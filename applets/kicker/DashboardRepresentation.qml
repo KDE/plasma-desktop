@@ -14,8 +14,6 @@ import org.kde.plasma.extras as PlasmaExtras
 import org.kde.plasma.plasmoid
 import org.kde.plasma.private.kicker as Kicker
 
-import "code/tools.js" as Tools
-
 /* TODO
  * Reverse middleRow layout + keyboard nav + filter list text alignment in rtl locales.
  * Keep cursor column when arrow'ing down past non-full trailing rows into a lower grid.
@@ -709,6 +707,7 @@ Kicker.DashboardWindow {
                     height: mainGrid.height
 
                     enabled: !root.searching
+                    hoverEnabled: true
 
                     property alias currentIndex: filterList.currentIndex
 
@@ -724,13 +723,20 @@ Kicker.DashboardWindow {
                         }
                     }
 
+                    onHoveredChanged: {
+                        if (!hovered) {
+                            filterList.currentIndex = filterList.activeIndex
+                            switchFilterTimer.stop()
+                        }
+                    }
+
                     ListView {
                         id: filterList
 
                         focus: true
 
                         property bool allApps: false
-                        property int eligibleWidth: width
+                        property int activeIndex: -1
                         property int hItemMargins: Math.max(highlightItemSvg.margins.left + highlightItemSvg.margins.right,
                             listItemSvg.margins.left + listItemSvg.margins.right)
 
@@ -742,122 +748,32 @@ Kicker.DashboardWindow {
                         spacing: 0
                         keyNavigationWraps: true
 
-                        delegate: MouseArea {
+                        delegate: ItemAbstractDelegate {
                             id: item
-
-                            required property int index
-                            required property bool hasActionList
-                            required property string favoriteId
-                            required property var /*QVariantList*/ actionList
-                            required property var model // for display, in case we port this to ItemDelegate
-
-                            signal actionTriggered(string actionId, var actionArgument)
-                            signal aboutToShowActionMenu(var actionMenu)
 
                             property var m: model
                             property int textWidth: label.contentWidth
-                            property int mouseCol
-                            property ActionMenu menu: actionMenu
 
                             width: ListView.view.width
-                            height: Math.ceil((label.paintedHeight
-                                + Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
-                                listItemSvg.margins.top + listItemSvg.margins.bottom)) / 2) * 2
-
-                            Accessible.role: Accessible.MenuItem
-                            Accessible.name: model.display
-
-                            acceptedButtons: Qt.LeftButton | Qt.RightButton
-
+                            height: implicitHeight
                             hoverEnabled: true
+                            baseModel: filterList.model
+                            favoritesModel: baseModel.favoritesModel
 
-                            onContainsMouseChanged: {
-                                if (!containsMouse) {
-                                    updateCurrentItemTimer.stop();
+                            onClicked: applyFilter()
+
+                            onHoveredChanged: {
+                                if (hovered && !isSeparator) {
+                                    filterList.currentIndex = index
+                                    filterList.forceActiveFocus()
+                                    switchFilterTimer.restart()
+                                } else if (!hovered && filterList.currentIndex === index) {
+                                    switchFilterTimer.stop()
                                 }
                             }
 
-                            onPositionChanged: mouse => { // Lazy menu implementation.
-                                mouseCol = mouse.x;
-
-                                if (ListView.view.currentIndex === 0 || index === ListView.view.currentIndex) {
-                                    updateCurrentItem();
-                                } else if ((index === ListView.view.currentIndex - 1) && mouse.y < (height - 6)
-                                    || (index === ListView.view.currentIndex + 1) && mouse.y > 5) {
-
-                                    if (mouse.x > filterList.eligibleWidth - 5) {
-                                        updateCurrentItem();
-                                    }
-                                } else if (mouse.x > filterList.eligibleWidth) {
-                                    updateCurrentItem();
-                                }
-
-                                updateCurrentItemTimer.restart();
-                            }
-
-                            onPressed: mouse => {
-                                if (mouse.buttons & Qt.RightButton) {
-                                    if (hasActionList) {
-                                        openActionMenu(item, mouse.x, mouse.y);
-                                    }
-                                }
-                            }
-
-                            onClicked: mouse => {
-                                if (mouse.button === Qt.LeftButton) {
-                                    updateCurrentItem();
-                                }
-                            }
-
-                            onAboutToShowActionMenu: actionMenu => {
-                                var actionList = hasActionList ? item.actionList : [];
-                                Tools.fillActionMenu(i18n, actionMenu, actionList, ListView.view.model.favoritesModel, item.favoriteId);
-                            }
-
-                            onActionTriggered: (actionId, actionArgument) => {
-                                if (Tools.triggerAction(ListView.view.model, item.index, actionId, actionArgument) === true) {
-                                    root.interactionConcluded()
-                                }
-                            }
-
-                            function openActionMenu(visualParent, x, y) {
-                                aboutToShowActionMenu(actionMenu);
-                                actionMenu.visualParent = visualParent;
-                                actionMenu.open(x, y);
-                            }
-
-                            function updateCurrentItem() {
-                                ListView.view.currentIndex = index;
-                                ListView.view.eligibleWidth = Math.min(width, mouseCol);
-                            }
-
-                            ActionMenu {
-                                id: actionMenu
-
-                                onActionClicked: (actionId, actionArgument) => {
-                                    item.actionTriggered(actionId, actionArgument);
-                                }
-                            }
-
-                            Timer {
-                                id: updateCurrentItemTimer
-
-                                interval: 50
-                                repeat: false
-
-                                onTriggered: parent.updateCurrentItem()
-                            }
-
-                            Kirigami.Heading {
+                            contentItem: Kirigami.Heading {
                                 id: label
-
-                                anchors {
-                                    fill: parent
-                                    topMargin: highlightItemSvg.margins.top
-                                    bottomMargin: highlightItemSvg.margins.bottom
-                                    leftMargin: highlightItemSvg.margins.left
-                                    rightMargin: highlightItemSvg.margins.right
-                                }
 
                                 elide: Text.ElideRight
                                 wrapMode: Text.NoWrap
@@ -875,13 +791,11 @@ Kicker.DashboardWindow {
                         highlight: PlasmaExtras.Highlight {
                             visible: filterList.currentItem
                             active: filterListScrollArea.focus
-                            pressed: filterList.currentItem && filterList.currentItem.pressed
+                            pressed: filterList.currentItem && (filterList.currentItem as ItemAbstractDelegate).pressed
                         }
 
                         highlightMoveDuration: 0
                         highlightResizeDuration: 0
-
-                        onCurrentIndexChanged: applyFilter()
 
                         onCountChanged: {
                             var width = 0;
@@ -919,6 +833,7 @@ Kicker.DashboardWindow {
                                 funnelModel.sourceModel = null;
                                 allApps = false;
                             }
+                            filterList.activeIndex = currentIndex;
                         }
 
                         function handleLeftRightArrow(event: KeyEvent) : void {
@@ -936,6 +851,15 @@ Kicker.DashboardWindow {
                         Keys.onBacktabPressed: mainColumn.tryActivate(0, 0);
                         Keys.onLeftPressed: event => handleLeftRightArrow(event)
                         Keys.onRightPressed: event => handleLeftRightArrow(event)
+
+                        Timer {
+                            id: switchFilterTimer
+
+                            interval: 150
+                            repeat: false
+
+                            onTriggered: filterList.applyFilter()
+                        }
                     }
                 }
             }
