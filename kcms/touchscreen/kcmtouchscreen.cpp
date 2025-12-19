@@ -9,6 +9,7 @@
 
 #include "kcmtouchscreen.h"
 #include "inputdevice.h"
+#include "touchscreenmoduledata.h"
 
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -19,7 +20,7 @@
 
 using namespace Qt::StringLiterals;
 
-K_PLUGIN_CLASS_WITH_JSON(Touchscreen, "kcm_touchscreen.json")
+K_PLUGIN_FACTORY_WITH_JSON(TouchscreenFactory, "kcm_touchscreen.json", registerPlugin<Touchscreen>(); registerPlugin<TouchscreenModuleData>();)
 
 class OutputsModel : public QStandardItemModel
 {
