@@ -873,20 +873,11 @@ Kicker.DashboardWindow {
                         }
 
                         highlight: PlasmaExtras.Highlight {
-                            x: LayoutMirroring.enabled ? filterList.width - width : 0
-                            y: filterList.currentItem ? filterList.currentItem.y : 0
-                            height: filterList.currentItem ? filterList.currentItem.height : 0
-                            width: (highlightItemSvg.margins.left
-                                + (filterList.currentItem ? filterList.currentItem.textWidth : 0)
-                                + highlightItemSvg.margins.right
-                                + Kirigami.Units.smallSpacing)
-
                             visible: filterList.currentItem
                             active: filterListScrollArea.focus
                             pressed: filterList.currentItem && filterList.currentItem.pressed
                         }
 
-                        highlightFollowsCurrentItem: false
                         highlightMoveDuration: 0
                         highlightResizeDuration: 0
 
