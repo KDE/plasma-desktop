@@ -94,7 +94,7 @@ KCM.SimpleKCM {
                 text: deviceType
             }
         }
-        
+
         RowLayout {
             spacing: Kirigami.Units.largeSpacing
 
@@ -133,7 +133,7 @@ KCM.SimpleKCM {
 
             QQC2.Switch {
                 id: plasmaIntegrationSwitch
-                text: i18nc("@label:textbox", "Plasma Integration")
+                text: i18nc("@label:textbox", "Enable Plasma Integration")
                 checked: KWinPlugin.pluginEnabled
 
                 onToggled: {
@@ -142,7 +142,7 @@ KCM.SimpleKCM {
             }
 
             Kirigami.ContextualHelpButton {
-                toolTipText: i18nc("@label:tooltip", "It cannot be used to control Plasma or most non-game applications, and using it will not stop the computer from going to sleep or turning off the screen.")
+                toolTipText: i18nc("@label:tooltip", "When disabled, this device can't be used to control Plasma or most non-game applications, and using it will not stop the computer from going to sleep or turning off the screen.")
             }
         }
 
@@ -158,7 +158,7 @@ KCM.SimpleKCM {
             }
 
             QQC2.Label {
-                text: i18nc("@label:textbox", "Some applications may still use this controller")
+                text: i18nc("@label:textbox", "Games can always use the controller.")
                 textFormat: Text.PlainText
                 font: Kirigami.Theme.smallFont
             }
@@ -248,3 +248,4 @@ KCM.SimpleKCM {
         Item { Layout.fillHeight: true }
     }
 }
+
