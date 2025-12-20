@@ -8,65 +8,38 @@ import QtQuick
 
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.components as PC3
+import org.kde.plasma.extras as PlasmaExtras
 
-import "code/tools.js" as Tools
-
-PC3.ToolButton {
+ItemAbstractDelegate {
     id: item
-
-    required property int index
-    required property var model // for display, which conflicts with ToolButton
-    required property bool hasActionList
-    required property string favoriteId
-    required property string decoration
-    required property var /*QVariantList*/ actionList
-    required property url url
-
-    required property var favoritesModel
 
     readonly property int itemIndex: model.index
 
-    signal interactionConcluded
-
-    activeFocusOnTab: false
-
-    text: model.display
-    display: PC3.AbstractButton.IconOnly
     Accessible.role: Accessible.ListItem
     icon.source: item.decoration
     icon.width: Kirigami.Units.iconSizes.medium
     icon.height: Kirigami.Units.iconSizes.medium
+    hoverEnabled: true
 
-
-
-    function activate() : void {
-        if (dragHandler.active) {
-            return
-        }
+    onClicked: {
         favoritesModel.trigger(index, "", null);
-        item.interactionConcluded()
+        interactionConcluded()
     }
 
-    Keys.onSpacePressed: activate()
-    Keys.onReturnPressed: activate()
-    Keys.onEnterPressed: activate()
-    onClicked: activate()
+    Keys.onSpacePressed: clicked()
 
-    function openActionMenu(visualParent, x, y) {
-        const actionList = (item.hasActionList !== null) ? item.actionList : [];
-        Tools.fillActionMenu(i18n, actionMenu, actionList, favoritesModel, item.favoriteId);
-        actionMenu.visualParent = visualParent;
-        actionMenu.open(x, y);
+    background.visible: false // we want the default background's spacing, but not the base color
+    contentItem: Kirigami.Icon {
+        active: item.hovered
+        width: item.icon.width
+        height: item.icon.height
+        source: item.icon.source
     }
 
-    ActionMenu {
-        id: actionMenu
-
-        onActionClicked: (actionId, actionArgument) => {
-            if (Tools.triggerAction(item.favoritesModel, item.index, actionId, actionArgument) === true) {
-                item.interactionConcluded()
-            }
-        }
+    PlasmaExtras.Highlight {
+        anchors.fill: parent
+        hovered: item.hovered || item.visualFocus
+        pressed: item.pressed
     }
 
     DragHandler {
@@ -84,12 +57,6 @@ PC3.ToolButton {
     Drag.dragType: Drag.Automatic
     Drag.mimeData: {
         "text/uri-list" : [item.url]
-    }
-
-    MouseArea {
-        anchors.fill: parent
-        acceptedButtons: Qt.RightButton
-        onPressed: mouse => item.openActionMenu(item, mouse.x, mouse.y)
     }
 
     PC3.ToolTip {

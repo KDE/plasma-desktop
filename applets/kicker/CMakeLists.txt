@@ -5,6 +5,7 @@ plasma_add_applet(org.kde.plasma.kicker
     CompactRepresentation.qml
     ConfigGeneral.qml
     DashboardRepresentation.qml
+    ItemAbstractDelegate.qml
     ItemGridDelegate.qml
     ItemGridView.qml
     ItemListDelegate.qml

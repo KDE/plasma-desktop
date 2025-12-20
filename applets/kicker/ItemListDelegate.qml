@@ -11,45 +11,25 @@ import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
 import org.kde.plasma.components as PlasmaComponents3
 
-import "code/tools.js" as Tools
-
-PlasmaComponents3.ItemDelegate {
+ItemAbstractDelegate {
     id: item
+
+    required property bool showIcons
+
+    readonly property bool iconAndLabelsShouldlookSelected: pressed && !hasChildren
 
     width: ListView.view.width
     height: isSeparator && !showSeparators ? 0 : implicitHeight
 
     // if it's not disabled and is either a leaf node or a node with children
     enabled: !isSeparator && !disabled && (!isParent || (isParent && hasChildren))
-
-    required property int index
-    required property bool isSeparator
-    required property bool hasChildren
-    required property bool isParent
-    required property bool disabled
-    required property bool hasActionList
-    required property string favoriteId
-    required property var /*QVariantList*/ actionList
-    required property url url
-    required property string description
-    required property string decoration
-    required property var model // for display, which would shadow ItemDelegate
-    required property bool showIcons
-
-    readonly property bool iconAndLabelsShouldlookSelected: pressed && !hasChildren
-    readonly property ActionMenu menu: actionMenu
-
-    property bool showSeparators: true
-    property bool dialogDefaultRight: Application.layoutDirection !== Qt.RightToLeft
-
-    signal interactionConcluded
+    favoritesModel: ListView.view.model.favoritesModel
+    baseModel: ListView.view.model
 
     Accessible.role: isSeparator ? Accessible.Separator : Accessible.ListItem
     Accessible.description: isParent
         ? i18nc("@action:inmenu accessible description for opening submenu", "Open category")
         : i18nc("@action:inmenu accessible description for opening app or file", "Launch")
-    text: model.display
-    icon.name: decoration
 
     onHasChildrenChanged: {
         if (!hasChildren && ListView.view.currentItem === item) {
@@ -59,52 +39,8 @@ PlasmaComponents3.ItemDelegate {
 
     onClicked: {
         if (!item.hasChildren) {
-            item.ListView.view.model.trigger(index, "", null);
+            item.baseModel.trigger(index, "", null);
             item.interactionConcluded()
-        }
-    }
-
-    function openActionMenu(visualParent: Item, x: real, y: real) : void {
-        const actionList = item.hasActionList ? item.actionList : [];
-        Tools.fillActionMenu(i18n, actionMenu, actionList, item.ListView.view.model.favoritesModel, item.favoriteId);
-        if (!actionMenu.actionList.length) {
-            return
-        }
-        actionMenu.visualParent = visualParent;
-        actionMenu.open(x, y);
-    }
-
-    ActionMenu {
-        id: actionMenu
-
-        onActionClicked: (actionId, actionArgument) => {
-            if (Tools.triggerAction(item.ListView.view.model, item.index, actionId, actionArgument) === true) {
-                item.interactionConcluded()
-            }
-        }
-    }
-
-    DragHandler {
-        target: null
-        onActiveChanged: {
-            if (active && item.url) {
-                // we need dragHelper and can't use attached Drag; submenus are destroyed too soon and Plasma crashes
-                dragHelper.startDrag(kicker, item.url, item.decoration)
-            }
-        }
-    }
-
-    MouseArea {
-        id: mouseArea
-
-        anchors.fill: parent
-
-        acceptedButtons: Qt.RightButton
-
-        onPressed: mouse => {
-            if (item.hasActionList || item.favoriteId !== null) {
-                item.openActionMenu(mouseArea, mouse.x, mouse.y);
-            }
         }
     }
 
@@ -180,6 +116,16 @@ PlasmaComponents3.ItemDelegate {
         }
     }
 
+    DragHandler {
+        target: null
+        onActiveChanged: {
+            if (active && item.url) {
+                // we need dragHelper and can't use attached Drag; submenus are destroyed too soon and Plasma crashes
+                dragHelper.startDrag(kicker, item.url, item.decoration)
+            }
+        }
+    }
+
     Component {
         id: separatorComponent
 
@@ -190,12 +136,4 @@ PlasmaComponents3.ItemDelegate {
             elementId: "horizontal-line"
         }
     }
-
-    Keys.onMenuPressed: {
-        if (item.hasActionList || item.favoriteId !== null) {
-            item.openActionMenu(mouseArea)
-        }
-    }
-    Keys.onReturnPressed: item.clicked()
-    Keys.onEnterPressed: Keys.returnPressed()
 }

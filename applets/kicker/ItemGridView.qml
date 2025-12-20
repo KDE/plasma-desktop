@@ -231,6 +231,22 @@ FocusScope {
                     showLabel: itemGrid.showLabels
                     iconSize: gridView.iconSize
                     onInteractionConcluded: itemGrid.interactionConcluded()
+                    onHoveredChanged: {
+                        if (hovered) {
+                            gridView.currentIndex = index
+                        } else {
+                            if (!actionMenu.opened) {
+                                gridView.currentIndex = -1;
+                            }
+
+                            hoverArea.pressX = -1;
+                            hoverArea.pressY = -1;
+                            hoverArea.lastX = -1;
+                            hoverArea.lastY = -1;
+                            hoverArea.pressedItem = null;
+                            hoverArea.hoverEnabled = true;
+                        }
+                    }
                 }
 
                 highlight: Item {
@@ -349,21 +365,6 @@ FocusScope {
                         itemGrid.keyNavDown();
                     }
                 }
-
-                onItemContainsMouseChanged: containsMouse => {
-                    if (!containsMouse) {
-                        if (!actionMenu.opened) {
-                            gridView.currentIndex = -1;
-                        }
-
-                        hoverArea.pressX = -1;
-                        hoverArea.pressY = -1;
-                        hoverArea.lastX = -1;
-                        hoverArea.lastY = -1;
-                        hoverArea.pressedItem = null;
-                        hoverArea.hoverEnabled = true;
-                    }
-                }
             }
         }
 
@@ -459,10 +460,10 @@ FocusScope {
                 if (gridView.currentIndex !== -1) {
                     if (itemGrid.dragEnabled && pressX !== -1 && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
                         if ("pluginName" in item.m) {
-                            dragHelper.startDrag(kicker, item.url, item.icon,
-                            "text/x-plasmoidservicename", item.m.pluginName);
+                            dragHelper.startDrag(kicker, item.url, item.decoration,
+                                "text/x-plasmoidservicename", item.model.pluginName);
                         } else {
-                            dragHelper.startDrag(kicker, item.url, item.icon);
+                            dragHelper.startDrag(kicker, item.url, item.decoration);
                         }
 
                         kicker.dragSource = item;

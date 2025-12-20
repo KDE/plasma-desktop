@@ -67,6 +67,7 @@ DropArea {
 
             delegate: SideBarItem {
                 favoritesModel: repeater.model
+                baseModel: repeater.model
                 Keys.onUpPressed: event => {
                     if (index > 0) {
                         repeater.itemAt(index - 1).forceActiveFocus(Qt.TabFocusReason)
