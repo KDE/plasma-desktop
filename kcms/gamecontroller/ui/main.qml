@@ -134,6 +134,12 @@ KCM.SimpleKCM {
                 QQC2.Switch {
                     id: plasmaIntegrationSwitch
                     text: i18nc("@label:textbox", "Enable Plasma integration")
+                    leftPadding: Application.layoutDirection === Qt.LeftToRight ? 
+                        plasmaIntegrationSwitch.indicator.width + plasmaIntegrationSwitch.spacing : padding
+
+                    rightPadding: Application.layoutDirection === Qt.RightToLeft ?
+                        plasmaIntegrationSwitch.indicator.width + plasmaIntegrationSwitch.spacing : padding
+
                     checked: KWinPlugin.pluginEnabled
 
                     onToggled: {
@@ -152,10 +158,6 @@ KCM.SimpleKCM {
 
                 visible: !plasmaIntegrationSwitch.checked
                 Layout.preferredHeight: visible ? implicitHeight : 0
-
-                Item {
-                    implicitWidth: Kirigami.Units.gridUnit * 2
-                }
 
                 QQC2.Label {
                     text: i18nc("@label:textbox", "Games can always use the controller.")
