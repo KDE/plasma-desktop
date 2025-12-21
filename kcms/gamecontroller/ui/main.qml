@@ -133,7 +133,7 @@ KCM.SimpleKCM {
 
             QQC2.Switch {
                 id: plasmaIntegrationSwitch
-                text: i18nc("@label:textbox", "Enable Plasma Integration")
+                text: i18nc("@label:textbox", "Enable Plasma integration")
                 checked: KWinPlugin.pluginEnabled
 
                 onToggled: {
@@ -142,7 +142,7 @@ KCM.SimpleKCM {
             }
 
             Kirigami.ContextualHelpButton {
-                toolTipText: i18nc("@label:tooltip", "When disabled, this device can't be used to control Plasma or most non-game applications, and using it will not stop the computer from going to sleep or turning off the screen.")
+                toolTipText: i18nc("@label:tooltip", "When disabled, this device can't be used to control Plasma or most non-game applications, and using it will not stop the computer from going to sleep or turning off the screen. Games can always use the controller")
             }
         }
 
