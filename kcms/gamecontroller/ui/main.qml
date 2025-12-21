@@ -77,7 +77,9 @@ KCM.SimpleKCM {
 
         Item { Layout.fillHeight: true }
         ColumnLayout {
+            Layout.fillWidth: true
             Layout.alignment: Qt.AlignHCenter
+            spacing: Kirigami.Units.largeSpacing
 
             RowLayout {
                 spacing: Kirigami.Units.largeSpacing
@@ -142,7 +144,7 @@ KCM.SimpleKCM {
                 }
 
                 Kirigami.ContextualHelpButton {
-                    toolTipText: i18nc("@label:tooltip", "When disabled, this device can't be used to control Plasma or most non-game applications, and using it will not stop the computer from going to sleep or turning off the screen. Games can always use the controller")
+                    toolTipText: i18nc("@label:tooltip", "This device can be used to control Plasma or most non-game applications, and using it will stop the computer from going to sleep or turning off the screen. Games can always use the controller")
                 }
             }
 
