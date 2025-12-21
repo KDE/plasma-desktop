@@ -144,7 +144,7 @@ KCM.SimpleKCM {
                 }
 
                 Kirigami.ContextualHelpButton {
-                    toolTipText: i18nc("@label:tooltip", "This device can be used to control Plasma or most non-game applications, and using it will stop the computer from going to sleep or turning off the screen. Games can always use the controller")
+                    toolTipText: xi18nc("@info:tooltip", "Allow this controller to send mouse and keyboard events to Plasma and most non-game applications.<nl/><nl/>This will prevent the computer from going to sleep or turning off the screen.<nl/><nl/>Games can always use the controller.")
                 }
             }
 
