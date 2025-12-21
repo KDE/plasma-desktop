@@ -149,17 +149,14 @@ KCM.SimpleKCM {
             }
 
             QQC2.Label {
+                visible: !plasmaIntegrationSwitch.checked
                 text: i18nc("@label:textbox", "Games can always use the controller.")
                 textFormat: Text.PlainText
                 font: Kirigami.Theme.smallFont
-                visible: !plasmaIntegrationSwitch.checked
-
-                leftPadding: Application.layoutDirection === Qt.LeftToRight ? 
-                    plasmaIntegrationSwitch.indicator.width + plasmaIntegrationSwitch.spacing : padding
-
+                leftPadding: Application.layoutDirection === Qt.LeftToRight ?
+                    plasmaIntegrationSwitch.indicator.width + plasmaIntegrationSwitch.spacing + plasmaIntegrationSwitch.padding : padding
                 rightPadding: Application.layoutDirection === Qt.RightToLeft ?
-                    plasmaIntegrationSwitch.indicator.width + plasmaIntegrationSwitch.spacing : padding
-
+                    plasmaIntegrationSwitch.indicator.width + plasmaIntegrationSwitch.spacing + plasmaIntegrationSwitch.padding : padding
             }
             Item { Layout.fillHeight: true }
         }
