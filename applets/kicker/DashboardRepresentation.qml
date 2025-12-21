@@ -120,16 +120,6 @@ Kicker.DashboardWindow {
                     funnelModel.reset();
                 }
             }
-
-            function onDragSourceChanged() {
-                if (!kicker.dragSource) {
-                    // FIXME TODO HACK: Reset all views post-DND to work around
-                    // mouse grab bug despite QQuickWindow::mouseGrabberItem==0x0.
-                    // Needs a more involved hunt through Qt Quick sources later since
-                    // it's not happening with near-identical code in the menu repr.
-                    root.rootModel.refresh();
-                }
-            }
         }
 
         Connections {
