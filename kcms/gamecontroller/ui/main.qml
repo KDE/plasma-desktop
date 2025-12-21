@@ -79,92 +79,92 @@ KCM.SimpleKCM {
         ColumnLayout {
             Layout.alignment: Qt.AlignHCenter
 
-        RowLayout {
-            spacing: Kirigami.Units.largeSpacing
+            RowLayout {
+                spacing: Kirigami.Units.largeSpacing
 
-            Layout.fillWidth: true
+                Layout.fillWidth: true
 
-            QQC2.Label {
-                text: i18nc("@label game controller device type (wheel, joystick, game controller, etc.)", "Device type:")
-                textFormat: Text.PlainText
-            }
+                QQC2.Label {
+                    text: i18nc("@label game controller device type (wheel, joystick, game controller, etc.)", "Device type:")
+                    textFormat: Text.PlainText
+                }
 
-            QQC2.Label {
-                id: typeLabel
-                text: deviceType
-            }
-        }
-
-        RowLayout {
-            spacing: Kirigami.Units.largeSpacing
-
-            Layout.fillWidth: true
-
-            QQC2.Label {
-                text: i18nc("@label game controller controller type (which brand, etc.)", "Controller type:")
-                textFormat: Text.PlainText
-            }
-
-            QQC2.Label {
-                id: controllerTypeLabel
-                text: deviceControllerType
-            }
-        }
-
-        RowLayout {
-            spacing: Kirigami.Units.largeSpacing
-
-            Layout.fillWidth: true
-
-            QQC2.Label {
-                text: i18nc("@label:textbox", "Connection type:")
-                textFormat: Text.PlainText
-            }
-
-            QQC2.Label {
-                id: connectionTypeLabel
-                text: deviceConnectionType
-            }
-        }
-
-        RowLayout {
-            spacing: Kirigami.Units.largeSpacing
-            Layout.fillWidth: true
-
-            QQC2.Switch {
-                id: plasmaIntegrationSwitch
-                text: i18nc("@label:textbox", "Enable Plasma integration")
-                checked: KWinPlugin.pluginEnabled
-
-                onToggled: {
-                    KWinPlugin.pluginEnabled = checked
+                QQC2.Label {
+                    id: typeLabel
+                    text: deviceType
                 }
             }
 
-            Kirigami.ContextualHelpButton {
-                toolTipText: i18nc("@label:tooltip", "When disabled, this device can't be used to control Plasma or most non-game applications, and using it will not stop the computer from going to sleep or turning off the screen. Games can always use the controller")
+            RowLayout {
+                spacing: Kirigami.Units.largeSpacing
+
+                Layout.fillWidth: true
+
+                QQC2.Label {
+                    text: i18nc("@label game controller controller type (which brand, etc.)", "Controller type:")
+                    textFormat: Text.PlainText
+                }
+
+                QQC2.Label {
+                    id: controllerTypeLabel
+                    text: deviceControllerType
+                }
             }
-        }
 
-        RowLayout {
-            spacing: Kirigami.Units.largeSpacing
-            Layout.fillWidth: true
+            RowLayout {
+                spacing: Kirigami.Units.largeSpacing
 
-            visible: !plasmaIntegrationSwitch.checked
-            Layout.preferredHeight: visible ? implicitHeight : 0
+                Layout.fillWidth: true
 
-            Item {
-                implicitWidth: Kirigami.Units.gridUnit * 2
+                QQC2.Label {
+                    text: i18nc("@label:textbox", "Connection type:")
+                    textFormat: Text.PlainText
+                }
+
+                QQC2.Label {
+                    id: connectionTypeLabel
+                    text: deviceConnectionType
+                }
             }
 
-            QQC2.Label {
-                text: i18nc("@label:textbox", "Games can always use the controller.")
-                textFormat: Text.PlainText
-                font: Kirigami.Theme.smallFont
+            RowLayout {
+                spacing: Kirigami.Units.largeSpacing
+                Layout.fillWidth: true
+
+                QQC2.Switch {
+                    id: plasmaIntegrationSwitch
+                    text: i18nc("@label:textbox", "Enable Plasma integration")
+                    checked: KWinPlugin.pluginEnabled
+
+                    onToggled: {
+                        KWinPlugin.pluginEnabled = checked
+                    }
+                }
+
+                Kirigami.ContextualHelpButton {
+                    toolTipText: i18nc("@label:tooltip", "When disabled, this device can't be used to control Plasma or most non-game applications, and using it will not stop the computer from going to sleep or turning off the screen. Games can always use the controller")
+                }
             }
-        }
+
+            RowLayout {
+                spacing: Kirigami.Units.largeSpacing
+                Layout.fillWidth: true
+
+                visible: !plasmaIntegrationSwitch.checked
+                Layout.preferredHeight: visible ? implicitHeight : 0
+
+                Item {
+                    implicitWidth: Kirigami.Units.gridUnit * 2
+                }
+
+                QQC2.Label {
+                    text: i18nc("@label:textbox", "Games can always use the controller.")
+                    textFormat: Text.PlainText
+                    font: Kirigami.Theme.smallFont
+                }
+            }
             Item { Layout.fillHeight: true }
-    }
+        }
 
         RowLayout {
             spacing: Kirigami.Units.largeSpacing
