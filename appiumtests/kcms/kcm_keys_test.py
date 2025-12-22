@@ -44,11 +44,18 @@ class KCMTest(unittest.TestCase):
 
         options = AppiumOptions()
         options.set_capability("app", f"kcmshell{KDE_VERSION} {KCM_ID}")
-        options.set_capability("environ", {
+
+        environment = {
             "LC_ALL": "en_US.UTF-8",
-            "QT_FATAL_WARNINGS": "1",
             "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;qt.qml.typeresolution.cycle.warning=false;qt.qpa.wayland.warning=false;kf.plasma.core.warning=false;kf.windowsystem.warning=false;kf.kirigami.platform.warning=false",
-        })
+        }
+
+        # work around unresolvable warnings from Kirigami https://qt-project.atlassian.net/browse/QTBUG-143033
+        if "KDECI_BUILD" not in os.environ or os.environ["CI_JOB_NAME"] != "suse_tumbleweed_qt611":
+            environment["QT_FATAL_WARNINGS"] = "1"
+
+        options.set_capability("environ", environment)
+
         options.set_capability("timeouts", {'implicit': 10000})
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
