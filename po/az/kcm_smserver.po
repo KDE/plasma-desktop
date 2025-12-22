@@ -1,13 +1,14 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2025 X əyyam
+# SPDX-FileCopyrightText: 2025 Kheyyam <xxmn77@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2023-02-19 16:20+0400\n"
+"PO-Revision-Date: 2025-12-22 01:34+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -15,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -68,11 +69,10 @@ msgid "Restart Now"
 msgstr "Yenidən başlat"
 
 #: ui/main.qml:46
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General"
-msgstr "Əsas:"
+msgstr "Əsas"
 
 #: ui/main.qml:51
 #, kde-format
@@ -80,7 +80,7 @@ msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "Ask for confirmation:"
-msgstr ""
+msgstr "Təsdiqini soruşmaq:"
 
 #: ui/main.qml:52
 #, kde-format
@@ -88,7 +88,7 @@ msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "On shutdown, restart, and logout"
-msgstr ""
+msgstr "Söndürülən, yenidən başladılan və sessiyadan çıxış zamanı"
 
 #: ui/main.qml:63
 #, kde-format
@@ -142,20 +142,18 @@ msgid "Ignored applications:"
 msgstr "İstisna edilən tətbiqlər:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"İcra fayllarının adlarını, həmin tətbiqləri sesiyaya giriş zamanı avtomatik "
-"başlatmadan istisna etmək üçün buraya yazın Ayırıcı kimi qoşa nöqtə və ya "
-"vergüldən istifadə edin (məsələn, \"xterm:konsole\" və ya \"xterm,konsole\")."
+"Tətbiqlərin masaüstü fayl identifikatorunu və ya X11-də icra edilə bilən "
+"adları (vergül və ya iki nöqtə ilə ayrılmış, məsələn, 'xterm:org.kde.konsole."
+"desktop' və ya 'xterm,org.kde.konsole.desktop') digər sessiya ilə bərpa "
+"edilmiş tətbiqlərlə birlikdə avtomatik başlamasının qarşısını almaq üçün "
+"buraya yazın."
 
 #: ui/main.qml:138
 #, kde-format
