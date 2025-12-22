@@ -66,7 +66,9 @@ PlasmaComponents3.ScrollView {
                 dialogMirrored: itemList.LayoutMirroring.enabled
             });
             itemList.childDialog.index = listView.currentIndex;
+            (itemList.childDialog as ItemListDialog).interactionConcluded.connect(itemList.interactionConcluded)
 
+            itemList.childDialog.mainItem.forceActiveFocus(Qt.TabFocusReason)
             windowSystem.forceActive(itemList.childDialog.mainItem); // only for X11; TODO Plasma 6.8: remove
 
             if (focusOnSpawn) {
@@ -164,7 +166,7 @@ PlasmaComponents3.ScrollView {
         highlight: PlasmaExtras.Highlight {
             width: listView.width
             visible: !(listView.currentItem as ItemListDelegate)?.isSeparator
-            pressed: !!((listView.currentItem as ItemListDelegate)?.pressed && (listView.currentItem as ItemListDelegate)?.hasChildren)
+            pressed: !!((listView.currentItem as ItemListDelegate)?.iconAndLabelsShouldlookSelected)
             active: !!(listView.currentItem as ItemListDelegate)?.hovered
         }
 

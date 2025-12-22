@@ -207,6 +207,7 @@ PlasmaComponents3.ScrollView {
             Layout.fillHeight: true
             Layout.fillWidth: true
             Layout.minimumWidth: searchField.defaultWidth
+            Layout.maximumHeight: implicitHeight
 
 
             visible: searchField.text === ""

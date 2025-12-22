@@ -29,7 +29,6 @@ Kicker.SubMenu {
     offset: Kirigami.Units.smallSpacing
     LayoutMirroring.enabled: dialogMirrored
 
-    onInteractionConcluded: itemDialog.interactionConcluded()
     onWindowDeactivated: {
         if (!aboutToBeDestroyed) {
             interactionConcluded()
@@ -47,6 +46,8 @@ Kicker.SubMenu {
         dialog: itemDialog
 
         model: funnelModel
+
+        onInteractionConcluded: itemDialog.interactionConcluded()
 
         Kicker.FunnelModel {
             id: funnelModel
