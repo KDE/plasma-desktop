@@ -147,7 +147,7 @@ Kirigami.ApplicationWindow {
                     window.currentPage.category = modelData;
                     window.currentPage.model = emoji;
                     window.currentPage.title = text
-                    window.currentPage.showClearHistoryButton = true;
+                    window.currentPage.showClearHistoryButton = false;
                     window.currentPage.searchFieldFocusRequested();
                 }
             }
