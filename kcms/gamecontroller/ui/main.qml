@@ -150,8 +150,8 @@ KCM.SimpleKCM {
 
             Kirigami.InlineMessage {
                 Layout.fillWidth: true
-                type: Kirigami.InlineMessage.Warning
-                text: i18n("Controller will no longer prevent system idling / suspend.")
+                type: Kirigami.MessageType.Warning
+                 text: i18nc("@label:textbox", "Controller will no longer prevent system idling / suspend.")
                 visible: !plasmaIntegrationSwitch.checked
 
                 leftPadding: Application.layoutDirection === Qt.LeftToRight ?
