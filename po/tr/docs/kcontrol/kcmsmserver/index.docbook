@@ -39,7 +39,7 @@
 </authorgroup>
 
 <date
->2023-01-30</date>
+>2023‒01‒30</date>
 <releaseinfo
 >Plasma 5.27</releaseinfo>
 
@@ -62,25 +62,23 @@
 >Masaüstü Oturumu</title>
 
 <para
->Bu &systemsettings; modülünde, &plasma;'nın oturum yöneticisini ve oturumu kapatma ayarlarını yapılandırabilirsiniz.</para>
+>Bu &systemsettings; modülünde, &plasma;’nın oturum yöneticisini ve oturumu kapatma ayarlarını yapılandırabilirsiniz.</para>
 
 <para
->Oturum yönetimi, &plasma;'nın uygulamaların ve pencerelerin durumunu &plasma; oturumunu kapattığınızda kaydetme ve yeniden oturum açtığınızda geri yükleme yeteneği ile ilgilidir.</para>
+>Oturum yönetimi, &plasma;’nın uygulamaların ve pencerelerin durumunu &plasma; oturumunu kapattığınızda kaydetme ve yeniden oturum açtığınızda geri yükleme yeteneği ile ilgilidir.</para>
 
 <sect2 id="sessions-logoutscreen">
 <title
->Oturumu Kapat Ekranı</title>
+>Genel</title>
 <variablelist>
 <varlistentry>
 <term
 ><guilabel
->Göster</guilabel
+>Onay iste: Kapanışta, yeniden başlatmada ve oturumu kapatırken</guilabel
 ></term>
 <listitem>
 <para
->Bu ayar açıksa oturumu ve bilgisayarı kapattığınızda, yeniden başlattığınızda, güç düğmesine bastığınızda veya <guilabel
->Ayrıl…</guilabel
-> etiketli menü ögelerine tıkladığınızda oturum kapatma onay ekranı gösterilir. Ayar kapatıldığında, ilgili düğmeyi tıkladıktan hemen sonra bilgisayarınız oturumu kapatır, gücü kapanır vb.</para>
+>Bu ayar açıksa oturumu ve bilgisayarı kapattığınızda veya yeniden başlattığınızda oturum kapatma onay ekranı gösterilir. Ayar kapatıldığında, ilgili düğmeyi tıkladıktan hemen sonra bilgisayarınız oturumu kapatır, gücü kapanır vb.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -110,7 +108,7 @@
 ></term>
 <listitem
 ><para
->&plasma;'yı oturum kapatılırken olan durum yerine elle kaydettiğiniz belirli bir duruma geri yükler.</para
+>&plasma;’yı oturum kapatılırken olan durum yerine elle kaydettiğiniz belirli bir duruma geri yükler.</para
 ><para
 ><guilabel
 >Application Launcher</guilabel

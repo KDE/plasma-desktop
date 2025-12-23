@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-16 13:26+0000\n"
+"POT-Creation-Date: 2025-12-23 00:43+0000\n"
 "PO-Revision-Date: 2025-10-09 01:15+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -581,7 +581,7 @@ msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr "디스플레이와 창 색상 전환 단축키 사용"
 
-#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:321
+#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:376
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
@@ -963,110 +963,148 @@ msgctxt "@item:inlistbox"
 msgid "Hide"
 msgstr "숨기기"
 
-#: ui/ZoomMagnifier.qml:98
+#: ui/ZoomMagnifier.qml:123
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mouse tracking:"
 msgstr "마우스 추적:"
 
-#: ui/ZoomMagnifier.qml:100
+#: ui/ZoomMagnifier.qml:128
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
 msgstr "비례"
 
-#: ui/ZoomMagnifier.qml:100
+#: ui/ZoomMagnifier.qml:129
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Zoom area moves in sync with mouse cursor"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:133
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "가운데"
 
-#: ui/ZoomMagnifier.qml:100
+#: ui/ZoomMagnifier.qml:134
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Mouse cursor stays centered on-screen, except near screen edges"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:138
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Centered"
+msgctxt "@item:inlistbox"
+msgid "Centered (Strict)"
+msgstr "가운데"
+
+#: ui/ZoomMagnifier.qml:139
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Mouse cursor stays centered on-screen, even near screen edges"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:143
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
 msgstr "밀기"
 
-#: ui/ZoomMagnifier.qml:100
+#: ui/ZoomMagnifier.qml:144
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Mouse cursor pushes zoom area at screen edges"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:148
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
 msgstr "사용 안 함"
 
-#: ui/ZoomMagnifier.qml:111
+#: ui/ZoomMagnifier.qml:149
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Zoom area doesn't follow mouse cursor"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:166
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable focus tracking"
 msgstr "포커스 위치 추적 활성화"
 
-#: ui/ZoomMagnifier.qml:123
+#: ui/ZoomMagnifier.qml:178
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "텍스트 캐럿 추적 활성화"
 
-#: ui/ZoomMagnifier.qml:139
+#: ui/ZoomMagnifier.qml:194
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "확대 영역"
 
-#: ui/ZoomMagnifier.qml:166
+#: ui/ZoomMagnifier.qml:221
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "너비:"
 
-#: ui/ZoomMagnifier.qml:177 ui/ZoomMagnifier.qml:202
+#: ui/ZoomMagnifier.qml:232 ui/ZoomMagnifier.qml:257
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
 msgid_plural "%1 px"
 msgstr[0] "%1픽셀"
 
-#: ui/ZoomMagnifier.qml:178 ui/ZoomMagnifier.qml:203
+#: ui/ZoomMagnifier.qml:233 ui/ZoomMagnifier.qml:258
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "픽셀"
 
-#: ui/ZoomMagnifier.qml:191
+#: ui/ZoomMagnifier.qml:246
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "높이:"
 
-#: ui/ZoomMagnifier.qml:220
+#: ui/ZoomMagnifier.qml:275
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "사용 안 함"
 
-#: ui/ZoomMagnifier.qml:233
+#: ui/ZoomMagnifier.qml:288
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "확대/축소 배율:"
 
-#: ui/ZoomMagnifier.qml:266
+#: ui/ZoomMagnifier.qml:321
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr "스크롤 제스처 수정자 키:"
 
-#: ui/ZoomMagnifier.qml:304
+#: ui/ZoomMagnifier.qml:359
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
 msgstr "확대/축소 스크롤 제스처는 Wayland에서만 사용할 수 있습니다."
 
-#: ui/ZoomMagnifier.qml:310
+#: ui/ZoomMagnifier.qml:365
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "수정자 키를 누르면서 스크롤 시 확대/축소로 전달"
 
-#: ui/ZoomMagnifier.qml:331
+#: ui/ZoomMagnifier.qml:386
 #, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"

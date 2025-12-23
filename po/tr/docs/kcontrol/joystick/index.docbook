@@ -7,7 +7,7 @@
 <article id="joystick" lang="&language;">
 <articleinfo>
 <title
->Oyun Kumandası</title>
+>Oyun Kolu</title>
 <authorgroup>
 <author
 ><firstname
@@ -39,7 +39,7 @@
 </authorgroup>
 
 <date
->2015-04-09</date>
+>2015‒04‒09</date>
 <releaseinfo
 >Plasma 5.3</releaseinfo>
 
@@ -51,9 +51,9 @@
 <keyword
 >oyun çubuğu</keyword>
 <keyword
->kumanda</keyword>
+>kol</keyword>
 <keyword
->oyun pedi</keyword>
+>oyun kolu</keyword>
 <keyword
 >kalibre et</keyword>
 </keywordset>
@@ -61,22 +61,22 @@
 
 <sect1 id="kcm_joystick">
 <title
->Oyun Kumandasını Kalibre Et</title>
+>Oyun Kolunu Kalibre Et</title>
 
 <para
->Bu modül, oyun kumandanızı kalibre etmenin yanı sıra oyun kumandanızdaki hangi işlevlerin hangi mantıksal düğme veya eksenle eşlemlendiğini görmeniz için bir arayüz sağlar.</para>
+>Bu modül, oyun kolunuzu kalibre etmenin yanı sıra koldaki hangi işlevlerin hangi mantıksal düğme veya eksenle eşlemlendiğini görmeniz için bir arayüz sağlar.</para>
 
 <para>
 <screenshot>
 <screeninfo
->İşte oyun kumandası modülünün bir ekran görüntüsü</screeninfo>
+>İşte oyun kolu modülünün bir ekran görüntüsü</screeninfo>
   <mediaobject>
     <imageobject>
       <imagedata fileref="joystick-main.png" format="PNG"/>
     </imageobject>
     <textobject>
       <phrase
->Oyun kumandası modülü</phrase>
+>Oyun kolu modülü</phrase>
     </textobject>
   </mediaobject>
 </screenshot>
@@ -90,9 +90,9 @@
 ></term>
 <listitem>
 <para
->Burada aygıtın mantıksal konumunu görebilirsiniz. Birden fazla oyun kumandanız varsa hangisini yapılandıracağınızı da seçebilirsiniz. </para>
+>Burada aygıtın mantıksal konumunu görebilirsiniz. Birden fazla oyun kolunuz varsa hangisini yapılandıracağınızı da seçebilirsiniz. </para>
 <para
->Bilgisayarınızda kendiliğinden oyun kumandası bulunmazsa ve bağlı olduğunu biliyorsanız doğru aygıt dosyasını buraya girebilirsiniz. </para>
+>Bilgisayarınızda bir oyun kolu kendiliğinden bulunamazsa ve bağlı olduğundan eminseniz doğru aygıt dosyasını buraya girebilirsiniz. </para>
 </listitem>
 </varlistentry>
 
@@ -103,9 +103,9 @@
 ></term>
 <listitem>
 <para
->Oyun kumandanızın çubuğunun X ve Y eksenlerinin çizilen konumu. Oyun çubuğunun yolunu bir noktadan diğerine çizmek için <guibutton
+>Oyun kolu çubuğunun X ve Y eksenlerinin çizilen konumu. Oyun çubuğunun yolunu bir noktadan diğerine çizmek için <guibutton
 >İzi göster</guibutton
->'i etkinleştirin. </para>
+>’i etkinleştirin. </para>
 <tip
 ><para
 >Oyun çubuğu bu grafiğin her noktasına ulaşamıyorsa veya doğru merkezlemiyorsa aygıtınızı kalibre etmeniz gerekir. </para
@@ -121,7 +121,7 @@
 ></term>
 <listitem>
 <para
->Oyun kumandanızdaki düğmelerin basılı durumunu ve düğmelerin doğru şekilde eşlenip eşlemlenmediğini görebileceğiniz bir yer. Bir düğmeye basıldığında, basılan düğmenin mantıksal numarasının (bilgisayarın gördüğü şekliyle) yanında <guilabel
+>Oyun kolunuzdaki düğmelerin basılı durumunu ve düğmelerin doğru şekilde eşlenip eşlemlenmediğini görebileceğiniz bir yer. Bir düğmeye basıldığında, basılan düğmenin mantıksal numarasının (bilgisayarın gördüğü şekliyle) yanında <guilabel
 >BASILDI</guilabel
 > görünür. </para>
 </listitem>
@@ -134,7 +134,7 @@
 ></term>
 <listitem>
 <para
->Bu, eksen konumlarının sayısal değerlerini görüntüler. 0 ortadır ve en yüksek ve en düşük değerler oyun kumandasına ve ilgili eksene bağlıdır. </para>
+>Bu, eksen konumlarının sayısal değerlerini görüntüler. 0 ortadır ve en yüksek ve en düşük değerler oyun koluna ve ilgili eksene bağlıdır. </para>
 </listitem>
 </varlistentry>
 
@@ -147,19 +147,19 @@
 <para
 ><guibutton
 >Kalibre Et</guibutton
->'e tıklamak, oyun çubuklarınızdaki her bir ekseni kalibre etmek için bir iletişim kutusu açar. </para>
+>’e tıklamak, oyun çubuklarınızdaki her bir ekseni kalibre etmek için bir iletişim kutusu açar. </para>
 
 <para>
 <screenshot>
 <screeninfo
->Oyun kumandanızı kalibre etmek</screeninfo>
+>Oyun kolunuzu kalibre etmek</screeninfo>
   <mediaobject>
     <imageobject>
       <imagedata fileref="joystick-calibration.png" format="PNG"/>
     </imageobject>
     <textobject>
       <phrase
->Oyun kumandanızı kalibre etmek</phrase>
+>Oyun kolunuzu kalibre etmek</phrase>
     </textobject>
   </mediaobject>
 </screenshot>

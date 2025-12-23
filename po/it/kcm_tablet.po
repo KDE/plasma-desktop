@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-07 00:44+0000\n"
-"PO-Revision-Date: 2025-12-06 19:17+0100\n"
+"PO-Revision-Date: 2025-12-17 15:43+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -484,16 +484,13 @@ msgid "No pad inputs found"
 msgstr "Non è stata trovata nessuna tavoletta da disegno"
 
 #: ui/MissingPadTab.qml:16
-#, fuzzy, kde-format
-#| msgid ""
-#| "There's no buttons or other inputs detected. This could mean you're "
-#| "missing a driver for this device."
+#, kde-format
 msgid ""
 "No buttons or other inputs were detected. This could mean the driver for "
 "this device is missing."
 msgstr ""
-"Non ci sono pulsanti o altri ingressi rilevati. Ciò potrebbe significare che "
-"in questo dispositivo manca un driver."
+"Non sono rilevati pulsanti o altri ingressi. Ciò potrebbe significare che il "
+"driver di questo dispositivo è mancante."
 
 #: ui/PadTab.qml:37
 #, kde-format

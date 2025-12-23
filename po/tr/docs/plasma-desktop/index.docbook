@@ -70,7 +70,7 @@
 >&FDLNotice;</legalnotice>
 
 <date
->2021-07-23</date>
+>2021‒07‒23</date>
 <releaseinfo
 >Plasma 5.20</releaseinfo>
 
@@ -122,7 +122,7 @@
 >&plasma; Araç Takımları ve Kapsamaları</title>
 
 <para
->&plasma;'nın özü iki ana bağlamda değerlendirilebilir: </para>
+>&plasma;’nın özü iki ana bağlamda değerlendirilebilir: </para>
 
 <variablelist>
 <varlistentry>
@@ -282,11 +282,11 @@
 >sağ</mousebutton
 > fare düğmesiyle tıklayın ve onu <guilabel
 >Sık Kullanılanlar</guilabel
->'a (veya doğrudan panelin içine veya masaüstüne) eklemek için <guilabel
+>’a (veya doğrudan panelin içine veya masaüstüne) eklemek için <guilabel
 >Sık Kullanılanlara Ekle</guilabel
->'yi seçin. Unutmayın, bunu yapmadan önce masaüstünde herhangi bir değişiklik yapmak için <mousebutton
+>’yi seçin. Unutmayın, bunu yapmadan önce masaüstünde herhangi bir değişiklik yapmak için <mousebutton
 >sağ</mousebutton
-> tıklayarak &plasma;'nın <quote
+> tıklayarak &plasma;’nın <quote
 >kilidini açmanız</quote
 > gerekiyor).</para>
 </sect2>
@@ -300,7 +300,7 @@
 >sağ</mousebutton
 > tıklayıp <guimenuitem
 >Alternatifler</guimenuitem
->'i seçerek yapabilirsiniz. </para>
+>’i seçerek yapabilirsiniz. </para>
 <screenshot>
 <screeninfo
 >Uygulama menüsü</screeninfo>
@@ -325,7 +325,7 @@
 >sağ</mousebutton
 > tıklayın ve <guimenuitem
 >Uygulama Başlatıcısı Ögesini Yapılandır</guimenuitem
->'ı seçin. </para>
+>’ı seçin. </para>
 <screenshot>
 <screeninfo
 >Uygulama başlatıcısı ayarları</screeninfo>
@@ -377,7 +377,7 @@
 <para
 >Diğer bir öntanımlı panel ögesi ise geleneksel uygulamalar ve araç takımları tarafından rıhtım olarak kullanılan <application
 >Sistem Tepsisi</application
->'dir. <application
+>’dir. <application
 >Sistem Tepsisi</application
 > ögesine sağ tıklamak, görüntülenecek girdileri ve bunların görünürlüğünü ayarlayabileceğiniz ayarlar iletişim kutusunu açmanıza olanak tanır. </para>
 <screenshot>
@@ -401,8 +401,8 @@
 
 <para
 >Sistem tepsisinde yer alan simgelerden biri de genellikle <application
->Aygıt Bildirici</application
->'dir. Bir &USB; disk bağladığınızda onu &dolphin; veya başka bir ilişkili uygulamayla açıp açmamak istediğinizi soran bir iletişim kutusu belirir. </para>
+>Aygıt Bildiricisi</application
+>’dir. Bir &USB; disk bağladığınızda onu &dolphin; veya başka bir ilişkili uygulamayla açıp açmamak istediğinizi soran bir iletişim kutusu belirir. </para>
 <para>
 <screenshot>
 <screeninfo
@@ -447,8 +447,8 @@
 </para>
 <para
 >Aygıt adının etrafındaki gölgeli kutuda herhangi bir yeri tıklamak (ancak varsa çıkar/bağlantıyı kes simgesini tıklamak), o aygıt için olası eylemlerin listesini gösterecek biçimde girişi genişletir. Eylemler dizisi aygıta bağlıdır; <application
->Aygıt Bildirici</application
->'nin içerik menüsünden veya &systemsettings; penceresinin <ulink url="help:/kcontrol/solid-actions/index.html"
+>Aygıt Bildiricisi</application
+>’nin içerik menüsünden veya &systemsettings; penceresinin <ulink url="help:/kcontrol/solid-actions/index.html"
 >Aygıt Eylemleri</ulink
 > ve <ulink url="help:/kcontrol/solid-device-automounter/index.html"
 >Çıkarılabilir Aygıtlar</ulink
@@ -473,7 +473,7 @@
 <para
 ><application
 >Sistem Tepsisi</application
->'ndeki bazı girdiler, alandan tasarruf etmek için gizlenmiştir. Bu girdileri görüntülemek için küçük beyaz yukarı ok simgesine <inlinemediaobject
+>’ndeki bazı girdiler, alandan tasarruf etmek için gizlenmiştir. Bu girdileri görüntülemek için küçük beyaz yukarı ok simgesine <inlinemediaobject
 ><imageobject
 ><imagedata fileref="system-tray-up-arrow.png" format="PNG"/> </imageobject
 ></inlinemediaobject
@@ -487,11 +487,11 @@
 <para
 >Öntanımlı panelde en sağdaki &plasma; araç takımı <application
 >Sayısal Saat</application
->'i barındırır. Bu saat, çeşitli saat dilimlerindeki saati görüntüleyebilir ve büyüklüğü ayarlanabilir. Saat, çevresindeki alanın büyüklüğüne göre yazıtipi boyutunu ayarlar (bu durumda panelin). Tarihi görüntülemeyi seçerseniz bu saat, &systemsettings; <guilabel
+>’i barındırır. Bu saat, çeşitli saat dilimlerindeki saati görüntüleyebilir ve büyüklüğü ayarlanabilir. Saat, çevresindeki alanın büyüklüğüne göre yazıtipi puntosunu ayarlar (bu durumda panelin). Tarihi görüntülemeyi seçerseniz bu saat, &systemsettings; <guilabel
 >Yazıtipi</guilabel
 > bölümündeki <guimenuitem
 >Küçük yazıtipi</guimenuitem
-> ayarı kullanılarark görüntülenir. Zaman ise geri kalan alanı kaplar. Özet olarak, görüntülemek isteyeceğiniz bilgi miktarını sığdığı sürece siz seçersiniz. Daha fazla bilgi görüntülemek istiyorsanız paneli daha büyük yapın veya saati rahatça büyüyebileceği masaüstüne koyun. </para>
+> ayarı kullanılarak görüntülenir. Zaman ise geri kalan alanı kaplar. Özet olarak, görüntülemek isteyeceğiniz bilgi miktarını sığdığı sürece siz seçersiniz. Daha fazla bilgi görüntülemek istiyorsanız paneli daha büyük yapın veya saati rahatça büyüyebileceği masaüstüne koyun. </para>
 </sect2>
 
 <sect2 id="panel-pager">
@@ -501,13 +501,13 @@
 <para
 >Panelinizdeki isteğe bağlı ögelerden biri de <application
 >Sayfalayıcı</application
->'dır. Sanal masaüstleriniz arasında geçiş yapmanızı sağlar. <guimenuitem
+>’dır. Sanal masaüstleriniz arasında geçiş yapmanızı sağlar. <guimenuitem
 >Satır sayısı</guimenuitem
 > seçeneği ile <application
 >Sayfalayıcı</application
->'nın yerleşiminde değişiklik yaparsanız bu, &kwin;’in <guimenuitem
+>’nın yerleşiminde değişiklik yaparsanız bu, &kwin;’in <guimenuitem
 >Masaüstü Izgarası</guimenuitem
->'nda gösterilen yerleşimi ve canlandırmaları da etkiler. Daha büyük sayfalayıcılar için <guimenuitem
+>’nda gösterilen yerleşimi ve canlandırmaları da etkiler. Daha büyük sayfalayıcılar için <guimenuitem
 >Pencerelerin simgelerini görüntüle</guimenuitem
 > seçeneği genelde işe yarar. </para>
 </sect2>
@@ -584,7 +584,7 @@
 >Masaüstü, aslında başka bir kapsamadır. Uygulamacıklar üzerinde boyut sınırlandırması yapmayan. Uygulamacıklar serbestçe taşınabilir ve boyutlandırılabilir. Kilidi açılmış bir masaüstünde, &plasma; araç takımlar, onların üzerine fareyi getirdiğinizde bir dörtgen gösterirler. Bu uygulamacık; paneli taşımanıza, yeniden boyutlandırmanıza, yeniden konumlandırmanıza ve yeniden hizalamanıza olanak sağlar. Ayrıca, &plasma; masaüstüne sürükleyip bırakmayı da halleder. Köşedeki düğmeler yeniden boyutlandırmak, döndürmek, yapılandırmak ve kaldırmak için kullanılır. Döndürüldüğünde, bir &plasma; araç takımı saat 12 yönüne manyetik olarak çekilir; böylelikle onu düzgün bir duruma rahatlıkla geri sokabilirsiniz. Öntanımlı olarak, çoğu uygulamacık yeniden boyutlandırılırken en-boy oranını korur. Bir uygulamacığı serbestçe yeniden boyutlandırmak istiyorsanız yeniden boyutlarken &Ctrl; düğmesini basılı tutun. </para>
 
 <para
->Masaüstüne sağ tıklamak size duvar kağıdını, kullanılan yerleşimi ve fare eylemlerini değiştirme olanağı sağlar. Ayrıca &knewstuff; ile yeni duvar kağıtları indirmenize izin verir. </para>
+>Masaüstüne sağ tıklamak size duvar kağıdını, kullanılan yerleşimi ve fare eylemlerini değiştirme olanağı sağlar. Ayrıca &knewstuff; ile yeni duvar kâğıtları indirmenize izin verir. </para>
 <para
 ><guilabel
 >İnce Ayarlar</guilabel
@@ -655,7 +655,7 @@
 <para
 ><guilabel
 >Masaüstü Ayarları</guilabel
->'ndan <guilabel
+>’ndan <guilabel
 >Klasör Görünümü</guilabel
 > yerleşimini seçerseniz bir Klasör Görünümünü tüm masaüstü olarak kullanabilir ve "eski tarz" masaüstü anlayışını tümüyle değiştirebilirsiniz. </para>
 </sect1>
@@ -689,7 +689,7 @@
 <para
 ><guilabel
 >K Çalıştır</guilabel
-> &systemsettings; modülünü açmak ve &krunner;'da neyi nasıl arayacağınızı yapılandırmak için <inlinemediaobject
+> &systemsettings; modülünü açmak ve &krunner;’da neyi nasıl arayacağınızı yapılandırmak için <inlinemediaobject
 ><imageobject
 ><imagedata fileref="krunner-configure.png" format="PNG"/> </imageobject
 ></inlinemediaobject
@@ -719,7 +719,7 @@
 </screenshot>
 
 <para
->Boş bir &krunner;'da &Down; düğmesine basarsanız son varlıkların geçmişi gösterilir. Bir arama sonucu çağrıldıktan sonra, onun sorgusu en başa taşınır, böylelikle sürekli kullanılan komutlar hiçbir zaman bu liste dışına çıkmaz. </para>
+>Boş bir &krunner;’da &Down; düğmesine basarsanız son varlıkların geçmişi gösterilir. Bir arama sonucu çağrıldıktan sonra, onun sorgusu en başa taşınır, böylelikle sürekli kullanılan komutlar hiçbir zaman bu liste dışına çıkmaz. </para>
 <para
 ><inlinemediaobject
 ><imageobject
@@ -742,7 +742,7 @@
 >Etkinlikler</quote
 > çubuğunu görüntülediğinizde önceden tanımlanmış etkinliklerden birini seçebilirsiniz veya <guilabel
 >Etkinlik Oluştur</guilabel
-> seçeneği ile zevkinize göre yapılandırarak yeni bir etkinlik oluşturabilirsiniz. &plasma;'nın etkinlikleri ve &kwin;'in masaüstü ızgarası aslında aynıdır ancak köken itibariyle farklıdır. Sanal masaüstleri pencereleri gruplandırıp düzenlerken &plasma;'nın etkinlikleri &plasma; araç takımlarını gruplandırır ve düzenler. Bu yolla etkinlikler arasında geçiş yapabilir ve erişmek istediğiniz görevleri destekleyen &plasma; araç takımlarına ulaşabilirsiniz. Karikatürlerle, bulmacalarla ve diğer &plasma; araç takımları ile bir <quote
+> seçeneği ile zevkinize göre yapılandırarak yeni bir etkinlik oluşturabilirsiniz. &plasma;’nın etkinlikleri ve &kwin;’in masaüstü ızgarası aslında aynıdır ancak köken itibariyle farklıdır. Sanal masaüstleri pencereleri gruplandırıp düzenlerken &plasma;’nın etkinlikleri &plasma; araç takımlarını gruplandırır ve düzenler. Bu yolla etkinlikler arasında geçiş yapabilir ve erişmek istediğiniz görevleri destekleyen &plasma; araç takımlarına ulaşabilirsiniz. Karikatürlerle, bulmacalarla ve diğer &plasma; araç takımları ile bir <quote
 >Boş zaman</quote
 > etkinliği veya <acronym
 >RSS</acronym
@@ -763,7 +763,7 @@
 ></keycombo
 > düğmelerine basın) <guibutton
 >Etkinliği Durdur</guibutton
-> düğmesine, kırmızı 'X''e basıp (veya <keycombo action="simul"
+> düğmesine, kırmızı “X”e basıp (veya <keycombo action="simul"
 >&Alt;<keycap
 >D</keycap
 ></keycombo
