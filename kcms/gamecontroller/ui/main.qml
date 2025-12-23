@@ -53,6 +53,15 @@ KCM.SimpleKCM {
         visible: deviceCombo.count !== 0
         spacing: Kirigami.Units.largeSpacing
 
+        Kirigami.InlineMessage {
+            Layout.fillWidth: true
+            visible: !plasmaIntegrationSwitch.checked
+            type: Kirigami.MessageType.Warning
+            position: Kirigami.InlineMessage.Position.Header
+            showCloseButton: true
+            text: i18nc("@label:textbox", "Controller will no longer prevent system idling / suspend.")
+        }
+
         RowLayout {
             spacing: Kirigami.Units.largeSpacing
 
@@ -148,17 +157,6 @@ KCM.SimpleKCM {
                 }
             }
 
-            Kirigami.InlineMessage {
-                Layout.fillWidth: true
-                type: Kirigami.MessageType.Warning
-                 text: i18nc("@label:textbox", "Controller will no longer prevent system idling / suspend.")
-                visible: !plasmaIntegrationSwitch.checked
-
-                leftPadding: Application.layoutDirection === Qt.LeftToRight ?
-                    plasmaIntegrationSwitch.indicator.width + plasmaIntegrationSwitch.spacing + plasmaIntegrationSwitch.padding : padding
-                rightPadding: Application.layoutDirection === Qt.RightToLeft ?
-                    plasmaIntegrationSwitch.indicator.width + plasmaIntegrationSwitch.spacing + plasmaIntegrationSwitch.padding : padding
-            }
             Item { Layout.fillHeight: true }
         }
 
