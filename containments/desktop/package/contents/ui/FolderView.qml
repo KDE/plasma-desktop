@@ -798,7 +798,7 @@ FocusScope {
 
                 delegate: FolderItemDelegate {
                     width: gridView.cellWidth
-                    height: contentHeight || gridView.cellHeight
+                    height: contentHeight ? Math.min(contentHeight, gridView.cellHeight) : gridView.cellHeight
                     isOnRootView: main.isRootView
                 }
 
