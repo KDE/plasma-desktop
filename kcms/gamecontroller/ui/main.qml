@@ -135,7 +135,7 @@ KCM.SimpleKCM {
 
                 QQC2.Switch {
                     id: plasmaIntegrationSwitch
-                    text: i18nc("@label:textbox", "Enable Plasma integration")
+                    text: i18nc("@label:textbox", "Allow using as pointer and keyboard")
                     checked: KWinPlugin.pluginEnabled
 
                     onToggled: {
@@ -144,15 +144,16 @@ KCM.SimpleKCM {
                 }
 
                 Kirigami.ContextualHelpButton {
-                    toolTipText: xi18nc("@info:tooltip", "Allow this controller to act like mouse and keyboard in Plasma and non-game applications.<nl/><nl/>This will prevent the computer from going to sleep or turning off the screen.<nl/><nl/>Games can always use the controller.")
+                    toolTipText: xi18nc("@info:tooltip", "Allow this controller to act like mouse and keyboard in Plasma and non-game applications.<nl/><nl/>This will prevent the computer from going to sleep or turning off the screen. See System Settings -> System -> Power Management.<nl/><nl/>Games can always use the controller.")
                 }
             }
 
-            QQC2.Label {
+            Kirigami.InlineMessage {
+                Layout.fillWidth: true
+                type: Kirigami.InlineMessage.Warning
+                text: i18n("Controller will no longer prevent system idling / suspend.")
                 visible: !plasmaIntegrationSwitch.checked
-                text: i18nc("@label:textbox", "Games can always use the controller.")
-                textFormat: Text.PlainText
-                font: Kirigami.Theme.smallFont
+
                 leftPadding: Application.layoutDirection === Qt.LeftToRight ?
                     plasmaIntegrationSwitch.indicator.width + plasmaIntegrationSwitch.spacing + plasmaIntegrationSwitch.padding : padding
                 rightPadding: Application.layoutDirection === Qt.RightToLeft ?
