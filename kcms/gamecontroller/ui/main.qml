@@ -159,7 +159,7 @@ KCM.SimpleKCM {
                 }
 
                 Kirigami.ContextualHelpButton {
-                    toolTipText: xi18nc("@info:tooltip", "Allow this controller to act like pointer and keyboard in Plasma and non-game applications.<nl/><nl/>This will prevent the computer from going to sleep or turning off the screen. See System Settings -> System -> Power Management.<nl/><nl/>Games can always use the controller.")
+                    toolTipText: xi18nc("@info:tooltip", "Allow this controller to act like pointer and keyboard in Plasma and non-game applications.<nl/><nl/>Games can always use the controller.")
                 }
             }
 
