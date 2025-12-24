@@ -47,13 +47,18 @@ KCM.SimpleKCM {
         }
     }
 
-    Kirigami.InlineMessage {
-        Layout.fillWidth: true
-        visible: !plasmaIntegrationSwitch.checked && deviceCombo.count !== 0
-        type: Kirigami.MessageType.Warning
-        position: Kirigami.InlineMessage.Position.Header
-        showCloseButton: true
-        text: i18nc("@info:usagetip", "The system may automatically go to sleep or lock the screen while the controller is in use. Consider manually blocking them while using the controller, or enable automatic blocking by allowing the use as pointer and keyboard.")
+    headerPaddingEnabled: false // Let the InlineMessages touch the edges
+    header: {
+        spacing: Kirigami.Units.smallSpacing
+
+        Kirigami.InlineMessage {
+            Layout.fillWidth: true
+            visible: !plasmaIntegrationSwitch.checked && deviceCombo.count !== 0
+            type: Kirigami.MessageType.Warning
+            position: Kirigami.InlineMessage.Position.Header
+            showCloseButton: true
+            text: i18nc("@info:usagetip", "The system may automatically go to sleep or lock the screen while the controller is in use. Consider manually blocking them while using the controller, or enable automatic blocking by allowing the use as pointer and keyboard.")
+        }
     }
 
     ColumnLayout {
@@ -84,72 +89,72 @@ KCM.SimpleKCM {
             }
         }
 
-        RowLayout {
-            spacing: Kirigami.Units.largeSpacing
+            RowLayout {
+                spacing: Kirigami.Units.largeSpacing
 
-            Layout.fillWidth: true
+                Layout.fillWidth: true
 
-            QQC2.Label {
-                text: i18nc("@label game controller device type (wheel, joystick, game controller, etc.)", "Device type:")
-                textFormat: Text.PlainText
-            }
+                QQC2.Label {
+                    text: i18nc("@label game controller device type (wheel, joystick, game controller, etc.)", "Device type:")
+                    textFormat: Text.PlainText
+                }
 
-            QQC2.Label {
-                id: typeLabel
-                text: deviceType
-            }
-        }
-
-        RowLayout {
-            spacing: Kirigami.Units.largeSpacing
-
-            Layout.fillWidth: true
-
-            QQC2.Label {
-                text: i18nc("@label game controller controller type (which brand, etc.)", "Controller type:")
-                textFormat: Text.PlainText
-            }
-
-            QQC2.Label {
-                id: controllerTypeLabel
-                text: deviceControllerType
-            }
-        }
-
-        RowLayout {
-            spacing: Kirigami.Units.largeSpacing
-
-            Layout.fillWidth: true
-
-            QQC2.Label {
-                text: i18nc("@label:textbox", "Connection type:")
-                textFormat: Text.PlainText
-            }
-
-            QQC2.Label {
-                id: connectionTypeLabel
-                text: deviceConnectionType
-            }
-        }
-
-        RowLayout {
-            spacing: Kirigami.Units.smallSpacing
-            Layout.fillWidth: true
-
-            QQC2.Switch {
-                id: plasmaIntegrationSwitch
-                text: i18nc("@option:check Allow using a game controller as a pointer and keyboard", "Allow using as pointer and keyboard")
-                checked: KWinPlugin.pluginEnabled
-
-                onToggled: {
-                    KWinPlugin.pluginEnabled = checked
+                QQC2.Label {
+                    id: typeLabel
+                    text: deviceType
                 }
             }
 
-            Kirigami.ContextualHelpButton {
-                toolTipText: xi18nc("@info:tooltip", "Allow this controller to act like pointer and keyboard devices in Plasma and non-game applications.<nl/><nl/>Games can always use the controller.")
+            RowLayout {
+                spacing: Kirigami.Units.largeSpacing
+
+                Layout.fillWidth: true
+
+                QQC2.Label {
+                    text: i18nc("@label game controller controller type (which brand, etc.)", "Controller type:")
+                    textFormat: Text.PlainText
+                }
+
+                QQC2.Label {
+                    id: controllerTypeLabel
+                    text: deviceControllerType
+                }
             }
-        }
+
+            RowLayout {
+                spacing: Kirigami.Units.largeSpacing
+
+                Layout.fillWidth: true
+
+                QQC2.Label {
+                    text: i18nc("@label:textbox", "Connection type:")
+                    textFormat: Text.PlainText
+                }
+
+                QQC2.Label {
+                    id: connectionTypeLabel
+                    text: deviceConnectionType
+                }
+            }
+
+            RowLayout {
+                spacing: Kirigami.Units.smallSpacing
+                Layout.fillWidth: true
+
+                QQC2.Switch {
+                    id: plasmaIntegrationSwitch
+                    text: i18nc("@option:check Allow using a game controller as a pointer and keyboard", "Allow using as pointer and keyboard")
+                    checked: KWinPlugin.pluginEnabled
+
+                    onToggled: {
+                        KWinPlugin.pluginEnabled = checked
+                    }
+                }
+
+                Kirigami.ContextualHelpButton {
+                    toolTipText: xi18nc("@info:tooltip", "Allow this controller to act like pointer and keyboard devices in Plasma and non-game applications.<nl/><nl/>Games can always use the controller.")
+                }
+            }
 
         RowLayout {
             spacing: Kirigami.Units.largeSpacing
