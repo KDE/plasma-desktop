@@ -48,7 +48,7 @@ KCMGameController::~KCMGameController()
 bool KCMGameController::isPluginEnabled() const
 {
     KConfigGroup plugins(KSharedConfig::openConfig("kwinrc"), QStringLiteral("Plugins"));
-    return plugins.readEntry(m_pluginId + QStringLiteral("Enabled"), false);
+    return plugins.readEntry(m_pluginId + QStringLiteral("Enabled"), true);
 }
 
 void KCMGameController::setPluginEnabled(bool enabled)
