@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-23 00:43+0000\n"
-"PO-Revision-Date: 2025-09-25 19:11+0300\n"
+"PO-Revision-Date: 2025-12-23 10:27+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -1004,7 +1004,7 @@ msgstr "Пропорційно"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with mouse cursor"
-msgstr ""
+msgstr "Область збільшення рухається синхронно із вказівником миші"
 
 #: ui/ZoomMagnifier.qml:133
 #, kde-format
@@ -1017,20 +1017,22 @@ msgstr "За центром"
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor stays centered on-screen, except near screen edges"
 msgstr ""
+"Вказівник миші завжди лишається у центрі екрана, окрім випадків розташування "
+"на краях екрана"
 
 #: ui/ZoomMagnifier.qml:138
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
-msgstr "За центром"
+msgstr "За центром (строго)"
 
 #: ui/ZoomMagnifier.qml:139
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor stays centered on-screen, even near screen edges"
 msgstr ""
+"Вказівник миші завжди лишається у центрі екрана, навіть при розташуванні на "
+"краях екрана"
 
 #: ui/ZoomMagnifier.qml:143
 #, kde-format
@@ -1042,7 +1044,7 @@ msgstr "Надіслати"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor pushes zoom area at screen edges"
-msgstr ""
+msgstr "Вказівник миші виштовхує область збільшення на краї екрана"
 
 #: ui/ZoomMagnifier.qml:148
 #, kde-format
@@ -1054,7 +1056,7 @@ msgstr "Вимкнено"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow mouse cursor"
-msgstr ""
+msgstr "Область збільшення не синхронізовано з вказівником миші"
 
 #: ui/ZoomMagnifier.qml:166
 #, kde-format

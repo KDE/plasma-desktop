@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-23 00:43+0000\n"
-"PO-Revision-Date: 2025-09-25 15:10+0200\n"
+"PO-Revision-Date: 2025-12-23 09:40+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -1000,7 +1000,7 @@ msgstr "Proporcional"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with mouse cursor"
-msgstr ""
+msgstr "L'àrea de zoom es mou amb sincronia amb el cursor del ratolí"
 
 #: ui/ZoomMagnifier.qml:133
 #, kde-format
@@ -1013,20 +1013,22 @@ msgstr "Centrat"
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor stays centered on-screen, except near screen edges"
 msgstr ""
+"El cursor del ratolí roman centrat a la pantalla, excepte a prop de les "
+"vores de la pantalla"
 
 #: ui/ZoomMagnifier.qml:138
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
-msgstr "Centrat"
+msgstr "Centrat (estricte)"
 
 #: ui/ZoomMagnifier.qml:139
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor stays centered on-screen, even near screen edges"
 msgstr ""
+"El cursor del ratolí roman centrat a la pantalla, inclús a prop de les vores "
+"de la pantalla"
 
 #: ui/ZoomMagnifier.qml:143
 #, kde-format
@@ -1038,7 +1040,7 @@ msgstr "Empeny"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor pushes zoom area at screen edges"
-msgstr ""
+msgstr "El cursor del ratolí empeny l'àrea de zoom a les vores de la pantalla"
 
 #: ui/ZoomMagnifier.qml:148
 #, kde-format
@@ -1050,7 +1052,7 @@ msgstr "Desactivat"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow mouse cursor"
-msgstr ""
+msgstr "L'àrea de zoom no segueix el cursor del ratolí"
 
 #: ui/ZoomMagnifier.qml:166
 #, kde-format

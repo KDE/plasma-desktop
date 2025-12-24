@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-23 00:43+0000\n"
-"PO-Revision-Date: 2025-09-26 10:17+0200\n"
+"PO-Revision-Date: 2025-12-23 13:30+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.0\n"
 "X-Text-Markup: kde4\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
@@ -1019,6 +1019,7 @@ msgstr "Proportionnel"
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with mouse cursor"
 msgstr ""
+"La zone de zoom se déplace de façon coordonnée avec le pointeur de souris"
 
 #: ui/ZoomMagnifier.qml:133
 #, kde-format
@@ -1031,20 +1032,22 @@ msgstr "Centré"
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor stays centered on-screen, except near screen edges"
 msgstr ""
+"Le pointeur de la souris reste au centre de l'écran, sauf près des bords de "
+"l'écran"
 
 #: ui/ZoomMagnifier.qml:138
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
-msgstr "Centré"
+msgstr "Centré (Strict)"
 
 #: ui/ZoomMagnifier.qml:139
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor stays centered on-screen, even near screen edges"
 msgstr ""
+"Le pointeur de la souris reste au centre de l'écran, même près des bords de "
+"l'écran"
 
 #: ui/ZoomMagnifier.qml:143
 #, kde-format
@@ -1057,6 +1060,7 @@ msgstr "Pousser"
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor pushes zoom area at screen edges"
 msgstr ""
+"Le pointeur de souris repousse la zone de zoom sur les bords de l'écran"
 
 #: ui/ZoomMagnifier.qml:148
 #, kde-format
@@ -1068,7 +1072,7 @@ msgstr "Désactivé"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow mouse cursor"
-msgstr ""
+msgstr "La zone de zoom ne suit pas le pointeur de souris"
 
 #: ui/ZoomMagnifier.qml:166
 #, kde-format

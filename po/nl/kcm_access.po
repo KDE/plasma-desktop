@@ -17,14 +17,14 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-23 00:43+0000\n"
-"PO-Revision-Date: 2025-09-25 15:34+0200\n"
+"PO-Revision-Date: 2025-12-23 17:16+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
@@ -999,7 +999,7 @@ msgstr "Proportioneel"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with mouse cursor"
-msgstr ""
+msgstr "Zoomgebied beweegt gelijk met de muiscursor"
 
 #: ui/ZoomMagnifier.qml:133
 #, kde-format
@@ -1012,20 +1012,20 @@ msgstr "Gecentreerd"
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor stays centered on-screen, except near screen edges"
 msgstr ""
+"Muiscursor blijft gecentreerd op het scherm, behalve nabij de schermranden"
 
 #: ui/ZoomMagnifier.qml:138
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
-msgstr "Gecentreerd"
+msgstr "Gecentreerd (strikt)"
 
 #: ui/ZoomMagnifier.qml:139
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor stays centered on-screen, even near screen edges"
 msgstr ""
+"Muiscursor blijft gecentreerd op het scherm, zelfs nabij de schermranden"
 
 #: ui/ZoomMagnifier.qml:143
 #, kde-format
@@ -1037,7 +1037,7 @@ msgstr "Push"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor pushes zoom area at screen edges"
-msgstr ""
+msgstr "Muiscursor drukt het zoomgebied aan de schermranden"
 
 #: ui/ZoomMagnifier.qml:148
 #, kde-format
@@ -1049,7 +1049,7 @@ msgstr "Uitgeschakeld"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow mouse cursor"
-msgstr ""
+msgstr "Zoomgebied volgt niet de muiscursor"
 
 #: ui/ZoomMagnifier.qml:166
 #, kde-format

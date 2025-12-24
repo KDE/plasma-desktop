@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-07 00:44+0000\n"
-"PO-Revision-Date: 2025-11-14 15:52+0100\n"
+"PO-Revision-Date: 2025-12-13 14:51+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -482,10 +482,9 @@ msgid "Pad"
 msgstr "Pad"
 
 #: ui/MissingPadTab.qml:15
-#, fuzzy, kde-format
-#| msgid "No drawing tablets found"
+#, kde-format
 msgid "No pad inputs found"
-msgstr "Kein Grafiktablett gefunden"
+msgstr "Keine Tabletteingaben gefunden"
 
 #: ui/MissingPadTab.qml:16
 #, kde-format
@@ -493,6 +492,8 @@ msgid ""
 "No buttons or other inputs were detected. This could mean the driver for "
 "this device is missing."
 msgstr ""
+"Es wurden keine Knöpfe oder andere Eingabegeräte erkannt. Das könnte "
+"bedeuten, dass der Treiber für dieses Gerät fehlt."
 
 #: ui/PadTab.qml:37
 #, kde-format

@@ -18,15 +18,15 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-23 00:43+0000\n"
-"PO-Revision-Date: 2025-11-08 21:10-0300\n"
-"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
+"PO-Revision-Date: 2025-12-23 06:10-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
@@ -999,7 +999,7 @@ msgstr "Proporcional"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with mouse cursor"
-msgstr ""
+msgstr "A área de zoom move-se em sincronia com o cursor do mouse"
 
 #: ui/ZoomMagnifier.qml:133
 #, kde-format
@@ -1012,20 +1012,21 @@ msgstr "Centralizado"
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor stays centered on-screen, except near screen edges"
 msgstr ""
+"O cursor do mouse permanece centralizado na tela, exceto próximo às bordas "
+"da tela"
 
 #: ui/ZoomMagnifier.qml:138
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
-msgstr "Centralizado"
+msgstr "Centralizado (Estrito)"
 
 #: ui/ZoomMagnifier.qml:139
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor stays centered on-screen, even near screen edges"
 msgstr ""
+"O cursor do mouse permanece centralizado na tela, mesmo próximo às bordas"
 
 #: ui/ZoomMagnifier.qml:143
 #, kde-format
@@ -1037,7 +1038,7 @@ msgstr "Empurrar"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor pushes zoom area at screen edges"
-msgstr ""
+msgstr "O cursor do mouse empurra a área de zoom nas bordas da tela"
 
 #: ui/ZoomMagnifier.qml:148
 #, kde-format
@@ -1049,7 +1050,7 @@ msgstr "Desabilitado"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow mouse cursor"
-msgstr ""
+msgstr "A área de zoom não acompanha o cursor do mouse"
 
 #: ui/ZoomMagnifier.qml:166
 #, kde-format

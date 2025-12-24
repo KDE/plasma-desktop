@@ -13,15 +13,15 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-23 00:43+0000\n"
-"PO-Revision-Date: 2025-09-25 18:32+0300\n"
-"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
+"PO-Revision-Date: 2025-12-23 10:22+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
@@ -996,7 +996,7 @@ msgstr "Oransal"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with mouse cursor"
-msgstr ""
+msgstr "Yakınlaştırma alanı, fare imleci ile eşzamanlı hareket eder"
 
 #: ui/ZoomMagnifier.qml:133
 #, kde-format
@@ -1008,21 +1008,20 @@ msgstr "Ortalanmış"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor stays centered on-screen, except near screen edges"
-msgstr ""
+msgstr "Fare imleci, ekran kenarları dışında ekranda ortalanmış olarak durur"
 
 #: ui/ZoomMagnifier.qml:138
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
-msgstr "Ortalanmış"
+msgstr "Ortalanmış (Katı)"
 
 #: ui/ZoomMagnifier.qml:139
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor stays centered on-screen, even near screen edges"
 msgstr ""
+"Fare imleci, ekran kenarları yakınında bile ekranda ortalanmış olarak durur"
 
 #: ui/ZoomMagnifier.qml:143
 #, kde-format
@@ -1034,7 +1033,7 @@ msgstr "İt"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor pushes zoom area at screen edges"
-msgstr ""
+msgstr "Fare imleci, ekran kenarlarında yakınlaştırma alanını iter"
 
 #: ui/ZoomMagnifier.qml:148
 #, kde-format
@@ -1046,7 +1045,7 @@ msgstr "Devre dışı"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow mouse cursor"
-msgstr ""
+msgstr "Yakınlaştırma alanı fare imlecini takip etmez"
 
 #: ui/ZoomMagnifier.qml:166
 #, kde-format

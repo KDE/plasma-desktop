@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-23 00:43+0000\n"
-"PO-Revision-Date: 2025-09-25 06:00+0200\n"
+"PO-Revision-Date: 2025-12-23 03:51+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
@@ -985,7 +985,7 @@ msgstr "პროპორციული"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with mouse cursor"
-msgstr ""
+msgstr "ადგილის გადიდება თაგუნას კურსორთან ერთად მოძრაობს"
 
 #: ui/ZoomMagnifier.qml:133
 #, kde-format
@@ -997,21 +997,19 @@ msgstr "შუაზე გასწორებული"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor stays centered on-screen, except near screen edges"
-msgstr ""
+msgstr "თაგუნას კურსორი რჩება ცენტრში, ეკრანის წიბოებთან სიახლოვის გარდა"
 
 #: ui/ZoomMagnifier.qml:138
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
-msgstr "შუაზე გასწორებული"
+msgstr "შუაზე გასწორებული (მკაცრად)"
 
 #: ui/ZoomMagnifier.qml:139
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor stays centered on-screen, even near screen edges"
-msgstr ""
+msgstr "თაგუნას კურსორი რჩება ცენტრში ეკრანის წიბოებთან ახლოსაც კი"
 
 #: ui/ZoomMagnifier.qml:143
 #, kde-format
@@ -1023,7 +1021,7 @@ msgstr "პუში"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor pushes zoom area at screen edges"
-msgstr ""
+msgstr "თაგუნას კურსორი გადიდების არეს ეკრანის წიბოებისკენ გასწევს"
 
 #: ui/ZoomMagnifier.qml:148
 #, kde-format
@@ -1035,7 +1033,7 @@ msgstr "გამორთული"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow mouse cursor"
-msgstr ""
+msgstr "გადიდების არე თაგუნას კურსორს არ მიჰყვება"
 
 #: ui/ZoomMagnifier.qml:166
 #, kde-format
