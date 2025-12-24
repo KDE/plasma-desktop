@@ -53,11 +53,11 @@ KCM.SimpleKCM {
 
         Kirigami.InlineMessage {
             Layout.fillWidth: true
-            visible: !plasmaIntegrationSwitch.checked
+            visible: !plasmaIntegrationSwitch.checked && deviceCombo.count !== 0
             type: Kirigami.MessageType.Warning
             position: Kirigami.InlineMessage.Position.Header
             showCloseButton: true
-            text: i18nc("@label:textbox", "In this mode of operation, the system may automatically go to sleep or lock the screen while the controller is in use. Consider manually blocking them while using the controller.")
+            text: i18nc("@label:textbox", "The system may automatically go to sleep or lock the screen while the controller is in use. Consider manually blocking them while using the controller, or enable automatic blocking by allowing the use as pointer and keyboard.")
         }
 
     }
