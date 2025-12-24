@@ -57,7 +57,7 @@ KCM.SimpleKCM {
             type: Kirigami.MessageType.Warning
             position: Kirigami.InlineMessage.Position.Header
             showCloseButton: true
-            text: i18nc("@label:textbox", "Controller will no longer prevent system idling / suspend.")
+            text: i18nc("@label:textbox", "In this mode of operation, the system may automatically go to sleep or lock the screen while the controller is in use. Consider manually blocking them while using the controller.")
         }
 
     }
@@ -150,7 +150,7 @@ KCM.SimpleKCM {
 
                 QQC2.Switch {
                     id: plasmaIntegrationSwitch
-                    text: i18nc("@label:textbox", "Allow using as pointer and keyboard")
+                    text: i18nc("@option:check Allow using a game controller as a pointer and keyboard", "Allow using as pointer and keyboard")
                     checked: KWinPlugin.pluginEnabled
 
                     onToggled: {
