@@ -47,11 +47,9 @@ KCM.SimpleKCM {
         }
     }
 
-    ColumnLayout {
-        anchors.fill: parent
-
-        visible: deviceCombo.count !== 0
-        spacing: Kirigami.Units.largeSpacing
+    headerPaddingEnabled: false // Let the InlineMessages touch the edges
+    header: ColumnLayout {
+        spacing: Kirigami.Units.smallSpacing
 
         Kirigami.InlineMessage {
             Layout.fillWidth: true
@@ -61,6 +59,14 @@ KCM.SimpleKCM {
             showCloseButton: true
             text: i18nc("@label:textbox", "Controller will no longer prevent system idling / suspend.")
         }
+
+    }
+
+    ColumnLayout {
+        anchors.fill: parent
+
+        visible: deviceCombo.count !== 0
+        spacing: Kirigami.Units.largeSpacing
 
         RowLayout {
             spacing: Kirigami.Units.largeSpacing
