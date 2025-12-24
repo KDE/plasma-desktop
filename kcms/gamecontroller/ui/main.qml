@@ -48,17 +48,13 @@ KCM.SimpleKCM {
     }
 
     headerPaddingEnabled: false // Let the InlineMessages touch the edges
-    header: {
-        spacing: Kirigami.Units.smallSpacing
-
-        Kirigami.InlineMessage {
+    header: Kirigami.InlineMessage {
             Layout.fillWidth: true
             visible: !plasmaIntegrationSwitch.checked && deviceCombo.count !== 0
             type: Kirigami.MessageType.Warning
             position: Kirigami.InlineMessage.Position.Header
             showCloseButton: true
             text: i18nc("@info:usagetip", "The system may automatically go to sleep or lock the screen while the controller is in use. Consider manually blocking them while using the controller, or enable automatic blocking by allowing the use as pointer and keyboard.")
-        }
     }
 
     ColumnLayout {
