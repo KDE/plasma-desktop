@@ -57,7 +57,7 @@ KCM.SimpleKCM {
             type: Kirigami.MessageType.Warning
             position: Kirigami.InlineMessage.Position.Header
             showCloseButton: true
-            text: i18nc("@label:textbox", "The system may automatically go to sleep or lock the screen while the controller is in use. Consider manually blocking them while using the controller, or enable automatic blocking by allowing the use as pointer and keyboard.")
+            text: i18nc("@info:usagetip", "The system may automatically go to sleep or lock the screen while the controller is in use. Consider manually blocking them while using the controller, or enable automatic blocking by allowing the use as pointer and keyboard.")
         }
 
     }
@@ -145,7 +145,7 @@ KCM.SimpleKCM {
             }
 
             RowLayout {
-                spacing: Kirigami.Units.largeSpacing
+                spacing: Kirigami.Units.smallSpacing
                 Layout.fillWidth: true
 
                 QQC2.Switch {
@@ -159,7 +159,7 @@ KCM.SimpleKCM {
                 }
 
                 Kirigami.ContextualHelpButton {
-                    toolTipText: xi18nc("@info:tooltip", "Allow this controller to act like pointer and keyboard in Plasma and non-game applications.<nl/><nl/>Games can always use the controller.")
+                    toolTipText: xi18nc("@info:tooltip", "Allow this controller to act like pointer and keyboard devices in Plasma and non-game applications.<nl/><nl/>Games can always use the controller.")
                 }
             }
 
