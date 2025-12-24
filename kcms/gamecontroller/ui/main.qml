@@ -47,7 +47,6 @@ KCM.SimpleKCM {
         }
     }
 
-    headerPaddingEnabled: false // Let the InlineMessages touch the edges
     Kirigami.InlineMessage {
         Layout.fillWidth: true
         visible: !plasmaIntegrationSwitch.checked && deviceCombo.count !== 0
