@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-22 00:44+0000\n"
-"PO-Revision-Date: 2025-09-26 09:34+0200\n"
+"PO-Revision-Date: 2025-12-19 13:03+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -246,25 +246,19 @@ msgid "Export %1"
 msgstr "Экспорт %1"
 
 #: ui/main.qml:231
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible %1 is the name of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@action:button %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Изменить команду для %1"
 
 #: ui/main.qml:258
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible %1 is the name of a shortcut category"
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@action:button %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Удалить все комбинации клавиш для %1"
 
 #: ui/main.qml:280
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible"
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@action:button"
 msgid "Undo deletion"
 msgstr "Отменить удаление"
@@ -278,20 +272,19 @@ msgstr "Не найдено ни одного объекта, удовлетво
 #, kde-format
 msgctxt "@info"
 msgid "These shortcuts will be deleted when changes are applied."
-msgstr ""
+msgstr "При применении изменений эти комбинации клавиш будут удалены."
 
 #: ui/main.qml:362
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo"
-msgstr ""
+msgstr "Отменить"
 
 #: ui/main.qml:363
-#, fuzzy, kde-format
-#| msgid "No default shortcuts"
+#, kde-format
 msgctxt "@action:button"
 msgid "Undo deleting shortcuts"
-msgstr "Отсутствуют комбинации по умолчанию"
+msgstr "Отменить удаление назначения комбинаций клавиш"
 
 #: ui/main.qml:399
 #, kde-format
@@ -441,14 +434,13 @@ msgstr "Добавить схему комбинаций клавиш"
 #, kde-format
 msgctxt "@action:button Collapse shortcuts view"
 msgid "Collapse"
-msgstr ""
+msgstr "Свернуть"
 
 #: ui/ShortcutActionDelegate.qml:32
-#, fuzzy, kde-format
-#| msgid "No active shortcuts"
+#, kde-format
 msgctxt "@action:button"
 msgid "Expand to configure shortcuts"
-msgstr "Не назначено"
+msgstr "Разверните, чтобы настроить комбинации клавиш"
 
 #: ui/ShortcutActionDelegate.qml:38
 #, kde-format

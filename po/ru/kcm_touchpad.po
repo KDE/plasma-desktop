@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-05 00:44+0000\n"
-"PO-Revision-Date: 2025-05-18 21:02+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2025-12-19 13:18+0200\n"
+"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.12.0\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
@@ -127,11 +127,9 @@ msgid "General:"
 msgstr "Основное:"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgctxt "Coasting"
-#| msgid "Enable"
+#, kde-format
 msgid "Enable device"
-msgstr "Включить"
+msgstr "Использовать устройство"
 
 #: ui/main.qml:115
 #, kde-format
@@ -151,25 +149,21 @@ msgid "This can interfere with video games."
 msgstr "Это может помешать видеоиграм."
 
 #: ui/main.qml:174
-#, fuzzy, kde-format
-#| msgid "Swap left and right buttons."
+#, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
-msgstr "Поменять назначение левой и правой кнопок."
+msgstr "Назначение левой и правой кнопок:"
 
 #: ui/main.qml:175
-#, fuzzy, kde-format
-#| msgid "Left-handed mode"
+#, kde-format
 msgid "Swap (left-handed mode)"
-msgstr "Для левшей"
+msgstr "Поменять (для левшей)"
 
 #: ui/main.qml:191
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Press left and right buttons to middle-click"
+#, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
-msgstr "Нажатие левой и правой кнопок — нажатие средней кнопки"
+msgstr "Одновременное нажатие — нажатие средней кнопки"
 
 #: ui/main.qml:204
 #, kde-format
@@ -219,20 +213,19 @@ msgid "Faster"
 msgstr "Быстрее"
 
 #: ui/main.qml:390
-#, fuzzy, kde-format
-#| msgid "Scrolling:"
+#, kde-format
 msgid "Scroll by:"
 msgstr "Прокрутка:"
 
 #: ui/main.qml:409
 #, kde-format
 msgid "Moving two fingers anywhere"
-msgstr ""
+msgstr "Перемещение двух пальцев в любом месте"
 
 #: ui/main.qml:416
 #, kde-format
 msgid "Moving one finger on edge"
-msgstr ""
+msgstr "Перемещение одного пальца по краю"
 
 #: ui/main.qml:424
 #, kde-format
@@ -245,18 +238,15 @@ msgid "Disable horizontal scrolling"
 msgstr "Отключить горизонтальную прокрутку"
 
 #: ui/main.qml:460
-#, fuzzy, kde-format
-#| msgid "Right-click"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'right-click by pressing "
 "bottom-right corner/pressing with two fingers'"
 msgid "Right-click by:"
-msgstr "Нажатие правой кнопки"
+msgstr "Щелчок правой кнопкой:"
 
 #: ui/main.qml:481
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated right-click"
-#| msgid "Press bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-right "
 "corner'"
@@ -267,7 +257,7 @@ msgstr "Нажатие правого нижнего угла"
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
-msgstr "Нажатие обоих нижних углов — нажатие средней кнопки."
+msgstr "Нажатие по центру внизу — нажатие средней кнопки."
 
 #: ui/main.qml:497
 #, kde-format
@@ -276,36 +266,29 @@ msgid "Middle-click by pressing bottom center."
 msgstr "Нажатие по центру внизу — нажатие средней кнопки."
 
 #: ui/main.qml:505
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated right-click"
-#| msgid "Press touchpad with two fingers"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing with two "
 "fingers'"
 msgid "Pressing anywhere with two fingers"
-msgstr "Нажатие сенсорного экрана двумя пальцами"
+msgstr "Нажатие двумя пальцами в любом месте"
 
 #: ui/main.qml:520
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing with three fingers."
+#, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
-msgstr "Нажатие тремя пальцами — нажатие средней кнопки."
+msgstr "Нажатие тремя пальцами в любом месте — нажатие средней кнопки."
 
 #: ui/main.qml:529
-#, fuzzy, kde-format
-#| msgid "Middle-click"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'middle-click by pressing "
 "bottom-middle edge/by pressing anywhere with three fingers'"
 msgid "Middle-click by:"
-msgstr "Нажатие средней кнопки"
+msgstr "Щелчок средней кнопкой:"
 
 #: ui/main.qml:550
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated middle-click"
-#| msgid "Press bottom middle edge"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-middle "
 "edge'"
@@ -313,9 +296,7 @@ msgid "Pressing bottom-middle edge"
 msgstr "Нажатие внизу посередине"
 
 #: ui/main.qml:557
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated middle-click"
-#| msgid "Press bottom left and bottom right corners"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-left "
 "and bottom-right corners'"
@@ -323,9 +304,7 @@ msgid "Pressing bottom-left and bottom-right corners"
 msgstr "Нажатие левого нижнего и правого нижнего углов"
 
 #: ui/main.qml:564
-#, fuzzy, kde-format
-#| msgctxt "@option:check touchpad integrated middle-click"
-#| msgid "Press touchpad with three fingers"
+#, kde-format
 msgctxt ""
 "@option:check completes the sentence 'middle-click by pressing anywhere with "
 "three fingers'"
@@ -339,8 +318,7 @@ msgid "Tapping:"
 msgstr "Нажатия:"
 
 #: ui/main.qml:581
-#, fuzzy, kde-format
-#| msgid "Tap to Click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Tap to click"
 msgstr "Эмуляция кнопок мыши"
@@ -348,7 +326,7 @@ msgstr "Эмуляция кнопок мыши"
 #: ui/main.qml:597
 #, kde-format
 msgid "Allow dragging after tapping"
-msgstr ""
+msgstr "Разрешить перетаскивание после нажатия"
 
 #: ui/main.qml:610
 #, kde-format

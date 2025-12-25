@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-23 00:43+0000\n"
-"PO-Revision-Date: 2025-09-26 15:35+0200\n"
+"PO-Revision-Date: 2025-12-24 08:28+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 26.03.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
@@ -994,7 +994,7 @@ msgstr "Пропорционално"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with mouse cursor"
-msgstr ""
+msgstr "Областта а увеличението се движи синхронно с курсора на мишката"
 
 #: ui/ZoomMagnifier.qml:133
 #, kde-format
@@ -1007,20 +1007,22 @@ msgstr "Центрирано"
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor stays centered on-screen, except near screen edges"
 msgstr ""
+"Курсорът на мишката остава центриран на екрана, освен близо до краищата на "
+"екрана"
 
 #: ui/ZoomMagnifier.qml:138
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
-msgstr "Центрирано"
+msgstr "Центрирано(стриктно)"
 
 #: ui/ZoomMagnifier.qml:139
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor stays centered on-screen, even near screen edges"
 msgstr ""
+"Курсорът на мишката остава центриран на екрана, дори и близо до краищата на "
+"екрана"
 
 #: ui/ZoomMagnifier.qml:143
 #, kde-format
@@ -1033,6 +1035,7 @@ msgstr "Изтласкване"
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor pushes zoom area at screen edges"
 msgstr ""
+"Курсорът на мишката избутва областта с увеличение към краищата на екрана"
 
 #: ui/ZoomMagnifier.qml:148
 #, kde-format
@@ -1044,7 +1047,7 @@ msgstr "Деактивиран"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow mouse cursor"
-msgstr ""
+msgstr "Областта с увеличение не следва курсора на мишката"
 
 #: ui/ZoomMagnifier.qml:166
 #, kde-format

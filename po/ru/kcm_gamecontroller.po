@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2025-10-12 20:10+0200\n"
+"PO-Revision-Date: 2025-12-19 13:01+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
@@ -138,22 +138,19 @@ msgid "NVidia Shield"
 msgstr "NVidia Shield"
 
 #: device.cpp:41
-#, fuzzy, kde-format
-#| msgid "Switch Left Joycon"
+#, kde-format
 msgid "Switch Left Joy-Con"
-msgstr "Левый Switch Joycon"
+msgstr "Левый Switch Joy-Con"
 
 #: device.cpp:42
-#, fuzzy, kde-format
-#| msgid "Switch Right Joycon"
+#, kde-format
 msgid "Switch Right Joy-Con"
-msgstr "Правый Switch Joycon"
+msgstr "Правый Switch Joy-Con"
 
 #: device.cpp:43
-#, fuzzy, kde-format
-#| msgid "Switch Paired Joycon"
+#, kde-format
 msgid "Switch Paired Joy-Con"
-msgstr "Объединённый Switch Joycon"
+msgstr "Объединённый Switch Joy-Con"
 
 #: device.cpp:48
 #, kde-format

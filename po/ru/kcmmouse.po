@@ -23,14 +23,14 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-04 00:45+0000\n"
-"PO-Revision-Date: 2025-05-18 20:58+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2025-12-19 13:20+0200\n"
+"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.12.0\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Environment: kde\n"
@@ -167,31 +167,24 @@ msgstr "Основное:"
 #: ui/main.qml:88
 #, kde-format
 msgid "Enable device"
-msgstr ""
+msgstr "Использовать устройство"
 
 #: ui/main.qml:105
-#, fuzzy, kde-format
-#| msgid "Swap left and right buttons."
+#, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
-msgstr "Обменять левую и правую кнопки."
+msgstr "Назначение левой и правой кнопок:"
 
 #: ui/main.qml:106
-#, fuzzy, kde-format
-#| msgid "Left-handed mode"
+#, kde-format
 msgid "Swap (left-handed mode)"
-msgstr "Для левшей"
+msgstr "Поменять (для левшей)"
 
 #: ui/main.qml:121
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Pressing the left and right button simultaneously acts as middle-click."
+#, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
-msgstr ""
-"Воспринимать одновременное нажатие левой и правой кнопок как нажатие средней "
-"кнопки."
+msgstr "Одновременное нажатие — нажатие средней кнопки"
 
 #: ui/main.qml:133
 #, kde-format
