@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-23 00:43+0000\n"
-"PO-Revision-Date: 2025-09-27 17:27+0400\n"
+"PO-Revision-Date: 2025-12-24 17:23+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -1010,7 +1010,7 @@ msgstr "متناسب"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with mouse cursor"
-msgstr ""
+msgstr "تتحرك منطقة التكبير/التصغير بالتزامن مع مؤشر الفأرة"
 
 #: ui/ZoomMagnifier.qml:133
 #, kde-format
@@ -1023,20 +1023,19 @@ msgstr "موسّطة"
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor stays centered on-screen, except near screen edges"
 msgstr ""
+"يظل مؤشر الفأرة في منتصف الشاشة، باستثناء المناطق القريبة من حواف الشاشة"
 
 #: ui/ZoomMagnifier.qml:138
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
-msgstr "موسّطة"
+msgstr "موسّطة (صارمة)"
 
 #: ui/ZoomMagnifier.qml:139
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor stays centered on-screen, even near screen edges"
-msgstr ""
+msgstr "يظل مؤشر الفأرة في منتصف الشاشة، حتى بالقرب من حواف الشاشة"
 
 #: ui/ZoomMagnifier.qml:143
 #, kde-format
@@ -1048,7 +1047,7 @@ msgstr "الدفع"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor pushes zoom area at screen edges"
-msgstr ""
+msgstr "مؤشر الفأرة يدفع منطقة التكبير إلى حواف الشاشة"
 
 #: ui/ZoomMagnifier.qml:148
 #, kde-format
@@ -1060,7 +1059,7 @@ msgstr "معطّل"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow mouse cursor"
-msgstr ""
+msgstr "منطقة التكبير لا تتبع مؤشر الفأرة"
 
 #: ui/ZoomMagnifier.qml:166
 #, kde-format
