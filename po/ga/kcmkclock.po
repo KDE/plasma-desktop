@@ -36,16 +36,16 @@ msgstr "Dáta agus Am"
 #. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
 #: dateandtime.ui:30
 #, fuzzy, kde-format
-#| msgid "Set date and time &automatically:"
+#| msgid "Set date and time &automatically"
 msgid "Set date and time &automatically"
-msgstr "Socr&aigh an dáta agus an t-am go huathoibríoch:"
+msgstr "Socr&aigh an dáta agus an t-am go huathoibríoch"
 
 #. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
 #: dateandtime.ui:53
 #, fuzzy, kde-format
-#| msgid "Time server:"
+#| msgid "&Time server:"
 msgid "&Time server:"
-msgstr "Freastalaí ama:"
+msgstr "&Freastalaí ama:"
 
 #. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
 #: dateandtime.ui:86
@@ -75,9 +75,9 @@ msgstr "Crios ama reatha:"
 #. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
 #: dateandtime.ui:161
 #, fuzzy, kde-format
-#| msgid "Search"
+#| msgid "Search…"
 msgid "Search…"
-msgstr "Cuardaigh"
+msgstr "Cuardaigh..."
 
 #: dtime.cpp:61
 #, kde-format
@@ -101,13 +101,15 @@ msgstr ""
 
 #: dtime.cpp:113
 #, fuzzy, kde-format
-#| msgid "Current local time zone:"
+#| msgctxt "%1 is name of time zone"
+#| msgid "Current local time zone: %1"
 msgctxt "%1 is name of time zone"
 msgid "Current local time zone: %1"
-msgstr "Crios ama reatha:"
+msgstr "Crios ama reatha: %1"
 
 #: dtime.cpp:116
 #, fuzzy, kde-format
+#| msgctxt "%1 is name of time zone, %2 is its abbreviation"
 #| msgid "Current local time zone: %1 (%2)"
 msgctxt "%1 is name of time zone, %2 is its abbreviation"
 msgid "Current local time zone: %1 (%2)"
@@ -116,14 +118,16 @@ msgstr "Crios ama reatha: %1 (%2)"
 #: dtime.cpp:203
 #, fuzzy, kde-format
 #| msgid ""
-#| "Public Time Server (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
-#| "north-america.pool.ntp.org,oceania.pool.ntp.org"
+#| "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        "
+#| "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#| "pool.ntp.org"
 msgid ""
 "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
 "pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
 msgstr ""
-"Freastalaí Ama Poiblí (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
-"north-america.pool.ntp.org,oceania.pool.ntp.org"
+"Freastalaí Ama Poiblí (pool.ntp.org),        asia.pool.ntp.org,        "
+"europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool."
+"ntp.org"
 
 #: dtime.cpp:274
 #, kde-format
@@ -224,21 +228,22 @@ msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr "Ní féidir fíordheimhniú/gníomh a rith: %1, %2"
 
 #: main.cpp:133
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Unable to change NTP settings"
 msgid "Unable to change NTP settings"
-msgstr ""
+msgstr "Ní féidir Socruithe NTP a athraigh"
 
 #: main.cpp:144
 #, fuzzy, kde-format
-#| msgid "Unable to contact time server: %1."
+#| msgid "Unable to set current time"
 msgid "Unable to set current time"
-msgstr "Ní féidir dul i dteagmháil leis an bhfreastalaí ama: %1."
+msgstr "Ní féidir ama reatha a shocrú"
 
 #: main.cpp:154
 #, fuzzy, kde-format
-#| msgid "Unable to contact time server: %1."
+#| msgid "Unable to set timezone"
 msgid "Unable to set timezone"
-msgstr "Ní féidir dul i dteagmháil leis an bhfreastalaí ama: %1."
+msgstr "Ní féidir crios ama a shocrú"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"
