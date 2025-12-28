@@ -78,9 +78,9 @@
 ></term>
 <listitem>
 <para
->Se esta configuração estiver ativada, a tela de confirmação de saída será exibida quando você sair, desligar, reiniciar, pressionar o botão liga/desliga ou clicar em botões ou itens de menu rotulados como <guilabel
+>Se esta configuração estiver ativada, a tela de confirmação de logout será exibida quando você fizer logout, desligar, reiniciar, pressionar o botão liga/desliga ou clicar em botões ou itens de menu com o rótulo <guilabel
 >Sair…</guilabel
->. Quando a configuração estiver desativada, seu computador será desconectado, desligado etc. imediatamente após clicar no respectivo botão.</para>
+>. Quando a configuração estiver desativada, seu computador fará logout, desligará etc. imediatamente após clicar no botão correspondente.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -88,7 +88,7 @@
 
 <sect2 id="sessions-restore">
 <title
->Ao iniciar, lançar aplicativos que estavam abertos</title>
+>Ao iniciar, abrir aplicativos que estavam abertos</title>
 <para
 >Você pode escolher uma das três opções, dependendo do que você deseja que aconteça ao acessar o &plasma;:</para>
 

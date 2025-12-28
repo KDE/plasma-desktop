@@ -60,9 +60,9 @@
 </authorgroup>
 
 <date
->09/04/2015</date>
+>08/04/2021</date>
 <releaseinfo
->Plasma 5.3</releaseinfo>
+>Plasma 5.20</releaseinfo>
 
 <keywordset>
 <keyword
@@ -90,9 +90,9 @@
 >Este módulo foi projetado para auxiliar usuários que possuem deficiências auditivas, ou que possuem dificuldade em utilizar um teclado. </para>
 
 <para
->O módulo está dividido em cinco abas: <link linkend="access-bell"
+>O módulo está dividido em seis abas: <link linkend="access-bell"
 ><guilabel
->Campainha</guilabel
+>Campainha do sistema</guilabel
 ></link
 >, <link linkend="access-modifier-keys"
 ><guilabel
@@ -100,14 +100,20 @@
 ></link
 >, <link linkend="access-keyboard-filters"
 ><guilabel
->Filtros do Teclado</guilabel
+>Filtros do teclado</guilabel
 ></link
 >, <link linkend="access-activation-gestures"
 ><guilabel
 >Gestos de ativação</guilabel
 ></link
-> e <guilabel
+>, <link linkend="mouse-navigation"
+><guilabel
+>Navegação do mouse</guilabel
+></link
+> e <link linkend="access-screenreader"
+><guilabel
 >Leitor de tela</guilabel
+></link
 >. </para>
 
 <sect3 id="access-bell">
@@ -139,12 +145,12 @@
 
 <para
 >Para aqueles usuários que possuem dificuldade em ouvir a campainha do sistema, ou para aqueles que possuem um computador silencioso, o &kde; oferece a <emphasis
->campainha visível</emphasis
+>campainha visual</emphasis
 >. Ela fornece um sinal visual (invertendo a tela ou piscando uma cor nela), quando a campainha do sistema normalmente tocaria um som. </para>
 
 <para
 >Para usar a campainha visual, primeiro selecione a caixa de verificação chamada <guilabel
->Usar campainha visível</guilabel
+>Usar campainha visual</guilabel
 >. </para>
 
 <para
@@ -187,12 +193,8 @@
 <listitem>
 <para
 >Se esta opção estive selecionada, o usuário pode pressionar e soltar as teclas &Shift;, &Alt; ou &Ctrl;, e depois clicar noutra tecla para obter uma combinação de teclas (exemplo: <keycombo action="simul"
->&Ctrl; &Alt; <keycap
->Del</keycap
-></keycombo
-> poderia ser feito com &Ctrl; seguido de &Alt; seguido de <keycap
->Del</keycap
->). </para>
+>&Ctrl; &Alt; &Del;</keycombo
+> poderia ser feito com &Ctrl; seguido de &Alt; seguido de &Del;). </para>
 
 <para
 >Nesta seção também existe uma opção <guilabel
@@ -412,6 +414,140 @@ Use system bell whenever a key is rejected
 >, de modo a abrir uma janela que lhe permite editar as notificações das mudanças de estado de todas as teclas.</para>
 
 </sect3>
+
+<sect3 id="mouse-navigation">
+<title
+>Navegação do mouse</title>
+
+<para
+>Esta aba permite configurar as teclas do teclado numérico como um dispositivo tipo mouse. Isso pode ser útil quando você estiver trabalhando em um dispositivo sem outro dispositivo apontador ou quando não tiver outra utilidade para o teclado numérico. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Mover o ponteiro do mouse com o teclado (usando o teclado numérico)</guilabel
+></term>
+<listitem>
+<para
+>Para ativar o modo teclado e mouse, você precisa selecionar a caixa de seleção com o rótulo <guilabel
+>Mover o ponteiro com o teclado (usando o teclado numérico)</guilabel
+>. Ao fazer isso, as outras configurações serão ativadas e você poderá personalizar o comportamento do ponteiro do teclado ainda mais, se necessário. </para>
+<para
+>As várias teclas do teclado numérico movem-se na direção esperada. Observe que você pode mover-se na diagonal, bem como para cima, para baixo, para a esquerda e para a direita. A tecla <keycap
+>5</keycap
+> simula um clique em um botão do ponteiro, normalmente &LMB; Você altera qual botão é simulado usando a tecla <keycap
+>/</keycap
+> (que a transforma em &LMB;), a tecla <keycap
+>*</keycap
+> (que a transforma em &MMB;) e <keycap
+>-</keycap
+> (que a transforma em &RMB;). Usar a tecla <keycap
+>+</keycap
+> simula um clique duplo no botão do ponteiro selecionado. Você pode usar a tecla <keycap
+>0</keycap
+> para simular o pressionamento do botão do ponteiro selecionado (para facilitar o arrastar) e, em seguida, usar a tecla <keycap
+>.</keycap
+> para simular a liberação do botão do ponteiro selecionado. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Atraso da aceleração</guilabel
+></term>
+<listitem>
+<para
+>Este é o tempo (em milissegundos) entre o pressionamento inicial da tecla e o primeiro evento de movimento repetido para aceleração da tecla do mouse. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Intervalo de repetição</guilabel
+></term>
+<listitem>
+<para
+>Este é o tempo em milissegundos entre eventos de movimento repetidos para aceleração do mouse. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Tempo de aceleração</guilabel
+></term>
+<listitem>
+<para
+>Este é o tempo em milissegundos antes que o ponteiro atinja a velocidade máxima de aceleração das teclas do mouse. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Velocidade máxima</guilabel
+></term>
+<listitem>
+<para
+>Esta é a velocidade máxima em pixels por segundo que o ponteiro pode alcançar para a aceleração da tecla do mouse. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Perfil de aceleração</guilabel
+></term>
+<listitem>
+<para
+>Esta é a inclinação da curva de aceleração para a aceleração das teclas do mouse. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-screenreader">
+<title
+><guilabel
+>Leitor de tela</guilabel
+></title>
+
+<para
+>Instale um aplicativo leitor de tela como <ulink url="https://en.wikipedia.org/wiki/Orca_(assistive_technology)"
+>Orca</ulink
+> juntamente com <application
+>speech-dispatcher</application
+>. </para>
+
+<para
+>Teste se o som do disparador de voz funciona usando o comando <command
+>spd-say olá</command
+> em um terminal. </para>
+
+<para
+>Além disso, você precisa de um sintetizador de texto para fala como &eg; o <application
+>espeak</application
+>. </para>
+
+<para
+>Ative o leitor de tela na caixa de seleção, faça logout e reinicie sua sessão de desktop. </para>
+
+<para
+>Para o próprio &plasma;, certifique-se de usar o <guilabel
+>Menu de aplicativos</guilabel
+> tradicional e verifique se este menu possui um atalho de teclado associado (<keycombo action="simul"
+>&Alt;<keycap
+>F1</keycap
+></keycombo
+>). Ao pressionar este atalho, o menu deve abrir e ser lido ao navegar pelo menu com as teclas de seta. </para>
+</sect3>
+
 </sect2>
 
 </sect1>

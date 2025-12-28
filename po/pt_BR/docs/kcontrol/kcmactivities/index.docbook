@@ -1,0 +1,223 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmactivities" lang="&language;">
+<title
+>Atividades</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+><firstname
+>Yuri</firstname
+><surname
+>Chornoivan</surname
+> <email
+>yurchor@ukr.net</email
+></author>
+<othercredit role="translator"
+><firstname
+>Marcus</firstname
+><surname
+>Gama</surname
+><affiliation
+><address
+><email
+>marcus.gama@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>12/04/2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configurações do sistema</keyword>
+<keyword
+>atividade</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="activities">
+<title
+>Atividades</title>
+<sect2 id="activities-intro">
+
+<title
+>Introdução</title>
+
+<para
+>Este módulo permite configurar atividades. Atividades são uma forma de ter várias configurações do &plasma;, cada uma com um conjunto diferente de widgets e temas. Algumas atividades podem ser privadas. Essas atividades não rastreiam suas ações. Por exemplo, elas não rastreiam qual documento você abriu recentemente. </para>
+
+<para
+>O módulo está dividido em três abas: <link linkend="activities-main"
+><guilabel
+>Atividades</guilabel
+></link
+>, <link linkend="activities-switching"
+><guilabel
+>Alternância</guilabel
+></link
+> e <link linkend="activities-privacy"
+><guilabel
+>Privacidade</guilabel
+></link
+>. </para>
+
+<sect3 id="activities-main">
+<title
+><guilabel
+>Atividades</guilabel
+></title>
+
+<para
+>Esta aba lista suas atividades atuais. Passe o cursor do mouse sobre os itens da lista para revelar os botões para configurar ou remover atividades. </para>
+
+<para
+>Use o botão de sobreposição <inlinemediaobject
+><imageobject
+><imagedata fileref="configure.png" format="PNG"/></imageobject
+></inlinemediaobject
+> para configurar a atividade. Você pode alterar os seguintes parâmetros da atividade: </para>
+
+<variablelist>
+    <varlistentry>
+        <term
+><guilabel
+>Ícone</guilabel
+></term>
+        <listitem>
+            <para
+>O ícone de atividade pode ser visto no seletor do gerenciador de atividades do painel do &plasma;. Clique no ícone atual para escolher um ícone do sistema ou navegue pelo sistema de arquivos para selecionar um ícone personalizado. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Nome</guilabel
+></term>
+        <listitem>
+            <para
+>Dê à sua atividade um nome fácil de reconhecer. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Descrição</guilabel
+></term>
+        <listitem>
+            <para
+>Uma descrição em formato livre da atividade que é exibida abaixo do nome no seletor do gerenciador de atividades do painel do &plasma;. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Privacidade</guilabel
+></term>
+        <listitem>
+            <para
+>Marque a opção <guilabel
+>Não rastrear o uso desta atividade</guilabel
+> para desativar o rastreamento da sua atividade. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Atalho para alternar</guilabel
+></term>
+        <listitem>
+            <para
+>Pressione o primeiro botão para inserir o novo atalho para alternar para a atividade. Pressione o segundo botão para remover o atalho atual. </para>
+        </listitem>
+    </varlistentry>
+</variablelist>
+<para
+>Clicar no botão <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> remove a atividade. </para>
+<para
+>Clicar no botão <guibutton
+>Criar nova...</guibutton
+> abaixo da lista abre a janela <guilabel
+>Criar uma nova atividade</guilabel
+>, que é semelhante à janela de configuração de atividade descrita acima. </para>
+</sect3>
+
+<sect3 id="activities-switching">
+<title
+><guilabel
+>Alternar</guilabel
+></title>
+
+<para
+>Aqui, você pode configurar se o &plasma; deve lembrar a <guilabel
+>Área de trabalho virtual atual</guilabel
+> para cada atividade (requer reinicialização). Também é possível configurar atalhos para navegar pela lista de atividades. </para>
+<para
+>Para obter mais informações sobre como usar o sistema de atalhos do &kde;, consulte a seção <ulink url="help:/fundamentals/shortcuts.html"
+><emphasis
+>Usando e personalizando atalhos</emphasis
+> da documentação dos <emphasis
+>Fundamentos do &kde;</emphasis
+></ulink
+>. </para>
+</sect3>
+
+<sect3 id="activities-privacy">
+<title
+><guilabel
+>Privacidade</guilabel
+></title>
+
+<para
+>Esta aba permite configurar o tempo para <guilabel
+>Manter histórico</guilabel
+> de atividades e limpar alguns dados de rastreamento. Use o botão suspenso <guibutton
+>Limpar histórico</guibutton
+> para fazer com o &plasma; <guimenuitem
+>Esquecer a última hora</guimenuitem
+>, <guimenuitem
+>Esquecer as duas últimas horas</guimenuitem
+>, <guimenuitem
+>Esquecer um dia</guimenuitem
+> ou <guimenuitem
+>Esquecer tudo</guimenuitem
+>. </para>
+<para
+>Abaixo, você pode configurar o intervalo de aplicativos para memorizar documentos em suas atividades. Use a opção <guilabel
+>Para todos os aplicativos</guilabel
+> para armazenar todos os dados, a opção <guilabel
+>Não lembrar</guilabel
+> para desativar o armazenamento de dados ou a opção <guilabel
+>Apenas para aplicativos específicos</guilabel
+> para uma seleção mais precisa (clicar no item do aplicativo alterna seu modo atual). </para>
+<para
+>Marque a opção <guilabel
+>Excluir aplicativos que não estão na lista</guilabel
+> para desativar o rastreamento de todos os aplicativos que não estão na lista. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

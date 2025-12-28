@@ -13,15 +13,7 @@
 >Aplicativos padrão</title>
 <authorgroup>
 <author
-><personname
-><firstname
->Burkhard</firstname
-><surname
->Lück</surname
-></personname
-> <email
->lueck@hube-lueck.de</email
-> </author>
+>&Burkhard.Lueck;&Burkhard.Lueck.mail;</author>
 
 <othercredit role="translator"
 ><firstname
@@ -41,9 +33,9 @@
 </authorgroup>
 
 <date
->09/04/2015</date>
+>12/02/2022</date>
 <releaseinfo
->Plasma 5.3</releaseinfo>
+>Plasma 5.24</releaseinfo>
 
 <keywordset>
 <keyword
@@ -59,7 +51,7 @@
 >Neste módulo, você poderá alterar os componentes padrão do &kde;.</para>
 
 <para
->Os componentes são programas que conseguem lidar com algumas tarefas básicas, como um emulador de terminal, um editor de texto ou o cliente de e-mail. As diferentes aplicações do &kde; precisam às vezes de invocar um determinado emulador de console, enviar um e-mail ou mostrar algum texto.</para
+>Os componentes são programas que lidam com tarefas básicas, como o navegador da web, o emulador de terminal, o gerenciador de arquivos, o cliente de e-mail, o mapa eletrônico e o discador. Diferentes aplicativos do &kde; às vezes precisam invocar um emulador de console, enviar um e-mail, gerenciar arquivos e pastas, exibir o mapa ou discar um número no seu telefone.</para
 > 
 
 <para
@@ -70,7 +62,7 @@
 <itemizedlist>
 <listitem>
 <para
->Cliente de e-mail</para>
+>Navegador Web</para>
 </listitem>
 <listitem>
 <para
@@ -78,19 +70,27 @@
 </listitem>
 <listitem>
 <para
+>Cliente de e-mail</para>
+</listitem>
+<listitem>
+<para
 >Emulador de terminal</para>
 </listitem>
 <listitem>
 <para
->Navegador Web</para>
+>Mapa</para>
 </listitem>
 <listitem>
 <para
->Gerenciador de janelas</para>
+>Discador</para>
 </listitem>
 </itemizedlist>
 
 <para
->Clique no componente que deseja configurar. Na parte direita da janela, todos os aplicativos disponíveis para esse serviço serão mostrados, de modo que você possa selecionar seu emulador de terminal, editor de texto, cliente de e-mail, &etc;, favoritos.</para>
+>Clique na caixa de combinação do componente que deseja configurar. Na lista, selecione seu navegador web, gerenciador de arquivos, cliente de e-mail, emulador de terminal, mapa e discador favoritos. Escolha <guimenuitem
+>Outro...</guimenuitem
+> para abrir a caixa de diálogo <guilabel
+>Escolher aplicativo</guilabel
+> e selecione seu aplicativo manualmente.</para>
 
 </article>

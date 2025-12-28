@@ -6,7 +6,7 @@
 ]>
 <article id="baloo" lang="&language;">
 <title
->Configurações da Pesquisa de Arquivos</title>
+>Pesquisa de arquivos</title>
 <articleinfo>
 <authorgroup>
 <author
@@ -33,17 +33,17 @@
 </authorgroup>
 
 <date
->02/03/2016</date>
+>30/01/2023</date>
 <releaseinfo
->Plasma 5.5</releaseinfo>
+>Plasma 5.27</releaseinfo>
 
 <keywordset>
 <keyword
->KDE</keyword>
+>Plasma</keyword>
 <keyword
 >Configurações do Sistema</keyword>
 <keyword
->procurar</keyword>
+>pesquisar</keyword>
 <keyword
 >arquivo</keyword>
 <keyword
@@ -54,20 +54,81 @@
 <para
 >Este módulo das &systemsettings; permite-lhe configurar quais arquivos devem ser indexados para pesquisa rápida. Ela usa internamente uma tecnologia chamada Baloo para pesquisar nos arquivos de forma eficiente. </para>
 
+<para
+>Adicione o widget <guilabel
+>Pesquisar</guilabel
+> ao seu painel ou permita que a pesquisa no &krunner; utilize os resultados de indexação para um acesso mais rápido aos seus documentos. </para>
+
+<para
+>Ative a opção <guilabel
+>Habilitar pesquisa de arquivos</guilabel
+> se desejar usar os recursos de busca da área de trabalho no &dolphin; e em outros aplicativos do &kde;. Desmarque a opção se não desejar usar a busca de arquivos com o Baloo (é possível usar outras tecnologias de busca, como o &kfind;). </para>
+
+<para
+>Use <guilabel
+>Também indexar conteúdo de arquivo</guilabel
+> para ampliar suas pesquisa também ao conteúdo dos arquivos. </para>
+
+<para
+>Marque a opção <guilabel
+>Indexar arquivos e pastas ocultas</guilabel
+> para que o Baloo indexe os arquivos e pastas ocultos. </para>
+
+<note>
+    <para
+>Qualquer nome de arquivo ou pasta que comece com um ponto (<literal
+>.</literal
+>) é oculto por padrão. </para>
+</note>
+
 <variablelist>
 <varlistentry
 ><term
 ><guilabel
->Pastas excluídas</guilabel
+>Configuração específica de pastas</guilabel
 ></term>
 <listitem>
     <para
->Uma lista de pastas que não devem ser pesquisadas. Por padrão, toda a sua pasta $HOME será indexada e mais nenhuma outra unidade. </para>
+>Você é apresentado a uma lista de pastas que podem ser pesquisadas. Por padrão, somente sua pasta <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+> inteira está indexada, e nenhuma outra pasta ou unidade está. </para>
     <para
 >Mídias removíveis nunca serão indexadas por padrão. No entanto, elas podem ser explicitamente removidas da lista de pastas excluídas para serem indexadas. </para>
+    <para
+>É possível usar a caixa de combinação ao lado de cada item da lista para configurar se ele é <guimenuitem
+>Indexado</guimenuitem
+> ou <guimenuitem
+>Não indexado</guimenuitem
+>. </para>
+    <para
+>Use o botão da lixeira para remover um item da lista. </para>
 </listitem>
 </varlistentry>
-
+<varlistentry
+><term
+><guibutton
+>Iniciar a indexação de uma pasta...</guibutton
+>/<guibutton
+>Parar a indexação de uma pasta...</guibutton
+></term>
+<listitem>
+    <para
+>Clicar em qualquer uma das opções mencionadas acima exibe a janela padrão do &plasma; para <guilabel
+>Selecionar uma pasta para filtrar</guilabel
+> e permite que você escolha a pasta a ser tratada. </para>
+</listitem>
+</varlistentry>
 </variablelist>
+
+<para
+>Para mais informações sobre opções de configuração adicionais &eg; como adicionar uma unidade montada fora da sua pasta <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+> leia <ulink url="https://community.kde.org/Baloo/Configuration"
+>Configuração/Baloo</ulink
+>.</para>
 
 </article>

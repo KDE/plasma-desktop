@@ -1,0 +1,178 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="workspaceoptions" lang="&language;">
+<articleinfo>
+<title
+>Comportamento geral</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<othercredit role="translator"
+><firstname
+>Marcus</firstname
+><surname
+>Gama</surname
+><affiliation
+><address
+><email
+>marcus.gama@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>18/05/2022</date>
+
+<releaseinfo
+>&plasma; 5.25</releaseinfo>
+
+<keywordset>
+<keyword
+>Configurações do sistema</keyword>
+<keyword
+>área de trabalho</keyword>
+<keyword
+>espaço de trabalho</keyword>
+</keywordset>
+
+</articleinfo>
+
+<para
+>Este é um módulo para configurar o comportamento do espaço de trabalho </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Exibir dicas informativas ao passar com o mouse</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção estiver marcada, as dicas serão exibidas ao passar o cursor sobre os itens no painel &plasma; ou na área de trabalho.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Exibir retorno visual para alterações de status</guilabel
+></term>
+<listitem>
+<para
+>Se você alterar, &eg;, o brilho e o volume usando o teclado, essas alterações de status serão exibidas em um OSD.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Velocidade da animação</guilabel
+></term>
+<listitem>
+    <para
+>Permite definir a velocidade das animações de efeitos na área de trabalho de <guilabel
+>Lento</guilabel
+> a <guilabel
+>Instantâneo</guilabel
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Clique único para abrir arquivos e pastas</guilabel
+></term>
+<listitem>
+<para
+>Esta é a configuração padrão. Clicar uma vez em um ícone o abrirá. Para selecionar, você pode arrastar o(s) ícone(s) ou clicar <keycombo action="simul"
+>&Ctrl;<mousebutton
+>Botão direito</mousebutton
+></keycombo
+>, ou simplesmente clicar e segurar para arrastá-lo. A seleção também pode ser feita clicando no marcador de seleção do item.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Clique duas vezes para abrir arquivos e pastas</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção não estiver marcada, os ícones/arquivos serão abertos com um único clique do botão <mousebutton
+>esquerdo</mousebutton
+> do mouse. Este comportamento padrão é consistente com o que você esperaria ao clicar em links na maioria dos navegadores da web. Se marcada, no entanto, os ícones/arquivos serão abertos com um clique duplo, enquanto um único clique selecionará apenas o ícone ou arquivo. Este é o comportamento que você pode conhecer de outros desktops ou sistemas operacionais.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Clicar na barra de rolagem</guimenu
+><guimenuitem
+>Rola uma página para cima e para baixo</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Esta é a configuração padrão. Clicar com o botão esquerdo do mouse na barra de rolagem move a barra de rolagem uma página.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Clicar na barra de rolagem</guimenu
+><guimenuitem
+>Rola até o local clicado</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Ativa o comportamento quando a posição da alça de rolagem salta diretamente para a posição no documento onde você clicou. Este é o comportamento que você pode conhecer de outros desktops ou sistemas operacionais.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Modo de toque</guimenu
+><guimenuitem
+>Habilitar automaticamente quando necessário/Nunca habilitado</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>O modo de toque será automaticamente ativado sempre que o sistema detectar uma tela sensível ao toque mas nenhum mouse ou touchpad. Por exemplo, quando o teclado de um laptop conversível é virado ou desconectado.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Sempre habilitado (padrão)/Nunca habilitado</guimenuitem
+></term>
+<listitem>
+<para
+>No modo de toque muitos elementos da interface se tornarão maiores para acomodar mais facilmente as interações com os toques.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>
