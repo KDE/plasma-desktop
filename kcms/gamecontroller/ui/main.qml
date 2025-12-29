@@ -21,6 +21,29 @@ KCM.SimpleKCM {
     readonly property var deviceControllerType: device?.controllerTypeName ?? ""
     readonly property var deviceConnectionType: device?.connectionType ?? ""
 
+    actions: [
+        Kirigami.Action  {
+            displayComponent: RowLayout {
+                spacing: Kirigami.Units.smallSpacing
+                Layout.fillWidth: true
+
+                QQC2.Switch {
+                    id: plasmaIntegrationSwitch
+                    text: i18nc("@option:check Allow using game controllers as a pointer and keyboard", "Allow using as pointer and keyboard")
+                    checked: KWinPlugin.pluginEnabled
+
+                    onToggled: {
+                        KWinPlugin.pluginEnabled = checked
+                    }
+                }
+
+                Kirigami.ContextualHelpButton {
+                    toolTipText: xi18nc("@info:tooltip", "Allow game controllers to act like pointer and keyboard devices in Plasma and non-game applications.<nl/><nl/>Games can always use the controller.")
+                }
+            }
+        }
+    ]
+
     Kirigami.PlaceholderMessage {
         icon.name: "input-gamepad"
         text: i18n("No game controllers found")
@@ -130,25 +153,6 @@ KCM.SimpleKCM {
             QQC2.Label {
                 id: connectionTypeLabel
                 text: deviceConnectionType
-            }
-        }
-
-        RowLayout {
-            spacing: Kirigami.Units.smallSpacing
-            Layout.fillWidth: true
-
-            QQC2.Switch {
-                id: plasmaIntegrationSwitch
-                text: i18nc("@option:check Allow using a game controller as a pointer and keyboard", "Allow using as pointer and keyboard")
-                checked: KWinPlugin.pluginEnabled
-
-                onToggled: {
-                    KWinPlugin.pluginEnabled = checked
-                }
-            }
-
-            Kirigami.ContextualHelpButton {
-                toolTipText: xi18nc("@info:tooltip", "Allow this controller to act like pointer and keyboard devices in Plasma and non-game applications.<nl/><nl/>Games can always use the controller.")
             }
         }
 
