@@ -25,7 +25,4 @@ public:
 
 Q_SIGNALS:
     void pluginEnabledChanged();
-
-private:
-    QString m_pluginId = QStringLiteral("gamecontroller");
 };

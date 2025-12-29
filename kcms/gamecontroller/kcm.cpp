@@ -24,6 +24,11 @@
 
 K_PLUGIN_CLASS_WITH_JSON(KCMGameController, "kcm_gamecontroller.json")
 
+namespace
+{
+static const QString s_kwinPluginId = QStringLiteral("gamecontroller");
+}
+
 KCMGameController::KCMGameController(QObject *parent, const KPluginMetaData &metaData)
     : KQuickConfigModule(parent, metaData)
 {
@@ -46,13 +51,13 @@ KCMGameController::~KCMGameController()
 bool KCMGameController::isPluginEnabled() const
 {
     KConfigGroup plugins(KSharedConfig::openConfig("kwinrc"), QStringLiteral("Plugins"));
-    return plugins.readEntry(m_pluginId + QStringLiteral("Enabled"), true);
+    return plugins.readEntry(s_kwinPluginId + QStringLiteral("Enabled"), true);
 }
 
 void KCMGameController::setPluginEnabled(bool enabled)
 {
     KConfigGroup plugins(KSharedConfig::openConfig("kwinrc"), QStringLiteral("Plugins"));
-    plugins.writeEntry(m_pluginId + QStringLiteral("Enabled"), enabled, KConfig::Notify);
+    plugins.writeEntry(s_kwinPluginId + QStringLiteral("Enabled"), enabled, KConfig::Notify);
     plugins.sync();
 
     QDBusMessage message;
@@ -61,13 +66,13 @@ void KCMGameController::setPluginEnabled(bool enabled)
                                                  QStringLiteral("/Plugins"),
                                                  QStringLiteral("org.kde.KWin.Plugins"),
                                                  QStringLiteral("LoadPlugin"));
-        message << m_pluginId;
+        message << s_kwinPluginId;
     } else {
         message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
                                                  QStringLiteral("/Plugins"),
                                                  QStringLiteral("org.kde.KWin.Plugins"),
                                                  QStringLiteral("UnloadPlugin"));
-        message << m_pluginId;
+        message << s_kwinPluginId;
     }
     QDBusConnection::sessionBus().asyncCall(message);
     Q_EMIT pluginEnabledChanged();
