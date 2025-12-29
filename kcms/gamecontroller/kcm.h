@@ -20,8 +20,8 @@ public:
     KCMGameController(QObject *parent, const KPluginMetaData &metaData);
     ~KCMGameController() override;
 
-    Q_INVOKABLE bool isPluginEnabled() const;
-    Q_INVOKABLE void setPluginEnabled(bool enabled);
+    bool isPluginEnabled() const;
+    void setPluginEnabled(bool enabled);
 
 Q_SIGNALS:
     void pluginEnabledChanged();
