@@ -20,9 +20,10 @@ KCM.SimpleKCM {
     readonly property var deviceType: device?.type ?? ""
     readonly property var deviceControllerType: device?.controllerTypeName ?? ""
     readonly property var deviceConnectionType: device?.connectionType ?? ""
+    readonly property bool kwinPluginEnabled: KWinPlugin.pluginEnabled
 
     actions: [
-        Kirigami.Action  {
+        Kirigami.Action {
             displayComponent: RowLayout {
                 spacing: Kirigami.Units.smallSpacing
                 Layout.fillWidth: true
@@ -30,7 +31,7 @@ KCM.SimpleKCM {
                 QQC2.Switch {
                     id: plasmaIntegrationSwitch
                     text: i18nc("@option:check Allow using game controllers as a pointer and keyboard", "Allow using as pointer and keyboard")
-                    checked: KWinPlugin.pluginEnabled
+                    checked: kwinPluginEnabled
 
                     onToggled: {
                         KWinPlugin.pluginEnabled = checked
@@ -72,12 +73,12 @@ KCM.SimpleKCM {
 
     headerPaddingEnabled: false // Let the InlineMessages touch the edges
     header: Kirigami.InlineMessage {
-            Layout.fillWidth: true
-            visible: !plasmaIntegrationSwitch.checked && deviceCombo.count !== 0
-            type: Kirigami.MessageType.Warning
-            position: Kirigami.InlineMessage.Position.Header
-            showCloseButton: true
-            text: i18nc("@info:usagetip", "The system may automatically go to sleep or lock the screen while the controller is in use. Consider manually blocking them while using the controller, or enable automatic blocking by allowing the use as pointer and keyboard.")
+        Layout.fillWidth: true
+        visible: !kwinPluginEnabled && deviceCombo.count !== 0
+        type: Kirigami.MessageType.Warning
+        position: Kirigami.InlineMessage.Position.Header
+        showCloseButton: true
+        text: i18nc("@info:usagetip", "The system may automatically go to sleep or lock the screen while the controller is in use. Consider manually blocking them while using the controller, or enable automatic blocking by allowing the use as pointer and keyboard.")
     }
 
     ColumnLayout {
