@@ -37,8 +37,6 @@ KCMGameController::KCMGameController(QObject *parent, const KPluginMetaData &met
     qmlRegisterType<ButtonModel>(uri, 1, 0, "ButtonModel");
     qmlRegisterType<HatModel>(uri, 1, 0, "HatModel");
     qmlRegisterSingletonInstance(uri, 1, 0, "KWinPlugin", this);
-
-    load();
 }
 
 KCMGameController::~KCMGameController()
