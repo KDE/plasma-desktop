@@ -41,7 +41,7 @@ Kirigami.ApplicationWindow {
 
     function copyAndReport(text: string) : void {
         CopyHelper.copyTextToClipboard(text)
-        window.showPassiveNotification(i18n("%1 copied to the clipboard", text))
+        window.showPassiveNotification(i18nc("@info:status passive notification as action feedback", "%1 copied to the clipboard", text))
     }
 
     function addToRecents(text: string, description: string): void {
@@ -55,7 +55,7 @@ Kirigami.ApplicationWindow {
     Kirigami.Action {
         id: recentAction
         checked: window.pageStack.get(0).title === text
-        text: i18n("Recent")
+        text: i18nc("@title page title for Recent Emoji view, and sidebar label for it", "Recent")
 
         icon.name: "document-open-recent-symbolic"
         onTriggered: {

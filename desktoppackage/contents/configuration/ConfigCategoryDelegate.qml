@@ -23,7 +23,7 @@ QQC2.ItemDelegate {
 
     Accessible.role: Accessible.PageTab
     Accessible.name: model.name
-    Accessible.description: i18nd("plasma_shell_org.kde.plasma.desktop", "Open configuration page")
+    Accessible.description: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:whatsthis Accessible description for sidebar entries opening configuration page", "Open configuration page")
     Accessible.onPressAction: delegate.clicked()
 
     focus: highlighted // need to actually focus highlighted items for the screen reader to see them

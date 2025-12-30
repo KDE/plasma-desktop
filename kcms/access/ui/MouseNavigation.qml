@@ -50,7 +50,7 @@ Kirigami.FormLayout {
         onValueChanged: kcm.mouseSettings.accelerationDelay = value
 
         textFromValue: function(value, locale) {
-            return i18np("%1 ms", "%1 ms", value)
+            return i18ncp("@label:valuesuffix acceleration delay spinbox %1 is value", "%1 ms", "%1 ms", value)
         }
         validator: IntValidatorWithSuffix {
             bottom: accelerationDelay.from
@@ -81,7 +81,7 @@ Kirigami.FormLayout {
             top: repeatInterval.to
         }
         textFromValue: function(value, locale) {
-            return i18np("%1 ms", "%1 ms", value)
+            return i18ncp("@label:valuesuffix repeat interval spinbox %1 is value", "%1 ms", "%1 ms", value)
         }
 
         valueFromText: (text, locale) => {
@@ -107,7 +107,7 @@ Kirigami.FormLayout {
             top: accelerationTime.to
         }
         textFromValue: function(value, locale) {
-            return i18np("%1 ms", "%1 ms", value)
+            return i18ncp("@label:valuesuffix acceleration time spinbox %1 is value", "%1 ms", "%1 ms", value)
         }
 
         valueFromText: (text, locale) => {

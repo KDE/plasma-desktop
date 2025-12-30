@@ -314,7 +314,7 @@ MouseArea {
                     // a top panel
                     visible: configurationArea.currentApplet?.applet.Plasmoid.internalAction("remove")?.enabled ?? false
                     icon.name: "edit-delete-remove-symbolic"
-                    text: i18n("Remove")
+                    text: i18nc("@action:inmenu removes widget", "Remove")
                     onClicked: {
                         configurationArea.currentApplet.applet.Plasmoid.internalAction("remove").trigger();
                         configurationArea.currentApplet = null;
@@ -324,8 +324,8 @@ MouseArea {
                     id: configureButton
                     Layout.fillWidth: true
                     icon.name: "configure"
-                    text: i18n("Configure…")
-                    visible: configurationArea.currentApplet?.applet.Plasmoid.hasConfigurationInterface ?? false
+                    text: i18nc("@action:inmenu opens widget config dialog", "Configure…")
+                    visible: configurationArea.currentApplet?.applet.plasmoid.hasConfigurationInterface ?? false
                     onClicked: {
                         configurationArea.currentApplet.applet.Plasmoid.internalAction("configure").trigger();
                         configurationArea.currentApplet = null;
@@ -335,7 +335,7 @@ MouseArea {
                     id: alternativesButton
                     Layout.fillWidth: true
                     icon.name: "widget-alternatives"
-                    text: i18n("Show Alternatives…")
+                    text: i18nc("@action:inmenu opens widget alternatives explorer", "Show Alternatives…")
                     onClicked: {
                         configurationArea.currentApplet.applet.Plasmoid.internalAction("alternatives").trigger();
                         // We keep this popup open for a brief interval of time instead
@@ -354,7 +354,7 @@ MouseArea {
                 Kirigami.Heading {
                     Layout.fillWidth: true
                     visible: panelSpacerWidth.visible
-                    text: i18n("Spacer width")
+                    text: i18nc("@label:spinbox", "Spacer width")
                     textFormat: Text.PlainText
                     level: 3
                     horizontalAlignment: Text.AlignHCenter

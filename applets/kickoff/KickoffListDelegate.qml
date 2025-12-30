@@ -115,8 +115,8 @@ AbstractKickoffItemDelegate {
             sourceComponent: Badge {
                 text: root.isCategoryListItem ? "" : Accessible.name
                 Accessible.name: i18nc("Newly installed app, badge, keep short", "New!") // qmllint disable unqualified
-                Accessible.description: root.isCategoryListItem ? i18n("There is a newly installed application in this category") // qmllint disable unqualified
-                                                         : i18n("Newly installed application") // qmllint disable unqualified
+                Accessible.description: root.isCategoryListItem ? i18nc("@info:whatsthis Accessible description for badge", "There is a newly installed application in this category") // qmllint disable unqualified
+                                                         : i18nc("@info:whatsthis Accessible description for badge", "Newly installed application") // qmllint disable unqualified
             }
         }
     }

@@ -49,8 +49,8 @@ KCM.SimpleKCM {
 
     Kirigami.PlaceholderMessage {
         icon.name: "input-gamepad"
-        text: i18n("No game controllers found")
-        explanation: i18n("Connect a wired or wireless controller")
+        text: i18nc("@info placeholdermessage text", "No game controllers found")
+        explanation: i18nc("@info:usagetip placeholdermessage text", "Connect a wired or wireless controller")
         anchors.centerIn: parent
         visible: deviceModel.count === 0
         width: parent.width - (Kirigami.Units.largeSpacing * 4)

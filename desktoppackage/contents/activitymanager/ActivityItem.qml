@@ -200,7 +200,7 @@ Item {
                 elide   : Text.ElideRight
 
                 text: root.current ?
-                        i18nd("plasma_shell_org.kde.plasma.desktop", "Currently being used") :
+                        i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:status currently active activity", "Currently being used") :
                         model.lastTimeUsedString
             }
         }
@@ -240,7 +240,7 @@ Item {
             topPadding: icon.height + 3 * Kirigami.Units.smallSpacing
             actionVisible: dropHighlight.visible
 
-            actionTitle: i18nd("plasma_shell_org.kde.plasma.desktop", "Move to\nthis activity")
+            actionTitle: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action shows when dragging file over item", "Move to\nthis activity")
 
             onTaskDropped: mimeData => {
                 ActivitySwitcher.Backend.dropMove(mimeData, root.activityId);
@@ -270,7 +270,7 @@ Item {
                 bottom: parent.bottom
             }
 
-            actionTitle: i18nd("plasma_shell_org.kde.plasma.desktop", "Show also\nin this activity")
+            actionTitle: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action shows when dragging file over item", "Show also\nin this activity")
 
             onTaskDropped: mimeData => {
                 ActivitySwitcher.Backend.dropCopy(mimeData, root.activityId);
@@ -332,7 +332,7 @@ Item {
                 icon.name: "configure"
                 PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
                 PlasmaComponents.ToolTip.visible: hovered
-                PlasmaComponents.ToolTip.text: i18nd("plasma_shell_org.kde.plasma.desktop", "Configure")
+                PlasmaComponents.ToolTip.text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button tooltip only, opens kcm", "Configure")
 
                 onClicked: KCMLauncher.openSystemSettings("kcm_activities", root.activityId);
 

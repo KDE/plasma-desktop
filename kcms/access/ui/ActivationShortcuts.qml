@@ -68,7 +68,7 @@ Kirigami.FormLayout {
             to: 30
 
             textFromValue: (value, locale) => {
-                return i18np("%1 min", "%1 min", value)
+                return i18ncp("@label:valuesuffix in spinbox %1 is timeout delay", "%1 min", "%1 min", value)
             }
 
 
@@ -86,8 +86,8 @@ Kirigami.FormLayout {
     }
 
     QQC2.CheckBox {
-        Kirigami.FormData.label: i18n("When a shortcut is used:")
-        text: i18n("Display a confirmation dialog")
+        Kirigami.FormData.label: i18nc("@title:group for checkbox group", "When a shortcut is used:")
+        text: i18nc("@option:check when shortcut used", "Display a confirmation dialog")
 
         KCMUtils.SettingStateBinding {
             configObject: kcm.activationGesturesSettings
@@ -98,7 +98,7 @@ Kirigami.FormLayout {
         onToggled: kcm.activationGesturesSettings.gestureConfirmation = checked
     }
     QQC2.CheckBox {
-        text: i18n("Ring the system bell")
+        text: i18nc("@option:check when shortcut used", "Ring the system bell")
 
         KCMUtils.SettingStateBinding {
             configObject: kcm.activationGesturesSettings
@@ -109,7 +109,7 @@ Kirigami.FormLayout {
         onToggled: kcm.activationGesturesSettings.accessXBeep = checked
     }
     QQC2.CheckBox {
-        text: i18n("Show a notification")
+        text: i18nc("@option:check when shortcut used", "Show a notification")
 
         KCMUtils.SettingStateBinding {
             configObject: kcm.activationGesturesSettings
@@ -120,7 +120,7 @@ Kirigami.FormLayout {
         onToggled: kcm.activationGesturesSettings.keyboardNotifyAccess = checked
     }
     QQC2.Button {
-        text: i18n("Configure Notifications…")
+        text: i18nc("@action:button opens Notifications kcm", "Configure Notifications…")
         icon.name: "preferences-desktop-notification"
 
         onClicked: kcm.configureKNotify()

@@ -56,8 +56,8 @@ KCM.SimpleKCM {
 
     Kirigami.PlaceholderMessage {
         icon.name: "input-touchpad"
-        text: i18nd("kcm_touchpad", "No touchpad found")
-        explanation: i18nd("kcm_touchpad", "Connect an external touchpad");
+        text: i18ndc("kcm_touchpad", "@info:status placeholdermessage text", "No touchpad found")
+        explanation: i18ndc("kcm_touchpad", "@info:usagetip placeholdermessage explanation", "Connect an external touchpad");
         anchors.centerIn: parent
         visible: !backend.inputDevices?.length
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
@@ -72,7 +72,7 @@ KCM.SimpleKCM {
 
         // Device
         QQC2.ComboBox {
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "Device:")
+            Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label:listbox device selection", "Device:")
             id: deviceSelector
 
             visible: count > 1
@@ -97,8 +97,8 @@ KCM.SimpleKCM {
         // General settings
         QQC2.CheckBox {
             id: deviceEnabled
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "General:")
-            text: i18nd("kcm_touchpad", "Enable device")
+            Kirigami.FormData.label: i18ndc("kcm_touchpad", "@title:group prefix for checkbox group", "General:")
+            text: i18ndc("kcm_touchpad", "@option:check", "Enable device")
             enabled: root.device?.supportsDisableEvents ?? false
             checked: root.device && (!root.device.supportsDisableEvents || root.device.enabled)
 
@@ -134,7 +134,7 @@ KCM.SimpleKCM {
 
             QQC2.CheckBox {
                 id: dwt
-                text: i18nd("kcm_touchpad", "Disable while typing")
+                text: i18ndc("kcm_touchpad", "option:check", "Disable while typing")
                 Accessible.description: dwtInfoLabel.text
                 leftPadding: Application.layoutDirection === Qt.LeftToRight ?
                     deviceEnabled.contentItem.leftPadding : disableEventsOnExternalMouse.padding
@@ -172,7 +172,7 @@ KCM.SimpleKCM {
         QQC2.CheckBox {
             id: leftHanded
             Kirigami.FormData.label: i18ndc("kcm_touchpad", "@title:group", "Left and right buttons:")
-            text: i18nd("kcm_touchpad", "Swap (left-handed mode)")
+            text: i18ndc("kcm_touchpad", "@option:check", "Swap (left-handed mode)")
             enabled: root.device?.supportsLeftHanded ?? false
             checked: enabled && (root.device?.leftHanded ?? false)
 
@@ -214,7 +214,7 @@ KCM.SimpleKCM {
 
         // Acceleration
         RowLayout {
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "Pointer speed:")
+            Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label:slider and @label:spinbox", "Pointer speed:")
             id: accelSpeed
             Layout.fillWidth: true
 
@@ -294,7 +294,7 @@ KCM.SimpleKCM {
 
             QQC2.CheckBox {
                 id: accelProfileEnabled
-                text: i18nd("kcm_touchpad", "Enable pointer acceleration")
+                text: i18ndc("kcm_touchpad", "@option:check" "Enable pointer acceleration")
                 enabled: root.device?.supportsPointerAccelerationProfileAdaptive ?? false
                 visible: enabled
                 checked: enabled && !(root.device?.pointerAccelerationProfileFlat ?? false)
@@ -322,7 +322,7 @@ KCM.SimpleKCM {
 
         // Scroll Speed aka scroll Factor
         GridLayout {
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling speed:")
+            Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label:slider", "Scrolling speed:")
             Kirigami.FormData.buddyFor: scrollFactor
             Layout.fillWidth: true
 
@@ -373,21 +373,21 @@ KCM.SimpleKCM {
 
             //row 2
             QQC2.Label {
-                text: i18ndc("kcm_touchpad", "Slower Scroll", "Slower")
+                text: i18ndc("kcm_touchpad", "@item:inrange Slower Scroll", "Slower")
                 textFormat: Text.PlainText
             }
             Item {
                 Layout.fillWidth: true
             }
             QQC2.Label {
-                text: i18ndc("kcm_touchpad", "Faster Scroll Speed", "Faster")
+                text: i18ndc("kcm_touchpad", "@item:inrange Faster Scroll Speed", "Faster")
                 textFormat: Text.PlainText
             }
         }
 
         ColumnLayout {
             id: scrollMethod
-            Kirigami.FormData.label: i18nd("kcm_touchpad begins the sentence 'Scroll by moving two fingers anywhere/moving one finger on edge'", "Scroll by:")
+            Kirigami.FormData.label: i18ndc("kcm_touchpad", "@title group begins the sentence 'Scroll by moving two fingers anywhere/moving one finger on edge'", "Scroll by:")
             Kirigami.FormData.buddyFor: scrollMethodTwoFingers
             visible: scrollMethodTwoFingers.enabled || scrollMethodTouchpadEdges.enabled
 
@@ -406,14 +406,14 @@ KCM.SimpleKCM {
 
             QQC2.RadioButton {
                 id: scrollMethodTwoFingers
-                text: i18nd("kcm_touchpad completes the sentence 'Scroll by moving two fingers anywhere'", "Moving two fingers anywhere")
+                text: i18ndc("kcm_touchpad", "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'", "Moving two fingers anywhere")
                 enabled: root.device?.supportsScrollTwoFinger ?? false
                 checked: root.device?.scrollTwoFinger ?? false
             }
 
             QQC2.RadioButton {
                 id: scrollMethodTouchpadEdges
-                text: i18nd("kcm_touchpad begins the sentence 'Scroll by moving one finger on edge'", "Moving one finger on edge")
+                text: i18ndc("kcm_touchpad", "@option:radio completes the sentence 'Scroll by moving one finger on edge'", "Moving one finger on edge")
                 enabled: root.device?.supportsScrollEdge ?? false
                 checked: root.device?.scrollEdge ?? false
             }
@@ -421,7 +421,7 @@ KCM.SimpleKCM {
 
         QQC2.CheckBox {
             id: naturalScroll
-            text: i18nd("kcm_touchpad", "Invert scroll direction (Natural scrolling)")
+            text: i18ndc("kcm_touchpad", "@option:check", "Invert scroll direction (Natural scrolling)")
             enabled: root.device?.supportsNaturalScroll ?? false
             checked: enabled && (root.device?.naturalScroll ?? false)
 
@@ -435,7 +435,7 @@ KCM.SimpleKCM {
 
         QQC2.CheckBox {
             id: disableHorizontalScrolling
-            text: i18nd("kcm_touchpad", "Disable horizontal scrolling")
+            text: i18ndc("kcm_touchpad", "@option:check", "Disable horizontal scrolling")
             visible: root.device?.supportsHorizontalScrolling ?? false
             enabled: root.device?.supportsHorizontalScrolling ?? false
             checked: enabled && !(root.device?.horizontalScrolling ?? true)
@@ -457,7 +457,7 @@ KCM.SimpleKCM {
 
         ColumnLayout {
             id: rightClickMethod
-            Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label for radiobutton group, begins the sentence 'right-click by pressing bottom-right corner/pressing with two fingers'", "Right-click by:")
+            Kirigami.FormData.label: i18ndc("kcm_touchpad", "@title:group for radiobutton group, begins the sentence 'right-click by pressing bottom-right corner/pressing with two fingers'", "Right-click by:")
             Kirigami.FormData.buddyFor: rightClickMethodAreas
             enabled: (root.device?.supportsClickMethodAreas && root.device?.supportsClickMethodClickfinger) ?? false
             visible: (root.device?.supportsClickMethodAreas || root.device?.supportsClickMethodClickfinger) ?? false
@@ -493,8 +493,8 @@ KCM.SimpleKCM {
                 rightPadding: Application.layoutDirection === Qt.RightToLeft ?
                     rightClickMethodAreas.contentItem.rightPadding : rightClickMethodAreas.padding
                 text: middleEmulation.checked
-                    ? i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by pressing both bottom corners.")
-                    : i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by pressing bottom center.")
+                    ? i18ndc("kcm_touchpad", "@info:usagetip shown below radio button", "Middle-click by pressing both bottom corners.")
+                    : i18ndc("kcm_touchpad", "@info:usagetip shown below radio button", "Middle-click by pressing bottom center.")
                 textFormat: Text.PlainText
                 elide: Text.ElideRight
                 font: Kirigami.Theme.smallFont
@@ -594,7 +594,7 @@ KCM.SimpleKCM {
             spacing: Kirigami.Units.smallSpacing
             QQC2.CheckBox {
                 id: tapAndDrag
-                text: i18nd("kcm_touchpad", "Allow dragging after tapping")
+                text: i18ndc("kcm_touchpad", "@option:check", "Allow dragging after tapping")
                 enabled: root.device?.tapFingerCount > 0 && tapToClick.checked
                 checked: enabled && (root.device?.tapAndDrag ?? false)
 
@@ -613,7 +613,7 @@ KCM.SimpleKCM {
 
         QQC2.CheckBox {
             id: tapAndDragLock
-            text: i18nd("kcm_touchpad", "Allow briefly lifting finger during tap-and-drag")
+            text: i18ndc("kcm_touchpad", "@option:check", "Allow briefly lifting finger during tap-and-drag")
             enabled: root.device?.tapFingerCount > 0 && tapAndDrag.checked
             checked: enabled && (root.device?.tapDragLock ?? false)
 
@@ -627,7 +627,7 @@ KCM.SimpleKCM {
 
         ColumnLayout {
             id: multiTap
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "Two-finger tap:")
+            Kirigami.FormData.label: i18ndc("kcm_touchpad", "@title:group", "Two-finger tap:")
             Kirigami.FormData.buddyFor: multiTapRightClick
             visible: root.device?.supportsLmrTapButtonMap
             enabled: root.device?.supportsLmrTapButtonMap && tapToClick.checked
@@ -647,8 +647,8 @@ KCM.SimpleKCM {
             QQC2.RadioButton {
                 id: multiTapRightClick
                 text: (root.device?.tapFingerCount > 2
-                    ? i18nd("kcm_touchpad", "Right-click (three-finger tap to middle-click)")
-                    : i18nd("kcm_touchpad", "Right-click")
+                    ? i18ndc("kcm_touchpad", "@option:radio", "Right-click (three-finger tap to middle-click)")
+                    : i18ndc("kcm_touchpad", "@option:radio", "Right-click")
                 )
                 checked: multiTap.enabled && !(root.device?.lmrTapButtonMap ?? false)
             }
@@ -656,8 +656,8 @@ KCM.SimpleKCM {
             QQC2.RadioButton {
                 id: multiTapMiddleClick
                 text: (root.device?.tapFingerCount > 2
-                    ? i18nd("kcm_touchpad", "Middle-click (three-finger tap to right-click)")
-                    : i18nd("kcm_touchpad", "Middle-click")
+                    ? i18ndc("kcm_touchpad", "@option:radio", "Middle-click (three-finger tap to right-click)")
+                    : i18ndc("kcm_touchpad", "@option:radio", "Middle-click")
                 )
                 checked: multiTap.enabled && (root.device?.lmrTapButtonMap ?? false)
             }

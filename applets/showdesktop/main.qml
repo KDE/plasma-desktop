@@ -115,7 +115,7 @@ PlasmoidItem {
 
         // Active/not active indicator
         KSvg.FrameSvgItem {
-            Accessible.name: i18n("Minimize All Applet Active Indicator")  // qmllint disable unqualified
+            Accessible.name: i18nc("@label Accessible name", "Minimize All Applet Active Indicator")  // qmllint disable unqualified
             property var containerMargins: {
                 let item = this;
                 while (item.parent) {

@@ -26,8 +26,8 @@ KCMUtils.SimpleKCM {
 
     Kirigami.PlaceholderMessage {
         icon.name: "input-touchscreen"
-        text: i18n("No touchscreens found")
-        explanation: i18n("Connect an external touchscreen")
+        text: i18nc("@info:status placeholdermessage text", "No touchscreens found")
+        explanation: i18nc("@info:usagetip placeholdermessage explanation", "Connect an external touchscreen")
         anchors.centerIn: parent
         visible: combo.count === 0
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
@@ -56,7 +56,7 @@ KCMUtils.SimpleKCM {
 
 
         QQC2.CheckBox {
-            Kirigami.FormData.label: i18n("Enabled:")
+            Kirigami.FormData.label: i18nc("@option:check prefix touchscreen device is enabled", "Enabled:")
 
             checked: root.device?.enabled ?? false
             onToggled: root.device.enabled = checked
@@ -64,7 +64,7 @@ KCMUtils.SimpleKCM {
 
         QQC2.ComboBox {
             id: outputsCombo
-            Kirigami.FormData.label: i18n("Target display:")
+            Kirigami.FormData.label: i18nc("@label:listbox", "Target display:")
             model: TouchScreenKCM.OutputsModel {
                 id: outputsModel
             }

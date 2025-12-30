@@ -15,7 +15,7 @@ Kirigami.Dialog {
 
     required property var previewPlugins
 
-    title: i18n("Preview Plugins")
+    title: i18nc("@title:window", "Preview Plugins")
 
     preferredWidth: Kirigami.Units.gridUnit * 15
     implicitHeight: Math.round(parent.height * 0.8)

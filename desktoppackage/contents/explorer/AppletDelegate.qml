@@ -44,7 +44,7 @@ Item {
         id: unsupportedTooltip
         anchors.fill: parent
         visible: !model.isSupported
-        mainText: i18n("Unsupported Widget")
+        mainText: i18nc("@info:tooltip", "Unsupported Widget")
         subText: model.unsupportedMessage
     }
 
@@ -214,8 +214,8 @@ Item {
                     top: parent.top
                     right: parent.right
                 }
-                text: delegate.pendingUninstall ? i18nd("plasma_shell_org.kde.plasma.desktop", "Cancel Uninstallation")
-                    : i18ndc("plasma_shell_org.kde.plasma.desktop","@info:tooltip uninstall a widget", "Mark for Uninstallation")
+                text: delegate.pendingUninstall ? i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button tooltip and accessible cancel uninstall widget", "Cancel Uninstallation")
+                    : i18ndc("plasma_shell_org.kde.plasma.desktop","@action:button tooltip and accessible uninstall widget", "Mark for Uninstallation")
                 icon.name: delegate.pendingUninstall ? "edit-undo" : "edit-delete"
                 display: PlasmaComponents.AbstractButton.IconOnly
                 Accessible.description: delegate.pendingUninstall
@@ -262,7 +262,7 @@ Item {
                     right: uninstallButton.visible ? uninstallButton.left : parent.right
                     rightMargin: uninstallButton.visible ? Kirigami.Units.smallSpacing : 0
                 }
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove all instances")
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Remove all instances")
                 display: PlasmaComponents.AbstractButton.IconOnly
                 icon.name: "edit-clear-all"
                 Accessible.description: i18ncp("@action:button accessible description, %1 number of instances %2 is widget name",

@@ -45,7 +45,7 @@ Item {
             if (kind != 0) { // if this is coming from the noninteractive authenticators
                 return;
             }
-            const msg = i18nd("plasma_shell_org.kde.plasma.desktop", "Unlocking failed");
+            const msg = i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:status", "Unlocking failed");
             lockScreenUi.handleMessage(msg);
             graceLockTimer.restart();
             notificationRemoveTimer.restart();
@@ -278,7 +278,7 @@ Item {
                 notificationMessage: {
                     const parts = [];
                     if (capsLockState.locked) {
-                        parts.push(i18nd("plasma_shell_org.kde.plasma.desktop", "Caps Lock is on"));
+                        parts.push(i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:status", "Caps Lock is on"));
                     }
                     if (root.notification) {
                         parts.push(root.notification);
@@ -292,19 +292,19 @@ Item {
 
                 actionItems: [
                     ActionButton {
-                        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Slee&p")
+                        text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Slee&p")
                         icon.name: "system-suspend"
                         onClicked: root.suspendToRam()
                         visible: root.suspendToRamSupported
                     },
                     ActionButton {
-                        text: i18nd("plasma_shell_org.kde.plasma.desktop", "&Hibernate")
+                        text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "&Hibernate")
                         icon.name: "system-suspend-hibernate"
                         onClicked: root.suspendToDisk()
                         visible: root.suspendToDiskSupported
                     },
                     ActionButton {
-                        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Switch &User")
+                        text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Switch &User")
                         icon.name: "system-switch-user"
                         onClicked: {
                             sessionManagement.switchUser();

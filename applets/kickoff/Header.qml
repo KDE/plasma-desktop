@@ -81,7 +81,7 @@ PlasmaExtras.PlasmoidHeading {
                     Layout.minimumWidth: height
                     Layout.maximumWidth: height
 
-                    text: i18n("Open user settings") // qmllint disable unqualified
+                    text: i18nc("@action:button icon-only, for tooltip/Accessible", "Open user settings") // qmllint disable unqualified
                     name: kuser.fullName
 
                     // The icon property emits two signals in a row during which it
@@ -261,7 +261,7 @@ PlasmaExtras.PlasmoidHeading {
                     checkable: true
                     checked: Plasmoid.configuration.pin
                     icon.name: "window-pin"
-                    text: i18n("Keep Open") // qmllint disable unqualified
+                    text: i18nc("@action:button Pin widget open if it loses focus, icon-only button, for tooltip/Accessible", "Keep Open") // qmllint disable unqualified
                     display: PC3.ToolButton.IconOnly
                     PC3.ToolTip.text: text
                     PC3.ToolTip.delay: Kirigami.Units.toolTipDelay

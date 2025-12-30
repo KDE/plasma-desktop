@@ -306,7 +306,7 @@ Kicker.DashboardWindow {
 
                     level: 1
 
-                    text: i18n("Favorites")
+                    text: i18nc("@title:group for column with app and system action grids", "Favorites")
                     textFormat: Text.PlainText
 
                     opacity: enabled ? 1.0 : 0.3

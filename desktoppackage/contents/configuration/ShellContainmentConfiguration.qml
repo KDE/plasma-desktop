@@ -16,7 +16,7 @@ import "shellcontainmentconfiguration"
 Kirigami.AbstractApplicationWindow {
     id: root
 
-    title: i18nd("plasma_shell_org.kde.plasma.desktop", "Manage Panels and Desktops")
+    title: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:window", "Manage Panels and Desktops")
 
     width: Kirigami.Units.gridUnit * 40
     height: Kirigami.Units.gridUnit * 32
@@ -31,7 +31,7 @@ Kirigami.AbstractApplicationWindow {
         }
         contentItem: QQC2.Label {
             Layout.fillWidth: parent
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "You can drag Panels and Desktops around to move them to different screens.")
+            text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:usagetip", "You can drag Panels and Desktops around to move them to different screens.")
             textFormat: Text.PlainText
             horizontalAlignment: Text.AlignHCenter
             wrapMode: Text.WordWrap
@@ -41,7 +41,7 @@ Kirigami.AbstractApplicationWindow {
     footer: QQC2.Control {
         contentItem: QQC2.DialogButtonBox {
             QQC2.Button {
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Close")
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button Close window", "Close")
                 onClicked: Window.window.close()
             }
         }

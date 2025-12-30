@@ -35,32 +35,32 @@ KCMUtils.AbstractKCM {
         },
         {
             icon: "input-keyboard",
-            title: i18nc("System Modifier Keys", "Modifier Keys"),
+            title: i18nc("@title Category name in sidebar", "Modifier Keys"),
             defaultnessKey: "keyboardModifiersIsDefaults"
         },
         {
             icon: "view-filter",
-            title: i18nc("System keyboard filters", "Keyboard Filters"),
+            title: i18nc("@title Category name in sidebar", "Keyboard Filters"),
             defaultnessKey: "keyboardFiltersIsDefaults"
         },
         {
             icon: "input-mouse",
-            title: i18nc("System mouse navigation", "Mouse Navigation"),
+            title: i18nc("@title Category name in sidebar", "Mouse Navigation"),
             defaultnessKey: "mouseIsDefaults"
         },
         {
             icon: "input-caps-on",
-            title: i18n("Activation Shortcuts"),
+            title: i18nc("@title Category name in sidebar", "Activation Shortcuts"),
             defaultnessKey: "activationGesturesIsDefaults"
         },
         {
             icon: "text-speak",
-            title: i18nc("System mouse navigation", "Screen Reader"),
+            title: i18nc("@title Category name in sidebar", "Screen Reader"),
             defaultnessKey: "screenReaderIsDefaults"
         },
         {
             icon: "view-visible",
-            title: i18nc("Correction for color blindness", "Color Blindness Correction"),
+            title: i18nc("@title Category name in sidebar", "Color Blindness Correction"),
             defaultnessKey: "colorblindnessCorrectionIsDefaults"
         },
         {
@@ -70,7 +70,7 @@ KCMUtils.AbstractKCM {
         },
         {
             icon: "cursor-arrow",
-            title: i18nc("Shake pointer to find it", "Shake Pointer"),
+            title: i18nc("@title Category name in sidebar, shake pointer to find it", "Shake Pointer"),
             defaultnessKey: "shakeCursorIsDefaults",
             available: KWindowSystem.isPlatformWayland
         }

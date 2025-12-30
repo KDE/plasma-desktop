@@ -35,7 +35,7 @@ QQC2.ItemDelegate {
             shortcutsList.selectedIndex = (root.state === "expanded") ? -1 : index;
         }
     }
-    Accessible.name: root.state === "expanded" ? i18n("Editing shortcut: %1", displayLabel.text) : displayLabel.text + keySequenceList.text
+    Accessible.name: root.state === "expanded" ? i18nc("@info:whatsthis accessible name %1 is shortcut label (not sequence)", "Editing shortcut: %1", displayLabel.text) : displayLabel.text + keySequenceList.text
     Accessible.onPressAction: action.trigger()
 
     Kirigami.Theme.useAlternateBackgroundColor: true
@@ -85,7 +85,7 @@ QQC2.ItemDelegate {
                         if (model?.activeShortcuts?.length !== 0) {
                             return model?.activeShortcuts?.map(s => kcm.keySequenceToString(s)).join(", ")
                         } else {
-                            return i18n("No active shortcuts")
+                            return i18nc("@info:status", "No active shortcuts")
                         }
                     }
                     textFormat: Text.PlainText
@@ -131,9 +131,9 @@ QQC2.ItemDelegate {
                     Kirigami.Heading {
                         level: 4
                         text: model.defaultShortcuts &&  model.defaultShortcuts.length !== 0 ?
-                            i18ncp("%1 decides if singular or plural will be used", "Default shortcut",
+                            i18ncp("@title:column %1 decides if singular or plural will be used", "Default shortcut",
                             "Default shortcuts", model.defaultShortcuts.length) :
-                            i18n("No default shortcuts")
+                            i18nc("@label for shortcut with no default bindings", "No default shortcuts")
                         textFormat: Text.PlainText
                     }
                     Kirigami.Separator {
@@ -142,7 +142,7 @@ QQC2.ItemDelegate {
                     Repeater {
                         model: defaultShortcuts
                         QQC2.CheckBox {
-                            Accessible.name: checked ? i18n("Default shortcut %1 is enabled.", modelData) : i18n("Default shortcut %1 is disabled.", modelData)
+                            Accessible.name: checked ? i18nc("@info:whatsthis accessible name", "Default shortcut %1 is enabled.", modelData) : i18nc("@info:whatsthis accessible name", "Default shortcut %1 is disabled.", modelData)
                             checked: activeShortcuts.indexOf(modelData) !== -1
                             text: modelData
                             onToggled: {
@@ -165,7 +165,7 @@ QQC2.ItemDelegate {
                     Kirigami.Heading {
                         level: 4
                         Layout.alignment: Qt.AlignRight
-                        text: i18n("Custom shortcuts")
+                        text: i18nc("@title:column", "Custom shortcuts")
                         textFormat: Text.PlainText
                     }
                     Kirigami.Separator {

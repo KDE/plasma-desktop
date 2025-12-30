@@ -81,26 +81,26 @@ KCM.SimpleKCM {
         }
 
         QQC2.CheckBox {
-            Kirigami.FormData.label: i18nc("@option:check", "While on this activity, allow:")
-            text: i18n("Tracking file and app use")
+            Kirigami.FormData.label: i18nc("@title:group for checkbox group", "While on this activity, allow:")
+            text: i18nc("@option:check While on activity, allow", "Tracking file and app use")
             checked: !settings.isPrivate
             onToggled: settings.isPrivate = !checked
         }
 
         QQC2.CheckBox {
-            text: i18nc("@option:check", "Automatically turning off the screen")
+            text: i18nc("@option:check While on activity, allow", "Automatically turning off the screen")
             checked: !settings.inhibitScreen
             onToggled: settings.inhibitScreen = !checked
         }
 
         QQC2.CheckBox {
-            text: i18nc("@option:check", "Automatically shutting down or sleeping")
+            text: i18nc("@option:check While on activity, allow", "Automatically shutting down or sleeping")
             checked: !settings.inhibitSleep
             onToggled: settings.inhibitSleep = !checked
         }
 
         KQuickControls.KeySequenceItem {
-            Kirigami.FormData.label: i18n("Shortcut for switching:")
+            Kirigami.FormData.label: i18nc("@label prefix for keyboard shortcut input button", "Shortcut for switching:")
             keySequence: settings.shortcut
             onCaptureFinished: settings.shortcut = keySequence
         }

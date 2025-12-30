@@ -41,7 +41,7 @@ KCM.ScrollViewKCM {
     actions: [
         Kirigami.Action {
             icon.name: monitor.state !== Baloo.Global.Suspended ? "media-playback-pause" : "media-playback-start"
-            text: monitor.state !== Baloo.Global.Suspended ? i18n("Pause Indexer") : i18n("Resume Indexer")
+            text: monitor.state !== Baloo.Global.Suspended ? i18nc("@action:button", "Pause Indexer") : i18nc("@action:button", "Resume Indexer")
             visible: kcm.balooSettings.indexingEnabled
             displayHint: Kirigami.DisplayHint.KeepVisible
             onTriggered: monitor.toggleSuspendState()
@@ -58,7 +58,7 @@ KCM.ScrollViewKCM {
             type: Kirigami.MessageType.Warning
             position: Kirigami.InlineMessage.Position.Header
             showCloseButton: true
-            text: i18n("This will disable file searching in KRunner and launcher menus, and remove extended metadata display from all KDE applications.");
+            text: i18nc("@info inlinemessage", "This will disable file searching in KRunner and launcher menus, and remove extended metadata display from all KDE applications.");
         }
 
         Kirigami.InlineMessage {
@@ -68,9 +68,9 @@ KCM.ScrollViewKCM {
             type: Kirigami.MessageType.Warning
             position: Kirigami.InlineMessage.Position.Header
             showCloseButton: true
-            text: i18n("Do you want to delete the saved index data? %1 of space will be freed, but if indexing is re-enabled later, the entire index will have to be re-created from scratch. This may take some time, depending on how many files you have.", kcm.prettyIndexFileSize());
+            text: i18nc("@info inlinemessage", "Do you want to delete the saved index data? %1 of space will be freed, but if indexing is re-enabled later, the entire index will have to be re-created from scratch. This may take some time, depending on how many files you have.", kcm.prettyIndexFileSize());
             actions: Kirigami.Action {
-                text: i18n("Delete Index Data")
+                text: i18nc("@action:button", "Delete Index Data")
                 icon.name: "edit-delete"
                 onTriggered: {
                     kcm.deleteIndex();
@@ -88,7 +88,7 @@ KCM.ScrollViewKCM {
             Layout.margins: Kirigami.Units.gridUnit
 
             QQC2.Label {
-                text: i18n("File Search helps you quickly locate your files. You can choose which folders and what types of file data are indexed.")
+                text: i18nc("@info:usagetip", "File Search helps you quickly locate your files. You can choose which folders and what types of file data are indexed.")
                 textFormat: Text.PlainText
                 Layout.fillWidth: true
                 Layout.maximumWidth: Kirigami.Units.gridUnit * 24
@@ -106,7 +106,7 @@ KCM.ScrollViewKCM {
                     id: fileSearchDisabled
 
                     Kirigami.FormData.label: i18nc("@title:group", "Data to index:")
-                    text: i18n("Nothing (disable indexing entirely)")
+                    text: i18nc("@option:radio Data to index", "Nothing (disable indexing entirely)")
                     checked: !kcm.balooSettings.indexingEnabled
                     onToggled: kcm.balooSettings.indexingEnabled = false
 
@@ -118,7 +118,7 @@ KCM.ScrollViewKCM {
                     }
                 }
                 QQC2.RadioButton {
-                    text: i18n("File names only")
+                    text: i18nc("@option:radio Data to index", "File names only")
                     checked: kcm.balooSettings.indexingEnabled && kcm.balooSettings.onlyBasicIndexing
                     onToggled: {
                         kcm.balooSettings.indexingEnabled = true;
@@ -133,7 +133,7 @@ KCM.ScrollViewKCM {
                     }
                 }
                 QQC2.RadioButton {
-                    text: i18n("File names and contents")
+                    text: i18nc("@option:radio Data to index", "File names and contents")
                     checked: kcm.balooSettings.indexingEnabled && !kcm.balooSettings.onlyBasicIndexing
                     onToggled: {
                         kcm.balooSettings.indexingEnabled = true;
@@ -154,7 +154,7 @@ KCM.ScrollViewKCM {
 
                 QQC2.CheckBox {
                     id: indexHiddenFolders
-                    text: i18n("Also index hidden files and folders")
+                    text: i18nc("@option:check", "Also index hidden files and folders")
                     checked: kcm.balooSettings.indexHiddenFolders
                     onCheckStateChanged: kcm.balooSettings.indexHiddenFolders = checked
 
@@ -267,8 +267,8 @@ KCM.ScrollViewKCM {
                     property bool fullContentIndexing: indexingModel.enableIndex
 
                     model: [
-                        i18n("Not indexed"),
-                        i18n("Indexed"),
+                        i18nc("@info:status", "Not indexed"),
+                        i18nc("@info:status", "Indexed"),
                     ]
 
                     // Intentionally not a simple ternary to facilitate adding
@@ -315,7 +315,7 @@ KCM.ScrollViewKCM {
         active: false
 
         sourceComponent: QtDialogs.FolderDialog {
-            title: fileDialogLoader.included ? i18n("Select a folder to include") : i18n("Select a folder to exclude")
+            title: fileDialogLoader.included ? i18nc("@title:window", "Select a folder to include") : i18nc("@title:window", "Select a folder to exclude")
             currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
 
             onAccepted: {

@@ -98,7 +98,7 @@ EmptyPage {
         }
         width: Math.min(parent.width, Math.floor((parent.width - leftMargin - rightMargin - (kickoff.mayHaveGridWithScrollBar ? verticalScrollBar.implicitWidth : 0)) / cellWidth) * cellWidth + leftMargin + rightMargin)
 
-        Accessible.description: i18n("Grid with %1 rows, %2 columns", rows, columns) // can't use i18np here
+        Accessible.description: i18nc("@info:whatsthis Accessible description", "Grid with %1 rows, %2 columns", rows, columns) // can't use i18np here
 
 
         implicitWidth: {

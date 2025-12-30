@@ -162,7 +162,7 @@ PlasmoidItem {
             PC3.Button {
                 id: copyButton
                 display: root.layoutForm === AppletError.HorizontalPanel || root.layoutForm === AppletError.VerticalPanel ? PC3.AbstractButton.IconOnly : PC3.AbstractButton.TextBesideIcon
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Copy to Clipboard")
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Copy to Clipboard")
                 icon.name: "edit-copy"
                 onClicked: {
                     textArea.selectAll()
@@ -185,7 +185,7 @@ PlasmoidItem {
                 sourceComponent: PC3.Button {
                     display: copyButton.display
                     icon.name: "window-new"
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "View Error Details…")
+                    text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button opens dialog", "View Error Details…")
                     checked: dialog.visible
                     onClicked: dialog.visible = !dialog.visible
 

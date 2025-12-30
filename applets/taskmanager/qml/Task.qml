@@ -176,7 +176,7 @@ PlasmaCore.ToolTipArea {
             }
         }
 
-        return `${i18n("Activate %1", model.display)}; ${smartLauncherDescription}`;
+        return `${i18nc("@info:usagetip %1 task name", "Activate %1", model.display)}; ${smartLauncherDescription}`;
     }
     Accessible.role: Accessible.Button
     Accessible.onPressAction: leftTapHandler.leftClick()

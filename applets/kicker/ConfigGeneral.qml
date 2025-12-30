@@ -45,7 +45,7 @@ KCMUtils.SimpleKCM {
         QQC2.Button {
             id: iconButton
 
-            Kirigami.FormData.label: i18n("Icon:")
+            Kirigami.FormData.label: i18nc("@label prefix for icon-only button", "Icon:")
 
             implicitWidth: previewFrame.width + Kirigami.Units.smallSpacing * 2
             implicitHeight: previewFrame.height + Kirigami.Units.smallSpacing * 2
@@ -156,9 +156,10 @@ KCMUtils.SimpleKCM {
 
             visible: !configGeneral.isDash
 
-            Kirigami.FormData.label: i18n("Show applications as:")
+            Kirigami.FormData.label: i18nc("@label:listbox", "Show applications as:")
 
-            model: [i18n("Name only"), i18n("Description only"), i18n("Name (Description)"), i18n("Description (Name)")]
+            model: [i18nc("@item:inlistbox", "Name only"), i18nc("@item:inlistbox", "Description only"),
+                    i18nc("@item:inlistbox", "Name (Description)"), i18nc("@item:inlistbox", "Description (Name)")]
         }
 
         Item {
@@ -168,9 +169,9 @@ KCMUtils.SimpleKCM {
         QQC2.CheckBox {
             id: alphaSort
 
-            Kirigami.FormData.label: i18n("Behavior:")
+            Kirigami.FormData.label: i18nc("@title:group prefix for checkbox group", "Behavior:")
 
-            text: i18n("Sort applications alphabetically")
+            text: i18nc("@option:check", "Sort applications alphabetically")
         }
 
         QQC2.CheckBox {
@@ -178,7 +179,7 @@ KCMUtils.SimpleKCM {
 
             visible: !configGeneral.isDash
 
-            text: i18n("Flatten sub-menus to a single level")
+            text: i18nc("@option:check", "Flatten sub-menus to a single level")
         }
 
         QQC2.CheckBox {
@@ -186,7 +187,7 @@ KCMUtils.SimpleKCM {
 
             visible: !configGeneral.isDash
 
-            text: i18n("Show icons on the root level of the menu")
+            text: i18nc("@option:check", "Show icons on the root level of the menu")
         }
 
         Item {
@@ -196,26 +197,26 @@ KCMUtils.SimpleKCM {
         QQC2.CheckBox {
             id: showRecentApps
 
-            Kirigami.FormData.label: i18n("Show categories:")
+            Kirigami.FormData.label: i18nc("@title:group prefix for checkbox group", "Show categories:")
 
             text: recentOrdering.currentIndex == 0
-                    ? i18n("Recent applications")
-                    : i18n("Often used applications")
+                    ? i18nc("@option:check", "Recent applications")
+                    : i18nc("@option:check", "Often used applications")
         }
 
         QQC2.CheckBox {
             id: showRecentDocs
 
             text: recentOrdering.currentIndex == 0
-                    ? i18n("Recent files")
-                    : i18n("Often used files")
+                    ? i18nc("@option:check", "Recent files")
+                    : i18nc("@option:check", "Often used files")
         }
 
         QQC2.ComboBox {
             id: recentOrdering
 
-            Kirigami.FormData.label: i18n("Sort items in categories by:")
-            model: [i18nc("@item:inlistbox Sort items in categories by [Recently used | Often used]", "Recently used"), i18nc("@item:inlistbox Sort items in categories by [Recently used | Ofetn used]", "Often used")]
+            Kirigami.FormData.label: i18nc("@label:listbox", "Sort items in categories by:")
+            model: [i18nc("@item:inlistbox Sort items in categories by [Recently used | Often used]", "Recently used"), i18nc("@item:inlistbox Sort items in categories by [Recently used | Often used]", "Often used")]
         }
 
         Item {
@@ -225,9 +226,9 @@ KCMUtils.SimpleKCM {
         QQC2.CheckBox {
             id: useExtraRunners
 
-            Kirigami.FormData.label: i18n("Search:")
+            Kirigami.FormData.label: i18nc("@title:group prefix for checkbox group", "Search:")
 
-            text: i18n("Expand search to bookmarks, files and emails")
+            text: i18nc("@option:check", "Expand search to bookmarks, files and emails")
         }
 
         QQC2.CheckBox {
@@ -235,17 +236,17 @@ KCMUtils.SimpleKCM {
 
             visible: !configGeneral.isDash
 
-            text: i18n("Align search results to bottom")
+            text: i18nc("@option:check", "Align search results to bottom")
         }
 
         RowLayout {
             visible: configGeneral.isDash
-            Kirigami.FormData.label: i18nc("@label:textbox for a checkbox toggling Dark Mode", "Appearance:")
+            Kirigami.FormData.label: i18nc("@label prefix for a checkbox toggling Dark Mode", "Appearance:")
             spacing: Kirigami.Units.smallSpacing
 
             QQC2.CheckBox {
                 id: forceDarkMode
-                text: i18n("Prefer Dark Mode when available")
+                text: i18nc("@option:check", "Prefer Dark Mode when available")
             }
 
             Kirigami.ContextualHelpButton {

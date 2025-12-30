@@ -54,13 +54,13 @@ KCM.SimpleKCM {
             spacing: Kirigami.Units.smallSpacing
             visible: configIcons.isPopup
 
-            Kirigami.FormData.label: i18n("Panel button:")
+            Kirigami.FormData.label: i18nc("@title:group prefix for checkbox + button", "Panel button:")
 
             CheckBox {
                 id: useCustomIcon
                 visible: configIcons.isPopup
                 checked: configIcons.cfg_useCustomIcon
-                text: i18n("Use a custom icon")
+                text: i18nc("@option:check", "Use a custom icon")
             }
 
             Button {
@@ -119,7 +119,7 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
             visible: !configIcons.isPopup || viewMode.currentIndex === 1 /* Icons mode */
 
-            Kirigami.FormData.label: i18n("Arrangement:")
+            Kirigami.FormData.label: i18nc("@label:listbox columns/rows", "Arrangement:")
 
             model: [
                 i18nc("@item:inlistbox arrangement of icons", "In Columns"),
@@ -132,7 +132,7 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
             visible: !configIcons.isPopup || viewMode.currentIndex === 1 /* Icons mode */
 
-            Kirigami.FormData.label: i18n("Sort Alignment:")
+            Kirigami.FormData.label: i18nc("@label:listbox, LtR/RtL", "Sort Alignment:")
 
             model: {
                 const ltrText = i18nc("@item:inlistbox alignment of icons", "Left-to-Right");
@@ -158,7 +158,7 @@ KCM.SimpleKCM {
                 }
             }
 
-            text: i18n("Lock in place")
+            text: i18nc("@option:check lock icon positions", "Lock in place")
         }
 
         Item {
@@ -172,7 +172,7 @@ KCM.SimpleKCM {
             id: sortMode
             Layout.fillWidth: true
 
-            Kirigami.FormData.label: i18n("Sort by:")
+            Kirigami.FormData.label: i18nc("@label:listbox sort items by field", "Sort by:")
 
             property int mode
             // FIXME TODO HACK: This maps the combo box list model to the KDirModel::ModelColumns
@@ -231,7 +231,7 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
             visible: !configIcons.isPopup || viewMode.currentIndex === 1 /* Icons mode */
 
-            Kirigami.FormData.label: i18n("Icon size:")
+            Kirigami.FormData.label: i18nc("@label:slider", "Icon size:")
 
             from: 0
             to: 6
@@ -246,7 +246,7 @@ KCM.SimpleKCM {
                 Layout.alignment: Qt.AlignLeft
                 visible: !configIcons.isPopup || viewMode.currentIndex === 1 /* Icons mode */
 
-                text: i18nc("@label:slider smallest icon size", "Small")
+                text: i18nc("@item:inrange smallest icon size", "Small")
             }
             Item {
                 Layout.fillWidth: true
@@ -255,7 +255,7 @@ KCM.SimpleKCM {
                 Layout.alignment: Qt.AlignRight
                 visible: !configIcons.isPopup || viewMode.currentIndex === 1 /* Icons mode */
 
-                text: i18nc("@label:slider largest icon size", "Large")
+                text: i18nc("@item:inrange largest icon size", "Large")
             }
         }
 
@@ -264,7 +264,7 @@ KCM.SimpleKCM {
             visible: !configIcons.isPopup || viewMode.currentIndex === 1 /* Icons mode */
             Layout.fillWidth: true
 
-            Kirigami.FormData.label: i18n("Label width:")
+            Kirigami.FormData.label: i18nc("@label:listbox", "Label width:")
 
             model: [
                 i18nc("@item:inlistbox how long a text label should be", "Narrow"),
@@ -277,7 +277,7 @@ KCM.SimpleKCM {
             id: textLines
             visible: !configIcons.isPopup || viewMode.currentIndex === 1 /* Icons mode */
 
-            Kirigami.FormData.label: i18n("Text lines:")
+            Kirigami.FormData.label: i18nc("@label:spinbox", "Text lines:")
 
             from: 1
             to: 10
@@ -293,23 +293,23 @@ KCM.SimpleKCM {
         CheckBox {
             id: toolTips
 
-            Kirigami.FormData.label: i18n("When hovering over icons:")
+            Kirigami.FormData.label: i18nc("@title:group prefix for checkbox group", "When hovering over icons:")
 
-            text: i18n("Show tooltips")
+            text: i18nc("@option:check When hovering over icons…", "Show tooltips")
         }
 
         CheckBox {
             id: selectionMarkers
             visible: Application.styleHints.singleClickActivation
 
-            text: i18n("Show selection markers")
+            text: i18nc("@option:check When hovering over icons…", "Show selection markers")
         }
 
         CheckBox {
             id: popups
             visible: !configIcons.isPopup
 
-            text: i18n("Show folder preview popups")
+            text: i18nc("@option:check When hovering over icons…", "Show folder preview popups")
         }
 
         Item {
@@ -319,11 +319,11 @@ KCM.SimpleKCM {
         CheckBox {
             id: renameInline
 
-            Kirigami.FormData.label: i18n("Rename:")
+            Kirigami.FormData.label: i18nc("@label prefix for checkbox", "Rename:")
 
             visible: !selectionMarkers.visible
 
-            text: i18n("Rename inline by clicking selected item's text")
+            text: i18nc("@option:check", "Rename inline by clicking selected item's text")
         }
 
         Item {
@@ -334,9 +334,9 @@ KCM.SimpleKCM {
         CheckBox {
             id: previews
 
-            Kirigami.FormData.label: i18n("Previews:")
+            Kirigami.FormData.label: i18nc("@title:group prefix for checkbox and button", "Previews:")
 
-            text: i18n("Show preview thumbnails")
+            text: i18nc("@option:check", "Show preview thumbnails")
         }
 
         Button {
@@ -344,7 +344,7 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
 
             icon.name: "configure"
-            text: i18n("Configure Preview Plugins…")
+            text: i18nc("@action:button opens dialog", "Configure Preview Plugins…")
 
             onClicked: {
                 const component = Qt.createComponent(Qt.resolvedUrl("FolderItemPreviewPluginsDialog.qml"));

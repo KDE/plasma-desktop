@@ -219,13 +219,13 @@ Item {
 
             Layout.fillWidth: false
             RowLayout {
-                Kirigami.FormData.label: i18nd("kcm_tablet", "Left-handed mode:")
+                Kirigami.FormData.label: i18ndc("kcm_tablet", "@label prefix for checkbox", "Left-handed mode:")
                 Kirigami.FormData.buddyFor: leftHandedCheckbox
                 spacing: 0
 
                 QQC2.CheckBox {
                     id: leftHandedCheckbox
-                    text: i18nc("Enable left-handed mode", "Enable")
+                    text: i18nc("@option:check Enable left-handed mode", "Enable")
                     enabled: root.device && root.device.supportsLeftHanded
                     checked: root.device && root.device.leftHanded
                     onCheckedChanged: root.device.leftHanded = checked
@@ -251,12 +251,12 @@ Item {
 
                 QQC2.RadioButton {
                     id: absoluteMode
-                    text: i18nc("Pen mode, where the point on the screen is always where you touch the stylus", "Pen")
+                    text: i18nc("@option:radio Pen mode, where the point on the screen is always where you touch the stylus", "Pen")
                     checked: root.device && !root.device.relative
                     onToggled: root.device.relative = false
                     QQC2.ButtonGroup.group: isRelativeGroup
 
-                    Accessible.description: i18n("The cursor follows where you touch the pen on the surface")
+                    Accessible.description: i18nc("@info:whatsthis Accessible description", "The cursor follows where you touch the pen on the surface")
                 }
 
                 QQC2.Label {
@@ -277,12 +277,12 @@ Item {
 
                 QQC2.RadioButton {
                     id: relativeMode
-                    text: i18nc("Mouse mode, or like using the tablet like a giant touchpad", "Mouse")
+                    text: i18nc("@option:radio Mouse mode, or like using the tablet like a giant touchpad", "Mouse")
                     checked: root.device && root.device.relative
                     onToggled: root.device.relative = true
                     QQC2.ButtonGroup.group: isRelativeGroup
 
-                    Accessible.description: i18n("Moving the pen on the surface moves the cursor relative to where it was, like a mouse")
+                    Accessible.description: i18nc("@info:whatsthis Accessible description", "Moving the pen on the surface moves the cursor relative to where it was, like a mouse")
                 }
 
                 QQC2.Label {
@@ -352,7 +352,7 @@ Item {
             }
 
             RowLayout {
-                Kirigami.FormData.label: i18nd("kcm_tablet", "Pen Pressure:")
+                Kirigami.FormData.label: i18ndc("kcm_tablet", "@label prefix for pen pressure curve config", "Pen Pressure:")
 
                 Layout.fillWidth: true
 

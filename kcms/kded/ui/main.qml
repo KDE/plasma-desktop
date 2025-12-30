@@ -52,7 +52,7 @@ KCM.ScrollViewKCM {
 
         Kirigami.InlineMessage {
             Layout.fillWidth: true
-            text: i18n("The background services manager (kded6) is currently not running. Make sure it is installed correctly.");
+            text: i18nc("@info:status inlinemessage", "The background services manager (kded6) is currently not running. Make sure it is installed correctly.");
             type: Kirigami.MessageType.Error
             position: Kirigami.InlineMessage.Position.Header
             showCloseButton: false
@@ -62,7 +62,7 @@ KCM.ScrollViewKCM {
         Kirigami.InlineMessage {
             id: selfDisablingModulesHint
             Layout.fillWidth: true
-            text: i18n("Some services disable themselves again when manually started if they are not useful in the current environment.")
+            text: i18nc("@info:status inlinemessage", "Some services disable themselves again when manually started if they are not useful in the current environment.")
             type: Kirigami.MessageType.Information
             position: Kirigami.InlineMessage.Position.Header
             showCloseButton: true
@@ -72,7 +72,7 @@ KCM.ScrollViewKCM {
         Kirigami.InlineMessage {
             id: runningModulesChangedAfterSaveHint
             Layout.fillWidth: true
-            text: i18n("Some services were automatically started/stopped when the background services manager (kded6) was restarted to apply your changes.")
+            text: i18nc("@info:status inlinemessage", "Some services were automatically started/stopped when the background services manager (kded6) was restarted to apply your changes.")
             type: Kirigami.MessageType.Information
             position: Kirigami.InlineMessage.Position.Header
             showCloseButton: true
@@ -120,9 +120,9 @@ KCM.ScrollViewKCM {
                 textRole: "text"
                 enabled: kcm.kdedRunning || currentIndex > 0
                 model: [
-                    {text: i18n("All Services"), statusFilter: Private.KCM.UnknownStatus},
-                    {text: i18nc("List running services", "Running"), statusFilter: Private.KCM.Running},
-                    {text: i18nc("List not running services", "Not Running"), statusFilter: Private.KCM.NotRunning}
+                    {text: i18nc("@item:inlistbox", "All Services"), statusFilter: Private.KCM.UnknownStatus},
+                    {text: i18nc("@item:inlistbox List running services", "Running"), statusFilter: Private.KCM.Running},
+                    {text: i18nc("@item:inlistbox List not running services", "Not Running"), statusFilter: Private.KCM.NotRunning}
                 ]
 
                 // HACK QQC2 doesn't support icons, so we just tamper with the desktop style ComboBox's background
@@ -159,8 +159,8 @@ KCM.ScrollViewKCM {
             width: list.width
             label: {
                 switch (Number(section)) {
-                    case Private.KCM.AutostartType: return i18n("Startup Services");
-                    case Private.KCM.OnDemandType: return i18n("Load-on-Demand Services");
+                    case Private.KCM.AutostartType: return i18nc("@title:group list section", "Startup Services");
+                    case Private.KCM.OnDemandType: return i18nc("@title:group list section", "Load-on-Demand Services");
                 }
             }
         }
@@ -180,7 +180,7 @@ KCM.ScrollViewKCM {
                 hoverEnabled: checkable
                 focusPolicy: Qt.ClickFocus
                 Accessible.name: checked ? i18nc("@action:button %1 service name", "Disable automatically loading %1 on startup", delegate.text) : i18nc("@action:button %1 service name", "Enable automatically loading %1 on startup", delegate.text)
-                Accessible.description: i18n("Toggle automatically loading this service on startup")
+                Accessible.description: i18nc("@info:whatsthis Accessible description", "Toggle automatically loading this service on startup")
                 Accessible.onPressAction: clicked()
                 onClicked: {
                     if (checkable) {
@@ -224,8 +224,8 @@ KCM.ScrollViewKCM {
                         visible: kcm.kdedRunning && model.type !== Private.KCM.OnDemandType
                         text: {
                             switch (model.status) {
-                            case Private.KCM.NotRunning: return i18n("Not running");
-                            case Private.KCM.Running: return i18n("Running");
+                                case Private.KCM.NotRunning: return i18nc("@info:status", "Not running");
+                                case Private.KCM.Running: return i18nc("@info:status", "Running");
                             }
                             return "";
                         }
@@ -248,7 +248,7 @@ KCM.ScrollViewKCM {
                         Accessible.name: model.status === Private.KCM.Running ? i18nc("@action:button %1 service name", "Stop %1", delegate.text) : i18nc("@action:button %1 service name", "Start %1", delegate.text)
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         QQC2.ToolTip.visible: hovered
-                        QQC2.ToolTip.text: model.status === Private.KCM.Running ? i18n("Stop Service") : i18n("Start Service")
+                        QQC2.ToolTip.text: model.status === Private.KCM.Running ? i18nc("@action:button", "Stop Service") : i18nc("@action:button", "Start Service")
                     }
                 }
             }

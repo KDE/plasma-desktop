@@ -61,7 +61,7 @@ KCMUtils.SimpleKCM {
         // Device
         QQC2.ComboBox {
             id: deviceSelector
-            Kirigami.FormData.label: i18nd("kcmmouse", "Device:")
+            Kirigami.FormData.label: i18ndc("kcmmouse", "@title:listbox select device", "Device:")
             visible: !root.backend.isAnonymousInputDevice
             enabled: count > 1
             Layout.fillWidth: true
@@ -84,8 +84,8 @@ KCMUtils.SimpleKCM {
         // General
         QQC2.CheckBox {
             id: deviceEnabled
-            Kirigami.FormData.label: i18nd("kcmmouse", "General:")
-            text: i18nd("kcmmouse enable this mouse device", "Enable device")
+            Kirigami.FormData.label: i18ndc("kcmmouse", "@title:group", "General:")
+            text: i18ndc("kcmmouse", "@option:check enable this mouse device", "Enable device")
             visible: !root.backend.isAnonymousInputDevice
             enabled: root.device?.supportsDisableEvents ?? false
             checked: root.device && (!root.device.supportsDisableEvents || root.device.enabled)
@@ -103,7 +103,7 @@ KCMUtils.SimpleKCM {
 
         QQC2.CheckBox {
             Kirigami.FormData.label: i18ndc("kcmmouse", "@title:group", "Left and right buttons:")
-            text: i18nd("kcmmouse", "Swap (left-handed mode)")
+            text: i18ndc("kcmmouse", "@option:check Left and right buttons", "Swap (left-handed mode)")
             enabled: root.device?.supportsLeftHanded ?? false
             checked: enabled && (root.device?.leftHanded ?? false)
 
@@ -145,7 +145,7 @@ KCMUtils.SimpleKCM {
         RowLayout {
             id: accelSpeed
 
-            Kirigami.FormData.label: i18nd("kcmmouse", "Pointer speed:")
+            Kirigami.FormData.label: i18ndc("kcmmouse", "@label:slider and @label:spinbox", "Pointer speed:")
             Layout.fillWidth: true
 
             spacing: Kirigami.Units.smallSpacing
@@ -224,7 +224,7 @@ KCMUtils.SimpleKCM {
 
             QQC2.CheckBox {
                 id: accelProfileEnabled
-                text: i18nd("kcmmouse", "Enable pointer acceleration")
+                text: i18ndc("kcmmouse", "@option:check", "Enable pointer acceleration")
                 enabled: root.device?.supportsPointerAccelerationProfileAdaptive ?? false
                 visible: enabled
                 checked: enabled && !(root.device?.pointerAccelerationProfileFlat ?? false)
@@ -238,7 +238,7 @@ KCMUtils.SimpleKCM {
             }
 
             Kirigami.ContextualHelpButton {
-                toolTipText: i18ndc("kcmmouse", "@info:tooltip from ContextualHelpButton", "When enabled, pointer travel distance increases with faster movement speed.")
+                toolTipText: i18ndc("kcmmouse", "@info:whatsthis ContextualHelpButton tooltip", "When enabled, pointer travel distance increases with faster movement speed.")
             }
         }
 
@@ -251,7 +251,7 @@ KCMUtils.SimpleKCM {
 
         // Scroll Speed aka scroll Factor
         GridLayout {
-            Kirigami.FormData.label: i18nd("kcmmouse", "Scrolling speed:")
+            Kirigami.FormData.label: i18ndc("kcmmouse", "@label:slider and @label:spinbox", "Scrolling speed:")
             Kirigami.FormData.buddyFor: scrollFactor
             Layout.fillWidth: true
 
@@ -318,8 +318,8 @@ KCMUtils.SimpleKCM {
         // Scrolling
         QQC2.CheckBox {
             id: naturalScroll
-            Kirigami.FormData.label: i18nd("kcmmouse", "Scrolling:")
-            text: i18nd("kcmmouse", "Invert scroll direction")
+            Kirigami.FormData.label: i18ndc("kcmmouse", "@title:group", "Scrolling:")
+            text: i18ndc("kcmmouse", "@option:check", "Invert scroll direction")
             enabled: root.device?.supportsNaturalScroll ?? false
             checked: enabled && (root.device?.naturalScroll ?? false)
 
@@ -336,7 +336,7 @@ KCMUtils.SimpleKCM {
 
             QQC2.CheckBox {
                 id: scrollOnButtonDown
-                text: i18nd("kcmmouse", "Hold down middle button and move mouse to scroll")
+                text: i18ndc("kcmmouse", "@option:check", "Hold down middle button and move mouse to scroll")
                 enabled: root.device?.supportsScrollOnButtonDown ?? false
                 checked: enabled && (root.device?.scrollOnButtonDown ?? false)
 
@@ -348,7 +348,7 @@ KCMUtils.SimpleKCM {
             }
 
             Kirigami.ContextualHelpButton {
-                toolTipText: i18ndc("kcmmouse", "@info:tooltip from ContextualHelpButton", "This will interfere with applications that use middle-button drag, such as some image editors, document viewers, or video games. It may be used on any device, but is intended primarily as a substitute for scroll wheels on devices that do not have any.")
+                toolTipText: i18ndc("kcmmouse", "@info:whatsthis ContextualHelpButton tooltip", "This will interfere with applications that use middle-button drag, such as some image editors, document viewers, or video games. It may be used on any device, but is intended primarily as a substitute for scroll wheels on devices that do not have any.")
             }
         }
     }

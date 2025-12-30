@@ -187,7 +187,7 @@ Item {
                 visible: outputAreaView.mapToPortion
                 icon.name: "transform-scale-symbolic"
                 display: QQC2.AbstractButton.IconOnly
-                text: i18nd("kcm_tablet", "Resize the screen area")
+                text: i18ndc("kcm_tablet", "@action:button", "Resize the screen area")
                 QQC2.ToolTip {
                     text: tabletSizeHandle.text
                     visible: parent.hovered && !screenResizeHandler.active
@@ -298,7 +298,7 @@ Item {
                 visible: outputAreaView.device.supportsInputArea
                 icon.name: "transform-scale-symbolic"
                 display: QQC2.AbstractButton.IconOnly
-                text: i18nd("kcm_tablet", "Resize the tablet area")
+                text: i18ndc("kcm_tablet", "@action:button", "Resize the tablet area")
                 QQC2.ToolTip {
                     text: inputAreaSizeHandle.text
                     visible: parent.hovered && !resizeHandler.active

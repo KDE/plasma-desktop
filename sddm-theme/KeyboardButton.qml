@@ -16,7 +16,7 @@ PlasmaComponents.ToolButton {
     property int currentIndex: keyboard.currentLayout
     onCurrentIndexChanged: keyboard.currentLayout = currentIndex
 
-    text: i18nd("plasma-desktop-sddm-theme", "Keyboard Layout: %1", keyboard.layouts[currentIndex]?.longName ?? "")
+    text: i18ndc("plasma-desktop-sddm-theme", "@action:button opens layout chooser %1 is current", "Keyboard Layout: %1", keyboard.layouts[currentIndex]?.longName ?? "")
     visible: keyboard.layouts.length > 1
 
     checkable: true

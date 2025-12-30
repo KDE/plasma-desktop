@@ -354,7 +354,7 @@ FocusScope {
 
     PlasmaCore.Action {
         id: viewPropertiesAction
-        text: i18n("Icons")
+        text: i18nc("@item:inmenu opens submenu with view options like sorting", "Icons")
         icon.name: "view-list-icons"
         menu: viewPropertiesMenu.menu
     }

@@ -34,7 +34,7 @@ Kirigami.FormLayout {
 
             required property int index
 
-            Kirigami.FormData.label: i18nd("kcm_tablet", "Pad ring %1:", index + 1)
+            Kirigami.FormData.label: i18ndc("kcm_tablet", "@label for graphics tablet ring config, % is number of ring", "Pad ring %1:", index + 1)
 
             Repeater {
                 id: modesRepeater
@@ -97,7 +97,7 @@ Kirigami.FormLayout {
 
             required property int index
 
-            Kirigami.FormData.label: i18nd("kcm_tablet", "Pad dial %1:", index + 1)
+            Kirigami.FormData.label: i18ndc("kcm_tablet", "@label for graphics tablet ring config, % is number of dial", "Pad dial %1:", index + 1)
 
             name: i18ndc("kcm_tablet", "@info Meant to be inserted into an existing sentence like 'configuring pad button 0'", "pad dial %1", index + 1)
             supportsPenButton: false
@@ -135,7 +135,7 @@ Kirigami.FormLayout {
 
             required property int index
 
-            Kirigami.FormData.label: (buttonPressed ? "<b>" : "") + i18nd("kcm_tablet", "Pad button %1:", index + 1) + (buttonPressed ? "</b>" : "")
+            Kirigami.FormData.label: (buttonPressed ? "<b>" : "") + i18ndc("kcm_tablet", "@label for graphics tablet button config, % is number of button", "Pad button %1:", index + 1) + (buttonPressed ? "</b>" : "")
             property bool buttonPressed: false
 
             name: i18ndc("kcm_tablet", "@info Meant to be inserted into an existing sentence like 'configuring pad button 0'", "pad button %1", index + 1)

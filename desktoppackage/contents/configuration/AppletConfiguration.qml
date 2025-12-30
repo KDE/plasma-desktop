@@ -87,7 +87,7 @@ Rectangle {
     ConfigModel {
         id: globalAppletConfigModel
         ConfigCategory {
-            name: i18nd("plasma_shell_org.kde.plasma.desktop", "Keyboard Shortcuts")
+            name: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:group for configuration dialog page", "Keyboard Shortcuts")
             icon: "preferences-desktop-keyboard"
             source: Qt.resolvedUrl("ConfigurationShortcuts.qml")
         }
@@ -334,7 +334,7 @@ Rectangle {
                 Layout.fillWidth: true
                 model: ConfigModel {
                     ConfigCategory{
-                        name: i18nd("plasma_shell_org.kde.plasma.desktop", "About")
+                        name: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:group for About dialog page", "About")
                         icon: "help-about"
                         source: Qt.resolvedUrl("AboutPlugin.qml")
                     }
@@ -382,8 +382,8 @@ Rectangle {
         Kirigami.PromptDialog {
             id: messageDialog
             property var item
-            title: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply Settings")
-            subtitle: i18nd("plasma_shell_org.kde.plasma.desktop", "The current page has unsaved changes. Apply the changes or discard them?")
+            title: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:window dialog title", "Apply Settings")
+            subtitle: i18ndc("plasma_shell_org.kde.plasma.desktop", "@label dialog body", "The current page has unsaved changes. Apply the changes or discard them?")
             standardButtons: Kirigami.Dialog.Apply | Kirigami.Dialog.Discard | Kirigami.Dialog.Cancel
             onApplied: {
                 applyAction.trigger()
@@ -415,20 +415,20 @@ Rectangle {
 
                 QQC2.Button {
                     icon.name: "dialog-ok"
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "OK")
+                    text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "OK")
                     onClicked: acceptAction.trigger()
                 }
                 QQC2.Button {
                     id: applyButton
                     enabled: false
                     icon.name: "dialog-ok-apply"
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply")
+                    text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Apply")
                     visible: !app.isAboutPage && app.pageStack.currentItem
                     onClicked: applyAction.trigger()
                 }
                 QQC2.Button {
                     icon.name: "dialog-cancel"
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Cancel")
+                    text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Cancel")
                     onClicked: cancelAction.trigger()
                     visible: !app.isAboutPage
                     KeyNavigation.tab: categories

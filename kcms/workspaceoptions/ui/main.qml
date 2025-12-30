@@ -22,13 +22,13 @@ KCM.SimpleKCM {
         id: primarySelectionRebootMessage
         position: Kirigami.InlineMessage.Position.Header
         type: Kirigami.MessageType.Information
-        text: i18n("The system must be restarted before changes to the middle-click paste setting can take effect.")
+        text: i18nc("@info:status inlinemessage", "The system must be restarted before changes to the middle-click paste setting can take effect.")
         visible: false
         showCloseButton: true
         actions: [
             Kirigami.Action {
                 icon.name: "system-reboot"
-                text: i18n("Restart")
+                text: i18nc("@action:button", "Restart")
                 onTriggered: kcm.requestReboot();
             }
         ]
@@ -66,7 +66,7 @@ KCM.SimpleKCM {
                 }
             }
             Kirigami.ContextualHelpButton {
-                toolTipText: i18n("Allows all Plasma panel and desktop widgets to show descriptive tooltips when hovered with the pointer. This setting has no effect on the small tooltips displayed when hovering over individual buttons and other user interface elements.")
+                toolTipText: i18nc("@info:whatsthis contextualhelpbutton tooltip", "Allows all Plasma panel and desktop widgets to show descriptive tooltips when hovered with the pointer. This setting has no effect on the small tooltips displayed when hovering over individual buttons and other user interface elements.")
             }
         }
 
@@ -84,7 +84,7 @@ KCM.SimpleKCM {
                 }
             }
             Kirigami.ContextualHelpButton {
-                toolTipText: i18n("Allows all Plasma widgets to show on-screen display (OSD) popups for changes like volume and brightness level, or audio device switching.")
+                toolTipText: i18nc("@info:whatsthis contextualhelpbutton tooltip", "Allows all Plasma widgets to show on-screen display (OSD) popups for changes like volume and brightness level, or audio device switching.")
             }
         }
 
@@ -97,8 +97,8 @@ KCM.SimpleKCM {
         QQC2.ButtonGroup { id: scrollHandleBehaviorGroup }
 
         QQC2.RadioButton {
-            Kirigami.FormData.label: i18n("Clicking in scrollbar track:")
-            text: i18nc("@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to the clicked location'", "Scrolls to the clicked location")
+            Kirigami.FormData.label: i18nc("@title:group prefix radiobutton group", "Clicking in scrollbar track:")
+            text: i18nc("@option:radio part of a complete sentence: 'Clicking in scrollbar track scrolls to the clicked location'", "Scrolls to the clicked location")
             checked: !kcm.globalsSettings.scrollbarLeftClickNavigatesByPage
             onToggled: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage = false
             QQC2.ButtonGroup.group: scrollHandleBehaviorGroup
@@ -116,7 +116,7 @@ KCM.SimpleKCM {
 
             QQC2.RadioButton {
                 id: scrollbarLeftClickNavigatesByPage
-                text: i18nc("@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one page up or down'", "Scrolls one page up or down")
+                text: i18nc("@option:radio part of a complete sentence: 'Clicking in scrollbar track scrolls one page up or down'", "Scrolls one page up or down")
                 Accessible.description: scrollbarLeftClickNavigatesByPageHelperText.text
                 checked: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage
                 onToggled: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage = true
@@ -134,7 +134,7 @@ KCM.SimpleKCM {
                 scrollbarLeftClickNavigatesByPage.indicator.width + scrollbarLeftClickNavigatesByPage.spacing : scrollbarLeftClickNavigatesByPageHelperText.padding
                 rightPadding: Application.layoutDirection === Qt.RightToLeft ?
                 scrollbarLeftClickNavigatesByPage.indicator.width + scrollbarLeftClickNavigatesByPage.spacing : scrollbarLeftClickNavigatesByPageHelperText.padding
-                text: i18n("Middle-click to scroll to clicked location")
+                text: i18nc("@info:usagetip", "Middle-click to scroll to clicked location")
                 textFormat: Text.PlainText
                 elide: Text.ElideRight
                 font: Kirigami.Theme.smallFont
@@ -198,7 +198,7 @@ KCM.SimpleKCM {
                     doubleClick.indicator.width + doubleClick.spacing : doubleClickHelperText.padding
                 rightPadding: Application.layoutDirection === Qt.RightToLeft ?
                     doubleClick.indicator.width + doubleClick.spacing : doubleClickHelperText.padding
-                text: i18n("Open by double-clicking instead")
+                text: i18nc("@info:usagetip", "Open by double-clicking instead")
                 textFormat: Text.PlainText
                 elide: Text.ElideRight
                 font: Kirigami.Theme.smallFont
@@ -229,7 +229,7 @@ KCM.SimpleKCM {
                     singleClick.indicator.width + singleClick.spacing : singleClickHelperText.padding
                 rightPadding: Application.layoutDirection === Qt.RightToLeft ?
                     singleClick.indicator.width + singleClick.spacing : singleClickHelperText.padding
-                text: i18n("Select by clicking on item's selection marker")
+                text: i18nc("@info:usagetip", "Select by clicking on item's selection marker")
                 textFormat: Text.PlainText
                 elide: Text.ElideRight
                 font: Kirigami.Theme.smallFont
@@ -265,7 +265,7 @@ KCM.SimpleKCM {
         }
 
         RowLayout {
-            Kirigami.FormData.label: i18n("Double-click interval:")
+            Kirigami.FormData.label: i18nc("@label:spinbox", "Double-click interval:")
             spacing: Kirigami.Units.smallSpacing
 
             QQC2.SpinBox {
@@ -298,7 +298,7 @@ KCM.SimpleKCM {
             }
 
             Kirigami.ContextualHelpButton {
-                toolTipText: i18n("Two clicks within this duration are considered a double-click. Some applications may not honor this setting.")
+                toolTipText: i18nc("@info:whatsthis contextualhelpbutton tooltip", "Two clicks within this duration are considered a double-click. Some applications may not honor this setting.")
             }
         }
 
@@ -351,15 +351,15 @@ KCM.SimpleKCM {
 
         Item {
             Kirigami.FormData.isSection: true
-            Kirigami.FormData.label: i18n("Drag and Drop")
+            Kirigami.FormData.label: i18nc("@title:group prefix radiobutton group", "Drag and Drop")
         }
 
         QQC2.ButtonGroup { id: dndBehaviorGroup }
 
         QQC2.RadioButton {
             id: dndBehaviorAsk
-            Kirigami.FormData.label: i18n("When dragging files or folders:")
-            text: i18n("Always ask what to do")
+            Kirigami.FormData.label: i18nc("@title:group prefix radiobutton group", "When dragging files or folders:")
+            text: i18nc("@option:radio When dragging...", "Always ask what to do")
             Accessible.description: dndBehaviorAskHelperText.text
             enabled: !kcm.globalsSettings.isImmutable("dndBehavior")
             checked: kcm.globalsSettings.dndBehavior === WorkspaceOptionsGlobalsSettings.AlwaysAsk
@@ -383,7 +383,7 @@ KCM.SimpleKCM {
 
         QQC2.RadioButton {
             id: dndBehaviorMove
-            text: i18n("Move if on the same device")
+            text: i18nc("@option:radio When dragging…", "Move if on the same device")
             Accessible.description: dndBehaviorMoveHelperText.text
             enabled: !kcm.globalsSettings.isImmutable("dndBehavior")
             checked: kcm.globalsSettings.dndBehavior === WorkspaceOptionsGlobalsSettings.MoveIfSameDevice
@@ -413,9 +413,9 @@ KCM.SimpleKCM {
         QQC2.ButtonGroup { id: tabletModeBehaviorGroup }
 
         RowLayout {
-            Kirigami.FormData.label: i18n("Enable Touch Mode:")
+            Kirigami.FormData.label: i18nc("@title:group prefix radiobutton group", "Enable Touch Mode:")
             QQC2.RadioButton {
-                text: KWindowSystem.isPlatformWayland ? i18nc("As in: 'Touch Mode is automatically enabled as needed'", "Automatically enable as needed") : i18nc("As in: 'Touch Mode is never enabled'", "Never enabled")
+                text: KWindowSystem.isPlatformWayland ? i18nc("@option:radio As in: 'Touch Mode is automatically enabled as needed'", "Automatically enable as needed") : i18nc("option:radio As in: 'Touch Mode is never enabled'", "Never enabled")
                 Accessible.description: touchModeAlwaysOffRadioButtonHelperText.text
                 checked: kcm.kwinSettings.tabletMode === "auto"
                 onToggled: {
@@ -432,7 +432,7 @@ KCM.SimpleKCM {
             }
             Kirigami.ContextualHelpButton {
                 visible: KWindowSystem.isPlatformWayland
-                toolTipText: i18n("Touch Mode will be automatically activated whenever the system detects a touchscreen but no mouse or touchpad. For example: when a transformable laptop's keyboard is flipped around or detached.")
+                toolTipText: i18nc("@info:whatsthis contextualhelpbutton tooltip", "Touch Mode will be automatically activated whenever the system detects a touchscreen but no mouse or touchpad. For example: when a transformable laptop's keyboard is flipped around or detached.")
             }
         }
 
@@ -483,7 +483,7 @@ KCM.SimpleKCM {
                 touchModeAlwaysOffRadioButton.indicator.width + touchModeAlwaysOffRadioButton.spacing : touchModeAlwaysOffRadioButton.padding
                 rightPadding: Application.layoutDirection === Qt.RightToLeft ?
                 touchModeAlwaysOffRadioButton.indicator.width + touchModeAlwaysOffRadioButton.spacing : touchModeAlwaysOffRadioButtonHelperText.padding
-                text: i18n("In Touch Mode, many elements of the user interface will become larger to more easily accommodate touch interaction.")
+                text: i18nc("@info:usagetip", "In Touch Mode, many elements of the user interface will become larger to more easily accommodate touch interaction.")
                 textFormat: Text.PlainText
                 elide: Text.ElideRight
                 font: Kirigami.Theme.smallFont

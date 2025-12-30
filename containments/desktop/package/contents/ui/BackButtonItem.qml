@@ -102,7 +102,7 @@ KSvg.FrameSvgItem {
         wrapMode: Text.Wrap
         elide: Text.ElideRight
 
-        text: i18n("Back")
+        text: i18nc("@action:button", "Back")
     }
 
     Timer {

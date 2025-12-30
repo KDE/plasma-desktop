@@ -35,8 +35,8 @@ SimpleKCM {
 
     Kirigami.PlaceholderMessage {
         icon.name: "preferences-desktop-tablet"
-        text: i18nd("kcm_tablet", "No drawing tablets found")
-        explanation: i18n("Connect a drawing tablet")
+        text: i18ndc("kcm_tablet", "@info placeholdermessage text", "No drawing tablets found")
+        explanation: i18nc("@info:usagetip placeholdermessage explanation", "Connect a drawing tablet")
         anchors.centerIn: parent
         visible: combo.count === 0
         width: parent.width - (Kirigami.Units.largeSpacing * 4)

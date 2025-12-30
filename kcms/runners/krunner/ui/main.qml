@@ -28,18 +28,18 @@ KCM.SimpleKCM {
         }
 
         QQC2.RadioButton {
-            Kirigami.FormData.label: i18n("Position on screen:")
+            Kirigami.FormData.label: i18nc("@title:group prefix for radiobutton group", "Position on screen:")
             onToggled: kcm.krunnerSettings.freeFloating = false
             checked: !kcm.krunnerSettings.freeFloating
             QQC2.ButtonGroup.group: positionGroup
-            text: i18n("Top")
+            text: i18nc("@option:check Position on top of screen", "Top")
         }
 
         QQC2.RadioButton {
             checked: kcm.krunnerSettings.freeFloating
             onToggled: kcm.krunnerSettings.freeFloating = true
             QQC2.ButtonGroup.group: positionGroup
-            text: i18n("Center")
+            text: i18nc("@option:check Position in center of screen", "Center")
 
             KCM.SettingStateBinding {
                 configObject: kcm.krunnerSettings
@@ -52,7 +52,7 @@ KCM.SimpleKCM {
         }
 
         QQC2.CheckBox {
-            Kirigami.FormData.label: i18n("Activation:")
+            Kirigami.FormData.label: i18nc("@label prefix for checkbutton", "Activation:")
             checked: kcm.krunnerSettings.activateWhenTypingOnDesktop
             onToggled: kcm.krunnerSettings.activateWhenTypingOnDesktop = checked
             text: i18nc("@option:check", "Activate when pressing any key on the desktop")
@@ -68,20 +68,20 @@ KCM.SimpleKCM {
         }
 
         QQC2.RadioButton {
-            Kirigami.FormData.label: i18n("History:")
+            Kirigami.FormData.label: i18nc("@title:group prefix for radiobutton group", "History:")
             checked: kcm.krunnerSettings.historyBehavior === KRunnerSettings.Disabled
             onToggled: kcm.krunnerSettings.historyBehavior = KRunnerSettings.Disabled
-            text: i18nc("@option:check", "Disabled")
+            text: i18nc("@option:radio History is disabled", "Disabled")
         }
         QQC2.RadioButton {
             checked: kcm.krunnerSettings.historyBehavior === KRunnerSettings.CompletionSuggestion
             onToggled: kcm.krunnerSettings.historyBehavior = KRunnerSettings.CompletionSuggestion
-            text: i18nc("@option:check The thing being enabled is search history", "Enable suggestions")
+            text: i18nc("@option:radio The thing being enabled is search history", "Enable suggestions")
         }
         QQC2.RadioButton {
             checked: kcm.krunnerSettings.historyBehavior === KRunnerSettings.ImmediateCompletion
             onToggled: kcm.krunnerSettings.historyBehavior = KRunnerSettings.ImmediateCompletion
-            text: i18nc("@option:check The thing being enabled is search history", "Enabled auto-complete")
+            text: i18nc("@option:radio The thing being enabled is search history", "Enable auto-complete")
         }
 
         QQC2.Button {
@@ -89,7 +89,7 @@ KCM.SimpleKCM {
             enabled: kcm.krunnerSettings.historyBehavior !== KRunnerSettings.Disabled && kcm.historyKeys.length > 0
 
             icon.name: Application.layoutDirection === Qt.LeftToRight ? "edit-clear-locationbar-ltr" : "edit-clear-locationbar-rtl"
-            text: i18n("Clear History…")
+            text: i18nc("@action:button", "Clear History…")
 
             checked: activityMenu.visible
 

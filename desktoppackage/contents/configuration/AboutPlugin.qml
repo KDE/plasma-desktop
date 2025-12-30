@@ -18,7 +18,7 @@ import org.kde.kcmutils as KCM
  */
 KCM.SimpleKCM {
     id: page
-    title: i18n("About")
+    title: i18nc("@title:window About this widget", "About")
 
     property var metaData: Plasmoid.metaData
 
@@ -48,7 +48,7 @@ KCM.SimpleKCM {
                     icon.name: "mail-sent"
 
                     display: QQC2.AbstractButton.IconOnly
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Send an email to %1", modelData.emailAddress)
+                    text: i18ndc("@action:button icononly for tooltip & accessible", "plasma_shell_org.kde.plasma.desktop", "Send an email to %1", modelData.emailAddress)
 
                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                     QQC2.ToolTip.visible: hovered
@@ -62,7 +62,7 @@ KCM.SimpleKCM {
                     icon.name: "globe"
 
                     display: QQC2.AbstractButton.IconOnly
-                    text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:tooltip %1 url", "Open website %1", modelData.webAddress)
+                    text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button icononly for tooltip & accessible %1 is url", "Open website %1", modelData.webAddress)
 
                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                     QQC2.ToolTip.visible: hovered
@@ -162,14 +162,14 @@ KCM.SimpleKCM {
                 textFormat: Text.PlainText
 
                 url: page.metaData.bugReportUrl
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Report an issue")
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button urlbutton", "Report an issue")
 
                 visible: page.metaData.bugReportUrl.length > 0
             }
 
             Kirigami.Heading {
                 Layout.topMargin: column.headingTopSpacing
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Copyright")
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title license information",  "Copyright")
                 textFormat: Text.PlainText
             }
 
@@ -188,7 +188,7 @@ KCM.SimpleKCM {
 
                     QQC2.Label {
                         Layout.fillWidth: true
-                        text: i18nd("plasma_shell_org.kde.plasma.desktop %1 is the short SPDX text for the license", "License: %1", page.metaData.license)
+                        text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@label %1 is the short SPDX text for the license", "License: %1", page.metaData.license)
                         textFormat: Text.PlainText
                     }
 
@@ -208,7 +208,7 @@ KCM.SimpleKCM {
             Kirigami.Heading {
                 Layout.fillWidth: true
                 Layout.topMargin: column.headingTopSpacing
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Authors")
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:group", "Authors")
                 textFormat: Text.PlainText
                 visible: page.metaData.authors.length > 0
             }
@@ -220,7 +220,7 @@ KCM.SimpleKCM {
 
             Kirigami.Heading {
                 Layout.topMargin: column.headingTopSpacing
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Credits")
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:group", "Credits")
                 textFormat: Text.PlainText
                 visible: repCredits.count > 0
             }
@@ -233,7 +233,7 @@ KCM.SimpleKCM {
 
             Kirigami.Heading {
                 Layout.topMargin: column.headingTopSpacing
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Translators")
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:group", "Translators")
                 textFormat: Text.PlainText
                 visible: repTranslators.count > 0
             }

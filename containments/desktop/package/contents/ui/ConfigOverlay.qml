@@ -94,7 +94,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
             ActionButton {
                 id: rotateButton
                 icon.name: "object-rotate-left-symbolic"
-                toolTip: !rotateHandle.pressed ? i18n("Click and drag to rotate") : ""
+                toolTip: !rotateHandle.pressed ? i18nc("@action:button tooltip rotate widget", "Click and drag to rotate") : ""
                 action: applet ? applet.plasmoid.internalAction("rotate") : null
                 down: rotateHandle.pressed
                 Component.onCompleted: {
@@ -180,7 +180,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
 
             ActionButton {
                 icon.name: "show-background"
-                toolTip: checked ? i18n("Hide Background") : i18n("Show Background")
+                toolTip: checked ? i18nc("@action:button tooltip hide widget background", "Hide Background") : i18nc("@action:button tooltip", "Show Background")
                 visible: (applet.plasmoid.backgroundHints & PlasmaCore.Types.ConfigurableBackground)
                 checked: applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground || applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.TranslucentBackground
                 checkable: true
@@ -228,7 +228,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
             ActionButton {
                 id: closeButton
                 icon.name: "edit-delete-remove"
-                toolTip: i18n("Remove")
+                toolTip: i18nc("@action:button tooltip remove widget", "Remove")
                 visible: {
                     if (!applet) {
                         return false;

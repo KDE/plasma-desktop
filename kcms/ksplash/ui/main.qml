@@ -27,7 +27,7 @@ KCM.GridViewKCM {
 
     actions: NewStuff.Action {
         id: newStuffButton
-        text: i18n("&Get New…")
+        text: i18nc("@action:button", "&Get New…")
         configFile: "ksplash.knsrc"
         viewMode: NewStuff.Page.ViewMode.Preview
         onEntryEvent: function(entry, event) {
@@ -47,7 +47,7 @@ KCM.GridViewKCM {
         Connections {
             target: kcm
             function onTestingFailed(processErrorOutput) {
-                testingFailedLabel.text = i18n("Failed to show the splash screen preview.")
+                testingFailedLabel.text = i18nc("@info:status", "Failed to show the splash screen preview.")
                 if (processErrorOutput) {
                     testingFailedLabel.text += "\n" + processErrorOutput
                 }
@@ -78,12 +78,12 @@ KCM.GridViewKCM {
             Kirigami.Action {
                 visible: model.pluginName !== "None"
                 icon.name: "media-playback-start"
-                tooltip: i18n("Preview Splash Screen")
+                tooltip: i18nc("@action:button", "Preview Splash Screen")
                 onTriggered: kcm.test(model.pluginName)
             },
             Kirigami.Action {
                 icon.name: model.pendingDeletion ? "edit-undo" : "edit-delete"
-                tooltip: i18n("Uninstall")
+                tooltip: i18nc("@action:button", "Uninstall")
                 enabled: model.uninstallable
                 onTriggered: model.pendingDeletion = !model.pendingDeletion
             }

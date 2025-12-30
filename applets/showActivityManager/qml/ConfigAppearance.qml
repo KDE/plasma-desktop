@@ -20,15 +20,15 @@ KCM.SimpleKCM {
         RadioButton {
             id: radioCurrentActivityIcon
 
-            Kirigami.FormData.label: i18n("Icon:")
+            Kirigami.FormData.label: i18nc("@title:group prefix for radiobutton group", "Icon:")
 
-            text: i18n("Show the current activity icon")
+            text: i18nc("@option:radio", "Show the current activity icon")
         }
 
         RadioButton {
             id: radioGenericActivityIcon
             checked: !radioCurrentActivityIcon.checked
-            text: i18n("Show the generic activity icon")
+            text: i18nc("@option:radio", "Show the generic activity icon")
         }
 
         Item { Kirigami.FormData.isSection: true }
@@ -38,9 +38,9 @@ KCM.SimpleKCM {
 
             enabled: Plasmoid.formFactor !== PlasmaCore.Types.Vertical
 
-            Kirigami.FormData.label: i18n("Title:")
+            Kirigami.FormData.label: i18nc("@label prefix for checkbox", "Title:")
 
-            text: i18n("Show the current activity name")
+            text: i18nc("@option:check title", "Show the current activity name")
         }
     }
 }

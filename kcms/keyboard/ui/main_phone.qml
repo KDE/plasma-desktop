@@ -33,7 +33,7 @@ KCM.SimpleKCM {
         spacing: 0
 
         FormCard.FormHeader {
-            title: i18n("Model & Layout")
+            title: i18nc("@title form header", "Model & Layout")
         }
 
         FormCard.FormCard {

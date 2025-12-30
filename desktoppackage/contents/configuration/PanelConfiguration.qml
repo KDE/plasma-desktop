@@ -96,7 +96,7 @@ ColumnLayout {
 
             Kirigami.Heading {
                 Layout.leftMargin: Kirigami.Units.smallSpacing
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Panel Settings")
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:window", "Panel Settings")
                 textFormat: Text.PlainText
             }
 
@@ -159,15 +159,15 @@ ColumnLayout {
             Kirigami.Heading {
                 Layout.alignment: Qt.AlignHCenter
                 level: dialogRoot.headingLevel
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Position")
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:group", "Position")
                 textFormat: Text.PlainText
             }
             PanelRepresentation {
                 id: positionRepresentation
-                text: (panel.location === PlasmaCore.Types.TopEdge ? i18nd("plasma_shell_org.kde.plasma.desktop", "Top") :
-                       panel.location === PlasmaCore.Types.RightEdge ? i18nd("plasma_shell_org.kde.plasma.desktop", "Right") :
-                       panel.location === PlasmaCore.Types.LeftEdge ? i18nd("plasma_shell_org.kde.plasma.desktop", "Left") :
-                       i18nd("plasma_shell_org.kde.plasma.desktop", "Bottom"))
+                text: (panel.location === PlasmaCore.Types.TopEdge ? i18ndc("plasma_shell_org.kde.plasma.desktop", "@label panel screen edge", "Top") :
+                       panel.location === PlasmaCore.Types.RightEdge ? i18ndc("plasma_shell_org.kde.plasma.desktop", "@label panel screen edge", "Right") :
+                       panel.location === PlasmaCore.Types.LeftEdge ? i18ndc("plasma_shell_org.kde.plasma.desktop", "@label panel screen edge", "Left") :
+                       i18ndc("plasma_shell_org.kde.plasma.desktop", "@label panel screen edge", "Bottom"))
                 Layout.alignment: Qt.AlignHCenter
                 alignment: (panel.location === PlasmaCore.Types.TopEdge ? Qt.AlignHCenter | Qt.AlignTop :
                             panel.location === PlasmaCore.Types.RightEdge ? Qt.AlignVCenter | Qt.AlignRight :
@@ -187,7 +187,7 @@ ColumnLayout {
                 Layout.minimumHeight: transparencyBox.height
                 Layout.minimumWidth: positionRepresentation.width
                 Layout.alignment: Qt.AlignHCenter
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Set Position…")
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "action:button", "Set Position…")
                 checkable: true
 
                 function moveTo(newLocation: int, associatedWindow = null) {
@@ -214,7 +214,7 @@ ColumnLayout {
             Kirigami.Heading {
                 Layout.alignment: Qt.AlignHCenter
                 level: dialogRoot.headingLevel
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alignment")
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:group", "Alignment")
                 textFormat: Text.PlainText
             }
             PanelRepresentation {
@@ -279,9 +279,9 @@ ColumnLayout {
                 Layout.alignment: Qt.AlignHCenter
                 Layout.minimumWidth: alignmentRepresentation.width
                 model: [
-                    dialogRoot.vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Top") : i18nd("plasma_shell_org.kde.plasma.desktop", "Left"),
-                    i18nd("plasma_shell_org.kde.plasma.desktop", "Center"),
-                    dialogRoot.vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Bottom") : i18nd("plasma_shell_org.kde.plasma.desktop", "Right")
+                    dialogRoot.vertical ? i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Top") : i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Left"),
+                    i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Center"),
+                    dialogRoot.vertical ? i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Bottom") : i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Right")
                 ]
                 currentIndex: (panel.alignment === Qt.AlignLeft ? 0 :
                                 panel.alignment === Qt.AlignCenter ? 1 : 2)
@@ -311,8 +311,8 @@ ColumnLayout {
             Kirigami.Heading {
                 level: dialogRoot.headingLevel
                 Layout.alignment: Qt.AlignHCenter
-                text: dialogRoot.vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Height")
-                                          : i18nd("plasma_shell_org.kde.plasma.desktop", "Width")
+                text: dialogRoot.vertical ? i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:group panel height", "Height")
+                                          : i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:group panel width", "Width")
                 textFormat: Text.PlainText
             }
             PanelRepresentation {
@@ -331,9 +331,9 @@ ColumnLayout {
                 Layout.alignment: Qt.AlignHCenter
                 Layout.minimumWidth: lengthRepresentation.width
                 model: [
-                    dialogRoot.vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Fill height") : i18nd("plasma_shell_org.kde.plasma.desktop", "Fill width"),
-                    i18nd("plasma_shell_org.kde.plasma.desktop", "Fit content"),
-                    i18nd("plasma_shell_org.kde.plasma.desktop", "Custom")
+                    dialogRoot.vertical ? i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Fill height") : i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Fill width"),
+                    i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Fit content"),
+                    i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Custom")
                 ]
                 currentIndex: (panel.lengthMode === Panel.Global.FillAvailable ? 0 :
                                 panel.lengthMode === Panel.Global.FitContent ? 1 : 2)
@@ -366,7 +366,7 @@ ColumnLayout {
             Kirigami.Heading {
                 Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
                 level: dialogRoot.headingLevel
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Visibility")
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:group", "Visibility")
                 textFormat: Text.PlainText
             }
             PanelRepresentation {
@@ -384,10 +384,10 @@ ColumnLayout {
                 property int previewIndex: popup.visible ? highlightedIndex : currentIndex
                 property int animationIndex: popup.visible ? highlightedIndex : -1
                 model: [
-                    i18nd("plasma_shell_org.kde.plasma.desktop", "Always visible"),
-                    i18nd("plasma_shell_org.kde.plasma.desktop", "Auto hide"),
-                    i18nd("plasma_shell_org.kde.plasma.desktop", "Dodge windows"),
-                    i18nd("plasma_shell_org.kde.plasma.desktop", "Windows go below"),
+                    i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Always visible"),
+                    i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Auto hide"),
+                    i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Dodge windows"),
+                    i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Windows go below"),
                 ]
                 onAnimationIndexChanged: {
                     if (animationIndex == 0 || animationIndex == 3) {
@@ -447,7 +447,7 @@ ColumnLayout {
             Kirigami.Heading {
                 Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
                 level: dialogRoot.headingLevel
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Opacity")
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:group", "Opacity")
                 textFormat: Text.PlainText
             }
             PanelRepresentation {
@@ -463,9 +463,9 @@ ColumnLayout {
                 id: transparencyBox
                 readonly property int previewIndex: popup.visible ? highlightedIndex : currentIndex
                 model: [
-                    i18nd("plasma_shell_org.kde.plasma.desktop", "Adaptive"),
-                    i18nd("plasma_shell_org.kde.plasma.desktop", "Opaque"),
-                    i18nd("plasma_shell_org.kde.plasma.desktop", "Translucent")
+                    i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Adaptive"),
+                    i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Opaque"),
+                    i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Translucent")
                 ]
                 Layout.alignment: Qt.AlignHCenter
                 Layout.minimumWidth: opacityRepresentation.width
@@ -644,8 +644,8 @@ ColumnLayout {
             wrapMode: Text.Wrap
 
             text: panel.location === PlasmaCore.Types.LeftEdge || panel.location === PlasmaCore.Types.RightEdge
-                ? i18nd("plasma_shell_org.kde.plasma.desktop", "Panel Width:")
-                : i18nd("plasma_shell_org.kde.plasma.desktop", "Panel Height:")
+                ? i18ndc("plasma_shell_org.kde.plasma.desktop", "@label:spinbox", "Panel Width:")
+                : i18ndc("plasma_shell_org.kde.plasma.desktop", "@label:spinbox", "Panel Height:")
             textFormat: Text.PlainText
         }
         PC3.SpinBox {
@@ -668,7 +668,7 @@ ColumnLayout {
 
         PC3.Label {
             Layout.alignment: Qt.AlignRight
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Focus shortcut:")
+            text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:group", "Focus shortcut:")
             textFormat: Text.PlainText
             visible: panel.adaptiveOpacityEnabled
 
@@ -679,15 +679,15 @@ ColumnLayout {
             }
 
             PC3.ToolTip {
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Press this keyboard shortcut to move focus to the Panel")
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:tooltip", "Press this keyboard shortcut to move focus to the Panel")
                 visible: mouseArea.containsMouse
             }
         }
         KeySequenceItem {
             id: button
 
-            Accessible.name: "Focus Shortcut Setter"
-            Accessible.description: "Button to set the shortcut for the panel to gain focus"
+            Accessible.name: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button acccessible name", "Focus Shortcut Setter")
+            Accessible.description: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:whatsthis Accessible description for button", "Button to set the shortcut for the panel to gain focus")
             Accessible.onPressAction: startCapturing()
 
             keySequence: plasmoid.globalShortcut
@@ -716,7 +716,7 @@ ColumnLayout {
                 text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button Delete the panel", "Delete Panel")
                 icon.name: "delete"
 
-                PC3.ToolTip.text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove this panel; this action is undo-able")
+                PC3.ToolTip.text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:tooltip for button", "Remove this panel; this action is undo-able")
                 PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
                 PC3.ToolTip.visible: hovered
 
@@ -729,7 +729,7 @@ ColumnLayout {
                 icon.name: "edit-copy-symbolic"
                 checkable: true
 
-                PC3.ToolTip.text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:tooltip", "Create a new panel with the same settings and applets")
+                PC3.ToolTip.text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:tooltip for button", "Create a new panel with the same settings and applets")
                 PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
                 PC3.ToolTip.visible: hovered
             }
@@ -741,7 +741,7 @@ ColumnLayout {
                 text: plasmoid.corona.enteredEditModeViaDesktop() ? i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button Close the panel configuration window", "Close") : i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button Close the panel configuration window and exit edit mode", "Exit Edit Mode")
                 icon.name: "dialog-ok-symbolic"
 
-                PC3.ToolTip.text: i18nd("plasma_shell_org.kde.plasma.desktop", "Close Panel Settings window and exit Edit Mode")
+                PC3.ToolTip.text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:tooltip for button", "Close Panel Settings window and exit Edit Mode")
                 PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
                 PC3.ToolTip.visible: hovered
 

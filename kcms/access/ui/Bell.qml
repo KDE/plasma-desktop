@@ -16,7 +16,7 @@ Kirigami.FormLayout {
 
     Dialogs.FileDialog {
         id: fileDialog
-        title: i18n("Please choose an audio file")
+        title: i18nc("@title:window dialog","Please choose an audio file")
         nameFilters: [i18nc("Name filters in a file dialog. Do not translate `(*.ogg *.oga *.wav)`",
                             "ogg, oga, and wav audio files (*.ogg *.oga *.wav)")]
         onAccepted: {
@@ -27,7 +27,7 @@ Kirigami.FormLayout {
     QQC2.CheckBox {
         id: systemBell
 
-        Kirigami.FormData.label: i18n("Audible bell:")
+        Kirigami.FormData.label: i18nc("@label prefix for checkbox", "Audible bell:")
         text: i18nc("Enable the system bell", "Enable")
         KCMUtils.SettingStateBinding {
             configObject: kcm.bellSettings
@@ -72,8 +72,9 @@ Kirigami.FormLayout {
         QQC2.Button {
             icon.name: "folder"
             QQC2.ToolTip.visible: down
-            QQC2.ToolTip.text: i18n("Search audio file for the system bell")
-            Accessible.name: i18n("Button search audio file")
+            QQC2.ToolTip.text: i18nc("@action:button icononly tooltip", "Choose audio file for the system bell")
+            Accessible.name: i18nc("@action button accessible only", "Choose audio file")
+            Accessible.description: i18nc("@info:usagetip accessible description for button", "Opens dialog")
             KCMUtils.SettingStateBinding {
                 configObject: kcm.bellSettings
                 settingName: "CustomBellFile"
@@ -89,8 +90,8 @@ Kirigami.FormLayout {
     QQC2.CheckBox {
         id: visibleBell
 
-        Kirigami.FormData.label: i18n("Visual bell:")
-        text: i18nc("Enable visual bell", "Enable")
+        Kirigami.FormData.label: i18nc("@label prefix for checkbox", "Visual bell:")
+        text: i18nc("@option:check Enable visual bell", "Enable")
 
         KCMUtils.SettingStateBinding {
             configObject: kcm.bellSettings
@@ -162,11 +163,11 @@ Kirigami.FormLayout {
         onValueModified: kcm.bellSettings.visibleBellPause = value
 
         textFromValue: function(value, locale) {
-            return i18np("%1 ms", "%1 ms", value)
+            return i18ncp("@label:valuesuffix %1 is visible bell duration", "%1 ms", "%1 ms", value)
         }
 
         valueFromText: (text, locale) => {
-            return Number.fromLocaleString(locale, text.replace(i18ncp("short for millisecond(s)", "ms", "ms"), ""))
+            return Number.fromLocaleString(locale, text.replace(i18ncp("@label:valuesuffix short for millisecond(s)", "ms", "ms"), ""))
         }
     }
 }

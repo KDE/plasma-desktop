@@ -323,7 +323,7 @@ Item {
 
     KSvg.FrameSvgItem {
 
-        Accessible.name: i18n("Panel Focus Indicator")
+        Accessible.name: i18nc("@info:whatsthis Accessible name", "Panel Focus Indicator")
 
         x: root.verticalPanel || !panel.activeFocusItem
             ? translucentItem.x

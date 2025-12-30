@@ -84,7 +84,7 @@ PlasmoidItem {
             + "</li></ul>";
 
         if (windows.length > maximum) {
-            text += i18np("…and %1 other window", "…and %1 other windows", windows.length - maximum) // qmllint disable unqualified
+            text += i18ncp("@info:tooltip overflow label", "…and %1 other window", "…and %1 other windows", windows.length - maximum) // qmllint disable unqualified
         }
 
         return text
@@ -348,7 +348,7 @@ PlasmoidItem {
                     if (visibleWindows.length === 1) {
                         text += visibleWindows[0]
                     } else if (visibleWindows.length > 1) {
-                        text += i18np("%1 Window:", "%1 Windows:", visibleWindows.length) // qmllint disable unqualified
+                        text += i18ncp("@info:tooltip start of list", "%1 Window:", "%1 Windows:", visibleWindows.length) // qmllint disable unqualified
                             + root.generateWindowList(visibleWindows)
                     }
 
@@ -360,7 +360,7 @@ PlasmoidItem {
                     }
 
                     if (minimizedWindows.length > 0) {
-                        text += i18np("%1 Minimized Window:", "%1 Minimized Windows:", minimizedWindows.length) // qmllint disable unqualified
+                        text += i18ncp("@info:tooltip", "%1 Minimized Window:", "%1 Minimized Windows:", minimizedWindows.length) // qmllint disable unqualified
                             + root.generateWindowList(minimizedWindows)
                     }
 
@@ -436,7 +436,7 @@ PlasmoidItem {
                     onClicked: mouse => {
                         pagerModel.changePage(desktop.index);
                     }
-                    Accessible.name: Plasmoid.configuration.displayedText ? desktop.display : i18n("Desktop %1", (desktop.index + 1)) // qmllint disable unqualified
+                    Accessible.name: Plasmoid.configuration.displayedText ? desktop.display : i18nc("@info:whatsthis Accessible name for pager section", "Desktop %1", (desktop.index + 1)) // qmllint disable unqualified
                     Accessible.description: Plasmoid.configuration.displayedText ? i18nc("@info:tooltip %1 is the name of a virtual desktop or an activity", "Switch to %1", desktop.display) : i18nc("@info:tooltip %1 is the name of a virtual desktop or an activity", "Switch to %1", (desktop.index + 1)) // qmllint disable unqualified
                     Accessible.role: Accessible.Button
                     Keys.onPressed: event => {

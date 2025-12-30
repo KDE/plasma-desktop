@@ -73,8 +73,8 @@ PlasmoidItem {
         PlasmaCore.ToolTipArea {
             id: tooltip
             anchors.fill: parent
-            mainText: i18n("Show Activity Manager")
-            subText: i18n("Click to show the activity manager")
+            mainText: i18nc("@info:tooltip", "Show Activity Manager")
+            subText: i18nc("@info:tooltip subtext", "Click to show the activity manager")
         }
 
         Kirigami.Icon {
@@ -120,5 +120,5 @@ PlasmoidItem {
             visible: KConfig.KAuthorized.authorize("kcm_activities")
             onTriggered: KCM.KCMLauncher.openSystemSettings("kcm_activities")
         }
-        ]
+    ]
 }

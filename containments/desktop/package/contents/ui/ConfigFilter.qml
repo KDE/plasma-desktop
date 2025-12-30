@@ -60,26 +60,26 @@ KCM.ScrollViewKCM {
     header: Kirigami.FormLayout {
         ComboBox {
             id: filterMode
-            Kirigami.FormData.label: i18n("Files:")
-            model: [i18n("Show all"), i18n("Show matching"), i18n("Hide matching")]
+            Kirigami.FormData.label: i18nc("@label:listbox filter mode", "Files:")
+            model: [i18nc("@item:inlistbox filter mode", "Show all"), i18nc("@item:inlistbox filter mode", "Show matching"), i18nc("@item:inlistbox filter mode", "Hide matching")]
         }
 
         TextField {
             id: filterPattern
-            Kirigami.FormData.label: i18n("File name pattern:")
+            Kirigami.FormData.label: i18nc("@label:textbox", "File name pattern:")
             enabled: (filterMode.currentIndex > 0)
             inputMethodHints: Qt.ImhNoPredictiveText
         }
 
         Kirigami.SearchField {
             id: mimeFilter
-            Kirigami.FormData.label: i18n("File types:")
+            Kirigami.FormData.label: i18nc("@label:textbox filter list by", "File types:")
             enabled: (filterMode.currentIndex > 0)
         }
 
         CheckBox {
             id: showHiddenFiles
-            Kirigami.FormData.label: i18n("Show hidden files:")
+            Kirigami.FormData.label: i18nc("@option:check prefix", "Show hidden files:")
         }
     }
 
@@ -108,8 +108,8 @@ KCM.ScrollViewKCM {
             clip: true // This removes event handling blocking by the header
             model: ListModel {
                 Component.onCompleted: {
-                    append({ display: i18n("File Type") });
-                    append({ display: i18n("Description") });
+                    append({ display: i18nc("@title:column", "File Type") });
+                    append({ display: i18nc("@title:column", "Description") });
                 }
             }
             interactive: false
@@ -179,7 +179,7 @@ KCM.ScrollViewKCM {
             icon.name: "edit-select-all"
             ToolTip.delay: Kirigami.Units.toolTipDelay
             ToolTip.visible: (Kirigami.Settings.isMobile ? pressed : hovered) && ToolTip.text.length > 0
-            ToolTip.text: i18n("Select All")
+            ToolTip.text: i18nc("@action:button tooltip only Select all filetypes", "Select All")
             onClicked: filteredMimeTypesModel.checkFiltered()
         }
 
@@ -189,7 +189,7 @@ KCM.ScrollViewKCM {
             icon.name: "edit-select-none"
             ToolTip.delay: Kirigami.Units.toolTipDelay
             ToolTip.visible: (Kirigami.Settings.isMobile ? pressed : hovered) && ToolTip.text.length > 0
-            ToolTip.text: i18n("Deselect All")
+            ToolTip.text: i18nc("@action:button tooltip only Deselect all filetypes", "Deselect All")
             onClicked: filteredMimeTypesModel.uncheckFiltered()
         }
 
@@ -198,7 +198,7 @@ KCM.ScrollViewKCM {
             icon.name: filteredMimeTypesModel.sortOrder === Qt.AscendingOrder ? "view-sort-ascending-symbolic" : "view-sort-descending-symbolic"
             ToolTip.delay: Kirigami.Units.toolTipDelay
             ToolTip.visible: (Kirigami.Settings.isMobile ? pressed : hovered) && ToolTip.text.length > 0
-            ToolTip.text: i18n("Switch Sort Order")
+            ToolTip.text: i18nc("@action:button tooltip only, ascending/descending", "Switch Sort Order")
             onClicked: {
                 filteredMimeTypesModel.sortOrder = filteredMimeTypesModel.sortOrder === Qt.AscendingOrder ? Qt.DescendingOrder : Qt.AscendingOrder;
                 filteredMimeTypesModel.sort(0, filteredMimeTypesModel.sortOrder);

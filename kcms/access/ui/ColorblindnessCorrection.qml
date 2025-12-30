@@ -129,10 +129,10 @@ ColumnLayout {
 
             Repeater {
                 model: [
-                    { name: i18n("Reds:"), colors: ["Red", "Orange", "Yellow"] },
-                    { name: i18n("Greens:"), colors: ["Green", "LimeGreen", "Lime"] },
-                    { name: i18n("Blues:"), colors: ["Blue", "DeepSkyBlue", "Aqua"] },
-                    { name: i18n("Purples:"), colors: ["Purple", "Fuchsia", "Violet"] },
+                    { name: i18nc("@title:group for color rectangles", "Reds:"), colors: ["Red", "Orange", "Yellow"] },
+                    { name: i18nc("@title:group for color rectangles", "Greens:"), colors: ["Green", "LimeGreen", "Lime"] },
+                    { name: i18nc("@title:group for color rectangles", "Blues:"), colors: ["Blue", "DeepSkyBlue", "Aqua"] },
+                    { name: i18nc("@title:group for color rectangles", "Purples:"), colors: ["Purple", "Fuchsia", "Violet"] },
                 ]
 
                 delegate: Column {

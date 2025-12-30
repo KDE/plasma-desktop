@@ -15,12 +15,12 @@ import org.kde.plasma.access.kcm
 Kirigami.FormLayout {
     RowLayout {
         spacing: Kirigami.Units.smallSpacing
-        Kirigami.FormData.label: i18n("Slow keys:")
+        Kirigami.FormData.label: i18nc("@title:group prefix", "Slow keys:")
         Kirigami.FormData.buddyFor: slowKeys
         QQC2.CheckBox {
             id: slowKeys
 
-            text: i18nc("Enable slow keys", "Enable")
+            text: i18nc("@option:check Enable slow keys", "Enable")
 
             KCMUtils.SettingStateBinding {
                 configObject: kcm.keyboardFiltersSettings
@@ -38,7 +38,7 @@ Kirigami.FormLayout {
     QQC2.SpinBox {
         id: slowKeyDelay
 
-        Kirigami.FormData.label: i18nc("Slow keys Delay", "Delay:")
+        Kirigami.FormData.label: i18nc("@label:spinbox Slow keys Delay", "Delay:")
 
         KCMUtils.SettingStateBinding {
             configObject: kcm.keyboardFiltersSettings
@@ -53,7 +53,7 @@ Kirigami.FormLayout {
         onValueModified: kcm.keyboardFiltersSettings.slowKeysDelay = value
 
         textFromValue: function(value, locale) {
-            return i18np("%1 ms", "%1 ms", value)
+            return i18ncp("@label:valuesuffix %1 is slow keys delay", "%1 ms", "%1 ms", value)
         }
 
         validator: IntValidatorWithSuffix {
@@ -62,7 +62,7 @@ Kirigami.FormLayout {
         }
 
         valueFromText: (text, locale) => {
-            return Number.fromLocaleString(locale, text.replace(i18ncp("short for millisecond(s)", "ms", "ms"), ""))
+            return Number.fromLocaleString(locale, text.replace(i18ncp("@label:valuesuffix short for millisecond(s)", "ms", "ms"), ""))
         }
     }
     Item {
@@ -71,8 +71,8 @@ Kirigami.FormLayout {
     QQC2.CheckBox {
         id: slowKeysPressBeep
 
-        Kirigami.FormData.label: i18n("Ring system bell:")
-        text: i18nc("Use system bell when a key is pressed", "when any key is &pressed")
+        Kirigami.FormData.label: i18nc("@title:group prefix for checkbox group", "Ring system bell:")
+        text: i18nc("@option:check Use system bell when a key is pressed", "when any key is &pressed")
 
         KCMUtils.SettingStateBinding {
             configObject: kcm.keyboardFiltersSettings
@@ -86,7 +86,7 @@ Kirigami.FormLayout {
     QQC2.CheckBox {
         id: slowKeysAcceptBeep
 
-        text: i18nc("Use system bell when a key is accepted", "when any key is &accepted")
+        text: i18nc("@option:check Use system bell when a key is accepted", "when any key is &accepted")
 
         KCMUtils.SettingStateBinding {
             configObject: kcm.keyboardFiltersSettings
@@ -100,7 +100,7 @@ Kirigami.FormLayout {
     QQC2.CheckBox {
         id: slowKeysRejectBeep
 
-        text: i18nc("Use system bell when a key is rejected", "when any key is &rejected")
+        text: i18nc("@option:check Use system bell when a key is rejected", "when any key is &rejected")
 
         KCMUtils.SettingStateBinding {
             configObject: kcm.keyboardFiltersSettings
@@ -116,12 +116,12 @@ Kirigami.FormLayout {
     }
     RowLayout {
         spacing: Kirigami.Units.smallSpacing
-        Kirigami.FormData.label: i18n("Bounce keys:")
+        Kirigami.FormData.label: i18nc("@title:group prefix", "Bounce keys:")
         Kirigami.FormData.buddyFor: bounceKeys
         QQC2.CheckBox {
             id: bounceKeys
 
-            text: i18nc("Bounce keys enable", "Enable");
+            text: i18nc("@option:check Bounce keys enable", "Enable");
 
             KCMUtils.SettingStateBinding {
                 configObject: kcm.keyboardFiltersSettings
@@ -139,7 +139,7 @@ Kirigami.FormLayout {
     QQC2.SpinBox {
         id: bounceKeysDelay
 
-        Kirigami.FormData.label: i18nc("Bounce keys delay", "Delay:")
+        Kirigami.FormData.label: i18nc("@label:spinbox Bounce keys delay", "Delay:")
 
         KCMUtils.SettingStateBinding {
             configObject: kcm.keyboardFiltersSettings
@@ -154,21 +154,21 @@ Kirigami.FormLayout {
         onValueModified: kcm.keyboardFiltersSettings.bounceKeysDelay = value
 
         textFromValue: function(value, locale) {
-            return i18np("%1 ms", "%1 ms", value)
+            return i18ncp("@label:valuesuffix %1 is bounce keys delay", "%1 ms", "%1 ms", value)
         }
         validator: IntValidatorWithSuffix {
             bottom: bounceKeysDelay.from
             top: bounceKeysDelay.to
         }
         valueFromText: (text, locale) => {
-            return Number.fromLocaleString(locale, text.replace(i18ncp("short for millisecond(s)", "ms", "ms"), ""))
+            return Number.fromLocaleString(locale, text.replace(i18ncp("@label:valuesuffix short for millisecond(s)", "ms", "ms"), ""))
         }
     }
 
     QQC2.CheckBox {
         id: bounceKeysRejectBeep
 
-        text: i18n("Ring system bell when rejected")
+        text: i18nc("@option:check for bounce keys", "Ring system bell when rejected")
 
         KCMUtils.SettingStateBinding {
             configObject: kcm.keyboardFiltersSettings

@@ -16,19 +16,19 @@ KCM.SimpleKCM {
     signal configurationChanged
 
     property var prettyStrings: {
-        "LeftButton": i18nd("plasma_shell_org.kde.plasma.desktop", "Left-Button"),
-        "RightButton": i18nd("plasma_shell_org.kde.plasma.desktop", "Right-Button"),
-        "MiddleButton": i18nd("plasma_shell_org.kde.plasma.desktop", "Middle-Button"),
-        "BackButton": i18nd("plasma_shell_org.kde.plasma.desktop", "Back-Button"),
-        "ForwardButton": i18nd("plasma_shell_org.kde.plasma.desktop", "Forward-Button"),
+        "LeftButton": i18ndc("plasma_shell_org.kde.plasma.desktop", "@label for shortcuts", "Left-Button"),
+        "RightButton": i18ndc("plasma_shell_org.kde.plasma.desktop", "@label for shortcuts", "Right-Button"),
+        "MiddleButton": i18ndc("plasma_shell_org.kde.plasma.desktop", "@label for shortcuts", "Middle-Button"),
+        "BackButton": i18ndc("plasma_shell_org.kde.plasma.desktop", "@label for shortcuts", "Back-Button"),
+        "ForwardButton": i18ndc("plasma_shell_org.kde.plasma.desktop", "@label for shortcuts", "Forward-Button"),
 
-        "wheel:Vertical": i18nd("plasma_shell_org.kde.plasma.desktop", "Vertical-Scroll"),
-        "wheel:Horizontal": i18nd("plasma_shell_org.kde.plasma.desktop", "Horizontal-Scroll"),
+        "wheel:Vertical": i18ndc("plasma_shell_org.kde.plasma.desktop", "@label for shortcuts", "Vertical-Scroll"),
+        "wheel:Horizontal": i18ndc("plasma_shell_org.kde.plasma.desktop", "@label for shortcuts", "Horizontal-Scroll"),
 
-        "ShiftModifier": i18nd("plasma_shell_org.kde.plasma.desktop", "Shift"),
-        "ControlModifier": i18nd("plasma_shell_org.kde.plasma.desktop", "Ctrl"),
-        "AltModifier": i18nd("plasma_shell_org.kde.plasma.desktop", "Alt"),
-        "MetaModifier": i18nd("plasma_shell_org.kde.plasma.desktop", "Meta")
+        "ShiftModifier": i18ndc("plasma_shell_org.kde.plasma.desktop", "@label for shortcuts", "Shift"),
+        "ControlModifier": i18ndc("plasma_shell_org.kde.plasma.desktop", "@label for shortcuts", "Ctrl"),
+        "AltModifier": i18ndc("plasma_shell_org.kde.plasma.desktop", "@label for shortcuts", "Alt"),
+        "MetaModifier": i18ndc("plasma_shell_org.kde.plasma.desktop", "@label for shortcuts", "Meta")
     }
 
     function saveConfig() {
@@ -136,12 +136,11 @@ KCM.SimpleKCM {
         }
 
         MouseEventInputButton {
-            defaultText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Action");
+            defaultText: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Add Action");
             icon.name: checked ? "input-mouse-symbolic" : "list-add"
             onEventStringChanged: {
                 configDialog.currentContainmentActionsModel.append(eventString, "org.kde.contextmenu");
             }
         }
     }
-
 }

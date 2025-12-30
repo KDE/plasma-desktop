@@ -109,8 +109,8 @@ Item {
             }
         }
         objectName: "configurePanelButton" // used for stable accessible id
-        Accessible.name: i18nd("plasma_toolbox_org.kde.paneltoolbox", "Configure Panel…")
-        Accessible.description: i18nd("plasma_toolbox_org.kde.paneltoolbox", "Open Panel configuration ui")
+        Accessible.name: i18ndc("plasma_toolbox_org.kde.paneltoolbox", "@info:whatsthis accessible name", "Configure Panel…")
+        Accessible.description: i18ndc("plasma_toolbox_org.kde.paneltoolbox", "@info:whatsthis accessible description", "Open Panel configuration ui")
         Accessible.role: Accessible.Button
         Accessible.onPressAction: main.Plasmoid.internalAction("configure").trigger();
 

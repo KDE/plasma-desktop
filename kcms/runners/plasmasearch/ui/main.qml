@@ -22,12 +22,12 @@ KCMUtils.ScrollViewKCM {
     actions: [
         Kirigami.Action {
             icon.name: "configure"
-            text: i18n("Configure KRunner…")
+            text: i18nc("@action:button in toolbar", "Configure KRunner…")
             Accessible.name: text // https://bugreports.qt.io/browse/QTBUG-130360
             onTriggered: kcm.showKRunnerKCM()
         },
         NewStuff.Action {
-            text: i18n("Get New Plugins…")
+            text: i18nc("@action:button in toolbar", "Get New Plugins…")
             visible: KAuthorized.authorize(KAuthorized.GHNS)
             configFile: "krunner.knsrc"
             onEntryEvent: (entry, event) => {
@@ -42,7 +42,7 @@ KCMUtils.ScrollViewKCM {
         spacing: Kirigami.Units.smallSpacing
 
         QQC2.Label {
-            text: i18n("Enable or disable plugins (used in KRunner, Application Launcher, and the Overview effect). Mark plugins as favorites and arrange them in order you want to prioritize them.")
+            text: i18nc("@info:usagetip", "Enable or disable plugins (used in KRunner, Application Launcher, and the Overview effect). Mark plugins as favorites and arrange them in order you want to prioritize them.")
             textFormat: Text.PlainText
             wrapMode: Text.WordWrap
             Layout.fillWidth: true
@@ -88,7 +88,7 @@ KCMUtils.ScrollViewKCM {
                 additionalActions: [
                     Kirigami.Action {
                         displayHint: Kirigami.DisplayHint.IconOnly
-                        text: isFavorite ? i18n("Remove from favorites") : i18n("Add to favorites")
+                        text: isFavorite ? i18nc("@action:button, icononly", "Remove from favorites") : i18nc("@action:button, icononly", "Add to favorites")
                         Accessible.name: text // https://bugreports.qt.io/browse/QTBUG-130360
                         icon.name: isFavorite ? "starred-symbolic": "non-starred-symbolic"
                         onTriggered: isFavorite ? kcm.removeFromFavorites(model.metaData) : kcm.addToFavorites(model.metaData)

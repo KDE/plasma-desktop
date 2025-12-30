@@ -67,7 +67,7 @@ PlasmaCore.Dialog {
         PlasmaExtras.PlasmoidHeading {
             Kirigami.Heading {
                 id: heading
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alternative Widgets")
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:window for widget alternatives explorer", "Alternative Widgets")
                 textFormat: Text.PlainText
             }
         }

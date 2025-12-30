@@ -14,21 +14,21 @@ ConfigModel {
     property bool isFolder: (Plasmoid.pluginName === "org.kde.plasma.folder")
 
     ConfigCategory {
-         name: i18n("Location")
+         name: i18nc("@title:group for configuration dialog page", "Location")
          icon: "inode-directory"
          source: "ConfigLocation.qml"
          visible: configModel.isFolder
     }
 
     ConfigCategory {
-         name: i18n("Icons")
+         name: i18nc("@title:group for configuration dialog page", "Icons")
          icon: "preferences-desktop-icons"
          source: "ConfigIcons.qml"
          visible: configModel.isFolder
     }
 
     ConfigCategory {
-         name: i18n("Filter")
+         name: i18nc("@title:group for configuration dialog page", "Filter")
          icon: "preferences-desktop-filter"
          source: "ConfigFilter.qml"
          visible: configModel.isFolder

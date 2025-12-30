@@ -450,14 +450,14 @@ ContainmentItem {
             icon: "configure"
         }
         Accessible.name: toolTipArea.mainText
-        Accessible.description: i18nd("plasma_shell_org.kde.plasma.desktop", "Open Panel configuration ui")
+        Accessible.description: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:whatsthis Accessible description for entering Panel edit mode click area", "Open Panel configuration ui")
         Accessible.role: Accessible.Button
     }
     PC3.ToolButton {
         id: addWidgetsButton
         anchors.centerIn: parent
         visible: appletsModel.count === 0
-        text: root.isHorizontal ? i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets…") : undefined
+        text: root.isHorizontal ? i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button opens widget explorer", "Add Widgets…") : undefined
         icon.name: "list-add-symbolic"
         onClicked: Plasmoid.internalAction("add widgets").trigger()
     }

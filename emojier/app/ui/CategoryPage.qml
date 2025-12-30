@@ -109,7 +109,7 @@ Kirigami.ScrollablePage {
 
             visible: view.showClearHistoryButton
             enabled: emojiView.count > 0
-            text: i18n("Clear History")
+            text: i18nc("@action:button clear emoji history", "Clear History")
             icon.name: "edit-clear-history"
             onClicked: view.clearHistoryRequested()
             KeyNavigation.right: skinToneButton
@@ -365,7 +365,7 @@ Kirigami.ScrollablePage {
         Kirigami.PlaceholderMessage {
             anchors.centerIn: parent
             width: parent.width - (Kirigami.Units.largeSpacing * 8)
-            text: view.showClearHistoryButton ? i18n("No recent Emojis") : i18nc("@label placeholder for no emoji found in category", "No matching emoji found")
+            text: view.showClearHistoryButton ? i18nc("@label placeholder for empty recent emoji list", "No recent Emojis") : i18nc("@label placeholder for no emoji found in category", "No matching emoji found")
             visible: emojiView.count === 0 && view.showClearHistoryButton
         }
     }

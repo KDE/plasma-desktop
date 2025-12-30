@@ -27,14 +27,14 @@ KCM.SimpleKCM {
             type: kcm.error.length > 0 ? Kirigami.MessageType.Error : Kirigami.MessageType.Information
             visible: kcm.restartInSetupScreen || kcm.error.length > 0
             text: kcm.error.length > 0
-            ? i18n("Failed to request restart to firmware setup: %1", kcm.error)
-            : kcm.isUefi ? i18n("Next time the computer is restarted, it will enter the UEFI setup screen.")
-            : i18n("Next time the computer is restarted, it will enter the firmware setup screen.")
+                ? i18nc("@info:status inlinemessage", "Failed to request restart to firmware setup: %1", kcm.error)
+                : kcm.isUefi ? i18nc("@info:status inlinemessage", "Next time the computer is restarted, it will enter the UEFI setup screen.")
+                             : i18nc("@info:status inlinemessage", "Next time the computer is restarted, it will enter the firmware setup screen.")
             showCloseButton: true
             actions: Kirigami.Action {
                 icon.name: "system-reboot"
                 onTriggered: kcm.reboot();
-                text: i18n("Restart Now")
+                text: i18nc("@action:button", "Restart Now")
             }
         }
     }
@@ -68,7 +68,7 @@ KCM.SimpleKCM {
         }
         RadioButton {
             id: loginRestore
-            Kirigami.FormData.label: i18n("On login, launch apps that were open:")
+            Kirigami.FormData.label: i18nc("@title:group prefix for radiobuttons", "On login, launch apps that were open:")
             text: i18nc("@option:radio Automatic style of session restoration", "On last logout")
             checked: kcm.settings.loginMode === 0
             onToggled: kcm.settings.loginMode = 0
@@ -110,7 +110,7 @@ KCM.SimpleKCM {
         }
 
         RowLayout {
-            Kirigami.FormData.label: i18n("Ignored applications:")
+            Kirigami.FormData.label: i18nc("@label:textbox", "Ignored applications:")
 
             spacing: 0
 
@@ -129,7 +129,7 @@ KCM.SimpleKCM {
                 }
             }
             Kirigami.ContextualHelpButton {
-                toolTipText: i18n("Write apps' desktop file identifier or, on X11, executable names here (separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along with other session-restored apps.")
+                toolTipText: i18nc("@info:whatsthis contextualhelpbutton tooltip", "Write apps' desktop file identifier or, on X11, executable names here (separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along with other session-restored apps.")
             }
         }
 

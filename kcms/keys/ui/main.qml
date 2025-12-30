@@ -24,7 +24,7 @@ KCM.AbstractKCM {
     framedView: false
 
     // order must be in sync with ComponentType enum in basemodel.h
-    readonly property var sectionNames: [i18n("Applications"), i18n("Commands"), i18n("System Services"), i18n("Common Actions")]
+    readonly property var sectionNames: [i18nc("@title:group list section name", "Applications"), i18nc("@title:group list section name", "Commands"), i18nc("@title:group list section name", "System Services"), i18nc("@title:group list section name", "Common Actions")]
 
     property alias exportActive: exportInfo.visible
     readonly property bool errorOccured: kcm.lastError !== ""
@@ -101,7 +101,7 @@ KCM.AbstractKCM {
         Kirigami.InlineMessage {
             id: exportWarning
             Layout.fillWidth: true
-            text: i18n("Cannot export scheme while there are unsaved changes")
+            text: i18nc("@info:status inlinemessage", "Cannot export scheme while there are unsaved changes")
             position: Kirigami.InlineMessage.Position.Header
             type: Kirigami.MessageType.Warning
             showCloseButton: true
@@ -114,7 +114,7 @@ KCM.AbstractKCM {
         Kirigami.InlineMessage {
             id: exportInfo
             Layout.fillWidth: true
-            text: i18n("Select the components below that should be included in the exported scheme")
+            text: i18nc("@info:usagetip", "Select the components below that should be included in the exported scheme")
             position: Kirigami.InlineMessage.Position.Header
             type: Kirigami.MessageType.Information
             showCloseButton: true
@@ -338,7 +338,7 @@ KCM.AbstractKCM {
                         anchors.centerIn: parent
                         width: parent.width - (Kirigami.Units.largeSpacing * 4)
                         visible: components.count === 0 && search.text.length > 0
-                        text: i18n("No items matched the search terms")
+                        text: i18nc("@info:status placeholdermessage", "No items matched the search terms")
                     }
                 }
             }
@@ -396,7 +396,7 @@ KCM.AbstractKCM {
                             anchors.centerIn: parent
                             width: parent.width - (Kirigami.Units.largeSpacing * 4)
                             visible: components.currentIndex == -1
-                            text: i18n("Select an item from the list to view its shortcuts here")
+                            text: i18nc("@info:usagetip placeholdermessage","Select an item from the list to view its shortcuts here")
                         }
                     }
                 }
@@ -409,7 +409,7 @@ KCM.AbstractKCM {
         active: false
         property bool save
         sourceComponent: FileDialog {
-            title: save ? i18n("Export Shortcut Scheme") : i18n("Import Shortcut Scheme")
+            title: save ? i18nc("@title:window dialog", "Export Shortcut Scheme") : i18nc("@title:window dialog", "Import Shortcut Scheme")
             currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
             nameFilters: [ i18nc("Template for file dialog","Shortcut Scheme (*.kksrc)") ]
             defaultSuffix: ".kksrc"
@@ -438,7 +438,7 @@ KCM.AbstractKCM {
         property string name: ""
         property Item commandListItemDelegate: null
 
-        title: editing ? i18n("Edit Command") : i18n("Add Command")
+        title: editing ? i18nc("@title:window dialog", "Edit Command") : i18nc("@title:window dialog", "Add Command")
         iconName: 'folder-script-symbolic'
 
         onVisibleChanged: {
@@ -460,7 +460,7 @@ KCM.AbstractKCM {
         }
 
         property Kirigami.Action addCommandAction: Kirigami.Action {
-            text: addCommandDialog.editing ? i18n("Save") : i18n("Add")
+            text: addCommandDialog.editing ? i18nc("@action:button in dialog, save changes to custom command", "Save") : i18nc("@action:button in dialog, add entry as new custom command", "Add")
             Accessible.name: addCommandDialog.editing
                              ? i18nc("@action:button accessible", "Save command")
                              : i18nc("@action:button accessible", "Add command")
@@ -489,7 +489,7 @@ KCM.AbstractKCM {
 
             QQC2.Label {
                 Layout.fillWidth: true
-                text: i18n("Enter a command or choose a script file:")
+                text: i18nc("@info:usagetip", "Enter a command or choose a script file:")
                 textFormat: Text.PlainText
                 wrapMode: Text.Wrap
             }
@@ -550,7 +550,7 @@ KCM.AbstractKCM {
     Kirigami.Dialog {
         id: importSheet
 
-        title: i18n("Import Shortcut Scheme")
+        title: i18nc("@title:window dialog", "Import Shortcut Scheme")
 
         width: Math.max(Math.round(root.width / 2), Kirigami.Units.gridUnit * 24)
 
@@ -558,7 +558,7 @@ KCM.AbstractKCM {
             spacing: Kirigami.Units.smallSpacing
 
             QQC2.Label {
-                text: i18n("Select the scheme to import:")
+                text: i18nc("@label:listbox regarding 'shortcut schemes'", "Select the scheme to import:")
                 textFormat: Text.PlainText
                 Layout.leftMargin: Kirigami.Units.largeSpacing
                 Layout.rightMargin: Kirigami.Units.largeSpacing
@@ -577,7 +577,7 @@ KCM.AbstractKCM {
                 onActivated: url = model[index]["url"]
                 Component.onCompleted: {
                     var defaultSchemes = kcm.defaultSchemes()
-                    defaultSchemes.push({name: i18n("Custom Scheme"), url: "unused"})
+                    defaultSchemes.push({name: i18nc("@item:inlistbox regarding 'shortcut schemes'", "Custom Scheme"), url: "unused"})
                     model = defaultSchemes
                 }
             }
@@ -585,7 +585,7 @@ KCM.AbstractKCM {
 
          customFooterActions: [
              Kirigami.Action {
-                text: schemeBox.customSchemeSelected ? i18n("Select File…") : i18n("Import")
+                text: schemeBox.customSchemeSelected ? i18nc("@action:button", "Select File…") : i18nc("@action:button import shortcut scheme", "Import")
                 Accessible.name: schemeBox.customSchemeSelected
                                  ? i18nc("@action:button accessible", "Select shortcut scheme file")
                                  : i18nc("@action:button accessible", "Add shortcut scheme")

@@ -13,7 +13,7 @@ import org.kde.kcmutils as KCM
 KCM.SimpleKCM {
     id: root
 
-    title: i18n("Shortcuts")
+    title: i18nc("@title:window for configuration page", "Shortcuts")
 
     property bool unsavedChanges: false
 

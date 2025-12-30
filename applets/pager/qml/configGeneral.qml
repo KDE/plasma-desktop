@@ -36,25 +36,25 @@ KCM.SimpleKCM {
         QQC2.CheckBox {
             id: showWindowOutlines
 
-            Kirigami.FormData.label: i18n("General:") // qmllint disable unqualified
+            Kirigami.FormData.label: i18nc("@title:group prefix for checkbox group", "General:") // qmllint disable unqualified
 
-            text: i18n("Show window outlines") // qmllint disable unqualified
+            text: i18nc("@option:check", "Show window outlines") // qmllint disable unqualified
         }
 
         QQC2.CheckBox {
             id: showWindowIcons
-            text: i18n("Show application icons on window outlines") // qmllint disable unqualified
+            text: i18nc("@option:check", "Show application icons on window outlines") // qmllint disable unqualified
             enabled: showWindowOutlines.checked
         }
 
         QQC2.CheckBox {
             id: showOnlyCurrentScreen
-            text: i18n("Show only current screen") // qmllint disable unqualified
+            text: i18nc("@option:check", "Show only current screen") // qmllint disable unqualified
         }
 
         QQC2.CheckBox {
             id: wrapPage
-            text: i18n("Navigation wraps around") // qmllint disable unqualified
+            text: i18nc("@option:check", "Navigation wraps around") // qmllint disable unqualified
         }
 
 
@@ -66,9 +66,9 @@ KCM.SimpleKCM {
         QQC2.ComboBox {
             id: pagerLayout
 
-            Kirigami.FormData.label: i18n("Layout:") // qmllint disable unqualified
+            Kirigami.FormData.label: i18nc("@title:listbox", "Layout:") // qmllint disable unqualified
 
-            model: [i18nc("The pager layout", "Default"), i18n("Horizontal"), i18n("Vertical")] // qmllint disable unqualified
+            model: [i18nc("@item:inlistbox The pager layout", "Default"), i18nc("@item:inlistbox The pager layout", "Horizontal"), i18nc("@item:inlistbox The pager layout", "Vertical")] // qmllint disable unqualified
             visible: root.isActivityPager
         }
 
@@ -82,10 +82,10 @@ KCM.SimpleKCM {
         QQC2.RadioButton {
             id: noTextRadio
 
-            Kirigami.FormData.label: i18n("Text display:") // qmllint disable unqualified
+            Kirigami.FormData.label: i18nc("@title:group prefix for radiobutton group", "Text display:") // qmllint disable unqualified
 
             QQC2.ButtonGroup.group: displayedTextGroup
-            text: i18n("No text") // qmllint disable unqualified
+            text: i18nc("@option:radio text display", "No text") // qmllint disable unqualified
             checked: root.cfg_displayedText === 2
             onToggled: if (checked) root.cfg_displayedText = 2;
         }
@@ -93,7 +93,7 @@ KCM.SimpleKCM {
         QQC2.RadioButton {
             id: desktopNumberRadio
             QQC2.ButtonGroup.group: displayedTextGroup
-            text: isActivityPager ? i18n("Activity number") : i18n("Desktop number") // qmllint disable unqualified
+            text: isActivityPager ? i18nc("@option:radio text display", "Activity number") : i18nc("@option:radio text display", "Desktop number") // qmllint disable unqualified
             checked: root.cfg_displayedText === 0
             onToggled: if (checked) root.cfg_displayedText = 0;
         }
@@ -101,7 +101,7 @@ KCM.SimpleKCM {
         QQC2.RadioButton {
             id: desktopNameRadio
             QQC2.ButtonGroup.group: displayedTextGroup
-            text: isActivityPager ? i18n("Activity name") : i18n("Desktop name") // qmllint disable unqualified
+            text: isActivityPager ? i18nc("@option:radio text display", "Activity name") : i18nc("@option:radio text display", "Desktop name") // qmllint disable unqualified
             checked: root.cfg_displayedText === 1
             onToggled: if (checked) root.cfg_displayedText = 1;
         }

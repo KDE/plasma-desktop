@@ -32,7 +32,7 @@ KCMUtils.SimpleKCM {
         }
 
         RowLayout {
-            Kirigami.FormData.label: i18n("Theme:")
+            Kirigami.FormData.label: i18nc("@title:group for light/dark quick switch", "Theme:")
 
             Layout.alignment: Qt.AlignCenter
             spacing: Kirigami.Units.largeSpacing
@@ -180,7 +180,7 @@ KCMUtils.SimpleKCM {
                     ? slider.to
                     : -(Math.log(kcm.globalsSettings.animationDurationFactor) / Math.log(2))
 
-                Accessible.name: i18n("Animation speed:")
+                Accessible.name: i18nc("@title:slider", "Animation speed:")
 
                 KCMUtils.SettingStateBinding {
                     configObject: kcm.globalsSettings
@@ -223,7 +223,7 @@ KCMUtils.SimpleKCM {
                 onToggled: kcm.globalsSettings.singleClick = false
                 QQC2.ButtonGroup.group: singleClickGroup
 
-                Accessible.description: i18n("Open by double-clicking instead")
+                Accessible.description: i18nc("@info:usagetip", "Open by double-clicking instead")
 
                 KCMUtils.SettingStateBinding {
                     configObject: kcm.globalsSettings
@@ -256,7 +256,7 @@ KCMUtils.SimpleKCM {
                 onToggled: kcm.globalsSettings.singleClick = true
                 QQC2.ButtonGroup.group: singleClickGroup
 
-                Accessible.description: i18n("Select by clicking on item's selection marker")
+                Accessible.description: i18nc("@info:usagetip", "Select by clicking on item's selection marker")
 
                 KCMUtils.SettingStateBinding {
                     configObject: kcm.globalsSettings
@@ -296,7 +296,7 @@ KCMUtils.SimpleKCM {
 
         GridLayout {
             id: mostUsedGrid
-            Kirigami.FormData.label: i18n("Most used pages:")
+            Kirigami.FormData.label: i18nc("@title:group for grid of buttons opening kcms", "Most used pages:")
 
             visible: recentlyUsedRepeater.count > 0
             Layout.fillWidth: true

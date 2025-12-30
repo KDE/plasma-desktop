@@ -54,7 +54,7 @@ Kirigami.FormLayout {
     QQC2.CheckBox {
         id: stickyKeysAutoOff
         Layout.fillWidth: true
-        text: i18n("Disable when two keys are held down")
+        text: i18nc("@option:check", "Disable when two keys are held down")
 
         KCMUtils.SettingStateBinding {
             configObject: kcm.keyboardSettings
@@ -67,7 +67,7 @@ Kirigami.FormLayout {
     }
     QQC2.CheckBox {
         Layout.fillWidth: true
-        text: i18n("Ring system bell when modifier keys are used")
+        text: i18nc("@option:check", "Ring system bell when modifier keys are used")
 
         KCMUtils.SettingStateBinding {
             configObject: kcm.keyboardSettings

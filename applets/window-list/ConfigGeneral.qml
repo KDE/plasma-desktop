@@ -86,9 +86,9 @@ KCM.SimpleKCM {
         
             text: Plasmoid.formFactor === PlasmaCore.Types.Vertical ?
                 // On a vertical panel
-                i18n("Only icons can be shown when the Panel is vertical.") :
+                i18nc("@info:usagetip display mode for active application", "Only icons can be shown when the Panel is vertical.") :
                 // On the desktop
-                i18n("Not applicable when the widget is on the Desktop.")
+                i18nc("@info:usagetip display mode for active application", "Not applicable when the widget is on the Desktop.")
             textFormat: Text.PlainText
             wrapMode: Text.Wrap
             font: Kirigami.Theme.smallFont
@@ -119,7 +119,7 @@ KCM.SimpleKCM {
                 enabled: root.cfg_openOnHover
 
                 textFromValue: function(value, locale) {
-                    return i18np("%1 ms", "%1 ms", value)
+                    return i18ncp("@item:valuesuffix, %1 is hover activation delay in ms", "%1 ms", "%1 ms", value)
                 }
 
                 validator: IntValidator {

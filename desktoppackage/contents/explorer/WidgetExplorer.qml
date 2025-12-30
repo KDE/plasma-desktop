@@ -137,7 +137,7 @@ PC3.Page {
         onClicked: model => {
             list.contentX = 0
             list.contentY = 0
-            categoryButton.text = (model.filterData ? model.display : i18nd("plasma_shell_org.kde.plasma.desktop", "All Widgets"))
+            categoryButton.text = (model.filterData ? model.display : i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button like listbox, switches category to all widgets", "All Widgets"))
             widgetExplorer.widgetsModel.filterQuery = model.filterData
             widgetExplorer.widgetsModel.filterType = model.filterType
         }
@@ -166,7 +166,7 @@ PC3.Page {
                 Kirigami.Heading {
                     id: heading
                     level: 1
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Widgets")
+                    text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:group for widget grid", "Widgets")
                     textFormat: Text.PlainText
                     elide: Text.ElideRight
 
@@ -220,7 +220,7 @@ PC3.Page {
                 }
                 PC3.ToolButton {
                     id: categoryButton
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "All Widgets")
+                    text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button like listbox, switches category to all widgets", "All Widgets")
                     icon.name: "view-filter"
 
                     Accessible.role: Accessible.ButtonMenu
@@ -234,7 +234,7 @@ PC3.Page {
                     }
 
                     PC3.ToolTip {
-                        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Categories")
+                        text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button tooltip only", "Categories")
                     }
                 }
             }
@@ -386,7 +386,7 @@ PC3.Page {
         anchors.centerIn: parent
         width: parent.width - (Kirigami.Units.gridUnit * 4)
         iconName: "edit-none"
-        text: searchInput.text.length > 0 ? i18nd("plasma_shell_org.kde.plasma.desktop", "No widgets matched the search terms") : i18nd("plasma_shell_org.kde.plasma.desktop", "No widgets available")
+        text: searchInput.text.length > 0 ? i18ndc("plasma_shell_org.kde.plasma.desktop", "@info placeholdermessage", "No widgets matched the search terms") : i18ndc("plasma_shell_org.kde.plasma.desktop", "@info placeholdermessage", "No widgets available")
         visible: list.count == 0 && !setModelTimer.running
     }
 }

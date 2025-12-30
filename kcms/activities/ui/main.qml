@@ -71,7 +71,7 @@ KCM.ScrollViewKCM {
 
     actions: Kirigami.Action {
         visible: kcm.isNewActivityAuthorized
-        text: i18n("Create New…")
+        text: i18nc("@action:button Create new Activity", "Create New…")
         icon.name: "list-add"
         onTriggered: kcm.newActivity();
     }
@@ -91,7 +91,7 @@ KCM.ScrollViewKCM {
         standardButtons: Kirigami.Dialog.Cancel
         customFooterActions: [
             Kirigami.Action {
-                text: i18n("Delete Activity")
+                text: i18nc("@action:button in dialog confirms deletion","Delete Activity")
                 icon.name: "edit-delete"
                 onTriggered: {
                     kcm.deleteActivity(removePrompt.activityId)

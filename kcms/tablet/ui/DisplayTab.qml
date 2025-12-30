@@ -43,7 +43,7 @@ Kirigami.FormLayout {
 
     QQC2.ComboBox {
         id: outputsCombo
-        Kirigami.FormData.label: i18nd("kcm_tablet", "Map to screen:")
+        Kirigami.FormData.label: i18ndc("kcm_tablet", "@label:listbox", "Map to screen:")
         model: KCM.OutputsModel {
             id: outputsModel
         }
@@ -70,13 +70,13 @@ Kirigami.FormLayout {
     }
 
     QQC2.ComboBox {
-        Kirigami.FormData.label: i18nd("kcm_tablet", "Orientation:")
+        Kirigami.FormData.label: i18ndc("kcm_tablet", "@label:listbox", "Orientation:")
         model: KCM.OrientationsModel {
             id: orientationsModel
         }
         enabled: root.device && root.device.supportsOrientation
         currentIndex: orientationsModel.rowForOrientation(root.device.orientation)
-        displayText: root.device.supportsOrientation ? currentText : i18nd("kcm_tablet", "Not Applicable")
+        displayText: root.device.supportsOrientation ? currentText : i18ndc("kcm_tablet", "@label substitute for unavailable orientation change", "Not Applicable")
         textRole: "display"
         onActivated: {
             root.device.orientation = orientationsModel.orientationAt(currentIndex)
@@ -90,7 +90,7 @@ Kirigami.FormLayout {
     QQC2.ComboBox {
         id: outputAreaCombo
         Layout.fillWidth: true
-        Kirigami.FormData.label: i18nd("kcm_tablet", "Mapped Area:")
+        Kirigami.FormData.label: i18ndc("kcm_tablet", "@label:listbox", "Mapped Area:")
         enabled: outputsCombo.currentIndex !== 0
         model: outputsCombo.currentIndex === 0 ?
             // We don't support mapping to a portion of the screen with follow current screen, since we have no way to visualize that

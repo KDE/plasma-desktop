@@ -12,8 +12,8 @@ Item {
     id: root
 
     Kirigami.PlaceholderMessage {
-        text: i18nd("kcm_tablet", "No pad inputs found")
-        explanation: i18n("No buttons or other inputs were detected. This could mean the driver for this device is missing.")
+        text: i18ndc("kcm_tablet", "@info placeholdermessage main text", "No pad inputs found")
+        explanation: i18nc("@info:usagetip placeholdermessage explanation", "No buttons or other inputs were detected. This could mean the driver for this device is missing.")
         anchors.centerIn: parent
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
     }

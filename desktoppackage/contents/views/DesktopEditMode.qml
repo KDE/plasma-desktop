@@ -128,7 +128,7 @@ Item {
                 PC.ToolButton {
                     Layout.alignment: Qt.AlignTop
                     icon.name: "dialog-ok-symbolic"
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Exit Edit Mode")
+                    text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Exit Edit Mode")
                     onClicked: containment.plasmoid.corona.editMode = false
                 }
             }

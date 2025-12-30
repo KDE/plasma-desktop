@@ -73,7 +73,7 @@ SimpleKCM {
 
         Kirigami.InlineMessage {
             visible: Plasmoid.immutable || animating
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout changes have been restricted by the system administrator")
+            text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:status inlinemessage", "Layout changes have been restricted by the system administrator")
             showCloseButton: true
             Layout.fillWidth: true
             Layout.leftMargin: Kirigami.Units.smallSpacing
@@ -88,7 +88,7 @@ SimpleKCM {
             QQC2.ComboBox {
                 id: pluginComboBox
                 Layout.preferredWidth: Math.max(implicitWidth, wallpaperComboBox.implicitWidth)
-                Kirigami.FormData.label: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout:")
+                Kirigami.FormData.label: i18ndc("plasma_shell_org.kde.plasma.desktop", "@label:listbox", "Layout:")
                 enabled: !Plasmoid.immutable
                 model: configDialog.containmentPluginsConfigModel
                 textRole: "name"
@@ -111,7 +111,7 @@ SimpleKCM {
             RowLayout {
                 Layout.fillWidth: true
                 enabled: main.currentItem.objectName !== "switchContainmentWarningItem"
-                Kirigami.FormData.label: i18nd("plasma_shell_org.kde.plasma.desktop", "Wallpaper type:")
+                Kirigami.FormData.label: i18ndc("plasma_shell_org.kde.plasma.desktop", "@label:listbox", "Wallpaper type:")
                 Kirigami.FormData.buddyFor: wallpaperComboBox
 
                 QQC2.ComboBox {
@@ -150,7 +150,7 @@ SimpleKCM {
                 }
                 NewStuff.Button {
                     configFile: "wallpaperplugin.knsrc"
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get New Plugins…")
+                    text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Get New Plugins…")
                     visibleWhenDisabled: true // don't hide on disabled
                     Layout.preferredHeight: wallpaperComboBox.height
                 }
@@ -240,11 +240,11 @@ SimpleKCM {
                 anchors.centerIn: parent
 
                 icon.name: "documentinfo"
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout changes must be applied before other changes can be made")
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info", "Layout changes must be applied before other changes can be made")
 
                 helpfulAction: QQC2.Action {
                     icon.name: "dialog-ok-apply"
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply Now")
+                    text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Apply Now")
                     onTriggered: appearanceRoot.saveConfig()
                 }
             }

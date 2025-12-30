@@ -56,8 +56,8 @@ AbstractKickoffItemDelegate {
                 active: root.model?.isNewlyInstalled ?? false
 
                 sourceComponent: Badge {
-                    text: i18nc("Newly installed app, badge, keep short", "New!") // qmllint disable unqualified
-                    Accessible.name: i18n("Newly installed application") // qmllint disable unqualified
+                    text: i18nc("@label Newly installed app, badge, keep short", "New!") // qmllint disable unqualified
+                    Accessible.name: i18nc("@label Accessible name for badge", "Newly installed application") // qmllint disable unqualified
                 }
             }
         }
