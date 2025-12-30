@@ -14,7 +14,7 @@
 class KCMGameController : public KQuickConfigModule
 {
     Q_OBJECT
-    Q_PROPERTY(bool pluginEnabled READ isPluginEnabled WRITE setPluginEnabled NOTIFY pluginEnabledChanged)
+    Q_PROPERTY(bool pluginEnabled READ isPluginEnabled WRITE setPluginEnabled NOTIFY pluginEnabledChanged FINAL)
 
 public:
     KCMGameController(QObject *parent, const KPluginMetaData &metaData);
