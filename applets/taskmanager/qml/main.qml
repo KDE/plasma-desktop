@@ -37,8 +37,6 @@ PlasmoidItem {
     property Task toolTipOpenedByClick
     property Task toolTipAreaItem
 
-    readonly property Component pulseAudioComponent: Qt.createComponent("PulseAudio.qml")
-
     property alias taskList: taskList
 
     preferredRepresentation: fullRepresentation
@@ -331,12 +329,6 @@ PlasmoidItem {
         TaskManager.ActivityInfo {
             id: activityInfo
             readonly property string nullUuid: "00000000-0000-0000-0000-000000000000"
-        }
-
-        Loader {
-            id: pulseAudio
-            sourceComponent: tasks.pulseAudioComponent
-            active: tasks.pulseAudioComponent.status === Component.Ready
         }
 
         Timer {

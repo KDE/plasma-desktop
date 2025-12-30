@@ -15,7 +15,6 @@ import org.kde.plasma.plasmoid
 KCMUtils.SimpleKCM {
     id: root
 
-    readonly property bool plasmaPaAvailable: Qt.createComponent("PulseAudio.qml").status === Component.Ready
     readonly property bool plasmoidVertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
     readonly property bool iconOnly: Plasmoid.pluginName === "org.kde.plasma.icontasks"
 
@@ -58,9 +57,8 @@ KCMUtils.SimpleKCM {
         QQC2.CheckBox {
             id: indicateAudioStreams
             text: i18nc("@option:check section General", "Show an indicator when a task is playing audio")
-            checked: root.cfg_indicateAudioStreams && root.plasmaPaAvailable
+            checked: root.cfg_indicateAudioStreams
             onToggled: root.cfg_indicateAudioStreams = checked
-            enabled: root.plasmaPaAvailable
         }
 
         QQC2.CheckBox {
@@ -68,17 +66,16 @@ KCMUtils.SimpleKCM {
             leftPadding: mirrored ? 0 : (indicateAudioStreams.indicator.width + indicateAudioStreams.spacing)
             rightPadding: mirrored ? (indicateAudioStreams.indicator.width + indicateAudioStreams.spacing) : 0
             text: i18nc("@option:check section General", "Mute task when clicking indicator")
-            checked: root.cfg_interactiveMute && root.plasmaPaAvailable
+            checked: root.cfg_interactiveMute
             onToggled: root.cfg_interactiveMute = checked
-            enabled: indicateAudioStreams.checked && root.plasmaPaAvailable
+            enabled: indicateAudioStreams.checked
         }
 
         QQC2.CheckBox {
             id: tooltipControls
             text: i18nc("@option:check section General", "Show media and volume controls in tooltip")
-            checked: root.cfg_tooltipControls && root.plasmaPaAvailable
+            checked: root.cfg_tooltipControls
             onToggled: root.cfg_tooltipControls = checked
-            enabled: root.plasmaPaAvailable
         }
 
         QQC2.CheckBox {

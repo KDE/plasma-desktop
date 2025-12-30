@@ -44,9 +44,6 @@
 #include <PlasmaActivities/Stats/ResultSet>
 #include <PlasmaActivities/Stats/Terms>
 
-#include <processcore/process.h>
-#include <processcore/processes.h>
-
 namespace KAStats = KActivities::Stats;
 
 using namespace KAStats;
@@ -541,33 +538,6 @@ bool Backend::isApplication(const QUrl &url) const
     return desktopFile.hasApplicationType();
 }
 
-qint64 Backend::parentPid(qint64 pid) const
-{
-    KSysGuard::Processes procs;
-    procs.updateOrAddProcess(pid);
-
-    KSysGuard::Process *proc = procs.getProcess(pid);
-    if (!proc) {
-        return -1;
-    }
-
-    int parentPid = proc->parentPid();
-    if (parentPid != -1) {
-        procs.updateOrAddProcess(parentPid);
-
-        KSysGuard::Process *parentProc = procs.getProcess(parentPid);
-        if (!parentProc) {
-            return -1;
-        }
-
-        if (!proc->cGroup().isEmpty() && parentProc->cGroup() == proc->cGroup()) {
-            return parentProc->pid();
-        }
-    }
-
-    return -1;
-}
-
 void Backend::setupShortcuts()
 {
     static std::once_flag once;
@@ -699,5 +669,3 @@ void Backend::dispatchMoveActiveTaskForward()
         Q_EMIT target->moveActiveTaskForwardRequested();
     }
 }
-
-#include "moc_backend.cpp"
