@@ -414,7 +414,6 @@ ColumnLayout {
     Loader {
         id: volumeControls
         active: toolTipDelegate.parentTask !== null
-             && pulseAudio.item !== null
              && toolTipDelegate.parentTask.tooltipControlsEnabled
              && toolTipDelegate.parentTask.hasAudioStream
              // Only load for one entry, as the controls only apply to one window.
@@ -465,27 +464,19 @@ ColumnLayout {
                 id: slider
 
                 readonly property int displayValue: Math.round(value / to * 100)
-                readonly property int loudestVolume: toolTipDelegate.parentTask.audioStreams
-                    .reduce((loudestVolume, stream) => Math.max(loudestVolume, stream.volume), 0)
 
                 Layout.fillWidth: true
-                from: pulseAudio.item.minimalVolume
-                to: pulseAudio.item.normalVolume
-                value: loudestVolume
-                stepSize: to / 100
+                from: 0
+                to: 100
+                value: toolTipDelegate.parentTask.volume
                 opacity: toolTipDelegate.parentTask.muted ? 0.5 : 1
 
                 Accessible.name: i18nc("Accessibility data on volume slider", "Adjust volume for %1", toolTipDelegate.parentTask.appName)
 
-                onMoved: toolTipDelegate.parentTask.audioStreams.forEach((stream) => {
-                    let v = Math.max(from, value)
-                    if (v > 0 && loudestVolume > 0) { // prevent divide by 0
-                        // adjust volume relative to the loudest stream
-                        v = Math.min(Math.round(stream.volume / loudestVolume * v), to)
-                    }
-                    stream.model.Volume = v
-                    stream.model.Muted = v === 0
-                })
+                onMoved: {
+                    toolTipDelegate.parentTask.volume = value
+                    toolTipDelegate.parentTask.muted = value === 0
+                }
             }
             PlasmaComponents3.Label { // percent label
                 Layout.alignment: Qt.AlignHCenter

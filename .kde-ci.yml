@@ -52,6 +52,7 @@ Dependencies:
     'third-party/wayland': '@latest'
     'third-party/wayland-protocols': '@latest'
     'libraries/kirigami-addons': '@latest-kf6'
+    'libraries/pulseaudio-qt': '@latest-kf6'
     'network/kaccounts-integration': '@latest-kf6'
 
 RuntimeDependencies:
@@ -64,7 +65,6 @@ RuntimeDependencies:
     'frameworks/qqc2-desktop-style': '@latest-kf6'
     'network/kio-extras': '@latest-kf6'
     'plasma/kactivitymanagerd': '@same'
-    'plasma/plasma-pa': '@same'
     'sdk/selenium-webdriver-at-spi': '@same'
 
 Options:

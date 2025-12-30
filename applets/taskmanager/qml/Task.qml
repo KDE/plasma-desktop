@@ -62,14 +62,14 @@ PlasmaCore.ToolTipArea {
     property QtObject smartLauncherItem: null
 
     property Item audioStreamIcon: null
-    property var audioStreams: []
     property bool delayAudioStreamIndicator: false
     property bool completed: false
     readonly property bool audioIndicatorsEnabled: Plasmoid.configuration.indicateAudioStreams
     readonly property bool tooltipControlsEnabled: Plasmoid.configuration.tooltipControls
-    readonly property bool hasAudioStream: audioStreams.length > 0
-    readonly property bool playingAudio: hasAudioStream && audioStreams.some(item => !item.corked)
-    readonly property bool muted: hasAudioStream && audioStreams.every(item => item.muted)
+    readonly property bool hasAudioStream: audioInfo.hasAudioStream
+    readonly property bool playingAudio: audioInfo.playingAudio
+    property alias muted: audioInfo.muted
+    property alias volume: audioInfo.volume
 
     readonly property bool highlighted: (inPopup && activeFocus) || (!inPopup && containsMouse)
         || (task.contextMenu && task.contextMenu.status === PlasmaExtras.Menu.Open)
@@ -204,13 +204,9 @@ PlasmaCore.ToolTipArea {
         tasksRoot.cancelHighlightWindows();
     }
 
-    onPidChanged: updateAudioStreams({delay: false})
-    onAppNameChanged: updateAudioStreams({delay: false})
-
     onIsWindowChanged: {
         if (model.IsWindow) {
             taskInitComponent.createObject(task);
-            updateAudioStreams({delay: false});
         }
     }
 
@@ -293,47 +289,8 @@ PlasmaCore.ToolTipArea {
         contextMenu.show();
     }
 
-    function updateAudioStreams(args: var): void {
-        if (args) {
-            // When the task just appeared (e.g. virtual desktop switch), show the audio indicator
-            // right away. Only when audio streams change during the lifetime of this task, delay
-            // showing that to avoid distraction.
-            delayAudioStreamIndicator = !!args.delay;
-        }
-
-        var pa = pulseAudio.item;
-        if (!pa || !task.isWindow) {
-            task.audioStreams = [];
-            return;
-        }
-
-        // Check appid first for app using portal
-        // https://docs.pipewire.org/page_portal.html
-        var streams = pa.streamsForAppId(task.appId);
-        if (!streams.length) {
-            streams = pa.streamsForPid(model.AppPid);
-            if (streams.length) {
-                pa.registerPidMatch(model.AppName);
-            } else {
-                // We only want to fall back to appName matching if we never managed to map
-                // a PID to an audio stream window. Otherwise if you have two instances of
-                // an application, one playing and the other not, it will look up appName
-                // for the non-playing instance and erroneously show an indicator on both.
-                if (!pa.hasPidMatch(model.AppName)) {
-                    streams = pa.streamsForAppName(model.AppName);
-                }
-            }
-        }
-
-        task.audioStreams = streams;
-    }
-
     function toggleMuted(): void {
-        if (muted) {
-            task.audioStreams.forEach(item => item.unmute());
-        } else {
-            task.audioStreams.forEach(item => item.mute());
-        }
+        muted = !muted
     }
 
     // Will also be called in activateTaskAtIndex(index)
@@ -368,14 +325,6 @@ PlasmaCore.ToolTipArea {
 
         mainItem.blockingUpdates = false;
         tasksRoot.toolTipAreaItem = this;
-    }
-
-    Connections {
-        target: pulseAudio.item
-        ignoreUnknownSignals: true // Plasma-PA might not be available
-        function onStreamsChanged(): void {
-            task.updateAudioStreams({delay: true})
-        }
     }
 
     TapHandler {
@@ -635,6 +584,14 @@ PlasmaCore.ToolTipArea {
         }
     }
 
+    TaskManagerApplet.AudioInfo {
+        id: audioInfo
+
+        appId: task.appId
+        pid: task.model.AppPid
+        appName: task.model.AppName
+    }
+
     states: [
         State {
             name: "launcher"
@@ -675,7 +632,6 @@ PlasmaCore.ToolTipArea {
             const component = Qt.createComponent("GroupExpanderOverlay.qml");
             component.createObject(task);
             component.destroy();
-            updateAudioStreams({delay: false});
         }
 
         if (!inPopup && !model.IsWindow) {

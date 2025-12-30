@@ -274,6 +274,8 @@ pkg_check_modules(IBUS "ibus-1.0>=1.5.0" IMPORTED_TARGET)
 pkg_check_modules(GOBJECT gobject-2.0 IMPORTED_TARGET)
 pkg_check_modules(SCIM scim IMPORTED_TARGET)
 
+find_package(KF6PulseAudioQt REQUIRED)
+
 ecm_setup_version(${PROJECT_VERSION} VARIABLE_PREFIX PLASMA VERSION_HEADER plasma_version.h)
 
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")

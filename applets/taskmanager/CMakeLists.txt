@@ -14,7 +14,6 @@ plasma_add_applet(org.kde.plasma.taskmanager
         qml/MouseHandler.qml
         qml/PipeWireThumbnail.qml
         qml/PlayerController.qml
-        qml/PulseAudio.qml
         qml/ScrollableTextWrapper.qml
         qml/TaskBadgeOverlay.qml
         qml/TaskList.qml
@@ -29,6 +28,7 @@ plasma_add_applet(org.kde.plasma.taskmanager
         backend.cpp
         smartlauncherbackend.cpp
         smartlauncheritem.cpp
+        audioinfo.cpp
     RESOURCES
         main.xml
     GENERATE_APPLET_CLASS
@@ -58,4 +58,5 @@ target_link_libraries(org.kde.plasma.taskmanager PRIVATE
                       KSysGuard::ProcessCore
                       KF6::Service
                       KF6::WindowSystem
+                      KF6::PulseAudioQt
                       PW::LibNotificationManager)

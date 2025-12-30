@@ -57,8 +57,6 @@ public:
 
     Q_INVOKABLE bool isApplication(const QUrl &url) const;
 
-    Q_INVOKABLE qint64 parentPid(qint64 pid) const;
-
     Q_INVOKABLE static QUrl tryDecodeApplicationsUrl(const QUrl &launcherUrl);
     Q_INVOKABLE static QStringList applicationCategories(const QUrl &launcherUrl);
 
