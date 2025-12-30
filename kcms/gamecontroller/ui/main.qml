@@ -20,7 +20,7 @@ KCM.SimpleKCM {
     readonly property var deviceType: device?.type ?? ""
     readonly property var deviceControllerType: device?.controllerTypeName ?? ""
     readonly property var deviceConnectionType: device?.connectionType ?? ""
-    readonly property bool kwinPluginEnabled: KWinPlugin.pluginEnabled
+    readonly property bool kwinPluginEnabled: KCM.ConfigModule.pluginEnabled
 
     actions: [
         Kirigami.Action {
@@ -34,7 +34,7 @@ KCM.SimpleKCM {
                     checked: kwinPluginEnabled
 
                     onToggled: {
-                        KWinPlugin.pluginEnabled = checked
+                        KCM.ConfigModule.pluginEnabled = checked
                     }
                 }
 

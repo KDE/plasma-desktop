@@ -36,12 +36,12 @@ KCMGameController::KCMGameController(QObject *parent, const KPluginMetaData &met
 
     constexpr const char *uri{"org.kde.plasma.gamecontroller.kcm"};
 
+    qmlRegisterUncreatableType<KCMGameController>(uri, 1, 0, "KCMGameController", QString());
     qmlRegisterType<DeviceModel>(uri, 1, 0, "DeviceModel");
     qmlRegisterType<AxesModel>(uri, 1, 0, "AxesModel");
     qmlRegisterType<AxesProxyModel>(uri, 1, 0, "AxesProxyModel");
     qmlRegisterType<ButtonModel>(uri, 1, 0, "ButtonModel");
     qmlRegisterType<HatModel>(uri, 1, 0, "HatModel");
-    qmlRegisterSingletonInstance(uri, 1, 0, "KWinPlugin", this);
 }
 
 KCMGameController::~KCMGameController()
