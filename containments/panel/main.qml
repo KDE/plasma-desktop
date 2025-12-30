@@ -42,8 +42,6 @@ ContainmentItem {
     property int fixedWidth: 0
     property int fixedHeight: 0
     property bool hasSpacer
-    // True when a widget is being drag and dropped within the panel.
-    property bool dragAndDropping: false
     // True when e.g. the task manager is drag and dropping tasks.
     property bool appletRequestsInhibitDnD: false
     property bool reverse: Application.layoutDirection === Qt.RightToLeft
@@ -101,7 +99,7 @@ ContainmentItem {
     Plasmoid.onUserConfiguringChanged: {
         if (!Plasmoid.userConfiguring) {
             if (root.configOverlay) {
-                if (root.dragAndDropping) {
+                if (root.configOverlay.dragAndDropping) {
                     root.configOverlay.finishDragOperation()
                 }
                 root.configOverlay.destroy();
@@ -119,7 +117,11 @@ ContainmentItem {
         configOverlay = component.createObject(this, {
             "anchors.fill": dropArea,
             "anchors.rightMargin": Qt.binding(() => isHorizontal ? toolBox.height : 0),
-            "anchors.bottomMargin": Qt.binding(() => !isHorizontal ? toolBox.height : 0)
+            "anchors.bottomMargin": Qt.binding(() => !isHorizontal ? toolBox.height : 0),
+            "layoutManager": Qt.binding(() => root.layoutManager),
+            "isHorizontal": Qt.binding(() => root.isHorizontal),
+            "rootWidth": Qt.binding(() => root.width),
+            "reverse": Qt.binding(() => root.reverse)
         });
         component.destroy();
     }
@@ -275,7 +277,7 @@ ContainmentItem {
                     id: marginHighlightElements
                     anchors.fill: parent
                     // index -1 is for floating applets, which do not need a margin highlight
-                    opacity: Plasmoid.containment.corona.editMode && dropArea.marginAreasEnabled && !root.dragAndDropping && container.index != -1 ? 1 : 0
+                    opacity: Plasmoid.containment.corona.editMode && dropArea.marginAreasEnabled && !(root.configOverlay?.dragAndDropping ?? false) && container.index != -1 ? 1 : 0
                     Behavior on opacity {
                         NumberAnimation {
                             duration: Kirigami.Units.longDuration

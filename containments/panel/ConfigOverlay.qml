@@ -21,9 +21,15 @@ MouseArea {
     z: 1000
     hoverEnabled: true
 
+    required property var layoutManager
+    required property bool isHorizontal
+    required property bool reverse
+    required property int rootWidth
+
     property Item currentApplet
     property int draggedItemIndex
     property real startDragOffset: 0.0
+    property bool dragAndDropping: false
 
     Drag.dragType: Drag.Automatic
     Drag.active: false
@@ -37,8 +43,8 @@ MouseArea {
             appletsModel.insert(configurationArea.draggedItemIndex - 1, {applet: currentApplet.applet});
         }
         currentApplet.destroy()
-        root.dragAndDropping = false
-        root.layoutManager.save()
+        configurationArea.dragAndDropping = false
+        configurationArea.layoutManager.save()
     }
 
     onPositionChanged: mouse => {
@@ -63,19 +69,19 @@ MouseArea {
                 currentApplet.x = mouse.x - startDragOffset;
             }
 
-            const item = root.layoutManager.childAtCoordinates(mouse.x, mouse.y);
+            const item = configurationArea.layoutManager.childAtCoordinates(mouse.x, mouse.y);
 
             if (item && item.applet !== placeHolder) {
                 var posInItem = mapToItem(item, mouse.x, mouse.y)
-                var pos = root.isHorizontal ? posInItem.x : posInItem.y
-                var size = root.isHorizontal ? item.width : item.height
-                if (root.reverse) {
+                var pos = configurationArea.isHorizontal ? posInItem.x : posInItem.y
+                var size = configurationArea.isHorizontal ? item.width : item.height
+                if (configurationArea.reverse) {
                     pos = size - pos
                 }
                 if (pos < size / 3) {
-                    root.layoutManager.move(placeHolder.parent, item.index)
+                    configurationArea.layoutManager.move(placeHolder.parent, item.index)
                 } else if (pos > size / 3 * 2) {
-                    root.layoutManager.move(placeHolder.parent, item.index+1)
+                    configurationArea.layoutManager.move(placeHolder.parent, item.index+1)
                 }
             }
 
@@ -126,7 +132,7 @@ MouseArea {
         placeHolder.parent.dragging = currentApplet
         configurationArea.draggedItemIndex = item.index
         appletsModel.remove(item.index)
-        root.dragAndDropping = true
+        configurationArea.dragAndDropping = true
 
         if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
             startDragOffset = mouse.y - currentApplet.y;
@@ -140,7 +146,7 @@ MouseArea {
     onCanceled: finishDragOperation()
 
     function finishDragOperation() {
-        root.dragAndDropping = false
+        configurationArea.dragAndDropping = false
         if (!currentApplet) {
             return;
         }
@@ -150,7 +156,7 @@ MouseArea {
         newCurrentApplet.dragging = null
         placeHolder.parent = this
         currentApplet.destroy()
-        root.layoutManager.save()
+        configurationArea.layoutManager.save()
     }
 
     Item {
@@ -188,7 +194,7 @@ MouseArea {
         opacity: configurationArea.currentApplet && configurationArea.containsMouse ? 0.5 : 0
 
         Kirigami.Icon {
-            visible: !root.dragAndDropping
+            visible: !configurationArea.dragAndDropping
             source: "transform-move"
             width: Math.min(parent.width, parent.height)
             height: width
@@ -231,7 +237,7 @@ MouseArea {
     }
     PlasmaCore.PopupPlasmaWindow {
         id: tooltip
-        visible: configurationArea.currentApplet && !root.dragAndDropping
+        visible: configurationArea.currentApplet && !configurationArea.dragAndDropping
         visualParent: configurationArea.currentApplet
         // Try to dodge the ruler, as we can't cover it since it's a layershell surface
         margin: configurationArea.Window.window?.lengthMode === 2 ? Kirigami.Units.gridUnit * 2 : 0
@@ -355,7 +361,7 @@ MouseArea {
                         && !configurationArea.currentApplet.applet.plasmoid.configuration.expanding
                     from: 0
                     stepSize: 10
-                    to: root.width
+                    to: configurationArea.rootWidth
                     value: configurationArea.currentApplet?.applet.plasmoid.configuration.length ?? 0
                     onValueModified: {
                         configurationArea.currentApplet.applet.plasmoid.configuration.length = value
@@ -370,7 +376,6 @@ MouseArea {
                     Layout.fillWidth: true
                     Layout.bottomMargin: Kirigami.Units.smallSpacing
                 }
-
             }
         }
     }
