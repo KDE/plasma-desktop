@@ -15,7 +15,7 @@ QtObject {
 
     signal streamsChanged()
 
-    readonly property PlasmaPa.GlobalConfig globalConfig: PlasmaPa.GlobalConfig { }
+    readonly property /*PlasmaPa.GlobalConfig*/ QtObject globalConfig: PlasmaPa.GlobalConfig { }
 
     // It's a JS object so we can do key lookup and don't need to take care of filtering duplicates.
     property var pidMatches: new Set()
