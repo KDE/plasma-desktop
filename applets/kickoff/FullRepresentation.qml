@@ -18,6 +18,7 @@ import QtQuick.Layouts
 import org.kde.milou as Milou
 import org.kde.plasma.plasmoid
 import org.kde.kirigami as Kirigami
+import org.kde.plasma.components as PC3
 import org.kde.plasma.extras as PlasmaExtras
 
 EmptyPage {
@@ -92,56 +93,80 @@ EmptyPage {
         Component {
             id: searchViewComponent
 
-            Milou.ResultsView {
-                id: searchView
-                property var view: searchView
-                objectName: "searchView"
-                queryString: kickoff.searchField ? kickoff.searchField.text : ""
-                clip: true
+            PC3.ScrollView {
+                id: searchScroll
+                objectName: "searchScroll"
+                property alias interceptedPosition: searchView.interceptedPosition
+                property alias currentIndex: searchView.currentIndex
 
                 // This keeps the minimum applet size the same whether you are
                 // searching or not.
                 implicitWidth: normalPage.implicitWidth
+                implicitHeight: normalPage.implicitHeight
 
-                Keys.onTabPressed: event => {
-                    kickoff.firstHeaderItem.forceActiveFocus(Qt.TabFocusReason);
-                }
-                Keys.onBacktabPressed: event => {
-                    kickoff.lastHeaderItem.forceActiveFocus(Qt.BacktabFocusReason);
-                }
-                Keys.onUpPressed: event => {
-                    kickoff.searchField.forceActiveFocus(Qt.BacktabFocusReason)
-                }
-                T.StackView.onActivated: {
-                    kickoff.sideBar = null
-                    kickoff.contentArea = searchView
-                }
 
-                property var interceptedPosition: null
-                Connections {
-                    target: blockHoverFocusHandler
-                    enabled: blockHoverFocusHandler.enabled && !searchView.interceptedPosition
-                    function onPointChanged() {
-                        searchView.interceptedPosition = blockHoverFocusHandler.point.position
+                // FIXME: has no effect for
+                contentWidth: implicitWidth - contentItem.leftMargin - contentItem.rightMargin - effectiveScrollBarWidth
+
+                // FIXME: make it not necessary
+                // PC3.ScrollBar.horizontal.policy: PC3.ScrollBar.AlwaysOff
+
+                focus: true
+
+                contentItem: Milou.ResultsView {
+                    id: searchView
+
+                    property var view: searchView
+                    readonly property int margins: Kirigami.Units.smallSpacing
+                    topMargin: margins
+                    bottomMargin: margins
+                    leftMargin: margins
+                    rightMargin: margins
+
+                    queryString: kickoff.searchField ? kickoff.searchField.text : ""
+
+                    Keys.onTabPressed: event => {
+                        kickoff.firstHeaderItem.forceActiveFocus(Qt.TabFocusReason);
                     }
-                }
-
-                Connections {
-                    target: blockHoverFocusHandler
-                    enabled: blockHoverFocusHandler.enabled && searchView.interceptedPosition && root.blockingHoverFocus
-                    function onPointChanged() {
-                        if (blockHoverFocusHandler.point.position === searchView.interceptedPosition) {
-                            return;
+                    Keys.onBacktabPressed: event => {
+                        kickoff.lastHeaderItem.forceActiveFocus(Qt.BacktabFocusReason);
+                    }
+                    Keys.onUpPressed: event => {
+                        if (currentIndex == 0) {
+                            kickoff.searchField.forceActiveFocus(Qt.BacktabFocusReason)
                         }
-                        root.blockingHoverFocus = false
                     }
-                }
+                    T.StackView.onActivated: {
+                        kickoff.sideBar = null
+                        kickoff.contentArea = searchView
+                    }
 
-                Item {
-                    anchors.fill: parent
-                    HoverHandler {
-                        id: blockHoverFocusHandler
-                        enabled: !contentItemStackView.busy && (!searchView.interceptedPosition || root.blockingHoverFocus)
+                    property var interceptedPosition: null
+                    Connections {
+                        target: blockHoverFocusHandler
+                        enabled: blockHoverFocusHandler.enabled && !searchView.interceptedPosition
+                        function onPointChanged() {
+                            searchView.interceptedPosition = blockHoverFocusHandler.point.position
+                        }
+                    }
+
+                    Connections {
+                        target: blockHoverFocusHandler
+                        enabled: blockHoverFocusHandler.enabled && searchView.interceptedPosition && root.blockingHoverFocus
+                        function onPointChanged() {
+                            if (blockHoverFocusHandler.point.position === searchView.interceptedPosition) {
+                                return;
+                            }
+                            root.blockingHoverFocus = false
+                        }
+                    }
+
+                    Item {
+                        anchors.fill: parent
+                        HoverHandler {
+                            id: blockHoverFocusHandler
+                            enabled: !contentItemStackView.busy && (!searchView.interceptedPosition || root.blockingHoverFocus)
+                        }
                     }
                 }
             }
@@ -196,7 +221,7 @@ EmptyPage {
                     contentItemStackView.replace(normalPage)
                 } else if ((root.header as Header).searchText.length > 0) {
                     root.blockingHoverFocus = true
-                    if (contentItemStackView.currentItem.objectName !== "searchView") {
+                    if (contentItemStackView.currentItem.objectName !== "searchScroll") {
                         contentItemStackView.reverseTransitions = false
                         contentItemStackView.replace(searchViewComponent)
                     } else {
