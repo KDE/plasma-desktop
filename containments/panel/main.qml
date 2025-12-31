@@ -112,7 +112,7 @@ ContainmentItem {
             return;
         }
 
-        Plasmoid.applets.forEach(applet => applet.expanded = false);
+        Containment.applets.forEach(applet => applet.expanded = false);
         const component = Qt.createComponent("ConfigOverlay.qml");
         configOverlay = component.createObject(this, {
             "anchors.fill": dropArea,
@@ -223,7 +223,7 @@ ContainmentItem {
                 property bool isMarginSeparator: ((applet.plasmoid?.constraintHints & Plasmoid.MarginAreasSeparator) == Plasmoid.MarginAreasSeparator)
                 property int appletIndex: index // To make sure it's always readable even inside other models
                 property bool inThickArea: false
-                visible: applet.plasmoid?.status !== PlasmaCore.Types.HiddenStatus || (!Plasmoid.immutable && Plasmoid.userConfiguring) || Plasmoid.corona.editMode;
+                visible: applet.plasmoid?.status !== PlasmaCore.Types.HiddenStatus || (!Plasmoid.immutable && Plasmoid.userConfiguring) || Containment.corona.editMode;
 
                 //when the applet moves caused by its resize, don't animate.
                 //this is completely heuristic, but looks way less "jumpy"
@@ -434,7 +434,7 @@ ContainmentItem {
     }
     MouseArea {
         anchors.fill: parent
-        visible: Plasmoid.corona.editMode && !Plasmoid.userConfiguring
+        visible: Containment.corona.editMode && !Plasmoid.userConfiguring
         hoverEnabled: true
         onClicked: Plasmoid.internalAction("configure").trigger()
         Rectangle {
