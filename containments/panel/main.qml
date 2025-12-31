@@ -201,14 +201,15 @@ ContainmentItem {
             * without dragEnter, and in this case parent.index is undefined, so also
             * check if dndSpacer is in appletsModel.
             */
-            if (typeof(dndSpacer.parent.index) === "number" && dndSpacer.parent.index > -1) {
-                appletsModel.remove(dndSpacer.parent.index);
+            const spacerContainer = dndSpacer.parent as AppletContainer
+            if (typeof(spacerContainer?.index) === "number" && spacerContainer.index > -1) {
+                appletsModel.remove(spacerContainer.index);
                 root.fixedWidth = root.fixedHeight = 0;
             }
         }
 
         onDrop: event => {
-            appletsModel.remove(dndSpacer.parent.index);
+            appletsModel.remove((dndSpacer.parent as AppletContainer).index);
             root.processMimeData(event.mimeData, event.x, event.y);
             event.accept(event.proposedAction);
             root.fixedWidth = root.fixedHeight = 0;
@@ -216,31 +217,20 @@ ContainmentItem {
 
 //BEGIN components
 
+
         Component {
             id: appletContainerComponent
             // This loader conditionally manages the BusyIndicator, it's not
             // loading the applet. The applet becomes a regular child item.
-            Loader {
+            AppletContainer {
                 id: container
-                required property Item applet
-                required property int index
-                property Item dragging
-                property bool isAppletContainer: true
-                property bool isMarginSeparator: ((applet.plasmoid?.constraintHints & Plasmoid.MarginAreasSeparator) == Plasmoid.MarginAreasSeparator)
-                property int appletIndex: index // To make sure it's always readable even inside other models
-                property bool inThickArea: false
-                visible: applet.plasmoid?.status !== PlasmaCore.Types.HiddenStatus || (!Plasmoid.immutable && Plasmoid.userConfiguring) || Containment.corona.editMode;
-
-                //when the applet moves caused by its resize, don't animate.
-                //this is completely heuristic, but looks way less "jumpy"
-                property bool movingForResize: false
 
                 function getMargins(side, returnAllMargins = false, overrideFillArea = null, overrideThickArea = null): real {
-                    if (!applet || !applet.plasmoid) {
+                    if (!applet || !applet.Plasmoid) {
                         return 0;
                     }
                     //Margins are either the size of the margins in the SVG, unless that prevents the panel from being at least half a smallMedium icon + smallSpace) tall at which point we set the margin to whatever allows it to be that...or if it still won't fit, 1.
-                    let fillArea = overrideFillArea === null ? applet && (applet.plasmoid.constraintHints & Plasmoid.CanFillArea) : overrideFillArea
+                    let fillArea = overrideFillArea === null ? applet && (applet.Plasmoid.constraintHints & Plasmoid.CanFillArea) : overrideFillArea
                     let inThickArea = overrideThickArea === null ? container.inThickArea : overrideThickArea
                     var layout = {
                         top: root.isHorizontal, bottom: root.isHorizontal,
@@ -259,8 +249,7 @@ ContainmentItem {
                 // https://bugs.kde.org/show_bug.cgi?id=473420
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                property bool wantsToFillWidth: applet?.Layout.fillWidth
-                property bool wantsToFillHeight: applet?.Layout.fillHeight
+
                 onWantsToFillWidthChanged: root.checkLastSpacer()
                 onWantsToFillHeightChanged: root.checkLastSpacer()
 
@@ -312,7 +301,7 @@ ContainmentItem {
                         }
                         elementId: fill ? 'fill' : (root.isHorizontal ? side + (container.inThickArea ? 'left' : 'right') : (container.inThickArea ? 'top' : 'bottom') + side)
                         svg: dropArea.marginHighlightSvg
-                        anchors {top: parent.top; left: parent.left; right: parent.right; bottom: parent.bottom}
+                        anchors {top: parent?.top; left: parent?.left; right: parent?.right; bottom: parent?.bottom}
                     }
                     Repeater {
                         model: ['top', 'bottom', 'right', 'left']

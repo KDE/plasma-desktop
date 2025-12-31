@@ -34,7 +34,7 @@ MouseArea {
     required property bool reverse
     required property int rootWidth
 
-    property Item currentApplet
+    property AppletContainer currentApplet
     property int draggedItemIndex
     property real startDragOffset: 0.0
     property bool dragAndDropping: false
@@ -43,7 +43,7 @@ MouseArea {
     Drag.active: false
     Drag.supportedActions: Qt.MoveAction
     Drag.mimeData: {
-        "text/x-plasmoidinstanceid": Plasmoid.containment.id+':'+configurationArea.currentApplet?.applet.plasmoid.id
+        "text/x-plasmoidinstanceid": Plasmoid.containment.id+':'+configurationArea.currentApplet?.applet.Plasmoid.id
     }
     Drag.onDragFinished: dropEvent => {
         if (dropEvent != Qt.MoveAction) {
@@ -66,7 +66,7 @@ MouseArea {
                 mouse.x > width + padding || mouse.y > height + padding)) {
                 configurationArea.currentApplet.grabToImage(result => {
                     configurationArea.Drag.imageSource = result.url
-                    appletsModel.remove(placeHolder.parent.index)
+                    appletsModel.remove((placeHolder.parent as AppletContainer).index)
                     currentApplet.visible = false
                     configurationArea.Drag.active = true
                 })
@@ -121,7 +121,7 @@ MouseArea {
         // Need to set currentApplet here too, to make touch selection + drag
         // with with a touchscreen, because there are no entered events in that
         // case
-        let item = currentLayout.childAt(mouse.x, mouse.y);
+        let item = currentLayout.childAt(mouse.x, mouse.y) as AppletContainer;
         // BUG 454095: Don't allow dragging lastSpacer as it's not a real applet
         if (!item || item == lastSpacer || item == addWidgetsButton) {
             configurationArea.currentApplet = null
@@ -158,7 +158,7 @@ MouseArea {
         if (!currentApplet) {
             return;
         }
-        appletsModel.set(placeHolder.parent.index, {applet: currentApplet.applet})
+        appletsModel.set((placeHolder.parent as AppletContainer).index, {applet: currentApplet.applet})
         let newCurrentApplet = currentApplet.applet.parent
         newCurrentApplet.animateFrom(currentApplet.x, currentApplet.y)
         newCurrentApplet.dragging = null
@@ -266,7 +266,7 @@ MouseArea {
         onVisualParentChanged: {
             if (visualParent) {
                 tooltip.requestActivate()
-                const thisPlasmoid = configurationArea.currentApplet.applet.plasmoid;
+                const thisPlasmoid = configurationArea.currentApplet.applet.Plasmoid;
                 thisPlasmoid.contextualActionsAboutToShow();
                 alternativesButton.visible = thisPlasmoid.internalAction("alternatives")?.enabled ?? false;
                 configureButton.visible = thisPlasmoid.internalAction("configure")?.enabled ?? false;
@@ -312,11 +312,11 @@ MouseArea {
                     // we want destructive actions to be far from the initial
                     // cursor position, so show this on the top unless it's on
                     // a top panel
-                    visible: configurationArea.currentApplet?.applet.plasmoid.internalAction("remove")?.enabled ?? false
+                    visible: configurationArea.currentApplet?.applet.Plasmoid.internalAction("remove")?.enabled ?? false
                     icon.name: "edit-delete-remove-symbolic"
                     text: i18n("Remove")
                     onClicked: {
-                        configurationArea.currentApplet.applet.plasmoid.internalAction("remove").trigger();
+                        configurationArea.currentApplet.applet.Plasmoid.internalAction("remove").trigger();
                         configurationArea.currentApplet = null;
                     }
                 }
@@ -325,9 +325,9 @@ MouseArea {
                     Layout.fillWidth: true
                     icon.name: "configure"
                     text: i18n("Configure…")
-                    visible: configurationArea.currentApplet?.applet.plasmoid.hasConfigurationInterface ?? false
+                    visible: configurationArea.currentApplet?.applet.Plasmoid.hasConfigurationInterface ?? false
                     onClicked: {
-                        configurationArea.currentApplet.applet.plasmoid.internalAction("configure").trigger();
+                        configurationArea.currentApplet.applet.Plasmoid.internalAction("configure").trigger();
                         configurationArea.currentApplet = null;
                     }
                 }
@@ -337,7 +337,7 @@ MouseArea {
                     icon.name: "widget-alternatives"
                     text: i18n("Show Alternatives…")
                     onClicked: {
-                        configurationArea.currentApplet.applet.plasmoid.internalAction("alternatives").trigger();
+                        configurationArea.currentApplet.applet.Plasmoid.internalAction("alternatives").trigger();
                         // We keep this popup open for a brief interval of time instead
                         // of re-setting the currentApplet now so that the alternatives
                         // popup has time to gain focus. The hideTimer will close this
@@ -365,22 +365,22 @@ MouseArea {
                     editable: true
                     Layout.fillWidth: true
                     focus: !Kirigami.InputMethod.willShowOnActive
-                    visible: configurationArea.currentApplet?.applet.plasmoid.pluginName === "org.kde.plasma.panelspacer"
-                        && !configurationArea.currentApplet.applet.plasmoid.configuration.expanding
+                    visible: configurationArea.currentApplet?.applet.Plasmoid.pluginName === "org.kde.plasma.panelspacer"
+                        && !configurationArea.currentApplet.applet.Plasmoid.configuration.expanding
                     from: 0
                     stepSize: 10
                     to: configurationArea.rootWidth
-                    value: configurationArea.currentApplet?.applet.plasmoid.configuration.length ?? 0
+                    value: configurationArea.currentApplet?.applet.Plasmoid.configuration.length ?? 0
                     onValueModified: {
-                        configurationArea.currentApplet.applet.plasmoid.configuration.length = value
+                        configurationArea.currentApplet.applet.Plasmoid.configuration.length = value
                     }
                 }
 
                 PlasmaComponents3.Switch {
                     text: i18nc("@option:check Whether to allow a spacer widget to fill available space", "Flexible size")
-                    visible: configurationArea.currentApplet?.applet.plasmoid.pluginName === "org.kde.plasma.panelspacer"
-                    checked: configurationArea.currentApplet?.applet.plasmoid.configuration.expanding ?? false
-                    onToggled: configurationArea.currentApplet.applet.plasmoid.configuration.expanding = checked
+                    visible: configurationArea.currentApplet?.applet.Plasmoid?.pluginName === "org.kde.plasma.panelspacer"
+                    checked: configurationArea.currentApplet?.applet.Plasmoid.configuration.expanding ?? false
+                    onToggled: configurationArea.currentApplet.applet.Plasmoid.configuration.expanding = checked
                     Layout.fillWidth: true
                     Layout.bottomMargin: Kirigami.Units.smallSpacing
                 }
