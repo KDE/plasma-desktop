@@ -9,6 +9,8 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Window
+
+import org.kde.draganddrop as DragDrop
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components as PlasmaComponents3
@@ -22,6 +24,12 @@ MouseArea {
     hoverEnabled: true
 
     required property var layoutManager
+    required property ListModel appletsModel
+    required property GridLayout currentLayout
+    required property Item addWidgetsButton
+    required property Item lastSpacer
+    required property DragDrop.DropArea dropArea
+    required property Component appletContainerComponent
     required property bool isHorizontal
     required property bool reverse
     required property int rootWidth

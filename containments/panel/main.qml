@@ -119,9 +119,15 @@ ContainmentItem {
             "anchors.rightMargin": Qt.binding(() => isHorizontal ? toolBox.height : 0),
             "anchors.bottomMargin": Qt.binding(() => !isHorizontal ? toolBox.height : 0),
             "layoutManager": Qt.binding(() => root.layoutManager),
+            "appletsModel": appletsModel,
+            "currentLayout": currentLayout,
+            "appletContainerComponent": appletContainerComponent,
+            "dropArea": dropArea,
             "isHorizontal": Qt.binding(() => root.isHorizontal),
             "rootWidth": Qt.binding(() => root.width),
-            "reverse": Qt.binding(() => root.reverse)
+            "reverse": Qt.binding(() => root.reverse),
+            "lastSpacer": lastSpacer,
+            "addWidgetsButton": addWidgetsButton
         });
         component.destroy();
     }
