@@ -313,7 +313,7 @@ PlasmoidItem {
 
                 readonly property /*WindowModel*/ var tasksModel: model.TasksModel
                 readonly property string desktopId: root.isActivityPager ? tasksModel.activity : tasksModel.virtualDesktop
-                readonly property bool active: (index === pagerModel.currentPage)
+                readonly property bool isCurrent: (index === pagerModel.currentPage)
             }
 
             delegate: DesktopDelegate {
@@ -380,7 +380,7 @@ PlasmoidItem {
                     if ((desktopMouseArea.enabled && (desktopMouseArea.containsMouse || desktopMouseArea.activeFocus))
                             || (root.dragging && root.dragId === desktopId)) {
                         return "hover";
-                    } else if (active) {
+                    } else if (isCurrent) {
                         return "active";
                     } else {
                         return "normal";
@@ -494,7 +494,7 @@ PlasmoidItem {
                             height: Math.round(geometry.height * pagerItemGrid.heightScaleFactor)
                             visible: Plasmoid.configuration.showWindowOutlines && !minimized
                             color: {
-                                if (desktop.active) {
+                                if (desktop.isCurrent) {
                                     if (isActive) {
                                         return root.windowActiveOnActiveDesktopColor;
                                     } else {
