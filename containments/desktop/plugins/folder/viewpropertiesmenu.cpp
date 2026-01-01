@@ -106,7 +106,7 @@ ViewPropertiesMenu::~ViewPropertiesMenu()
     delete m_menu;
 }
 
-QObject *ViewPropertiesMenu::menu() const
+QMenu *ViewPropertiesMenu::menu() const
 {
     return m_menu;
 }

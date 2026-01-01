@@ -2,7 +2,7 @@ if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
 endif(BUILD_TESTING)
 
-ecm_add_qml_module(folderplugin URI org.kde.private.desktopcontainment.folder GENERATE_PLUGIN_SOURCE DEPENDENCIES "QtCore" "QtQuick")
+ecm_add_qml_module(folderplugin URI org.kde.private.desktopcontainment.folder GENERATE_PLUGIN_SOURCE DEPENDENCIES "QtCore" "QtQuick" "org.kde.plasma.core")
 
 target_sources(folderplugin PRIVATE
     applauncher.cpp

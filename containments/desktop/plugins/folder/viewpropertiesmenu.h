@@ -18,7 +18,7 @@ class ViewPropertiesMenu : public QObject
     Q_OBJECT
     QML_ELEMENT
 
-    Q_PROPERTY(QObject *menu READ menu CONSTANT)
+    Q_PROPERTY(QMenu *menu READ menu CONSTANT)
 
     Q_PROPERTY(bool showLayoutActions READ showLayoutActions WRITE setShowLayoutActions NOTIFY showLayoutActionsChanged)
     Q_PROPERTY(bool showLockAction READ showLockAction WRITE setShowLockAction NOTIFY showLockActionChanged)
@@ -38,7 +38,7 @@ public:
     explicit ViewPropertiesMenu(QObject *parent = nullptr);
     ~ViewPropertiesMenu() override;
 
-    QObject *menu() const;
+    QMenu *menu() const;
 
     bool showLayoutActions() const;
     void setShowLayoutActions(bool show);
