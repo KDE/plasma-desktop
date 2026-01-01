@@ -348,12 +348,6 @@ FocusScope {
                     onClicked: folderViewLayerComponent.goHome()
                 }
             }
-
-            Component.onCompleted: {
-                if (root.showPin) {
-                    windowPin = windowPinComponent.createObject(label);
-                }
-            }
         }
     }
 
