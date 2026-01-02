@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-19 00:45+0000\n"
+"POT-Creation-Date: 2026-01-02 00:45+0000\n"
 "PO-Revision-Date: 2025-11-04 22:05+0100\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -189,18 +189,18 @@ msgid ""
 "usually feature a dark background."
 msgstr ""
 
-#: DashboardRepresentation.qml:321
+#: DashboardRepresentation.qml:311
 #, kde-format
 msgid "Favorites"
 msgstr "Favoritter"
 
-#: ItemListDelegate.qml:49
+#: ItemListDelegate.qml:31
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
 msgstr ""
 
-#: ItemListDelegate.qml:50
+#: ItemListDelegate.qml:32
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
@@ -218,7 +218,7 @@ msgctxt "@title:group accessible name for favorite group in sidebar"
 msgid "Favorites"
 msgstr "Favoritter"
 
-#: MenuRepresentation.qml:315
+#: MenuRepresentation.qml:316
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"

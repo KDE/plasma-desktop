@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-19 00:45+0000\n"
+"POT-Creation-Date: 2026-01-02 00:45+0000\n"
 "PO-Revision-Date: 2021-07-08 20:37+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -187,18 +187,18 @@ msgid ""
 "usually feature a dark background."
 msgstr ""
 
-#: DashboardRepresentation.qml:321
+#: DashboardRepresentation.qml:311
 #, kde-format
 msgid "Favorites"
 msgstr "पसंदीदा"
 
-#: ItemListDelegate.qml:49
+#: ItemListDelegate.qml:31
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
 msgstr ""
 
-#: ItemListDelegate.qml:50
+#: ItemListDelegate.qml:32
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
@@ -216,7 +216,7 @@ msgctxt "@title:group accessible name for favorite group in sidebar"
 msgid "Favorites"
 msgstr "पसंदीदा"
 
-#: MenuRepresentation.qml:315
+#: MenuRepresentation.qml:316
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"

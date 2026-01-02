@@ -2,13 +2,13 @@
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2006-2008, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2016.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-23 00:43+0000\n"
-"PO-Revision-Date: 2025-09-26 04:58+0900\n"
+"PO-Revision-Date: 2026-01-02 07:19+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -977,7 +977,7 @@ msgstr "比例"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with mouse cursor"
-msgstr ""
+msgstr "縮放區域與滑鼠游標一同移動"
 
 #: ui/ZoomMagnifier.qml:133
 #, kde-format
@@ -989,21 +989,19 @@ msgstr "置中"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor stays centered on-screen, except near screen edges"
-msgstr ""
+msgstr "滑鼠游標維持在螢幕正中間，除了接近螢幕邊緣時"
 
 #: ui/ZoomMagnifier.qml:138
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
-msgstr "置中"
+msgstr "置中（嚴格）"
 
 #: ui/ZoomMagnifier.qml:139
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor stays centered on-screen, even near screen edges"
-msgstr ""
+msgstr "滑鼠游標維持在螢幕正中間，包含在螢幕邊緣附近"
 
 #: ui/ZoomMagnifier.qml:143
 #, kde-format
@@ -1015,7 +1013,7 @@ msgstr "推動"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Mouse cursor pushes zoom area at screen edges"
-msgstr ""
+msgstr "滑鼠游標在螢幕邊緣會推著縮放區域走"
 
 #: ui/ZoomMagnifier.qml:148
 #, kde-format
@@ -1027,7 +1025,7 @@ msgstr "停用"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow mouse cursor"
-msgstr ""
+msgstr "縮放區域不跟隨滑鼠游標"
 
 #: ui/ZoomMagnifier.qml:166
 #, kde-format
