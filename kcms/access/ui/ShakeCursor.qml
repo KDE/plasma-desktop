@@ -12,8 +12,8 @@ import org.kde.kirigami as Kirigami
 
 Kirigami.FormLayout {
     QQC2.CheckBox {
-        Kirigami.FormData.label: i18nc("@label", "Shake cursor to find it:")
-        text: i18nc("@option check, Enable shake cursor effect", "Enable")
+        Kirigami.FormData.label: i18nc("@label", "Shake pointer to find it:")
+        text: i18nc("@option check, Enable shake pointer effect", "Enable")
 
         KCMUtils.SettingStateBinding {
             configObject: kcm.shakeCursorSettings
@@ -25,7 +25,7 @@ Kirigami.FormLayout {
     }
 
     ColumnLayout {
-        Kirigami.FormData.label: i18nc("@label Cursor magnification level", "Magnification:")
+        Kirigami.FormData.label: i18nc("@label Pointer magnification level", "Magnification:")
         Kirigami.FormData.buddyFor: magnificationSlider
         spacing: Kirigami.Units.smallSpacing
 
@@ -52,14 +52,14 @@ Kirigami.FormLayout {
             spacing: 0
 
             QQC2.Label {
-                text: i18nc("@label Normal cursor size", "Normal")
+                text: i18nc("@label Normal pointer size", "Normal")
                 textFormat: Text.PlainText
             }
             Item {
                 Layout.fillWidth: true
             }
             QQC2.Label {
-                text: i18nc("@label Large cursor size", "Large")
+                text: i18nc("@label Large pointer size", "Large")
                 textFormat: Text.PlainText
             }
         }

@@ -70,7 +70,7 @@ KCMUtils.AbstractKCM {
         },
         {
             icon: "cursor-arrow",
-            title: i18nc("Shake cursor to find it", "Shake Cursor"),
+            title: i18nc("Shake pointer to find it", "Shake Pointer"),
             defaultnessKey: "shakeCursorIsDefaults",
             available: KWindowSystem.isPlatformWayland
         }

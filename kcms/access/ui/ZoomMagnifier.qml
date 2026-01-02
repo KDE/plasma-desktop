@@ -82,7 +82,7 @@ Kirigami.FormLayout {
             }
 
             QQC2.ComboBox {
-                Kirigami.FormData.label: i18nc("@label:listbox", "Mouse pointer:")
+                Kirigami.FormData.label: i18nc("@label:listbox", "Pointer appearance:")
 
                 model: [i18nc("@item:inlistbox", "Scale"), i18nc("@item:inlistbox", "Keep"), i18nc("@item:inlistbox", "Hide")]
                 currentIndex: kcm.zoomMagnifierSettings.zoomMousePointer
@@ -120,33 +120,33 @@ Kirigami.FormLayout {
             }
 
             QQC2.ComboBox {
-                Kirigami.FormData.label: i18nc("@label:listbox", "Mouse tracking:")
+                Kirigami.FormData.label: i18nc("@label:listbox", "Pointer tracking:")
 
                 delegate: mouseTrackingItemDelegate
                 model: [
                     {
                         title: i18nc("@item:inlistbox", "Proportional"),
-                        description: i18nc("@item:inlistbox", "Zoom area moves in sync with mouse cursor"),
+                        description: i18nc("@item:inlistbox", "Zoom area moves in sync with pointer"),
                         settingIndex: 0
                     },
                     {
                         title: i18nc("@item:inlistbox", "Centered"),
-                        description: i18nc("@item:inlistbox", "Mouse cursor stays centered on-screen, except near screen edges"),
+                        description: i18nc("@item:inlistbox", "Pointer stays centered on-screen, except near screen edges"),
                         settingIndex: 1
                     },
                     {
                         title: i18nc("@item:inlistbox", "Centered (Strict)"),
-                        description: i18nc("@item:inlistbox", "Mouse cursor stays centered on-screen, even near screen edges"),
+                        description: i18nc("@item:inlistbox", "Pointer stays centered on-screen, even near screen edges"),
                         settingIndex: 4
                     },
                     {
                         title: i18nc("@item:inlistbox", "Push"),
-                        description: i18nc("@item:inlistbox", "Mouse cursor pushes zoom area at screen edges"),
+                        description: i18nc("@item:inlistbox", "Pointer pushes zoom area at screen edges"),
                         settingIndex: 2
                     },
                     {
                         title: i18nc("@item:inlistbox", "Disabled"),
-                        description: i18nc("@item:inlistbox", "Zoom area doesn't follow mouse cursor"),
+                        description: i18nc("@item:inlistbox", "Zoom area doesn't follow pointer"),
                         settingIndex: 3
                     }
                 ]
