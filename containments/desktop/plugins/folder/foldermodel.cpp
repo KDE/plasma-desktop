@@ -1167,7 +1167,9 @@ void FolderModel::dragSelectedInternal(int x, int y)
     DragTracker::self()->setDragInProgress(nullptr, false);
     m_urlChangedWhileDragging = false;
 
-    if (m_dirModel->dirLister()->url() == currentUrl) {
+    // If we spring-load into another folder and back (with the back button or draggin outside a popup)
+    // the first condition will be true, but we don't want to do this with an empty dragIndexes
+    if (m_dirModel->dirLister()->url() == currentUrl && !m_dragIndexes.isEmpty()) {
         const QModelIndex first(m_dragIndexes.first());
         const QModelIndex last(m_dragIndexes.last());
         m_dragIndexes.clear();
