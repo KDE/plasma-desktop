@@ -662,9 +662,9 @@ FocusScope {
                     return;
                 }
 
-                if (root.useListViewMode) {
-                    main.doCd(index);
-                } else if (Plasmoid.configuration.popups) {
+                if (root.useListViewMode && main.dragging) {
+                    main.doCd((main.hoveredItem as FolderItemDelegate).index);
+                } else if (!root.useListViewMode && Plasmoid.configuration.popups) {
                     hoveredItem.openPopup();
                 }
             }
