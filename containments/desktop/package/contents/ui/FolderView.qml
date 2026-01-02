@@ -6,7 +6,6 @@
 */
 
 import QtQuick
-import QtQuick.Layouts
 import QtQml
 
 import org.kde.plasma.plasmoid
@@ -22,7 +21,7 @@ FocusScope {
 
     signal pressed()
 
-    property QtObject model: dir
+    property Folder.FolderModel model: dir
     property Item rubberBand: null
 
     property alias view: gridView
@@ -55,7 +54,7 @@ FocusScope {
     property var history: []
     property var lastPosition: null
     property bool goingBack: false
-    property Item backButton: null
+    property BackButtonItem backButton: null
     property var dialog: null
     property Item editor: null
 
@@ -67,7 +66,7 @@ FocusScope {
 
     function rename() {
         if (gridView.currentIndex !== -1) {
-            let renameAction = folderView.model.action("rename");
+            let renameAction = model.action("rename");
             if (renameAction && !renameAction.enabled) {
                 return;
             }
@@ -138,13 +137,13 @@ FocusScope {
         let dragIndex = gridView.safeIndexAt(dragPos.x, dragPos.y);
 
         if (listener.dragX === -1 || dragIndex !== dropIndex) {
-            dir.drop(target, event, dropItemAt(dropPos), root.isContainment && !Plasmoid.immutable);
+            dir.drop(target, event, dropItemAt(dropPos), Plasmoid.isContainment && !Plasmoid.immutable);
         }
     }
 
     function generateDragImage() {
         for (let i = 0; i < gridView.count; i++) {
-            let item = gridView.itemAtIndex(i);
+            let item = gridView.itemAtIndex(i) as FolderItemDelegate;
             if (item) {
                 item.updateDragImage();
             }
@@ -154,7 +153,7 @@ FocusScope {
     Connections {
         target: dir
         function onPopupMenuAboutToShow(dropJob, mimeData, x, y) {
-            if (root.isContainment && !Plasmoid.immutable) {
+            if (Plasmoid.isContainment && !Plasmoid.immutable) {
                 root.processMimeData(mimeData, x, y, dropJob);
             }
         }
@@ -294,7 +293,7 @@ FocusScope {
 
             const mappedPos = mapToItem(gridView.contentItem, mouse.x, mouse.y)
             const index = gridView.safeIndexAt(mappedPos.x, mappedPos.y);
-            const indexItem = gridView.itemAtIndex(index);
+            const indexItem = gridView.itemAtIndex(index) as FolderItemDelegate;
 
             if (indexItem && indexItem.iconArea) { // update position in case of touch or untriggered hover
                 gridView.currentIndex = index;
@@ -697,7 +696,7 @@ FocusScope {
                 property int iconSize: makeIconSize()
                 property int verticalDropHitscanOffset: 0
 
-                property Item hoveredItem: null
+                property FolderItemDelegate hoveredItem: null
 
                 property int anchorIndex: 0
                 property bool ctrlPressed: false

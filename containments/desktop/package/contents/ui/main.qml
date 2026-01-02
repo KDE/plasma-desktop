@@ -5,6 +5,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Layouts
@@ -12,7 +13,6 @@ import QtQuick.Layouts
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 import org.kde.ksvg as KSvg
-import org.kde.kquickcontrolsaddons as KQuickControlsAddons
 import org.kde.kirigami as Kirigami
 
 import org.kde.private.desktopcontainment.folder as Folder
@@ -64,7 +64,7 @@ ContainmentItem {
 
     readonly property int hoverActivateDelay: 750 // Magic number that matches Dolphin's auto-expand folders delay.
 
-    readonly property Loader folderViewLayer: fullRepresentationItem.folderViewLayer
+    readonly property FolderViewLayerLoader folderViewLayer: fullRepresentationItem.folderViewLayer
     readonly property ContainmentLayoutManager.AppletsLayout appletsLayout: fullRepresentationItem.appletsLayout
 
     // Plasmoid.title is set by a Binding {} in FolderViewLayer
@@ -76,7 +76,7 @@ ContainmentItem {
     // specific representation right here
     function symbolicizeIconName(iconName) {
         const symbolicSuffix = "-symbolic";
-        if (iconName.endsWith(symbolicSuffix)) {
+        if (iconName?.endsWith(symbolicSuffix)) {
             return iconName;
         }
 
@@ -112,7 +112,7 @@ ContainmentItem {
         }
 
         if (Plasmoid.configuration.labelMode !== 0) {
-            height += folderViewLayer.item.labelHeight;
+            height += (folderViewLayer.item as FolderViewLayer).labelHeight;
         }
 
         return height;
@@ -120,12 +120,12 @@ ContainmentItem {
 
     function isDrag(fromX, fromY, toX, toY) {
         const length = Math.abs(fromX - toX) + Math.abs(fromY - toY);
-        return length >= Qt.styleHints.startDragDistance;
+        return length >= Application.styleHints.startDragDistance;
     }
 
     onFocusChanged: {
         if (focus && isFolder) {
-            folderViewLayer.item?.forceActiveFocus();
+            (folderViewLayer.item as Item)?.forceActiveFocus();
         }
     }
 
@@ -152,7 +152,7 @@ ContainmentItem {
 
         visible: false
 
-        imagePath: isPopup ? "widgets/viewitem" : ""
+        imagePath: root.isPopup ? "widgets/viewitem" : ""
         prefix: "hover"
     }
 
@@ -161,7 +161,7 @@ ContainmentItem {
 
         visible: false
 
-        imagePath: isPopup ? "widgets/viewitem" : ""
+        imagePath: root.isPopup ? "widgets/viewitem" : ""
         prefix: "normal"
     }
 
@@ -181,13 +181,13 @@ ContainmentItem {
 
         anchors {
             fill: parent
-            leftMargin: (isContainment && root.availableScreenRect) ? root.availableScreenRect.x : 0
-            topMargin: (isContainment && root.availableScreenRect) ? root.availableScreenRect.y : 0
+            leftMargin: (root.isContainment && root.availableScreenRect) ? root.availableScreenRect.x : 0
+            topMargin: (root.isContainment && root.availableScreenRect) ? root.availableScreenRect.y : 0
 
-            rightMargin: (isContainment && root.availableScreenRect && parent)
+            rightMargin: (root.isContainment && root.availableScreenRect && parent)
                 ? (parent.width - root.availableScreenRect.x - root.availableScreenRect.width) : 0
 
-            bottomMargin: (isContainment && root.availableScreenRect && parent)
+            bottomMargin: (root.isContainment && root.availableScreenRect && parent)
                 ? (parent.height - root.availableScreenRect.y - root.availableScreenRect.height) : 0
         }
 
@@ -204,12 +204,12 @@ ContainmentItem {
         preventStealing: true
 
         onDragEnter: event => {
-            if (isContainment && Plasmoid.immutable && !(isFolder && FolderTools.isFileDrag(event))) {
+            if (root.isContainment && Plasmoid.immutable && !(root.isFolder && FolderTools.isFileDrag(event))) {
                 event.ignore();
             }
 
             // Don't allow any drops while listing.
-            if (isFolder && folderViewLayer.view.status === Folder.FolderModel.Listing) {
+            if (root.isFolder && folderViewLayer.view.status === Folder.FolderModel.Listing) {
                 event.ignore();
             }
 
@@ -226,9 +226,9 @@ ContainmentItem {
             // is currently incapable of rejecting drag events.
 
             // Trigger autoscroll.
-            if (isFolder && FolderTools.isFileDrag(event)) {
+            if (root.isFolder && FolderTools.isFileDrag(event)) {
                 handleDragMove(folderViewLayer.view, mapToItem(folderViewLayer.view, event.x, event.y));
-            } else if (isContainment) {
+            } else if (root.isContainment) {
                 appletsLayout.showPlaceHolderAt(
                     Qt.rect(event.x - appletsLayout.minimumItemWidth / 2,
                     event.y - appletsLayout.minimumItemHeight / 2,
@@ -240,20 +240,20 @@ ContainmentItem {
 
         onDragLeave: event => {
             // Cancel autoscroll.
-            if (isFolder) {
+            if (root.isFolder) {
                 handleDragEnd(folderViewLayer.view);
             }
 
-            if (isContainment) {
+            if (root.isContainment) {
                 appletsLayout.hidePlaceHolder();
             }
         }
 
         onDrop: event => {
-            if (isFolder && FolderTools.isFileDrag(event)) {
+            if (root.isFolder && FolderTools.isFileDrag(event)) {
                 handleDragEnd(folderViewLayer.view);
                 folderViewLayer.view.drop(root, event, mapToItem(folderViewLayer.view, event.x, event.y));
-            } else if (isContainment) {
+            } else if (root.isContainment) {
                 root.processMimeData(event.mimeData,
                     event.x - appletsLayout.placeHolder.width / 2,
                     event.y - appletsLayout.placeHolder.height / 2);
@@ -313,7 +313,7 @@ ContainmentItem {
             defaultItemWidth: cellWidth * 6
             defaultItemHeight: cellHeight * 6
 
-            eventManagerToFilter: folderViewLayer.item?.view.view ?? null
+            eventManagerToFilter: (folderViewLayer.item as FolderViewLayer)?.view.view ?? null
 
             appletContainerComponent: ContainmentLayoutManager.BasicAppletContainer {
                 id: appletContainer
@@ -374,14 +374,19 @@ ContainmentItem {
 
             placeHolder: ContainmentLayoutManager.PlaceHolder {}
 
-            Loader {
+            component FolderViewLayerLoader: Loader {
+                property bool ready: status === Loader.Ready
+                property FolderView view: (item as FolderViewLayer)?.view ?? null
+                property Folder.FolderModel model: (item as FolderViewLayer)?.model ?? null
+
+                source: "FolderViewLayer.qml"
+            }
+
+
+            FolderViewLayerLoader {
                 id: folderViewLayer
 
                 anchors.fill: parent
-
-                property bool ready: status === Loader.Ready
-                property Item view: item?.view ?? null
-                property QtObject model: item?.model ?? null
 
                 focus: true
 
@@ -400,12 +405,22 @@ ContainmentItem {
                 }
                 asynchronous: false
 
-                source: "FolderViewLayer.qml"
-
                 onFocusChanged: {
                     if (!focus && model) {
                         model.clearSelection();
                     }
+                }
+
+                Binding {
+                    target: folderViewLayer.item
+                    property: "isPopup"
+                    value: root.isPopup
+                }
+
+                Binding {
+                    target: folderViewLayer.item
+                    property: "useListViewMode"
+                    value: root.useListViewMode
                 }
 
                 Connections {
@@ -430,11 +445,11 @@ ContainmentItem {
         Component.onCompleted: {
             // Layout bindings need to be set delayed; the intermediate steps as the other bindings happen cause loops
             Qt.callLater( () => {
-                dropArea.Layout.minimumWidth = Qt.binding(() => preferredWidth(isPopup))
-                dropArea.Layout.minimumHeight = Qt.binding(() => preferredHeight(isPopup))
+                dropArea.Layout.minimumWidth = Qt.binding(() => root.preferredWidth(root.isPopup))
+                dropArea.Layout.minimumHeight = Qt.binding(() => root.preferredHeight(root.isPopup))
 
-                dropArea.Layout.preferredWidth = Qt.binding(() => preferredWidth(false))
-                dropArea.Layout.preferredHeight = Qt.binding(() => preferredHeight(false))
+                dropArea.Layout.preferredWidth = Qt.binding(() => root.preferredWidth(false))
+                dropArea.Layout.preferredHeight = Qt.binding(() => root.preferredHeight(false))
 
                 // Maximum size is intentionally unbounded
             })

@@ -3,15 +3,15 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.15
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
 
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.plasma.core as PlasmaCore
+import org.kde.kirigami as Kirigami
 import org.kde.private.desktopcontainment.folder as Folder
-import org.kde.kitemmodels 1.0 as KItemModels
+import org.kde.kitemmodels as KItemModels
 import org.kde.kcmutils as KCM
 
 KCM.ScrollViewKCM {
@@ -138,13 +138,13 @@ KCM.ScrollViewKCM {
                     Layout.fillHeight: true
                     CheckBox {
                         Layout.fillHeight: true
-                        checked: mimeTypesModel.checkedTypes.indexOf(name) >= 0
+                        checked: mimeTypesModel.checkedTypes.indexOf(delegate.name) >= 0
                         onToggled: {
-                            let idx = mimeTypesModel.checkedTypes.indexOf(name);
+                            let idx = mimeTypesModel.checkedTypes.indexOf(delegate.name);
                             if (idx >= 0) {
                                 mimeTypesModel.checkedTypes.splice(idx, 1);
                             } else {
-                                mimeTypesModel.checkedTypes.push(name)
+                                mimeTypesModel.checkedTypes.push(delegate.name)
                             }
                         }
                     }
@@ -153,17 +153,17 @@ KCM.ScrollViewKCM {
                         implicitWidth: Kirigami.Units.iconSizes.small
                         implicitHeight: Kirigami.Units.iconSizes.small
                         animated: false // TableView reuses delegates, avoid animation when sorting/filtering.
-                        source: decoration
+                        source: delegate.decoration
                     }
                     Label {
-                        text: name
+                        text: delegate.name
                         elide: Text.ElideRight
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                     }
                 }
                 Label {
-                    text: comment
+                    text: delegate.comment
                     elide: Text.ElideRight
                     Layout.fillWidth: true
                     Layout.fillHeight: true

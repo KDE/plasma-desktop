@@ -3,6 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQml
@@ -18,10 +19,14 @@ import org.kde.private.desktopcontainment.folder as Folder
 FocusScope {
     id: folderViewLayerComponent
 
+    // these need to be passed in from main, but required properties with Loaders are awkward
+    /*required*/ property bool isPopup
+    /*required*/ property bool useListViewMode
+
     property var sharedActions: ["newMenu", "paste", "undo", "emptyTrash"]
     property Component folderViewDialogComponent: Qt.createComponent("FolderViewDialog.qml", Qt.Asynchronous, root)
 
-    property Item view: folderView
+    property FolderView view: folderView
     property Item label: null
     property int labelHeight: Kirigami.Units.iconSizes.sizeForLabels + (Kirigami.Units.smallSpacing * 2)
 
@@ -72,18 +77,18 @@ FocusScope {
 
         folderModel: folderView.model
         rtl: (Application.layoutDirection === Qt.RightToLeft)
-        labelMode: Plasmoid.configuration.labelMode || (isContainment ? 0 : 1)
+        labelMode: Plasmoid.configuration.labelMode || (Plasmoid.isContainment ? 0 : 1)
         labelText: Plasmoid.configuration.labelText
     }
 
     Folder.ViewPropertiesMenu {
         id: viewPropertiesMenu
 
-        showLayoutActions: !isPopup
-        showLockAction: isContainment
-        showIconSizeActions: !root.useListViewMode
+        showLayoutActions: !folderViewLayerComponent.isPopup
+        showLockAction: Plasmoid.isContainment
+        showIconSizeActions: !folderViewLayerComponent.useListViewMode
 
-        lockedEnabled: !lockedByKiosk
+        lockedEnabled: !folderViewLayerComponent.lockedByKiosk
 
         onArrangementChanged: {
             Plasmoid.configuration.arrangement = arrangement;
@@ -98,7 +103,7 @@ FocusScope {
         }
 
         onLockedChanged: {
-            if (!lockedByKiosk) {
+            if (!folderViewLayerComponent.lockedByKiosk) {
                 Plasmoid.configuration.locked = locked;
             }
         }
@@ -123,7 +128,7 @@ FocusScope {
             arrangement = Plasmoid.configuration.arrangement;
             alignment = Plasmoid.configuration.alignment;
             previews = Plasmoid.configuration.previews;
-            locked = Plasmoid.configuration.locked || lockedByKiosk;
+            locked = Plasmoid.configuration.locked || folderViewLayerComponent.lockedByKiosk;
             sortMode = Plasmoid.configuration.sortMode;
             sortDesc = Plasmoid.configuration.sortDesc;
             sortDirsFirst = Plasmoid.configuration.sortDirsFirst;
@@ -146,13 +151,13 @@ FocusScope {
         target: root
 
         function onExpandedChanged() {
-            if (root.isPopup) {
+            if (folderViewLayerComponent.isPopup) {
                 if (root.expanded) {
                     folderView.currentIndex = -1;
                     folderView.forceActiveFocus();
                     folderView.positionViewAtBeginning();
                 } else {
-                    goHome();
+                    folderViewLayerComponent.goHome();
 
                     folderView.currentIndex = -1;
                     folderView.model.clearSelection();
@@ -205,11 +210,11 @@ FocusScope {
         anchors.bottom: parent.bottom
 
         focus: true
-        isRootView: isContainment
+        isRootView: Plasmoid.isContainment
         positionerApplet: Plasmoid
 
         url: Plasmoid.configuration.url
-        locked: (Plasmoid.configuration.locked || !isContainment || lockedByKiosk)
+        locked: (Plasmoid.configuration.locked || !Plasmoid.isContainment || folderViewLayerComponent.lockedByKiosk)
         filterMode: Plasmoid.configuration.filterMode
         filterPattern: Plasmoid.configuration.filterPattern
         filterMimeTypes: Plasmoid.configuration.filterMimeTypes
@@ -237,10 +242,10 @@ FocusScope {
             // propagates recursively) and that confuses the Label, hence the temp property.
             readonly property bool active: (Plasmoid.configuration.labelMode !== 0)
 
-            readonly property bool showPin: root.isPopup && root.compactRepresentationItem && root.compactRepresentationItem.visible
+            readonly property bool showPin: folderViewLayerComponent.isPopup && root.compactRepresentationItem && root.compactRepresentationItem.visible
 
             width: parent.width
-            height: active ? labelHeight : 0
+            height: active ? folderViewLayerComponent.labelHeight : 0
 
             visible: active
 
@@ -248,7 +253,7 @@ FocusScope {
             property Item homeButton: null
 
             onVisibleChanged: {
-                if (root.isPopup && !visible) {
+                if (folderViewLayerComponent.isPopup && !visible) {
                     root.hideOnWindowDeactivate = true;
                 }
             }
@@ -318,7 +323,7 @@ FocusScope {
 
                     visible: label.showPin
 
-                    width: root.isPopup ? Math.round(Kirigami.Units.gridUnit * 1.25) : 0
+                    width: folderViewLayerComponent.isPopup ? Math.round(Kirigami.Units.gridUnit * 1.25) : 0
                     height: width
                     checkable: true
                     icon.name: "window-pin"
@@ -334,13 +339,13 @@ FocusScope {
 
                     anchors.left: parent.left
 
-                    visible: root.isPopup && folderView.url !== Plasmoid.configuration.url
+                    visible: folderViewLayerComponent.isPopup && folderView.url !== Plasmoid.configuration.url
 
-                    width: root.isPopup ? Math.round(Kirigami.Units.gridUnit * 1.25) : 0
+                    width: folderViewLayerComponent.isPopup ? Math.round(Kirigami.Units.gridUnit * 1.25) : 0
                     height: width
                     icon.name: "go-home"
 
-                    onClicked: goHome()
+                    onClicked: folderViewLayerComponent.goHome()
                 }
             }
 
@@ -365,7 +370,7 @@ FocusScope {
     }
 
     Component.onCompleted: {
-        if (!isContainment) {
+        if (!Plasmoid.isContainment) {
             label = labelComponent.createObject(folderViewLayerComponent);
         }
 

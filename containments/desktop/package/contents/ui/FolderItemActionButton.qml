@@ -37,7 +37,7 @@ KSvg.SvgItem {
     svg: KSvg.Svg {
         imagePath: "widgets/action-overlays"
         multipleImages: true
-        size: "16x16"
+        size: Qt.size(16, 16)
     }
     elementId: element + "-normal"
 
@@ -61,8 +61,7 @@ KSvg.SvgItem {
                 when: actionButtonMouseArea.containsMouse && !actionButtonMouseArea.pressed
 
                 PropertyChanges {
-                    target: actionButton
-                    elementId: actionButton.element + "-hover"
+                    actionButton.elementId: actionButton.element + "-hover"
                 }
             },
             State {
@@ -70,8 +69,7 @@ KSvg.SvgItem {
                 when: actionButtonMouseArea.pressed
 
                 PropertyChanges {
-                    target: actionButton
-                    elementId: actionButton.element + "-pressed"
+                    actionButton.elementId: actionButton.element + "-pressed"
                 }
             }
         ]

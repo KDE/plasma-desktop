@@ -4,12 +4,12 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.15
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
 
-import org.kde.plasma.plasmoid 2.0
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.plasmoid
+import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 
 import org.kde.private.desktopcontainment.folder as Folder
@@ -55,7 +55,7 @@ KCM.SimpleKCM {
         id: placesModel
         showDesktopEntry: false
 
-        onPlacesChanged: applyConfig(true)
+        onPlacesChanged: configLocation.applyConfig(true)
     }
 
     ButtonGroup {
@@ -65,9 +65,9 @@ KCM.SimpleKCM {
 
         onCheckedButtonChanged: {
             if (checkedButton === locationDesktop) {
-                cfg_url = "desktop:/";
+                configLocation.cfg_url = "desktop:/";
             } else if (checkedButton === locationCurrentActivity) {
-                cfg_url = "activities:/current/";
+                configLocation.cfg_url = "activities:/current/";
             }
         }
     }
@@ -117,12 +117,12 @@ KCM.SimpleKCM {
 
                 onEnabledChanged: {
                     if (enabled && currentIndex !== -1) {
-                        cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(placesModel.urlForIndex(currentIndex));
+                        configLocation.cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(placesModel.urlForIndex(currentIndex));
                     }
                 }
 
                 onActivated: index => {
-                    cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(placesModel.urlForIndex(index));
+                    configLocation.cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(placesModel.urlForIndex(index));
                 }
             }
         }
@@ -148,13 +148,13 @@ KCM.SimpleKCM {
 
                 onEnabledChanged: {
                     if (enabled && text !== "") {
-                        cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(text);
+                        configLocation.cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(text);
                     }
                 }
 
                 onTextChanged: {
                     if (enabled) {
-                        cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(text);
+                        configLocation.cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(text);
                     }
                 }
             }
@@ -177,20 +177,20 @@ KCM.SimpleKCM {
         }
 
         Item {
-            visible: titleVisible
+            visible: configLocation.titleVisible
             Kirigami.FormData.isSection: true
         }
 
         RowLayout {
             Layout.fillWidth: true
             spacing: Kirigami.Units.smallSpacing
-            visible: titleVisible
+            visible: configLocation.titleVisible
             Kirigami.FormData.label: i18nc("@label:textbox custom widget title", "Title:")
 
             ComboBox {
                 id: labelMode
                 Layout.minimumWidth: Math.max(locationPlace.implicitWidth, locationCustom.implicitWidth, labelMode.implicitWidth)
-                visible: titleVisible
+                visible: configLocation.titleVisible
 
 
                 model: [

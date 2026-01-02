@@ -6,12 +6,12 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
-import org.kde.plasma.plasmoid 2.0
+import QtQuick
+import org.kde.plasma.plasmoid
 
-import org.kde.ksvg 1.0 as KSvg
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.ksvg as KSvg
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.kirigami as Kirigami
 
 KSvg.FrameSvgItem {
     id: upButton
@@ -53,14 +53,14 @@ KSvg.FrameSvgItem {
             if (mouse.buttons & Qt.BackButton) {
                 if (root.isPopup && dir.resolvedUrl !== dir.resolve(Plasmoid.configuration.url)) {
                     doBack();
-                    ignoreClick = true;
+                    upButton.ignoreClick = true;
                 }
             }
         }
 
         onClicked: mouse => {
-            if (ignoreClick) {
-                ignoreClick = false;
+            if (upButton.ignoreClick) {
+                upButton.ignoreClick = false;
                 return;
             }
 
@@ -116,11 +116,10 @@ KSvg.FrameSvgItem {
     states: [
         State {
             name: "hover"
-            when: mouseArea.containsMouse || containsDrag
+            when: mouseArea.containsMouse || upButton.containsDrag
 
             PropertyChanges {
-                target: upButton
-                prefix: "hover"
+                upButton.prefix: "hover"
             }
         }
     ]

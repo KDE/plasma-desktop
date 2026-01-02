@@ -6,18 +6,16 @@
 */
 
 import QtQuick
-import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.15
+import QtQuick.Controls
+import QtQuick.Layouts
 
-import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.plasma.extras as PlasmaExtras
 import org.kde.iconthemes as KIconThemes
 import org.kde.config // for KAuthorized
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
-
-import org.kde.private.desktopcontainment.folder as Folder
 
 KCM.SimpleKCM {
     id: configIcons
@@ -47,21 +45,21 @@ KCM.SimpleKCM {
 
     KIconThemes.IconDialog {
         id: iconDialog
-        onIconNameChanged: iconName => cfg_icon = iconName || "folder-symbolic";
+        onIconNameChanged: iconName => configIcons.cfg_icon = iconName || "folder-symbolic";
     }
 
     Kirigami.FormLayout {
         // Panel button
         RowLayout {
             spacing: Kirigami.Units.smallSpacing
-            visible: isPopup
+            visible: configIcons.isPopup
 
             Kirigami.FormData.label: i18n("Panel button:")
 
             CheckBox {
                 id: useCustomIcon
-                visible: isPopup
-                checked: cfg_useCustomIcon
+                visible: configIcons.isPopup
+                checked: configIcons.cfg_useCustomIcon
                 text: i18n("Use a custom icon")
             }
 
@@ -86,7 +84,7 @@ KCM.SimpleKCM {
                     anchors.centerIn: parent
                     width: Kirigami.Units.iconSizes.large
                     height: width
-                    source: cfg_icon
+                    source: configIcons.cfg_icon
                 }
             }
 
@@ -103,13 +101,13 @@ KCM.SimpleKCM {
                 PlasmaExtras.MenuItem {
                     text: i18nc("@item:inmenu Reset icon to default", "Clear Icon")
                     icon: "edit-clear"
-                    onClicked: cfg_icon = "folder-symbolic";
+                    onClicked: configIcons.cfg_icon = "folder-symbolic";
                 }
             }
         }
 
         Item {
-            visible: isPopup
+            visible: configIcons.isPopup
             Kirigami.FormData.isSection: true
         }
 
@@ -119,7 +117,7 @@ KCM.SimpleKCM {
         ComboBox {
             id: arrangement
             Layout.fillWidth: true
-            visible: !isPopup || viewMode.currentIndex === 1 /* Icons mode */
+            visible: !configIcons.isPopup || viewMode.currentIndex === 1 /* Icons mode */
 
             Kirigami.FormData.label: i18n("Arrangement:")
 
@@ -132,7 +130,7 @@ KCM.SimpleKCM {
         ComboBox {
             id: alignment
             Layout.fillWidth: true
-            visible: !isPopup || viewMode.currentIndex === 1 /* Icons mode */
+            visible: !configIcons.isPopup || viewMode.currentIndex === 1 /* Icons mode */
 
             Kirigami.FormData.label: i18n("Sort Alignment:")
 
@@ -150,13 +148,13 @@ KCM.SimpleKCM {
 
         CheckBox {
             id: locked
-            visible: ("containmentType" in plasmoid)
-            checked: cfg_locked || lockedByKiosk
-            enabled: !lockedByKiosk
+            visible: ("containmentType" in Plasmoid)
+            checked: configIcons.cfg_locked || configIcons.lockedByKiosk
+            enabled: !configIcons.lockedByKiosk
 
             onCheckedChanged: {
-                if (!lockedByKiosk) {
-                    cfg_locked = checked;
+                if (!configIcons.lockedByKiosk) {
+                    configIcons.cfg_locked = checked;
                 }
             }
 
@@ -165,7 +163,7 @@ KCM.SimpleKCM {
 
         Item {
             Kirigami.FormData.isSection: true
-            visible: !isPopup || viewMode.currentIndex === 1 /* Icons mode */
+            visible: !configIcons.isPopup || viewMode.currentIndex === 1 /* Icons mode */
         }
 
 
@@ -189,7 +187,7 @@ KCM.SimpleKCM {
                     i18nc("@item:inlistbox sort icons by date", "Date")]
 
             Component.onCompleted: currentIndex = modeToIndex[mode]
-            onActivated: mode = indexToMode[index]
+            onActivated: index => mode = indexToMode[index]
         }
 
         CheckBox {
@@ -216,7 +214,7 @@ KCM.SimpleKCM {
         // View Mode section (only if we're a pop-up)
         ComboBox {
             id: viewMode
-            visible: isPopup
+            visible: configIcons.isPopup
             Layout.fillWidth: true
 
             Kirigami.FormData.label: i18nc("whether to use icon or list view", "View mode:")
@@ -231,7 +229,7 @@ KCM.SimpleKCM {
             id: iconSize
 
             Layout.fillWidth: true
-            visible: !isPopup || viewMode.currentIndex === 1 /* Icons mode */
+            visible: !configIcons.isPopup || viewMode.currentIndex === 1 /* Icons mode */
 
             Kirigami.FormData.label: i18n("Icon size:")
 
@@ -246,7 +244,7 @@ KCM.SimpleKCM {
 
             Label {
                 Layout.alignment: Qt.AlignLeft
-                visible: !isPopup || viewMode.currentIndex === 1 /* Icons mode */
+                visible: !configIcons.isPopup || viewMode.currentIndex === 1 /* Icons mode */
 
                 text: i18nc("@label:slider smallest icon size", "Small")
             }
@@ -255,7 +253,7 @@ KCM.SimpleKCM {
             }
             Label {
                 Layout.alignment: Qt.AlignRight
-                visible: !isPopup || viewMode.currentIndex === 1 /* Icons mode */
+                visible: !configIcons.isPopup || viewMode.currentIndex === 1 /* Icons mode */
 
                 text: i18nc("@label:slider largest icon size", "Large")
             }
@@ -263,7 +261,7 @@ KCM.SimpleKCM {
 
         ComboBox {
             id: labelWidth
-            visible: !isPopup || viewMode.currentIndex === 1 /* Icons mode */
+            visible: !configIcons.isPopup || viewMode.currentIndex === 1 /* Icons mode */
             Layout.fillWidth: true
 
             Kirigami.FormData.label: i18n("Label width:")
@@ -277,7 +275,7 @@ KCM.SimpleKCM {
 
         SpinBox {
             id: textLines
-            visible: !isPopup || viewMode.currentIndex === 1 /* Icons mode */
+            visible: !configIcons.isPopup || viewMode.currentIndex === 1 /* Icons mode */
 
             Kirigami.FormData.label: i18n("Text lines:")
 
@@ -302,14 +300,14 @@ KCM.SimpleKCM {
 
         CheckBox {
             id: selectionMarkers
-            visible: Qt.styleHints.singleClickActivation
+            visible: Application.styleHints.singleClickActivation
 
             text: i18n("Show selection markers")
         }
 
         CheckBox {
             id: popups
-            visible: !isPopup
+            visible: !configIcons.isPopup
 
             text: i18n("Show folder preview popups")
         }

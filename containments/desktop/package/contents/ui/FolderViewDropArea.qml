@@ -12,7 +12,7 @@ import org.kde.kirigami as Kirigami
 DragDrop.DropArea {
     id: dropArea
 
-    property Item folderView: null
+    property FolderView folderView: null
 
     function handleDragMove(folderView, pos) {
         // Trigger autoscroll.

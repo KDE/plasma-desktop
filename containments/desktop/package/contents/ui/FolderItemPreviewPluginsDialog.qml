@@ -4,9 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.15
+import QtQuick
+import QtQuick.Controls
 
 import org.kde.private.desktopcontainment.folder as Folder
 import org.kde.kirigami as Kirigami
@@ -38,10 +37,11 @@ Kirigami.Dialog {
         }
 
         delegate: CheckDelegate {
+            required property var model // for display, which shadows a delegate property
+            required checked
             width: ListView.view.width
             text: model.display
 
-            checked: model.checked
             onToggled: model.checked = checked;
         }
     }

@@ -3,6 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Window
@@ -13,13 +14,13 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.extras as PlasmaExtras
 
 import org.kde.kirigami as Kirigami
-import org.kde.ksvg as KSvg
-import org.kde.kquickcontrolsaddons
 
 import org.kde.private.desktopcontainment.folder as Folder
 
 Item {
     id: main
+
+    required property var model
 
     property int index:          model.index
     property string name:        model.blank ? "" : model.display
@@ -28,14 +29,14 @@ Item {
     property bool selected:      model.blank ? false : model.selected
     property bool isDir:           loader.item ? loader.item.isDir : false
     property bool isOnRootView: false
-    property QtObject popupDialog: loader.item ? loader.item.popupDialog    : null
+    property /*FolderViewDialog*/ Folder.SubDialog popupDialog: loader.item ? loader.item.popupDialog    : null
     property Item iconArea:        loader.item ? loader.item.iconArea       : null
     property Item label:           loader.item ? loader.item.label          : null
     property Item labelArea:       loader.item ? loader.item.labelArea      : null
     property Item actionsOverlay:  loader.item ? loader.item.actionsOverlay : null
     property Item hoverArea:       loader.item ? loader.item.hoverArea      : null
     property Item frame:           loader.item ? loader.item.frame          : null
-    property Item toolTip:         loader.item ? loader.item.toolTip        : null
+    property PlasmaCore.ToolTipArea toolTip:         loader.item ? loader.item.toolTip        : null
     property real contentHeight:   loader.item && !root.useListViewMode ? loader.item.contentHeight : null
     Accessible.name: name
     Accessible.role: Accessible.Canvas
@@ -55,7 +56,7 @@ Item {
 
     function closePopup() {
         if (popupDialog && popupDialog.allowClosing) {
-            popupDialog.requestDestroy();
+            (popupDialog as FolderViewDialog).requestDestroy();
             loader.item.popupDialog = null;
         }
     }
@@ -73,7 +74,7 @@ Item {
 
         visible: status === Loader.Ready
 
-        active: !model.blank
+        active: !main.model.blank
 
         sourceComponent: delegateImplementation
 
@@ -96,18 +97,18 @@ Item {
 
             anchors.fill: parent
 
-            property bool blank: model.blank
-            property bool isDir: model.blank ? false : model.isDir
+            property bool blank: main.model.blank
+            property bool isDir: main.model.blank ? false : main.model.isDir
             property bool hovered: (main.GridView.view.hoveredItem === main)
-            property QtObject popupDialog: null
+            property /*FolderViewDialog*/ Folder.SubDialog popupDialog: null
             property Item iconArea: icon
             property Item label: label
             property Item labelArea: label
             property Item actionsOverlay: actions
             property Item hoverArea: toolTip
             property Item frame: frameLoader
-            property Item toolTip: toolTip
-            property Item selectionButton: selectionButtonComponent.createObject(actions)
+            property alias toolTip: toolTip
+            property Item selectionButton: selectionButtonComponent.createObject(actions) as FolderItemActionButton
             property Item popupButton: null
             property int contentHeight: frameLoader.height + frameLoader.y * 2
 
@@ -115,22 +116,22 @@ Item {
 
 
             Connections {
-                target: model
+                target: main.model
 
                 function onSelectedChanged() {
-                    if (dir.usedByContainment && model.selected) {
-                        gridView.currentIndex = model.index;
+                    if (dir.usedByContainment && main.model.selected) {
+                        gridView.currentIndex = main.model.index;
                     }
                 }
             }
 
             onHoveredChanged: {
                 if (hovered) {
-                    if (Plasmoid.configuration.selectionMarkers && Qt.styleHints.singleClickActivation) {
+                    if (Plasmoid.configuration.selectionMarkers && Application.styleHints.singleClickActivation) {
                         selectionButton.visible = true;
                     }
 
-                    if (model.isDir) {
+                    if (main.model.isDir) {
                         if (!main.GridView.view.isRootView || root.containsDrag) {
                             hoverActivateTimer.restart();
                         }
@@ -141,7 +142,7 @@ Item {
                     }
                 } else if (!hovered) {
                     if (popupDialog != null) {
-                        closePopup();
+                        main.closePopup();
                     }
 
                     selectionButton.visible = false;
@@ -157,7 +158,7 @@ Item {
                 if (folderViewDialogComponent.status === Component.Ready) {
                     impl.popupDialog = folderViewDialogComponent.createObject(impl);
                     impl.popupDialog.visualParent = icon;
-                    impl.popupDialog.url = Folder.DesktopSchemeHelper.getDesktopUrl(model.linkDestinationUrl);
+                    impl.popupDialog.url = Folder.DesktopSchemeHelper.getDesktopUrl(main.model.linkDestinationUrl);
                     impl.popupDialog.visible = true;
                 }
             }
@@ -167,21 +168,21 @@ Item {
                 anchors.fill: impl
 
                 active: (Plasmoid.configuration.toolTips || label.truncated)
-                        && popupDialog === null
-                        && !model.blank
+                        && impl.popupDialog === null
+                        && !main.model.blank
                 interactive: false
                 location: root.useListViewMode ? (Plasmoid.location === PlasmaCore.Types.LeftEdge ? PlasmaCore.Types.LeftEdge : PlasmaCore.Types.RightEdge) : Plasmoid.location
 
                 onContainsMouseChanged:  {
-                    if (containsMouse && !model.blank) {
+                    if (containsMouse && !main.model.blank) {
                         if (toolTip.active) {
-                            toolTip.icon = model.decoration;
-                            toolTip.mainText = model.display;
+                            toolTip.icon = main.model.decoration;
+                            toolTip.mainText = main.model.display;
 
-                            if (model.size !== undefined) {
-                                toolTip.subText = model.type + "\n" + model.size;
+                            if (main.model.size !== undefined) {
+                                toolTip.subText = main.model.type + "\n" + main.model.size;
                             } else {
-                                toolTip.subText = model.type;
+                                toolTip.subText = main.model.type;
                             }
                         }
 
@@ -196,7 +197,7 @@ Item {
                             // The solution is to call later and check again to make sure if we still contains
                             // mouse and next set the "hoveredItem". In this approach the "FolderView" sets the
                             // old "hoveredItem" to "null" and next we set it to the new item here.
-                            if (containsMouse && !model.blank) {
+                            if (containsMouse && !main.model.blank) {
                                 main.GridView.view.hoveredItem = main;
                             }
                         })
@@ -213,10 +214,9 @@ Item {
                         }
 
                         PropertyChanges {
-                            target: toolTip
-                            y: frameLoader.y + icon.y
-                            width: Math.max(icon.paintedWidth, label.paintedWidth)
-                            height: (label.y + label.paintedHeight) - y
+                            toolTip.y: frameLoader.y + icon.y
+                            toolTip.width: Math.max(icon.paintedWidth, label.paintedWidth)
+                            toolTip.height: (label.y + label.paintedHeight) - y
                         }
                     },
                     State { // list view
@@ -228,11 +228,10 @@ Item {
                         }
 
                         PropertyChanges {
-                            target: toolTip
-                            x: frameLoader.x
-                            y: frameLoader.y
-                            width: frameLoader.width
-                            height: frameLoader.height
+                            toolTip.x: frameLoader.x
+                            toolTip.y: frameLoader.y
+                            toolTip.width: frameLoader.width
+                            toolTip.height: frameLoader.height
                         }
                     }
                 ]
@@ -248,7 +247,7 @@ Item {
                 property string prefix: ""
 
                 sourceComponent: frameComponent
-                active: impl.iconAndLabelsShouldlookSelected || (model?.selected ?? false)
+                active: impl.iconAndLabelsShouldlookSelected || (main.model?.selected ?? false)
                 asynchronous: true
 
                 width: {
@@ -303,11 +302,11 @@ Item {
                     height: main.GridView.view.iconSize
 
                     opacity: {
-                        if (root.useListViewMode && selectionButton.visible) {
+                        if (root.useListViewMode && impl.selectionButton.visible) {
                             return 0.3;
                         }
 
-                        if (model.isHidden) {
+                        if (main.model.isHidden) {
                             return 0.6;
                         }
 
@@ -316,7 +315,7 @@ Item {
 
                     animated: false
 
-                    source: model.decoration
+                    source: main.model.decoration
                 }
 
                 PlasmaExtras.ShadowedLabel {
@@ -336,11 +335,10 @@ Item {
                                 anchors.horizontalCenter: parent.horizontalCenter
                             }
                             PropertyChanges {
-                                target: label
-                                anchors.topMargin: Kirigami.Units.smallSpacing
-                                width: parent.width - Kirigami.Units.smallSpacing
-                                maximumLineCount: Plasmoid.configuration.textLines
-                                horizontalAlignment: Text.AlignHCenter
+                                label.anchors.topMargin: Kirigami.Units.smallSpacing
+                                label.width: label.parent.width - Kirigami.Units.smallSpacing
+                                label.maximumLineCount: label.Plasmoid.configuration.textLines
+                                label.horizontalAlignment: Text.AlignHCenter
                             }
                         },
                         State { // list view
@@ -352,12 +350,11 @@ Item {
                                 anchors.verticalCenter: parent.verticalCenter
                             }
                             PropertyChanges {
-                                target: label
-                                anchors.leftMargin: Kirigami.Units.smallSpacing * 2
-                                anchors.rightMargin: Kirigami.Units.smallSpacing * 2
-                                width: parent.width - icon.width - (Kirigami.Units.smallSpacing * 4)
-                                maximumLineCount: 1
-                                horizontalAlignment: Text.AlignLeft
+                                label.anchors.leftMargin: Kirigami.Units.smallSpacing * 2
+                                label.anchors.rightMargin: Kirigami.Units.smallSpacing * 2
+                                label.width: label.parent.width - icon.width - (Kirigami.Units.smallSpacing * 4)
+                                label.maximumLineCount: 1
+                                label.horizontalAlignment: Text.AlignLeft
                             }
                         }
                     ]
@@ -368,7 +365,7 @@ Item {
                             return "white";
                         }
 
-                        if (model.selected) {
+                        if (main.model.selected) {
                             return Kirigami.Theme.highlightedTextColor;
                         }
 
@@ -377,10 +374,10 @@ Item {
                     }
                     visible: !renaming
                     renderShadow: main.isOnRootView && !renaming
-                    opacity: model.isHidden ? 0.6 : 1
+                    opacity: main.model.isHidden ? 0.6 : 1
 
                     text: main.nameWrapped
-                    font.italic: (model?.isLink ?? false)
+                    font.italic: (main.model?.isLink ?? false)
                     wrapMode: (maximumLineCount === 1) ? Text.NoWrap : Text.Wrap
                     horizontalAlignment: Text.AlignHCenter
                 }
@@ -394,7 +391,7 @@ Item {
                         // place on the desktop.
                         visible: this === frameLoader.item
                         hovered: impl.iconAndLabelsShouldlookSelected
-                        pressed: model.selected
+                        pressed: main.model.selected
                         active: Window.active
                     }
                 }
@@ -403,11 +400,11 @@ Item {
                     id: selectionButtonComponent
 
                     FolderItemActionButton {
-                        element: model.selected ? "remove" : "add"
+                        element: main.model.selected ? "remove" : "add"
 
                         onClicked: {
-                            dir.toggleSelected(positioner.map(index));
-                            main.GridView.view.currentIndex = index;
+                            dir.toggleSelected(positioner.map(main.index));
+                            main.GridView.view.currentIndex = main.index;
                         }
                     }
                 }
@@ -416,14 +413,14 @@ Item {
                     id: popupButtonComponent
 
                     FolderItemActionButton {
-                        visible: main.GridView.view.isRootView && (popupDialog == null)
+                        visible: main.GridView.view.isRootView && (impl.popupDialog == null)
 
                         element: "open"
 
                         onClicked: {
-                            dir.setSelected(positioner.map(index));
-                            main.GridView.view.currentIndex = index;
-                            openPopup();
+                            dir.setSelected(positioner.map(main.index));
+                            main.GridView.view.currentIndex = main.index;
+                            main.openPopup();
                         }
                     }
                 }
@@ -444,7 +441,7 @@ Item {
 
                         color: "black"
 
-                        opacity: model.isHidden ? 0.3 : 0.6
+                        opacity: main.model.isHidden ? 0.3 : 0.6
 
                         source: icon
                     }
@@ -463,7 +460,7 @@ Item {
                         return false;
                     }
 
-                    if (popupDialog) {
+                    if (main.popupDialog) {
                         return false;
                     }
 
