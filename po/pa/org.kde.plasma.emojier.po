@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-13 00:46+0000\n"
+"POT-Creation-Date: 2026-01-03 00:44+0000\n"
 "PO-Revision-Date: 2023-12-26 11:09-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -49,24 +49,109 @@ msgstr "ਮੌਜੂਦਾ ਮੌਕੇ ਨੂੰ ਬਦਲੋ"
 msgid "Clear History"
 msgstr "ਅਤੀਤ ਨੂੰ ਮਿਟਾਓ"
 
-#: app/ui/CategoryPage.qml:138
+#: app/ui/CategoryPage.qml:124
+#, kde-format
+msgctxt "@action:button Button to open a menu that lets you choose a skin tone"
+msgid "Skin tone:"
+msgstr ""
+
+#: app/ui/CategoryPage.qml:135 app/ui/Emojier.qml:73
+#, fuzzy, kde-format
+#| msgid "All"
+msgctxt "@title:page All emojis"
+msgid "All"
+msgstr "ਸਭ"
+
+#: app/ui/CategoryPage.qml:189
+#, kde-format
+msgctxt "@action:inmenu Skin Tone"
+msgid "🖐️ Neutral"
+msgstr ""
+
+#: app/ui/CategoryPage.qml:190
+#, kde-format
+msgctxt "@action:inmenu Skin Tone"
+msgid "Neutral"
+msgstr ""
+
+#: app/ui/CategoryPage.qml:198
+#, kde-format
+msgctxt "@action:inmenu Skin Tone"
+msgid "🖐🏻 Light"
+msgstr ""
+
+#: app/ui/CategoryPage.qml:199
+#, kde-format
+msgctxt "@action:inmenu Skin Tone"
+msgid "Light"
+msgstr ""
+
+#: app/ui/CategoryPage.qml:207
+#, kde-format
+msgctxt "@action:inmenu Skin Tone"
+msgid "🖐🏼 Medium Light"
+msgstr ""
+
+#: app/ui/CategoryPage.qml:208
+#, kde-format
+msgctxt "@action:inmenu Skin Tone"
+msgid "Medium Light"
+msgstr ""
+
+#: app/ui/CategoryPage.qml:216
+#, kde-format
+msgctxt "@action:inmenu Skin Tone"
+msgid "🖐🏽 Medium"
+msgstr ""
+
+#: app/ui/CategoryPage.qml:217
+#, kde-format
+msgctxt "@action:inmenu Skin Tone"
+msgid "Medium"
+msgstr ""
+
+#: app/ui/CategoryPage.qml:225
+#, kde-format
+msgctxt "@action:inmenu Skin Tone"
+msgid "🖐🏾 Medium Dark"
+msgstr ""
+
+#: app/ui/CategoryPage.qml:226
+#, kde-format
+msgctxt "@action:inmenu Skin Tone"
+msgid "Medium Dark"
+msgstr ""
+
+#: app/ui/CategoryPage.qml:234
+#, kde-format
+msgctxt "@action:inmenu Skin Tone"
+msgid "🖐🏿 Dark"
+msgstr ""
+
+#: app/ui/CategoryPage.qml:235
+#, kde-format
+msgctxt "@action:inmenu Skin Tone"
+msgid "Dark"
+msgstr ""
+
+#: app/ui/CategoryPage.qml:264
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Character"
 msgstr "ਅੱਖਰ ਕਾਪੀ ਕਰੋ"
 
-#: app/ui/CategoryPage.qml:143
+#: app/ui/CategoryPage.qml:269
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Description"
 msgstr "ਵਰਣਨ ਕਾਪੀ ਕਰੋ"
 
-#: app/ui/CategoryPage.qml:242
+#: app/ui/CategoryPage.qml:368
 #, kde-format
 msgid "No recent Emojis"
 msgstr "ਕੋਈ ਸੱਜਰੇ ਈਮੋਜ਼ੀ ਨਹੀਂ ਹਨ"
 
-#: app/ui/CategoryPage.qml:242
+#: app/ui/CategoryPage.qml:368
 #, kde-format
 msgctxt "@label placeholder for no emoji found in category"
 msgid "No matching emoji found"
@@ -81,13 +166,6 @@ msgstr "%1 ਨੂੰ ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਕ�
 #, kde-format
 msgid "Recent"
 msgstr "ਤਾਜ਼ਾ"
-
-#: app/ui/Emojier.qml:73
-#, fuzzy, kde-format
-#| msgid "All"
-msgctxt "@title:page All emojis"
-msgid "All"
-msgstr "ਸਭ"
 
 #: emojicategory.cpp:14
 msgctxt "Emoji Category"

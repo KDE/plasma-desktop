@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-03 00:44+0000\n"
 "PO-Revision-Date: 2024-10-28 19:16+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -326,23 +326,47 @@ msgctxt "Device name and path"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: ui/main.qml:26
+#: ui/main.qml:35
+#, kde-format
+msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
+msgid "Allow using as pointer and keyboard"
+msgstr ""
+
+#: ui/main.qml:44
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"Allow game controllers to act like pointer and keyboard devices in Plasma "
+"and non-game applications.<nl/><nl/>Games can always use the controller."
+msgstr ""
+
+#: ui/main.qml:52
 #, kde-format
 msgid "No game controllers found"
 msgstr "Tidak ditemukan kontroler game"
 
-#: ui/main.qml:27
+#: ui/main.qml:53
 #, kde-format
 msgid "Connect a wired or wireless controller"
 msgstr "Sambungkan sebuah kontroler kabel atau nirkabel"
 
-#: ui/main.qml:62
+#: ui/main.qml:83
+#, kde-format
+msgctxt "@info:usagetip"
+msgid ""
+"The system may automatically go to sleep or lock the screen while the "
+"controller is in use. Consider manually blocking them while using the "
+"controller, or enable automatic blocking by allowing the use as pointer and "
+"keyboard."
+msgstr ""
+
+#: ui/main.qml:98
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Device:"
 msgstr "Peranti:"
 
-#: ui/main.qml:84
+#: ui/main.qml:120
 #, fuzzy, kde-format
 #| msgctxt "@label:textbox"
 #| msgid "Device:"
@@ -351,19 +375,19 @@ msgctxt ""
 msgid "Device type:"
 msgstr "Peranti:"
 
-#: ui/main.qml:100
+#: ui/main.qml:136
 #, kde-format
 msgctxt "@label game controller controller type (which brand, etc.)"
 msgid "Controller type:"
 msgstr ""
 
-#: ui/main.qml:116
+#: ui/main.qml:152
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Connection type:"
 msgstr ""
 
-#: ui/main.qml:137
+#: ui/main.qml:174
 #, fuzzy, kde-format
 #| msgctxt "@label Visual representation of an axis position"
 #| msgid "Position:"
@@ -371,7 +395,7 @@ msgctxt "@label Visual representation of the axis position for the left axis"
 msgid "Left position:"
 msgstr "Posisi:"
 
-#: ui/main.qml:149
+#: ui/main.qml:186
 #, fuzzy, kde-format
 #| msgctxt "@label Visual representation of an axis position"
 #| msgid "Position:"
@@ -379,13 +403,13 @@ msgctxt "@label Visual representation of the axis position for the right axis"
 msgid "Right position:"
 msgstr "Posisi:"
 
-#: ui/main.qml:168
+#: ui/main.qml:205
 #, kde-format
 msgctxt "@label Gamepad buttons"
 msgid "Buttons:"
 msgstr "Tombol:"
 
-#: ui/main.qml:190
+#: ui/main.qml:227
 #, kde-format
 msgctxt "@label Gamepad axes (sticks)"
 msgid "Axes:"
