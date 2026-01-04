@@ -8,6 +8,7 @@
 
 #include "logging.h"
 #include "touchpadbackend.h"
+#include "touchpadmoduledata.h"
 #include <config-build-options.h>
 
 #include <KLocalizedContext>
@@ -21,7 +22,7 @@
 #include <QQuickItem>
 #include <QVBoxLayout>
 
-K_PLUGIN_CLASS_WITH_JSON(KCMTouchpad, "kcm_touchpad.json")
+K_PLUGIN_FACTORY_WITH_JSON(KCMTouchpadFactory, "kcm_touchpad.json", registerPlugin<KCMTouchpad>(); registerPlugin<TouchpadModuleData>();)
 
 extern "C" {
 Q_DECL_EXPORT void kcminit()

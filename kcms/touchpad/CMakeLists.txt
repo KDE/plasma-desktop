@@ -50,7 +50,7 @@ add_subdirectory(backends)
 add_subdirectory(kded)
 
 kcmutils_add_qml_kcm(kcm_touchpad)
-target_sources(kcm_touchpad PRIVATE kcm.cpp)
+target_sources(kcm_touchpad PRIVATE kcm.cpp touchpadmoduledata.cpp)
 
 target_link_libraries(kcm_touchpad
     PRIVATE
