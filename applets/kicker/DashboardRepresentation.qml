@@ -596,7 +596,7 @@ Kicker.DashboardWindow {
 
                     visible: opacity !== 0.0
 
-                    opacity: filterList.allApps ? 1.0 : 0.0
+                    opacity: filterList.allApps && !root.searching ? 1.0 : 0.0
 
                     onInteractionConcluded: root.interactionConcluded()
                     onOpacityChanged: {
