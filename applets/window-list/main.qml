@@ -61,6 +61,48 @@ PlasmoidItem {
             Layout.preferredHeight: Kirigami.Units.gridUnit * 12
             model: tasksModel
 
+            Connections {
+                target: root
+                function onExpandedChanged(expanded) {
+                    if (expanded) {
+                        windowListView.currentIndex = -1
+                    }
+                }
+            }
+
+            // focus is needed to receive key events on desktop containment works in panel without this.
+            focus: true
+            keyNavigationWraps: true
+
+            highlight: PlasmaExtras.Highlight {
+                visible: windowListView.currentItem
+                active: windowListView.focus
+                pressed: windowListView.currentItem && windowListView.currentItem.pressed
+            }
+
+            highlightMoveDuration: 0
+            highlightResizeDuration: 0
+
+            Keys.onEnterPressed: {
+                if (currentIndex >= 0 && currentIndex < windowListView.count) {
+                    tasksModel.requestActivate(tasksModel.makeModelIndex(currentIndex));
+                }
+            }
+
+            Keys.onReturnPressed: {
+                if (currentIndex >= 0 && currentIndex < windowListView.count) {
+                    tasksModel.requestActivate(tasksModel.makeModelIndex(currentIndex));
+                }
+            }
+
+            Keys.onTabPressed: {
+                incrementCurrentIndex();
+            }
+
+            Keys.onBacktabPressed: {
+                decrementCurrentIndex();
+            }
+
             delegate: PlasmaComponents.ItemDelegate {
                 id: delegate
 
@@ -69,6 +111,8 @@ PlasmoidItem {
 
 
                 width: ListView.view.width
+
+                highlighted: ListView.isCurrentItem
 
                 contentItem: RowLayout {
                     spacing: Kirigami.Units.smallSpacing
@@ -98,7 +142,16 @@ PlasmoidItem {
                     }
                 }
 
-                onClicked: tasksModel.requestActivate(tasksModel.makeModelIndex(model.index))
+                onHoveredChanged: {
+                    if (hovered) {
+                        windowListView.currentIndex = model.index
+                    }
+                }
+
+                onClicked: {
+                    windowListView.currentIndex = model.index
+                    tasksModel.requestActivate(tasksModel.makeModelIndex(model.index))
+                }
 
             }
 
