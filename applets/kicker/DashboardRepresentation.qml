@@ -79,8 +79,7 @@ Kicker.DashboardWindow {
         globalFavoritesGrid.currentIndex = -1;
         systemFavoritesGrid.currentIndex = -1;
         filterList.currentIndex = 0;
-        funnelModel.sourceModel = rootModel.modelForRow(0);
-        mainGrid.model = funnelModel;
+        filterList.applyFilter();
         mainGrid.currentIndex = -1;
         filterList.model = rootModel;
     }
