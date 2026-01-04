@@ -356,9 +356,16 @@ Kicker.DashboardWindow {
 
                     opacity: enabled ? 1.0 : 0.3
 
+                    Rectangle {
+                        anchors.fill: parent
+                        color: "transparent"
+                        border.color: "red"
+                        border.width: 2
+                        z: 1000
+                    }
+
                     Behavior on opacity { SmoothedAnimation { duration: Kirigami.Units.longDuration; velocity: 0.01 } }
 
-                    onInteractionConcluded: root.interactionConcluded()
                     onCurrentIndexChanged: {
                         preloadAllAppsTimer.defer();
                     }
@@ -401,7 +408,14 @@ Kicker.DashboardWindow {
 
                     dropEnabled: true
 
-                    onInteractionConcluded: root.interactionConcluded()
+                    Rectangle {
+                        anchors.fill: parent
+                        color: "transparent"
+                        border.color: "blue"
+                        border.width: 2
+                        z: 1000
+                    }
+
                     onCurrentIndexChanged: {
                         preloadAllAppsTimer.defer();
                     }
@@ -562,7 +576,14 @@ Kicker.DashboardWindow {
 
                         model: funnelModel
 
-                        onInteractionConcluded: root.interactionConcluded()
+                        Rectangle {
+                            anchors.fill: parent
+                            color: "transparent"
+                            border.color: "green"
+                            border.width: 2
+                            z: 1000
+                        }
+
                         onCurrentIndexChanged: {
                             preloadAllAppsTimer.defer();
                         }
@@ -597,7 +618,14 @@ Kicker.DashboardWindow {
 
                     opacity: filterList.allApps ? 1.0 : 0.0
 
-                    onInteractionConcluded: root.interactionConcluded()
+                    Rectangle {
+                        anchors.fill: parent
+                        color: "transparent"
+                        border.color: "yellow"
+                        border.width: 2
+                        z: 1000
+                    }
+
                     onOpacityChanged: {
                         if (opacity === 1.0) {
                             allAppsGrid.flickableItem.contentY = 0;
@@ -645,7 +673,14 @@ Kicker.DashboardWindow {
 
                     opacity: root.searching ? 1.0 : 0.0
 
-                    onInteractionConcluded: root.interactionConcluded()
+                    Rectangle {
+                        anchors.fill: parent
+                        color: "transparent"
+                        border.color: "magenta"
+                        border.width: 2
+                        z: 1000
+                    }
+
                     onOpacityChanged: {
                         if (opacity === 1.0) {
                             mainColumn.visibleGrid = runnerGrid;
@@ -685,6 +720,14 @@ Kicker.DashboardWindow {
 
             Item {
                 id: filterListColumn
+
+                Rectangle {
+                    anchors.fill: parent
+                    color: "transparent"
+                    border.color: "orange"
+                    border.width: 2
+                    z: 1000
+                }
 
                 anchors {
                     top: parent.top
