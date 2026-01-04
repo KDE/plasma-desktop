@@ -21,9 +21,10 @@
 #include "axesproxymodel.h"
 #include "buttonmodel.h"
 #include "devicemodel.h"
+#include "gamecontrollermoduledata.h"
 #include "hatmodel.h"
 
-K_PLUGIN_CLASS_WITH_JSON(KCMGameController, "kcm_gamecontroller.json")
+K_PLUGIN_FACTORY_WITH_JSON(KCMGameControllerFactory, "kcm_gamecontroller.json", registerPlugin<KCMGameController>(); registerPlugin<GameControllerModuleData>();)
 
 static const QString s_kwinPluginId = QStringLiteral("gamecontroller");
 

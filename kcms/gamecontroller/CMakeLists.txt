@@ -34,6 +34,7 @@ target_sources(kcm_gamecontroller PRIVATE
     hatmodel.cpp
     kcm.cpp
     udevmatcher.cpp
+    gamecontrollermoduledata.cpp
 )
 
 target_link_libraries(kcm_gamecontroller PRIVATE
