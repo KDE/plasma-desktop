@@ -26,6 +26,8 @@ kcmutils_add_qml_kcm(kcm_mouse
         inputbackend.h
         inputdevice.cpp
         inputdevice.h
+        mousemoduledata.cpp
+        mousemoduledata.h
 )
 
 if (BUILD_KCM_MOUSE_X11)

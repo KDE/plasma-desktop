@@ -9,6 +9,7 @@
 #include "cursortheme.h"
 #include "inputbackend.h"
 #include "logging.h"
+#include "mousemoduledata.h"
 
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -23,7 +24,7 @@
 
 using namespace Qt::StringLiterals;
 
-K_PLUGIN_CLASS_WITH_JSON(KCMMouse, "kcm_mouse.json")
+K_PLUGIN_FACTORY_WITH_JSON(KCMMouseFactory, "kcm_mouse.json", registerPlugin<KCMMouse>(); registerPlugin<MouseModuleData>();)
 
 extern "C" {
 Q_DECL_EXPORT void kcminit()
