@@ -214,7 +214,7 @@ PlasmaExtras.Menu {
             menu.addMenuItem(menuItem, startNewInstanceItem);
 
             // Technically media controls and audio streams are separate but for the user they're
-            // semantically related, don't add a separator inbetween.
+            // semantically related, don't add a separator in between.
             if (!(menu.visualParent as Task).hasAudioStream) {
                 menu.addMenuItem(newSeparator(menu), startNewInstanceItem);
             }

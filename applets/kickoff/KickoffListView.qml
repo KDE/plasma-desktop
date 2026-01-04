@@ -153,7 +153,7 @@ EmptyPage {
         }
 
         // Without switch-on-hover, it's possible for the selected category and the hovered category to be adjacent.
-        // When this happens, their highlights tuoch and look ungly without some artificial spacing added.
+        // When this happens, their highlights touch and look ugly without some artificial spacing added.
         spacing: root.isSidebar && !Plasmoid.configuration.switchCategoryOnHover ? Kirigami.Units.smallSpacing : 0
 
         section {

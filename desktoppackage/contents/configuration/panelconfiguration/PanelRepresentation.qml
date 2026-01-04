@@ -41,7 +41,7 @@ Item {
     readonly property bool iconAndLabelsShouldlookSelected: checked || mouseArea.pressed
 
     // Layouts automatically mirror on RTL languages, and we use
-    // layouts to position the panel here. As a result, RTL langauges
+    // layouts to position the panel here. As a result, RTL languages
     // show the panel on the opposite side, which does not match
     // where the panel actually is. We instead disable layout
     // mirroring to avoid that.
