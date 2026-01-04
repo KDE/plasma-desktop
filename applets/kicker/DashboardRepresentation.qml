@@ -235,8 +235,9 @@ Kicker.DashboardWindow {
             }
 
             onFocusChanged: {
-                if (!focus)
+                if (!focus && runnerGrid?.firstGrid) {
                     runnerGrid.firstGrid.currentIndex = -1
+                }
             }
 
             Keys.forwardTo: runnerGrid.visible && runnerGrid.firstGrid ? [runnerGrid.firstGrid.view] : []
