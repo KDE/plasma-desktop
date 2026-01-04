@@ -761,7 +761,7 @@ Kicker.DashboardWindow {
                             baseModel: filterList.model
                             favoritesModel: baseModel.favoritesModel
 
-                            onClicked: applyFilter()
+                            onClicked: ListView.view.applyFilter()
 
                             onHoveredChanged: {
                                 if (hovered && !isSeparator) {
