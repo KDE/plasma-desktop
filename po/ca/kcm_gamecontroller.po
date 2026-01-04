@@ -1,15 +1,15 @@
 # Translation of kcm_gamecontroller.po to Catalan
-# Copyright (C) 2023-2025 This_file_is_part_of_KDE
+# Copyright (C) 2023-2026 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-03 00:44+0000\n"
-"PO-Revision-Date: 2025-11-08 14:59+0100\n"
+"PO-Revision-Date: 2026-01-03 09:06+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
@@ -318,7 +318,7 @@ msgstr "%1 (%2)"
 #, kde-format
 msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
 msgid "Allow using as pointer and keyboard"
-msgstr ""
+msgstr "Permet fer-lo servir com a punter i teclat"
 
 #: ui/main.qml:44
 #, kde-kuit-format
@@ -327,6 +327,9 @@ msgid ""
 "Allow game controllers to act like pointer and keyboard devices in Plasma "
 "and non-game applications.<nl/><nl/>Games can always use the controller."
 msgstr ""
+"Permet que els controladors de jocs actuïn com a dispositius de punter i "
+"teclat en aplicacions Plasma i no de joc.<nl/><nl/>Els jocs sempre poden "
+"utilitzar el controlador."
 
 #: ui/main.qml:52
 #, kde-format
@@ -347,6 +350,10 @@ msgid ""
 "controller, or enable automatic blocking by allowing the use as pointer and "
 "keyboard."
 msgstr ""
+"El sistema pot anar automàticament a dormir o bloquejar la pantalla mentre "
+"el controlador estigui en ús. Considereu bloquejar-los manualment mentre "
+"utilitzeu el controlador, o activeu el bloqueig automàtic permetent l'ús com "
+"a punter i teclat."
 
 #: ui/main.qml:98
 #, kde-format

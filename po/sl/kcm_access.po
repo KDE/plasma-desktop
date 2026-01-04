@@ -1,7 +1,7 @@
 # translation of kcmaccess.po to Slovenian
 # Translation of kcmaccess.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMACCESS.
-# $Id: kcm_access.po 1725757 2025-12-24 01:26:52Z scripty $
+# $Id: kcm_access.po 1726477 2026-01-04 01:27:11Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2005, 2006 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-23 00:43+0000\n"
+"POT-Creation-Date: 2026-01-04 00:46+0000\n"
 "PO-Revision-Date: 2025-12-23 07:27+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -300,8 +300,9 @@ msgstr "Omogoči bralnik zaslona"
 
 #. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
 #: kcmaccessibilityshakecursor.kcfg:9
-#, kde-format
-msgid "Whether Shake Cursor is enabled"
+#, fuzzy, kde-format
+#| msgid "Whether Shake Cursor is enabled"
+msgid "Whether Shake Pointer is enabled"
 msgstr "Ali je omogočeno tresenje kazalke"
 
 #. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
@@ -747,9 +748,11 @@ msgid "Invert"
 msgstr "Invertiraj"
 
 #: ui/main.qml:73
-#, kde-format
-msgctxt "Shake cursor to find it"
-msgid "Shake Cursor"
+#, fuzzy, kde-format
+#| msgctxt "Shake cursor to find it"
+#| msgid "Shake Cursor"
+msgctxt "Shake pointer to find it"
+msgid "Shake Pointer"
 msgstr "Zatresi kazalko"
 
 #: ui/ModifierKeys.qml:17
@@ -835,9 +838,11 @@ msgid "Configure Notifications…"
 msgstr "Konfiguriraj obvestila…"
 
 #: ui/MouseNavigation.qml:17
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Use number pad to move cursor:"
 msgctxt "@option:check"
-msgid "Use number pad to move cursor:"
+msgid "Use number pad to move pointer:"
 msgstr "Uporabi številsko tipkovnico za premikanje kazalke:"
 
 #: ui/MouseNavigation.qml:22
@@ -917,32 +922,42 @@ msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Zaženi konfiguracijo bralnika zaslona Orca…"
 
 #: ui/ShakeCursor.qml:15
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid "Shake cursor to find it:"
 msgctxt "@label"
-msgid "Shake cursor to find it:"
+msgid "Shake pointer to find it:"
 msgstr "Zatresi kazalko, da ga najdem:"
 
 #: ui/ShakeCursor.qml:16
-#, kde-format
-msgctxt "@option check, Enable shake cursor effect"
+#, fuzzy, kde-format
+#| msgctxt "Enable activation shortcuts"
+#| msgid "Enable"
+msgctxt "@option check, Enable shake pointer effect"
 msgid "Enable"
 msgstr "Omogoči"
 
 #: ui/ShakeCursor.qml:28
-#, kde-format
-msgctxt "@label Cursor magnification level"
+#, fuzzy, kde-format
+#| msgctxt "@label Cursor magnification level"
+#| msgid "Magnification:"
+msgctxt "@label Pointer magnification level"
 msgid "Magnification:"
 msgstr "Povečanje:"
 
 #: ui/ShakeCursor.qml:55
-#, kde-format
-msgctxt "@label Normal cursor size"
+#, fuzzy, kde-format
+#| msgctxt "@label Normal cursor size"
+#| msgid "Normal"
+msgctxt "@label Normal pointer size"
 msgid "Normal"
 msgstr "Normalno"
 
 #: ui/ShakeCursor.qml:62
-#, kde-format
-msgctxt "@label Large cursor size"
+#, fuzzy, kde-format
+#| msgctxt "@label Large cursor size"
+#| msgid "Large"
+msgctxt "@label Large pointer size"
 msgid "Large"
 msgstr "Veliko"
 
@@ -965,10 +980,12 @@ msgid "Show pixel grid at zoom level:"
 msgstr "Prikaži mrežo slikovnih pik pri ravni zooma:"
 
 #: ui/ZoomMagnifier.qml:85
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:spinbox"
+#| msgid "Pointer acceleration:"
 msgctxt "@label:listbox"
-msgid "Mouse pointer:"
-msgstr "Kazalec miške:"
+msgid "Pointer appearance:"
+msgstr "Pospeševanje kazalca:"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
@@ -989,9 +1006,11 @@ msgid "Hide"
 msgstr "Skrij"
 
 #: ui/ZoomMagnifier.qml:123
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:listbox"
+#| msgid "Mouse tracking:"
 msgctxt "@label:listbox"
-msgid "Mouse tracking:"
+msgid "Pointer tracking:"
 msgstr "Sledenje miške:"
 
 #: ui/ZoomMagnifier.qml:128
@@ -1001,9 +1020,11 @@ msgid "Proportional"
 msgstr "Proporcionalno"
 
 #: ui/ZoomMagnifier.qml:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Zoom area moves in sync with mouse cursor"
 msgctxt "@item:inlistbox"
-msgid "Zoom area moves in sync with mouse cursor"
+msgid "Zoom area moves in sync with pointer"
 msgstr "Območje povečave se premika usklajeno s kazalcem miške"
 
 #: ui/ZoomMagnifier.qml:133
@@ -1013,9 +1034,11 @@ msgid "Centered"
 msgstr "Sredinsko"
 
 #: ui/ZoomMagnifier.qml:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Mouse cursor stays centered on-screen, except near screen edges"
 msgctxt "@item:inlistbox"
-msgid "Mouse cursor stays centered on-screen, except near screen edges"
+msgid "Pointer stays centered on-screen, except near screen edges"
 msgstr "Kazalec miške ostane centriran na zaslonu, razen blizu robov zaslona"
 
 #: ui/ZoomMagnifier.qml:138
@@ -1025,9 +1048,11 @@ msgid "Centered (Strict)"
 msgstr "Sredinsko (Strogo)"
 
 #: ui/ZoomMagnifier.qml:139
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Mouse cursor stays centered on-screen, even near screen edges"
 msgctxt "@item:inlistbox"
-msgid "Mouse cursor stays centered on-screen, even near screen edges"
+msgid "Pointer stays centered on-screen, even near screen edges"
 msgstr "Kazalec miške ostane centriran na zaslonu, tudi blizu robov zaslona"
 
 #: ui/ZoomMagnifier.qml:143
@@ -1037,9 +1062,11 @@ msgid "Push"
 msgstr "Porini"
 
 #: ui/ZoomMagnifier.qml:144
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Mouse cursor pushes zoom area at screen edges"
 msgctxt "@item:inlistbox"
-msgid "Mouse cursor pushes zoom area at screen edges"
+msgid "Pointer pushes zoom area at screen edges"
 msgstr "Kazalec miške potisne območje povečave na robove zaslona"
 
 #: ui/ZoomMagnifier.qml:148
@@ -1049,9 +1076,11 @@ msgid "Disabled"
 msgstr "Onemogočeno"
 
 #: ui/ZoomMagnifier.qml:149
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Zoom area doesn't follow mouse cursor"
 msgctxt "@item:inlistbox"
-msgid "Zoom area doesn't follow mouse cursor"
+msgid "Zoom area doesn't follow pointer"
 msgstr "Območje povečave ne sledi kazalcu miške"
 
 #: ui/ZoomMagnifier.qml:166
@@ -1135,6 +1164,14 @@ msgstr "Premakni med pritiskom na spremenilne tipke za zoom"
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "Uporabi bližnjice za kontrolo zooma"
+
+#~ msgctxt "@option check, Enable shake cursor effect"
+#~ msgid "Enable"
+#~ msgstr "Omogoči"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Mouse pointer:"
+#~ msgstr "Kazalec miške:"
 
 #~ msgctxt "@label"
 #~ msgid "Color blindness correction:"

@@ -4,13 +4,13 @@
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2023.
 # SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 # SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
-# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-03 00:44+0000\n"
-"PO-Revision-Date: 2025-11-08 06:12-0300\n"
+"PO-Revision-Date: 2026-01-03 06:37-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
@@ -319,7 +319,7 @@ msgstr "%1 (%2)"
 #, kde-format
 msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
 msgid "Allow using as pointer and keyboard"
-msgstr ""
+msgstr "Permitir o uso como ponteiro e teclado"
 
 #: ui/main.qml:44
 #, kde-kuit-format
@@ -328,6 +328,9 @@ msgid ""
 "Allow game controllers to act like pointer and keyboard devices in Plasma "
 "and non-game applications.<nl/><nl/>Games can always use the controller."
 msgstr ""
+"Permitir que os controladores de jogos atuem como dispositivos de ponteiro e "
+"teclado no Plasma e em aplicativos que não sejam jogos.<nl/><nl/>Os jogos "
+"sempre podem usar o controlador."
 
 #: ui/main.qml:52
 #, kde-format
@@ -348,6 +351,10 @@ msgid ""
 "controller, or enable automatic blocking by allowing the use as pointer and "
 "keyboard."
 msgstr ""
+"O sistema pode entrar em modo de suspensão ou bloquear a tela "
+"automaticamente enquanto o controlador estiver em uso. Considere bloqueá-lo "
+"manualmente ao usar o controlador ou habilite o bloqueio automático "
+"permitindo seu uso como ponteiro e teclado."
 
 #: ui/main.qml:98
 #, kde-format

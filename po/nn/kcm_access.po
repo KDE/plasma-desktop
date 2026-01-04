@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-23 00:43+0000\n"
+"POT-Creation-Date: 2026-01-04 00:46+0000\n"
 "PO-Revision-Date: 2024-07-06 14:48+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -297,8 +297,9 @@ msgstr "Bruk skjermlesar"
 
 #. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
 #: kcmaccessibilityshakecursor.kcfg:9
-#, kde-format
-msgid "Whether Shake Cursor is enabled"
+#, fuzzy, kde-format
+#| msgid "Whether Shake Cursor is enabled"
+msgid "Whether Shake Pointer is enabled"
 msgstr "Om risting av peikaren skal brukast."
 
 #. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
@@ -732,9 +733,11 @@ msgid "Invert"
 msgstr ""
 
 #: ui/main.qml:73
-#, kde-format
-msgctxt "Shake cursor to find it"
-msgid "Shake Cursor"
+#, fuzzy, kde-format
+#| msgctxt "Shake cursor to find it"
+#| msgid "Shake Cursor"
+msgctxt "Shake pointer to find it"
+msgid "Shake Pointer"
 msgstr "Rist på peikaren"
 
 #: ui/ModifierKeys.qml:17
@@ -815,7 +818,7 @@ msgstr "Set opp varslingar …"
 #: ui/MouseNavigation.qml:17
 #, fuzzy, kde-format
 msgctxt "@option:check"
-msgid "Use number pad to move cursor:"
+msgid "Use number pad to move pointer:"
 msgstr "Bruk taltastaturet til å flytta peikaren:"
 
 #: ui/MouseNavigation.qml:22
@@ -890,32 +893,40 @@ msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Set opp skjermlesaren Orca …"
 
 #: ui/ShakeCursor.qml:15
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid "Shake cursor to find it:"
 msgctxt "@label"
-msgid "Shake cursor to find it:"
+msgid "Shake pointer to find it:"
 msgstr "Rist på peikaren for å finna han:"
 
 #: ui/ShakeCursor.qml:16
-#, kde-format
-msgctxt "@option check, Enable shake cursor effect"
+#, fuzzy, kde-format
+msgctxt "@option check, Enable shake pointer effect"
 msgid "Enable"
 msgstr "Slå på"
 
 #: ui/ShakeCursor.qml:28
-#, kde-format
-msgctxt "@label Cursor magnification level"
+#, fuzzy, kde-format
+#| msgctxt "@label Cursor magnification level"
+#| msgid "Magnification:"
+msgctxt "@label Pointer magnification level"
 msgid "Magnification:"
 msgstr "Forstørring:"
 
 #: ui/ShakeCursor.qml:55
-#, kde-format
-msgctxt "@label Normal cursor size"
+#, fuzzy, kde-format
+#| msgctxt "@label Normal cursor size"
+#| msgid "Normal"
+msgctxt "@label Normal pointer size"
 msgid "Normal"
 msgstr "Vanleg"
 
 #: ui/ShakeCursor.qml:62
-#, kde-format
-msgctxt "@label Large cursor size"
+#, fuzzy, kde-format
+#| msgctxt "@label Large cursor size"
+#| msgid "Large"
+msgctxt "@label Large pointer size"
 msgid "Large"
 msgstr "Stor"
 
@@ -938,10 +949,10 @@ msgid "Show pixel grid at zoom level:"
 msgstr ""
 
 #: ui/ZoomMagnifier.qml:85
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@label:listbox"
-msgid "Mouse pointer:"
-msgstr ""
+msgid "Pointer appearance:"
+msgstr "Peikarakselerasjon:"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
@@ -962,10 +973,10 @@ msgid "Hide"
 msgstr ""
 
 #: ui/ZoomMagnifier.qml:123
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@label:listbox"
-msgid "Mouse tracking:"
-msgstr ""
+msgid "Pointer tracking:"
+msgstr "Peikarakselerasjon:"
 
 #: ui/ZoomMagnifier.qml:128
 #, kde-format
@@ -976,7 +987,7 @@ msgstr ""
 #: ui/ZoomMagnifier.qml:129
 #, kde-format
 msgctxt "@item:inlistbox"
-msgid "Zoom area moves in sync with mouse cursor"
+msgid "Zoom area moves in sync with pointer"
 msgstr ""
 
 #: ui/ZoomMagnifier.qml:133
@@ -988,7 +999,7 @@ msgstr ""
 #: ui/ZoomMagnifier.qml:134
 #, kde-format
 msgctxt "@item:inlistbox"
-msgid "Mouse cursor stays centered on-screen, except near screen edges"
+msgid "Pointer stays centered on-screen, except near screen edges"
 msgstr ""
 
 #: ui/ZoomMagnifier.qml:138
@@ -1000,7 +1011,7 @@ msgstr ""
 #: ui/ZoomMagnifier.qml:139
 #, kde-format
 msgctxt "@item:inlistbox"
-msgid "Mouse cursor stays centered on-screen, even near screen edges"
+msgid "Pointer stays centered on-screen, even near screen edges"
 msgstr ""
 
 #: ui/ZoomMagnifier.qml:143
@@ -1012,7 +1023,7 @@ msgstr ""
 #: ui/ZoomMagnifier.qml:144
 #, kde-format
 msgctxt "@item:inlistbox"
-msgid "Mouse cursor pushes zoom area at screen edges"
+msgid "Pointer pushes zoom area at screen edges"
 msgstr ""
 
 #: ui/ZoomMagnifier.qml:148
@@ -1024,7 +1035,7 @@ msgstr ""
 #: ui/ZoomMagnifier.qml:149
 #, kde-format
 msgctxt "@item:inlistbox"
-msgid "Zoom area doesn't follow mouse cursor"
+msgid "Zoom area doesn't follow pointer"
 msgstr ""
 
 #: ui/ZoomMagnifier.qml:166
@@ -1109,3 +1120,7 @@ msgstr "Ring systembjølla når valtastar vert brukte"
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "Bruk tastaturet til å styra musepeikaren"
+
+#~ msgctxt "@option check, Enable shake cursor effect"
+#~ msgid "Enable"
+#~ msgstr "Slå på"

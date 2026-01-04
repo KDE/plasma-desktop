@@ -1,15 +1,15 @@
 # Spanish translations for kcm_gamecontroller.po package.
-# Copyright (C) 2023-2025 This file is copyright:
+# Copyright (C) 2023-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 # Automatically generated, 2023.
 #
-# SPDX-FileCopyrightText: 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_gamecontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-03 00:44+0000\n"
-"PO-Revision-Date: 2025-11-10 02:30+0100\n"
+"PO-Revision-Date: 2026-01-03 16:52+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
@@ -318,7 +318,7 @@ msgstr "%1 (%2)"
 #, kde-format
 msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
 msgid "Allow using as pointer and keyboard"
-msgstr ""
+msgstr "Permitir su uso como puntero y teclado"
 
 #: ui/main.qml:44
 #, kde-kuit-format
@@ -327,6 +327,9 @@ msgid ""
 "Allow game controllers to act like pointer and keyboard devices in Plasma "
 "and non-game applications.<nl/><nl/>Games can always use the controller."
 msgstr ""
+"Permitir que los mandos de juego actúen como dispositivos de puntero y de "
+"teclado en Plasma y en aplicaciones que no sean juegos.<nl/><nl/>Los juegos "
+"siempre pueden usar el mando."
 
 #: ui/main.qml:52
 #, kde-format
@@ -347,6 +350,10 @@ msgid ""
 "controller, or enable automatic blocking by allowing the use as pointer and "
 "keyboard."
 msgstr ""
+"El sistema puede entrar en reposo o bloquear la pantalla automáticamente "
+"cuando el mando esté en uso. Considere bloquearlos de forma manual cuando "
+"use el mando, o active el bloqueo automático permitiendo su uso como puntero "
+"y teclado."
 
 #: ui/main.qml:98
 #, kde-format

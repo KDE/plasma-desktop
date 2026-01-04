@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmai.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmai.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-03 00:44+0000\n"
-"PO-Revision-Date: 2025-11-22 21:24+0100\n"
+"PO-Revision-Date: 2026-01-03 13:39+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -317,7 +317,7 @@ msgstr "%1 (%2)"
 #, kde-format
 msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
 msgid "Allow using as pointer and keyboard"
-msgstr ""
+msgstr "Pozwól używać jako myszy i klawiatury"
 
 #: ui/main.qml:44
 #, kde-kuit-format
@@ -326,6 +326,9 @@ msgid ""
 "Allow game controllers to act like pointer and keyboard devices in Plasma "
 "and non-game applications.<nl/><nl/>Games can always use the controller."
 msgstr ""
+"Zezwól kontrolerom gier na działanie jako urządzenia myszy i klawiatury w "
+"Plazmie i aplikacjach nie będących grami.<nl/><nl/>Gry zawsze będą mogły "
+"używać kontrolera."
 
 #: ui/main.qml:52
 #, kde-format
@@ -346,6 +349,9 @@ msgid ""
 "controller, or enable automatic blocking by allowing the use as pointer and "
 "keyboard."
 msgstr ""
+"System może sam się uśpić lub zablokować ekran, gdy używany jest kontroler. "
+"Rozważ ich ręczne blokowanie, gdy używasz kontrolera lub włącz samoczynne "
+"blokowanie poprzez zezwolenie na używanie go jako myszy i klawiatury."
 
 #: ui/main.qml:98
 #, kde-format
