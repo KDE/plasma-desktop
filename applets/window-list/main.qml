@@ -126,7 +126,7 @@ PlasmoidItem {
             Layout.fillHeight: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
             Layout.fillWidth: Plasmoid.formFactor === PlasmaCore.Types.Vertical
 
-            onClicked: tasksMenu.open()
+            onClicked: tasksMenu.openRelative()
             down: pressed || tasksMenu.status === PlasmaExtras.Menu.Open
 
             Accessible.name: Plasmoid.title
@@ -147,6 +147,7 @@ PlasmoidItem {
 
             PlasmaExtras.ModelContextMenu {
                 id: tasksMenu
+                visualParent: menuButton
 
                 placement: {
                    if (Plasmoid.location === PlasmaCore.Types.LeftEdge) {
@@ -182,7 +183,7 @@ PlasmoidItem {
                 repeat: false
                 onTriggered: {
                     if (tasksMenu?.status === PlasmaExtras.Menu.Closed) {
-                        tasksMenu.open()
+                        tasksMenu.openRelative()
                     }
                 }
             }
