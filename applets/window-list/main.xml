@@ -38,6 +38,10 @@
       <label>Delay in milliseconds before opening the window list popup when hovering over the applet</label>
       <default>300</default>
     </entry>
+    <entry name="sortingStrategy" type="Int">
+      <label>Values from TaskManager::TasksModel::SortMode</label>
+      <default>3</default>
+    </entry>
   </group>
 
 </kcfg>

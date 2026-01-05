@@ -13,6 +13,7 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
+import org.kde.kitemmodels as KItemModels
 
 import org.kde.taskmanager as TaskManager
 
@@ -41,13 +42,34 @@ PlasmoidItem {
         screenGeometry: Plasmoid.containment.screenGeometry
         activity: activityInfo.currentActivity
 
-        sortMode: TaskManager.TasksModel.SortVirtualDesktop
+        sortMode: sortModeEnumValue(Plasmoid.configuration.sortingStrategy)
         groupMode: TaskManager.TasksModel.GroupDisabled
 
         filterByVirtualDesktop: Plasmoid.configuration.showOnlyCurrentDesktop
         filterByScreen: Plasmoid.configuration.showOnlyCurrentScreen
         filterByActivity: Plasmoid.configuration.showOnlyCurrentActivity
         filterNotMinimized: Plasmoid.configuration.showOnlyMinimized
+
+        function sortModeEnumValue(index: int): /*TaskManager.TasksModel.SortMode*/ int {
+            switch (index) {
+            case 0:
+                return TaskManager.TasksModel.SortDisabled;
+            case 1: // Unused
+                return TaskManager.TasksModel.SortManual; 
+            case 2:
+                return TaskManager.TasksModel.SortAlpha;
+            case 3:
+                return TaskManager.TasksModel.SortVirtualDesktop;
+            case 4:
+                return TaskManager.TasksModel.SortActivity;
+            case 5:
+                return TaskManager.TasksModel.SortLastActivated;
+            case 6:
+                return TaskManager.TasksModel.SortWindowPositionHorizontal;
+            default:
+                return TaskManager.TasksModel.SortDisabled;
+            }
+        }
     }
 
     Component {
@@ -101,6 +123,38 @@ PlasmoidItem {
 
             Keys.onBacktabPressed: {
                 decrementCurrentIndex();
+            }
+
+            section {
+                property: switch (Plasmoid.configuration.sortingStrategy) {
+                    case 3:
+                        return "VirtualDesktops"; // AbstractTasksModel::AdditionalRoles::VirtualDesktops
+                    case 4:
+                        return "Activities";  // AbstractTasksModel::AdditionalRoles::Activities
+                    default:
+                        return "";
+                }
+                delegate: Kirigami.ListSectionHeader {
+                    required property var section
+                    width: windowListView.width
+                    text: {
+                        switch (Plasmoid.configuration.sortingStrategy) {
+                        case 3:
+                            if (section) {
+                                const idx = virtualDesktopInfo.desktopIds.indexOf(section);
+                                return idx !== -1 ? virtualDesktopInfo.desktopNames[idx] : i18n("Desktop %1", section);
+                            }
+                            break;
+                        case 4:
+                            if (section && section !== activityInfo.nullUuid) {
+                                const activityName = activityInfo.activityName(section);
+                                return activityName || section;
+                            }
+                            break;
+                        }
+                        return "";
+                    }
+                }
             }
 
             delegate: PlasmaComponents.ItemDelegate {
