@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2023, 2024, 2025 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-03 00:44+0000\n"
-"PO-Revision-Date: 2025-11-08 11:16+0100\n"
+"PO-Revision-Date: 2026-01-04 14:27+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
@@ -316,7 +316,7 @@ msgstr "%1 (%2)"
 #, kde-format
 msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
 msgid "Allow using as pointer and keyboard"
-msgstr ""
+msgstr "Toestaan gebruik als aanwijzer en toetsenbord"
 
 #: ui/main.qml:44
 #, kde-kuit-format
@@ -325,6 +325,9 @@ msgid ""
 "Allow game controllers to act like pointer and keyboard devices in Plasma "
 "and non-game applications.<nl/><nl/>Games can always use the controller."
 msgstr ""
+"Sta spelcontrollers toe te werken als aanwijzers en toetsenbordapparaten in "
+"Plasma en niet-spel toepassingen.<nl/><nl/>Spellen kunnen altijd de "
+"controller gebruiken."
 
 #: ui/main.qml:52
 #, kde-format
@@ -345,6 +348,10 @@ msgid ""
 "controller, or enable automatic blocking by allowing the use as pointer and "
 "keyboard."
 msgstr ""
+"Het systeem kan automatisch in de slaapstand gaan of het scherm vergrendelen "
+"terwijl de controller in gebruik is. Overweeg om deze functies handmatig te "
+"blokkeren tijdens het gebruik van de controller of schakel automatische "
+"blokkering in door het gebruik als aanwijzer en toetsenbord toe te staan."
 
 #: ui/main.qml:98
 #, kde-format

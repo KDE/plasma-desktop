@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-19 00:45+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2024-12-25 19:45+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -19,18 +19,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: package/contents/config/config.qml:16
+#: package/contents/config/config.qml:17
 #, kde-format
 msgid "Location"
 msgstr "स्थानीय"
 
-#: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:358
+#: package/contents/config/config.qml:24
+#: package/contents/ui/FolderViewLayer.qml:357
 #, kde-format
 msgid "Icons"
 msgstr "चिह्नानि"
 
-#: package/contents/config/config.qml:30
+#: package/contents/config/config.qml:31
 #, kde-format
 msgid "Filter"
 msgstr "फ़िल्टर"
@@ -100,52 +100,52 @@ msgstr "सर्वाणि अचयनं कुर्वन्तु"
 msgid "Switch Sort Order"
 msgstr "क्रमबद्धक्रमं परिवर्तयन्तु"
 
-#: package/contents/ui/ConfigIcons.qml:59
+#: package/contents/ui/ConfigIcons.qml:57
 #, kde-format
 msgid "Panel button:"
 msgstr "फलकबटनम् :"
 
-#: package/contents/ui/ConfigIcons.qml:65
+#: package/contents/ui/ConfigIcons.qml:63
 #, kde-format
 msgid "Use a custom icon"
 msgstr "कस्टम् चिह्नस्य उपयोगं कुर्वन्तु"
 
-#: package/contents/ui/ConfigIcons.qml:98
+#: package/contents/ui/ConfigIcons.qml:96
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "चिनोतु…"
 
-#: package/contents/ui/ConfigIcons.qml:104
+#: package/contents/ui/ConfigIcons.qml:102
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "स्पष्टं चिह्नम्"
 
-#: package/contents/ui/ConfigIcons.qml:124
+#: package/contents/ui/ConfigIcons.qml:122
 #, kde-format
 msgid "Arrangement:"
 msgstr "व्यवस्थाम्:"
 
-#: package/contents/ui/ConfigIcons.qml:127
+#: package/contents/ui/ConfigIcons.qml:125
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Columns"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:128
+#: package/contents/ui/ConfigIcons.qml:126
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Rows"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:137
+#: package/contents/ui/ConfigIcons.qml:135
 #, fuzzy, kde-format
 #| msgid "Sorting:"
 msgid "Sort Alignment:"
 msgstr "क्रमाङ्कनम् :"
 
-#: package/contents/ui/ConfigIcons.qml:140
+#: package/contents/ui/ConfigIcons.qml:138
 #, fuzzy, kde-format
 #| msgctxt "@item:inlistbox arrangement of icons"
 #| msgid "Left to Right"
@@ -153,7 +153,7 @@ msgctxt "@item:inlistbox alignment of icons"
 msgid "Left-to-Right"
 msgstr "वामतः दक्षिणतः"
 
-#: package/contents/ui/ConfigIcons.qml:141
+#: package/contents/ui/ConfigIcons.qml:139
 #, fuzzy, kde-format
 #| msgctxt "@item:inlistbox arrangement of icons"
 #| msgid "Right to Left"
@@ -161,163 +161,163 @@ msgctxt "@item:inlistbox alignment of icons"
 msgid "Right-to-Left"
 msgstr "दक्षिणतः वामतः"
 
-#: package/contents/ui/ConfigIcons.qml:163
+#: package/contents/ui/ConfigIcons.qml:161
 #, kde-format
 msgid "Lock in place"
 msgstr "स्थाने तालान् स्थापयतु"
 
-#: package/contents/ui/ConfigIcons.qml:177
+#: package/contents/ui/ConfigIcons.qml:175
 #, fuzzy, kde-format
 #| msgid "Sort By"
 msgid "Sort by:"
 msgstr "Sort By"
 
-#: package/contents/ui/ConfigIcons.qml:185
+#: package/contents/ui/ConfigIcons.qml:183
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr "शास्त्र"
 
-#: package/contents/ui/ConfigIcons.qml:186
+#: package/contents/ui/ConfigIcons.qml:184
 #, kde-format
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "नामः"
 
-#: package/contents/ui/ConfigIcons.qml:187
+#: package/contents/ui/ConfigIcons.qml:185
 #, kde-format
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "आकृति"
 
-#: package/contents/ui/ConfigIcons.qml:188
+#: package/contents/ui/ConfigIcons.qml:186
 #, kde-format
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "प्रकारः"
 
-#: package/contents/ui/ConfigIcons.qml:189
+#: package/contents/ui/ConfigIcons.qml:187
 #, kde-format
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "दिनाङ्कः"
 
-#: package/contents/ui/ConfigIcons.qml:200
+#: package/contents/ui/ConfigIcons.qml:198
 #, kde-format
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr "अवतरन्"
 
-#: package/contents/ui/ConfigIcons.qml:208
+#: package/contents/ui/ConfigIcons.qml:206
 #, kde-format
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "प्रथमं पुटम्"
 
-#: package/contents/ui/ConfigIcons.qml:222
+#: package/contents/ui/ConfigIcons.qml:220
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr "दृश्यविधिः :"
 
-#: package/contents/ui/ConfigIcons.qml:224
+#: package/contents/ui/ConfigIcons.qml:222
 #, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr "सूची"
 
-#: package/contents/ui/ConfigIcons.qml:225
+#: package/contents/ui/ConfigIcons.qml:223
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
 msgstr "गृध्र"
 
-#: package/contents/ui/ConfigIcons.qml:236
+#: package/contents/ui/ConfigIcons.qml:234
 #, kde-format
 msgid "Icon size:"
 msgstr "चिह्नस्य आकारः :"
 
-#: package/contents/ui/ConfigIcons.qml:251
+#: package/contents/ui/ConfigIcons.qml:249
 #, kde-format
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "लघु"
 
-#: package/contents/ui/ConfigIcons.qml:260
+#: package/contents/ui/ConfigIcons.qml:258
 #, kde-format
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "बृहत्‌"
 
-#: package/contents/ui/ConfigIcons.qml:269
+#: package/contents/ui/ConfigIcons.qml:267
 #, kde-format
 msgid "Label width:"
 msgstr "लेबलस्य विस्तारः :"
 
-#: package/contents/ui/ConfigIcons.qml:272
+#: package/contents/ui/ConfigIcons.qml:270
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr "सङ्कीर्णः"
 
-#: package/contents/ui/ConfigIcons.qml:273
+#: package/contents/ui/ConfigIcons.qml:271
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr "मध्यम"
 
-#: package/contents/ui/ConfigIcons.qml:274
+#: package/contents/ui/ConfigIcons.qml:272
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr "विस्तृतः"
 
-#: package/contents/ui/ConfigIcons.qml:282
+#: package/contents/ui/ConfigIcons.qml:280
 #, kde-format
 msgid "Text lines:"
 msgstr "पाठपङ्क्तयः :"
 
-#: package/contents/ui/ConfigIcons.qml:298
+#: package/contents/ui/ConfigIcons.qml:296
 #, kde-format
 msgid "When hovering over icons:"
 msgstr "चिह्नानां उपरि भ्रमन् :"
 
-#: package/contents/ui/ConfigIcons.qml:300
+#: package/contents/ui/ConfigIcons.qml:298
 #, kde-format
 msgid "Show tooltips"
 msgstr "टूलटिप्स दर्शयतु"
 
-#: package/contents/ui/ConfigIcons.qml:307
+#: package/contents/ui/ConfigIcons.qml:305
 #, kde-format
 msgid "Show selection markers"
 msgstr "चयनचिह्नानि दर्शयतु"
 
-#: package/contents/ui/ConfigIcons.qml:314
+#: package/contents/ui/ConfigIcons.qml:312
 #, kde-format
 msgid "Show folder preview popups"
 msgstr "समुच्चय पूर्वावलोकन पॉपअप्स् दर्शयतु"
 
-#: package/contents/ui/ConfigIcons.qml:324
+#: package/contents/ui/ConfigIcons.qml:322
 #, kde-format
 msgid "Rename:"
 msgstr "पुनर्नामकरणम् :"
 
-#: package/contents/ui/ConfigIcons.qml:328
+#: package/contents/ui/ConfigIcons.qml:326
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
 msgstr "चयनितस्य द्रव्यस्य पाठं क्लिक् कृत्वा inline इति नामकरणं कुर्वन्तु"
 
-#: package/contents/ui/ConfigIcons.qml:339
+#: package/contents/ui/ConfigIcons.qml:337
 #, kde-format
 msgid "Previews:"
 msgstr "पूर्वावलोकनम् :"
 
-#: package/contents/ui/ConfigIcons.qml:341
+#: package/contents/ui/ConfigIcons.qml:339
 #, kde-format
 msgid "Show preview thumbnails"
 msgstr "पूर्वावलोकनलघुचित्रं दर्शयतु"
 
-#: package/contents/ui/ConfigIcons.qml:349
+#: package/contents/ui/ConfigIcons.qml:347
 #, kde-format
 msgid "Configure Preview Plugins…"
 msgstr "पूर्वावलोकनप्लगिन् विन्यस्तं कुर्वन्तु..."
@@ -406,32 +406,32 @@ msgctxt "@info:placeholder custom window title"
 msgid "Enter title…"
 msgstr "कस्टम् शीर्षकं प्रविष्टं कुर्वन्तु..."
 
-#: package/contents/ui/ConfigOverlay.qml:98
+#: package/contents/ui/ConfigOverlay.qml:97
 #, kde-format
 msgid "Click and drag to rotate"
 msgstr "भ्रमणार्थं क्लिक् कृत्वा कर्षयन्तु"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:183
 #, kde-format
 msgid "Hide Background"
 msgstr "पृष्ठभूमिं गोपयतु"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:183
 #, kde-format
 msgid "Show Background"
 msgstr "पृष्ठभूमिं दर्शयतु"
 
-#: package/contents/ui/ConfigOverlay.qml:232
+#: package/contents/ui/ConfigOverlay.qml:231
 #, kde-format
 msgid "Remove"
 msgstr "अपाकरोति"
 
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:19
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:18
 #, kde-format
 msgid "Preview Plugins"
 msgstr "पूर्वावलोकन प्लगिन्स्"
 
-#: package/contents/ui/FolderView.qml:1238
+#: package/contents/ui/FolderView.qml:1237
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -441,7 +441,7 @@ msgstr ""
 "डेस्कटॉप् मध्ये बहु सञ्चिकाः, पुटकानि च सन्ति । एतेन दोषाः, कार्यक्षमतायाः समस्याः च "
 "उत्पद्यन्ते । तेषु केचन अन्यत्र स्थानान्तरयितुं विचारयन्तु।"
 
-#: package/contents/ui/FolderViewDialog.qml:90
+#: package/contents/ui/FolderViewDialog.qml:91
 #, fuzzy, kde-format
 #| msgctxt "@option:check sort icons with folders first"
 #| msgid "Folders first"
@@ -449,7 +449,7 @@ msgctxt "@info:placeholder"
 msgid "Folder is empty"
 msgstr "प्रथमं पुटम्"
 
-#: package/contents/ui/main.qml:424
+#: package/contents/ui/main.qml:439
 #, kde-format
 msgid "Desktop and Wallpaper"
 msgstr "डेस्कटॉप तथा वॉलपेपर"
@@ -464,7 +464,7 @@ msgstr "Folder इति चिनोतु"
 msgid "&Refresh Desktop"
 msgstr "&डेस्कटॉप ताजगीं कुर्वन्तु"
 
-#: plugins/folder/foldermodel.cpp:505 plugins/folder/foldermodel.cpp:1740
+#: plugins/folder/foldermodel.cpp:505 plugins/folder/foldermodel.cpp:1742
 #, kde-format
 msgid "&Refresh View"
 msgstr "&ताजगी दृश्य"
@@ -485,23 +485,23 @@ msgid ""
 "not be found. It may have been moved or deleted."
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1749
+#: plugins/folder/foldermodel.cpp:1751
 #, kde-format
 msgid "&Empty Trash"
 msgstr "&रिक्त कचरा"
 
-#: plugins/folder/foldermodel.cpp:1752
+#: plugins/folder/foldermodel.cpp:1754
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1755
+#: plugins/folder/foldermodel.cpp:1757
 #, kde-format
 msgid "&Open"
 msgstr "&उद्घाटित"
 
-#: plugins/folder/foldermodel.cpp:1759
+#: plugins/folder/foldermodel.cpp:1761
 #, fuzzy, kde-format
 #| msgid "Show all"
 msgctxt ""
@@ -510,24 +510,24 @@ msgctxt ""
 msgid "Show Target"
 msgstr "सर्वान् दर्शयतु"
 
-#: plugins/folder/foldermodel.cpp:1860
+#: plugins/folder/foldermodel.cpp:1862
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1863
+#: plugins/folder/foldermodel.cpp:1865
 #, fuzzy, kde-format
 #| msgid "&Empty Trash"
 msgid "&Move to Trash"
 msgstr "&रिक्त कचरा"
 
-#: plugins/folder/foldermodel.cpp:1896
+#: plugins/folder/foldermodel.cpp:1898
 #, kde-format
 msgid "&Paste"
 msgstr "&पेस्ट"
 
-#: plugins/folder/foldermodel.cpp:2047
+#: plugins/folder/foldermodel.cpp:2049
 #, kde-format
 msgid "&Properties"
 msgstr "&गुणाः"

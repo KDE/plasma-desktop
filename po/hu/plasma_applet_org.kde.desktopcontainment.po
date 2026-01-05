@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-19 00:45+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2025-11-10 22:30+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -21,18 +21,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.08.2\n"
 
-#: package/contents/config/config.qml:16
+#: package/contents/config/config.qml:17
 #, kde-format
 msgid "Location"
 msgstr "Hely"
 
-#: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:358
+#: package/contents/config/config.qml:24
+#: package/contents/ui/FolderViewLayer.qml:357
 #, kde-format
 msgid "Icons"
 msgstr "Ikonok"
 
-#: package/contents/config/config.qml:30
+#: package/contents/config/config.qml:31
 #, kde-format
 msgid "Filter"
 msgstr "Szűrő"
@@ -102,218 +102,218 @@ msgstr "A kijelölés megszüntetése"
 msgid "Switch Sort Order"
 msgstr "Rendezési sorrend megfordítása"
 
-#: package/contents/ui/ConfigIcons.qml:59
+#: package/contents/ui/ConfigIcons.qml:57
 #, kde-format
 msgid "Panel button:"
 msgstr "Panelgomb:"
 
-#: package/contents/ui/ConfigIcons.qml:65
+#: package/contents/ui/ConfigIcons.qml:63
 #, kde-format
 msgid "Use a custom icon"
 msgstr "Egyedi ikon használata"
 
-#: package/contents/ui/ConfigIcons.qml:98
+#: package/contents/ui/ConfigIcons.qml:96
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Kiválasztás…"
 
-#: package/contents/ui/ConfigIcons.qml:104
+#: package/contents/ui/ConfigIcons.qml:102
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Ikon visszaállítása"
 
-#: package/contents/ui/ConfigIcons.qml:124
+#: package/contents/ui/ConfigIcons.qml:122
 #, kde-format
 msgid "Arrangement:"
 msgstr "Elrendezés:"
 
-#: package/contents/ui/ConfigIcons.qml:127
+#: package/contents/ui/ConfigIcons.qml:125
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Columns"
 msgstr "Oszlopokban"
 
-#: package/contents/ui/ConfigIcons.qml:128
+#: package/contents/ui/ConfigIcons.qml:126
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Rows"
 msgstr "Sorokban"
 
-#: package/contents/ui/ConfigIcons.qml:137
+#: package/contents/ui/ConfigIcons.qml:135
 #, kde-format
 msgid "Sort Alignment:"
 msgstr "Rendezés igazítása:"
 
-#: package/contents/ui/ConfigIcons.qml:140
+#: package/contents/ui/ConfigIcons.qml:138
 #, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Left-to-Right"
 msgstr "Balról jobbra"
 
-#: package/contents/ui/ConfigIcons.qml:141
+#: package/contents/ui/ConfigIcons.qml:139
 #, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Right-to-Left"
 msgstr "Jobbról balra"
 
-#: package/contents/ui/ConfigIcons.qml:163
+#: package/contents/ui/ConfigIcons.qml:161
 #, kde-format
 msgid "Lock in place"
 msgstr "Rögzítés"
 
-#: package/contents/ui/ConfigIcons.qml:177
+#: package/contents/ui/ConfigIcons.qml:175
 #, kde-format
 msgid "Sort by:"
 msgstr "Rendezés:"
 
-#: package/contents/ui/ConfigIcons.qml:185
+#: package/contents/ui/ConfigIcons.qml:183
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr "Kézi"
 
-#: package/contents/ui/ConfigIcons.qml:186
+#: package/contents/ui/ConfigIcons.qml:184
 #, kde-format
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "Név"
 
-#: package/contents/ui/ConfigIcons.qml:187
+#: package/contents/ui/ConfigIcons.qml:185
 #, kde-format
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "Méret"
 
-#: package/contents/ui/ConfigIcons.qml:188
+#: package/contents/ui/ConfigIcons.qml:186
 #, kde-format
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "Típus"
 
-#: package/contents/ui/ConfigIcons.qml:189
+#: package/contents/ui/ConfigIcons.qml:187
 #, kde-format
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "Dátum"
 
-#: package/contents/ui/ConfigIcons.qml:200
+#: package/contents/ui/ConfigIcons.qml:198
 #, kde-format
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr "Csökkenő"
 
-#: package/contents/ui/ConfigIcons.qml:208
+#: package/contents/ui/ConfigIcons.qml:206
 #, kde-format
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "Mappák előre"
 
-#: package/contents/ui/ConfigIcons.qml:222
+#: package/contents/ui/ConfigIcons.qml:220
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr "Nézetmód:"
 
-#: package/contents/ui/ConfigIcons.qml:224
+#: package/contents/ui/ConfigIcons.qml:222
 #, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr "Lista"
 
-#: package/contents/ui/ConfigIcons.qml:225
+#: package/contents/ui/ConfigIcons.qml:223
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
 msgstr "Rács"
 
-#: package/contents/ui/ConfigIcons.qml:236
+#: package/contents/ui/ConfigIcons.qml:234
 #, kde-format
 msgid "Icon size:"
 msgstr "Ikonméret:"
 
-#: package/contents/ui/ConfigIcons.qml:251
+#: package/contents/ui/ConfigIcons.qml:249
 #, kde-format
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "Kicsi"
 
-#: package/contents/ui/ConfigIcons.qml:260
+#: package/contents/ui/ConfigIcons.qml:258
 #, kde-format
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "Nagy"
 
-#: package/contents/ui/ConfigIcons.qml:269
+#: package/contents/ui/ConfigIcons.qml:267
 #, kde-format
 msgid "Label width:"
 msgstr "Címkeszélesség:"
 
-#: package/contents/ui/ConfigIcons.qml:272
+#: package/contents/ui/ConfigIcons.qml:270
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr "Keskeny"
 
-#: package/contents/ui/ConfigIcons.qml:273
+#: package/contents/ui/ConfigIcons.qml:271
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr "Közepes"
 
-#: package/contents/ui/ConfigIcons.qml:274
+#: package/contents/ui/ConfigIcons.qml:272
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr "Széles"
 
-#: package/contents/ui/ConfigIcons.qml:282
+#: package/contents/ui/ConfigIcons.qml:280
 #, kde-format
 msgid "Text lines:"
 msgstr "Szövegsorok:"
 
-#: package/contents/ui/ConfigIcons.qml:298
+#: package/contents/ui/ConfigIcons.qml:296
 #, kde-format
 msgid "When hovering over icons:"
 msgstr "Ikonokra rámutatáskor:"
 
-#: package/contents/ui/ConfigIcons.qml:300
+#: package/contents/ui/ConfigIcons.qml:298
 #, kde-format
 msgid "Show tooltips"
 msgstr "Tippek megjelenítése"
 
-#: package/contents/ui/ConfigIcons.qml:307
+#: package/contents/ui/ConfigIcons.qml:305
 #, kde-format
 msgid "Show selection markers"
 msgstr "Kijelölésjelzők megjelenítése"
 
-#: package/contents/ui/ConfigIcons.qml:314
+#: package/contents/ui/ConfigIcons.qml:312
 #, kde-format
 msgid "Show folder preview popups"
 msgstr "Mappaelőnézeti felugrók megjelenítése"
 
-#: package/contents/ui/ConfigIcons.qml:324
+#: package/contents/ui/ConfigIcons.qml:322
 #, kde-format
 msgid "Rename:"
 msgstr "Átnevezés:"
 
-#: package/contents/ui/ConfigIcons.qml:328
+#: package/contents/ui/ConfigIcons.qml:326
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
 msgstr "Átnevezés helyben a kijelölt elem szövegére kattintva"
 
-#: package/contents/ui/ConfigIcons.qml:339
+#: package/contents/ui/ConfigIcons.qml:337
 #, kde-format
 msgid "Previews:"
 msgstr "Előnézetek:"
 
-#: package/contents/ui/ConfigIcons.qml:341
+#: package/contents/ui/ConfigIcons.qml:339
 #, kde-format
 msgid "Show preview thumbnails"
 msgstr "Előnézeti bélyegképek megjelenítése"
 
-#: package/contents/ui/ConfigIcons.qml:349
+#: package/contents/ui/ConfigIcons.qml:347
 #, kde-format
 msgid "Configure Preview Plugins…"
 msgstr "Előnézet bővítmény beállítása…"
@@ -390,32 +390,32 @@ msgctxt "@info:placeholder custom window title"
 msgid "Enter title…"
 msgstr "Cím megadása…"
 
-#: package/contents/ui/ConfigOverlay.qml:98
+#: package/contents/ui/ConfigOverlay.qml:97
 #, kde-format
 msgid "Click and drag to rotate"
 msgstr "Kattintson és húzza a forgatáshoz"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:183
 #, kde-format
 msgid "Hide Background"
 msgstr "Háttér elrejtése"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:183
 #, kde-format
 msgid "Show Background"
 msgstr "Háttér megjelenítése"
 
-#: package/contents/ui/ConfigOverlay.qml:232
+#: package/contents/ui/ConfigOverlay.qml:231
 #, kde-format
 msgid "Remove"
 msgstr "Eltávolítás"
 
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:19
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:18
 #, kde-format
 msgid "Preview Plugins"
 msgstr "Bővítmények előnézete"
 
-#: package/contents/ui/FolderView.qml:1238
+#: package/contents/ui/FolderView.qml:1237
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -426,13 +426,13 @@ msgstr ""
 "teljesítményproblémákat okozhat. Kérjük, fontolja meg ezek egy részének "
 "máshová történő áthelyezését."
 
-#: package/contents/ui/FolderViewDialog.qml:90
+#: package/contents/ui/FolderViewDialog.qml:91
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Folder is empty"
 msgstr "A mappa üres"
 
-#: package/contents/ui/main.qml:424
+#: package/contents/ui/main.qml:439
 #, kde-format
 msgid "Desktop and Wallpaper"
 msgstr "Asztal és háttérkép"
@@ -447,7 +447,7 @@ msgstr "Mappa kiválasztása"
 msgid "&Refresh Desktop"
 msgstr "Az asztal &frissítése"
 
-#: plugins/folder/foldermodel.cpp:505 plugins/folder/foldermodel.cpp:1740
+#: plugins/folder/foldermodel.cpp:505 plugins/folder/foldermodel.cpp:1742
 #, kde-format
 msgid "&Refresh View"
 msgstr "A né&zet frissítése"
@@ -470,23 +470,23 @@ msgstr ""
 "A(z) <filename>%1</filename> a(z) <filename>%2</filename> fájlra mutat, de "
 "az nem található. Talán áthelyezték vagy törölték."
 
-#: plugins/folder/foldermodel.cpp:1749
+#: plugins/folder/foldermodel.cpp:1751
 #, kde-format
 msgid "&Empty Trash"
 msgstr "A Kuka ü&rítése"
 
-#: plugins/folder/foldermodel.cpp:1752
+#: plugins/folder/foldermodel.cpp:1754
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "Visszaállítás a korábbi helyre"
 
-#: plugins/folder/foldermodel.cpp:1755
+#: plugins/folder/foldermodel.cpp:1757
 #, kde-format
 msgid "&Open"
 msgstr "Megny&itás"
 
-#: plugins/folder/foldermodel.cpp:1759
+#: plugins/folder/foldermodel.cpp:1761
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -494,23 +494,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Cél megjelenítése"
 
-#: plugins/folder/foldermodel.cpp:1860
+#: plugins/folder/foldermodel.cpp:1862
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "Kuka ikon eltávolítása"
 
-#: plugins/folder/foldermodel.cpp:1863
+#: plugins/folder/foldermodel.cpp:1865
 #, kde-format
 msgid "&Move to Trash"
 msgstr "&Áthelyezés a Kukába"
 
-#: plugins/folder/foldermodel.cpp:1896
+#: plugins/folder/foldermodel.cpp:1898
 #, kde-format
 msgid "&Paste"
 msgstr "&Beillesztés"
 
-#: plugins/folder/foldermodel.cpp:2047
+#: plugins/folder/foldermodel.cpp:2049
 #, kde-format
 msgid "&Properties"
 msgstr "&Tulajdonságok"

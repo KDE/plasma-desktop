@@ -6,13 +6,13 @@
 # Eugene Onischenko <oneugene@ukr.net>, 2002.
 # Andriy Rysin <rysin@kde.org>, 2002, 2006.
 # Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>, 2005, 2006, 2007, 2008.
-# Yuri Chornoivan <yurchor@ukr.net>, 2009, 2010, 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
+# Yuri Chornoivan <yurchor@ukr.net>, 2009, 2010, 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-04 00:46+0000\n"
-"PO-Revision-Date: 2025-12-23 10:27+0200\n"
+"PO-Revision-Date: 2026-01-04 12:41+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -296,8 +296,7 @@ msgstr "Увімкнути засіб читання з екрана"
 
 #. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
 #: kcmaccessibilityshakecursor.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether Shake Pointer is enabled"
 msgstr "Визначає, чи увімкнено ефект «Потрясти вказівником»"
 
@@ -747,9 +746,7 @@ msgid "Invert"
 msgstr "Інвертувати"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "Shake cursor to find it"
-#| msgid "Shake Cursor"
+#, kde-format
 msgctxt "Shake pointer to find it"
 msgid "Shake Pointer"
 msgstr "Потрясти вказівником"
@@ -837,9 +834,7 @@ msgid "Configure Notifications…"
 msgstr "Налаштувати сповіщення…"
 
 #: ui/MouseNavigation.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move pointer:"
 msgstr "Цифрова панель для пересування вказівника:"
@@ -922,41 +917,31 @@ msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Запустити налаштування засобу читання з екрана Orca…"
 
 #: ui/ShakeCursor.qml:15
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Shake cursor to find it:"
+#, kde-format
 msgctxt "@label"
 msgid "Shake pointer to find it:"
 msgstr "Потрясти вказівником, щоб знайти його:"
 
 #: ui/ShakeCursor.qml:16
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable shake pointer effect"
 msgid "Enable"
 msgstr "Увімкнути"
 
 #: ui/ShakeCursor.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@label Cursor magnification level"
-#| msgid "Magnification:"
+#, kde-format
 msgctxt "@label Pointer magnification level"
 msgid "Magnification:"
 msgstr "Збільшення:"
 
 #: ui/ShakeCursor.qml:55
-#, fuzzy, kde-format
-#| msgctxt "@label Normal cursor size"
-#| msgid "Normal"
+#, kde-format
 msgctxt "@label Normal pointer size"
 msgid "Normal"
 msgstr "Звичайний"
 
 #: ui/ShakeCursor.qml:62
-#, fuzzy, kde-format
-#| msgctxt "@label Large cursor size"
-#| msgid "Large"
+#, kde-format
 msgctxt "@label Large pointer size"
 msgid "Large"
 msgstr "Великий"
@@ -980,12 +965,10 @@ msgid "Show pixel grid at zoom level:"
 msgstr "Показувати ґратку пікселів на такому рівні масштабування:"
 
 #: ui/ZoomMagnifier.qml:85
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer appearance:"
-msgstr "Прискорення вказівника:"
+msgstr "Вигляд вказівника:"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
@@ -1006,9 +989,7 @@ msgid "Hide"
 msgstr "Приховати"
 
 #: ui/ZoomMagnifier.qml:123
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox"
-#| msgid "Mouse tracking:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer tracking:"
 msgstr "Стеження за вказівником:"
@@ -1020,12 +1001,10 @@ msgid "Proportional"
 msgstr "Пропорційно"
 
 #: ui/ZoomMagnifier.qml:129
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Zoom area moves in sync with mouse cursor"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with pointer"
-msgstr "Область збільшення рухається синхронно із вказівником миші"
+msgstr "Область збільшення рухається синхронно із вказівником"
 
 #: ui/ZoomMagnifier.qml:133
 #, kde-format
@@ -1034,14 +1013,12 @@ msgid "Centered"
 msgstr "За центром"
 
 #: ui/ZoomMagnifier.qml:134
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Mouse cursor stays centered on-screen, except near screen edges"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, except near screen edges"
 msgstr ""
-"Вказівник миші завжди лишається у центрі екрана, окрім випадків розташування "
-"на краях екрана"
+"Вказівник завжди лишається у центрі екрана, окрім випадків розташування на "
+"краях екрана"
 
 #: ui/ZoomMagnifier.qml:138
 #, kde-format
@@ -1050,14 +1027,12 @@ msgid "Centered (Strict)"
 msgstr "За центром (строго)"
 
 #: ui/ZoomMagnifier.qml:139
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Mouse cursor stays centered on-screen, even near screen edges"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, even near screen edges"
 msgstr ""
-"Вказівник миші завжди лишається у центрі екрана, навіть при розташуванні на "
-"краях екрана"
+"Вказівник завжди лишається у центрі екрана, навіть при розташуванні на краях "
+"екрана"
 
 #: ui/ZoomMagnifier.qml:143
 #, kde-format
@@ -1066,12 +1041,10 @@ msgid "Push"
 msgstr "Надіслати"
 
 #: ui/ZoomMagnifier.qml:144
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Mouse cursor pushes zoom area at screen edges"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer pushes zoom area at screen edges"
-msgstr "Вказівник миші виштовхує область збільшення на краї екрана"
+msgstr "Вказівник виштовхує область збільшення на краї екрана"
 
 #: ui/ZoomMagnifier.qml:148
 #, kde-format
@@ -1080,12 +1053,10 @@ msgid "Disabled"
 msgstr "Вимкнено"
 
 #: ui/ZoomMagnifier.qml:149
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Zoom area doesn't follow mouse cursor"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow pointer"
-msgstr "Область збільшення не синхронізовано з вказівником миші"
+msgstr "Область збільшення не синхронізовано з вказівником"
 
 #: ui/ZoomMagnifier.qml:166
 #, kde-format

@@ -1,27 +1,27 @@
 # Translation for kcmaccess.po to Euskara/Basque (eu).
-# Copyright (C) 2002-2025 This file is copyright:
+# Copyright (C) 2002-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Marcos  <marcos@euskalgnu.org>, 2002, 2003.
 # Ion Gaztañaga <igaztanaga@gmail.com>, 2005.
 # marcos <marcos@euskalgnu.org>, 2006, 2007, 2008.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2014, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2014, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-04 00:46+0000\n"
-"PO-Revision-Date: 2025-09-27 13:43+0200\n"
+"PO-Revision-Date: 2026-01-04 23:06+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
@@ -297,10 +297,9 @@ msgstr "Gaitu pantaila-irakurlea"
 
 #. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
 #: kcmaccessibilityshakecursor.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether Shake Pointer is enabled"
-msgstr "Kurtsorea astintzea gaituta dagoen edo ez"
+msgstr "Astindu kurtsorea gaituta dagoen"
 
 #. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
 #: kcmaccessibilityshakecursor.kcfg:15
@@ -739,9 +738,7 @@ msgid "Invert"
 msgstr "Alderantzikatu"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "Shake cursor to find it"
-#| msgid "Shake Cursor"
+#, kde-format
 msgctxt "Shake pointer to find it"
 msgid "Shake Pointer"
 msgstr "Astindu kurtsorea"
@@ -827,12 +824,10 @@ msgid "Configure Notifications…"
 msgstr "Konfiguratu jakinarazpenak..."
 
 #: ui/MouseNavigation.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move pointer:"
-msgstr "Erabili zenbakizko teklatua kurtsorea mugitzeko:"
+msgstr "Erabili zenbakizko teklatua erakuslea mugitzeko:"
 
 #: ui/MouseNavigation.qml:22
 #, kde-format
@@ -912,41 +907,31 @@ msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Abiarazi Orca pantaila-irakurlearen konfigurazioa..."
 
 #: ui/ShakeCursor.qml:15
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Shake cursor to find it:"
+#, kde-format
 msgctxt "@label"
 msgid "Shake pointer to find it:"
-msgstr "Astindu zure kurtsorea hura aurkitzeko:"
+msgstr "Astindu erakuslea hura aurkitzeko:"
 
 #: ui/ShakeCursor.qml:16
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable shake pointer effect"
 msgid "Enable"
 msgstr "Gaitu"
 
 #: ui/ShakeCursor.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@label Cursor magnification level"
-#| msgid "Magnification:"
+#, kde-format
 msgctxt "@label Pointer magnification level"
 msgid "Magnification:"
 msgstr "Handiagotzea:"
 
 #: ui/ShakeCursor.qml:55
-#, fuzzy, kde-format
-#| msgctxt "@label Normal cursor size"
-#| msgid "Normal"
+#, kde-format
 msgctxt "@label Normal pointer size"
 msgid "Normal"
 msgstr "Arrunta"
 
 #: ui/ShakeCursor.qml:62
-#, fuzzy, kde-format
-#| msgctxt "@label Large cursor size"
-#| msgid "Large"
+#, kde-format
 msgctxt "@label Large pointer size"
 msgid "Large"
 msgstr "Handia"
@@ -970,12 +955,10 @@ msgid "Show pixel grid at zoom level:"
 msgstr "Erakutsi pixel sareta zoom-maila honetan:"
 
 #: ui/ZoomMagnifier.qml:85
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer appearance:"
-msgstr "Erakuslearen azelerazioa:"
+msgstr "Erakuslearen itxura:"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
@@ -996,9 +979,7 @@ msgid "Hide"
 msgstr "Ezkutatu"
 
 #: ui/ZoomMagnifier.qml:123
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox"
-#| msgid "Mouse tracking:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer tracking:"
 msgstr "Saguaren jarraipena:"
@@ -1013,7 +994,7 @@ msgstr "Proportzionala"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with pointer"
-msgstr ""
+msgstr "Zoom-eremua erakuslearekin batera mugitzen da"
 
 #: ui/ZoomMagnifier.qml:133
 #, kde-format
@@ -1026,20 +1007,20 @@ msgstr "Erdiratuta"
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, except near screen edges"
 msgstr ""
+"Erakuslea pantailan erdiratuta gelditzen da, pantailaren ertzetan izan ezik"
 
 #: ui/ZoomMagnifier.qml:138
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
-msgstr "Erdiratuta"
+msgstr "Erdiratuta (Zorrotza)"
 
 #: ui/ZoomMagnifier.qml:139
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, even near screen edges"
 msgstr ""
+"Erakuslea pantailan erdiratuta gelditzen da, baita pantailaren ertzetan ere"
 
 #: ui/ZoomMagnifier.qml:143
 #, kde-format
@@ -1051,7 +1032,7 @@ msgstr "Bultzatu"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer pushes zoom area at screen edges"
-msgstr ""
+msgstr "Erakusleak pantaila-ertzetan zoom-eremua bultzatzen du"
 
 #: ui/ZoomMagnifier.qml:148
 #, kde-format
@@ -1063,7 +1044,7 @@ msgstr "Ezgaituta"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow pointer"
-msgstr ""
+msgstr "Zoom-eremuak ez dio erakusleari jarraitzen"
 
 #: ui/ZoomMagnifier.qml:166
 #, kde-format

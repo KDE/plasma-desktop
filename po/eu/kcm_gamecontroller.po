@@ -1,16 +1,16 @@
 # Translation for kcm_gamecontroller.po to Euskara/Basque (eu).
-# Copyright (C) 2023-2025 This file is copyright:
+# Copyright (C) 2023-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# SPDX-FileCopyrightText: 2023, 2024 Iñigo Salvador Azurmendi <xalba@ni.eus>, 2025.
+# SPDX-FileCopyrightText: 2023, 2024 Iñigo Salvador Azurmendi <xalba@ni.eus>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-03 00:44+0000\n"
-"PO-Revision-Date: 2025-12-06 15:48+0100\n"
+"PO-Revision-Date: 2026-01-04 22:55+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
@@ -319,7 +319,7 @@ msgstr "%1 (%2)"
 #, kde-format
 msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
 msgid "Allow using as pointer and keyboard"
-msgstr ""
+msgstr "Baimendu erakusle eta teklatu gisa erabiltzea"
 
 #: ui/main.qml:44
 #, kde-kuit-format
@@ -328,6 +328,9 @@ msgid ""
 "Allow game controllers to act like pointer and keyboard devices in Plasma "
 "and non-game applications.<nl/><nl/>Games can always use the controller."
 msgstr ""
+"Baimendu joko-kontrolagailuak Plasman eta jokoak ez diren aplikazioetan "
+"erakusle- eta teklatu-gailu bezala aritzea.<nl/><nl/>Jokoek beti erabil "
+"dezakete kontrolagailua."
 
 #: ui/main.qml:52
 #, kde-format
@@ -348,6 +351,10 @@ msgid ""
 "controller, or enable automatic blocking by allowing the use as pointer and "
 "keyboard."
 msgstr ""
+"Kontrolagailua erabiltzen den bitartean sistema automatikoki lotara joan "
+"daiteke edo pantaila giltzatu dezake. Hausnartu kontrolagailua erabili "
+"bitartean haiek eskuz oztopatzeko aukera, edo gaitu oztopo automatikoa "
+"erakusle eta teklatu erabilera baimenduz."
 
 #: ui/main.qml:98
 #, kde-format

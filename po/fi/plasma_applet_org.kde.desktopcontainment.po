@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-19 00:45+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2025-09-03 18:39+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -18,18 +18,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.04.0\n"
 
-#: package/contents/config/config.qml:16
+#: package/contents/config/config.qml:17
 #, kde-format
 msgid "Location"
 msgstr "Sijainti"
 
-#: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:358
+#: package/contents/config/config.qml:24
+#: package/contents/ui/FolderViewLayer.qml:357
 #, kde-format
 msgid "Icons"
 msgstr "Kuvakkeet"
 
-#: package/contents/config/config.qml:30
+#: package/contents/config/config.qml:31
 #, kde-format
 msgid "Filter"
 msgstr "Suodatin"
@@ -99,218 +99,218 @@ msgstr "Poista kaikki valinnat"
 msgid "Switch Sort Order"
 msgstr "Vaihda lajittelujärjestys"
 
-#: package/contents/ui/ConfigIcons.qml:59
+#: package/contents/ui/ConfigIcons.qml:57
 #, kde-format
 msgid "Panel button:"
 msgstr "Paneelin painike:"
 
-#: package/contents/ui/ConfigIcons.qml:65
+#: package/contents/ui/ConfigIcons.qml:63
 #, kde-format
 msgid "Use a custom icon"
 msgstr "Käytä omaa kuvaketta"
 
-#: package/contents/ui/ConfigIcons.qml:98
+#: package/contents/ui/ConfigIcons.qml:96
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Valitse…"
 
-#: package/contents/ui/ConfigIcons.qml:104
+#: package/contents/ui/ConfigIcons.qml:102
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Tyhjennä kuvake"
 
-#: package/contents/ui/ConfigIcons.qml:124
+#: package/contents/ui/ConfigIcons.qml:122
 #, kde-format
 msgid "Arrangement:"
 msgstr "Sijoittelu:"
 
-#: package/contents/ui/ConfigIcons.qml:127
+#: package/contents/ui/ConfigIcons.qml:125
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Columns"
 msgstr "Sarakkeiksi"
 
-#: package/contents/ui/ConfigIcons.qml:128
+#: package/contents/ui/ConfigIcons.qml:126
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Rows"
 msgstr "Riveiksi"
 
-#: package/contents/ui/ConfigIcons.qml:137
+#: package/contents/ui/ConfigIcons.qml:135
 #, kde-format
 msgid "Sort Alignment:"
 msgstr "Lajittelun tasaus:"
 
-#: package/contents/ui/ConfigIcons.qml:140
+#: package/contents/ui/ConfigIcons.qml:138
 #, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Left-to-Right"
 msgstr "Vasemmalta oikealle"
 
-#: package/contents/ui/ConfigIcons.qml:141
+#: package/contents/ui/ConfigIcons.qml:139
 #, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Right-to-Left"
 msgstr "Oikealta vasemmalle"
 
-#: package/contents/ui/ConfigIcons.qml:163
+#: package/contents/ui/ConfigIcons.qml:161
 #, kde-format
 msgid "Lock in place"
 msgstr "Lukitse paikoilleen"
 
-#: package/contents/ui/ConfigIcons.qml:177
+#: package/contents/ui/ConfigIcons.qml:175
 #, kde-format
 msgid "Sort by:"
 msgstr "Lajitteluperuste:"
 
-#: package/contents/ui/ConfigIcons.qml:185
+#: package/contents/ui/ConfigIcons.qml:183
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr "Mukautettu"
 
-#: package/contents/ui/ConfigIcons.qml:186
+#: package/contents/ui/ConfigIcons.qml:184
 #, kde-format
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "Nimi"
 
-#: package/contents/ui/ConfigIcons.qml:187
+#: package/contents/ui/ConfigIcons.qml:185
 #, kde-format
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "Koko"
 
-#: package/contents/ui/ConfigIcons.qml:188
+#: package/contents/ui/ConfigIcons.qml:186
 #, kde-format
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "Tyyppi"
 
-#: package/contents/ui/ConfigIcons.qml:189
+#: package/contents/ui/ConfigIcons.qml:187
 #, kde-format
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "Aika"
 
-#: package/contents/ui/ConfigIcons.qml:200
+#: package/contents/ui/ConfigIcons.qml:198
 #, kde-format
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr "Laskevasti"
 
-#: package/contents/ui/ConfigIcons.qml:208
+#: package/contents/ui/ConfigIcons.qml:206
 #, kde-format
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "Kansiot ensin"
 
-#: package/contents/ui/ConfigIcons.qml:222
+#: package/contents/ui/ConfigIcons.qml:220
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr "Näkymä:"
 
-#: package/contents/ui/ConfigIcons.qml:224
+#: package/contents/ui/ConfigIcons.qml:222
 #, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr "Luettelo"
 
-#: package/contents/ui/ConfigIcons.qml:225
+#: package/contents/ui/ConfigIcons.qml:223
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
 msgstr "Ruudukko"
 
-#: package/contents/ui/ConfigIcons.qml:236
+#: package/contents/ui/ConfigIcons.qml:234
 #, kde-format
 msgid "Icon size:"
 msgstr "Kuvakekoko:"
 
-#: package/contents/ui/ConfigIcons.qml:251
+#: package/contents/ui/ConfigIcons.qml:249
 #, kde-format
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "Pieni"
 
-#: package/contents/ui/ConfigIcons.qml:260
+#: package/contents/ui/ConfigIcons.qml:258
 #, kde-format
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "Suuri"
 
-#: package/contents/ui/ConfigIcons.qml:269
+#: package/contents/ui/ConfigIcons.qml:267
 #, kde-format
 msgid "Label width:"
 msgstr "Selitteen leveys:"
 
-#: package/contents/ui/ConfigIcons.qml:272
+#: package/contents/ui/ConfigIcons.qml:270
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr "Kapea"
 
-#: package/contents/ui/ConfigIcons.qml:273
+#: package/contents/ui/ConfigIcons.qml:271
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr "Keskikokoinen"
 
-#: package/contents/ui/ConfigIcons.qml:274
+#: package/contents/ui/ConfigIcons.qml:272
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr "Leveä"
 
-#: package/contents/ui/ConfigIcons.qml:282
+#: package/contents/ui/ConfigIcons.qml:280
 #, kde-format
 msgid "Text lines:"
 msgstr "Tekstirivejä:"
 
-#: package/contents/ui/ConfigIcons.qml:298
+#: package/contents/ui/ConfigIcons.qml:296
 #, kde-format
 msgid "When hovering over icons:"
 msgstr "Leijuttaessa kuvakkeiden yllä:"
 
-#: package/contents/ui/ConfigIcons.qml:300
+#: package/contents/ui/ConfigIcons.qml:298
 #, kde-format
 msgid "Show tooltips"
 msgstr "Näytä työkaluvihjeet"
 
-#: package/contents/ui/ConfigIcons.qml:307
+#: package/contents/ui/ConfigIcons.qml:305
 #, kde-format
 msgid "Show selection markers"
 msgstr "Näytä valinnan merkit"
 
-#: package/contents/ui/ConfigIcons.qml:314
+#: package/contents/ui/ConfigIcons.qml:312
 #, kde-format
 msgid "Show folder preview popups"
 msgstr "Näytä kansioiden esikatseluikkunat"
 
-#: package/contents/ui/ConfigIcons.qml:324
+#: package/contents/ui/ConfigIcons.qml:322
 #, kde-format
 msgid "Rename:"
 msgstr "Muuta nimeä:"
 
-#: package/contents/ui/ConfigIcons.qml:328
+#: package/contents/ui/ConfigIcons.qml:326
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
 msgstr "Muuta nimeä suoraan napsauttamalla kohteen tekstiä"
 
-#: package/contents/ui/ConfigIcons.qml:339
+#: package/contents/ui/ConfigIcons.qml:337
 #, kde-format
 msgid "Previews:"
 msgstr "Esikatselut:"
 
-#: package/contents/ui/ConfigIcons.qml:341
+#: package/contents/ui/ConfigIcons.qml:339
 #, kde-format
 msgid "Show preview thumbnails"
 msgstr "Näytä esikatselun pienoiskuvat"
 
-#: package/contents/ui/ConfigIcons.qml:349
+#: package/contents/ui/ConfigIcons.qml:347
 #, kde-format
 msgid "Configure Preview Plugins…"
 msgstr "Esikatseluliitännäisten asetukset…"
@@ -387,32 +387,32 @@ msgctxt "@info:placeholder custom window title"
 msgid "Enter title…"
 msgstr "Kirjoita otsikko…"
 
-#: package/contents/ui/ConfigOverlay.qml:98
+#: package/contents/ui/ConfigOverlay.qml:97
 #, kde-format
 msgid "Click and drag to rotate"
 msgstr "Kierrä vetämällä ja pudottamalla"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:183
 #, kde-format
 msgid "Hide Background"
 msgstr "Piilota tausta"
 
-#: package/contents/ui/ConfigOverlay.qml:184
+#: package/contents/ui/ConfigOverlay.qml:183
 #, kde-format
 msgid "Show Background"
 msgstr "Näytä tausta"
 
-#: package/contents/ui/ConfigOverlay.qml:232
+#: package/contents/ui/ConfigOverlay.qml:231
 #, kde-format
 msgid "Remove"
 msgstr "Poista"
 
-#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:19
+#: package/contents/ui/FolderItemPreviewPluginsDialog.qml:18
 #, kde-format
 msgid "Preview Plugins"
 msgstr "Esikatseluliitännäiset"
 
-#: package/contents/ui/FolderView.qml:1238
+#: package/contents/ui/FolderView.qml:1237
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -422,13 +422,13 @@ msgstr ""
 "Työpöydällä on paljon tiedostoja ja kansioita. Tämä voi aiheuttaa virheitä "
 "ja suorituskykyongelmia. Harkitse niiden siirtämistä muualle."
 
-#: package/contents/ui/FolderViewDialog.qml:90
+#: package/contents/ui/FolderViewDialog.qml:91
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Folder is empty"
 msgstr "Kansio on tyhjä"
 
-#: package/contents/ui/main.qml:424
+#: package/contents/ui/main.qml:439
 #, kde-format
 msgid "Desktop and Wallpaper"
 msgstr "Työpöytä ja tausta"
@@ -443,7 +443,7 @@ msgstr "Valitse kansio"
 msgid "&Refresh Desktop"
 msgstr "&Päivitä työpöytä"
 
-#: plugins/folder/foldermodel.cpp:505 plugins/folder/foldermodel.cpp:1740
+#: plugins/folder/foldermodel.cpp:505 plugins/folder/foldermodel.cpp:1742
 #, kde-format
 msgid "&Refresh View"
 msgstr "&Päivitä näkymä"
@@ -466,23 +466,23 @@ msgstr ""
 "<filename>%1</filename> osoittaa tiedostoon <filename>%2</filename>, jota ei "
 "löydy. Se on ehkä siirretty tai poistettu."
 
-#: plugins/folder/foldermodel.cpp:1749
+#: plugins/folder/foldermodel.cpp:1751
 #, kde-format
 msgid "&Empty Trash"
 msgstr "&Tyhjennä roskakori"
 
-#: plugins/folder/foldermodel.cpp:1752
+#: plugins/folder/foldermodel.cpp:1754
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "Palauta aiempaan sijaintiin"
 
-#: plugins/folder/foldermodel.cpp:1755
+#: plugins/folder/foldermodel.cpp:1757
 #, kde-format
 msgid "&Open"
 msgstr "&Avaa"
 
-#: plugins/folder/foldermodel.cpp:1759
+#: plugins/folder/foldermodel.cpp:1761
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -490,23 +490,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Näytä kohde"
 
-#: plugins/folder/foldermodel.cpp:1860
+#: plugins/folder/foldermodel.cpp:1862
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "Poista roskakorikuvake"
 
-#: plugins/folder/foldermodel.cpp:1863
+#: plugins/folder/foldermodel.cpp:1865
 #, kde-format
 msgid "&Move to Trash"
 msgstr "Siirrä &roskakoriin"
 
-#: plugins/folder/foldermodel.cpp:1896
+#: plugins/folder/foldermodel.cpp:1898
 #, kde-format
 msgid "&Paste"
 msgstr "&Liitä"
 
-#: plugins/folder/foldermodel.cpp:2047
+#: plugins/folder/foldermodel.cpp:2049
 #, kde-format
 msgid "&Properties"
 msgstr "&Ominaisuudet"

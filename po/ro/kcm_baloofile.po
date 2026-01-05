@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2020, 2021, 2023, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
+# SPDX-FileCopyrightText: 2014, 2015, 2020, 2021, 2023, 2024, 2025, 2026 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-04 00:45+0000\n"
-"PO-Revision-Date: 2025-10-03 13:39+0100\n"
+"PO-Revision-Date: 2026-01-03 15:42+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -73,7 +73,7 @@ msgstr "Date de indexat:"
 #: ui/main.qml:109
 #, kde-format
 msgid "Nothing (disable indexing entirely)"
-msgstr ""
+msgstr "Nimic (dezactivează indexarea în întregime)"
 
 #: ui/main.qml:121
 #, kde-format
@@ -86,10 +86,9 @@ msgid "File names and contents"
 msgstr "Denumiri și conținuturi de fișiere"
 
 #: ui/main.qml:157
-#, fuzzy, kde-format
-#| msgid "Hidden files and folders"
+#, kde-format
 msgid "Also index hidden files and folders"
-msgstr "Fișiere și dosare ascunse"
+msgstr "Indexează fișiere și dosare ascunse"
 
 #: ui/main.qml:183
 #, kde-format

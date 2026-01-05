@@ -4,7 +4,7 @@
 # Andrea RIZZI <rizzi@kde.org>, 2005.
 # Giovanni Venturi <jumpyj@tiscali.it>, 2006.
 # Pino Toscano <toscano.pino@tiscali.it>, 2006.
-# SPDX-FileCopyrightText: 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Vincenzo Reale <smart2128vr@gmail.com>
 # SPDX-FileCopyrightText: 2025 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-04 00:46+0000\n"
-"PO-Revision-Date: 2025-09-26 18:23+0200\n"
+"PO-Revision-Date: 2026-01-04 09:54+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
@@ -297,8 +297,7 @@ msgstr "Abilita il lettore dello schermo"
 
 #. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
 #: kcmaccessibilityshakecursor.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether Shake Pointer is enabled"
 msgstr "Se Scuoti il puntatore è abilitata"
 
@@ -740,9 +739,7 @@ msgid "Invert"
 msgstr "Inverti"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "Shake cursor to find it"
-#| msgid "Shake Cursor"
+#, kde-format
 msgctxt "Shake pointer to find it"
 msgid "Shake Pointer"
 msgstr "Scuoti il puntatore"
@@ -831,12 +828,10 @@ msgid "Configure Notifications…"
 msgstr "Configura le notifiche..."
 
 #: ui/MouseNavigation.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move pointer:"
-msgstr "Usa il tastierino numerico per spostare il cursore:"
+msgstr "Usa il tastierino numerico per spostare il puntatore:"
 
 #: ui/MouseNavigation.qml:22
 #, kde-format
@@ -916,41 +911,31 @@ msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Avvia la configurazione del lettore dello schermo Orca..."
 
 #: ui/ShakeCursor.qml:15
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Shake cursor to find it:"
+#, kde-format
 msgctxt "@label"
 msgid "Shake pointer to find it:"
 msgstr "Scuoti il puntatore per trovarlo:"
 
 #: ui/ShakeCursor.qml:16
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable shake pointer effect"
 msgid "Enable"
 msgstr "Abilita"
 
 #: ui/ShakeCursor.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@label Cursor magnification level"
-#| msgid "Magnification:"
+#, kde-format
 msgctxt "@label Pointer magnification level"
 msgid "Magnification:"
 msgstr "Ingrandimento:"
 
 #: ui/ShakeCursor.qml:55
-#, fuzzy, kde-format
-#| msgctxt "@label Normal cursor size"
-#| msgid "Normal"
+#, kde-format
 msgctxt "@label Normal pointer size"
 msgid "Normal"
 msgstr "Normale"
 
 #: ui/ShakeCursor.qml:62
-#, fuzzy, kde-format
-#| msgctxt "@label Large cursor size"
-#| msgid "Large"
+#, kde-format
 msgctxt "@label Large pointer size"
 msgid "Large"
 msgstr "Grande"
@@ -974,12 +959,10 @@ msgid "Show pixel grid at zoom level:"
 msgstr "Mostra la griglia dei pixel al livello di zoom:"
 
 #: ui/ZoomMagnifier.qml:85
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer appearance:"
-msgstr "Accelerazione del puntatore:"
+msgstr "Aspetto del puntatore:"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
@@ -1000,12 +983,10 @@ msgid "Hide"
 msgstr "Nascondi"
 
 #: ui/ZoomMagnifier.qml:123
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox"
-#| msgid "Mouse tracking:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer tracking:"
-msgstr "Inseguimento del mouse:"
+msgstr "Tracciamento del puntatore:"
 
 #: ui/ZoomMagnifier.qml:128
 #, kde-format
@@ -1017,7 +998,7 @@ msgstr "Proporzionale"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with pointer"
-msgstr ""
+msgstr "L'area dello zoom si sposta in sincronia con il puntatore del mouse"
 
 #: ui/ZoomMagnifier.qml:133
 #, kde-format
@@ -1030,20 +1011,22 @@ msgstr "Centrato"
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, except near screen edges"
 msgstr ""
+"Il puntatore del mouse rimane centrato sullo schermo, tranne vicino ai bordi "
+"dello schermo"
 
 #: ui/ZoomMagnifier.qml:138
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
-msgstr "Centrato"
+msgstr "Centrato (preciso)"
 
 #: ui/ZoomMagnifier.qml:139
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, even near screen edges"
 msgstr ""
+"Il puntatore del mouse rimane centrato sullo schermo, anche vicino ai bordi "
+"dello schermo"
 
 #: ui/ZoomMagnifier.qml:143
 #, kde-format
@@ -1055,7 +1038,7 @@ msgstr "Push"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer pushes zoom area at screen edges"
-msgstr ""
+msgstr "Il puntatore del mouse sposta l'area di zoom sui bordi dello schermo"
 
 #: ui/ZoomMagnifier.qml:148
 #, kde-format
@@ -1067,7 +1050,7 @@ msgstr "Disabilitato"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow pointer"
-msgstr ""
+msgstr "L'area dello zoom non segue il puntatore del mouse"
 
 #: ui/ZoomMagnifier.qml:166
 #, kde-format

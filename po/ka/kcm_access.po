@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-04 00:46+0000\n"
-"PO-Revision-Date: 2025-12-23 03:51+0100\n"
+"PO-Revision-Date: 2026-01-04 05:22+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -291,8 +291,7 @@ msgstr "ეკრანის მკითხველის ჩართვა"
 
 #. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
 #: kcmaccessibilityshakecursor.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether Shake Pointer is enabled"
 msgstr "როცა კურსორის ჯანჯღარი ჩართულია"
 
@@ -730,9 +729,7 @@ msgid "Invert"
 msgstr "ინვერსია"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "Shake cursor to find it"
-#| msgid "Shake Cursor"
+#, kde-format
 msgctxt "Shake pointer to find it"
 msgid "Shake Pointer"
 msgstr "კურსორის ჯანჯღარი"
@@ -818,12 +815,10 @@ msgid "Configure Notifications…"
 msgstr "შეტყობინებების მორგება…"
 
 #: ui/MouseNavigation.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move pointer:"
-msgstr "კურსორის გადასაადგილებლად ციფრული კლავიატურის გამოყენება:"
+msgstr "ციფრული კლავიატურის გამოყენება კურსორის გადასაადგილებლად:"
 
 #: ui/MouseNavigation.qml:22
 #, kde-format
@@ -903,41 +898,31 @@ msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Orca - ეკრანის მკითხველის მორგების გაშვება…"
 
 #: ui/ShakeCursor.qml:15
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Shake cursor to find it:"
+#, kde-format
 msgctxt "@label"
 msgid "Shake pointer to find it:"
 msgstr "კურსორის ჯანჯღარი მის საპოვნელად:"
 
 #: ui/ShakeCursor.qml:16
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable shake pointer effect"
 msgid "Enable"
 msgstr "ჩართვა"
 
 #: ui/ShakeCursor.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@label Cursor magnification level"
-#| msgid "Magnification:"
+#, kde-format
 msgctxt "@label Pointer magnification level"
 msgid "Magnification:"
 msgstr "გადიდება:"
 
 #: ui/ShakeCursor.qml:55
-#, fuzzy, kde-format
-#| msgctxt "@label Normal cursor size"
-#| msgid "Normal"
+#, kde-format
 msgctxt "@label Normal pointer size"
 msgid "Normal"
-msgstr "ჩვეულებრივი"
+msgstr "ნორმალური"
 
 #: ui/ShakeCursor.qml:62
-#, fuzzy, kde-format
-#| msgctxt "@label Large cursor size"
-#| msgid "Large"
+#, kde-format
 msgctxt "@label Large pointer size"
 msgid "Large"
 msgstr "დიდი"
@@ -961,12 +946,10 @@ msgid "Show pixel grid at zoom level:"
 msgstr "პიქსელების ბადის ჩვენება გადიდების დონეზე:"
 
 #: ui/ZoomMagnifier.qml:85
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer appearance:"
-msgstr "კურსორის აჩქარება:"
+msgstr "კურსორის გარეგნობა:"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
@@ -987,12 +970,10 @@ msgid "Hide"
 msgstr "დამალვა"
 
 #: ui/ZoomMagnifier.qml:123
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox"
-#| msgid "Mouse tracking:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer tracking:"
-msgstr "თაგუნას თვალყურის დევნება:"
+msgstr "კურსორის თვალყურის დევნება:"
 
 #: ui/ZoomMagnifier.qml:128
 #, kde-format
@@ -1001,12 +982,10 @@ msgid "Proportional"
 msgstr "პროპორციული"
 
 #: ui/ZoomMagnifier.qml:129
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Zoom area moves in sync with mouse cursor"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with pointer"
-msgstr "ადგილის გადიდება თაგუნას კურსორთან ერთად მოძრაობს"
+msgstr "ადგილის გადიდება კურსორთან ერთად მოძრაობს"
 
 #: ui/ZoomMagnifier.qml:133
 #, kde-format
@@ -1015,12 +994,10 @@ msgid "Centered"
 msgstr "შუაზე გასწორებული"
 
 #: ui/ZoomMagnifier.qml:134
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Mouse cursor stays centered on-screen, except near screen edges"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, except near screen edges"
-msgstr "თაგუნას კურსორი რჩება ცენტრში, ეკრანის წიბოებთან სიახლოვის გარდა"
+msgstr "კურსორი რჩება ცენტრში, ეკრანის წიბოებთან სიახლოვის გარდა"
 
 #: ui/ZoomMagnifier.qml:138
 #, kde-format
@@ -1029,12 +1006,10 @@ msgid "Centered (Strict)"
 msgstr "შუაზე გასწორებული (მკაცრად)"
 
 #: ui/ZoomMagnifier.qml:139
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Mouse cursor stays centered on-screen, even near screen edges"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, even near screen edges"
-msgstr "თაგუნას კურსორი რჩება ცენტრში ეკრანის წიბოებთან ახლოსაც კი"
+msgstr "კურსორი რჩება ცენტრში ეკრანის წიბოებთან ახლოსაც კი"
 
 #: ui/ZoomMagnifier.qml:143
 #, kde-format
@@ -1043,12 +1018,10 @@ msgid "Push"
 msgstr "პუში"
 
 #: ui/ZoomMagnifier.qml:144
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Mouse cursor pushes zoom area at screen edges"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer pushes zoom area at screen edges"
-msgstr "თაგუნას კურსორი გადიდების არეს ეკრანის წიბოებისკენ გასწევს"
+msgstr "კურსორი გადიდების არეს ეკრანის წიბოებისკენ გასწევს"
 
 #: ui/ZoomMagnifier.qml:148
 #, kde-format
@@ -1057,12 +1030,10 @@ msgid "Disabled"
 msgstr "გამორთული"
 
 #: ui/ZoomMagnifier.qml:149
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Zoom area doesn't follow mouse cursor"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow pointer"
-msgstr "გადიდების არე თაგუნას კურსორს არ მიჰყვება"
+msgstr "გადიდების არე კურსორს არ მიჰყვება"
 
 #: ui/ZoomMagnifier.qml:166
 #, kde-format

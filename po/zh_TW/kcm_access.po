@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-04 00:46+0000\n"
-"PO-Revision-Date: 2026-01-02 07:19+0900\n"
+"PO-Revision-Date: 2026-01-05 01:47+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "dot tw>\n"
-"X-Generator: Lokalize 25.11.70\n"
+"X-Generator: Lokalize 26.03.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
@@ -292,8 +292,7 @@ msgstr "啟用螢幕閱讀器"
 
 #. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
 #: kcmaccessibilityshakecursor.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether Shake Pointer is enabled"
 msgstr "是否要啟用游標甩動功能"
 
@@ -724,9 +723,7 @@ msgid "Invert"
 msgstr "反轉"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "Shake cursor to find it"
-#| msgid "Shake Cursor"
+#, kde-format
 msgctxt "Shake pointer to find it"
 msgid "Shake Pointer"
 msgstr "甩動游標"
@@ -811,9 +808,7 @@ msgid "Configure Notifications…"
 msgstr "設定通知(&C)…"
 
 #: ui/MouseNavigation.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move pointer:"
 msgstr "使用數字鍵盤移動游標："
@@ -895,41 +890,31 @@ msgid "Launch Orca Screen Reader Configuration…"
 msgstr "開啟 Orca 螢幕閱讀器設定(&O)…"
 
 #: ui/ShakeCursor.qml:15
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Shake cursor to find it:"
+#, kde-format
 msgctxt "@label"
 msgid "Shake pointer to find it:"
 msgstr "甩動游標來尋找它："
 
 #: ui/ShakeCursor.qml:16
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable shake pointer effect"
 msgid "Enable"
 msgstr "啟用"
 
 #: ui/ShakeCursor.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@label Cursor magnification level"
-#| msgid "Magnification:"
+#, kde-format
 msgctxt "@label Pointer magnification level"
 msgid "Magnification:"
 msgstr "放大："
 
 #: ui/ShakeCursor.qml:55
-#, fuzzy, kde-format
-#| msgctxt "@label Normal cursor size"
-#| msgid "Normal"
+#, kde-format
 msgctxt "@label Normal pointer size"
 msgid "Normal"
 msgstr "一般"
 
 #: ui/ShakeCursor.qml:62
-#, fuzzy, kde-format
-#| msgctxt "@label Large cursor size"
-#| msgid "Large"
+#, kde-format
 msgctxt "@label Large pointer size"
 msgid "Large"
 msgstr "巨大"
@@ -953,9 +938,7 @@ msgid "Show pixel grid at zoom level:"
 msgstr "到某縮放等級顯示像素格線："
 
 #: ui/ZoomMagnifier.qml:85
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer appearance:"
 msgstr "指標加速(&O)："
@@ -979,12 +962,10 @@ msgid "Hide"
 msgstr "隱藏"
 
 #: ui/ZoomMagnifier.qml:123
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox"
-#| msgid "Mouse tracking:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer tracking:"
-msgstr "滑鼠追蹤："
+msgstr "游標追蹤："
 
 #: ui/ZoomMagnifier.qml:128
 #, kde-format
@@ -993,12 +974,10 @@ msgid "Proportional"
 msgstr "比例"
 
 #: ui/ZoomMagnifier.qml:129
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Zoom area moves in sync with mouse cursor"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with pointer"
-msgstr "縮放區域與滑鼠游標一同移動"
+msgstr "縮放區域與游標一同移動"
 
 #: ui/ZoomMagnifier.qml:133
 #, kde-format
@@ -1007,12 +986,10 @@ msgid "Centered"
 msgstr "置中"
 
 #: ui/ZoomMagnifier.qml:134
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Mouse cursor stays centered on-screen, except near screen edges"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, except near screen edges"
-msgstr "滑鼠游標維持在螢幕正中間，除了接近螢幕邊緣時"
+msgstr "游標維持在螢幕正中間，除了接近螢幕邊緣時"
 
 #: ui/ZoomMagnifier.qml:138
 #, kde-format
@@ -1021,12 +998,10 @@ msgid "Centered (Strict)"
 msgstr "置中（嚴格）"
 
 #: ui/ZoomMagnifier.qml:139
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Mouse cursor stays centered on-screen, even near screen edges"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, even near screen edges"
-msgstr "滑鼠游標維持在螢幕正中間，包含在螢幕邊緣附近"
+msgstr "游標維持在螢幕正中間，包含在螢幕邊緣附近"
 
 #: ui/ZoomMagnifier.qml:143
 #, kde-format
@@ -1035,12 +1010,10 @@ msgid "Push"
 msgstr "推動"
 
 #: ui/ZoomMagnifier.qml:144
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Mouse cursor pushes zoom area at screen edges"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer pushes zoom area at screen edges"
-msgstr "滑鼠游標在螢幕邊緣會推著縮放區域走"
+msgstr "游標在螢幕邊緣會推著縮放區域走"
 
 #: ui/ZoomMagnifier.qml:148
 #, kde-format
@@ -1049,12 +1022,10 @@ msgid "Disabled"
 msgstr "停用"
 
 #: ui/ZoomMagnifier.qml:149
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Zoom area doesn't follow mouse cursor"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow pointer"
-msgstr "縮放區域不跟隨滑鼠游標"
+msgstr "縮放區域不跟隨游標"
 
 #: ui/ZoomMagnifier.qml:166
 #, kde-format

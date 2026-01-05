@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2023, 2024, 2025.
+# Yuri Chornoivan <yurchor@ukr.net>, 2023, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-03 00:44+0000\n"
-"PO-Revision-Date: 2025-11-08 17:58+0200\n"
+"PO-Revision-Date: 2026-01-04 11:51+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -317,7 +317,7 @@ msgstr "%1 (%2)"
 #, kde-format
 msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
 msgid "Allow using as pointer and keyboard"
-msgstr ""
+msgstr "Дозволити використання як вказівника і клавіатури"
 
 #: ui/main.qml:44
 #, kde-kuit-format
@@ -326,6 +326,9 @@ msgid ""
 "Allow game controllers to act like pointer and keyboard devices in Plasma "
 "and non-game applications.<nl/><nl/>Games can always use the controller."
 msgstr ""
+"Дозволити ігровим контролерам виконувати функції вказівника миші та "
+"клавіатури у Плазмі та неігрових програмах.<nl/><nl/>Контролером можна буде "
+"завжди користуватися в іграх."
 
 #: ui/main.qml:52
 #, kde-format
@@ -346,6 +349,10 @@ msgid ""
 "controller, or enable automatic blocking by allowing the use as pointer and "
 "keyboard."
 msgstr ""
+"Система може автоматично переходити в режим сну або блокувати екран під час "
+"використання контролера. Спробуйте заблокувати їх вручну на час використання "
+"контролера або увімкнути автоматичне блокування, дозволивши використовувати "
+"контролер як вказівник миші і клавіатуру."
 
 #: ui/main.qml:98
 #, kde-format

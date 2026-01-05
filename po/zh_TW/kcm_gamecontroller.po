@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-03 00:44+0000\n"
-"PO-Revision-Date: 2025-11-13 22:22+0900\n"
+"PO-Revision-Date: 2026-01-05 02:05+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.11.70\n"
+"X-Generator: Lokalize 26.03.70\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
@@ -328,7 +328,7 @@ msgstr "%1 (%2)"
 #, kde-format
 msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
 msgid "Allow using as pointer and keyboard"
-msgstr ""
+msgstr "允許作為指標裝置及鍵盤使用"
 
 #: ui/main.qml:44
 #, kde-kuit-format
@@ -337,6 +337,8 @@ msgid ""
 "Allow game controllers to act like pointer and keyboard devices in Plasma "
 "and non-game applications.<nl/><nl/>Games can always use the controller."
 msgstr ""
+"允許遊戲控制器在 Plasma 和非遊戲應用程式當中作為指標裝置及鍵盤裝置運作。<nl/"
+"><nl/>遊戲無論此選項皆可使用控制器。"
 
 #: ui/main.qml:52
 #, kde-format
@@ -357,6 +359,9 @@ msgid ""
 "controller, or enable automatic blocking by allowing the use as pointer and "
 "keyboard."
 msgstr ""
+"系統可能會在使用控制器時誤以為閒置而進入睡眠或鎖定螢幕。請考慮在使用控制器時"
+"手動阻擋睡眠。要讓系統自動偵測控制器使用情形以避免誤認閒置，請啟用允許作為指"
+"標裝置及鍵盤使用的選項。"
 
 #: ui/main.qml:98
 #, kde-format
