@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2024, 2025 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:41+0000\n"
-"PO-Revision-Date: 2025-05-18 21:08+0530\n"
+"PO-Revision-Date: 2026-01-04 17:10+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
@@ -38,18 +38,17 @@ msgstr "நிலை"
 #: device.cpp:17 device.cpp:30
 #, kde-format
 msgid "Unknown"
-msgstr ""
+msgstr "தெரியாதது"
 
 #: device.cpp:18
-#, fuzzy, kde-format
-#| msgid "No game controllers found"
+#, kde-format
 msgid "Game Controller"
-msgstr "எந்த விளையாட்டு கட்டுப்படுத்தியும் கண்டுபிடிக்கப்படவில்லை"
+msgstr "விளையாட்டு கட்டுப்படுத்தி"
 
 #: device.cpp:19
 #, kde-format
 msgid "Wheel"
-msgstr ""
+msgstr "சக்கரம்"
 
 #: device.cpp:20
 #, kde-format
@@ -114,7 +113,7 @@ msgstr ""
 #: device.cpp:36
 #, kde-format
 msgid "Virtual"
-msgstr ""
+msgstr "மெய்நிகர்"
 
 #: device.cpp:37
 #, kde-format
@@ -152,44 +151,34 @@ msgid "Switch Paired Joycon"
 msgstr ""
 
 #: device.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The game controller button with a letter A on it"
 msgid "A button"
-msgstr "பட்டன்கள்"
+msgstr "A பட்டன்"
 
 #: device.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The game controller button with a letter B on it"
 msgid "B button"
-msgstr "பட்டன்கள்"
+msgstr "B பட்டன்"
 
 #: device.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The game controller button with a letter X on it"
 msgid "X button"
-msgstr "பட்டன்கள்"
+msgstr "X பட்டன்"
 
 #: device.cpp:51
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The game controller button with a letter Y on it"
 msgid "Y button"
-msgstr "பட்டன்கள்"
+msgstr "Y பட்டன்"
 
 #: device.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The back game controller button"
 msgid "Back button"
-msgstr "பட்டன்கள்"
+msgstr "பின் பட்டன்"
 
 #: device.cpp:53
 #, kde-format
@@ -201,22 +190,19 @@ msgstr ""
 #, kde-format
 msgctxt "The start game controller button"
 msgid "Start button"
-msgstr ""
+msgstr "துவக்கு பட்டன்"
 
 #: device.cpp:55
 #, kde-format
 msgctxt "The button under the game controller's left analog stick"
 msgid "Left analog stick"
-msgstr ""
+msgstr "இடது குச்சி"
 
 #: device.cpp:56
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label Visual representation of the axis position for the right axis"
-#| msgid "Right position:"
+#, kde-format
 msgctxt "The button under the game controller's right analog stick"
 msgid "Right analog stick"
-msgstr "வலது இருப்பிடம்:"
+msgstr "வலது குச்சி"
 
 #: device.cpp:57
 #, kde-format
@@ -290,36 +276,35 @@ msgstr ""
 #, kde-format
 msgctxt "The button under the game controller's touchpad"
 msgid "Touchpad button"
-msgstr ""
+msgstr "தொடுபலகை பட்டன்"
 
 #: device.cpp:73
 #, kde-format
 msgctxt "Unknown controller connection type"
 msgid "Unknown"
-msgstr ""
+msgstr "தெரியாதது"
 
 #: device.cpp:74
 #, kde-format
 msgctxt "USB connected controller"
 msgid "USB"
-msgstr ""
+msgstr "USB"
 
 #: device.cpp:75
 #, kde-format
 msgctxt "Bluetooth connected controller"
 msgid "Bluetooth"
-msgstr ""
+msgstr "ஊடலை"
 
 #: device.cpp:83
 #, kde-format
 msgid "Invalid button value"
-msgstr ""
+msgstr "செல்லுபடியாகாத பட்டன்"
 
 #: device.cpp:246
-#, fuzzy, kde-format
-#| msgid "No game controllers found"
+#, kde-format
 msgid "Not a controller"
-msgstr "எந்த விளையாட்டு கட்டுப்படுத்தியும் கண்டுபிடிக்கப்படவில்லை"
+msgstr "விளையாட்டு கட்டுப்படுத்தி இல்லை"
 
 #: devicemodel.cpp:68
 #, kde-format

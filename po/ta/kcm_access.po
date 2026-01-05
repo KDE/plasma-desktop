@@ -1,12 +1,12 @@
 # Copyright (C) 2021 Free Software Foundation, Inc.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:41+0000\n"
-"PO-Revision-Date: 2025-01-26 16:48+0530\n"
+"PO-Revision-Date: 2026-01-04 20:23+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -14,52 +14,52 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
 msgid "KWin"
-msgstr ""
+msgstr "கேவின்"
 
 #: kcmaccess.cpp:130
 #, kde-format
 msgid "Toggle Invert Effect"
-msgstr ""
+msgstr "நிறப்புரட்டலை நிலைமாற்று"
 
 #: kcmaccess.cpp:136
 #, kde-format
 msgid "Toggle Invert Effect on Window"
-msgstr ""
+msgstr "சாளரத்திற்கான நிறப்புரட்டலை நிலைமாற்று"
 
 #: kcmaccess.cpp:178
 #, kde-format
 msgid "Move Left"
-msgstr ""
+msgstr "இடதுபக்க நகர்த்து"
 
 #: kcmaccess.cpp:185
 #, kde-format
 msgid "Move Right"
-msgstr ""
+msgstr "வலதுபக்கமாக நகர்த்து"
 
 #: kcmaccess.cpp:192
 #, kde-format
 msgid "Move Up"
-msgstr ""
+msgstr "மேலே நகர்த்து"
 
 #: kcmaccess.cpp:199
 #, kde-format
 msgid "Move Down"
-msgstr ""
+msgstr "கீழே நகர்த்து"
 
 #: kcmaccess.cpp:206
 #, kde-format
 msgid "Move Mouse to Focus"
-msgstr ""
+msgstr "குவியத்திற்கு சுட்டியை நகர்த்து"
 
 #: kcmaccess.cpp:213
 #, kde-format
 msgid "Move Mouse to Center"
-msgstr ""
+msgstr "மையத்திற்கு சுட்டியை நகர்த்து"
 
 #: kcmaccess.cpp:256
 #, kde-format
@@ -139,15 +139,13 @@ msgstr "மணியடிக்கும்போது திரையில�
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
-#, fuzzy, kde-format
-#| msgid "Color of the Visible Bell"
+#, kde-format
 msgid "Color of the Visual Bell"
 msgstr "காட்சிவழி மணியின் நிறம்"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Duration of the Visible Bell"
+#, kde-format
 msgid "Duration of the Visual Bell"
 msgstr "காட்சிவழி மணி நீடிக்கும் காலம்"
 
@@ -159,10 +157,9 @@ msgstr "நிறக்குருடு பயன்முறை இயக்�
 
 #. i18n: ectx: label, entry (Invert), group (Plugins)
 #: kcmaccessibilityinvert.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Invert effect is enabled"
-msgstr "சுட்டிக்குறியை ஆட்டுவது இயக்கப்பட்டுள்ளதா"
+msgstr "நிறப்புரட்டல் இயக்கப்பட்டுள்ளதா"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -304,17 +301,15 @@ msgstr "பெரிதாக்குவது"
 
 #. i18n: ectx: label, entry (Zoom), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Zoom effect is enabled"
-msgstr "சுட்டிக்குறியை ஆட்டுவது இயக்கப்பட்டுள்ளதா"
+msgstr "உருப்பெருக்கம் இயக்கப்பட்டுள்ளதா"
 
 #. i18n: ectx: label, entry (Magnifier), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Magnifier effect is enabled"
-msgstr "சுட்டிக்குறியை ஆட்டுவது இயக்கப்பட்டுள்ளதா"
+msgstr "உருப்பெருக்கி இயக்கப்பட்டுள்ளதா"
 
 #: ui/ActivationShortcuts.qml:18
 #, kde-format
@@ -556,12 +551,10 @@ msgstr "ஊதா"
 #, kde-format
 msgctxt "@label"
 msgid "Invert:"
-msgstr ""
+msgstr "புரட்டு:"
 
 #: ui/Invert.qml:23
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable invert effect"
 msgid "Enable"
 msgstr "இயக்கு"
@@ -571,13 +564,13 @@ msgstr "இயக்கு"
 msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr ""
+"திரையிலுள்ள அல்லது சாளரத்திலுள்ள நிறங்களை விசைச்சுருக்குவழிகளின் மூலம் புரட்டலாம்."
 
 #: ui/Invert.qml:49 ui/ZoomMagnifier.qml:321
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
-msgstr "அறிவிப்புகளை அமை…"
+msgstr "சுருக்குவழிகளை அமை…"
 
 #: ui/KeyboardFilters.qml:18
 #, kde-format
@@ -667,7 +660,7 @@ msgstr "மறுக்கப்படும்போது கணினி ம�
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Zoom & Magnifier"
-msgstr ""
+msgstr "உருப்பெருக்கமும் உருப்பெருக்கியும்"
 
 #: ui/main.qml:33
 #, kde-format
@@ -714,7 +707,7 @@ msgstr "நிறக்குருடு பயன்முறை"
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
-msgstr ""
+msgstr "புரட்டு"
 
 #: ui/main.qml:73
 #, kde-format
@@ -821,6 +814,12 @@ msgid ""
 "up). The keys <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</"
 "shortcut>, and <shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
+"<shortcut>5</shortcut> எனும் விசை சுட்டி கிளிக்காக செயல்படும். <shortcut>2</"
+"shortcut>, <shortcut>4</shortcut>, <shortcut>6</shortcut>, மற்றும் "
+"<shortcut>8</shortcut> விசைகள் கீழ், இடது, வலது மற்றும் மேல் திசைகளில் சுட்டிக்குறியை "
+"நகர்த்தும். <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</"
+"shortcut>, மற்றும் <shortcut>9</shortcut> விசைகள், குறுக்காக சுட்டிக்குறியை "
+"நகர்த்தும்."
 
 #: ui/MouseNavigation.qml:39
 #, kde-format
@@ -910,21 +909,19 @@ msgstr "பெரியது"
 #, kde-format
 msgctxt "@label, followed by 'full screen' or 'magnify region'"
 msgid "Zoom:"
-msgstr ""
+msgstr "உருப்பெருக்கம்:"
 
 #: ui/ZoomMagnifier.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Flash screen when a system bell is rung"
-#| msgid "Flash screen"
+#, kde-format
 msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
 msgid "Full screen"
-msgstr "திரையை மின்னச்செய்"
+msgstr "முழுத்திரை"
 
 #: ui/ZoomMagnifier.qml:53
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Show pixel grid at zoom level:"
-msgstr ""
+msgstr "இந்த உருப்பெருக்க விகிதத்திற்கு மேல் பிக்செல்களை கோடிட்டு குறி"
 
 #: ui/ZoomMagnifier.qml:85
 #, kde-format
@@ -936,19 +933,19 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scale"
-msgstr ""
+msgstr "அளவு"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Keep"
-msgstr ""
+msgstr "வைத்திரு"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Hide"
-msgstr ""
+msgstr "மறை"
 
 #: ui/ZoomMagnifier.qml:98
 #, kde-format
@@ -960,69 +957,67 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
-msgstr ""
+msgstr "ஒரே விகிதத்தில்"
 
 #: ui/ZoomMagnifier.qml:100
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
-msgstr ""
+msgstr "நடுப்படுத்து"
 
 #: ui/ZoomMagnifier.qml:100
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
-msgstr ""
+msgstr "தள்ளுவது போல்"
 
 #: ui/ZoomMagnifier.qml:100
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
-msgstr ""
+msgstr "முடக்கு"
 
 #: ui/ZoomMagnifier.qml:111
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable focus tracking"
-msgstr ""
+msgstr "குவியத்தைப் பின்தொடர்"
 
 #: ui/ZoomMagnifier.qml:123
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
-msgstr ""
+msgstr "இடஞ்சுட்டியைப் பின்தொடர்"
 
 #: ui/ZoomMagnifier.qml:134
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
-msgstr ""
+msgstr "உருள்வதற்கான மாற்றிவிசைகள்:"
 
 #: ui/ZoomMagnifier.qml:172
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
-msgstr ""
+msgstr "உருள்வதற்கான சைகைகளை Wayland-இல் மட்டும்தான பயன்படுத்த முடியும்."
 
 #: ui/ZoomMagnifier.qml:178
-#, fuzzy, kde-format
-#| msgid "Ring system bell when modifier keys are used"
+#, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
-msgstr "மாற்றி விசைகள் பயன்படுத்தப்படும்போது கணினி மணியை ஒலிக்கச்செய்"
+msgstr "மாற்றிவிசையை அழுத்தியபடியே உருள்வது உருப்பெருக்க விகிதத்தை மாற்றும்"
 
 #: ui/ZoomMagnifier.qml:190
-#, fuzzy, kde-format
-#| msgid "Magnification"
+#, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
-msgstr "பெரிதாக்குவது"
+msgstr "உருப்பெருக்கும் பரப்பளவு"
 
 #: ui/ZoomMagnifier.qml:217
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
-msgstr ""
+msgstr "அகலம்:"
 
 #: ui/ZoomMagnifier.qml:228 ui/ZoomMagnifier.qml:253
 #, kde-format
@@ -1042,26 +1037,25 @@ msgstr ""
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
-msgstr ""
+msgstr "உயரம்:"
 
 #: ui/ZoomMagnifier.qml:271
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
-msgstr ""
+msgstr "முடக்கு"
 
 #: ui/ZoomMagnifier.qml:284
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
-msgstr ""
+msgstr "உருப்பெருக்க விகிதம்:"
 
 #: ui/ZoomMagnifier.qml:331
-#, fuzzy, kde-format
-#| msgid "Use keys to control the mouse"
+#, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
-msgstr "சுட்டியை இயக்க விசைகளை பயன்படுத்து"
+msgstr "உருப்பெருக்கத்தை கட்டுப்படுத்த சுருக்குவழிகளைப் பயன்படுத்தவும்"
 
 #~ msgid "AltGraph"
 #~ msgstr "AltGraph"
