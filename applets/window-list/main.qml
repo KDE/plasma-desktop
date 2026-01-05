@@ -13,12 +13,13 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
-import org.kde.kitemmodels as KItemModels
 
 import org.kde.taskmanager as TaskManager
 
 PlasmoidItem {
     id: root
+
+    property string activeTaskName: ""
 
     Plasmoid.constraintHints: Plasmoid.CanFillArea
     compactRepresentation: windowListButton
@@ -206,13 +207,21 @@ PlasmoidItem {
             Layout.fillHeight: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
             Layout.fillWidth: Plasmoid.formFactor === PlasmaCore.Types.Vertical
 
-            onClicked: tasksMenu.openRelative()
-            down: pressed || tasksMenu.status === PlasmaExtras.Menu.Open
+            onClicked: {
+                if (tasksModel.activeTask.valid) {
+                    root.activeTaskName = tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.AppName) ||
+                       tasksModel.data(tasksModel.activeTask, 0 /* display name, window title if app name not present */)
+                }
+                root.expanded = !root.expanded
+            }
+            down: pressed || root.expanded
 
             Accessible.name: Plasmoid.title
             Accessible.description: root.toolTipSubText
 
-            text: if (tasksModel.activeTask.valid) {
+            text: if (root.expanded && root.activeTaskName !== "") {
+                return root.activeTaskName
+            } else if (tasksModel.activeTask.valid) {
                 return tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.AppName) ||
                        tasksModel.data(tasksModel.activeTask, 0 /* display name, window title if app name not present */)
             } else {
@@ -225,52 +234,24 @@ PlasmoidItem {
                 return "start-here-kde-symbolic"
             }
 
-            PlasmaExtras.ModelContextMenu {
-                id: tasksMenu
-                visualParent: menuButton
-
-                placement: {
-                   if (Plasmoid.location === PlasmaCore.Types.LeftEdge) {
-                       return PlasmaExtras.Menu.RightPosedTopAlignedPopup
-                   } else if (Plasmoid.location === PlasmaCore.Types.TopEdge) {
-                       return PlasmaExtras.Menu.BottomPosedLeftAlignedPopup
-                   } else if (Plasmoid.location === PlasmaCore.Types.RightEdge) {
-                       return PlasmaExtras.Menu.LeftPosedTopAlignedPopup
-                   } else {
-                       return PlasmaExtras.Menu.TopPosedLeftAlignedPopup
-                   }
-                }
-
-                property ListModel noWindowModel: ListModel {
-                    ListElement {
-                        display: "" // filled by Component.onCompleted
-                        decoration: "edit-none"
-                    }
-                    Component.onCompleted: tasksMenu.noWindowModel.setProperty(0, "display", i18nc("@info:placeholder", "No open windows"))
-                }
-
-                model: tasksModel.count === 0 ? noWindowModel : tasksModel
-                onClicked: (model) => {
-                    if (tasksModel.count > 0) {
-                        tasksModel.requestActivate(tasksModel.makeModelIndex(model.index));
-                    }
-                }
-            }
-
             Timer {
                 id: hoverOpenTimer
                 interval: Plasmoid?.configuration?.hoverOpenDelay ?? 300
                 repeat: false
                 onTriggered: {
-                    if (tasksMenu?.status === PlasmaExtras.Menu.Closed) {
-                        tasksMenu.openRelative()
-                    }
+                    root.expanded = true
                 }
             }
 
             onHoveredChanged: {
-                if (hovered && Plasmoid.configuration.openOnHover) {
-                    hoverOpenTimer.start()
+                if (hovered) {
+                    if (tasksModel.activeTask.valid) {
+                        root.activeTaskName = tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.AppName) ||
+                       tasksModel.data(tasksModel.activeTask, 0 /* display name, window title if app name not present */)
+                    }
+                    if (Plasmoid.configuration.openOnHover) {
+                        hoverOpenTimer.start()
+                    }
                 } else {
                     hoverOpenTimer.stop()
                 }
