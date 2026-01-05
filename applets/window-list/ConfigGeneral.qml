@@ -12,6 +12,7 @@ import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
+import org.kde.taskmanager as TaskManager
 
 KCM.SimpleKCM {
     id: root
@@ -20,6 +21,7 @@ KCM.SimpleKCM {
     property bool cfg_showIcon: Plasmoid.configuration.showIcon
     property alias cfg_openOnHover: openOnHoverCheckbox.checked
     property alias cfg_hoverOpenDelay: hoverDelaySpinBox.value
+    property int cfg_sortingStrategy
     property alias cfg_showOnlyCurrentScreen: showOnlyCurrentScreen.checked
     property alias cfg_showOnlyCurrentDesktop: showOnlyCurrentDesktop.checked
     property alias cfg_showOnlyCurrentActivity: showOnlyCurrentActivity.checked
@@ -158,6 +160,54 @@ KCM.SimpleKCM {
         QQC2.CheckBox {
             id: showOnlyMinimized
             text: i18nc("@option:check completes sentence: show only windows", "That are minimized")
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+        QQC2.ComboBox {
+            id: sortingStrategy
+            Kirigami.FormData.label: i18nc("@label:listbox sort windows is list", "Sort:")
+            Layout.fillWidth: true
+            Layout.minimumWidth: Kirigami.Units.gridUnit * 14
+            textRole: "text"
+            valueRole: "value"
+            model: [
+                {
+                    "text": i18nc("@item:inlistbox sort windows in list", "Do not sort"),
+                    "value": TaskManager.TasksModel.SortDisabled,
+                    "index": 0
+                },
+                // Unused manual sorting option omitted
+                {
+                    "text": i18nc("@item:inlistbox sort windows in list", "Alphabetically"),
+                    "value": TaskManager.TasksModel.SortAlpha,
+                    "index": 2
+                },
+                {
+                    "text": i18nc("@item:inlistbox sort windows in list", "By desktop"),
+                    "value": TaskManager.TasksModel.SortVirtualDesktop,
+                    "index": 3
+                },
+                {
+                    "text": i18nc("@item:inlistbox sort windows in list", "By activity"),
+                    "value": TaskManager.TasksModel.SortActivity,
+                    "index": 4
+                },
+                {
+                    "text": i18nc("@item:inlistbox sort windows in list", "By last activated time"),
+                    "value": TaskManager.TasksModel.SortLastActivated,
+                    "index": 5
+                },
+                {
+                    "text": i18nc("@item:inlistbox sort windows in list", "By horizontal window position"),
+                    "value": TaskManager.TasksModel.SortWindowPositionHorizontal,
+                    "index": 6
+                },
+            ]
+            onActivated: root.cfg_sortingStrategy = currentValue
+            Component.onCompleted: currentIndex = indexOfValue(root.cfg_sortingStrategy)
         }
     }
 }
