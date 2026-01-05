@@ -38,6 +38,19 @@
       <label>Delay in milliseconds before opening the window list popup when hovering over the applet</label>
       <default>300</default>
     </entry>
+    <entry name="sortingStrategy" type="Enum">
+    <label>Values from TaskManager::TasksModel::SortMode</label>
+      <choices name="TaskManager.TasksModel">
+        <choice name="SortDisabled"/>
+        <choice name="SortManual"/>
+        <choice name="SortAlpha"/>
+        <choice name="SortVirtualDesktop"/>
+        <choice name="SortActivity"/>
+        <choice name="SortLastActivated"/>
+        <choice name="SortWindowPositionHorizontal"/>
+      </choices>
+      <default>3</default>
+    </entry>
   </group>
 
 </kcfg>

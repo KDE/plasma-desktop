@@ -13,6 +13,7 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
+import org.kde.kitemmodels as KItemModels
 
 import org.kde.taskmanager as TaskManager
 
@@ -41,7 +42,7 @@ PlasmoidItem {
         screenGeometry: Plasmoid.containment.screenGeometry
         activity: activityInfo.currentActivity
 
-        sortMode: TaskManager.TasksModel.SortVirtualDesktop
+        sortMode: Plasmoid.configuration.sortingStrategy
         groupMode: TaskManager.TasksModel.GroupDisabled
 
         filterByVirtualDesktop: Plasmoid.configuration.showOnlyCurrentDesktop
@@ -101,6 +102,32 @@ PlasmoidItem {
 
             Keys.onBacktabPressed: {
                 decrementCurrentIndex();
+            }
+
+            section {
+                property: switch (Plasmoid.configuration.sortingStrategy) {
+                    case TaskManager.TasksModel.SortVirtualDesktop:
+                        return "VirtualDesktops"; // AbstractTasksModel::AdditionalRoles::VirtualDesktops
+                    case TaskManager.TasksModel.SortActivity:
+                        return "Activities";  // AbstractTasksModel::AdditionalRoles::Activities
+                    default:
+                        return "";
+                }
+                delegate: Kirigami.ListSectionHeader {
+                    required property var section
+                    width: windowListView.width
+                    text: {
+                        switch (Plasmoid.configuration.sortingStrategy) {
+                        case TaskManager.TasksModel.SortVirtualDesktop:
+                            // Section contains the virtual desktop id. In case the application is on multiple desktops, it is empty.
+                            return section ? virtualDesktopInfo.desktopNames[virtualDesktopInfo.desktopIds.indexOf(section)] : "";
+                        case TaskManager.TasksModel.SortActivity:
+                            // Section contains the activity id. In case the application is on multiple activities, it is empty.
+                            return section ? activityInfo.activityName(section) : "";
+                        }
+                        return "";
+                    }
+                }
             }
 
             delegate: PlasmaComponents.ItemDelegate {
