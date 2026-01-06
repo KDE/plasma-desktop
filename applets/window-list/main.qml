@@ -44,34 +44,13 @@ PlasmoidItem {
         screenGeometry: Plasmoid.containment.screenGeometry
         activity: activityInfo.currentActivity
 
-        sortMode: sortModeEnumValue(Plasmoid.configuration.sortingStrategy)
+        sortMode: Plasmoid.configuration.sortingStrategy
         groupMode: TaskManager.TasksModel.GroupDisabled
 
         filterByVirtualDesktop: Plasmoid.configuration.showOnlyCurrentDesktop
         filterByScreen: Plasmoid.configuration.showOnlyCurrentScreen
         filterByActivity: Plasmoid.configuration.showOnlyCurrentActivity
         filterNotMinimized: Plasmoid.configuration.showOnlyMinimized
-
-        function sortModeEnumValue(index: int): /*TaskManager.TasksModel.SortMode*/ int {
-            switch (index) {
-            case 0:
-                return TaskManager.TasksModel.SortDisabled;
-            case 1: // Unused
-                return TaskManager.TasksModel.SortManual; 
-            case 2:
-                return TaskManager.TasksModel.SortAlpha;
-            case 3:
-                return TaskManager.TasksModel.SortVirtualDesktop;
-            case 4:
-                return TaskManager.TasksModel.SortActivity;
-            case 5:
-                return TaskManager.TasksModel.SortLastActivated;
-            case 6:
-                return TaskManager.TasksModel.SortWindowPositionHorizontal;
-            default:
-                return TaskManager.TasksModel.SortDisabled;
-            }
-        }
     }
 
     Component {
@@ -139,9 +118,9 @@ PlasmoidItem {
 
             section {
                 property: switch (Plasmoid.configuration.sortingStrategy) {
-                    case 3:
+                    case TaskManager.TasksModel.SortVirtualDesktop:
                         return "VirtualDesktops"; // AbstractTasksModel::AdditionalRoles::VirtualDesktops
-                    case 4:
+                    case TaskManager.TasksModel.SortActivity:
                         return "Activities";  // AbstractTasksModel::AdditionalRoles::Activities
                     default:
                         return "";
@@ -151,10 +130,10 @@ PlasmoidItem {
                     width: windowListView.width
                     text: {
                         switch (Plasmoid.configuration.sortingStrategy) {
-                        case 3:
+                        case TaskManager.TasksModel.SortVirtualDesktop:
                             // Section contains the virtual desktop id. In case the application is on multiple desktops, it is empty.
                             return section ? virtualDesktopInfo.desktopNames[virtualDesktopInfo.desktopIds.indexOf(section)] : "";
-                        case 4:
+                        case TaskManager.TasksModel.SortActivity:
                             // Section contains the activity id. In case the application is on multiple activities, it is empty.
                             return section ? activityInfo.activityName(section) : "";
                         }
