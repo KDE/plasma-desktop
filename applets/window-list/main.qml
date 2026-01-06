@@ -152,17 +152,11 @@ PlasmoidItem {
                     text: {
                         switch (Plasmoid.configuration.sortingStrategy) {
                         case 3:
-                            if (section) {
-                                const idx = virtualDesktopInfo.desktopIds.indexOf(section);
-                                return idx !== -1 ? virtualDesktopInfo.desktopNames[idx] : i18n("Desktop %1", section);
-                            }
-                            break;
+                            // Section contains the virtual desktop id. In case the application is on multiple desktops, it is empty.
+                            return section ? virtualDesktopInfo.desktopNames[virtualDesktopInfo.desktopIds.indexOf(section)] : "";
                         case 4:
-                            if (section && section !== activityInfo.nullUuid) {
-                                const activityName = activityInfo.activityName(section);
-                                return activityName || section;
-                            }
-                            break;
+                            // Section contains the activity id. In case the application is on multiple activities, it is empty.
+                            return section ? activityInfo.activityName(section) : "";
                         }
                         return "";
                     }
