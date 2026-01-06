@@ -21,7 +21,7 @@ KCM.SimpleKCM {
     property bool cfg_showIcon: Plasmoid.configuration.showIcon
     property alias cfg_openOnHover: openOnHoverCheckbox.checked
     property alias cfg_hoverOpenDelay: hoverDelaySpinBox.value
-    property int cfg_sortingStrategy
+    property int cfg_sortingStrategy: Plasmoid.configuration.sortingStrategy
     property alias cfg_showOnlyCurrentScreen: showOnlyCurrentScreen.checked
     property alias cfg_showOnlyCurrentDesktop: showOnlyCurrentDesktop.checked
     property alias cfg_showOnlyCurrentActivity: showOnlyCurrentActivity.checked
@@ -176,35 +176,28 @@ KCM.SimpleKCM {
             model: [
                 {
                     "text": i18nc("@item:inlistbox sort windows in list", "Do not sort"),
-                    "value": TaskManager.TasksModel.SortDisabled,
-                    "index": 0
+                    "value": TaskManager.TasksModel.SortDisabled
                 },
-                // Unused manual sorting option omitted
                 {
                     "text": i18nc("@item:inlistbox sort windows in list", "Alphabetically"),
-                    "value": TaskManager.TasksModel.SortAlpha,
-                    "index": 2
+                    "value": TaskManager.TasksModel.SortAlpha
                 },
                 {
                     "text": i18nc("@item:inlistbox sort windows in list", "By desktop"),
-                    "value": TaskManager.TasksModel.SortVirtualDesktop,
-                    "index": 3
+                    "value": TaskManager.TasksModel.SortVirtualDesktop
                 },
                 {
                     "text": i18nc("@item:inlistbox sort windows in list", "By activity"),
-                    "value": TaskManager.TasksModel.SortActivity,
-                    "index": 4
+                    "value": TaskManager.TasksModel.SortActivity
                 },
                 {
                     "text": i18nc("@item:inlistbox sort windows in list", "By last activated time"),
-                    "value": TaskManager.TasksModel.SortLastActivated,
-                    "index": 5
+                    "value": TaskManager.TasksModel.SortLastActivated
                 },
                 {
                     "text": i18nc("@item:inlistbox sort windows in list", "By horizontal window position"),
-                    "value": TaskManager.TasksModel.SortWindowPositionHorizontal,
-                    "index": 6
-                },
+                    "value": TaskManager.TasksModel.SortWindowPositionHorizontal
+                }
             ]
             onActivated: root.cfg_sortingStrategy = currentValue
             Component.onCompleted: currentIndex = indexOfValue(root.cfg_sortingStrategy)
