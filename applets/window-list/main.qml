@@ -20,6 +20,7 @@ PlasmoidItem {
     id: root
 
     property string activeTaskName: ""
+    property var activeTaskIcon: ""
 
     Plasmoid.constraintHints: Plasmoid.CanFillArea
     compactRepresentation: windowListButton
@@ -68,6 +69,16 @@ PlasmoidItem {
                 function onExpandedChanged(expanded) {
                     if (expanded) {
                         windowListView.currentIndex = -1
+
+                        // Needed for when for expanded with Global Shortcut
+                        if (tasksModel.activeTask.valid) {
+                            root.activeTaskName = tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.AppName) ||
+                            tasksModel.data(tasksModel.activeTask, 0 /* display name, window title if app name not present */)
+                            root.activeTaskIcon = tasksModel.data(tasksModel.activeTask, 1 /* decorationrole */)
+                        } else {
+                            root.activeTaskName = ""
+                            root.activeTaskIcon = ""
+                        }
                     }
                 }
             }
@@ -211,6 +222,7 @@ PlasmoidItem {
                 if (tasksModel.activeTask.valid) {
                     root.activeTaskName = tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.AppName) ||
                        tasksModel.data(tasksModel.activeTask, 0 /* display name, window title if app name not present */)
+                    root.activeTaskIcon = tasksModel.data(tasksModel.activeTask, 1 /* decorationrole */)
                 }
                 root.expanded = !root.expanded
             }
@@ -228,7 +240,9 @@ PlasmoidItem {
                 return i18nc("@title:window title shown e.g. for desktop and expanded widgets", "Plasma Desktop")
             }
 
-            iconSource: if (tasksModel.activeTask.valid) {
+            iconSource: if (expanded && root.activeTaskIcon) {
+                return root.activeTaskIcon
+            } else if (tasksModel.activeTask.valid) {
                 return tasksModel.data(tasksModel.activeTask, 1 /* decorationrole */)
             } else {
                 return "start-here-kde-symbolic"
@@ -248,6 +262,7 @@ PlasmoidItem {
                     if (tasksModel.activeTask.valid) {
                         root.activeTaskName = tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.AppName) ||
                        tasksModel.data(tasksModel.activeTask, 0 /* display name, window title if app name not present */)
+                       root.activeTaskIcon = tasksModel.data(tasksModel.activeTask, 1 /* decorationrole */)
                     }
                     if (Plasmoid.configuration.openOnHover) {
                         hoverOpenTimer.start()
