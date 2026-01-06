@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-04 00:46+0000\n"
-"PO-Revision-Date: 2025-12-23 14:16+0200\n"
+"PO-Revision-Date: 2026-01-04 08:29+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -304,8 +304,7 @@ msgstr "הפעלת קורא מסך"
 
 #. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
 #: kcmaccessibilityshakecursor.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether Shake Pointer is enabled"
 msgstr "האם ניעור סמן פעיל"
 
@@ -751,9 +750,7 @@ msgid "Invert"
 msgstr "היפוך"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "Shake cursor to find it"
-#| msgid "Shake Cursor"
+#, kde-format
 msgctxt "Shake pointer to find it"
 msgid "Shake Pointer"
 msgstr "ניעור סמן"
@@ -836,9 +833,7 @@ msgid "Configure Notifications…"
 msgstr "הגדרת התראות…"
 
 #: ui/MouseNavigation.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move pointer:"
 msgstr "שימוש בלוח המספרים כדי להזיז את הסמן:"
@@ -920,44 +915,34 @@ msgid "Launch Orca Screen Reader Configuration…"
 msgstr "הפעלת ההגדרות של קורא המסך Orca…"
 
 #: ui/ShakeCursor.qml:15
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Shake cursor to find it:"
+#, kde-format
 msgctxt "@label"
 msgid "Shake pointer to find it:"
 msgstr "ניעור הסמן לאיתורו:"
 
 #: ui/ShakeCursor.qml:16
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable shake pointer effect"
 msgid "Enable"
-msgstr "הפעלה"
+msgstr "פעיל"
 
 #: ui/ShakeCursor.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@label Cursor magnification level"
-#| msgid "Magnification:"
+#, kde-format
 msgctxt "@label Pointer magnification level"
 msgid "Magnification:"
 msgstr "הגדלה:"
 
 #: ui/ShakeCursor.qml:55
-#, fuzzy, kde-format
-#| msgctxt "@label Normal cursor size"
-#| msgid "Normal"
+#, kde-format
 msgctxt "@label Normal pointer size"
 msgid "Normal"
-msgstr "רגיל"
+msgstr "רגילה"
 
 #: ui/ShakeCursor.qml:62
-#, fuzzy, kde-format
-#| msgctxt "@label Large cursor size"
-#| msgid "Large"
+#, kde-format
 msgctxt "@label Large pointer size"
 msgid "Large"
-msgstr "גדול"
+msgstr "גדולה"
 
 #: ui/ZoomMagnifier.qml:22
 #, kde-format
@@ -978,12 +963,10 @@ msgid "Show pixel grid at zoom level:"
 msgstr "הצגת רשת פיקסלים ברמת תקריב:"
 
 #: ui/ZoomMagnifier.qml:85
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer appearance:"
-msgstr "האצת סמן:"
+msgstr "הופעת סמן:"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
@@ -1004,12 +987,10 @@ msgid "Hide"
 msgstr "להסתיר"
 
 #: ui/ZoomMagnifier.qml:123
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox"
-#| msgid "Mouse tracking:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer tracking:"
-msgstr "מעקב עכבר:"
+msgstr "מעקב סמן:"
 
 #: ui/ZoomMagnifier.qml:128
 #, kde-format
@@ -1018,12 +999,10 @@ msgid "Proportional"
 msgstr "יחסי"
 
 #: ui/ZoomMagnifier.qml:129
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Zoom area moves in sync with mouse cursor"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with pointer"
-msgstr "אזור התקריב זז בתיאום עם סמן העכבר"
+msgstr "אזור התקריב זז בתיאום עם הסמן"
 
 #: ui/ZoomMagnifier.qml:133
 #, kde-format
@@ -1032,12 +1011,10 @@ msgid "Centered"
 msgstr "ממורכז"
 
 #: ui/ZoomMagnifier.qml:134
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Mouse cursor stays centered on-screen, except near screen edges"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, except near screen edges"
-msgstr "סמן העכבר נשאר ממורכז במסך, למעט סביב קצוות המסך"
+msgstr "הסמן נשאר ממורכז במסך, למעט סביב קצוות המסך"
 
 #: ui/ZoomMagnifier.qml:138
 #, kde-format
@@ -1046,12 +1023,10 @@ msgid "Centered (Strict)"
 msgstr "ממורכז (קפדני)"
 
 #: ui/ZoomMagnifier.qml:139
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Mouse cursor stays centered on-screen, even near screen edges"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, even near screen edges"
-msgstr "סמן העכבר נשאר ממורכז במסך, אפילו סביב קצוות המסך"
+msgstr "הסמן נשאר ממורכז במסך, אפילו סביב קצוות המסך"
 
 #: ui/ZoomMagnifier.qml:143
 #, kde-format
@@ -1060,12 +1035,10 @@ msgid "Push"
 msgstr "דחיפה"
 
 #: ui/ZoomMagnifier.qml:144
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Mouse cursor pushes zoom area at screen edges"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer pushes zoom area at screen edges"
-msgstr "סמן העכבר דוחף את אזור התקריב ליד קצוות המסך"
+msgstr "הסמן דוחף את אזור התקריב לעבר קצוות המסך"
 
 #: ui/ZoomMagnifier.qml:148
 #, kde-format
@@ -1074,12 +1047,10 @@ msgid "Disabled"
 msgstr "מושבת"
 
 #: ui/ZoomMagnifier.qml:149
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Zoom area doesn't follow mouse cursor"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow pointer"
-msgstr "אזור התקריב לא עוקב אחר סמן העכבר"
+msgstr "אזור התקריב לא עוקב אחר הסמן"
 
 #: ui/ZoomMagnifier.qml:166
 #, kde-format
