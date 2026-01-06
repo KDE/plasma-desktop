@@ -223,7 +223,7 @@ PlasmoidItem {
                     root.activeTaskName = tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.AppName) ||
                        tasksModel.data(tasksModel.activeTask, 0 /* display name, window title if app name not present */)
                     root.activeTaskIcon = tasksModel.data(tasksModel.activeTask, 1 /* decorationrole */)
-z                }
+                }
                 root.expanded = !root.expanded
             }
             down: pressed || root.expanded
