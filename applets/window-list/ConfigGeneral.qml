@@ -166,37 +166,68 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: true
         }
 
+        
+        Component {
+            id: sortingStrategyDelegate
+
+            QQC2.ItemDelegate {
+                id: delegate
+
+                required property string title
+                required property string description
+
+                width: parent?.width ?? 0
+
+                text: delegate.title
+
+                contentItem: Kirigami.TitleSubtitle {
+                    title: delegate.title
+                    subtitle: delegate.description
+                    font: delegate.font
+                    selected: delegate.highlighted || delegate.down
+                    wrapMode: Text.Wrap
+                }
+            }
+        }
+
         QQC2.ComboBox {
             id: sortingStrategy
             Kirigami.FormData.label: i18nc("@label:listbox sort windows is list", "Sort:")
             Layout.fillWidth: true
             Layout.minimumWidth: Kirigami.Units.gridUnit * 14
-            textRole: "text"
+            textRole: "title"
             valueRole: "value"
+            delegate: sortingStrategyDelegate
             model: [
                 {
-                    "text": i18nc("@item:inlistbox sort windows in list", "By time opened"),
-                    "value": TaskManager.TasksModel.SortDisabled
+                    title: i18nc("@item:inlistbox sort windows in list", "None"),
+                    description: i18nc("@item:inlistbox sort windows in list", "Windows appear in their natural order as they are created. No sorting is applied."),
+                    value: TaskManager.TasksModel.SortDisabled
                 },
                 {
-                    "text": i18nc("@item:inlistbox sort windows in list", "Alphabetically"),
-                    "value": TaskManager.TasksModel.SortAlpha
+                    title: i18nc("@item:inlistbox sort windows in list", "Alphabetically"),
+                    description: i18nc("@item:inlistbox sort windows in list", "Windows are sorted by their Application Title alphabetically."),
+                    value: TaskManager.TasksModel.SortAlpha
                 },
                 {
-                    "text": i18nc("@item:inlistbox sort windows in list", "Alphabetically, grouped by virtual desktop"),
-                    "value": TaskManager.TasksModel.SortVirtualDesktop
+                    title: i18nc("@item:inlistbox sort windows in list", "By desktop"),
+                    description: i18nc("@item:inlistbox sort windows in list", "Windows are grouped by Virtual Desktop. Virtual Desktop Name is shown in the as a group header in list."),
+                    value: TaskManager.TasksModel.SortVirtualDesktop
                 },
                 {
-                    "text": i18nc("@item:inlistbox sort windows in list", "Alphabetically, grouped by activity"),
-                    "value": TaskManager.TasksModel.SortActivity
+                    title: i18nc("@item:inlistbox sort windows in list", "By activity"),
+                    description: i18nc("@item:inlistbox sort windows in list", "Windows are grouped by Activity. Activity Name is shown in the as a group header in list."),
+                    value: TaskManager.TasksModel.SortActivity
                 },
                 {
-                    "text": i18nc("@item:inlistbox sort windows in list", "By last activated time"),
-                    "value": TaskManager.TasksModel.SortLastActivated
+                    title: i18nc("@item:inlistbox sort windows in list", "By last activated"),
+                    description: i18nc("@item:inlistbox sort windows in list", "Windows are sorted by most recently used. The last activated window appears first."),
+                    value: TaskManager.TasksModel.SortLastActivated
                 },
                 {
-                    "text": i18nc("@item:inlistbox sort windows in list", "By horizontal window position"),
-                    "value": TaskManager.TasksModel.SortWindowPositionHorizontal
+                    title: i18nc("@item:inlistbox sort windows in list", "By position"),
+                    description: i18nc("@item:inlistbox sort windows in list", "Windows are sorted by their horizontal screen position. Leftmost window appears first."),
+                    value: TaskManager.TasksModel.SortWindowPositionHorizontal
                 }
             ]
             onActivated: root.cfg_sortingStrategy = currentValue
