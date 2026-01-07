@@ -183,11 +183,11 @@ KCM.SimpleKCM {
                     "value": TaskManager.TasksModel.SortAlpha
                 },
                 {
-                    "text": i18nc("@item:inlistbox sort windows in list", "By desktop"),
+                    "text": i18nc("@item:inlistbox sort windows in list", "Alphabetically, grouped by virtual desktop"),
                     "value": TaskManager.TasksModel.SortVirtualDesktop
                 },
                 {
-                    "text": i18nc("@item:inlistbox sort windows in list", "By activity"),
+                    "text": i18nc("@item:inlistbox sort windows in list", "Alphabetically, grouped by activity"),
                     "value": TaskManager.TasksModel.SortActivity
                 },
                 {
