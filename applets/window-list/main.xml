@@ -51,6 +51,19 @@
       </choices>
       <default code="true">TaskManager::TasksModel::SortVirtualDesktop</default>
     </entry>
+    <entry name="widthStrategy" type="Enum">
+      <label>Width strategy for window list applet when added to a panel and showText is true</label>
+      <choices name="Globals.WidthStrategy">
+        <choice name="Automatic"/>
+        <choice name="Fixed"/>
+        <choice name="FixedMaximum"/>
+      </choices>
+      <default code="true">Globals.WidthStrategy.Automatic</default>
+    </entry>
+    <entry name="width" type="Int">
+      <label>Width of window list applet when widthStrategy is set to 1 and maximum width when widthStrategy is set to 2. The value is in multiples of Kirigami.Units.gridUnit</label>
+      <default>15</default>
+    </entry>
   </group>
 
 </kcfg>

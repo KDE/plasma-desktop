@@ -1,5 +1,6 @@
 /*
  *  SPDX-FileCopyrightText: 2022 Nate Graham <nate@kde.org>
+ *  SPDX-FileCopyrightText: 2025 Shubham Arora <contact@shubhamarora.dev>
  *
  *  SPDX-License-Identifier: GPL-2.0-or-later
  */
@@ -26,6 +27,8 @@ KCM.SimpleKCM {
     property alias cfg_showOnlyCurrentDesktop: showOnlyCurrentDesktop.checked
     property alias cfg_showOnlyCurrentActivity: showOnlyCurrentActivity.checked
     property alias cfg_showOnlyMinimized: showOnlyMinimized.checked
+    property int cfg_widthStrategy: Plasmoid.configuration.widthStrategy
+    property alias cfg_width: widthSpinBox.value
 
     Kirigami.FormLayout {
         anchors.right: parent.right
@@ -80,9 +83,10 @@ KCM.SimpleKCM {
 
         QQC2.Label {
             Layout.fillWidth: true
-            // Arbitrary maximum length to make it wrap earlier, because long
-            // unwrapped text is ugly and harder to read.
-            Layout.maximumWidth: Kirigami.Units.gridUnit * 25
+            // Maximum length to make it wrap earlier, because long unwrapped text is ugly
+            // and harder to read. Keet same as combo box above otherwise there is a 
+            // jump in width on text change.
+            Layout.maximumWidth: Kirigami.Units.gridUnit * 14
 
             visible: !displayModeComboBox.enabled
         
@@ -166,9 +170,45 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: true
         }
 
-        
+        QQC2.ComboBox {
+            id: sortingStrategy
+            Kirigami.FormData.label: i18nc("@label:listbox sort windows is list", "Sort:")
+            Layout.fillWidth: true
+            Layout.minimumWidth: Kirigami.Units.gridUnit * 14
+            textRole: "text"
+            valueRole: "value"
+            model: [
+                {
+                    "text": i18nc("@item:inlistbox sort windows in list", "By time opened"),
+                    "value": TaskManager.TasksModel.SortDisabled
+                },
+                {
+                    "text": i18nc("@item:inlistbox sort windows in list", "Alphabetically"),
+                    "value": TaskManager.TasksModel.SortAlpha
+                },
+                {
+                    "text": i18nc("@item:inlistbox sort windows in list", "Alphabetically, grouped by virtual desktop"),
+                    "value": TaskManager.TasksModel.SortVirtualDesktop
+                },
+                {
+                    "text": i18nc("@item:inlistbox sort windows in list", "Alphabetically, grouped by activity"),
+                    "value": TaskManager.TasksModel.SortActivity
+                },
+                {
+                    "text": i18nc("@item:inlistbox sort windows in list", "By last activated time"),
+                    "value": TaskManager.TasksModel.SortLastActivated
+                },
+                {
+                    "text": i18nc("@item:inlistbox sort windows in list", "By horizontal window position"),
+                    "value": TaskManager.TasksModel.SortWindowPositionHorizontal
+                }
+            ]
+            onActivated: root.cfg_sortingStrategy = currentValue
+            Component.onCompleted: currentIndex = indexOfValue(root.cfg_sortingStrategy)
+        }
+
         Component {
-            id: sortingStrategyDelegate
+            id: listItemDelegate
 
             QQC2.ItemDelegate {
                 id: delegate
@@ -190,49 +230,111 @@ KCM.SimpleKCM {
             }
         }
 
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
         QQC2.ComboBox {
-            id: sortingStrategy
-            Kirigami.FormData.label: i18nc("@label:listbox sort windows is list", "Sort:")
+            id: widthStrategyComboBox
+            Kirigami.FormData.label: i18nc("@label:listbox", "Width mode:")
             Layout.fillWidth: true
             Layout.minimumWidth: Kirigami.Units.gridUnit * 14
             textRole: "title"
             valueRole: "value"
-            delegate: sortingStrategyDelegate
+            delegate: listItemDelegate
+
+            enabled: Plasmoid.formFactor === PlasmaCore.Types.Horizontal && root.cfg_showText === true
             model: [
                 {
-                    title: i18nc("@item:inlistbox sort windows in list", "None"),
-                    description: i18nc("@item:inlistbox sort windows in list", "Windows appear in their natural order as they are created. No sorting is applied."),
-                    value: TaskManager.TasksModel.SortDisabled
+                    title: i18nc("@item:inlistbox width strategy for window list widget", "Automatic"),
+                    description: i18nc("@item:inlistbox width strategy for window list widget", "Widget width is based on content, expanding and contracting as needed."),
+                    value: Globals.WidthStrategy.Automatic
                 },
                 {
-                    title: i18nc("@item:inlistbox sort windows in list", "Alphabetically"),
-                    description: i18nc("@item:inlistbox sort windows in list", "Windows are sorted by their Application Title alphabetically."),
-                    value: TaskManager.TasksModel.SortAlpha
+                    title: i18nc("@item:inlistbox width strategy for window list widget", "Fixed"),
+                    description: i18nc("@item:inlistbox width strategy for window list widget", "Widget has a fixed width, and text is elided if it does not fit."),
+                    value: Globals.WidthStrategy.Fixed
                 },
                 {
-                    title: i18nc("@item:inlistbox sort windows in list", "By desktop"),
-                    description: i18nc("@item:inlistbox sort windows in list", "Windows are grouped by Virtual Desktop. Virtual Desktop Name is shown in the as a group header in list."),
-                    value: TaskManager.TasksModel.SortVirtualDesktop
-                },
-                {
-                    title: i18nc("@item:inlistbox sort windows in list", "By activity"),
-                    description: i18nc("@item:inlistbox sort windows in list", "Windows are grouped by Activity. Activity Name is shown in the as a group header in list."),
-                    value: TaskManager.TasksModel.SortActivity
-                },
-                {
-                    title: i18nc("@item:inlistbox sort windows in list", "By last activated"),
-                    description: i18nc("@item:inlistbox sort windows in list", "Windows are sorted by most recently used. The last activated window appears first."),
-                    value: TaskManager.TasksModel.SortLastActivated
-                },
-                {
-                    title: i18nc("@item:inlistbox sort windows in list", "By position"),
-                    description: i18nc("@item:inlistbox sort windows in list", "Windows are sorted by their horizontal screen position. Leftmost window appears first."),
-                    value: TaskManager.TasksModel.SortWindowPositionHorizontal
+                    title: i18nc("@item:inlistbox width strategy for window list widget", "Fixed Maximum"), 
+                    description: i18nc("@item:inlistbox width strategy for window list widget", "Widget has a fixed maximum width with minimum width based on content, and text is elided if it does not fit."),
+                    value: Globals.WidthStrategy.FixedMaximum
                 }
             ]
-            onActivated: root.cfg_sortingStrategy = currentValue
-            Component.onCompleted: currentIndex = indexOfValue(root.cfg_sortingStrategy)
+
+            onActivated: root.cfg_widthStrategy = currentValue
+
+            Component.onCompleted: currentIndex = indexOfValue(root.cfg_widthStrategy)
         }
-    
+
+        QQC2.Label {
+            Layout.fillWidth: true
+            // Maximum length to make it wrap earlier, because long unwrapped text is ugly
+            // and harder to read. Keet same as combo box above otherwise there is a 
+            // jump in width on text change.
+            Layout.maximumWidth: Kirigami.Units.gridUnit * 14
+
+            visible: !widthStrategyComboBox.enabled
+        
+            text: {
+                if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
+                    // On a vertical panel
+                    return i18n("Not applicable when the Panel is vertical.")
+                } else if (root.cfg_showIcon === true && root.cfg_showText === false) {
+                    // Only icons are shown in horizontal panel
+                    return i18n("Not applicable when only icons are shown in the horizontal Panel.")
+                } else  {
+                    // On the desktop
+                    return i18n("Not applicable when the widget is on the Desktop.")    
+                }
+            }
+            textFormat: Text.PlainText
+            wrapMode: Text.Wrap
+            font: Kirigami.Theme.smallFont
+        }
+
+        QQC2.SpinBox {
+            id: widthSpinBox
+            Kirigami.FormData.label: i18nc("@label:spinbox", "Fixed width:")
+
+            enabled: widthStrategyComboBox.enabled && (widthStrategyComboBox.currentValue === Globals.WidthStrategy.Fixed || widthStrategyComboBox.currentValue === Globals.WidthStrategy.FixedMaximum)
+
+            from: 5
+            to: 50
+            stepSize: 1
+            
+            Accessible.name: i18nc("@label:spinbox accessible", "Widget width")
+        }
+
+        QQC2.Label {
+            Layout.fillWidth: true
+            // Maximum length to make it wrap earlier, because long unwrapped text is ugly
+            // and harder to read. Keet same as combo box above otherwise there is a 
+            // jump in width on text change.
+            Layout.maximumWidth: Kirigami.Units.gridUnit * 14
+
+            visible: !(widthStrategyComboBox.enabled) || widthStrategyComboBox.currentValue === Globals.WidthStrategy.Automatic
+        
+            text: {
+                if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
+                    // On a vertical panel
+                    return i18n("Not applicable when the Panel is vertical.")
+                } else if (root.cfg_showIcon === true && root.cfg_showText === false) {
+                    // Only icons are shown in horizontal panel
+                    return i18n("Not applicable when only icons are shown in the horizontal Panel.")
+                } else  if (Plasmoid.formFactor === PlasmaCore.Types.Horizontal && widthStrategyComboBox.currentValue === Globals.WidthStrategy.Automatic) {
+                    // Automatic width strategy in horizontal panel
+                    return i18n("Not applicable when the width mode is set to Automatic.")
+                } else {
+                    // On the desktop
+                    return i18n("Not applicable when the widget is on the Desktop.")    
+                }
+            }
+            
+            textFormat: Text.PlainText
+            wrapMode: Text.Wrap
+            font: Kirigami.Theme.smallFont
+        }
+
     }
 }

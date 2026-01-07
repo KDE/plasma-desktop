@@ -1,7 +1,9 @@
 /*
-    SPDX-FileCopyrightText: 2016 Eike Hein <hein@kde.org>
-    SPDX-FileCopyrightText: 2022 Carson Black <uhhadd@gmail.com>
-    SPDX-License-Identifier: GPL-2.0-or-later
+ *  SPDX-FileCopyrightText: 2016 Eike Hein <hein@kde.org>
+ *  SPDX-FileCopyrightText: 2022 Carson Black <uhhadd@gmail.com>
+ *  SPDX-FileCopyrightText: 2025 Shubham Arora <contact@shubhamarora.dev>
+ *
+ *  SPDX-License-Identifier: GPL-2.0-or-later
 */
 pragma ComponentBehavior: Bound
 
@@ -213,8 +215,8 @@ PlasmoidItem {
         MenuButton {
             id: menuButton
 
-            Layout.minimumWidth: implicitWidth
-            Layout.maximumWidth: implicitWidth
+            Layout.minimumWidth: Plasmoid.configuration.widthStrategy === Globals.WidthStrategy.Fixed ? Kirigami.Units.gridUnit * Plasmoid.configuration.width : implicitWidth
+            Layout.maximumWidth: Plasmoid.configuration.widthStrategy !== Globals.WidthStrategy.Automatic ? Kirigami.Units.gridUnit * Plasmoid.configuration.width : implicitWidth
             Layout.fillHeight: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
             Layout.fillWidth: Plasmoid.formFactor === PlasmaCore.Types.Vertical
 

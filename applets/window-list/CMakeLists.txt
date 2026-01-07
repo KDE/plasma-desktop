@@ -7,6 +7,8 @@ plasma_add_applet(org.kde.plasma.windowlist
         config.qml
         main.qml
         MenuButton.qml
+        Globals.qml
+        qmldir
     RESOURCES
         main.xml
     GENERATE_APPLET_CLASS

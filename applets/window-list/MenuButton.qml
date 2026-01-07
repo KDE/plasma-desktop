@@ -55,6 +55,8 @@ AbstractButton {
     }
 
     contentItem: RowLayout {
+        spacing: Kirigami.Units.smallSpacing
+        
         Kirigami.Icon {
             id: iconItem
             visible: (Plasmoid.formFactor !== PlasmaCore.Types.Horizontal
@@ -63,7 +65,7 @@ AbstractButton {
             implicitWidth: Kirigami.Units.iconSizes.sizeForLabels
             implicitHeight: Kirigami.Units.iconSizes.sizeForLabels
 
-            Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
+            Layout.alignment: Qt.AlignVCenter | Qt.AlignHLeft
         }
         // Fall back to a generic icon if the application doesn't provide a valid one
         Kirigami.Icon {
@@ -75,12 +77,29 @@ AbstractButton {
             implicitWidth: Kirigami.Units.iconSizes.sizeForLabels
             implicitHeight: Kirigami.Units.iconSizes.sizeForLabels
 
-            Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
+            Layout.alignment: Qt.AlignVCenter | Qt.AlignHLeft
         }
+
         PC3.Label {
             id: label
             visible: Plasmoid.formFactor === PlasmaCore.Types.Horizontal && Plasmoid.configuration.showText
 
+            Layout.maximumWidth: {
+                switch (Plasmoid.configuration.widthStrategy) {
+                case Globals.WidthStrategy.FixedMaximum: {
+                    const availableWidth = Kirigami.Units.gridUnit * Plasmoid.configuration.width - controlRoot.leftPadding - controlRoot.rightPadding
+                    return Plasmoid.configuration.showIcon ? availableWidth - Kirigami.Units.iconSizes.sizeForLabels - Kirigami.Units.smallSpacing : availableWidth
+                }
+                case Globals.WidthStrategy.Automatic:
+                    return label.implicitWidth
+                default:
+                    return Infinity
+                }
+            }
+
+            Layout.fillWidth: Plasmoid.configuration.widthStrategy === Globals.WidthStrategy.Fixed
+
+            elide: Text.ElideRight
             text: controlRoot.Kirigami.MnemonicData.richTextLabel
             color: controlRoot.down || controlRoot.hovered ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
             verticalAlignment: Text.AlignVCenter
