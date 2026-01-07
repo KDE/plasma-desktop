@@ -19,8 +19,8 @@ import org.kde.taskmanager as TaskManager
 PlasmoidItem {
     id: root
 
-    property string activeTaskName: ""
-    property var activeTaskIcon: ""
+    property string lastActiveTaskName: ""
+    property /*QIcon*/ var lastActiveTaskIcon: ""
 
     Plasmoid.constraintHints: Plasmoid.CanFillArea
     compactRepresentation: windowListButton
@@ -72,12 +72,12 @@ PlasmoidItem {
 
                         // Needed for when for expanded with Global Shortcut
                         if (tasksModel.activeTask.valid) {
-                            root.activeTaskName = tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.AppName) ||
+                            root.lastActiveTaskName = tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.AppName) ||
                             tasksModel.data(tasksModel.activeTask, 0 /* display name, window title if app name not present */)
-                            root.activeTaskIcon = tasksModel.data(tasksModel.activeTask, 1 /* decorationrole */)
+                            root.lastActiveTaskIcon = tasksModel.data(tasksModel.activeTask, 1 /* decorationrole */)
                         } else {
-                            root.activeTaskName = ""
-                            root.activeTaskIcon = ""
+                            root.lastActiveTaskName = ""
+                            root.lastActiveTaskIcon = ""
                         }
                     }
                 }
@@ -220,9 +220,9 @@ PlasmoidItem {
 
             onClicked: {
                 if (tasksModel.activeTask.valid) {
-                    root.activeTaskName = tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.AppName) ||
+                    root.lastActiveTaskName = tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.AppName) ||
                        tasksModel.data(tasksModel.activeTask, 0 /* display name, window title if app name not present */)
-                    root.activeTaskIcon = tasksModel.data(tasksModel.activeTask, 1 /* decorationrole */)
+                    root.lastActiveTaskIcon = tasksModel.data(tasksModel.activeTask, 1 /* decorationrole */)
                 }
                 root.expanded = !root.expanded
             }
@@ -231,8 +231,8 @@ PlasmoidItem {
             Accessible.name: Plasmoid.title
             Accessible.description: root.toolTipSubText
 
-            text: if (root.expanded && root.activeTaskName !== "") {
-                return root.activeTaskName
+            text: if (root.expanded && root.lastActiveTaskName !== "") {
+                return root.lastActiveTaskName
             } else if (tasksModel.activeTask.valid) {
                 return tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.AppName) ||
                        tasksModel.data(tasksModel.activeTask, 0 /* display name, window title if app name not present */)
@@ -240,8 +240,8 @@ PlasmoidItem {
                 return i18nc("@title:window title shown e.g. for desktop and expanded widgets", "Plasma Desktop")
             }
 
-            iconSource: if (expanded && root.activeTaskIcon) {
-                return root.activeTaskIcon
+            iconSource: if (expanded && root.lastActiveTaskIcon) {
+                return root.lastActiveTaskIcon
             } else if (tasksModel.activeTask.valid) {
                 return tasksModel.data(tasksModel.activeTask, 1 /* decorationrole */)
             } else {
@@ -260,9 +260,9 @@ PlasmoidItem {
             onHoveredChanged: {
                 if (hovered) {
                     if (tasksModel.activeTask.valid) {
-                        root.activeTaskName = tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.AppName) ||
+                        root.lastActiveTaskName = tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.AppName) ||
                        tasksModel.data(tasksModel.activeTask, 0 /* display name, window title if app name not present */)
-                       root.activeTaskIcon = tasksModel.data(tasksModel.activeTask, 1 /* decorationrole */)
+                       root.lastActiveTaskIcon = tasksModel.data(tasksModel.activeTask, 1 /* decorationrole */)
                     }
                     if (Plasmoid.configuration.openOnHover) {
                         hoverOpenTimer.start()
