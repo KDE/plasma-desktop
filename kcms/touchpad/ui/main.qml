@@ -294,7 +294,7 @@ KCM.SimpleKCM {
 
             QQC2.CheckBox {
                 id: accelProfileEnabled
-                text: i18ndc("kcm_touchpad", "@option:check" "Enable pointer acceleration")
+                text: i18ndc("kcm_touchpad", "@option:check", "Enable pointer acceleration")
                 enabled: root.device?.supportsPointerAccelerationProfileAdaptive ?? false
                 visible: enabled
                 checked: enabled && !(root.device?.pointerAccelerationProfileFlat ?? false)
