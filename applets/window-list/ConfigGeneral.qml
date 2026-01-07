@@ -175,7 +175,7 @@ KCM.SimpleKCM {
             valueRole: "value"
             model: [
                 {
-                    "text": i18nc("@item:inlistbox sort windows in list", "Do not sort"),
+                    "text": i18nc("@item:inlistbox sort windows in list", "By time opened"),
                     "value": TaskManager.TasksModel.SortDisabled
                 },
                 {
@@ -202,5 +202,6 @@ KCM.SimpleKCM {
             onActivated: root.cfg_sortingStrategy = currentValue
             Component.onCompleted: currentIndex = indexOfValue(root.cfg_sortingStrategy)
         }
+    
     }
 }

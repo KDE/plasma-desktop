@@ -49,7 +49,7 @@
         <choice name="SortLastActivated"/>
         <choice name="SortWindowPositionHorizontal"/>
       </choices>
-      <default>3</default>
+      <default code="true">TaskManager::TasksModel::SortVirtualDesktop</default>
     </entry>
   </group>
 
