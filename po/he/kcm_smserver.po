@@ -11,13 +11,13 @@
 #
 # Diego Iastrubni <elcuco@kde.org>, 2005, 2006, 2008, 2012.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:41+0000\n"
-"PO-Revision-Date: 2025-01-09 22:10+0200\n"
+"PO-Revision-Date: 2026-01-05 15:41+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -178,13 +178,13 @@ msgstr "אחרי ההפעלה הבאה מחדש:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr "כניסה למסך הגדרות UEFI"
+msgstr "להיכנס למסך הגדרות UEFI"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr "כניסה למסך הגדרות קושחה"
+msgstr "להיכנס למסך הגדרות קושחה"
 
 #~ msgid ""
 #~ "The system must be restarted before manual session saving becomes active."
