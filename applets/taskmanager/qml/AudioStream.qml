@@ -154,8 +154,8 @@ Item {
 
                 PropertyChanges {
                     audioStreamIconBox.width: Kirigami.Units.iconSizes.roundedIconSize(Math.min(Math.min(iconBox.width, iconBox.height), Kirigami.Units.iconSizes.smallMedium))
-                    audioStreamIcon.height: parent.height
-                    audioStreamIcon.width: parent.width
+                    audioStreamIcon.height: audioStreamIcon.parent.height
+                    audioStreamIcon.width: audioStreamIcon.parent.width
                 }
             },
 
@@ -173,8 +173,8 @@ Item {
                 PropertyChanges {
                     audioStreamIconBox.anchors.topMargin: taskFrame.margins.top
                     audioStreamIconBox.width: Kirigami.Units.iconSizes.roundedIconSize(Math.min(Math.min(iconBox.width, iconBox.height), Kirigami.Units.iconSizes.smallMedium))
-                    audioStreamIcon.height: parent.height
-                    audioStreamIcon.width: parent.width
+                    audioStreamIcon.height: audioStreamIcon.parent.height
+                    audioStreamIcon.width: audioStreamIcon.parent.width
                 }
             }
         ]
