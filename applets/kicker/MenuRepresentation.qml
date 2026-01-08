@@ -153,7 +153,6 @@ PlasmaComponents3.ScrollView {
                     let viewYPosition = (item.height <= contentItem.height)
                         ? Math.round(actualItemY + item.height / 2 - contentItem.height / 2)
                         : actualItemY
-                    console.log(actualItemY, flickable.contentY)
                     if (actualItemY < flickable.contentY) {
                         flickable.contentY = Math.max(0, viewYPosition)
                     } else if ((actualItemY + item.height) > (flickable.contentY + flickable.height)) {
@@ -300,7 +299,7 @@ PlasmaComponents3.ScrollView {
                     Layout.fillHeight: true
                     Layout.fillWidth: true
 
-                    visible: model.count > 0
+                    visible: model.count > 0 || (model.querying && visible)
 
                     model: root.runnerModel.modelForRow(index)
                     mainSearchField: searchField

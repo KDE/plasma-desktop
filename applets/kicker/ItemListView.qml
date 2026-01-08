@@ -183,7 +183,7 @@ PlasmaComponents3.ScrollView {
         onCurrentIndexChanged: {
             if (currentIndex === itemList.childDialog?.index) {
                 return;
-            } else if (currentIndex === -1  || !(currentItem as ItemListDelegate).hasChildren || !kicker.expanded) {
+            } else if (currentIndex === -1  || !(currentItem as ItemListDelegate)?.hasChildren || !kicker.expanded) {
                 dialogSpawnTimer.stop();
                 itemList.clearChildDialog();
             } else if (itemList.childDialog) {
