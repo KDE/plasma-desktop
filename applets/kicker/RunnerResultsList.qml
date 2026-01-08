@@ -79,9 +79,13 @@ RowLayout {
             Layout.fillHeight: true
             Layout.fillWidth: true
             Layout.maximumHeight: Plasmoid.configuration.alignResultsToBottom ? contentHeight : -1
+            implicitWidth: Kirigami.Units.gridUnit * 17
+            Layout.minimumWidth: implicitWidth
+            Layout.maximumWidth: implicitWidth
 
             Accessible.name: header.text
 
+            dynamicResize: false
             iconsEnabled: true
             keyNavigationWraps: !searchFieldPlaceholder.visible
             LayoutMirroring.enabled: runnerResultsList.LayoutMirroring.enabled

@@ -28,6 +28,7 @@ PlasmaComponents3.ScrollView {
     property Kicker.SubMenu dialog: null
     property Kicker.SubMenu childDialog: null
     property bool iconsEnabled: false
+    property bool dynamicResize : true
 
     property alias currentIndex: listView.currentIndex
     property alias currentItem: listView.currentItem
@@ -115,7 +116,7 @@ PlasmaComponents3.ScrollView {
         Binding on implicitWidth {
             value: listView.maxDelegateImplicitWidth
             delayed: true // only resize once all delegates are loaded
-            when: listView.maxDelegateImplicitWidth > 0
+            when: listView.maxDelegateImplicitWidth > 0 && itemList.dynamicResize
         }
 
         currentIndex: -1
@@ -126,7 +127,11 @@ PlasmaComponents3.ScrollView {
         snapMode: ListView.SnapToItem
         spacing: 0
         keyNavigationEnabled: false
-        cacheBuffer: 10000 // try to load all delegates for sizing; krunner won't return too many anyway
+
+        Binding on cacheBuffer {
+            when: itemList.dynamicResize
+            value: 10000 // load more delegates, to get their width right
+        }
 
         Accessible.name: itemList.Accessible.name
         Accessible.role: Accessible.List
