@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-11-28 04:32+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -25,27 +25,37 @@ msgid "Appearance"
 msgstr "გარეგნობა"
 
 #: qml/ConfigAppearance.qml:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@title:group prefix for radiobutton group"
 msgid "Icon:"
 msgstr "ხატულა:"
 
 #: qml/ConfigAppearance.qml:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show the current activity icon"
+msgctxt "@option:radio"
 msgid "Show the current activity icon"
 msgstr "მიმდინარე აქტივობის ხატულის ჩვენება"
 
 #: qml/ConfigAppearance.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show the generic activity icon"
+msgctxt "@option:radio"
 msgid "Show the generic activity icon"
 msgstr "ზოგადი აქტივობის ხატულის ჩვენება"
 
 #: qml/ConfigAppearance.qml:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Title:"
+msgctxt "@label prefix for checkbox"
 msgid "Title:"
 msgstr "სათაური:"
 
 #: qml/ConfigAppearance.qml:43
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show the current activity name"
+msgctxt "@option:check title"
 msgid "Show the current activity name"
 msgstr "მიმდინარე აქტივობის სახელის ჩვენება"
 
@@ -56,12 +66,16 @@ msgid "Current activity is %1"
 msgstr "მიმდინარე აქტივობაა: %1"
 
 #: qml/main.qml:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Activity Manager"
+msgctxt "@info:tooltip"
 msgid "Show Activity Manager"
 msgstr "აქტივობების მმართველის ჩვენება"
 
 #: qml/main.qml:77
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Click to show the activity manager"
+msgctxt "@info:tooltip subtext"
 msgid "Click to show the activity manager"
 msgstr "დააწკაპუნეთ აქტივობების მმართველის საჩვენებლად"
 

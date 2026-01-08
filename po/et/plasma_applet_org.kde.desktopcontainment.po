@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2020-10-08 11:43+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -20,95 +20,127 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/config/config.qml:17
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Location"
+msgctxt "@title:group for configuration dialog page"
 msgid "Location"
 msgstr "Asukoht"
 
 #: package/contents/config/config.qml:24
-#: package/contents/ui/FolderViewLayer.qml:357
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icons"
+msgctxt "@title:group for configuration dialog page"
 msgid "Icons"
 msgstr "Ikoonid"
 
 #: package/contents/config/config.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Filter"
+msgctxt "@title:group for configuration dialog page"
 msgid "Filter"
 msgstr "Filter"
 
 #: package/contents/ui/BackButtonItem.qml:105
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Back"
+msgctxt "@action:button"
 msgid "Back"
 msgstr "Tagasi"
 
 #: package/contents/ui/ConfigFilter.qml:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Files:"
+msgctxt "@label:listbox filter mode"
 msgid "Files:"
 msgstr "Failid:"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show all"
+msgctxt "@item:inlistbox filter mode"
 msgid "Show all"
 msgstr "Kõigi näitamine"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show matching"
+msgctxt "@item:inlistbox filter mode"
 msgid "Show matching"
 msgstr "Vastete näitamine"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hide matching"
+msgctxt "@item:inlistbox filter mode"
 msgid "Hide matching"
 msgstr "Vasted peidetakse"
 
 #: package/contents/ui/ConfigFilter.qml:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File name pattern:"
+msgctxt "@label:textbox"
 msgid "File name pattern:"
 msgstr "Failinime muster:"
 
 #: package/contents/ui/ConfigFilter.qml:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File types:"
+msgctxt "@label:textbox filter list by"
 msgid "File types:"
 msgstr "Failitüübid:"
 
 #: package/contents/ui/ConfigFilter.qml:82
 #, fuzzy, kde-format
 #| msgid "Show All Files"
+msgctxt "@option:check prefix"
 msgid "Show hidden files:"
 msgstr "Kõigi failide näitamine"
 
 #: package/contents/ui/ConfigFilter.qml:111
 #, fuzzy, kde-format
 #| msgid "File type"
+msgctxt "@title:column"
 msgid "File Type"
 msgstr "Failitüüp"
 
 #: package/contents/ui/ConfigFilter.qml:112
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Description"
+msgctxt "@title:column"
 msgid "Description"
 msgstr "Kirjeldus"
 
 #: package/contents/ui/ConfigFilter.qml:182
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select All"
+msgctxt "@action:button tooltip only Select all filetypes"
 msgid "Select All"
 msgstr "Vali kõik"
 
 #: package/contents/ui/ConfigFilter.qml:192
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Deselect All"
+msgctxt "@action:button tooltip only Deselect all filetypes"
 msgid "Deselect All"
 msgstr "Tühista kõigi valik"
 
 #: package/contents/ui/ConfigFilter.qml:201
 #, kde-format
+msgctxt "@action:button tooltip only, ascending/descending"
 msgid "Switch Sort Order"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:57
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Panel button:"
+msgctxt "@title:group prefix for checkbox + button"
 msgid "Panel button:"
 msgstr "Paneelinupp:"
 
 #: package/contents/ui/ConfigIcons.qml:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use a custom icon"
+msgctxt "@option:check"
 msgid "Use a custom icon"
 msgstr "Kohandatud ikooni kasutamine"
 
@@ -127,7 +159,9 @@ msgid "Clear Icon"
 msgstr "Puhasta ikoon"
 
 #: package/contents/ui/ConfigIcons.qml:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Arrangement:"
+msgctxt "@label:listbox columns/rows"
 msgid "Arrangement:"
 msgstr "Paigutus:"
 
@@ -148,6 +182,7 @@ msgstr "Ridades"
 #: package/contents/ui/ConfigIcons.qml:135
 #, fuzzy, kde-format
 #| msgid "Sorting:"
+msgctxt "@label:listbox, LtR/RtL"
 msgid "Sort Alignment:"
 msgstr "Sortimine:"
 
@@ -166,13 +201,16 @@ msgid "Right-to-Left"
 msgstr "Ülalt alla, paremalt vasakule"
 
 #: package/contents/ui/ConfigIcons.qml:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Lock in place"
+msgctxt "@option:check lock icon positions"
 msgid "Lock in place"
 msgstr "Lukustamine asukohale"
 
 #: package/contents/ui/ConfigIcons.qml:175
 #, fuzzy, kde-format
 #| msgid "Sort By"
+msgctxt "@label:listbox sort items by field"
 msgid "Sort by:"
 msgstr "Sortimine"
 
@@ -245,26 +283,30 @@ msgid "Grid"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:234
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icon size:"
+msgctxt "@label:slider"
 msgid "Icon size:"
 msgstr "Ikooni suurus:"
 
 #: package/contents/ui/ConfigIcons.qml:249
 #, fuzzy, kde-format
 #| msgid "Small"
-msgctxt "@label:slider smallest icon size"
+msgctxt "@item:inrange smallest icon size"
 msgid "Small"
 msgstr "Väike"
 
 #: package/contents/ui/ConfigIcons.qml:258
 #, fuzzy, kde-format
 #| msgid "Large"
-msgctxt "@label:slider largest icon size"
+msgctxt "@item:inrange largest icon size"
 msgid "Large"
 msgstr "Suur"
 
 #: package/contents/ui/ConfigIcons.qml:267
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Label width:"
+msgctxt "@label:listbox"
 msgid "Label width:"
 msgstr "Pealdise laius:"
 
@@ -290,59 +332,70 @@ msgid "Wide"
 msgstr "Lai"
 
 #: package/contents/ui/ConfigIcons.qml:280
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Text lines:"
+msgctxt "@label:spinbox"
 msgid "Text lines:"
 msgstr "Tekstiread:"
 
 #: package/contents/ui/ConfigIcons.qml:296
 #, kde-format
+msgctxt "@title:group prefix for checkbox group"
 msgid "When hovering over icons:"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:298
 #, fuzzy, kde-format
 #| msgid "Tooltips"
+msgctxt "@option:check When hovering over icons…"
 msgid "Show tooltips"
 msgstr "Kohtspikrid"
 
 #: package/contents/ui/ConfigIcons.qml:305
 #, fuzzy, kde-format
 #| msgid "Selection markers"
+msgctxt "@option:check When hovering over icons…"
 msgid "Show selection markers"
 msgstr "Valikumarkerid"
 
 #: package/contents/ui/ConfigIcons.qml:312
 #, fuzzy, kde-format
 #| msgid "Folder preview popups"
+msgctxt "@option:check When hovering over icons…"
 msgid "Show folder preview popups"
 msgstr "Kataloogi hüpikeelvaatlused"
 
 #: package/contents/ui/ConfigIcons.qml:322
 #, fuzzy, kde-format
 #| msgid "&Rename"
+msgctxt "@label prefix for checkbox"
 msgid "Rename:"
 msgstr "&Nimeta ümber"
 
 #: package/contents/ui/ConfigIcons.qml:326
 #, kde-format
+msgctxt "@option:check"
 msgid "Rename inline by clicking selected item's text"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:337
 #, fuzzy, kde-format
 #| msgid "Preview In"
+msgctxt "@title:group prefix for checkbox and button"
 msgid "Previews:"
 msgstr "Eelvaatlus rakenduses"
 
 #: package/contents/ui/ConfigIcons.qml:339
 #, fuzzy, kde-format
 #| msgid "Preview thumbnails"
+msgctxt "@option:check"
 msgid "Show preview thumbnails"
 msgstr "Eelvaatluse pisipildid"
 
 #: package/contents/ui/ConfigIcons.qml:347
 #, fuzzy, kde-format
 #| msgid "Configure Preview Plugins..."
+msgctxt "@action:button opens dialog"
 msgid "Configure Preview Plugins…"
 msgstr "Seadista eelvaatluse pluginaid ..."
 
@@ -432,26 +485,35 @@ msgstr "Sisesta kohandatud pealdis ..."
 
 #: package/contents/ui/ConfigOverlay.qml:97
 #, kde-format
+msgctxt "@action:button tooltip rotate widget"
 msgid "Click and drag to rotate"
 msgstr ""
 
 #: package/contents/ui/ConfigOverlay.qml:183
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hide Background"
+msgctxt "@action:button tooltip hide widget background"
 msgid "Hide Background"
 msgstr "Peida taust"
 
 #: package/contents/ui/ConfigOverlay.qml:183
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Background"
+msgctxt "@action:button tooltip"
 msgid "Show Background"
 msgstr "Näita tausta"
 
 #: package/contents/ui/ConfigOverlay.qml:231
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@action:button tooltip remove widget"
 msgid "Remove"
 msgstr "Eemalda"
 
 #: package/contents/ui/FolderItemPreviewPluginsDialog.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preview Plugins"
+msgctxt "@title:window"
 msgid "Preview Plugins"
 msgstr "Eelvaatluse pluginad"
 
@@ -470,9 +532,17 @@ msgctxt "@info:placeholder"
 msgid "Folder is empty"
 msgstr "See kataloog on tühi."
 
+#: package/contents/ui/FolderViewLayer.qml:357
+#, fuzzy, kde-format
+#| msgid "Icons"
+msgctxt "@item:inmenu opens submenu with view options like sorting"
+msgid "Icons"
+msgstr "Ikoonid"
+
 #: package/contents/ui/main.qml:439
 #, fuzzy, kde-format
 #| msgid "Configure Desktop and Wallpaper..."
+msgctxt "@action:inmenu opens config dialog"
 msgid "Desktop and Wallpaper"
 msgstr "Seadista töölauda ja taustapilti ..."
 

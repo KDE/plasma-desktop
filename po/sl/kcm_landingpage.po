@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-19 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-10-17 06:28+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -70,7 +70,9 @@ msgid "Global theme"
 msgstr "Globalna tema"
 
 #: ui/main.qml:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Theme:"
+msgctxt "@title:group for light/dark quick switch"
 msgid "Theme:"
 msgstr "Tema:"
 
@@ -95,7 +97,9 @@ msgid "More appearance settings:"
 msgstr "Več nastavitev videza:"
 
 #: ui/main.qml:183
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Animation speed:"
+msgctxt "@title:slider"
 msgid "Animation speed:"
 msgstr "Hitrost animacije:"
 
@@ -125,7 +129,9 @@ msgid "Selects them"
 msgstr "Jih izbere"
 
 #: ui/main.qml:226
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open by double-clicking instead"
+msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "Odpri z dvojnim klikom"
 
@@ -136,7 +142,9 @@ msgid "Opens them"
 msgstr "Jih odpre"
 
 #: ui/main.qml:259
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select by clicking on item's selection marker"
+msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
 msgstr "Izberi s klikom na označevalnik predmeta"
 
@@ -147,7 +155,9 @@ msgid "More behavior settings:"
 msgstr "Več nastavitev obnašanja:"
 
 #: ui/main.qml:299
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Most used pages:"
+msgctxt "@title:group for grid of buttons opening kcms"
 msgid "Most used pages:"
 msgstr "Najpogosteje uporabljane strani:"
 

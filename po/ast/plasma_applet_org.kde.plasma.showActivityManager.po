@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2023-05-03 21:47+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -26,26 +26,31 @@ msgstr "Aspeutu"
 
 #: qml/ConfigAppearance.qml:23
 #, kde-format
+msgctxt "@title:group prefix for radiobutton group"
 msgid "Icon:"
 msgstr ""
 
 #: qml/ConfigAppearance.qml:25
 #, kde-format
+msgctxt "@option:radio"
 msgid "Show the current activity icon"
 msgstr ""
 
 #: qml/ConfigAppearance.qml:31
 #, kde-format
+msgctxt "@option:radio"
 msgid "Show the generic activity icon"
 msgstr ""
 
 #: qml/ConfigAppearance.qml:41
 #, kde-format
+msgctxt "@label prefix for checkbox"
 msgid "Title:"
 msgstr ""
 
 #: qml/ConfigAppearance.qml:43
 #, kde-format
+msgctxt "@option:check title"
 msgid "Show the current activity name"
 msgstr ""
 
@@ -57,11 +62,13 @@ msgstr ""
 
 #: qml/main.qml:76
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Show Activity Manager"
 msgstr ""
 
 #: qml/main.qml:77
 #, kde-format
+msgctxt "@info:tooltip subtext"
 msgid "Click to show the activity manager"
 msgstr ""
 

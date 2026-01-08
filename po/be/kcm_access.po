@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-04 00:46+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-11-21 20:40\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -357,7 +357,10 @@ msgid "Disable sticky and slow keys after:"
 msgstr "Адключаць заліплыя і павольныя клавішы пасля:"
 
 #: ui/ActivationShortcuts.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1 min"
+#| msgid_plural "%1 min"
+msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
 msgid "%1 min"
 msgid_plural "%1 min"
 msgstr[0] "%1 хв"
@@ -376,32 +379,44 @@ msgstr[2] "хв"
 msgstr[3] "хв"
 
 #: ui/ActivationShortcuts.qml:89
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "When a shortcut is used:"
+msgctxt "@title:group for checkbox group"
 msgid "When a shortcut is used:"
 msgstr "Калі выкарыстоўваецца спалучэнне клавіш:"
 
 #: ui/ActivationShortcuts.qml:90
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Display a confirmation dialog"
+msgctxt "@option:check when shortcut used"
 msgid "Display a confirmation dialog"
 msgstr "Паказваць дыялогавае акно пацвярджэння"
 
 #: ui/ActivationShortcuts.qml:101
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ring the system bell"
+msgctxt "@option:check when shortcut used"
 msgid "Ring the system bell"
 msgstr "Сістэмнае гукавое апавяшчэнне"
 
 #: ui/ActivationShortcuts.qml:112
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show a notification"
+msgctxt "@option:check when shortcut used"
 msgid "Show a notification"
 msgstr "Паказваць апавяшчэнне"
 
 #: ui/ActivationShortcuts.qml:123
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Notifications…"
+msgctxt "@action:button opens Notifications kcm"
 msgid "Configure Notifications…"
 msgstr "Наладжванне апавяшчэнняў…"
 
 #: ui/Bell.qml:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Please choose an audio file"
+msgctxt "@title:window dialog"
 msgid "Please choose an audio file"
 msgstr "Абярыце аўдыяфайл"
 
@@ -412,7 +427,9 @@ msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
 msgstr "ogg, oga, і аўдыяфайлы wav (*.ogg *.oga *.wav)"
 
 #: ui/Bell.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Audible bell:"
+msgctxt "@label prefix for checkbox"
 msgid "Audible bell:"
 msgstr "Гукавое апавяшчэнне:"
 
@@ -429,54 +446,69 @@ msgid "Custom sound:"
 msgstr "Адвольны гук:"
 
 #: ui/Bell.qml:75
-#, kde-format
-msgid "Search audio file for the system bell"
+#, fuzzy, kde-format
+#| msgid "Search audio file for the system bell"
+msgctxt "@action:button icononly tooltip"
+msgid "Choose audio file for the system bell"
 msgstr "Пошук аўдыяфайла для сістэмнага гукавога апавяшчэння"
 
 #: ui/Bell.qml:76
-#, kde-format
-msgid "Button search audio file"
-msgstr "Кнопка пошуку аўдыяфайла"
+#, fuzzy, kde-format
+#| msgid "Please choose an audio file"
+msgctxt "@action button accessible only"
+msgid "Choose audio file"
+msgstr "Абярыце аўдыяфайл"
 
-#: ui/Bell.qml:92
+#: ui/Bell.qml:77
 #, kde-format
+msgctxt "@info:usagetip accessible description for button"
+msgid "Opens dialog"
+msgstr ""
+
+#: ui/Bell.qml:93
+#, fuzzy, kde-format
+#| msgid "Visual bell:"
+msgctxt "@label prefix for checkbox"
 msgid "Visual bell:"
 msgstr "Візуальнае апавяшчэнне:"
 
-#: ui/Bell.qml:93
-#, kde-format
-msgctxt "Enable visual bell"
+#: ui/Bell.qml:94
+#, fuzzy, kde-format
+#| msgctxt "Enable activation shortcuts"
+#| msgid "Enable"
+msgctxt "@option:check Enable visual bell"
 msgid "Enable"
 msgstr "Уключыць"
 
-#: ui/Bell.qml:107
+#: ui/Bell.qml:108
 #, kde-format
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
 msgstr "Інвертаванне колераў экрана"
 
-#: ui/Bell.qml:125
+#: ui/Bell.qml:126
 #, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
 msgstr "Падсвятленне экрана"
 
-#: ui/Bell.qml:136
+#: ui/Bell.qml:137
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr "Колер"
 
-#: ui/Bell.qml:150
+#: ui/Bell.qml:151
 #, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "Працягласць:"
 
-#: ui/Bell.qml:165 ui/KeyboardFilters.qml:56 ui/KeyboardFilters.qml:157
-#: ui/MouseNavigation.qml:53 ui/MouseNavigation.qml:84
-#: ui/MouseNavigation.qml:110
-#, kde-format
+#: ui/Bell.qml:166
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix %1 is visible bell duration"
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] "%1 мс"
@@ -484,11 +516,12 @@ msgstr[1] "%1 мс"
 msgstr[2] "%1 мс"
 msgstr[3] "%1 мс"
 
-#: ui/Bell.qml:169 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
-#: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
-#: ui/MouseNavigation.qml:114
-#, kde-format
-msgctxt "short for millisecond(s)"
+#: ui/Bell.qml:170 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
+#, fuzzy, kde-format
+#| msgctxt "short for millisecond(s)"
+#| msgid "ms"
+#| msgid_plural "ms"
+msgctxt "@label:valuesuffix short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
 msgstr[0] "мс"
@@ -567,24 +600,28 @@ msgstr ""
 
 #: ui/ColorblindnessCorrection.qml:132
 #, kde-format
+msgctxt "@title:group for color rectangles"
 msgid "Reds:"
 msgstr ""
 
 #: ui/ColorblindnessCorrection.qml:133
 #, fuzzy, kde-format
 #| msgid "Green"
+msgctxt "@title:group for color rectangles"
 msgid "Greens:"
 msgstr "Зялёны"
 
 #: ui/ColorblindnessCorrection.qml:134
 #, fuzzy, kde-format
 #| msgid "Blue"
+msgctxt "@title:group for color rectangles"
 msgid "Blues:"
 msgstr "Сіні"
 
 #: ui/ColorblindnessCorrection.qml:135
 #, fuzzy, kde-format
 #| msgid "Purple"
+msgctxt "@title:group for color rectangles"
 msgid "Purples:"
 msgstr "Фіялетавы"
 
@@ -616,13 +653,17 @@ msgid "Configure Shortcuts…"
 msgstr "Наладжванне апавяшчэнняў…"
 
 #: ui/KeyboardFilters.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Slow keys:"
+msgctxt "@title:group prefix"
 msgid "Slow keys:"
 msgstr "Павольныя клавішы:"
 
 #: ui/KeyboardFilters.qml:23
-#, kde-format
-msgctxt "Enable slow keys"
+#, fuzzy, kde-format
+#| msgctxt "Enable activation shortcuts"
+#| msgid "Enable"
+msgctxt "@option:check Enable slow keys"
 msgid "Enable"
 msgstr "Уключыць"
 
@@ -639,42 +680,68 @@ msgstr ""
 "адчуваеце цяжкасці з націсканнем патрэбнай клавішы ў першы раз."
 
 #: ui/KeyboardFilters.qml:41
-#, kde-format
-msgctxt "Slow keys Delay"
+#, fuzzy, kde-format
+#| msgctxt "Slow keys Delay"
+#| msgid "Delay:"
+msgctxt "@label:spinbox Slow keys Delay"
 msgid "Delay:"
 msgstr "Затрымліванне:"
 
+#: ui/KeyboardFilters.qml:56
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix %1 is slow keys delay"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 мс"
+msgstr[1] "%1 мс"
+msgstr[2] "%1 мс"
+msgstr[3] "%1 мс"
+
 #: ui/KeyboardFilters.qml:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ring system bell:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "Ring system bell:"
 msgstr "Сістэмнае гукавое апавяшчэнне:"
 
 #: ui/KeyboardFilters.qml:75
-#, kde-format
-msgctxt "Use system bell when a key is pressed"
+#, fuzzy, kde-format
+#| msgctxt "Use system bell when a key is pressed"
+#| msgid "when any key is &pressed"
+msgctxt "@option:check Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "калі любая клавіша &націснутая"
 
 #: ui/KeyboardFilters.qml:89
-#, kde-format
-msgctxt "Use system bell when a key is accepted"
+#, fuzzy, kde-format
+#| msgctxt "Use system bell when a key is accepted"
+#| msgid "when any key is &accepted"
+msgctxt "@option:check Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "калі любая клавіша &ўхваленая"
 
 #: ui/KeyboardFilters.qml:103
-#, kde-format
-msgctxt "Use system bell when a key is rejected"
+#, fuzzy, kde-format
+#| msgctxt "Use system bell when a key is rejected"
+#| msgid "when any key is &rejected"
+msgctxt "@option:check Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "калі любая клавіша &адхіленая"
 
 #: ui/KeyboardFilters.qml:119
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Bounce keys:"
+msgctxt "@title:group prefix"
 msgid "Bounce keys:"
 msgstr "Пругкія клавішы:"
 
 #: ui/KeyboardFilters.qml:124
-#, kde-format
-msgctxt "Bounce keys enable"
+#, fuzzy, kde-format
+#| msgctxt "Enable activation shortcuts"
+#| msgid "Enable"
+msgctxt "@option:check Bounce keys enable"
 msgid "Enable"
 msgstr "Уключыць"
 
@@ -691,13 +758,29 @@ msgstr ""
 "калі хочаце націснуць толькі адзін раз."
 
 #: ui/KeyboardFilters.qml:142
-#, kde-format
-msgctxt "Bounce keys delay"
+#, fuzzy, kde-format
+#| msgctxt "Slow keys Delay"
+#| msgid "Delay:"
+msgctxt "@label:spinbox Bounce keys delay"
 msgid "Delay:"
 msgstr "Затрымліванне:"
 
+#: ui/KeyboardFilters.qml:157
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix %1 is bounce keys delay"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 мс"
+msgstr[1] "%1 мс"
+msgstr[2] "%1 мс"
+msgstr[3] "%1 мс"
+
 #: ui/KeyboardFilters.qml:171
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ring system bell when rejected"
+msgctxt "@option:check for bounce keys"
 msgid "Ring system bell when rejected"
 msgstr "Сістэмнае гукавое апавяшчэнне пры адхіленні"
 
@@ -714,37 +797,49 @@ msgid "System Bell"
 msgstr "Сістэмнае гукавое апавяшчэнне"
 
 #: ui/main.qml:38
-#, kde-format
-msgctxt "System Modifier Keys"
+#, fuzzy, kde-format
+#| msgctxt "System Modifier Keys"
+#| msgid "Modifier Keys"
+msgctxt "@title Category name in sidebar"
 msgid "Modifier Keys"
 msgstr "Клавішы-мадыфікатары"
 
 #: ui/main.qml:43
-#, kde-format
-msgctxt "System keyboard filters"
+#, fuzzy, kde-format
+#| msgctxt "System keyboard filters"
+#| msgid "Keyboard Filters"
+msgctxt "@title Category name in sidebar"
 msgid "Keyboard Filters"
 msgstr "Фільтры клавіятуры"
 
 #: ui/main.qml:48
-#, kde-format
-msgctxt "System mouse navigation"
+#, fuzzy, kde-format
+#| msgctxt "System mouse navigation"
+#| msgid "Mouse Navigation"
+msgctxt "@title Category name in sidebar"
 msgid "Mouse Navigation"
 msgstr "Навігацыя мышшу"
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Activation Shortcuts"
+msgctxt "@title Category name in sidebar"
 msgid "Activation Shortcuts"
 msgstr "Спалучэнні клавіш актывацыі"
 
 #: ui/main.qml:58
-#, kde-format
-msgctxt "System mouse navigation"
+#, fuzzy, kde-format
+#| msgctxt "System mouse navigation"
+#| msgid "Screen Reader"
+msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "Чытанне з экрана"
 
 #: ui/main.qml:63
-#, kde-format
-msgctxt "Correction for color blindness"
+#, fuzzy, kde-format
+#| msgctxt "Correction for color blindness"
+#| msgid "Color Blindness Correction"
+msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr "Карэкцыя дальтанізму"
 
@@ -758,7 +853,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgctxt "Shake cursor to find it"
 #| msgid "Shake Cursor"
-msgctxt "Shake pointer to find it"
+msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
 msgstr "Страсянуць курсор"
 
@@ -801,12 +896,16 @@ msgid ""
 msgstr ""
 
 #: ui/ModifierKeys.qml:57
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Disable when two keys are held down"
+msgctxt "@option:check"
 msgid "Disable when two keys are held down"
 msgstr "Адключаць пры націсканні дзвюх клавіш"
 
 #: ui/ModifierKeys.qml:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ring system bell when modifier keys are used"
+msgctxt "@option:check"
 msgid "Ring system bell when modifier keys are used"
 msgstr ""
 "Выкарыстоўваць сістэмнае гукавое апавяшчэнне пры выкарыстанні клавіш-"
@@ -880,17 +979,64 @@ msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "Затрымліванне паскарэння:"
 
+#: ui/MouseNavigation.qml:53
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix acceleration delay spinbox %1 is value"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 мс"
+msgstr[1] "%1 мс"
+msgstr[2] "%1 мс"
+msgstr[3] "%1 мс"
+
+#: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
+#: ui/MouseNavigation.qml:114
+#, kde-format
+msgctxt "short for millisecond(s)"
+msgid "ms"
+msgid_plural "ms"
+msgstr[0] "мс"
+msgstr[1] "мс"
+msgstr[2] "мс"
+msgstr[3] "мс"
+
 #: ui/MouseNavigation.qml:66
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Інтэрвал паўтарэння:"
 
+#: ui/MouseNavigation.qml:84
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix repeat interval spinbox %1 is value"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 мс"
+msgstr[1] "%1 мс"
+msgstr[2] "%1 мс"
+msgstr[3] "%1 мс"
+
 #: ui/MouseNavigation.qml:93
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Час паскарэння:"
+
+#: ui/MouseNavigation.qml:110
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 мс"
+msgstr[1] "%1 мс"
+msgstr[2] "%1 мс"
+msgstr[3] "%1 мс"
 
 #: ui/MouseNavigation.qml:118
 #, kde-format
@@ -1168,6 +1314,25 @@ msgstr ""
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "Выкарыстоўваць клавішы для кіравання мышшу"
+
+#~ msgid "Button search audio file"
+#~ msgstr "Кнопка пошуку аўдыяфайла"
+
+#~ msgctxt "Enable visual bell"
+#~ msgid "Enable"
+#~ msgstr "Уключыць"
+
+#~ msgctxt "Enable slow keys"
+#~ msgid "Enable"
+#~ msgstr "Уключыць"
+
+#~ msgctxt "Bounce keys enable"
+#~ msgid "Enable"
+#~ msgstr "Уключыць"
+
+#~ msgctxt "Bounce keys delay"
+#~ msgid "Delay:"
+#~ msgstr "Затрымліванне:"
 
 #~ msgctxt "@option check, Enable shake cursor effect"
 #~ msgid "Enable"

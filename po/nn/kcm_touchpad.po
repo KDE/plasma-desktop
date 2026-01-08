@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-10-26 12:16+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -35,7 +35,7 @@ msgstr "Kritisk feil ved lesing av fundamental einingsinfo for styreplata %1."
 msgid "Cannot connect to X server"
 msgstr "Klarte ikkje kopla til X-tenaren"
 
-#: backends/x11/xlibbackend.cpp:80 ui/main.qml:59
+#: backends/x11/xlibbackend.cpp:80
 #, kde-format
 msgid "No touchpad found"
 msgstr "Fann inga styreplate"
@@ -106,24 +106,38 @@ msgstr "Styreplata er kopla frå, og innstillingsvindauget vart derfor lukka."
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Styreplata er kopla frå. Finn ingen andre styreplater."
 
+#: ui/main.qml:59
+#, fuzzy, kde-format
+#| msgid "No touchpad found"
+msgctxt "@info:status placeholdermessage text"
+msgid "No touchpad found"
+msgstr "Fann inga styreplate"
+
 # Bør ha med artikkelen «ei» her for å gjera det (litt) klarare at det er snakk om imperativ (og at teksten altså ikkje tyder at ei styreplate *er* tilkopla). Jamfør og med tilsvarande tekst «Kopla til ein kabla/trådlaus spelkontrollar», som bør vera på same form.
 #: ui/main.qml:60
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Connect an external touchpad"
+msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchpad"
 msgstr "Kopla til ei ekstern styreplate"
 
 #: ui/main.qml:75
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Device:"
+msgctxt "@label:listbox device selection"
 msgid "Device:"
 msgstr "Eining:"
 
 #: ui/main.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "Generelt:"
 
 #: ui/main.qml:101
 #, kde-format
+msgctxt "@option:check"
 msgid "Enable device"
 msgstr ""
 
@@ -134,7 +148,9 @@ msgid "Disable while mouse is connected"
 msgstr "Slå av når musa er tilkopla"
 
 #: ui/main.qml:137
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Disable while typing"
+msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "Slå av styreplata under tasting"
 
@@ -155,6 +171,7 @@ msgstr "Trykk venstre og høgre knapp samtidig for midtklikk"
 #: ui/main.qml:175
 #, fuzzy, kde-format
 #| msgid "Left-handed mode"
+msgctxt "@option:check"
 msgid "Swap (left-handed mode)"
 msgstr "Venstrehandsmodus"
 
@@ -178,12 +195,16 @@ msgstr ""
 "høgreklikk."
 
 #: ui/main.qml:217
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pointer speed:"
+msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Peikarfart:"
 
 #: ui/main.qml:297
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable pointer acceleration"
+msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Bruk peikarakselerasjon"
 
@@ -196,45 +217,62 @@ msgstr ""
 "Når dette er slått på, vil peikaren flytta seg lenger ved raskare rørsle."
 
 #: ui/main.qml:325
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scrolling speed:"
+msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "Rullefart:"
 
 #: ui/main.qml:376
-#, kde-format
-msgctxt "Slower Scroll"
+#, fuzzy, kde-format
+#| msgctxt "Slower Scroll"
+#| msgid "Slower"
+msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "Saktare"
 
 #: ui/main.qml:383
-#, kde-format
-msgctxt "Faster Scroll Speed"
+#, fuzzy, kde-format
+#| msgctxt "Faster Scroll Speed"
+#| msgid "Faster"
+msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "Raskare"
 
 #: ui/main.qml:390
 #, fuzzy, kde-format
 #| msgid "Scrolling:"
+msgctxt ""
+"@title group begins the sentence 'Scroll by moving two fingers anywhere/"
+"moving one finger on edge'"
 msgid "Scroll by:"
 msgstr "Rulling:"
 
 #: ui/main.qml:409
 #, kde-format
+msgctxt ""
+"@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr ""
 
 #: ui/main.qml:416
 #, kde-format
+msgctxt ""
+"@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr ""
 
 #: ui/main.qml:424
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Invert scroll direction (Natural scrolling)"
+msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Omvend rulleretning  (naturleg rulling)"
 
 #: ui/main.qml:438
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Disable horizontal scrolling"
+msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "Slå av vassrett rulling"
 
@@ -242,8 +280,8 @@ msgstr "Slå av vassrett rulling"
 #, fuzzy, kde-format
 #| msgid "Right-click"
 msgctxt ""
-"@label for radiobutton group, begins the sentence 'right-click by pressing "
-"bottom-right corner/pressing with two fingers'"
+"@title:group for radiobutton group, begins the sentence 'right-click by "
+"pressing bottom-right corner/pressing with two fingers'"
 msgid "Right-click by:"
 msgstr "Høgreklikk"
 
@@ -258,14 +296,18 @@ msgid "Pressing bottom-right corner"
 msgstr "Trykk i hjørnet nede til høgre"
 
 #: ui/main.qml:496
-#, kde-format
-msgctxt "@info shown below radio button"
+#, fuzzy, kde-format
+#| msgctxt "@info shown below radio button"
+#| msgid "Middle-click by pressing both bottom corners."
+msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "Midtklikk ved å trykkja i begge nedre hjørne."
 
 #: ui/main.qml:497
-#, kde-format
-msgctxt "@info shown below radio button"
+#, fuzzy, kde-format
+#| msgctxt "@info shown below radio button"
+#| msgid "Middle-click by pressing bottom center."
+msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Midtklikk for å trykk i midten nede."
 
@@ -342,6 +384,7 @@ msgstr "Tapp for å klikka"
 
 #: ui/main.qml:597
 #, kde-format
+msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr ""
 
@@ -356,31 +399,43 @@ msgstr ""
 "styreplata. Løft fingeren for å sleppa."
 
 #: ui/main.qml:616
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Allow briefly lifting finger during tap-and-drag"
+msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr "Tillatt kort løft av fingeren ved tapp-og-slepp-rørsle"
 
 #: ui/main.qml:630
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Two-finger tap:"
+msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "Tofingertrykk:"
 
 #: ui/main.qml:650
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Right-click (three-finger tap to middle-click)"
+msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Høgreklikk (trefingertrykk for midtklikk)"
 
 #: ui/main.qml:651
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Right-click"
+msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "Høgreklikk"
 
 #: ui/main.qml:659
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle-click (three-finger tap to right-click)"
+msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Midtklikk (trefingertrykk for høgreklikk)"
 
 #: ui/main.qml:660
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle-click"
+msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Midtklikk"

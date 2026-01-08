@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-05-30 20:41+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -141,22 +141,30 @@ msgid "Help"
 msgstr "Pomocník"
 
 #: ui/main.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Applications"
+msgctxt "@title:group list section name"
 msgid "Applications"
 msgstr "Aplikácie"
 
 #: ui/main.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Commands"
+msgctxt "@title:group list section name"
 msgid "Commands"
 msgstr "Príkazy"
 
 #: ui/main.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "System Services"
+msgctxt "@title:group list section name"
 msgid "System Services"
 msgstr "Systémové služby"
 
 #: ui/main.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Common Actions"
+msgctxt "@title:group list section name"
 msgid "Common Actions"
 msgstr "Spoločné akcie"
 
@@ -223,12 +231,17 @@ msgid "Add new command or script"
 msgstr "Pridať nový príkaz alebo skript"
 
 #: ui/main.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cannot export scheme while there are unsaved changes"
+msgctxt "@info:status inlinemessage"
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "Nie je možné exportovať schému pokým existujú neuložené zmeny"
 
 #: ui/main.qml:117
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Select the components below that should be included in the exported scheme"
+msgctxt "@info:usagetip"
 msgid ""
 "Select the components below that should be included in the exported scheme"
 msgstr ""
@@ -273,7 +286,9 @@ msgid "Undo deletion"
 msgstr "Vrátiť odstránenie"
 
 #: ui/main.qml:341
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No items matched the search terms"
+msgctxt "@info:status placeholdermessage"
 msgid "No items matched the search terms"
 msgstr "Hľadaným výrazom nezodpovedajú žiadne položky"
 
@@ -297,17 +312,23 @@ msgid "Undo deleting shortcuts"
 msgstr "Žiadne predvolené skratky"
 
 #: ui/main.qml:399
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select an item from the list to view its shortcuts here"
+msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Vyberte položku zo zoznamu na zobrazenie jej skratiek"
 
 #: ui/main.qml:412
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Export Shortcut Scheme"
+msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr "Exportovať schému skratiek"
 
 #: ui/main.qml:412 ui/main.qml:553
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Import Shortcut Scheme"
+msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
 msgstr "Importovať schému skratiek"
 
@@ -318,22 +339,30 @@ msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Schéma skratiek (*.kksrc)"
 
 #: ui/main.qml:441
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Command"
+msgctxt "@title:window dialog"
 msgid "Edit Command"
 msgstr "Upraviť príkaz"
 
 #: ui/main.qml:441
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Command"
+msgctxt "@title:window dialog"
 msgid "Add Command"
 msgstr "Pridať príkaz"
 
 #: ui/main.qml:463
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save"
+msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
 msgstr "Uložiť"
 
 #: ui/main.qml:463
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add"
+msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
 msgstr "Pridať"
 
@@ -353,7 +382,9 @@ msgid "Add command"
 msgstr "Pridať príkaz"
 
 #: ui/main.qml:492
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enter a command or choose a script file:"
+msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr "Zadajte príkaz alebo vyberte skriptový súbor:"
 
@@ -408,22 +439,30 @@ msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "Súbory skriptov (.sh, .bash, .zsh, etc.) (*.*sh)"
 
 #: ui/main.qml:561
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select the scheme to import:"
+msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr "Vyberte schému na import:"
 
 #: ui/main.qml:580
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom Scheme"
+msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
 msgstr "Vlastná schéma"
 
 #: ui/main.qml:588
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select File…"
+msgctxt "@action:button"
 msgid "Select File…"
 msgstr "Vybrať súbor..."
 
 #: ui/main.qml:588
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Import"
+msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "Importovať"
 
@@ -456,7 +495,9 @@ msgid "Expand to configure shortcuts"
 msgstr "Žiadne aktívne skratky"
 
 #: ui/ShortcutActionDelegate.qml:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Editing shortcut: %1"
+msgctxt "@info:whatsthis accessible name %1 is shortcut label (not sequence)"
 msgid "Editing shortcut: %1"
 msgstr "Úprava skratky: %1"
 
@@ -469,13 +510,18 @@ msgid "%1:"
 msgstr "%1:"
 
 #: ui/ShortcutActionDelegate.qml:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No active shortcuts"
+msgctxt "@info:status"
 msgid "No active shortcuts"
 msgstr "Žiadne aktívne skratky"
 
 #: ui/ShortcutActionDelegate.qml:134
-#, kde-format
-msgctxt "%1 decides if singular or plural will be used"
+#, fuzzy, kde-format
+#| msgctxt "%1 decides if singular or plural will be used"
+#| msgid "Default shortcut"
+#| msgid_plural "Default shortcuts"
+msgctxt "@title:column %1 decides if singular or plural will be used"
 msgid "Default shortcut"
 msgid_plural "Default shortcuts"
 msgstr[0] "Predvolený odkaz"
@@ -483,22 +529,30 @@ msgstr[1] "Predvolené odkazy"
 msgstr[2] "Predvolených odkazov"
 
 #: ui/ShortcutActionDelegate.qml:136
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No default shortcuts"
+msgctxt "@label for shortcut with no default bindings"
 msgid "No default shortcuts"
 msgstr "Žiadne predvolené skratky"
 
 #: ui/ShortcutActionDelegate.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Default shortcut %1 is enabled."
+msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is enabled."
 msgstr "Predvolená skratka %1 je povolená."
 
 #: ui/ShortcutActionDelegate.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Default shortcut %1 is disabled."
+msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is disabled."
 msgstr "Predvolená skratka %1 je zakázaná."
 
 #: ui/ShortcutActionDelegate.qml:168
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom shortcuts"
+msgctxt "@title:column"
 msgid "Custom shortcuts"
 msgstr "Vlastné skratky"
 

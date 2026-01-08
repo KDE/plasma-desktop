@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-07 00:46+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-11-10 22:26+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -46,12 +46,16 @@ msgid "Show in Favorites"
 msgstr "Megjelenítés a Kedvenceknél"
 
 #: config.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Általános"
 
 #: ConfigGeneral.qml:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Ikon:"
 
@@ -68,122 +72,162 @@ msgid "Clear Icon"
 msgstr "Ikon visszaállítása"
 
 #: ConfigGeneral.qml:159
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show applications as:"
+msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Alkalmazások megjelenítése mint:"
 
 #: ConfigGeneral.qml:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Name only"
+msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Csak név"
 
 #: ConfigGeneral.qml:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Description only"
+msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Csak leírás"
 
-#: ConfigGeneral.qml:161
-#, kde-format
+#: ConfigGeneral.qml:162
+#, fuzzy, kde-format
+#| msgid "Name (Description)"
+msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Név (leírás)"
 
-#: ConfigGeneral.qml:161
-#, kde-format
+#: ConfigGeneral.qml:162
+#, fuzzy, kde-format
+#| msgid "Description (Name)"
+msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Leírás (név)"
 
-#: ConfigGeneral.qml:171
-#, kde-format
+#: ConfigGeneral.qml:172
+#, fuzzy, kde-format
+#| msgid "Behavior:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
 msgstr "Működés:"
 
-#: ConfigGeneral.qml:173
-#, kde-format
+#: ConfigGeneral.qml:174
+#, fuzzy, kde-format
+#| msgid "Sort applications alphabetically"
+msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Alkalmazások rendezése ABC sorrendben"
 
-#: ConfigGeneral.qml:181
-#, kde-format
+#: ConfigGeneral.qml:182
+#, fuzzy, kde-format
+#| msgid "Flatten sub-menus to a single level"
+msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
 msgstr "Almenük összenyomása egyetlen szintre"
 
-#: ConfigGeneral.qml:189
-#, kde-format
+#: ConfigGeneral.qml:190
+#, fuzzy, kde-format
+#| msgid "Show icons on the root level of the menu"
+msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
 msgstr "Ikonok megjelenítése a menü legfelső szintjén"
 
-#: ConfigGeneral.qml:199
-#, kde-format
+#: ConfigGeneral.qml:200
+#, fuzzy, kde-format
+#| msgid "Show categories:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
 msgstr "Kategóriák:"
 
-#: ConfigGeneral.qml:202
-#, kde-format
+#: ConfigGeneral.qml:203
+#, fuzzy, kde-format
+#| msgid "Recent applications"
+msgctxt "@option:check"
 msgid "Recent applications"
 msgstr "Legutóbbi alkalmazások"
 
-#: ConfigGeneral.qml:203
-#, kde-format
+#: ConfigGeneral.qml:204
+#, fuzzy, kde-format
+#| msgid "Often used applications"
+msgctxt "@option:check"
 msgid "Often used applications"
 msgstr "Gyakran használt alkalmazások"
 
-#: ConfigGeneral.qml:210
-#, kde-format
+#: ConfigGeneral.qml:211
+#, fuzzy, kde-format
+#| msgid "Recent files"
+msgctxt "@option:check"
 msgid "Recent files"
 msgstr "Legutóbbi fájlok"
 
-#: ConfigGeneral.qml:211
-#, kde-format
+#: ConfigGeneral.qml:212
+#, fuzzy, kde-format
+#| msgid "Often used files"
+msgctxt "@option:check"
 msgid "Often used files"
 msgstr "Gyakran használt fájlok"
 
-#: ConfigGeneral.qml:217
-#, kde-format
+#: ConfigGeneral.qml:218
+#, fuzzy, kde-format
+#| msgid "Sort items in categories by:"
+msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
 msgstr "Elemek kategóriába sorolási szempontja:"
 
-#: ConfigGeneral.qml:218
+#: ConfigGeneral.qml:219
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Legutóbb használt"
 
-#: ConfigGeneral.qml:218
-#, kde-format
+#: ConfigGeneral.qml:219
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+#| msgid "Often used"
 msgctxt ""
-"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Often used"
 msgstr "Gyakran használt"
 
-#: ConfigGeneral.qml:228
-#, kde-format
+#: ConfigGeneral.qml:229
+#, fuzzy, kde-format
+#| msgid "Search:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
 msgstr "Keresés:"
 
-#: ConfigGeneral.qml:230
-#, kde-format
+#: ConfigGeneral.qml:231
+#, fuzzy, kde-format
+#| msgid "Expand search to bookmarks, files and emails"
+msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Keresés kiterjesztése könyvjelzőkre, fájlokra és e-mailekre"
 
-#: ConfigGeneral.qml:238
-#, kde-format
+#: ConfigGeneral.qml:239
+#, fuzzy, kde-format
+#| msgid "Align search results to bottom"
+msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr "Találatok igazítása alulra "
 
-#: ConfigGeneral.qml:243
+#: ConfigGeneral.qml:244
 #, fuzzy, kde-format
 #| msgid "Appearance"
-msgctxt "@label:textbox for a checkbox toggling Dark Mode"
+msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
 msgstr "Megjelenés"
 
-#: ConfigGeneral.qml:248
+#: ConfigGeneral.qml:249
 #, kde-format
+msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
 msgstr ""
 
-#: ConfigGeneral.qml:252
+#: ConfigGeneral.qml:253
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -192,7 +236,9 @@ msgid ""
 msgstr ""
 
 #: DashboardRepresentation.qml:309
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Favorites"
+msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "Kedvencek"
 
@@ -209,7 +255,9 @@ msgid "Launch"
 msgstr ""
 
 #: main.qml:211
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Applications…"
+msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
 msgstr "Alkalmazások szerkesztése…"
 

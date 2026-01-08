@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-08-12 12:05+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -61,7 +61,11 @@ msgstr ""
 "<link url='%1'>υποβάλετε και μια αναφορά σφάλματος γι' αυτό.</link>"
 
 #: ui/main.qml:55
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The background services manager (kded6) is currently not running. Make "
+#| "sure it is installed correctly."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
@@ -70,7 +74,11 @@ msgstr ""
 "παρόντος. Βεβαιωθείτε ότι έχει εγκατασταθεί σωστά."
 
 #: ui/main.qml:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Some services disable themselves again when manually started if they are "
+#| "not useful in the current environment."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
@@ -79,7 +87,11 @@ msgstr ""
 "δεν είναι χρήσιμες στο τρέχον περιβάλλον."
 
 #: ui/main.qml:75
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Some services were automatically started/stopped when the background "
+#| "services manager (kded6) was restarted to apply your changes."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
@@ -88,29 +100,38 @@ msgstr ""
 "διαχειριστή υπηρεσιών παρασκηνίου (kded6) για την εφαρμογή των αλλαγών σας."
 
 #: ui/main.qml:123
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "All Services"
+msgctxt "@item:inlistbox"
 msgid "All Services"
 msgstr "Όλες οι υπηρεσίες"
 
 #: ui/main.qml:124
-#, kde-format
-msgctxt "List running services"
+#, fuzzy, kde-format
+#| msgid "Running"
+msgctxt "@item:inlistbox List running services"
 msgid "Running"
 msgstr "Εκτελείται"
 
 #: ui/main.qml:125
-#, kde-format
-msgctxt "List not running services"
+#, fuzzy, kde-format
+#| msgctxt "List not running services"
+#| msgid "Not Running"
+msgctxt "@item:inlistbox List not running services"
 msgid "Not Running"
 msgstr "Δεν εκτελείται"
 
 #: ui/main.qml:162
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Startup Services"
+msgctxt "@title:group list section"
 msgid "Startup Services"
 msgstr "Υπηρεσίες εκκίνησης"
 
 #: ui/main.qml:163
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load-on-Demand Services"
+msgctxt "@title:group list section"
 msgid "Load-on-Demand Services"
 msgstr "Υπηρεσίες φόρτωσης κατ' απαίτηση"
 
@@ -127,17 +148,23 @@ msgid "Enable automatically loading %1 on startup"
 msgstr "Ενεργοποίηση αυτόματης φόρτωσης %1 κατά την εκκίνηση"
 
 #: ui/main.qml:183
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Toggle automatically loading this service on startup"
+msgctxt "@info:whatsthis Accessible description"
 msgid "Toggle automatically loading this service on startup"
 msgstr "Εναλλαγή αυτόματης φόρτωσης αυτής της υπηρεσίας κατά την εκκίνηση"
 
 #: ui/main.qml:227
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Not running"
+msgctxt "@info:status"
 msgid "Not running"
 msgstr "Δεν εκτελείται"
 
 #: ui/main.qml:228
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Running"
+msgctxt "@info:status"
 msgid "Running"
 msgstr "Εκτελείται"
 
@@ -154,14 +181,22 @@ msgid "Start %1"
 msgstr "Εκκίνηση %1"
 
 #: ui/main.qml:251
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Stop Service"
+msgctxt "@action:button"
 msgid "Stop Service"
 msgstr "Διακοπή υπηρεσίας"
 
 #: ui/main.qml:251
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Start Service"
+msgctxt "@action:button"
 msgid "Start Service"
 msgstr "Έναρξη υπηρεσίας"
+
+#~ msgctxt "List running services"
+#~ msgid "Running"
+#~ msgstr "Εκτελείται"
 
 #, fuzzy
 #~| msgid ""

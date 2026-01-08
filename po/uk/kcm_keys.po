@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-11-22 15:20+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -138,22 +138,30 @@ msgid "Help"
 msgstr "Довідка"
 
 #: ui/main.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Applications"
+msgctxt "@title:group list section name"
 msgid "Applications"
 msgstr "Програми"
 
 #: ui/main.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Commands"
+msgctxt "@title:group list section name"
 msgid "Commands"
 msgstr "Команди"
 
 #: ui/main.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "System Services"
+msgctxt "@title:group list section name"
 msgid "System Services"
 msgstr "Служби системи"
 
 #: ui/main.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Common Actions"
+msgctxt "@title:group list section name"
 msgid "Common Actions"
 msgstr "Загальні дії"
 
@@ -218,12 +226,17 @@ msgid "Add new command or script"
 msgstr "Додати нову команду або скрипт"
 
 #: ui/main.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cannot export scheme while there are unsaved changes"
+msgctxt "@info:status inlinemessage"
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "Не вдалося експортувати схему, хоча є незбережені зміни"
 
 #: ui/main.qml:117
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Select the components below that should be included in the exported scheme"
+msgctxt "@info:usagetip"
 msgid ""
 "Select the components below that should be included in the exported scheme"
 msgstr ""
@@ -261,7 +274,9 @@ msgid "Undo deletion"
 msgstr "Скасувати вилучення"
 
 #: ui/main.qml:341
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No items matched the search terms"
+msgctxt "@info:status placeholdermessage"
 msgid "No items matched the search terms"
 msgstr "Не знайдено відповідників критеріям пошуку"
 
@@ -284,18 +299,24 @@ msgid "Undo deleting shortcuts"
 msgstr "Скасувати вилучення скорочень"
 
 #: ui/main.qml:399
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select an item from the list to view its shortcuts here"
+msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
 msgstr ""
 "Виберіть пункт у списку, щоб переглянути скорочення, які у ньому містяться"
 
 #: ui/main.qml:412
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Export Shortcut Scheme"
+msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr "Експортувати схему скорочень"
 
 #: ui/main.qml:412 ui/main.qml:553
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Import Shortcut Scheme"
+msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
 msgstr "Імпортувати схему скорочень"
 
@@ -306,22 +327,30 @@ msgid "Shortcut Scheme (*.kksrc)"
 msgstr "схема скорочень (*.kksrc)"
 
 #: ui/main.qml:441
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Command"
+msgctxt "@title:window dialog"
 msgid "Edit Command"
 msgstr "Редагувати команду"
 
 #: ui/main.qml:441
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Command"
+msgctxt "@title:window dialog"
 msgid "Add Command"
 msgstr "Додати команду"
 
 #: ui/main.qml:463
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save"
+msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
 msgstr "Зберегти"
 
 #: ui/main.qml:463
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add"
+msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
 msgstr "Додати"
 
@@ -338,7 +367,9 @@ msgid "Add command"
 msgstr "Додати команду"
 
 #: ui/main.qml:492
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enter a command or choose a script file:"
+msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr "Введіть команду або виберіть файл скрипту:"
 
@@ -393,22 +424,30 @@ msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "файли скриптів (.sh, .bash, .zsh тощо) (*.*sh)"
 
 #: ui/main.qml:561
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select the scheme to import:"
+msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr "Виберіть схему для імпортування:"
 
 #: ui/main.qml:580
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom Scheme"
+msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
 msgstr "Нетипова схема"
 
 #: ui/main.qml:588
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select File…"
+msgctxt "@action:button"
 msgid "Select File…"
 msgstr "Вибрати файл…"
 
 #: ui/main.qml:588
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Import"
+msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "Імпортувати"
 
@@ -437,7 +476,9 @@ msgid "Expand to configure shortcuts"
 msgstr "Розгорнути для налаштовування скорочень"
 
 #: ui/ShortcutActionDelegate.qml:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Editing shortcut: %1"
+msgctxt "@info:whatsthis accessible name %1 is shortcut label (not sequence)"
 msgid "Editing shortcut: %1"
 msgstr "Редагування скорочення: %1"
 
@@ -450,13 +491,18 @@ msgid "%1:"
 msgstr "%1:"
 
 #: ui/ShortcutActionDelegate.qml:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No active shortcuts"
+msgctxt "@info:status"
 msgid "No active shortcuts"
 msgstr "Немає активних скорочень"
 
 #: ui/ShortcutActionDelegate.qml:134
-#, kde-format
-msgctxt "%1 decides if singular or plural will be used"
+#, fuzzy, kde-format
+#| msgctxt "%1 decides if singular or plural will be used"
+#| msgid "Default shortcut"
+#| msgid_plural "Default shortcuts"
+msgctxt "@title:column %1 decides if singular or plural will be used"
 msgid "Default shortcut"
 msgid_plural "Default shortcuts"
 msgstr[0] "Типові скорочення"
@@ -465,22 +511,30 @@ msgstr[2] "Типові скорочення"
 msgstr[3] "Типове скорочення"
 
 #: ui/ShortcutActionDelegate.qml:136
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No default shortcuts"
+msgctxt "@label for shortcut with no default bindings"
 msgid "No default shortcuts"
 msgstr "Немає типових скорочень"
 
 #: ui/ShortcutActionDelegate.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Default shortcut %1 is enabled."
+msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is enabled."
 msgstr "Увімкнено типове скорочення %1."
 
 #: ui/ShortcutActionDelegate.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Default shortcut %1 is disabled."
+msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is disabled."
 msgstr "Вимкнено типове скорочення %1."
 
 #: ui/ShortcutActionDelegate.qml:168
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom shortcuts"
+msgctxt "@title:column"
 msgid "Custom shortcuts"
 msgstr "Нетипові скорочення"
 

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-05-31 12:44+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -139,17 +139,22 @@ msgid "Configure Extra Buttons…"
 msgstr "Anpassa extra knappar…"
 
 #: ui/main.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Device:"
+msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Enhet:"
 
 #: ui/main.qml:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@title:group"
 msgid "General:"
 msgstr "Allmänt:"
 
 #: ui/main.qml:88
 #, kde-format
+msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr ""
 
@@ -163,6 +168,7 @@ msgstr "Byt vänster- och högerknapp."
 #: ui/main.qml:106
 #, fuzzy, kde-format
 #| msgid "Left-handed mode"
+msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
 msgstr "Vänsterhänt läge"
 
@@ -188,18 +194,26 @@ msgstr ""
 "högertryck."
 
 #: ui/main.qml:148
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pointer speed:"
+msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Pekarhastighet:"
 
 #: ui/main.qml:227
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable pointer acceleration"
+msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Aktivera pekaracceleration"
 
 #: ui/main.qml:241
-#, kde-format
-msgctxt "@info:tooltip from ContextualHelpButton"
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip from ContextualHelpButton"
+#| msgid ""
+#| "When enabled, pointer travel distance increases with faster movement "
+#| "speed."
+msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
@@ -207,7 +221,9 @@ msgstr ""
 "rörelsehastighet."
 
 #: ui/main.qml:254
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scrolling speed:"
+msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr "Rullningshastighet:"
 
@@ -224,23 +240,35 @@ msgid "Faster"
 msgstr "Snabbare"
 
 #: ui/main.qml:321
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scrolling:"
+msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "Rullning:"
 
 #: ui/main.qml:322
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Invert scroll direction"
+msgctxt "@option:check"
 msgid "Invert scroll direction"
 msgstr "Omvänd rullningsriktning"
 
 #: ui/main.qml:339
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hold down middle button and move mouse to scroll"
+msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "Håll nere mittenknappen och flytta musen för att rulla"
 
 #: ui/main.qml:351
-#, kde-format
-msgctxt "@info:tooltip from ContextualHelpButton"
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip from ContextualHelpButton"
+#| msgid ""
+#| "This will interfere with applications that use middle-button drag, such "
+#| "as some image editors, document viewers, or video games. It may be used "
+#| "on any device, but is intended primarily as a substitute for scroll "
+#| "wheels on devices that do not have any."
+msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "This will interfere with applications that use middle-button drag, such as "
 "some image editors, document viewers, or video games. It may be used on any "

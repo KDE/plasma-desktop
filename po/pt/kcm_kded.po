@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2020-07-04 13:16+0100\n"
 "Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -55,6 +55,7 @@ msgstr ""
 #| msgid ""
 #| "The background services manager (kded5) is currently not running. Make "
 #| "sure it is installed correctly."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
@@ -63,7 +64,11 @@ msgstr ""
 "execução. Certifique-se que está instalado correctamente."
 
 #: ui/main.qml:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Some services disable themselves again when manually started if they are "
+#| "not useful in the current environment."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
@@ -76,6 +81,7 @@ msgstr ""
 #| msgid ""
 #| "Some services were automatically started/stopped when the background "
 #| "services manager (kded5) was restarted to apply your changes."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
@@ -85,29 +91,38 @@ msgstr ""
 "suas modificações."
 
 #: ui/main.qml:123
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "All Services"
+msgctxt "@item:inlistbox"
 msgid "All Services"
 msgstr "Todos os Serviços"
 
 #: ui/main.qml:124
-#, kde-format
-msgctxt "List running services"
+#, fuzzy, kde-format
+#| msgid "Running"
+msgctxt "@item:inlistbox List running services"
 msgid "Running"
-msgstr "Em Execução"
+msgstr "Em execução"
 
 #: ui/main.qml:125
-#, kde-format
-msgctxt "List not running services"
+#, fuzzy, kde-format
+#| msgctxt "List not running services"
+#| msgid "Not Running"
+msgctxt "@item:inlistbox List not running services"
 msgid "Not Running"
 msgstr "Parados"
 
 #: ui/main.qml:162
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Startup Services"
+msgctxt "@title:group list section"
 msgid "Startup Services"
 msgstr "Serviços do Arranque"
 
 #: ui/main.qml:163
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load-on-Demand Services"
+msgctxt "@title:group list section"
 msgid "Load-on-Demand Services"
 msgstr "Serviços Carregados a Pedido"
 
@@ -126,17 +141,23 @@ msgid "Enable automatically loading %1 on startup"
 msgstr "Activa/desactiva o carregamento automático deste serviço no arranque"
 
 #: ui/main.qml:183
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Toggle automatically loading this service on startup"
+msgctxt "@info:whatsthis Accessible description"
 msgid "Toggle automatically loading this service on startup"
 msgstr "Activa/desactiva o carregamento automático deste serviço no arranque"
 
 #: ui/main.qml:227
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Not running"
+msgctxt "@info:status"
 msgid "Not running"
 msgstr "Parados"
 
 #: ui/main.qml:228
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Running"
+msgctxt "@info:status"
 msgid "Running"
 msgstr "Em execução"
 
@@ -153,14 +174,22 @@ msgid "Start %1"
 msgstr ""
 
 #: ui/main.qml:251
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Stop Service"
+msgctxt "@action:button"
 msgid "Stop Service"
 msgstr "Parar o Serviço"
 
 #: ui/main.qml:251
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Start Service"
+msgctxt "@action:button"
 msgid "Start Service"
 msgstr "Iniciar o Serviço"
+
+#~ msgctxt "List running services"
+#~ msgid "Running"
+#~ msgstr "Em Execução"
 
 #~ msgid ""
 #~ "<p>This module allows you to have an overview of all plugins of the KDE "

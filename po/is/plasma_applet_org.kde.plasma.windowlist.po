@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-11-30 11:18+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -55,12 +55,16 @@ msgid "Name"
 msgstr "Heiti"
 
 #: ConfigGeneral.qml:89
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Only icons can be shown when the Panel is vertical."
+msgctxt "@info:usagetip display mode for active application"
 msgid "Only icons can be shown when the Panel is vertical."
 msgstr "Einungis er hægt að sýna tákn þegar skjáborðsstikan er lóðrétt."
 
 #: ConfigGeneral.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Not applicable when the widget is on the Desktop."
+msgctxt "@info:usagetip display mode for active application"
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "Á ekki við þegar græjan er á skjáborðinu."
 
@@ -77,7 +81,10 @@ msgid "Enabled, with delay:"
 msgstr "Virkt, með töf:"
 
 #: ConfigGeneral.qml:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@item:valuesuffix, %1 is hover activation delay in ms"
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] "%1 ms"

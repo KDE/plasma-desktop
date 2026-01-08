@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-09 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-12-06 15:42+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -105,12 +105,16 @@ msgid "9,999+"
 msgstr "9,999+"
 
 #: qml/config.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Appearance"
+msgctxt "@title:group for configuration dialog page"
 msgid "Appearance"
 msgstr "Itxura"
 
 #: qml/config.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Behavior"
+msgctxt "@title:group for configuration dialog page"
 msgid "Behavior"
 msgstr "Portaera"
 
@@ -596,17 +600,23 @@ msgid "On the top"
 msgstr "Goiko aldean"
 
 #: qml/ContextMenu.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Places"
+msgctxt "@title:group for section of menu items"
 msgid "Places"
 msgstr "Lekuak"
 
 #: qml/ContextMenu.qml:106
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Recent Files"
+msgctxt "@title:group for section of menu items"
 msgid "Recent Files"
 msgstr "Azken aldiko fitxategiak"
 
 #: qml/ContextMenu.qml:116
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Actions"
+msgctxt "@title:group for section of menu items"
 msgid "Actions"
 msgstr "Ekintzak"
 
@@ -653,117 +663,163 @@ msgid "Restore"
 msgstr "Leheneratu"
 
 #: qml/ContextMenu.qml:266
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mute"
+msgctxt "@option:check inmenu, no separate unmute action"
 msgid "Mute"
 msgstr "Isilarazi"
 
 #: qml/ContextMenu.qml:277
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open New Window"
+msgctxt "action:inmenu"
 msgid "Open New Window"
 msgstr "Ireki leiho berria"
 
 #: qml/ContextMenu.qml:293
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move to &Desktop"
+msgctxt "action:inmenu"
 msgid "Move to &Desktop"
 msgstr "Eraman &mahaigainera"
 
 #: qml/ContextMenu.qml:323
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &To Current Desktop"
+msgctxt "action:inmenu"
 msgid "Move &To Current Desktop"
 msgstr "Eraman &uneko mahaigainera"
 
 #: qml/ContextMenu.qml:332
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&All Desktops"
+msgctxt "action:inmenu"
 msgid "&All Desktops"
 msgstr "Mahaigain &guztietan"
 
 #: qml/ContextMenu.qml:360
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&New Desktop"
+msgctxt "action:inmenu"
 msgid "&New Desktop"
 msgstr "Mahaigain &berria"
 
 #: qml/ContextMenu.qml:380
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show in &Activities"
+msgctxt "action:inmenu"
 msgid "Show in &Activities"
 msgstr "Erakutsi &Jardueretan"
 
 #: qml/ContextMenu.qml:404
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add To Current Activity"
+msgctxt "action:inmenu"
 msgid "Add To Current Activity"
 msgstr "Gehitu uneko jarduerara"
 
 #: qml/ContextMenu.qml:414
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "All Activities"
+msgctxt "action:inmenu"
 msgid "All Activities"
 msgstr "Jarduera guztietan"
 
 #: qml/ContextMenu.qml:470
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move to %1"
+msgctxt "action:inmenu"
 msgid "Move to %1"
 msgstr "Eraman %1(e)ra"
 
 #: qml/ContextMenu.qml:496 qml/ContextMenu.qml:512
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Pin to Task Manager"
+msgctxt "action:inmenu"
 msgid "&Pin to Task Manager"
 msgstr "&Iltzatu Ataza Kudeatzailera"
 
 #: qml/ContextMenu.qml:564
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "On All Activities"
+msgctxt "action:inmenu"
 msgid "On All Activities"
 msgstr "Jarduera guztietan"
 
 #: qml/ContextMenu.qml:570
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "On The Current Activity"
+msgctxt "action:inmenu"
 msgid "On The Current Activity"
 msgstr "Uneko jardueran"
 
 #: qml/ContextMenu.qml:594
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Unpin from Task Manager"
+msgctxt "action:inmenu"
 msgid "Unpin from Task Manager"
 msgstr "Iltzagetu ataza kudeatzailetik"
 
 #: qml/ContextMenu.qml:609
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "More"
+msgctxt "item:inmenu opens submenu"
 msgid "More"
 msgstr "Gehiago"
 
 #: qml/ContextMenu.qml:618
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Move"
+msgctxt "action:inmenu"
 msgid "&Move"
 msgstr "&Mugitu"
 
 #: qml/ContextMenu.qml:627
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Re&size"
+msgctxt "action:inmenu"
 msgid "Re&size"
 msgstr "&Handiera aldatu"
 
 #: qml/ContextMenu.qml:641
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ma&ximize"
+msgctxt "action:inmenu"
 msgid "Ma&ximize"
 msgstr "Ma&ximizatu"
 
 #: qml/ContextMenu.qml:655
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mi&nimize"
+msgctxt "action:inmenu"
 msgid "Mi&nimize"
 msgstr "I&konotu"
 
 #: qml/ContextMenu.qml:665
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep &Above Others"
+msgctxt "action:inmenu"
 msgid "Keep &Above Others"
 msgstr "M&antendu besteen gainean"
 
 #: qml/ContextMenu.qml:675
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep &Below Others"
+msgctxt "action:inmenu"
 msgid "Keep &Below Others"
 msgstr "Mantendu &besteen azpian"
 
 #: qml/ContextMenu.qml:687
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Fullscreen"
+msgctxt "action:inmenu"
 msgid "&Fullscreen"
 msgstr "&Pantaila-betea"
 
 #: qml/ContextMenu.qml:700
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Shade"
+msgctxt "action:inmenu"
 msgid "&Shade"
 msgstr "Bil&du"
 
@@ -780,18 +836,24 @@ msgid "&Hide from Screencast"
 msgstr "E&zkutatu pantaila-grabaziotik"
 
 #: qml/ContextMenu.qml:741
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Allow this program to be grouped"
+msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr "Baimendu programa hau taldekatu dadin"
 
 #: qml/ContextMenu.qml:787
-#, kde-format
-msgctxt "@item:inmenu"
+#, fuzzy, kde-format
+#| msgctxt "@item:inmenu"
+#| msgid "&Close All"
+msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "&Itxi guztia"
 
 #: qml/ContextMenu.qml:787
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Close"
+msgctxt "@action:inmenu"
 msgid "&Close"
 msgstr "&Itxi"
 
@@ -828,7 +890,9 @@ msgid "Open textual list of windows for %1"
 msgstr "Ireki leihoen testuzko zerrenda bat %1(e)rako"
 
 #: qml/Task.qml:179
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Activate %1"
+msgctxt "@info:usagetip %1 task name"
 msgid "Activate %1"
 msgstr "Aktibatu %1"
 

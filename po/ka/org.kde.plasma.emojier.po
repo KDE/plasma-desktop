@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-03 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2026-01-03 02:52+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -46,7 +46,9 @@ msgid "Replace an existing instance"
 msgstr "გაშვებული ასლის ჩანაცვლება"
 
 #: app/ui/CategoryPage.qml:112
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear History"
+msgctxt "@action:button clear emoji history"
 msgid "Clear History"
 msgstr "ისტორიის გაწმენდა"
 
@@ -147,7 +149,9 @@ msgid "Copy Description"
 msgstr "აღწერის კოპირება"
 
 #: app/ui/CategoryPage.qml:368
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No recent Emojis"
+msgctxt "@label placeholder for empty recent emoji list"
 msgid "No recent Emojis"
 msgstr "ემოჯიების გარეშე"
 
@@ -158,12 +162,16 @@ msgid "No matching emoji found"
 msgstr "შესაბამისი ემოჯი აღმოჩენილი არაა"
 
 #: app/ui/Emojier.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1 copied to the clipboard"
+msgctxt "@info:status passive notification as action feedback"
 msgid "%1 copied to the clipboard"
 msgstr "დაკოპირდა გაცვლის ბაფერში: %1"
 
 #: app/ui/Emojier.qml:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Recent"
+msgctxt "@title page title for Recent Emoji view, and sidebar label for it"
 msgid "Recent"
 msgstr "Ბოლო"
 

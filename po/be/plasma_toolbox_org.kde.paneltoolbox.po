@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-02-11 18:56\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -23,11 +23,15 @@ msgstr ""
 "X-Crowdin-File-ID: 10682\n"
 
 #: contents/ui/main.qml:112
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Panel…"
+msgctxt "@info:whatsthis accessible name"
 msgid "Configure Panel…"
 msgstr "Наладжванне панэлі…"
 
 #: contents/ui/main.qml:113
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Panel configuration ui"
+msgctxt "@info:whatsthis accessible description"
 msgid "Open Panel configuration ui"
 msgstr "Адкрыць інтэрфейс канфігурацыі панэлі"

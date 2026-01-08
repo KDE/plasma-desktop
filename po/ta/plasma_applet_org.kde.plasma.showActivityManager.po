@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-11-30 11:02+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -24,27 +24,37 @@ msgid "Appearance"
 msgstr "தோற்றம்"
 
 #: qml/ConfigAppearance.qml:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@title:group prefix for radiobutton group"
 msgid "Icon:"
 msgstr "சின்னம்:"
 
 #: qml/ConfigAppearance.qml:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show the current activity icon"
+msgctxt "@option:radio"
 msgid "Show the current activity icon"
 msgstr "தற்போதைய செயல்பாட்டின் சின்னத்தை காட்டு"
 
 #: qml/ConfigAppearance.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show the generic activity icon"
+msgctxt "@option:radio"
 msgid "Show the generic activity icon"
 msgstr "பொதுவான செயல்பாடு சின்னத்தை காட்டு"
 
 #: qml/ConfigAppearance.qml:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Title:"
+msgctxt "@label prefix for checkbox"
 msgid "Title:"
 msgstr "தலைப்பு:"
 
 #: qml/ConfigAppearance.qml:43
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show the current activity name"
+msgctxt "@option:check title"
 msgid "Show the current activity name"
 msgstr "தற்போதைய செயல்பாட்டின் பெயரை காட்டு"
 
@@ -55,12 +65,16 @@ msgid "Current activity is %1"
 msgstr "தற்போதைய செயல்பாடு %1 ஆகும்"
 
 #: qml/main.qml:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Activity Manager"
+msgctxt "@info:tooltip"
 msgid "Show Activity Manager"
 msgstr "செயல்பாடு மேலாளியை காட்டு"
 
 #: qml/main.qml:77
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Click to show the activity manager"
+msgctxt "@info:tooltip subtext"
 msgid "Click to show the activity manager"
 msgstr "செயல்பாடு மேலாளியை காட்ட க்ளிக் செய்யவும்"
 

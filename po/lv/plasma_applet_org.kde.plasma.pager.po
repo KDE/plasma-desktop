@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-06-19 20:10+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -23,83 +23,115 @@ msgstr ""
 "2);\n"
 
 #: qml/config.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Pamata"
 
 #: qml/configGeneral.qml:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "Pamata:"
 
 #: qml/configGeneral.qml:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show window outlines"
+msgctxt "@option:check"
 msgid "Show window outlines"
 msgstr "Rādīt logu kontūras"
 
 #: qml/configGeneral.qml:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show application icons on window outlines"
+msgctxt "@option:check"
 msgid "Show application icons on window outlines"
 msgstr "Rādīt programmu ikonas logu kontūrās"
 
 #: qml/configGeneral.qml:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show only current screen"
+msgctxt "@option:check"
 msgid "Show only current screen"
 msgstr "Rādīt tikai pašreizējo ekrānu"
 
 #: qml/configGeneral.qml:57
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Navigation wraps around"
+msgctxt "@option:check"
 msgid "Navigation wraps around"
 msgstr "Navigācija iet uz riņķi"
 
 #: qml/configGeneral.qml:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Layout:"
+msgctxt "@title:listbox"
 msgid "Layout:"
 msgstr "Izkārtojums:"
 
 #: qml/configGeneral.qml:71
-#, kde-format
-msgctxt "The pager layout"
+#, fuzzy, kde-format
+#| msgctxt "The pager layout"
+#| msgid "Default"
+msgctxt "@item:inlistbox The pager layout"
 msgid "Default"
 msgstr "Noklusējuma"
 
 #: qml/configGeneral.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Horizontal"
+msgctxt "@item:inlistbox The pager layout"
 msgid "Horizontal"
 msgstr "Horizontāls"
 
 #: qml/configGeneral.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Vertical"
+msgctxt "@item:inlistbox The pager layout"
 msgid "Vertical"
 msgstr "Vertikāls"
 
 #: qml/configGeneral.qml:85
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Text display:"
+msgctxt "@title:group prefix for radiobutton group"
 msgid "Text display:"
 msgstr "Rādīt tekstu:"
 
 #: qml/configGeneral.qml:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No text"
+msgctxt "@option:radio text display"
 msgid "No text"
 msgstr "Nav teksta"
 
 #: qml/configGeneral.qml:96
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Activity number"
+msgctxt "@option:radio text display"
 msgid "Activity number"
 msgstr "Aktivitātes numurs"
 
 #: qml/configGeneral.qml:96
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Desktop number"
+msgctxt "@option:radio text display"
 msgid "Desktop number"
 msgstr "Darbvirsmas numurs"
 
 #: qml/configGeneral.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Activity name"
+msgctxt "@option:radio text display"
 msgid "Activity name"
 msgstr "Aktivitātes nosaukums"
 
 #: qml/configGeneral.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Desktop name"
+msgctxt "@option:radio text display"
 msgid "Desktop name"
 msgstr "Darbvirsmas nosaukums"
 
@@ -136,7 +168,10 @@ msgid "Shows the desktop"
 msgstr "Parāda darbvirsmu"
 
 #: qml/main.qml:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "…and %1 other window"
+#| msgid_plural "…and %1 other windows"
+msgctxt "@info:tooltip overflow label"
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
 msgstr[0] "… un %1 cits logs"
@@ -144,7 +179,10 @@ msgstr[1] "… un %1 citi logi"
 msgstr[2] "… un %1 citu logs"
 
 #: qml/main.qml:351
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1 Window:"
+#| msgid_plural "%1 Windows:"
+msgctxt "@info:tooltip start of list"
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
 msgstr[0] "%1 logs:"
@@ -152,7 +190,10 @@ msgstr[1] "%1 logi:"
 msgstr[2] "%1 logu:"
 
 #: qml/main.qml:363
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1 Minimized Window:"
+#| msgid_plural "%1 Minimized Windows:"
+msgctxt "@info:tooltip"
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
 msgstr[0] "%1 minimizēts logs:"
@@ -160,7 +201,9 @@ msgstr[1] "%1 minimizēti logi:"
 msgstr[2] "%1 minimizētu logu:"
 
 #: qml/main.qml:439
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Desktop %1"
+msgctxt "@info:whatsthis Accessible name for pager section"
 msgid "Desktop %1"
 msgstr "Darbvirsma %1"
 

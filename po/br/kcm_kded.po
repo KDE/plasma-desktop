@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2004-09-19 18:12+0200\n"
 "Last-Translator: Thierry Vignaud <tvignaud.com>\n"
 "Language-Team: Brezhoneg <Suav.Icb.fr>\n"
@@ -49,6 +49,7 @@ msgstr ""
 
 #: ui/main.qml:55
 #, kde-format
+msgctxt "@info:status inlinemessage"
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
@@ -56,6 +57,7 @@ msgstr ""
 
 #: ui/main.qml:65
 #, kde-format
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
@@ -63,6 +65,7 @@ msgstr ""
 
 #: ui/main.qml:75
 #, kde-format
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
@@ -71,31 +74,34 @@ msgstr ""
 #: ui/main.qml:123
 #, fuzzy, kde-format
 #| msgid "Service"
+msgctxt "@item:inlistbox"
 msgid "All Services"
 msgstr "Servij"
 
 #: ui/main.qml:124
 #, fuzzy, kde-format
 #| msgid "Running"
-msgctxt "List running services"
+msgctxt "@item:inlistbox List running services"
 msgid "Running"
 msgstr "Emaon o seveniñ"
 
 #: ui/main.qml:125
 #, fuzzy, kde-format
 #| msgid "Not running"
-msgctxt "List not running services"
+msgctxt "@item:inlistbox List not running services"
 msgid "Not Running"
 msgstr "N'eo ket bev"
 
 #: ui/main.qml:162
 #, fuzzy, kde-format
 #| msgid "Service"
+msgctxt "@title:group list section"
 msgid "Startup Services"
 msgstr "Servij"
 
 #: ui/main.qml:163
 #, kde-format
+msgctxt "@title:group list section"
 msgid "Load-on-Demand Services"
 msgstr ""
 
@@ -113,16 +119,21 @@ msgstr ""
 
 #: ui/main.qml:183
 #, kde-format
+msgctxt "@info:whatsthis Accessible description"
 msgid "Toggle automatically loading this service on startup"
 msgstr ""
 
 #: ui/main.qml:227
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Not running"
+msgctxt "@info:status"
 msgid "Not running"
 msgstr "N'eo ket bev"
 
 #: ui/main.qml:228
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Running"
+msgctxt "@info:status"
 msgid "Running"
 msgstr "Emaon o seveniñ"
 
@@ -143,14 +154,22 @@ msgstr "Loc'hañ"
 #: ui/main.qml:251
 #, fuzzy, kde-format
 #| msgid "Service"
+msgctxt "@action:button"
 msgid "Stop Service"
 msgstr "Servij"
 
 #: ui/main.qml:251
 #, fuzzy, kde-format
 #| msgid "Service"
+msgctxt "@action:button"
 msgid "Start Service"
 msgstr "Servij"
+
+#, fuzzy
+#~| msgid "Running"
+#~ msgctxt "List running services"
+#~ msgid "Running"
+#~ msgstr "Emaon o seveniñ"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

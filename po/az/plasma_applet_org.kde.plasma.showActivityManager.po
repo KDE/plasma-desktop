@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-12-22 01:43+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -25,27 +25,37 @@ msgid "Appearance"
 msgstr "Xarici görünüş"
 
 #: qml/ConfigAppearance.qml:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@title:group prefix for radiobutton group"
 msgid "Icon:"
 msgstr "İkon:"
 
 #: qml/ConfigAppearance.qml:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show the current activity icon"
+msgctxt "@option:radio"
 msgid "Show the current activity icon"
 msgstr "Cari İş otağı ikonunu göstərmək"
 
 #: qml/ConfigAppearance.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show the generic activity icon"
+msgctxt "@option:radio"
 msgid "Show the generic activity icon"
 msgstr "Əsas İş otağı nişanını göstərmək"
 
 #: qml/ConfigAppearance.qml:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Title:"
+msgctxt "@label prefix for checkbox"
 msgid "Title:"
 msgstr "Başlıq:"
 
 #: qml/ConfigAppearance.qml:43
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show the current activity name"
+msgctxt "@option:check title"
 msgid "Show the current activity name"
 msgstr "Cari İş otağının adını göstərmək"
 
@@ -56,12 +66,16 @@ msgid "Current activity is %1"
 msgstr "Cari İş otağı: %1"
 
 #: qml/main.qml:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Activity Manager"
+msgctxt "@info:tooltip"
 msgid "Show Activity Manager"
 msgstr "İş otağı menecerini göstərmək"
 
 #: qml/main.qml:77
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Click to show the activity manager"
+msgctxt "@info:tooltip subtext"
 msgid "Click to show the activity manager"
 msgstr "İş otağı menecerini göstərmək üçün klikləmək"
 

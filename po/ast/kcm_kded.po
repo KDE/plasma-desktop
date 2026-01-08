@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-03-20 10:47+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -51,7 +51,11 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:55
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The background services manager (kded6) is currently not running. Make "
+#| "sure it is installed correctly."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
@@ -61,13 +65,18 @@ msgstr ""
 
 #: ui/main.qml:65
 #, kde-format
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
 
 #: ui/main.qml:75
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Some services were automatically started/stopped when the background "
+#| "services manager (kded6) was restarted to apply your changes."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
@@ -76,29 +85,37 @@ msgstr ""
 "segundu planu (kded6) se reanició p'aplicar los cambeos."
 
 #: ui/main.qml:123
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "All Services"
+msgctxt "@item:inlistbox"
 msgid "All Services"
 msgstr "Tolos servicios"
 
 #: ui/main.qml:124
-#, kde-format
-msgctxt "List running services"
+#, fuzzy, kde-format
+#| msgid "Running"
+msgctxt "@item:inlistbox List running services"
 msgid "Running"
-msgstr ""
+msgstr "N'execución"
 
 #: ui/main.qml:125
-#, kde-format
-msgctxt "List not running services"
+#, fuzzy, kde-format
+#| msgid "Not running"
+msgctxt "@item:inlistbox List not running services"
 msgid "Not Running"
-msgstr ""
+msgstr "Nun ta n'execución"
 
 #: ui/main.qml:162
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Startup Services"
+msgctxt "@title:group list section"
 msgid "Startup Services"
 msgstr "Servicios del aniciu"
 
 #: ui/main.qml:163
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load-on-Demand Services"
+msgctxt "@title:group list section"
 msgid "Load-on-Demand Services"
 msgstr "Servicios de carga baxo demanda"
 
@@ -116,16 +133,21 @@ msgstr ""
 
 #: ui/main.qml:183
 #, kde-format
+msgctxt "@info:whatsthis Accessible description"
 msgid "Toggle automatically loading this service on startup"
 msgstr ""
 
 #: ui/main.qml:227
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Not running"
+msgctxt "@info:status"
 msgid "Not running"
 msgstr "Nun ta n'execución"
 
 #: ui/main.qml:228
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Running"
+msgctxt "@info:status"
 msgid "Running"
 msgstr "N'execución"
 
@@ -142,11 +164,15 @@ msgid "Start %1"
 msgstr ""
 
 #: ui/main.qml:251
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Stop Service"
+msgctxt "@action:button"
 msgid "Stop Service"
 msgstr "Parar el serviciu"
 
 #: ui/main.qml:251
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Start Service"
+msgctxt "@action:button"
 msgid "Start Service"
 msgstr "Aniciar el serviciu"

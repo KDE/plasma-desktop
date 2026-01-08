@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2008-12-19 23:36+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -47,17 +47,20 @@ msgstr "Aplikacije, kiž su wuzamknjene z posedźenjow:"
 
 #: ui/main.qml:30
 #, kde-format
+msgctxt "@info:status inlinemessage"
 msgid "Failed to request restart to firmware setup: %1"
 msgstr ""
 
 #: ui/main.qml:31
 #, kde-format
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr ""
 
 #: ui/main.qml:32
 #, kde-format
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
@@ -65,6 +68,7 @@ msgstr ""
 #: ui/main.qml:37
 #, fuzzy, kde-format
 #| msgid "&Restart computer"
+msgctxt "@action:button"
 msgid "Restart Now"
 msgstr "Kompjuter &znowa startować"
 
@@ -100,6 +104,7 @@ msgstr "Rjadowar posedźenja"
 
 #: ui/main.qml:71
 #, kde-format
+msgctxt "@title:group prefix for radiobuttons"
 msgid "On login, launch apps that were open:"
 msgstr ""
 
@@ -138,11 +143,13 @@ msgstr "Z pró&zdnym posedźenjom započeć"
 
 #: ui/main.qml:113
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Ignored applications:"
 msgstr ""
 
 #: ui/main.qml:132
 #, kde-format
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "

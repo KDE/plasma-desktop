@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-09 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-08-17 10:23+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -107,12 +107,16 @@ msgid "9,999+"
 msgstr "9,999+"
 
 #: qml/config.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Appearance"
+msgctxt "@title:group for configuration dialog page"
 msgid "Appearance"
 msgstr "Izskats"
 
 #: qml/config.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Behavior"
+msgctxt "@title:group for configuration dialog page"
 msgid "Behavior"
 msgstr "Izturēšanās"
 
@@ -612,17 +616,23 @@ msgid "On the top"
 msgstr "Augšā"
 
 #: qml/ContextMenu.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Places"
+msgctxt "@title:group for section of menu items"
 msgid "Places"
 msgstr "Vietas"
 
 #: qml/ContextMenu.qml:106
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Recent Files"
+msgctxt "@title:group for section of menu items"
 msgid "Recent Files"
 msgstr "Nesenās datnes"
 
 #: qml/ContextMenu.qml:116
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Actions"
+msgctxt "@title:group for section of menu items"
 msgid "Actions"
 msgstr "Darbības"
 
@@ -669,117 +679,163 @@ msgid "Restore"
 msgstr "Atjaunot"
 
 #: qml/ContextMenu.qml:266
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mute"
+msgctxt "@option:check inmenu, no separate unmute action"
 msgid "Mute"
 msgstr "Apklusināt"
 
 #: qml/ContextMenu.qml:277
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open New Window"
+msgctxt "action:inmenu"
 msgid "Open New Window"
 msgstr "Atvērt jaunu logu"
 
 #: qml/ContextMenu.qml:293
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move to &Desktop"
+msgctxt "action:inmenu"
 msgid "Move to &Desktop"
 msgstr "Pārvietot uz &darbvirsmu"
 
 #: qml/ContextMenu.qml:323
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &To Current Desktop"
+msgctxt "action:inmenu"
 msgid "Move &To Current Desktop"
 msgstr "Pārvietot uz &pašreizējo darbvirsmu"
 
 #: qml/ContextMenu.qml:332
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&All Desktops"
+msgctxt "action:inmenu"
 msgid "&All Desktops"
 msgstr "&Uz visām darbvirsmām"
 
 #: qml/ContextMenu.qml:360
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&New Desktop"
+msgctxt "action:inmenu"
 msgid "&New Desktop"
 msgstr "Uz &jaunu darbvirsmu"
 
 #: qml/ContextMenu.qml:380
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show in &Activities"
+msgctxt "action:inmenu"
 msgid "Show in &Activities"
 msgstr "Rādīt &aktivitātēs"
 
 #: qml/ContextMenu.qml:404
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add To Current Activity"
+msgctxt "action:inmenu"
 msgid "Add To Current Activity"
 msgstr "Pievienot aktīvajai aktivitātei"
 
 #: qml/ContextMenu.qml:414
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "All Activities"
+msgctxt "action:inmenu"
 msgid "All Activities"
 msgstr "Visās aktivitātēs"
 
 #: qml/ContextMenu.qml:470
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move to %1"
+msgctxt "action:inmenu"
 msgid "Move to %1"
 msgstr "Pārvietot uz „%1“"
 
 #: qml/ContextMenu.qml:496 qml/ContextMenu.qml:512
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Pin to Task Manager"
+msgctxt "action:inmenu"
 msgid "&Pin to Task Manager"
 msgstr "&Piespraust uzdevumu pārvaldniekam"
 
 #: qml/ContextMenu.qml:564
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "On All Activities"
+msgctxt "action:inmenu"
 msgid "On All Activities"
 msgstr "Visās aktivitātēs"
 
 #: qml/ContextMenu.qml:570
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "On The Current Activity"
+msgctxt "action:inmenu"
 msgid "On The Current Activity"
 msgstr "Pašreizējā aktivitātē"
 
 #: qml/ContextMenu.qml:594
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Unpin from Task Manager"
+msgctxt "action:inmenu"
 msgid "Unpin from Task Manager"
 msgstr "Noņemt no uzdevumu pārvaldnieka"
 
 #: qml/ContextMenu.qml:609
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "More"
+msgctxt "item:inmenu opens submenu"
 msgid "More"
 msgstr "Vairāk"
 
 #: qml/ContextMenu.qml:618
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Move"
+msgctxt "action:inmenu"
 msgid "&Move"
 msgstr "&Pārvietot"
 
 #: qml/ContextMenu.qml:627
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Re&size"
+msgctxt "action:inmenu"
 msgid "Re&size"
 msgstr "&Mainīt izmēru"
 
 #: qml/ContextMenu.qml:641
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ma&ximize"
+msgctxt "action:inmenu"
 msgid "Ma&ximize"
 msgstr "M&aksimizēt"
 
 #: qml/ContextMenu.qml:655
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mi&nimize"
+msgctxt "action:inmenu"
 msgid "Mi&nimize"
 msgstr "Minimi&zēt"
 
 #: qml/ContextMenu.qml:665
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep &Above Others"
+msgctxt "action:inmenu"
 msgid "Keep &Above Others"
 msgstr "Patu&rēt virs citiem"
 
 #: qml/ContextMenu.qml:675
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep &Below Others"
+msgctxt "action:inmenu"
 msgid "Keep &Below Others"
 msgstr "Pa&turēt zem citiem"
 
 #: qml/ContextMenu.qml:687
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Fullscreen"
+msgctxt "action:inmenu"
 msgid "&Fullscreen"
 msgstr "Piln&ekrāna"
 
 #: qml/ContextMenu.qml:700
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Shade"
+msgctxt "action:inmenu"
 msgid "&Shade"
 msgstr "&Saritināt"
 
@@ -796,18 +852,24 @@ msgid "&Hide from Screencast"
 msgstr ""
 
 #: qml/ContextMenu.qml:741
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Allow this program to be grouped"
+msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr "Ļaut programmu grupēt"
 
 #: qml/ContextMenu.qml:787
-#, kde-format
-msgctxt "@item:inmenu"
+#, fuzzy, kde-format
+#| msgctxt "@item:inmenu"
+#| msgid "&Close All"
+msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "&Aizvērt visus"
 
 #: qml/ContextMenu.qml:787
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Close"
+msgctxt "@action:inmenu"
 msgid "&Close"
 msgstr "&Aizvērt"
 
@@ -845,7 +907,9 @@ msgid "Open textual list of windows for %1"
 msgstr "Atvērt „%1“ logu tekstuālu sarakstu"
 
 #: qml/Task.qml:179
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Activate %1"
+msgctxt "@info:usagetip %1 task name"
 msgid "Activate %1"
 msgstr "Aktivizēt „%1“"
 

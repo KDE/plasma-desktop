@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-12-04 17:57+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -140,17 +140,23 @@ msgid "Configure Extra Buttons…"
 msgstr "Конфигуриране на допълнителни бутони…"
 
 #: ui/main.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Device:"
+msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Устройство:"
 
 #: ui/main.qml:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@title:group"
 msgid "General:"
 msgstr "Общи:"
 
 #: ui/main.qml:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable device"
+msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr "Активиране на устройството"
 
@@ -161,7 +167,9 @@ msgid "Left and right buttons:"
 msgstr "Ляв и десен бутон:"
 
 #: ui/main.qml:106
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Swap (left-handed mode)"
+msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
 msgstr "Размяна (ляв режим)"
 
@@ -183,18 +191,26 @@ msgstr ""
 "с левия и десния бутон на мишката."
 
 #: ui/main.qml:148
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pointer speed:"
+msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Скорост на показалеца:"
 
 #: ui/main.qml:227
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable pointer acceleration"
+msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Активиране на ускорение на показалеца"
 
 #: ui/main.qml:241
-#, kde-format
-msgctxt "@info:tooltip from ContextualHelpButton"
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip from ContextualHelpButton"
+#| msgid ""
+#| "When enabled, pointer travel distance increases with faster movement "
+#| "speed."
+msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
@@ -202,7 +218,9 @@ msgstr ""
 "увеличаване на скоростта на движение."
 
 #: ui/main.qml:254
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scrolling speed:"
+msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr "Скорост на превъртане:"
 
@@ -219,24 +237,36 @@ msgid "Faster"
 msgstr "По-бързо"
 
 #: ui/main.qml:321
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scrolling:"
+msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "Превъртане:"
 
 #: ui/main.qml:322
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Invert scroll direction"
+msgctxt "@option:check"
 msgid "Invert scroll direction"
 msgstr "Обръщане на посоката на превъртане"
 
 #: ui/main.qml:339
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hold down middle button and move mouse to scroll"
+msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr ""
 "Натискане и задържане на средния бутон и преместване на мишката за превъртане"
 
 #: ui/main.qml:351
-#, kde-format
-msgctxt "@info:tooltip from ContextualHelpButton"
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip from ContextualHelpButton"
+#| msgid ""
+#| "This will interfere with applications that use middle-button drag, such "
+#| "as some image editors, document viewers, or video games. It may be used "
+#| "on any device, but is intended primarily as a substitute for scroll "
+#| "wheels on devices that do not have any."
+msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "This will interfere with applications that use middle-button drag, such as "
 "some image editors, document viewers, or video games. It may be used on any "

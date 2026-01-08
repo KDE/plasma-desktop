@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-11-10 22:30+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -22,93 +22,128 @@ msgstr ""
 "X-Generator: Lokalize 25.08.2\n"
 
 #: package/contents/config/config.qml:17
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Location"
+msgctxt "@title:group for configuration dialog page"
 msgid "Location"
 msgstr "Hely"
 
 #: package/contents/config/config.qml:24
-#: package/contents/ui/FolderViewLayer.qml:357
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icons"
+msgctxt "@title:group for configuration dialog page"
 msgid "Icons"
 msgstr "Ikonok"
 
 #: package/contents/config/config.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Filter"
+msgctxt "@title:group for configuration dialog page"
 msgid "Filter"
 msgstr "Szűrő"
 
 #: package/contents/ui/BackButtonItem.qml:105
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Back"
+msgctxt "@action:button"
 msgid "Back"
 msgstr "Vissza"
 
 #: package/contents/ui/ConfigFilter.qml:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Files:"
+msgctxt "@label:listbox filter mode"
 msgid "Files:"
 msgstr "Fájlok:"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show all"
+msgctxt "@item:inlistbox filter mode"
 msgid "Show all"
 msgstr "Összes megjelenítése"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show matching"
+msgctxt "@item:inlistbox filter mode"
 msgid "Show matching"
 msgstr "Illeszkedők megjelenítése"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hide matching"
+msgctxt "@item:inlistbox filter mode"
 msgid "Hide matching"
 msgstr "Illeszkedők elrejtése"
 
 #: package/contents/ui/ConfigFilter.qml:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File name pattern:"
+msgctxt "@label:textbox"
 msgid "File name pattern:"
 msgstr "Fájlnévminta:"
 
 #: package/contents/ui/ConfigFilter.qml:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File types:"
+msgctxt "@label:textbox filter list by"
 msgid "File types:"
 msgstr "Fájltípusok:"
 
 #: package/contents/ui/ConfigFilter.qml:82
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show hidden files:"
+msgctxt "@option:check prefix"
 msgid "Show hidden files:"
 msgstr "Rejtett fájlok megjelenítése:"
 
 #: package/contents/ui/ConfigFilter.qml:111
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File Type"
+msgctxt "@title:column"
 msgid "File Type"
 msgstr "Fájltípus"
 
 #: package/contents/ui/ConfigFilter.qml:112
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Description"
+msgctxt "@title:column"
 msgid "Description"
 msgstr "Leírás"
 
 #: package/contents/ui/ConfigFilter.qml:182
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select All"
+msgctxt "@action:button tooltip only Select all filetypes"
 msgid "Select All"
 msgstr "Összes kijelölése"
 
 #: package/contents/ui/ConfigFilter.qml:192
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Deselect All"
+msgctxt "@action:button tooltip only Deselect all filetypes"
 msgid "Deselect All"
 msgstr "A kijelölés megszüntetése"
 
 #: package/contents/ui/ConfigFilter.qml:201
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Switch Sort Order"
+msgctxt "@action:button tooltip only, ascending/descending"
 msgid "Switch Sort Order"
 msgstr "Rendezési sorrend megfordítása"
 
 #: package/contents/ui/ConfigIcons.qml:57
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Panel button:"
+msgctxt "@title:group prefix for checkbox + button"
 msgid "Panel button:"
 msgstr "Panelgomb:"
 
 #: package/contents/ui/ConfigIcons.qml:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use a custom icon"
+msgctxt "@option:check"
 msgid "Use a custom icon"
 msgstr "Egyedi ikon használata"
 
@@ -125,7 +160,9 @@ msgid "Clear Icon"
 msgstr "Ikon visszaállítása"
 
 #: package/contents/ui/ConfigIcons.qml:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Arrangement:"
+msgctxt "@label:listbox columns/rows"
 msgid "Arrangement:"
 msgstr "Elrendezés:"
 
@@ -142,7 +179,9 @@ msgid "In Rows"
 msgstr "Sorokban"
 
 #: package/contents/ui/ConfigIcons.qml:135
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sort Alignment:"
+msgctxt "@label:listbox, LtR/RtL"
 msgid "Sort Alignment:"
 msgstr "Rendezés igazítása:"
 
@@ -159,12 +198,16 @@ msgid "Right-to-Left"
 msgstr "Jobbról balra"
 
 #: package/contents/ui/ConfigIcons.qml:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Lock in place"
+msgctxt "@option:check lock icon positions"
 msgid "Lock in place"
 msgstr "Rögzítés"
 
 #: package/contents/ui/ConfigIcons.qml:175
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sort by:"
+msgctxt "@label:listbox sort items by field"
 msgid "Sort by:"
 msgstr "Rendezés:"
 
@@ -229,24 +272,32 @@ msgid "Grid"
 msgstr "Rács"
 
 #: package/contents/ui/ConfigIcons.qml:234
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icon size:"
+msgctxt "@label:slider"
 msgid "Icon size:"
 msgstr "Ikonméret:"
 
 #: package/contents/ui/ConfigIcons.qml:249
-#, kde-format
-msgctxt "@label:slider smallest icon size"
+#, fuzzy, kde-format
+#| msgctxt "@label:slider smallest icon size"
+#| msgid "Small"
+msgctxt "@item:inrange smallest icon size"
 msgid "Small"
 msgstr "Kicsi"
 
 #: package/contents/ui/ConfigIcons.qml:258
-#, kde-format
-msgctxt "@label:slider largest icon size"
+#, fuzzy, kde-format
+#| msgctxt "@label:slider largest icon size"
+#| msgid "Large"
+msgctxt "@item:inrange largest icon size"
 msgid "Large"
 msgstr "Nagy"
 
 #: package/contents/ui/ConfigIcons.qml:267
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Label width:"
+msgctxt "@label:listbox"
 msgid "Label width:"
 msgstr "Címkeszélesség:"
 
@@ -269,52 +320,72 @@ msgid "Wide"
 msgstr "Széles"
 
 #: package/contents/ui/ConfigIcons.qml:280
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Text lines:"
+msgctxt "@label:spinbox"
 msgid "Text lines:"
 msgstr "Szövegsorok:"
 
 #: package/contents/ui/ConfigIcons.qml:296
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "When hovering over icons:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "When hovering over icons:"
 msgstr "Ikonokra rámutatáskor:"
 
 #: package/contents/ui/ConfigIcons.qml:298
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show tooltips"
+msgctxt "@option:check When hovering over icons…"
 msgid "Show tooltips"
 msgstr "Tippek megjelenítése"
 
 #: package/contents/ui/ConfigIcons.qml:305
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show selection markers"
+msgctxt "@option:check When hovering over icons…"
 msgid "Show selection markers"
 msgstr "Kijelölésjelzők megjelenítése"
 
 #: package/contents/ui/ConfigIcons.qml:312
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show folder preview popups"
+msgctxt "@option:check When hovering over icons…"
 msgid "Show folder preview popups"
 msgstr "Mappaelőnézeti felugrók megjelenítése"
 
 #: package/contents/ui/ConfigIcons.qml:322
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename:"
+msgctxt "@label prefix for checkbox"
 msgid "Rename:"
 msgstr "Átnevezés:"
 
 #: package/contents/ui/ConfigIcons.qml:326
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename inline by clicking selected item's text"
+msgctxt "@option:check"
 msgid "Rename inline by clicking selected item's text"
 msgstr "Átnevezés helyben a kijelölt elem szövegére kattintva"
 
 #: package/contents/ui/ConfigIcons.qml:337
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Previews:"
+msgctxt "@title:group prefix for checkbox and button"
 msgid "Previews:"
 msgstr "Előnézetek:"
 
 #: package/contents/ui/ConfigIcons.qml:339
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show preview thumbnails"
+msgctxt "@option:check"
 msgid "Show preview thumbnails"
 msgstr "Előnézeti bélyegképek megjelenítése"
 
 #: package/contents/ui/ConfigIcons.qml:347
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Preview Plugins…"
+msgctxt "@action:button opens dialog"
 msgid "Configure Preview Plugins…"
 msgstr "Előnézet bővítmény beállítása…"
 
@@ -391,27 +462,37 @@ msgid "Enter title…"
 msgstr "Cím megadása…"
 
 #: package/contents/ui/ConfigOverlay.qml:97
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Click and drag to rotate"
+msgctxt "@action:button tooltip rotate widget"
 msgid "Click and drag to rotate"
 msgstr "Kattintson és húzza a forgatáshoz"
 
 #: package/contents/ui/ConfigOverlay.qml:183
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hide Background"
+msgctxt "@action:button tooltip hide widget background"
 msgid "Hide Background"
 msgstr "Háttér elrejtése"
 
 #: package/contents/ui/ConfigOverlay.qml:183
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Background"
+msgctxt "@action:button tooltip"
 msgid "Show Background"
 msgstr "Háttér megjelenítése"
 
 #: package/contents/ui/ConfigOverlay.qml:231
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@action:button tooltip remove widget"
 msgid "Remove"
 msgstr "Eltávolítás"
 
 #: package/contents/ui/FolderItemPreviewPluginsDialog.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preview Plugins"
+msgctxt "@title:window"
 msgid "Preview Plugins"
 msgstr "Bővítmények előnézete"
 
@@ -432,8 +513,17 @@ msgctxt "@info:placeholder"
 msgid "Folder is empty"
 msgstr "A mappa üres"
 
+#: package/contents/ui/FolderViewLayer.qml:357
+#, fuzzy, kde-format
+#| msgid "Icons"
+msgctxt "@item:inmenu opens submenu with view options like sorting"
+msgid "Icons"
+msgstr "Ikonok"
+
 #: package/contents/ui/main.qml:439
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Desktop and Wallpaper"
+msgctxt "@action:inmenu opens config dialog"
 msgid "Desktop and Wallpaper"
 msgstr "Asztal és háttérkép"
 

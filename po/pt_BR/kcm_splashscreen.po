@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2022-12-20 11:20-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -47,22 +47,30 @@ msgid "Name of the current splash theme"
 msgstr "Nome da tela de apresentação atual"
 
 #: ui/main.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Get New…"
+msgctxt "@action:button"
 msgid "&Get New…"
 msgstr "&Baixar novos…"
 
 #: ui/main.qml:50
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Failed to show the splash screen preview."
+msgctxt "@info:status"
 msgid "Failed to show the splash screen preview."
 msgstr "Falha ao mostrar visualização da tela de apresentação."
 
 #: ui/main.qml:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preview Splash Screen"
+msgctxt "@action:button"
 msgid "Preview Splash Screen"
 msgstr "Visualizar a tela de apresentação"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgctxt "@action:button"
 msgid "Uninstall"
 msgstr "Desinstalar"
 

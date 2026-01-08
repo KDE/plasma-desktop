@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-04-04 12:39+0200\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -142,17 +142,22 @@ msgid "Configure Extra Buttons…"
 msgstr "Sett opp ekstraknapper …"
 
 #: ui/main.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Device:"
+msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Enhet:"
 
 #: ui/main.qml:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@title:group"
 msgid "General:"
 msgstr "Generelt:"
 
 #: ui/main.qml:88
 #, kde-format
+msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr ""
 
@@ -167,6 +172,7 @@ msgstr "Trykk på venstre- og høyreknappen samtidig for midtklikk"
 #: ui/main.qml:106
 #, fuzzy, kde-format
 #| msgid "Left-handed mode"
+msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
 msgstr "Venstrehåndsmodus:"
 
@@ -190,24 +196,34 @@ msgstr ""
 "høyreklikk."
 
 #: ui/main.qml:148
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pointer speed:"
+msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Pekerhastighet:"
 
 #: ui/main.qml:227
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable pointer acceleration"
+msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Slå på pekerakselerasjon:"
 
 #: ui/main.qml:241
-#, kde-format
-msgctxt "@info:tooltip from ContextualHelpButton"
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip from ContextualHelpButton"
+#| msgid ""
+#| "When enabled, pointer travel distance increases with faster movement "
+#| "speed."
+msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr "Når i bruk, så vil pekerekkevidden øke med raskere musebevegelser."
 
 #: ui/main.qml:254
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scrolling speed:"
+msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr "Rullehastighet:"
 
@@ -224,24 +240,29 @@ msgid "Faster"
 msgstr "Raskere"
 
 #: ui/main.qml:321
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scrolling:"
+msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "Rulling:"
 
 #: ui/main.qml:322
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Invert scroll direction"
+msgctxt "@option:check"
 msgid "Invert scroll direction"
 msgstr "Omvendt rulleretning"
 
 #: ui/main.qml:339
 #, fuzzy, kde-format
 #| msgid "Press middle button and move mouse to scroll"
+msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "Trykk på midtknappen og flytt musa for å rulle"
 
 #: ui/main.qml:351
 #, kde-format
-msgctxt "@info:tooltip from ContextualHelpButton"
+msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "This will interfere with applications that use middle-button drag, such as "
 "some image editors, document viewers, or video games. It may be used on any "

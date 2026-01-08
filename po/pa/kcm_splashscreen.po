@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2023-12-22 21:46-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -45,22 +45,30 @@ msgid "Name of the current splash theme"
 msgstr "ਮੌਜੂਦਾ ਸਵਾਗਤੀ ਸਕਰੀਨ ਦਾ ਨਾਂ"
 
 #: ui/main.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Get New…"
+msgctxt "@action:button"
 msgid "&Get New…"
 msgstr "ਨਵੀਂ ਚੀਜ਼ਾਂ ਲਵੋ(&N)…"
 
 #: ui/main.qml:50
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Failed to show the splash screen preview."
+msgctxt "@info:status"
 msgid "Failed to show the splash screen preview."
 msgstr "ਸਵਾਗਤੀ ਸਕਰੀਨ ਦੀ ਝਲਕ ਵਿਖਾਉਣ ਲਈ ਅਸਫ਼ਲ ਹੈ।"
 
 #: ui/main.qml:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preview Splash Screen"
+msgctxt "@action:button"
 msgid "Preview Splash Screen"
 msgstr "ਸਵਾਗਤੀ ਸਕਰੀਨ ਦੀ ਝਲਕ ਵੇਖੋ"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgctxt "@action:button"
 msgid "Uninstall"
 msgstr "ਅਣ-ਇੰਸਟਾਲ ਕਰੋ"
 

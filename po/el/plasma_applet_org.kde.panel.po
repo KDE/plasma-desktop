@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-03 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-09-13 18:18+0300\n"
 "Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
 "Language-Team: el <kde-i18n-el@kde.org>\n"
@@ -18,22 +18,30 @@ msgstr ""
 "X-Generator: Lokalize 24.05.2\n"
 
 #: ConfigOverlay.qml:317
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@action:inmenu removes widget"
 msgid "Remove"
 msgstr "Αφαίρεση"
 
 #: ConfigOverlay.qml:327
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
+msgctxt "@action:inmenu opens widget config dialog"
 msgid "Configure…"
 msgstr "Διαμόρφωση…"
 
 #: ConfigOverlay.qml:338
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Alternatives…"
+msgctxt "@action:inmenu opens widget alternatives explorer"
 msgid "Show Alternatives…"
 msgstr "Εμφάνιση εναλλακτικών…"
 
 #: ConfigOverlay.qml:357
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Spacer width"
+msgctxt "@label:spinbox"
 msgid "Spacer width"
 msgstr "Πλάτος διαστήματος"
 
@@ -45,11 +53,17 @@ msgid "Flexible size"
 msgstr ""
 
 #: main.qml:453
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Panel configuration ui"
+msgctxt ""
+"@info:whatsthis Accessible description for entering Panel edit mode click "
+"area"
 msgid "Open Panel configuration ui"
 msgstr "Άνοιγμα της διαμόρφωσης πίνακα"
 
 #: main.qml:460
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Widgets…"
+msgctxt "@action:button opens widget explorer"
 msgid "Add Widgets…"
 msgstr "Προσθήκη συστατικών…"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-10-27 09:54+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -18,17 +18,25 @@ msgstr ""
 "X-Generator: Lokalize 24.08.2\n"
 
 #: ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pause Indexer"
+msgctxt "@action:button"
 msgid "Pause Indexer"
 msgstr "Jeda pengindeks"
 
 #: ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Resume Indexer"
+msgctxt "@action:button"
 msgid "Resume Indexer"
 msgstr "Lanjutkan pengindeks"
 
 #: ui/main.qml:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This will disable file searching in KRunner and launcher menus, and "
+#| "remove extended metadata display from all KDE applications."
+msgctxt "@info inlinemessage"
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
@@ -37,7 +45,13 @@ msgstr ""
 "menghapus tampilan metadata yang diperluas dari semua aplikasi KDE."
 
 #: ui/main.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Do you want to delete the saved index data? %1 of space will be freed, "
+#| "but if indexing is re-enabled later, the entire index will have to be re-"
+#| "created from scratch. This may take some time, depending on how many "
+#| "files you have."
+msgctxt "@info inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
 "if indexing is re-enabled later, the entire index will have to be re-created "
@@ -49,12 +63,18 @@ msgstr ""
 "pada berapa banyak file yang kamu miliki."
 
 #: ui/main.qml:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete Index Data"
+msgctxt "@action:button"
 msgid "Delete Index Data"
 msgstr "Hapus Data Indeks"
 
 #: ui/main.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "File Search helps you quickly locate your files. You can choose which "
+#| "folders and what types of file data are indexed."
+msgctxt "@info:usagetip"
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
@@ -70,22 +90,28 @@ msgstr "Data untuk diindeks:"
 
 #: ui/main.qml:109
 #, kde-format
+msgctxt "@option:radio Data to index"
 msgid "Nothing (disable indexing entirely)"
 msgstr ""
 
 #: ui/main.qml:121
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File names only"
+msgctxt "@option:radio Data to index"
 msgid "File names only"
 msgstr "Nama-nama file saja"
 
 #: ui/main.qml:136
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File names and contents"
+msgctxt "@option:radio Data to index"
 msgid "File names and contents"
 msgstr "Konten-konten dan nama-nama file"
 
 #: ui/main.qml:157
 #, fuzzy, kde-format
 #| msgid "Hidden files and folders"
+msgctxt "@option:check"
 msgid "Also index hidden files and folders"
 msgstr "Sembunyikan file dan folder"
 
@@ -120,12 +146,16 @@ msgid "Currently indexing: <filename>%1</filename>"
 msgstr "Pengindeksan saat ini: <filename>%1</filename>"
 
 #: ui/main.qml:270
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Not indexed"
+msgctxt "@info:status"
 msgid "Not indexed"
 msgstr "Tidak terindeks"
 
 #: ui/main.qml:271
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Indexed"
+msgctxt "@info:status"
 msgid "Indexed"
 msgstr "Terindeks"
 
@@ -136,12 +166,16 @@ msgid "Remove entry"
 msgstr "Hapus entri"
 
 #: ui/main.qml:318
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select a folder to include"
+msgctxt "@title:window"
 msgid "Select a folder to include"
 msgstr "Pilih sebuah folder untuk disertakan"
 
 #: ui/main.qml:318
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select a folder to exclude"
+msgctxt "@title:window"
 msgid "Select a folder to exclude"
 msgstr "Pilih sebuah folder untuk dikecualikan"
 

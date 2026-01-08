@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2008-12-29 16:21+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
@@ -25,12 +25,14 @@ msgstr ""
 #| "Title of the page that lets the user choose which location should the "
 #| "folderview show"
 #| msgid "Location"
+msgctxt "@title:group for configuration dialog page"
 msgid "Location"
 msgstr "অবস্থান"
 
 #: package/contents/config/config.qml:24
-#: package/contents/ui/FolderViewLayer.qml:357
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icons"
+msgctxt "@title:group for configuration dialog page"
 msgid "Icons"
 msgstr "আইকন"
 
@@ -40,87 +42,106 @@ msgstr "আইকন"
 #| "Title of the page that lets the user choose how to filter the folderview "
 #| "contents"
 #| msgid "Filter"
+msgctxt "@title:group for configuration dialog page"
 msgid "Filter"
 msgstr "ফিল্টার"
 
 #: package/contents/ui/BackButtonItem.qml:105
 #, kde-format
+msgctxt "@action:button"
 msgid "Back"
 msgstr ""
 
 #: package/contents/ui/ConfigFilter.qml:63
 #, fuzzy, kde-format
 #| msgid "File types:"
+msgctxt "@label:listbox filter mode"
 msgid "Files:"
 msgstr "ফাইলের ধরন:"
 
 #: package/contents/ui/ConfigFilter.qml:64
 #, fuzzy, kde-format
 #| msgid "Show All Files"
+msgctxt "@item:inlistbox filter mode"
 msgid "Show all"
 msgstr "সকল ফাইল প্রদর্শন করা হবে"
 
 #: package/contents/ui/ConfigFilter.qml:64
 #, fuzzy, kde-format
 #| msgid "Show All Files"
+msgctxt "@item:inlistbox filter mode"
 msgid "Show matching"
 msgstr "সকল ফাইল প্রদর্শন করা হবে"
 
 #: package/contents/ui/ConfigFilter.qml:64
 #, fuzzy, kde-format
 #| msgid "Show All Files"
+msgctxt "@item:inlistbox filter mode"
 msgid "Hide matching"
 msgstr "সকল ফাইল প্রদর্শন করা হবে"
 
 #: package/contents/ui/ConfigFilter.qml:69
 #, kde-format
+msgctxt "@label:textbox"
 msgid "File name pattern:"
 msgstr ""
 
 #: package/contents/ui/ConfigFilter.qml:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File types:"
+msgctxt "@label:textbox filter list by"
 msgid "File types:"
 msgstr "ফাইলের ধরন:"
 
 #: package/contents/ui/ConfigFilter.qml:82
 #, fuzzy, kde-format
 #| msgid "Show All Files"
+msgctxt "@option:check prefix"
 msgid "Show hidden files:"
 msgstr "সকল ফাইল প্রদর্শন করা হবে"
 
 #: package/contents/ui/ConfigFilter.qml:111
 #, fuzzy, kde-format
 #| msgid "File types:"
+msgctxt "@title:column"
 msgid "File Type"
 msgstr "ফাইলের ধরন:"
 
 #: package/contents/ui/ConfigFilter.qml:112
 #, kde-format
+msgctxt "@title:column"
 msgid "Description"
 msgstr ""
 
 #: package/contents/ui/ConfigFilter.qml:182
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select All"
+msgctxt "@action:button tooltip only Select all filetypes"
 msgid "Select All"
 msgstr "সমগ্র নির্বাচন করুন"
 
 #: package/contents/ui/ConfigFilter.qml:192
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Deselect All"
+msgctxt "@action:button tooltip only Deselect all filetypes"
 msgid "Deselect All"
 msgstr "সমগ্র নির্বাচন বাতিল করুন"
 
 #: package/contents/ui/ConfigFilter.qml:201
 #, kde-format
+msgctxt "@action:button tooltip only, ascending/descending"
 msgid "Switch Sort Order"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:57
 #, kde-format
+msgctxt "@title:group prefix for checkbox + button"
 msgid "Panel button:"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:63
 #, kde-format
+msgctxt "@option:check"
 msgid "Use a custom icon"
 msgstr ""
 
@@ -141,6 +162,7 @@ msgstr "আইকন সুবিন্যাস্ত করুন"
 
 #: package/contents/ui/ConfigIcons.qml:122
 #, kde-format
+msgctxt "@label:listbox columns/rows"
 msgid "Arrangement:"
 msgstr ""
 
@@ -159,6 +181,7 @@ msgstr ""
 #: package/contents/ui/ConfigIcons.qml:135
 #, fuzzy, kde-format
 #| msgid "Sort icons:"
+msgctxt "@label:listbox, LtR/RtL"
 msgid "Sort Alignment:"
 msgstr "আইকনের ক্রমবিন্যাস:"
 
@@ -178,12 +201,14 @@ msgstr "উপর থেকে নীচে"
 
 #: package/contents/ui/ConfigIcons.qml:161
 #, kde-format
+msgctxt "@option:check lock icon positions"
 msgid "Lock in place"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:175
 #, fuzzy, kde-format
 #| msgid "Sort icons:"
+msgctxt "@label:listbox sort items by field"
 msgid "Sort by:"
 msgstr "আইকনের ক্রমবিন্যাস:"
 
@@ -260,26 +285,28 @@ msgstr ""
 #: package/contents/ui/ConfigIcons.qml:234
 #, fuzzy, kde-format
 #| msgid "Icon size:"
+msgctxt "@label:slider"
 msgid "Icon size:"
 msgstr "আইকনের মাপ:"
 
 #: package/contents/ui/ConfigIcons.qml:249
 #, fuzzy, kde-format
 #| msgid "Small"
-msgctxt "@label:slider smallest icon size"
+msgctxt "@item:inrange smallest icon size"
 msgid "Small"
 msgstr "ক্ষুদ্র"
 
 #: package/contents/ui/ConfigIcons.qml:258
 #, fuzzy, kde-format
 #| msgid "Large"
-msgctxt "@label:slider largest icon size"
+msgctxt "@item:inrange largest icon size"
 msgid "Large"
 msgstr "বৃহৎ"
 
 #: package/contents/ui/ConfigIcons.qml:267
 #, fuzzy, kde-format
 #| msgid "Label:"
+msgctxt "@label:listbox"
 msgid "Label width:"
 msgstr "লেবেল:"
 
@@ -306,56 +333,66 @@ msgstr ""
 #| msgctxt "Inserted as %2 in the message below."
 #| msgid "1 file"
 #| msgid_plural "%1 files"
+msgctxt "@label:spinbox"
 msgid "Text lines:"
 msgstr "একটি ফাইল"
 
 #: package/contents/ui/ConfigIcons.qml:296
 #, kde-format
+msgctxt "@title:group prefix for checkbox group"
 msgid "When hovering over icons:"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:298
 #, kde-format
+msgctxt "@option:check When hovering over icons…"
 msgid "Show tooltips"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:305
 #, fuzzy, kde-format
 #| msgid "Select All"
+msgctxt "@option:check When hovering over icons…"
 msgid "Show selection markers"
 msgstr "সমগ্র নির্বাচন করুন"
 
 #: package/contents/ui/ConfigIcons.qml:312
 #, fuzzy, kde-format
 #| msgid "Preview In"
+msgctxt "@option:check When hovering over icons…"
 msgid "Show folder preview popups"
 msgstr "ঝলক প্রদর্শনে ব্যবহৃত হবে"
 
 #: package/contents/ui/ConfigIcons.qml:322
 #, fuzzy, kde-format
 #| msgid "&Rename"
+msgctxt "@label prefix for checkbox"
 msgid "Rename:"
 msgstr "নাম পরিবর্তন (&R)"
 
 #: package/contents/ui/ConfigIcons.qml:326
 #, kde-format
+msgctxt "@option:check"
 msgid "Rename inline by clicking selected item's text"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:337
 #, fuzzy, kde-format
 #| msgid "Preview In"
+msgctxt "@title:group prefix for checkbox and button"
 msgid "Previews:"
 msgstr "ঝলক প্রদর্শনে ব্যবহৃত হবে"
 
 #: package/contents/ui/ConfigIcons.qml:339
 #, fuzzy, kde-format
 #| msgid "Preview In"
+msgctxt "@option:check"
 msgid "Show preview thumbnails"
 msgstr "ঝলক প্রদর্শনে ব্যবহৃত হবে"
 
 #: package/contents/ui/ConfigIcons.qml:347
 #, kde-format
+msgctxt "@action:button opens dialog"
 msgid "Configure Preview Plugins…"
 msgstr ""
 
@@ -440,28 +477,34 @@ msgstr ""
 
 #: package/contents/ui/ConfigOverlay.qml:97
 #, kde-format
+msgctxt "@action:button tooltip rotate widget"
 msgid "Click and drag to rotate"
 msgstr ""
 
 #: package/contents/ui/ConfigOverlay.qml:183
 #, kde-format
+msgctxt "@action:button tooltip hide widget background"
 msgid "Hide Background"
 msgstr ""
 
 #: package/contents/ui/ConfigOverlay.qml:183
 #, kde-format
+msgctxt "@action:button tooltip"
 msgid "Show Background"
 msgstr ""
 
 #: package/contents/ui/ConfigOverlay.qml:231
 #, kde-format
+msgctxt "@action:button tooltip remove widget"
 msgid "Remove"
 msgstr ""
 
 #: package/contents/ui/FolderItemPreviewPluginsDialog.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preview In"
+msgctxt "@title:window"
 msgid "Preview Plugins"
-msgstr ""
+msgstr "ঝলক প্রদর্শনে ব্যবহৃত হবে"
 
 #: package/contents/ui/FolderView.qml:1237
 #, kde-format
@@ -479,9 +522,17 @@ msgctxt "@info:placeholder"
 msgid "Folder is empty"
 msgstr "প্রথমে ফোল্ডার"
 
+#: package/contents/ui/FolderViewLayer.qml:357
+#, fuzzy, kde-format
+#| msgid "Icons"
+msgctxt "@item:inmenu opens submenu with view options like sorting"
+msgid "Icons"
+msgstr "আইকন"
+
 #: package/contents/ui/main.qml:439
 #, fuzzy, kde-format
 #| msgid "Set as &Wallpaper"
+msgctxt "@action:inmenu opens config dialog"
 msgid "Desktop and Wallpaper"
 msgstr "ওয়াল-পেপার রূপে নির্ধারণ করুন (&W)"
 

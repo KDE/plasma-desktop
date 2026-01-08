@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-12-25 19:45+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -20,93 +20,128 @@ msgstr ""
 "X-Generator: Lokalize 24.08.2\n"
 
 #: package/contents/config/config.qml:17
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Location"
+msgctxt "@title:group for configuration dialog page"
 msgid "Location"
 msgstr "स्थानीय"
 
 #: package/contents/config/config.qml:24
-#: package/contents/ui/FolderViewLayer.qml:357
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icons"
+msgctxt "@title:group for configuration dialog page"
 msgid "Icons"
 msgstr "चिह्नानि"
 
 #: package/contents/config/config.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Filter"
+msgctxt "@title:group for configuration dialog page"
 msgid "Filter"
 msgstr "फ़िल्टर"
 
 #: package/contents/ui/BackButtonItem.qml:105
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Back"
+msgctxt "@action:button"
 msgid "Back"
 msgstr "पृष्ठभागः"
 
 #: package/contents/ui/ConfigFilter.qml:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Files:"
+msgctxt "@label:listbox filter mode"
 msgid "Files:"
 msgstr "सञ्चिकाः :"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show all"
+msgctxt "@item:inlistbox filter mode"
 msgid "Show all"
 msgstr "सर्वान् दर्शयतु"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show matching"
+msgctxt "@item:inlistbox filter mode"
 msgid "Show matching"
 msgstr "मेलनं दर्शयतु"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hide matching"
+msgctxt "@item:inlistbox filter mode"
 msgid "Hide matching"
 msgstr "मेलनं गोपयन्तु"
 
 #: package/contents/ui/ConfigFilter.qml:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File name pattern:"
+msgctxt "@label:textbox"
 msgid "File name pattern:"
 msgstr "सञ्चिकानामप्रतिरूपः :"
 
 #: package/contents/ui/ConfigFilter.qml:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File types:"
+msgctxt "@label:textbox filter list by"
 msgid "File types:"
 msgstr "सञ्चिकाप्रकाराः :"
 
 #: package/contents/ui/ConfigFilter.qml:82
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show hidden files:"
+msgctxt "@option:check prefix"
 msgid "Show hidden files:"
 msgstr "गुप्तसञ्चिकाः दर्शयन्तु :"
 
 #: package/contents/ui/ConfigFilter.qml:111
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File Type"
+msgctxt "@title:column"
 msgid "File Type"
 msgstr "सञ्चिकाप्रकारः"
 
 #: package/contents/ui/ConfigFilter.qml:112
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Description"
+msgctxt "@title:column"
 msgid "Description"
 msgstr "वर्णनम्‌"
 
 #: package/contents/ui/ConfigFilter.qml:182
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select All"
+msgctxt "@action:button tooltip only Select all filetypes"
 msgid "Select All"
 msgstr "सर्वं चिनोतु"
 
 #: package/contents/ui/ConfigFilter.qml:192
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Deselect All"
+msgctxt "@action:button tooltip only Deselect all filetypes"
 msgid "Deselect All"
 msgstr "सर्वाणि अचयनं कुर्वन्तु"
 
 #: package/contents/ui/ConfigFilter.qml:201
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Switch Sort Order"
+msgctxt "@action:button tooltip only, ascending/descending"
 msgid "Switch Sort Order"
 msgstr "क्रमबद्धक्रमं परिवर्तयन्तु"
 
 #: package/contents/ui/ConfigIcons.qml:57
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Panel button:"
+msgctxt "@title:group prefix for checkbox + button"
 msgid "Panel button:"
 msgstr "फलकबटनम् :"
 
 #: package/contents/ui/ConfigIcons.qml:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use a custom icon"
+msgctxt "@option:check"
 msgid "Use a custom icon"
 msgstr "कस्टम् चिह्नस्य उपयोगं कुर्वन्तु"
 
@@ -123,7 +158,9 @@ msgid "Clear Icon"
 msgstr "स्पष्टं चिह्नम्"
 
 #: package/contents/ui/ConfigIcons.qml:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Arrangement:"
+msgctxt "@label:listbox columns/rows"
 msgid "Arrangement:"
 msgstr "व्यवस्थाम्:"
 
@@ -142,6 +179,7 @@ msgstr ""
 #: package/contents/ui/ConfigIcons.qml:135
 #, fuzzy, kde-format
 #| msgid "Sorting:"
+msgctxt "@label:listbox, LtR/RtL"
 msgid "Sort Alignment:"
 msgstr "क्रमाङ्कनम् :"
 
@@ -162,13 +200,16 @@ msgid "Right-to-Left"
 msgstr "दक्षिणतः वामतः"
 
 #: package/contents/ui/ConfigIcons.qml:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Lock in place"
+msgctxt "@option:check lock icon positions"
 msgid "Lock in place"
 msgstr "स्थाने तालान् स्थापयतु"
 
 #: package/contents/ui/ConfigIcons.qml:175
 #, fuzzy, kde-format
 #| msgid "Sort By"
+msgctxt "@label:listbox sort items by field"
 msgid "Sort by:"
 msgstr "Sort By"
 
@@ -233,24 +274,32 @@ msgid "Grid"
 msgstr "गृध्र"
 
 #: package/contents/ui/ConfigIcons.qml:234
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icon size:"
+msgctxt "@label:slider"
 msgid "Icon size:"
 msgstr "चिह्नस्य आकारः :"
 
 #: package/contents/ui/ConfigIcons.qml:249
-#, kde-format
-msgctxt "@label:slider smallest icon size"
+#, fuzzy, kde-format
+#| msgctxt "@label:slider smallest icon size"
+#| msgid "Small"
+msgctxt "@item:inrange smallest icon size"
 msgid "Small"
 msgstr "लघु"
 
 #: package/contents/ui/ConfigIcons.qml:258
-#, kde-format
-msgctxt "@label:slider largest icon size"
+#, fuzzy, kde-format
+#| msgctxt "@label:slider largest icon size"
+#| msgid "Large"
+msgctxt "@item:inrange largest icon size"
 msgid "Large"
 msgstr "बृहत्‌"
 
 #: package/contents/ui/ConfigIcons.qml:267
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Label width:"
+msgctxt "@label:listbox"
 msgid "Label width:"
 msgstr "लेबलस्य विस्तारः :"
 
@@ -273,52 +322,72 @@ msgid "Wide"
 msgstr "विस्तृतः"
 
 #: package/contents/ui/ConfigIcons.qml:280
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Text lines:"
+msgctxt "@label:spinbox"
 msgid "Text lines:"
 msgstr "पाठपङ्क्तयः :"
 
 #: package/contents/ui/ConfigIcons.qml:296
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "When hovering over icons:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "When hovering over icons:"
 msgstr "चिह्नानां उपरि भ्रमन् :"
 
 #: package/contents/ui/ConfigIcons.qml:298
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show tooltips"
+msgctxt "@option:check When hovering over icons…"
 msgid "Show tooltips"
 msgstr "टूलटिप्स दर्शयतु"
 
 #: package/contents/ui/ConfigIcons.qml:305
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show selection markers"
+msgctxt "@option:check When hovering over icons…"
 msgid "Show selection markers"
 msgstr "चयनचिह्नानि दर्शयतु"
 
 #: package/contents/ui/ConfigIcons.qml:312
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show folder preview popups"
+msgctxt "@option:check When hovering over icons…"
 msgid "Show folder preview popups"
 msgstr "समुच्चय पूर्वावलोकन पॉपअप्स् दर्शयतु"
 
 #: package/contents/ui/ConfigIcons.qml:322
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename:"
+msgctxt "@label prefix for checkbox"
 msgid "Rename:"
 msgstr "पुनर्नामकरणम् :"
 
 #: package/contents/ui/ConfigIcons.qml:326
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename inline by clicking selected item's text"
+msgctxt "@option:check"
 msgid "Rename inline by clicking selected item's text"
 msgstr "चयनितस्य द्रव्यस्य पाठं क्लिक् कृत्वा inline इति नामकरणं कुर्वन्तु"
 
 #: package/contents/ui/ConfigIcons.qml:337
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Previews:"
+msgctxt "@title:group prefix for checkbox and button"
 msgid "Previews:"
 msgstr "पूर्वावलोकनम् :"
 
 #: package/contents/ui/ConfigIcons.qml:339
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show preview thumbnails"
+msgctxt "@option:check"
 msgid "Show preview thumbnails"
 msgstr "पूर्वावलोकनलघुचित्रं दर्शयतु"
 
 #: package/contents/ui/ConfigIcons.qml:347
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Preview Plugins…"
+msgctxt "@action:button opens dialog"
 msgid "Configure Preview Plugins…"
 msgstr "पूर्वावलोकनप्लगिन् विन्यस्तं कुर्वन्तु..."
 
@@ -407,27 +476,37 @@ msgid "Enter title…"
 msgstr "कस्टम् शीर्षकं प्रविष्टं कुर्वन्तु..."
 
 #: package/contents/ui/ConfigOverlay.qml:97
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Click and drag to rotate"
+msgctxt "@action:button tooltip rotate widget"
 msgid "Click and drag to rotate"
 msgstr "भ्रमणार्थं क्लिक् कृत्वा कर्षयन्तु"
 
 #: package/contents/ui/ConfigOverlay.qml:183
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hide Background"
+msgctxt "@action:button tooltip hide widget background"
 msgid "Hide Background"
 msgstr "पृष्ठभूमिं गोपयतु"
 
 #: package/contents/ui/ConfigOverlay.qml:183
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Background"
+msgctxt "@action:button tooltip"
 msgid "Show Background"
 msgstr "पृष्ठभूमिं दर्शयतु"
 
 #: package/contents/ui/ConfigOverlay.qml:231
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@action:button tooltip remove widget"
 msgid "Remove"
 msgstr "अपाकरोति"
 
 #: package/contents/ui/FolderItemPreviewPluginsDialog.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preview Plugins"
+msgctxt "@title:window"
 msgid "Preview Plugins"
 msgstr "पूर्वावलोकन प्लगिन्स्"
 
@@ -449,8 +528,17 @@ msgctxt "@info:placeholder"
 msgid "Folder is empty"
 msgstr "प्रथमं पुटम्"
 
+#: package/contents/ui/FolderViewLayer.qml:357
+#, fuzzy, kde-format
+#| msgid "Icons"
+msgctxt "@item:inmenu opens submenu with view options like sorting"
+msgid "Icons"
+msgstr "चिह्नानि"
+
 #: package/contents/ui/main.qml:439
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Desktop and Wallpaper"
+msgctxt "@action:inmenu opens config dialog"
 msgid "Desktop and Wallpaper"
 msgstr "डेस्कटॉप तथा वॉलपेपर"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-12-18 15:25+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -53,12 +53,16 @@ msgid "Name"
 msgstr "Ad"
 
 #: ConfigGeneral.qml:89
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Only icons can be shown when the Panel is vertical."
+msgctxt "@info:usagetip display mode for active application"
 msgid "Only icons can be shown when the Panel is vertical."
 msgstr "Panel dikeyken, yalnızca simgeler gösterilebilir."
 
 #: ConfigGeneral.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Not applicable when the widget is on the Desktop."
+msgctxt "@info:usagetip display mode for active application"
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "Araç takımı Masaüstü’ndeyken kullanılabilir değildir."
 
@@ -75,7 +79,10 @@ msgid "Enabled, with delay:"
 msgstr "Etkin, gecikme ile:"
 
 #: ConfigGeneral.qml:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@item:valuesuffix, %1 is hover activation delay in ms"
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] "%1 ms"

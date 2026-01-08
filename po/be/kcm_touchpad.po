@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-11-20 08:42\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -41,7 +41,7 @@ msgstr ""
 msgid "Cannot connect to X server"
 msgstr "Не ўдалося злучыцца з X-серверам"
 
-#: backends/x11/xlibbackend.cpp:80 ui/main.qml:59
+#: backends/x11/xlibbackend.cpp:80
 #, kde-format
 msgid "No touchpad found"
 msgstr "Сэнсарныя панэлі не знойдзеныя"
@@ -112,18 +112,31 @@ msgstr "Сэнсарная панэль адлучаная. Дыялогавае
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Сэнсарная панэль адлучаная. Не знойдзена іншых сэнсарных панэляў."
 
+#: ui/main.qml:59
+#, fuzzy, kde-format
+#| msgid "No touchpad found"
+msgctxt "@info:status placeholdermessage text"
+msgid "No touchpad found"
+msgstr "Сэнсарныя панэлі не знойдзеныя"
+
 #: ui/main.qml:60
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Connect an external touchpad"
+msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchpad"
 msgstr "Падлучыць вонкавы тачпад"
 
 #: ui/main.qml:75
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Device:"
+msgctxt "@label:listbox device selection"
 msgid "Device:"
 msgstr "Прылада:"
 
 #: ui/main.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "Асноўныя налады:"
 
@@ -131,6 +144,7 @@ msgstr "Асноўныя налады:"
 #, fuzzy, kde-format
 #| msgctxt "Coasting"
 #| msgid "Enable"
+msgctxt "@option:check"
 msgid "Enable device"
 msgstr "Уключыць"
 
@@ -142,7 +156,9 @@ msgid "Disable while mouse is connected"
 msgstr "Адключаць сэнсарную панэль пры падлучэнні мышы"
 
 #: ui/main.qml:137
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Disable while typing"
+msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "Адключаць падчас уводу"
 
@@ -162,6 +178,7 @@ msgstr "Памяняць левую і правую кнопкі."
 #: ui/main.qml:175
 #, fuzzy, kde-format
 #| msgid "Left-handed mode"
+msgctxt "@option:check"
 msgid "Swap (left-handed mode)"
 msgstr "Рэжым для ляўшэй"
 
@@ -185,13 +202,16 @@ msgstr ""
 "адначасовага націскання левай і правай кнопак."
 
 #: ui/main.qml:217
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pointer speed:"
+msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Хуткасць паказальніка:"
 
 #: ui/main.qml:297
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
+msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Паскарэнне паказальніка:"
 
@@ -203,45 +223,62 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:325
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scrolling speed:"
+msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "Хуткасць пракручвання:"
 
 #: ui/main.qml:376
-#, kde-format
-msgctxt "Slower Scroll"
+#, fuzzy, kde-format
+#| msgctxt "Slower Scroll"
+#| msgid "Slower"
+msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "Павольна"
 
 #: ui/main.qml:383
-#, kde-format
-msgctxt "Faster Scroll Speed"
+#, fuzzy, kde-format
+#| msgctxt "Faster Scroll Speed"
+#| msgid "Faster"
+msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "Хутка"
 
 #: ui/main.qml:390
 #, fuzzy, kde-format
 #| msgid "Scrolling:"
+msgctxt ""
+"@title group begins the sentence 'Scroll by moving two fingers anywhere/"
+"moving one finger on edge'"
 msgid "Scroll by:"
 msgstr "Пракручванне:"
 
 #: ui/main.qml:409
 #, kde-format
+msgctxt ""
+"@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr ""
 
 #: ui/main.qml:416
 #, kde-format
+msgctxt ""
+"@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr ""
 
 #: ui/main.qml:424
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Invert scroll direction (Natural scrolling)"
+msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Адваротны кірунак пракручвання (звычайнае пракручванне)"
 
 #: ui/main.qml:438
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Disable horizontal scrolling"
+msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "Адключыць гарызантальнае пракручванне"
 
@@ -249,8 +286,8 @@ msgstr "Адключыць гарызантальнае пракручванне
 #, fuzzy, kde-format
 #| msgid "Right-click"
 msgctxt ""
-"@label for radiobutton group, begins the sentence 'right-click by pressing "
-"bottom-right corner/pressing with two fingers'"
+"@title:group for radiobutton group, begins the sentence 'right-click by "
+"pressing bottom-right corner/pressing with two fingers'"
 msgid "Right-click by:"
 msgstr "Правая кнопка мышы"
 
@@ -265,14 +302,18 @@ msgid "Pressing bottom-right corner"
 msgstr "Націсканне ў ніжнім правым куце"
 
 #: ui/main.qml:496
-#, kde-format
-msgctxt "@info shown below radio button"
+#, fuzzy, kde-format
+#| msgctxt "@info shown below radio button"
+#| msgid "Middle-click by pressing both bottom corners."
+msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "Пстрыканне сярэдняй кнопкай мышы націсканнем у абодвух ніжніх кутах."
 
 #: ui/main.qml:497
-#, kde-format
-msgctxt "@info shown below radio button"
+#, fuzzy, kde-format
+#| msgctxt "@info shown below radio button"
+#| msgid "Middle-click by pressing bottom center."
+msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr ""
 "Пстрыканне сярэдняй кнопкай мышы націсканнем у ніжняй цэнтральнай вобласці."
@@ -349,6 +390,7 @@ msgstr "Дакрананне як пстрыканне"
 
 #: ui/main.qml:597
 #, kde-format
+msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr ""
 
@@ -362,33 +404,44 @@ msgstr ""
 
 #: ui/main.qml:616
 #, kde-format
+msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr ""
 
 #: ui/main.qml:630
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Two-finger tap:"
+msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "Дакрананне двума пальцамі:"
 
 #: ui/main.qml:650
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Right-click (three-finger tap to middle-click)"
+msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Правая кнопка мышы (дакрананне трыма пальцамі - сярэдняя кнопка мышы)"
 
 #: ui/main.qml:651
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Right-click"
+msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "Правая кнопка мышы"
 
 #: ui/main.qml:659
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle-click (three-finger tap to right-click)"
+msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr ""
 "Сярэдняя кнопка мышы (дакрананне трыма пальцамі - пстрыканне правай кнопкай "
 "мышы)"
 
 #: ui/main.qml:660
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle-click"
+msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Сярэдняя кнопка мышы"
 

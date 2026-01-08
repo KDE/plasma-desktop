@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-09-14 20:40+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -57,7 +57,11 @@ msgstr ""
 "url='%1'>küldjön egy hibajelentést is erről.</link>"
 
 #: ui/main.qml:55
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The background services manager (kded6) is currently not running. Make "
+#| "sure it is installed correctly."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
@@ -66,7 +70,11 @@ msgstr ""
 "megfelelően lett-e telepítve."
 
 #: ui/main.qml:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Some services disable themselves again when manually started if they are "
+#| "not useful in the current environment."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
@@ -75,7 +83,11 @@ msgstr ""
 "nem hasznosak a jelenlegi környezetben."
 
 #: ui/main.qml:75
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Some services were automatically started/stopped when the background "
+#| "services manager (kded6) was restarted to apply your changes."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
@@ -84,29 +96,38 @@ msgstr ""
 "háttérszolgáltatás-kezelő (kded6) újraindult a változtatások alkalmazásához."
 
 #: ui/main.qml:123
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "All Services"
+msgctxt "@item:inlistbox"
 msgid "All Services"
 msgstr "Minden szolgáltatás"
 
 #: ui/main.qml:124
-#, kde-format
-msgctxt "List running services"
+#, fuzzy, kde-format
+#| msgid "Running"
+msgctxt "@item:inlistbox List running services"
 msgid "Running"
 msgstr "Fut"
 
 #: ui/main.qml:125
-#, kde-format
-msgctxt "List not running services"
+#, fuzzy, kde-format
+#| msgctxt "List not running services"
+#| msgid "Not Running"
+msgctxt "@item:inlistbox List not running services"
 msgid "Not Running"
 msgstr "Nem fut"
 
 #: ui/main.qml:162
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Startup Services"
+msgctxt "@title:group list section"
 msgid "Startup Services"
 msgstr "Indítási szolgáltatások"
 
 #: ui/main.qml:163
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load-on-Demand Services"
+msgctxt "@title:group list section"
 msgid "Load-on-Demand Services"
 msgstr "Szükség esetén elinduló szolgáltatások"
 
@@ -123,17 +144,23 @@ msgid "Enable automatically loading %1 on startup"
 msgstr "A(z) %1 induláskori betöltésének bekapcsolása"
 
 #: ui/main.qml:183
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Toggle automatically loading this service on startup"
+msgctxt "@info:whatsthis Accessible description"
 msgid "Toggle automatically loading this service on startup"
 msgstr "Szolgáltatás induláskori betöltésének be- vagy kikapcsolása"
 
 #: ui/main.qml:227
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Not running"
+msgctxt "@info:status"
 msgid "Not running"
 msgstr "Nem fut"
 
 #: ui/main.qml:228
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Running"
+msgctxt "@info:status"
 msgid "Running"
 msgstr "Fut"
 
@@ -150,14 +177,22 @@ msgid "Start %1"
 msgstr "A(z) %1 indítása"
 
 #: ui/main.qml:251
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Stop Service"
+msgctxt "@action:button"
 msgid "Stop Service"
 msgstr "Szolgáltatás leállítása"
 
 #: ui/main.qml:251
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Start Service"
+msgctxt "@action:button"
 msgid "Start Service"
 msgstr "Szolgáltatás indítása"
+
+#~ msgctxt "List running services"
+#~ msgid "Running"
+#~ msgstr "Fut"
 
 #~ msgid ""
 #~ "<p>This module allows you to have an overview of all plugins of the KDE "

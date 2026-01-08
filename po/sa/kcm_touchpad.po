@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-12-24 20:16+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -34,7 +34,7 @@ msgstr "टचपैड् %1 कृते मौलिकयन्त्रस�
 msgid "Cannot connect to X server"
 msgstr "X सर्वरेण सह सम्बद्धं कर्तुं न शक्नोति"
 
-#: backends/x11/xlibbackend.cpp:80 ui/main.qml:59
+#: backends/x11/xlibbackend.cpp:80
 #, kde-format
 msgid "No touchpad found"
 msgstr "न टचपैड् प्राप्तम्"
@@ -104,23 +104,37 @@ msgstr "टचपैड् विच्छिन्नः। तस्य से
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "टचपैड् विच्छिन्नः। अन्ये स्पर्शपट्टिकाः न प्राप्ताः।"
 
+#: ui/main.qml:59
+#, fuzzy, kde-format
+#| msgid "No touchpad found"
+msgctxt "@info:status placeholdermessage text"
+msgid "No touchpad found"
+msgstr "न टचपैड् प्राप्तम्"
+
 #: ui/main.qml:60
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Connect an external touchpad"
+msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchpad"
 msgstr "एकं बाह्यं टचपैड् संयोजयन्तु"
 
 #: ui/main.qml:75
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Device:"
+msgctxt "@label:listbox device selection"
 msgid "Device:"
 msgstr "उपकरणम्‌:"
 
 #: ui/main.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "सामान्य:"
 
 #: ui/main.qml:101
 #, kde-format
+msgctxt "@option:check"
 msgid "Enable device"
 msgstr ""
 
@@ -131,7 +145,9 @@ msgid "Disable while mouse is connected"
 msgstr "मूषकं संयोजितं सति निष्क्रियं कुरु।"
 
 #: ui/main.qml:137
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Disable while typing"
+msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "टङ्कनं कुर्वन् अक्षमं कुर्वन्तु"
 
@@ -151,6 +167,7 @@ msgstr "वाम-दक्षिण-बटनयोः अदला-बदल�
 #: ui/main.qml:175
 #, fuzzy, kde-format
 #| msgid "Left-handed mode"
+msgctxt "@option:check"
 msgid "Swap (left-handed mode)"
 msgstr "वामहस्तः मोडः"
 
@@ -173,13 +190,16 @@ msgstr ""
 "सम्यक् ज्ञातुं अतिरिक्तविलम्बस्य आवश्यकता भवति ।"
 
 #: ui/main.qml:217
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pointer speed:"
+msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "सूचकस्य गतिः :"
 
 #: ui/main.qml:297
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
+msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "सूचकत्वरणम् :"
 
@@ -191,45 +211,62 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:325
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scrolling speed:"
+msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "स्क्रॉल गतिः :"
 
 #: ui/main.qml:376
-#, kde-format
-msgctxt "Slower Scroll"
+#, fuzzy, kde-format
+#| msgctxt "Slower Scroll"
+#| msgid "Slower"
+msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "मन्दतरम्"
 
 #: ui/main.qml:383
-#, kde-format
-msgctxt "Faster Scroll Speed"
+#, fuzzy, kde-format
+#| msgctxt "Faster Scroll Speed"
+#| msgid "Faster"
+msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "द्रुततरम्"
 
 #: ui/main.qml:390
 #, fuzzy, kde-format
 #| msgid "Scrolling:"
+msgctxt ""
+"@title group begins the sentence 'Scroll by moving two fingers anywhere/"
+"moving one finger on edge'"
 msgid "Scroll by:"
 msgstr "स्क्रॉल करणम् :"
 
 #: ui/main.qml:409
 #, kde-format
+msgctxt ""
+"@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr ""
 
 #: ui/main.qml:416
 #, kde-format
+msgctxt ""
+"@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr ""
 
 #: ui/main.qml:424
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Invert scroll direction (Natural scrolling)"
+msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "स्क्रॉल दिशा उल्टा (प्राकृतिक स्क्रॉल) 1.1."
 
 #: ui/main.qml:438
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Disable horizontal scrolling"
+msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "क्षैतिजस्क्रॉलं निष्क्रियं कुर्वन्तु"
 
@@ -237,8 +274,8 @@ msgstr "क्षैतिजस्क्रॉलं निष्क्रि�
 #, fuzzy, kde-format
 #| msgid "Right-click"
 msgctxt ""
-"@label for radiobutton group, begins the sentence 'right-click by pressing "
-"bottom-right corner/pressing with two fingers'"
+"@title:group for radiobutton group, begins the sentence 'right-click by "
+"pressing bottom-right corner/pressing with two fingers'"
 msgid "Right-click by:"
 msgstr "राइट्-क्लिक् कुर्वन्तु"
 
@@ -253,14 +290,18 @@ msgid "Pressing bottom-right corner"
 msgstr "अधः-दक्षिणकोणं नुदन्तु"
 
 #: ui/main.qml:496
-#, kde-format
-msgctxt "@info shown below radio button"
+#, fuzzy, kde-format
+#| msgctxt "@info shown below radio button"
+#| msgid "Middle-click by pressing both bottom corners."
+msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "अधः कोणद्वयं दबावन् मध्य-क्लिक् कुर्वन्तु ।"
 
 #: ui/main.qml:497
-#, kde-format
-msgctxt "@info shown below radio button"
+#, fuzzy, kde-format
+#| msgctxt "@info shown below radio button"
+#| msgid "Middle-click by pressing bottom center."
+msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "अधः केन्द्रं नुत्वा मध्य-क्लिक् कुर्वन्तु ।"
 
@@ -337,6 +378,7 @@ msgstr "ट्याप्-टू-क्लिक्"
 
 #: ui/main.qml:597
 #, kde-format
+msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr ""
 
@@ -350,31 +392,42 @@ msgstr ""
 
 #: ui/main.qml:616
 #, kde-format
+msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr ""
 
 #: ui/main.qml:630
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Two-finger tap:"
+msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "द्वि-अङ्गुली-नलः :"
 
 #: ui/main.qml:650
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Right-click (three-finger tap to middle-click)"
+msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "राइट्-क्लिक् (मध्य-क्लिक्-पर्यन्तं त्रि-अङ्गुली-ट्याप्)"
 
 #: ui/main.qml:651
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Right-click"
+msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "राइट्-क्लिक् कुर्वन्तु"
 
 #: ui/main.qml:659
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle-click (three-finger tap to right-click)"
+msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "मध्य-क्लिक् (दक्षिण-क्लिक् कर्तुं त्रि-अङ्गुली-ट्याप्)"
 
 #: ui/main.qml:660
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle-click"
+msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "मध्य-क्लिक्"
 

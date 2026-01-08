@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-08-24 11:36+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -134,22 +134,30 @@ msgid "Help"
 msgstr "Help"
 
 #: ui/main.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Applications"
+msgctxt "@title:group list section name"
 msgid "Applications"
 msgstr "Applications"
 
 #: ui/main.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Commands"
+msgctxt "@title:group list section name"
 msgid "Commands"
 msgstr "Commands"
 
 #: ui/main.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "System Services"
+msgctxt "@title:group list section name"
 msgid "System Services"
 msgstr "System Services"
 
 #: ui/main.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Common Actions"
+msgctxt "@title:group list section name"
 msgid "Common Actions"
 msgstr "Common Actions"
 
@@ -219,12 +227,17 @@ msgid "Add new command or script"
 msgstr "Command or Script…"
 
 #: ui/main.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cannot export scheme while there are unsaved changes"
+msgctxt "@info:status inlinemessage"
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "Cannot export scheme while there are unsaved changes"
 
 #: ui/main.qml:117
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Select the components below that should be included in the exported scheme"
+msgctxt "@info:usagetip"
 msgid ""
 "Select the components below that should be included in the exported scheme"
 msgstr ""
@@ -268,7 +281,9 @@ msgid "Undo deletion"
 msgstr "Undo deletion"
 
 #: ui/main.qml:341
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No items matched the search terms"
+msgctxt "@info:status placeholdermessage"
 msgid "No items matched the search terms"
 msgstr "No items matched the search terms"
 
@@ -292,17 +307,23 @@ msgid "Undo deleting shortcuts"
 msgstr "No default shortcuts"
 
 #: ui/main.qml:399
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select an item from the list to view its shortcuts here"
+msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Select an item from the list to view its shortcuts here"
 
 #: ui/main.qml:412
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Export Shortcut Scheme"
+msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr "Export Shortcut Scheme"
 
 #: ui/main.qml:412 ui/main.qml:553
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Import Shortcut Scheme"
+msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
 msgstr "Import Shortcut Scheme"
 
@@ -313,22 +334,30 @@ msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Shortcut Scheme (*.kksrc)"
 
 #: ui/main.qml:441
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Command"
+msgctxt "@title:window dialog"
 msgid "Edit Command"
 msgstr "Edit Command"
 
 #: ui/main.qml:441
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Command"
+msgctxt "@title:window dialog"
 msgid "Add Command"
 msgstr "Add Command"
 
 #: ui/main.qml:463
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save"
+msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
 msgstr "Save"
 
 #: ui/main.qml:463
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add"
+msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
 msgstr "Add"
 
@@ -348,7 +377,9 @@ msgid "Add command"
 msgstr "Add Command"
 
 #: ui/main.qml:492
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enter a command or choose a script file:"
+msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr "Enter a command or choose a script file:"
 
@@ -403,22 +434,30 @@ msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 
 #: ui/main.qml:561
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select the scheme to import:"
+msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr "Select the scheme to import:"
 
 #: ui/main.qml:580
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom Scheme"
+msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
 msgstr "Custom Scheme"
 
 #: ui/main.qml:588
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select File…"
+msgctxt "@action:button"
 msgid "Select File…"
 msgstr "Select File…"
 
 #: ui/main.qml:588
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Import"
+msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "Import"
 
@@ -451,7 +490,9 @@ msgid "Expand to configure shortcuts"
 msgstr "No active shortcuts"
 
 #: ui/ShortcutActionDelegate.qml:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Editing shortcut: %1"
+msgctxt "@info:whatsthis accessible name %1 is shortcut label (not sequence)"
 msgid "Editing shortcut: %1"
 msgstr "Editing shortcut: %1"
 
@@ -464,35 +505,48 @@ msgid "%1:"
 msgstr "%1:"
 
 #: ui/ShortcutActionDelegate.qml:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No active shortcuts"
+msgctxt "@info:status"
 msgid "No active shortcuts"
 msgstr "No active shortcuts"
 
 #: ui/ShortcutActionDelegate.qml:134
-#, kde-format
-msgctxt "%1 decides if singular or plural will be used"
+#, fuzzy, kde-format
+#| msgctxt "%1 decides if singular or plural will be used"
+#| msgid "Default shortcut"
+#| msgid_plural "Default shortcuts"
+msgctxt "@title:column %1 decides if singular or plural will be used"
 msgid "Default shortcut"
 msgid_plural "Default shortcuts"
 msgstr[0] "Default shortcut"
 msgstr[1] "Default shortcuts"
 
 #: ui/ShortcutActionDelegate.qml:136
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No default shortcuts"
+msgctxt "@label for shortcut with no default bindings"
 msgid "No default shortcuts"
 msgstr "No default shortcuts"
 
 #: ui/ShortcutActionDelegate.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Default shortcut %1 is enabled."
+msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is enabled."
 msgstr "Default shortcut %1 is enabled."
 
 #: ui/ShortcutActionDelegate.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Default shortcut %1 is disabled."
+msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is disabled."
 msgstr "Default shortcut %1 is disabled."
 
 #: ui/ShortcutActionDelegate.qml:168
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom shortcuts"
+msgctxt "@title:column"
 msgid "Custom shortcuts"
 msgstr "Custom shortcuts"
 

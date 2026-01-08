@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-02 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-06-29 21:39+0200\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -46,12 +46,16 @@ msgid "Show in Favorites"
 msgstr "Vis i favoritter"
 
 #: config.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Generelt"
 
 #: ConfigGeneral.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Ikon:"
 
@@ -102,27 +106,37 @@ msgid "Remove icon"
 msgstr "Fjern ikon"
 
 #: ConfigGeneral.qml:120
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show applications as:"
+msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Vis programmer som:"
 
 #: ConfigGeneral.qml:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Name only"
+msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Bare navn"
 
 #: ConfigGeneral.qml:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Description only"
+msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Bare beskrivelse"
 
 #: ConfigGeneral.qml:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Name (Description)"
+msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Navn (beskrivelse)"
 
 #: ConfigGeneral.qml:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Description (Name)"
+msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Beskrivelse (navn)"
 
@@ -173,7 +187,9 @@ msgstr ""
 "eller favorittsiden."
 
 #: ConfigGeneral.qml:185
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use compact list item style"
+msgctxt "@option:check"
 msgid "Use compact list item style"
 msgstr "Bruk kompakt listestil"
 
@@ -184,12 +200,16 @@ msgid "Automatically disabled when in Touch Mode"
 msgstr "Automatisk slått av i trykkskjerm-modus"
 
 #: ConfigGeneral.qml:199
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Highlight newly installed applications"
+msgctxt "@option:check"
 msgid "Highlight newly installed applications"
 msgstr "Fremhev nylig installerte programmer"
 
 #: ConfigGeneral.qml:204
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Switch sidebar categories when hovering over them"
+msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
 msgstr "Endre sidestolpekategorier når du svever over dem"
 
@@ -200,86 +220,125 @@ msgid "Configure Search Plugins…"
 msgstr "Sett opp søketillegg …"
 
 #: ConfigGeneral.qml:220
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sidebar position:"
+msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr "Plassering av sidestolpe:"
 
 #: ConfigGeneral.qml:221 ConfigGeneral.qml:229
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Right"
+msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr "Til høyre"
 
-#: ConfigGeneral.qml:221 ConfigGeneral.qml:229
-#, kde-format
+#: ConfigGeneral.qml:221
+#, fuzzy, kde-format
+#| msgid "Left"
+msgctxt "option:radio sidebar position"
+msgid "Left"
+msgstr "Til venstre"
+
+#: ConfigGeneral.qml:229
+#, fuzzy, kde-format
+#| msgid "Left"
+msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr "Til venstre"
 
 #: ConfigGeneral.qml:237
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show favorites:"
+msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
 msgstr "Vis favoritter:"
 
 #: ConfigGeneral.qml:238
-#, kde-format
-msgctxt "Part of a sentence: 'Show favorites in a grid'"
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
+#| msgid "In a grid"
+msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "I rutenett"
 
 #: ConfigGeneral.qml:246
-#, kde-format
-msgctxt "Part of a sentence: 'Show favorites in a list'"
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Show favorites in a list'"
+#| msgid "In a list"
+msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "I liste"
 
 #: ConfigGeneral.qml:254
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show other applications:"
+msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
 msgstr "Vis andre programmer:"
 
 #: ConfigGeneral.qml:255
-#, kde-format
-msgctxt "Part of a sentence: 'Show other applications in a grid'"
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
+#| msgid "In a grid"
+msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "I rutenett"
 
 #: ConfigGeneral.qml:263
-#, kde-format
-msgctxt "Part of a sentence: 'Show other applications in a list'"
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Show favorites in a list'"
+#| msgid "In a list"
+msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "I liste"
 
 #: ConfigGeneral.qml:275
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show buttons for:"
+msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr "Vis knapper for:"
 
-#: ConfigGeneral.qml:276 LeaveButtons.qml:171
-#, kde-format
+#: ConfigGeneral.qml:276
+#, fuzzy, kde-format
+#| msgid "Power"
+msgctxt "@option:radio Show buttons for"
 msgid "Power"
 msgstr "Strøm"
 
-#: ConfigGeneral.qml:285 LeaveButtons.qml:171
-#, kde-format
+#: ConfigGeneral.qml:285
+#, fuzzy, kde-format
+#| msgid "Session"
+msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "Økt"
 
 #: ConfigGeneral.qml:294
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Power and session"
+msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
 msgstr "Strøm og økt"
 
 #: ConfigGeneral.qml:303
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show action button captions"
+msgctxt "@option:check"
 msgid "Show action button captions"
 msgstr "Vis tekst på handlingsknapper"
 
 #: Footer.qml:101
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Applications"
+msgctxt "@title:tab kickoff sidebar tab"
 msgid "Applications"
 msgstr "Programmer"
 
 #: Footer.qml:117
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Places"
+msgctxt "@title:tab kickoff sidebar tab"
 msgid "Places"
 msgstr "Steder"
 
@@ -290,48 +349,95 @@ msgid "No matches"
 msgstr "Ingen treff"
 
 #: Header.qml:84
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open user settings"
+msgctxt "@action:button icon-only, for tooltip/Accessible"
 msgid "Open user settings"
 msgstr "Åpne brukerinnstillinger"
 
 #: Header.qml:264
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep Open"
+msgctxt ""
+"@action:button Pin widget open if it loses focus, icon-only button, for "
+"tooltip/Accessible"
 msgid "Keep Open"
 msgstr "Hold åpen"
 
-#: KickoffGridDelegate.qml:59 KickoffListDelegate.qml:117
+#: KickoffGridDelegate.qml:59
+#, fuzzy, kde-format
+#| msgctxt "Newly installed app, badge, keep short"
+#| msgid "New!"
+msgctxt "@label Newly installed app, badge, keep short"
+msgid "New!"
+msgstr "Nytt!"
+
+#: KickoffGridDelegate.qml:60
+#, fuzzy, kde-format
+#| msgid "Newly installed application"
+msgctxt "@label Accessible name for badge"
+msgid "Newly installed application"
+msgstr "Nylig installert program"
+
+#: KickoffGridView.qml:101
+#, fuzzy, kde-format
+#| msgid "Grid with %1 rows, %2 columns"
+msgctxt "@info:whatsthis Accessible description"
+msgid "Grid with %1 rows, %2 columns"
+msgstr "Rutenett med %1 rader og %2 kolonner"
+
+#: KickoffListDelegate.qml:117
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "Nytt!"
 
-#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:119
-#, kde-format
-msgid "Newly installed application"
-msgstr "Nylig installert program"
-
-#: KickoffGridView.qml:101
-#, kde-format
-msgid "Grid with %1 rows, %2 columns"
-msgstr "Rutenett med %1 rader og %2 kolonner"
-
 #: KickoffListDelegate.qml:118
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "There is a newly installed application in this category"
+msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly installed application in this category"
 msgstr "Det finnes et nylig installert program i denne kategorien"
 
+#: KickoffListDelegate.qml:119
+#, fuzzy, kde-format
+#| msgid "Newly installed application"
+msgctxt "@info:whatsthis Accessible description for badge"
+msgid "Newly installed application"
+msgstr "Nylig installert program"
+
 #: LeaveButtons.qml:171
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Session"
+msgctxt "@title:menu menubutton"
+msgid "Session"
+msgstr "Økt"
+
+#: LeaveButtons.qml:171
+#, fuzzy, kde-format
+#| msgid "Power"
+msgctxt "@title:menu menubutton"
+msgid "Power"
+msgstr "Strøm"
+
+#: LeaveButtons.qml:171
+#, fuzzy, kde-format
+#| msgid "More"
+msgctxt "@title:menu menubutton"
 msgid "More"
 msgstr "Mer"
 
 #: LeaveButtons.qml:171
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Session and Power"
+msgctxt "@title:menu menubutton"
 msgid "Session and Power"
 msgstr "Økt og strøm"
 
 #: main.qml:356
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Applications…"
+msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
 msgstr "Rediger programmer …"
 
@@ -352,3 +458,11 @@ msgstr "Historikk"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Mest brukte"
+
+#~ msgctxt "Part of a sentence: 'Show other applications in a grid'"
+#~ msgid "In a grid"
+#~ msgstr "I rutenett"
+
+#~ msgctxt "Part of a sentence: 'Show other applications in a list'"
+#~ msgid "In a list"
+#~ msgstr "I liste"

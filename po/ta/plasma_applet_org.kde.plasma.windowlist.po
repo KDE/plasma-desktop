@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2026-01-04 17:03+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -51,12 +51,16 @@ msgid "Name"
 msgstr "பெயர்"
 
 #: ConfigGeneral.qml:89
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Only icons can be shown when the Panel is vertical."
+msgctxt "@info:usagetip display mode for active application"
 msgid "Only icons can be shown when the Panel is vertical."
 msgstr "பலகை செங்குத்தாக இருக்கும்போது சின்னங்களை மட்டும்தான் காட்ட முடியும்."
 
 #: ConfigGeneral.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Not applicable when the widget is on the Desktop."
+msgctxt "@info:usagetip display mode for active application"
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "பிளாஸ்மாய்டு பணிமேடையில் இருக்கும்போது பொருந்தாது."
 
@@ -73,7 +77,10 @@ msgid "Enabled, with delay:"
 msgstr "இந்த தாமதத்துடன் இயக்கு:"
 
 #: ConfigGeneral.qml:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@item:valuesuffix, %1 is hover activation delay in ms"
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] "%1 மி.நொ."

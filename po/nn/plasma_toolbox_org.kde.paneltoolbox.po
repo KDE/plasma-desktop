@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2022-02-13 14:34+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -20,11 +20,15 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 
 #: contents/ui/main.qml:112
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Panel…"
+msgctxt "@info:whatsthis accessible name"
 msgid "Configure Panel…"
 msgstr "Set opp panelet …"
 
 #: contents/ui/main.qml:113
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Panel configuration ui"
+msgctxt "@info:whatsthis accessible description"
 msgid "Open Panel configuration ui"
 msgstr "Opna brukarflate for paneloppsett"

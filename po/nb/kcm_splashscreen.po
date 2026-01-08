@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-03-29 14:04+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -47,21 +47,29 @@ msgid "Name of the current splash theme"
 msgstr "Navn på gjeldende tema for velkomstbilde"
 
 #: ui/main.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Get New…"
+msgctxt "@action:button"
 msgid "&Get New…"
 msgstr "&Hent nye …"
 
 #: ui/main.qml:50
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Failed to show the splash screen preview."
+msgctxt "@info:status"
 msgid "Failed to show the splash screen preview."
 msgstr "Klarte ikke vise forhåndsvisning av velkomstbildet."
 
 #: ui/main.qml:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preview Splash Screen"
+msgctxt "@action:button"
 msgid "Preview Splash Screen"
 msgstr "Forhåndsvisning av velkomstbilde"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgctxt "@action:button"
 msgid "Uninstall"
 msgstr "Avinstaller"

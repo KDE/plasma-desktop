@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2005-10-11 20:31+0200\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -48,17 +48,20 @@ msgstr "Сеансга &кирмаган дастурлар:"
 
 #: ui/main.qml:30
 #, kde-format
+msgctxt "@info:status inlinemessage"
 msgid "Failed to request restart to firmware setup: %1"
 msgstr ""
 
 #: ui/main.qml:31
 #, kde-format
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr ""
 
 #: ui/main.qml:32
 #, kde-format
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
@@ -66,6 +69,7 @@ msgstr ""
 #: ui/main.qml:37
 #, fuzzy, kde-format
 #| msgid "&Restart computer"
+msgctxt "@action:button"
 msgid "Restart Now"
 msgstr "К&омпьютерни ўчириб-ёқиш"
 
@@ -101,6 +105,7 @@ msgstr "Сеанс бошқарувчиси"
 
 #: ui/main.qml:71
 #, kde-format
+msgctxt "@title:group prefix for radiobuttons"
 msgid "On login, launch apps that were open:"
 msgstr ""
 
@@ -139,11 +144,13 @@ msgstr "&Бўш сеанс билан бошлаш"
 
 #: ui/main.qml:113
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Ignored applications:"
 msgstr ""
 
 #: ui/main.qml:132
 #, kde-format
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "

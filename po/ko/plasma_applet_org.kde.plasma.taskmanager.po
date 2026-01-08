@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-09 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-10-09 01:18+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -103,12 +103,16 @@ msgid "9,999+"
 msgstr "9,999+"
 
 #: qml/config.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Appearance"
+msgctxt "@title:group for configuration dialog page"
 msgid "Appearance"
 msgstr "모양"
 
 #: qml/config.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Behavior"
+msgctxt "@title:group for configuration dialog page"
 msgid "Behavior"
 msgstr "행동"
 
@@ -602,17 +606,23 @@ msgid "On the top"
 msgstr "위쪽에"
 
 #: qml/ContextMenu.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Places"
+msgctxt "@title:group for section of menu items"
 msgid "Places"
 msgstr "위치"
 
 #: qml/ContextMenu.qml:106
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Recent Files"
+msgctxt "@title:group for section of menu items"
 msgid "Recent Files"
 msgstr "최근 파일"
 
 #: qml/ContextMenu.qml:116
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Actions"
+msgctxt "@title:group for section of menu items"
 msgid "Actions"
 msgstr "동작"
 
@@ -659,117 +669,163 @@ msgid "Restore"
 msgstr "복원"
 
 #: qml/ContextMenu.qml:266
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mute"
+msgctxt "@option:check inmenu, no separate unmute action"
 msgid "Mute"
 msgstr "음소거"
 
 #: qml/ContextMenu.qml:277
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open New Window"
+msgctxt "action:inmenu"
 msgid "Open New Window"
 msgstr "새 창 열기"
 
 #: qml/ContextMenu.qml:293
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move to &Desktop"
+msgctxt "action:inmenu"
 msgid "Move to &Desktop"
 msgstr "다음 바탕 화면으로 이동(&D)"
 
 #: qml/ContextMenu.qml:323
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &To Current Desktop"
+msgctxt "action:inmenu"
 msgid "Move &To Current Desktop"
 msgstr "현재 바탕 화면으로 이동(&T)"
 
 #: qml/ContextMenu.qml:332
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&All Desktops"
+msgctxt "action:inmenu"
 msgid "&All Desktops"
 msgstr "모든 바탕 화면(&A)"
 
 #: qml/ContextMenu.qml:360
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&New Desktop"
+msgctxt "action:inmenu"
 msgid "&New Desktop"
 msgstr "새 바탕 화면(&N)"
 
 #: qml/ContextMenu.qml:380
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show in &Activities"
+msgctxt "action:inmenu"
 msgid "Show in &Activities"
 msgstr "다음 활동에 표시(&A)"
 
 #: qml/ContextMenu.qml:404
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add To Current Activity"
+msgctxt "action:inmenu"
 msgid "Add To Current Activity"
 msgstr "현재 활동에 추가"
 
 #: qml/ContextMenu.qml:414
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "All Activities"
+msgctxt "action:inmenu"
 msgid "All Activities"
 msgstr "모든 활동"
 
 #: qml/ContextMenu.qml:470
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move to %1"
+msgctxt "action:inmenu"
 msgid "Move to %1"
 msgstr "%1(으)로 이동"
 
 #: qml/ContextMenu.qml:496 qml/ContextMenu.qml:512
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Pin to Task Manager"
+msgctxt "action:inmenu"
 msgid "&Pin to Task Manager"
 msgstr "작업 관리자에 고정(&P)"
 
 #: qml/ContextMenu.qml:564
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "On All Activities"
+msgctxt "action:inmenu"
 msgid "On All Activities"
 msgstr "모든 활동에"
 
 #: qml/ContextMenu.qml:570
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "On The Current Activity"
+msgctxt "action:inmenu"
 msgid "On The Current Activity"
 msgstr "현재 활동에"
 
 #: qml/ContextMenu.qml:594
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Unpin from Task Manager"
+msgctxt "action:inmenu"
 msgid "Unpin from Task Manager"
 msgstr "작업 관리자에서 고정 해제"
 
 #: qml/ContextMenu.qml:609
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "More"
+msgctxt "item:inmenu opens submenu"
 msgid "More"
 msgstr "더 보기"
 
 #: qml/ContextMenu.qml:618
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Move"
+msgctxt "action:inmenu"
 msgid "&Move"
 msgstr "이동(&M)"
 
 #: qml/ContextMenu.qml:627
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Re&size"
+msgctxt "action:inmenu"
 msgid "Re&size"
 msgstr "크기 조정(&S)"
 
 #: qml/ContextMenu.qml:641
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ma&ximize"
+msgctxt "action:inmenu"
 msgid "Ma&ximize"
 msgstr "최대화(&X)"
 
 #: qml/ContextMenu.qml:655
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mi&nimize"
+msgctxt "action:inmenu"
 msgid "Mi&nimize"
 msgstr "최소화(&N)"
 
 #: qml/ContextMenu.qml:665
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep &Above Others"
+msgctxt "action:inmenu"
 msgid "Keep &Above Others"
 msgstr "항상 위(&A)"
 
 #: qml/ContextMenu.qml:675
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep &Below Others"
+msgctxt "action:inmenu"
 msgid "Keep &Below Others"
 msgstr "항상 아래(&B)"
 
 #: qml/ContextMenu.qml:687
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Fullscreen"
+msgctxt "action:inmenu"
 msgid "&Fullscreen"
 msgstr "전체 화면(&F)"
 
 #: qml/ContextMenu.qml:700
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Shade"
+msgctxt "action:inmenu"
 msgid "&Shade"
 msgstr "말아 올리기(&S)"
 
@@ -786,18 +842,24 @@ msgid "&Hide from Screencast"
 msgstr ""
 
 #: qml/ContextMenu.qml:741
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Allow this program to be grouped"
+msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr "이 프로그램을 그룹으로 묶기"
 
 #: qml/ContextMenu.qml:787
-#, kde-format
-msgctxt "@item:inmenu"
+#, fuzzy, kde-format
+#| msgctxt "@item:inmenu"
+#| msgid "&Close All"
+msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "모두 닫기(&C)"
 
 #: qml/ContextMenu.qml:787
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Close"
+msgctxt "@action:inmenu"
 msgid "&Close"
 msgstr "닫기(&C)"
 
@@ -833,7 +895,9 @@ msgid "Open textual list of windows for %1"
 msgstr "%1의 창 텍스트 목록 표시"
 
 #: qml/Task.qml:179
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Activate %1"
+msgctxt "@info:usagetip %1 task name"
 msgid "Activate %1"
 msgstr "%1 활성화"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-05-01 03:41+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -19,14 +19,20 @@ msgstr ""
 "X-Generator: Poedit 3.5\n"
 
 #: ui/main.qml:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The system must be restarted before changes to the middle-click paste "
+#| "setting can take effect."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr "შუა-წკაპით ჩასმის ჩასართავად აუცილებელია, გადატვირთოთ სისტემა."
 
 #: ui/main.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Restart"
+msgctxt "@action:button"
 msgid "Restart"
 msgstr "გადატვრთვა"
 
@@ -49,7 +55,13 @@ msgid "Panel and widget tooltips"
 msgstr "პანელის და ვიჯეტის მინიშნებები"
 
 #: ui/main.qml:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Allows all Plasma panel and desktop widgets to show descriptive tooltips "
+#| "when hovered with the pointer. This setting has no effect on the small "
+#| "tooltips displayed when hovering over individual buttons and other user "
+#| "interface elements."
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Allows all Plasma panel and desktop widgets to show descriptive tooltips "
 "when hovered with the pointer. This setting has no effect on the small "
@@ -69,7 +81,11 @@ msgid "OSD popups for status changes"
 msgstr "OSD მხტუნარები სტატუსის ცვლილებისთვის"
 
 #: ui/main.qml:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Allows all Plasma widgets to show on-screen display (OSD) popups for "
+#| "changes like volume and brightness level, or audio device switching."
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
@@ -85,28 +101,40 @@ msgid "Scrolling"
 msgstr "აჩოჩება"
 
 #: ui/main.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clicking in scrollbar track:"
+msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
 msgstr "ჩოჩიაზე წკაპი:"
 
 #: ui/main.qml:101
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
+#| "to the clicked location'"
+#| msgid "Scrolls to the clicked location"
 msgctxt ""
-"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
-"the clicked location'"
+"@option:radio part of a complete sentence: 'Clicking in scrollbar track "
+"scrolls to the clicked location'"
 msgid "Scrolls to the clicked location"
 msgstr "დაწკაპუნებულ ადგლამდე მიწევა"
 
 #: ui/main.qml:119
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
+#| "one page up or down'"
+#| msgid "Scrolls one page up or down"
 msgctxt ""
-"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
-"page up or down'"
+"@option:radio part of a complete sentence: 'Clicking in scrollbar track "
+"scrolls one page up or down'"
 msgid "Scrolls one page up or down"
 msgstr "ერთი გვერდით მაღლა ან დაბალ აწევა"
 
 #: ui/main.qml:137
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle-click to scroll to clicked location"
+msgctxt "@info:usagetip"
 msgid "Middle-click to scroll to clicked location"
 msgstr "შუა-წკაპი აწევ-ჩამოწევის წკაპის მდებარეობა"
 
@@ -150,7 +178,9 @@ msgid "Selects them"
 msgstr "მონიშნავს"
 
 #: ui/main.qml:201
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open by double-clicking instead"
+msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "გახსნა მხოლოდ ორმაგი წკაპით მოხდება"
 
@@ -161,7 +191,9 @@ msgid "Opens them"
 msgstr "გახსნის მათ"
 
 #: ui/main.qml:232
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select by clicking on item's selection marker"
+msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
 msgstr "არჩიეთ ჩანაწერის არჩევის სანიშნზე დაწკაპუნებით"
 
@@ -182,7 +214,9 @@ msgid "Pastes selected text"
 msgstr "ჩასვამს მონიშნულ ტექსტს"
 
 #: ui/main.qml:268
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Double-click interval:"
+msgctxt "@label:spinbox"
 msgid "Double-click interval:"
 msgstr "ორმაგი წკაპის ინტერვალი:"
 
@@ -201,7 +235,11 @@ msgid "ms"
 msgstr "მწმ"
 
 #: ui/main.qml:301
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Two clicks within this duration are considered a double-click. Some "
+#| "applications may not honor this setting."
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
@@ -220,17 +258,23 @@ msgstr ""
 "შეცვალა, გაზარდეთ ორმაგი წკაპის ინტერვალი."
 
 #: ui/main.qml:354
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Drag and Drop"
+msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr "გადათრევა და დაგდება"
 
 #: ui/main.qml:361
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "When dragging files or folders:"
+msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "ფაილების, ან საქაღალდეების გადათრევისას:"
 
 #: ui/main.qml:362
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Always ask what to do"
+msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr "ყოველთვის მკითხე, რა ვქნა"
 
@@ -247,7 +291,9 @@ msgstr ""
 "შესაქმნელად. სხვა შემთხვევაში ნაჩვენები იქნება დიალოგი."
 
 #: ui/main.qml:386
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move if on the same device"
+msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "გადატანა, თუ იგივე მოწყობილობაზეა"
 
@@ -266,24 +312,35 @@ msgid "Touch"
 msgstr "შეხება"
 
 #: ui/main.qml:416
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable Touch Mode:"
+msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Touch Mode:"
 msgstr "შეხების რეჟიმის ჩართვა:"
 
 #: ui/main.qml:418
-#, kde-format
-msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
+#, fuzzy, kde-format
+#| msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
+#| msgid "Automatically enable as needed"
+msgctxt "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "საჭიროებისამებრ ჩართვა"
 
 #: ui/main.qml:418
-#, kde-format
-msgctxt "As in: 'Touch Mode is never enabled'"
+#, fuzzy, kde-format
+#| msgctxt "As in: 'Touch Mode is never enabled'"
+#| msgid "Never enabled"
+msgctxt "option:radio As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "არასდროს ჩართულა"
 
 #: ui/main.qml:435
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Touch Mode will be automatically activated whenever the system detects a "
+#| "touchscreen but no mouse or touchpad. For example: when a transformable "
+#| "laptop's keyboard is flipped around or detached."
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
@@ -306,7 +363,11 @@ msgid "Disabled"
 msgstr "გამორთულია"
 
 #: ui/main.qml:486
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "In Touch Mode, many elements of the user interface will become larger to "
+#| "more easily accommodate touch interaction."
+msgctxt "@info:usagetip"
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
 "more easily accommodate touch interaction."

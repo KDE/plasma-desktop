@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-07 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-12-07 06:49+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -228,17 +228,28 @@ msgstr ""
 "njim ravnati."
 
 #: ui/ActionDialog.qml:248
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Up:"
+msgctxt ""
+"@label prefix for configuring Keybind to send when dial/ring is turned "
+"upwards"
 msgid "Up:"
 msgstr "Gor:"
 
 #: ui/ActionDialog.qml:261
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Down:"
+msgctxt ""
+"@label prefix for configuring Keybind to send when dial/ring is turned "
+"downwards"
 msgid "Down:"
 msgstr "Dol:"
 
 #: ui/ActionDialog.qml:274
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Speed:"
+msgctxt ""
+"@label:slider Speed for how often this dial/ring should emit key events"
 msgid "Speed:"
 msgstr "Hitrost:"
 
@@ -379,22 +390,30 @@ msgid "Cancel"
 msgstr "Prekliči"
 
 #: ui/DisplayTab.qml:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Map to screen:"
+msgctxt "@label:listbox"
 msgid "Map to screen:"
 msgstr "Preslikaj na zaslon:"
 
 #: ui/DisplayTab.qml:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Orientation:"
+msgctxt "@label:listbox"
 msgid "Orientation:"
 msgstr "Orientacija:"
 
 #: ui/DisplayTab.qml:79
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Not Applicable"
+msgctxt "@label substitute for unavailable orientation change"
 msgid "Not Applicable"
 msgstr "Ni uporabno"
 
 #: ui/DisplayTab.qml:93
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mapped Area:"
+msgctxt "@label:listbox"
 msgid "Mapped Area:"
 msgstr "Preslikano območje:"
 
@@ -411,7 +430,9 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/ExternalScreenMapping.qml:190
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Resize the screen area"
+msgctxt "@action:button"
 msgid "Resize the screen area"
 msgstr "Spremenite velikost območja zaslona"
 
@@ -422,17 +443,23 @@ msgid "%1%,%2% - %3%×%4%"
 msgstr "%1%,%2% - %3%×%4%"
 
 #: ui/ExternalScreenMapping.qml:301
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Resize the tablet area"
+msgctxt "@action:button"
 msgid "Resize the tablet area"
 msgstr "Spremenite velikost območja tablice"
 
 #: ui/main.qml:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No drawing tablets found"
+msgctxt "@info placeholdermessage text"
 msgid "No drawing tablets found"
 msgstr "Ni najdenih risalnih tablic"
 
 #: ui/main.qml:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Connect a drawing tablet"
+msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect a drawing tablet"
 msgstr "Priklopi risalno tablico"
 
@@ -479,12 +506,18 @@ msgid "Pad"
 msgstr "Podloga"
 
 #: ui/MissingPadTab.qml:15
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No pad inputs found"
+msgctxt "@info placeholdermessage main text"
 msgid "No pad inputs found"
 msgstr "Ni najdenih vhodov za tablico"
 
 #: ui/MissingPadTab.qml:16
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "No buttons or other inputs were detected. This could mean the driver for "
+#| "this device is missing."
+msgctxt "@info:usagetip placeholdermessage explanation"
 msgid ""
 "No buttons or other inputs were detected. This could mean the driver for "
 "this device is missing."
@@ -493,7 +526,9 @@ msgstr ""
 "manjka gonilnik."
 
 #: ui/PadTab.qml:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pad ring %1:"
+msgctxt "@label for graphics tablet ring config, % is number of ring"
 msgid "Pad ring %1:"
 msgstr "Zvonjenje podloge %1:"
 
@@ -506,7 +541,9 @@ msgid "pad ring/dial %1"
 msgstr "zvonjenje/klicanje podloge %1"
 
 #: ui/PadTab.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pad dial %1:"
+msgctxt "@label for graphics tablet ring config, % is number of dial"
 msgid "Pad dial %1:"
 msgstr "Številčnica tablice %1:"
 
@@ -519,7 +556,9 @@ msgid "pad dial %1"
 msgstr "številčnica tablice %1"
 
 #: ui/PadTab.qml:138
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pad button %1:"
+msgctxt "@label for graphics tablet button config, % is number of button"
 msgid "Pad button %1:"
 msgstr "Gumb tablice %1:"
 
@@ -532,13 +571,17 @@ msgid "pad button %1"
 msgstr "gumb tablice %1"
 
 #: ui/StylusTab.qml:222
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Left-handed mode:"
+msgctxt "@label prefix for checkbox"
 msgid "Left-handed mode:"
 msgstr "Način za levičarje:"
 
 #: ui/StylusTab.qml:228
-#, kde-format
-msgctxt "Enable left-handed mode"
+#, fuzzy, kde-format
+#| msgctxt "Enable left-handed mode"
+#| msgid "Enable"
+msgctxt "@option:check Enable left-handed mode"
 msgid "Enable"
 msgstr "Omogoči"
 
@@ -562,25 +605,37 @@ msgid "Mode:"
 msgstr "Način:"
 
 #: ui/StylusTab.qml:254
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Pen"
 msgctxt ""
-"Pen mode, where the point on the screen is always where you touch the stylus"
+"@option:radio Pen mode, where the point on the screen is always where you "
+"touch the stylus"
 msgid "Pen"
 msgstr "Pisalo"
 
 #: ui/StylusTab.qml:259
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "The cursor follows where you touch the pen on the surface"
+msgctxt "@info:whatsthis Accessible description"
 msgid "The cursor follows where you touch the pen on the surface"
 msgstr "Kazalec sledi mestu, kjer se dotaknete peresa na površini"
 
 #: ui/StylusTab.qml:280
-#, kde-format
-msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
+#, fuzzy, kde-format
+#| msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
+#| msgid "Mouse"
+msgctxt ""
+"@option:radio Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
 msgstr "Miška"
 
 #: ui/StylusTab.qml:285
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Moving the pen on the surface moves the cursor relative to where it was, "
+#| "like a mouse"
+msgctxt "@info:whatsthis Accessible description"
 msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
 "like a mouse"
@@ -589,7 +644,9 @@ msgstr ""
 "bil, podobno kot miška"
 
 #: ui/StylusTab.qml:355
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pen Pressure:"
+msgctxt "@label prefix for pen pressure curve config"
 msgid "Pen Pressure:"
 msgstr "Pritisk pisala:"
 
@@ -744,6 +801,12 @@ msgstr ""
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
 msgstr "Očisti"
+
+#~ msgctxt ""
+#~ "Pen mode, where the point on the screen is always where you touch the "
+#~ "stylus"
+#~ msgid "Pen"
+#~ msgstr "Pisalo"
 
 #~ msgctxt "@info"
 #~ msgid ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_splashscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-05-26 00:48+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -47,21 +47,29 @@ msgid "Name of the current splash theme"
 msgstr "Nombre del tema de pantalla de bienvenida actual"
 
 #: ui/main.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Get New…"
+msgctxt "@action:button"
 msgid "&Get New…"
 msgstr "&Obtener novedades…"
 
 #: ui/main.qml:50
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Failed to show the splash screen preview."
+msgctxt "@info:status"
 msgid "Failed to show the splash screen preview."
 msgstr "No se ha podido mostrar la vista previa de la pantalla de bienvenida."
 
 #: ui/main.qml:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preview Splash Screen"
+msgctxt "@action:button"
 msgid "Preview Splash Screen"
 msgstr "Vista previa de la pantalla de bienvenida"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgctxt "@action:button"
 msgid "Uninstall"
 msgstr "Desinstalar"

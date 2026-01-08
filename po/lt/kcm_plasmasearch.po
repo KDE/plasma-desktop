@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-06-29 01:33+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -32,17 +32,26 @@ msgid "Available Plugins"
 msgstr "Prieinami įskiepiai"
 
 #: plasmasearch/ui/main.qml:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure KRunner…"
+msgctxt "@action:button in toolbar"
 msgid "Configure KRunner…"
 msgstr "Konfigūruoti KRunner…"
 
 #: plasmasearch/ui/main.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Get New Plugins…"
+msgctxt "@action:button in toolbar"
 msgid "Get New Plugins…"
 msgstr "Gauti naujų įskiepių…"
 
 #: plasmasearch/ui/main.qml:45
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#| "Overview effect). Mark plugins as favorites and arrange them in order you "
+#| "want to prioritize them."
+msgctxt "@info:usagetip"
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
@@ -53,12 +62,16 @@ msgstr ""
 "norima pirmenybės tvarka."
 
 #: plasmasearch/ui/main.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove from favorites"
+msgctxt "@action:button, icononly"
 msgid "Remove from favorites"
 msgstr "Šalinti iš mėgstamų"
 
 #: plasmasearch/ui/main.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add to favorites"
+msgctxt "@action:button, icononly"
 msgid "Add to favorites"
 msgstr "Pridėti į mėgstamas"
 

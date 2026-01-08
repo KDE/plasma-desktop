@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-03 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-12-13 19:10+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -18,22 +18,30 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 
 #: ConfigOverlay.qml:317
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@action:inmenu removes widget"
 msgid "Remove"
 msgstr "अपाकरोति"
 
 #: ConfigOverlay.qml:327
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
+msgctxt "@action:inmenu opens widget config dialog"
 msgid "Configure…"
 msgstr "विन्यस्तं कुर्वन्तु..."
 
 #: ConfigOverlay.qml:338
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Alternatives…"
+msgctxt "@action:inmenu opens widget alternatives explorer"
 msgid "Show Alternatives…"
 msgstr "विकल्पान् दर्शयतु..."
 
 #: ConfigOverlay.qml:357
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Spacer width"
+msgctxt "@label:spinbox"
 msgid "Spacer width"
 msgstr "स्पेसर चौड़ाई"
 
@@ -45,11 +53,17 @@ msgid "Flexible size"
 msgstr "लचीला आकारः"
 
 #: main.qml:453
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Panel configuration ui"
+msgctxt ""
+"@info:whatsthis Accessible description for entering Panel edit mode click "
+"area"
 msgid "Open Panel configuration ui"
 msgstr "Open Panel विन्यास ui"
 
 #: main.qml:460
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Widgets…"
+msgctxt "@action:button opens widget explorer"
 msgid "Add Widgets…"
 msgstr "विजेट् योजयन्तु..."

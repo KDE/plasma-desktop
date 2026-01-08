@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-12-16 22:09+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -36,7 +36,7 @@ msgstr "在讀取觸控板 %1 的基礎裝置資訊時發生嚴重錯誤。"
 msgid "Cannot connect to X server"
 msgstr "無法連線到 X 伺服器"
 
-#: backends/x11/xlibbackend.cpp:80 ui/main.qml:59
+#: backends/x11/xlibbackend.cpp:80
 #, kde-format
 msgid "No touchpad found"
 msgstr "找不到觸控板"
@@ -100,23 +100,38 @@ msgstr "觸控板已斷線。關閉此設定對話框。"
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "觸控板已斷線。找不到其他的觸控板。"
 
+#: ui/main.qml:59
+#, fuzzy, kde-format
+#| msgid "No touchpad found"
+msgctxt "@info:status placeholdermessage text"
+msgid "No touchpad found"
+msgstr "找不到觸控板"
+
 #: ui/main.qml:60
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Connect an external touchpad"
+msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchpad"
 msgstr "請連線一個外部觸控板"
 
 #: ui/main.qml:75
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Device:"
+msgctxt "@label:listbox device selection"
 msgid "Device:"
 msgstr "裝置："
 
 #: ui/main.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "一般："
 
 #: ui/main.qml:101
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable device"
+msgctxt "@option:check"
 msgid "Enable device"
 msgstr "啟用裝置"
 
@@ -127,7 +142,9 @@ msgid "Disable while mouse is connected"
 msgstr "插入滑鼠時停用(&I)"
 
 #: ui/main.qml:137
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Disable while typing"
+msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "打字時停用(&W)"
 
@@ -144,7 +161,9 @@ msgid "Left and right buttons:"
 msgstr "左鍵和右鍵："
 
 #: ui/main.qml:175
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Swap (left-handed mode)"
+msgctxt "@option:check"
 msgid "Swap (left-handed mode)"
 msgstr "交換（左手模式）"
 
@@ -164,12 +183,16 @@ msgstr ""
 "啟用此設定會使點擊增加 50 毫秒的延遲。這個延遲用來偵測左右鍵的同時按下。"
 
 #: ui/main.qml:217
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pointer speed:"
+msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "游標速度："
 
 #: ui/main.qml:297
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable pointer acceleration"
+msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "啟用指標加速"
 
@@ -181,52 +204,76 @@ msgid ""
 msgstr "啟用時，手指移動較快時會使指標移動距離較遠。"
 
 #: ui/main.qml:325
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scrolling speed:"
+msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "捲動速度："
 
 #: ui/main.qml:376
-#, kde-format
-msgctxt "Slower Scroll"
+#, fuzzy, kde-format
+#| msgctxt "Slower Scroll"
+#| msgid "Slower"
+msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "較慢"
 
 #: ui/main.qml:383
-#, kde-format
-msgctxt "Faster Scroll Speed"
+#, fuzzy, kde-format
+#| msgctxt "Faster Scroll Speed"
+#| msgid "Faster"
+msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "較快"
 
 #: ui/main.qml:390
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scroll by:"
+msgctxt ""
+"@title group begins the sentence 'Scroll by moving two fingers anywhere/"
+"moving one finger on edge'"
 msgid "Scroll by:"
 msgstr "捲動方式："
 
 #: ui/main.qml:409
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Moving two fingers anywhere"
+msgctxt ""
+"@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr "以兩支手指滑動任何地方"
 
 #: ui/main.qml:416
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Moving one finger on edge"
+msgctxt ""
+"@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr "以單指滑動邊緣"
 
 #: ui/main.qml:424
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Invert scroll direction (Natural scrolling)"
+msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "反轉捲動方向(&N)（自然捲動）"
 
 #: ui/main.qml:438
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Disable horizontal scrolling"
+msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "停用水平捲動(&H)"
 
 #: ui/main.qml:460
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@label for radiobutton group, begins the sentence 'right-click by "
+#| "pressing bottom-right corner/pressing with two fingers'"
+#| msgid "Right-click by:"
 msgctxt ""
-"@label for radiobutton group, begins the sentence 'right-click by pressing "
-"bottom-right corner/pressing with two fingers'"
+"@title:group for radiobutton group, begins the sentence 'right-click by "
+"pressing bottom-right corner/pressing with two fingers'"
 msgid "Right-click by:"
 msgstr "右鍵點擊方式："
 
@@ -239,14 +286,18 @@ msgid "Pressing bottom-right corner"
 msgstr "點觸右下角"
 
 #: ui/main.qml:496
-#, kde-format
-msgctxt "@info shown below radio button"
+#, fuzzy, kde-format
+#| msgctxt "@info shown below radio button"
+#| msgid "Middle-click by pressing both bottom corners."
+msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "同時按下左下角和右下角來進行中鍵點擊。"
 
 #: ui/main.qml:497
-#, kde-format
-msgctxt "@info shown below radio button"
+#, fuzzy, kde-format
+#| msgctxt "@info shown below radio button"
+#| msgid "Middle-click by pressing bottom center."
+msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "按下右下角來進行中鍵點擊。"
 
@@ -309,7 +360,9 @@ msgid "Tap to click"
 msgstr "輕點以點擊"
 
 #: ui/main.qml:597
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Allow dragging after tapping"
+msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr "允許輕點後拖曳"
 
@@ -324,32 +377,44 @@ msgstr ""
 "指來拖放。"
 
 #: ui/main.qml:616
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Allow briefly lifting finger during tap-and-drag"
+msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr "允許在輕點後拖曳時抬起手指一下子"
 
 #: ui/main.qml:630
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Two-finger tap:"
+msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "兩指點擊："
 
 #: ui/main.qml:650
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Right-click (three-finger tap to middle-click)"
+msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "右鍵(&R)（三指點擊傳出中鍵）"
 
 #: ui/main.qml:651
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Right-click"
+msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "點擊右鍵"
 
 #: ui/main.qml:659
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle-click (three-finger tap to right-click)"
+msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "中鍵(&M)（三指點擊傳出右鍵）"
 
 #: ui/main.qml:660
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle-click"
+msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "中鍵"
 

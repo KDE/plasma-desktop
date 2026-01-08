@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-11-29 00:40+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -25,27 +25,37 @@ msgid "Appearance"
 msgstr "모양"
 
 #: qml/ConfigAppearance.qml:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@title:group prefix for radiobutton group"
 msgid "Icon:"
 msgstr "아이콘:"
 
 #: qml/ConfigAppearance.qml:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show the current activity icon"
+msgctxt "@option:radio"
 msgid "Show the current activity icon"
 msgstr "현재 활동 아이콘 표시"
 
 #: qml/ConfigAppearance.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show the generic activity icon"
+msgctxt "@option:radio"
 msgid "Show the generic activity icon"
 msgstr "일반 활동 아이콘 표시"
 
 #: qml/ConfigAppearance.qml:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Title:"
+msgctxt "@label prefix for checkbox"
 msgid "Title:"
 msgstr "제목:"
 
 #: qml/ConfigAppearance.qml:43
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show the current activity name"
+msgctxt "@option:check title"
 msgid "Show the current activity name"
 msgstr "현재 활동 이름 표시"
 
@@ -56,12 +66,16 @@ msgid "Current activity is %1"
 msgstr "현재 활동: %1"
 
 #: qml/main.qml:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Activity Manager"
+msgctxt "@info:tooltip"
 msgid "Show Activity Manager"
 msgstr "활동 관리자 표시"
 
 #: qml/main.qml:77
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Click to show the activity manager"
+msgctxt "@info:tooltip subtext"
 msgid "Click to show the activity manager"
 msgstr "활동 관리자를 표시하려면 클릭하십시오"
 

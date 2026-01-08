@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_activities\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2023-11-11 15:45+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -60,30 +60,40 @@ msgid "Description:"
 msgstr "Popis:"
 
 #: ui/ActivityEditor.qml:84
-#, kde-format
-msgctxt "@option:check"
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "While on this activity, allow:"
+msgctxt "@title:group for checkbox group"
 msgid "While on this activity, allow:"
 msgstr "Počas tejto aktivity povoliť:"
 
 #: ui/ActivityEditor.qml:85
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tracking file and app use"
+msgctxt "@option:check While on activity, allow"
 msgid "Tracking file and app use"
 msgstr "Sledovanie používania súborov a aplikácií"
 
 #: ui/ActivityEditor.qml:91
-#, kde-format
-msgctxt "@option:check"
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Automatically turning off the screen"
+msgctxt "@option:check While on activity, allow"
 msgid "Automatically turning off the screen"
 msgstr "Automatické vypnutie obrazovky"
 
 #: ui/ActivityEditor.qml:97
-#, kde-format
-msgctxt "@option:check"
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Automatically shutting down or sleeping"
+msgctxt "@option:check While on activity, allow"
 msgid "Automatically shutting down or sleeping"
 msgstr "Automatické vypnutie alebo uspanie"
 
 #: ui/ActivityEditor.qml:103
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Shortcut for switching:"
+msgctxt "@label prefix for keyboard shortcut input button"
 msgid "Shortcut for switching:"
 msgstr "Skratka na prepínanie:"
 
@@ -94,7 +104,9 @@ msgid "Delete %1 activity"
 msgstr "Vymazať aktivitu %1"
 
 #: ui/main.qml:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create New…"
+msgctxt "@action:button Create new Activity"
 msgid "Create New…"
 msgstr "Vytvoriť novú..."
 
@@ -111,7 +123,9 @@ msgid "Do you want to delete activity '%1'?"
 msgstr "Naozaj chcete vymazať  aktivitu '%1'?"
 
 #: ui/main.qml:94
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete Activity"
+msgctxt "@action:button in dialog confirms deletion"
 msgid "Delete Activity"
 msgstr "Vymazať aktivitu"
 

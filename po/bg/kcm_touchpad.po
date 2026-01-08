@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-12-06 22:52+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -36,7 +36,7 @@ msgstr ""
 msgid "Cannot connect to X server"
 msgstr "Не може да се свърже с X сървър"
 
-#: backends/x11/xlibbackend.cpp:80 ui/main.qml:59
+#: backends/x11/xlibbackend.cpp:80
 #, kde-format
 msgid "No touchpad found"
 msgstr "Не е намерен тъчпад"
@@ -107,23 +107,38 @@ msgstr "Тъчпадът е изключен. Затворете диалого�
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Тъчпадът е изключен. Не са намерени други устройства."
 
+#: ui/main.qml:59
+#, fuzzy, kde-format
+#| msgid "No touchpad found"
+msgctxt "@info:status placeholdermessage text"
+msgid "No touchpad found"
+msgstr "Не е намерен тъчпад"
+
 #: ui/main.qml:60
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Connect an external touchpad"
+msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchpad"
 msgstr "Свързване на външен тъчпад"
 
 #: ui/main.qml:75
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Device:"
+msgctxt "@label:listbox device selection"
 msgid "Device:"
 msgstr "Устройство:"
 
 #: ui/main.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "Общи:"
 
 #: ui/main.qml:101
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable device"
+msgctxt "@option:check"
 msgid "Enable device"
 msgstr "Активиране на устройството"
 
@@ -134,7 +149,9 @@ msgid "Disable while mouse is connected"
 msgstr "Деактивиране при налична свързана мишка"
 
 #: ui/main.qml:137
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Disable while typing"
+msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "Деактивиране по време на писане"
 
@@ -151,7 +168,9 @@ msgid "Left and right buttons:"
 msgstr "Ляв и десен бутон:"
 
 #: ui/main.qml:175
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Swap (left-handed mode)"
+msgctxt "@option:check"
 msgid "Swap (left-handed mode)"
 msgstr "Размяна (режим за лява ръка)"
 
@@ -173,12 +192,16 @@ msgstr ""
 "с левия и десния бутон на мишката."
 
 #: ui/main.qml:217
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pointer speed:"
+msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Скорост на показалеца:"
 
 #: ui/main.qml:297
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable pointer acceleration"
+msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Активиране на ускорение на показалеца"
 
@@ -192,52 +215,76 @@ msgstr ""
 "увеличаване на скоростта на движение."
 
 #: ui/main.qml:325
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scrolling speed:"
+msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "Скорост на превъртане:"
 
 #: ui/main.qml:376
-#, kde-format
-msgctxt "Slower Scroll"
+#, fuzzy, kde-format
+#| msgctxt "Slower Scroll"
+#| msgid "Slower"
+msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "По-бавно"
 
 #: ui/main.qml:383
-#, kde-format
-msgctxt "Faster Scroll Speed"
+#, fuzzy, kde-format
+#| msgctxt "Faster Scroll Speed"
+#| msgid "Faster"
+msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "По-бързо"
 
 #: ui/main.qml:390
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scroll by:"
+msgctxt ""
+"@title group begins the sentence 'Scroll by moving two fingers anywhere/"
+"moving one finger on edge'"
 msgid "Scroll by:"
 msgstr "Превъртане чрез:"
 
 #: ui/main.qml:409
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Moving two fingers anywhere"
+msgctxt ""
+"@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr "Преместване на два пръста на произволно място"
 
 #: ui/main.qml:416
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Moving one finger on edge"
+msgctxt ""
+"@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr "Преместване на един пръст по ръба"
 
 #: ui/main.qml:424
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Invert scroll direction (Natural scrolling)"
+msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Обръщане на посоката на превъртане (Естествено превъртане)"
 
 #: ui/main.qml:438
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Disable horizontal scrolling"
+msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "Деактивиране на хоризонтално превъртане"
 
 #: ui/main.qml:460
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@label for radiobutton group, begins the sentence 'right-click by "
+#| "pressing bottom-right corner/pressing with two fingers'"
+#| msgid "Right-click by:"
 msgctxt ""
-"@label for radiobutton group, begins the sentence 'right-click by pressing "
-"bottom-right corner/pressing with two fingers'"
+"@title:group for radiobutton group, begins the sentence 'right-click by "
+"pressing bottom-right corner/pressing with two fingers'"
 msgid "Right-click by:"
 msgstr "Кликване с десен бутон чрез"
 
@@ -250,14 +297,18 @@ msgid "Pressing bottom-right corner"
 msgstr "Натискане на долния десен ъгъл"
 
 #: ui/main.qml:496
-#, kde-format
-msgctxt "@info shown below radio button"
+#, fuzzy, kde-format
+#| msgctxt "@info shown below radio button"
+#| msgid "Middle-click by pressing both bottom corners."
+msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "Кликване със среден бутон чрез натискане на двата долни ъгъла."
 
 #: ui/main.qml:497
-#, kde-format
-msgctxt "@info shown below radio button"
+#, fuzzy, kde-format
+#| msgctxt "@info shown below radio button"
+#| msgid "Middle-click by pressing bottom center."
+msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Кликване със среден бутон чрез натискане средата на долния ръб."
 
@@ -321,7 +372,9 @@ msgid "Tap to click"
 msgstr "Докосване за кликване"
 
 #: ui/main.qml:597
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Allow dragging after tapping"
+msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr "Разрешаване на плъзгане след докосване"
 
@@ -337,35 +390,47 @@ msgstr ""
 "вдигнете пръста."
 
 #: ui/main.qml:616
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Allow briefly lifting finger during tap-and-drag"
+msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr ""
 "Позволяване на кратко повдигане на пръста по време на докосване и плъзгане"
 
 #: ui/main.qml:630
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Two-finger tap:"
+msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "Докосване с два пръста:"
 
 #: ui/main.qml:650
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Right-click (three-finger tap to middle-click)"
+msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr ""
 "Кликване  с десния бутон на мишката (докосване с три пръста за средно "
 "кликване)"
 
 #: ui/main.qml:651
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Right-click"
+msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "Кликване с десен бутон"
 
 #: ui/main.qml:659
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle-click (three-finger tap to right-click)"
+msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Средно кликване (докосване с три пръста за кликване на десен бутон)"
 
 #: ui/main.qml:660
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle-click"
+msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Кликване със среден бутон"
 

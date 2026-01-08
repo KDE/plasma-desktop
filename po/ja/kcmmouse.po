@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-01-22 20:51+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -143,17 +143,22 @@ msgid "Configure Extra Buttons…"
 msgstr "追加のボタンを設定..."
 
 #: ui/main.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Device:"
+msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "デバイス:"
 
 #: ui/main.qml:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@title:group"
 msgid "General:"
 msgstr "全般:"
 
 #: ui/main.qml:88
 #, kde-format
+msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr ""
 
@@ -167,6 +172,7 @@ msgstr "左右のボタンを入れ替えます。"
 #: ui/main.qml:106
 #, fuzzy, kde-format
 #| msgid "Left-handed mode"
+msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
 msgstr "左利きモード"
 
@@ -190,7 +196,9 @@ msgstr ""
 "左右のボタンが同時に押されたことを正しく検知するために必要です。"
 
 #: ui/main.qml:148
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pointer speed:"
+msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "ポインタの速度:"
 
@@ -198,19 +206,22 @@ msgstr "ポインタの速度:"
 #: ui/main.qml:227
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
+msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "加速(&P):"
 
 #: ui/main.qml:241
 #, fuzzy, kde-format
 #| msgid "Cursor travel distance depends on the mouse movement speed."
-msgctxt "@info:tooltip from ContextualHelpButton"
+msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr "カーソルが動く距離はマウスの動く速さによって変動します。"
 
 #: ui/main.qml:254
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scrolling speed:"
+msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr "スクロールの速さ:"
 
@@ -227,24 +238,29 @@ msgid "Faster"
 msgstr "速く"
 
 #: ui/main.qml:321
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scrolling:"
+msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "スクロール:"
 
 #: ui/main.qml:322
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Invert scroll direction"
+msgctxt "@option:check"
 msgid "Invert scroll direction"
 msgstr "スクロール方向を反転"
 
 #: ui/main.qml:339
 #, fuzzy, kde-format
 #| msgid "Press middle button and move mouse to scroll"
+msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "中ボタンを押しながらマウスを移動してスクロール"
 
 #: ui/main.qml:351
 #, kde-format
-msgctxt "@info:tooltip from ContextualHelpButton"
+msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "This will interfere with applications that use middle-button drag, such as "
 "some image editors, document viewers, or video games. It may be used on any "

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-09-26 16:01+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -22,12 +22,18 @@ msgstr ""
 "X-Generator: Poedit 3.6\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Currently being used"
+msgctxt "@info:status currently active activity"
 msgid "Currently being used"
 msgstr "Šiuo metu naudojama"
 
 #: contents/activitymanager/ActivityItem.qml:243
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Move to\n"
+#| "this activity"
+msgctxt "@action shows when dragging file over item"
 msgid ""
 "Move to\n"
 "this activity"
@@ -36,7 +42,11 @@ msgstr ""
 "šią veiklą"
 
 #: contents/activitymanager/ActivityItem.qml:273
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Show also\n"
+#| "in this activity"
+msgctxt "@action shows when dragging file over item"
 msgid ""
 "Show also\n"
 "in this activity"
@@ -45,49 +55,66 @@ msgstr ""
 "šioje veikloje"
 
 #: contents/activitymanager/ActivityItem.qml:335
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgctxt "@action:button tooltip only, opens kcm"
 msgid "Configure"
 msgstr "Konfigūruoti"
 
 #: contents/activitymanager/ActivityManager.qml:118
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create activity…"
+msgctxt "@action:button opens Activity kcm"
 msgid "Create activity…"
 msgstr "Sukurti veiklą…"
 
 #: contents/activitymanager/Heading.qml:59
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Activities"
+msgctxt "@title:window"
 msgid "Activities"
 msgstr "Veiklos"
 
 #: contents/applet/AppletError.qml:165
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Copy to Clipboard"
+msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Kopijuoti į iškarpinę"
 
 #: contents/applet/AppletError.qml:188
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "View Error Details…"
+msgctxt "@action:button opens dialog"
 msgid "View Error Details…"
 msgstr "Rodyti išsamiau apie klaidą…"
 
 #: contents/applet/CompactApplet.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open %1"
+msgctxt "@info:whatsthis Accessible description for panel widget %1"
 msgid "Open %1"
 msgstr "Atverti %1"
 
 #: contents/configuration/AboutPlugin.qml:21
-#: contents/configuration/AppletConfiguration.qml:337
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "About"
+msgctxt "@title:window About this widget"
 msgid "About"
 msgstr "Apie"
 
 #: contents/configuration/AboutPlugin.qml:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Send an email to %1"
+msgctxt "plasma_shell_org.kde.plasma.desktop"
 msgid "Send an email to %1"
 msgstr "Siųsti el. laišką, adresu %1"
 
 #: contents/configuration/AboutPlugin.qml:65
-#, kde-format
-msgctxt "@info:tooltip %1 url"
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip %1 url"
+#| msgid "Open website %1"
+msgctxt "@action:button icononly for tooltip & accessible %1 is url"
 msgid "Open website %1"
 msgstr "Atverti internetinę svetainę %1"
 
@@ -104,17 +131,23 @@ msgid "Get Help"
 msgstr "Gauti pagalbos"
 
 #: contents/configuration/AboutPlugin.qml:165
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Report an issue"
+msgctxt "@action:button urlbutton"
 msgid "Report an issue"
 msgstr "Pranešti apie klaidą"
 
 #: contents/configuration/AboutPlugin.qml:172
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Copyright"
+msgctxt "@title license information"
 msgid "Copyright"
 msgstr "Autorių teisės"
 
 #: contents/configuration/AboutPlugin.qml:191
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "License: %1"
+msgctxt "@label %1 is the short SPDX text for the license"
 msgid "License: %1"
 msgstr "Licencija: %1"
 
@@ -125,32 +158,52 @@ msgid "Read License"
 msgstr "Skaityti licenciją"
 
 #: contents/configuration/AboutPlugin.qml:211
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Authors"
+msgctxt "@title:group"
 msgid "Authors"
 msgstr "Autoriai"
 
 #: contents/configuration/AboutPlugin.qml:223
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Credits"
+msgctxt "@title:group"
 msgid "Credits"
 msgstr "Padėkos"
 
 #: contents/configuration/AboutPlugin.qml:236
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Translators"
+msgctxt "@title:group"
 msgid "Translators"
 msgstr "Vertėjai"
 
 #: contents/configuration/AppletConfiguration.qml:90
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keyboard Shortcuts"
+msgctxt "@title:group for configuration dialog page"
 msgid "Keyboard Shortcuts"
 msgstr "Spartieji klavišai"
 
+#: contents/configuration/AppletConfiguration.qml:337
+#, fuzzy, kde-format
+#| msgid "About"
+msgctxt "@title:group for About dialog page"
+msgid "About"
+msgstr "Apie"
+
 #: contents/configuration/AppletConfiguration.qml:385
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Apply Settings"
+msgctxt "@title:window dialog title"
 msgid "Apply Settings"
 msgstr "Taikyti nuostatas"
 
 #: contents/configuration/AppletConfiguration.qml:386
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The current page has unsaved changes. Apply the changes or discard them?"
+msgctxt "@label dialog body"
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
 msgstr ""
@@ -158,77 +211,109 @@ msgstr ""
 "atmesti?"
 
 #: contents/configuration/AppletConfiguration.qml:418
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "OK"
+msgctxt "@action:button"
 msgid "OK"
 msgstr "Gerai"
 
 #: contents/configuration/AppletConfiguration.qml:425
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Apply"
+msgctxt "@action:button"
 msgid "Apply"
 msgstr "Taikyti"
 
 #: contents/configuration/AppletConfiguration.qml:431
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Atsisakyti"
 
 #: contents/configuration/ConfigCategoryDelegate.qml:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open configuration page"
+msgctxt ""
+"@info:whatsthis Accessible description for sidebar entries opening "
+"configuration page"
 msgid "Open configuration page"
 msgstr "Atverti konfigūracijos puslapį"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Left-Button"
+msgctxt "@label for shortcuts"
 msgid "Left-Button"
 msgstr "Kairysis mygtukas"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Right-Button"
+msgctxt "@label for shortcuts"
 msgid "Right-Button"
 msgstr "Dešinysis mygtukas"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:21
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle-Button"
+msgctxt "@label for shortcuts"
 msgid "Middle-Button"
 msgstr "Vidurinysis mygtukas"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Back-Button"
+msgctxt "@label for shortcuts"
 msgid "Back-Button"
 msgstr "Perėjimo atgal mygtukas"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forward-Button"
+msgctxt "@label for shortcuts"
 msgid "Forward-Button"
 msgstr "Perėjimo pirmyn mygtukas"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Vertical-Scroll"
+msgctxt "@label for shortcuts"
 msgid "Vertical-Scroll"
 msgstr "Vertikali slinktis"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Horizontal-Scroll"
+msgctxt "@label for shortcuts"
 msgid "Horizontal-Scroll"
 msgstr "Horizontali slinktis"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Shift"
+msgctxt "@label for shortcuts"
 msgid "Shift"
 msgstr "Lyg2"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ctrl"
+msgctxt "@label for shortcuts"
 msgid "Ctrl"
 msgstr "Vald"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Alt"
+msgctxt "@label for shortcuts"
 msgid "Alt"
 msgstr "Alt"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Meta"
+msgctxt "@label for shortcuts"
 msgid "Meta"
 msgstr "Meta"
 
@@ -239,44 +324,59 @@ msgid "+"
 msgstr "+"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:139
-#: contents/configuration/MouseEventInputButton.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Action"
+msgctxt "@action:button"
 msgid "Add Action"
 msgstr "Pridėti veiksmą"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Layout changes have been restricted by the system administrator"
+msgctxt "@info:status inlinemessage"
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "Sistemos administratorius apribojo išdėstymo pakeitimus"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Layout:"
+msgctxt "@label:listbox"
 msgid "Layout:"
 msgstr "Išdėstymas:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:114
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Wallpaper type:"
+msgctxt "@label:listbox"
 msgid "Wallpaper type:"
 msgstr "Darbalaukio fono tipas:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:153
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Get New Plugins…"
+msgctxt "@action:button"
 msgid "Get New Plugins…"
 msgstr "Gauti naujų įskiepių…"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:243
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Layout changes must be applied before other changes can be made"
+msgctxt "@info"
 msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
 "Prieš atliekant kitus pakeitimus, turi būti įrašyti išdėstymo pakeitimai"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:247
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Apply Now"
+msgctxt "@action:button"
 msgid "Apply Now"
 msgstr "Taikyti dabar"
 
 #: contents/configuration/ConfigurationShortcuts.qml:16
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Shortcuts"
+msgctxt "@title:window for configuration page"
 msgid "Shortcuts"
 msgstr "Spartieji klavišai"
 
@@ -287,22 +387,37 @@ msgid "Activate widget as if clicked:"
 msgstr "Aktyvuoti valdiklį taip, tarsi ant jo buvo spustelėta:"
 
 #: contents/configuration/ContainmentConfiguration.qml:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Wallpaper"
+msgctxt "@title:group for configuration dialog page"
 msgid "Wallpaper"
 msgstr "Darbalaukio fonas"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mouse Actions"
+msgctxt "@title:group for configuration dialog page"
 msgid "Mouse Actions"
 msgstr "Pelės veiksmai"
 
+#: contents/configuration/MouseEventInputButton.qml:13
+#, fuzzy, kde-format
+#| msgid "Add Action"
+msgctxt "@action:button inactive state for button recording mouse input"
+msgid "Add Action"
+msgstr "Pridėti veiksmą"
+
 #: contents/configuration/MouseEventInputButton.qml:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Input Here"
+msgctxt "@action:button active state for button recording mouse input"
 msgid "Input Here"
 msgstr "Įveskite čia"
 
 #: contents/configuration/PanelConfiguration.qml:99
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Panel Settings"
+msgctxt "@title:window"
 msgid "Panel Settings"
 msgstr "Skydelio nuostatos"
 
@@ -327,121 +442,191 @@ msgid "Widgets…"
 msgstr "Valdikliai…"
 
 #: contents/configuration/PanelConfiguration.qml:162
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Position"
+msgctxt "@title:group"
 msgid "Position"
 msgstr "Pozicija"
 
 #: contents/configuration/PanelConfiguration.qml:167
-#: contents/configuration/PanelConfiguration.qml:282
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Top"
+msgctxt "@label panel screen edge"
 msgid "Top"
 msgstr "Viršuje"
 
 #: contents/configuration/PanelConfiguration.qml:168
-#: contents/configuration/PanelConfiguration.qml:284
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Right"
+msgctxt "@label panel screen edge"
 msgid "Right"
 msgstr "Dešinėje"
 
 #: contents/configuration/PanelConfiguration.qml:169
-#: contents/configuration/PanelConfiguration.qml:282
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Left"
+msgctxt "@label panel screen edge"
 msgid "Left"
 msgstr "Kairėje"
 
 #: contents/configuration/PanelConfiguration.qml:170
-#: contents/configuration/PanelConfiguration.qml:284
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Bottom"
+msgctxt "@label panel screen edge"
 msgid "Bottom"
 msgstr "Apačioje"
 
 #: contents/configuration/PanelConfiguration.qml:190
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Set Position…"
+msgctxt "action:button"
 msgid "Set Position…"
 msgstr "Nustatyti poziciją…"
 
 #: contents/configuration/PanelConfiguration.qml:217
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Alignment"
+msgctxt "@title:group"
 msgid "Alignment"
 msgstr "Lygiavimas"
 
+#: contents/configuration/PanelConfiguration.qml:282
+#, fuzzy, kde-format
+#| msgid "Top"
+msgctxt "@item:inlistbox"
+msgid "Top"
+msgstr "Viršuje"
+
+#: contents/configuration/PanelConfiguration.qml:282
+#, fuzzy, kde-format
+#| msgid "Left"
+msgctxt "@item:inlistbox"
+msgid "Left"
+msgstr "Kairėje"
+
 #: contents/configuration/PanelConfiguration.qml:283
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Center"
+msgctxt "@item:inlistbox"
 msgid "Center"
 msgstr "Centre"
 
+#: contents/configuration/PanelConfiguration.qml:284
+#, fuzzy, kde-format
+#| msgid "Bottom"
+msgctxt "@item:inlistbox"
+msgid "Bottom"
+msgstr "Apačioje"
+
+#: contents/configuration/PanelConfiguration.qml:284
+#, fuzzy, kde-format
+#| msgid "Right"
+msgctxt "@item:inlistbox"
+msgid "Right"
+msgstr "Dešinėje"
+
 #: contents/configuration/PanelConfiguration.qml:314
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Height"
+msgctxt "@title:group panel height"
 msgid "Height"
 msgstr "Aukštis"
 
 #: contents/configuration/PanelConfiguration.qml:315
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Width"
+msgctxt "@title:group panel width"
 msgid "Width"
 msgstr "Plotis"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Fill height"
+msgctxt "@item:inlistbox"
 msgid "Fill height"
 msgstr "Užpildyti aukštį"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Fill width"
+msgctxt "@item:inlistbox"
 msgid "Fill width"
 msgstr "Užpildyti plotį"
 
 #: contents/configuration/PanelConfiguration.qml:335
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Fit content"
+msgctxt "@item:inlistbox"
 msgid "Fit content"
 msgstr "Talpinti turinį"
 
 #: contents/configuration/PanelConfiguration.qml:336
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom"
+msgctxt "@item:inlistbox"
 msgid "Custom"
 msgstr "Tinkintas"
 
 #: contents/configuration/PanelConfiguration.qml:369
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Visibility"
+msgctxt "@title:group"
 msgid "Visibility"
 msgstr "Matomumas"
 
 #: contents/configuration/PanelConfiguration.qml:387
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Always visible"
+msgctxt "@item:inlistbox"
 msgid "Always visible"
 msgstr "Visada matomas"
 
 #: contents/configuration/PanelConfiguration.qml:388
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Auto hide"
+msgctxt "@item:inlistbox"
 msgid "Auto hide"
 msgstr "Automatiškai slėpti"
 
 #: contents/configuration/PanelConfiguration.qml:389
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Dodge windows"
+msgctxt "@item:inlistbox"
 msgid "Dodge windows"
 msgstr "Vengti langų"
 
 #: contents/configuration/PanelConfiguration.qml:390
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Windows go below"
+msgctxt "@item:inlistbox"
 msgid "Windows go below"
 msgstr "Langai palenda"
 
 #: contents/configuration/PanelConfiguration.qml:450
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Opacity"
+msgctxt "@title:group"
 msgid "Opacity"
 msgstr "Nepermatomumas"
 
 #: contents/configuration/PanelConfiguration.qml:466
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Adaptive"
+msgctxt "@item:inlistbox"
 msgid "Adaptive"
 msgstr "Prisitaikantis"
 
 #: contents/configuration/PanelConfiguration.qml:467
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Opaque"
+msgctxt "@item:inlistbox"
 msgid "Opaque"
 msgstr "Nepermatomas"
 
 #: contents/configuration/PanelConfiguration.qml:468
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Translucent"
+msgctxt "@item:inlistbox"
 msgid "Translucent"
 msgstr "Pusiau permatomas"
 
@@ -477,24 +662,45 @@ msgid "Fix it"
 msgstr "Pataisyti"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Panel Width:"
+msgctxt "@label:spinbox"
 msgid "Panel Width:"
 msgstr "Skydelio plotis:"
 
 #: contents/configuration/PanelConfiguration.qml:648
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Panel Height:"
+msgctxt "@label:spinbox"
 msgid "Panel Height:"
 msgstr "Skydelio aukštis:"
 
 #: contents/configuration/PanelConfiguration.qml:671
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Focus shortcut:"
+msgctxt "@title:group"
 msgid "Focus shortcut:"
 msgstr "Spartusis klavišas:"
 
 #: contents/configuration/PanelConfiguration.qml:682
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Press this keyboard shortcut to move focus to the Panel"
+msgctxt "@info:tooltip"
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Paspauskite šį spartųjį klavišą norėdami perkelti fokusą į skydelį"
+
+#: contents/configuration/PanelConfiguration.qml:689
+#, fuzzy, kde-format
+#| msgid "Focus shortcut:"
+msgctxt "@action:button acccessible name"
+msgid "Focus Shortcut Setter"
+msgstr "Spartusis klavišas:"
+
+#: contents/configuration/PanelConfiguration.qml:690
+#, kde-format
+msgctxt "@info:whatsthis Accessible description for button"
+msgid "Button to set the shortcut for the panel to gain focus"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:716
 #, kde-format
@@ -503,7 +709,9 @@ msgid "Delete Panel"
 msgstr "Ištrinti skydelį"
 
 #: contents/configuration/PanelConfiguration.qml:719
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove this panel; this action is undo-able"
+msgctxt "@info:tooltip for button"
 msgid "Remove this panel; this action is undo-able"
 msgstr "Šalinti šį skydelį; šį veiksmą galima bus atšaukti"
 
@@ -514,8 +722,10 @@ msgid "Clone Panel"
 msgstr "Dubliuoti skydelį"
 
 #: contents/configuration/PanelConfiguration.qml:732
-#, kde-format
-msgctxt "@info:tooltip"
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Create a new panel with the same settings and applets"
+msgctxt "@info:tooltip for button"
 msgid "Create a new panel with the same settings and applets"
 msgstr "Sukurti naują skydelį su tomis pačiomis nuostatomis ir programėlėmis"
 
@@ -533,7 +743,9 @@ msgid "Exit Edit Mode"
 msgstr "Išjungti taisymo veikseną"
 
 #: contents/configuration/PanelConfiguration.qml:744
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Close Panel Settings window and exit Edit Mode"
+msgctxt "@info:tooltip for button"
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "Užverti skydelio nuostatų langą ir išeiti iš taisymo veiksenos"
 
@@ -579,12 +791,17 @@ msgstr ""
 "Spustelėkite du kartus, norėdami atstatyti."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Manage Panels and Desktops"
+msgctxt "@title:window"
 msgid "Manage Panels and Desktops"
 msgstr "Tvarkyti skydelius ir darbalaukius"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "You can drag Panels and Desktops around to move them to different screens."
+msgctxt "@info:usagetip"
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr ""
@@ -592,37 +809,51 @@ msgstr ""
 "į skirtingus ekranus."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Close"
+msgctxt "@action:button Close window"
 msgid "Close"
 msgstr "Užverti"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Swap with Desktop on Screen %1"
+msgctxt "@action:inmenu"
 msgid "Swap with Desktop on Screen %1"
 msgstr "Sukeisti su darbalaukiu, esančiu ekrane %1"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:188
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move to Screen %1"
+msgctxt "@action:inmenu"
 msgid "Move to Screen %1"
 msgstr "Perkelti į ekraną %1"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:202
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Desktop"
+msgctxt "@action:inmenu"
 msgid "Remove Desktop"
 msgstr "Šalinti darbalaukį"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:203
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Panel"
+msgctxt "@action:inmenu"
 msgid "Remove Panel"
 msgstr "Šalinti skydelį"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:279
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1 (primary)"
+msgctxt "@info % is screen name"
 msgid "%1 (primary)"
 msgstr "%1 (pirminis)"
 
 #: contents/explorer/AppletAlternatives.qml:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Alternative Widgets"
+msgctxt "@title:window for widget alternatives explorer"
 msgid "Alternative Widgets"
 msgstr "Alternatyvūs valdikliai"
 
@@ -633,7 +864,9 @@ msgid "Add %1"
 msgstr "Pridėti %1"
 
 #: contents/explorer/AppletDelegate.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Unsupported Widget"
+msgctxt "@info:tooltip"
 msgid "Unsupported Widget"
 msgstr "Nepalaikomas valdiklis"
 
@@ -660,13 +893,17 @@ msgid "Recently installed"
 msgstr "Paskiausiai įdiegti"
 
 #: contents/explorer/AppletDelegate.qml:217
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cancel Uninstallation"
+msgctxt "@action:button tooltip and accessible cancel uninstall widget"
 msgid "Cancel Uninstallation"
 msgstr "Atsisakyti pašalinimo"
 
 #: contents/explorer/AppletDelegate.qml:218
-#, kde-format
-msgctxt "@info:tooltip uninstall a widget"
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip uninstall a widget"
+#| msgid "Mark for Uninstallation"
+msgctxt "@action:button tooltip and accessible uninstall widget"
 msgid "Mark for Uninstallation"
 msgstr "Pažymėti pašalinimui"
 
@@ -683,7 +920,9 @@ msgid "Mark widget %1 for uninstallation. Requires confirmation"
 msgstr "Pažymėti valdiklį %1 pašalinimui. Reikalingas patvirtinimas"
 
 #: contents/explorer/AppletDelegate.qml:265
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove all instances"
+msgctxt "@action:button"
 msgid "Remove all instances"
 msgstr "Šalinti visus egzempliorius"
 
@@ -701,12 +940,16 @@ msgstr[3] "Pašalinti visus %1 veikiantį valdiklio %2 egzempliorių"
 
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:223
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "All Widgets"
+msgctxt "@action:button like listbox, switches category to all widgets"
 msgid "All Widgets"
 msgstr "Visi valdikliai"
 
 #: contents/explorer/WidgetExplorer.qml:169
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Widgets"
+msgctxt "@title:group for widget grid"
 msgid "Widgets"
 msgstr "Valdikliai"
 
@@ -735,7 +978,9 @@ msgid "Search through widgets"
 msgstr "Ieškoti per valdiklius"
 
 #: contents/explorer/WidgetExplorer.qml:237
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Categories"
+msgctxt "@action:button tooltip only"
 msgid "Categories"
 msgstr "Kategorijos"
 
@@ -750,12 +995,16 @@ msgstr[2] "Pašalinti (%1 valdiklių)"
 msgstr[3] "Pašalinti (%1 valdiklį)"
 
 #: contents/explorer/WidgetExplorer.qml:389
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No widgets matched the search terms"
+msgctxt "@info placeholdermessage"
 msgid "No widgets matched the search terms"
 msgstr "Joks valdiklis neatitiko paieškos žodžių"
 
 #: contents/explorer/WidgetExplorer.qml:389
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No widgets available"
+msgctxt "@info placeholdermessage"
 msgid "No widgets available"
 msgstr "Nėra jokių prieinamų valdiklių"
 
@@ -814,27 +1063,37 @@ msgid "Show under unlocking prompt"
 msgstr "Rodyti po atrakinimo užklausa"
 
 #: contents/lockscreen/LockScreenUi.qml:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Unlocking failed"
+msgctxt "@info:status"
 msgid "Unlocking failed"
 msgstr "Atrakinti nepavyko"
 
 #: contents/lockscreen/LockScreenUi.qml:281
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Caps Lock is on"
+msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "Įjungtos didžiosios raidės"
 
 #: contents/lockscreen/LockScreenUi.qml:295
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Slee&p"
+msgctxt "@action:button"
 msgid "Slee&p"
 msgstr "&Pristabdyti"
 
 #: contents/lockscreen/LockScreenUi.qml:301
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Hibernate"
+msgctxt "@action:button"
 msgid "&Hibernate"
 msgstr "Už&migdyti"
 
 #: contents/lockscreen/LockScreenUi.qml:307
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Switch &User"
+msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "Perjungti na&udotoją"
 
@@ -851,50 +1110,60 @@ msgid "Switch layout"
 msgstr "Perjungti išdėstymą"
 
 #: contents/lockscreen/MainBlock.qml:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Password"
+msgctxt "@info:placeholder in text field"
 msgid "Password"
 msgstr "Slaptažodis"
 
 #: contents/lockscreen/MainBlock.qml:114
-#: contents/lockscreen/NoPasswordUnlock.qml:17
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Unlock"
+msgctxt "@action:button accessible only"
 msgid "Unlock"
 msgstr "Atrakinti"
 
 #: contents/lockscreen/MainBlock.qml:163
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "(or scan your fingerprint on the reader)"
+msgctxt "@info:usagetip"
 msgid "(or scan your fingerprint on the reader)"
 msgstr "(arba nuskenuokite skaitytuvu piršto atspaudą)"
 
 #: contents/lockscreen/MainBlock.qml:167
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "(or scan your smartcard)"
+msgctxt "@info:usagetip"
 msgid "(or scan your smartcard)"
 msgstr "(arba nuskenuokite lustinę kortelę)"
 
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr "Nėra pavadinimo"
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
-msgstr "Nieko neatkuriama"
-
 #: contents/lockscreen/MediaControls.qml:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Previous track"
+msgctxt "@action:button Accessible only"
 msgid "Previous track"
 msgstr "Ankstesnis takelis"
 
 #: contents/lockscreen/MediaControls.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Play or Pause media"
+msgctxt "@action:button Accessible only"
 msgid "Play or Pause media"
 msgstr "Atkurti ar Pristabdyti mediją"
 
 #: contents/lockscreen/MediaControls.qml:110
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Next track"
+msgctxt "@action:button Accessible only"
 msgid "Next track"
 msgstr "Kitas takelis"
+
+#: contents/lockscreen/NoPasswordUnlock.qml:17
+#, fuzzy, kde-format
+#| msgid "Unlock"
+msgctxt "@action:button no-password unlock"
+msgid "Unlock"
+msgstr "Atrakinti"
 
 #: contents/views/DesktopEditMode.qml:122
 #, kde-format
@@ -903,14 +1172,24 @@ msgid "More"
 msgstr "Daugiau"
 
 #: contents/views/DesktopEditMode.qml:131
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Exit Edit Mode"
+msgctxt "@action:button"
 msgid "Exit Edit Mode"
 msgstr "Išjungti taisymo veikseną"
 
 #: contents/views/Panel.qml:326
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Panel Focus Indicator"
+msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Skydelio fokusavimo indikatorius"
+
+#~ msgid "No title"
+#~ msgstr "Nėra pavadinimo"
+
+#~ msgid "No media playing"
+#~ msgstr "Nieko neatkuriama"
 
 #~ msgid "Configure activity"
 #~ msgstr "Konfigūruoti veiklą"

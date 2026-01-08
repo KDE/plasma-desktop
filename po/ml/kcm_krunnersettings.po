@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2019-12-12 22:31+0000\n"
 "Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -20,21 +20,25 @@ msgstr ""
 
 #: ui/main.qml:31
 #, kde-format
+msgctxt "@title:group prefix for radiobutton group"
 msgid "Position on screen:"
 msgstr ""
 
 #: ui/main.qml:35
 #, kde-format
+msgctxt "@option:check Position on top of screen"
 msgid "Top"
 msgstr ""
 
 #: ui/main.qml:42
 #, kde-format
+msgctxt "@option:check Position in center of screen"
 msgid "Center"
 msgstr ""
 
 #: ui/main.qml:55
 #, kde-format
+msgctxt "@label prefix for checkbutton"
 msgid "Activation:"
 msgstr ""
 
@@ -46,29 +50,31 @@ msgstr ""
 
 #: ui/main.qml:71
 #, kde-format
+msgctxt "@title:group prefix for radiobutton group"
 msgid "History:"
 msgstr ""
 
 #: ui/main.qml:74
 #, kde-format
-msgctxt "@option:check"
+msgctxt "@option:radio History is disabled"
 msgid "Disabled"
 msgstr ""
 
 #: ui/main.qml:79
 #, kde-format
-msgctxt "@option:check The thing being enabled is search history"
+msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable suggestions"
 msgstr ""
 
 #: ui/main.qml:84
 #, kde-format
-msgctxt "@option:check The thing being enabled is search history"
-msgid "Enabled auto-complete"
+msgctxt "@option:radio The thing being enabled is search history"
+msgid "Enable auto-complete"
 msgstr ""
 
 #: ui/main.qml:92
 #, kde-format
+msgctxt "@action:button"
 msgid "Clear History…"
 msgstr ""
 

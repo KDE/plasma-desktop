@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-09-26 20:34+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -29,83 +29,115 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 
 #: qml/config.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Основное"
 
 #: qml/configGeneral.qml:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "Основные параметры:"
 
 #: qml/configGeneral.qml:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show window outlines"
+msgctxt "@option:check"
 msgid "Show window outlines"
 msgstr "Показывать схемы окон"
 
 #: qml/configGeneral.qml:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show application icons on window outlines"
+msgctxt "@option:check"
 msgid "Show application icons on window outlines"
 msgstr "Показывать значки приложений на схемах окон"
 
 #: qml/configGeneral.qml:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show only current screen"
+msgctxt "@option:check"
 msgid "Show only current screen"
 msgstr "Показывать только текущий экран"
 
 #: qml/configGeneral.qml:57
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Navigation wraps around"
+msgctxt "@option:check"
 msgid "Navigation wraps around"
 msgstr "Навигация с переходом по циклу"
 
 #: qml/configGeneral.qml:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Layout:"
+msgctxt "@title:listbox"
 msgid "Layout:"
 msgstr "Ориентация:"
 
 #: qml/configGeneral.qml:71
-#, kde-format
-msgctxt "The pager layout"
+#, fuzzy, kde-format
+#| msgctxt "The pager layout"
+#| msgid "Default"
+msgctxt "@item:inlistbox The pager layout"
 msgid "Default"
 msgstr "По умолчанию"
 
 #: qml/configGeneral.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Horizontal"
+msgctxt "@item:inlistbox The pager layout"
 msgid "Horizontal"
 msgstr "Горизонтальная"
 
 #: qml/configGeneral.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Vertical"
+msgctxt "@item:inlistbox The pager layout"
 msgid "Vertical"
 msgstr "Вертикальная"
 
 #: qml/configGeneral.qml:85
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Text display:"
+msgctxt "@title:group prefix for radiobutton group"
 msgid "Text display:"
 msgstr "Текстовые подписи:"
 
 #: qml/configGeneral.qml:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No text"
+msgctxt "@option:radio text display"
 msgid "No text"
 msgstr "Без надписи"
 
 #: qml/configGeneral.qml:96
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Activity number"
+msgctxt "@option:radio text display"
 msgid "Activity number"
 msgstr "Номер комнаты"
 
 #: qml/configGeneral.qml:96
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Desktop number"
+msgctxt "@option:radio text display"
 msgid "Desktop number"
 msgstr "Номер рабочего стола"
 
 #: qml/configGeneral.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Activity name"
+msgctxt "@option:radio text display"
 msgid "Activity name"
 msgstr "Название комнаты"
 
 #: qml/configGeneral.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Desktop name"
+msgctxt "@option:radio text display"
 msgid "Desktop name"
 msgstr "Название рабочего стола"
 
@@ -142,7 +174,10 @@ msgid "Shows the desktop"
 msgstr "Показать рабочий стол"
 
 #: qml/main.qml:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "…and %1 other window"
+#| msgid_plural "…and %1 other windows"
+msgctxt "@info:tooltip overflow label"
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
 msgstr[0] "и %1 другое окно."
@@ -151,7 +186,10 @@ msgstr[2] "и %1 других окон."
 msgstr[3] "и %1 другое окно."
 
 #: qml/main.qml:351
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1 Window:"
+#| msgid_plural "%1 Windows:"
+msgctxt "@info:tooltip start of list"
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
 msgstr[0] "%1 окно:"
@@ -160,7 +198,10 @@ msgstr[2] "%1 окон:"
 msgstr[3] "%1 окно:"
 
 #: qml/main.qml:363
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1 Minimized Window:"
+#| msgid_plural "%1 Minimized Windows:"
+msgctxt "@info:tooltip"
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
 msgstr[0] "%1 свёрнутое окно:"
@@ -169,7 +210,9 @@ msgstr[2] "%1 свёрнутых окон:"
 msgstr[3] "%1 свёрнутое окно:"
 
 #: qml/main.qml:439
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Desktop %1"
+msgctxt "@info:whatsthis Accessible name for pager section"
 msgid "Desktop %1"
 msgstr "Рабочий стол %1"
 

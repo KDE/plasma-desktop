@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2009-08-08 17:59+0000\n"
 "Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -129,17 +129,20 @@ msgstr ""
 
 #: ui/main.qml:64
 #, kde-format
+msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr ""
 
 #: ui/main.qml:87
 #, fuzzy, kde-format
 #| msgid "&General"
+msgctxt "@title:group"
 msgid "General:"
 msgstr "&Të Përgjithshme"
 
 #: ui/main.qml:88
 #, kde-format
+msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr ""
 
@@ -151,6 +154,7 @@ msgstr ""
 
 #: ui/main.qml:106
 #, kde-format
+msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
 msgstr ""
 
@@ -170,23 +174,26 @@ msgstr ""
 
 #: ui/main.qml:148
 #, kde-format
+msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr ""
 
 #: ui/main.qml:227
 #, kde-format
+msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr ""
 
 #: ui/main.qml:241
 #, kde-format
-msgctxt "@info:tooltip from ContextualHelpButton"
+msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
 
 #: ui/main.qml:254
 #, kde-format
+msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr ""
 
@@ -204,22 +211,25 @@ msgstr ""
 
 #: ui/main.qml:321
 #, kde-format
+msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr ""
 
 #: ui/main.qml:322
 #, kde-format
+msgctxt "@option:check"
 msgid "Invert scroll direction"
 msgstr ""
 
 #: ui/main.qml:339
 #, kde-format
+msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr ""
 
 #: ui/main.qml:351
 #, kde-format
-msgctxt "@info:tooltip from ContextualHelpButton"
+msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "This will interfere with applications that use middle-button drag, such as "
 "some image editors, document viewers, or video games. It may be used on any "

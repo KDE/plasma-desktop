@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-05-27 16:39+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -29,17 +29,26 @@ msgid "Available Plugins"
 msgstr "Dostupné moduly"
 
 #: plasmasearch/ui/main.qml:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure KRunner…"
+msgctxt "@action:button in toolbar"
 msgid "Configure KRunner…"
 msgstr "Nastavit KRunner…"
 
 #: plasmasearch/ui/main.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Get New Plugins…"
+msgctxt "@action:button in toolbar"
 msgid "Get New Plugins…"
 msgstr "Získat nové moduly…"
 
 #: plasmasearch/ui/main.qml:45
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#| "Overview effect). Mark plugins as favorites and arrange them in order you "
+#| "want to prioritize them."
+msgctxt "@info:usagetip"
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
@@ -50,12 +59,16 @@ msgstr ""
 "chcete prioritizovat."
 
 #: plasmasearch/ui/main.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove from favorites"
+msgctxt "@action:button, icononly"
 msgid "Remove from favorites"
 msgstr "Odstranit z oblíbených"
 
 #: plasmasearch/ui/main.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add to favorites"
+msgctxt "@action:button, icononly"
 msgid "Add to favorites"
 msgstr "Přidat do oblíbených"
 

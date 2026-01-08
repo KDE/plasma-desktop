@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.panel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-03 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-05-26 00:51+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -20,22 +20,30 @@ msgstr ""
 "X-Generator: Lokalize 24.05.2\n"
 
 #: ConfigOverlay.qml:317
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@action:inmenu removes widget"
 msgid "Remove"
 msgstr "Eliminar"
 
 #: ConfigOverlay.qml:327
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
+msgctxt "@action:inmenu opens widget config dialog"
 msgid "Configure…"
 msgstr "Configurar…"
 
 #: ConfigOverlay.qml:338
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Alternatives…"
+msgctxt "@action:inmenu opens widget alternatives explorer"
 msgid "Show Alternatives…"
 msgstr "Mostrar alternativas…"
 
 #: ConfigOverlay.qml:357
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Spacer width"
+msgctxt "@label:spinbox"
 msgid "Spacer width"
 msgstr "Anchura del separador"
 
@@ -47,11 +55,17 @@ msgid "Flexible size"
 msgstr "Tamaño flexible"
 
 #: main.qml:453
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Panel configuration ui"
+msgctxt ""
+"@info:whatsthis Accessible description for entering Panel edit mode click "
+"area"
 msgid "Open Panel configuration ui"
 msgstr "Abrir la interfaz de configuración del panel"
 
 #: main.qml:460
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Widgets…"
+msgctxt "@action:button opens widget explorer"
 msgid "Add Widgets…"
 msgstr "Añadir elementos gráficos…"

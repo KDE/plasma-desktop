@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-11-29 00:27+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -30,17 +30,26 @@ msgid "Available Plugins"
 msgstr "사용 가능한 플러그인"
 
 #: plasmasearch/ui/main.qml:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure KRunner…"
+msgctxt "@action:button in toolbar"
 msgid "Configure KRunner…"
 msgstr "KRunner 설정…"
 
 #: plasmasearch/ui/main.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Get New Plugins…"
+msgctxt "@action:button in toolbar"
 msgid "Get New Plugins…"
 msgstr "새 플러그인 가져오기…"
 
 #: plasmasearch/ui/main.qml:45
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#| "Overview effect). Mark plugins as favorites and arrange them in order you "
+#| "want to prioritize them."
+msgctxt "@info:usagetip"
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
@@ -50,12 +59,16 @@ msgstr ""
 "용). 플러그인을 책갈피에 등록하여 표시 순서를 사용자 정의할 수 있습니다."
 
 #: plasmasearch/ui/main.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove from favorites"
+msgctxt "@action:button, icononly"
 msgid "Remove from favorites"
 msgstr "책갈피에서 삭제"
 
 #: plasmasearch/ui/main.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add to favorites"
+msgctxt "@action:button, icononly"
 msgid "Add to favorites"
 msgstr "책갈피에 추가"
 

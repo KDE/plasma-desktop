@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-19 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-12-20 21:53+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -70,7 +70,9 @@ msgid "Global theme"
 msgstr ""
 
 #: ui/main.qml:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Theme:"
+msgctxt "@title:group for light/dark quick switch"
 msgid "Theme:"
 msgstr "विषयवस्तु:"
 
@@ -95,7 +97,9 @@ msgid "More appearance settings:"
 msgstr "अधिकानि रूपसेटिंग्स् :"
 
 #: ui/main.qml:183
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Animation speed:"
+msgctxt "@title:slider"
 msgid "Animation speed:"
 msgstr "एनिमेशनवेगः :"
 
@@ -125,7 +129,9 @@ msgid "Selects them"
 msgstr "तान् चिनोति"
 
 #: ui/main.qml:226
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open by double-clicking instead"
+msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "तस्य स्थाने द्विवारं क्लिक् कृत्वा उद्घाटयन्तु"
 
@@ -136,7 +142,9 @@ msgid "Opens them"
 msgstr "तान् उद्घाटयति"
 
 #: ui/main.qml:259
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select by clicking on item's selection marker"
+msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
 msgstr "मदस्य चयनचिह्नं नुत्वा चयनं कुर्वन्तु"
 
@@ -147,6 +155,8 @@ msgid "More behavior settings:"
 msgstr "अधिकानि व्यवहारसेटिंग्स् :"
 
 #: ui/main.qml:299
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Most used pages:"
+msgctxt "@title:group for grid of buttons opening kcms"
 msgid "Most used pages:"
 msgstr "सर्वाधिकं प्रयुक्तानि पृष्ठानि :"

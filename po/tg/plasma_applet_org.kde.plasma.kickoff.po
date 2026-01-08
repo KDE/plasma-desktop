@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-02 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2021-09-05 11:38-0700\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik Language Support\n"
@@ -43,12 +43,16 @@ msgid "Show in Favorites"
 msgstr "Намоиш додан дар баргузидаҳо"
 
 #: config.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Умумӣ"
 
 #: ConfigGeneral.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Нишона:"
 
@@ -101,26 +105,31 @@ msgstr ""
 #: ConfigGeneral.qml:120
 #, fuzzy, kde-format
 #| msgid "Show applications by name"
+msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Намоиш додани барномаҳо аз рӯи ном"
 
 #: ConfigGeneral.qml:122
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr ""
 
 #: ConfigGeneral.qml:122
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr ""
 
 #: ConfigGeneral.qml:122
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr ""
 
 #: ConfigGeneral.qml:122
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr ""
 
@@ -172,6 +181,7 @@ msgstr ""
 
 #: ConfigGeneral.qml:185
 #, kde-format
+msgctxt "@option:check"
 msgid "Use compact list item style"
 msgstr ""
 
@@ -182,12 +192,15 @@ msgid "Automatically disabled when in Touch Mode"
 msgstr ""
 
 #: ConfigGeneral.qml:199
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show applications by name"
+msgctxt "@option:check"
 msgid "Highlight newly installed applications"
-msgstr ""
+msgstr "Намоиш додани барномаҳо аз рӯи ном"
 
 #: ConfigGeneral.qml:204
 #, kde-format
+msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
 msgstr ""
 
@@ -199,87 +212,110 @@ msgstr ""
 
 #: ConfigGeneral.qml:220
 #, kde-format
+msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr ""
 
 #: ConfigGeneral.qml:221 ConfigGeneral.qml:229
 #, kde-format
+msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr ""
 
-#: ConfigGeneral.qml:221 ConfigGeneral.qml:229
+#: ConfigGeneral.qml:221
 #, kde-format
+msgctxt "option:radio sidebar position"
+msgid "Left"
+msgstr ""
+
+#: ConfigGeneral.qml:229
+#, kde-format
+msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr ""
 
 #: ConfigGeneral.qml:237
 #, fuzzy, kde-format
 #| msgid "Show in Favorites"
+msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
 msgstr "Намоиш додан дар баргузидаҳо"
 
 #: ConfigGeneral.qml:238
 #, kde-format
-msgctxt "Part of a sentence: 'Show favorites in a grid'"
+msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr ""
 
 #: ConfigGeneral.qml:246
 #, kde-format
-msgctxt "Part of a sentence: 'Show favorites in a list'"
+msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr ""
 
 #: ConfigGeneral.qml:254
 #, fuzzy, kde-format
 #| msgid "Show applications by name"
+msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
 msgstr "Намоиш додани барномаҳо аз рӯи ном"
 
 #: ConfigGeneral.qml:255
 #, kde-format
-msgctxt "Part of a sentence: 'Show other applications in a grid'"
+msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr ""
 
 #: ConfigGeneral.qml:263
 #, kde-format
-msgctxt "Part of a sentence: 'Show other applications in a list'"
+msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr ""
 
 #: ConfigGeneral.qml:275
 #, kde-format
+msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr ""
 
-#: ConfigGeneral.qml:276 LeaveButtons.qml:171
-#, kde-format
+#: ConfigGeneral.qml:276
+#, fuzzy, kde-format
+#| msgid "Power"
+msgctxt "@option:radio Show buttons for"
 msgid "Power"
 msgstr "Барқ"
 
-#: ConfigGeneral.qml:285 LeaveButtons.qml:171
-#, kde-format
+#: ConfigGeneral.qml:285
+#, fuzzy, kde-format
+#| msgid "Session"
+msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "Ҷаласа"
 
 #: ConfigGeneral.qml:294
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Power and session"
+msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
 msgstr "Барқ ва ҷаласа"
 
 #: ConfigGeneral.qml:303
 #, kde-format
+msgctxt "@option:check"
 msgid "Show action button captions"
 msgstr ""
 
 #: Footer.qml:101
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Applications"
+msgctxt "@title:tab kickoff sidebar tab"
 msgid "Applications"
 msgstr "Барномаҳо"
 
 #: Footer.qml:117
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Places"
+msgctxt "@title:tab kickoff sidebar tab"
 msgid "Places"
 msgstr "Ҷойҳо"
 
@@ -292,48 +328,88 @@ msgstr ""
 #: Header.qml:84
 #, fuzzy, kde-format
 #| msgid "Go to user settings"
+msgctxt "@action:button icon-only, for tooltip/Accessible"
 msgid "Open user settings"
 msgstr "Гузариш ба танзимоти корбар"
 
 #: Header.qml:264
 #, kde-format
+msgctxt ""
+"@action:button Pin widget open if it loses focus, icon-only button, for "
+"tooltip/Accessible"
 msgid "Keep Open"
 msgstr ""
 
-#: KickoffGridDelegate.qml:59 KickoffListDelegate.qml:117
+#: KickoffGridDelegate.qml:59
 #, kde-format
-msgctxt "Newly installed app, badge, keep short"
+msgctxt "@label Newly installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:119
+#: KickoffGridDelegate.qml:60
 #, fuzzy, kde-format
 #| msgid "Show applications by name"
+msgctxt "@label Accessible name for badge"
 msgid "Newly installed application"
 msgstr "Намоиш додани барномаҳо аз рӯи ном"
 
 #: KickoffGridView.qml:101
 #, kde-format
+msgctxt "@info:whatsthis Accessible description"
 msgid "Grid with %1 rows, %2 columns"
 msgstr ""
 
-#: KickoffListDelegate.qml:118
+#: KickoffListDelegate.qml:117
 #, kde-format
-msgid "There is a newly installed application in this category"
+msgctxt "Newly installed app, badge, keep short"
+msgid "New!"
 msgstr ""
 
+#: KickoffListDelegate.qml:118
+#, fuzzy, kde-format
+#| msgid "Show applications by name"
+msgctxt "@info:whatsthis Accessible description for badge"
+msgid "There is a newly installed application in this category"
+msgstr "Намоиш додани барномаҳо аз рӯи ном"
+
+#: KickoffListDelegate.qml:119
+#, fuzzy, kde-format
+#| msgid "Show applications by name"
+msgctxt "@info:whatsthis Accessible description for badge"
+msgid "Newly installed application"
+msgstr "Намоиш додани барномаҳо аз рӯи ном"
+
 #: LeaveButtons.qml:171
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Session"
+msgctxt "@title:menu menubutton"
+msgid "Session"
+msgstr "Ҷаласа"
+
+#: LeaveButtons.qml:171
+#, fuzzy, kde-format
+#| msgid "Power"
+msgctxt "@title:menu menubutton"
+msgid "Power"
+msgstr "Барқ"
+
+#: LeaveButtons.qml:171
+#, fuzzy, kde-format
+#| msgid "More"
+msgctxt "@title:menu menubutton"
 msgid "More"
 msgstr "Бештар"
 
 #: LeaveButtons.qml:171
 #, kde-format
+msgctxt "@title:menu menubutton"
 msgid "Session and Power"
 msgstr ""
 
 #: main.qml:356
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Applications…"
+msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
 msgstr "Таҳрир кардани барномаҳо..."
 

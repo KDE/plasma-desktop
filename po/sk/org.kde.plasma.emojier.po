@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: org.kde.plasma.emojier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-03 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2023-03-16 18:06+0100\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -46,7 +46,9 @@ msgid "Replace an existing instance"
 msgstr "Nahradiť existujúcu inštanciu"
 
 #: app/ui/CategoryPage.qml:112
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear History"
+msgctxt "@action:button clear emoji history"
 msgid "Clear History"
 msgstr "Vyčistiť históriu"
 
@@ -148,7 +150,9 @@ msgid "Copy Description"
 msgstr "Kopírovať popis"
 
 #: app/ui/CategoryPage.qml:368
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No recent Emojis"
+msgctxt "@label placeholder for empty recent emoji list"
 msgid "No recent Emojis"
 msgstr "Žiadne nedávne emotikony"
 
@@ -159,12 +163,16 @@ msgid "No matching emoji found"
 msgstr ""
 
 #: app/ui/Emojier.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1 copied to the clipboard"
+msgctxt "@info:status passive notification as action feedback"
 msgid "%1 copied to the clipboard"
 msgstr "%1 skopírované do schránky"
 
 #: app/ui/Emojier.qml:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Recent"
+msgctxt "@title page title for Recent Emoji view, and sidebar label for it"
 msgid "Recent"
 msgstr "Nedávne"
 

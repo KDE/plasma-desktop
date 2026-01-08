@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-03 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2022-10-28 22:17+0300\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -18,12 +18,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: qml/config.qml:6
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Perusasetukset"
 
 #: qml/configGeneral.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Display style:"
+msgctxt "@title:group of radio buttons, options are language codes or images"
 msgid "Display style:"
 msgstr "Näyttötyyli:"
 
@@ -34,12 +38,16 @@ msgid "No flag available"
 msgstr "Lippu ei saatavilla"
 
 #: qml/configGeneral.qml:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Layouts:"
+msgctxt "@label prefixed to button"
 msgid "Layouts:"
 msgstr "Asettelut:"
 
 #: qml/configGeneral.qml:103
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
+msgctxt "@action:button opens kcm_keyboard"
 msgid "Configure…"
 msgstr "Asetukset…"
 

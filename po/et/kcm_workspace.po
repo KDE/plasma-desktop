@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2022-11-14 01:35+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -20,6 +20,7 @@ msgstr ""
 
 #: ui/main.qml:25
 #, kde-format
+msgctxt "@info:status inlinemessage"
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
@@ -27,6 +28,7 @@ msgstr ""
 
 #: ui/main.qml:31
 #, kde-format
+msgctxt "@action:button"
 msgid "Restart"
 msgstr ""
 
@@ -50,6 +52,7 @@ msgstr ""
 
 #: ui/main.qml:69
 #, kde-format
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Allows all Plasma panel and desktop widgets to show descriptive tooltips "
 "when hovered with the pointer. This setting has no effect on the small "
@@ -67,6 +70,7 @@ msgstr "Visuaalse tagasiside kuvamine olekumuutuste korral"
 
 #: ui/main.qml:87
 #, kde-format
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
@@ -79,28 +83,40 @@ msgid "Scrolling"
 msgstr ""
 
 #: ui/main.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clicking in scrollbar track:"
+msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
 msgstr "Klõps kerimisribal:"
 
 #: ui/main.qml:101
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
+#| "to the clicked location'"
+#| msgid "Scrolls to the clicked location"
 msgctxt ""
-"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
-"the clicked location'"
+"@option:radio part of a complete sentence: 'Clicking in scrollbar track "
+"scrolls to the clicked location'"
 msgid "Scrolls to the clicked location"
 msgstr "Kerib klõpsatud asukohta"
 
 #: ui/main.qml:119
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
+#| "one page up or down'"
+#| msgid "Scrolls one page up or down"
 msgctxt ""
-"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
-"page up or down'"
+"@option:radio part of a complete sentence: 'Clicking in scrollbar track "
+"scrolls one page up or down'"
 msgid "Scrolls one page up or down"
 msgstr "Kerib ühe lehe võrra üles või alla"
 
 #: ui/main.qml:137
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle-click to scroll to clicked location"
+msgctxt "@info:usagetip"
 msgid "Middle-click to scroll to clicked location"
 msgstr "Keskklõps kerib klõpsatud asukohta"
 
@@ -140,7 +156,9 @@ msgid "Selects them"
 msgstr "Valib selle"
 
 #: ui/main.qml:201
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open by double-clicking instead"
+msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "Avamiseks tuleb teha topeltklõps"
 
@@ -151,7 +169,9 @@ msgid "Opens them"
 msgstr "Avab selle"
 
 #: ui/main.qml:232
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select by clicking on item's selection marker"
+msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
 msgstr "Valimine klõpsuga elemendi valikumärgisele"
 
@@ -176,6 +196,7 @@ msgstr "Asetab valitud teksti"
 #: ui/main.qml:268
 #, fuzzy, kde-format
 #| msgid "Open by double-clicking instead"
+msgctxt "@label:spinbox"
 msgid "Double-click interval:"
 msgstr "Avamiseks tuleb teha topeltklõps"
 
@@ -195,6 +216,7 @@ msgstr ""
 
 #: ui/main.qml:301
 #, kde-format
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
@@ -210,6 +232,7 @@ msgstr ""
 
 #: ui/main.qml:354
 #, kde-format
+msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr ""
 
@@ -218,11 +241,13 @@ msgstr ""
 #| msgctxt ""
 #| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 #| msgid "Clicking files or folders:"
+msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "Ühekordne klõps failil või kataloogil:"
 
 #: ui/main.qml:362
 #, kde-format
+msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr ""
 
@@ -237,6 +262,7 @@ msgstr ""
 
 #: ui/main.qml:386
 #, kde-format
+msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr ""
 
@@ -256,23 +282,33 @@ msgstr "Puuterežiim:"
 #: ui/main.qml:416
 #, fuzzy, kde-format
 #| msgid "Touch Mode:"
+msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Touch Mode:"
 msgstr "Puuterežiim:"
 
 #: ui/main.qml:418
-#, kde-format
-msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
+#, fuzzy, kde-format
+#| msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
+#| msgid "Automatically enable as needed"
+msgctxt "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Lülitatakse automaatselt"
 
 #: ui/main.qml:418
-#, kde-format
-msgctxt "As in: 'Touch Mode is never enabled'"
+#, fuzzy, kde-format
+#| msgctxt "As in: 'Touch Mode is never enabled'"
+#| msgid "Never enabled"
+msgctxt "option:radio As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Püsivalt välja lülitatud"
 
 #: ui/main.qml:435
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Touch Mode will be automatically activated whenever the system detects a "
+#| "touchscreen but no mouse or touchpad. For example: when a transformable "
+#| "laptop's keyboard is flipped around or detached."
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
@@ -297,7 +333,11 @@ msgid "Disabled"
 msgstr ""
 
 #: ui/main.qml:486
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "In Touch Mode, many elements of the user interface will become larger to "
+#| "more easily accommodate touch interaction."
+msgctxt "@info:usagetip"
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
 "more easily accommodate touch interaction."

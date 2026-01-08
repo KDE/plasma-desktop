@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-03 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2023-12-07 16:12+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -19,12 +19,16 @@ msgstr ""
 "X-Generator: Lokalize 23.08.3\n"
 
 #: qml/config.qml:6
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Vispārīgi"
 
 #: qml/configGeneral.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Display style:"
+msgctxt "@title:group of radio buttons, options are language codes or images"
 msgid "Display style:"
 msgstr "Indikatora stils:"
 
@@ -35,11 +39,15 @@ msgid "No flag available"
 msgstr "Nav pieejams karodziņš"
 
 #: qml/configGeneral.qml:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Layouts:"
+msgctxt "@label prefixed to button"
 msgid "Layouts:"
 msgstr "Izkārtojumi:"
 
 #: qml/configGeneral.qml:103
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
+msgctxt "@action:button opens kcm_keyboard"
 msgid "Configure…"
 msgstr "Pārvaldīt..."

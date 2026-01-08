@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-09-14 12:49+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -20,7 +20,9 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 
 #: main.qml:118
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Minimize All Applet Active Indicator"
+msgctxt "@label Accessible name"
 msgid "Minimize All Applet Active Indicator"
 msgstr "Zminimalizuj wszystkie wskaźniki aktywności apletu"
 

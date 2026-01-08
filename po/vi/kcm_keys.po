@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2023-01-08 16:27+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -141,23 +141,30 @@ msgid "Help"
 msgstr "Trợ giúp"
 
 #: ui/main.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Applications"
+msgctxt "@title:group list section name"
 msgid "Applications"
 msgstr "Ứng dụng"
 
 #: ui/main.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Commands"
+msgctxt "@title:group list section name"
 msgid "Commands"
 msgstr "Lệnh"
 
 #: ui/main.qml:27
 #, fuzzy, kde-format
 #| msgid "System Settings"
+msgctxt "@title:group list section name"
 msgid "System Services"
 msgstr "Thiết lập hệ thống"
 
 #: ui/main.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Common Actions"
+msgctxt "@title:group list section name"
 msgid "Common Actions"
 msgstr "Hành động chung"
 
@@ -231,12 +238,17 @@ msgid "Add new command or script"
 msgstr "Nhập một lệnh hoặc đường dẫn đầy đủ đến một tệp kịch bản:"
 
 #: ui/main.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cannot export scheme while there are unsaved changes"
+msgctxt "@info:status inlinemessage"
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "Không thể xuất khẩu quy hoạch khi có các thay đổi chưa được lưu"
 
 #: ui/main.qml:117
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Select the components below that should be included in the exported scheme"
+msgctxt "@info:usagetip"
 msgid ""
 "Select the components below that should be included in the exported scheme"
 msgstr ""
@@ -280,7 +292,9 @@ msgid "Undo deletion"
 msgstr "Đảo ngược việc xoá"
 
 #: ui/main.qml:341
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No items matched the search terms"
+msgctxt "@info:status placeholdermessage"
 msgid "No items matched the search terms"
 msgstr "Không có mục nào khớp với các từ khoá tìm kiếm"
 
@@ -304,17 +318,23 @@ msgid "Undo deleting shortcuts"
 msgstr "Không có phím tắt mặc định"
 
 #: ui/main.qml:399
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select an item from the list to view its shortcuts here"
+msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Chọn một mục trong danh sách để xem các phím tắt của nó tại đây"
 
 #: ui/main.qml:412
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Export Shortcut Scheme"
+msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr "Xuất khẩu quy hoạch phím tắt"
 
 #: ui/main.qml:412 ui/main.qml:553
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Import Shortcut Scheme"
+msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
 msgstr "Nhập khẩu quy hoạch phím tắt"
 
@@ -325,22 +345,30 @@ msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Quy hoạch phím tắt (*.kksrc)"
 
 #: ui/main.qml:441
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Command"
+msgctxt "@title:window dialog"
 msgid "Edit Command"
 msgstr "Sửa lệnh"
 
 #: ui/main.qml:441
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Command"
+msgctxt "@title:window dialog"
 msgid "Add Command"
 msgstr "Thêm lệnh"
 
 #: ui/main.qml:463
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save"
+msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
 msgstr "Lưu"
 
 #: ui/main.qml:463
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add"
+msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
 msgstr "Thêm"
 
@@ -361,6 +389,7 @@ msgstr "Thêm lệnh"
 #: ui/main.qml:492
 #, fuzzy, kde-format
 #| msgid "Enter a command or the full path to a script file:"
+msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr "Nhập một lệnh hoặc đường dẫn đầy đủ đến một tệp kịch bản:"
 
@@ -417,22 +446,30 @@ msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr ""
 
 #: ui/main.qml:561
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select the scheme to import:"
+msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr "Chọn quy hoạch để nhập khẩu:"
 
 #: ui/main.qml:580
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom Scheme"
+msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
 msgstr "Quy hoạch tự chọn"
 
 #: ui/main.qml:588
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select File…"
+msgctxt "@action:button"
 msgid "Select File…"
 msgstr "Chọn tệp…"
 
 #: ui/main.qml:588
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Import"
+msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "Nhập khẩu"
 
@@ -464,7 +501,9 @@ msgid "Expand to configure shortcuts"
 msgstr "Không có phím tắt hoạt động"
 
 #: ui/ShortcutActionDelegate.qml:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Editing shortcut: %1"
+msgctxt "@info:whatsthis accessible name %1 is shortcut label (not sequence)"
 msgid "Editing shortcut: %1"
 msgstr "Sửa phím tắt: %1"
 
@@ -477,34 +516,47 @@ msgid "%1:"
 msgstr "%1:"
 
 #: ui/ShortcutActionDelegate.qml:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No active shortcuts"
+msgctxt "@info:status"
 msgid "No active shortcuts"
 msgstr "Không có phím tắt hoạt động"
 
 #: ui/ShortcutActionDelegate.qml:134
-#, kde-format
-msgctxt "%1 decides if singular or plural will be used"
+#, fuzzy, kde-format
+#| msgctxt "%1 decides if singular or plural will be used"
+#| msgid "Default shortcut"
+#| msgid_plural "Default shortcuts"
+msgctxt "@title:column %1 decides if singular or plural will be used"
 msgid "Default shortcut"
 msgid_plural "Default shortcuts"
 msgstr[0] "Phím tắt mặc định"
 
 #: ui/ShortcutActionDelegate.qml:136
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No default shortcuts"
+msgctxt "@label for shortcut with no default bindings"
 msgid "No default shortcuts"
 msgstr "Không có phím tắt mặc định"
 
 #: ui/ShortcutActionDelegate.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Default shortcut %1 is enabled."
+msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is enabled."
 msgstr "Phím tắt mặc định %1 đã được bật."
 
 #: ui/ShortcutActionDelegate.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Default shortcut %1 is disabled."
+msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is disabled."
 msgstr "Phím tắt mặc định %1 đã được tắt."
 
 #: ui/ShortcutActionDelegate.qml:168
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom shortcuts"
+msgctxt "@title:column"
 msgid "Custom shortcuts"
 msgstr "Phím tắt tự chọn"
 

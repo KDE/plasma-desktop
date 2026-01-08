@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,17 +18,25 @@ msgstr ""
 "X-Crowdin-File-ID: 43281\n"
 
 #: ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pause Indexer"
+msgctxt "@action:button"
 msgid "Pause Indexer"
 msgstr "暂停索引"
 
 #: ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Resume Indexer"
+msgctxt "@action:button"
 msgid "Resume Indexer"
 msgstr "恢复索引"
 
 #: ui/main.qml:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This will disable file searching in KRunner and launcher menus, and "
+#| "remove extended metadata display from all KDE applications."
+msgctxt "@info inlinemessage"
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
@@ -37,7 +45,13 @@ msgstr ""
 "展的元数据显示内容。"
 
 #: ui/main.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Do you want to delete the saved index data? %1 of space will be freed, "
+#| "but if indexing is re-enabled later, the entire index will have to be re-"
+#| "created from scratch. This may take some time, depending on how many "
+#| "files you have."
+msgctxt "@info inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
 "if indexing is re-enabled later, the entire index will have to be re-created "
@@ -47,12 +61,18 @@ msgstr ""
 "时必须重新创建整个索引。删除索引数据的所需时间取决于文件的多少。"
 
 #: ui/main.qml:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete Index Data"
+msgctxt "@action:button"
 msgid "Delete Index Data"
 msgstr "删除索引数据"
 
 #: ui/main.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "File Search helps you quickly locate your files. You can choose which "
+#| "folders and what types of file data are indexed."
+msgctxt "@info:usagetip"
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
@@ -67,22 +87,30 @@ msgid "Data to index:"
 msgstr "要索引的数据："
 
 #: ui/main.qml:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Nothing (disable indexing entirely)"
+msgctxt "@option:radio Data to index"
 msgid "Nothing (disable indexing entirely)"
 msgstr "无 (完全禁用索引)"
 
 #: ui/main.qml:121
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File names only"
+msgctxt "@option:radio Data to index"
 msgid "File names only"
 msgstr "仅文件名"
 
 #: ui/main.qml:136
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File names and contents"
+msgctxt "@option:radio Data to index"
 msgid "File names and contents"
 msgstr "文件名和内容"
 
 #: ui/main.qml:157
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Also index hidden files and folders"
+msgctxt "@option:check"
 msgid "Also index hidden files and folders"
 msgstr "同时索引隐藏文件和文件夹"
 
@@ -117,12 +145,16 @@ msgid "Currently indexing: <filename>%1</filename>"
 msgstr "正在索引：<filename>%1</filename>"
 
 #: ui/main.qml:270
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Not indexed"
+msgctxt "@info:status"
 msgid "Not indexed"
 msgstr "不索引"
 
 #: ui/main.qml:271
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Indexed"
+msgctxt "@info:status"
 msgid "Indexed"
 msgstr "索引"
 
@@ -133,11 +165,15 @@ msgid "Remove entry"
 msgstr "移除条目"
 
 #: ui/main.qml:318
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select a folder to include"
+msgctxt "@title:window"
 msgid "Select a folder to include"
 msgstr "选择要索引的文件夹"
 
 #: ui/main.qml:318
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select a folder to exclude"
+msgctxt "@title:window"
 msgid "Select a folder to exclude"
 msgstr "选择不索引的文件夹"

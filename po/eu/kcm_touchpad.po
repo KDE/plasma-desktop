@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-12-06 15:22+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -40,7 +40,7 @@ msgstr ""
 msgid "Cannot connect to X server"
 msgstr "Ezin da konektatu X zerbitzarira"
 
-#: backends/x11/xlibbackend.cpp:80 ui/main.qml:59
+#: backends/x11/xlibbackend.cpp:80
 #, kde-format
 msgid "No touchpad found"
 msgstr "Ez da Ukipen-sagurik aurkitu"
@@ -111,23 +111,38 @@ msgstr "ukipen-sagua deskonektatua. Itxita bere ezarpen elkarrizketa."
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "ukipen-sagua deskonektatua. Ez da beste ukipen-sagurik aurkitu."
 
+#: ui/main.qml:59
+#, fuzzy, kde-format
+#| msgid "No touchpad found"
+msgctxt "@info:status placeholdermessage text"
+msgid "No touchpad found"
+msgstr "Ez da Ukipen-sagurik aurkitu"
+
 #: ui/main.qml:60
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Connect an external touchpad"
+msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchpad"
 msgstr "Konektatu kanpoko ukipen-sagu bat"
 
 #: ui/main.qml:75
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Device:"
+msgctxt "@label:listbox device selection"
 msgid "Device:"
 msgstr "Gailua:"
 
 #: ui/main.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "Orokorra:"
 
 #: ui/main.qml:101
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable device"
+msgctxt "@option:check"
 msgid "Enable device"
 msgstr "Gaitu gailua"
 
@@ -138,7 +153,9 @@ msgid "Disable while mouse is connected"
 msgstr "Ezgaitu sagua konektatuta dagoen bitartean"
 
 #: ui/main.qml:137
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Disable while typing"
+msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "Ezgaitu tekleatu bitartean"
 
@@ -155,7 +172,9 @@ msgid "Left and right buttons:"
 msgstr "Ezker eta eskuin botoiak:"
 
 #: ui/main.qml:175
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Swap (left-handed mode)"
+msgctxt "@option:check"
 msgid "Swap (left-handed mode)"
 msgstr "Trukatu (ezkertiar modua)"
 
@@ -177,12 +196,16 @@ msgstr ""
 "antzemateko."
 
 #: ui/main.qml:217
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pointer speed:"
+msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Erakuslearen abiadura:"
 
 #: ui/main.qml:297
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable pointer acceleration"
+msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Gaitu erakuslearen azelerazioa"
 
@@ -196,52 +219,76 @@ msgstr ""
 "mugimendu-abiadura azkarragoarekin."
 
 #: ui/main.qml:325
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scrolling speed:"
+msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "Kiribiltze abiadura:"
 
 #: ui/main.qml:376
-#, kde-format
-msgctxt "Slower Scroll"
+#, fuzzy, kde-format
+#| msgctxt "Slower Scroll"
+#| msgid "Slower"
+msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "Mantsoago"
 
 #: ui/main.qml:383
-#, kde-format
-msgctxt "Faster Scroll Speed"
+#, fuzzy, kde-format
+#| msgctxt "Faster Scroll Speed"
+#| msgid "Faster"
+msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "Bizkorrago"
 
 #: ui/main.qml:390
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scroll by:"
+msgctxt ""
+"@title group begins the sentence 'Scroll by moving two fingers anywhere/"
+"moving one finger on edge'"
 msgid "Scroll by:"
 msgstr "Kiribildu:"
 
 #: ui/main.qml:409
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Moving two fingers anywhere"
+msgctxt ""
+"@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr "Bi hatz edozein aldetan mugituz"
 
 #: ui/main.qml:416
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Moving one finger on edge"
+msgctxt ""
+"@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr "Hatz bakarra ertzean mugituz"
 
 #: ui/main.qml:424
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Invert scroll direction (Natural scrolling)"
+msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Alderantzizko labaintze-noranzkoa (labaintze naturala)"
 
 #: ui/main.qml:438
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Disable horizontal scrolling"
+msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "Ezgaitu labaintze horizontala"
 
 #: ui/main.qml:460
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@label for radiobutton group, begins the sentence 'right-click by "
+#| "pressing bottom-right corner/pressing with two fingers'"
+#| msgid "Right-click by:"
 msgctxt ""
-"@label for radiobutton group, begins the sentence 'right-click by pressing "
-"bottom-right corner/pressing with two fingers'"
+"@title:group for radiobutton group, begins the sentence 'right-click by "
+"pressing bottom-right corner/pressing with two fingers'"
 msgid "Right-click by:"
 msgstr "Eskuineko klik:"
 
@@ -254,14 +301,18 @@ msgid "Pressing bottom-right corner"
 msgstr "Beheko eskuineko izkina sakatuz"
 
 #: ui/main.qml:496
-#, kde-format
-msgctxt "@info shown below radio button"
+#, fuzzy, kde-format
+#| msgctxt "@info shown below radio button"
+#| msgid "Middle-click by pressing both bottom corners."
+msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "Erdiko klik, beheko bi izkinak sakatuta."
 
 #: ui/main.qml:497
-#, kde-format
-msgctxt "@info shown below radio button"
+#, fuzzy, kde-format
+#| msgctxt "@info shown below radio button"
+#| msgid "Middle-click by pressing bottom center."
+msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Erdiko klik, beheko erdigunea sakatuta."
 
@@ -324,7 +375,9 @@ msgid "Tap to click"
 msgstr "Egin tak klik egiteko"
 
 #: ui/main.qml:597
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Allow dragging after tapping"
+msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr "Tak egin ondoren arrastatzea baimendu"
 
@@ -339,32 +392,44 @@ msgstr ""
 "irristatu arrastatzeko. Altxatu hatza jaregiteko."
 
 #: ui/main.qml:616
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Allow briefly lifting finger during tap-and-drag"
+msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr "Hatza laburki altxatzen utzi tak egin eta arrastatzean"
 
 #: ui/main.qml:630
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Two-finger tap:"
+msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "Bi hatzetako tak:"
 
 #: ui/main.qml:650
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Right-click (three-finger tap to middle-click)"
+msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Eskuineko klik (hiru hatzetako tak erdiko klik egiteko)"
 
 #: ui/main.qml:651
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Right-click"
+msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "Eskuineko klik"
 
 #: ui/main.qml:659
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle-click (three-finger tap to right-click)"
+msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Erdiko klik (hiru hatzeko tak eskuineko klik egiteko)"
 
 #: ui/main.qml:660
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle-click"
+msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Erdiko klik"
 

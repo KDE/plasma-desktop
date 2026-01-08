@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-02 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-06-10 22:33+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -44,12 +44,16 @@ msgid "Show in Favorites"
 msgstr "책갈피에 표시"
 
 #: config.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "일반"
 
 #: ConfigGeneral.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "아이콘:"
 
@@ -100,27 +104,37 @@ msgid "Remove icon"
 msgstr "아이콘 삭제"
 
 #: ConfigGeneral.qml:120
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show applications as:"
+msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "앱 표시 형식:"
 
 #: ConfigGeneral.qml:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Name only"
+msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "이름만"
 
 #: ConfigGeneral.qml:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Description only"
+msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "설명만"
 
 #: ConfigGeneral.qml:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Name (Description)"
+msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "이름(설명)"
 
 #: ConfigGeneral.qml:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Description (Name)"
+msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "설명(이름)"
 
@@ -170,7 +184,9 @@ msgstr ""
 "검색 결과나 책갈피 페이지에 앱이 표시되는 순서에는 영향을 주지 않습니다."
 
 #: ConfigGeneral.qml:185
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use compact list item style"
+msgctxt "@option:check"
 msgid "Use compact list item style"
 msgstr "간략한 목록 항목 스타일 사용"
 
@@ -181,12 +197,16 @@ msgid "Automatically disabled when in Touch Mode"
 msgstr "터치 모드에서 자동으로 비활성화됨"
 
 #: ConfigGeneral.qml:199
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Highlight newly installed applications"
+msgctxt "@option:check"
 msgid "Highlight newly installed applications"
 msgstr "새로 설치한 앱 강조"
 
 #: ConfigGeneral.qml:204
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Switch sidebar categories when hovering over them"
+msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
 msgstr "사이드바 위를 지나다닐 때 분류를 전환하기"
 
@@ -197,86 +217,125 @@ msgid "Configure Search Plugins…"
 msgstr "검색 플러그인 설정…"
 
 #: ConfigGeneral.qml:220
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sidebar position:"
+msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr "사이드바 위치:"
 
 #: ConfigGeneral.qml:221 ConfigGeneral.qml:229
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Right"
+msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr "오른쪽"
 
-#: ConfigGeneral.qml:221 ConfigGeneral.qml:229
-#, kde-format
+#: ConfigGeneral.qml:221
+#, fuzzy, kde-format
+#| msgid "Left"
+msgctxt "option:radio sidebar position"
+msgid "Left"
+msgstr "왼쪽"
+
+#: ConfigGeneral.qml:229
+#, fuzzy, kde-format
+#| msgid "Left"
+msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr "왼쪽"
 
 #: ConfigGeneral.qml:237
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show favorites:"
+msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
 msgstr "책갈피 표시:"
 
 #: ConfigGeneral.qml:238
-#, kde-format
-msgctxt "Part of a sentence: 'Show favorites in a grid'"
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
+#| msgid "In a grid"
+msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "격자로"
 
 #: ConfigGeneral.qml:246
-#, kde-format
-msgctxt "Part of a sentence: 'Show favorites in a list'"
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Show favorites in a list'"
+#| msgid "In a list"
+msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "목록으로"
 
 #: ConfigGeneral.qml:254
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show other applications:"
+msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
 msgstr "다른 앱 표시:"
 
 #: ConfigGeneral.qml:255
-#, kde-format
-msgctxt "Part of a sentence: 'Show other applications in a grid'"
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
+#| msgid "In a grid"
+msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "격자로"
 
 #: ConfigGeneral.qml:263
-#, kde-format
-msgctxt "Part of a sentence: 'Show other applications in a list'"
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Show favorites in a list'"
+#| msgid "In a list"
+msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "목록으로"
 
 #: ConfigGeneral.qml:275
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show buttons for:"
+msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr "다음 단추 표시:"
 
-#: ConfigGeneral.qml:276 LeaveButtons.qml:171
-#, kde-format
+#: ConfigGeneral.qml:276
+#, fuzzy, kde-format
+#| msgid "Power"
+msgctxt "@option:radio Show buttons for"
 msgid "Power"
 msgstr "전원"
 
-#: ConfigGeneral.qml:285 LeaveButtons.qml:171
-#, kde-format
+#: ConfigGeneral.qml:285
+#, fuzzy, kde-format
+#| msgid "Session"
+msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "세션"
 
 #: ConfigGeneral.qml:294
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Power and session"
+msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
 msgstr "전원과 세션"
 
 #: ConfigGeneral.qml:303
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show action button captions"
+msgctxt "@option:check"
 msgid "Show action button captions"
 msgstr "동작 단추 캡션 표시"
 
 #: Footer.qml:101
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Applications"
+msgctxt "@title:tab kickoff sidebar tab"
 msgid "Applications"
 msgstr "앱"
 
 #: Footer.qml:117
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Places"
+msgctxt "@title:tab kickoff sidebar tab"
 msgid "Places"
 msgstr "위치"
 
@@ -287,48 +346,95 @@ msgid "No matches"
 msgstr "검색 결과 없음"
 
 #: Header.qml:84
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open user settings"
+msgctxt "@action:button icon-only, for tooltip/Accessible"
 msgid "Open user settings"
 msgstr "사용자 설정 열기"
 
 #: Header.qml:264
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep Open"
+msgctxt ""
+"@action:button Pin widget open if it loses focus, icon-only button, for "
+"tooltip/Accessible"
 msgid "Keep Open"
 msgstr "열린 상태로 유지"
 
-#: KickoffGridDelegate.qml:59 KickoffListDelegate.qml:117
+#: KickoffGridDelegate.qml:59
+#, fuzzy, kde-format
+#| msgctxt "Newly installed app, badge, keep short"
+#| msgid "New!"
+msgctxt "@label Newly installed app, badge, keep short"
+msgid "New!"
+msgstr "새 앱!"
+
+#: KickoffGridDelegate.qml:60
+#, fuzzy, kde-format
+#| msgid "Newly installed application"
+msgctxt "@label Accessible name for badge"
+msgid "Newly installed application"
+msgstr "새로 설치한 앱"
+
+#: KickoffGridView.qml:101
+#, fuzzy, kde-format
+#| msgid "Grid with %1 rows, %2 columns"
+msgctxt "@info:whatsthis Accessible description"
+msgid "Grid with %1 rows, %2 columns"
+msgstr "%1줄, %2칸 크기 격자"
+
+#: KickoffListDelegate.qml:117
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "새 앱!"
 
-#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:119
-#, kde-format
-msgid "Newly installed application"
-msgstr "새로 설치한 앱"
-
-#: KickoffGridView.qml:101
-#, kde-format
-msgid "Grid with %1 rows, %2 columns"
-msgstr "%1줄, %2칸 크기 격자"
-
 #: KickoffListDelegate.qml:118
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "There is a newly installed application in this category"
+msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly installed application in this category"
 msgstr "이 분류에 새로 설치한 앱이 있음"
 
+#: KickoffListDelegate.qml:119
+#, fuzzy, kde-format
+#| msgid "Newly installed application"
+msgctxt "@info:whatsthis Accessible description for badge"
+msgid "Newly installed application"
+msgstr "새로 설치한 앱"
+
 #: LeaveButtons.qml:171
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Session"
+msgctxt "@title:menu menubutton"
+msgid "Session"
+msgstr "세션"
+
+#: LeaveButtons.qml:171
+#, fuzzy, kde-format
+#| msgid "Power"
+msgctxt "@title:menu menubutton"
+msgid "Power"
+msgstr "전원"
+
+#: LeaveButtons.qml:171
+#, fuzzy, kde-format
+#| msgid "More"
+msgctxt "@title:menu menubutton"
 msgid "More"
 msgstr "더 보기"
 
 #: LeaveButtons.qml:171
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Session and Power"
+msgctxt "@title:menu menubutton"
 msgid "Session and Power"
 msgstr "세션과 전원"
 
 #: main.qml:356
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Applications…"
+msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
 msgstr "앱 편집…"
 
@@ -349,6 +455,14 @@ msgstr "과거 기록"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "자주 사용함"
+
+#~ msgctxt "Part of a sentence: 'Show other applications in a grid'"
+#~ msgid "In a grid"
+#~ msgstr "격자로"
+
+#~ msgctxt "Part of a sentence: 'Show other applications in a list'"
+#~ msgid "In a list"
+#~ msgstr "목록으로"
 
 #~ msgid "Leave"
 #~ msgstr "떠나기"

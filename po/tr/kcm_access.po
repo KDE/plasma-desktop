@@ -7,14 +7,14 @@
 # Adil Yıldız <adil@kde.org.tr>, 2005.
 # Serdar Soytetir <tulliana@gmail.com>, 2007, 2008, 2009.
 # Volkan Gezer <volkangezer@gmail.com>, 2017, 2021, 2022.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-04 00:46+0000\n"
-"PO-Revision-Date: 2025-12-23 10:22+0300\n"
-"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"PO-Revision-Date: 2026-01-07 20:25+0300\n"
+"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -296,10 +296,9 @@ msgstr "Ekran okuyucusunu etkinleştir"
 
 #. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
 #: kcmaccessibilityshakecursor.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether Shake Pointer is enabled"
-msgstr "İmleci Salla’nın etkin olup olmadığı"
+msgstr "İşaretçiyi Salla’nın etkin olup olmadığı"
 
 #. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
 #: kcmaccessibilityshakecursor.kcfg:15
@@ -353,7 +352,10 @@ msgid "Disable sticky and slow keys after:"
 msgstr "Yapışkan/yavaş düğmeleri devre dışı bırakmak için hareketsizlik:"
 
 #: ui/ActivationShortcuts.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1 min"
+#| msgid_plural "%1 min"
+msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
 msgid "%1 min"
 msgid_plural "%1 min"
 msgstr[0] "%1 dak"
@@ -368,32 +370,44 @@ msgstr[0] "dak"
 msgstr[1] "dak"
 
 #: ui/ActivationShortcuts.qml:89
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "When a shortcut is used:"
+msgctxt "@title:group for checkbox group"
 msgid "When a shortcut is used:"
 msgstr "Bir kısayol kullanıldığında:"
 
 #: ui/ActivationShortcuts.qml:90
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Display a confirmation dialog"
+msgctxt "@option:check when shortcut used"
 msgid "Display a confirmation dialog"
 msgstr "Bir onay iletişim kutusu görüntüle"
 
 #: ui/ActivationShortcuts.qml:101
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ring the system bell"
+msgctxt "@option:check when shortcut used"
 msgid "Ring the system bell"
 msgstr "Sistem zilini çal"
 
 #: ui/ActivationShortcuts.qml:112
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show a notification"
+msgctxt "@option:check when shortcut used"
 msgid "Show a notification"
 msgstr "Bir bildirim göster"
 
 #: ui/ActivationShortcuts.qml:123
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Notifications…"
+msgctxt "@action:button opens Notifications kcm"
 msgid "Configure Notifications…"
 msgstr "Bildirimleri Yapılandır…"
 
 #: ui/Bell.qml:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Please choose an audio file"
+msgctxt "@title:window dialog"
 msgid "Please choose an audio file"
 msgstr "Lütfen bir ses dosyası seçin"
 
@@ -404,7 +418,9 @@ msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
 msgstr "OGG, OGA ve WAV ses dosyaları (*.ogg *.oga *.wav)"
 
 #: ui/Bell.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Audible bell:"
+msgctxt "@label prefix for checkbox"
 msgid "Audible bell:"
 msgstr "Sesli zil:"
 
@@ -421,64 +437,80 @@ msgid "Custom sound:"
 msgstr "Özel ses:"
 
 #: ui/Bell.qml:75
-#, kde-format
-msgid "Search audio file for the system bell"
+#, fuzzy, kde-format
+#| msgid "Search audio file for the system bell"
+msgctxt "@action:button icononly tooltip"
+msgid "Choose audio file for the system bell"
 msgstr "Sistem zili için ses dosyasını ara"
 
 #: ui/Bell.qml:76
-#, kde-format
-msgid "Button search audio file"
-msgstr "Düğme arama ses dosyası"
+#, fuzzy, kde-format
+#| msgid "Please choose an audio file"
+msgctxt "@action button accessible only"
+msgid "Choose audio file"
+msgstr "Lütfen bir ses dosyası seçin"
 
-#: ui/Bell.qml:92
+#: ui/Bell.qml:77
 #, kde-format
+msgctxt "@info:usagetip accessible description for button"
+msgid "Opens dialog"
+msgstr ""
+
+#: ui/Bell.qml:93
+#, fuzzy, kde-format
+#| msgid "Visual bell:"
+msgctxt "@label prefix for checkbox"
 msgid "Visual bell:"
 msgstr "Görsel zil:"
 
-#: ui/Bell.qml:93
-#, kde-format
-msgctxt "Enable visual bell"
+#: ui/Bell.qml:94
+#, fuzzy, kde-format
+#| msgctxt "Enable activation shortcuts"
+#| msgid "Enable"
+msgctxt "@option:check Enable visual bell"
 msgid "Enable"
 msgstr "Etkinleştir"
 
-#: ui/Bell.qml:107
+#: ui/Bell.qml:108
 #, kde-format
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
 msgstr "Ekran renklerini tersine çevir"
 
-#: ui/Bell.qml:125
+#: ui/Bell.qml:126
 #, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
 msgstr "Ekranı yanıp söndür"
 
-#: ui/Bell.qml:136
+#: ui/Bell.qml:137
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr "Renk"
 
-#: ui/Bell.qml:150
+#: ui/Bell.qml:151
 #, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "Süre:"
 
-#: ui/Bell.qml:165 ui/KeyboardFilters.qml:56 ui/KeyboardFilters.qml:157
-#: ui/MouseNavigation.qml:53 ui/MouseNavigation.qml:84
-#: ui/MouseNavigation.qml:110
-#, kde-format
+#: ui/Bell.qml:166
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix %1 is visible bell duration"
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/Bell.qml:169 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
-#: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
-#: ui/MouseNavigation.qml:114
-#, kde-format
-msgctxt "short for millisecond(s)"
+#: ui/Bell.qml:170 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
+#, fuzzy, kde-format
+#| msgctxt "short for millisecond(s)"
+#| msgid "ms"
+#| msgid_plural "ms"
+msgctxt "@label:valuesuffix short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
 msgstr[0] "ms"
@@ -556,22 +588,30 @@ msgid "Adjusted colors:"
 msgstr "Ayarlanan renkler:"
 
 #: ui/ColorblindnessCorrection.qml:132
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Reds:"
+msgctxt "@title:group for color rectangles"
 msgid "Reds:"
 msgstr "Kırmızılar:"
 
 #: ui/ColorblindnessCorrection.qml:133
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Greens:"
+msgctxt "@title:group for color rectangles"
 msgid "Greens:"
 msgstr "Yeşiller:"
 
 #: ui/ColorblindnessCorrection.qml:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Blues:"
+msgctxt "@title:group for color rectangles"
 msgid "Blues:"
 msgstr "Maviler:"
 
 #: ui/ColorblindnessCorrection.qml:135
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Purples:"
+msgctxt "@title:group for color rectangles"
 msgid "Purples:"
 msgstr "Morlar:"
 
@@ -600,13 +640,17 @@ msgid "Configure Shortcuts…"
 msgstr "Kısayolları Yapılandır…"
 
 #: ui/KeyboardFilters.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Slow keys:"
+msgctxt "@title:group prefix"
 msgid "Slow keys:"
 msgstr "Yavaş düğmeler:"
 
 #: ui/KeyboardFilters.qml:23
-#, kde-format
-msgctxt "Enable slow keys"
+#, fuzzy, kde-format
+#| msgctxt "Enable activation shortcuts"
+#| msgid "Enable"
+msgctxt "@option:check Enable slow keys"
 msgid "Enable"
 msgstr "Etkinleştir"
 
@@ -624,42 +668,66 @@ msgstr ""
 "zorlanıyorsanız yararlıdır."
 
 #: ui/KeyboardFilters.qml:41
-#, kde-format
-msgctxt "Slow keys Delay"
+#, fuzzy, kde-format
+#| msgctxt "Slow keys Delay"
+#| msgid "Delay:"
+msgctxt "@label:spinbox Slow keys Delay"
 msgid "Delay:"
 msgstr "Gecikme:"
 
+#: ui/KeyboardFilters.qml:56
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix %1 is slow keys delay"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+
 #: ui/KeyboardFilters.qml:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ring system bell:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "Ring system bell:"
 msgstr "Sistem zilini çal:"
 
 #: ui/KeyboardFilters.qml:75
-#, kde-format
-msgctxt "Use system bell when a key is pressed"
+#, fuzzy, kde-format
+#| msgctxt "Use system bell when a key is pressed"
+#| msgid "when any key is &pressed"
+msgctxt "@option:check Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "&bir düğmeye basıldığında"
 
 #: ui/KeyboardFilters.qml:89
-#, kde-format
-msgctxt "Use system bell when a key is accepted"
+#, fuzzy, kde-format
+#| msgctxt "Use system bell when a key is accepted"
+#| msgid "when any key is &accepted"
+msgctxt "@option:check Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "b&ir düğme kabul edildiğinde"
 
 #: ui/KeyboardFilters.qml:103
-#, kde-format
-msgctxt "Use system bell when a key is rejected"
+#, fuzzy, kde-format
+#| msgctxt "Use system bell when a key is rejected"
+#| msgid "when any key is &rejected"
+msgctxt "@option:check Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "bi&r düğme reddedildiğinde"
 
 #: ui/KeyboardFilters.qml:119
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Bounce keys:"
+msgctxt "@title:group prefix"
 msgid "Bounce keys:"
 msgstr "Sıçrama düğmeleri:"
 
 #: ui/KeyboardFilters.qml:124
-#, kde-format
-msgctxt "Bounce keys enable"
+#, fuzzy, kde-format
+#| msgctxt "Enable activation shortcuts"
+#| msgid "Enable"
+msgctxt "@option:check Bounce keys enable"
 msgid "Enable"
 msgstr "Etkinleştir"
 
@@ -676,13 +744,27 @@ msgstr ""
 "titremeleriniz varsa yararlıdır."
 
 #: ui/KeyboardFilters.qml:142
-#, kde-format
-msgctxt "Bounce keys delay"
+#, fuzzy, kde-format
+#| msgctxt "Slow keys Delay"
+#| msgid "Delay:"
+msgctxt "@label:spinbox Bounce keys delay"
 msgid "Delay:"
 msgstr "Gecikme:"
 
+#: ui/KeyboardFilters.qml:157
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix %1 is bounce keys delay"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+
 #: ui/KeyboardFilters.qml:171
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ring system bell when rejected"
+msgctxt "@option:check for bounce keys"
 msgid "Ring system bell when rejected"
 msgstr "Reddedildiğinde sistem zilini çal"
 
@@ -699,37 +781,49 @@ msgid "System Bell"
 msgstr "Sistem Zili"
 
 #: ui/main.qml:38
-#, kde-format
-msgctxt "System Modifier Keys"
+#, fuzzy, kde-format
+#| msgctxt "System Modifier Keys"
+#| msgid "Modifier Keys"
+msgctxt "@title Category name in sidebar"
 msgid "Modifier Keys"
 msgstr "Niteleyici Düğmeler"
 
 #: ui/main.qml:43
-#, kde-format
-msgctxt "System keyboard filters"
+#, fuzzy, kde-format
+#| msgctxt "System keyboard filters"
+#| msgid "Keyboard Filters"
+msgctxt "@title Category name in sidebar"
 msgid "Keyboard Filters"
 msgstr "Klavye Süzgeçleri"
 
 #: ui/main.qml:48
-#, kde-format
-msgctxt "System mouse navigation"
+#, fuzzy, kde-format
+#| msgctxt "System mouse navigation"
+#| msgid "Mouse Navigation"
+msgctxt "@title Category name in sidebar"
 msgid "Mouse Navigation"
 msgstr "Fare Dolaşımı"
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Activation Shortcuts"
+msgctxt "@title Category name in sidebar"
 msgid "Activation Shortcuts"
 msgstr "Etkinleştirme Kısayolları"
 
 #: ui/main.qml:58
-#, kde-format
-msgctxt "System mouse navigation"
+#, fuzzy, kde-format
+#| msgctxt "System mouse navigation"
+#| msgid "Screen Reader"
+msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "Ekran Okuyucusu"
 
 #: ui/main.qml:63
-#, kde-format
-msgctxt "Correction for color blindness"
+#, fuzzy, kde-format
+#| msgctxt "Correction for color blindness"
+#| msgid "Color Blindness Correction"
+msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr "Renk Körlüğü Düzeltmesi"
 
@@ -741,11 +835,11 @@ msgstr "Tersine Çevir"
 
 #: ui/main.qml:73
 #, fuzzy, kde-format
-#| msgctxt "Shake cursor to find it"
-#| msgid "Shake Cursor"
-msgctxt "Shake pointer to find it"
+#| msgctxt "Shake pointer to find it"
+#| msgid "Shake Pointer"
+msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
-msgstr "İmleci Salla"
+msgstr "İşaretçiyi Salla"
 
 #: ui/ModifierKeys.qml:17
 #, kde-format
@@ -788,12 +882,16 @@ msgstr ""
 "etkin durumda tutar."
 
 #: ui/ModifierKeys.qml:57
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Disable when two keys are held down"
+msgctxt "@option:check"
 msgid "Disable when two keys are held down"
 msgstr "İki düğme basılı tutulduğunda devre dışı bırak"
 
 #: ui/ModifierKeys.qml:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ring system bell when modifier keys are used"
+msgctxt "@option:check"
 msgid "Ring system bell when modifier keys are used"
 msgstr "Niteleyici düğmeler kullanıldığında sistem zilini çal"
 
@@ -829,12 +927,10 @@ msgid "Configure Notifications…"
 msgstr "Bildirimleri Yapılandır…"
 
 #: ui/MouseNavigation.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move pointer:"
-msgstr "İmleci hareket ettirmek için sayısal düğme takımını kullan:"
+msgstr "İşaretçiyi hareket ettirmek için sayısal düğme takımını kullan:"
 
 #: ui/MouseNavigation.qml:22
 #, kde-format
@@ -865,17 +961,56 @@ msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "İvmelendirme gecikmesi:"
 
+#: ui/MouseNavigation.qml:53
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix acceleration delay spinbox %1 is value"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+
+#: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
+#: ui/MouseNavigation.qml:114
+#, kde-format
+msgctxt "short for millisecond(s)"
+msgid "ms"
+msgid_plural "ms"
+msgstr[0] "ms"
+msgstr[1] "ms"
+
 #: ui/MouseNavigation.qml:66
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Yineleme aralığı:"
 
+#: ui/MouseNavigation.qml:84
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix repeat interval spinbox %1 is value"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+
 #: ui/MouseNavigation.qml:93
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "İvmelendirme süresi:"
+
+#: ui/MouseNavigation.qml:110
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
 
 #: ui/MouseNavigation.qml:118
 #, kde-format
@@ -914,41 +1049,31 @@ msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Orca Ekran Okuyucusu Yapılandırmasını Başlat…"
 
 #: ui/ShakeCursor.qml:15
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Shake cursor to find it:"
+#, kde-format
 msgctxt "@label"
 msgid "Shake pointer to find it:"
-msgstr "İmleci bulmak için onu salla:"
+msgstr "İşaretçiyi bulmak için onu salla:"
 
 #: ui/ShakeCursor.qml:16
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable shake pointer effect"
 msgid "Enable"
 msgstr "Etkinleştir"
 
 #: ui/ShakeCursor.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@label Cursor magnification level"
-#| msgid "Magnification:"
+#, kde-format
 msgctxt "@label Pointer magnification level"
 msgid "Magnification:"
 msgstr "Büyütme:"
 
 #: ui/ShakeCursor.qml:55
-#, fuzzy, kde-format
-#| msgctxt "@label Normal cursor size"
-#| msgid "Normal"
+#, kde-format
 msgctxt "@label Normal pointer size"
 msgid "Normal"
 msgstr "Normal"
 
 #: ui/ShakeCursor.qml:62
-#, fuzzy, kde-format
-#| msgctxt "@label Large cursor size"
-#| msgid "Large"
+#, kde-format
 msgctxt "@label Large pointer size"
 msgid "Large"
 msgstr "Büyük"
@@ -972,12 +1097,10 @@ msgid "Show pixel grid at zoom level:"
 msgstr "Şu yakınlaştırma düzeyinde piksel ızgarasını göster:"
 
 #: ui/ZoomMagnifier.qml:85
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer appearance:"
-msgstr "İşaretçi ivmelendirmesi:"
+msgstr "İşaretçi görünüşü:"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
@@ -998,12 +1121,10 @@ msgid "Hide"
 msgstr "Gizle"
 
 #: ui/ZoomMagnifier.qml:123
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox"
-#| msgid "Mouse tracking:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer tracking:"
-msgstr "Fare izlemesi:"
+msgstr "İşaretçi izlemesi:"
 
 #: ui/ZoomMagnifier.qml:128
 #, kde-format
@@ -1012,12 +1133,10 @@ msgid "Proportional"
 msgstr "Oransal"
 
 #: ui/ZoomMagnifier.qml:129
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Zoom area moves in sync with mouse cursor"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with pointer"
-msgstr "Yakınlaştırma alanı, fare imleci ile eşzamanlı hareket eder"
+msgstr "Yakınlaştırma alanı, işaretçiyle eşzamanlı hareket eder"
 
 #: ui/ZoomMagnifier.qml:133
 #, kde-format
@@ -1026,12 +1145,10 @@ msgid "Centered"
 msgstr "Ortalanmış"
 
 #: ui/ZoomMagnifier.qml:134
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Mouse cursor stays centered on-screen, except near screen edges"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, except near screen edges"
-msgstr "Fare imleci, ekran kenarları dışında ekranda ortalanmış olarak durur"
+msgstr "İşaretçi, ekran kenarları dışında ekranda ortalanmış olarak durur"
 
 #: ui/ZoomMagnifier.qml:138
 #, kde-format
@@ -1040,13 +1157,11 @@ msgid "Centered (Strict)"
 msgstr "Ortalanmış (Katı)"
 
 #: ui/ZoomMagnifier.qml:139
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Mouse cursor stays centered on-screen, even near screen edges"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, even near screen edges"
 msgstr ""
-"Fare imleci, ekran kenarları yakınında bile ekranda ortalanmış olarak durur"
+"İşaretçi, ekran kenarları yakınında bile ekranda ortalanmış olarak durur"
 
 #: ui/ZoomMagnifier.qml:143
 #, kde-format
@@ -1055,12 +1170,10 @@ msgid "Push"
 msgstr "İt"
 
 #: ui/ZoomMagnifier.qml:144
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Mouse cursor pushes zoom area at screen edges"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer pushes zoom area at screen edges"
-msgstr "Fare imleci, ekran kenarlarında yakınlaştırma alanını iter"
+msgstr "İşaretçi, ekran kenarlarında yakınlaştırma alanını iter"
 
 #: ui/ZoomMagnifier.qml:148
 #, kde-format
@@ -1069,12 +1182,10 @@ msgid "Disabled"
 msgstr "Devre dışı"
 
 #: ui/ZoomMagnifier.qml:149
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Zoom area doesn't follow mouse cursor"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow pointer"
-msgstr "Yakınlaştırma alanı fare imlecini takip etmez"
+msgstr "Yakınlaştırma alanı işaretçiyi takip etmez"
 
 #: ui/ZoomMagnifier.qml:166
 #, kde-format
@@ -1156,6 +1267,25 @@ msgstr "Yakınlaştırmak için niteleyici düğmelere basıldığında sar"
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "Yakınlaştırmayı denetlemek için kısayollar kullan"
+
+#~ msgid "Button search audio file"
+#~ msgstr "Düğme arama ses dosyası"
+
+#~ msgctxt "Enable visual bell"
+#~ msgid "Enable"
+#~ msgstr "Etkinleştir"
+
+#~ msgctxt "Enable slow keys"
+#~ msgid "Enable"
+#~ msgstr "Etkinleştir"
+
+#~ msgctxt "Bounce keys enable"
+#~ msgid "Enable"
+#~ msgstr "Etkinleştir"
+
+#~ msgctxt "Bounce keys delay"
+#~ msgid "Delay:"
+#~ msgstr "Gecikme:"
 
 #~ msgctxt "@option check, Enable shake cursor effect"
 #~ msgid "Enable"

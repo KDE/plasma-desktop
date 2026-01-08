@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2023-12-14 22:04+0100\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -20,22 +20,30 @@ msgstr ""
 "X-Generator: Lokalize 23.08.3\n"
 
 #: ui/main.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Position on screen:"
+msgctxt "@title:group prefix for radiobutton group"
 msgid "Position on screen:"
 msgstr "Pozíció a képernyőn:"
 
 #: ui/main.qml:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Top"
+msgctxt "@option:check Position on top of screen"
 msgid "Top"
 msgstr "Fent"
 
 #: ui/main.qml:42
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Center"
+msgctxt "@option:check Position in center of screen"
 msgid "Center"
 msgstr "Középen"
 
 #: ui/main.qml:55
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Activation:"
+msgctxt "@label prefix for checkbutton"
 msgid "Activation:"
 msgstr "Aktiválás:"
 
@@ -46,30 +54,40 @@ msgid "Activate when pressing any key on the desktop"
 msgstr "Aktiválás bármely billentyű megnyomásakor az asztalon"
 
 #: ui/main.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "History:"
+msgctxt "@title:group prefix for radiobutton group"
 msgid "History:"
 msgstr "Előzmények:"
 
 #: ui/main.qml:74
-#, kde-format
-msgctxt "@option:check"
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Disabled"
+msgctxt "@option:radio History is disabled"
 msgid "Disabled"
 msgstr "Kikapcsolva"
 
 #: ui/main.qml:79
-#, kde-format
-msgctxt "@option:check The thing being enabled is search history"
+#, fuzzy, kde-format
+#| msgctxt "@option:check The thing being enabled is search history"
+#| msgid "Enable suggestions"
+msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable suggestions"
 msgstr "Javaslatok bekapcsolása"
 
 #: ui/main.qml:84
-#, kde-format
-msgctxt "@option:check The thing being enabled is search history"
-msgid "Enabled auto-complete"
+#, fuzzy, kde-format
+#| msgctxt "@option:check The thing being enabled is search history"
+#| msgid "Enabled auto-complete"
+msgctxt "@option:radio The thing being enabled is search history"
+msgid "Enable auto-complete"
 msgstr "Automatikus kiegészítés bekapcsolása"
 
 #: ui/main.qml:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear History…"
+msgctxt "@action:button"
 msgid "Clear History…"
 msgstr "Előzmények törlése…"
 

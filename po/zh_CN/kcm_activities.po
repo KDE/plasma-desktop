@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -59,30 +59,40 @@ msgid "Description:"
 msgstr "描述："
 
 #: ui/ActivityEditor.qml:84
-#, kde-format
-msgctxt "@option:check"
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "While on this activity, allow:"
+msgctxt "@title:group for checkbox group"
 msgid "While on this activity, allow:"
 msgstr "处于此活动时，允许："
 
 #: ui/ActivityEditor.qml:85
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tracking file and app use"
+msgctxt "@option:check While on activity, allow"
 msgid "Tracking file and app use"
 msgstr "跟踪文件和应用程序使用情况"
 
 #: ui/ActivityEditor.qml:91
-#, kde-format
-msgctxt "@option:check"
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Automatically turning off the screen"
+msgctxt "@option:check While on activity, allow"
 msgid "Automatically turning off the screen"
 msgstr "自动关闭屏幕"
 
 #: ui/ActivityEditor.qml:97
-#, kde-format
-msgctxt "@option:check"
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Automatically shutting down or sleeping"
+msgctxt "@option:check While on activity, allow"
 msgid "Automatically shutting down or sleeping"
 msgstr "自动关机或者睡眠"
 
 #: ui/ActivityEditor.qml:103
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Shortcut for switching:"
+msgctxt "@label prefix for keyboard shortcut input button"
 msgid "Shortcut for switching:"
 msgstr "切换快捷键："
 
@@ -93,7 +103,9 @@ msgid "Delete %1 activity"
 msgstr "删除 %1 活动"
 
 #: ui/main.qml:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create New…"
+msgctxt "@action:button Create new Activity"
 msgid "Create New…"
 msgstr "新建…"
 
@@ -110,6 +122,8 @@ msgid "Do you want to delete activity '%1'?"
 msgstr "您想要删除活动“%1”吗？"
 
 #: ui/main.qml:94
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete Activity"
+msgctxt "@action:button in dialog confirms deletion"
 msgid "Delete Activity"
 msgstr "删除活动"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-07 00:46+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-03-25 07:27+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -46,12 +46,16 @@ msgid "Show in Favorites"
 msgstr "Vis i favoritter"
 
 #: config.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Generelt"
 
 #: ConfigGeneral.qml:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Ikon:"
 
@@ -68,121 +72,161 @@ msgid "Clear Icon"
 msgstr "Fjern ikon"
 
 #: ConfigGeneral.qml:159
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show applications as:"
+msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Vis programmer som:"
 
 #: ConfigGeneral.qml:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Name only"
+msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Bare navn"
 
 #: ConfigGeneral.qml:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Description only"
+msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Bare beskrivelse"
 
-#: ConfigGeneral.qml:161
-#, kde-format
+#: ConfigGeneral.qml:162
+#, fuzzy, kde-format
+#| msgid "Name (Description)"
+msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Navn (beskrivelse)"
 
-#: ConfigGeneral.qml:161
-#, kde-format
+#: ConfigGeneral.qml:162
+#, fuzzy, kde-format
+#| msgid "Description (Name)"
+msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Beskrivelse (navn)"
 
-#: ConfigGeneral.qml:171
-#, kde-format
+#: ConfigGeneral.qml:172
+#, fuzzy, kde-format
+#| msgid "Behavior:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
 msgstr "Atferd:"
 
-#: ConfigGeneral.qml:173
-#, kde-format
+#: ConfigGeneral.qml:174
+#, fuzzy, kde-format
+#| msgid "Sort applications alphabetically"
+msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Sorter programmer alfabetisk"
 
-#: ConfigGeneral.qml:181
-#, kde-format
+#: ConfigGeneral.qml:182
+#, fuzzy, kde-format
+#| msgid "Flatten sub-menus to a single level"
+msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
 msgstr "Flat ut undermenyer til ett nivå"
 
-#: ConfigGeneral.qml:189
-#, kde-format
+#: ConfigGeneral.qml:190
+#, fuzzy, kde-format
+#| msgid "Show icons on the root level of the menu"
+msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
 msgstr "Vis ikon på rotnivået av menyen"
 
-#: ConfigGeneral.qml:199
-#, kde-format
+#: ConfigGeneral.qml:200
+#, fuzzy, kde-format
+#| msgid "Show categories:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
 msgstr "Vis kategorier:"
 
-#: ConfigGeneral.qml:202
-#, kde-format
+#: ConfigGeneral.qml:203
+#, fuzzy, kde-format
+#| msgid "Recent applications"
+msgctxt "@option:check"
 msgid "Recent applications"
 msgstr "Nylig brukte programmer"
 
-#: ConfigGeneral.qml:203
-#, kde-format
+#: ConfigGeneral.qml:204
+#, fuzzy, kde-format
+#| msgid "Often used applications"
+msgctxt "@option:check"
 msgid "Often used applications"
 msgstr "Ofte brukte programmer"
 
-#: ConfigGeneral.qml:210
-#, kde-format
+#: ConfigGeneral.qml:211
+#, fuzzy, kde-format
+#| msgid "Recent files"
+msgctxt "@option:check"
 msgid "Recent files"
 msgstr "Nylig brukte filer"
 
-#: ConfigGeneral.qml:211
-#, kde-format
+#: ConfigGeneral.qml:212
+#, fuzzy, kde-format
+#| msgid "Often used files"
+msgctxt "@option:check"
 msgid "Often used files"
 msgstr "Ofte brukte filer"
 
-#: ConfigGeneral.qml:217
-#, kde-format
+#: ConfigGeneral.qml:218
+#, fuzzy, kde-format
+#| msgid "Sort items in categories by:"
+msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
 msgstr "Sorter i kategorier etter:"
 
-#: ConfigGeneral.qml:218
+#: ConfigGeneral.qml:219
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Nylig brukte"
 
-#: ConfigGeneral.qml:218
-#, kde-format
+#: ConfigGeneral.qml:219
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+#| msgid "Often used"
 msgctxt ""
-"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Often used"
 msgstr "Ofte brukte"
 
-#: ConfigGeneral.qml:228
-#, kde-format
+#: ConfigGeneral.qml:229
+#, fuzzy, kde-format
+#| msgid "Search:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
 msgstr "Søk:"
 
-#: ConfigGeneral.qml:230
-#, kde-format
+#: ConfigGeneral.qml:231
+#, fuzzy, kde-format
+#| msgid "Expand search to bookmarks, files and emails"
+msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Utvid søket til bokmerker, filer og e-poster"
 
-#: ConfigGeneral.qml:238
-#, kde-format
+#: ConfigGeneral.qml:239
+#, fuzzy, kde-format
+#| msgid "Align search results to bottom"
+msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr "Plasser søkeresultater nederst"
 
-#: ConfigGeneral.qml:243
+#: ConfigGeneral.qml:244
 #, kde-format
-msgctxt "@label:textbox for a checkbox toggling Dark Mode"
+msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
 msgstr ""
 
-#: ConfigGeneral.qml:248
+#: ConfigGeneral.qml:249
 #, kde-format
+msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
 msgstr ""
 
-#: ConfigGeneral.qml:252
+#: ConfigGeneral.qml:253
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -191,7 +235,9 @@ msgid ""
 msgstr ""
 
 #: DashboardRepresentation.qml:309
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Favorites"
+msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "Favoritter"
 
@@ -208,7 +254,9 @@ msgid "Launch"
 msgstr ""
 
 #: main.qml:211
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Applications…"
+msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
 msgstr "Rediger programmer …"
 

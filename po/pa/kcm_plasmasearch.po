@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-01-28 18:01-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -28,18 +28,23 @@ msgid "Available Plugins"
 msgstr "ਮੌਜੂਦ ਪਲੱਗਇਨ"
 
 #: plasmasearch/ui/main.qml:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure KRunner…"
+msgctxt "@action:button in toolbar"
 msgid "Configure KRunner…"
 msgstr "ਕੇ-ਰਨਰ ਦੀ ਸੰਰਚਨਾ…"
 
 #: plasmasearch/ui/main.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Get New Plugins…"
+msgctxt "@action:button in toolbar"
 msgid "Get New Plugins…"
 msgstr "…ਨਵੀਆਂ ਪਲੱਗਇਨਾਂ ਲਵੋ"
 
 #: plasmasearch/ui/main.qml:45
 #, fuzzy, kde-format
 #| msgid "Enable or disable plugins (used in KRunner and Application Launcher)"
+msgctxt "@info:usagetip"
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
@@ -47,12 +52,16 @@ msgid ""
 msgstr "ਪਲੱਗਇਨ ਸਮਰੱਥ ਜਾਂ ਅਸਮਰੱਥ ਕਰੋ (ਕੇ-ਰਨਰ ਤੇ ਐਪਲੀਕੇਸ਼ਨ ਲਾਂਚਰ ਵਿੱਚ ਵਰਤੀਆਂ ਜਾਂਦੀਆਂ)"
 
 #: plasmasearch/ui/main.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove from favorites"
+msgctxt "@action:button, icononly"
 msgid "Remove from favorites"
 msgstr "ਪਸੰਦੀਦਾ ਵਿੱਚੋਂ ਹਟਾਓ"
 
 #: plasmasearch/ui/main.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add to favorites"
+msgctxt "@action:button, icononly"
 msgid "Add to favorites"
 msgstr "ਪਸੰਦੀਦਾ ਵਿੱਚ ਜੋੜੋ"
 

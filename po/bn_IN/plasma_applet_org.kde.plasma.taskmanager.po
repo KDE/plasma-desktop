@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-09 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2008-12-29 15:50+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
@@ -103,12 +103,15 @@ msgid "9,999+"
 msgstr ""
 
 #: qml/config.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Appearance"
+msgctxt "@title:group for configuration dialog page"
 msgid "Appearance"
 msgstr "চেহারা ছবি"
 
 #: qml/config.qml:18
 #, kde-format
+msgctxt "@title:group for configuration dialog page"
 msgid "Behavior"
 msgstr ""
 
@@ -605,16 +608,19 @@ msgstr ""
 
 #: qml/ContextMenu.qml:100
 #, kde-format
+msgctxt "@title:group for section of menu items"
 msgid "Places"
 msgstr ""
 
 #: qml/ContextMenu.qml:106
 #, kde-format
+msgctxt "@title:group for section of menu items"
 msgid "Recent Files"
 msgstr ""
 
 #: qml/ContextMenu.qml:116
 #, kde-format
+msgctxt "@title:group for section of menu items"
 msgid "Actions"
 msgstr ""
 
@@ -662,121 +668,146 @@ msgstr ""
 
 #: qml/ContextMenu.qml:266
 #, kde-format
+msgctxt "@option:check inmenu, no separate unmute action"
 msgid "Mute"
 msgstr ""
 
 #: qml/ContextMenu.qml:277
 #, kde-format
+msgctxt "action:inmenu"
 msgid "Open New Window"
 msgstr ""
 
 #: qml/ContextMenu.qml:293
 #, fuzzy, kde-format
 #| msgid "By Desktop"
+msgctxt "action:inmenu"
 msgid "Move to &Desktop"
 msgstr "ডেস্কটপ অনুযায়ী"
 
 #: qml/ContextMenu.qml:323
 #, fuzzy, kde-format
 #| msgid "By Desktop"
+msgctxt "action:inmenu"
 msgid "Move &To Current Desktop"
 msgstr "ডেস্কটপ অনুযায়ী"
 
 #: qml/ContextMenu.qml:332
 #, fuzzy, kde-format
 #| msgid "By Desktop"
+msgctxt "action:inmenu"
 msgid "&All Desktops"
 msgstr "ডেস্কটপ অনুযায়ী"
 
 #: qml/ContextMenu.qml:360
 #, fuzzy, kde-format
 #| msgid "By Desktop"
+msgctxt "action:inmenu"
 msgid "&New Desktop"
 msgstr "ডেস্কটপ অনুযায়ী"
 
 #: qml/ContextMenu.qml:380
 #, kde-format
+msgctxt "action:inmenu"
 msgid "Show in &Activities"
 msgstr ""
 
 #: qml/ContextMenu.qml:404
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Only show tasks from the current screen"
+msgctxt "action:inmenu"
 msgid "Add To Current Activity"
-msgstr ""
+msgstr "শুধুমাত্র বর্তমান পর্দার কর্ম প্রদর্শন করা হবে"
 
 #: qml/ContextMenu.qml:414
 #, kde-format
+msgctxt "action:inmenu"
 msgid "All Activities"
 msgstr ""
 
 #: qml/ContextMenu.qml:470
 #, fuzzy, kde-format
 #| msgid "By Desktop"
+msgctxt "action:inmenu"
 msgid "Move to %1"
 msgstr "ডেস্কটপ অনুযায়ী"
 
 #: qml/ContextMenu.qml:496 qml/ContextMenu.qml:512
 #, kde-format
+msgctxt "action:inmenu"
 msgid "&Pin to Task Manager"
 msgstr ""
 
 #: qml/ContextMenu.qml:564
 #, kde-format
+msgctxt "action:inmenu"
 msgid "On All Activities"
 msgstr ""
 
 #: qml/ContextMenu.qml:570
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Only show tasks from the current screen"
+msgctxt "action:inmenu"
 msgid "On The Current Activity"
-msgstr ""
+msgstr "শুধুমাত্র বর্তমান পর্দার কর্ম প্রদর্শন করা হবে"
 
 #: qml/ContextMenu.qml:594
 #, kde-format
+msgctxt "action:inmenu"
 msgid "Unpin from Task Manager"
 msgstr ""
 
 #: qml/ContextMenu.qml:609
 #, kde-format
+msgctxt "item:inmenu opens submenu"
 msgid "More"
 msgstr ""
 
 #: qml/ContextMenu.qml:618
 #, kde-format
+msgctxt "action:inmenu"
 msgid "&Move"
 msgstr ""
 
 #: qml/ContextMenu.qml:627
 #, kde-format
+msgctxt "action:inmenu"
 msgid "Re&size"
 msgstr ""
 
 #: qml/ContextMenu.qml:641
 #, kde-format
+msgctxt "action:inmenu"
 msgid "Ma&ximize"
 msgstr ""
 
 #: qml/ContextMenu.qml:655
 #, kde-format
+msgctxt "action:inmenu"
 msgid "Mi&nimize"
 msgstr ""
 
 #: qml/ContextMenu.qml:665
 #, kde-format
+msgctxt "action:inmenu"
 msgid "Keep &Above Others"
 msgstr ""
 
 #: qml/ContextMenu.qml:675
 #, kde-format
+msgctxt "action:inmenu"
 msgid "Keep &Below Others"
 msgstr ""
 
 #: qml/ContextMenu.qml:687
 #, kde-format
+msgctxt "action:inmenu"
 msgid "&Fullscreen"
 msgstr ""
 
 #: qml/ContextMenu.qml:700
 #, kde-format
+msgctxt "action:inmenu"
 msgid "&Shade"
 msgstr ""
 
@@ -794,17 +825,19 @@ msgstr ""
 
 #: qml/ContextMenu.qml:741
 #, kde-format
+msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr ""
 
 #: qml/ContextMenu.qml:787
 #, kde-format
-msgctxt "@item:inmenu"
+msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr ""
 
 #: qml/ContextMenu.qml:787
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "&Close"
 msgstr ""
 
@@ -843,6 +876,7 @@ msgstr ""
 
 #: qml/Task.qml:179
 #, kde-format
+msgctxt "@info:usagetip %1 task name"
 msgid "Activate %1"
 msgstr ""
 

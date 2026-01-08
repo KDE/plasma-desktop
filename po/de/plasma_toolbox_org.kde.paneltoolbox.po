@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_toolbox_org.kde.paneltoolbox\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2023-02-26 00:29+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -18,11 +18,15 @@ msgstr ""
 "X-Generator: Lokalize 22.12.2\n"
 
 #: contents/ui/main.qml:112
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Panel…"
+msgctxt "@info:whatsthis accessible name"
 msgid "Configure Panel…"
 msgstr "Kontrollleiste einrichten …"
 
 #: contents/ui/main.qml:113
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Panel configuration ui"
+msgctxt "@info:whatsthis accessible description"
 msgid "Open Panel configuration ui"
 msgstr "Benutzeroberfläche zur Einrichtung der Kontrollleiste öffnen"

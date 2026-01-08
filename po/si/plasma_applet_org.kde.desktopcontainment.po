@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2009-12-25 11:40+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -23,12 +23,14 @@ msgstr ""
 #| "Title of the page that lets the user choose which location should the "
 #| "folderview show"
 #| msgid "Location"
+msgctxt "@title:group for configuration dialog page"
 msgid "Location"
 msgstr "පිහිටුම"
 
 #: package/contents/config/config.qml:24
-#: package/contents/ui/FolderViewLayer.qml:357
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icons"
+msgctxt "@title:group for configuration dialog page"
 msgid "Icons"
 msgstr "අයිකන"
 
@@ -38,88 +40,108 @@ msgstr "අයිකන"
 #| "Title of the page that lets the user choose how to filter the folderview "
 #| "contents"
 #| msgid "Filter"
+msgctxt "@title:group for configuration dialog page"
 msgid "Filter"
 msgstr "පෙරහන"
 
 #: package/contents/ui/BackButtonItem.qml:105
 #, kde-format
+msgctxt "@action:button"
 msgid "Back"
 msgstr ""
 
 #: package/contents/ui/ConfigFilter.qml:63
 #, fuzzy, kde-format
 #| msgid "File types:"
+msgctxt "@label:listbox filter mode"
 msgid "Files:"
 msgstr "ගොනු වර්‍ග:"
 
 #: package/contents/ui/ConfigFilter.qml:64
 #, fuzzy, kde-format
 #| msgid "Show a place:"
+msgctxt "@item:inlistbox filter mode"
 msgid "Show all"
 msgstr "ස්ථානයක් පෙන්වන්න:"
 
 #: package/contents/ui/ConfigFilter.qml:64
 #, fuzzy, kde-format
 #| msgid "Show Files Matching"
+msgctxt "@item:inlistbox filter mode"
 msgid "Show matching"
 msgstr "ගොනු ගැලපුම පෙන්වන්න"
 
 #: package/contents/ui/ConfigFilter.qml:64
 #, fuzzy, kde-format
 #| msgid "Hide Files Matching"
+msgctxt "@item:inlistbox filter mode"
 msgid "Hide matching"
 msgstr "ගොනු ගැලපුම සඟවන්න"
 
 #: package/contents/ui/ConfigFilter.qml:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File name pattern:"
+msgctxt "@label:textbox"
 msgid "File name pattern:"
 msgstr "ගොනු නාම රටා:"
 
 #: package/contents/ui/ConfigFilter.qml:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File types:"
+msgctxt "@label:textbox filter list by"
 msgid "File types:"
 msgstr "ගොනු වර්‍ග:"
 
 #: package/contents/ui/ConfigFilter.qml:82
 #, fuzzy, kde-format
 #| msgid "Show All Files"
+msgctxt "@option:check prefix"
 msgid "Show hidden files:"
 msgstr "සියළු ගොනු පෙන්වන්න"
 
 #: package/contents/ui/ConfigFilter.qml:111
 #, fuzzy, kde-format
 #| msgid "File types:"
+msgctxt "@title:column"
 msgid "File Type"
 msgstr "ගොනු වර්‍ග:"
 
 #: package/contents/ui/ConfigFilter.qml:112
 #, kde-format
+msgctxt "@title:column"
 msgid "Description"
 msgstr ""
 
 #: package/contents/ui/ConfigFilter.qml:182
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select All"
+msgctxt "@action:button tooltip only Select all filetypes"
 msgid "Select All"
 msgstr "සියල්ල තෝරන්න"
 
 #: package/contents/ui/ConfigFilter.qml:192
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Deselect All"
+msgctxt "@action:button tooltip only Deselect all filetypes"
 msgid "Deselect All"
 msgstr "සියල්ල තේරීම අවලගු කරන්න"
 
 #: package/contents/ui/ConfigFilter.qml:201
 #, kde-format
+msgctxt "@action:button tooltip only, ascending/descending"
 msgid "Switch Sort Order"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:57
 #, kde-format
+msgctxt "@title:group prefix for checkbox + button"
 msgid "Panel button:"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:63
 #, fuzzy, kde-format
 #| msgid "Custom Title:"
+msgctxt "@option:check"
 msgid "Use a custom icon"
 msgstr "රුචි මාතෘකාවන්:"
 
@@ -139,6 +161,7 @@ msgstr "අයිකන පෙළගස්වන්න "
 #: package/contents/ui/ConfigIcons.qml:122
 #, fuzzy, kde-format
 #| msgid "Arrangement:"
+msgctxt "@label:listbox columns/rows"
 msgid "Arrangement:"
 msgstr "පෙළගැස්ම:"
 
@@ -157,6 +180,7 @@ msgstr ""
 #: package/contents/ui/ConfigIcons.qml:135
 #, fuzzy, kde-format
 #| msgid "Sorting:"
+msgctxt "@label:listbox, LtR/RtL"
 msgid "Sort Alignment:"
 msgstr "පෙළගසමින්:"
 
@@ -177,12 +201,14 @@ msgstr "ඉහළ සිට පහළට, දකුණ සිට වමට"
 #: package/contents/ui/ConfigIcons.qml:161
 #, fuzzy, kde-format
 #| msgid "Lock in place:"
+msgctxt "@option:check lock icon positions"
 msgid "Lock in place"
 msgstr "ස්ථානයේ අගුළුලන්න:"
 
 #: package/contents/ui/ConfigIcons.qml:175
 #, fuzzy, kde-format
 #| msgid "Sorting:"
+msgctxt "@label:listbox sort items by field"
 msgid "Sort by:"
 msgstr "පෙළගසමින්:"
 
@@ -259,25 +285,27 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgctxt "Sort icons"
 #| msgid "By Size"
+msgctxt "@label:slider"
 msgid "Icon size:"
 msgstr "ප්‍රමාණයෙන්"
 
 #: package/contents/ui/ConfigIcons.qml:249
 #, fuzzy, kde-format
 #| msgid "Small"
-msgctxt "@label:slider smallest icon size"
+msgctxt "@item:inrange smallest icon size"
 msgid "Small"
 msgstr "කුඩා"
 
 #: package/contents/ui/ConfigIcons.qml:258
 #, fuzzy, kde-format
 #| msgid "Large"
-msgctxt "@label:slider largest icon size"
+msgctxt "@item:inrange largest icon size"
 msgid "Large"
 msgstr "විශාල"
 
 #: package/contents/ui/ConfigIcons.qml:267
 #, kde-format
+msgctxt "@label:listbox"
 msgid "Label width:"
 msgstr ""
 
@@ -302,57 +330,67 @@ msgstr ""
 #: package/contents/ui/ConfigIcons.qml:280
 #, fuzzy, kde-format
 #| msgid " lines"
+msgctxt "@label:spinbox"
 msgid "Text lines:"
 msgstr "පේළි"
 
 #: package/contents/ui/ConfigIcons.qml:296
 #, kde-format
+msgctxt "@title:group prefix for checkbox group"
 msgid "When hovering over icons:"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:298
 #, kde-format
+msgctxt "@option:check When hovering over icons…"
 msgid "Show tooltips"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:305
 #, fuzzy, kde-format
 #| msgid "Select All"
+msgctxt "@option:check When hovering over icons…"
 msgid "Show selection markers"
 msgstr "සියල්ල තෝරන්න"
 
 #: package/contents/ui/ConfigIcons.qml:312
 #, fuzzy, kde-format
 #| msgid "Previews:"
+msgctxt "@option:check When hovering over icons…"
 msgid "Show folder preview popups"
 msgstr "පෙරදැකීම්:"
 
 #: package/contents/ui/ConfigIcons.qml:322
 #, fuzzy, kde-format
 #| msgid "&Rename"
+msgctxt "@label prefix for checkbox"
 msgid "Rename:"
 msgstr "ප්‍රතිනම් කරන්න (&R)"
 
 #: package/contents/ui/ConfigIcons.qml:326
 #, kde-format
+msgctxt "@option:check"
 msgid "Rename inline by clicking selected item's text"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:337
 #, fuzzy, kde-format
 #| msgid "Previews:"
+msgctxt "@title:group prefix for checkbox and button"
 msgid "Previews:"
 msgstr "පෙරදැකීම්:"
 
 #: package/contents/ui/ConfigIcons.qml:339
 #, fuzzy, kde-format
 #| msgid "Previews:"
+msgctxt "@option:check"
 msgid "Show preview thumbnails"
 msgstr "පෙරදැකීම්:"
 
 #: package/contents/ui/ConfigIcons.qml:347
 #, fuzzy, kde-format
 #| msgid "More Preview Options..."
+msgctxt "@action:button opens dialog"
 msgid "Configure Preview Plugins…"
 msgstr "තවත් පෙරදැකීම් අභිප්‍රේත..."
 
@@ -438,27 +476,32 @@ msgstr "රුචිකල හැකි මාතෘකාවක් එක් �
 
 #: package/contents/ui/ConfigOverlay.qml:97
 #, kde-format
+msgctxt "@action:button tooltip rotate widget"
 msgid "Click and drag to rotate"
 msgstr ""
 
 #: package/contents/ui/ConfigOverlay.qml:183
 #, kde-format
+msgctxt "@action:button tooltip hide widget background"
 msgid "Hide Background"
 msgstr ""
 
 #: package/contents/ui/ConfigOverlay.qml:183
 #, kde-format
+msgctxt "@action:button tooltip"
 msgid "Show Background"
 msgstr ""
 
 #: package/contents/ui/ConfigOverlay.qml:231
 #, kde-format
+msgctxt "@action:button tooltip remove widget"
 msgid "Remove"
 msgstr ""
 
 #: package/contents/ui/FolderItemPreviewPluginsDialog.qml:18
 #, fuzzy, kde-format
 #| msgid "Previews:"
+msgctxt "@title:window"
 msgid "Preview Plugins"
 msgstr "පෙරදැකීම්:"
 
@@ -477,9 +520,17 @@ msgctxt "@info:placeholder"
 msgid "Folder is empty"
 msgstr "මෙම බහාළුම හිස්."
 
+#: package/contents/ui/FolderViewLayer.qml:357
+#, fuzzy, kde-format
+#| msgid "Icons"
+msgctxt "@item:inmenu opens submenu with view options like sorting"
+msgid "Icons"
+msgstr "අයිකන"
+
 #: package/contents/ui/main.qml:439
 #, fuzzy, kde-format
 #| msgid "&Refresh Desktop"
+msgctxt "@action:inmenu opens config dialog"
 msgid "Desktop and Wallpaper"
 msgstr "වැඩතලය නැවුම් කරන්න (&R)"
 

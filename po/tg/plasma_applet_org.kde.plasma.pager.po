@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2020-09-19 11:37+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik <kde-i18n-doc@kde.org>\n"
@@ -18,83 +18,106 @@ msgstr ""
 "X-Generator: Lokalize 20.04.2\n"
 
 #: qml/config.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Умумӣ"
 
 #: qml/configGeneral.qml:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "Умумӣ:"
 
 #: qml/configGeneral.qml:41
 #, kde-format
+msgctxt "@option:check"
 msgid "Show window outlines"
 msgstr ""
 
 #: qml/configGeneral.qml:46
 #, kde-format
+msgctxt "@option:check"
 msgid "Show application icons on window outlines"
 msgstr ""
 
 #: qml/configGeneral.qml:52
 #, kde-format
+msgctxt "@option:check"
 msgid "Show only current screen"
 msgstr ""
 
 #: qml/configGeneral.qml:57
 #, kde-format
+msgctxt "@option:check"
 msgid "Navigation wraps around"
 msgstr ""
 
 #: qml/configGeneral.qml:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Layout:"
+msgctxt "@title:listbox"
 msgid "Layout:"
 msgstr "Тарҳбандӣ:"
 
 #: qml/configGeneral.qml:71
 #, kde-format
-msgctxt "The pager layout"
+msgctxt "@item:inlistbox The pager layout"
 msgid "Default"
 msgstr ""
 
 #: qml/configGeneral.qml:71
 #, kde-format
+msgctxt "@item:inlistbox The pager layout"
 msgid "Horizontal"
 msgstr ""
 
 #: qml/configGeneral.qml:71
 #, kde-format
+msgctxt "@item:inlistbox The pager layout"
 msgid "Vertical"
 msgstr ""
 
 #: qml/configGeneral.qml:85
 #, kde-format
+msgctxt "@title:group prefix for radiobutton group"
 msgid "Text display:"
 msgstr ""
 
 #: qml/configGeneral.qml:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No text"
+msgctxt "@option:radio text display"
 msgid "No text"
 msgstr "Бе матн"
 
 #: qml/configGeneral.qml:96
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Activity Manager..."
+msgctxt "@option:radio text display"
 msgid "Activity number"
-msgstr ""
+msgstr "Намоиш додани мудири фаъолият..."
 
 #: qml/configGeneral.qml:96
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Desktop number"
+msgctxt "@option:radio text display"
 msgid "Desktop number"
 msgstr "Рақами мизи корӣ"
 
 #: qml/configGeneral.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Activity Manager..."
+msgctxt "@option:radio text display"
 msgid "Activity name"
-msgstr ""
+msgstr "Намоиш додани мудири фаъолият..."
 
 #: qml/configGeneral.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Desktop name"
+msgctxt "@option:radio text display"
 msgid "Desktop name"
 msgstr "Номи мизи корӣ"
 
@@ -133,6 +156,7 @@ msgstr ""
 
 #: qml/main.qml:87
 #, kde-format
+msgctxt "@info:tooltip overflow label"
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
 msgstr[0] ""
@@ -140,6 +164,7 @@ msgstr[1] ""
 
 #: qml/main.qml:351
 #, kde-format
+msgctxt "@info:tooltip start of list"
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
 msgstr[0] ""
@@ -147,6 +172,7 @@ msgstr[1] ""
 
 #: qml/main.qml:363
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
 msgstr[0] ""
@@ -155,6 +181,7 @@ msgstr[1] ""
 #: qml/main.qml:439
 #, fuzzy, kde-format
 #| msgid "Desktop name"
+msgctxt "@info:whatsthis Accessible name for pager section"
 msgid "Desktop %1"
 msgstr "Номи мизи корӣ"
 

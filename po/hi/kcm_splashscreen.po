@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2021-10-11 11:53+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -46,21 +46,28 @@ msgstr "वर्तमान स्प्लैश प्रसंग का �
 
 #: ui/main.qml:30
 #, kde-format
+msgctxt "@action:button"
 msgid "&Get New…"
 msgstr ""
 
 #: ui/main.qml:50
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Failed to show the splash screen preview."
+msgctxt "@info:status"
 msgid "Failed to show the splash screen preview."
 msgstr "स्प्लैश स्क्रीन पूर्वावलोकन दिखाने में विफल।"
 
 #: ui/main.qml:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preview Splash Screen"
+msgctxt "@action:button"
 msgid "Preview Splash Screen"
 msgstr "पूर्वावलोकन स्पलैश स्क्रीन"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgctxt "@action:button"
 msgid "Uninstall"
 msgstr "स्थापना रद्द करें"
 

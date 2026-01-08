@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2020-10-07 22:37+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -21,16 +21,20 @@ msgstr ""
 #: ui/main.qml:44
 #, fuzzy, kde-format
 #| msgid "Indexed"
+msgctxt "@action:button"
 msgid "Pause Indexer"
 msgstr "Indekseeritud"
 
 #: ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Indexed"
+msgctxt "@action:button"
 msgid "Resume Indexer"
-msgstr ""
+msgstr "Indekseeritud"
 
 #: ui/main.qml:61
 #, kde-format
+msgctxt "@info inlinemessage"
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
@@ -38,6 +42,7 @@ msgstr ""
 
 #: ui/main.qml:71
 #, kde-format
+msgctxt "@info inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
 "if indexing is re-enabled later, the entire index will have to be re-created "
@@ -47,6 +52,7 @@ msgstr ""
 #: ui/main.qml:73
 #, fuzzy, kde-format
 #| msgid "Delete entry"
+msgctxt "@action:button"
 msgid "Delete Index Data"
 msgstr "Kustuta kirje"
 
@@ -55,6 +61,7 @@ msgstr "Kustuta kirje"
 #| msgid ""
 #| "File Search helps you quickly locate all your files based on their "
 #| "content."
+msgctxt "@info:usagetip"
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
@@ -68,22 +75,26 @@ msgstr ""
 
 #: ui/main.qml:109
 #, kde-format
+msgctxt "@option:radio Data to index"
 msgid "Nothing (disable indexing entirely)"
 msgstr ""
 
 #: ui/main.qml:121
 #, kde-format
+msgctxt "@option:radio Data to index"
 msgid "File names only"
 msgstr ""
 
 #: ui/main.qml:136
 #, kde-format
+msgctxt "@option:radio Data to index"
 msgid "File names and contents"
 msgstr ""
 
 #: ui/main.qml:157
 #, fuzzy, kde-format
 #| msgid "Index hidden files and folders"
+msgctxt "@option:check"
 msgid "Also index hidden files and folders"
 msgstr "Peidetud failide ja kataloogide indekseerimine"
 
@@ -121,12 +132,16 @@ msgid "Currently indexing: <filename>%1</filename>"
 msgstr "Sisu täielik indekseerimine"
 
 #: ui/main.qml:270
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Not indexed"
+msgctxt "@info:status"
 msgid "Not indexed"
 msgstr "Ei ole indekseeritud"
 
 #: ui/main.qml:271
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Indexed"
+msgctxt "@info:status"
 msgid "Indexed"
 msgstr "Indekseeritud"
 
@@ -140,12 +155,14 @@ msgstr "Kustuta kirje"
 #: ui/main.qml:318
 #, fuzzy, kde-format
 #| msgid "Select a folder to filter"
+msgctxt "@title:window"
 msgid "Select a folder to include"
 msgstr "Kataloogi valimine filtreerimiseks"
 
 #: ui/main.qml:318
 #, fuzzy, kde-format
 #| msgid "Select a folder to filter"
+msgctxt "@title:window"
 msgid "Select a folder to exclude"
 msgstr "Kataloogi valimine filtreerimiseks"
 

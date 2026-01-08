@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2022-12-18 12:03+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -14,7 +14,11 @@ msgstr ""
 "X-POFile-SpellExtra: Furkan Tokac OSD\n"
 
 #: ui/main.qml:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The system must be restarted before changes to the middle-click paste "
+#| "setting can take effect."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
@@ -23,7 +27,9 @@ msgstr ""
 "colagem com o botão do meio do rato façam efeito."
 
 #: ui/main.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Restart"
+msgctxt "@action:button"
 msgid "Restart"
 msgstr "Reiniciar"
 
@@ -47,6 +53,7 @@ msgstr ""
 
 #: ui/main.qml:69
 #, kde-format
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Allows all Plasma panel and desktop widgets to show descriptive tooltips "
 "when hovered with the pointer. This setting has no effect on the small "
@@ -63,11 +70,17 @@ msgid "OSD popups for status changes"
 msgstr "Mostrar uma mensagem em caso de mudança da disposição"
 
 #: ui/main.qml:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Show an on-screen display to indicate status changes such as brightness "
+#| "or volume"
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"Mostrar uma visualização no ecrã para indicar as mudanças de estado, como o "
+"brilho ou o volume"
 
 #: ui/main.qml:94
 #, kde-format
@@ -76,28 +89,40 @@ msgid "Scrolling"
 msgstr ""
 
 #: ui/main.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clicking in scrollbar track:"
+msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
 msgstr "Ao carregar na barra de deslocamento:"
 
 #: ui/main.qml:101
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
+#| "to the clicked location'"
+#| msgid "Scrolls to the clicked location"
 msgctxt ""
-"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
-"the clicked location'"
+"@option:radio part of a complete sentence: 'Clicking in scrollbar track "
+"scrolls to the clicked location'"
 msgid "Scrolls to the clicked location"
 msgstr "Desloca-se para a posição carregada"
 
 #: ui/main.qml:119
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
+#| "one page up or down'"
+#| msgid "Scrolls one page up or down"
 msgctxt ""
-"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
-"page up or down'"
+"@option:radio part of a complete sentence: 'Clicking in scrollbar track "
+"scrolls one page up or down'"
 msgid "Scrolls one page up or down"
 msgstr "Desloca uma página para cima ou para baixo"
 
 #: ui/main.qml:137
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle-click to scroll to clicked location"
+msgctxt "@info:usagetip"
 msgid "Middle-click to scroll to clicked location"
 msgstr "'Click' do botão do meio para se deslocar para a posição carregada"
 
@@ -137,7 +162,9 @@ msgid "Selects them"
 msgstr "Selecciona-os"
 
 #: ui/main.qml:201
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open by double-clicking instead"
+msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "Abrir com duplo-click em alternativa"
 
@@ -148,7 +175,9 @@ msgid "Opens them"
 msgstr "Abre-os"
 
 #: ui/main.qml:232
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select by clicking on item's selection marker"
+msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
 msgstr "Seleccionar ao carregar no marcador de selecção do item"
 
@@ -173,6 +202,7 @@ msgstr "Colar o texto seleccionado"
 #: ui/main.qml:268
 #, fuzzy, kde-format
 #| msgid "Open by double-clicking instead"
+msgctxt "@label:spinbox"
 msgid "Double-click interval:"
 msgstr "Abrir com duplo-click em alternativa"
 
@@ -192,6 +222,7 @@ msgstr ""
 
 #: ui/main.qml:301
 #, kde-format
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
@@ -207,6 +238,7 @@ msgstr ""
 
 #: ui/main.qml:354
 #, kde-format
+msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr ""
 
@@ -215,11 +247,13 @@ msgstr ""
 #| msgctxt ""
 #| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 #| msgid "Clicking files or folders:"
+msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "Ao carregar nos ficheiros ou pastas:"
 
 #: ui/main.qml:362
 #, kde-format
+msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr ""
 
@@ -234,6 +268,7 @@ msgstr ""
 
 #: ui/main.qml:386
 #, kde-format
+msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr ""
 
@@ -253,23 +288,33 @@ msgstr "Modo Táctil:"
 #: ui/main.qml:416
 #, fuzzy, kde-format
 #| msgid "Touch Mode:"
+msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Touch Mode:"
 msgstr "Modo Táctil:"
 
 #: ui/main.qml:418
-#, kde-format
-msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
+#, fuzzy, kde-format
+#| msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
+#| msgid "Automatically enable as needed"
+msgctxt "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Activar automaticamente se necessário"
 
 #: ui/main.qml:418
-#, kde-format
-msgctxt "As in: 'Touch Mode is never enabled'"
+#, fuzzy, kde-format
+#| msgctxt "As in: 'Touch Mode is never enabled'"
+#| msgid "Never enabled"
+msgctxt "option:radio As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Nunca activo"
 
 #: ui/main.qml:435
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Touch Mode will be automatically activated whenever the system detects a "
+#| "touchscreen but no mouse or touchpad. For example: when a transformable "
+#| "laptop's keyboard is flipped around or detached."
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
@@ -294,7 +339,11 @@ msgid "Disabled"
 msgstr ""
 
 #: ui/main.qml:486
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "In Touch Mode, many elements of the user interface will become larger to "
+#| "more easily accommodate touch interaction."
+msgctxt "@info:usagetip"
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
 "more easily accommodate touch interaction."

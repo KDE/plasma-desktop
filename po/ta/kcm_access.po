@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-04 00:46+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2026-01-04 20:23+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -342,7 +342,10 @@ msgid "Disable sticky and slow keys after:"
 msgstr "இவ்வளவு நேரத்திற்கு பின் மெதுவிசைகளையும் ஒட்டுவிசைகளையும் முடக்கு:"
 
 #: ui/ActivationShortcuts.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1 min"
+#| msgid_plural "%1 min"
+msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
 msgid "%1 min"
 msgid_plural "%1 min"
 msgstr[0] "%1 நிமி"
@@ -357,32 +360,44 @@ msgstr[0] "நிமி"
 msgstr[1] "நிமி"
 
 #: ui/ActivationShortcuts.qml:89
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "When a shortcut is used:"
+msgctxt "@title:group for checkbox group"
 msgid "When a shortcut is used:"
 msgstr "சுருக்குவழி பயன்படுத்தப்படும்போது:"
 
 #: ui/ActivationShortcuts.qml:90
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Display a confirmation dialog"
+msgctxt "@option:check when shortcut used"
 msgid "Display a confirmation dialog"
 msgstr "உறுதிப்பாடு சாளரத்தை காட்டு"
 
 #: ui/ActivationShortcuts.qml:101
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ring the system bell"
+msgctxt "@option:check when shortcut used"
 msgid "Ring the system bell"
 msgstr "கணினி மணியை ஒலிக்கச்செய்"
 
 #: ui/ActivationShortcuts.qml:112
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show a notification"
+msgctxt "@option:check when shortcut used"
 msgid "Show a notification"
 msgstr "அறிவிப்பை காட்டு"
 
 #: ui/ActivationShortcuts.qml:123
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Notifications…"
+msgctxt "@action:button opens Notifications kcm"
 msgid "Configure Notifications…"
 msgstr "அறிவிப்புகளை அமை…"
 
 #: ui/Bell.qml:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Please choose an audio file"
+msgctxt "@title:window dialog"
 msgid "Please choose an audio file"
 msgstr "ஒலிக்கோப்பு ஒன்றை தேர்ந்தெடுக்கவும்"
 
@@ -393,7 +408,9 @@ msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
 msgstr "ogg, oga, மற்றும் wav ஒலிக்கோப்புகள் (*.ogg *.oga *.wav)"
 
 #: ui/Bell.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Audible bell:"
+msgctxt "@label prefix for checkbox"
 msgid "Audible bell:"
 msgstr "மணியோசை:"
 
@@ -410,64 +427,80 @@ msgid "Custom sound:"
 msgstr "விருப்ப ஒலி:"
 
 #: ui/Bell.qml:75
-#, kde-format
-msgid "Search audio file for the system bell"
+#, fuzzy, kde-format
+#| msgid "Search audio file for the system bell"
+msgctxt "@action:button icononly tooltip"
+msgid "Choose audio file for the system bell"
 msgstr "கணினி மணிக்கான ஒலிக்கோப்பை தேடு"
 
 #: ui/Bell.qml:76
-#, kde-format
-msgid "Button search audio file"
-msgstr "ஒலிக்கோப்பை தேடுவதற்கான பட்டன்"
+#, fuzzy, kde-format
+#| msgid "Please choose an audio file"
+msgctxt "@action button accessible only"
+msgid "Choose audio file"
+msgstr "ஒலிக்கோப்பு ஒன்றை தேர்ந்தெடுக்கவும்"
 
-#: ui/Bell.qml:92
+#: ui/Bell.qml:77
 #, kde-format
+msgctxt "@info:usagetip accessible description for button"
+msgid "Opens dialog"
+msgstr ""
+
+#: ui/Bell.qml:93
+#, fuzzy, kde-format
+#| msgid "Visual bell:"
+msgctxt "@label prefix for checkbox"
 msgid "Visual bell:"
 msgstr "காட்சிவழி மணி:"
 
-#: ui/Bell.qml:93
-#, kde-format
-msgctxt "Enable visual bell"
+#: ui/Bell.qml:94
+#, fuzzy, kde-format
+#| msgctxt "Enable activation shortcuts"
+#| msgid "Enable"
+msgctxt "@option:check Enable visual bell"
 msgid "Enable"
 msgstr "இயக்கு"
 
-#: ui/Bell.qml:107
+#: ui/Bell.qml:108
 #, kde-format
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
 msgstr "திரையிலுள்ள நிறங்களை புரட்டு"
 
-#: ui/Bell.qml:125
+#: ui/Bell.qml:126
 #, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
 msgstr "திரையை மின்னச்செய்"
 
-#: ui/Bell.qml:136
+#: ui/Bell.qml:137
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr "நிறம்"
 
-#: ui/Bell.qml:150
+#: ui/Bell.qml:151
 #, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "நீடிக்கும் காலம்:"
 
-#: ui/Bell.qml:165 ui/KeyboardFilters.qml:56 ui/KeyboardFilters.qml:157
-#: ui/MouseNavigation.qml:53 ui/MouseNavigation.qml:84
-#: ui/MouseNavigation.qml:110
-#, kde-format
+#: ui/Bell.qml:166
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix %1 is visible bell duration"
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] "%1 மி.நொ."
 msgstr[1] "%1 மி.நொ."
 
-#: ui/Bell.qml:169 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
-#: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
-#: ui/MouseNavigation.qml:114
-#, kde-format
-msgctxt "short for millisecond(s)"
+#: ui/Bell.qml:170 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
+#, fuzzy, kde-format
+#| msgctxt "short for millisecond(s)"
+#| msgid "ms"
+#| msgid_plural "ms"
+msgctxt "@label:valuesuffix short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
 msgstr[0] "மி.நொ."
@@ -545,22 +578,30 @@ msgid "Adjusted colors:"
 msgstr "மாற்றப்படும் நிறங்கள்:"
 
 #: ui/ColorblindnessCorrection.qml:132
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Reds:"
+msgctxt "@title:group for color rectangles"
 msgid "Reds:"
 msgstr "சிவப்பு:"
 
 #: ui/ColorblindnessCorrection.qml:133
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Greens:"
+msgctxt "@title:group for color rectangles"
 msgid "Greens:"
 msgstr "பச்சை:"
 
 #: ui/ColorblindnessCorrection.qml:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Blues:"
+msgctxt "@title:group for color rectangles"
 msgid "Blues:"
 msgstr "நீலம்:"
 
 #: ui/ColorblindnessCorrection.qml:135
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Purples:"
+msgctxt "@title:group for color rectangles"
 msgid "Purples:"
 msgstr "ஊதா:"
 
@@ -590,13 +631,17 @@ msgid "Configure Shortcuts…"
 msgstr "சுருக்குவழிகளை அமை…"
 
 #: ui/KeyboardFilters.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Slow keys:"
+msgctxt "@title:group prefix"
 msgid "Slow keys:"
 msgstr "மெதுவான விசைகள்:"
 
 #: ui/KeyboardFilters.qml:23
-#, kde-format
-msgctxt "Enable slow keys"
+#, fuzzy, kde-format
+#| msgctxt "Enable activation shortcuts"
+#| msgid "Enable"
+msgctxt "@option:check Enable slow keys"
 msgid "Enable"
 msgstr "இயக்கு"
 
@@ -613,42 +658,66 @@ msgstr ""
 "இத்தேர்வு பயனுள்ளதாக இருக்கலாம்."
 
 #: ui/KeyboardFilters.qml:41
-#, kde-format
-msgctxt "Slow keys Delay"
+#, fuzzy, kde-format
+#| msgctxt "Slow keys Delay"
+#| msgid "Delay:"
+msgctxt "@label:spinbox Slow keys Delay"
 msgid "Delay:"
 msgstr "தாமதம்:"
 
+#: ui/KeyboardFilters.qml:56
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix %1 is slow keys delay"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 மி.நொ."
+msgstr[1] "%1 மி.நொ."
+
 #: ui/KeyboardFilters.qml:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ring system bell:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "Ring system bell:"
 msgstr "கணினி மணியை ஒலிக்கச்செய்:"
 
 #: ui/KeyboardFilters.qml:75
-#, kde-format
-msgctxt "Use system bell when a key is pressed"
+#, fuzzy, kde-format
+#| msgctxt "Use system bell when a key is pressed"
+#| msgid "when any key is &pressed"
+msgctxt "@option:check Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "ஏதாவதொரு விசை &அழுத்தப்படும்போது"
 
 #: ui/KeyboardFilters.qml:89
-#, kde-format
-msgctxt "Use system bell when a key is accepted"
+#, fuzzy, kde-format
+#| msgctxt "Use system bell when a key is accepted"
+#| msgid "when any key is &accepted"
+msgctxt "@option:check Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "ஏதாவதொரு விசை &ஏற்கப்படும்போது"
 
 #: ui/KeyboardFilters.qml:103
-#, kde-format
-msgctxt "Use system bell when a key is rejected"
+#, fuzzy, kde-format
+#| msgctxt "Use system bell when a key is rejected"
+#| msgid "when any key is &rejected"
+msgctxt "@option:check Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "ஏதாவதொரு விசை &மறுக்கப்படும்போது"
 
 #: ui/KeyboardFilters.qml:119
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Bounce keys:"
+msgctxt "@title:group prefix"
 msgid "Bounce keys:"
 msgstr "பாய்ச்சல் விசைகள்:"
 
 #: ui/KeyboardFilters.qml:124
-#, kde-format
-msgctxt "Bounce keys enable"
+#, fuzzy, kde-format
+#| msgctxt "Enable activation shortcuts"
+#| msgid "Enable"
+msgctxt "@option:check Bounce keys enable"
 msgid "Enable"
 msgstr "இயக்கு"
 
@@ -663,13 +732,27 @@ msgstr ""
 "ஒரே விசையை பலமுறை அழுத்துவதை பொருட்படுத்தாதே. கை தடுமாற்றம் உள்ளோருக்கு இது உதவும்."
 
 #: ui/KeyboardFilters.qml:142
-#, kde-format
-msgctxt "Bounce keys delay"
+#, fuzzy, kde-format
+#| msgctxt "Slow keys Delay"
+#| msgid "Delay:"
+msgctxt "@label:spinbox Bounce keys delay"
 msgid "Delay:"
 msgstr "தாமதம்:"
 
+#: ui/KeyboardFilters.qml:157
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix %1 is bounce keys delay"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 மி.நொ."
+msgstr[1] "%1 மி.நொ."
+
 #: ui/KeyboardFilters.qml:171
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ring system bell when rejected"
+msgctxt "@option:check for bounce keys"
 msgid "Ring system bell when rejected"
 msgstr "மறுக்கப்படும்போது கணினி மணியை ஒலிக்கச்செய்"
 
@@ -686,37 +769,49 @@ msgid "System Bell"
 msgstr "கணினி மணி"
 
 #: ui/main.qml:38
-#, kde-format
-msgctxt "System Modifier Keys"
+#, fuzzy, kde-format
+#| msgctxt "System Modifier Keys"
+#| msgid "Modifier Keys"
+msgctxt "@title Category name in sidebar"
 msgid "Modifier Keys"
 msgstr "மாற்றி விசைகள்"
 
 #: ui/main.qml:43
-#, kde-format
-msgctxt "System keyboard filters"
+#, fuzzy, kde-format
+#| msgctxt "System keyboard filters"
+#| msgid "Keyboard Filters"
+msgctxt "@title Category name in sidebar"
 msgid "Keyboard Filters"
 msgstr "விசைப்பலகை வடிகட்டிகள்"
 
 #: ui/main.qml:48
-#, kde-format
-msgctxt "System mouse navigation"
+#, fuzzy, kde-format
+#| msgctxt "System mouse navigation"
+#| msgid "Mouse Navigation"
+msgctxt "@title Category name in sidebar"
 msgid "Mouse Navigation"
 msgstr "சுட்டிவழி உலாவல்"
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Activation Shortcuts"
+msgctxt "@title Category name in sidebar"
 msgid "Activation Shortcuts"
 msgstr "தூண்டுவதற்கான சுருக்குவழிகள்"
 
 #: ui/main.qml:58
-#, kde-format
-msgctxt "System mouse navigation"
+#, fuzzy, kde-format
+#| msgctxt "System mouse navigation"
+#| msgid "Screen Reader"
+msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "திரை வாசிப்பான்"
 
 #: ui/main.qml:63
-#, kde-format
-msgctxt "Correction for color blindness"
+#, fuzzy, kde-format
+#| msgctxt "Correction for color blindness"
+#| msgid "Color Blindness Correction"
+msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr "நிறக்குருடு பயன்முறை"
 
@@ -727,8 +822,10 @@ msgid "Invert"
 msgstr "புரட்டு"
 
 #: ui/main.qml:73
-#, kde-format
-msgctxt "Shake pointer to find it"
+#, fuzzy, kde-format
+#| msgctxt "Shake pointer to find it"
+#| msgid "Shake Pointer"
+msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
 msgstr "சுட்டிக்குறியை ஆட்டு"
 
@@ -770,12 +867,16 @@ msgid ""
 msgstr "மாற்றிவிசையை இருமுறை தட்டினால், மீண்டும் அதைத் தட்டும்வரை செயலிலேயே இருக்கும்"
 
 #: ui/ModifierKeys.qml:57
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Disable when two keys are held down"
+msgctxt "@option:check"
 msgid "Disable when two keys are held down"
 msgstr "இரண்டு விசைகள் சேர்த்து அழுத்தப்படும்போது முடக்கு"
 
 #: ui/ModifierKeys.qml:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ring system bell when modifier keys are used"
+msgctxt "@option:check"
 msgid "Ring system bell when modifier keys are used"
 msgstr "மாற்றி விசைகள் பயன்படுத்தப்படும்போது கணினி மணியை ஒலிக்கச்செய்"
 
@@ -844,17 +945,56 @@ msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "வேகவளர்ச்சி தாமதம்:"
 
+#: ui/MouseNavigation.qml:53
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix acceleration delay spinbox %1 is value"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 மி.நொ."
+msgstr[1] "%1 மி.நொ."
+
+#: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
+#: ui/MouseNavigation.qml:114
+#, kde-format
+msgctxt "short for millisecond(s)"
+msgid "ms"
+msgid_plural "ms"
+msgstr[0] "மி.நொ."
+msgstr[1] "மி.நொ."
+
 #: ui/MouseNavigation.qml:66
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "மீளச்செயல் இடைவெளி:"
 
+#: ui/MouseNavigation.qml:84
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix repeat interval spinbox %1 is value"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 மி.நொ."
+msgstr[1] "%1 மி.நொ."
+
 #: ui/MouseNavigation.qml:93
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "வேகவளர்ச்சி கால நீட்சி:"
+
+#: ui/MouseNavigation.qml:110
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 மி.நொ."
+msgstr[1] "%1 மி.நொ."
 
 #: ui/MouseNavigation.qml:118
 #, kde-format
@@ -1112,6 +1252,25 @@ msgstr "மாற்றிவிசையை அழுத்தியபடி�
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "உருப்பெருக்கத்தை கட்டுப்படுத்த சுருக்குவழிகளைப் பயன்படுத்தவும்"
+
+#~ msgid "Button search audio file"
+#~ msgstr "ஒலிக்கோப்பை தேடுவதற்கான பட்டன்"
+
+#~ msgctxt "Enable visual bell"
+#~ msgid "Enable"
+#~ msgstr "இயக்கு"
+
+#~ msgctxt "Enable slow keys"
+#~ msgid "Enable"
+#~ msgstr "இயக்கு"
+
+#~ msgctxt "Bounce keys enable"
+#~ msgid "Enable"
+#~ msgstr "இயக்கு"
+
+#~ msgctxt "Bounce keys delay"
+#~ msgid "Delay:"
+#~ msgstr "தாமதம்:"
 
 #~ msgctxt "@option check, Enable shake cursor effect"
 #~ msgid "Enable"

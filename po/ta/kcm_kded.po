@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-06-30 13:34+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -54,7 +54,11 @@ msgstr ""
 "அதைப் பற்றி ஓர் பிழையறிக்கையையும் சமர்ப்பிக்கவும்.</link>"
 
 #: ui/main.qml:55
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The background services manager (kded6) is currently not running. Make "
+#| "sure it is installed correctly."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
@@ -63,7 +67,11 @@ msgstr ""
 "என்று பாருங்கள்."
 
 #: ui/main.qml:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Some services disable themselves again when manually started if they are "
+#| "not useful in the current environment."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
@@ -71,7 +79,11 @@ msgstr ""
 "தற்போதைய சூழலில் பயனில்லா சேவைகளை நீங்கள் கைமுறையாக இயக்கிநாளும் தானாக நின்றுவிடும்."
 
 #: ui/main.qml:75
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Some services were automatically started/stopped when the background "
+#| "services manager (kded6) was restarted to apply your changes."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
@@ -80,29 +92,38 @@ msgstr ""
 "சேவைகள் தானாக ஆரம்பித்தன/நின்றன."
 
 #: ui/main.qml:123
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "All Services"
+msgctxt "@item:inlistbox"
 msgid "All Services"
 msgstr "அனைத்து சேவைகள்"
 
 #: ui/main.qml:124
-#, kde-format
-msgctxt "List running services"
+#, fuzzy, kde-format
+#| msgid "Running"
+msgctxt "@item:inlistbox List running services"
 msgid "Running"
-msgstr "இயங்குகிறவை"
+msgstr "இயங்குகிறது"
 
 #: ui/main.qml:125
-#, kde-format
-msgctxt "List not running services"
+#, fuzzy, kde-format
+#| msgctxt "List not running services"
+#| msgid "Not Running"
+msgctxt "@item:inlistbox List not running services"
 msgid "Not Running"
 msgstr "இயங்காதவை"
 
 #: ui/main.qml:162
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Startup Services"
+msgctxt "@title:group list section"
 msgid "Startup Services"
 msgstr "துவக்க சேவைகள்"
 
 #: ui/main.qml:163
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load-on-Demand Services"
+msgctxt "@title:group list section"
 msgid "Load-on-Demand Services"
 msgstr "தேவைக்கேற்ப இயக்கப்படும் சேவைகளை "
 
@@ -119,17 +140,23 @@ msgid "Enable automatically loading %1 on startup"
 msgstr "%1 தனை துவக்கத்தின் போது தானாக ஏற்று"
 
 #: ui/main.qml:183
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Toggle automatically loading this service on startup"
+msgctxt "@info:whatsthis Accessible description"
 msgid "Toggle automatically loading this service on startup"
 msgstr "இந்த சேவையை தொடக்கத்தின் போது தானாக இயக்குவதை நிலைமாற்று"
 
 #: ui/main.qml:227
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Not running"
+msgctxt "@info:status"
 msgid "Not running"
 msgstr "இயங்கவில்லை"
 
 #: ui/main.qml:228
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Running"
+msgctxt "@info:status"
 msgid "Running"
 msgstr "இயங்குகிறது"
 
@@ -146,14 +173,22 @@ msgid "Start %1"
 msgstr "%1 தனை துவக்கு"
 
 #: ui/main.qml:251
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Stop Service"
+msgctxt "@action:button"
 msgid "Stop Service"
 msgstr "சேவையை நிறுத்து"
 
 #: ui/main.qml:251
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Start Service"
+msgctxt "@action:button"
 msgid "Start Service"
 msgstr "சேவையை துவக்கு"
+
+#~ msgctxt "List running services"
+#~ msgid "Running"
+#~ msgstr "இயங்குகிறவை"
 
 #, fuzzy
 #~| msgid ""

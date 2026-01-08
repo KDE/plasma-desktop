@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-08-14 18:35+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -22,22 +22,44 @@ msgstr ""
 "X-Generator: Lokalize 25.04.0\n"
 
 #: KeyboardButton.qml:19
+#, fuzzy
+#| msgid "Keyboard Layout: %1"
+msgctxt "@action:button opens layout chooser %1 is current"
 msgid "Keyboard Layout: %1"
 msgstr "Näppäimistöasettelu: %1"
 
 #: Login.qml:86
+#, fuzzy
+#| msgid "Username"
+msgctxt "@info:placeholder in textfield"
 msgid "Username"
 msgstr "Käyttäjätunnus"
 
 #: Login.qml:103
+#, fuzzy
+#| msgid "Password"
+msgctxt "@info:placeholder in textfield"
 msgid "Password"
 msgstr "Salasana"
 
-#: Login.qml:145 Login.qml:151
+#: Login.qml:145
+#, fuzzy
+#| msgid "Log In"
+msgctxt "@action:button Accessible name"
+msgid "Log in"
+msgstr "Kirjaudu"
+
+#: Login.qml:151
+#, fuzzy
+#| msgid "Log In"
+msgctxt "@action:button"
 msgid "Log In"
 msgstr "Kirjaudu"
 
 #: Main.qml:200
+#, fuzzy
+#| msgid "Caps Lock is on"
+msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "Vaihtolukko on käytössä"
 
@@ -47,28 +69,46 @@ msgid "Hibernate"
 msgstr "Siirry lepotilaan"
 
 #: Main.qml:218 Main.qml:357
-msgctxt "Suspend to RAM"
+#, fuzzy
+#| msgctxt "Suspend to RAM"
+#| msgid "Sleep"
+msgctxt "@action:button Suspend to RAM"
 msgid "Sleep"
 msgstr "Valmiustila"
 
 #: Main.qml:224 Main.qml:363
+#, fuzzy
+#| msgid "Restart"
+msgctxt "@action:button"
 msgid "Restart"
 msgstr "Käynnistä uudelleen"
 
 #: Main.qml:230 Main.qml:369
+#, fuzzy
+#| msgid "Shut Down"
+msgctxt "@action:button"
 msgid "Shut Down"
 msgstr "Sammuta"
 
 #: Main.qml:236
-msgctxt "For switching to a username and password prompt"
+#, fuzzy
+#| msgctxt "For switching to a username and password prompt"
+#| msgid "Other…"
+msgctxt "@action:button For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Muu…"
 
 #: Main.qml:343
+#, fuzzy
+#| msgid "Type in Username and Password"
+msgctxt "@info:usagetip"
 msgid "Type in Username and Password"
 msgstr "Syötä käyttäjätunnus ja salasana"
 
 #: Main.qml:375
+#, fuzzy
+#| msgid "List Users"
+msgctxt "@action:button"
 msgid "List Users"
 msgstr "Luettele käyttäjät"
 
@@ -78,9 +118,15 @@ msgid "Virtual Keyboard"
 msgstr "Näyttönäppäimistö"
 
 #: Main.qml:516
+#, fuzzy
+#| msgid "Login Failed"
+msgctxt "@info:status"
 msgid "Login Failed"
 msgstr "Kirjautuminen epäonnistui"
 
 #: SessionButton.qml:18
+#, fuzzy
+#| msgid "Desktop Session: %1"
+msgctxt "@action:button opens sessions menu %1 is current"
 msgid "Desktop Session: %1"
 msgstr "Työpöytäistunto: %1"

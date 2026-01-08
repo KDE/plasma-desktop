@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-02 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2021-10-11 11:33+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -43,12 +43,16 @@ msgid "Show in Favorites"
 msgstr "पसंदीदा में प्रदर्शित करें"
 
 #: config.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "सामान्य"
 
 #: ConfigGeneral.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "प्रतीकः"
 
@@ -99,26 +103,31 @@ msgstr ""
 #: ConfigGeneral.qml:120
 #, fuzzy, kde-format
 #| msgid "Show other applications:"
+msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "अन्य अनुप्रयोगों को दिखाएँ :"
 
 #: ConfigGeneral.qml:122
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr ""
 
 #: ConfigGeneral.qml:122
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr ""
 
 #: ConfigGeneral.qml:122
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr ""
 
 #: ConfigGeneral.qml:122
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr ""
 
@@ -170,6 +179,7 @@ msgstr ""
 
 #: ConfigGeneral.qml:185
 #, kde-format
+msgctxt "@option:check"
 msgid "Use compact list item style"
 msgstr ""
 
@@ -180,12 +190,15 @@ msgid "Automatically disabled when in Touch Mode"
 msgstr ""
 
 #: ConfigGeneral.qml:199
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show other applications:"
+msgctxt "@option:check"
 msgid "Highlight newly installed applications"
-msgstr ""
+msgstr "अन्य अनुप्रयोगों को दिखाएँ :"
 
 #: ConfigGeneral.qml:204
 #, kde-format
+msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
 msgstr ""
 
@@ -198,85 +211,120 @@ msgstr "सक्षम खोज प्लग इन विन्यस्त �
 
 #: ConfigGeneral.qml:220
 #, kde-format
+msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr ""
 
 #: ConfigGeneral.qml:221 ConfigGeneral.qml:229
 #, kde-format
+msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr ""
 
-#: ConfigGeneral.qml:221 ConfigGeneral.qml:229
+#: ConfigGeneral.qml:221
 #, kde-format
+msgctxt "option:radio sidebar position"
+msgid "Left"
+msgstr ""
+
+#: ConfigGeneral.qml:229
+#, kde-format
+msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr ""
 
 #: ConfigGeneral.qml:237
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show favorites:"
+msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
 msgstr "पसंदीदा दिखाएँ :"
 
 #: ConfigGeneral.qml:238
-#, kde-format
-msgctxt "Part of a sentence: 'Show favorites in a grid'"
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
+#| msgid "In a grid"
+msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "ग्रिड में दिखाएँ"
 
 #: ConfigGeneral.qml:246
-#, kde-format
-msgctxt "Part of a sentence: 'Show favorites in a list'"
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Show favorites in a list'"
+#| msgid "In a list"
+msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "सूची में दिखाएँ"
 
 #: ConfigGeneral.qml:254
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show other applications:"
+msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
 msgstr "अन्य अनुप्रयोगों को दिखाएँ :"
 
 #: ConfigGeneral.qml:255
-#, kde-format
-msgctxt "Part of a sentence: 'Show other applications in a grid'"
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
+#| msgid "In a grid"
+msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "ग्रिड में दिखाएँ"
 
 #: ConfigGeneral.qml:263
-#, kde-format
-msgctxt "Part of a sentence: 'Show other applications in a list'"
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Show favorites in a list'"
+#| msgid "In a list"
+msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "सूची में दिखाएँ"
 
 #: ConfigGeneral.qml:275
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show buttons for:"
+msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr "इनके लिए बटन दिखाएँ :"
 
-#: ConfigGeneral.qml:276 LeaveButtons.qml:171
-#, kde-format
+#: ConfigGeneral.qml:276
+#, fuzzy, kde-format
+#| msgid "Power"
+msgctxt "@option:radio Show buttons for"
 msgid "Power"
 msgstr "शक्ती..."
 
-#: ConfigGeneral.qml:285 LeaveButtons.qml:171
-#, kde-format
+#: ConfigGeneral.qml:285
+#, fuzzy, kde-format
+#| msgid "Session"
+msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "सत्र"
 
 #: ConfigGeneral.qml:294
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Power and session"
+msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
 msgstr "शक्ती और सत्र"
 
 #: ConfigGeneral.qml:303
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show action button captions"
+msgctxt "@option:check"
 msgid "Show action button captions"
 msgstr "क्रिया बटन अनुशिर्षक दिखाएं"
 
 #: Footer.qml:101
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Applications"
+msgctxt "@title:tab kickoff sidebar tab"
 msgid "Applications"
 msgstr "अनुप्रयोग"
 
 #: Footer.qml:117
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Places"
+msgctxt "@title:tab kickoff sidebar tab"
 msgid "Places"
 msgstr "स्थान"
 
@@ -289,48 +337,90 @@ msgstr ""
 #: Header.qml:84
 #, fuzzy, kde-format
 #| msgid "Go to user settings"
+msgctxt "@action:button icon-only, for tooltip/Accessible"
 msgid "Open user settings"
 msgstr "उपयोक्ता सेटिंग में जाएँ"
 
 #: Header.qml:264
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep Open"
+msgctxt ""
+"@action:button Pin widget open if it loses focus, icon-only button, for "
+"tooltip/Accessible"
 msgid "Keep Open"
 msgstr "खुला रखें"
 
-#: KickoffGridDelegate.qml:59 KickoffListDelegate.qml:117
+#: KickoffGridDelegate.qml:59
+#, kde-format
+msgctxt "@label Newly installed app, badge, keep short"
+msgid "New!"
+msgstr ""
+
+#: KickoffGridDelegate.qml:60
+#, fuzzy, kde-format
+#| msgid "Show other applications:"
+msgctxt "@label Accessible name for badge"
+msgid "Newly installed application"
+msgstr "अन्य अनुप्रयोगों को दिखाएँ :"
+
+#: KickoffGridView.qml:101
+#, fuzzy, kde-format
+#| msgid "Grid with %1 rows, %2 columns"
+msgctxt "@info:whatsthis Accessible description"
+msgid "Grid with %1 rows, %2 columns"
+msgstr "ग्रिड %1 पंक्तियों, %2 स्तंभों के साथ"
+
+#: KickoffListDelegate.qml:117
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:119
+#: KickoffListDelegate.qml:118
 #, fuzzy, kde-format
 #| msgid "Show other applications:"
+msgctxt "@info:whatsthis Accessible description for badge"
+msgid "There is a newly installed application in this category"
+msgstr "अन्य अनुप्रयोगों को दिखाएँ :"
+
+#: KickoffListDelegate.qml:119
+#, fuzzy, kde-format
+#| msgid "Show other applications:"
+msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly installed application"
 msgstr "अन्य अनुप्रयोगों को दिखाएँ :"
 
-#: KickoffGridView.qml:101
-#, kde-format
-msgid "Grid with %1 rows, %2 columns"
-msgstr "ग्रिड %1 पंक्तियों, %2 स्तंभों के साथ"
-
-#: KickoffListDelegate.qml:118
-#, kde-format
-msgid "There is a newly installed application in this category"
-msgstr ""
+#: LeaveButtons.qml:171
+#, fuzzy, kde-format
+#| msgid "Session"
+msgctxt "@title:menu menubutton"
+msgid "Session"
+msgstr "सत्र"
 
 #: LeaveButtons.qml:171
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Power"
+msgctxt "@title:menu menubutton"
+msgid "Power"
+msgstr "शक्ती..."
+
+#: LeaveButtons.qml:171
+#, fuzzy, kde-format
+#| msgid "More"
+msgctxt "@title:menu menubutton"
 msgid "More"
 msgstr "अधिक"
 
 #: LeaveButtons.qml:171
 #, kde-format
+msgctxt "@title:menu menubutton"
 msgid "Session and Power"
 msgstr ""
 
 #: main.qml:356
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Applications…"
+msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
 msgstr "अनुप्रयोगों का सम्पादन करें…"
 
@@ -351,6 +441,14 @@ msgstr "इतिहास"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "प्राय‍ः उपयोग किए जाने वाले"
+
+#~ msgctxt "Part of a sentence: 'Show other applications in a grid'"
+#~ msgid "In a grid"
+#~ msgstr "ग्रिड में दिखाएँ"
+
+#~ msgctxt "Part of a sentence: 'Show other applications in a list'"
+#~ msgid "In a list"
+#~ msgstr "सूची में दिखाएँ"
 
 #~ msgid "Leave"
 #~ msgstr "छोड़ें..."

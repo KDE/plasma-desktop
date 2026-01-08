@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2017-04-07 00:51+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -59,6 +59,7 @@ msgstr ""
 
 #: ui/main.qml:55
 #, kde-format
+msgctxt "@info:status inlinemessage"
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
@@ -66,6 +67,7 @@ msgstr ""
 
 #: ui/main.qml:65
 #, kde-format
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
@@ -73,37 +75,42 @@ msgstr ""
 
 #: ui/main.qml:75
 #, kde-format
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
 
 #: ui/main.qml:123
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Startup Services"
+msgctxt "@item:inlistbox"
 msgid "All Services"
-msgstr ""
+msgstr "Сервиси при покретању"
 
 #: ui/main.qml:124
 #, kde-format
-msgctxt "List running services"
+msgctxt "@item:inlistbox List running services"
 msgid "Running"
 msgstr ""
 
 #: ui/main.qml:125
 #, kde-format
-msgctxt "List not running services"
+msgctxt "@item:inlistbox List not running services"
 msgid "Not Running"
 msgstr ""
 
 #: ui/main.qml:162
 #, fuzzy, kde-format
 #| msgid "Startup Services"
+msgctxt "@title:group list section"
 msgid "Startup Services"
 msgstr "Сервиси при покретању"
 
 #: ui/main.qml:163
 #, fuzzy, kde-format
 #| msgid "Startup Services"
+msgctxt "@title:group list section"
 msgid "Load-on-Demand Services"
 msgstr "Сервиси при покретању"
 
@@ -121,16 +128,19 @@ msgstr ""
 
 #: ui/main.qml:183
 #, kde-format
+msgctxt "@info:whatsthis Accessible description"
 msgid "Toggle automatically loading this service on startup"
 msgstr ""
 
 #: ui/main.qml:227
 #, kde-format
+msgctxt "@info:status"
 msgid "Not running"
 msgstr ""
 
 #: ui/main.qml:228
 #, kde-format
+msgctxt "@info:status"
 msgid "Running"
 msgstr ""
 
@@ -147,13 +157,16 @@ msgid "Start %1"
 msgstr ""
 
 #: ui/main.qml:251
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Startup Services"
+msgctxt "@action:button"
 msgid "Stop Service"
-msgstr ""
+msgstr "Сервиси при покретању"
 
 #: ui/main.qml:251
 #, fuzzy, kde-format
 #| msgid "Startup Services"
+msgctxt "@action:button"
 msgid "Start Service"
 msgstr "Сервиси при покретању"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-02 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-06-07 22:20+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -43,12 +43,16 @@ msgid "Show in Favorites"
 msgstr "Показване в Предпочитани"
 
 #: config.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Общи"
 
 #: ConfigGeneral.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icon:"
+msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Икона:"
 
@@ -99,27 +103,37 @@ msgid "Remove icon"
 msgstr "Премахване на икона"
 
 #: ConfigGeneral.qml:120
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show applications as:"
+msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Показване на приложения като:"
 
 #: ConfigGeneral.qml:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Name only"
+msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Само име"
 
 #: ConfigGeneral.qml:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Description only"
+msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Само описание"
 
 #: ConfigGeneral.qml:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Name (Description)"
+msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Име (описание)"
 
 #: ConfigGeneral.qml:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Description (Name)"
+msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Описание (име)"
 
@@ -170,7 +184,9 @@ msgstr ""
 "търсенето или в страницата с предпочитани."
 
 #: ConfigGeneral.qml:185
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use compact list item style"
+msgctxt "@option:check"
 msgid "Use compact list item style"
 msgstr "Компактен стил на списък"
 
@@ -181,12 +197,16 @@ msgid "Automatically disabled when in Touch Mode"
 msgstr "Автоматично деактивиране в режим на таблет"
 
 #: ConfigGeneral.qml:199
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Highlight newly installed applications"
+msgctxt "@option:check"
 msgid "Highlight newly installed applications"
 msgstr "Маркиране на новоинсталирани приложения"
 
 #: ConfigGeneral.qml:204
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Switch sidebar categories when hovering over them"
+msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
 msgstr "Превключва категориите на страничната лента при посочване с мишката"
 
@@ -197,86 +217,125 @@ msgid "Configure Search Plugins…"
 msgstr "Конфигуриране на приставки за търсене…"
 
 #: ConfigGeneral.qml:220
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sidebar position:"
+msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr "Позиция на плъзгача:"
 
 #: ConfigGeneral.qml:221 ConfigGeneral.qml:229
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Right"
+msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr "Вдясно"
 
-#: ConfigGeneral.qml:221 ConfigGeneral.qml:229
-#, kde-format
+#: ConfigGeneral.qml:221
+#, fuzzy, kde-format
+#| msgid "Left"
+msgctxt "option:radio sidebar position"
+msgid "Left"
+msgstr "Вляво"
+
+#: ConfigGeneral.qml:229
+#, fuzzy, kde-format
+#| msgid "Left"
+msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr "Вляво"
 
 #: ConfigGeneral.qml:237
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show favorites:"
+msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
 msgstr "Показване на Предпочитани:"
 
 #: ConfigGeneral.qml:238
-#, kde-format
-msgctxt "Part of a sentence: 'Show favorites in a grid'"
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
+#| msgid "In a grid"
+msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "Плочки"
 
 #: ConfigGeneral.qml:246
-#, kde-format
-msgctxt "Part of a sentence: 'Show favorites in a list'"
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Show favorites in a list'"
+#| msgid "In a list"
+msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "Списък"
 
 #: ConfigGeneral.qml:254
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show other applications:"
+msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
 msgstr "Показване на други приложения:"
 
 #: ConfigGeneral.qml:255
-#, kde-format
-msgctxt "Part of a sentence: 'Show other applications in a grid'"
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
+#| msgid "In a grid"
+msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "Плочки"
 
 #: ConfigGeneral.qml:263
-#, kde-format
-msgctxt "Part of a sentence: 'Show other applications in a list'"
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Show favorites in a list'"
+#| msgid "In a list"
+msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "Списък"
 
 #: ConfigGeneral.qml:275
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show buttons for:"
+msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr "Показване на бутони за:"
 
-#: ConfigGeneral.qml:276 LeaveButtons.qml:171
-#, kde-format
+#: ConfigGeneral.qml:276
+#, fuzzy, kde-format
+#| msgid "Power"
+msgctxt "@option:radio Show buttons for"
 msgid "Power"
 msgstr "Захранване"
 
-#: ConfigGeneral.qml:285 LeaveButtons.qml:171
-#, kde-format
+#: ConfigGeneral.qml:285
+#, fuzzy, kde-format
+#| msgid "Session"
+msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "Сесия"
 
 #: ConfigGeneral.qml:294
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Power and session"
+msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
 msgstr "Захранване и сесия"
 
 #: ConfigGeneral.qml:303
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show action button captions"
+msgctxt "@option:check"
 msgid "Show action button captions"
 msgstr "Показване на надписите на бутоните за действие"
 
 #: Footer.qml:101
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Applications"
+msgctxt "@title:tab kickoff sidebar tab"
 msgid "Applications"
 msgstr "Приложения"
 
 #: Footer.qml:117
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Places"
+msgctxt "@title:tab kickoff sidebar tab"
 msgid "Places"
 msgstr "Места"
 
@@ -287,48 +346,95 @@ msgid "No matches"
 msgstr "Няма съвпадения"
 
 #: Header.qml:84
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open user settings"
+msgctxt "@action:button icon-only, for tooltip/Accessible"
 msgid "Open user settings"
 msgstr "Потребителски настройки"
 
 #: Header.qml:264
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep Open"
+msgctxt ""
+"@action:button Pin widget open if it loses focus, icon-only button, for "
+"tooltip/Accessible"
 msgid "Keep Open"
 msgstr "Задържане отворен"
 
-#: KickoffGridDelegate.qml:59 KickoffListDelegate.qml:117
+#: KickoffGridDelegate.qml:59
+#, fuzzy, kde-format
+#| msgctxt "Newly installed app, badge, keep short"
+#| msgid "New!"
+msgctxt "@label Newly installed app, badge, keep short"
+msgid "New!"
+msgstr "Ново!"
+
+#: KickoffGridDelegate.qml:60
+#, fuzzy, kde-format
+#| msgid "Newly installed application"
+msgctxt "@label Accessible name for badge"
+msgid "Newly installed application"
+msgstr "Новоинсталирано приложение"
+
+#: KickoffGridView.qml:101
+#, fuzzy, kde-format
+#| msgid "Grid with %1 rows, %2 columns"
+msgctxt "@info:whatsthis Accessible description"
+msgid "Grid with %1 rows, %2 columns"
+msgstr "Плочки на %1 реда, %2 колони"
+
+#: KickoffListDelegate.qml:117
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "Ново!"
 
-#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:119
-#, kde-format
-msgid "Newly installed application"
-msgstr "Новоинсталирано приложение"
-
-#: KickoffGridView.qml:101
-#, kde-format
-msgid "Grid with %1 rows, %2 columns"
-msgstr "Плочки на %1 реда, %2 колони"
-
 #: KickoffListDelegate.qml:118
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "There is a newly installed application in this category"
+msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly installed application in this category"
 msgstr "В тази категория има новоинсталирано приложение"
 
+#: KickoffListDelegate.qml:119
+#, fuzzy, kde-format
+#| msgid "Newly installed application"
+msgctxt "@info:whatsthis Accessible description for badge"
+msgid "Newly installed application"
+msgstr "Новоинсталирано приложение"
+
 #: LeaveButtons.qml:171
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Session"
+msgctxt "@title:menu menubutton"
+msgid "Session"
+msgstr "Сесия"
+
+#: LeaveButtons.qml:171
+#, fuzzy, kde-format
+#| msgid "Power"
+msgctxt "@title:menu menubutton"
+msgid "Power"
+msgstr "Захранване"
+
+#: LeaveButtons.qml:171
+#, fuzzy, kde-format
+#| msgid "More"
+msgctxt "@title:menu menubutton"
 msgid "More"
 msgstr "Повече"
 
 #: LeaveButtons.qml:171
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Session and Power"
+msgctxt "@title:menu menubutton"
 msgid "Session and Power"
 msgstr "Сесия и захранване"
 
 #: main.qml:356
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Applications…"
+msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
 msgstr "Редактиране на приложения…"
 
@@ -349,3 +455,11 @@ msgstr "История"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Често използвани"
+
+#~ msgctxt "Part of a sentence: 'Show other applications in a grid'"
+#~ msgid "In a grid"
+#~ msgstr "Плочки"
+
+#~ msgctxt "Part of a sentence: 'Show other applications in a list'"
+#~ msgid "In a list"
+#~ msgstr "Списък"

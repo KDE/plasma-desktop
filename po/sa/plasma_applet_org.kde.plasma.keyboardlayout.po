@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-03 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-12-20 21:53+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -20,12 +20,16 @@ msgstr ""
 "X-Generator: Lokalize 24.08.2\n"
 
 #: qml/config.qml:6
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "सामान्य"
 
 #: qml/configGeneral.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Display style:"
+msgctxt "@title:group of radio buttons, options are language codes or images"
 msgid "Display style:"
 msgstr "प्रदर्शनशैली :"
 
@@ -36,11 +40,15 @@ msgid "No flag available"
 msgstr "ध्वजः उपलब्धः नास्ति"
 
 #: qml/configGeneral.qml:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Layouts:"
+msgctxt "@label prefixed to button"
 msgid "Layouts:"
 msgstr "विन्यासाः :"
 
 #: qml/configGeneral.qml:103
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
+msgctxt "@action:button opens kcm_keyboard"
 msgid "Configure…"
 msgstr "विन्यस्तं कुर्वन्तु..."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-07 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-12-07 12:15+0200\n"
 "Last-Translator: Fracture dept <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -228,17 +228,28 @@ msgstr ""
 "програми, яка вирішить, як обробляти натискання."
 
 #: ui/ActionDialog.qml:248
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Up:"
+msgctxt ""
+"@label prefix for configuring Keybind to send when dial/ring is turned "
+"upwards"
 msgid "Up:"
 msgstr "Вгору:"
 
 #: ui/ActionDialog.qml:261
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Down:"
+msgctxt ""
+"@label prefix for configuring Keybind to send when dial/ring is turned "
+"downwards"
 msgid "Down:"
 msgstr "Вниз:"
 
 #: ui/ActionDialog.qml:274
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Speed:"
+msgctxt ""
+"@label:slider Speed for how often this dial/ring should emit key events"
 msgid "Speed:"
 msgstr "Швидкість:"
 
@@ -379,22 +390,30 @@ msgid "Cancel"
 msgstr "Скасувати"
 
 #: ui/DisplayTab.qml:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Map to screen:"
+msgctxt "@label:listbox"
 msgid "Map to screen:"
 msgstr "Прив’язка до екрана:"
 
 #: ui/DisplayTab.qml:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Orientation:"
+msgctxt "@label:listbox"
 msgid "Orientation:"
 msgstr "Орієнтація:"
 
 #: ui/DisplayTab.qml:79
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Not Applicable"
+msgctxt "@label substitute for unavailable orientation change"
 msgid "Not Applicable"
 msgstr "Незастосовне"
 
 #: ui/DisplayTab.qml:93
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mapped Area:"
+msgctxt "@label:listbox"
 msgid "Mapped Area:"
 msgstr "Область прив'язки:"
 
@@ -411,7 +430,9 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 – %3×%4"
 
 #: ui/ExternalScreenMapping.qml:190
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Resize the screen area"
+msgctxt "@action:button"
 msgid "Resize the screen area"
 msgstr "Змінити розміри області на екрані"
 
@@ -422,17 +443,23 @@ msgid "%1%,%2% - %3%×%4%"
 msgstr "%1%,%2% – %3%×%4%"
 
 #: ui/ExternalScreenMapping.qml:301
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Resize the tablet area"
+msgctxt "@action:button"
 msgid "Resize the tablet area"
 msgstr "Змінити розміри області планшета"
 
 #: ui/main.qml:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No drawing tablets found"
+msgctxt "@info placeholdermessage text"
 msgid "No drawing tablets found"
 msgstr "Планшетів для малювання не знайдено"
 
 #: ui/main.qml:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Connect a drawing tablet"
+msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect a drawing tablet"
 msgstr "Встановлення з'єднання з планшетом для малювання"
 
@@ -479,12 +506,18 @@ msgid "Pad"
 msgstr "Панель"
 
 #: ui/MissingPadTab.qml:15
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No pad inputs found"
+msgctxt "@info placeholdermessage main text"
 msgid "No pad inputs found"
 msgstr "Не знайдено жодної панелі для введення"
 
 #: ui/MissingPadTab.qml:16
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "No buttons or other inputs were detected. This could mean the driver for "
+#| "this device is missing."
+msgctxt "@info:usagetip placeholdermessage explanation"
 msgid ""
 "No buttons or other inputs were detected. This could mean the driver for "
 "this device is missing."
@@ -493,7 +526,9 @@ msgstr ""
 "те, що у системі немає драйвера для цього пристрою."
 
 #: ui/PadTab.qml:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pad ring %1:"
+msgctxt "@label for graphics tablet ring config, % is number of ring"
 msgid "Pad ring %1:"
 msgstr "Набирання на панелі %1:"
 
@@ -506,7 +541,9 @@ msgid "pad ring/dial %1"
 msgstr "набирання на панелі %1"
 
 #: ui/PadTab.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pad dial %1:"
+msgctxt "@label for graphics tablet ring config, % is number of dial"
 msgid "Pad dial %1:"
 msgstr "Цифрова панель %1:"
 
@@ -519,7 +556,9 @@ msgid "pad dial %1"
 msgstr "цифрова панель %1"
 
 #: ui/PadTab.qml:138
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pad button %1:"
+msgctxt "@label for graphics tablet button config, % is number of button"
 msgid "Pad button %1:"
 msgstr "Кнопка панелі %1:"
 
@@ -532,13 +571,17 @@ msgid "pad button %1"
 msgstr "кнопка панелі %1"
 
 #: ui/StylusTab.qml:222
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Left-handed mode:"
+msgctxt "@label prefix for checkbox"
 msgid "Left-handed mode:"
 msgstr "Режим шульги:"
 
 #: ui/StylusTab.qml:228
-#, kde-format
-msgctxt "Enable left-handed mode"
+#, fuzzy, kde-format
+#| msgctxt "Enable left-handed mode"
+#| msgid "Enable"
+msgctxt "@option:check Enable left-handed mode"
 msgid "Enable"
 msgstr "Увімкнути"
 
@@ -562,26 +605,38 @@ msgid "Mode:"
 msgstr "Режим:"
 
 #: ui/StylusTab.qml:254
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Pen"
 msgctxt ""
-"Pen mode, where the point on the screen is always where you touch the stylus"
+"@option:radio Pen mode, where the point on the screen is always where you "
+"touch the stylus"
 msgid "Pen"
 msgstr "Перо"
 
 #: ui/StylusTab.qml:259
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "The cursor follows where you touch the pen on the surface"
+msgctxt "@info:whatsthis Accessible description"
 msgid "The cursor follows where you touch the pen on the surface"
 msgstr ""
 "Вказівник пересуватиметься керуванням за допомогою торкання поверхні пером"
 
 #: ui/StylusTab.qml:280
-#, kde-format
-msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
+#, fuzzy, kde-format
+#| msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
+#| msgid "Mouse"
+msgctxt ""
+"@option:radio Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
 msgstr "Миша"
 
 #: ui/StylusTab.qml:285
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Moving the pen on the surface moves the cursor relative to where it was, "
+#| "like a mouse"
+msgctxt "@info:whatsthis Accessible description"
 msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
 "like a mouse"
@@ -590,7 +645,9 @@ msgstr ""
 "був, подібно до миші"
 
 #: ui/StylusTab.qml:355
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pen Pressure:"
+msgctxt "@label prefix for pen pressure curve config"
 msgid "Pen Pressure:"
 msgstr "Натиск пера:"
 
@@ -746,6 +803,12 @@ msgstr ""
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
 msgstr "Очистити"
+
+#~ msgctxt ""
+#~ "Pen mode, where the point on the screen is always where you touch the "
+#~ "stylus"
+#~ msgid "Pen"
+#~ msgstr "Перо"
 
 #~ msgctxt "@info"
 #~ msgid ""

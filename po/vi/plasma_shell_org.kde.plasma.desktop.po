@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2023-01-08 16:18+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -18,12 +18,18 @@ msgstr ""
 "X-Generator: Lokalize 22.12.0\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Currently being used"
+msgctxt "@info:status currently active activity"
 msgid "Currently being used"
 msgstr "Đang dùng"
 
 #: contents/activitymanager/ActivityItem.qml:243
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Move to\n"
+#| "this activity"
+msgctxt "@action shows when dragging file over item"
 msgid ""
 "Move to\n"
 "this activity"
@@ -32,7 +38,11 @@ msgstr ""
 "Hoạt động này"
 
 #: contents/activitymanager/ActivityItem.qml:273
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Show also\n"
+#| "in this activity"
+msgctxt "@action shows when dragging file over item"
 msgid ""
 "Show also\n"
 "in this activity"
@@ -41,49 +51,66 @@ msgstr ""
 "Hoạt động này"
 
 #: contents/activitymanager/ActivityItem.qml:335
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgctxt "@action:button tooltip only, opens kcm"
 msgid "Configure"
 msgstr "Cấu hình"
 
 #: contents/activitymanager/ActivityManager.qml:118
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create activity…"
+msgctxt "@action:button opens Activity kcm"
 msgid "Create activity…"
 msgstr "Tạo Hoạt động…"
 
 #: contents/activitymanager/Heading.qml:59
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Activities"
+msgctxt "@title:window"
 msgid "Activities"
 msgstr "Hoạt động"
 
 #: contents/applet/AppletError.qml:165
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Copy to Clipboard"
+msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Chép vào bảng nháp"
 
 #: contents/applet/AppletError.qml:188
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "View Error Details…"
+msgctxt "@action:button opens dialog"
 msgid "View Error Details…"
 msgstr "Xem chi tiết về lỗi…"
 
 #: contents/applet/CompactApplet.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open %1"
+msgctxt "@info:whatsthis Accessible description for panel widget %1"
 msgid "Open %1"
 msgstr "Mở %1"
 
 #: contents/configuration/AboutPlugin.qml:21
-#: contents/configuration/AppletConfiguration.qml:337
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "About"
+msgctxt "@title:window About this widget"
 msgid "About"
 msgstr "Thông tin"
 
 #: contents/configuration/AboutPlugin.qml:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Send an email to %1"
+msgctxt "plasma_shell_org.kde.plasma.desktop"
 msgid "Send an email to %1"
 msgstr "Gửi thư đến %1"
 
 #: contents/configuration/AboutPlugin.qml:65
-#, kde-format
-msgctxt "@info:tooltip %1 url"
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip %1 url"
+#| msgid "Open website %1"
+msgctxt "@action:button icononly for tooltip & accessible %1 is url"
 msgid "Open website %1"
 msgstr "Mở địa điểm web %1"
 
@@ -102,17 +129,21 @@ msgstr ""
 #: contents/configuration/AboutPlugin.qml:165
 #, fuzzy, kde-format
 #| msgid "Report a Bug…"
+msgctxt "@action:button urlbutton"
 msgid "Report an issue"
 msgstr "Báo lỗi…"
 
 #: contents/configuration/AboutPlugin.qml:172
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Copyright"
+msgctxt "@title license information"
 msgid "Copyright"
 msgstr "Bản quyền"
 
 #: contents/configuration/AboutPlugin.qml:191
 #, fuzzy, kde-format
 #| msgid "License:"
+msgctxt "@label %1 is the short SPDX text for the license"
 msgid "License: %1"
 msgstr "Giấy phép:"
 
@@ -124,27 +155,44 @@ msgid "Read License"
 msgstr "Giấy phép:"
 
 #: contents/configuration/AboutPlugin.qml:211
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Authors"
+msgctxt "@title:group"
 msgid "Authors"
 msgstr "Tác giả"
 
 #: contents/configuration/AboutPlugin.qml:223
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Credits"
+msgctxt "@title:group"
 msgid "Credits"
 msgstr "Ghi nhận"
 
 #: contents/configuration/AboutPlugin.qml:236
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Translators"
+msgctxt "@title:group"
 msgid "Translators"
 msgstr "Người dịch"
 
 #: contents/configuration/AppletConfiguration.qml:90
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keyboard Shortcuts"
+msgctxt "@title:group for configuration dialog page"
 msgid "Keyboard Shortcuts"
 msgstr "Phím tắt"
 
+#: contents/configuration/AppletConfiguration.qml:337
+#, fuzzy, kde-format
+#| msgid "About"
+msgctxt "@title:group for About dialog page"
+msgid "About"
+msgstr "Thông tin"
+
 #: contents/configuration/AppletConfiguration.qml:385
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Apply Settings"
+msgctxt "@title:window dialog title"
 msgid "Apply Settings"
 msgstr "Áp dụng thiết lập"
 
@@ -153,6 +201,7 @@ msgstr "Áp dụng thiết lập"
 #| msgid ""
 #| "The settings of the current module have changed. Do you want to apply the "
 #| "changes or discard them?"
+msgctxt "@label dialog body"
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
 msgstr ""
@@ -160,77 +209,109 @@ msgstr ""
 "thay đổi?"
 
 #: contents/configuration/AppletConfiguration.qml:418
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "OK"
+msgctxt "@action:button"
 msgid "OK"
 msgstr "OK"
 
 #: contents/configuration/AppletConfiguration.qml:425
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Apply"
+msgctxt "@action:button"
 msgid "Apply"
 msgstr "Áp dụng"
 
 #: contents/configuration/AppletConfiguration.qml:431
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Huỷ"
 
 #: contents/configuration/ConfigCategoryDelegate.qml:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open configuration page"
+msgctxt ""
+"@info:whatsthis Accessible description for sidebar entries opening "
+"configuration page"
 msgid "Open configuration page"
 msgstr "Mở trang cấu hình"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Left-Button"
+msgctxt "@label for shortcuts"
 msgid "Left-Button"
 msgstr "Nút trái"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Right-Button"
+msgctxt "@label for shortcuts"
 msgid "Right-Button"
 msgstr "Nút phải"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:21
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle-Button"
+msgctxt "@label for shortcuts"
 msgid "Middle-Button"
 msgstr "Nút giữa"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Back-Button"
+msgctxt "@label for shortcuts"
 msgid "Back-Button"
 msgstr "Nút lùi"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forward-Button"
+msgctxt "@label for shortcuts"
 msgid "Forward-Button"
 msgstr "Nút tiến"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Vertical-Scroll"
+msgctxt "@label for shortcuts"
 msgid "Vertical-Scroll"
 msgstr "Cuộn dọc"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Horizontal-Scroll"
+msgctxt "@label for shortcuts"
 msgid "Horizontal-Scroll"
 msgstr "Cuộn ngang"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Shift"
+msgctxt "@label for shortcuts"
 msgid "Shift"
 msgstr "Shift"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ctrl"
+msgctxt "@label for shortcuts"
 msgid "Ctrl"
 msgstr "Ctrl"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Alt"
+msgctxt "@label for shortcuts"
 msgid "Alt"
 msgstr "Alt"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Meta"
+msgctxt "@label for shortcuts"
 msgid "Meta"
 msgstr "Meta"
 
@@ -241,44 +322,59 @@ msgid "+"
 msgstr "+"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:139
-#: contents/configuration/MouseEventInputButton.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Action"
+msgctxt "@action:button"
 msgid "Add Action"
 msgstr "Thêm hành động"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Layout changes have been restricted by the system administrator"
+msgctxt "@info:status inlinemessage"
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "Các thay đổi về bố cục đã bị giới hạn bởi quản trị viên hệ thống"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Layout:"
+msgctxt "@label:listbox"
 msgid "Layout:"
 msgstr "Bố cục:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:114
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Wallpaper type:"
+msgctxt "@label:listbox"
 msgid "Wallpaper type:"
 msgstr "Kiểu phông nền:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:153
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Get New Plugins…"
+msgctxt "@action:button"
 msgid "Get New Plugins…"
 msgstr "Lấy phần cài cắm mới…"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:243
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Layout changes must be applied before other changes can be made"
+msgctxt "@info"
 msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
 "Thay đổi về bố cục phải được áp dụng trước khi tạo ra các thay đổi khác"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:247
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Apply Now"
+msgctxt "@action:button"
 msgid "Apply Now"
 msgstr "Áp dụng ngay"
 
 #: contents/configuration/ConfigurationShortcuts.qml:16
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Shortcuts"
+msgctxt "@title:window for configuration page"
 msgid "Shortcuts"
 msgstr "Phím tắt"
 
@@ -289,23 +385,37 @@ msgid "Activate widget as if clicked:"
 msgstr ""
 
 #: contents/configuration/ContainmentConfiguration.qml:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Wallpaper"
+msgctxt "@title:group for configuration dialog page"
 msgid "Wallpaper"
 msgstr "Phông nền"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mouse Actions"
+msgctxt "@title:group for configuration dialog page"
 msgid "Mouse Actions"
 msgstr "Hành động chuột"
 
+#: contents/configuration/MouseEventInputButton.qml:13
+#, fuzzy, kde-format
+#| msgid "Add Action"
+msgctxt "@action:button inactive state for button recording mouse input"
+msgid "Add Action"
+msgstr "Thêm hành động"
+
 #: contents/configuration/MouseEventInputButton.qml:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Input Here"
+msgctxt "@action:button active state for button recording mouse input"
 msgid "Input Here"
 msgstr "Nhập vào đây"
 
 #: contents/configuration/PanelConfiguration.qml:99
 #, fuzzy, kde-format
 #| msgid "Apply Settings"
+msgctxt "@title:window"
 msgid "Panel Settings"
 msgstr "Áp dụng thiết lập"
 
@@ -332,133 +442,187 @@ msgid "Widgets…"
 msgstr "Phụ kiện"
 
 #: contents/configuration/PanelConfiguration.qml:162
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "More Options…"
+msgctxt "@title:group"
 msgid "Position"
-msgstr ""
+msgstr "Lựa chọn thêm…"
 
 #: contents/configuration/PanelConfiguration.qml:167
-#: contents/configuration/PanelConfiguration.qml:282
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Top"
+msgctxt "@label panel screen edge"
 msgid "Top"
 msgstr "Trên"
 
 #: contents/configuration/PanelConfiguration.qml:168
-#: contents/configuration/PanelConfiguration.qml:284
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Right"
+msgctxt "@label panel screen edge"
 msgid "Right"
 msgstr "Phải"
 
 #: contents/configuration/PanelConfiguration.qml:169
-#: contents/configuration/PanelConfiguration.qml:282
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Left"
+msgctxt "@label panel screen edge"
 msgid "Left"
 msgstr "Trái"
 
 #: contents/configuration/PanelConfiguration.qml:170
-#: contents/configuration/PanelConfiguration.qml:284
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Bottom"
+msgctxt "@label panel screen edge"
 msgid "Bottom"
 msgstr "Dưới"
 
 #: contents/configuration/PanelConfiguration.qml:190
 #, fuzzy, kde-format
 #| msgid "More Options…"
+msgctxt "action:button"
 msgid "Set Position…"
 msgstr "Lựa chọn thêm…"
 
 #: contents/configuration/PanelConfiguration.qml:217
 #, fuzzy, kde-format
 #| msgid "Panel Alignment"
+msgctxt "@title:group"
 msgid "Alignment"
 msgstr "Căn lề cho bảng"
 
+#: contents/configuration/PanelConfiguration.qml:282
+#, fuzzy, kde-format
+#| msgid "Top"
+msgctxt "@item:inlistbox"
+msgid "Top"
+msgstr "Trên"
+
+#: contents/configuration/PanelConfiguration.qml:282
+#, fuzzy, kde-format
+#| msgid "Left"
+msgctxt "@item:inlistbox"
+msgid "Left"
+msgstr "Trái"
+
 #: contents/configuration/PanelConfiguration.qml:283
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Center"
+msgctxt "@item:inlistbox"
 msgid "Center"
 msgstr "Giữa"
+
+#: contents/configuration/PanelConfiguration.qml:284
+#, fuzzy, kde-format
+#| msgid "Bottom"
+msgctxt "@item:inlistbox"
+msgid "Bottom"
+msgstr "Dưới"
+
+#: contents/configuration/PanelConfiguration.qml:284
+#, fuzzy, kde-format
+#| msgid "Right"
+msgctxt "@item:inlistbox"
+msgid "Right"
+msgstr "Phải"
 
 #: contents/configuration/PanelConfiguration.qml:314
 #, fuzzy, kde-format
 #| msgid "Right"
+msgctxt "@title:group panel height"
 msgid "Height"
 msgstr "Phải"
 
 #: contents/configuration/PanelConfiguration.qml:315
 #, kde-format
+msgctxt "@title:group panel width"
 msgid "Width"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:334
 #, fuzzy, kde-format
 #| msgid "Panel height:"
+msgctxt "@item:inlistbox"
 msgid "Fill height"
 msgstr "Độ cao bảng:"
 
 #: contents/configuration/PanelConfiguration.qml:334
 #, fuzzy, kde-format
 #| msgid "Panel width:"
+msgctxt "@item:inlistbox"
 msgid "Fill width"
 msgstr "Độ rộng bảng:"
 
 #: contents/configuration/PanelConfiguration.qml:335
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Fit content"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:336
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Custom"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:369
 #, fuzzy, kde-format
 #| msgid "Visibility"
+msgctxt "@title:group"
 msgid "Visibility"
 msgstr "Khả kiến"
 
 #: contents/configuration/PanelConfiguration.qml:387
 #, fuzzy, kde-format
 #| msgid "Always Visible"
+msgctxt "@item:inlistbox"
 msgid "Always visible"
 msgstr "Luôn hiện"
 
 #: contents/configuration/PanelConfiguration.qml:388
 #, fuzzy, kde-format
 #| msgid "Auto Hide"
+msgctxt "@item:inlistbox"
 msgid "Auto hide"
 msgstr "Tự động ẩn"
 
 #: contents/configuration/PanelConfiguration.qml:389
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Dodge windows"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:390
 #, fuzzy, kde-format
 #| msgid "Windows Go Below"
+msgctxt "@item:inlistbox"
 msgid "Windows go below"
 msgstr "Cửa sổ đi xuống dưới"
 
 #: contents/configuration/PanelConfiguration.qml:450
 #, fuzzy, kde-format
 #| msgid "Opacity"
+msgctxt "@title:group"
 msgid "Opacity"
 msgstr "Độ mờ đục"
 
 #: contents/configuration/PanelConfiguration.qml:466
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Adaptive"
+msgctxt "@item:inlistbox"
 msgid "Adaptive"
 msgstr "Thích ứng"
 
 #: contents/configuration/PanelConfiguration.qml:467
 #, fuzzy, kde-format
 #| msgid "Opaque"
+msgctxt "@item:inlistbox"
 msgid "Opaque"
 msgstr "Đục"
 
 #: contents/configuration/PanelConfiguration.qml:468
 #, fuzzy, kde-format
 #| msgid "Translucent"
+msgctxt "@item:inlistbox"
 msgid "Translucent"
 msgstr "Trong mờ"
 
@@ -499,25 +663,43 @@ msgstr ""
 #: contents/configuration/PanelConfiguration.qml:647
 #, fuzzy, kde-format
 #| msgid "Panel width:"
+msgctxt "@label:spinbox"
 msgid "Panel Width:"
 msgstr "Độ rộng bảng:"
 
 #: contents/configuration/PanelConfiguration.qml:648
 #, fuzzy, kde-format
 #| msgid "Panel width:"
+msgctxt "@label:spinbox"
 msgid "Panel Height:"
 msgstr "Độ rộng bảng:"
 
 #: contents/configuration/PanelConfiguration.qml:671
 #, fuzzy, kde-format
 #| msgid "Shortcut"
+msgctxt "@title:group"
 msgid "Focus shortcut:"
 msgstr "Phím tắt"
 
 #: contents/configuration/PanelConfiguration.qml:682
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Press this keyboard shortcut to move focus to the Panel"
+msgctxt "@info:tooltip"
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Nhấn phím tắt này để chuyển nhắm đến bảng"
+
+#: contents/configuration/PanelConfiguration.qml:689
+#, fuzzy, kde-format
+#| msgid "Shortcut"
+msgctxt "@action:button acccessible name"
+msgid "Focus Shortcut Setter"
+msgstr "Phím tắt"
+
+#: contents/configuration/PanelConfiguration.qml:690
+#, kde-format
+msgctxt "@info:whatsthis Accessible description for button"
+msgid "Button to set the shortcut for the panel to gain focus"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:716
 #, fuzzy, kde-format
@@ -528,6 +710,7 @@ msgstr "Xoá bỏ bảng"
 
 #: contents/configuration/PanelConfiguration.qml:719
 #, kde-format
+msgctxt "@info:tooltip for button"
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
 
@@ -540,7 +723,7 @@ msgstr "Xoá bỏ bảng"
 
 #: contents/configuration/PanelConfiguration.qml:732
 #, kde-format
-msgctxt "@info:tooltip"
+msgctxt "@info:tooltip for button"
 msgid "Create a new panel with the same settings and applets"
 msgstr ""
 
@@ -560,6 +743,7 @@ msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:744
 #, kde-format
+msgctxt "@info:tooltip for button"
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr ""
 
@@ -615,11 +799,15 @@ msgstr ""
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, fuzzy, kde-format
 #| msgid "Panels and Desktops Management"
+msgctxt "@title:window"
 msgid "Manage Panels and Desktops"
 msgstr "Quản lí các bảng và bàn làm việc"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "You can drag Panels and Desktops around to move them to different screens."
+msgctxt "@info:usagetip"
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr ""
@@ -627,38 +815,51 @@ msgstr ""
 "hình khác nhau."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Close"
+msgctxt "@action:button Close window"
 msgid "Close"
 msgstr "Đóng"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Swap with Desktop on Screen %1"
+msgctxt "@action:inmenu"
 msgid "Swap with Desktop on Screen %1"
 msgstr "Hoán đổi với bàn làm việc ở màn hình %1"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:188
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move to Screen %1"
+msgctxt "@action:inmenu"
 msgid "Move to Screen %1"
 msgstr "Chuyển đến màn hình %1"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:202
 #, fuzzy, kde-format
 #| msgid "Remove Panel"
+msgctxt "@action:inmenu"
 msgid "Remove Desktop"
 msgstr "Xoá bỏ bảng"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:203
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Panel"
+msgctxt "@action:inmenu"
 msgid "Remove Panel"
 msgstr "Xoá bỏ bảng"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:279
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1 (primary)"
+msgctxt "@info % is screen name"
 msgid "%1 (primary)"
 msgstr "%1 (chính)"
 
 #: contents/explorer/AppletAlternatives.qml:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Alternative Widgets"
+msgctxt "@title:window for widget alternatives explorer"
 msgid "Alternative Widgets"
 msgstr "Phụ kiện thay thế"
 
@@ -670,6 +871,7 @@ msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:47
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Unsupported Widget"
 msgstr ""
 
@@ -696,14 +898,16 @@ msgstr ""
 #: contents/explorer/AppletDelegate.qml:217
 #, fuzzy, kde-format
 #| msgid "Uninstall"
+msgctxt "@action:button tooltip and accessible cancel uninstall widget"
 msgid "Cancel Uninstallation"
 msgstr "Gỡ cài đặt"
 
 #: contents/explorer/AppletDelegate.qml:218
-#, kde-format
-msgctxt "@info:tooltip uninstall a widget"
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgctxt "@action:button tooltip and accessible uninstall widget"
 msgid "Mark for Uninstallation"
-msgstr ""
+msgstr "Gỡ cài đặt"
 
 #: contents/explorer/AppletDelegate.qml:222
 #, kde-format
@@ -720,6 +924,7 @@ msgstr ""
 #: contents/explorer/AppletDelegate.qml:265
 #, fuzzy, kde-format
 #| msgid "Remove Panel"
+msgctxt "@action:button"
 msgid "Remove all instances"
 msgstr "Xoá bỏ bảng"
 
@@ -734,12 +939,16 @@ msgstr[0] ""
 
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:223
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "All Widgets"
+msgctxt "@action:button like listbox, switches category to all widgets"
 msgid "All Widgets"
 msgstr "Tất cả phụ kiện"
 
 #: contents/explorer/WidgetExplorer.qml:169
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Widgets"
+msgctxt "@title:group for widget grid"
 msgid "Widgets"
 msgstr "Phụ kiện"
 
@@ -771,7 +980,9 @@ msgid "Search through widgets"
 msgstr "Phụ kiện"
 
 #: contents/explorer/WidgetExplorer.qml:237
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Categories"
+msgctxt "@action:button tooltip only"
 msgid "Categories"
 msgstr "Các loại"
 
@@ -784,12 +995,16 @@ msgid_plural "Uninstall (%1 Widgets)"
 msgstr[0] "Gỡ cài đặt phụ kiện"
 
 #: contents/explorer/WidgetExplorer.qml:389
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No widgets matched the search terms"
+msgctxt "@info placeholdermessage"
 msgid "No widgets matched the search terms"
 msgstr "Không có phụ kiện nào khớp với các từ khoá tìm kiếm"
 
 #: contents/explorer/WidgetExplorer.qml:389
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No widgets available"
+msgctxt "@info placeholdermessage"
 msgid "No widgets available"
 msgstr "Không có phụ kiện nào"
 
@@ -850,27 +1065,32 @@ msgstr ""
 
 #: contents/lockscreen/LockScreenUi.qml:48
 #, kde-format
+msgctxt "@info:status"
 msgid "Unlocking failed"
 msgstr ""
 
 #: contents/lockscreen/LockScreenUi.qml:281
 #, kde-format
+msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr ""
 
 #: contents/lockscreen/LockScreenUi.qml:295
 #, kde-format
+msgctxt "@action:button"
 msgid "Slee&p"
 msgstr ""
 
 #: contents/lockscreen/LockScreenUi.qml:301
 #, kde-format
+msgctxt "@action:button"
 msgid "&Hibernate"
 msgstr ""
 
 #: contents/lockscreen/LockScreenUi.qml:307
 #, fuzzy, kde-format
 #| msgid "Switch"
+msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "Chuyển"
 
@@ -889,48 +1109,50 @@ msgstr "Chuyển"
 
 #: contents/lockscreen/MainBlock.qml:65
 #, kde-format
+msgctxt "@info:placeholder in text field"
 msgid "Password"
 msgstr ""
 
 #: contents/lockscreen/MainBlock.qml:114
-#: contents/lockscreen/NoPasswordUnlock.qml:17
 #, kde-format
+msgctxt "@action:button accessible only"
 msgid "Unlock"
 msgstr ""
 
 #: contents/lockscreen/MainBlock.qml:163
 #, kde-format
+msgctxt "@info:usagetip"
 msgid "(or scan your fingerprint on the reader)"
 msgstr ""
 
 #: contents/lockscreen/MainBlock.qml:167
 #, kde-format
+msgctxt "@info:usagetip"
 msgid "(or scan your smartcard)"
-msgstr ""
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr ""
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
 msgstr ""
 
 #: contents/lockscreen/MediaControls.qml:88
 #, kde-format
+msgctxt "@action:button Accessible only"
 msgid "Previous track"
 msgstr ""
 
 #: contents/lockscreen/MediaControls.qml:100
 #, kde-format
+msgctxt "@action:button Accessible only"
 msgid "Play or Pause media"
 msgstr ""
 
 #: contents/lockscreen/MediaControls.qml:110
 #, kde-format
+msgctxt "@action:button Accessible only"
 msgid "Next track"
+msgstr ""
+
+#: contents/lockscreen/NoPasswordUnlock.qml:17
+#, kde-format
+msgctxt "@action:button no-password unlock"
+msgid "Unlock"
 msgstr ""
 
 #: contents/views/DesktopEditMode.qml:122
@@ -941,11 +1163,13 @@ msgstr ""
 
 #: contents/views/DesktopEditMode.qml:131
 #, kde-format
+msgctxt "@action:button"
 msgid "Exit Edit Mode"
 msgstr ""
 
 #: contents/views/Panel.qml:326
 #, kde-format
+msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr ""
 

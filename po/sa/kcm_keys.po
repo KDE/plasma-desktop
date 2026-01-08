@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-12-25 19:37+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -137,22 +137,30 @@ msgid "Help"
 msgstr "साहाय्यम्‌"
 
 #: ui/main.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Applications"
+msgctxt "@title:group list section name"
 msgid "Applications"
 msgstr "अनुप्रयोगाः"
 
 #: ui/main.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Commands"
+msgctxt "@title:group list section name"
 msgid "Commands"
 msgstr "आदेशाः"
 
 #: ui/main.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "System Services"
+msgctxt "@title:group list section name"
 msgid "System Services"
 msgstr "प्रणाली सेवाएँ"
 
 #: ui/main.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Common Actions"
+msgctxt "@title:group list section name"
 msgid "Common Actions"
 msgstr "सामान्य कर्म"
 
@@ -222,12 +230,17 @@ msgid "Add new command or script"
 msgstr "आदेशः वा स्क्रिप्ट् वा..."
 
 #: ui/main.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cannot export scheme while there are unsaved changes"
+msgctxt "@info:status inlinemessage"
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "असरक्षितपरिवर्तनानि सन्ति चेत् योजना निर्यातयितुं न शक्नोति"
 
 #: ui/main.qml:117
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Select the components below that should be included in the exported scheme"
+msgctxt "@info:usagetip"
 msgid ""
 "Select the components below that should be included in the exported scheme"
 msgstr "निर्यातितयोजनायां समाविष्टानि घटकानि अधोलिखितानि चिनुत"
@@ -270,7 +283,9 @@ msgid "Undo deletion"
 msgstr "लोपं पूर्ववत कुर्वन्तु"
 
 #: ui/main.qml:341
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No items matched the search terms"
+msgctxt "@info:status placeholdermessage"
 msgid "No items matched the search terms"
 msgstr "अन्वेषणपदैः सह कोऽपि द्रव्यः न मेलति स्म"
 
@@ -294,17 +309,23 @@ msgid "Undo deleting shortcuts"
 msgstr "पूर्वनिर्धारितशॉर्टकट् नास्ति"
 
 #: ui/main.qml:399
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select an item from the list to view its shortcuts here"
+msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "अत्र तस्य शॉर्टकट् द्रष्टुं सूचीतः एकं द्रव्यं चिनोतु"
 
 #: ui/main.qml:412
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Export Shortcut Scheme"
+msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr "निर्यात शॉर्टकट योजना"
 
 #: ui/main.qml:412 ui/main.qml:553
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Import Shortcut Scheme"
+msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
 msgstr "आयात शॉर्टकट योजना"
 
@@ -315,22 +336,30 @@ msgid "Shortcut Scheme (*.kksrc)"
 msgstr "शॉर्टकट योजना (*.kksrc) 1.1."
 
 #: ui/main.qml:441
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Command"
+msgctxt "@title:window dialog"
 msgid "Edit Command"
 msgstr "सम्पादन आदेश"
 
 #: ui/main.qml:441
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Command"
+msgctxt "@title:window dialog"
 msgid "Add Command"
 msgstr "Add Command इति"
 
 #: ui/main.qml:463
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save"
+msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
 msgstr "रक्ष्"
 
 #: ui/main.qml:463
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add"
+msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
 msgstr "संयोजयति"
 
@@ -350,7 +379,9 @@ msgid "Add command"
 msgstr "Add Command इति"
 
 #: ui/main.qml:492
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enter a command or choose a script file:"
+msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr "आदेशं प्रविशतु अथवा स्क्रिप्ट् सञ्चिकां चिनोतु:"
 
@@ -405,22 +436,30 @@ msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "स्क्रिप्ट् सञ्चिकाः (.sh, .bash, .zsh इत्यादयः) (*.*sh)"
 
 #: ui/main.qml:561
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select the scheme to import:"
+msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr "आयातार्थं योजनां चिनोतु :"
 
 #: ui/main.qml:580
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom Scheme"
+msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
 msgstr "कस्टम योजना"
 
 #: ui/main.qml:588
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select File…"
+msgctxt "@action:button"
 msgid "Select File…"
 msgstr "सञ्चिकां चिनोतु..."
 
 #: ui/main.qml:588
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Import"
+msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "आयात"
 
@@ -453,7 +492,9 @@ msgid "Expand to configure shortcuts"
 msgstr "सक्रियशॉर्टकट् नास्ति"
 
 #: ui/ShortcutActionDelegate.qml:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Editing shortcut: %1"
+msgctxt "@info:whatsthis accessible name %1 is shortcut label (not sequence)"
 msgid "Editing shortcut: %1"
 msgstr "सम्पादन शॉर्टकट्: %1"
 
@@ -466,35 +507,48 @@ msgid "%1:"
 msgstr "%1:"
 
 #: ui/ShortcutActionDelegate.qml:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No active shortcuts"
+msgctxt "@info:status"
 msgid "No active shortcuts"
 msgstr "सक्रियशॉर्टकट् नास्ति"
 
 #: ui/ShortcutActionDelegate.qml:134
-#, kde-format
-msgctxt "%1 decides if singular or plural will be used"
+#, fuzzy, kde-format
+#| msgctxt "%1 decides if singular or plural will be used"
+#| msgid "Default shortcut"
+#| msgid_plural "Default shortcuts"
+msgctxt "@title:column %1 decides if singular or plural will be used"
 msgid "Default shortcut"
 msgid_plural "Default shortcuts"
 msgstr[0] "पूर्वनिर्धारित शॉर्टकट"
 msgstr[1] "पूर्वनिर्धारित शॉर्टकट"
 
 #: ui/ShortcutActionDelegate.qml:136
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No default shortcuts"
+msgctxt "@label for shortcut with no default bindings"
 msgid "No default shortcuts"
 msgstr "पूर्वनिर्धारितशॉर्टकट् नास्ति"
 
 #: ui/ShortcutActionDelegate.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Default shortcut %1 is enabled."
+msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is enabled."
 msgstr "पूर्वनिर्धारितं शॉर्टकट् %1 सक्षमम् अस्ति ।"
 
 #: ui/ShortcutActionDelegate.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Default shortcut %1 is disabled."
+msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is disabled."
 msgstr "पूर्वनिर्धारितं शॉर्टकट् %1 अक्षमम् अस्ति ।"
 
 #: ui/ShortcutActionDelegate.qml:168
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom shortcuts"
+msgctxt "@title:column"
 msgid "Custom shortcuts"
 msgstr "कस्टम शॉर्टकट"
 

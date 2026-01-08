@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-10-02 09:25+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -398,9 +398,12 @@ msgid "or"
 msgstr "nebo"
 
 #: ui/main_phone.qml:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Layout"
+msgctxt "@title form header"
 msgid "Model & Layout"
-msgstr ""
+msgstr "Přidat rozvržení"
 
 #: ui/main_phone.qml:43
 #, kde-format

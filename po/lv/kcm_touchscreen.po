@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-03 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-03-27 18:45+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -30,12 +30,16 @@ msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 — (%2,%3 %4×%5)"
 
 #: ui/main.qml:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No touchscreens found"
+msgctxt "@info:status placeholdermessage text"
 msgid "No touchscreens found"
 msgstr "Skārienekrāni nav atrasti"
 
 #: ui/main.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Connect an external touchscreen"
+msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchscreen"
 msgstr "Pievienojiet ārēju skārienekrānu"
 
@@ -46,11 +50,15 @@ msgid "Device:"
 msgstr "Ierīce:"
 
 #: ui/main.qml:59
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enabled:"
+msgctxt "@option:check prefix touchscreen device is enabled"
 msgid "Enabled:"
 msgstr "Ieslēgts:"
 
 #: ui/main.qml:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Target display:"
+msgctxt "@label:listbox"
 msgid "Target display:"
 msgstr "Mērķa displejs:"

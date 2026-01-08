@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_showactivitymanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2011-12-28 12:28-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -25,27 +25,34 @@ msgstr ""
 
 #: qml/ConfigAppearance.qml:23
 #, kde-format
+msgctxt "@title:group prefix for radiobutton group"
 msgid "Icon:"
 msgstr ""
 
 #: qml/ConfigAppearance.qml:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Activity Manager"
+msgctxt "@option:radio"
 msgid "Show the current activity icon"
-msgstr ""
+msgstr "Taispeáin an Bainisteoir Gníomhaíochta"
 
 #: qml/ConfigAppearance.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Activity Manager"
+msgctxt "@option:radio"
 msgid "Show the generic activity icon"
-msgstr ""
+msgstr "Taispeáin an Bainisteoir Gníomhaíochta"
 
 #: qml/ConfigAppearance.qml:41
 #, kde-format
+msgctxt "@label prefix for checkbox"
 msgid "Title:"
 msgstr ""
 
 #: qml/ConfigAppearance.qml:43
 #, fuzzy, kde-format
 #| msgid "Show Activity Manager"
+msgctxt "@option:check title"
 msgid "Show the current activity name"
 msgstr "Taispeáin an Bainisteoir Gníomhaíochta"
 
@@ -57,12 +64,16 @@ msgid "Current activity is %1"
 msgstr "Taispeáin an Bainisteoir Gníomhaíochta"
 
 #: qml/main.qml:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Activity Manager"
+msgctxt "@info:tooltip"
 msgid "Show Activity Manager"
 msgstr "Taispeáin an Bainisteoir Gníomhaíochta"
 
 #: qml/main.qml:77
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Click to show the activity manager"
+msgctxt "@info:tooltip subtext"
 msgid "Click to show the activity manager"
 msgstr "Cliceáil chun an bainisteoir gníomhaíochta a thaispeáint"
 

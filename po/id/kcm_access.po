@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-04 00:46+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-03-15 05:45+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -352,7 +352,10 @@ msgid "Disable sticky and slow keys after:"
 msgstr "Nonfungsikan tombol lekat dan tombol pelan setelah:"
 
 #: ui/ActivationShortcuts.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1 min"
+#| msgid_plural "%1 min"
+msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
 msgid "%1 min"
 msgid_plural "%1 min"
 msgstr[0] "%1 mnt"
@@ -367,32 +370,44 @@ msgstr[0] "min"
 msgstr[1] "min"
 
 #: ui/ActivationShortcuts.qml:89
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "When a shortcut is used:"
+msgctxt "@title:group for checkbox group"
 msgid "When a shortcut is used:"
 msgstr "Ketika pintasan digunakan:"
 
 #: ui/ActivationShortcuts.qml:90
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Display a confirmation dialog"
+msgctxt "@option:check when shortcut used"
 msgid "Display a confirmation dialog"
 msgstr "Tampilan dialog konfirmasi"
 
 #: ui/ActivationShortcuts.qml:101
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ring the system bell"
+msgctxt "@option:check when shortcut used"
 msgid "Ring the system bell"
 msgstr "Deringkan bel sistem"
 
 #: ui/ActivationShortcuts.qml:112
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show a notification"
+msgctxt "@option:check when shortcut used"
 msgid "Show a notification"
 msgstr "Tampilkan notifikasi"
 
 #: ui/ActivationShortcuts.qml:123
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Notifications…"
+msgctxt "@action:button opens Notifications kcm"
 msgid "Configure Notifications…"
 msgstr "Konfigurasi Notifikasi..."
 
 #: ui/Bell.qml:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Please choose an audio file"
+msgctxt "@title:window dialog"
 msgid "Please choose an audio file"
 msgstr "Silakan pilih file audio"
 
@@ -403,7 +418,9 @@ msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
 msgstr "File-file audio ogg, oga, dan wav (*.ogg *.oga *.wav)"
 
 #: ui/Bell.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Audible bell:"
+msgctxt "@label prefix for checkbox"
 msgid "Audible bell:"
 msgstr "Bel Dapat Diaudiokan:"
 
@@ -420,64 +437,80 @@ msgid "Custom sound:"
 msgstr "Kustom suara:"
 
 #: ui/Bell.qml:75
-#, kde-format
-msgid "Search audio file for the system bell"
+#, fuzzy, kde-format
+#| msgid "Search audio file for the system bell"
+msgctxt "@action:button icononly tooltip"
+msgid "Choose audio file for the system bell"
 msgstr "Cari file audio untuk bel sistem"
 
 #: ui/Bell.qml:76
-#, kde-format
-msgid "Button search audio file"
-msgstr "Tombol pencarian file audio"
+#, fuzzy, kde-format
+#| msgid "Please choose an audio file"
+msgctxt "@action button accessible only"
+msgid "Choose audio file"
+msgstr "Silakan pilih file audio"
 
-#: ui/Bell.qml:92
+#: ui/Bell.qml:77
 #, kde-format
+msgctxt "@info:usagetip accessible description for button"
+msgid "Opens dialog"
+msgstr ""
+
+#: ui/Bell.qml:93
+#, fuzzy, kde-format
+#| msgid "Visual bell:"
+msgctxt "@label prefix for checkbox"
 msgid "Visual bell:"
 msgstr "Bel visual:"
 
-#: ui/Bell.qml:93
-#, kde-format
-msgctxt "Enable visual bell"
+#: ui/Bell.qml:94
+#, fuzzy, kde-format
+#| msgctxt "Enable activation shortcuts"
+#| msgid "Enable"
+msgctxt "@option:check Enable visual bell"
 msgid "Enable"
 msgstr "Fungsikan"
 
-#: ui/Bell.qml:107
+#: ui/Bell.qml:108
 #, kde-format
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
 msgstr "Kebalikan warna layar"
 
-#: ui/Bell.qml:125
+#: ui/Bell.qml:126
 #, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
 msgstr "Layar kilat"
 
-#: ui/Bell.qml:136
+#: ui/Bell.qml:137
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr "Warna"
 
-#: ui/Bell.qml:150
+#: ui/Bell.qml:151
 #, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "Durasi:"
 
-#: ui/Bell.qml:165 ui/KeyboardFilters.qml:56 ui/KeyboardFilters.qml:157
-#: ui/MouseNavigation.qml:53 ui/MouseNavigation.qml:84
-#: ui/MouseNavigation.qml:110
-#, kde-format
+#: ui/Bell.qml:166
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix %1 is visible bell duration"
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] "%1 mdt"
 msgstr[1] "%1 mdt"
 
-#: ui/Bell.qml:169 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
-#: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
-#: ui/MouseNavigation.qml:114
-#, kde-format
-msgctxt "short for millisecond(s)"
+#: ui/Bell.qml:170 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
+#, fuzzy, kde-format
+#| msgctxt "short for millisecond(s)"
+#| msgid "ms"
+#| msgid_plural "ms"
+msgctxt "@label:valuesuffix short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
 msgstr[0] "mdt"
@@ -554,24 +587,28 @@ msgstr ""
 
 #: ui/ColorblindnessCorrection.qml:132
 #, kde-format
+msgctxt "@title:group for color rectangles"
 msgid "Reds:"
 msgstr ""
 
 #: ui/ColorblindnessCorrection.qml:133
 #, fuzzy, kde-format
 #| msgid "Green"
+msgctxt "@title:group for color rectangles"
 msgid "Greens:"
 msgstr "Hijau"
 
 #: ui/ColorblindnessCorrection.qml:134
 #, fuzzy, kde-format
 #| msgid "Blue"
+msgctxt "@title:group for color rectangles"
 msgid "Blues:"
 msgstr "Biru"
 
 #: ui/ColorblindnessCorrection.qml:135
 #, fuzzy, kde-format
 #| msgid "Purple"
+msgctxt "@title:group for color rectangles"
 msgid "Purples:"
 msgstr "Ungu"
 
@@ -603,13 +640,17 @@ msgid "Configure Shortcuts…"
 msgstr "Konfigurasi Notifikasi..."
 
 #: ui/KeyboardFilters.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Slow keys:"
+msgctxt "@title:group prefix"
 msgid "Slow keys:"
 msgstr "Tombol pelan:"
 
 #: ui/KeyboardFilters.qml:23
-#, kde-format
-msgctxt "Enable slow keys"
+#, fuzzy, kde-format
+#| msgctxt "Enable activation shortcuts"
+#| msgid "Enable"
+msgctxt "@option:check Enable slow keys"
 msgid "Enable"
 msgstr "Fungsikan"
 
@@ -627,42 +668,66 @@ msgstr ""
 "pertama kalinya."
 
 #: ui/KeyboardFilters.qml:41
-#, kde-format
-msgctxt "Slow keys Delay"
+#, fuzzy, kde-format
+#| msgctxt "Slow keys Delay"
+#| msgid "Delay:"
+msgctxt "@label:spinbox Slow keys Delay"
 msgid "Delay:"
 msgstr "Tundaan:"
 
+#: ui/KeyboardFilters.qml:56
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix %1 is slow keys delay"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 mdt"
+msgstr[1] "%1 mdt"
+
 #: ui/KeyboardFilters.qml:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ring system bell:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "Ring system bell:"
 msgstr "Dering bel sistem:"
 
 #: ui/KeyboardFilters.qml:75
-#, kde-format
-msgctxt "Use system bell when a key is pressed"
+#, fuzzy, kde-format
+#| msgctxt "Use system bell when a key is pressed"
+#| msgid "when any key is &pressed"
+msgctxt "@option:check Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "ketika tombol apapun dit&ekan"
 
 #: ui/KeyboardFilters.qml:89
-#, kde-format
-msgctxt "Use system bell when a key is accepted"
+#, fuzzy, kde-format
+#| msgctxt "Use system bell when a key is accepted"
+#| msgid "when any key is &accepted"
+msgctxt "@option:check Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "ketika tombol apapun di&setujui"
 
 #: ui/KeyboardFilters.qml:103
-#, kde-format
-msgctxt "Use system bell when a key is rejected"
+#, fuzzy, kde-format
+#| msgctxt "Use system bell when a key is rejected"
+#| msgid "when any key is &rejected"
+msgctxt "@option:check Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "ketika tombol apapun di&tolak"
 
 #: ui/KeyboardFilters.qml:119
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Bounce keys:"
+msgctxt "@title:group prefix"
 msgid "Bounce keys:"
 msgstr "Tombol mentul:"
 
 #: ui/KeyboardFilters.qml:124
-#, kde-format
-msgctxt "Bounce keys enable"
+#, fuzzy, kde-format
+#| msgctxt "Enable activation shortcuts"
+#| msgid "Enable"
+msgctxt "@option:check Bounce keys enable"
 msgid "Enable"
 msgstr "Fungsikan"
 
@@ -679,13 +744,27 @@ msgstr ""
 "padahal Anda hanya ingin menekannya sekali."
 
 #: ui/KeyboardFilters.qml:142
-#, kde-format
-msgctxt "Bounce keys delay"
+#, fuzzy, kde-format
+#| msgctxt "Slow keys Delay"
+#| msgid "Delay:"
+msgctxt "@label:spinbox Bounce keys delay"
 msgid "Delay:"
 msgstr "Tundaan:"
 
+#: ui/KeyboardFilters.qml:157
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix %1 is bounce keys delay"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 mdt"
+msgstr[1] "%1 mdt"
+
 #: ui/KeyboardFilters.qml:171
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ring system bell when rejected"
+msgctxt "@option:check for bounce keys"
 msgid "Ring system bell when rejected"
 msgstr "Deringkan bel sistem ketika ditolak"
 
@@ -702,37 +781,49 @@ msgid "System Bell"
 msgstr "Bel Sistem"
 
 #: ui/main.qml:38
-#, kde-format
-msgctxt "System Modifier Keys"
+#, fuzzy, kde-format
+#| msgctxt "System Modifier Keys"
+#| msgid "Modifier Keys"
+msgctxt "@title Category name in sidebar"
 msgid "Modifier Keys"
 msgstr "Tombol Pengubah"
 
 #: ui/main.qml:43
-#, kde-format
-msgctxt "System keyboard filters"
+#, fuzzy, kde-format
+#| msgctxt "System keyboard filters"
+#| msgid "Keyboard Filters"
+msgctxt "@title Category name in sidebar"
 msgid "Keyboard Filters"
 msgstr "Filter Keyboard"
 
 #: ui/main.qml:48
-#, kde-format
-msgctxt "System mouse navigation"
+#, fuzzy, kde-format
+#| msgctxt "System mouse navigation"
+#| msgid "Mouse Navigation"
+msgctxt "@title Category name in sidebar"
 msgid "Mouse Navigation"
 msgstr "Navigasi Mouse"
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Activation Shortcuts"
+msgctxt "@title Category name in sidebar"
 msgid "Activation Shortcuts"
 msgstr "Pintasan Aktivasi"
 
 #: ui/main.qml:58
-#, kde-format
-msgctxt "System mouse navigation"
+#, fuzzy, kde-format
+#| msgctxt "System mouse navigation"
+#| msgid "Screen Reader"
+msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "Screen Reader"
 
 #: ui/main.qml:63
-#, kde-format
-msgctxt "Correction for color blindness"
+#, fuzzy, kde-format
+#| msgctxt "Correction for color blindness"
+#| msgid "Color Blindness Correction"
+msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr "Koreksi Buta Warna"
 
@@ -746,7 +837,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgctxt "Shake cursor to find it"
 #| msgid "Shake Cursor"
-msgctxt "Shake pointer to find it"
+msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
 msgstr "Guncang Kursor"
 
@@ -791,12 +882,16 @@ msgstr ""
 "ditekan lagi."
 
 #: ui/ModifierKeys.qml:57
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Disable when two keys are held down"
+msgctxt "@option:check"
 msgid "Disable when two keys are held down"
 msgstr "Nonfungsikan ketika dua tombol tertekan-tahan"
 
 #: ui/ModifierKeys.qml:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ring system bell when modifier keys are used"
+msgctxt "@option:check"
 msgid "Ring system bell when modifier keys are used"
 msgstr "Deringkan bel sistem ketika tombol pemodif digunakan"
 
@@ -866,17 +961,56 @@ msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "Tundaan akselerasi:"
 
+#: ui/MouseNavigation.qml:53
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix acceleration delay spinbox %1 is value"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 mdt"
+msgstr[1] "%1 mdt"
+
+#: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
+#: ui/MouseNavigation.qml:114
+#, kde-format
+msgctxt "short for millisecond(s)"
+msgid "ms"
+msgid_plural "ms"
+msgstr[0] "mdt"
+msgstr[1] "mdt"
+
 #: ui/MouseNavigation.qml:66
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Interval pengulangan:"
 
+#: ui/MouseNavigation.qml:84
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix repeat interval spinbox %1 is value"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 mdt"
+msgstr[1] "%1 mdt"
+
 #: ui/MouseNavigation.qml:93
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Waktu akselerasi:"
+
+#: ui/MouseNavigation.qml:110
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 mdt"
+msgstr[1] "%1 mdt"
 
 #: ui/MouseNavigation.qml:118
 #, kde-format
@@ -1150,6 +1284,25 @@ msgstr "Deringkan bel sistem ketika tombol pemodif digunakan"
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "Gunakan tombol untuk mengontrol mouse"
+
+#~ msgid "Button search audio file"
+#~ msgstr "Tombol pencarian file audio"
+
+#~ msgctxt "Enable visual bell"
+#~ msgid "Enable"
+#~ msgstr "Fungsikan"
+
+#~ msgctxt "Enable slow keys"
+#~ msgid "Enable"
+#~ msgstr "Fungsikan"
+
+#~ msgctxt "Bounce keys enable"
+#~ msgid "Enable"
+#~ msgstr "Fungsikan"
+
+#~ msgctxt "Bounce keys delay"
+#~ msgid "Delay:"
+#~ msgstr "Tundaan:"
 
 #~ msgctxt "@option check, Enable shake cursor effect"
 #~ msgid "Enable"

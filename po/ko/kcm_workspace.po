@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-06-10 22:32+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -19,7 +19,11 @@ msgstr ""
 "X-Generator: Lokalize 24.12.3\n"
 
 #: ui/main.qml:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The system must be restarted before changes to the middle-click paste "
+#| "setting can take effect."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
@@ -27,7 +31,9 @@ msgstr ""
 "가운데 단추 붙여넣기 설정 변경을 적용하려면 시스템을 다시 시작해야 합니다."
 
 #: ui/main.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Restart"
+msgctxt "@action:button"
 msgid "Restart"
 msgstr "다시 시작"
 
@@ -50,7 +56,13 @@ msgid "Panel and widget tooltips"
 msgstr "패널과 위젯 풍선 도움말"
 
 #: ui/main.qml:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Allows all Plasma panel and desktop widgets to show descriptive tooltips "
+#| "when hovered with the pointer. This setting has no effect on the small "
+#| "tooltips displayed when hovering over individual buttons and other user "
+#| "interface elements."
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Allows all Plasma panel and desktop widgets to show descriptive tooltips "
 "when hovered with the pointer. This setting has no effect on the small "
@@ -69,7 +81,11 @@ msgid "OSD popups for status changes"
 msgstr "상태 변경 시 OSD 팝업 표시"
 
 #: ui/main.qml:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Allows all Plasma widgets to show on-screen display (OSD) popups for "
+#| "changes like volume and brightness level, or audio device switching."
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
@@ -84,28 +100,40 @@ msgid "Scrolling"
 msgstr "스크롤"
 
 #: ui/main.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clicking in scrollbar track:"
+msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
 msgstr "스크롤 바의 빈 공간을 클릭했을 때:"
 
 #: ui/main.qml:101
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
+#| "to the clicked location'"
+#| msgid "Scrolls to the clicked location"
 msgctxt ""
-"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
-"the clicked location'"
+"@option:radio part of a complete sentence: 'Clicking in scrollbar track "
+"scrolls to the clicked location'"
 msgid "Scrolls to the clicked location"
 msgstr "클릭한 위치로 스크롤"
 
 #: ui/main.qml:119
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
+#| "one page up or down'"
+#| msgid "Scrolls one page up or down"
 msgctxt ""
-"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
-"page up or down'"
+"@option:radio part of a complete sentence: 'Clicking in scrollbar track "
+"scrolls one page up or down'"
 msgid "Scrolls one page up or down"
 msgstr "한 쪽 위/아래로 스크롤"
 
 #: ui/main.qml:137
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle-click to scroll to clicked location"
+msgctxt "@info:usagetip"
 msgid "Middle-click to scroll to clicked location"
 msgstr "가운데 단추를 클릭했을 때 클릭한 위치로 스크롤"
 
@@ -149,7 +177,9 @@ msgid "Selects them"
 msgstr "선택하기"
 
 #: ui/main.qml:201
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open by double-clicking instead"
+msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "대신 두 번 클릭하여 열기"
 
@@ -160,7 +190,9 @@ msgid "Opens them"
 msgstr "열기"
 
 #: ui/main.qml:232
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select by clicking on item's selection marker"
+msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
 msgstr "항목의 선택 마커를 클릭해서 선택"
 
@@ -181,7 +213,9 @@ msgid "Pastes selected text"
 msgstr "선택한 문자열 붙여넣기"
 
 #: ui/main.qml:268
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Double-click interval:"
+msgctxt "@label:spinbox"
 msgid "Double-click interval:"
 msgstr "두 번 클릭 간격:"
 
@@ -199,7 +233,11 @@ msgid "ms"
 msgstr "밀리초"
 
 #: ui/main.qml:301
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Two clicks within this duration are considered a double-click. Some "
+#| "applications may not honor this setting."
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
@@ -218,17 +256,23 @@ msgstr ""
 "을 증가시키십시오."
 
 #: ui/main.qml:354
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Drag and Drop"
+msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr "드래그 앤 드롭"
 
 #: ui/main.qml:361
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "When dragging files or folders:"
+msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "파일이나 폴더를 드래그할 때:"
 
 #: ui/main.qml:362
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Always ask what to do"
+msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr "항상 원하는 것 묻기"
 
@@ -245,7 +289,9 @@ msgstr ""
 "고 있으면 심볼릭 링크를 생성합니다. 그렇지 않으면 대화 상자를 표시합니다."
 
 #: ui/main.qml:386
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move if on the same device"
+msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "같은 장치에 있을 때에는 이동"
 
@@ -264,24 +310,35 @@ msgid "Touch"
 msgstr "터치"
 
 #: ui/main.qml:416
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable Touch Mode:"
+msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Touch Mode:"
 msgstr "터치 모드 활성화:"
 
 #: ui/main.qml:418
-#, kde-format
-msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
+#, fuzzy, kde-format
+#| msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
+#| msgid "Automatically enable as needed"
+msgctxt "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "필요할 때 자동으로 활성화"
 
 #: ui/main.qml:418
-#, kde-format
-msgctxt "As in: 'Touch Mode is never enabled'"
+#, fuzzy, kde-format
+#| msgctxt "As in: 'Touch Mode is never enabled'"
+#| msgid "Never enabled"
+msgctxt "option:radio As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "활성화하지 않음"
 
 #: ui/main.qml:435
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Touch Mode will be automatically activated whenever the system detects a "
+#| "touchscreen but no mouse or touchpad. For example: when a transformable "
+#| "laptop's keyboard is flipped around or detached."
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
@@ -303,7 +360,11 @@ msgid "Disabled"
 msgstr "사용 안 함"
 
 #: ui/main.qml:486
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "In Touch Mode, many elements of the user interface will become larger to "
+#| "more easily accommodate touch interaction."
+msgctxt "@info:usagetip"
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
 "more easily accommodate touch interaction."

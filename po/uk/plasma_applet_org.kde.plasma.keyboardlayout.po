@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.keyboardlayout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-03 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2022-08-21 09:24+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -21,12 +21,16 @@ msgstr ""
 "X-Generator: Lokalize 20.12.0\n"
 
 #: qml/config.qml:6
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Загальне"
 
 #: qml/configGeneral.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Display style:"
+msgctxt "@title:group of radio buttons, options are language codes or images"
 msgid "Display style:"
 msgstr "Стиль показу:"
 
@@ -37,12 +41,16 @@ msgid "No flag available"
 msgstr "Немає прапорця"
 
 #: qml/configGeneral.qml:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Layouts:"
+msgctxt "@label prefixed to button"
 msgid "Layouts:"
 msgstr "Розкладки:"
 
 #: qml/configGeneral.qml:103
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
+msgctxt "@action:button opens kcm_keyboard"
 msgid "Configure…"
 msgstr "Налаштувати…"
 

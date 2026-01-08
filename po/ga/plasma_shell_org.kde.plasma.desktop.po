@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
@@ -20,11 +20,13 @@ msgstr ""
 
 #: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
+msgctxt "@info:status currently active activity"
 msgid "Currently being used"
 msgstr ""
 
 #: contents/activitymanager/ActivityItem.qml:243
 #, kde-format
+msgctxt "@action shows when dragging file over item"
 msgid ""
 "Move to\n"
 "this activity"
@@ -32,6 +34,7 @@ msgstr ""
 
 #: contents/activitymanager/ActivityItem.qml:273
 #, kde-format
+msgctxt "@action shows when dragging file over item"
 msgid ""
 "Show also\n"
 "in this activity"
@@ -39,48 +42,55 @@ msgstr ""
 
 #: contents/activitymanager/ActivityItem.qml:335
 #, kde-format
+msgctxt "@action:button tooltip only, opens kcm"
 msgid "Configure"
 msgstr ""
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
+msgctxt "@action:button opens Activity kcm"
 msgid "Create activity…"
 msgstr ""
 
 #: contents/activitymanager/Heading.qml:59
 #, kde-format
+msgctxt "@title:window"
 msgid "Activities"
 msgstr ""
 
 #: contents/applet/AppletError.qml:165
 #, kde-format
+msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr ""
 
 #: contents/applet/AppletError.qml:188
 #, kde-format
+msgctxt "@action:button opens dialog"
 msgid "View Error Details…"
 msgstr ""
 
 #: contents/applet/CompactApplet.qml:91
 #, kde-format
+msgctxt "@info:whatsthis Accessible description for panel widget %1"
 msgid "Open %1"
 msgstr ""
 
 #: contents/configuration/AboutPlugin.qml:21
-#: contents/configuration/AppletConfiguration.qml:337
 #, kde-format
+msgctxt "@title:window About this widget"
 msgid "About"
 msgstr ""
 
 #: contents/configuration/AboutPlugin.qml:51
 #, kde-format
+msgctxt "plasma_shell_org.kde.plasma.desktop"
 msgid "Send an email to %1"
 msgstr ""
 
 #: contents/configuration/AboutPlugin.qml:65
 #, kde-format
-msgctxt "@info:tooltip %1 url"
+msgctxt "@action:button icononly for tooltip & accessible %1 is url"
 msgid "Open website %1"
 msgstr ""
 
@@ -98,16 +108,19 @@ msgstr ""
 
 #: contents/configuration/AboutPlugin.qml:165
 #, kde-format
+msgctxt "@action:button urlbutton"
 msgid "Report an issue"
 msgstr ""
 
 #: contents/configuration/AboutPlugin.qml:172
 #, kde-format
+msgctxt "@title license information"
 msgid "Copyright"
 msgstr ""
 
 #: contents/configuration/AboutPlugin.qml:191
 #, kde-format
+msgctxt "@label %1 is the short SPDX text for the license"
 msgid "License: %1"
 msgstr ""
 
@@ -119,107 +132,136 @@ msgstr ""
 
 #: contents/configuration/AboutPlugin.qml:211
 #, kde-format
+msgctxt "@title:group"
 msgid "Authors"
 msgstr ""
 
 #: contents/configuration/AboutPlugin.qml:223
 #, kde-format
+msgctxt "@title:group"
 msgid "Credits"
 msgstr ""
 
 #: contents/configuration/AboutPlugin.qml:236
 #, kde-format
+msgctxt "@title:group"
 msgid "Translators"
 msgstr ""
 
 #: contents/configuration/AppletConfiguration.qml:90
 #, kde-format
+msgctxt "@title:group for configuration dialog page"
 msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: contents/configuration/AppletConfiguration.qml:337
+#, kde-format
+msgctxt "@title:group for About dialog page"
+msgid "About"
 msgstr ""
 
 #: contents/configuration/AppletConfiguration.qml:385
 #, kde-format
+msgctxt "@title:window dialog title"
 msgid "Apply Settings"
 msgstr ""
 
 #: contents/configuration/AppletConfiguration.qml:386
 #, kde-format
+msgctxt "@label dialog body"
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
 msgstr ""
 
 #: contents/configuration/AppletConfiguration.qml:418
 #, kde-format
+msgctxt "@action:button"
 msgid "OK"
 msgstr ""
 
 #: contents/configuration/AppletConfiguration.qml:425
 #, kde-format
+msgctxt "@action:button"
 msgid "Apply"
 msgstr ""
 
 #: contents/configuration/AppletConfiguration.qml:431
 #, kde-format
+msgctxt "@action:button"
 msgid "Cancel"
 msgstr ""
 
 #: contents/configuration/ConfigCategoryDelegate.qml:26
 #, kde-format
+msgctxt ""
+"@info:whatsthis Accessible description for sidebar entries opening "
+"configuration page"
 msgid "Open configuration page"
 msgstr ""
 
 #: contents/configuration/ConfigurationContainmentActions.qml:19
 #, kde-format
+msgctxt "@label for shortcuts"
 msgid "Left-Button"
 msgstr ""
 
 #: contents/configuration/ConfigurationContainmentActions.qml:20
 #, kde-format
+msgctxt "@label for shortcuts"
 msgid "Right-Button"
 msgstr ""
 
 #: contents/configuration/ConfigurationContainmentActions.qml:21
 #, kde-format
+msgctxt "@label for shortcuts"
 msgid "Middle-Button"
 msgstr ""
 
 #: contents/configuration/ConfigurationContainmentActions.qml:22
 #, kde-format
+msgctxt "@label for shortcuts"
 msgid "Back-Button"
 msgstr ""
 
 #: contents/configuration/ConfigurationContainmentActions.qml:23
 #, kde-format
+msgctxt "@label for shortcuts"
 msgid "Forward-Button"
 msgstr ""
 
 #: contents/configuration/ConfigurationContainmentActions.qml:25
 #, kde-format
+msgctxt "@label for shortcuts"
 msgid "Vertical-Scroll"
 msgstr ""
 
 #: contents/configuration/ConfigurationContainmentActions.qml:26
 #, kde-format
+msgctxt "@label for shortcuts"
 msgid "Horizontal-Scroll"
 msgstr ""
 
 #: contents/configuration/ConfigurationContainmentActions.qml:28
 #, kde-format
+msgctxt "@label for shortcuts"
 msgid "Shift"
 msgstr ""
 
 #: contents/configuration/ConfigurationContainmentActions.qml:29
 #, kde-format
+msgctxt "@label for shortcuts"
 msgid "Ctrl"
 msgstr ""
 
 #: contents/configuration/ConfigurationContainmentActions.qml:30
 #, kde-format
+msgctxt "@label for shortcuts"
 msgid "Alt"
 msgstr ""
 
 #: contents/configuration/ConfigurationContainmentActions.qml:31
 #, kde-format
+msgctxt "@label for shortcuts"
 msgid "Meta"
 msgstr ""
 
@@ -230,43 +272,50 @@ msgid "+"
 msgstr ""
 
 #: contents/configuration/ConfigurationContainmentActions.qml:139
-#: contents/configuration/MouseEventInputButton.qml:13
 #, kde-format
+msgctxt "@action:button"
 msgid "Add Action"
 msgstr ""
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:76
 #, kde-format
+msgctxt "@info:status inlinemessage"
 msgid "Layout changes have been restricted by the system administrator"
 msgstr ""
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:91
 #, kde-format
+msgctxt "@label:listbox"
 msgid "Layout:"
 msgstr ""
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:114
 #, kde-format
+msgctxt "@label:listbox"
 msgid "Wallpaper type:"
 msgstr ""
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:153
 #, kde-format
+msgctxt "@action:button"
 msgid "Get New Plugins…"
 msgstr ""
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:243
 #, kde-format
+msgctxt "@info"
 msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:247
 #, kde-format
+msgctxt "@action:button"
 msgid "Apply Now"
 msgstr ""
 
 #: contents/configuration/ConfigurationShortcuts.qml:16
 #, kde-format
+msgctxt "@title:window for configuration page"
 msgid "Shortcuts"
 msgstr ""
 
@@ -278,21 +327,31 @@ msgstr ""
 
 #: contents/configuration/ContainmentConfiguration.qml:26
 #, kde-format
+msgctxt "@title:group for configuration dialog page"
 msgid "Wallpaper"
 msgstr ""
 
 #: contents/configuration/ContainmentConfiguration.qml:31
 #, kde-format
+msgctxt "@title:group for configuration dialog page"
 msgid "Mouse Actions"
+msgstr ""
+
+#: contents/configuration/MouseEventInputButton.qml:13
+#, kde-format
+msgctxt "@action:button inactive state for button recording mouse input"
+msgid "Add Action"
 msgstr ""
 
 #: contents/configuration/MouseEventInputButton.qml:20
 #, kde-format
+msgctxt "@action:button active state for button recording mouse input"
 msgid "Input Here"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:99
 #, kde-format
+msgctxt "@title:window"
 msgid "Panel Settings"
 msgstr ""
 
@@ -318,120 +377,163 @@ msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:162
 #, kde-format
+msgctxt "@title:group"
 msgid "Position"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:167
-#: contents/configuration/PanelConfiguration.qml:282
 #, kde-format
+msgctxt "@label panel screen edge"
 msgid "Top"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:168
-#: contents/configuration/PanelConfiguration.qml:284
 #, kde-format
+msgctxt "@label panel screen edge"
 msgid "Right"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:169
-#: contents/configuration/PanelConfiguration.qml:282
 #, kde-format
+msgctxt "@label panel screen edge"
 msgid "Left"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:170
-#: contents/configuration/PanelConfiguration.qml:284
 #, kde-format
+msgctxt "@label panel screen edge"
 msgid "Bottom"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:190
 #, kde-format
+msgctxt "action:button"
 msgid "Set Position…"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:217
 #, kde-format
+msgctxt "@title:group"
 msgid "Alignment"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:282
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Top"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:282
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Left"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:283
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Center"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:284
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Bottom"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:284
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Right"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:314
 #, kde-format
+msgctxt "@title:group panel height"
 msgid "Height"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:315
 #, kde-format
+msgctxt "@title:group panel width"
 msgid "Width"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:334
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Fill height"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:334
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Fill width"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:335
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Fit content"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:336
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Custom"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:369
 #, kde-format
+msgctxt "@title:group"
 msgid "Visibility"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:387
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Always visible"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:388
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Auto hide"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:389
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Dodge windows"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:390
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Windows go below"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:450
 #, kde-format
+msgctxt "@title:group"
 msgid "Opacity"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:466
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Adaptive"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:467
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Opaque"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:468
 #, kde-format
+msgctxt "@item:inlistbox"
 msgid "Translucent"
 msgstr ""
 
@@ -468,22 +570,38 @@ msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:647
 #, kde-format
+msgctxt "@label:spinbox"
 msgid "Panel Width:"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:648
 #, kde-format
+msgctxt "@label:spinbox"
 msgid "Panel Height:"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:671
 #, kde-format
+msgctxt "@title:group"
 msgid "Focus shortcut:"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:682
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Press this keyboard shortcut to move focus to the Panel"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:689
+#, kde-format
+msgctxt "@action:button acccessible name"
+msgid "Focus Shortcut Setter"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:690
+#, kde-format
+msgctxt "@info:whatsthis Accessible description for button"
+msgid "Button to set the shortcut for the panel to gain focus"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:716
@@ -494,6 +612,7 @@ msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:719
 #, kde-format
+msgctxt "@info:tooltip for button"
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
 
@@ -505,7 +624,7 @@ msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:732
 #, kde-format
-msgctxt "@info:tooltip"
+msgctxt "@info:tooltip for button"
 msgid "Create a new panel with the same settings and applets"
 msgstr ""
 
@@ -524,6 +643,7 @@ msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:744
 #, kde-format
+msgctxt "@info:tooltip for button"
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr ""
 
@@ -568,47 +688,56 @@ msgstr ""
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, kde-format
+msgctxt "@title:window"
 msgid "Manage Panels and Desktops"
 msgstr ""
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 #, kde-format
+msgctxt "@info:usagetip"
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr ""
 
 #: contents/configuration/ShellContainmentConfiguration.qml:44
 #, kde-format
+msgctxt "@action:button Close window"
 msgid "Close"
 msgstr ""
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:187
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Swap with Desktop on Screen %1"
 msgstr ""
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:188
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Move to Screen %1"
 msgstr ""
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:202
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Remove Desktop"
 msgstr ""
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:203
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Remove Panel"
 msgstr ""
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:279
 #, kde-format
+msgctxt "@info % is screen name"
 msgid "%1 (primary)"
 msgstr ""
 
 #: contents/explorer/AppletAlternatives.qml:70
 #, kde-format
+msgctxt "@title:window for widget alternatives explorer"
 msgid "Alternative Widgets"
 msgstr ""
 
@@ -620,6 +749,7 @@ msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:47
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Unsupported Widget"
 msgstr ""
 
@@ -645,12 +775,13 @@ msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:217
 #, kde-format
+msgctxt "@action:button tooltip and accessible cancel uninstall widget"
 msgid "Cancel Uninstallation"
 msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:218
 #, kde-format
-msgctxt "@info:tooltip uninstall a widget"
+msgctxt "@action:button tooltip and accessible uninstall widget"
 msgid "Mark for Uninstallation"
 msgstr ""
 
@@ -668,6 +799,7 @@ msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:265
 #, kde-format
+msgctxt "@action:button"
 msgid "Remove all instances"
 msgstr ""
 
@@ -684,11 +816,13 @@ msgstr[1] ""
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:223
 #, kde-format
+msgctxt "@action:button like listbox, switches category to all widgets"
 msgid "All Widgets"
 msgstr ""
 
 #: contents/explorer/WidgetExplorer.qml:169
 #, kde-format
+msgctxt "@title:group for widget grid"
 msgid "Widgets"
 msgstr ""
 
@@ -718,6 +852,7 @@ msgstr ""
 
 #: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
+msgctxt "@action:button tooltip only"
 msgid "Categories"
 msgstr ""
 
@@ -731,11 +866,13 @@ msgstr[1] ""
 
 #: contents/explorer/WidgetExplorer.qml:389
 #, kde-format
+msgctxt "@info placeholdermessage"
 msgid "No widgets matched the search terms"
 msgstr ""
 
 #: contents/explorer/WidgetExplorer.qml:389
 #, kde-format
+msgctxt "@info placeholdermessage"
 msgid "No widgets available"
 msgstr ""
 
@@ -795,26 +932,31 @@ msgstr ""
 
 #: contents/lockscreen/LockScreenUi.qml:48
 #, kde-format
+msgctxt "@info:status"
 msgid "Unlocking failed"
 msgstr ""
 
 #: contents/lockscreen/LockScreenUi.qml:281
 #, kde-format
+msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr ""
 
 #: contents/lockscreen/LockScreenUi.qml:295
 #, kde-format
+msgctxt "@action:button"
 msgid "Slee&p"
 msgstr ""
 
 #: contents/lockscreen/LockScreenUi.qml:301
 #, kde-format
+msgctxt "@action:button"
 msgid "&Hibernate"
 msgstr ""
 
 #: contents/lockscreen/LockScreenUi.qml:307
 #, kde-format
+msgctxt "@action:button"
 msgid "Switch &User"
 msgstr ""
 
@@ -832,48 +974,50 @@ msgstr ""
 
 #: contents/lockscreen/MainBlock.qml:65
 #, kde-format
+msgctxt "@info:placeholder in text field"
 msgid "Password"
 msgstr ""
 
 #: contents/lockscreen/MainBlock.qml:114
-#: contents/lockscreen/NoPasswordUnlock.qml:17
 #, kde-format
+msgctxt "@action:button accessible only"
 msgid "Unlock"
 msgstr ""
 
 #: contents/lockscreen/MainBlock.qml:163
 #, kde-format
+msgctxt "@info:usagetip"
 msgid "(or scan your fingerprint on the reader)"
 msgstr ""
 
 #: contents/lockscreen/MainBlock.qml:167
 #, kde-format
+msgctxt "@info:usagetip"
 msgid "(or scan your smartcard)"
-msgstr ""
-
-#: contents/lockscreen/MediaControls.qml:59
-#, kde-format
-msgid "No title"
-msgstr ""
-
-#: contents/lockscreen/MediaControls.qml:60
-#, kde-format
-msgid "No media playing"
 msgstr ""
 
 #: contents/lockscreen/MediaControls.qml:88
 #, kde-format
+msgctxt "@action:button Accessible only"
 msgid "Previous track"
 msgstr ""
 
 #: contents/lockscreen/MediaControls.qml:100
 #, kde-format
+msgctxt "@action:button Accessible only"
 msgid "Play or Pause media"
 msgstr ""
 
 #: contents/lockscreen/MediaControls.qml:110
 #, kde-format
+msgctxt "@action:button Accessible only"
 msgid "Next track"
+msgstr ""
+
+#: contents/lockscreen/NoPasswordUnlock.qml:17
+#, kde-format
+msgctxt "@action:button no-password unlock"
+msgid "Unlock"
 msgstr ""
 
 #: contents/views/DesktopEditMode.qml:122
@@ -884,10 +1028,12 @@ msgstr ""
 
 #: contents/views/DesktopEditMode.qml:131
 #, kde-format
+msgctxt "@action:button"
 msgid "Exit Edit Mode"
 msgstr ""
 
 #: contents/views/Panel.qml:326
 #, kde-format
+msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr ""

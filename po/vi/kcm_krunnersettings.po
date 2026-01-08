@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2022-06-19 14:26+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -18,22 +18,30 @@ msgstr ""
 "X-Generator: Lokalize 21.12.2\n"
 
 #: ui/main.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Position on screen:"
+msgctxt "@title:group prefix for radiobutton group"
 msgid "Position on screen:"
 msgstr "Vị trí trên màn hình:"
 
 #: ui/main.qml:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Top"
+msgctxt "@option:check Position on top of screen"
 msgid "Top"
 msgstr "Trên"
 
 #: ui/main.qml:42
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Center"
+msgctxt "@option:check Position in center of screen"
 msgid "Center"
 msgstr "Giữa"
 
 #: ui/main.qml:55
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Activation:"
+msgctxt "@label prefix for checkbutton"
 msgid "Activation:"
 msgstr "Kích hoạt:"
 
@@ -44,30 +52,34 @@ msgid "Activate when pressing any key on the desktop"
 msgstr "Kích hoạt khi đang ở bàn làm việc và nhấn phím bất kì"
 
 #: ui/main.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "History:"
+msgctxt "@title:group prefix for radiobutton group"
 msgid "History:"
 msgstr "Lịch sử:"
 
 #: ui/main.qml:74
 #, kde-format
-msgctxt "@option:check"
+msgctxt "@option:radio History is disabled"
 msgid "Disabled"
 msgstr ""
 
 #: ui/main.qml:79
 #, kde-format
-msgctxt "@option:check The thing being enabled is search history"
+msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable suggestions"
 msgstr ""
 
 #: ui/main.qml:84
 #, kde-format
-msgctxt "@option:check The thing being enabled is search history"
-msgid "Enabled auto-complete"
+msgctxt "@option:radio The thing being enabled is search history"
+msgid "Enable auto-complete"
 msgstr ""
 
 #: ui/main.qml:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear History…"
+msgctxt "@action:button"
 msgid "Clear History…"
 msgstr "Xoá lịch sử…"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-12-05 06:31+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -37,7 +37,7 @@ msgstr "Kritična napaka med branjem bistvenih podatkov o sledilni ploščici %1
 msgid "Cannot connect to X server"
 msgstr "Ni se bilo mogoče povezati s strežnikom X"
 
-#: backends/x11/xlibbackend.cpp:80 ui/main.qml:59
+#: backends/x11/xlibbackend.cpp:80
 #, kde-format
 msgid "No touchpad found"
 msgstr "Najdene ni bilo nobene sledilne ploščice"
@@ -110,23 +110,38 @@ msgstr ""
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Sledilna ploščica je bila odklopljena. Druge niso bile najdene."
 
+#: ui/main.qml:59
+#, fuzzy, kde-format
+#| msgid "No touchpad found"
+msgctxt "@info:status placeholdermessage text"
+msgid "No touchpad found"
+msgstr "Najdene ni bilo nobene sledilne ploščice"
+
 #: ui/main.qml:60
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Connect an external touchpad"
+msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchpad"
 msgstr "Priklopi zunanjo drsno ploščico"
 
 #: ui/main.qml:75
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Device:"
+msgctxt "@label:listbox device selection"
 msgid "Device:"
 msgstr "Naprava:"
 
 #: ui/main.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "Splošno:"
 
 #: ui/main.qml:101
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable device"
+msgctxt "@option:check"
 msgid "Enable device"
 msgstr "Omogoči napravo"
 
@@ -137,7 +152,9 @@ msgid "Disable while mouse is connected"
 msgstr "Onemogoči, ko je miška priklopljena"
 
 #: ui/main.qml:137
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Disable while typing"
+msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "Onemogoči jo med tipkanjem"
 
@@ -154,7 +171,9 @@ msgid "Left and right buttons:"
 msgstr "Levi in desni gumbi:"
 
 #: ui/main.qml:175
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Swap (left-handed mode)"
+msgctxt "@option:check"
 msgid "Swap (left-handed mode)"
 msgstr "Zamenjava (način za levičarje)"
 
@@ -176,12 +195,16 @@ msgstr ""
 "klikov miške."
 
 #: ui/main.qml:217
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pointer speed:"
+msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Hitrost kazalke:"
 
 #: ui/main.qml:297
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable pointer acceleration"
+msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Omogoči pospešek kazalke"
 
@@ -195,52 +218,76 @@ msgstr ""
 "premikanja."
 
 #: ui/main.qml:325
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scrolling speed:"
+msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "Hitrost drsenja:"
 
 #: ui/main.qml:376
-#, kde-format
-msgctxt "Slower Scroll"
+#, fuzzy, kde-format
+#| msgctxt "Slower Scroll"
+#| msgid "Slower"
+msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "Počasneje"
 
 #: ui/main.qml:383
-#, kde-format
-msgctxt "Faster Scroll Speed"
+#, fuzzy, kde-format
+#| msgctxt "Faster Scroll Speed"
+#| msgid "Faster"
+msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "Hitreje"
 
 #: ui/main.qml:390
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scroll by:"
+msgctxt ""
+"@title group begins the sentence 'Scroll by moving two fingers anywhere/"
+"moving one finger on edge'"
 msgid "Scroll by:"
 msgstr "Drsenje z:"
 
 #: ui/main.qml:409
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Moving two fingers anywhere"
+msgctxt ""
+"@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr "S premikanjem dveh prstov kamor koli"
 
 #: ui/main.qml:416
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Moving one finger on edge"
+msgctxt ""
+"@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr "S premikanjem enega prsta po robu"
 
 #: ui/main.qml:424
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Invert scroll direction (Natural scrolling)"
+msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Obrni smer drsenja (naravno drsenje zaslona)"
 
 #: ui/main.qml:438
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Disable horizontal scrolling"
+msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "Onemogoči vodoravno drsenje"
 
 #: ui/main.qml:460
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@label for radiobutton group, begins the sentence 'right-click by "
+#| "pressing bottom-right corner/pressing with two fingers'"
+#| msgid "Right-click by:"
 msgctxt ""
-"@label for radiobutton group, begins the sentence 'right-click by pressing "
-"bottom-right corner/pressing with two fingers'"
+"@title:group for radiobutton group, begins the sentence 'right-click by "
+"pressing bottom-right corner/pressing with two fingers'"
 msgid "Right-click by:"
 msgstr "Desni klik z:"
 
@@ -253,14 +300,18 @@ msgid "Pressing bottom-right corner"
 msgstr "Pritiskom spodnjega desnega kota"
 
 #: ui/main.qml:496
-#, kde-format
-msgctxt "@info shown below radio button"
+#, fuzzy, kde-format
+#| msgctxt "@info shown below radio button"
+#| msgid "Middle-click by pressing both bottom corners."
+msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "Srednji klik s pritiskom na oba spodnja vogala."
 
 #: ui/main.qml:497
-#, kde-format
-msgctxt "@info shown below radio button"
+#, fuzzy, kde-format
+#| msgctxt "@info shown below radio button"
+#| msgid "Middle-click by pressing bottom center."
+msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Srednji klik s pritiskom spodnjega središča."
 
@@ -323,7 +374,9 @@ msgid "Tap to click"
 msgstr "Potrepljaj za klik"
 
 #: ui/main.qml:597
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Allow dragging after tapping"
+msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr "Dovoli vlečenje po dotiku"
 
@@ -338,32 +391,44 @@ msgstr ""
 "sledilni ploščici. Dvignite prst za spuščanje."
 
 #: ui/main.qml:616
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Allow briefly lifting finger during tap-and-drag"
+msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr "Dovoli kratek dvig prsta med dotikom in vlečenjem"
 
 #: ui/main.qml:630
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Two-finger tap:"
+msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "Trepljanje z dvema prstoma:"
 
 #: ui/main.qml:650
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Right-click (three-finger tap to middle-click)"
+msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Desni klik (trepljanje s tremi prsti je klik sredine)"
 
 #: ui/main.qml:651
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Right-click"
+msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "Desni klik"
 
 #: ui/main.qml:659
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle-click (three-finger tap to right-click)"
+msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Srednji klik (trepljanje s tremi prsti je desni klik)"
 
 #: ui/main.qml:660
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle-click"
+msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Srednji klik"
 

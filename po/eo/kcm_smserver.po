@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-01-11 22:49+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -46,12 +46,17 @@ msgid "Applications to be excluded from session"
 msgstr "Aplikaĵoj kiujn vi volas ekskluzivi de seanco"
 
 #: ui/main.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Failed to request restart to firmware setup: %1"
+msgctxt "@info:status inlinemessage"
 msgid "Failed to request restart to firmware setup: %1"
 msgstr "Malsukcesis peti rekomencon de la agordo de la firmware: %1"
 
 #: ui/main.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Next time the computer is restarted, it will enter the UEFI setup screen."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr ""
@@ -59,7 +64,11 @@ msgstr ""
 "ekranon de UEFI."
 
 #: ui/main.qml:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Next time the computer is restarted, it will enter the firmware setup "
+#| "screen."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
@@ -67,7 +76,9 @@ msgstr ""
 "de agordo de firmware."
 
 #: ui/main.qml:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Restart Now"
+msgctxt "@action:button"
 msgid "Restart Now"
 msgstr "Restartigi Nun"
 
@@ -100,7 +111,9 @@ msgid "Session Restore"
 msgstr "Restarigo de Seanco"
 
 #: ui/main.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "On login, launch apps that were open:"
+msgctxt "@title:group prefix for radiobuttons"
 msgid "On login, launch apps that were open:"
 msgstr "Je ensaluto, lanĉ-aplikaĵoj estis malfermitaj:"
 
@@ -140,12 +153,20 @@ msgid "Start with an empty session"
 msgstr "Komenci en malplena seanco"
 
 #: ui/main.qml:113
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ignored applications:"
+msgctxt "@label:textbox"
 msgid "Ignored applications:"
 msgstr "Ignoritaj aplikaĵoj:"
 
 #: ui/main.qml:132
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Write apps' desktop file identifier or, on X11, executable names here "
+#| "(separated by commas or colons, for example 'xterm:org.kde.konsole."
+#| "desktop' or 'xterm,org.kde.konsole.desktop') to prevent them from "
+#| "autostarting along with other session-restored apps."
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "

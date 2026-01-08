@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2022-02-19 12:25+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -18,11 +18,15 @@ msgstr ""
 "X-Generator: Lokalize 21.12.1\n"
 
 #: contents/ui/main.qml:112
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Panel…"
+msgctxt "@info:whatsthis accessible name"
 msgid "Configure Panel…"
 msgstr "Configure Panel…"
 
 #: contents/ui/main.qml:113
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Panel configuration ui"
+msgctxt "@info:whatsthis accessible description"
 msgid "Open Panel configuration ui"
 msgstr "Open Panel configuration UI"

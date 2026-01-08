@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-03-30 09:39+0200\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -21,22 +21,44 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 
 #: KeyboardButton.qml:19
+#, fuzzy
+#| msgid "Keyboard Layout: %1"
+msgctxt "@action:button opens layout chooser %1 is current"
 msgid "Keyboard Layout: %1"
 msgstr "Tastaturoppsett: %1"
 
 #: Login.qml:86
+#, fuzzy
+#| msgid "Username"
+msgctxt "@info:placeholder in textfield"
 msgid "Username"
 msgstr "Brukernavn"
 
 #: Login.qml:103
+#, fuzzy
+#| msgid "Password"
+msgctxt "@info:placeholder in textfield"
 msgid "Password"
 msgstr "Passord"
 
-#: Login.qml:145 Login.qml:151
+#: Login.qml:145
+#, fuzzy
+#| msgid "Log In"
+msgctxt "@action:button Accessible name"
+msgid "Log in"
+msgstr "Logg inn"
+
+#: Login.qml:151
+#, fuzzy
+#| msgid "Log In"
+msgctxt "@action:button"
 msgid "Log In"
 msgstr "Logg inn"
 
 #: Main.qml:200
+#, fuzzy
+#| msgid "Caps Lock is on"
+msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "«Caps Lock» er på"
 
@@ -46,28 +68,46 @@ msgid "Hibernate"
 msgstr ""
 
 #: Main.qml:218 Main.qml:357
-msgctxt "Suspend to RAM"
+#, fuzzy
+#| msgctxt "Suspend to RAM"
+#| msgid "Sleep"
+msgctxt "@action:button Suspend to RAM"
 msgid "Sleep"
 msgstr "Hvilemodus"
 
 #: Main.qml:224 Main.qml:363
+#, fuzzy
+#| msgid "Restart"
+msgctxt "@action:button"
 msgid "Restart"
 msgstr "Start på nytt"
 
 #: Main.qml:230 Main.qml:369
+#, fuzzy
+#| msgid "Shut Down"
+msgctxt "@action:button"
 msgid "Shut Down"
 msgstr "Slå av"
 
 #: Main.qml:236
-msgctxt "For switching to a username and password prompt"
+#, fuzzy
+#| msgctxt "For switching to a username and password prompt"
+#| msgid "Other…"
+msgctxt "@action:button For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Annet …"
 
 #: Main.qml:343
+#, fuzzy
+#| msgid "Type in Username and Password"
+msgctxt "@info:usagetip"
 msgid "Type in Username and Password"
 msgstr "Skriv inn brukernavn og passord"
 
 #: Main.qml:375
+#, fuzzy
+#| msgid "List Users"
+msgctxt "@action:button"
 msgid "List Users"
 msgstr "Vis brukere"
 
@@ -77,9 +117,15 @@ msgid "Virtual Keyboard"
 msgstr "Virtuelt tastatur"
 
 #: Main.qml:516
+#, fuzzy
+#| msgid "Login Failed"
+msgctxt "@info:status"
 msgid "Login Failed"
 msgstr "Feil ved innlogging"
 
 #: SessionButton.qml:18
+#, fuzzy
+#| msgid "Desktop Session: %1"
+msgctxt "@action:button opens sessions menu %1 is current"
 msgid "Desktop Session: %1"
 msgstr "Skrivebordsøkt: %1"

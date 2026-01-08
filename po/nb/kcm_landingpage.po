@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-19 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-03-25 06:44+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -69,7 +69,9 @@ msgid "Global theme"
 msgstr ""
 
 #: ui/main.qml:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Theme:"
+msgctxt "@title:group for light/dark quick switch"
 msgid "Theme:"
 msgstr "Tema:"
 
@@ -94,7 +96,9 @@ msgid "More appearance settings:"
 msgstr "Flere innstillinger for utseende:"
 
 #: ui/main.qml:183
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Animation speed:"
+msgctxt "@title:slider"
 msgid "Animation speed:"
 msgstr "Animasjonshastighet:"
 
@@ -124,7 +128,9 @@ msgid "Selects them"
 msgstr "Merker dem"
 
 #: ui/main.qml:226
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open by double-clicking instead"
+msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "Åpne bare med dobbeltklikking"
 
@@ -135,7 +141,9 @@ msgid "Opens them"
 msgstr "Åpner dem"
 
 #: ui/main.qml:259
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select by clicking on item's selection marker"
+msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
 msgstr "Merk element ved å trykke på markeringsikonet"
 
@@ -146,6 +154,8 @@ msgid "More behavior settings:"
 msgstr "Flere innstillinger for programatferd:"
 
 #: ui/main.qml:299
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Most used pages:"
+msgctxt "@title:group for grid of buttons opening kcms"
 msgid "Most used pages:"
 msgstr "Mest brukte sider:"

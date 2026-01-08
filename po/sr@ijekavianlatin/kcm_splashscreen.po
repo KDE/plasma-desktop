@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_splashscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2015-03-28 11:52+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -48,23 +48,27 @@ msgstr ""
 
 #: ui/main.qml:30
 #, kde-format
+msgctxt "@action:button"
 msgid "&Get New…"
 msgstr ""
 
 #: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Failed to successfully test the splash screen."
+msgctxt "@info:status"
 msgid "Failed to show the splash screen preview."
 msgstr "Proba uvodnog ekrana nije uspela."
 
 #: ui/main.qml:81
 #, fuzzy, kde-format
 #| msgid "Test Splashscreen"
+msgctxt "@action:button"
 msgid "Preview Splash Screen"
 msgstr "Probni uvodni ekran"
 
 #: ui/main.qml:86
 #, kde-format
+msgctxt "@action:button"
 msgid "Uninstall"
 msgstr ""
 

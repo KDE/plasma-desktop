@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-05-20 18:59+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -60,30 +60,40 @@ msgid "Description:"
 msgstr "Description:"
 
 #: ui/ActivityEditor.qml:84
-#, kde-format
-msgctxt "@option:check"
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "While on this activity, allow:"
+msgctxt "@title:group for checkbox group"
 msgid "While on this activity, allow:"
 msgstr "While on this activity, allow:"
 
 #: ui/ActivityEditor.qml:85
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tracking file and app use"
+msgctxt "@option:check While on activity, allow"
 msgid "Tracking file and app use"
 msgstr "Tracking file and app use"
 
 #: ui/ActivityEditor.qml:91
-#, kde-format
-msgctxt "@option:check"
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Automatically turning off the screen"
+msgctxt "@option:check While on activity, allow"
 msgid "Automatically turning off the screen"
 msgstr "Automatically turning off the screen"
 
 #: ui/ActivityEditor.qml:97
-#, kde-format
-msgctxt "@option:check"
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Automatically shutting down or sleeping"
+msgctxt "@option:check While on activity, allow"
 msgid "Automatically shutting down or sleeping"
 msgstr "Automatically shutting down or sleeping"
 
 #: ui/ActivityEditor.qml:103
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Shortcut for switching:"
+msgctxt "@label prefix for keyboard shortcut input button"
 msgid "Shortcut for switching:"
 msgstr "Shortcut for switching:"
 
@@ -94,7 +104,9 @@ msgid "Delete %1 activity"
 msgstr "Delete %1 activity"
 
 #: ui/main.qml:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create New…"
+msgctxt "@action:button Create new Activity"
 msgid "Create New…"
 msgstr "Create New…"
 
@@ -111,7 +123,9 @@ msgid "Do you want to delete activity '%1'?"
 msgstr "Do you want to delete activity '%1'?"
 
 #: ui/main.qml:94
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete Activity"
+msgctxt "@action:button in dialog confirms deletion"
 msgid "Delete Activity"
 msgstr "Delete Activity"
 

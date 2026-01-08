@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-09-23 10:13+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -64,30 +64,40 @@ msgid "Description:"
 msgstr "Descripció:"
 
 #: ui/ActivityEditor.qml:84
-#, kde-format
-msgctxt "@option:check"
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "While on this activity, allow:"
+msgctxt "@title:group for checkbox group"
 msgid "While on this activity, allow:"
 msgstr "Mentre esteu en aquesta activitat, permet:"
 
 #: ui/ActivityEditor.qml:85
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tracking file and app use"
+msgctxt "@option:check While on activity, allow"
 msgid "Tracking file and app use"
 msgstr "Seguiment de l'ús de fitxers i aplicacions"
 
 #: ui/ActivityEditor.qml:91
-#, kde-format
-msgctxt "@option:check"
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Automatically turning off the screen"
+msgctxt "@option:check While on activity, allow"
 msgid "Automatically turning off the screen"
 msgstr "Apaga automàticament la pantalla"
 
 #: ui/ActivityEditor.qml:97
-#, kde-format
-msgctxt "@option:check"
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Automatically shutting down or sleeping"
+msgctxt "@option:check While on activity, allow"
 msgid "Automatically shutting down or sleeping"
 msgstr "Apaga o adorm automàticament"
 
 #: ui/ActivityEditor.qml:103
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Shortcut for switching:"
+msgctxt "@label prefix for keyboard shortcut input button"
 msgid "Shortcut for switching:"
 msgstr "Drecera per a alternar:"
 
@@ -98,7 +108,9 @@ msgid "Delete %1 activity"
 msgstr "Suprimeix l'activitat %1"
 
 #: ui/main.qml:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create New…"
+msgctxt "@action:button Create new Activity"
 msgid "Create New…"
 msgstr "Crea nova…"
 
@@ -115,7 +127,9 @@ msgid "Do you want to delete activity '%1'?"
 msgstr "Esteu segur que voleu suprimir l'activitat «%1»?"
 
 #: ui/main.qml:94
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete Activity"
+msgctxt "@action:button in dialog confirms deletion"
 msgid "Delete Activity"
 msgstr "Suprimeix l'activitat"
 

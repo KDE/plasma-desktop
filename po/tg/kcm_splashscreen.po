@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2019-09-27 23:43+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -46,22 +46,27 @@ msgstr ""
 
 #: ui/main.qml:30
 #, kde-format
+msgctxt "@action:button"
 msgid "&Get New…"
 msgstr ""
 
 #: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Failed to test the splash screen."
+msgctxt "@info:status"
 msgid "Failed to show the splash screen preview."
 msgstr "Санҷиши экрани зоҳирӣ қатъ шуд."
 
 #: ui/main.qml:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preview Splash Screen"
+msgctxt "@action:button"
 msgid "Preview Splash Screen"
 msgstr "Пешнамоиши экрани зоҳирӣ"
 
 #: ui/main.qml:86
 #, kde-format
+msgctxt "@action:button"
 msgid "Uninstall"
 msgstr ""
 

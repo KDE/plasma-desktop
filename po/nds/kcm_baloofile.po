@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2014-05-08 15:36+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -20,16 +20,20 @@ msgstr ""
 #: ui/main.qml:44
 #, fuzzy, kde-format
 #| msgid "Index Audio"
+msgctxt "@action:button"
 msgid "Pause Indexer"
 msgstr "Klangdateien indizeren"
 
 #: ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Index Audio"
+msgctxt "@action:button"
 msgid "Resume Indexer"
-msgstr ""
+msgstr "Klangdateien indizeren"
 
 #: ui/main.qml:61
 #, kde-format
+msgctxt "@info inlinemessage"
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
@@ -37,6 +41,7 @@ msgstr ""
 
 #: ui/main.qml:71
 #, kde-format
+msgctxt "@info inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
 "if indexing is re-enabled later, the entire index will have to be re-created "
@@ -45,6 +50,7 @@ msgstr ""
 
 #: ui/main.qml:73
 #, kde-format
+msgctxt "@action:button"
 msgid "Delete Index Data"
 msgstr ""
 
@@ -53,6 +59,7 @@ msgstr ""
 #| msgid ""
 #| "Desktop Search helps you quickly locate all your files based on their "
 #| "content"
+msgctxt "@info:usagetip"
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
@@ -67,22 +74,26 @@ msgstr ""
 
 #: ui/main.qml:109
 #, kde-format
+msgctxt "@option:radio Data to index"
 msgid "Nothing (disable indexing entirely)"
 msgstr ""
 
 #: ui/main.qml:121
 #, kde-format
+msgctxt "@option:radio Data to index"
 msgid "File names only"
 msgstr ""
 
 #: ui/main.qml:136
 #, kde-format
+msgctxt "@option:radio Data to index"
 msgid "File names and contents"
 msgstr ""
 
 #: ui/main.qml:157
 #, fuzzy, kde-format
 #| msgid "Show hidden folders"
+msgctxt "@option:check"
 msgid "Also index hidden files and folders"
 msgstr "Versteken Ornern wiesen"
 
@@ -118,13 +129,16 @@ msgid "Currently indexing: <filename>%1</filename>"
 msgstr "Dateiindizeren"
 
 #: ui/main.qml:270
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Index Audio"
+msgctxt "@info:status"
 msgid "Not indexed"
-msgstr ""
+msgstr "Klangdateien indizeren"
 
 #: ui/main.qml:271
 #, fuzzy, kde-format
 #| msgid "Index Audio"
+msgctxt "@info:status"
 msgid "Indexed"
 msgstr "Klangdateien indizeren"
 
@@ -137,12 +151,14 @@ msgstr ""
 #: ui/main.qml:318
 #, fuzzy, kde-format
 #| msgid "Select the folder which should be excluded"
+msgctxt "@title:window"
 msgid "Select a folder to include"
 msgstr "Den Orner fastleggen, den Du utsluten wullt"
 
 #: ui/main.qml:318
 #, fuzzy, kde-format
 #| msgid "Select the folder which should be excluded"
+msgctxt "@title:window"
 msgid "Select a folder to exclude"
 msgstr "Den Orner fastleggen, den Du utsluten wullt"
 

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-01-10 14:48+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -56,12 +56,17 @@ msgid "Applications to be excluded from session"
 msgstr "Applications à exclure de la session"
 
 #: ui/main.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Failed to request restart to firmware setup: %1"
+msgctxt "@info:status inlinemessage"
 msgid "Failed to request restart to firmware setup: %1"
 msgstr "Impossible de demander un redémarrage pour configurer le firmware : %1"
 
 #: ui/main.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Next time the computer is restarted, it will enter the UEFI setup screen."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr ""
@@ -69,7 +74,11 @@ msgstr ""
 "UEFI."
 
 #: ui/main.qml:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Next time the computer is restarted, it will enter the firmware setup "
+#| "screen."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
@@ -77,7 +86,9 @@ msgstr ""
 "du firmware."
 
 #: ui/main.qml:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Restart Now"
+msgctxt "@action:button"
 msgid "Restart Now"
 msgstr "Démarrer maintenant"
 
@@ -110,7 +121,9 @@ msgid "Session Restore"
 msgstr "Restauration de la session"
 
 #: ui/main.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "On login, launch apps that were open:"
+msgctxt "@title:group prefix for radiobuttons"
 msgid "On login, launch apps that were open:"
 msgstr "A la connexion, lancer les applications ayant été ouvertes :"
 
@@ -151,12 +164,20 @@ msgid "Start with an empty session"
 msgstr "Démarrer avec une session vide"
 
 #: ui/main.qml:113
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ignored applications:"
+msgctxt "@label:textbox"
 msgid "Ignored applications:"
 msgstr "Applications ignorées :"
 
 #: ui/main.qml:132
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Write apps' desktop file identifier or, on X11, executable names here "
+#| "(separated by commas or colons, for example 'xterm:org.kde.konsole."
+#| "desktop' or 'xterm,org.kde.konsole.desktop') to prevent them from "
+#| "autostarting along with other session-restored apps."
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "

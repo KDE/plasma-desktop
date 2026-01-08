@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-19 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-09-13 18:18+0300\n"
 "Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
 "Language-Team: el <kde-i18n-el@kde.org>\n"
@@ -68,7 +68,9 @@ msgid "Global theme"
 msgstr ""
 
 #: ui/main.qml:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Theme:"
+msgctxt "@title:group for light/dark quick switch"
 msgid "Theme:"
 msgstr "Θέμα:"
 
@@ -93,7 +95,9 @@ msgid "More appearance settings:"
 msgstr "Περισσότερες ρυθμίσεις εμφάνισης:"
 
 #: ui/main.qml:183
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Animation speed:"
+msgctxt "@title:slider"
 msgid "Animation speed:"
 msgstr "Ταχύτητα κίνησης:"
 
@@ -123,7 +127,9 @@ msgid "Selects them"
 msgstr "Τους επιλέγει"
 
 #: ui/main.qml:226
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open by double-clicking instead"
+msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "Άνοιγμα με διπλό κλικ"
 
@@ -134,7 +140,9 @@ msgid "Opens them"
 msgstr "Τους ανοίγει"
 
 #: ui/main.qml:259
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select by clicking on item's selection marker"
+msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
 msgstr "Επιλογή κάνοντας κλικ στο δείκτη επιλογής στοιχείου"
 
@@ -145,6 +153,8 @@ msgid "More behavior settings:"
 msgstr "Περισσότερες ρυθμίσεις συμπεριφοράς:"
 
 #: ui/main.qml:299
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Most used pages:"
+msgctxt "@title:group for grid of buttons opening kcms"
 msgid "Most used pages:"
 msgstr "Πιο συχνές σελίδες:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-10-09 01:19+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -19,22 +19,44 @@ msgstr ""
 "X-Generator: Lokalize 24.12.3\n"
 
 #: KeyboardButton.qml:19
+#, fuzzy
+#| msgid "Keyboard Layout: %1"
+msgctxt "@action:button opens layout chooser %1 is current"
 msgid "Keyboard Layout: %1"
 msgstr "키보드 레이아웃: %1"
 
 #: Login.qml:86
+#, fuzzy
+#| msgid "Username"
+msgctxt "@info:placeholder in textfield"
 msgid "Username"
 msgstr "사용자 이름"
 
 #: Login.qml:103
+#, fuzzy
+#| msgid "Password"
+msgctxt "@info:placeholder in textfield"
 msgid "Password"
 msgstr "암호"
 
-#: Login.qml:145 Login.qml:151
+#: Login.qml:145
+#, fuzzy
+#| msgid "Log In"
+msgctxt "@action:button Accessible name"
+msgid "Log in"
+msgstr "로그인"
+
+#: Login.qml:151
+#, fuzzy
+#| msgid "Log In"
+msgctxt "@action:button"
 msgid "Log In"
 msgstr "로그인"
 
 #: Main.qml:200
+#, fuzzy
+#| msgid "Caps Lock is on"
+msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "Caps Lock이 켜져 있음"
 
@@ -44,28 +66,46 @@ msgid "Hibernate"
 msgstr "최대 절전 모드"
 
 #: Main.qml:218 Main.qml:357
-msgctxt "Suspend to RAM"
+#, fuzzy
+#| msgctxt "Suspend to RAM"
+#| msgid "Sleep"
+msgctxt "@action:button Suspend to RAM"
 msgid "Sleep"
 msgstr "대기 모드"
 
 #: Main.qml:224 Main.qml:363
+#, fuzzy
+#| msgid "Restart"
+msgctxt "@action:button"
 msgid "Restart"
 msgstr "다시 시작"
 
 #: Main.qml:230 Main.qml:369
+#, fuzzy
+#| msgid "Shut Down"
+msgctxt "@action:button"
 msgid "Shut Down"
 msgstr "컴퓨터 끄기"
 
 #: Main.qml:236
-msgctxt "For switching to a username and password prompt"
+#, fuzzy
+#| msgctxt "For switching to a username and password prompt"
+#| msgid "Other…"
+msgctxt "@action:button For switching to a username and password prompt"
 msgid "Other…"
 msgstr "기타…"
 
 #: Main.qml:343
+#, fuzzy
+#| msgid "Type in Username and Password"
+msgctxt "@info:usagetip"
 msgid "Type in Username and Password"
 msgstr "사용자 이름과 암호 입력"
 
 #: Main.qml:375
+#, fuzzy
+#| msgid "List Users"
+msgctxt "@action:button"
 msgid "List Users"
 msgstr "사용자 목록"
 
@@ -75,9 +115,15 @@ msgid "Virtual Keyboard"
 msgstr "가상 키보드"
 
 #: Main.qml:516
+#, fuzzy
+#| msgid "Login Failed"
+msgctxt "@info:status"
 msgid "Login Failed"
 msgstr "로그인 실패"
 
 #: SessionButton.qml:18
+#, fuzzy
+#| msgid "Desktop Session: %1"
+msgctxt "@action:button opens sessions menu %1 is current"
 msgid "Desktop Session: %1"
 msgstr "데스크톱 세션: %1"

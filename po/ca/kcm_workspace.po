@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-05-01 10:36+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -23,7 +23,11 @@ msgstr ""
 "X-Generator: Lokalize 22.12.3\n"
 
 #: ui/main.qml:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The system must be restarted before changes to the middle-click paste "
+#| "setting can take effect."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
@@ -32,7 +36,9 @@ msgstr ""
 "amb el clic del mig tinguin efecte."
 
 #: ui/main.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Restart"
+msgctxt "@action:button"
 msgid "Restart"
 msgstr "Reinicia"
 
@@ -55,7 +61,13 @@ msgid "Panel and widget tooltips"
 msgstr "Consells del plafó i dels ginys"
 
 #: ui/main.qml:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Allows all Plasma panel and desktop widgets to show descriptive tooltips "
+#| "when hovered with the pointer. This setting has no effect on the small "
+#| "tooltips displayed when hovering over individual buttons and other user "
+#| "interface elements."
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Allows all Plasma panel and desktop widgets to show descriptive tooltips "
 "when hovered with the pointer. This setting has no effect on the small "
@@ -76,7 +88,11 @@ msgid "OSD popups for status changes"
 msgstr "Finestres emergents OSD de canvis d'estat"
 
 #: ui/main.qml:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Allows all Plasma widgets to show on-screen display (OSD) popups for "
+#| "changes like volume and brightness level, or audio device switching."
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
@@ -92,28 +108,40 @@ msgid "Scrolling"
 msgstr "Desplaçament"
 
 #: ui/main.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clicking in scrollbar track:"
+msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
 msgstr "En fer clic a la via de la barra de desplaçament:"
 
 #: ui/main.qml:101
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
+#| "to the clicked location'"
+#| msgid "Scrolls to the clicked location"
 msgctxt ""
-"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
-"the clicked location'"
+"@option:radio part of a complete sentence: 'Clicking in scrollbar track "
+"scrolls to the clicked location'"
 msgid "Scrolls to the clicked location"
 msgstr "Desplaça a la ubicació clicada"
 
 #: ui/main.qml:119
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
+#| "one page up or down'"
+#| msgid "Scrolls one page up or down"
 msgctxt ""
-"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
-"page up or down'"
+"@option:radio part of a complete sentence: 'Clicking in scrollbar track "
+"scrolls one page up or down'"
 msgid "Scrolls one page up or down"
 msgstr "Desplaça una pàgina amunt o avall"
 
 #: ui/main.qml:137
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle-click to scroll to clicked location"
+msgctxt "@info:usagetip"
 msgid "Middle-click to scroll to clicked location"
 msgstr "Clic del mig per a desplaçar a la ubicació clicada"
 
@@ -157,7 +185,9 @@ msgid "Selects them"
 msgstr "Se seleccionen"
 
 #: ui/main.qml:201
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open by double-clicking instead"
+msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "Obre fent doble clic"
 
@@ -168,7 +198,9 @@ msgid "Opens them"
 msgstr "S'obren"
 
 #: ui/main.qml:232
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select by clicking on item's selection marker"
+msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
 msgstr "Selecciona en clicar al marcador de selecció de l'element"
 
@@ -189,7 +221,9 @@ msgid "Pastes selected text"
 msgstr "Enganxa el text seleccionat"
 
 #: ui/main.qml:268
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Double-click interval:"
+msgctxt "@label:spinbox"
 msgid "Double-click interval:"
 msgstr "Interval del doble clic:"
 
@@ -208,7 +242,11 @@ msgid "ms"
 msgstr "ms"
 
 #: ui/main.qml:301
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Two clicks within this duration are considered a double-click. Some "
+#| "applications may not honor this setting."
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
@@ -227,17 +265,23 @@ msgstr ""
 "augmenteu l'interval del doble clic."
 
 #: ui/main.qml:354
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Drag and Drop"
+msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr "Arrossegar i deixar anar"
 
 #: ui/main.qml:361
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "When dragging files or folders:"
+msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "En arrossegar fitxers o carpetes:"
 
 #: ui/main.qml:362
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Always ask what to do"
+msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr "Demana sempre què fer"
 
@@ -254,7 +298,9 @@ msgstr ""
 "un enllaç simbòlic. En cas contrari mostra un diàleg."
 
 #: ui/main.qml:386
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move if on the same device"
+msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "Mou si estan en el mateix dispositiu"
 
@@ -273,24 +319,35 @@ msgid "Touch"
 msgstr "Tàctil"
 
 #: ui/main.qml:416
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable Touch Mode:"
+msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Touch Mode:"
 msgstr "Activa el mode tàctil:"
 
 #: ui/main.qml:418
-#, kde-format
-msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
+#, fuzzy, kde-format
+#| msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
+#| msgid "Automatically enable as needed"
+msgctxt "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Activa automàticament quan calgui"
 
 #: ui/main.qml:418
-#, kde-format
-msgctxt "As in: 'Touch Mode is never enabled'"
+#, fuzzy, kde-format
+#| msgctxt "As in: 'Touch Mode is never enabled'"
+#| msgid "Never enabled"
+msgctxt "option:radio As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Mai activat"
 
 #: ui/main.qml:435
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Touch Mode will be automatically activated whenever the system detects a "
+#| "touchscreen but no mouse or touchpad. For example: when a transformable "
+#| "laptop's keyboard is flipped around or detached."
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
@@ -313,7 +370,11 @@ msgid "Disabled"
 msgstr "Desactivat"
 
 #: ui/main.qml:486
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "In Touch Mode, many elements of the user interface will become larger to "
+#| "more easily accommodate touch interaction."
+msgctxt "@info:usagetip"
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
 "more easily accommodate touch interaction."

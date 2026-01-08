@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-07-21 22:13-0500\n"
 "Last-Translator: aalam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -130,17 +130,22 @@ msgid "Configure Extra Buttons…"
 msgstr ""
 
 #: ui/main.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Device:"
+msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "ਡਿਵਾਈਸ:"
 
 #: ui/main.qml:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@title:group"
 msgid "General:"
 msgstr "ਆਮ:"
 
 #: ui/main.qml:88
 #, kde-format
+msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr ""
 
@@ -154,6 +159,7 @@ msgstr "ਖੱਬੇ ਤੇ ਸੱਜੇ ਬਟਨਾਂ ਨੂੰ ਬਦਲੋ�
 #: ui/main.qml:106
 #, fuzzy, kde-format
 #| msgid "Left handed mode"
+msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
 msgstr "ਖੱਬੇ ਹੱਥਾ ਢੰਗ"
 
@@ -174,26 +180,31 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:148
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pointer speed:"
+msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "ਪੁਆਇੰਟਰ ਦੀ ਗਤੀ:"
 
 #: ui/main.qml:227
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
+msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "ਪੁਆਇੰਟਰ ਐਕਸਲੇਸ਼ਨ:"
 
 #: ui/main.qml:241
 #, fuzzy, kde-format
 #| msgid "Cursor travel distance depends on the mouse movement speed."
-msgctxt "@info:tooltip from ContextualHelpButton"
+msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr "ਕਰਸਰ ਹਿਲਜੁਲ ਦੀ ਦੂਰੀ ਮਾਊਸ ਦੀ ਹਿਲਜੁਲ ਦੀ ਸਪੀਡ ਉੱਤੇ ਨਿਰਭਰ ਕਰਦੀ ਹੈ।"
 
 #: ui/main.qml:254
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scrolling speed:"
+msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr "ਸਰਕਾਉਣ ਦੀ ਗਤੀ:"
 
@@ -210,23 +221,28 @@ msgid "Faster"
 msgstr "ਵੱਧ ਤੇਜ਼"
 
 #: ui/main.qml:321
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scrolling:"
+msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "ਸਰਕਾਉਣਾ:"
 
 #: ui/main.qml:322
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Invert scroll direction"
+msgctxt "@option:check"
 msgid "Invert scroll direction"
 msgstr "ਉਲਟ ਸਕਰੋਲ ਦਿਸ਼ਾ"
 
 #: ui/main.qml:339
 #, kde-format
+msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr ""
 
 #: ui/main.qml:351
 #, kde-format
-msgctxt "@info:tooltip from ContextualHelpButton"
+msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "This will interfere with applications that use middle-button drag, such as "
 "some image editors, document viewers, or video games. It may be used on any "

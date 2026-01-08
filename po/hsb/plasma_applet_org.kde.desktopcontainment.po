@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2008-11-13 01:06+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -23,12 +23,14 @@ msgstr ""
 #| "Title of the page that lets the user choose which location should the "
 #| "folderview show"
 #| msgid "Location"
+msgctxt "@title:group for configuration dialog page"
 msgid "Location"
 msgstr "Městno"
 
 #: package/contents/config/config.qml:24
-#: package/contents/ui/FolderViewLayer.qml:357
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icons"
+msgctxt "@title:group for configuration dialog page"
 msgid "Icons"
 msgstr "piktogramy"
 
@@ -38,17 +40,20 @@ msgstr "piktogramy"
 #| "Title of the page that lets the user choose how to filter the folderview "
 #| "contents"
 #| msgid "Filter"
+msgctxt "@title:group for configuration dialog page"
 msgid "Filter"
 msgstr "Filter"
 
 #: package/contents/ui/BackButtonItem.qml:105
 #, kde-format
+msgctxt "@action:button"
 msgid "Back"
 msgstr ""
 
 #: package/contents/ui/ConfigFilter.qml:63
 #, fuzzy, kde-format
 #| msgid "File types:"
+msgctxt "@label:listbox filter mode"
 msgid "Files:"
 msgstr "Datajowe družiny:"
 
@@ -56,67 +61,82 @@ msgstr "Datajowe družiny:"
 #, fuzzy, kde-format
 #| msgctxt "Icons on the desktop"
 #| msgid "Lock in Place"
+msgctxt "@item:inlistbox filter mode"
 msgid "Show all"
 msgstr "Na městno přiwjazać"
 
 #: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
+msgctxt "@item:inlistbox filter mode"
 msgid "Show matching"
 msgstr ""
 
 #: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
+msgctxt "@item:inlistbox filter mode"
 msgid "Hide matching"
 msgstr ""
 
 #: package/contents/ui/ConfigFilter.qml:69
 #, kde-format
+msgctxt "@label:textbox"
 msgid "File name pattern:"
 msgstr ""
 
 #: package/contents/ui/ConfigFilter.qml:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File types:"
+msgctxt "@label:textbox filter list by"
 msgid "File types:"
 msgstr "Datajowe družiny:"
 
 #: package/contents/ui/ConfigFilter.qml:82
 #, kde-format
+msgctxt "@option:check prefix"
 msgid "Show hidden files:"
 msgstr ""
 
 #: package/contents/ui/ConfigFilter.qml:111
 #, fuzzy, kde-format
 #| msgid "File types:"
+msgctxt "@title:column"
 msgid "File Type"
 msgstr "Datajowe družiny:"
 
 #: package/contents/ui/ConfigFilter.qml:112
 #, kde-format
+msgctxt "@title:column"
 msgid "Description"
 msgstr ""
 
 #: package/contents/ui/ConfigFilter.qml:182
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Desktop Folder"
+msgctxt "@action:button tooltip only Select all filetypes"
 msgid "Select All"
-msgstr ""
+msgstr "Zapisk na dźěłowym powjerchu"
 
 #: package/contents/ui/ConfigFilter.qml:192
 #, kde-format
+msgctxt "@action:button tooltip only Deselect all filetypes"
 msgid "Deselect All"
 msgstr ""
 
 #: package/contents/ui/ConfigFilter.qml:201
 #, kde-format
+msgctxt "@action:button tooltip only, ascending/descending"
 msgid "Switch Sort Order"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:57
 #, kde-format
+msgctxt "@title:group prefix for checkbox + button"
 msgid "Panel button:"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:63
 #, kde-format
+msgctxt "@option:check"
 msgid "Use a custom icon"
 msgstr ""
 
@@ -135,6 +155,7 @@ msgstr "Piktogramy sortěrować"
 
 #: package/contents/ui/ConfigIcons.qml:122
 #, kde-format
+msgctxt "@label:listbox columns/rows"
 msgid "Arrangement:"
 msgstr ""
 
@@ -152,6 +173,7 @@ msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:135
 #, kde-format
+msgctxt "@label:listbox, LtR/RtL"
 msgid "Sort Alignment:"
 msgstr ""
 
@@ -173,11 +195,13 @@ msgstr "Wot horjeka dele"
 #, fuzzy, kde-format
 #| msgctxt "Icons on the desktop"
 #| msgid "Lock in Place"
+msgctxt "@option:check lock icon positions"
 msgid "Lock in place"
 msgstr "Na městno přiwjazać"
 
 #: package/contents/ui/ConfigIcons.qml:175
 #, kde-format
+msgctxt "@label:listbox sort items by field"
 msgid "Sort by:"
 msgstr ""
 
@@ -254,26 +278,28 @@ msgstr ""
 #: package/contents/ui/ConfigIcons.qml:234
 #, fuzzy, kde-format
 #| msgid "Icon size:"
+msgctxt "@label:slider"
 msgid "Icon size:"
 msgstr "Wulkosć piktogramow:"
 
 #: package/contents/ui/ConfigIcons.qml:249
 #, fuzzy, kde-format
 #| msgid "Small"
-msgctxt "@label:slider smallest icon size"
+msgctxt "@item:inrange smallest icon size"
 msgid "Small"
 msgstr "Małe"
 
 #: package/contents/ui/ConfigIcons.qml:258
 #, fuzzy, kde-format
 #| msgid "Large"
-msgctxt "@label:slider largest icon size"
+msgctxt "@item:inrange largest icon size"
 msgid "Large"
 msgstr "Wulke"
 
 #: package/contents/ui/ConfigIcons.qml:267
 #, fuzzy, kde-format
 #| msgid "Label:"
+msgctxt "@label:listbox"
 msgid "Label width:"
 msgstr "Etiket:"
 
@@ -297,57 +323,67 @@ msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:280
 #, kde-format
+msgctxt "@label:spinbox"
 msgid "Text lines:"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:296
 #, kde-format
+msgctxt "@title:group prefix for checkbox group"
 msgid "When hovering over icons:"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:298
 #, kde-format
+msgctxt "@option:check When hovering over icons…"
 msgid "Show tooltips"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:305
 #, fuzzy, kde-format
 #| msgid "Desktop Folder"
+msgctxt "@option:check When hovering over icons…"
 msgid "Show selection markers"
 msgstr "Zapisk na dźěłowym powjerchu"
 
 #: package/contents/ui/ConfigIcons.qml:312
 #, fuzzy, kde-format
 #| msgid "Show previews"
+msgctxt "@option:check When hovering over icons…"
 msgid "Show folder preview popups"
 msgstr "Přehladki pokazać"
 
 #: package/contents/ui/ConfigIcons.qml:322
 #, fuzzy, kde-format
 #| msgid "&Rename"
+msgctxt "@label prefix for checkbox"
 msgid "Rename:"
 msgstr "&Hinak pomjenować"
 
 #: package/contents/ui/ConfigIcons.qml:326
 #, kde-format
+msgctxt "@option:check"
 msgid "Rename inline by clicking selected item's text"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:337
 #, fuzzy, kde-format
 #| msgid "Show previews"
+msgctxt "@title:group prefix for checkbox and button"
 msgid "Previews:"
 msgstr "Přehladki pokazać"
 
 #: package/contents/ui/ConfigIcons.qml:339
 #, fuzzy, kde-format
 #| msgid "Show previews"
+msgctxt "@option:check"
 msgid "Show preview thumbnails"
 msgstr "Přehladki pokazać"
 
 #: package/contents/ui/ConfigIcons.qml:347
 #, fuzzy, kde-format
 #| msgid "Show previews"
+msgctxt "@action:button opens dialog"
 msgid "Configure Preview Plugins…"
 msgstr "Přehladki pokazać"
 
@@ -432,27 +468,32 @@ msgstr ""
 
 #: package/contents/ui/ConfigOverlay.qml:97
 #, kde-format
+msgctxt "@action:button tooltip rotate widget"
 msgid "Click and drag to rotate"
 msgstr ""
 
 #: package/contents/ui/ConfigOverlay.qml:183
 #, kde-format
+msgctxt "@action:button tooltip hide widget background"
 msgid "Hide Background"
 msgstr ""
 
 #: package/contents/ui/ConfigOverlay.qml:183
 #, kde-format
+msgctxt "@action:button tooltip"
 msgid "Show Background"
 msgstr ""
 
 #: package/contents/ui/ConfigOverlay.qml:231
 #, kde-format
+msgctxt "@action:button tooltip remove widget"
 msgid "Remove"
 msgstr ""
 
 #: package/contents/ui/FolderItemPreviewPluginsDialog.qml:18
 #, fuzzy, kde-format
 #| msgid "Show previews"
+msgctxt "@title:window"
 msgid "Preview Plugins"
 msgstr "Přehladki pokazać"
 
@@ -472,9 +513,17 @@ msgctxt "@info:placeholder"
 msgid "Folder is empty"
 msgstr "Najprjedy zapiski"
 
+#: package/contents/ui/FolderViewLayer.qml:357
+#, fuzzy, kde-format
+#| msgid "Icons"
+msgctxt "@item:inmenu opens submenu with view options like sorting"
+msgid "Icons"
+msgstr "piktogramy"
+
 #: package/contents/ui/main.qml:439
 #, fuzzy, kde-format
 #| msgid "&Refresh Desktop"
+msgctxt "@action:inmenu opens config dialog"
 msgid "Desktop and Wallpaper"
 msgstr "&Dźěłowy powjerch aktualizować"
 

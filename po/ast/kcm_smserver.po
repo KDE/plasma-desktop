@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-03-18 01:19+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -43,23 +43,27 @@ msgstr ""
 
 #: ui/main.qml:30
 #, kde-format
+msgctxt "@info:status inlinemessage"
 msgid "Failed to request restart to firmware setup: %1"
 msgstr ""
 
 #: ui/main.qml:31
 #, kde-format
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr ""
 
 #: ui/main.qml:32
 #, kde-format
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
 
 #: ui/main.qml:37
 #, kde-format
+msgctxt "@action:button"
 msgid "Restart Now"
 msgstr ""
 
@@ -93,6 +97,7 @@ msgstr "Restauración de sesiones"
 
 #: ui/main.qml:71
 #, kde-format
+msgctxt "@title:group prefix for radiobuttons"
 msgid "On login, launch apps that were open:"
 msgstr ""
 
@@ -128,12 +133,15 @@ msgid "Start with an empty session"
 msgstr ""
 
 #: ui/main.qml:113
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ignored applications:"
+msgctxt "@label:textbox"
 msgid "Ignored applications:"
 msgstr "Aplicaciones inoraes:"
 
 #: ui/main.qml:132
 #, kde-format
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "

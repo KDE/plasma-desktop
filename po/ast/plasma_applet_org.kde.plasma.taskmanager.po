@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-09 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2023-12-12 00:58+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -104,12 +104,16 @@ msgid "9,999+"
 msgstr ""
 
 #: qml/config.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Appearance"
+msgctxt "@title:group for configuration dialog page"
 msgid "Appearance"
 msgstr "Aspeutu"
 
 #: qml/config.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Behavior"
+msgctxt "@title:group for configuration dialog page"
 msgid "Behavior"
 msgstr "Comportamientu"
 
@@ -660,17 +664,23 @@ msgid "On the top"
 msgstr "Arriba"
 
 #: qml/ContextMenu.qml:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Places"
+msgctxt "@title:group for section of menu items"
 msgid "Places"
 msgstr "Llugares"
 
 #: qml/ContextMenu.qml:106
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Recent Files"
+msgctxt "@title:group for section of menu items"
 msgid "Recent Files"
 msgstr "Ficheros de recién"
 
 #: qml/ContextMenu.qml:116
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Actions"
+msgctxt "@title:group for section of menu items"
 msgid "Actions"
 msgstr "Aiciones"
 
@@ -717,117 +727,159 @@ msgid "Restore"
 msgstr "Restaurar"
 
 #: qml/ContextMenu.qml:266
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mute"
+msgctxt "@option:check inmenu, no separate unmute action"
 msgid "Mute"
 msgstr "Desactivar el soníu"
 
 #: qml/ContextMenu.qml:277
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open New Window"
+msgctxt "action:inmenu"
 msgid "Open New Window"
 msgstr "Abrir una ventana nueva"
 
 #: qml/ContextMenu.qml:293
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move to &Desktop"
+msgctxt "action:inmenu"
 msgid "Move to &Desktop"
 msgstr "Mover al &escritoriu"
 
 #: qml/ContextMenu.qml:323
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &To Current Desktop"
+msgctxt "action:inmenu"
 msgid "Move &To Current Desktop"
 msgstr "Mover &al escritoriu actual"
 
 #: qml/ContextMenu.qml:332
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&All Desktops"
+msgctxt "action:inmenu"
 msgid "&All Desktops"
 msgstr "&Tolos escritorios"
 
 #: qml/ContextMenu.qml:360
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&New Desktop"
+msgctxt "action:inmenu"
 msgid "&New Desktop"
 msgstr "Escritoriu &nuevu"
 
 #: qml/ContextMenu.qml:380
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show in &Activities"
+msgctxt "action:inmenu"
 msgid "Show in &Activities"
 msgstr "Amosar n'&Actividaes"
 
 #: qml/ContextMenu.qml:404
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add To Current Activity"
+msgctxt "action:inmenu"
 msgid "Add To Current Activity"
 msgstr "Amestar a l'actividá actual"
 
 #: qml/ContextMenu.qml:414
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "All Activities"
+msgctxt "action:inmenu"
 msgid "All Activities"
 msgstr "Toles actividaes"
 
 #: qml/ContextMenu.qml:470
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move to %1"
+msgctxt "action:inmenu"
 msgid "Move to %1"
 msgstr "Mover a «%1»"
 
 #: qml/ContextMenu.qml:496 qml/ContextMenu.qml:512
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Pin to Task Manager"
+msgctxt "action:inmenu"
 msgid "&Pin to Task Manager"
 msgstr "&Fixar nel xestor de xeres"
 
 #: qml/ContextMenu.qml:564
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "On All Activities"
+msgctxt "action:inmenu"
 msgid "On All Activities"
 msgstr "En toles actividaes"
 
 #: qml/ContextMenu.qml:570
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "On The Current Activity"
+msgctxt "action:inmenu"
 msgid "On The Current Activity"
 msgstr "Na actividá actual"
 
 #: qml/ContextMenu.qml:594
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Unpin from Task Manager"
+msgctxt "action:inmenu"
 msgid "Unpin from Task Manager"
 msgstr "Soltar del xestor de xeres"
 
 #: qml/ContextMenu.qml:609
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "More"
+msgctxt "item:inmenu opens submenu"
 msgid "More"
 msgstr "Más"
 
 #: qml/ContextMenu.qml:618
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Move"
+msgctxt "action:inmenu"
 msgid "&Move"
 msgstr "&Mover"
 
 #: qml/ContextMenu.qml:627
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Re&size"
+msgctxt "action:inmenu"
 msgid "Re&size"
 msgstr "Re&dimensionar"
 
 #: qml/ContextMenu.qml:641
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ma&ximize"
+msgctxt "action:inmenu"
 msgid "Ma&ximize"
 msgstr "Ma&ximizar"
 
 #: qml/ContextMenu.qml:655
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mi&nimize"
+msgctxt "action:inmenu"
 msgid "Mi&nimize"
 msgstr "Mi&nimizar"
 
 #: qml/ContextMenu.qml:665
 #, kde-format
+msgctxt "action:inmenu"
 msgid "Keep &Above Others"
 msgstr ""
 
 #: qml/ContextMenu.qml:675
 #, kde-format
+msgctxt "action:inmenu"
 msgid "Keep &Below Others"
 msgstr ""
 
 #: qml/ContextMenu.qml:687
 #, kde-format
+msgctxt "action:inmenu"
 msgid "&Fullscreen"
 msgstr ""
 
 #: qml/ContextMenu.qml:700
 #, kde-format
+msgctxt "action:inmenu"
 msgid "&Shade"
 msgstr ""
 
@@ -844,18 +896,24 @@ msgid "&Hide from Screencast"
 msgstr ""
 
 #: qml/ContextMenu.qml:741
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Allow this program to be grouped"
+msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr "Permitir qu'esti programa s'agrupe"
 
 #: qml/ContextMenu.qml:787
-#, kde-format
-msgctxt "@item:inmenu"
+#, fuzzy, kde-format
+#| msgctxt "@item:inmenu"
+#| msgid "&Close All"
+msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "&Zarrar too"
 
 #: qml/ContextMenu.qml:787
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Close"
+msgctxt "@action:inmenu"
 msgid "&Close"
 msgstr "&Zarrar"
 
@@ -893,6 +951,7 @@ msgstr ""
 
 #: qml/Task.qml:179
 #, kde-format
+msgctxt "@info:usagetip %1 task name"
 msgid "Activate %1"
 msgstr ""
 

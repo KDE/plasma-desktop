@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_showactivitymanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -25,27 +25,34 @@ msgstr ""
 
 #: qml/ConfigAppearance.qml:23
 #, kde-format
+msgctxt "@title:group prefix for radiobutton group"
 msgid "Icon:"
 msgstr ""
 
 #: qml/ConfigAppearance.qml:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Activity Manager"
+msgctxt "@option:radio"
 msgid "Show the current activity icon"
-msgstr ""
+msgstr "پائالىيەت باشقۇرغىنى كۆرسەت"
 
 #: qml/ConfigAppearance.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Activity Manager"
+msgctxt "@option:radio"
 msgid "Show the generic activity icon"
-msgstr ""
+msgstr "پائالىيەت باشقۇرغىنى كۆرسەت"
 
 #: qml/ConfigAppearance.qml:41
 #, kde-format
+msgctxt "@label prefix for checkbox"
 msgid "Title:"
 msgstr ""
 
 #: qml/ConfigAppearance.qml:43
 #, fuzzy, kde-format
 #| msgid "Show Activity Manager"
+msgctxt "@option:check title"
 msgid "Show the current activity name"
 msgstr "پائالىيەت باشقۇرغىنى كۆرسەت"
 
@@ -57,22 +64,23 @@ msgid "Current activity is %1"
 msgstr "پائالىيەت باشقۇرغىنى كۆرسەت"
 
 #: qml/main.qml:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Activity Manager"
+msgctxt "@info:tooltip"
 msgid "Show Activity Manager"
 msgstr "پائالىيەت باشقۇرغىنى كۆرسەت"
 
 #: qml/main.qml:77
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Click or press the Meta key and 'Q' to show the activity manager"
+msgctxt "@info:tooltip subtext"
 msgid "Click to show the activity manager"
 msgstr ""
+"پائالىيەت باشقۇرغىنى كۆرسىتىش ئۈچۈن چېكىڭ ياكى Meta كۇنۇپكىسى بىلەن 'Q' نى "
+"بېسىڭ"
 
 #: qml/main.qml:119
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
 msgstr ""
-
-#~ msgid "Click or press the Meta key and 'Q' to show the activity manager"
-#~ msgstr ""
-#~ "پائالىيەت باشقۇرغىنى كۆرسىتىش ئۈچۈن چېكىڭ ياكى Meta كۇنۇپكىسى بىلەن 'Q' "
-#~ "نى بېسىڭ"

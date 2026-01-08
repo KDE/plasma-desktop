@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-07 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-03-03 11:47+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -234,16 +234,24 @@ msgstr ""
 
 #: ui/ActionDialog.qml:248
 #, kde-format
+msgctxt ""
+"@label prefix for configuring Keybind to send when dial/ring is turned "
+"upwards"
 msgid "Up:"
 msgstr ""
 
 #: ui/ActionDialog.qml:261
 #, kde-format
+msgctxt ""
+"@label prefix for configuring Keybind to send when dial/ring is turned "
+"downwards"
 msgid "Down:"
 msgstr ""
 
 #: ui/ActionDialog.qml:274
 #, kde-format
+msgctxt ""
+"@label:slider Speed for how often this dial/ring should emit key events"
 msgid "Speed:"
 msgstr ""
 
@@ -383,21 +391,26 @@ msgstr ""
 
 #: ui/DisplayTab.qml:46
 #, kde-format
+msgctxt "@label:listbox"
 msgid "Map to screen:"
 msgstr ""
 
 #: ui/DisplayTab.qml:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Orientation:"
+msgctxt "@label:listbox"
 msgid "Orientation:"
 msgstr "Orientasi:"
 
 #: ui/DisplayTab.qml:79
 #, kde-format
+msgctxt "@label substitute for unavailable orientation change"
 msgid "Not Applicable"
 msgstr ""
 
 #: ui/DisplayTab.qml:93
 #, kde-format
+msgctxt "@label:listbox"
 msgid "Mapped Area:"
 msgstr ""
 
@@ -416,6 +429,7 @@ msgstr "%1,%2 - %3×%4"
 #: ui/ExternalScreenMapping.qml:190
 #, fuzzy, kde-format
 #| msgid "Resize the tablet area"
+msgctxt "@action:button"
 msgid "Resize the screen area"
 msgstr "Ubah ukuran area tablet"
 
@@ -428,17 +442,23 @@ msgid "%1%,%2% - %3%×%4%"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/ExternalScreenMapping.qml:301
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Resize the tablet area"
+msgctxt "@action:button"
 msgid "Resize the tablet area"
 msgstr "Ubah ukuran area tablet"
 
 #: ui/main.qml:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No drawing tablets found"
+msgctxt "@info placeholdermessage text"
 msgid "No drawing tablets found"
 msgstr "Tidak ada tablet penggambar yang ditemukan"
 
 #: ui/main.qml:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Connect a drawing tablet"
+msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect a drawing tablet"
 msgstr "Hubungkan sebuah tablet penggambar"
 
@@ -487,11 +507,13 @@ msgstr "Papan:"
 #: ui/MissingPadTab.qml:15
 #, fuzzy, kde-format
 #| msgid "No drawing tablets found"
+msgctxt "@info placeholdermessage main text"
 msgid "No pad inputs found"
 msgstr "Tidak ada tablet penggambar yang ditemukan"
 
 #: ui/MissingPadTab.qml:16
 #, kde-format
+msgctxt "@info:usagetip placeholdermessage explanation"
 msgid ""
 "No buttons or other inputs were detected. This could mean the driver for "
 "this device is missing."
@@ -500,6 +522,7 @@ msgstr ""
 #: ui/PadTab.qml:37
 #, fuzzy, kde-format
 #| msgid "Button %1:"
+msgctxt "@label for graphics tablet ring config, % is number of ring"
 msgid "Pad ring %1:"
 msgstr "Tombol %1:"
 
@@ -515,6 +538,7 @@ msgstr "Tombol %1:"
 #: ui/PadTab.qml:100
 #, fuzzy, kde-format
 #| msgid "Button %1:"
+msgctxt "@label for graphics tablet ring config, % is number of dial"
 msgid "Pad dial %1:"
 msgstr "Tombol %1:"
 
@@ -529,6 +553,7 @@ msgstr ""
 #: ui/PadTab.qml:138
 #, fuzzy, kde-format
 #| msgid "Button %1:"
+msgctxt "@label for graphics tablet button config, % is number of button"
 msgid "Pad button %1:"
 msgstr "Tombol %1:"
 
@@ -542,13 +567,15 @@ msgid "pad button %1"
 msgstr "Tombol %1:"
 
 #: ui/StylusTab.qml:222
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Left-handed mode:"
+msgctxt "@label prefix for checkbox"
 msgid "Left-handed mode:"
 msgstr "Mode tangan kiri:"
 
 #: ui/StylusTab.qml:228
 #, kde-format
-msgctxt "Enable left-handed mode"
+msgctxt "@option:check Enable left-handed mode"
 msgid "Enable"
 msgstr ""
 
@@ -571,23 +598,27 @@ msgstr ""
 #: ui/StylusTab.qml:254
 #, kde-format
 msgctxt ""
-"Pen mode, where the point on the screen is always where you touch the stylus"
+"@option:radio Pen mode, where the point on the screen is always where you "
+"touch the stylus"
 msgid "Pen"
 msgstr ""
 
 #: ui/StylusTab.qml:259
 #, kde-format
+msgctxt "@info:whatsthis Accessible description"
 msgid "The cursor follows where you touch the pen on the surface"
 msgstr ""
 
 #: ui/StylusTab.qml:280
 #, kde-format
-msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
+msgctxt ""
+"@option:radio Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
 msgstr ""
 
 #: ui/StylusTab.qml:285
 #, kde-format
+msgctxt "@info:whatsthis Accessible description"
 msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
 "like a mouse"
@@ -595,6 +626,7 @@ msgstr ""
 
 #: ui/StylusTab.qml:355
 #, kde-format
+msgctxt "@label prefix for pen pressure curve config"
 msgid "Pen Pressure:"
 msgstr ""
 

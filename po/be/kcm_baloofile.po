@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-11-20 08:42\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -23,17 +23,25 @@ msgstr ""
 "X-Crowdin-File-ID: 10598\n"
 
 #: ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pause Indexer"
+msgctxt "@action:button"
 msgid "Pause Indexer"
 msgstr "Прыпыніць індэксаванне"
 
 #: ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Resume Indexer"
+msgctxt "@action:button"
 msgid "Resume Indexer"
 msgstr "Узнавіць індэксаванне"
 
 #: ui/main.qml:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This will disable file searching in KRunner and launcher menus, and "
+#| "remove extended metadata display from all KDE applications."
+msgctxt "@info inlinemessage"
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
@@ -42,7 +50,13 @@ msgstr ""
 "паказ метаданых з усіх праграм KDE."
 
 #: ui/main.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Do you want to delete the saved index data? %1 of space will be freed, "
+#| "but if indexing is re-enabled later, the entire index will have to be re-"
+#| "created from scratch. This may take some time, depending on how many "
+#| "files you have."
+msgctxt "@info inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
 "if indexing is re-enabled later, the entire index will have to be re-created "
@@ -54,12 +68,18 @@ msgstr ""
 "вас файлаў."
 
 #: ui/main.qml:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete Index Data"
+msgctxt "@action:button"
 msgid "Delete Index Data"
 msgstr "Выдаліць даныя індэкса"
 
 #: ui/main.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "File Search helps you quickly locate your files. You can choose which "
+#| "folders and what types of file data are indexed."
+msgctxt "@info:usagetip"
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
@@ -75,22 +95,28 @@ msgstr "Даныя для індэксавання:"
 
 #: ui/main.qml:109
 #, kde-format
+msgctxt "@option:radio Data to index"
 msgid "Nothing (disable indexing entirely)"
 msgstr ""
 
 #: ui/main.qml:121
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File names only"
+msgctxt "@option:radio Data to index"
 msgid "File names only"
 msgstr "Толькі назвы файлаў"
 
 #: ui/main.qml:136
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File names and contents"
+msgctxt "@option:radio Data to index"
 msgid "File names and contents"
 msgstr "Назвы і змесціва файлаў"
 
 #: ui/main.qml:157
 #, fuzzy, kde-format
 #| msgid "Hidden files and folders"
+msgctxt "@option:check"
 msgid "Also index hidden files and folders"
 msgstr "Схаваныя файлы і каталогі"
 
@@ -125,12 +151,16 @@ msgid "Currently indexing: <filename>%1</filename>"
 msgstr "Бягучае індэксаванне: <filename>%1</filename>"
 
 #: ui/main.qml:270
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Not indexed"
+msgctxt "@info:status"
 msgid "Not indexed"
 msgstr "Не індэксуецца"
 
 #: ui/main.qml:271
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Indexed"
+msgctxt "@info:status"
 msgid "Indexed"
 msgstr "Індэксаваны"
 
@@ -141,12 +171,16 @@ msgid "Remove entry"
 msgstr "Выдаліць элемент"
 
 #: ui/main.qml:318
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select a folder to include"
+msgctxt "@title:window"
 msgid "Select a folder to include"
 msgstr "Абярыце каталог для ўключэння"
 
 #: ui/main.qml:318
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select a folder to exclude"
+msgctxt "@title:window"
 msgid "Select a folder to exclude"
 msgstr "Абярыце каталог для выключэння"
 

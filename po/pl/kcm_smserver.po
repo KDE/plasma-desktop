@@ -2,7 +2,7 @@
 # translation of kcmsmserver.po to
 # translation of kcmsmserver.po to
 # translation of kcmsmserver.po to Polish
-# Version: $Revision: 1723076 $
+# Version: $Revision: 1726870 $
 # SPDX-FileCopyrightText: 2014, 2019, 2020, 2021, 2022, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004, 2005, 2008, 2009.
 # Krzysztof Lichota <lichota@mimuw.edu.pl>, 2005.
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-01-11 11:21+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -47,21 +47,30 @@ msgid "Applications to be excluded from session"
 msgstr "Programy wykluczone z posiedzenia"
 
 #: ui/main.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Failed to request restart to firmware setup: %1"
+msgctxt "@info:status inlinemessage"
 msgid "Failed to request restart to firmware setup: %1"
 msgstr ""
 "Nie udało się wymusić ponownego uruchomienia do ustawienia oprogramowania "
 "układowego: %1"
 
 #: ui/main.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Next time the computer is restarted, it will enter the UEFI setup screen."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr ""
 "Przy następnym uruchomieniu komputera, przejdzie on do ekranu ustawień UEFI."
 
 #: ui/main.qml:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Next time the computer is restarted, it will enter the firmware setup "
+#| "screen."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
@@ -69,7 +78,9 @@ msgstr ""
 "oprogramowania układowego."
 
 #: ui/main.qml:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Restart Now"
+msgctxt "@action:button"
 msgid "Restart Now"
 msgstr "Uruchom ponownie teraz"
 
@@ -102,7 +113,9 @@ msgid "Session Restore"
 msgstr "Przywracanie posiedzenia"
 
 #: ui/main.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "On login, launch apps that were open:"
+msgctxt "@title:group prefix for radiobuttons"
 msgid "On login, launch apps that were open:"
 msgstr "Po zalogowaniu, uruchom aplikacje, które były otwarte:"
 
@@ -143,12 +156,20 @@ msgid "Start with an empty session"
 msgstr "Rozpocznij puste posiedzenie"
 
 #: ui/main.qml:113
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ignored applications:"
+msgctxt "@label:textbox"
 msgid "Ignored applications:"
 msgstr "Pomiń aplikacje:"
 
 #: ui/main.qml:132
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Write apps' desktop file identifier or, on X11, executable names here "
+#| "(separated by commas or colons, for example 'xterm:org.kde.konsole."
+#| "desktop' or 'xterm,org.kde.konsole.desktop') to prevent them from "
+#| "autostarting along with other session-restored apps."
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2020-10-27 21:32+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -67,29 +67,32 @@ msgstr "Kirjeldus:"
 
 #: ui/ActivityEditor.qml:84
 #, kde-format
-msgctxt "@option:check"
+msgctxt "@title:group for checkbox group"
 msgid "While on this activity, allow:"
 msgstr ""
 
 #: ui/ActivityEditor.qml:85
 #, kde-format
+msgctxt "@option:check While on activity, allow"
 msgid "Tracking file and app use"
 msgstr ""
 
 #: ui/ActivityEditor.qml:91
 #, kde-format
-msgctxt "@option:check"
+msgctxt "@option:check While on activity, allow"
 msgid "Automatically turning off the screen"
 msgstr ""
 
 #: ui/ActivityEditor.qml:97
 #, kde-format
-msgctxt "@option:check"
+msgctxt "@option:check While on activity, allow"
 msgid "Automatically shutting down or sleeping"
 msgstr ""
 
 #: ui/ActivityEditor.qml:103
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Shortcut for switching:"
+msgctxt "@label prefix for keyboard shortcut input button"
 msgid "Shortcut for switching:"
 msgstr "Lülitumise kiirklahv:"
 
@@ -102,6 +105,7 @@ msgstr "%1 tegevuse kustutamine"
 #: ui/main.qml:74
 #, fuzzy, kde-format
 #| msgid "Create New..."
+msgctxt "@action:button Create new Activity"
 msgid "Create New…"
 msgstr "Loo uus ..."
 
@@ -122,6 +126,7 @@ msgstr "Kas tõesti kustutada \"%1\"?"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Delete Activity"
+msgctxt "@action:button in dialog confirms deletion"
 msgid "Delete Activity"
 msgstr "Tegevuse kustutamine"
 

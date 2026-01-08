@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-09-16 23:53+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -22,83 +22,115 @@ msgstr ""
 "X-Generator: Lokalize 25.04.3\n"
 
 #: qml/config.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Almennt"
 
 #: qml/configGeneral.qml:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "Almennt:"
 
 #: qml/configGeneral.qml:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show window outlines"
+msgctxt "@option:check"
 msgid "Show window outlines"
 msgstr "Sýna útlínur glugga"
 
 #: qml/configGeneral.qml:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show application icons on window outlines"
+msgctxt "@option:check"
 msgid "Show application icons on window outlines"
 msgstr "Sýna forritatákn á útlínum glugga"
 
 #: qml/configGeneral.qml:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show only current screen"
+msgctxt "@option:check"
 msgid "Show only current screen"
 msgstr "Sýna aðeins núverandi skjá"
 
 #: qml/configGeneral.qml:57
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Navigation wraps around"
+msgctxt "@option:check"
 msgid "Navigation wraps around"
 msgstr "Fletting í gegn fer hringinn"
 
 #: qml/configGeneral.qml:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Layout:"
+msgctxt "@title:listbox"
 msgid "Layout:"
 msgstr "Framsetning:"
 
 #: qml/configGeneral.qml:71
-#, kde-format
-msgctxt "The pager layout"
+#, fuzzy, kde-format
+#| msgctxt "The pager layout"
+#| msgid "Default"
+msgctxt "@item:inlistbox The pager layout"
 msgid "Default"
 msgstr "Sjálfgefið"
 
 #: qml/configGeneral.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Horizontal"
+msgctxt "@item:inlistbox The pager layout"
 msgid "Horizontal"
 msgstr "Lárétt"
 
 #: qml/configGeneral.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Vertical"
+msgctxt "@item:inlistbox The pager layout"
 msgid "Vertical"
 msgstr "Lóðrétt"
 
 #: qml/configGeneral.qml:85
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Text display:"
+msgctxt "@title:group prefix for radiobutton group"
 msgid "Text display:"
 msgstr "Birting texta:"
 
 #: qml/configGeneral.qml:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No text"
+msgctxt "@option:radio text display"
 msgid "No text"
 msgstr "Enginn texti"
 
 #: qml/configGeneral.qml:96
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Activity number"
+msgctxt "@option:radio text display"
 msgid "Activity number"
 msgstr "Númer athafnar"
 
 #: qml/configGeneral.qml:96
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Desktop number"
+msgctxt "@option:radio text display"
 msgid "Desktop number"
 msgstr "Númer skjáborðs"
 
 #: qml/configGeneral.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Activity name"
+msgctxt "@option:radio text display"
 msgid "Activity name"
 msgstr "Heiti athafnar"
 
 #: qml/configGeneral.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Desktop name"
+msgctxt "@option:radio text display"
 msgid "Desktop name"
 msgstr "Heiti skjáborðs"
 
@@ -135,28 +167,39 @@ msgid "Shows the desktop"
 msgstr "sýnir skjáborðið"
 
 #: qml/main.qml:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "…and %1 other window"
+#| msgid_plural "…and %1 other windows"
+msgctxt "@info:tooltip overflow label"
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
 msgstr[0] "…og %1 gluggi í viðbót"
 msgstr[1] "…og %1 gluggar í viðbót"
 
 #: qml/main.qml:351
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1 Window:"
+#| msgid_plural "%1 Windows:"
+msgctxt "@info:tooltip start of list"
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
 msgstr[0] "%1 gluggi:"
 msgstr[1] "%1 gluggar:"
 
 #: qml/main.qml:363
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1 Minimized Window:"
+#| msgid_plural "%1 Minimized Windows:"
+msgctxt "@info:tooltip"
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
 msgstr[0] "%1 falinn gluggi:"
 msgstr[1] "%1 faldir gluggar:"
 
 #: qml/main.qml:439
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Desktop %1"
+msgctxt "@info:whatsthis Accessible name for pager section"
 msgid "Desktop %1"
 msgstr "Skjáborð %1"
 

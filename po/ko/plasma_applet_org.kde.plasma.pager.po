@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-06-10 22:34+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -19,83 +19,115 @@ msgstr ""
 "X-Generator: Lokalize 24.12.3\n"
 
 #: qml/config.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "일반"
 
 #: qml/configGeneral.qml:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "일반:"
 
 #: qml/configGeneral.qml:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show window outlines"
+msgctxt "@option:check"
 msgid "Show window outlines"
 msgstr "창 외곽선 표시"
 
 #: qml/configGeneral.qml:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show application icons on window outlines"
+msgctxt "@option:check"
 msgid "Show application icons on window outlines"
 msgstr "창 외곽선에 앱 아이콘 표시"
 
 #: qml/configGeneral.qml:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show only current screen"
+msgctxt "@option:check"
 msgid "Show only current screen"
 msgstr "현재 화면만 표시"
 
 #: qml/configGeneral.qml:57
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Navigation wraps around"
+msgctxt "@option:check"
 msgid "Navigation wraps around"
 msgstr "탐색 시 끝에 도달했을 때 되돌아가기"
 
 #: qml/configGeneral.qml:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Layout:"
+msgctxt "@title:listbox"
 msgid "Layout:"
 msgstr "레이아웃:"
 
 #: qml/configGeneral.qml:71
-#, kde-format
-msgctxt "The pager layout"
+#, fuzzy, kde-format
+#| msgctxt "The pager layout"
+#| msgid "Default"
+msgctxt "@item:inlistbox The pager layout"
 msgid "Default"
 msgstr "기본값"
 
 #: qml/configGeneral.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Horizontal"
+msgctxt "@item:inlistbox The pager layout"
 msgid "Horizontal"
 msgstr "수평"
 
 #: qml/configGeneral.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Vertical"
+msgctxt "@item:inlistbox The pager layout"
 msgid "Vertical"
 msgstr "수직"
 
 #: qml/configGeneral.qml:85
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Text display:"
+msgctxt "@title:group prefix for radiobutton group"
 msgid "Text display:"
 msgstr "텍스트 표시:"
 
 #: qml/configGeneral.qml:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No text"
+msgctxt "@option:radio text display"
 msgid "No text"
 msgstr "텍스트 없음"
 
 #: qml/configGeneral.qml:96
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Activity number"
+msgctxt "@option:radio text display"
 msgid "Activity number"
 msgstr "활동 번호"
 
 #: qml/configGeneral.qml:96
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Desktop number"
+msgctxt "@option:radio text display"
 msgid "Desktop number"
 msgstr "바탕 화면 번호"
 
 #: qml/configGeneral.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Activity name"
+msgctxt "@option:radio text display"
 msgid "Activity name"
 msgstr "활동 이름"
 
 #: qml/configGeneral.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Desktop name"
+msgctxt "@option:radio text display"
 msgid "Desktop name"
 msgstr "바탕 화면 이름"
 
@@ -132,25 +164,36 @@ msgid "Shows the desktop"
 msgstr "바탕 화면 표시"
 
 #: qml/main.qml:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "…and %1 other window"
+#| msgid_plural "…and %1 other windows"
+msgctxt "@info:tooltip overflow label"
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
 msgstr[0] "… 그리고 다른 창 %1개"
 
 #: qml/main.qml:351
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1 Window:"
+#| msgid_plural "%1 Windows:"
+msgctxt "@info:tooltip start of list"
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
 msgstr[0] "창 %1개:"
 
 #: qml/main.qml:363
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1 Minimized Window:"
+#| msgid_plural "%1 Minimized Windows:"
+msgctxt "@info:tooltip"
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
 msgstr[0] "최소화 된 창 %1개:"
 
 #: qml/main.qml:439
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Desktop %1"
+msgctxt "@info:whatsthis Accessible name for pager section"
 msgid "Desktop %1"
 msgstr "바탕 화면 %1"
 

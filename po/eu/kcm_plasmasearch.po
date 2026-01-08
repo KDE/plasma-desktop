@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-06-28 09:42+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -31,17 +31,26 @@ msgid "Available Plugins"
 msgstr "Plugin erabilgarriak"
 
 #: plasmasearch/ui/main.qml:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure KRunner…"
+msgctxt "@action:button in toolbar"
 msgid "Configure KRunner…"
 msgstr "Konfiguratu KRunner…"
 
 #: plasmasearch/ui/main.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Get New Plugins…"
+msgctxt "@action:button in toolbar"
 msgid "Get New Plugins…"
 msgstr "Lortu plugin berriak..."
 
 #: plasmasearch/ui/main.qml:45
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
+#| "Overview effect). Mark plugins as favorites and arrange them in order you "
+#| "want to prioritize them."
+msgctxt "@info:usagetip"
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
@@ -52,12 +61,16 @@ msgstr ""
 "ordenean eman nahi diezun lehentasunaren arabera."
 
 #: plasmasearch/ui/main.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove from favorites"
+msgctxt "@action:button, icononly"
 msgid "Remove from favorites"
 msgstr "Kendu gogokoenetatik"
 
 #: plasmasearch/ui/main.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add to favorites"
+msgctxt "@action:button, icononly"
 msgid "Add to favorites"
 msgstr "Gehitu gogokoenetara"
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-03 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -48,7 +48,9 @@ msgid "Replace an existing instance"
 msgstr "替换当前的实例"
 
 #: app/ui/CategoryPage.qml:112
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear History"
+msgctxt "@action:button clear emoji history"
 msgid "Clear History"
 msgstr "清除历史"
 
@@ -149,7 +151,9 @@ msgid "Copy Description"
 msgstr "复制描述"
 
 #: app/ui/CategoryPage.qml:368
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No recent Emojis"
+msgctxt "@label placeholder for empty recent emoji list"
 msgid "No recent Emojis"
 msgstr "没有最近使用过的表情符号"
 
@@ -160,12 +164,16 @@ msgid "No matching emoji found"
 msgstr "没有找到匹配的表情符号"
 
 #: app/ui/Emojier.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1 copied to the clipboard"
+msgctxt "@info:status passive notification as action feedback"
 msgid "%1 copied to the clipboard"
 msgstr "%1 已复制到剪贴板"
 
 #: app/ui/Emojier.qml:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Recent"
+msgctxt "@title page title for Recent Emoji view, and sidebar label for it"
 msgid "Recent"
 msgstr "最近使用"
 

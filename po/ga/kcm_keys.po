@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
@@ -131,21 +131,25 @@ msgstr ""
 
 #: ui/main.qml:27
 #, kde-format
+msgctxt "@title:group list section name"
 msgid "Applications"
 msgstr ""
 
 #: ui/main.qml:27
 #, kde-format
+msgctxt "@title:group list section name"
 msgid "Commands"
 msgstr ""
 
 #: ui/main.qml:27
 #, kde-format
+msgctxt "@title:group list section name"
 msgid "System Services"
 msgstr ""
 
 #: ui/main.qml:27
 #, kde-format
+msgctxt "@title:group list section name"
 msgid "Common Actions"
 msgstr ""
 
@@ -211,11 +215,13 @@ msgstr ""
 
 #: ui/main.qml:104
 #, kde-format
+msgctxt "@info:status inlinemessage"
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr ""
 
 #: ui/main.qml:117
 #, kde-format
+msgctxt "@info:usagetip"
 msgid ""
 "Select the components below that should be included in the exported scheme"
 msgstr ""
@@ -253,6 +259,7 @@ msgstr ""
 
 #: ui/main.qml:341
 #, kde-format
+msgctxt "@info:status placeholdermessage"
 msgid "No items matched the search terms"
 msgstr ""
 
@@ -276,16 +283,19 @@ msgstr ""
 
 #: ui/main.qml:399
 #, kde-format
+msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
 msgstr ""
 
 #: ui/main.qml:412
 #, kde-format
+msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr ""
 
 #: ui/main.qml:412 ui/main.qml:553
 #, kde-format
+msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
 msgstr ""
 
@@ -297,21 +307,25 @@ msgstr ""
 
 #: ui/main.qml:441
 #, kde-format
+msgctxt "@title:window dialog"
 msgid "Edit Command"
 msgstr ""
 
 #: ui/main.qml:441
 #, kde-format
+msgctxt "@title:window dialog"
 msgid "Add Command"
 msgstr ""
 
 #: ui/main.qml:463
 #, kde-format
+msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
 msgstr ""
 
 #: ui/main.qml:463
 #, kde-format
+msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
 msgstr ""
 
@@ -329,6 +343,7 @@ msgstr ""
 
 #: ui/main.qml:492
 #, kde-format
+msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr ""
 
@@ -384,21 +399,25 @@ msgstr ""
 
 #: ui/main.qml:561
 #, kde-format
+msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr ""
 
 #: ui/main.qml:580
 #, kde-format
+msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
 msgstr ""
 
 #: ui/main.qml:588
 #, kde-format
+msgctxt "@action:button"
 msgid "Select File…"
 msgstr ""
 
 #: ui/main.qml:588
 #, kde-format
+msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr ""
 
@@ -428,6 +447,7 @@ msgstr ""
 
 #: ui/ShortcutActionDelegate.qml:38
 #, kde-format
+msgctxt "@info:whatsthis accessible name %1 is shortcut label (not sequence)"
 msgid "Editing shortcut: %1"
 msgstr ""
 
@@ -441,34 +461,42 @@ msgstr ""
 
 #: ui/ShortcutActionDelegate.qml:88
 #, kde-format
+msgctxt "@info:status"
 msgid "No active shortcuts"
 msgstr ""
 
 #: ui/ShortcutActionDelegate.qml:134
 #, kde-format
-msgctxt "%1 decides if singular or plural will be used"
+msgctxt "@title:column %1 decides if singular or plural will be used"
 msgid "Default shortcut"
 msgid_plural "Default shortcuts"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
 #: ui/ShortcutActionDelegate.qml:136
 #, kde-format
+msgctxt "@label for shortcut with no default bindings"
 msgid "No default shortcuts"
 msgstr ""
 
 #: ui/ShortcutActionDelegate.qml:145
 #, kde-format
+msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is enabled."
 msgstr ""
 
 #: ui/ShortcutActionDelegate.qml:145
 #, kde-format
+msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is disabled."
 msgstr ""
 
 #: ui/ShortcutActionDelegate.qml:168
 #, kde-format
+msgctxt "@title:column"
 msgid "Custom shortcuts"
 msgstr ""
 

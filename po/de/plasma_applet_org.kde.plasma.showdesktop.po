@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-01-21 15:48+0100\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -20,7 +20,9 @@ msgstr ""
 # Accessible.name: i18n("Minimize All Applet Active Indicator")
 # für screenreader
 #: main.qml:118
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Minimize All Applet Active Indicator"
+msgctxt "@label Accessible name"
 msgid "Minimize All Applet Active Indicator"
 msgstr "Alle Anzeiger für aktive Miniprogramme minimieren"
 

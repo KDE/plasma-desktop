@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-07-29 06:51+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -19,22 +19,44 @@ msgstr ""
 "X-Generator: Poedit 3.6\n"
 
 #: KeyboardButton.qml:19
+#, fuzzy
+#| msgid "Keyboard Layout: %1"
+msgctxt "@action:button opens layout chooser %1 is current"
 msgid "Keyboard Layout: %1"
 msgstr "Razporeditev tipkovnice: %1"
 
 #: Login.qml:86
+#, fuzzy
+#| msgid "Username"
+msgctxt "@info:placeholder in textfield"
 msgid "Username"
 msgstr "Uporabniško ime"
 
 #: Login.qml:103
+#, fuzzy
+#| msgid "Password"
+msgctxt "@info:placeholder in textfield"
 msgid "Password"
 msgstr "Geslo"
 
-#: Login.qml:145 Login.qml:151
+#: Login.qml:145
+#, fuzzy
+#| msgid "Log In"
+msgctxt "@action:button Accessible name"
+msgid "Log in"
+msgstr "Prijavi se"
+
+#: Login.qml:151
+#, fuzzy
+#| msgid "Log In"
+msgctxt "@action:button"
 msgid "Log In"
 msgstr "Prijavi se"
 
 #: Main.qml:200
+#, fuzzy
+#| msgid "Caps Lock is on"
+msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "Velike črke vklopljene"
 
@@ -44,28 +66,46 @@ msgid "Hibernate"
 msgstr "V mirovanje"
 
 #: Main.qml:218 Main.qml:357
-msgctxt "Suspend to RAM"
+#, fuzzy
+#| msgctxt "Suspend to RAM"
+#| msgid "Sleep"
+msgctxt "@action:button Suspend to RAM"
 msgid "Sleep"
 msgstr "Zaspi"
 
 #: Main.qml:224 Main.qml:363
+#, fuzzy
+#| msgid "Restart"
+msgctxt "@action:button"
 msgid "Restart"
 msgstr "Ponovni zagon"
 
 #: Main.qml:230 Main.qml:369
+#, fuzzy
+#| msgid "Shut Down"
+msgctxt "@action:button"
 msgid "Shut Down"
 msgstr "Izklop"
 
 #: Main.qml:236
-msgctxt "For switching to a username and password prompt"
+#, fuzzy
+#| msgctxt "For switching to a username and password prompt"
+#| msgid "Other…"
+msgctxt "@action:button For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Ostalo…"
 
 #: Main.qml:343
+#, fuzzy
+#| msgid "Type in Username and Password"
+msgctxt "@info:usagetip"
 msgid "Type in Username and Password"
 msgstr "Vnesite uporabniško ime in geslo"
 
 #: Main.qml:375
+#, fuzzy
+#| msgid "List Users"
+msgctxt "@action:button"
 msgid "List Users"
 msgstr "Seznam uporabnikov"
 
@@ -75,9 +115,15 @@ msgid "Virtual Keyboard"
 msgstr "Navidezna tipkovnica"
 
 #: Main.qml:516
+#, fuzzy
+#| msgid "Login Failed"
+msgctxt "@info:status"
 msgid "Login Failed"
 msgstr "Neuspela prijava"
 
 #: SessionButton.qml:18
+#, fuzzy
+#| msgid "Desktop Session: %1"
+msgctxt "@action:button opens sessions menu %1 is current"
 msgid "Desktop Session: %1"
 msgstr "Namizja seja: %1"

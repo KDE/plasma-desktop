@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-12-20 21:53+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -44,24 +44,35 @@ msgid "Applications to be excluded from session"
 msgstr "सत्रात् बहिष्कृताः आवेदनाः"
 
 #: ui/main.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Failed to request restart to firmware setup: %1"
+msgctxt "@info:status inlinemessage"
 msgid "Failed to request restart to firmware setup: %1"
 msgstr "फर्मवेयर सेटअपं प्रति पुनः आरम्भस्य अनुरोधं कर्तुं असफलम्: %1"
 
 #: ui/main.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Next time the computer is restarted, it will enter the UEFI setup screen."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr "अग्रिमे समये सङ्गणकं पुनः आरभ्यते तदा UEFI setup screen मध्ये प्रविशति ।"
 
 #: ui/main.qml:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Next time the computer is restarted, it will enter the firmware setup "
+#| "screen."
+msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr "अग्रिमे समये सङ्गणकं पुनः आरभ्यते तदा सः फर्मवेयर सेटअप स्क्रीन् मध्ये प्रविशति ।"
 
 #: ui/main.qml:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Restart Now"
+msgctxt "@action:button"
 msgid "Restart Now"
 msgstr "अधुना पुनः आरभत"
 
@@ -94,7 +105,9 @@ msgid "Session Restore"
 msgstr "सत्र पुनर्स्थापनम्"
 
 #: ui/main.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "On login, launch apps that were open:"
+msgctxt "@title:group prefix for radiobuttons"
 msgid "On login, launch apps that were open:"
 msgstr "प्रवेशे, एप्स् प्रारम्भं कुर्वन्तु ये उद्घाटिताः आसन्:"
 
@@ -133,7 +146,9 @@ msgid "Start with an empty session"
 msgstr "रिक्तसत्रेण आरभत"
 
 #: ui/main.qml:113
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ignored applications:"
+msgctxt "@label:textbox"
 msgid "Ignored applications:"
 msgstr "उपेक्षिताः अनुप्रयोगाः :"
 
@@ -143,6 +158,7 @@ msgstr "उपेक्षिताः अनुप्रयोगाः :"
 #| "Write apps' executable names here (separated by commas or colons, for "
 #| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 #| "autostarting along with other session-restored apps."
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "

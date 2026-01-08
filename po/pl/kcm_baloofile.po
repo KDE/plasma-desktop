@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2026-01-03 13:44+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -19,17 +19,25 @@ msgstr ""
 "X-Generator: Lokalize 25.08.2\n"
 
 #: ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pause Indexer"
+msgctxt "@action:button"
 msgid "Pause Indexer"
 msgstr "Wstrzymaj spisywanie"
 
 #: ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Resume Indexer"
+msgctxt "@action:button"
 msgid "Resume Indexer"
 msgstr "Wznów spisywanie"
 
 #: ui/main.qml:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This will disable file searching in KRunner and launcher menus, and "
+#| "remove extended metadata display from all KDE applications."
+msgctxt "@info inlinemessage"
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
@@ -39,7 +47,13 @@ msgstr ""
 "KDE"
 
 #: ui/main.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Do you want to delete the saved index data? %1 of space will be freed, "
+#| "but if indexing is re-enabled later, the entire index will have to be re-"
+#| "created from scratch. This may take some time, depending on how many "
+#| "files you have."
+msgctxt "@info inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
 "if indexing is re-enabled later, the entire index will have to be re-created "
@@ -51,12 +65,18 @@ msgstr ""
 "systemie."
 
 #: ui/main.qml:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete Index Data"
+msgctxt "@action:button"
 msgid "Delete Index Data"
 msgstr "Usuń spis plików"
 
 #: ui/main.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "File Search helps you quickly locate your files. You can choose which "
+#| "folders and what types of file data are indexed."
+msgctxt "@info:usagetip"
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
@@ -71,22 +91,30 @@ msgid "Data to index:"
 msgstr "Dane do spisania:"
 
 #: ui/main.qml:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Nothing (disable indexing entirely)"
+msgctxt "@option:radio Data to index"
 msgid "Nothing (disable indexing entirely)"
 msgstr "Nic (wyłącz całkowicie spisywanie)"
 
 #: ui/main.qml:121
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File names only"
+msgctxt "@option:radio Data to index"
 msgid "File names only"
 msgstr "Tylko nazwy plików"
 
 #: ui/main.qml:136
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File names and contents"
+msgctxt "@option:radio Data to index"
 msgid "File names and contents"
 msgstr "Nazwy i treść plików"
 
 #: ui/main.qml:157
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Also index hidden files and folders"
+msgctxt "@option:check"
 msgid "Also index hidden files and folders"
 msgstr "Spisuj także ukryte pliki i katalogi"
 
@@ -121,12 +149,16 @@ msgid "Currently indexing: <filename>%1</filename>"
 msgstr "Obecnie spisuję: <filename>%1</filename>"
 
 #: ui/main.qml:270
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Not indexed"
+msgctxt "@info:status"
 msgid "Not indexed"
 msgstr "Niespisany"
 
 #: ui/main.qml:271
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Indexed"
+msgctxt "@info:status"
 msgid "Indexed"
 msgstr "Spisany"
 
@@ -137,12 +169,16 @@ msgid "Remove entry"
 msgstr "Usuń wpis"
 
 #: ui/main.qml:318
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select a folder to include"
+msgctxt "@title:window"
 msgid "Select a folder to include"
 msgstr "Wybierz katalog do uwzględnienia"
 
 #: ui/main.qml:318
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select a folder to exclude"
+msgctxt "@title:window"
 msgid "Select a folder to exclude"
 msgstr "Wybierz katalog do wykluczenia"
 

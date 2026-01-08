@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:45+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-12-04 06:54+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -21,17 +21,25 @@ msgstr ""
 "X-Generator: Poedit 3.8\n"
 
 #: ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pause Indexer"
+msgctxt "@action:button"
 msgid "Pause Indexer"
 msgstr "Začasno ustavi izgrajevalnik"
 
 #: ui/main.qml:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Resume Indexer"
+msgctxt "@action:button"
 msgid "Resume Indexer"
 msgstr "Nadaljuj indeksiranje"
 
 #: ui/main.qml:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This will disable file searching in KRunner and launcher menus, and "
+#| "remove extended metadata display from all KDE applications."
+msgctxt "@info inlinemessage"
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
@@ -40,7 +48,13 @@ msgstr ""
 "odstranilo prikaz metapodatkov iz vseh KDE aplikacij."
 
 #: ui/main.qml:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Do you want to delete the saved index data? %1 of space will be freed, "
+#| "but if indexing is re-enabled later, the entire index will have to be re-"
+#| "created from scratch. This may take some time, depending on how many "
+#| "files you have."
+msgctxt "@info inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
 "if indexing is re-enabled later, the entire index will have to be re-created "
@@ -52,12 +66,18 @@ msgstr ""
 "datotek, ki jih imate."
 
 #: ui/main.qml:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete Index Data"
+msgctxt "@action:button"
 msgid "Delete Index Data"
 msgstr "Izbriši indeksne podatke"
 
 #: ui/main.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "File Search helps you quickly locate your files. You can choose which "
+#| "folders and what types of file data are indexed."
+msgctxt "@info:usagetip"
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
@@ -72,22 +92,30 @@ msgid "Data to index:"
 msgstr "Podatki za indeksiranje:"
 
 #: ui/main.qml:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Nothing (disable indexing entirely)"
+msgctxt "@option:radio Data to index"
 msgid "Nothing (disable indexing entirely)"
 msgstr "Nič (popolnoma onemogoči indeksiranje)"
 
 #: ui/main.qml:121
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File names only"
+msgctxt "@option:radio Data to index"
 msgid "File names only"
 msgstr "Samo imena datotek"
 
 #: ui/main.qml:136
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File names and contents"
+msgctxt "@option:radio Data to index"
 msgid "File names and contents"
 msgstr "Imena datotek in vsebina"
 
 #: ui/main.qml:157
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Also index hidden files and folders"
+msgctxt "@option:check"
 msgid "Also index hidden files and folders"
 msgstr "Indeksiraj tudi skrite datoteke in mape"
 
@@ -122,12 +150,16 @@ msgid "Currently indexing: <filename>%1</filename>"
 msgstr "Trenutno v indeksiranju: <filename>%1</filename>"
 
 #: ui/main.qml:270
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Not indexed"
+msgctxt "@info:status"
 msgid "Not indexed"
 msgstr "Ni indeksirano"
 
 #: ui/main.qml:271
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Indexed"
+msgctxt "@info:status"
 msgid "Indexed"
 msgstr "Indeksirano"
 
@@ -138,12 +170,16 @@ msgid "Remove entry"
 msgstr "Odstrani vnos"
 
 #: ui/main.qml:318
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select a folder to include"
+msgctxt "@title:window"
 msgid "Select a folder to include"
 msgstr "Izberite mapo za vključitev"
 
 #: ui/main.qml:318
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select a folder to exclude"
+msgctxt "@title:window"
 msgid "Select a folder to exclude"
 msgstr "Izberite mapo za izključitev"
 
