@@ -39,6 +39,8 @@ MouseArea {
     property real startDragOffset: 0.0
     property bool dragAndDropping: false
 
+    property AppletContainer __previousApplet
+
     Drag.dragType: Drag.Automatic
     Drag.active: false
     Drag.supportedActions: Qt.MoveAction
@@ -111,10 +113,15 @@ MouseArea {
     onExited: hideTimer.restart()
 
     onCurrentAppletChanged: {
-        if (!currentApplet) {
-            hideTimer.start();
-            return;
+        if (currentApplet && __previousApplet) {
+            showTimer.stop();
+            hideTimer.stop();
+        } else if (currentApplet) {
+            showTimer.restart();
+        } else {
+            hideTimer.restart();
         }
+        __previousApplet = currentApplet;
     }
 
     onPressed: mouse => {
@@ -188,6 +195,15 @@ MouseArea {
         interval: Kirigami.Units.humanMoment
         onTriggered: configurationArea.currentApplet = null
     }
+    Timer {
+        id: showTimer
+        interval: Kirigami.Units.toolTipDelay
+        onTriggered: {
+            if (!configurationArea.containsMouse) {
+                configurationArea.currentApplet = null
+            }
+        }
+    }
 
     Rectangle {
         id: handle
@@ -245,7 +261,7 @@ MouseArea {
     }
     PlasmaCore.PopupPlasmaWindow {
         id: tooltip
-        visible: configurationArea.currentApplet && !configurationArea.dragAndDropping
+        visible: configurationArea.currentApplet && !configurationArea.dragAndDropping && !showTimer.running
         visualParent: configurationArea.currentApplet
         // Try to dodge the ruler, as we can't cover it since it's a layershell surface
         margin: configurationArea.Window.window?.lengthMode === 2 ? Kirigami.Units.gridUnit * 2 : 0
