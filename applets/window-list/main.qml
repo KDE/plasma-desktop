@@ -28,6 +28,30 @@ PlasmoidItem {
     switchWidth: Kirigami.Units.gridUnit * 8
     switchHeight: Kirigami.Units.gridUnit * 6
 
+    readonly property bool inPanel: [
+        PlasmaCore.Types.TopEdge,
+        PlasmaCore.Types.RightEdge,
+        PlasmaCore.Types.BottomEdge,
+        PlasmaCore.Types.LeftEdge,
+    ].includes(Plasmoid.location)
+
+    TextMetrics {
+        id: placeholderMetrics
+        font: Kirigami.Theme.defaultFont 
+        text: i18nc("@info:placeholder", "No open windows")
+    }
+
+    property ListModel noWindowModel: ListModel {
+        ListElement {
+            display: ""
+            decoration: "edit-none"
+        }
+
+        Component.onCompleted: {
+            noWindowModel.setProperty(0, "display", placeholderMetrics.text)
+        }
+    }
+
     TaskManager.VirtualDesktopInfo {
         id: virtualDesktopInfo
     }
@@ -53,17 +77,98 @@ PlasmoidItem {
         filterNotMinimized: Plasmoid.configuration.showOnlyMinimized
     }
 
+    property string longestWindowCaption: ""
+
+    TextMetrics {
+        id: longestTextMetrics
+        elide: Text.ElideRight
+    }
+
+    property int fullRepresentationDynamicWidth: 0
+
+    function updateLongestWindowTitle() {
+        if (!tasksModel || !tasksModel.count) {
+            longestWindowCaption = "";
+
+            fullRepresentationDynamicWidth = Math.ceil(placeholderMetrics.width)
+                                           + Kirigami.Units.iconSizes.sizeForLabels * 2 + Kirigami.Units.smallSpacing * 2;
+            return;
+        }
+
+        let maxWidth = 0;
+        let longest = "";
+        for (let i = 0; i < tasksModel.count; ++i) {
+            let idx = tasksModel.makeModelIndex(i);
+            longestTextMetrics.text = tasksModel.data(idx, 0) || tasksModel.data(idx, TaskManager.AbstractTasksModel.AppName) || "";
+            
+            if (longestTextMetrics.width > maxWidth) {
+                maxWidth = longestTextMetrics.width;
+                longest = longestTextMetrics.text;
+            }
+        }
+
+        root.longestWindowCaption = longest;
+        fullRepresentationDynamicWidth = Math.ceil(maxWidth) + Kirigami.Units.iconSizes.sizeForLabels * 2 + Kirigami.Units.smallSpacing * 2;
+    }
+
+    Connections {
+        target: tasksModel
+        function onModelReset() { updateLongestWindowTitle(); }
+    }
+
     Component {
         id: windowList
 
-        ListView {
+        ListView {  
             id: windowListView
-
+            property int maxDelegateWidth: 0
+            
             clip: true
-            Layout.preferredWidth: Kirigami.Units.gridUnit * 10
-            Layout.preferredHeight: Kirigami.Units.gridUnit * 12
-            model: tasksModel
 
+
+            // Set preferred size when on desktop containment. 
+            // Size set arbitrarily to fit approximately 12-14 items.
+            Binding {
+                target: windowListView
+                property: "Layout.preferredWidth"
+                when: !inPanel
+                value: Kirigami.Units.gridUnit * 28
+            }
+
+            Binding {
+                target: windowListView
+                property: "Layout.preferredHeight"
+                when: !inPanel
+                value: Kirigami.Units.gridUnit * 24
+            }
+
+            Binding {
+                target: windowListView
+                property: "Layout.maximumHeight"
+                when: inPanel
+                value: contentHeight
+            }
+            Binding {
+                target: windowListView
+                property: "Layout.minimumHeight"
+                when: inPanel
+                value: contentHeight
+            }
+            Binding {
+                target: windowListView
+                property: "Layout.maximumWidth"
+                when: inPanel
+                value: root.fullRepresentationDynamicWidth
+            }
+            Binding {
+                target: windowListView
+                property: "Layout.minimumWidth"
+                when: inPanel
+                value: root.fullRepresentationDynamicWidth
+            }
+
+            model: inPanel && tasksModel.count === 0 ? noWindowModel : tasksModel
+        
             Connections {
                 target: root
                 function onExpandedChanged(expanded) {
@@ -79,6 +184,8 @@ PlasmoidItem {
                             root.lastActiveTaskName = ""
                             root.lastActiveTaskIcon = ""
                         }
+
+                        root.updateLongestWindowTitle();
                     }
                 }
             }
@@ -142,15 +249,24 @@ PlasmoidItem {
                 }
             }
 
+            // Helps with performance otherwise scrolling is very laggy and stuttery
+            // with low fps
+            reuseItems: true
+
             delegate: PlasmaComponents.ItemDelegate {
                 id: delegate
 
                 required property var model
                 required property var decoration
 
-
-                width: ListView.view.width
-
+                width: {
+                    if (inPanel) {
+                        return root.fullRepresentationDynamicWidth 
+                    } else {
+                        return ListView.view.width;
+                    }
+                }
+                
                 highlighted: ListView.isCurrentItem
 
                 contentItem: RowLayout {
@@ -197,9 +313,9 @@ PlasmoidItem {
             Kirigami.PlaceholderMessage {
                 anchors.centerIn: parent
                 width: parent.width - (Kirigami.Units.largeSpacing * 2)
-                visible: windowListView.count === 0
+                visible: !inPanel && windowListView.count === 0
                 icon.source: "edit-none"
-                text: i18nc("@info:placeholder", "No open windows")
+                text: placeholderMetrics.text
             }
         }
     }

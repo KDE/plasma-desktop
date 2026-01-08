@@ -202,6 +202,6 @@ KCM.SimpleKCM {
             onActivated: root.cfg_sortingStrategy = currentValue
             Component.onCompleted: currentIndex = indexOfValue(root.cfg_sortingStrategy)
         }
-    
+
     }
 }
