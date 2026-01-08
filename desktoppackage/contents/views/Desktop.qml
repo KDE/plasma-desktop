@@ -92,12 +92,16 @@ Item {
         return screenRect;
     }
 
+    // Handles click events to exit edit mode around the editModeRect
     MouseArea {
         id: desktopMouseArea
         anchors.fill: parent
         onClicked: containment.plasmoid.corona.editMode = false
     }
 
+    // Coverts the edit mode area and consumes the click events inside it so that
+    // edit mode is not exited when clicking inside the edit area
+    // Touch events are handled in plasma-workspace appletslayout.cpp
     MouseArea {
         id: containmentParent
         x: editModeLoader.item ? editModeLoader.item.centerX - width / 2 : 0
