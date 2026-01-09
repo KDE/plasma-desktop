@@ -56,6 +56,19 @@ Item {
             width: Math.round(parent.width)
             height: Math.round(parent.height + toolBar.height + Kirigami.Units.largeSpacing)
             y: - toolBar.height - Kirigami.Units.largeSpacing
+            
+            // Needed especially for toolbar since containmentParent MouseArea is not covering it. 
+            // Do not fill the parent or it will prevent widget interaction
+            MouseArea {
+                anchors.left: parent.left
+                anchors.top: parent.top
+                anchors.right: parent.right
+                height: toolBar.height
+                onClicked: {
+                    // Transparent MouseArea to consume clicks and taps on the toolbar area
+                    // preventing edit mode exit when clicking on the toolbar
+                }
+            }
 
             radius: editModeItem.open ? Kirigami.Units.cornerRadius : 0
             Behavior on radius {
