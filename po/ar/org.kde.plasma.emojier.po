@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-12-18 09:10+0400\n"
+"PO-Revision-Date: 2026-01-08 11:43+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -46,8 +46,7 @@ msgid "Replace an existing instance"
 msgstr "استبدل نسخة موجودة"
 
 #: app/ui/CategoryPage.qml:112
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:button clear emoji history"
 msgid "Clear History"
 msgstr "امحُ التاريخ"
@@ -56,7 +55,7 @@ msgstr "امحُ التاريخ"
 #, kde-format
 msgctxt "@action:button Button to open a menu that lets you choose a skin tone"
 msgid "Skin tone:"
-msgstr ""
+msgstr "لون البشرة:"
 
 #: app/ui/CategoryPage.qml:135 app/ui/Emojier.qml:73
 #, kde-format
@@ -68,73 +67,73 @@ msgstr "الكلّ"
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐️ Neutral"
-msgstr ""
+msgstr "🖐محايد"
 
 #: app/ui/CategoryPage.qml:190
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Neutral"
-msgstr ""
+msgstr "طبيعي"
 
 #: app/ui/CategoryPage.qml:198
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏻 Light"
-msgstr ""
+msgstr "🖐🏻 فاتح"
 
 #: app/ui/CategoryPage.qml:199
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Light"
-msgstr ""
+msgstr "فاتح"
 
 #: app/ui/CategoryPage.qml:207
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏼 Medium Light"
-msgstr ""
+msgstr "🖐🏼 فاتح متوسط"
 
 #: app/ui/CategoryPage.qml:208
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium Light"
-msgstr ""
+msgstr "فاتح متوسط"
 
 #: app/ui/CategoryPage.qml:216
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏽 Medium"
-msgstr ""
+msgstr "🖐🏽 متوسط"
 
 #: app/ui/CategoryPage.qml:217
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium"
-msgstr ""
+msgstr "متوسط"
 
 #: app/ui/CategoryPage.qml:225
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏾 Medium Dark"
-msgstr ""
+msgstr "🖐🏾 داكن متوسط"
 
 #: app/ui/CategoryPage.qml:226
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium Dark"
-msgstr ""
+msgstr "داكن متوسط"
 
 #: app/ui/CategoryPage.qml:234
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏿 Dark"
-msgstr ""
+msgstr "🖐🏿 داكن"
 
 #: app/ui/CategoryPage.qml:235
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Dark"
-msgstr ""
+msgstr "داكن"
 
 #: app/ui/CategoryPage.qml:264
 #, kde-format
@@ -149,11 +148,10 @@ msgid "Copy Description"
 msgstr "انسخ الوصف"
 
 #: app/ui/CategoryPage.qml:368
-#, fuzzy, kde-format
-#| msgid "No recent Emojis"
+#, kde-format
 msgctxt "@label placeholder for empty recent emoji list"
 msgid "No recent Emojis"
-msgstr "لا يوجد إموجي حديثة"
+msgstr "لا يوجد صور تعبيرية حديثة"
 
 #: app/ui/CategoryPage.qml:368
 #, kde-format
@@ -162,15 +160,13 @@ msgid "No matching emoji found"
 msgstr "لم يعثر على رموز مطابقة"
 
 #: app/ui/Emojier.qml:44
-#, fuzzy, kde-format
-#| msgid "%1 copied to the clipboard"
+#, kde-format
 msgctxt "@info:status passive notification as action feedback"
 msgid "%1 copied to the clipboard"
 msgstr "‏%1 نُسخ للحافظة"
 
 #: app/ui/Emojier.qml:58
-#, fuzzy, kde-format
-#| msgid "Recent"
+#, kde-format
 msgctxt "@title page title for Recent Emoji view, and sidebar label for it"
 msgid "Recent"
 msgstr "الحديثة"

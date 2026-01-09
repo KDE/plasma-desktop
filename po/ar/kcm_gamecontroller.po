@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-11-12 18:55+0400\n"
+"PO-Revision-Date: 2026-01-08 11:28+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -317,7 +317,7 @@ msgstr "%1 (%2)"
 #, kde-format
 msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
 msgid "Allow using as pointer and keyboard"
-msgstr ""
+msgstr "اسمح باستعمالها كمؤشر ولوحة المفاتيح"
 
 #: ui/main.qml:44
 #, kde-kuit-format
@@ -326,17 +326,18 @@ msgid ""
 "Allow game controllers to act like pointer and keyboard devices in Plasma "
 "and non-game applications.<nl/><nl/>Games can always use the controller."
 msgstr ""
+"السماح لأجهزة التحكم في الألعاب بالعمل كأجهزة مؤشر ولوحة مفاتيح في بلازما "
+"والتطبيقات غير المتعلقة بالألعاب.<nl/><nl/>يمكن للألعاب دائمًا استخدام جهاز "
+"التحكم."
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "No game controllers found"
+#, kde-format
 msgctxt "@info placeholdermessage text"
 msgid "No game controllers found"
 msgstr "لم يعثر أجهزة التحكم بألعاب الفيديو"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Connect a wired or wireless controller"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage text"
 msgid "Connect a wired or wireless controller"
 msgstr "صِل متحكم سلكي أو لا سلكي"
@@ -350,6 +351,9 @@ msgid ""
 "controller, or enable automatic blocking by allowing the use as pointer and "
 "keyboard."
 msgstr ""
+"قد يدخل النظام آليًا في وضع السكون أو يقفل الشاشة أثناء استخدام جهاز التحكم. "
+"ضع في اعتبارك حظرهما يدويًا أثناء استخدام جهاز التحكم، أو فعّل الحظر الآلي عن "
+"طريق السماح باستخدامهما كمؤشر ولوحة مفاتيح."
 
 #: ui/main.qml:98
 #, kde-format

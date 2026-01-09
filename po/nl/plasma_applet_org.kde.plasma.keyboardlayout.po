@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2026 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2022-08-21 19:13+0200\n"
+"PO-Revision-Date: 2026-01-08 18:07+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,18 +15,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: qml/config.qml:6
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Algemeen"
 
 #: qml/configGeneral.qml:31
-#, fuzzy, kde-format
-#| msgid "Display style:"
+#, kde-format
 msgctxt "@title:group of radio buttons, options are language codes or images"
 msgid "Display style:"
 msgstr "Weergavestijl:"
@@ -38,15 +36,13 @@ msgid "No flag available"
 msgstr "Geen vlag beschikbaar"
 
 #: qml/configGeneral.qml:102
-#, fuzzy, kde-format
-#| msgid "Layouts:"
+#, kde-format
 msgctxt "@label prefixed to button"
 msgid "Layouts:"
 msgstr "Indelingen:"
 
 #: qml/configGeneral.qml:103
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:button opens kcm_keyboard"
 msgid "Configure…"
 msgstr "Configureren…"

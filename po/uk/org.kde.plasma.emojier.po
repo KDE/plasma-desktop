@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: org.kde.plasma.emojier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2026-01-04 11:52+0200\n"
+"PO-Revision-Date: 2026-01-08 08:50+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -48,8 +48,7 @@ msgid "Replace an existing instance"
 msgstr "Замінити наявний екземпляр"
 
 #: app/ui/CategoryPage.qml:112
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:button clear emoji history"
 msgid "Clear History"
 msgstr "Спорожнити журнал"
@@ -151,8 +150,7 @@ msgid "Copy Description"
 msgstr "Копіювати опис"
 
 #: app/ui/CategoryPage.qml:368
-#, fuzzy, kde-format
-#| msgid "No recent Emojis"
+#, kde-format
 msgctxt "@label placeholder for empty recent emoji list"
 msgid "No recent Emojis"
 msgstr "Немає нещодавніх емоційок"
@@ -164,15 +162,13 @@ msgid "No matching emoji found"
 msgstr "Не знайдено відповідної емоційки"
 
 #: app/ui/Emojier.qml:44
-#, fuzzy, kde-format
-#| msgid "%1 copied to the clipboard"
+#, kde-format
 msgctxt "@info:status passive notification as action feedback"
 msgid "%1 copied to the clipboard"
 msgstr "%1 скопійовано до буфера обміну даними"
 
 #: app/ui/Emojier.qml:58
-#, fuzzy, kde-format
-#| msgid "Recent"
+#, kde-format
 msgctxt "@title page title for Recent Emoji view, and sidebar label for it"
 msgid "Recent"
 msgstr "Нещодавні"

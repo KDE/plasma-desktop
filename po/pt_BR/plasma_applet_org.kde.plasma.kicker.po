@@ -4,14 +4,14 @@
 #
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2014, 2015, 2016, 2019.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2017, 2019, 2020, 2021, 2023.
-# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Marcus Gama <marcus.gama@gmail.com>
 # SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-12-12 07:18-0300\n"
+"PO-Revision-Date: 2026-01-08 07:46-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: code/tools.js:53
 #, kde-format
@@ -47,15 +47,13 @@ msgid "Show in Favorites"
 msgstr "Mostrar nos Favoritos"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Geral"
 
 #: ConfigGeneral.qml:48
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Ícone:"
@@ -73,106 +71,91 @@ msgid "Clear Icon"
 msgstr "Limpar ícone"
 
 #: ConfigGeneral.qml:159
-#, fuzzy, kde-format
-#| msgid "Show applications as:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Mostrar os aplicativos como:"
 
 #: ConfigGeneral.qml:161
-#, fuzzy, kde-format
-#| msgid "Name only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Apenas o nome"
 
 #: ConfigGeneral.qml:161
-#, fuzzy, kde-format
-#| msgid "Description only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Apenas a descrição"
 
 #: ConfigGeneral.qml:162
-#, fuzzy, kde-format
-#| msgid "Name (Description)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Nome (Descrição)"
 
 #: ConfigGeneral.qml:162
-#, fuzzy, kde-format
-#| msgid "Description (Name)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Descrição (Nome)"
 
 #: ConfigGeneral.qml:172
-#, fuzzy, kde-format
-#| msgid "Behavior:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
 msgstr "Comportamento:"
 
 #: ConfigGeneral.qml:174
-#, fuzzy, kde-format
-#| msgid "Sort applications alphabetically"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Ordenar os aplicativos alfabeticamente"
 
 #: ConfigGeneral.qml:182
-#, fuzzy, kde-format
-#| msgid "Flatten sub-menus to a single level"
+#, kde-format
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
 msgstr "Achatar os submenus a um único nível"
 
 #: ConfigGeneral.qml:190
-#, fuzzy, kde-format
-#| msgid "Show icons on the root level of the menu"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
 msgstr "Mostrar os ícones no nível da raiz do menu"
 
 #: ConfigGeneral.qml:200
-#, fuzzy, kde-format
-#| msgid "Show categories:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
 msgstr "Mostrar categorias:"
 
 #: ConfigGeneral.qml:203
-#, fuzzy, kde-format
-#| msgid "Recent applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent applications"
 msgstr "Aplicativos recentes"
 
 #: ConfigGeneral.qml:204
-#, fuzzy, kde-format
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used applications"
 msgstr "Aplicativos usados frequentemente"
 
 #: ConfigGeneral.qml:211
-#, fuzzy, kde-format
-#| msgid "Recent files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent files"
 msgstr "Arquivos recentes"
 
 #: ConfigGeneral.qml:212
-#, fuzzy, kde-format
-#| msgid "Often used files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used files"
 msgstr "Arquivos usados frequentemente"
 
 #: ConfigGeneral.qml:218
-#, fuzzy, kde-format
-#| msgid "Sort items in categories by:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
 msgstr "Ordenar os itens nas categorias por:"
@@ -185,47 +168,38 @@ msgid "Recently used"
 msgstr "Usados recentemente"
 
 #: ConfigGeneral.qml:219
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
-#| msgid "Often used"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Often used"
 msgstr "Usados frequentemente"
 
 #: ConfigGeneral.qml:229
-#, fuzzy, kde-format
-#| msgid "Search:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
 msgstr "Pesquisar:"
 
 #: ConfigGeneral.qml:231
-#, fuzzy, kde-format
-#| msgid "Expand search to bookmarks, files and emails"
+#, kde-format
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Expandir a pesquisa nos favoritos, arquivos e e-mails"
 
 #: ConfigGeneral.qml:239
-#, fuzzy, kde-format
-#| msgid "Align search results to bottom"
+#, kde-format
 msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr "Alinhar os resultados da pesquisa na parte inferior"
 
 #: ConfigGeneral.qml:244
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox for a checkbox toggling Dark Mode"
-#| msgid "Appearance:"
+#, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
 msgstr "Aparência:"
 
 #: ConfigGeneral.qml:249
-#, fuzzy, kde-format
-#| msgid "Prefer Dark Mode when available"
+#, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
 msgstr "Preferir o Modo Escuro quando disponível"
@@ -241,8 +215,7 @@ msgstr ""
 "geralmente apresentam um fundo escuro."
 
 #: DashboardRepresentation.qml:309
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "Favoritos"
@@ -260,8 +233,7 @@ msgid "Launch"
 msgstr "Iniciar"
 
 #: main.qml:211
-#, fuzzy, kde-format
-#| msgid "Edit Applications…"
+#, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
 msgstr "Editar aplicativos…"

@@ -44,18 +44,16 @@ msgid "Show in Favorites"
 msgstr "显示到常用程序"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
-msgstr "常规"
+msgstr ""
 
 #: ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
-msgstr "图标："
+msgstr ""
 
 #: ConfigGeneral.qml:53
 #, kde-format
@@ -102,39 +100,34 @@ msgid "Remove icon"
 msgstr "移除图标"
 
 #: ConfigGeneral.qml:120
-#, fuzzy, kde-format
-#| msgid "Show applications as:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
-msgstr "应用程序显示方式："
+msgstr ""
 
 #: ConfigGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "Name only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
-msgstr "仅名称"
+msgstr ""
 
 #: ConfigGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "Description only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
-msgstr "仅描述"
+msgstr ""
 
 #: ConfigGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "Name (Description)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
-msgstr "名称 (描述)"
+msgstr ""
 
 #: ConfigGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "Description (Name)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
-msgstr "描述 (名称)"
+msgstr ""
 
 #: ConfigGeneral.qml:132
 #, kde-format
@@ -181,11 +174,10 @@ msgid ""
 msgstr "这不会影响应用程序在搜索结果或常用程序页面中的排序方式。"
 
 #: ConfigGeneral.qml:185
-#, fuzzy, kde-format
-#| msgid "Use compact list item style"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use compact list item style"
-msgstr "列表项目使用紧凑样式"
+msgstr ""
 
 #: ConfigGeneral.qml:191
 #, kde-format
@@ -194,18 +186,16 @@ msgid "Automatically disabled when in Touch Mode"
 msgstr "在触摸模式下自动禁用"
 
 #: ConfigGeneral.qml:199
-#, fuzzy, kde-format
-#| msgid "Highlight newly installed applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly installed applications"
-msgstr "突出显示新安装的应用程序"
+msgstr ""
 
 #: ConfigGeneral.qml:204
-#, fuzzy, kde-format
-#| msgid "Switch sidebar categories when hovering over them"
+#, kde-format
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
-msgstr "悬停时切换侧边栏类别"
+msgstr ""
 
 #: ConfigGeneral.qml:210
 #, kde-format
@@ -214,127 +204,106 @@ msgid "Configure Search Plugins…"
 msgstr "配置搜索插件…"
 
 #: ConfigGeneral.qml:220
-#, fuzzy, kde-format
-#| msgid "Sidebar position:"
+#, kde-format
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
-msgstr "侧边栏位置："
+msgstr ""
 
 #: ConfigGeneral.qml:221 ConfigGeneral.qml:229
-#, fuzzy, kde-format
-#| msgid "Right"
+#, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Right"
-msgstr "右侧"
+msgstr ""
 
 #: ConfigGeneral.qml:221
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "option:radio sidebar position"
 msgid "Left"
-msgstr "左侧"
+msgstr ""
 
 #: ConfigGeneral.qml:229
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Left"
-msgstr "左侧"
+msgstr ""
 
 #: ConfigGeneral.qml:237
-#, fuzzy, kde-format
-#| msgid "Show favorites:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
-msgstr "常用程序显示方式："
+msgstr ""
 
 #: ConfigGeneral.qml:238
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
-#| msgid "In a grid"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
-msgstr "网格"
+msgstr ""
 
 #: ConfigGeneral.qml:246
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a list'"
-#| msgid "In a list"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
-msgstr "列表"
+msgstr ""
 
 #: ConfigGeneral.qml:254
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
-msgstr "显示其他应用程序："
+msgstr ""
 
 #: ConfigGeneral.qml:255
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
-#| msgid "In a grid"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
-msgstr "网格"
+msgstr ""
 
 #: ConfigGeneral.qml:263
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a list'"
-#| msgid "In a list"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
-msgstr "列表"
+msgstr ""
 
 #: ConfigGeneral.qml:275
-#, fuzzy, kde-format
-#| msgid "Show buttons for:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
-msgstr "显示按钮："
+msgstr ""
 
 #: ConfigGeneral.qml:276
-#, fuzzy, kde-format
-#| msgid "Power"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power"
-msgstr "电源"
+msgstr ""
 
 #: ConfigGeneral.qml:285
-#, fuzzy, kde-format
-#| msgid "Session"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Session"
-msgstr "会话"
+msgstr ""
 
 #: ConfigGeneral.qml:294
-#, fuzzy, kde-format
-#| msgid "Power and session"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
-msgstr "电源和会话"
+msgstr ""
 
 #: ConfigGeneral.qml:303
-#, fuzzy, kde-format
-#| msgid "Show action button captions"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show action button captions"
-msgstr "显示操作按钮的文字标签"
+msgstr ""
 
 #: Footer.qml:101
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@title:tab kickoff sidebar tab"
 msgid "Applications"
-msgstr "应用程序"
+msgstr ""
 
 #: Footer.qml:117
-#, fuzzy, kde-format
-#| msgid "Places"
+#, kde-format
 msgctxt "@title:tab kickoff sidebar tab"
 msgid "Places"
-msgstr "常用位置"
+msgstr ""
 
 #: FullRepresentation.qml:133
 #, kde-format
@@ -343,42 +312,36 @@ msgid "No matches"
 msgstr "没有匹配的内容"
 
 #: Header.qml:84
-#, fuzzy, kde-format
-#| msgid "Open user settings"
+#, kde-format
 msgctxt "@action:button icon-only, for tooltip/Accessible"
 msgid "Open user settings"
-msgstr "打开用户设置"
+msgstr ""
 
 #: Header.qml:264
-#, fuzzy, kde-format
-#| msgid "Keep Open"
+#, kde-format
 msgctxt ""
 "@action:button Pin widget open if it loses focus, icon-only button, for "
 "tooltip/Accessible"
 msgid "Keep Open"
-msgstr "保持展开状态"
+msgstr ""
 
 #: KickoffGridDelegate.qml:59
-#, fuzzy, kde-format
-#| msgctxt "Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "@label Newly installed app, badge, keep short"
 msgid "New!"
-msgstr "新增"
+msgstr ""
 
 #: KickoffGridDelegate.qml:60
-#, fuzzy, kde-format
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly installed application"
-msgstr "新安装的应用程序"
+msgstr ""
 
 #: KickoffGridView.qml:101
-#, fuzzy, kde-format
-#| msgid "Grid with %1 rows, %2 columns"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Grid with %1 rows, %2 columns"
-msgstr "%1 行 %2 列的网格"
+msgstr ""
 
 #: KickoffListDelegate.qml:117
 #, kde-format
@@ -387,53 +350,46 @@ msgid "New!"
 msgstr "新增"
 
 #: KickoffListDelegate.qml:118
-#, fuzzy, kde-format
-#| msgid "There is a newly installed application in this category"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly installed application in this category"
-msgstr "此类别中有一个新安装的应用程序"
+msgstr ""
 
 #: KickoffListDelegate.qml:119
-#, fuzzy, kde-format
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly installed application"
-msgstr "新安装的应用程序"
+msgstr ""
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Session"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Session"
-msgstr "会话"
+msgstr ""
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Power"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Power"
-msgstr "电源"
+msgstr ""
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "More"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "More"
-msgstr "更多"
+msgstr ""
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Session and Power"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Session and Power"
-msgstr "会话和电源"
+msgstr ""
 
 #: main.qml:356
-#, fuzzy, kde-format
-#| msgid "Edit Applications…"
+#, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
-msgstr "编辑应用程序…"
+msgstr ""
 
 #: PlacesPage.qml:64
 #, kde-format
@@ -452,11 +408,3 @@ msgstr "历史"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "常用"
-
-#~ msgctxt "Part of a sentence: 'Show other applications in a grid'"
-#~ msgid "In a grid"
-#~ msgstr "网格"
-
-#~ msgctxt "Part of a sentence: 'Show other applications in a list'"
-#~ msgid "In a list"
-#~ msgstr "列表"

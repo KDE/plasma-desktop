@@ -3,20 +3,20 @@
 #
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2011.
 # Yi-Jyun Pan <pan93412@gmail.com>, 2020.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-11-29 17:59+0900\n"
+"PO-Revision-Date: 2026-01-08 23:59+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 26.03.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: qml/config.qml:13
@@ -26,36 +26,31 @@ msgid "Appearance"
 msgstr "外觀"
 
 #: qml/ConfigAppearance.qml:23
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Icon:"
 msgstr "圖示："
 
 #: qml/ConfigAppearance.qml:25
-#, fuzzy, kde-format
-#| msgid "Show the current activity icon"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show the current activity icon"
 msgstr "顯示目前的活動圖示"
 
 #: qml/ConfigAppearance.qml:31
-#, fuzzy, kde-format
-#| msgid "Show the generic activity icon"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show the generic activity icon"
 msgstr "顯示通用的活動圖示"
 
 #: qml/ConfigAppearance.qml:41
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Title:"
 msgstr "標題："
 
 #: qml/ConfigAppearance.qml:43
-#, fuzzy, kde-format
-#| msgid "Show the current activity name"
+#, kde-format
 msgctxt "@option:check title"
 msgid "Show the current activity name"
 msgstr "顯示目前的活動名稱"
@@ -67,15 +62,13 @@ msgid "Current activity is %1"
 msgstr "目前的活動是 %1"
 
 #: qml/main.qml:76
-#, fuzzy, kde-format
-#| msgid "Show Activity Manager"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show Activity Manager"
 msgstr "顯示活動管理員"
 
 #: qml/main.qml:77
-#, fuzzy, kde-format
-#| msgid "Click to show the activity manager"
+#, kde-format
 msgctxt "@info:tooltip subtext"
 msgid "Click to show the activity manager"
 msgstr "點擊以顯示活動管理員"

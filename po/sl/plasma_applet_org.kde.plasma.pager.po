@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-06-06 07:07+0200\n"
+"PO-Revision-Date: 2026-01-08 18:40+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -21,117 +21,100 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.8\n"
 
 #: qml/config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Splošno"
 
 #: qml/configGeneral.qml:39
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "Splošno:"
 
 #: qml/configGeneral.qml:41
-#, fuzzy, kde-format
-#| msgid "Show window outlines"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show window outlines"
 msgstr "Prikaži obrise okna"
 
 #: qml/configGeneral.qml:46
-#, fuzzy, kde-format
-#| msgid "Show application icons on window outlines"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show application icons on window outlines"
-msgstr "Prikažite ikone aplikacij na obrisih oken"
+msgstr "Prikaži ikone aplikacij na obrisih oken"
 
 #: qml/configGeneral.qml:52
-#, fuzzy, kde-format
-#| msgid "Show only current screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show only current screen"
 msgstr "Prikaži samo trenutni zaslon"
 
 #: qml/configGeneral.qml:57
-#, fuzzy, kde-format
-#| msgid "Navigation wraps around"
+#, kde-format
 msgctxt "@option:check"
 msgid "Navigation wraps around"
 msgstr "Krmarjenje je ovito okoli"
 
 #: qml/configGeneral.qml:69
-#, fuzzy, kde-format
-#| msgid "Layout:"
+#, kde-format
 msgctxt "@title:listbox"
 msgid "Layout:"
 msgstr "Postavitev:"
 
 #: qml/configGeneral.qml:71
-#, fuzzy, kde-format
-#| msgctxt "The pager layout"
-#| msgid "Default"
+#, kde-format
 msgctxt "@item:inlistbox The pager layout"
 msgid "Default"
 msgstr "Privzeto"
 
 #: qml/configGeneral.qml:71
-#, fuzzy, kde-format
-#| msgid "Horizontal"
+#, kde-format
 msgctxt "@item:inlistbox The pager layout"
 msgid "Horizontal"
 msgstr "Vodoravno"
 
 #: qml/configGeneral.qml:71
-#, fuzzy, kde-format
-#| msgid "Vertical"
+#, kde-format
 msgctxt "@item:inlistbox The pager layout"
 msgid "Vertical"
 msgstr "Navpično"
 
 #: qml/configGeneral.qml:85
-#, fuzzy, kde-format
-#| msgid "Text display:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Text display:"
 msgstr "Prikaz besedila:"
 
 #: qml/configGeneral.qml:88
-#, fuzzy, kde-format
-#| msgid "No text"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "No text"
 msgstr "Brez besedila"
 
 #: qml/configGeneral.qml:96
-#, fuzzy, kde-format
-#| msgid "Activity number"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "Activity number"
 msgstr "Številka dejavnosti"
 
 #: qml/configGeneral.qml:96
-#, fuzzy, kde-format
-#| msgid "Desktop number"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "Desktop number"
 msgstr "Številka namizja"
 
 #: qml/configGeneral.qml:104
-#, fuzzy, kde-format
-#| msgid "Activity name"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "Activity name"
 msgstr "Ime dejavnosti"
 
 #: qml/configGeneral.qml:104
-#, fuzzy, kde-format
-#| msgid "Desktop name"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "Desktop name"
 msgstr "Ime namizja"
@@ -169,9 +152,7 @@ msgid "Shows the desktop"
 msgstr "Pokaži namizje"
 
 #: qml/main.qml:87
-#, fuzzy, kde-format
-#| msgid "…and %1 other window"
-#| msgid_plural "…and %1 other windows"
+#, kde-format
 msgctxt "@info:tooltip overflow label"
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
@@ -181,9 +162,7 @@ msgstr[2] "…in %1 druga okna"
 msgstr[3] "…in %1 druga okna"
 
 #: qml/main.qml:351
-#, fuzzy, kde-format
-#| msgid "%1 Window:"
-#| msgid_plural "%1 Windows:"
+#, kde-format
 msgctxt "@info:tooltip start of list"
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
@@ -193,9 +172,7 @@ msgstr[2] "%1 okna:"
 msgstr[3] "%1 okna:"
 
 #: qml/main.qml:363
-#, fuzzy, kde-format
-#| msgid "%1 Minimized Window:"
-#| msgid_plural "%1 Minimized Windows:"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
@@ -205,8 +182,7 @@ msgstr[2] "%1 skrčena okna:"
 msgstr[3] "%1 skrčenih oken:"
 
 #: qml/main.qml:439
-#, fuzzy, kde-format
-#| msgid "Desktop %1"
+#, kde-format
 msgctxt "@info:whatsthis Accessible name for pager section"
 msgid "Desktop %1"
 msgstr "Namizje %1"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-09-19 07:11+0200\n"
+"PO-Revision-Date: 2026-01-08 05:57+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,97 +16,84 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
-#, fuzzy, kde-format
-#| msgid "Currently being used"
+#, kde-format
 msgctxt "@info:status currently active activity"
 msgid "Currently being used"
 msgstr "ამჟამად გამოიყენება"
 
 #: contents/activitymanager/ActivityItem.qml:243
-#, fuzzy, kde-format
-#| msgid ""
-#| "Move to\n"
-#| "this activity"
+#, kde-format
 msgctxt "@action shows when dragging file over item"
 msgid ""
 "Move to\n"
 "this activity"
-msgstr "ამ აქტივობასთან გადმოტანა"
+msgstr ""
+"გადმოტანა\n"
+"ამ აქტივობასთან"
 
 #: contents/activitymanager/ActivityItem.qml:273
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show also\n"
-#| "in this activity"
+#, kde-format
 msgctxt "@action shows when dragging file over item"
 msgid ""
 "Show also\n"
 "in this activity"
-msgstr "ამ აქტივობაშიც ჩვენება"
+msgstr ""
+"ჩვენება\n"
+"ამ აქტივობაშიც"
 
 #: contents/activitymanager/ActivityItem.qml:335
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm"
 msgid "Configure"
 msgstr "მორგება"
 
 #: contents/activitymanager/ActivityManager.qml:118
-#, fuzzy, kde-format
-#| msgid "Create activity…"
+#, kde-format
 msgctxt "@action:button opens Activity kcm"
 msgid "Create activity…"
 msgstr "აქტივობის შექმნა…"
 
 #: contents/activitymanager/Heading.qml:59
-#, fuzzy, kde-format
-#| msgid "Activities"
+#, kde-format
 msgctxt "@title:window"
 msgid "Activities"
-msgstr "ქმედებები"
+msgstr "აქტივობები"
 
 #: contents/applet/AppletError.qml:165
-#, fuzzy, kde-format
-#| msgid "Copy to Clipboard"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr "გაცვლის ბუფერში კოპირება"
+msgstr "ბუფერში კოპირება"
 
 #: contents/applet/AppletError.qml:188
-#, fuzzy, kde-format
-#| msgid "View Error Details…"
+#, kde-format
 msgctxt "@action:button opens dialog"
 msgid "View Error Details…"
 msgstr "შეცდომის დეტალები ნახვა…"
 
 #: contents/applet/CompactApplet.qml:91
-#, fuzzy, kde-format
-#| msgid "Open %1"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for panel widget %1"
 msgid "Open %1"
 msgstr "%1-ის გახსნა"
 
 #: contents/configuration/AboutPlugin.qml:21
-#, fuzzy, kde-format
-#| msgid "About"
+#, kde-format
 msgctxt "@title:window About this widget"
 msgid "About"
 msgstr "შესახებ"
 
 #: contents/configuration/AboutPlugin.qml:51
-#, fuzzy, kde-format
-#| msgid "Send an email to %1"
+#, kde-format
 msgctxt "plasma_shell_org.kde.plasma.desktop"
 msgid "Send an email to %1"
-msgstr "%1-სთვის ელფოსტის გაგზავნა"
+msgstr "ელფოსტის გაგზავნა %1-ისთვის"
 
 #: contents/configuration/AboutPlugin.qml:65
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip %1 url"
-#| msgid "Open website %1"
+#, kde-format
 msgctxt "@action:button icononly for tooltip & accessible %1 is url"
 msgid "Open website %1"
 msgstr "ვებგვერდის გახსნა: %1"
@@ -124,22 +111,19 @@ msgid "Get Help"
 msgstr "დახმარების მიღება"
 
 #: contents/configuration/AboutPlugin.qml:165
-#, fuzzy, kde-format
-#| msgid "Report an issue"
+#, kde-format
 msgctxt "@action:button urlbutton"
 msgid "Report an issue"
 msgstr "პრობლემის ანგარიში"
 
 #: contents/configuration/AboutPlugin.qml:172
-#, fuzzy, kde-format
-#| msgid "Copyright"
+#, kde-format
 msgctxt "@title license information"
 msgid "Copyright"
 msgstr "საავტორო უფლებები"
 
 #: contents/configuration/AboutPlugin.qml:191
-#, fuzzy, kde-format
-#| msgid "License: %1"
+#, kde-format
 msgctxt "@label %1 is the short SPDX text for the license"
 msgid "License: %1"
 msgstr "ლიცენზია: %1"
@@ -151,51 +135,43 @@ msgid "Read License"
 msgstr "ლიცენზიის წაკითხვა"
 
 #: contents/configuration/AboutPlugin.qml:211
-#, fuzzy, kde-format
-#| msgid "Authors"
+#, kde-format
 msgctxt "@title:group"
 msgid "Authors"
 msgstr "ავტორები"
 
 #: contents/configuration/AboutPlugin.qml:223
-#, fuzzy, kde-format
-#| msgid "Credits"
+#, kde-format
 msgctxt "@title:group"
 msgid "Credits"
 msgstr "კრედიტები"
 
 #: contents/configuration/AboutPlugin.qml:236
-#, fuzzy, kde-format
-#| msgid "Translators"
+#, kde-format
 msgctxt "@title:group"
 msgid "Translators"
 msgstr "მთარგმნელები"
 
 #: contents/configuration/AppletConfiguration.qml:90
-#, fuzzy, kde-format
-#| msgid "Keyboard Shortcuts"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Keyboard Shortcuts"
-msgstr "სხარტი კლავიშები"
+msgstr "კლავიატურის მალსახმობები"
 
 #: contents/configuration/AppletConfiguration.qml:337
-#, fuzzy, kde-format
-#| msgid "About"
+#, kde-format
 msgctxt "@title:group for About dialog page"
 msgid "About"
 msgstr "შესახებ"
 
 #: contents/configuration/AppletConfiguration.qml:385
-#, fuzzy, kde-format
-#| msgid "Apply Settings"
+#, kde-format
 msgctxt "@title:window dialog title"
 msgid "Apply Settings"
 msgstr "პარამეტრების გადატარება"
 
 #: contents/configuration/AppletConfiguration.qml:386
-#, fuzzy, kde-format
-#| msgid ""
-#| "The current page has unsaved changes. Apply the changes or discard them?"
+#, kde-format
 msgctxt "@label dialog body"
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
@@ -204,108 +180,93 @@ msgstr ""
 "ცვლილებები თუ მოვაშოროთ ისინი?"
 
 #: contents/configuration/AppletConfiguration.qml:418
-#, fuzzy, kde-format
-#| msgid "OK"
+#, kde-format
 msgctxt "@action:button"
 msgid "OK"
 msgstr "დიახ"
 
 #: contents/configuration/AppletConfiguration.qml:425
-#, fuzzy, kde-format
-#| msgid "Apply"
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply"
-msgstr "გამოყენება"
+msgstr "გადატარება"
 
 #: contents/configuration/AppletConfiguration.qml:431
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "გაუქმება"
 
 #: contents/configuration/ConfigCategoryDelegate.qml:26
-#, fuzzy, kde-format
-#| msgid "Open configuration page"
+#, kde-format
 msgctxt ""
 "@info:whatsthis Accessible description for sidebar entries opening "
 "configuration page"
 msgid "Open configuration page"
-msgstr "კონფიგურაციის გვერდის გახსნა"
+msgstr "მორგების გვერდის გახსნა"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:19
-#, fuzzy, kde-format
-#| msgid "Left-Button"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Left-Button"
 msgstr "მარცხენა ღილაკი"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:20
-#, fuzzy, kde-format
-#| msgid "Right-Button"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Right-Button"
 msgstr "მარჯვენა ღილაკი"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:21
-#, fuzzy, kde-format
-#| msgid "Middle-Button"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Middle-Button"
 msgstr "შუა ღილაკი"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:22
-#, fuzzy, kde-format
-#| msgid "Back-Button"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Back-Button"
 msgstr "ღილაკი უკან"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:23
-#, fuzzy, kde-format
-#| msgid "Forward-Button"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Forward-Button"
 msgstr "ღილაკი წინ"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:25
-#, fuzzy, kde-format
-#| msgid "Vertical-Scroll"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Vertical-Scroll"
-msgstr "ვერტიკალური ცოცია"
+msgstr "ვერტიკალური გადახვევა"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:26
-#, fuzzy, kde-format
-#| msgid "Horizontal-Scroll"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Horizontal-Scroll"
-msgstr "ჰორიზონტალური ცოცია"
+msgstr "ჰორიზონტალური ჩოჩია"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:28
-#, fuzzy, kde-format
-#| msgid "Shift"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Shift"
 msgstr "Shift"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:29
-#, fuzzy, kde-format
-#| msgid "Ctrl"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Ctrl"
 msgstr "Ctrl"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:30
-#, fuzzy, kde-format
-#| msgid "Alt"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Alt"
 msgstr "Alt"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:31
-#, fuzzy, kde-format
-#| msgid "Meta"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Meta"
 msgstr "Meta"
@@ -317,58 +278,50 @@ msgid "+"
 msgstr "+"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:139
-#, fuzzy, kde-format
-#| msgid "Add Action"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Action"
 msgstr "ქმედების დამატება"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:76
-#, fuzzy, kde-format
-#| msgid "Layout changes have been restricted by the system administrator"
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "განლაგების ცვლილება შეზღუდულია სისტემური ადმინისტრატორის მიერ"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:91
-#, fuzzy, kde-format
-#| msgid "Layout:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Layout:"
 msgstr "განლაგება:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:114
-#, fuzzy, kde-format
-#| msgid "Wallpaper type:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Wallpaper type:"
-msgstr "ფონური სურათის ტიპი:"
+msgstr "ფონის სურათის ტიპი:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:153
-#, fuzzy, kde-format
-#| msgid "Get New Plugins…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Plugins…"
 msgstr "ახალი დამატებების მიღება…"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:243
-#, fuzzy, kde-format
-#| msgid "Layout changes must be applied before other changes can be made"
+#, kde-format
 msgctxt "@info"
 msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
 "სხვა ცვლილებების განხორციელებამდე საჭიროა განლაგების ცვლილებების გადატარება"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:247
-#, fuzzy, kde-format
-#| msgid "Apply Now"
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply Now"
 msgstr "ახლა გადატარება"
 
 #: contents/configuration/ConfigurationShortcuts.qml:16
-#, fuzzy, kde-format
-#| msgid "Shortcuts"
+#, kde-format
 msgctxt "@title:window for configuration page"
 msgid "Shortcuts"
 msgstr "მალსახმობები"
@@ -380,39 +333,34 @@ msgid "Activate widget as if clicked:"
 msgstr "ვიჯეტის გააქტიურება, თითქოს ზედ დააწკაპუნეს:"
 
 #: contents/configuration/ContainmentConfiguration.qml:26
-#, fuzzy, kde-format
-#| msgid "Wallpaper"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Wallpaper"
-msgstr "ფონური სურათი"
+msgstr "ფონის სურათი"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
-#, fuzzy, kde-format
-#| msgid "Mouse Actions"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Mouse Actions"
 msgstr "თაგუნას ქმედებები"
 
 #: contents/configuration/MouseEventInputButton.qml:13
-#, fuzzy, kde-format
-#| msgid "Add Action"
+#, kde-format
 msgctxt "@action:button inactive state for button recording mouse input"
 msgid "Add Action"
 msgstr "ქმედების დამატება"
 
 #: contents/configuration/MouseEventInputButton.qml:20
-#, fuzzy, kde-format
-#| msgid "Input Here"
+#, kde-format
 msgctxt "@action:button active state for button recording mouse input"
 msgid "Input Here"
-msgstr "აქ შეყვანეთ"
+msgstr "აქ შეიყვანეთ"
 
 #: contents/configuration/PanelConfiguration.qml:99
-#, fuzzy, kde-format
-#| msgid "Panel Settings"
+#, kde-format
 msgctxt "@title:window"
 msgid "Panel Settings"
-msgstr "პანელის პარამეტრები"
+msgstr "პანელის მორგება"
 
 #: contents/configuration/PanelConfiguration.qml:108
 #, kde-format
@@ -435,190 +383,163 @@ msgid "Widgets…"
 msgstr "ვიჯეტები…"
 
 #: contents/configuration/PanelConfiguration.qml:162
-#, fuzzy, kde-format
-#| msgid "Position"
+#, kde-format
 msgctxt "@title:group"
 msgid "Position"
 msgstr "პოზიცია"
 
 #: contents/configuration/PanelConfiguration.qml:167
-#, fuzzy, kde-format
-#| msgid "Top"
+#, kde-format
 msgctxt "@label panel screen edge"
 msgid "Top"
-msgstr "თავში"
+msgstr "ზედა"
 
 #: contents/configuration/PanelConfiguration.qml:168
-#, fuzzy, kde-format
-#| msgid "Right"
+#, kde-format
 msgctxt "@label panel screen edge"
 msgid "Right"
 msgstr "მარჯვენა"
 
 #: contents/configuration/PanelConfiguration.qml:169
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "@label panel screen edge"
 msgid "Left"
 msgstr "მარცხენა"
 
 #: contents/configuration/PanelConfiguration.qml:170
-#, fuzzy, kde-format
-#| msgid "Bottom"
+#, kde-format
 msgctxt "@label panel screen edge"
 msgid "Bottom"
-msgstr "ქვედა"
+msgstr "ქვემოთ"
 
 #: contents/configuration/PanelConfiguration.qml:190
-#, fuzzy, kde-format
-#| msgid "Set Position…"
+#, kde-format
 msgctxt "action:button"
 msgid "Set Position…"
 msgstr "მდებარეობის დაყენება…"
 
 #: contents/configuration/PanelConfiguration.qml:217
-#, fuzzy, kde-format
-#| msgid "Alignment"
+#, kde-format
 msgctxt "@title:group"
 msgid "Alignment"
 msgstr "სწორება"
 
 #: contents/configuration/PanelConfiguration.qml:282
-#, fuzzy, kde-format
-#| msgid "Top"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Top"
-msgstr "თავში"
+msgstr "ზედა"
 
 #: contents/configuration/PanelConfiguration.qml:282
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Left"
 msgstr "მარცხენა"
 
 #: contents/configuration/PanelConfiguration.qml:283
-#, fuzzy, kde-format
-#| msgid "Center"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Center"
 msgstr "ცენტრი"
 
 #: contents/configuration/PanelConfiguration.qml:284
-#, fuzzy, kde-format
-#| msgid "Bottom"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Bottom"
-msgstr "ქვედა"
+msgstr "ქვემოთ"
 
 #: contents/configuration/PanelConfiguration.qml:284
-#, fuzzy, kde-format
-#| msgid "Right"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Right"
 msgstr "მარჯვენა"
 
 #: contents/configuration/PanelConfiguration.qml:314
-#, fuzzy, kde-format
-#| msgid "Height"
+#, kde-format
 msgctxt "@title:group panel height"
 msgid "Height"
 msgstr "სიმაღლე"
 
 #: contents/configuration/PanelConfiguration.qml:315
-#, fuzzy, kde-format
-#| msgid "Width"
+#, kde-format
 msgctxt "@title:group panel width"
 msgid "Width"
 msgstr "სიგანე"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, fuzzy, kde-format
-#| msgid "Fill height"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Fill height"
 msgstr "სიმაღლის შევსება"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, fuzzy, kde-format
-#| msgid "Fill width"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Fill width"
 msgstr "სიგანის შევსება"
 
 #: contents/configuration/PanelConfiguration.qml:335
-#, fuzzy, kde-format
-#| msgid "Fit content"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Fit content"
 msgstr "შემცველობის ჩატევა"
 
 #: contents/configuration/PanelConfiguration.qml:336
-#, fuzzy, kde-format
-#| msgid "Custom"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Custom"
 msgstr "ხელით"
 
 #: contents/configuration/PanelConfiguration.qml:369
-#, fuzzy, kde-format
-#| msgid "Visibility"
+#, kde-format
 msgctxt "@title:group"
 msgid "Visibility"
 msgstr "ხილვადობა"
 
 #: contents/configuration/PanelConfiguration.qml:387
-#, fuzzy, kde-format
-#| msgid "Always visible"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always visible"
 msgstr "ყოველთვის ხილული"
 
 #: contents/configuration/PanelConfiguration.qml:388
-#, fuzzy, kde-format
-#| msgid "Auto hide"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Auto hide"
 msgstr "ავტოდამალვა"
 
 #: contents/configuration/PanelConfiguration.qml:389
-#, fuzzy, kde-format
-#| msgid "Dodge windows"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Dodge windows"
 msgstr "ფანჯრების აცილება"
 
 #: contents/configuration/PanelConfiguration.qml:390
-#, fuzzy, kde-format
-#| msgid "Windows go below"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Windows go below"
-msgstr "ფანჯრებს ქვეშ შეძრომა შეუძლიათ"
+msgstr "ფანჯრები ქვეშ ძვრებიან"
 
 #: contents/configuration/PanelConfiguration.qml:450
-#, fuzzy, kde-format
-#| msgid "Opacity"
+#, kde-format
 msgctxt "@title:group"
 msgid "Opacity"
 msgstr "გაუმჭვირვალობა"
 
 #: contents/configuration/PanelConfiguration.qml:466
-#, fuzzy, kde-format
-#| msgid "Adaptive"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Adaptive"
 msgstr "შეგუებადი"
 
 #: contents/configuration/PanelConfiguration.qml:467
-#, fuzzy, kde-format
-#| msgid "Opaque"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Opaque"
 msgstr "გაუმჭვირვალე"
 
 #: contents/configuration/PanelConfiguration.qml:468
-#, fuzzy, kde-format
-#| msgid "Translucent"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Translucent"
 msgstr "ნახევრადგამჭვირვალე"
@@ -655,46 +576,41 @@ msgid "Fix it"
 msgstr "გაასწორეთ"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Panel Width:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Panel Width:"
 msgstr "პანელის სიგანე:"
 
 #: contents/configuration/PanelConfiguration.qml:648
-#, fuzzy, kde-format
-#| msgid "Panel Height:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Panel Height:"
 msgstr "პანელის სიმაღლე:"
 
 #: contents/configuration/PanelConfiguration.qml:671
-#, fuzzy, kde-format
-#| msgid "Focus shortcut:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Focus shortcut:"
 msgstr "ფოკუსის მალსახმობი:"
 
 #: contents/configuration/PanelConfiguration.qml:682
-#, fuzzy, kde-format
-#| msgid "Press this keyboard shortcut to move focus to the Panel"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 "ფოკუსის პანელზე გადასატანად ეს კლავიატურის მალსახმობი შეგიძლიათ, გამოიყენოთ"
 
 #: contents/configuration/PanelConfiguration.qml:689
-#, fuzzy, kde-format
-#| msgid "Focus shortcut:"
+#, kde-format
 msgctxt "@action:button acccessible name"
 msgid "Focus Shortcut Setter"
-msgstr "ფოკუსის მალსახმობი:"
+msgstr "ფოკუსის მალსახმობის დამყენებელი"
 
 #: contents/configuration/PanelConfiguration.qml:690
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for button"
 msgid "Button to set the shortcut for the panel to gain focus"
-msgstr ""
+msgstr "ღილაკი მალსახმობის დასაყენებლად პანელზე ფოკუსის გადატანისთვის"
 
 #: contents/configuration/PanelConfiguration.qml:716
 #, kde-format
@@ -703,8 +619,7 @@ msgid "Delete Panel"
 msgstr "პანელის წაშლა"
 
 #: contents/configuration/PanelConfiguration.qml:719
-#, fuzzy, kde-format
-#| msgid "Remove this panel; this action is undo-able"
+#, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Remove this panel; this action is undo-able"
 msgstr "ამ პანელის წაშლა. ეს ქმედება დაბრუნებადია"
@@ -716,9 +631,7 @@ msgid "Clone Panel"
 msgstr "პანელის დაკლონვა"
 
 #: contents/configuration/PanelConfiguration.qml:732
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Create a new panel with the same settings and applets"
+#, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Create a new panel with the same settings and applets"
 msgstr "ახალი პანელის შექმნა იგივე პარამეტრებითა და აპლეტებით"
@@ -737,8 +650,7 @@ msgid "Exit Edit Mode"
 msgstr "ჩასწორების რეჟიმიდან გასვლა"
 
 #: contents/configuration/PanelConfiguration.qml:744
-#, fuzzy, kde-format
-#| msgid "Close Panel Settings window and exit Edit Mode"
+#, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "პანელის მორგების ფანჯრის დახურვა და ჩასწორების რეჟიმიდან გასვლა"
@@ -785,67 +697,57 @@ msgstr ""
 "ორმაგი წკაპი ჩამოსაყრელად."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy, kde-format
-#| msgid "Manage Panels and Desktops"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Panels and Desktops"
 msgstr "სამუშაო მაგიდებისა და პანელების მართვა"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
-#, fuzzy, kde-format
-#| msgid ""
-#| "You can drag Panels and Desktops around to move them to different screens."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr ""
-"პანელები და სამუშაო მაგიდები სხვადასხვა ეკრანებზე შეგიძლიათ გადაათრიოთ."
+"პანელები და სამუშაო მაგიდები სხვადასხვა ეკრანებზე შეგიძლიათ, გადაათრიოთ."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:44
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button Close window"
 msgid "Close"
 msgstr "დახურვა"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:187
-#, fuzzy, kde-format
-#| msgid "Swap with Desktop on Screen %1"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Swap with Desktop on Screen %1"
 msgstr "სამუშაო მაგიდასთან (ეკრანზე %1) ადგილის გაცვლა"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:188
-#, fuzzy, kde-format
-#| msgid "Move to Screen %1"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Move to Screen %1"
-msgstr "ეკრანზე გადატანა %1"
+msgstr "გადატანა ეკრანზე %1"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:202
-#, fuzzy, kde-format
-#| msgid "Remove Desktop"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove Desktop"
 msgstr "სამუშაო მაგიდის წაშლა"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:203
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove Panel"
-msgstr "პანელის მოცილება"
+msgstr "პანელის წაშლა"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:279
-#, fuzzy, kde-format
-#| msgid "%1 (primary)"
+#, kde-format
 msgctxt "@info % is screen name"
 msgid "%1 (primary)"
 msgstr "%1 (ძირითადი)"
 
 #: contents/explorer/AppletAlternatives.qml:70
-#, fuzzy, kde-format
-#| msgid "Alternative Widgets"
+#, kde-format
 msgctxt "@title:window for widget alternatives explorer"
 msgid "Alternative Widgets"
 msgstr "ალტერნატიული ვიჯეტები"
@@ -857,8 +759,7 @@ msgid "Add %1"
 msgstr "%1-ის დამატება"
 
 #: contents/explorer/AppletDelegate.qml:47
-#, fuzzy, kde-format
-#| msgid "Unsupported Widget"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Unsupported Widget"
 msgstr "მხარდაუჭერელი ვიჯეტი"
@@ -884,16 +785,13 @@ msgid "Recently installed"
 msgstr "ახლახან დაყენებული"
 
 #: contents/explorer/AppletDelegate.qml:217
-#, fuzzy, kde-format
-#| msgid "Cancel Uninstallation"
+#, kde-format
 msgctxt "@action:button tooltip and accessible cancel uninstall widget"
 msgid "Cancel Uninstallation"
 msgstr "წაშლის გაუქმება"
 
 #: contents/explorer/AppletDelegate.qml:218
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip uninstall a widget"
-#| msgid "Mark for Uninstallation"
+#, kde-format
 msgctxt "@action:button tooltip and accessible uninstall widget"
 msgid "Mark for Uninstallation"
 msgstr "წასაშლელად მონიშვნა"
@@ -911,8 +809,7 @@ msgid "Mark widget %1 for uninstallation. Requires confirmation"
 msgstr "ვიჯეტის %1 მონიშვნა წასაშლელად. საჭიროებს დადასტურებას"
 
 #: contents/explorer/AppletDelegate.qml:265
-#, fuzzy, kde-format
-#| msgid "Remove all instances"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove all instances"
 msgstr "ყველა გაშვებული ასლის წაშლა"
@@ -929,15 +826,13 @@ msgstr[1] "ვიჯეტის %2 ყველა %1 გაშვებულ�
 
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:223
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@action:button like listbox, switches category to all widgets"
 msgid "All Widgets"
 msgstr "ყველა ვიჯეტი"
 
 #: contents/explorer/WidgetExplorer.qml:169
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@title:group for widget grid"
 msgid "Widgets"
 msgstr "ვიჯეტები"
@@ -967,8 +862,7 @@ msgid "Search through widgets"
 msgstr "ძებნა ვიჯეტებში"
 
 #: contents/explorer/WidgetExplorer.qml:237
-#, fuzzy, kde-format
-#| msgid "Categories"
+#, kde-format
 msgctxt "@action:button tooltip only"
 msgid "Categories"
 msgstr "კატეგორიები"
@@ -982,15 +876,13 @@ msgstr[0] "წაშლა (%1 ვიჯეტი)"
 msgstr[1] "წაშლა (%1 ვიჯეტი)"
 
 #: contents/explorer/WidgetExplorer.qml:389
-#, fuzzy, kde-format
-#| msgid "No widgets matched the search terms"
+#, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets matched the search terms"
 msgstr "ვიჯეტების თქვენს ძებნას პასუხები არ აქვს"
 
 #: contents/explorer/WidgetExplorer.qml:389
-#, fuzzy, kde-format
-#| msgid "No widgets available"
+#, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets available"
 msgstr "ვიჯეტების გარეშე"
@@ -1050,36 +942,31 @@ msgid "Show under unlocking prompt"
 msgstr "განბლოკვის შეტყობინების ქვეშ ჩვენება"
 
 #: contents/lockscreen/LockScreenUi.qml:48
-#, fuzzy, kde-format
-#| msgid "Unlocking failed"
+#, kde-format
 msgctxt "@info:status"
 msgid "Unlocking failed"
 msgstr "განბლოკვის შეცდომა"
 
 #: contents/lockscreen/LockScreenUi.qml:281
-#, fuzzy, kde-format
-#| msgid "Caps Lock is on"
+#, kde-format
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "CapsLock ჩართულია"
 
 #: contents/lockscreen/LockScreenUi.qml:295
-#, fuzzy, kde-format
-#| msgid "Slee&p"
+#, kde-format
 msgctxt "@action:button"
 msgid "Slee&p"
 msgstr "ძი&ლი"
 
 #: contents/lockscreen/LockScreenUi.qml:301
-#, fuzzy, kde-format
-#| msgid "&Hibernate"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Hibernate"
 msgstr "პ&როგრამული ძილი"
 
 #: contents/lockscreen/LockScreenUi.qml:307
-#, fuzzy, kde-format
-#| msgid "Switch &User"
+#, kde-format
 msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "მ&ომხმარებლის გადართვა"
@@ -1097,57 +984,49 @@ msgid "Switch layout"
 msgstr "განლაგების გადართვა"
 
 #: contents/lockscreen/MainBlock.qml:65
-#, fuzzy, kde-format
-#| msgid "Password"
+#, kde-format
 msgctxt "@info:placeholder in text field"
 msgid "Password"
 msgstr "პაროლი"
 
 #: contents/lockscreen/MainBlock.qml:114
-#, fuzzy, kde-format
-#| msgid "Unlock"
+#, kde-format
 msgctxt "@action:button accessible only"
 msgid "Unlock"
 msgstr "განბლოკვა"
 
 #: contents/lockscreen/MainBlock.qml:163
-#, fuzzy, kde-format
-#| msgid "(or scan your fingerprint on the reader)"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "(or scan your fingerprint on the reader)"
 msgstr "(aნ დაადეთ თქვენი თითი ანაბეჭდის წამკითხველს)"
 
 #: contents/lockscreen/MainBlock.qml:167
-#, fuzzy, kde-format
-#| msgid "(or scan your smartcard)"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "(or scan your smartcard)"
 msgstr "(ან დაასკანირეთ თქვენი სმარტ ბარათი)"
 
 #: contents/lockscreen/MediaControls.qml:88
-#, fuzzy, kde-format
-#| msgid "Previous track"
+#, kde-format
 msgctxt "@action:button Accessible only"
 msgid "Previous track"
 msgstr "წინა აუდიობილიკი"
 
 #: contents/lockscreen/MediaControls.qml:100
-#, fuzzy, kde-format
-#| msgid "Play or Pause media"
+#, kde-format
 msgctxt "@action:button Accessible only"
 msgid "Play or Pause media"
-msgstr "მედიის დაკვრა/გაჩერების გადართვა"
+msgstr "მედიის დაკვრა ან გაჩერება"
 
 #: contents/lockscreen/MediaControls.qml:110
-#, fuzzy, kde-format
-#| msgid "Next track"
+#, kde-format
 msgctxt "@action:button Accessible only"
 msgid "Next track"
 msgstr "შემდეგი აუდიობილიკი"
 
 #: contents/lockscreen/NoPasswordUnlock.qml:17
-#, fuzzy, kde-format
-#| msgid "Unlock"
+#, kde-format
 msgctxt "@action:button no-password unlock"
 msgid "Unlock"
 msgstr "განბლოკვა"
@@ -1159,15 +1038,13 @@ msgid "More"
 msgstr "მეტი"
 
 #: contents/views/DesktopEditMode.qml:131
-#, fuzzy, kde-format
-#| msgid "Exit Edit Mode"
+#, kde-format
 msgctxt "@action:button"
 msgid "Exit Edit Mode"
-msgstr "რედაქტირების რეჟიმიდან გასვლა"
+msgstr "ჩასწორების რეჟიმიდან გასვლა"
 
 #: contents/views/Panel.qml:326
-#, fuzzy, kde-format
-#| msgid "Panel Focus Indicator"
+#, kde-format
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "პანელის ფოკუსის მაჩვენებელი"

@@ -1,7 +1,7 @@
 # translation of kcminput.po to Slovenian
 # Translation of kcminput.po to Slovenian
 # KCMINPUT TRANSLATION TO SLOVENE LANGUAGE.
-# $Id: kcmmouse.po 1726870 2026-01-08 01:26:23Z scripty $
+# $Id: kcmmouse.po 1726930 2026-01-09 01:26:02Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-12-04 06:58+0100\n"
+"PO-Revision-Date: 2026-01-08 10:46+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -145,22 +145,19 @@ msgid "Configure Extra Buttons…"
 msgstr "Konfiguriraj dodatne gumbe…"
 
 #: ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Naprava:"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General:"
 msgstr "Splošno:"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgid "Enable device"
+#, kde-format
 msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr "Omogoči napravo"
@@ -172,8 +169,7 @@ msgid "Left and right buttons:"
 msgstr "Leva in desna gumba:"
 
 #: ui/main.qml:106
-#, fuzzy, kde-format
-#| msgid "Swap (left-handed mode)"
+#, kde-format
 msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
 msgstr "Zamenjava (način za levičarje)"
@@ -196,25 +192,19 @@ msgstr ""
 "miške."
 
 #: ui/main.qml:148
-#, fuzzy, kde-format
-#| msgid "Pointer speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
-msgstr "Hitrost kazalke:"
+msgstr "Hitrost kazalca:"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid "Enable pointer acceleration"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
-msgstr "Omogoči pospešek kazalke"
+msgstr "Omogoči pospešek kazalca"
 
 #: ui/main.qml:241
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip from ContextualHelpButton"
-#| msgid ""
-#| "When enabled, pointer travel distance increases with faster movement "
-#| "speed."
+#, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
@@ -223,8 +213,7 @@ msgstr ""
 "premikanja."
 
 #: ui/main.qml:254
-#, fuzzy, kde-format
-#| msgid "Scrolling speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr "Hitrost drsenja:"
@@ -242,34 +231,25 @@ msgid "Faster"
 msgstr "Hitreje"
 
 #: ui/main.qml:321
-#, fuzzy, kde-format
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "Drsenje zaslona:"
 
 #: ui/main.qml:322
-#, fuzzy, kde-format
-#| msgid "Invert scroll direction"
+#, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction"
 msgstr "Obrni smer drsenja zaslona"
 
 #: ui/main.qml:339
-#, fuzzy, kde-format
-#| msgid "Hold down middle button and move mouse to scroll"
+#, kde-format
 msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
-msgstr "Pritisnite srednji gumb in premikajte miško za pomikanje"
+msgstr "Pritisnite srednji gumb in premikajte miško za drsenje"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip from ContextualHelpButton"
-#| msgid ""
-#| "This will interfere with applications that use middle-button drag, such "
-#| "as some image editors, document viewers, or video games. It may be used "
-#| "on any device, but is intended primarily as a substitute for scroll "
-#| "wheels on devices that do not have any."
+#, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "This will interfere with applications that use middle-button drag, such as "
@@ -279,8 +259,8 @@ msgid ""
 msgstr ""
 "To bo motilo aplikacije, ki uporabljajo vlečenje s srednjim gumbom, kot so "
 "nekateri urejevalniki slik, pregledovalniki dokumentov ali videoigre. "
-"Uporablja se lahko v kateri koli napravi, vendar je namenjeno predvsem kot "
-"nadomestilo za drsni kolešček v napravah, ki jih nimajo."
+"Uporablja se lahko na kateri koli napravi, vendar je namenjeno predvsem kot "
+"nadomestilo za drsni kolešček v napravah, ki ga nimajo."
 
 #~ msgid "Device enabled"
 #~ msgstr "Naprava omogočena"

@@ -1,15 +1,15 @@
 # Spanish translations for plasma-desktop-sddm-theme.po package.
-# Copyright (C) 2024-2025 This file is copyright:
+# Copyright (C) 2024-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 # Automatically generated, 2024.
 #
-# SPDX-FileCopyrightText: 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop-sddm-theme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-07-29 13:54+0100\n"
+"PO-Revision-Date: 2026-01-09 00:40+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,46 +17,34 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: KeyboardButton.qml:19
-#, fuzzy
-#| msgid "Keyboard Layout: %1"
 msgctxt "@action:button opens layout chooser %1 is current"
 msgid "Keyboard Layout: %1"
 msgstr "Distribución del teclado: %1"
 
 #: Login.qml:86
-#, fuzzy
-#| msgid "Username"
 msgctxt "@info:placeholder in textfield"
 msgid "Username"
 msgstr "Usuario"
 
 #: Login.qml:103
-#, fuzzy
-#| msgid "Password"
 msgctxt "@info:placeholder in textfield"
 msgid "Password"
 msgstr "Contraseña"
 
 #: Login.qml:145
-#, fuzzy
-#| msgid "Log In"
 msgctxt "@action:button Accessible name"
 msgid "Log in"
 msgstr "Iniciar sesión"
 
 #: Login.qml:151
-#, fuzzy
-#| msgid "Log In"
 msgctxt "@action:button"
 msgid "Log In"
 msgstr "Iniciar sesión"
 
 #: Main.qml:200
-#, fuzzy
-#| msgid "Caps Lock is on"
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "Mayúsculas activadas"
@@ -67,45 +55,31 @@ msgid "Hibernate"
 msgstr "Hibernar"
 
 #: Main.qml:218 Main.qml:357
-#, fuzzy
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
 msgctxt "@action:button Suspend to RAM"
 msgid "Sleep"
 msgstr "Reposo"
 
 #: Main.qml:224 Main.qml:363
-#, fuzzy
-#| msgid "Restart"
 msgctxt "@action:button"
 msgid "Restart"
 msgstr "Reiniciar"
 
 #: Main.qml:230 Main.qml:369
-#, fuzzy
-#| msgid "Shut Down"
 msgctxt "@action:button"
 msgid "Shut Down"
 msgstr "Apagar"
 
 #: Main.qml:236
-#, fuzzy
-#| msgctxt "For switching to a username and password prompt"
-#| msgid "Other…"
 msgctxt "@action:button For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Otro…"
 
 #: Main.qml:343
-#, fuzzy
-#| msgid "Type in Username and Password"
 msgctxt "@info:usagetip"
 msgid "Type in Username and Password"
 msgstr "Introduzca el usuario y la contraseña"
 
 #: Main.qml:375
-#, fuzzy
-#| msgid "List Users"
 msgctxt "@action:button"
 msgid "List Users"
 msgstr "Listar usuarios"
@@ -116,15 +90,11 @@ msgid "Virtual Keyboard"
 msgstr "Teclado virtual"
 
 #: Main.qml:516
-#, fuzzy
-#| msgid "Login Failed"
 msgctxt "@info:status"
 msgid "Login Failed"
 msgstr "Inicio de sesión fallido"
 
 #: SessionButton.qml:18
-#, fuzzy
-#| msgid "Desktop Session: %1"
 msgctxt "@action:button opens sessions menu %1 is current"
 msgid "Desktop Session: %1"
 msgstr "Sesión de escritorio: %1"

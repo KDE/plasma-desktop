@@ -1,7 +1,7 @@
 # Language  translations for KDE package.
 # Copyright (C) 2014 This_file_is_part_of_KDE
 # This file is distributed under the same license as the KDE package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2015, 2016.
 # Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2024.
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-09-20 20:23+0400\n"
+"PO-Revision-Date: 2026-01-08 10:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -21,17 +21,13 @@ msgstr ""
 "X-Generator: Lokalize 23.08.5\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
-#, fuzzy, kde-format
-#| msgid "Currently being used"
+#, kde-format
 msgctxt "@info:status currently active activity"
 msgid "Currently being used"
 msgstr "مُستخدم حاليًّا"
 
 #: contents/activitymanager/ActivityItem.qml:243
-#, fuzzy, kde-format
-#| msgid ""
-#| "Move to\n"
-#| "this activity"
+#, kde-format
 msgctxt "@action shows when dragging file over item"
 msgid ""
 "Move to\n"
@@ -41,10 +37,7 @@ msgstr ""
 "هذا النشاط"
 
 #: contents/activitymanager/ActivityItem.qml:273
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show also\n"
-#| "in this activity"
+#, kde-format
 msgctxt "@action shows when dragging file over item"
 msgid ""
 "Show also\n"
@@ -54,65 +47,55 @@ msgstr ""
 "في هذه النشاط"
 
 #: contents/activitymanager/ActivityItem.qml:335
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm"
 msgid "Configure"
 msgstr "اضبط"
 
 #: contents/activitymanager/ActivityManager.qml:118
-#, fuzzy, kde-format
-#| msgid "Create activity…"
+#, kde-format
 msgctxt "@action:button opens Activity kcm"
 msgid "Create activity…"
 msgstr "أنشئ نشاطًا..."
 
 #: contents/activitymanager/Heading.qml:59
-#, fuzzy, kde-format
-#| msgid "Activities"
+#, kde-format
 msgctxt "@title:window"
 msgid "Activities"
 msgstr "الأنشطة"
 
 #: contents/applet/AppletError.qml:165
-#, fuzzy, kde-format
-#| msgid "Copy to Clipboard"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "انسخ إلى الحافظة"
 
 #: contents/applet/AppletError.qml:188
-#, fuzzy, kde-format
-#| msgid "View Error Details…"
+#, kde-format
 msgctxt "@action:button opens dialog"
 msgid "View Error Details…"
 msgstr "استعرض تفاصيل الخطأ…"
 
 #: contents/applet/CompactApplet.qml:91
-#, fuzzy, kde-format
-#| msgid "Open %1"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for panel widget %1"
 msgid "Open %1"
 msgstr "افتح %1"
 
 #: contents/configuration/AboutPlugin.qml:21
-#, fuzzy, kde-format
-#| msgid "About"
+#, kde-format
 msgctxt "@title:window About this widget"
 msgid "About"
 msgstr "عن"
 
 #: contents/configuration/AboutPlugin.qml:51
-#, fuzzy, kde-format
-#| msgid "Send an email to %1"
+#, kde-format
 msgctxt "plasma_shell_org.kde.plasma.desktop"
 msgid "Send an email to %1"
 msgstr "أرسِل بريد الإلكتروني إلى %1"
 
 #: contents/configuration/AboutPlugin.qml:65
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip %1 url"
-#| msgid "Open website %1"
+#, kde-format
 msgctxt "@action:button icononly for tooltip & accessible %1 is url"
 msgid "Open website %1"
 msgstr "افتح موقع %1"
@@ -130,22 +113,19 @@ msgid "Get Help"
 msgstr "احصل على المساعدة"
 
 #: contents/configuration/AboutPlugin.qml:165
-#, fuzzy, kde-format
-#| msgid "Report an issue"
+#, kde-format
 msgctxt "@action:button urlbutton"
 msgid "Report an issue"
 msgstr "أبلغ عن مشكلة"
 
 #: contents/configuration/AboutPlugin.qml:172
-#, fuzzy, kde-format
-#| msgid "Copyright"
+#, kde-format
 msgctxt "@title license information"
 msgid "Copyright"
 msgstr "حقوق النسخ"
 
 #: contents/configuration/AboutPlugin.qml:191
-#, fuzzy, kde-format
-#| msgid "License: %1"
+#, kde-format
 msgctxt "@label %1 is the short SPDX text for the license"
 msgid "License: %1"
 msgstr "الترخيص: %1"
@@ -157,51 +137,43 @@ msgid "Read License"
 msgstr "اقرأ الرّخصة"
 
 #: contents/configuration/AboutPlugin.qml:211
-#, fuzzy, kde-format
-#| msgid "Authors"
+#, kde-format
 msgctxt "@title:group"
 msgid "Authors"
 msgstr "المؤلفين"
 
 #: contents/configuration/AboutPlugin.qml:223
-#, fuzzy, kde-format
-#| msgid "Credits"
+#, kde-format
 msgctxt "@title:group"
 msgid "Credits"
 msgstr "الإشادات"
 
 #: contents/configuration/AboutPlugin.qml:236
-#, fuzzy, kde-format
-#| msgid "Translators"
+#, kde-format
 msgctxt "@title:group"
 msgid "Translators"
 msgstr "المترجمون"
 
 #: contents/configuration/AppletConfiguration.qml:90
-#, fuzzy, kde-format
-#| msgid "Keyboard Shortcuts"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Keyboard Shortcuts"
 msgstr "اختصارات لوحة المفاتيح"
 
 #: contents/configuration/AppletConfiguration.qml:337
-#, fuzzy, kde-format
-#| msgid "About"
+#, kde-format
 msgctxt "@title:group for About dialog page"
 msgid "About"
 msgstr "عن"
 
 #: contents/configuration/AppletConfiguration.qml:385
-#, fuzzy, kde-format
-#| msgid "Apply Settings"
+#, kde-format
 msgctxt "@title:window dialog title"
 msgid "Apply Settings"
 msgstr "طبّق الإعدادات"
 
 #: contents/configuration/AppletConfiguration.qml:386
-#, fuzzy, kde-format
-#| msgid ""
-#| "The current page has unsaved changes. Apply the changes or discard them?"
+#, kde-format
 msgctxt "@label dialog body"
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
@@ -209,29 +181,25 @@ msgstr ""
 "تحوي الصفحة الحالية على تغيرات غير محفوظة. أتريد تطبيق الإعدادات أو رفضها؟"
 
 #: contents/configuration/AppletConfiguration.qml:418
-#, fuzzy, kde-format
-#| msgid "OK"
+#, kde-format
 msgctxt "@action:button"
 msgid "OK"
 msgstr "حسنًا"
 
 #: contents/configuration/AppletConfiguration.qml:425
-#, fuzzy, kde-format
-#| msgid "Apply"
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "طبّق"
 
 #: contents/configuration/AppletConfiguration.qml:431
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr "ألغ"
+msgstr "ألغِ"
 
 #: contents/configuration/ConfigCategoryDelegate.qml:26
-#, fuzzy, kde-format
-#| msgid "Open configuration page"
+#, kde-format
 msgctxt ""
 "@info:whatsthis Accessible description for sidebar entries opening "
 "configuration page"
@@ -239,78 +207,67 @@ msgid "Open configuration page"
 msgstr "افتح صفحة الضبط"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:19
-#, fuzzy, kde-format
-#| msgid "Left-Button"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Left-Button"
 msgstr "الزّرّ الأيسر"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:20
-#, fuzzy, kde-format
-#| msgid "Right-Button"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Right-Button"
 msgstr "الزّرّ الأيمن"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:21
-#, fuzzy, kde-format
-#| msgid "Middle-Button"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Middle-Button"
 msgstr "الزّرّ الأوسط"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:22
-#, fuzzy, kde-format
-#| msgid "Back-Button"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Back-Button"
 msgstr "زرّ العودة"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:23
-#, fuzzy, kde-format
-#| msgid "Forward-Button"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Forward-Button"
 msgstr "زرّ التّقدّم"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:25
-#, fuzzy, kde-format
-#| msgid "Vertical-Scroll"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Vertical-Scroll"
 msgstr "التّمرير الرّأسيّ"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:26
-#, fuzzy, kde-format
-#| msgid "Horizontal-Scroll"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Horizontal-Scroll"
 msgstr "التّمرير الأفقيّ"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:28
-#, fuzzy, kde-format
-#| msgid "Shift"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Shift"
 msgstr "Shift"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:29
-#, fuzzy, kde-format
-#| msgid "Ctrl"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Ctrl"
 msgstr "Ctrl"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:30
-#, fuzzy, kde-format
-#| msgid "Alt"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Alt"
 msgstr "Alt"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:31
-#, fuzzy, kde-format
-#| msgid "Meta"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Meta"
 msgstr "Meta"
@@ -322,57 +279,49 @@ msgid "+"
 msgstr "+"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:139
-#, fuzzy, kde-format
-#| msgid "Add Action"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Action"
 msgstr "أضف إجراءً"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:76
-#, fuzzy, kde-format
-#| msgid "Layout changes have been restricted by the system administrator"
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "قُيد تغييرات التخطيط من قبل مسؤول النظام "
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:91
-#, fuzzy, kde-format
-#| msgid "Layout:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Layout:"
 msgstr "التخطيط:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:114
-#, fuzzy, kde-format
-#| msgid "Wallpaper type:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Wallpaper type:"
 msgstr "نوع الخلفيّة:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:153
-#, fuzzy, kde-format
-#| msgid "Get New Plugins…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Plugins…"
 msgstr "احصل على ملحقات جديدة..."
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:243
-#, fuzzy, kde-format
-#| msgid "Layout changes must be applied before other changes can be made"
+#, kde-format
 msgctxt "@info"
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "يجب تطبيق تغييرات التخطيط قبل إجراء تغييرات أخرى"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:247
-#, fuzzy, kde-format
-#| msgid "Apply Now"
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply Now"
 msgstr "طبّق الآن"
 
 #: contents/configuration/ConfigurationShortcuts.qml:16
-#, fuzzy, kde-format
-#| msgid "Shortcuts"
+#, kde-format
 msgctxt "@title:window for configuration page"
 msgid "Shortcuts"
 msgstr "الاختصارات"
@@ -384,36 +333,31 @@ msgid "Activate widget as if clicked:"
 msgstr "فعّل تطبيق سطح المكتب عند الضغط على:"
 
 #: contents/configuration/ContainmentConfiguration.qml:26
-#, fuzzy, kde-format
-#| msgid "Wallpaper"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Wallpaper"
-msgstr "الخلفيّة"
+msgstr "صورة الخلفية"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
-#, fuzzy, kde-format
-#| msgid "Mouse Actions"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Mouse Actions"
 msgstr "إجراءات الفأرة"
 
 #: contents/configuration/MouseEventInputButton.qml:13
-#, fuzzy, kde-format
-#| msgid "Add Action"
+#, kde-format
 msgctxt "@action:button inactive state for button recording mouse input"
 msgid "Add Action"
 msgstr "أضف إجراءً"
 
 #: contents/configuration/MouseEventInputButton.qml:20
-#, fuzzy, kde-format
-#| msgid "Input Here"
+#, kde-format
 msgctxt "@action:button active state for button recording mouse input"
 msgid "Input Here"
 msgstr "أدخل هنا"
 
 #: contents/configuration/PanelConfiguration.qml:99
-#, fuzzy, kde-format
-#| msgid "Panel Settings"
+#, kde-format
 msgctxt "@title:window"
 msgid "Panel Settings"
 msgstr "إعدادات اللوحة"
@@ -439,190 +383,163 @@ msgid "Widgets…"
 msgstr "أدوات…"
 
 #: contents/configuration/PanelConfiguration.qml:162
-#, fuzzy, kde-format
-#| msgid "Position"
+#, kde-format
 msgctxt "@title:group"
 msgid "Position"
 msgstr "الموضع"
 
 #: contents/configuration/PanelConfiguration.qml:167
-#, fuzzy, kde-format
-#| msgid "Top"
+#, kde-format
 msgctxt "@label panel screen edge"
 msgid "Top"
 msgstr "الأعلى"
 
 #: contents/configuration/PanelConfiguration.qml:168
-#, fuzzy, kde-format
-#| msgid "Right"
+#, kde-format
 msgctxt "@label panel screen edge"
 msgid "Right"
 msgstr "اليمين"
 
 #: contents/configuration/PanelConfiguration.qml:169
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "@label panel screen edge"
 msgid "Left"
 msgstr "اليسار"
 
 #: contents/configuration/PanelConfiguration.qml:170
-#, fuzzy, kde-format
-#| msgid "Bottom"
+#, kde-format
 msgctxt "@label panel screen edge"
 msgid "Bottom"
 msgstr "الأسفل"
 
 #: contents/configuration/PanelConfiguration.qml:190
-#, fuzzy, kde-format
-#| msgid "Set Position…"
+#, kde-format
 msgctxt "action:button"
 msgid "Set Position…"
 msgstr "عين موضع…"
 
 #: contents/configuration/PanelConfiguration.qml:217
-#, fuzzy, kde-format
-#| msgid "Alignment"
+#, kde-format
 msgctxt "@title:group"
 msgid "Alignment"
 msgstr "المحاذاة"
 
 #: contents/configuration/PanelConfiguration.qml:282
-#, fuzzy, kde-format
-#| msgid "Top"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Top"
 msgstr "الأعلى"
 
 #: contents/configuration/PanelConfiguration.qml:282
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Left"
 msgstr "اليسار"
 
 #: contents/configuration/PanelConfiguration.qml:283
-#, fuzzy, kde-format
-#| msgid "Center"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Center"
 msgstr "الوسط"
 
 #: contents/configuration/PanelConfiguration.qml:284
-#, fuzzy, kde-format
-#| msgid "Bottom"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Bottom"
 msgstr "الأسفل"
 
 #: contents/configuration/PanelConfiguration.qml:284
-#, fuzzy, kde-format
-#| msgid "Right"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Right"
 msgstr "اليمين"
 
 #: contents/configuration/PanelConfiguration.qml:314
-#, fuzzy, kde-format
-#| msgid "Height"
+#, kde-format
 msgctxt "@title:group panel height"
 msgid "Height"
 msgstr "الارتفاع"
 
 #: contents/configuration/PanelConfiguration.qml:315
-#, fuzzy, kde-format
-#| msgid "Width"
+#, kde-format
 msgctxt "@title:group panel width"
 msgid "Width"
 msgstr "العرض"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, fuzzy, kde-format
-#| msgid "Fill height"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Fill height"
 msgstr "ارتفاع الملء"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, fuzzy, kde-format
-#| msgid "Fill width"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Fill width"
 msgstr "عرض الملء"
 
 #: contents/configuration/PanelConfiguration.qml:335
-#, fuzzy, kde-format
-#| msgid "Fit content"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Fit content"
 msgstr "لائم المحتوى"
 
 #: contents/configuration/PanelConfiguration.qml:336
-#, fuzzy, kde-format
-#| msgid "Custom"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Custom"
 msgstr "مخصّص"
 
 #: contents/configuration/PanelConfiguration.qml:369
-#, fuzzy, kde-format
-#| msgid "Visibility"
+#, kde-format
 msgctxt "@title:group"
 msgid "Visibility"
 msgstr "الرّؤية"
 
 #: contents/configuration/PanelConfiguration.qml:387
-#, fuzzy, kde-format
-#| msgid "Always visible"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always visible"
 msgstr "ظاهرة دائمًا"
 
 #: contents/configuration/PanelConfiguration.qml:388
-#, fuzzy, kde-format
-#| msgid "Auto hide"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Auto hide"
 msgstr "إخفاء آليّ"
 
 #: contents/configuration/PanelConfiguration.qml:389
-#, fuzzy, kde-format
-#| msgid "Dodge windows"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Dodge windows"
 msgstr "تجنب النوافذ"
 
 #: contents/configuration/PanelConfiguration.qml:390
-#, fuzzy, kde-format
-#| msgid "Windows go below"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Windows go below"
 msgstr "النّوافذ تذهب تحتها"
 
 #: contents/configuration/PanelConfiguration.qml:450
-#, fuzzy, kde-format
-#| msgid "Opacity"
+#, kde-format
 msgctxt "@title:group"
 msgid "Opacity"
 msgstr "العتمة"
 
 #: contents/configuration/PanelConfiguration.qml:466
-#, fuzzy, kde-format
-#| msgid "Adaptive"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Adaptive"
 msgstr "متكيف"
 
 #: contents/configuration/PanelConfiguration.qml:467
-#, fuzzy, kde-format
-#| msgid "Opaque"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Opaque"
 msgstr "معتم"
 
 #: contents/configuration/PanelConfiguration.qml:468
-#, fuzzy, kde-format
-#| msgid "Translucent"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Translucent"
 msgstr "شفاف"
@@ -659,45 +576,40 @@ msgid "Fix it"
 msgstr "أصلحها"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Panel Width:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Panel Width:"
 msgstr "عرض اللوح:"
 
 #: contents/configuration/PanelConfiguration.qml:648
-#, fuzzy, kde-format
-#| msgid "Panel Height:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Panel Height:"
 msgstr "ارتفاع اللوحة:"
 
 #: contents/configuration/PanelConfiguration.qml:671
-#, fuzzy, kde-format
-#| msgid "Focus shortcut:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Focus shortcut:"
 msgstr "اختصار التركيز:"
 
 #: contents/configuration/PanelConfiguration.qml:682
-#, fuzzy, kde-format
-#| msgid "Press this keyboard shortcut to move focus to the Panel"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "اضغط على اختصار لوحة المفاتيح هذا لتنقل التركيز للوحة"
 
 #: contents/configuration/PanelConfiguration.qml:689
-#, fuzzy, kde-format
-#| msgid "Focus shortcut:"
+#, kde-format
 msgctxt "@action:button acccessible name"
 msgid "Focus Shortcut Setter"
-msgstr "اختصار التركيز:"
+msgstr "معيّن اختصار التركيز"
 
 #: contents/configuration/PanelConfiguration.qml:690
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for button"
 msgid "Button to set the shortcut for the panel to gain focus"
-msgstr ""
+msgstr "زر لتعيين اختصار للوح حتى يأخذ التركيز"
 
 #: contents/configuration/PanelConfiguration.qml:716
 #, kde-format
@@ -706,8 +618,7 @@ msgid "Delete Panel"
 msgstr "احذف اللوح"
 
 #: contents/configuration/PanelConfiguration.qml:719
-#, fuzzy, kde-format
-#| msgid "Remove this panel; this action is undo-able"
+#, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Remove this panel; this action is undo-able"
 msgstr "أزِل هذه اللوحة؛ لا يمكن التراجع عن هذا الإجراء"
@@ -719,9 +630,7 @@ msgid "Clone Panel"
 msgstr "استنسخ اللوحة"
 
 #: contents/configuration/PanelConfiguration.qml:732
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Create a new panel with the same settings and applets"
+#, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Create a new panel with the same settings and applets"
 msgstr "أنشئ لوحة جديدة بنفس الإعدادات والتطبيقات الصغيرة"
@@ -740,8 +649,7 @@ msgid "Exit Edit Mode"
 msgstr "اخرج من نمط التحرير"
 
 #: contents/configuration/PanelConfiguration.qml:744
-#, fuzzy, kde-format
-#| msgid "Close Panel Settings window and exit Edit Mode"
+#, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "أغلق إعدادات اللوحة واخرج من نمط التحرير"
@@ -788,69 +696,59 @@ msgstr ""
 "انقر مزدوجاً للتصفير."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy, kde-format
-#| msgid "Manage Panels and Desktops"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Panels and Desktops"
 msgstr "أدر أسطح المكتب واللوحات"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
-#, fuzzy, kde-format
-#| msgid ""
-#| "You can drag Panels and Desktops around to move them to different screens."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr "يمكنك سحب اللوحات وأسطح المكتب لنقلها إلى شاشات مختلفة."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:44
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button Close window"
 msgid "Close"
 msgstr "أغلق"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:187
-#, fuzzy, kde-format
-#| msgid "Swap with Desktop on Screen %1"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Swap with Desktop on Screen %1"
 msgstr "بدل بسطح مكتب على الشاشة %1"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:188
-#, fuzzy, kde-format
-#| msgid "Move to Screen %1"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Move to Screen %1"
 msgstr "انقل إلى الشّاشة %1"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:202
-#, fuzzy, kde-format
-#| msgid "Remove Desktop"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove Desktop"
 msgstr "أزل سطح المكتب"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:203
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove Panel"
 msgstr "أزل اللوحة"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:279
-#, fuzzy, kde-format
-#| msgid "%1 (primary)"
+#, kde-format
 msgctxt "@info % is screen name"
 msgid "%1 (primary)"
 msgstr "‏%1 (أولي)"
 
 #: contents/explorer/AppletAlternatives.qml:70
-#, fuzzy, kde-format
-#| msgid "Alternative Widgets"
+#, kde-format
 msgctxt "@title:window for widget alternatives explorer"
 msgid "Alternative Widgets"
-msgstr "أدوات بديلة"
+msgstr "الودجات البديلة"
 
 #: contents/explorer/AppletDelegate.qml:28
 #, kde-format
@@ -859,11 +757,10 @@ msgid "Add %1"
 msgstr "أضف %1"
 
 #: contents/explorer/AppletDelegate.qml:47
-#, fuzzy, kde-format
-#| msgid "Unsupported Widget"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Unsupported Widget"
-msgstr "أداة غير مدعومة"
+msgstr "أداة غير متاحة"
 
 #: contents/explorer/AppletDelegate.qml:202
 #, kde-format
@@ -890,16 +787,13 @@ msgid "Recently installed"
 msgstr "المثبتة حديثًا"
 
 #: contents/explorer/AppletDelegate.qml:217
-#, fuzzy, kde-format
-#| msgid "Cancel Uninstallation"
+#, kde-format
 msgctxt "@action:button tooltip and accessible cancel uninstall widget"
 msgid "Cancel Uninstallation"
 msgstr "ألغ إزالة التّثبيت"
 
 #: contents/explorer/AppletDelegate.qml:218
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip uninstall a widget"
-#| msgid "Mark for Uninstallation"
+#, kde-format
 msgctxt "@action:button tooltip and accessible uninstall widget"
 msgid "Mark for Uninstallation"
 msgstr "علّم لإزالة التثبيت"
@@ -917,8 +811,7 @@ msgid "Mark widget %1 for uninstallation. Requires confirmation"
 msgstr "علّم الأداة %1 لإلغاء التثبيت. يتطلب التأكيد"
 
 #: contents/explorer/AppletDelegate.qml:265
-#, fuzzy, kde-format
-#| msgid "Remove all instances"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove all instances"
 msgstr "أزل كل النسخ"
@@ -939,18 +832,16 @@ msgstr[5] "أزل %1 نسخة مشغل حاليا للأداة %2"
 
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:223
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@action:button like listbox, switches category to all widgets"
 msgid "All Widgets"
-msgstr "كلّ الأدوات"
+msgstr "كلّ الودجات"
 
 #: contents/explorer/WidgetExplorer.qml:169
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@title:group for widget grid"
 msgid "Widgets"
-msgstr "الأدوات"
+msgstr "الودجات"
 
 #: contents/explorer/WidgetExplorer.qml:178
 #, kde-format
@@ -977,8 +868,7 @@ msgid "Search through widgets"
 msgstr "ابحث في الأدوات"
 
 #: contents/explorer/WidgetExplorer.qml:237
-#, fuzzy, kde-format
-#| msgid "Categories"
+#, kde-format
 msgctxt "@action:button tooltip only"
 msgid "Categories"
 msgstr "الفئات"
@@ -996,18 +886,16 @@ msgstr[4] "أزل تثبيت (%1 أداة)"
 msgstr[5] "أزل تثبيت (%1 أداة)"
 
 #: contents/explorer/WidgetExplorer.qml:389
-#, fuzzy, kde-format
-#| msgid "No widgets matched the search terms"
+#, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets matched the search terms"
-msgstr "لا توجد أدوات مطابقة لشروط البحث"
+msgstr "لا توجد ودجات مطابقة لشروط البحث"
 
 #: contents/explorer/WidgetExplorer.qml:389
-#, fuzzy, kde-format
-#| msgid "No widgets available"
+#, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets available"
-msgstr "لا تتوفر أدوات"
+msgstr "لا تتوفر ودجات"
 
 #: contents/lockscreen/config.qml:23
 #, kde-format
@@ -1064,36 +952,31 @@ msgid "Show under unlocking prompt"
 msgstr "اعرضها تحت محث فك القفل"
 
 #: contents/lockscreen/LockScreenUi.qml:48
-#, fuzzy, kde-format
-#| msgid "Unlocking failed"
+#, kde-format
 msgctxt "@info:status"
 msgid "Unlocking failed"
 msgstr "فشل فكّ القفل"
 
 #: contents/lockscreen/LockScreenUi.qml:281
-#, fuzzy, kde-format
-#| msgid "Caps Lock is on"
+#, kde-format
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "مفتاح Caps Lock مفعّل"
 
 #: contents/lockscreen/LockScreenUi.qml:295
-#, fuzzy, kde-format
-#| msgid "Slee&p"
+#, kde-format
 msgctxt "@action:button"
 msgid "Slee&p"
 msgstr "&علّق"
 
 #: contents/lockscreen/LockScreenUi.qml:301
-#, fuzzy, kde-format
-#| msgid "&Hibernate"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Hibernate"
 msgstr "أ&سبِت"
 
 #: contents/lockscreen/LockScreenUi.qml:307
-#, fuzzy, kde-format
-#| msgid "Switch &User"
+#, kde-format
 msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "بدّل ال&مستخدم"
@@ -1111,57 +994,49 @@ msgid "Switch layout"
 msgstr "بدّل التخطيط"
 
 #: contents/lockscreen/MainBlock.qml:65
-#, fuzzy, kde-format
-#| msgid "Password"
+#, kde-format
 msgctxt "@info:placeholder in text field"
 msgid "Password"
 msgstr "كلمة السّر"
 
 #: contents/lockscreen/MainBlock.qml:114
-#, fuzzy, kde-format
-#| msgid "Unlock"
+#, kde-format
 msgctxt "@action:button accessible only"
 msgid "Unlock"
 msgstr "فكّ القفل"
 
 #: contents/lockscreen/MainBlock.qml:163
-#, fuzzy, kde-format
-#| msgid "(or scan your fingerprint on the reader)"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "(or scan your fingerprint on the reader)"
-msgstr "(أو امحُ بصمة إصبعك على القارئ)"
+msgstr "(أو امسح بصمة إصبعك على القارئ)"
 
 #: contents/lockscreen/MainBlock.qml:167
-#, fuzzy, kde-format
-#| msgid "(or scan your smartcard)"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "(or scan your smartcard)"
-msgstr "(أو امحُ بطاقتك الذكية)"
+msgstr "(أو امسح بطاقتك الذكية)"
 
 #: contents/lockscreen/MediaControls.qml:88
-#, fuzzy, kde-format
-#| msgid "Previous track"
+#, kde-format
 msgctxt "@action:button Accessible only"
 msgid "Previous track"
 msgstr "المقطوعة السابقة"
 
 #: contents/lockscreen/MediaControls.qml:100
-#, fuzzy, kde-format
-#| msgid "Play or Pause media"
+#, kde-format
 msgctxt "@action:button Accessible only"
 msgid "Play or Pause media"
 msgstr "شغّل أو أوقف الوسيط"
 
 #: contents/lockscreen/MediaControls.qml:110
-#, fuzzy, kde-format
-#| msgid "Next track"
+#, kde-format
 msgctxt "@action:button Accessible only"
 msgid "Next track"
 msgstr "المقطوعة التالية"
 
 #: contents/lockscreen/NoPasswordUnlock.qml:17
-#, fuzzy, kde-format
-#| msgid "Unlock"
+#, kde-format
 msgctxt "@action:button no-password unlock"
 msgid "Unlock"
 msgstr "فكّ القفل"
@@ -1173,15 +1048,13 @@ msgid "More"
 msgstr "المزيد"
 
 #: contents/views/DesktopEditMode.qml:131
-#, fuzzy, kde-format
-#| msgid "Exit Edit Mode"
+#, kde-format
 msgctxt "@action:button"
 msgid "Exit Edit Mode"
 msgstr "اخرج من نمط التحرير"
 
 #: contents/views/Panel.qml:326
-#, fuzzy, kde-format
-#| msgid "Panel Focus Indicator"
+#, kde-format
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "مؤشر التركيز على اللوحة"

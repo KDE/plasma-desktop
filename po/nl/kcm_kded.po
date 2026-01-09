@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2017, 2020, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2020, 2023, 2024, 2026 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2024-06-30 21:00+0200\n"
+"PO-Revision-Date: 2026-01-08 17:50+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: kcmkded.cpp:115
 #, kde-format
@@ -55,10 +55,7 @@ msgstr ""
 "een <link url='%1'> een bugrapport over in.</link>"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded6) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
@@ -68,10 +65,7 @@ msgstr ""
 "juist is geïnstalleerd."
 
 #: ui/main.qml:65
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services disable themselves again when manually started if they are "
-#| "not useful in the current environment."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -81,10 +75,7 @@ msgstr ""
 "gestart als ze niet nuttig zijn in de huidige omgeving."
 
 #: ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services were automatically started/stopped when the background "
-#| "services manager (kded6) was restarted to apply your changes."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -95,37 +86,31 @@ msgstr ""
 "passen."
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "All Services"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "All Services"
 msgstr "Alle services"
 
 #: ui/main.qml:124
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "@item:inlistbox List running services"
 msgid "Running"
 msgstr "Actief"
 
 #: ui/main.qml:125
-#, fuzzy, kde-format
-#| msgctxt "List not running services"
-#| msgid "Not Running"
+#, kde-format
 msgctxt "@item:inlistbox List not running services"
 msgid "Not Running"
 msgstr "Niet actief"
 
 #: ui/main.qml:162
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgctxt "@title:group list section"
 msgid "Startup Services"
 msgstr "Opstartdiensten"
 
 #: ui/main.qml:163
-#, fuzzy, kde-format
-#| msgid "Load-on-Demand Services"
+#, kde-format
 msgctxt "@title:group list section"
 msgid "Load-on-Demand Services"
 msgstr "Diensten die op verzoek worden geladen"
@@ -143,22 +128,19 @@ msgid "Enable automatically loading %1 on startup"
 msgstr "Automatisch laden van %1 inschakelen bij opstarten"
 
 #: ui/main.qml:183
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Toggle automatically loading this service on startup"
 msgstr "Automatisch laden van deze service omschakelen bij opstarten"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid "Not running"
+#, kde-format
 msgctxt "@info:status"
 msgid "Not running"
 msgstr "Niet actief"
 
 #: ui/main.qml:228
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "@info:status"
 msgid "Running"
 msgstr "Actief"
@@ -176,15 +158,13 @@ msgid "Start %1"
 msgstr "%1 starten"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Stop Service"
+#, kde-format
 msgctxt "@action:button"
 msgid "Stop Service"
 msgstr "Dienst stoppen"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Start Service"
+#, kde-format
 msgctxt "@action:button"
 msgid "Start Service"
 msgstr "Service starten"

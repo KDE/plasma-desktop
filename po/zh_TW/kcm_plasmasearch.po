@@ -4,13 +4,13 @@
 # Franklin, 2014.
 # Jeff Huang <s8321414@gmail.com>, 2016.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2024-05-26 16:18+0900\n"
+"PO-Revision-Date: 2026-01-09 00:00+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 26.03.70\n"
 
 #: plasmasearch/kcm.h:73
 #, kde-format
@@ -31,25 +31,19 @@ msgid "Available Plugins"
 msgstr "可用的外掛程式"
 
 #: plasmasearch/ui/main.qml:25
-#, fuzzy, kde-format
-#| msgid "Configure KRunner…"
+#, kde-format
 msgctxt "@action:button in toolbar"
 msgid "Configure KRunner…"
 msgstr "設定 KRunner…"
 
 #: plasmasearch/ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Get New Plugins…"
+#, kde-format
 msgctxt "@action:button in toolbar"
 msgid "Get New Plugins…"
 msgstr "取得新的外掛程式…"
 
 #: plasmasearch/ui/main.qml:45
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect). Mark plugins as favorites and arrange them in order you "
-#| "want to prioritize them."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
@@ -60,15 +54,13 @@ msgstr ""
 "外掛程式為最愛或是以您希望優先看到的順序將它們進行排序。"
 
 #: plasmasearch/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Remove from favorites"
+#, kde-format
 msgctxt "@action:button, icononly"
 msgid "Remove from favorites"
 msgstr "從我的最愛中移除"
 
 #: plasmasearch/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Add to favorites"
+#, kde-format
 msgctxt "@action:button, icononly"
 msgid "Add to favorites"
 msgstr "新增到我的最愛"

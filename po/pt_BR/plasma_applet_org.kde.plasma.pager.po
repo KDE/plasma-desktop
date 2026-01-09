@@ -6,130 +6,114 @@
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2016, 2017, 2019, 2021, 2022.
 # SPDX-FileCopyrightText: 2024, 2025 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 # SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
+# SPDX-FileCopyrightText: 2026 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-11-08 21:10-0300\n"
-"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
+"PO-Revision-Date: 2026-01-08 07:48-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: qml/config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Geral"
 
 #: qml/configGeneral.qml:39
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "Geral:"
 
 #: qml/configGeneral.qml:41
-#, fuzzy, kde-format
-#| msgid "Show window outlines"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show window outlines"
 msgstr "Mostrar contornos da janela"
 
 #: qml/configGeneral.qml:46
-#, fuzzy, kde-format
-#| msgid "Show application icons on window outlines"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show application icons on window outlines"
 msgstr "Mostrar os ícones do aplicativo nos contornos das janelas"
 
 #: qml/configGeneral.qml:52
-#, fuzzy, kde-format
-#| msgid "Show only current screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show only current screen"
 msgstr "Mostrar apenas na tela atual"
 
 #: qml/configGeneral.qml:57
-#, fuzzy, kde-format
-#| msgid "Navigation wraps around"
+#, kde-format
 msgctxt "@option:check"
 msgid "Navigation wraps around"
 msgstr "Navegação circular"
 
 #: qml/configGeneral.qml:69
-#, fuzzy, kde-format
-#| msgid "Layout:"
+#, kde-format
 msgctxt "@title:listbox"
 msgid "Layout:"
 msgstr "Layout:"
 
 #: qml/configGeneral.qml:71
-#, fuzzy, kde-format
-#| msgctxt "The pager layout"
-#| msgid "Default"
+#, kde-format
 msgctxt "@item:inlistbox The pager layout"
 msgid "Default"
 msgstr "Padrão"
 
 #: qml/configGeneral.qml:71
-#, fuzzy, kde-format
-#| msgid "Horizontal"
+#, kde-format
 msgctxt "@item:inlistbox The pager layout"
 msgid "Horizontal"
 msgstr "Horizontal"
 
 #: qml/configGeneral.qml:71
-#, fuzzy, kde-format
-#| msgid "Vertical"
+#, kde-format
 msgctxt "@item:inlistbox The pager layout"
 msgid "Vertical"
 msgstr "Vertical"
 
 #: qml/configGeneral.qml:85
-#, fuzzy, kde-format
-#| msgid "Text display:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Text display:"
 msgstr "Exibição do texto:"
 
 #: qml/configGeneral.qml:88
-#, fuzzy, kde-format
-#| msgid "No text"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "No text"
 msgstr "Nenhum texto"
 
 #: qml/configGeneral.qml:96
-#, fuzzy, kde-format
-#| msgid "Activity number"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "Activity number"
 msgstr "Número da atividade"
 
 #: qml/configGeneral.qml:96
-#, fuzzy, kde-format
-#| msgid "Desktop number"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "Desktop number"
 msgstr "Número da área de trabalho"
 
 #: qml/configGeneral.qml:104
-#, fuzzy, kde-format
-#| msgid "Activity name"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "Activity name"
 msgstr "Nome da atividade"
 
 #: qml/configGeneral.qml:104
-#, fuzzy, kde-format
-#| msgid "Desktop name"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "Desktop name"
 msgstr "Nome da área de trabalho"
@@ -167,9 +151,7 @@ msgid "Shows the desktop"
 msgstr "Mostra a área de trabalho"
 
 #: qml/main.qml:87
-#, fuzzy, kde-format
-#| msgid "…and %1 other window"
-#| msgid_plural "…and %1 other windows"
+#, kde-format
 msgctxt "@info:tooltip overflow label"
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
@@ -177,9 +159,7 @@ msgstr[0] "…e mais %1 janela"
 msgstr[1] "…e mais %1 janelas"
 
 #: qml/main.qml:351
-#, fuzzy, kde-format
-#| msgid "%1 Window:"
-#| msgid_plural "%1 Windows:"
+#, kde-format
 msgctxt "@info:tooltip start of list"
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
@@ -187,9 +167,7 @@ msgstr[0] "%1 janela:"
 msgstr[1] "%1 janelas:"
 
 #: qml/main.qml:363
-#, fuzzy, kde-format
-#| msgid "%1 Minimized Window:"
-#| msgid_plural "%1 Minimized Windows:"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
@@ -197,8 +175,7 @@ msgstr[0] "%1 janela minimizada:"
 msgstr[1] "%1 janelas minimizadas:"
 
 #: qml/main.qml:439
-#, fuzzy, kde-format
-#| msgid "Desktop %1"
+#, kde-format
 msgctxt "@info:whatsthis Accessible name for pager section"
 msgid "Desktop %1"
 msgstr "Área de trabalho %1"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-11-22 10:02+0100\n"
+"PO-Revision-Date: 2026-01-08 05:09+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -136,32 +136,28 @@ msgid "Help"
 msgstr "დახმარება"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@title:group list section name"
 msgid "Applications"
 msgstr "აპლიკაციები"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "Commands"
+#, kde-format
 msgctxt "@title:group list section name"
 msgid "Commands"
 msgstr "ბრძანებები"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "System Services"
+#, kde-format
 msgctxt "@title:group list section name"
 msgid "System Services"
 msgstr "სისტემური სერვისები"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "Common Actions"
+#, kde-format
 msgctxt "@title:group list section name"
 msgid "Common Actions"
-msgstr "ჩვეულებრივი ქმედებები"
+msgstr "ზოგადი ქმედებები"
 
 #: ui/main.qml:43
 #, kde-format
@@ -224,8 +220,7 @@ msgid "Add new command or script"
 msgstr "ახალი ბრძანების ან სკრიპტის დამატება"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Cannot export scheme while there are unsaved changes"
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr ""
@@ -233,13 +228,11 @@ msgstr ""
 "შეუძლებელია"
 
 #: ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the components below that should be included in the exported scheme"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Select the components below that should be included in the exported scheme"
-msgstr "აირჩიეთ კომპონენტები, რომლებიც გატანილ სქემაში იქნება ჩასმული"
+msgstr "აირჩიეთ ქვემოთ კომპონენტები, რომლებიც გატანილ სქემაში იქნება ჩასმული"
 
 #: ui/main.qml:124
 #, kde-format
@@ -273,8 +266,7 @@ msgid "Undo deletion"
 msgstr "წაშლის გაუქმება"
 
 #: ui/main.qml:341
-#, fuzzy, kde-format
-#| msgid "No items matched the search terms"
+#, kde-format
 msgctxt "@info:status placeholdermessage"
 msgid "No items matched the search terms"
 msgstr "თქვენს ძებნას პასუხები არ აქვს"
@@ -298,22 +290,19 @@ msgid "Undo deleting shortcuts"
 msgstr "მალსახმობების წაშლის გაუქმება"
 
 #: ui/main.qml:399
-#, fuzzy, kde-format
-#| msgid "Select an item from the list to view its shortcuts here"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
-msgstr "აირჩიეთ სიის ჩანაწერები, რომლის მალსახმობების ნახვაც აქ გსურთ"
+msgstr "აირჩიეთ ელემენტი სიიდან, რომლის მალსახმობების ნახვაც აქ გსურთ"
 
 #: ui/main.qml:412
-#, fuzzy, kde-format
-#| msgid "Export Shortcut Scheme"
+#, kde-format
 msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr "მალსახმობების სქემის გატანა"
 
 #: ui/main.qml:412 ui/main.qml:553
-#, fuzzy, kde-format
-#| msgid "Import Shortcut Scheme"
+#, kde-format
 msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
 msgstr "მალსახმობების სქემის შემოტანა"
@@ -325,29 +314,25 @@ msgid "Shortcut Scheme (*.kksrc)"
 msgstr "მალსახმობების სქემა(*.kksrc)"
 
 #: ui/main.qml:441
-#, fuzzy, kde-format
-#| msgid "Edit Command"
+#, kde-format
 msgctxt "@title:window dialog"
 msgid "Edit Command"
 msgstr "ბრძანების ჩასწორება"
 
 #: ui/main.qml:441
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgctxt "@title:window dialog"
 msgid "Add Command"
 msgstr "ბრძანების დამატება"
 
 #: ui/main.qml:463
-#, fuzzy, kde-format
-#| msgid "Save"
+#, kde-format
 msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
 msgstr "შენახვა"
 
 #: ui/main.qml:463
-#, fuzzy, kde-format
-#| msgid "Add"
+#, kde-format
 msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
 msgstr "დამატება"
@@ -365,11 +350,10 @@ msgid "Add command"
 msgstr "ბრძანების დამატება"
 
 #: ui/main.qml:492
-#, fuzzy, kde-format
-#| msgid "Enter a command or choose a script file:"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
-msgstr "შეიყვანეთ ბრძანება ან აირჩიეთ სკრიპტის ფაილი:"
+msgstr "შეიყვანეთ ბრძანება, ან აირჩიეთ სკრიპტის ფაილი:"
 
 #: ui/main.qml:501
 #, kde-format
@@ -422,29 +406,25 @@ msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "სკრიპტის ფაილები (.sh, .bash, .zsh და ა.შ.) (*.*sh)"
 
 #: ui/main.qml:561
-#, fuzzy, kde-format
-#| msgid "Select the scheme to import:"
+#, kde-format
 msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr "არჩიეთ შემოსატანი სქემა:"
 
 #: ui/main.qml:580
-#, fuzzy, kde-format
-#| msgid "Custom Scheme"
+#, kde-format
 msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
-msgstr "ხელით მითითებული სქემა"
+msgstr "მორგებული სქემა"
 
 #: ui/main.qml:588
-#, fuzzy, kde-format
-#| msgid "Select File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select File…"
 msgstr "აირჩიეთ ფაილი…"
 
 #: ui/main.qml:588
-#, fuzzy, kde-format
-#| msgid "Import"
+#, kde-format
 msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "შემოტანა"
@@ -474,8 +454,7 @@ msgid "Expand to configure shortcuts"
 msgstr "ჩამოშალეთ მალსახმობების მოსარგებად"
 
 #: ui/ShortcutActionDelegate.qml:38
-#, fuzzy, kde-format
-#| msgid "Editing shortcut: %1"
+#, kde-format
 msgctxt "@info:whatsthis accessible name %1 is shortcut label (not sequence)"
 msgid "Editing shortcut: %1"
 msgstr "სწორდება მალსახმობი: %1"
@@ -489,17 +468,13 @@ msgid "%1:"
 msgstr "%1:"
 
 #: ui/ShortcutActionDelegate.qml:88
-#, fuzzy, kde-format
-#| msgid "No active shortcuts"
+#, kde-format
 msgctxt "@info:status"
 msgid "No active shortcuts"
 msgstr "აქტიური მალსახმობების გარეშე"
 
 #: ui/ShortcutActionDelegate.qml:134
-#, fuzzy, kde-format
-#| msgctxt "%1 decides if singular or plural will be used"
-#| msgid "Default shortcut"
-#| msgid_plural "Default shortcuts"
+#, kde-format
 msgctxt "@title:column %1 decides if singular or plural will be used"
 msgid "Default shortcut"
 msgid_plural "Default shortcuts"
@@ -507,29 +482,25 @@ msgstr[0] "ნაგულისხმევი მალსახმობი"
 msgstr[1] "ნაგულისხმევი მალსახმობები"
 
 #: ui/ShortcutActionDelegate.qml:136
-#, fuzzy, kde-format
-#| msgid "No default shortcuts"
+#, kde-format
 msgctxt "@label for shortcut with no default bindings"
 msgid "No default shortcuts"
 msgstr "ნაგულისხმევი მალსახმობების გარეშე"
 
 #: ui/ShortcutActionDelegate.qml:145
-#, fuzzy, kde-format
-#| msgid "Default shortcut %1 is enabled."
+#, kde-format
 msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is enabled."
 msgstr "ნაგულისხმევი მალსახმობი %1 ჩართულია."
 
 #: ui/ShortcutActionDelegate.qml:145
-#, fuzzy, kde-format
-#| msgid "Default shortcut %1 is disabled."
+#, kde-format
 msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is disabled."
 msgstr "ნაგულისხმევი მალსახმობი %1 გამორთულია."
 
 #: ui/ShortcutActionDelegate.qml:168
-#, fuzzy, kde-format
-#| msgid "Custom shortcuts"
+#, kde-format
 msgctxt "@title:column"
 msgid "Custom shortcuts"
 msgstr "საკუთარი მალსახმობები"

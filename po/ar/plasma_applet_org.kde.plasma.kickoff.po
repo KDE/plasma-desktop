@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2015, 2017.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-06-12 12:12+0400\n"
+"PO-Revision-Date: 2026-01-08 11:42+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -45,15 +45,13 @@ msgid "Show in Favorites"
 msgstr "أظهر في المفضّلة"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
-msgstr "عام"
+msgstr "عامّ"
 
 #: ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "الأيقونة:"
@@ -105,36 +103,31 @@ msgid "Remove icon"
 msgstr "أزل الأيقونة"
 
 #: ConfigGeneral.qml:120
-#, fuzzy, kde-format
-#| msgid "Show applications as:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
-msgstr "أظهر التّطبيقات كـ:"
+msgstr "أظهر التّطبيقات ك‍:"
 
 #: ConfigGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "Name only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "الاسم فقط"
 
 #: ConfigGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "Description only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "الوصف فقط"
 
 #: ConfigGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "Name (Description)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "الاسم (الوصف)"
 
 #: ConfigGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "Description (Name)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "الوصف (الاسم)"
@@ -184,8 +177,7 @@ msgid ""
 msgstr "لا يؤثر ذلك على كيفية فرز التطبيقات في نتائج البحث أو صفحة المفضلة."
 
 #: ConfigGeneral.qml:185
-#, fuzzy, kde-format
-#| msgid "Use compact list item style"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use compact list item style"
 msgstr "استخدم قائمة العناصر المتراصة"
@@ -197,15 +189,13 @@ msgid "Automatically disabled when in Touch Mode"
 msgstr "يعطل آليّا في وضع اللوحي"
 
 #: ConfigGeneral.qml:199
-#, fuzzy, kde-format
-#| msgid "Highlight newly installed applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly installed applications"
 msgstr "أبرز التطبيقات المثبتة حديثًا"
 
 #: ConfigGeneral.qml:204
-#, fuzzy, kde-format
-#| msgid "Switch sidebar categories when hovering over them"
+#, kde-format
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
 msgstr "بدّل فئات الشريط الجانبي عند التمرير فوقها"
@@ -217,124 +207,103 @@ msgid "Configure Search Plugins…"
 msgstr "اضبط ملحقات البحث…"
 
 #: ConfigGeneral.qml:220
-#, fuzzy, kde-format
-#| msgid "Sidebar position:"
+#, kde-format
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr "موضع الشريط الجانبي:"
 
 #: ConfigGeneral.qml:221 ConfigGeneral.qml:229
-#, fuzzy, kde-format
-#| msgid "Right"
+#, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr "يمين"
 
 #: ConfigGeneral.qml:221
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "option:radio sidebar position"
 msgid "Left"
 msgstr "يسار"
 
 #: ConfigGeneral.qml:229
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr "يسار"
 
 #: ConfigGeneral.qml:237
-#, fuzzy, kde-format
-#| msgid "Show favorites:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
 msgstr "أظهر المفضّلات"
 
 #: ConfigGeneral.qml:238
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
-#| msgid "In a grid"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "في شبكة"
 
 #: ConfigGeneral.qml:246
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a list'"
-#| msgid "In a list"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "في قائمة"
 
 #: ConfigGeneral.qml:254
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
 msgstr "أظهر التّطبيقات الأخرى:"
 
 #: ConfigGeneral.qml:255
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
-#| msgid "In a grid"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "في شبكة"
 
 #: ConfigGeneral.qml:263
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a list'"
-#| msgid "In a list"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "في قائمة"
 
 #: ConfigGeneral.qml:275
-#, fuzzy, kde-format
-#| msgid "Show buttons for:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr "أظهر أزرار لـ:"
 
 #: ConfigGeneral.qml:276
-#, fuzzy, kde-format
-#| msgid "Power"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power"
 msgstr "الطاقة"
 
 #: ConfigGeneral.qml:285
-#, fuzzy, kde-format
-#| msgid "Session"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "الجلسة"
 
 #: ConfigGeneral.qml:294
-#, fuzzy, kde-format
-#| msgid "Power and session"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
 msgstr "الطاقة والجلسة"
 
 #: ConfigGeneral.qml:303
-#, fuzzy, kde-format
-#| msgid "Show action button captions"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show action button captions"
 msgstr "أظهر عناوين أزرار الإجراءات"
 
 #: Footer.qml:101
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@title:tab kickoff sidebar tab"
 msgid "Applications"
 msgstr "التّطبيقات"
 
 #: Footer.qml:117
-#, fuzzy, kde-format
-#| msgid "Places"
+#, kde-format
 msgctxt "@title:tab kickoff sidebar tab"
 msgid "Places"
 msgstr "الأماكن"
@@ -346,15 +315,13 @@ msgid "No matches"
 msgstr "لا يوجد متطابقات"
 
 #: Header.qml:84
-#, fuzzy, kde-format
-#| msgid "Open user settings"
+#, kde-format
 msgctxt "@action:button icon-only, for tooltip/Accessible"
 msgid "Open user settings"
 msgstr "افتح إعدادات المستخدم"
 
 #: Header.qml:264
-#, fuzzy, kde-format
-#| msgid "Keep Open"
+#, kde-format
 msgctxt ""
 "@action:button Pin widget open if it loses focus, icon-only button, for "
 "tooltip/Accessible"
@@ -362,23 +329,19 @@ msgid "Keep Open"
 msgstr "أبقه مفتوحاً"
 
 #: KickoffGridDelegate.qml:59
-#, fuzzy, kde-format
-#| msgctxt "Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "@label Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "جديد!"
 
 #: KickoffGridDelegate.qml:60
-#, fuzzy, kde-format
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly installed application"
 msgstr "تطبيق مثبتًا حديثًا"
 
 #: KickoffGridView.qml:101
-#, fuzzy, kde-format
-#| msgid "Grid with %1 rows, %2 columns"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Grid with %1 rows, %2 columns"
 msgstr "شبكة بـ %1 سطر و %2 عمود"
@@ -390,50 +353,43 @@ msgid "New!"
 msgstr "جديد!"
 
 #: KickoffListDelegate.qml:118
-#, fuzzy, kde-format
-#| msgid "There is a newly installed application in this category"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly installed application in this category"
 msgstr "يوجد تطبيق مثبت حديثًا في هذه الفئة"
 
 #: KickoffListDelegate.qml:119
-#, fuzzy, kde-format
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly installed application"
 msgstr "تطبيق مثبتًا حديثًا"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Session"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Session"
 msgstr "الجلسة"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Power"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Power"
 msgstr "الطاقة"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "More"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "More"
 msgstr "المزيد"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Session and Power"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Session and Power"
 msgstr "الجلسة والطاقة"
 
 #: main.qml:356
-#, fuzzy, kde-format
-#| msgid "Edit Applications…"
+#, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
 msgstr "حرّر التّطبيقات..."

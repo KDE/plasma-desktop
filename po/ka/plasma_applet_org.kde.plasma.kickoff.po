@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-06-06 05:16+0200\n"
+"PO-Revision-Date: 2026-01-08 05:41+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.8\n"
 
 #: code/tools.js:32
 #, kde-format
@@ -44,15 +44,13 @@ msgid "Show in Favorites"
 msgstr "რჩეულებში ჩვენება"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
-msgstr "მთავარი"
+msgstr "ზოგადი"
 
 #: ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "ხატულა:"
@@ -61,7 +59,7 @@ msgstr "ხატულა:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr "აპლიკაციების გამშვების ხატულის შეცვლა"
+msgstr "აპლიკაციების გამშვების ხატულას შეცვლა"
 
 #: ConfigGeneral.qml:54
 #, kde-format
@@ -104,36 +102,31 @@ msgid "Remove icon"
 msgstr "ხატულის წაშლა"
 
 #: ConfigGeneral.qml:120
-#, fuzzy, kde-format
-#| msgid "Show applications as:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "აპლიკაციის ჩვენება, როგორც:"
 
 #: ConfigGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "Name only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "მხოლოდ სახელი"
 
 #: ConfigGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "Description only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "მხოლოდ აღწერა"
 
 #: ConfigGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "Name (Description)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "სახელი (აღწერა)"
 
 #: ConfigGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "Description (Name)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "აღწერა (სახელი)"
@@ -172,7 +165,7 @@ msgstr "ზოგადი:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
-msgstr "აპლიკაციების ანბანის მიხედვით დალაგება"
+msgstr "აპლიკაციების დალაგება ანბანის მიხედვით"
 
 #: ConfigGeneral.qml:179
 #, kde-format
@@ -185,8 +178,7 @@ msgstr ""
 "გვერდზე."
 
 #: ConfigGeneral.qml:185
-#, fuzzy, kde-format
-#| msgid "Use compact list item style"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use compact list item style"
 msgstr "ელემენტის კომპაქტური ჩამონათვალის სტილის გამოყენება"
@@ -198,15 +190,13 @@ msgid "Automatically disabled when in Touch Mode"
 msgstr "სენსორული ეკრანის  რეჟიმში ავტომატურად ითიშება"
 
 #: ConfigGeneral.qml:199
-#, fuzzy, kde-format
-#| msgid "Highlight newly installed applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly installed applications"
 msgstr "ახლად დაყენებული აპლიკაციების გამოკვეთა"
 
 #: ConfigGeneral.qml:204
-#, fuzzy, kde-format
-#| msgid "Switch sidebar categories when hovering over them"
+#, kde-format
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
 msgstr ""
@@ -219,124 +209,103 @@ msgid "Configure Search Plugins…"
 msgstr "ძებნის დამატებების მორგება…"
 
 #: ConfigGeneral.qml:220
-#, fuzzy, kde-format
-#| msgid "Sidebar position:"
+#, kde-format
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr "გვერდითი პანელის მდებარეობა:"
 
 #: ConfigGeneral.qml:221 ConfigGeneral.qml:229
-#, fuzzy, kde-format
-#| msgid "Right"
+#, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr "მარჯვენა"
 
 #: ConfigGeneral.qml:221
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "option:radio sidebar position"
 msgid "Left"
 msgstr "მარცხენა"
 
 #: ConfigGeneral.qml:229
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr "მარცხენა"
 
 #: ConfigGeneral.qml:237
-#, fuzzy, kde-format
-#| msgid "Show favorites:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
-msgstr "სანიშნების ჩვენება:"
+msgstr "რჩეულების ჩვენება:"
 
 #: ConfigGeneral.qml:238
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
-#| msgid "In a grid"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "ბადეში"
 
 #: ConfigGeneral.qml:246
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a list'"
-#| msgid "In a list"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "სიაში"
 
 #: ConfigGeneral.qml:254
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
 msgstr "სხვა აპლიკაციების ჩვენება:"
 
 #: ConfigGeneral.qml:255
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
-#| msgid "In a grid"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "ბადეში"
 
 #: ConfigGeneral.qml:263
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a list'"
-#| msgid "In a list"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "სიაში"
 
 #: ConfigGeneral.qml:275
-#, fuzzy, kde-format
-#| msgid "Show buttons for:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr "ღილაკების ჩვენება:"
 
 #: ConfigGeneral.qml:276
-#, fuzzy, kde-format
-#| msgid "Power"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power"
 msgstr "კვება"
 
 #: ConfigGeneral.qml:285
-#, fuzzy, kde-format
-#| msgid "Session"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "სესია"
 
 #: ConfigGeneral.qml:294
-#, fuzzy, kde-format
-#| msgid "Power and session"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
 msgstr "კვება და სესია"
 
 #: ConfigGeneral.qml:303
-#, fuzzy, kde-format
-#| msgid "Show action button captions"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show action button captions"
 msgstr "ქმედების ღილაკების აღწერის ჩვენება"
 
 #: Footer.qml:101
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@title:tab kickoff sidebar tab"
 msgid "Applications"
 msgstr "აპლიკაციები"
 
 #: Footer.qml:117
-#, fuzzy, kde-format
-#| msgid "Places"
+#, kde-format
 msgctxt "@title:tab kickoff sidebar tab"
 msgid "Places"
 msgstr "ადგილები"
@@ -348,15 +317,13 @@ msgid "No matches"
 msgstr "დათხვევა არ არსებობს"
 
 #: Header.qml:84
-#, fuzzy, kde-format
-#| msgid "Open user settings"
+#, kde-format
 msgctxt "@action:button icon-only, for tooltip/Accessible"
 msgid "Open user settings"
 msgstr "მომხმარებლის პარამეტრების გახსნა"
 
 #: Header.qml:264
-#, fuzzy, kde-format
-#| msgid "Keep Open"
+#, kde-format
 msgctxt ""
 "@action:button Pin widget open if it loses focus, icon-only button, for "
 "tooltip/Accessible"
@@ -364,23 +331,19 @@ msgid "Keep Open"
 msgstr "ღიად დატოვება"
 
 #: KickoffGridDelegate.qml:59
-#, fuzzy, kde-format
-#| msgctxt "Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "@label Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "ახალი!"
 
 #: KickoffGridDelegate.qml:60
-#, fuzzy, kde-format
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly installed application"
 msgstr "ახლად დაყენებული აპლიკაცია"
 
 #: KickoffGridView.qml:101
-#, fuzzy, kde-format
-#| msgid "Grid with %1 rows, %2 columns"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Grid with %1 rows, %2 columns"
 msgstr "ბადე %1 მწკრივით და %2 სვეტით"
@@ -392,50 +355,43 @@ msgid "New!"
 msgstr "ახალი!"
 
 #: KickoffListDelegate.qml:118
-#, fuzzy, kde-format
-#| msgid "There is a newly installed application in this category"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly installed application in this category"
 msgstr "ამ კატეგორიაში ახლად დაყენებული აპლიკაციები არაა"
 
 #: KickoffListDelegate.qml:119
-#, fuzzy, kde-format
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly installed application"
 msgstr "ახლად დაყენებული აპლიკაცია"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Session"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Session"
 msgstr "სესია"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Power"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Power"
 msgstr "კვება"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "More"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "More"
 msgstr "მეტი"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Session and Power"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Session and Power"
 msgstr "სესია და კვება"
 
 #: main.qml:356
-#, fuzzy, kde-format
-#| msgid "Edit Applications…"
+#, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
 msgstr "აპლიკაციების ჩასწორება…"

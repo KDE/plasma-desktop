@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2015, 2016.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-08-03 14:19+0400\n"
+"PO-Revision-Date: 2026-01-08 11:39+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -20,29 +20,25 @@ msgstr ""
 "X-Generator: Lokalize 23.08.5\n"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Position on screen:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Position on screen:"
 msgstr "الموضع في الشاشة:"
 
 #: ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Top"
+#, kde-format
 msgctxt "@option:check Position on top of screen"
 msgid "Top"
 msgstr "أعلى"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Center"
+#, kde-format
 msgctxt "@option:check Position in center of screen"
 msgid "Center"
 msgstr "وسط"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Activation:"
+#, kde-format
 msgctxt "@label prefix for checkbutton"
 msgid "Activation:"
 msgstr "التفعيل:"
@@ -54,39 +50,31 @@ msgid "Activate when pressing any key on the desktop"
 msgstr "فعّل عند ضغط أي زر على سطح المكتب"
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid "History:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "History:"
 msgstr "التأريخ:"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Disabled"
+#, kde-format
 msgctxt "@option:radio History is disabled"
 msgid "Disabled"
 msgstr "معطّلة"
 
 #: ui/main.qml:79
-#, fuzzy, kde-format
-#| msgctxt "@option:check The thing being enabled is search history"
-#| msgid "Enable suggestions"
+#, kde-format
 msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable suggestions"
 msgstr "مكن الاقتراحات"
 
 #: ui/main.qml:84
-#, fuzzy, kde-format
-#| msgctxt "@option:check The thing being enabled is search history"
-#| msgid "Enabled auto-complete"
+#, kde-format
 msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable auto-complete"
-msgstr "الإكمال الآليّ مفعل"
+msgstr "مكّن الإكمال الآليّ"
 
 #: ui/main.qml:92
-#, fuzzy, kde-format
-#| msgid "Clear History…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear History…"
 msgstr "امحُ التّأريخ…"

@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
+# SPDX-FileCopyrightText: 2022, 2024, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
-# SPDX-FileCopyrightText: 2022, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2024-02-19 17:52+0400\n"
+"PO-Revision-Date: 2026-01-08 11:41+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kcmtouchscreen.cpp:47
 #, kde-format
@@ -29,15 +30,13 @@ msgid "%1 - (%2,%3 %4×%5)"
 msgstr "‏%1 - (%2،%3 %4×%5)"
 
 #: ui/main.qml:29
-#, fuzzy, kde-format
-#| msgid "No touchscreens found"
+#, kde-format
 msgctxt "@info:status placeholdermessage text"
 msgid "No touchscreens found"
 msgstr "لم يعثر على شاشات لمس"
 
 #: ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Connect an external touchscreen"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchscreen"
 msgstr "صِل شاشة لمس خارجية"
@@ -49,15 +48,13 @@ msgid "Device:"
 msgstr "الجهاز:"
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgid "Enabled:"
+#, kde-format
 msgctxt "@option:check prefix touchscreen device is enabled"
 msgid "Enabled:"
-msgstr "ممكّن"
+msgstr "الممكّنة:"
 
 #: ui/main.qml:67
-#, fuzzy, kde-format
-#| msgid "Target display:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Target display:"
 msgstr "الشاشة المستهدفة:"

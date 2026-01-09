@@ -1,15 +1,15 @@
 # Spanish translations for plasma_applet_org.kde.plasma.keyboardlayout.po package.
-# Copyright (C) 2021-2025 This file is copyright:
+# Copyright (C) 2021-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 # Automatically generated, 2021.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2021, 2022, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.keyboardlayout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-05-26 00:52+0100\n"
+"PO-Revision-Date: 2026-01-09 00:41+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,18 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.07.90\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: qml/config.qml:6
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "General"
 
 #: qml/configGeneral.qml:31
-#, fuzzy, kde-format
-#| msgid "Display style:"
+#, kde-format
 msgctxt "@title:group of radio buttons, options are language codes or images"
 msgid "Display style:"
 msgstr "Estilo del visor:"
@@ -40,15 +38,13 @@ msgid "No flag available"
 msgstr "No dispone de bandera"
 
 #: qml/configGeneral.qml:102
-#, fuzzy, kde-format
-#| msgid "Layouts:"
+#, kde-format
 msgctxt "@label prefixed to button"
 msgid "Layouts:"
 msgstr "Diseños:"
 
 #: qml/configGeneral.qml:103
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:button opens kcm_keyboard"
 msgid "Configure…"
 msgstr "Configurar…"

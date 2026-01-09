@@ -1,6 +1,6 @@
 # Translation of kcmkded.po to Slovenian
 # Copyright (C) 2002, 2003, 2004 Free Software Foundation, Inc.
-# $Id: kcm_kded.po 1726870 2026-01-08 01:26:23Z scripty $
+# $Id: kcm_kded.po 1726930 2026-01-09 01:26:02Z scripty $
 # $Source$
 #
 # Gregor Rakar <gregor.rakar@kiss.si>, 2002, 2003, 2004.
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2024-06-29 07:05+0200\n"
+"PO-Revision-Date: 2026-01-08 09:57+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.8\n"
 
 #: kcmkded.cpp:115
 #, kde-format
@@ -62,79 +62,64 @@ msgstr ""
 "url='%1'>pošljite tudi poročilo o napaki o tem.</link>"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded6) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
-"Upravitelj storitev v ozadju (kded6) trenutno ne deluje. Poskrbite, da je "
+"Upravljalnik storitev v ozadju (kded6) trenutno ne teče. Poskrbite, da je "
 "pravilno nameščen."
 
 #: ui/main.qml:65
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services disable themselves again when manually started if they are "
-#| "not useful in the current environment."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
-"Nekatere storitve se ob ročnem zagonu ponovno onemogočijo, če niso nujno "
-"potrebne v trenutnem okolju."
+"Nekatere storitve se ob ročnem zagonu znova onemogočijo, če v trenutnem "
+"okolju niso uporabne."
 
 #: ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services were automatically started/stopped when the background "
-#| "services manager (kded6) was restarted to apply your changes."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
 "Nekatere storitve v ozadju so se samodejno zagnale/ustavile, ko je bil "
-"upravitelj storitev (kded6) znova zagnan, da uveljavi vaše spremembe."
+"upravljalnik storitev (kded6) znova zagnan, da uveljavi vaše spremembe."
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "All Services"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "All Services"
 msgstr "Vse storitve"
 
 #: ui/main.qml:124
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "@item:inlistbox List running services"
 msgid "Running"
 msgstr "Teče"
 
 #: ui/main.qml:125
-#, fuzzy, kde-format
-#| msgctxt "List not running services"
-#| msgid "Not Running"
+#, kde-format
 msgctxt "@item:inlistbox List not running services"
 msgid "Not Running"
 msgstr "Ne teče"
 
 #: ui/main.qml:162
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgctxt "@title:group list section"
 msgid "Startup Services"
 msgstr "Zagon storitev"
 
 #: ui/main.qml:163
-#, fuzzy, kde-format
-#| msgid "Load-on-Demand Services"
+#, kde-format
 msgctxt "@title:group list section"
 msgid "Load-on-Demand Services"
-msgstr "Storitve na zahtevo"
+msgstr "Storitve naložene na zahtevo"
 
 #: ui/main.qml:182
 #, kde-format
@@ -149,22 +134,19 @@ msgid "Enable automatically loading %1 on startup"
 msgstr "Omogoči samodejno nalaganje %1 ob zagonu"
 
 #: ui/main.qml:183
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Toggle automatically loading this service on startup"
 msgstr "Preklaplja samodejno nalaganje te storitve ob zagonu"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid "Not running"
+#, kde-format
 msgctxt "@info:status"
 msgid "Not running"
 msgstr "Ne teče"
 
 #: ui/main.qml:228
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "@info:status"
 msgid "Running"
 msgstr "Teče"
@@ -182,15 +164,13 @@ msgid "Start %1"
 msgstr "Zaženi %1"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Stop Service"
+#, kde-format
 msgctxt "@action:button"
 msgid "Stop Service"
 msgstr "Ustavi storitev"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Start Service"
+#, kde-format
 msgctxt "@action:button"
 msgid "Start Service"
 msgstr "Zaženi storitev"

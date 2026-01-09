@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-12-05 05:38+0100\n"
+"PO-Revision-Date: 2026-01-08 05:23+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -109,36 +109,31 @@ msgid "Touchpad disconnected. No other touchpads found."
 msgstr "თაჩპედი გაითიშა. სხვა თაჩპედები ვერ ვიპოვე."
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgid "No touchpad found"
+#, kde-format
 msgctxt "@info:status placeholdermessage text"
 msgid "No touchpad found"
-msgstr "თაჩპედის ვერ ვიპოვე"
+msgstr "თაჩპედი ვერ ვიპოვე"
 
 #: ui/main.qml:60
-#, fuzzy, kde-format
-#| msgid "Connect an external touchpad"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchpad"
 msgstr "გარე თაჩპედის მიერთება"
 
 #: ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@label:listbox device selection"
 msgid "Device:"
 msgstr "მოწყობილობა:"
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "ზოგადი:"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "Enable device"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable device"
 msgstr "მოწყობილობის ჩართვა"
@@ -150,8 +145,7 @@ msgid "Disable while mouse is connected"
 msgstr "გამორთვა, როცა თაგუნა შეერთებულია"
 
 #: ui/main.qml:137
-#, fuzzy, kde-format
-#| msgid "Disable while typing"
+#, kde-format
 msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "კრეფისას გამორთვა"
@@ -169,8 +163,7 @@ msgid "Left and right buttons:"
 msgstr "მარჯვენა და მარცხენა ღილაკები:"
 
 #: ui/main.qml:175
-#, fuzzy, kde-format
-#| msgid "Swap (left-handed mode)"
+#, kde-format
 msgctxt "@option:check"
 msgid "Swap (left-handed mode)"
 msgstr "მიმოცვლა (ცაციის რეჟიმი)"
@@ -179,7 +172,7 @@ msgstr "მიმოცვლა (ცაციის რეჟიმი)"
 #, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
-msgstr "შუა-წკაპისთვის ორივე ღილაკს ერთდროულად დააწექით"
+msgstr "შუა წკაპისთვის ორივე ღილაკს ერთდროულად დააწექით"
 
 #: ui/main.qml:204
 #, kde-format
@@ -193,15 +186,13 @@ msgstr ""
 "ერთდროული დაწკაპუნება სწორად ამოვიცნო."
 
 #: ui/main.qml:217
-#, fuzzy, kde-format
-#| msgid "Pointer speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "კურსორის სიჩქარე:"
 
 #: ui/main.qml:297
-#, fuzzy, kde-format
-#| msgid "Enable pointer acceleration"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "კურსორის აჩქარების ჩართვა"
@@ -216,78 +207,64 @@ msgstr ""
 "ერთად."
 
 #: ui/main.qml:325
-#, fuzzy, kde-format
-#| msgid "Scrolling speed:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
-msgstr "აწევ-ჩამოწევის სიჩქარე:"
+msgstr "გადახვევის სიჩქარე:"
 
 #: ui/main.qml:376
-#, fuzzy, kde-format
-#| msgctxt "Slower Scroll"
-#| msgid "Slower"
+#, kde-format
 msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "უფრო ნელა"
 
 #: ui/main.qml:383
-#, fuzzy, kde-format
-#| msgctxt "Faster Scroll Speed"
-#| msgid "Faster"
+#, kde-format
 msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
-msgstr "უფრო სწრაფი"
+msgstr "უფრო სწრაფად"
 
 #: ui/main.qml:390
-#, fuzzy, kde-format
-#| msgid "Scroll by:"
+#, kde-format
 msgctxt ""
 "@title group begins the sentence 'Scroll by moving two fingers anywhere/"
 "moving one finger on edge'"
 msgid "Scroll by:"
-msgstr "აწევ-ჩამოწევა:"
+msgstr "გადახვევა რით:"
 
 #: ui/main.qml:409
-#, fuzzy, kde-format
-#| msgid "Moving two fingers anywhere"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
-msgstr "გადაიტანეთ ორი თითი სადმე"
+msgstr "ორი თითის მოძრაობა სადმე"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Moving one finger on edge"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
-msgstr "გადაიტანეთ ერთი თითი წიბოზე"
+msgstr "წიბოზე ერთი თითის მოძრაობა"
 
 #: ui/main.qml:424
-#, fuzzy, kde-format
-#| msgid "Invert scroll direction (Natural scrolling)"
+#, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
-msgstr "აწევ-ჩამოწევის მიმართულების ინვერსია (ჩვეულებრივი აწევ-ჩამოწევა)"
+msgstr "გადახვევის მიმართულების ინვერსია (ჩვეულებრივი გადახვევა)"
 
 #: ui/main.qml:438
-#, fuzzy, kde-format
-#| msgid "Disable horizontal scrolling"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
-msgstr "ჰორიზონტალური აწევ-ჩამოწევის გამორთვა"
+msgstr "ჰორიზონტალური გადახვევის გამორთვა"
 
 #: ui/main.qml:460
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label for radiobutton group, begins the sentence 'right-click by "
-#| "pressing bottom-right corner/pressing with two fingers'"
-#| msgid "Right-click by:"
+#, kde-format
 msgctxt ""
 "@title:group for radiobutton group, begins the sentence 'right-click by "
 "pressing bottom-right corner/pressing with two fingers'"
 msgid "Right-click by:"
-msgstr "მარჯვენა-წკაპი:"
+msgstr "მარჯვენა წკაპი რით:"
 
 #: ui/main.qml:481
 #, kde-format
@@ -298,20 +275,16 @@ msgid "Pressing bottom-right corner"
 msgstr "დაჭერა ქვედა-მარჯვენა კუთხეში"
 
 #: ui/main.qml:496
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing both bottom corners."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
-msgstr "შუა-წკაპი ორივე ქვედა კუთხეში დაჭერით."
+msgstr "შუა წკაპი ორივე ქვედა კუთხეში დაჭერით."
 
 #: ui/main.qml:497
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing bottom center."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr "შუა-წკაპი ქვედა ცენტრში დაჭერით."
+msgstr "შუა წკაპი ქვედა ცენტრში დაჭერით."
 
 #: ui/main.qml:505
 #, kde-format
@@ -325,7 +298,7 @@ msgstr "ნებისმიერ ადგილას დაწოლა ო
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
-msgstr "შუა-წკაპი სამი თითით დაწოლით ნებისმიერ ადგილას."
+msgstr "შუა წკაპი სამი თითით დაწოლით ნებისმიერ ადგილას."
 
 #: ui/main.qml:529
 #, kde-format
@@ -333,7 +306,7 @@ msgctxt ""
 "@label for radiobutton group, begins the sentence 'middle-click by pressing "
 "bottom-middle edge/by pressing anywhere with three fingers'"
 msgid "Middle-click by:"
-msgstr "შუა-წკაპი:"
+msgstr "შუა წკაპი:"
 
 #: ui/main.qml:550
 #, kde-format
@@ -372,8 +345,7 @@ msgid "Tap to click"
 msgstr "დატყაპუნება დასაწკაპუნებლად"
 
 #: ui/main.qml:597
-#, fuzzy, kde-format
-#| msgid "Allow dragging after tapping"
+#, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr "დატყაპუნების შემდეგ გადათრევის დაშვება"
@@ -389,46 +361,40 @@ msgstr ""
 "გაასრიალეთ თაჩპედზე. დასაგდებად აუშვით თითი."
 
 #: ui/main.qml:616
-#, fuzzy, kde-format
-#| msgid "Allow briefly lifting finger during tap-and-drag"
+#, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr "დატყაპუნება-გადათრევისას თითის ცოტა ხნით აწევის დაშვება"
 
 #: ui/main.qml:630
-#, fuzzy, kde-format
-#| msgid "Two-finger tap:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Two-finger tap:"
-msgstr "ორი თითით ტყაპუნი:"
+msgstr "ორი თითით დატყაპუნება:"
 
 #: ui/main.qml:650
-#, fuzzy, kde-format
-#| msgid "Right-click (three-finger tap to middle-click)"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
-msgstr "მარჯვენა-ღილაკის-წკაპი (შუა-ღილაკის-წკაპისთვის სამი თითით დაატყაპუნეთ)"
+msgstr "მარჯვენა წკაპი (შუა წკაპისთვის სამი თითით დაატყაპუნეთ)"
 
 #: ui/main.qml:651
-#, fuzzy, kde-format
-#| msgid "Right-click"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Right-click"
-msgstr "მარჯვენა-წკაპი"
+msgstr "მარჯვენა წკაპი"
 
 #: ui/main.qml:659
-#, fuzzy, kde-format
-#| msgid "Middle-click (three-finger tap to right-click)"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
-msgstr "შუა-წკაპი (მარჯვენა-წკაპისთვის სამი თითით დაატყაპუნეთ)"
+msgstr "შუა წკაპი (მარჯვენა წკაპისთვის სამი თითით დაატყაპუნეთ)"
 
 #: ui/main.qml:660
-#, fuzzy, kde-format
-#| msgid "Middle-click"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click"
-msgstr "შუა-წკაპი"
+msgstr "შუა წკაპი"
 
 #~ msgctxt ""
 #~ "@label for radiobutton group, begins the sentence 'middle-click by "

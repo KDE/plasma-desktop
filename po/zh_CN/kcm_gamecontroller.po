@@ -316,7 +316,7 @@ msgstr "%1 (%2)"
 #, kde-format
 msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
 msgid "Allow using as pointer and keyboard"
-msgstr ""
+msgstr "允许用作指针和键盘"
 
 #: ui/main.qml:44
 #, kde-kuit-format
@@ -325,20 +325,20 @@ msgid ""
 "Allow game controllers to act like pointer and keyboard devices in Plasma "
 "and non-game applications.<nl/><nl/>Games can always use the controller."
 msgstr ""
+"允许游戏控制器在 Plasma 桌面环境和非游戏应用程序中作为指针和键盘设备工作。"
+"<nl/><nl/>游戏不受此影响，总是可以使用游戏控制器。"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "No game controllers found"
+#, kde-format
 msgctxt "@info placeholdermessage text"
 msgid "No game controllers found"
-msgstr "没有找到游戏控制器"
+msgstr ""
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Connect a wired or wireless controller"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage text"
 msgid "Connect a wired or wireless controller"
-msgstr "连接有线/无线控制器"
+msgstr ""
 
 #: ui/main.qml:83
 #, kde-format
@@ -349,6 +349,8 @@ msgid ""
 "controller, or enable automatic blocking by allowing the use as pointer and "
 "keyboard."
 msgstr ""
+"游戏控制器在使用时，系统仍可能自动睡眠或锁屏。您可以手动阻止睡眠或锁屏，也可"
+"以通过允许将游戏控制器用作指针和键盘设备来避免自动睡眠或锁屏。"
 
 #: ui/main.qml:98
 #, kde-format

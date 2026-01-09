@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2024-05-24 06:58+0200\n"
+"PO-Revision-Date: 2026-01-08 10:01+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.8\n"
 
 #: plasmasearch/kcm.h:73
 #, kde-format
@@ -29,25 +29,19 @@ msgid "Available Plugins"
 msgstr "Razpoložljivi vtičniki"
 
 #: plasmasearch/ui/main.qml:25
-#, fuzzy, kde-format
-#| msgid "Configure KRunner…"
+#, kde-format
 msgctxt "@action:button in toolbar"
 msgid "Configure KRunner…"
 msgstr "Konfiguriraj KRunner…"
 
 #: plasmasearch/ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Get New Plugins…"
+#, kde-format
 msgctxt "@action:button in toolbar"
 msgid "Get New Plugins…"
 msgstr "Pridobi nove vtičnike…"
 
 #: plasmasearch/ui/main.qml:45
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect). Mark plugins as favorites and arrange them in order you "
-#| "want to prioritize them."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
@@ -55,19 +49,17 @@ msgid ""
 "want to prioritize them."
 msgstr ""
 "Omogoči ali onemogoči vtičnike (uporabljeni v zaganjalniku aplikacij KRunner "
-"in učinku pregleda). Označi vtičnike kot priljubljene in jih razvrsti tako, "
-"kot jih želite imeti po prednosti."
+"in učinku predogleda). Označi vtičnike kot priljubljene in jih razvrsti "
+"tako, kot jih želite imeti po prednosti."
 
 #: plasmasearch/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Remove from favorites"
+#, kde-format
 msgctxt "@action:button, icononly"
 msgid "Remove from favorites"
 msgstr "Odstrani iz priljubljenih"
 
 #: plasmasearch/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Add to favorites"
+#, kde-format
 msgctxt "@action:button, icononly"
 msgid "Add to favorites"
 msgstr "Dodaj med priljubljene"

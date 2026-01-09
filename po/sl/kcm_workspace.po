@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-05-01 06:09+0200\n"
+"PO-Revision-Date: 2026-01-08 18:21+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -19,13 +19,10 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.8\n"
 
 #: ui/main.qml:25
-#, fuzzy, kde-format
-#| msgid ""
-#| "The system must be restarted before changes to the middle-click paste "
-#| "setting can take effect."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
@@ -35,8 +32,7 @@ msgstr ""
 "lepljenja s srednjim klikom."
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgctxt "@action:button"
 msgid "Restart"
 msgstr "Ponovni zagon"
@@ -60,12 +56,7 @@ msgid "Panel and widget tooltips"
 msgstr "Namigov za plošče in gradnike"
 
 #: ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid ""
-#| "Allows all Plasma panel and desktop widgets to show descriptive tooltips "
-#| "when hovered with the pointer. This setting has no effect on the small "
-#| "tooltips displayed when hovering over individual buttons and other user "
-#| "interface elements."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Allows all Plasma panel and desktop widgets to show descriptive tooltips "
@@ -73,10 +64,10 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
-"Omogoča, da vse plošče Plasme in gradniki namizja prikažejo opisne namige "
-"orodij, ko se pomaknete s kazalcem nadnje. Ta nastavitev ne vpliva na majhne "
-"namige orodij, ki se prikažejo, ko miškin kazalec premaknete nad posamezne "
-"gumbe in druge elemente uporabniškega vmesnika."
+"Omogoča, da vse plošče Plasme in namizni pripomočki prikazujejo opisne opise "
+"orodij, ko se kazalec zadrži nad njimi. Ta nastavitev ne vpliva na majhne "
+"opise orodij, ki se prikažejo, ko se kazalec zadrži nad posameznimi gumbi in "
+"drugimi elementi uporabniškega vmesnika."
 
 #: ui/main.qml:77
 #, kde-format
@@ -86,18 +77,15 @@ msgid "OSD popups for status changes"
 msgstr "Prikaz pojavnih oken na zaslonu za spremembe stanja"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Allows all Plasma widgets to show on-screen display (OSD) popups for "
-#| "changes like volume and brightness level, or audio device switching."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
-"Omogoča vsem gradnikom Plasme, da prikažejo pojavna okna na zaslonu za "
-"spremembe, kot sta raven glasnosti in svetlosti ali preklapljanje zvočne "
-"naprave."
+"Omogoča vsem gradnikom Plasme prikaz pojavnih oken na zaslonu (OSD) za "
+"spremembe, kot so glasnost in svetlost ali preklapljanje med zvočnimi "
+"napravami."
 
 #: ui/main.qml:94
 #, kde-format
@@ -106,42 +94,32 @@ msgid "Scrolling"
 msgstr "Drsenje"
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid "Clicking in scrollbar track:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
-msgstr "Klik v drsnik:"
+msgstr "Klikanje v drsnik:"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
-#| "to the clicked location'"
-#| msgid "Scrolls to the clicked location"
+#, kde-format
 msgctxt ""
 "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
 "scrolls to the clicked location'"
 msgid "Scrolls to the clicked location"
-msgstr "Drsne na s klikom označeno mesto"
+msgstr "Drsne na kliknjeno mesto"
 
 #: ui/main.qml:119
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
-#| "one page up or down'"
-#| msgid "Scrolls one page up or down"
+#, kde-format
 msgctxt ""
 "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
 "scrolls one page up or down'"
 msgid "Scrolls one page up or down"
-msgstr "Drsi en zaslon gor ali dol"
+msgstr "Drsi eno stran gor ali dol"
 
 #: ui/main.qml:137
-#, fuzzy, kde-format
-#| msgid "Middle-click to scroll to clicked location"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Middle-click to scroll to clicked location"
-msgstr "Srednji klik za zdrs na s klikom označeno mesto"
+msgstr "Srednji klik za zdrs na kliknjeno mesto"
 
 #: ui/main.qml:152
 #, kde-format
@@ -183,11 +161,10 @@ msgid "Selects them"
 msgstr "Jih izbira"
 
 #: ui/main.qml:201
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
-msgstr "Odpira jih z dvojnim klikom"
+msgstr "Odpiraj z dvojnim klikom"
 
 #: ui/main.qml:214
 #, kde-format
@@ -196,11 +173,10 @@ msgid "Opens them"
 msgstr "Jih odpira"
 
 #: ui/main.qml:232
-#, fuzzy, kde-format
-#| msgid "Select by clicking on item's selection marker"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
-msgstr "Izbira s klikom na marker označevanje predmeta"
+msgstr "Izbira s klikom na marker za označevanje predmeta"
 
 #: ui/main.qml:246
 #, kde-format
@@ -219,8 +195,7 @@ msgid "Pastes selected text"
 msgstr "Prilepi izbrano besedilo"
 
 #: ui/main.qml:268
-#, fuzzy, kde-format
-#| msgid "Double-click interval:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Double-click interval:"
 msgstr "Interval dvojnega klika:"
@@ -242,10 +217,7 @@ msgid "ms"
 msgstr "ms"
 
 #: ui/main.qml:301
-#, fuzzy, kde-format
-#| msgid ""
-#| "Two clicks within this duration are considered a double-click. Some "
-#| "applications may not honor this setting."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "
@@ -265,22 +237,19 @@ msgstr ""
 "dvojnega klika."
 
 #: ui/main.qml:354
-#, fuzzy, kde-format
-#| msgid "Drag and Drop"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr "Vlečenje in spuščanje"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgid "When dragging files or folders:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "Pri vlečenju datotek ali map:"
 
 #: ui/main.qml:362
-#, fuzzy, kde-format
-#| msgid "Always ask what to do"
+#, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr "Vedno vprašaj, kaj storiti"
@@ -298,8 +267,7 @@ msgstr ""
 "ustvarjanje simbolne povezave. Sicer prikaži pogovorno okno."
 
 #: ui/main.qml:386
-#, fuzzy, kde-format
-#| msgid "Move if on the same device"
+#, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "Premakni, če so v isti napravi"
@@ -319,34 +287,25 @@ msgid "Touch"
 msgstr "Dotakni"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Enable Touch Mode:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Touch Mode:"
 msgstr "Omogoči dotikalni način:"
 
 #: ui/main.qml:418
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
-#| msgid "Automatically enable as needed"
+#, kde-format
 msgctxt "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
-msgstr "Samodejno omogoči kadar je potrebno"
+msgstr "Samodejno omogoč,i kadar je potrebno"
 
 #: ui/main.qml:418
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is never enabled'"
-#| msgid "Never enabled"
+#, kde-format
 msgctxt "option:radio As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Nikoli omogočeno"
 
 #: ui/main.qml:435
-#, fuzzy, kde-format
-#| msgid ""
-#| "Touch Mode will be automatically activated whenever the system detects a "
-#| "touchscreen but no mouse or touchpad. For example: when a transformable "
-#| "laptop's keyboard is flipped around or detached."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -354,8 +313,8 @@ msgid ""
 "laptop's keyboard is flipped around or detached."
 msgstr ""
 "Dotikalni način bo samodejno aktiviran, kadar sistem zazna zaslon z dotikom "
-"in niti miške niti ploščice. Na primer kadar se prilagodljiva tipkovnica "
-"preklopi na drugo stran notesnika ali se jo odklopi."
+"a niti miške niti drsne ploščice. Na primer kadar se prilagodljiva "
+"tipkovnica preklopi na drugo stran notesnika ali se jo odklopi."
 
 #: ui/main.qml:440
 #, kde-format
@@ -370,10 +329,7 @@ msgid "Disabled"
 msgstr "Onemogočeno"
 
 #: ui/main.qml:486
-#, fuzzy, kde-format
-#| msgid ""
-#| "In Touch Mode, many elements of the user interface will become larger to "
-#| "more easily accommodate touch interaction."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "

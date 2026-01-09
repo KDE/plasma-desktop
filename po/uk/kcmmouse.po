@@ -7,13 +7,13 @@
 # Andriy Rysin <rysin@kde.org>, 2002, 2003, 2004, 2006.
 # Eugene Onischenko <oneugene@ukr.net>, 2003, 2005.
 # Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>, 2005, 2006, 2007, 2008.
-# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2020, 2022, 2023, 2024, 2025.
+# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2020, 2022, 2023, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-12-04 17:07+0200\n"
+"PO-Revision-Date: 2026-01-08 08:47+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -146,22 +146,19 @@ msgid "Configure Extra Buttons…"
 msgstr "Налаштувати додаткові кнопки…"
 
 #: ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Пристрій:"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General:"
 msgstr "Загальне:"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgid "Enable device"
+#, kde-format
 msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr "Увімкнути пристрій"
@@ -173,8 +170,7 @@ msgid "Left and right buttons:"
 msgstr "Ліва і права кнопки:"
 
 #: ui/main.qml:106
-#, fuzzy, kde-format
-#| msgid "Swap (left-handed mode)"
+#, kde-format
 msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
 msgstr "Поміняти місцями (режим шульги)"
@@ -197,25 +193,19 @@ msgstr ""
 "лівою і правою кнопками миші."
 
 #: ui/main.qml:148
-#, fuzzy, kde-format
-#| msgid "Pointer speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Швидкість вказівника:"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid "Enable pointer acceleration"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Увімкнути прискорення вказівника"
 
 #: ui/main.qml:241
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip from ContextualHelpButton"
-#| msgid ""
-#| "When enabled, pointer travel distance increases with faster movement "
-#| "speed."
+#, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
@@ -224,8 +214,7 @@ msgstr ""
 "збільшенні швидкості його пересування."
 
 #: ui/main.qml:254
-#, fuzzy, kde-format
-#| msgid "Scrolling speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr "Швидкість гортання:"
@@ -243,35 +232,26 @@ msgid "Faster"
 msgstr "Швидше"
 
 #: ui/main.qml:321
-#, fuzzy, kde-format
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "Гортання:"
 
 #: ui/main.qml:322
-#, fuzzy, kde-format
-#| msgid "Invert scroll direction"
+#, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction"
 msgstr "Інвертувати напрямок гортання"
 
 #: ui/main.qml:339
-#, fuzzy, kde-format
-#| msgid "Hold down middle button and move mouse to scroll"
+#, kde-format
 msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr ""
 "Утримуйте натиснутою середню кнопку миші пересуньте вказівник для гортання"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip from ContextualHelpButton"
-#| msgid ""
-#| "This will interfere with applications that use middle-button drag, such "
-#| "as some image editors, document viewers, or video games. It may be used "
-#| "on any device, but is intended primarily as a substitute for scroll "
-#| "wheels on devices that do not have any."
+#, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "This will interfere with applications that use middle-button drag, such as "

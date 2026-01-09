@@ -4,7 +4,7 @@
 # Lisiane Sztoltz <lisiane@conectiva.com.br>, 2002,2003.
 # Henrique Pinto <stampede@coltec.ufmg.br>, 2003.
 # Lisiane Sztoltz Teixeira <lisiane@conectiva.com.br>, 2004.
-# Marcus Gama <marcus.gama@gmail.com>, 2004.
+# SPDX-FileCopyrightText: 2004, 2026 Marcus Gama <marcus.gama@gmail.com>
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2008, 2009, 2010, 2011, 2019.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2010, 2019, 2020, 2021, 2022, 2023.
 # Rubens de Souza Matos Júnior <rubens.matos@gmail.com>, 2011.
@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-12-25 04:00-0300\n"
-"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
+"PO-Revision-Date: 2026-01-08 07:51-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -50,17 +50,14 @@ msgid "Applications to be excluded from session"
 msgstr "Aplicativos a serem excluídos da sessão"
 
 #: ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Failed to request restart to firmware setup: %1"
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Failed to request restart to firmware setup: %1"
 msgstr ""
 "Não foi possível solicitar o reinício para configuração do firmware: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the UEFI setup screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
@@ -69,10 +66,7 @@ msgstr ""
 "configuração do UEFI."
 
 #: ui/main.qml:32
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
@@ -81,8 +75,7 @@ msgstr ""
 "configuração do firmware."
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgctxt "@action:button"
 msgid "Restart Now"
 msgstr "Reiniciar agora"
@@ -116,8 +109,7 @@ msgid "Session Restore"
 msgstr "Restauração da sessão"
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid "On login, launch apps that were open:"
+#, kde-format
 msgctxt "@title:group prefix for radiobuttons"
 msgid "On login, launch apps that were open:"
 msgstr "Ao iniciar, abrir aplicativos que estavam abertos:"
@@ -158,19 +150,13 @@ msgid "Start with an empty session"
 msgstr "Iniciar com uma sessão vazia"
 
 #: ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Ignored applications:"
 msgstr "Aplicativos ignorados:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' desktop file identifier or, on X11, executable names here "
-#| "(separated by commas or colons, for example 'xterm:org.kde.konsole."
-#| "desktop' or 'xterm,org.kde.konsole.desktop') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "

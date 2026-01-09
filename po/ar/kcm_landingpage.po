@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-10-23 08:53+0400\n"
+"PO-Revision-Date: 2026-01-08 11:33+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -69,8 +69,7 @@ msgid "Global theme"
 msgstr "سمة عامة"
 
 #: ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Theme:"
+#, kde-format
 msgctxt "@title:group for light/dark quick switch"
 msgid "Theme:"
 msgstr "السمة:"
@@ -96,8 +95,7 @@ msgid "More appearance settings:"
 msgstr "المزيد من إعدادات المظهر:"
 
 #: ui/main.qml:183
-#, fuzzy, kde-format
-#| msgid "Animation speed:"
+#, kde-format
 msgctxt "@title:slider"
 msgid "Animation speed:"
 msgstr "سرعة التحريك:"
@@ -128,8 +126,7 @@ msgid "Selects them"
 msgstr "يحددها"
 
 #: ui/main.qml:226
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "فتح بواسطة النقر المزدوج  بدلا عن ذلك"
@@ -141,8 +138,7 @@ msgid "Opens them"
 msgstr "يفتحها"
 
 #: ui/main.qml:259
-#, fuzzy, kde-format
-#| msgid "Select by clicking on item's selection marker"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
 msgstr "تحديد بواسطة النقر على علامة التحديد في العنصر"
@@ -154,8 +150,7 @@ msgid "More behavior settings:"
 msgstr "المزيد من إعدادات السلوك:"
 
 #: ui/main.qml:299
-#, fuzzy, kde-format
-#| msgid "Most used pages:"
+#, kde-format
 msgctxt "@title:group for grid of buttons opening kcms"
 msgid "Most used pages:"
 msgstr "أكثر الصفحات استخدامًا:"

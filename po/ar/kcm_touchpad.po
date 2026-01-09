@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2021, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2015, 2015.
 # Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2024.
 #
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-12-06 16:47+0400\n"
+"PO-Revision-Date: 2026-01-08 11:29+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -106,36 +106,31 @@ msgid "Touchpad disconnected. No other touchpads found."
 msgstr "لوح اللمس غير متصل. لم يعثر على أجهزة لمس أخرى."
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgid "No touchpad found"
+#, kde-format
 msgctxt "@info:status placeholdermessage text"
 msgid "No touchpad found"
 msgstr "لم يُعثر على لوحة لمس"
 
 #: ui/main.qml:60
-#, fuzzy, kde-format
-#| msgid "Connect an external touchpad"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchpad"
 msgstr "صِل لوحة لمس خارجية"
 
 #: ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@label:listbox device selection"
 msgid "Device:"
 msgstr "الجهاز:"
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "عام:"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "Enable device"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable device"
 msgstr "مكّن الجهاز"
@@ -147,8 +142,7 @@ msgid "Disable while mouse is connected"
 msgstr "عطّل عند وصل الفأرة"
 
 #: ui/main.qml:137
-#, fuzzy, kde-format
-#| msgid "Disable while typing"
+#, kde-format
 msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "عطّل أثناء الكتابة"
@@ -166,8 +160,7 @@ msgid "Left and right buttons:"
 msgstr "لأزرار اليمنى واليسرى:"
 
 #: ui/main.qml:175
-#, fuzzy, kde-format
-#| msgid "Swap (left-handed mode)"
+#, kde-format
 msgctxt "@option:check"
 msgid "Swap (left-handed mode)"
 msgstr "تبديل (وضع الأعسر)"
@@ -190,15 +183,13 @@ msgstr ""
 "والأيمن."
 
 #: ui/main.qml:217
-#, fuzzy, kde-format
-#| msgid "Pointer speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "سرعة المؤشر:"
 
 #: ui/main.qml:297
-#, fuzzy, kde-format
-#| msgid "Enable pointer acceleration"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "مكّن تسارع المؤشر"
@@ -211,31 +202,25 @@ msgid ""
 msgstr "عند تمكين هذا الخيار، تزداد مسافة تحرك المؤشر مع زيادة سرعة الحركة."
 
 #: ui/main.qml:325
-#, fuzzy, kde-format
-#| msgid "Scrolling speed:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "سرعة التمرير:"
 
 #: ui/main.qml:376
-#, fuzzy, kde-format
-#| msgctxt "Slower Scroll"
-#| msgid "Slower"
+#, kde-format
 msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "أبطأ"
 
 #: ui/main.qml:383
-#, fuzzy, kde-format
-#| msgctxt "Faster Scroll Speed"
-#| msgid "Faster"
+#, kde-format
 msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "أسرع"
 
 #: ui/main.qml:390
-#, fuzzy, kde-format
-#| msgid "Scroll by:"
+#, kde-format
 msgctxt ""
 "@title group begins the sentence 'Scroll by moving two fingers anywhere/"
 "moving one finger on edge'"
@@ -243,41 +228,33 @@ msgid "Scroll by:"
 msgstr "التمرير بواسطة:"
 
 #: ui/main.qml:409
-#, fuzzy, kde-format
-#| msgid "Moving two fingers anywhere"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr "تحريك إصبعيين أي مكان"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Moving one finger on edge"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr "تحريك اصبع واحد على الحافة"
 
 #: ui/main.qml:424
-#, fuzzy, kde-format
-#| msgid "Invert scroll direction (Natural scrolling)"
+#, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "اعكس اتّجاه التّمرير (التمرير الطبيعي)"
 
 #: ui/main.qml:438
-#, fuzzy, kde-format
-#| msgid "Disable horizontal scrolling"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "عطّل التمرير الأفقي"
 
 #: ui/main.qml:460
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label for radiobutton group, begins the sentence 'right-click by "
-#| "pressing bottom-right corner/pressing with two fingers'"
-#| msgid "Right-click by:"
+#, kde-format
 msgctxt ""
 "@title:group for radiobutton group, begins the sentence 'right-click by "
 "pressing bottom-right corner/pressing with two fingers'"
@@ -293,17 +270,13 @@ msgid "Pressing bottom-right corner"
 msgstr "الضغط على الزاوية اليمنى الدنيا"
 
 #: ui/main.qml:496
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing both bottom corners."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "نقرة الفأرة الأوسط بالضغط على الزاويتين السفليتين."
 
 #: ui/main.qml:497
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing bottom center."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "نقرة الفأرة الأوسط بالضغط على أسفل الوسط."
@@ -367,8 +340,7 @@ msgid "Tap to click"
 msgstr "اطَرق لتنقر"
 
 #: ui/main.qml:597
-#, fuzzy, kde-format
-#| msgid "Allow dragging after tapping"
+#, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr "اسمح بالسحب بعد الطَرق"
@@ -384,43 +356,37 @@ msgstr ""
 "للإسقاط."
 
 #: ui/main.qml:616
-#, fuzzy, kde-format
-#| msgid "Allow briefly lifting finger during tap-and-drag"
+#, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr "اسمح برفع الإصبع لفترة وجيزة أثناء النقر والسحب"
 
 #: ui/main.qml:630
-#, fuzzy, kde-format
-#| msgid "Two-finger tap:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "طَرق أصبعين:"
 
 #: ui/main.qml:650
-#, fuzzy, kde-format
-#| msgid "Right-click (three-finger tap to middle-click)"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "النقر بزر الأيمن (الطَرق بثلاثة أصابع للنقر بزر الفأرة الأوسط)"
 
 #: ui/main.qml:651
-#, fuzzy, kde-format
-#| msgid "Right-click"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "النقر باليمين"
 
 #: ui/main.qml:659
-#, fuzzy, kde-format
-#| msgid "Middle-click (three-finger tap to right-click)"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "النقر الأوسط (الطَرْق بثلاثة أصابع للنقر الأيمن)"
 
 #: ui/main.qml:660
-#, fuzzy, kde-format
-#| msgid "Middle-click"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "النّقر بالوسط"

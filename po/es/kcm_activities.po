@@ -1,15 +1,15 @@
 # Spanish translations for kcm_activities.po package.
-# Copyright (C) 2016-2025 This file is copyright:
+# Copyright (C) 2016-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 # Automatically generated, 2016.
 #
-# SPDX-FileCopyrightText: 2016, 2019, 2020, 2021, 2023, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2016, 2019, 2020, 2021, 2023, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_activities\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-09-23 14:18+0100\n"
+"PO-Revision-Date: 2026-01-09 00:30+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: activityconfig.cpp:151
 #, kde-format
@@ -61,39 +61,31 @@ msgid "Description:"
 msgstr "Descripción:"
 
 #: ui/ActivityEditor.qml:84
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "While on this activity, allow:"
+#, kde-format
 msgctxt "@title:group for checkbox group"
 msgid "While on this activity, allow:"
 msgstr "Permitir en esta actividad:"
 
 #: ui/ActivityEditor.qml:85
-#, fuzzy, kde-format
-#| msgid "Tracking file and app use"
+#, kde-format
 msgctxt "@option:check While on activity, allow"
 msgid "Tracking file and app use"
 msgstr "Rastrear el uso de archivos y aplicaciones"
 
 #: ui/ActivityEditor.qml:91
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Automatically turning off the screen"
+#, kde-format
 msgctxt "@option:check While on activity, allow"
 msgid "Automatically turning off the screen"
 msgstr "Apagar la pantalla automáticamente"
 
 #: ui/ActivityEditor.qml:97
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Automatically shutting down or sleeping"
+#, kde-format
 msgctxt "@option:check While on activity, allow"
 msgid "Automatically shutting down or sleeping"
 msgstr "Apagar o entrar en reposo automáticamente"
 
 #: ui/ActivityEditor.qml:103
-#, fuzzy, kde-format
-#| msgid "Shortcut for switching:"
+#, kde-format
 msgctxt "@label prefix for keyboard shortcut input button"
 msgid "Shortcut for switching:"
 msgstr "Atajo de teclado para cambiar:"
@@ -105,8 +97,7 @@ msgid "Delete %1 activity"
 msgstr "Borrar la actividad %1"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Create New…"
+#, kde-format
 msgctxt "@action:button Create new Activity"
 msgid "Create New…"
 msgstr "Crear nueva…"
@@ -124,8 +115,7 @@ msgid "Do you want to delete activity '%1'?"
 msgstr "¿Desea borrar la actividad «%1»?"
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "Delete Activity"
+#, kde-format
 msgctxt "@action:button in dialog confirms deletion"
 msgid "Delete Activity"
 msgstr "Borrar actividad"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2026-01-03 02:52+0100\n"
+"PO-Revision-Date: 2026-01-08 05:31+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: app/emojier.cpp:43 app/emojier.cpp:45
 #, kde-format
 msgid "Emoji Selector"
-msgstr "Emoji -ების არჩევა"
+msgstr "ემოჯის ამრჩევი"
 
 #: app/emojier.cpp:47
 #, kde-format
@@ -43,14 +43,13 @@ msgstr "Temuri.doghonadze@gmail.com"
 #: app/emojier.cpp:58
 #, kde-format
 msgid "Replace an existing instance"
-msgstr "გაშვებული ასლის ჩანაცვლება"
+msgstr "არსებული ასლის ჩანაცვლება"
 
 #: app/ui/CategoryPage.qml:112
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:button clear emoji history"
 msgid "Clear History"
-msgstr "ისტორიის გაწმენდა"
+msgstr "ისტორიის გასუფთავება"
 
 #: app/ui/CategoryPage.qml:124
 #, kde-format
@@ -149,11 +148,10 @@ msgid "Copy Description"
 msgstr "აღწერის კოპირება"
 
 #: app/ui/CategoryPage.qml:368
-#, fuzzy, kde-format
-#| msgid "No recent Emojis"
+#, kde-format
 msgctxt "@label placeholder for empty recent emoji list"
 msgid "No recent Emojis"
-msgstr "ემოჯიების გარეშე"
+msgstr "უახლესი ემოჯიების გარეშე"
 
 #: app/ui/CategoryPage.qml:368
 #, kde-format
@@ -162,18 +160,16 @@ msgid "No matching emoji found"
 msgstr "შესაბამისი ემოჯი აღმოჩენილი არაა"
 
 #: app/ui/Emojier.qml:44
-#, fuzzy, kde-format
-#| msgid "%1 copied to the clipboard"
+#, kde-format
 msgctxt "@info:status passive notification as action feedback"
 msgid "%1 copied to the clipboard"
-msgstr "დაკოპირდა გაცვლის ბაფერში: %1"
+msgstr "%1 დაკოპირდა გაცვლის ბუფერში"
 
 #: app/ui/Emojier.qml:58
-#, fuzzy, kde-format
-#| msgid "Recent"
+#, kde-format
 msgctxt "@title page title for Recent Emoji view, and sidebar label for it"
 msgid "Recent"
-msgstr "Ბოლო"
+msgstr "უახლესი"
 
 #: emojicategory.cpp:14
 msgctxt "Emoji Category"
@@ -183,7 +179,7 @@ msgstr "ღიმილი და ემოციები"
 #: emojicategory.cpp:15
 msgctxt "Emoji Category"
 msgid "People and Body"
-msgstr "ადამიანის სხეულები"
+msgstr "ხალხი და სხეული"
 
 #: emojicategory.cpp:16
 msgctxt "Emoji Category"
@@ -223,7 +219,7 @@ msgstr "სიმბოლოები"
 #: emojicategory.cpp:23
 msgctxt "Emoji Category"
 msgid "Flags"
-msgstr "დროშები"
+msgstr "ალმები"
 
 #~ msgid "Categories"
 #~ msgstr "კატეგორიები"

@@ -139,29 +139,25 @@ msgid "Help"
 msgstr "Ajuda"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@title:group list section name"
 msgid "Applications"
 msgstr "Aplicacions"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "Commands"
+#, kde-format
 msgctxt "@title:group list section name"
 msgid "Commands"
 msgstr "Ordres"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "System Services"
+#, kde-format
 msgctxt "@title:group list section name"
 msgid "System Services"
 msgstr "Serveis del sistema"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "Common Actions"
+#, kde-format
 msgctxt "@title:group list section name"
 msgid "Common Actions"
 msgstr "Accions comunes"
@@ -227,16 +223,13 @@ msgid "Add new command or script"
 msgstr "Afegeix una ordre o script nou"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Cannot export scheme while there are unsaved changes"
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "No s'ha pogut exportar l'esquema mentre hi ha canvis sense desar"
 
 #: ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the components below that should be included in the exported scheme"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Select the components below that should be included in the exported scheme"
@@ -276,8 +269,7 @@ msgid "Undo deletion"
 msgstr "Desfés la supressió"
 
 #: ui/main.qml:341
-#, fuzzy, kde-format
-#| msgid "No items matched the search terms"
+#, kde-format
 msgctxt "@info:status placeholdermessage"
 msgid "No items matched the search terms"
 msgstr "No hi ha cap element que coincideixi amb els termes de la cerca"
@@ -301,23 +293,20 @@ msgid "Undo deleting shortcuts"
 msgstr "Desfà la supressió de dreceres"
 
 #: ui/main.qml:399
-#, fuzzy, kde-format
-#| msgid "Select an item from the list to view its shortcuts here"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
 msgstr ""
 "Seleccioneu un element de la llista per a veure aquí les seves dreceres"
 
 #: ui/main.qml:412
-#, fuzzy, kde-format
-#| msgid "Export Shortcut Scheme"
+#, kde-format
 msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr "Exporta un esquema de dreceres"
 
 #: ui/main.qml:412 ui/main.qml:553
-#, fuzzy, kde-format
-#| msgid "Import Shortcut Scheme"
+#, kde-format
 msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
 msgstr "Importa un esquema de dreceres"
@@ -329,29 +318,25 @@ msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Esquema de dreceres (*.kksrc)"
 
 #: ui/main.qml:441
-#, fuzzy, kde-format
-#| msgid "Edit Command"
+#, kde-format
 msgctxt "@title:window dialog"
 msgid "Edit Command"
 msgstr "Edita una ordre"
 
 #: ui/main.qml:441
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgctxt "@title:window dialog"
 msgid "Add Command"
 msgstr "Afegeix una ordre"
 
 #: ui/main.qml:463
-#, fuzzy, kde-format
-#| msgid "Save"
+#, kde-format
 msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
 msgstr "Desa"
 
 #: ui/main.qml:463
-#, fuzzy, kde-format
-#| msgid "Add"
+#, kde-format
 msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
 msgstr "Afegeix"
@@ -369,8 +354,7 @@ msgid "Add command"
 msgstr "Ordre d'afegir"
 
 #: ui/main.qml:492
-#, fuzzy, kde-format
-#| msgid "Enter a command or choose a script file:"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr "Introduïu una ordre o trieu un fitxer de script:"
@@ -427,29 +411,25 @@ msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "Fitxers de script (.sh, .bash, .zsh, etc.) (*.*sh)"
 
 #: ui/main.qml:561
-#, fuzzy, kde-format
-#| msgid "Select the scheme to import:"
+#, kde-format
 msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr "Seleccioneu l'esquema a importar:"
 
 #: ui/main.qml:580
-#, fuzzy, kde-format
-#| msgid "Custom Scheme"
+#, kde-format
 msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
 msgstr "Esquema personalitzat"
 
 #: ui/main.qml:588
-#, fuzzy, kde-format
-#| msgid "Select File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select File…"
 msgstr "Selecciona un fitxer…"
 
 #: ui/main.qml:588
-#, fuzzy, kde-format
-#| msgid "Import"
+#, kde-format
 msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "Importa"
@@ -479,8 +459,7 @@ msgid "Expand to configure shortcuts"
 msgstr "Expandeix per a configurar les dreceres"
 
 #: ui/ShortcutActionDelegate.qml:38
-#, fuzzy, kde-format
-#| msgid "Editing shortcut: %1"
+#, kde-format
 msgctxt "@info:whatsthis accessible name %1 is shortcut label (not sequence)"
 msgid "Editing shortcut: %1"
 msgstr "Drecera en edició: %1"
@@ -494,17 +473,13 @@ msgid "%1:"
 msgstr "%1:"
 
 #: ui/ShortcutActionDelegate.qml:88
-#, fuzzy, kde-format
-#| msgid "No active shortcuts"
+#, kde-format
 msgctxt "@info:status"
 msgid "No active shortcuts"
 msgstr "Cap drecera activa"
 
 #: ui/ShortcutActionDelegate.qml:134
-#, fuzzy, kde-format
-#| msgctxt "%1 decides if singular or plural will be used"
-#| msgid "Default shortcut"
-#| msgid_plural "Default shortcuts"
+#, kde-format
 msgctxt "@title:column %1 decides if singular or plural will be used"
 msgid "Default shortcut"
 msgid_plural "Default shortcuts"
@@ -512,29 +487,25 @@ msgstr[0] "Drecera predeterminada"
 msgstr[1] "Dreceres predeterminades"
 
 #: ui/ShortcutActionDelegate.qml:136
-#, fuzzy, kde-format
-#| msgid "No default shortcuts"
+#, kde-format
 msgctxt "@label for shortcut with no default bindings"
 msgid "No default shortcuts"
 msgstr "Sense dreceres predeterminades"
 
 #: ui/ShortcutActionDelegate.qml:145
-#, fuzzy, kde-format
-#| msgid "Default shortcut %1 is enabled."
+#, kde-format
 msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is enabled."
 msgstr "La drecera predeterminada %1 està activada."
 
 #: ui/ShortcutActionDelegate.qml:145
-#, fuzzy, kde-format
-#| msgid "Default shortcut %1 is disabled."
+#, kde-format
 msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is disabled."
 msgstr "La drecera predeterminada %1 està desactivada."
 
 #: ui/ShortcutActionDelegate.qml:168
-#, fuzzy, kde-format
-#| msgid "Custom shortcuts"
+#, kde-format
 msgctxt "@title:column"
 msgid "Custom shortcuts"
 msgstr "Dreceres personalitzades"

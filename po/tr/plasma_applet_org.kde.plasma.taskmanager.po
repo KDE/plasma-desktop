@@ -5,13 +5,13 @@
 #
 # Serdar Soytetir <tulliana@gmail.com>, 2008, 2009, 2010, 2011, 2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2017, 2021, 2022.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-12-18 15:26+0300\n"
+"PO-Revision-Date: 2026-01-08 17:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: backend.cpp:284
 #, kde-format
@@ -105,15 +105,13 @@ msgid "9,999+"
 msgstr "+9.999"
 
 #: qml/config.qml:13
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Appearance"
 msgstr "Görünüş"
 
 #: qml/config.qml:18
-#, fuzzy, kde-format
-#| msgid "Behavior"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Behavior"
 msgstr "Davranış"
@@ -600,22 +598,19 @@ msgid "On the top"
 msgstr "Üstte"
 
 #: qml/ContextMenu.qml:100
-#, fuzzy, kde-format
-#| msgid "Places"
+#, kde-format
 msgctxt "@title:group for section of menu items"
 msgid "Places"
 msgstr "Yerler"
 
 #: qml/ContextMenu.qml:106
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgctxt "@title:group for section of menu items"
 msgid "Recent Files"
 msgstr "Son Dosyalar"
 
 #: qml/ContextMenu.qml:116
-#, fuzzy, kde-format
-#| msgid "Actions"
+#, kde-format
 msgctxt "@title:group for section of menu items"
 msgid "Actions"
 msgstr "Eylemler"
@@ -663,162 +658,139 @@ msgid "Restore"
 msgstr "Geri Yükle"
 
 #: qml/ContextMenu.qml:266
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@option:check inmenu, no separate unmute action"
 msgid "Mute"
 msgstr "Sesi Kapat"
 
 #: qml/ContextMenu.qml:277
-#, fuzzy, kde-format
-#| msgid "Open New Window"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Open New Window"
 msgstr "Yeni Pencere Aç"
 
 #: qml/ContextMenu.qml:293
-#, fuzzy, kde-format
-#| msgid "Move to &Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move to &Desktop"
 msgstr "Masaüstüne &Taşı"
 
 #: qml/ContextMenu.qml:323
-#, fuzzy, kde-format
-#| msgid "Move &To Current Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move &To Current Desktop"
 msgstr "&Geçerli Masaüstüne Taşı"
 
 #: qml/ContextMenu.qml:332
-#, fuzzy, kde-format
-#| msgid "&All Desktops"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&All Desktops"
 msgstr "&Tüm Masaüstleri"
 
 #: qml/ContextMenu.qml:360
-#, fuzzy, kde-format
-#| msgid "&New Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&New Desktop"
 msgstr "&Yeni Masaüstü"
 
 #: qml/ContextMenu.qml:380
-#, fuzzy, kde-format
-#| msgid "Show in &Activities"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Show in &Activities"
 msgstr "&Etkinliklerde Göster"
 
 #: qml/ContextMenu.qml:404
-#, fuzzy, kde-format
-#| msgid "Add To Current Activity"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Add To Current Activity"
 msgstr "Geçerli Etkinliğe Ekle"
 
 #: qml/ContextMenu.qml:414
-#, fuzzy, kde-format
-#| msgid "All Activities"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "All Activities"
 msgstr "Tüm Etkinlikler"
 
 #: qml/ContextMenu.qml:470
-#, fuzzy, kde-format
-#| msgid "Move to %1"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move to %1"
-msgstr "Şuraya taşı: %1"
+msgstr "Şuraya Taşı: %1"
 
 #: qml/ContextMenu.qml:496 qml/ContextMenu.qml:512
-#, fuzzy, kde-format
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Pin to Task Manager"
 msgstr "&Görev Yöneticisine Sabitle"
 
 #: qml/ContextMenu.qml:564
-#, fuzzy, kde-format
-#| msgid "On All Activities"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "On All Activities"
 msgstr "Tüm Etkinliklerde"
 
 #: qml/ContextMenu.qml:570
-#, fuzzy, kde-format
-#| msgid "On The Current Activity"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "On The Current Activity"
 msgstr "Geçerli Etkinlikte"
 
 #: qml/ContextMenu.qml:594
-#, fuzzy, kde-format
-#| msgid "Unpin from Task Manager"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Unpin from Task Manager"
 msgstr "Görev Yöneticisinden Kaldır"
 
 #: qml/ContextMenu.qml:609
-#, fuzzy, kde-format
-#| msgid "More"
+#, kde-format
 msgctxt "item:inmenu opens submenu"
 msgid "More"
 msgstr "Daha Fazla"
 
 #: qml/ContextMenu.qml:618
-#, fuzzy, kde-format
-#| msgid "&Move"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Move"
 msgstr "&Taşı"
 
 #: qml/ContextMenu.qml:627
-#, fuzzy, kde-format
-#| msgid "Re&size"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Re&size"
 msgstr "&Yeniden Boyutlandır"
 
 #: qml/ContextMenu.qml:641
-#, fuzzy, kde-format
-#| msgid "Ma&ximize"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Ma&ximize"
 msgstr "Ekranı &Kapla"
 
 #: qml/ContextMenu.qml:655
-#, fuzzy, kde-format
-#| msgid "Mi&nimize"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Mi&nimize"
 msgstr "Simge &Durumuna Küçült"
 
 #: qml/ContextMenu.qml:665
-#, fuzzy, kde-format
-#| msgid "Keep &Above Others"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Keep &Above Others"
 msgstr "&Diğerlerinin Üzerinde Tut"
 
 #: qml/ContextMenu.qml:675
-#, fuzzy, kde-format
-#| msgid "Keep &Below Others"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Keep &Below Others"
 msgstr "Diğerlerinin &Altında Tut"
 
 #: qml/ContextMenu.qml:687
-#, fuzzy, kde-format
-#| msgid "&Fullscreen"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Fullscreen"
 msgstr "Tam &Ekran"
 
 #: qml/ContextMenu.qml:700
-#, fuzzy, kde-format
-#| msgid "&Shade"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Shade"
 msgstr "&Panjuru Kapat"
@@ -836,23 +808,19 @@ msgid "&Hide from Screencast"
 msgstr "Ekran Yayınından &Gizle"
 
 #: qml/ContextMenu.qml:741
-#, fuzzy, kde-format
-#| msgid "Allow this program to be grouped"
+#, kde-format
 msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr "Bu Programın Gruplandırılmasına İzin Ver"
 
 #: qml/ContextMenu.qml:787
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu"
-#| msgid "&Close All"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "Tümünü &Kapat"
 
 #: qml/ContextMenu.qml:787
-#, fuzzy, kde-format
-#| msgid "&Close"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close"
 msgstr "&Kapat"
@@ -890,8 +858,7 @@ msgid "Open textual list of windows for %1"
 msgstr "%1 için pencerelerin bir listesini aç"
 
 #: qml/Task.qml:179
-#, fuzzy, kde-format
-#| msgid "Activate %1"
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Activate %1"
 msgstr "Etkinleştir: %1"

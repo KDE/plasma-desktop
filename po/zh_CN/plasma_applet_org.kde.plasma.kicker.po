@@ -44,18 +44,16 @@ msgid "Show in Favorites"
 msgstr "显示到常用程序"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
-msgstr "常规"
+msgstr ""
 
 #: ConfigGeneral.qml:48
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
-msgstr "图标："
+msgstr ""
 
 #: ConfigGeneral.qml:133
 #, kde-format
@@ -70,109 +68,94 @@ msgid "Clear Icon"
 msgstr "清除图标"
 
 #: ConfigGeneral.qml:159
-#, fuzzy, kde-format
-#| msgid "Show applications as:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
-msgstr "应用程序显示方式："
+msgstr ""
 
 #: ConfigGeneral.qml:161
-#, fuzzy, kde-format
-#| msgid "Name only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
-msgstr "只显示名称"
+msgstr ""
 
 #: ConfigGeneral.qml:161
-#, fuzzy, kde-format
-#| msgid "Description only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
-msgstr "只显示描述"
+msgstr ""
 
 #: ConfigGeneral.qml:162
-#, fuzzy, kde-format
-#| msgid "Name (Description)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
-msgstr "名称 (描述)"
+msgstr ""
 
 #: ConfigGeneral.qml:162
-#, fuzzy, kde-format
-#| msgid "Description (Name)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
-msgstr "描述 (名称)"
+msgstr ""
 
 #: ConfigGeneral.qml:172
-#, fuzzy, kde-format
-#| msgid "Behavior:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
-msgstr "行为："
+msgstr ""
 
 #: ConfigGeneral.qml:174
-#, fuzzy, kde-format
-#| msgid "Sort applications alphabetically"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
-msgstr "按字母顺序排列应用程序"
+msgstr ""
 
 #: ConfigGeneral.qml:182
-#, fuzzy, kde-format
-#| msgid "Flatten sub-menus to a single level"
+#, kde-format
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
-msgstr "扁平化子菜单到一级"
+msgstr ""
 
 #: ConfigGeneral.qml:190
-#, fuzzy, kde-format
-#| msgid "Show icons on the root level of the menu"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
-msgstr "在顶级菜单显示图标"
+msgstr ""
 
 #: ConfigGeneral.qml:200
-#, fuzzy, kde-format
-#| msgid "Show categories:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
-msgstr "显示分类："
+msgstr ""
 
 #: ConfigGeneral.qml:203
-#, fuzzy, kde-format
-#| msgid "Recent applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent applications"
-msgstr "最近使用的应用程序"
+msgstr ""
 
 #: ConfigGeneral.qml:204
-#, fuzzy, kde-format
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used applications"
-msgstr "经常使用的应用程序"
+msgstr ""
 
 #: ConfigGeneral.qml:211
-#, fuzzy, kde-format
-#| msgid "Recent files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent files"
-msgstr "最近文件"
+msgstr ""
 
 #: ConfigGeneral.qml:212
-#, fuzzy, kde-format
-#| msgid "Often used files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used files"
-msgstr "经常使用的文件"
+msgstr ""
 
 #: ConfigGeneral.qml:218
-#, fuzzy, kde-format
-#| msgid "Sort items in categories by:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
-msgstr "分类内部排序方式："
+msgstr ""
 
 #: ConfigGeneral.qml:219
 #, kde-format
@@ -182,50 +165,41 @@ msgid "Recently used"
 msgstr "最近使用"
 
 #: ConfigGeneral.qml:219
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
-#| msgid "Often used"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Often used"
-msgstr "经常使用"
+msgstr ""
 
 #: ConfigGeneral.qml:229
-#, fuzzy, kde-format
-#| msgid "Search:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
-msgstr "查找："
+msgstr ""
 
 #: ConfigGeneral.qml:231
-#, fuzzy, kde-format
-#| msgid "Expand search to bookmarks, files and emails"
+#, kde-format
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
-msgstr "扩展查找范围至书签、文件和电子邮件"
+msgstr ""
 
 #: ConfigGeneral.qml:239
-#, fuzzy, kde-format
-#| msgid "Align search results to bottom"
+#, kde-format
 msgctxt "@option:check"
 msgid "Align search results to bottom"
-msgstr "查找结果在底部对齐"
+msgstr ""
 
 #: ConfigGeneral.qml:244
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox for a checkbox toggling Dark Mode"
-#| msgid "Appearance:"
+#, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
-msgstr "外观："
+msgstr ""
 
 #: ConfigGeneral.qml:249
-#, fuzzy, kde-format
-#| msgid "Prefer Dark Mode when available"
+#, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
-msgstr "当可用时，优先选择深色模式"
+msgstr ""
 
 #: ConfigGeneral.qml:253
 #, kde-kuit-format
@@ -236,11 +210,10 @@ msgid ""
 msgstr "此功能使用您配色方案中的互补色，通常具有深色背景。"
 
 #: DashboardRepresentation.qml:309
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
-msgstr "常用程序"
+msgstr ""
 
 #: ItemListDelegate.qml:31
 #, kde-format
@@ -255,11 +228,10 @@ msgid "Launch"
 msgstr "启动"
 
 #: main.qml:211
-#, fuzzy, kde-format
-#| msgid "Edit Applications…"
+#, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
-msgstr "编辑应用程序…"
+msgstr ""
 
 #: MenuRepresentation.qml:171
 #, kde-format

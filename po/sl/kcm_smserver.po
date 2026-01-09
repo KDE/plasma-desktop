@@ -1,7 +1,7 @@
 # translation of kcmsmserver.po to Slovenian
 # Translation of kcmsmserver.po to Slovenian
 # KDEBASE translation to Slovenian language.
-# $Id: kcm_smserver.po 1726870 2026-01-08 01:26:23Z scripty $
+# $Id: kcm_smserver.po 1726930 2026-01-09 01:26:02Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2004, 2005 Free Software Foundation, Inc.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-01-09 07:28+0100\n"
+"PO-Revision-Date: 2026-01-08 10:57+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.8\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -52,43 +52,35 @@ msgid "Applications to be excluded from session"
 msgstr "Aplikacije, ki naj bi bile izključene iz seje"
 
 #: ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Failed to request restart to firmware setup: %1"
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Failed to request restart to firmware setup: %1"
 msgstr ""
-"Ni bilo mogoče zahtevati ponovnega zagona za namestitev strojne programske "
-"opreme: %1"
+"Neuspela zahteva za ponovni zagon nastavitve vdelane programske opreme: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the UEFI setup screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr ""
-"Ko se računalnik ponovno zažene, se bo aktivirala kontrolna plošča za "
+"Ko se računalnik naslednjič znova zažene, se bo prikazal zaslon za "
 "nastavitev UEFI."
 
 #: ui/main.qml:32
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
-"Ko se računalnik ponovno zažene, se bo aktivirala kontrolna plošča za "
-"nastavitev strojne programske opreme."
+"Ko se računalnik naslednjič znova zažene, se bo odprl zaslon za nastavitev "
+"vdelane programske opreme."
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgctxt "@action:button"
 msgid "Restart Now"
-msgstr "Ponovno zaženi računalnik"
+msgstr "Ponovno zaženi zdaj"
 
 #: ui/main.qml:46
 #, kde-format
@@ -119,11 +111,10 @@ msgid "Session Restore"
 msgstr "Obnovi sejo"
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid "On login, launch apps that were open:"
+#, kde-format
 msgctxt "@title:group prefix for radiobuttons"
 msgid "On login, launch apps that were open:"
-msgstr "Ob prijavi zaženi aplikacije, ki so bile odprte:"
+msgstr "Ob prijavi zaženite aplikacije, ki so bile odprte:"
 
 #: ui/main.qml:72
 #, kde-format
@@ -161,19 +152,13 @@ msgid "Start with an empty session"
 msgstr "Začni s prazno sejo"
 
 #: ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Ignored applications:"
 msgstr "Prezrte aplikacije:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' desktop file identifier or, on X11, executable names here "
-#| "(separated by commas or colons, for example 'xterm:org.kde.konsole."
-#| "desktop' or 'xterm,org.kde.konsole.desktop') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
@@ -181,10 +166,10 @@ msgid ""
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"Sem zapišite identifikator namiznih datotek aplikacij ali, na X11 imena "
-"izvedljivih datotek (ločena z vejicami ali dvopičji, na primer 'xterm:org."
-"kde.konsole.desktop' ali 'xterm,org.kde.konsole.desktop'), da jim preprečite "
-"samodejni zagon skupaj z drugimi aplikacijami obnovljenimi po seji."
+"Sem zapišite identifikator namiznih datotek aplikacij ali, v X11, imena "
+"izvedljivih datotek (ločenih z vejicami ali dvopičji, na primer 'xterm:org."
+"kde.konsole.desktop' ali 'xterm,org.kde.konsole.desktop'), da preprečite "
+"njihov samodejni zagon skupaj z drugimi aplikacijami, obnovljenimi med sejo."
 
 #: ui/main.qml:138
 #, kde-format

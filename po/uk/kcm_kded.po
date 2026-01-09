@@ -6,15 +6,15 @@
 # Eugene Onischenko <oneugene@ukr.net>, 2002, 2003.
 # Andriy Rysin <arysin@bcsii.com>, 2002, 2003, 2004, 2006, 2007.
 # Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>, 2005, 2007, 2008.
-# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2015, 2017, 2020, 2023, 2024.
+# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2015, 2017, 2020, 2023, 2024, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_kded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2024-06-29 08:32+0300\n"
+"PO-Revision-Date: 2026-01-08 08:41+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
-"Language-Team: Ukrainian\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,10 +60,7 @@ msgstr ""
 "url='%1'>подайте також звіт щодо цієї вади.</link>"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded6) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
@@ -73,10 +70,7 @@ msgstr ""
 "засоби керування встановлено належним чином."
 
 #: ui/main.qml:65
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services disable themselves again when manually started if they are "
-#| "not useful in the current environment."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -86,10 +80,7 @@ msgstr ""
 "незастосовними до поточного середовища."
 
 #: ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services were automatically started/stopped when the background "
-#| "services manager (kded6) was restarted to apply your changes."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -99,37 +90,31 @@ msgstr ""
 "засіб керування службами (kded6) для застосування внесених вами змін."
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "All Services"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "All Services"
 msgstr "Усі служби"
 
 #: ui/main.qml:124
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "@item:inlistbox List running services"
 msgid "Running"
 msgstr "Запущено"
 
 #: ui/main.qml:125
-#, fuzzy, kde-format
-#| msgctxt "List not running services"
-#| msgid "Not Running"
+#, kde-format
 msgctxt "@item:inlistbox List not running services"
 msgid "Not Running"
 msgstr "Не запущено"
 
 #: ui/main.qml:162
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgctxt "@title:group list section"
 msgid "Startup Services"
 msgstr "Служби, які завантажуються при запуску"
 
 #: ui/main.qml:163
-#, fuzzy, kde-format
-#| msgid "Load-on-Demand Services"
+#, kde-format
 msgctxt "@title:group list section"
 msgid "Load-on-Demand Services"
 msgstr "Служби, які завантажуються за запитом"
@@ -147,23 +132,20 @@ msgid "Enable automatically loading %1 on startup"
 msgstr "Увімкнути автоматичне завантаження %1 під час запуску"
 
 #: ui/main.qml:183
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Toggle automatically loading this service on startup"
 msgstr ""
 "Увімкнути або вимкнути автоматичне завантаження цієї служби під час запуску"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid "Not running"
+#, kde-format
 msgctxt "@info:status"
 msgid "Not running"
-msgstr "Зупинено"
+msgstr "Не запущено"
 
 #: ui/main.qml:228
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "@info:status"
 msgid "Running"
 msgstr "Запущено"
@@ -181,15 +163,13 @@ msgid "Start %1"
 msgstr "Запустити %1"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Stop Service"
+#, kde-format
 msgctxt "@action:button"
 msgid "Stop Service"
 msgstr "Зупинити службу"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Start Service"
+#, kde-format
 msgctxt "@action:button"
 msgid "Start Service"
 msgstr "Запустити службу"

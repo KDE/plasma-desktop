@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-12-02 05:03+0100\n"
+"PO-Revision-Date: 2026-01-08 05:45+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -102,15 +102,13 @@ msgid "9,999+"
 msgstr "9,999+"
 
 #: qml/config.qml:13
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Appearance"
-msgstr "გარემოს იერსახე"
+msgstr "გარეგნობა"
 
 #: qml/config.qml:18
-#, fuzzy, kde-format
-#| msgid "Behavior"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Behavior"
 msgstr "ქცევა"
@@ -597,22 +595,19 @@ msgid "On the top"
 msgstr "სულ ზემოთ"
 
 #: qml/ContextMenu.qml:100
-#, fuzzy, kde-format
-#| msgid "Places"
+#, kde-format
 msgctxt "@title:group for section of menu items"
 msgid "Places"
 msgstr "ადგილები"
 
 #: qml/ContextMenu.qml:106
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgctxt "@title:group for section of menu items"
 msgid "Recent Files"
-msgstr "ბოლო ფაილები"
+msgstr "უახლესი ფაილები"
 
 #: qml/ContextMenu.qml:116
-#, fuzzy, kde-format
-#| msgid "Actions"
+#, kde-format
 msgctxt "@title:group for section of menu items"
 msgid "Actions"
 msgstr "ქმედებები"
@@ -660,162 +655,139 @@ msgid "Restore"
 msgstr "აღდგენა"
 
 #: qml/ContextMenu.qml:266
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@option:check inmenu, no separate unmute action"
 msgid "Mute"
 msgstr "დადუმება"
 
 #: qml/ContextMenu.qml:277
-#, fuzzy, kde-format
-#| msgid "Open New Window"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Open New Window"
-msgstr "ახალ ფანჯრის გახსნა"
+msgstr "ახალo ფანჯრის გახსნა"
 
 #: qml/ContextMenu.qml:293
-#, fuzzy, kde-format
-#| msgid "Move to &Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move to &Desktop"
-msgstr "სამუშაო მაგიდაზე გადატანა"
+msgstr "გადატანა სამუშაო მაგი&დაზე"
 
 #: qml/ContextMenu.qml:323
-#, fuzzy, kde-format
-#| msgid "Move &To Current Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move &To Current Desktop"
-msgstr "მიმდინარე სამუშაო მაგიდაზე გადატანა"
+msgstr "მიმდინარე სამუშაო მაგიდაზე გადა&ტანა"
 
 #: qml/ContextMenu.qml:332
-#, fuzzy, kde-format
-#| msgid "&All Desktops"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&All Desktops"
 msgstr "&ყველა სამუშაო მაგიდა"
 
 #: qml/ContextMenu.qml:360
-#, fuzzy, kde-format
-#| msgid "&New Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&New Desktop"
 msgstr "&ახალი სამუშაო მაგიდა"
 
 #: qml/ContextMenu.qml:380
-#, fuzzy, kde-format
-#| msgid "Show in &Activities"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Show in &Activities"
 msgstr "აქტივობებში &ჩვენება"
 
 #: qml/ContextMenu.qml:404
-#, fuzzy, kde-format
-#| msgid "Add To Current Activity"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Add To Current Activity"
 msgstr "მიმდინარე აქტივობაზე დამატება"
 
 #: qml/ContextMenu.qml:414
-#, fuzzy, kde-format
-#| msgid "All Activities"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "All Activities"
 msgstr "ყველა აქტივობა"
 
 #: qml/ContextMenu.qml:470
-#, fuzzy, kde-format
-#| msgid "Move to %1"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move to %1"
-msgstr "%1-ზე გადატანა"
+msgstr "გადატანა %1-ზე"
 
 #: qml/ContextMenu.qml:496 qml/ContextMenu.qml:512
-#, fuzzy, kde-format
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Pin to Task Manager"
 msgstr "ამოცანების მმართველზე &მიმაგრება"
 
 #: qml/ContextMenu.qml:564
-#, fuzzy, kde-format
-#| msgid "On All Activities"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "On All Activities"
 msgstr "ყველა აქტივობაზე"
 
 #: qml/ContextMenu.qml:570
-#, fuzzy, kde-format
-#| msgid "On The Current Activity"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "On The Current Activity"
 msgstr "მიმდინარე აქტივობაზე"
 
 #: qml/ContextMenu.qml:594
-#, fuzzy, kde-format
-#| msgid "Unpin from Task Manager"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Unpin from Task Manager"
 msgstr "ამოცანების მმართველზე მიმაგრების მოხსნა"
 
 #: qml/ContextMenu.qml:609
-#, fuzzy, kde-format
-#| msgid "More"
+#, kde-format
 msgctxt "item:inmenu opens submenu"
 msgid "More"
 msgstr "მეტი"
 
 #: qml/ContextMenu.qml:618
-#, fuzzy, kde-format
-#| msgid "&Move"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Move"
 msgstr "&გადატანა"
 
 #: qml/ContextMenu.qml:627
-#, fuzzy, kde-format
-#| msgid "Re&size"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Re&size"
 msgstr "&ზომის შეცვლა"
 
 #: qml/ContextMenu.qml:641
-#, fuzzy, kde-format
-#| msgid "Ma&ximize"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Ma&ximize"
 msgstr "&აკეცვა"
 
 #: qml/ContextMenu.qml:655
-#, fuzzy, kde-format
-#| msgid "Mi&nimize"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Mi&nimize"
 msgstr "&ჩაკეცვა"
 
 #: qml/ContextMenu.qml:665
-#, fuzzy, kde-format
-#| msgid "Keep &Above Others"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Keep &Above Others"
 msgstr "დანარჩენი ფანჯრების ზემოთ &ქონა"
 
 #: qml/ContextMenu.qml:675
-#, fuzzy, kde-format
-#| msgid "Keep &Below Others"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Keep &Below Others"
 msgstr "სხვა ფანჯრების &ქვემოთ ქონა"
 
 #: qml/ContextMenu.qml:687
-#, fuzzy, kde-format
-#| msgid "&Fullscreen"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Fullscreen"
-msgstr "&მთელ ეკრანზე"
+msgstr "სრულ ეკრან&ზე"
 
 #: qml/ContextMenu.qml:700
-#, fuzzy, kde-format
-#| msgid "&Shade"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Shade"
 msgstr "&დაჩრდილვა"
@@ -833,23 +805,19 @@ msgid "&Hide from Screencast"
 msgstr "დამალვა ე&კრანის ვიდეოჩანაწერიდან"
 
 #: qml/ContextMenu.qml:741
-#, fuzzy, kde-format
-#| msgid "Allow this program to be grouped"
+#, kde-format
 msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
-msgstr "პროგრამების დაჯგუფების ჩართვა"
+msgstr "პროგრამების დაჯგუფების დაშვება"
 
 #: qml/ContextMenu.qml:787
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu"
-#| msgid "&Close All"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "ყველას &დახურვა"
 
 #: qml/ContextMenu.qml:787
-#, fuzzy, kde-format
-#| msgid "&Close"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close"
 msgstr "&დახურვა"
@@ -887,8 +855,7 @@ msgid "Open textual list of windows for %1"
 msgstr "%1-სთვის ტექსტუალური სის გახსნა"
 
 #: qml/Task.qml:179
-#, fuzzy, kde-format
-#| msgid "Activate %1"
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Activate %1"
 msgstr "%1-ის აქტივაცია"

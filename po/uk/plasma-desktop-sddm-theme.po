@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2024, 2025.
+# Yuri Chornoivan <yurchor@ukr.net>, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-07-29 09:52+0300\n"
+"PO-Revision-Date: 2026-01-08 08:47+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -19,43 +19,31 @@ msgstr ""
 "X-Generator: Lokalize 23.04.3\n"
 
 #: KeyboardButton.qml:19
-#, fuzzy
-#| msgid "Keyboard Layout: %1"
 msgctxt "@action:button opens layout chooser %1 is current"
 msgid "Keyboard Layout: %1"
 msgstr "Розкладка клавіатури: %1"
 
 #: Login.qml:86
-#, fuzzy
-#| msgid "Username"
 msgctxt "@info:placeholder in textfield"
 msgid "Username"
 msgstr "Користувач"
 
 #: Login.qml:103
-#, fuzzy
-#| msgid "Password"
 msgctxt "@info:placeholder in textfield"
 msgid "Password"
 msgstr "Пароль"
 
 #: Login.qml:145
-#, fuzzy
-#| msgid "Log In"
 msgctxt "@action:button Accessible name"
 msgid "Log in"
 msgstr "Увійти"
 
 #: Login.qml:151
-#, fuzzy
-#| msgid "Log In"
 msgctxt "@action:button"
 msgid "Log In"
 msgstr "Увійти"
 
 #: Main.qml:200
-#, fuzzy
-#| msgid "Caps Lock is on"
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "Caps Lock увімкнено"
@@ -66,45 +54,31 @@ msgid "Hibernate"
 msgstr "Приспати"
 
 #: Main.qml:218 Main.qml:357
-#, fuzzy
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
 msgctxt "@action:button Suspend to RAM"
 msgid "Sleep"
 msgstr "Призупинити"
 
 #: Main.qml:224 Main.qml:363
-#, fuzzy
-#| msgid "Restart"
 msgctxt "@action:button"
 msgid "Restart"
 msgstr "Перезапустити"
 
 #: Main.qml:230 Main.qml:369
-#, fuzzy
-#| msgid "Shut Down"
 msgctxt "@action:button"
 msgid "Shut Down"
 msgstr "Вимкнути"
 
 #: Main.qml:236
-#, fuzzy
-#| msgctxt "For switching to a username and password prompt"
-#| msgid "Other…"
 msgctxt "@action:button For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Інше…"
 
 #: Main.qml:343
-#, fuzzy
-#| msgid "Type in Username and Password"
 msgctxt "@info:usagetip"
 msgid "Type in Username and Password"
 msgstr "Введіть ім'я користувача і пароль"
 
 #: Main.qml:375
-#, fuzzy
-#| msgid "List Users"
 msgctxt "@action:button"
 msgid "List Users"
 msgstr "Список користувачів"
@@ -115,15 +89,11 @@ msgid "Virtual Keyboard"
 msgstr "Віртуальна клавіатура"
 
 #: Main.qml:516
-#, fuzzy
-#| msgid "Login Failed"
 msgctxt "@info:status"
 msgid "Login Failed"
 msgstr "Невдала спроба увійти"
 
 #: SessionButton.qml:18
-#, fuzzy
-#| msgid "Desktop Session: %1"
 msgctxt "@action:button opens sessions menu %1 is current"
 msgid "Desktop Session: %1"
 msgstr "Сеанс стільниці: %1"

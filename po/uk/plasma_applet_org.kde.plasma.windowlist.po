@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2016, 2022, 2025.
+# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2016, 2022, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-12-09 09:40+0200\n"
+"PO-Revision-Date: 2026-01-08 08:50+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -54,15 +54,13 @@ msgid "Name"
 msgstr "Назву"
 
 #: ConfigGeneral.qml:89
-#, fuzzy, kde-format
-#| msgid "Only icons can be shown when the Panel is vertical."
+#, kde-format
 msgctxt "@info:usagetip display mode for active application"
 msgid "Only icons can be shown when the Panel is vertical."
 msgstr "Якщо панель є вертикальною, може бути показано лише піктограми"
 
 #: ConfigGeneral.qml:91
-#, fuzzy, kde-format
-#| msgid "Not applicable when the widget is on the Desktop."
+#, kde-format
 msgctxt "@info:usagetip display mode for active application"
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "Не може бути застосовано, якщо віджет перебуває на стільниці."
@@ -80,9 +78,7 @@ msgid "Enabled, with delay:"
 msgstr "Увімкнено, з затримкою:"
 
 #: ConfigGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@item:valuesuffix, %1 is hover activation delay in ms"
 msgid "%1 ms"
 msgid_plural "%1 ms"

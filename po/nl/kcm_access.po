@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2026-01-04 14:23+0100\n"
+"PO-Revision-Date: 2026-01-08 17:43+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -355,9 +355,7 @@ msgid "Disable sticky and slow keys after:"
 msgstr "Plakkende en langzame toetsen uitschakelen na:"
 
 #: ui/ActivationShortcuts.qml:71
-#, fuzzy, kde-format
-#| msgid "%1 min"
-#| msgid_plural "%1 min"
+#, kde-format
 msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
 msgid "%1 min"
 msgid_plural "%1 min"
@@ -373,43 +371,37 @@ msgstr[0] "min"
 msgstr[1] "min"
 
 #: ui/ActivationShortcuts.qml:89
-#, fuzzy, kde-format
-#| msgid "When a shortcut is used:"
+#, kde-format
 msgctxt "@title:group for checkbox group"
 msgid "When a shortcut is used:"
 msgstr "Wanneer een sneltoets wordt gebruikt:"
 
 #: ui/ActivationShortcuts.qml:90
-#, fuzzy, kde-format
-#| msgid "Display a confirmation dialog"
+#, kde-format
 msgctxt "@option:check when shortcut used"
 msgid "Display a confirmation dialog"
 msgstr "Een bevestigingsdialoog tonen"
 
 #: ui/ActivationShortcuts.qml:101
-#, fuzzy, kde-format
-#| msgid "Ring the system bell"
+#, kde-format
 msgctxt "@option:check when shortcut used"
 msgid "Ring the system bell"
 msgstr "De systeembel gebruiken"
 
 #: ui/ActivationShortcuts.qml:112
-#, fuzzy, kde-format
-#| msgid "Show a notification"
+#, kde-format
 msgctxt "@option:check when shortcut used"
 msgid "Show a notification"
 msgstr "Een melding tonen"
 
 #: ui/ActivationShortcuts.qml:123
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button opens Notifications kcm"
 msgid "Configure Notifications…"
 msgstr "Meldingen configureren…"
 
 #: ui/Bell.qml:19
-#, fuzzy, kde-format
-#| msgid "Please choose an audio file"
+#, kde-format
 msgctxt "@title:window dialog"
 msgid "Please choose an audio file"
 msgstr "Kies een audiobestand"
@@ -421,8 +413,7 @@ msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
 msgstr "ogg-, oga- en wav-audiobestanden (*.ogg *.oga *.wav)"
 
 #: ui/Bell.qml:30
-#, fuzzy, kde-format
-#| msgid "Audible bell:"
+#, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Audible bell:"
 msgstr "Hoorbare bel:"
@@ -440,36 +431,31 @@ msgid "Custom sound:"
 msgstr "Eigen geluid:"
 
 #: ui/Bell.qml:75
-#, fuzzy, kde-format
-#| msgid "Search audio file for the system bell"
+#, kde-format
 msgctxt "@action:button icononly tooltip"
 msgid "Choose audio file for the system bell"
-msgstr "Audiobestand voor de systeembel zoeken"
+msgstr "Audiobestand voor de systeembel kiezen"
 
 #: ui/Bell.qml:76
-#, fuzzy, kde-format
-#| msgid "Please choose an audio file"
+#, kde-format
 msgctxt "@action button accessible only"
 msgid "Choose audio file"
-msgstr "Kies een audiobestand"
+msgstr "Kies audiobestand"
 
 #: ui/Bell.qml:77
 #, kde-format
 msgctxt "@info:usagetip accessible description for button"
 msgid "Opens dialog"
-msgstr ""
+msgstr "Opent dialoog"
 
 #: ui/Bell.qml:93
-#, fuzzy, kde-format
-#| msgid "Visual bell:"
+#, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Visual bell:"
 msgstr "Zichtbare bel:"
 
 #: ui/Bell.qml:94
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable visual bell"
 msgid "Enable"
 msgstr "Inschakelen"
@@ -499,20 +485,15 @@ msgid "Duration:"
 msgstr "Tijdsduur:"
 
 #: ui/Bell.qml:166
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is visible bell duration"
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
-msgstr[1] "%1 min"
+msgstr[1] "%1 ms"
 
 #: ui/Bell.qml:170 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
-#, fuzzy, kde-format
-#| msgctxt "short for millisecond(s)"
-#| msgid "ms"
-#| msgid_plural "ms"
+#, kde-format
 msgctxt "@label:valuesuffix short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
@@ -591,29 +572,25 @@ msgid "Adjusted colors:"
 msgstr "Aangepaste kleuren:"
 
 #: ui/ColorblindnessCorrection.qml:132
-#, fuzzy, kde-format
-#| msgid "Reds:"
+#, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Reds:"
 msgstr "Roden:"
 
 #: ui/ColorblindnessCorrection.qml:133
-#, fuzzy, kde-format
-#| msgid "Greens:"
+#, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Greens:"
 msgstr "Groenen:"
 
 #: ui/ColorblindnessCorrection.qml:134
-#, fuzzy, kde-format
-#| msgid "Blues:"
+#, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Blues:"
 msgstr "Blauwen:"
 
 #: ui/ColorblindnessCorrection.qml:135
-#, fuzzy, kde-format
-#| msgid "Purples:"
+#, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Purples:"
 msgstr "Paarsen:"
@@ -644,16 +621,13 @@ msgid "Configure Shortcuts…"
 msgstr "Sneltoetsen configureren…"
 
 #: ui/KeyboardFilters.qml:18
-#, fuzzy, kde-format
-#| msgid "Slow keys:"
+#, kde-format
 msgctxt "@title:group prefix"
 msgid "Slow keys:"
 msgstr "Langzame toetsen:"
 
 #: ui/KeyboardFilters.qml:23
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable slow keys"
 msgid "Enable"
 msgstr "Inschakelen"
@@ -672,65 +646,51 @@ msgstr ""
 "drukken."
 
 #: ui/KeyboardFilters.qml:41
-#, fuzzy, kde-format
-#| msgctxt "Slow keys Delay"
-#| msgid "Delay:"
+#, kde-format
 msgctxt "@label:spinbox Slow keys Delay"
 msgid "Delay:"
 msgstr "Vertraging:"
 
 #: ui/KeyboardFilters.qml:56
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is slow keys delay"
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
-msgstr[1] "%1 min"
+msgstr[1] "%1 ms"
 
 #: ui/KeyboardFilters.qml:74
-#, fuzzy, kde-format
-#| msgid "Ring system bell:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Ring system bell:"
 msgstr "Systeembel bellen:"
 
 #: ui/KeyboardFilters.qml:75
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is pressed"
-#| msgid "when any key is &pressed"
+#, kde-format
 msgctxt "@option:check Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "wanneer een toets wordt inge&drukt"
 
 #: ui/KeyboardFilters.qml:89
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is accepted"
-#| msgid "when any key is &accepted"
+#, kde-format
 msgctxt "@option:check Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "wanneer een toets wordt ge&accepteerd"
 
 #: ui/KeyboardFilters.qml:103
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is rejected"
-#| msgid "when any key is &rejected"
+#, kde-format
 msgctxt "@option:check Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "wanneer een toets wordt ge&weigerd"
 
 #: ui/KeyboardFilters.qml:119
-#, fuzzy, kde-format
-#| msgid "Bounce keys:"
+#, kde-format
 msgctxt "@title:group prefix"
 msgid "Bounce keys:"
 msgstr "Stuiterende toetsen:"
 
 #: ui/KeyboardFilters.qml:124
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Bounce keys enable"
 msgid "Enable"
 msgstr "Inschakelen"
@@ -748,26 +708,21 @@ msgstr ""
 "indrukt wanneer u slechts bedoeld het een keer te doen."
 
 #: ui/KeyboardFilters.qml:142
-#, fuzzy, kde-format
-#| msgctxt "Slow keys Delay"
-#| msgid "Delay:"
+#, kde-format
 msgctxt "@label:spinbox Bounce keys delay"
 msgid "Delay:"
 msgstr "Vertraging:"
 
 #: ui/KeyboardFilters.qml:157
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is bounce keys delay"
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
-msgstr[1] "%1 min"
+msgstr[1] "%1 ms"
 
 #: ui/KeyboardFilters.qml:171
-#, fuzzy, kde-format
-#| msgid "Ring system bell when rejected"
+#, kde-format
 msgctxt "@option:check for bounce keys"
 msgid "Ring system bell when rejected"
 msgstr "Systeembel gebruiken bij afwijzen"
@@ -785,48 +740,37 @@ msgid "System Bell"
 msgstr "Systeembel"
 
 #: ui/main.qml:38
-#, fuzzy, kde-format
-#| msgctxt "System Modifier Keys"
-#| msgid "Modifier Keys"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Modifier Keys"
 msgstr "Samensteltoetsen"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgctxt "System keyboard filters"
-#| msgid "Keyboard Filters"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Keyboard Filters"
 msgstr "Toetsenbordfilters"
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgctxt "System mouse navigation"
-#| msgid "Mouse Navigation"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Mouse Navigation"
 msgstr "Muisnavigatie"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Activation Shortcuts"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Activation Shortcuts"
 msgstr "Sneltoetsen voor activeren"
 
 #: ui/main.qml:58
-#, fuzzy, kde-format
-#| msgctxt "System mouse navigation"
-#| msgid "Screen Reader"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "Schermlezer"
 
 #: ui/main.qml:63
-#, fuzzy, kde-format
-#| msgctxt "Correction for color blindness"
-#| msgid "Color Blindness Correction"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr "Correctie voor kleurenblindheid"
@@ -838,9 +782,7 @@ msgid "Invert"
 msgstr "Inverteren"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "Shake pointer to find it"
-#| msgid "Shake Pointer"
+#, kde-format
 msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
 msgstr "Schuddende aanwijzer"
@@ -886,15 +828,13 @@ msgstr ""
 "tot opnieuw indrukken."
 
 #: ui/ModifierKeys.qml:57
-#, fuzzy, kde-format
-#| msgid "Disable when two keys are held down"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable when two keys are held down"
 msgstr "Uitschakelen wanneer twee toetsen omlaag gedrukt blijven"
 
 #: ui/ModifierKeys.qml:70
-#, fuzzy, kde-format
-#| msgid "Ring system bell when modifier keys are used"
+#, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when modifier keys are used"
 msgstr "Systeembel gebruiken als samensteltoetsen worden gebruikt"
@@ -965,14 +905,12 @@ msgid "Acceleration delay:"
 msgstr "Versnellingsvertraging:"
 
 #: ui/MouseNavigation.qml:53
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix acceleration delay spinbox %1 is value"
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
-msgstr[1] "%1 min"
+msgstr[1] "%1 ms"
 
 #: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
 #: ui/MouseNavigation.qml:114
@@ -990,14 +928,12 @@ msgid "Repeat interval:"
 msgstr "Herhaalinterval:"
 
 #: ui/MouseNavigation.qml:84
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix repeat interval spinbox %1 is value"
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
-msgstr[1] "%1 min"
+msgstr[1] "%1 ms"
 
 #: ui/MouseNavigation.qml:93
 #, kde-format
@@ -1006,14 +942,12 @@ msgid "Acceleration time:"
 msgstr "Versnellingstijd:"
 
 #: ui/MouseNavigation.qml:110
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
-msgstr[1] "%1 min"
+msgstr[1] "%1 ms"
 
 #: ui/MouseNavigation.qml:118
 #, kde-format

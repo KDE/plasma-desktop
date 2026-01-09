@@ -42,37 +42,30 @@ msgid "Applications to be excluded from session"
 msgstr "要从会话中排除的应用程序"
 
 #: ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Failed to request restart to firmware setup: %1"
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Failed to request restart to firmware setup: %1"
-msgstr "请求重新启动到固件设置失败：%1"
+msgstr ""
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the UEFI setup screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
-msgstr "下次重新启动计算机时，它将进入 UEFI 设置。"
+msgstr ""
 
 #: ui/main.qml:32
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
-msgstr "下次重新启动计算机时，它将进入固件设置。"
+msgstr ""
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgctxt "@action:button"
 msgid "Restart Now"
-msgstr "立即重新启动"
+msgstr ""
 
 #: ui/main.qml:46
 #, kde-format
@@ -103,11 +96,10 @@ msgid "Session Restore"
 msgstr "会话恢复"
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid "On login, launch apps that were open:"
+#, kde-format
 msgctxt "@title:group prefix for radiobuttons"
 msgid "On login, launch apps that were open:"
-msgstr "登录时自动启动应用程序："
+msgstr ""
 
 #: ui/main.qml:72
 #, kde-format
@@ -144,19 +136,13 @@ msgid "Start with an empty session"
 msgstr "启动为空会话"
 
 #: ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Ignored applications:"
-msgstr "忽略的应用程序："
+msgstr ""
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' desktop file identifier or, on X11, executable names here "
-#| "(separated by commas or colons, for example 'xterm:org.kde.konsole."
-#| "desktop' or 'xterm,org.kde.konsole.desktop') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "

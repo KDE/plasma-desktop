@@ -6,13 +6,13 @@
 # محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
 # AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
-# SPDX-FileCopyrightText: 2008, 2021, 2022, 2023, 2024, 2025 zayed <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2008, 2021, 2022, 2023, 2024, 2025, 2026 zayed <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-08-09 18:49+0400\n"
+"PO-Revision-Date: 2026-01-08 11:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -59,10 +59,7 @@ msgstr ""
 "url='%1'>إرسال تقرير خطأ حول هذا الأمر أيضًا.</link>"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded6) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
@@ -70,10 +67,7 @@ msgid ""
 msgstr "مدير خدمات الخلفية (kded6) لا يعمل حاليًا. تأكد من تثبيته بشكل صحيح."
 
 #: ui/main.qml:65
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services disable themselves again when manually started if they are "
-#| "not useful in the current environment."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -83,10 +77,7 @@ msgstr ""
 "مفيدة في البيئة الحالية."
 
 #: ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services were automatically started/stopped when the background "
-#| "services manager (kded6) was restarted to apply your changes."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -96,37 +87,31 @@ msgstr ""
 "لتطبيق تغييراتك."
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "All Services"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "All Services"
 msgstr "جميع الخدمات"
 
 #: ui/main.qml:124
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "@item:inlistbox List running services"
 msgid "Running"
-msgstr "قيد التشغيل"
+msgstr "تعمل"
 
 #: ui/main.qml:125
-#, fuzzy, kde-format
-#| msgctxt "List not running services"
-#| msgid "Not Running"
+#, kde-format
 msgctxt "@item:inlistbox List not running services"
 msgid "Not Running"
-msgstr "غير عاملة"
+msgstr "لا تعمل"
 
 #: ui/main.qml:162
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgctxt "@title:group list section"
 msgid "Startup Services"
 msgstr "خدمات بدء التشغيل"
 
 #: ui/main.qml:163
-#, fuzzy, kde-format
-#| msgid "Load-on-Demand Services"
+#, kde-format
 msgctxt "@title:group list section"
 msgid "Load-on-Demand Services"
 msgstr "خدمات التحميل عند الطلب"
@@ -144,25 +129,22 @@ msgid "Enable automatically loading %1 on startup"
 msgstr "مكّن تحميل %1 آليًّا عند بدء التشغيل"
 
 #: ui/main.qml:183
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Toggle automatically loading this service on startup"
 msgstr "بدّل تحميل هذه الخدمة آليّا عند بدء التشغيل"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid "Not running"
+#, kde-format
 msgctxt "@info:status"
 msgid "Not running"
-msgstr "متوقف عن التشغيل"
+msgstr "لا تعمل"
 
 #: ui/main.qml:228
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "@info:status"
 msgid "Running"
-msgstr "قيد التشغيل"
+msgstr "تعمل"
 
 #: ui/main.qml:248
 #, kde-format
@@ -177,15 +159,13 @@ msgid "Start %1"
 msgstr "ابدأ %1"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Stop Service"
+#, kde-format
 msgctxt "@action:button"
 msgid "Stop Service"
 msgstr "أوقف الخدمة"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Start Service"
+#, kde-format
 msgctxt "@action:button"
 msgid "Start Service"
 msgstr "ابدأ الخدمة"

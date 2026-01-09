@@ -101,18 +101,16 @@ msgid "9,999+"
 msgstr "9,999+"
 
 #: qml/config.qml:13
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Appearance"
-msgstr "外观"
+msgstr ""
 
 #: qml/config.qml:18
-#, fuzzy, kde-format
-#| msgid "Behavior"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Behavior"
-msgstr "行为"
+msgstr ""
 
 #: qml/ConfigAppearance.qml:49
 #, kde-format
@@ -593,25 +591,22 @@ msgid "On the top"
 msgstr "在顶部显示"
 
 #: qml/ContextMenu.qml:100
-#, fuzzy, kde-format
-#| msgid "Places"
+#, kde-format
 msgctxt "@title:group for section of menu items"
 msgid "Places"
-msgstr "位置"
+msgstr ""
 
 #: qml/ContextMenu.qml:106
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgctxt "@title:group for section of menu items"
 msgid "Recent Files"
-msgstr "最近文件"
+msgstr ""
 
 #: qml/ContextMenu.qml:116
-#, fuzzy, kde-format
-#| msgid "Actions"
+#, kde-format
 msgctxt "@title:group for section of menu items"
 msgid "Actions"
-msgstr "操作"
+msgstr ""
 
 #: qml/ContextMenu.qml:163
 #, kde-format
@@ -656,165 +651,142 @@ msgid "Restore"
 msgstr "恢复"
 
 #: qml/ContextMenu.qml:266
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@option:check inmenu, no separate unmute action"
 msgid "Mute"
-msgstr "静音"
+msgstr ""
 
 #: qml/ContextMenu.qml:277
-#, fuzzy, kde-format
-#| msgid "Open New Window"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Open New Window"
-msgstr "打开新窗口"
+msgstr ""
 
 #: qml/ContextMenu.qml:293
-#, fuzzy, kde-format
-#| msgid "Move to &Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move to &Desktop"
-msgstr "移动到桌面(&D)"
+msgstr ""
 
 #: qml/ContextMenu.qml:323
-#, fuzzy, kde-format
-#| msgid "Move &To Current Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move &To Current Desktop"
-msgstr "移动到当前桌面(&T)"
+msgstr ""
 
 #: qml/ContextMenu.qml:332
-#, fuzzy, kde-format
-#| msgid "&All Desktops"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&All Desktops"
-msgstr "全部桌面(&A)"
+msgstr ""
 
 #: qml/ContextMenu.qml:360
-#, fuzzy, kde-format
-#| msgid "&New Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&New Desktop"
-msgstr "新建桌面(&N)"
+msgstr ""
 
 #: qml/ContextMenu.qml:380
-#, fuzzy, kde-format
-#| msgid "Show in &Activities"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Show in &Activities"
-msgstr "在活动中显示(&A)"
+msgstr ""
 
 #: qml/ContextMenu.qml:404
-#, fuzzy, kde-format
-#| msgid "Add To Current Activity"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Add To Current Activity"
-msgstr "添加到当前活动"
+msgstr ""
 
 #: qml/ContextMenu.qml:414
-#, fuzzy, kde-format
-#| msgid "All Activities"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "All Activities"
-msgstr "全部活动"
+msgstr ""
 
 #: qml/ContextMenu.qml:470
-#, fuzzy, kde-format
-#| msgid "Move to %1"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move to %1"
-msgstr "移动到 %1"
+msgstr ""
 
 #: qml/ContextMenu.qml:496 qml/ContextMenu.qml:512
-#, fuzzy, kde-format
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Pin to Task Manager"
-msgstr "固定到任务栏(&P)"
+msgstr ""
 
 #: qml/ContextMenu.qml:564
-#, fuzzy, kde-format
-#| msgid "On All Activities"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "On All Activities"
-msgstr "在全部活动中"
+msgstr ""
 
 #: qml/ContextMenu.qml:570
-#, fuzzy, kde-format
-#| msgid "On The Current Activity"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "On The Current Activity"
-msgstr "在当前活动中"
+msgstr ""
 
 #: qml/ContextMenu.qml:594
-#, fuzzy, kde-format
-#| msgid "Unpin from Task Manager"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Unpin from Task Manager"
-msgstr "取消固定到任务栏"
+msgstr ""
 
 #: qml/ContextMenu.qml:609
-#, fuzzy, kde-format
-#| msgid "More"
+#, kde-format
 msgctxt "item:inmenu opens submenu"
 msgid "More"
-msgstr "更多"
+msgstr ""
 
 #: qml/ContextMenu.qml:618
-#, fuzzy, kde-format
-#| msgid "&Move"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Move"
-msgstr "移动(&M)"
+msgstr ""
 
 #: qml/ContextMenu.qml:627
-#, fuzzy, kde-format
-#| msgid "Re&size"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Re&size"
-msgstr "调整大小(&S)"
+msgstr ""
 
 #: qml/ContextMenu.qml:641
-#, fuzzy, kde-format
-#| msgid "Ma&ximize"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Ma&ximize"
-msgstr "最大化(&X)"
+msgstr ""
 
 #: qml/ContextMenu.qml:655
-#, fuzzy, kde-format
-#| msgid "Mi&nimize"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Mi&nimize"
-msgstr "最小化(&N)"
+msgstr ""
 
 #: qml/ContextMenu.qml:665
-#, fuzzy, kde-format
-#| msgid "Keep &Above Others"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Keep &Above Others"
-msgstr "置顶(&A)"
+msgstr ""
 
 #: qml/ContextMenu.qml:675
-#, fuzzy, kde-format
-#| msgid "Keep &Below Others"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Keep &Below Others"
-msgstr "置底(&B)"
+msgstr ""
 
 #: qml/ContextMenu.qml:687
-#, fuzzy, kde-format
-#| msgid "&Fullscreen"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Fullscreen"
-msgstr "全屏(&F)"
+msgstr ""
 
 #: qml/ContextMenu.qml:700
-#, fuzzy, kde-format
-#| msgid "&Shade"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Shade"
-msgstr "折叠(&S)"
+msgstr ""
 
 #: qml/ContextMenu.qml:712
 #, kde-format
@@ -829,26 +801,22 @@ msgid "&Hide from Screencast"
 msgstr "在录屏中隐藏(&H)"
 
 #: qml/ContextMenu.qml:741
-#, fuzzy, kde-format
-#| msgid "Allow this program to be grouped"
+#, kde-format
 msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
-msgstr "允许将此程序的所有窗口合并成一个分组"
+msgstr ""
 
 #: qml/ContextMenu.qml:787
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu"
-#| msgid "&Close All"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close All"
-msgstr "关闭所有(&C)"
+msgstr ""
 
 #: qml/ContextMenu.qml:787
-#, fuzzy, kde-format
-#| msgid "&Close"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close"
-msgstr "关闭(&C)"
+msgstr ""
 
 #: qml/Task.qml:153
 #, kde-format
@@ -882,11 +850,10 @@ msgid "Open textual list of windows for %1"
 msgstr "打开 %1 的文本窗口列表"
 
 #: qml/Task.qml:179
-#, fuzzy, kde-format
-#| msgid "Activate %1"
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Activate %1"
-msgstr "激活 %1"
+msgstr ""
 
 #: qml/ToolTipInstance.qml:189
 #, kde-format

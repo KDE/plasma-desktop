@@ -4,13 +4,13 @@
 #
 # Serdar Soytetir <tulliana@gmail.com>, 2007, 2008, 2009.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2015, 2017, 2021, 2022.
-# SPDX-FileCopyrightText: 2022, 2024, 2025 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2024, 2025, 2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-06-06 21:34+0300\n"
+"PO-Revision-Date: 2026-01-08 17:12+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -18,118 +18,101 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.12.0\n"
 "X-POOTLE-MTIME: 1413102228.000000\n"
 
 #: qml/config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Genel"
 
 #: qml/configGeneral.qml:39
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "Genel:"
 
 #: qml/configGeneral.qml:41
-#, fuzzy, kde-format
-#| msgid "Show window outlines"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show window outlines"
 msgstr "Pencere ana hatlarını göster"
 
 #: qml/configGeneral.qml:46
-#, fuzzy, kde-format
-#| msgid "Show application icons on window outlines"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show application icons on window outlines"
 msgstr "Pencere ana hatlarında uygulama simgelerini göster"
 
 #: qml/configGeneral.qml:52
-#, fuzzy, kde-format
-#| msgid "Show only current screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show only current screen"
 msgstr "Yalnızca geçerli ekranı göster"
 
 #: qml/configGeneral.qml:57
-#, fuzzy, kde-format
-#| msgid "Navigation wraps around"
+#, kde-format
 msgctxt "@option:check"
 msgid "Navigation wraps around"
 msgstr "Dolaşım sarmalı"
 
 #: qml/configGeneral.qml:69
-#, fuzzy, kde-format
-#| msgid "Layout:"
+#, kde-format
 msgctxt "@title:listbox"
 msgid "Layout:"
 msgstr "Yerleşim:"
 
 #: qml/configGeneral.qml:71
-#, fuzzy, kde-format
-#| msgctxt "The pager layout"
-#| msgid "Default"
+#, kde-format
 msgctxt "@item:inlistbox The pager layout"
 msgid "Default"
 msgstr "Öntanımlı"
 
 #: qml/configGeneral.qml:71
-#, fuzzy, kde-format
-#| msgid "Horizontal"
+#, kde-format
 msgctxt "@item:inlistbox The pager layout"
 msgid "Horizontal"
 msgstr "Yatay"
 
 #: qml/configGeneral.qml:71
-#, fuzzy, kde-format
-#| msgid "Vertical"
+#, kde-format
 msgctxt "@item:inlistbox The pager layout"
 msgid "Vertical"
 msgstr "Dikey"
 
 #: qml/configGeneral.qml:85
-#, fuzzy, kde-format
-#| msgid "Text display:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Text display:"
 msgstr "Metin görüntüleme:"
 
 #: qml/configGeneral.qml:88
-#, fuzzy, kde-format
-#| msgid "No text"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "No text"
 msgstr "Metin yok"
 
 #: qml/configGeneral.qml:96
-#, fuzzy, kde-format
-#| msgid "Activity number"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "Activity number"
 msgstr "Etkinlik numarası"
 
 #: qml/configGeneral.qml:96
-#, fuzzy, kde-format
-#| msgid "Desktop number"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "Desktop number"
 msgstr "Masaüstü numarası"
 
 #: qml/configGeneral.qml:104
-#, fuzzy, kde-format
-#| msgid "Activity name"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "Activity name"
 msgstr "Etkinlik adı"
 
 #: qml/configGeneral.qml:104
-#, fuzzy, kde-format
-#| msgid "Desktop name"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "Desktop name"
 msgstr "Masaüstü adı"
@@ -167,9 +150,7 @@ msgid "Shows the desktop"
 msgstr "Masaüstünü gösterir"
 
 #: qml/main.qml:87
-#, fuzzy, kde-format
-#| msgid "…and %1 other window"
-#| msgid_plural "…and %1 other windows"
+#, kde-format
 msgctxt "@info:tooltip overflow label"
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
@@ -177,28 +158,23 @@ msgstr[0] "… ve %1 diğer pencere"
 msgstr[1] "… ve %1 diğer pencere"
 
 #: qml/main.qml:351
-#, fuzzy, kde-format
-#| msgid "%1 Window:"
-#| msgid_plural "%1 Windows:"
+#, kde-format
 msgctxt "@info:tooltip start of list"
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
-msgstr[0] "%1 Pencere:"
-msgstr[1] "%1 Pencere:"
+msgstr[0] "%1 pencere:"
+msgstr[1] "%1 pencere:"
 
 #: qml/main.qml:363
-#, fuzzy, kde-format
-#| msgid "%1 Minimized Window:"
-#| msgid_plural "%1 Minimized Windows:"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
-msgstr[0] "%1 Küçültülmüş Pencere:"
-msgstr[1] "%1 Küçültülmüş Pencere:"
+msgstr[0] "%1 küçültülmüş pencere:"
+msgstr[1] "%1 küçültülmüş pencere:"
 
 #: qml/main.qml:439
-#, fuzzy, kde-format
-#| msgid "Desktop %1"
+#, kde-format
 msgctxt "@info:whatsthis Accessible name for pager section"
 msgid "Desktop %1"
 msgstr "Masaüstü %1"

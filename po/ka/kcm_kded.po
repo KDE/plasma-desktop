@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2024-06-30 07:34+0200\n"
+"PO-Revision-Date: 2026-01-08 05:07+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.8\n"
 
 #: kcmkded.cpp:115
 #, kde-format
@@ -56,10 +56,7 @@ msgstr ""
 "შეცდომის ანგარიშიც მოგვწერეთ.</link>"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded6) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
@@ -69,10 +66,7 @@ msgstr ""
 "სწორად აყენია."
 
 #: ui/main.qml:65
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services disable themselves again when manually started if they are "
-#| "not useful in the current environment."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -82,10 +76,7 @@ msgstr ""
 "გათიშავენ თავის თავს."
 
 #: ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services were automatically started/stopped when the background "
-#| "services manager (kded6) was restarted to apply your changes."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -95,37 +86,31 @@ msgstr ""
 "გადატვირთვისას ზოგიერთი სხვა სერვისიც ავტომატურად გაჩერდა/ჩაირთო."
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "All Services"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "All Services"
 msgstr "ყველა სერვისი"
 
 #: ui/main.qml:124
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "@item:inlistbox List running services"
 msgid "Running"
-msgstr "გაშვებული"
+msgstr "გაშვებულია"
 
 #: ui/main.qml:125
-#, fuzzy, kde-format
-#| msgctxt "List not running services"
-#| msgid "Not Running"
+#, kde-format
 msgctxt "@item:inlistbox List not running services"
 msgid "Not Running"
 msgstr "გაშვებული არაა"
 
 #: ui/main.qml:162
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgctxt "@title:group list section"
 msgid "Startup Services"
 msgstr "ჩატვირთვისას გაშვებული სერვისები"
 
 #: ui/main.qml:163
-#, fuzzy, kde-format
-#| msgid "Load-on-Demand Services"
+#, kde-format
 msgctxt "@title:group list section"
 msgid "Load-on-Demand Services"
 msgstr "საჭიროებისამებრ ჩატვირთვადი სერვისები"
@@ -143,25 +128,22 @@ msgid "Enable automatically loading %1 on startup"
 msgstr "%1-ის გაშვებისას ავტომატური გაშვების ჩართვა"
 
 #: ui/main.qml:183
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Toggle automatically loading this service on startup"
 msgstr "სერვისის ჩატვირთვისას გაშვების გადართვა"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid "Not running"
+#, kde-format
 msgctxt "@info:status"
 msgid "Not running"
 msgstr "გაშვებული არაა"
 
 #: ui/main.qml:228
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "@info:status"
 msgid "Running"
-msgstr "გაშვებული"
+msgstr "გაშვებულია"
 
 #: ui/main.qml:248
 #, kde-format
@@ -176,15 +158,13 @@ msgid "Start %1"
 msgstr "%1-ის გაშვება"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Stop Service"
+#, kde-format
 msgctxt "@action:button"
 msgid "Stop Service"
 msgstr "სერვისის გაჩერება"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Start Service"
+#, kde-format
 msgctxt "@action:button"
 msgid "Start Service"
 msgstr "სერვისის გაშვება"

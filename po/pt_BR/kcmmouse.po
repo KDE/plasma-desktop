@@ -12,14 +12,14 @@
 # Frederico Gonçalves Guimarães <frederico@teia.bio.br>, 2018.
 # SPDX-FileCopyrightText: 2024, 2025 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 # SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
-# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-12-28 23:25-0300\n"
-"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
+"PO-Revision-Date: 2026-01-08 07:50-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -151,22 +151,19 @@ msgid "Configure Extra Buttons…"
 msgstr "Configurar botões extras"
 
 #: ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Dispositivo:"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General:"
 msgstr "Geral:"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgid "Enable device"
+#, kde-format
 msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr "Habilitar dispositivo"
@@ -178,8 +175,7 @@ msgid "Left and right buttons:"
 msgstr "Botões esquerdo e direito:"
 
 #: ui/main.qml:106
-#, fuzzy, kde-format
-#| msgid "Swap (left-handed mode)"
+#, kde-format
 msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
 msgstr "Trocar (modo canhoto)"
@@ -202,25 +198,19 @@ msgstr ""
 "esquerdo e direito do mouse."
 
 #: ui/main.qml:148
-#, fuzzy, kde-format
-#| msgid "Pointer speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Velocidade do ponteiro:"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid "Enable pointer acceleration"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Habilitar aceleração do ponteiro"
 
 #: ui/main.qml:241
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip from ContextualHelpButton"
-#| msgid ""
-#| "When enabled, pointer travel distance increases with faster movement "
-#| "speed."
+#, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
@@ -229,8 +219,7 @@ msgstr ""
 "movimentações mais rápidas."
 
 #: ui/main.qml:254
-#, fuzzy, kde-format
-#| msgid "Scrolling speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr "Velocidade de rolagem:"
@@ -248,34 +237,25 @@ msgid "Faster"
 msgstr "Mais rápido"
 
 #: ui/main.qml:321
-#, fuzzy, kde-format
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "Rolagem:"
 
 #: ui/main.qml:322
-#, fuzzy, kde-format
-#| msgid "Invert scroll direction"
+#, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction"
 msgstr "Inverter direção da rolagem"
 
 #: ui/main.qml:339
-#, fuzzy, kde-format
-#| msgid "Hold down middle button and move mouse to scroll"
+#, kde-format
 msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "Segurar o botão do meio e mover o mouse para rolar"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip from ContextualHelpButton"
-#| msgid ""
-#| "This will interfere with applications that use middle-button drag, such "
-#| "as some image editors, document viewers, or video games. It may be used "
-#| "on any device, but is intended primarily as a substitute for scroll "
-#| "wheels on devices that do not have any."
+#, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "This will interfere with applications that use middle-button drag, such as "

@@ -1,15 +1,15 @@
 # Spanish translations for kcm_krunnersettings.po package.
-# Copyright (C) 2022-2025 This file is copyright:
+# Copyright (C) 2022-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 # Automatically generated, 2022.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2022, 2023, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_krunnersettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-05-26 00:45+0100\n"
+"PO-Revision-Date: 2026-01-09 00:32+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,32 +17,28 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Position on screen:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Position on screen:"
 msgstr "Posición en la pantalla:"
 
 #: ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Top"
+#, kde-format
 msgctxt "@option:check Position on top of screen"
 msgid "Top"
 msgstr "Arriba"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Center"
+#, kde-format
 msgctxt "@option:check Position in center of screen"
 msgid "Center"
 msgstr "Centro"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Activation:"
+#, kde-format
 msgctxt "@label prefix for checkbutton"
 msgid "Activation:"
 msgstr "Activación:"
@@ -54,39 +50,31 @@ msgid "Activate when pressing any key on the desktop"
 msgstr "Activar al pulsar cualquier tecla en el escritorio"
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid "History:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "History:"
 msgstr "Historial:"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Disabled"
+#, kde-format
 msgctxt "@option:radio History is disabled"
 msgid "Disabled"
 msgstr "Desactivado"
 
 #: ui/main.qml:79
-#, fuzzy, kde-format
-#| msgctxt "@option:check The thing being enabled is search history"
-#| msgid "Enable suggestions"
+#, kde-format
 msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable suggestions"
 msgstr "Activar sugerencias"
 
 #: ui/main.qml:84
-#, fuzzy, kde-format
-#| msgctxt "@option:check The thing being enabled is search history"
-#| msgid "Enabled auto-complete"
+#, kde-format
 msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable auto-complete"
-msgstr "Terminación automática activada"
+msgstr "Activar terminación automática"
 
 #: ui/main.qml:92
-#, fuzzy, kde-format
-#| msgid "Clear History…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear History…"
 msgstr "Borrar el historial…"

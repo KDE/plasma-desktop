@@ -292,7 +292,7 @@ msgstr "启用屏幕阅读器"
 #: kcmaccessibilityshakecursor.kcfg:9
 #, kde-format
 msgid "Whether Shake Pointer is enabled"
-msgstr ""
+msgstr "启用了抖动后放大指针时"
 
 #. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
 #: kcmaccessibilityshakecursor.kcfg:15
@@ -343,9 +343,7 @@ msgid "Disable sticky and slow keys after:"
 msgstr "一段时间之后禁用粘滞键和慢速键："
 
 #: ui/ActivationShortcuts.qml:71
-#, fuzzy, kde-format
-#| msgid "%1 min"
-#| msgid_plural "%1 min"
+#, kde-format
 msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
 msgid "%1 min"
 msgid_plural "%1 min"
@@ -359,46 +357,40 @@ msgid_plural "min"
 msgstr[0] "分钟"
 
 #: ui/ActivationShortcuts.qml:89
-#, fuzzy, kde-format
-#| msgid "When a shortcut is used:"
+#, kde-format
 msgctxt "@title:group for checkbox group"
 msgid "When a shortcut is used:"
-msgstr "使用快捷键时："
+msgstr ""
 
 #: ui/ActivationShortcuts.qml:90
-#, fuzzy, kde-format
-#| msgid "Display a confirmation dialog"
+#, kde-format
 msgctxt "@option:check when shortcut used"
 msgid "Display a confirmation dialog"
-msgstr "显示确认对话框"
+msgstr ""
 
 #: ui/ActivationShortcuts.qml:101
-#, fuzzy, kde-format
-#| msgid "Ring the system bell"
+#, kde-format
 msgctxt "@option:check when shortcut used"
 msgid "Ring the system bell"
-msgstr "发出系统提示"
+msgstr ""
 
 #: ui/ActivationShortcuts.qml:112
-#, fuzzy, kde-format
-#| msgid "Show a notification"
+#, kde-format
 msgctxt "@option:check when shortcut used"
 msgid "Show a notification"
-msgstr "显示通知"
+msgstr ""
 
 #: ui/ActivationShortcuts.qml:123
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button opens Notifications kcm"
 msgid "Configure Notifications…"
-msgstr "配置通知…"
+msgstr ""
 
 #: ui/Bell.qml:19
-#, fuzzy, kde-format
-#| msgid "Please choose an audio file"
+#, kde-format
 msgctxt "@title:window dialog"
 msgid "Please choose an audio file"
-msgstr "请选择音频文件"
+msgstr ""
 
 #: ui/Bell.qml:21
 #, kde-format
@@ -407,11 +399,10 @@ msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
 msgstr "ogg、oga 和 wav 音频文件 (*.ogg *.oga *.wav)"
 
 #: ui/Bell.qml:30
-#, fuzzy, kde-format
-#| msgid "Audible bell:"
+#, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Audible bell:"
-msgstr "声音提示："
+msgstr ""
 
 #: ui/Bell.qml:31
 #, kde-format
@@ -426,18 +417,16 @@ msgid "Custom sound:"
 msgstr "自定义声音："
 
 #: ui/Bell.qml:75
-#, fuzzy, kde-format
-#| msgid "Search audio file for the system bell"
+#, kde-format
 msgctxt "@action:button icononly tooltip"
 msgid "Choose audio file for the system bell"
-msgstr "搜索系统声音提示的音频文件"
+msgstr ""
 
 #: ui/Bell.qml:76
-#, fuzzy, kde-format
-#| msgid "Please choose an audio file"
+#, kde-format
 msgctxt "@action button accessible only"
 msgid "Choose audio file"
-msgstr "请选择音频文件"
+msgstr ""
 
 #: ui/Bell.qml:77
 #, kde-format
@@ -446,19 +435,16 @@ msgid "Opens dialog"
 msgstr ""
 
 #: ui/Bell.qml:93
-#, fuzzy, kde-format
-#| msgid "Visual bell:"
+#, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Visual bell:"
-msgstr "视觉提示："
+msgstr ""
 
 #: ui/Bell.qml:94
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable visual bell"
 msgid "Enable"
-msgstr "启用"
+msgstr ""
 
 #: ui/Bell.qml:108
 #, kde-format
@@ -485,23 +471,18 @@ msgid "Duration:"
 msgstr "持续时间："
 
 #: ui/Bell.qml:166
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is visible bell duration"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 毫秒"
+msgstr[0] ""
 
 #: ui/Bell.qml:170 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
-#, fuzzy, kde-format
-#| msgctxt "short for millisecond(s)"
-#| msgid "ms"
-#| msgid_plural "ms"
+#, kde-format
 msgctxt "@label:valuesuffix short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] "毫秒"
+msgstr[0] ""
 
 #: ui/ColorblindnessCorrection.qml:21
 #, kde-format
@@ -574,32 +555,28 @@ msgid "Adjusted colors:"
 msgstr "调整后的颜色："
 
 #: ui/ColorblindnessCorrection.qml:132
-#, fuzzy, kde-format
-#| msgid "Reds:"
+#, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Reds:"
-msgstr "红："
+msgstr ""
 
 #: ui/ColorblindnessCorrection.qml:133
-#, fuzzy, kde-format
-#| msgid "Greens:"
+#, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Greens:"
-msgstr "绿："
+msgstr ""
 
 #: ui/ColorblindnessCorrection.qml:134
-#, fuzzy, kde-format
-#| msgid "Blues:"
+#, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Blues:"
-msgstr "蓝："
+msgstr ""
 
 #: ui/ColorblindnessCorrection.qml:135
-#, fuzzy, kde-format
-#| msgid "Purples:"
+#, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Purples:"
-msgstr "紫："
+msgstr ""
 
 #: ui/Invert.qml:22
 #, kde-format
@@ -626,19 +603,16 @@ msgid "Configure Shortcuts…"
 msgstr "配置快捷键…"
 
 #: ui/KeyboardFilters.qml:18
-#, fuzzy, kde-format
-#| msgid "Slow keys:"
+#, kde-format
 msgctxt "@title:group prefix"
 msgid "Slow keys:"
-msgstr "慢速键："
+msgstr ""
 
 #: ui/KeyboardFilters.qml:23
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable slow keys"
 msgid "Enable"
-msgstr "启用"
+msgstr ""
 
 #: ui/KeyboardFilters.qml:34
 #, kde-format
@@ -652,67 +626,53 @@ msgstr ""
 "个按键，或者很难在首次尝试时按到自己想按的按键，可以尝试使用此功能。"
 
 #: ui/KeyboardFilters.qml:41
-#, fuzzy, kde-format
-#| msgctxt "Slow keys Delay"
-#| msgid "Delay:"
+#, kde-format
 msgctxt "@label:spinbox Slow keys Delay"
 msgid "Delay:"
-msgstr "延迟："
+msgstr ""
 
 #: ui/KeyboardFilters.qml:56
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is slow keys delay"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 毫秒"
+msgstr[0] ""
 
 #: ui/KeyboardFilters.qml:74
-#, fuzzy, kde-format
-#| msgid "Ring system bell:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Ring system bell:"
-msgstr "发出系统提示："
+msgstr ""
 
 #: ui/KeyboardFilters.qml:75
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is pressed"
-#| msgid "when any key is &pressed"
+#, kde-format
 msgctxt "@option:check Use system bell when a key is pressed"
 msgid "when any key is &pressed"
-msgstr "按下按键时(&P)"
+msgstr ""
 
 #: ui/KeyboardFilters.qml:89
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is accepted"
-#| msgid "when any key is &accepted"
+#, kde-format
 msgctxt "@option:check Use system bell when a key is accepted"
 msgid "when any key is &accepted"
-msgstr "接受按键时(&A)"
+msgstr ""
 
 #: ui/KeyboardFilters.qml:103
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is rejected"
-#| msgid "when any key is &rejected"
+#, kde-format
 msgctxt "@option:check Use system bell when a key is rejected"
 msgid "when any key is &rejected"
-msgstr "拒绝按键时(&R)"
+msgstr ""
 
 #: ui/KeyboardFilters.qml:119
-#, fuzzy, kde-format
-#| msgid "Bounce keys:"
+#, kde-format
 msgctxt "@title:group prefix"
 msgid "Bounce keys:"
-msgstr "防抖键："
+msgstr ""
 
 #: ui/KeyboardFilters.qml:124
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Bounce keys enable"
 msgid "Enable"
-msgstr "启用"
+msgstr ""
 
 #: ui/KeyboardFilters.qml:135
 #, kde-format
@@ -726,28 +686,23 @@ msgstr ""
 "次，可以使用此功能。"
 
 #: ui/KeyboardFilters.qml:142
-#, fuzzy, kde-format
-#| msgctxt "Slow keys Delay"
-#| msgid "Delay:"
+#, kde-format
 msgctxt "@label:spinbox Bounce keys delay"
 msgid "Delay:"
-msgstr "延迟："
+msgstr ""
 
 #: ui/KeyboardFilters.qml:157
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is bounce keys delay"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 毫秒"
+msgstr[0] ""
 
 #: ui/KeyboardFilters.qml:171
-#, fuzzy, kde-format
-#| msgid "Ring system bell when rejected"
+#, kde-format
 msgctxt "@option:check for bounce keys"
 msgid "Ring system bell when rejected"
-msgstr "拒绝按键时发出系统提示"
+msgstr ""
 
 #: ui/main.qml:28
 #, kde-format
@@ -762,51 +717,40 @@ msgid "System Bell"
 msgstr "系统提示"
 
 #: ui/main.qml:38
-#, fuzzy, kde-format
-#| msgctxt "System Modifier Keys"
-#| msgid "Modifier Keys"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Modifier Keys"
-msgstr "修饰键"
+msgstr ""
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgctxt "System keyboard filters"
-#| msgid "Keyboard Filters"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Keyboard Filters"
-msgstr "键盘输入过滤"
+msgstr ""
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgctxt "System mouse navigation"
-#| msgid "Mouse Navigation"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Mouse Navigation"
-msgstr "鼠标导航"
+msgstr ""
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Activation Shortcuts"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Activation Shortcuts"
-msgstr "激活快捷键"
+msgstr ""
 
 #: ui/main.qml:58
-#, fuzzy, kde-format
-#| msgctxt "System mouse navigation"
-#| msgid "Screen Reader"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
-msgstr "屏幕阅读器"
+msgstr ""
 
 #: ui/main.qml:63
-#, fuzzy, kde-format
-#| msgctxt "Correction for color blindness"
-#| msgid "Color Blindness Correction"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
-msgstr "色盲校正"
+msgstr ""
 
 #: ui/main.qml:68
 #, kde-format
@@ -858,18 +802,16 @@ msgid ""
 msgstr "连续两次按下修饰键将保持它处于激活状态直到再次按下该键。"
 
 #: ui/ModifierKeys.qml:57
-#, fuzzy, kde-format
-#| msgid "Disable when two keys are held down"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable when two keys are held down"
-msgstr "同时按住两个按键时禁用"
+msgstr ""
 
 #: ui/ModifierKeys.qml:70
-#, fuzzy, kde-format
-#| msgid "Ring system bell when modifier keys are used"
+#, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when modifier keys are used"
-msgstr "修饰键按下时发出系统提示"
+msgstr ""
 
 #: ui/ModifierKeys.qml:88
 #, kde-format
@@ -905,7 +847,7 @@ msgstr "配置通知…"
 #, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move pointer:"
-msgstr ""
+msgstr "使用数字小键盘移动指针："
 
 #: ui/MouseNavigation.qml:22
 #, kde-format
@@ -936,13 +878,11 @@ msgid "Acceleration delay:"
 msgstr "加速延迟："
 
 #: ui/MouseNavigation.qml:53
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix acceleration delay spinbox %1 is value"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 毫秒"
+msgstr[0] ""
 
 #: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
 #: ui/MouseNavigation.qml:114
@@ -959,13 +899,11 @@ msgid "Repeat interval:"
 msgstr "重复间隔："
 
 #: ui/MouseNavigation.qml:84
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix repeat interval spinbox %1 is value"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 毫秒"
+msgstr[0] ""
 
 #: ui/MouseNavigation.qml:93
 #, kde-format
@@ -974,13 +912,11 @@ msgid "Acceleration time:"
 msgstr "加速时间："
 
 #: ui/MouseNavigation.qml:110
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 毫秒"
+msgstr[0] ""
 
 #: ui/MouseNavigation.qml:118
 #, kde-format
@@ -1022,31 +958,31 @@ msgstr "启动 Orca 屏幕阅读器配置…"
 #, kde-format
 msgctxt "@label"
 msgid "Shake pointer to find it:"
-msgstr ""
+msgstr "抖动时放大指针以便定位："
 
 #: ui/ShakeCursor.qml:16
 #, kde-format
 msgctxt "@option check, Enable shake pointer effect"
 msgid "Enable"
-msgstr ""
+msgstr "启用"
 
 #: ui/ShakeCursor.qml:28
 #, kde-format
 msgctxt "@label Pointer magnification level"
 msgid "Magnification:"
-msgstr ""
+msgstr "放大："
 
 #: ui/ShakeCursor.qml:55
 #, kde-format
 msgctxt "@label Normal pointer size"
 msgid "Normal"
-msgstr ""
+msgstr "正常"
 
 #: ui/ShakeCursor.qml:62
 #, kde-format
 msgctxt "@label Large pointer size"
 msgid "Large"
-msgstr ""
+msgstr "大"
 
 #: ui/ZoomMagnifier.qml:22
 #, kde-format
@@ -1070,7 +1006,7 @@ msgstr "显示网格的缩放级别："
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer appearance:"
-msgstr ""
+msgstr "指针外观："
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
@@ -1094,7 +1030,7 @@ msgstr "隐藏"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer tracking:"
-msgstr ""
+msgstr "指针轨迹："
 
 #: ui/ZoomMagnifier.qml:128
 #, kde-format
@@ -1106,7 +1042,7 @@ msgstr "比例"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with pointer"
-msgstr ""
+msgstr "缩放区域与指针同步"
 
 #: ui/ZoomMagnifier.qml:133
 #, kde-format
@@ -1118,7 +1054,7 @@ msgstr "居中"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, except near screen edges"
-msgstr ""
+msgstr "指针保持在屏幕中心，除非靠近屏幕边缘"
 
 #: ui/ZoomMagnifier.qml:138
 #, kde-format
@@ -1130,7 +1066,7 @@ msgstr "居中 (严格)"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, even near screen edges"
-msgstr ""
+msgstr "指针保持在屏幕中心，即使靠近屏幕边缘"
 
 #: ui/ZoomMagnifier.qml:143
 #, kde-format
@@ -1142,7 +1078,7 @@ msgstr "外推"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer pushes zoom area at screen edges"
-msgstr ""
+msgstr "指针在屏幕边缘推动缩放区域"
 
 #: ui/ZoomMagnifier.qml:148
 #, kde-format
@@ -1154,7 +1090,7 @@ msgstr "禁用"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow pointer"
-msgstr ""
+msgstr "缩放区域不跟随指针"
 
 #: ui/ZoomMagnifier.qml:166
 #, kde-format
@@ -1234,22 +1170,3 @@ msgstr "按住修饰键并滚动时缩放"
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "使用快捷键控制缩放"
-
-#~ msgid "Button search audio file"
-#~ msgstr "搜索音频文件按钮"
-
-#~ msgctxt "Enable visual bell"
-#~ msgid "Enable"
-#~ msgstr "启用"
-
-#~ msgctxt "Enable slow keys"
-#~ msgid "Enable"
-#~ msgstr "启用"
-
-#~ msgctxt "Bounce keys enable"
-#~ msgid "Enable"
-#~ msgstr "启用"
-
-#~ msgctxt "Bounce keys delay"
-#~ msgid "Delay:"
-#~ msgstr "延迟："

@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024, 2025 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-12-04 10:14+0100\n"
+"PO-Revision-Date: 2026-01-08 17:50+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,27 +15,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Pause Indexer"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pause Indexer"
 msgstr "Indexering pauzeren"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Resume Indexer"
+#, kde-format
 msgctxt "@action:button"
 msgid "Resume Indexer"
 msgstr "Indexering hervatten"
 
 #: ui/main.qml:61
-#, fuzzy, kde-format
-#| msgid ""
-#| "This will disable file searching in KRunner and launcher menus, and "
-#| "remove extended metadata display from all KDE applications."
+#, kde-format
 msgctxt "@info inlinemessage"
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -45,12 +40,7 @@ msgstr ""
 "verwijdert uitgebreid tonen van metagegevens uit alle KDE toepassingen."
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid ""
-#| "Do you want to delete the saved index data? %1 of space will be freed, "
-#| "but if indexing is re-enabled later, the entire index will have to be re-"
-#| "created from scratch. This may take some time, depending on how many "
-#| "files you have."
+#, kde-format
 msgctxt "@info inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -63,17 +53,13 @@ msgstr ""
 "tijd kosten, afhankelijk van hoeveel bestanden u hebt."
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgid "Delete Index Data"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delete Index Data"
 msgstr "Indexgegevens verwijderen"
 
 #: ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid ""
-#| "File Search helps you quickly locate your files. You can choose which "
-#| "folders and what types of file data are indexed."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
@@ -89,29 +75,25 @@ msgid "Data to index:"
 msgstr "Te indexeren gegevens:"
 
 #: ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "Nothing (disable indexing entirely)"
+#, kde-format
 msgctxt "@option:radio Data to index"
 msgid "Nothing (disable indexing entirely)"
 msgstr "Niets (Indexering geheel uitschakelen)"
 
 #: ui/main.qml:121
-#, fuzzy, kde-format
-#| msgid "File names only"
+#, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names only"
 msgstr "Alleen bestandsnamen"
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "File names and contents"
+#, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names and contents"
 msgstr "Bestandsnamen en inhoud"
 
 #: ui/main.qml:157
-#, fuzzy, kde-format
-#| msgid "Also index hidden files and folders"
+#, kde-format
 msgctxt "@option:check"
 msgid "Also index hidden files and folders"
 msgstr "Ook verborgen bestanden en mappen indexeren"
@@ -147,15 +129,13 @@ msgid "Currently indexing: <filename>%1</filename>"
 msgstr "Wordt nu geïndexeerd: <filename>%1</filename>"
 
 #: ui/main.qml:270
-#, fuzzy, kde-format
-#| msgid "Not indexed"
+#, kde-format
 msgctxt "@info:status"
 msgid "Not indexed"
 msgstr "Niet geïndexeerd"
 
 #: ui/main.qml:271
-#, fuzzy, kde-format
-#| msgid "Indexed"
+#, kde-format
 msgctxt "@info:status"
 msgid "Indexed"
 msgstr "Geïndexeerd"
@@ -167,15 +147,13 @@ msgid "Remove entry"
 msgstr "Item verwijderen"
 
 #: ui/main.qml:318
-#, fuzzy, kde-format
-#| msgid "Select a folder to include"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to include"
 msgstr "Een map selecteren om in te voegen"
 
 #: ui/main.qml:318
-#, fuzzy, kde-format
-#| msgid "Select a folder to exclude"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to exclude"
 msgstr "Een map selecteren om uit te sluiten"
