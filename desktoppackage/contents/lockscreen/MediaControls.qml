@@ -56,8 +56,8 @@ Item {
                     text: model.track.length > 0
                             ? model.track
                             : (model.playbackStatus > Mpris.PlaybackStatus.Stopped
-                                ? i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:status". "No title")
-                                : i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:status". "No media playing"))
+                                ? i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:status", "No title")
+                                : i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:status", "No media playing"))
                     textFormat: Text.PlainText
                     wrapMode: Text.NoWrap
                 }
