@@ -358,22 +358,22 @@ msgstr[0] "分钟"
 #: ui/ActivationShortcuts.qml:89
 #, kde-format
 msgid "When a shortcut is used:"
-msgstr "使用快捷键时："
+msgstr ""
 
 #: ui/ActivationShortcuts.qml:90
 #, kde-format
 msgid "Display a confirmation dialog"
-msgstr "显示确认对话框"
+msgstr ""
 
 #: ui/ActivationShortcuts.qml:101
 #, kde-format
 msgid "Ring the system bell"
-msgstr "发出系统提示"
+msgstr ""
 
 #: ui/ActivationShortcuts.qml:112
 #, kde-format
 msgid "Show a notification"
-msgstr "显示通知"
+msgstr ""
 
 #: ui/ActivationShortcuts.qml:123
 #, kde-format
@@ -383,7 +383,7 @@ msgstr "配置通知…"
 #: ui/Bell.qml:19
 #, kde-format
 msgid "Please choose an audio file"
-msgstr "请选择音频文件"
+msgstr ""
 
 #: ui/Bell.qml:21
 #, kde-format
@@ -394,7 +394,7 @@ msgstr "ogg、oga 和 wav 音频文件 (*.ogg *.oga *.wav)"
 #: ui/Bell.qml:30
 #, kde-format
 msgid "Audible bell:"
-msgstr "声音提示："
+msgstr ""
 
 #: ui/Bell.qml:31
 #, kde-format
@@ -421,7 +421,7 @@ msgstr "搜索音频文件按钮"
 #: ui/Bell.qml:92
 #, kde-format
 msgid "Visual bell:"
-msgstr "视觉提示："
+msgstr ""
 
 #: ui/Bell.qml:93
 #, kde-format
@@ -459,7 +459,7 @@ msgstr "持续时间："
 #, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 毫秒"
+msgstr[0] ""
 
 #: ui/Bell.qml:169 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
 #: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
@@ -571,7 +571,7 @@ msgstr "配置快捷键…"
 #: ui/KeyboardFilters.qml:18
 #, kde-format
 msgid "Slow keys:"
-msgstr "慢速键："
+msgstr ""
 
 #: ui/KeyboardFilters.qml:23
 #, kde-format
@@ -594,35 +594,35 @@ msgstr ""
 #, kde-format
 msgctxt "Slow keys Delay"
 msgid "Delay:"
-msgstr "延迟："
+msgstr ""
 
 #: ui/KeyboardFilters.qml:74
 #, kde-format
 msgid "Ring system bell:"
-msgstr "发出系统提示："
+msgstr ""
 
 #: ui/KeyboardFilters.qml:75
 #, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
-msgstr "按下按键时(&P)"
+msgstr ""
 
 #: ui/KeyboardFilters.qml:89
 #, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
-msgstr "接受按键时(&A)"
+msgstr ""
 
 #: ui/KeyboardFilters.qml:103
 #, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
-msgstr "拒绝按键时(&R)"
+msgstr ""
 
 #: ui/KeyboardFilters.qml:119
 #, kde-format
 msgid "Bounce keys:"
-msgstr "防抖键："
+msgstr ""
 
 #: ui/KeyboardFilters.qml:124
 #, kde-format
@@ -645,12 +645,12 @@ msgstr ""
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
-msgstr "延迟："
+msgstr ""
 
 #: ui/KeyboardFilters.qml:171
 #, kde-format
 msgid "Ring system bell when rejected"
-msgstr "拒绝按键时发出系统提示"
+msgstr ""
 
 #: ui/main.qml:28
 #, kde-format
@@ -668,36 +668,36 @@ msgstr "系统提示"
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
-msgstr "修饰键"
+msgstr ""
 
 #: ui/main.qml:43
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
-msgstr "键盘输入过滤"
+msgstr ""
 
 #: ui/main.qml:48
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
-msgstr "鼠标导航"
+msgstr ""
 
 #: ui/main.qml:53
 #, kde-format
 msgid "Activation Shortcuts"
-msgstr "激活快捷键"
+msgstr ""
 
 #: ui/main.qml:58
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
-msgstr "屏幕阅读器"
+msgstr ""
 
 #: ui/main.qml:63
 #, kde-format
 msgctxt "Correction for color blindness"
 msgid "Color Blindness Correction"
-msgstr "色盲校正"
+msgstr ""
 
 #: ui/main.qml:68
 #, kde-format
@@ -751,12 +751,12 @@ msgstr "连续两次按下修饰键将保持它处于激活状态直到再次按
 #: ui/ModifierKeys.qml:57
 #, kde-format
 msgid "Disable when two keys are held down"
-msgstr "同时按住两个按键时禁用"
+msgstr ""
 
 #: ui/ModifierKeys.qml:70
 #, kde-format
 msgid "Ring system bell when modifier keys are used"
-msgstr "修饰键按下时发出系统提示"
+msgstr ""
 
 #: ui/ModifierKeys.qml:88
 #, kde-format
@@ -886,19 +886,19 @@ msgstr "启用"
 #, kde-format
 msgctxt "@label Cursor magnification level"
 msgid "Magnification:"
-msgstr ""
+msgstr "放大："
 
 #: ui/ShakeCursor.qml:55
 #, kde-format
 msgctxt "@label Normal cursor size"
 msgid "Normal"
-msgstr ""
+msgstr "正常"
 
 #: ui/ShakeCursor.qml:62
 #, kde-format
 msgctxt "@label Large cursor size"
 msgid "Large"
-msgstr ""
+msgstr "大"
 
 #: ui/ZoomMagnifier.qml:22
 #, kde-format
