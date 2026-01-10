@@ -9,11 +9,12 @@ import QtQuick.Templates as T
 import org.kde.plasma.components as PC3
 import org.kde.kirigami as Kirigami
 
-PC3.Frame {
+PC3.Control {
     id: badge
 
     property alias text: badgeLabel.text
 
+    padding: Kirigami.Units.smallSpacing
     leftPadding: text !== "" ? Kirigami.Units.cornerRadius : height / 2
     rightPadding: text !== "" ? Kirigami.Units.cornerRadius : height / 2
 
@@ -23,7 +24,7 @@ PC3.Frame {
         color: badge.text !== "" ? Kirigami.Theme.positiveBackgroundColor : Kirigami.Theme.positiveTextColor
     }
 
-    Item {
+    contentItem: Item {
         implicitWidth: badgeLabel.text !== "" ? badgeLabel.implicitWidth : 0
         implicitHeight: badgeLabel.text !== "" ? badgeLabel.implicitHeight : 0
 
