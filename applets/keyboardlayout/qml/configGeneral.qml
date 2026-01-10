@@ -99,7 +99,7 @@ SimpleKCM {
         }
 
         Button {
-            Kirigami.FormData.label: i18nc("@label prefixed to button", "Layouts:") // qmllint disable unqualified
+            Kirigami.FormData.label: i18nc("@label prefixed to button, as in 'keyboard layouts'", "Layouts:") // qmllint disable unqualified
             text: i18nc("@action:button opens kcm_keyboard", "Configure…") // qmllint disable unqualified
             icon.name: "configure"
             onClicked: KCMLauncher.openSystemSettings("kcm_keyboard", "--tab=layouts")
