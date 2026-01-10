@@ -64,7 +64,7 @@ KCMUtils.SimpleKCM {
 
         QQC2.ComboBox {
             id: outputsCombo
-            Kirigami.FormData.label: i18nc("@label:listbox", "Target display:")
+            Kirigami.FormData.label: i18nc("@label:listbox this is a compound noun", "Target display:")
             model: TouchScreenKCM.OutputsModel {
                 id: outputsModel
             }
