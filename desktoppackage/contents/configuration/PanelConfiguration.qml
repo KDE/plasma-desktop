@@ -331,9 +331,9 @@ ColumnLayout {
                 Layout.alignment: Qt.AlignHCenter
                 Layout.minimumWidth: lengthRepresentation.width
                 model: [
-                    dialogRoot.vertical ? i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Fill height") : i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Fill width"),
-                    i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Fit content"),
-                    i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Custom")
+                    dialogRoot.vertical ? i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox panel fills the full height of the display", "Fill height") : i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox panel fills the full width of the display", "Fill width"),
+                    i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox panel is just big enough to fit its content", "Fit content"),
+                    i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox panel size", "Custom")
                 ]
                 currentIndex: (panel.lengthMode === Panel.Global.FillAvailable ? 0 :
                                 panel.lengthMode === Panel.Global.FitContent ? 1 : 2)
@@ -668,7 +668,7 @@ ColumnLayout {
 
         PC3.Label {
             Layout.alignment: Qt.AlignRight
-            text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:group", "Focus shortcut:")
+            text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:group shortcut that moves focus to the panel", "Focus shortcut:")
             textFormat: Text.PlainText
             visible: panel.adaptiveOpacityEnabled
 
@@ -686,7 +686,7 @@ ColumnLayout {
         KeySequenceItem {
             id: button
 
-            Accessible.name: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button acccessible name", "Focus Shortcut Setter")
+            Accessible.name: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button accessible name", "Focus Shortcut Setter")
             Accessible.description: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:whatsthis Accessible description for button", "Button to set the shortcut for the panel to gain focus")
             Accessible.onPressAction: startCapturing()
 
@@ -716,7 +716,7 @@ ColumnLayout {
                 text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button Delete the panel", "Delete Panel")
                 icon.name: "delete"
 
-                PC3.ToolTip.text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:tooltip for button", "Remove this panel; this action is undo-able")
+                PC3.ToolTip.text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:tooltip for button", "Remove this panel; this action can be undone")
                 PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
                 PC3.ToolTip.visible: hovered
 
