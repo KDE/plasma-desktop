@@ -41,7 +41,7 @@ Kirigami.ApplicationWindow {
 
     function copyAndReport(text: string) : void {
         CopyHelper.copyTextToClipboard(text)
-        window.showPassiveNotification(i18nc("@info:status passive notification as action feedback", "%1 copied to the clipboard", text))
+        window.showPassiveNotification(i18nc("@info:status passive notification as action feedback, %1 is an emoji", "%1 copied to the clipboard", text))
     }
 
     function addToRecents(text: string, description: string): void {
