@@ -127,12 +127,12 @@ msgstr "配置额外按钮…"
 #: ui/main.qml:64
 #, kde-format
 msgid "Device:"
-msgstr ""
+msgstr "设备："
 
 #: ui/main.qml:87
 #, kde-format
 msgid "General:"
-msgstr ""
+msgstr "常规："
 
 #: ui/main.qml:88
 #, kde-format
@@ -163,24 +163,24 @@ msgstr ""
 #: ui/main.qml:142
 #, kde-format
 msgid "Pointer speed:"
-msgstr ""
+msgstr "指针速度："
 
 #: ui/main.qml:221
 #, kde-format
 msgid "Enable pointer acceleration"
-msgstr ""
+msgstr "启用指针加速度"
 
 #: ui/main.qml:235
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
-msgstr ""
+msgstr "启用后，指针的移动距离会随着移动速度的加快而增加。"
 
 #: ui/main.qml:245
 #, kde-format
 msgid "Scrolling speed:"
-msgstr ""
+msgstr "滚动速度："
 
 #: ui/main.qml:295
 #, kde-format
@@ -197,17 +197,17 @@ msgstr "快"
 #: ui/main.qml:312
 #, kde-format
 msgid "Scrolling:"
-msgstr ""
+msgstr "滚动："
 
 #: ui/main.qml:313
 #, kde-format
 msgid "Invert scroll direction"
-msgstr ""
+msgstr "反转滚动方向"
 
 #: ui/main.qml:330
 #, kde-format
 msgid "Hold down middle button and move mouse to scroll"
-msgstr ""
+msgstr "按住中键并移动鼠标以滚动"
 
 #: ui/main.qml:342
 #, kde-format
@@ -218,3 +218,5 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"这将干扰使用中键拖动的应用程序，例如某些图像编辑器、文档查看器或游戏。此功能"
+"在任意设备上均可使用，但主要用于在没有滚轮设备上替代滚轮的功能。"
