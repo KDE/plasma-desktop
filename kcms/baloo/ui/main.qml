@@ -68,7 +68,7 @@ KCM.ScrollViewKCM {
             type: Kirigami.MessageType.Warning
             position: Kirigami.InlineMessage.Position.Header
             showCloseButton: true
-            text: i18nc("@info inlinemessage", "Do you want to delete the saved index data? %1 of space will be freed, but if indexing is re-enabled later, the entire index will have to be re-created from scratch. This may take some time, depending on how many files you have.", kcm.prettyIndexFileSize());
+            text: i18nc("@info:inlinemessage", "Do you want to delete the saved index data? %1 of space will be freed, but if indexing is re-enabled later, the entire index will have to be re-created from scratch. This may take some time, depending on the number of files to index.", kcm.prettyIndexFileSize());
             actions: Kirigami.Action {
                 text: i18nc("@action:button", "Delete Index Data")
                 icon.name: "edit-delete"
