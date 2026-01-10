@@ -21,13 +21,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Pause Indexer"
-msgstr ""
+msgstr "暂停索引"
 
 #: ui/main.qml:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Resume Indexer"
-msgstr ""
+msgstr "恢复索引"
 
 #: ui/main.qml:61
 #, kde-format
@@ -36,6 +36,8 @@ msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
 msgstr ""
+"这将禁用 KRunner 和 程序启动器菜单中的文件搜索，并从所有 KDE 应用程序中移除扩"
+"展的元数据显示内容。"
 
 #: ui/main.qml:71
 #, kde-format
@@ -45,12 +47,14 @@ msgid ""
 "if indexing is re-enabled later, the entire index will have to be re-created "
 "from scratch. This may take some time, depending on how many files you have."
 msgstr ""
+"您确定要删除已保存的索引数据吗？这可以释放 %1 空间，但将导致重新启用索引功能"
+"时必须重新创建整个索引。删除索引数据的所需时间取决于文件的多少。"
 
 #: ui/main.qml:73
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Index Data"
-msgstr ""
+msgstr "删除索引数据"
 
 #: ui/main.qml:91
 #, kde-format
@@ -59,6 +63,8 @@ msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
 msgstr ""
+"文件搜索功能可以帮助您快速找到您想要的文件。您可以选择对哪些文件夹和文件数据"
+"类型进行索引。"
 
 #: ui/main.qml:108
 #, kde-format
@@ -70,25 +76,25 @@ msgstr "要索引的数据："
 #, kde-format
 msgctxt "@option:radio Data to index"
 msgid "Nothing (disable indexing entirely)"
-msgstr ""
+msgstr "无 (完全禁用索引)"
 
 #: ui/main.qml:121
 #, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names only"
-msgstr ""
+msgstr "仅文件名"
 
 #: ui/main.qml:136
 #, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names and contents"
-msgstr ""
+msgstr "文件名和内容"
 
 #: ui/main.qml:157
 #, kde-format
 msgctxt "@option:check"
 msgid "Also index hidden files and folders"
-msgstr ""
+msgstr "同时索引隐藏文件和文件夹"
 
 #: ui/main.qml:183
 #, kde-format
@@ -124,13 +130,13 @@ msgstr "正在索引：<filename>%1</filename>"
 #, kde-format
 msgctxt "@info:status"
 msgid "Not indexed"
-msgstr ""
+msgstr "不索引"
 
 #: ui/main.qml:271
 #, kde-format
 msgctxt "@info:status"
 msgid "Indexed"
-msgstr ""
+msgstr "索引"
 
 #: ui/main.qml:297
 #, kde-format
@@ -142,10 +148,10 @@ msgstr "移除条目"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to include"
-msgstr ""
+msgstr "选择要索引的文件夹"
 
 #: ui/main.qml:318
 #, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to exclude"
-msgstr ""
+msgstr "选择不索引的文件夹"

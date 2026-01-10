@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:44+0000\n"
 "PO-Revision-Date: 2026-01-08 07:37-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -1013,6 +1013,20 @@ msgctxt "@info:usagetip"
 msgid "(or scan your smartcard)"
 msgstr "(ou escaneie seu smartcard)"
 
+#: contents/lockscreen/MediaControls.qml:59
+#, fuzzy, kde-format
+#| msgid "No title"
+msgctxt "@info:status"
+msgid "No title"
+msgstr "Sem título"
+
+#: contents/lockscreen/MediaControls.qml:60
+#, fuzzy, kde-format
+#| msgid "No media playing"
+msgctxt "@info:status"
+msgid "No media playing"
+msgstr "Nenhuma reprodução de mídia"
+
 #: contents/lockscreen/MediaControls.qml:88
 #, kde-format
 msgctxt "@action:button Accessible only"
@@ -1054,12 +1068,6 @@ msgstr "Sair do modo de edição"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Indicador de foco do painel"
-
-#~ msgid "No title"
-#~ msgstr "Sem título"
-
-#~ msgid "No media playing"
-#~ msgstr "Nenhuma reprodução de mídia"
 
 #~ msgid "Configure activity"
 #~ msgstr "Configurar atividade"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:44+0000\n"
 "PO-Revision-Date: 2024-11-06 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -1156,6 +1156,20 @@ msgctxt "@info:usagetip"
 msgid "(or scan your smartcard)"
 msgstr "(або адскануйце смарт-картку)"
 
+#: contents/lockscreen/MediaControls.qml:59
+#, fuzzy, kde-format
+#| msgid "No title"
+msgctxt "@info:status"
+msgid "No title"
+msgstr "Без назвы"
+
+#: contents/lockscreen/MediaControls.qml:60
+#, fuzzy, kde-format
+#| msgid "No media playing"
+msgctxt "@info:status"
+msgid "No media playing"
+msgstr "Медыяфайлы не прайграюцца"
+
 #: contents/lockscreen/MediaControls.qml:88
 #, fuzzy, kde-format
 #| msgid "Previous track"
@@ -1203,12 +1217,6 @@ msgstr "Выйсці з рэжыму рэдагавання"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Індыкатар фокуса панэлі"
-
-#~ msgid "No title"
-#~ msgstr "Без назвы"
-
-#~ msgid "No media playing"
-#~ msgstr "Медыяфайлы не прайграюцца"
 
 #~ msgid "Configure activity"
 #~ msgstr "Наладжванне пакоя"

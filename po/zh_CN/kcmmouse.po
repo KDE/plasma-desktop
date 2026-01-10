@@ -128,19 +128,19 @@ msgstr "配置额外按钮…"
 #, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
-msgstr ""
+msgstr "设备："
 
 #: ui/main.qml:87
 #, kde-format
 msgctxt "@title:group"
 msgid "General:"
-msgstr ""
+msgstr "常规："
 
 #: ui/main.qml:88
 #, kde-format
 msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
-msgstr ""
+msgstr "启用设备"
 
 #: ui/main.qml:105
 #, kde-format
@@ -152,7 +152,7 @@ msgstr "左键和右键："
 #, kde-format
 msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
-msgstr ""
+msgstr "对调 (左手模式)"
 
 #: ui/main.qml:121
 #, kde-format
@@ -174,26 +174,26 @@ msgstr ""
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
-msgstr ""
+msgstr "指针速度："
 
 #: ui/main.qml:227
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
-msgstr ""
+msgstr "启用指针加速度"
 
 #: ui/main.qml:241
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
-msgstr ""
+msgstr "启用后，指针的移动距离会随着移动速度的加快而增加。"
 
 #: ui/main.qml:254
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
-msgstr ""
+msgstr "滚动速度："
 
 #: ui/main.qml:304
 #, kde-format
@@ -211,19 +211,19 @@ msgstr "快"
 #, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"
-msgstr ""
+msgstr "滚动："
 
 #: ui/main.qml:322
 #, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction"
-msgstr ""
+msgstr "反转滚动方向"
 
 #: ui/main.qml:339
 #, kde-format
 msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
-msgstr ""
+msgstr "按住中键并移动鼠标以滚动"
 
 #: ui/main.qml:351
 #, kde-format
@@ -234,3 +234,5 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"这将干扰使用中键拖动的应用程序，例如某些图像编辑器、文档查看器或游戏。此功能"
+"在任意设备上均可使用，但主要用于在没有滚轮设备上替代滚轮的功能。"

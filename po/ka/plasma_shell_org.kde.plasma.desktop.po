@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:44+0000\n"
 "PO-Revision-Date: 2026-01-08 05:57+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -1007,6 +1007,20 @@ msgctxt "@info:usagetip"
 msgid "(or scan your smartcard)"
 msgstr "(ან დაასკანირეთ თქვენი სმარტ ბარათი)"
 
+#: contents/lockscreen/MediaControls.qml:59
+#, fuzzy, kde-format
+#| msgid "No title"
+msgctxt "@info:status"
+msgid "No title"
+msgstr "სათაურის გარეშე"
+
+#: contents/lockscreen/MediaControls.qml:60
+#, fuzzy, kde-format
+#| msgid "No media playing"
+msgctxt "@info:status"
+msgid "No media playing"
+msgstr "არაფერს ვუკრავ"
+
 #: contents/lockscreen/MediaControls.qml:88
 #, kde-format
 msgctxt "@action:button Accessible only"
@@ -1048,12 +1062,6 @@ msgstr "ჩასწორების რეჟიმიდან გასვ�
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "პანელის ფოკუსის მაჩვენებელი"
-
-#~ msgid "No title"
-#~ msgstr "სათაურის გარეშე"
-
-#~ msgid "No media playing"
-#~ msgstr "არაფერს ვუკრავ"
 
 #~ msgid "Configure activity"
 #~ msgstr "აქტივობის მორგება"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:44+0000\n"
 "PO-Revision-Date: 2025-10-03 13:25+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -1136,6 +1136,20 @@ msgctxt "@info:usagetip"
 msgid "(or scan your smartcard)"
 msgstr "(sau scanați smartcard-ul)"
 
+#: contents/lockscreen/MediaControls.qml:59
+#, fuzzy, kde-format
+#| msgid "No title"
+msgctxt "@info:status"
+msgid "No title"
+msgstr "Fără titlu"
+
+#: contents/lockscreen/MediaControls.qml:60
+#, fuzzy, kde-format
+#| msgid "No media playing"
+msgctxt "@info:status"
+msgid "No media playing"
+msgstr "Nimic în redare"
+
 #: contents/lockscreen/MediaControls.qml:88
 #, fuzzy, kde-format
 #| msgid "Previous track"
@@ -1183,12 +1197,6 @@ msgstr "Ieși din regim de modificare"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Indicator de focalizare a panoului"
-
-#~ msgid "No title"
-#~ msgstr "Fără titlu"
-
-#~ msgid "No media playing"
-#~ msgstr "Nimic în redare"
 
 #~ msgid "Configure activity"
 #~ msgstr "Configurează activitatea"

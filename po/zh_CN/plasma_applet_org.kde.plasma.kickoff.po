@@ -47,13 +47,13 @@ msgstr "显示到常用程序"
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
-msgstr ""
+msgstr "常规"
 
 #: ConfigGeneral.qml:47
 #, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
-msgstr ""
+msgstr "图标："
 
 #: ConfigGeneral.qml:53
 #, kde-format
@@ -103,31 +103,31 @@ msgstr "移除图标"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
-msgstr ""
+msgstr "应用程序显示方式："
 
 #: ConfigGeneral.qml:122
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
-msgstr ""
+msgstr "仅名称"
 
 #: ConfigGeneral.qml:122
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
-msgstr ""
+msgstr "仅描述"
 
 #: ConfigGeneral.qml:122
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
-msgstr ""
+msgstr "名称 (描述)"
 
 #: ConfigGeneral.qml:122
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
-msgstr ""
+msgstr "描述 (名称)"
 
 #: ConfigGeneral.qml:132
 #, kde-format
@@ -177,7 +177,7 @@ msgstr "这不会影响应用程序在搜索结果或常用程序页面中的排
 #, kde-format
 msgctxt "@option:check"
 msgid "Use compact list item style"
-msgstr ""
+msgstr "列表项目使用紧凑样式"
 
 #: ConfigGeneral.qml:191
 #, kde-format
@@ -189,13 +189,13 @@ msgstr "在触摸模式下自动禁用"
 #, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly installed applications"
-msgstr ""
+msgstr "突出显示新安装的应用程序"
 
 #: ConfigGeneral.qml:204
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
-msgstr ""
+msgstr "悬停时切换侧边栏类别"
 
 #: ConfigGeneral.qml:210
 #, kde-format
@@ -207,103 +207,103 @@ msgstr "配置搜索插件…"
 #, kde-format
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
-msgstr ""
+msgstr "侧边栏位置："
 
 #: ConfigGeneral.qml:221 ConfigGeneral.qml:229
 #, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Right"
-msgstr ""
+msgstr "右"
 
 #: ConfigGeneral.qml:221
 #, kde-format
 msgctxt "option:radio sidebar position"
 msgid "Left"
-msgstr ""
+msgstr "左"
 
 #: ConfigGeneral.qml:229
 #, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Left"
-msgstr ""
+msgstr "左"
 
 #: ConfigGeneral.qml:237
 #, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
-msgstr ""
+msgstr "常用程序显示方式："
 
 #: ConfigGeneral.qml:238
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
-msgstr ""
+msgstr "网格"
 
 #: ConfigGeneral.qml:246
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
-msgstr ""
+msgstr "列表"
 
 #: ConfigGeneral.qml:254
 #, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
-msgstr ""
+msgstr "显示其他应用程序："
 
 #: ConfigGeneral.qml:255
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
-msgstr ""
+msgstr "网格"
 
 #: ConfigGeneral.qml:263
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
-msgstr ""
+msgstr "列表"
 
 #: ConfigGeneral.qml:275
 #, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
-msgstr ""
+msgstr "显示按钮："
 
 #: ConfigGeneral.qml:276
 #, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power"
-msgstr ""
+msgstr "电源"
 
 #: ConfigGeneral.qml:285
 #, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Session"
-msgstr ""
+msgstr "会话"
 
 #: ConfigGeneral.qml:294
 #, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
-msgstr ""
+msgstr "电源和会话"
 
 #: ConfigGeneral.qml:303
 #, kde-format
 msgctxt "@option:check"
 msgid "Show action button captions"
-msgstr ""
+msgstr "显示操作按钮的文字标签"
 
 #: Footer.qml:101
 #, kde-format
 msgctxt "@title:tab kickoff sidebar tab"
 msgid "Applications"
-msgstr ""
+msgstr "应用程序"
 
 #: Footer.qml:117
 #, kde-format
 msgctxt "@title:tab kickoff sidebar tab"
 msgid "Places"
-msgstr ""
+msgstr "常用位置"
 
 #: FullRepresentation.qml:133
 #, kde-format
@@ -315,7 +315,7 @@ msgstr "没有匹配的内容"
 #, kde-format
 msgctxt "@action:button icon-only, for tooltip/Accessible"
 msgid "Open user settings"
-msgstr ""
+msgstr "打开用户设置"
 
 #: Header.qml:264
 #, kde-format
@@ -323,25 +323,25 @@ msgctxt ""
 "@action:button Pin widget open if it loses focus, icon-only button, for "
 "tooltip/Accessible"
 msgid "Keep Open"
-msgstr ""
+msgstr "保持展开状态"
 
 #: KickoffGridDelegate.qml:59
 #, kde-format
 msgctxt "@label Newly installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "新"
 
 #: KickoffGridDelegate.qml:60
 #, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly installed application"
-msgstr ""
+msgstr "新安装的应用程序"
 
 #: KickoffGridView.qml:101
 #, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Grid with %1 rows, %2 columns"
-msgstr ""
+msgstr "%1 行 %2 列的网格"
 
 #: KickoffListDelegate.qml:117
 #, kde-format
@@ -353,43 +353,43 @@ msgstr "新增"
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly installed application in this category"
-msgstr ""
+msgstr "此类别中有一个新安装的应用程序"
 
 #: KickoffListDelegate.qml:119
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly installed application"
-msgstr ""
+msgstr "新安装的应用程序"
 
 #: LeaveButtons.qml:171
 #, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Session"
-msgstr ""
+msgstr "会话"
 
 #: LeaveButtons.qml:171
 #, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Power"
-msgstr ""
+msgstr "电源"
 
 #: LeaveButtons.qml:171
 #, kde-format
 msgctxt "@title:menu menubutton"
 msgid "More"
-msgstr ""
+msgstr "更多"
 
 #: LeaveButtons.qml:171
 #, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Session and Power"
-msgstr ""
+msgstr "会话和电源"
 
 #: main.qml:356
 #, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
-msgstr ""
+msgstr "编辑应用程序…"
 
 #: PlacesPage.qml:64
 #, kde-format

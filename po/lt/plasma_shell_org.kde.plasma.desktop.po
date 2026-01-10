@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:44+0000\n"
 "PO-Revision-Date: 2025-09-26 16:01+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -1137,6 +1137,20 @@ msgctxt "@info:usagetip"
 msgid "(or scan your smartcard)"
 msgstr "(arba nuskenuokite lustinę kortelę)"
 
+#: contents/lockscreen/MediaControls.qml:59
+#, fuzzy, kde-format
+#| msgid "No title"
+msgctxt "@info:status"
+msgid "No title"
+msgstr "Nėra pavadinimo"
+
+#: contents/lockscreen/MediaControls.qml:60
+#, fuzzy, kde-format
+#| msgid "No media playing"
+msgctxt "@info:status"
+msgid "No media playing"
+msgstr "Nieko neatkuriama"
+
 #: contents/lockscreen/MediaControls.qml:88
 #, fuzzy, kde-format
 #| msgid "Previous track"
@@ -1184,12 +1198,6 @@ msgstr "Išjungti taisymo veikseną"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Skydelio fokusavimo indikatorius"
-
-#~ msgid "No title"
-#~ msgstr "Nėra pavadinimo"
-
-#~ msgid "No media playing"
-#~ msgstr "Nieko neatkuriama"
 
 #~ msgid "Configure activity"
 #~ msgstr "Konfigūruoti veiklą"

@@ -45,27 +45,27 @@ msgstr "要从会话中排除的应用程序"
 #, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Failed to request restart to firmware setup: %1"
-msgstr ""
+msgstr "请求重新启动到固件设置失败：%1"
 
 #: ui/main.qml:31
 #, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
-msgstr ""
+msgstr "下次重新启动计算机时，它将进入 UEFI 设置。"
 
 #: ui/main.qml:32
 #, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
-msgstr ""
+msgstr "下次重新启动计算机时，它将进入固件设置。"
 
 #: ui/main.qml:37
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart Now"
-msgstr ""
+msgstr "立即重新启动"
 
 #: ui/main.qml:46
 #, kde-format
@@ -99,7 +99,7 @@ msgstr "会话恢复"
 #, kde-format
 msgctxt "@title:group prefix for radiobuttons"
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "登录时自动启动应用程序："
 
 #: ui/main.qml:72
 #, kde-format
@@ -139,7 +139,7 @@ msgstr "启动为空会话"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Ignored applications:"
-msgstr ""
+msgstr "忽略的应用程序："
 
 #: ui/main.qml:132
 #, kde-format

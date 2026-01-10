@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:44+0000\n"
 "PO-Revision-Date: 2025-11-08 01:10+0100\n"
 "Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -1137,6 +1137,20 @@ msgctxt "@info:usagetip"
 msgid "(or scan your smartcard)"
 msgstr "(oder Smartcard einlesen)"
 
+#: contents/lockscreen/MediaControls.qml:59
+#, fuzzy, kde-format
+#| msgid "No title"
+msgctxt "@info:status"
+msgid "No title"
+msgstr "Kein Titel"
+
+#: contents/lockscreen/MediaControls.qml:60
+#, fuzzy, kde-format
+#| msgid "No media playing"
+msgctxt "@info:status"
+msgid "No media playing"
+msgstr "Es werden keine Medien wiedergegeben"
+
 #: contents/lockscreen/MediaControls.qml:88
 #, fuzzy, kde-format
 #| msgid "Previous track"
@@ -1184,12 +1198,6 @@ msgstr "Bearbeitungsmodus beenden"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Fokus der Kontrollleiste sichtbar machen"
-
-#~ msgid "No title"
-#~ msgstr "Kein Titel"
-
-#~ msgid "No media playing"
-#~ msgstr "Es werden keine Medien wiedergegeben"
 
 #~ msgid "Configure activity"
 #~ msgstr "Aktivität einrichten"

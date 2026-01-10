@@ -58,7 +58,7 @@ msgctxt "@info:status inlinemessage"
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
-msgstr ""
+msgstr "后台服务管理器 (kded6) 当前没有运行。请确保已经正确安装了该软件包。"
 
 #: ui/main.qml:65
 #, kde-format
@@ -66,7 +66,7 @@ msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
-msgstr ""
+msgstr "如果在当前环境无法发挥作用，一些服务会在手动启动后再次将自身禁用。"
 
 #: ui/main.qml:75
 #, kde-format
@@ -75,36 +75,37 @@ msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
+"后台服务管理器 (kded6) 在重新启动以应用更改时，一些服务已被自动启动/停止。"
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All Services"
-msgstr ""
+msgstr "所有服务"
 
 #: ui/main.qml:124
 #, kde-format
 msgctxt "@item:inlistbox List running services"
 msgid "Running"
-msgstr ""
+msgstr "正在运行"
 
 #: ui/main.qml:125
 #, kde-format
 msgctxt "@item:inlistbox List not running services"
 msgid "Not Running"
-msgstr ""
+msgstr "没有运行"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@title:group list section"
 msgid "Startup Services"
-msgstr ""
+msgstr "启动服务"
 
 #: ui/main.qml:163
 #, kde-format
 msgctxt "@title:group list section"
 msgid "Load-on-Demand Services"
-msgstr ""
+msgstr "按需加载服务"
 
 #: ui/main.qml:182
 #, kde-format
@@ -122,19 +123,19 @@ msgstr "启动时启用自动加载 %1"
 #, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Toggle automatically loading this service on startup"
-msgstr ""
+msgstr "切换是否在启动时自动加载服务"
 
 #: ui/main.qml:227
 #, kde-format
 msgctxt "@info:status"
 msgid "Not running"
-msgstr ""
+msgstr "没有运行"
 
 #: ui/main.qml:228
 #, kde-format
 msgctxt "@info:status"
 msgid "Running"
-msgstr ""
+msgstr "正在运行"
 
 #: ui/main.qml:248
 #, kde-format
@@ -152,10 +153,10 @@ msgstr "启动 %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Service"
-msgstr ""
+msgstr "停止服务"
 
 #: ui/main.qml:251
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Service"
-msgstr ""
+msgstr "启动服务"

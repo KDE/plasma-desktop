@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:44+0000\n"
 "PO-Revision-Date: 2024-04-23 19:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -22,7 +22,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:status currently active activity"
 msgid "Currently being used"
-msgstr ""
+msgstr "当前正被使用"
 
 #: contents/activitymanager/ActivityItem.qml:243
 #, kde-format
@@ -31,6 +31,8 @@ msgid ""
 "Move to\n"
 "this activity"
 msgstr ""
+"移动到\n"
+"此活动"
 
 #: contents/activitymanager/ActivityItem.qml:273
 #, kde-format
@@ -39,60 +41,62 @@ msgid ""
 "Show also\n"
 "in this activity"
 msgstr ""
+"同时显示\n"
+"在此活动中"
 
 #: contents/activitymanager/ActivityItem.qml:335
 #, kde-format
 msgctxt "@action:button tooltip only, opens kcm"
 msgid "Configure"
-msgstr ""
+msgstr "配置"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
 msgctxt "@action:button opens Activity kcm"
 msgid "Create activity…"
-msgstr ""
+msgstr "创建活动…"
 
 #: contents/activitymanager/Heading.qml:59
 #, kde-format
 msgctxt "@title:window"
 msgid "Activities"
-msgstr ""
+msgstr "活动"
 
 #: contents/applet/AppletError.qml:165
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "复制到剪贴板"
 
 #: contents/applet/AppletError.qml:188
 #, kde-format
 msgctxt "@action:button opens dialog"
 msgid "View Error Details…"
-msgstr ""
+msgstr "查看错误详情…"
 
 #: contents/applet/CompactApplet.qml:91
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for panel widget %1"
 msgid "Open %1"
-msgstr ""
+msgstr "打开 %1"
 
 #: contents/configuration/AboutPlugin.qml:21
 #, kde-format
 msgctxt "@title:window About this widget"
 msgid "About"
-msgstr ""
+msgstr "关于"
 
 #: contents/configuration/AboutPlugin.qml:51
 #, kde-format
 msgctxt "plasma_shell_org.kde.plasma.desktop"
 msgid "Send an email to %1"
-msgstr ""
+msgstr "发送电子邮件到 %1"
 
 #: contents/configuration/AboutPlugin.qml:65
 #, kde-format
 msgctxt "@action:button icononly for tooltip & accessible %1 is url"
 msgid "Open website %1"
-msgstr ""
+msgstr "打开网站 %1"
 
 #: contents/configuration/AboutPlugin.qml:146
 #, kde-format
@@ -110,19 +114,19 @@ msgstr "获取帮助"
 #, kde-format
 msgctxt "@action:button urlbutton"
 msgid "Report an issue"
-msgstr ""
+msgstr "报告问题"
 
 #: contents/configuration/AboutPlugin.qml:172
 #, kde-format
 msgctxt "@title license information"
 msgid "Copyright"
-msgstr ""
+msgstr "版权信息"
 
 #: contents/configuration/AboutPlugin.qml:191
 #, kde-format
 msgctxt "@label %1 is the short SPDX text for the license"
 msgid "License: %1"
-msgstr ""
+msgstr "许可证：%1"
 
 #: contents/configuration/AboutPlugin.qml:197
 #, kde-format
@@ -134,62 +138,62 @@ msgstr "查看许可证"
 #, kde-format
 msgctxt "@title:group"
 msgid "Authors"
-msgstr ""
+msgstr "作者"
 
 #: contents/configuration/AboutPlugin.qml:223
 #, kde-format
 msgctxt "@title:group"
 msgid "Credits"
-msgstr ""
+msgstr "鸣谢"
 
 #: contents/configuration/AboutPlugin.qml:236
 #, kde-format
 msgctxt "@title:group"
 msgid "Translators"
-msgstr ""
+msgstr "翻译者"
 
 #: contents/configuration/AppletConfiguration.qml:90
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "键盘快捷键"
 
 #: contents/configuration/AppletConfiguration.qml:337
 #, kde-format
 msgctxt "@title:group for About dialog page"
 msgid "About"
-msgstr ""
+msgstr "关于"
 
 #: contents/configuration/AppletConfiguration.qml:385
 #, kde-format
 msgctxt "@title:window dialog title"
 msgid "Apply Settings"
-msgstr ""
+msgstr "应用设置"
 
 #: contents/configuration/AppletConfiguration.qml:386
 #, kde-format
 msgctxt "@label dialog body"
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
-msgstr ""
+msgstr "当前页面包含尚未保存的更改。您想要应用还是放弃这些更改？"
 
 #: contents/configuration/AppletConfiguration.qml:418
 #, kde-format
 msgctxt "@action:button"
 msgid "OK"
-msgstr ""
+msgstr "确认"
 
 #: contents/configuration/AppletConfiguration.qml:425
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
-msgstr ""
+msgstr "应用"
 
 #: contents/configuration/AppletConfiguration.qml:431
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: contents/configuration/ConfigCategoryDelegate.qml:26
 #, kde-format
@@ -197,73 +201,73 @@ msgctxt ""
 "@info:whatsthis Accessible description for sidebar entries opening "
 "configuration page"
 msgid "Open configuration page"
-msgstr ""
+msgstr "打开配置页面"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:19
 #, kde-format
 msgctxt "@label for shortcuts"
 msgid "Left-Button"
-msgstr ""
+msgstr "左键"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:20
 #, kde-format
 msgctxt "@label for shortcuts"
 msgid "Right-Button"
-msgstr ""
+msgstr "右键"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:21
 #, kde-format
 msgctxt "@label for shortcuts"
 msgid "Middle-Button"
-msgstr ""
+msgstr "中键"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:22
 #, kde-format
 msgctxt "@label for shortcuts"
 msgid "Back-Button"
-msgstr ""
+msgstr "后退键"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:23
 #, kde-format
 msgctxt "@label for shortcuts"
 msgid "Forward-Button"
-msgstr ""
+msgstr "前进键"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:25
 #, kde-format
 msgctxt "@label for shortcuts"
 msgid "Vertical-Scroll"
-msgstr ""
+msgstr "滚轮垂直滚动"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:26
 #, kde-format
 msgctxt "@label for shortcuts"
 msgid "Horizontal-Scroll"
-msgstr ""
+msgstr "滚轮水平滚动"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:28
 #, kde-format
 msgctxt "@label for shortcuts"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:29
 #, kde-format
 msgctxt "@label for shortcuts"
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:30
 #, kde-format
 msgctxt "@label for shortcuts"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:31
 #, kde-format
 msgctxt "@label for shortcuts"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:72
 #, kde-format
@@ -275,49 +279,49 @@ msgstr "+"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Action"
-msgstr ""
+msgstr "添加操作"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:76
 #, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Layout changes have been restricted by the system administrator"
-msgstr ""
+msgstr "布局更改已被系统管理员限制使用"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:91
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Layout:"
-msgstr ""
+msgstr "布局： "
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:114
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Wallpaper type:"
-msgstr ""
+msgstr "壁纸类型："
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Plugins…"
-msgstr ""
+msgstr "获取新插件…"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:243
 #, kde-format
 msgctxt "@info"
 msgid "Layout changes must be applied before other changes can be made"
-msgstr ""
+msgstr "布局更改后，必须先应用后才能更改其他选项"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:247
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Now"
-msgstr ""
+msgstr "立即应用"
 
 #: contents/configuration/ConfigurationShortcuts.qml:16
 #, kde-format
 msgctxt "@title:window for configuration page"
 msgid "Shortcuts"
-msgstr ""
+msgstr "快捷键"
 
 #: contents/configuration/ConfigurationShortcuts.qml:29
 #, kde-format
@@ -329,31 +333,31 @@ msgstr "激活小部件，效果与点击它相同："
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Wallpaper"
-msgstr ""
+msgstr "壁纸"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Mouse Actions"
-msgstr ""
+msgstr "鼠标操作"
 
 #: contents/configuration/MouseEventInputButton.qml:13
 #, kde-format
 msgctxt "@action:button inactive state for button recording mouse input"
 msgid "Add Action"
-msgstr ""
+msgstr "添加操作"
 
 #: contents/configuration/MouseEventInputButton.qml:20
 #, kde-format
 msgctxt "@action:button active state for button recording mouse input"
 msgid "Input Here"
-msgstr ""
+msgstr "在此输入"
 
 #: contents/configuration/PanelConfiguration.qml:99
 #, kde-format
 msgctxt "@title:window"
 msgid "Panel Settings"
-msgstr ""
+msgstr "面板设置"
 
 #: contents/configuration/PanelConfiguration.qml:108
 #, kde-format
@@ -379,163 +383,163 @@ msgstr "小部件…"
 #, kde-format
 msgctxt "@title:group"
 msgid "Position"
-msgstr ""
+msgstr "位置"
 
 #: contents/configuration/PanelConfiguration.qml:167
 #, kde-format
 msgctxt "@label panel screen edge"
 msgid "Top"
-msgstr ""
+msgstr "顶部"
 
 #: contents/configuration/PanelConfiguration.qml:168
 #, kde-format
 msgctxt "@label panel screen edge"
 msgid "Right"
-msgstr ""
+msgstr "右侧"
 
 #: contents/configuration/PanelConfiguration.qml:169
 #, kde-format
 msgctxt "@label panel screen edge"
 msgid "Left"
-msgstr ""
+msgstr "左侧"
 
 #: contents/configuration/PanelConfiguration.qml:170
 #, kde-format
 msgctxt "@label panel screen edge"
 msgid "Bottom"
-msgstr ""
+msgstr "底部"
 
 #: contents/configuration/PanelConfiguration.qml:190
 #, kde-format
 msgctxt "action:button"
 msgid "Set Position…"
-msgstr ""
+msgstr "设置位置…"
 
 #: contents/configuration/PanelConfiguration.qml:217
 #, kde-format
 msgctxt "@title:group"
 msgid "Alignment"
-msgstr ""
+msgstr "对齐"
 
 #: contents/configuration/PanelConfiguration.qml:282
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Top"
-msgstr ""
+msgstr "靠上"
 
 #: contents/configuration/PanelConfiguration.qml:282
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Left"
-msgstr ""
+msgstr "靠左"
 
 #: contents/configuration/PanelConfiguration.qml:283
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Center"
-msgstr ""
+msgstr "居中"
 
 #: contents/configuration/PanelConfiguration.qml:284
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Bottom"
-msgstr ""
+msgstr "靠下"
 
 #: contents/configuration/PanelConfiguration.qml:284
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Right"
-msgstr ""
+msgstr "靠右"
 
 #: contents/configuration/PanelConfiguration.qml:314
 #, kde-format
 msgctxt "@title:group panel height"
 msgid "Height"
-msgstr ""
+msgstr "高度"
 
 #: contents/configuration/PanelConfiguration.qml:315
 #, kde-format
 msgctxt "@title:group panel width"
 msgid "Width"
-msgstr ""
+msgstr "宽度"
 
 #: contents/configuration/PanelConfiguration.qml:334
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Fill height"
-msgstr ""
+msgstr "填满高度"
 
 #: contents/configuration/PanelConfiguration.qml:334
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Fill width"
-msgstr ""
+msgstr "填满宽度"
 
 #: contents/configuration/PanelConfiguration.qml:335
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Fit content"
-msgstr ""
+msgstr "适合内容"
 
 #: contents/configuration/PanelConfiguration.qml:336
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Custom"
-msgstr ""
+msgstr "自定义"
 
 #: contents/configuration/PanelConfiguration.qml:369
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility"
-msgstr ""
+msgstr "显示/隐藏"
 
 #: contents/configuration/PanelConfiguration.qml:387
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always visible"
-msgstr ""
+msgstr "总是显示"
 
 #: contents/configuration/PanelConfiguration.qml:388
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Auto hide"
-msgstr ""
+msgstr "自动隐藏"
 
 #: contents/configuration/PanelConfiguration.qml:389
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Dodge windows"
-msgstr ""
+msgstr "避开窗口"
 
 #: contents/configuration/PanelConfiguration.qml:390
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Windows go below"
-msgstr ""
+msgstr "覆盖窗口"
 
 #: contents/configuration/PanelConfiguration.qml:450
 #, kde-format
 msgctxt "@title:group"
 msgid "Opacity"
-msgstr ""
+msgstr "透明度"
 
 #: contents/configuration/PanelConfiguration.qml:466
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Adaptive"
-msgstr ""
+msgstr "自适应"
 
 #: contents/configuration/PanelConfiguration.qml:467
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Opaque"
-msgstr ""
+msgstr "不透明"
 
 #: contents/configuration/PanelConfiguration.qml:468
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Translucent"
-msgstr ""
+msgstr "透明"
 
 #: contents/configuration/PanelConfiguration.qml:500
 #, kde-format
@@ -572,37 +576,37 @@ msgstr "修复"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Panel Width:"
-msgstr ""
+msgstr "面板宽度："
 
 #: contents/configuration/PanelConfiguration.qml:648
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Panel Height:"
-msgstr ""
+msgstr "面板高度："
 
 #: contents/configuration/PanelConfiguration.qml:671
 #, kde-format
 msgctxt "@title:group"
 msgid "Focus shortcut:"
-msgstr ""
+msgstr "焦点快捷键："
 
 #: contents/configuration/PanelConfiguration.qml:682
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Press this keyboard shortcut to move focus to the Panel"
-msgstr ""
+msgstr "按下此键盘快捷键以移动焦点到面板"
 
 #: contents/configuration/PanelConfiguration.qml:689
 #, kde-format
 msgctxt "@action:button acccessible name"
 msgid "Focus Shortcut Setter"
-msgstr ""
+msgstr "聚焦快捷键设置"
 
 #: contents/configuration/PanelConfiguration.qml:690
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for button"
 msgid "Button to set the shortcut for the panel to gain focus"
-msgstr ""
+msgstr "设置面板获取焦点快捷键的按钮"
 
 #: contents/configuration/PanelConfiguration.qml:716
 #, kde-format
@@ -614,7 +618,7 @@ msgstr "删除面板"
 #, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Remove this panel; this action is undo-able"
-msgstr ""
+msgstr "移除此面板；此操作可以撤销"
 
 #: contents/configuration/PanelConfiguration.qml:728
 #, kde-format
@@ -626,7 +630,7 @@ msgstr "创建面板副本"
 #, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Create a new panel with the same settings and applets"
-msgstr ""
+msgstr "创建具有相同设置和小程序的新面板"
 
 #: contents/configuration/PanelConfiguration.qml:741
 #, kde-format
@@ -645,7 +649,7 @@ msgstr "退出编辑模式"
 #, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Close Panel Settings window and exit Edit Mode"
-msgstr ""
+msgstr "关闭面板设置窗口并退出编辑模式"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:25
 #, kde-format
@@ -692,56 +696,56 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Manage Panels and Desktops"
-msgstr ""
+msgstr "管理面板和桌面"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
-msgstr ""
+msgstr "您可以将面板和桌面拖动到不同的屏幕上。"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:44
 #, kde-format
 msgctxt "@action:button Close window"
 msgid "Close"
-msgstr ""
+msgstr "关闭"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:187
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Swap with Desktop on Screen %1"
-msgstr ""
+msgstr "与屏幕 %1 的桌面对调"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:188
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Move to Screen %1"
-msgstr ""
+msgstr "移动到屏幕 %1"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:202
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove Desktop"
-msgstr ""
+msgstr "移除桌面"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:203
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove Panel"
-msgstr ""
+msgstr "移除面板"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:279
 #, kde-format
 msgctxt "@info % is screen name"
 msgid "%1 (primary)"
-msgstr ""
+msgstr "%1 (主要)"
 
 #: contents/explorer/AppletAlternatives.qml:70
 #, kde-format
 msgctxt "@title:window for widget alternatives explorer"
 msgid "Alternative Widgets"
-msgstr ""
+msgstr "替代小部件"
 
 #: contents/explorer/AppletDelegate.qml:28
 #, kde-format
@@ -753,7 +757,7 @@ msgstr "添加 %1"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Unsupported Widget"
-msgstr ""
+msgstr "不支持的小部件"
 
 #: contents/explorer/AppletDelegate.qml:202
 #, kde-format
@@ -778,13 +782,13 @@ msgstr "最近安装"
 #, kde-format
 msgctxt "@action:button tooltip and accessible cancel uninstall widget"
 msgid "Cancel Uninstallation"
-msgstr ""
+msgstr "取消卸载"
 
 #: contents/explorer/AppletDelegate.qml:218
 #, kde-format
 msgctxt "@action:button tooltip and accessible uninstall widget"
 msgid "Mark for Uninstallation"
-msgstr ""
+msgstr "标记为卸载"
 
 #: contents/explorer/AppletDelegate.qml:222
 #, kde-format
@@ -802,7 +806,7 @@ msgstr "标记小部件 %1 为卸载。需要确认"
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove all instances"
-msgstr ""
+msgstr "移除所有实例"
 
 #: contents/explorer/AppletDelegate.qml:269
 #, kde-format
@@ -818,13 +822,13 @@ msgstr[0] "移除所有 %2 小部件的 %1 个正在运行的的实例"
 #, kde-format
 msgctxt "@action:button like listbox, switches category to all widgets"
 msgid "All Widgets"
-msgstr ""
+msgstr "所有小部件"
 
 #: contents/explorer/WidgetExplorer.qml:169
 #, kde-format
 msgctxt "@title:group for widget grid"
 msgid "Widgets"
-msgstr ""
+msgstr "小部件"
 
 #: contents/explorer/WidgetExplorer.qml:178
 #, kde-format
@@ -854,7 +858,7 @@ msgstr "搜索小部件"
 #, kde-format
 msgctxt "@action:button tooltip only"
 msgid "Categories"
-msgstr ""
+msgstr "类别"
 
 #: contents/explorer/WidgetExplorer.qml:259
 #, kde-format
@@ -867,13 +871,13 @@ msgstr[0] "卸载 (%1 个小部件)"
 #, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets matched the search terms"
-msgstr ""
+msgstr "没有匹配该搜索条件的小部件"
 
 #: contents/explorer/WidgetExplorer.qml:389
 #, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets available"
-msgstr ""
+msgstr "没有可用的小部件"
 
 #: contents/lockscreen/config.qml:23
 #, kde-format
@@ -933,31 +937,31 @@ msgstr "显示在解锁框下方"
 #, kde-format
 msgctxt "@info:status"
 msgid "Unlocking failed"
-msgstr ""
+msgstr "解锁失败"
 
 #: contents/lockscreen/LockScreenUi.qml:281
 #, kde-format
 msgctxt "@info:status"
 msgid "Caps Lock is on"
-msgstr ""
+msgstr "大写锁定已打开"
 
 #: contents/lockscreen/LockScreenUi.qml:295
 #, kde-format
 msgctxt "@action:button"
 msgid "Slee&p"
-msgstr ""
+msgstr "睡眠(&P)"
 
 #: contents/lockscreen/LockScreenUi.qml:301
 #, kde-format
 msgctxt "@action:button"
 msgid "&Hibernate"
-msgstr ""
+msgstr "休眠(&H)"
 
 #: contents/lockscreen/LockScreenUi.qml:307
 #, kde-format
 msgctxt "@action:button"
 msgid "Switch &User"
-msgstr ""
+msgstr "切换用户(&U)"
 
 #: contents/lockscreen/LockScreenUi.qml:368
 #, kde-format
@@ -975,49 +979,61 @@ msgstr "切换布局"
 #, kde-format
 msgctxt "@info:placeholder in text field"
 msgid "Password"
-msgstr ""
+msgstr "密码"
 
 #: contents/lockscreen/MainBlock.qml:114
 #, kde-format
 msgctxt "@action:button accessible only"
 msgid "Unlock"
-msgstr ""
+msgstr "解锁"
 
 #: contents/lockscreen/MainBlock.qml:163
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(或者在指纹传感器上扫描您的指纹)"
 
 #: contents/lockscreen/MainBlock.qml:167
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "(or scan your smartcard)"
+msgstr "(或者扫描您的智能卡)"
+
+#: contents/lockscreen/MediaControls.qml:59
+#, kde-format
+msgctxt "@info:status"
+msgid "No title"
+msgstr ""
+
+#: contents/lockscreen/MediaControls.qml:60
+#, kde-format
+msgctxt "@info:status"
+msgid "No media playing"
 msgstr ""
 
 #: contents/lockscreen/MediaControls.qml:88
 #, kde-format
 msgctxt "@action:button Accessible only"
 msgid "Previous track"
-msgstr ""
+msgstr "上一首"
 
 #: contents/lockscreen/MediaControls.qml:100
 #, kde-format
 msgctxt "@action:button Accessible only"
 msgid "Play or Pause media"
-msgstr ""
+msgstr "播放或者暂停媒体"
 
 #: contents/lockscreen/MediaControls.qml:110
 #, kde-format
 msgctxt "@action:button Accessible only"
 msgid "Next track"
-msgstr ""
+msgstr "下一首"
 
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 #, kde-format
 msgctxt "@action:button no-password unlock"
 msgid "Unlock"
-msgstr ""
+msgstr "解锁"
 
 #: contents/views/DesktopEditMode.qml:122
 #, kde-format
@@ -1029,7 +1045,7 @@ msgstr "更多"
 #, kde-format
 msgctxt "@action:button"
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "退出编辑模式"
 
 #: contents/views/Panel.qml:326
 #, kde-format

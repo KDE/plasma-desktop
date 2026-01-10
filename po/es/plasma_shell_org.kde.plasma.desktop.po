@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:44+0000\n"
 "PO-Revision-Date: 2026-01-09 00:38+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -1010,6 +1010,18 @@ msgstr "(o escanee su huella digital en el lector)"
 msgctxt "@info:usagetip"
 msgid "(or scan your smartcard)"
 msgstr "(o escanee su tarjeta inteligente)"
+
+#: contents/lockscreen/MediaControls.qml:59
+#, kde-format
+msgctxt "@info:status"
+msgid "No title"
+msgstr ""
+
+#: contents/lockscreen/MediaControls.qml:60
+#, kde-format
+msgctxt "@info:status"
+msgid "No media playing"
+msgstr ""
 
 #: contents/lockscreen/MediaControls.qml:88
 #, kde-format

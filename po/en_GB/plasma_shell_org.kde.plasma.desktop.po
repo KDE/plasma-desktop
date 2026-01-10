@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:44+0000\n"
 "PO-Revision-Date: 2024-10-18 17:02+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -1146,6 +1146,20 @@ msgctxt "@info:usagetip"
 msgid "(or scan your smartcard)"
 msgstr "(or scan your smartcard)"
 
+#: contents/lockscreen/MediaControls.qml:59
+#, fuzzy, kde-format
+#| msgid "No title"
+msgctxt "@info:status"
+msgid "No title"
+msgstr "No title"
+
+#: contents/lockscreen/MediaControls.qml:60
+#, fuzzy, kde-format
+#| msgid "No media playing"
+msgctxt "@info:status"
+msgid "No media playing"
+msgstr "No media playing"
+
 #: contents/lockscreen/MediaControls.qml:88
 #, fuzzy, kde-format
 #| msgid "Previous track"
@@ -1193,12 +1207,6 @@ msgstr "Exit Edit Mode"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Panel Focus Indicator"
-
-#~ msgid "No title"
-#~ msgstr "No title"
-
-#~ msgid "No media playing"
-#~ msgstr "No media playing"
 
 #~ msgid "Configure activity"
 #~ msgstr "Configure activity"

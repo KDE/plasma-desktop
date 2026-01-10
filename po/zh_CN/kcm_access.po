@@ -360,37 +360,37 @@ msgstr[0] "分钟"
 #, kde-format
 msgctxt "@title:group for checkbox group"
 msgid "When a shortcut is used:"
-msgstr ""
+msgstr "使用快捷键时："
 
 #: ui/ActivationShortcuts.qml:90
 #, kde-format
 msgctxt "@option:check when shortcut used"
 msgid "Display a confirmation dialog"
-msgstr ""
+msgstr "显示确认对话框"
 
 #: ui/ActivationShortcuts.qml:101
 #, kde-format
 msgctxt "@option:check when shortcut used"
 msgid "Ring the system bell"
-msgstr ""
+msgstr "发出系统提示"
 
 #: ui/ActivationShortcuts.qml:112
 #, kde-format
 msgctxt "@option:check when shortcut used"
 msgid "Show a notification"
-msgstr ""
+msgstr "显示通知"
 
 #: ui/ActivationShortcuts.qml:123
 #, kde-format
 msgctxt "@action:button opens Notifications kcm"
 msgid "Configure Notifications…"
-msgstr ""
+msgstr "配置通知…"
 
 #: ui/Bell.qml:19
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Please choose an audio file"
-msgstr ""
+msgstr "请选择音频文件"
 
 #: ui/Bell.qml:21
 #, kde-format
@@ -402,7 +402,7 @@ msgstr "ogg、oga 和 wav 音频文件 (*.ogg *.oga *.wav)"
 #, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Audible bell:"
-msgstr ""
+msgstr "声音提示："
 
 #: ui/Bell.qml:31
 #, kde-format
@@ -420,31 +420,31 @@ msgstr "自定义声音："
 #, kde-format
 msgctxt "@action:button icononly tooltip"
 msgid "Choose audio file for the system bell"
-msgstr ""
+msgstr "选择系统声音提示的音频文件"
 
 #: ui/Bell.qml:76
 #, kde-format
 msgctxt "@action button accessible only"
 msgid "Choose audio file"
-msgstr ""
+msgstr "选择音频文件"
 
 #: ui/Bell.qml:77
 #, kde-format
 msgctxt "@info:usagetip accessible description for button"
 msgid "Opens dialog"
-msgstr ""
+msgstr "打开对话框"
 
 #: ui/Bell.qml:93
 #, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Visual bell:"
-msgstr ""
+msgstr "视觉提示："
 
 #: ui/Bell.qml:94
 #, kde-format
 msgctxt "@option:check Enable visual bell"
 msgid "Enable"
-msgstr ""
+msgstr "启用"
 
 #: ui/Bell.qml:108
 #, kde-format
@@ -475,14 +475,14 @@ msgstr "持续时间："
 msgctxt "@label:valuesuffix %1 is visible bell duration"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] ""
+msgstr[0] "%1 毫秒"
 
 #: ui/Bell.qml:170 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
 #, kde-format
 msgctxt "@label:valuesuffix short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
+msgstr[0] " 毫秒"
 
 #: ui/ColorblindnessCorrection.qml:21
 #, kde-format
@@ -558,25 +558,25 @@ msgstr "调整后的颜色："
 #, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Reds:"
-msgstr ""
+msgstr "红："
 
 #: ui/ColorblindnessCorrection.qml:133
 #, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Greens:"
-msgstr ""
+msgstr "绿："
 
 #: ui/ColorblindnessCorrection.qml:134
 #, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Blues:"
-msgstr ""
+msgstr "蓝："
 
 #: ui/ColorblindnessCorrection.qml:135
 #, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Purples:"
-msgstr ""
+msgstr "紫："
 
 #: ui/Invert.qml:22
 #, kde-format
@@ -606,13 +606,13 @@ msgstr "配置快捷键…"
 #, kde-format
 msgctxt "@title:group prefix"
 msgid "Slow keys:"
-msgstr ""
+msgstr "慢速键："
 
 #: ui/KeyboardFilters.qml:23
 #, kde-format
 msgctxt "@option:check Enable slow keys"
 msgid "Enable"
-msgstr ""
+msgstr "启用"
 
 #: ui/KeyboardFilters.qml:34
 #, kde-format
@@ -629,50 +629,50 @@ msgstr ""
 #, kde-format
 msgctxt "@label:spinbox Slow keys Delay"
 msgid "Delay:"
-msgstr ""
+msgstr "延时："
 
 #: ui/KeyboardFilters.qml:56
 #, kde-format
 msgctxt "@label:valuesuffix %1 is slow keys delay"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] ""
+msgstr[0] "%1 毫秒"
 
 #: ui/KeyboardFilters.qml:74
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Ring system bell:"
-msgstr ""
+msgstr "发出系统提示："
 
 #: ui/KeyboardFilters.qml:75
 #, kde-format
 msgctxt "@option:check Use system bell when a key is pressed"
 msgid "when any key is &pressed"
-msgstr ""
+msgstr "任意按键被按下时(&P)"
 
 #: ui/KeyboardFilters.qml:89
 #, kde-format
 msgctxt "@option:check Use system bell when a key is accepted"
 msgid "when any key is &accepted"
-msgstr ""
+msgstr "任意按键被接受时(&A)"
 
 #: ui/KeyboardFilters.qml:103
 #, kde-format
 msgctxt "@option:check Use system bell when a key is rejected"
 msgid "when any key is &rejected"
-msgstr ""
+msgstr "任意按键被拒绝时(&R)"
 
 #: ui/KeyboardFilters.qml:119
 #, kde-format
 msgctxt "@title:group prefix"
 msgid "Bounce keys:"
-msgstr ""
+msgstr "防抖键："
 
 #: ui/KeyboardFilters.qml:124
 #, kde-format
 msgctxt "@option:check Bounce keys enable"
 msgid "Enable"
-msgstr ""
+msgstr "启用"
 
 #: ui/KeyboardFilters.qml:135
 #, kde-format
@@ -689,20 +689,20 @@ msgstr ""
 #, kde-format
 msgctxt "@label:spinbox Bounce keys delay"
 msgid "Delay:"
-msgstr ""
+msgstr "延时："
 
 #: ui/KeyboardFilters.qml:157
 #, kde-format
 msgctxt "@label:valuesuffix %1 is bounce keys delay"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] ""
+msgstr[0] "%1 毫秒"
 
 #: ui/KeyboardFilters.qml:171
 #, kde-format
 msgctxt "@option:check for bounce keys"
 msgid "Ring system bell when rejected"
-msgstr ""
+msgstr "拒绝按键时发出系统提示"
 
 #: ui/main.qml:28
 #, kde-format
@@ -720,37 +720,37 @@ msgstr "系统提示"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Modifier Keys"
-msgstr ""
+msgstr "修饰键"
 
 #: ui/main.qml:43
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Keyboard Filters"
-msgstr ""
+msgstr "键盘输入过滤"
 
 #: ui/main.qml:48
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Mouse Navigation"
-msgstr ""
+msgstr "鼠标导航"
 
 #: ui/main.qml:53
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Activation Shortcuts"
-msgstr ""
+msgstr "激活快捷键"
 
 #: ui/main.qml:58
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
-msgstr ""
+msgstr "屏幕阅读器"
 
 #: ui/main.qml:63
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
-msgstr ""
+msgstr "色盲校正"
 
 #: ui/main.qml:68
 #, kde-format
@@ -762,7 +762,7 @@ msgstr "反相"
 #, kde-format
 msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
-msgstr ""
+msgstr "抖动指针"
 
 #: ui/ModifierKeys.qml:17
 #, kde-format
@@ -805,13 +805,13 @@ msgstr "连续两次按下修饰键将保持它处于激活状态直到再次按
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable when two keys are held down"
-msgstr ""
+msgstr "同时按住两个按键时禁用"
 
 #: ui/ModifierKeys.qml:70
 #, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when modifier keys are used"
-msgstr ""
+msgstr "修饰键按下时发出系统提示"
 
 #: ui/ModifierKeys.qml:88
 #, kde-format
@@ -882,7 +882,7 @@ msgstr "加速延迟："
 msgctxt "@label:valuesuffix acceleration delay spinbox %1 is value"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] ""
+msgstr[0] "%1 毫秒"
 
 #: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
 #: ui/MouseNavigation.qml:114
@@ -903,7 +903,7 @@ msgstr "重复间隔："
 msgctxt "@label:valuesuffix repeat interval spinbox %1 is value"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] ""
+msgstr[0] "%1 毫秒"
 
 #: ui/MouseNavigation.qml:93
 #, kde-format
@@ -916,7 +916,7 @@ msgstr "加速时间："
 msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] ""
+msgstr[0] "%1 毫秒"
 
 #: ui/MouseNavigation.qml:118
 #, kde-format
@@ -928,7 +928,7 @@ msgstr "最大速度："
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
-msgstr "光标加速："
+msgstr "指针加速："
 
 #: ui/ScreenReader.qml:20
 #, kde-format

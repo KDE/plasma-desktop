@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:44+0000\n"
 "PO-Revision-Date: 2024-09-19 17:30+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -1154,6 +1154,20 @@ msgctxt "@info:usagetip"
 msgid "(or scan your smartcard)"
 msgstr "(ή σαρώστε την έξυπνη κάρτα σας)"
 
+#: contents/lockscreen/MediaControls.qml:59
+#, fuzzy, kde-format
+#| msgid "No title"
+msgctxt "@info:status"
+msgid "No title"
+msgstr "Χωρίς τίτλο"
+
+#: contents/lockscreen/MediaControls.qml:60
+#, fuzzy, kde-format
+#| msgid "No media playing"
+msgctxt "@info:status"
+msgid "No media playing"
+msgstr "Δε γίνεται αναπαραγωγή πολυμέσων"
+
 #: contents/lockscreen/MediaControls.qml:88
 #, fuzzy, kde-format
 #| msgid "Previous track"
@@ -1201,12 +1215,6 @@ msgstr "Έξοδος λειτουργίας επεξεργασίας"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Δείκτης εστίασης πίνακα"
-
-#~ msgid "No title"
-#~ msgstr "Χωρίς τίτλο"
-
-#~ msgid "No media playing"
-#~ msgstr "Δε γίνεται αναπαραγωγή πολυμέσων"
 
 #~ msgid "Configure activity"
 #~ msgstr "Διαμόρφωση δραστηριότητας"

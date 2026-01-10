@@ -23,13 +23,13 @@ msgctxt "@info:status inlinemessage"
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
-msgstr ""
+msgstr "系统必须重启才能更改中键点击粘贴设置。"
 
 #: ui/main.qml:31
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
-msgstr ""
+msgstr "重新启动"
 
 #: ui/main.qml:47
 #, kde-format
@@ -58,6 +58,8 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"允许所有 Plasma 面板和桌面小部件在指针悬停时显示描述性工具提示。此设置对悬停"
+"在单个按钮和其他用户界面元素上时显示的悬停信息没有影响。"
 
 #: ui/main.qml:77
 #, kde-format
@@ -73,6 +75,8 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"允许所有 Plasma 小部件在音量、亮度发生更改或音频设备发生切换时显示屏显 (OSD) "
+"弹窗。"
 
 #: ui/main.qml:94
 #, kde-format
@@ -84,7 +88,7 @@ msgstr "滚动"
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
-msgstr ""
+msgstr "点击滚动条空白位置："
 
 #: ui/main.qml:101
 #, kde-format
@@ -92,7 +96,7 @@ msgctxt ""
 "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
 "scrolls to the clicked location'"
 msgid "Scrolls to the clicked location"
-msgstr ""
+msgstr "直接滚动到点击位置"
 
 #: ui/main.qml:119
 #, kde-format
@@ -100,13 +104,13 @@ msgctxt ""
 "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
 "scrolls one page up or down'"
 msgid "Scrolls one page up or down"
-msgstr ""
+msgstr "向上或向下滚动一页"
 
 #: ui/main.qml:137
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Middle-click to scroll to clicked location"
-msgstr ""
+msgstr "提示：中键点击即可直接滚动到点击位置"
 
 #: ui/main.qml:152
 #, kde-format
@@ -150,7 +154,7 @@ msgstr "选中"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
-msgstr ""
+msgstr "提示：双击可以打开对象"
 
 #: ui/main.qml:214
 #, kde-format
@@ -162,7 +166,7 @@ msgstr "打开"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
-msgstr ""
+msgstr "提示：单击对象的选择框可以选中"
 
 #: ui/main.qml:246
 #, kde-format
@@ -184,7 +188,7 @@ msgstr "粘贴选中的文本"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Double-click interval:"
-msgstr ""
+msgstr "双击间隔时间："
 
 #: ui/main.qml:283
 #, kde-format
@@ -206,6 +210,8 @@ msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
 msgstr ""
+"在这个间隔时长内发生的两次点击将被视作一次双击。有些应用程序可能不遵守此设"
+"置。"
 
 #: ui/main.qml:312
 #, kde-format
@@ -219,19 +225,19 @@ msgstr "双击文件夹进行测试。如果它的外观没有发生变化，请
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
-msgstr ""
+msgstr "拖放"
 
 #: ui/main.qml:361
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
-msgstr ""
+msgstr "拖动文件或文件夹时："
 
 #: ui/main.qml:362
 #, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
-msgstr ""
+msgstr "总是询问要进行什么操作"
 
 #: ui/main.qml:378
 #, kde-kuit-format
@@ -248,7 +254,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
-msgstr ""
+msgstr "如果在同一设备上，则移动"
 
 #: ui/main.qml:402
 #, kde-kuit-format
@@ -266,19 +272,19 @@ msgstr "触摸"
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Touch Mode:"
-msgstr ""
+msgstr "启用触摸模式："
 
 #: ui/main.qml:418
 #, kde-format
 msgctxt "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
-msgstr ""
+msgstr "按需自动启动"
 
 #: ui/main.qml:418
 #, kde-format
 msgctxt "option:radio As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
-msgstr ""
+msgstr "永不启用"
 
 #: ui/main.qml:435
 #, kde-format
@@ -288,6 +294,8 @@ msgid ""
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
+"触摸模式将在系统检测到触摸屏，并且检测不到鼠标和触摸板时自动启用。例如：将变"
+"形本的键盘盖翻转 180 度或拆除时。"
 
 #: ui/main.qml:440
 #, kde-format
@@ -307,7 +315,7 @@ msgctxt "@info:usagetip"
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
 "more easily accommodate touch interaction."
-msgstr ""
+msgstr "在触摸模式下，用户界面的许多元素将被放大，以便适应触摸操作。"
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9

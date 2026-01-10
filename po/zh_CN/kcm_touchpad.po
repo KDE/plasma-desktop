@@ -99,7 +99,7 @@ msgstr "触摸板已断开连接。没有找到其他触摸板。"
 #, kde-format
 msgctxt "@info:status placeholdermessage text"
 msgid "No touchpad found"
-msgstr ""
+msgstr "没有找到触摸板"
 
 #: ui/main.qml:60
 #, kde-format
@@ -123,7 +123,7 @@ msgstr "常规："
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable device"
-msgstr ""
+msgstr "启用设备"
 
 #: ui/main.qml:115
 #, kde-format
@@ -153,7 +153,7 @@ msgstr "左键和右键："
 #, kde-format
 msgctxt "@option:check"
 msgid "Swap (left-handed mode)"
-msgstr ""
+msgstr "对调 (左手模式)"
 
 #: ui/main.qml:191
 #, kde-format
@@ -175,20 +175,20 @@ msgstr ""
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
-msgstr "光标速度："
+msgstr "指针速度："
 
 #: ui/main.qml:297
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
-msgstr ""
+msgstr "启用指针加速度"
 
 #: ui/main.qml:312
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
-msgstr "启用后，光标的移动距离会随着移动速度的加快而增加。"
+msgstr "启用后，指针的移动距离会随着移动速度的加快而增加。"
 
 #: ui/main.qml:325
 #, kde-format
@@ -214,21 +214,21 @@ msgctxt ""
 "@title group begins the sentence 'Scroll by moving two fingers anywhere/"
 "moving one finger on edge'"
 msgid "Scroll by:"
-msgstr ""
+msgstr "滚动方式："
 
 #: ui/main.qml:409
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
-msgstr ""
+msgstr "任意位置双指拖动"
 
 #: ui/main.qml:416
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
-msgstr ""
+msgstr "边缘单指拖动"
 
 #: ui/main.qml:424
 #, kde-format
@@ -248,7 +248,7 @@ msgctxt ""
 "@title:group for radiobutton group, begins the sentence 'right-click by "
 "pressing bottom-right corner/pressing with two fingers'"
 msgid "Right-click by:"
-msgstr ""
+msgstr "右键点击方式："
 
 #: ui/main.qml:481
 #, kde-format
@@ -262,13 +262,13 @@ msgstr "按下触摸板的右下角"
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
-msgstr ""
+msgstr "按下底部两角时点击中键。"
 
 #: ui/main.qml:497
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr ""
+msgstr "按下底部中间位置时点击中键。"
 
 #: ui/main.qml:505
 #, kde-format
@@ -332,7 +332,7 @@ msgstr "轻触点击"
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
-msgstr ""
+msgstr "允许点击后拖动"
 
 #: ui/main.qml:610
 #, kde-format
@@ -348,7 +348,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
-msgstr ""
+msgstr "轻触拖动时允许手指短暂离开触摸板"
 
 #: ui/main.qml:630
 #, kde-format
@@ -372,7 +372,7 @@ msgstr "右键点击"
 #, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
-msgstr ""
+msgstr "中键点击 (三指轻触时点击右键)"
 
 #: ui/main.qml:660
 #, kde-format

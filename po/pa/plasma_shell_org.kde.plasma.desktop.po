@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:44+0000\n"
 "PO-Revision-Date: 2025-09-15 10:15-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -1120,6 +1120,20 @@ msgctxt "@info:usagetip"
 msgid "(or scan your smartcard)"
 msgstr "(ਜਾਂ ਆਪਣਾ ਸਮਾਰਟ-ਕਾਡ ਸਕੈਨ ਕਰੋ)"
 
+#: contents/lockscreen/MediaControls.qml:59
+#, fuzzy, kde-format
+#| msgid "No title"
+msgctxt "@info:status"
+msgid "No title"
+msgstr "ਕੋਈ ਟਾਈਟਲ ਨਹੀਂ"
+
+#: contents/lockscreen/MediaControls.qml:60
+#, fuzzy, kde-format
+#| msgid "No media playing"
+msgctxt "@info:status"
+msgid "No media playing"
+msgstr "ਕੋਈ ਮੀਡਿਆ ਨਹੀਂ ਚੱਲ ਰਿਹਾ ਹੈ"
+
 #: contents/lockscreen/MediaControls.qml:88
 #, fuzzy, kde-format
 #| msgid "Previous track"
@@ -1167,12 +1181,6 @@ msgstr "ਸੋਧ ਢੰਗ ਨੂੰ ਛੱਡੋ"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "ਪੈਨਲ ਫੋਕਸ ਸੰਕੇਤਕ"
-
-#~ msgid "No title"
-#~ msgstr "ਕੋਈ ਟਾਈਟਲ ਨਹੀਂ"
-
-#~ msgid "No media playing"
-#~ msgstr "ਕੋਈ ਮੀਡਿਆ ਨਹੀਂ ਚੱਲ ਰਿਹਾ ਹੈ"
 
 #~ msgid "Configure activity"
 #~ msgstr "ਸਰਗਰਮੀ ਦੀ ਸੰਰਚਨਾ"

@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # SPDX-FileCopyrightText: 2024, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
-# SPDX-FileCopyrightText: 2025 Sveinn í Felli <sv1@fellsnet.is>
+# SPDX-FileCopyrightText: 2025, 2026 Sveinn í Felli <sv1@fellsnet.is>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-12-03 11:09+0000\n"
+"PO-Revision-Date: 2026-01-09 08:42+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -19,10 +19,7 @@ msgstr ""
 "X-Generator: Lokalize 23.08.5\n"
 
 #: ui/main.qml:25
-#, fuzzy, kde-format
-#| msgid ""
-#| "The system must be restarted before changes to the middle-click paste "
-#| "setting can take effect."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
@@ -32,8 +29,7 @@ msgstr ""
 "verði virkar."
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgctxt "@action:button"
 msgid "Restart"
 msgstr "Endurræsa"
@@ -57,12 +53,7 @@ msgid "Panel and widget tooltips"
 msgstr "Vísbendingar fyrir skjáborðsstiku og græjur"
 
 #: ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid ""
-#| "Allows all Plasma panel and desktop widgets to show descriptive tooltips "
-#| "when hovered with the pointer. This setting has no effect on the small "
-#| "tooltips displayed when hovering over individual buttons and other user "
-#| "interface elements."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Allows all Plasma panel and desktop widgets to show descriptive tooltips "
@@ -83,16 +74,13 @@ msgid "OSD popups for status changes"
 msgstr "Skjátilkynning við stöðubreytingu"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Allows all Plasma widgets to show on-screen display (OSD) popups for "
-#| "changes like volume and brightness level, or audio device switching."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
-"Leyfir öllum Plasma-græjum að birta tilkynningu á skjá (OSD) við breytingar "
+"Leyfir öllum Plasma-græjum að birta stjórntexta á skjá (OSD) við breytingar "
 "eins og á hljóðstyrk og birtustigi eða þegar skipt er um hljóðtæki."
 
 #: ui/main.qml:94
@@ -102,18 +90,13 @@ msgid "Scrolling"
 msgstr "Skrun"
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid "Clicking in scrollbar track:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
 msgstr "Smellt í skrunstikubrautina:"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
-#| "to the clicked location'"
-#| msgid "Scrolls to the clicked location"
+#, kde-format
 msgctxt ""
 "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
 "scrolls to the clicked location'"
@@ -121,11 +104,7 @@ msgid "Scrolls to the clicked location"
 msgstr "Skrunar á smellta staðinn"
 
 #: ui/main.qml:119
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
-#| "one page up or down'"
-#| msgid "Scrolls one page up or down"
+#, kde-format
 msgctxt ""
 "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
 "scrolls one page up or down'"
@@ -133,11 +112,10 @@ msgid "Scrolls one page up or down"
 msgstr "Skrunar upp eða niður um síðu"
 
 #: ui/main.qml:137
-#, fuzzy, kde-format
-#| msgid "Middle-click to scroll to clicked location"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Middle-click to scroll to clicked location"
-msgstr "Miðjusmellur flettir á staðinn þar sem smellt er"
+msgstr "Miðjusmellur færir á staðinn þar sem smellt er"
 
 #: ui/main.qml:152
 #, kde-format
@@ -179,11 +157,10 @@ msgid "Selects them"
 msgstr "velur þær"
 
 #: ui/main.qml:201
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
-msgstr "Opnaðu í staðinn með því að tvísmella"
+msgstr "Opna í staðinn með því að tvísmella"
 
 #: ui/main.qml:214
 #, kde-format
@@ -192,8 +169,7 @@ msgid "Opens them"
 msgstr "opnar þær"
 
 #: ui/main.qml:232
-#, fuzzy, kde-format
-#| msgid "Select by clicking on item's selection marker"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
 msgstr "Veldu með því að smella á valmerkingu atriðis"
@@ -215,11 +191,10 @@ msgid "Pastes selected text"
 msgstr "Límir valinn texta"
 
 #: ui/main.qml:268
-#, fuzzy, kde-format
-#| msgid "Double-click interval:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Double-click interval:"
-msgstr "Bil á milli tvísmella:"
+msgstr "Bil á milli í tvísmell:"
 
 #: ui/main.qml:283
 #, kde-format
@@ -236,10 +211,7 @@ msgid "ms"
 msgstr "msek."
 
 #: ui/main.qml:301
-#, fuzzy, kde-format
-#| msgid ""
-#| "Two clicks within this duration are considered a double-click. Some "
-#| "applications may not honor this setting."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "
@@ -259,22 +231,19 @@ msgstr ""
 "bilið á milli tvísmellanna."
 
 #: ui/main.qml:354
-#, fuzzy, kde-format
-#| msgid "Drag and Drop"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr "Draga og sleppa"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgid "When dragging files or folders:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "Þegar skrár eða möppur eru dregnar:"
 
 #: ui/main.qml:362
-#, fuzzy, kde-format
-#| msgid "Always ask what to do"
+#, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr "Alltaf spyrja hvað eigi að gera"
@@ -292,8 +261,7 @@ msgstr ""
 "Annars á að birta þennan svarglugga."
 
 #: ui/main.qml:386
-#, fuzzy, kde-format
-#| msgid "Move if on the same device"
+#, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "Færa ef á sama tæki"
@@ -313,34 +281,25 @@ msgid "Touch"
 msgstr "Snerting"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Enable Touch Mode:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Touch Mode:"
 msgstr "Virkja snertistillingu:"
 
 #: ui/main.qml:418
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
-#| msgid "Automatically enable as needed"
+#, kde-format
 msgctxt "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Gera sjálfkrafa virka eftir þörfum"
 
 #: ui/main.qml:418
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is never enabled'"
-#| msgid "Never enabled"
+#, kde-format
 msgctxt "option:radio As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Aldrei virk"
 
 #: ui/main.qml:435
-#, fuzzy, kde-format
-#| msgid ""
-#| "Touch Mode will be automatically activated whenever the system detects a "
-#| "touchscreen but no mouse or touchpad. For example: when a transformable "
-#| "laptop's keyboard is flipped around or detached."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -364,10 +323,7 @@ msgid "Disabled"
 msgstr "Óvirk"
 
 #: ui/main.qml:486
-#, fuzzy, kde-format
-#| msgid ""
-#| "In Touch Mode, many elements of the user interface will become larger to "
-#| "more easily accommodate touch interaction."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "

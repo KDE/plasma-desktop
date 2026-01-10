@@ -4,13 +4,13 @@
 # SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
 # SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2025, 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_gamecontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-11-28 23:04+0100\n"
+"PO-Revision-Date: 2026-01-06 16:26+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -319,7 +319,7 @@ msgstr "%1 (%2)"
 #, kde-format
 msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
 msgid "Allow using as pointer and keyboard"
-msgstr ""
+msgstr "Verwendung als Maus und Tastatur erlauben"
 
 #: ui/main.qml:44
 #, kde-kuit-format
@@ -328,6 +328,8 @@ msgid ""
 "Allow game controllers to act like pointer and keyboard devices in Plasma "
 "and non-game applications.<nl/><nl/>Games can always use the controller."
 msgstr ""
+"Verwendung von Controllern als Maus und Tastatur außerhalb von Spielen in "
+"Plasma erlauben.<nl/><nl/>Spiele können den Controller immer verwenden."
 
 #: ui/main.qml:52
 #, fuzzy, kde-format
@@ -352,6 +354,10 @@ msgid ""
 "controller, or enable automatic blocking by allowing the use as pointer and "
 "keyboard."
 msgstr ""
+"Das System könnte automatisch in den Ruhemodus wechseln oder den Bildschirm "
+"sperren, während der Controller verwendet wird. Sie können dieses Verhalten "
+"manuell blockieren, oder aktivieren Sie die automatische Blockierung, indem "
+"Sie die Verwendung als Maus und Tastatur erlauben."
 
 #: ui/main.qml:98
 #, kde-format
