@@ -2,16 +2,16 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Joëlle Cornavin <j.cornavin@sfr.fr>, 2009, 2013.
-# SPDX-FileCopyrightText: 2022, 2025 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2022, 2025, 2026 Xavier Besnard <xavier.besnard@kde.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-12-10 11:02+0100\n"
+"PO-Revision-Date: 2026-01-09 13:32+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: French <French <kde-francophone@kde.org>>\n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.11.90\n"
+"X-Generator: Lokalize 25.12.0\n"
 "X-Text-Markup: kde4\n"
 
 #: config.qml:13
@@ -56,16 +56,14 @@ msgid "Name"
 msgstr "Nom"
 
 #: ConfigGeneral.qml:89
-#, fuzzy, kde-format
-#| msgid "Only icons can be shown when the Panel is vertical."
+#, kde-format
 msgctxt "@info:usagetip display mode for active application"
 msgid "Only icons can be shown when the Panel is vertical."
 msgstr ""
 "Seules les icônes peuvent être affichées lorsque le panneau est vertical."
 
 #: ConfigGeneral.qml:91
-#, fuzzy, kde-format
-#| msgid "Not applicable when the widget is on the Desktop."
+#, kde-format
 msgctxt "@info:usagetip display mode for active application"
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "Non applicable lorsque le composant graphique est sur le bureau."
@@ -83,9 +81,7 @@ msgid "Enabled, with delay:"
 msgstr "Activé, avec délai :"
 
 #: ConfigGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@item:valuesuffix, %1 is hover activation delay in ms"
 msgid "%1 ms"
 msgid_plural "%1 ms"

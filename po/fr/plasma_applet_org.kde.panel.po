@@ -1,13 +1,13 @@
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Xavier Besnard <xavier.besnard@kde.org>
 # Simon Depiets <sdepiets@gmail.com>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.panel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-01-06 16:58+0100\n"
+"PO-Revision-Date: 2026-01-09 13:37+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: French <French <kde-francophone@kde.org>>\n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,33 +15,29 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.12.0\n"
 "X-Text-Markup: kde4\n"
 
 #: ConfigOverlay.qml:317
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:inmenu removes widget"
 msgid "Remove"
 msgstr "Supprimer"
 
 #: ConfigOverlay.qml:327
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:inmenu opens widget config dialog"
 msgid "Configure…"
 msgstr "Configurer..."
 
 #: ConfigOverlay.qml:338
-#, fuzzy, kde-format
-#| msgid "Show Alternatives…"
+#, kde-format
 msgctxt "@action:inmenu opens widget alternatives explorer"
 msgid "Show Alternatives…"
 msgstr "Afficher les alternatives..."
 
 #: ConfigOverlay.qml:357
-#, fuzzy, kde-format
-#| msgid "Spacer width"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Spacer width"
 msgstr "Largeur du séparateur"
@@ -54,8 +50,7 @@ msgid "Flexible size"
 msgstr "Taille ajustable"
 
 #: main.qml:453
-#, fuzzy, kde-format
-#| msgid "Open Panel configuration ui"
+#, kde-format
 msgctxt ""
 "@info:whatsthis Accessible description for entering Panel edit mode click "
 "area"
@@ -63,8 +58,7 @@ msgid "Open Panel configuration ui"
 msgstr "Ouvrir l'interface graphique pour la configuration des panneaux"
 
 #: main.qml:460
-#, fuzzy, kde-format
-#| msgid "Add Widgets…"
+#, kde-format
 msgctxt "@action:button opens widget explorer"
 msgid "Add Widgets…"
 msgstr "Ajouter des composants graphiques..."

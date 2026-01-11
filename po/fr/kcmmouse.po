@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2026-01-06 16:01+0100\n"
+"PO-Revision-Date: 2026-01-09 13:45+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -158,22 +158,19 @@ msgid "Configure Extra Buttons…"
 msgstr "Configurer les boutons supplémentaires..."
 
 #: ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Périphérique :"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General:"
 msgstr "Général :"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgid "Enable device"
+#, kde-format
 msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr "Activer le périphérique"
@@ -185,8 +182,7 @@ msgid "Left and right buttons:"
 msgstr "Boutons gauche et droite :"
 
 #: ui/main.qml:106
-#, fuzzy, kde-format
-#| msgid "Swap (left-handed mode)"
+#, kde-format
 msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
 msgstr "Échanger (Mode pour personne gauchère)"
@@ -209,35 +205,28 @@ msgstr ""
 "appuis simultanés des boutons gauche et droit."
 
 #: ui/main.qml:148
-#, fuzzy, kde-format
-#| msgid "Pointer speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Vitesse du pointeur :"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid "Enable pointer acceleration"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
-msgstr "Activer l'accélération du curseur"
+msgstr "Activer l'accélération du pointeur"
 
 #: ui/main.qml:241
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip from ContextualHelpButton"
-#| msgid ""
-#| "When enabled, pointer travel distance increases with faster movement "
-#| "speed."
+#, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
-"Lorsque cette option est activée, la distance de déplacement du curseur "
-"augmente avec une vitesse plus importante du curseur."
+"Lorsque cette option est activée, la distance de déplacement du pointeur "
+"augmente avec une vitesse plus importante de celui-ci."
 
 #: ui/main.qml:254
-#, fuzzy, kde-format
-#| msgid "Scrolling speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr "Vitesse de défilement :"
@@ -255,34 +244,27 @@ msgid "Faster"
 msgstr "Plus rapide"
 
 #: ui/main.qml:321
-#, fuzzy, kde-format
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "Défilement :"
 
 #: ui/main.qml:322
-#, fuzzy, kde-format
-#| msgid "Invert scroll direction"
+#, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction"
 msgstr "Inverser la direction de défilement"
 
 #: ui/main.qml:339
-#, fuzzy, kde-format
-#| msgid "Hold down middle button and move mouse to scroll"
+#, kde-format
 msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
-msgstr "Appuyez sur le bouton central et déplacez la souris pour faire défiler"
+msgstr ""
+"Maintenez le bouton central appuyé et déplacez la souris pour effectuer un "
+"défilement"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip from ContextualHelpButton"
-#| msgid ""
-#| "This will interfere with applications that use middle-button drag, such "
-#| "as some image editors, document viewers, or video games. It may be used "
-#| "on any device, but is intended primarily as a substitute for scroll "
-#| "wheels on devices that do not have any."
+#, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "This will interfere with applications that use middle-button drag, such as "
@@ -291,10 +273,10 @@ msgid ""
 "devices that do not have any."
 msgstr ""
 "Cela interférera avec les applications utilisant le glisser avec le bouton "
-"central, comme les applications d'édition d'images, celles pour affichage de "
-"documents ou celles de jeux vidéo. Il peut être utilisé sur n'importe quel "
+"central, comme les applications d'édition d'images, les visionneuses de "
+"documents ou les jeux vidéo. Il peut être utilisé sur n'importe quel "
 "périphérique. Cependant, cela est principalement destiné à simuler les "
-"molettes de défilement sur les appareils n'en possédant pas."
+"molettes de défilement sur les périphériques n'en possédant pas."
 
 #~ msgid "Device enabled"
 #~ msgstr "Dispositif activé"

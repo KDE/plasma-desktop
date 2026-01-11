@@ -3,16 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Joëlle Cornavin <jcorn@free.fr>, 2011, 2012.
 # Simon Depiets <sdepiets@gmail.com>, 2020.
-# SPDX-FileCopyrightText: 2022, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2022, 2024, 2025, 2026 Xavier Besnard <xavier.besnard@kde.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.showActivityManager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-11-29 10:45+0100\n"
+"PO-Revision-Date: 2026-01-09 13:41+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: French <French <kde-francophone@kde.org>>\n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.11.80\n"
+"X-Generator: Lokalize 25.12.0\n"
 "X-Text-Markup: kde4\n"
 
 #: qml/config.qml:13
@@ -30,39 +30,34 @@ msgid "Appearance"
 msgstr "Apparence"
 
 #: qml/ConfigAppearance.qml:23
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Icon:"
 msgstr "Icône :"
 
 #: qml/ConfigAppearance.qml:25
-#, fuzzy, kde-format
-#| msgid "Show the current activity icon"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show the current activity icon"
-msgstr "Afficher l'icône de l'activité actuelle"
+msgstr "Afficher l'icône de l'activité courante"
 
 #: qml/ConfigAppearance.qml:31
-#, fuzzy, kde-format
-#| msgid "Show the generic activity icon"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show the generic activity icon"
-msgstr "Afficher l'icône d'activité générique"
+msgstr "Afficher l'icône générique d'activité"
 
 #: qml/ConfigAppearance.qml:41
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Title:"
 msgstr "Titre :"
 
 #: qml/ConfigAppearance.qml:43
-#, fuzzy, kde-format
-#| msgid "Show the current activity name"
+#, kde-format
 msgctxt "@option:check title"
 msgid "Show the current activity name"
-msgstr "Afficher le nom de l'activité actuelle"
+msgstr "Afficher le nom de l'activité courante"
 
 #: qml/main.qml:66
 #, kde-format
@@ -71,15 +66,13 @@ msgid "Current activity is %1"
 msgstr "L'activité courante est %1"
 
 #: qml/main.qml:76
-#, fuzzy, kde-format
-#| msgid "Show Activity Manager"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show Activity Manager"
 msgstr "Afficher le gestionnaire d'activités"
 
 #: qml/main.qml:77
-#, fuzzy, kde-format
-#| msgid "Click to show the activity manager"
+#, kde-format
 msgctxt "@info:tooltip subtext"
 msgid "Click to show the activity manager"
 msgstr "Cliquez pour afficher le gestionnaire d'activités"

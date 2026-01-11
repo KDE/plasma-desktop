@@ -3,22 +3,22 @@
 # Sebastien Renard <renard@kde.org>, 2014, 2015.
 # Vincent Pinon <vpinon@kde.org>, 2016, 2017.
 # Simon Depiets <sdepiets@gmail.com>, 2019.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2026 Xavier Besnard <xavier.besnard@kde.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2024-05-25 12:17+0200\n"
+"PO-Revision-Date: 2026-01-09 13:36+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: French <French <kde-francophone@kde.org>>\n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.0\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -34,45 +34,37 @@ msgid "Available Plugins"
 msgstr "Modules complémentaires disponibles"
 
 #: plasmasearch/ui/main.qml:25
-#, fuzzy, kde-format
-#| msgid "Configure KRunner…"
+#, kde-format
 msgctxt "@action:button in toolbar"
 msgid "Configure KRunner…"
 msgstr "Configurer KRunner..."
 
 #: plasmasearch/ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Get New Plugins…"
+#, kde-format
 msgctxt "@action:button in toolbar"
 msgid "Get New Plugins…"
 msgstr "Obtenir de nouveaux modules externes..."
 
 #: plasmasearch/ui/main.qml:45
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect). Mark plugins as favorites and arrange them in order you "
-#| "want to prioritize them."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to prioritize them."
 msgstr ""
-"Activer ou désactiver les modules externes (Utilisés dans KRunner, le "
-"lanceur d'applications et l'effet d'aperçu). Veuillez marquer les modules "
-"externes comme des préférés et les organiser selon vos besoins."
+"Activer ou désactiver les modules externes (Ceux utilisés dans KRunner, dans "
+"le lanceur d'applications et dans l'effet d'aperçu). Veuillez marquer les "
+"modules externes comme des favoris et les organiser selon vos besoins."
 
 #: plasmasearch/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Remove from favorites"
+#, kde-format
 msgctxt "@action:button, icononly"
 msgid "Remove from favorites"
 msgstr "Supprimer des favoris"
 
 #: plasmasearch/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Add to favorites"
+#, kde-format
 msgctxt "@action:button, icononly"
 msgid "Add to favorites"
 msgstr "Ajouter aux favoris"

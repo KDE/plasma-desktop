@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2026-01-04 08:29+0200\n"
+"PO-Revision-Date: 2026-01-09 17:07+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -357,9 +357,7 @@ msgid "Disable sticky and slow keys after:"
 msgstr "השבתת מקשים דביקים ואיטיים לאחר:"
 
 #: ui/ActivationShortcuts.qml:71
-#, fuzzy, kde-format
-#| msgid "%1 min"
-#| msgid_plural "%1 min"
+#, kde-format
 msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
 msgid "%1 min"
 msgid_plural "%1 min"
@@ -379,43 +377,37 @@ msgstr[2] "דק׳"
 msgstr[3] "דק׳"
 
 #: ui/ActivationShortcuts.qml:89
-#, fuzzy, kde-format
-#| msgid "When a shortcut is used:"
+#, kde-format
 msgctxt "@title:group for checkbox group"
 msgid "When a shortcut is used:"
 msgstr "בעת שימוש במקש קיצור:"
 
 #: ui/ActivationShortcuts.qml:90
-#, fuzzy, kde-format
-#| msgid "Display a confirmation dialog"
+#, kde-format
 msgctxt "@option:check when shortcut used"
 msgid "Display a confirmation dialog"
-msgstr "הצגת חלונית אישור"
+msgstr "להציג חלונית אישור"
 
 #: ui/ActivationShortcuts.qml:101
-#, fuzzy, kde-format
-#| msgid "Ring the system bell"
+#, kde-format
 msgctxt "@option:check when shortcut used"
 msgid "Ring the system bell"
-msgstr "צלצול בפעמון המערכת"
+msgstr "לצלצל בפעמון המערכת"
 
 #: ui/ActivationShortcuts.qml:112
-#, fuzzy, kde-format
-#| msgid "Show a notification"
+#, kde-format
 msgctxt "@option:check when shortcut used"
 msgid "Show a notification"
-msgstr "הצגת התראה"
+msgstr "להציג התראה"
 
 #: ui/ActivationShortcuts.qml:123
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button opens Notifications kcm"
 msgid "Configure Notifications…"
 msgstr "הגדרת התראות…"
 
 #: ui/Bell.qml:19
-#, fuzzy, kde-format
-#| msgid "Please choose an audio file"
+#, kde-format
 msgctxt "@title:window dialog"
 msgid "Please choose an audio file"
 msgstr "נא לבחור קובץ שמע"
@@ -427,8 +419,7 @@ msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
 msgstr "קובצי שמע מהסוגים ogg,‏ oga ו־wav (‎*.ogg ‏‎*.wav)"
 
 #: ui/Bell.qml:30
-#, fuzzy, kde-format
-#| msgid "Audible bell:"
+#, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Audible bell:"
 msgstr "פעמון שמע:"
@@ -446,36 +437,31 @@ msgid "Custom sound:"
 msgstr "צליל משלך:"
 
 #: ui/Bell.qml:75
-#, fuzzy, kde-format
-#| msgid "Search audio file for the system bell"
+#, kde-format
 msgctxt "@action:button icononly tooltip"
 msgid "Choose audio file for the system bell"
-msgstr "חיפוש קובץ שמע לפעמון המערכת"
+msgstr "בחירת קובץ שמע לפעמון המערכת"
 
 #: ui/Bell.qml:76
-#, fuzzy, kde-format
-#| msgid "Please choose an audio file"
+#, kde-format
 msgctxt "@action button accessible only"
 msgid "Choose audio file"
-msgstr "נא לבחור קובץ שמע"
+msgstr "בחירת קובץ שמע"
 
 #: ui/Bell.qml:77
 #, kde-format
 msgctxt "@info:usagetip accessible description for button"
 msgid "Opens dialog"
-msgstr ""
+msgstr "פתיחת חלונית"
 
 #: ui/Bell.qml:93
-#, fuzzy, kde-format
-#| msgid "Visual bell:"
+#, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Visual bell:"
 msgstr "פעמון חזותי:"
 
 #: ui/Bell.qml:94
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable visual bell"
 msgid "Enable"
 msgstr "הפעלה"
@@ -505,9 +491,7 @@ msgid "Duration:"
 msgstr "משך:"
 
 #: ui/Bell.qml:166
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is visible bell duration"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -517,10 +501,7 @@ msgstr[2] "%1 מ״ש"
 msgstr[3] "%1 מ״ש"
 
 #: ui/Bell.qml:170 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
-#, fuzzy, kde-format
-#| msgctxt "short for millisecond(s)"
-#| msgid "ms"
-#| msgid_plural "ms"
+#, kde-format
 msgctxt "@label:valuesuffix short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
@@ -601,29 +582,25 @@ msgid "Adjusted colors:"
 msgstr "צבעים מותאמים:"
 
 #: ui/ColorblindnessCorrection.qml:132
-#, fuzzy, kde-format
-#| msgid "Reds:"
+#, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Reds:"
 msgstr "אדומים:"
 
 #: ui/ColorblindnessCorrection.qml:133
-#, fuzzy, kde-format
-#| msgid "Greens:"
+#, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Greens:"
 msgstr "ירוקים:"
 
 #: ui/ColorblindnessCorrection.qml:134
-#, fuzzy, kde-format
-#| msgid "Blues:"
+#, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Blues:"
 msgstr "כחולים:"
 
 #: ui/ColorblindnessCorrection.qml:135
-#, fuzzy, kde-format
-#| msgid "Purples:"
+#, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Purples:"
 msgstr "סגולים:"
@@ -653,16 +630,13 @@ msgid "Configure Shortcuts…"
 msgstr "הגדרת קיצורי מקשים…"
 
 #: ui/KeyboardFilters.qml:18
-#, fuzzy, kde-format
-#| msgid "Slow keys:"
+#, kde-format
 msgctxt "@title:group prefix"
 msgid "Slow keys:"
 msgstr "מקשים איטיים:"
 
 #: ui/KeyboardFilters.qml:23
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable slow keys"
 msgid "Enable"
 msgstr "הפעלה"
@@ -679,17 +653,13 @@ msgstr ""
 "ממקש אחד בו־זמנית או אם יש קושי ללחוץ על המקש המבוקש בפעם הראשונה."
 
 #: ui/KeyboardFilters.qml:41
-#, fuzzy, kde-format
-#| msgctxt "Slow keys Delay"
-#| msgid "Delay:"
+#, kde-format
 msgctxt "@label:spinbox Slow keys Delay"
 msgid "Delay:"
 msgstr "השהיה:"
 
 #: ui/KeyboardFilters.qml:56
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is slow keys delay"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -699,47 +669,37 @@ msgstr[2] "%1 מ״ש"
 msgstr[3] "%1 מ״ש"
 
 #: ui/KeyboardFilters.qml:74
-#, fuzzy, kde-format
-#| msgid "Ring system bell:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Ring system bell:"
 msgstr "צלצול בפעמון המערכת:"
 
 #: ui/KeyboardFilters.qml:75
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is pressed"
-#| msgid "when any key is &pressed"
+#, kde-format
 msgctxt "@option:check Use system bell when a key is pressed"
 msgid "when any key is &pressed"
-msgstr "כאשר מקש נ&לחץ"
+msgstr "כאשר מקש כלשהו נ&לחץ"
 
 #: ui/KeyboardFilters.qml:89
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is accepted"
-#| msgid "when any key is &accepted"
+#, kde-format
 msgctxt "@option:check Use system bell when a key is accepted"
 msgid "when any key is &accepted"
-msgstr "כאשר מקש מ&תקבל"
+msgstr "כאשר מקש כלשהו מ&תקבל"
 
 #: ui/KeyboardFilters.qml:103
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is rejected"
-#| msgid "when any key is &rejected"
+#, kde-format
 msgctxt "@option:check Use system bell when a key is rejected"
 msgid "when any key is &rejected"
-msgstr "כאשר מקש נ&דחה"
+msgstr "כאשר מקש כלשהו נ&דחה"
 
 #: ui/KeyboardFilters.qml:119
-#, fuzzy, kde-format
-#| msgid "Bounce keys:"
+#, kde-format
 msgctxt "@title:group prefix"
 msgid "Bounce keys:"
 msgstr "מקשים חוזרים:"
 
 #: ui/KeyboardFilters.qml:124
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Bounce keys enable"
 msgid "Enable"
 msgstr "הפעלה"
@@ -757,17 +717,13 @@ msgstr ""
 "בלבד."
 
 #: ui/KeyboardFilters.qml:142
-#, fuzzy, kde-format
-#| msgctxt "Slow keys Delay"
-#| msgid "Delay:"
+#, kde-format
 msgctxt "@label:spinbox Bounce keys delay"
 msgid "Delay:"
 msgstr "השהיה:"
 
 #: ui/KeyboardFilters.qml:157
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is bounce keys delay"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -777,8 +733,7 @@ msgstr[2] "%1 מ״ש"
 msgstr[3] "%1 מ״ש"
 
 #: ui/KeyboardFilters.qml:171
-#, fuzzy, kde-format
-#| msgid "Ring system bell when rejected"
+#, kde-format
 msgctxt "@option:check for bounce keys"
 msgid "Ring system bell when rejected"
 msgstr "לצלצל בפעמון המערכת בעת דחיית מקש"
@@ -796,48 +751,37 @@ msgid "System Bell"
 msgstr "פעמון מערכת"
 
 #: ui/main.qml:38
-#, fuzzy, kde-format
-#| msgctxt "System Modifier Keys"
-#| msgid "Modifier Keys"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Modifier Keys"
 msgstr "מקשי החלפה"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgctxt "System keyboard filters"
-#| msgid "Keyboard Filters"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Keyboard Filters"
 msgstr "מסנני מקלדת"
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgctxt "System mouse navigation"
-#| msgid "Mouse Navigation"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Mouse Navigation"
 msgstr "ניווט עכבר"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Activation Shortcuts"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Activation Shortcuts"
 msgstr "קיצורי דרך להפעלה"
 
 #: ui/main.qml:58
-#, fuzzy, kde-format
-#| msgctxt "System mouse navigation"
-#| msgid "Screen Reader"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "קורא מסך"
 
 #: ui/main.qml:63
-#, fuzzy, kde-format
-#| msgctxt "Correction for color blindness"
-#| msgid "Color Blindness Correction"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr "תיקון עיוורון צבעים"
@@ -849,9 +793,7 @@ msgid "Invert"
 msgstr "היפוך"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "Shake pointer to find it"
-#| msgid "Shake Pointer"
+#, kde-format
 msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
 msgstr "ניעור סמן"
@@ -894,15 +836,13 @@ msgid ""
 msgstr "לחיצה על מקש החלפה פעמיים תשאיר אותו במצב פעיל עד שיילחץ שוב."
 
 #: ui/ModifierKeys.qml:57
-#, fuzzy, kde-format
-#| msgid "Disable when two keys are held down"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable when two keys are held down"
 msgstr "להשבית בעת החזקה של שני מקשים"
 
 #: ui/ModifierKeys.qml:70
-#, fuzzy, kde-format
-#| msgid "Ring system bell when modifier keys are used"
+#, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when modifier keys are used"
 msgstr "לצלצל בפעמון המערכת בעת שימוש במקשי החלפה"
@@ -972,9 +912,7 @@ msgid "Acceleration delay:"
 msgstr "השהיית האצה:"
 
 #: ui/MouseNavigation.qml:53
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix acceleration delay spinbox %1 is value"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -1001,9 +939,7 @@ msgid "Repeat interval:"
 msgstr "משך חזרה:"
 
 #: ui/MouseNavigation.qml:84
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix repeat interval spinbox %1 is value"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -1019,9 +955,7 @@ msgid "Acceleration time:"
 msgstr "זמן האצה:"
 
 #: ui/MouseNavigation.qml:110
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
 msgid "%1 ms"
 msgid_plural "%1 ms"

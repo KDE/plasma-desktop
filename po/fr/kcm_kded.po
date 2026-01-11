@@ -9,7 +9,7 @@
 # Nicolas Ternisien <nicolas.ternisien@gmail.com>, 2007.
 # Guillaume Pujol <guill.p@gmail.com>, 2008.
 # Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2008.
-# SPDX-FileCopyrightText: 2013, 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2013, 2024, 2026 Xavier Besnard <xavier.besnard@kde.org>
 # Vincent Pinon <vpinon@kde.org>, 2016, 2017.
 # Simon Depiets <sdepiets@gmail.com>, 2020.
 # William Oprandi <william.oprandi@gmail.com>, 2020.
@@ -20,9 +20,9 @@ msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2024-06-30 11:19+0200\n"
+"PO-Revision-Date: 2026-01-09 13:48+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: French <French <kde-francophone@kde.org>>\n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,7 +30,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.0\n"
 "X-Text-Markup: kde4\n"
 
 #: kcmkded.cpp:115
@@ -71,23 +71,17 @@ msgstr ""
 "<link url='%1'>également envoyer un rapport de bogue à ce sujet.</link>"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded6) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
-"Le gestionnaire de services d'arrière plan (kded6) n'est pas actuellement "
-"lancé. Veuillez vous assurer qu'il est installé correctement."
+"Le gestionnaire de services d'arrière plan (kded6) n'est pas actuellement en "
+"cours d'exécution. Veuillez vous assurer qu'il est installé correctement."
 
 #: ui/main.qml:65
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services disable themselves again when manually started if they are "
-#| "not useful in the current environment."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services disable themselves again when manually started if they are not "
@@ -97,10 +91,7 @@ msgstr ""
 "manuellement, s'il ne sont pas utilisent dans l'environnement courant."
 
 #: ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services were automatically started/stopped when the background "
-#| "services manager (kded6) was restarted to apply your changes."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services were automatically started/stopped when the background "
@@ -111,37 +102,31 @@ msgstr ""
 "compte vos modifications."
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "All Services"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "All Services"
 msgstr "Tous les services"
 
 #: ui/main.qml:124
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "@item:inlistbox List running services"
 msgid "Running"
-msgstr "En fonctionnement"
+msgstr "En cours d'exécution"
 
 #: ui/main.qml:125
-#, fuzzy, kde-format
-#| msgctxt "List not running services"
-#| msgid "Not Running"
+#, kde-format
 msgctxt "@item:inlistbox List not running services"
 msgid "Not Running"
 msgstr "Non lancé"
 
 #: ui/main.qml:162
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgctxt "@title:group list section"
 msgid "Startup Services"
 msgstr "Services au démarrage"
 
 #: ui/main.qml:163
-#, fuzzy, kde-format
-#| msgid "Load-on-Demand Services"
+#, kde-format
 msgctxt "@title:group list section"
 msgid "Load-on-Demand Services"
 msgstr "Services chargés à la demande"
@@ -159,25 +144,22 @@ msgid "Enable automatically loading %1 on startup"
 msgstr "Activer automatiquement le chargement de %1 au démarrage"
 
 #: ui/main.qml:183
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Toggle automatically loading this service on startup"
 msgstr "Basculer automatiquement le chargement de ce service au démarrage"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid "Not running"
+#, kde-format
 msgctxt "@info:status"
 msgid "Not running"
 msgstr "Non lancé"
 
 #: ui/main.qml:228
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "@info:status"
 msgid "Running"
-msgstr "En fonctionnement"
+msgstr "En cours d'exécution"
 
 #: ui/main.qml:248
 #, kde-format
@@ -192,18 +174,16 @@ msgid "Start %1"
 msgstr "Démarrer %1"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Stop Service"
+#, kde-format
 msgctxt "@action:button"
 msgid "Stop Service"
-msgstr "Service avant arrêt"
+msgstr "Arrêter le service"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Start Service"
+#, kde-format
 msgctxt "@action:button"
 msgid "Start Service"
-msgstr "Service au démarrage"
+msgstr "Démarrer le service"
 
 #~ msgctxt "List running services"
 #~ msgid "Running"
