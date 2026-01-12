@@ -36,12 +36,131 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
         }
     }
 
-    KSvg.FrameSvgItem {
-        id: frame
+    Item {
+        id: actionOverlayItem
+        opacity: rotateHandle.pressed ? 0 : 1
+
+        Behavior on opacity {
+            NumberAnimation {
+                duration: Kirigami.Units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
+
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.horizontalCenterOffset: {
+            let widthDifference = Math.round((actionOverlayItem.width - overlay.width) / 2)
+            if (widthDifference > 0) {
+                if (widthDifference > overlay.leftAvailableSpace) {
+                    return widthDifference - overlay.leftAvailableSpace
+                }
+                if (widthDifference > overlay.rightAvailableSpace) {
+                    return overlay.rightAvailableSpace - widthDifference
+                }
+            }
+            return 0
+        }
+        y: overlay.topAvailableSpace > height + Kirigami.Units.gridUnit
+            ? -height - Kirigami.Units.gridUnit * 2
+            : parent.height + Kirigami.Units.gridUnit * 2
+
+
+        transform: Translate {
+            y: overlay.open ? 0 : (overlay.topAvailableSpace > actionOverlayItem.height + Kirigami.Units.gridUnit ? -actionOverlayItem.height : actionOverlayItem.height)
+
+            Behavior on y {
+                NumberAnimation {
+                    duration: Kirigami.Units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
+        }
+        width: layout.implicitWidth + Kirigami.Units.gridUnit
+        height: layout.implicitHeight + Kirigami.Units.gridUnit
+
+        RowLayout {
+            id: layout
+            anchors {
+                fill: parent
+                topMargin: Kirigami.Units.gridUnit
+                leftMargin: Kirigami.Units.gridUnit
+                bottomMargin: Kirigami.Units.gridUnit
+                rightMargin: Kirigami.Units.gridUnit
+            }
+            spacing: Kirigami.Units.gridUnit
+
+            ActionButton {
+                icon.name: "configure"
+                text: i18nc("@action:button", "Configure")
+                visible: qAction && qAction.enabled && (applet && applet.plasmoid.hasConfigurationInterface)
+                qAction: applet ? applet.plasmoid.internalAction("configure") : null
+                Component.onCompleted: {
+                    if (qAction) {
+                        qAction.enabled = true;
+                    }
+                }
+            }
+
+            ActionButton {
+                icon.name: "show-background"
+                text: checked ? i18nc("@action:button", "Hide Background") : i18nc("@action:button", "Show Background")
+                toolTip: checked ? i18nc("@action:button tooltip hide widget background", "Hide Background") : i18nc("@action:button tooltip", "Show Background")
+                visible: (applet.plasmoid.backgroundHints & PlasmaCore.Types.ConfigurableBackground)
+                checked: applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground || applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.TranslucentBackground
+                checkable: true
+                onClicked: {
+                    if (checked) {
+                        if (applet.plasmoid.backgroundHints & PlasmaCore.Types.StandardBackground || applet.plasmoid.backgroundHints & PlasmaCore.Types.TranslucentBackground) {
+                            applet.plasmoid.userBackgroundHints = applet.plasmoid.backgroundHints;
+                        } else {
+                            applet.plasmoid.userBackgroundHints = PlasmaCore.Types.StandardBackground;
+                        }
+                    } else {
+                        if (applet.plasmoid.backgroundHints & PlasmaCore.Types.ShadowBackground || applet.plasmoid.backgroundHints & PlasmaCore.Types.NoBackground) {
+                            applet.plasmoid.userBackgroundHints = applet.plasmoid.backgroundHints;
+                        } else {
+                            applet.plasmoid.userBackgroundHints = PlasmaCore.Types.ShadowBackground;
+                        }
+                    }
+                }
+            }
+
+            ActionButton {
+                id: closeButton
+                icon.name: "edit-delete-remove"
+                text: i18nc("@action:button", "Remove")
+                toolTip: i18nc("@action:button tooltip remove widget", "Remove Applet")
+                visible: {
+                    if (!applet) {
+                        return false;
+                    }
+                    var a = applet.plasmoid.internalAction("remove");
+                    return a && a.enabled || false;
+                }
+                // we don't set action, since we want to catch the button click,
+                // animate, and then trigger the "remove" action
+                // Triggering the action is handled in the overlay.itemContainer, we just
+                // Q_EMIT a signal here to avoid the applet-gets-removed-before-we-
+                // can-animate it race condition.
+                onClicked: {
+                    removeAnim.restart();
+                }
+                Component.onCompleted: {
+                    var a = applet.plasmoid.internalAction("remove");
+                    if (a) {
+                        a.enabled = true;
+                    }
+                }
+            }
+        }
+    }
+
+    Item {
+        id: rotateItem
 
         anchors.verticalCenter: parent.verticalCenter
         anchors.verticalCenterOffset: {
-            let heightDifference = Math.round((frame.height - overlay.height) / 2)
+            let heightDifference = Math.round((rotateItem.height - overlay.height) / 2)
             if (heightDifference > 0) {
                 if (heightDifference > overlay.topAvailableSpace) {
                     return heightDifference - overlay.topAvailableSpace
@@ -56,19 +175,8 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
             ? parent.width + Kirigami.Units.gridUnit
             : -width - Kirigami.Units.gridUnit
 
-        // This MouseArea is used to block input between the applet and the handle, to not make it steal by other applets
-        MouseArea {
-            anchors {
-                top: parent.top
-                bottom: parent.bottom
-            }
-            z: -1
-            x: overlay.rightAvailableSpace > parent.width + Kirigami.Units.gridUnit ? -Kirigami.Units.gridUnit : 0
-            width: Kirigami.Units.gridUnit + parent.width
-            hoverEnabled: true
-        }
         transform: Translate {
-            x: overlay.open ? 0 : (overlay.rightAvailableSpace > frame.width + Kirigami.Units.gridUnit ? -frame.width : frame.width)
+            x: overlay.open ? 0 : (overlay.rightAvailableSpace > rotateItem.width + Kirigami.Units.gridUnit ? -rotateItem.width : rotateItem.width)
 
             Behavior on x {
                 NumberAnimation {
@@ -77,22 +185,24 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                 }
             }
         }
-        width: layout.implicitWidth + margins.left + margins.right
-        height: Math.max(layout.implicitHeight + margins.top + margins.bottom, parent.height)
-        imagePath: "widgets/background"
 
-        ColumnLayout {
-            id: layout
+        width: rotateLayout.implicitWidth + Kirigami.Units.gridUnit
+        height: rotateLayout.implicitHeight + Kirigami.Units.gridUnit
+
+        RowLayout {
+            id: rotateLayout
             anchors {
                 fill: parent
-                topMargin: parent.margins.top
-                leftMargin: parent.margins.left
-                bottomMargin: parent.margins.bottom
-                rightMargin: parent.margins.right
+                topMargin: Kirigami.Units.gridUnit
+                leftMargin: Kirigami.Units.gridUnit
+                bottomMargin: Kirigami.Units.gridUnit
+                rightMargin: Kirigami.Units.gridUnit
             }
 
             ActionButton {
                 id: rotateButton
+                Layout.alignment: Qt.AlignCenter
+
                 icon.name: "object-rotate-left-symbolic"
                 toolTip: !rotateHandle.pressed ? i18nc("@action:button tooltip rotate widget", "Click and drag to rotate") : ""
                 action: applet ? applet.plasmoid.internalAction("rotate") : null
@@ -166,91 +276,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
                     }
                 }
             }
-
-            ActionButton {
-                icon.name: "configure"
-                visible: qAction && qAction.enabled && (applet && applet.plasmoid.hasConfigurationInterface)
-                qAction: applet ? applet.plasmoid.internalAction("configure") : null
-                Component.onCompleted: {
-                    if (qAction) {
-                        qAction.enabled = true;
-                    }
-                }
-            }
-
-            ActionButton {
-                icon.name: "show-background"
-                toolTip: checked ? i18nc("@action:button tooltip hide widget background", "Hide Background") : i18nc("@action:button tooltip", "Show Background")
-                visible: (applet.plasmoid.backgroundHints & PlasmaCore.Types.ConfigurableBackground)
-                checked: applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground || applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.TranslucentBackground
-                checkable: true
-                onClicked: {
-                    if (checked) {
-                        if (applet.plasmoid.backgroundHints & PlasmaCore.Types.StandardBackground || applet.plasmoid.backgroundHints & PlasmaCore.Types.TranslucentBackground) {
-                            applet.plasmoid.userBackgroundHints = applet.plasmoid.backgroundHints;
-                        } else {
-                            applet.plasmoid.userBackgroundHints = PlasmaCore.Types.StandardBackground;
-                        }
-                    } else {
-                        if (applet.plasmoid.backgroundHints & PlasmaCore.Types.ShadowBackground || applet.plasmoid.backgroundHints & PlasmaCore.Types.NoBackground) {
-                            applet.plasmoid.userBackgroundHints = applet.plasmoid.backgroundHints;
-                        } else {
-                            applet.plasmoid.userBackgroundHints = PlasmaCore.Types.ShadowBackground;
-                        }
-                    }
-                }
-            }
-
-            MouseArea {
-                drag.target: overlay.itemContainer
-                Layout.minimumHeight: Kirigami.Units.gridUnit * 3
-                Layout.fillHeight: true
-                Layout.fillWidth: true
-                cursorShape: containsPress ? Qt.DragMoveCursor : Qt.OpenHandCursor
-                hoverEnabled: true
-                onPressed: mouse => {
-                    overlay.itemContainer.layout.releaseSpace(overlay.itemContainer);
-                }
-                onPositionChanged: mouse => {
-                    if (!pressed) {
-                        return;
-                    }
-                    overlay.itemContainer.layout.showPlaceHolderForItem(overlay.itemContainer);
-                    var dragPos = mapToItem(overlay.itemContainer, mouse.x, mouse.y);
-                    overlay.itemContainer.userDrag(Qt.point(overlay.itemContainer.x, overlay.itemContainer.y), dragPos);
-                }
-                onReleased: mouse => {
-                    overlay.itemContainer.layout.hidePlaceHolder();
-                    overlay.itemContainer.layout.positionItem(overlay.itemContainer);
-                }
-            }
-
-            ActionButton {
-                id: closeButton
-                icon.name: "edit-delete-remove"
-                toolTip: i18nc("@action:button tooltip remove widget", "Remove")
-                visible: {
-                    if (!applet) {
-                        return false;
-                    }
-                    var a = applet.plasmoid.internalAction("remove");
-                    return a && a.enabled || false;
-                }
-                // we don't set action, since we want to catch the button click,
-                // animate, and then trigger the "remove" action
-                // Triggering the action is handled in the overlay.itemContainer, we just
-                // Q_EMIT a signal here to avoid the applet-gets-removed-before-we-
-                // can-animate it race condition.
-                onClicked: {
-                    removeAnim.restart();
-                }
-                Component.onCompleted: {
-                    var a = applet.plasmoid.internalAction("remove");
-                    if (a) {
-                        a.enabled = true;
-                    }
-                }
-            }
         }
     }
+    
 }

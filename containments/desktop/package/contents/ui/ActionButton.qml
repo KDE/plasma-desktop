@@ -14,7 +14,8 @@ import org.kde.plasma.components as PC3
 
 PC3.ToolButton {
     id: button
-
+    flat: false
+    
     property PlasmaCore.Action qAction
     readonly property int iconSize: Kirigami.Settings.hasTransientTouchInput
         ? Kirigami.Units.iconSizes.medium
