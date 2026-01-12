@@ -1,241 +1,244 @@
-# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 Xavier Besnard <xavier.besnard@kde.org>
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:41+0000\n"
-"PO-Revision-Date: 2026-01-10 21:48+0100\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: \n"
-"Language: fr\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.1\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
 msgctxt "@label Axis value"
 msgid "Value"
-msgstr "Valeur"
+msgstr ""
 
 #: buttonmodel.cpp:71
 #, kde-format
 msgctxt "Status of a gamepad button"
 msgid "PRESSED"
-msgstr "APPUYÉ"
+msgstr ""
 
 #: buttonmodel.cpp:81
 #, kde-format
 msgctxt "@label Button state"
 msgid "State"
-msgstr "État"
+msgstr ""
 
 #: device.cpp:17 device.cpp:30
 #, kde-format
 msgid "Unknown"
-msgstr "Inconnu"
+msgstr ""
 
 #: device.cpp:18
 #, kde-format
 msgid "Game Controller"
-msgstr "Manette de jeu"
+msgstr ""
 
 #: device.cpp:19
 #, kde-format
 msgid "Wheel"
-msgstr "Molette"
+msgstr ""
 
 #: device.cpp:20
 #, kde-format
 msgid "Arcade Stick"
-msgstr "Joystick d'arcade"
+msgstr ""
 
 #: device.cpp:21
 #, kde-format
 msgid "Flight Stick"
-msgstr "Joystick de pilotage"
+msgstr ""
 
 #: device.cpp:22
 #, kde-format
 msgid "Dance Pad"
-msgstr "Tapis de danse"
+msgstr ""
 
 #: device.cpp:23
 #, kde-format
 msgid "Guitar"
-msgstr "Guitare"
+msgstr ""
 
 #: device.cpp:24
 #, kde-format
 msgid "Drum Kit"
-msgstr "Batterie"
+msgstr ""
 
 #: device.cpp:25
 #, kde-format
 msgid "Arcade Pad"
-msgstr "Pavé d'arcade"
+msgstr ""
 
 #: device.cpp:26
 #, kde-format
 msgid "Throttle"
-msgstr "Manette"
+msgstr ""
 
 #: device.cpp:31
 #, kde-format
 msgid "XBox 360"
-msgstr "XBox 360"
+msgstr ""
 
 #: device.cpp:32
 #, kde-format
 msgid "XBox One"
-msgstr "XBox One"
+msgstr ""
 
 #: device.cpp:33
 #, kde-format
 msgid "Sony Dualshock 3"
-msgstr "Sony Dualshock 3"
+msgstr ""
 
 #: device.cpp:34
 #, kde-format
 msgid "Sony Dualshock 4"
-msgstr "Sony Dualshock 4"
+msgstr ""
 
 #: device.cpp:35
 #, kde-format
 msgid "Switch Pro"
-msgstr "Switch Pro"
+msgstr ""
 
 #: device.cpp:36
 #, kde-format
 msgid "Virtual"
-msgstr "Virtuelle"
+msgstr ""
 
 #: device.cpp:37
 #, kde-format
 msgid "Sony Dualsense"
-msgstr "Sony Dualsense"
+msgstr ""
 
 #: device.cpp:38
 #, kde-format
 msgid "Amazon Luna"
-msgstr "Amazon Luna"
+msgstr ""
 
 #: device.cpp:39
 #, kde-format
 msgid "Google Stadia"
-msgstr "Google Stadia"
+msgstr ""
 
 #: device.cpp:40
 #, kde-format
 msgid "NVidia Shield"
-msgstr "NVidia Shield"
+msgstr ""
 
 #: device.cpp:41
 #, kde-format
 msgid "Switch Left Joycon"
-msgstr "Basculer le bouton gauche du joystick"
+msgstr ""
 
 #: device.cpp:42
 #, kde-format
 msgid "Switch Right Joycon"
-msgstr "Basculer le bouton droit du joystick"
+msgstr ""
 
 #: device.cpp:43
 #, kde-format
 msgid "Switch Paired Joycon"
-msgstr "Basculer les boutons associés du joystick"
+msgstr ""
 
 #: device.cpp:48
 #, kde-format
 msgctxt "The game controller button with a letter A on it"
 msgid "A button"
-msgstr "Bouton A"
+msgstr ""
 
 #: device.cpp:49
 #, kde-format
 msgctxt "The game controller button with a letter B on it"
 msgid "B button"
-msgstr "Bouton B"
+msgstr ""
 
 #: device.cpp:50
 #, kde-format
 msgctxt "The game controller button with a letter X on it"
 msgid "X button"
-msgstr "Bouton X"
+msgstr ""
 
 #: device.cpp:51
 #, kde-format
 msgctxt "The game controller button with a letter Y on it"
 msgid "Y button"
-msgstr "Bouton Y"
+msgstr ""
 
 #: device.cpp:52
 #, kde-format
 msgctxt "The back game controller button"
 msgid "Back button"
-msgstr "Bouton de retour en arrière"
+msgstr ""
 
 #: device.cpp:53
 #, kde-format
 msgctxt "The guide game controller button"
 msgid "Guide button"
-msgstr "Bouton de guide"
+msgstr ""
 
 #: device.cpp:54
 #, kde-format
 msgctxt "The start game controller button"
 msgid "Start button"
-msgstr "Bouton de démarrage"
+msgstr ""
 
 #: device.cpp:55
 #, kde-format
 msgctxt "The button under the game controller's left analog stick"
 msgid "Left analog stick"
-msgstr "Joystick analogique gauche"
+msgstr ""
 
 #: device.cpp:56
 #, kde-format
 msgctxt "The button under the game controller's right analog stick"
 msgid "Right analog stick"
-msgstr "Joystick analogique droite"
+msgstr ""
 
 #: device.cpp:57
 #, kde-format
 msgctxt "The game controller's left shoulder button"
 msgid "Left shoulder button"
-msgstr "Bouton gauche de gâchette"
+msgstr ""
 
 #: device.cpp:58
 #, kde-format
 msgctxt "The game controller's right shoulder button"
 msgid "Right shoulder button"
-msgstr "Bouton droit de gâchette"
+msgstr ""
 
 #: device.cpp:59
 #, kde-format
 msgctxt "The game controller's d-pad Up button"
 msgid "D-pad up button"
-msgstr "Bouton D vers le haut du pavé"
+msgstr ""
 
 #: device.cpp:60
 #, kde-format
 msgctxt "The game controller's d-pad down button"
 msgid "D-pad down button"
-msgstr "Bouton D vers le bas du pavé"
+msgstr ""
 
 #: device.cpp:61
 #, kde-format
 msgctxt "The game controller's d-pad left button"
 msgid "D-pad left button"
-msgstr "Bouton D vers la gauche du pavé"
+msgstr ""
 
 #: device.cpp:62
 #, kde-format
 msgctxt "The game controller's d-pad right button"
 msgid "D-pad right button"
-msgstr "Bouton D vers la droite du pavé"
+msgstr ""
 
 #: device.cpp:64
 #, kde-format
@@ -243,127 +246,127 @@ msgctxt ""
 "The game controller's miscellaneous button (Share on Xbox, mic on "
 "Playstation/Luna, capture on Switch)"
 msgid "Miscellaneous button"
-msgstr "Bouton divers"
+msgstr ""
 
 #: device.cpp:65
 #, kde-format
 msgctxt "The game controller's 1st paddle button"
 msgid "Paddle button 1"
-msgstr "Bouton 1 de la poignée"
+msgstr ""
 
 #: device.cpp:66
 #, kde-format
 msgctxt "The game controller's 2nd paddle button"
 msgid "Paddle button 2"
-msgstr "Bouton 2 de la poignée"
+msgstr ""
 
 #: device.cpp:67
 #, kde-format
 msgctxt "The game controller's 3rd paddle button"
 msgid "Paddle button 3"
-msgstr "Bouton 3 de la poignée"
+msgstr ""
 
 #: device.cpp:68
 #, kde-format
 msgctxt "The game controller's 4th paddle button"
 msgid "Paddle button 4"
-msgstr "Bouton 4 de la poignée"
+msgstr ""
 
 #: device.cpp:69
 #, kde-format
 msgctxt "The button under the game controller's touchpad"
 msgid "Touchpad button"
-msgstr "Bouton de pavé tactile"
+msgstr ""
 
 #: device.cpp:73
 #, kde-format
 msgctxt "Unknown controller connection type"
 msgid "Unknown"
-msgstr "Inconnue"
+msgstr ""
 
 #: device.cpp:74
 #, kde-format
 msgctxt "USB connected controller"
 msgid "USB"
-msgstr "USB"
+msgstr ""
 
 #: device.cpp:75
 #, kde-format
 msgctxt "Bluetooth connected controller"
 msgid "Bluetooth"
-msgstr "Bluetooth"
+msgstr ""
 
 #: device.cpp:83
 #, kde-format
 msgid "Invalid button value"
-msgstr "Valeur de bouton non valable"
+msgstr ""
 
 #: device.cpp:246
 #, kde-format
 msgid "Not a controller"
-msgstr "N'est pas une manette de jeu"
+msgstr ""
 
 #: devicemodel.cpp:68
 #, kde-format
 msgctxt "Device name and path"
 msgid "%1 (%2)"
-msgstr "%1 (%2)"
+msgstr ""
 
 #: ui/main.qml:26
 #, kde-format
 msgid "No game controllers found"
-msgstr "Aucune manette de jeu n'a été trouvée."
+msgstr ""
 
 #: ui/main.qml:27
 #, kde-format
 msgid "Connect a wired or wireless controller"
-msgstr "Connecter une manette de jeu avec ou sans fil"
+msgstr ""
 
 #: ui/main.qml:62
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Device:"
-msgstr "Périphérique :"
+msgstr ""
 
 #: ui/main.qml:84
 #, kde-format
 msgctxt ""
 "@label game controller device type (wheel, joystick, game controller, etc.)"
 msgid "Device type:"
-msgstr "Type de périphérique :"
+msgstr ""
 
 #: ui/main.qml:100
 #, kde-format
 msgctxt "@label game controller controller type (which brand, etc.)"
 msgid "Controller type:"
-msgstr "Type de manette :"
+msgstr ""
 
 #: ui/main.qml:116
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Connection type:"
-msgstr "Type de connexion :"
+msgstr ""
 
 #: ui/main.qml:137
 #, kde-format
 msgctxt "@label Visual representation of the axis position for the left axis"
 msgid "Left position:"
-msgstr "Position à gauche :"
+msgstr ""
 
 #: ui/main.qml:149
 #, kde-format
 msgctxt "@label Visual representation of the axis position for the right axis"
 msgid "Right position:"
-msgstr "Position à droite :"
+msgstr ""
 
 #: ui/main.qml:168
 #, kde-format
 msgctxt "@label Gamepad buttons"
 msgid "Buttons:"
-msgstr "Boutons :"
+msgstr ""
 
 #: ui/main.qml:190
 #, kde-format
 msgctxt "@label Gamepad axes (sticks)"
 msgid "Axes:"
-msgstr "Axes :"
+msgstr ""

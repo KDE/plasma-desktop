@@ -1,65 +1,56 @@
-# Translation of kcm_touchpad.po to Catalan (Valencian)
-# Copyright (C) 2015-2025 This_file_is_part_of_KDE
-# This file is distributed under the license LGPL version 2.1 or
-# version 3 or later versions approved by the membership of KDE e.V.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# SPDX-FileCopyrightText: 2017, 2018, 2020, 2022 Antoni Bella Pérez <antonibella5@yahoo.com>
-# SPDX-FileCopyrightText: 2019 Empar Montoro Martín <montoro_mde@gva.es>
-# SPDX-FileCopyrightText: 2015, 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:41+0000\n"
-"PO-Revision-Date: 2025-05-15 10:23+0200\n"
-"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
-"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
-"Language: ca@valencia\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 22.12.3\n"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
-"La consulta dels dispositius d'entrada ha fallat. Torneu a obrir este mòdul "
-"de configuració."
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:74
 #, kde-format
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr ""
-"Error crític en llegir la informació fonamental del dispositiu per al ratolí "
-"tàctil %1."
 
 #: backends/x11/xlibbackend.cpp:69
 #, kde-format
 msgid "Cannot connect to X server"
-msgstr "No s'ha pogut connectar amb el servidor X"
+msgstr ""
 
 #: backends/x11/xlibbackend.cpp:80 ui/main.qml:59
 #, kde-format
 msgid "No touchpad found"
-msgstr "No s'ha trobat cap ratolí tàctil"
+msgstr ""
 
 #: backends/x11/xlibbackend.cpp:120
 #, kde-format
 msgid "Cannot apply touchpad configuration"
-msgstr "No s'ha pogut aplicar la configuració del ratolí tàctil"
+msgstr ""
 
 #: backends/x11/xlibbackend.cpp:134
 #, kde-format
 msgid "Cannot read touchpad configuration"
-msgstr "No s'ha pogut llegir la configuració del ratolí tàctil"
+msgstr ""
 
 #: backends/x11/xlibbackend.cpp:147
 #, kde-format
 msgid "Cannot read default touchpad configuration"
-msgstr "No s'ha pogut llegir la configuració predeterminada del ratolí tàctil"
+msgstr ""
 
 #: kcm.cpp:107
 #, kde-format
@@ -67,13 +58,11 @@ msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr ""
-"S'ha produït un error mentre es carregaven els valors. Vegeu els registres "
-"per a més informació. Torneu a iniciar este mòdul de configuració."
 
 #: kcm.cpp:110
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
-msgstr "No s'ha trobat cap ratolí tàctil. Connecteu ara el ratolí tàctil."
+msgstr ""
 
 #: kcm.cpp:119
 #, kde-format
@@ -81,9 +70,6 @@ msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
-"No s'han pogut guardar tots els canvis. Vegeu els registres per a més "
-"informació. Torneu a iniciar este mòdul de configuració i proveu-ho una "
-"altra vegada."
 
 #: kcm.cpp:138
 #, kde-format
@@ -91,8 +77,6 @@ msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr ""
-"S'ha produït un error mentre es carregaven els valors predeterminats. Ha "
-"fallat mentre s'establien diverses opcions als seus valors predeterminats."
 
 #: kcm.cpp:154
 #, kde-format
@@ -100,68 +84,64 @@ msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr ""
-"S'ha produït un error mentre s'afegia un dispositiu connectat nou. Torneu a "
-"connectar-lo i reinicieu este mòdul de configuració."
 
 #: kcm.cpp:169
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr ""
-"S'ha desconnectat el ratolí tàctil. Es tanca el seu diàleg de configuració."
 
 #: kcm.cpp:171
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr ""
-"S'ha desconnectat el ratolí tàctil. No s'ha trobat cap altre ratolí tàctil."
 
 #: ui/main.qml:60
 #, kde-format
 msgid "Connect an external touchpad"
-msgstr "Connecta un ratolí tàctil extern"
+msgstr ""
 
 #: ui/main.qml:75
 #, kde-format
 msgid "Device:"
-msgstr "Dispositiu:"
+msgstr ""
 
 #: ui/main.qml:100
 #, kde-format
 msgid "General:"
-msgstr "General:"
+msgstr ""
 
 #: ui/main.qml:101
 #, kde-format
 msgid "Device enabled"
-msgstr "Dispositiu activat"
+msgstr ""
 
 #: ui/main.qml:115
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
-msgstr "Desactiva mentre el ratolí està connectat"
+msgstr ""
 
 #: ui/main.qml:137
 #, kde-format
 msgid "Disable while typing"
-msgstr "Desactiva en teclejar"
+msgstr ""
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
-msgstr "Açò pot interferir amb els videojocs."
+msgstr ""
 
 #: ui/main.qml:170
 #, kde-format
 msgid "Left-handed mode"
-msgstr "Mode esquerrà"
+msgstr ""
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
-msgstr "Prémer els botons esquerre i dret per al clic del mig"
+msgstr ""
 
 #: ui/main.qml:199
 #, kde-format
@@ -170,19 +150,16 @@ msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
-"L'activació d'este paràmetre augmenta la latència del clic en 50 ms. Cal un "
-"retard addicional per a detectar correctament la pressió simultània dels "
-"botons esquerre i dret."
 
 #: ui/main.qml:209
 #, kde-format
 msgid "Pointer speed:"
-msgstr "Velocitat del punter:"
+msgstr ""
 
 #: ui/main.qml:289
 #, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Activa l'acceleració del punter"
+msgstr ""
 
 #: ui/main.qml:304
 #, kde-format
@@ -190,67 +167,65 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
-"Quan es marca, la distància del moviment del punter augmenta amb una "
-"velocitat de moviment més ràpida."
 
 #: ui/main.qml:314
 #, kde-format
 msgid "Scrolling speed:"
-msgstr "Velocitat de desplaçament:"
+msgstr ""
 
 #: ui/main.qml:365
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
-msgstr "Més lenta"
+msgstr ""
 
 #: ui/main.qml:372
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
-msgstr "Més ràpida"
+msgstr ""
 
 #: ui/main.qml:380
 #, kde-format
 msgid "Scrolling:"
-msgstr "Desplaçament:"
+msgstr ""
 
 #: ui/main.qml:399
 #, kde-format
 msgid "Two fingers"
-msgstr "Dos dits"
+msgstr ""
 
 #: ui/main.qml:406
 #, kde-format
 msgid "Touchpad edges"
-msgstr "Vores del ratolí tàctil"
+msgstr ""
 
 #: ui/main.qml:414
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
-msgstr "Invertix la direcció de desplaçament (desplaçament natural)"
+msgstr ""
 
 #: ui/main.qml:428
 #, kde-format
 msgid "Disable horizontal scrolling"
-msgstr "Desactiva el desplaçament horitzontal"
+msgstr ""
 
 #: ui/main.qml:448
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
-msgstr "Tocs:"
+msgstr ""
 
 #: ui/main.qml:449
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
-msgstr "Toc per a clicar"
+msgstr ""
 
 #: ui/main.qml:465
 #, kde-format
 msgid "Tap-and-drag"
-msgstr "Tocar i arrossegar"
+msgstr ""
 
 #: ui/main.qml:478
 #, kde-format
@@ -259,38 +234,36 @@ msgid ""
 "Tap, then tap and immediately slide finger over the touchpad to drag. Lift "
 "finger to drop."
 msgstr ""
-"Toqueu, després toqueu i llisqueu immediatament el dit sobre el ratolí "
-"tàctil per a arrossegar. Aixequeu el dit per a deixar anar."
 
 #: ui/main.qml:485
 #, kde-format
 msgid "Allow briefly lifting finger during tap-and-drag"
-msgstr "Permet aixecar breument el dit durant el toc i l'arrossegament"
+msgstr ""
 
 #: ui/main.qml:499
 #, kde-format
 msgid "Two-finger tap:"
-msgstr "Toc amb dos dits:"
+msgstr ""
 
 #: ui/main.qml:519
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
-msgstr "Clic dret (un toc amb tres dits per al clic del mig)"
+msgstr ""
 
 #: ui/main.qml:520
 #, kde-format
 msgid "Right-click"
-msgstr "Clic dret"
+msgstr ""
 
 #: ui/main.qml:528
 #, kde-format
 msgid "Middle-click (three-finger tap to right-click)"
-msgstr "Clic del mig (un toc amb tres dits per al clic dret)"
+msgstr ""
 
 #: ui/main.qml:529
 #, kde-format
 msgid "Middle-click"
-msgstr "Clic del mig"
+msgstr ""
 
 #: ui/main.qml:541
 #, kde-format
@@ -298,37 +271,37 @@ msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated right-click:"
-msgstr "Clic dret integrat:"
+msgstr ""
 
 #: ui/main.qml:562
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
-msgstr "Premeu el cantó inferior dret"
+msgstr ""
 
 #: ui/main.qml:577
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
-msgstr "Clic del mig prement les dues cantons inferiors."
+msgstr ""
 
 #: ui/main.qml:578
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr "Clic del mig prement el centre inferior."
+msgstr ""
 
 #: ui/main.qml:586
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
-msgstr "Premeu el ratolí tàctil amb dos dits"
+msgstr ""
 
 #: ui/main.qml:601
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
-msgstr "Clic del mig prement amb tres dits."
+msgstr ""
 
 #: ui/main.qml:610
 #, kde-format
@@ -336,22 +309,22 @@ msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated middle-click:"
-msgstr "Clic del mig integrat:"
+msgstr ""
 
 #: ui/main.qml:631
 #, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
-msgstr "Premeu la vora mitjana inferior"
+msgstr ""
 
 #: ui/main.qml:638
 #, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
-msgstr "Premeu els cantons inferiors esquerra i dreta"
+msgstr ""
 
 #: ui/main.qml:645
 #, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
-msgstr "Premeu el ratolí tàctil amb tres dits"
+msgstr ""
