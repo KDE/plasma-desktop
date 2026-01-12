@@ -48,8 +48,8 @@ msgstr "Obtín connectors nous…"
 msgctxt "@info:status"
 msgid "Failed to run install script in terminal <message>%1</message>"
 msgstr ""
-"No s'ha pogut executar l'script d'instal·lació en el terminal <message>%1</"
-"message>"
+"Ha fallat mentre s'executava l'script d'instal·lació en el terminal <message>"
+"%1</message>"
 
 #: plugininstaller/AbstractJob.cpp:29
 #, kde-format
@@ -247,4 +247,5 @@ msgstr "No s'ha pogut resoldre el nom del paquet de %1"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
-msgstr "No s'ha pogut executar l'ordre d'instal·lació: <message>%1</message>"
+msgstr ""
+"Ha fallat mentre s'executava l'ordre d'instal·lació: <message>%1</message>"
