@@ -75,7 +75,7 @@ KCM.SimpleKCM {
     headerPaddingEnabled: false // Let the InlineMessages touch the edges
     header: Kirigami.InlineMessage {
         Layout.fillWidth: true
-        visible: kcm.pluginEnabled && deviceCombo.count !== 0
+        visible: !kcm.pluginEnabled && deviceCombo.count !== 0
         type: Kirigami.MessageType.Warning
         position: Kirigami.InlineMessage.Position.Header
         showCloseButton: true
