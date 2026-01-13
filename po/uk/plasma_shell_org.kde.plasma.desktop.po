@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-10 00:44+0000\n"
-"PO-Revision-Date: 2026-01-08 08:46+0200\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
+"PO-Revision-Date: 2026-01-12 03:19+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -467,26 +467,34 @@ msgid "Width"
 msgstr "Ширина"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, kde-format
-msgctxt "@item:inlistbox"
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Fill height"
+msgctxt "@item:inlistbox panel fills the full height of the display"
 msgid "Fill height"
 msgstr "Заповнити у висоту"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, kde-format
-msgctxt "@item:inlistbox"
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Fill width"
+msgctxt "@item:inlistbox panel fills the full width of the display"
 msgid "Fill width"
 msgstr "Заповнити у ширину"
 
 #: contents/configuration/PanelConfiguration.qml:335
-#, kde-format
-msgctxt "@item:inlistbox"
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Fit content"
+msgctxt "@item:inlistbox panel is just big enough to fit its content"
 msgid "Fit content"
 msgstr "За вмістом"
 
 #: contents/configuration/PanelConfiguration.qml:336
-#, kde-format
-msgctxt "@item:inlistbox"
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Custom"
+msgctxt "@item:inlistbox panel size"
 msgid "Custom"
 msgstr "Нетиповий"
 
@@ -588,8 +596,10 @@ msgid "Panel Height:"
 msgstr "Висота панелі:"
 
 #: contents/configuration/PanelConfiguration.qml:671
-#, kde-format
-msgctxt "@title:group"
+#, fuzzy, kde-format
+#| msgctxt "@title:group"
+#| msgid "Focus shortcut:"
+msgctxt "@title:group shortcut that moves focus to the panel"
 msgid "Focus shortcut:"
 msgstr "Скорочення фокусування:"
 
@@ -600,8 +610,10 @@ msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Натисніть цю комбінацію клавіш, щоб передати фокус панелі"
 
 #: contents/configuration/PanelConfiguration.qml:689
-#, kde-format
-msgctxt "@action:button acccessible name"
+#, fuzzy, kde-format
+#| msgctxt "@action:button acccessible name"
+#| msgid "Focus Shortcut Setter"
+msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
 msgstr "Засіб встановлення скорочення фокусування"
 
@@ -618,9 +630,11 @@ msgid "Delete Panel"
 msgstr "Вилучити панель"
 
 #: contents/configuration/PanelConfiguration.qml:719
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip for button"
+#| msgid "Remove this panel; this action is undo-able"
 msgctxt "@info:tooltip for button"
-msgid "Remove this panel; this action is undo-able"
+msgid "Remove this panel; this action can be undone"
 msgstr "Вилучити цю панель; наслідки цієї дії можна скасувати"
 
 #: contents/configuration/PanelConfiguration.qml:728
@@ -1013,15 +1027,13 @@ msgid "(or scan your smartcard)"
 msgstr "(або скануйте вашу смарт-картку)"
 
 #: contents/lockscreen/MediaControls.qml:59
-#, fuzzy, kde-format
-#| msgid "No title"
+#, kde-format
 msgctxt "@info:status"
 msgid "No title"
 msgstr "Без заголовка"
 
 #: contents/lockscreen/MediaControls.qml:60
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgctxt "@info:status"
 msgid "No media playing"
 msgstr "Відтворення не відбувається"

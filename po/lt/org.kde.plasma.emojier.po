@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2026-01-06 15:13+0200\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
+"PO-Revision-Date: 2026-01-12 23:38+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -47,8 +47,7 @@ msgid "Replace an existing instance"
 msgstr "Pakeisti esamą egzempliorių"
 
 #: app/ui/CategoryPage.qml:112
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:button clear emoji history"
 msgid "Clear History"
 msgstr "Išvalyti istoriją"
@@ -150,8 +149,7 @@ msgid "Copy Description"
 msgstr "Kopijuoti aprašą"
 
 #: app/ui/CategoryPage.qml:368
-#, fuzzy, kde-format
-#| msgid "No recent Emojis"
+#, kde-format
 msgctxt "@label placeholder for empty recent emoji list"
 msgid "No recent Emojis"
 msgstr "Nėra paskiausių jaustukų"
@@ -164,14 +162,14 @@ msgstr "Nerasta jokių atitinkančių jaustukų"
 
 #: app/ui/Emojier.qml:44
 #, fuzzy, kde-format
+#| msgctxt "@info:status passive notification as action feedback"
 #| msgid "%1 copied to the clipboard"
-msgctxt "@info:status passive notification as action feedback"
+msgctxt "@info:status passive notification as action feedback, %1 is an emoji"
 msgid "%1 copied to the clipboard"
-msgstr "%1 nukopijuota į iškarpinę"
+msgstr "%1 nukopijuotas į iškarpinę"
 
 #: app/ui/Emojier.qml:58
-#, fuzzy, kde-format
-#| msgid "Recent"
+#, kde-format
 msgctxt "@title page title for Recent Emoji view, and sidebar label for it"
 msgid "Recent"
 msgstr "Paskiausi"

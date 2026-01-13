@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-10 00:44+0000\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
 "PO-Revision-Date: 2026-01-10 02:53+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -467,26 +467,34 @@ msgid "Width"
 msgstr "სიგანე"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, kde-format
-msgctxt "@item:inlistbox"
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Fill height"
+msgctxt "@item:inlistbox panel fills the full height of the display"
 msgid "Fill height"
 msgstr "სიმაღლის შევსება"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, kde-format
-msgctxt "@item:inlistbox"
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Fill width"
+msgctxt "@item:inlistbox panel fills the full width of the display"
 msgid "Fill width"
 msgstr "სიგანის შევსება"
 
 #: contents/configuration/PanelConfiguration.qml:335
-#, kde-format
-msgctxt "@item:inlistbox"
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Fit content"
+msgctxt "@item:inlistbox panel is just big enough to fit its content"
 msgid "Fit content"
 msgstr "შემცველობის ჩატევა"
 
 #: contents/configuration/PanelConfiguration.qml:336
-#, kde-format
-msgctxt "@item:inlistbox"
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Custom"
+msgctxt "@item:inlistbox panel size"
 msgid "Custom"
 msgstr "ხელით"
 
@@ -588,8 +596,10 @@ msgid "Panel Height:"
 msgstr "პანელის სიმაღლე:"
 
 #: contents/configuration/PanelConfiguration.qml:671
-#, kde-format
-msgctxt "@title:group"
+#, fuzzy, kde-format
+#| msgctxt "@title:group"
+#| msgid "Focus shortcut:"
+msgctxt "@title:group shortcut that moves focus to the panel"
 msgid "Focus shortcut:"
 msgstr "ფოკუსის მალსახმობი:"
 
@@ -601,8 +611,10 @@ msgstr ""
 "ფოკუსის პანელზე გადასატანად ეს კლავიატურის მალსახმობი შეგიძლიათ, გამოიყენოთ"
 
 #: contents/configuration/PanelConfiguration.qml:689
-#, kde-format
-msgctxt "@action:button acccessible name"
+#, fuzzy, kde-format
+#| msgctxt "@action:button acccessible name"
+#| msgid "Focus Shortcut Setter"
+msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
 msgstr "ფოკუსის მალსახმობის დამყენებელი"
 
@@ -619,9 +631,11 @@ msgid "Delete Panel"
 msgstr "პანელის წაშლა"
 
 #: contents/configuration/PanelConfiguration.qml:719
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip for button"
+#| msgid "Remove this panel; this action is undo-able"
 msgctxt "@info:tooltip for button"
-msgid "Remove this panel; this action is undo-able"
+msgid "Remove this panel; this action can be undone"
 msgstr "ამ პანელის წაშლა. ეს ქმედება დაბრუნებადია"
 
 #: contents/configuration/PanelConfiguration.qml:728

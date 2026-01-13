@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-12-16 21:27+0200\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
+"PO-Revision-Date: 2026-01-12 23:21+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -22,24 +22,19 @@ msgstr ""
 "X-Generator: Poedit 3.8\n"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Pause Indexer"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pause Indexer"
 msgstr "Pristabdyti indeksatorių"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Resume Indexer"
+#, kde-format
 msgctxt "@action:button"
 msgid "Resume Indexer"
 msgstr "Pratęsti indeksatorių"
 
 #: ui/main.qml:61
-#, fuzzy, kde-format
-#| msgid ""
-#| "This will disable file searching in KRunner and launcher menus, and "
-#| "remove extended metadata display from all KDE applications."
+#, kde-format
 msgctxt "@info inlinemessage"
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -50,34 +45,32 @@ msgstr ""
 
 #: ui/main.qml:71
 #, fuzzy, kde-format
+#| msgctxt "@info inlinemessage"
 #| msgid ""
 #| "Do you want to delete the saved index data? %1 of space will be freed, "
 #| "but if indexing is re-enabled later, the entire index will have to be re-"
 #| "created from scratch. This may take some time, depending on how many "
 #| "files you have."
-msgctxt "@info inlinemessage"
+msgctxt "@info:inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
 "if indexing is re-enabled later, the entire index will have to be re-created "
-"from scratch. This may take some time, depending on how many files you have."
+"from scratch. This may take some time, depending on the number of files to "
+"index."
 msgstr ""
 "Ar norite ištrinti įrašytus indeksavimo duomenis? Bus atlaisvinta %1 vietos, "
-"bet jeigu vėliau indeksavimas bus įjungtas iš naujo, tuomet visą indeksą "
-"teks kurti iš naujo nuo nulio. Tai gali užtrukti tam tikrą laiką, "
-"priklausomai nuo to, kiek turite failų."
+"bet jeigu vėliau indeksavimas bus įjungtas iš naujo, tada visą indeksą teks "
+"kurti iš naujo nuo nulio. Tai gali užtrukti tam tikrą laiką, priklausomai "
+"nuo to, kiek turite failų."
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgid "Delete Index Data"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delete Index Data"
 msgstr "Ištrinti indeksavimo duomenis"
 
 #: ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid ""
-#| "File Search helps you quickly locate your files. You can choose which "
-#| "folders and what types of file data are indexed."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
@@ -93,29 +86,25 @@ msgid "Data to index:"
 msgstr "Duomenys, kuriuos indeksuoti:"
 
 #: ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "Nothing (disable indexing entirely)"
+#, kde-format
 msgctxt "@option:radio Data to index"
 msgid "Nothing (disable indexing entirely)"
 msgstr "Nieko (visiškai išjungti indeksavimą)"
 
 #: ui/main.qml:121
-#, fuzzy, kde-format
-#| msgid "File names only"
+#, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names only"
 msgstr "Tik failų pavadinimai"
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "File names and contents"
+#, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names and contents"
 msgstr "Failų pavadinimai ir turinys"
 
 #: ui/main.qml:157
-#, fuzzy, kde-format
-#| msgid "Also index hidden files and folders"
+#, kde-format
 msgctxt "@option:check"
 msgid "Also index hidden files and folders"
 msgstr "Taip pat indeksuoti paslėptus failus ir aplankus"
@@ -151,15 +140,13 @@ msgid "Currently indexing: <filename>%1</filename>"
 msgstr "Šiuo metu indeksuojama: <filename>%1</filename>"
 
 #: ui/main.qml:270
-#, fuzzy, kde-format
-#| msgid "Not indexed"
+#, kde-format
 msgctxt "@info:status"
 msgid "Not indexed"
 msgstr "Neindeksuotas"
 
 #: ui/main.qml:271
-#, fuzzy, kde-format
-#| msgid "Indexed"
+#, kde-format
 msgctxt "@info:status"
 msgid "Indexed"
 msgstr "Indeksuotas"
@@ -171,15 +158,13 @@ msgid "Remove entry"
 msgstr "Šalinti įrašą"
 
 #: ui/main.qml:318
-#, fuzzy, kde-format
-#| msgid "Select a folder to include"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to include"
 msgstr "Pasirinkite aplanką, kurį įtraukti"
 
 #: ui/main.qml:318
-#, fuzzy, kde-format
-#| msgid "Select a folder to exclude"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to exclude"
 msgstr "Pasirinkite aplanką, kurį išbraukti"

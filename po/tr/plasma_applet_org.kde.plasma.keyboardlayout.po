@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
 "PO-Revision-Date: 2026-01-08 17:15+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -37,8 +37,10 @@ msgid "No flag available"
 msgstr "Kullanılabilir bayrak yok"
 
 #: qml/configGeneral.qml:102
-#, kde-format
-msgctxt "@label prefixed to button"
+#, fuzzy, kde-format
+#| msgctxt "@label prefixed to button"
+#| msgid "Layouts:"
+msgctxt "@label prefixed to button, as in 'keyboard layouts'"
 msgid "Layouts:"
 msgstr "Yerleşimler:"
 

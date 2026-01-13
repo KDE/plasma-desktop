@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-10 00:44+0000\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
 "PO-Revision-Date: 2024-04-23 19:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -464,26 +464,34 @@ msgid "Width"
 msgstr "宽度"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, kde-format
-msgctxt "@item:inlistbox"
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Fill height"
+msgctxt "@item:inlistbox panel fills the full height of the display"
 msgid "Fill height"
 msgstr "填满高度"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, kde-format
-msgctxt "@item:inlistbox"
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Fill width"
+msgctxt "@item:inlistbox panel fills the full width of the display"
 msgid "Fill width"
 msgstr "填满宽度"
 
 #: contents/configuration/PanelConfiguration.qml:335
-#, kde-format
-msgctxt "@item:inlistbox"
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Fit content"
+msgctxt "@item:inlistbox panel is just big enough to fit its content"
 msgid "Fit content"
 msgstr "适合内容"
 
 #: contents/configuration/PanelConfiguration.qml:336
-#, kde-format
-msgctxt "@item:inlistbox"
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Custom"
+msgctxt "@item:inlistbox panel size"
 msgid "Custom"
 msgstr "自定义"
 
@@ -585,8 +593,10 @@ msgid "Panel Height:"
 msgstr "面板高度："
 
 #: contents/configuration/PanelConfiguration.qml:671
-#, kde-format
-msgctxt "@title:group"
+#, fuzzy, kde-format
+#| msgctxt "@title:group"
+#| msgid "Focus shortcut:"
+msgctxt "@title:group shortcut that moves focus to the panel"
 msgid "Focus shortcut:"
 msgstr "焦点快捷键："
 
@@ -597,8 +607,10 @@ msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "按下此键盘快捷键以移动焦点到面板"
 
 #: contents/configuration/PanelConfiguration.qml:689
-#, kde-format
-msgctxt "@action:button acccessible name"
+#, fuzzy, kde-format
+#| msgctxt "@action:button acccessible name"
+#| msgid "Focus Shortcut Setter"
+msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
 msgstr "聚焦快捷键设置"
 
@@ -615,9 +627,11 @@ msgid "Delete Panel"
 msgstr "删除面板"
 
 #: contents/configuration/PanelConfiguration.qml:719
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip for button"
+#| msgid "Remove this panel; this action is undo-able"
 msgctxt "@info:tooltip for button"
-msgid "Remove this panel; this action is undo-able"
+msgid "Remove this panel; this action can be undone"
 msgstr "移除此面板；此操作可以撤销"
 
 #: contents/configuration/PanelConfiguration.qml:728
@@ -1003,13 +1017,13 @@ msgstr "(或者扫描您的智能卡)"
 #, kde-format
 msgctxt "@info:status"
 msgid "No title"
-msgstr ""
+msgstr "无标题"
 
 #: contents/lockscreen/MediaControls.qml:60
 #, kde-format
 msgctxt "@info:status"
 msgid "No media playing"
-msgstr ""
+msgstr "没有正在播放的媒体"
 
 #: contents/lockscreen/MediaControls.qml:88
 #, kde-format

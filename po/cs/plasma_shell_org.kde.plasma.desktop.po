@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-10 00:44+0000\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
 "PO-Revision-Date: 2025-12-05 13:40+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -533,27 +533,29 @@ msgstr "Šířka"
 #: contents/configuration/PanelConfiguration.qml:334
 #, fuzzy, kde-format
 #| msgid "Fill height"
-msgctxt "@item:inlistbox"
+msgctxt "@item:inlistbox panel fills the full height of the display"
 msgid "Fill height"
 msgstr "Vyplnit víšku"
 
 #: contents/configuration/PanelConfiguration.qml:334
 #, fuzzy, kde-format
 #| msgid "Fill width"
-msgctxt "@item:inlistbox"
+msgctxt "@item:inlistbox panel fills the full width of the display"
 msgid "Fill width"
 msgstr "Vyplnit šířku"
 
 #: contents/configuration/PanelConfiguration.qml:335
 #, fuzzy, kde-format
 #| msgid "Fit content"
-msgctxt "@item:inlistbox"
+msgctxt "@item:inlistbox panel is just big enough to fit its content"
 msgid "Fit content"
 msgstr "Přizpůsob obsah"
 
 #: contents/configuration/PanelConfiguration.qml:336
-#, kde-format
-msgctxt "@item:inlistbox"
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Custom"
+msgctxt "@item:inlistbox panel size"
 msgid "Custom"
 msgstr "Vlastní"
 
@@ -668,7 +670,7 @@ msgstr "Výška panelu:"
 
 #: contents/configuration/PanelConfiguration.qml:671
 #, kde-format
-msgctxt "@title:group"
+msgctxt "@title:group shortcut that moves focus to the panel"
 msgid "Focus shortcut:"
 msgstr ""
 
@@ -681,7 +683,7 @@ msgstr "Touto klávesovou zkratkou se přepnete na panel7"
 
 #: contents/configuration/PanelConfiguration.qml:689
 #, kde-format
-msgctxt "@action:button acccessible name"
+msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
 msgstr ""
 
@@ -701,7 +703,7 @@ msgstr "Smazat panel"
 #, fuzzy, kde-format
 #| msgid "Remove this panel; this action is undo-able"
 msgctxt "@info:tooltip for button"
-msgid "Remove this panel; this action is undo-able"
+msgid "Remove this panel; this action can be undone"
 msgstr "Odstranit tento panel, tento krok nelze vzít zpět"
 
 #: contents/configuration/PanelConfiguration.qml:728

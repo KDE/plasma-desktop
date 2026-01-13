@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-10 00:44+0000\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
 "PO-Revision-Date: 2025-10-03 13:25+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -542,28 +542,28 @@ msgstr "Lățime"
 #: contents/configuration/PanelConfiguration.qml:334
 #, fuzzy, kde-format
 #| msgid "Fill height"
-msgctxt "@item:inlistbox"
+msgctxt "@item:inlistbox panel fills the full height of the display"
 msgid "Fill height"
 msgstr "Umple înălțimea"
 
 #: contents/configuration/PanelConfiguration.qml:334
 #, fuzzy, kde-format
 #| msgid "Fill width"
-msgctxt "@item:inlistbox"
+msgctxt "@item:inlistbox panel fills the full width of the display"
 msgid "Fill width"
 msgstr "Umple lățimea"
 
 #: contents/configuration/PanelConfiguration.qml:335
 #, fuzzy, kde-format
 #| msgid "Fit content"
-msgctxt "@item:inlistbox"
+msgctxt "@item:inlistbox panel is just big enough to fit its content"
 msgid "Fit content"
 msgstr "Potrivește conținutul"
 
 #: contents/configuration/PanelConfiguration.qml:336
 #, fuzzy, kde-format
 #| msgid "Custom"
-msgctxt "@item:inlistbox"
+msgctxt "@item:inlistbox panel size"
 msgid "Custom"
 msgstr "Personalizat"
 
@@ -678,7 +678,7 @@ msgstr "Înălțime panou:"
 #: contents/configuration/PanelConfiguration.qml:671
 #, fuzzy, kde-format
 #| msgid "Focus shortcut:"
-msgctxt "@title:group"
+msgctxt "@title:group shortcut that moves focus to the panel"
 msgid "Focus shortcut:"
 msgstr "Scurtătură pentru focalizare:"
 
@@ -693,7 +693,7 @@ msgstr ""
 #: contents/configuration/PanelConfiguration.qml:689
 #, fuzzy, kde-format
 #| msgid "Focus shortcut:"
-msgctxt "@action:button acccessible name"
+msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
 msgstr "Scurtătură pentru focalizare:"
 
@@ -713,7 +713,7 @@ msgstr "Șterge panoul"
 #, fuzzy, kde-format
 #| msgid "Remove this panel; this action is undo-able"
 msgctxt "@info:tooltip for button"
-msgid "Remove this panel; this action is undo-able"
+msgid "Remove this panel; this action can be undone"
 msgstr "Elimină acest panou. Acțiunea nu poate fi desfăcută."
 
 #: contents/configuration/PanelConfiguration.qml:728

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-10 00:44+0000\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
 "PO-Revision-Date: 2026-01-10 12:51+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -470,26 +470,34 @@ msgid "Width"
 msgstr "Amplària"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, kde-format
-msgctxt "@item:inlistbox"
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Fill height"
+msgctxt "@item:inlistbox panel fills the full height of the display"
 msgid "Fill height"
 msgstr "Òmpliga l'alçària"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, kde-format
-msgctxt "@item:inlistbox"
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Fill width"
+msgctxt "@item:inlistbox panel fills the full width of the display"
 msgid "Fill width"
 msgstr "Òmpliga l'amplària"
 
 #: contents/configuration/PanelConfiguration.qml:335
-#, kde-format
-msgctxt "@item:inlistbox"
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Fit content"
+msgctxt "@item:inlistbox panel is just big enough to fit its content"
 msgid "Fit content"
 msgstr "Ajusta el contingut"
 
 #: contents/configuration/PanelConfiguration.qml:336
-#, kde-format
-msgctxt "@item:inlistbox"
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Custom"
+msgctxt "@item:inlistbox panel size"
 msgid "Custom"
 msgstr "Personalitzada"
 
@@ -591,8 +599,10 @@ msgid "Panel Height:"
 msgstr "Alçària del quadro:"
 
 #: contents/configuration/PanelConfiguration.qml:671
-#, kde-format
-msgctxt "@title:group"
+#, fuzzy, kde-format
+#| msgctxt "@title:group"
+#| msgid "Focus shortcut:"
+msgctxt "@title:group shortcut that moves focus to the panel"
 msgid "Focus shortcut:"
 msgstr "Drecera de focus:"
 
@@ -603,8 +613,10 @@ msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Premeu esta drecera de teclat per a moure el focus al quadro"
 
 #: contents/configuration/PanelConfiguration.qml:689
-#, kde-format
-msgctxt "@action:button acccessible name"
+#, fuzzy, kde-format
+#| msgctxt "@action:button acccessible name"
+#| msgid "Focus Shortcut Setter"
+msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
 msgstr "Establix de drecera de focus"
 
@@ -621,9 +633,11 @@ msgid "Delete Panel"
 msgstr "Suprimix el quadro"
 
 #: contents/configuration/PanelConfiguration.qml:719
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip for button"
+#| msgid "Remove this panel; this action is undo-able"
 msgctxt "@info:tooltip for button"
-msgid "Remove this panel; this action is undo-able"
+msgid "Remove this panel; this action can be undone"
 msgstr "Elimina este quadro. Esta acció no es podrà desfer"
 
 #: contents/configuration/PanelConfiguration.qml:728

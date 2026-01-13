@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-08-05 14:02+0300\n"
+"PO-Revision-Date: 2026-01-12 23:49+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -18,13 +18,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.8\n"
 
 #: ui/main.qml:25
-#, fuzzy, kde-format
-#| msgid ""
-#| "The system must be restarted before changes to the middle-click paste "
-#| "setting can take effect."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
@@ -34,8 +31,7 @@ msgstr ""
 "mygtuku nuostatomis, sistema privalo būti paleista iš naujo."
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgctxt "@action:button"
 msgid "Restart"
 msgstr "Paleisti iš naujo"
@@ -59,12 +55,7 @@ msgid "Panel and widget tooltips"
 msgstr "Skydelių ir valdiklių paaiškinimai"
 
 #: ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid ""
-#| "Allows all Plasma panel and desktop widgets to show descriptive tooltips "
-#| "when hovered with the pointer. This setting has no effect on the small "
-#| "tooltips displayed when hovering over individual buttons and other user "
-#| "interface elements."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Allows all Plasma panel and desktop widgets to show descriptive tooltips "
@@ -72,7 +63,7 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
-"Leidžia visiems Plasma skydeliams ir darbalaukio valdikliams, užvedus ant jų "
+"Leidžia visiems Plasma skydelio ir darbalaukio valdikliams, užvedus ant jų "
 "pelę, rodyti aprašomuosius paaiškinimus. Ši nuostata negalioja mažiems "
 "paaiškinimams, kurie rodomi, kai pelė užvedama ant atskirų mygtukų ar kitų "
 "naudotojo sąsajos elementų."
@@ -85,10 +76,7 @@ msgid "OSD popups for status changes"
 msgstr "Iškylančiuosius pranešimus ekrane apie būsenos pokyčius"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Allows all Plasma widgets to show on-screen display (OSD) popups for "
-#| "changes like volume and brightness level, or audio device switching."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
@@ -105,18 +93,13 @@ msgid "Scrolling"
 msgstr "Slinkimas"
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid "Clicking in scrollbar track:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
 msgstr "Spustelėjimas slankjuostės takelyje:"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
-#| "to the clicked location'"
-#| msgid "Scrolls to the clicked location"
+#, kde-format
 msgctxt ""
 "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
 "scrolls to the clicked location'"
@@ -124,11 +107,7 @@ msgid "Scrolls to the clicked location"
 msgstr "Slenka į spustelėtą vietą"
 
 #: ui/main.qml:119
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
-#| "one page up or down'"
-#| msgid "Scrolls one page up or down"
+#, kde-format
 msgctxt ""
 "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
 "scrolls one page up or down'"
@@ -136,8 +115,7 @@ msgid "Scrolls one page up or down"
 msgstr "Slenka vieną puslapį aukštyn ar žemyn"
 
 #: ui/main.qml:137
-#, fuzzy, kde-format
-#| msgid "Middle-click to scroll to clicked location"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Middle-click to scroll to clicked location"
 msgstr "Viduriniojo mygtuko spustelėjimas slenka į spustelėtą vietą"
@@ -182,8 +160,7 @@ msgid "Selects them"
 msgstr "Juos pažymi"
 
 #: ui/main.qml:201
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "Vietoj to, atverti naudojant dvikartį spustelėjimą"
@@ -195,8 +172,7 @@ msgid "Opens them"
 msgstr "Juos atveria"
 
 #: ui/main.qml:232
-#, fuzzy, kde-format
-#| msgid "Select by clicking on item's selection marker"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
 msgstr "Žymėti spustelėjant ant elemento žymėjimo žymeklio"
@@ -218,8 +194,7 @@ msgid "Pastes selected text"
 msgstr "Įdeda žymėtą tekstą"
 
 #: ui/main.qml:268
-#, fuzzy, kde-format
-#| msgid "Double-click interval:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Double-click interval:"
 msgstr "Dvikarčio spustelėjimo intervalas:"
@@ -241,10 +216,7 @@ msgid "ms"
 msgstr "msek."
 
 #: ui/main.qml:301
-#, fuzzy, kde-format
-#| msgid ""
-#| "Two clicks within this duration are considered a double-click. Some "
-#| "applications may not honor this setting."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "
@@ -264,22 +236,19 @@ msgstr ""
 "nepasikeičia, padidinkite dvikarčio spustelėjimo intervalą."
 
 #: ui/main.qml:354
-#, fuzzy, kde-format
-#| msgid "Drag and Drop"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr "Tempimas"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgid "When dragging files or folders:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "Tempiant failus ar aplankus:"
 
 #: ui/main.qml:362
-#, fuzzy, kde-format
-#| msgid "Always ask what to do"
+#, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr "Visada klausti, ką daryti"
@@ -298,8 +267,7 @@ msgstr ""
 "dialogą."
 
 #: ui/main.qml:386
-#, fuzzy, kde-format
-#| msgid "Move if on the same device"
+#, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "Perkelti, jeigu jie tame pačiame įrenginyje"
@@ -319,34 +287,25 @@ msgid "Touch"
 msgstr "Lietimas"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Enable Touch Mode:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Touch Mode:"
 msgstr "Įjungti lietimo veiksena:"
 
 #: ui/main.qml:418
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
-#| msgid "Automatically enable as needed"
+#, kde-format
 msgctxt "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Automatiškai įjungti, kai reikia"
 
 #: ui/main.qml:418
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is never enabled'"
-#| msgid "Never enabled"
+#, kde-format
 msgctxt "option:radio As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Niekada neįjungta"
 
 #: ui/main.qml:435
-#, fuzzy, kde-format
-#| msgid ""
-#| "Touch Mode will be automatically activated whenever the system detects a "
-#| "touchscreen but no mouse or touchpad. For example: when a transformable "
-#| "laptop's keyboard is flipped around or detached."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -371,10 +330,7 @@ msgid "Disabled"
 msgstr "Išjungta"
 
 #: ui/main.qml:486
-#, fuzzy, kde-format
-#| msgid ""
-#| "In Touch Mode, many elements of the user interface will become larger to "
-#| "more easily accommodate touch interaction."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "

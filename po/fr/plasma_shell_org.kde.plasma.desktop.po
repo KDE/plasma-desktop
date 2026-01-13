@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-10 00:44+0000\n"
-"PO-Revision-Date: 2026-01-09 18:17+0100\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
+"PO-Revision-Date: 2026-01-12 10:31+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 "X-Text-Markup: kde4\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
@@ -477,26 +477,34 @@ msgid "Width"
 msgstr "Largeur"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, kde-format
-msgctxt "@item:inlistbox"
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Fill height"
+msgctxt "@item:inlistbox panel fills the full height of the display"
 msgid "Fill height"
 msgstr "Remplir la hauteur"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, kde-format
-msgctxt "@item:inlistbox"
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Fill width"
+msgctxt "@item:inlistbox panel fills the full width of the display"
 msgid "Fill width"
 msgstr "Remplir la largeur"
 
 #: contents/configuration/PanelConfiguration.qml:335
-#, kde-format
-msgctxt "@item:inlistbox"
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Fit content"
+msgctxt "@item:inlistbox panel is just big enough to fit its content"
 msgid "Fit content"
 msgstr "Ajuster au contenu"
 
 #: contents/configuration/PanelConfiguration.qml:336
-#, kde-format
-msgctxt "@item:inlistbox"
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Custom"
+msgctxt "@item:inlistbox panel size"
 msgid "Custom"
 msgstr "Personnalisé"
 
@@ -598,8 +606,10 @@ msgid "Panel Height:"
 msgstr "Hauteur de panneau :"
 
 #: contents/configuration/PanelConfiguration.qml:671
-#, kde-format
-msgctxt "@title:group"
+#, fuzzy, kde-format
+#| msgctxt "@title:group"
+#| msgid "Focus shortcut:"
+msgctxt "@title:group shortcut that moves focus to the panel"
 msgid "Focus shortcut:"
 msgstr "Raccourci de focus :"
 
@@ -611,8 +621,10 @@ msgstr ""
 "Appuyez sur ce raccourci de clavier pour déplacer le focus vers le panneau"
 
 #: contents/configuration/PanelConfiguration.qml:689
-#, kde-format
-msgctxt "@action:button acccessible name"
+#, fuzzy, kde-format
+#| msgctxt "@action:button acccessible name"
+#| msgid "Focus Shortcut Setter"
+msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
 msgstr "Réglage de raccourci de focus"
 
@@ -630,9 +642,11 @@ msgid "Delete Panel"
 msgstr "Supprimer un panneau"
 
 #: contents/configuration/PanelConfiguration.qml:719
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip for button"
+#| msgid "Remove this panel; this action is undo-able"
 msgctxt "@info:tooltip for button"
-msgid "Remove this panel; this action is undo-able"
+msgid "Remove this panel; this action can be undone"
 msgstr "Supprimer ce panneau. Cette action ne peut être annulée."
 
 #: contents/configuration/PanelConfiguration.qml:728
@@ -1026,15 +1040,13 @@ msgid "(or scan your smartcard)"
 msgstr "(ou parcourir votre carte mémoire)"
 
 #: contents/lockscreen/MediaControls.qml:59
-#, fuzzy, kde-format
-#| msgid "No title"
+#, kde-format
 msgctxt "@info:status"
 msgid "No title"
 msgstr "Aucun titre"
 
 #: contents/lockscreen/MediaControls.qml:60
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgctxt "@info:status"
 msgid "No media playing"
 msgstr "Aucun média en cours de lecture"

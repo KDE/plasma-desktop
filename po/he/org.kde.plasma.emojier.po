@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
 "PO-Revision-Date: 2026-01-09 17:25+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -160,8 +160,10 @@ msgid "No matching emoji found"
 msgstr "לא נמצא אמוג׳י תואם"
 
 #: app/ui/Emojier.qml:44
-#, kde-format
-msgctxt "@info:status passive notification as action feedback"
+#, fuzzy, kde-format
+#| msgctxt "@info:status passive notification as action feedback"
+#| msgid "%1 copied to the clipboard"
+msgctxt "@info:status passive notification as action feedback, %1 is an emoji"
 msgid "%1 copied to the clipboard"
 msgstr "%1 הועתק ללוח הגזירים"
 
