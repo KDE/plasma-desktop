@@ -22,7 +22,6 @@ KCM.SimpleKCM {
     readonly property var deviceType: device?.type ?? ""
     readonly property var deviceControllerType: device?.controllerTypeName ?? ""
     readonly property var deviceConnectionType: device?.connectionType ?? ""
-    readonly property bool kwinPluginEnabled: KCM.ConfigModule.pluginEnabled
 
     actions: [
         Kirigami.Action {
@@ -33,10 +32,10 @@ KCM.SimpleKCM {
                 QQC2.Switch {
                     id: plasmaIntegrationSwitch
                     text: i18nc("@option:check Allow using game controllers as a pointer and keyboard", "Allow using as pointer and keyboard")
-                    checked: kwinPluginEnabled
+                    checked: kcm.pluginEnabled
 
                     onToggled: {
-                        KCM.ConfigModule.pluginEnabled = checked
+                        kcm.pluginEnabled = checked
                     }
                 }
 
@@ -76,7 +75,7 @@ KCM.SimpleKCM {
     headerPaddingEnabled: false // Let the InlineMessages touch the edges
     header: Kirigami.InlineMessage {
         Layout.fillWidth: true
-        visible: kwinPluginEnabled && deviceCombo.count !== 0
+        visible: kcm.pluginEnabled && deviceCombo.count !== 0
         type: Kirigami.MessageType.Warning
         position: Kirigami.InlineMessage.Position.Header
         showCloseButton: true
@@ -181,7 +180,7 @@ KCM.SimpleKCM {
                     device: root.device
                     leftAxis: true
                 }
-                
+
                 QQC2.Label {
                     text: i18nc("@label Visual representation of the axis position for the right axis", "Right position:")
                     textFormat: Text.PlainText
