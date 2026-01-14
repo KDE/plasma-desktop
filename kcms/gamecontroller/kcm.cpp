@@ -21,6 +21,7 @@
 #include "axesproxymodel.h"
 #include "buttonmodel.h"
 #include "devicemodel.h"
+#include "gamecontrolleremulationsettings.h"
 #include "gamecontrollermoduledata.h"
 #include "hatmodel.h"
 
@@ -30,6 +31,7 @@ static const QString s_kwinPluginId = QStringLiteral("gamecontroller");
 
 KCMGameController::KCMGameController(QObject *parent, const KPluginMetaData &metaData)
     : KQuickConfigModule(parent, metaData)
+    , m_emulationSettings(std::make_unique<GameControllerEmulationSettings>())
 {
     setButtons(Help);
 
@@ -49,15 +51,13 @@ KCMGameController::~KCMGameController()
 
 bool KCMGameController::isPluginEnabled() const
 {
-    KConfigGroup plugins(KSharedConfig::openConfig("kwinrc"), QStringLiteral("Plugins"));
-    return plugins.readEntry(s_kwinPluginId + QStringLiteral("Enabled"), true);
+    return m_emulationSettings->gamecontrollerEnabled();
 }
 
 void KCMGameController::setPluginEnabled(bool enabled)
 {
-    KConfigGroup plugins(KSharedConfig::openConfig("kwinrc"), QStringLiteral("Plugins"));
-    plugins.writeEntry(s_kwinPluginId + QStringLiteral("Enabled"), enabled, KConfig::Notify);
-    plugins.sync();
+    m_emulationSettings->setGamecontrollerEnabled(enabled);
+    m_emulationSettings->save();
 
     QDBusMessage message;
     if (enabled) {
