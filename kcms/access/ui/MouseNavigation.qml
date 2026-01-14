@@ -30,7 +30,7 @@ Kirigami.FormLayout {
             onToggled: kcm.mouseSettings.mouseKeys = checked
         }
         Kirigami.ContextualHelpButton {
-            toolTipText: xi18nc("@info:tooltip", "The numpad key <shortcut>5</shortcut> functions as a mouse click. The keys <shortcut>2</shortcut>, <shortcut>4</shortcut>, <shortcut>6</shortcut>, and <shortcut>8</shortcut> allow for cardinal movement (down, left, right, and up). The keys <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</shortcut>, and <shortcut>9</shortcut> allow for diagonal movement.")
+            toolTipText: xi18nc("@info:tooltip", "The numpad key <shortcut>5</shortcut> functions as a mouse click, toggled by <shortcut>/</shortcut> for middle click, <shortcut>*</shortcut> for right click and <shortcut>NumLock</shortcut> for left click. The keys <shortcut>2</shortcut>, <shortcut>4</shortcut>, <shortcut>6</shortcut>, and <shortcut>8</shortcut> allow for cardinal movement (down, left, right, and up). The keys <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</shortcut>, and <shortcut>9</shortcut> allow for diagonal movement.")
         }
     }
 
