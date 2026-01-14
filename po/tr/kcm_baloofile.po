@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-08 17:32+0300\n"
+"PO-Revision-Date: 2026-01-13 18:00+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -41,13 +41,7 @@ msgstr ""
 "ve genişletilmiş üst veri gösterimini tüm KDE uygulamalarından kaldıracaktır."
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@info inlinemessage"
-#| msgid ""
-#| "Do you want to delete the saved index data? %1 of space will be freed, "
-#| "but if indexing is re-enabled later, the entire index will have to be re-"
-#| "created from scratch. This may take some time, depending on how many "
-#| "files you have."
+#, kde-format
 msgctxt "@info:inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -57,7 +51,7 @@ msgid ""
 msgstr ""
 "Kayıtlı indeks verisini silmek istiyor musunuz? %1 kadar alan "
 "boşaltılacaktır; ancak indeksleme daha sonra yeniden etkinleştirilirse tüm "
-"indeksin sıfırdan yeniden oluşturulması gerekecektir. Bu, sahip olduğunuz "
+"indeksin sıfırdan yeniden oluşturulması gerekecektir. Bu, indekslenecek "
 "dosya sayısına bağlı olarak biraz zaman alabilir."
 
 #: ui/main.qml:73
