@@ -36,6 +36,12 @@ target_sources(kcm_gamecontroller PRIVATE
     udevmatcher.cpp
 )
 
+kconfig_target_kcfg_file(kcm_gamecontroller
+    FILE gamecontrolleremulationsettings.kcfg
+    CLASS_NAME GameControllerEmulationSettings
+    MUTATORS
+)
+
 target_link_libraries(kcm_gamecontroller PRIVATE
     KF6::CoreAddons
     KF6::KCMUtils
