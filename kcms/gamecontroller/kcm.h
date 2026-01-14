@@ -11,6 +11,8 @@
 
 #include <KQuickConfigModule>
 
+class GameControllerEmulationSettings;
+
 class KCMGameController : public KQuickConfigModule
 {
     Q_OBJECT
@@ -25,4 +27,7 @@ public:
 
 Q_SIGNALS:
     void pluginEnabledChanged();
+
+private:
+    std::unique_ptr<GameControllerEmulationSettings> m_emulationSettings;
 };
