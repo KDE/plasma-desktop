@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-14 00:46+0000\n"
 "PO-Revision-Date: 2025-02-15 13:27+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -56,7 +56,7 @@ msgstr "タッチパッドの設定を読み取れません"
 msgid "Cannot read default touchpad configuration"
 msgstr "デフォルトのタッチパッドの設定を読み込めません"
 
-#: kcm.cpp:107
+#: kcm.cpp:108
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -65,12 +65,12 @@ msgstr ""
 "数値の読み込み中にエラーが発生しました。さらなる情報を得るにはログを確認して"
 "ください。この設定モジュールを再起動してください。"
 
-#: kcm.cpp:110
+#: kcm.cpp:111
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "タッチパッドが見つかりません。タッチパッドを接続してください。"
 
-#: kcm.cpp:119
+#: kcm.cpp:120
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -79,7 +79,7 @@ msgstr ""
 "すべての変更を保存できませんでした。さらなる情報を得るにはログを確認してくだ"
 "さい。この設定モジュールを再起動して再試行してください。"
 
-#: kcm.cpp:138
+#: kcm.cpp:139
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -88,7 +88,7 @@ msgstr ""
 "デフォルトの数値の読み込み中にエラーが発生しました。いくつかのオプションにデ"
 "フォルトの数値を設定できませんでした。"
 
-#: kcm.cpp:154
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -97,12 +97,12 @@ msgstr ""
 "新しく追加されたデバイスの読み込み中にエラーが発生しました。再接続してこの設"
 "定モジュールを再起動してください。"
 
-#: kcm.cpp:169
+#: kcm.cpp:170
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "タッチパッドが切断されました。設定ダイアログを閉じました。"
 
-#: kcm.cpp:171
+#: kcm.cpp:172
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr ""

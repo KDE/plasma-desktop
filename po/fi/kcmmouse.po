@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-14 00:46+0000\n"
 "PO-Revision-Date: 2025-05-25 09:14+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -39,12 +39,12 @@ msgstr "Syötelaitteiden kysely epäonnistui. Avaa tämä asetusmoduuli uudellee
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Kriittinen virhe luettaessa laitteen %1 perustietoja."
 
-#: kcm.cpp:86
+#: kcm.cpp:87
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "Ei voida valita sopivaa taustajärjestelmää"
 
-#: kcm.cpp:142
+#: kcm.cpp:143
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -53,12 +53,12 @@ msgstr ""
 "Virhe ladattaessa arvoja. Katso lisätietoa lokista. Käynnistä tämä "
 "asetusmoduuli uudelleen."
 
-#: kcm.cpp:145
+#: kcm.cpp:146
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Osoitinlaitteita ei löytynyt. Kytke sellainen nyt."
 
-#: kcm.cpp:154
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -67,7 +67,7 @@ msgstr ""
 "Kaikkia muutoksia ei voitu tallentaa. Katso lisätietoa lokista. Käynnistä "
 "tämä asetusmoduuli uudelleen."
 
-#: kcm.cpp:172
+#: kcm.cpp:173
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -76,7 +76,7 @@ msgstr ""
 "Virhe ladattaessa oletusarvoja. Joitakin asetuksia ei saatu asetetuksi "
 "oletusarvoihinsa."
 
-#: kcm.cpp:187
+#: kcm.cpp:188
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -85,12 +85,12 @@ msgstr ""
 "Virhe lisättäessä vasta kytkettyä laitetta. Kytke se uudelleen ja käynnistä "
 "tämän asetusmoduuli sitten toistamiseen."
 
-#: kcm.cpp:200
+#: kcm.cpp:201
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Osoitinlaitetta ei ole kytketty. Suljettiin sen asetusikkuna."
 
-#: kcm.cpp:202
+#: kcm.cpp:203
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Osoitinlaitetta ei ole kytketty. Muita laitteita ei löytynyt."

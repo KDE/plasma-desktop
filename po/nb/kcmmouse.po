@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-14 00:46+0000\n"
 "PO-Revision-Date: 2025-04-04 12:39+0200\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -37,12 +37,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Kritisk feil ved lesing av fundamentale enhetsinfo for %1."
 
-#: kcm.cpp:86
+#: kcm.cpp:87
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "Klarte ikke velge egnet bakgrunnsmotor."
 
-#: kcm.cpp:142
+#: kcm.cpp:143
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -51,12 +51,12 @@ msgstr ""
 "Feil ved innlesing av data. Se loggen for mer informasjon. Prøv å starte "
 "oppsettsmodulen på nytt og prøv igjen."
 
-#: kcm.cpp:145
+#: kcm.cpp:146
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Fant ingen pekerenheter. Prøv å koble til en enhet nå."
 
-#: kcm.cpp:154
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -65,7 +65,7 @@ msgstr ""
 "Klarte ikke lagre alle endringene. Se loggen for mer informasjon. Prøv å "
 "starte oppsettsmodulen på nytt og prøv igjen."
 
-#: kcm.cpp:172
+#: kcm.cpp:173
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -74,7 +74,7 @@ msgstr ""
 "Klarte ikke laste standardverdiene. Noen av verdiene kunne ikke settes til "
 "standardverdier."
 
-#: kcm.cpp:187
+#: kcm.cpp:188
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -83,12 +83,12 @@ msgstr ""
 "Klarte ikke legge til nylig tilkoblet enhet. Prøv og koble den til en gang "
 "til, og start så oppsettsmodulen på nytt."
 
-#: kcm.cpp:200
+#: kcm.cpp:201
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Pekerenheten er koblet fra, og innstillingsvinduet blir derfor lukket."
 
-#: kcm.cpp:202
+#: kcm.cpp:203
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Pekerenheten er koblet fra. Fant ingen andre enheter."

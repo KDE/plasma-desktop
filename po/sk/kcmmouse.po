@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-14 00:46+0000\n"
 "PO-Revision-Date: 2025-05-30 20:36+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -38,12 +38,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Kritická chyba počas čítania základných informácií o zariadení %1."
 
-#: kcm.cpp:86
+#: kcm.cpp:87
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr ""
 
-#: kcm.cpp:142
+#: kcm.cpp:143
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -52,12 +52,12 @@ msgstr ""
 "Chyba počas načítavania hodnôt. Pozrite si logy pre viac informácií. Prosím "
 "reštartujte tento konfiguračný modul."
 
-#: kcm.cpp:145
+#: kcm.cpp:146
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Nenájdené žiadne ukazovacie zariadenie. Pripojte ho teraz."
 
-#: kcm.cpp:154
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -66,7 +66,7 @@ msgstr ""
 "Nebolo možné uložiť zmeny. Pozrite logy pre viac informácií. Prosím "
 "reštarujte teto konfiguračný modul a skúste znova."
 
-#: kcm.cpp:172
+#: kcm.cpp:173
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -75,7 +75,7 @@ msgstr ""
 "Chyba počas načítania predvolených hodnôt. Zlyhalo nastavenie niektorých "
 "možností na ich predvolené hodnoty."
 
-#: kcm.cpp:187
+#: kcm.cpp:188
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -84,12 +84,12 @@ msgstr ""
 "Chyba počas pridávania nového zariadenia. Prosím pripojte ho znova a "
 "reštarujte tento modul nastavení."
 
-#: kcm.cpp:200
+#: kcm.cpp:201
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Ukazovacie zariadenie odpojené. Zatvorte tento dialóg nastavení."
 
-#: kcm.cpp:202
+#: kcm.cpp:203
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Ukazovacie zariadenie odpojené. Žiadne iné zariadenie nebolo nájdené."

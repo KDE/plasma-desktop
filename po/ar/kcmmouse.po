@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-14 00:46+0000\n"
 "PO-Revision-Date: 2026-01-08 11:30+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -37,12 +37,12 @@ msgstr "فشل الاستعلام عن أجهزة الإدخال. يرجى إع�
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "خطأ فادح في قراءة معلومات الجهاز الأساسية لـ%1."
 
-#: kcm.cpp:86
+#: kcm.cpp:87
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "غير قادر على تحديد الواجهة الخلفية المناسبة"
 
-#: kcm.cpp:142
+#: kcm.cpp:143
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -51,12 +51,12 @@ msgstr ""
 "خطأ أثناء تحميل القيم. انظر السجلات لمزيد من المعلومات. يرجى إعادة تشغيل "
 "وحدة الضبط هذه."
 
-#: kcm.cpp:145
+#: kcm.cpp:146
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "لم يعثر على جهاز مؤشر. صل الآن."
 
-#: kcm.cpp:154
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -65,7 +65,7 @@ msgstr ""
 "غير قادر على حفظ كل التغييرات. انظر السجلات لمزيد من المعلومات. يرجى إعادة "
 "تشغيل وحدة الضبط هذه والمحاولة مرة أخرى."
 
-#: kcm.cpp:172
+#: kcm.cpp:173
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -73,7 +73,7 @@ msgid ""
 msgstr ""
 "خطأ أثناء تحميل القيم المبدئية. فشل في تعيين بعض الخيارات لقيمها المبدئية."
 
-#: kcm.cpp:187
+#: kcm.cpp:188
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -82,12 +82,12 @@ msgstr ""
 "خطأ أثناء إضافة جهاز متصل حديثًا. يرجى إعادة توصيله وإعادة تشغيل وحدة الضبط "
 "هذه. "
 
-#: kcm.cpp:200
+#: kcm.cpp:201
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "جهاز المؤشر غير متصل. أغلقت مربع حوار الإعداد الخاص به."
 
-#: kcm.cpp:202
+#: kcm.cpp:203
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "جهاز المؤشر غير متصل. لم يعثر على أجهزة أخرى."

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-14 00:46+0000\n"
 "PO-Revision-Date: 2025-01-22 20:51+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -38,12 +38,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "%1 の基本的なデバイス情報の読み込み中に深刻なエラーが発生しました。"
 
-#: kcm.cpp:86
+#: kcm.cpp:87
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "適切なバックエンドを選択できませんでした"
 
-#: kcm.cpp:142
+#: kcm.cpp:143
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -52,12 +52,12 @@ msgstr ""
 "数値の読み込み中にエラーが発生しました。さらなる情報を得るにはログを確認して"
 "ください。この設定モジュールを再起動してください。"
 
-#: kcm.cpp:145
+#: kcm.cpp:146
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "ポインタデバイスが見つかりません。接続してください。"
 
-#: kcm.cpp:154
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -66,7 +66,7 @@ msgstr ""
 "すべての変更を保存できませんでした。さらなる情報を得るにはログを確認してくだ"
 "さい。この設定モジュールを再起動して再試行してください。"
 
-#: kcm.cpp:172
+#: kcm.cpp:173
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -75,7 +75,7 @@ msgstr ""
 "デフォルトの数値の読み込み中にエラーが発生しました。いくつかのオプションにデ"
 "フォルトの数値を設定できませんでした。"
 
-#: kcm.cpp:187
+#: kcm.cpp:188
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -84,12 +84,12 @@ msgstr ""
 "新しく追加されたデバイスの読み込み中にエラーが発生しました。再接続してこの設"
 "定モジュールを再起動してください。"
 
-#: kcm.cpp:200
+#: kcm.cpp:201
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "ポインタデバイスが切断されました。設定ダイアログを閉じました。"
 
-#: kcm.cpp:202
+#: kcm.cpp:203
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "ポインタデバイスが切断されました。他のデバイスは見つかりませんでした。"

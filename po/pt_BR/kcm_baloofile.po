@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-08 07:49-0300\n"
+"PO-Revision-Date: 2026-01-13 08:39-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -46,13 +46,7 @@ msgstr ""
 "metadados estendidos exibidos em todos os aplicativos KDE."
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@info inlinemessage"
-#| msgid ""
-#| "Do you want to delete the saved index data? %1 of space will be freed, "
-#| "but if indexing is re-enabled later, the entire index will have to be re-"
-#| "created from scratch. This may take some time, depending on how many "
-#| "files you have."
+#, kde-format
 msgctxt "@info:inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -62,8 +56,8 @@ msgid ""
 msgstr ""
 "Deseja excluir os dados salvos do índice? %1 de espaço serão liberados, mas "
 "se a indexação for reabilitada mais tarde, o índice inteiro terá que ser "
-"recriado do zero. Isto pode levar algum tempo, dependendo de quantos "
-"arquivos você tem."
+"recriado do zero. Isto pode levar algum tempo, dependendo do número de "
+"arquivos a indexar."
 
 #: ui/main.qml:73
 #, kde-format

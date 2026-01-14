@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-14 00:46+0000\n"
 "PO-Revision-Date: 2026-01-08 18:02+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -55,19 +55,19 @@ msgstr "לא ניתן לקרוא את הגדרות משטח המגע"
 msgid "Cannot read default touchpad configuration"
 msgstr "אי אפשר לקרוא את הגדרות משטח המגע כברירת מחדל"
 
-#: kcm.cpp:107
+#: kcm.cpp:108
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr "שגיאה בטעינת ערכים. יש להפעיל מודול הגדרות זה מחדש."
 
-#: kcm.cpp:110
+#: kcm.cpp:111
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "לא נמצא משטח מגע. יש לחבר אותו כעת."
 
-#: kcm.cpp:119
+#: kcm.cpp:120
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -76,7 +76,7 @@ msgstr ""
 "לא ניתן לשמור את כל השינויים. ביומני המערכת יש פירוט נוסף. נא להפעיל את "
 "מודול הגדרות זה מחדש ולנסות שוב."
 
-#: kcm.cpp:138
+#: kcm.cpp:139
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -84,7 +84,7 @@ msgid ""
 msgstr ""
 "שגיאה בטעינת ערכי ברירת המחדל. הגדרת חלק מהאפשרויות לברירות המחדל שלהן נכשלה."
 
-#: kcm.cpp:154
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -92,12 +92,12 @@ msgid ""
 msgstr ""
 "שגיאה בהוספת התקן חדש שחובר. נא לחבר אותו מחדש ולהפעיל את ההגדרות מחדש."
 
-#: kcm.cpp:169
+#: kcm.cpp:170
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "משטח המגע התנתק. חלון ההגדרות שלו נסגר."
 
-#: kcm.cpp:171
+#: kcm.cpp:172
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "משטח המגע התנתק. לא נמצאו משטחי מגע אחרים."

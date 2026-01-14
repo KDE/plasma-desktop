@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-14 00:46+0000\n"
 "PO-Revision-Date: 2025-12-13 15:37+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -56,7 +56,7 @@ msgstr "Die Touchpad-Einrichtung kann nicht gelesen werden"
 msgid "Cannot read default touchpad configuration"
 msgstr "Die Standard-Touchpad-Einrichtung kann nicht gelesen werden"
 
-#: kcm.cpp:107
+#: kcm.cpp:108
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -65,12 +65,12 @@ msgstr ""
 "Fehler beim Laden von Werten. Im Protokoll finden Sie weitere Informationen "
 "dazu. Bitte starten Sie dieses Einrichtungsmodul erneut."
 
-#: kcm.cpp:110
+#: kcm.cpp:111
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Es wurde kein Touchpad gefunden. Schließen Sie das Touchpad jetzt an."
 
-#: kcm.cpp:119
+#: kcm.cpp:120
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -80,7 +80,7 @@ msgstr ""
 "weitere Informationen dazu. Bitte starten Sie dieses Einrichtungsmodul neu "
 "und versuchen es nochmal."
 
-#: kcm.cpp:138
+#: kcm.cpp:139
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -89,7 +89,7 @@ msgstr ""
 "Fehler beim Laden der Standardwerte. Es können nicht alle Einstellungen auf "
 "die Standardwerte zurückgesetzt werden."
 
-#: kcm.cpp:154
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -98,13 +98,13 @@ msgstr ""
 "Fehler beim Hinzufügen des neu angeschlossenen Geräts. Schließen Sie es "
 "bitte erneut an und starten dann dieses Einrichtungsmodul neu."
 
-#: kcm.cpp:169
+#: kcm.cpp:170
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr ""
 "Das Touchpad wurde getrennt, der Einstellungsdialog dafür wird geschlossen."
 
-#: kcm.cpp:171
+#: kcm.cpp:172
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr ""

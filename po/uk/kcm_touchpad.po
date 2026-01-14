@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-14 00:46+0000\n"
 "PO-Revision-Date: 2026-01-08 08:43+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -59,7 +59,7 @@ msgstr "Не вдалося прочитати дані щодо налашту�
 msgid "Cannot read default touchpad configuration"
 msgstr "Не вдалося прочитати дані щодо типових налаштувань сенсорної панелі"
 
-#: kcm.cpp:107
+#: kcm.cpp:108
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -68,13 +68,13 @@ msgstr ""
 "Помилка під час завантаження значень. Докладнішу інформацію можна знайти у "
 "журналі. Будь ласка, перезапустіть модуль керування сенсорними панелями."
 
-#: kcm.cpp:110
+#: kcm.cpp:111
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr ""
 "Не знайдено сенсорної панелі. З’єднайте сенсорну панель із комп’ютером."
 
-#: kcm.cpp:119
+#: kcm.cpp:120
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -84,7 +84,7 @@ msgstr ""
 "Будь ласка, перезапустіть модуль керування сенсорними панелями, потім "
 "повторіть спробу."
 
-#: kcm.cpp:138
+#: kcm.cpp:139
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -93,7 +93,7 @@ msgstr ""
 "Помилка під час спроби завантажити типові значення. Не вдалося встановити "
 "типові значення для усіх параметрів."
 
-#: kcm.cpp:154
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -103,12 +103,12 @@ msgstr ""
 "спробуйте з’єднати його з комп’ютером ще раз, потім перезапустіть модуль "
 "керування сенсорними панелями."
 
-#: kcm.cpp:169
+#: kcm.cpp:170
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Сенсорну панель від’єднано. Діалогове вікно її параметрів закрито."
 
-#: kcm.cpp:171
+#: kcm.cpp:172
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Сенсорну панель від’єднано. Інших сенсорних панелей не виявлено."

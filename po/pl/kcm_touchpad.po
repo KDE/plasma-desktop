@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-14 00:46+0000\n"
 "PO-Revision-Date: 2026-01-03 13:53+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -55,7 +55,7 @@ msgstr "Nie można odczytać ustawień gładzika"
 msgid "Cannot read default touchpad configuration"
 msgstr "Nie można odczytać domyślnych ustawień gładzika"
 
-#: kcm.cpp:107
+#: kcm.cpp:108
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -64,12 +64,12 @@ msgstr ""
 "Błąd podczas wczytywania wartości. Zajrzyj do dziennika po szczegóły. "
 "Uruchom moduł ustawień ponownie."
 
-#: kcm.cpp:110
+#: kcm.cpp:111
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "Nie znaleziono gładzika, więc podłącz go teraz."
 
-#: kcm.cpp:119
+#: kcm.cpp:120
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -78,7 +78,7 @@ msgstr ""
 "Nie można zapisać wszystkich zmian. Zajrzyj do dziennika po szczegóły. "
 "Uruchom moduł ustawień ponownie."
 
-#: kcm.cpp:138
+#: kcm.cpp:139
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -87,7 +87,7 @@ msgstr ""
 "Błąd wczytywania wartości domyślnych. Nie można ustawić wszystkich lub "
 "części opcji do wartości domyślnych."
 
-#: kcm.cpp:154
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -96,12 +96,12 @@ msgstr ""
 "Błąd podczas dodawania nowopodłączonego urządzenia. Podłącz je ponownie i "
 "uruchom moduł ustawień ponownie."
 
-#: kcm.cpp:169
+#: kcm.cpp:170
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "Rozłączono gładzik. Zamknięto okno dialogowe jego ustawień."
 
-#: kcm.cpp:171
+#: kcm.cpp:172
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Rozłączono gładzik. Nie znaleziono innych gładzików."

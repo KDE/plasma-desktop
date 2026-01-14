@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-14 00:46+0000\n"
 "PO-Revision-Date: 2024-10-26 11:52+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -33,12 +33,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Kritisk fejl ved læsning af fundamentale enhedsinformationer for %1."
 
-#: kcm.cpp:86
+#: kcm.cpp:87
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr ""
 
-#: kcm.cpp:142
+#: kcm.cpp:143
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -47,12 +47,12 @@ msgstr ""
 "Fejl under indlæsning af værdier. Se logge for mere information. Genstart "
 "venligst dette konfigurationsmodul."
 
-#: kcm.cpp:145
+#: kcm.cpp:146
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Intet pegeredskab fundet. Tilslut det nu."
 
-#: kcm.cpp:154
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -61,7 +61,7 @@ msgstr ""
 "Kan ikke gemme alle ændringer. Se logge for mere information. Genstart "
 "venligst dette konfigurationsmodul og prøv igen."
 
-#: kcm.cpp:172
+#: kcm.cpp:173
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -70,7 +70,7 @@ msgstr ""
 "Fejl under indlæsning af standardværdier. Nogle indstillinger kunne ikke "
 "sættes til deres standardværdier."
 
-#: kcm.cpp:187
+#: kcm.cpp:188
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -79,12 +79,12 @@ msgstr ""
 "Fejl under tilføjelse af ny tilsluttet enhed. Tilslut venligst igen og "
 "genstart dette konfigurationsmodul."
 
-#: kcm.cpp:200
+#: kcm.cpp:201
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Pegeredskab frakoblet. Lukkede indstillingsdialogen."
 
-#: kcm.cpp:202
+#: kcm.cpp:203
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Pegeredskab frakoblet. Ingen andre enheder fundet."

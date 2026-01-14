@@ -1,7 +1,7 @@
 # translation of kcminput.po to Slovenian
 # Translation of kcminput.po to Slovenian
 # KCMINPUT TRANSLATION TO SLOVENE LANGUAGE.
-# $Id: kcmmouse.po 1726930 2026-01-09 01:26:02Z scripty $
+# $Id: kcmmouse.po 1727523 2026-01-14 01:27:09Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-14 00:46+0000\n"
 "PO-Revision-Date: 2026-01-08 10:46+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -39,12 +39,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Kritična napaka pri branju osnovnih informacij o napravi %1."
 
-#: kcm.cpp:86
+#: kcm.cpp:87
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "Ni mogoče izbrati ustreznega zaledja"
 
-#: kcm.cpp:142
+#: kcm.cpp:143
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -53,12 +53,12 @@ msgstr ""
 "Napaka pri nalaganju vrednosti. Za več informacij si oglejte dnevnike. "
 "Ponovno zaženite ta nastavitveni modul."
 
-#: kcm.cpp:145
+#: kcm.cpp:146
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Ni bilo mogoče najti nobene kazalne naprave . Povežite jih."
 
-#: kcm.cpp:154
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -67,7 +67,7 @@ msgstr ""
 "Vseh sprememb ni mogoče shraniti. Za več informacij glejte dnevnike. Ponovno "
 "zaženite ta nastavitveni modul in spet poskusite."
 
-#: kcm.cpp:172
+#: kcm.cpp:173
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -76,7 +76,7 @@ msgstr ""
 "Napaka med nalaganjem privzetih vrednosti. Nekaterih nastavitev ni bilo "
 "mogoče nastaviti na privzete vrednosti."
 
-#: kcm.cpp:187
+#: kcm.cpp:188
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -85,13 +85,13 @@ msgstr ""
 "Napaka pri dodajanju na novo povezane naprave. Ponovno jo povežite in "
 "ponovno zaženite ta nastavitveni modul."
 
-#: kcm.cpp:200
+#: kcm.cpp:201
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Kazalna naprava je izključena. Pogovorno okno z nastavitvami je zaprto."
 
-#: kcm.cpp:202
+#: kcm.cpp:203
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Kazalna naprava je izključena. Ni najti nobene druge naprave."

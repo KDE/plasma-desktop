@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-14 00:46+0000\n"
 "PO-Revision-Date: 2025-06-06 22:36+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -31,12 +31,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Kritikus hiba a(z) %1 eszközinformációinak olvasásakor."
 
-#: kcm.cpp:86
+#: kcm.cpp:87
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "Nem lehet kiválasztani a megfelelő háttéralkalmazást"
 
-#: kcm.cpp:142
+#: kcm.cpp:143
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -45,12 +45,12 @@ msgstr ""
 "Hiba az értékek betöltésekor. Lásd a naplót további információkért. Indítsa "
 "újra a modult."
 
-#: kcm.cpp:145
+#: kcm.cpp:146
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Nem található mutatóeszköz, csatlakoztasson egyet."
 
-#: kcm.cpp:154
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -59,7 +59,7 @@ msgstr ""
 "Nem lehet minden módosítást menteni. Lásd a naplót további információkért. "
 "Indítsa újra a modult, és próbálja meg újból."
 
-#: kcm.cpp:172
+#: kcm.cpp:173
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -68,7 +68,7 @@ msgstr ""
 "Hiba az alapértelmezett értékek betöltésekor. Nem mindegyik vagy egyik "
 "beállítás sem állítható az alapértelmezett értékre."
 
-#: kcm.cpp:187
+#: kcm.cpp:188
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -77,12 +77,12 @@ msgstr ""
 "Hiba az újonnan csatlakoztatott eszköz hozzáadásakor. Csatlakoztassa újra és "
 "indítsa újra ezt a modult."
 
-#: kcm.cpp:200
+#: kcm.cpp:201
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Mutatóeszköz leválasztva, a beállítóablak bezárul."
 
-#: kcm.cpp:202
+#: kcm.cpp:203
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Mutatóeszköz leválasztva, nem található másik eszköz."

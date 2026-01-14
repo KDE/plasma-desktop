@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-14 00:46+0000\n"
 "PO-Revision-Date: 2020-04-10 19:47+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -30,12 +30,12 @@ msgstr "Sisendseadmete otsing nurjus. Palun ava seadistusmoodul."
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Kriitiline tõrge %1 põhilise seadmeinfo lugemisel."
 
-#: kcm.cpp:86
+#: kcm.cpp:87
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr ""
 
-#: kcm.cpp:142
+#: kcm.cpp:143
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -44,12 +44,12 @@ msgstr ""
 "Tõrge väärtuste laadimisel. Täpsemat teavet annab logi. Palun käivita see "
 "seadistusmoodul uuesti."
 
-#: kcm.cpp:145
+#: kcm.cpp:146
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Osutusseadet ei leitud. Ühenda see nüüd."
 
-#: kcm.cpp:154
+#: kcm.cpp:155
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -58,7 +58,7 @@ msgstr ""
 "Kõiki muudatusi ei õnnestunud salvestada. Täpsemat teavet annab logi. Palunn "
 "käivita see seadistusmoodul uuesti ja proovi veel."
 
-#: kcm.cpp:172
+#: kcm.cpp:173
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -67,7 +67,7 @@ msgstr ""
 "Tõrge vaikeväärtuste laadimisel. Mõnele valikule vaikimisi väärtuse "
 "määramine nurjus."
 
-#: kcm.cpp:187
+#: kcm.cpp:188
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -76,12 +76,12 @@ msgstr ""
 "Tõrge äsja ühendatud seadme lisamisel. Palun ühenda see uuesti ja käivita "
 "see seadistusmoodul veel kord."
 
-#: kcm.cpp:200
+#: kcm.cpp:201
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Osutusseade on lahutatud. Seadistustedialoog suletakse."
 
-#: kcm.cpp:202
+#: kcm.cpp:203
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Osutusseade on lahutatud. Teisi seadmeid ei leitud."
