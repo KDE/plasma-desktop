@@ -35,6 +35,23 @@ PlasmoidItem {
         PlasmaCore.Types.LeftEdge,
     ].includes(Plasmoid.location)
 
+    TextMetrics {
+        id: placeholderMetrics
+        font: Kirigami.Theme.defaultFont 
+        text: i18nc("@info:placeholder", "No open windows")
+    }
+
+    property ListModel noWindowModel: ListModel {
+        ListElement {
+            display: ""
+            decoration: "edit-none"
+        }
+
+        Component.onCompleted: {
+            noWindowModel.setProperty(0, "display", placeholderMetrics.text)
+        }
+    }
+
     TaskManager.VirtualDesktopInfo {
         id: virtualDesktopInfo
     }
@@ -70,8 +87,11 @@ PlasmoidItem {
     property int fullRepresentationDynamicWidth: 0
 
     function updateLongestWindowTitle() {
-         if (!tasksModel || !tasksModel.count) {
+        if (!tasksModel || !tasksModel.count) {
             longestWindowCaption = "";
+
+            fullRepresentationDynamicWidth = Math.ceil(placeholderMetrics.width)
+                                           + Kirigami.Units.iconSizes.sizeForLabels * 2 + Kirigami.Units.smallSpacing * 2;
             return;
         }
 
@@ -122,7 +142,6 @@ PlasmoidItem {
                 value: Kirigami.Units.gridUnit * 24
             }
 
-
             Binding {
                 target: windowListView
                 property: "Layout.maximumHeight"
@@ -148,7 +167,7 @@ PlasmoidItem {
                 value: root.fullRepresentationDynamicWidth
             }
 
-            model: tasksModel
+            model: inPanel && tasksModel.count === 0 ? noWindowModel : tasksModel
         
             Connections {
                 target: root
@@ -294,9 +313,9 @@ PlasmoidItem {
             Kirigami.PlaceholderMessage {
                 anchors.centerIn: parent
                 width: parent.width - (Kirigami.Units.largeSpacing * 2)
-                visible: windowListView.count === 0
+                visible: !inPanel && windowListView.count === 0
                 icon.source: "edit-none"
-                text: i18nc("@info:placeholder", "No open windows")
+                text: placeholderMetrics.text
             }
         }
     }
