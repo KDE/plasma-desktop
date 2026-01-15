@@ -308,6 +308,10 @@ PlasmoidItem {
                     tasksModel.requestActivate(tasksModel.makeModelIndex(model.index))
                 }
 
+                TapHandler {
+                    acceptedButtons: Qt.RightButton
+                    onTapped: { /* Empty to disable right click menu provided by applet on the delegate */ }
+                }
             }
 
             Kirigami.PlaceholderMessage {
@@ -317,6 +321,8 @@ PlasmoidItem {
                 icon.source: "edit-none"
                 text: placeholderMetrics.text
             }
+
+
         }
     }
 
