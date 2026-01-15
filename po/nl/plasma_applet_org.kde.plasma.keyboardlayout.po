@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-08 18:07+0100\n"
+"PO-Revision-Date: 2026-01-14 16:28+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: qml/config.qml:6
 #, kde-format
@@ -36,9 +36,7 @@ msgid "No flag available"
 msgstr "Geen vlag beschikbaar"
 
 #: qml/configGeneral.qml:102
-#, fuzzy, kde-format
-#| msgctxt "@label prefixed to button"
-#| msgid "Layouts:"
+#, kde-format
 msgctxt "@label prefixed to button, as in 'keyboard layouts'"
 msgid "Layouts:"
 msgstr "Indelingen:"

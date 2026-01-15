@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-11 00:32+0100\n"
+"POT-Creation-Date: 2026-01-15 00:44+0000\n"
+"PO-Revision-Date: 2026-01-14 12:11+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -471,33 +471,25 @@ msgid "Width"
 msgstr "Anchura"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Fill height"
+#, kde-format
 msgctxt "@item:inlistbox panel fills the full height of the display"
 msgid "Fill height"
 msgstr "Rellenar la altura"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Fill width"
+#, kde-format
 msgctxt "@item:inlistbox panel fills the full width of the display"
 msgid "Fill width"
 msgstr "Rellenar la anchura"
 
 #: contents/configuration/PanelConfiguration.qml:335
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Fit content"
+#, kde-format
 msgctxt "@item:inlistbox panel is just big enough to fit its content"
 msgid "Fit content"
 msgstr "Ajustar el contenido"
 
 #: contents/configuration/PanelConfiguration.qml:336
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Custom"
+#, kde-format
 msgctxt "@item:inlistbox panel size"
 msgid "Custom"
 msgstr "Personalizado"
@@ -600,9 +592,7 @@ msgid "Panel Height:"
 msgstr "Altura del panel:"
 
 #: contents/configuration/PanelConfiguration.qml:671
-#, fuzzy, kde-format
-#| msgctxt "@title:group"
-#| msgid "Focus shortcut:"
+#, kde-format
 msgctxt "@title:group shortcut that moves focus to the panel"
 msgid "Focus shortcut:"
 msgstr "Atajo de teclado para enfocar:"
@@ -614,12 +604,10 @@ msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Pulse este atajo de teclado de teclado para mover el foco al panel"
 
 #: contents/configuration/PanelConfiguration.qml:689
-#, fuzzy, kde-format
-#| msgctxt "@action:button acccessible name"
-#| msgid "Focus Shortcut Setter"
+#, kde-format
 msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
-msgstr "Modificador de acceso directo de foco"
+msgstr "Modificador de atajo de teclado para enfocar"
 
 #: contents/configuration/PanelConfiguration.qml:690
 #, kde-format
@@ -634,9 +622,7 @@ msgid "Delete Panel"
 msgstr "Borrar el panel"
 
 #: contents/configuration/PanelConfiguration.qml:719
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip for button"
-#| msgid "Remove this panel; this action is undo-able"
+#, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Remove this panel; this action can be undone"
 msgstr "Eliminar este panel (esta acción se puede deshacer)"
@@ -1061,13 +1047,13 @@ msgctxt "@action:button no-password unlock"
 msgid "Unlock"
 msgstr "Desbloquear"
 
-#: contents/views/DesktopEditMode.qml:122
+#: contents/views/DesktopEditMode.qml:135
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "Más"
 
-#: contents/views/DesktopEditMode.qml:131
+#: contents/views/DesktopEditMode.qml:144
 #, kde-format
 msgctxt "@action:button"
 msgid "Exit Edit Mode"

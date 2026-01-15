@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-08 23:58+0900\n"
+"PO-Revision-Date: 2026-01-15 00:56+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -43,13 +43,7 @@ msgstr ""
 "中繼資料顯示。"
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@info inlinemessage"
-#| msgid ""
-#| "Do you want to delete the saved index data? %1 of space will be freed, "
-#| "but if indexing is re-enabled later, the entire index will have to be re-"
-#| "created from scratch. This may take some time, depending on how many "
-#| "files you have."
+#, kde-format
 msgctxt "@info:inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -58,7 +52,7 @@ msgid ""
 "index."
 msgstr ""
 "您要刪除已儲存的索引資料嗎？這將會清出 %1 的空間，但若之後重新啟用索引，整個"
-"索引將會需要從頭開始重新建立。取決於您的檔案數量，這可能會需要一些時間。"
+"索引將會需要從頭開始重新建立。取決要索引的檔案數量，這可能會需要一些時間。"
 
 #: ui/main.qml:73
 #, kde-format

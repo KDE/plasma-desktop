@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2009, 2014.
-# SPDX-FileCopyrightText: 2022, 2025 Luigi Toscano <luigi.toscano@tiscali.it>
+# SPDX-FileCopyrightText: 2022, 2025, 2026 Luigi Toscano <luigi.toscano@tiscali.it>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-12-09 16:29+0100\n"
+"PO-Revision-Date: 2026-01-08 09:49+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -52,15 +52,13 @@ msgid "Name"
 msgstr "Nome"
 
 #: ConfigGeneral.qml:89
-#, fuzzy, kde-format
-#| msgid "Only icons can be shown when the Panel is vertical."
+#, kde-format
 msgctxt "@info:usagetip display mode for active application"
 msgid "Only icons can be shown when the Panel is vertical."
 msgstr "Solo le icone possono essere mostrate quando il pannello è verticale."
 
 #: ConfigGeneral.qml:91
-#, fuzzy, kde-format
-#| msgid "Not applicable when the widget is on the Desktop."
+#, kde-format
 msgctxt "@info:usagetip display mode for active application"
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "Non valido se l'oggetto è sul desktop."
@@ -78,9 +76,7 @@ msgid "Enabled, with delay:"
 msgstr "Abilitato, con ritardo:"
 
 #: ConfigGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@item:valuesuffix, %1 is hover activation delay in ms"
 msgid "%1 ms"
 msgid_plural "%1 ms"

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-08 10:34+0400\n"
+"POT-Creation-Date: 2026-01-15 00:44+0000\n"
+"PO-Revision-Date: 2026-01-14 07:44+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -467,33 +467,25 @@ msgid "Width"
 msgstr "العرض"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Fill height"
+#, kde-format
 msgctxt "@item:inlistbox panel fills the full height of the display"
 msgid "Fill height"
-msgstr "ارتفاع الملء"
+msgstr "املأ الطول"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Fill width"
+#, kde-format
 msgctxt "@item:inlistbox panel fills the full width of the display"
 msgid "Fill width"
-msgstr "عرض الملء"
+msgstr "املأ العرض"
 
 #: contents/configuration/PanelConfiguration.qml:335
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Fit content"
+#, kde-format
 msgctxt "@item:inlistbox panel is just big enough to fit its content"
 msgid "Fit content"
-msgstr "لائم المحتوى"
+msgstr "لائم حسب المحتوى"
 
 #: contents/configuration/PanelConfiguration.qml:336
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Custom"
+#, kde-format
 msgctxt "@item:inlistbox panel size"
 msgid "Custom"
 msgstr "مخصّص"
@@ -596,9 +588,7 @@ msgid "Panel Height:"
 msgstr "ارتفاع اللوحة:"
 
 #: contents/configuration/PanelConfiguration.qml:671
-#, fuzzy, kde-format
-#| msgctxt "@title:group"
-#| msgid "Focus shortcut:"
+#, kde-format
 msgctxt "@title:group shortcut that moves focus to the panel"
 msgid "Focus shortcut:"
 msgstr "اختصار التركيز:"
@@ -610,9 +600,7 @@ msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "اضغط على اختصار لوحة المفاتيح هذا لتنقل التركيز للوحة"
 
 #: contents/configuration/PanelConfiguration.qml:689
-#, fuzzy, kde-format
-#| msgctxt "@action:button acccessible name"
-#| msgid "Focus Shortcut Setter"
+#, kde-format
 msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
 msgstr "معيّن اختصار التركيز"
@@ -630,9 +618,7 @@ msgid "Delete Panel"
 msgstr "احذف اللوح"
 
 #: contents/configuration/PanelConfiguration.qml:719
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip for button"
-#| msgid "Remove this panel; this action is undo-able"
+#, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Remove this panel; this action can be undone"
 msgstr "أزِل هذه اللوحة؛ لا يمكن التراجع عن هذا الإجراء"
@@ -1032,18 +1018,16 @@ msgid "(or scan your smartcard)"
 msgstr "(أو امسح بطاقتك الذكية)"
 
 #: contents/lockscreen/MediaControls.qml:59
-#, fuzzy, kde-format
-#| msgid "No title"
+#, kde-format
 msgctxt "@info:status"
 msgid "No title"
 msgstr "دون عنوان"
 
 #: contents/lockscreen/MediaControls.qml:60
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgctxt "@info:status"
 msgid "No media playing"
-msgstr "لا وسائط تعمل"
+msgstr "لا يوجد وسائط تعمل"
 
 #: contents/lockscreen/MediaControls.qml:88
 #, kde-format
@@ -1069,13 +1053,13 @@ msgctxt "@action:button no-password unlock"
 msgid "Unlock"
 msgstr "فكّ القفل"
 
-#: contents/views/DesktopEditMode.qml:122
+#: contents/views/DesktopEditMode.qml:135
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "المزيد"
 
-#: contents/views/DesktopEditMode.qml:131
+#: contents/views/DesktopEditMode.qml:144
 #, kde-format
 msgctxt "@action:button"
 msgid "Exit Edit Mode"

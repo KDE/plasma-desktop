@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-09 00:01+0900\n"
+"PO-Revision-Date: 2026-01-15 00:57+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -164,9 +164,7 @@ msgid "No matching emoji found"
 msgstr "沒有找到符合的表情符號"
 
 #: app/ui/Emojier.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info:status passive notification as action feedback"
-#| msgid "%1 copied to the clipboard"
+#, kde-format
 msgctxt "@info:status passive notification as action feedback, %1 is an emoji"
 msgid "%1 copied to the clipboard"
 msgstr "%1 已複製至剪貼簿"

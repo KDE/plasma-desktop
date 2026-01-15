@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-12 22:03+0200\n"
+"POT-Creation-Date: 2026-01-15 00:44+0000\n"
+"PO-Revision-Date: 2026-01-14 17:32+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -470,33 +470,25 @@ msgid "Width"
 msgstr "Plotis"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Fill height"
+#, kde-format
 msgctxt "@item:inlistbox panel fills the full height of the display"
 msgid "Fill height"
 msgstr "Užpildyti aukštį"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Fill width"
+#, kde-format
 msgctxt "@item:inlistbox panel fills the full width of the display"
 msgid "Fill width"
 msgstr "Užpildyti plotį"
 
 #: contents/configuration/PanelConfiguration.qml:335
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Fit content"
+#, kde-format
 msgctxt "@item:inlistbox panel is just big enough to fit its content"
 msgid "Fit content"
 msgstr "Talpinti turinį"
 
 #: contents/configuration/PanelConfiguration.qml:336
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Custom"
+#, kde-format
 msgctxt "@item:inlistbox panel size"
 msgid "Custom"
 msgstr "Tinkintas"
@@ -599,9 +591,7 @@ msgid "Panel Height:"
 msgstr "Skydelio aukštis:"
 
 #: contents/configuration/PanelConfiguration.qml:671
-#, fuzzy, kde-format
-#| msgctxt "@title:group"
-#| msgid "Focus shortcut:"
+#, kde-format
 msgctxt "@title:group shortcut that moves focus to the panel"
 msgid "Focus shortcut:"
 msgstr "Fokusavimo spartusis klavišas:"
@@ -613,9 +603,7 @@ msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Paspauskite šį spartųjį klavišą norėdami perkelti fokusą į skydelį"
 
 #: contents/configuration/PanelConfiguration.qml:689
-#, fuzzy, kde-format
-#| msgctxt "@action:button acccessible name"
-#| msgid "Focus Shortcut Setter"
+#, kde-format
 msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
 msgstr "Fokusavimo sparčiojo klavišo nustatytojas"
@@ -634,9 +622,7 @@ msgid "Delete Panel"
 msgstr "Ištrinti skydelį"
 
 #: contents/configuration/PanelConfiguration.qml:719
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip for button"
-#| msgid "Remove this panel; this action is undo-able"
+#, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Remove this panel; this action can be undone"
 msgstr "Šalinti šį skydelį; šį veiksmą galima bus atšaukti"
@@ -1067,13 +1053,13 @@ msgctxt "@action:button no-password unlock"
 msgid "Unlock"
 msgstr "Atrakinti"
 
-#: contents/views/DesktopEditMode.qml:122
+#: contents/views/DesktopEditMode.qml:135
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "Daugiau"
 
-#: contents/views/DesktopEditMode.qml:131
+#: contents/views/DesktopEditMode.qml:144
 #, kde-format
 msgctxt "@action:button"
 msgid "Exit Edit Mode"
