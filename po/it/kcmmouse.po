@@ -1,5 +1,5 @@
 # translation of kcminput.po to Italian
-# SPDX-FileCopyrightText: 2017, 2018, 2020, 2022, 2023, 2024, 2025 Paolo Zamponi <feus73@gmail.com>
+# SPDX-FileCopyrightText: 2017, 2018, 2020, 2022, 2023, 2024, 2025, 2026 Paolo Zamponi <feus73@gmail.com>
 # Andrea Rizzi <rizzi@kde.org>, 2003, 2004, 2005, 2007.
 # Pino Toscano <toscano.pino@tiscali.it>, 2006.
 # Luciano Montanaro <mikelima@cirulla.net>, 2008.
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-12-06 19:51+0100\n"
+"PO-Revision-Date: 2026-01-10 15:49+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
@@ -141,22 +141,19 @@ msgid "Configure Extra Buttons…"
 msgstr "Configura i pulsanti supplementari..."
 
 #: ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Dispositivo:"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General:"
 msgstr "Generale:"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgid "Enable device"
+#, kde-format
 msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr "Abilita dispositivo"
@@ -168,8 +165,7 @@ msgid "Left and right buttons:"
 msgstr "Pulsanti sinistro e destro:"
 
 #: ui/main.qml:106
-#, fuzzy, kde-format
-#| msgid "Swap (left-handed mode)"
+#, kde-format
 msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
 msgstr "Inverti (modalità mancino)"
@@ -192,25 +188,19 @@ msgstr ""
 "sinistri simultanei."
 
 #: ui/main.qml:148
-#, fuzzy, kde-format
-#| msgid "Pointer speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Velocità del puntatore:"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid "Enable pointer acceleration"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Abilita l'accelerazione del puntatore"
 
 #: ui/main.qml:241
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip from ContextualHelpButton"
-#| msgid ""
-#| "When enabled, pointer travel distance increases with faster movement "
-#| "speed."
+#, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
@@ -219,8 +209,7 @@ msgstr ""
 "velocità di movimento maggiore."
 
 #: ui/main.qml:254
-#, fuzzy, kde-format
-#| msgid "Scrolling speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr "Velocità di scorrimento:"
@@ -238,34 +227,25 @@ msgid "Faster"
 msgstr "Più veloce"
 
 #: ui/main.qml:321
-#, fuzzy, kde-format
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "Scorrimento:"
 
 #: ui/main.qml:322
-#, fuzzy, kde-format
-#| msgid "Invert scroll direction"
+#, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction"
 msgstr "Inverti la direzione di scorrimento"
 
 #: ui/main.qml:339
-#, fuzzy, kde-format
-#| msgid "Hold down middle button and move mouse to scroll"
+#, kde-format
 msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "Tieni premuto il pulsante centrale e sposta il mouse per scorrere"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip from ContextualHelpButton"
-#| msgid ""
-#| "This will interfere with applications that use middle-button drag, such "
-#| "as some image editors, document viewers, or video games. It may be used "
-#| "on any device, but is intended primarily as a substitute for scroll "
-#| "wheels on devices that do not have any."
+#, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "This will interfere with applications that use middle-button drag, such as "

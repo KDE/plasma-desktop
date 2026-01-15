@@ -3,41 +3,36 @@
 # Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2023.
 # Dusan Kazik <prescott66@gmail.com>, 2020.
 # Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
-# SPDX-FileCopyrightText: 2025 Lucia Mrenica <lucia.mrenica@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2025-05-30 20:34+0200\n"
+"PO-Revision-Date: 2026-01-14 17:49+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Pause Indexer"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pause Indexer"
 msgstr "Pozastaviť Indexer"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Resume Indexer"
+#, kde-format
 msgctxt "@action:button"
 msgid "Resume Indexer"
 msgstr "Pokračovať v indexovaní"
 
 #: ui/main.qml:61
-#, fuzzy, kde-format
-#| msgid ""
-#| "This will disable file searching in KRunner and launcher menus, and "
-#| "remove extended metadata display from all KDE applications."
+#, kde-format
 msgctxt "@info inlinemessage"
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -65,8 +60,7 @@ msgstr ""
 "úplne od začiatku. Môže to chvíľu trvať, v závislosti od počtu súborov."
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgid "Delete Index Data"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delete Index Data"
 msgstr "Odstrániť údaje indexu"
@@ -148,15 +142,13 @@ msgid "Currently indexing: <filename>%1</filename>"
 msgstr "Práve sa indexuje: <filename>%1</filename>"
 
 #: ui/main.qml:270
-#, fuzzy, kde-format
-#| msgid "Not indexed"
+#, kde-format
 msgctxt "@info:status"
 msgid "Not indexed"
 msgstr "Neindexované"
 
 #: ui/main.qml:271
-#, fuzzy, kde-format
-#| msgid "Indexed"
+#, kde-format
 msgctxt "@info:status"
 msgid "Indexed"
 msgstr "Indexované"
@@ -168,15 +160,13 @@ msgid "Remove entry"
 msgstr "Odstrániť položku"
 
 #: ui/main.qml:318
-#, fuzzy, kde-format
-#| msgid "Select a folder to include"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to include"
 msgstr "Vyberte priečinok, ktorý chcete zahrnúť"
 
 #: ui/main.qml:318
-#, fuzzy, kde-format
-#| msgid "Select a folder to exclude"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to exclude"
 msgstr "Vyberte priečinok, ktorý chcete vynechať"

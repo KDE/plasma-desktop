@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-13 01:23+0900\n"
+"PO-Revision-Date: 2026-01-15 00:56+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -466,33 +466,25 @@ msgid "Width"
 msgstr "寬度"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Fill height"
+#, kde-format
 msgctxt "@item:inlistbox panel fills the full height of the display"
 msgid "Fill height"
 msgstr "填滿高度"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Fill width"
+#, kde-format
 msgctxt "@item:inlistbox panel fills the full width of the display"
 msgid "Fill width"
 msgstr "填滿寬度"
 
 #: contents/configuration/PanelConfiguration.qml:335
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Fit content"
+#, kde-format
 msgctxt "@item:inlistbox panel is just big enough to fit its content"
 msgid "Fit content"
 msgstr "符合內容"
 
 #: contents/configuration/PanelConfiguration.qml:336
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Custom"
+#, kde-format
 msgctxt "@item:inlistbox panel size"
 msgid "Custom"
 msgstr "自訂"
@@ -595,9 +587,7 @@ msgid "Panel Height:"
 msgstr "面板高度："
 
 #: contents/configuration/PanelConfiguration.qml:671
-#, fuzzy, kde-format
-#| msgctxt "@title:group"
-#| msgid "Focus shortcut:"
+#, kde-format
 msgctxt "@title:group shortcut that moves focus to the panel"
 msgid "Focus shortcut:"
 msgstr "取得焦點快捷鍵："
@@ -609,9 +599,7 @@ msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "按這個鍵盤快捷鍵來移動焦點到面板上"
 
 #: contents/configuration/PanelConfiguration.qml:689
-#, fuzzy, kde-format
-#| msgctxt "@action:button acccessible name"
-#| msgid "Focus Shortcut Setter"
+#, kde-format
 msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
 msgstr "焦點快捷鍵設定器"
@@ -629,9 +617,7 @@ msgid "Delete Panel"
 msgstr "刪除面板"
 
 #: contents/configuration/PanelConfiguration.qml:719
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip for button"
-#| msgid "Remove this panel; this action is undo-able"
+#, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Remove this panel; this action can be undone"
 msgstr "移除這個面板；這個動作是可以復原的"

@@ -2,20 +2,20 @@
 # Roman Paholik <wizzardsk@gmail.com>, 2015, 2017.
 # Mthw <jari_45@hotmail.com>, 2018, 2019.
 # SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024 Matej Mrenica <matejm98mthw@gmail.com>
-# SPDX-FileCopyrightText: 2025 Lucia Mrenica <lucia.mrenica@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-05-30 20:35+0200\n"
+"PO-Revision-Date: 2026-01-14 17:55+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
@@ -108,51 +108,43 @@ msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Touchpad odpojený. Nenašli sa žiadne iné."
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgid "No touchpad found"
+#, kde-format
 msgctxt "@info:status placeholdermessage text"
 msgid "No touchpad found"
 msgstr "Nenašiel sa touchpad"
 
 #: ui/main.qml:60
-#, fuzzy, kde-format
-#| msgid "Connect an external touchpad"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchpad"
 msgstr "Pripojiť externý touchpad"
 
 #: ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@label:listbox device selection"
 msgid "Device:"
 msgstr "Zariadenie:"
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "Všeobecné:"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgctxt "Coasting"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable device"
-msgstr "Povoliť"
+msgstr "Povoliť zariadenie"
 
 #: ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "Disable touchpad when mouse is plugged in"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
-msgstr "Zakázať touchpad, keď je pripojená myš"
+msgstr "Zakázať, keď je myš pripojená"
 
 #: ui/main.qml:137
-#, fuzzy, kde-format
-#| msgid "Disable while typing"
+#, kde-format
 msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "Zakázať touchpad pri písaní"
@@ -161,7 +153,7 @@ msgstr "Zakázať touchpad pri písaní"
 #, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
-msgstr ""
+msgstr "To môže zasahovať do videohier."
 
 #: ui/main.qml:174
 #, fuzzy, kde-format
@@ -198,18 +190,16 @@ msgstr ""
 "ľavým a pravým tlačidlom myši."
 
 #: ui/main.qml:217
-#, fuzzy, kde-format
-#| msgid "Pointer speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Rýchlosť ukazovateľa:"
 
 #: ui/main.qml:297
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
-msgstr "Zrýchlenie ukazovateľa:"
+msgstr "Povoliť zrýchlenie ukazovateľa"
 
 #: ui/main.qml:312
 #, kde-format
@@ -217,26 +207,23 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
+"Keď je táto funkcia zapnutá, vzdialenosť pohybu ukazovateľa sa zvyšuje s "
+"vyššou rýchlosťou pohybu."
 
 #: ui/main.qml:325
-#, fuzzy, kde-format
-#| msgid "Scrolling speed:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "Rýchlosť rolovania:"
 
 #: ui/main.qml:376
-#, fuzzy, kde-format
-#| msgctxt "Slower Scroll"
-#| msgid "Slower"
+#, kde-format
 msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "Pomalšie"
 
 #: ui/main.qml:383
-#, fuzzy, kde-format
-#| msgctxt "Faster Scroll Speed"
-#| msgid "Faster"
+#, kde-format
 msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "Rýchlejšie"
@@ -265,15 +252,13 @@ msgid "Moving one finger on edge"
 msgstr ""
 
 #: ui/main.qml:424
-#, fuzzy, kde-format
-#| msgid "Invert scroll direction (Natural scrolling)"
+#, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Otočiť smer rolovania (Prirodzené rolovanie)"
 
 #: ui/main.qml:438
-#, fuzzy, kde-format
-#| msgid "Disable horizontal scrolling"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "Zakázať horizontálne rolovanie"
@@ -298,18 +283,16 @@ msgid "Pressing bottom-right corner"
 msgstr "Stlačte pravý dolný roh"
 
 #: ui/main.qml:496
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
-msgstr "Stlačte hocikde s troma prstami."
+msgstr "Stlačenie oboch spodných rohov spôsobí stredné kliknutie."
 
 #: ui/main.qml:497
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr "Stlačte hocikde s troma prstami."
+msgstr "Stlačenie spodného stredu spôsobí stredné kliknutie."
 
 #: ui/main.qml:505
 #, fuzzy, kde-format
@@ -373,8 +356,7 @@ msgid "Tapping:"
 msgstr "Ťukanie:"
 
 #: ui/main.qml:581
-#, fuzzy, kde-format
-#| msgid "Tap to Click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Tap to click"
 msgstr "Ťuknite na kliknutie"
@@ -392,44 +374,41 @@ msgid ""
 "Tap, then tap and immediately slide finger over the touchpad to drag. Lift "
 "finger to drop."
 msgstr ""
+"Ťuknite na položku, potom ťuknite na položku a ihneď ťahajte prstom po "
+"dotykovej ploche. Zdvihnutím prsta pustíte."
 
 #: ui/main.qml:616
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
-msgstr ""
+msgstr "Povolenie krátkeho zdvihnutia prsta počas ťuknutia a potiahnutia"
 
 #: ui/main.qml:630
-#, fuzzy, kde-format
-#| msgid "Two-finger tap:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "Ťuknutie dvoma prstami:"
 
 #: ui/main.qml:650
-#, fuzzy, kde-format
-#| msgid "Right-click (three-finger tap to middle-click)"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Pravý klik (troj-klik na stredný klik)"
 
 #: ui/main.qml:651
-#, fuzzy, kde-format
-#| msgid "Right-click"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "Pravý klik"
 
 #: ui/main.qml:659
-#, fuzzy, kde-format
-#| msgid "Middle-click (three-finger tap to right-click)"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Stredný klik (troj-klik na pravý klik)"
 
 #: ui/main.qml:660
-#, fuzzy, kde-format
-#| msgid "Middle-click"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Stredný klik"

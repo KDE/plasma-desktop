@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-15 03:00+0000\n"
 "PO-Revision-Date: 2026-01-08 11:28+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -313,13 +313,13 @@ msgctxt "Device name and path"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: ui/main.qml:35
+#: ui/main.qml:34
 #, kde-format
 msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
 msgid "Allow using as pointer and keyboard"
 msgstr "اسمح باستعمالها كمؤشر ولوحة المفاتيح"
 
-#: ui/main.qml:44
+#: ui/main.qml:43
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -330,19 +330,19 @@ msgstr ""
 "والتطبيقات غير المتعلقة بالألعاب.<nl/><nl/>يمكن للألعاب دائمًا استخدام جهاز "
 "التحكم."
 
-#: ui/main.qml:52
+#: ui/main.qml:51
 #, kde-format
 msgctxt "@info placeholdermessage text"
 msgid "No game controllers found"
 msgstr "لم يعثر أجهزة التحكم بألعاب الفيديو"
 
-#: ui/main.qml:53
+#: ui/main.qml:52
 #, kde-format
 msgctxt "@info:usagetip placeholdermessage text"
 msgid "Connect a wired or wireless controller"
 msgstr "صِل متحكم سلكي أو لا سلكي"
 
-#: ui/main.qml:83
+#: ui/main.qml:82
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -355,50 +355,50 @@ msgstr ""
 "ضع في اعتبارك حظرهما يدويًا أثناء استخدام جهاز التحكم، أو فعّل الحظر الآلي عن "
 "طريق السماح باستخدامهما كمؤشر ولوحة مفاتيح."
 
-#: ui/main.qml:98
+#: ui/main.qml:97
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Device:"
 msgstr "الجهاز:"
 
-#: ui/main.qml:120
+#: ui/main.qml:119
 #, kde-format
 msgctxt ""
 "@label game controller device type (wheel, joystick, game controller, etc.)"
 msgid "Device type:"
 msgstr "نوع الجهاز:"
 
-#: ui/main.qml:136
+#: ui/main.qml:135
 #, kde-format
 msgctxt "@label game controller controller type (which brand, etc.)"
 msgid "Controller type:"
 msgstr "نوع المتحكم:"
 
-#: ui/main.qml:152
+#: ui/main.qml:151
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Connection type:"
 msgstr "نوع الاتصال:"
 
-#: ui/main.qml:174
+#: ui/main.qml:173
 #, kde-format
 msgctxt "@label Visual representation of the axis position for the left axis"
 msgid "Left position:"
 msgstr "الموضع الأيسر:"
 
-#: ui/main.qml:186
+#: ui/main.qml:185
 #, kde-format
 msgctxt "@label Visual representation of the axis position for the right axis"
 msgid "Right position:"
 msgstr "الموضع الأيمن:"
 
-#: ui/main.qml:205
+#: ui/main.qml:204
 #, kde-format
 msgctxt "@label Gamepad buttons"
 msgid "Buttons:"
 msgstr "الأزرار:"
 
-#: ui/main.qml:227
+#: ui/main.qml:226
 #, kde-format
 msgctxt "@label Gamepad axes (sticks)"
 msgid "Axes:"

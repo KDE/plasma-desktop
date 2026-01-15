@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-08 11:43+0400\n"
+"PO-Revision-Date: 2026-01-14 07:27+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -26,7 +26,7 @@ msgstr "منتقي الإيموجي"
 #: app/emojier.cpp:47
 #, kde-format
 msgid "(C) 2019 Aleix Pol i Gonzalez"
-msgstr "(C) 2019 Aleix Pol i Gonzalez"
+msgstr "(ج) 2019 أليكس بول إي جونزاليس"
 
 #: app/emojier.cpp:49
 #, kde-format
@@ -160,9 +160,7 @@ msgid "No matching emoji found"
 msgstr "لم يعثر على رموز مطابقة"
 
 #: app/ui/Emojier.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info:status passive notification as action feedback"
-#| msgid "%1 copied to the clipboard"
+#, kde-format
 msgctxt "@info:status passive notification as action feedback, %1 is an emoji"
 msgid "%1 copied to the clipboard"
 msgstr "‏%1 نُسخ للحافظة"

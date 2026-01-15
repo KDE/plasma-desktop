@@ -1,19 +1,20 @@
 # translation of kcm_gamecontroller.po to Slovak
 # SPDX-FileCopyrightText: 2023 Roman Paholík <wizzardsk@gmail.com>
 # SPDX-FileCopyrightText: 2024 Matej Mrenica <matejm98mthw@gmail.com>
+# SPDX-FileCopyrightText: 2026 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_gamecontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2024-06-26 14:10+0200\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"POT-Creation-Date: 2026-01-15 03:00+0000\n"
+"PO-Revision-Date: 2026-01-14 17:51+0100\n"
+"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 25.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
@@ -37,18 +38,17 @@ msgstr "Stav"
 #: device.cpp:17 device.cpp:30
 #, kde-format
 msgid "Unknown"
-msgstr ""
+msgstr "Neznáme"
 
 #: device.cpp:18
-#, fuzzy, kde-format
-#| msgid "No game controllers found"
+#, kde-format
 msgid "Game Controller"
-msgstr "Nenašli sa herné ovládače"
+msgstr "Herný ovládač"
 
 #: device.cpp:19
 #, kde-format
 msgid "Wheel"
-msgstr ""
+msgstr "Volant"
 
 #: device.cpp:20
 #, kde-format
@@ -68,7 +68,7 @@ msgstr ""
 #: device.cpp:23
 #, kde-format
 msgid "Guitar"
-msgstr ""
+msgstr "Gitara"
 
 #: device.cpp:24
 #, kde-format
@@ -113,7 +113,7 @@ msgstr ""
 #: device.cpp:36
 #, kde-format
 msgid "Virtual"
-msgstr ""
+msgstr "Virtuálny"
 
 #: device.cpp:37
 #, kde-format
@@ -151,44 +151,34 @@ msgid "Switch Paired Joy-Con"
 msgstr ""
 
 #: device.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The game controller button with a letter A on it"
 msgid "A button"
-msgstr "Tlačidlá:"
+msgstr "Tlačidlo A"
 
 #: device.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The game controller button with a letter B on it"
 msgid "B button"
-msgstr "Tlačidlá:"
+msgstr "Tlačidlo B"
 
 #: device.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The game controller button with a letter X on it"
 msgid "X button"
-msgstr "Tlačidlá:"
+msgstr "Tlačidlo X"
 
 #: device.cpp:51
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The game controller button with a letter Y on it"
 msgid "Y button"
-msgstr "Tlačidlá:"
+msgstr "Tlačidlo Y"
 
 #: device.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The back game controller button"
 msgid "Back button"
-msgstr "Tlačidlá:"
+msgstr "Tlačidlo vzad"
 
 #: device.cpp:53
 #, kde-format
@@ -294,19 +284,19 @@ msgstr ""
 #, kde-format
 msgctxt "Unknown controller connection type"
 msgid "Unknown"
-msgstr ""
+msgstr "Neznáme"
 
 #: device.cpp:74
 #, kde-format
 msgctxt "USB connected controller"
 msgid "USB"
-msgstr ""
+msgstr "USB"
 
 #: device.cpp:75
 #, kde-format
 msgctxt "Bluetooth connected controller"
 msgid "Bluetooth"
-msgstr ""
+msgstr "Bluetooth"
 
 #: device.cpp:83
 #, kde-format
@@ -325,13 +315,13 @@ msgctxt "Device name and path"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: ui/main.qml:35
+#: ui/main.qml:34
 #, kde-format
 msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
 msgid "Allow using as pointer and keyboard"
 msgstr ""
 
-#: ui/main.qml:44
+#: ui/main.qml:43
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -339,21 +329,20 @@ msgid ""
 "and non-game applications.<nl/><nl/>Games can always use the controller."
 msgstr ""
 
-#: ui/main.qml:52
+#: ui/main.qml:51
 #, fuzzy, kde-format
 #| msgid "No game controllers found"
 msgctxt "@info placeholdermessage text"
 msgid "No game controllers found"
 msgstr "Nenašli sa herné ovládače"
 
-#: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Connect a wired or wireless controller"
+#: ui/main.qml:52
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage text"
 msgid "Connect a wired or wireless controller"
 msgstr "Pripojte drôtový alebo bezdrôtový ovládač"
 
-#: ui/main.qml:83
+#: ui/main.qml:82
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -363,56 +352,50 @@ msgid ""
 "keyboard."
 msgstr ""
 
-#: ui/main.qml:98
+#: ui/main.qml:97
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Device:"
 msgstr "Zariadenie:"
 
-#: ui/main.qml:120
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Device:"
+#: ui/main.qml:119
+#, kde-format
 msgctxt ""
 "@label game controller device type (wheel, joystick, game controller, etc.)"
 msgid "Device type:"
-msgstr "Zariadenie:"
+msgstr "Typ zariadenia:"
 
-#: ui/main.qml:136
+#: ui/main.qml:135
 #, kde-format
 msgctxt "@label game controller controller type (which brand, etc.)"
 msgid "Controller type:"
 msgstr ""
 
-#: ui/main.qml:152
+#: ui/main.qml:151
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Connection type:"
-msgstr ""
+msgstr "Typ pripojenia:"
 
-#: ui/main.qml:174
-#, fuzzy, kde-format
-#| msgctxt "@label Visual representation of an axis position"
-#| msgid "Position:"
+#: ui/main.qml:173
+#, kde-format
 msgctxt "@label Visual representation of the axis position for the left axis"
 msgid "Left position:"
-msgstr "Pozícia:"
+msgstr "Ľavá pozícia:"
 
-#: ui/main.qml:186
-#, fuzzy, kde-format
-#| msgctxt "@label Visual representation of an axis position"
-#| msgid "Position:"
+#: ui/main.qml:185
+#, kde-format
 msgctxt "@label Visual representation of the axis position for the right axis"
 msgid "Right position:"
-msgstr "Pozícia:"
+msgstr "Pravá pozícia:"
 
-#: ui/main.qml:205
+#: ui/main.qml:204
 #, kde-format
 msgctxt "@label Gamepad buttons"
 msgid "Buttons:"
 msgstr "Tlačidlá:"
 
-#: ui/main.qml:227
+#: ui/main.qml:226
 #, kde-format
 msgctxt "@label Gamepad axes (sticks)"
 msgid "Axes:"

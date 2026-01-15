@@ -4,20 +4,20 @@
 # Michal Sulek <misurel@gmail.com>, 2011.
 # Roman Paholík <wizzardsk@gmail.com>, 2012, 2014, 2016, 2017.
 # SPDX-FileCopyrightText: 2020, 2021, 2023, 2024 Matej Mrenica <matejm98mthw@gmail.com>
-# SPDX-FileCopyrightText: 2025 Lucia Mrenica <lucia.mrenica@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-05-30 20:42+0200\n"
+"PO-Revision-Date: 2026-01-14 17:47+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #, kde-format
@@ -97,12 +97,10 @@ msgstr ""
 "poriadku, ak sa použijú"
 
 #: ui/KeyBindings.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Switching…"
+#, kde-format
 msgctxt "@title"
 msgid "Configure Key Bindings…"
-msgstr "Nastaviť prepínanie…"
+msgstr "Nastaviť klávesové skratky..."
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -129,12 +127,10 @@ msgid "Reset selected options for this group"
 msgstr "Obnoviť vybrané možnosti pre túto skupinu"
 
 #: ui/LayoutDialog.qml:22
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Layout"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Layout"
-msgstr "Rozloženie"
+msgstr "Nastavenie rozloženie"
 
 #: ui/LayoutDialog.qml:22
 #, kde-format
@@ -415,41 +411,31 @@ msgid "or"
 msgstr "alebo"
 
 #: ui/main_phone.qml:36
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@title form header"
 msgid "Model & Layout"
-msgstr "Pridať rozloženie"
+msgstr "Model a rozloženie"
 
 #: ui/main_phone.qml:43
-#, fuzzy, kde-format
-#| msgctxt "@title:group"
-#| msgid "Keyboard model:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Keyboard Model"
-msgstr "Model klávesnice:"
+msgstr "Model klávesnice"
 
 #: ui/main_phone.qml:72
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Layout"
+#, kde-format
 msgctxt "@option:check"
 msgid "Custom Layout"
-msgstr "Rozloženie"
+msgstr "Vlastné rozloženie"
 
 #: ui/main_phone.qml:96
-#, fuzzy, kde-format
-#| msgctxt "@option:textbox"
-#| msgid "Change layout:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Layout..."
-msgstr "Zmeniť rozloženie:"
+msgstr "Zmeniť rozloženie..."
 
 #: ui/main_phone.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@label:checkbox accessible"
-#| msgid "Key repeat"
+#, kde-format
 msgctxt "@title:group"
 msgid "Key Repeat"
 msgstr "Opakovanie klávesov"
@@ -458,7 +444,7 @@ msgstr "Opakovanie klávesov"
 #, kde-format
 msgctxt "@option:check"
 msgid "Customize Repeat"
-msgstr ""
+msgstr "Prispôsobiť opakovanie"
 
 #: ui/Switching.qml:17
 #, kde-format
@@ -503,12 +489,10 @@ msgid "Current window only"
 msgstr "Iba aktuálne okno"
 
 #: ui/Switching.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Show OSD popup on layout change"
-msgstr "Zobraziť vyskakovacie okno pri zmene rozloženia"
+msgstr "Zobraziť OSD pri zmene rozloženia"
 
 #: ui/Switching.qml:86
 #, kde-format

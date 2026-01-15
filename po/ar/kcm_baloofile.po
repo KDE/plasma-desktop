@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-08 11:38+0400\n"
+"PO-Revision-Date: 2026-01-14 07:26+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -43,13 +43,7 @@ msgstr ""
 "وإزالة عرض البيانات الوصفية الممتد من جميع تطبيقات كِيدِي."
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@info inlinemessage"
-#| msgid ""
-#| "Do you want to delete the saved index data? %1 of space will be freed, "
-#| "but if indexing is re-enabled later, the entire index will have to be re-"
-#| "created from scratch. This may take some time, depending on how many "
-#| "files you have."
+#, kde-format
 msgctxt "@info:inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -59,7 +53,7 @@ msgid ""
 msgstr ""
 "هل ترغب في حذف بيانات الفهرس المحفوظة؟ ستحرر %1 من المساحة لكن إذا مكنت "
 "الفهرسة مرة أخرى فإن كامل الفهرس سيعاد تكوينها من الصفر، سيأخذ هذا بعض الوقت "
-"اعتمادا على عدد الملفات الموجودة."
+"اعتمادا على عدد الملفات التي ستفهرس."
 
 #: ui/main.qml:73
 #, kde-format

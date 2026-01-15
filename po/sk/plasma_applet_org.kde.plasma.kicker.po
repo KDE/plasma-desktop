@@ -4,20 +4,21 @@
 # Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021.
 # Dusan Kazik <prescott66@gmail.com>, 2020.
 # Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
+# SPDX-FileCopyrightText: 2026 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2023-07-14 16:39+0200\n"
-"Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
-"Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
+"PO-Revision-Date: 2026-01-14 18:05+0100\n"
+"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: code/tools.js:53
 #, kde-format
@@ -45,15 +46,13 @@ msgid "Show in Favorites"
 msgstr "Zobraziť v obľúbených"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Všeobecné"
 
 #: ConfigGeneral.qml:48
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Ikona:"
@@ -71,106 +70,91 @@ msgid "Clear Icon"
 msgstr "Vymazať ikonu"
 
 #: ConfigGeneral.qml:159
-#, fuzzy, kde-format
-#| msgid "Show applications as:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Zobraziť aplikáciu ako:"
 
 #: ConfigGeneral.qml:161
-#, fuzzy, kde-format
-#| msgid "Name only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Iba názov"
 
 #: ConfigGeneral.qml:161
-#, fuzzy, kde-format
-#| msgid "Description only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Len popis"
 
 #: ConfigGeneral.qml:162
-#, fuzzy, kde-format
-#| msgid "Name (Description)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Názov (popis)"
 
 #: ConfigGeneral.qml:162
-#, fuzzy, kde-format
-#| msgid "Description (Name)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Popis (názov)"
 
 #: ConfigGeneral.qml:172
-#, fuzzy, kde-format
-#| msgid "Behavior:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
 msgstr "Správanie:"
 
 #: ConfigGeneral.qml:174
-#, fuzzy, kde-format
-#| msgid "Sort applications alphabetically"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Zoradiť podľa abecedy"
 
 #: ConfigGeneral.qml:182
-#, fuzzy, kde-format
-#| msgid "Flatten sub-menus to a single level"
+#, kde-format
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
 msgstr "Sploštiť ponuku na jednoduchú úroveň"
 
 #: ConfigGeneral.qml:190
-#, fuzzy, kde-format
-#| msgid "Show icons on the root level of the menu"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
 msgstr "Zobraziť ikony na koreňovej úrovni ponuky"
 
 #: ConfigGeneral.qml:200
-#, fuzzy, kde-format
-#| msgid "Show categories:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
 msgstr "Zobraziť kategórie:"
 
 #: ConfigGeneral.qml:203
-#, fuzzy, kde-format
-#| msgid "Recent applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent applications"
 msgstr "Nedávne aplikácie"
 
 #: ConfigGeneral.qml:204
-#, fuzzy, kde-format
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used applications"
 msgstr "Často používané aplikácie"
 
 #: ConfigGeneral.qml:211
-#, fuzzy, kde-format
-#| msgid "Recent files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent files"
 msgstr "Nedávne súbory"
 
 #: ConfigGeneral.qml:212
-#, fuzzy, kde-format
-#| msgid "Often used files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used files"
 msgstr "Často používané súbory"
 
 #: ConfigGeneral.qml:218
-#, fuzzy, kde-format
-#| msgid "Sort items in categories by:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
 msgstr "Zoradiť položky v kategóriách podľa:"
@@ -183,32 +167,26 @@ msgid "Recently used"
 msgstr "Nedávno použité"
 
 #: ConfigGeneral.qml:219
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
-#| msgid "Often used"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Often used"
 msgstr "Často používané"
 
 #: ConfigGeneral.qml:229
-#, fuzzy, kde-format
-#| msgid "Search:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
 msgstr "Hľadať:"
 
 #: ConfigGeneral.qml:231
-#, fuzzy, kde-format
-#| msgid "Expand search to bookmarks, files and emails"
+#, kde-format
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Rozbaliť hľadanie na záložky, súbory a e-maily"
 
 #: ConfigGeneral.qml:239
-#, fuzzy, kde-format
-#| msgid "Align search results to bottom"
+#, kde-format
 msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr "Zarovnať výsledky hľadania na spodok"
@@ -217,13 +195,13 @@ msgstr "Zarovnať výsledky hľadania na spodok"
 #, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
-msgstr ""
+msgstr "Vzhľad:"
 
 #: ConfigGeneral.qml:249
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
-msgstr ""
+msgstr "Preferovať tmavý režim keď je dostupný"
 
 #: ConfigGeneral.qml:253
 #, kde-kuit-format
@@ -234,8 +212,7 @@ msgid ""
 msgstr ""
 
 #: DashboardRepresentation.qml:309
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "Obľúbené"
@@ -244,24 +221,22 @@ msgstr "Obľúbené"
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
-msgstr ""
+msgstr "Otvoriť kategóriu"
 
 #: ItemListDelegate.qml:32
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
-msgstr ""
+msgstr "Spustiť"
 
 #: main.qml:211
-#, fuzzy, kde-format
-#| msgid "Edit Applications…"
+#, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
 msgstr "Upraviť aplikácie..."
 
 #: MenuRepresentation.qml:170
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@title:group accessible name for favorite group in sidebar"
 msgid "Favorites"
 msgstr "Obľúbené"
@@ -270,7 +245,7 @@ msgstr "Obľúbené"
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr ""
+msgstr "Žiadne zhody"
 
 #~ msgid "Searching for '%1'"
 #~ msgstr "Vyhľadáva sa \"%1\""

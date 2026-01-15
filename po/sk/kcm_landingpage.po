@@ -1,20 +1,20 @@
 # translation of kcm_landingpage.po to Slovak
 # Roman Paholík <wizzardsk@gmail.com>, 2021.
 # Matej Mrenica <matejm98mthw@gmail.com>, 2021, 2022.
-# SPDX-FileCopyrightText: 2025 Lucia Mrenica <lucia.mrenica@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_landingpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-05-30 20:35+0200\n"
+"PO-Revision-Date: 2026-01-14 17:52+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
@@ -65,20 +65,19 @@ msgstr ""
 #, kde-format
 msgctxt "@label accessible"
 msgid "Global theme"
-msgstr ""
+msgstr "Globálna téma"
 
 #: ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Theme:"
+#, kde-format
 msgctxt "@title:group for light/dark quick switch"
 msgid "Theme:"
-msgstr "Téma"
+msgstr "Téma:"
 
 #: ui/main.qml:91
 #, kde-format
 msgctxt "Switch between dark and light look and feel packages automatically"
 msgid "Automatic"
-msgstr ""
+msgstr "Automatická"
 
 #: ui/main.qml:93
 #, kde-format
@@ -95,11 +94,10 @@ msgid "More appearance settings:"
 msgstr "Ďalšie nastavenia vzhľadu:"
 
 #: ui/main.qml:183
-#, fuzzy, kde-format
-#| msgid "Animation speed:"
+#, kde-format
 msgctxt "@title:slider"
 msgid "Animation speed:"
-msgstr "Rýchlosť animácie:"
+msgstr "Rýchlosť animácií:"
 
 #: ui/main.qml:192
 #, kde-format
@@ -127,8 +125,7 @@ msgid "Selects them"
 msgstr "Vyberie položku"
 
 #: ui/main.qml:226
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "Otvoriť radšej dvoj-klikom"
@@ -140,8 +137,7 @@ msgid "Opens them"
 msgstr "Otvorí položku"
 
 #: ui/main.qml:259
-#, fuzzy, kde-format
-#| msgid "Select by clicking on item's selection marker"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
 msgstr "Vybrať kliknutím na značku výberu položky"
@@ -153,8 +149,7 @@ msgid "More behavior settings:"
 msgstr "Ďalšie nastavenia správania:"
 
 #: ui/main.qml:299
-#, fuzzy, kde-format
-#| msgid "Most used pages:"
+#, kde-format
 msgctxt "@title:group for grid of buttons opening kcms"
 msgid "Most used pages:"
 msgstr "Najpoužívanejšie stránky:"

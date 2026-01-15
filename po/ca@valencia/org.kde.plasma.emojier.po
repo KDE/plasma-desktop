@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-03 09:07+0100\n"
+"PO-Revision-Date: 2026-01-13 13:00+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: app/emojier.cpp:43 app/emojier.cpp:45
 #, kde-format
@@ -162,9 +162,7 @@ msgid "No matching emoji found"
 msgstr "No s'ha trobat cap emoji coincident"
 
 #: app/ui/Emojier.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info:status passive notification as action feedback"
-#| msgid "%1 copied to the clipboard"
+#, kde-format
 msgctxt "@info:status passive notification as action feedback, %1 is an emoji"
 msgid "%1 copied to the clipboard"
 msgstr "S'ha copiat %1 a dins del porta-retalls"

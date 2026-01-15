@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-10 12:37+0100\n"
+"PO-Revision-Date: 2026-01-14 16:30+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
@@ -468,33 +468,25 @@ msgid "Width"
 msgstr "Breedte"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Fill height"
+#, kde-format
 msgctxt "@item:inlistbox panel fills the full height of the display"
 msgid "Fill height"
 msgstr "Volle hoogte"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Fill width"
+#, kde-format
 msgctxt "@item:inlistbox panel fills the full width of the display"
 msgid "Fill width"
 msgstr "Volle breedte"
 
 #: contents/configuration/PanelConfiguration.qml:335
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Fit content"
+#, kde-format
 msgctxt "@item:inlistbox panel is just big enough to fit its content"
 msgid "Fit content"
-msgstr "Inhoud laten passen"
+msgstr "Inhoud past"
 
 #: contents/configuration/PanelConfiguration.qml:336
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Custom"
+#, kde-format
 msgctxt "@item:inlistbox panel size"
 msgid "Custom"
 msgstr "Aangepast"
@@ -597,9 +589,7 @@ msgid "Panel Height:"
 msgstr "Paneelhoogte:"
 
 #: contents/configuration/PanelConfiguration.qml:671
-#, fuzzy, kde-format
-#| msgctxt "@title:group"
-#| msgid "Focus shortcut:"
+#, kde-format
 msgctxt "@title:group shortcut that moves focus to the panel"
 msgid "Focus shortcut:"
 msgstr "Sneltoets voor focus:"
@@ -611,9 +601,7 @@ msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Deze sneltoets indrukken om focus te verplaatsen naar het paneel"
 
 #: contents/configuration/PanelConfiguration.qml:689
-#, fuzzy, kde-format
-#| msgctxt "@action:button acccessible name"
-#| msgid "Focus Shortcut Setter"
+#, kde-format
 msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
 msgstr "Sneltoets voor focus geven:"
@@ -631,9 +619,7 @@ msgid "Delete Panel"
 msgstr "Paneel verwijderen"
 
 #: contents/configuration/PanelConfiguration.qml:719
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip for button"
-#| msgid "Remove this panel; this action is undo-able"
+#, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Remove this panel; this action can be undone"
 msgstr "Dit paneel verwijderen; deze actie kan niet ongedaan worden"

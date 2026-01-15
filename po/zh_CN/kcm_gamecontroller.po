@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-15 03:00+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -312,13 +312,13 @@ msgctxt "Device name and path"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: ui/main.qml:35
+#: ui/main.qml:34
 #, kde-format
 msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
 msgid "Allow using as pointer and keyboard"
 msgstr "允许用作指针和键盘"
 
-#: ui/main.qml:44
+#: ui/main.qml:43
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -328,19 +328,19 @@ msgstr ""
 "允许游戏控制器在 Plasma 桌面环境和非游戏应用程序中作为指针和键盘设备工作。"
 "<nl/><nl/>游戏不受此影响，总是可以使用游戏控制器。"
 
-#: ui/main.qml:52
+#: ui/main.qml:51
 #, kde-format
 msgctxt "@info placeholdermessage text"
 msgid "No game controllers found"
 msgstr "没有找到游戏控制器"
 
-#: ui/main.qml:53
+#: ui/main.qml:52
 #, kde-format
 msgctxt "@info:usagetip placeholdermessage text"
 msgid "Connect a wired or wireless controller"
 msgstr "连接有线/无线控制器"
 
-#: ui/main.qml:83
+#: ui/main.qml:82
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -352,50 +352,50 @@ msgstr ""
 "游戏控制器在使用时，系统仍可能自动睡眠或锁屏。您可以手动阻止睡眠或锁屏，也可"
 "以通过允许将游戏控制器用作指针和键盘设备来避免自动睡眠或锁屏。"
 
-#: ui/main.qml:98
+#: ui/main.qml:97
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Device:"
 msgstr "设备："
 
-#: ui/main.qml:120
+#: ui/main.qml:119
 #, kde-format
 msgctxt ""
 "@label game controller device type (wheel, joystick, game controller, etc.)"
 msgid "Device type:"
 msgstr "设备类型："
 
-#: ui/main.qml:136
+#: ui/main.qml:135
 #, kde-format
 msgctxt "@label game controller controller type (which brand, etc.)"
 msgid "Controller type:"
 msgstr "控制器类型："
 
-#: ui/main.qml:152
+#: ui/main.qml:151
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Connection type:"
 msgstr "连接类型："
 
-#: ui/main.qml:174
+#: ui/main.qml:173
 #, kde-format
 msgctxt "@label Visual representation of the axis position for the left axis"
 msgid "Left position:"
 msgstr "左坐标位置："
 
-#: ui/main.qml:186
+#: ui/main.qml:185
 #, kde-format
 msgctxt "@label Visual representation of the axis position for the right axis"
 msgid "Right position:"
 msgstr "右坐标位置："
 
-#: ui/main.qml:205
+#: ui/main.qml:204
 #, kde-format
 msgctxt "@label Gamepad buttons"
 msgid "Buttons:"
 msgstr "按钮："
 
-#: ui/main.qml:227
+#: ui/main.qml:226
 #, kde-format
 msgctxt "@label Gamepad axes (sticks)"
 msgid "Axes:"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-15 03:00+0000\n"
 "PO-Revision-Date: 2026-01-04 22:55+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -315,13 +315,13 @@ msgctxt "Device name and path"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: ui/main.qml:35
+#: ui/main.qml:34
 #, kde-format
 msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
 msgid "Allow using as pointer and keyboard"
 msgstr "Baimendu erakusle eta teklatu gisa erabiltzea"
 
-#: ui/main.qml:44
+#: ui/main.qml:43
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -332,21 +332,21 @@ msgstr ""
 "erakusle- eta teklatu-gailu bezala aritzea.<nl/><nl/>Jokoek beti erabil "
 "dezakete kontrolagailua."
 
-#: ui/main.qml:52
+#: ui/main.qml:51
 #, fuzzy, kde-format
 #| msgid "No game controllers found"
 msgctxt "@info placeholdermessage text"
 msgid "No game controllers found"
 msgstr "Ez da joko-kontrolagailurik aurkitu"
 
-#: ui/main.qml:53
+#: ui/main.qml:52
 #, fuzzy, kde-format
 #| msgid "Connect a wired or wireless controller"
 msgctxt "@info:usagetip placeholdermessage text"
 msgid "Connect a wired or wireless controller"
 msgstr "Konektatu hari bidezko edo hari gabeko kontrolagailu bat"
 
-#: ui/main.qml:83
+#: ui/main.qml:82
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -360,50 +360,50 @@ msgstr ""
 "bitartean haiek eskuz oztopatzeko aukera, edo gaitu oztopo automatikoa "
 "erakusle eta teklatu erabilera baimenduz."
 
-#: ui/main.qml:98
+#: ui/main.qml:97
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Device:"
 msgstr "Gailua:"
 
-#: ui/main.qml:120
+#: ui/main.qml:119
 #, kde-format
 msgctxt ""
 "@label game controller device type (wheel, joystick, game controller, etc.)"
 msgid "Device type:"
 msgstr "Gailu mota:"
 
-#: ui/main.qml:136
+#: ui/main.qml:135
 #, kde-format
 msgctxt "@label game controller controller type (which brand, etc.)"
 msgid "Controller type:"
 msgstr "Kontrolagailu mota:"
 
-#: ui/main.qml:152
+#: ui/main.qml:151
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Connection type:"
 msgstr "Konexio mota:"
 
-#: ui/main.qml:174
+#: ui/main.qml:173
 #, kde-format
 msgctxt "@label Visual representation of the axis position for the left axis"
 msgid "Left position:"
 msgstr "Ezkerreko kokapena:"
 
-#: ui/main.qml:186
+#: ui/main.qml:185
 #, kde-format
 msgctxt "@label Visual representation of the axis position for the right axis"
 msgid "Right position:"
 msgstr "Eskuineko kokapena:"
 
-#: ui/main.qml:205
+#: ui/main.qml:204
 #, kde-format
 msgctxt "@label Gamepad buttons"
 msgid "Buttons:"
 msgstr "Botoiak:"
 
-#: ui/main.qml:227
+#: ui/main.qml:226
 #, kde-format
 msgctxt "@label Gamepad axes (sticks)"
 msgid "Axes:"

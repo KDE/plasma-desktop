@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2018, 2019, 2021, 2022, 2023, 2024 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2018, 2019, 2021, 2022, 2023, 2024, 2026 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.panel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-14 02:39+0000\n"
-"PO-Revision-Date: 2024-08-20 17:44+0200\n"
+"PO-Revision-Date: 2026-01-08 09:08+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,32 +15,28 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: ConfigOverlay.qml:333
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:inmenu removes widget"
 msgid "Remove"
 msgstr "Rimuovi"
 
 #: ConfigOverlay.qml:343
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:inmenu opens widget config dialog"
 msgid "Configure…"
 msgstr "Configura…"
 
 #: ConfigOverlay.qml:354
-#, fuzzy, kde-format
-#| msgid "Show Alternatives…"
+#, kde-format
 msgctxt "@action:inmenu opens widget alternatives explorer"
 msgid "Show Alternatives…"
 msgstr "Mostra alternative..."
 
 #: ConfigOverlay.qml:373
-#, fuzzy, kde-format
-#| msgid "Spacer width"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Spacer width"
 msgstr "Larghezza dello spaziatore"
@@ -53,8 +49,7 @@ msgid "Flexible size"
 msgstr "Dimensione flessibile"
 
 #: main.qml:453
-#, fuzzy, kde-format
-#| msgid "Open Panel configuration ui"
+#, kde-format
 msgctxt ""
 "@info:whatsthis Accessible description for entering Panel edit mode click "
 "area"
@@ -62,8 +57,7 @@ msgid "Open Panel configuration ui"
 msgstr "Apri l'interfaccia di configurazione dei pannelli"
 
 #: main.qml:460
-#, fuzzy, kde-format
-#| msgid "Add Widgets…"
+#, kde-format
 msgctxt "@action:button opens widget explorer"
 msgid "Add Widgets…"
 msgstr "Aggiungi oggetti..."

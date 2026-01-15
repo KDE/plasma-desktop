@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-08 17:50+0100\n"
+"PO-Revision-Date: 2026-01-14 16:27+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -40,13 +40,7 @@ msgstr ""
 "verwijdert uitgebreid tonen van metagegevens uit alle KDE toepassingen."
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@info inlinemessage"
-#| msgid ""
-#| "Do you want to delete the saved index data? %1 of space will be freed, "
-#| "but if indexing is re-enabled later, the entire index will have to be re-"
-#| "created from scratch. This may take some time, depending on how many "
-#| "files you have."
+#, kde-format
 msgctxt "@info:inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -57,7 +51,7 @@ msgstr ""
 "Wilt u de opgeslagen indexgegevens verwijderen? Er zal %1 ruimte worden "
 "vrijgemaakt, maar als als indexering later opnieuw wordt ingeschakeld zal de "
 "gehele index vanaf niets opnieuw moeten worden aangemaakt. Dit kan enige "
-"tijd kosten, afhankelijk van hoeveel bestanden u hebt."
+"tijd kosten, afhankelijk van het aantal te indexeren bestanden."
 
 #: ui/main.qml:73
 #, kde-format
