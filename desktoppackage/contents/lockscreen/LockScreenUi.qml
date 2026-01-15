@@ -124,6 +124,10 @@ Item {
             seenPositionChange = true;
         }
         onUiVisibleChanged: {
+            if (uiVisible) {
+                Window.window.requestActivate();
+            }
+
             if (blockUI) {
                 fadeoutTimer.running = false;
             } else if (uiVisible) {
