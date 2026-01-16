@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-desktop/kcm_touchscreen.pot\n"
-"X-Crowdin-File-ID: 43245\n"
+"X-Crowdin-File: /kf6-stable/messages/plasma-desktop/kcm_touchscreen.pot\n"
+"X-Crowdin-File-ID: 52940\n"
 
 #: kcmtouchscreen.cpp:47
 #, kde-format
@@ -53,9 +53,7 @@ msgid "Enabled:"
 msgstr "已启用："
 
 #: ui/main.qml:67
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox"
-#| msgid "Target display:"
+#, kde-format
 msgctxt "@label:listbox this is a compound noun"
 msgid "Target display:"
-msgstr "目标显示器："
+msgstr ""

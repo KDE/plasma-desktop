@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-15 03:00+0000\n"
-"PO-Revision-Date: 2025-09-01 17:48+0300\n"
+"PO-Revision-Date: 2026-01-15 20:11+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.8\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
@@ -65,17 +65,17 @@ msgstr ""
 #: device.cpp:22
 #, kde-format
 msgid "Dance Pad"
-msgstr ""
+msgstr "Šokių kilimėlis"
 
 #: device.cpp:23
 #, kde-format
 msgid "Guitar"
-msgstr ""
+msgstr "Gitara"
 
 #: device.cpp:24
 #, kde-format
 msgid "Drum Kit"
-msgstr ""
+msgstr "Būgnai"
 
 #: device.cpp:25
 #, kde-format
@@ -85,32 +85,32 @@ msgstr ""
 #: device.cpp:26
 #, kde-format
 msgid "Throttle"
-msgstr ""
+msgstr "Traukos svirtis"
 
 #: device.cpp:31
 #, kde-format
 msgid "XBox 360"
-msgstr ""
+msgstr "XBox 360"
 
 #: device.cpp:32
 #, kde-format
 msgid "XBox One"
-msgstr ""
+msgstr "XBox One"
 
 #: device.cpp:33
 #, kde-format
 msgid "Sony Dualshock 3"
-msgstr ""
+msgstr "Sony Dualshock 3"
 
 #: device.cpp:34
 #, kde-format
 msgid "Sony Dualshock 4"
-msgstr ""
+msgstr "Sony Dualshock 4"
 
 #: device.cpp:35
 #, kde-format
 msgid "Switch Pro"
-msgstr ""
+msgstr "Switch Pro"
 
 #: device.cpp:36
 #, kde-format
@@ -120,37 +120,37 @@ msgstr ""
 #: device.cpp:37
 #, kde-format
 msgid "Sony Dualsense"
-msgstr ""
+msgstr "Sony Dualsense"
 
 #: device.cpp:38
 #, kde-format
 msgid "Amazon Luna"
-msgstr ""
+msgstr "Amazon Luna"
 
 #: device.cpp:39
 #, kde-format
 msgid "Google Stadia"
-msgstr ""
+msgstr "Google Stadia"
 
 #: device.cpp:40
 #, kde-format
 msgid "NVidia Shield"
-msgstr ""
+msgstr "NVidia Shield"
 
 #: device.cpp:41
 #, kde-format
 msgid "Switch Left Joy-Con"
-msgstr ""
+msgstr "Switch kairysis Joy-Con"
 
 #: device.cpp:42
 #, kde-format
 msgid "Switch Right Joy-Con"
-msgstr ""
+msgstr "Switch dešinysis Joy-Con"
 
 #: device.cpp:43
 #, kde-format
 msgid "Switch Paired Joy-Con"
-msgstr ""
+msgstr "Switch poriniai Joy-Con"
 
 #: device.cpp:48
 #, kde-format
@@ -258,31 +258,31 @@ msgstr ""
 #, kde-format
 msgctxt "The game controller's 1st paddle button"
 msgid "Paddle button 1"
-msgstr ""
+msgstr "Pulto mygtukas 1"
 
 #: device.cpp:66
 #, kde-format
 msgctxt "The game controller's 2nd paddle button"
 msgid "Paddle button 2"
-msgstr ""
+msgstr "Pulto mygtukas 2"
 
 #: device.cpp:67
 #, kde-format
 msgctxt "The game controller's 3rd paddle button"
 msgid "Paddle button 3"
-msgstr ""
+msgstr "Pulto mygtukas 3"
 
 #: device.cpp:68
 #, kde-format
 msgctxt "The game controller's 4th paddle button"
 msgid "Paddle button 4"
-msgstr ""
+msgstr "Pulto mygtukas 4"
 
 #: device.cpp:69
 #, kde-format
 msgctxt "The button under the game controller's touchpad"
 msgid "Touchpad button"
-msgstr ""
+msgstr "Jutiklinio kilimėlio mygtukas"
 
 #: device.cpp:73
 #, kde-format
@@ -322,7 +322,7 @@ msgstr "%1 (%2)"
 #, kde-format
 msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
 msgid "Allow using as pointer and keyboard"
-msgstr ""
+msgstr "Leisti naudoti kaip rodyklę ir klaviatūrą"
 
 #: ui/main.qml:43
 #, kde-kuit-format
@@ -333,15 +333,13 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:51
-#, fuzzy, kde-format
-#| msgid "No game controllers found"
+#, kde-format
 msgctxt "@info placeholdermessage text"
 msgid "No game controllers found"
 msgstr "Nerasta jokių žaidimų valdiklių"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Connect a wired or wireless controller"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage text"
 msgid "Connect a wired or wireless controller"
 msgstr "Prijunkite laidinį arba belaidį valdiklį"
@@ -382,20 +380,16 @@ msgid "Connection type:"
 msgstr "Ryšio tipas:"
 
 #: ui/main.qml:173
-#, fuzzy, kde-format
-#| msgctxt "@label Visual representation of an axis position"
-#| msgid "Position:"
+#, kde-format
 msgctxt "@label Visual representation of the axis position for the left axis"
 msgid "Left position:"
-msgstr "Pozicija:"
+msgstr "Kairioji pozicija:"
 
 #: ui/main.qml:185
-#, fuzzy, kde-format
-#| msgctxt "@label Visual representation of an axis position"
-#| msgid "Position:"
+#, kde-format
 msgctxt "@label Visual representation of the axis position for the right axis"
 msgid "Right position:"
-msgstr "Pozicija:"
+msgstr "Dešinioji pozicija:"
 
 #: ui/main.qml:204
 #, kde-format

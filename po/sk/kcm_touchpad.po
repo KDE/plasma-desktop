@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2026-01-14 17:55+0100\n"
+"PO-Revision-Date: 2026-01-15 20:28+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -156,27 +156,22 @@ msgid "This can interfere with video games."
 msgstr "To môže zasahovať do videohier."
 
 #: ui/main.qml:174
-#, fuzzy, kde-format
-#| msgid "Swap left and right buttons."
+#, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
-msgstr "Vymeniť ľavé a pravé tlačidlo."
+msgstr "Ľavé a pravé tlačidlá:"
 
 #: ui/main.qml:175
-#, fuzzy, kde-format
-#| msgid "Left-handed mode"
+#, kde-format
 msgctxt "@option:check"
 msgid "Swap (left-handed mode)"
-msgstr "Režim ľavej ruky"
+msgstr "Vymeniť (režim pre ľavákov)"
 
 #: ui/main.qml:191
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Press left and right buttons to middle-click"
+#, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
-msgstr ""
-"Stlačením ľavého a pravého tlačidla vykonať kliknutie stredným tlačidlom"
+msgstr "Stlačte obe súčasne pre stredné kliknutie"
 
 #: ui/main.qml:204
 #, kde-format
@@ -229,8 +224,7 @@ msgid "Faster"
 msgstr "Rýchlejšie"
 
 #: ui/main.qml:390
-#, fuzzy, kde-format
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt ""
 "@title group begins the sentence 'Scroll by moving two fingers anywhere/"
 "moving one finger on edge'"
@@ -242,14 +236,14 @@ msgstr "Rolovanie:"
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
-msgstr ""
+msgstr "Pohybom dvoch prstov kdekoľvek"
 
 #: ui/main.qml:416
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
-msgstr ""
+msgstr "Pohybom jedným prstom na okraji"
 
 #: ui/main.qml:424
 #, kde-format
@@ -264,23 +258,20 @@ msgid "Disable horizontal scrolling"
 msgstr "Zakázať horizontálne rolovanie"
 
 #: ui/main.qml:460
-#, fuzzy, kde-format
-#| msgid "Right-click"
+#, kde-format
 msgctxt ""
 "@title:group for radiobutton group, begins the sentence 'right-click by "
 "pressing bottom-right corner/pressing with two fingers'"
 msgid "Right-click by:"
-msgstr "Pravý klik"
+msgstr "Pravé kliknutie:"
 
 #: ui/main.qml:481
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated right-click"
-#| msgid "Press bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-right "
 "corner'"
 msgid "Pressing bottom-right corner"
-msgstr "Stlačte pravý dolný roh"
+msgstr "Stlačením pravého dolného rohu"
 
 #: ui/main.qml:496
 #, kde-format
@@ -295,59 +286,50 @@ msgid "Middle-click by pressing bottom center."
 msgstr "Stlačenie spodného stredu spôsobí stredné kliknutie."
 
 #: ui/main.qml:505
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated right-click"
-#| msgid "Press touchpad with two fingers"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing with two "
 "fingers'"
 msgid "Pressing anywhere with two fingers"
-msgstr "Stlačte touchpad dvoma prstami"
+msgstr "Stlačením kdekoľvek dvoma prstami"
 
 #: ui/main.qml:520
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers."
+#, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
-msgstr "Stlačte hocikde s troma prstami."
+msgstr "Stlačte hocikde s troma prstami na kliknutie stredného tlačidla."
 
 #: ui/main.qml:529
-#, fuzzy, kde-format
-#| msgid "Middle-click"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'middle-click by pressing "
 "bottom-middle edge/by pressing anywhere with three fingers'"
 msgid "Middle-click by:"
-msgstr "Stredný klik"
+msgstr "Stredný klik:"
 
 #: ui/main.qml:550
-#, fuzzy, kde-format
-#| msgid "Press bottom-middle"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-middle "
 "edge'"
 msgid "Pressing bottom-middle edge"
-msgstr "Stlačte na spodu v strede"
+msgstr "Stlačením na spodu v strede"
 
 #: ui/main.qml:557
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated middle-click"
-#| msgid "Press bottom left and bottom right corners"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-left "
 "and bottom-right corners'"
 msgid "Pressing bottom-left and bottom-right corners"
-msgstr "Stlačte naraz dolný ľavý a dolný pravý roh"
+msgstr "Stlačením naraz dolného ľavého a dolného pravého rohu"
 
 #: ui/main.qml:564
-#, fuzzy, kde-format
-#| msgctxt "@option:check touchpad integrated middle-click"
-#| msgid "Press touchpad with three fingers"
+#, kde-format
 msgctxt ""
 "@option:check completes the sentence 'middle-click by pressing anywhere with "
 "three fingers'"
 msgid "Pressing anywhere with three fingers"
-msgstr "Stlačte touchpad troma prstami"
+msgstr "Stlačením hocikde troma prstami"
 
 #: ui/main.qml:580
 #, kde-format
@@ -365,7 +347,7 @@ msgstr "Ťuknite na kliknutie"
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
-msgstr ""
+msgstr "Povoliť ťahanie po ťuknutí"
 
 #: ui/main.qml:610
 #, kde-format

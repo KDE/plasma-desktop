@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2026-01-14 17:48+0100\n"
+"PO-Revision-Date: 2026-01-15 20:24+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -150,11 +150,7 @@ msgid "Ignored applications:"
 msgstr "Ignorované aplikácie:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
@@ -162,10 +158,10 @@ msgid ""
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"Sem napíšte názvy spustiteľných aplikácií (oddelené čiarkami alebo "
-"dvojbodkami, napríklad 'xterm:konsole' alebo 'xterm,konsole'), aby sa "
-"zabránilo ich automatickému spúšťaniu spolu s inými aplikáciami obnovenými v "
-"sedení."
+"Napíšte sem identifikátor súboru aplikácie na ploche alebo v prípade X11 "
+"názvy spustiteľných súborov (oddelené čiarkami alebo dvojbodkami, napríklad "
+"„xterm:org.kde.konsole.desktop“ alebo „xterm,org.kde.konsole.desktop“), aby "
+"sa nezapínali automaticky spolu s ostatnými aplikáciami obnovenými v relácii."
 
 #: ui/main.qml:138
 #, kde-format

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-14 17:49+0100\n"
+"PO-Revision-Date: 2026-01-15 20:18+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -42,12 +42,7 @@ msgstr ""
 "rozšírené zobrazenie metadát zo všetkých aplikácií KDE."
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid ""
-#| "Do you want to delete the saved index data? %1 of space will be freed, "
-#| "but if indexing is re-enabled later, the entire index will have to be re-"
-#| "created from scratch. This may take some time, depending on how many "
-#| "files you have."
+#, kde-format
 msgctxt "@info:inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -55,9 +50,10 @@ msgid ""
 "from scratch. This may take some time, depending on the number of files to "
 "index."
 msgstr ""
-"Chcete vymazať uložené údaje indexu? %1 miesta bude uvoľnené, ale ak bude "
-"indexovanie neskôr znova povolené, bude treba znovu vytvoriť celý index "
-"úplne od začiatku. Môže to chvíľu trvať, v závislosti od počtu súborov."
+"Chcete odstrániť uložené údaje indexu? Uvoľní sa %1 miesta, ale ak neskôr "
+"opäť povolíte indexovanie, celý index bude potrebné vytvoriť znova od "
+"začiatku. V závislosti od počtu súborov, ktoré sa majú indexovať, to môže "
+"trvať nejaký čas."
 
 #: ui/main.qml:73
 #, kde-format
@@ -66,17 +62,14 @@ msgid "Delete Index Data"
 msgstr "Odstrániť údaje indexu"
 
 #: ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid ""
-#| "File Search helps you quickly locate your files. You can choose which "
-#| "folders and what types of file data are indexed."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
 msgstr ""
-"Hľadanie súborov vám pomôže rýchlo vyhľadať súbory. Môžete si vybrať, ktoré "
-"priečinky a aké typy súborov sa indexujú."
+"Vyhľadávanie súborov vám pomôže rýchlo nájsť vaše súbory. Môžete si vybrať, "
+"ktoré zložky a aké typy súborov budú indexované."
 
 #: ui/main.qml:108
 #, kde-format
@@ -88,28 +81,25 @@ msgstr "Dáta na indexovanie:"
 #, kde-format
 msgctxt "@option:radio Data to index"
 msgid "Nothing (disable indexing entirely)"
-msgstr ""
+msgstr "Nič (úplné vypnutie indexovania)"
 
 #: ui/main.qml:121
-#, fuzzy, kde-format
-#| msgid "File names only"
+#, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names only"
 msgstr "Iba názvy súborov"
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "File names and contents"
+#, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names and contents"
 msgstr "Názvy súborov a obsah"
 
 #: ui/main.qml:157
-#, fuzzy, kde-format
-#| msgid "Hidden files and folders"
+#, kde-format
 msgctxt "@option:check"
 msgid "Also index hidden files and folders"
-msgstr "Skryté súbory a priečinky"
+msgstr "Indexovať aj skryté súbory a priečinky"
 
 #: ui/main.qml:183
 #, kde-format
