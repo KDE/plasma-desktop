@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-14 00:46+0000\n"
+"POT-Creation-Date: 2026-01-16 00:45+0000\n"
 "PO-Revision-Date: 2025-12-05 11:00+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -301,7 +301,7 @@ msgstr "Bluetooth"
 msgid "Invalid button value"
 msgstr "Neplatná hodnota tlačítka"
 
-#: device.cpp:246
+#: device.cpp:247
 #, kde-format
 msgid "Not a controller"
 msgstr "Není ovladač"
@@ -328,17 +328,16 @@ msgstr ""
 
 #: ui/main.qml:51
 #, fuzzy, kde-format
-#| msgid "No game controllers found"
+#| msgid "Not a controller"
 msgctxt "@info placeholdermessage text"
 msgid "No game controllers found"
-msgstr "Nebyl nalezen žádný herní ovladač"
+msgstr "Není ovladač"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Connect a wired or wireless controller"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage text"
 msgid "Connect a wired or wireless controller"
-msgstr "Připojit drátový nebo bezdrátový ovladač"
+msgstr ""
 
 #: ui/main.qml:82
 #, kde-format

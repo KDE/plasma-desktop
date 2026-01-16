@@ -44,30 +44,24 @@ msgid "Applications to be excluded from session"
 msgstr "Vyjmout tyto aplikace ze sezení"
 
 #: ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Failed to request restart to firmware setup: %1"
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Failed to request restart to firmware setup: %1"
-msgstr "Požadavek na restartování do nastavení firmwaru se nezdařil: %1"
+msgstr ""
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the UEFI setup screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
-msgstr "Při dalším restartu počítače bude spuštěno nastavení UEFI."
+msgstr ""
 
 #: ui/main.qml:32
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
-msgstr "Při dalším restartu počítače bude spuštěno nastavení firmwaru."
+msgstr ""
 
 #: ui/main.qml:37
 #, kde-format
@@ -104,11 +98,10 @@ msgid "Session Restore"
 msgstr "Obnovení sezení"
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid "On login, launch apps that were open:"
+#, kde-format
 msgctxt "@title:group prefix for radiobuttons"
 msgid "On login, launch apps that were open:"
-msgstr "Při přihlášení spustit aplikace, které byly otevřeny:"
+msgstr ""
 
 #: ui/main.qml:72
 #, kde-format
@@ -142,11 +135,10 @@ msgid "Start with an empty session"
 msgstr "Spustit s prázdnou relací"
 
 #: ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Ignored applications:"
-msgstr "Ignorované aplikace:"
+msgstr ""
 
 #: ui/main.qml:132
 #, kde-format

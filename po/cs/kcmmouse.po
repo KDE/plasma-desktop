@@ -139,11 +139,10 @@ msgid "Configure Extra Buttons…"
 msgstr "Nastavit extra tlačítka…"
 
 #: ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
-msgstr "Zařízení:"
+msgstr ""
 
 #: ui/main.qml:87
 #, kde-format
@@ -187,38 +186,29 @@ msgstr ""
 "levým a pravým tlačítkem myši."
 
 #: ui/main.qml:148
-#, fuzzy, kde-format
-#| msgid "Pointer speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
-msgstr "Rychlost ukazatele:"
+msgstr ""
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid "Enable pointer acceleration"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
-msgstr "Povolit akceleraci ukazatele"
+msgstr ""
 
 #: ui/main.qml:241
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip from ContextualHelpButton"
-#| msgid ""
-#| "When enabled, pointer travel distance increases with faster movement "
-#| "speed."
+#, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
-"Pokud povoleno, vzdálenost posunu ukazatele se zvyšuje s rostoucí rychlostí "
-"pohybu myši."
 
 #: ui/main.qml:254
-#, fuzzy, kde-format
-#| msgid "Scrolling speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
-msgstr "Rychlost rolování:"
+msgstr ""
 
 #: ui/main.qml:304
 #, kde-format
@@ -233,34 +223,25 @@ msgid "Faster"
 msgstr "Rychleji"
 
 #: ui/main.qml:321
-#, fuzzy, kde-format
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"
-msgstr "Rolování:"
+msgstr ""
 
 #: ui/main.qml:322
-#, fuzzy, kde-format
-#| msgid "Invert scroll direction"
+#, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction"
-msgstr "Obrátit směr rolování"
+msgstr ""
 
 #: ui/main.qml:339
-#, fuzzy, kde-format
-#| msgid "Hold down middle button and move mouse to scroll"
+#, kde-format
 msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
-msgstr "Pro pohyb posuvníku podržte prostřední tlačítko a hněte myší"
+msgstr ""
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip from ContextualHelpButton"
-#| msgid ""
-#| "This will interfere with applications that use middle-button drag, such "
-#| "as some image editors, document viewers, or video games. It may be used "
-#| "on any device, but is intended primarily as a substitute for scroll "
-#| "wheels on devices that do not have any."
+#, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "This will interfere with applications that use middle-button drag, such as "
@@ -268,7 +249,3 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
-"Toto způsobí komplikace u aplikací, které používají přesun pomocí "
-"prostředního tlačítka jako jsou například editory obrázků, prohlížeče "
-"dokumentů nebo video hry. Lze použít na jakémkoliv zařízení ale má sloužit "
-"jako náhrada pokud zařízení nemá kolečko."

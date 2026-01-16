@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-09 13:51+0100\n"
+"PO-Revision-Date: 2026-01-14 08:31+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 "X-Text-Markup: kde4\n"
 
 #: ui/main.qml:44
@@ -49,13 +49,7 @@ msgstr ""
 "toutes les applications de KDE."
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@info inlinemessage"
-#| msgid ""
-#| "Do you want to delete the saved index data? %1 of space will be freed, "
-#| "but if indexing is re-enabled later, the entire index will have to be re-"
-#| "created from scratch. This may take some time, depending on how many "
-#| "files you have."
+#, kde-format
 msgctxt "@info:inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -66,7 +60,7 @@ msgstr ""
 "Voulez-vous vraiment supprimer les données enregistrées d'indexation ? Un "
 "espace de %1 sera libéré. Mais, si l'indexation est ré-activée "
 "ultérieurement, le fichier d'index devra être totalement re-créé. Cela "
-"pourra prendre un peu de temps, selon le nombre de vos fichiers."
+"pourra prendre un peu de temps, selon le nombre de fichiers que vous avez."
 
 #: ui/main.qml:73
 #, kde-format

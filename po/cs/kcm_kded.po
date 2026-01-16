@@ -53,79 +53,58 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid ""
-#| "The background services manager (kded6) is currently not running. Make "
-#| "sure it is installed correctly."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
-"Správce služeb na pozadí (kded6) momentálně neběží. Prosím, ujistěte se, že "
-"je správně nainstalován."
 
 #: ui/main.qml:65
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services disable themselves again when manually started if they are "
-#| "not useful in the current environment."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
-"Některé služby se samy zase vypnou pokud jsou spuštěny manuálně pokud v "
-"současném prostředí nejsou k ničemu."
 
 #: ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid ""
-#| "Some services were automatically started/stopped when the background "
-#| "services manager (kded6) was restarted to apply your changes."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
-"Pro provedení vašich změny byly některé služby automaticky spuštěny/"
-"zastaveny při restartu správce služeb na pozadí (kded6)."
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "All Services"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "All Services"
-msgstr "Všechny služby"
+msgstr ""
 
 #: ui/main.qml:124
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "@item:inlistbox List running services"
 msgid "Running"
-msgstr "Spuštěno"
+msgstr ""
 
 #: ui/main.qml:125
-#, fuzzy, kde-format
-#| msgctxt "List not running services"
-#| msgid "Not Running"
+#, kde-format
 msgctxt "@item:inlistbox List not running services"
 msgid "Not Running"
-msgstr "Není spuštěno"
+msgstr ""
 
 #: ui/main.qml:162
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgctxt "@title:group list section"
 msgid "Startup Services"
-msgstr "Služby při spuštění"
+msgstr ""
 
 #: ui/main.qml:163
-#, fuzzy, kde-format
-#| msgid "Load-on-Demand Services"
+#, kde-format
 msgctxt "@title:group list section"
 msgid "Load-on-Demand Services"
-msgstr "Služby na požádání"
+msgstr ""
 
 #: ui/main.qml:182
 #, kde-format
@@ -141,24 +120,23 @@ msgstr "Povolit automatické spouštění %1 při spuštění"
 
 #: ui/main.qml:183
 #, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#| msgctxt "@action:button %1 service name"
+#| msgid "Enable automatically loading %1 on startup"
 msgctxt "@info:whatsthis Accessible description"
 msgid "Toggle automatically loading this service on startup"
-msgstr "Zapnout automatické spouštění této služby při spuštění"
+msgstr "Povolit automatické spouštění %1 při spuštění"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid "Not running"
+#, kde-format
 msgctxt "@info:status"
 msgid "Not running"
-msgstr "Nespuštěno"
+msgstr ""
 
 #: ui/main.qml:228
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "@info:status"
 msgid "Running"
-msgstr "Spuštěno"
+msgstr ""
 
 #: ui/main.qml:248
 #, kde-format
@@ -173,19 +151,13 @@ msgid "Start %1"
 msgstr "Spustit %1"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Stop Service"
+#, kde-format
 msgctxt "@action:button"
 msgid "Stop Service"
-msgstr "Zastavit službu"
+msgstr ""
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Start Service"
+#, kde-format
 msgctxt "@action:button"
 msgid "Start Service"
-msgstr "Spustit službu"
-
-#~ msgctxt "List running services"
-#~ msgid "Running"
-#~ msgstr "Spuštěno"
+msgstr ""

@@ -21,17 +21,12 @@ msgstr ""
 "X-Generator: Lokalize 25.08.1\n"
 
 #: ui/main.qml:25
-#, fuzzy, kde-format
-#| msgid ""
-#| "The system must be restarted before changes to the middle-click paste "
-#| "setting can take effect."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr ""
-"K provedení změn nastavení vkládání prostředním tlačítkem bude potřeba "
-"restartovat počítač."
 
 #: ui/main.qml:31
 #, kde-format
@@ -89,42 +84,32 @@ msgid "Scrolling"
 msgstr "Rolování"
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid "Clicking in scrollbar track:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
-msgstr "Kliknutím na pruh posuvníku:"
+msgstr ""
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
-#| "to the clicked location'"
-#| msgid "Scrolls to the clicked location"
+#, kde-format
 msgctxt ""
 "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
 "scrolls to the clicked location'"
 msgid "Scrolls to the clicked location"
-msgstr "Posunout na místo kliknutí"
+msgstr ""
 
 #: ui/main.qml:119
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
-#| "one page up or down'"
-#| msgid "Scrolls one page up or down"
+#, kde-format
 msgctxt ""
 "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
 "scrolls one page up or down'"
 msgid "Scrolls one page up or down"
-msgstr "Posunout o stránku nahoru nebo dolů"
+msgstr ""
 
 #: ui/main.qml:137
-#, fuzzy, kde-format
-#| msgid "Middle-click to scroll to clicked location"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Middle-click to scroll to clicked location"
-msgstr "Kliknutí prostředním posunout na dané místo"
+msgstr ""
 
 #: ui/main.qml:152
 #, kde-format
@@ -166,10 +151,10 @@ msgstr "Vybere je"
 
 #: ui/main.qml:201
 #, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#| msgid "Double click interval"
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
-msgstr "Otevřít je dvojklikem"
+msgstr "Interval dvojkliku"
 
 #: ui/main.qml:214
 #, kde-format
@@ -178,11 +163,10 @@ msgid "Opens them"
 msgstr "Otevře je"
 
 #: ui/main.qml:232
-#, fuzzy, kde-format
-#| msgid "Select by clicking on item's selection marker"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
-msgstr "Vybrat levým kliknutím značku výběru položky"
+msgstr ""
 
 #: ui/main.qml:246
 #, kde-format
@@ -202,10 +186,10 @@ msgstr "Vloží vybraný text"
 
 #: ui/main.qml:268
 #, fuzzy, kde-format
-#| msgid "Double-click interval:"
+#| msgid "Double click interval"
 msgctxt "@label:spinbox"
 msgid "Double-click interval:"
-msgstr "Interval dvojkliku:"
+msgstr "Interval dvojkliku"
 
 #: ui/main.qml:283
 #, kde-format
@@ -223,17 +207,12 @@ msgid "ms"
 msgstr "ms"
 
 #: ui/main.qml:301
-#, fuzzy, kde-format
-#| msgid ""
-#| "Two clicks within this duration are considered a double-click. Some "
-#| "applications may not honor this setting."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
 msgstr ""
-"Dva kliky v tomto časovém rozmezí budou považovány za dvojklik. Ne všechny "
-"aplikace toto nastavení dodržují."
 
 #: ui/main.qml:312
 #, kde-format
@@ -244,11 +223,10 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:354
-#, fuzzy, kde-format
-#| msgid "Drag and Drop"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
-msgstr "Táhnout a pustit"
+msgstr ""
 
 #: ui/main.qml:361
 #, fuzzy, kde-format
@@ -299,36 +277,25 @@ msgid "Enable Touch Mode:"
 msgstr ""
 
 #: ui/main.qml:418
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
-#| msgid "Automatically enable as needed"
+#, kde-format
 msgctxt "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
-msgstr "Automaticky povolit pokud je potřeba"
+msgstr ""
 
 #: ui/main.qml:418
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is never enabled'"
-#| msgid "Never enabled"
+#, kde-format
 msgctxt "option:radio As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
-msgstr "Nikdy nepovolen"
+msgstr ""
 
 #: ui/main.qml:435
-#, fuzzy, kde-format
-#| msgid ""
-#| "Touch Mode will be automatically activated whenever the system detects a "
-#| "touchscreen but no mouse or touchpad. For example: when a transformable "
-#| "laptop's keyboard is flipped around or detached."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
-"Dotykový režim bude zapnut pokaždé když systém zjistí dotykovou obrazovku, "
-"ale žádnou myš nebo touchpad. Například pokud je klávesnice odpojena nebo "
-"odklopena dozadu."
 
 #: ui/main.qml:440
 #, kde-format
@@ -343,17 +310,12 @@ msgid "Disabled"
 msgstr "Zakázáno"
 
 #: ui/main.qml:486
-#, fuzzy, kde-format
-#| msgid ""
-#| "In Touch Mode, many elements of the user interface will become larger to "
-#| "more easily accommodate touch interaction."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
 "more easily accommodate touch interaction."
 msgstr ""
-"V dotykovém režimu bude spousta prvků uživatelského rozhraní zvětšena aby "
-"tyto byly snáze použitelné dotykem."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-15 00:44+0000\n"
+"POT-Creation-Date: 2026-01-16 00:45+0000\n"
 "PO-Revision-Date: 2024-04-23 19:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -464,36 +464,28 @@ msgid "Width"
 msgstr "宽度"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Fill height"
+#, kde-format
 msgctxt "@item:inlistbox panel fills the full height of the display"
 msgid "Fill height"
-msgstr "填满高度"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Fill width"
+#, kde-format
 msgctxt "@item:inlistbox panel fills the full width of the display"
 msgid "Fill width"
-msgstr "填满宽度"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:335
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Fit content"
+#, kde-format
 msgctxt "@item:inlistbox panel is just big enough to fit its content"
 msgid "Fit content"
-msgstr "适合内容"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:336
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Custom"
+#, kde-format
 msgctxt "@item:inlistbox panel size"
 msgid "Custom"
-msgstr "自定义"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:369
 #, kde-format
@@ -593,12 +585,10 @@ msgid "Panel Height:"
 msgstr "面板高度："
 
 #: contents/configuration/PanelConfiguration.qml:671
-#, fuzzy, kde-format
-#| msgctxt "@title:group"
-#| msgid "Focus shortcut:"
+#, kde-format
 msgctxt "@title:group shortcut that moves focus to the panel"
 msgid "Focus shortcut:"
-msgstr "焦点快捷键："
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:682
 #, kde-format
@@ -607,12 +597,10 @@ msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "按下此键盘快捷键以移动焦点到面板"
 
 #: contents/configuration/PanelConfiguration.qml:689
-#, fuzzy, kde-format
-#| msgctxt "@action:button acccessible name"
-#| msgid "Focus Shortcut Setter"
+#, kde-format
 msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
-msgstr "聚焦快捷键设置"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:690
 #, kde-format
@@ -627,12 +615,10 @@ msgid "Delete Panel"
 msgstr "删除面板"
 
 #: contents/configuration/PanelConfiguration.qml:719
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip for button"
-#| msgid "Remove this panel; this action is undo-able"
+#, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Remove this panel; this action can be undone"
-msgstr "移除此面板；此操作可以撤销"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:728
 #, kde-format
@@ -953,37 +939,37 @@ msgctxt "@info:status"
 msgid "Unlocking failed"
 msgstr "解锁失败"
 
-#: contents/lockscreen/LockScreenUi.qml:281
+#: contents/lockscreen/LockScreenUi.qml:285
 #, kde-format
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "大写锁定已打开"
 
-#: contents/lockscreen/LockScreenUi.qml:295
+#: contents/lockscreen/LockScreenUi.qml:299
 #, kde-format
 msgctxt "@action:button"
 msgid "Slee&p"
 msgstr "睡眠(&P)"
 
-#: contents/lockscreen/LockScreenUi.qml:301
+#: contents/lockscreen/LockScreenUi.qml:305
 #, kde-format
 msgctxt "@action:button"
 msgid "&Hibernate"
 msgstr "休眠(&H)"
 
-#: contents/lockscreen/LockScreenUi.qml:307
+#: contents/lockscreen/LockScreenUi.qml:311
 #, kde-format
 msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "切换用户(&U)"
 
-#: contents/lockscreen/LockScreenUi.qml:368
+#: contents/lockscreen/LockScreenUi.qml:372
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "虚拟键盘"
 
-#: contents/lockscreen/LockScreenUi.qml:392
+#: contents/lockscreen/LockScreenUi.qml:396
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

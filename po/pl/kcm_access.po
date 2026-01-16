@@ -1,4 +1,4 @@
-# Version: $Revision: 1726870 $
+# Version: $Revision: 1727789 $
 # translation of kcmaccess.po to
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2021, 2022, 2023, 2024, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-16 00:45+0000\n"
 "PO-Revision-Date: 2026-01-03 13:43+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -943,14 +943,24 @@ msgid "Enable"
 msgstr "Włącz"
 
 #: ui/MouseNavigation.qml:33
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "The numpad key <shortcut>5</shortcut> functions as a mouse click. The "
+#| "keys <shortcut>2</shortcut>, <shortcut>4</shortcut>, <shortcut>6</"
+#| "shortcut>, and <shortcut>8</shortcut> allow for cardinal movement (down, "
+#| "left, right, and up). The keys <shortcut>1</shortcut>, <shortcut>3</"
+#| "shortcut>, <shortcut>7</shortcut>, and <shortcut>9</shortcut> allow for "
+#| "diagonal movement."
 msgctxt "@info:tooltip"
 msgid ""
-"The numpad key <shortcut>5</shortcut> functions as a mouse click. The keys "
-"<shortcut>2</shortcut>, <shortcut>4</shortcut>, <shortcut>6</shortcut>, and "
-"<shortcut>8</shortcut> allow for cardinal movement (down, left, right, and "
-"up). The keys <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</"
-"shortcut>, and <shortcut>9</shortcut> allow for diagonal movement."
+"The numpad key <shortcut>5</shortcut> functions as a mouse click, toggled by "
+"<shortcut>/</shortcut> for middle click, <shortcut>*</shortcut> for right "
+"click and <shortcut>NumLock</shortcut> for left click. The keys <shortcut>2</"
+"shortcut>, <shortcut>4</shortcut>, <shortcut>6</shortcut>, and <shortcut>8</"
+"shortcut> allow for cardinal movement (down, left, right, and up). The keys "
+"<shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</shortcut>, and "
+"<shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
 "Klawisz <shortcut>5</shortcut> na klawiaturze numerycznej działa jako "
 "kliknięcie myszą. Klawisze <shortcut>2</shortcut>, <shortcut>4</shortcut>, "

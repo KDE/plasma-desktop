@@ -47,17 +47,17 @@ msgstr "Zobrazit v oblíbených"
 
 #: config.qml:13
 #, fuzzy, kde-format
-#| msgid "General"
+#| msgctxt "General options"
+#| msgid "General:"
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
-msgstr "Obecné"
+msgstr "Obecné:"
 
 #: ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
-msgstr "Ikona:"
+msgstr ""
 
 #: ConfigGeneral.qml:53
 #, kde-format
@@ -107,38 +107,35 @@ msgstr "Odstranit ikonu"
 
 #: ConfigGeneral.qml:120
 #, fuzzy, kde-format
-#| msgid "Show applications as:"
+#| msgctxt "@option:check"
+#| msgid "Sort applications alphabetically"
 msgctxt "@label:listbox"
 msgid "Show applications as:"
-msgstr "Zobrazit aplikace jako:"
+msgstr "Řadit aplikace podle abecedy"
 
 #: ConfigGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "Name only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
-msgstr "Pouze název"
+msgstr ""
 
 #: ConfigGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "Description only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
-msgstr "Pouze popis"
+msgstr ""
 
 #: ConfigGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "Name (Description)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
-msgstr "Název (popis)"
+msgstr ""
 
 #: ConfigGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "Description (Name)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
-msgstr "Popis (název)"
+msgstr ""
 
 #: ConfigGeneral.qml:132
 #, kde-format
@@ -187,11 +184,10 @@ msgstr ""
 "stránce oblíbených."
 
 #: ConfigGeneral.qml:185
-#, fuzzy, kde-format
-#| msgid "Use compact list item style"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use compact list item style"
-msgstr "Použít kompaktní styl seznamu položek"
+msgstr ""
 
 #: ConfigGeneral.qml:191
 #, kde-format
@@ -218,127 +214,107 @@ msgid "Configure Search Plugins…"
 msgstr "Nastavit pro vyhledávání…"
 
 #: ConfigGeneral.qml:220
-#, fuzzy, kde-format
-#| msgid "Sidebar position:"
+#, kde-format
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
-msgstr "Pozice postranní lišty:"
+msgstr ""
 
 #: ConfigGeneral.qml:221 ConfigGeneral.qml:229
-#, fuzzy, kde-format
-#| msgid "Right"
+#, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Right"
-msgstr "Vpravo"
+msgstr ""
 
 #: ConfigGeneral.qml:221
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "option:radio sidebar position"
 msgid "Left"
-msgstr "Vlevo"
+msgstr ""
 
 #: ConfigGeneral.qml:229
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Left"
-msgstr "Vlevo"
+msgstr ""
 
 #: ConfigGeneral.qml:237
 #, fuzzy, kde-format
-#| msgid "Show favorites:"
+#| msgid "Show in Favorites"
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
-msgstr "Zobrazit oblíbené:"
+msgstr "Zobrazit v oblíbených"
 
 #: ConfigGeneral.qml:238
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
-#| msgid "In a grid"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
-msgstr "V mřížce"
+msgstr ""
 
 #: ConfigGeneral.qml:246
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a list'"
-#| msgid "In a list"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
-msgstr "V seznamu"
+msgstr ""
 
 #: ConfigGeneral.qml:254
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
-msgstr "Zobrazit ostatní aplikace:"
+msgstr ""
 
 #: ConfigGeneral.qml:255
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
-#| msgid "In a grid"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
-msgstr "V mřížce"
+msgstr ""
 
 #: ConfigGeneral.qml:263
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a list'"
-#| msgid "In a list"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
-msgstr "V seznamu"
+msgstr ""
 
 #: ConfigGeneral.qml:275
-#, fuzzy, kde-format
-#| msgid "Show buttons for:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
-msgstr "Zobrazit tlačítka pro:"
+msgstr ""
 
 #: ConfigGeneral.qml:276
-#, fuzzy, kde-format
-#| msgid "Power"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power"
-msgstr "Napájení"
+msgstr ""
 
 #: ConfigGeneral.qml:285
-#, fuzzy, kde-format
-#| msgid "Session"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Session"
-msgstr "Sezení"
+msgstr ""
 
 #: ConfigGeneral.qml:294
-#, fuzzy, kde-format
-#| msgid "Power and session"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
-msgstr "Napájení a sezení"
+msgstr ""
 
 #: ConfigGeneral.qml:303
-#, fuzzy, kde-format
-#| msgid "Show action button captions"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show action button captions"
-msgstr "Zobrazit popisky akčních tlačítek"
+msgstr ""
 
 #: Footer.qml:101
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@title:tab kickoff sidebar tab"
 msgid "Applications"
-msgstr "Aplikace"
+msgstr ""
 
 #: Footer.qml:117
-#, fuzzy, kde-format
-#| msgid "Places"
+#, kde-format
 msgctxt "@title:tab kickoff sidebar tab"
 msgid "Places"
-msgstr "Místa"
+msgstr ""
 
 #: FullRepresentation.qml:133
 #, kde-format
@@ -347,20 +323,18 @@ msgid "No matches"
 msgstr "Žádné shody"
 
 #: Header.qml:84
-#, fuzzy, kde-format
-#| msgid "Open user settings"
+#, kde-format
 msgctxt "@action:button icon-only, for tooltip/Accessible"
 msgid "Open user settings"
-msgstr "Otevřít nastavení uživatele"
+msgstr ""
 
 #: Header.qml:264
-#, fuzzy, kde-format
-#| msgid "Keep Open"
+#, kde-format
 msgctxt ""
 "@action:button Pin widget open if it loses focus, icon-only button, for "
 "tooltip/Accessible"
 msgid "Keep Open"
-msgstr "Ponechat otevřené"
+msgstr ""
 
 #: KickoffGridDelegate.qml:59
 #, fuzzy, kde-format
@@ -371,18 +345,16 @@ msgid "New!"
 msgstr "Nové!"
 
 #: KickoffGridDelegate.qml:60
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly installed application"
-msgstr "Zobrazit ostatní aplikace:"
+msgstr ""
 
 #: KickoffGridView.qml:101
-#, fuzzy, kde-format
-#| msgid "Grid with %1 rows, %2 columns"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Grid with %1 rows, %2 columns"
-msgstr "Mřížka s %1 řádky, %2 sloupci"
+msgstr ""
 
 #: KickoffListDelegate.qml:117
 #, kde-format
@@ -397,32 +369,28 @@ msgid "There is a newly installed application in this category"
 msgstr ""
 
 #: KickoffListDelegate.qml:119
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly installed application"
-msgstr "Zobrazit ostatní aplikace:"
+msgstr ""
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Session"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Session"
-msgstr "Sezení"
+msgstr ""
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Power"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Power"
-msgstr "Napájení"
+msgstr ""
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "More"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "More"
-msgstr "Více"
+msgstr ""
 
 #: LeaveButtons.qml:171
 #, kde-format
@@ -431,11 +399,10 @@ msgid "Session and Power"
 msgstr ""
 
 #: main.qml:356
-#, fuzzy, kde-format
-#| msgid "Edit Applications…"
+#, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
-msgstr "Upravit aplikace…"
+msgstr ""
 
 #: PlacesPage.qml:64
 #, kde-format
@@ -454,11 +421,3 @@ msgstr "Historie"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Často používané"
-
-#~ msgctxt "Part of a sentence: 'Show other applications in a grid'"
-#~ msgid "In a grid"
-#~ msgstr "V mřížce"
-
-#~ msgctxt "Part of a sentence: 'Show other applications in a list'"
-#~ msgid "In a list"
-#~ msgstr "V seznamu"
