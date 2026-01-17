@@ -1,20 +1,20 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2025 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-09 17:25+0200\n"
+"PO-Revision-Date: 2026-01-15 15:07+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 
@@ -160,9 +160,7 @@ msgid "No matching emoji found"
 msgstr "לא נמצא אמוג׳י תואם"
 
 #: app/ui/Emojier.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info:status passive notification as action feedback"
-#| msgid "%1 copied to the clipboard"
+#, kde-format
 msgctxt "@info:status passive notification as action feedback, %1 is an emoji"
 msgid "%1 copied to the clipboard"
 msgstr "%1 הועתק ללוח הגזירים"
