@@ -1,7 +1,7 @@
 # translation of kcmaccess.po to Slovenian
 # Translation of kcmaccess.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMACCESS.
-# $Id: kcm_access.po 1727789 2026-01-16 01:26:44Z scripty $
+# $Id: kcm_access.po 1727902 2026-01-17 01:27:10Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2005, 2006 Free Software Foundation, Inc.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-16 00:45+0000\n"
-"PO-Revision-Date: 2026-01-08 09:44+0100\n"
+"PO-Revision-Date: 2026-01-16 06:31+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -892,15 +892,7 @@ msgid "Enable"
 msgstr "Omogoči"
 
 #: ui/MouseNavigation.qml:33
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The numpad key <shortcut>5</shortcut> functions as a mouse click. The "
-#| "keys <shortcut>2</shortcut>, <shortcut>4</shortcut>, <shortcut>6</"
-#| "shortcut>, and <shortcut>8</shortcut> allow for cardinal movement (down, "
-#| "left, right, and up). The keys <shortcut>1</shortcut>, <shortcut>3</"
-#| "shortcut>, <shortcut>7</shortcut>, and <shortcut>9</shortcut> allow for "
-#| "diagonal movement."
+#, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
 "The numpad key <shortcut>5</shortcut> functions as a mouse click, toggled by "
@@ -911,11 +903,14 @@ msgid ""
 "<shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</shortcut>, and "
 "<shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
-"Tipka na številski tipkovnici <shortcut>5</shortcut> deluje kot klik miške. "
-"Tipke <shortcut>2</shortcut>, <shortcut>4</shortcut>, <shortcut>6</shortcut> "
-"in <shortcut>8</shortcut> omogočajo gibanje po oseh (dol, levo, desno in "
-"gor). Tipke <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</"
-"shortcut> in <shortcut>9</shortcut> omogočajo diagonalno gibanje."
+"Tipka <shortcut>5</shortcut> na številski tipkovnici deluje kot klik miške, "
+"ki ga preklapljate z <shortcut>/</shortcut> za klik s srednjo tipko miške, "
+"<shortcut>*</shortcut> za klik z desno tipko miške in <shortcut>NumLock</"
+"shortcut> za klik z levo tipko miške. Tipke <shortcut>2</shortcut>, "
+"<shortcut>4</shortcut>, <shortcut>6</shortcut> in <shortcut>8</shortcut> "
+"omogočajo gibanje po oseh (dol, levo, desno in gor). Tipke <shortcut>1</"
+"shortcut>, <shortcut>3</shortcut>, <shortcut>7</shortcut> in <shortcut>9</"
+"shortcut> omogočajo diagonalno gibanje."
 
 #: ui/MouseNavigation.qml:39
 #, kde-format
