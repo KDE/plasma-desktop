@@ -14,7 +14,7 @@
    <item>
     <widget class="QTreeView" name="deviceView">
      <property name="whatsThis">
-      <string>This list contains the storage devices known to the system. If &quot;Automount on Login&quot; is checked, the device will be automatically mounted even though &quot;Mount all removable media at login&quot; is unchecked. The same applies for &quot;Automount on Attach&quot;.</string>
+      <string>This list contains the storage devices known to the system. If &quot;Automount on Login&quot; is checked, devices will be automatically mounted even though &quot;Mount all removable media at login&quot; is unchecked. The same applies for &quot;Automount on Attach&quot;.</string>
      </property>
      <property name="editTriggers">
       <set>QAbstractItemView::NoEditTriggers</set>
