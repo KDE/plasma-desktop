@@ -110,7 +110,7 @@ RowLayout {
             onNavigateLeftRequested: runnerResultsList.navigateLeftRequested()
             onNavigateRightRequested: runnerResultsList.navigateRightRequested()
             onKeyNavigationAtListEnd: mainSearchField.forceActiveFocus(Qt.TabFocusReason)
-            onInteractionConcluded: runnerResultsList.interactionConcluded
+            onInteractionConcluded: runnerResultsList.interactionConcluded()
         }
 
         Item {
