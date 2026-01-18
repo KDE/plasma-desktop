@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-15 03:00+0000\n"
-"PO-Revision-Date: 2025-08-22 15:25+0200\n"
+"PO-Revision-Date: 2026-01-17 21:57+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
@@ -136,22 +136,19 @@ msgid "NVidia Shield"
 msgstr "NVidia Shield"
 
 #: device.cpp:41
-#, fuzzy, kde-format
-#| msgid "Switch Left Joycon"
+#, kde-format
 msgid "Switch Left Joy-Con"
-msgstr "Switch Joycon vänster"
+msgstr "Byt vänster Joy-Con"
 
 #: device.cpp:42
-#, fuzzy, kde-format
-#| msgid "Switch Right Joycon"
+#, kde-format
 msgid "Switch Right Joy-Con"
-msgstr "Switch Joycon höger"
+msgstr "Byt höger Joy-Con"
 
 #: device.cpp:43
-#, fuzzy, kde-format
-#| msgid "Switch Paired Joycon"
+#, kde-format
 msgid "Switch Paired Joy-Con"
-msgstr "Switch Joycon parad"
+msgstr "Byt parkopplad Joy-Con"
 
 #: device.cpp:48
 #, kde-format
@@ -319,7 +316,7 @@ msgstr "%1 (%2)"
 #, kde-format
 msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
 msgid "Allow using as pointer and keyboard"
-msgstr ""
+msgstr "Tillåt användning som pekare och tangentbord"
 
 #: ui/main.qml:43
 #, kde-kuit-format
@@ -328,17 +325,18 @@ msgid ""
 "Allow game controllers to act like pointer and keyboard devices in Plasma "
 "and non-game applications.<nl/><nl/>Games can always use the controller."
 msgstr ""
+"Tillåt spelkontroller att fungera som pekare och tangentbordsenheter i "
+"Plasma och program som inte är spel.<nl/><nl/>Spel kan alltid använda "
+"kontrollen."
 
 #: ui/main.qml:51
-#, fuzzy, kde-format
-#| msgid "No game controllers found"
+#, kde-format
 msgctxt "@info placeholdermessage text"
 msgid "No game controllers found"
 msgstr "Ingen spelkontroll hittades"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Connect a wired or wireless controller"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage text"
 msgid "Connect a wired or wireless controller"
 msgstr "Anslut en trådbunden eller trådlös kontroll"
@@ -352,6 +350,10 @@ msgid ""
 "controller, or enable automatic blocking by allowing the use as pointer and "
 "keyboard."
 msgstr ""
+"Systemet kan automatiskt gå till viloläge eller låsa skärmen medan "
+"kontrollen används. Överväg att förhindra dem manuellt medan kontrollen "
+"används, eller aktivera automatisk blockering genom att tillåta användning "
+"som pekare och tangentbord."
 
 #: ui/main.qml:97
 #, kde-format
