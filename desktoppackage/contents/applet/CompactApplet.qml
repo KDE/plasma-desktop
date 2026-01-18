@@ -243,8 +243,8 @@ PlasmaCore.ToolTipArea {
                 root.plasmoidItem.expanded = false;
             }
 
-            property real extraWidth: root.vertical ? separator.width : 0
-            property real extraHeight: root.vertical ? 0 : separator.height
+            property real extraWidth: 0
+            property real extraHeight: 0
 
             Layout.minimumWidth: root.fullRepresentation ? root.fullRepresentation.Layout.minimumWidth + extraWidth : 0
             Layout.minimumHeight: root.fullRepresentation ? root.fullRepresentation.Layout.minimumHeight + extraHeight : 0
@@ -307,6 +307,8 @@ PlasmaCore.ToolTipArea {
                         }
                         PropertyChanges {
                             separator.height: 1
+                            appletParent.extraHeight: 1
+                            appletParent.extraWidth: 0
                         }
                     },
                     State {
@@ -321,6 +323,8 @@ PlasmaCore.ToolTipArea {
                         }
                         PropertyChanges {
                             separator.width: 1
+                            appletParent.extraHeight: 0
+                            appletParent.extraWidth: 1
                         }
                     },
                     State {
@@ -335,6 +339,8 @@ PlasmaCore.ToolTipArea {
                         }
                         PropertyChanges {
                             separator.width: 1
+                            appletParent.extraHeight: 0
+                            appletParent.extraWidth: 1
                         }
                     },
                     State {
@@ -349,6 +355,8 @@ PlasmaCore.ToolTipArea {
                         }
                         PropertyChanges {
                             separator.height: 1
+                            appletParent.extraHeight: 1
+                            appletParent.extraWidth: 0
                         }
                     }
                 ]
