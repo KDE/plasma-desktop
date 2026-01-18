@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2023, 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2023, 2024, 2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2024-09-10 11:16+0300\n"
+"PO-Revision-Date: 2026-01-16 18:45+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,46 +16,40 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: qml/config.qml:13
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgctxt "@title page"
 msgid "Appearance"
 msgstr "Izskats"
 
 #: qml/ConfigAppearance.qml:23
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Icon:"
 msgstr "Ikona:"
 
 #: qml/ConfigAppearance.qml:25
-#, fuzzy, kde-format
-#| msgid "Show the current activity icon"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show the current activity icon"
 msgstr "Parādīt pašreizējās aktivitātes ikonu"
 
 #: qml/ConfigAppearance.qml:31
-#, fuzzy, kde-format
-#| msgid "Show the generic activity icon"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show the generic activity icon"
 msgstr "Parādīt vispārīgu aktivitātes ikonu"
 
 #: qml/ConfigAppearance.qml:41
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Title:"
-msgstr "Virsraksts:"
+msgstr "Nosaukums:"
 
 #: qml/ConfigAppearance.qml:43
-#, fuzzy, kde-format
-#| msgid "Show the current activity name"
+#, kde-format
 msgctxt "@option:check title"
 msgid "Show the current activity name"
 msgstr "Parādīt pašreizējās aktivitātes nosaukumu"
@@ -67,15 +61,13 @@ msgid "Current activity is %1"
 msgstr "Pašreizējā aktivitāte ir „%1“"
 
 #: qml/main.qml:76
-#, fuzzy, kde-format
-#| msgid "Show Activity Manager"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show Activity Manager"
 msgstr "Parādīt aktivitāšu pārvaldnieku"
 
 #: qml/main.qml:77
-#, fuzzy, kde-format
-#| msgid "Click to show the activity manager"
+#, kde-format
 msgctxt "@info:tooltip subtext"
 msgid "Click to show the activity manager"
 msgstr "Klikšķiniet, lai parādītu aktivitāšu pārvaldnieku"

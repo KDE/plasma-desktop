@@ -3,20 +3,20 @@
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2008.
 # Maris Nartiss <maris.kde@gmail.com>, 2008.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-01-27 16:06+0200\n"
+"PO-Revision-Date: 2026-01-13 19:25+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.12.0\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -45,27 +45,21 @@ msgid "Applications to be excluded from session"
 msgstr "Programmas, kuras neiekļaut sesijā"
 
 #: ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Failed to request restart to firmware setup: %1"
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Failed to request restart to firmware setup: %1"
 msgstr ""
-"Neizdevās pieprasīt pārstartēšanu aparātprogrammatūras sagatavošanai: %1"
+"Neizdevās pieprasīt pārstartēšanu aparātprogrammatūras iestatīšanai: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the UEFI setup screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr "Pēc nākamās datora pārstartēšanas atvērsies UEFI iestatījumi."
 
 #: ui/main.qml:32
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
@@ -73,11 +67,10 @@ msgstr ""
 "Pēc nākamās datora pārstartēšanas atvērsies aparātprogrammatūras iestatījumi."
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgctxt "@action:button"
 msgid "Restart Now"
-msgstr "Veikt pārstartēšanu"
+msgstr "Pārstartēt"
 
 #: ui/main.qml:46
 #, kde-format
@@ -108,8 +101,7 @@ msgid "Session Restore"
 msgstr "Atjaunot sesiju"
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid "On login, launch apps that were open:"
+#, kde-format
 msgctxt "@title:group prefix for radiobuttons"
 msgid "On login, launch apps that were open:"
 msgstr "Ierakstoties atvērt programmas, kas bija atvērtas:"
@@ -150,19 +142,13 @@ msgid "Start with an empty session"
 msgstr "Sākt ar tukšu sesiju"
 
 #: ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Ignored applications:"
 msgstr "Ignorētās programmas:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' desktop file identifier or, on X11, executable names here "
-#| "(separated by commas or colons, for example 'xterm:org.kde.konsole."
-#| "desktop' or 'xterm,org.kde.konsole.desktop') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
@@ -171,9 +157,9 @@ msgid ""
 "with other session-restored apps."
 msgstr ""
 "Rakstiet programmu darbvirsmas datnes identifikatoru vai, ja lietojat X11, "
-"izpilddatnes nosaukumus (atdaliet tos ar komatu vai kolu, piemēram, xterm:"
-"org.kde.konsole.desktop vai xterm,org.kde.konsole.desktop), lai novērstu to "
-"automātisku ieslēgšanu kopā ar citām atjaunotām sesijas programmām."
+"izpilddatnes nosaukumus (atdaliet tos ar komatu vai kolu, piemēram, „xterm:"
+"org.kde.konsole.desktop“ vai „xterm,org.kde.konsole.desktop“), lai novērstu "
+"to automātisku ieslēgšanu kopā ar citām atjaunotām sesijas programmām."
 
 #: ui/main.qml:138
 #, kde-format

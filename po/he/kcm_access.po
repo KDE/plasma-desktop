@@ -14,13 +14,13 @@
 # Diego Iastrubni <elcuco@kde.org>, 2007, 2008, 2012.
 # elkana bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2024, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-16 00:45+0000\n"
-"PO-Revision-Date: 2026-01-09 17:07+0200\n"
+"PO-Revision-Date: 2026-01-16 13:32+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -29,7 +29,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
@@ -890,15 +890,7 @@ msgid "Enable"
 msgstr "הפעלה"
 
 #: ui/MouseNavigation.qml:33
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The numpad key <shortcut>5</shortcut> functions as a mouse click. The "
-#| "keys <shortcut>2</shortcut>, <shortcut>4</shortcut>, <shortcut>6</"
-#| "shortcut>, and <shortcut>8</shortcut> allow for cardinal movement (down, "
-#| "left, right, and up). The keys <shortcut>1</shortcut>, <shortcut>3</"
-#| "shortcut>, <shortcut>7</shortcut>, and <shortcut>9</shortcut> allow for "
-#| "diagonal movement."
+#, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
 "The numpad key <shortcut>5</shortcut> functions as a mouse click, toggled by "
@@ -909,11 +901,13 @@ msgid ""
 "<shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</shortcut>, and "
 "<shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
-"מקש לוח המספרים <shortcut>5</shortcut> מתפקד כלחיצה על העכבר. המקשים "
-"<shortcut>2</shortcut>,‏ <shortcut>4</shortcut>,‏ <shortcut>6</shortcut> ו־"
-"<shortcut>8</shortcut> מאפשרים תנועה כיוונית (למטה, שמאלה, ימינה ולמעלה). "
-"המקשים <shortcut>1</shortcut>,‏ <shortcut>3</shortcut>,‏ <shortcut>7</"
-"shortcut> ו־<shortcut>9</shortcut> מאפשרים תנועה אנכית."
+"מקש לוח המספרים <shortcut>5</shortcut> מתפקד כלחיצה על העכבר, עם <shortcut>/"
+"</shortcut> הופך ללחיצה אמצעית, <shortcut>*</shortcut> לימנית ו־"
+"<shortcut>NumLock</shortcut> ללחיצה שמאלית. המקשים <shortcut>2</shortcut>,‏ "
+"<shortcut>4</shortcut>,‏ <shortcut>6</shortcut> ו־<shortcut>8</shortcut> "
+"מאפשרים תנועה כיוונית (למטה, שמאלה, ימינה ולמעלה). המקשים <shortcut>1</"
+"shortcut>,‏ <shortcut>3</shortcut>,‏ <shortcut>7</shortcut> ו־<shortcut>9</"
+"shortcut> מאפשרים תנועה אנכית."
 
 #: ui/MouseNavigation.qml:39
 #, kde-format

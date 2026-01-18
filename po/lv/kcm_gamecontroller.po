@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-16 00:45+0000\n"
-"PO-Revision-Date: 2025-08-25 12:53+0300\n"
+"PO-Revision-Date: 2026-01-13 19:08+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
@@ -137,22 +137,19 @@ msgid "NVidia Shield"
 msgstr "NVidia Shield"
 
 #: device.cpp:41
-#, fuzzy, kde-format
-#| msgid "Switch Left Joycon"
+#, kde-format
 msgid "Switch Left Joy-Con"
-msgstr "Switch Left Joycon"
+msgstr "„Switch“ kreisais „Joy-con“"
 
 #: device.cpp:42
-#, fuzzy, kde-format
-#| msgid "Switch Right Joycon"
+#, kde-format
 msgid "Switch Right Joy-Con"
-msgstr "Switch Right Joycon"
+msgstr "„Switch“ labais „Joy-con“"
 
 #: device.cpp:43
-#, fuzzy, kde-format
-#| msgid "Switch Paired Joycon"
+#, kde-format
 msgid "Switch Paired Joy-Con"
-msgstr "Switch Paired Joycon"
+msgstr "„Switch“ sapārotais „Joy-con“"
 
 #: device.cpp:48
 #, kde-format
@@ -320,7 +317,7 @@ msgstr "%1 (%2)"
 #, kde-format
 msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
 msgid "Allow using as pointer and keyboard"
-msgstr ""
+msgstr "Atļaut izmantot kā peles rādītāju un tastatūru"
 
 #: ui/main.qml:43
 #, kde-kuit-format
@@ -329,17 +326,18 @@ msgid ""
 "Allow game controllers to act like pointer and keyboard devices in Plasma "
 "and non-game applications.<nl/><nl/>Games can always use the controller."
 msgstr ""
+"Atļaut spēļu kontrolierim „Plasma“ darbvirsmā un ārpus spēlēm darboties kā "
+"peles rādītājam un tastatūrai.<nl/><nl/>Spēles kontrolieri vienmēr varēs "
+"izmantot."
 
 #: ui/main.qml:51
-#, fuzzy, kde-format
-#| msgid "No game controllers found"
+#, kde-format
 msgctxt "@info placeholdermessage text"
 msgid "No game controllers found"
 msgstr "Nav atrasti spēļu kontrolieri"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Connect a wired or wireless controller"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage text"
 msgid "Connect a wired or wireless controller"
 msgstr "Pievienojiet vadu vai bezvadu kontrolieri"
@@ -353,6 +351,10 @@ msgid ""
 "controller, or enable automatic blocking by allowing the use as pointer and "
 "keyboard."
 msgstr ""
+"Kontroliera izmantošanas laikā sistēma var automātiski iesnaudināties vai "
+"bloķēt ekrānu. Apsveriet to manuāli bloķēt, kad izmantojat kontrolieri, vai "
+"arī ieslēdziet automātisku bloķēšanu, atļaujot ierīci izmantot kā peles "
+"rādītāju un tastatūru."
 
 #: ui/main.qml:97
 #, kde-format

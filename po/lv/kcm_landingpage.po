@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2023, 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-08-17 10:16+0300\n"
+"PO-Revision-Date: 2026-01-13 19:22+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
@@ -69,8 +69,7 @@ msgid "Global theme"
 msgstr "Globālais motīvs"
 
 #: ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Theme:"
+#, kde-format
 msgctxt "@title:group for light/dark quick switch"
 msgid "Theme:"
 msgstr "Motīvs:"
@@ -87,7 +86,7 @@ msgctxt ""
 "@info:tooltip 1 is the name of a light global theme, 2 is the name of a dark "
 "global theme"
 msgid "Use “%1” during the day and “%2” at night"
-msgstr ""
+msgstr "Lietot „%1“ pa dienu, bet „%2“ naktī"
 
 #: ui/main.qml:136
 #, kde-format
@@ -96,8 +95,7 @@ msgid "More appearance settings:"
 msgstr "Vairāk izskata iestatījumu:"
 
 #: ui/main.qml:183
-#, fuzzy, kde-format
-#| msgid "Animation speed:"
+#, kde-format
 msgctxt "@title:slider"
 msgid "Animation speed:"
 msgstr "Animāciju ātrums:"
@@ -128,11 +126,10 @@ msgid "Selects them"
 msgstr "Tās atlasa"
 
 #: ui/main.qml:226
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
-msgstr "Lai atvērtu, jāizmanto dubultklikšķis"
+msgstr "Tā vietā atvērt ar dubultklikšķi"
 
 #: ui/main.qml:254
 #, kde-format
@@ -141,11 +138,10 @@ msgid "Opens them"
 msgstr "Tās atver"
 
 #: ui/main.qml:259
-#, fuzzy, kde-format
-#| msgid "Select by clicking on item's selection marker"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
-msgstr "Atlasa, klikšķinot uz vienības atlasīšanas marķiera"
+msgstr "Atlasa, klikšķinot uz vienuma atlasīšanas marķiera"
 
 #: ui/main.qml:285
 #, kde-format
@@ -154,8 +150,7 @@ msgid "More behavior settings:"
 msgstr "Vairāk uzvedības iestatījumu:"
 
 #: ui/main.qml:299
-#, fuzzy, kde-format
-#| msgid "Most used pages:"
+#, kde-format
 msgctxt "@title:group for grid of buttons opening kcms"
 msgid "Most used pages:"
 msgstr "Visbiežāk atvērtās lapas:"

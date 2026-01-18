@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2023, 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2023, 2024, 2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2024-01-22 20:47+0200\n"
+"PO-Revision-Date: 2026-01-13 19:00+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: activityconfig.cpp:151
 #, kde-format
 msgid "Activity Manager"
-msgstr ""
+msgstr "Aktivitāšu pārvaldnieks"
 
 #: ui/ActivityEditor.qml:22
 #, kde-format
@@ -60,39 +60,31 @@ msgid "Description:"
 msgstr "Apraksts:"
 
 #: ui/ActivityEditor.qml:84
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "While on this activity, allow:"
+#, kde-format
 msgctxt "@title:group for checkbox group"
 msgid "While on this activity, allow:"
 msgstr "Esot šajā aktivitātē, ļaut:"
 
 #: ui/ActivityEditor.qml:85
-#, fuzzy, kde-format
-#| msgid "Tracking file and app use"
+#, kde-format
 msgctxt "@option:check While on activity, allow"
 msgid "Tracking file and app use"
 msgstr "Sekot datņu un programmu lietojumam"
 
 #: ui/ActivityEditor.qml:91
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Automatically turning off the screen"
+#, kde-format
 msgctxt "@option:check While on activity, allow"
 msgid "Automatically turning off the screen"
-msgstr "Automātiski izslēgt ekrānu"
+msgstr "Ekrāna automātiska izslēgšana"
 
 #: ui/ActivityEditor.qml:97
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Automatically shutting down or sleeping"
+#, kde-format
 msgctxt "@option:check While on activity, allow"
 msgid "Automatically shutting down or sleeping"
-msgstr "Automātiski izslēgt vai iesnaudināt"
+msgstr "Automātiska ierīces izslēgšana un iesnaudināšana"
 
 #: ui/ActivityEditor.qml:103
-#, fuzzy, kde-format
-#| msgid "Shortcut for switching:"
+#, kde-format
 msgctxt "@label prefix for keyboard shortcut input button"
 msgid "Shortcut for switching:"
 msgstr "Saīsne pārslēgšanai:"
@@ -104,11 +96,10 @@ msgid "Delete %1 activity"
 msgstr "Dzēst %1 aktivitāti"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Create New…"
+#, kde-format
 msgctxt "@action:button Create new Activity"
 msgid "Create New…"
-msgstr "Izveidot jaunu..."
+msgstr "Izveidot jaunu…"
 
 #: ui/main.qml:85
 #, kde-format
@@ -123,8 +114,7 @@ msgid "Do you want to delete activity '%1'?"
 msgstr "Vai vēlaties dzēst aktivitāti „%1“?"
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "Delete Activity"
+#, kde-format
 msgctxt "@action:button in dialog confirms deletion"
 msgid "Delete Activity"
 msgstr "Dzēst aktivitāti"

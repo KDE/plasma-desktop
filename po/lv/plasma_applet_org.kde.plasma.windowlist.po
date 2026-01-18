@@ -2,26 +2,25 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2009.
-# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-03-03 17:12+0200\n"
+"PO-Revision-Date: 2026-01-16 18:54+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Pamata"
@@ -30,39 +29,37 @@ msgstr "Pamata"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "For active application, show:"
-msgstr ""
+msgstr "Aktīvajai programmai rādīt:"
 
 #: ConfigGeneral.qml:40
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Icon and name"
-msgstr ""
+msgstr "Ikonu un nosaukumu"
 
 #: ConfigGeneral.qml:41
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Icon"
-msgstr ""
+msgstr "Ikonu"
 
 #: ConfigGeneral.qml:42
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Name"
-msgstr ""
+msgstr "Nosaukumu"
 
 #: ConfigGeneral.qml:89
-#, fuzzy, kde-format
-#| msgid "Only icons can be shown when the Panel is vertical."
+#, kde-format
 msgctxt "@info:usagetip display mode for active application"
 msgid "Only icons can be shown when the Panel is vertical."
-msgstr "Kad panelis ir vertikāls, var parādīt tikai ikonas."
+msgstr "Vertikālā panelī iespējams parādīt tikai ikonas."
 
 #: ConfigGeneral.qml:91
-#, fuzzy, kde-format
-#| msgid "Not applicable when the widget is on the Desktop."
+#, kde-format
 msgctxt "@info:usagetip display mode for active application"
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "Nav piemērojams, logrīkam atrodoties uz darbvirsmas."
@@ -71,50 +68,47 @@ msgstr "Nav piemērojams, logrīkam atrodoties uz darbvirsmas."
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Open on hover:"
-msgstr ""
+msgstr "Atvērt, uzliekot rādītāju:"
 
 #: ConfigGeneral.qml:109
 #, kde-format
 msgctxt "@option:check open-on-hover is enabled, with the following delay:"
 msgid "Enabled, with delay:"
-msgstr ""
+msgstr "Ieslēgt ar aizturi:"
 
 #: ConfigGeneral.qml:122
 #, kde-format
 msgctxt "@item:valuesuffix, %1 is hover activation delay in ms"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+msgstr[2] "%1 ms"
 
 #: ConfigGeneral.qml:131
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "ms"
+msgstr[1] "ms"
+msgstr[2] "ms"
 
 #: ConfigGeneral.qml:134
 #, kde-format
 msgctxt "@label:spinbox accessible %1 is milliseconds"
 msgid "Hover open delay %1 ms"
-msgstr ""
+msgstr "Ieslēgšanas ar rādītāja uzlikšanu aizture ir %1 ms"
 
 #: ConfigGeneral.qml:144
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "No open windows"
+#, kde-format
 msgctxt ""
 "@label for checkbox group, completes sentence like: … from current screen"
 msgid "Show only windows:"
-msgstr "Nav atvērtu logu"
+msgstr "Rādīt tikai logus:"
 
 #: ConfigGeneral.qml:145
-#, fuzzy, kde-format
-#| msgid "Current desktop"
+#, kde-format
 msgctxt "@option:check completes sentence: show only windows"
 msgid "From the current desktop"
 msgstr "Aktīvajā darbvirsmā"
@@ -123,19 +117,19 @@ msgstr "Aktīvajā darbvirsmā"
 #, kde-format
 msgctxt "@option:check completes sentence: show only windows"
 msgid "From the current activity"
-msgstr ""
+msgstr "Aktīvajā aktivitātē"
 
 #: ConfigGeneral.qml:155
 #, kde-format
 msgctxt "@option:check completes sentence: show only windows"
 msgid "From the current screen"
-msgstr ""
+msgstr "Aktīvajā ekrānā"
 
 #: ConfigGeneral.qml:160
 #, kde-format
 msgctxt "@option:check completes sentence: show only windows"
 msgid "That are minimized"
-msgstr ""
+msgstr "Kas ir minimizēti"
 
 #: main.qml:163 main.qml:222
 #, kde-format
@@ -144,8 +138,7 @@ msgid "No open windows"
 msgstr "Nav atvērtu logu"
 
 #: main.qml:192
-#, fuzzy, kde-format
-#| msgid "Plasma Desktop"
+#, kde-format
 msgctxt "@title:window title shown e.g. for desktop and expanded widgets"
 msgid "Plasma Desktop"
 msgstr "„Plasma“ darbvirsma"
