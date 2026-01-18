@@ -4,14 +4,14 @@
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
 # SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2024, 2025 Flori G <Renner03@protonmail.com>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2025, 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2023-06-12 00:06+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2026-01-10 10:15+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -95,7 +95,7 @@ msgstr "Wählt sie aus"
 #: package/contents/ui/main.qml:160
 #, kde-format
 msgid "Open by double-clicking instead"
-msgstr "Öffnen stattdessen durch Doppelklick"
+msgstr "Öffnen durch Doppelklick"
 
 #: package/contents/ui/main.qml:175
 #, kde-format
@@ -113,7 +113,7 @@ msgstr "Eine Seite hoch oder runter"
 #: package/contents/ui/main.qml:188
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
-msgstr "Mittelklick geht zur angeklickten Position"
+msgstr "Bei Mittelklick zur angeklickten Position gehen"
 
 #: package/contents/ui/main.qml:198
 #, kde-format
@@ -158,8 +158,9 @@ msgid ""
 "laptop's keyboard is flipped around or detached."
 msgstr ""
 "Der Touch-Modus wird automatisch aktiviert, wenn das System einen "
-"Touchscreen erkennt, aber keine Maus oder kein Touchpad. Zum Beispiel, wenn "
-"die Tastatur eines 2-in-1-Notebooks umgedreht oder abgenommen wird."
+"Touchscreen erkennt, aber keine Maus oder Touchpad. Das ist beispielsweise "
+"der Fall, wenn die Tastatur eines 2-in-1-Notebooks umgedreht oder abgenommen "
+"wird."
 
 #: package/contents/ui/main.qml:255
 #, kde-format
@@ -174,7 +175,7 @@ msgid ""
 "more easily accommodate touch interaction."
 msgstr ""
 "Im Touch-Modus werden viele Elemente der Benutzeroberfläche vergrößert, um "
-"die Bedienung zu erleichtern."
+"die Bedienung mit den Fingern zu erleichtern."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9

@@ -4,13 +4,13 @@
 # SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
 # SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2025, 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2025-08-03 22:03+0200\n"
+"PO-Revision-Date: 2026-01-10 09:43+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -162,7 +162,7 @@ msgstr "Favoriten anzeigen:"
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
-msgstr "In einem Gitter"
+msgstr "In einem Raster"
 
 #: package/contents/ui/ConfigGeneral.qml:186
 #, kde-format
@@ -173,13 +173,13 @@ msgstr "In einer Liste"
 #: package/contents/ui/ConfigGeneral.qml:194
 #, kde-format
 msgid "Show other applications:"
-msgstr "Weitere Anwendungen anzeigen:"
+msgstr "Andere Anwendungen anzeigen:"
 
 #: package/contents/ui/ConfigGeneral.qml:195
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
-msgstr "In einem Gitter"
+msgstr "In einem Raster"
 
 #: package/contents/ui/ConfigGeneral.qml:203
 #, kde-format
@@ -206,7 +206,7 @@ msgstr "Sitzung"
 #: package/contents/ui/ConfigGeneral.qml:234
 #, kde-format
 msgid "Power and session"
-msgstr "Energieverwaltung und Sitzung"
+msgstr "Energie und Sitzung"
 
 #: package/contents/ui/ConfigGeneral.qml:243
 #, kde-format
@@ -247,7 +247,7 @@ msgstr "Anwendungen bearbeiten …"
 #: package/contents/ui/KickoffGridView.qml:88
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
-msgstr "Gitter mit %1 Zeilen, %2 Spalten"
+msgstr "Raster mit %1 Zeilen, %2 Spalten"
 
 #: package/contents/ui/LeaveButtons.qml:115
 #, kde-format

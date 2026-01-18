@@ -3,13 +3,13 @@
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
 # SPDX-FileCopyrightText: 2024 Alois.spitzbart <spitz234@hotmail.com>
 # SPDX-FileCopyrightText: 2024, 2025 Flori G <Renner03@protonmail.com>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2025, 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2025-12-13 14:45+0100\n"
+"PO-Revision-Date: 2026-01-09 23:03+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -33,9 +33,8 @@ msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
 msgstr ""
-"Dadurch wird die Dateisuche in KRunner und den Startmenüs deaktiviert. "
-"Außerdem wird die erweiterte Metadatenanzeige aus allen KDE-Anwendungen "
-"deaktiviert."
+"Das deaktiviert die Dateisuche in KRunner und den Startmenüs. Außerdem wird "
+"die erweiterte Metadatenanzeige in allen KDE-Anwendungen deaktiviert."
 
 #: package/contents/ui/main.qml:67
 #, kde-format
@@ -45,9 +44,9 @@ msgid ""
 "from scratch. This may take some time, depending on how many files you have."
 msgstr ""
 "Möchten Sie die gespeicherten Indexdaten löschen? %1 Speicherplatz wird "
-"freigegeben, aber wenn die Indexierung später wieder aktiviert wird, muss "
-"der gesamte Index von Grund auf neu erstellt werden. Dies kann einige Zeit "
-"dauern, je nachdem, wie viele Dateien Sie haben."
+"freigegeben, aber wenn die Indizierung später wieder aktiviert wird, muss "
+"der gesamte Index von Grund auf neu erstellt werden. Dies kann, je nach der "
+"zu indizierenden Datenmenge, einige Zeit dauern."
 
 #: package/contents/ui/main.qml:69
 #, kde-format

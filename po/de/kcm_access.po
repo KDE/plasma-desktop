@@ -14,8 +14,8 @@ msgstr ""
 "Project-Id-Version: kcm_access\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2025-08-09 16:01+0200\n"
-"Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
+"PO-Revision-Date: 2026-01-10 17:55+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -67,7 +67,7 @@ msgstr "Drücken Sie %1 bei aktiver NumLock und Feststell-Taste"
 #: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while CapsLock is active"
-msgstr "Drücken Sie %1 während CapsLock aktiv ist"
+msgstr "Drücken Sie %1, während CapsLock aktiv ist"
 
 #: kcmaccess.cpp:136
 #, kde-format
@@ -93,19 +93,19 @@ msgstr "Fehler: „orca --setup“ kann nicht gestartet werden"
 #: kcmaccessibilitybell.kcfg:9
 #, kde-format
 msgid "Use System Bell"
-msgstr "Signalton des Systems verwenden"
+msgstr "Systemsignalton verwenden"
 
 #. i18n: ectx: label, entry (CustomBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:13
 #, kde-format
 msgid "Customize system bell"
-msgstr "Signalton des Systems anpassen"
+msgstr "Systemsignalton anpassen"
 
 #. i18n: ectx: label, entry (CustomBellFile), group (Bell)
 #: kcmaccessibilitybell.kcfg:17
 #, kde-format
 msgid "Sound file for the Bell"
-msgstr "Klangdatei für den Signalton"
+msgstr "Audiodatei für den Signalton"
 
 #. i18n: ectx: label, entry (VisibleBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:20
@@ -148,7 +148,7 @@ msgstr "„Klebende“ Tasten einrasten"
 #, kde-format
 msgid "Turn sticky keys off when two keys are pressed simultaneously"
 msgstr ""
-"„Klebende“ Tasten abschalten, wenn zwei Tasten gleichzeitig gedrückt werden"
+"„Klebende“ Tasten deaktivieren, wenn zwei Tasten gleichzeitig gedrückt werden"
 
 #. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:21
@@ -166,7 +166,7 @@ msgstr "Signalton beim Umschalten der Tasten"
 #: kcmaccessibilitykeyboard.kcfg:29
 #, kde-format
 msgid "Notify when a keyboard modifier is pressed"
-msgstr "Benachrichtigen wenn eine Sondertaste gedrückt wird"
+msgstr "Benachrichtigen, wenn eine Sondertaste gedrückt wird"
 
 #. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:33
@@ -232,7 +232,7 @@ msgstr "Verzögerung für zurückschnellende Tasten verwenden"
 #: kcmaccessibilitykeyboardfilters.kcfg:37
 #, kde-format
 msgid "Beep if a bounce key event is rejected"
-msgstr "Signalton wenn eine zurückschnellende Taste zurückgewiesen wird"
+msgstr "Signalton, wenn eine zurückschnellende Taste zurückgewiesen wird"
 
 #. i18n: ectx: label, entry (MouseKeys), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:9
@@ -324,12 +324,12 @@ msgstr "Benutzerdefinierter Klang:"
 #: package/contents/ui/Bell.qml:76
 #, kde-format
 msgid "Search audio file for the system bell"
-msgstr "Klangdatei für Signalton des Systems suchen"
+msgstr "Audiodatei für Systemsignalton suchen"
 
 #: package/contents/ui/Bell.qml:77
 #, kde-format
 msgid "Button search audio file"
-msgstr "Knopf für Suche nach Klangdatei"
+msgstr "Knopf für Suche nach Audiodatei"
 
 #: package/contents/ui/Bell.qml:93
 #, kde-format
@@ -394,25 +394,25 @@ msgstr "Verzögerung:"
 #: package/contents/ui/KeyboardFilters.qml:54
 #, kde-format
 msgid "Ring system bell:"
-msgstr "Signalton des Systems verwenden:"
+msgstr "Systemsignalton abspielen:"
 
 #: package/contents/ui/KeyboardFilters.qml:55
 #, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
-msgstr "Wenn eine Taste &gedrückt wird"
+msgstr "Wenn eine beliebige Taste &gedrückt wird"
 
 #: package/contents/ui/KeyboardFilters.qml:69
 #, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
-msgstr "Wenn eine Taste &akzeptiert wird"
+msgstr "Wenn eine beliebige Taste &akzeptiert wird"
 
 #: package/contents/ui/KeyboardFilters.qml:83
 #, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
-msgstr "Wenn eine Taste &zurückgewiesen wird"
+msgstr "Wenn eine beliebige Taste &zurückgewiesen wird"
 
 #: package/contents/ui/KeyboardFilters.qml:100
 #, kde-format
@@ -439,7 +439,7 @@ msgstr "Verzögerung:"
 #: package/contents/ui/KeyboardFilters.qml:134
 #, kde-format
 msgid "Ring system bell when rejected"
-msgstr "Signalton verwenden, wenn zurückgewiesen"
+msgstr "Systemsignalton abspielen, wenn zurückgewiesen"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -504,7 +504,7 @@ msgstr "Deaktivieren, wenn zwei Tasten gedrückt werden"
 #: package/contents/ui/ModifierKeys.qml:54
 #, kde-format
 msgid "Ring system bell when modifier keys are used"
-msgstr "Signalton verwenden, wenn eine Sondertaste gedrückt wurde"
+msgstr "Systemsignalton abspielen, wenn Sondertasten verwendet werden"
 
 #: package/contents/ui/ModifierKeys.qml:71
 #, kde-format
@@ -514,7 +514,7 @@ msgstr "Rückmeldung:"
 #: package/contents/ui/ModifierKeys.qml:72
 #, kde-format
 msgid "Ring system bell when locking keys are toggled"
-msgstr "Signalton verwenden, wenn Sperrtasten umgeschaltet wurden"
+msgstr "Systemsignalton abspielen, wenn Sperrtasten umgeschaltet wurden"
 
 #: package/contents/ui/ModifierKeys.qml:83
 #, kde-format
@@ -525,7 +525,7 @@ msgstr ""
 #: package/contents/ui/ModifierKeys.qml:95
 #, kde-format
 msgid "Configure Notifications…"
-msgstr "Benachrichtigungen festlegen …"
+msgstr "Benachrichtigungen einrichten …"
 
 #: package/contents/ui/MouseNavigation.qml:17
 #, kde-format
@@ -540,7 +540,7 @@ msgstr "Aktivieren"
 #: package/contents/ui/MouseNavigation.qml:29
 #, kde-format
 msgid "When a gesture is used:"
-msgstr "Wenn eine Geste benutzt wird:"
+msgstr "Wenn eine Geste verwendet wird:"
 
 #: package/contents/ui/MouseNavigation.qml:30
 #, kde-format
@@ -550,7 +550,7 @@ msgstr "Bestätigungsdialog anzeigen"
 #: package/contents/ui/MouseNavigation.qml:41
 #, kde-format
 msgid "Ring the System Bell"
-msgstr "Signalton des Systems verwenden"
+msgstr "Systemsignalton abspielen"
 
 #: package/contents/ui/MouseNavigation.qml:52
 #, kde-format

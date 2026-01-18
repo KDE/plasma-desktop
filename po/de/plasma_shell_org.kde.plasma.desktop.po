@@ -5,21 +5,21 @@
 # SPDX-FileCopyrightText: 2024, 2025 Flori G <Renner03@protonmail.com>
 # SPDX-FileCopyrightText: 2025 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
 # SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2025, 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2025-08-06 21:29+0200\n"
-"Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
+"PO-Revision-Date: 2026-01-14 20:18+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:212
 msgid "Currently being used"
@@ -30,20 +30,20 @@ msgid ""
 "Move to\n"
 "this activity"
 msgstr ""
-"Verschieben in\n"
-"diese Aktivität"
+"In diese Aktivität\n"
+"verschieben"
 
 #: contents/activitymanager/ActivityItem.qml:282
 msgid ""
 "Show also\n"
 "in this activity"
 msgstr ""
-"Auch anzeigen\n"
-"in dieser Aktivität"
+"Auch in dieser\n"
+"Aktivität anzeigen"
 
 #: contents/activitymanager/ActivityItem.qml:342
 msgid "Configure"
-msgstr "Einrichtung"
+msgstr "Einrichten"
 
 #: contents/activitymanager/ActivityItem.qml:359
 msgid "Stop activity"
@@ -130,7 +130,7 @@ msgstr "Ein Problem melden …"
 
 #: contents/configuration/AppletConfiguration.qml:56
 msgid "Keyboard Shortcuts"
-msgstr "Kurzbefehle"
+msgstr "Tastaturkurzbefehle"
 
 #: contents/configuration/AppletConfiguration.qml:294
 msgid "Apply Settings"
@@ -183,15 +183,15 @@ msgstr "Vorwärts-Knopf"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:27
 msgid "Vertical-Scroll"
-msgstr "Vertikales Mausrad"
+msgstr "Vertikales Scrollen"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:28
 msgid "Horizontal-Scroll"
-msgstr "Horizontales Mausrad"
+msgstr "Horizontales Scrollen"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:30
 msgid "Shift"
-msgstr "Umschalttaste"
+msgstr "Umschalt"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:31
 msgid "Ctrl"
@@ -222,7 +222,7 @@ msgstr "Aktion hinzufügen"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:78
 msgid "Layout changes have been restricted by the system administrator"
-msgstr "Layout-Änderungen sind vom Systemverwalter deaktiviert worden"
+msgstr "Layout-Änderungen wurden durch den Systemverwalter eingeschränkt"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:93
 msgid "Layout:"
@@ -239,8 +239,8 @@ msgstr "Neue Module holen …"
 #: contents/configuration/ConfigurationContainmentAppearance.qml:195
 msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
-"Layout-Änderungen müssen angewendet werden, bevor eine weitere Bearbeitung "
-"möglich ist"
+"Layout-Änderungen müssen angewendet werden, bevor weitere Änderungen "
+"vorgenommen werden können"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:199
 msgid "Apply Now"
@@ -262,11 +262,11 @@ msgstr "Hintergrundbild"
 
 #: contents/configuration/ContainmentConfiguration.qml:34
 msgid "Mouse Actions"
-msgstr "Maus-Aktionen"
+msgstr "Mausaktionen"
 
 #: contents/configuration/MouseEventInputButton.qml:20
 msgid "Input Here"
-msgstr "Eingabe hier"
+msgstr "Hier eingeben"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:39
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:194
@@ -304,11 +304,11 @@ msgstr "Sichtbarkeit"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:107
 msgid "Always Visible"
-msgstr "Begrenzend"
+msgstr "Immer sichtbar"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:114
 msgid "Auto Hide"
-msgstr "Versteckt"
+msgstr "Automatisch ausblenden"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:121
 msgid "Windows Can Cover"
@@ -316,7 +316,7 @@ msgstr "Im Hintergrund"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:128
 msgid "Windows Go Below"
-msgstr "Im Vordergrund"
+msgstr "Fenster verschwinden dahinter"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:137
 msgid "Opacity"
@@ -349,8 +349,7 @@ msgstr "Kurzbefehl"
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:213
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
-"Drücken Sie diesen Tastatur-Kurzbefehl, um den Fokus auf die Kontrollleiste "
-"zu setzen"
+"Verwenden Sie diesen Tastaturkurzbefehl, um die Kontrollleiste zu fokussieren"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 msgid "Drag to change maximum height."
@@ -490,7 +489,7 @@ msgstr "Kategorien"
 
 #: contents/explorer/WidgetExplorer.qml:339
 msgid "No widgets matched the search terms"
-msgstr "Keine Bedienelemente passen zum Suchbegriff"
+msgstr "Keine Miniprogramme passen zum Suchbegriff"
 
 #: contents/explorer/WidgetExplorer.qml:339
 msgid "No widgets available"

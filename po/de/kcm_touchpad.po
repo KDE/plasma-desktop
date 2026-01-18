@@ -2,13 +2,13 @@
 # SPDX-FileCopyrightText: 2016 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2020, 2021 Frank Steinmetzger <dev@felsenfleischer.de>
 # SPDX-FileCopyrightText: 2024, 2025 Alois.spitzbart <spitz234@hotmail.com>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2025, 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2025-12-13 15:37+0100\n"
+"PO-Revision-Date: 2026-01-09 23:36+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -41,7 +41,7 @@ msgstr "Touchpad aktivieren"
 #: actions.cpp:30
 #, kde-format
 msgid "Disable Touchpad"
-msgstr "Touchpad abschalten"
+msgstr "Touchpad deaktivieren"
 
 #: actions.cpp:38
 #, kde-format
@@ -109,13 +109,13 @@ msgstr "Eingaben über dieses Gerät annehmen."
 #: kcm/libinput/touchpad.qml:167
 #, kde-format
 msgid "Disable while typing"
-msgstr "Beim Tippen abschalten"
+msgstr "Beim Tippen deaktivieren"
 
 #: kcm/libinput/touchpad.qml:171
 #, kde-format
 msgid "Disable touchpad while typing to prevent accidental inputs."
 msgstr ""
-"Touchpad beim Tippen abschalten, um unbeabsichtigte Eingaben zu verhindern."
+"Touchpad beim Tippen deaktivieren, um unbeabsichtigte Eingaben zu verhindern."
 
 #: kcm/libinput/touchpad.qml:195
 #, kde-format
@@ -175,32 +175,33 @@ msgstr ""
 #: kcm/libinput/touchpad.qml:416
 #, kde-format
 msgid "Tapping:"
-msgstr "Klicken:"
+msgstr "Antippen:"
 
 #: kcm/libinput/touchpad.qml:418
 #, kde-format
 msgid "Tap-to-click"
-msgstr "Tippen zum Klicken"
+msgstr "Antippen zum Klicken"
 
 #: kcm/libinput/touchpad.qml:422
 #, kde-format
 msgid "Single tap is left button click."
-msgstr "Einfach Tippen entspricht Klicken mit der linken Maustaste"
+msgstr ""
+"Ein einfaches Antippen entspricht einem Klicken mit der linken Maustaste."
 
 #: kcm/libinput/touchpad.qml:451
 #, kde-format
 msgid "Tap-and-drag"
-msgstr "Berühren-und-Ziehen"
+msgstr "Antippen-und-Ziehen"
 
 #: kcm/libinput/touchpad.qml:455
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
-msgstr "Ziehen durch Bewegung auf dem Touchpad direkt nach dem Tippen."
+msgstr "Ziehen durch Bewegung auf dem Touchpad direkt nach dem Antippen."
 
 #: kcm/libinput/touchpad.qml:482
 #, kde-format
 msgid "Tap-and-drag lock"
-msgstr "Berühren-und-Ziehen einrasten"
+msgstr "Antippen-und-Ziehen einrasten"
 
 #: kcm/libinput/touchpad.qml:486
 #, kde-format
@@ -210,33 +211,33 @@ msgstr "Das Ziehen wird nach kurzem Anheben des Fingers fortgesetzt."
 #: kcm/libinput/touchpad.qml:505
 #, kde-format
 msgid "Two-finger tap:"
-msgstr "Zweifingertippen:"
+msgstr "Antippen mit zwei Fingern:"
 
 #: kcm/libinput/touchpad.qml:514
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
-msgstr "Rechtsklick (Mittelklick durch Dreifingertippen)"
+msgstr "Rechtsklick (Mittelklick durch Antippen mit drei Fingern)"
 
 #: kcm/libinput/touchpad.qml:515
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
 msgstr ""
-"Mit zwei Fingern für einen Rechtsklick tippen, mit drei Fingern für einen "
-"Mittelklick tippen."
+"Mit zwei Fingern antippen für einen Rechtsklick, mit drei Fingern antippen "
+"für einen Mittelklick."
 
 #: kcm/libinput/touchpad.qml:517
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
-msgstr "Mittelklick (Rechtsklick durch Dreifingertippen)"
+msgstr "Mittelklick (Rechtsklick durch Antippen mit drei Fingern)"
 
 #: kcm/libinput/touchpad.qml:518
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
 msgstr ""
-"Mit zwei Fingern für einen Mittelklick tippen, mit drei Fingern für einen "
-"Rechtsklick tippen."
+"Mit zwei Fingern antippen für einen Mittelklick, mit drei Fingern antippen "
+"für einen Rechtsklick."
 
 #: kcm/libinput/touchpad.qml:520
 #, kde-format
@@ -246,7 +247,7 @@ msgstr "Rechtsklick"
 #: kcm/libinput/touchpad.qml:521
 #, kde-format
 msgid "Tap with two fingers to right-click."
-msgstr "Mit zwei Fingern für einen Rechtsklick tippen."
+msgstr "Mit zwei Fingern antippen für einen Rechtsklick."
 
 #: kcm/libinput/touchpad.qml:523
 #, kde-format
@@ -256,7 +257,7 @@ msgstr "Mittelklick"
 #: kcm/libinput/touchpad.qml:524
 #, kde-format
 msgid "Tap with two fingers to middle-click."
-msgstr "Mit zwei Fingern für einen Mittelklick tippen."
+msgstr "Mit zwei Fingern antippen für einen Mittelklick."
 
 #: kcm/libinput/touchpad.qml:582
 #, kde-format
@@ -341,7 +342,7 @@ msgstr "An beliebiger Stelle mit zwei Fingern tippen"
 #: kcm/libinput/touchpad.qml:800
 #, kde-format
 msgid "Tap with two finger to enable right click."
-msgstr "Mit zwei Fingern tippen, um Rechtsklick zu aktivieren."
+msgstr "Mit zwei Fingern antippen, um Rechtsklick zu aktivieren."
 
 #: kcm/libinput/touchpad.qml:813
 #, kde-format
@@ -605,7 +606,7 @@ msgstr "Kurzbefehle:"
 #: kcm/xlib/ui/kded.ui:60
 #, kde-format
 msgid "Disable touchpad when typing"
-msgstr "Touchpad beim Tippen abschalten"
+msgstr "Touchpad beim Tippen deaktivieren"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: kcm/xlib/ui/kded.ui:75
@@ -650,13 +651,13 @@ msgstr ""
 #: kcm/xlib/ui/kded.ui:109
 #, kde-format
 msgid "Disable taps and scrolling only"
-msgstr "Nur Berührung und Blättern abschalten"
+msgstr "Nur Antippen und Bildlauf deaktivieren"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableWhenMousePluggedIn)
 #: kcm/xlib/ui/kded.ui:119
 #, kde-format
 msgid "Disable touchpad when mouse is plugged in"
-msgstr "Touchpad abschalten, wenn eine Maus angeschlossen ist"
+msgstr "Touchpad deaktivieren, wenn eine Maus angeschlossen ist"
 
 #. i18n: ectx: property (text), widget (QLabel, notificationsLabel)
 #: kcm/xlib/ui/kded.ui:136
@@ -1201,13 +1202,13 @@ msgstr ""
 #, kde-format
 msgctxt "Touchpad gesture"
 msgid "Taps"
-msgstr "Berührungen"
+msgstr "Antipper"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_Tapping)
 #: kcm/xlib/ui/tap.ui:28
 #, kde-format
 msgid "Tap to Click"
-msgstr "Tippen zum Klicken"
+msgstr "Antippen zum Klicken"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/xlib/ui/tap.ui:43
@@ -1220,7 +1221,7 @@ msgstr "Ein Finger:"
 #: kcm/xlib/ui/tap.ui:53
 #, kde-format
 msgid "Which mouse button is reported on a non-corner one-finger tap"
-msgstr "Die Maustaste beim Berühren mit einem Finger an beliebiger Stelle"
+msgstr "Die Maustaste beim Antippen mit einem Finger an beliebiger Stelle"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm/xlib/ui/tap.ui:60
@@ -1233,7 +1234,7 @@ msgstr "Zwei Finger:"
 #: kcm/xlib/ui/tap.ui:70
 #, kde-format
 msgid "Which mouse button is reported on a non-corner two-finger tap"
-msgstr "Die Maustaste beim Berühren mit zwei Fingern an beliebiger Stelle"
+msgstr "Die Maustaste beim Antippen mit zwei Fingern an beliebiger Stelle"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: kcm/xlib/ui/tap.ui:77
@@ -1246,7 +1247,7 @@ msgstr "Drei Finger:"
 #: kcm/xlib/ui/tap.ui:87
 #, kde-format
 msgid "Which mouse button is reported on a non-corner three-finger tap"
-msgstr "Die Maustaste beim Berühren mit drei Fingern an beliebiger Stelle"
+msgstr "Die Maustaste beim Antippen mit drei Fingern an beliebiger Stelle"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: kcm/xlib/ui/tap.ui:107
@@ -1266,7 +1267,7 @@ msgstr "Oben links:"
 #: kcm/xlib/ui/tap.ui:144
 #, kde-format
 msgid "Which mouse button is reported on a left top corner tap"
-msgstr "Die Maustaste beim Berühren der oberen linken Ecke"
+msgstr "Die Maustaste beim Antippen der oberen linken Ecke"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: kcm/xlib/ui/tap.ui:151
@@ -1286,19 +1287,19 @@ msgstr "Oben rechts:"
 #: kcm/xlib/ui/tap.ui:177
 #, kde-format
 msgid "Which mouse button is reported on a left bottom corner tap"
-msgstr "Die Maustaste beim Berühren der unteren linken Ecke"
+msgstr "Die Maustaste beim Antippen der unteren linken Ecke"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RTCornerButton)
 #: kcm/xlib/ui/tap.ui:184
 #, kde-format
 msgid "Which mouse button is reported on a right top corner tap"
-msgstr "Die Maustaste beim Berühren der oberen rechten Ecke"
+msgstr "Die Maustaste beim Antippen der oberen rechten Ecke"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RBCornerButton)
 #: kcm/xlib/ui/tap.ui:191
 #, kde-format
 msgid "Which mouse button is reported on a right bottom corner tap"
-msgstr "Die Maustaste beim Berühren der unteren rechten Ecke"
+msgstr "Die Maustaste beim Antippen der unteren rechten Ecke"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: kcm/xlib/ui/tap.ui:214
@@ -1315,15 +1316,15 @@ msgid ""
 "(touching and releasing the finger), then touching again and moving the "
 "finger on the touchpad"
 msgstr ""
-"Diese Geste ist eine alternative Art des Ziehens. Sie wird durch Abtippen "
-"(Berühren und loslassen des Fingers) und anschließend wieder Berühren und "
-"Verschieben des Fingers auf dem Touchpad ausgeführt"
+"Diese Geste ist eine alternative Art des Ziehens. Sie wird durch Antippen "
+"(Berühren und Loslassen des Touchpads) und erneutem Berühren des Touchpads "
+"und Verschieben des Fingers auf dem Touchpad ausgeführt"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_TapAndDragGesture)
 #: kcm/xlib/ui/tap.ui:254
 #, kde-format
 msgid "Tap-and-Drag Gesture"
-msgstr "Berühren-und-Ziehen-Geste"
+msgstr "Antippen-und-Ziehen-Geste"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_LockedDrags)
 #: kcm/xlib/ui/tap.ui:266
@@ -1332,7 +1333,7 @@ msgid ""
 "If off, a tap-and-drag gesture ends when you release the finger. If on, the "
 "gesture is active until you tap a second time, or until timeout expires"
 msgstr ""
-"Ist dies abgeschaltet, endet die Berühren-und-Ziehen-Geste mit dem Loslassen "
+"Ist dies deaktiviert, endet die Antippen-und-Ziehen-Geste mit dem Loslassen "
 "des Fingers. Ansonsten ist die Geste aktiviert, bis Sie das Touchpad zum "
 "zweiten Mal berühren oder bis zum Zeitablauf"
 
@@ -1358,14 +1359,14 @@ msgid ""
 "How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
 "automatically turned off after the finger is released from the touchpad"
 msgstr ""
-"Dauer in Millisekunden für den Modus„Gesperrtes Ziehen“, nach der der Modus "
-"automatisch abgeschaltet wird, wenn der Finger vom Touchpad gehoben wird."
+"Dauer in Millisekunden für den Modus „Gesperrtes Ziehen“. Wenn der Finger "
+"vom Touchpad gehoben wird, endet der Modus nach dieser Zeit automatisch"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: kcm/xlib/ui/tap.ui:325
 #, kde-format
 msgid "Tap Detection"
-msgstr "Berührungs-Erkennung"
+msgstr "Antipp-Erkennung"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #: kcm/xlib/ui/tap.ui:340
@@ -1383,40 +1384,39 @@ msgstr "Maximale Fingerbewegung:"
 #: kcm/xlib/ui/tap.ui:366
 #, kde-format
 msgid "Maximum time for double tap:"
-msgstr "Maximale Zeit für doppelte Berührung:"
+msgstr "Maximale Zeit für doppeltes Antippen:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_13)
 #: kcm/xlib/ui/tap.ui:379
 #, kde-format
 msgid "Single tap timeout:"
-msgstr "Zeitüberschreitung für einfache Berührung:"
+msgstr "Zeitüberschreitung für einfaches Antippen:"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxTapTime)
 #: kcm/xlib/ui/tap.ui:389
 #, kde-format
 msgid "Maximum time (in milliseconds) for detecting a tap"
-msgstr "Maximale Zeit in Millisekunden für die Erkennung einer Berührung"
+msgstr "Maximale Zeit in Millisekunden für die Erkennung eines Antippens"
 
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_MaxTapMove)
 #: kcm/xlib/ui/tap.ui:408
 #, kde-format
 msgid "Maximum movement of the finger for detecting a tap"
-msgstr "Maximale Bewegung des Fingers für die Erkennung einer Berührung"
+msgstr "Maximale Bewegung des Fingers für die Erkennung eines Antippens"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxDoubleTapTime)
 #: kcm/xlib/ui/tap.ui:427
 #, kde-format
 msgid "Maximum time (in milliseconds) for detecting a double tap"
 msgstr ""
-"Maximale Zeit in Millisekunden für die Erkennung einer doppelten Berührung"
+"Maximale Zeit in Millisekunden für die Erkennung eines doppelten Antippens"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_SingleTapTimeout)
 #: kcm/xlib/ui/tap.ui:446
 #, kde-format
 msgid "Timeout after a tap to recognize it as a single tap"
 msgstr ""
-"Zeitüberschreitung nach der eine Berührung als einzelne Berührung erkannt "
-"wird"
+"Zeitüberschreitung, nach der ein Antippen als einzelnes Antippen erkannt wird"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: kcm/xlib/ui/testarea.ui:20

@@ -9,14 +9,14 @@
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
 # SPDX-FileCopyrightText: 2024, 2025 Flori G <Renner03@protonmail.com>
 # SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2025, 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2025-06-06 21:56+0200\n"
-"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
+"PO-Revision-Date: 2026-01-10 09:53+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -313,11 +313,11 @@ msgid ""
 "as the left and right buttons are affected. For example, if you have a three-"
 "button mouse, the middle button is unaffected."
 msgstr ""
-"Wenn Sie Linkshänder(in) sind, dann werden Sie es vielleicht vorziehen, die "
-"Funktionen der linken und rechten Maustaste zu vertauschen. Dies tun Sie "
-"durch Aktivierung der „Linkshänder“-Einstellung. Wenn Ihr Zeigegerät mehr "
-"als zwei Tasten besitzt, dann werden von der Änderung nur die linke und die "
-"rechte beeinflusst. Falls Sie z. B. eine Dreitastenmaus benutzen, dann "
+"Wenn Sie Linkshänder(in) sind, werden Sie es vielleicht vorziehen, die "
+"Funktionen der linken und rechten Maustaste zu vertauschen. Dies erreichen "
+"Sie durch Aktivieren der „Linkshänder“-Einstellung. Wenn Ihr Zeigegerät mehr "
+"als zwei Tasten besitzt, werden von der Änderung nur die linke und die "
+"rechte Taste beeinflusst. Falls Sie z. B. eine Dreitastenmaus verwenden, "
 "bleibt die Funktion der mittleren Taste unverändert."
 
 #. i18n: ectx: property (title), widget (QGroupBox, handedBox)
@@ -453,8 +453,8 @@ msgid ""
 msgstr ""
 "Der Doppelklick-Abstand ist die maximale Zeit (in Millisekunden) zwischen "
 "zwei Mausklicks, in der sie als Doppelklick interpretiert werden. Wenn der "
-"zweite Klick nach der angegebenen Zeit erfolgt, dann werden die beiden "
-"Aktionen als separate Klicks aufgefasst."
+"zweite Klick nach der angegebenen Zeit erfolgt, werden die beiden Aktionen "
+"als separate Klicks aufgefasst."
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, doubleClickInterval)
 #. i18n: ectx: property (suffix), widget (QSpinBox, dragStartTime)
@@ -475,8 +475,8 @@ msgid ""
 "the mouse within the drag start time, a drag operation will be initiated."
 msgstr ""
 "Wenn Sie mit der Maus klicken (etwa in einem mehrzeiligen Editor) und dann "
-"innerhalb der angegebenen Zeit den Mauszeiger bewegen, dann wird eine Zieh-"
-"Aktion (Drag &amp; Drop) eingeleitet."
+"innerhalb der angegebenen Zeit den Mauszeiger bewegen, wird eine Zieh-Aktion "
+"eingeleitet."
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartDist)
 #: kcm/xlib/kcmmouse.ui:333
@@ -486,7 +486,7 @@ msgid ""
 "start distance, a drag operation will be initiated."
 msgstr ""
 "Wenn Sie mit der Maus klicken und dann den Mauszeiger über die angegebene "
-"Entfernung bewegen, dann wird eine Zieh-Aktion (Drag &amp; Drop) eingeleitet."
+"Entfernung bewegen, wird eine Zieh-Aktion eingeleitet."
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, wheelScrollLines)
 #: kcm/xlib/kcmmouse.ui:355
@@ -497,12 +497,11 @@ msgid ""
 "number of visible lines, it will be ignored and the wheel movement will be "
 "handled as a page up/down movement."
 msgstr ""
-"Wenn Sie das Rad einer „Wheel Mouse“ verwenden, legt dieser Wert die Anzahl "
-"der Zeilen fest, um die der Bildschirm bei jeder Bewegung des Rades "
-"verschoben werden soll. Falls dieser Wert höher ist als die sichtbare Anzahl "
-"der sichtbaren Zeilen, so wird er ignoriert und die Bewegung des Rades wird "
-"genauso interpretiert, als ob die Tasten „Bild auf“ oder „Bild ab“ gedrückt "
-"worden wäre."
+"Wenn Sie ein Mausrad verwenden, legt dieser Wert die Anzahl der Zeilen fest, "
+"um die der Bildschirm bei jeder Bewegung des Rades verschoben wird. Falls "
+"dieser Wert höher ist als die Anzahl der sichtbaren Zeilen, wird er "
+"ignoriert und die Bewegung des Rades wird genauso interpretiert, als ob die "
+"Tasten „Bild auf“ oder „Bild ab“ gedrückt worden wären."
 
 #. i18n: ectx: attribute (title), widget (QWidget, MouseNavigation)
 #: kcm/xlib/kcmmouse.ui:387
