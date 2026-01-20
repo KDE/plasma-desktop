@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-14 02:39+0000\n"
-"PO-Revision-Date: 2025-03-25 07:27+0100\n"
+"PO-Revision-Date: 2026-01-19 13:36+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
@@ -13,35 +13,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
 #: ConfigOverlay.qml:333
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:inmenu removes widget"
 msgid "Remove"
 msgstr "Fjern"
 
 #: ConfigOverlay.qml:343
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:inmenu opens widget config dialog"
 msgid "Configure…"
 msgstr "Sett opp …"
 
 #: ConfigOverlay.qml:354
-#, fuzzy, kde-format
-#| msgid "Show Alternatives…"
+#, kde-format
 msgctxt "@action:inmenu opens widget alternatives explorer"
 msgid "Show Alternatives…"
 msgstr "Vis alternativer …"
 
 #: ConfigOverlay.qml:373
-#, fuzzy, kde-format
-#| msgid "Spacer width"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Spacer width"
 msgstr "Avstandsbredde"
@@ -54,8 +50,7 @@ msgid "Flexible size"
 msgstr "Fleksibel størrelse"
 
 #: main.qml:453
-#, fuzzy, kde-format
-#| msgid "Open Panel configuration ui"
+#, kde-format
 msgctxt ""
 "@info:whatsthis Accessible description for entering Panel edit mode click "
 "area"
@@ -63,8 +58,7 @@ msgid "Open Panel configuration ui"
 msgstr "Åpne brukergrensesnitt for paneloppsett"
 
 #: main.qml:460
-#, fuzzy, kde-format
-#| msgid "Add Widgets…"
+#, kde-format
 msgctxt "@action:button opens widget explorer"
 msgid "Add Widgets…"
-msgstr "Legg til element …"
+msgstr "Legg til elementer …"

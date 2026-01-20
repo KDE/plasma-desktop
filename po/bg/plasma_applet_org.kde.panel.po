@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-14 02:39+0000\n"
-"PO-Revision-Date: 2024-09-22 18:42+0200\n"
+"PO-Revision-Date: 2026-01-19 21:51+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,32 +15,28 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 26.03.70\n"
 
 #: ConfigOverlay.qml:333
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:inmenu removes widget"
 msgid "Remove"
 msgstr "Премахване"
 
 #: ConfigOverlay.qml:343
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:inmenu opens widget config dialog"
 msgid "Configure…"
 msgstr "Конфигуриране…"
 
 #: ConfigOverlay.qml:354
-#, fuzzy, kde-format
-#| msgid "Show Alternatives…"
+#, kde-format
 msgctxt "@action:inmenu opens widget alternatives explorer"
 msgid "Show Alternatives…"
 msgstr "Показване на алтернативи…"
 
 #: ConfigOverlay.qml:373
-#, fuzzy, kde-format
-#| msgid "Spacer width"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Spacer width"
 msgstr "Широчина на разделител"
@@ -53,8 +49,7 @@ msgid "Flexible size"
 msgstr "Гъвкав размер"
 
 #: main.qml:453
-#, fuzzy, kde-format
-#| msgid "Open Panel configuration ui"
+#, kde-format
 msgctxt ""
 "@info:whatsthis Accessible description for entering Panel edit mode click "
 "area"
@@ -62,8 +57,7 @@ msgid "Open Panel configuration ui"
 msgstr "Отваряне на графичен интерфейс за конфигурация на панел"
 
 #: main.qml:460
-#, fuzzy, kde-format
-#| msgid "Add Widgets…"
+#, kde-format
 msgctxt "@action:button opens widget explorer"
 msgid "Add Widgets…"
 msgstr "Добавяне на уиджети…"

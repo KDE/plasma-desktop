@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_trash\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-27 00:45+0000\n"
-"PO-Revision-Date: 2025-03-25 07:16+0100\n"
+"PO-Revision-Date: 2026-01-19 13:38+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -26,12 +26,10 @@ msgid "Trash"
 msgstr "Papirkurv"
 
 #: main.qml:36
-#, fuzzy, kde-format
-#| msgctxt "@info:status The trash is empty"
-#| msgid "Empty"
+#, kde-format
 msgctxt "@info:status The trash is being emptied"
 msgid "Emptying…"
-msgstr "Tom"
+msgstr "Tømmer …"
 
 #: main.qml:38
 #, kde-format
