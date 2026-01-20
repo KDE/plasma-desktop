@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Automatically generated, 2022.
-# SPDX-FileCopyrightText: 2022, 2024 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2024, 2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2024-02-26 08:41+0100\n"
+"PO-Revision-Date: 2026-01-19 21:45+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 26.03.70\n"
 
 #: kcmtouchscreen.cpp:47
 #, kde-format
@@ -31,15 +31,13 @@ msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
 #: ui/main.qml:29
-#, fuzzy, kde-format
-#| msgid "No touchscreens found"
+#, kde-format
 msgctxt "@info:status placeholdermessage text"
 msgid "No touchscreens found"
 msgstr "Не открит сензорен екран"
 
 #: ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Connect an external touchscreen"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchscreen"
 msgstr "Свързване на външен сензорен екран"
@@ -51,15 +49,13 @@ msgid "Device:"
 msgstr "Устройство:"
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgid "Enabled:"
+#, kde-format
 msgctxt "@option:check prefix touchscreen device is enabled"
 msgid "Enabled:"
 msgstr "Активирано:"
 
 #: ui/main.qml:67
-#, fuzzy, kde-format
-#| msgid "Target display:"
+#, kde-format
 msgctxt "@label:listbox this is a compound noun"
 msgid "Target display:"
 msgstr "Главен екран:"
