@@ -25,12 +25,12 @@ AbstractKickoffItemDelegate {
     property bool compact: Kirigami.Settings.tabletMode ? false : Plasmoid.configuration.compactMode
 
     leftPadding: KickoffSingleton.listItemMetrics.margins.left
-    + (mirrored ? KickoffSingleton.fontMetrics.descent : 0)
+        + (mirrored ? KickoffSingleton.fontMetrics.descent : 0)
     rightPadding: KickoffSingleton.listItemMetrics.margins.right
-    + (!mirrored ? KickoffSingleton.fontMetrics.descent : 0)
+        + (!mirrored ? KickoffSingleton.fontMetrics.descent : 0)
     // Otherwise it's *too* compact :)
-    topPadding: compact ? Kirigami.Units.mediumSpacing : Kirigami.Units.smallSpacing
-    bottomPadding: compact ? Kirigami.Units.mediumSpacing : Kirigami.Units.smallSpacing
+    topPadding: compact && !isCategoryListItem ? Kirigami.Units.mediumSpacing : Kirigami.Units.smallSpacing
+    bottomPadding: compact && !isCategoryListItem ? Kirigami.Units.mediumSpacing : Kirigami.Units.smallSpacing
 
     icon.width: compact || root.isCategoryListItem ? Kirigami.Units.iconSizes.smallMedium : Kirigami.Units.iconSizes.medium
     icon.height: compact || root.isCategoryListItem ? Kirigami.Units.iconSizes.smallMedium : Kirigami.Units.iconSizes.medium
