@@ -30,8 +30,10 @@ PlasmaCore.ToolTipArea {
 
     implicitHeight: inPopup
                     ? TaskManagerApplet.LayoutMetrics.preferredHeightInPopup()
-                    : Math.max(tasksRoot.height / Plasmoid.configuration.maxStripes,
-                             TaskManagerApplet.LayoutMetrics.preferredMinHeight())
+                    : (tasksRoot.vertical
+                        ? TaskManagerApplet.LayoutMetrics.preferredMinHeight()
+                        : Math.max(tasksRoot.height / Plasmoid.configuration.maxStripes,
+                             TaskManagerApplet.LayoutMetrics.preferredMinHeight()))
     implicitWidth: tasksRoot.vertical
         ? Math.max(TaskManagerApplet.LayoutMetrics.preferredMinWidth(), Math.min(TaskManagerApplet.LayoutMetrics.preferredMaxWidth(), tasksRoot.width / Plasmoid.configuration.maxStripes))
         : 0
