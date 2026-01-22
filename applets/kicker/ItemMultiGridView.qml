@@ -181,6 +181,7 @@ PlasmaComponents.ScrollView {
                         cellWidth: itemMultiGrid.cellSize
                         cellHeight: itemMultiGrid.cellSize
                         iconSize: itemMultiGrid.iconSize
+                        hoverEnabled: itemMultiGrid.hoverEnabled
 
                         verticalScrollBarPolicy: PlasmaComponents.ScrollBar.AlwaysOff
 
