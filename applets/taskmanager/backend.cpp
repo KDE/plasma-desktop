@@ -254,6 +254,10 @@ QVariantList Backend::placesActions(const QUrl &launcherUrl, bool showAllPlaces,
         if (previousGroup != groupName) {
             QAction *subMenuAction = new QAction(groupName, parent);
             subMenu = new QMenu();
+            // Breeze and Oxygen have rounded corners on menus. They set this attribute in polish()
+            // but at that time the underlying surface has already been created where setting this
+            // flag makes no difference anymore (Bug 385311)
+            subMenu->setAttribute(Qt::WA_TranslucentBackground);
             // Cannot parent a QMenu to a QAction, need to delete it manually.
             connect(parent, &QObject::destroyed, subMenu, &QObject::deleteLater);
             subMenuAction->setMenu(subMenu);
