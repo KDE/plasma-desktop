@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-22 01:00+0000\n"
 "PO-Revision-Date: 2026-01-08 11:31+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -95,12 +95,6 @@ msgid "Mute %1"
 msgstr "اكتم %1"
 
 #: qml/Badge.qml:52
-#, kde-format
-msgctxt "Invalid number of new messages, overlay, keep short"
-msgid "—"
-msgstr "—"
-
-#: qml/Badge.qml:54
 #, kde-format
 msgctxt "Over 9999 new messages, overlay, keep short"
 msgid "9,999+"
@@ -932,6 +926,10 @@ msgstr "متوفّرة أيضًا في %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "متوفّرة في %1"
+
+#~ msgctxt "Invalid number of new messages, overlay, keep short"
+#~ msgid "—"
+#~ msgstr "—"
 
 #~ msgctxt ""
 #~ "@item:inlistbox Part of a sentence: 'Scrolling on any task does nothing'"

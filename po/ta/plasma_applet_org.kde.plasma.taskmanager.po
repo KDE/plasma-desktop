@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-22 01:00+0000\n"
 "PO-Revision-Date: 2026-01-04 17:03+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -89,12 +89,6 @@ msgid "Mute %1"
 msgstr "%1-இன் ஒலியை அடக்கு"
 
 #: qml/Badge.qml:52
-#, kde-format
-msgctxt "Invalid number of new messages, overlay, keep short"
-msgid "—"
-msgstr "—"
-
-#: qml/Badge.qml:54
 #, kde-format
 msgctxt "Over 9999 new messages, overlay, keep short"
 msgid "9,999+"
@@ -956,6 +950,10 @@ msgstr "%1-இலும் உள்ளது"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "%1-இல் உள்ளது"
+
+#~ msgctxt "Invalid number of new messages, overlay, keep short"
+#~ msgid "—"
+#~ msgstr "—"
 
 #~ msgctxt ""
 #~ "@item:inlistbox Part of a sentence: 'Scrolling on any task does nothing'"
