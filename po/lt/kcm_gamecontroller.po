@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-15 03:00+0000\n"
-"PO-Revision-Date: 2026-01-15 20:11+0200\n"
+"PO-Revision-Date: 2026-01-22 00:09+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -50,17 +50,17 @@ msgstr "Žaidimų valdiklis"
 #: device.cpp:19
 #, kde-format
 msgid "Wheel"
-msgstr ""
+msgstr "Vairas"
 
 #: device.cpp:20
 #, kde-format
 msgid "Arcade Stick"
-msgstr ""
+msgstr "Arkados svirtis"
 
 #: device.cpp:21
 #, kde-format
 msgid "Flight Stick"
-msgstr ""
+msgstr "Skrydžio svirtis"
 
 #: device.cpp:22
 #, kde-format
@@ -80,7 +80,7 @@ msgstr "Būgnai"
 #: device.cpp:25
 #, kde-format
 msgid "Arcade Pad"
-msgstr ""
+msgstr "Arkados kilimėlis"
 
 #: device.cpp:26
 #, kde-format
@@ -115,7 +115,7 @@ msgstr "Switch Pro"
 #: device.cpp:36
 #, kde-format
 msgid "Virtual"
-msgstr ""
+msgstr "Virtualus"
 
 #: device.cpp:37
 #, kde-format
@@ -177,74 +177,70 @@ msgid "Y button"
 msgstr "Y mygtukas"
 
 #: device.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The back game controller button"
 msgid "Back button"
-msgstr "Mygtukai:"
+msgstr "Mygtukas „Atgal“"
 
 #: device.cpp:53
 #, kde-format
 msgctxt "The guide game controller button"
 msgid "Guide button"
-msgstr ""
+msgstr "Mygtukas „Žinynas“"
 
 #: device.cpp:54
 #, kde-format
 msgctxt "The start game controller button"
 msgid "Start button"
-msgstr ""
+msgstr "Mygtukas „Pradėti“"
 
 #: device.cpp:55
 #, kde-format
 msgctxt "The button under the game controller's left analog stick"
 msgid "Left analog stick"
-msgstr ""
+msgstr "Kairioji analoginė svirtis"
 
 #: device.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "@label Visual representation of an axis position"
-#| msgid "Position:"
+#, kde-format
 msgctxt "The button under the game controller's right analog stick"
 msgid "Right analog stick"
-msgstr "Pozicija:"
+msgstr "Dešinioji analoginė svirtis"
 
 #: device.cpp:57
 #, kde-format
 msgctxt "The game controller's left shoulder button"
 msgid "Left shoulder button"
-msgstr ""
+msgstr "Kairysis peties mygtukas"
 
 #: device.cpp:58
 #, kde-format
 msgctxt "The game controller's right shoulder button"
 msgid "Right shoulder button"
-msgstr ""
+msgstr "Dešinysis peties mygtukas"
 
 #: device.cpp:59
 #, kde-format
 msgctxt "The game controller's d-pad Up button"
 msgid "D-pad up button"
-msgstr ""
+msgstr "Mygtukas aukštyn krypties skydelyje"
 
 #: device.cpp:60
 #, kde-format
 msgctxt "The game controller's d-pad down button"
 msgid "D-pad down button"
-msgstr ""
+msgstr "Mygtukas žemyn krypties skydelyje"
 
 #: device.cpp:61
 #, kde-format
 msgctxt "The game controller's d-pad left button"
 msgid "D-pad left button"
-msgstr ""
+msgstr "Mygtukas kairėn krypties skydelyje"
 
 #: device.cpp:62
 #, kde-format
 msgctxt "The game controller's d-pad right button"
 msgid "D-pad right button"
-msgstr ""
+msgstr "Mygtukas dešinėn krypties skydelyje"
 
 #: device.cpp:64
 #, kde-format
@@ -252,7 +248,7 @@ msgctxt ""
 "The game controller's miscellaneous button (Share on Xbox, mic on "
 "Playstation/Luna, capture on Switch)"
 msgid "Miscellaneous button"
-msgstr ""
+msgstr "Mygtukas „Kita“"
 
 #: device.cpp:65
 #, kde-format
@@ -331,6 +327,9 @@ msgid ""
 "Allow game controllers to act like pointer and keyboard devices in Plasma "
 "and non-game applications.<nl/><nl/>Games can always use the controller."
 msgstr ""
+"Leisti, kad žaidimų valdikliai Plasma ir ne žaidimų programose būtų "
+"naudojami kaip rodyklės ir klaviatūros įrenginiai.<nl/><nl/>Žaidimai visada "
+"gali naudoti valdiklį."
 
 #: ui/main.qml:51
 #, kde-format
@@ -353,6 +352,10 @@ msgid ""
 "controller, or enable automatic blocking by allowing the use as pointer and "
 "keyboard."
 msgstr ""
+"Naudojant valdiklį sistema gali būti pristabdyta ar užrakinti ekraną. "
+"Apsvarstykite galimybę rankiniu būdu užblokuoti sistemos pristabdymą ir "
+"ekrano užrakinimą, kol naudojate valdiklį, arba įjunkite automatinį "
+"blokavimą leisdami naudoti valdiklį kaip rodyklę ir klaviatūrą."
 
 #: ui/main.qml:97
 #, kde-format
