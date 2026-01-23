@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-10 15:51+0100\n"
+"PO-Revision-Date: 2026-01-16 14:52+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -42,12 +42,7 @@ msgstr ""
 "applicazioni di KDE."
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid ""
-#| "Do you want to delete the saved index data? %1 of space will be freed, "
-#| "but if indexing is re-enabled later, the entire index will have to be re-"
-#| "created from scratch. This may take some time, depending on how many "
-#| "files you have."
+#, kde-format
 msgctxt "@info:inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -58,7 +53,7 @@ msgstr ""
 "Vuoi eliminare i dati indice salvati? Verrebbero liberati %1 di spazio, ma "
 "se l'indicizzazione verrà riabilitata successivamente, l'intero indice dovrà "
 "essere ricreato da capo. Ci vorrà un po' di tempo, a seconda del numero di "
-"file."
+"file da indicizzare."
 
 #: ui/main.qml:73
 #, kde-format

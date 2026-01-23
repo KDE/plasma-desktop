@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-23 02:42+0000\n"
 "PO-Revision-Date: 2026-01-16 17:38+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -31,7 +31,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: backend.cpp:284
+#: backend.cpp:288
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
@@ -41,40 +41,40 @@ msgstr[1] "Ещё %1 точки входа..."
 msgstr[2] "Ещё %1 точек входа..."
 msgstr[3] "Ещё %1 точка входа..."
 
-#: backend.cpp:368
+#: backend.cpp:372
 #, kde-format
 msgid "Recent Downloads"
 msgstr "Последние загрузки"
 
-#: backend.cpp:370
+#: backend.cpp:374
 #, kde-format
 msgid "Recent Connections"
 msgstr "Недавние подключения"
 
-#: backend.cpp:372
+#: backend.cpp:376
 #, kde-format
 msgid "Recent Places"
 msgstr "Недавние точки входа"
 
-#: backend.cpp:381
+#: backend.cpp:385
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
 msgstr "Очистить список последних загруженных файлов"
 
-#: backend.cpp:383
+#: backend.cpp:387
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
 msgstr "Очистить список последних использованных сетевых подключений файлов"
 
-#: backend.cpp:385
+#: backend.cpp:389
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
 msgstr "Очистить список последних использованных точек входа"
 
-#: backend.cpp:387
+#: backend.cpp:391
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"

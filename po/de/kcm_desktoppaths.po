@@ -6,20 +6,21 @@
 # SPDX-FileCopyrightText: 2013 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
 # SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2024-11-20 14:40+0100\n"
-"Last-Translator: Flori G <Renner03@protonmail.com>\n"
+"PO-Revision-Date: 2026-01-18 02:02+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: ui/main.qml:52
 #, kde-format
@@ -45,8 +46,8 @@ msgstr "Dokumentenordner:"
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung zum Öffnen oder Speichern von "
-"Dokumenten benutzt."
+"Dieser Ordner wird standardmäßig zum Öffnen oder Speichern von Dokumenten "
+"verwendet."
 
 #: ui/main.qml:80
 #, kde-format
@@ -59,8 +60,8 @@ msgstr "Downloadordner:"
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung zum Speichern von heruntergeladenen "
-"Dateien benutzt."
+"Dieser Ordner wird standardmäßig zum Speichern von heruntergeladenen Dateien "
+"verwendet."
 
 #: ui/main.qml:94
 #, kde-format
@@ -73,8 +74,8 @@ msgstr "Videoordner:"
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung zum Öffnen oder Speichern von "
-"Videodateien benutzt."
+"Dieser Ordner wird standardmäßig zum Öffnen oder Speichern von Videodateien "
+"verwendet."
 
 #: ui/main.qml:108
 #, kde-format
@@ -87,8 +88,8 @@ msgstr "Bilderordner:"
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung zum Öffnen oder Speichern von "
-"Bilddateien benutzt."
+"Dieser Ordner wird standardmäßig zum Öffnen oder Speichern von Bilddateien "
+"verwendet."
 
 #: ui/main.qml:122
 #, kde-format
@@ -101,8 +102,8 @@ msgstr "Musikordner:"
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung zum Öffnen oder Speichern von "
-"Musikdateien benutzt."
+"Dieser Ordner wird standardmäßig zum Öffnen oder Speichern von Musikdateien "
+"verwendet."
 
 #: ui/main.qml:136
 #, kde-format
@@ -117,8 +118,8 @@ msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung für öffentlich freigegebene Dateien "
-"verwendet, wenn Netzwerkfreigaben eingeschaltet sind."
+"Dieser Ordner wird standardmäßig für öffentlich freigegebene Dateien "
+"verwendet, wenn Netzwerkfreigaben aktiviert sind."
 
 #: ui/main.qml:150
 #, kde-format
@@ -131,8 +132,8 @@ msgstr "Vorlagenordner:"
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung zum Öffnen oder Speichern von "
-"Dateivorlagen benutzt."
+"Dieser Ordner wird standardmäßig zum Öffnen oder Speichern von Dateivorlagen "
+"verwendet."
 
 #: ui/UrlRequester.qml:74
 #, kde-format

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-16 03:02+0000\n"
-"PO-Revision-Date: 2026-01-14 20:18+0100\n"
+"PO-Revision-Date: 2026-01-18 01:51+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -471,29 +471,25 @@ msgid "Width"
 msgstr "Breite"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, fuzzy, kde-format
-#| msgid "Fill height"
+#, kde-format
 msgctxt "@item:inlistbox panel fills the full height of the display"
 msgid "Fill height"
 msgstr "Höhe ausfüllen"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, fuzzy, kde-format
-#| msgid "Fill width"
+#, kde-format
 msgctxt "@item:inlistbox panel fills the full width of the display"
 msgid "Fill width"
 msgstr "Breite ausfüllen"
 
 #: contents/configuration/PanelConfiguration.qml:335
-#, fuzzy, kde-format
-#| msgid "Fit content"
+#, kde-format
 msgctxt "@item:inlistbox panel is just big enough to fit its content"
 msgid "Fit content"
-msgstr "Inhalt anpassen"
+msgstr "An Inhalt anpassen"
 
 #: contents/configuration/PanelConfiguration.qml:336
-#, fuzzy, kde-format
-#| msgid "Custom"
+#, kde-format
 msgctxt "@item:inlistbox panel size"
 msgid "Custom"
 msgstr "Benutzerdefiniert"
@@ -596,11 +592,10 @@ msgid "Panel Height:"
 msgstr "Höhe der Kontrollleiste:"
 
 #: contents/configuration/PanelConfiguration.qml:671
-#, fuzzy, kde-format
-#| msgid "Focus shortcut:"
+#, kde-format
 msgctxt "@title:group shortcut that moves focus to the panel"
 msgid "Focus shortcut:"
-msgstr "Kurzbefehl sichtbar machen:"
+msgstr "Kurzbefehl zum Fokussieren:"
 
 #: contents/configuration/PanelConfiguration.qml:682
 #, kde-format
@@ -610,11 +605,10 @@ msgstr ""
 "Verwenden Sie diesen Tastaturkurzbefehl, um die Kontrollleiste zu fokussieren"
 
 #: contents/configuration/PanelConfiguration.qml:689
-#, fuzzy, kde-format
-#| msgid "Focus shortcut:"
+#, kde-format
 msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
-msgstr "Kurzbefehl sichtbar machen:"
+msgstr "Legt den Kurzbefehl zum Fokussieren fest"
 
 #: contents/configuration/PanelConfiguration.qml:690
 #, kde-format
@@ -629,12 +623,11 @@ msgid "Delete Panel"
 msgstr "Kontrollleiste entfernen"
 
 #: contents/configuration/PanelConfiguration.qml:719
-#, fuzzy, kde-format
-#| msgid "Remove this panel; this action is undo-able"
+#, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Remove this panel; this action can be undone"
 msgstr ""
-"Diese Kontrollleiste entfernen; diese Aktion kann rückgängig gemacht werden"
+"Diese Kontrollleiste entfernen. Diese Aktion kann rückgängig gemacht werden"
 
 #: contents/configuration/PanelConfiguration.qml:728
 #, kde-format
@@ -1023,15 +1016,13 @@ msgid "(or scan your smartcard)"
 msgstr "(oder Smartcard einlesen)"
 
 #: contents/lockscreen/MediaControls.qml:59
-#, fuzzy, kde-format
-#| msgid "No title"
+#, kde-format
 msgctxt "@info:status"
 msgid "No title"
 msgstr "Kein Titel"
 
 #: contents/lockscreen/MediaControls.qml:60
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgctxt "@info:status"
 msgid "No media playing"
 msgstr "Es werden keine Medien wiedergegeben"
