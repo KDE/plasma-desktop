@@ -6,20 +6,21 @@
 # SPDX-FileCopyrightText: 2013 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
 # SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2023-01-31 20:54+0100\n"
-"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
+"PO-Revision-Date: 2026-01-18 02:02+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: desktoppathssettings.cpp:197
 #, kde-format
@@ -105,8 +106,8 @@ msgstr "Pfad für Dokumente:"
 msgid ""
 "This folder will be used by default to load or save documents from or to."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von "
-"Dokumenten benutzt."
+"Dieser Ordner wird standardmäßig zum Laden oder Speichern von Dokumenten "
+"verwendet."
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: globalpaths.ui:51
@@ -119,8 +120,8 @@ msgstr "Pfad für heruntergeladene Dateien:"
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung zum Speichern von heruntergeladenen "
-"Dateien benutzt."
+"Dieser Ordner wird standardmäßig zum Speichern von heruntergeladenen Dateien "
+"verwendet."
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: globalpaths.ui:68
@@ -133,8 +134,8 @@ msgstr "Pfad für Videos:"
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Filmen "
-"benutzt."
+"Dieser Ordner wird standardmäßig zum Laden oder Speichern von Filmen "
+"verwendet."
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: globalpaths.ui:85
@@ -148,8 +149,8 @@ msgstr "Pfad für Bilder:"
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Bildern "
-"benutzt."
+"Dieser Ordner wird standardmäßig zum Laden oder Speichern von Bildern "
+"verwendet."
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: globalpaths.ui:102
@@ -162,8 +163,8 @@ msgstr "Pfad für Musik:"
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Musik "
-"benutzt."
+"Dieser Ordner wird standardmäßig zum Laden oder Speichern von Musik "
+"verwendet."
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: globalpaths.ui:119
@@ -177,8 +178,8 @@ msgstr "Pfad für Öffentlich:"
 msgid ""
 "This folder will be used by default to load or save public shares from or to."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von "
-"öffentlichen Freigaben benutzt."
+"Dieser Ordner wird standardmäßig zum Laden oder Speichern von öffentlichen "
+"Freigaben verwendet."
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: globalpaths.ui:136
@@ -192,8 +193,8 @@ msgstr "Pfad für Vorlagen:"
 msgid ""
 "This folder will be used by default to load or save templates from or to."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Vorlagen "
-"benutzt."
+"Dieser Ordner wird standardmäßig zum Laden oder Speichern von Vorlagen "
+"verwendet."
 
 #~ msgid "Autostart path:"
 #~ msgstr "Pfad zu Autostart:"
