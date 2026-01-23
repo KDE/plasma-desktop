@@ -1232,10 +1232,9 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
         dropTargetUrl = item.mostLocalUrl();
     }
 
-    auto dropTargetFolderUrl = dropTargetUrl;
-    if (dropTargetFolderUrl.fileName() == QLatin1Char('.')) {
+    if (dropTargetUrl.fileName() == QLatin1Char('.')) {
         // the target URL for desktop:/ is e.g. 'file://home/user/Desktop/.'
-        dropTargetFolderUrl = dropTargetFolderUrl.adjusted(QUrl::RemoveFilename);
+        dropTargetUrl = dropTargetUrl.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash);
     }
 
     // use dropTargetUrl to resolve desktop:/ to the actual file location which is also used by the mime data
@@ -1243,10 +1242,10 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
      * use a fancy scheme like desktop:/ instead. Ensure we always use the latter to properly map URLs,
      * i.e. go from file:///home/user/Desktop/file to desktop:/file
      */
-    auto mappableUrl = [this, dropTargetFolderUrl](const QUrl &url) -> QUrl {
-        if (dropTargetFolderUrl != m_dirModel->dirLister()->url()) {
+    auto mappableUrl = [this, dropTargetUrl](const QUrl &url) -> QUrl {
+        if (dropTargetUrl != m_dirModel->dirLister()->url()) {
             QString mappedUrl = url.toString();
-            const auto local = dropTargetFolderUrl.toString();
+            const auto local = dropTargetUrl.toString();
             const auto internal = m_dirModel->dirLister()->url().toString();
             if (mappedUrl.startsWith(local)) {
                 mappedUrl.replace(0, local.size(), internal);
@@ -1288,7 +1287,7 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
     }
 
     if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
-        if (isDropBetweenSharedViews(mimeData->urls(), dropTargetFolderUrl)) {
+        if (isDropBetweenSharedViews(mimeData->urls(), dropTargetUrl)) {
             setUnsortedModeOnDrop();
             const QList<QUrl> urls = mimeData->urls();
             for (const auto &url : urls) {
