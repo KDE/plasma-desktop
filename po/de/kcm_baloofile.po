@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-09 23:03+0100\n"
+"PO-Revision-Date: 2026-01-18 01:49+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -42,12 +42,7 @@ msgstr ""
 "die erweiterte Metadatenanzeige in allen KDE-Anwendungen deaktiviert."
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid ""
-#| "Do you want to delete the saved index data? %1 of space will be freed, "
-#| "but if indexing is re-enabled later, the entire index will have to be re-"
-#| "created from scratch. This may take some time, depending on how many "
-#| "files you have."
+#, kde-format
 msgctxt "@info:inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -56,9 +51,9 @@ msgid ""
 "index."
 msgstr ""
 "Möchten Sie die gespeicherten Indexdaten löschen? %1 Speicherplatz wird "
-"freigegeben, aber wenn die Indexierung später wieder aktiviert wird, muss "
-"der gesamte Index von Grund auf neu erstellt werden. Dies kann einige Zeit "
-"dauern, je nachdem, wie viele Dateien Sie haben."
+"freigegeben, aber wenn die Indizierung später wieder aktiviert wird, muss "
+"der gesamte Index von Grund auf neu erstellt werden. Dies kann, je nach "
+"Anzahl der zu indizierenden Dateien, einige Zeit dauern."
 
 #: ui/main.qml:73
 #, kde-format

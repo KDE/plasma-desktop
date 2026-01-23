@@ -1,14 +1,14 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2024, 2025 Alexander Yavorsky <kekcuha@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 Alexander Yavorsky <kekcuha@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-10-12 20:01+0200\n"
-"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2026-01-20 18:53+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -16,46 +16,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: KeyboardButton.qml:19
-#, fuzzy
-#| msgid "Keyboard Layout: %1"
 msgctxt "@action:button opens layout chooser %1 is current"
 msgid "Keyboard Layout: %1"
 msgstr "Раскладка клавиатуры: %1"
 
 #: Login.qml:86
-#, fuzzy
-#| msgid "Username"
 msgctxt "@info:placeholder in textfield"
 msgid "Username"
 msgstr "Имя пользователя"
 
 #: Login.qml:103
-#, fuzzy
-#| msgid "Password"
 msgctxt "@info:placeholder in textfield"
 msgid "Password"
 msgstr "Пароль"
 
 #: Login.qml:145
-#, fuzzy
-#| msgid "Log In"
 msgctxt "@action:button Accessible name"
 msgid "Log in"
 msgstr "Войти"
 
 #: Login.qml:151
-#, fuzzy
-#| msgid "Log In"
 msgctxt "@action:button"
 msgid "Log In"
 msgstr "Войти"
 
 #: Main.qml:200
-#, fuzzy
-#| msgid "Caps Lock is on"
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "Включён режим Caps Lock"
@@ -66,45 +54,31 @@ msgid "Hibernate"
 msgstr "Гибернация"
 
 #: Main.qml:218 Main.qml:357
-#, fuzzy
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
 msgctxt "@action:button Suspend to RAM"
 msgid "Sleep"
 msgstr "Сон"
 
 #: Main.qml:224 Main.qml:363
-#, fuzzy
-#| msgid "Restart"
 msgctxt "@action:button"
 msgid "Restart"
 msgstr "Перезапустить"
 
 #: Main.qml:230 Main.qml:369
-#, fuzzy
-#| msgid "Shut Down"
 msgctxt "@action:button"
 msgid "Shut Down"
 msgstr "Выключить"
 
 #: Main.qml:236
-#, fuzzy
-#| msgctxt "For switching to a username and password prompt"
-#| msgid "Other…"
 msgctxt "@action:button For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Другой…"
 
 #: Main.qml:343
-#, fuzzy
-#| msgid "Type in Username and Password"
 msgctxt "@info:usagetip"
 msgid "Type in Username and Password"
 msgstr "Введите имя пользователя и пароль"
 
 #: Main.qml:375
-#, fuzzy
-#| msgid "List Users"
 msgctxt "@action:button"
 msgid "List Users"
 msgstr "Список пользователей"
@@ -115,15 +89,11 @@ msgid "Virtual Keyboard"
 msgstr "Виртуальная клавиатура"
 
 #: Main.qml:516
-#, fuzzy
-#| msgid "Login Failed"
 msgctxt "@info:status"
 msgid "Login Failed"
 msgstr "Не удалось выполнить вход"
 
 #: SessionButton.qml:18
-#, fuzzy
-#| msgid "Desktop Session: %1"
 msgctxt "@action:button opens sessions menu %1 is current"
 msgid "Desktop Session: %1"
 msgstr "Графический сеанс: %1"

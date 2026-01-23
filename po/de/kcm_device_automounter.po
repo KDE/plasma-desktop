@@ -4,20 +4,21 @@
 # SPDX-FileCopyrightText: 2011 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2011 Panagiotis Papadopoulos <pano_90@gmx.net>
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
+# SPDX-FileCopyrightText: 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2023-02-27 19:50+0100\n"
-"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
+"POT-Creation-Date: 2026-01-23 00:45+0000\n"
+"PO-Revision-Date: 2026-01-19 00:45+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,16 +32,21 @@ msgstr "kde-i18n-de@kde.org"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This list contains the storage devices known to the system. If "
+#| "\"Automount on Login\" is checked, the device will be automatically "
+#| "mounted even though \"Mount all removable media at login\" is unchecked. "
+#| "The same applies for \"Automount on Attach\"."
 msgid ""
 "This list contains the storage devices known to the system. If \"Automount "
-"on Login\" is checked, the device will be automatically mounted even though "
+"on Login\" is checked, devices will be automatically mounted even though "
 "\"Mount all removable media at login\" is unchecked. The same applies for "
 "\"Automount on Attach\"."
 msgstr ""
-"Diese Liste zeigt alle Geräte, die dem System bekannt sind. Wenn die "
-"Einstellung „Automatisches Einhängen beim Anmelden“ aktiviert ist, wird das "
-"Gerät automatisch eingebunden, selbst wenn die Einstellung „Alle "
+"Diese Liste zeigt alle Speichermedien, die dem System bekannt sind. Wenn die "
+"Einstellung „Automatisches Einhängen beim Anmelden“ aktiviert ist, werden "
+"Geräte automatisch eingebunden, selbst, wenn die Einstellung „Alle "
 "Wechselmedien beim Anmelden einhängen” nicht aktiviert ist. Das Gleiche gilt "
 "für die Einstellung „Automatisches Einhängen beim Anschluss des Gerätes“."
 
