@@ -110,22 +110,6 @@ KCM.SimpleKCM {
             }
         }
 
-        Item {
-            Kirigami.FormData.isSection: true
-        }
-
-        QQC2.ComboBox {
-            id: appNameFormat
-
-            Kirigami.FormData.label: i18nc("@label:listbox", "Show applications as:") // qmllint disable unqualified
-
-            model: [i18nc("@item:inlistbox", "Name only"), i18nc("@item:inlistbox", "Description only"), i18nc("@item:inlistbox", "Name (Description)"), i18nc("@item:inlistbox", "Description (Name)")] // qmllint disable unqualified
-        }
-
-        Item {
-            Kirigami.FormData.isSection: true
-        }
-
         Kirigami.ActionTextField {
             id: menuLabel
             enabled: Plasmoid.formFactor !== PlasmaCore.Types.Vertical
@@ -161,6 +145,18 @@ KCM.SimpleKCM {
             text: i18nc("@info", "A text label cannot be set when the Panel is vertical.") // qmllint disable unqualified
             wrapMode: Text.Wrap
             font: Kirigami.Theme.smallFont
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+        QQC2.ComboBox {
+            id: appNameFormat
+
+            Kirigami.FormData.label: i18nc("@label:listbox", "Show applications as:") // qmllint disable unqualified
+
+            model: [i18nc("@item:inlistbox", "Name only"), i18nc("@item:inlistbox", "Description only"), i18nc("@item:inlistbox", "Name (Description)"), i18nc("@item:inlistbox", "Description (Name)")] // qmllint disable unqualified
         }
 
         Item {
