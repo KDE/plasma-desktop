@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2023, 2024, 2025 giovanni <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 giovanni <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-16 00:45+0000\n"
-"PO-Revision-Date: 2025-05-09 18:21+0200\n"
+"PO-Revision-Date: 2026-01-23 16:34+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -41,15 +41,14 @@ msgid "Unknown"
 msgstr ""
 
 #: device.cpp:18
-#, fuzzy, kde-format
-#| msgid "No game controllers found"
+#, kde-format
 msgid "Game Controller"
-msgstr "Nulle controlores de joco trovate"
+msgstr "Controlator de Joco"
 
 #: device.cpp:19
 #, kde-format
 msgid "Wheel"
-msgstr ""
+msgstr "Rota"
 
 #: device.cpp:20
 #, kde-format
@@ -69,7 +68,7 @@ msgstr ""
 #: device.cpp:23
 #, kde-format
 msgid "Guitar"
-msgstr ""
+msgstr "Gitarra"
 
 #: device.cpp:24
 #, kde-format
@@ -87,14 +86,14 @@ msgid "Throttle"
 msgstr ""
 
 #: device.cpp:31
-#, kde-format
+#, fuzzy, kde-format
 msgid "XBox 360"
-msgstr ""
+msgstr "Xbox"
 
 #: device.cpp:32
-#, kde-format
+#, fuzzy, kde-format
 msgid "XBox One"
-msgstr ""
+msgstr "Xbox One"
 
 #: device.cpp:33
 #, kde-format
@@ -114,7 +113,7 @@ msgstr ""
 #: device.cpp:36
 #, kde-format
 msgid "Virtual"
-msgstr ""
+msgstr "Virtual"
 
 #: device.cpp:37
 #, kde-format
@@ -184,12 +183,10 @@ msgid "Y button"
 msgstr "Buttones:"
 
 #: device.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The back game controller button"
 msgid "Back button"
-msgstr "Buttones:"
+msgstr "Button de retro"
 
 #: device.cpp:53
 #, kde-format
@@ -293,22 +290,22 @@ msgid "Touchpad button"
 msgstr ""
 
 #: device.cpp:73
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "Unknown controller connection type"
 msgid "Unknown"
-msgstr ""
+msgstr "Incognite"
 
 #: device.cpp:74
 #, kde-format
 msgctxt "USB connected controller"
 msgid "USB"
-msgstr ""
+msgstr "USB"
 
 #: device.cpp:75
 #, kde-format
 msgctxt "Bluetooth connected controller"
 msgid "Bluetooth"
-msgstr ""
+msgstr "Bluetooth"
 
 #: device.cpp:83
 #, kde-format
@@ -342,15 +339,13 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:51
-#, fuzzy, kde-format
-#| msgid "No game controllers found"
+#, kde-format
 msgctxt "@info placeholdermessage text"
 msgid "No game controllers found"
 msgstr "Nulle controlores de joco trovate"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Connect a wired or wireless controller"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage text"
 msgid "Connect a wired or wireless controller"
 msgstr "Connecte un Controlator con o sin cablos"
@@ -372,13 +367,11 @@ msgid "Device:"
 msgstr "Dispositivo:"
 
 #: ui/main.qml:119
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Device:"
+#, kde-format
 msgctxt ""
 "@label game controller device type (wheel, joystick, game controller, etc.)"
 msgid "Device type:"
-msgstr "Dispositivo:"
+msgstr "Typo de dispositivo:"
 
 #: ui/main.qml:135
 #, kde-format
@@ -390,7 +383,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Connection type:"
-msgstr ""
+msgstr "Typo de connexion:"
 
 #: ui/main.qml:173
 #, kde-format

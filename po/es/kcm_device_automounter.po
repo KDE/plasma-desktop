@@ -1,15 +1,15 @@
 # Spanish translations for kcm_device_automounter.po package.
-# Copyright (C) 2015-2025 This file is copyright:
+# Copyright (C) 2015-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 # Automatically generated, 2015.
 #
-# SPDX-FileCopyrightText: 2015, 2020, 2021, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2015, 2020, 2021, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-23 00:45+0000\n"
-"PO-Revision-Date: 2025-05-26 00:44+0100\n"
+"PO-Revision-Date: 2026-01-23 20:13+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.08.2\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,12 +31,7 @@ msgstr "ecuadra@eloihr.net"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "This list contains the storage devices known to the system. If "
-#| "\"Automount on Login\" is checked, the device will be automatically "
-#| "mounted even though \"Mount all removable media at login\" is unchecked. "
-#| "The same applies for \"Automount on Attach\"."
+#, kde-format
 msgid ""
 "This list contains the storage devices known to the system. If \"Automount "
 "on Login\" is checked, devices will be automatically mounted even though "
@@ -44,8 +39,8 @@ msgid ""
 "\"Automount on Attach\"."
 msgstr ""
 "Esta lista contiene los dispositivos de almacenamiento conocidos por el "
-"sistema. Si está marcado «Montar automáticamente al iniciar sesión», el "
-"dispositivo se montará automáticamente incluso cuando no esté marcado "
+"sistema. Si está marcado «Montar automáticamente al iniciar sesión», los "
+"dispositivos se montarán automáticamente incluso cuando no esté marcado "
 "«Montar todos los dispositivos extraíbles al iniciar sesión». Lo mismo se "
 "aplica para «Montar automáticamente al conectarlo»."
 
