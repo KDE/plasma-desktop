@@ -330,7 +330,8 @@ void KAccessConfig::save()
         reloadMessage.setArguments({QStringLiteral("colorblindnesscorrection")});
         QDBusConnection::sessionBus().call(reloadMessage);
     }
-    if (colorblindnessCorrectionSettingsSaveNeeded) {
+
+    if (colorblindnessCorrectionSaveNeeded || colorblindnessCorrectionSettingsSaveNeeded) {
         QDBusMessage reconfigureMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
                                                                          QStringLiteral("/Effects"),
                                                                          QStringLiteral("org.kde.kwin.Effects"),
