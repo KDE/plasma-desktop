@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-03 13:44+0100\n"
+"PO-Revision-Date: 2026-01-24 10:24+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -19,24 +19,19 @@ msgstr ""
 "X-Generator: Lokalize 25.08.2\n"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Pause Indexer"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pause Indexer"
 msgstr "Wstrzymaj spisywanie"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Resume Indexer"
+#, kde-format
 msgctxt "@action:button"
 msgid "Resume Indexer"
 msgstr "Wznów spisywanie"
 
 #: ui/main.qml:61
-#, fuzzy, kde-format
-#| msgid ""
-#| "This will disable file searching in KRunner and launcher menus, and "
-#| "remove extended metadata display from all KDE applications."
+#, kde-format
 msgctxt "@info inlinemessage"
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -47,12 +42,7 @@ msgstr ""
 "KDE"
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid ""
-#| "Do you want to delete the saved index data? %1 of space will be freed, "
-#| "but if indexing is re-enabled later, the entire index will have to be re-"
-#| "created from scratch. This may take some time, depending on how many "
-#| "files you have."
+#, kde-format
 msgctxt "@info:inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -62,21 +52,16 @@ msgid ""
 msgstr ""
 "Czy chcesz usunąć spis plików i katalogów? Dzięki temu zwolnisz %1 miejsca, "
 "jednak ponowne włączenie spisywania będzie wymagało stworzenia tego spisu od "
-"nowa. Może to trochę potrwać, w zależności od liczby plików na twoim "
-"systemie."
+"nowa. Może to trochę potrwać, w zależności od liczby plików do spisania."
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgid "Delete Index Data"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delete Index Data"
 msgstr "Usuń spis plików"
 
 #: ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid ""
-#| "File Search helps you quickly locate your files. You can choose which "
-#| "folders and what types of file data are indexed."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
@@ -92,29 +77,25 @@ msgid "Data to index:"
 msgstr "Dane do spisania:"
 
 #: ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "Nothing (disable indexing entirely)"
+#, kde-format
 msgctxt "@option:radio Data to index"
 msgid "Nothing (disable indexing entirely)"
 msgstr "Nic (wyłącz całkowicie spisywanie)"
 
 #: ui/main.qml:121
-#, fuzzy, kde-format
-#| msgid "File names only"
+#, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names only"
 msgstr "Tylko nazwy plików"
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "File names and contents"
+#, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names and contents"
 msgstr "Nazwy i treść plików"
 
 #: ui/main.qml:157
-#, fuzzy, kde-format
-#| msgid "Also index hidden files and folders"
+#, kde-format
 msgctxt "@option:check"
 msgid "Also index hidden files and folders"
 msgstr "Spisuj także ukryte pliki i katalogi"
@@ -150,15 +131,13 @@ msgid "Currently indexing: <filename>%1</filename>"
 msgstr "Obecnie spisuję: <filename>%1</filename>"
 
 #: ui/main.qml:270
-#, fuzzy, kde-format
-#| msgid "Not indexed"
+#, kde-format
 msgctxt "@info:status"
 msgid "Not indexed"
 msgstr "Niespisany"
 
 #: ui/main.qml:271
-#, fuzzy, kde-format
-#| msgid "Indexed"
+#, kde-format
 msgctxt "@info:status"
 msgid "Indexed"
 msgstr "Spisany"
@@ -170,15 +149,13 @@ msgid "Remove entry"
 msgstr "Usuń wpis"
 
 #: ui/main.qml:318
-#, fuzzy, kde-format
-#| msgid "Select a folder to include"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to include"
 msgstr "Wybierz katalog do uwzględnienia"
 
 #: ui/main.qml:318
-#, fuzzy, kde-format
-#| msgid "Select a folder to exclude"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to exclude"
 msgstr "Wybierz katalog do wykluczenia"

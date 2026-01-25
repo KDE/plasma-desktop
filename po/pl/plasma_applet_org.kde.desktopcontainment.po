@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-08-16 07:09+0200\n"
+"PO-Revision-Date: 2026-01-24 10:35+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -16,130 +16,112 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: package/contents/config/config.qml:17
-#, fuzzy, kde-format
-#| msgid "Location"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Location"
 msgstr "Położenie"
 
 #: package/contents/config/config.qml:24
-#, fuzzy, kde-format
-#| msgid "Icons"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Icons"
 msgstr "Ikony"
 
 #: package/contents/config/config.qml:31
-#, fuzzy, kde-format
-#| msgid "Filter"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Filter"
 msgstr "Filtr"
 
 #: package/contents/ui/BackButtonItem.qml:105
-#, fuzzy, kde-format
-#| msgid "Back"
+#, kde-format
 msgctxt "@action:button"
 msgid "Back"
 msgstr "Wstecz"
 
 #: package/contents/ui/ConfigFilter.qml:63
-#, fuzzy, kde-format
-#| msgid "Files:"
+#, kde-format
 msgctxt "@label:listbox filter mode"
 msgid "Files:"
 msgstr "Pliki:"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, fuzzy, kde-format
-#| msgid "Show all"
+#, kde-format
 msgctxt "@item:inlistbox filter mode"
 msgid "Show all"
 msgstr "Pokaż wszystkie"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, fuzzy, kde-format
-#| msgid "Show matching"
+#, kde-format
 msgctxt "@item:inlistbox filter mode"
 msgid "Show matching"
 msgstr "Pokaż pasujące"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, fuzzy, kde-format
-#| msgid "Hide matching"
+#, kde-format
 msgctxt "@item:inlistbox filter mode"
 msgid "Hide matching"
 msgstr "Ukryj pasujące"
 
 #: package/contents/ui/ConfigFilter.qml:69
-#, fuzzy, kde-format
-#| msgid "File name pattern:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "File name pattern:"
 msgstr "Wzorzec nazwy pliku:"
 
 #: package/contents/ui/ConfigFilter.qml:76
-#, fuzzy, kde-format
-#| msgid "File types:"
+#, kde-format
 msgctxt "@label:textbox filter list by"
 msgid "File types:"
 msgstr "Rodzaje plików:"
 
 #: package/contents/ui/ConfigFilter.qml:82
-#, fuzzy, kde-format
-#| msgid "Show hidden files:"
+#, kde-format
 msgctxt "@option:check prefix"
 msgid "Show hidden files:"
 msgstr "Pokaż ukryte pliki:"
 
 #: package/contents/ui/ConfigFilter.qml:111
-#, fuzzy, kde-format
-#| msgid "File Type"
+#, kde-format
 msgctxt "@title:column"
 msgid "File Type"
 msgstr "Rodzaj pliku"
 
 #: package/contents/ui/ConfigFilter.qml:112
-#, fuzzy, kde-format
-#| msgid "Description"
+#, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Opis"
 
 #: package/contents/ui/ConfigFilter.qml:182
-#, fuzzy, kde-format
-#| msgid "Select All"
+#, kde-format
 msgctxt "@action:button tooltip only Select all filetypes"
 msgid "Select All"
 msgstr "Zaznacz wszystko"
 
 #: package/contents/ui/ConfigFilter.qml:192
-#, fuzzy, kde-format
-#| msgid "Deselect All"
+#, kde-format
 msgctxt "@action:button tooltip only Deselect all filetypes"
 msgid "Deselect All"
 msgstr "Odznacz wszystko"
 
 #: package/contents/ui/ConfigFilter.qml:201
-#, fuzzy, kde-format
-#| msgid "Switch Sort Order"
+#, kde-format
 msgctxt "@action:button tooltip only, ascending/descending"
 msgid "Switch Sort Order"
 msgstr "Przełącz porządek szeregowania"
 
 #: package/contents/ui/ConfigIcons.qml:57
-#, fuzzy, kde-format
-#| msgid "Panel button:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox + button"
 msgid "Panel button:"
 msgstr "Przycisk panelu:"
 
 #: package/contents/ui/ConfigIcons.qml:63
-#, fuzzy, kde-format
-#| msgid "Use a custom icon"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use a custom icon"
 msgstr "Użyj własnej ikony"
@@ -148,7 +130,7 @@ msgstr "Użyj własnej ikony"
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
-msgstr "Wybierz..."
+msgstr "Wybierz…"
 
 #: package/contents/ui/ConfigIcons.qml:102
 #, kde-format
@@ -157,8 +139,7 @@ msgid "Clear Icon"
 msgstr "Wyczyść ikonę"
 
 #: package/contents/ui/ConfigIcons.qml:122
-#, fuzzy, kde-format
-#| msgid "Arrangement:"
+#, kde-format
 msgctxt "@label:listbox columns/rows"
 msgid "Arrangement:"
 msgstr "Rozmieść w:"
@@ -176,8 +157,7 @@ msgid "In Rows"
 msgstr "W wierszach"
 
 #: package/contents/ui/ConfigIcons.qml:135
-#, fuzzy, kde-format
-#| msgid "Sort Alignment:"
+#, kde-format
 msgctxt "@label:listbox, LtR/RtL"
 msgid "Sort Alignment:"
 msgstr "Wyrównanie szeregu:"
@@ -195,15 +175,13 @@ msgid "Right-to-Left"
 msgstr "Z prawej do lewej"
 
 #: package/contents/ui/ConfigIcons.qml:161
-#, fuzzy, kde-format
-#| msgid "Lock in place"
+#, kde-format
 msgctxt "@option:check lock icon positions"
 msgid "Lock in place"
 msgstr "Unieruchom w miejscu"
 
 #: package/contents/ui/ConfigIcons.qml:175
-#, fuzzy, kde-format
-#| msgid "Sort by:"
+#, kde-format
 msgctxt "@label:listbox sort items by field"
 msgid "Sort by:"
 msgstr "Uszereguj wg:"
@@ -269,31 +247,25 @@ msgid "Grid"
 msgstr "Siatka"
 
 #: package/contents/ui/ConfigIcons.qml:234
-#, fuzzy, kde-format
-#| msgid "Icon size:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Icon size:"
 msgstr "Rozmiar ikon:"
 
 #: package/contents/ui/ConfigIcons.qml:249
-#, fuzzy, kde-format
-#| msgctxt "@label:slider smallest icon size"
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inrange smallest icon size"
 msgid "Small"
 msgstr "Małe"
 
 #: package/contents/ui/ConfigIcons.qml:258
-#, fuzzy, kde-format
-#| msgctxt "@label:slider largest icon size"
-#| msgid "Large"
+#, kde-format
 msgctxt "@item:inrange largest icon size"
 msgid "Large"
 msgstr "Duże"
 
 #: package/contents/ui/ConfigIcons.qml:267
-#, fuzzy, kde-format
-#| msgid "Label width:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Label width:"
 msgstr "Szerokość etykiety:"
@@ -317,71 +289,61 @@ msgid "Wide"
 msgstr "Szeroka"
 
 #: package/contents/ui/ConfigIcons.qml:280
-#, fuzzy, kde-format
-#| msgid "Text lines:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Text lines:"
 msgstr "Liczba wierszy tekstu:"
 
 #: package/contents/ui/ConfigIcons.qml:296
-#, fuzzy, kde-format
-#| msgid "When hovering over icons:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "When hovering over icons:"
 msgstr "Po najechaniu na ikonę:"
 
 #: package/contents/ui/ConfigIcons.qml:298
-#, fuzzy, kde-format
-#| msgid "Show tooltips"
+#, kde-format
 msgctxt "@option:check When hovering over icons…"
 msgid "Show tooltips"
 msgstr "Pokaż podpowiedzi"
 
 #: package/contents/ui/ConfigIcons.qml:305
-#, fuzzy, kde-format
-#| msgid "Show selection markers"
+#, kde-format
 msgctxt "@option:check When hovering over icons…"
 msgid "Show selection markers"
 msgstr "Pokaż znaczniki zaznaczania"
 
 #: package/contents/ui/ConfigIcons.qml:312
-#, fuzzy, kde-format
-#| msgid "Show folder preview popups"
+#, kde-format
 msgctxt "@option:check When hovering over icons…"
 msgid "Show folder preview popups"
 msgstr "Pokaż okno podglądu katalogu"
 
 #: package/contents/ui/ConfigIcons.qml:322
-#, fuzzy, kde-format
-#| msgid "Rename:"
+#, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Rename:"
 msgstr "Zmień nazwę:"
 
 #: package/contents/ui/ConfigIcons.qml:326
-#, fuzzy, kde-format
-#| msgid "Rename inline by clicking selected item's text"
+#, kde-format
 msgctxt "@option:check"
 msgid "Rename inline by clicking selected item's text"
 msgstr "Zmień nazwę po naciśnięciu na nią i bez otwierania dodatkowego okna"
 
 #: package/contents/ui/ConfigIcons.qml:337
-#, fuzzy, kde-format
-#| msgid "Previews:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox and button"
 msgid "Previews:"
 msgstr "Podglądy:"
 
 #: package/contents/ui/ConfigIcons.qml:339
-#, fuzzy, kde-format
-#| msgid "Show preview thumbnails"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show preview thumbnails"
 msgstr "Pokaż miniatury podglądu"
 
 #: package/contents/ui/ConfigIcons.qml:347
-#, fuzzy, kde-format
-#| msgid "Configure Preview Plugins…"
+#, kde-format
 msgctxt "@action:button opens dialog"
 msgid "Configure Preview Plugins…"
 msgstr "Ustawienia wtyczek podglądu…"
@@ -459,36 +421,31 @@ msgid "Enter title…"
 msgstr "Wpisz tytuł…"
 
 #: package/contents/ui/ConfigOverlay.qml:97
-#, fuzzy, kde-format
-#| msgid "Click and drag to rotate"
+#, kde-format
 msgctxt "@action:button tooltip rotate widget"
 msgid "Click and drag to rotate"
 msgstr "Naciśnij i przeciągnij, aby obrócić"
 
 #: package/contents/ui/ConfigOverlay.qml:183
-#, fuzzy, kde-format
-#| msgid "Hide Background"
+#, kde-format
 msgctxt "@action:button tooltip hide widget background"
 msgid "Hide Background"
 msgstr "Ukryj tło"
 
 #: package/contents/ui/ConfigOverlay.qml:183
-#, fuzzy, kde-format
-#| msgid "Show Background"
+#, kde-format
 msgctxt "@action:button tooltip"
 msgid "Show Background"
 msgstr "Pokaż tło"
 
 #: package/contents/ui/ConfigOverlay.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button tooltip remove widget"
 msgid "Remove"
 msgstr "Usuń"
 
 #: package/contents/ui/FolderItemPreviewPluginsDialog.qml:18
-#, fuzzy, kde-format
-#| msgid "Preview Plugins"
+#, kde-format
 msgctxt "@title:window"
 msgid "Preview Plugins"
 msgstr "Wtyczki podglądów"
@@ -510,15 +467,13 @@ msgid "Folder is empty"
 msgstr "Katalog jest pusty"
 
 #: package/contents/ui/FolderViewLayer.qml:357
-#, fuzzy, kde-format
-#| msgid "Icons"
+#, kde-format
 msgctxt "@item:inmenu opens submenu with view options like sorting"
 msgid "Icons"
 msgstr "Ikony"
 
 #: package/contents/ui/main.qml:439
-#, fuzzy, kde-format
-#| msgid "Desktop and Wallpaper"
+#, kde-format
 msgctxt "@action:inmenu opens config dialog"
 msgid "Desktop and Wallpaper"
 msgstr "Pulpit i tapeta"

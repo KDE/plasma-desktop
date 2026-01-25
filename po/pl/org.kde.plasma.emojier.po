@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-03 13:41+0100\n"
+"PO-Revision-Date: 2026-01-24 10:17+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -46,8 +46,7 @@ msgid "Replace an existing instance"
 msgstr "Zastąp istniejące wystąpienie"
 
 #: app/ui/CategoryPage.qml:112
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:button clear emoji history"
 msgid "Clear History"
 msgstr "Wyczyść historię"
@@ -149,8 +148,7 @@ msgid "Copy Description"
 msgstr "Skopiuj opis"
 
 #: app/ui/CategoryPage.qml:368
-#, fuzzy, kde-format
-#| msgid "No recent Emojis"
+#, kde-format
 msgctxt "@label placeholder for empty recent emoji list"
 msgid "No recent Emojis"
 msgstr "Nie ma żadnych ostatnich Emoji"
@@ -162,15 +160,13 @@ msgid "No matching emoji found"
 msgstr "Nie znaleziono żadnego pasującego emoji"
 
 #: app/ui/Emojier.qml:44
-#, fuzzy, kde-format
-#| msgid "%1 copied to the clipboard"
+#, kde-format
 msgctxt "@info:status passive notification as action feedback, %1 is an emoji"
 msgid "%1 copied to the clipboard"
 msgstr "Skopiowano %1 do schowka"
 
 #: app/ui/Emojier.qml:58
-#, fuzzy, kde-format
-#| msgid "Recent"
+#, kde-format
 msgctxt "@title page title for Recent Emoji view, and sidebar label for it"
 msgid "Recent"
 msgstr "Ostatnie"
