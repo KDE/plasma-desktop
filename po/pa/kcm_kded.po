@@ -1,20 +1,20 @@
 # translation of kcmkded.po to Punjabi
 # SPDX-FileCopyrightText: 2004, 2005, 2024 Amanpreet Singh Alam <aalam@redhat.com>
 # Amanpreet Singh Brar <amanpreetalam@yahoo.com>, 2005.
-# SPDX-FileCopyrightText: 2007, 2008, 2020, 2021, 2024 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2007, 2008, 2020, 2021, 2024, 2026 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2024-10-25 23:48-0500\n"
+"PO-Revision-Date: 2026-01-24 08:42-0600\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.12.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kcmkded.cpp:115
@@ -82,65 +82,55 @@ msgid "All Services"
 msgstr "ਸਾਰੀਆਂ ਸਰਵਿਸਾਂ"
 
 #: ui/main.qml:124
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "@item:inlistbox List running services"
 msgid "Running"
 msgstr "ਚੱਲ ਰਹੀ ਹੈ"
 
 #: ui/main.qml:125
-#, fuzzy, kde-format
-#| msgctxt "List not running services"
-#| msgid "Not Running"
+#, kde-format
 msgctxt "@item:inlistbox List not running services"
 msgid "Not Running"
 msgstr "ਚੱਲ ਨਹੀਂ ਰਹੀ"
 
 #: ui/main.qml:162
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgctxt "@title:group list section"
 msgid "Startup Services"
 msgstr "ਸਟਾਰਟਅੱਪ ਸਰਵਿਸਾਂ"
 
 #: ui/main.qml:163
-#, fuzzy, kde-format
-#| msgid "Load-on-Demand Services"
+#, kde-format
 msgctxt "@title:group list section"
 msgid "Load-on-Demand Services"
 msgstr "ਲੋੜ 'ਤੇ ਲੋਡ ਸਰਵਿਸਾਂ"
 
 #: ui/main.qml:182
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Disable automatically loading %1 on startup"
-msgstr "ਸ਼ੁਰੂ ਵੇਲੇ ਇਸ ਸਰਵਿਸ ਨੂੰ ਆਪਣੇ-ਆਪ ਲੋਡ ਕਰਨ ਲਈ ਤਬਦੀਲ ਕਰੋ"
+msgstr "ਸ਼ੁਰੂ ਵੇਲੇ %1 ਸਰਵਿਸ ਨੂੰ ਆਪਣੇ-ਆਪ ਲੋਡ ਕਰਨ ਲਈ ਤਬਦੀਲ ਕਰੋ"
 
 #: ui/main.qml:182
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Enable automatically loading %1 on startup"
-msgstr "ਸ਼ੁਰੂ ਵੇਲੇ ਇਸ ਸਰਵਿਸ ਨੂੰ ਆਪਣੇ-ਆਪ ਲੋਡ ਕਰਨ ਲਈ ਤਬਦੀਲ ਕਰੋ"
+msgstr "ਸ਼ੁਰੂ ਵੇਲੇ %1 ਸਰਵਿਸ ਨੂੰ ਆਪਣੇ-ਆਪ ਲੋਡ ਕਰਨ ਲਈ ਤਬਦੀਲ ਕਰੋ"
 
 #: ui/main.qml:183
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Toggle automatically loading this service on startup"
 msgstr "ਸ਼ੁਰੂ ਵੇਲੇ ਇਸ ਸਰਵਿਸ ਨੂੰ ਆਪਣੇ-ਆਪ ਲੋਡ ਕਰਨ ਲਈ ਤਬਦੀਲ ਕਰੋ"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid "Not running"
+#, kde-format
 msgctxt "@info:status"
 msgid "Not running"
 msgstr "ਚੱਲ ਨਹੀਂ ਰਹੀ"
 
 #: ui/main.qml:228
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "@info:status"
 msgid "Running"
 msgstr "ਚੱਲ ਰਹੀ ਹੈ"
@@ -158,18 +148,16 @@ msgid "Start %1"
 msgstr "%1 ਨੂੰ ਸ਼ੁਰੂ ਕਰੋ"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Stop Service"
+#, kde-format
 msgctxt "@action:button"
 msgid "Stop Service"
-msgstr "ਸਰਵਿਸ ਰੋਕੋ"
+msgstr "ਸਰਵਿਸ ਨੂੰ ਰੋਕੋ"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid "Start Service"
+#, kde-format
 msgctxt "@action:button"
 msgid "Start Service"
-msgstr "ਸਰਵਿਸ ਸ਼ੁਰੂ ਕਰੋ"
+msgstr "ਸਰਵਿਸ ਨੂੰ ਚਲਾਓ"
 
 #~ msgctxt "List running services"
 #~ msgid "Running"

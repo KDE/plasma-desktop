@@ -1,27 +1,24 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2020, 2021, 2023, 2024, 2025 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2014, 2020, 2021, 2023, 2024, 2025, 2026 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-09-15 10:20-0500\n"
-"Last-Translator: A S Alam <aalam@punlinux.org>\n"
-"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-01-24 08:41-0600\n"
+"Last-Translator: A S Alam <aman@punlinux.org>\n"
+"Language-Team: pa\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: ui/main.qml:25
-#, fuzzy, kde-format
-#| msgid ""
-#| "The system must be restarted before changes to the middle-click paste "
-#| "setting can take effect."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
@@ -29,8 +26,7 @@ msgid ""
 msgstr "ਮਿਡਸ-ਕਲਿੱਕ ਚੇਪਣ ਸੈਟਿੰਗਾਂ ਦੇ ਪ੍ਰਭਾਵੀ ਹੋਣ ਲਈ ਸਿਸਟਮ ਨੂੰ ਮੁੜ-ਚਾਲੂ ਕਰਨਾ ਪਵੇਗਾ।"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgctxt "@action:button"
 msgid "Restart"
 msgstr "ਮੁੜ-ਚਾਲੂ ਕਰੋ"
@@ -91,11 +87,7 @@ msgid "Clicking in scrollbar track:"
 msgstr ""
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
-#| "to the clicked location'"
-#| msgid "Scrolls to the clicked location"
+#, kde-format
 msgctxt ""
 "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
 "scrolls to the clicked location'"
@@ -103,11 +95,7 @@ msgid "Scrolls to the clicked location"
 msgstr "ਕਲਿੱਕ ਕੀਤੇ ਟਿਕਾਣੇ ਲਈ ਸਕਰੋਲ ਕਰਦਾ ਹੈ"
 
 #: ui/main.qml:119
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
-#| "one page up or down'"
-#| msgid "Scrolls one page up or down"
+#, kde-format
 msgctxt ""
 "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
 "scrolls one page up or down'"
@@ -115,11 +103,7 @@ msgid "Scrolls one page up or down"
 msgstr "ਇੱਕ ਸਫ਼ਾ ਉੱਤੇ ਜਾਂ ਹੇਠਾਂ ਲਈ ਸਕਰੋਲ ਕਰਦਾ ਹੈ"
 
 #: ui/main.qml:137
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
-#| "to the clicked location'"
-#| msgid "Scrolls to the clicked location"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Middle-click to scroll to clicked location"
 msgstr "ਕਲਿੱਕ ਕੀਤੇ ਟਿਕਾਣੇ ਲਈ ਸਕਰੋਲ ਕਰਦਾ ਹੈ"
@@ -144,7 +128,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "ਕਲਿੱਕ ਕਰਨਾ"
 
 #: ui/main.qml:175
 #, kde-format
@@ -160,8 +144,7 @@ msgid "Selects them"
 msgstr "ਉਹਨਾਂ ਨੂੰ ਚੁਣੋ"
 
 #: ui/main.qml:201
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "ਇਸ ਦੀ ਬਜਾਏ ਦੋ ਵਾਰ ਕਲਿੱਕ ਕਰਕੇ ਖੋਲ੍ਹੋ"
@@ -173,8 +156,7 @@ msgid "Opens them"
 msgstr "ਉਹਨਾਂ ਨੂੰ ਖੋਲ੍ਹੋ"
 
 #: ui/main.qml:232
-#, fuzzy, kde-format
-#| msgid "Select by clicking on item's selection marker"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
 msgstr "ਆਈਟਮ ਦੇ ਚੋਣ ਨਿਸ਼ਾਨ ਨੂੰ ਕਲਿੱਕ ਕਰਕੇ ਚੁਣੋ"
@@ -196,11 +178,10 @@ msgid "Pastes selected text"
 msgstr "ਚੁਣੀ ਲਿਖਤ ਨੂੰ ਚੇਪਦਾ ਹੈ"
 
 #: ui/main.qml:268
-#, fuzzy, kde-format
-#| msgid "Double-click interval:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Double-click interval:"
-msgstr "ਡਬਲ ਕਲਿੱਕ ਇੰਟਰਵਲ:"
+msgstr "ਡਬਲ ਕਲਿੱਕ ਅੰਤਰਾਲ:"
 
 #: ui/main.qml:283
 #, kde-format
@@ -236,22 +217,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
-msgstr ""
+msgstr "ਖਿੱਚਣਾ ਅਤੇ ਡਰੌਪ ਕਰਨਾ"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
-msgstr "ਫਾਇਲ ਜਾਂ ਫੋਲਡਰ ਉੱਤੇ ਕਲਿੱਕ ਕਰਨਾ:"
+msgstr "ਜਦ ਫਾਇਲ ਜਾਂ ਫੋਲਡਰ ਨੂੰ ਖਿੱਚਿਆ ਜਾਵੇ:"
 
 #: ui/main.qml:362
 #, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
-msgstr ""
+msgstr "ਹਮੇਸ਼ਾ ਪੁੱਛੋ ਕਿ ਕੀ ਕਰਨਾ ਹੈ"
 
 #: ui/main.qml:378
 #, kde-kuit-format
@@ -281,24 +259,19 @@ msgid "Touch"
 msgstr "ਟੱਚ"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Enable Touch Mode:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Touch Mode:"
 msgstr "ਟੱਚ ਮੋਡ ਸਮਰੱਥ:"
 
 #: ui/main.qml:418
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
-#| msgid "Automatically enable as needed"
+#, kde-format
 msgctxt "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "ਲੋੜ ਮੁਤਾਬਕ ਆਪਣੇ-ਆਪ ਸਮਰੱਥ ਕਰੋ"
 
 #: ui/main.qml:418
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is never enabled'"
-#| msgid "Never enabled"
+#, kde-format
 msgctxt "option:radio As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "ਕਦੇ ਵੀ ਸਮਰੱਥ ਨਾ ਕਰੋ"

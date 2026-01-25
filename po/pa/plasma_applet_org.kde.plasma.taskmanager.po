@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2018, 2020, 2021, 2022, 2023, 2024, 2025 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2018, 2020, 2021, 2022, 2023, 2024, 2025, 2026 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-24 00:45+0000\n"
-"PO-Revision-Date: 2025-09-15 10:16-0500\n"
-"Last-Translator: A S Alam <aalam@punlinux.org>\n"
-"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-01-24 08:38-0600\n"
+"Last-Translator: A S Alam <aman@punlinux.org>\n"
+"Language-Team: pa\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: backend.cpp:288
 #, kde-format
@@ -95,15 +95,13 @@ msgid "9,999+"
 msgstr "9,999+"
 
 #: qml/config.qml:13
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Appearance"
 msgstr "ਦਿੱਖ"
 
 #: qml/config.qml:18
-#, fuzzy, kde-format
-#| msgid "Behavior"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Behavior"
 msgstr "ਰਵੱਈਆ"
@@ -465,11 +463,7 @@ msgid "Brings it to the current virtual desktop"
 msgstr "ਇਸ ਨੂੰ ਮੌਜੂਦਾ ਵਰਚੁਅਲ ਡੈਸਕਟਾਪ ਉੱਤੇ ਲਿਆਉਂਦਾ ਹੈ"
 
 #: qml/ConfigBehavior.qml:207
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/"
-#| "cycles through tasks/cycles through the selected task's windows'"
-#| msgid "Scrolling behavior:"
+#, kde-format
 msgctxt ""
 "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/cycles "
 "through tasks/cycles through the selected task's windows/adjusts the hovered "
@@ -500,11 +494,7 @@ msgid "Cycles through the hovered task’s windows"
 msgstr "ਹੋਰ ਕੀਤੀਆਂ ਟਾਕਸ ਵਿੰਡੋਆਂ ਵਿੱਚ ਘੁੰਮਾਓ"
 
 #: qml/ConfigBehavior.qml:214
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through "
-#| "the hovered task's windows'"
-#| msgid "Cycles through the hovered task’s windows"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior adjusts the hovered "
 "task’s volume'"
@@ -592,22 +582,19 @@ msgid "On the top"
 msgstr "ਸਿਖਰ ਉੱਤੇ"
 
 #: qml/ContextMenu.qml:100
-#, fuzzy, kde-format
-#| msgid "Places"
+#, kde-format
 msgctxt "@title:group for section of menu items"
 msgid "Places"
 msgstr "ਥਾਵਾਂ"
 
 #: qml/ContextMenu.qml:106
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgctxt "@title:group for section of menu items"
 msgid "Recent Files"
-msgstr "ਤਾਜ਼ਾ ਫ਼ਾਇਲਾਂ"
+msgstr "ਸੱਜਰੀਆਂ ਫਾਇਲ"
 
 #: qml/ContextMenu.qml:116
-#, fuzzy, kde-format
-#| msgid "Actions"
+#, kde-format
 msgctxt "@title:group for section of menu items"
 msgid "Actions"
 msgstr "ਕਾਰਵਾਈਆਂ"
@@ -655,162 +642,139 @@ msgid "Restore"
 msgstr "ਬਹਾਲ ਕਰੋ"
 
 #: qml/ContextMenu.qml:266
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@option:check inmenu, no separate unmute action"
 msgid "Mute"
 msgstr "ਚੁੱਪ"
 
 #: qml/ContextMenu.qml:277
-#, fuzzy, kde-format
-#| msgid "Open New Window"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Open New Window"
-msgstr "ਨਵੀਂ ਵਿੰਡੋ ਖੋਲ੍ਹੋ"
+msgstr "ਨਵੀਂ ਵਿੰਡੋ ਨੂੰ ਖੋਲ੍ਹੋ"
 
 #: qml/ContextMenu.qml:293
-#, fuzzy, kde-format
-#| msgid "Move to &Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move to &Desktop"
 msgstr "ਡੈਸਕਟਾਪ ਵਿੱਚ ਭੇਜੋ(&D)"
 
 #: qml/ContextMenu.qml:323
-#, fuzzy, kde-format
-#| msgid "Move &To Current Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move &To Current Desktop"
 msgstr "ਮੌਜੂਦਾ ਡੈਸਕਟਾਪ ਉੱਤੇ ਭੇਜੋ(&T)"
 
 #: qml/ContextMenu.qml:332
-#, fuzzy, kde-format
-#| msgid "&All Desktops"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&All Desktops"
 msgstr "ਸਭ ਡੈਸਕਟਾਪ(&A)"
 
 #: qml/ContextMenu.qml:360
-#, fuzzy, kde-format
-#| msgid "&New Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&New Desktop"
 msgstr "ਨਵਾਂ ਡੈਸਕਟਾਪ(&N)"
 
 #: qml/ContextMenu.qml:380
-#, fuzzy, kde-format
-#| msgid "Show in &Activities"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Show in &Activities"
 msgstr "ਸਰਗਰਮੀਆਂ ਵਿੱਚ ਵੇਖਾਓ(&A)"
 
 #: qml/ContextMenu.qml:404
-#, fuzzy, kde-format
-#| msgid "Add To Current Activity"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Add To Current Activity"
 msgstr "ਮੌਜੂਦਾ ਸਰਗਰਮੀ 'ਚ ਜੋੜੋ"
 
 #: qml/ContextMenu.qml:414
-#, fuzzy, kde-format
-#| msgid "All Activities"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "All Activities"
 msgstr "ਸਭ ਸਰਗਰਮੀਆਂ"
 
 #: qml/ContextMenu.qml:470
-#, fuzzy, kde-format
-#| msgid "Move to %1"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move to %1"
 msgstr "%1 ਉੱਤੇ ਭੇਜੋ"
 
 #: qml/ContextMenu.qml:496 qml/ContextMenu.qml:512
-#, fuzzy, kde-format
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Pin to Task Manager"
 msgstr "ਟਾਸਕ ਮੈਨੇਜਰ ਵਿੱਚ ਟੰਗੋ(&P)"
 
 #: qml/ContextMenu.qml:564
-#, fuzzy, kde-format
-#| msgid "On All Activities"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "On All Activities"
 msgstr "ਸਭ ਸਰਗਰਮੀਆਂ ਉੱਤੇ"
 
 #: qml/ContextMenu.qml:570
-#, fuzzy, kde-format
-#| msgid "On The Current Activity"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "On The Current Activity"
 msgstr "ਮੌਜੂਦਾ ਸਰਗਰਮੀ 'ਚ ਜੋੜੋ"
 
 #: qml/ContextMenu.qml:594
-#, fuzzy, kde-format
-#| msgid "Unpin from Task Manager"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Unpin from Task Manager"
 msgstr "ਟਾਸਕ ਮੈਨੇਜਰ ਤੋਂ ਲਾਹੋ"
 
 #: qml/ContextMenu.qml:609
-#, fuzzy, kde-format
-#| msgid "More"
+#, kde-format
 msgctxt "item:inmenu opens submenu"
 msgid "More"
 msgstr "ਹੋਰ"
 
 #: qml/ContextMenu.qml:618
-#, fuzzy, kde-format
-#| msgid "&Move"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Move"
 msgstr "ਭੇਜੋ(&M)"
 
 #: qml/ContextMenu.qml:627
-#, fuzzy, kde-format
-#| msgid "Re&size"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Re&size"
 msgstr "ਮੁੜ-ਆਕਾਰ(&s)"
 
 #: qml/ContextMenu.qml:641
-#, fuzzy, kde-format
-#| msgid "Ma&ximize"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Ma&ximize"
 msgstr "ਵੱਧੋ-ਵੱਧ(&x)"
 
 #: qml/ContextMenu.qml:655
-#, fuzzy, kde-format
-#| msgid "Mi&nimize"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Mi&nimize"
 msgstr "ਘੱਟੋ-ਘੱਟ(&n)"
 
 #: qml/ContextMenu.qml:665
-#, fuzzy, kde-format
-#| msgid "Keep &Above Others"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Keep &Above Others"
 msgstr "ਸਭ ਤੋਂ ਉੱਤੇ ਰੱਖੋ(&A)"
 
 #: qml/ContextMenu.qml:675
-#, fuzzy, kde-format
-#| msgid "Keep &Below Others"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Keep &Below Others"
 msgstr "ਸਭ ਤੋਂ ਹੇਠਾਂ ਰੱਖੋ(&B)"
 
 #: qml/ContextMenu.qml:687
-#, fuzzy, kde-format
-#| msgid "&Fullscreen"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Fullscreen"
 msgstr "ਪੂਰੀ ਸਕਰੀਨ(&F)"
 
 #: qml/ContextMenu.qml:700
-#, fuzzy, kde-format
-#| msgid "&Shade"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Shade"
 msgstr "ਸ਼ੇਡ(&S)"
@@ -819,32 +783,28 @@ msgstr "ਸ਼ੇਡ(&S)"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
-msgstr ""
+msgstr "ਕੋਈ ਟਾਈਟਲ-ਪੱਟੀ ਅਤੇ ਫਰੇਮ ਨਹੀਂ(&N)"
 
 #: qml/ContextMenu.qml:725
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Hide from Screencast"
-msgstr ""
+msgstr "ਸਕਰੀਨਕਾਸਟ ਤੋਂ ਓਹਲੇ(&H)"
 
 #: qml/ContextMenu.qml:741
-#, fuzzy, kde-format
-#| msgid "Allow this program to be grouped"
+#, kde-format
 msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr "ਇਸ ਗਰੁੱਪ ਨੂੰ ਗਰੁੱਪ ਬਣਾਉਣ ਦੀ ਇਜਾਜ਼ਤ ਦਿਓ"
 
 #: qml/ContextMenu.qml:787
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu"
-#| msgid "&Close All"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "ਸਭ ਨੂੰ ਬੰਦ ਕਰੋ(&C)"
 
 #: qml/ContextMenu.qml:787
-#, fuzzy, kde-format
-#| msgid "&Close"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close"
 msgstr "ਬੰਦ ਕਰੋ(&C)"
@@ -882,11 +842,10 @@ msgid "Open textual list of windows for %1"
 msgstr ""
 
 #: qml/Task.qml:181
-#, fuzzy, kde-format
-#| msgid "Activate %1"
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Activate %1"
-msgstr "%1 ਸਰਗਰਮ ਕਰੋ"
+msgstr "%1 ਨੂੰ ਸਰਗਰਮ ਕਰੋ"
 
 #: qml/ToolTipInstance.qml:189
 #, kde-format

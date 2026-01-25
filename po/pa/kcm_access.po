@@ -2,28 +2,28 @@
 # Amanpreet Singh Alam <aalam@redhat.com>, 2004, 2005.
 # Amanpreet Singh Brar <amanpreetalam@yahoo.com>, 2005.
 # Amanpreet Singh Brar <aalam@redhat.com>, 2005.
-# SPDX-FileCopyrightText: 2007, 2008, 2021, 2024, 2025 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2007, 2008, 2021, 2024, 2025, 2026 A S Alam <aalam@users.sf.net>
 # Amanpreet Singh Alam <aalam@users.sf.net>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-16 00:45+0000\n"
-"PO-Revision-Date: 2025-02-28 10:36-0600\n"
+"PO-Revision-Date: 2026-01-24 08:26-0600\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.12.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
 msgid "KWin"
-msgstr ""
+msgstr "ਕੇ-ਵਿਨ"
 
 #: kcmaccess.cpp:130
 #, kde-format
@@ -38,32 +38,32 @@ msgstr ""
 #: kcmaccess.cpp:178
 #, kde-format
 msgid "Move Left"
-msgstr ""
+msgstr "ਖੱਬੇ ਭੇਜੋ"
 
 #: kcmaccess.cpp:185
 #, kde-format
 msgid "Move Right"
-msgstr ""
+msgstr "ਸੱਜੇ ਭੇਜੋ"
 
 #: kcmaccess.cpp:192
 #, kde-format
 msgid "Move Up"
-msgstr ""
+msgstr "ਉੱਤੇ ਭੇਜੋ"
 
 #: kcmaccess.cpp:199
 #, kde-format
 msgid "Move Down"
-msgstr ""
+msgstr "ਹੇਠਾਂ ਭੇਜੋ"
 
 #: kcmaccess.cpp:206
 #, kde-format
 msgid "Move Mouse to Focus"
-msgstr ""
+msgstr "ਫੋਕਸ ਲਈ ਮਾਊਸ ਨੂੰ ਹਿਲਾਓ"
 
 #: kcmaccess.cpp:213
 #, kde-format
 msgid "Move Mouse to Center"
-msgstr ""
+msgstr "ਸੈੰਟਰ ਲਈ ਮਾਊਸ ਨੂੰ ਹਿਲਾਓ"
 
 #: kcmaccess.cpp:256
 #, kde-format
@@ -91,7 +91,7 @@ msgstr "ਜੈਸਚਰ ਲਈ ਤਸਦੀਕ ਕਰਨ ਵਾਸਤੇ ਪੁ�
 #: kcmaccessibilityactivationgestures.kcfg:17
 #, kde-format
 msgid "Confirm access to the Keyboard"
-msgstr ""
+msgstr "ਕੀਬੋਰਡ ਲਈ ਪਹੁੰਚ ਵਾਸਤੇ ਤਸਦੀਕ"
 
 #. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
 #: kcmaccessibilityactivationgestures.kcfg:21
@@ -103,7 +103,7 @@ msgstr ""
 #: kcmaccessibilityactivationgestures.kcfg:25
 #, kde-format
 msgid "Delay for timeout"
-msgstr ""
+msgstr "ਟਾਈਮ-ਆਉਟ ਲਈ ਦੇਰੀ"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilityactivationgestures.kcfg:29
@@ -143,15 +143,13 @@ msgstr "ਘੰਟੀ ਵੱਜਣ ਸਮੇਂ ਸਿਸਟਮ ਰੰਗਾਂ �
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
-#, fuzzy, kde-format
-#| msgid "Color of the Visible Bell"
+#, kde-format
 msgid "Color of the Visual Bell"
 msgstr "ਦਿੱਖ ਘੰਟੀ ਦੇ ਰੰਗ"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Duration of the Visible Bell"
+#, kde-format
 msgid "Duration of the Visual Bell"
 msgstr "ਦਿੱਖ ਘੰਟੀ ਦਾ ਅੰਤਰਾਲ"
 

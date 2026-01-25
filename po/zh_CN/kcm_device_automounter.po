@@ -37,6 +37,9 @@ msgid ""
 "\"Mount all removable media at login\" is unchecked. The same applies for "
 "\"Automount on Attach\"."
 msgstr ""
+"此列表包含了系统已知的所有存储设备。如果勾选了设备的“登录时”选框，系统将在登"
+"录到桌面时自动挂载它，即使您没有勾选“登录时自动挂载所有可移动设备”选框。此规"
+"则同样适用于设备的“插入时”选框。"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:54
