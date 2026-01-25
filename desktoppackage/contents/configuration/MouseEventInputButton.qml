@@ -27,18 +27,23 @@ QQC2.Button {
         acceptedButtons: Qt.AllButtons
         enabled: false
 
-        onClicked: {
+        onClicked: mouse => {
             var newEventString = configDialog.currentContainmentActionsModel.mouseEventString(mouse.button, mouse.modifiers);
 
             if (mouseInputButton.eventString === newEventString || !configDialog.currentContainmentActionsModel.isTriggerUsed(newEventString)) {
-                mouseInputButton.eventString = newEventString;
+                if (mouseInputButton.eventString === newEventString) {
+                    // fire changed signal so deleted button can return if needed
+                    mouseInputButton.eventStringChanged()
+                } else {
+                    mouseInputButton.eventString = newEventString;
+                }
                 mouseInputButton.text = mouseInputButton.defaultText;
                 mouseInputButton.checked = false;
                 enabled = false;
             }
         }
 
-        onWheel: {
+        onWheel: wheel => {
             var newEventString = configDialog.currentContainmentActionsModel.wheelEventString(wheel);
 
             if (mouseInputButton.eventString === newEventString || !configDialog.currentContainmentActionsModel.isTriggerUsed(newEventString)) {
@@ -50,4 +55,3 @@ QQC2.Button {
         }
     }
 }
-
