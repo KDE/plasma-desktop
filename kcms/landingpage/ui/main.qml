@@ -41,13 +41,12 @@ KCMUtils.SimpleKCM {
 
             LookAndFeelBox {
                 id: lightLookAndFeelBox
+
                 packageId: kcm.globalsSettings.defaultLightLookAndFeel
+                variant: LookAndFeel.Variant.Light
+
                 checked: !kcm.globalsSettings.automaticLookAndFeel && kcm.globalsSettings.lookAndFeelPackage === kcm.globalsSettings.defaultLightLookAndFeel
                 group: themeGroup
-
-                availablePackages: LookAndFeelModel {
-                    variant: LookAndFeel.Variant.Light
-                }
 
                 onToggled: {
                     kcm.globalsSettings.automaticLookAndFeel = false;
@@ -65,13 +64,12 @@ KCMUtils.SimpleKCM {
 
             LookAndFeelBox {
                 id: darkLookAndFeelBox
+
                 packageId: kcm.globalsSettings.defaultDarkLookAndFeel
+                variant: LookAndFeel.Variant.Dark
+
                 checked: !kcm.globalsSettings.automaticLookAndFeel && kcm.globalsSettings.lookAndFeelPackage === kcm.globalsSettings.defaultDarkLookAndFeel
                 group: themeGroup
-
-                availablePackages: LookAndFeelModel {
-                    variant: LookAndFeel.Variant.Dark
-                }
 
                 onToggled: {
                     kcm.globalsSettings.automaticLookAndFeel = false;
@@ -92,8 +90,6 @@ KCMUtils.SimpleKCM {
                 popupEnabled: false
 
                 group: themeGroup
-                packageId: ""
-                availablePackages: LookAndFeelModel { }
 
                 text: i18nc("Switch between dark and light look and feel packages automatically", "Automatic")
 

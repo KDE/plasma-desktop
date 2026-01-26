@@ -4,6 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
@@ -19,8 +21,8 @@ Column {
     Accessible.onToggleAction: button.toggle();
 
     required property ButtonGroup group
-    required property string packageId
-    required property Component availablePackages
+    property string packageId
+    property int variant
 
     property alias checked: button.checked
     property alias popupEnabled: indicator.visible
@@ -99,13 +101,15 @@ Column {
 
             Accessible.role: Accessible.ButtonMenu
 
+            property Popup popup
+
             contentItem: Kirigami.Icon {
                 source: "arrow-down"
             }
 
             background: Rectangle {
                 color: {
-                    if (indicator.pressed || popup.visible) {
+                    if (indicator.pressed || indicator.popup?.visible) {
                         return Kirigami.Theme.highlightColor;
                     } else if (indicator.hovered || indicator.visualFocus) {
                         return Qt.rgba(Kirigami.Theme.highlightColor.r, Kirigami.Theme.highlightColor.g, Kirigami.Theme.highlightColor.b, 0.5);
@@ -119,9 +123,10 @@ Column {
             }
 
             onClicked: {
-                if (popup.visible) {
+                if (popup) {
                     popup.close();
                 } else {
+                    popup = popupComponent.createObject(root)
                     popup.open();
                 }
             }
@@ -146,94 +151,109 @@ Column {
         }
     }
 
-    Popup {
-        id: popup
-        y: button.height
-        implicitHeight: Math.min(contentItem.implicitHeight + topPadding + bottomPadding, Kirigami.Units.gridUnit * 40, root.Window.height - Kirigami.Units.gridUnit * 10)
-        focus: true
-        popupType: Popup.Item
-        padding: 1
-        clip: false
+    Component {
+        id: popupComponent
 
-        contentItem: ScrollView {
-            ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
-            contentWidth: listView.implicitWidth
-            contentHeight: listView.implicitHeight
+        Popup {
+            id: popup
+            y: button.height
+            implicitHeight: Math.min(contentItem.implicitHeight + topPadding + bottomPadding, Kirigami.Units.gridUnit * 40, root.Window.height - Kirigami.Units.gridUnit * 10)
+
             focus: true
-            clip: true
+            popupType: Popup.Item
+            padding: 1
+            clip: false
+            modal: true
 
-            bottomPadding: leftPadding > 0 ? leftPadding : Kirigami.Units.mediumSpacing
-
-            ListView {
-                id: listView
-                Accessible.role: Accessible.List // TODO: remove once Qt sets this automatically
-                Accessible.name: i18nc("@label accessible", "Global theme")
+            contentItem: ScrollView {
+                ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
+                contentWidth: listView.implicitWidth
+                contentHeight: listView.implicitHeight
                 focus: true
-                implicitWidth: button.width
-                implicitHeight: contentHeight
-                delegate: ItemDelegate {
-                    id: delegate
+                clip: true
 
-                    readonly property string pluginId: model.packageId
-                    readonly property string previewUrl: model.preview
+                bottomPadding: leftPadding > 0 ? leftPadding : Kirigami.Units.mediumSpacing
 
-                    text: model.name
+                ListView {
+                    id: listView
+                    Accessible.role: Accessible.List // TODO: remove once Qt sets this automatically
+                    Accessible.name: i18nc("@label accessible", "Global theme")
+                    focus: true
+                    implicitWidth: button.width
+                    implicitHeight: contentHeight
 
-                    width: ListView.view.width
-
-                    contentItem: Column {
-                        spacing: Kirigami.Units.smallSpacing
-
-                        Image {
-                            width: parent.width
-                            height: width / 1.6
-                            source: delegate.previewUrl
-                        }
-
-                        Label {
-                            width: parent.width
-                            horizontalAlignment: Text.AlignHCenter
-                            text: delegate.text
-                            textFormat: Text.PlainText
-                            elide: Text.ElideRight
-                        }
+                    // Note: Make sure this model is not part of the direct instantiation of the main
+                    // page, to avoid doing a lot of potentially unnecessary lookup of LookAndFeel
+                    // data from disk. In this case, this popup is dynamically created so we only
+                    // load data when the popup is visible.
+                    model: LookAndFeelModel {
+                        variant: root.variant
                     }
 
-                    onClicked: {
-                        root.accepted(delegate.pluginId);
-                        popup.close();
+                    delegate: ItemDelegate {
+                        id: delegate
+
+                        required property string packageId
+                        required property string preview
+                        required property string name
+
+                        text: name
+
+                        width: ListView.view.width
+
+                        contentItem: Column {
+                            spacing: Kirigami.Units.smallSpacing
+
+                            Image {
+                                width: parent.width
+                                height: width / 1.6
+                                source: delegate.preview
+                            }
+
+                            Label {
+                                width: parent.width
+                                horizontalAlignment: Text.AlignHCenter
+                                text: delegate.text
+                                textFormat: Text.PlainText
+                                elide: Text.ElideRight
+                            }
+                        }
+
+                        onClicked: {
+                            root.accepted(delegate.packageId);
+                            popup.close();
+                        }
                     }
                 }
             }
-        }
 
-        background: Kirigami.ShadowedRectangle {
-            Kirigami.Theme.inherit: false
-            Kirigami.Theme.colorSet: Kirigami.Theme.View
+            background: Kirigami.ShadowedRectangle {
+                Kirigami.Theme.inherit: false
+                Kirigami.Theme.colorSet: Kirigami.Theme.View
 
-            color: Kirigami.Theme.backgroundColor
+                color: Kirigami.Theme.backgroundColor
 
-            radius: Kirigami.Units.cornerRadius
+                radius: Kirigami.Units.cornerRadius
 
-            border.width: 1
-            border.color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
+                border.width: 1
+                border.color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
 
-            shadow {
-                size: 10
-                yOffset: 2
-                color: Qt.rgba(0, 0, 0, 0.2)
+                shadow {
+                    size: 10
+                    yOffset: 2
+                    color: Qt.rgba(0, 0, 0, 0.2)
+                }
             }
-        }
 
-        onAboutToShow: {
-            listView.model = root.availablePackages.createObject(listView);
-            listView.currentIndex = listView.model.indexOf(root.packageId);
-        }
+            onAboutToShow: {
+                listView.currentIndex = listView.model.indexOf(root.packageId);
+            }
 
-        onClosed: {
-            if (listView.model) {
-                listView.model.destroy();
-                listView.model = null;
+            onClosed: {
+                if (indicator.popup) {
+                    indicator.popup.destroy()
+                    indicator.popup = null
+                }
             }
         }
     }
