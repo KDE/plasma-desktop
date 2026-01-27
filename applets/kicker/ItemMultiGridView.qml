@@ -258,6 +258,10 @@ PlasmaComponents.ScrollView {
                             }
                             currentIndex = -1
                         }
+                        Keys.onBacktabPressed: event => {
+                            currentIndex = -1
+                            event.accepted = false // pass to mainColumn handler
+                        }
                     }
 
                     // HACK: Steal wheel events from the nested grid view and forward them to

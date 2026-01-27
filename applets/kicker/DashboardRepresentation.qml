@@ -76,6 +76,7 @@ Kicker.DashboardWindow {
 
     function reset() {
         searchField.clear();
+        searchField.forceActiveFocus(Qt.OtherFocusReason)
         globalFavoritesGrid.currentIndex = -1;
         systemFavoritesGrid.currentIndex = -1;
         filterList.currentIndex = 0;
@@ -227,6 +228,7 @@ Kicker.DashboardWindow {
             y: (middleRow.anchors.topMargin / 2) - (root.smallScreen ? (height/10) : 0)
             width: Kirigami.Units.gridUnit * 24
             font.pointSize: dummyHeading.font.pointSize * 1.5
+            focus: true
 
             onTextChanged: {
                 root.runnerModel.query = searchField.text
@@ -239,15 +241,19 @@ Kicker.DashboardWindow {
                 }
             }
 
-            Keys.forwardTo: runnerGrid.visible && runnerGrid.firstGrid ? [runnerGrid.firstGrid.view] : []
-
             function clear() {
                 text = "";
             }
 
+            Keys.priority: Keys.AfterItem
             Keys.onTabPressed: {
                 if (root.runnerModel.count) {
+                    focus = false
                     mainColumn.tryActivate(0, 0);
+                } else if (mainGrid.visible && mainGrid.count) {
+                    mainGrid.tryActivate(0, 0);
+                } else if (allAppsGrid.visible && allAppsGrid.count) {
+                    allAppsGrid.tryActivate(0, 0);
                 } else {
                     systemFavoritesGrid.tryActivate(0, 0);
                 }
@@ -259,8 +265,51 @@ Kicker.DashboardWindow {
                     systemFavoritesGrid.tryActivate(0, 0);
                 }
             }
+            Keys.onDownPressed: event => {
+                if (mainGrid.visible) {
+                    mainGrid.tryActivate(0, 0);
+                } else if (allAppsGrid.visible) {
+                    allAppsGrid.tryActivate(0, 0);
+                } else if (runnerGrid.visible) {
+                    if (runnerGrid.firstGrid.currentIndex != -1) {
+                        runnerGrid.firstGrid.view.moveCurrentIndexDown()
+                        let currentRow = runnerGrid.firstGrid.currentRow()
+                        let currentCol = runnerGrid.firstGrid.currentCol()
+                        focus = false
+                        runnerGrid.tryActivate(currentRow, currentCol)
+                    } else {
+                        focus = false
+                        runnerGrid.tryActivate(0,0)
+                    }
+                } else {
+                    event.accepted = false
+                }
+            }
+            Keys.onRightPressed: event => {
+                if (runnerGrid.visible && runnerGrid.firstGrid.currentIndex != -1 &&
+                    (Application.layoutDirection == Qt.LeftToRight || runnerGrid.firstGrid.currentIndex != 0)) {
+                    runnerGrid.firstGrid.view.moveCurrentIndexRight()
+                    let currentRow = runnerGrid.firstGrid.currentRow()
+                    let currentCol = runnerGrid.firstGrid.currentCol()
+                    focus = false
+                    runnerGrid.tryActivate(currentRow, currentCol)
+                } else {
+                    event.accepted = false
+                }
+            }
+            Keys.onLeftPressed: event => {
+                if (runnerGrid.visible && runnerGrid.firstGrid.currentIndex != -1 &&
+                    (Application.layoutDirection == Qt.RightToLeft || runnerGrid.firstGrid.currentIndex != 0)) {
+                    runnerGrid.firstGrid.view.moveCurrentIndexLeft()
+                    let currentRow = runnerGrid.firstGrid.currentRow()
+                    let currentCol = runnerGrid.firstGrid.currentCol()
+                    focus = false
+                    runnerGrid.tryActivate(currentRow, currentCol)
+                    } else {
+                        event.accepted = false
+                    }
+            }
         }
-
 
         Row {
             id: middleRow
@@ -371,7 +420,10 @@ Kicker.DashboardWindow {
                         systemFavoritesGrid.tryActivate(0, currentCol());
                     }
 
-                    Keys.onTabPressed: mainColumn.tryActivate(0, 0);
+                    Keys.onTabPressed: {
+                        currentIndex = -1
+                        searchField.forceActiveFocus(Qt.TabFocusReason)
+                    }
                     Keys.onBacktabPressed: systemFavoritesGrid.tryActivate(0, 0);
 
                     Binding {
@@ -418,7 +470,7 @@ Kicker.DashboardWindow {
                         if (globalFavoritesGrid.enabled) {
                             globalFavoritesGrid.tryActivate(0, 0);
                         } else {
-                            mainColumn.tryActivate(0, 0);
+                            searchField.forceActiveFocus(Qt.TabFocusReason)
                         }
                     }
                     Keys.onBacktabPressed: {
@@ -577,6 +629,16 @@ Kicker.DashboardWindow {
                         onKeyNavRight: {
                             filterListScrollArea.focus = true;
                         }
+
+                        onKeyNavUp: {
+                            currentIndex = -1
+                            searchField.forceActiveFocus(Qt.TabFocusReason)
+                        }
+
+                        Keys.onBacktabPressed: event => {
+                            currentIndex = -1
+                            event.accepted = false // pass to mainColumn handler
+                        }
                     }
                 }
 
@@ -622,6 +684,11 @@ Kicker.DashboardWindow {
                     onKeyNavRight: subGridIndex => {
                         filterListScrollArea.focus = true;
                     }
+
+                    onKeyNavUp: {
+                        firstGrid.currentIndex = -1
+                        searchField.forceActiveFocus(Qt.TabFocusReason)
+                    }
                 }
 
                 ItemMultiGridView {
@@ -665,6 +732,11 @@ Kicker.DashboardWindow {
                         var targetRow = row + 1 > globalFavoritesGrid.rows ? row - globalFavoritesGrid.rows : row;
                         target.tryActivate(targetRow, favoritesColumn.columns - 1);
                     }
+
+                    onKeyNavUp: {
+                        firstGrid.currentIndex = -1
+                        searchField.forceActiveFocus(Qt.TabFocusReason)
+                    }
                 }
 
                 Keys.onTabPressed: {
@@ -675,11 +747,7 @@ Kicker.DashboardWindow {
                     }
                 }
                 Keys.onBacktabPressed: {
-                    if (globalFavoritesGrid.enabled) {
-                        globalFavoritesGrid.tryActivate(0, 0);
-                    } else {
-                        systemFavoritesGrid.tryActivate(0, 0);
-                    }
+                    searchField.forceActiveFocus(Qt.BacktabFocusReason)
                 }
             }
 
