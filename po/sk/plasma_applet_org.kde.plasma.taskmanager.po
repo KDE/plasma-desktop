@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-24 02:39+0000\n"
-"PO-Revision-Date: 2026-01-14 18:01+0100\n"
+"PO-Revision-Date: 2026-01-26 20:49+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -135,12 +135,10 @@ msgid "Hide other windows when hovering over previews"
 msgstr "Skryť ostatné okná pri prejdení nad náhľadmi"
 
 #: qml/ConfigAppearance.qml:55
-#, fuzzy, kde-format
-#| msgctxt "@option:check section General"
-#| msgid "Hide other windows when hovering over previews"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over tooltips"
-msgstr "Skryť ostatné okná pri prejdení nad náhľadmi"
+msgstr "Skryť ostatné okná pri prechádzaní kurzorom nad náhľadmi"
 
 #: qml/ConfigAppearance.qml:60
 #, kde-format
@@ -481,14 +479,13 @@ msgid "Brings it to the current virtual desktop"
 msgstr "Prenesie to na aktuálnu virtuálnu pracovnú plochu"
 
 #: qml/ConfigBehavior.qml:207
-#, fuzzy, kde-format
-#| msgid "Show only tasks:"
+#, kde-format
 msgctxt ""
 "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/cycles "
 "through tasks/cycles through the selected task's windows/adjusts the hovered "
 "task’s volume''"
 msgid "Scrolling behavior:"
-msgstr "Zobrazovať iba úlohy:"
+msgstr "Správanie pri scrollovaní:"
 
 #: qml/ConfigBehavior.qml:211
 #, kde-format
@@ -505,26 +502,20 @@ msgid "Cycles through all tasks"
 msgstr "Prepína medzi úlohami"
 
 #: qml/ConfigBehavior.qml:213
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task cycles through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through the "
 "hovered task's windows'"
 msgid "Cycles through the hovered task’s windows"
-msgstr "Prepína medzi úlohami"
+msgstr "Prechádza oknami úlohy, nad ktorou sa nachádza kurzor"
 
 #: qml/ConfigBehavior.qml:214
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task cycles through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior adjusts the hovered "
 "task’s volume'"
 msgid "Adjusts the hovered task’s volume"
-msgstr "Prepína medzi úlohami"
+msgstr "Upravuje hlasitosť úlohy, nad ktorou sa nachádza kurzor"
 
 #: qml/ConfigBehavior.qml:222
 #, kde-format
@@ -540,22 +531,19 @@ msgid "Show only tasks:"
 msgstr "Zobrazovať iba úlohy:"
 
 #: qml/ConfigBehavior.qml:233
-#, fuzzy, kde-format
-#| msgid "From current desktop"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current desktop"
 msgstr "Z aktuálnej pracovnej plochy"
 
 #: qml/ConfigBehavior.qml:238
-#, fuzzy, kde-format
-#| msgid "From current activity"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current activity"
 msgstr "Z aktuálnej aktivity"
 
 #: qml/ConfigBehavior.qml:243
-#, fuzzy, kde-format
-#| msgid "From current screen"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current screen"
 msgstr "Z aktuálnej obrazovky"
@@ -817,7 +805,7 @@ msgstr "Žiadne záhlavie a rám"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Hide from Screencast"
-msgstr ""
+msgstr "Skryť zo Screencastu"
 
 #: qml/ContextMenu.qml:741
 #, kde-format

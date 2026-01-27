@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-16 03:02+0000\n"
-"PO-Revision-Date: 2026-01-14 17:40+0100\n"
+"PO-Revision-Date: 2026-01-26 20:53+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -132,11 +132,10 @@ msgid "License: %1"
 msgstr "Licencia: %1"
 
 #: contents/configuration/AboutPlugin.qml:197
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Read License"
-msgstr "Licencia:"
+msgstr "Prečítať licenciu"
 
 #: contents/configuration/AboutPlugin.qml:211
 #, kde-format
@@ -601,17 +600,16 @@ msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Stlačte túto klávesovú skratku na presun zamerania na panel"
 
 #: contents/configuration/PanelConfiguration.qml:689
-#, fuzzy, kde-format
-#| msgid "Focus shortcut:"
+#, kde-format
 msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
-msgstr "Skratka zamerania:"
+msgstr "Nastavenie skratiek pre zaostrenie"
 
 #: contents/configuration/PanelConfiguration.qml:690
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for button"
 msgid "Button to set the shortcut for the panel to gain focus"
-msgstr ""
+msgstr "Tlačidlo na nastavenie skratky pre panel, aby získal fokus"
 
 #: contents/configuration/PanelConfiguration.qml:716
 #, kde-format
@@ -620,11 +618,10 @@ msgid "Delete Panel"
 msgstr "Odstrániť panel"
 
 #: contents/configuration/PanelConfiguration.qml:719
-#, fuzzy, kde-format
-#| msgid "Remove this panel; this action is undo-able"
+#, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Remove this panel; this action can be undone"
-msgstr "Odstrániť tento panel; túto akciu je možné zrušiť"
+msgstr "Odstráňte tento panel; túto akciu je možné vrátiť späť"
 
 #: contents/configuration/PanelConfiguration.qml:728
 #, kde-format
@@ -772,14 +769,13 @@ msgid "New!"
 msgstr "Nové!"
 
 #: contents/explorer/AppletDelegate.qml:204
-#, fuzzy, kde-format
-#| msgid "No widgets available"
+#, kde-format
 msgctxt "@info:other accessible for badge showing applet count"
 msgid "%1 widget active"
 msgid_plural "%1 widgets active"
-msgstr[0] "Žiadne miniaplikáciw nie sú dostupné"
-msgstr[1] "Žiadne miniaplikáciw nie sú dostupné"
-msgstr[2] "Žiadne miniaplikáciw nie sú dostupné"
+msgstr[0] "%1 widget aktívny"
+msgstr[1] "%1 widgety aktívne"
+msgstr[2] "%1 widgetov aktívnych"
 
 #: contents/explorer/AppletDelegate.qml:205
 #, kde-format
@@ -860,11 +856,10 @@ msgid "Close Widget Explorer"
 msgstr "Zatvoriť prehliadač widgetov"
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, fuzzy, kde-format
-#| msgid "Lock Widgets"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Search through widgets"
-msgstr "Zamknúť widgety"
+msgstr "Hľadať medzi widgetmi"
 
 #: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
@@ -873,14 +868,13 @@ msgid "Categories"
 msgstr "Kategórie"
 
 #: contents/explorer/WidgetExplorer.qml:259
-#, fuzzy, kde-format
-#| msgid "Uninstall widget"
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Uninstall (%1 Widget)"
 msgid_plural "Uninstall (%1 Widgets)"
-msgstr[0] "Odinštalovať miniaplikáciu"
-msgstr[1] "Odinštalovať miniaplikáciu"
-msgstr[2] "Odinštalovať miniaplikáciu"
+msgstr[0] "Odinštalovať (%1 Widget)"
+msgstr[1] "Odinštalovať (%1 Widgety)"
+msgstr[2] "Odinštalovať (%1 Widgetov)"
 
 #: contents/explorer/WidgetExplorer.qml:389
 #, kde-format
