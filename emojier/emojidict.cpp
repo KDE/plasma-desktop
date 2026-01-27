@@ -62,7 +62,7 @@ void EmojiDict::load(const QString &path)
                     auto &neutralEmoji = m_emojis[m_emojis.size() - 1];
                     neutralEmoji.skinTone = Tone::Neutral;
                     neutralEmoji.skinToneVariantIndex = skinToneVariantIndex;
-                    skinToneVariantIndex += 5;
+                    skinToneVariantIndex += SKIN_TONE_COUNT;
                 }
                 m_processedTonedEmojis[emoji.content] = m_tonedEmojis.size();
                 m_tonedEmojis.append(emoji);

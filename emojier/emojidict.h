@@ -14,6 +14,8 @@
 
 using Tone = EmojierSettings::SkinTone;
 
+constexpr int SKIN_TONE_COUNT = 5;
+
 enum ToneChars : uint {
     CharLight = 0x1F3FB,
     CharMediumLight = 0x1F3FC,
@@ -48,35 +50,44 @@ inline QDataStream &operator>>(QDataStream &stream, Emoji &emoji)
         emoji.annotations << QString::fromUtf8(annotation);
     }
 
-    int sumToneL = 0, sumToneML = 0, sumToneM = 0, sumToneMD = 0, sumToneD = 0;
+    int toneLightModifierCount = 0, toneMediumLightModifierCount = 0, toneMediumModifierCount = 0, toneMediumDarkModifierCount = 0, toneDarkModifierCount = 0;
     for (const auto &c : emoji.content.toUcs4()) {
         switch (c) {
         case CharLight:
-            sumToneL++;
+            toneLightModifierCount++;
             break;
         case CharMediumLight:
-            sumToneML++;
+            toneMediumLightModifierCount++;
             break;
         case CharMedium:
-            sumToneM++;
+            toneMediumModifierCount++;
             break;
         case CharMediumDark:
-            sumToneMD++;
+            toneMediumDarkModifierCount++;
             break;
         case CharDark:
-            sumToneD++;
+            toneDarkModifierCount++;
             break;
         }
     }
-    const int sumToneAll = sumToneL + sumToneML + sumToneM + sumToneMD + sumToneD;
+    const int toneModifierCount =
+        toneLightModifierCount + toneMediumLightModifierCount + toneMediumModifierCount + toneMediumDarkModifierCount + toneDarkModifierCount;
 
-    if (sumToneAll == 0) {
+    if (toneModifierCount == 0) {
         emoji.skinTone = Tone::HasNoVariants;
     } else {
-        if (sumToneL == sumToneAll) {
+        if (toneModifierCount == toneLightModifierCount) {
             emoji.skinTone = Tone::Light;
-        } else if (sumToneML == sumToneAll || sumToneM == sumToneAll || sumToneMD == sumToneAll || sumToneD == sumToneAll) {
+        } else if (toneModifierCount == toneMediumLightModifierCount) {
+            emoji.skinTone = Tone::MediumLight;
+        } else if (toneModifierCount == toneMediumModifierCount) {
+            emoji.skinTone = Tone::Medium;
+        } else if (toneModifierCount == toneMediumDarkModifierCount) {
+            emoji.skinTone = Tone::MediumDark;
+        } else if (toneModifierCount == toneDarkModifierCount) {
             emoji.skinTone = Tone::Dark;
+        } else if (toneModifierCount == 2) {
+            emoji.skinTone = Tone::TwoTone;
         } else {
             emoji.skinTone = Tone::HasNoVariants;
         }
