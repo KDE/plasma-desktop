@@ -38,6 +38,7 @@ public:
         CategoryRole = Qt::UserRole + 1,
         AnnotationsRole,
         FallbackDescriptionRole,
+        twoToneIndexRole,
     };
 
     int rowCount(const QModelIndex &parent = {}) const override;
@@ -45,9 +46,52 @@ public:
     QVariant data(const QModelIndex &index, int role) const override;
 
 protected:
+    QHash<int, QByteArray> roleNames() const override
+    {
+        return {{Qt::DisplayRole, "display"}, {Qt::ToolTipRole, "toolTip"}, {twoToneIndexRole, "twoToneIndex"}};
+    }
+
     QList<Emoji> m_emoji;
     QList<Emoji> m_tonedEmojis;
     EmojierSettings m_settings;
+};
+
+class EmojiModel;
+
+class TwoToneEmojiModel : public QAbstractListModel
+{
+    Q_OBJECT
+    Q_PROPERTY(int twoToneIndex READ twoToneIndex WRITE setTwoToneIndex)
+public:
+    TwoToneEmojiModel(QList<Emoji> twoToneEmojis, QList<Emoji> &tonedEmojis, EmojierSettings &settings)
+        : m_twoToneEmojis(twoToneEmojis)
+        , m_tonedEmojis(tonedEmojis)
+        , m_settings(settings)
+    {
+    }
+
+    int rowCount(const QModelIndex &parent = {}) const override;
+
+    QVariant data(const QModelIndex &index, int role) const override;
+
+    void twoToneDataChanged();
+
+    int twoToneIndex();
+
+    void setTwoToneIndex(int twoToneIndex);
+
+private:
+    QList<Emoji> m_twoToneEmojis;
+    QList<Emoji> &m_tonedEmojis;
+    int m_twoToneIndex = 0;
+
+    EmojierSettings &m_settings;
+
+    QMap<int, QList<int>> twoToneSortFilterMap = {{Tone::Light, {0, 1, 2, 3, 4, 8, 12, 16}},
+                                                  {Tone::MediumLight, {4, 5, 6, 7, 0, 9, 13, 17}},
+                                                  {Tone::Medium, {8, 9, 10, 11, 1, 5, 14, 18}},
+                                                  {Tone::MediumDark, {12, 13, 14, 15, 2, 6, 10, 19}},
+                                                  {Tone::Dark, {16, 17, 18, 19, 3, 7, 11, 15}}};
 };
 
 class EmojiModel : public AbstractEmojiModel
@@ -56,6 +100,7 @@ class EmojiModel : public AbstractEmojiModel
     QML_ELEMENT
     Q_PROPERTY(QStringList categories MEMBER m_categories CONSTANT)
     Q_PROPERTY(int skinTone READ skinTone WRITE setSkinTone NOTIFY skinToneChanged)
+    Q_PROPERTY(QAbstractItemModel *twoToneEmojiModel MEMBER m_TwoToneEmojiModel CONSTANT)
 public:
     enum EmojiRole {
         CategoryRole = Qt::UserRole + 1,
@@ -74,6 +119,7 @@ public:
 
 private:
     QStringList m_categories;
+    TwoToneEmojiModel *m_TwoToneEmojiModel;
 };
 
 class RecentEmojiModel : public AbstractEmojiModel

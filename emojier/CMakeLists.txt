@@ -7,6 +7,12 @@ target_sources(EmojierDeclarativePlugin PRIVATE
     emojicategory.cpp
 )
 
+ecm_qt_declare_logging_category(EmojierDeclarativePlugin
+    HEADER emojier_debug.h
+    IDENTIFIER EMOJIER_LOG
+    CATEGORY_NAME org.kde.plasma.emojier
+)
+
 kconfig_add_kcfg_files(EmojierDeclarativePlugin emojiersettings.kcfgc GENERATE_MOC)
 
 target_link_libraries(EmojierDeclarativePlugin PRIVATE Qt::Qml Qt::Gui KF6::ConfigGui KF6::I18n)

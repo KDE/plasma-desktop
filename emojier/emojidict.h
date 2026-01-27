@@ -15,6 +15,7 @@
 using Tone = EmojierSettings::SkinTone;
 
 constexpr int SKIN_TONE_COUNT = 5;
+constexpr int TWO_TONE_PAIR_PERMUTATIONS = SKIN_TONE_COUNT * (SKIN_TONE_COUNT - 1);
 
 enum ToneChars : uint {
     CharLight = 0x1F3FB,
@@ -32,6 +33,7 @@ struct Emoji {
     QStringList annotations;
     int skinTone;
     int skinToneVariantIndex;
+    int twoToneVariantIndex = 0;
 
     QString categoryName() const;
 };
@@ -101,6 +103,9 @@ struct EmojiDict {
 
     QList<Emoji> m_emojis;
     QList<Emoji> m_tonedEmojis;
+    QList<Emoji> m_twoToneEmojis;
+
     QMap<QString, int> m_processedEmojis;
     QMap<QString, int> m_processedTonedEmojis;
+    QMap<QString, int> m_processedTwoToneEmojis;
 };

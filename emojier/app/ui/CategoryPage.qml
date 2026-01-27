@@ -242,6 +242,37 @@ Kirigami.ScrollablePage {
         }
     }
 
+    Kirigami.Dialog {
+        id: variantDialog
+        title: i18nc("@title:window A two-tone skin variant can be selected here", "Select Variant")
+
+        ColumnLayout {
+            GridView {
+                id: dialogEmojiView
+
+                Layout.alignment: Qt.AlignHCenter
+                Layout.preferredHeight: contentHeight
+                readonly property real desiredSize: Kirigami.Units.gridUnit * 3
+
+                cellWidth: desiredSize
+                cellHeight: desiredSize
+                implicitWidth: (view.model.skinTone === SkinTone.Neutral ? 5 : 4) * desiredSize
+
+                model: emoji.twoToneEmojiModel
+                delegate: emojiDelegateComponent
+            }
+        }
+
+        onVisibleChanged: {
+            if (visible) {
+                dialogEmojiView.currentIndex = 0;
+                dialogEmojiView.forceActiveFocus();
+            }
+        }
+
+        onClosed: emojiView.currentItem?.forceActiveFocus()
+    }
+
     Shortcut {
         sequences: [StandardKey.Copy]
         enabled: emojiView.currentItem
@@ -262,12 +293,18 @@ Kirigami.ScrollablePage {
             QQC2.MenuItem {
                 icon.name: "edit-copy"
                 text: i18nc("@item:inmenu", "Copy Character")
-                onClicked: view.copyRequested(menu.label.text)
+                onClicked: {
+                    view.copyRequested(menu.label.text)
+                    variantDialog.close()
+                }
             }
             QQC2.MenuItem {
                 icon.name: "edit-copy"
                 text: i18nc("@item:inmenu", "Copy Description")
-                onClicked: view.copyRequested(menu.label.QQC2.ToolTip.text)
+                onClicked: {
+                    view.copyRequested(menu.label.QQC2.ToolTip.text)
+                    variantDialog.close()
+                }
             }
         }
     }
@@ -278,6 +315,7 @@ Kirigami.ScrollablePage {
         readonly property real desiredSize: Kirigami.Units.gridUnit * 3
         readonly property int columnsToHave: Math.ceil(width / desiredSize)
         readonly property int delayInterval: Math.min(300, columnsToHave * 10)
+        property int hoveredIndex: -1
 
         cellWidth: width / columnsToHave
         cellHeight: desiredSize
@@ -298,25 +336,77 @@ Kirigami.ScrollablePage {
             event.accepted = false
         }
 
-        delegate: QQC2.ItemDelegate {
+        delegate: emojiDelegateComponent
+
+        Kirigami.PlaceholderMessage {
+            anchors.centerIn: parent
+            width: parent.width - (Kirigami.Units.largeSpacing * 8)
+            text: view.showClearHistoryButton ? i18nc("@label placeholder for empty recent emoji list", "No recent emojis") : i18nc("@label placeholder for no emoji found in category", "No matching emoji found")
+            visible: emojiView.count === 0 && view.showClearHistoryButton
+        }
+    }
+
+    Component {
+        id: emojiDelegateComponent
+
+        QQC2.ItemDelegate {
             id: emojiLabel
 
             required property var model
             required property string toolTip
+            required property int index
 
-            width: emojiView.cellWidth
-            height: emojiView.cellHeight
+            readonly property bool hasVariants: emojiLabel.model.twoToneIndex != undefined
+                                             && emojiLabel.model.twoToneIndex != 0
+
+            readonly property bool isHoveredOrFocused: hoverHandler.hovered
+                                                    || variantButton.hovered
+                                                    || emojiLabel.GridView.isCurrentItem
+                                                    || variantButton.activeFocus
+
+            width: GridView.view.cellWidth
+            height: GridView.view.cellHeight
+
+            z: (
+                (index === emojiView.hoveredIndex  && emojiView.hoveredIndex + 1 === emojiView.currentIndex) ||
+                (emojiLabel.GridView.isCurrentItem && emojiView.currentIndex + 1 === emojiView.hoveredIndex)
+            ) ? 2 : (emojiLabel.isHoveredOrFocused ? 1 : 0)
 
             text: model.display
             contentItem: QQC2.Label {
                 font.pointSize: 25
                 font.family: 'emoji' // Avoid monochrome fonts like DejaVu Sans
-                fontSizeMode: emojiLabel.text.length > 5 ? Text.Fit : Text.FixedSize
                 minimumPointSize: 10
                 text: emojiLabel.text
                 textFormat: Text.PlainText
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
+
+                QQC2.Button {
+                    id: variantButton
+                    icon.name: "view-more-horizontal-symbolic"
+                    icon.width: Kirigami.Units.iconSizes.small
+                    icon.height: Kirigami.Units.iconSizes.small
+
+                    display: QQC2.Button.IconOnly
+                    text: i18nc("@action:button Opens a window where a two-tone skin variant can be selected. %1 is the emoji's name", "Select Variant of \"%1\"", emojiLabel.toolTip)
+
+                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                    QQC2.ToolTip.text: variantButton.text
+                    QQC2.ToolTip.visible: variantButton.hovered || variantButton.activeFocus
+
+                    visible: emojiLabel.hasVariants && emojiLabel.isHoveredOrFocused
+
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.horizontalCenterOffset: emojiLabel.width  / 2 - ((emojiLabel.index+1) % emojiView.columnsToHave ? 0 : variantButton.width / 2)
+                    anchors.verticalCenterOffset: - emojiLabel.height / 2 + ( emojiLabel.index   >= emojiView.columnsToHave ? 0 : variantButton.width / 2)
+
+                    onClicked: {
+                        emoji.twoToneEmojiModel.twoToneIndex = emojiLabel.model.twoToneIndex
+                        variantDialog.open()
+                    }
+                }
             }
 
             Accessible.name: emojiLabel.toolTip
@@ -324,7 +414,7 @@ Kirigami.ScrollablePage {
 
             QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
             QQC2.ToolTip.text: emojiLabel.toolTip
-            QQC2.ToolTip.visible: hoverHandler.hovered
+            QQC2.ToolTip.visible: hoverHandler.hovered && !variantButton.hovered
 
             Keys.onMenuPressed: event => contextMenuHandler.action()
             Keys.onReturnPressed: event => tapHandler.action()
@@ -332,6 +422,11 @@ Kirigami.ScrollablePage {
 
             HoverHandler {
                 id: hoverHandler
+                onHoveredChanged: {
+                    if(hovered) {
+                        emojiView.hoveredIndex = emojiLabel.index
+                    }
+                }
             }
 
             TapHandler {
@@ -339,6 +434,7 @@ Kirigami.ScrollablePage {
                 function action() {
                     view.copyRequested(emojiLabel.text)
                     view.addToRecentsRequested(emojiLabel.text, emojiLabel.toolTip);
+                    variantDialog.close()
                 }
                 onTapped: (eventPoint, button) => action()
             }
@@ -349,24 +445,21 @@ Kirigami.ScrollablePage {
                 onLongPressed: contextMenuHandler.action()
             }
 
-            TapHandler {
+            MouseArea {
                 id: contextMenuHandler
                 acceptedButtons: Qt.RightButton
+
+                implicitHeight: emojiLabel.implicitHeight
+                implicitWidth: emojiLabel.implicitWidth
+
                 function action() {
                     const menu = menuComponent.createObject(emojiLabel, {
                         "label": emojiLabel,
                     }) as QQC2.Menu;
                     menu.popup();
                 }
-                onTapped: (eventPoint, button) => action()
+                onClicked: action()
             }
-        }
-
-        Kirigami.PlaceholderMessage {
-            anchors.centerIn: parent
-            width: parent.width - (Kirigami.Units.largeSpacing * 8)
-            text: view.showClearHistoryButton ? i18nc("@label placeholder for empty recent emoji list", "No recent Emojis") : i18nc("@label placeholder for no emoji found in category", "No matching emoji found")
-            visible: emojiView.count === 0 && view.showClearHistoryButton
         }
     }
 }

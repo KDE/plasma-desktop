@@ -6,6 +6,7 @@
 
 #include "emojidict.h"
 #include "emojicategory.h"
+#include "emojier_debug.h"
 #include <KLocalizedString>
 #include <QFile>
 #include <QJsonArray>
@@ -19,6 +20,21 @@ QString Emoji::categoryName() const
     }
     // off by 1 because 0 is unknown.
     return names[category - 1];
+}
+
+void replaceEmoji(Emoji &currentEmoji, const Emoji &newEmoji)
+{
+    const QString fallbackDescription = currentEmoji.description;
+    const int skinTone = currentEmoji.skinTone;
+    const int skinToneVariantIndex = currentEmoji.skinToneVariantIndex;
+    const int twoToneVariantIndex = currentEmoji.twoToneVariantIndex;
+
+    currentEmoji = newEmoji;
+
+    currentEmoji.fallbackDescription = fallbackDescription;
+    currentEmoji.skinTone = skinTone;
+    currentEmoji.skinToneVariantIndex = skinToneVariantIndex;
+    currentEmoji.twoToneVariantIndex = twoToneVariantIndex;
 }
 
 void EmojiDict::load(const QString &path)
@@ -39,27 +55,30 @@ void EmojiDict::load(const QString &path)
     stream >> emojis;
 
     int skinToneVariantIndex = 0;
+    int twoToneVariantIndex = 0;
+    bool searchNeutralForTwoTone = false;
     for (const auto &emoji : emojis) {
         if (auto iter = m_processedEmojis.find(emoji.content); iter != m_processedEmojis.end()) {
             // Overwrite with new data but keep previous description as fallback.
-            auto &foundEmoji = m_emojis[iter.value()];
-            const QString fallbackDescription = foundEmoji.description;
-            const int skinTone = foundEmoji.skinTone;
-            const int oldSkinToneVariantIndex = foundEmoji.skinToneVariantIndex;
-            foundEmoji = emoji;
-            foundEmoji.fallbackDescription = fallbackDescription;
-            foundEmoji.skinTone = skinTone;
-            foundEmoji.skinToneVariantIndex = oldSkinToneVariantIndex;
+            replaceEmoji(m_emojis[iter.value()], emoji);
         } else if (auto iter = m_processedTonedEmojis.find(emoji.content); iter != m_processedTonedEmojis.end()) {
-            // Overwrite with new data but keep previous description as fallback.
-            auto &foundEmoji = m_tonedEmojis[iter.value()];
-            const QString fallbackDescription = foundEmoji.description;
-            foundEmoji = emoji;
-            foundEmoji.fallbackDescription = fallbackDescription;
+            replaceEmoji(m_tonedEmojis[iter.value()], emoji);
+        } else if (auto iter = m_processedTwoToneEmojis.find(emoji.content); iter != m_processedTwoToneEmojis.end()) {
+            replaceEmoji(m_twoToneEmojis[iter.value()], emoji);
         } else {
-            if (emoji.skinTone > Tone::Neutral) {
+            if (emoji.skinTone == Tone::TwoTone) {
+                if (searchNeutralForTwoTone && !m_emojis.isEmpty()) {
+                    twoToneVariantIndex += TWO_TONE_PAIR_PERMUTATIONS;
+                    auto &neutralEmoji = m_emojis.last();
+                    neutralEmoji.twoToneVariantIndex = twoToneVariantIndex;
+                }
+                m_processedTwoToneEmojis[emoji.content] = m_twoToneEmojis.size();
+                m_twoToneEmojis.append(emoji);
+                m_twoToneEmojis.last().skinToneVariantIndex = skinToneVariantIndex - SKIN_TONE_COUNT;
+                searchNeutralForTwoTone = false;
+            } else if (emoji.skinTone > Tone::Neutral) {
                 if (emoji.skinTone == Tone::Light && !m_emojis.isEmpty()) {
-                    auto &neutralEmoji = m_emojis[m_emojis.size() - 1];
+                    auto &neutralEmoji = m_emojis.last();
                     neutralEmoji.skinTone = Tone::Neutral;
                     neutralEmoji.skinToneVariantIndex = skinToneVariantIndex;
                     skinToneVariantIndex += SKIN_TONE_COUNT;
@@ -69,15 +88,24 @@ void EmojiDict::load(const QString &path)
             } else {
                 m_processedEmojis[emoji.content] = m_emojis.size();
                 m_emojis.append(emoji);
+                searchNeutralForTwoTone = true;
             }
         }
     }
 
     if (skinToneVariantIndex != 0 && m_tonedEmojis.size() != skinToneVariantIndex) {
-        qWarning() << "Some skin tone variants are missing.";
+        qCWarning(EMOJIER_LOG) << "Some skin tone variants are missing.";
         m_emojis.append(std::move(m_tonedEmojis));
+        m_emojis.append(std::move(m_twoToneEmojis));
         for (auto &emoji : m_emojis) {
             emoji.skinTone = Tone::HasNoVariants;
+            emoji.twoToneVariantIndex = 0;
+        }
+    } else if (twoToneVariantIndex != 0 && m_twoToneEmojis.size() != twoToneVariantIndex) {
+        qCWarning(EMOJIER_LOG) << "Some two-tone skin variants are missing.";
+        m_emojis.append(std::move(m_twoToneEmojis));
+        for (auto &emoji : m_emojis) {
+            emoji.twoToneVariantIndex = 0;
         }
     }
 }
