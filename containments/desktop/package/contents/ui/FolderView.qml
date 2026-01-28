@@ -217,12 +217,6 @@ FocusScope {
         id: eventGenerator
     }
 
-    onEnabledChanged: {
-        if (!main.enabled) {
-            listener.clearPressState();
-        }
-    }
-
     MouseEventListener {
         id: listener
 
@@ -1359,6 +1353,11 @@ FocusScope {
             perStripe: Math.floor((gridView.flow === GridView.FlowLeftToRight)
                 ? (gridView.width / gridView.cellWidth)
                 : (gridView.height / gridView.cellHeight))
+
+            onModelReset: {
+                // When reset, listener.pressedItem will be invalidated.
+                listener.clearPressState();
+            }
         }
 
         Folder.ItemViewAdapter {
