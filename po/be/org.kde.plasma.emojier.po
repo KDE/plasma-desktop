@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 08:43+0000\n"
+"POT-Creation-Date: 2026-01-28 00:46+0000\n"
 "PO-Revision-Date: 2024-11-20 08:42\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -141,29 +141,43 @@ msgctxt "@action:inmenu Skin Tone"
 msgid "Dark"
 msgstr ""
 
-#: app/ui/CategoryPage.qml:264
+#: app/ui/CategoryPage.qml:247
+#, kde-format
+msgctxt "@title:window A two-tone skin variant can be selected here"
+msgid "Select Variant"
+msgstr ""
+
+#: app/ui/CategoryPage.qml:295
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Character"
 msgstr "Скапіяваць знак"
 
-#: app/ui/CategoryPage.qml:269
+#: app/ui/CategoryPage.qml:303
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Description"
 msgstr "Скапіяваць апісанне"
 
-#: app/ui/CategoryPage.qml:368
+#: app/ui/CategoryPage.qml:344
 #, fuzzy, kde-format
 #| msgid "No recent Emojis"
 msgctxt "@label placeholder for empty recent emoji list"
-msgid "No recent Emojis"
+msgid "No recent emojis"
 msgstr "Няма нядаўна выкарыстаных эмодзі"
 
-#: app/ui/CategoryPage.qml:368
+#: app/ui/CategoryPage.qml:344
 #, kde-format
 msgctxt "@label placeholder for no emoji found in category"
 msgid "No matching emoji found"
+msgstr ""
+
+#: app/ui/CategoryPage.qml:392
+#, kde-format
+msgctxt ""
+"@action:button Opens a window where a two-tone skin variant can be selected. "
+"%1 is the emoji's name"
+msgid "Select Variant of \"%1\""
 msgstr ""
 
 #: app/ui/Emojier.qml:44

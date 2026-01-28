@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-16 00:45+0000\n"
-"PO-Revision-Date: 2026-01-20 19:54+0300\n"
+"PO-Revision-Date: 2026-01-27 19:49+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -1108,7 +1108,7 @@ msgstr "Пропорционально"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with pointer"
-msgstr ""
+msgstr "Область масштабирования следует за курсором"
 
 #: ui/ZoomMagnifier.qml:133
 #, kde-format
@@ -1121,6 +1121,7 @@ msgstr "По центру"
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, except near screen edges"
 msgstr ""
+"Курсор остаётся в центре экрана, за исключением областей вблизи краёв экрана"
 
 #: ui/ZoomMagnifier.qml:138
 #, kde-format
@@ -1132,7 +1133,7 @@ msgstr "По центру"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, even near screen edges"
-msgstr ""
+msgstr "Курсор остаётся в центре экрана, даже при перемещении к краям экрана"
 
 #: ui/ZoomMagnifier.qml:143
 #, kde-format
@@ -1156,7 +1157,7 @@ msgstr "Отключено"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow pointer"
-msgstr ""
+msgstr "Область масштабирования не следует за курсором"
 
 #: ui/ZoomMagnifier.qml:166
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-28 00:46+0000\n"
 "PO-Revision-Date: 2026-01-19 21:45+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -100,73 +100,73 @@ msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Премахване на икона"
 
-#: ConfigGeneral.qml:120
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Show applications as:"
-msgstr "Показване на приложения като:"
-
-#: ConfigGeneral.qml:122
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Name only"
-msgstr "Само име"
-
-#: ConfigGeneral.qml:122
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Description only"
-msgstr "Само описание"
-
-#: ConfigGeneral.qml:122
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Name (Description)"
-msgstr "Име (описание)"
-
-#: ConfigGeneral.qml:122
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Description (Name)"
-msgstr "Описание (име)"
-
-#: ConfigGeneral.qml:132
+#: ConfigGeneral.qml:116
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Надпис:"
 
-#: ConfigGeneral.qml:134
+#: ConfigGeneral.qml:118
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Добавете надпис"
 
-#: ConfigGeneral.qml:148
+#: ConfigGeneral.qml:132
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "Възстановяване на етикета на менюто"
 
-#: ConfigGeneral.qml:161
+#: ConfigGeneral.qml:145
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "Не може да се зададе текстов етикет, когато панелът е вертикален."
 
-#: ConfigGeneral.qml:171
+#: ConfigGeneral.qml:157
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Show applications as:"
+msgstr "Показване на приложения като:"
+
+#: ConfigGeneral.qml:159
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Name only"
+msgstr "Само име"
+
+#: ConfigGeneral.qml:159
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Description only"
+msgstr "Само описание"
+
+#: ConfigGeneral.qml:159
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Name (Description)"
+msgstr "Име (описание)"
+
+#: ConfigGeneral.qml:159
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Description (Name)"
+msgstr "Описание (име)"
+
+#: ConfigGeneral.qml:167
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Общи:"
 
-#: ConfigGeneral.qml:175
+#: ConfigGeneral.qml:171
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Сортиране на приложенията по азбучен ред"
 
-#: ConfigGeneral.qml:179
+#: ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -176,121 +176,121 @@ msgstr ""
 "Това не влияе на начина на сортиране на приложенията в резултатите от "
 "търсенето или в страницата с предпочитани."
 
-#: ConfigGeneral.qml:185
+#: ConfigGeneral.qml:181
 #, kde-format
 msgctxt "@option:check"
 msgid "Use compact list item style"
 msgstr "Компактен стил на списък"
 
-#: ConfigGeneral.qml:191
+#: ConfigGeneral.qml:187
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Автоматично деактивиране в режим на таблет"
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:195
 #, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly installed applications"
 msgstr "Маркиране на новоинсталирани приложения"
 
-#: ConfigGeneral.qml:204
+#: ConfigGeneral.qml:200
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
 msgstr "Превключва категориите на страничната лента при посочване с мишката"
 
-#: ConfigGeneral.qml:210
+#: ConfigGeneral.qml:206
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "Конфигуриране на приставки за търсене…"
 
-#: ConfigGeneral.qml:220
+#: ConfigGeneral.qml:216
 #, kde-format
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr "Позиция на плъзгача:"
 
-#: ConfigGeneral.qml:221 ConfigGeneral.qml:229
+#: ConfigGeneral.qml:217 ConfigGeneral.qml:225
 #, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr "Вдясно"
 
-#: ConfigGeneral.qml:221
+#: ConfigGeneral.qml:217
 #, kde-format
 msgctxt "option:radio sidebar position"
 msgid "Left"
 msgstr "Вляво"
 
-#: ConfigGeneral.qml:229
+#: ConfigGeneral.qml:225
 #, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr "Вляво"
 
-#: ConfigGeneral.qml:237
+#: ConfigGeneral.qml:233
 #, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
 msgstr "Показване на Предпочитани:"
 
-#: ConfigGeneral.qml:238
+#: ConfigGeneral.qml:234
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "Плочки"
 
-#: ConfigGeneral.qml:246
+#: ConfigGeneral.qml:242
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "Списък"
 
-#: ConfigGeneral.qml:254
+#: ConfigGeneral.qml:250
 #, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
 msgstr "Показване на други приложения:"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:251
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "Плочки"
 
-#: ConfigGeneral.qml:263
+#: ConfigGeneral.qml:259
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "Списък"
 
-#: ConfigGeneral.qml:275
+#: ConfigGeneral.qml:271
 #, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr "Показване на бутони за:"
 
-#: ConfigGeneral.qml:276
+#: ConfigGeneral.qml:272
 #, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power"
 msgstr "Захранване"
 
-#: ConfigGeneral.qml:285
+#: ConfigGeneral.qml:281
 #, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "Сесия"
 
-#: ConfigGeneral.qml:294
+#: ConfigGeneral.qml:290
 #, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
 msgstr "Захранване и сесия"
 
-#: ConfigGeneral.qml:303
+#: ConfigGeneral.qml:299
 #, kde-format
 msgctxt "@option:check"
 msgid "Show action button captions"

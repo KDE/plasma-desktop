@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 08:43+0000\n"
+"POT-Creation-Date: 2026-01-28 00:46+0000\n"
 "PO-Revision-Date: 2026-01-13 14:56+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -135,29 +135,45 @@ msgctxt "@action:inmenu Skin Tone"
 msgid "Dark"
 msgstr "כהה"
 
-#: app/ui/CategoryPage.qml:264
+#: app/ui/CategoryPage.qml:247
+#, kde-format
+msgctxt "@title:window A two-tone skin variant can be selected here"
+msgid "Select Variant"
+msgstr ""
+
+#: app/ui/CategoryPage.qml:295
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Character"
 msgstr "העתקת תו"
 
-#: app/ui/CategoryPage.qml:269
+#: app/ui/CategoryPage.qml:303
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Description"
 msgstr "העתקת תיאור"
 
-#: app/ui/CategoryPage.qml:368
-#, kde-format
+#: app/ui/CategoryPage.qml:344
+#, fuzzy, kde-format
+#| msgctxt "@label placeholder for empty recent emoji list"
+#| msgid "No recent Emojis"
 msgctxt "@label placeholder for empty recent emoji list"
-msgid "No recent Emojis"
+msgid "No recent emojis"
 msgstr "אין אמוג׳י אחרונים"
 
-#: app/ui/CategoryPage.qml:368
+#: app/ui/CategoryPage.qml:344
 #, kde-format
 msgctxt "@label placeholder for no emoji found in category"
 msgid "No matching emoji found"
 msgstr "לא נמצא אמוג׳י תואם"
+
+#: app/ui/CategoryPage.qml:392
+#, kde-format
+msgctxt ""
+"@action:button Opens a window where a two-tone skin variant can be selected. "
+"%1 is the emoji's name"
+msgid "Select Variant of \"%1\""
+msgstr ""
 
 #: app/ui/Emojier.qml:44
 #, kde-format

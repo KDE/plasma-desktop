@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-28 00:46+0000\n"
 "PO-Revision-Date: 2025-06-08 10:26+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -105,78 +105,78 @@ msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Kendu ikonoa"
 
-#: ConfigGeneral.qml:120
+#: ConfigGeneral.qml:116
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Text label:"
+msgstr "Testu-etiketa:"
+
+#: ConfigGeneral.qml:118
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to add a text label"
+msgstr "Tekleatu hemen testu-etiketa bat gehitzeko"
+
+#: ConfigGeneral.qml:132
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset menu label"
+msgstr "Berrezarri menuko etiketa"
+
+#: ConfigGeneral.qml:145
+#, kde-format
+msgctxt "@info"
+msgid "A text label cannot be set when the Panel is vertical."
+msgstr "Testu etiketa bat ezin da ezarri panela bertikala denean."
+
+#: ConfigGeneral.qml:157
 #, fuzzy, kde-format
 #| msgid "Show applications as:"
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Erakutsi aplikazioak honela:"
 
-#: ConfigGeneral.qml:122
+#: ConfigGeneral.qml:159
 #, fuzzy, kde-format
 #| msgid "Name only"
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Izena bakarrik"
 
-#: ConfigGeneral.qml:122
+#: ConfigGeneral.qml:159
 #, fuzzy, kde-format
 #| msgid "Description only"
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Deskribapena bakarrik"
 
-#: ConfigGeneral.qml:122
+#: ConfigGeneral.qml:159
 #, fuzzy, kde-format
 #| msgid "Name (Description)"
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Izena (deskribapena)"
 
-#: ConfigGeneral.qml:122
+#: ConfigGeneral.qml:159
 #, fuzzy, kde-format
 #| msgid "Description (Name)"
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Deskribapena (Izena)"
 
-#: ConfigGeneral.qml:132
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Text label:"
-msgstr "Testu-etiketa:"
-
-#: ConfigGeneral.qml:134
-#, kde-format
-msgctxt "@info:placeholder"
-msgid "Type here to add a text label"
-msgstr "Tekleatu hemen testu-etiketa bat gehitzeko"
-
-#: ConfigGeneral.qml:148
-#, kde-format
-msgctxt "@action:button"
-msgid "Reset menu label"
-msgstr "Berrezarri menuko etiketa"
-
-#: ConfigGeneral.qml:161
-#, kde-format
-msgctxt "@info"
-msgid "A text label cannot be set when the Panel is vertical."
-msgstr "Testu etiketa bat ezin da ezarri panela bertikala denean."
-
-#: ConfigGeneral.qml:171
+#: ConfigGeneral.qml:167
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Orokorra:"
 
-#: ConfigGeneral.qml:175
+#: ConfigGeneral.qml:171
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Sailkatu aplikazioak alfabetikoki"
 
-#: ConfigGeneral.qml:179
+#: ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -186,75 +186,75 @@ msgstr ""
 "Honek ez dio eragiten aplikazioak sailkatzeko erari, ez bilaketa emaitzetan "
 "ez eta gogokoak orrian ere."
 
-#: ConfigGeneral.qml:185
+#: ConfigGeneral.qml:181
 #, fuzzy, kde-format
 #| msgid "Use compact list item style"
 msgctxt "@option:check"
 msgid "Use compact list item style"
 msgstr "Erabili zerrenda-trinko elementu estiloa"
 
-#: ConfigGeneral.qml:191
+#: ConfigGeneral.qml:187
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Automatikoki ezgaitua ukimen moduan"
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:195
 #, fuzzy, kde-format
 #| msgid "Highlight newly installed applications"
 msgctxt "@option:check"
 msgid "Highlight newly installed applications"
 msgstr "Nabarmendu aplikazio instalatu berriak"
 
-#: ConfigGeneral.qml:204
+#: ConfigGeneral.qml:200
 #, fuzzy, kde-format
 #| msgid "Switch sidebar categories when hovering over them"
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
 msgstr "Aldatu alboko-barra kategoriak haien gainetik igarotzean"
 
-#: ConfigGeneral.qml:210
+#: ConfigGeneral.qml:206
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "Konfiguratu bilaketa-pluginak..."
 
-#: ConfigGeneral.qml:220
+#: ConfigGeneral.qml:216
 #, fuzzy, kde-format
 #| msgid "Sidebar position:"
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr "Alboko barraren kokapena:"
 
-#: ConfigGeneral.qml:221 ConfigGeneral.qml:229
+#: ConfigGeneral.qml:217 ConfigGeneral.qml:225
 #, fuzzy, kde-format
 #| msgid "Right"
 msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr "Eskuinean"
 
-#: ConfigGeneral.qml:221
+#: ConfigGeneral.qml:217
 #, fuzzy, kde-format
 #| msgid "Left"
 msgctxt "option:radio sidebar position"
 msgid "Left"
 msgstr "Ezkerrean"
 
-#: ConfigGeneral.qml:229
+#: ConfigGeneral.qml:225
 #, fuzzy, kde-format
 #| msgid "Left"
 msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr "Ezkerrean"
 
-#: ConfigGeneral.qml:237
+#: ConfigGeneral.qml:233
 #, fuzzy, kde-format
 #| msgid "Show favorites:"
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
 msgstr "Erakutsi gogokoak:"
 
-#: ConfigGeneral.qml:238
+#: ConfigGeneral.qml:234
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a grid'"
 #| msgid "In a grid"
@@ -262,7 +262,7 @@ msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "Sareta batean"
 
-#: ConfigGeneral.qml:246
+#: ConfigGeneral.qml:242
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a list'"
 #| msgid "In a list"
@@ -270,14 +270,14 @@ msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "Zerrenda batean"
 
-#: ConfigGeneral.qml:254
+#: ConfigGeneral.qml:250
 #, fuzzy, kde-format
 #| msgid "Show other applications:"
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
 msgstr "Erakutsi beste aplikazio batzuk:"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:251
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a grid'"
 #| msgid "In a grid"
@@ -285,7 +285,7 @@ msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "Sareta batean"
 
-#: ConfigGeneral.qml:263
+#: ConfigGeneral.qml:259
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a list'"
 #| msgid "In a list"
@@ -293,35 +293,35 @@ msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "Zerrenda batean"
 
-#: ConfigGeneral.qml:275
+#: ConfigGeneral.qml:271
 #, fuzzy, kde-format
 #| msgid "Show buttons for:"
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr "Erakutsi honetarako botoiak:"
 
-#: ConfigGeneral.qml:276
+#: ConfigGeneral.qml:272
 #, fuzzy, kde-format
 #| msgid "Power"
 msgctxt "@option:radio Show buttons for"
 msgid "Power"
 msgstr "Energia"
 
-#: ConfigGeneral.qml:285
+#: ConfigGeneral.qml:281
 #, fuzzy, kde-format
 #| msgid "Session"
 msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "Saioa"
 
-#: ConfigGeneral.qml:294
+#: ConfigGeneral.qml:290
 #, fuzzy, kde-format
 #| msgid "Power and session"
 msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
 msgstr "Energia eta saioa"
 
-#: ConfigGeneral.qml:303
+#: ConfigGeneral.qml:299
 #, fuzzy, kde-format
 #| msgid "Show action button captions"
 msgctxt "@option:check"

@@ -9,21 +9,21 @@
 # Gregory Mokhin <mok@kde.ru>, 2005.
 # Andrey Cherepanov <skull@kde.ru>, 2009.
 # Alexander Potashev <aspotashev@gmail.com>, 2011, 2019.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2018, 2020, 2021, 2022, 2023, 2026 Alexander Yavorsky <kekcuha@gmail.com>
 # SPDX-FileCopyrightText: 2024, 2025 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-03-10 14:53+0300\n"
-"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
-"Language-Team: Basealt Translation Team\n"
+"PO-Revision-Date: 2026-01-27 19:45+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.1\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Environment: kde\n"
@@ -55,16 +55,13 @@ msgid "Applications to be excluded from session"
 msgstr "Приложения, которые не следует восстанавливать в следующем сеансе"
 
 #: ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Failed to request restart to firmware setup: %1"
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Failed to request restart to firmware setup: %1"
 msgstr "Не удалось запросить перезагрузку в экран настройки прошивки: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the UEFI setup screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
@@ -72,10 +69,7 @@ msgstr ""
 "При следующей перезагрузке компьютера будет показан экран настройки UEFI."
 
 #: ui/main.qml:32
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
@@ -83,8 +77,7 @@ msgstr ""
 "При следующей перезагрузке компьютера будет показан экран настройки прошивки."
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgctxt "@action:button"
 msgid "Restart Now"
 msgstr "Перезагрузить сейчас"
@@ -118,8 +111,7 @@ msgid "Session Restore"
 msgstr "Восстановление сеанса"
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid "On login, launch apps that were open:"
+#, kde-format
 msgctxt "@title:group prefix for radiobuttons"
 msgid "On login, launch apps that were open:"
 msgstr "Восстанавливать приложения, которые были запущены:"
@@ -161,19 +153,13 @@ msgid "Start with an empty session"
 msgstr "Начинать с пустого сеанса"
 
 #: ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Ignored applications:"
 msgstr "Исключить приложения:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' desktop file identifier or, on X11, executable names here "
-#| "(separated by commas or colons, for example 'xterm:org.kde.konsole."
-#| "desktop' or 'xterm,org.kde.konsole.desktop') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "

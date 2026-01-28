@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-16 00:45+0000\n"
-"PO-Revision-Date: 2026-01-23 16:33+0100\n"
+"PO-Revision-Date: 2026-01-27 16:23+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -23,7 +23,7 @@ msgid "KWin"
 msgstr "KWin"
 
 #: kcmaccess.cpp:130
-#, fuzzy, kde-format
+#, kde-format
 msgid "Toggle Invert Effect"
 msgstr "Commuta effecto de inverter"
 
@@ -140,15 +140,13 @@ msgstr "Inverte le colores de systema sur le campana"
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
-#, fuzzy, kde-format
-#| msgid "Color of the Visible Bell"
+#, kde-format
 msgid "Color of the Visual Bell"
 msgstr "Color del campana visibile"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Duration of the Visible Bell"
+#, kde-format
 msgid "Duration of the Visual Bell"
 msgstr "Duration del campana visibile"
 
@@ -160,10 +158,9 @@ msgstr "Si Correction de cecitate de color (ColorBlindness) es habilitate"
 
 #. i18n: ectx: label, entry (Invert), group (Plugins)
 #: kcmaccessibilityinvert.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Invert effect is enabled"
-msgstr "Si agitar cursor es habilitate"
+msgstr "Si effecto de inverter es habilitate"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -294,10 +291,9 @@ msgstr "Activa Lector de schermo"
 
 #. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
 #: kcmaccessibilityshakecursor.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether Shake Pointer is enabled"
-msgstr "Si agitar cursor es habilitate"
+msgstr "Si agitar punctator es habilitate"
 
 #. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
 #: kcmaccessibilityshakecursor.kcfg:15
@@ -307,17 +303,15 @@ msgstr "Aggrandimento"
 
 #. i18n: ectx: label, entry (Zoom), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Zoom effect is enabled"
-msgstr "Si agitar cursor es habilitate"
+msgstr "Si effecto de zoom es habilitate"
 
 #. i18n: ectx: label, entry (Magnifier), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Magnifier effect is enabled"
-msgstr "Si agitar cursor es habilitate"
+msgstr "Si effecto de aggrandir es habilitate"
 
 #: ui/ActivationShortcuts.qml:18
 #, kde-format
@@ -426,18 +420,16 @@ msgid "Custom sound:"
 msgstr "Sono personalisate:"
 
 #: ui/Bell.qml:75
-#, fuzzy, kde-format
-#| msgid "Search audio file for the system bell"
+#, kde-format
 msgctxt "@action:button icononly tooltip"
 msgid "Choose audio file for the system bell"
 msgstr "Cerca file audio per le campana de systema"
 
 #: ui/Bell.qml:76
-#, fuzzy, kde-format
-#| msgid "Please choose an audio file"
+#, kde-format
 msgctxt "@action button accessible only"
 msgid "Choose audio file"
-msgstr "Pro favor selige un file audio"
+msgstr "Selige un file audio"
 
 #: ui/Bell.qml:77
 #, kde-format
@@ -534,7 +526,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option"
 msgid "Yellow, green & purple (Tritanopia)"
-msgstr ""
+msgstr "Jalne, verde& purpura (Tritanopia)"
 
 #: ui/ColorblindnessCorrection.qml:52
 #, kde-format
@@ -570,28 +562,25 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Reds:"
-msgstr ""
+msgstr "Rubies:"
 
 #: ui/ColorblindnessCorrection.qml:133
-#, fuzzy, kde-format
-#| msgid "Green"
+#, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Greens:"
-msgstr "Verde"
+msgstr "Verdes:"
 
 #: ui/ColorblindnessCorrection.qml:134
-#, fuzzy, kde-format
-#| msgid "Blue"
+#, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Blues:"
-msgstr "Blues"
+msgstr "Blaus:"
 
 #: ui/ColorblindnessCorrection.qml:135
-#, fuzzy, kde-format
-#| msgid "Purple"
+#, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Purples:"
-msgstr "Purpura"
+msgstr "Purpuras:"
 
 #: ui/Invert.qml:22
 #, kde-format
@@ -778,12 +767,10 @@ msgid "Invert"
 msgstr "Inverte"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "Shake cursor to find it"
-#| msgid "Shake Cursor"
+#, kde-format
 msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
-msgstr "Agita Cursor"
+msgstr "Agita Punctator"
 
 #: ui/ModifierKeys.qml:17
 #, kde-format
@@ -868,12 +855,10 @@ msgid "Configure Notifications…"
 msgstr "Configura notificationes ..."
 
 #: ui/MouseNavigation.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move pointer:"
-msgstr "Usa pannello numeric per mover cursor"
+msgstr "Usa pannello numeric per mover punctator:"
 
 #: ui/MouseNavigation.qml:22
 #, kde-format
@@ -996,12 +981,10 @@ msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Lancea configuration de Lector de schermo Orca…"
 
 #: ui/ShakeCursor.qml:15
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Shake cursor to find it:"
+#, kde-format
 msgctxt "@label"
 msgid "Shake pointer to find it:"
-msgstr "Agita cursor pe trovaqr lo:"
+msgstr "Agita punctator per trovar lo:"
 
 #: ui/ShakeCursor.qml:16
 #, kde-format
@@ -1022,9 +1005,7 @@ msgid "Normal"
 msgstr "Normal"
 
 #: ui/ShakeCursor.qml:62
-#, fuzzy, kde-format
-#| msgctxt "@label Large cursor size"
-#| msgid "Large"
+#, kde-format
 msgctxt "@label Large pointer size"
 msgid "Large"
 msgstr "Grande (Large)"
@@ -1036,9 +1017,7 @@ msgid "Zoom:"
 msgstr "Zoom: "
 
 #: ui/ZoomMagnifier.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Flash screen when a system bell is rung"
-#| msgid "Flash screen"
+#, kde-format
 msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
 msgid "Full screen"
 msgstr "Schermo plen"

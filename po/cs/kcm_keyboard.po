@@ -5,30 +5,31 @@
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2013.
 # SPDX-FileCopyrightText: 2021, 2024, 2025 Vit Pelcak <vit@pelcak.org>
 #
+# SPDX-FileCopyrightText: 2026 Jan Papez (honyczek)
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-10-02 09:25+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
-"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-01-27 18:41+0100\n"
+"Last-Translator: Jan Papez (honyczek) <honyczek@centrum.cz>\n"
+"Language-Team: Czech <kde-i18n-cs@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Vít Pelčák,Lukáš Kucharczyk"
+msgstr "Vít Pelčák,Lukáš Kucharczyk,Jan Papež"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "vit@pelcak.org,lukas@kucharczyk.xyz"
+msgstr "vit@pelcak.org,lukas@kucharczyk.xyz,honyczek@centrum.cz"
 
 #: bindings.cpp:24
 #, kde-format
@@ -86,14 +87,19 @@ msgid ""
 "not supported and  will also trigger this message. These might still work "
 "fine if applied"
 msgstr ""
+"Geometrie klávesnice při načítání selhala. To často naznačuje, že vybraný "
+"model nepodporuje konkrétní rozložení nebo jeho variantu. Tento problém se "
+"pravděpodobně také vyskytne, když se pokusíte použít tuto kombinaci modelu, "
+"rozložení a varianty.\n"
+"Náhled rozložení definovaných mimo adresář xkb vašeho systému není "
+"podporován a také spustí tuto zprávu. Tyto však mohou při aplikování stále "
+"fungovat správně."
 
 #: ui/KeyBindings.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Switching…"
+#, kde-format
 msgctxt "@title"
 msgid "Configure Key Bindings…"
-msgstr "Nastavit přepínání…"
+msgstr "Nastavit klávesové zkratky..."
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -123,7 +129,7 @@ msgstr "Obnovit vybrané volby této skupiny"
 #, kde-format
 msgctxt "@title:window"
 msgid "Set Layout"
-msgstr ""
+msgstr "Nastavit rozvržení"
 
 #: ui/LayoutDialog.qml:22
 #, kde-format
@@ -144,6 +150,8 @@ msgid ""
 "The abbreviated name of the selected layout, which will be displayed in the "
 "system tray. You can change this setting yourself."
 msgstr ""
+"Zkrácený název vybraného rozvržení, který bude zobrazený v systémové liště. "
+"Toto nastavení si můžete změnit."
 
 #: ui/LayoutDialog.qml:147
 #, kde-format
@@ -367,7 +375,7 @@ msgstr "Volná rozvržení:"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
-msgstr ""
+msgstr "Počet náhradních hlavních rozložení"
 
 #: ui/main.qml:378
 #, kde-format
@@ -384,6 +392,9 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"Můžete mít až 4 hlavní rozložení, všechna ostatní rozložení jsou náhradní. "
+"Náhradní rozložení nejsou zahrnuta při přepínání mezi rozloženími, ale lze k "
+"nim přistupovat pomocí indikátoru klávesnice nebo nastavením vlastní zkratky."
 
 #: ui/main.qml:387
 #, kde-format
@@ -398,42 +409,40 @@ msgid "or"
 msgstr "nebo"
 
 #: ui/main_phone.qml:36
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@title form header"
 msgid "Model & Layout"
-msgstr "Přidat rozvržení"
+msgstr "Model a rozložení"
 
 #: ui/main_phone.qml:43
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Keyboard Model"
-msgstr ""
+msgstr "Model klávesnice"
 
 #: ui/main_phone.qml:72
 #, kde-format
 msgctxt "@option:check"
 msgid "Custom Layout"
-msgstr ""
+msgstr "Vlastní rozvržení"
 
 #: ui/main_phone.qml:96
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Layout..."
-msgstr ""
+msgstr "Změnit rozvržení..."
 
 #: ui/main_phone.qml:103
 #, kde-format
 msgctxt "@title:group"
 msgid "Key Repeat"
-msgstr ""
+msgstr "Opakování klávesy"
 
 #: ui/main_phone.qml:109
 #, kde-format
 msgctxt "@option:check"
 msgid "Customize Repeat"
-msgstr ""
+msgstr "Upravit opakování"
 
 #: ui/Switching.qml:17
 #, kde-format
@@ -516,6 +525,10 @@ msgid ""
 "Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
 "page."
 msgstr ""
+"Odkazované zkratky X11 umožňují jemnější ovládání zkratky pouze s "
+"modifikátorem a mají v hraničních případech mírně lepší podporu na X11. Na "
+"Waylandu je lze použít také.<nl/><nl/>Nastavení těchto zkratek vás přesune "
+"na stránku Klávesových zkratek."
 
 #: ui/Switching.qml:180
 #, kde-format
@@ -530,6 +543,8 @@ msgid ""
 "Modifier keys can be used to type additional characters, symbols, and "
 "diacritical marks."
 msgstr ""
+"Modifikační klávesy lze použít k zadávání dalších znaků, symbolů a "
+"diakritických znamének."
 
 #: xkboptionsmodel.cpp:165
 #, kde-format

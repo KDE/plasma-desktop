@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-28 00:46+0000\n"
 "PO-Revision-Date: 2026-01-08 08:42+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -103,73 +103,73 @@ msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Вилучити піктограму"
 
-#: ConfigGeneral.qml:120
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Show applications as:"
-msgstr "Показ програм:"
-
-#: ConfigGeneral.qml:122
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Name only"
-msgstr "лише назви"
-
-#: ConfigGeneral.qml:122
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Description only"
-msgstr "лише описи"
-
-#: ConfigGeneral.qml:122
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Name (Description)"
-msgstr "назва (опис)"
-
-#: ConfigGeneral.qml:122
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Description (Name)"
-msgstr "опис (назва)"
-
-#: ConfigGeneral.qml:132
+#: ConfigGeneral.qml:116
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Текстова мітка:"
 
-#: ConfigGeneral.qml:134
+#: ConfigGeneral.qml:118
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Тут ви можете додати текстову мітку"
 
-#: ConfigGeneral.qml:148
+#: ConfigGeneral.qml:132
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "Відновити мітку меню"
 
-#: ConfigGeneral.qml:161
+#: ConfigGeneral.qml:145
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "Не можна встановлювати текстову мітку, якщо панель є вертикальною."
 
-#: ConfigGeneral.qml:171
+#: ConfigGeneral.qml:157
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Show applications as:"
+msgstr "Показ програм:"
+
+#: ConfigGeneral.qml:159
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Name only"
+msgstr "лише назви"
+
+#: ConfigGeneral.qml:159
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Description only"
+msgstr "лише описи"
+
+#: ConfigGeneral.qml:159
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Name (Description)"
+msgstr "назва (опис)"
+
+#: ConfigGeneral.qml:159
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Description (Name)"
+msgstr "опис (назва)"
+
+#: ConfigGeneral.qml:167
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Загальне:"
 
-#: ConfigGeneral.qml:175
+#: ConfigGeneral.qml:171
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Впорядкувати програми за абеткою"
 
-#: ConfigGeneral.qml:179
+#: ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -179,121 +179,121 @@ msgstr ""
 "Це не стосуватимуться упорядковування програм у результатах пошуку або на "
 "сторінці улюблених програм."
 
-#: ConfigGeneral.qml:185
+#: ConfigGeneral.qml:181
 #, kde-format
 msgctxt "@option:check"
 msgid "Use compact list item style"
 msgstr "Компактний стиль пунктів списку"
 
-#: ConfigGeneral.qml:191
+#: ConfigGeneral.qml:187
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Автоматично вимикається у режимі сенсорного керування"
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:195
 #, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly installed applications"
 msgstr "Підсвічувати нововстановлені програми"
 
-#: ConfigGeneral.qml:204
+#: ConfigGeneral.qml:200
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
 msgstr "Перемикати категорії бічної панелі, якщо на них наведено вказівник"
 
-#: ConfigGeneral.qml:210
+#: ConfigGeneral.qml:206
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "Налаштувати додатки пошуку…"
 
-#: ConfigGeneral.qml:220
+#: ConfigGeneral.qml:216
 #, kde-format
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr "Розташування бічної панелі:"
 
-#: ConfigGeneral.qml:221 ConfigGeneral.qml:229
+#: ConfigGeneral.qml:217 ConfigGeneral.qml:225
 #, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr "Праворуч"
 
-#: ConfigGeneral.qml:221
+#: ConfigGeneral.qml:217
 #, kde-format
 msgctxt "option:radio sidebar position"
 msgid "Left"
 msgstr "Ліворуч"
 
-#: ConfigGeneral.qml:229
+#: ConfigGeneral.qml:225
 #, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr "Ліворуч"
 
-#: ConfigGeneral.qml:237
+#: ConfigGeneral.qml:233
 #, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
 msgstr "Показувати «Улюблені»:"
 
-#: ConfigGeneral.qml:238
+#: ConfigGeneral.qml:234
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "У таблиці"
 
-#: ConfigGeneral.qml:246
+#: ConfigGeneral.qml:242
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "У списку"
 
-#: ConfigGeneral.qml:254
+#: ConfigGeneral.qml:250
 #, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
 msgstr "Показати інші програми:"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:251
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "У таблиці"
 
-#: ConfigGeneral.qml:263
+#: ConfigGeneral.qml:259
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "У списку"
 
-#: ConfigGeneral.qml:275
+#: ConfigGeneral.qml:271
 #, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr "Показати кнопки:"
 
-#: ConfigGeneral.qml:276
+#: ConfigGeneral.qml:272
 #, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power"
 msgstr "Живлення"
 
-#: ConfigGeneral.qml:285
+#: ConfigGeneral.qml:281
 #, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "Сеанс"
 
-#: ConfigGeneral.qml:294
+#: ConfigGeneral.qml:290
 #, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
 msgstr "Живлення і сеансу"
 
-#: ConfigGeneral.qml:303
+#: ConfigGeneral.qml:299
 #, kde-format
 msgctxt "@option:check"
 msgid "Show action button captions"

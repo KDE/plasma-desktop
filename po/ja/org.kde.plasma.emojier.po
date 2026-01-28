@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 08:43+0000\n"
+"POT-Creation-Date: 2026-01-28 00:46+0000\n"
 "PO-Revision-Date: 2022-08-11 14:20+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -137,29 +137,43 @@ msgctxt "@action:inmenu Skin Tone"
 msgid "Dark"
 msgstr ""
 
-#: app/ui/CategoryPage.qml:264
+#: app/ui/CategoryPage.qml:247
+#, kde-format
+msgctxt "@title:window A two-tone skin variant can be selected here"
+msgid "Select Variant"
+msgstr ""
+
+#: app/ui/CategoryPage.qml:295
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Character"
 msgstr ""
 
-#: app/ui/CategoryPage.qml:269
+#: app/ui/CategoryPage.qml:303
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Description"
 msgstr ""
 
-#: app/ui/CategoryPage.qml:368
+#: app/ui/CategoryPage.qml:344
 #, fuzzy, kde-format
 #| msgid "No recent Emojis"
 msgctxt "@label placeholder for empty recent emoji list"
-msgid "No recent Emojis"
+msgid "No recent emojis"
 msgstr "最近使用した絵文字はありません"
 
-#: app/ui/CategoryPage.qml:368
+#: app/ui/CategoryPage.qml:344
 #, kde-format
 msgctxt "@label placeholder for no emoji found in category"
 msgid "No matching emoji found"
+msgstr ""
+
+#: app/ui/CategoryPage.qml:392
+#, kde-format
+msgctxt ""
+"@action:button Opens a window where a two-tone skin variant can be selected. "
+"%1 is the emoji's name"
+msgid "Select Variant of \"%1\""
 msgstr ""
 
 #: app/ui/Emojier.qml:44
