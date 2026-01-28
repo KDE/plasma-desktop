@@ -25,6 +25,7 @@ FocusScope {
     property bool dragEnabled: true
     property bool dropEnabled: false
     property bool showLabels: true
+    property bool hoverEnabled: true
     property var view: gridView
 
     property alias currentIndex: gridView.currentIndex
@@ -231,6 +232,7 @@ FocusScope {
                     showLabel: itemGrid.showLabels
                     iconSize: gridView.iconSize
                     onInteractionConcluded: itemGrid.interactionConcluded()
+                    hoverEnabled: itemGrid.hoverEnabled
                     onHoveredChanged: {
                         if (hovered) {
                             gridView.currentIndex = index
@@ -244,7 +246,7 @@ FocusScope {
                             hoverArea.lastX = -1;
                             hoverArea.lastY = -1;
                             hoverArea.pressedItem = null;
-                            hoverArea.hoverEnabled = true;
+                            hoverArea.hoverEnabled = itemGrid.hoverEnabled;
                         }
                     }
                 }
@@ -382,7 +384,7 @@ FocusScope {
 
             acceptedButtons: Qt.LeftButton | Qt.RightButton
 
-            hoverEnabled: true
+            hoverEnabled: itemGrid.hoverEnabled
 
             function updatePositionProperties(x, y) {
                 // Prevent hover event synthesis in QQuickWindow interfering

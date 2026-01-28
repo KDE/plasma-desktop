@@ -83,6 +83,7 @@ Kicker.DashboardWindow {
         filterList.applyFilter();
         mainGrid.currentIndex = -1;
         filterList.model = rootModel;
+        hoverBlock.reset();
     }
 
     mainItem: MouseArea {
@@ -401,6 +402,7 @@ Kicker.DashboardWindow {
 
                     model: root.globalFavorites
 
+                    hoverEnabled: !hoverBlock.enabled
                     dropEnabled: true
 
                     opacity: enabled ? 1.0 : 0.3
@@ -451,6 +453,7 @@ Kicker.DashboardWindow {
 
                     model: root.systemFavorites
 
+                    hoverEnabled: !hoverBlock.enabled
                     dropEnabled: true
 
                     onInteractionConcluded: root.interactionConcluded()
@@ -612,6 +615,8 @@ Kicker.DashboardWindow {
                         cellHeight: cellWidth
                         iconSize: root.iconSize
 
+                        hoverEnabled: !hoverBlock.enabled
+
                         model: funnelModel
 
                         onInteractionConcluded: root.interactionConcluded()
@@ -654,6 +659,8 @@ Kicker.DashboardWindow {
                     height: systemFavoritesGrid.y + systemFavoritesGrid.height
                     cellSize: root.cellSize
                     iconSize: root.iconSize
+
+                    hoverEnabled: !hoverBlock.enabled
 
                     visible: opacity !== 0.0
 
@@ -708,6 +715,7 @@ Kicker.DashboardWindow {
 
                     model: root.runnerModel
 
+                    hoverEnabled: !hoverBlock.enabled
                     grabFocus: false
 
                     opacity: root.searching ? 1.0 : 0.0
@@ -775,7 +783,7 @@ Kicker.DashboardWindow {
                     height: mainGrid.height
 
                     enabled: !root.searching
-                    hoverEnabled: true
+                    hoverEnabled: !hoverBlock.enabled
 
                     property alias currentIndex: filterList.currentIndex
 
@@ -824,7 +832,7 @@ Kicker.DashboardWindow {
 
                             width: ListView.view.width
                             height: implicitHeight
-                            hoverEnabled: true
+                            hoverEnabled: !hoverBlock.enabled
                             baseModel: filterList.model
                             favoritesModel: baseModel.favoritesModel
 
@@ -942,6 +950,26 @@ Kicker.DashboardWindow {
         onClicked: mouse => {
             if (mouse.button === Qt.LeftButton) {
                 root.interactionConcluded()
+            }
+        }
+
+        MouseArea {
+            id: hoverBlock  // don't hover-activate until mouse is moved to not interfere with keyboard use
+            anchors.fill: parent
+            hoverEnabled: true
+            propagateComposedEvents: true // clicking should still work if hovering is blocked
+
+            property bool mouseMoved: false
+
+            function reset() {
+                mouseMoved = false
+                enabled = true
+            }
+
+            onPositionChanged: if (!mouseMoved) {
+                mouseMoved = true
+            } else {
+                enabled = false // this immediately triggers other hover events when bound to their hoverEnabled
             }
         }
     }
