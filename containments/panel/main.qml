@@ -81,16 +81,25 @@ ContainmentItem {
 
 //BEGIN connections
     Containment.onAppletAdded: (applet, geometry) => {
-        LayoutManager.addApplet(applet, geometry.x, geometry.y);
+        let pos = Qt.point(geometry.x, geometry.y)
+        if ("positionBeforeDeletion" in applet) {
+            pos = applet.positionBeforeDeletion
+            delete applet.positionBeforeDeletion
+        }
+
+        LayoutManager.addApplet(applet, pos.x, pos.y);
         root.checkLastSpacer();
+
         // When a new preset panel is added, avoid calling save() multiple times
         Qt.callLater(LayoutManager.save);
     }
 
     Containment.onAppletRemoved: (applet) => {
         let plasmoidItem = root.itemFor(applet);
+
         if (plasmoidItem) {
             appletsModel.remove(plasmoidItem.parent.index);
+            applet["positionBeforeDeletion"] = Qt.point(plasmoidItem.parent.x, plasmoidItem.parent.y)
         }
         checkLastSpacer();
         LayoutManager.save();
