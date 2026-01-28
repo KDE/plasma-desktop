@@ -219,13 +219,13 @@ PlasmaExtras.PlasmoidHeading {
                     }
                     Keys.onLeftPressed: event => {
                         if (activeFocus) {
-                            nextItemInFocusChain(kickoff.sideBarOnRight).forceActiveFocus(
+                            (sideBarOnRight ? configureButton : avatar).forceActiveFocus(
                                 Application.layoutDirection === Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
                         }
                     }
                     Keys.onRightPressed: event => {
                         if (activeFocus) {
-                            nextItemInFocusChain(!kickoff.sideBarOnRight).forceActiveFocus(
+                            (sideBarOnRight ? avatar : configureButton).forceActiveFocus(
                                 Application.layoutDirection === Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
                         }
                     }
@@ -249,11 +249,11 @@ PlasmaExtras.PlasmoidHeading {
                         tabSetFocus(event, nextItemInFocusChain());
                     }
                     Keys.onLeftPressed: event => {
-                        nextItemInFocusChain(kickoff.sideBarOnRight).forceActiveFocus(
+                        (kickoff.sideBarOnRight ? pinButton : searchField).forceActiveFocus(
                             Application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
                     }
                     Keys.onRightPressed: event => {
-                        nextItemInFocusChain(!kickoff.sideBarOnRight).forceActiveFocus(
+                        (kickoff.sideBarOnRight ? searchField : pinButton).forceActiveFocus(
                             Application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
                     }
                     onClicked: plasmoid.internalAction("configure").trigger()
