@@ -65,6 +65,8 @@ PlasmaExtras.PlasmoidHeading {
                 rightMargin: kickoff.backgroundMetrics.rightPadding
             }
 
+            Keys.forwardTo: searchField.activeFocus ? null : searchField
+
             RowLayout {
                 id: nameAndIcon
                 spacing: root.spacing
