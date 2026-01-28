@@ -1,14 +1,14 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Alexander Potashev <aspotashev@gmail.com>, 2018, 2019.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2026 Alexander Yavorsky <kekcuha@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-14 02:39+0000\n"
-"PO-Revision-Date: 2024-09-15 13:46+0300\n"
+"PO-Revision-Date: 2026-01-27 19:46+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -17,32 +17,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: ConfigOverlay.qml:333
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:inmenu removes widget"
 msgid "Remove"
 msgstr "Удалить"
 
 #: ConfigOverlay.qml:343
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:inmenu opens widget config dialog"
 msgid "Configure…"
 msgstr "Настроить…"
 
 #: ConfigOverlay.qml:354
-#, fuzzy, kde-format
-#| msgid "Show Alternatives…"
+#, kde-format
 msgctxt "@action:inmenu opens widget alternatives explorer"
 msgid "Show Alternatives…"
 msgstr "Взаимозаменяемые виджеты…"
 
 #: ConfigOverlay.qml:373
-#, fuzzy, kde-format
-#| msgid "Spacer width"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Spacer width"
 msgstr "Ширина разделителя"
@@ -55,8 +51,7 @@ msgid "Flexible size"
 msgstr "Не фиксировать размер"
 
 #: main.qml:453
-#, fuzzy, kde-format
-#| msgid "Open Panel configuration ui"
+#, kde-format
 msgctxt ""
 "@info:whatsthis Accessible description for entering Panel edit mode click "
 "area"
@@ -64,8 +59,7 @@ msgid "Open Panel configuration ui"
 msgstr "Открыть интерфейс настройки панели"
 
 #: main.qml:460
-#, fuzzy, kde-format
-#| msgid "Add Widgets…"
+#, kde-format
 msgctxt "@action:button opens widget explorer"
 msgid "Add Widgets…"
 msgstr "Добавить виджеты…"

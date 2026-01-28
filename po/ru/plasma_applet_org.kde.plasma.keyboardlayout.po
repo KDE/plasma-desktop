@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2024 Alexander Yavorsky <kekcuha@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2024, 2026 Alexander Yavorsky <kekcuha@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2024-05-06 09:02+0300\n"
+"PO-Revision-Date: 2026-01-27 19:36+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -16,18 +16,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: qml/config.qml:6
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Общие"
 
 #: qml/configGeneral.qml:31
-#, fuzzy, kde-format
-#| msgid "Display style:"
+#, kde-format
 msgctxt "@title:group of radio buttons, options are language codes or images"
 msgid "Display style:"
 msgstr "Стиль отображения:"
@@ -39,15 +37,13 @@ msgid "No flag available"
 msgstr "Флаг недоступен"
 
 #: qml/configGeneral.qml:102
-#, fuzzy, kde-format
-#| msgid "Layouts:"
+#, kde-format
 msgctxt "@label prefixed to button, as in 'keyboard layouts'"
 msgid "Layouts:"
 msgstr "Раскладки:"
 
 #: qml/configGeneral.qml:103
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:button opens kcm_keyboard"
 msgid "Configure…"
 msgstr "Настроить…"

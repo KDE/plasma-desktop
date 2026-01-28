@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-28 02:43+0000\n"
 "PO-Revision-Date: 2025-11-10 22:26+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -105,78 +105,78 @@ msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Ikon eltávolítása"
 
-#: ConfigGeneral.qml:120
+#: ConfigGeneral.qml:116
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Text label:"
+msgstr "Szövegcímke:"
+
+#: ConfigGeneral.qml:118
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to add a text label"
+msgstr "Írjon ide szövegcímke hozzáadásához"
+
+#: ConfigGeneral.qml:132
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset menu label"
+msgstr "Menücímke visszaállítása"
+
+#: ConfigGeneral.qml:145
+#, kde-format
+msgctxt "@info"
+msgid "A text label cannot be set when the Panel is vertical."
+msgstr "Nem állítható be szövegcímke függőleges panelhez."
+
+#: ConfigGeneral.qml:157
 #, fuzzy, kde-format
 #| msgid "Show applications as:"
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Alkalmazások megjelenítése mint:"
 
-#: ConfigGeneral.qml:122
+#: ConfigGeneral.qml:159
 #, fuzzy, kde-format
 #| msgid "Name only"
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Csak név"
 
-#: ConfigGeneral.qml:122
+#: ConfigGeneral.qml:159
 #, fuzzy, kde-format
 #| msgid "Description only"
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Csak leírás"
 
-#: ConfigGeneral.qml:122
+#: ConfigGeneral.qml:159
 #, fuzzy, kde-format
 #| msgid "Name (Description)"
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Név (leírás)"
 
-#: ConfigGeneral.qml:122
+#: ConfigGeneral.qml:159
 #, fuzzy, kde-format
 #| msgid "Description (Name)"
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Leírás (név)"
 
-#: ConfigGeneral.qml:132
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Text label:"
-msgstr "Szövegcímke:"
-
-#: ConfigGeneral.qml:134
-#, kde-format
-msgctxt "@info:placeholder"
-msgid "Type here to add a text label"
-msgstr "Írjon ide szövegcímke hozzáadásához"
-
-#: ConfigGeneral.qml:148
-#, kde-format
-msgctxt "@action:button"
-msgid "Reset menu label"
-msgstr "Menücímke visszaállítása"
-
-#: ConfigGeneral.qml:161
-#, kde-format
-msgctxt "@info"
-msgid "A text label cannot be set when the Panel is vertical."
-msgstr "Nem állítható be szövegcímke függőleges panelhez."
-
-#: ConfigGeneral.qml:171
+#: ConfigGeneral.qml:167
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Általános:"
 
-#: ConfigGeneral.qml:175
+#: ConfigGeneral.qml:171
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Alkalmazások rendezése betűrendben"
 
-#: ConfigGeneral.qml:179
+#: ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -186,75 +186,75 @@ msgstr ""
 "Ez nem befolyásolja az alkalmazások rendezését a keresési eredményekben vagy "
 "a kedvencek oldalon."
 
-#: ConfigGeneral.qml:185
+#: ConfigGeneral.qml:181
 #, fuzzy, kde-format
 #| msgid "Use compact list item style"
 msgctxt "@option:check"
 msgid "Use compact list item style"
 msgstr "Kompakt listaelemstílus használata"
 
-#: ConfigGeneral.qml:191
+#: ConfigGeneral.qml:187
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Automatikus kikapcsolás Érintés módban"
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:195
 #, fuzzy, kde-format
 #| msgid "Highlight newly installed applications"
 msgctxt "@option:check"
 msgid "Highlight newly installed applications"
 msgstr "Újonnan telepített alkalmazások kiemelése"
 
-#: ConfigGeneral.qml:204
+#: ConfigGeneral.qml:200
 #, fuzzy, kde-format
 #| msgid "Switch sidebar categories when hovering over them"
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
 msgstr "Oldalsáv-kategóriák váltása rámutatáskor"
 
-#: ConfigGeneral.qml:210
+#: ConfigGeneral.qml:206
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "Keresőbővítmények beállítása…"
 
-#: ConfigGeneral.qml:220
+#: ConfigGeneral.qml:216
 #, fuzzy, kde-format
 #| msgid "Sidebar position:"
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr "Oldalsáv pozíció:"
 
-#: ConfigGeneral.qml:221 ConfigGeneral.qml:229
+#: ConfigGeneral.qml:217 ConfigGeneral.qml:225
 #, fuzzy, kde-format
 #| msgid "Right"
 msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr "Jobbra"
 
-#: ConfigGeneral.qml:221
+#: ConfigGeneral.qml:217
 #, fuzzy, kde-format
 #| msgid "Left"
 msgctxt "option:radio sidebar position"
 msgid "Left"
 msgstr "Balra"
 
-#: ConfigGeneral.qml:229
+#: ConfigGeneral.qml:225
 #, fuzzy, kde-format
 #| msgid "Left"
 msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr "Balra"
 
-#: ConfigGeneral.qml:237
+#: ConfigGeneral.qml:233
 #, fuzzy, kde-format
 #| msgid "Show favorites:"
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
 msgstr "Kedvencek megjelenítése:"
 
-#: ConfigGeneral.qml:238
+#: ConfigGeneral.qml:234
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a grid'"
 #| msgid "In a grid"
@@ -262,7 +262,7 @@ msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "Rácsban"
 
-#: ConfigGeneral.qml:246
+#: ConfigGeneral.qml:242
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a list'"
 #| msgid "In a list"
@@ -270,14 +270,14 @@ msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "Listaként"
 
-#: ConfigGeneral.qml:254
+#: ConfigGeneral.qml:250
 #, fuzzy, kde-format
 #| msgid "Show other applications:"
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
 msgstr "Egyéb alkalmazások megjelenítése:"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:251
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a grid'"
 #| msgid "In a grid"
@@ -285,7 +285,7 @@ msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "Rácsban"
 
-#: ConfigGeneral.qml:263
+#: ConfigGeneral.qml:259
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a list'"
 #| msgid "In a list"
@@ -293,35 +293,35 @@ msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "Listaként"
 
-#: ConfigGeneral.qml:275
+#: ConfigGeneral.qml:271
 #, fuzzy, kde-format
 #| msgid "Show buttons for:"
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr "Gombok megjelenítése ehhez:"
 
-#: ConfigGeneral.qml:276
+#: ConfigGeneral.qml:272
 #, fuzzy, kde-format
 #| msgid "Power"
 msgctxt "@option:radio Show buttons for"
 msgid "Power"
 msgstr "Főkapcsoló"
 
-#: ConfigGeneral.qml:285
+#: ConfigGeneral.qml:281
 #, fuzzy, kde-format
 #| msgid "Session"
 msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "Munkamenet"
 
-#: ConfigGeneral.qml:294
+#: ConfigGeneral.qml:290
 #, fuzzy, kde-format
 #| msgid "Power and session"
 msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
 msgstr "Főkapcsoló és munkamenet"
 
-#: ConfigGeneral.qml:303
+#: ConfigGeneral.qml:299
 #, fuzzy, kde-format
 #| msgid "Show action button captions"
 msgctxt "@option:check"

@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Alexander Potashev <aspotashev@gmail.com>, 2014, 2015, 2018, 2019.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2026 Alexander Yavorsky <kekcuha@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2022-12-23 11:02+0300\n"
+"PO-Revision-Date: 2026-01-27 19:35+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: kcm.cpp:162
 #, kde-format
@@ -47,29 +47,25 @@ msgid "Name of the current splash theme"
 msgstr "Название текущей заставки"
 
 #: ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "&Get New…"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Get New…"
 msgstr "&Загрузить…"
 
 #: ui/main.qml:50
-#, fuzzy, kde-format
-#| msgid "Failed to show the splash screen preview."
+#, kde-format
 msgctxt "@info:status"
 msgid "Failed to show the splash screen preview."
 msgstr "Не удалось выполнить предварительный просмотр заставки."
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgid "Preview Splash Screen"
+#, kde-format
 msgctxt "@action:button"
 msgid "Preview Splash Screen"
 msgstr "Продемонстрировать заставку"
 
 #: ui/main.qml:86
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgctxt "@action:button"
 msgid "Uninstall"
 msgstr "Удалить"

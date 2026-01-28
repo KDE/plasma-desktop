@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # SPDX-FileCopyrightText: 2024 Olesya Gerasimenko <translation-team@basealt.ru>
-# SPDX-FileCopyrightText: 2021, 2022, 2025 Alexander Yavorsky <kekcuha@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2025, 2026 Alexander Yavorsky <kekcuha@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-11-22 16:52+0200\n"
-"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2026-01-22 18:51+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
@@ -70,8 +70,7 @@ msgid "Global theme"
 msgstr "Оформление рабочей среды"
 
 #: ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Theme:"
+#, kde-format
 msgctxt "@title:group for light/dark quick switch"
 msgid "Theme:"
 msgstr "Оформление:"
@@ -97,8 +96,7 @@ msgid "More appearance settings:"
 msgstr "Расширенные параметры оформления:"
 
 #: ui/main.qml:183
-#, fuzzy, kde-format
-#| msgid "Animation speed:"
+#, kde-format
 msgctxt "@title:slider"
 msgid "Animation speed:"
 msgstr "Скорость анимации:"
@@ -129,8 +127,7 @@ msgid "Selects them"
 msgstr "Выделяет объект"
 
 #: ui/main.qml:226
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "Открывать двойным щелчком"
@@ -142,8 +139,7 @@ msgid "Opens them"
 msgstr "Открывает объект"
 
 #: ui/main.qml:259
-#, fuzzy, kde-format
-#| msgid "Select by clicking on item's selection marker"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
 msgstr "Выбирать щелчком по метке выделения"
@@ -155,8 +151,7 @@ msgid "More behavior settings:"
 msgstr "Расширенные параметры поведения:"
 
 #: ui/main.qml:299
-#, fuzzy, kde-format
-#| msgid "Most used pages:"
+#, kde-format
 msgctxt "@title:group for grid of buttons opening kcms"
 msgid "Most used pages:"
 msgstr "Часто используемые страницы:"

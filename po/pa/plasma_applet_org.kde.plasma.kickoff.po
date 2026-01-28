@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-28 02:43+0000\n"
 "PO-Revision-Date: 2025-03-24 14:54-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -100,79 +100,79 @@ msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "ਆਈਕਾਨ ਹਟਾਓ"
 
-#: ConfigGeneral.qml:120
+#: ConfigGeneral.qml:116
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Text label:"
+msgstr "ਲਿਖਤ ਲੇਬਲ:"
+
+#: ConfigGeneral.qml:118
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to add a text label"
+msgstr "ਲਿਖਤ ਲੇਬਲ ਜੋੜਣ ਲਈ ਇੱਥੇ ਲਿਖੋ"
+
+#: ConfigGeneral.qml:132
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset menu label"
+msgstr "ਮੇਨੂ ਲੇਬਲ ਮੁੜ-ਸੈ਼ਟ ਕਰੋ"
+
+#: ConfigGeneral.qml:145
+#, kde-format
+msgctxt "@info"
+msgid "A text label cannot be set when the Panel is vertical."
+msgstr ""
+
+#: ConfigGeneral.qml:157
 #, fuzzy, kde-format
 #| msgid "Show applications as:"
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "ਐਪਲੀਕੇਸ਼ਨਾਂ ਵਜੋਂ ਵੇਖਾਓ:"
 
-#: ConfigGeneral.qml:122
+#: ConfigGeneral.qml:159
 #, fuzzy, kde-format
 #| msgid "Name only"
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "ਨਾਂ ਹੀ"
 
-#: ConfigGeneral.qml:122
+#: ConfigGeneral.qml:159
 #, fuzzy, kde-format
 #| msgid "Description only"
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "ਵੇਰਵਾ ਹੀ"
 
-#: ConfigGeneral.qml:122
+#: ConfigGeneral.qml:159
 #, fuzzy, kde-format
 #| msgid "Name (Description)"
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "ਨਾਂ (ਵੇਰਵਾ)"
 
-#: ConfigGeneral.qml:122
+#: ConfigGeneral.qml:159
 #, fuzzy, kde-format
 #| msgid "Description (Name)"
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "ਵੇਰਵਾ (ਨਾਂ)"
 
-#: ConfigGeneral.qml:132
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Text label:"
-msgstr "ਲਿਖਤ ਲੇਬਲ:"
-
-#: ConfigGeneral.qml:134
-#, kde-format
-msgctxt "@info:placeholder"
-msgid "Type here to add a text label"
-msgstr "ਲਿਖਤ ਲੇਬਲ ਜੋੜਣ ਲਈ ਇੱਥੇ ਲਿਖੋ"
-
-#: ConfigGeneral.qml:148
-#, kde-format
-msgctxt "@action:button"
-msgid "Reset menu label"
-msgstr "ਮੇਨੂ ਲੇਬਲ ਮੁੜ-ਸੈ਼ਟ ਕਰੋ"
-
-#: ConfigGeneral.qml:161
-#, kde-format
-msgctxt "@info"
-msgid "A text label cannot be set when the Panel is vertical."
-msgstr ""
-
-#: ConfigGeneral.qml:171
+#: ConfigGeneral.qml:167
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "ਆਮ:"
 
-#: ConfigGeneral.qml:175
+#: ConfigGeneral.qml:171
 #, fuzzy, kde-format
 #| msgid "Always sort applications alphabetically"
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "ਹਮੇਸ਼ਾਂ ਐਪਲੀਕੇਸ਼ਨ ਨਾਂ ਮੁਤਾਬਕ ਲੜੀਬੱਧ ਕਰੋ"
 
-#: ConfigGeneral.qml:179
+#: ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -180,32 +180,32 @@ msgid ""
 "the favorites page."
 msgstr ""
 
-#: ConfigGeneral.qml:185
+#: ConfigGeneral.qml:181
 #, kde-format
 msgctxt "@option:check"
 msgid "Use compact list item style"
 msgstr ""
 
-#: ConfigGeneral.qml:191
+#: ConfigGeneral.qml:187
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "ਜਦੋਂ ਟੱਚ ਮੋਡ ਹੋਵੇ ਤਾਂ ਆਪਣੇ-ਆਪ ਅਸਮਰੱਥ ਕਰੋ"
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:195
 #, fuzzy, kde-format
 #| msgid "Recently Used Applications"
 msgctxt "@option:check"
 msgid "Highlight newly installed applications"
 msgstr "ਤਾਜ਼ਾ ਐਪਲੀਕੇਸ਼ਨ ਸਾਫ਼ ਕਰੋ"
 
-#: ConfigGeneral.qml:204
+#: ConfigGeneral.qml:200
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
 msgstr ""
 
-#: ConfigGeneral.qml:210
+#: ConfigGeneral.qml:206
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Configure Enabled Search Plugins…"
@@ -213,42 +213,42 @@ msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "ਸਮਰੱਥ ਖੋਜ ਪਲੱਗਇਨਾਂ ਦੀ ਸੰਰਚਨਾ ਕਰੋ…"
 
-#: ConfigGeneral.qml:220
+#: ConfigGeneral.qml:216
 #, fuzzy, kde-format
 #| msgid "Sidebar position:"
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr "ਬਾਹੀ ਦੀ ਸਥਿਤੀ:"
 
-#: ConfigGeneral.qml:221 ConfigGeneral.qml:229
+#: ConfigGeneral.qml:217 ConfigGeneral.qml:225
 #, fuzzy, kde-format
 #| msgid "Right"
 msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr "ਸੱਜੇ"
 
-#: ConfigGeneral.qml:221
+#: ConfigGeneral.qml:217
 #, fuzzy, kde-format
 #| msgid "Left"
 msgctxt "option:radio sidebar position"
 msgid "Left"
 msgstr "ਖੱਬੇ"
 
-#: ConfigGeneral.qml:229
+#: ConfigGeneral.qml:225
 #, fuzzy, kde-format
 #| msgid "Left"
 msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr "ਖੱਬੇ"
 
-#: ConfigGeneral.qml:237
+#: ConfigGeneral.qml:233
 #, fuzzy, kde-format
 #| msgid "Show favorites:"
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
 msgstr "ਪਸੰਦੀਦਾ ਵੇਖਾਓ:"
 
-#: ConfigGeneral.qml:238
+#: ConfigGeneral.qml:234
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a grid'"
 #| msgid "In a grid"
@@ -256,7 +256,7 @@ msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "ਗਰਿੱਡ ਵਿੱਚ"
 
-#: ConfigGeneral.qml:246
+#: ConfigGeneral.qml:242
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a list'"
 #| msgid "In a list"
@@ -264,14 +264,14 @@ msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "ਸੂਚੀ ਵਿੱਚ"
 
-#: ConfigGeneral.qml:254
+#: ConfigGeneral.qml:250
 #, fuzzy, kde-format
 #| msgid "Show other applications:"
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
 msgstr "ਹੋਰ ਐਪਲੀਕੇਸ਼ਨਾਂ ਵੇਖਾਓ:"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:251
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a grid'"
 #| msgid "In a grid"
@@ -279,7 +279,7 @@ msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "ਗਰਿੱਡ ਵਿੱਚ"
 
-#: ConfigGeneral.qml:263
+#: ConfigGeneral.qml:259
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a list'"
 #| msgid "In a list"
@@ -287,35 +287,35 @@ msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "ਸੂਚੀ ਵਿੱਚ"
 
-#: ConfigGeneral.qml:275
+#: ConfigGeneral.qml:271
 #, fuzzy, kde-format
 #| msgid "Show buttons for:"
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr "ਇਸ ਲਈ ਬਟਨ ਵੇਖਾਓ:"
 
-#: ConfigGeneral.qml:276
+#: ConfigGeneral.qml:272
 #, fuzzy, kde-format
 #| msgid "Power"
 msgctxt "@option:radio Show buttons for"
 msgid "Power"
 msgstr "ਪਾਵਰ"
 
-#: ConfigGeneral.qml:285
+#: ConfigGeneral.qml:281
 #, fuzzy, kde-format
 #| msgid "Session"
 msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "ਸ਼ੈਸ਼ਨ"
 
-#: ConfigGeneral.qml:294
+#: ConfigGeneral.qml:290
 #, fuzzy, kde-format
 #| msgid "Power and session"
 msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
 msgstr "ਪਾਵਰ ਅਤੇ ਸ਼ੈਸ਼ਨ"
 
-#: ConfigGeneral.qml:303
+#: ConfigGeneral.qml:299
 #, fuzzy, kde-format
 #| msgid "Show action button captions"
 msgctxt "@option:check"

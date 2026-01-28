@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-28 02:43+0000\n"
 "PO-Revision-Date: 2021-09-05 11:38-0700\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik Language Support\n"
@@ -102,76 +102,76 @@ msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr ""
 
-#: ConfigGeneral.qml:120
+#: ConfigGeneral.qml:116
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Text label:"
+msgstr ""
+
+#: ConfigGeneral.qml:118
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to add a text label"
+msgstr ""
+
+#: ConfigGeneral.qml:132
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset menu label"
+msgstr ""
+
+#: ConfigGeneral.qml:145
+#, kde-format
+msgctxt "@info"
+msgid "A text label cannot be set when the Panel is vertical."
+msgstr ""
+
+#: ConfigGeneral.qml:157
 #, fuzzy, kde-format
 #| msgid "Show applications by name"
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Намоиш додани барномаҳо аз рӯи ном"
 
-#: ConfigGeneral.qml:122
+#: ConfigGeneral.qml:159
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr ""
 
-#: ConfigGeneral.qml:122
+#: ConfigGeneral.qml:159
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr ""
 
-#: ConfigGeneral.qml:122
+#: ConfigGeneral.qml:159
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr ""
 
-#: ConfigGeneral.qml:122
+#: ConfigGeneral.qml:159
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr ""
 
-#: ConfigGeneral.qml:132
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Text label:"
-msgstr ""
-
-#: ConfigGeneral.qml:134
-#, kde-format
-msgctxt "@info:placeholder"
-msgid "Type here to add a text label"
-msgstr ""
-
-#: ConfigGeneral.qml:148
-#, kde-format
-msgctxt "@action:button"
-msgid "Reset menu label"
-msgstr ""
-
-#: ConfigGeneral.qml:161
-#, kde-format
-msgctxt "@info"
-msgid "A text label cannot be set when the Panel is vertical."
-msgstr ""
-
-#: ConfigGeneral.qml:171
+#: ConfigGeneral.qml:167
 #, fuzzy, kde-format
 #| msgid "General:"
 msgctxt "General options"
 msgid "General:"
 msgstr "Умумӣ:"
 
-#: ConfigGeneral.qml:175
+#: ConfigGeneral.qml:171
 #, fuzzy, kde-format
 #| msgid "Sort alphabetically"
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Аз рӯи алифбо мураттаб кардан"
 
-#: ConfigGeneral.qml:179
+#: ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -179,127 +179,127 @@ msgid ""
 "the favorites page."
 msgstr ""
 
-#: ConfigGeneral.qml:185
+#: ConfigGeneral.qml:181
 #, kde-format
 msgctxt "@option:check"
 msgid "Use compact list item style"
 msgstr ""
 
-#: ConfigGeneral.qml:191
+#: ConfigGeneral.qml:187
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr ""
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:195
 #, fuzzy, kde-format
 #| msgid "Show applications by name"
 msgctxt "@option:check"
 msgid "Highlight newly installed applications"
 msgstr "Намоиш додани барномаҳо аз рӯи ном"
 
-#: ConfigGeneral.qml:204
+#: ConfigGeneral.qml:200
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
 msgstr ""
 
-#: ConfigGeneral.qml:210
+#: ConfigGeneral.qml:206
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr ""
 
-#: ConfigGeneral.qml:220
+#: ConfigGeneral.qml:216
 #, kde-format
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr ""
 
-#: ConfigGeneral.qml:221 ConfigGeneral.qml:229
+#: ConfigGeneral.qml:217 ConfigGeneral.qml:225
 #, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr ""
 
-#: ConfigGeneral.qml:221
+#: ConfigGeneral.qml:217
 #, kde-format
 msgctxt "option:radio sidebar position"
 msgid "Left"
 msgstr ""
 
-#: ConfigGeneral.qml:229
+#: ConfigGeneral.qml:225
 #, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr ""
 
-#: ConfigGeneral.qml:237
+#: ConfigGeneral.qml:233
 #, fuzzy, kde-format
 #| msgid "Show in Favorites"
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
 msgstr "Намоиш додан дар баргузидаҳо"
 
-#: ConfigGeneral.qml:238
+#: ConfigGeneral.qml:234
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr ""
 
-#: ConfigGeneral.qml:246
+#: ConfigGeneral.qml:242
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr ""
 
-#: ConfigGeneral.qml:254
+#: ConfigGeneral.qml:250
 #, fuzzy, kde-format
 #| msgid "Show applications by name"
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
 msgstr "Намоиш додани барномаҳо аз рӯи ном"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:251
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr ""
 
-#: ConfigGeneral.qml:263
+#: ConfigGeneral.qml:259
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr ""
 
-#: ConfigGeneral.qml:275
+#: ConfigGeneral.qml:271
 #, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr ""
 
-#: ConfigGeneral.qml:276
+#: ConfigGeneral.qml:272
 #, fuzzy, kde-format
 #| msgid "Power"
 msgctxt "@option:radio Show buttons for"
 msgid "Power"
 msgstr "Барқ"
 
-#: ConfigGeneral.qml:285
+#: ConfigGeneral.qml:281
 #, fuzzy, kde-format
 #| msgid "Session"
 msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "Ҷаласа"
 
-#: ConfigGeneral.qml:294
+#: ConfigGeneral.qml:290
 #, fuzzy, kde-format
 #| msgid "Power and session"
 msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
 msgstr "Барқ ва ҷаласа"
 
-#: ConfigGeneral.qml:303
+#: ConfigGeneral.qml:299
 #, kde-format
 msgctxt "@option:check"
 msgid "Show action button captions"
