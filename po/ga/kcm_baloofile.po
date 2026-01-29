@@ -1,34 +1,35 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-01-21 11:04+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
+"Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
+"plasma-translations/baloofile/ga/>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : (n>2 && n<7) ? 2 :"
+"(n>6 && n<11) ? 3 : 4;\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: ui/main.qml:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Pause Indexer"
-msgstr ""
+msgstr "Sos Innéacsóir"
 
 #: ui/main.qml:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Resume Indexer"
-msgstr ""
+msgstr "Innéacsóir CV"
 
 #: ui/main.qml:61
 #, kde-format
@@ -37,6 +38,9 @@ msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
 msgstr ""
+"Cuirfidh sé seo cuardach comhad ar ceal i KRunner agus i roghchláir an "
+"lainseálaí, agus bainfidh sé taispeáint meiteashonraí leathnaithe ó gach "
+"feidhmchlár KDE."
 
 #: ui/main.qml:71
 #, kde-format
@@ -47,12 +51,16 @@ msgid ""
 "from scratch. This may take some time, depending on the number of files to "
 "index."
 msgstr ""
+"Ar mhaith leat na sonraí innéacs sábháilte a scriosadh? Saorfar %1 den spás, "
+"ach má athchumasaítear an t-innéacsú níos déanaí, beidh ort an t-innéacs "
+"iomlán a athchruthú ón tús. D’fhéadfadh sé seo roinnt ama a thógáil, ag "
+"brath ar líon na gcomhad atá le hinnéacsú."
 
 #: ui/main.qml:73
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Index Data"
-msgstr ""
+msgstr "Scrios Sonraí Innéacs"
 
 #: ui/main.qml:91
 #, kde-format
@@ -61,93 +69,96 @@ msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
 msgstr ""
+"Cabhraíonn Cuardach Comhad leat do chuid comhad a aimsiú go tapa. Is féidir "
+"leat a roghnú cé na fillteáin agus na cineálacha sonraí comhaid atá "
+"innéacsaithe."
 
 #: ui/main.qml:108
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
-msgstr ""
+msgstr "Sonraí le hinnéacsú:"
 
 #: ui/main.qml:109
 #, kde-format
 msgctxt "@option:radio Data to index"
 msgid "Nothing (disable indexing entirely)"
-msgstr ""
+msgstr "Dada (díchumasaigh innéacsú go hiomlán)"
 
 #: ui/main.qml:121
 #, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names only"
-msgstr ""
+msgstr "Ainmneacha comhad amháin"
 
 #: ui/main.qml:136
 #, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names and contents"
-msgstr ""
+msgstr "Ainmneacha agus ábhar comhad"
 
 #: ui/main.qml:157
 #, kde-format
 msgctxt "@option:check"
 msgid "Also index hidden files and folders"
-msgstr ""
+msgstr "Chomh maith leis sin, innéacsaigh comhaid agus fillteáin fholaithe"
 
 #: ui/main.qml:183
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
-msgstr ""
+msgstr "Suíomhanna"
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
-msgstr ""
+msgstr "Tosaigh ag Innéacsú Fillteáin…"
 
 #: ui/main.qml:194
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
-msgstr ""
+msgstr "Stop ag Innéacsú Fillteáin…"
 
 #: ui/main.qml:212
 #, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
-msgstr ""
+msgstr "%1, %2% críochnaithe"
 
 #: ui/main.qml:219
 #, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
-msgstr ""
+msgstr "Ag innéacsú faoi láthair: <filename>%1</filename>"
 
 #: ui/main.qml:270
 #, kde-format
 msgctxt "@info:status"
 msgid "Not indexed"
-msgstr ""
+msgstr "Gan innéacsú"
 
 #: ui/main.qml:271
 #, kde-format
 msgctxt "@info:status"
 msgid "Indexed"
-msgstr ""
+msgstr "Innéacsaithe"
 
 #: ui/main.qml:297
 #, kde-format
 msgctxt "Remove the list item for this filesystem path"
 msgid "Remove entry"
-msgstr ""
+msgstr "Bain an iontráil"
 
 #: ui/main.qml:318
 #, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to include"
-msgstr ""
+msgstr "Roghnaigh fillteán le cur san áireamh"
 
 #: ui/main.qml:318
 #, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to exclude"
-msgstr ""
+msgstr "Roghnaigh fillteán le heisiamh"

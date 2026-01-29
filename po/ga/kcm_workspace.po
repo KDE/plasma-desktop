@@ -1,22 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-01-21 11:04+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
+"Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
+"plasma-translations/kcm_workspace/ga/>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"3 : 4;\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -25,30 +26,32 @@ msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr ""
+"Ní mór an córas a atosú sula dtiocfaidh athruithe ar an socrú greamaithe "
+"lárchliceáil i bhfeidhm."
 
 #: ui/main.qml:31
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
-msgstr ""
+msgstr "Atosaigh"
 
 #: ui/main.qml:47
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Lig do Plasma a thaispeáint:"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "Leideanna uirlisí painéil agus giuirléidí"
 
 #: ui/main.qml:69
 #, kde-format
@@ -59,13 +62,18 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"Ceadaíonn sé seo do gach giuirléid painéil Plasma agus deisce leideanna "
+"uirlisí tuairisciúla a thaispeáint nuair a bhíonn an pointeoir ag luí "
+"tharstu. Níl aon éifeacht ag an socrú seo ar na leideanna uirlisí beaga a "
+"thaispeántar nuair a bhíonn an luí thar chnaipí aonair agus eilimintí eile "
+"den chomhéadan úsáideora."
 
 #: ui/main.qml:77
 #, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr ""
+msgstr "Fuinneoga OSD le haghaidh athruithe stádais"
 
 #: ui/main.qml:87
 #, kde-format
@@ -74,18 +82,21 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"Ceadaíonn sé seo do gach giuirléid Plasma fuinneoga aníos ar an scáileán "
+"(OSD) a thaispeáint le haghaidh athruithe cosúil le leibhéal toirte agus "
+"gile, nó athrú gléas fuaime."
 
 #: ui/main.qml:94
 #, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr ""
+msgstr "Scrolláil"
 
 #: ui/main.qml:100
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
-msgstr ""
+msgstr "Ag cliceáil sa rian scrollbharra:"
 
 #: ui/main.qml:101
 #, kde-format
@@ -93,7 +104,7 @@ msgctxt ""
 "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
 "scrolls to the clicked location'"
 msgid "Scrolls to the clicked location"
-msgstr ""
+msgstr "Scrollaíonn sé go dtí an áit ar cliceáladh"
 
 #: ui/main.qml:119
 #, kde-format
@@ -101,19 +112,19 @@ msgctxt ""
 "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
 "scrolls one page up or down'"
 msgid "Scrolls one page up or down"
-msgstr ""
+msgstr "Scrollaíonn sé leathanach amháin suas nó síos"
 
 #: ui/main.qml:137
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Middle-click to scroll to clicked location"
-msgstr ""
+msgstr "Cliceáil sa lár chun scrollú go dtí an áit a ndearnadh cliceáil uirthi"
 
 #: ui/main.qml:152
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
-msgstr ""
+msgstr "Is fearr liom scrollú réidh"
 
 #: ui/main.qml:162
 #, kde-format
@@ -124,43 +135,47 @@ msgid ""
 "because they either do not support smooth scrolling, or have their own "
 "setting for enabling and disabling it."
 msgstr ""
+"Cumasaíonn nó díchumasaíonn an socrú seo aistrithe beoite agus tú ag scrollú "
+"le roth na luiche nó leis an méarchlár. B’fhéidir nach n-urramóidh roinnt "
+"feidhmchlár an socrú seo toisc nach dtacaíonn siad le scrollú réidh, nó go "
+"bhfuil a socrú féin acu chun é a chumasú agus a dhíchumasú."
 
 #: ui/main.qml:169
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "Ag cliceáil"
 
 #: ui/main.qml:175
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
-msgstr ""
+msgstr "Cliceáil ar chomhaid nó ar fhillteáin:"
 
 #: ui/main.qml:182
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
-msgstr ""
+msgstr "Roghnaíonn siad iad"
 
 #: ui/main.qml:201
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
-msgstr ""
+msgstr "Oscail trí chliceáil faoi dhó ina ionad sin"
 
 #: ui/main.qml:214
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
-msgstr ""
+msgstr "Osclaíonn siad iad"
 
 #: ui/main.qml:232
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
-msgstr ""
+msgstr "Roghnaigh trí chliceáil ar mharc roghnúcháin na míre"
 
 #: ui/main.qml:246
 #, kde-format
@@ -168,7 +183,7 @@ msgctxt ""
 "@label for checkbox, part of a complete sentence: 'Middle-click pastes "
 "selected text'"
 msgid "Middle-click:"
-msgstr ""
+msgstr "Cliceáil sa lár:"
 
 #: ui/main.qml:248
 #, kde-format
@@ -176,27 +191,30 @@ msgctxt ""
 "@option:check part of a complete sentence: 'Middle click pastes selected "
 "text'"
 msgid "Pastes selected text"
-msgstr ""
+msgstr "Greamaíonn sé an téacs roghnaithe"
 
 #: ui/main.qml:268
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Double-click interval:"
-msgstr ""
+msgstr "Eatramh cliceáil faoi dhó:"
 
 #: ui/main.qml:283
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+msgstr[2] "%1 ms"
+msgstr[3] "%1 ms"
+msgstr[4] "%1 ms"
 
 #: ui/main.qml:287
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
-msgstr ""
+msgstr "ms"
 
 #: ui/main.qml:301
 #, kde-format
@@ -205,6 +223,8 @@ msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
 msgstr ""
+"Meastar gur cliceáil dhúbailte iad dhá chlic laistigh den tréimhse seo. "
+"B’fhéidir nach nglacfaidh roinnt feidhmchlár leis an socrú seo."
 
 #: ui/main.qml:312
 #, kde-format
@@ -213,24 +233,26 @@ msgid ""
 "Double-click the folder to test. If it does not change its appearance, "
 "increase double-click interval."
 msgstr ""
+"Cliceáil faoi dhó ar an bhfillteán le tástáil a dhéanamh. Mura n-athraíonn "
+"sé a chuma, méadaigh an t-eatramh cliceáil faoi dhó."
 
 #: ui/main.qml:354
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
-msgstr ""
+msgstr "Tarraing agus Scaoil"
 
 #: ui/main.qml:361
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
-msgstr ""
+msgstr "Agus comhaid nó fillteáin á dtarraingt agat:"
 
 #: ui/main.qml:362
 #, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
-msgstr ""
+msgstr "Fiafraigh i gcónaí cad atá le déanamh"
 
 #: ui/main.qml:378
 #, kde-kuit-format
@@ -240,42 +262,47 @@ msgid ""
 "and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
 "dialog."
 msgstr ""
+"Coinnigh <shortcut>Shift</shortcut> síos le bogadh, <shortcut>Ctrl</"
+"shortcut> le cóipeáil, agus <shortcut>Shift+Ctrl</shortcut> le nasc "
+"siombalach a chruthú. Seachas sin, taispeáin dialóg."
 
 #: ui/main.qml:386
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
-msgstr ""
+msgstr "Bog más ar an ngléas céanna é"
 
 #: ui/main.qml:402
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
+"Coinnigh <shortcut>Shift</shortcut> síos agus tú ag scaoileadh chun roghanna "
+"eile a thaispeáint."
 
 #: ui/main.qml:410
 #, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr ""
+msgstr "Teagmháil"
 
 #: ui/main.qml:416
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Touch Mode:"
-msgstr ""
+msgstr "Cumasaigh Mód Tadhaill:"
 
 #: ui/main.qml:418
 #, kde-format
 msgctxt "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
-msgstr ""
+msgstr "Cumasaigh go huathoibríoch de réir mar is gá"
 
 #: ui/main.qml:418
 #, kde-format
 msgctxt "option:radio As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
-msgstr ""
+msgstr "Níor cuireadh ar chumas riamh"
 
 #: ui/main.qml:435
 #, kde-format
@@ -285,18 +312,21 @@ msgid ""
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
+"Cuirfear Mód Tadhaill i ngníomh go huathoibríoch aon uair a bhraithfidh an "
+"córas scáileán tadhaill ach gan luch ná ceap tadhaill. Mar shampla: nuair a "
+"chasfar nó a bhaintear méarchlár ríomhaire glúine in-athraithe."
 
 #: ui/main.qml:440
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
-msgstr ""
+msgstr "Gníomhach i gcónaí"
 
 #: ui/main.qml:463
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "Díchumasaithe"
 
 #: ui/main.qml:486
 #, kde-format
@@ -305,12 +335,14 @@ msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
 "more easily accommodate touch interaction."
 msgstr ""
+"I Mód Tadhaill, beidh go leor eilimintí den chomhéadan úsáideora níos mó "
+"chun go mbeidh sé níos fusa idirghníomhaíocht tadhaill a dhéanamh."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
 #, kde-format
 msgid "Single click to open files"
-msgstr ""
+msgstr "Cliceáil amháin chun comhaid a oscailt"
 
 #. i18n: ectx: label, entry (dndBehavior), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:13
@@ -319,42 +351,47 @@ msgid ""
 "For local files on the same device, whether dragging and dropping will "
 "perform a move operation instead of showing the options menu"
 msgstr ""
+"I gcás comhad áitiúil ar an ngléas céanna, cibé acu an ndéanfar oibríocht "
+"bhogtha trí tharraingt agus scaoileadh in ionad an roghchlár roghanna a "
+"thaispeáint"
 
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
 #, kde-format
 msgid "Smooth scrolling"
-msgstr ""
+msgstr "Scrolláil réidh"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:25
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
 msgstr ""
+"Bogann cliceáil ar chlé sa rian scrollbharra an scrollbharra leathanach "
+"amháin"
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:29
 #, kde-format
 msgid "Double click interval"
-msgstr ""
+msgstr "Eatramh cliceáil faoi dhó"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9
 #, kde-format
 msgid "Automatically switch to touch-optimized mode"
-msgstr ""
+msgstr "Athraigh go huathoibríoch go mód optamaithe tadhaill"
 
 #. i18n: ectx: label, entry (primarySelection), group (Wayland)
 #: workspaceoptions_kwinsettings.kcfg:15
 #, kde-format
 msgid "Enable middle click selection pasting"
-msgstr ""
+msgstr "Cumasaigh greamú roghnúcháin le cliceáil lár"
 
 #. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "Taispeáin painéal mór agus leideanna uirlisí giuirléidí"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -362,12 +399,14 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"Ceadaigh giuirléidí Plasma painéal mór agus leideanna uirlisí giuirléidí a "
+"thaispeáint nuair a bhíonn siad ag luí thar an líne"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
 #, kde-format
 msgid "Display small popups for status changes"
-msgstr ""
+msgstr "Taispeáin fuinneoga beaga aníos le haghaidh athruithe stádais"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
@@ -376,15 +415,17 @@ msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
 msgstr ""
+"Ceadaigh giuirléidí Plasma fuinneoga beaga aníos a thaispeáint le haghaidh "
+"athruithe stádais amhail gile nó toirt"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
 #, kde-format
 msgid "OSD on layout change"
-msgstr ""
+msgstr "OSD ar athrú leagan amach"
 
 #. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:22
 #, kde-format
 msgid "Show a popup on layout changes"
-msgstr ""
+msgstr "Taispeáin fuinneog aníos nuair a athraítear leagan amach"

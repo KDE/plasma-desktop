@@ -2,35 +2,40 @@
 # Copyright (C) 2002 Free Software Foundation, Inc.
 # Séamus Ó Ciardhuáin <seoc@cnds.ucd.ie>, 2002
 # Kevin Scannell <kscanne@gmail.com>, 2009
+# Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2004-12-03 14:52-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2026-01-21 11:04+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
+"Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
+"plasma-translations/kcmmouse/ga/>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"3 : 4;\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
+"Theip ar cheisteanna a chur ar ghléasanna ionchuir. Oscail an modúl "
+"socruithe seo arís, le do thoil."
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:81
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
-msgstr ""
+msgstr "Earráid chriticiúil agus faisnéis bhunúsach faoin ngléas %1 á léamh."
 
 #: kcm.cpp:86
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "Ní féidir an cúltaca cuí a roghnú"
 
 #: kcm.cpp:142
 #, kde-format
@@ -38,11 +43,13 @@ msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr ""
+"Earráid agus luachanna á lódáil. Féach na logaí le haghaidh tuilleadh "
+"eolais. Atosaigh an modúl cumraíochta seo le do thoil."
 
 #: kcm.cpp:145
 #, kde-format
 msgid "No pointer device found. Connect now."
-msgstr ""
+msgstr "Níor aimsíodh aon ghléas pointeora. Ceangail anois."
 
 #: kcm.cpp:154
 #, kde-format
@@ -50,6 +57,8 @@ msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
+"Ní féidir na hathruithe go léir a shábháil. Féach na logaí le haghaidh "
+"tuilleadh eolais. Atosaigh an modúl cumraíochta seo agus déan iarracht arís."
 
 #: kcm.cpp:172
 #, kde-format
@@ -57,6 +66,8 @@ msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr ""
+"Earráid agus luachanna réamhshocraithe á lódáil. Theip ar roinnt roghanna a "
+"shocrú chuig a luachanna réamhshocraithe."
 
 #: kcm.cpp:187
 #, kde-format
@@ -64,104 +75,102 @@ msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr ""
+"Earráid agus gléas nua-cheangailte á chur leis. Athcheangail é agus atosú an "
+"modúl cumraíochta seo le do thoil."
 
 #: kcm.cpp:200
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr ""
+msgstr "Gléas pointeora dícheangailte. Dúnadh a dhialog socruithe."
 
 #: kcm.cpp:202
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr ""
+msgstr "Gléas pointeora dícheangailte. Ní bhfuarthas aon ghléasanna eile."
 
 #: ui/bindings.qml:27
-#, fuzzy, kde-format
-#| msgid "Press Connect Button"
+#, kde-format
 msgctxt "@title"
 msgid "Extra Mouse Buttons"
-msgstr "Brúigh an Cnaipe Ceangail"
+msgstr "Cnaipí Luiche Breise"
 
 #: ui/bindings.qml:77
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
-msgstr ""
+msgstr "Cnaipe Breise %1:"
 
 #: ui/bindings.qml:106
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
-msgstr ""
+msgstr "Brúigh an cnaipe luiche ar mhaith leat ceangal eochrach a chur leis"
 
 #: ui/bindings.qml:108
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
-msgstr ""
+msgstr "Cuir isteach an teaglaim eochrach nua do %1"
 
 #: ui/bindings.qml:112
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Cealaigh"
 
 #: ui/bindings.qml:130
-#, fuzzy, kde-format
-#| msgid "Press Connect Button"
+#, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button"
-msgstr "Brúigh an Cnaipe Ceangail"
+msgstr "Brúigh cnaipe luiche"
 
 #: ui/bindings.qml:131
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
-msgstr ""
+msgstr "Cuir Ceangal leis…"
 
 #: ui/main.qml:37
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
-msgstr ""
+msgstr "Cumraigh Cnaipí Breise…"
 
 #: ui/main.qml:64
 #, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
-msgstr ""
+msgstr "Gléas:"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "&General"
+#, kde-format
 msgctxt "@title:group"
 msgid "General:"
-msgstr "&Ginearálta"
+msgstr "Ginearálta:"
 
 #: ui/main.qml:88
 #, kde-format
 msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
-msgstr ""
+msgstr "Cumasaigh gléas"
 
 #: ui/main.qml:105
 #, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
-msgstr ""
+msgstr "Cnaipí clé agus deas:"
 
 #: ui/main.qml:106
-#, fuzzy, kde-format
-#| msgid "Le&ft handed"
+#, kde-format
 msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
-msgstr "&Ciotach"
+msgstr "Malartú (mód láimhe clé)"
 
 #: ui/main.qml:121
 #, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
-msgstr ""
+msgstr "Brúigh an dá cheann ag an am céanna le cliceáil sa lár"
 
 #: ui/main.qml:133
 #, kde-format
@@ -170,20 +179,20 @@ msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"Méadaíonn an socrú seo an moill cliceáil faoi 50ms. Tá an mhoill bhreise ag "
+"teastáil chun brúnna cnaipe clé agus deas comhuaineacha a bhrath i gceart."
 
 #: ui/main.qml:148
-#, fuzzy, kde-format
-#| msgid "Pointer threshold:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
-msgstr "Tairseach an phointeora:"
+msgstr "Luas pointeora:"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
-msgstr "Luasghéarú an phointeora:"
+msgstr "Cumasaigh luasghéarú pointeora"
 
 #: ui/main.qml:241
 #, kde-format
@@ -191,45 +200,44 @@ msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
+"Nuair a bhíonn sé cumasaithe, méadaíonn achar taistil an phointeora de réir "
+"mar a bhíonn luas gluaiseachta níos tapúla."
 
 #: ui/main.qml:254
-#, fuzzy, kde-format
-#| msgid "Pointer threshold:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
-msgstr "Tairseach an phointeora:"
+msgstr "Luas scrollaigh:"
 
 #: ui/main.qml:304
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
-msgstr ""
+msgstr "Níos moille"
 
 #: ui/main.qml:313
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
-msgstr ""
+msgstr "Níos tapúla"
 
 #: ui/main.qml:321
-#, fuzzy, kde-format
-#| msgid "Pointer threshold:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"
-msgstr "Tairseach an phointeora:"
+msgstr "Scrolláil:"
 
 #: ui/main.qml:322
-#, fuzzy, kde-format
-#| msgid "Re&verse scroll direction"
+#, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction"
-msgstr "Iompaigh &treo scrollaithe"
+msgstr "Inbhéartaigh treo an scrolla"
 
 #: ui/main.qml:339
 #, kde-format
 msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
-msgstr ""
+msgstr "Coinnigh síos an cnaipe lár agus bog an luch le scrollú"
 
 #: ui/main.qml:351
 #, kde-format
@@ -240,6 +248,10 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"Cuirfidh sé seo isteach ar fheidhmchláir a úsáideann tarraingt cnaipe lár, "
+"amhail roinnt eagarthóirí íomhá, breathnóirí doiciméad, nó cluichí físeáin. "
+"Is féidir é a úsáid ar aon fheiste, ach tá sé beartaithe go príomha mar "
+"ionadach ar rothaí scrolla ar fheistí nach bhfuil aon cheann acu."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

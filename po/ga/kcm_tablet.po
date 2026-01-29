@@ -1,147 +1,148 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-01-21 12:41+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
+"Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
+"plasma-translations/kcm_tablet/ga/>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : (n>2 && n<7) ? 2 :"
+"(n>6 && n<11) ? 3 : 4;\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: inputsequence.cpp:191
 #, kde-format
 msgctxt "@action:button This action is disabled"
 msgid "Disabled"
-msgstr ""
+msgstr "Díchumasaithe"
 
 #: inputsequence.cpp:194
 #, kde-format
 msgctxt "@action:button There is no keybinding"
 msgid "None"
-msgstr ""
+msgstr "Dada"
 
 #: inputsequence.cpp:209
 #, kde-format
 msgctxt "@action:button Two keybinds for a dial, up & down"
 msgid "%1 && %2"
-msgstr ""
+msgstr "%1 && %2"
 
 #: inputsequence.cpp:216
 #, kde-format
 msgctxt "@action:button There is no keybindings"
 msgid "None"
-msgstr ""
+msgstr "None"
 
 #: inputsequence.cpp:221
 #, kde-format
 msgctxt "@action:button"
 msgid "Left mouse button"
-msgstr ""
+msgstr "Cnaipe luiche ar chlé"
 
 #: inputsequence.cpp:223
 #, kde-format
 msgctxt "@action:button"
 msgid "Right mouse button"
-msgstr ""
+msgstr "Cnaipe luiche ar dheis"
 
 #: inputsequence.cpp:225
 #, kde-format
 msgctxt "@action:button"
 msgid "Middle mouse button"
-msgstr ""
+msgstr "Cnaipe lár na luiche"
 
 #: inputsequence.cpp:231
 #, kde-format
 msgctxt "@action:button"
 msgid "Application-defined"
-msgstr ""
+msgstr "Sainmhínithe ag an bhfeidhmchlár"
 
 #: inputsequence.cpp:233
 #, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr ""
+msgstr "Cnaipe Peann %1"
 
 #: inputsequence.cpp:235
 #, kde-format
 msgctxt "@action:button"
 msgid "Scroll wheel"
-msgstr ""
+msgstr "Roth scrollála"
 
 #: kcmtablet.cpp:36
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "Réamhshocrú"
 
 #: kcmtablet.cpp:37
 #, kde-format
 msgid "Portrait"
-msgstr ""
+msgstr "Portráid"
 
 #: kcmtablet.cpp:38
 #, kde-format
 msgid "Landscape"
-msgstr ""
+msgstr "Tírdhreach"
 
 #: kcmtablet.cpp:39
 #, kde-format
 msgid "Inverted Portrait"
-msgstr ""
+msgstr "Portráid Inbhéartaithe"
 
 #: kcmtablet.cpp:40
 #, kde-format
 msgid "Inverted Landscape"
-msgstr ""
+msgstr "Tírdhreach Inbhéartaithe"
 
 #: kcmtablet.cpp:90
 #, kde-format
 msgid "Follow the Current Screen"
-msgstr ""
+msgstr "Lean an Scáileán Reatha"
 
 #: kcmtablet.cpp:95
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "Gach Scáileán"
 
 #: kcmtablet.cpp:104
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
-msgstr ""
+msgstr "%1 - (%2,%3 %4×%5)"
 
 #: kcmtablet.cpp:164 ui/DisplayTab.qml:97 ui/DisplayTab.qml:98
 #, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
-msgstr ""
+msgstr "Síneadh agus Líonadh"
 
 #: kcmtablet.cpp:165 ui/DisplayTab.qml:99
 #, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
-msgstr ""
+msgstr "Coinnigh Cóimheas Gné agus Oiriúnacht"
 
 #: kcmtablet.cpp:166 ui/DisplayTab.qml:100
 #, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
-msgstr ""
+msgstr "Léarscáil go Cuid"
 
 #: kcmtablet.cpp:268
 #, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr ""
+msgstr "Cnaipe peann %1:"
 
 #: kcmtablet.cpp:269
 #, kde-format
@@ -149,73 +150,73 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr ""
+msgstr "cnaipe peann %1"
 
 #: ui/ActionDialog.qml:27
 #, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial/Ring Action"
-msgstr ""
+msgstr "Roghnaigh Gníomh Diailithe/Fáinne"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
 msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
-msgstr ""
+msgstr "Gníomh Cnaipe Roghnaigh"
 
 #: ui/ActionDialog.qml:87
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when rotating %1:"
-msgstr ""
+msgstr "Roghnaigh cén gníomh a dhéanfar agus %1 á rothlú:"
 
 #: ui/ActionDialog.qml:88
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
-msgstr ""
+msgstr "Roghnaigh cén gníomh a dhéanfar nuair a bhrúnn tú %1:"
 
 #: ui/ActionDialog.qml:102
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
-msgstr ""
+msgstr "Cuir an t-iarratas siar"
 
 #: ui/ActionDialog.qml:117
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
-msgstr ""
+msgstr "Seol eochair méarchláir"
 
 #: ui/ActionDialog.qml:133
 #, kde-format
 msgctxt "@option:radio Set this action to a up/down keyboard type"
 msgid "Send keyboard keys"
-msgstr ""
+msgstr "Seol eochracha méarchláir"
 
 #: ui/ActionDialog.qml:148
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
-msgstr ""
+msgstr "Seol cliceáil cnaipe luiche"
 
 #: ui/ActionDialog.qml:164
 #, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr ""
+msgstr "Cnaipe seolta peann"
 
 #: ui/ActionDialog.qml:181
 #, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
-msgstr ""
+msgstr "Gníomhú mar roth scrollaithe"
 
 #: ui/ActionDialog.qml:199
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
-msgstr ""
+msgstr "Ná déan tada"
 
 #: ui/ActionDialog.qml:219
 #, kde-format
@@ -224,6 +225,8 @@ msgid ""
 "This tablet button is forwarded to the focused application, which can decide "
 "how to handle it."
 msgstr ""
+"Cuirtear an cnaipe táibléid seo ar aghaidh chuig an bhfeidhmchlár dírithe, a "
+"fhéadann cinneadh a dhéanamh conas é a láimhseáil."
 
 #: ui/ActionDialog.qml:248
 #, kde-format
@@ -231,7 +234,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "upwards"
 msgid "Up:"
-msgstr ""
+msgstr "Suas:"
 
 #: ui/ActionDialog.qml:261
 #, kde-format
@@ -239,92 +242,92 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "downwards"
 msgid "Down:"
-msgstr ""
+msgstr "Síos:"
 
 #: ui/ActionDialog.qml:274
 #, kde-format
 msgctxt ""
 "@label:slider Speed for how often this dial/ring should emit key events"
 msgid "Speed:"
-msgstr ""
+msgstr "Luas:"
 
 #: ui/ActionDialog.qml:289
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
-msgstr ""
+msgstr "Cliceáil ar chlé"
 
 #: ui/ActionDialog.qml:290
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
-msgstr ""
+msgstr "Cliceáil sa lár"
 
 #: ui/ActionDialog.qml:291
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
-msgstr ""
+msgstr "Cliceáil ar dheis"
 
 #: ui/ActionDialog.qml:318
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: ui/ActionDialog.qml:325
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: ui/ActionDialog.qml:332
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: ui/ActionDialog.qml:339
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: ui/ActionDialog.qml:355
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr ""
+msgstr "Cnaipe 1"
 
 #: ui/ActionDialog.qml:356
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr ""
+msgstr "Cnaipe 2"
 
 #: ui/ActionDialog.qml:357
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr ""
+msgstr "Cnaipe 3"
 
 #: ui/ActionDialog.qml:366
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
-msgstr ""
+msgstr "Gníomhaigh cosúil le roth scrolla ar luch."
 
 #: ui/ActionDialog.qml:375
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
-msgstr ""
+msgstr "Tá an cnaipe seo díchumasaithe agus ní dhéanfaidh sé aon rud."
 
 #: ui/Calibration.qml:30
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr ""
+msgstr "Calabrú Peann"
 
 #: ui/Calibration.qml:98
 #, kde-kuit-format
@@ -334,6 +337,9 @@ msgid ""
 "revert to default calibration in %1 seconds unless further action is taken.</"
 "b>"
 msgstr ""
+"Tapáil na spriocanna arís chun an calabrú nua a dheimhniú.<nl/><nl/"
+"><b>Fillfidh sé ar an gcalabrú réamhshocraithe i %1 soicind mura ndéantar "
+"aon ghníomh eile.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -342,114 +348,116 @@ msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
 msgstr ""
+"Tá an calabrú críochnaithe agus sábháilte.<nl/><nl/>Déan an calabrú a "
+"bheachtú tuilleadh nó dún an fhuinneog."
 
 #: ui/Calibration.qml:105
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "Tapáil lár gach sprice."
 
 #: ui/Calibration.qml:112
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr ""
+msgstr "Calabrú atá ann cheana a scagadh"
 
 #: ui/Calibration.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "Athshocraigh agus Bain Triail Arís"
 
 #: ui/Calibration.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr ""
+msgstr "Calabraigh ón Tosach"
 
 #: ui/Calibration.qml:135
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Dún"
 
 #: ui/Calibration.qml:135
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Cealaigh"
 
 #: ui/DisplayTab.qml:46
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Map to screen:"
-msgstr ""
+msgstr "Ceangail leis an scáileán:"
 
 #: ui/DisplayTab.qml:73
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Orientation:"
-msgstr ""
+msgstr "Treoshuíomh:"
 
 #: ui/DisplayTab.qml:79
 #, kde-format
 msgctxt "@label substitute for unavailable orientation change"
 msgid "Not Applicable"
-msgstr ""
+msgstr "Ní Bhaineann"
 
 #: ui/DisplayTab.qml:93
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mapped Area:"
-msgstr ""
+msgstr "Limistéar Mapáilte:"
 
 #: ui/ExternalScreenMapping.qml:110
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
-msgstr ""
+msgstr "Cóimheas gné glasála"
 
 #: ui/ExternalScreenMapping.qml:151
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
-msgstr ""
+msgstr "%1,%2 - %3×%4"
 
 #: ui/ExternalScreenMapping.qml:190
 #, kde-format
 msgctxt "@action:button"
 msgid "Resize the screen area"
-msgstr ""
+msgstr "Athraigh méid an scáileáin"
 
 #: ui/ExternalScreenMapping.qml:267
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr ""
+msgstr "%1%,%2% - %3%×%4%"
 
 #: ui/ExternalScreenMapping.qml:301
 #, kde-format
 msgctxt "@action:button"
 msgid "Resize the tablet area"
-msgstr ""
+msgstr "Athraigh méid an limistéir táibléid"
 
 #: ui/main.qml:38
 #, kde-format
 msgctxt "@info placeholdermessage text"
 msgid "No drawing tablets found"
-msgstr ""
+msgstr "Níor aimsíodh aon táibléid líníochta"
 
 #: ui/main.qml:39
 #, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect a drawing tablet"
-msgstr ""
+msgstr "Ceangail táibléad líníochta"
 
 #: ui/main.qml:47
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr ""
+msgstr "Táibléad Tástála…"
 
 #: ui/main.qml:87
 #, kde-format
@@ -459,36 +467,39 @@ msgid ""
 "driver to configure the tablet instead of using the settings here, unless "
 "specifically instructed otherwise."
 msgstr ""
+"Tá an gléas seo á bhainistiú ag tiománaí spáis úsáideora a shuiteáil tú. "
+"Bain úsáid as an tiománaí sin chun an táibléad a chumrú in ionad na "
+"socruithe anseo a úsáid, mura dtugtar treoir shonrach duit a mhalairt."
 
 #: ui/main.qml:106
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
-msgstr ""
+msgstr "Gléas:"
 
 #: ui/main.qml:174
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "Taispeáin"
 
 #: ui/main.qml:187
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "Peann"
 
 #: ui/main.qml:199
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr ""
+msgstr "Ceap"
 
 #: ui/MissingPadTab.qml:15
 #, kde-format
 msgctxt "@info placeholdermessage main text"
 msgid "No pad inputs found"
-msgstr ""
+msgstr "Níor aimsíodh aon ionchur ceap"
 
 #: ui/MissingPadTab.qml:16
 #, kde-format
@@ -497,12 +508,14 @@ msgid ""
 "No buttons or other inputs were detected. This could mean the driver for "
 "this device is missing."
 msgstr ""
+"Níor braitheadh aon chnaipí ná aon ionchur eile. D’fhéadfadh sé seo a "
+"chiallaíonn go bhfuil an tiománaí don fheiste seo ar iarraidh."
 
 #: ui/PadTab.qml:37
 #, kde-format
 msgctxt "@label for graphics tablet ring config, % is number of ring"
 msgid "Pad ring %1:"
-msgstr ""
+msgstr "Fáinne ceap %1:"
 
 #: ui/PadTab.qml:60
 #, kde-format
@@ -510,13 +523,13 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "ring/dial 0'"
 msgid "pad ring/dial %1"
-msgstr ""
+msgstr "fáinne ceap/dhiailiú %1"
 
 #: ui/PadTab.qml:100
 #, kde-format
 msgctxt "@label for graphics tablet ring config, % is number of dial"
 msgid "Pad dial %1:"
-msgstr ""
+msgstr "Ceap diail %1:"
 
 #: ui/PadTab.qml:102
 #, kde-format
@@ -524,13 +537,13 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad dial %1"
-msgstr ""
+msgstr "ceap dhiailiú %1"
 
 #: ui/PadTab.qml:138
 #, kde-format
 msgctxt "@label for graphics tablet button config, % is number of button"
 msgid "Pad button %1:"
-msgstr ""
+msgstr "Cnaipe ceap %1:"
 
 #: ui/PadTab.qml:141
 #, kde-format
@@ -538,19 +551,19 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr ""
+msgstr "cnaipe ceap %1"
 
 #: ui/StylusTab.qml:222
 #, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Left-handed mode:"
-msgstr ""
+msgstr "Mód láimhe clé:"
 
 #: ui/StylusTab.qml:228
 #, kde-format
 msgctxt "@option:check Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "Cumasaigh"
 
 #: ui/StylusTab.qml:234
 #, kde-kuit-format
@@ -560,13 +573,16 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"Insíonn sé don fheiste freastal ar úsáideoirí clé-láimhe. Athróidh na "
+"héifeachtaí de réir an fheiste, ach is minic a aisiompaíonn sé feidhmiúlacht "
+"na gcnaipí ceap ionas gur féidir an táibléad a úsáid bun os cionn."
 
 #: ui/StylusTab.qml:246
 #, kde-format
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
-msgstr ""
+msgstr "Mód:"
 
 #: ui/StylusTab.qml:254
 #, kde-format
@@ -574,20 +590,21 @@ msgctxt ""
 "@option:radio Pen mode, where the point on the screen is always where you "
 "touch the stylus"
 msgid "Pen"
-msgstr ""
+msgstr "Peann"
 
 #: ui/StylusTab.qml:259
 #, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "The cursor follows where you touch the pen on the surface"
 msgstr ""
+"Leanann an cúrsóir an áit a dteagmhaíonn tú leis an peann ar an dromchla"
 
 #: ui/StylusTab.qml:280
 #, kde-format
 msgctxt ""
 "@option:radio Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
-msgstr ""
+msgstr "Luch"
 
 #: ui/StylusTab.qml:285
 #, kde-format
@@ -596,36 +613,38 @@ msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
 "like a mouse"
 msgstr ""
+"Agus an peann á bhogadh ar an dromchla, bogann an cúrsóir i gcoibhneas leis "
+"an áit a raibh sé, cosúil le luch"
 
 #: ui/StylusTab.qml:355
 #, kde-format
 msgctxt "@label prefix for pen pressure curve config"
 msgid "Pen Pressure:"
-msgstr ""
+msgstr "Brú Peann:"
 
 #: ui/StylusTab.qml:415
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:423
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:434
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: ui/StylusTab.qml:442
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
-msgstr ""
+msgstr "0%"
 
 #: ui/StylusTab.qml:446
 #, kde-format
@@ -634,12 +653,14 @@ msgid ""
 "This curve controls the relationship between the pressure on the stylus and "
 "the pressure values received by applications."
 msgstr ""
+"Rialaíonn an cuar seo an gaol idir an brú ar an stíl agus na luachanna brú a "
+"fhaigheann feidhmchláir."
 
 #: ui/StylusTab.qml:451
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
-msgstr ""
+msgstr "Raon Brú:"
 
 #: ui/StylusTab.qml:478
 #, kde-format
@@ -648,30 +669,32 @@ msgid ""
 "Pressure above or below the threshold will be clamped, and this becomes the "
 "new effective range."
 msgstr ""
+"Déanfar brú os cionn nó faoi bhun na tairsí a chlampáil, agus is é seo an "
+"raon éifeachtach nua."
 
 #: ui/StylusTab.qml:489
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr ""
+msgstr "Calabrú ar Siúl"
 
 #: ui/StylusTab.qml:491
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
-msgstr ""
+msgstr "Calabraigh"
 
 #: ui/StylusTab.qml:494
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
-msgstr ""
+msgstr "Ní Thacaítear le Calabrú"
 
 #: ui/StylusTab.qml:535
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr ""
+msgstr "Athshocraigh Calabrú Saincheaptha"
 
 #: ui/StylusTab.qml:550
 #, kde-format
@@ -680,19 +703,21 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"Tá an táibléad seo calabraithe de láimh agat. Mura bhfuil sé ag obair i "
+"gceart a thuilleadh, déan iarracht é seo a athshocrú ar dtús."
 
 #: ui/Tester.qml:25
 #, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr ""
+msgstr "Tástálaí Táibléid"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgctxt ""
 "A tablet stylus was pressed onto the surface X=[x position] Y=[y position]"
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "Brúigh an stíl X=%1 Y=%2"
 
 #: ui/Tester.qml:58
 #, kde-format
@@ -700,7 +725,7 @@ msgctxt ""
 "A tablet stylus has 'released' or was lifted from the surface X=[x position] "
 "Y=[y position]"
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "Scaoileadh stíl X=%1 Y=%2"
 
 #: ui/Tester.qml:68
 #, kde-format
@@ -708,19 +733,19 @@ msgctxt ""
 "A tablet stylus has moved over the surface X=[x position] Y=[y position] "
 "P=[pressure] TX=[tilt x] TY=[tilt y]"
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr ""
+msgstr "Bogadh an stíl X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:75
 #, kde-format
 msgctxt "A tablet pad's button has been pressed B=[the button number]"
 msgid "Pad button press B=%1"
-msgstr ""
+msgstr "Brú cnaipe ceap B=%1"
 
 #: ui/Tester.qml:77
 #, kde-format
 msgctxt "A tablet pad's button has been released B=[the button number]"
 msgid "Pad button release B=%1"
-msgstr ""
+msgstr "Scaoileadh cnaipe ceap B=%1"
 
 #: ui/Tester.qml:83
 #, kde-format
@@ -728,7 +753,7 @@ msgctxt ""
 "A tablet pad's dial has moved, V120 here refers to 'Value 120' which is a "
 "technical term that should be kept as is"
 msgid "Pad dial moved V120=%1"
-msgstr ""
+msgstr "Bogadh an dhiailiú ceap V120=%1"
 
 #: ui/Tester.qml:219
 #, kde-format
@@ -739,9 +764,13 @@ msgid ""
 "# P - pressure\n"
 "# TX,TY - tilt\n"
 msgstr ""
+"## Foscríbhinn:\n"
+"# X, Y - comhordanáid imeachta\n"
+"# P - brú\n"
+"# TX,TY - claonadh\n"
 
 #: ui/Tester.qml:225
 #, kde-format
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
-msgstr ""
+msgstr "Glan"
