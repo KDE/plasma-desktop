@@ -16,6 +16,7 @@
 #include <KSharedConfig>
 
 #include <algorithm>
+#include <cmath>
 
 #include "log_settings.h"
 #include <settings.h>
@@ -209,7 +210,11 @@ void Backend::update(const QString &uri, const QMap<QString, QVariant> &properti
     if (foundProgress != propertiesEnd) {
         const int oldSanitizedProgress = progress(storageId);
 
-        foundEntry->progress = qRound(foundProgress->toDouble() * 100);
+        double progressValue = foundProgress->toDouble();
+        if (!std::isfinite(progressValue)) {
+            progressValue = 0.0; // Treat NaN/Inf as zero
+        }
+        foundEntry->progress = qRound(progressValue * 100);
 
         const int newSanitizedProgress = progress(storageId);
 
