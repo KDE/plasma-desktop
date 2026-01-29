@@ -2,20 +2,23 @@
 # Copyright (C) 2009 This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma_applet_folderview package.
 # Kevin Scannell <kscanne@gmail.com>, 2009.
+# Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/plasma_applet_folderview.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2008-05-19 07:19-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2026-01-21 12:21+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
+"Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
+"plasma-translations/plasma_applet_org-kde-desktopcontainment/ga/>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"3 : 4;\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: package/contents/config/config.qml:16
 #, fuzzy, kde-format
@@ -28,7 +31,8 @@ msgstr "Suíomh"
 
 #: package/contents/config/config.qml:23
 #: package/contents/ui/FolderViewLayer.qml:435
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icons"
 msgid "Icons"
 msgstr "Deilbhíní"
 
@@ -71,12 +75,14 @@ msgid "Hide matching"
 msgstr "Folaigh comhaid atá comhoiriúnach"
 
 #: package/contents/ui/ConfigFilter.qml:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File name pattern:"
 msgid "File name pattern:"
 msgstr "Patrún ainm comhaid:"
 
 #: package/contents/ui/ConfigFilter.qml:77
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File types:"
 msgid "File types:"
 msgstr "Cineálacha comhaid:"
 
@@ -98,12 +104,14 @@ msgid "Description"
 msgstr ""
 
 #: package/contents/ui/ConfigFilter.qml:201
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select All"
 msgid "Select All"
 msgstr "Roghnaigh Uile"
 
 #: package/contents/ui/ConfigFilter.qml:211
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Deselect All"
 msgid "Deselect All"
 msgstr "Díroghnaigh Uile"
 
@@ -119,19 +127,16 @@ msgid "Use a custom icon"
 msgstr "Teideal saincheaptha:"
 
 #: package/contents/ui/ConfigIcons.qml:102
-#, fuzzy, kde-format
-#| msgctxt "@title:menu in Copy To or Move To submenu"
-#| msgid "Browse..."
+#, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
-msgstr "Brabhsáil..."
+msgstr "Roghnaigh…"
 
 #: package/contents/ui/ConfigIcons.qml:108
-#, fuzzy, kde-format
-#| msgid "Sort Icons"
+#, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
-msgstr "Sórtáil na Deilbhíní"
+msgstr "Deilbhín Glan"
 
 #: package/contents/ui/ConfigIcons.qml:128
 #, fuzzy, kde-format
@@ -190,72 +195,61 @@ msgstr "Sórtáil:"
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
-msgstr ""
+msgstr "Láimhe"
 
 #: package/contents/ui/ConfigIcons.qml:182
-#, fuzzy, kde-format
-#| msgctxt "Sort icons"
-#| msgid "By Name"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
-msgstr "De Réir Ainm"
+msgstr "Ainm"
 
 #: package/contents/ui/ConfigIcons.qml:183
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
-msgstr "Méid:"
+msgstr "Méid"
 
 #: package/contents/ui/ConfigIcons.qml:184
-#, fuzzy, kde-format
-#| msgctxt "Sort icons"
-#| msgid "By Type"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
-msgstr "De Réir Cineáil"
+msgstr "Cineál"
 
 #: package/contents/ui/ConfigIcons.qml:185
-#, fuzzy, kde-format
-#| msgctxt "Sort icons"
-#| msgid "By Date"
+#, kde-format
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
-msgstr "De Réir Dáta"
+msgstr "Dáta"
 
 #: package/contents/ui/ConfigIcons.qml:196
-#, fuzzy, kde-format
-#| msgctxt "Sort icons"
-#| msgid "Descending"
+#, kde-format
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr "Ag dul síos"
 
 #: package/contents/ui/ConfigIcons.qml:204
-#, fuzzy, kde-format
-#| msgctxt "Sort icons"
-#| msgid "Folders First"
+#, kde-format
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
-msgstr "Fillteáin Ar dTús"
+msgstr "Fillteáin ar dtús"
 
 #: package/contents/ui/ConfigIcons.qml:218
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
-msgstr ""
+msgstr "Mód radhairc:"
 
 #: package/contents/ui/ConfigIcons.qml:220
 #, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
-msgstr ""
+msgstr "Liosta"
 
 #: package/contents/ui/ConfigIcons.qml:221
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
-msgstr ""
+msgstr "Eangach"
 
 #: package/contents/ui/ConfigIcons.qml:232
 #, fuzzy, kde-format
@@ -287,19 +281,19 @@ msgstr "Lipéad:"
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
-msgstr ""
+msgstr "Caol"
 
 #: package/contents/ui/ConfigIcons.qml:269
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
-msgstr ""
+msgstr "Meánach"
 
 #: package/contents/ui/ConfigIcons.qml:270
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
-msgstr ""
+msgstr "Leathan"
 
 #: package/contents/ui/ConfigIcons.qml:278
 #, fuzzy, kde-format
@@ -400,12 +394,14 @@ msgid "Title:"
 msgstr "Teideal:"
 
 #: package/contents/ui/ConfigLocation.qml:183
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "None"
 msgid "None"
 msgstr "Faic"
 
 #: package/contents/ui/ConfigLocation.qml:183
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Default"
 msgid "Default"
 msgstr "Réamhshocrú"
 
@@ -465,6 +461,9 @@ msgid ""
 "There are a lot of files and folders on the desktop. This can cause bugs and "
 "performance issues. Please consider moving some of them elsewhere."
 msgstr ""
+"Tá a lán comhad agus fillteán ar an deasc. Is féidir go mbeadh fabhtanna "
+"agus fadhbanna feidhmíochta mar thoradh air seo. Smaoinigh ar chuid acu a "
+"bhogadh in áit eile."
 
 #: package/contents/ui/main.qml:356
 #, fuzzy, kde-format
@@ -473,10 +472,9 @@ msgid "Configure Desktop and Wallpaper…"
 msgstr "Ath&nuaigh an Deasc"
 
 #: plugins/folder/directorypicker.cpp:32
-#, fuzzy, kde-format
-#| msgid "Select All"
+#, kde-format
 msgid "Select Folder"
-msgstr "Roghnaigh Uile"
+msgstr "Roghnaigh Fillteán"
 
 #: plugins/folder/foldermodel.cpp:467
 #, kde-format
@@ -489,8 +487,7 @@ msgid "&Refresh View"
 msgstr "&Athnuaigh an tAmharc"
 
 #: plugins/folder/foldermodel.cpp:1641
-#, fuzzy, kde-format
-#| msgid "&Empty Trash Bin"
+#, kde-format
 msgid "&Empty Trash"
 msgstr "&Folmhaigh an Bruscar"
 
@@ -517,88 +514,71 @@ msgid "&Properties"
 msgstr "&Airíonna"
 
 #: plugins/folder/viewpropertiesmenu.cpp:21
-#, fuzzy, kde-format
-#| msgid "Sorting:"
+#, kde-format
 msgid "Sort By"
-msgstr "Sórtáil:"
+msgstr "Sórtáil De réir"
 
 #: plugins/folder/viewpropertiesmenu.cpp:24
-#, fuzzy, kde-format
-#| msgctxt "Sort Icons"
-#| msgid "Unsorted"
+#, kde-format
 msgctxt "@item:inmenu Sort icons manually"
 msgid "Unsorted"
-msgstr "Gan Sórtáil"
+msgstr "Gan sórtáil"
 
 #: plugins/folder/viewpropertiesmenu.cpp:28
-#, fuzzy, kde-format
-#| msgctxt "Sort icons"
-#| msgid "By Name"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by name"
 msgid "Name"
-msgstr "De Réir Ainm"
+msgstr "Ainm"
 
 #: plugins/folder/viewpropertiesmenu.cpp:32
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by size"
 msgid "Size"
-msgstr "Méid:"
+msgstr "Méid"
 
 #: plugins/folder/viewpropertiesmenu.cpp:36
-#, fuzzy, kde-format
-#| msgctxt "Sort icons"
-#| msgid "By Type"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by file type"
 msgid "Type"
-msgstr "De Réir Cineáil"
+msgstr "Cineál"
 
 #: plugins/folder/viewpropertiesmenu.cpp:40
-#, fuzzy, kde-format
-#| msgctxt "Sort icons"
-#| msgid "By Date"
+#, kde-format
 msgctxt "@item:inmenu Sort icons by date"
 msgid "Date"
-msgstr "De Réir Dáta"
+msgstr "Dáta"
 
 #: plugins/folder/viewpropertiesmenu.cpp:45
-#, fuzzy, kde-format
-#| msgctxt "Sort icons"
-#| msgid "Descending"
+#, kde-format
 msgctxt "@item:inmenu Sort icons in descending order"
 msgid "Descending"
 msgstr "Ag dul síos"
 
 #: plugins/folder/viewpropertiesmenu.cpp:47
-#, fuzzy, kde-format
-#| msgctxt "Sort icons"
-#| msgid "Folders First"
+#, kde-format
 msgctxt "@item:inmenu Sort icons with folders first"
 msgid "Folders First"
-msgstr "Fillteáin Ar dTús"
+msgstr "Fillteáin Ar dtús"
 
 #: plugins/folder/viewpropertiesmenu.cpp:50
-#, fuzzy, kde-format
-#| msgid "Icon size:"
+#, kde-format
 msgid "Icon Size"
-msgstr "Méid na ndeilbhíní:"
+msgstr "Méid na Deilbhíní"
 
 #: plugins/folder/viewpropertiesmenu.cpp:53
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Tiny"
-msgstr ""
+msgstr "Beag bídeach"
 
 #: plugins/folder/viewpropertiesmenu.cpp:54
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Very Small"
-msgstr "Beag"
+msgstr "An-bheag"
 
 #: plugins/folder/viewpropertiesmenu.cpp:55
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Small"
 msgstr "Beag"
@@ -607,17 +587,16 @@ msgstr "Beag"
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Small-Medium"
-msgstr ""
+msgstr "Beag-Meánach"
 
 #: plugins/folder/viewpropertiesmenu.cpp:57
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Medium"
-msgstr ""
+msgstr "Meánach"
 
 #: plugins/folder/viewpropertiesmenu.cpp:58
-#, fuzzy, kde-format
-#| msgid "Large"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Large"
 msgstr "Mór"
@@ -626,14 +605,13 @@ msgstr "Mór"
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Huge"
-msgstr ""
+msgstr "Ollmhór"
 
 #: plugins/folder/viewpropertiesmenu.cpp:67
-#, fuzzy, kde-format
-#| msgid "Arrange icons:"
+#, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Arrange"
-msgstr "Eagraigh na deilbhíní:"
+msgstr "Leag amach"
 
 #: plugins/folder/viewpropertiesmenu.cpp:71
 #, fuzzy, kde-format
@@ -675,16 +653,15 @@ msgid "Right"
 msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:93
-#, fuzzy, kde-format
-#| msgid "Previews:"
+#, kde-format
 msgid "Show Previews"
-msgstr "Réamhamhairc:"
+msgstr "Taispeáin Réamhamhairc"
 
 #: plugins/folder/viewpropertiesmenu.cpp:97
 #, kde-format
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
-msgstr ""
+msgstr "Faoi ghlas"
 
 #, fuzzy
 #~| msgctxt "On a camera"

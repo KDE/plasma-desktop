@@ -1,27 +1,28 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-01-21 11:04+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
+"Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
+"plasma-translations/kcm_plasmasearch/ga/>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : (n>2 && n<7) ? 2 :"
+"(n>6 && n<11) ? 3 : 4;\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: plasmasearch/kcm.cpp:87
 #, kde-format
 msgid "Available Plugins"
-msgstr ""
+msgstr "Breiseáin atá ar Fáil"
 
 #: plasmasearch/package/contents/ui/main.qml:25
 #, kde-format
@@ -45,24 +46,29 @@ msgstr ""
 msgctxt "@info:status"
 msgid "Failed to run install script in terminal <message>%1</message>"
 msgstr ""
+"Theip ar an script suiteála a rith sa chríochfort <message>%1</message>"
 
 #: plugininstaller/AbstractJob.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Installation executed successfully, you may now close this window"
 msgstr ""
+"Suiteáil curtha i gcrích go rathúil, is féidir leat an fhuinneog seo a "
+"dhúnadh anois"
 
 #: plugininstaller/AbstractJob.cpp:31
 #, kde-format
 msgctxt "@info"
 msgid "Uninstallation executed successfully, you may now close this window"
 msgstr ""
+"Cuireadh an díshuiteáil i gcrích go rathúil, is féidir leat an fhuinneog seo "
+"a dhúnadh anois"
 
 #: plugininstaller/main.cpp:31
 #, kde-format
 msgctxt "@info"
 msgid "KRunner plugin installation failed"
-msgstr ""
+msgstr "Theip ar shuiteáil breiseán KRunner"
 
 #: plugininstaller/main.cpp:43
 #, kde-format
@@ -80,14 +86,14 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
-msgstr ""
+msgstr "Gan tacaíocht PackageKit"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:23
 #: plugininstaller/ScriptConfirmationDialog.h:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Installation"
-msgstr ""
+msgstr "Deimhnigh an Suiteáil"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:26
 #, kde-kuit-format
@@ -96,25 +102,27 @@ msgid ""
 "You are about to install a binary package. You should only install these "
 "from a trusted author/packager."
 msgstr ""
+"Tá tú ar tí pacáiste dénártha a shuiteáil. Níor cheart duit iad seo a "
+"shuiteáil ach ó údar/pacálaí iontaofa."
 
 #: plugininstaller/PackageKitConfirmationDialog.h:33
 #: plugininstaller/ScriptConfirmationDialog.h:79
 #, kde-format
 msgctxt "@action:button"
 msgid "Accept Risk And Continue"
-msgstr ""
+msgstr "Glac leis an Riosca agus Lean ar aghaidh"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:37
 #, kde-format
 msgctxt "@action:button"
 msgid "View File"
-msgstr ""
+msgstr "Féach ar an gComhad"
 
 #: plugininstaller/PackageKitJob.cpp:24
 #, kde-format
 msgctxt "@info"
 msgid "The mime type %1 is not supported by the packagekit backend"
-msgstr ""
+msgstr "Ní thacaíonn an chúltaca packagekit leis an gcineál mime %1"
 
 #: plugininstaller/ScriptConfirmationDialog.h:32
 #, kde-kuit-format
@@ -124,6 +132,10 @@ msgid ""
 "author. You can try to uninstall the plugin manually.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Ní sholáthraíonn an breiseán seo script díshuiteála. Téigh i dteagmháil leis "
+"an údar le do thoil. Is féidir leat iarracht a dhéanamh an breiseán a "
+"dhíshuiteáil de láimh.<nl/>Mura mbraitheann tú in ann nó compordach leis "
+"seo, cliceáil <interface>Cealaigh</interface>  anois."
 
 #: plugininstaller/ScriptConfirmationDialog.h:37
 #, kde-kuit-format
@@ -134,6 +146,11 @@ msgid ""
 "the README for instructions from the author.<nl/>If you do not feel capable "
 "or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Ní sholáthraíonn an breiseán seo script díshuiteála. Téigh i dteagmháil leis "
+"an údar le do thoil. Is féidir leat iarracht a dhéanamh an breiseán a "
+"dhíshuiteáil de láimh. Féach ar an README le haghaidh treoracha ón údar.<nl/"
+">Mura mbraitheann tú in ann nó compordach leis seo, cliceáil "
+"<interface>Cealaigh</interface>  anois."
 
 #: plugininstaller/ScriptConfirmationDialog.h:43
 #, kde-kuit-format
@@ -143,6 +160,10 @@ msgid ""
 "author. You can try to install the plugin manually.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Ní sholáthraíonn an breiseán seo script suiteála. Téigh i dteagmháil leis an "
+"údar le do thoil. Is féidir leat iarracht a dhéanamh an breiseán a shuiteáil "
+"de láimh.<nl/>Mura mbraitheann tú in ann nó compordach leis seo, cliceáil "
+"<interface>Cealaigh</interface>  anois."
 
 #: plugininstaller/ScriptConfirmationDialog.h:48
 #, kde-kuit-format
@@ -153,6 +174,11 @@ msgid ""
 "the README for instructions from the author.<nl/>If you do not feel capable "
 "or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Ní sholáthraíonn an breiseán seo script suiteála. Téigh i dteagmháil leis an "
+"údar le do thoil. Is féidir leat iarracht a dhéanamh an breiseán a shuiteáil "
+"de láimh. Féach ar an README le haghaidh treoracha ón údar.<nl/>Mura "
+"mbraitheann tú in ann nó compordach leis seo, cliceáil <interface>Cealaigh</"
+"interface>  anois."
 
 #: plugininstaller/ScriptConfirmationDialog.h:54
 #, kde-kuit-format
@@ -163,6 +189,11 @@ msgid ""
 "read the script's source code.<nl/>If you do not feel capable or comfortable "
 "with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Úsáideann an breiseán seo script le haghaidh suiteála a d'fhéadfadh riosca "
+"slándála a chruthú. Scrúdaigh ábhar iomlán an bhreiseáin le do thoil sula "
+"suiteálann tú é, nó léigh cód foinse an scripte ar a laghad.<nl/>Mura "
+"mbraitheann tú in ann nó compordach leis seo, cliceáil <interface>Cealaigh</"
+"interface>  anois."
 
 #: plugininstaller/ScriptConfirmationDialog.h:60
 #, kde-kuit-format
@@ -173,45 +204,50 @@ msgid ""
 "read the README file and the script's source code.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Úsáideann an breiseán seo script le haghaidh suiteála a d'fhéadfadh riosca "
+"slándála a chruthú. Scrúdaigh ábhar iomlán an bhreiseáin le do thoil sula "
+"suiteálann tú é, nó léigh an comhad README agus cód foinse an scripte ar a "
+"laghad.<nl/>Mura mbraitheann tú in ann nó compordach leis seo, cliceáil "
+"<interface>Cealaigh</interface>  anois."
 
 #: plugininstaller/ScriptConfirmationDialog.h:75
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark entry as uninstalled"
-msgstr ""
+msgstr "Marcáil an iontráil mar dhíshuiteáilte"
 
 #: plugininstaller/ScriptConfirmationDialog.h:77
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark entry as installed"
-msgstr ""
+msgstr "Marcáil an iontráil mar shuiteáilte"
 
 #: plugininstaller/ScriptConfirmationDialog.h:85
 #, kde-format
 msgctxt "@action:button"
 msgid "View Script"
-msgstr ""
+msgstr "Féach ar an Script"
 
 #: plugininstaller/ScriptConfirmationDialog.h:91
 #, kde-format
 msgctxt "@action:button"
 msgid "View Source Directory"
-msgstr ""
+msgstr "Féach ar an Eolaire Foinse"
 
 #: plugininstaller/ScriptConfirmationDialog.h:102
 #, kde-format
 msgctxt "@action:button"
 msgid "View %1"
-msgstr ""
+msgstr "Amharc %1"
 
 #: plugininstaller/ZypperRPMJob.cpp:30
 #, kde-format
 msgctxt "@info"
 msgid "Could not resolve package name of %1"
-msgstr ""
+msgstr "Níorbh fhéidir ainm pacáiste %1 a réiteach"
 
 #: plugininstaller/ZypperRPMJob.cpp:37
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
-msgstr ""
+msgstr "Theip ar an ordú suiteála a rith: <message>%1</message>"

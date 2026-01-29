@@ -1,22 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-01-21 11:04+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
+"Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
+"plasma-translations/kcm_touchpad/ga/>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : (n>2 && n<7) ? 2 :"
+"(n>6 && n<11) ? 3 : 4;\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -52,36 +53,40 @@ msgstr ""
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
+"Theip ar cheisteanna a chur ar ghléasanna ionchuir. Oscail an modúl "
+"socruithe seo arís, le do thoil."
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:78
 #, kde-format
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr ""
+"Earráid chriticiúil agus faisnéis bhunúsach faoin ngléas á léamh don "
+"phainéal tadhaill %1."
 
 #: backends/x11/xlibbackend.cpp:74
 #, kde-format
 msgid "Cannot connect to X server"
-msgstr ""
+msgstr "Ní féidir ceangal leis an bhfreastalaí X"
 
 #: backends/x11/xlibbackend.cpp:90 kcm/libinput/touchpad.qml:98
 #, kde-format
 msgid "No touchpad found"
-msgstr ""
+msgstr "Níor aimsíodh aon phainéal tadhaill"
 
 #: backends/x11/xlibbackend.cpp:136 backends/x11/xlibbackend.cpp:150
 #, kde-format
 msgid "Cannot apply touchpad configuration"
-msgstr ""
+msgstr "Ní féidir cumraíocht an tslat tadhaill a chur i bhfeidhm"
 
 #: backends/x11/xlibbackend.cpp:164 backends/x11/xlibbackend.cpp:177
 #, kde-format
 msgid "Cannot read touchpad configuration"
-msgstr ""
+msgstr "Ní féidir cumraíocht an tslat tadhaill a léamh"
 
 #: backends/x11/xlibbackend.cpp:190
 #, kde-format
 msgid "Cannot read default touchpad configuration"
-msgstr ""
+msgstr "Ní féidir cumraíocht réamhshocraithe an tadhaill a léamh"
 
 #: kcm/libinput/touchpad.qml:112
 #, kde-format
@@ -394,11 +399,13 @@ msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr ""
+"Earráid agus luachanna á lódáil. Féach na logaí le haghaidh tuilleadh "
+"eolais. Atosaigh an modúl cumraíochta seo le do thoil."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:94
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
-msgstr ""
+msgstr "Níor aimsíodh aon tadhaill-cheap. Ceangail an tadhaill-cheap anois."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:103
 #, kde-format
@@ -406,6 +413,8 @@ msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
+"Ní féidir na hathruithe go léir a shábháil. Féach na logaí le haghaidh "
+"tuilleadh eolais. Atosaigh an modúl cumraíochta seo agus déan iarracht arís."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:122
 #, kde-format
@@ -413,6 +422,8 @@ msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr ""
+"Earráid agus luachanna réamhshocraithe á lódáil. Theip ar roinnt roghanna a "
+"shocrú chuig a luachanna réamhshocraithe."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:142
 #, kde-format
@@ -420,16 +431,18 @@ msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr ""
+"Earráid agus gléas nua-cheangailte á chur leis. Athcheangail é agus atosú an "
+"modúl cumraíochta seo le do thoil."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:165
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
-msgstr ""
+msgstr "An ceap tadhaill dícheangailte. Dhún sé a dhialóg socruithe."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:167
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
-msgstr ""
+msgstr "Teagmhéadán dícheangailte. Ní bhfuarthas aon teagmhéadáin eile."
 
 #: kcm/xlib/testarea.cpp:20
 #, kde-format

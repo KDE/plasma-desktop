@@ -2,36 +2,38 @@
 # Copyright (C) 2009 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kcm_solid_actions package.
 # Kevin Scannell <kscanne@gmail.com>, 2009.
+# Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2009-03-03 08:19-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2026-01-21 12:09+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
+"Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
+"plasma-translations/kcm_solid_actions/ga/>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"3 : 4;\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Kevin Scannell"
+msgstr "Séamus Ó Ciardhuáin,Kevin Scannell,Aindriú Mac Giolla Eoin"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kscanne@gmail.com"
+msgstr "seoc@iolfree.ie,kscanne@gmail.com,aindriu80@yahoo.com"
 
 #: ActionEditor.cpp:60
-#, fuzzy, kde-format
-#| msgid "Editing Action %1"
+#, kde-format
 msgid "Editing Action '%1'"
-msgstr "Gníomh %1 á chur in eagar"
+msgstr "Gníomh Eagarthóireachta '%1'"
 
 #: ActionEditor.cpp:162
 #, kde-format
@@ -41,7 +43,7 @@ msgid ""
 msgstr ""
 "Dealraíonn sé go bhfuil ceann de na rudaí seo neamhbhailí: ainm gníomh, "
 "ordú, deilbhín, nó coinníoll.\n"
-"Ní chuirfear na hathruithe i bhfeidhm mar sin"
+"Ní chuirfear na hathruithe i bhfeidhm mar sin."
 
 #: ActionEditor.cpp:163
 #, kde-format
@@ -231,12 +233,14 @@ msgid "The device property %1 must contain %2"
 msgstr "Ní mór %2 a bheith in airí %1 an ghléis"
 
 #: SolidActions.cpp:33
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Solid Device Actions Editor"
 msgid "Solid Device Actions Editor"
 msgstr "Eagarthóir Gníomhartha Gléis Solid"
 
 #: SolidActions.cpp:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Solid Device Actions Control Panel Module"
 msgid "Solid Device Actions Control Panel Module"
 msgstr "Modúl Rialaithe le haghaidh Gníomhartha Gléis Solid"
 
@@ -281,13 +285,13 @@ msgstr "Bain"
 #: SolidActions.ui:29
 #, kde-format
 msgid "Edit…"
-msgstr ""
+msgstr "Cuir in eagar…"
 
 #. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
 #: SolidActions.ui:36
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Cuir leis…"
 
 #~ msgid "Edit..."
 #~ msgstr "Eagar..."

@@ -2,23 +2,27 @@
 # Copyright (C) 2009 This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma_applet_tasks package.
 # Kevin Scannell <kscanne@gmail.com>, 2009.
+# Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/plasma_applet_tasks.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2007-12-31 14:35-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2026-01-21 15:09+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
+"Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
+"plasma-translations/plasma_applet_org-kde-plasma-taskmanager/ga/>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"3 : 4;\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: package/contents/config/config.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Appearance"
 msgid "Appearance"
 msgstr "Cuma"
 
@@ -31,37 +35,37 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
-msgstr ""
+msgstr "Díbhalbhaigh"
 
 #: package/contents/ui/AudioStream.qml:101
 #, kde-format
 msgctxt "@action:button"
 msgid "Mute"
-msgstr ""
+msgstr "Balbhaigh"
 
 #: package/contents/ui/AudioStream.qml:102
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
-msgstr ""
+msgstr "Díbhalbhaigh %1"
 
 #: package/contents/ui/AudioStream.qml:102
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
-msgstr ""
+msgstr "Balbhaigh %1"
 
 #: package/contents/ui/Badge.qml:54
 #, kde-format
 msgctxt "Invalid number of new messages, overlay, keep short"
 msgid "—"
-msgstr ""
+msgstr "—"
 
 #: package/contents/ui/Badge.qml:56
 #, kde-format
 msgctxt "Over 9999 new messages, overlay, keep short"
 msgid "9,999+"
-msgstr ""
+msgstr "9,999+"
 
 #: package/contents/ui/ConfigAppearance.qml:33
 #, fuzzy, kde-format
@@ -97,7 +101,8 @@ msgid "Maximum columns:"
 msgstr "Líon uasta na rónna:"
 
 #: package/contents/ui/ConfigAppearance.qml:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Maximum rows:"
 msgid "Maximum rows:"
 msgstr "Líon uasta na rónna:"
 
@@ -120,19 +125,19 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
-msgstr ""
+msgstr "Beag"
 
 #: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
-msgstr ""
+msgstr "Gnáth"
 
 #: package/contents/ui/ConfigAppearance.qml:89
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
-msgstr ""
+msgstr "Mór"
 
 #: package/contents/ui/ConfigAppearance.qml:113
 #, kde-format
@@ -220,12 +225,14 @@ msgid "Do not sort"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Manually"
 msgid "Manually"
 msgstr "De Láimh"
 
 #: package/contents/ui/ConfigBehavior.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Alphabetically"
 msgid "Alphabetically"
 msgstr "In Ord Aibítre"
 
@@ -406,43 +413,43 @@ msgstr ""
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
-msgstr ""
+msgstr "An Rian Roimhe Seo"
 
 #: package/contents/ui/ContextMenu.qml:184
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
-msgstr ""
+msgstr "Sos"
 
 #: package/contents/ui/ContextMenu.qml:184
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
-msgstr ""
+msgstr "Seinn"
 
 #: package/contents/ui/ContextMenu.qml:202
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
-msgstr ""
+msgstr "An Chéad Rian Eile"
 
 #: package/contents/ui/ContextMenu.qml:213
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
-msgstr ""
+msgstr "Stop"
 
 #: package/contents/ui/ContextMenu.qml:233
 #, kde-format
 msgctxt "Quit media player app"
 msgid "Quit"
-msgstr ""
+msgstr "Scoir"
 
 #: package/contents/ui/ContextMenu.qml:248
 #, kde-format
 msgctxt "Open or bring to the front window of media player app"
 msgid "Restore"
-msgstr ""
+msgstr "Athchóirigh"
 
 #: package/contents/ui/ContextMenu.qml:274
 #, kde-format
@@ -586,37 +593,36 @@ msgstr ""
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
-msgstr ""
+msgstr "Lainseáil %1"
 
 #: package/contents/ui/Task.qml:88
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
+msgstr[0] "Tá %1 teachtaireacht nua ann."
+msgstr[1] "Tá %1 teachtaireachtaí nua ann."
+msgstr[2] "Tá %1 teachtaireachtaí nua ann."
+msgstr[3] "Tá %1 teachtaireachtaí nua ann."
+msgstr[4] "Tá %1 teachtaireachtaí nua ann."
 
 #: package/contents/ui/Task.qml:97
-#, fuzzy, kde-format
-#| msgid "Show tooltips"
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
-msgstr "Taispeáin leideanna uirlisí"
+msgstr "Taispeáin leid uirlisí Tasca do %1"
 
 #: package/contents/ui/Task.qml:103
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
-msgstr ""
+msgstr "Taispeáin fuinneoga taobh le taobh le haghaidh %1"
 
 #: package/contents/ui/Task.qml:108
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
-msgstr ""
+msgstr "Oscail liosta téacsúil fuinneoga le haghaidh %1"
 
 #: package/contents/ui/Task.qml:112
 #, kde-format
@@ -627,38 +633,34 @@ msgstr ""
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
-msgstr ""
+msgstr "Díbhalbhaigh %1"
 
 #: package/contents/ui/ToolTipInstance.qml:357
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
-msgstr ""
+msgstr "Balbhaigh %1"
 
 #: package/contents/ui/ToolTipInstance.qml:380
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
-msgstr ""
+msgstr "Coigeartaigh an toirt do %1"
 
 #: package/contents/ui/ToolTipInstance.qml:396
-#, fuzzy, kde-format
-#| msgctxt "@title:group Name of a group of windows"
-#| msgid "%1"
+#, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
-msgstr "%1"
+msgstr "%1%"
 
 #: package/contents/ui/ToolTipInstance.qml:399
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: package/contents/ui/ToolTipInstance.qml:423
-#, fuzzy, kde-format
-#| msgctxt "Which virtual desktop a window is currently on"
-#| msgid "On %1"
+#, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "Ar %1"
@@ -667,25 +669,25 @@ msgstr "Ar %1"
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
-msgstr ""
+msgstr "Prionáilte le gach deasc"
 
 #: package/contents/ui/ToolTipInstance.qml:437
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
-msgstr ""
+msgstr "Ar fáil ar gach gníomhaíocht"
 
 #: package/contents/ui/ToolTipInstance.qml:459
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
-msgstr ""
+msgstr "Ar fáil freisin ar %1"
 
 #: package/contents/ui/ToolTipInstance.qml:463
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
-msgstr ""
+msgstr "Ar fáil ar %1"
 
 #: plugin/backend.cpp:368
 #, kde-format
@@ -701,41 +703,41 @@ msgstr[4] ""
 #: plugin/backend.cpp:468
 #, kde-format
 msgid "Recent Downloads"
-msgstr ""
+msgstr "Íoslódálacha Le Déanaí"
 
 #: plugin/backend.cpp:470
 #, kde-format
 msgid "Recent Connections"
-msgstr ""
+msgstr "Naisc Le Déanaí"
 
 #: plugin/backend.cpp:472
 #, kde-format
 msgid "Recent Places"
-msgstr ""
+msgstr "Áiteanna Le Déanaí"
 
 #: plugin/backend.cpp:481
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
-msgstr ""
+msgstr "Déan dearmad ar Íoslódálacha Le Déanaí"
 
 #: plugin/backend.cpp:483
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
-msgstr ""
+msgstr "Déan dearmad ar naisc le déanaí"
 
 #: plugin/backend.cpp:485
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
-msgstr ""
+msgstr "Déan dearmad ar áiteanna le déanaí"
 
 #: plugin/backend.cpp:487
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
-msgstr ""
+msgstr "Déan dearmad ar chomhaid le déanaí"
 
 #~ msgid "Show tooltips"
 #~ msgstr "Taispeáin leideanna uirlisí"

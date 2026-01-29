@@ -2,23 +2,27 @@
 # Copyright (C) 2009 This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma_applet_pager package.
 # Kevin Scannell <kscanne@gmail.com>, 2009.
+# Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/plasma_applet_pager.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2007-10-07 08:39-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2026-01-21 11:04+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
+"Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
+"plasma-translations/plasma_applet_org-kde-plasma-pager/ga/>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"3 : 4;\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: package/contents/config/config.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
 msgid "General"
 msgstr "Ginearálta"
 
@@ -71,7 +75,8 @@ msgid "Text display:"
 msgstr "Téacs taispeána:"
 
 #: package/contents/ui/configGeneral.qml:83
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No text"
 msgid "No text"
 msgstr "Gan téacs"
 
@@ -81,7 +86,8 @@ msgid "Activity number"
 msgstr ""
 
 #: package/contents/ui/configGeneral.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Desktop number"
 msgid "Desktop number"
 msgstr "Uimhir na deisce"
 
@@ -91,7 +97,8 @@ msgid "Activity name"
 msgstr ""
 
 #: package/contents/ui/configGeneral.qml:99
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Desktop name"
 msgid "Desktop name"
 msgstr "Ainm na deisce"
 
@@ -108,7 +115,8 @@ msgid "Selecting current virtual desktop:"
 msgstr "Deasc reatha a roghnú:"
 
 #: package/contents/ui/configGeneral.qml:116
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Does nothing"
 msgid "Does nothing"
 msgstr "Ní dhéanann sé faic"
 
@@ -162,7 +170,7 @@ msgstr "Ainm na deisce"
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
-msgstr ""
+msgstr "Athraigh go %1"
 
 #: package/contents/ui/main.qml:595
 #, kde-format

@@ -2,27 +2,34 @@
 # Copyright (C) 2002 Free Software Foundation, Inc.
 # Séamus Ó Ciardhuáin <seoc@cnds.ucd.ie>, 2002
 # Kevin Scannell <kscanne@gmail.com>, 2009
+# Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2004-12-03 14:52-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2026-01-21 11:04+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
+"Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
+"plasma-translations/kcmmouse/ga/>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"3 : 4;\n"
+"X-Generator: Weblate 5.15.1\n"
 
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "NAME OF TRANSLATORS"
+#| msgid "Your names"
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Séamus Ó Ciardhuáin,Kevin Scannell"
 
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "EMAIL OF TRANSLATORS"
+#| msgid "Your emails"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "seoc@iolfree.ie,kscanne@gmail.com"
@@ -31,11 +38,13 @@ msgstr "seoc@iolfree.ie,kscanne@gmail.com"
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
+"Theip ar cheisteanna a chur ar ghléasanna ionchuir. Oscail an modúl "
+"socruithe seo arís, le do thoil."
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:86
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
-msgstr ""
+msgstr "Earráid chriticiúil agus faisnéis bhunúsach faoin ngléas %1 á léamh."
 
 #: kcm/libinput/libinput_config.cpp:36
 #, kde-format
@@ -68,11 +77,13 @@ msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr ""
+"Earráid agus luachanna á lódáil. Féach na logaí le haghaidh tuilleadh "
+"eolais. Atosaigh an modúl cumraíochta seo le do thoil."
 
 #: kcm/libinput/libinput_config.cpp:114
 #, kde-format
 msgid "No pointer device found. Connect now."
-msgstr ""
+msgstr "Níor aimsíodh aon ghléas pointeora. Ceangail anois."
 
 #: kcm/libinput/libinput_config.cpp:125
 #, kde-format
@@ -80,6 +91,8 @@ msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
+"Ní féidir na hathruithe go léir a shábháil. Féach na logaí le haghaidh "
+"tuilleadh eolais. Atosaigh an modúl cumraíochta seo agus déan iarracht arís."
 
 #: kcm/libinput/libinput_config.cpp:145
 #, kde-format
@@ -87,6 +100,8 @@ msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr ""
+"Earráid agus luachanna réamhshocraithe á lódáil. Theip ar roinnt roghanna a "
+"shocrú chuig a luachanna réamhshocraithe."
 
 #: kcm/libinput/libinput_config.cpp:167
 #, kde-format
@@ -94,16 +109,18 @@ msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr ""
+"Earráid agus gléas nua-cheangailte á chur leis. Athcheangail é agus atosú an "
+"modúl cumraíochta seo le do thoil."
 
 #: kcm/libinput/libinput_config.cpp:191
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr ""
+msgstr "Gléas pointeora dícheangailte. Dúnadh a dhialog socruithe."
 
 #: kcm/libinput/libinput_config.cpp:193
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr ""
+msgstr "Gléas pointeora dícheangailte. Ní bhfuarthas aon ghléasanna eile."
 
 #: kcm/libinput/main.qml:79
 #, kde-format
@@ -206,13 +223,13 @@ msgstr "Tairseach an phointeora:"
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
-msgstr ""
+msgstr "Níos moille"
 
 #: kcm/libinput/main.qml:349
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
-msgstr ""
+msgstr "Níos tapúla"
 
 #: kcm/libinput/main.qml:360
 #, kde-format
@@ -224,25 +241,25 @@ msgstr ""
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
-msgstr ""
+msgstr "Cnaipe Breise %1:"
 
 #: kcm/libinput/main.qml:426
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
-msgstr ""
+msgstr "Brúigh an cnaipe luiche ar mhaith leat ceangal eochrach a chur leis"
 
 #: kcm/libinput/main.qml:427
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
-msgstr ""
+msgstr "Cuir isteach an teaglaim eochrach nua do %1"
 
 #: kcm/libinput/main.qml:431
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Cealaigh"
 
 #: kcm/libinput/main.qml:448
 #, fuzzy, kde-format
@@ -255,7 +272,7 @@ msgstr "Brúigh an Cnaipe Ceangail"
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
-msgstr ""
+msgstr "Cuir Ceangal leis…"
 
 #: kcm/libinput/main.qml:478
 #, kde-format
@@ -265,7 +282,11 @@ msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
 #: kcm/xlib/kcmmouse.ui:14
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Mouse</h1> This module allows you to choose various options for the "
+#| "way in which your pointing device works. Your pointing device may be a "
+#| "mouse, trackball, or some other hardware that performs a similar function."
 msgid ""
 "<h1>Mouse</h1> This module allows you to choose various options for the way "
 "in which your pointing device works. Your pointing device may be a mouse, "
@@ -278,13 +299,20 @@ msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, generalTab)
 #: kcm/xlib/kcmmouse.ui:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&General"
 msgid "&General"
 msgstr "&Ginearálta"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, handedBox)
 #: kcm/xlib/kcmmouse.ui:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "If you are left-handed, you may prefer to swap the functions of the left "
+#| "and right buttons on your pointing device by choosing the 'left-handed' "
+#| "option. If your pointing device has more than two buttons, only those "
+#| "that function as the left and right buttons are affected. For example, if "
+#| "you have a three-button mouse, the middle button is unaffected."
 msgid ""
 "If you are left-handed, you may prefer to swap the functions of the left and "
 "right buttons on your pointing device by choosing the 'left-handed' option. "
@@ -301,25 +329,31 @@ msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, handedBox)
 #: kcm/xlib/kcmmouse.ui:55
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Button Order"
 msgid "Button Order"
 msgstr "Ord na gCnaipí"
 
 #. i18n: ectx: property (text), widget (QRadioButton, rightHanded)
 #: kcm/xlib/kcmmouse.ui:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Righ&t handed"
 msgid "Righ&t handed"
 msgstr "&Deaslámhach"
 
 #. i18n: ectx: property (text), widget (QRadioButton, leftHanded)
 #: kcm/xlib/kcmmouse.ui:77
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Le&ft handed"
 msgid "Le&ft handed"
 msgstr "&Ciotach"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, cbScrollPolarity)
 #: kcm/xlib/kcmmouse.ui:106
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#| "mouse buttons."
 msgid ""
 "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
 "mouse buttons."
@@ -329,55 +363,72 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbScrollPolarity)
 #: kcm/xlib/kcmmouse.ui:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Re&verse scroll direction"
 msgid "Re&verse scroll direction"
 msgstr "Iompaigh &treo scrollaithe"
 
 #. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
 #: kcm/xlib/kcmmouse.ui:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Advanced"
 msgid "Advanced"
 msgstr "Casta"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/xlib/kcmmouse.ui:164
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pointer acceleration:"
 msgid "Pointer acceleration:"
 msgstr "Luasghéarú an phointeora:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pointer threshold:"
 msgid "Pointer threshold:"
 msgstr "Tairseach an phointeora:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm/xlib/kcmmouse.ui:184
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Double click interval:"
 msgid "Double click interval:"
 msgstr "Eatramh déchliceála:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: kcm/xlib/kcmmouse.ui:194
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Drag start time:"
 msgid "Drag start time:"
 msgstr "Tréimhse tosaithe tarraingthe:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: kcm/xlib/kcmmouse.ui:204
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Drag start distance:"
 msgid "Drag start distance:"
 msgstr "Fad tosaithe tarraingthe:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm/xlib/kcmmouse.ui:214
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mouse wheel scrolls by:"
 msgid "Mouse wheel scrolls by:"
 msgstr "Líon na línte a scrollaíonn roth na luiche:"
 
 #. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, accel)
 #: kcm/xlib/kcmmouse.ui:230
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>This option allows you to change the relationship between the distance "
+#| "that the mouse pointer moves on the screen and the relative movement of "
+#| "the physical device itself (which may be a mouse, trackball, or some "
+#| "other pointing device.)</p><p> A high value for the acceleration will "
+#| "lead to large movements of the mouse pointer on the screen even when you "
+#| "only make a small movement with the physical device. Selecting very high "
+#| "values may result in the mouse pointer flying across the screen, making "
+#| "it hard to control.</p>"
 msgid ""
 "<p>This option allows you to change the relationship between the distance "
 "that the mouse pointer moves on the screen and the relative movement of the "
@@ -397,13 +448,23 @@ msgstr ""
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, accel)
 #: kcm/xlib/kcmmouse.ui:233
-#, kde-format
+#, fuzzy, kde-format
+#| msgid " x"
 msgid " x"
 msgstr " ×"
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, thresh)
 #: kcm/xlib/kcmmouse.ui:261
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>The threshold is the smallest distance that the mouse pointer must "
+#| "move on the screen before acceleration has any effect. If the movement is "
+#| "smaller than the threshold, the mouse pointer moves as if the "
+#| "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#| "with the physical device, there is no acceleration at all, giving you a "
+#| "greater degree of control over the mouse pointer. With larger movements "
+#| "of the physical device, you can move the mouse pointer rapidly to "
+#| "different areas on the screen.</p>"
 msgid ""
 "<p>The threshold is the smallest distance that the mouse pointer must move "
 "on the screen before acceleration has any effect. If the movement is smaller "
@@ -423,7 +484,12 @@ msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, doubleClickInterval)
 #: kcm/xlib/kcmmouse.ui:280
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The double click interval is the maximal time (in milliseconds) between "
+#| "two mouse clicks which turns them into a double click. If the second "
+#| "click happens later than this time interval after the first click, they "
+#| "are recognized as two separate clicks."
 msgid ""
 "The double click interval is the maximal time (in milliseconds) between two "
 "mouse clicks which turns them into a double click. If the second click "
@@ -441,13 +507,18 @@ msgstr ""
 #. i18n: ectx: property (suffix), widget (QSpinBox, mk_time_to_max)
 #: kcm/xlib/kcmmouse.ui:283 kcm/xlib/kcmmouse.ui:311 kcm/xlib/kcmmouse.ui:408
 #: kcm/xlib/kcmmouse.ui:450 kcm/xlib/kcmmouse.ui:482
-#, kde-format
+#, fuzzy, kde-format
+#| msgid " msec"
 msgid " msec"
 msgstr " ms"
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartTime)
 #: kcm/xlib/kcmmouse.ui:308
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#| "move the mouse within the drag start time, a drag operation will be "
+#| "initiated."
 msgid ""
 "If you click with the mouse (e.g. in a multi-line editor) and begin to move "
 "the mouse within the drag start time, a drag operation will be initiated."
@@ -457,7 +528,10 @@ msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, dragStartDist)
 #: kcm/xlib/kcmmouse.ui:333
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "If you click with the mouse and begin to move the mouse at least the drag "
+#| "start distance, a drag operation will be initiated."
 msgid ""
 "If you click with the mouse and begin to move the mouse at least the drag "
 "start distance, a drag operation will be initiated."
@@ -467,7 +541,12 @@ msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, wheelScrollLines)
 #: kcm/xlib/kcmmouse.ui:355
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "If you use the wheel of a mouse, this value determines the number of "
+#| "lines to scroll for each wheel movement. Note that if this number exceeds "
+#| "the number of visible lines, it will be ignored and the wheel movement "
+#| "will be handled as a page up/down movement."
 msgid ""
 "If you use the wheel of a mouse, this value determines the number of lines "
 "to scroll for each wheel movement. Note that if this number exceeds the "
@@ -489,48 +568,56 @@ msgstr "Nascleanúint Luiche"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mouseKeys)
 #: kcm/xlib/kcmmouse.ui:395
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Move pointer with keyboard (using the num pad)"
 msgid "&Move pointer with keyboard (using the num pad)"
 msgstr "&Bog an pointeoir leis an méarchlár (ar an eochaircheap uimhriúil)"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: kcm/xlib/kcmmouse.ui:424
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Acceleration delay:"
 msgid "&Acceleration delay:"
 msgstr "Moill lu&asghéaraithe:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: kcm/xlib/kcmmouse.ui:434
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "R&epeat interval:"
 msgid "R&epeat interval:"
 msgstr "E&atramh athdhéanta:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: kcm/xlib/kcmmouse.ui:466
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Acceleration &time:"
 msgid "Acceleration &time:"
 msgstr "Am luasghéarai&the:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #: kcm/xlib/kcmmouse.ui:498
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ma&ximum speed:"
 msgid "Ma&ximum speed:"
 msgstr "&Uasluas:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, mk_max_speed)
 #: kcm/xlib/kcmmouse.ui:514
-#, kde-format
+#, fuzzy, kde-format
+#| msgid " pixel/sec"
 msgid " pixel/sec"
 msgstr " pct/soic"
 
 #. i18n: ectx: property (text), widget (QLabel, label_11)
 #: kcm/xlib/kcmmouse.ui:530
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Acceleration &profile:"
 msgid "Acceleration &profile:"
 msgstr "&Próifíl luasghéaraithe:"
 
 #: kcm/xlib/xlib_config.cpp:79
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mouse"
 msgid "Mouse"
 msgstr "Luch"
 
@@ -541,42 +628,51 @@ msgid "(c) 1997 - 2018 Mouse developers"
 msgstr "© 1997 - 2005 Forbróirí Mouse"
 
 #: kcm/xlib/xlib_config.cpp:84
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Patrick Dowler"
 msgid "Patrick Dowler"
 msgstr "Patrick Dowler"
 
 #: kcm/xlib/xlib_config.cpp:85
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Dirk A. Mueller"
 msgid "Dirk A. Mueller"
 msgstr "Dirk A. Mueller"
 
 #: kcm/xlib/xlib_config.cpp:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "David Faure"
 msgid "David Faure"
 msgstr "David Faure"
 
 #: kcm/xlib/xlib_config.cpp:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Bernd Gehrmann"
 msgid "Bernd Gehrmann"
 msgstr "Bernd Gehrmann"
 
 #: kcm/xlib/xlib_config.cpp:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rik Hemsley"
 msgid "Rik Hemsley"
 msgstr "Rik Hemsley"
 
 #: kcm/xlib/xlib_config.cpp:89
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Brad Hughes"
 msgid "Brad Hughes"
 msgstr "Brad Hughes"
 
 #: kcm/xlib/xlib_config.cpp:90
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Brad Hards"
 msgid "Brad Hards"
 msgstr "Brad Hards"
 
 #: kcm/xlib/xlib_config.cpp:283 kcm/xlib/xlib_config.cpp:288
-#, kde-format
+#, fuzzy, kde-format
+#| msgid " pixel"
+#| msgid_plural " pixels"
 msgid " pixel"
 msgid_plural " pixels"
 msgstr[0] " phicteilín"
@@ -586,7 +682,9 @@ msgstr[3] " bpicteilín"
 msgstr[4] " picteilín"
 
 #: kcm/xlib/xlib_config.cpp:293
-#, kde-format
+#, fuzzy, kde-format
+#| msgid " line"
+#| msgid_plural " lines"
 msgid " line"
 msgid_plural " lines"
 msgstr[0] " líne"

@@ -2,30 +2,33 @@
 # Copyright (C) 2002 Free Software Foundation, Inc.
 # Séamus Ó Ciardhuáin <seoc@cnds.ucd.ie>, 2002
 # Kevin Scannell <kscanne@gmail.com>, 2009
+# Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2004-12-03 14:52-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2026-01-21 12:09+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
+"Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
+"plasma-translations/kcmkclock/ga/>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"3 : 4;\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Séamus Ó Ciardhuáin,Kevin Scannell"
+msgstr "Séamus Ó Ciardhuáin,Kevin Scannell,Aindriú Mac Giolla Eoin"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "seoc@iolfree.ie,kscanne@gmail.com"
+msgstr "seoc@iolfree.ie,kscanne@gmail.com,aindriu80@yahoo.com"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: dateandtime.ui:22
@@ -35,15 +38,13 @@ msgstr "Dáta agus Am"
 
 #. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
 #: dateandtime.ui:30
-#, fuzzy, kde-format
-#| msgid "Set date and time &automatically"
+#, kde-format
 msgid "Set date and time &automatically"
-msgstr "Socr&aigh an dáta agus an t-am go huathoibríoch"
+msgstr "Socr&aigh dáta agus am go huathoibríoch"
 
 #. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
 #: dateandtime.ui:53
-#, fuzzy, kde-format
-#| msgid "&Time server:"
+#, kde-format
 msgid "&Time server:"
 msgstr "&Freastalaí ama:"
 
@@ -61,14 +62,16 @@ msgstr "Crios Ama"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: dateandtime.ui:128
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "To change the local time zone, select your area from the list below."
 msgid "To change the local time zone, select your area from the list below."
 msgstr ""
 "Chun an crios ama logánta a athrú, roghnaigh do cheantar as an liosta thíos."
 
 #. i18n: ectx: property (text), widget (QLabel, m_local)
 #: dateandtime.ui:151
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Current local time zone:"
 msgid "Current local time zone:"
 msgstr "Crios ama reatha:"
 
@@ -116,11 +119,7 @@ msgid "Current local time zone: %1 (%2)"
 msgstr "Crios ama reatha: %1 (%2)"
 
 #: dtime.cpp:203
-#, fuzzy, kde-format
-#| msgid ""
-#| "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        "
-#| "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
-#| "pool.ntp.org"
+#, kde-format
 msgid ""
 "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
 "pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
@@ -167,47 +166,62 @@ msgstr ""
 "téigh i dteagmháil le riarthóir do chórais."
 
 #: main.cpp:49
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "KDE Clock Control Module"
 msgid "KDE Clock Control Module"
 msgstr "Modúl Rialaithe Cloig KDE"
 
 #: main.cpp:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "(c) 1996 - 2001 Luca Montecchiani"
 msgid "(c) 1996 - 2001 Luca Montecchiani"
 msgstr "© 1996 - 2001 Luca Montecchiani"
 
 #: main.cpp:55
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Luca Montecchiani"
 msgid "Luca Montecchiani"
 msgstr "Luca Montecchiani"
 
 #: main.cpp:55
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Original author"
 msgid "Original author"
 msgstr "An chéad údar"
 
 #: main.cpp:56
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Paul Campbell"
 msgid "Paul Campbell"
 msgstr "Paul Campbell"
 
 #: main.cpp:56
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Current Maintainer"
 msgid "Current Maintainer"
 msgstr "Cothaitheoir Reatha"
 
 #: main.cpp:57
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Benjamin Meyer"
 msgid "Benjamin Meyer"
 msgstr "Benjamin Meyer"
 
 #: main.cpp:57
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Added NTP support"
 msgid "Added NTP support"
 msgstr "Chuir sé tacaíocht NTP leis"
 
 #: main.cpp:60
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Date & Time</h1> This control module can be used to set the system "
+#| "date and time. As these settings do not only affect you as a user, but "
+#| "rather the whole system, you can only change these settings when you "
+#| "start the System Settings as root. If you do not have the root password, "
+#| "but feel the system time should be corrected, please contact your system "
+#| "administrator."
 msgid ""
 "<h1>Date & Time</h1> This control module can be used to set the system date "
 "and time. As these settings do not only affect you as a user, but rather the "
@@ -228,20 +242,17 @@ msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr "Ní féidir fíordheimhniú/gníomh a rith: %1, %2"
 
 #: main.cpp:133
-#, fuzzy, kde-format
-#| msgid "Unable to change NTP settings"
+#, kde-format
 msgid "Unable to change NTP settings"
-msgstr "Ní féidir Socruithe NTP a athraigh"
+msgstr "Ní féidir socruithe NTP a athrú"
 
 #: main.cpp:144
-#, fuzzy, kde-format
-#| msgid "Unable to set current time"
+#, kde-format
 msgid "Unable to set current time"
-msgstr "Ní féidir ama reatha a shocrú"
+msgstr "Ní féidir an t-am reatha a shocrú"
 
 #: main.cpp:154
-#, fuzzy, kde-format
-#| msgid "Unable to set timezone"
+#, kde-format
 msgid "Unable to set timezone"
 msgstr "Ní féidir crios ama a shocrú"
 

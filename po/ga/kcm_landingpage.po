@@ -1,40 +1,41 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-01-21 11:04+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
+"Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
+"plasma-translations/kcm_landingpage/ga/>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : (n>2 && n<7) ? 2 :"
+"(n>6 && n<11) ? 3 : 4;\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
 #, kde-format
 msgid "Color scheme name"
-msgstr ""
+msgstr "Ainm na scéime dathanna"
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:15
 #, kde-format
 msgid "Single click to open files"
-msgstr ""
+msgstr "Cliceáil amháin chun comhaid a oscailt"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:19
 #, kde-format
 msgid "Global Look and Feel package"
-msgstr ""
+msgstr "Pacáiste Cuma agus Mothú Domhanda"
 
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
@@ -42,13 +43,13 @@ msgstr ""
 #: landingpage_kdeglobalssettings.kcfg:27
 #, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr ""
+msgstr "Pacáiste Cuma agus Mothú Domhanda, malartach"
 
 #. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:31
 #, kde-format
 msgid "Animation speed"
-msgstr ""
+msgstr "Luas beochana"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -64,13 +65,13 @@ msgstr ""
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
-msgstr ""
+msgstr "Mall"
 
 #: package/contents/ui/main.qml:102
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
-msgstr ""
+msgstr "Meandarach"
 
 #: package/contents/ui/main.qml:116
 #, kde-format
@@ -87,13 +88,13 @@ msgstr ""
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
-msgstr ""
+msgstr "Cliceáil ar chomhaid nó ar fhillteáin:"
 
 #: package/contents/ui/main.qml:139
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
-msgstr ""
+msgstr "Osclaíonn siad iad"
 
 #: package/contents/ui/main.qml:144
 #, kde-format
@@ -104,7 +105,7 @@ msgstr ""
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
-msgstr ""
+msgstr "Roghnaíonn siad iad"
 
 #: package/contents/ui/main.qml:170
 #, kde-format
