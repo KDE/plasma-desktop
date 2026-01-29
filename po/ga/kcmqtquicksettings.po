@@ -1,32 +1,33 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-01-21 12:09+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
+"Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
+"plasma-translations/kcmqtquicksettings/ga/>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : (n>2 && n<7) ? 2 :"
+"(n>6 && n<11) ? 3 : 4;\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Do ainmneacha"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "aindriu80@yahoo.com"
 
 #. i18n: ectx: property (text), widget (KMessageWidget, kmessagewidget)
 #: kcmqtquicksettingswidget.ui:23
@@ -36,64 +37,67 @@ msgid ""
 "settings can break your desktop. Only adjust these settings if you know what "
 "you are doing."
 msgstr ""
+"Coigeartaíonn na socruithe seo na socruithe QtQuick a úsáideann Plasma. Is "
+"féidir le modhnú na socruithe seo do dheasc a mhilleadh. Ná coigeartaigh na "
+"socruithe seo ach amháin má tá a fhios agat cad atá á dhéanamh agat."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcmqtquicksettingswidget.ui:41
 #, kde-format
 msgid "Rendering Backend:"
-msgstr ""
+msgstr "Cúltaca Rindreála:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
 #: kcmqtquicksettingswidget.ui:49 kcmqtquicksettingswidget.ui:87
 #, kde-format
 msgid "Automatic"
-msgstr ""
+msgstr "Uathoibríoch"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #: kcmqtquicksettingswidget.ui:54
 #, kde-format
 msgid "Open GL"
-msgstr ""
+msgstr "OpenGL"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #: kcmqtquicksettingswidget.ui:59
 #, kde-format
 msgid "Software"
-msgstr ""
+msgstr "Bogearraí"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #: kcmqtquicksettingswidget.ui:64
 #, kde-format
 msgid "Vulkan"
-msgstr ""
+msgstr "Vulkan"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcmqtquicksettingswidget.ui:72
 #, kde-format
 msgid "GL Core Profile:"
-msgstr ""
+msgstr "Próifíl Chroí GL:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcmqtquicksettingswidget.ui:79
 #, kde-format
 msgid "Render Loop:"
-msgstr ""
+msgstr "Lúb Rindreála:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
 #: kcmqtquicksettingswidget.ui:92
 #, kde-format
 msgid "Basic"
-msgstr ""
+msgstr "Bunúsach"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
 #: kcmqtquicksettingswidget.ui:97
 #, kde-format
 msgid "Threaded"
-msgstr ""
+msgstr "Snáithithe"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ForceGlCoreProfile)
 #: kcmqtquicksettingswidget.ui:105
 #, kde-format
 msgid "Force"
-msgstr ""
+msgstr "Fórsa"

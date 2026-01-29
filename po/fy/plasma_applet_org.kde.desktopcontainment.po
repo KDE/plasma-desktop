@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-29 00:45+0000\n"
 "PO-Revision-Date: 2009-06-26 00:57+0200\n"
 "Last-Translator: Rinse de Vries <rinsedevries@kde.nl>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -458,7 +458,7 @@ msgctxt "@title:window"
 msgid "Preview Plugins"
 msgstr "Foarbyld yn"
 
-#: package/contents/ui/FolderView.qml:1237
+#: package/contents/ui/FolderView.qml:1231
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -495,7 +495,7 @@ msgstr "Alles selektearje"
 msgid "&Refresh Desktop"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:505 plugins/folder/foldermodel.cpp:1742
+#: plugins/folder/foldermodel.cpp:505 plugins/folder/foldermodel.cpp:1741
 #, kde-format
 msgid "&Refresh View"
 msgstr ""
@@ -516,24 +516,24 @@ msgid ""
 "not be found. It may have been moved or deleted."
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1751
+#: plugins/folder/foldermodel.cpp:1750
 #, fuzzy, kde-format
 #| msgid "&Empty Trash Bin"
 msgid "&Empty Trash"
 msgstr "&leegje jiskefet"
 
-#: plugins/folder/foldermodel.cpp:1754
+#: plugins/folder/foldermodel.cpp:1753
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1757
+#: plugins/folder/foldermodel.cpp:1756
 #, kde-format
 msgid "&Open"
 msgstr "&Iepenje"
 
-#: plugins/folder/foldermodel.cpp:1761
+#: plugins/folder/foldermodel.cpp:1760
 #, fuzzy, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -541,23 +541,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Posysje beskoattelje"
 
-#: plugins/folder/foldermodel.cpp:1862
+#: plugins/folder/foldermodel.cpp:1861
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1865
+#: plugins/folder/foldermodel.cpp:1864
 #, fuzzy, kde-format
 msgid "&Move to Trash"
 msgstr "&Nei it jiskefet"
 
-#: plugins/folder/foldermodel.cpp:1898
+#: plugins/folder/foldermodel.cpp:1897
 #, fuzzy, kde-format
 msgid "&Paste"
 msgstr "P&lakken"
 
-#: plugins/folder/foldermodel.cpp:2049
+#: plugins/folder/foldermodel.cpp:2048
 #, kde-format
 msgid "&Properties"
 msgstr "Eigenski&ppen"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-29 00:45+0000\n"
 "PO-Revision-Date: 2025-08-02 09:32+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -492,7 +492,7 @@ msgctxt "@title:window"
 msgid "Preview Plugins"
 msgstr "Insticksprogram för förhandsgranskning"
 
-#: package/contents/ui/FolderView.qml:1237
+#: package/contents/ui/FolderView.qml:1231
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -532,7 +532,7 @@ msgstr "Markera katalog"
 msgid "&Refresh Desktop"
 msgstr "Uppdate&ra skrivbord"
 
-#: plugins/folder/foldermodel.cpp:505 plugins/folder/foldermodel.cpp:1742
+#: plugins/folder/foldermodel.cpp:505 plugins/folder/foldermodel.cpp:1741
 #, kde-format
 msgid "&Refresh View"
 msgstr "Uppdate&ra vy"
@@ -555,23 +555,23 @@ msgstr ""
 "<filename>%1</filename> pekar på <filename>%2</filename>, men det kunde inte "
 "hittas. Det kan ha flyttats eller tagits bort."
 
-#: plugins/folder/foldermodel.cpp:1751
+#: plugins/folder/foldermodel.cpp:1750
 #, kde-format
 msgid "&Empty Trash"
 msgstr "Töm papp&erskorg"
 
-#: plugins/folder/foldermodel.cpp:1754
+#: plugins/folder/foldermodel.cpp:1753
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "Återställ till tidigare plats"
 
-#: plugins/folder/foldermodel.cpp:1757
+#: plugins/folder/foldermodel.cpp:1756
 #, kde-format
 msgid "&Open"
 msgstr "Ö&ppna"
 
-#: plugins/folder/foldermodel.cpp:1761
+#: plugins/folder/foldermodel.cpp:1760
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -579,23 +579,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Visa mål"
 
-#: plugins/folder/foldermodel.cpp:1862
+#: plugins/folder/foldermodel.cpp:1861
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "Ta bort papperskorgsikon"
 
-#: plugins/folder/foldermodel.cpp:1865
+#: plugins/folder/foldermodel.cpp:1864
 #, kde-format
 msgid "&Move to Trash"
 msgstr "&Flytta till papperskorg"
 
-#: plugins/folder/foldermodel.cpp:1898
+#: plugins/folder/foldermodel.cpp:1897
 #, kde-format
 msgid "&Paste"
 msgstr "K&listra in"
 
-#: plugins/folder/foldermodel.cpp:2049
+#: plugins/folder/foldermodel.cpp:2048
 #, kde-format
 msgid "&Properties"
 msgstr "E&genskaper"

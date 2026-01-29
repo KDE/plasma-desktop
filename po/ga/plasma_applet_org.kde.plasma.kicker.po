@@ -2,212 +2,207 @@
 # Copyright (C) 2012 This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma_applet_org.kde.homerun package.
 # Kevin Scannell <kscanne@gmail.com>, 2012.
+# Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.homerun\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-28 00:46+0000\n"
-"PO-Revision-Date: 2012-09-21 16:01-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"POT-Creation-Date: 2026-01-29 00:45+0000\n"
+"PO-Revision-Date: 2026-01-21 11:04+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
+"Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
+"plasma-translations/plasma_applet_org-kde-plasma-kicker/ga/>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"3 : 4;\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: code/tools.js:53
 #, kde-format
 msgid "Remove from Favorites"
-msgstr ""
+msgstr "Bain de na Ceanáin"
 
 #: code/tools.js:57
 #, kde-format
 msgid "Add to Favorites"
-msgstr ""
+msgstr "Cuir le Ceanáin"
 
 #: code/tools.js:83
 #, kde-format
 msgid "On All Activities"
-msgstr ""
+msgstr "Ar Gach Gníomhaíocht"
 
 #: code/tools.js:133
 #, kde-format
 msgid "On the Current Activity"
-msgstr ""
+msgstr "Ar an nGníomhaíocht Reatha"
 
 #: code/tools.js:147
-#, fuzzy, kde-format
-#| msgid "Favorite Places"
+#, kde-format
 msgid "Show in Favorites"
-msgstr "Áiteanna Is Ansa Liom"
+msgstr "Taispeáin i gCeanáin"
 
 #: config.qml:13
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
-msgstr ""
+msgstr "Ginearálta"
 
 #: ConfigGeneral.qml:48
 #, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
-msgstr ""
+msgstr "Deilbhín:"
 
 #: ConfigGeneral.qml:133
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
-msgstr ""
+msgstr "Roghnaigh…"
 
 #: ConfigGeneral.qml:138
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
-msgstr ""
+msgstr "Deilbhín Glan"
 
 #: ConfigGeneral.qml:159
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
-msgstr "Feidhmchláir"
+msgstr "Taispeáin feidhmchláir mar:"
 
 #: ConfigGeneral.qml:161
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
-msgstr ""
+msgstr "Ainm amháin"
 
 #: ConfigGeneral.qml:161
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
-msgstr ""
+msgstr "Cur síos amháin"
 
 #: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
-msgstr ""
+msgstr "Ainm (Cur Síos)"
 
 #: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
-msgstr ""
+msgstr "Cur Síos (Ainm)"
 
 #: ConfigGeneral.qml:172
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
-msgstr ""
+msgstr "Iompar:"
 
 #: ConfigGeneral.qml:174
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
-msgstr "Feidhmchláir"
+msgstr "Sórtáil iarratais in ord aibítre"
 
 #: ConfigGeneral.qml:182
 #, kde-format
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
-msgstr ""
+msgstr "Fo-roghchláir a leacú go leibhéal amháin"
 
 #: ConfigGeneral.qml:190
 #, kde-format
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
-msgstr ""
+msgstr "Taispeáin deilbhíní ar fhréamhleibhéal an roghchláir"
 
 #: ConfigGeneral.qml:200
-#, fuzzy, kde-format
-#| msgid "Favorite Places"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
-msgstr "Áiteanna Is Ansa Liom"
+msgstr "Taispeáin catagóirí:"
 
 #: ConfigGeneral.qml:203
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent applications"
-msgstr "Feidhmchláir"
+msgstr "Iarratais le déanaí"
 
 #: ConfigGeneral.qml:204
-#, fuzzy, kde-format
-#| msgid "Installed Applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used applications"
-msgstr "Feidhmchláir Shuiteáilte"
+msgstr "Feidhmchláir a úsáidtear go minic"
 
 #: ConfigGeneral.qml:211
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent files"
-msgstr ""
+msgstr "Comhaid le déanaí"
 
 #: ConfigGeneral.qml:212
-#, fuzzy, kde-format
-#| msgid "Installed Applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used files"
-msgstr "Feidhmchláir Shuiteáilte"
+msgstr "Comhaid a úsáidtear go minic"
 
 #: ConfigGeneral.qml:218
-#, fuzzy, kde-format
-#| msgid "Favorite Places"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
-msgstr "Áiteanna Is Ansa Liom"
+msgstr "Sórtáil míreanna i gcatagóirí de réir:"
 
 #: ConfigGeneral.qml:219
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
-msgstr ""
+msgstr "Úsáidte le déanaí"
 
 #: ConfigGeneral.qml:219
-#, fuzzy, kde-format
-#| msgid "Installed Applications"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Often used"
-msgstr "Feidhmchláir Shuiteáilte"
+msgstr "Úsáidtear go minic"
 
 #: ConfigGeneral.qml:229
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
-msgstr ""
+msgstr "Cuardaigh:"
 
 #: ConfigGeneral.qml:231
 #, kde-format
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr ""
+"Leathnaigh an cuardach chuig leabharmharcanna, comhaid agus ríomhphoist"
 
 #: ConfigGeneral.qml:239
 #, kde-format
 msgctxt "@option:check"
 msgid "Align search results to bottom"
-msgstr ""
+msgstr "Ailínigh torthaí cuardaigh go bun"
 
 #: ConfigGeneral.qml:244
 #, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
-msgstr ""
+msgstr "Dealramh:"
 
 #: ConfigGeneral.qml:249
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
-msgstr ""
+msgstr "Is fearr Mód Dorcha nuair atá sé ar fáil"
 
 #: ConfigGeneral.qml:253
 #, kde-kuit-format
@@ -216,45 +211,44 @@ msgid ""
 "This feature uses the complementary colors from your colorscheme, which "
 "usually feature a dark background."
 msgstr ""
+"Úsáideann an ghné seo na dathanna comhlántacha ó do scéim dathanna, a mbíonn "
+"cúlra dorcha iontu de ghnáth."
 
-#: DashboardRepresentation.qml:358
-#, fuzzy, kde-format
-#| msgid "Favorite Places"
+#: DashboardRepresentation.qml:359
+#, kde-format
 msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
-msgstr "Áiteanna Is Ansa Liom"
+msgstr "Ceanáin"
 
 #: ItemListDelegate.qml:31
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
-msgstr ""
+msgstr "Oscail an chatagóir"
 
 #: ItemListDelegate.qml:32
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
-msgstr ""
+msgstr "Seoladh"
 
 #: main.qml:211
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
-msgstr "Feidhmchláir"
+msgstr "Cuir Feidhmchláir in Eagar…"
 
 #: MenuRepresentation.qml:170
-#, fuzzy, kde-format
-#| msgid "Favorite Places"
+#, kde-format
 msgctxt "@title:group accessible name for favorite group in sidebar"
 msgid "Favorites"
-msgstr "Áiteanna Is Ansa Liom"
+msgstr "Ceanáin"
 
 #: MenuRepresentation.qml:348
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr ""
+msgstr "Gan aon mheaitseálacha"
 
 #, fuzzy
 #~| msgid "Applications"

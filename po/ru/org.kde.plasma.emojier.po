@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-28 00:46+0000\n"
-"PO-Revision-Date: 2026-01-27 20:04+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2026-01-28 16:35+0200\n"
+"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -140,7 +140,7 @@ msgstr "Тёмный"
 #, kde-format
 msgctxt "@title:window A two-tone skin variant can be selected here"
 msgid "Select Variant"
-msgstr ""
+msgstr "Выбор варианта"
 
 #: app/ui/CategoryPage.qml:295
 #, kde-format
@@ -155,9 +155,7 @@ msgid "Copy Description"
 msgstr "Копировать описание"
 
 #: app/ui/CategoryPage.qml:344
-#, fuzzy, kde-format
-#| msgctxt "@label placeholder for empty recent emoji list"
-#| msgid "No recent Emojis"
+#, kde-format
 msgctxt "@label placeholder for empty recent emoji list"
 msgid "No recent emojis"
 msgstr "Нет недавних эмодзи"
@@ -174,7 +172,7 @@ msgctxt ""
 "@action:button Opens a window where a two-tone skin variant can be selected. "
 "%1 is the emoji's name"
 msgid "Select Variant of \"%1\""
-msgstr ""
+msgstr "Выбрать «%1»"
 
 #: app/ui/Emojier.qml:44
 #, kde-format

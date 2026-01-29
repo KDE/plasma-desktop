@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-29 00:45+0000\n"
 "PO-Revision-Date: 2025-10-09 01:18+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -493,7 +493,7 @@ msgctxt "@title:window"
 msgid "Preview Plugins"
 msgstr "미리 보기 플러그인"
 
-#: package/contents/ui/FolderView.qml:1237
+#: package/contents/ui/FolderView.qml:1231
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -533,7 +533,7 @@ msgstr "폴더 선택"
 msgid "&Refresh Desktop"
 msgstr "바탕 화면 새로 고침(&R)"
 
-#: plugins/folder/foldermodel.cpp:505 plugins/folder/foldermodel.cpp:1742
+#: plugins/folder/foldermodel.cpp:505 plugins/folder/foldermodel.cpp:1741
 #, kde-format
 msgid "&Refresh View"
 msgstr "보기 새로 고침(&R)"
@@ -556,23 +556,23 @@ msgstr ""
 "<filename>%1</filename>이(가) <filename>%2</filename>을(를) 가리키지만 대상"
 "을 찾을 수 없습니다. 이동이나 삭제되었을 수도 있습니다."
 
-#: plugins/folder/foldermodel.cpp:1751
+#: plugins/folder/foldermodel.cpp:1750
 #, kde-format
 msgid "&Empty Trash"
 msgstr "휴지통 비우기(&E)"
 
-#: plugins/folder/foldermodel.cpp:1754
+#: plugins/folder/foldermodel.cpp:1753
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "이전 위치로 복원"
 
-#: plugins/folder/foldermodel.cpp:1757
+#: plugins/folder/foldermodel.cpp:1756
 #, kde-format
 msgid "&Open"
 msgstr "열기(&O)"
 
-#: plugins/folder/foldermodel.cpp:1761
+#: plugins/folder/foldermodel.cpp:1760
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -580,23 +580,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "대상 표시"
 
-#: plugins/folder/foldermodel.cpp:1862
+#: plugins/folder/foldermodel.cpp:1861
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "휴지통 아이콘 삭제"
 
-#: plugins/folder/foldermodel.cpp:1865
+#: plugins/folder/foldermodel.cpp:1864
 #, kde-format
 msgid "&Move to Trash"
 msgstr "휴지통으로 이동(&M)"
 
-#: plugins/folder/foldermodel.cpp:1898
+#: plugins/folder/foldermodel.cpp:1897
 #, kde-format
 msgid "&Paste"
 msgstr "붙여넣기(&P)"
 
-#: plugins/folder/foldermodel.cpp:2049
+#: plugins/folder/foldermodel.cpp:2048
 #, kde-format
 msgid "&Properties"
 msgstr "속성(&P)"

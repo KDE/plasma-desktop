@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-28 00:46+0000\n"
-"PO-Revision-Date: 2026-01-15 00:57+0900\n"
+"PO-Revision-Date: 2026-01-28 20:02+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -143,7 +143,7 @@ msgstr "深色"
 #, kde-format
 msgctxt "@title:window A two-tone skin variant can be selected here"
 msgid "Select Variant"
-msgstr ""
+msgstr "選取變化型"
 
 #: app/ui/CategoryPage.qml:295
 #, kde-format
@@ -158,9 +158,7 @@ msgid "Copy Description"
 msgstr "複製描述"
 
 #: app/ui/CategoryPage.qml:344
-#, fuzzy, kde-format
-#| msgctxt "@label placeholder for empty recent emoji list"
-#| msgid "No recent Emojis"
+#, kde-format
 msgctxt "@label placeholder for empty recent emoji list"
 msgid "No recent emojis"
 msgstr "沒有最近使用的表情符號"
@@ -177,7 +175,7 @@ msgctxt ""
 "@action:button Opens a window where a two-tone skin variant can be selected. "
 "%1 is the emoji's name"
 msgid "Select Variant of \"%1\""
-msgstr ""
+msgstr "選取「%1」的變化型"
 
 #: app/ui/Emojier.qml:44
 #, kde-format

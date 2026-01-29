@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: org.kde.plasma.emojier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-28 00:46+0000\n"
-"PO-Revision-Date: 2026-01-14 12:09+0100\n"
+"PO-Revision-Date: 2026-01-28 21:14+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: app/emojier.cpp:43 app/emojier.cpp:45
 #, kde-format
@@ -140,7 +140,7 @@ msgstr "Oscuro"
 #, kde-format
 msgctxt "@title:window A two-tone skin variant can be selected here"
 msgid "Select Variant"
-msgstr ""
+msgstr "Seleccionar variante"
 
 #: app/ui/CategoryPage.qml:295
 #, kde-format
@@ -155,9 +155,7 @@ msgid "Copy Description"
 msgstr "Copiar descripción"
 
 #: app/ui/CategoryPage.qml:344
-#, fuzzy, kde-format
-#| msgctxt "@label placeholder for empty recent emoji list"
-#| msgid "No recent Emojis"
+#, kde-format
 msgctxt "@label placeholder for empty recent emoji list"
 msgid "No recent emojis"
 msgstr "No hay emojis recientes"
@@ -174,7 +172,7 @@ msgctxt ""
 "@action:button Opens a window where a two-tone skin variant can be selected. "
 "%1 is the emoji's name"
 msgid "Select Variant of \"%1\""
-msgstr ""
+msgstr "Seleccionar variante de «%1»"
 
 #: app/ui/Emojier.qml:44
 #, kde-format

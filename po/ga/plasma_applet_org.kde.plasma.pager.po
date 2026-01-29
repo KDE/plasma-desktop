@@ -2,93 +2,92 @@
 # Copyright (C) 2009 This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma_applet_pager package.
 # Kevin Scannell <kscanne@gmail.com>, 2009.
+# Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/plasma_applet_pager.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2007-10-07 08:39-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2026-01-21 11:04+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
+"Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
+"plasma-translations/plasma_applet_org-kde-plasma-pager/ga/>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"3 : 4;\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: qml/config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Ginearálta"
 
 #: qml/configGeneral.qml:39
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
-msgstr "Ginearálta"
+msgstr "Ginearálta:"
 
 #: qml/configGeneral.qml:41
 #, kde-format
 msgctxt "@option:check"
 msgid "Show window outlines"
-msgstr ""
+msgstr "Taispeáin imlínte na fuinneoige"
 
 #: qml/configGeneral.qml:46
 #, kde-format
 msgctxt "@option:check"
 msgid "Show application icons on window outlines"
-msgstr ""
+msgstr "Taispeáin deilbhíní feidhmchláir ar imlínte na fuinneoige"
 
 #: qml/configGeneral.qml:52
 #, kde-format
 msgctxt "@option:check"
 msgid "Show only current screen"
-msgstr ""
+msgstr "Taispeáin an scáileán reatha amháin"
 
 #: qml/configGeneral.qml:57
 #, kde-format
 msgctxt "@option:check"
 msgid "Navigation wraps around"
-msgstr ""
+msgstr "Fillteann an loingseoireacht timpeall"
 
 #: qml/configGeneral.qml:69
 #, kde-format
 msgctxt "@title:listbox"
 msgid "Layout:"
-msgstr ""
+msgstr "Leagan Amach:"
 
 #: qml/configGeneral.qml:71
 #, kde-format
 msgctxt "@item:inlistbox The pager layout"
 msgid "Default"
-msgstr ""
+msgstr "Réamhshocrú"
 
 #: qml/configGeneral.qml:71
 #, kde-format
 msgctxt "@item:inlistbox The pager layout"
 msgid "Horizontal"
-msgstr ""
+msgstr "Cothrománach"
 
 #: qml/configGeneral.qml:71
 #, kde-format
 msgctxt "@item:inlistbox The pager layout"
 msgid "Vertical"
-msgstr ""
+msgstr "Ingearach"
 
 #: qml/configGeneral.qml:85
-#, fuzzy, kde-format
-#| msgid "Display text:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Text display:"
-msgstr "Téacs taispeána:"
+msgstr "Taispeántas téacs:"
 
 #: qml/configGeneral.qml:88
-#, fuzzy, kde-format
-#| msgid "No text"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "No text"
 msgstr "Gan téacs"
@@ -97,149 +96,132 @@ msgstr "Gan téacs"
 #, kde-format
 msgctxt "@option:radio text display"
 msgid "Activity number"
-msgstr ""
+msgstr "Uimhir na gníomhaíochta"
 
 #: qml/configGeneral.qml:96
-#, fuzzy, kde-format
-#| msgid "Desktop number"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "Desktop number"
-msgstr "Uimhir na deisce"
+msgstr "Uimhir deisce"
 
 #: qml/configGeneral.qml:104
 #, kde-format
 msgctxt "@option:radio text display"
 msgid "Activity name"
-msgstr ""
+msgstr "Ainm na gníomhaíochta"
 
 #: qml/configGeneral.qml:104
-#, fuzzy, kde-format
-#| msgid "Desktop name"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "Desktop name"
-msgstr "Ainm na deisce"
+msgstr "Ainm deisce"
 
 #: qml/configGeneral.qml:119
-#, fuzzy, kde-format
-#| msgid "Selecting current desktop:"
+#, kde-format
 msgctxt ""
 "@label Start of the sentence 'Selecting current activity does nothing/shows "
 "the desktop'"
 msgid "Selecting current Activity:"
-msgstr "Deasc reatha a roghnú:"
+msgstr "Ag roghnú na Gníomhaíochta Reatha:"
 
 #: qml/configGeneral.qml:120
-#, fuzzy, kde-format
-#| msgid "Selecting current desktop:"
+#, kde-format
 msgctxt ""
 "@label Start of the sentence 'Selecting current virtual desktop does nothing/"
 "shows the desktop'"
 msgid "Selecting current virtual desktop:"
-msgstr "Deasc reatha a roghnú:"
+msgstr "Ag roghnú an deasc fhíorúil reatha:"
 
 #: qml/configGeneral.qml:123
-#, fuzzy, kde-format
-#| msgid "Does nothing"
+#, kde-format
 msgctxt ""
 "option:check completes the sentence 'Selecting current activity/virtual "
 "desktop does nothing'"
 msgid "Does nothing"
-msgstr "Ní dhéanann sé faic"
+msgstr "Ní dhéanann sé tada"
 
 #: qml/configGeneral.qml:131
-#, fuzzy, kde-format
-#| msgid "Shows desktop"
+#, kde-format
 msgctxt ""
 "option:check completes the sentence 'Selecting current activity/virtual "
 "desktop shows the desktop'"
 msgid "Shows the desktop"
-msgstr "Taispeáin an deasc"
+msgstr "Taispeánann an deasc"
 
 #: qml/main.qml:87
-#, fuzzy, kde-format
-#| msgid "and 1 other"
-#| msgid_plural "and %1 others"
+#, kde-format
 msgctxt "@info:tooltip overflow label"
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
-msgstr[0] "agus ceann eile"
-msgstr[1] "agus ceann eile"
-msgstr[2] "agus ceann eile"
-msgstr[3] "agus ceann eile"
-msgstr[4] "agus ceann eile"
+msgstr[0] "…agus %1 fuinneog eile"
+msgstr[1] "…agus %1 fuinneoga eile"
+msgstr[2] "…agus %1 fuinneoga eile"
+msgstr[3] "…agus %1 fuinneoga eile"
+msgstr[4] "…agus %1 fuinneoga eile"
 
 #: qml/main.qml:351
-#, fuzzy, kde-format
-#| msgid "One window:"
-#| msgid_plural "%1 windows:"
+#, kde-format
 msgctxt "@info:tooltip start of list"
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
-msgstr[0] "Fuinneog amháin:"
-msgstr[1] "Fuinneog amháin:"
-msgstr[2] "Fuinneog amháin:"
-msgstr[3] "Fuinneog amháin:"
-msgstr[4] "Fuinneog amháin:"
+msgstr[0] "%1 Fuinneog:"
+msgstr[1] "%1 Fuinneoga:"
+msgstr[2] "%1 Fuinneoga:"
+msgstr[3] "%1 Fuinneoga:"
+msgstr[4] "%1 Fuinneoga:"
 
 #: qml/main.qml:363
-#, fuzzy, kde-format
-#| msgid "One window:"
-#| msgid_plural "%1 windows:"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
-msgstr[0] "Fuinneog amháin:"
-msgstr[1] "Fuinneog amháin:"
-msgstr[2] "Fuinneog amháin:"
-msgstr[3] "Fuinneog amháin:"
-msgstr[4] "Fuinneog amháin:"
+msgstr[0] "%1 Fuinneog Íoslaghdaithe:"
+msgstr[1] "%1 Fuinneoga Íoslaghdaithe:"
+msgstr[2] "%1 Fuinneoga Íoslaghdaithe:"
+msgstr[3] "%1 Fuinneoga Íoslaghdaithe:"
+msgstr[4] "%1 Fuinneoga Íoslaghdaithe:"
 
 #: qml/main.qml:439
-#, fuzzy, kde-format
-#| msgid "Desktop name"
+#, kde-format
 msgctxt "@info:whatsthis Accessible name for pager section"
 msgid "Desktop %1"
-msgstr "Ainm na deisce"
+msgstr "Deasc %1"
 
 #: qml/main.qml:440
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
-msgstr ""
+msgstr "Athraigh go %1"
 
 #: qml/main.qml:592
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
-msgstr ""
+msgstr "Taispeáin Bainisteoir Gníomhaíochta"
 
 #: qml/main.qml:598
-#, fuzzy, kde-format
-#| msgid "&Add Virtual Desktop"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
-msgstr "&Cuir Deasc Fhíorúil Leis"
+msgstr "Cuir Deasc Fíorúil leis"
 
 #: qml/main.qml:604
-#, fuzzy, kde-format
-#| msgid "&Remove Last Virtual Desktop"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
-msgstr "&Bain an Deasc Dheiridh Fhíorúil"
+msgstr "Bain Deasc Fíorúil"
 
 #: qml/main.qml:611
-#, fuzzy, kde-format
-#| msgid "Configure Desktops..."
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
-msgstr "Cumraigh Deasca..."
+msgstr "&Cumraigh Gníomhaíochtaí…"
 
 #: qml/main.qml:616
-#, fuzzy, kde-format
-#| msgid "Configure Desktops..."
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Configure Virtual Desktops…"
-msgstr "Cumraigh Deasca..."
+msgstr "Cumraigh Deasca Fíorúla…"
 
 #~ msgid "Shows the dashboard"
 #~ msgstr "Taispeáin painéal na n-ionstraimí"

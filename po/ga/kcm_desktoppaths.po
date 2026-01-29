@@ -2,156 +2,141 @@
 # Copyright (C) 2002 Free Software Foundation, Inc.
 # Séamus Ó Ciardhuáin <seoc@cnds.ucd.ie>, 2002
 # Kevin Scannell <kscanne@gmail.com>, 2009
+# Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2004-12-03 14:52-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2026-01-20 12:01+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
+"Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
+"plasma-translations/kcm_desktoppaths/ga/>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"3 : 4;\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Desktop Menu"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
-msgstr "Roghchlár na Deisce"
+msgstr "Fillteán deisce:"
 
 #: ui/main.qml:58
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
-msgstr ""
+msgstr "Tá na comhaid go léir a fheiceann tú ar do dheasc sa fhillteán seo."
 
 #: ui/main.qml:66
-#, fuzzy, kde-format
-#| msgid "Documents"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Documents folder:"
-msgstr "Cáipéisí"
+msgstr "Fillteán na ndoiciméad:"
 
 #: ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save documents from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
 msgstr ""
-"Luchtófar cáipéisí ón fhillteán seo agus sábhálfar iad ann de réir "
-"réamhshocraithe."
+"Úsáidfear an fillteán seo de réir réamhshocraithe chun doiciméid a oscailt "
+"nó a shábháil."
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgid "Downloads"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
-msgstr "Íosluchtuithe"
+msgstr "Fillteán íoslódálacha:"
 
 #: ui/main.qml:86
-#, fuzzy, kde-format
-#| msgid "This folder will be used by default to save your downloaded items."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
-"Sábhálfar do chuid íosluchtuithe san fhillteán seo de réir réamhshocraithe."
+"Úsáidfear an fillteán seo de réir réamhshocraithe chun do mhíreanna "
+"íoslódáilte a shábháil."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "Movies path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Videos folder:"
-msgstr "Conair na scannán:"
+msgstr "Fillteán físeáin:"
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
 msgstr ""
-"Luchtófar scannáin ón fhillteán seo agus sábhálfar iad ann de réir "
-"réamhshocraithe."
+"Úsáidfear an fillteán seo de réir réamhshocraithe chun comhaid físe a "
+"oscailt nó a shábháil."
 
 #: ui/main.qml:108
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
-msgstr "Conair na bpictiúr:"
+msgstr "Fillteán pictiúr:"
 
 #: ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
 msgstr ""
-"Luchtófar scannáin ón fhillteán seo agus sábhálfar iad ann de réir "
-"réamhshocraithe."
+"Úsáidfear an fillteán seo de réir réamhshocraithe chun comhaid íomhá a "
+"oscailt nó a shábháil."
 
 #: ui/main.qml:122
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
-msgstr ""
+msgstr "Fillteán ceoil:"
 
 #: ui/main.qml:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save music from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
 msgstr ""
-"Luchtófar ceol ón fhillteán seo agus sábhálfar é ann de réir réamhshocraithe."
+"Úsáidfear an fillteán seo de réir réamhshocraithe chun comhaid cheoil a "
+"oscailt nó a shábháil."
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Music path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Public folder:"
-msgstr "Conair cheoil:"
+msgstr "Fillteán poiblí:"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
 msgstr ""
-"Luchtófar pictiúir ón fhillteán seo agus sábhálfar iad ann de réir "
-"réamhshocraithe."
+"Úsáidfear an fillteán seo de réir réamhshocraithe le haghaidh comhad a "
+"roinntear go poiblí nuair a bheidh comhroinnt líonra cumasaithe."
 
 #: ui/main.qml:150
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Templates folder:"
-msgstr "Conair na bpictiúr:"
+msgstr "Fillteán teimpléid:"
 
 #: ui/main.qml:156
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
 msgstr ""
-"Luchtófar pictiúir ón fhillteán seo agus sábhálfar iad ann de réir "
-"réamhshocraithe."
+"Úsáidfear an fillteán seo de réir réamhshocraithe chun teimpléid comhad a "
+"oscailt nó a shábháil."
 
 #: ui/UrlRequester.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"
-msgstr ""
+msgstr "Roghnaigh suíomh nua"
 
 #~ msgid "Desktop path:"
 #~ msgstr "Conair na deisce:"

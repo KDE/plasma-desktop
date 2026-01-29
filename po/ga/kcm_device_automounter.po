@@ -2,30 +2,33 @@
 # Copyright (C) 2009 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kcm_device_automounter package.
 # Kevin Scannell <kscanne@gmail.com>, 2009.
+# Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-23 00:45+0000\n"
-"PO-Revision-Date: 2009-12-24 06:59-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2026-01-21 12:09+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
+"Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
+"plasma-translations/kcm_device_automounter/ga/>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"3 : 4;\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Kevin Scannell"
+msgstr "Séamus Ó Ciardhuáin,Kevin Scannell,Aindriú Mac Giolla Eoin"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kscanne@gmail.com"
+msgstr "seoc@iolfree.ie,kscanne@gmail.com,aindriu80@yahoo.com"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
@@ -78,15 +81,7 @@ msgstr "Déan Dearmad ar Ghléas"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:67
-#, fuzzy, kde-format
-#| msgid ""
-#| "When this is checked, only remembered devices will be automatically "
-#| "mounted. A device is 'remembered' if it has ever been mounted before. For "
-#| "instance, plugging in a USB media player to charge is not sufficient to "
-#| "'remember' it - if the files are not accessed, it will not be "
-#| "automatically mounted the next time it is seen. Once they have been "
-#| "accessed, however, the device's contents will be automatically made "
-#| "available to the system."
+#, kde-format
 msgid ""
 "When this is not checked, only remembered devices will be automatically "
 "mounted. A device is 'remembered' if it has ever been mounted before. For "
@@ -95,53 +90,48 @@ msgid ""
 "mounted the next time it is seen. Once they have been accessed, however, the "
 "device's contents will be automatically made available to the system."
 msgstr ""
-"Má tá tic leis an rogha seo, ní fheisteofar go huathoibríoch ach na "
-"gléasanna a bhfuil cuimhne aige orthu. Beidh cuimhne aige ar ghléas má bhí "
-"sé feistithe riamh.  Ach, mar shampla, ní mheabhrófar seinnteoir meán USB "
-"atá plugáilte isteach leis an gcadhnra a luchtú - mura ndéantar rochtain ar "
-"na comhaid, ní fheisteofar an seinnteoir go huathoibríoch an chéad uair eile "
-"a bheidh sé plugáilte isteach. Ach chomh luath is a dhéantar rochtain ar na "
-"comhaid, beidh inneachar an ghléis ar fáil don chóras."
+"Nuair nach bhfuil tic sa rogha seo, ní dhéanfar ach gléasanna cuimhne a "
+"fheistiú go huathoibríoch. Cuimhnítear ar ghléas má bhí sé suiteáilte riamh "
+"cheana. Mar shampla, ní leor seinnteoir meán USB a phlugáil isteach chun é a "
+"mhuirearú chun é a 'chuimhneamh' - mura ndéantar rochtain ar na comhaid, ní "
+"dhéanfar é a fheistiú go huathoibríoch an chéad uair eile a fheicfear é. "
+"Nuair a bheidh rochtain orthu, áfach, cuirfear ábhar na gléis ar fáil don "
+"chóras go huathoibríoch."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Only automatically mount removable media that has been manually mounted "
-#| "before"
+#, kde-format
 msgid "Automatically mount removable media that have never been mounted before"
 msgstr ""
-"Ná feistigh go huathoibríoch ach na meáin inbhainte a bhí feistithe de láimh "
-"roimhe seo"
+"Meáin inbhainte nach raibh feistithe riamh cheana a shuiteáil go "
+"huathoibríoch"
 
 #: DeviceModel.cpp:52
-#, fuzzy, kde-format
-#| msgid "Automount on Login"
+#, kde-format
 msgid "Automount Device"
-msgstr "Feistiú uathoibríoch ag am logála isteach"
+msgstr "Gléas Uath-Ghléasta"
 
 #: DeviceModel.cpp:54
 #, kde-format
 msgctxt "As in automount on login"
 msgid "On Login"
-msgstr ""
+msgstr "Ar Logáil Isteach"
 
 #: DeviceModel.cpp:56
 #, kde-format
 msgctxt "As in automount on attach"
 msgid "On Attach"
-msgstr ""
+msgstr "Ar Cheangal"
 
 #: DeviceModel.cpp:258
-#, fuzzy, kde-format
-#| msgid "Device"
+#, kde-format
 msgid "All Devices"
-msgstr "Gléas"
+msgstr "Gach Gléas"
 
 #: DeviceModel.cpp:258
 #, kde-format
 msgid "All Known Devices"
-msgstr ""
+msgstr "Gach Gléas Aitheanta"
 
 #: DeviceModel.cpp:260
 #, kde-format

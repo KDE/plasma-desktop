@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-29 00:45+0000\n"
 "PO-Revision-Date: 2026-01-12 23:36+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -456,7 +456,7 @@ msgctxt "@title:window"
 msgid "Preview Plugins"
 msgstr "Peržiūros įskiepiai"
 
-#: package/contents/ui/FolderView.qml:1237
+#: package/contents/ui/FolderView.qml:1231
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -495,7 +495,7 @@ msgstr "Pasirinkite aplanką"
 msgid "&Refresh Desktop"
 msgstr "Į&kelti darbalaukį iš naujo"
 
-#: plugins/folder/foldermodel.cpp:505 plugins/folder/foldermodel.cpp:1742
+#: plugins/folder/foldermodel.cpp:505 plugins/folder/foldermodel.cpp:1741
 #, kde-format
 msgid "&Refresh View"
 msgstr "Įke&lti rodinį iš naujo"
@@ -518,23 +518,23 @@ msgstr ""
 "<filename>%1</filename> nurodo į <filename>%2</filename>, bet jo nepavyko "
 "surasti. Gali būti, kad jis perkeltas arba ištrintas."
 
-#: plugins/folder/foldermodel.cpp:1751
+#: plugins/folder/foldermodel.cpp:1750
 #, kde-format
 msgid "&Empty Trash"
 msgstr "&Išvalyti šiukšlinę"
 
-#: plugins/folder/foldermodel.cpp:1754
+#: plugins/folder/foldermodel.cpp:1753
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "Atkurti į ankstesnę vietą"
 
-#: plugins/folder/foldermodel.cpp:1757
+#: plugins/folder/foldermodel.cpp:1756
 #, kde-format
 msgid "&Open"
 msgstr "At&verti"
 
-#: plugins/folder/foldermodel.cpp:1761
+#: plugins/folder/foldermodel.cpp:1760
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -542,23 +542,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Rodyti paskirtį"
 
-#: plugins/folder/foldermodel.cpp:1862
+#: plugins/folder/foldermodel.cpp:1861
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "Pašalinti šiukšlinės piktogramą"
 
-#: plugins/folder/foldermodel.cpp:1865
+#: plugins/folder/foldermodel.cpp:1864
 #, kde-format
 msgid "&Move to Trash"
 msgstr "Perkelti į šiu&kšliadėžę"
 
-#: plugins/folder/foldermodel.cpp:1898
+#: plugins/folder/foldermodel.cpp:1897
 #, kde-format
 msgid "&Paste"
 msgstr "Į&dėti"
 
-#: plugins/folder/foldermodel.cpp:2049
+#: plugins/folder/foldermodel.cpp:2048
 #, kde-format
 msgid "&Properties"
 msgstr "&Savybės"

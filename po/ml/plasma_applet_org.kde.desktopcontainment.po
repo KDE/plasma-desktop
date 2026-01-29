@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-29 00:45+0000\n"
 "PO-Revision-Date: 2019-12-29 20:50+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -490,7 +490,7 @@ msgctxt "@title:window"
 msgid "Preview Plugins"
 msgstr "കണ്ടുനോക്കുന്നതു് പ്രാവര്‍ത്തികമാക്കുക"
 
-#: package/contents/ui/FolderView.qml:1237
+#: package/contents/ui/FolderView.qml:1231
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -528,7 +528,7 @@ msgstr "എല്ലാം തെരഞ്ഞെടുക്കുക"
 msgid "&Refresh Desktop"
 msgstr "പണിയിടം പുതുക്കുക (&R)"
 
-#: plugins/folder/foldermodel.cpp:505 plugins/folder/foldermodel.cpp:1742
+#: plugins/folder/foldermodel.cpp:505 plugins/folder/foldermodel.cpp:1741
 #, kde-format
 msgid "&Refresh View"
 msgstr "കാഴ്ച പുതുക്കുക (&R)"
@@ -549,23 +549,23 @@ msgid ""
 "not be found. It may have been moved or deleted."
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1751
+#: plugins/folder/foldermodel.cpp:1750
 #, fuzzy, kde-format
 msgid "&Empty Trash"
 msgstr "ചവറ്റുകുട്ട കാലിയാക്കുക (&E)"
 
-#: plugins/folder/foldermodel.cpp:1754
+#: plugins/folder/foldermodel.cpp:1753
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1757
+#: plugins/folder/foldermodel.cpp:1756
 #, kde-format
 msgid "&Open"
 msgstr "തുറക്കുക (&O)"
 
-#: plugins/folder/foldermodel.cpp:1761
+#: plugins/folder/foldermodel.cpp:1760
 #, fuzzy, kde-format
 #| msgid "Show all"
 msgctxt ""
@@ -574,23 +574,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "എല്ലാം കാണിക്കുക"
 
-#: plugins/folder/foldermodel.cpp:1862
+#: plugins/folder/foldermodel.cpp:1861
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1865
+#: plugins/folder/foldermodel.cpp:1864
 #, kde-format
 msgid "&Move to Trash"
 msgstr "&ചവറ്റുകുട്ടയിലിടുക"
 
-#: plugins/folder/foldermodel.cpp:1898
+#: plugins/folder/foldermodel.cpp:1897
 #, kde-format
 msgid "&Paste"
 msgstr "ഒട്ടിക്കുക (&P)"
 
-#: plugins/folder/foldermodel.cpp:2049
+#: plugins/folder/foldermodel.cpp:2048
 #, kde-format
 msgid "&Properties"
 msgstr "ഗുണഗണങ്ങള്‍ (&P)"

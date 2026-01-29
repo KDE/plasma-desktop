@@ -5,20 +5,20 @@
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2011.
 # Jeff Huang <s8321414@gmail.com>, 2016.
 # pan93412 <pan93412@gmail.com>, 2020.
-# SPDX-FileCopyrightText: 2022, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2022, 2024, 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-23 00:45+0000\n"
-"PO-Revision-Date: 2024-05-09 06:43+0900\n"
+"PO-Revision-Date: 2026-01-28 20:01+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 26.03.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
@@ -33,12 +33,7 @@ msgstr "franklin@goodhorse.idv.tw, s8321414@gmail.com, mail@kisaragi-hiu.com"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "This list contains the storage devices known to the system. If "
-#| "\"Automount on Login\" is checked, the device will be automatically "
-#| "mounted even though \"Mount all removable media at login\" is unchecked. "
-#| "The same applies for \"Automount on Attach\"."
+#, kde-format
 msgid ""
 "This list contains the storage devices known to the system. If \"Automount "
 "on Login\" is checked, devices will be automatically mounted even though "
@@ -46,8 +41,8 @@ msgid ""
 "\"Automount on Attach\"."
 msgstr ""
 "這個清單包含了系統認識的儲存裝置。若是勾選了「登入時自動掛載」，則即使您未勾"
-"選「登入時掛載所有可移除媒體」，它還是會自動掛載。相同的，「連上時自動掛載」"
-"也是一樣的作法。"
+"選「登入時掛載所有可移除媒體」，裝置還是會自動掛載。相同的，「連上時自動掛"
+"載」也是一樣的作法。"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:54

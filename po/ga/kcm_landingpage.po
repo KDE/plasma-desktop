@@ -1,46 +1,47 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-01-21 11:04+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
+"Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
+"plasma-translations/kcm_landingpage/ga/>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : (n>2 && n<7) ? 2 :"
+"(n>6 && n<11) ? 3 : 4;\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
 #, kde-format
 msgid "Color scheme name"
-msgstr ""
+msgstr "Ainm na scéime dathanna"
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:15
 #, kde-format
 msgid "Single click to open files"
-msgstr ""
+msgstr "Cliceáil amháin chun comhaid a oscailt"
 
 #. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:19
 #, kde-format
 msgid "Switch the look and feel package depending on time of day"
-msgstr ""
+msgstr "Athraigh an pacáiste cuma agus mothú ag brath ar an am den lá"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:23
 #, kde-format
 msgid "Global Look and Feel package"
-msgstr ""
+msgstr "Pacáiste Cuma agus Mothú Domhanda"
 
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
@@ -48,37 +49,37 @@ msgstr ""
 #: landingpage_kdeglobalssettings.kcfg:31
 #, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr ""
+msgstr "Pacáiste Cuma agus Mothú Domhanda, malartach"
 
 #. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:35
 #, kde-format
 msgid "Animation speed"
-msgstr ""
+msgstr "Luas beochana"
 
 #: ui/LookAndFeelBox.qml:101
 #, kde-format
 msgctxt "@action:button"
 msgid "Change global theme"
-msgstr ""
+msgstr "Athraigh an téama domhanda"
 
 #: ui/LookAndFeelBox.qml:178
 #, kde-format
 msgctxt "@label accessible"
 msgid "Global theme"
-msgstr ""
+msgstr "Téama domhanda"
 
 #: ui/main.qml:35
 #, kde-format
 msgctxt "@title:group for light/dark quick switch"
 msgid "Theme:"
-msgstr ""
+msgstr "Téama:"
 
 #: ui/main.qml:91
 #, kde-format
 msgctxt "Switch between dark and light look and feel packages automatically"
 msgid "Automatic"
-msgstr ""
+msgstr "Uathoibríoch"
 
 #: ui/main.qml:93
 #, kde-format
@@ -86,71 +87,71 @@ msgctxt ""
 "@info:tooltip 1 is the name of a light global theme, 2 is the name of a dark "
 "global theme"
 msgid "Use “%1” during the day and “%2” at night"
-msgstr ""
+msgstr "Úsáid “%1” i rith an lae agus “%2” san oíche"
 
 #: ui/main.qml:136
 #, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More appearance settings:"
-msgstr ""
+msgstr "Tuilleadh socruithe cuma:"
 
 #: ui/main.qml:183
 #, kde-format
 msgctxt "@title:slider"
 msgid "Animation speed:"
-msgstr ""
+msgstr "Luas beochana:"
 
 #: ui/main.qml:192
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
-msgstr ""
+msgstr "Mall"
 
 #: ui/main.qml:199
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
-msgstr ""
+msgstr "Meandarach"
 
 #: ui/main.qml:213
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
-msgstr ""
+msgstr "Cliceáil ar chomhaid nó ar fhillteáin:"
 
 #: ui/main.qml:221
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
-msgstr ""
+msgstr "Roghnaíonn siad iad"
 
 #: ui/main.qml:226
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
-msgstr ""
+msgstr "Oscail trí chliceáil faoi dhó ina ionad sin"
 
 #: ui/main.qml:254
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
-msgstr ""
+msgstr "Osclaíonn siad iad"
 
 #: ui/main.qml:259
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
-msgstr ""
+msgstr "Roghnaigh trí chliceáil ar mharc roghnúcháin na míre"
 
 #: ui/main.qml:285
 #, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
-msgstr ""
+msgstr "Tuilleadh socruithe iompair:"
 
 #: ui/main.qml:299
 #, kde-format
 msgctxt "@title:group for grid of buttons opening kcms"
 msgid "Most used pages:"
-msgstr ""
+msgstr "Leathanaigh is mó a úsáidtear:"
