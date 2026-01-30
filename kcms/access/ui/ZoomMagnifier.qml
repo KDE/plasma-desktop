@@ -163,6 +163,17 @@ Kirigami.FormLayout {
             }
 
             QQC2.CheckBox {
+                text: i18nc("@option:check", "Enable text/icon sharpening filter")
+                checked: kcm.zoomMagnifierSettings.zoomUsePatternUpscaler
+                onCheckedChanged: kcm.zoomMagnifierSettings.zoomUsePatternUpscaler = checked
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.zoomMagnifierSettings
+                    settingName: "ZoomUsePatternUpscaler"
+                }
+            }
+
+            QQC2.CheckBox {
                 text: i18nc("@option:check", "Enable focus tracking")
                 checked: kcm.zoomMagnifierSettings.zoomEnableFocusTracking
                 onCheckedChanged: kcm.zoomMagnifierSettings.zoomEnableFocusTracking = checked
