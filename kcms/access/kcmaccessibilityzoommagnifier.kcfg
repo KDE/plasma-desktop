@@ -36,6 +36,9 @@
     <entry name="ZoomPointerAxisGestureModifiers" key="PointerAxisGestureModifiers" type="String">
       <default>Meta+Control</default>
     </entry>
+    <entry name="ZoomUsePatternUpscaler" key="UsePatternUpscaler" type="Bool">
+        <default>true</default>
+    </entry>
   </group>
   <group name="Effect-magnifier">
     <entry name="MagnifierWidth" key="Width" type="UInt">
