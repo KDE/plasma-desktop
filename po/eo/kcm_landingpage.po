@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_landingpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-30 00:46+0000\n"
 "PO-Revision-Date: 2024-12-27 10:42+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -56,13 +56,13 @@ msgstr "Pako por ĉiea aspekto kaj sento, alterna"
 msgid "Animation speed"
 msgstr "Animacia rapideco"
 
-#: ui/LookAndFeelBox.qml:101
+#: ui/LookAndFeelBox.qml:99
 #, kde-format
 msgctxt "@action:button"
 msgid "Change global theme"
 msgstr ""
 
-#: ui/LookAndFeelBox.qml:178
+#: ui/LookAndFeelBox.qml:180
 #, kde-format
 msgctxt "@label accessible"
 msgid "Global theme"
@@ -75,13 +75,13 @@ msgctxt "@title:group for light/dark quick switch"
 msgid "Theme:"
 msgstr "Etoso:"
 
-#: ui/main.qml:91
+#: ui/main.qml:94
 #, kde-format
 msgctxt "Switch between dark and light look and feel packages automatically"
 msgid "Automatic"
 msgstr ""
 
-#: ui/main.qml:93
+#: ui/main.qml:120
 #, kde-format
 msgctxt ""
 "@info:tooltip 1 is the name of a light global theme, 2 is the name of a dark "
@@ -89,71 +89,71 @@ msgctxt ""
 msgid "Use “%1” during the day and “%2” at night"
 msgstr ""
 
-#: ui/main.qml:136
+#: ui/main.qml:134
 #, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More appearance settings:"
 msgstr "Pli da aspektaj agordoj…"
 
-#: ui/main.qml:183
+#: ui/main.qml:181
 #, fuzzy, kde-format
 #| msgid "Animation speed:"
 msgctxt "@title:slider"
 msgid "Animation speed:"
 msgstr "Animacia rapideco:"
 
-#: ui/main.qml:192
+#: ui/main.qml:190
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Malrapida"
 
-#: ui/main.qml:199
+#: ui/main.qml:197
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Tuj"
 
-#: ui/main.qml:213
+#: ui/main.qml:211
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Klakante dosierojn aŭ dosierujojn:"
 
-#: ui/main.qml:221
+#: ui/main.qml:219
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Elektas ilin"
 
-#: ui/main.qml:226
+#: ui/main.qml:224
 #, fuzzy, kde-format
 #| msgid "Open by double-clicking instead"
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "Malfermu per duobla klako anstataŭe"
 
-#: ui/main.qml:254
+#: ui/main.qml:252
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Malfermas ilin"
 
-#: ui/main.qml:259
+#: ui/main.qml:257
 #, fuzzy, kde-format
 #| msgid "Select by clicking on item's selection marker"
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
 msgstr "Elektu klakante sur la elekta markilo de ero"
 
-#: ui/main.qml:285
+#: ui/main.qml:283
 #, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
 msgstr "Pliaj kondut-agordoj:"
 
-#: ui/main.qml:299
+#: ui/main.qml:297
 #, fuzzy, kde-format
 #| msgid "Most used pages:"
 msgctxt "@title:group for grid of buttons opening kcms"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-16 00:45+0000\n"
-"PO-Revision-Date: 2026-01-27 16:24+0100\n"
+"PO-Revision-Date: 2026-01-29 11:21+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -151,36 +151,28 @@ msgid "Switch Paired Joy-Con"
 msgstr ""
 
 #: device.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The game controller button with a letter A on it"
 msgid "A button"
-msgstr "Buttones:"
+msgstr "Button A"
 
 #: device.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The game controller button with a letter B on it"
 msgid "B button"
-msgstr "Buttones:"
+msgstr "Button B"
 
 #: device.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The game controller button with a letter X on it"
 msgid "X button"
-msgstr "Buttones:"
+msgstr "Button X"
 
 #: device.cpp:51
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The game controller button with a letter Y on it"
 msgid "Y button"
-msgstr "Buttones:"
+msgstr "Button Y"
 
 #: device.cpp:52
 #, kde-format
@@ -207,13 +199,10 @@ msgid "Left analog stick"
 msgstr ""
 
 #: device.cpp:56
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label Visual representation of the axis position for the right axis"
-#| msgid "Right position:"
+#, kde-format
 msgctxt "The button under the game controller's right analog stick"
 msgid "Right analog stick"
-msgstr "Position dextere:"
+msgstr "Baston analogic dextere"
 
 #: device.cpp:57
 #, kde-format
@@ -313,10 +302,9 @@ msgid "Invalid button value"
 msgstr ""
 
 #: device.cpp:247
-#, fuzzy, kde-format
-#| msgid "No game controllers found"
+#, kde-format
 msgid "Not a controller"
-msgstr "Nulle controlores de joco trovate"
+msgstr "Non un  controlor"
 
 #: devicemodel.cpp:68
 #, kde-format

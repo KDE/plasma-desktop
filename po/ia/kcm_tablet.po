@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2026-01-23 16:36+0100\n"
+"PO-Revision-Date: 2026-01-29 12:09+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -33,7 +33,7 @@ msgstr "Necun"
 #, kde-format
 msgctxt "@action:button Two keybinds for a dial, up & down"
 msgid "%1 && %2"
-msgstr ""
+msgstr "%1 && %2"
 
 #: inputsequence.cpp:216
 #, kde-format
@@ -75,7 +75,7 @@ msgstr "Button de penna %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Scroll wheel"
-msgstr ""
+msgstr "Rola Rota"
 
 #: kcmtablet.cpp:36
 #, kde-format
@@ -151,12 +151,10 @@ msgid "pen button %1"
 msgstr "Button de penna %1"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet button"
-#| msgid "Select Button Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial/Ring Action"
-msgstr "Selige Action de Button"
+msgstr "Selige Action de Quadrante/Anello"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -165,12 +163,10 @@ msgid "Select Button Action"
 msgstr "Selige Action de Button"
 
 #: ui/ActionDialog.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
-#| msgid "Choose what action will be taken when pressing %1:"
+#, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when rotating %1:"
-msgstr "Selige qual action essera prendite quando on pressa %1:"
+msgstr "Selige qual action essera prendite quando on rota %1:"
 
 #: ui/ActionDialog.qml:88
 #, kde-format
@@ -191,12 +187,10 @@ msgid "Send keyboard key"
 msgstr "Invia clave de claviero"
 
 #: ui/ActionDialog.qml:133
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Set this action to a keyboard type"
-#| msgid "Send keyboard key"
+#, kde-format
 msgctxt "@option:radio Set this action to a up/down keyboard type"
 msgid "Send keyboard keys"
-msgstr "Invia clave de claviero"
+msgstr "Invia claves de claviero"
 
 #: ui/ActionDialog.qml:148
 #, kde-format
@@ -214,7 +208,7 @@ msgstr "Invia Button de penna "
 #, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
-msgstr ""
+msgstr "Age como rota de rolar"
 
 #: ui/ActionDialog.qml:199
 #, kde-format
@@ -319,7 +313,7 @@ msgstr "Button 3"
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
-msgstr ""
+msgstr "Age como rota de rolar sur un mus."
 
 #: ui/ActionDialog.qml:375
 #, kde-format
@@ -334,11 +328,7 @@ msgid "Pen Calibration"
 msgstr "Calibration de Penna"
 
 #: ui/Calibration.qml:98
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
@@ -346,7 +336,8 @@ msgid ""
 "b>"
 msgstr ""
 "Tocca le objectivos novemente per confirmar le nove calibration.<nl/><nl/> "
-"<b>Retornera al calibration predefinite in %1 secundas.</b>"
+"<b>Retornera al calibration predefinite in %1 secundas a minuse que ulterior "
+"action es prendite.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -474,6 +465,9 @@ msgid ""
 "driver to configure the tablet instead of using the settings here, unless "
 "specifically instructed otherwise."
 msgstr ""
+"Iste dispositivo es gerite per un driver de spatio de usator que tu "
+"installava. Usa hic ille driver per configurar le tabletta in loco de usar "
+"le preferentias, a minus que alteremente instruite specificatemente."
 
 #: ui/main.qml:106
 #, kde-format
@@ -500,11 +494,10 @@ msgid "Pad"
 msgstr "Reimple (Pad)"
 
 #: ui/MissingPadTab.qml:15
-#, fuzzy, kde-format
-#| msgid "No drawing tablets found"
+#, kde-format
 msgctxt "@info placeholdermessage main text"
 msgid "No pad inputs found"
-msgstr "Necun tabletta de designar trovate"
+msgstr "Necun ingressos de tampon (pad) trovate"
 
 #: ui/MissingPadTab.qml:16
 #, kde-format
@@ -513,29 +506,28 @@ msgid ""
 "No buttons or other inputs were detected. This could mean the driver for "
 "this device is missing."
 msgstr ""
+"Nulle buttones o altere ingressos esseva discoperite. Isto poterea "
+"significar que le driver per iste dispositivo es mancante."
 
 #: ui/PadTab.qml:37
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt "@label for graphics tablet ring config, % is number of ring"
 msgid "Pad ring %1:"
-msgstr "Button de tampon (pad)  %1:"
+msgstr "Anello de tampon (pad)  %1:"
 
 #: ui/PadTab.qml:60
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "ring/dial 0'"
 msgid "pad ring/dial %1"
-msgstr "Button de tampon (pad)  %1:"
+msgstr "Anello/quadrante de tampon (pad)  %1"
 
 #: ui/PadTab.qml:100
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt "@label for graphics tablet ring config, % is number of dial"
 msgid "Pad dial %1:"
-msgstr "Button de tampon (pad)  %1:"
+msgstr "Quadrante de tampon (pad)  %1:"
 
 #: ui/PadTab.qml:102
 #, kde-format
@@ -543,7 +535,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad dial %1"
-msgstr ""
+msgstr "Quadrante (Dial) del tampon (Pad) %1"
 
 #: ui/PadTab.qml:138
 #, kde-format

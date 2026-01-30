@@ -1,20 +1,20 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# g.sora <g.sora@tiscali.it>, 2010, 2011, 2017, 2020, 2021.
+# SPDX-FileCopyrightText: 2010, 2011, 2017, 2020, 2021, 2026 g.sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-23 00:45+0000\n"
-"PO-Revision-Date: 2021-11-04 22:25+0100\n"
+"PO-Revision-Date: 2026-01-29 11:17+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.08.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -29,12 +29,7 @@ msgstr "g.sora@tiscali.it"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "This list contains the storage devices known to the system. If "
-#| "\"Automount on Login\" is checked, the device will be automatically "
-#| "mounted even though \"Mount all removable media at login\" is unchecked. "
-#| "The same applies for \"Automount on Attach\"."
+#, kde-format
 msgid ""
 "This list contains the storage devices known to the system. If \"Automount "
 "on Login\" is checked, devices will be automatically mounted even though "
@@ -42,7 +37,7 @@ msgid ""
 "\"Automount on Attach\"."
 msgstr ""
 "Iste lista contine le dispositivos de immagazinage cognoscite al systema. "
-"Si  \"Monta automaticamente al accesso\" es marcate, le dispositivo essera "
+"Si  \"Monta automaticamente al accesso\" es marcate, le dispositivos essera "
 "montate automaticamente anque si \"Monta omne dispositivo removibile al "
 "accesso\" non es marcate. Le mesme il applica pro \"Monta automaticamente al "
 "attaccar\"."

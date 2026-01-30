@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-30 00:46+0000\n"
 "PO-Revision-Date: 2025-10-02 09:25+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -55,13 +55,13 @@ msgstr "Balíček pro celkový vzhled a chování (alternativní)"
 msgid "Animation speed"
 msgstr "Rychlost animace"
 
-#: ui/LookAndFeelBox.qml:101
+#: ui/LookAndFeelBox.qml:99
 #, kde-format
 msgctxt "@action:button"
 msgid "Change global theme"
 msgstr "Změnit celkový motiv"
 
-#: ui/LookAndFeelBox.qml:178
+#: ui/LookAndFeelBox.qml:180
 #, kde-format
 msgctxt "@label accessible"
 msgid "Global theme"
@@ -73,13 +73,13 @@ msgctxt "@title:group for light/dark quick switch"
 msgid "Theme:"
 msgstr ""
 
-#: ui/main.qml:91
+#: ui/main.qml:94
 #, kde-format
 msgctxt "Switch between dark and light look and feel packages automatically"
 msgid "Automatic"
 msgstr "Automaticky"
 
-#: ui/main.qml:93
+#: ui/main.qml:120
 #, kde-format
 msgctxt ""
 "@info:tooltip 1 is the name of a light global theme, 2 is the name of a dark "
@@ -87,69 +87,69 @@ msgctxt ""
 msgid "Use “%1” during the day and “%2” at night"
 msgstr ""
 
-#: ui/main.qml:136
+#: ui/main.qml:134
 #, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More appearance settings:"
 msgstr "Víc nastavení vzhledu:"
 
-#: ui/main.qml:183
+#: ui/main.qml:181
 #, fuzzy, kde-format
 #| msgid "Animation speed"
 msgctxt "@title:slider"
 msgid "Animation speed:"
 msgstr "Rychlost animace"
 
-#: ui/main.qml:192
+#: ui/main.qml:190
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Pomalu"
 
-#: ui/main.qml:199
+#: ui/main.qml:197
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Okamžitě"
 
-#: ui/main.qml:213
+#: ui/main.qml:211
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Klikání na soubory nebo složky:"
 
-#: ui/main.qml:221
+#: ui/main.qml:219
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Vybere je"
 
-#: ui/main.qml:226
+#: ui/main.qml:224
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr ""
 
-#: ui/main.qml:254
+#: ui/main.qml:252
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Otevře je"
 
-#: ui/main.qml:259
+#: ui/main.qml:257
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
 msgstr ""
 
-#: ui/main.qml:285
+#: ui/main.qml:283
 #, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
 msgstr "Víc nastavení chování:"
 
-#: ui/main.qml:299
+#: ui/main.qml:297
 #, kde-format
 msgctxt "@title:group for grid of buttons opening kcms"
 msgid "Most used pages:"

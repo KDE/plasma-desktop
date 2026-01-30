@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-16 00:45+0000\n"
-"PO-Revision-Date: 2026-01-28 22:41+0000\n"
+"PO-Revision-Date: 2026-01-29 01:02+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -20,47 +20,47 @@ msgstr ""
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
 msgid "KWin"
-msgstr ""
+msgstr "KWin"
 
 #: kcmaccess.cpp:130
 #, kde-format
 msgid "Toggle Invert Effect"
-msgstr ""
+msgstr "Comută efectul de inversare"
 
 #: kcmaccess.cpp:136
 #, kde-format
 msgid "Toggle Invert Effect on Window"
-msgstr ""
+msgstr "Comută efectul de inversare asupra ferestrei"
 
 #: kcmaccess.cpp:178
 #, kde-format
 msgid "Move Left"
-msgstr ""
+msgstr "Mută la stânga"
 
 #: kcmaccess.cpp:185
 #, kde-format
 msgid "Move Right"
-msgstr ""
+msgstr "Mută la dreapta"
 
 #: kcmaccess.cpp:192
 #, kde-format
 msgid "Move Up"
-msgstr ""
+msgstr "Mută în sus"
 
 #: kcmaccess.cpp:199
 #, kde-format
 msgid "Move Down"
-msgstr ""
+msgstr "Mută în jos"
 
 #: kcmaccess.cpp:206
 #, kde-format
 msgid "Move Mouse to Focus"
-msgstr ""
+msgstr "Mută mausul la focalizare"
 
 #: kcmaccess.cpp:213
 #, kde-format
 msgid "Move Mouse to Center"
-msgstr ""
+msgstr "Mută mausul la centru"
 
 #: kcmaccess.cpp:256
 #, kde-format
@@ -140,31 +140,27 @@ msgstr "Inversează culorile sistemului la clopoțel"
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
-#, fuzzy, kde-format
-#| msgid "Color of the Visible Bell"
+#, kde-format
 msgid "Color of the Visual Bell"
-msgstr "Culoarea clopoțelului vizibil"
+msgstr "Culoarea clopoțelului vizual"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Duration of the Visible Bell"
+#, kde-format
 msgid "Duration of the Visual Bell"
-msgstr "Durata clopoțelului vizibil"
+msgstr "Durata clopoțelului vizual"
 
 #. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)
 #: kcmaccessibilitycolorblindnesscorrection.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether Colorblindness Correction is enabled"
-msgstr "Dacă scuturarea cursorului e activă"
+msgstr "Dacă corecția pentru daltonism e activă"
 
 #. i18n: ectx: label, entry (Invert), group (Plugins)
 #: kcmaccessibilityinvert.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Invert effect is enabled"
-msgstr "Dacă scuturarea cursorului e activă"
+msgstr "Dacă efectul de inversare e activ"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -295,10 +291,9 @@ msgstr "Activează cititorul de ecran"
 
 #. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
 #: kcmaccessibilityshakecursor.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether Shake Pointer is enabled"
-msgstr "Dacă scuturarea cursorului e activă"
+msgstr "Dacă scuturarea indicatorului e activă"
 
 #. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
 #: kcmaccessibilityshakecursor.kcfg:15
@@ -308,10 +303,9 @@ msgstr "Mărire"
 
 #. i18n: ectx: label, entry (Zoom), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Zoom effect is enabled"
-msgstr "Dacă scuturarea cursorului e activă"
+msgstr "Dacă efectul de mărire e activ"
 
 #. i18n: ectx: label, entry (Magnifier), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:13
@@ -640,6 +634,9 @@ msgid ""
 "Useful if you accidentally type more than one key at a time or have "
 "difficulty pressing the key you want the first time."
 msgstr ""
+"Pentru ca o tastă să fie acceptată, aceasta trebuie ținută pe durata "
+"stabilită. Util atunci când apăsați accidental mai multe taste odată sau "
+"întâmpinați dificultăți la apăsarea tastei dorite la prima încercare."
 
 #: ui/KeyboardFilters.qml:41
 #, kde-format
@@ -700,6 +697,9 @@ msgid ""
 "tremors that cause you to press a key multiple times when you only intend to "
 "press once."
 msgstr ""
+"Ignoră apăsările rapide și repetate ale aceleiași taste. Util când vă "
+"tremură mâinile și apăsați o tastă de multe ori când ați fi vrut să o "
+"apăsați o singură dată."
 
 #: ui/KeyboardFilters.qml:142
 #, kde-format
@@ -802,6 +802,9 @@ msgid ""
 "though they “stick in place” and no longer need to be held down when typing "
 "a keyboard shortcut."
 msgstr ""
+"Tastele modificatoare ca Ctrl, Shift, Alt și tasta Meta/Super/Windows "
+"acționează de parcă se „lipesc” și nu mai trebuiesc ținute apăsate în timp "
+"ce tastați o scurtătură de taste."
 
 #: ui/ModifierKeys.qml:39
 #, kde-format
@@ -816,6 +819,8 @@ msgid ""
 "Pressing a modifier key twice will keep it in active state until pressed "
 "again."
 msgstr ""
+"Apăsarea unei taste modificatoare de două ori o va ține în starea activă "
+"până e apăsată iar."
 
 #: ui/ModifierKeys.qml:57
 #, kde-format
@@ -860,11 +865,10 @@ msgid "Configure Notifications…"
 msgstr "Configurează notificările…"
 
 #: ui/MouseNavigation.qml:17
-#, fuzzy, kde-format
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move pointer:"
-msgstr "Folosește tastatura numerică pentru a muta cursorul:"
+msgstr "Folosește zona numerică pentru a muta indicatorul:"
 
 #: ui/MouseNavigation.qml:22
 #, kde-format
@@ -884,6 +888,14 @@ msgid ""
 "<shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</shortcut>, and "
 "<shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
+"Tasta <shortcut>5</shortcut> din zona numerică funcționează ca un clic de "
+"șoricel, comutat de <shortcut>/</shortcut> pentru clic mijlociu, "
+"<shortcut>*</shortcut> pentru clic drept și <shortcut>NumLock</shortcut> "
+"pentru clic stâng. Tastele <shortcut>2</shortcut>, <shortcut>4</shortcut>, "
+"<shortcut>6</shortcut> și <shortcut>8</shortcut> permit deplasări cardinale "
+"(jos, stânga, dreapta și sus). Tastele <shortcut>1</shortcut>, <shortcut>3</"
+"shortcut>, <shortcut>7</shortcut> și <shortcut>9</shortcut> permit deplasări "
+"diagonale."
 
 #: ui/MouseNavigation.qml:39
 #, kde-format
@@ -1126,7 +1138,7 @@ msgstr "Activează urmărirea focalizării"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
-msgstr ""
+msgstr "Activează urmărirea cursorului textual"
 
 #: ui/ZoomMagnifier.qml:194
 #, kde-format
@@ -1177,27 +1189,25 @@ msgstr "Factor de apropiere:"
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
-msgstr ""
+msgstr "Taste modificatoare pentru gestul de derulare:"
 
 #: ui/ZoomMagnifier.qml:359
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
-msgstr ""
+msgstr "Gesturile de apropiere la derulare sunt disponibile doar pe Wayland."
 
 #: ui/ZoomMagnifier.qml:365
-#, fuzzy, kde-format
-#| msgid "Ring system bell when modifier keys are used"
+#, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
-msgstr "Sună clopoțelul de sistem la folosirea tastelor modificatoare"
+msgstr "Derulați în timp ce sunt apăsate taste modificatoare pentru a apropia"
 
 #: ui/ZoomMagnifier.qml:386
-#, fuzzy, kde-format
-#| msgid "Use keys to control the mouse"
+#, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
-msgstr "Folosește taste pentru a controla mausul"
+msgstr "Folosiți scurtături pentru a controla apropierea"
 
 #~ msgid "Button search audio file"
 #~ msgstr "Buton, caută fișier audio"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2026-01-27 16:25+0100\n"
+"PO-Revision-Date: 2026-01-29 11:34+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -134,8 +134,7 @@ msgid "Help"
 msgstr "Adjuta"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@title:group list section name"
 msgid "Applications"
 msgstr "Applicationes"
@@ -165,8 +164,7 @@ msgid "Import…"
 msgstr "Importa…"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Import Shortcut Scheme"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Import shortcut scheme"
 msgstr "Importar schema de via breve"
@@ -184,8 +182,7 @@ msgid "Export…"
 msgstr "Exporta…"
 
 #: ui/main.qml:53 ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Export Shortcut Scheme"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Export shortcut scheme"
 msgstr "Exportar schema de via breve"
@@ -276,7 +273,7 @@ msgstr "Necun terminos coincideva con le terminos de cerca"
 #, kde-format
 msgctxt "@info"
 msgid "These shortcuts will be deleted when changes are applied."
-msgstr ""
+msgstr "Iste vias breve essera delite quando le cambiamentos essera applicate."
 
 #: ui/main.qml:362
 #, kde-format
@@ -285,11 +282,10 @@ msgid "Undo"
 msgstr "Annulla"
 
 #: ui/main.qml:363
-#, fuzzy, kde-format
-#| msgid "No default shortcuts"
+#, kde-format
 msgctxt "@action:button"
 msgid "Undo deleting shortcuts"
-msgstr "Nulle vias breve predefinite"
+msgstr "Annulla deler vias breve"
 
 #: ui/main.qml:399
 #, kde-format
@@ -432,19 +428,16 @@ msgid "Import"
 msgstr "Importa"
 
 #: ui/main.qml:590
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible"
-#| msgid "Delete shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
-msgstr "Deler via breve"
+msgstr "Selige file de schema de via breve"
 
 #: ui/main.qml:591
-#, fuzzy, kde-format
-#| msgid "Export Shortcut Scheme"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"
-msgstr "Exportar schema de via breve"
+msgstr "Adde schema de via breve"
 
 #: ui/ShortcutActionDelegate.qml:31
 #, kde-format
@@ -453,11 +446,10 @@ msgid "Collapse"
 msgstr "Plica"
 
 #: ui/ShortcutActionDelegate.qml:32
-#, fuzzy, kde-format
-#| msgid "No active shortcuts"
+#, kde-format
 msgctxt "@action:button"
 msgid "Expand to configure shortcuts"
-msgstr "Necun vias breve active"
+msgstr "Expande per configurar vias breve"
 
 #: ui/ShortcutActionDelegate.qml:38
 #, kde-format
