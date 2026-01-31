@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2026-01-22 15:58+0100\n"
+"PO-Revision-Date: 2026-01-30 09:50+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -115,8 +115,7 @@ msgid "Desktop name"
 msgstr "Nomine de scriptorio"
 
 #: qml/configGeneral.qml:119
-#, fuzzy, kde-format
-#| msgid "Selecting current Activity:"
+#, kde-format
 msgctxt ""
 "@label Start of the sentence 'Selecting current activity does nothing/shows "
 "the desktop'"
@@ -124,8 +123,7 @@ msgid "Selecting current Activity:"
 msgstr "Seligente Activitate currente:"
 
 #: qml/configGeneral.qml:120
-#, fuzzy, kde-format
-#| msgid "Selecting current virtual desktop:"
+#, kde-format
 msgctxt ""
 "@label Start of the sentence 'Selecting current virtual desktop does nothing/"
 "shows the desktop'"
@@ -141,13 +139,12 @@ msgid "Does nothing"
 msgstr "Il face nihil"
 
 #: qml/configGeneral.qml:131
-#, fuzzy, kde-format
-#| msgid "Shows the desktop"
+#, kde-format
 msgctxt ""
 "option:check completes the sentence 'Selecting current activity/virtual "
 "desktop shows the desktop'"
 msgid "Shows the desktop"
-msgstr "Il monstra scriptorio"
+msgstr "Il monstra le scriptorio"
 
 #: qml/main.qml:87
 #, kde-format

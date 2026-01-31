@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-28 00:46+0000\n"
-"PO-Revision-Date: 2026-01-29 12:16+0100\n"
+"PO-Revision-Date: 2026-01-30 09:46+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -54,7 +54,7 @@ msgstr "Netta chronologia"
 #, kde-format
 msgctxt "@action:button Button to open a menu that lets you choose a skin tone"
 msgid "Skin tone:"
-msgstr ""
+msgstr "Tono de apparentia:"
 
 #: app/ui/CategoryPage.qml:135 app/ui/Emojier.qml:73
 #, kde-format
@@ -87,22 +87,22 @@ msgid "Light"
 msgstr "Legier"
 
 #: app/ui/CategoryPage.qml:207
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏼 Medium Light"
-msgstr "Medie legier"
+msgstr "🖐🏼 Medie legier"
 
 #: app/ui/CategoryPage.qml:208
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium Light"
 msgstr "Medie legier"
 
 #: app/ui/CategoryPage.qml:216
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏽 Medium"
-msgstr "Medie"
+msgstr "🖐🏼 Medie"
 
 #: app/ui/CategoryPage.qml:217
 #, kde-format
@@ -111,13 +111,13 @@ msgid "Medium"
 msgstr "Medie"
 
 #: app/ui/CategoryPage.qml:225
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏾 Medium Dark"
-msgstr "Medie obscur"
+msgstr "🖐🏼 Medie obscur"
 
 #: app/ui/CategoryPage.qml:226
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium Dark"
 msgstr "Medie obscur"
@@ -138,7 +138,7 @@ msgstr "Obscur"
 #, kde-format
 msgctxt "@title:window A two-tone skin variant can be selected here"
 msgid "Select Variant"
-msgstr ""
+msgstr "Selige variante:"
 
 #: app/ui/CategoryPage.qml:295
 #, kde-format
@@ -153,18 +153,16 @@ msgid "Copy Description"
 msgstr "Copia Description"
 
 #: app/ui/CategoryPage.qml:344
-#, fuzzy, kde-format
-#| msgctxt "@label placeholder for empty recent emoji list"
-#| msgid "No recent Emojis"
+#, kde-format
 msgctxt "@label placeholder for empty recent emoji list"
 msgid "No recent emojis"
-msgstr "Nulle Emojis recente"
+msgstr "Necun Emojis recente"
 
 #: app/ui/CategoryPage.qml:344
 #, kde-format
 msgctxt "@label placeholder for no emoji found in category"
 msgid "No matching emoji found"
-msgstr ""
+msgstr "Necun emoji correspondente trovate"
 
 #: app/ui/CategoryPage.qml:392
 #, kde-format
@@ -172,7 +170,7 @@ msgctxt ""
 "@action:button Opens a window where a two-tone skin variant can be selected. "
 "%1 is the emoji's name"
 msgid "Select Variant of \"%1\""
-msgstr ""
+msgstr "Selige variante de \"%1\""
 
 #: app/ui/Emojier.qml:44
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-16 00:45+0000\n"
-"PO-Revision-Date: 2026-01-23 16:42+0100\n"
+"PO-Revision-Date: 2026-01-30 10:02+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -18,8 +18,7 @@ msgstr ""
 "X-Generator: Lokalize 23.08.5\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
-#, fuzzy, kde-format
-#| msgid "Currently being used"
+#, kde-format
 msgctxt "@info:status currently active activity"
 msgid "Currently being used"
 msgstr "Que es usate curentemente"
@@ -111,11 +110,10 @@ msgid "Get Help"
 msgstr "Obtene adjuta"
 
 #: contents/configuration/AboutPlugin.qml:165
-#, fuzzy, kde-format
-#| msgid "Report a Bug…"
+#, kde-format
 msgctxt "@action:button urlbutton"
 msgid "Report an issue"
-msgstr "Reporta un bug…"
+msgstr "Reporta un problema"
 
 #: contents/configuration/AboutPlugin.qml:172
 #, kde-format
@@ -130,11 +128,10 @@ msgid "License: %1"
 msgstr "Licentia; %1"
 
 #: contents/configuration/AboutPlugin.qml:197
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Read License"
-msgstr "Licentia:"
+msgstr "Lege Licentia"
 
 #: contents/configuration/AboutPlugin.qml:211
 #, kde-format
@@ -605,17 +602,16 @@ msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Pressa iste via breve de claviero pro mover foco al Pannello"
 
 #: contents/configuration/PanelConfiguration.qml:689
-#, fuzzy, kde-format
-#| msgid "Focus shortcut:"
+#, kde-format
 msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
-msgstr "Via Breve de Foco:"
+msgstr "Assignator de Via Breve de Foco"
 
 #: contents/configuration/PanelConfiguration.qml:690
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for button"
 msgid "Button to set the shortcut for the panel to gain focus"
-msgstr ""
+msgstr "Button per assignar le via breve ut le pannello gania foco"
 
 #: contents/configuration/PanelConfiguration.qml:716
 #, kde-format
@@ -624,12 +620,10 @@ msgid "Delete Panel"
 msgstr "Dele pannello"
 
 #: contents/configuration/PanelConfiguration.qml:719
-#, fuzzy, kde-format
-#| msgid "Remove this panel; this action is undo-able"
+#, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Remove this panel; this action can be undone"
-msgstr ""
-"Remove iste pannello: iste action es sub le commando que on pote annullar"
+msgstr "Remove iste pannello; iste action non pote esser annullate"
 
 #: contents/configuration/PanelConfiguration.qml:728
 #, kde-format
@@ -864,12 +858,10 @@ msgid "Close Widget Explorer"
 msgstr "Claude explorator de widget"
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Search Widgets"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Search through widgets"
-msgstr "Cerca Widgets"
+msgstr "Cerca per Widgets"
 
 #: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
