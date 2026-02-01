@@ -1,21 +1,21 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2025-05-18 20:53+0530\n"
+"PO-Revision-Date: 2026-01-31 20:40+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
-"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: code/tools.js:32
 #, kde-format
@@ -43,15 +43,13 @@ msgid "Show in Favorites"
 msgstr "பிடித்தவற்றில் காட்டு"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "பொதுவானவை"
 
 #: ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "சின்னம்:"
@@ -126,36 +124,31 @@ msgid "A text label cannot be set when the Panel is vertical."
 msgstr "பலகை செங்குத்தாக இருக்கும்போது காட்சிப்பெயரை அமைக்கு முடியாது."
 
 #: ConfigGeneral.qml:157
-#, fuzzy, kde-format
-#| msgid "Show applications as:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "செயலிகளை இவ்வாறு காட்டு:"
 
 #: ConfigGeneral.qml:159
-#, fuzzy, kde-format
-#| msgid "Name only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "பெயர் மட்டும்"
 
 #: ConfigGeneral.qml:159
-#, fuzzy, kde-format
-#| msgid "Description only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "விவரணம் மட்டும்"
 
 #: ConfigGeneral.qml:159
-#, fuzzy, kde-format
-#| msgid "Name (Description)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "பெயர் (விவரணம்)"
 
 #: ConfigGeneral.qml:159
-#, fuzzy, kde-format
-#| msgid "Description (Name)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "விவரணம் (பெயர்)"
@@ -182,8 +175,7 @@ msgstr ""
 "தேடல் முடிவுகளிலும் பிடித்தவற்றிலும் செயலிகள் வரிசைப்படுத்தப்படுவதை இது பாதிக்காது."
 
 #: ConfigGeneral.qml:181
-#, fuzzy, kde-format
-#| msgid "Use compact list item style"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use compact list item style"
 msgstr "சுருக்கமான காட்சிமுறையை பயன்படுத்து"
@@ -195,15 +187,13 @@ msgid "Automatically disabled when in Touch Mode"
 msgstr "பலகைக்கணினி பயன்முறையில் தானாக முடக்கப்படும்"
 
 #: ConfigGeneral.qml:195
-#, fuzzy, kde-format
-#| msgid "Highlight newly installed applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly installed applications"
 msgstr "புதியதாக நிறுவியுள்ள செயலிகளை முன்னிலைப்படுத்து"
 
 #: ConfigGeneral.qml:200
-#, fuzzy, kde-format
-#| msgid "Switch sidebar categories when hovering over them"
+#, kde-format
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
 msgstr "ஓரப்பட்டையிலுள்ள பகுப்புகளின் மீது சுட்டியை வைக்கும்போது அவற்றிற்கு தாவு"
@@ -215,124 +205,103 @@ msgid "Configure Search Plugins…"
 msgstr "தேடல் செருகுநிரல்களை அமை…"
 
 #: ConfigGeneral.qml:216
-#, fuzzy, kde-format
-#| msgid "Sidebar position:"
+#, kde-format
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr "ஓரப்பட்டையின் இருப்பிடம்:"
 
 #: ConfigGeneral.qml:217 ConfigGeneral.qml:225
-#, fuzzy, kde-format
-#| msgid "Right"
+#, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr "வலதில்"
 
 #: ConfigGeneral.qml:217
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "option:radio sidebar position"
 msgid "Left"
 msgstr "இடதில்"
 
 #: ConfigGeneral.qml:225
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr "இடதில்"
 
 #: ConfigGeneral.qml:233
-#, fuzzy, kde-format
-#| msgid "Show favorites:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
-msgstr "பிடித்தவற்றை காட்டு:"
+msgstr "பிடித்தவற்றை காட்டுவது:"
 
 #: ConfigGeneral.qml:234
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
-#| msgid "In a grid"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "நெடுவரிசைகளில்"
 
 #: ConfigGeneral.qml:242
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a list'"
-#| msgid "In a list"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "பட்டியலாக"
 
 #: ConfigGeneral.qml:250
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
-msgstr "மற்ற செயலிகளை காட்டு:"
+msgstr "மற்ற செயலிகளை காட்டுவது:"
 
 #: ConfigGeneral.qml:251
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
-#| msgid "In a grid"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "நெடுவரிசைகளில்"
 
 #: ConfigGeneral.qml:259
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a list'"
-#| msgid "In a list"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "பட்டியலாக"
 
 #: ConfigGeneral.qml:271
-#, fuzzy, kde-format
-#| msgid "Show buttons for:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr "இவற்றிற்கு பட்டன்களை காட்டு:"
 
 #: ConfigGeneral.qml:272
-#, fuzzy, kde-format
-#| msgid "Power"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power"
 msgstr "ஆற்றல்"
 
 #: ConfigGeneral.qml:281
-#, fuzzy, kde-format
-#| msgid "Session"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "அமர்வு"
 
 #: ConfigGeneral.qml:290
-#, fuzzy, kde-format
-#| msgid "Power and session"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
 msgstr "ஆற்றல் மற்றும் அமர்வு"
 
 #: ConfigGeneral.qml:299
-#, fuzzy, kde-format
-#| msgid "Show action button captions"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show action button captions"
 msgstr "பட்டன்களுக்கு கருவித்துப்புகளை காட்டு"
 
 #: Footer.qml:101
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@title:tab kickoff sidebar tab"
 msgid "Applications"
 msgstr "செயலிகள்"
 
 #: Footer.qml:117
-#, fuzzy, kde-format
-#| msgid "Places"
+#, kde-format
 msgctxt "@title:tab kickoff sidebar tab"
 msgid "Places"
 msgstr "இடங்கள்"
@@ -344,15 +313,13 @@ msgid "No matches"
 msgstr "பொருத்தங்கள் இல்லை"
 
 #: Header.qml:86
-#, fuzzy, kde-format
-#| msgid "Open user settings"
+#, kde-format
 msgctxt "@action:button icon-only, for tooltip/Accessible"
 msgid "Open user settings"
 msgstr "பயனர் அமைப்புகளை திற"
 
 #: Header.qml:266
-#, fuzzy, kde-format
-#| msgid "Keep Open"
+#, kde-format
 msgctxt ""
 "@action:button Pin widget open if it loses focus, icon-only button, for "
 "tooltip/Accessible"
@@ -360,23 +327,19 @@ msgid "Keep Open"
 msgstr "திறந்தே வைத்திரு"
 
 #: KickoffGridDelegate.qml:59
-#, fuzzy, kde-format
-#| msgctxt "Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "@label Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "புதியது!"
 
 #: KickoffGridDelegate.qml:60
-#, fuzzy, kde-format
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly installed application"
 msgstr "புதியதாக நிறுவியுள்ள செயலி"
 
 #: KickoffGridView.qml:101
-#, fuzzy, kde-format
-#| msgid "Grid with %1 rows, %2 columns"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Grid with %1 rows, %2 columns"
 msgstr "%1 வரிசைகளும் %2 நெடுவரிசைகளும் கொண்ட கிரிட்"
@@ -388,50 +351,43 @@ msgid "New!"
 msgstr "புதியது!"
 
 #: KickoffListDelegate.qml:118
-#, fuzzy, kde-format
-#| msgid "There is a newly installed application in this category"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly installed application in this category"
 msgstr "இப்பகுப்பில் புதியதாக நிறுவியுள்ள செயலி உள்ளது"
 
 #: KickoffListDelegate.qml:119
-#, fuzzy, kde-format
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly installed application"
 msgstr "புதியதாக நிறுவியுள்ள செயலி"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Session"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Session"
 msgstr "அமர்வு"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Power"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Power"
 msgstr "ஆற்றல்"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "More"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "More"
 msgstr "மேலும்"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Session and Power "
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Session and Power"
-msgstr "அமர்வும் ஆற்றலும் "
+msgstr "அமர்வும் ஆற்றலும்"
 
 #: main.qml:356
-#, fuzzy, kde-format
-#| msgid "Edit Applications…"
+#, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
 msgstr "செயலிகளை திருத்து…"

@@ -1,32 +1,30 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2026 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2023-12-17 16:43+0530\n"
+"PO-Revision-Date: 2026-01-31 19:21+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
-"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: qml/config.qml:6
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "பொதுவானவை"
 
 #: qml/configGeneral.qml:31
-#, fuzzy, kde-format
-#| msgid "Display style:"
+#, kde-format
 msgctxt "@title:group of radio buttons, options are language codes or images"
 msgid "Display style:"
 msgstr "காட்சி முறை:"
@@ -38,18 +36,16 @@ msgid "No flag available"
 msgstr "கொடி இல்லை"
 
 #: qml/configGeneral.qml:102
-#, fuzzy, kde-format
-#| msgid "Layouts:"
+#, kde-format
 msgctxt "@label prefixed to button, as in 'keyboard layouts'"
 msgid "Layouts:"
 msgstr "தளவமைப்புகள்:"
 
 #: qml/configGeneral.qml:103
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:button opens kcm_keyboard"
 msgid "Configure…"
-msgstr "அமை..."
+msgstr "அமை…"
 
 #~ msgid "Show label"
 #~ msgstr "காட்சிப்பெயரை காட்டு"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-14 00:46+0000\n"
-"PO-Revision-Date: 2026-01-04 15:41+0530\n"
+"PO-Revision-Date: 2026-01-31 18:00+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -106,36 +106,31 @@ msgid "Touchpad disconnected. No other touchpads found."
 msgstr "தொடுபலகை கழற்றப்பட்டது. வேறெந்த தொடுபலகையும் கண்டுபிடிக்கப்படவில்லை."
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgid "No touchpad found"
+#, kde-format
 msgctxt "@info:status placeholdermessage text"
 msgid "No touchpad found"
 msgstr "தொடுபலகை கண்டுபிடிக்கப்படவில்லை"
 
 #: ui/main.qml:60
-#, fuzzy, kde-format
-#| msgid "Connect an external touchpad"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchpad"
 msgstr "வெளி தொடுபலகையை இணைக்கவும்"
 
 #: ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@label:listbox device selection"
 msgid "Device:"
 msgstr "சாதனம்:"
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "பொதுவானவை:"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "Enable device"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable device"
 msgstr "சாதனத்தை இயக்கு"
@@ -147,8 +142,7 @@ msgid "Disable while mouse is connected"
 msgstr "சுட்டி செருகியுள்ளபோது முடக்கு"
 
 #: ui/main.qml:137
-#, fuzzy, kde-format
-#| msgid "Disable while typing"
+#, kde-format
 msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "தட்டச்சிடும்போது முடக்கு"
@@ -166,8 +160,7 @@ msgid "Left and right buttons:"
 msgstr "இடது மற்றும் வலது பட்டன்கள்:"
 
 #: ui/main.qml:175
-#, fuzzy, kde-format
-#| msgid "Swap (left-handed mode)"
+#, kde-format
 msgctxt "@option:check"
 msgid "Swap (left-handed mode)"
 msgstr "இடமாற்று (இடதுகை பயன்முறை)"
@@ -190,15 +183,13 @@ msgstr ""
 "அடையாளங்காணஇந்த கூடுதல் தாமதம் தேவை."
 
 #: ui/main.qml:217
-#, fuzzy, kde-format
-#| msgid "Pointer speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "சுட்டிக்குறியின் வேகம்:"
 
 #: ui/main.qml:297
-#, fuzzy, kde-format
-#| msgid "Enable pointer acceleration"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "சுட்டிக்குறி வேகவளர்ச்சியை இயக்கு"
@@ -211,31 +202,25 @@ msgid ""
 msgstr "இது இயக்கப்பட்டிருந்தால், சுட்டியை நகர்த்தும் தூரம் கூட அதன் வேகமும் கூடும்."
 
 #: ui/main.qml:325
-#, fuzzy, kde-format
-#| msgid "Scrolling speed:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "உருளல் வேகம்:"
 
 #: ui/main.qml:376
-#, fuzzy, kde-format
-#| msgctxt "Slower Scroll"
-#| msgid "Slower"
+#, kde-format
 msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "மெதுவாக"
 
 #: ui/main.qml:383
-#, fuzzy, kde-format
-#| msgctxt "Faster Scroll Speed"
-#| msgid "Faster"
+#, kde-format
 msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "வேகமாக"
 
 #: ui/main.qml:390
-#, fuzzy, kde-format
-#| msgid "Scroll by:"
+#, kde-format
 msgctxt ""
 "@title group begins the sentence 'Scroll by moving two fingers anywhere/"
 "moving one finger on edge'"
@@ -243,46 +228,38 @@ msgid "Scroll by:"
 msgstr "உருள்வது:"
 
 #: ui/main.qml:409
-#, fuzzy, kde-format
-#| msgid "Moving two fingers anywhere"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr "இரண்டு விரல்களைக் கொண்டு எங்கேயேனும்"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Moving one finger on edge"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr "ஒரு விரலைக் கொண்டு ஒரத்தில்"
 
 #: ui/main.qml:424
-#, fuzzy, kde-format
-#| msgid "Invert scroll direction (Natural scrolling)"
+#, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "உருளல் திசையைப் புரட்டு (இயற்கையான உருளல்)"
 
 #: ui/main.qml:438
-#, fuzzy, kde-format
-#| msgid "Disable horizontal scrolling"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "கிடைமட்ட உருளலை முடக்கு"
 
 #: ui/main.qml:460
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label for radiobutton group, begins the sentence 'right-click by "
-#| "pressing bottom-right corner/pressing with two fingers'"
-#| msgid "Right-click by:"
+#, kde-format
 msgctxt ""
 "@title:group for radiobutton group, begins the sentence 'right-click by "
 "pressing bottom-right corner/pressing with two fingers'"
 msgid "Right-click by:"
-msgstr "வலது கிளிக்:"
+msgstr ".வலது கிளிக்:"
 
 #: ui/main.qml:481
 #, kde-format
@@ -293,17 +270,13 @@ msgid "Pressing bottom-right corner"
 msgstr "வலது-கீழ் மூலையை அழுத்துவது"
 
 #: ui/main.qml:496
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing both bottom corners."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "கீழுள்ள இரண்டு மூலைகையும் அழுத்துவது நடு கிளிக்காக கருதப்படும்."
 
 #: ui/main.qml:497
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing bottom center."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "கீழ் ஓரத்தின் நடுப்பகுதியை அழுத்துவது நடு கிளிக்காக கருதப்படும்."
@@ -367,8 +340,7 @@ msgid "Tap to click"
 msgstr "கிளிக் செய்ய தட்டுவது"
 
 #: ui/main.qml:597
-#, fuzzy, kde-format
-#| msgid "Allow dragging after tapping"
+#, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr "தட்டிய பின் இழுக்கவிடு"
@@ -384,46 +356,40 @@ msgstr ""
 "கீழுள்ளதை இழுப்பதாகக் கருதப்படும். அதை விடுவிக்க விரலைத் தூக்கவும்."
 
 #: ui/main.qml:616
-#, fuzzy, kde-format
-#| msgid "Allow briefly lifting finger during tap-and-drag"
+#, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr "தட்டி இழுக்கும்போது விரலை தற்காலிகமாக தூக்க விடு"
 
 #: ui/main.qml:630
-#, fuzzy, kde-format
-#| msgid "Two-finger tap:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "இருவிரல் தட்டுதல்:"
 
 #: ui/main.qml:650
-#, fuzzy, kde-format
-#| msgid "Right-click (three-finger tap to middle-click)"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
-msgstr "வலது க்ளிக் (நடு க்ளிக்குக்கு மூன்று விரல்களைக் கொண்டு தட்டவும்)"
+msgstr "வலது கிளிக் (நடு க்ளிக்குக்கு மூன்று விரல்களைக் கொண்டு தட்டவும்)"
 
 #: ui/main.qml:651
-#, fuzzy, kde-format
-#| msgid "Right-click"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Right-click"
-msgstr "வலது க்ளிக்"
+msgstr "வலது கிளிக்"
 
 #: ui/main.qml:659
-#, fuzzy, kde-format
-#| msgid "Middle-click (three-finger tap to right-click)"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
-msgstr "நடு க்ளிக் (வலது க்ளிக்குக்கு மூன்று விரல்களைக் கொண்டு தட்டவும்)"
+msgstr "நடு கிளிக் (வலது க்ளிக்குக்கு மூன்று விரல்களைக் கொண்டு தட்டவும்)"
 
 #: ui/main.qml:660
-#, fuzzy, kde-format
-#| msgid "Middle-click"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click"
-msgstr "நடு க்ளிக்"
+msgstr "நடு கிளிக்"
 
 #~ msgid "Device enabled"
 #~ msgstr "சாதனத்தை இயக்கு"

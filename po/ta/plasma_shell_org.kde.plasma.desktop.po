@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-16 00:45+0000\n"
-"PO-Revision-Date: 2025-09-21 13:26+0530\n"
+"PO-Revision-Date: 2026-01-31 21:11+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -15,20 +15,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
-#, fuzzy, kde-format
-#| msgid "Currently being used"
+#, kde-format
 msgctxt "@info:status currently active activity"
 msgid "Currently being used"
-msgstr "இப்போது பயன்படுத்தப்படுவது"
+msgstr "இப்போது பயனிலுள்ளது"
 
 #: contents/activitymanager/ActivityItem.qml:243
-#, fuzzy, kde-format
-#| msgid ""
-#| "Move to\n"
-#| "this activity"
+#, kde-format
 msgctxt "@action shows when dragging file over item"
 msgid ""
 "Move to\n"
@@ -38,10 +34,7 @@ msgstr ""
 "நகர்த்து"
 
 #: contents/activitymanager/ActivityItem.qml:273
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show also\n"
-#| "in this activity"
+#, kde-format
 msgctxt "@action shows when dragging file over item"
 msgid ""
 "Show also\n"
@@ -51,65 +44,55 @@ msgstr ""
 "காட்டு"
 
 #: contents/activitymanager/ActivityItem.qml:335
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm"
 msgid "Configure"
 msgstr "அமை"
 
 #: contents/activitymanager/ActivityManager.qml:118
-#, fuzzy, kde-format
-#| msgid "Create activity…"
+#, kde-format
 msgctxt "@action:button opens Activity kcm"
 msgid "Create activity…"
-msgstr "செயல்பாட்டை உருவாக்கு"
+msgstr "செயல்பாட்டை உருவாக்கு…"
 
 #: contents/activitymanager/Heading.qml:59
-#, fuzzy, kde-format
-#| msgid "Activities"
+#, kde-format
 msgctxt "@title:window"
 msgid "Activities"
 msgstr "செயல்பாடுகள்"
 
 #: contents/applet/AppletError.qml:165
-#, fuzzy, kde-format
-#| msgid "Copy to Clipboard"
+#, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "பிடிப்புப்பலகைக்கு நகலெடு"
 
 #: contents/applet/AppletError.qml:188
-#, fuzzy, kde-format
-#| msgid "View Error Details…"
+#, kde-format
 msgctxt "@action:button opens dialog"
 msgid "View Error Details…"
 msgstr "சிக்கலின் விவரங்களை காட்டு…"
 
 #: contents/applet/CompactApplet.qml:91
-#, fuzzy, kde-format
-#| msgid "Open %1"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for panel widget %1"
 msgid "Open %1"
-msgstr "%1-ஐ திற"
+msgstr "%1 தனை திற"
 
 #: contents/configuration/AboutPlugin.qml:21
-#, fuzzy, kde-format
-#| msgid "About"
+#, kde-format
 msgctxt "@title:window About this widget"
 msgid "About"
 msgstr "பற்றி"
 
 #: contents/configuration/AboutPlugin.qml:51
-#, fuzzy, kde-format
-#| msgid "Send an email to %1"
+#, kde-format
 msgctxt "plasma_shell_org.kde.plasma.desktop"
 msgid "Send an email to %1"
 msgstr "%1 என்பவருக்கு மின்னஞ்சல் அனுப்பு"
 
 #: contents/configuration/AboutPlugin.qml:65
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip %1 url"
-#| msgid "Open website %1"
+#, kde-format
 msgctxt "@action:button icononly for tooltip & accessible %1 is url"
 msgid "Open website %1"
 msgstr "%1 எனும் இணையதளத்தைத் திற"
@@ -127,22 +110,19 @@ msgid "Get Help"
 msgstr "உதவி பெறுவது"
 
 #: contents/configuration/AboutPlugin.qml:165
-#, fuzzy, kde-format
-#| msgid "Report an issue"
+#, kde-format
 msgctxt "@action:button urlbutton"
 msgid "Report an issue"
 msgstr "பிழையை தெரிவி"
 
 #: contents/configuration/AboutPlugin.qml:172
-#, fuzzy, kde-format
-#| msgid "Copyright"
+#, kde-format
 msgctxt "@title license information"
 msgid "Copyright"
 msgstr "பதிப்புரிமை"
 
 #: contents/configuration/AboutPlugin.qml:191
-#, fuzzy, kde-format
-#| msgid "License: %1"
+#, kde-format
 msgctxt "@label %1 is the short SPDX text for the license"
 msgid "License: %1"
 msgstr "உரிமம்: %1"
@@ -154,51 +134,43 @@ msgid "Read License"
 msgstr "உரிமத்தைக் காட்டு"
 
 #: contents/configuration/AboutPlugin.qml:211
-#, fuzzy, kde-format
-#| msgid "Authors"
+#, kde-format
 msgctxt "@title:group"
 msgid "Authors"
 msgstr "இயற்றியவர்கள்"
 
 #: contents/configuration/AboutPlugin.qml:223
-#, fuzzy, kde-format
-#| msgid "Credits"
+#, kde-format
 msgctxt "@title:group"
 msgid "Credits"
 msgstr "நன்றி"
 
 #: contents/configuration/AboutPlugin.qml:236
-#, fuzzy, kde-format
-#| msgid "Translators"
+#, kde-format
 msgctxt "@title:group"
 msgid "Translators"
 msgstr "மொழிபெயர்ப்பாளர்கள்"
 
 #: contents/configuration/AppletConfiguration.qml:90
-#, fuzzy, kde-format
-#| msgid "Keyboard Shortcuts"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Keyboard Shortcuts"
-msgstr "விசைப்பலகை சுருக்குவழிகள்"
+msgstr "விசைச் சுருக்குவழிகள்"
 
 #: contents/configuration/AppletConfiguration.qml:337
-#, fuzzy, kde-format
-#| msgid "About"
+#, kde-format
 msgctxt "@title:group for About dialog page"
 msgid "About"
 msgstr "பற்றி"
 
 #: contents/configuration/AppletConfiguration.qml:385
-#, fuzzy, kde-format
-#| msgid "Apply Settings"
+#, kde-format
 msgctxt "@title:window dialog title"
 msgid "Apply Settings"
-msgstr "அமைப்புகளை செயல்படுத்து"
+msgstr "அமைப்புகளை செயல்படுத்துவது"
 
 #: contents/configuration/AppletConfiguration.qml:386
-#, fuzzy, kde-format
-#| msgid ""
-#| "The current page has unsaved changes. Apply the changes or discard them?"
+#, kde-format
 msgctxt "@label dialog body"
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
@@ -207,29 +179,25 @@ msgstr ""
 "வேண்டுமா?"
 
 #: contents/configuration/AppletConfiguration.qml:418
-#, fuzzy, kde-format
-#| msgid "OK"
+#, kde-format
 msgctxt "@action:button"
 msgid "OK"
 msgstr "சரி"
 
 #: contents/configuration/AppletConfiguration.qml:425
-#, fuzzy, kde-format
-#| msgid "Apply"
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "செயல்படுத்து"
 
 #: contents/configuration/AppletConfiguration.qml:431
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "ரத்து செய்"
 
 #: contents/configuration/ConfigCategoryDelegate.qml:26
-#, fuzzy, kde-format
-#| msgid "Open configuration page"
+#, kde-format
 msgctxt ""
 "@info:whatsthis Accessible description for sidebar entries opening "
 "configuration page"
@@ -237,78 +205,67 @@ msgid "Open configuration page"
 msgstr "விருப்பத்தேர்வு பக்கத்தை திற"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:19
-#, fuzzy, kde-format
-#| msgid "Left-Button"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Left-Button"
 msgstr "இடது பட்டன்"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:20
-#, fuzzy, kde-format
-#| msgid "Right-Button"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Right-Button"
 msgstr "வலது பட்டன்"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:21
-#, fuzzy, kde-format
-#| msgid "Middle-Button"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Middle-Button"
 msgstr "நடு பட்டன்"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:22
-#, fuzzy, kde-format
-#| msgid "Back-Button"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Back-Button"
 msgstr "பின் பட்டன்"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:23
-#, fuzzy, kde-format
-#| msgid "Forward-Button"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Forward-Button"
 msgstr "முன் பட்டன்"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:25
-#, fuzzy, kde-format
-#| msgid "Vertical-Scroll"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Vertical-Scroll"
 msgstr "செங்குத்து உருளல்"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:26
-#, fuzzy, kde-format
-#| msgid "Horizontal-Scroll"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Horizontal-Scroll"
 msgstr "கிடைமட்ட உருளல்"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:28
-#, fuzzy, kde-format
-#| msgid "Shift"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Shift"
 msgstr "Shift"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:29
-#, fuzzy, kde-format
-#| msgid "Ctrl"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Ctrl"
 msgstr "Ctrl"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:30
-#, fuzzy, kde-format
-#| msgid "Alt"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Alt"
 msgstr "Alt"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:31
-#, fuzzy, kde-format
-#| msgid "Meta"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Meta"
 msgstr "Meta"
@@ -320,57 +277,49 @@ msgid "+"
 msgstr "+"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:139
-#, fuzzy, kde-format
-#| msgid "Add Action"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Action"
 msgstr "செயலை சேர்"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:76
-#, fuzzy, kde-format
-#| msgid "Layout changes have been restricted by the system administrator"
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Layout changes have been restricted by the system administrator"
-msgstr "தளவமைப்பு மாற்றங்களை கணினி நிர்வாகி தடைசெய்துள்ளார்"
+msgstr "தளவமைப்பை மாற்றுவதை கணினி நிர்வாகி தடைசெய்துள்ளார்"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:91
-#, fuzzy, kde-format
-#| msgid "Layout:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Layout:"
 msgstr "தளவமைப்பு:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:114
-#, fuzzy, kde-format
-#| msgid "Wallpaper type:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Wallpaper type:"
 msgstr "பின்புல படத்தின் வகை:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:153
-#, fuzzy, kde-format
-#| msgid "Get New Plugins…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Plugins…"
 msgstr "புதிய செருகுநிரல்களை பதிவிறக்கு…"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:243
-#, fuzzy, kde-format
-#| msgid "Layout changes must be applied before other changes can be made"
+#, kde-format
 msgctxt "@info"
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "தளவமைப்பை மாற்றியதை செயல்படுத்திய பின்னரே மற்ற மாற்றங்களை நீங்கள் செய்யலாம்"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:247
-#, fuzzy, kde-format
-#| msgid "Apply Now"
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply Now"
 msgstr "இப்போது செயல்படுத்து"
 
 #: contents/configuration/ConfigurationShortcuts.qml:16
-#, fuzzy, kde-format
-#| msgid "Shortcuts"
+#, kde-format
 msgctxt "@title:window for configuration page"
 msgid "Shortcuts"
 msgstr "சுருக்குவழிகள்"
@@ -382,36 +331,31 @@ msgid "Activate widget as if clicked:"
 msgstr "பிளாஸ்மாய்டை கிளிக் செய்தது போல இயக்கு"
 
 #: contents/configuration/ContainmentConfiguration.qml:26
-#, fuzzy, kde-format
-#| msgid "Wallpaper"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Wallpaper"
 msgstr "பின்புல படம்"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
-#, fuzzy, kde-format
-#| msgid "Mouse Actions"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Mouse Actions"
 msgstr "சுட்டி செயல்கள்"
 
 #: contents/configuration/MouseEventInputButton.qml:13
-#, fuzzy, kde-format
-#| msgid "Add Action"
+#, kde-format
 msgctxt "@action:button inactive state for button recording mouse input"
 msgid "Add Action"
 msgstr "செயலை சேர்"
 
 #: contents/configuration/MouseEventInputButton.qml:20
-#, fuzzy, kde-format
-#| msgid "Input Here"
+#, kde-format
 msgctxt "@action:button active state for button recording mouse input"
 msgid "Input Here"
 msgstr "இங்கு உள்ளிடவும்"
 
 #: contents/configuration/PanelConfiguration.qml:99
-#, fuzzy, kde-format
-#| msgid "Panel Settings"
+#, kde-format
 msgctxt "@title:window"
 msgid "Panel Settings"
 msgstr "பலகைக்கான அமைப்புகள்"
@@ -437,190 +381,163 @@ msgid "Widgets…"
 msgstr "பிளாஸ்மாய்டுகள்…"
 
 #: contents/configuration/PanelConfiguration.qml:162
-#, fuzzy, kde-format
-#| msgid "Position"
+#, kde-format
 msgctxt "@title:group"
 msgid "Position"
 msgstr "இருப்பிடம்"
 
 #: contents/configuration/PanelConfiguration.qml:167
-#, fuzzy, kde-format
-#| msgid "Top"
+#, kde-format
 msgctxt "@label panel screen edge"
 msgid "Top"
 msgstr "மேலே"
 
 #: contents/configuration/PanelConfiguration.qml:168
-#, fuzzy, kde-format
-#| msgid "Right"
+#, kde-format
 msgctxt "@label panel screen edge"
 msgid "Right"
 msgstr "வலதுபுறமாக"
 
 #: contents/configuration/PanelConfiguration.qml:169
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "@label panel screen edge"
 msgid "Left"
 msgstr "இடதுபுறமாக"
 
 #: contents/configuration/PanelConfiguration.qml:170
-#, fuzzy, kde-format
-#| msgid "Bottom"
+#, kde-format
 msgctxt "@label panel screen edge"
 msgid "Bottom"
 msgstr "கீழே"
 
 #: contents/configuration/PanelConfiguration.qml:190
-#, fuzzy, kde-format
-#| msgid "Set Position…"
+#, kde-format
 msgctxt "action:button"
 msgid "Set Position…"
 msgstr "இருப்பிடத்தை அமை…"
 
 #: contents/configuration/PanelConfiguration.qml:217
-#, fuzzy, kde-format
-#| msgid "Alignment"
+#, kde-format
 msgctxt "@title:group"
 msgid "Alignment"
 msgstr "சீரமைப்பு"
 
 #: contents/configuration/PanelConfiguration.qml:282
-#, fuzzy, kde-format
-#| msgid "Top"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Top"
 msgstr "மேலே"
 
 #: contents/configuration/PanelConfiguration.qml:282
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Left"
 msgstr "இடதுபுறமாக"
 
 #: contents/configuration/PanelConfiguration.qml:283
-#, fuzzy, kde-format
-#| msgid "Center"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Center"
 msgstr "நடுவில்"
 
 #: contents/configuration/PanelConfiguration.qml:284
-#, fuzzy, kde-format
-#| msgid "Bottom"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Bottom"
 msgstr "கீழே"
 
 #: contents/configuration/PanelConfiguration.qml:284
-#, fuzzy, kde-format
-#| msgid "Right"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Right"
 msgstr "வலதுபுறமாக"
 
 #: contents/configuration/PanelConfiguration.qml:314
-#, fuzzy, kde-format
-#| msgid "Height"
+#, kde-format
 msgctxt "@title:group panel height"
 msgid "Height"
 msgstr "உயரம்"
 
 #: contents/configuration/PanelConfiguration.qml:315
-#, fuzzy, kde-format
-#| msgid "Width"
+#, kde-format
 msgctxt "@title:group panel width"
 msgid "Width"
 msgstr "அகலம்"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, fuzzy, kde-format
-#| msgid "Fill height"
+#, kde-format
 msgctxt "@item:inlistbox panel fills the full height of the display"
 msgid "Fill height"
 msgstr "உயரத்தை நிரப்பு"
 
 #: contents/configuration/PanelConfiguration.qml:334
-#, fuzzy, kde-format
-#| msgid "Fill width"
+#, kde-format
 msgctxt "@item:inlistbox panel fills the full width of the display"
 msgid "Fill width"
 msgstr "அகலத்தை நிரப்பு"
 
 #: contents/configuration/PanelConfiguration.qml:335
-#, fuzzy, kde-format
-#| msgid "Fit content"
+#, kde-format
 msgctxt "@item:inlistbox panel is just big enough to fit its content"
 msgid "Fit content"
 msgstr "உள்ளடக்கத்தைப் பொறுத்து"
 
 #: contents/configuration/PanelConfiguration.qml:336
-#, fuzzy, kde-format
-#| msgid "Custom"
+#, kde-format
 msgctxt "@item:inlistbox panel size"
 msgid "Custom"
 msgstr "விருப்பமானது"
 
 #: contents/configuration/PanelConfiguration.qml:369
-#, fuzzy, kde-format
-#| msgid "Visibility"
+#, kde-format
 msgctxt "@title:group"
 msgid "Visibility"
 msgstr "காட்டப்படுவது"
 
 #: contents/configuration/PanelConfiguration.qml:387
-#, fuzzy, kde-format
-#| msgid "Always visible"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always visible"
-msgstr "எப்போது காட்டப்படும்"
+msgstr "எப்போதும்"
 
 #: contents/configuration/PanelConfiguration.qml:388
-#, fuzzy, kde-format
-#| msgid "Auto hide"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Auto hide"
 msgstr "தானாக மறை"
 
 #: contents/configuration/PanelConfiguration.qml:389
-#, fuzzy, kde-format
-#| msgid "Dodge windows"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Dodge windows"
 msgstr "சாளரங்களைத் தவிர்"
 
 #: contents/configuration/PanelConfiguration.qml:390
-#, fuzzy, kde-format
-#| msgid "Windows go below"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Windows go below"
 msgstr "சாளரங்கள் அடியில் இருக்கலாம்"
 
 #: contents/configuration/PanelConfiguration.qml:450
-#, fuzzy, kde-format
-#| msgid "Opacity"
+#, kde-format
 msgctxt "@title:group"
 msgid "Opacity"
 msgstr "ஒளிபுகாமை"
 
 #: contents/configuration/PanelConfiguration.qml:466
-#, fuzzy, kde-format
-#| msgid "Adaptive"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Adaptive"
 msgstr "மாறக்கூடியது"
 
 #: contents/configuration/PanelConfiguration.qml:467
-#, fuzzy, kde-format
-#| msgid "Opaque"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Opaque"
-msgstr "ஒளி புகாத‍து"
+msgstr "ஒளிபுகாத‍து"
 
 #: contents/configuration/PanelConfiguration.qml:468
-#, fuzzy, kde-format
-#| msgid "Translucent"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Translucent"
 msgstr "ஒளிபுகக்கூடியது"
@@ -657,45 +574,40 @@ msgid "Fix it"
 msgstr "இதை சரிசெய்"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Panel Width:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Panel Width:"
 msgstr "பலகையின் அகலம்:"
 
 #: contents/configuration/PanelConfiguration.qml:648
-#, fuzzy, kde-format
-#| msgid "Panel Height:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Panel Height:"
 msgstr "பலகையின் உயரம்:"
 
 #: contents/configuration/PanelConfiguration.qml:671
-#, fuzzy, kde-format
-#| msgid "Focus shortcut:"
+#, kde-format
 msgctxt "@title:group shortcut that moves focus to the panel"
 msgid "Focus shortcut:"
 msgstr "குவியப்படுத்தும் சுருக்குவழி:"
 
 #: contents/configuration/PanelConfiguration.qml:682
-#, fuzzy, kde-format
-#| msgid "Press this keyboard shortcut to move focus to the Panel"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Press this keyboard shortcut to move focus to the Panel"
-msgstr "பலகையை குவியப்படுத்த இந்த விசைச் சுருக்குவழியை அழுத்துங்கள்"
+msgstr "பலகையை குவியப்படுத்த இந்த விசைச் சுருக்குவழியை அழுத்தலாம்"
 
 #: contents/configuration/PanelConfiguration.qml:689
-#, fuzzy, kde-format
-#| msgid "Focus shortcut:"
+#, kde-format
 msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
-msgstr "குவியப்படுத்தும் சுருக்குவழி:"
+msgstr "குவியப்படுத்தும் சுருக்குவழியை அமைப்பது"
 
 #: contents/configuration/PanelConfiguration.qml:690
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for button"
 msgid "Button to set the shortcut for the panel to gain focus"
-msgstr ""
+msgstr "பலகையைக் குவியப்படுத்தும் விசைச்சுருக்குவழியை அமைப்பதற்கான பட்டன்"
 
 #: contents/configuration/PanelConfiguration.qml:716
 #, kde-format
@@ -704,8 +616,7 @@ msgid "Delete Panel"
 msgstr "பலகையை நீக்கு"
 
 #: contents/configuration/PanelConfiguration.qml:719
-#, fuzzy, kde-format
-#| msgid "Remove this panel; this action is undo-able"
+#, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Remove this panel; this action can be undone"
 msgstr "பலகையை நீக்கும்; இச்செயலை செயல்நீக்கலாம்"
@@ -717,9 +628,7 @@ msgid "Clone Panel"
 msgstr "பலகையின் நகலை உருவாக்கு"
 
 #: contents/configuration/PanelConfiguration.qml:732
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Create a new panel with the same settings and applets"
+#, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Create a new panel with the same settings and applets"
 msgstr "இதே அமைப்புகளையும் பிளாஸ்மாய்டுகளையும் கொண்டுள்ள புதிய பலகையை உருவாக்கும்"
@@ -738,11 +647,10 @@ msgid "Exit Edit Mode"
 msgstr "திருத்தும் பயன்முறையிலிருந்து வெளியேறு"
 
 #: contents/configuration/PanelConfiguration.qml:744
-#, fuzzy, kde-format
-#| msgid "Close Panel Settings window and exit Edit Mode"
+#, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Close Panel Settings window and exit Edit Mode"
-msgstr "பலகை அமைப்புகளை மூடி திருத்தும் பயன்முறையிலிருந்து வெளியேறும்"
+msgstr "பலகை அமைப்புகளை மூடி, திருத்தும் பயன்முறையிலிருந்து வெளியேறும்"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:25
 #, kde-format
@@ -786,66 +694,56 @@ msgstr ""
 "மீட்டமைக்க இரட்டைக் கிளிக் செய்யவும்."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy, kde-format
-#| msgid "Manage Panels and Desktops"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Panels and Desktops"
-msgstr "பலகைகளையும் பணிமேடைகளையும் நிர்வகி"
+msgstr "பலகைகளையும் பணிமேடைகளையும் நிர்வகிப்பது"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
-#, fuzzy, kde-format
-#| msgid ""
-#| "You can drag Panels and Desktops around to move them to different screens."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
 msgstr "பலகைகளையும் பணிமேடைகளையும் இழுத்து அவற்றை வெவ்வேறு திரைகளுக்கு நகர்த்தலாம்."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:44
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button Close window"
 msgid "Close"
 msgstr "மூடு"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:187
-#, fuzzy, kde-format
-#| msgid "Swap with Desktop on Screen %1"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Swap with Desktop on Screen %1"
 msgstr "%1 என்ற திரையிலுள்ள பணிமேடையுடன் இடமாற்று"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:188
-#, fuzzy, kde-format
-#| msgid "Move to Screen %1"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Move to Screen %1"
 msgstr "%1 என்ற திரைக்கு நகர்த்து"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:202
-#, fuzzy, kde-format
-#| msgid "Remove Desktop"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove Desktop"
 msgstr "பணிமேடையை நீக்கு"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:203
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove Panel"
 msgstr "பலகையை நீக்கு"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:279
-#, fuzzy, kde-format
-#| msgid "%1 (primary)"
+#, kde-format
 msgctxt "@info % is screen name"
 msgid "%1 (primary)"
 msgstr "%1 (முதன்மையானது)"
 
 #: contents/explorer/AppletAlternatives.qml:70
-#, fuzzy, kde-format
-#| msgid "Alternative Widgets"
+#, kde-format
 msgctxt "@title:window for widget alternatives explorer"
 msgid "Alternative Widgets"
 msgstr "மாற்று பிளாஸ்மாய்டுகள்"
@@ -857,8 +755,7 @@ msgid "Add %1"
 msgstr "%1 தனை சேர்"
 
 #: contents/explorer/AppletDelegate.qml:47
-#, fuzzy, kde-format
-#| msgid "Unsupported Widget"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Unsupported Widget"
 msgstr "ஆதரிக்கப்படாத பிளாஸ்மாய்ட்"
@@ -884,16 +781,13 @@ msgid "Recently installed"
 msgstr "சமீபத்தில் நிறுவியது"
 
 #: contents/explorer/AppletDelegate.qml:217
-#, fuzzy, kde-format
-#| msgid "Cancel Uninstallation"
+#, kde-format
 msgctxt "@action:button tooltip and accessible cancel uninstall widget"
 msgid "Cancel Uninstallation"
 msgstr "நிறுவல் நீக்கியதை திரும்பப்பெறு"
 
 #: contents/explorer/AppletDelegate.qml:218
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip uninstall a widget"
-#| msgid "Mark for Uninstallation"
+#, kde-format
 msgctxt "@action:button tooltip and accessible uninstall widget"
 msgid "Mark for Uninstallation"
 msgstr "நிறுவல் நீக்கவேண்டியதாக குறி"
@@ -912,8 +806,7 @@ msgstr ""
 "%1 எனும் பிளாஸ்மாய்டை நிறுவல்நீக்க வேண்டியதாக குறிக்கும். உறுதி செய்த பின்னே நீக்கப்படும்."
 
 #: contents/explorer/AppletDelegate.qml:265
-#, fuzzy, kde-format
-#| msgid "Remove all instances"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove all instances"
 msgstr "இது உள்ள அனைத்து இடங்களிலிருந்தும் நீக்கு"
@@ -930,15 +823,13 @@ msgstr[1] "%1 இடங்களிலுள்ள %2 எனும் பிள�
 
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:223
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@action:button like listbox, switches category to all widgets"
 msgid "All Widgets"
 msgstr "அனைத்து பிளாஸ்மாய்டுகள்"
 
 #: contents/explorer/WidgetExplorer.qml:169
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@title:group for widget grid"
 msgid "Widgets"
 msgstr "பிளாஸ்மாய்டுகள்"
@@ -968,11 +859,10 @@ msgid "Search through widgets"
 msgstr "பிளாஸ்மாய்டுகளின் பட்டியலில் தேடு"
 
 #: contents/explorer/WidgetExplorer.qml:237
-#, fuzzy, kde-format
-#| msgid "Categories"
+#, kde-format
 msgctxt "@action:button tooltip only"
 msgid "Categories"
-msgstr "வகைகள்"
+msgstr "பகுப்புகள்"
 
 #: contents/explorer/WidgetExplorer.qml:259
 #, kde-format
@@ -983,15 +873,13 @@ msgstr[0] "நிறுவல்நீக்கு (%1 பிளாஸ்மா�
 msgstr[1] "நிறுவல் நீக்கு (%1 பிளாஸ்மாய்டுகள்)"
 
 #: contents/explorer/WidgetExplorer.qml:389
-#, fuzzy, kde-format
-#| msgid "No widgets matched the search terms"
+#, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets matched the search terms"
 msgstr "தேடலுக்கு எந்த பிளாஸ்மாய்டும் பொருந்தவில்லை"
 
 #: contents/explorer/WidgetExplorer.qml:389
-#, fuzzy, kde-format
-#| msgid "No widgets available"
+#, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets available"
 msgstr "பிளாஸ்மாய்டுகள் ஏதுமில்லை"
@@ -1051,36 +939,31 @@ msgid "Show under unlocking prompt"
 msgstr "திறப்பதற்கான பட்டனுக்கு அடியில் காட்டு"
 
 #: contents/lockscreen/LockScreenUi.qml:48
-#, fuzzy, kde-format
-#| msgid "Unlocking failed"
+#, kde-format
 msgctxt "@info:status"
 msgid "Unlocking failed"
 msgstr "திறப்பது தோல்வியடைந்தது"
 
 #: contents/lockscreen/LockScreenUi.qml:285
-#, fuzzy, kde-format
-#| msgid "Caps Lock is on"
+#, kde-format
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "Caps Lock இயக்கப்பட்டுள்ளது"
 
 #: contents/lockscreen/LockScreenUi.qml:299
-#, fuzzy, kde-format
-#| msgid "Slee&p"
+#, kde-format
 msgctxt "@action:button"
 msgid "Slee&p"
 msgstr "உறங்கு"
 
 #: contents/lockscreen/LockScreenUi.qml:305
-#, fuzzy, kde-format
-#| msgid "&Hibernate"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Hibernate"
 msgstr "ஆழுறங்கு"
 
 #: contents/lockscreen/LockScreenUi.qml:311
-#, fuzzy, kde-format
-#| msgid "Switch &User"
+#, kde-format
 msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "பயனரை மாற்று"
@@ -1098,71 +981,61 @@ msgid "Switch layout"
 msgstr "தளவமைப்பை மாற்று"
 
 #: contents/lockscreen/MainBlock.qml:65
-#, fuzzy, kde-format
-#| msgid "Password"
+#, kde-format
 msgctxt "@info:placeholder in text field"
 msgid "Password"
 msgstr "கடவுச்சொல்"
 
 #: contents/lockscreen/MainBlock.qml:114
-#, fuzzy, kde-format
-#| msgid "Unlock"
+#, kde-format
 msgctxt "@action:button accessible only"
 msgid "Unlock"
 msgstr "திற"
 
 #: contents/lockscreen/MainBlock.qml:163
-#, fuzzy, kde-format
-#| msgid "(or scan your fingerprint on the reader)"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "(or scan your fingerprint on the reader)"
 msgstr "(அல்லது வருடியால் கைரேகையை வருடவும்)"
 
 #: contents/lockscreen/MainBlock.qml:167
-#, fuzzy, kde-format
-#| msgid "(or scan your smartcard)"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "(or scan your smartcard)"
 msgstr "(அல்லது அட்டையை வருடவும்)"
 
 #: contents/lockscreen/MediaControls.qml:59
-#, fuzzy, kde-format
-#| msgid "No title"
+#, kde-format
 msgctxt "@info:status"
 msgid "No title"
 msgstr "தலைப்பில்லாத‍து"
 
 #: contents/lockscreen/MediaControls.qml:60
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgctxt "@info:status"
 msgid "No media playing"
 msgstr "எந்த பாடலும் இசைக்கப்படவில்லை"
 
 #: contents/lockscreen/MediaControls.qml:88
-#, fuzzy, kde-format
-#| msgid "Previous track"
+#, kde-format
 msgctxt "@action:button Accessible only"
 msgid "Previous track"
 msgstr "முந்தைய பாடல்"
 
 #: contents/lockscreen/MediaControls.qml:100
-#, fuzzy, kde-format
-#| msgid "Play or Pause media"
+#, kde-format
 msgctxt "@action:button Accessible only"
 msgid "Play or Pause media"
 msgstr "பாடலை வாசி/இடைநிறுத்து"
 
 #: contents/lockscreen/MediaControls.qml:110
-#, fuzzy, kde-format
-#| msgid "Next track"
+#, kde-format
 msgctxt "@action:button Accessible only"
 msgid "Next track"
 msgstr "அடுத்த பாடல்"
 
 #: contents/lockscreen/NoPasswordUnlock.qml:17
-#, fuzzy, kde-format
-#| msgid "Unlock"
+#, kde-format
 msgctxt "@action:button no-password unlock"
 msgid "Unlock"
 msgstr "திற"
@@ -1174,15 +1047,13 @@ msgid "More"
 msgstr "மேலும்"
 
 #: contents/views/DesktopEditMode.qml:144
-#, fuzzy, kde-format
-#| msgid "Exit Edit Mode"
+#, kde-format
 msgctxt "@action:button"
 msgid "Exit Edit Mode"
 msgstr "திருத்தும் பயன்முறையிலிருந்து வெளியேறு"
 
 #: contents/views/Panel.qml:326
-#, fuzzy, kde-format
-#| msgid "Panel Focus Indicator"
+#, kde-format
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "பலகைக் குவியக்காட்டி"
