@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kcm_gamecontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-15 03:00+0000\n"
-"PO-Revision-Date: 2026-01-14 17:51+0100\n"
+"PO-Revision-Date: 2026-01-31 17:20+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -304,10 +304,9 @@ msgid "Invalid button value"
 msgstr ""
 
 #: device.cpp:246
-#, fuzzy, kde-format
-#| msgid "No game controllers found"
+#, kde-format
 msgid "Not a controller"
-msgstr "Nenašli sa herné ovládače"
+msgstr "Nie je herný ovládač"
 
 #: devicemodel.cpp:68
 #, kde-format
@@ -319,7 +318,7 @@ msgstr "%1 (%2)"
 #, kde-format
 msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
 msgid "Allow using as pointer and keyboard"
-msgstr ""
+msgstr "Povoliť použitie ako ukazovateľa a klávesnice"
 
 #: ui/main.qml:43
 #, kde-kuit-format
@@ -328,10 +327,11 @@ msgid ""
 "Allow game controllers to act like pointer and keyboard devices in Plasma "
 "and non-game applications.<nl/><nl/>Games can always use the controller."
 msgstr ""
+"Povoliť herným ovládačom fungovať ako ukazovacie a klávesnicové zariadenia v "
+"Plasma a neherných aplikáciách.<nl/><nl/>Hry môžu ovládač používať vždy."
 
 #: ui/main.qml:51
-#, fuzzy, kde-format
-#| msgid "No game controllers found"
+#, kde-format
 msgctxt "@info placeholdermessage text"
 msgid "No game controllers found"
 msgstr "Nenašli sa herné ovládače"
@@ -351,6 +351,10 @@ msgid ""
 "controller, or enable automatic blocking by allowing the use as pointer and "
 "keyboard."
 msgstr ""
+"Systém sa môže automaticky prepnúť do režimu spánku alebo uzamknúť "
+"obrazovku, keď je ovládač v prevádzke. Zvážte ich manuálne blokovanie počas "
+"používania ovládača alebo povolte automatické blokovanie tým, že povolíte "
+"používanie ako ukazovateľa a klávesnice."
 
 #: ui/main.qml:97
 #, kde-format
@@ -369,7 +373,7 @@ msgstr "Typ zariadenia:"
 #, kde-format
 msgctxt "@label game controller controller type (which brand, etc.)"
 msgid "Controller type:"
-msgstr ""
+msgstr "Typ ovládača:"
 
 #: ui/main.qml:151
 #, kde-format
