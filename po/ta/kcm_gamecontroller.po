@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-16 00:45+0000\n"
-"PO-Revision-Date: 2026-01-04 17:10+0530\n"
+"PO-Revision-Date: 2026-02-01 16:45+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
@@ -327,18 +327,16 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:51
-#, fuzzy, kde-format
-#| msgid "No game controllers found"
+#, kde-format
 msgctxt "@info placeholdermessage text"
 msgid "No game controllers found"
 msgstr "எந்த விளையாட்டு கட்டுப்படுத்தியும் கண்டுபிடிக்கப்படவில்லை"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Connect a wired or wireless controller"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage text"
 msgid "Connect a wired or wireless controller"
-msgstr "கம்பியுள்ள அல்லது கம்பியில்லை விளையாட்டு கட்டுப்படுத்தியை இணைக்கவும்"
+msgstr "கம்பியுள்ள அல்லது கம்பியில்லா விளையாட்டு கட்டுப்படுத்தியை இணைக்கவும்"
 
 #: ui/main.qml:82
 #, kde-format
@@ -349,6 +347,9 @@ msgid ""
 "controller, or enable automatic blocking by allowing the use as pointer and "
 "keyboard."
 msgstr ""
+"கட்டுப்படுத்தி பயனிலுள்ளபோது கணினி தானாக தூங்கலாம். கட்டுப்படுத்தியைப் பயன்படுத்தும்போது "
+"தானியக்க தூக்கத்தைக் கைமுறையாக தடுக்கவும், அல்லது கட்டுப்படுத்தியை சுட்டியாகப் "
+"பயன்படுத்தும் அம்சத்தை இயக்கவும்."
 
 #: ui/main.qml:97
 #, kde-format
@@ -357,25 +358,23 @@ msgid "Device:"
 msgstr "சாதனம்:"
 
 #: ui/main.qml:119
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Device:"
+#, kde-format
 msgctxt ""
 "@label game controller device type (wheel, joystick, game controller, etc.)"
 msgid "Device type:"
-msgstr "சாதனம்:"
+msgstr "சாதன வகை:"
 
 #: ui/main.qml:135
 #, kde-format
 msgctxt "@label game controller controller type (which brand, etc.)"
 msgid "Controller type:"
-msgstr ""
+msgstr "கட்டுப்படுத்தியின் வகை:"
 
 #: ui/main.qml:151
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Connection type:"
-msgstr ""
+msgstr "இணைப்பு வகை:"
 
 #: ui/main.qml:173
 #, kde-format

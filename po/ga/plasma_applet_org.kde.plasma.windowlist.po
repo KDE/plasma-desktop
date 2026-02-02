@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_windowslist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-02 00:45+0000\n"
 "PO-Revision-Date: 2026-01-21 11:04+0000\n"
 "Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
 "Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
@@ -26,59 +26,59 @@ msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Ginearálta"
 
-#: ConfigGeneral.qml:35
+#: ConfigGeneral.qml:37
 #, kde-format
 msgctxt "@label:listbox"
 msgid "For active application, show:"
 msgstr "I gcás feidhmchláir ghníomhacha, taispeáin:"
 
-#: ConfigGeneral.qml:40
+#: ConfigGeneral.qml:42
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Icon and name"
 msgstr "Deilbhín agus ainm"
 
-#: ConfigGeneral.qml:41
+#: ConfigGeneral.qml:43
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Icon"
 msgstr "Deilbhín"
 
-#: ConfigGeneral.qml:42
+#: ConfigGeneral.qml:44
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Name"
 msgstr "Ainm"
 
-#: ConfigGeneral.qml:89
+#: ConfigGeneral.qml:91
 #, kde-format
 msgctxt "@info:usagetip display mode for active application"
 msgid "Only icons can be shown when the Panel is vertical."
 msgstr ""
 "Ní féidir ach deilbhíní a thaispeáint nuair a bhíonn an Painéal ingearach."
 
-#: ConfigGeneral.qml:91
+#: ConfigGeneral.qml:93
 #, kde-format
 msgctxt "@info:usagetip display mode for active application"
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "Ní bhaineann sé nuair atá an giuirléid ar an Deasc."
 
-#: ConfigGeneral.qml:104
+#: ConfigGeneral.qml:106
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Open on hover:"
 msgstr "Oscail ar luchóg:"
 
-#: ConfigGeneral.qml:109
+#: ConfigGeneral.qml:111
 #, kde-format
 msgctxt "@option:check open-on-hover is enabled, with the following delay:"
 msgid "Enabled, with delay:"
 msgstr "Cumasaithe, le moill:"
 
-#: ConfigGeneral.qml:122
+#: ConfigGeneral.qml:124
 #, kde-format
 msgctxt "@item:valuesuffix, %1 is hover activation delay in ms"
 msgid "%1 ms"
@@ -89,7 +89,7 @@ msgstr[2] "%1 ms"
 msgstr[3] "%1 ms"
 msgstr[4] "%1 ms"
 
-#: ConfigGeneral.qml:131
+#: ConfigGeneral.qml:133
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
@@ -100,50 +100,92 @@ msgstr[2] "ms"
 msgstr[3] "ms"
 msgstr[4] "ms"
 
-#: ConfigGeneral.qml:134
+#: ConfigGeneral.qml:136
 #, kde-format
 msgctxt "@label:spinbox accessible %1 is milliseconds"
 msgid "Hover open delay %1 ms"
 msgstr "Moill oscailte luiche %1 ms"
 
-#: ConfigGeneral.qml:144
+#: ConfigGeneral.qml:146
 #, kde-format
 msgctxt ""
 "@label for checkbox group, completes sentence like: … from current screen"
 msgid "Show only windows:"
 msgstr "Taispeáin fuinneoga amháin:"
 
-#: ConfigGeneral.qml:145
+#: ConfigGeneral.qml:147
 #, kde-format
 msgctxt "@option:check completes sentence: show only windows"
 msgid "From the current desktop"
 msgstr "Ón deasc reatha"
 
-#: ConfigGeneral.qml:150
+#: ConfigGeneral.qml:152
 #, kde-format
 msgctxt "@option:check completes sentence: show only windows"
 msgid "From the current activity"
 msgstr "Ón ngníomhaíocht reatha"
 
-#: ConfigGeneral.qml:155
+#: ConfigGeneral.qml:157
 #, kde-format
 msgctxt "@option:check completes sentence: show only windows"
 msgid "From the current screen"
 msgstr "Ón scáileán reatha"
 
-#: ConfigGeneral.qml:160
+#: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@option:check completes sentence: show only windows"
 msgid "That are minimized"
 msgstr "A bhfuil íoslaghdú déanta orthu"
 
-#: main.qml:163 main.qml:222
+#: ConfigGeneral.qml:171
+#, kde-format
+msgctxt "@label:listbox sort windows is list"
+msgid "Sort:"
+msgstr ""
+
+#: ConfigGeneral.qml:178
+#, kde-format
+msgctxt "@item:inlistbox sort windows in list"
+msgid "By time opened"
+msgstr ""
+
+#: ConfigGeneral.qml:182
+#, kde-format
+msgctxt "@item:inlistbox sort windows in list"
+msgid "Alphabetically"
+msgstr ""
+
+#: ConfigGeneral.qml:186
+#, kde-format
+msgctxt "@item:inlistbox sort windows in list"
+msgid "Alphabetically, grouped by virtual desktop"
+msgstr ""
+
+#: ConfigGeneral.qml:190
+#, kde-format
+msgctxt "@item:inlistbox sort windows in list"
+msgid "Alphabetically, grouped by activity"
+msgstr ""
+
+#: ConfigGeneral.qml:194
+#, kde-format
+msgctxt "@item:inlistbox sort windows in list"
+msgid "By last activated time"
+msgstr ""
+
+#: ConfigGeneral.qml:198
+#, kde-format
+msgctxt "@item:inlistbox sort windows in list"
+msgid "By horizontal window position"
+msgstr ""
+
+#: main.qml:41
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No open windows"
 msgstr "Gan aon fhuinneoga oscailte"
 
-#: main.qml:192
+#: main.qml:362
 #, kde-format
 msgctxt "@title:window title shown e.g. for desktop and expanded widgets"
 msgid "Plasma Desktop"
