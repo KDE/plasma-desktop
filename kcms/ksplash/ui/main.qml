@@ -78,13 +78,20 @@ KCM.GridViewKCM {
             Kirigami.Action {
                 visible: model.pluginName !== "None"
                 icon.name: "media-playback-start"
-                tooltip: i18nc("@action:button", "Preview Splash Screen")
+                tooltip: i18nc("@info:tooltip", "Preview splash screen")
                 onTriggered: kcm.test(model.pluginName)
             },
             Kirigami.Action {
+                visible: model.pluginName !== "None"
                 icon.name: model.pendingDeletion ? "edit-undo" : "edit-delete"
-                tooltip: i18nc("@action:button", "Uninstall")
-                enabled: model.uninstallable
+                tooltip: if (enabled) {
+                    return i18nc("@info:tooltip", "Remove splash screen");
+                } else if (model.uninstallable) {
+                    return i18nc("@info:tooltip", "Cannot delete the active splash screen");
+                } else {
+                    return i18nc("@info:tooltip", "Cannot delete system-installed splash screens");
+                }
+                enabled: model.uninstallable && !delegate.GridView.isCurrentItem
                 onTriggered: model.pendingDeletion = !model.pendingDeletion
             }
         ]
