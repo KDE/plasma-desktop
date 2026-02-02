@@ -178,7 +178,7 @@ Item {
         }
         Timer {
             id: graceLockTimer
-            interval: 3000
+            interval: 777
             onTriggered: {
                 root.clearPassword();
                 authenticator.startAuthenticating();
