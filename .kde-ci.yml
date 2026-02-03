@@ -54,6 +54,9 @@ Dependencies:
     'libraries/kirigami-addons': '@latest-kf6'
     'network/kaccounts-integration': '@latest-kf6'
 
+Environment:
+ QT_LOGGING_RULES: "org.kde.plasma.kicker.debug=true"
+
 RuntimeDependencies:
  - 'on': ['@all']
    'require':
