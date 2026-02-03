@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-03 00:48+0000\n"
 "PO-Revision-Date: 2024-10-29 08:07+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -61,16 +61,36 @@ msgstr "Gagal menampilkan pratinjau layar splash."
 #: ui/main.qml:81
 #, fuzzy, kde-format
 #| msgid "Preview Splash Screen"
-msgctxt "@action:button"
-msgid "Preview Splash Screen"
+msgctxt "@info:tooltip"
+msgid "Preview splash screen"
 msgstr "Pratinjau Layar Splash"
 
-#: ui/main.qml:86
+#: ui/main.qml:88
 #, fuzzy, kde-format
-#| msgid "Uninstall"
-msgctxt "@action:button"
-msgid "Uninstall"
-msgstr "Hapus instalasi"
+#| msgid "Preview Splash Screen"
+msgctxt "@info:tooltip"
+msgid "Remove splash screen"
+msgstr "Pratinjau Layar Splash"
+
+#: ui/main.qml:90
+#, fuzzy, kde-format
+#| msgid "You cannot delete the currently selected splash screen"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active splash screen"
+msgstr "Anda tidak dapat menghapus layar splash yang dipilih saat ini"
+
+#: ui/main.qml:92
+#, fuzzy, kde-format
+#| msgid "You cannot delete the currently selected splash screen"
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed splash screens"
+msgstr "Anda tidak dapat menghapus layar splash yang dipilih saat ini"
+
+#, fuzzy
+#~| msgid "Uninstall"
+#~ msgctxt "@action:button"
+#~ msgid "Uninstall"
+#~ msgstr "Hapus instalasi"
 
 #~ msgid "This module lets you choose the splash screen theme."
 #~ msgstr "Modul ini memungkinkanmu memilih tema layar splash."

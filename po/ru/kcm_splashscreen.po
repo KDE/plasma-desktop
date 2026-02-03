@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-03 00:48+0000\n"
 "PO-Revision-Date: 2026-01-27 19:35+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -59,16 +59,38 @@ msgid "Failed to show the splash screen preview."
 msgstr "Не удалось выполнить предварительный просмотр заставки."
 
 #: ui/main.qml:81
-#, kde-format
-msgctxt "@action:button"
-msgid "Preview Splash Screen"
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Preview Splash Screen"
+msgctxt "@info:tooltip"
+msgid "Preview splash screen"
 msgstr "Продемонстрировать заставку"
 
-#: ui/main.qml:86
-#, kde-format
-msgctxt "@action:button"
-msgid "Uninstall"
-msgstr "Удалить"
+#: ui/main.qml:88
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Preview Splash Screen"
+msgctxt "@info:tooltip"
+msgid "Remove splash screen"
+msgstr "Продемонстрировать заставку"
+
+#: ui/main.qml:90
+#, fuzzy, kde-format
+#| msgid "You cannot delete the currently selected splash screen"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active splash screen"
+msgstr "Активная заставка не может быть удалена"
+
+#: ui/main.qml:92
+#, fuzzy, kde-format
+#| msgid "You cannot delete the currently selected splash screen"
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed splash screens"
+msgstr "Активная заставка не может быть удалена"
+
+#~ msgctxt "@action:button"
+#~ msgid "Uninstall"
+#~ msgstr "Удалить"
 
 #~ msgid "This module lets you choose the splash screen theme."
 #~ msgstr "Этот модуль позволяет выбрать заставку."

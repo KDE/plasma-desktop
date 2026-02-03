@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-03 00:48+0000\n"
 "PO-Revision-Date: 2025-03-29 14:04+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -63,13 +63,33 @@ msgstr "Klarte ikke vise forhåndsvisning av velkomstbildet."
 #: ui/main.qml:81
 #, fuzzy, kde-format
 #| msgid "Preview Splash Screen"
-msgctxt "@action:button"
-msgid "Preview Splash Screen"
+msgctxt "@info:tooltip"
+msgid "Preview splash screen"
 msgstr "Forhåndsvisning av velkomstbilde"
 
-#: ui/main.qml:86
+#: ui/main.qml:88
 #, fuzzy, kde-format
-#| msgid "Uninstall"
-msgctxt "@action:button"
-msgid "Uninstall"
-msgstr "Avinstaller"
+#| msgid "Preview Splash Screen"
+msgctxt "@info:tooltip"
+msgid "Remove splash screen"
+msgstr "Forhåndsvisning av velkomstbilde"
+
+#: ui/main.qml:90
+#, fuzzy, kde-format
+#| msgid "You cannot delete the currently selected splash screen"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active splash screen"
+msgstr "Du kan ikke fjerne det gjeldende velkomstbildet"
+
+#: ui/main.qml:92
+#, fuzzy, kde-format
+#| msgid "You cannot delete the currently selected splash screen"
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed splash screens"
+msgstr "Du kan ikke fjerne det gjeldende velkomstbildet"
+
+#, fuzzy
+#~| msgid "Uninstall"
+#~ msgctxt "@action:button"
+#~ msgid "Uninstall"
+#~ msgstr "Avinstaller"

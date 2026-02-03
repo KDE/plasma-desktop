@@ -8,14 +8,15 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-29 00:45+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-02-01 17:57-0500\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.8\n"
 
 #: code/tools.js:53
 #, kde-format
@@ -30,29 +31,26 @@ msgstr "يىغقۇچقا قوش"
 #: code/tools.js:83
 #, kde-format
 msgid "On All Activities"
-msgstr ""
+msgstr "بارلىق پائالىيەتتە"
 
 #: code/tools.js:133
 #, kde-format
 msgid "On the Current Activity"
-msgstr ""
+msgstr "نۆۋەتتىكى پائالىيەتتە"
 
 #: code/tools.js:147
-#, fuzzy, kde-format
-#| msgid "Add to Favorites"
+#, kde-format
 msgid "Show in Favorites"
-msgstr "يىغقۇچقا قوش"
+msgstr "يىغقۇچتا كۆرسەت"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "ئادەتتىكى"
 
 #: ConfigGeneral.qml:48
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "سىنبەلگە:"
@@ -61,157 +59,147 @@ msgstr "سىنبەلگە:"
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
-msgstr ""
+msgstr "تاللا…"
 
 #: ConfigGeneral.qml:138
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
-msgstr ""
+msgstr "سىنبەلگە تازىلا"
 
 #: ConfigGeneral.qml:159
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
-msgstr "پروگراممىلار"
+msgstr "پىروگراممىنى كۆرسىتىدۇ:"
 
 #: ConfigGeneral.qml:161
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
-msgstr ""
+msgstr "ئاتىلا"
 
 #: ConfigGeneral.qml:161
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
-msgstr ""
+msgstr "چۈشەندۈرۈشىلا"
 
 #: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
-msgstr ""
+msgstr "ئاتى (چۈشەندۈرۈش)"
 
 #: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
-msgstr ""
+msgstr "چۈشەندۈرۈش(ئات)"
 
 #: ConfigGeneral.qml:172
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
-msgstr ""
+msgstr "قىلمىش:"
 
 #: ConfigGeneral.qml:174
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
-msgstr "پروگراممىلار"
+msgstr "پىروگراممىنى ئېلىپبە تەرتىپىدە تەرتىپلەيدۇ"
 
 #: ConfigGeneral.qml:182
 #, kde-format
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
-msgstr ""
+msgstr "تارماق تىزىملىكنى يەككە دەرىجىگە تۈزلەيدۇ"
 
 #: ConfigGeneral.qml:190
 #, kde-format
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
-msgstr ""
+msgstr "غول تىزىملىك دەرىجىسىدە سىنبەلگە كۆرسىتىدۇ"
 
 #: ConfigGeneral.qml:200
-#, fuzzy, kde-format
-#| msgid "Add to Favorites"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
-msgstr "يىغقۇچقا قوش"
+msgstr "سەھىپە كۆرسەت:"
 
 #: ConfigGeneral.qml:203
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent applications"
-msgstr "پروگراممىلار"
+msgstr "يېقىنقى پىروگرامما"
 
 #: ConfigGeneral.qml:204
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used applications"
-msgstr "پروگراممىلار"
+msgstr "دائىم ئىشلىتىدىغان پىروگرامما"
 
 #: ConfigGeneral.qml:211
-#, fuzzy, kde-format
-#| msgid "Recent Documents"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent files"
-msgstr "يېقىنقى پۈتۈكلەر"
+msgstr "يېقىنقى ھۆججەت"
 
 #: ConfigGeneral.qml:212
-#, fuzzy, kde-format
-#| msgid "Recent Documents"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used files"
-msgstr "يېقىنقى پۈتۈكلەر"
+msgstr "دائىم ئىشلىتىدىغان ھۆججەت"
 
 #: ConfigGeneral.qml:218
-#, fuzzy, kde-format
-#| msgid "Add to Favorites"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
-msgstr "يىغقۇچقا قوش"
+msgstr "سەھىپىدىكى تۈرنىڭ تەرتىپى:"
 
 #: ConfigGeneral.qml:219
-#, fuzzy, kde-format
-#| msgid "Recent Documents"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
-msgstr "يېقىنقى پۈتۈكلەر"
+msgstr "يېقىندا ئىشلەتكەن"
 
 #: ConfigGeneral.qml:219
-#, fuzzy, kde-format
-#| msgid "Recent Documents"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Often used"
-msgstr "يېقىنقى پۈتۈكلەر"
+msgstr "دائىم ئىشلىتىدىغان"
 
 #: ConfigGeneral.qml:229
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
-msgstr ""
+msgstr "ئىزدە:"
 
 #: ConfigGeneral.qml:231
 #, kde-format
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
-msgstr ""
+msgstr "ئىزدە دائىرىسىنى خەتكۈش، ھۆججەت ۋە ئېلخەتكە كېڭەيتىدۇ"
 
 #: ConfigGeneral.qml:239
 #, kde-format
 msgctxt "@option:check"
 msgid "Align search results to bottom"
-msgstr ""
+msgstr "ئىزدەش نەتىجىسىنى ئاستىغا توغرىلايدۇ"
 
 #: ConfigGeneral.qml:244
 #, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
-msgstr ""
+msgstr "قىياپەت:"
 
 #: ConfigGeneral.qml:249
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
-msgstr ""
+msgstr "ئىشلەتكىلى بولسا قاراڭغۇ ھالەتنى تاللايدۇ"
 
 #: ConfigGeneral.qml:253
 #, kde-kuit-format
@@ -220,57 +208,53 @@ msgid ""
 "This feature uses the complementary colors from your colorscheme, which "
 "usually feature a dark background."
 msgstr ""
+"بۇ ئىقتىدار رەڭ لايىھەڭىزگە قوشۇمچە رەڭنى ئىشلىتىدۇ، بۇ ئادەتتە قاراڭغۇ "
+"تەگلىكنى كۆرسىتىدۇ."
 
 #: DashboardRepresentation.qml:359
-#, fuzzy, kde-format
-#| msgid "Add to Favorites"
+#, kde-format
 msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
-msgstr "يىغقۇچقا قوش"
+msgstr "يىغقۇچ"
 
 #: ItemListDelegate.qml:31
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
-msgstr ""
+msgstr "سەھىپە ئاچ"
 
 #: ItemListDelegate.qml:32
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
-msgstr ""
+msgstr "قوزغات"
 
 #: main.qml:211
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
-msgstr "پروگراممىلار"
+msgstr "پىروگرامما تەھرىرلە…"
 
 #: MenuRepresentation.qml:170
-#, fuzzy, kde-format
-#| msgid "Add to Favorites"
+#, kde-format
 msgctxt "@title:group accessible name for favorite group in sidebar"
 msgid "Favorites"
-msgstr "يىغقۇچقا قوش"
+msgstr "يىغقۇچ"
 
 #: MenuRepresentation.qml:348
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr ""
+msgstr "ماس كەلگىنى يوق"
 
-#, fuzzy
 #~| msgid "Recent Documents"
 #~ msgid "Recent contacts"
 #~ msgstr "يېقىنقى پۈتۈكلەر"
 
-#, fuzzy
 #~| msgid "Recent Documents"
 #~ msgid "Often used contacts"
 #~ msgstr "يېقىنقى پۈتۈكلەر"
 
-#, fuzzy
 #~| msgid "Recent Documents"
 #~ msgid "Often used documents"
 #~ msgstr "يېقىنقى پۈتۈكلەر"
@@ -284,7 +268,6 @@ msgstr ""
 #~ msgid "Add to Desktop"
 #~ msgstr "ئۈستەلئۈستىگە قوش"
 
-#, fuzzy
 #~| msgid "Add to Panel"
 #~ msgid "Add to Panel (Widget)"
 #~ msgstr "تاختىغا قوش"
@@ -292,63 +275,51 @@ msgstr ""
 #~ msgid "Recent Documents"
 #~ msgstr "يېقىنقى پۈتۈكلەر"
 
-#, fuzzy
 #~| msgid "Recent Documents"
 #~ msgid "Forget Recent Documents"
 #~ msgstr "يېقىنقى پۈتۈكلەر"
 
-#, fuzzy
 #~| msgid "Applications"
 #~ msgid "Edit Application..."
 #~ msgstr "پروگراممىلار"
 
-#, fuzzy
 #~| msgid "Applications"
 #~ msgid "Hide Application"
 #~ msgstr "پروگراممىلار"
 
-#, fuzzy
 #~| msgctxt "Tab title"
 #~| msgid "Applications"
 #~ msgid "Applications"
 #~ msgstr "پروگراممىلار"
 
-#, fuzzy
 #~| msgid "Applications"
 #~ msgid "Unhide Applications in '%1'"
 #~ msgstr "پروگراممىلار"
 
-#, fuzzy
 #~| msgid "Recent Documents"
 #~ msgid "Contacts"
 #~ msgstr "يېقىنقى پۈتۈكلەر"
 
-#, fuzzy
 #~| msgid "Recent Documents"
 #~ msgid "Forget All Contacts"
 #~ msgstr "يېقىنقى پۈتۈكلەر"
 
-#, fuzzy
 #~| msgid "Recent Documents"
 #~ msgid "Documents"
 #~ msgstr "يېقىنقى پۈتۈكلەر"
 
-#, fuzzy
 #~| msgid "Applications"
 #~ msgid "Forget Application"
 #~ msgstr "پروگراممىلار"
 
-#, fuzzy
 #~| msgid "Recent Documents"
 #~ msgid "Forget All"
 #~ msgstr "يېقىنقى پۈتۈكلەر"
 
-#, fuzzy
 #~| msgid "Applications"
 #~ msgid "Forget All Applications"
 #~ msgstr "پروگراممىلار"
 
-#, fuzzy
 #~| msgid "Recent Documents"
 #~ msgid "Forget All Documents"
 #~ msgstr "يېقىنقى پۈتۈكلەر"
@@ -356,57 +327,47 @@ msgstr ""
 #~ msgid "All Applications"
 #~ msgstr "بارلىق پروگراممىلار"
 
-#, fuzzy
 #~| msgid "Recent Documents"
 #~ msgid "Recent Contacts"
 #~ msgstr "يېقىنقى پۈتۈكلەر"
 
-#, fuzzy
 #~| msgid "Recent Documents"
 #~ msgid "Often Used Documents"
 #~ msgstr "يېقىنقى پۈتۈكلەر"
 
-#, fuzzy
 #~| msgid "Applications"
 #~ msgid "Recent Applications"
 #~ msgstr "پروگراممىلار"
 
-#, fuzzy
 #~| msgid "Applications"
 #~ msgid "Often Used Applications"
 #~ msgstr "پروگراممىلار"
 
-#, fuzzy
 #~| msgctxt "an action"
 #~| msgid "New Session"
 #~ msgid "Power / Session"
 #~ msgstr "يېڭى ئەڭگىمە"
 
-#, fuzzy
 #~| msgctxt "an action"
 #~| msgid "Lock"
 #~ msgid "Lock"
 #~ msgstr "قۇلۇپلا"
 
-#, fuzzy
 #~| msgctxt "an action"
 #~| msgid "New Session"
 #~ msgid "Save Session"
 #~ msgstr "يېڭى ئەڭگىمە"
 
-#, fuzzy
 #~| msgctxt "an action"
 #~| msgid "Hibernate"
 #~ msgid "Hibernate"
 #~ msgstr "ئۈچەك"
 
-#, fuzzy
 #~| msgctxt "an action"
 #~| msgid "Restart"
 #~ msgid "Restart"
 #~ msgstr "قايتا قوزغات"
 
-#, fuzzy
 #~| msgctxt "an action"
 #~| msgid "Shutdown"
 #~ msgid "Shut Down"
@@ -415,68 +376,56 @@ msgstr ""
 #~ msgid "Session"
 #~ msgstr "ئەڭگىمە"
 
-#, fuzzy
 #~| msgid "Session"
 #~ msgid "End session"
 #~ msgstr "ئەڭگىمە"
 
-#, fuzzy
 #~| msgctxt "an action"
 #~| msgid "Suspend"
 #~ msgid "Suspend to RAM"
 #~ msgstr "توڭلات"
 
-#, fuzzy
 #~| msgctxt "an action"
 #~| msgid "Suspend"
 #~ msgid "Suspend to disk"
 #~ msgstr "توڭلات"
 
-#, fuzzy
 #~| msgctxt "an action"
 #~| msgid "Restart"
 #~ msgid "Restart computer"
 #~ msgstr "قايتا قوزغات"
 
-#, fuzzy
 #~| msgid "&Safely Remove '%1'"
 #~ msgctxt "@action opens a software center with the application"
 #~ msgid "Manage '%1'..."
 #~ msgstr "'%1' نى بىخەتەر چىقىرىۋەت(&S)"
 
-#, fuzzy
 #~| msgid "Applications"
 #~ msgid "Show recent applications"
 #~ msgstr "پروگراممىلار"
 
-#, fuzzy
 #~| msgid "Applications"
 #~ msgid "Show often used applications"
 #~ msgstr "پروگراممىلار"
 
-#, fuzzy
 #~| msgid "Recent Documents"
 #~ msgid "Show recent documents"
 #~ msgstr "يېقىنقى پۈتۈكلەر"
 
-#, fuzzy
 #~| msgid "Recent Documents"
 #~ msgid "Show often used documents"
 #~ msgstr "يېقىنقى پۈتۈكلەر"
 
-#, fuzzy
 #~| msgctxt "an action"
 #~| msgid "Logout"
 #~ msgid "Logout"
 #~ msgstr "تىزىمدىن چىقىش"
 
-#, fuzzy
 #~| msgctxt "an action"
 #~| msgid "Suspend"
 #~ msgid "Suspend"
 #~ msgstr "توڭلات"
 
-#, fuzzy
 #~| msgctxt "an action"
 #~| msgid "New Session"
 #~ msgid "New Session"
@@ -536,12 +485,10 @@ msgstr ""
 #~ msgid "An error occurred while accessing '%1'"
 #~ msgstr "'%1' نى زىيارەت قىلىۋاتقاندا خاتالىق كۆرۈلدى"
 
-#, fuzzy
 #~| msgid "Remove from Favorites"
 #~ msgid "Remove from Sidebar"
 #~ msgstr "يىغقۇچتىن چىقىرىۋەت"
 
-#, fuzzy
 #~| msgid "Add to Panel"
 #~ msgid "Add to Sidebar"
 #~ msgstr "تاختىغا قوش"

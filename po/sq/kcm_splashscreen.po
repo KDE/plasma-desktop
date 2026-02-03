@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-03 00:48+0000\n"
 "PO-Revision-Date: 2026-01-03 12:20-0500\n"
 "Last-Translator: Agron Selimaj <as9902613@gmail.com>\n"
 "Language-Team: sq\n"
@@ -61,13 +61,33 @@ msgstr "Dështoi shfaqja e parapamjes së ekranit në nisje."
 #: ui/main.qml:81
 #, fuzzy, kde-format
 #| msgid "Preview Splash Screen"
-msgctxt "@action:button"
-msgid "Preview Splash Screen"
+msgctxt "@info:tooltip"
+msgid "Preview splash screen"
 msgstr "Parapamja e Ekranit në Nisje"
 
-#: ui/main.qml:86
+#: ui/main.qml:88
 #, fuzzy, kde-format
-#| msgid "Uninstall"
-msgctxt "@action:button"
-msgid "Uninstall"
-msgstr "Çinstalo"
+#| msgid "Preview Splash Screen"
+msgctxt "@info:tooltip"
+msgid "Remove splash screen"
+msgstr "Parapamja e Ekranit në Nisje"
+
+#: ui/main.qml:90
+#, fuzzy, kde-format
+#| msgid "You cannot delete the currently selected splash screen"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active splash screen"
+msgstr "Nuk mund ta fshish ekranin e tashëm të përzgjedhur të nisjes"
+
+#: ui/main.qml:92
+#, fuzzy, kde-format
+#| msgid "You cannot delete the currently selected splash screen"
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed splash screens"
+msgstr "Nuk mund ta fshish ekranin e tashëm të përzgjedhur të nisjes"
+
+#, fuzzy
+#~| msgid "Uninstall"
+#~ msgctxt "@action:button"
+#~ msgid "Uninstall"
+#~ msgstr "Çinstalo"

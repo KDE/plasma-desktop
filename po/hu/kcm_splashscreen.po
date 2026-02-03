@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-03 00:48+0000\n"
 "PO-Revision-Date: 2023-12-14 22:50+0100\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -62,16 +62,36 @@ msgstr "Nem sikerült megjeleníteni a nyitóképernyő előnézetét."
 #: ui/main.qml:81
 #, fuzzy, kde-format
 #| msgid "Preview Splash Screen"
-msgctxt "@action:button"
-msgid "Preview Splash Screen"
+msgctxt "@info:tooltip"
+msgid "Preview splash screen"
 msgstr "Nyitóképernyő előnézete"
 
-#: ui/main.qml:86
+#: ui/main.qml:88
 #, fuzzy, kde-format
-#| msgid "Uninstall"
-msgctxt "@action:button"
-msgid "Uninstall"
-msgstr "Eltávolítás"
+#| msgid "Preview Splash Screen"
+msgctxt "@info:tooltip"
+msgid "Remove splash screen"
+msgstr "Nyitóképernyő előnézete"
+
+#: ui/main.qml:90
+#, fuzzy, kde-format
+#| msgid "You cannot delete the currently selected splash screen"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active splash screen"
+msgstr "Nem lehet törölni a jelenleg kijelölt nyitóképernyőt"
+
+#: ui/main.qml:92
+#, fuzzy, kde-format
+#| msgid "You cannot delete the currently selected splash screen"
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed splash screens"
+msgstr "Nem lehet törölni a jelenleg kijelölt nyitóképernyőt"
+
+#, fuzzy
+#~| msgid "Uninstall"
+#~ msgctxt "@action:button"
+#~ msgid "Uninstall"
+#~ msgstr "Eltávolítás"
 
 #~ msgid "This module lets you choose the splash screen theme."
 #~ msgstr "Ebben a modulban álltíthatja be a nyitóképernyő témáját."

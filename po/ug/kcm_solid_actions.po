@@ -8,29 +8,30 @@ msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-02-01 17:57-0500\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.8\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
+msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
+msgstr "sahranbay@gmail.com,  gheyret@gmail.com"
 
 #: ActionEditor.cpp:60
 #, kde-format
 msgid "Editing Action '%1'"
-msgstr ""
+msgstr "«%1» مەشغۇلاتنى تەھرىرلەيدۇ"
 
 #: ActionEditor.cpp:162
 #, kde-format
@@ -38,73 +39,73 @@ msgid ""
 "It appears that the action name, command, icon or condition are not valid.\n"
 "Therefore, changes will not be applied."
 msgstr ""
+"مەشغۇلات ئىسمى، بۇيرۇق، سىنبەلگە ياكى شەرت ئىناۋەتسىز.\n"
+"شۇڭلاشقا ئۆزگىرىش قوللىنىلمايدۇ."
 
 #: ActionEditor.cpp:163
 #, kde-format
 msgid "Invalid action"
-msgstr ""
+msgstr "ئىناۋەتسىز مەشغۇلات"
 
 #. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
 #: ActionEditor.ui:17
-#, fuzzy, kde-format
-#| msgid "Reset Parameter"
+#, kde-format
 msgid "Edit Parameter"
-msgstr "پارامېتىرلارنى ئەسلىگە قايتۇر"
+msgstr "پارامېتىر تەھرىر"
 
 #. i18n: ectx: property (text), widget (QLabel, LblParameterType)
 #: ActionEditor.ui:43
-#, fuzzy, kde-format
-#| msgid "Reset Parameter"
+#, kde-format
 msgid "Parameter type:"
-msgstr "پارامېتىرلارنى ئەسلىگە قايتۇر"
+msgstr "پارامېتىر تۈرى:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
 #: ActionEditor.ui:51
 #, kde-format
 msgid "Property Match"
-msgstr ""
+msgstr "خاسلىق ماسلىقى"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
 #: ActionEditor.ui:56
 #, kde-format
 msgid "Content Conjunction"
-msgstr ""
+msgstr "مەزمۇن باغلىنىشى"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
 #: ActionEditor.ui:61
 #, kde-format
 msgid "Content Disjunction"
-msgstr ""
+msgstr "مەزمۇن باغلانماسلىقى"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
 #: ActionEditor.ui:66
 #, kde-format
 msgid "Device Interface Match"
-msgstr ""
+msgstr "ئۈسكۈنە ئارايۈزى ماسلىقى"
 
 #. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
 #: ActionEditor.ui:96
 #, kde-format
 msgid "Device type:"
-msgstr "ئۈسكۈنە تىپى:"
+msgstr "ئۈسكۈنە تۈرى:"
 
 #. i18n: ectx: property (text), widget (QLabel, LblValueName)
 #: ActionEditor.ui:135
 #, kde-format
 msgid "Value name:"
-msgstr ""
+msgstr "قىممەت ئاتى:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
 #: ActionEditor.ui:175
 #, kde-format
 msgid "Equals"
-msgstr "تەڭلىك"
+msgstr "تەڭ"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
 #: ActionEditor.ui:180
 #, kde-format
 msgid "Contains"
-msgstr "ئۆز ئىچىگە ئالغان"
+msgstr "ئىچىدە"
 
 #. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
 #: ActionEditor.ui:208
@@ -116,13 +117,13 @@ msgstr "پارامېتىرلارنى ئەسلىگە قايتۇر"
 #: ActionEditor.ui:215
 #, kde-format
 msgid "Save Parameter Changes"
-msgstr ""
+msgstr "پارامېتىر ئۆزگىرىشىنى ساقلا"
 
 #. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
 #: ActionEditor.ui:247
 #, kde-format
 msgid "Action icon, click to change it"
-msgstr ""
+msgstr "مەشغۇلات سىنبەلگىسى، چېكىلسە ئۆزگەرتىدۇ"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
 #: ActionEditor.ui:254
@@ -147,12 +148,19 @@ msgid ""
 "%d: Path to the device node - Block devices only\n"
 "%i: The identifier of the device"
 msgstr ""
+"مەشغۇلاتنى قوزغىتىدىغان بۇيرۇق\n"
+"تۆۋەندىكى خالىغان ياكى بارلىق كېڭەيتىلگەن بەلگىنى ئۆز ئىچىگە ئالىدۇ، چوڭ "
+"كىچىك ھەرپنى پەرقلەندۈرمەيدۇ:\n"
+"\n"
+"%f: ئۈسكۈنىنىڭ ئېگەرلەش نۇقتىسى -  پەقەت ساقلاش زىيارەت ئۈسكۈنىسىلا\n"
+"%d: ئۈسكۈنە تۈگۈنىنىڭ يولى - بۆلەك ئۈسكۈنىسىلا\n"
+"%i: ئۈسكۈنىنىڭ پەرقلەندۈرگۈچىسى"
 
 #. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
 #: ActionEditor.ui:300
 #, kde-format
 msgid "Devices must match the following parameters for this action:"
-msgstr ""
+msgstr "ئۈسكۈنە مەشغۇلاتى چوقۇم تۆۋەندىكى پارامېتىرغا ماس كېلىشى كېرەك:"
 
 #. i18n: ectx: property (text), widget (QLabel, LblActionName)
 #: AddAction.ui:19
@@ -164,12 +172,12 @@ msgstr "مەشغۇلات ئاتى:"
 #: AddAction.ui:26
 #, kde-format
 msgid "Enter the name for your new action"
-msgstr ""
+msgstr "يېڭى مەشغۇلاتنىڭ ئىسمى كىرگۈزۈلىدۇ"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
 msgid "Solid Action Desktop File Generator"
-msgstr "Solid Action Desktop File Generator"
+msgstr "Solid مەشغۇلات Desktop ھۆججەت ھاسىللىغۇچ"
 
 #: DesktopFileGenerator.cpp:27
 #, kde-format
@@ -177,6 +185,8 @@ msgid ""
 "Tool to automatically generate Desktop Files from Solid DeviceInterface "
 "classes for translation"
 msgstr ""
+"Solid نىڭ DeviceInterface تۈرىگە ئاساسەن تەرجىمە قىلىشقا قولاي Desktop "
+"ھۆججەتنى ئۆزلۈكىدىن ھاسىللايدىغان قورال"
 
 #: DesktopFileGenerator.cpp:29
 #, kde-format
@@ -191,47 +201,47 @@ msgstr "Ben Cooksley"
 #: DesktopFileGenerator.cpp:30
 #, kde-format
 msgid "Maintainer"
-msgstr "مەسئۇل كىشى"
+msgstr "ئاسرىغۇچى"
 
 #: PredicateItem.cpp:119
 #, kde-format
 msgid "The device must be of the type %1"
-msgstr ""
+msgstr "ئۈسكۈنە تۈرى چوقۇم %1"
 
 #: PredicateItem.cpp:122
 #, kde-format
 msgid "Any of the contained properties must match"
-msgstr ""
+msgstr "ئۆز ئىچىگە ئالغان خالىغان خاسلىق چوقۇم ماس كېلىشى كېرەك"
 
 #: PredicateItem.cpp:125
 #, kde-format
 msgid "All of the contained properties must match"
-msgstr ""
+msgstr "ئۆز ئىچىگە ئالغان ھەممە خاسلىق چوقۇم ماس كېلىشى كېرەك"
 
 #: PredicateItem.cpp:134
 #, kde-format
 msgid "The device property %1 must equal %2"
-msgstr ""
+msgstr "ئۈسكۈنە خاسلىقى %1 چوقۇم %2 غا تەڭ بولۇشى كېرەك"
 
 #: PredicateItem.cpp:137
 #, kde-format
 msgid "The device property %1 must contain %2"
-msgstr ""
+msgstr "ئۈسكۈنە خاسلىقى %1 چوقۇم %2 نى ئۆز ئىچىگە ئېلىشى كېرەك"
 
 #: SolidActions.cpp:137
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
-msgstr ""
+msgstr "بۇ مەشغۇلاتنىڭ شەرتى ئىناۋەتسىز."
 
 #: SolidActions.cpp:137
 #, kde-format
 msgid "Error Parsing Device Conditions"
-msgstr ""
+msgstr "ئۈسكۈنە شەرتىنى يېشىۋاتقاندا خاتالىق كۆرۈلدى"
 
 #: SolidActions.cpp:185
 #, kde-format
 msgid "No Action Selected"
-msgstr ""
+msgstr "ھېچقانداق مەشغۇلات تاللانمىدى"
 
 #: SolidActions.cpp:206
 #, kde-format
@@ -248,13 +258,13 @@ msgstr "چىقىرىۋەت"
 #: SolidActions.ui:29
 #, kde-format
 msgid "Edit…"
-msgstr ""
+msgstr "تەھرىر…"
 
 #. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
 #: SolidActions.ui:36
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "قوش…"
 
 #~ msgid "Edit..."
 #~ msgstr "تەھرىر…"

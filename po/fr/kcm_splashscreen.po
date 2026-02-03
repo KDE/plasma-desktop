@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-03 00:48+0000\n"
 "PO-Revision-Date: 2026-01-09 13:33+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
@@ -63,16 +63,38 @@ msgid "Failed to show the splash screen preview."
 msgstr "Impossible d'afficher l'aperçu de l'écran de démarrage."
 
 #: ui/main.qml:81
-#, kde-format
-msgctxt "@action:button"
-msgid "Preview Splash Screen"
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Preview Splash Screen"
+msgctxt "@info:tooltip"
+msgid "Preview splash screen"
 msgstr "Aperçu de l'écran de démarrage"
 
-#: ui/main.qml:86
-#, kde-format
-msgctxt "@action:button"
-msgid "Uninstall"
-msgstr "Désinstaller"
+#: ui/main.qml:88
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Preview Splash Screen"
+msgctxt "@info:tooltip"
+msgid "Remove splash screen"
+msgstr "Aperçu de l'écran de démarrage"
+
+#: ui/main.qml:90
+#, fuzzy, kde-format
+#| msgid "You cannot delete the currently selected splash screen"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active splash screen"
+msgstr "Vous ne pouvez supprimer l'écran de session actuellement sélectionné."
+
+#: ui/main.qml:92
+#, fuzzy, kde-format
+#| msgid "You cannot delete the currently selected splash screen"
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed splash screens"
+msgstr "Vous ne pouvez supprimer l'écran de session actuellement sélectionné."
+
+#~ msgctxt "@action:button"
+#~ msgid "Uninstall"
+#~ msgstr "Désinstaller"
 
 #~ msgid "This module lets you choose the splash screen theme."
 #~ msgstr "Ce module vous permet de choisir le thème de l'écran de session."

@@ -8,99 +8,96 @@ msgstr ""
 "Project-Id-Version: plasma_applet_kimpanel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-02-01 17:57-0500\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.8\n"
 
 #: qml/ActionMenu.qml:92
 #, kde-format
 msgctxt "@label placeholder for empty menu"
 msgid "(Empty)"
-msgstr ""
+msgstr "(بوش)"
 
 #: qml/config.qml:13
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Appearance"
-msgstr ""
+msgstr "قىياپەت"
 
 #: qml/ConfigAppearance.qml:31
-#, fuzzy, kde-format
-#| msgid "Input Method"
+#, kde-format
 msgctxt "@title:group for radiobuttons"
 msgid "Input method list:"
-msgstr "كىرگۈزگۈچ"
+msgstr "كىرگۈزگۈچ تىزىمى:"
 
 #: qml/ConfigAppearance.qml:32
 #, kde-format
 msgctxt "@option:radio IM list orientation"
 msgid "Vertical"
-msgstr ""
+msgstr "بويىغا"
 
 #: qml/ConfigAppearance.qml:38
 #, kde-format
 msgctxt "@option:radio IM list orientation"
 msgid "Horizontal"
-msgstr ""
+msgstr "توغرىسىغا"
 
 #: qml/ConfigAppearance.qml:45
-#, fuzzy, kde-format
-#| msgid "Font"
+#, kde-format
 msgctxt "@title group font selection"
 msgid "Font:"
-msgstr "خەت نۇسخا"
+msgstr "خەت نۇسخا:"
 
 #: qml/ConfigAppearance.qml:51
 #, kde-format
 msgctxt "@option:check use custom font"
 msgid "Use custom:"
-msgstr ""
+msgstr "ئىختىيارىي ئىشلەت:"
 
 #: qml/ConfigAppearance.qml:57
 #, kde-format
 msgctxt "@info The selected font family (%1) and font size (%2)"
 msgid "%1 %2 pt"
-msgstr ""
+msgstr "%1 %2 pt"
 
 #: qml/ConfigAppearance.qml:65
-#, fuzzy, kde-format
-#| msgid "Select Font"
+#, kde-format
 msgctxt "@action:button opens font dialog"
 msgid "Choose Font…"
-msgstr "خەت نۇسخا تاللا"
+msgstr "خەت نۇسخا تاللىنىدۇ…"
 
 #: qml/ConfigAppearance.qml:78
 #, kde-format
 msgctxt "@title:group The arrangement of icons in the Panel"
 msgid "Panel icon size:"
-msgstr ""
+msgstr "كۆزنەكچە سىنبەلگە چوڭلۇقى:"
 
 #: qml/ConfigAppearance.qml:79
 #, kde-format
 msgctxt "@option:radio panel icon size"
 msgid "Small"
-msgstr ""
+msgstr "كىچىك"
 
 #: qml/ConfigAppearance.qml:87
 #, kde-format
 msgctxt "@option:radio panel icon size"
 msgid "Scale with Panel height"
-msgstr ""
+msgstr "كۆزنەكچە ئېگىزلىكى نىسبىتىدە چوڭايتىدۇ"
 
 #: qml/ConfigAppearance.qml:88
 #, kde-format
 msgctxt "@option:radio panel icon size"
 msgid "Scale with Panel width"
-msgstr ""
+msgstr "كۆزنەكچە كەڭلىكى نىسبىتىدە چوڭايتىدۇ"
 
 #: qml/ConfigAppearance.qml:96
-#, fuzzy, kde-format
-#| msgid "Select Font"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Font"
 msgstr "خەت نۇسخا تاللا"
@@ -109,43 +106,38 @@ msgstr "خەت نۇسخا تاللا"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show"
-msgstr ""
+msgstr "كۆرسەت"
 
 #: qml/ContextMenu.qml:111
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide %1"
-msgstr ""
+msgstr "%1 نى يوشۇر"
 
 #: qml/ContextMenu.qml:120
-#, fuzzy, kde-format
-#| msgid "Input Method"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Input Method"
-msgstr "كىرگۈزگۈچ"
+msgstr "كىرگۈزگۈچ سەپلىمىسى"
 
 #: qml/ContextMenu.qml:128
-#, fuzzy, kde-format
-#| msgid "Reload Config"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Reload Config"
 msgstr "سەپلىمىنى قايتا يۈكلە"
 
 #: qml/ContextMenu.qml:136
-#, fuzzy, kde-format
-#| msgid "Input Method"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Exit Input Method"
-msgstr "كىرگۈزگۈچ"
+msgstr "كىرگۈزگۈچتىن چېكىن"
 
 #: qml/main.qml:254
-#, fuzzy, kde-format
-#| msgid "Input Method"
+#, kde-format
 msgctxt "@label placeholder for missing label"
 msgid "Input Method Panel"
-msgstr "كىرگۈزگۈچ"
+msgstr "كىرگۈزگۈچ كۆزنەكچىسى"
 
-#, fuzzy
 #~| msgid "Select Font"
 #~ msgid "Select Font..."
 #~ msgstr "خەت نۇسخا تاللا"

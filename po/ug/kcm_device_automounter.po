@@ -8,34 +8,46 @@ msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-23 00:45+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-02-01 17:56-0500\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.8\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
+msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
+msgstr "sahranbay@gmail.com,  gheyret@gmail.com"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This list contains the storage devices known to the system. If "
+#| "\"Automount on Login\" is checked, the device will be automatically "
+#| "mounted even though \"Mount all removable media at login\" is unchecked. "
+#| "The same applies for \"Automount on Attach\"."
 msgid ""
 "This list contains the storage devices known to the system. If \"Automount "
 "on Login\" is checked, devices will be automatically mounted even though "
 "\"Mount all removable media at login\" is unchecked. The same applies for "
 "\"Automount on Attach\"."
 msgstr ""
+"بۇ تىزىمدا سىستېمىغا ئېنىق بولغان بارلىق ساقلاش ئۈسكۈنىسى بار. ئەگەر "
+"ئىچىدىكى بىر ئۈسكۈنىنىڭ «تىزىمغا كىرگەندە ئۆزلۈكىدىن ئېگەرلە» تاللانمىسى "
+"تاللانغان بولسا، «تىزىمغا كىرگەندە بارلىق كۆچمە ئۈسكۈنىنى ئېگەرلە» "
+"تاللانمىسى تاللانغان ياكى تاللانمىغان بولۇشىدىن قەتئىينەزەر ئۆزلۈكىدىن "
+"ئېگەرلىنىدۇ. «چېتىلغاندا ئۆزلۈكىدىن ئېگەرلە» ئۈچۈنمۇ ئوخشاش ئۇسۇل "
+"قوللىنىلىدۇ."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:54
@@ -47,12 +59,16 @@ msgid ""
 "system is set to only automatically mount familiar devices, the device will "
 "not be automatically mounted."
 msgstr ""
+"بۇ توپچە چېكىلگەندە تاللانغان ئۈسكۈنە «ئۇنتۇ» لىدۇ. ئەگەر «ئىلگىرى قولدا "
+"يۈكلەنگەن كۆچمە ئۈسكۈنىنىلا ئۆزلۈكىدىن يۈكلە» تاللانمىسى تاللانغان بولسا "
+"ئاندىن كۈچكە ئىگە. ئۈسكۈنە ئۇنتۇلغان ۋە سىستېما پەقەت تونۇش ئۈسكۈنىلەرنىلا "
+"ئېگەرلەيدىغان بولسا، بۇ ئۈسكۈنە ئۆزلۈكىدىن ئېگەرلەنمەيدۇ."
 
 #. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:57
 #, kde-format
 msgid "Forget Device"
-msgstr "ئۈسكۈنىنى ئۇنتۇش"
+msgstr "ئۈسكۈنىنى ئۇنتۇ"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:67
@@ -65,55 +81,55 @@ msgid ""
 "mounted the next time it is seen. Once they have been accessed, however, the "
 "device's contents will be automatically made available to the system."
 msgstr ""
+"بۇ تاللانمىغاندا، سىستېما پەقەت ئەستە تۇتقان ئۈسكۈنىلەرنىلا ئۆزلۈكىدىن "
+"ئېگەرلەيدۇ. ئەگەر ئۈسكۈنىدىكى ھۆججەتنى زىيارەت قىلغان بولسىڭىز، سىستېما شۇ "
+"ئۈسكۈنە كېيىنكى قېتىم چېتىلغاندا ئۆزلۈكىدىن يۈكلەيدۇ. ئەكسىچە، ئەگەر بىر USB "
+"ۋاسىتە قويغۇچ چېتىلىپ توك لىقلاپ، ئۇنىڭدىكى ھۆججەت زىيارەت قىلىنمىغان بولسا، "
+"سىستېما ئۇنى ئەستە تۇتمايدۇ، كېيىنكى قېتىم ئۇ ۋاسىتە قويغۇچنى چاتقاندا "
+"ئۆزلۈكىدىن ئېگەرلىمەيدۇ."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Only automatically mount removable media that has been manually mounted "
-#| "before"
+#, kde-format
 msgid "Automatically mount removable media that have never been mounted before"
-msgstr ""
-"بىر قېتىم قولدا ئېگەرلەنگەن يۆتكىلىشچان ۋاسىتىلەرنىلا ئاپتوماتىك ئېگەرلەش"
+msgstr "ئىلگىرى ئېگەرلەنمىگەن كۆچمە ۋاسىتىنى ئۆزلۈكىدىن ئېگەرلەيدۇ"
 
 #: DeviceModel.cpp:52
-#, fuzzy, kde-format
-#| msgid "Automount on Login"
+#, kde-format
 msgid "Automount Device"
-msgstr "كىرگەندە ئاپتوماتىك ئېگەرلە"
+msgstr "ئۈسكۈنىنى ئۆزلۈكىدىن ئېگەرلەيدۇ"
 
 #: DeviceModel.cpp:54
 #, kde-format
 msgctxt "As in automount on login"
 msgid "On Login"
-msgstr ""
+msgstr "تىزىمغا كىرگەندە"
 
 #: DeviceModel.cpp:56
 #, kde-format
 msgctxt "As in automount on attach"
 msgid "On Attach"
-msgstr ""
+msgstr "چېتىلغاندا"
 
 #: DeviceModel.cpp:258
-#, fuzzy, kde-format
-#| msgid "Device"
+#, kde-format
 msgid "All Devices"
-msgstr "ئۈسكۈنە"
+msgstr "ھەممە ئۈسكۈنە"
 
 #: DeviceModel.cpp:258
 #, kde-format
 msgid "All Known Devices"
-msgstr ""
+msgstr "بىلىدىغان بارلىق ئۈسكۈنە"
 
 #: DeviceModel.cpp:260
 #, kde-format
 msgid "Attached Devices"
-msgstr "ئۇلانغان ئۈسكۈنە"
+msgstr "چېتىلغان ئۈسكۈنە"
 
 #: DeviceModel.cpp:262
 #, kde-format
 msgid "Disconnected Devices"
-msgstr "باغلانمىغان ئۈسكۈنىلەر"
+msgstr "باغلىنىشى ئۈزۈلگەن ئۈسكۈنە"
 
 #: DeviceModel.cpp:298 DeviceModel.cpp:307
 #, kde-format
@@ -143,7 +159,6 @@ msgstr "بۇ ئۈسكۈنە چېتىلغاندا ئاپتوماتىك ئېگەر
 #~ msgid "Device Automounter"
 #~ msgstr "ئۈسكۈنىنى ئاپتوماتىك ئېگەرلەش"
 
-#, fuzzy
 #~| msgid "(c) 2009 Trever Fischer"
 #~ msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
 #~ msgstr "(c) 2009 Trever Fischer"
@@ -160,7 +175,6 @@ msgstr "بۇ ئۈسكۈنە چېتىلغاندا ئاپتوماتىك ئېگەر
 #~ "ساقلاش ئۈسكۈنىلىرى سىستېمىڭىز ۋە باشقا پروگراممىلارنىڭ ئىشلىتىلىشىگە "
 #~ "تەييار بولىدۇ."
 
-#, fuzzy
 #~| msgid "Mount all removable media at login"
 #~ msgid "Automatically mount removable medias at login"
 #~ msgstr "بارلىق يۆتكىلىشچان ۋاسىتىلەرنى كىرگەندە ئېگەرلەش"
@@ -173,7 +187,6 @@ msgstr "بۇ ئۈسكۈنە چېتىلغاندا ئاپتوماتىك ئېگەر
 #~ "بۇ تاللانسا، خالىغان بىر ساقلاش ئۈسكۈنىسى سىستېمىغا چېتىلغان ھامان، ئۇنىڭ "
 #~ "ئىچىدىكى مەزمۇنلارنى ئاپتوماتىك ھالدا ئىشلىتىشكە تەييار بولىدۇ."
 
-#, fuzzy
 #~| msgid "Automatically mount removable media when attached"
 #~ msgid "Automatically mount removable medias when attached"
 #~ msgstr "يۆتكىلىشچان ۋاسىتىلەر چېتىلغان ھامان ئېگەرلەنسۇن"

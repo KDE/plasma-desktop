@@ -8,71 +8,69 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-02-01 17:56-0500\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.8\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
+msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
+msgstr "sahranbay@gmail.com,  gheyret@gmail.com"
 
 #: bindings.cpp:24
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgid "Keyboard Layout Switcher"
-msgstr "جايلاشتۇرۇش قوشۇش"
+msgstr "ھەرپتاختا جايلاشتۇرۇشنى ئالماشتۇرغۇچ"
 
 #: bindings.cpp:26
 #, kde-format
 msgid "Switch to Next Keyboard Layout"
-msgstr ""
+msgstr "كېيىنكى ھەرپتاختا جايلاشتۇرۇشقا ئالماشتۇرىدۇ"
 
 #: bindings.cpp:30
 #, kde-format
 msgid "Switch to Last-Used Keyboard Layout"
-msgstr ""
+msgstr "ئاخىرقى قېتىم ئىشلەتكەن ھەرپتاختا جايلاشتۇرۇشقا ئالماشتۇرىدۇ"
 
 #: bindings.cpp:60
 #, kde-format
 msgid "Switch keyboard layout to %1"
-msgstr ""
+msgstr "%1 ھەرپتاختا جايلاشتۇرۇشقا ئالماشتۇرىدۇ"
 
 #: keyboardmodel.cpp:35
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
-msgstr "نامەلۇم"
+msgstr "يوچۇن"
 
 #: keyboardmodel.cpp:39
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
-msgstr "%1 | %2"
+msgstr ""
 
 #: tastenbrett/main.cpp:52
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "app display name"
 msgid "Keyboard Preview"
-msgstr "جايلاشتۇرۇش قوشۇش"
+msgstr "ھەرپتاختىنى ئالدىن كۆزىتىش"
 
 #: tastenbrett/main.cpp:54
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "app description"
 msgid "Keyboard layout visualization"
-msgstr "جايلاشتۇرۇش قوشۇش"
+msgstr "كۆرۈنۈشلەشتۈرۈلگەن ھەرپتاختا جايلاشتۇرۇش"
 
 #: tastenbrett/main.cpp:139
 #, kde-format
@@ -86,59 +84,62 @@ msgid ""
 "not supported and  will also trigger this message. These might still work "
 "fine if applied"
 msgstr ""
+"ھەرپتاختا ئۇچۇرىنى يۈكلىيەلمىدى. ئادەتتە بۇ تاللانغان ھەرپتاختىنىڭ "
+"بەلگىلەنگەن جايلاشتۇرۇش ياكى جايلاشتۇرۇش شەكلىنى قوللىمايدىغانلىقىنى "
+"كۆرسىتىدۇ. بۇ سىزنىڭ مەزكۇر مودېل، جايلاشتۇرۇش ۋە شەكلىنى ئىشلىتىشكە مەسىلە "
+"پەيدا قىلىشى مۇمكىن.\n"
+"پىروگرامما مەزكۇر سىستېمىنىڭ xkb مۇندەرىجىسىنىڭ سىرتىدىكى جايلاشتۇرۇشنى "
+"ئالدىن كۆزىتىشنى قوللىمايدۇ، بۇ خىل جايلاشتۇرۇشنى ئالدىن كۆزەتكەندە مەزكۇر "
+"ئەسكەرتىش ئۇچۇرىنى قوزغىتىدۇ. ئەگەر بۇ ھەرپتاختا جايلاشتۇرۇشى قوللىنىلسا "
+"ئادەتتىكىدەك ئىشلەيدۇ"
 
 #: ui/KeyBindings.qml:18
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@title"
 msgid "Configure Key Bindings…"
-msgstr "جايلاشتۇرۇشلارنى سەپلە"
+msgstr "كۇنۇپكا باغلىنىشىنى سەپلەيدۇ…"
 
 #: ui/KeyBindings.qml:62
-#, fuzzy, kde-format
-#| msgid "&Configure keyboard options"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
-msgstr "ھەرپتاختا تاللانمىلىرىنى سەپلە(&C)"
+msgstr "ھەرپتاختا تاللانمىسىنى سەپلەيدۇ"
 
 #: ui/KeyBindings.qml:130
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset"
-msgstr ""
+msgstr "ئەسلىگە قايتۇر"
 
 #: ui/KeyBindings.qml:134
 #, kde-format
 msgctxt "@info accessible"
 msgid "Reset selected options for this group"
-msgstr ""
+msgstr "بۇ گۇرۇپپىنىڭ تاللانغان تاللانمىسىنى ئەسلىگە قايتۇرىدۇ"
 
 #: ui/KeyBindings.qml:135
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Reset selected options for this group"
-msgstr ""
+msgstr "بۇ گۇرۇپپىنىڭ تاللانغان تاللانمىسىنى ئەسلىگە قايتۇرىدۇ"
 
 #: ui/LayoutDialog.qml:22
-#, fuzzy, kde-format
-#| msgid "Layout:"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Layout"
-msgstr "جايلاشتۇرۇش:"
+msgstr "جايلاشتۇرۇش تەڭشىكى"
 
 #: ui/LayoutDialog.qml:22
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Layout"
-msgstr "جايلاشتۇرۇش قوشۇش"
+msgstr "جايلاشتۇرۇش قوش"
 
 #: ui/LayoutDialog.qml:129
-#, fuzzy, kde-format
-#| msgid "Show layout indicator"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
-msgstr "جايلاشتۇرۇش كۆرسەتكۈچىنى كۆرسەت"
+msgstr "جايلاشتۇرۇشنىڭ قىسقا ئاتى"
 
 #: ui/LayoutDialog.qml:139
 #, kde-format
@@ -147,17 +148,17 @@ msgid ""
 "The abbreviated name of the selected layout, which will be displayed in the "
 "system tray. You can change this setting yourself."
 msgstr ""
+"تاللانغان جايلاشتۇرۇشنىڭ قىسقا ئاتى، ئۇ سىستېما قوندىقىدا كۆرسىتىلىدۇ. بۇ "
+"تەڭشەكنى ئۆزىڭىز ئۆزگەرتەلەيسىز."
 
 #: ui/LayoutDialog.qml:147
-#, fuzzy, kde-format
-#| msgid "Shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "تېزلەتمە:"
 
 #: ui/LayoutDialog.qml:158 ui/main.qml:287
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button"
 msgid "Preview"
 msgstr "ئالدىن كۆزەت"
@@ -166,78 +167,73 @@ msgstr "ئالدىن كۆزەت"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Switching…"
-msgstr ""
+msgstr "سەپلىمە ئالماشتۇرۇش…"
 
 #: ui/main.qml:38
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Configure Switching"
-msgstr "جايلاشتۇرۇشلارنى سەپلە"
+msgstr "ئالماشتۇرۇشنى سەپلەيدۇ"
 
 #: ui/main.qml:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Key Bindings"
-msgstr ""
+msgstr "كۇنۇپكا باغلىنىشى"
 
 #: ui/main.qml:45
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Key Bindings"
-msgstr ""
+msgstr "كۇنۇپكا باغلىنىشى"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@action:button Layout"
 msgid "Add…"
-msgstr ""
+msgstr "قوش…"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add layout"
-msgstr "جايلاشتۇرۇش قوشۇش"
+msgstr "جايلاشتۇرۇش قوش"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "@label:checkbox configure layouts option"
 msgid "Enable"
-msgstr ""
+msgstr "قوزغات"
 
 #: ui/main.qml:60
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Configure Layouts"
-msgstr "جايلاشتۇرۇشلارنى سەپلە"
+msgstr "جايلاشتۇرۇشنى سەپلەيدۇ"
 
 #: ui/main.qml:76
 #, kde-format
 msgctxt "@label:listbox Keyboard model"
 msgid "Model:"
-msgstr ""
+msgstr "ئەندىزە:"
 
 #: ui/main.qml:104
 #, kde-format
 msgctxt "@label:listbox"
 msgid "NumLock on startup:"
-msgstr ""
+msgstr "قوزغالغاندىكى  NumLock ھالىتى:"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgid "T&urn on"
+#, kde-format
 msgctxt "@item:inlistbox Turn on \"NumLock\" on startup"
 msgid "Turn on"
-msgstr "ئاچ(&U)"
+msgstr "ئاچ"
 
 #: ui/main.qml:116
-#, fuzzy, kde-format
-#| msgid "Turn o&ff"
+#, kde-format
 msgctxt "@item:inlistbox Turn off \"NumLock\" on startup"
 msgid "Turn off"
-msgstr "تاقا(&F)"
+msgstr "تاقا"
 
 #: ui/main.qml:120
 #, kde-format
@@ -245,96 +241,88 @@ msgctxt ""
 "@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma "
 "started up"
 msgid "Leave unchanged"
-msgstr ""
+msgstr "شۇ پېتى قالدۇرىدۇ"
 
 #: ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Key repeat:"
-msgstr "جايلاشتۇرۇش قوشۇش"
+msgstr "كۇنۇپكا تەكرارلاش:"
 
 #: ui/main.qml:155 ui/main_phone.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
-msgstr "جايلاشتۇرۇش قوشۇش"
+msgstr "كۇنۇپكا تەكرارلاش"
 
 #: ui/main.qml:166 ui/main_phone.qml:131
-#, fuzzy, kde-format
-#| msgid "&Delay:"
+#, kde-format
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
-msgstr "كېچىكىش(&D):"
+msgstr "كېچىكىش:"
 
 #: ui/main.qml:180 ui/main_phone.qml:135
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
-msgstr ""
+msgstr "كۇنۇپكا تەكرارلىقىنى كېچىكتۈرۈشى %1"
 
 #: ui/main.qml:188 ui/main_phone.qml:143
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
-msgstr ""
+msgstr "%1 ms"
 
 #: ui/main.qml:192 ui/main_phone.qml:147
-#, fuzzy, kde-format
-#| msgid " ms"
+#, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
-msgstr " ms"
+msgstr "ms"
 
 #: ui/main.qml:205 ui/main_phone.qml:162
-#, fuzzy, kde-format
-#| msgid "&Rate:"
+#, kde-format
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
-msgstr "سۈرئەت(&R):"
+msgstr "سۈرئەت:"
 
 #: ui/main.qml:219 ui/main_phone.qml:169
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
-msgstr ""
+msgstr "كۇنۇپكا تەكرارلىنىش نىسبىتى %1"
 
 #: ui/main.qml:227 ui/main_phone.qml:177
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
-msgstr ""
+msgstr "%1 قېتىم/سېكۇنت"
 
 #: ui/main.qml:231 ui/main_phone.qml:181
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
-msgstr ""
+msgstr "قېتىم/سېكۇنت"
 
 #: ui/main.qml:243
-#, fuzzy, kde-format
-#| msgid "Test area:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Test area:"
-msgstr "سىناق دائىرىسى"
+msgstr "سىناق دائىرىسى:"
 
 #: ui/main.qml:245
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to test settings"
-msgstr ""
+msgstr "تەڭشەكنى سىناش ئۈچۈن ھەرپ كىرگۈزۈلىدۇ"
 
 #: ui/main.qml:256
-#, fuzzy, kde-format
-#| msgid "Layouts"
+#, kde-format
 msgctxt "@title:view"
 msgid "Layouts"
-msgstr "جايلاشتۇرۇشلار"
+msgstr "جايلاشتۇرۇش"
 
 #: ui/main.qml:270
-#, fuzzy, kde-format
-#| msgid "Move Up"
+#, kde-format
 msgctxt "@action:button"
 msgid "Move Up"
 msgstr "ئۈستىگە"
@@ -343,32 +331,28 @@ msgstr "ئۈستىگە"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
-msgstr ""
+msgstr "ئۈستىگە %1 جايلاشتۇرۇش يۆتكە"
 
 #: ui/main.qml:277
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button"
 msgid "Move Down"
-msgstr "پەسكە"
+msgstr "ئاستىغا"
 
 #: ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
-msgstr "پەسكە"
+msgstr "ئاستىغا %1 جايلاشتۇرۇش يۆتكە"
 
 #: ui/main.qml:288
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Preview"
 msgstr "ئالدىن كۆزەت"
 
 #: ui/main.qml:296
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "چىقىرىۋەت"
@@ -377,27 +361,25 @@ msgstr "چىقىرىۋەت"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
-msgstr ""
+msgstr "%1 جايلاشتۇرۇشنى چىقىرىۋەت"
 
 #: ui/main.qml:309
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
-msgstr "جايلاشتۇرۇشلارنى سەپلە"
+msgstr "قوشۇمچە جايلاشتۇرۇش:"
 
 #: ui/main.qml:346
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
-msgstr ""
+msgstr "قوشۇمچە ئاساسلىق جايلاشتۇرۇشنىڭ سانى"
 
 #: ui/main.qml:378
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
-msgstr "جايلاشتۇرۇشلارنى سەپلە"
+msgstr "ئاساسلىق جايلاشتۇرۇش"
 
 #: ui/main.qml:382
 #, kde-format
@@ -408,137 +390,130 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"ئەڭ كۆپ بولغاندا 4 ئاساسلىق جايلاشتۇرۇش سەپلىيەلەيسىز، باشقا بارلىق "
+"جايلاشتۇرۇش قوشۇمچە جايلاشتۇرۇش دەپ قارىلىدۇ. قوشۇمچە جايلاشتۇرۇش دەۋرىي "
+"ئالماشتۇرىدىغان جايلاشنىڭ ئىچىدە بولمايدۇ ئەمما ھەرپتاختا كۆرسەتكۈچ "
+"قوللانچاق ياكى ئىختىيارى تېزلەتمە ئارقىلىق تەڭشەپ زىيارەت قىلغىلى بولىدۇ."
 
 #: ui/main.qml:387
-#, fuzzy, kde-format
-#| msgid "Main shortcuts:"
+#, kde-format
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
-msgstr "ئاساسىي تېزلەتمىلەر:"
+msgstr "جايلاشتۇرۇش تېزلەتمىسىنى ئۆزگەرتىدۇ:"
 
 #: ui/main.qml:410
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
-msgstr ""
+msgstr "ياكى"
 
 #: ui/main_phone.qml:36
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@title form header"
 msgid "Model & Layout"
-msgstr "جايلاشتۇرۇش قوشۇش"
+msgstr "ئەندىزە ۋە جايلاشتۇرۇش"
 
 #: ui/main_phone.qml:43
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Keyboard Model"
-msgstr "جايلاشتۇرۇش قوشۇش"
+msgstr "ھەرپتاختا ئەندىزىسى"
 
 #: ui/main_phone.qml:72
-#, fuzzy, kde-format
-#| msgid "Layout:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Custom Layout"
-msgstr "جايلاشتۇرۇش:"
+msgstr "ئىختىيارى جايلاشتۇرۇش"
 
 #: ui/main_phone.qml:96
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Layout..."
-msgstr "جايلاشتۇرۇشلارنى سەپلە"
+msgstr "جايلاشتۇرۇش ئۆزگەرت…"
 
 #: ui/main_phone.qml:103
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@title:group"
 msgid "Key Repeat"
-msgstr "جايلاشتۇرۇش قوشۇش"
+msgstr "كۇنۇپكا تەكرارلاش"
 
 #: ui/main_phone.qml:109
 #, kde-format
 msgctxt "@option:check"
 msgid "Customize Repeat"
-msgstr ""
+msgstr "تەكرارلاشنى خاسلاشتۇرىدۇ"
 
 #: ui/Switching.qml:17
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@title"
 msgid "Configure Switching"
-msgstr "جايلاشتۇرۇشلارنى سەپلە"
+msgstr "ئالماشتۇرۇشنى سەپلەيدۇ"
 
 #: ui/Switching.qml:23
 #, kde-format
 msgctxt "@title:group"
 msgid "Behavior"
-msgstr ""
+msgstr "قىلمىش"
 
 #: ui/Switching.qml:28
-#, fuzzy, kde-format
-#| msgid "Main shortcuts:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Switching layout affects:"
-msgstr "ئاساسىي تېزلەتمىلەر:"
+msgstr "جايلاشتۇرۇش ئالماشتۇرۇشنىڭ تەسىرى:"
 
 #: ui/Switching.qml:35
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows"
-msgstr ""
+msgstr "ھەممە كۆزنەك"
 
 #: ui/Switching.qml:39
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows on current desktop"
-msgstr ""
+msgstr "نۆۋەتتىك ئۈستەلئۈستىدىكى ھەممە كۆزنەك"
 
 #: ui/Switching.qml:43
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows of current application"
-msgstr ""
+msgstr "نۆۋەتتىكى پىروگراممىنىڭ ھەممە كۆزنىكى"
 
 #: ui/Switching.qml:47
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Current window only"
-msgstr ""
+msgstr "نۆۋەتتىكى كۆزنەكلا"
 
 #: ui/Switching.qml:74
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Show OSD popup on layout change"
-msgstr ""
+msgstr "جايلاشتۇرۇش ئۆزگەرگەندە  قاڭقىش ئۇقتۇرۇشىنى كۆرسىتىدۇ"
 
 #: ui/Switching.qml:86
-#, fuzzy, kde-format
-#| msgid "Shortcut:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Shortcuts"
-msgstr "تېزلەتمە:"
+msgstr "تېزلەتمە"
 
 #: ui/Switching.qml:91 ui/Switching.qml:151
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
-msgstr "جايلاشتۇرۇشلارنى سەپلە"
+msgstr "جايلاشتۇرۇش ئۆزگەرتىش:"
 
 #: ui/Switching.qml:111
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
-msgstr ""
+msgstr "ئاخىرقى قېتىملىق جايلاشتۇرۇشقا ئالماشتۇرىدۇ:"
 
 #: ui/Switching.qml:131
-#, fuzzy, kde-format
-#| msgid "Shortcut:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
-msgstr "تېزلەتمە:"
+msgstr "كونا تېزلەتمە"
 
 #: ui/Switching.qml:139
 #, kde-kuit-format
@@ -549,13 +524,16 @@ msgid ""
 "Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
 "page."
 msgstr ""
+"كونا X11 تېزلەتمە بىرىكمە كۇنۇپكىنى تېخىمۇ  تەپسىلىي تىزگىنلەشكە يول قويىدۇ "
+"ھەمدە X11 مۇھىتىدىكى ئالاھىدە ئەھۋالدا ماسلىشىشچانلىقى سەل ياخشى. بۇ "
+"تېزلەتمىنى Wayland مۇھىتىدىمۇ ئىشلەتكىلى بولىدۇ.<nl/><nl/>بۇ تېزلەتمىنى "
+"تەڭشەش بىرىكمە كۇنۇپكا باغلاش بېتىگە باشلايدۇ."
 
 #: ui/Switching.qml:180
-#, fuzzy, kde-format
-#| msgid "3rd level shortcuts:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
-msgstr "3- دەرىجىلىك تېزلەتمىلەر:"
+msgstr "ئالماشتۇرىدىغان بەلگە:"
 
 #: ui/Switching.qml:206
 #, kde-format
@@ -564,108 +542,92 @@ msgid ""
 "Modifier keys can be used to type additional characters, symbols, and "
 "diacritical marks."
 msgstr ""
+"بىرىكمە كۇنۇپكا قوشۇمچە ھەرپ، بەلگە ۋە تاۋۇش پەرقلەندۈرگۈچ بەلگىسىنى "
+"كىرگۈزۈشكە ئىشلىتىلىدۇ."
 
 #: xkboptionsmodel.cpp:165
-#, fuzzy, kde-format
-#| msgid "Shortcut:"
+#, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
-msgstr[0] "تېزلەتمە:"
+msgstr[0] "%1 تېزلەتمە"
 
 #: xkboptionsmodel.cpp:168
-#, fuzzy, kde-format
-#| msgctxt "no shortcut defined"
-#| msgid "None"
+#, kde-format
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "يوق"
 
-#, fuzzy
 #~| msgid "Turn o&ff"
 #~ msgctxt "@option:radio"
 #~ msgid "Turn Off"
 #~ msgstr "تاقا(&F)"
 
-#, fuzzy
 #~| msgid "Configure layouts"
 #~ msgctxt "@title:group"
 #~ msgid "Shortcuts for Switching Layout"
 #~ msgstr "جايلاشتۇرۇشلارنى سەپلە"
 
-#, fuzzy
 #~| msgid "Main shortcuts:"
 #~ msgctxt "@option:textbox"
 #~ msgid "Main shortcuts:"
 #~ msgstr "ئاساسىي تېزلەتمىلەر:"
 
-#, fuzzy
 #~| msgid "3rd level shortcuts:"
 #~ msgctxt "@option:textbox"
 #~ msgid "3rd level shortcuts:"
 #~ msgstr "3- دەرىجىلىك تېزلەتمىلەر:"
 
-#, fuzzy
 #~| msgid "3rd level shortcuts:"
 #~ msgctxt "@option:textbox"
 #~ msgid "Last used shortcuts:"
 #~ msgstr "3- دەرىجىلىك تېزلەتمىلەر:"
 
-#, fuzzy
 #~| msgid "&Global"
 #~ msgctxt "@option:radio"
 #~ msgid "Global"
 #~ msgstr "ئومۇمىيەت(&G)"
 
-#, fuzzy
 #~| msgid "&Desktop"
 #~ msgctxt "@option:radio"
 #~ msgid "Desktop"
 #~ msgstr "ئۈستەلئۈستى(&D)"
 
-#, fuzzy
 #~| msgid "&Application"
 #~ msgctxt "@option:radio"
 #~ msgid "Application"
 #~ msgstr "پروگرامما(&A)"
 
-#, fuzzy
 #~| msgid "&Window"
 #~ msgctxt "@option:radio"
 #~ msgid "Window"
 #~ msgstr "كۆزنەك(&W)"
 
-#, fuzzy
 #~| msgid "Add"
 #~ msgctxt "@action:button"
 #~ msgid "Add"
 #~ msgstr "قوش"
 
-#, fuzzy
 #~| msgctxt "layout map name"
 #~| msgid "Map"
 #~ msgctxt "@title:column"
 #~ msgid "Map"
 #~ msgstr "خەرىتە"
 
-#, fuzzy
 #~| msgid "Label:"
 #~ msgctxt "@title:column"
 #~ msgid "Label"
 #~ msgstr "ئەن:"
 
-#, fuzzy
 #~| msgid "Variant:"
 #~ msgctxt "@title:column"
 #~ msgid "Variant"
 #~ msgstr "ۋارىيانتى:"
 
-#, fuzzy
 #~| msgid "Main shortcuts:"
 #~ msgctxt "@action:button"
 #~ msgid "Reassign shortcut"
 #~ msgstr "ئاساسىي تېزلەتمىلەر:"
 
-#, fuzzy
 #~| msgid "Hardware"
 #~ msgctxt "@title:tab"
 #~ msgid "Hardware"
@@ -689,7 +651,6 @@ msgstr "يوق"
 #~ msgid "Default"
 #~ msgstr "كۆڭۈلدىكى"
 
-#, fuzzy
 #~| msgid ""
 #~| "If supported, this option allows you to setup the state of NumLock after "
 #~| "KDE startup.<p>You can configure NumLock to be turned on or off, or "
@@ -736,7 +697,6 @@ msgstr "يوق"
 #~ msgid "Layout Indicator"
 #~ msgstr "جايلاشتۇرۇش كۆرسەتكۈچى"
 
-#, fuzzy
 #~| msgid "Show label"
 #~ msgid "Show flag"
 #~ msgstr "ئەن كۆرسەت"
@@ -744,23 +704,19 @@ msgstr "يوق"
 #~ msgid "Show label"
 #~ msgstr "ئەن كۆرسەت"
 
-#, fuzzy
 #~| msgid "Show label"
 #~ msgid "Show label on flag"
 #~ msgstr "ئەن كۆرسەت"
 
-#, fuzzy
 #~| msgid "Add Layout"
 #~ msgctxt "tooltip title"
 #~ msgid "Keyboard Layout"
 #~ msgstr "جايلاشتۇرۇش قوشۇش"
 
-#, fuzzy
 #~| msgid "Configure layouts"
 #~ msgid "Configure Layouts..."
 #~ msgstr "جايلاشتۇرۇشلارنى سەپلە"
 
-#, fuzzy
 #~| msgid "Configure layouts"
 #~ msgid "Configure..."
 #~ msgstr "جايلاشتۇرۇشلارنى سەپلە"

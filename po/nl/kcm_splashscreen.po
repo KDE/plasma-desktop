@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-03 00:48+0000\n"
 "PO-Revision-Date: 2026-01-08 17:53+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -58,16 +58,38 @@ msgid "Failed to show the splash screen preview."
 msgstr "Voorbeeld van het opstartscherm tonen is mislukt."
 
 #: ui/main.qml:81
-#, kde-format
-msgctxt "@action:button"
-msgid "Preview Splash Screen"
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Preview Splash Screen"
+msgctxt "@info:tooltip"
+msgid "Preview splash screen"
 msgstr "Opstartscherm bekijken"
 
-#: ui/main.qml:86
-#, kde-format
-msgctxt "@action:button"
-msgid "Uninstall"
-msgstr "Installatie ongedaan maken"
+#: ui/main.qml:88
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Preview Splash Screen"
+msgctxt "@info:tooltip"
+msgid "Remove splash screen"
+msgstr "Opstartscherm bekijken"
+
+#: ui/main.qml:90
+#, fuzzy, kde-format
+#| msgid "You cannot delete the currently selected splash screen"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active splash screen"
+msgstr "U kunt het nu geselecteerde opstartscherm niet verwijderen"
+
+#: ui/main.qml:92
+#, fuzzy, kde-format
+#| msgid "You cannot delete the currently selected splash screen"
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed splash screens"
+msgstr "U kunt het nu geselecteerde opstartscherm niet verwijderen"
+
+#~ msgctxt "@action:button"
+#~ msgid "Uninstall"
+#~ msgstr "Installatie ongedaan maken"
 
 #~ msgid "This module lets you choose the splash screen theme."
 #~ msgstr "Deze module laat u het thema van het opstartscherm kiezen."

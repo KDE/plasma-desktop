@@ -5,21 +5,21 @@
 # Richard Allen <ra@ra.is>, 1998-2004.
 # Stígur Snæsson <stigur@vortex.is>, 2004.
 # Arnar Leosson <leosson@frisurf.no>, 2004, 2005.
-# Sveinn í Felli <sveinki@nett.is>, 2010, 2011.
+# SPDX-FileCopyrightText: 2010, 2011, 2026 Sveinn í Felli <sveinki@nett.is>
 # SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-14 00:46+0000\n"
-"PO-Revision-Date: 2025-09-16 23:51+0000\n"
-"Last-Translator: Gummi <gudmundure@gmail.com>\n"
-"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-02-02 17:15+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -140,15 +140,13 @@ msgid "Configure Extra Buttons…"
 msgstr "Grunnstilla aukahnappa..."
 
 #: ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Tæki:"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General:"
 msgstr "Almennt:"
@@ -157,32 +155,25 @@ msgstr "Almennt:"
 #, kde-format
 msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
-msgstr ""
+msgstr "Virkja tæki"
 
 #: ui/main.qml:105
-#, fuzzy, kde-format
-#| msgid "Swap left and right buttons."
+#, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
-msgstr "Víxla hægri og vinstri hnöppum."
+msgstr "Hægri og vinstri hnappar:"
 
 #: ui/main.qml:106
-#, fuzzy, kde-format
-#| msgid "Left-handed mode"
+#, kde-format
 msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
-msgstr "Snið fyrir örvhenta"
+msgstr "Víxla (snið fyrir örvhenta)"
 
 #: ui/main.qml:121
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Pressing the left and right button simultaneously acts as middle-click."
+#, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
-msgstr ""
-"Ef smellt er á vinstri og hægri hnappana samtímis myndar músin "
-"miðjuhnappssmell."
+msgstr "Ýta á vinstri og hægri hnappana samtímis til að miðjusmella"
 
 #: ui/main.qml:133
 #, kde-format
@@ -196,25 +187,19 @@ msgstr ""
 "samtímis á vinstri og hægri músarhnappana."
 
 #: ui/main.qml:148
-#, fuzzy, kde-format
-#| msgid "Pointer speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Hraði bendils:"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid "Enable pointer acceleration"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Virkja hröðun bendils"
 
 #: ui/main.qml:241
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip from ContextualHelpButton"
-#| msgid ""
-#| "When enabled, pointer travel distance increases with faster movement "
-#| "speed."
+#, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
@@ -223,8 +208,7 @@ msgstr ""
 "hreyfingin er hraðari."
 
 #: ui/main.qml:254
-#, fuzzy, kde-format
-#| msgid "Scrolling speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr "Skrunhraði:"
@@ -242,34 +226,25 @@ msgid "Faster"
 msgstr "Hraðar"
 
 #: ui/main.qml:321
-#, fuzzy, kde-format
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "Skrun:"
 
 #: ui/main.qml:322
-#, fuzzy, kde-format
-#| msgid "Invert scroll direction"
+#, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction"
 msgstr "Snúa við skrunstefnu"
 
 #: ui/main.qml:339
-#, fuzzy, kde-format
-#| msgid "Hold down middle button and move mouse to scroll"
+#, kde-format
 msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "Halda niðri miðjuhnappi og færa músina til að skruna"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip from ContextualHelpButton"
-#| msgid ""
-#| "This will interfere with applications that use middle-button drag, such "
-#| "as some image editors, document viewers, or video games. It may be used "
-#| "on any device, but is intended primarily as a substitute for scroll "
-#| "wheels on devices that do not have any."
+#, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "This will interfere with applications that use middle-button drag, such as "
@@ -278,9 +253,9 @@ msgid ""
 "devices that do not have any."
 msgstr ""
 "Þetta flækist fyrir forritum sem nota miðjusmell til að draga, eins og sumum "
-"myndforritum, skjalaskoðurum og tölvuleikjum. Það má nota þetta á öllum "
-"tækjum en er sérstaklega hugsað sem staðgengill fyrir skrunhjól á tækjum sem "
-"eru ekki með slíkan búnað."
+"myndvinnsluforritum, skjalaskoðurum og tölvuleikjum. Það má nota þetta á "
+"öllum tækjum en er sérstaklega hugsað sem staðgengill fyrir skrunhjól á "
+"tækjum sem eru ekki með slíkan búnað."
 
 #~ msgid "Device enabled"
 #~ msgstr "Tæki virkt"
