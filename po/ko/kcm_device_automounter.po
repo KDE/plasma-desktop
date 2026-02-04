@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2009, 2010, 2011, 2015, 2020, 2021.
+# SPDX-FileCopyrightText: 2009, 2010, 2011, 2015, 2020, 2021, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-23 00:45+0000\n"
-"PO-Revision-Date: 2021-11-14 18:02+0100\n"
+"PO-Revision-Date: 2026-02-03 21:34+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -29,12 +29,7 @@ msgstr "kde@peremen.name"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "This list contains the storage devices known to the system. If "
-#| "\"Automount on Login\" is checked, the device will be automatically "
-#| "mounted even though \"Mount all removable media at login\" is unchecked. "
-#| "The same applies for \"Automount on Attach\"."
+#, kde-format
 msgid ""
 "This list contains the storage devices known to the system. If \"Automount "
 "on Login\" is checked, devices will be automatically mounted even though "

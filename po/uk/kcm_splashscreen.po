@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_splashscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-03 00:48+0000\n"
-"PO-Revision-Date: 2026-01-08 08:50+0200\n"
+"PO-Revision-Date: 2026-02-03 03:39+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -60,34 +60,28 @@ msgid "Failed to show the splash screen preview."
 msgstr "Не вдалося показати попередній перегляд вікна вітання."
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Preview Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview splash screen"
 msgstr "Ескіз вікна вітання"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Preview Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove splash screen"
-msgstr "Ескіз вікна вітання"
+msgstr "Вилучити вікно вітання"
 
 #: ui/main.qml:90
-#, fuzzy, kde-format
-#| msgid "You cannot delete the currently selected splash screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active splash screen"
-msgstr "Не можна вилучати поточне позначене вікно вітання"
+msgstr "Не можна вилучати активне вікно вітання"
 
 #: ui/main.qml:92
-#, fuzzy, kde-format
-#| msgid "You cannot delete the currently selected splash screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed splash screens"
-msgstr "Не можна вилучати поточне позначене вікно вітання"
+msgstr "Не можна вилучати встановлені на рівні системи вікна вітання"
 
 #~ msgctxt "@action:button"
 #~ msgid "Uninstall"

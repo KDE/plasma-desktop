@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2009, 2014, 2020, 2022, 2025 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2009, 2014, 2020, 2022, 2025, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-02 00:45+0000\n"
-"PO-Revision-Date: 2025-04-07 00:20+0200\n"
+"PO-Revision-Date: 2026-02-03 21:59+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,11 +15,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "일반"
@@ -28,39 +27,37 @@ msgstr "일반"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "For active application, show:"
-msgstr ""
+msgstr "활성 앱에 대해서 표시:"
 
 #: ConfigGeneral.qml:42
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Icon and name"
-msgstr ""
+msgstr "아이콘과 이름"
 
 #: ConfigGeneral.qml:43
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Icon"
-msgstr ""
+msgstr "아이콘"
 
 #: ConfigGeneral.qml:44
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Name"
-msgstr ""
+msgstr "이름"
 
 #: ConfigGeneral.qml:91
-#, fuzzy, kde-format
-#| msgid "Only icons can be shown when the Panel is vertical."
+#, kde-format
 msgctxt "@info:usagetip display mode for active application"
 msgid "Only icons can be shown when the Panel is vertical."
 msgstr "패널이 수직일 때는 아이콘만 표시할 수 있습니다."
 
 #: ConfigGeneral.qml:93
-#, fuzzy, kde-format
-#| msgid "Not applicable when the widget is on the Desktop."
+#, kde-format
 msgctxt "@info:usagetip display mode for active application"
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "위젯이 바탕 화면에 있을 때에는 사용할 수 없습니다."
@@ -69,109 +66,106 @@ msgstr "위젯이 바탕 화면에 있을 때에는 사용할 수 없습니다."
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Open on hover:"
-msgstr ""
+msgstr "지나다닐 때 열기:"
 
 #: ConfigGeneral.qml:111
 #, kde-format
 msgctxt "@option:check open-on-hover is enabled, with the following delay:"
 msgid "Enabled, with delay:"
-msgstr ""
+msgstr "활성화됨, 지연 시간:"
 
 #: ConfigGeneral.qml:124
 #, kde-format
 msgctxt "@item:valuesuffix, %1 is hover activation delay in ms"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] ""
+msgstr[0] "%1밀리초"
 
 #: ConfigGeneral.qml:133
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
+msgstr[0] "밀리초"
 
 #: ConfigGeneral.qml:136
 #, kde-format
 msgctxt "@label:spinbox accessible %1 is milliseconds"
 msgid "Hover open delay %1 ms"
-msgstr ""
+msgstr "마우스 올림 지연 시간 %1밀리초"
 
 #: ConfigGeneral.qml:146
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "No open windows"
+#, kde-format
 msgctxt ""
 "@label for checkbox group, completes sentence like: … from current screen"
 msgid "Show only windows:"
-msgstr "열린 창 없음"
+msgstr "다음의 창만 표시:"
 
 #: ConfigGeneral.qml:147
-#, fuzzy, kde-format
-#| msgid "Current desktop"
+#, kde-format
 msgctxt "@option:check completes sentence: show only windows"
 msgid "From the current desktop"
-msgstr "현재 데스크톱"
+msgstr "현재 바탕 화면에 있는 작업만"
 
 #: ConfigGeneral.qml:152
 #, kde-format
 msgctxt "@option:check completes sentence: show only windows"
 msgid "From the current activity"
-msgstr ""
+msgstr "현재 활동에 있는 작업만"
 
 #: ConfigGeneral.qml:157
 #, kde-format
 msgctxt "@option:check completes sentence: show only windows"
 msgid "From the current screen"
-msgstr ""
+msgstr "현재 화면에 있는 작업만"
 
 #: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@option:check completes sentence: show only windows"
 msgid "That are minimized"
-msgstr ""
+msgstr "최소화됨"
 
 #: ConfigGeneral.qml:171
 #, kde-format
 msgctxt "@label:listbox sort windows is list"
 msgid "Sort:"
-msgstr ""
+msgstr "정렬:"
 
 #: ConfigGeneral.qml:178
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "By time opened"
-msgstr ""
+msgstr "연 시간순"
 
 #: ConfigGeneral.qml:182
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "Alphabetically"
-msgstr ""
+msgstr "가나다순"
 
 #: ConfigGeneral.qml:186
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "Alphabetically, grouped by virtual desktop"
-msgstr ""
+msgstr "가나다순, 가상 데스크톱으로 그룹화"
 
 #: ConfigGeneral.qml:190
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "Alphabetically, grouped by activity"
-msgstr ""
+msgstr "가나다순, 활동으로 그룹화"
 
 #: ConfigGeneral.qml:194
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "By last activated time"
-msgstr ""
+msgstr "마지막 활성화 시간순"
 
 #: ConfigGeneral.qml:198
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "By horizontal window position"
-msgstr ""
+msgstr "수평 창 위치순"
 
 #: main.qml:41
 #, kde-format
@@ -180,8 +174,7 @@ msgid "No open windows"
 msgstr "열린 창 없음"
 
 #: main.qml:362
-#, fuzzy, kde-format
-#| msgid "Plasma Desktop"
+#, kde-format
 msgctxt "@title:window title shown e.g. for desktop and expanded widgets"
 msgid "Plasma Desktop"
 msgstr "Plasma 데스크톱"

@@ -1,6 +1,6 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2020, 2021, 2023, 2025 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2020, 2021, 2023, 2025, 2026 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2021.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-28 00:46+0000\n"
-"PO-Revision-Date: 2025-07-20 01:37+0200\n"
+"PO-Revision-Date: 2026-02-03 21:52+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: app/emojier.cpp:43 app/emojier.cpp:45
 #, kde-format
@@ -46,8 +46,7 @@ msgid "Replace an existing instance"
 msgstr "실행 중인 인스턴스 대체"
 
 #: app/ui/CategoryPage.qml:112
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:button clear emoji history"
 msgid "Clear History"
 msgstr "과거 기록 비우기"
@@ -56,7 +55,7 @@ msgstr "과거 기록 비우기"
 #, kde-format
 msgctxt "@action:button Button to open a menu that lets you choose a skin tone"
 msgid "Skin tone:"
-msgstr ""
+msgstr "피부 색조:"
 
 #: app/ui/CategoryPage.qml:135 app/ui/Emojier.qml:73
 #, kde-format
@@ -68,79 +67,79 @@ msgstr "모두"
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐️ Neutral"
-msgstr ""
+msgstr "🖐️ 중립"
 
 #: app/ui/CategoryPage.qml:190
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Neutral"
-msgstr ""
+msgstr "중립"
 
 #: app/ui/CategoryPage.qml:198
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏻 Light"
-msgstr ""
+msgstr "🖐🏻 밝음"
 
 #: app/ui/CategoryPage.qml:199
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Light"
-msgstr ""
+msgstr "밝음"
 
 #: app/ui/CategoryPage.qml:207
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏼 Medium Light"
-msgstr ""
+msgstr "🖐🏼 중간 밝음"
 
 #: app/ui/CategoryPage.qml:208
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium Light"
-msgstr ""
+msgstr "중간 밝음"
 
 #: app/ui/CategoryPage.qml:216
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏽 Medium"
-msgstr ""
+msgstr "🖐🏽 중간"
 
 #: app/ui/CategoryPage.qml:217
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium"
-msgstr ""
+msgstr "중간"
 
 #: app/ui/CategoryPage.qml:225
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏾 Medium Dark"
-msgstr ""
+msgstr "🖐🏾 중간 어두움"
 
 #: app/ui/CategoryPage.qml:226
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium Dark"
-msgstr ""
+msgstr "중간 어두움"
 
 #: app/ui/CategoryPage.qml:234
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏿 Dark"
-msgstr ""
+msgstr "🖐🏿 어두움"
 
 #: app/ui/CategoryPage.qml:235
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Dark"
-msgstr ""
+msgstr "어두움"
 
 #: app/ui/CategoryPage.qml:247
 #, kde-format
 msgctxt "@title:window A two-tone skin variant can be selected here"
 msgid "Select Variant"
-msgstr ""
+msgstr "파생형 선택"
 
 #: app/ui/CategoryPage.qml:295
 #, kde-format
@@ -155,8 +154,7 @@ msgid "Copy Description"
 msgstr "설명 복사"
 
 #: app/ui/CategoryPage.qml:344
-#, fuzzy, kde-format
-#| msgid "No recent Emojis"
+#, kde-format
 msgctxt "@label placeholder for empty recent emoji list"
 msgid "No recent emojis"
 msgstr "최근에 사용한 이모지 없음"
@@ -165,7 +163,7 @@ msgstr "최근에 사용한 이모지 없음"
 #, kde-format
 msgctxt "@label placeholder for no emoji found in category"
 msgid "No matching emoji found"
-msgstr ""
+msgstr "일치하는 이모지 없음"
 
 #: app/ui/CategoryPage.qml:392
 #, kde-format
@@ -173,18 +171,16 @@ msgctxt ""
 "@action:button Opens a window where a two-tone skin variant can be selected. "
 "%1 is the emoji's name"
 msgid "Select Variant of \"%1\""
-msgstr ""
+msgstr "\"%1\"의 파생형 선택"
 
 #: app/ui/Emojier.qml:44
-#, fuzzy, kde-format
-#| msgid "%1 copied to the clipboard"
+#, kde-format
 msgctxt "@info:status passive notification as action feedback, %1 is an emoji"
 msgid "%1 copied to the clipboard"
 msgstr "클립보드에 %1 복사됨"
 
 #: app/ui/Emojier.qml:58
-#, fuzzy, kde-format
-#| msgid "Recent"
+#, kde-format
 msgctxt "@title page title for Recent Emoji view, and sidebar label for it"
 msgid "Recent"
 msgstr "최근"
