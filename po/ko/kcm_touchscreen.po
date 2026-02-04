@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2023, 2024, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2024-02-19 21:40+0100\n"
+"PO-Revision-Date: 2026-02-03 21:45+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: kcmtouchscreen.cpp:47
 #, kde-format
@@ -29,15 +29,13 @@ msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
 #: ui/main.qml:29
-#, fuzzy, kde-format
-#| msgid "No touchscreens found"
+#, kde-format
 msgctxt "@info:status placeholdermessage text"
 msgid "No touchscreens found"
 msgstr "터치스크린을 찾을 수 없음"
 
 #: ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Connect an external touchscreen"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchscreen"
 msgstr "외부 터치스크린을 연결하십시오"
@@ -49,15 +47,13 @@ msgid "Device:"
 msgstr "장치:"
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgid "Enabled:"
+#, kde-format
 msgctxt "@option:check prefix touchscreen device is enabled"
 msgid "Enabled:"
 msgstr "활성화:"
 
 #: ui/main.qml:67
-#, fuzzy, kde-format
-#| msgid "Target display:"
+#, kde-format
 msgctxt "@label:listbox this is a compound noun"
 msgid "Target display:"
 msgstr "대상 디스플레이:"

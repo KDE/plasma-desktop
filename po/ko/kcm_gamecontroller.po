@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2024, 2025 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-15 03:00+0000\n"
-"PO-Revision-Date: 2025-10-09 01:47+0200\n"
+"PO-Revision-Date: 2026-02-03 21:35+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
@@ -136,20 +136,17 @@ msgid "NVidia Shield"
 msgstr "NVidia 실드"
 
 #: device.cpp:41
-#, fuzzy, kde-format
-#| msgid "Switch Left Joycon"
+#, kde-format
 msgid "Switch Left Joy-Con"
 msgstr "Switch 왼쪽 조이콘"
 
 #: device.cpp:42
-#, fuzzy, kde-format
-#| msgid "Switch Right Joycon"
+#, kde-format
 msgid "Switch Right Joy-Con"
 msgstr "Switch 오른쪽 조이콘"
 
 #: device.cpp:43
-#, fuzzy, kde-format
-#| msgid "Switch Paired Joycon"
+#, kde-format
 msgid "Switch Paired Joy-Con"
 msgstr "Switch 조이콘 한 쌍"
 
@@ -319,7 +316,7 @@ msgstr "%1(%2)"
 #, kde-format
 msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
 msgid "Allow using as pointer and keyboard"
-msgstr ""
+msgstr "포인터와 키보드로 사용 허용"
 
 #: ui/main.qml:43
 #, kde-kuit-format
@@ -328,17 +325,17 @@ msgid ""
 "Allow game controllers to act like pointer and keyboard devices in Plasma "
 "and non-game applications.<nl/><nl/>Games can always use the controller."
 msgstr ""
+"게임 컨트롤러를 Plasma와 비 게임 앱에서 포인터와 키보드 장치로 사용하도록 허"
+"용합니다.<nl/><nl/>게임에서는 항상 컨트롤러를 사용할 수 있습니다."
 
 #: ui/main.qml:51
-#, fuzzy, kde-format
-#| msgid "No game controllers found"
+#, kde-format
 msgctxt "@info placeholdermessage text"
 msgid "No game controllers found"
 msgstr "게임 컨트롤러를 찾을 수 없음"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Connect a wired or wireless controller"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage text"
 msgid "Connect a wired or wireless controller"
 msgstr "유선이나 무선 컨트롤러를 연결하십시오"
@@ -352,6 +349,9 @@ msgid ""
 "controller, or enable automatic blocking by allowing the use as pointer and "
 "keyboard."
 msgstr ""
+"컨트롤러가 사용 중일 때 시스템이 절전 모드로 진입하거나 화면을 잠글 수도 있습"
+"니다. 컨트롤러를 사용 중일 때 수동으로 해당 설정을 차단하거나, 포인터와 키보"
+"드로 사용을 허용하여 자동 차단을 활성화할 수 있습니다."
 
 #: ui/main.qml:97
 #, kde-format
