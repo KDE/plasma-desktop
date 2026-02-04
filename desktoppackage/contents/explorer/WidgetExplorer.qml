@@ -153,13 +153,13 @@ PC3.Page {
 
     header: PlasmaExtras.PlasmoidHeading {
         // Subtract page's own margins since we touch the top, left, and right
-        topPadding: - main.sidePanel.margins.top
+        topPadding: main.contentMargins - main.sidePanel.margins.top
         leftPadding: main.contentMargins - main.sidePanel.margins.left
         rightPadding: main.contentMargins - main.sidePanel.margins.right
         bottomPadding: main.contentMargins
 
         contentItem: ColumnLayout {
-            spacing: Kirigami.Units.smallSpacing
+            spacing: Kirigami.Units.largeSpacing
 
             RowLayout {
                 spacing: Kirigami.Units.smallSpacing
