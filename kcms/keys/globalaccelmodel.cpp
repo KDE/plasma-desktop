@@ -111,6 +111,31 @@ void GlobalAccelModel::load()
     });
 }
 
+ComponentType classify(const KService::Ptr service)
+{
+    if (!service || !service->isApplication()) {
+        return ComponentType::SystemService;
+    }
+
+    if (service->property<bool>(QStringLiteral("X-KDE-GlobalAccel-CommandShortcut"))) {
+        return ComponentType::Command;
+    }
+
+    if (service->entryPath().startsWith(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/applications/"))) {
+        // this service was explicitely added by the user. Whether it's actually an "application" is uncertain, but it's probably not an actual system
+        // service.
+        return ComponentType::Application;
+    }
+
+    if ((service->noDisplay() || service->property<QString>(QStringLiteral("X-KDE-GlobalShortcutType")) == QLatin1String("Service"))) {
+        // services with noDisplay are typically KCMs or implementation details
+        // don't show them as "Application"
+        return ComponentType::SystemService;
+    }
+
+    return ComponentType::Application;
+};
+
 Component GlobalAccelModel::loadComponent(const QList<KGlobalShortcutInfo> &info)
 {
     const QString &componentUnique = info[0].componentUniqueName();
@@ -140,23 +165,7 @@ Component GlobalAccelModel::loadComponent(const QList<KGlobalShortcutInfo> &info
         service = services.value(0, KService::Ptr());
     }
 
-    ComponentType type;
-
-    if (service && service->isApplication()) {
-        if (service->property<bool>(QStringLiteral("X-KDE-GlobalAccel-CommandShortcut"))) {
-            type = ComponentType::Command;
-        } else {
-            if (service->noDisplay() || service->property<QString>(QStringLiteral("X-KDE-GlobalShortcutType")) == QLatin1String("Service")) {
-                // services with noDisplay are typically KCMs or implementation details
-                // don't show them as "Application"
-                type = ComponentType::SystemService;
-            } else {
-                type = ComponentType::Application;
-            }
-        }
-    } else {
-        type = ComponentType::SystemService;
-    }
+    auto type = classify(service);
 
     QString icon;
 
