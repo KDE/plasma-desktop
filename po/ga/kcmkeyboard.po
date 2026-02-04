@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"3 : 4;\n"
 "X-Generator: Weblate 5.15.1\n"
 
 #, kde-format
@@ -46,9 +46,7 @@ msgid "Switch keyboard layout to %1"
 msgstr "Roghnaigh leagan amach nua don mhéarchláir: %1"
 
 #: flags.cpp:122
-#, fuzzy, kde-format
-#| msgctxt "layout - variant"
-#| msgid "%1 - %2"
+#, kde-format
 msgctxt "layout - variant"
 msgid "%1 - %2"
 msgstr "%1 - %2"
@@ -75,8 +73,7 @@ msgstr "Aicearra:"
 
 #. i18n: ectx: property (text), widget (QLabel, labelLabel)
 #: kcm_add_layout_dialog.ui:55
-#, fuzzy, kde-format
-#| msgid "Label:"
+#, kde-format
 msgid "Label:"
 msgstr "Lipéad:"
 
@@ -94,8 +91,7 @@ msgid "KDE Keyboard Control Module"
 msgstr ""
 
 #: kcm_keyboard.cpp:36
-#, fuzzy, kde-format
-#| msgid "(c) 2010 Andriy Rysin"
+#, kde-format
 msgid "(c) 2010 Andriy Rysin"
 msgstr "© 2010 Andriy Rysin"
 
@@ -122,14 +118,7 @@ msgstr "Samhail an &mhéarchláir:"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, keyboardModelComboBox)
 #: kcm_keyboard.ui:53
-#, fuzzy, kde-format
-#| msgid ""
-#| "Here you can choose a keyboard model. This setting is independent of your "
-#| "keyboard layout and refers to the \"hardware\" model, i.e. the way your "
-#| "keyboard is manufactured. Modern keyboards that come with your computer "
-#| "usually have two extra keys and are referred to as \"104-key\" models, "
-#| "which is probably what you want if you do not know what kind of keyboard "
-#| "you have.\n"
+#, kde-format
 msgid ""
 "Here you can choose a keyboard model. This setting is independent of your "
 "keyboard layout and refers to the \"hardware\" model, i.e. the way your "
@@ -154,10 +143,7 @@ msgstr "Leaganacha Amach"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
 #: kcm_keyboard.ui:102
-#, fuzzy, kde-format
-#| msgid ""
-#| "If you select \"Application\" or \"Window\" switching policy, changing "
-#| "the keyboard layout will only affect the current application or window."
+#, kde-format
 msgid ""
 "If you select \"Application\" or \"Window\" switching policy, changing the "
 "keyboard layout will only affect the current application or window."
@@ -217,10 +203,7 @@ msgstr "Príomhaicearraí:"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
 #: kcm_keyboard.ui:176
-#, fuzzy, kde-format
-#| msgid ""
-#| "This is a shortcut for switching layouts which is handled by X.org. It "
-#| "allows modifier-only shortcuts."
+#, kde-format
 msgid ""
 "This is a shortcut for switching layouts which is handled by X.org. It "
 "allows modifier-only shortcuts."
@@ -231,9 +214,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
 #. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
 #: kcm_keyboard.ui:179 kcm_keyboard.ui:209
-#, fuzzy, kde-format
-#| msgctxt "no shortcut defined"
-#| msgid "None"
+#, kde-format
 msgctxt "no shortcut defined"
 msgid "None"
 msgstr "Gan aicearra"
@@ -254,11 +235,7 @@ msgstr "Aicearraí tríú leibhéal:"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
 #: kcm_keyboard.ui:206
-#, fuzzy, kde-format
-#| msgid ""
-#| "This is a shortcut for switching to a third level of the active layout "
-#| "(if it has one) which is handled by X.org. It allows modifier-only "
-#| "shortcuts."
+#, kde-format
 msgid ""
 "This is a shortcut for switching to a third level of the active layout (if "
 "it has one) which is handled by X.org. It allows modifier-only shortcuts."
@@ -342,8 +319,7 @@ msgstr "Príomhaicearraí:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
 #: kcm_keyboard.ui:412
-#, fuzzy, kde-format
-#| msgid "Advanced"
+#, kde-format
 msgid "Advanced"
 msgstr "Casta"
 
@@ -415,9 +391,7 @@ msgid "Shortcut"
 msgstr "Aicearra:"
 
 #: kcm_view_models.cpp:273
-#, fuzzy, kde-format
-#| msgctxt "variant"
-#| msgid "Default"
+#, kde-format
 msgctxt "variant"
 msgid "Default"
 msgstr "Réamhshocrú"
@@ -500,8 +474,7 @@ msgstr "&Díghníomhachtaigh"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton3)
 #: kcmmiscwidget.ui:111
-#, fuzzy, kde-format
-#| msgid "Leave unchan&ged"
+#, kde-format
 msgid "Leave unchan&ged"
 msgstr "Fá&g mar atá"
 
@@ -515,11 +488,7 @@ msgstr "&Ráta:"
 #. i18n: ectx: property (whatsThis), widget (QSlider, delaySlider)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_repeatDelay)
 #: kcmmiscwidget.ui:164 kcmmiscwidget.ui:202
-#, fuzzy, kde-format
-#| msgid ""
-#| "If supported, this option allows you to set the delay after which a "
-#| "pressed key will start generating keycodes. The 'Repeat rate' option "
-#| "controls the frequency of these keycodes."
+#, kde-format
 msgid ""
 "If supported, this option allows you to set the delay after which a pressed "
 "key will start generating keycodes. The 'Repeat rate' option controls the "
@@ -532,10 +501,7 @@ msgstr ""
 #. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, kcfg_repeatRate)
 #. i18n: ectx: property (whatsThis), widget (QSlider, rateSlider)
 #: kcmmiscwidget.ui:192 kcmmiscwidget.ui:212
-#, fuzzy, kde-format
-#| msgid ""
-#| "If supported, this option allows you to set the rate at which keycodes "
-#| "are generated while a key is pressed."
+#, kde-format
 msgid ""
 "If supported, this option allows you to set the rate at which keycodes are "
 "generated while a key is pressed."

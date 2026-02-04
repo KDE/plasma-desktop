@@ -17,12 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"3 : 4;\n"
 "X-Generator: Weblate 5.15.1\n"
 
 #: desktoppathssettings.cpp:197
-#, fuzzy, kde-format
-#| msgid "Desktop"
+#, kde-format
 msgid "Desktop"
 msgstr "Deasc"
 
@@ -39,14 +38,12 @@ msgid "Downloads"
 msgstr "Íosluchtuithe"
 
 #: desktoppathssettings.cpp:242
-#, fuzzy, kde-format
-#| msgid "Music"
+#, kde-format
 msgid "Music"
 msgstr "Ceol"
 
 #: desktoppathssettings.cpp:257
-#, fuzzy, kde-format
-#| msgid "Pictures"
+#, kde-format
 msgid "Pictures"
 msgstr "Pictiúir"
 
@@ -67,12 +64,7 @@ msgid "Templates"
 msgstr ""
 
 #: globalpaths.cpp:32
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Paths</h1>\n"
-#| "This module allows you to choose where in the filesystem the files on "
-#| "your desktop should be stored.\n"
-#| "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
+#, kde-format
 msgid ""
 "<h1>Paths</h1>\n"
 "This module allows you to choose where in the filesystem the files on your "
@@ -87,18 +79,13 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_1)
 #: globalpaths.ui:17
-#, fuzzy, kde-format
-#| msgid "Desktop path:"
+#, kde-format
 msgid "Desktop path:"
 msgstr "Conair na deisce:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
 #: globalpaths.ui:24
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder contains all the files which you see on your desktop. You can "
-#| "change the location of this folder if you want to, and the contents will "
-#| "move automatically to the new location as well."
+#, kde-format
 msgid ""
 "This folder contains all the files which you see on your desktop. You can "
 "change the location of this folder if you want to, and the contents will "
@@ -110,8 +97,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: globalpaths.ui:34
-#, fuzzy, kde-format
-#| msgid "Documents path:"
+#, kde-format
 msgid "Documents path:"
 msgstr "Conair na gcáipéisí:"
 
@@ -128,8 +114,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: globalpaths.ui:51
-#, fuzzy, kde-format
-#| msgid "Downloads path:"
+#, kde-format
 msgid "Downloads path:"
 msgstr "Conair na n-íosluchtuithe:"
 
@@ -167,9 +152,7 @@ msgstr "Conair na bpictiúr:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
 #: globalpaths.ui:92
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
 msgstr ""
@@ -178,8 +161,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: globalpaths.ui:102
-#, fuzzy, kde-format
-#| msgid "Music path:"
+#, kde-format
 msgid "Music path:"
 msgstr "Conair cheoil:"
 

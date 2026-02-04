@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"3 : 4;\n"
 "X-Generator: Weblate 5.15.1\n"
 
 #, kde-format
@@ -233,14 +233,12 @@ msgid "The device property %1 must contain %2"
 msgstr "Ní mór %2 a bheith in airí %1 an ghléis"
 
 #: SolidActions.cpp:33
-#, fuzzy, kde-format
-#| msgid "Solid Device Actions Editor"
+#, kde-format
 msgid "Solid Device Actions Editor"
 msgstr "Eagarthóir Gníomhartha Gléis Solid"
 
 #: SolidActions.cpp:35
-#, fuzzy, kde-format
-#| msgid "Solid Device Actions Control Panel Module"
+#, kde-format
 msgid "Solid Device Actions Control Panel Module"
 msgstr "Modúl Rialaithe le haghaidh Gníomhartha Gléis Solid"
 

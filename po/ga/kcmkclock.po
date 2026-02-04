@@ -3,22 +3,22 @@
 # Séamus Ó Ciardhuáin <seoc@cnds.ucd.ie>, 2002
 # Kevin Scannell <kscanne@gmail.com>, 2009
 # Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>, 2026.
+# SPDX-FileCopyrightText: 2026 Charlotte <altronic25@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2026-01-21 12:09+0000\n"
-"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
-"Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
-"plasma-translations/kcmkclock/ga/>\n"
+"PO-Revision-Date: 2026-01-29 20:46+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
-"X-Generator: Weblate 5.15.1\n"
+"3 : 4;\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -62,23 +62,20 @@ msgstr "Crios Ama"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: dateandtime.ui:128
-#, fuzzy, kde-format
-#| msgid "To change the local time zone, select your area from the list below."
+#, kde-format
 msgid "To change the local time zone, select your area from the list below."
 msgstr ""
 "Chun an crios ama logánta a athrú, roghnaigh do cheantar as an liosta thíos."
 
 #. i18n: ectx: property (text), widget (QLabel, m_local)
 #: dateandtime.ui:151
-#, fuzzy, kde-format
-#| msgid "Current local time zone:"
+#, kde-format
 msgid "Current local time zone:"
 msgstr "Crios ama reatha:"
 
 #. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
 #: dateandtime.ui:161
-#, fuzzy, kde-format
-#| msgid "Search…"
+#, kde-format
 msgid "Search…"
 msgstr "Cuardaigh..."
 
@@ -103,17 +100,13 @@ msgstr ""
 "dheis, nó iontráil an luach nua go díreach."
 
 #: dtime.cpp:113
-#, fuzzy, kde-format
-#| msgctxt "%1 is name of time zone"
-#| msgid "Current local time zone: %1"
+#, kde-format
 msgctxt "%1 is name of time zone"
 msgid "Current local time zone: %1"
 msgstr "Crios ama reatha: %1"
 
 #: dtime.cpp:116
-#, fuzzy, kde-format
-#| msgctxt "%1 is name of time zone, %2 is its abbreviation"
-#| msgid "Current local time zone: %1 (%2)"
+#, kde-format
 msgctxt "%1 is name of time zone, %2 is its abbreviation"
 msgid "Current local time zone: %1 (%2)"
 msgstr "Crios ama reatha: %1 (%2)"
@@ -166,62 +159,47 @@ msgstr ""
 "téigh i dteagmháil le riarthóir do chórais."
 
 #: main.cpp:49
-#, fuzzy, kde-format
-#| msgid "KDE Clock Control Module"
+#, kde-format
 msgid "KDE Clock Control Module"
 msgstr "Modúl Rialaithe Cloig KDE"
 
 #: main.cpp:53
-#, fuzzy, kde-format
-#| msgid "(c) 1996 - 2001 Luca Montecchiani"
+#, kde-format
 msgid "(c) 1996 - 2001 Luca Montecchiani"
 msgstr "© 1996 - 2001 Luca Montecchiani"
 
 #: main.cpp:55
-#, fuzzy, kde-format
-#| msgid "Luca Montecchiani"
+#, kde-format
 msgid "Luca Montecchiani"
 msgstr "Luca Montecchiani"
 
 #: main.cpp:55
-#, fuzzy, kde-format
-#| msgid "Original author"
+#, kde-format
 msgid "Original author"
 msgstr "An chéad údar"
 
 #: main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Paul Campbell"
+#, kde-format
 msgid "Paul Campbell"
 msgstr "Paul Campbell"
 
 #: main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Current Maintainer"
+#, kde-format
 msgid "Current Maintainer"
 msgstr "Cothaitheoir Reatha"
 
 #: main.cpp:57
-#, fuzzy, kde-format
-#| msgid "Benjamin Meyer"
+#, kde-format
 msgid "Benjamin Meyer"
 msgstr "Benjamin Meyer"
 
 #: main.cpp:57
-#, fuzzy, kde-format
-#| msgid "Added NTP support"
+#, kde-format
 msgid "Added NTP support"
 msgstr "Chuir sé tacaíocht NTP leis"
 
 #: main.cpp:60
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Date & Time</h1> This control module can be used to set the system "
-#| "date and time. As these settings do not only affect you as a user, but "
-#| "rather the whole system, you can only change these settings when you "
-#| "start the System Settings as root. If you do not have the root password, "
-#| "but feel the system time should be corrected, please contact your system "
-#| "administrator."
+#, kde-format
 msgid ""
 "<h1>Date & Time</h1> This control module can be used to set the system date "
 "and time. As these settings do not only affect you as a user, but rather the "
