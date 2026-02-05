@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2014 Marco Martin <mart@kde.org>
+    SPDX-FileCopyrightText: 2026 David Edmundson <davidedmundson@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -17,28 +18,38 @@ import org.kde.kirigami as Kirigami
 import org.kde.plasma.private.shell
 import org.kde.plasma.shell
 
-PlasmaCore.Dialog {
+PlasmaCore.PopupPlasmaWindow {
     id: dialog
 
     required property AlternativesHelper alternativesHelper
 
     visualParent: alternativesHelper.applet
-    location: alternativesHelper.applet.Plasmoid.location
+    width: root.Layout.preferredWidth + leftPadding + rightPadding
+    height: root.Layout.preferredHeight + topPadding + bottomPadding
+
+    onActiveChanged: if (!active) visible = false
+    animated: true
     hideOnWindowDeactivate: true
-    backgroundHints: (alternativesHelper.applet.Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentPrefersOpaqueBackground) ? PlasmaCore.Dialog.SolidBackground : PlasmaCore.Dialog.StandardBackground
 
-    Component.onCompleted: {
-        flags = flags |  Qt.WindowStaysOnTopHint;
-        dialog.show();
+    popupDirection: switch (alternativesHelper.applet.Plasmoid.location) {
+        case PlasmaCore.Types.TopEdge:
+            return Qt.BottomEdge
+        case PlasmaCore.Types.LeftEdge:
+            return Qt.RightEdge
+        case PlasmaCore.Types.RightEdge:
+            return Qt.LeftEdge
+        default:
+            return Qt.TopEdge
     }
+    visible: true
 
-    ColumnLayout {
+    mainItem: ColumnLayout {
         id: root
 
         signal configurationChanged
 
-        Layout.minimumWidth: Kirigami.Units.gridUnit * 20
-        Layout.minimumHeight: Math.min(Screen.height - Kirigami.Units.gridUnit * 10, implicitHeight)
+        Layout.preferredWidth: Kirigami.Units.gridUnit * 20
+        Layout.preferredHeight: Math.min(Screen.height - Kirigami.Units.gridUnit * 10, implicitHeight)
 
         LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
