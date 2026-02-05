@@ -279,7 +279,7 @@ PlasmaComponents3.ScrollView {
 
             readonly property bool searchResultsPresent: runnerColumns.visibleChildren[0] instanceof RunnerResultsList
 
-            Layout.minimumWidth: searchField.defaultWidth
+            Layout.minimumWidth: (searchResultsPresent || root.runnerModel.querying) ? searchField.defaultWidth : 0
             Layout.fillHeight: true
 
             visible: searchField.text !== "" && root.runnerModel.count > 0
@@ -334,35 +334,40 @@ PlasmaComponents3.ScrollView {
                 }
             }
 
-            PlasmaExtras.PlaceholderMessage {
-                id: noMatchesPlaceholder
+        }
+        PlasmaExtras.PlaceholderMessage {
+            id: noMatchesPlaceholder
 
-                property bool searchRunning: false
-                property string lastQuery: "" // copy to avoid timing conflicts with visible binding
+            property bool searchRunning: false
+            property string lastQuery: "" // copy to avoid timing conflicts with visible binding
 
-                Layout.minimumWidth: searchField.defaultWidth
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            Layout.minimumWidth: searchField.defaultWidth
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
-                visible: lastQuery !== "" && !runnerColumns.searchResultsPresent && (!searchRunning || visible)
-                iconName: "edit-none"
-                text: i18nc("@info:status", "No matches")
+            visible: lastQuery !== "" && !runnerColumns.searchResultsPresent && (!searchRunning || visible)
+            iconName: "edit-none"
+            text: i18nc("@info:status", "No matches")
 
-                Connections {
-                    target: root.runnerModel
+            Connections {
+                target: root.runnerModel
 
-                    function onQueryFinished() {
-                        noMatchesPlaceholder.searchRunning = false
-                    }
+                function onQueryFinished() {
+                    noMatchesPlaceholder.searchRunning = false
                 }
+            }
 
-                Connections {
-                    target: searchField
+            Connections {
+                target: searchField
 
-                    function onTextChanged() {
-                        noMatchesPlaceholder.searchRunning = searchField.text !== ""
-                        noMatchesPlaceholder.lastQuery = searchField.text
-                    }
+                function onTextChanged() {
+                    noMatchesPlaceholder.searchRunning = searchField.text !== ""
+                    noMatchesPlaceholder.lastQuery = searchField.text
                 }
+            }
+
+            Binding {
+                searchField.width: searchField.defaultWidth
+                when: noMatchesPlaceholder.visible
             }
         }
     }
