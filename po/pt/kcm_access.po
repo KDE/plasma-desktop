@@ -1,11 +1,12 @@
+# SPDX-FileCopyrightText: 2026 César A. P. Cláudio <cesarapclaudio@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-16 00:45+0000\n"
-"PO-Revision-Date: 2023-01-22 22:34+0000\n"
-"Last-Translator: Pedro Morais <morasi@kde.org>\n"
-"Language-Team: pt <kde-i18n-pt@kde.org>\n"
+"PO-Revision-Date: 2026-02-04 23:39+0000\n"
+"Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
+"Language-Team: pt\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,160 +16,160 @@ msgstr ""
 "X-POFile-SpellExtra: Hyper AltGraph CapsLock ms NumLock AccessX bip min\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-SpellExtra: setup mp\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
 msgid "KWin"
-msgstr ""
+msgstr "KWin"
 
 #: kcmaccess.cpp:130
 #, kde-format
 msgid "Toggle Invert Effect"
-msgstr ""
+msgstr "Alternar Efeito de Inversão"
 
 #: kcmaccess.cpp:136
 #, kde-format
 msgid "Toggle Invert Effect on Window"
-msgstr ""
+msgstr "Alternar Efeito de Inversão na Janela"
 
 #: kcmaccess.cpp:178
 #, kde-format
 msgid "Move Left"
-msgstr ""
+msgstr "Mover para a esquerda"
 
 #: kcmaccess.cpp:185
 #, kde-format
 msgid "Move Right"
-msgstr ""
+msgstr "Mover para a direita"
 
 #: kcmaccess.cpp:192
 #, kde-format
 msgid "Move Up"
-msgstr ""
+msgstr "Mover para cima"
 
 #: kcmaccess.cpp:199
 #, kde-format
 msgid "Move Down"
-msgstr ""
+msgstr "Mover para baixo"
 
 #: kcmaccess.cpp:206
 #, kde-format
 msgid "Move Mouse to Focus"
-msgstr ""
+msgstr "Mover o rato para o foco"
 
 #: kcmaccess.cpp:213
 #, kde-format
 msgid "Move Mouse to Center"
-msgstr ""
+msgstr "Mover o rato para o centro"
 
 #: kcmaccess.cpp:256
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
-msgstr "Não foi possível obter a configuração do Orca: o \"%1\" falhou"
+msgstr ""
+"Não foi possível definir as definições do 'gsettings' para o Orca: \"%1\" "
+"falhou"
 
 #: kcmaccess.cpp:263
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
-msgstr "Erro: Não foi possível invocar o \"orca --setup\""
+msgstr "Erro: Não foi possível iniciar \"orca --setup\""
 
 #. i18n: ectx: label, entry (Gestures), group (Keyboard)
 #: kcmaccessibilityactivationgestures.kcfg:9
 #, kde-format
 msgid "Use Gestures"
-msgstr "Usar os Gestos"
+msgstr "Usar Gestos"
 
 #. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
 #: kcmaccessibilityactivationgestures.kcfg:13
 #, kde-format
 msgid "Ask for Confirmation for a gesture"
-msgstr "Pedir a confirmação de um gesto"
+msgstr "Pedir confirmação para um gesto"
 
 #. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
 #: kcmaccessibilityactivationgestures.kcfg:17
 #, kde-format
 msgid "Confirm access to the Keyboard"
-msgstr "Confirmar o acesso ao teclado"
+msgstr "Confirmar acesso ao teclado"
 
 #. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
 #: kcmaccessibilityactivationgestures.kcfg:21
 #, kde-format
 msgid "Use a timeout delay"
-msgstr "Usar um tempo-limite de atraso"
+msgstr "Utilizar um atraso de tempo limite"
 
 #. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
 #: kcmaccessibilityactivationgestures.kcfg:25
-#, fuzzy, kde-format
-#| msgid "Delay for the mouse movement"
+#, kde-format
 msgid "Delay for timeout"
-msgstr "Atraso do movimento do rato"
+msgstr "Atraso para tempo limite"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilityactivationgestures.kcfg:29
 #, kde-format
 msgid "Use a beep for access"
-msgstr "Usar um apito no acesso"
+msgstr "Utilizar um sinal sonoro para acesso"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
 #, kde-format
 msgid "Use System Bell"
-msgstr "Usar a Campainha do Sistema"
+msgstr "Utilizar o Sinal Sonoro do Sistema"
 
 #. i18n: ectx: label, entry (CustomBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:13
 #, kde-format
 msgid "Customize system bell"
-msgstr "Personalizar a campainha do sistema"
+msgstr "Personalizar o sinal sonoro do sistema"
 
 #. i18n: ectx: label, entry (CustomBellFile), group (Bell)
 #: kcmaccessibilitybell.kcfg:17
 #, kde-format
 msgid "Sound file for the Bell"
-msgstr "Ficheiro de som da campainha"
+msgstr "Ficheiro de som para o Sinal Sonoro"
 
 #. i18n: ectx: label, entry (VisibleBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:20
 #, kde-format
 msgid "Use a visual bell instead of a sound"
-msgstr "Usar uma campainha visual em vez de um som"
+msgstr "Utilizar um alerta visual em vez de um som"
 
 #. i18n: ectx: label, entry (InvertScreen), group (Bell)
 #: kcmaccessibilitybell.kcfg:24
 #, kde-format
 msgid "Invert the system colors on the bell"
-msgstr "Inverter as cores do sistema na campainha"
+msgstr "Inverter as cores do sistema ao ativar o sinal sonoro"
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
-#, fuzzy, kde-format
-#| msgid "Color of the Visible Bell"
+#, kde-format
 msgid "Color of the Visual Bell"
-msgstr "Cor da Campainha Visível"
+msgstr "Cor do Alerta Visual"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Duration of the Visible Bell"
+#, kde-format
 msgid "Duration of the Visual Bell"
-msgstr "Duração da Campainha Visível"
+msgstr "Duração do Alerta Visual"
 
 #. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)
 #: kcmaccessibilitycolorblindnesscorrection.kcfg:13
 #, kde-format
 msgid "Whether Colorblindness Correction is enabled"
-msgstr ""
+msgstr "Se a Correção de Daltonismo está ativada"
 
 #. i18n: ectx: label, entry (Invert), group (Plugins)
 #: kcmaccessibilityinvert.kcfg:9
 #, kde-format
 msgid "Whether the Invert effect is enabled"
-msgstr ""
+msgstr "Se o efeito de Inversão está ativado"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
 #, kde-format
 msgid "Use sticky Keys"
-msgstr "Usar as teclas fixas"
+msgstr "Utilizar as teclas fixas"
 
 #. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:13
@@ -180,67 +181,67 @@ msgstr "Bloquear as teclas fixas"
 #: kcmaccessibilitykeyboard.kcfg:17
 #, kde-format
 msgid "Turn sticky keys off when two keys are pressed simultaneously"
-msgstr "Desligar as teclas fixas quando carregar em duas teclas em simultâneo"
+msgstr "Desativar as teclas fixas ao premir duas teclas simultaneamente"
 
 #. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:21
 #, kde-format
 msgid "Beep on a sticky key press"
-msgstr "Apitar ao carregar numa tecla fixa"
+msgstr "Emitir sinal sonoro ao premir uma tecla fixa"
 
 #. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:25
 #, kde-format
 msgid "Toggle keys beep"
-msgstr "Comutar o som das teclas"
+msgstr "Sinal sonoro das teclas de alternância"
 
 #. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:29
 #, kde-format
 msgid "Notify when a keyboard modifier is pressed"
-msgstr "Notificar quando carregar numa tecla modificadora"
+msgstr "Notificar quando um modificador de teclado for premido"
 
 #. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:9
 #, kde-format
 msgid "Use slow keypresses"
-msgstr "Usar as teclas lentas"
+msgstr "Utilizar as teclas lentas"
 
 #. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:13
 #, kde-format
 msgid "Delay for the key press"
-msgstr "Atraso da pressão da tecla"
+msgstr "Atraso para a pressão da tecla"
 
 #. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:17
 #, kde-format
 msgid "Beep on a slow keypress"
-msgstr "Apitar numa pressão lenta da tecla"
+msgstr "Emitir sinal sonoro ao premir lentamente uma tecla"
 
 #. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:21
 #, kde-format
 msgid "Beep on an accepted keypress"
-msgstr "Apitar numa pressão de tecla aceite"
+msgstr "Emitir sinal sonoro numa pressão da tecla aceite"
 
 #. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:25
 #, kde-format
 msgid "Beep on a rejected keypress"
-msgstr "Apitar numa pressão de tecla rejeitada"
+msgstr "Emitir sinal sonoro numa pressão da tecla rejeitada"
 
 #. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:29
 #, kde-format
 msgid "Bounce Keys"
-msgstr "Teclas Sonoras"
+msgstr "Teclas com rejeição"
 
 #. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:33
 #, kde-format
 msgid "Use a delay for bouncing"
-msgstr "Usar um atraso no som"
+msgstr "Utilizar um atraso para a rejeição"
 
 #. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:37

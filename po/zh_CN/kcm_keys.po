@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-05 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -45,20 +45,20 @@ msgctxt "@item:intable"
 msgid "Plasma Workspace"
 msgstr "Plasma 工作空间"
 
-#: globalaccelmodel.cpp:245
+#: globalaccelmodel.cpp:254
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
 msgstr "保存快捷键 %1 时出错：%2"
 
-#: globalaccelmodel.cpp:362
+#: globalaccelmodel.cpp:371
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "添加 %1 时出错，它似乎没有关联的操作。"
 
-#: globalaccelmodel.cpp:413
+#: globalaccelmodel.cpp:422
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "与全局快捷键服务通信时出错"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:45+0000\n"
+"POT-Creation-Date: 2026-02-05 00:45+0000\n"
 "PO-Revision-Date: 2026-02-01 17:57-0500\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -35,40 +35,25 @@ msgid "Date and Time"
 msgstr "چېسلا ۋە ۋاقىت"
 
 #. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
-#: dateandtime.ui:45
+#: dateandtime.ui:61
 #, kde-format
 msgid "Set date and time &automatically"
 msgstr "چېسلا ۋە ۋاقىتنى ئۆزلۈكىدىن تەڭشەيدۇ(&A)"
 
-#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
-#: dateandtime.ui:62
-#, kde-format
-msgid "&Time server:"
-msgstr "ۋاقىت مۇلازىمېتىرى(&T):"
-
 #. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
-#: dateandtime.ui:102
+#: dateandtime.ui:91
 #, kde-format
 msgid "Here you can change the system date's day of the month, month and year."
 msgstr ""
 "سىز بۇ يەر دە سىستېما چېسلاسىنىڭ يىل، ئاي،كۈنلىرىنى ئۆزگەرتسىڭىز بولىدۇ."
 
 #. i18n: ectx: attribute (title), widget (QQuickWidget, timezoneViewer)
-#: dateandtime.ui:146
+#: dateandtime.ui:140
 #, kde-format
 msgid "Time Zone"
 msgstr "ۋاقىت رايونى"
 
-#: dtime.cpp:63
-#, kde-format
-msgid ""
-"No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
-"enable automatic updating of date and time."
-msgstr ""
-"NTP قورالىنى تاپالمىدى. «ntpdate» ياكى «rdate» بۇيرۇقىنى ئورنىتىپ چېسلا ۋە "
-"ۋاقىتنىڭ ئۆزلۈكىدىن يېڭىلىنىش ئىقتىدارىنى قوزغىتىڭ."
-
-#: dtime.cpp:92
+#: dtime.cpp:70
 #, kde-format
 msgid ""
 "Here you can change the system time. Click into the hours, minutes or "
@@ -79,36 +64,7 @@ msgstr ""
 "بۆلىكىنى چېكىپ، ئاندىن ئوڭ تەرەپتىكى ئاستى ئۈستى توپچە ئارقىلىق ياكى يېڭى "
 "ساننى بىۋاسىتە كىرگۈزۈپ ئۆزگەرتەلەيسىز."
 
-#: dtime.cpp:194
-#, kde-format
-msgid ""
-"Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
-"pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
-msgstr ""
-"ئاممىۋى ۋاقىت مۇلازىمېتىرى (pool.ntp.org)، asia.pool.ntp.org، europe.pool."
-"ntp.org، north-america.pool.ntp.org، oceania.pool.ntp.org"
-
-#: dtime.cpp:269
-#, kde-format
-msgid "Unable to contact time server: %1."
-msgstr "ۋاقىت مۇلازىمېتىرى بىلەن ئالاقە قىلغىلى بولمىدى: %1."
-
-#: dtime.cpp:273
-#, kde-format
-msgid "Can not set date."
-msgstr "چېسلانى بەلگىلىگىلى بولمىدى."
-
-#: dtime.cpp:276
-#, kde-format
-msgid "Error setting new time zone."
-msgstr "يېڭى ۋاقت رايونىنى تەڭشەشتە خاتالىق كۆرۈلدى."
-
-#: dtime.cpp:276
-#, kde-format
-msgid "Time zone Error"
-msgstr "ۋاقىت رايون خاتالىقى"
-
-#: dtime.cpp:294
+#: dtime.cpp:193
 #, kde-format
 msgid ""
 "<h1>Date & Time</h1> This system settings module can be used to set the "
@@ -125,25 +81,53 @@ msgstr ""
 "ئۆزگەرتەلەيسىز. ئەگەر سىزدە root ئىشلەتكۈچى ئىم بولمىسا، ئەمما سىستېما "
 "ۋاقتىنى تەڭشەش كېرەك دەپ قارىسىڭىز، سىستېما باشقۇرغۇچىڭىز بىلەن ئالاقىلىشىڭ."
 
-#: main.cpp:91
-#, kde-format
-msgid "Unable to authenticate/execute the action: %1, %2"
-msgstr "سالاھىيەت دەلىللەپ/مەشغۇلاتنى ئىجرا قىلالمايدۇ:  %1، %2"
-
-#: main.cpp:111
+#: main.cpp:60
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "NTP تەڭشىكىنى ئۆزگەرتەلمەيدۇ"
 
-#: main.cpp:124
+#: main.cpp:73
 #, kde-format
 msgid "Unable to set current time"
 msgstr "نۆۋەتتىكى ۋاقىتنى تەڭشىيەلمەيدۇ"
 
-#: main.cpp:136
+#: main.cpp:85
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "ۋاقىت رايونىنى تەڭشىيەلمەيدۇ"
+
+#~ msgid "&Time server:"
+#~ msgstr "ۋاقىت مۇلازىمېتىرى(&T):"
+
+#~ msgid ""
+#~ "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
+#~ "enable automatic updating of date and time."
+#~ msgstr ""
+#~ "NTP قورالىنى تاپالمىدى. «ntpdate» ياكى «rdate» بۇيرۇقىنى ئورنىتىپ چېسلا "
+#~ "ۋە ۋاقىتنىڭ ئۆزلۈكىدىن يېڭىلىنىش ئىقتىدارىنى قوزغىتىڭ."
+
+#~ msgid ""
+#~ "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        "
+#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#~ "pool.ntp.org"
+#~ msgstr ""
+#~ "ئاممىۋى ۋاقىت مۇلازىمېتىرى (pool.ntp.org)، asia.pool.ntp.org، europe.pool."
+#~ "ntp.org، north-america.pool.ntp.org، oceania.pool.ntp.org"
+
+#~ msgid "Unable to contact time server: %1."
+#~ msgstr "ۋاقىت مۇلازىمېتىرى بىلەن ئالاقە قىلغىلى بولمىدى: %1."
+
+#~ msgid "Can not set date."
+#~ msgstr "چېسلانى بەلگىلىگىلى بولمىدى."
+
+#~ msgid "Error setting new time zone."
+#~ msgstr "يېڭى ۋاقت رايونىنى تەڭشەشتە خاتالىق كۆرۈلدى."
+
+#~ msgid "Time zone Error"
+#~ msgstr "ۋاقىت رايون خاتالىقى"
+
+#~ msgid "Unable to authenticate/execute the action: %1, %2"
+#~ msgstr "سالاھىيەت دەلىللەپ/مەشغۇلاتنى ئىجرا قىلالمايدۇ:  %1، %2"
 
 #~ msgid "Current local time zone:"
 #~ msgstr "نۆۋەتتىكى يەرلىك ۋاقىت رايونى"

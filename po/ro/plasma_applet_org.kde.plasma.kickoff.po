@@ -2,23 +2,23 @@
 # This file is distributed under the same license as the plasma-desktop package.
 # SPDX-FileCopyrightText: 2013, 2020, 2021, 2022, 2023, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
 # Ovidiu-Florin Bogdan <ovidiu.b13@gmail.com>, 2015.
+# SPDX-FileCopyrightText: 2015, 2026 Viorel-Cătălin Răpițeanu <rapiteanu.catalin@gmail.com>
 #
-# Viorel-Cătălin Răpițeanu <rapiteanu DOT catalin AT gmail DOT com>, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2025-10-03 13:57+0100\n"
-"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"PO-Revision-Date: 2026-01-29 14:39+0200\n"
+"Last-Translator: Viorel-Cătălin Răpițeanu <rapiteanu.catalin@gmail.com>\n"
+"Language-Team: ro\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: code/tools.js:32
 #, kde-format
@@ -46,15 +46,13 @@ msgid "Show in Favorites"
 msgstr "Arată în favorite"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Generale"
 
 #: ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Pictogramă:"
@@ -130,36 +128,31 @@ msgid "A text label cannot be set when the Panel is vertical."
 msgstr "Eticheta textuală nu poate fi adăugată când panoul e vertical."
 
 #: ConfigGeneral.qml:157
-#, fuzzy, kde-format
-#| msgid "Show applications as:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Arată aplicațiile ca:"
 
 #: ConfigGeneral.qml:159
-#, fuzzy, kde-format
-#| msgid "Name only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Doar denumirea"
 
 #: ConfigGeneral.qml:159
-#, fuzzy, kde-format
-#| msgid "Description only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Doar descrierea"
 
 #: ConfigGeneral.qml:159
-#, fuzzy, kde-format
-#| msgid "Name (Description)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Denumire (descriere)"
 
 #: ConfigGeneral.qml:159
-#, fuzzy, kde-format
-#| msgid "Description (Name)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Descriere (denumire)"
@@ -187,8 +180,7 @@ msgstr ""
 "pagina cu favorite."
 
 #: ConfigGeneral.qml:181
-#, fuzzy, kde-format
-#| msgid "Use compact list item style"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use compact list item style"
 msgstr "Folosește stil compact pentru elementele listei"
@@ -200,15 +192,13 @@ msgid "Automatically disabled when in Touch Mode"
 msgstr "Dezactivată automat în regim tactil"
 
 #: ConfigGeneral.qml:195
-#, fuzzy, kde-format
-#| msgid "Highlight newly installed applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly installed applications"
 msgstr "Evidențiază aplicațiile instalate recent"
 
 #: ConfigGeneral.qml:200
-#, fuzzy, kde-format
-#| msgid "Switch sidebar categories when hovering over them"
+#, kde-format
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
 msgstr "Schimbă categoriile barei laterale la planarea deasupra lor"
@@ -220,124 +210,103 @@ msgid "Configure Search Plugins…"
 msgstr "Configurează extensiile de căutare…"
 
 #: ConfigGeneral.qml:216
-#, fuzzy, kde-format
-#| msgid "Sidebar position:"
+#, kde-format
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr "Poziția barei laterale:"
 
 #: ConfigGeneral.qml:217 ConfigGeneral.qml:225
-#, fuzzy, kde-format
-#| msgid "Right"
+#, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr "Dreapta"
 
 #: ConfigGeneral.qml:217
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "option:radio sidebar position"
 msgid "Left"
 msgstr "Stânga"
 
 #: ConfigGeneral.qml:225
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr "Stânga"
 
 #: ConfigGeneral.qml:233
-#, fuzzy, kde-format
-#| msgid "Show favorites:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
 msgstr "Arată favoritele:"
 
 #: ConfigGeneral.qml:234
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
-#| msgid "In a grid"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "într-o grilă"
 
 #: ConfigGeneral.qml:242
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a list'"
-#| msgid "In a list"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "într-o listă"
 
 #: ConfigGeneral.qml:250
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
 msgstr "Arată alte aplicații:"
 
 #: ConfigGeneral.qml:251
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
-#| msgid "In a grid"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "într-o grilă"
 
 #: ConfigGeneral.qml:259
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a list'"
-#| msgid "In a list"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "într-o listă"
 
 #: ConfigGeneral.qml:271
-#, fuzzy, kde-format
-#| msgid "Show buttons for:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr "Arată butoane pentru:"
 
 #: ConfigGeneral.qml:272
-#, fuzzy, kde-format
-#| msgid "Power"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power"
 msgstr "Alimentare"
 
 #: ConfigGeneral.qml:281
-#, fuzzy, kde-format
-#| msgid "Session"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "Sesiune"
 
 #: ConfigGeneral.qml:290
-#, fuzzy, kde-format
-#| msgid "Power and session"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
 msgstr "Alimentare și sesiune"
 
 #: ConfigGeneral.qml:299
-#, fuzzy, kde-format
-#| msgid "Show action button captions"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show action button captions"
 msgstr "Arată etichete pentru butoane de acțiune"
 
 #: Footer.qml:101
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@title:tab kickoff sidebar tab"
 msgid "Applications"
 msgstr "Aplicații"
 
 #: Footer.qml:117
-#, fuzzy, kde-format
-#| msgid "Places"
+#, kde-format
 msgctxt "@title:tab kickoff sidebar tab"
 msgid "Places"
 msgstr "Locuri"
@@ -349,15 +318,13 @@ msgid "No matches"
 msgstr "Nicio potrivire"
 
 #: Header.qml:86
-#, fuzzy, kde-format
-#| msgid "Open user settings"
+#, kde-format
 msgctxt "@action:button icon-only, for tooltip/Accessible"
 msgid "Open user settings"
 msgstr "Deschide configurările utilizatorului"
 
 #: Header.qml:266
-#, fuzzy, kde-format
-#| msgid "Keep Open"
+#, kde-format
 msgctxt ""
 "@action:button Pin widget open if it loses focus, icon-only button, for "
 "tooltip/Accessible"
@@ -365,23 +332,19 @@ msgid "Keep Open"
 msgstr "Ține deschis"
 
 #: KickoffGridDelegate.qml:59
-#, fuzzy, kde-format
-#| msgctxt "Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "@label Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "Nouă!"
 
 #: KickoffGridDelegate.qml:60
-#, fuzzy, kde-format
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly installed application"
 msgstr "Aplicație instalată recent"
 
 #: KickoffGridView.qml:101
-#, fuzzy, kde-format
-#| msgid "Grid with %1 rows, %2 columns"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Grid with %1 rows, %2 columns"
 msgstr "Grilă cu %1 rânduri, %2 coloane"
@@ -393,50 +356,43 @@ msgid "New!"
 msgstr "Nouă!"
 
 #: KickoffListDelegate.qml:118
-#, fuzzy, kde-format
-#| msgid "There is a newly installed application in this category"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly installed application in this category"
 msgstr "În această categorie este o aplicație instalată recent"
 
 #: KickoffListDelegate.qml:119
-#, fuzzy, kde-format
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly installed application"
 msgstr "Aplicație instalată recent"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Session"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Session"
 msgstr "Sesiune"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Power"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Power"
 msgstr "Alimentare"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "More"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "More"
 msgstr "Mai multe"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Session and Power"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Session and Power"
 msgstr "Sesiune și alimentare"
 
 #: main.qml:356
-#, fuzzy, kde-format
-#| msgid "Edit Applications…"
+#, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
 msgstr "Modifică aplicații…"
@@ -469,3 +425,228 @@ msgstr "Folosite frecvent"
 
 #~ msgid "Leave"
 #~ msgstr "Pleacă"
+
+#, fuzzy
+#~ msgid "Icon:"
+#~ msgstr "Pictogramă:"
+
+#, fuzzy
+#~ msgctxt "@action:button"
+#~ msgid "Configure Enabled Search Plugins…"
+#~ msgstr "Configurează extensiile de căutare…"
+
+#, fuzzy
+#~ msgid "Always sort applications alphabetically"
+#~ msgstr "Sortează aplicațiile alfabetic"
+
+#, fuzzy
+#~ msgid "Use compact list item style"
+#~ msgstr "Folosește stil compact pentru elementele listei"
+
+#, fuzzy
+#~ msgid "Show favorites:"
+#~ msgstr "Arată favoritele:"
+
+#, fuzzy
+#~ msgctxt "Part of a sentence: 'Show favorites in a grid'"
+#~ msgid "In a grid"
+#~ msgstr "într-o grilă"
+
+#, fuzzy
+#~ msgctxt "Part of a sentence: 'Show favorites in a list'"
+#~ msgid "In a list"
+#~ msgstr "într-o listă"
+
+#, fuzzy
+#~ msgid "Show other applications:"
+#~ msgstr "Arată alte aplicații:"
+
+#, fuzzy
+#~ msgid "Show buttons for:"
+#~ msgstr "Arată butoane pentru:"
+
+#, fuzzy
+#~ msgid "Power"
+#~ msgstr "Alimentare"
+
+#, fuzzy
+#~ msgid "Session"
+#~ msgstr "Sesiune"
+
+#, fuzzy
+#~ msgid "Power and session"
+#~ msgstr "Alimentare și sesiune"
+
+#, fuzzy
+#~ msgid "Show action button captions"
+#~ msgstr "Arată etichete pentru butoane de acțiune"
+
+#, fuzzy
+#~ msgid "General"
+#~ msgstr "Generale"
+
+#, fuzzy
+#~ msgid "Applications"
+#~ msgstr "Aplicații"
+
+#, fuzzy
+#~ msgid "Places"
+#~ msgstr "Locuri"
+
+#, fuzzy
+#~ msgid "Open user settings"
+#~ msgstr "Deschide configurările utilizatorului"
+
+#, fuzzy
+#~ msgid "Keep Open"
+#~ msgstr "Ține deschis"
+
+#, fuzzy
+#~ msgid "Edit Applications…"
+#~ msgstr "Modifică aplicații…"
+
+#, fuzzy
+#~ msgid "Grid with %1 rows, %2 columns"
+#~ msgstr "Grilă cu %1 rânduri, %2 coloane"
+
+#, fuzzy
+#~ msgid "More"
+#~ msgstr "Mai multe"
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "Șterge pictograma"
+
+#, fuzzy
+#~ msgid "Configure enabled search plugins"
+#~ msgstr "Configurează extensiile de căutare…"
+
+#~ msgid "Search…"
+#~ msgstr "Caută…"
+
+#, fuzzy
+#~ msgctxt "@item:inmenu Open icon chooser dialog"
+#~ msgid "Choose..."
+#~ msgstr "Alege…"
+
+#, fuzzy
+#~ msgid "Sort alphabetically"
+#~ msgstr "Sortează aplicațiile alfabetic"
+
+#~ msgid "Switch tabs on hover"
+#~ msgstr "Comută filele la planare"
+
+#~ msgid "Expand search to bookmarks, files and emails"
+#~ msgstr ""
+#~ "Extinde căutarea asupra semnelor de carte, fișierelor și scrisorilor"
+
+#~ msgid ""
+#~ "Drag tabs between the boxes to show/hide them, or reorder the visible "
+#~ "tabs by dragging."
+#~ msgstr ""
+#~ "Trageți filele între chenare pentru a le afișa/ascunde, sau reordonați "
+#~ "filele vizibile prin tragere."
+
+#~ msgid "%2@%3 (%1)"
+#~ msgstr "%2@%3 (%1)"
+
+#~ msgid "%1@%2"
+#~ msgstr "%1@%2"
+
+#~ msgid "Search..."
+#~ msgstr "Caută…"
+
+#, fuzzy
+#~ msgid "Edit Applications..."
+#~ msgstr "Modifică aplicații…"
+
+#, fuzzy
+#~ msgid "All Applications"
+#~ msgstr "Aplicații"
+
+#, fuzzy
+#~ msgid "Applications updated."
+#~ msgstr "Aplicații"
+
+#, fuzzy
+#~ msgid "Favorites"
+#~ msgstr "Adaugă la favorite"
+
+#, fuzzy
+#~ msgid "Computer"
+#~ msgstr "Calculator"
+
+#, fuzzy
+#~ msgid "History"
+#~ msgstr "Istoric"
+
+#~ msgid "Often Used"
+#~ msgstr "Folosite des"
+
+#~ msgid "Active Tabs"
+#~ msgstr "File active"
+
+#~ msgid "Inactive Tabs"
+#~ msgstr "File inactive"
+
+#, fuzzy
+#~ msgid "Go to user settings"
+#~ msgstr "Deschide configurările utilizatorului"
+
+#~ msgid "Allow labels to have two lines"
+#~ msgstr "Permite etichete pe două linii"
+
+#~ msgid "Primary actions:"
+#~ msgstr "Acțiuni primare:"
+
+#, fuzzy
+#~ msgid "Power actions"
+#~ msgstr "Alimentare și sesiune"
+
+#, fuzzy
+#~ msgid "Leave..."
+#~ msgstr "Pleacă"
+
+#, fuzzy
+#~ msgid "Power..."
+#~ msgstr "Alimentare"
+
+#, fuzzy
+#~ msgid "More..."
+#~ msgstr "Mai multe"
+
+#, fuzzy
+#~ msgid "Updating applications..."
+#~ msgstr "Modifică aplicații…"
+
+#, fuzzy
+#~ msgid "Frequently Used"
+#~ msgstr "Folosite frecvent"
+
+#~ msgid "List with 1 item"
+#~ msgid_plural "List with %1 items"
+#~ msgstr[0] "Listă cu 1 element"
+#~ msgstr[1] "Listă cu %1 elemente"
+#~ msgstr[2] "Listă cu %1 de elemente"
+
+#~ msgid "%1 submenu"
+#~ msgstr "Submeniu %1"
+
+#, fuzzy
+#~ msgid "Updating applications…"
+#~ msgstr "Modifică aplicații…"
+
+#, fuzzy
+#~ msgid "Leave…"
+#~ msgstr "Pleacă"
+
+#, fuzzy
+#~ msgid "Power…"
+#~ msgstr "Alimentare"
+
+#, fuzzy
+#~ msgid "More…"
+#~ msgstr "Mai multe"
+
+#~ msgid "Allow label to have two lines"
+#~ msgstr "Permite etichetei să aibă două linii"

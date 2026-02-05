@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
+# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024, 2025, 2026 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-10-03 13:39+0100\n"
+"PO-Revision-Date: 2026-02-04 17:14+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -60,39 +60,31 @@ msgid "Description:"
 msgstr "Descriere:"
 
 #: ui/ActivityEditor.qml:84
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "While on this activity, allow:"
+#, kde-format
 msgctxt "@title:group for checkbox group"
 msgid "While on this activity, allow:"
 msgstr "În timpul aflării în această activitate, permite:"
 
 #: ui/ActivityEditor.qml:85
-#, fuzzy, kde-format
-#| msgid "Tracking file and app use"
+#, kde-format
 msgctxt "@option:check While on activity, allow"
 msgid "Tracking file and app use"
 msgstr "Evidența utilizării fișierelor și aplicațiilor"
 
 #: ui/ActivityEditor.qml:91
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Automatically turning off the screen"
+#, kde-format
 msgctxt "@option:check While on activity, allow"
 msgid "Automatically turning off the screen"
 msgstr "Deconectarea automată a ecranului"
 
 #: ui/ActivityEditor.qml:97
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Automatically shutting down or sleeping"
+#, kde-format
 msgctxt "@option:check While on activity, allow"
 msgid "Automatically shutting down or sleeping"
 msgstr "Oprirea sau adormirea automată"
 
 #: ui/ActivityEditor.qml:103
-#, fuzzy, kde-format
-#| msgid "Shortcut for switching:"
+#, kde-format
 msgctxt "@label prefix for keyboard shortcut input button"
 msgid "Shortcut for switching:"
 msgstr "Scurtătură pentru schimbare:"
@@ -104,8 +96,7 @@ msgid "Delete %1 activity"
 msgstr "Șterge activitatea %1"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Create New…"
+#, kde-format
 msgctxt "@action:button Create new Activity"
 msgid "Create New…"
 msgstr "Creează nouă…"
@@ -123,8 +114,7 @@ msgid "Do you want to delete activity '%1'?"
 msgstr "Sigur doriți să ștergeți activitatea „%1”?"
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "Delete Activity"
+#, kde-format
 msgctxt "@action:button in dialog confirms deletion"
 msgid "Delete Activity"
 msgstr "Șterge activitatea"

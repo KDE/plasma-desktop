@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:45+0000\n"
+"POT-Creation-Date: 2026-02-05 00:45+0000\n"
 "PO-Revision-Date: 2026-01-21 12:09+0000\n"
 "Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
 "Language-Team: Irish\n"
@@ -37,39 +37,24 @@ msgid "Date and Time"
 msgstr "Dáta agus Am"
 
 #. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
-#: dateandtime.ui:45
+#: dateandtime.ui:61
 #, kde-format
 msgid "Set date and time &automatically"
 msgstr "Socr&aigh dáta agus am go huathoibríoch"
 
-#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
-#: dateandtime.ui:62
-#, kde-format
-msgid "&Time server:"
-msgstr "&Freastalaí ama:"
-
 #. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
-#: dateandtime.ui:102
+#: dateandtime.ui:91
 #, kde-format
 msgid "Here you can change the system date's day of the month, month and year."
 msgstr "Is féidir leat dáta an chórais (lá, mí, bliain) a athrú anseo."
 
 #. i18n: ectx: attribute (title), widget (QQuickWidget, timezoneViewer)
-#: dateandtime.ui:146
+#: dateandtime.ui:140
 #, kde-format
 msgid "Time Zone"
 msgstr "Crios Ama"
 
-#: dtime.cpp:63
-#, kde-format
-msgid ""
-"No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
-"enable automatic updating of date and time."
-msgstr ""
-"Níor aimsíodh aon uirlis NTP. Suiteáil 'ntpdate' nó 'rdate' chun an dáta "
-"agus an t-am a nuashonrú go huathoibríoch."
-
-#: dtime.cpp:92
+#: dtime.cpp:70
 #, kde-format
 msgid ""
 "Here you can change the system time. Click into the hours, minutes or "
@@ -80,37 +65,7 @@ msgstr ""
 "a athrú (uaire, nóiméid, nó soicindí), agus úsáid na cnaipí suas/síos ar "
 "dheis, nó iontráil an luach nua go díreach."
 
-#: dtime.cpp:194
-#, kde-format
-msgid ""
-"Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
-"pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
-msgstr ""
-"Freastalaí Ama Poiblí (pool.ntp.org),        asia.pool.ntp.org,        "
-"europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool."
-"ntp.org"
-
-#: dtime.cpp:269
-#, kde-format
-msgid "Unable to contact time server: %1."
-msgstr "Ní féidir dul i dteagmháil leis an bhfreastalaí ama: %1."
-
-#: dtime.cpp:273
-#, kde-format
-msgid "Can not set date."
-msgstr "Ní féidir an dáta a shocrú."
-
-#: dtime.cpp:276
-#, kde-format
-msgid "Error setting new time zone."
-msgstr "Earráid agus crios ama nua á shocrú."
-
-#: dtime.cpp:276
-#, kde-format
-msgid "Time zone Error"
-msgstr "Earráid Chreasa Ama"
-
-#: dtime.cpp:294
+#: dtime.cpp:193
 #, kde-format
 msgid ""
 "<h1>Date & Time</h1> This system settings module can be used to set the "
@@ -127,25 +82,54 @@ msgstr ""
 "focal faire an fhorúsáideora agat, agus tá gá le ham an chórais a cheartú, "
 "téigh i dteagmháil le riarthóir do chórais."
 
-#: main.cpp:91
-#, kde-format
-msgid "Unable to authenticate/execute the action: %1, %2"
-msgstr "Ní féidir fíordheimhniú/gníomh a rith: %1, %2"
-
-#: main.cpp:111
+#: main.cpp:60
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "Ní féidir socruithe NTP a athrú"
 
-#: main.cpp:124
+#: main.cpp:73
 #, kde-format
 msgid "Unable to set current time"
 msgstr "Ní féidir an t-am reatha a shocrú"
 
-#: main.cpp:136
+#: main.cpp:85
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Ní féidir crios ama a shocrú"
+
+#~ msgid "&Time server:"
+#~ msgstr "&Freastalaí ama:"
+
+#~ msgid ""
+#~ "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
+#~ "enable automatic updating of date and time."
+#~ msgstr ""
+#~ "Níor aimsíodh aon uirlis NTP. Suiteáil 'ntpdate' nó 'rdate' chun an dáta "
+#~ "agus an t-am a nuashonrú go huathoibríoch."
+
+#~ msgid ""
+#~ "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        "
+#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#~ "pool.ntp.org"
+#~ msgstr ""
+#~ "Freastalaí Ama Poiblí (pool.ntp.org),        asia.pool.ntp.org,        "
+#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#~ "pool.ntp.org"
+
+#~ msgid "Unable to contact time server: %1."
+#~ msgstr "Ní féidir dul i dteagmháil leis an bhfreastalaí ama: %1."
+
+#~ msgid "Can not set date."
+#~ msgstr "Ní féidir an dáta a shocrú."
+
+#~ msgid "Error setting new time zone."
+#~ msgstr "Earráid agus crios ama nua á shocrú."
+
+#~ msgid "Time zone Error"
+#~ msgstr "Earráid Chreasa Ama"
+
+#~ msgid "Unable to authenticate/execute the action: %1, %2"
+#~ msgstr "Ní féidir fíordheimhniú/gníomh a rith: %1, %2"
 
 #~ msgid "To change the local time zone, select your area from the list below."
 #~ msgstr ""

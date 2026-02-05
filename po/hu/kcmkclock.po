@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:45+0000\n"
+"POT-Creation-Date: 2026-02-05 00:45+0000\n"
 "PO-Revision-Date: 2023-12-15 13:18+0100\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -35,39 +35,24 @@ msgid "Date and Time"
 msgstr "Dátum és idő"
 
 #. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
-#: dateandtime.ui:45
+#: dateandtime.ui:61
 #, kde-format
 msgid "Set date and time &automatically"
 msgstr "A dátum és az &idő automatikus beállítása"
 
-#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
-#: dateandtime.ui:62
-#, kde-format
-msgid "&Time server:"
-msgstr "I&dőkiszolgáló:"
-
 #. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
-#: dateandtime.ui:102
+#: dateandtime.ui:91
 #, kde-format
 msgid "Here you can change the system date's day of the month, month and year."
 msgstr "Itt lehet módosítani a rendszerdátum év, hónap és nap mezőjét."
 
 #. i18n: ectx: attribute (title), widget (QQuickWidget, timezoneViewer)
-#: dateandtime.ui:146
+#: dateandtime.ui:140
 #, kde-format
 msgid "Time Zone"
 msgstr "Időzóna"
 
-#: dtime.cpp:63
-#, kde-format
-msgid ""
-"No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
-"enable automatic updating of date and time."
-msgstr ""
-"Nem található NTP-segédprogram. Telepítse az „ntpdate” vagy „rdate” "
-"alkalmazást a dátum és idő atuomatikus frissítésének bekapcsolásához."
-
-#: dtime.cpp:92
+#: dtime.cpp:70
 #, kde-format
 msgid ""
 "Here you can change the system time. Click into the hours, minutes or "
@@ -78,37 +63,7 @@ msgstr ""
 "mezőkre az értékek megváltoztatásához és írja be az új értéket, vagy "
 "használja a fel/le gombokat."
 
-#: dtime.cpp:194
-#, kde-format
-msgid ""
-"Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
-"pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
-msgstr ""
-"Nyilvános időkiszolgáló (pool.ntp.org),        asia.pool.ntp.org,        "
-"europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool."
-"ntp.org"
-
-#: dtime.cpp:269
-#, kde-format
-msgid "Unable to contact time server: %1."
-msgstr "Nem sikerült elérni ezt az időszolgáltatót: %1."
-
-#: dtime.cpp:273
-#, kde-format
-msgid "Can not set date."
-msgstr "Nem sikerült beállítani a dátumot."
-
-#: dtime.cpp:276
-#, kde-format
-msgid "Error setting new time zone."
-msgstr "Nem sikerült beállítani az új időzónát."
-
-#: dtime.cpp:276
-#, kde-format
-msgid "Time zone Error"
-msgstr "Időzóna-hiba"
-
-#: dtime.cpp:294
+#: dtime.cpp:193
 #, kde-format
 msgid ""
 "<h1>Date & Time</h1> This system settings module can be used to set the "
@@ -124,25 +79,54 @@ msgstr ""
 "a Rendszerbeállításokat. Ha nem rendelkezik rendszergazdai jelszóval, akkor "
 "kérjen meg egy ilyen jogosultságú személyt a módosítás elvégzésére."
 
-#: main.cpp:91
-#, kde-format
-msgid "Unable to authenticate/execute the action: %1, %2"
-msgstr "Nem sikerült hitelesíteni/végrehajtani a műveletet: %1, %2"
-
-#: main.cpp:111
+#: main.cpp:60
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "Nem lehet módosítani az NTP beállításokat"
 
-#: main.cpp:124
+#: main.cpp:73
 #, kde-format
 msgid "Unable to set current time"
 msgstr "Nem lehet beállítani a jelenlegi időt"
 
-#: main.cpp:136
+#: main.cpp:85
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Nem lehet beállítani az időzónát"
+
+#~ msgid "&Time server:"
+#~ msgstr "I&dőkiszolgáló:"
+
+#~ msgid ""
+#~ "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
+#~ "enable automatic updating of date and time."
+#~ msgstr ""
+#~ "Nem található NTP-segédprogram. Telepítse az „ntpdate” vagy „rdate” "
+#~ "alkalmazást a dátum és idő atuomatikus frissítésének bekapcsolásához."
+
+#~ msgid ""
+#~ "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        "
+#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#~ "pool.ntp.org"
+#~ msgstr ""
+#~ "Nyilvános időkiszolgáló (pool.ntp.org),        asia.pool.ntp.org,        "
+#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#~ "pool.ntp.org"
+
+#~ msgid "Unable to contact time server: %1."
+#~ msgstr "Nem sikerült elérni ezt az időszolgáltatót: %1."
+
+#~ msgid "Can not set date."
+#~ msgstr "Nem sikerült beállítani a dátumot."
+
+#~ msgid "Error setting new time zone."
+#~ msgstr "Nem sikerült beállítani az új időzónát."
+
+#~ msgid "Time zone Error"
+#~ msgstr "Időzóna-hiba"
+
+#~ msgid "Unable to authenticate/execute the action: %1, %2"
+#~ msgstr "Nem sikerült hitelesíteni/végrehajtani a műveletet: %1, %2"
 
 #~ msgid "To change the local time zone, select your area from the list below."
 #~ msgstr ""

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-02 00:45+0000\n"
-"PO-Revision-Date: 2026-01-03 15:43+0000\n"
+"PO-Revision-Date: 2026-02-04 17:23+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -52,15 +52,13 @@ msgid "Name"
 msgstr "Denumirea"
 
 #: ConfigGeneral.qml:91
-#, fuzzy, kde-format
-#| msgid "Only icons can be shown when the Panel is vertical."
+#, kde-format
 msgctxt "@info:usagetip display mode for active application"
 msgid "Only icons can be shown when the Panel is vertical."
 msgstr "Doar pictogramele pot fi arătate când panoul e vertical."
 
 #: ConfigGeneral.qml:93
-#, fuzzy, kde-format
-#| msgid "Not applicable when the widget is on the Desktop."
+#, kde-format
 msgctxt "@info:usagetip display mode for active application"
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "Nu se aplică când controlul grafic e pe birou."
@@ -78,9 +76,7 @@ msgid "Enabled, with delay:"
 msgstr "Activat, cu întârziere:"
 
 #: ConfigGeneral.qml:124
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@item:valuesuffix, %1 is hover activation delay in ms"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -138,43 +134,43 @@ msgstr "Care sunt minimizate"
 #, kde-format
 msgctxt "@label:listbox sort windows is list"
 msgid "Sort:"
-msgstr ""
+msgstr "Sortare:"
 
 #: ConfigGeneral.qml:178
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "By time opened"
-msgstr ""
+msgstr "Conform momentului deschiderii"
 
 #: ConfigGeneral.qml:182
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "Alphabetically"
-msgstr ""
+msgstr "Alfabetic"
 
 #: ConfigGeneral.qml:186
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "Alphabetically, grouped by virtual desktop"
-msgstr ""
+msgstr "Alfabetic, grupat după biroul virtual"
 
 #: ConfigGeneral.qml:190
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "Alphabetically, grouped by activity"
-msgstr ""
+msgstr "Alfabetic, grupat după activitate"
 
 #: ConfigGeneral.qml:194
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "By last activated time"
-msgstr ""
+msgstr "Conform momentului ultimei activări"
 
 #: ConfigGeneral.qml:198
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "By horizontal window position"
-msgstr ""
+msgstr "Conform poziției orizontale a ferestrei"
 
 #: main.qml:41
 #, kde-format

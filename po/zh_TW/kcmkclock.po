@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:45+0000\n"
+"POT-Creation-Date: 2026-02-05 00:45+0000\n"
 "PO-Revision-Date: 2023-11-10 23:22+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -42,39 +42,24 @@ msgid "Date and Time"
 msgstr "日期與時間"
 
 #. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
-#: dateandtime.ui:45
+#: dateandtime.ui:61
 #, kde-format
 msgid "Set date and time &automatically"
 msgstr "自動設定日期與時刻(&A)"
 
-#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
-#: dateandtime.ui:62
-#, kde-format
-msgid "&Time server:"
-msgstr "時間伺服器(&T)："
-
 #. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
-#: dateandtime.ui:102
+#: dateandtime.ui:91
 #, kde-format
 msgid "Here you can change the system date's day of the month, month and year."
 msgstr "您可以在這裡調整系統當月的第幾天，月份和年份。"
 
 #. i18n: ectx: attribute (title), widget (QQuickWidget, timezoneViewer)
-#: dateandtime.ui:146
+#: dateandtime.ui:140
 #, kde-format
 msgid "Time Zone"
 msgstr "時區"
 
-#: dtime.cpp:63
-#, kde-format
-msgid ""
-"No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
-"enable automatic updating of date and time."
-msgstr ""
-"找不到 NTP 工具程式。請安裝 ntpdate 或 rdate 以便開啟自動調整日期與時間的功"
-"能。"
-
-#: dtime.cpp:92
+#: dtime.cpp:70
 #, kde-format
 msgid ""
 "Here you can change the system time. Click into the hours, minutes or "
@@ -84,36 +69,7 @@ msgstr ""
 "你可以在這裡改變系統時刻。點選進入時，分，秒欄位來改變相對映的值， 也可以使用"
 "右邊的上下按鈕或直接輸入一個新的值。"
 
-#: dtime.cpp:194
-#, kde-format
-msgid ""
-"Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
-"pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
-msgstr ""
-"公用時刻伺服器 (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,north-"
-"america.pool.ntp.org,oceania.pool.ntp.org"
-
-#: dtime.cpp:269
-#, kde-format
-msgid "Unable to contact time server: %1."
-msgstr "無法接觸時間伺服器：%1。"
-
-#: dtime.cpp:273
-#, kde-format
-msgid "Can not set date."
-msgstr "無法設定日期。"
-
-#: dtime.cpp:276
-#, kde-format
-msgid "Error setting new time zone."
-msgstr "設定新時區錯誤。"
-
-#: dtime.cpp:276
-#, kde-format
-msgid "Time zone Error"
-msgstr "時區錯誤"
-
-#: dtime.cpp:294
+#: dtime.cpp:193
 #, kde-format
 msgid ""
 "<h1>Date & Time</h1> This system settings module can be used to set the "
@@ -127,25 +83,53 @@ msgstr ""
 "影響使用者，也會影響整個系統，只有當你用 root 身份 啟動系統設定時才能改變這些"
 "設定。假如你沒有 root 密碼，但覺得系統 時刻需要修正，請聯絡你的系統管理者。"
 
-#: main.cpp:91
-#, kde-format
-msgid "Unable to authenticate/execute the action: %1, %2"
-msgstr "無法認證/執行此動作：%1，%2"
-
-#: main.cpp:111
+#: main.cpp:60
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "無法變更 NTP 設定"
 
-#: main.cpp:124
+#: main.cpp:73
 #, kde-format
 msgid "Unable to set current time"
 msgstr "無法設定目前時間"
 
-#: main.cpp:136
+#: main.cpp:85
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "無法設定時區"
+
+#~ msgid "&Time server:"
+#~ msgstr "時間伺服器(&T)："
+
+#~ msgid ""
+#~ "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
+#~ "enable automatic updating of date and time."
+#~ msgstr ""
+#~ "找不到 NTP 工具程式。請安裝 ntpdate 或 rdate 以便開啟自動調整日期與時間的"
+#~ "功能。"
+
+#~ msgid ""
+#~ "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        "
+#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#~ "pool.ntp.org"
+#~ msgstr ""
+#~ "公用時刻伺服器 (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,north-"
+#~ "america.pool.ntp.org,oceania.pool.ntp.org"
+
+#~ msgid "Unable to contact time server: %1."
+#~ msgstr "無法接觸時間伺服器：%1。"
+
+#~ msgid "Can not set date."
+#~ msgstr "無法設定日期。"
+
+#~ msgid "Error setting new time zone."
+#~ msgstr "設定新時區錯誤。"
+
+#~ msgid "Time zone Error"
+#~ msgstr "時區錯誤"
+
+#~ msgid "Unable to authenticate/execute the action: %1, %2"
+#~ msgstr "無法認證/執行此動作：%1，%2"
 
 #~ msgid "To change the local time zone, select your area from the list below."
 #~ msgstr "要改變本地時區，從下面的清單選擇您的區域。"

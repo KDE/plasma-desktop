@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:45+0000\n"
+"POT-Creation-Date: 2026-02-05 00:45+0000\n"
 "PO-Revision-Date: 2008-11-21 22:29+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -38,39 +38,26 @@ msgid "Date and Time"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
-#: dateandtime.ui:45
+#: dateandtime.ui:61
 #, fuzzy, kde-format
 #| msgid "Set date and time &automatically:"
 msgid "Set date and time &automatically"
 msgstr "Datum a čas awtomatisce nastajić:"
 
-#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
-#: dateandtime.ui:62
-#, kde-format
-msgid "&Time server:"
-msgstr ""
-
 #. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
-#: dateandtime.ui:102
+#: dateandtime.ui:91
 #, kde-format
 msgid "Here you can change the system date's day of the month, month and year."
 msgstr "Tu móžeće systemowy datum změnić."
 
 #. i18n: ectx: attribute (title), widget (QQuickWidget, timezoneViewer)
-#: dateandtime.ui:146
+#: dateandtime.ui:140
 #, fuzzy, kde-format
 #| msgid "Time zone Error"
 msgid "Time Zone"
 msgstr "Zmylk časoweho pasa"
 
-#: dtime.cpp:63
-#, kde-format
-msgid ""
-"No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
-"enable automatic updating of date and time."
-msgstr ""
-
-#: dtime.cpp:92
+#: dtime.cpp:70
 #, kde-format
 msgid ""
 "Here you can change the system time. Click into the hours, minutes or "
@@ -81,39 +68,7 @@ msgstr ""
 "sekundy, zo byšće wotpowědnu hódnotu změnili, pak z kneflomaj za \"horje\" "
 "abo \"dele\" abo přez zapodaće noweje hódnoty."
 
-#: dtime.cpp:194
-#, fuzzy, kde-format
-#| msgid ""
-#| "Public Time Server (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
-#| "north-america.pool.ntp.org,oceania.pool.ntp.org"
-msgid ""
-"Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
-"pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
-msgstr ""
-"Zjawny časowy serwer (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
-"north-america.pool.ntp.org,oceania.pool.ntp.org"
-
-#: dtime.cpp:269
-#, kde-format
-msgid "Unable to contact time server: %1."
-msgstr "Njemóžu so z časowym serwerom zwjazać: %1."
-
-#: dtime.cpp:273
-#, kde-format
-msgid "Can not set date."
-msgstr "Njemóžu datum změnić."
-
-#: dtime.cpp:276
-#, kde-format
-msgid "Error setting new time zone."
-msgstr "Zmylk při nastajenju noweho časoweho pasa!"
-
-#: dtime.cpp:276
-#, kde-format
-msgid "Time zone Error"
-msgstr "Zmylk časoweho pasa"
-
-#: dtime.cpp:294
+#: dtime.cpp:193
 #, fuzzy, kde-format
 #| msgid ""
 #| "<h1>Date & Time</h1> This control module can be used to set the system "
@@ -137,27 +92,46 @@ msgstr ""
 "ale měniće, zo měłoj so systemowy čas abo datum hinak nastajić, skontaktujće "
 "so z administratorom Wašeho systema."
 
-#: main.cpp:91
-#, kde-format
-msgid "Unable to authenticate/execute the action: %1, %2"
-msgstr ""
-
-#: main.cpp:111
+#: main.cpp:60
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr ""
 
-#: main.cpp:124
+#: main.cpp:73
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set current time"
 msgstr "Njemóžu so z časowym serwerom zwjazać: %1."
 
-#: main.cpp:136
+#: main.cpp:85
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set timezone"
 msgstr "Njemóžu so z časowym serwerom zwjazać: %1."
+
+#, fuzzy
+#~| msgid ""
+#~| "Public Time Server (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
+#~| "north-america.pool.ntp.org,oceania.pool.ntp.org"
+#~ msgid ""
+#~ "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        "
+#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#~ "pool.ntp.org"
+#~ msgstr ""
+#~ "Zjawny časowy serwer (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
+#~ "north-america.pool.ntp.org,oceania.pool.ntp.org"
+
+#~ msgid "Unable to contact time server: %1."
+#~ msgstr "Njemóžu so z časowym serwerom zwjazać: %1."
+
+#~ msgid "Can not set date."
+#~ msgstr "Njemóžu datum změnić."
+
+#~ msgid "Error setting new time zone."
+#~ msgstr "Zmylk při nastajenju noweho časoweho pasa!"
+
+#~ msgid "Time zone Error"
+#~ msgstr "Zmylk časoweho pasa"
 
 #, fuzzy
 #~| msgid "To change the local time zone, select your area from the list below"

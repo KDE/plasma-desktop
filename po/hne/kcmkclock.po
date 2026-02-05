@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:45+0000\n"
+"POT-Creation-Date: 2026-02-05 00:45+0000\n"
 "PO-Revision-Date: 2009-02-10 12:26+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -36,39 +36,26 @@ msgid "Date and Time"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
-#: dateandtime.ui:45
+#: dateandtime.ui:61
 #, fuzzy, kde-format
 #| msgid "Set date and time &automatically:"
 msgid "Set date and time &automatically"
 msgstr "तारीक अउ समय ल अपने अपन सेट करव: (&a)"
 
-#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
-#: dateandtime.ui:62
-#, kde-format
-msgid "&Time server:"
-msgstr ""
-
 #. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
-#: dateandtime.ui:102
+#: dateandtime.ui:91
 #, kde-format
 msgid "Here you can change the system date's day of the month, month and year."
 msgstr "इहां आप मन तंत्र के तारीक, दिन, महिना अउ साल ल बदल सकथो ."
 
 #. i18n: ectx: attribute (title), widget (QQuickWidget, timezoneViewer)
-#: dateandtime.ui:146
+#: dateandtime.ui:140
 #, fuzzy, kde-format
 #| msgid "Time zone Error"
 msgid "Time Zone"
 msgstr "समय छेत्र गलती"
 
-#: dtime.cpp:63
-#, kde-format
-msgid ""
-"No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
-"enable automatic updating of date and time."
-msgstr ""
-
-#: dtime.cpp:92
+#: dtime.cpp:70
 #, kde-format
 msgid ""
 "Here you can change the system time. Click into the hours, minutes or "
@@ -78,39 +65,7 @@ msgstr ""
 "इहां आप मन तंत्र के समय ल बदल सकथो . घंटा, मिनट या सेकन्ड मं किलिक करव फिर जेवनी दे गए "
 "ऊपर या नीचे बटन के उपयोग से या नवा मान भर के संबंधित समय बदलव."
 
-#: dtime.cpp:194
-#, fuzzy, kde-format
-#| msgid ""
-#| "Public Time Server (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
-#| "north-america.pool.ntp.org,oceania.pool.ntp.org"
-msgid ""
-"Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
-"pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
-msgstr ""
-"पब्लिक टाइम सर्वर (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,north-"
-"america.pool.ntp.org,oceania.pool.ntp.org"
-
-#: dtime.cpp:269
-#, kde-format
-msgid "Unable to contact time server: %1."
-msgstr "समय सर्वर : %1 से जुड़े मं असमर्थ."
-
-#: dtime.cpp:273
-#, kde-format
-msgid "Can not set date."
-msgstr "तारीक सेट नइ कर सके."
-
-#: dtime.cpp:276
-#, kde-format
-msgid "Error setting new time zone."
-msgstr "नवा समय छेत्र (टाइम जोन) सेट करे मं गलती."
-
-#: dtime.cpp:276
-#, kde-format
-msgid "Time zone Error"
-msgstr "समय छेत्र गलती"
-
-#: dtime.cpp:294
+#: dtime.cpp:193
 #, fuzzy, kde-format
 #| msgid ""
 #| "<h1>Date & Time</h1> This control module can be used to set the system "
@@ -133,27 +88,46 @@ msgstr ""
 "करहू. यदि आप मन तिर रूट पासवर्ड नइ हे, फेर चाहथो कि तंत्र के समय सही करे जाना चाही, "
 "किरपा करके, अपन तंत्र प्रसासक से संपर्क करव."
 
-#: main.cpp:91
-#, kde-format
-msgid "Unable to authenticate/execute the action: %1, %2"
-msgstr ""
-
-#: main.cpp:111
+#: main.cpp:60
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr ""
 
-#: main.cpp:124
+#: main.cpp:73
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set current time"
 msgstr "समय सर्वर : %1 से जुड़े मं असमर्थ."
 
-#: main.cpp:136
+#: main.cpp:85
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set timezone"
 msgstr "समय सर्वर : %1 से जुड़े मं असमर्थ."
+
+#, fuzzy
+#~| msgid ""
+#~| "Public Time Server (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
+#~| "north-america.pool.ntp.org,oceania.pool.ntp.org"
+#~ msgid ""
+#~ "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        "
+#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#~ "pool.ntp.org"
+#~ msgstr ""
+#~ "पब्लिक टाइम सर्वर (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
+#~ "north-america.pool.ntp.org,oceania.pool.ntp.org"
+
+#~ msgid "Unable to contact time server: %1."
+#~ msgstr "समय सर्वर : %1 से जुड़े मं असमर्थ."
+
+#~ msgid "Can not set date."
+#~ msgstr "तारीक सेट नइ कर सके."
+
+#~ msgid "Error setting new time zone."
+#~ msgstr "नवा समय छेत्र (टाइम जोन) सेट करे मं गलती."
+
+#~ msgid "Time zone Error"
+#~ msgstr "समय छेत्र गलती"
 
 #, fuzzy
 #~| msgid "To change the local time zone, select your area from the list below"
