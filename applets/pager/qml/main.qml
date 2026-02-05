@@ -238,8 +238,8 @@ PlasmoidItem {
 
         anchors.centerIn: parent
         spacing: 1
-        rows: effectiveRows
-        columns: effectiveColumns
+        rows: effectiveRows * effectiveColumns >= pagerModel.count ? effectiveRows : pagerModel.count
+        columns: effectiveRows * effectiveColumns >= pagerModel.count ? effectiveColumns : pagerModel.count
 
         z: 1
 
