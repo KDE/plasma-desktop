@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-24 02:39+0000\n"
-"PO-Revision-Date: 2026-01-22 17:55+0100\n"
+"PO-Revision-Date: 2026-02-05 16:23+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -102,8 +102,7 @@ msgid "9,999+"
 msgstr "9,999+"
 
 #: qml/config.qml:13
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Appearance"
 msgstr "Apparentia"
@@ -133,12 +132,10 @@ msgid "Hide other windows when hovering over previews"
 msgstr "Cela altere fenestras quando plana sur vistas preliminar"
 
 #: qml/ConfigAppearance.qml:55
-#, fuzzy, kde-format
-#| msgctxt "@option:check section General"
-#| msgid "Hide other windows when hovering over previews"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over tooltips"
-msgstr "Cela altere fenestras quando plana sur vistas preliminar"
+msgstr "Cela altere fenestras quando plana sur consilios"
 
 #: qml/ConfigAppearance.qml:60
 #, kde-format
@@ -479,15 +476,13 @@ msgid "Brings it to the current virtual desktop"
 msgstr "Porta al scriptorio currente virtual"
 
 #: qml/ConfigBehavior.qml:207
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox completes sentence like: … does nothing"
-#| msgid "Scrolling behavior:"
+#, kde-format
 msgctxt ""
 "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/cycles "
 "through tasks/cycles through the selected task's windows/adjusts the hovered "
 "task’s volume''"
 msgid "Scrolling behavior:"
-msgstr "Ambiente de Rolar:"
+msgstr "Comportamento de Rolar:"
 
 #: qml/ConfigBehavior.qml:211
 #, kde-format
@@ -496,11 +491,7 @@ msgid "Does nothing"
 msgstr "Il face nihil"
 
 #: qml/ConfigBehavior.qml:212
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Scrolling anywhere switches through "
-#| "all tasks'"
-#| msgid "Cycles through all tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through all "
 "tasks'"
@@ -508,28 +499,20 @@ msgid "Cycles through all tasks"
 msgstr "Cycla per omne cargas"
 
 #: qml/ConfigBehavior.qml:213
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Scrolling on a task switches between "
-#| "that task's windows'"
-#| msgid "Cycles through the selected task windows"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through the "
 "hovered task's windows'"
 msgid "Cycles through the hovered task’s windows"
-msgstr "Cycla per le fenestras de carga selectionate"
+msgstr "Cycla per le fenestras de carga planate"
 
 #: qml/ConfigBehavior.qml:214
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Scrolling on a task switches between "
-#| "that task's windows'"
-#| msgid "Cycles through the selected task windows"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior adjusts the hovered "
 "task’s volume'"
 msgid "Adjusts the hovered task’s volume"
-msgstr "Cycla per le fenestras de carga selectionate"
+msgstr "Adapta volumine de carga planate"
 
 #: qml/ConfigBehavior.qml:222
 #, kde-format
@@ -618,8 +601,7 @@ msgid "Places"
 msgstr "Placias"
 
 #: qml/ContextMenu.qml:106
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgctxt "@title:group for section of menu items"
 msgid "Recent Files"
 msgstr "Files recente"
@@ -673,8 +655,7 @@ msgid "Restore"
 msgstr "Restabili"
 
 #: qml/ContextMenu.qml:266
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@option:check inmenu, no separate unmute action"
 msgid "Mute"
 msgstr "Silente"
@@ -758,8 +739,7 @@ msgid "Unpin from Task Manager"
 msgstr "Deattacha ex Gerente de carga"
 
 #: qml/ContextMenu.qml:609
-#, fuzzy, kde-format
-#| msgid "More"
+#, kde-format
 msgctxt "item:inmenu opens submenu"
 msgid "More"
 msgstr "Plus"
@@ -807,8 +787,7 @@ msgid "&Fullscreen"
 msgstr "Sc&hermo plen"
 
 #: qml/ContextMenu.qml:700
-#, fuzzy, kde-format
-#| msgid "&Shade"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Shade"
 msgstr "&Adumbra"
@@ -838,8 +817,7 @@ msgid "&Close All"
 msgstr "&Claude omne"
 
 #: qml/ContextMenu.qml:787
-#, fuzzy, kde-format
-#| msgid "&Close"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close"
 msgstr "&Claude"
