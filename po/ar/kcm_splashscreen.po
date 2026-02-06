@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-03 00:48+0000\n"
-"PO-Revision-Date: 2026-01-08 11:39+0400\n"
+"PO-Revision-Date: 2026-02-05 11:11+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -59,34 +59,28 @@ msgid "Failed to show the splash screen preview."
 msgstr "فشل في عرض معاينة لشاشة البدء"
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Preview Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview splash screen"
-msgstr "عايش شاشة البدء"
+msgstr "معاينة شاشة البدء"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Preview Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove splash screen"
-msgstr "عايش شاشة البدء"
+msgstr "أزل شاشة البدء"
 
 #: ui/main.qml:90
-#, fuzzy, kde-format
-#| msgid "You cannot delete the currently selected splash screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active splash screen"
-msgstr "لا يمكنك حذف شاشة البدء الحالية"
+msgstr "لا يمكنك حذف شاشة البدء النشطة"
 
 #: ui/main.qml:92
-#, fuzzy, kde-format
-#| msgid "You cannot delete the currently selected splash screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed splash screens"
-msgstr "لا يمكنك حذف شاشة البدء الحالية"
+msgstr "لا يمكنك حذف شاشة البدء شاشات البداية المثبتة على مستوى النظام"
 
 #~ msgctxt "@action:button"
 #~ msgid "Uninstall"

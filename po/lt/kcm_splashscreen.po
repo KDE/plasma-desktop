@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-03 00:48+0000\n"
-"PO-Revision-Date: 2026-01-13 00:04+0200\n"
+"PO-Revision-Date: 2026-02-06 01:15+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -60,34 +60,28 @@ msgid "Failed to show the splash screen preview."
 msgstr "Nepavyko parodyti prisistatymo lango peržiūros."
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Preview Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview splash screen"
 msgstr "Peržiūrėti prisistatymo langą"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Preview Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove splash screen"
-msgstr "Peržiūrėti prisistatymo langą"
+msgstr "Šalinti prisistatymo langą"
 
 #: ui/main.qml:90
-#, fuzzy, kde-format
-#| msgid "You cannot delete the currently selected splash screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active splash screen"
-msgstr "Negalite ištrinti šiuo metu pasirinktą prisistatymo langą"
+msgstr "Negalima ištrinti prisistatymo lango"
 
 #: ui/main.qml:92
-#, fuzzy, kde-format
-#| msgid "You cannot delete the currently selected splash screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed splash screens"
-msgstr "Negalite ištrinti šiuo metu pasirinktą prisistatymo langą"
+msgstr "Negalima ištrinti sistemos įdiegtų prisistatymo langų"
 
 #~ msgctxt "@action:button"
 #~ msgid "Uninstall"
