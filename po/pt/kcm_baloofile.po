@@ -1,11 +1,12 @@
+# SPDX-FileCopyrightText: 2026 César A. P. Cláudio <cesarapclaudio@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2022-12-14 09:40+0000\n"
-"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
-"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"PO-Revision-Date: 2026-02-06 22:20+0000\n"
+"Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
+"Language-Team: pt\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,42 +14,33 @@ msgstr ""
 "X-POFile-SpellExtra: Handa mails Sebastian Vishesh Trüg Tomaz Canabrava\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-SpellExtra: KRunner\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Pause Indexer"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pause Indexer"
-msgstr "Pausar a Indexação"
+msgstr "Pausar indexação"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Resume Indexer"
+#, kde-format
 msgctxt "@action:button"
 msgid "Resume Indexer"
-msgstr "Retomar a Indexação"
+msgstr "Retomar indexação"
 
 #: ui/main.qml:61
-#, fuzzy, kde-format
-#| msgid ""
-#| "This will disable file searching in KRunner and launcher menus, and "
-#| "remove extended metadata display from all KDE applications."
+#, kde-format
 msgctxt "@info inlinemessage"
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
 msgstr ""
-"Isto irá desactivar a pesquisa de ficheiros no KRunner e nos menus de "
-"lançamento, assim como remover a apresentação dos meta-dados estendidos de "
-"todas as aplicações do KDE."
+"Isto irá desativar a pesquisa de ficheiros no KRunner e nos menus de "
+"lançamento, e remover a apresentação de metadados expandidos em todas as "
+"aplicações do KDE."
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid ""
-#| "Do you want to delete the saved index data? %1 of space will be freed, "
-#| "but if indexing is re-enabled later, the entire index will have to be re-"
-#| "created from scratch. This may take some time, depending on how many "
-#| "files you have."
+#, kde-format
 msgctxt "@info:inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -56,130 +48,117 @@ msgid ""
 "from scratch. This may take some time, depending on the number of files to "
 "index."
 msgstr ""
-"Deseja remover os dados do índice gravados? Serão libertados %1 de espaço, "
-"mas se a indexação for reactivada mais tarde, todo o índice terá de ser "
-"recriado do zero. Isto poderá levar algum tempo, dependendo de quantos "
-"ficheiros tem."
+"Pretende eliminar os dados do índice guardados? Serão libertados %1 de "
+"espaço, mas, se a indexação for reativada posteriormente, todo o índice terá "
+"de ser recriado. Isto poderá demorar algum tempo, dependendo do número de "
+"ficheiros a indexar."
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgid "Delete Index Data"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delete Index Data"
-msgstr "Apagar os Dados do Índice"
+msgstr "Eliminar dados de indexação"
 
 #: ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid ""
-#| "File Search helps you quickly locate all your files based on their "
-#| "content."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
 msgstr ""
-"A Pesquisa de Ficheiros ajuda-o a localizar rapidamente todos os seus "
-"ficheiros com base no seu conteúdo."
+"A Pesquisa de Ficheiros ajuda-o a localizar rapidamente os seus ficheiros. "
+"Pode escolher quais as pastas e que tipos de dados de ficheiros são "
+"indexados."
 
 #: ui/main.qml:108
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
-msgstr ""
+msgstr "Dados a indexar:"
 
 #: ui/main.qml:109
 #, kde-format
 msgctxt "@option:radio Data to index"
 msgid "Nothing (disable indexing entirely)"
-msgstr ""
+msgstr "Nada (desativar a indexação completamente)"
 
 #: ui/main.qml:121
 #, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names only"
-msgstr ""
+msgstr "Apenas nomes de ficheiros"
 
 #: ui/main.qml:136
 #, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names and contents"
-msgstr ""
+msgstr "Nomes e conteúdos de ficheiros"
 
 #: ui/main.qml:157
-#, fuzzy, kde-format
-#| msgid "Index hidden files and folders"
+#, kde-format
 msgctxt "@option:check"
 msgid "Also index hidden files and folders"
-msgstr "Indexar os ficheiros e pastas escondidos"
+msgstr "Indexar também ficheiros e pastas ocultos"
 
 #: ui/main.qml:183
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
-msgstr ""
+msgstr "Localizações"
 
 #: ui/main.qml:186
-#, fuzzy, kde-format
-#| msgid "Start indexing a folder…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
-msgstr "Iniciar a indexação de uma pasta…"
+msgstr "Iniciar indexação de uma pasta…"
 
 #: ui/main.qml:194
-#, fuzzy, kde-format
-#| msgid "Stop indexing a folder…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
-msgstr "Parar a indexação de uma pasta…"
+msgstr "Parar indexação de uma pasta…"
 
 #: ui/main.qml:212
-#, fuzzy, kde-format
-#| msgid "Status: %1, %2% complete"
+#, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
-msgstr "Estado: %1, %2% completo"
+msgstr "%1, %2% completo"
 
 #: ui/main.qml:219
-#, fuzzy, kde-kuit-format
-#| msgid "Currently indexing: %1"
+#, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
-msgstr "A indexar de momento: %1"
+msgstr "A indexar atualmente: <filename>%1</filename>"
 
 #: ui/main.qml:270
-#, fuzzy, kde-format
-#| msgid "Not indexed"
+#, kde-format
 msgctxt "@info:status"
 msgid "Not indexed"
-msgstr "Não indexada"
+msgstr "Não indexado"
 
 #: ui/main.qml:271
-#, fuzzy, kde-format
-#| msgid "Indexed"
+#, kde-format
 msgctxt "@info:status"
 msgid "Indexed"
 msgstr "Indexado"
 
 #: ui/main.qml:297
-#, fuzzy, kde-format
-#| msgid "Delete entry"
+#, kde-format
 msgctxt "Remove the list item for this filesystem path"
 msgid "Remove entry"
-msgstr "Apagar o item"
+msgstr "Remover entrada"
 
 #: ui/main.qml:318
-#, fuzzy, kde-format
-#| msgid "Select a folder to include"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to include"
-msgstr "Seleccione uma pasta a incluir"
+msgstr "Selecione uma pasta a incluir"
 
 #: ui/main.qml:318
-#, fuzzy, kde-format
-#| msgid "Select a folder to exclude"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to exclude"
-msgstr "Seleccione uma pasta a excluir"
+msgstr "Selecione uma pasta a excluir"
 
 #, fuzzy
 #~| msgid "Currently indexing: %1"

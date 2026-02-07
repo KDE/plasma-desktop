@@ -1,47 +1,44 @@
+# SPDX-FileCopyrightText: 2026 César A. P. Cláudio <cesarapclaudio@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-23 00:45+0000\n"
-"PO-Revision-Date: 2021-10-29 09:53+0100\n"
-"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
-"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"PO-Revision-Date: 2026-02-06 22:38+0000\n"
+"Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
+"Language-Team: pt\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-POFile-SpellExtra: Trever Kai UDI Uwe Broulik\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "José Nuno Pires"
+msgstr "César A. P. Cláudio"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "zepires@gmail.com"
+msgstr "cesarapclaudio@gmail.com"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "This list contains the storage devices known to the system. If "
-#| "\"Automount on Login\" is checked, the device will be automatically "
-#| "mounted even though \"Mount all removable media at login\" is unchecked. "
-#| "The same applies for \"Automount on Attach\"."
+#, kde-format
 msgid ""
 "This list contains the storage devices known to the system. If \"Automount "
 "on Login\" is checked, devices will be automatically mounted even though "
 "\"Mount all removable media at login\" is unchecked. The same applies for "
 "\"Automount on Attach\"."
 msgstr ""
-"Esta lista contém os dispositivos de armazenamento conhecidos do sistema. Se "
-"a opção \"Auto-Montar no Início da Sessão\" estiver assinalada, o "
-"dispositivo será montado automaticamente, ainda que a opção \"Montar todos "
-"os dispositivos removíveis no início da sessão\" esteja desligada. O mesmo "
-"aplica-se com a opção \"Auto-Montar ao Ligar\"."
+"Esta lista contém os dispositivos de armazenamento conhecidos pelo sistema. "
+"Se \"Montar automaticamente ao iniciar sessão\" estiver assinalado, os "
+"dispositivos serão montados automaticamente, mesmo que \"Montar todos os "
+"suportes removíveis ao iniciar sessão\" não esteja selecionado. O mesmo se "
+"aplica a \"Montar automaticamente ao inserir dispositivo\"."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:54
@@ -53,18 +50,18 @@ msgid ""
 "system is set to only automatically mount familiar devices, the device will "
 "not be automatically mounted."
 msgstr ""
-"Se carregar neste botão, faz com que os dispositivos sejam 'esquecidos'. "
-"Isto só é útil se a opção \"Só montar automaticamente os dispositivos "
-"removíveis que tenham sido montados manualmente\" estiver assinalada. Assim "
-"que um dispositivo seja esquecido e o sistema esteja configurado para montar "
-"apenas os dispositivos conhecidos, o dispositivo não será montado "
-"automaticamente."
+"Clicar neste botão faz com que os dispositivos selecionados sejam "
+"\"esquecidos\". Isto só é útil se \"Montar automaticamente apenas suportes "
+"removíveis que tenham sido montados manualmente anteriormente\" estiver "
+"selecionado. Assim que um dispositivo for esquecido e o sistema estiver "
+"configurado para montar automaticamente apenas dispositivos conhecidos, o "
+"dispositivo não será montado automaticamente."
 
 #. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:57
 #, kde-format
 msgid "Forget Device"
-msgstr "Esquecer o Dispositivo"
+msgstr "Esquecer dispositivo"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:67
@@ -77,58 +74,59 @@ msgid ""
 "mounted the next time it is seen. Once they have been accessed, however, the "
 "device's contents will be automatically made available to the system."
 msgstr ""
-"Se esta opção estiver assinalada, só os dispositivos recordados é que serão "
-"montados automaticamente. Um dispositivo é 'recordado', caso tenha sido "
-"montado alguma vez anterior. Por exemplo, a ligação de um leitor multimédia "
-"USB para o carregar não é o suficiente para o 'recordar' - se os ficheiros "
-"não forem acedidos, não será montado automaticamente da próxima vez que o "
-"ligar. Em contrapartida, se tiver sido acedido alguma vez, o conteúdo do "
-"dispositivo ficará automaticamente disponível no sistema."
+"Quando esta opção não estiver selecionada, apenas os dispositivos recordados "
+"serão montados automaticamente. Um dispositivo é \"recordado\" se alguma vez "
+"tiver sido montado anteriormente. Por exemplo, ligar um leitor multimédia "
+"USB apenas para o carregar não é suficiente para o \"recordar\" — se os "
+"ficheiros não forem acedidos, o dispositivo não será montado automaticamente "
+"da próxima vez que for detetado. Contudo, assim que os respetivos conteúdos "
+"tiverem sido acedidos, estes serão disponibilizados automaticamente ao "
+"sistema."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:70
 #, kde-format
 msgid "Automatically mount removable media that have never been mounted before"
 msgstr ""
-"Montar automaticamente os dispositivos que nunca tenham sido montados "
+"Montar automaticamente suportes removíveis que nunca tenham sido montados "
 "anteriormente"
 
 #: DeviceModel.cpp:52
 #, kde-format
 msgid "Automount Device"
-msgstr "Auto-Montar o Dispositivo"
+msgstr "Montar dispositivo automaticamente"
 
 #: DeviceModel.cpp:54
 #, kde-format
 msgctxt "As in automount on login"
 msgid "On Login"
-msgstr "No Início da Sessão"
+msgstr "No início da sessão"
 
 #: DeviceModel.cpp:56
 #, kde-format
 msgctxt "As in automount on attach"
 msgid "On Attach"
-msgstr "Ao Ligar"
+msgstr "Ao inserir dispositivo"
 
 #: DeviceModel.cpp:258
 #, kde-format
 msgid "All Devices"
-msgstr "Todos os Dispositivos"
+msgstr "Todos os dispositivos"
 
 #: DeviceModel.cpp:258
 #, kde-format
 msgid "All Known Devices"
-msgstr "Todos os Dispositivos Conhecidos"
+msgstr "Todos os dispositivos conhecidos"
 
 #: DeviceModel.cpp:260
 #, kde-format
 msgid "Attached Devices"
-msgstr "Dispositivos Ligados"
+msgstr "Dispositivos ligados"
 
 #: DeviceModel.cpp:262
 #, kde-format
 msgid "Disconnected Devices"
-msgstr "Dispositivos Desligados"
+msgstr "Dispositivos desligados"
 
 #: DeviceModel.cpp:298 DeviceModel.cpp:307
 #, kde-format
@@ -138,26 +136,22 @@ msgstr "UDI: %1"
 #: DeviceModel.cpp:318
 #, kde-format
 msgid "This device will be automatically mounted at login."
-msgstr "Este dispositivo será montado automaticamente no início da sessão."
+msgstr "Este dispositivo será montado automaticamente ao iniciar sessão."
 
 #: DeviceModel.cpp:318
 #, kde-format
 msgid "This device will not be automatically mounted at login."
-msgstr "Este dispositivo não será montado automaticamente no início da sessão."
+msgstr "Este dispositivo não será montado automaticamente ao iniciar sessão."
 
 #: DeviceModel.cpp:326
 #, kde-format
 msgid "This device will be automatically mounted when attached."
-msgstr ""
-"Este dispositivo será montado automaticamente quando for ligado ao "
-"computador."
+msgstr "Este dispositivo será montado automaticamente ao ser ligado."
 
 #: DeviceModel.cpp:327
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
-msgstr ""
-"Este dispositivo não será montado automaticamente quando for ligado ao "
-"computador."
+msgstr "Este dispositivo não será montado automaticamente ao ser ligado."
 
 #~ msgid "Device Automounter"
 #~ msgstr "Auto-Montagem de Dispositivos"
