@@ -86,8 +86,32 @@ Loader {
 
         PlasmaComponents3.ScrollView {
             // 2 * Kirigami.Units.smallSpacing is for the margin of tooltipDialog
-            implicitWidth: leftPadding + rightPadding + Math.min(Screen.desktopAvailableWidth - 2 * Kirigami.Units.smallSpacing, Math.max(delegateModel.estimatedWidth, (contentItem as Flickable).contentItem.childrenRect.width))
-            implicitHeight: bottomPadding + Math.min(Screen.desktopAvailableHeight - 2 * Kirigami.Units.smallSpacing, Math.max(delegateModel.estimatedHeight, (contentItem as Flickable).contentItem.childrenRect.height))
+            readonly property real maximumWidth: Screen.desktopAvailableWidth - 2 * Kirigami.Units.smallSpacing
+            readonly property real maximumHeight: Screen.desktopAvailableWidth - 2 * Kirigami.Units.smallSpacing
+
+            implicitWidth: {
+                // when vertical, all delegates have the same fixed width
+                let listContentWidth = groupToolTipListView.orientation == ListView.Vertical
+                   ? toolTipDelegate.tooltipInstanceMaximumWidth
+                   : groupToolTipListView.contentWidth
+
+                return leftPadding + rightPadding + Math.min(maximumWidth, Math.max(delegateModel.estimatedWidth, listContentWidth))
+            }
+
+            implicitHeight: {
+                // not using bottomPadding; in PC3 it's either 0 or the scrollbar height, and here
+                // this causes binding loops when turning it off - manually computing the width
+                // avoids this.
+                let scrollBarRequired = groupToolTipListView.contentWidth > maximumWidth
+                let scrollBarHeight = scrollBarRequired ? PlasmaComponents3.ScrollBar.horizontal.height : 0
+                // currentItem is never unloaded, so we use it for sizing. Default to the same value
+                // that estimatedHeight while it's not available
+                let listContentHeight = groupToolTipListView.orientation == ListView.Vertical
+                    ? groupToolTipListView.contentHeight
+                    : groupToolTipListView.currentItem?.implicitHeight ?? toolTipDelegate.tooltipInstanceMaximumWidth
+
+                return Math.min(maximumHeight, Math.max(delegateModel.estimatedHeight, listContentHeight + scrollBarHeight))
+            }
 
             ListView {
                 id: groupToolTipListView
