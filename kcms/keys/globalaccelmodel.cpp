@@ -380,6 +380,29 @@ void GlobalAccelModel::addApplication(const QString &desktopFileName, const QStr
     });
 }
 
+void GlobalAccelModel::onShortcutChanged(const QString &uniqueName)
+{
+    auto component = std::find_if(m_components.begin(), m_components.end(), [&uniqueName](const Component &c) { return c.id == uniqueName; });
+    if (component == m_components.end()) {
+        return;
+    }
+
+    auto &actions = component->actions;
+    auto action = std::find_if(actions.begin(), actions.end(), [](const Action &a) { return a.id == QStringLiteral("_launch"); });
+    if (action == actions.end()) {
+        return;
+    }
+
+    const int componentRow = std::distance(m_components.begin(), component);
+    const int actionRow = std::distance(actions.begin(), action);
+
+    const QModelIndex componentIndex = index(componentRow, 0);
+    const QModelIndex actionIndex = index(actionRow, 0, componentIndex);
+
+    Q_EMIT dataChanged(actionIndex, actionIndex, {Qt::DisplayRole});
+    Q_EMIT dataChanged(actionIndex.parent(), actionIndex.parent(), {Qt::DisplayRole});
+}
+
 void GlobalAccelModel::removeComponent(const Component &component)
 {
     const QString &uniqueName = component.id;
