@@ -468,10 +468,7 @@ KCM.AbstractKCM {
             enabled: cmdField.length > 0
             onTriggered: {
                 if (addCommandDialog.editing) {
-                    const newLabel = kcm.editCommand(addCommandDialog.componentName, nameField.text, cmdField.text);
-                    if (addCommandDialog.commandListItemDelegate) {
-                        addCommandDialog.commandListItemDelegate.text = newLabel;
-                    }
+                    kcm.editCommand(addCommandDialog.componentName, nameField.text, cmdField.text);
                 } else {
                     kcm.addCommand(cmdField.text, nameField.text);
                 }

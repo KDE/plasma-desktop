@@ -296,7 +296,7 @@ QString KCMKeys::addCommand(const QString &exec, const QString &name)
     return menuId;
 }
 
-QString KCMKeys::editCommand(const QString &componentName, const QString &name, const QString &newExec)
+void KCMKeys::editCommand(const QString &componentName, const QString &name, const QString &newExec)
 {
     QString finalExec = newExec;
 
@@ -314,7 +314,8 @@ QString KCMKeys::editCommand(const QString &componentName, const QString &name, 
     cg.writeEntry("Name", name);
     cg.writeEntry("Exec", finalExec);
     cg.sync();
-    return name;
+
+    m_globalAccelModel->onShortcutChanged(componentName);
 }
 
 QString KCMKeys::quoteUrl(const QUrl &url)
