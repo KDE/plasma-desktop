@@ -93,6 +93,7 @@ RowLayout {
 
             dynamicResize: false
             iconsEnabled: true
+            showDescriptionInTooltip: true
             keyNavigationWraps: !searchFieldPlaceholder.visible
             LayoutMirroring.enabled: runnerResultsList.LayoutMirroring.enabled
 

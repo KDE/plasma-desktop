@@ -25,6 +25,7 @@ PlasmaComponents3.ItemDelegate {
     required property url url
     required property string description
     required property string decoration
+    required property string compactName
     required property var model // for display, which would shadow ItemDelegate
     required property var favoritesModel
     required property var baseModel

@@ -42,6 +42,8 @@ Kicker.SubMenu {
 
         iconsEnabled: true
         LayoutMirroring.enabled: itemDialog.LayoutMirroring.enabled
+        // force tooltip for recent files - the path is relevant no matter the display setting
+        showDescriptionInTooltip: (funnelModel.sourceModel as Kicker.RecentUsageModel)?.shownItems === Kicker.RecentUsageModel.OnlyDocs
 
         dialog: itemDialog
 
