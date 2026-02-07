@@ -60,7 +60,7 @@ KCM.SimpleKCM {
 
             KIconThemes.IconDialog {
                 id: iconDialog
-                onIconNameChanged: {
+                onAccepted: {
                     root.cfg_icon = iconName || Tools.defaultIconName;
                 }
             }
