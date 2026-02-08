@@ -1,58 +1,60 @@
+# SPDX-FileCopyrightText: 2026 César A. P. Cláudio <cesarapclaudio@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-05 00:45+0000\n"
-"PO-Revision-Date: 2023-01-11 09:27+0000\n"
-"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
-"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"PO-Revision-Date: 2026-02-07 22:03+0000\n"
+"Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
+"Language-Team: pt\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-SpellExtra: kksrc sh\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "César A. P. Cláudio"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "cesarapclaudio@gmail.com"
 
 #: basemodel.cpp:158
 #, kde-format
 msgctxt "@title:group Launch app"
 msgid "Launch"
-msgstr ""
+msgstr "Iniciar"
 
 #: basemodel.cpp:191
 #, kde-format
 msgctxt "@item:intable"
 msgid "Window Management"
-msgstr ""
+msgstr "Gestão de Janelas"
 
 #: basemodel.cpp:194
 #, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Workspace"
-msgstr ""
+msgstr "Área de trabalho Plasma"
 
 #: globalaccelmodel.cpp:254
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
-msgstr "Erro ao gravar o atalho %1: %2"
+msgstr "Erro ao guardar o atalho %1: %2"
 
 #: globalaccelmodel.cpp:371
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
-msgstr "Erro ao adicionar o %1; parece que não tem acções."
+msgstr "Erro ao adicionar %1; parece que não tem ações."
 
 #: globalaccelmodel.cpp:422
 #, kde-format
@@ -62,49 +64,42 @@ msgstr "Erro ao comunicar com o serviço de atalhos globais"
 #: kcm_keys.cpp:56
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
-msgstr "Não foi possível comunicar com o serviço de atalhos globais"
+msgstr "Falha na comunicação com o serviço de atalhos globais"
 
 #: kcm_keys.cpp:372
-#, fuzzy, kde-kuit-format
-#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-#| "Do you want to reassign it?"
+#, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
 "<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
-"O atalho %1 já está atribuído à acção comum de %2 '%3'.\n"
-"Deseja atribuí-la de novo?"
+"O atalho <shortcut>%1</shortcut> já está atribuído à ação comum %2 "
+"<interface>%3</interface>.Reatribuí-lo a %4?"
 
 #: kcm_keys.cpp:378
-#, fuzzy, kde-kuit-format
-#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-#| "Do you want to reassign it?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
 "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
 "action <interface>%4</interface> of <application>%5</application>?"
 msgstr ""
-"O atalho %1 já está atribuído à acção comum de %2 '%3'.\n"
-"Deseja atribuí-la de novo?"
+"O atalho <shortcut>%1</shortcut> já está atribuído à ação <interface>%2</"
+"interface> da aplicação <application>%3</application>.Reatribuí-lo à ação "
+"<interface>%4</interface> da aplicação <application>%5</application>?"
 
 #: kcm_keys.cpp:387
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
-msgstr ""
+msgstr "Resolver Conflito de Atalho"
 
 #: kcm_keys.cpp:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr ""
+msgstr "Reatribuir"
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format
@@ -129,7 +124,7 @@ msgstr "Ver"
 #: standardshortcutsmodel.cpp:39
 #, kde-format
 msgid "Settings"
-msgstr "Configuração"
+msgstr "Definições"
 
 #: standardshortcutsmodel.cpp:40
 #, kde-format
@@ -137,203 +132,176 @@ msgid "Help"
 msgstr "Ajuda"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@title:group list section name"
 msgid "Applications"
 msgstr "Aplicações"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "Commands"
+#, kde-format
 msgctxt "@title:group list section name"
 msgid "Commands"
 msgstr "Comandos"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "System Settings"
+#, kde-format
 msgctxt "@title:group list section name"
 msgid "System Services"
-msgstr "Configuração do Sistema"
+msgstr "Serviços do Sistema"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "Common Actions"
+#, kde-format
 msgctxt "@title:group list section name"
 msgid "Common Actions"
-msgstr "Acções Comuns"
+msgstr "Ações Comuns"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgid "Import"
+#, kde-format
 msgctxt "@action:button Import shortcut scheme"
 msgid "Import…"
-msgstr "Importar"
+msgstr "Importar..."
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Import Shortcut Scheme"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Import shortcut scheme"
-msgstr "Importar um Esquema de Atalhos"
+msgstr "Importar esquema de atalhos"
 
 #: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Cancel Export"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel Export"
-msgstr "Cancelar a Exportação"
+msgstr "Cancelar exportação"
 
 #: ui/main.qml:50
-#, fuzzy, kde-format
-#| msgid "Export Scheme…"
+#, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
-msgstr "Exportar o Esquema…"
+msgstr "Exportar..."
 
 #: ui/main.qml:53 ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Export Shortcut Scheme"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Export shortcut scheme"
-msgstr "Exportar o Esquema de Atalhos"
+msgstr "Exportar esquema de atalhos"
 
 #: ui/main.qml:66
 #, kde-format
 msgctxt "@action:button Add new shortcut"
 msgid "Add New"
-msgstr ""
+msgstr "Adicionar novo"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep translated text as short as possible"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Application…'"
 msgid "Application…"
-msgstr "Adicionar uma Aplicação…"
+msgstr "Aplicação..."
 
 #: ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new application"
-msgstr "Aplicações"
+msgstr "Adicionar nova aplicação"
 
 #: ui/main.qml:82
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
-msgstr ""
+msgstr "Comando ou programa..."
 
 #: ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid "Enter a command or choose a script file:"
+#, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new command or script"
-msgstr "Indique um comando ou escolha um ficheiro de programa:"
+msgstr "Adicionar novo comando ou programa"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Cannot export scheme while there are unsaved changes"
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr ""
-"Não é possível exportar o esquema enquanto existirem modificações por gravar"
+"Não é possível exportar o esquema enquanto houver alterações não guardadas"
 
 #: ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the components below that should be included in the exported scheme"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Select the components below that should be included in the exported scheme"
 msgstr ""
-"Seleccione os componentes abaixo que devem ser incluídos no esquema exportado"
+"Selecione abaixo os componentes que devem ser incluídos no esquema exportado"
 
 #: ui/main.qml:124
-#, fuzzy, kde-format
-#| msgid "Export Scheme…"
+#, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
-msgstr "Exportar o Esquema…"
+msgstr "Exportar"
 
 #: ui/main.qml:221
-#, fuzzy, kde-format
-#| msgid "Export Scheme…"
+#, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
-msgstr "Exportar o Esquema…"
+msgstr "Exportar %1"
 
 #: ui/main.qml:231
-#, fuzzy, kde-format
-#| msgctxt "@tooltip:button %1 is the text of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@action:button %1 is the name of a custom command"
 msgid "Edit command for %1"
-msgstr "Editar o comando de %1"
+msgstr "Editar comando para %1"
 
 #: ui/main.qml:258
-#, fuzzy, kde-format
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@action:button %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
-msgstr "Remover todos os atalhos do %1"
+msgstr "Remover todos os atalhos para %1"
 
 #: ui/main.qml:280
-#, fuzzy, kde-format
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@action:button"
 msgid "Undo deletion"
-msgstr "Desfazer a remoção"
+msgstr "Anular eliminação"
 
 #: ui/main.qml:341
-#, fuzzy, kde-format
-#| msgid "No items matched the search terms"
+#, kde-format
 msgctxt "@info:status placeholdermessage"
 msgid "No items matched the search terms"
-msgstr "Sem itens correspondentes aos termos da pesquisa"
+msgstr "Nenhum item corresponde aos termos de pesquisa"
 
 #: ui/main.qml:358
 #, kde-format
 msgctxt "@info"
 msgid "These shortcuts will be deleted when changes are applied."
-msgstr ""
+msgstr "Estes atalhos serão eliminados quando as alterações forem aplicadas."
 
 #: ui/main.qml:362
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo"
-msgstr ""
+msgstr "Anular"
 
 #: ui/main.qml:363
-#, fuzzy, kde-format
-#| msgid "No default shortcuts"
+#, kde-format
 msgctxt "@action:button"
 msgid "Undo deleting shortcuts"
-msgstr "Sem atalhos predefinidos"
+msgstr "Anular eliminação de atalhos"
 
 #: ui/main.qml:399
-#, fuzzy, kde-format
-#| msgid "Select an item from the list to view its shortcuts here"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
-msgstr "Seleccione um item na lista para ver aqui os atalhos do mesmo"
+msgstr "Selecione um item da lista para ver os respetivos atalhos aqui"
 
 #: ui/main.qml:412
-#, fuzzy, kde-format
-#| msgid "Export Shortcut Scheme"
+#, kde-format
 msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
-msgstr "Exportar o Esquema de Atalhos"
+msgstr "Exportar Esquema de Atalhos"
 
 #: ui/main.qml:412 ui/main.qml:553
-#, fuzzy, kde-format
-#| msgid "Import Shortcut Scheme"
+#, kde-format
 msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
-msgstr "Importar um Esquema de Atalhos"
+msgstr "Importar Esquema de Atalhos"
 
 #: ui/main.qml:414
 #, kde-format
@@ -342,67 +310,58 @@ msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Esquema de Atalhos (*.kksrc)"
 
 #: ui/main.qml:441
-#, fuzzy, kde-format
-#| msgid "Edit Command"
+#, kde-format
 msgctxt "@title:window dialog"
 msgid "Edit Command"
-msgstr "Editar o Comando"
+msgstr "Editar comando"
 
 #: ui/main.qml:441
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgctxt "@title:window dialog"
 msgid "Add Command"
-msgstr "Adicionar um Comando"
+msgstr "Adicionar comando"
 
 #: ui/main.qml:463
-#, fuzzy, kde-format
-#| msgid "Save"
+#, kde-format
 msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
-msgstr "Gravar"
+msgstr "Guardar"
 
 #: ui/main.qml:463
-#, fuzzy, kde-format
-#| msgid "Add"
+#, kde-format
 msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
-msgstr "Adicionar"
+msgstr "Adicionar "
 
 #: ui/main.qml:465
-#, fuzzy, kde-format
-#| msgid "Commands"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Save command"
-msgstr "Comandos"
+msgstr "Guardar comando"
 
 #: ui/main.qml:466
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add command"
-msgstr "Adicionar um Comando"
+msgstr "Adicionar comando"
 
 #: ui/main.qml:492
-#, fuzzy, kde-format
-#| msgid "Enter a command or choose a script file:"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
-msgstr "Indique um comando ou escolha um ficheiro de programa:"
+msgstr "Introduza um comando ou escolha um ficheiro de programa:"
 
 #: ui/main.qml:501
-#, fuzzy, kde-format
-#| msgid "Commands"
+#, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
-msgstr "Comandos"
+msgstr "Comando:"
 
 #: ui/main.qml:507
-#, fuzzy, kde-format
-#| msgid "Commands"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
-msgstr "Comandos"
+msgstr "Comando"
 
 #: ui/main.qml:514
 #, kde-format
@@ -411,30 +370,28 @@ msgid "Choose…"
 msgstr "Escolher…"
 
 #: ui/main.qml:515
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Choose Script File"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
-msgstr "Escolher o Ficheiro do Programa"
+msgstr "Escolher ficheiro de programa"
 
 #: ui/main.qml:523
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
-msgstr ""
+msgstr "Nome:"
 
 #: ui/main.qml:524
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
-msgstr ""
+msgstr "Introduza o nome aqui"
 
 #: ui/main.qml:536
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
-msgstr "Escolher o Ficheiro do Programa"
+msgstr "Escolher ficheiro de programa"
 
 #: ui/main.qml:538
 #, kde-format
@@ -442,69 +399,61 @@ msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
 "extensions"
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
-msgstr ""
+msgstr "Ficheiros de programa (.sh, .bash, .zsh, etc.) (*.*sh)"
 
 #: ui/main.qml:561
-#, fuzzy, kde-format
-#| msgid "Select the scheme to import:"
+#, kde-format
 msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
-msgstr "Seleccione o esquema a importar:"
+msgstr "Selecione o esquema a importar:"
 
 #: ui/main.qml:580
-#, fuzzy, kde-format
-#| msgid "Custom Scheme"
+#, kde-format
 msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
-msgstr "Esquema Personalizado"
+msgstr "Esquema personalizado"
 
 #: ui/main.qml:588
-#, fuzzy, kde-format
-#| msgid "Select File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select File…"
-msgstr "Seleccionar o Ficheiro…"
+msgstr "Selecionar ficheiro…"
 
 #: ui/main.qml:588
-#, fuzzy, kde-format
-#| msgid "Import"
+#, kde-format
 msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "Importar"
 
 #: ui/main.qml:590
-#, fuzzy, kde-format
-#| msgid "Delete this shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
-msgstr "Apagar este atalho"
+msgstr "Selecione o ficheiro de esquema de atalhos"
 
 #: ui/main.qml:591
-#, fuzzy, kde-format
-#| msgid "Export Shortcut Scheme"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"
-msgstr "Exportar o Esquema de Atalhos"
+msgstr "Adicionar esquema de atalhos"
 
 #: ui/ShortcutActionDelegate.qml:31
 #, kde-format
 msgctxt "@action:button Collapse shortcuts view"
 msgid "Collapse"
-msgstr ""
+msgstr "Recolher"
 
 #: ui/ShortcutActionDelegate.qml:32
-#, fuzzy, kde-format
-#| msgid "No active shortcuts"
+#, kde-format
 msgctxt "@action:button"
 msgid "Expand to configure shortcuts"
-msgstr "Sem atalhos activos"
+msgstr "Expandir para configurar atalhos"
 
 #: ui/ShortcutActionDelegate.qml:38
-#, fuzzy, kde-format
-#| msgid "Editing shortcut: %1"
+#, kde-format
 msgctxt "@info:whatsthis accessible name %1 is shortcut label (not sequence)"
 msgid "Editing shortcut: %1"
-msgstr "A editar o atalho: %1"
+msgstr "A editar atalho: %1"
 
 #: ui/ShortcutActionDelegate.qml:63
 #, kde-format
@@ -515,17 +464,13 @@ msgid "%1:"
 msgstr "%1:"
 
 #: ui/ShortcutActionDelegate.qml:88
-#, fuzzy, kde-format
-#| msgid "No active shortcuts"
+#, kde-format
 msgctxt "@info:status"
 msgid "No active shortcuts"
-msgstr "Sem atalhos activos"
+msgstr "Sem atalhos ativos"
 
 #: ui/ShortcutActionDelegate.qml:134
-#, fuzzy, kde-format
-#| msgctxt "%1 decides if singular or plural will be used"
-#| msgid "Default shortcut"
-#| msgid_plural "Default shortcuts"
+#, kde-format
 msgctxt "@title:column %1 decides if singular or plural will be used"
 msgid "Default shortcut"
 msgid_plural "Default shortcuts"
@@ -533,59 +478,52 @@ msgstr[0] "Atalho predefinido"
 msgstr[1] "Atalhos predefinidos"
 
 #: ui/ShortcutActionDelegate.qml:136
-#, fuzzy, kde-format
-#| msgid "No default shortcuts"
+#, kde-format
 msgctxt "@label for shortcut with no default bindings"
 msgid "No default shortcuts"
 msgstr "Sem atalhos predefinidos"
 
 #: ui/ShortcutActionDelegate.qml:145
-#, fuzzy, kde-format
-#| msgid "Default shortcut %1 is enabled."
+#, kde-format
 msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is enabled."
-msgstr "O atalho predefinido %1 está activo."
+msgstr "O atalho predefinido %1 está ativado."
 
 #: ui/ShortcutActionDelegate.qml:145
-#, fuzzy, kde-format
-#| msgid "Default shortcut %1 is disabled."
+#, kde-format
 msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is disabled."
-msgstr "O atalho predefinido %1 está inactivo."
+msgstr "O atalho predefinido %1 está desativado."
 
 #: ui/ShortcutActionDelegate.qml:168
-#, fuzzy, kde-format
-#| msgid "Custom shortcuts"
+#, kde-format
 msgctxt "@title:column"
 msgid "Custom shortcuts"
 msgstr "Atalhos personalizados"
 
 #: ui/ShortcutActionDelegate.qml:195
-#, fuzzy, kde-format
-#| msgid "Delete this shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
-msgstr "Apagar este atalho"
+msgstr "Eliminar atalho"
 
 #: ui/ShortcutActionDelegate.qml:206
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
-msgstr ""
+msgstr "Adicionar..."
 
 #: ui/ShortcutActionDelegate.qml:207
-#, fuzzy, kde-format
-#| msgid "Add custom shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
-msgstr "Adicionar um atalho personalizado"
+msgstr "Adicionar atalho personalizado"
 
 #: ui/ShortcutActionDelegate.qml:243
-#, fuzzy, kde-format
-#| msgid "Cancel capturing of new shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
-msgstr "Cancelar a captura do novo atalho"
+msgstr "Cancelar captura de atalho"
 
 #, fuzzy
 #~| msgctxt "@tooltip:button %1 is the text of a custom command"

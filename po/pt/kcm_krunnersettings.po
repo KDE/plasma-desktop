@@ -1,16 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2026 César A. P. Cláudio <cesarapclaudio@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_search\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2022-06-03 18:10+0100\n"
-"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
-"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"PO-Revision-Date: 2026-02-07 22:11+0000\n"
+"Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
+"Language-Team: pt\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,44 +17,40 @@ msgstr ""
 "X-POFile-SpellExtra: Vishesh Handa KRunner install uninstall Packagekit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-SpellExtra: PackageKit\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Position on screen:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Position on screen:"
 msgstr "Posição no ecrã:"
 
 #: ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Top"
+#, kde-format
 msgctxt "@option:check Position on top of screen"
 msgid "Top"
-msgstr "Topo"
+msgstr "Superior"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Center"
+#, kde-format
 msgctxt "@option:check Position in center of screen"
 msgid "Center"
 msgstr "Centro"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Activation:"
+#, kde-format
 msgctxt "@label prefix for checkbutton"
 msgid "Activation:"
-msgstr "Activação:"
+msgstr "Ativação:"
 
 #: ui/main.qml:58
 #, kde-format
 msgctxt "@option:check"
 msgid "Activate when pressing any key on the desktop"
-msgstr "Activar quando carregar em qualquer tecla no ecrã"
+msgstr "Ativar ao premir qualquer tecla no ambiente de trabalho"
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid "History:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "History:"
 msgstr "Histórico:"
@@ -64,23 +59,22 @@ msgstr "Histórico:"
 #, kde-format
 msgctxt "@option:radio History is disabled"
 msgid "Disabled"
-msgstr ""
+msgstr "Desativado"
 
 #: ui/main.qml:79
 #, kde-format
 msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable suggestions"
-msgstr ""
+msgstr "Ativar sugestões"
 
 #: ui/main.qml:84
 #, kde-format
 msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable auto-complete"
-msgstr ""
+msgstr "Ativar preenchimento automático"
 
 #: ui/main.qml:92
-#, fuzzy, kde-format
-#| msgid "Clear History…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear History…"
 msgstr "Limpar o Histórico…"
@@ -89,25 +83,25 @@ msgstr "Limpar o Histórico…"
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for all activities"
 msgid "For all activities"
-msgstr "Para todas as actividades"
+msgstr "Para todas as atividades"
 
 #: ui/main.qml:127
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for this activity"
 msgid "For activity \"%1\""
-msgstr "Para a actividade \"%1\""
+msgstr "Para a atividade \"%1\""
 
 #: ui/main.qml:144
 #, kde-format
 msgctxt "@label"
 msgid "Plugins:"
-msgstr "'Plugins':"
+msgstr "Suplementos:"
 
 #: ui/main.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
-msgstr "Configurar os 'Plugins' de Pesquisa Activos…"
+msgstr "Configurar Suplementos de Pesquisa"
 
 #~ msgctxt "@option:check"
 #~ msgid "Remember past searches"
