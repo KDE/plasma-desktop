@@ -11,6 +11,7 @@
 #include <QAbstractListModel>
 #include <QMap>
 #include <QPointer>
+#include <QQmlEngine>
 
 #include <SDL2/SDL_joystick.h>
 
@@ -30,7 +31,14 @@ public:
         TypeRole,
     };
 
-    DeviceModel();
+    static DeviceModel *instance()
+    {
+        // This is an event polling model. There must only ever be a single
+        // instance of it or one model would poll the events so the other won't get them.
+        static DeviceModel instance;
+        QQmlEngine::setObjectOwnership(&instance, QQmlEngine::CppOwnership);
+        return &instance;
+    }
     virtual ~DeviceModel();
 
     Q_INVOKABLE Device *device(SDL_JoystickID id) const;
@@ -48,6 +56,7 @@ private Q_SLOTS:
     void poll();
 
 private:
+    DeviceModel();
     void addDevice(const int deviceIndex);
     void removeDevice(const SDL_JoystickID id);
 

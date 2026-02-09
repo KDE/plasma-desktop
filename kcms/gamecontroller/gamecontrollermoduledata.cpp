@@ -11,14 +11,13 @@
 GameControllerModuleData::GameControllerModuleData(QObject *parent)
     : KCModuleData(parent)
 {
-    m_deviceModel = new DeviceModel();
-    connect(m_deviceModel, &DeviceModel::devicesChanged, this, &GameControllerModuleData::updateRelevance);
+    connect(DeviceModel::instance(), &DeviceModel::devicesChanged, this, &GameControllerModuleData::updateRelevance);
     updateRelevance();
 }
 
 void GameControllerModuleData::updateRelevance()
 {
-    bool relevant = m_deviceModel->count() > 0;
+    bool relevant = DeviceModel::instance()->rowCount({}) > 0;
     setRelevant(relevant);
 }
 

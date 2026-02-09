@@ -19,6 +19,4 @@ public:
 
 private:
     void updateRelevance();
-
-    DeviceModel *m_deviceModel = nullptr;
 };
