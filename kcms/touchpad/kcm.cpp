@@ -64,7 +64,7 @@ KCMTouchpad::KCMTouchpad(QObject *parent, const KPluginMetaData &data)
 
     m_view->rootContext()->setContextProperty("backend", m_backend);
 
-    QObject::connect(m_view, &QQuickWidget::statusChanged, [&](QQuickWidget::Status status) {
+    QObject::connect(m_view, &QQuickWidget::statusChanged, this, [this](QQuickWidget::Status status) {
         if (status == QQuickWidget::Ready) {
             connect(m_view->rootObject(), SIGNAL(changeSignal()), this, SLOT(onChange()));
         }

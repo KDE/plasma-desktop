@@ -20,7 +20,7 @@ using namespace Qt::Literals::StringLiterals;
 LayoutSearchModel::LayoutSearchModel(QObject *parent)
     : QSortFilterProxyModel(parent)
 {
-    connect(this, &QSortFilterProxyModel::sourceModelChanged, [this]() {
+    connect(this, &QSortFilterProxyModel::sourceModelChanged, this, [this]() {
         const auto originalRoles = sourceModel()->roleNames().keys();
         m_searchScoreRole = *std::max_element(originalRoles.begin(), originalRoles.end()) + 1;
     });

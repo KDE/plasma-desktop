@@ -278,6 +278,8 @@ ecm_setup_version(${PROJECT_VERSION} VARIABLE_PREFIX PLASMA VERSION_HEADER plasm
 
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
+add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
+
 configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-workspace.h)
 configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
 configure_file(config-build-options.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-build-options.h)

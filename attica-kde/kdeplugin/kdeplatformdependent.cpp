@@ -256,7 +256,7 @@ void Attica::KdePlatformDependent::loadAccessToken()
         }
 
         auto job = new KAccounts::GetCredentialsJob(accountId, accountsManager);
-        connect(job, &KJob::finished, [this, job, accountId = account->id()]() {
+        connect(job, &KJob::finished, this, [this, job, accountId = account->id()]() {
             const auto credentialsData = job->credentialsData();
             const auto idToken = credentialsData[QStringLiteral("IdToken")].toString();
 
