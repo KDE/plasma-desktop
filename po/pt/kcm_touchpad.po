@@ -1,16 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2026 César A. P. Cláudio <cesarapclaudio@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-14 00:46+0000\n"
-"PO-Revision-Date: 2020-04-09 10:54+0100\n"
-"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
-"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"PO-Revision-Date: 2026-02-08 21:20+0000\n"
+"Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
+"Language-Team: pt\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,45 +18,46 @@ msgstr ""
 "X-POFile-SpellExtra: Raspryagayeva Synaptics Osterlund synclient Peter\n"
 "X-POFile-SpellExtra: Mezin Zaytsev Alexander Libinput Roman Gilg tácteis\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
-"A pesquisa pelos dispositivos de entrada foi mal-sucedida. Por favor, reabra "
-"este módulo de configuração."
+"Falha ao consultar os dispositivos de entrada. Reabra este módulo de "
+"definições."
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:74
 #, kde-format
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr ""
-"Ocorreu um erro crítico ao ler os dados dos dispositivos para o rato por "
-"toque %1."
+"Erro crítico ao ler as informações fundamentais do dispositivo para o "
+"touchpad %1."
 
 #: backends/x11/xlibbackend.cpp:69
 #, kde-format
 msgid "Cannot connect to X server"
-msgstr "Não é possível contactar o servidor X"
+msgstr "Não é possível ligar ao servidor X"
 
 #: backends/x11/xlibbackend.cpp:80
 #, kde-format
 msgid "No touchpad found"
-msgstr "Não foi encontrado nenhum rato por toque"
+msgstr "Nenhum touchpad encontrado"
 
 #: backends/x11/xlibbackend.cpp:120
 #, kde-format
 msgid "Cannot apply touchpad configuration"
-msgstr "Não é possível aplicar a configuração do rato por toque"
+msgstr "Não é possível aplicar a configuração do touchpad"
 
 #: backends/x11/xlibbackend.cpp:134
 #, kde-format
 msgid "Cannot read touchpad configuration"
-msgstr "Não é possível ler a configuração do rato por toque"
+msgstr "Não é possível ler a configuração do touchpad"
 
 #: backends/x11/xlibbackend.cpp:147
 #, kde-format
 msgid "Cannot read default touchpad configuration"
-msgstr "Não é possível ler a configuração predefinida do rato por toque"
+msgstr "Não é possível ler a configuração predefinida do touchpad"
 
 #: kcm.cpp:108
 #, kde-format
@@ -65,13 +65,13 @@ msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr ""
-"Ocorreu um erro ao carregar os valores. Veja os registos para obter mais "
-"informações. Por favor, reinicie este módulo de configuração."
+"Erro ao carregar os valores. Consulte os registos para obter mais "
+"informações. Reinicie este módulo de configuração."
 
 #: kcm.cpp:111
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
-msgstr "Não foi detectado nenhum rato por toque. Ligue-o agora."
+msgstr "Nenhum touchpad encontrado. Ligue o touchpad agora."
 
 #: kcm.cpp:120
 #, kde-format
@@ -79,9 +79,9 @@ msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
-"Não foi possível gravar todas as modificações. Veja os registos para obter "
-"mais informações. Por favor, reinicie este módulo de configuração e tente de "
-"novo."
+"Não foi possível guardar todas as alterações. Consulte os registos para "
+"obter mais informações. Reinicie este módulo de configuração e tente "
+"novamente."
 
 #: kcm.cpp:139
 #, kde-format
@@ -89,8 +89,8 @@ msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr ""
-"Ocorreu um erro ao ler os valores predefinidos. Nem todas as opções puderam "
-"ser configuradas com os seus valores por omissão."
+"Erro ao carregar os valores predefinidos. Não foi possível definir algumas "
+"opções nos respetivos valores predefinidos."
 
 #: kcm.cpp:155
 #, kde-format
@@ -98,97 +98,84 @@ msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr ""
-"Ocorreu um erro ao adicionar o dispositivo acabado de ligar. Por favor, "
-"ligue-o de novo e reinicie este módulo de configuração."
+"Erro ao adicionar o dispositivo recentemente ligado. Ligue-o novamente e "
+"reinicie este módulo de configuração."
 
 #: kcm.cpp:170
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
-msgstr ""
-"O rato por toque foi desligado. Foi fechada a sua janela de configuração."
+msgstr "Touchpad desligado. Fechou-se a respetiva janela de definições."
 
 #: kcm.cpp:172
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
-msgstr ""
-"O rato por toque foi desligado. Não foram detectados mais dispositivos desse "
-"tipo."
+msgstr "Touchpad desligado. Não foram encontrados outros touchpads."
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgid "No touchpad found"
+#, kde-format
 msgctxt "@info:status placeholdermessage text"
 msgid "No touchpad found"
-msgstr "Não foi encontrado nenhum rato por toque"
+msgstr "Nenhum touchpad encontrado"
 
 #: ui/main.qml:60
 #, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchpad"
-msgstr ""
+msgstr "Ligue um touchpad externo"
 
 #: ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@label:listbox device selection"
 msgid "Device:"
 msgstr "Dispositivo:"
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "Geral:"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgctxt "Coasting"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable device"
-msgstr "Activar"
+msgstr "Ativar dispositivo"
 
 #: ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "Disable touchpad when mouse is plugged in"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
-msgstr "Desactivar o rato por toque ao ligar outro rato"
+msgstr "Desativar enquanto o rato estiver ligado"
 
 #: ui/main.qml:137
-#, fuzzy, kde-format
-#| msgid "Disable while typing"
+#, kde-format
 msgctxt "option:check"
 msgid "Disable while typing"
-msgstr "Desactivar durante a escrita"
+msgstr "Desativar enquanto escreve"
 
 #: ui/main.qml:160
 #, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
-msgstr ""
+msgstr "Isto pode interferir com jogos de vídeo."
 
 #: ui/main.qml:174
-#, fuzzy, kde-format
-#| msgid "Swap left and right buttons."
+#, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
-msgstr "Trocar os botões esquerdo e direito."
+msgstr "Botões esquerdo e direito:"
 
 #: ui/main.qml:175
-#, fuzzy, kde-format
-#| msgid "Left handed mode"
+#, kde-format
 msgctxt "@option:check"
 msgid "Swap (left-handed mode)"
-msgstr "Modo esquerdino"
+msgstr "Inverter (modo para esquerdinos)"
 
 #: ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle click"
+#, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
-msgstr "Carregue nos botões esquerdo e direito para simular o do meio"
+msgstr "Premir ambos simultaneamente para clicar com o botão do meio"
 
 #: ui/main.qml:204
 #, kde-format
@@ -197,20 +184,21 @@ msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"A ativação desta definição aumenta a latência do clique em 50 ms. O atraso "
+"adicional é necessário para detetar corretamente os cliques simultâneos nos "
+"botões esquerdo e direito."
 
 #: ui/main.qml:217
-#, fuzzy, kde-format
-#| msgid "Pointer speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Velocidade do ponteiro:"
 
 #: ui/main.qml:297
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
-msgstr "Aceleração do cursor:"
+msgstr "Ativar aceleração do ponteiro"
 
 #: ui/main.qml:312
 #, kde-format
@@ -218,170 +206,153 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
+"Quando ativada, a distância percorrida pelo ponteiro aumenta com a "
+"velocidade de movimento."
 
 #: ui/main.qml:325
-#, fuzzy, kde-format
-#| msgid "Scrolling speed:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
-msgstr "Velocidade do deslocamento:"
+msgstr "Velocidade de deslocamento:"
 
 #: ui/main.qml:376
-#, fuzzy, kde-format
-#| msgctxt "Slower Scroll"
-#| msgid "Slower"
+#, kde-format
 msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
-msgstr "Mais devagar"
+msgstr "Mais lento"
 
 #: ui/main.qml:383
-#, fuzzy, kde-format
-#| msgctxt "Faster Scroll Speed"
-#| msgid "Faster"
+#, kde-format
 msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
-msgstr "Mais depressa"
+msgstr "Mais rápido"
 
 #: ui/main.qml:390
-#, fuzzy, kde-format
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt ""
 "@title group begins the sentence 'Scroll by moving two fingers anywhere/"
 "moving one finger on edge'"
 msgid "Scroll by:"
-msgstr "Deslocamento:"
+msgstr "Deslocar ao:"
 
 #: ui/main.qml:409
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
-msgstr ""
+msgstr "Mover dois dedos em qualquer posição"
 
 #: ui/main.qml:416
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
-msgstr ""
+msgstr "Mover um dedo na borda do touchpad"
 
 #: ui/main.qml:424
-#, fuzzy, kde-format
-#| msgid "Invert scroll direction (Natural scrolling)"
+#, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
-msgstr "Inverter a direcção do deslocamento (deslocamento natural)"
+msgstr "Inverter direção de deslocamento (Deslocamento natural)"
 
 #: ui/main.qml:438
-#, fuzzy, kde-format
-#| msgid "Disable horizontal scrolling"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
-msgstr "Desactivar o deslocamento horizontal"
+msgstr "Desativar deslocamento horizontal"
 
 #: ui/main.qml:460
-#, fuzzy, kde-format
-#| msgid "Right-click"
+#, kde-format
 msgctxt ""
 "@title:group for radiobutton group, begins the sentence 'right-click by "
 "pressing bottom-right corner/pressing with two fingers'"
 msgid "Right-click by:"
-msgstr "Botão direito"
+msgstr "Clicar com o botão direito ao:"
 
 #: ui/main.qml:481
-#, fuzzy, kde-format
-#| msgid "Press bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-right "
 "corner'"
 msgid "Pressing bottom-right corner"
-msgstr "Carregar no canto inferior direito"
+msgstr "Pressionar o canto inferior direito"
 
 #: ui/main.qml:496
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
-msgstr "Carregue em qualquer lado com três dedos."
+msgstr "Clicar com o botão do meio ao pressionar ambos os cantos inferiores."
 
 #: ui/main.qml:497
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr "Carregue em qualquer lado com três dedos."
+msgstr "Clicar com o botão do meio ao pressionar o centro inferior."
 
 #: ui/main.qml:505
-#, fuzzy, kde-format
-#| msgid "Press anywhere with two fingers"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing with two "
 "fingers'"
 msgid "Pressing anywhere with two fingers"
-msgstr "Carregar em qualquer lado com dois dedos"
+msgstr "Pressionar em qualquer posição com dois dedos"
 
 #: ui/main.qml:520
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers."
+#, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
-msgstr "Carregue em qualquer lado com três dedos."
+msgstr ""
+"Clicar com o botão do meio ao pressionar em qualquer posição com três dedos."
 
 #: ui/main.qml:529
-#, fuzzy, kde-format
-#| msgid "Middle-click"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'middle-click by pressing "
 "bottom-middle edge/by pressing anywhere with three fingers'"
 msgid "Middle-click by:"
-msgstr "Botão do meio"
+msgstr "Clicar com o botão do meio ao:"
 
 #: ui/main.qml:550
-#, fuzzy, kde-format
-#| msgid "Press bottom-middle"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-middle "
 "edge'"
 msgid "Pressing bottom-middle edge"
-msgstr "Botão do meio inferior"
+msgstr "Pressionar a borda inferior central do touchpad"
 
 #: ui/main.qml:557
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-left "
 "and bottom-right corners'"
 msgid "Pressing bottom-left and bottom-right corners"
-msgstr "Carregar em baixo e à esquerda e direita em simultâneo"
+msgstr "Pressionar os cantos inferior esquerdo e inferior direito"
 
 #: ui/main.qml:564
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers"
+#, kde-format
 msgctxt ""
 "@option:check completes the sentence 'middle-click by pressing anywhere with "
 "three fingers'"
 msgid "Pressing anywhere with three fingers"
-msgstr "Carregar em qualquer lado com três dedos"
+msgstr "Pressionar em qualquer posição com três dedos"
 
 #: ui/main.qml:580
-#, fuzzy, kde-format
-#| msgid "Tapping:"
+#, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Toques:"
 
 #: ui/main.qml:581
-#, fuzzy, kde-format
-#| msgid "Tap to Click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Tap to click"
-msgstr "Toque para Carregar"
+msgstr "Tocar para clicar"
 
 #: ui/main.qml:597
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
-msgstr ""
+msgstr "Permitir arrastar após toque"
 
 #: ui/main.qml:610
 #, kde-format
@@ -390,47 +361,49 @@ msgid ""
 "Tap, then tap and immediately slide finger over the touchpad to drag. Lift "
 "finger to drop."
 msgstr ""
+"Toque, depois toque novamente e deslize imediatamente o dedo pelo touchpad "
+"para arrastar. Levante o dedo para largar."
 
 #: ui/main.qml:616
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr ""
+"Permitir levantar brevemente o dedo durante o movimento de tocar e arrastar"
 
 #: ui/main.qml:630
-#, fuzzy, kde-format
-#| msgid "Two-finger tap:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "Toque com dois dedos:"
 
 #: ui/main.qml:650
-#, fuzzy, kde-format
-#| msgid "Right-click (three-finger tap to middle-click)"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
-msgstr "Botão direito (toque com três dedos para o botão do meio)"
+msgstr ""
+"Clicar com o botão direito (toque com três dedos para clicar com o botão do "
+"meio)"
 
 #: ui/main.qml:651
-#, fuzzy, kde-format
-#| msgid "Right-click"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Right-click"
-msgstr "Botão direito"
+msgstr "Clicar com o botão direito"
 
 #: ui/main.qml:659
-#, fuzzy, kde-format
-#| msgid "Middle-click (three-finger tap right-click)"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
-msgstr "Botão do meio (toque com três dedos para o botão direito)"
+msgstr ""
+"Clicar com o botão do meio (toque com três dedos para clicar com o botão "
+"direito)"
 
 #: ui/main.qml:660
-#, fuzzy, kde-format
-#| msgid "Middle-click"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click"
-msgstr "Botão do meio"
+msgstr "Clicar com o botão do meio"
 
 #~ msgid "Device enabled"
 #~ msgstr "Dispositivo activo"
