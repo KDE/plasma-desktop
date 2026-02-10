@@ -21,7 +21,7 @@ public:
     };
     Q_INVOKABLE void setSearchString(QStringView searchString);
 
-    Q_PROPERTY(QString searchString READ searchString WRITE setSearchString NOTIFY searchStringChanged);
+    Q_PROPERTY(QString searchString READ searchString WRITE setSearchString NOTIFY searchStringChanged)
 
 signals:
     void searchStringChanged();
