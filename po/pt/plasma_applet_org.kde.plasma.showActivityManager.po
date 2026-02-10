@@ -1,86 +1,78 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2026 César A. P. Cláudio <cesarapclaudio@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2022-07-20 18:29+0100\n"
-"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
-"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"PO-Revision-Date: 2026-02-09 22:33+0000\n"
+"Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
+"Language-Team: pt\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: qml/config.qml:13
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgctxt "@title page"
 msgid "Appearance"
 msgstr "Aparência"
 
 #: qml/ConfigAppearance.qml:23
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Icon:"
 msgstr "Ícone:"
 
 #: qml/ConfigAppearance.qml:25
-#, fuzzy, kde-format
-#| msgid "Show the current activity icon"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show the current activity icon"
-msgstr "Mostrar o ícone da actividade actual"
+msgstr "Mostrar o ícone da Atividade atual"
 
 #: qml/ConfigAppearance.qml:31
-#, fuzzy, kde-format
-#| msgid "Show the generic activity icon"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show the generic activity icon"
-msgstr "Mostrar o ícone de actividade genérico"
+msgstr "Mostrar o ícone genérico de Atividade"
 
 #: qml/ConfigAppearance.qml:41
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Title:"
 msgstr "Título:"
 
 #: qml/ConfigAppearance.qml:43
-#, fuzzy, kde-format
-#| msgid "Show the current activity name"
+#, kde-format
 msgctxt "@option:check title"
 msgid "Show the current activity name"
-msgstr "Mostrar o nome da actividade actual"
+msgstr "Mostrar o nome da Atividade atual"
 
 #: qml/main.qml:66
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current activity is %1"
-msgstr "A actividade actual é a %1"
+msgstr "A Atividade atual é %1"
 
 #: qml/main.qml:76
-#, fuzzy, kde-format
-#| msgid "Show Activity Manager"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show Activity Manager"
-msgstr "Mostrar o Gestor de Actividades"
+msgstr "Mostrar Gestor de Atividades"
 
 #: qml/main.qml:77
-#, fuzzy, kde-format
-#| msgid "Click to show the activity manager"
+#, kde-format
 msgctxt "@info:tooltip subtext"
 msgid "Click to show the activity manager"
-msgstr "Carregue para mostrar o gestor de actividades"
+msgstr "Clique para mostrar o Gestor de Atividades"
 
 #: qml/main.qml:119
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
-msgstr ""
+msgstr "&Configurar Atividades…"

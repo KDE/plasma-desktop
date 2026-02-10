@@ -1,25 +1,24 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2026 César A. P. Cláudio <cesarapclaudio@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-02 00:45+0000\n"
-"PO-Revision-Date: 2022-06-30 14:47+0100\n"
-"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
-"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"PO-Revision-Date: 2026-02-09 23:00+0000\n"
+"Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
+"Language-Team: pt\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Geral"
@@ -28,162 +27,159 @@ msgstr "Geral"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "For active application, show:"
-msgstr ""
+msgstr "Para a aplicação ativa, mostrar:"
 
 #: ConfigGeneral.qml:42
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Icon and name"
-msgstr ""
+msgstr "Ícone e nome"
 
 #: ConfigGeneral.qml:43
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Icon"
-msgstr ""
+msgstr "Ícone"
 
 #: ConfigGeneral.qml:44
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #: ConfigGeneral.qml:91
-#, fuzzy, kde-format
-#| msgid "Only icons can be shown when the Panel is vertical."
+#, kde-format
 msgctxt "@info:usagetip display mode for active application"
 msgid "Only icons can be shown when the Panel is vertical."
-msgstr "Só poderá mostrar os ícones quando o painel for Vertical."
+msgstr "Apenas os ícones podem ser mostrados quando o Painel está na vertical."
 
 #: ConfigGeneral.qml:93
-#, fuzzy, kde-format
-#| msgid "Not applicable when the widget is on the Desktop."
+#, kde-format
 msgctxt "@info:usagetip display mode for active application"
 msgid "Not applicable when the widget is on the Desktop."
-msgstr "Não se aplica quando o elemento está no ecrã."
+msgstr "Não aplicável quando o widget está no Ambiente de trabalho."
 
 #: ConfigGeneral.qml:106
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Open on hover:"
-msgstr ""
+msgstr "Abrir ao passar o rato:"
 
 #: ConfigGeneral.qml:111
 #, kde-format
 msgctxt "@option:check open-on-hover is enabled, with the following delay:"
 msgid "Enabled, with delay:"
-msgstr ""
+msgstr "Ativado, com atraso:"
 
 #: ConfigGeneral.qml:124
 #, kde-format
 msgctxt "@item:valuesuffix, %1 is hover activation delay in ms"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
 
 #: ConfigGeneral.qml:133
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ms"
+msgstr[1] "ms"
 
 #: ConfigGeneral.qml:136
 #, kde-format
 msgctxt "@label:spinbox accessible %1 is milliseconds"
 msgid "Hover open delay %1 ms"
-msgstr ""
+msgstr "Atraso de abertura ao passar o rato: %1 ms"
 
 #: ConfigGeneral.qml:146
 #, kde-format
 msgctxt ""
 "@label for checkbox group, completes sentence like: … from current screen"
 msgid "Show only windows:"
-msgstr ""
+msgstr "Mostrar apenas janelas"
 
 #: ConfigGeneral.qml:147
 #, kde-format
 msgctxt "@option:check completes sentence: show only windows"
 msgid "From the current desktop"
-msgstr ""
+msgstr "Do ambiente de trabalho atual"
 
 #: ConfigGeneral.qml:152
 #, kde-format
 msgctxt "@option:check completes sentence: show only windows"
 msgid "From the current activity"
-msgstr ""
+msgstr "Da atividade atual"
 
 #: ConfigGeneral.qml:157
 #, kde-format
 msgctxt "@option:check completes sentence: show only windows"
 msgid "From the current screen"
-msgstr ""
+msgstr "Do ecrã atual"
 
 #: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@option:check completes sentence: show only windows"
 msgid "That are minimized"
-msgstr ""
+msgstr "Que estejam minimizadas"
 
 #: ConfigGeneral.qml:171
 #, kde-format
 msgctxt "@label:listbox sort windows is list"
 msgid "Sort:"
-msgstr ""
+msgstr "Ordenar:"
 
 #: ConfigGeneral.qml:178
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "By time opened"
-msgstr ""
+msgstr "Pela data em que foi aberto"
 
 #: ConfigGeneral.qml:182
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "Alphabetically"
-msgstr ""
+msgstr "Alfabeticamente"
 
 #: ConfigGeneral.qml:186
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "Alphabetically, grouped by virtual desktop"
-msgstr ""
+msgstr "Por ordem alfabética, agrupado por ambiente de trabalho virtual"
 
 #: ConfigGeneral.qml:190
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "Alphabetically, grouped by activity"
-msgstr ""
+msgstr "Por ordem alfabética, agrupado por atividade"
 
 #: ConfigGeneral.qml:194
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "By last activated time"
-msgstr ""
+msgstr "Por hora da última ativação"
 
 #: ConfigGeneral.qml:198
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "By horizontal window position"
-msgstr ""
+msgstr "Por posição horizontal da janela"
 
 #: main.qml:41
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No open windows"
-msgstr ""
+msgstr "Sem janelas abertas"
 
 #: main.qml:362
-#, fuzzy, kde-format
-#| msgid "Plasma Desktop"
+#, kde-format
 msgctxt "@title:window title shown e.g. for desktop and expanded widgets"
 msgid "Plasma Desktop"
-msgstr "Área de Trabalho Plasma"
+msgstr "Ambiente de trabalho Plasma"
 
 #~ msgid "Show active application's name on Panel button"
 #~ msgstr "Mostrar o nome da aplicação activa no botão do Painel"

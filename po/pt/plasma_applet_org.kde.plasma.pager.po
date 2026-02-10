@@ -1,11 +1,12 @@
+# SPDX-FileCopyrightText: 2026 César A. P. Cláudio <cesarapclaudio@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2022-07-31 16:34+0100\n"
-"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
-"Language-Team: pt <kde-i18n-pt@kde.org>\n"
+"PO-Revision-Date: 2026-02-09 22:32+0000\n"
+"Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
+"Language-Team: pt\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,170 +15,146 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-SpellExtra: buttonGroupText\n"
 "X-POFile-IgnoreConsistency: Display:\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: qml/config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Geral"
 
 #: qml/configGeneral.qml:39
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "Geral:"
 
 #: qml/configGeneral.qml:41
-#, fuzzy, kde-format
-#| msgid "Show application icons on window outlines"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show window outlines"
-msgstr "Mostrar os ícones da aplicação nos contornos das janelas"
+msgstr "Mostrar contornos das janelas"
 
 #: qml/configGeneral.qml:46
-#, fuzzy, kde-format
-#| msgid "Show application icons on window outlines"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show application icons on window outlines"
-msgstr "Mostrar os ícones da aplicação nos contornos das janelas"
+msgstr "Mostrar ícones das aplicações nos contornos das janelas"
 
 #: qml/configGeneral.qml:52
-#, fuzzy, kde-format
-#| msgid "Show only current screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show only current screen"
-msgstr "Mostrar apenas o ecrã actual"
+msgstr "Mostrar apenas o ecrã atual"
 
 #: qml/configGeneral.qml:57
-#, fuzzy, kde-format
-#| msgid "Navigation wraps around"
+#, kde-format
 msgctxt "@option:check"
 msgid "Navigation wraps around"
-msgstr "A navegação dá a volta"
+msgstr "A navegação volta ao início"
 
 #: qml/configGeneral.qml:69
-#, fuzzy, kde-format
-#| msgid "Layout:"
+#, kde-format
 msgctxt "@title:listbox"
 msgid "Layout:"
 msgstr "Disposição:"
 
 #: qml/configGeneral.qml:71
-#, fuzzy, kde-format
-#| msgctxt "The pager layout"
-#| msgid "Default"
+#, kde-format
 msgctxt "@item:inlistbox The pager layout"
 msgid "Default"
 msgstr "Predefinida"
 
 #: qml/configGeneral.qml:71
-#, fuzzy, kde-format
-#| msgid "Horizontal"
+#, kde-format
 msgctxt "@item:inlistbox The pager layout"
 msgid "Horizontal"
 msgstr "Horizontal"
 
 #: qml/configGeneral.qml:71
-#, fuzzy, kde-format
-#| msgid "Vertical"
+#, kde-format
 msgctxt "@item:inlistbox The pager layout"
 msgid "Vertical"
 msgstr "Vertical"
 
 #: qml/configGeneral.qml:85
-#, fuzzy, kde-format
-#| msgid "Text display:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Text display:"
-msgstr "Apresentação do texto:"
+msgstr "Apresentação de texto:"
 
 #: qml/configGeneral.qml:88
-#, fuzzy, kde-format
-#| msgid "No text"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "No text"
 msgstr "Sem texto"
 
 #: qml/configGeneral.qml:96
-#, fuzzy, kde-format
-#| msgid "Activity number"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "Activity number"
-msgstr "Número da actividade"
+msgstr "Número da Atividade"
 
 #: qml/configGeneral.qml:96
-#, fuzzy, kde-format
-#| msgid "Desktop number"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "Desktop number"
-msgstr "Número do ecrã"
+msgstr "Número do ambiente de trabalho"
 
 #: qml/configGeneral.qml:104
-#, fuzzy, kde-format
-#| msgid "Activity name"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "Activity name"
-msgstr "Nome da actividade"
+msgstr "Nome da Atividade"
 
 #: qml/configGeneral.qml:104
-#, fuzzy, kde-format
-#| msgid "Desktop name"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "Desktop name"
-msgstr "Nome do ecrã"
+msgstr "Nome do ambiente de trabalho"
 
 #: qml/configGeneral.qml:119
-#, fuzzy, kde-format
-#| msgid "Selecting current Activity:"
+#, kde-format
 msgctxt ""
 "@label Start of the sentence 'Selecting current activity does nothing/shows "
 "the desktop'"
 msgid "Selecting current Activity:"
-msgstr "Ao seleccionar a actividade actual:"
+msgstr "Selecionar a Atividade atual:"
 
 #: qml/configGeneral.qml:120
-#, fuzzy, kde-format
-#| msgid "Selecting current virtual desktop:"
+#, kde-format
 msgctxt ""
 "@label Start of the sentence 'Selecting current virtual desktop does nothing/"
 "shows the desktop'"
 msgid "Selecting current virtual desktop:"
-msgstr "Ao seleccionar o ecrã virtual actual:"
+msgstr "Selecionar o ambiente de trabalho virtual atual:"
 
 #: qml/configGeneral.qml:123
-#, fuzzy, kde-format
-#| msgid "Does nothing"
+#, kde-format
 msgctxt ""
 "option:check completes the sentence 'Selecting current activity/virtual "
 "desktop does nothing'"
 msgid "Does nothing"
-msgstr "Não fazer nada"
+msgstr "Não faz nada"
 
 #: qml/configGeneral.qml:131
-#, fuzzy, kde-format
-#| msgid "Shows the desktop"
+#, kde-format
 msgctxt ""
 "option:check completes the sentence 'Selecting current activity/virtual "
 "desktop shows the desktop'"
 msgid "Shows the desktop"
-msgstr "Mostra o ecrã"
+msgstr "Mostra o ambiente de trabalho"
 
 #: qml/main.qml:87
-#, fuzzy, kde-format
-#| msgid "…and %1 other window"
-#| msgid_plural "…and %1 other windows"
+#, kde-format
 msgctxt "@info:tooltip overflow label"
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
-msgstr[0] "…e mais %1 janela"
-msgstr[1] "…e mais %1 janelas"
+msgstr[0] "…e %1 outra janela"
+msgstr[1] "…e %1 outras janelas"
 
 #: qml/main.qml:351
-#, fuzzy, kde-format
-#| msgid "%1 Window:"
-#| msgid_plural "%1 Windows:"
+#, kde-format
 msgctxt "@info:tooltip start of list"
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
@@ -185,59 +162,51 @@ msgstr[0] "%1 Janela:"
 msgstr[1] "%1 Janelas:"
 
 #: qml/main.qml:363
-#, fuzzy, kde-format
-#| msgid "%1 Minimized Window:"
-#| msgid_plural "%1 Minimized Windows:"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
-msgstr[0] "%1 Janela Minimizada:"
-msgstr[1] "%1 Janelas Minimizadas:"
+msgstr[0] "%1 Janela minimizada:"
+msgstr[1] "%1 Janelas minimizadas:"
 
 #: qml/main.qml:439
-#, fuzzy, kde-format
-#| msgid "Desktop %1"
+#, kde-format
 msgctxt "@info:whatsthis Accessible name for pager section"
 msgid "Desktop %1"
-msgstr "Ecrã %1"
+msgstr "Ambiente de trabalho %1"
 
 #: qml/main.qml:440
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
-msgstr "Mudar para o(a) %1"
+msgstr "Mudar para %1"
 
 #: qml/main.qml:592
-#, fuzzy, kde-format
-#| msgid "Show Activity Manager…"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
-msgstr "Mostrar o Gestor de Actividades…"
+msgstr "Mostrar Gestor de Atividades"
 
 #: qml/main.qml:598
-#, fuzzy, kde-format
-#| msgid "Add Virtual Desktop"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
-msgstr "Adicionar um Ecrã Virtual"
+msgstr "Adicionar Ambiente de Trabalho Virtual"
 
 #: qml/main.qml:604
-#, fuzzy, kde-format
-#| msgid "Remove Virtual Desktop"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
-msgstr "Remover o Ecrã Virtual"
+msgstr "Remover Ambiente de Trabalho Virtual"
 
 #: qml/main.qml:611
-#, fuzzy, kde-format
-#| msgid "Configure Virtual Desktops…"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
-msgstr "Configurar os Ecrãs Virtuais…"
+msgstr "&Configurar Atividades…"
 
 #: qml/main.qml:616
-#, fuzzy, kde-format
-#| msgid "Configure Virtual Desktops…"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Configure Virtual Desktops…"
-msgstr "Configurar os Ecrãs Virtuais…"
+msgstr "Configurar Ambientes de Trabalho Virtuais..."

@@ -1,11 +1,12 @@
+# SPDX-FileCopyrightText: 2026 César A. P. Cláudio <cesarapclaudio@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-14 00:46+0000\n"
-"PO-Revision-Date: 2022-08-26 02:36+0100\n"
-"Last-Translator: Pedro Morais <morais@kde.org>\n"
-"Language-Team: pt <kde-i18n-pt@kde.org>\n"
+"PO-Revision-Date: 2026-02-09 03:25+0000\n"
+"Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
+"Language-Team: pt\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,23 +18,24 @@ msgstr ""
 "X-POFile-SpellExtra: Dowler Faure Gehrmann Mueller Logitech Hemsley Nolden\n"
 "X-POFile-SpellExtra: libusb Rik ms Brad Dirk Ralf Hards Bernd KD Höglund\n"
 "X-POFile-SpellExtra: Fredrik KCM Roman Gilg tácteis\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
-"A pesquisa pelos dispositivos de entrada foi mal-sucedida. Por favor, reabra "
-"este módulo de configuração."
+"Falha ao consultar dispositivos de entrada. Reabra este módulo das "
+"definições."
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:81
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
-msgstr "Erro crítico ao ler os dados fundamentais do dispositivo %1."
+msgstr "Erro crítico ao ler informações fundamentais do dispositivo %1."
 
 #: kcm.cpp:87
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "Não foi possível selecionar a infraestrutura adequada"
 
 #: kcm.cpp:143
 #, kde-format
@@ -41,13 +43,13 @@ msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr ""
-"Ocorreu um erro ao carregar os valores. Veja os registos para obter mais "
-"informações. Por favor, reinicie este módulo de configuração."
+"Erro ao carregar os valores. Consulte os registos para mais informações. "
+"Reinicie este módulo de configuração."
 
 #: kcm.cpp:146
 #, kde-format
 msgid "No pointer device found. Connect now."
-msgstr "Não foi encontrado nenhum dispositivo. Ligue-o agora."
+msgstr "Nenhum dispositivo de ponteiro encontrado. Ligue agora."
 
 #: kcm.cpp:155
 #, kde-format
@@ -55,9 +57,8 @@ msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
-"Não foi possível gravar todas as modificações. Veja os registos para obter "
-"mais informações. Por favor, reinicie este módulo de configuração e tente de "
-"novo."
+"Não foi possível guardar todas as alterações. Consulte os registos para mais "
+"informações. Reinicie este módulo de configuração e tente novamente."
 
 #: kcm.cpp:173
 #, kde-format
@@ -65,8 +66,8 @@ msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr ""
-"Ocorreu um erro ao ler os valores predefinidos. Nem todas as opções puderam "
-"ser configuradas com os seus valores por omissão."
+"Erro ao carregar os valores predefinidos. Não foi possível repor algumas "
+"opções nos respetivos valores predefinidos."
 
 #: kcm.cpp:188
 #, kde-format
@@ -74,49 +75,47 @@ msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr ""
-"Ocorreu um erro ao adicionar o dispositivo acabado de ligar. Por favor, "
-"ligue-o de novo e reinicie este módulo de configuração."
+"Erro ao adicionar o dispositivo recém-ligado. Volte a ligá-lo e reinicie "
+"este módulo de configuração."
 
 #: kcm.cpp:201
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
-"O dispositivo de ponteiro desligou-se. Foi fechada a sua janela de "
-"configuração."
+"Dispositivo de ponteiro desligado. Fechou-se o respetivo diálogo de "
+"definições."
 
 #: kcm.cpp:203
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr ""
-"O dispositivo de ponteiro desligou-se. Não foram encontrados mais "
-"dispositivos."
+"Dispositivo de ponteiro desligado. Fechou-se o respetivo diálogo de "
+"definições."
 
 #: ui/bindings.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@label for assigning an action to a numbered button"
-#| msgid "Extra Button %1:"
+#, kde-format
 msgctxt "@title"
 msgid "Extra Mouse Buttons"
-msgstr "Botão Extra %1:"
+msgstr "Botões extra do rato"
 
 #: ui/bindings.qml:77
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
-msgstr "Botão Extra %1:"
+msgstr "Botão extra %1:"
 
 #: ui/bindings.qml:106
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr ""
-"Carregue no botão do rato ao qual deseja associar uma combinação de teclas"
+"Prima o botão do rato para o qual pretende adicionar uma associação de tecla"
 
 #: ui/bindings.qml:108
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
-msgstr "Indique a nova combinação de teclas para o %1"
+msgstr "Introduza a nova combinação de teclas para %1"
 
 #: ui/bindings.qml:112
 #, kde-format
@@ -125,35 +124,31 @@ msgid "Cancel"
 msgstr "Cancelar"
 
 #: ui/bindings.qml:130
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Press a mouse button "
+#, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button"
-msgstr "Carregue num botão do rato."
+msgstr "Prima um botão do rato"
 
 #: ui/bindings.qml:131
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
-msgstr "Nova Associação…"
+msgstr "Adicionar associação..."
 
 #: ui/main.qml:37
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
-msgstr ""
+msgstr "Configurar botões extra…"
 
 #: ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Dispositivo:"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General:"
 msgstr "Geral:"
@@ -162,31 +157,25 @@ msgstr "Geral:"
 #, kde-format
 msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
-msgstr ""
+msgstr "Ativar dispositivo"
 
 #: ui/main.qml:105
-#, fuzzy, kde-format
-#| msgid "Swap left and right buttons."
+#, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
-msgstr "Trocar os botões esquerdo e direito."
+msgstr "Botões esquerdo e direito:"
 
 #: ui/main.qml:106
-#, fuzzy, kde-format
-#| msgid "Left handed mode"
+#, kde-format
 msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
-msgstr "Modo esquerdino"
+msgstr "Inverter (modo para canhotos)"
 
 #: ui/main.qml:121
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
-msgstr ""
-"Se carregar nos botões esquerdo e direito em simultâneo, envia um 'click' do "
-"botão do meio."
+msgstr "Prima ambos simultaneamente para clicar com o botão do meio"
 
 #: ui/main.qml:133
 #, kde-format
@@ -195,68 +184,66 @@ msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"Ativar esta definição aumenta a latência do clique em 50 ms. O atraso "
+"adicional é necessário para detetar corretamente pressões simultâneas dos "
+"botões esquerdo e direito."
 
 #: ui/main.qml:148
-#, fuzzy, kde-format
-#| msgid "Pointer speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Velocidade do ponteiro:"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
-msgstr "Aceleração do cursor:"
+msgstr "Enable pointer acceleration"
 
 #: ui/main.qml:241
-#, fuzzy, kde-format
-#| msgid "Cursor travel distance depends on the mouse movement speed."
+#, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
-"A distância de percurso do cursor depende da velocidade do movimento do dedo."
+"Quando ativada, a distância percorrida pelo ponteiro aumenta com a "
+"velocidade do movimento."
 
 #: ui/main.qml:254
-#, fuzzy, kde-format
-#| msgid "Scrolling speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
-msgstr "Velocidade do deslocamento:"
+msgstr "Velocidade de deslocamento:"
 
 #: ui/main.qml:304
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
-msgstr "Mais devagar"
+msgstr "Mais lento"
 
 #: ui/main.qml:313
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
-msgstr "Mais depressa"
+msgstr "Mais rápido"
 
 #: ui/main.qml:321
-#, fuzzy, kde-format
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "Deslocamento:"
 
 #: ui/main.qml:322
-#, fuzzy, kde-format
-#| msgid "Invert scroll direction"
+#, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction"
-msgstr "Inverter a direcção do deslocamento"
+msgstr "Inverter direção do deslocamento"
 
 #: ui/main.qml:339
 #, kde-format
 msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
-msgstr ""
+msgstr "Mantenha premido o botão do meio e mova o rato para deslocar"
 
 #: ui/main.qml:351
 #, kde-format
@@ -267,6 +254,10 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"Isto interferirá com aplicações que utilizem o arrastar com o botão do meio, "
+"como alguns editores de imagem, visualizadores de documentos ou jogos. Pode "
+"ser utilizado em qualquer dispositivo, mas destina-se sobretudo a substituir "
+"rodas de deslocamento em dispositivos que não as tenham."
 
 #~ msgid "Device enabled"
 #~ msgstr "Dispositivo activo"

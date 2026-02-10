@@ -1,52 +1,50 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2026 César A. P. Cláudio <cesarapclaudio@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmqtquicksettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2018-04-24 11:10+0100\n"
-"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
-"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"PO-Revision-Date: 2026-02-09 03:31+0000\n"
+"Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
+"Language-Team: pt\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-POFile-SpellExtra: Open QtQuick Edmundson\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "José Nuno Pires"
+msgstr "César A. P. Cláudio"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "zepires@gmail.com"
+msgstr "cesarapclaudio@gmail.com"
 
 #. i18n: ectx: property (text), widget (KMessageWidget, kmessagewidget)
 #: kcmqtquicksettingswidget.ui:23
-#, fuzzy, kde-format
-#| msgid ""
-#| "These settings adjust the QtQuick settings used by Plasma. Only adjust if "
-#| "you know what you are doing."
+#, kde-format
 msgid ""
 "These settings adjust the QtQuick settings used by Plasma. Modifying these "
 "settings can break your desktop. Only adjust these settings if you know what "
 "you are doing."
 msgstr ""
-"Esta configuração ajusta as definições do QtQuick usado pelo Plasma. Ajuste "
-"apenas se souber o que está a fazer."
+"Estas definições ajustam as configurações do QtQuick utilizadas pelo Plasma. "
+"Modificar estas definições pode danificar o seu ambiente de trabalho. Ajuste-"
+"as apenas se souber o que está a fazer."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcmqtquicksettingswidget.ui:41
 #, kde-format
 msgid "Rendering Backend:"
-msgstr "Infra-Estrutura de Desenho:"
+msgstr "Infraestrutura de renderização:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
@@ -65,25 +63,25 @@ msgstr "Open GL"
 #: kcmqtquicksettingswidget.ui:59
 #, kde-format
 msgid "Software"
-msgstr "Aplicação"
+msgstr "Software"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #: kcmqtquicksettingswidget.ui:64
 #, kde-format
 msgid "Vulkan"
-msgstr ""
+msgstr "Vulkan"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcmqtquicksettingswidget.ui:72
 #, kde-format
 msgid "GL Core Profile:"
-msgstr "Perfil Básico do GL:"
+msgstr "Perfil Principal do GL:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcmqtquicksettingswidget.ui:79
 #, kde-format
 msgid "Render Loop:"
-msgstr "Ciclo de Desenho:"
+msgstr "Ciclo de renderização:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
 #: kcmqtquicksettingswidget.ui:92
@@ -95,13 +93,13 @@ msgstr "Básico"
 #: kcmqtquicksettingswidget.ui:97
 #, kde-format
 msgid "Threaded"
-msgstr "Multi-tarefa"
+msgstr "Com threads"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ForceGlCoreProfile)
 #: kcmqtquicksettingswidget.ui:105
 #, kde-format
 msgid "Force"
-msgstr "Obrigar"
+msgstr "Forçar"
 
 #~ msgid "Plasma QtQuick Settings"
 #~ msgstr "Configuração do QtQuick do Plasma"

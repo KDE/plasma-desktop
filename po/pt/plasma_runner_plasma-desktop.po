@@ -1,29 +1,31 @@
+# SPDX-FileCopyrightText: 2026 César A. P. Cláudio <cesarapclaudio@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_plasma-desktop_shell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2012-01-29 22:48+0000\n"
-"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
-"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"PO-Revision-Date: 2026-02-09 22:44+0000\n"
+"Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
+"Language-Team: pt\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-SpellExtra: KWin\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: plasma-desktop-runner.cpp:24
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "desktop console"
-msgstr "consola do ecrã"
+msgstr "consola do ambiente de trabalho"
 
 #: plasma-desktop-runner.cpp:25
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "wm console"
-msgstr "consola do gestor"
+msgstr "consola do gestor de janelas"
 
 #: plasma-desktop-runner.cpp:28 plasma-desktop-runner.cpp:30
 #, kde-format
@@ -31,34 +33,34 @@ msgid ""
 "Opens the Plasma desktop interactive console with a file path to a script on "
 "disk."
 msgstr ""
-"Abre a consola interactiva do ambiente de trabalho Plasma com a localização "
-"de um programa no disco."
+"Abre a consola interativa do ambiente de trabalho Plasma com o caminho para "
+"um programa no disco."
 
 #: plasma-desktop-runner.cpp:29
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "desktop console :q:"
-msgstr "consola do ecrã :q:"
+msgstr "consola do ambiente de trabalho :q:"
 
 #: plasma-desktop-runner.cpp:31 plasma-desktop-runner.cpp:32
 #, kde-format
 msgid ""
 "Opens the KWin interactive console with a file path to a script on disk."
 msgstr ""
-"Abre a consola interactiva do KWin com a localização de um programa no disco."
+"Abre a consola interativa do KWin com o caminho para um programa no disco."
 
 #: plasma-desktop-runner.cpp:32
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "wm console :q:"
-msgstr "consola do gestor :q:"
+msgstr "consola do gestor de janelas :q:"
 
 #: plasma-desktop-runner.cpp:42
 #, kde-format
 msgid "Open Plasma desktop interactive console"
-msgstr "Abrir a consola interactiva do ambiente de trabalho Plasma"
+msgstr "Abrir consola interativa do ambiente de trabalho Plasma"
 
 #: plasma-desktop-runner.cpp:51
 #, kde-format
 msgid "Open KWin interactive console"
-msgstr "Abrir a consola interactiva do KWin"
+msgstr "Abrir consola interativa do KWin"

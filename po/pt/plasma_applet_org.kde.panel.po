@@ -1,56 +1,52 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2026 César A. P. Cláudio <cesarapclaudio@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-29 00:45+0000\n"
-"PO-Revision-Date: 2022-05-16 14:29+0100\n"
-"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
-"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"PO-Revision-Date: 2026-02-09 23:06+0000\n"
+"Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
+"Language-Team: pt\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: ConfigOverlay.qml:333
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:inmenu removes widget"
 msgid "Remove"
 msgstr "Remover"
 
 #: ConfigOverlay.qml:343
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:inmenu opens widget config dialog"
 msgid "Configure…"
 msgstr "Configurar…"
 
 #: ConfigOverlay.qml:354
-#, fuzzy, kde-format
-#| msgid "Show Alternatives…"
+#, kde-format
 msgctxt "@action:inmenu opens widget alternatives explorer"
 msgid "Show Alternatives…"
-msgstr "Mostrar as Alternativas…"
+msgstr "Mostrar alternativas…"
 
 #: ConfigOverlay.qml:373
-#, fuzzy, kde-format
-#| msgid "Spacer width"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Spacer width"
-msgstr "Largura do intervalo"
+msgstr "Largura do espaçador"
 
 #: ConfigOverlay.qml:396
 #, kde-format
 msgctxt ""
 "@option:check Whether to allow a spacer widget to fill available space"
 msgid "Flexible size"
-msgstr ""
+msgstr "Tamanho flexível"
 
 #: main.qml:462
 #, kde-format
@@ -58,10 +54,10 @@ msgctxt ""
 "@info:whatsthis Accessible description for entering Panel edit mode click "
 "area"
 msgid "Open Panel configuration ui"
-msgstr ""
+msgstr "Abrir interface de configuração do Painel"
 
 #: main.qml:469
 #, kde-format
 msgctxt "@action:button opens widget explorer"
 msgid "Add Widgets…"
-msgstr ""
+msgstr "Adicionar widgets..."

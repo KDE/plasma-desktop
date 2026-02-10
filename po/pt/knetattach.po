@@ -1,27 +1,29 @@
+# SPDX-FileCopyrightText: 2026 César A. P. Cláudio <cesarapclaudio@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kio_remote\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2014-10-23 10:07+0100\n"
-"Last-Translator: Pedro Morais <morais@kde.org>\n"
-"Language-Team: pt <kde-i18n-pt@kde.org>\n"
+"PO-Revision-Date: 2026-02-09 03:39+0000\n"
+"Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
+"Language-Team: pt\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-POFile-SpellExtra: webdav Secure Staikos\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "José Nuno Pires"
+msgstr "César A. P. Cláudio, José Nuno Pires"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "zepires@gmail.com"
+msgstr "cesarapclaudio@gmail.com"
 
 #: knetattach.cpp:78
 #, kde-format
@@ -29,9 +31,9 @@ msgid ""
 "Enter a name for this <i>WebFolder</i> as well as a server address, port and "
 "folder path to use and press the <b>Save & Connect</b> button."
 msgstr ""
-"Indique o nome para esta <i>Pasta Web</i> tal como o endereço do servidor, "
-"porto e localização da pasta a utilizar e carregue no botão <b>Gravar e "
-"Ligar</b>.Próximo."
+"Introduza um nome para esta <i>Pasta Web</i>, bem como um endereço de "
+"servidor, porta e caminho da pasta a utilizar, e prima o botão <b>Guardar e "
+"Ligar</b>."
 
 #: knetattach.cpp:81
 #, kde-format
@@ -40,9 +42,9 @@ msgid ""
 "address, port and folder path to use and press the <b>Save & Connect</b> "
 "button."
 msgstr ""
-"Indique o nome para esta <i>ligação por Secure Shell</i> tal como o endereço "
-"do servidor, porto e localização da pasta a utilizar e carregue no botão "
-"<b>Gravar e Ligar</b>."
+"Introduza um nome para esta <i>Ligação Secure Shell</i>, bem como um "
+"endereço de servidor, porta e caminho da pasta a utilizar, e prima o botão "
+"<b>Guardar e Ligar</b>."
 
 #: knetattach.cpp:85
 #, kde-format
@@ -51,9 +53,9 @@ msgid ""
 "server address and folder path to use and press the <b>Save & Connect</b> "
 "button."
 msgstr ""
-"Indique o nome para esta <i>ligação por FTP</i> tal como o endereço do "
-"servidor e localização da pasta a utilizar e carregue no botão <b>Gravar e "
-"Ligar</b>."
+"Introduza um nome para esta <i>Ligação File Transfer Protocol</i>, bem como "
+"um endereço de servidor e caminho da pasta a utilizar, e prima o botão "
+"<b>Guardar e Ligar</b>."
 
 #: knetattach.cpp:89
 #, kde-format
@@ -62,21 +64,21 @@ msgid ""
 "server address and folder path to use and press the <b>Save & Connect</b> "
 "button."
 msgstr ""
-"Indique o nome para esta <i>unidade de rede do Microsoft Windows</i> tal "
-"como o endereço do servidor, porto e localização da pasta a utilizar e "
-"carregue no botão <b>Gravar e Ligar</b>."
+"Introduza um nome para esta <i>Unidade de rede Microsoft Windows</i>, bem "
+"como um endereço de servidor e caminho da pasta a utilizar, e prima o botão "
+"<b>Guardar e Ligar</b>."
 
 #: knetattach.cpp:205
 #, kde-format
 msgid "Unable to connect to server.  Please check your settings and try again."
 msgstr ""
-"Não foi possível ligar ao servidor.  Verifique as suas opções e tente "
+"Não foi possível ligar ao servidor. Verifique as definições e tente "
 "novamente."
 
 #: knetattach.cpp:333
 #, kde-format
 msgid "Save && C&onnect"
-msgstr "Gravar e L&igar"
+msgstr "Guardar e L&igar"
 
 #: knetattach.cpp:335
 #, kde-format
@@ -87,13 +89,13 @@ msgstr "L&igar"
 #: knetattach.ui:14
 #, kde-format
 msgid "Network Folder Wizard"
-msgstr "Assistente de Pastas de Rede"
+msgstr "Assistente de Pasta de Rede"
 
 #. i18n: ectx: property (title), widget (QWizardPage, _folderType)
 #: knetattach.ui:18
 #, kde-format
 msgid "Add Network Folder"
-msgstr "Adicionar uma Pasta de Rede"
+msgstr "Adicionar Pasta de Rede"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #: knetattach.ui:24
@@ -102,8 +104,8 @@ msgid ""
 "Select the type of network folder you wish to connect to and press the Next "
 "button."
 msgstr ""
-"Escolha o tipo de pasta de rede a que se deseja ligar e carregue no botão "
-"Próximo."
+"Selecione o tipo de pasta de rede à qual pretende ligar-se e prima o botão "
+"Seguinte."
 
 #. i18n: ectx: property (text), widget (QRadioButton, _recent)
 #: knetattach.ui:65
@@ -121,7 +123,7 @@ msgstr "Pasta &Web (webdav)"
 #: knetattach.ui:82
 #, kde-format
 msgid "&Secure shell (ssh)"
-msgstr "'&Secure shell' (ssh)"
+msgstr "&Secure shell (ssh)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, _ftp)
 #: knetattach.ui:111
@@ -163,7 +165,7 @@ msgstr "Se&rvidor:"
 #: knetattach.ui:248
 #, kde-format
 msgid "&Port:"
-msgstr "&Porto:"
+msgstr "&Porta:"
 
 #. i18n: ectx: property (text), widget (QLabel, _protocol)
 #: knetattach.ui:283
@@ -193,7 +195,7 @@ msgstr "Criar um ícon&e para esta pasta remota"
 #: knetattach.ui:361
 #, kde-format
 msgid "&Use encryption"
-msgstr "&Usar encriptação"
+msgstr "&Utilizar encriptação"
 
 #: main.cpp:21 main.cpp:23
 #, kde-format
@@ -213,7 +215,7 @@ msgstr "George Staikos"
 #: main.cpp:28
 #, kde-format
 msgid "Primary author and maintainer"
-msgstr "Autor e manutenção"
+msgstr "Autor principal e responsável pela manutenção"
 
 #~ msgid ""
 #~ "Enter a name for this <i>%1</i> as well as the server address, port and "

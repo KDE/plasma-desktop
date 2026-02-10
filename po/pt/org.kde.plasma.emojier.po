@@ -1,22 +1,24 @@
+# SPDX-FileCopyrightText: 2026 César A. P. Cláudio <cesarapclaudio@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-28 00:46+0000\n"
-"PO-Revision-Date: 2023-02-15 15:12+0000\n"
-"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
-"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"PO-Revision-Date: 2026-02-09 20:56+0000\n"
+"Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
+"Language-Team: pt\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-POFile-SpellExtra: Gonzalez Pol Emojis Aleix emojis\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: app/emojier.cpp:43 app/emojier.cpp:45
 #, kde-format
 msgid "Emoji Selector"
-msgstr "Selector de Emojis"
+msgstr "Painel de Emojis"
 
 #: app/emojier.cpp:47
 #, kde-format
@@ -27,13 +29,13 @@ msgstr "(C) 2019 Aleix Pol i Gonzalez"
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "José Nuno Pires"
+msgstr "César A. P. Cláudio"
 
 #: app/emojier.cpp:49
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "zepires@gmail.com"
+msgstr "cesarapclaudio@gmail.com"
 
 #: app/emojier.cpp:58
 #, kde-format
@@ -41,21 +43,19 @@ msgid "Replace an existing instance"
 msgstr "Substituir uma instância existente"
 
 #: app/ui/CategoryPage.qml:112
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:button clear emoji history"
 msgid "Clear History"
-msgstr "Limpar o Histórico"
+msgstr "Limpar histórico"
 
 #: app/ui/CategoryPage.qml:124
 #, kde-format
 msgctxt "@action:button Button to open a menu that lets you choose a skin tone"
 msgid "Skin tone:"
-msgstr ""
+msgstr "Tom de pele"
 
 #: app/ui/CategoryPage.qml:135 app/ui/Emojier.qml:73
-#, fuzzy, kde-format
-#| msgid "All"
+#, kde-format
 msgctxt "@title:page All emojis"
 msgid "All"
 msgstr "Tudo"
@@ -64,95 +64,94 @@ msgstr "Tudo"
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐️ Neutral"
-msgstr ""
+msgstr "🖐️ Neutro"
 
 #: app/ui/CategoryPage.qml:190
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Neutral"
-msgstr ""
+msgstr "Neutro"
 
 #: app/ui/CategoryPage.qml:198
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏻 Light"
-msgstr ""
+msgstr "🖐🏻 Claro"
 
 #: app/ui/CategoryPage.qml:199
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Light"
-msgstr ""
+msgstr "Claro"
 
 #: app/ui/CategoryPage.qml:207
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏼 Medium Light"
-msgstr ""
+msgstr "🖐🏼 Médio claro"
 
 #: app/ui/CategoryPage.qml:208
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium Light"
-msgstr ""
+msgstr "Médio claro"
 
 #: app/ui/CategoryPage.qml:216
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏽 Medium"
-msgstr ""
+msgstr "🖐🏽 Médio"
 
 #: app/ui/CategoryPage.qml:217
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium"
-msgstr ""
+msgstr "Médio"
 
 #: app/ui/CategoryPage.qml:225
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏾 Medium Dark"
-msgstr ""
+msgstr "🖐🏾 Médio escuro"
 
 #: app/ui/CategoryPage.qml:226
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium Dark"
-msgstr ""
+msgstr "Médio escuro"
 
 #: app/ui/CategoryPage.qml:234
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏿 Dark"
-msgstr ""
+msgstr "🖐🏿 Escuro"
 
 #: app/ui/CategoryPage.qml:235
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Dark"
-msgstr ""
+msgstr "Escuro"
 
 #: app/ui/CategoryPage.qml:247
 #, kde-format
 msgctxt "@title:window A two-tone skin variant can be selected here"
 msgid "Select Variant"
-msgstr ""
+msgstr "Selecionar variante"
 
 #: app/ui/CategoryPage.qml:295
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Character"
-msgstr "Copiar o Carácter"
+msgstr "Copiar carácter"
 
 #: app/ui/CategoryPage.qml:303
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Description"
-msgstr "Copiar a Descrição"
+msgstr "Copiar descrição"
 
 #: app/ui/CategoryPage.qml:344
-#, fuzzy, kde-format
-#| msgid "No recent Emojis"
+#, kde-format
 msgctxt "@label placeholder for empty recent emoji list"
 msgid "No recent emojis"
 msgstr "Sem emojis recentes"
@@ -161,7 +160,7 @@ msgstr "Sem emojis recentes"
 #, kde-format
 msgctxt "@label placeholder for no emoji found in category"
 msgid "No matching emoji found"
-msgstr ""
+msgstr "Nenhum emoji correspondente encontrado"
 
 #: app/ui/CategoryPage.qml:392
 #, kde-format
@@ -169,18 +168,16 @@ msgctxt ""
 "@action:button Opens a window where a two-tone skin variant can be selected. "
 "%1 is the emoji's name"
 msgid "Select Variant of \"%1\""
-msgstr ""
+msgstr "Selecionar variante de \"%1\""
 
 #: app/ui/Emojier.qml:44
-#, fuzzy, kde-format
-#| msgid "%1 copied to the clipboard"
+#, kde-format
 msgctxt "@info:status passive notification as action feedback, %1 is an emoji"
 msgid "%1 copied to the clipboard"
-msgstr "O %1 foi copiado para a área de transferência"
+msgstr "%1 copiado para a área de transferência"
 
 #: app/ui/Emojier.qml:58
-#, fuzzy, kde-format
-#| msgid "Recent"
+#, kde-format
 msgctxt "@title page title for Recent Emoji view, and sidebar label for it"
 msgid "Recent"
 msgstr "Recente"
@@ -188,7 +185,7 @@ msgstr "Recente"
 #: emojicategory.cpp:14
 msgctxt "Emoji Category"
 msgid "Smileys and Emotion"
-msgstr "Sorrisos e Emoções"
+msgstr "Emoticons e Emoções"
 
 #: emojicategory.cpp:15
 msgctxt "Emoji Category"
@@ -218,12 +215,12 @@ msgstr "Viagens e Locais"
 #: emojicategory.cpp:20
 msgctxt "Emoji Category"
 msgid "Activities"
-msgstr "Actividades"
+msgstr "Atividades"
 
 #: emojicategory.cpp:21
 msgctxt "Emoji Category"
 msgid "Objects"
-msgstr "Objectos"
+msgstr "Objetos"
 
 #: emojicategory.cpp:22
 msgctxt "Emoji Category"

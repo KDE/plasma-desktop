@@ -1,11 +1,12 @@
+# SPDX-FileCopyrightText: 2026 César A. P. Cláudio <cesarapclaudio@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-05 00:45+0000\n"
-"PO-Revision-Date: 2015-03-05 11:22+0000\n"
-"Last-Translator: Pedro Morais <morais@kde.org>\n"
-"Language-Team: pt <kde-i18n-pt@kde.org>\n"
+"PO-Revision-Date: 2026-02-09 03:12+0000\n"
+"Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
+"Language-Team: pt\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,16 +15,17 @@ msgstr ""
 "X-POFile-SpellExtra: NTP kcmclock Campbell Montecchiani Luca Meyer ntpdate\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-SpellExtra: rdate\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "José Nuno Pires"
+msgstr "César A. P. Cláudio"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "zepires@gmail.com"
+msgstr "cesarapclaudio@gmail.com"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: dateandtime.ui:37
@@ -35,19 +37,19 @@ msgstr "Data e Hora"
 #: dateandtime.ui:61
 #, kde-format
 msgid "Set date and time &automatically"
-msgstr "Configurar a data e hora &automaticamente"
+msgstr "Definir data e hora &automaticamente"
 
 #. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
 #: dateandtime.ui:91
 #, kde-format
 msgid "Here you can change the system date's day of the month, month and year."
-msgstr "Aqui pode alterar o dia, mês e ano do calendário do computador."
+msgstr "Aqui pode alterar o dia do mês, o mês e o ano da data do sistema."
 
 #. i18n: ectx: attribute (title), widget (QQuickWidget, timezoneViewer)
 #: dateandtime.ui:140
 #, kde-format
 msgid "Time Zone"
-msgstr "Fuso-Horário"
+msgstr "Fuso horário"
 
 #: dtime.cpp:70
 #, kde-format
@@ -56,9 +58,9 @@ msgid ""
 "seconds field to change the relevant value, either using the up and down "
 "buttons to the right or by entering a new value."
 msgstr ""
-"Aqui pode alterar a hora do relógio do seu computador. Carregue nas horas, "
-"minutos ou segundos para mudar o seu valor, utilizando os botões mais e "
-"menos ou inserindo um novo valor."
+"Aqui pode alterar a hora do sistema. Clique no campo das horas, minutos ou "
+"segundos para alterar o valor respetivo, quer utilizando os botões de "
+"aumento e diminuição à direita, quer introduzindo um novo valor."
 
 #: dtime.cpp:193
 #, kde-format
@@ -70,27 +72,27 @@ msgid ""
 "feel the system time should be corrected, please contact your system "
 "administrator."
 msgstr ""
-"<h1>Data e Hora</h1> Com este módulo o utilizador pode alterar a data e hora "
-"do seu computador. Como esta configuração não o afecta somente a si, o "
-"utilizador, mas também todo o resto do computador, só a pode alterar se "
-"tiver arrancado a Configuração do Sistema como 'root'. Se não tiver a senha "
-"de 'root', mas acha que a hora do computador precisa de ser corrigida, por "
-"favor contacte o seu administrador de sistemas."
+"<h1>Data e Hora</h1> Este módulo das definições do sistema permite definir a "
+"data e a hora do sistema. Como estas definições afetam não só o utilizador, "
+"mas todo o sistema, só é possível alterá-las ao iniciar as Definições de "
+"Sistema como 'root'. Se não tiver a palavra-passe de 'root', mas considerar "
+"que a hora do sistema deve ser corrigida, contacte o administrador do "
+"sistema."
 
 #: main.cpp:60
 #, kde-format
 msgid "Unable to change NTP settings"
-msgstr "Não é possível mudar a configuração do NTP"
+msgstr "Não é possível alterar as definições NTP"
 
 #: main.cpp:73
 #, kde-format
 msgid "Unable to set current time"
-msgstr "Não é possível ajustar a hora actual"
+msgstr "Não é possível definir a hora atual"
 
 #: main.cpp:85
 #, kde-format
 msgid "Unable to set timezone"
-msgstr "Não é possível mudar o fuso-horário"
+msgstr "Não é possível definir o fuso horário"
 
 #~ msgid "&Time server:"
 #~ msgstr "&Servidor horário:"
