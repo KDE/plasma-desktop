@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2026-01-03 15:44+0000\n"
+"PO-Revision-Date: 2026-02-05 16:28+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -213,13 +213,13 @@ msgstr "Buton creion 1"
 #, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
-msgstr ""
+msgstr "Comportă ca rotița șoricelului"
 
 #: ui/ActionDialog.qml:199
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
-msgstr ""
+msgstr "Nu fă nimic"
 
 #: ui/ActionDialog.qml:219
 #, kde-format
@@ -228,6 +228,8 @@ msgid ""
 "This tablet button is forwarded to the focused application, which can decide "
 "how to handle it."
 msgstr ""
+"Acest buton de planșetă e înaintat spre aplicația focalizată, care poate "
+"decide cum să-l manipuleze."
 
 #: ui/ActionDialog.qml:248
 #, kde-format
@@ -235,7 +237,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "upwards"
 msgid "Up:"
-msgstr ""
+msgstr "Sus:"
 
 #: ui/ActionDialog.qml:261
 #, kde-format
@@ -243,95 +245,92 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "downwards"
 msgid "Down:"
-msgstr ""
+msgstr "Jos:"
 
 #: ui/ActionDialog.qml:274
 #, kde-format
 msgctxt ""
 "@label:slider Speed for how often this dial/ring should emit key events"
 msgid "Speed:"
-msgstr ""
+msgstr "Viteză:"
 
 #: ui/ActionDialog.qml:289
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
-msgstr ""
+msgstr "Clic stâng"
 
 #: ui/ActionDialog.qml:290
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
-msgstr ""
+msgstr "Clic mijlociu"
 
 #: ui/ActionDialog.qml:291
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
-msgstr ""
+msgstr "Clic drept"
 
 #: ui/ActionDialog.qml:318
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: ui/ActionDialog.qml:325
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: ui/ActionDialog.qml:332
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: ui/ActionDialog.qml:339
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: ui/ActionDialog.qml:355
-#, fuzzy, kde-format
-#| msgid "Tool Button 1"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr "Buton unealtă 1"
+msgstr "Buton 1"
 
 #: ui/ActionDialog.qml:356
-#, fuzzy, kde-format
-#| msgid "Pen Button 2"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr "Buton creion 2"
+msgstr "Buton 2"
 
 #: ui/ActionDialog.qml:357
-#, fuzzy, kde-format
-#| msgid "Pen Button 3"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr "Buton creion 3"
+msgstr "Buton 3"
 
 #: ui/ActionDialog.qml:366
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
-msgstr ""
+msgstr "Se va comporta ca rotița unui șoricel."
 
 #: ui/ActionDialog.qml:375
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
-msgstr ""
+msgstr "Acest buton e dezactivat și nu va face nimic."
 
 #: ui/Calibration.qml:30
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr ""
+msgstr "Calibrarea creionului"
 
 #: ui/Calibration.qml:98
 #, kde-kuit-format
@@ -341,6 +340,9 @@ msgid ""
 "revert to default calibration in %1 seconds unless further action is taken.</"
 "b>"
 msgstr ""
+"Tapați țintele din nou pentru a confirma noua calibrare.<nl/><nl/><b>Se va "
+"reveni la calibrarea implicită în %1 secunde dacă nu întreprindeți nicio "
+"acțiune.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -349,42 +351,44 @@ msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
 msgstr ""
+"Calibrarea e încheiată și salvată.<nl/><nl/>Continuați să perfecționați "
+"calibrarea su închideți fereastra."
 
 #: ui/Calibration.qml:105
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "Tapați centrul fiecărei ținte."
 
 #: ui/Calibration.qml:112
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr ""
+msgstr "Perfecționează calibrare existentă"
 
 #: ui/Calibration.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "Reinițializează și încearcă din nou"
 
 #: ui/Calibration.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr ""
+msgstr "Calibrează de la zero"
 
 #: ui/Calibration.qml:135
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Închide"
 
 #: ui/Calibration.qml:135
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Renunță"
 
 #: ui/DisplayTab.qml:46
 #, kde-format
@@ -393,8 +397,7 @@ msgid "Map to screen:"
 msgstr ""
 
 #: ui/DisplayTab.qml:73
-#, fuzzy, kde-format
-#| msgid "Orientation:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Orientation:"
 msgstr "Orientare:"
@@ -403,7 +406,7 @@ msgstr "Orientare:"
 #, kde-format
 msgctxt "@label substitute for unavailable orientation change"
 msgid "Not Applicable"
-msgstr ""
+msgstr "Indisponibilă"
 
 #: ui/DisplayTab.qml:93
 #, kde-format
@@ -424,47 +427,40 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/ExternalScreenMapping.qml:190
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgctxt "@action:button"
 msgid "Resize the screen area"
-msgstr "Redimensionează zona tabletei"
+msgstr "Redimensionează zona ecranului"
 
 #: ui/ExternalScreenMapping.qml:267
-#, fuzzy, kde-format
-#| msgctxt "tablet area position - size"
-#| msgid "%1,%2 - %3×%4"
+#, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr "%1,%2 - %3×%4"
+msgstr "%1%,%2% - %3%×%4%"
 
 #: ui/ExternalScreenMapping.qml:301
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgctxt "@action:button"
 msgid "Resize the tablet area"
 msgstr "Redimensionează zona tabletei"
 
 #: ui/main.qml:38
-#, fuzzy, kde-format
-#| msgid "No drawing tablets found"
+#, kde-format
 msgctxt "@info placeholdermessage text"
 msgid "No drawing tablets found"
 msgstr "Nicio planșetă grafică găsită"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "Connect a drawing tablet"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect a drawing tablet"
 msgstr "Conectați o planșetă grafică"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Tablet"
+#, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr "Tabletă"
+msgstr "Testează planșeta…"
 
 #: ui/main.qml:87
 #, kde-format
@@ -485,21 +481,19 @@ msgstr "Dispozitiv:"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "Afișaj"
 
 #: ui/main.qml:187
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "Creion"
 
 #: ui/main.qml:199
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The pad we are configuring"
-#| msgid "Pad:"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr "Planșetă"
+msgstr "Zonă cu butoane"
 
 #: ui/MissingPadTab.qml:15
 #, fuzzy, kde-format
@@ -564,8 +558,7 @@ msgid "pad button %1"
 msgstr "Buton %1:"
 
 #: ui/StylusTab.qml:222
-#, fuzzy, kde-format
-#| msgid "Left-handed mode:"
+#, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Left-handed mode:"
 msgstr "Regim pentru stângaci:"
@@ -574,7 +567,7 @@ msgstr "Regim pentru stângaci:"
 #, kde-format
 msgctxt "@option:check Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "Activează"
 
 #: ui/StylusTab.qml:234
 #, kde-kuit-format
@@ -590,7 +583,7 @@ msgstr ""
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
-msgstr ""
+msgstr "Regim:"
 
 #: ui/StylusTab.qml:254
 #, kde-format
@@ -598,7 +591,7 @@ msgctxt ""
 "@option:radio Pen mode, where the point on the screen is always where you "
 "touch the stylus"
 msgid "Pen"
-msgstr ""
+msgstr "Creion"
 
 #: ui/StylusTab.qml:259
 #, kde-format
@@ -611,7 +604,7 @@ msgstr ""
 msgctxt ""
 "@option:radio Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
-msgstr ""
+msgstr "Șoricel"
 
 #: ui/StylusTab.qml:285
 #, kde-format
@@ -625,31 +618,31 @@ msgstr ""
 #, kde-format
 msgctxt "@label prefix for pen pressure curve config"
 msgid "Pen Pressure:"
-msgstr ""
+msgstr "Presiunea creionului:"
 
 #: ui/StylusTab.qml:415
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:423
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:434
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: ui/StylusTab.qml:442
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
-msgstr ""
+msgstr "0%"
 
 #: ui/StylusTab.qml:446
 #, kde-format
@@ -683,19 +676,19 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
-msgstr ""
+msgstr "Calibrează"
 
 #: ui/StylusTab.qml:494
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
-msgstr ""
+msgstr "Calibrarea nu este susținută"
 
 #: ui/StylusTab.qml:535
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr ""
+msgstr "Reinițializează calibrarea personalizată"
 
 #: ui/StylusTab.qml:550
 #, kde-format
@@ -704,13 +697,14 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"Ați calibrat manual această planșetă. Dacă nu mai lucrează corect, încercați "
+"s-o reinițializați mai întâi."
 
 #: ui/Tester.qml:25
-#, fuzzy, kde-format
-#| msgid "Tablet"
+#, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr "Tabletă"
+msgstr "Testarea planșetei"
 
 #: ui/Tester.qml:48
 #, kde-format
@@ -772,7 +766,7 @@ msgstr ""
 #, kde-format
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
-msgstr ""
+msgstr "Curăță"
 
 #, fuzzy
 #~| msgid "Pen Button 2"
