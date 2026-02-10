@@ -1,12 +1,12 @@
 # Traducerea kcmaccess.po în Română
 # Copyright (C) 2005, 2008 Free Software Foundation, Inc.
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2020, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2008, 2009, 2020, 2021, 2022, 2023, 2024, 2026 Sergiu Bivol <sergiu@cip.md>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2024-01-07 18:15+0000\n"
+"PO-Revision-Date: 2026-01-29 01:02+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: kcmaccess.cpp:116
 #, kde-format
@@ -116,13 +116,13 @@ msgstr "Inversează culorile sistemului la clopoțel"
 #: kcmaccessibilitybell.kcfg:28
 #, kde-format
 msgid "Color of the Visible Bell"
-msgstr "Culoarea clopoțelului vizibil"
+msgstr "Culoarea clopoțelului vizual"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
 #, kde-format
 msgid "Duration of the Visible Bell"
-msgstr "Durata clopoțelului vizibil"
+msgstr "Durata clopoțelului vizual"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -322,7 +322,7 @@ msgstr "Caută fișier audio pentru clopoțelul de sistem"
 #: package/contents/ui/Bell.qml:77
 #, kde-format
 msgid "Button search audio file"
-msgstr "Buton, caută fișier audio"
+msgstr "Buton caută fișier audio"
 
 #: package/contents/ui/Bell.qml:93
 #, kde-format
@@ -421,7 +421,7 @@ msgstr "Activează"
 #: package/contents/ui/KeyboardFilters.qml:104
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
-msgstr "Ignoră apăsările rapide și repetate ale aceleeași taste"
+msgstr "Ignoră apăsările rapide și repetate ale aceleiași taste"
 
 #: package/contents/ui/KeyboardFilters.qml:119
 #, kde-format
