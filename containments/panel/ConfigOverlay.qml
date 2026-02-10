@@ -38,6 +38,7 @@ MouseArea {
     property int draggedItemIndex
     property real startDragOffset: 0.0
     property bool dragAndDropping: false
+    property point __mouseDownPos
 
     property AppletContainer __previousApplet
 
@@ -59,39 +60,65 @@ MouseArea {
 
     onPositionChanged: mouse => {
         if (pressed) {
+            // We start a drag when the Manhattan length of the mouse travel is more than startDragDistance
+            if (!configurationArea.dragAndDropping &&
+                configurationArea.currentApplet &&
+                Math.abs(mouse.x - __mouseDownPos.x) + Math.abs(mouse.y - __mouseDownPos.y)  > Qt.styleHints.startDragDistance) {
+                tooltip.visible = false;
+                // We set the current applet being dragged as a property of placeHolder
+                // to be able to read its properties from the LayoutManager
+                const oldCurrentApplet = currentApplet;
+                appletsModel.insert(configurationArea.currentApplet.index, {applet: placeHolder});
+                placeHolder.parent.inThickArea = configurationArea.currentApplet.inThickArea
+                currentApplet = appletContainerComponent.createObject(dropArea, {applet: configurationArea.currentApplet.applet, x: configurationArea.currentApplet.x,
+                                                                            y: configurationArea.currentApplet.y, z: 900,
+                                                                            width: configurationArea.currentApplet.width, height: configurationArea.currentApplet.height, index: -1})
+                placeHolder.parent.dragging = currentApplet
+                configurationArea.draggedItemIndex = oldCurrentApplet.index
 
-            // If the object has been dragged outside of the panel and there's
-            // a different containment there, we remove it from the panel
-            // containment and add it to the new one.
-            var padding = Kirigami.Units.gridUnit * 5;
-            if (currentApplet && (mouse.x < -padding || mouse.y < -padding ||
-                mouse.x > width + padding || mouse.y > height + padding)) {
-                configurationArea.currentApplet.grabToImage(result => {
-                    configurationArea.Drag.imageSource = result.url
-                    appletsModel.remove((placeHolder.parent as AppletContainer).index)
-                    currentApplet.visible = false
-                    configurationArea.Drag.active = true
-                })
-            }
-            if (Plasmoid.formFactor === PlasmaCore.Types.Vertical && currentApplet) {
-                currentApplet.y = mouse.y - startDragOffset;
-            } else {
-                currentApplet.x = mouse.x - startDragOffset;
-            }
+                appletsModel.remove(oldCurrentApplet.index)
+                configurationArea.dragAndDropping = true
 
-            const item = configurationArea.layoutManager.childAtCoordinates(mouse.x, mouse.y);
-
-            if (item && item.applet !== placeHolder) {
-                var posInItem = mapToItem(item, mouse.x, mouse.y)
-                var pos = configurationArea.isHorizontal ? posInItem.x : posInItem.y
-                var size = configurationArea.isHorizontal ? item.width : item.height
-                if (configurationArea.reverse) {
-                    pos = size - pos
+                if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
+                    startDragOffset = __mouseDownPos.y - currentApplet.y;
+                } else {
+                    startDragOffset = __mouseDownPos.x - currentApplet.x;
                 }
-                if (pos < size / 3) {
-                    configurationArea.layoutManager.move(placeHolder.parent, item.index)
-                } else if (pos > size / 3 * 2) {
-                    configurationArea.layoutManager.move(placeHolder.parent, item.index+1)
+
+            } else if (configurationArea.dragAndDropping) {
+                // If the object has been dragged outside of the panel and there's
+                // a different containment there, we remove it from the panel
+                // containment and add it to the new one.
+                var padding = Kirigami.Units.gridUnit * 5;
+                if (currentApplet && (mouse.x < -padding || mouse.y < -padding ||
+                    mouse.x > width + padding || mouse.y > height + padding)) {
+                    configurationArea.currentApplet.grabToImage(result => {
+                        configurationArea.Drag.imageSource = result.url
+                        appletsModel.remove((placeHolder.parent as AppletContainer).index)
+                        currentApplet.visible = false
+                        configurationArea.Drag.active = true
+                    })
+                }
+                if (Plasmoid.formFactor === PlasmaCore.Types.Vertical && currentApplet) {
+                    currentApplet.y = mouse.y - startDragOffset;
+                } else {
+                    currentApplet.x = mouse.x - startDragOffset;
+                }
+
+                const item = configurationArea.layoutManager.childAtCoordinates(mouse.x, mouse.y);
+
+                if (item && item.applet !== placeHolder) {
+                    var posInItem = mapToItem(item, mouse.x, mouse.y)
+                    var pos = configurationArea.isHorizontal ? posInItem.x : posInItem.y
+                    var size = configurationArea.isHorizontal ? item.width : item.height
+                    if (configurationArea.reverse) {
+                        pos = size - pos
+                    }
+                    if (pos < size / 3) {
+                        configurationArea.layoutManager.move(placeHolder.parent, item.index)
+                    } else if (pos > size / 3 * 2) {
+                        configurationArea.layoutManager.move(placeHolder.parent, item.index+1)
+                    }
                 }
             }
 
@@ -125,35 +152,18 @@ MouseArea {
     }
 
     onPressed: mouse => {
-        // Need to set currentApplet here too, to make touch selection + drag
-        // with with a touchscreen, because there are no entered events in that
-        // case
-        let item = currentLayout.childAt(mouse.x, mouse.y) as AppletContainer;
+        configurationArea.currentApplet = currentLayout.childAt(mouse.x, mouse.y) as AppletContainer;
         // BUG 454095: Don't allow dragging lastSpacer as it's not a real applet
-        if (!item || item == lastSpacer || item == addWidgetsButton) {
-            configurationArea.currentApplet = null
+        if (!configurationArea.currentApplet || configurationArea.currentApplet == lastSpacer || configurationArea.currentApplet == addWidgetsButton) {
+            configurationArea.currentApplet = null;
             return;
         }
+        __mouseDownPos.x = mouse.x;
+        __mouseDownPos.y = mouse.y;
+
         tooltip.raise();
         hideTimer.stop();
-
-        // We set the current applet being dragged as a property of placeHolder
-        // to be able to read its properties from the LayoutManager
-        appletsModel.insert(item.index, {applet: placeHolder});
-        placeHolder.parent.inThickArea = item.inThickArea
-        currentApplet = appletContainerComponent.createObject(dropArea, {applet: item.applet, x: item.x,
-                                                                     y: item.y, z: 900,
-                                                                     width: item.width, height: item.height, index: -1})
-        placeHolder.parent.dragging = currentApplet
-        configurationArea.draggedItemIndex = item.index
-        appletsModel.remove(item.index)
-        configurationArea.dragAndDropping = true
-
-        if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
-            startDragOffset = mouse.y - currentApplet.y;
-        } else {
-            startDragOffset = mouse.x - currentApplet.x;
-        }
+        showTimer.stop();
     }
 
     onReleased: mouse => finishDragOperation()
@@ -161,6 +171,9 @@ MouseArea {
     onCanceled: finishDragOperation()
 
     function finishDragOperation() {
+        if (!configurationArea.dragAndDropping) {
+            return;
+        }
         configurationArea.dragAndDropping = false
         if (!currentApplet) {
             return;
