@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-16 00:45+0000\n"
-"PO-Revision-Date: 2026-02-06 00:44+0000\n"
+"PO-Revision-Date: 2026-02-11 00:14+0000\n"
 "Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
 "Language-Team: pt\n"
 "Language: pt\n"
@@ -169,25 +169,25 @@ msgstr "Se o efeito de Inversão está ativado"
 #: kcmaccessibilitykeyboard.kcfg:9
 #, kde-format
 msgid "Use sticky Keys"
-msgstr "Utilizar Teclas Fixas"
+msgstr "Utilizar Teclas Presas"
 
 #. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:13
 #, kde-format
 msgid "Lock the sticky keys"
-msgstr "Bloquear as Teclas Fixas"
+msgstr "Bloquear as Teclas Presas"
 
 #. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:17
 #, kde-format
 msgid "Turn sticky keys off when two keys are pressed simultaneously"
-msgstr "Desativar as Teclas Fixas ao premir duas teclas simultaneamente"
+msgstr "Desativar as Teclas Presas ao premir duas teclas simultaneamente"
 
 #. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:21
 #, kde-format
 msgid "Beep on a sticky key press"
-msgstr "Emitir sinal sonoro ao premir uma tecla fixa"
+msgstr "Emitir sinal sonoro ao premir uma tecla presa"
 
 #. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:25
@@ -331,7 +331,7 @@ msgstr "Ativar"
 #, kde-format
 msgctxt "@label"
 msgid "Press Shift 5 times to enable Sticky Keys"
-msgstr "Prima a tecla Shift 5 vezes para ativar as Teclas Fixas"
+msgstr "Prima a tecla Shift 5 vezes para ativar as Teclas Presas"
 
 #: ui/ActivationShortcuts.qml:38
 #, kde-format
@@ -345,7 +345,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable sticky and slow keys after:"
-msgstr "Desativar as Teclas Fixas e as Lentas após:"
+msgstr "Desativar as Teclas Presas e as Lentas após:"
 
 #: ui/ActivationShortcuts.qml:71
 #, kde-format
@@ -783,7 +783,7 @@ msgstr "Agitar Ponteiro"
 #, kde-format
 msgctxt "@option:check"
 msgid "Sticky keys:"
-msgstr "Teclas Fixas:"
+msgstr "Teclas Presas:"
 
 #: ui/ModifierKeys.qml:22
 #, kde-format
@@ -807,7 +807,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock sticky keys"
-msgstr "Bloquear Teclas Fixas"
+msgstr "Bloquear Teclas Presas"
 
 #: ui/ModifierKeys.qml:51
 #, kde-format
