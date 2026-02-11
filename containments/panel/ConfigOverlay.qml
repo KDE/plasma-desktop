@@ -415,7 +415,7 @@ MouseArea {
                     id: panelSpacerWidth
                     editable: true
                     Layout.fillWidth: true
-                    focus: !Kirigami.InputMethod.willShowOnActive
+                    focus: !Kirigami.InputMethod.willShowOnActive && visible
                     visible: configurationArea.currentApplet?.applet.Plasmoid.pluginName === "org.kde.plasma.panelspacer"
                         && !configurationArea.currentApplet.applet.Plasmoid.configuration.expanding
                     from: 0
