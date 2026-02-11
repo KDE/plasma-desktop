@@ -26,7 +26,7 @@ KCM.SimpleKCM {
 
         KeySequenceItem {
             id: button
-            Kirigami.FormData.label: i18nc("@action:button set keyboard shortcut for", "Activate widget as if clicked:")
+            Kirigami.FormData.label: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button set keyboard shortcut for", "Activate widget as if clicked:")
             keySequence: Plasmoid.globalShortcut
             patterns: ShortcutPattern.Modifier | ShortcutPattern.ModifierAndKey
             onKeySequenceModified: root.unsavedChanges = keySequence !== Plasmoid.globalShortcut
