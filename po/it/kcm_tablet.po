@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2026-01-10 15:55+0100\n"
+"PO-Revision-Date: 2026-02-07 17:04+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -494,11 +494,10 @@ msgid "Pad"
 msgstr "Tavoletta"
 
 #: ui/MissingPadTab.qml:15
-#, fuzzy, kde-format
-#| msgid "No drawing tablets found"
+#, kde-format
 msgctxt "@info placeholdermessage main text"
 msgid "No pad inputs found"
-msgstr "Non è stata trovata nessuna tavoletta da disegno"
+msgstr "Nessun ingresso della tavoletta trovato"
 
 #: ui/MissingPadTab.qml:16
 #, kde-format
@@ -511,11 +510,10 @@ msgstr ""
 "driver di questo dispositivo è mancante."
 
 #: ui/PadTab.qml:37
-#, fuzzy, kde-format
-#| msgid "Pad ring %1:"
+#, kde-format
 msgctxt "@label for graphics tablet ring config, % is number of ring"
 msgid "Pad ring %1:"
-msgstr "Rotella sensibile al tocco %1:"
+msgstr "Anello %1:"
 
 #: ui/PadTab.qml:60
 #, kde-format
@@ -523,14 +521,13 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "ring/dial 0'"
 msgid "pad ring/dial %1"
-msgstr "rotella sensibile al tocco/dial %1"
+msgstr "anello/rotella %1"
 
 #: ui/PadTab.qml:100
-#, fuzzy, kde-format
-#| msgid "Pad dial %1:"
+#, kde-format
 msgctxt "@label for graphics tablet ring config, % is number of dial"
 msgid "Pad dial %1:"
-msgstr "Rotella sensibile al tocco %1:"
+msgstr "Rotella %1:"
 
 #: ui/PadTab.qml:102
 #, kde-format
@@ -538,7 +535,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad dial %1"
-msgstr "rotella sensibile al tocco %1"
+msgstr "rotella %1"
 
 #: ui/PadTab.qml:138
 #, kde-format
@@ -753,7 +750,7 @@ msgctxt ""
 "A tablet pad's dial has moved, V120 here refers to 'Value 120' which is a "
 "technical term that should be kept as is"
 msgid "Pad dial moved V120=%1"
-msgstr "Rotella sensibile al tocco spostata V120=%1"
+msgstr "Rotella spostata V120=%1"
 
 #: ui/Tester.qml:219
 #, kde-format
