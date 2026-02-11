@@ -312,7 +312,7 @@ PlasmoidItem {
                 required property var model
 
                 readonly property /*WindowModel*/ var tasksModel: model.TasksModel
-                readonly property string desktopId: root.isActivityPager ? tasksModel.activity : tasksModel.virtualDesktop
+                readonly property string desktopId: (root.isActivityPager ? tasksModel?.activity : tasksModel?.virtualDesktop) ?? ""
                 readonly property bool isCurrent: (index === pagerModel.currentPage)
             }
 
