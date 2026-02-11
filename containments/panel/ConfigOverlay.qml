@@ -64,7 +64,6 @@ MouseArea {
             if (!configurationArea.dragAndDropping &&
                 configurationArea.currentApplet &&
                 Math.abs(mouse.x - __mouseDownPos.x) + Math.abs(mouse.y - __mouseDownPos.y)  > Qt.styleHints.startDragDistance) {
-                tooltip.visible = false;
                 // We set the current applet being dragged as a property of placeHolder
                 // to be able to read its properties from the LayoutManager
                 const oldCurrentApplet = currentApplet;
@@ -85,7 +84,7 @@ MouseArea {
                     startDragOffset = __mouseDownPos.x - currentApplet.x;
                 }
 
-            } else if (configurationArea.dragAndDropping) {
+            } else if (configurationArea.dragAndDropping && configurationArea.currentApplet) {
                 // If the object has been dragged outside of the panel and there's
                 // a different containment there, we remove it from the panel
                 // containment and add it to the new one.
@@ -137,7 +136,11 @@ MouseArea {
 
     onEntered: hideTimer.stop();
 
-    onExited: hideTimer.restart()
+    onExited: {
+        if (!tooltip.openedByTap) {
+            hideTimer.restart();
+        }
+    }
 
     onCurrentAppletChanged: {
         if (currentApplet && __previousApplet) {
@@ -147,6 +150,7 @@ MouseArea {
             showTimer.restart();
         } else {
             hideTimer.restart();
+            dragAndDropping = false;
         }
         __previousApplet = currentApplet;
     }
@@ -160,13 +164,18 @@ MouseArea {
         }
         __mouseDownPos.x = mouse.x;
         __mouseDownPos.y = mouse.y;
-
-        tooltip.raise();
-        hideTimer.stop();
-        showTimer.stop();
     }
 
-    onReleased: mouse => finishDragOperation()
+    onReleased: mouse => {
+        if (configurationArea.dragAndDropping) {
+            finishDragOperation();
+        } else {
+            tooltip.openedByTap = true;
+            tooltip.raise();
+            hideTimer.stop();
+            showTimer.stop();
+        }
+    }
 
     onCanceled: finishDragOperation()
 
@@ -274,12 +283,25 @@ MouseArea {
     }
     PlasmaCore.PopupPlasmaWindow {
         id: tooltip
+        property bool openedByTap
         visible: configurationArea.currentApplet && !configurationArea.dragAndDropping && !showTimer.running
         visualParent: configurationArea.currentApplet
         // Try to dodge the ruler, as we can't cover it since it's a layershell surface
         margin: configurationArea.Window.window?.lengthMode === 2 ? Kirigami.Units.gridUnit * 2 : 0
         width: mainItem.implicitWidth + leftPadding + rightPadding
         height: mainItem.implicitHeight + topPadding + bottomPadding
+        onVisibleChanged: {
+            if (visible) {
+                requestActivate();
+            } else {
+                openedByTap = false;
+            }
+        }
+        onActiveChanged: {
+            if (!active && !configurationArea.dragAndDropping) {
+                configurationArea.currentApplet = null;
+            }
+        }
 
         popupDirection: switch (Plasmoid.location) {
             case PlasmaCore.Types.TopEdge:
