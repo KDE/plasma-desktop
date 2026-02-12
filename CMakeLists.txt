@@ -156,6 +156,11 @@ set_package_properties(KF6QQC2DesktopStyle PROPERTIES
 )
 
 if(BUILD_KCM_TABLET)
+    find_package(Canberra)
+    set_package_properties(Canberra PROPERTIES
+        TYPE REQUIRED
+        PURPOSE "Required for building Tablet input KCM"
+    )
     find_package(WaylandProtocols 1.44)
     set_package_properties(WaylandProtocols PROPERTIES
         TYPE REQUIRED
@@ -206,11 +211,6 @@ set_package_properties(X11 PROPERTIES
 if(X11_FOUND)
   set(HAVE_X11 1)
 endif()
-
-find_package(Canberra)
-set_package_properties(Canberra PROPERTIES
-    PURPOSE "Support audible bell in kaccess"
-    TYPE REQUIRED)
 
 find_package(UDev)
 set_package_properties(UDev PROPERTIES
