@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: kcm_splashscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-03 00:48+0000\n"
-"PO-Revision-Date: 2026-02-08 19:21+0000\n"
+"PO-Revision-Date: 2026-02-11 20:40+0000\n"
 "Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
 "Language-Team: pt\n"
 "Language: pt\n"
@@ -17,17 +17,18 @@ msgstr ""
 #: kcm.cpp:162
 #, kde-format
 msgid "None"
-msgstr "Nenhum"
+msgstr "Nenhuma"
 
 #: kcm.cpp:165
 #, kde-format
 msgid "No splash screen will be shown"
-msgstr "O ecrã de arranque não será apresentado"
+msgstr "A animação de início de sessão não será apresentada"
 
 #: kcm.cpp:183
 #, kde-format
 msgid "You cannot delete the currently selected splash screen"
-msgstr "Não é possível eliminar o ecrã de arranque atualmente selecionado"
+msgstr ""
+"Não é possível eliminar a animação de início de sessão atualmente selecionada"
 
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
@@ -39,43 +40,44 @@ msgstr "Para utilização futura"
 #: splashscreensettings.kcfg:16
 #, kde-format
 msgid "Name of the current splash theme"
-msgstr "Nome do tema de ecrã de arranque"
+msgstr "Nome do tema da animação de início de sessão atual"
 
 #: ui/main.qml:30
 #, kde-format
 msgctxt "@action:button"
 msgid "&Get New…"
-msgstr "&Obter novos..."
+msgstr "&Obter novas..."
 
 #: ui/main.qml:50
 #, kde-format
 msgctxt "@info:status"
 msgid "Failed to show the splash screen preview."
-msgstr "Falha ao mostrar a pré-visualização do ecrã de arranque."
+msgstr "Falha ao mostrar a pré-visualização da animação de início de sessão."
 
 #: ui/main.qml:81
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview splash screen"
-msgstr "Pré-visualizar ecrã de arranque"
+msgstr "Pré-visualizar animação de início de sessão"
 
 #: ui/main.qml:88
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove splash screen"
-msgstr "Remover ecrã de arranque"
+msgstr "Remover animação de início de sessão"
 
 #: ui/main.qml:90
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active splash screen"
-msgstr "Não é possível eliminar o ecrã de arranque ativo"
+msgstr "Não é possível eliminar a animação de início de sessão ativa"
 
 #: ui/main.qml:92
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed splash screens"
-msgstr "Não é possível eliminar ecrãs de arranque instalados pelo sistema"
+msgstr ""
+"Não é possível eliminar animações de início de sessão instaladas pelo sistema"
 
 #, fuzzy
 #~| msgid "Uninstall"
