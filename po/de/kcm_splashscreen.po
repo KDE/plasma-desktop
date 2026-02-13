@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kcm_splashscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-03 00:48+0000\n"
-"PO-Revision-Date: 2026-01-10 21:50+0100\n"
+"PO-Revision-Date: 2026-02-08 14:56+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: kcm.cpp:162
 #, kde-format
@@ -57,34 +57,29 @@ msgid "Failed to show the splash screen preview."
 msgstr "Anzeigen der Startbildschirmvorschau fehlgeschlagen."
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Preview Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview splash screen"
 msgstr "Startbildschirmvorschau anzeigen"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Preview Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove splash screen"
-msgstr "Startbildschirmvorschau anzeigen"
+msgstr "Startbildschirm entfernen"
 
 #: ui/main.qml:90
-#, fuzzy, kde-format
-#| msgid "You cannot delete the currently selected splash screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active splash screen"
-msgstr "Sie können den gerade ausgewählten Startbildschirm nicht löschen"
+msgstr "Der aktive Startbildschirm kann nicht gelöscht werden"
 
 #: ui/main.qml:92
-#, fuzzy, kde-format
-#| msgid "You cannot delete the currently selected splash screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed splash screens"
-msgstr "Sie können den gerade ausgewählten Startbildschirm nicht löschen"
+msgstr ""
+"Durch das System installierte Startbildschirme können nicht gelöscht werden"
 
 #~ msgctxt "@action:button"
 #~ msgid "Uninstall"

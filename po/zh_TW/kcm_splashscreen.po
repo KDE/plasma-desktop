@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-03 00:48+0000\n"
-"PO-Revision-Date: 2026-01-09 00:00+0900\n"
+"PO-Revision-Date: 2026-02-12 16:22+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -59,34 +59,28 @@ msgid "Failed to show the splash screen preview."
 msgstr "啟動畫面預覽失敗。"
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Preview Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview splash screen"
 msgstr "預覽啟動畫面"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Preview Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove splash screen"
-msgstr "預覽啟動畫面"
+msgstr "移除啟動畫面"
 
 #: ui/main.qml:90
-#, fuzzy, kde-format
-#| msgid "You cannot delete the currently selected splash screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active splash screen"
-msgstr "您不能刪除目前已選取的啟動畫面"
+msgstr "無法刪除作用中的啟動畫面"
 
 #: ui/main.qml:92
-#, fuzzy, kde-format
-#| msgid "You cannot delete the currently selected splash screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed splash screens"
-msgstr "您不能刪除目前已選取的啟動畫面"
+msgstr "無法刪除系統安裝的啟動畫面"
 
 #~ msgctxt "@action:button"
 #~ msgid "Uninstall"
