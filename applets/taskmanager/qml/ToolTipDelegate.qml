@@ -90,9 +90,10 @@ Loader {
             readonly property real maximumHeight: Screen.desktopAvailableWidth - 2 * Kirigami.Units.smallSpacing
 
             implicitWidth: {
-                // when vertical, all delegates have the same fixed width
+                // when vertical, all delegates have the same fixed width, but with an extra
+                // gridUnit when thumbnails are disabled to match the default tooltip margins
                 let listContentWidth = groupToolTipListView.orientation == ListView.Vertical
-                   ? toolTipDelegate.tooltipInstanceMaximumWidth
+                   ? toolTipDelegate.tooltipInstanceMaximumWidth + (toolTipDelegate.isWin && Plasmoid.configuration.showToolTips ? 0 : Kirigami.Units.gridUnit)
                    : groupToolTipListView.contentWidth
 
                 return leftPadding + rightPadding + Math.min(maximumWidth, Math.max(delegateModel.estimatedWidth, listContentWidth))
