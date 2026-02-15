@@ -80,13 +80,13 @@ public Q_SLOTS:
      * @param device The input device to set the calibration matrix for.
      * @param matrix The matrix to use, this should come from finished().
      */
-    void setCalibrationMatrix(InputDevice *device, const QMatrix4x4 &matrix);
+    void setCalibrationMatrix(KWinDevices::InputDevice *device, const QMatrix4x4 &matrix);
 
     /**
      * @brief Restores the default calibration matrix for the input device.
      * @param device The input device to restore the calibration for.
      */
-    void restoreDefaults(InputDevice *device);
+    void restoreDefaults(KWinDevices::InputDevice *device);
 
     /**
      * @brief Restarts the calibration process, getting rid of any existing point data.

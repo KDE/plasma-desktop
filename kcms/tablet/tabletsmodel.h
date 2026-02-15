@@ -20,8 +20,8 @@ extern "C" {
 
 struct TabletDevice {
     QString deviceGroup;
-    InputDevice *padDevice = nullptr;
-    InputDevice *penDevice = nullptr;
+    KWinDevices::InputDevice *padDevice = nullptr;
+    KWinDevices::InputDevice *penDevice = nullptr;
 };
 
 class TabletsModel : public QAbstractListModel
@@ -42,8 +42,8 @@ public:
     bool isDefaults() const;
 
 public Q_SLOTS:
-    InputDevice *penAt(int row) const;
-    InputDevice *padAt(int row) const;
+    KWinDevices::InputDevice *penAt(int row) const;
+    KWinDevices::InputDevice *padAt(int row) const;
 
 private Q_SLOTS:
     void onDeviceAdded(const QString &sysName);

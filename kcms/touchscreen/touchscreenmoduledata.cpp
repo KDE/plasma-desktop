@@ -10,8 +10,8 @@
 
 TouchscreenModuleData::TouchscreenModuleData(QObject *parent)
     : KCModuleData(parent)
+    , m_devices(new KWinDevices::DevicesModel(KWinDevices::DevicesModel::Kind::Touch, {}, this))
 {
-    m_devices = new DevicesModel("touch", this);
     connect(m_devices, &QAbstractItemModel::rowsInserted, this, &TouchscreenModuleData::updateRelevance);
     connect(m_devices, &QAbstractItemModel::rowsRemoved, this, &TouchscreenModuleData::updateRelevance);
     connect(m_devices, &QAbstractItemModel::modelReset, this, &TouchscreenModuleData::updateRelevance);

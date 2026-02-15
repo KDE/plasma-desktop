@@ -17,6 +17,9 @@
 
 #include "kwindevices-logging.h"
 
+namespace KWinDevices
+{
+
 class InputDevice : public QObject
 {
     Q_OBJECT
@@ -448,3 +451,5 @@ private:
 
     std::unique_ptr<OrgKdeKWinInputDeviceInterface> m_iface;
 };
+
+} // namespace KWinDevices

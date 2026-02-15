@@ -101,13 +101,13 @@ void CalibrationTool::calibrate(const double touchX, const double touchY, const 
     checkIfFinished();
 }
 
-void CalibrationTool::setCalibrationMatrix(InputDevice *device, const QMatrix4x4 &matrix)
+void CalibrationTool::setCalibrationMatrix(KWinDevices::InputDevice *device, const QMatrix4x4 &matrix)
 {
     Q_ASSERT(device);
     device->setCalibrationMatrix(device->calibrationMatrix() * matrix);
 }
 
-void CalibrationTool::restoreDefaults(InputDevice *device)
+void CalibrationTool::restoreDefaults(KWinDevices::InputDevice *device)
 {
     Q_ASSERT(device);
     device->setCalibrationMatrix(device->defaultCalibrationMatrix());

@@ -181,60 +181,56 @@ void TabletsModel::onDeviceAdded(const QString &sysName)
 
 void TabletsModel::addDevice(const QString &sysName, bool tellModel)
 {
-    QDBusInterface deviceIface(QStringLiteral("org.kde.KWin"),
-                               QStringLiteral("/org/kde/KWin/InputDevice/") + sysName,
-                               QStringLiteral("org.kde.KWin.InputDevice"),
-                               QDBusConnection::sessionBus(),
-                               this);
-    QVariant reply = deviceIface.property("tabletTool");
-    QVariant reply2 = deviceIface.property("tabletPad");
-    if (reply.isValid() && (reply.toBool() || reply2.toBool())) {
-        auto dev = new InputDevice(sysName, this);
-        connect(dev, &InputDevice::needsSaveChanged, this, &TabletsModel::needsSaveChanged);
+    auto dev = new KWinDevices::InputDevice(sysName, this);
+    if (!dev->tabletTool() && !dev->tabletPad()) {
+        delete dev;
+        return;
+    }
 
-        QString deviceGroup = dev->deviceGroup();
+    connect(dev, &KWinDevices::InputDevice::needsSaveChanged, this, &TabletsModel::needsSaveChanged);
 
-        auto it = std::find_if(m_devices.begin(), m_devices.end(), [deviceGroup](const TabletDevice &device) {
-            return device.deviceGroup == deviceGroup;
-        });
+    QString deviceGroup = dev->deviceGroup();
 
-        if (it != m_devices.end()) {
-            if (dev->tabletTool() && !it->penDevice) {
-                qCDebug(KCM_TABLET) << "Adding a tablet pen to an existing thing.";
-                it->penDevice = std::move(dev);
+    auto it = std::find_if(m_devices.begin(), m_devices.end(), [deviceGroup](const TabletDevice &device) {
+        return device.deviceGroup == deviceGroup;
+    });
 
-                const int index = std::distance(m_devices.begin(), it);
-                // We need to tell the model that a pen was added for this device and the UI needs refreshing
-                Q_EMIT deviceChanged(index);
-                return;
-            }
-            if (dev->tabletPad() && !it->padDevice) {
-                qCDebug(KCM_TABLET) << "Adding a tablet pad to an existing thing.";
-                it->padDevice = std::move(dev);
+    if (it != m_devices.end()) {
+        if (dev->tabletTool() && !it->penDevice) {
+            qCDebug(KCM_TABLET) << "Adding a tablet pen to an existing thing.";
+            it->penDevice = std::move(dev);
 
-                const int index = std::distance(m_devices.begin(), it);
-                // We need to tell the model that a pad was added for this device and the UI needs refreshing
-                Q_EMIT deviceChanged(index);
-                return;
-            }
+            const int index = std::distance(m_devices.begin(), it);
+            // We need to tell the model that a pen was added for this device and the UI needs refreshing
+            Q_EMIT deviceChanged(index);
+            return;
         }
+        if (dev->tabletPad() && !it->padDevice) {
+            qCDebug(KCM_TABLET) << "Adding a tablet pad to an existing thing.";
+            it->padDevice = std::move(dev);
 
-        TabletDevice tablet;
-        tablet.deviceGroup = deviceGroup;
+            const int index = std::distance(m_devices.begin(), it);
+            // We need to tell the model that a pad was added for this device and the UI needs refreshing
+            Q_EMIT deviceChanged(index);
+            return;
+        }
+    }
 
-        if (dev->tabletTool()) {
-            tablet.penDevice = std::move(dev);
-        } else if (dev->tabletPad()) {
-            tablet.padDevice = std::move(dev);
-        }
+    TabletDevice tablet;
+    tablet.deviceGroup = deviceGroup;
 
-        if (tellModel) {
-            beginInsertRows({}, m_devices.size(), m_devices.size());
-        }
-        m_devices.push_back(std::move(tablet));
-        if (tellModel) {
-            endInsertRows();
-        }
+    if (dev->tabletTool()) {
+        tablet.penDevice = std::move(dev);
+    } else if (dev->tabletPad()) {
+        tablet.padDevice = std::move(dev);
+    }
+
+    if (tellModel) {
+        beginInsertRows({}, m_devices.size(), m_devices.size());
+    }
+    m_devices.push_back(std::move(tablet));
+    if (tellModel) {
+        endInsertRows();
     }
 }
 
@@ -287,7 +283,7 @@ void TabletsModel::loadReply(QDBusMessage reply)
     endResetModel();
 }
 
-InputDevice *TabletsModel::penAt(int row) const
+KWinDevices::InputDevice *TabletsModel::penAt(int row) const
 {
     if (row == -1) {
         return nullptr;
@@ -296,7 +292,7 @@ InputDevice *TabletsModel::penAt(int row) const
     return m_devices[row].penDevice;
 }
 
-InputDevice *TabletsModel::padAt(int row) const
+KWinDevices::InputDevice *TabletsModel::padAt(int row) const
 {
     if (row == -1) {
         return nullptr;

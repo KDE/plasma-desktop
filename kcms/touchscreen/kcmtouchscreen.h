@@ -19,7 +19,7 @@
 class Touchscreen : public KQuickManagedConfigModule
 {
     Q_OBJECT
-    Q_PROPERTY(DevicesModel *touchscreensModel READ touchscreensModel CONSTANT)
+    Q_PROPERTY(KWinDevices::DevicesModel *touchscreensModel READ touchscreensModel CONSTANT)
 
 public:
     explicit Touchscreen(QObject *parent, const KPluginMetaData &metaData);
@@ -31,10 +31,10 @@ public:
     bool isSaveNeeded() const override;
     bool isDefaults() const override;
 
-    DevicesModel *touchscreensModel() const;
+    KWinDevices::DevicesModel *touchscreensModel() const;
 
 private:
     void refreshNeedsSave();
 
-    DevicesModel *const m_touchscreensModel;
+    KWinDevices::DevicesModel *const m_touchscreensModel;
 };

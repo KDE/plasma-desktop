@@ -9,16 +9,33 @@
 #include <QAbstractListModel>
 
 #include <memory>
+
 #include <vector>
 
-class QDBusInterface;
+namespace KWinDevices
+{
 class InputDevice;
 
 class DevicesModel : public QAbstractListModel
 {
     Q_OBJECT
+
 public:
-    explicit DevicesModel(const QByteArray &kind, QObject *parent = nullptr);
+    enum Roles {
+        DeviceRole = Qt::UserRole,
+        SysNameRole,
+    };
+    Q_ENUM(Roles)
+
+    enum class Kind {
+        Pointers = 1,
+        Keyboards,
+        Touch,
+    };
+    Q_ENUM(Kind)
+
+    explicit DevicesModel(Kind kind, QObject *parent = nullptr);
+    explicit DevicesModel(Kind kind, const QVariantMap &filters, QObject *parent = nullptr);
 
     QHash<int, QByteArray> roleNames() const override;
     QVariant data(const QModelIndex &index, int role) const override;
@@ -30,6 +47,7 @@ public:
     void defaults();
     bool isSaveNeeded() const;
     bool isDefaults() const;
+    QString errorString() const;
 
 private Q_SLOTS:
     void onDeviceAdded(const QString &sysName);
@@ -40,10 +58,15 @@ Q_SIGNALS:
     void deviceRemoved(const QString &sysName);
 
 private:
-    void addDevice(const QString &sysname, bool tellModel);
-    void resetModel();
+    void addDevice(const QString &sysname);
 
-    std::vector<std::unique_ptr<InputDevice>> m_devices;
-    QDBusInterface *m_deviceManager;
-    QByteArray m_kind;
+    const Kind m_kind;
+    QVariantMap m_filters;
+    std::vector<std::unique_ptr<KWinDevices::InputDevice>> m_devices;
+    // So it doesn't have to look them up on the device via DBus.
+    QStringList m_deviceSysNames;
+
+    QString m_errorString;
 };
+
+} // namespace KWinDevices
