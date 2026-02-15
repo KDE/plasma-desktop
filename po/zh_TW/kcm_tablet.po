@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-15 00:45+0000\n"
 "PO-Revision-Date: 2026-01-09 00:02+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -605,37 +605,42 @@ msgid ""
 "like a mouse"
 msgstr "在繪圖板上移動筆刷會讓游標從它先前的位置開始移動，就像滑鼠一樣"
 
-#: ui/StylusTab.qml:355
+#: ui/StylusTab.qml:301
+#, kde-format
+msgid "Sync with mouse cursor"
+msgstr ""
+
+#: ui/StylusTab.qml:361
 #, kde-format
 msgctxt "@label prefix for pen pressure curve config"
 msgid "Pen Pressure:"
 msgstr "筆壓："
 
-#: ui/StylusTab.qml:415
+#: ui/StylusTab.qml:421
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:423
+#: ui/StylusTab.qml:429
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:434
+#: ui/StylusTab.qml:440
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100%"
 
-#: ui/StylusTab.qml:442
+#: ui/StylusTab.qml:448
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0%"
 
-#: ui/StylusTab.qml:446
+#: ui/StylusTab.qml:452
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -643,13 +648,13 @@ msgid ""
 "the pressure values received by applications."
 msgstr "這個曲線控制筆尖上的壓力與應用程式實際收到的壓力值之間的關係。"
 
-#: ui/StylusTab.qml:451
+#: ui/StylusTab.qml:457
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
 msgstr "筆壓範圍："
 
-#: ui/StylusTab.qml:478
+#: ui/StylusTab.qml:484
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -657,31 +662,31 @@ msgid ""
 "new effective range."
 msgstr "高於或低於閥值的筆壓會視為最高值或最低值，而這會變成新的實際範圍。"
 
-#: ui/StylusTab.qml:489
+#: ui/StylusTab.qml:495
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "校準進行中"
 
-#: ui/StylusTab.qml:491
+#: ui/StylusTab.qml:497
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "校準"
 
-#: ui/StylusTab.qml:494
+#: ui/StylusTab.qml:500
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "不支援校準"
 
-#: ui/StylusTab.qml:535
+#: ui/StylusTab.qml:541
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
 msgstr "重設自訂校準"
 
-#: ui/StylusTab.qml:550
+#: ui/StylusTab.qml:556
 #, kde-format
 msgctxt "@info"
 msgid ""

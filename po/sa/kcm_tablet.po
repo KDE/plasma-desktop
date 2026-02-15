@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-15 00:45+0000\n"
 "PO-Revision-Date: 2024-12-29 22:52+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -628,38 +628,43 @@ msgid ""
 "like a mouse"
 msgstr ""
 
-#: ui/StylusTab.qml:355
+#: ui/StylusTab.qml:301
+#, kde-format
+msgid "Sync with mouse cursor"
+msgstr ""
+
+#: ui/StylusTab.qml:361
 #, fuzzy, kde-format
 #| msgid "Pen Pressure:"
 msgctxt "@label prefix for pen pressure curve config"
 msgid "Pen Pressure:"
 msgstr "पेन दबावः :"
 
-#: ui/StylusTab.qml:415
+#: ui/StylusTab.qml:421
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:423
+#: ui/StylusTab.qml:429
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:434
+#: ui/StylusTab.qml:440
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "१००%"
 
-#: ui/StylusTab.qml:442
+#: ui/StylusTab.qml:448
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "०%"
 
-#: ui/StylusTab.qml:446
+#: ui/StylusTab.qml:452
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -669,13 +674,13 @@ msgstr ""
 "एषा वक्रता स्टाइलसस्य उपरि दबावस्य अनुप्रयोगैः प्राप्तानां दाबमूल्यानां च सम्बन्धं नियन्त्रयति "
 "।"
 
-#: ui/StylusTab.qml:451
+#: ui/StylusTab.qml:457
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
 msgstr "दबाव श्रेणी :"
 
-#: ui/StylusTab.qml:478
+#: ui/StylusTab.qml:484
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -683,25 +688,25 @@ msgid ""
 "new effective range."
 msgstr "दहलीजस्य उपरि अधः वा दबावः क्लैम्पः भविष्यति, एतत् च भवतिनवीन प्रभावी श्रेणी।"
 
-#: ui/StylusTab.qml:489
+#: ui/StylusTab.qml:495
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "मापनं प्रगतिशीलम् अस्ति"
 
-#: ui/StylusTab.qml:491
+#: ui/StylusTab.qml:497
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "मापन करो"
 
-#: ui/StylusTab.qml:494
+#: ui/StylusTab.qml:500
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "मापनं समर्थितम् नास्ति"
 
-#: ui/StylusTab.qml:535
+#: ui/StylusTab.qml:541
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Refine Existing Calibration"
@@ -709,7 +714,7 @@ msgctxt "@action:button"
 msgid "Reset Custom Calibration"
 msgstr "विद्यमानं मापनं परिष्कृतं कुर्वन्तु"
 
-#: ui/StylusTab.qml:550
+#: ui/StylusTab.qml:556
 #, kde-format
 msgctxt "@info"
 msgid ""
