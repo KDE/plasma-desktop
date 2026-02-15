@@ -126,7 +126,7 @@ public:
         return item(row)->data(Qt::UserRole).toString();
     }
 
-    Q_SCRIPTABLE int rowForDevice(InputDevice *device)
+    Q_SCRIPTABLE int rowForDevice(KWinDevices::InputDevice *device)
     {
         if (!device) {
             return 0;
@@ -174,7 +174,7 @@ class StylusButtonsModel : public QStandardItemModel
     Q_OBJECT
 
     Q_PROPERTY(WacomDeviceDatabase *db READ db WRITE setDb NOTIFY dbChanged REQUIRED)
-    Q_PROPERTY(InputDevice *device READ device WRITE setDevice NOTIFY deviceChanged REQUIRED)
+    Q_PROPERTY(KWinDevices::InputDevice *device READ device WRITE setDevice NOTIFY deviceChanged REQUIRED)
 
 public:
     enum CustomRoles {
@@ -207,12 +207,12 @@ public:
         }
     }
 
-    InputDevice *device() const
+    KWinDevices::InputDevice *device() const
     {
         return m_device;
     }
 
-    void setDevice(InputDevice *device)
+    void setDevice(KWinDevices::InputDevice *device)
     {
         if (m_device != device) {
             m_device = device;
@@ -285,7 +285,7 @@ private:
     }
 
     WacomDeviceDatabase *m_db = nullptr;
-    InputDevice *m_device = nullptr;
+    KWinDevices::InputDevice *m_device = nullptr;
 };
 
 Tablet::Tablet(QObject *parent, const KPluginMetaData &metaData)
@@ -302,7 +302,7 @@ Tablet::Tablet(QObject *parent, const KPluginMetaData &metaData)
     qmlRegisterType<OrientationsModel>("org.kde.plasma.tablet.kcm", 1, 0, "OrientationsModel");
     qmlRegisterType<StylusButtonsModel>("org.kde.plasma.tablet.kcm", 1, 1, "StylusButtonsModel");
     qmlRegisterType<TabletEvents>("org.kde.plasma.tablet.kcm", 1, 1, "TabletEvents");
-    qmlRegisterUncreatableType<InputDevice>("org.kde.plasma.tablet.kcm", 1, 0, "InputDevice", "Access from C++ only");
+    qmlRegisterUncreatableType<KWinDevices::InputDevice>("org.kde.plasma.tablet.kcm", 1, 0, "InputDevice", "Access from C++ only");
     qmlRegisterType<CalibrationTool>("org.kde.plasma.tablet.kcm", 1, 1, "CalibrationTool");
     // This looks weird, but the first type here is the value type. The second type is here is just for the enumerations.
     // Yes, this IS what they suggest you do: https://doc.qt.io/qt-6/qtqml-cppintegration-definetypes.html#value-types-with-enumerations

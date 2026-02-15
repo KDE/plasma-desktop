@@ -8,6 +8,9 @@
 
 #include <QList>
 
+namespace KWinDevices
+{
+
 InputDevice::InputDevice(const QString &dbusName, QObject *parent)
     : QObject(parent)
 {
@@ -165,5 +168,7 @@ void InputDevice::setRelative(bool relative)
 {
     m_relative.set(relative);
 }
+
+} // namespace KWinDevices
 
 #include "moc_inputdevice.cpp"

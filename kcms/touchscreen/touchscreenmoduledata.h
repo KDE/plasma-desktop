@@ -8,7 +8,10 @@
 
 #include <KCModuleData>
 
+namespace KWinDevices
+{
 class DevicesModel;
+}
 
 class TouchscreenModuleData : public KCModuleData
 {
@@ -20,5 +23,5 @@ public:
 private:
     void updateRelevance();
 
-    DevicesModel *m_devices = nullptr;
+    KWinDevices::DevicesModel *m_devices;
 };
