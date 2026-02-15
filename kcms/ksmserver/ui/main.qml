@@ -28,7 +28,7 @@ KCM.SimpleKCM {
             visible: kcm.restartInSetupScreen || kcm.error.length > 0
             text: kcm.error.length > 0
                 ? i18nc("@info:status inlinemessage", "Failed to request restart to firmware setup: %1", kcm.error)
-                : kcm.isUefi ? i18nc("@info:status inlinemessage", "Next time the computer is restarted, it will enter the UEFI setup screen.")
+                : kcm.isUefi ? i18nc("@info:status inlinemessage", "Next time the computer is restarted, it will enter UEFI firmware settings.")
                              : i18nc("@info:status inlinemessage", "Next time the computer is restarted, it will enter the firmware setup screen.")
             showCloseButton: true
             actions: Kirigami.Action {
@@ -142,7 +142,7 @@ KCM.SimpleKCM {
         Switch {
             id: uefi
             Kirigami.FormData.label: i18nc("@label:check part of a sentence: After next restart enter UEFI/Firmware setup screen", "After next restart:")
-            text: kcm.isUefi ? i18nc("@option:check", "Enter UEFI setup screen")
+            text: kcm.isUefi ? i18nc("@option:check", "Enter UEFI firmware settings")
                             : i18nc("@option:check", "Enter firmware setup screen")
             visible: kcm.canFirmwareSetup
             checked: kcm.restartInSetupScreen
