@@ -670,7 +670,6 @@ ColumnLayout {
             Layout.alignment: Qt.AlignRight
             text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:group shortcut that moves focus to the panel", "Focus shortcut:")
             textFormat: Text.PlainText
-            visible: panel.adaptiveOpacityEnabled
 
             MouseArea {
                 id: mouseArea
