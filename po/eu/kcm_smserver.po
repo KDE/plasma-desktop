@@ -1,34 +1,34 @@
 # Translation for kcmsmserver.po to Euskara/Basque (eu).
-# Copyright (C) 2002-2025 This file is copyright:
+# Copyright (C) 2002-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2024, 2025 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Marcos  <marcos@euskalgnu.org>, 2002, 2006.
 # Ion Gaztañaga <ion_g_m@hotmail.com>, 2004.
 # Asier Urio Larrea <asieriko@gmail.com>, 2008.
-# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2011, 2014, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2011, 2014, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-01-09 22:15+0100\n"
+"PO-Revision-Date: 2026-02-15 22:43+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.12.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
 #, kde-format
 msgid "Confirm logout"
-msgstr "Berretsi saio-ixtea"
+msgstr "Berretsi saioa ixtea"
 
 #. i18n: ectx: label, entry (shutdownType), group (General)
 #: smserversettings.kcfg:13
@@ -40,50 +40,44 @@ msgstr "Irteteko aukera lehenetsia"
 #: smserversettings.kcfg:22
 #, kde-format
 msgid "On login"
-msgstr "Saioa-hastean"
+msgstr "Saioa hastean"
 
 #. i18n: ectx: label, entry (excludeApps), group (General)
 #: smserversettings.kcfg:26
 #, kde-format
 msgid "Applications to be excluded from session"
-msgstr "Saioetatik baztertu beharreko aplikazioak"
+msgstr "Saioetatik kanpo utzi beharreko aplikazioak"
 
 #: ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Failed to request restart to firmware setup: %1"
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Failed to request restart to firmware setup: %1"
-msgstr "Huts egin du firmware ezarpenera berrabiatzeko eskaerak: %1"
+msgstr ""
+"Ezin izan da firmwarearen ezarpenetara berrabiarazteko eskaera egin: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the UEFI setup screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr ""
-"Ordenagailua berrabiatzen den hurrengo aldian, UEFI ezarpen pantailan "
+"Ordenagailua berrabiatzen den hurrengoan, UEFI konfigurazio-pantailara "
 "sartuko da."
 
 #: ui/main.qml:32
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
-"Ordenagailua berrabiatzen den hurrengo aldian, firmware ezarpen pantailan "
-"sartuko da."
+"Ordenagailua berrabiatzen den hurrengo aldian, firmwarearen konfigurazio-"
+"pantailara sartuko da."
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgctxt "@action:button"
 msgid "Restart Now"
-msgstr "Berrabiarazi orain"
+msgstr "Orain berrabiarazi"
 
 #: ui/main.qml:46
 #, kde-format
@@ -97,7 +91,7 @@ msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "Ask for confirmation:"
-msgstr "Eskatu baieztapena:"
+msgstr "Baieztapena eskatu:"
 
 #: ui/main.qml:52
 #, kde-format
@@ -105,7 +99,7 @@ msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "On shutdown, restart, and logout"
-msgstr "Itzali, berrabiarazi, eta saio-ixtean"
+msgstr "Itzaltzean, berrabiatzean, eta saioa ixtean"
 
 #: ui/main.qml:63
 #, kde-format
@@ -114,23 +108,22 @@ msgid "Session Restore"
 msgstr "Saioa lehengoratzea"
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid "On login, launch apps that were open:"
+#, kde-format
 msgctxt "@title:group prefix for radiobuttons"
 msgid "On login, launch apps that were open:"
-msgstr "Saio-hastean, abiarazi irekita zeuden aplikazioak:"
+msgstr "Saioa hastean, abiarazi irekita zeuden aplikazioak:"
 
 #: ui/main.qml:72
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr "Azken saio-ixtean"
+msgstr "Saioa ixtean irekita zeudenak"
 
 #: ui/main.qml:85
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "Saioa eskuz gorde denean"
+msgstr "Saioa eskuz gorde zenean irekita zeudenak"
 
 #: ui/main.qml:94
 #, kde-kuit-format
@@ -141,11 +134,10 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
-"<interface>Gorde saioa</interface> botoi bat agertuko da "
-"<interface>Aplikazioak abiarazteko</interface> menuan. Hari klik egiten "
-"diozunean, Plasmak, irekita dauden aplikazioak gogoratu eta hurrengo saio-"
-"hastean lehengoratuko ditu. Berriro klik egin gogoratutako aplikazioen "
-"multzoa ordezkatzeko."
+"<interface>Aplikazio-abiarazlea</interface> menuan <interface>Gorde saioa</"
+"interface> botoi agertuko da . Sakatzen duzunean, Plasmak irekita dauden "
+"aplikazioak gogoratuko ditu eta hurrengo saioa hastean lehengoratuko ditu. "
+"Sakatu berriro gogoratutako aplikazioen multzoa ordezkatzeko."
 
 #: ui/main.qml:99
 #, kde-format
@@ -154,22 +146,16 @@ msgctxt ""
 "restoration, whereby the windows that were open on logout are re-opened on "
 "the next login"
 msgid "Start with an empty session"
-msgstr "Hasi saio huts batekin"
+msgstr "Saio huts batekin abiarazi"
 
 #: ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Ignored applications:"
-msgstr "Ezikusitako aplikazioak:"
+msgstr "Baztertutako aplikazioak:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' desktop file identifier or, on X11, executable names here "
-#| "(separated by commas or colons, for example 'xterm:org.kde.konsole."
-#| "desktop' or 'xterm,org.kde.konsole.desktop') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
@@ -177,11 +163,11 @@ msgid ""
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"Saioarekin lehengoratutako beste aplikazioekin batera automatikoki abiatzea "
-"saihesteko, aplikazioaren mahaigaineko fitxategiaren identifikatzailea edo, "
-"X11-an, exekutagarriaren izenak hemen idatzi (koma edo puntu eta koma bidez "
-"bereizita, adibidez 'xterm:org.kde.konsole.desktop' edo 'xterm,org.kde."
-"konsole.desktop')."
+"Saioa berrezartzean lehengoratutako beste aplikazioekin batera automatikoki "
+"abiatzea saihesteko, idatzi hemen aplikazioen mahaigaineko fitxategiaren "
+"identifikatzailea edo, X11n, exekutagarriaren izenak (koma edo bi punturen "
+"bidez bereizita; adibidez, 'xterm:org.kde.konsole.desktop' edo 'xterm,org."
+"kde.konsole.desktop')."
 
 #: ui/main.qml:138
 #, kde-format
@@ -195,19 +181,19 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr "Hurrengo berrabiatzearen ondoren:"
+msgstr "Hurrengo berrabiaraztean:"
 
 #: ui/main.qml:145
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr "Sartu UEFI ezarpen pantailara"
+msgstr "Sartu UEFI konfigurazio-pantailara"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr "Sartu firmware ezarpen pantailara"
+msgstr "Sartu firmwarearen konfigurazio-pantailara"
 
 #~ msgid ""
 #~ "The system must be restarted before manual session saving becomes active."

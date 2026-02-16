@@ -1,16 +1,16 @@
 # Translation for kcm_keys.po to Euskara/Basque (eu).
-# Copyright (C) 2020-2025 This file is copyright:
+# Copyright (C) 2020-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2021, 2023, 2024, 2025.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2021, 2023, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-06 03:01+0000\n"
-"PO-Revision-Date: 2025-12-06 15:32+0100\n"
+"PO-Revision-Date: 2026-02-15 21:11+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,7 +28,7 @@ msgstr "Iñigo Salvador Azurmendi"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "xalba@euskalnet.net"
+msgstr "xalba@ni.eus"
 
 #: basemodel.cpp:158
 #, kde-format
@@ -53,7 +53,7 @@ msgstr "Plasma langunea"
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
-msgstr "Errorea lasterbideak gordetzean %1: %2"
+msgstr "Errorea %1 lasterbidea gordetzean: %2"
 
 #: globalaccelmodel.cpp:371
 #, kde-format
@@ -64,12 +64,12 @@ msgstr "Errorea %1 gehitzean, ekintzarik ez duela ematen du."
 #: globalaccelmodel.cpp:422
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
-msgstr "Errorea lasterbide orokorreko zerbitzuarekin komunikatzean"
+msgstr "Errorea lasterbide-globalen zerbitzuarekin komunikatzean"
 
 #: kcm_keys.cpp:56
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
-msgstr "Huts egin du lasterbide orokorreko daimonarekin komunikatzea"
+msgstr "Ezin izan da lasterbide globalen daimonarekin komunikatu"
 
 #: kcm_keys.cpp:372
 #, kde-kuit-format
@@ -80,7 +80,7 @@ msgid ""
 "<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
 "<shortcut>%1</shortcut> lasterbidea jada %2 ekintza arruntera <interface>%3</"
-"interface> esleituta dago.<nl/><nl/>%4(e)ri berresleitu?"
+"interface> esleituta dago.<nl/><nl/>%4(e)ra berresleitu?"
 
 #: kcm_keys.cpp:378
 #, kde-kuit-format
@@ -92,14 +92,13 @@ msgid ""
 msgstr ""
 "<shortcut>%1</shortcut> lasterbidea jada <application>%3</application>(e)ren "
 "<interface>%2</interface> ekintzara esleituta dago.<nl/><nl/><application>"
-"%4</application>(e)ren <interface>%5</interface> ekintzara berresleitu nahi "
-"duzu?"
+"%5</application>(e)ren <interface>%4</interface> ekintzara berresleitu?"
 
 #: kcm_keys.cpp:387
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
-msgstr "Lasterbide-gatazaka ebatzi"
+msgstr "Lasterbide-gatazka ebatzi"
 
 #: kcm_keys.cpp:397
 #, kde-format
@@ -138,29 +137,25 @@ msgid "Help"
 msgstr "Laguntza"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@title:group list section name"
 msgid "Applications"
 msgstr "Aplikazioak"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "Commands"
+#, kde-format
 msgctxt "@title:group list section name"
 msgid "Commands"
 msgstr "Komandoak"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "System Services"
+#, kde-format
 msgctxt "@title:group list section name"
 msgid "System Services"
 msgstr "Sistemaren zerbitzuak"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "Common Actions"
+#, kde-format
 msgctxt "@title:group list section name"
 msgid "Common Actions"
 msgstr "Ekintza arruntak"
@@ -181,7 +176,7 @@ msgstr "Inportatu lasterbide-antolaera"
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Export"
-msgstr "Utzi esportatzea"
+msgstr "Ezeztatu esportatzea"
 
 #: ui/main.qml:50
 #, kde-format
@@ -223,19 +218,16 @@ msgstr "Komandoa edo gidoia…"
 #, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new command or script"
-msgstr "Gehitu komando edo gidoi berria"
+msgstr "Gehitu komandoa edo gidoi berria"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Cannot export scheme while there are unsaved changes"
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "Ezin da antolaera esportatu gorde gabeko aldaketak dauden bitartean"
 
 #: ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the components below that should be included in the exported scheme"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Select the components below that should be included in the exported scheme"
@@ -260,13 +252,13 @@ msgstr "Esportatu %1"
 #, kde-format
 msgctxt "@action:button %1 is the name of a custom command"
 msgid "Edit command for %1"
-msgstr "Editatu %1(e)ren komandoa"
+msgstr "Editatu %1(e)rako komandoa"
 
 #: ui/main.qml:258
 #, kde-format
 msgctxt "@action:button %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
-msgstr "Ezabatu %1(r)en lasterbide guztiak"
+msgstr "Ezabatu %1(e)rako lasterbide guztiak"
 
 #: ui/main.qml:280
 #, kde-format
@@ -275,17 +267,16 @@ msgid "Undo deletion"
 msgstr "Desegin ezabatzea"
 
 #: ui/main.qml:341
-#, fuzzy, kde-format
-#| msgid "No items matched the search terms"
+#, kde-format
 msgctxt "@info:status placeholdermessage"
 msgid "No items matched the search terms"
-msgstr "Ez dago bilatzeko terminoekin bat datorren elementurik"
+msgstr "Ez dago bilaketa terminoekin bat datorren elementurik"
 
 #: ui/main.qml:358
 #, kde-format
 msgctxt "@info"
 msgid "These shortcuts will be deleted when changes are applied."
-msgstr "Aldaketa hauek ezabatuko dira aldaketak aplikatzen direnean."
+msgstr "Aldaketa hauek ezabatu egingo dira aldaketak aplikatzen direnean."
 
 #: ui/main.qml:362
 #, kde-format
@@ -300,22 +291,19 @@ msgid "Undo deleting shortcuts"
 msgstr "Desegin lasterbideak ezabatzea"
 
 #: ui/main.qml:399
-#, fuzzy, kde-format
-#| msgid "Select an item from the list to view its shortcuts here"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
-msgstr "Hautatu zerrendako elementu bat hemen bere lasterbideak ikusteko"
+msgstr "Hautatu zerrendako elementu bat bere lasterbideak hemen ikusteko"
 
 #: ui/main.qml:412
-#, fuzzy, kde-format
-#| msgid "Export Shortcut Scheme"
+#, kde-format
 msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr "Esportatu lasterbide-antolaera"
 
 #: ui/main.qml:412 ui/main.qml:553
-#, fuzzy, kde-format
-#| msgid "Import Shortcut Scheme"
+#, kde-format
 msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
 msgstr "Inportatu lasterbide-antolaera"
@@ -324,32 +312,28 @@ msgstr "Inportatu lasterbide-antolaera"
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
-msgstr "Lasterbide antolaera (*.kksrc)"
+msgstr "Lasterbide-antolaera (*.kksrc)"
 
 #: ui/main.qml:441
-#, fuzzy, kde-format
-#| msgid "Edit Command"
+#, kde-format
 msgctxt "@title:window dialog"
 msgid "Edit Command"
 msgstr "Editatu komandoa"
 
 #: ui/main.qml:441
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgctxt "@title:window dialog"
 msgid "Add Command"
 msgstr "Gehitu komandoa"
 
 #: ui/main.qml:463
-#, fuzzy, kde-format
-#| msgid "Save"
+#, kde-format
 msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
 msgstr "Gorde"
 
 #: ui/main.qml:463
-#, fuzzy, kde-format
-#| msgid "Add"
+#, kde-format
 msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
 msgstr "Gehitu"
@@ -367,8 +351,7 @@ msgid "Add command"
 msgstr "Gehitu komandoa"
 
 #: ui/main.qml:492
-#, fuzzy, kde-format
-#| msgid "Enter a command or choose a script file:"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr "Sartu komando bat edo hautatu gidoi-fitxategi bat:"
@@ -407,7 +390,7 @@ msgstr "Izena:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
-msgstr "Izena hemen sartu"
+msgstr "Sartu izena hemen"
 
 #: ui/main.qml:536
 #, kde-format
@@ -421,32 +404,28 @@ msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
 "extensions"
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
-msgstr "Gidoi-fitxategiak (.sh, .bash, .zsh, etc.) (*.*sh)"
+msgstr "Gidoi-fitxategiak (.sh, .bash, .zsh, etab.) (*.*sh)"
 
 #: ui/main.qml:561
-#, fuzzy, kde-format
-#| msgid "Select the scheme to import:"
+#, kde-format
 msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr "Hautatu inportatu beharreko antolaera:"
 
 #: ui/main.qml:580
-#, fuzzy, kde-format
-#| msgid "Custom Scheme"
+#, kde-format
 msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
-msgstr "Norberak finkatutako antolaera"
+msgstr "Neurrira ipinitako antolaera"
 
 #: ui/main.qml:588
-#, fuzzy, kde-format
-#| msgid "Select File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select File…"
 msgstr "Hautatu fitxategia…"
 
 #: ui/main.qml:588
-#, fuzzy, kde-format
-#| msgid "Import"
+#, kde-format
 msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "Inportatu"
@@ -476,8 +455,7 @@ msgid "Expand to configure shortcuts"
 msgstr "Zabaldu lasterbideak konfiguratzeko"
 
 #: ui/ShortcutActionDelegate.qml:38
-#, fuzzy, kde-format
-#| msgid "Editing shortcut: %1"
+#, kde-format
 msgctxt "@info:whatsthis accessible name %1 is shortcut label (not sequence)"
 msgid "Editing shortcut: %1"
 msgstr "Lasterbidea editatzea: %1"
@@ -491,17 +469,13 @@ msgid "%1:"
 msgstr "%1:"
 
 #: ui/ShortcutActionDelegate.qml:88
-#, fuzzy, kde-format
-#| msgid "No active shortcuts"
+#, kde-format
 msgctxt "@info:status"
 msgid "No active shortcuts"
-msgstr "Ez lasterbide aktiborik"
+msgstr "Ez dago lasterbide aktiborik"
 
 #: ui/ShortcutActionDelegate.qml:134
-#, fuzzy, kde-format
-#| msgctxt "%1 decides if singular or plural will be used"
-#| msgid "Default shortcut"
-#| msgid_plural "Default shortcuts"
+#, kde-format
 msgctxt "@title:column %1 decides if singular or plural will be used"
 msgid "Default shortcut"
 msgid_plural "Default shortcuts"
@@ -509,32 +483,28 @@ msgstr[0] "Lasterbide lehenetsia"
 msgstr[1] "Lasterbide lehenetsiak"
 
 #: ui/ShortcutActionDelegate.qml:136
-#, fuzzy, kde-format
-#| msgid "No default shortcuts"
+#, kde-format
 msgctxt "@label for shortcut with no default bindings"
 msgid "No default shortcuts"
 msgstr "Ez dago lasterbide lehenetsirik"
 
 #: ui/ShortcutActionDelegate.qml:145
-#, fuzzy, kde-format
-#| msgid "Default shortcut %1 is enabled."
+#, kde-format
 msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is enabled."
 msgstr "%1 lasterbide lehenetsia gaituta dago."
 
 #: ui/ShortcutActionDelegate.qml:145
-#, fuzzy, kde-format
-#| msgid "Default shortcut %1 is disabled."
+#, kde-format
 msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is disabled."
 msgstr "%1 lasterbide lehenetsia ezgaituta dago."
 
 #: ui/ShortcutActionDelegate.qml:168
-#, fuzzy, kde-format
-#| msgid "Custom shortcuts"
+#, kde-format
 msgctxt "@title:column"
 msgid "Custom shortcuts"
-msgstr "Norberak finkatutako lasterbideak"
+msgstr "Neurrira ipinitako lasterbideak"
 
 #: ui/ShortcutActionDelegate.qml:195
 #, kde-format
@@ -558,7 +528,7 @@ msgstr "Gehitu neurrira ipinitako lasterbidea"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
-msgstr "Utzi lasterbidea atzematea"
+msgstr "Ezeztatu lasterbidea atzematea"
 
 #~ msgctxt "@info:tooltip %1 is the text of a custom command"
 #~ msgid "Edit command for %1"
