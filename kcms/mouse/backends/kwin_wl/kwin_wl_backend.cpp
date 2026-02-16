@@ -11,38 +11,22 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 
-#include <QDBusInterface>
-#include <QDBusMessage>
-#include <QDBusReply>
 #include <QKeySequence>
 #include <QStringList>
 
+#include "devicesmodel.h"
 #include "logging.h"
 
 KWinWaylandBackend::KWinWaylandBackend()
     : InputBackend()
-    , m_deviceManager(new QDBusInterface(QStringLiteral("org.kde.KWin"),
-                                         QStringLiteral("/org/kde/KWin/InputDevice"),
-                                         QStringLiteral("org.kde.KWin.InputDeviceManager"),
-                                         QDBusConnection::sessionBus(),
-                                         this))
+    , m_devicesModel(new KWinDevices::DevicesModel(KWinDevices::DevicesModel::Kind::Pointers, {{QStringLiteral("touchpad"), false}}, this))
 {
-    findDevices();
-
-    m_deviceManager->connection().connect(QStringLiteral("org.kde.KWin"),
-                                          QStringLiteral("/org/kde/KWin/InputDevice"),
-                                          QStringLiteral("org.kde.KWin.InputDeviceManager"),
-                                          QStringLiteral("deviceAdded"),
-                                          this,
-                                          SLOT(onDeviceAdded(QString)));
-    m_deviceManager->connection().connect(QStringLiteral("org.kde.KWin"),
-                                          QStringLiteral("/org/kde/KWin/InputDevice"),
-                                          QStringLiteral("org.kde.KWin.InputDeviceManager"),
-                                          QStringLiteral("deviceRemoved"),
-                                          this,
-                                          SLOT(onDeviceRemoved(QString)));
+    connect(m_devicesModel, &QAbstractItemModel::rowsInserted, this, &KWinWaylandBackend::onDevicesInserted);
+    connect(m_devicesModel, &QAbstractItemModel::rowsAboutToBeRemoved, this, &KWinWaylandBackend::onDevicesAboutToBeRemoved);
 
     connect(this, &InputBackend::buttonMappingChanged, this, &InputBackend::needsSaveChanged);
+
+    findDevices();
 }
 
 KWinWaylandBackend::~KWinWaylandBackend()
@@ -51,40 +35,18 @@ KWinWaylandBackend::~KWinWaylandBackend()
 
 void KWinWaylandBackend::findDevices()
 {
-    QStringList devicesSysNames;
-    const QVariant replyDevicesSysNames = m_deviceManager->property("devicesSysNames");
-    if (replyDevicesSysNames.isValid()) {
-        qCDebug(KCM_MOUSE) << "Devices list received successfully from KWin.";
-        devicesSysNames = replyDevicesSysNames.toStringList();
-    } else {
-        qCCritical(KCM_MOUSE) << "Error on receiving device list from KWin.";
-        m_errorString = i18n("Querying input devices failed. Please reopen this settings module.");
-        return;
-    }
+    for (int i = 0; i < m_devicesModel->rowCount(QModelIndex()); ++i) {
+        const QString sysName = m_devicesModel->index(i).data(KWinDevices::DevicesModel::SysNameRole).toString();
 
-    for (const QString &sn : std::as_const(devicesSysNames)) {
-        QDBusInterface deviceIface(QStringLiteral("org.kde.KWin"),
-                                   QStringLiteral("/org/kde/KWin/InputDevice/") + sn,
-                                   QStringLiteral("org.kde.KWin.InputDevice"),
-                                   QDBusConnection::sessionBus(),
-                                   this);
-        QVariant reply = deviceIface.property("pointer");
-        if (reply.isValid() && reply.toBool()) {
-            reply = deviceIface.property("touchpad");
-            if (reply.isValid() && reply.toBool()) {
-                continue;
-            }
-
-            auto dev = std::make_unique<KWinWaylandDevice>(sn);
-            if (!dev->init()) {
-                qCCritical(KCM_MOUSE) << "Error on creating device object" << sn;
-                m_errorString = i18n("Critical error on reading fundamental device infos of %1.", sn);
-                return;
-            }
-            connect(dev.get(), &KWinWaylandDevice::needsSaveChanged, this, &InputBackend::needsSaveChanged);
-            qCDebug(KCM_MOUSE).nospace() << "Device found: " << dev->name() << " (" << dev->sysName() << ")";
-            m_devices.push_back(std::move(dev));
+        auto dev = std::make_unique<KWinWaylandDevice>(sysName);
+        if (!dev->init()) {
+            qCCritical(KCM_MOUSE) << "Error on creating device object" << sysName;
+            m_errorString = i18n("Critical error on reading fundamental device infos of %1.", sysName);
+            return;
         }
+        connect(dev.get(), &KWinWaylandDevice::needsSaveChanged, this, &InputBackend::needsSaveChanged);
+        qCDebug(KCM_MOUSE).nospace() << "Device found:" << sysName;
+        m_devices.push_back(std::move(dev));
     }
 }
 
@@ -162,26 +124,10 @@ void KWinWaylandBackend::setButtonMapping(const QVariantMap &mapping)
     }
 }
 
-void KWinWaylandBackend::onDeviceAdded(QString sysName)
+void KWinWaylandBackend::onDevicesInserted(const QModelIndex &parent, int first, int last)
 {
-    if (std::ranges::any_of(std::as_const(m_devices), [sysName](const std::unique_ptr<KWinWaylandDevice> &device) {
-            return device->sysName() == sysName;
-        })) {
-        return;
-    }
-
-    QDBusInterface deviceIface(QStringLiteral("org.kde.KWin"),
-                               QStringLiteral("/org/kde/KWin/InputDevice/") + sysName,
-                               QStringLiteral("org.kde.KWin.InputDevice"),
-                               QDBusConnection::sessionBus(),
-                               this);
-    QVariant reply = deviceIface.property("pointer");
-
-    if (reply.isValid() && reply.toBool()) {
-        reply = deviceIface.property("touchpad");
-        if (reply.isValid() && reply.toBool()) {
-            return;
-        }
+    for (int i = first; i <= last; ++i) {
+        const QString sysName = m_devicesModel->index(first, 0, parent).data(KWinDevices::DevicesModel::SysNameRole).toString();
 
         auto dev = std::make_unique<KWinWaylandDevice>(sysName);
         if (!dev->init()) {
@@ -190,37 +136,41 @@ void KWinWaylandBackend::onDeviceAdded(QString sysName)
         }
 
         connect(dev.get(), &KWinWaylandDevice::needsSaveChanged, this, &InputBackend::needsSaveChanged);
-        qCDebug(KCM_MOUSE).nospace() << "Device connected: " << dev->name() << " (" << dev->sysName() << ")";
+        qCDebug(KCM_MOUSE).nospace() << "Device connected:" << sysName;
         m_devices.push_back(std::move(dev));
         Q_EMIT deviceAdded(true);
         Q_EMIT inputDevicesChanged();
     }
 }
 
-void KWinWaylandBackend::onDeviceRemoved(QString sysName)
+void KWinWaylandBackend::onDevicesAboutToBeRemoved(const QModelIndex &parent, int first, int last)
 {
-    const auto it = std::ranges::find_if(std::as_const(m_devices), [sysName](const std::unique_ptr<KWinWaylandDevice> &device) {
-        return device->sysName() == sysName;
-    });
-    if (it == m_devices.cend()) {
-        return;
-    }
-    int index = std::distance(m_devices.cbegin(), it);
+    for (int i = first; i <= last; ++i) {
+        const QString sysName = m_devicesModel->index(first, 0, parent).data(KWinDevices::DevicesModel::SysNameRole).toString();
 
-    // delete at the end of the function, after change signals have been fired
-    std::unique_ptr<KWinWaylandDevice> dev = std::move(m_devices[index]);
-    m_devices.erase(m_devices.cbegin() + index);
+        const auto it = std::ranges::find_if(std::as_const(m_devices), [&sysName](const std::unique_ptr<KWinWaylandDevice> &device) {
+            return device->sysName() == sysName;
+        });
+        if (it == m_devices.cend()) {
+            continue;
+        }
+        const int index = std::distance(m_devices.cbegin(), it);
 
-    bool deviceNeededSave = dev->isSaveNeeded();
-    disconnect(dev.get(), nullptr, this, nullptr);
+        // delete at the end of the function, after change signals have been fired
+        std::unique_ptr<KWinWaylandDevice> dev = std::move(m_devices[index]);
+        m_devices.erase(m_devices.cbegin() + index);
 
-    qCDebug(KCM_MOUSE).nospace() << "Device disconnected: " << dev->name() << " (" << dev->sysName() << ")";
+        bool deviceNeededSave = dev->isSaveNeeded();
+        disconnect(dev.get(), nullptr, this, nullptr);
 
-    Q_EMIT deviceRemoved(index);
-    Q_EMIT inputDevicesChanged();
+        qCDebug(KCM_MOUSE).nospace() << "Device disconnected:" << sysName;
 
-    if (deviceNeededSave) {
-        Q_EMIT needsSaveChanged();
+        Q_EMIT deviceRemoved(index);
+        Q_EMIT inputDevicesChanged();
+
+        if (deviceNeededSave) {
+            Q_EMIT needsSaveChanged();
+        }
     }
 }
 
