@@ -450,6 +450,8 @@ public:
     }
 
 Q_SIGNALS:
+    void needsSaveChanged();
+
     void enabledChanged();
     // Tapping
     void tapToClickChanged();
@@ -483,7 +485,7 @@ protected:
     struct Prop {
         using ChangedSignal = void (LibinputCommon::*)();
 
-        explicit Prop(LibinputCommon *device, const QByteArray &name, T initialValue, ChangedSignal changedSignal = nullptr)
+        explicit Prop(LibinputCommon *device, const QString &name, T initialValue, ChangedSignal changedSignal = nullptr)
             : name(name)
             , avail(false)
             , changedSignalFunction(changedSignal)
@@ -501,6 +503,7 @@ protected:
                     // clang-format off
                     Q_EMIT (device->*changedSignalFunction)();
                     // clang-format on
+                    Q_EMIT device->needsSaveChanged();
                 }
             }
         }
@@ -514,7 +517,7 @@ protected:
         }
 
         // In wayland, name will be dbus name
-        QByteArray name;
+        QString name;
         bool avail;
         const ChangedSignal changedSignalFunction;
         LibinputCommon *const device;
@@ -523,21 +526,21 @@ protected:
     };
 
     struct PropInt : public Prop<int> {
-        explicit PropInt(LibinputCommon *device, const QByteArray &name, ChangedSignal changedSignal = nullptr)
+        explicit PropInt(LibinputCommon *device, const QString &name, ChangedSignal changedSignal = nullptr)
             : Prop<int>(device, name, 0, changedSignal)
         {
         }
     };
 
     struct PropReal : public Prop<qreal> {
-        explicit PropReal(LibinputCommon *device, const QByteArray &name, ChangedSignal changedSignal = nullptr)
+        explicit PropReal(LibinputCommon *device, const QString &name, ChangedSignal changedSignal = nullptr)
             : Prop<qreal>(device, name, 0, changedSignal)
         {
         }
     };
 
     struct PropBool : public Prop<bool> {
-        explicit PropBool(LibinputCommon *device, const QByteArray &name, ChangedSignal changedSignal = nullptr)
+        explicit PropBool(LibinputCommon *device, const QString &name, ChangedSignal changedSignal = nullptr)
             : Prop<bool>(device, name, false, changedSignal)
         {
         }

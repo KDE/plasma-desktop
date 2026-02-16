@@ -6,36 +6,44 @@
 
 #include "kwinwaylandtouchpad.h"
 
+#include <QDBusConnection>
 #include <QDBusError>
-#include <QDBusInterface>
+#include <QDBusMessage>
+#include <QDBusReply>
 #include <QList>
 
 #include "logging.h"
 
 KWinWaylandTouchpad::KWinWaylandTouchpad(const QString &dbusName)
     : LibinputCommon()
+    , m_dbusName(dbusName)
 {
-    m_iface = new QDBusInterface(QStringLiteral("org.kde.KWin"),
-                                 QStringLiteral("/org/kde/KWin/InputDevice/") + dbusName,
-                                 QStringLiteral("org.kde.KWin.InputDevice"),
-                                 QDBusConnection::sessionBus(),
-                                 this);
 }
 
 KWinWaylandTouchpad::~KWinWaylandTouchpad()
 {
-    delete m_iface;
-}
-
-bool KWinWaylandTouchpad::init()
-{
-    // need to do it here in order to populate combobox and handle events
-    return valueLoader(m_name) && valueLoader(m_sysName);
 }
 
 bool KWinWaylandTouchpad::load()
 {
+    auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
+                                                  QStringLiteral("/org/kde/KWin/InputDevice/") + m_dbusName,
+                                                  QStringLiteral("org.freedesktop.DBus.Properties"),
+                                                  QStringLiteral("GetAll"));
+    message << QStringLiteral("org.kde.KWin.InputDevice");
+    QDBusReply<QVariantMap> reply = QDBusConnection::sessionBus().call(message);
+
+    if (!reply.isValid()) {
+        return false;
+    }
+
     bool success = true;
+
+    const auto properties = reply.value();
+
+    const auto valueLoader = [this, &properties]<typename T>(Prop<T> &prop) {
+        return this->valueLoader(properties, prop);
+    };
 
     // general
     success &= valueLoader(m_supportsDisableEvents);
@@ -135,37 +143,30 @@ bool KWinWaylandTouchpad::defaults()
 
 bool KWinWaylandTouchpad::save()
 {
-    QList<QString> msgs;
-
-    msgs << valueWriter(m_enabled) << valueWriter(m_leftHanded) << valueWriter(m_pointerAcceleration) << valueWriter(m_pointerAccelerationProfileFlat)
-         << valueWriter(m_pointerAccelerationProfileAdaptive)
-
-         << valueWriter(m_disableEventsOnExternalMouse) << valueWriter(m_disableWhileTyping) << valueWriter(m_middleEmulation)
-
-         << valueWriter(m_tapToClick) << valueWriter(m_tapAndDrag) << valueWriter(m_tapDragLock) << valueWriter(m_lmrTapButtonMap)
-
-         << valueWriter(m_naturalScroll) << valueWriter(m_isScrollTwoFinger) << valueWriter(m_isScrollEdge) << valueWriter(m_isScrollOnButtonDown)
-         << valueWriter(m_scrollButton) << valueWriter(m_scrollFactor)
-
-         << valueWriter(m_clickMethodAreas) << valueWriter(m_clickMethodClickfinger);
-
     bool success = true;
-    QString error_msg;
 
-    for (const QString &m : std::as_const(msgs)) {
-        if (!m.isNull()) {
-            qCCritical(KCM_TOUCHPAD) << "in error:" << m;
-            if (!success) {
-                error_msg.append("\n");
-            }
-            error_msg.append(m);
-            success = false;
-        }
-    }
+    success &= valueWriter(m_enabled);
+    success &= valueWriter(m_leftHanded);
+    success &= valueWriter(m_pointerAcceleration);
+    success &= valueWriter(m_pointerAccelerationProfileFlat);
+    success &= valueWriter(m_pointerAccelerationProfileAdaptive);
+    success &= valueWriter(m_disableEventsOnExternalMouse);
+    success &= valueWriter(m_disableWhileTyping);
+    success &= valueWriter(m_middleEmulation);
 
-    if (!success) {
-        qCCritical(KCM_TOUCHPAD) << error_msg;
-    }
+    success &= valueWriter(m_tapToClick);
+    success &= valueWriter(m_tapAndDrag);
+    success &= valueWriter(m_tapDragLock);
+    success &= valueWriter(m_lmrTapButtonMap);
+    success &= valueWriter(m_naturalScroll);
+    success &= valueWriter(m_isScrollTwoFinger);
+    success &= valueWriter(m_isScrollEdge);
+    success &= valueWriter(m_isScrollOnButtonDown);
+    success &= valueWriter(m_scrollButton);
+    success &= valueWriter(m_scrollFactor);
+    success &= valueWriter(m_clickMethodAreas);
+    success &= valueWriter(m_clickMethodClickfinger);
+
     return success;
 }
 
@@ -196,36 +197,37 @@ bool KWinWaylandTouchpad::isSaveNeeded() const
 }
 
 template<typename T>
-QString KWinWaylandTouchpad::valueWriter(const Prop<T> &prop)
+bool KWinWaylandTouchpad::valueWriter(const Prop<T> &prop)
 {
     if (!prop.changed()) {
-        return QString();
+        return true;
     }
-    m_iface->setProperty(prop.name, prop.val);
-    QDBusError error = m_iface->lastError();
-    if (error.isValid()) {
-        qCCritical(KCM_TOUCHPAD) << error.message();
-        return error.message();
+    auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
+                                                  QStringLiteral("/org/kde/KWin/InputDevice/") + m_dbusName,
+                                                  QStringLiteral("org.freedesktop.DBus.Properties"),
+                                                  QStringLiteral("Set"));
+    message << QStringLiteral("org.kde.KWin.InputDevice") << prop.name << QVariant::fromValue(QDBusVariant(prop.val));
+    QDBusReply<void> reply = QDBusConnection::sessionBus().call(message);
+    if (reply.error().isValid()) {
+        qCCritical(KCM_TOUCHPAD) << reply.error().message();
+        return false;
     }
-    return QString();
+    return true;
 }
 
 template<typename T>
-bool KWinWaylandTouchpad::valueLoader(Prop<T> &prop)
+bool KWinWaylandTouchpad::valueLoader(const QVariantMap &properties, Prop<T> &prop)
 {
-    QVariant reply = m_iface->property(prop.name);
-    if (!reply.isValid()) {
-        qCCritical(KCM_TOUCHPAD) << "Error on d-bus read of" << prop.name;
+    if (const auto variant = properties.value(prop.name); variant.isValid()) {
+        prop.avail = true;
+        prop.old = valueLoaderPart<T>(variant);
+        prop.set(prop.old);
+        return true;
+    } else {
+        qCCritical(KCM_TOUCHPAD) << "Device" << m_dbusName << "does not have property on d-bus read of" << prop.name;
         prop.avail = false;
         return false;
     }
-    prop.avail = true;
-
-    T replyValue = valueLoaderPart<T>(reply);
-
-    prop.old = replyValue;
-    prop.set(replyValue);
-    return true;
 }
 
 #include "moc_kwinwaylandtouchpad.cpp"

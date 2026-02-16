@@ -21,8 +21,6 @@ public:
     explicit KWinWaylandTouchpad(const QString &dbusName);
     ~KWinWaylandTouchpad() override;
 
-    bool init();
-
     bool load() override;
     bool defaults() override;
     bool save() override;
@@ -139,10 +137,10 @@ public:
 
 private:
     template<typename T>
-    bool valueLoader(Prop<T> &prop);
+    bool valueLoader(const QVariantMap &properties, Prop<T> &prop);
 
     template<typename T>
-    QString valueWriter(const Prop<T> &prop);
+    bool valueWriter(const Prop<T> &prop);
     //
     // general
     Prop<QString> m_name = Prop<QString>(this, "name", QString());
@@ -163,5 +161,5 @@ private:
     Prop<bool> m_supportsNaturalScroll = PropBool(this, "supportsNaturalScroll");
     Prop<qreal> m_scrollFactor = Prop<qreal>(this, "scrollFactor", 0, &LibinputCommon::scrollFactorChanged);
 
-    QDBusInterface *m_iface;
+    QString m_dbusName;
 };

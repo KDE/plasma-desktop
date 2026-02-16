@@ -366,10 +366,10 @@ XcbAtom &LibinputTouchpad::touchpadOffAtom()
 template<typename T>
 bool LibinputTouchpad::valueLoader(Prop<T> &prop)
 {
-    const Parameter *p = findParameter(QString::fromLatin1(prop.name));
+    const Parameter *p = findParameter(prop.name);
 
     if (!p) {
-        qCCritical(KCM_TOUCHPAD) << "Error on read of " << QString::fromLatin1(prop.name);
+        qCCritical(KCM_TOUCHPAD) << "Error on read of" << prop.name;
     }
 
     QVariant reply = getParameter(p);
@@ -382,7 +382,7 @@ bool LibinputTouchpad::valueLoader(Prop<T> &prop)
     auto touchpadConfig = m_config->group(m_name);
 
     const T replyValue = valueLoaderPart<T>(reply);
-    const T loadedValue = touchpadConfig.readEntry(QString(prop.name), replyValue);
+    const T loadedValue = touchpadConfig.readEntry(prop.name, replyValue);
     prop.old = replyValue;
     prop.set(loadedValue);
 
@@ -392,7 +392,7 @@ bool LibinputTouchpad::valueLoader(Prop<T> &prop)
 template<typename T>
 QString LibinputTouchpad::valueWriter(const Prop<T> &prop)
 {
-    const Parameter *p = findParameter(QString::fromLatin1(prop.name));
+    const Parameter *p = findParameter(prop.name);
 
     if (!p || !prop.changed()) {
         return QString();
@@ -400,11 +400,11 @@ QString LibinputTouchpad::valueWriter(const Prop<T> &prop)
 
     bool error = !setParameter(p, prop.val);
     if (error) {
-        qCCritical(KCM_TOUCHPAD) << "Cannot set property " + QString::fromLatin1(prop.name);
-        return QStringLiteral("Cannot set property ") + QString::fromLatin1(prop.name);
+        qCCritical(KCM_TOUCHPAD) << "Cannot set property" << prop.name;
+        return QStringLiteral("Cannot set property %1").arg(prop.name); // i18n?
     }
     auto touchpadConfig = m_config->group(m_name);
-    touchpadConfig.writeEntry(QString(prop.name), prop.val);
+    touchpadConfig.writeEntry(prop.name, prop.val);
     touchpadConfig.config()->sync();
     return QString();
 }

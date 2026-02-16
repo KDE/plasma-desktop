@@ -10,7 +10,10 @@
 
 #include <QList>
 
-class QDBusInterface;
+namespace KWinDevices
+{
+class DevicesModel;
+}
 
 class KWinWaylandBackend : public TouchpadBackend
 {
@@ -39,14 +42,13 @@ public:
         return m_devices;
     }
 
-private Q_SLOTS:
-    void onDeviceAdded(QString);
-    void onDeviceRemoved(QString);
-
 private:
     void findTouchpads();
 
-    QDBusInterface *m_deviceManager;
+    void onDevicesInserted(const QModelIndex &parent, int first, int last);
+    void onDevicesAboutToBeRemoved(const QModelIndex &parent, int first, int last);
+
+    KWinDevices::DevicesModel *m_devicesModel;
     QList<LibinputCommon *> m_devices;
 
     QString m_errorString = QString();
