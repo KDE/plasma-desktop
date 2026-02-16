@@ -1,16 +1,16 @@
 # Translation for kcm_search.po to Euskara/Basque (eu).
-# Copyright (C) 2018-2023 This file is copyright:
+# Copyright (C) 2018-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2018, 2019, 2020, 2021, 2022, 2023.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2018, 2019, 2020, 2021, 2022, 2023, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2023-07-16 10:38+0200\n"
+"PO-Revision-Date: 2026-02-15 10:02+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,32 +18,28 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Position on screen:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Position on screen:"
-msgstr "Pantailako kokapena:"
+msgstr "Pantailan duen lekua:"
 
 #: ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Top"
+#, kde-format
 msgctxt "@option:check Position on top of screen"
 msgid "Top"
 msgstr "Goian"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Center"
+#, kde-format
 msgctxt "@option:check Position in center of screen"
 msgid "Center"
 msgstr "Erdian"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Activation:"
+#, kde-format
 msgctxt "@label prefix for checkbutton"
 msgid "Activation:"
 msgstr "Aktibatzea:"
@@ -55,42 +51,34 @@ msgid "Activate when pressing any key on the desktop"
 msgstr "Aktibatu mahaigainean edozein tekla sakatzean"
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid "History:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "History:"
 msgstr "Historia:"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Disabled"
+#, kde-format
 msgctxt "@option:radio History is disabled"
 msgid "Disabled"
-msgstr "Ezgaituta"
+msgstr "Desgaituta"
 
 #: ui/main.qml:79
-#, fuzzy, kde-format
-#| msgctxt "@option:check The thing being enabled is search history"
-#| msgid "Enable suggestions"
+#, kde-format
 msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable suggestions"
 msgstr "Gaitu iradokizunak"
 
 #: ui/main.qml:84
-#, fuzzy, kde-format
-#| msgctxt "@option:check The thing being enabled is search history"
-#| msgid "Enabled auto-complete"
+#, kde-format
 msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable auto-complete"
-msgstr "Gaitu osatze automatikoa"
+msgstr "Gaitu osatze-automatikoa"
 
 #: ui/main.qml:92
-#, fuzzy, kde-format
-#| msgid "Clear History…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear History…"
-msgstr "Garbitu historia…"
+msgstr "Garbitu Historia…"
 
 #: ui/main.qml:115
 #, kde-format
@@ -102,7 +90,7 @@ msgstr "Jarduera guztietarako"
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for this activity"
 msgid "For activity \"%1\""
-msgstr "«%1» jarduerarako"
+msgstr "\"%1\" jarduerarako"
 
 #: ui/main.qml:144
 #, kde-format

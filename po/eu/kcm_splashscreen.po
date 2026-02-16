@@ -1,16 +1,16 @@
 # Translation for kcm_splashscreen.po to Euskara/Basque (eu).
-# Copyright (C) 2018-2021, This file is copyright:
+# Copyright (C) 2018-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# KDE Euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2026 KDE Euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2018, 2019, 2020, 2021, 2022.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2018, 2019, 2020, 2021, 2022, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-03 00:48+0000\n"
-"PO-Revision-Date: 2022-12-01 23:10+0100\n"
+"PO-Revision-Date: 2026-02-15 19:39+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: kcm.cpp:162
 #, kde-format
@@ -28,12 +28,12 @@ msgstr "Bat ere ez"
 #: kcm.cpp:165
 #, kde-format
 msgid "No splash screen will be shown"
-msgstr "Ez da Plasta pantailarik erakutsiko"
+msgstr "Ez da abio-pantailarik erakutsiko"
 
 #: kcm.cpp:183
 #, kde-format
 msgid "You cannot delete the currently selected splash screen"
-msgstr "Ezin duzu kendu unean hautatuta dagoen plasta pantaila"
+msgstr "Ezin duzu une honetan hautatutako abio-pantaila ezabatu."
 
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
@@ -45,49 +45,43 @@ msgstr "Etorkizunean erabiltzeko"
 #: splashscreensettings.kcfg:16
 #, kde-format
 msgid "Name of the current splash theme"
-msgstr "Uneko plasta gaiaren izena"
+msgstr "Uneko abio-gaiaren izena"
 
 #: ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "&Get New…"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Get New…"
 msgstr "&Lortu berria…"
 
 #: ui/main.qml:50
-#, fuzzy, kde-format
-#| msgid "Failed to show the splash screen preview."
+#, kde-format
 msgctxt "@info:status"
 msgid "Failed to show the splash screen preview."
-msgstr "Plasta pantailaren aurreikuspegia erakustea huts egin du."
+msgstr "Ezin izan da abio-pantailaren aurreikuspegia erakutsi."
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgid "Preview Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview splash screen"
-msgstr "Aurreikusi Plasta pantaila"
+msgstr "Erakutsi abio-pantailaren aurreikuspegia"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgid "Preview Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove splash screen"
-msgstr "Aurreikusi Plasta pantaila"
+msgstr "Kendu abio-pantaila"
 
 #: ui/main.qml:90
-#, fuzzy, kde-format
-#| msgid "You cannot delete the currently selected splash screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active splash screen"
-msgstr "Ezin duzu kendu unean hautatuta dagoen plasta pantaila"
+msgstr "Abio-pantaila aktiboa ezin da ezabatu."
 
 #: ui/main.qml:92
-#, fuzzy, kde-format
-#| msgid "You cannot delete the currently selected splash screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed splash screens"
-msgstr "Ezin duzu kendu unean hautatuta dagoen plasta pantaila"
+msgstr "Sistemak instalatutako abio-pantailak ezin dira ezabatu"
 
 #, fuzzy
 #~| msgid "Uninstall"

@@ -1,16 +1,16 @@
 # Translation for kcm_tablet.po to Euskara/Basque (eu).
-# Copyright (C) 2022-2025 This file is copyright:
+# Copyright (C) 2022-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022, 2024, 2025.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-15 00:45+0000\n"
-"PO-Revision-Date: 2025-12-07 10:32+0100\n"
+"PO-Revision-Date: 2026-02-16 00:44+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,13 +18,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: inputsequence.cpp:191
 #, kde-format
 msgctxt "@action:button This action is disabled"
 msgid "Disabled"
-msgstr "Ezgaituta"
+msgstr "Desgaituta"
 
 #: inputsequence.cpp:194
 #, kde-format
@@ -108,7 +108,7 @@ msgstr "Alderantzizko paisaia"
 #: kcmtablet.cpp:90
 #, kde-format
 msgid "Follow the Current Screen"
-msgstr "Jarraitu uneko pantailari"
+msgstr "Uneko pantaila jarraitu"
 
 #: kcmtablet.cpp:95
 #, kde-format
@@ -131,13 +131,13 @@ msgstr "Hedatu eta bete"
 #, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
-msgstr "Mantendu itxura-proportzioa eta egokitu"
+msgstr "Itxura-erlazioa mantendu eta egokitu"
 
 #: kcmtablet.cpp:166 ui/DisplayTab.qml:100
 #, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
-msgstr "Mapatu zatira"
+msgstr "Zatira mapatu"
 
 #: kcmtablet.cpp:268
 #, kde-format
@@ -157,61 +157,61 @@ msgstr "arkatzaren %1. botoia"
 #, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial/Ring Action"
-msgstr "Aukeratu Dialaren/Eraztunaren ekintza"
+msgstr "Dialaren/Eraztunaren ekintza aukeratu"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
 msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
-msgstr "Aukeratu botoiaren ekintza"
+msgstr "Botoiaren ekintza aukeratu"
 
 #: ui/ActionDialog.qml:87
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when rotating %1:"
-msgstr "Aukeratu %1 biratzean egingo den ekintza:"
+msgstr "Aukeratu %1 biratzean hartuko den ekintza:"
 
 #: ui/ActionDialog.qml:88
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
-msgstr "Aukeratu %1 sakatzean egingo den ekintza:"
+msgstr "Aukeratu %1 sakatzean hartuko den ekintza:"
 
 #: ui/ActionDialog.qml:102
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
-msgstr "Aplikaziora luzatu"
+msgstr "Aplikaziora pasa"
 
 #: ui/ActionDialog.qml:117
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
-msgstr "Bidali teklatuaren tekla"
+msgstr "Teklatuko tekla bidali"
 
 #: ui/ActionDialog.qml:133
 #, kde-format
 msgctxt "@option:radio Set this action to a up/down keyboard type"
 msgid "Send keyboard keys"
-msgstr "Bidali teklatuaren teklak"
+msgstr "Teklatuko teklak bidali"
 
 #: ui/ActionDialog.qml:148
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
-msgstr "Bidali sauaren botoiaren klik"
+msgstr "Sagu-botoiaren klik bidali"
 
 #: ui/ActionDialog.qml:164
 #, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr "Bidali arkatzaren botoia"
+msgstr "Arkatzaren botoia bidali"
 
 #: ui/ActionDialog.qml:181
 #, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
-msgstr "Jardun kiribiltzeko gurpil gisa"
+msgstr "Kiribiltzeko gurpil gisa jardun"
 
 #: ui/ActionDialog.qml:199
 #, kde-format
@@ -226,12 +226,11 @@ msgid ""
 "This tablet button is forwarded to the focused application, which can decide "
 "how to handle it."
 msgstr ""
-"Tabletaren botoi hori fokua duen aplikazioari birbidaltzen zaio, hark "
+"Tabletaren botoi hau fokua duen aplikazioari birbidaltzen zaio, hark "
 "erabakiko du hura nola maneiatu."
 
 #: ui/ActionDialog.qml:248
-#, fuzzy, kde-format
-#| msgid "Up:"
+#, kde-format
 msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "upwards"
@@ -239,8 +238,7 @@ msgid "Up:"
 msgstr "Gora:"
 
 #: ui/ActionDialog.qml:261
-#, fuzzy, kde-format
-#| msgid "Down:"
+#, kde-format
 msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "downwards"
@@ -248,8 +246,7 @@ msgid "Down:"
 msgstr "Behera:"
 
 #: ui/ActionDialog.qml:274
-#, fuzzy, kde-format
-#| msgid "Speed:"
+#, kde-format
 msgctxt ""
 "@label:slider Speed for how often this dial/ring should emit key events"
 msgid "Speed:"
@@ -325,7 +322,7 @@ msgstr "Sagu bateko kiribiltzeko gurpila bezala jardun."
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
-msgstr "Botoi hau ezgaituta dago eta ez du ezer egingo."
+msgstr "Botoi hau desgaituta dago eta ez du ezer egingo."
 
 #: ui/Calibration.qml:30
 #, kde-format
@@ -343,7 +340,7 @@ msgid ""
 msgstr ""
 "Jomugetan berriz tak egin kalibrazioa berresteko.<nl/><nl/><b>Ekintza "
 "gehiago egin ezean, %1 segundotan lehenetsitako kalibraziora lehengoratuko "
-"du.</b>"
+"da.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -352,7 +349,7 @@ msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
 msgstr ""
-"Kalibrazioa osatu eta gorde da.<nl/><nl/>Kalibrazioa gehiago birfindu edo "
+"Kalibrazioa osatu da eta gorde da.<nl/><nl/>Kalibrazioa gehiago rfindu edo "
 "itxi leihoa."
 
 #: ui/Calibration.qml:105
@@ -365,7 +362,7 @@ msgstr "Egin tak jomuga bakoitzaren erdigunean."
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr "Dagoen kalibrazioa findu"
+msgstr "Findu dagoen kalibrazioa"
 
 #: ui/Calibration.qml:121
 #, kde-format
@@ -392,29 +389,25 @@ msgid "Cancel"
 msgstr "Utzi"
 
 #: ui/DisplayTab.qml:46
-#, fuzzy, kde-format
-#| msgid "Map to screen:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Map to screen:"
-msgstr "Mapatu pantailara:"
+msgstr "Pantailara mapatu:"
 
 #: ui/DisplayTab.qml:73
-#, fuzzy, kde-format
-#| msgid "Orientation:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Orientation:"
 msgstr "Orientazioa:"
 
 #: ui/DisplayTab.qml:79
-#, fuzzy, kde-format
-#| msgid "Not Applicable"
+#, kde-format
 msgctxt "@label substitute for unavailable orientation change"
 msgid "Not Applicable"
 msgstr "Ez da aplikagarria"
 
 #: ui/DisplayTab.qml:93
-#, fuzzy, kde-format
-#| msgid "Mapped Area:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Mapped Area:"
 msgstr "Mapatutako azalera:"
@@ -423,7 +416,7 @@ msgstr "Mapatutako azalera:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
-msgstr "Giltzatu itxura-proportzioa"
+msgstr "Giltzatu itxura-erlazioa"
 
 #: ui/ExternalScreenMapping.qml:151
 #, kde-format
@@ -432,11 +425,10 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/ExternalScreenMapping.qml:190
-#, fuzzy, kde-format
-#| msgid "Resize the screen area"
+#, kde-format
 msgctxt "@action:button"
 msgid "Resize the screen area"
-msgstr "Pantaila azaleraren neurria aldatu"
+msgstr "Pantaila-azaleraren neurria aldatu"
 
 #: ui/ExternalScreenMapping.qml:267
 #, kde-format
@@ -445,22 +437,19 @@ msgid "%1%,%2% - %3%×%4%"
 msgstr "%%1,%%2 - %%3×%%4"
 
 #: ui/ExternalScreenMapping.qml:301
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgctxt "@action:button"
 msgid "Resize the tablet area"
 msgstr "Tableta-azaleraren neurria aldatu"
 
 #: ui/main.qml:38
-#, fuzzy, kde-format
-#| msgid "No drawing tablets found"
+#, kde-format
 msgctxt "@info placeholdermessage text"
 msgid "No drawing tablets found"
 msgstr "Ez da marrazteko tabletarik aurkitu"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "Connect a drawing tablet"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect a drawing tablet"
 msgstr "Konektatu marrazteko tableta bat"
@@ -480,8 +469,8 @@ msgid ""
 "specifically instructed otherwise."
 msgstr ""
 "Gailu hau zuk instalatutako erabiltzaile-espazioko gidari batek kudeatzen "
-"du. Erabili gidari hori tableta konfiguratzeko hemengo ezarpenak erabili "
-"ordez, berariaz bestelakorik adierazten ez bada behintzat."
+"du. Hemengo ezarpenak erabili ordez, erabili gidari hori tableta "
+"konfiguratzeko, berariaz bestelakorik adierazten ez bada behintzat."
 
 #: ui/main.qml:106
 #, kde-format
@@ -493,7 +482,7 @@ msgstr "Gailua:"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr "Erakusleihoa"
+msgstr "Pantaila"
 
 #: ui/main.qml:187
 #, kde-format
@@ -508,31 +497,26 @@ msgid "Pad"
 msgstr "Panela"
 
 #: ui/MissingPadTab.qml:15
-#, fuzzy, kde-format
-#| msgid "No pad inputs found"
+#, kde-format
 msgctxt "@info placeholdermessage main text"
 msgid "No pad inputs found"
 msgstr "Ez da paneleko sarrerarik aurkitu"
 
 #: ui/MissingPadTab.qml:16
-#, fuzzy, kde-format
-#| msgid ""
-#| "No buttons or other inputs were detected. This could mean the driver for "
-#| "this device is missing."
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid ""
 "No buttons or other inputs were detected. This could mean the driver for "
 "this device is missing."
 msgstr ""
-"Ez da botoirik edo beste sarrerarik antzeman. Horrek esan nahi dezake gailu "
+"Ez da botoirik ez beste sarrerarik antzeman. Horrek esan nahi dezake gailu "
 "honetarako gidaria falta dela."
 
 #: ui/PadTab.qml:37
-#, fuzzy, kde-format
-#| msgid "Pad ring %1:"
+#, kde-format
 msgctxt "@label for graphics tablet ring config, % is number of ring"
 msgid "Pad ring %1:"
-msgstr "Paneleko %1 eraztuna:"
+msgstr "Paneleko %1. eraztuna:"
 
 #: ui/PadTab.qml:60
 #, kde-format
@@ -540,14 +524,13 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "ring/dial 0'"
 msgid "pad ring/dial %1"
-msgstr "paneleko  %1 eraztuna/diala"
+msgstr "paneleko  %1. eraztuna/diala"
 
 #: ui/PadTab.qml:100
-#, fuzzy, kde-format
-#| msgid "Pad dial %1:"
+#, kde-format
 msgctxt "@label for graphics tablet ring config, % is number of dial"
 msgid "Pad dial %1:"
-msgstr "Paneleko botoia %1:"
+msgstr "Paneleko %1. diala:"
 
 #: ui/PadTab.qml:102
 #, kde-format
@@ -555,14 +538,13 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad dial %1"
-msgstr "paneleko diala %1"
+msgstr "paneleko %1. diala"
 
 #: ui/PadTab.qml:138
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt "@label for graphics tablet button config, % is number of button"
 msgid "Pad button %1:"
-msgstr "Paneleko %1 botoia:"
+msgstr "Paneleko %1. botoia:"
 
 #: ui/PadTab.qml:141
 #, kde-format
@@ -570,19 +552,16 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr "Paneleko %1 botoia"
+msgstr "paneleko %1. botoia"
 
 #: ui/StylusTab.qml:222
-#, fuzzy, kde-format
-#| msgid "Left-handed mode:"
+#, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Left-handed mode:"
 msgstr "Ezkerti modua:"
 
 #: ui/StylusTab.qml:228
-#, fuzzy, kde-format
-#| msgctxt "Enable left-handed mode"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable left-handed mode"
 msgid "Enable"
 msgstr "Gaitu"
@@ -608,9 +587,7 @@ msgid "Mode:"
 msgstr "Modua:"
 
 #: ui/StylusTab.qml:254
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Pen"
+#, kde-format
 msgctxt ""
 "@option:radio Pen mode, where the point on the screen is always where you "
 "touch the stylus"
@@ -618,42 +595,35 @@ msgid "Pen"
 msgstr "Arkatza"
 
 #: ui/StylusTab.qml:259
-#, fuzzy, kde-format
-#| msgid "The cursor follows where you touch the pen on the surface"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "The cursor follows where you touch the pen on the surface"
-msgstr "Kurtsoreak arkatza gainazalean ukitzen duzun lekua jarraitzen du"
+msgstr "Kurtsoreak arkatzak gainazala ukitzen duzun lekua jarraitzen du"
 
 #: ui/StylusTab.qml:280
-#, fuzzy, kde-format
-#| msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
-#| msgid "Mouse"
+#, kde-format
 msgctxt ""
 "@option:radio Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
 msgstr "Sagua"
 
 #: ui/StylusTab.qml:285
-#, fuzzy, kde-format
-#| msgid ""
-#| "Moving the pen on the surface moves the cursor relative to where it was, "
-#| "like a mouse"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
 "like a mouse"
 msgstr ""
 "Arkatza gainazalean mugitzean kurtsorea zegoen tokiarekiko erlatibo mugitzen "
-"du, sagu batekin bezala"
+"da, sagu batekin bezala"
 
 #: ui/StylusTab.qml:301
 #, kde-format
 msgid "Sync with mouse cursor"
-msgstr ""
+msgstr "Saguaren kurtsorearekin sinkronizatu"
 
 #: ui/StylusTab.qml:361
-#, fuzzy, kde-format
-#| msgid "Pen Pressure:"
+#, kde-format
 msgctxt "@label prefix for pen pressure curve config"
 msgid "Pen Pressure:"
 msgstr "Arkatzaren presioa:"
@@ -689,7 +659,7 @@ msgid ""
 "This curve controls the relationship between the pressure on the stylus and "
 "the pressure values received by applications."
 msgstr ""
-"Kurba honek, arkatzaren presioaren eta aplikazioak jasotako presio-balioen "
+"Kurba honek arkatzaren presioaren eta aplikazioak jasotako presio-balioen "
 "arteko erlazioa kontrolatzen du."
 
 #: ui/StylusTab.qml:457
@@ -739,8 +709,8 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
-"Tableta hau eskuz kalibratu duzu. Jada behar bezala ez badabil, aurrena saia "
-"zaitez hori berrezartzen."
+"Tableta hau eskuz kalibratu duzu. Jada behar bezala ez badabil, aurrena hau "
+"berrezartzen saia zaitez."
 
 #: ui/Tester.qml:25
 #, kde-format
@@ -753,7 +723,7 @@ msgstr "Tableta probatzailea"
 msgctxt ""
 "A tablet stylus was pressed onto the surface X=[x position] Y=[y position]"
 msgid "Stylus press X=%1 Y=%2"
-msgstr "Arkatza estutu X=%1 Y=%2"
+msgstr "Arkatz digitala sakatu X=%1 Y=%2"
 
 #: ui/Tester.qml:58
 #, kde-format
@@ -761,7 +731,7 @@ msgctxt ""
 "A tablet stylus has 'released' or was lifted from the surface X=[x position] "
 "Y=[y position]"
 msgid "Stylus release X=%1 Y=%2"
-msgstr "Arkatza laxatu X=%1 Y=%2"
+msgstr "Arkatz digitala laxatu X=%1 Y=%2"
 
 #: ui/Tester.qml:68
 #, kde-format
@@ -769,13 +739,13 @@ msgctxt ""
 "A tablet stylus has moved over the surface X=[x position] Y=[y position] "
 "P=[pressure] TX=[tilt x] TY=[tilt y]"
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "Arkatza mugitu X=%1 Y=%2 P=%3% TX=%4 TY=%5"
+msgstr "Arkatz digitala mugitu X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:75
 #, kde-format
 msgctxt "A tablet pad's button has been pressed B=[the button number]"
 msgid "Pad button press B=%1"
-msgstr "Paneleko botoia estutu B=%1"
+msgstr "Paneleko botoia sakatu B=%1"
 
 #: ui/Tester.qml:77
 #, kde-format
@@ -809,7 +779,7 @@ msgstr ""
 #, kde-format
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
-msgstr "Hustu"
+msgstr "Garbitu"
 
 #~ msgctxt ""
 #~ "Pen mode, where the point on the screen is always where you touch the "

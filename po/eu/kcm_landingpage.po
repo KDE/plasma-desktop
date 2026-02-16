@@ -1,16 +1,16 @@
 # Translation for kcm_landingpage.po to Euskara/Basque (eu).
-# Copyright (C) 2022-2025 This file is copyright:
+# Copyright (C) 2022-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 # SPDX-FileCopyrightText: 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2021, 2022, 2024, 2025.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2021, 2022, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-30 00:46+0000\n"
-"PO-Revision-Date: 2026-01-25 13:49+0100\n"
+"PO-Revision-Date: 2026-02-15 10:17+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
@@ -36,13 +36,13 @@ msgstr "Klik bakuna fitxategiak irekitzeko"
 #: landingpage_kdeglobalssettings.kcfg:19
 #, kde-format
 msgid "Switch the look and feel package depending on time of day"
-msgstr "Eguneko orduaren arabera, itxura eta izaera paketea aldatu"
+msgstr "Aldatu itxura eta izaera paketea eguneko orduaren arabera"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:23
 #, kde-format
 msgid "Global Look and Feel package"
-msgstr "Itxura eta Izaera Globala paketea"
+msgstr "Itxura eta Izaera pakete globala"
 
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
@@ -50,7 +50,7 @@ msgstr "Itxura eta Izaera Globala paketea"
 #: landingpage_kdeglobalssettings.kcfg:31
 #, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr "Itxura eta Izaera Globala paketea, ordezkoa"
+msgstr "Itxura eta Izaera pakete globala, ordezkoa"
 
 #. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:35
@@ -71,8 +71,7 @@ msgid "Global theme"
 msgstr "Gai globala"
 
 #: ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Theme:"
+#, kde-format
 msgctxt "@title:group for light/dark quick switch"
 msgid "Theme:"
 msgstr "Gaia:"
@@ -89,7 +88,7 @@ msgctxt ""
 "@info:tooltip 1 is the name of a light global theme, 2 is the name of a dark "
 "global theme"
 msgid "Use “%1” during the day and “%2” at night"
-msgstr "Erabili “%1” egunean zehar eta “%2” gauean"
+msgstr "Erabili “%1” egunez eta “%2” gauez"
 
 #: ui/main.qml:134
 #, kde-format
@@ -98,8 +97,7 @@ msgid "More appearance settings:"
 msgstr "Itxura-ezarpen gehiago:"
 
 #: ui/main.qml:181
-#, fuzzy, kde-format
-#| msgid "Animation speed:"
+#, kde-format
 msgctxt "@title:slider"
 msgid "Animation speed:"
 msgstr "Animazioaren abiadura:"
@@ -121,7 +119,7 @@ msgstr "Bat-batekoa"
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
-msgstr "Fitxategiei edo karpetei klik egitea:"
+msgstr "Fitxategietan edo karpetetan klik egitean:"
 
 #: ui/main.qml:219
 #, kde-format
@@ -130,11 +128,10 @@ msgid "Selects them"
 msgstr "Haiek hautatzen ditu"
 
 #: ui/main.qml:224
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
-msgstr "Ireki, haren ordez, klik-bikoitza eginez"
+msgstr "Ireki klik-bikoitza eginez"
 
 #: ui/main.qml:252
 #, kde-format
@@ -143,11 +140,10 @@ msgid "Opens them"
 msgstr "Haiek irekitzen ditu"
 
 #: ui/main.qml:257
-#, fuzzy, kde-format
-#| msgid "Select by clicking on item's selection marker"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
-msgstr "Hautatu elementuen hautapen markan klik eginez"
+msgstr "Hautatu elementuaren hautapen markan klik eginez"
 
 #: ui/main.qml:283
 #, kde-format
@@ -156,11 +152,10 @@ msgid "More behavior settings:"
 msgstr "Jokabide-ezarpen gehiago:"
 
 #: ui/main.qml:297
-#, fuzzy, kde-format
-#| msgid "Most used pages:"
+#, kde-format
 msgctxt "@title:group for grid of buttons opening kcms"
 msgid "Most used pages:"
-msgstr "Gehien erabiltzen diren orriak:"
+msgstr "Gehien erabilitako orrialdeak:"
 
 #~ msgctxt "@action:button as in, 'this will take you to the Wallpaper KCM'"
 #~ msgid "Wallpaper"

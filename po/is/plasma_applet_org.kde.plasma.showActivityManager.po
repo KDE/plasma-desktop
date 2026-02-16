@@ -1,14 +1,14 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2022, 2025 Sveinn í Felli <sv1@fellsnet.is>
+# SPDX-FileCopyrightText: 2022, 2025, 2026 Sveinn í Felli <sv1@fellsnet.is>
 # SPDX-FileCopyrightText: 2022, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-11-30 11:15+0000\n"
+"PO-Revision-Date: 2026-02-15 15:43+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -25,39 +25,34 @@ msgid "Appearance"
 msgstr "Útlit"
 
 #: qml/ConfigAppearance.qml:23
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Icon:"
 msgstr "Tákn:"
 
 #: qml/ConfigAppearance.qml:25
-#, fuzzy, kde-format
-#| msgid "Show the current activity icon"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show the current activity icon"
 msgstr "Sýna tákn fyrir núverandi athöfn"
 
 #: qml/ConfigAppearance.qml:31
-#, fuzzy, kde-format
-#| msgid "Show the generic activity icon"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show the generic activity icon"
 msgstr "Sýna almenna athafnatáknið"
 
 #: qml/ConfigAppearance.qml:41
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Title:"
 msgstr "Titill:"
 
 #: qml/ConfigAppearance.qml:43
-#, fuzzy, kde-format
-#| msgid "Show the current activity name"
+#, kde-format
 msgctxt "@option:check title"
 msgid "Show the current activity name"
-msgstr "Sýna nafn núverandi athafnar"
+msgstr "Sýna heiti núverandi athafnar"
 
 #: qml/main.qml:66
 #, kde-format
@@ -66,15 +61,13 @@ msgid "Current activity is %1"
 msgstr "Núverandi athöfn er %1"
 
 #: qml/main.qml:76
-#, fuzzy, kde-format
-#| msgid "Show Activity Manager"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show Activity Manager"
 msgstr "Sýna athafnastjóra"
 
 #: qml/main.qml:77
-#, fuzzy, kde-format
-#| msgid "Click to show the activity manager"
+#, kde-format
 msgctxt "@info:tooltip subtext"
 msgid "Click to show the activity manager"
 msgstr "Smelltu til að sýna athafnastjórann"

@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # SPDX-FileCopyrightText: 2024, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
-# SPDX-FileCopyrightText: 2025 Sveinn í Felli <sv1@fellsnet.is>
+# SPDX-FileCopyrightText: 2025, 2026 Sveinn í Felli <sv1@fellsnet.is>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-16 00:45+0000\n"
-"PO-Revision-Date: 2025-11-22 09:52+0000\n"
+"PO-Revision-Date: 2026-02-15 14:23+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -317,7 +317,7 @@ msgstr "%1 (%2)"
 #, kde-format
 msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
 msgid "Allow using as pointer and keyboard"
-msgstr ""
+msgstr "Leyfa að nota sem bendil og lyklaborð"
 
 #: ui/main.qml:43
 #, kde-kuit-format
@@ -328,15 +328,13 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:51
-#, fuzzy, kde-format
-#| msgid "No game controllers found"
+#, kde-format
 msgctxt "@info placeholdermessage text"
 msgid "No game controllers found"
 msgstr "Engar leikjastýringar fundust"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Connect a wired or wireless controller"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage text"
 msgid "Connect a wired or wireless controller"
 msgstr "Tengdu þráðlausa stýringu eða með snúru"

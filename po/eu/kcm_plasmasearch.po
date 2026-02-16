@@ -1,16 +1,16 @@
 # Translation for kcm_search.po to Euskara/Basque (eu).
-# Copyright (C) 2018-2024 This file is copyright:
+# Copyright (C) 2018-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2024-06-28 09:42+0200\n"
+"PO-Revision-Date: 2026-02-15 21:38+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: plasmasearch/kcm.h:73
 #, kde-format
@@ -31,80 +31,71 @@ msgid "Available Plugins"
 msgstr "Plugin erabilgarriak"
 
 #: plasmasearch/ui/main.qml:25
-#, fuzzy, kde-format
-#| msgid "Configure KRunner…"
+#, kde-format
 msgctxt "@action:button in toolbar"
 msgid "Configure KRunner…"
 msgstr "Konfiguratu KRunner…"
 
 #: plasmasearch/ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Get New Plugins…"
+#, kde-format
 msgctxt "@action:button in toolbar"
 msgid "Get New Plugins…"
-msgstr "Lortu plugin berriak..."
+msgstr "Lortu plugin berriak…"
 
 #: plasmasearch/ui/main.qml:45
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect). Mark plugins as favorites and arrange them in order you "
-#| "want to prioritize them."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to prioritize them."
 msgstr ""
-"Pluginak gaitu edo ezgaitu (KRunner, Aplikazio abiarazlea, eta Ikuspegi "
-"orokorra efektuan erabilia). Markatu pluginak gogoko gisa eta ipin itzazu "
-"ordenean eman nahi diezun lehentasunaren arabera."
+"Pluginak gaitu edo desgaitu (KRunner, Aplikazio abiarazlea, eta Ikuspegi "
+"orokorra efektuan erabilitakoak). Markatu pluginak gogoko gisa eta antola "
+"itzazu eman nahi diezun lehentasunaren araberako ordenan."
 
 #: plasmasearch/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Remove from favorites"
+#, kde-format
 msgctxt "@action:button, icononly"
 msgid "Remove from favorites"
-msgstr "Kendu gogokoenetatik"
+msgstr "Kendu gogokoetatik"
 
 #: plasmasearch/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Add to favorites"
+#, kde-format
 msgctxt "@action:button, icononly"
 msgid "Add to favorites"
-msgstr "Gehitu gogokoenetara"
+msgstr "Gehitu gogoetara"
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "Failed to run install script in terminal <message>%1</message>"
 msgstr ""
-"Huts egin du <message>%1</message> terminalean instalatzeko gidoia "
-"exekutatzea"
+"Instalazio-gidoia ezin izan da terminalean exekutatu <message>%1</message>"
 
 #: plugininstaller/AbstractJob.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Installation executed successfully, you may now close this window"
-msgstr "Instalazio arrakastatsua, orain leiho hau itxi dezakezu"
+msgstr "Instalazio exekuzio arrakastatsua, orain leiho hau itxi dezakezu"
 
 #: plugininstaller/AbstractJob.cpp:31
 #, kde-format
 msgctxt "@info"
 msgid "Uninstallation executed successfully, you may now close this window"
-msgstr "Desinstalazio arrakastatsua, orain leiho hau itxi dezakezu"
+msgstr "Desinstalazio exekuzio arrakastatsua, orain leiho hau itxi dezakezu"
 
 #: plugininstaller/KRunnerPluginInstallerRcJob.cpp:88
 #, kde-format
 msgid "Failed to copy file %1 to %2"
-msgstr "%1 fitxategi %2(e)ra kopiatzea huts egin du"
+msgstr "%1 fitxategia ezin izan da %2(e)ra kopiatu"
 
 #: plugininstaller/KRunnerPluginInstallerRcJob.cpp:103
 #: plugininstaller/KRunnerPluginInstallerRcJob.cpp:106
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Failed to remove file %1:<nl/>%2"
-msgstr "%1 fitxategia kentzea huts egin du:<nl/>%2"
+msgstr "%1 fitxategia ezin izan da ezabatu:<nl/>%2"
 
 #: plugininstaller/main.cpp:33
 #, kde-format
@@ -116,25 +107,25 @@ msgstr "KRunner plugina instalatzea huts egin du"
 #, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall"
-msgstr "Exekutatu beharreko komandoa: «install» edo «uninstall»"
+msgstr "Exekutatu beharreko komandoa: “install” edo “uninstall”"
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive or extracted folder"
-msgstr "Artxiboaren edo erauzitako karpetaren bide-izena"
+msgstr "Artxiborako edo erauzitako karpetarako bide-izena"
 
 #: plugininstaller/main.cpp:50
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
-msgstr "Ez erakutsi ikus-berrespen elkarrizketa bat"
+msgstr "Ez erakutsi ikus-berrespen elkarrizketa-koadro bat"
 
 #: plugininstaller/main.cpp:92
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
-msgstr "Ez dago Packagekit-en euskarririk"
+msgstr "Ez dago PackageKit euskarririk"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:23
 #: plugininstaller/ScriptConfirmationDialog.h:37
@@ -170,7 +161,7 @@ msgstr "Ikusi fitxategia"
 #, kde-format
 msgctxt "@info"
 msgid "The mime type %1 is not supported by the packagekit backend"
-msgstr "Packagekit-en bizkarraldekoak ez du onartzen %1 MIME-mota"
+msgstr "Packagekit bizkarraldekoak ez du %1 MIME-mota onartzen"
 
 #: plugininstaller/ScriptConfirmationDialog.h:44
 #, kde-kuit-format
@@ -179,8 +170,8 @@ msgid ""
 "This plugin executes the following command for starting the \"%1\" service:"
 "<nl/>%2"
 msgstr ""
-"Plugin horrek \"%1\" zerbitzua abiarazteko ondoko komandoa exekutatzen du:"
-"<nl/>%2"
+"Plugin honek “%1” zerbitzua abiarazteko ondoko komandoa exekutatzen du:<nl/>"
+"%2"
 
 #: plugininstaller/ScriptConfirmationDialog.h:47
 #, kde-kuit-format
@@ -190,9 +181,9 @@ msgid ""
 "author. You can try to uninstall the plugin manually.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
-"Plugin honek ez du ekartzen desinstalatzeko gidoirik. Jar zaitez egilearekin "
-"harremanean. Plugina eskuz desinstalatzen saia zaitezke.<nl/>Hori egiteko "
-"gai, edo eroso, sentitzen ez bazara, egin klik, orain, <interface>Utzi</"
+"Plugin honek ez du desinstalatzeko gidoirik ekartzen. Mesedez, jar zaitez "
+"egilearekin harremanean. Plugina eskuz desinstalatzen saia zaitezke.<nl/"
+">Hori egiteko gai edo eroso sentitzen ez bazara, egin klik <interface>Utzi</"
 "interface> aukeran."
 
 #: plugininstaller/ScriptConfirmationDialog.h:52
@@ -204,10 +195,10 @@ msgid ""
 "the README for instructions from the author.<nl/>If you do not feel capable "
 "or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
-"Plugin honek ez du ekartzen desinstalatzeko gidoirik. Jar zaitez egilearekin "
-"harremanean. Plugina eskuz desinstalatzen saia zaitezke. Begiratu README, "
-"egilearen jarraibideen bila.<nl/>Hori egiteko gai, edo eroso, sentitzen ez "
-"bazara, egin klik, orain <interface>Utzi</interface> aukeran."
+"Plugin honek ez du desinstalatzeko gidoirik ekartzen. Mesedez, jar zaitez "
+"egilearekin harremanean. Plugina eskuz desinstalatzen saia zaitezke. "
+"Begiratu README, egilearen jarraibideen bila.<nl/>Hori egiteko gai edo eroso "
+"sentitzen ez bazara, egin klik <interface>Utzi</interface> aukeran."
 
 #: plugininstaller/ScriptConfirmationDialog.h:58
 #, kde-kuit-format
@@ -217,9 +208,9 @@ msgid ""
 "author. You can try to install the plugin manually.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
-"Plugin honek ez du ekartzen instalatzeko gidoirik. Jar zaitez egilearekin "
-"harremanean. Plugina eskuz instalatzen saia zaitezke.<nl/>Hori egiteko gai, "
-"edo eroso, sentitzen ez bazara, egin klik, orain, <interface>Utzi</"
+"Plugin honek ez du desinstalatzeko gidoirik ekartzen. Mesedez, jar zaitez "
+"egilearekin harremanean. Plugina eskuz instalatzen saia zaitezke.<nl/>Hori "
+"egiteko gai edo eroso sentitzen ez bazara, egin klik <interface>Utzi</"
 "interface> aukeran."
 
 #: plugininstaller/ScriptConfirmationDialog.h:63
@@ -231,10 +222,10 @@ msgid ""
 "the README for instructions from the author.<nl/>If you do not feel capable "
 "or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
-"Plugin honek ez du ekartzen instalatzeko gidoirik. Jar zaitez egilearekin "
-"harremanean. Plugina eskuz instalatzen saia zaitezke. Begiratu README, "
-"egilearen jarraibideen bila.<nl/>Hori egiteko gai, edo eroso, sentitzen ez "
-"bazara, egin klik, orain, <interface>Utzi</interface> aukeran."
+"Plugin honek ez du desinstalatzeko gidoirik ekartzen. Mesedez, jar zaitez "
+"egilearekin harremanean. Plugina eskuz instalatzen saia zaitezke. Begiratu "
+"README, egilearen jarraibideen bila.<nl/>Hori egiteko gai edo eroso "
+"sentitzen ez bazara, egin klik <interface>Utzi</interface> aukeran."
 
 #: plugininstaller/ScriptConfirmationDialog.h:69
 #, kde-kuit-format
@@ -245,11 +236,10 @@ msgid ""
 "read the script's source code.<nl/>If you do not feel capable or comfortable "
 "with this, click <interface>Cancel</interface>  now."
 msgstr ""
-"Plugin honek, instalatzeko, segurtasun arriskua sor dezakeen gidoi bat "
+"Plugin honek instalatzeko segurtasun arriskua sor dezakeen gidoi bat "
 "erabiltzen du. Instalatu aurretik, azter ezazu pluginaren eduki osoa, edo "
-"gutxienez, irakurri gidoiaren sorburu kodea.<nl/>Hori egiteko gai, edo "
-"eroso, sentitzen ez bazara, egin klik, orain, <interface>Utzi</interface> "
-"aukeran."
+"gutxienez, irakurri gidoiaren sorburu kodea.<nl/>Hori egiteko gai edo eroso "
+"sentitzen ez bazara, egin klik <interface>Utzi</interface> aukeran."
 
 #: plugininstaller/ScriptConfirmationDialog.h:75
 #, kde-kuit-format
@@ -260,11 +250,11 @@ msgid ""
 "read the README file and the script's source code.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
-"Plugin honek, instalatzeko, segurtasun arriskua sor dezakeen gidoi bat "
+"Plugin honek instalatzeko segurtasun arriskua sor dezakeen gidoi bat "
 "erabiltzen du. Instalatu aurretik, azter ezazu pluginaren eduki osoa, edo "
-"gutxienez, irakurri README fitxategia eta gidoiaren sorburu kodea. <nl/>Hori "
-"egiteko gai, edo eroso, sentitzen ez bazara, egin klik, orain, "
-"<interface>Utzi</interface> aukeran."
+"gutxienez, irakurri README fitxategia eta gidoiaren sorburu kodea.<nl/>Hori "
+"egiteko gai edo eroso sentitzen ez bazara, egin klik <interface>Utzi</"
+"interface> aukeran."
 
 #: plugininstaller/ScriptConfirmationDialog.h:90
 #, kde-format
@@ -276,7 +266,7 @@ msgstr "Markatu sarrera desinstalatu gisa"
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark entry as installed"
-msgstr "Markatu sarrera instalatutako gisa"
+msgstr "Markatu sarrera instalatu gisa"
 
 #: plugininstaller/ScriptConfirmationDialog.h:100
 #, kde-format
@@ -300,13 +290,13 @@ msgstr "Ikusi %1"
 #, kde-format
 msgctxt "@info"
 msgid "Could not resolve package name of %1"
-msgstr "Ezin izan da «%1»en pakete-izena ebatzi"
+msgstr "Ezin izan da %1(e)ren pakete-izena ebatzi"
 
 #: plugininstaller/ZypperRPMJob.cpp:35
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
-msgstr "Huts egin du instalatzeko komandoa exekutatzea: <message>%1</message>"
+msgstr "Instalazio komandoa ezin izan da exekutatu: <message>%1</message>"
 
 #~ msgctxt "@info:shell"
 #~ msgid "Path to archive."
