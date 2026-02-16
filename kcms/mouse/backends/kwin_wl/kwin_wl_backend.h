@@ -14,7 +14,10 @@
 #include <memory>
 #include <vector>
 
-class QDBusInterface;
+namespace KWinDevices
+{
+class DevicesModel;
+}
 
 class KWinWaylandBackend : public InputBackend
 {
@@ -35,18 +38,17 @@ public:
     QVariantMap buttonMapping() const override;
     void setButtonMapping(const QVariantMap &mapping) override;
 
-private Q_SLOTS:
-    void onDeviceAdded(QString);
-    void onDeviceRemoved(QString);
-
 private:
     void findDevices();
     // all_of without short-circuiting is like for_each but with an AND-reduced accumulator.
     bool forAllDevices(bool (KWinWaylandDevice::*f)()) const;
 
+    void onDevicesInserted(const QModelIndex &parent, int first, int last);
+    void onDevicesAboutToBeRemoved(const QModelIndex &parent, int first, int last);
+
     static KConfigGroup mouseButtonRebindsConfigGroup();
 
-    std::unique_ptr<QDBusInterface> m_deviceManager;
+    KWinDevices::DevicesModel *m_devicesModel;
     std::vector<std::unique_ptr<KWinWaylandDevice>> m_devices;
     QVariantMap m_buttonMapping;
     QVariantMap m_loadedButtonMapping;

@@ -7,7 +7,7 @@ if (BUILD_KCM_MOUSE_KWIN_WAYLAND)
             kwin_wl/kwin_wl_device.cpp
     )
 
-    target_link_libraries(kcm_mouse PUBLIC Qt::DBus)
+    target_link_libraries(kcm_mouse PUBLIC Qt::DBus PRIVATE kwindevices)
 endif()
 
 if (BUILD_KCM_MOUSE_X11)
