@@ -31,7 +31,7 @@ Item {
     onHeightChanged: updateSizeHints()
 
     function updateSizeHints(): void {
-        if (useCustomButtonImage) {
+        if (useCustomButtonImage && imageFallback.visible) {
             if (vertical) {
                 const scaledHeight = Math.floor(parent?.width * (imageFallback.implicitHeight / imageFallback.implicitWidth));
                 root.Layout.minimumWidth = -1;
@@ -60,7 +60,7 @@ Item {
 
         active: mouseArea.containsMouse
         source: root.useCustomButtonImage ? Plasmoid.configuration.customButtonImage : Plasmoid.configuration.icon
-        visible: !root.useCustomButtonImage || imageFallback.aspectRatio === 1
+        visible: !imageFallback.visible
 
         // A custom icon could also be rectangular, but Kirigami.Icon only supports square ones.
         // If a square, custom, icon is given, we load it using Kirigami.Icon and round it to
@@ -68,6 +68,7 @@ Item {
         roundToIconSize: true
 
         onSourceChanged: root.updateSizeHints()
+        onVisibleChanged: root.updateSizeHints()
     }
 
     Image {
@@ -79,10 +80,11 @@ Item {
 
         anchors.fill: parent
 
-        visible: root.useCustomButtonImage && status == Image.Ready && aspectRatio !== 1
+        visible: root.useCustomButtonImage && status == Image.Ready && aspectRatio !== 1 && source !== ""
 
         source: Plasmoid.icon.startsWith("/") ? "file:" + Plasmoid.icon.split("/").map(encodeURIComponent).join("/") : ""
         onSourceChanged: root.updateSizeHints()
+        onVisibleChanged: root.updateSizeHints()
 
         fillMode: Image.PreserveAspectFit
     }
