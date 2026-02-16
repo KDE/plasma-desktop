@@ -98,6 +98,8 @@ private:
     TouchpadInputBackendMode m_mode;
 
 Q_SIGNALS:
+    void needsSaveChanged();
+
     void touchpadStateChanged();
     void touchpadReset();
     void keyboardActivityStarted();

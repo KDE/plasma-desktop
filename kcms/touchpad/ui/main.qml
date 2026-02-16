@@ -6,50 +6,72 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
-import org.kde.kcmutils as KCM
+import org.kde.config as KConfig // KAuthorized
+import org.kde.kcmutils as KCMUtils
 import org.kde.kirigami as Kirigami
-
-import org.kde.touchpad.kcm
 
 import org.kde.plasma.private.kcm_touchpad as Touchpad
 
-KCM.SimpleKCM {
+KCMUtils.SimpleKCM {
     id: root
+
+    readonly property Touchpad.TouchpadBackend backend: KCMUtils.ConfigModule.backend
 
     spacing: Kirigami.Units.smallSpacing
 
-    property alias deviceIndex: deviceSelector.currentIndex
-    property Touchpad.InputDevice device: backend.inputDevices[deviceIndex] ?? null
-    signal changeSignal()
+    property Touchpad.InputDevice device: root.backend.inputDevices[KCMUtils.ConfigModule.currentDeviceIndex] ?? null
 
     LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
     headerPaddingEnabled: false // Let the InlineMessage touch the edges
-    header: Kirigami.InlineMessage {
-        id: inlineMessage
-        position: Kirigami.InlineMessage.Position.Header
+    header: ColumnLayout {
+        spacing: 0
+
+        Message {
+            Layout.fillWidth: true
+            message: root.KCMUtils.ConfigModule.saveLoadMessage
+        }
+
+        Message {
+            Layout.fillWidth: true
+            message: root.KCMUtils.ConfigModule.hotplugMessage
+            showCloseButton: true
+        }
     }
 
-    Connections {
-        target: KCMTouchpad
-
-        function onShowMessage(message, type) {
-
-            if (!backend.inputDevices?.length) {
-                return
+    actions: [
+        Kirigami.Action {
+            icon.name: "preferences-desktop-cursors"
+            text: i18ndc("kcm_touchpad", "Open cursor theme KCM", "Cursors")
+            tooltip: i18ndc("kcm_touchpad", "@info:tooltip Cursor theme KCM description", "Choose mouse cursor theme")
+            //visible: KConfig.KAuthorized.authorizeControlModule("kcm_cursortheme.desktop")
+            onTriggered: {
+                KCMUtils.KCMLauncher.openSystemSettings("kcm_cursortheme")
             }
+        }
+    ]
 
-            if (message.length !== 0) {
-                inlineMessage.text = message
-                inlineMessage.type = type
-                inlineMessage.visible = true
-            } else {
-                inlineMessage.visible = false
+    component Message : Kirigami.InlineMessage {
+        required property Touchpad.message message
+
+        position: Kirigami.InlineMessage.Position.Header
+        visible: message.type !== Touchpad.MessageType.None
+        text: message.text
+        type: {
+            switch (message.type) {
+            case Touchpad.MessageType.Error:
+                return Kirigami.MessageType.Error;
+            case Touchpad.MessageType.Information:
+            case Touchpad.MessageType.None:
+            default:
+                return Kirigami.MessageType.Information;
             }
         }
     }
@@ -59,15 +81,14 @@ KCM.SimpleKCM {
         text: i18ndc("kcm_touchpad", "@info:status placeholdermessage text", "No touchpad found")
         explanation: i18ndc("kcm_touchpad", "@info:usagetip placeholdermessage explanation", "Connect an external touchpad");
         anchors.centerIn: parent
-        visible: !backend.inputDevices?.length
+        visible: !root.backend.inputDevices?.length
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
     }
-
 
     Kirigami.FormLayout {
         id: formLayout
 
-        visible: backend.inputDevices?.length > 0
+        visible: root.backend.inputDevices?.length > 0
         enabled: visible
 
         // Device
@@ -77,16 +98,15 @@ KCM.SimpleKCM {
 
             visible: count > 1
             Layout.fillWidth: true
-            model: backend.inputDevices
+            model: root.backend.inputDevices
             textRole: "name"
 
-            Connections {
-                target: backend
-                function onDeviceRemoved(index) {
-                    if (index < deviceSelector.currentIndex) {
-                        --deviceSelector.currentIndex;
-                    }
-                }
+            Component.onCompleted: {
+                currentIndex = Qt.binding(() => root.KCMUtils.ConfigModule.currentDeviceIndex);
+            }
+
+            onActivated: {
+                root.KCMUtils.ConfigModule.currentDeviceIndex = currentIndex;
             }
         }
 
@@ -105,7 +125,6 @@ KCM.SimpleKCM {
             onToggled: {
                 if (root.device) {
                     root.device.enabled = checked
-                    root.changeSignal()
                 }
             }
         }
@@ -123,7 +142,6 @@ KCM.SimpleKCM {
             onToggled: {
                 if (root.device) {
                     root.device.disableEventsOnExternalMouse = checked
-                    root.changeSignal()
                 }
             }
         }
@@ -146,7 +164,6 @@ KCM.SimpleKCM {
                 onToggled: {
                     if (root.device) {
                         root.device.disableWhileTyping = checked
-                        root.changeSignal()
                     }
                 }
             }
@@ -179,7 +196,6 @@ KCM.SimpleKCM {
             onToggled: {
                 if (root.device) {
                     root.device.leftHanded = checked
-                    root.changeSignal()
                 }
             }
         }
@@ -195,7 +211,6 @@ KCM.SimpleKCM {
                 onToggled: {
                     if (root.device) {
                         root.device.middleEmulation = checked
-                        root.changeSignal()
                     }
                 }
             }
@@ -221,7 +236,6 @@ KCM.SimpleKCM {
             function onAccelSpeedChanged(val) {
                 if ((val / 100) !== root.device.pointerAcceleration) {
                     root.device.pointerAcceleration = val / 100
-                    root.changeSignal()
                 }
             }
 
@@ -303,7 +317,6 @@ KCM.SimpleKCM {
                     if (root.device) {
                         root.device.pointerAccelerationProfileFlat = !checked
                         root.device.pointerAccelerationProfileAdaptive = checked
-                        root.changeSignal()
                     }
                 }
             }
@@ -366,7 +379,6 @@ KCM.SimpleKCM {
                 onMoved: {
                     if (root.device) {
                         root.device.scrollFactor = values[value]
-                        root.changeSignal()
                     }
                 }
             }
@@ -399,7 +411,6 @@ KCM.SimpleKCM {
                     if (root.device) {
                         root.device.scrollTwoFinger = scrollMethodTwoFingers.checked
                         root.device.scrollEdge = scrollMethodTouchpadEdges.checked
-                        root.changeSignal()
                     }
                 }
             }
@@ -428,7 +439,6 @@ KCM.SimpleKCM {
             onToggled: {
                 if (root.device) {
                     root.device.naturalScroll = checked
-                    root.changeSignal()
                 }
             }
         }
@@ -443,7 +453,6 @@ KCM.SimpleKCM {
             onToggled: {
                 if (root.device) {
                     root.device.horizontalScrolling = !checked
-                    root.changeSignal()
                 }
             }
         }
@@ -471,7 +480,6 @@ KCM.SimpleKCM {
                     if (root.device) {
                         root.device.clickMethodAreas = rightClickMethodAreas.checked && rightClickMethodAreas.visible
                         root.device.clickMethodClickfinger = rightClickMethodClickfinger.checked && rightClickMethodClickfinger.visible
-                        root.changeSignal()
                     }
                 }
             }
@@ -540,7 +548,6 @@ KCM.SimpleKCM {
                 onClicked: {
                     if (root.device) {
                         root.device.middleEmulation = middleSoftwareEmulation.checked && middleSoftwareEmulation.visible
-                        root.changeSignal()
                     }
                 }
             }
@@ -585,7 +592,6 @@ KCM.SimpleKCM {
             onToggled: {
                 if (root.device) {
                     root.device.tapToClick = checked
-                    root.changeSignal()
                 }
             }
         }
@@ -601,7 +607,6 @@ KCM.SimpleKCM {
                 onToggled: {
                     if (root.device) {
                         root.device.tapAndDrag = checked
-                        root.changeSignal()
                     }
                 }
             }
@@ -620,7 +625,6 @@ KCM.SimpleKCM {
             onToggled: {
                 if (root.device) {
                     root.device.tapDragLock = checked
-                    root.changeSignal()
                 }
             }
         }
@@ -639,7 +643,6 @@ KCM.SimpleKCM {
                 onClicked: {
                     if (root.device) {
                         root.device.lmrTapButtonMap = multiTapMiddleClick.checked
-                        root.changeSignal()
                     }
                 }
             }

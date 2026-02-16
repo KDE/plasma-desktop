@@ -57,10 +57,9 @@ target_link_libraries(kcm_touchpad
     Qt::Core
     Qt::Widgets
     Qt::Quick
-    Qt::QuickWidgets
     KF6::CoreAddons
     KF6::I18n
-    KF6::KCMUtils
+    KF6::KCMUtilsQuick
     Plasma::Plasma
     KF6::WindowSystem
     touchpad_common
