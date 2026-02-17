@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-17 00:47+0000\n"
 "PO-Revision-Date: 2024-11-20 08:42\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -58,11 +58,12 @@ msgstr ""
 #: ui/main.qml:31
 #, fuzzy, kde-format
 #| msgid ""
-#| "Next time the computer is restarted, it will enter the UEFI setup screen."
+#| "Next time the computer is restarted, it will enter the firmware setup "
+#| "screen."
 msgctxt "@info:status inlinemessage"
 msgid ""
-"Next time the computer is restarted, it will enter the UEFI setup screen."
-msgstr "Пасля перазапуску камп'ютара адкрыецца экран кіравання UEFI."
+"Next time the computer is restarted, it will enter UEFI firmware settings."
+msgstr "Пасля перазапуску камп'ютара адкрыецца праграма кіравання прашыўкай."
 
 #: ui/main.qml:32
 #, fuzzy, kde-format
@@ -190,16 +191,30 @@ msgid "After next restart:"
 msgstr "Пасля наступнага перазапуску:"
 
 #: ui/main.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Enter firmware setup screen"
 msgctxt "@option:check"
-msgid "Enter UEFI setup screen"
-msgstr "Увайсці ў праграму кіравання UEFI"
+msgid "Enter UEFI firmware settings"
+msgstr "Увайсці ў праграму кіравання прашыўкай"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Увайсці ў праграму кіравання прашыўкай"
+
+#, fuzzy
+#~| msgid ""
+#~| "Next time the computer is restarted, it will enter the UEFI setup screen."
+#~ msgctxt "@info:status inlinemessage"
+#~ msgid ""
+#~ "Next time the computer is restarted, it will enter the UEFI setup screen."
+#~ msgstr "Пасля перазапуску камп'ютара адкрыецца экран кіравання UEFI."
+
+#~ msgctxt "@option:check"
+#~ msgid "Enter UEFI setup screen"
+#~ msgstr "Увайсці ў праграму кіравання UEFI"
 
 #~ msgid ""
 #~ "The system must be restarted before manual session saving becomes active."

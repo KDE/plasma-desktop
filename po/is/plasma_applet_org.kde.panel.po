@@ -1,16 +1,16 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Sveinn í Felli <sv1@fellsnet.is>, 2022.
+# SPDX-FileCopyrightText: 2022, 2026 Sveinn í Felli <sv1@fellsnet.is>
 # SPDX-FileCopyrightText: 2022, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-29 00:45+0000\n"
-"PO-Revision-Date: 2024-12-13 10:33+0000\n"
-"Last-Translator: Gummi <gudmundure@gmail.com>\n"
-"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-02-16 11:07+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,29 +19,25 @@ msgstr ""
 "X-Generator: Lokalize 23.08.5\n"
 
 #: ConfigOverlay.qml:333
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:inmenu removes widget"
 msgid "Remove"
 msgstr "Fjarlægja"
 
 #: ConfigOverlay.qml:343
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:inmenu opens widget config dialog"
 msgid "Configure…"
 msgstr "Grunnstilla…"
 
 #: ConfigOverlay.qml:354
-#, fuzzy, kde-format
-#| msgid "Show Alternatives…"
+#, kde-format
 msgctxt "@action:inmenu opens widget alternatives explorer"
 msgid "Show Alternatives…"
 msgstr "Sýna aðra valkosti…"
 
 #: ConfigOverlay.qml:373
-#, fuzzy, kde-format
-#| msgid "Spacer width"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Spacer width"
 msgstr "Breidd bils"
@@ -54,8 +50,7 @@ msgid "Flexible size"
 msgstr "Sveigjanleg stærð"
 
 #: main.qml:462
-#, fuzzy, kde-format
-#| msgid "Open Panel configuration ui"
+#, kde-format
 msgctxt ""
 "@info:whatsthis Accessible description for entering Panel edit mode click "
 "area"
@@ -63,8 +58,7 @@ msgid "Open Panel configuration ui"
 msgstr "Opna stillingaviðmót skjáborðsstiku"
 
 #: main.qml:469
-#, fuzzy, kde-format
-#| msgid "Add Widgets…"
+#, kde-format
 msgctxt "@action:button opens widget explorer"
 msgid "Add Widgets…"
-msgstr "Bæta við græjum..."
+msgstr "Bæta við skjágræjum…"

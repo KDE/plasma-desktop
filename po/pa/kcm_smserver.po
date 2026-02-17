@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-17 00:47+0000\n"
 "PO-Revision-Date: 2024-07-21 22:13-0500\n"
 "Last-Translator: aalam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -52,11 +52,12 @@ msgstr "ਫਿਰਮਵੇਅਰ ਸੈਟਅੱਪ ਕਰਨ ਲਈ ਮੁੜ-�
 #: ui/main.qml:31
 #, fuzzy, kde-format
 #| msgid ""
-#| "Next time the computer is restarted, it will enter the UEFI setup screen."
+#| "Next time the computer is restarted, it will enter the firmware setup "
+#| "screen."
 msgctxt "@info:status inlinemessage"
 msgid ""
-"Next time the computer is restarted, it will enter the UEFI setup screen."
-msgstr "ਅਗਲੀ ਵਾਰ ਜਦੋਂ ਕੰਪਿਊਟਰ ਮੁੜ-ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ ਤਾਂ ਇਹ UEFI ਸੈਟਅੱਪ ਸਕਰੀਨ ਵਿੱਚ ਜਾਏਗਾ।"
+"Next time the computer is restarted, it will enter UEFI firmware settings."
+msgstr "ਅਗਲੀ ਵਾਰ ਜਦੋਂ ਕੰਪਿਊਟਰ ਮੁੜ-ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ ਤਾਂ ਇਹ ਫਿਰਮਵੇਅਰ ਸੈਟਅੱਪ ਸਕਰੀਨ ਵਿੱਚ ਜਾਏਗਾ।"
 
 #: ui/main.qml:32
 #, fuzzy, kde-format
@@ -174,16 +175,30 @@ msgid "After next restart:"
 msgstr "ਅਗਲੀ ਵਾਰ ਮੁੜ-ਚਾਲੂ ਹੋਣ ਦੇ ਬਾਅਦ:"
 
 #: ui/main.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Enter firmware setup screen"
 msgctxt "@option:check"
-msgid "Enter UEFI setup screen"
-msgstr "UEFI ਸੈਟਅੱਪ ਸਕਰੀਨ ਵਿੱਚ ਜਾਓ"
+msgid "Enter UEFI firmware settings"
+msgstr "ਫਿਰਮਵੇਅਰ ਸੈਟਅੱਪ ਸਕਰੀਨ ਵਿੱਚ ਜਾਓ"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "ਫਿਰਮਵੇਅਰ ਸੈਟਅੱਪ ਸਕਰੀਨ ਵਿੱਚ ਜਾਓ"
+
+#, fuzzy
+#~| msgid ""
+#~| "Next time the computer is restarted, it will enter the UEFI setup screen."
+#~ msgctxt "@info:status inlinemessage"
+#~ msgid ""
+#~ "Next time the computer is restarted, it will enter the UEFI setup screen."
+#~ msgstr "ਅਗਲੀ ਵਾਰ ਜਦੋਂ ਕੰਪਿਊਟਰ ਮੁੜ-ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ ਤਾਂ ਇਹ UEFI ਸੈਟਅੱਪ ਸਕਰੀਨ ਵਿੱਚ ਜਾਏਗਾ।"
+
+#~ msgctxt "@option:check"
+#~ msgid "Enter UEFI setup screen"
+#~ msgstr "UEFI ਸੈਟਅੱਪ ਸਕਰੀਨ ਵਿੱਚ ਜਾਓ"
 
 #~ msgid ""
 #~ "The system must be restarted before manual session saving becomes active."

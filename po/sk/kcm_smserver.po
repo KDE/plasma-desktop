@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-17 00:47+0000\n"
 "PO-Revision-Date: 2025-05-30 20:35+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -56,12 +56,13 @@ msgstr "Zlyhalo vyžiadanie reštartovania do nastavení firmvéru: %1"
 #: ui/main.qml:31
 #, fuzzy, kde-format
 #| msgid ""
-#| "Next time the computer is restarted, it will enter the UEFI setup screen."
+#| "Next time the computer is restarted, it will enter the firmware setup "
+#| "screen."
 msgctxt "@info:status inlinemessage"
 msgid ""
-"Next time the computer is restarted, it will enter the UEFI setup screen."
+"Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"Keď sa počítač najbližšie reštartuje, vojde na obrazovku nastavení UEFI."
+"Keď sa počítač najbližšie reštartuje, vojde na obrazovku nastavení firmvéru."
 
 #: ui/main.qml:32
 #, fuzzy, kde-format
@@ -191,16 +192,31 @@ msgid "After next restart:"
 msgstr "Po ďalšom reštarte:"
 
 #: ui/main.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Enter firmware setup screen"
 msgctxt "@option:check"
-msgid "Enter UEFI setup screen"
-msgstr "Vstúpiť do obrazovky nastavenia UEFI"
+msgid "Enter UEFI firmware settings"
+msgstr "Vstúpiť do obrazovky nastavenia firmvéru"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Vstúpiť do obrazovky nastavenia firmvéru"
+
+#, fuzzy
+#~| msgid ""
+#~| "Next time the computer is restarted, it will enter the UEFI setup screen."
+#~ msgctxt "@info:status inlinemessage"
+#~ msgid ""
+#~ "Next time the computer is restarted, it will enter the UEFI setup screen."
+#~ msgstr ""
+#~ "Keď sa počítač najbližšie reštartuje, vojde na obrazovku nastavení UEFI."
+
+#~ msgctxt "@option:check"
+#~ msgid "Enter UEFI setup screen"
+#~ msgstr "Vstúpiť do obrazovky nastavenia UEFI"
 
 #~ msgid ""
 #~ "The system must be restarted before manual session saving becomes active."

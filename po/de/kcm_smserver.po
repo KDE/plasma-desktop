@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_smserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-17 00:47+0000\n"
 "PO-Revision-Date: 2026-01-12 20:15+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -56,12 +56,16 @@ msgstr ""
 "%1"
 
 #: ui/main.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:status inlinemessage"
+#| msgid ""
+#| "Next time the computer is restarted, it will enter the firmware setup "
+#| "screen."
 msgctxt "@info:status inlinemessage"
 msgid ""
-"Next time the computer is restarted, it will enter the UEFI setup screen."
+"Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"Beim nächsten Neustart des Rechners wird der UEFI-Einrichtungsdialog "
+"Beim nächsten Neustart des Rechners wird der Firmware-Einrichtungsdialog "
 "angezeigt."
 
 #: ui/main.qml:32
@@ -185,16 +189,29 @@ msgid "After next restart:"
 msgstr "Nach dem nächsten Neustart:"
 
 #: ui/main.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Enter firmware setup screen"
 msgctxt "@option:check"
-msgid "Enter UEFI setup screen"
-msgstr "UEFI-Einrichtungsdialog öffnen"
+msgid "Enter UEFI firmware settings"
+msgstr "Firmware-Einrichtungsdialog anzeigen"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Firmware-Einrichtungsdialog anzeigen"
+
+#~ msgctxt "@info:status inlinemessage"
+#~ msgid ""
+#~ "Next time the computer is restarted, it will enter the UEFI setup screen."
+#~ msgstr ""
+#~ "Beim nächsten Neustart des Rechners wird der UEFI-Einrichtungsdialog "
+#~ "angezeigt."
+
+#~ msgctxt "@option:check"
+#~ msgid "Enter UEFI setup screen"
+#~ msgstr "UEFI-Einrichtungsdialog öffnen"
 
 #~ msgid ""
 #~ "The system must be restarted before manual session saving becomes active."

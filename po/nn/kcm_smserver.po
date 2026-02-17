@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-17 00:47+0000\n"
 "PO-Revision-Date: 2024-07-14 13:03+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -54,13 +54,14 @@ msgstr "Feil ved førespurnad om omstart for fastvareoppsett: %1"
 #: ui/main.qml:31
 #, fuzzy, kde-format
 #| msgid ""
-#| "Next time the computer is restarted, it will enter the UEFI setup screen."
+#| "Next time the computer is restarted, it will enter the firmware setup "
+#| "screen."
 msgctxt "@info:status inlinemessage"
 msgid ""
-"Next time the computer is restarted, it will enter the UEFI setup screen."
+"Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"Når maskina vert starta på nytt, vil ho starta innstillingane for UEFI-"
-"oppsett."
+"Når maskina vert starta på nytt, vil ho starta innstillingane for "
+"fastvareoppsett."
 
 #: ui/main.qml:32
 #, fuzzy, kde-format
@@ -187,13 +188,29 @@ msgid "After next restart:"
 msgstr "Etter neste omstart:"
 
 #: ui/main.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Enter firmware setup screen"
 msgctxt "@option:check"
-msgid "Enter UEFI setup screen"
-msgstr "Gå inn i UEFI-oppsettmenyen"
+msgid "Enter UEFI firmware settings"
+msgstr "Gå til fastvareoppsett-skjermen"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Gå til fastvareoppsett-skjermen"
+
+#, fuzzy
+#~| msgid ""
+#~| "Next time the computer is restarted, it will enter the UEFI setup screen."
+#~ msgctxt "@info:status inlinemessage"
+#~ msgid ""
+#~ "Next time the computer is restarted, it will enter the UEFI setup screen."
+#~ msgstr ""
+#~ "Når maskina vert starta på nytt, vil ho starta innstillingane for UEFI-"
+#~ "oppsett."
+
+#~ msgctxt "@option:check"
+#~ msgid "Enter UEFI setup screen"
+#~ msgstr "Gå inn i UEFI-oppsettmenyen"

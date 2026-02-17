@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-17 00:47+0000\n"
 "PO-Revision-Date: 2026-01-27 19:45+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -61,12 +61,16 @@ msgid "Failed to request restart to firmware setup: %1"
 msgstr "Не удалось запросить перезагрузку в экран настройки прошивки: %1"
 
 #: ui/main.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:status inlinemessage"
+#| msgid ""
+#| "Next time the computer is restarted, it will enter the firmware setup "
+#| "screen."
 msgctxt "@info:status inlinemessage"
 msgid ""
-"Next time the computer is restarted, it will enter the UEFI setup screen."
+"Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"При следующей перезагрузке компьютера будет показан экран настройки UEFI."
+"При следующей перезагрузке компьютера будет показан экран настройки прошивки."
 
 #: ui/main.qml:32
 #, kde-format
@@ -188,16 +192,28 @@ msgid "After next restart:"
 msgstr "При следующей перезагрузке:"
 
 #: ui/main.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Enter firmware setup screen"
 msgctxt "@option:check"
-msgid "Enter UEFI setup screen"
-msgstr "Показать экран настройки UEFI"
+msgid "Enter UEFI firmware settings"
+msgstr "Показать экран настройки встроенного ПО"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Показать экран настройки встроенного ПО"
+
+#~ msgctxt "@info:status inlinemessage"
+#~ msgid ""
+#~ "Next time the computer is restarted, it will enter the UEFI setup screen."
+#~ msgstr ""
+#~ "При следующей перезагрузке компьютера будет показан экран настройки UEFI."
+
+#~ msgctxt "@option:check"
+#~ msgid "Enter UEFI setup screen"
+#~ msgstr "Показать экран настройки UEFI"
 
 #~ msgid ""
 #~ "The system must be restarted before manual session saving becomes active."

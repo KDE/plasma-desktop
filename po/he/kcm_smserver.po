@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-17 00:47+0000\n"
 "PO-Revision-Date: 2026-01-09 17:25+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -59,11 +59,15 @@ msgid "Failed to request restart to firmware setup: %1"
 msgstr "בקשת הפעלה מחדש להגדרת הקושחה נכשלה: %1"
 
 #: ui/main.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:status inlinemessage"
+#| msgid ""
+#| "Next time the computer is restarted, it will enter the firmware setup "
+#| "screen."
 msgctxt "@info:status inlinemessage"
 msgid ""
-"Next time the computer is restarted, it will enter the UEFI setup screen."
-msgstr "בפעם הבאה שהמחשב יופעל מחדש, הוא ייכנס למסך הגדרות ה־UEFI."
+"Next time the computer is restarted, it will enter UEFI firmware settings."
+msgstr "בפעם הבאה שהמחשב יופעל מחדש, הוא ייכנס למסך הגדרות הקושלה."
 
 #: ui/main.qml:32
 #, kde-format
@@ -182,16 +186,27 @@ msgid "After next restart:"
 msgstr "אחרי ההפעלה הבאה מחדש:"
 
 #: ui/main.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Enter firmware setup screen"
 msgctxt "@option:check"
-msgid "Enter UEFI setup screen"
-msgstr "להיכנס למסך הגדרות UEFI"
+msgid "Enter UEFI firmware settings"
+msgstr "להיכנס למסך הגדרות קושחה"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "להיכנס למסך הגדרות קושחה"
+
+#~ msgctxt "@info:status inlinemessage"
+#~ msgid ""
+#~ "Next time the computer is restarted, it will enter the UEFI setup screen."
+#~ msgstr "בפעם הבאה שהמחשב יופעל מחדש, הוא ייכנס למסך הגדרות ה־UEFI."
+
+#~ msgctxt "@option:check"
+#~ msgid "Enter UEFI setup screen"
+#~ msgstr "להיכנס למסך הגדרות UEFI"
 
 #~ msgid ""
 #~ "The system must be restarted before manual session saving becomes active."

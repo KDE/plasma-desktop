@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-17 00:47+0000\n"
 "PO-Revision-Date: 2025-02-23 13:15+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -58,11 +58,12 @@ msgstr "ファームウェア設定のための再起動の要求に失敗しま
 #: ui/main.qml:31
 #, fuzzy, kde-format
 #| msgid ""
-#| "Next time the computer is restarted, it will enter the UEFI setup screen."
+#| "Next time the computer is restarted, it will enter the firmware setup "
+#| "screen."
 msgctxt "@info:status inlinemessage"
 msgid ""
-"Next time the computer is restarted, it will enter the UEFI setup screen."
-msgstr "次回の再起動時に UEFI 設定画面に入ります。"
+"Next time the computer is restarted, it will enter UEFI firmware settings."
+msgstr "次回の再起動時にファームウェア設定画面に入ります。"
 
 #: ui/main.qml:32
 #, fuzzy, kde-format
@@ -193,13 +194,27 @@ msgid "After next restart:"
 msgstr "次の再起動後:"
 
 #: ui/main.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Enter firmware setup screen"
 msgctxt "@option:check"
-msgid "Enter UEFI setup screen"
-msgstr "UEFI 設定画面に入る"
+msgid "Enter UEFI firmware settings"
+msgstr "ファームウェア設定画面に入る"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "ファームウェア設定画面に入る"
+
+#, fuzzy
+#~| msgid ""
+#~| "Next time the computer is restarted, it will enter the UEFI setup screen."
+#~ msgctxt "@info:status inlinemessage"
+#~ msgid ""
+#~ "Next time the computer is restarted, it will enter the UEFI setup screen."
+#~ msgstr "次回の再起動時に UEFI 設定画面に入ります。"
+
+#~ msgctxt "@option:check"
+#~ msgid "Enter UEFI setup screen"
+#~ msgstr "UEFI 設定画面に入る"

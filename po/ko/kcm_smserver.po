@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-17 00:47+0000\n"
 "PO-Revision-Date: 2026-02-03 21:42+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -50,11 +50,15 @@ msgid "Failed to request restart to firmware setup: %1"
 msgstr "펌웨어 설정으로 다시 시작 요청 실패: %1"
 
 #: ui/main.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:status inlinemessage"
+#| msgid ""
+#| "Next time the computer is restarted, it will enter the firmware setup "
+#| "screen."
 msgctxt "@info:status inlinemessage"
 msgid ""
-"Next time the computer is restarted, it will enter the UEFI setup screen."
-msgstr "컴퓨터를 다음에 다시 시작할 때 UEFI 설정 화면으로 진입합니다."
+"Next time the computer is restarted, it will enter UEFI firmware settings."
+msgstr "컴퓨터를 다음에 다시 시작할 때 펌웨어 설정 화면으로 진입합니다."
 
 #: ui/main.qml:32
 #, kde-format
@@ -171,16 +175,27 @@ msgid "After next restart:"
 msgstr "다음에 다시 시작할 때:"
 
 #: ui/main.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Enter firmware setup screen"
 msgctxt "@option:check"
-msgid "Enter UEFI setup screen"
-msgstr "UEFI 설정 화면 진입"
+msgid "Enter UEFI firmware settings"
+msgstr "펌웨어 설정 화면 진입"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "펌웨어 설정 화면 진입"
+
+#~ msgctxt "@info:status inlinemessage"
+#~ msgid ""
+#~ "Next time the computer is restarted, it will enter the UEFI setup screen."
+#~ msgstr "컴퓨터를 다음에 다시 시작할 때 UEFI 설정 화면으로 진입합니다."
+
+#~ msgctxt "@option:check"
+#~ msgid "Enter UEFI setup screen"
+#~ msgstr "UEFI 설정 화면 진입"
 
 #~ msgid ""
 #~ "The system must be restarted before manual session saving becomes active."

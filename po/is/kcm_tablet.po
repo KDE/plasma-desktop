@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-15 00:45+0000\n"
-"PO-Revision-Date: 2026-02-15 13:24+0000\n"
+"PO-Revision-Date: 2026-02-16 09:30+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -129,7 +129,7 @@ msgstr "Teygja og fylla"
 #, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
-msgstr "Halda myndhlutfalli og passa á skjá"
+msgstr "Halda stærðarhlutföllum og aðlögun að skjá"
 
 #: kcmtablet.cpp:166 ui/DisplayTab.qml:100
 #, kde-format
@@ -447,8 +447,7 @@ msgid "No drawing tablets found"
 msgstr "Engin teikniborð fundust"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "Connect a drawing tablet"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect a drawing tablet"
 msgstr "Tengja teikniborð"
@@ -496,11 +495,10 @@ msgid "Pad"
 msgstr "Bakki"
 
 #: ui/MissingPadTab.qml:15
-#, fuzzy, kde-format
-#| msgid "No pad inputs found"
+#, kde-format
 msgctxt "@info placeholdermessage main text"
 msgid "No pad inputs found"
-msgstr "Engir inntaksplattar fundust"
+msgstr "Engin inntök fundust fyrir bakka"
 
 #: ui/MissingPadTab.qml:16
 #, kde-format
@@ -509,10 +507,11 @@ msgid ""
 "No buttons or other inputs were detected. This could mean the driver for "
 "this device is missing."
 msgstr ""
+"Engir hnappar eða önnur inntaksatriði fundust. Þetta gæti þýtt að rekilinn "
+"fyrir þetta tæki vanti."
 
 #: ui/PadTab.qml:37
-#, fuzzy, kde-format
-#| msgid "Pad ring %1:"
+#, kde-format
 msgctxt "@label for graphics tablet ring config, % is number of ring"
 msgid "Pad ring %1:"
 msgstr "Bakkahringur %1:"
@@ -526,8 +525,7 @@ msgid "pad ring/dial %1"
 msgstr "bakkahringur/skífa %1:"
 
 #: ui/PadTab.qml:100
-#, fuzzy, kde-format
-#| msgid "Pad dial %1:"
+#, kde-format
 msgctxt "@label for graphics tablet ring config, % is number of dial"
 msgid "Pad dial %1:"
 msgstr "Bakkaskífa %1:"
@@ -541,8 +539,7 @@ msgid "pad dial %1"
 msgstr "bakkaskífa %1"
 
 #: ui/PadTab.qml:138
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt "@label for graphics tablet button config, % is number of button"
 msgid "Pad button %1:"
 msgstr "Bakkahnappur %1:"

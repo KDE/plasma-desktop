@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-17 00:47+0000\n"
 "PO-Revision-Date: 2026-02-15 22:43+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -56,13 +56,17 @@ msgstr ""
 "Ezin izan da firmwarearen ezarpenetara berrabiarazteko eskaera egin: %1"
 
 #: ui/main.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:status inlinemessage"
+#| msgid ""
+#| "Next time the computer is restarted, it will enter the firmware setup "
+#| "screen."
 msgctxt "@info:status inlinemessage"
 msgid ""
-"Next time the computer is restarted, it will enter the UEFI setup screen."
+"Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"Ordenagailua berrabiatzen den hurrengoan, UEFI konfigurazio-pantailara "
-"sartuko da."
+"Ordenagailua berrabiatzen den hurrengo aldian, firmwarearen konfigurazio-"
+"pantailara sartuko da."
 
 #: ui/main.qml:32
 #, kde-format
@@ -184,16 +188,29 @@ msgid "After next restart:"
 msgstr "Hurrengo berrabiaraztean:"
 
 #: ui/main.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Enter firmware setup screen"
 msgctxt "@option:check"
-msgid "Enter UEFI setup screen"
-msgstr "Sartu UEFI konfigurazio-pantailara"
+msgid "Enter UEFI firmware settings"
+msgstr "Sartu firmwarearen konfigurazio-pantailara"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Sartu firmwarearen konfigurazio-pantailara"
+
+#~ msgctxt "@info:status inlinemessage"
+#~ msgid ""
+#~ "Next time the computer is restarted, it will enter the UEFI setup screen."
+#~ msgstr ""
+#~ "Ordenagailua berrabiatzen den hurrengoan, UEFI konfigurazio-pantailara "
+#~ "sartuko da."
+
+#~ msgctxt "@option:check"
+#~ msgid "Enter UEFI setup screen"
+#~ msgstr "Sartu UEFI konfigurazio-pantailara"
 
 #~ msgid ""
 #~ "The system must be restarted before manual session saving becomes active."

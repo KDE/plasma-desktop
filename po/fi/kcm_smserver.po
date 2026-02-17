@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-17 00:47+0000\n"
 "PO-Revision-Date: 2025-02-16 11:01+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -60,12 +60,14 @@ msgstr "Pyyntö käynnistää laiteohjelmiston asetusohjelmaan epäonnistui: %1"
 #: ui/main.qml:31
 #, fuzzy, kde-format
 #| msgid ""
-#| "Next time the computer is restarted, it will enter the UEFI setup screen."
+#| "Next time the computer is restarted, it will enter the firmware setup "
+#| "screen."
 msgctxt "@info:status inlinemessage"
 msgid ""
-"Next time the computer is restarted, it will enter the UEFI setup screen."
+"Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"Tietokoneen seuraavan kerran käynnistyessä siirrytään UEFI-asetusnäyttöön."
+"Kun tietokone seuraavan kerran käynnistyy, mennään laiteohjelmiston "
+"asetusnäyttöön."
 
 #: ui/main.qml:32
 #, fuzzy, kde-format
@@ -199,16 +201,31 @@ msgid "After next restart:"
 msgstr "Seuraavan käynnistyksen jälkeen:"
 
 #: ui/main.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Enter firmware setup screen"
 msgctxt "@option:check"
-msgid "Enter UEFI setup screen"
-msgstr "Siirry UEFI-asetuksiin"
+msgid "Enter UEFI firmware settings"
+msgstr "Siirry laiteohjelmiston asetuksiin"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Siirry laiteohjelmiston asetuksiin"
+
+#, fuzzy
+#~| msgid ""
+#~| "Next time the computer is restarted, it will enter the UEFI setup screen."
+#~ msgctxt "@info:status inlinemessage"
+#~ msgid ""
+#~ "Next time the computer is restarted, it will enter the UEFI setup screen."
+#~ msgstr ""
+#~ "Tietokoneen seuraavan kerran käynnistyessä siirrytään UEFI-asetusnäyttöön."
+
+#~ msgctxt "@option:check"
+#~ msgid "Enter UEFI setup screen"
+#~ msgstr "Siirry UEFI-asetuksiin"
 
 #~ msgid ""
 #~ "The system must be restarted before manual session saving becomes active."

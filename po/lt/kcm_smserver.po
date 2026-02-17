@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-17 00:47+0000\n"
 "PO-Revision-Date: 2026-01-13 01:27+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -52,13 +52,17 @@ msgstr ""
 "sąranką: %1"
 
 #: ui/main.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:status inlinemessage"
+#| msgid ""
+#| "Next time the computer is restarted, it will enter the firmware setup "
+#| "screen."
 msgctxt "@info:status inlinemessage"
 msgid ""
-"Next time the computer is restarted, it will enter the UEFI setup screen."
+"Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"Kitą kartą, kai kompiuteris bus paleistas iš naujo, jis įžengs į UEFI "
-"sąrankos langą."
+"Kitą kartą, kai kompiuteris bus paleistas iš naujo, jis įžengs į programinės "
+"aparatinės įrangos sąrankos langą."
 
 #: ui/main.qml:32
 #, kde-format
@@ -180,16 +184,29 @@ msgid "After next restart:"
 msgstr "Po kito paleidimo iš naujo:"
 
 #: ui/main.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Enter firmware setup screen"
 msgctxt "@option:check"
-msgid "Enter UEFI setup screen"
-msgstr "Įžengti į UEFI sąrankos langą"
+msgid "Enter UEFI firmware settings"
+msgstr "Įžengti į programinės aparatinės įrangos sąrankos langą"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Įžengti į programinės aparatinės įrangos sąrankos langą"
+
+#~ msgctxt "@info:status inlinemessage"
+#~ msgid ""
+#~ "Next time the computer is restarted, it will enter the UEFI setup screen."
+#~ msgstr ""
+#~ "Kitą kartą, kai kompiuteris bus paleistas iš naujo, jis įžengs į UEFI "
+#~ "sąrankos langą."
+
+#~ msgctxt "@option:check"
+#~ msgid "Enter UEFI setup screen"
+#~ msgstr "Įžengti į UEFI sąrankos langą"
 
 #~ msgid ""
 #~ "The system must be restarted before manual session saving becomes active."

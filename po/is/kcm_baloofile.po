@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # SPDX-FileCopyrightText: 2023, 2024, 2025 gummi <gudmundure@gmail.com>
-# SPDX-FileCopyrightText: 2025 Sveinn í Felli <sv1@fellsnet.is>
+# SPDX-FileCopyrightText: 2025, 2026 Sveinn í Felli <sv1@fellsnet.is>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2025-12-02 13:29+0000\n"
+"PO-Revision-Date: 2026-02-16 11:00+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -19,24 +19,19 @@ msgstr ""
 "X-Generator: Lokalize 23.08.5\n"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Pause Indexer"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pause Indexer"
 msgstr "Gera hlé á skráningu"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Resume Indexer"
+#, kde-format
 msgctxt "@action:button"
 msgid "Resume Indexer"
 msgstr "Halda áfram skráningu"
 
 #: ui/main.qml:61
-#, fuzzy, kde-format
-#| msgid ""
-#| "This will disable file searching in KRunner and launcher menus, and "
-#| "remove extended metadata display from all KDE applications."
+#, kde-format
 msgctxt "@info inlinemessage"
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -46,12 +41,7 @@ msgstr ""
 "ítarlega birtingu lýsigagna úr öllum KDE-forritum."
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid ""
-#| "Do you want to delete the saved index data? %1 of space will be freed, "
-#| "but if indexing is re-enabled later, the entire index will have to be re-"
-#| "created from scratch. This may take some time, depending on how many "
-#| "files you have."
+#, kde-format
 msgctxt "@info:inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -61,21 +51,17 @@ msgid ""
 msgstr ""
 "Viltu eyða vistuðum skráningargögnum? Það losar %1 af diskplássi en ef "
 "atriðaskráning er virkjuð aftur síðar þarf að búa til alla atriðaskrána upp "
-"á nýtt. Það getur tekið talsverðan tíma, allt eftir því hvað þú ert með "
-"margar skrár."
+"á nýtt. Það getur tekið talsverðan tíma, allt eftir því hve margar skrár "
+"eigi að yfirfara."
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgid "Delete Index Data"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delete Index Data"
 msgstr "Eyða atriðaskráningargögnum"
 
 #: ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid ""
-#| "File Search helps you quickly locate your files. You can choose which "
-#| "folders and what types of file data are indexed."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
@@ -94,28 +80,25 @@ msgstr "Gögn sem á að skrá:"
 #, kde-format
 msgctxt "@option:radio Data to index"
 msgid "Nothing (disable indexing entirely)"
-msgstr ""
+msgstr "Ekkert (gera atriðaskráningu alveg óvirka)"
 
 #: ui/main.qml:121
-#, fuzzy, kde-format
-#| msgid "File names only"
+#, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names only"
 msgstr "Skráaheiti eingöngu"
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "File names and contents"
+#, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names and contents"
-msgstr "Skráaheiti og innihald"
+msgstr "Skráaheiti og efni"
 
 #: ui/main.qml:157
-#, fuzzy, kde-format
-#| msgid "Hidden files and folders"
+#, kde-format
 msgctxt "@option:check"
 msgid "Also index hidden files and folders"
-msgstr "Faldar skrár og möppur"
+msgstr "Einnig atriðaskrá faldar skrár og möppur"
 
 #: ui/main.qml:183
 #, kde-format
@@ -148,15 +131,13 @@ msgid "Currently indexing: <filename>%1</filename>"
 msgstr "Er að skrá núna: <filename>%1</filename>"
 
 #: ui/main.qml:270
-#, fuzzy, kde-format
-#| msgid "Not indexed"
+#, kde-format
 msgctxt "@info:status"
 msgid "Not indexed"
 msgstr "Ekki skráð"
 
 #: ui/main.qml:271
-#, fuzzy, kde-format
-#| msgid "Indexed"
+#, kde-format
 msgctxt "@info:status"
 msgid "Indexed"
 msgstr "Skráð"
@@ -168,15 +149,13 @@ msgid "Remove entry"
 msgstr "Fjarlægja færslu"
 
 #: ui/main.qml:318
-#, fuzzy, kde-format
-#| msgid "Select a folder to include"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to include"
 msgstr "Velja möppu sem á að taka með"
 
 #: ui/main.qml:318
-#, fuzzy, kde-format
-#| msgid "Select a folder to exclude"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to exclude"
 msgstr "Velja möppu sem á að útiloka"

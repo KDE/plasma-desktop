@@ -2,14 +2,14 @@
 # Copyright (C) 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2008, 2009, 2013, 2022, 2025 Sveinn í Felli <sveinki@nett.is>
+# SPDX-FileCopyrightText: 2008, 2009, 2013, 2022, 2025, 2026 Sveinn í Felli <sveinki@nett.is>
 # SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-29 00:45+0000\n"
-"PO-Revision-Date: 2025-12-02 10:30+0000\n"
+"PO-Revision-Date: 2026-02-16 11:05+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -22,127 +22,109 @@ msgstr ""
 "X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/config/config.qml:17
-#, fuzzy, kde-format
-#| msgid "Location"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Location"
 msgstr "Staðsetning"
 
 #: package/contents/config/config.qml:24
-#, fuzzy, kde-format
-#| msgid "Icons"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Icons"
-msgstr "Tákn"
+msgstr "Táknmyndir"
 
 #: package/contents/config/config.qml:31
-#, fuzzy, kde-format
-#| msgid "Filter"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Filter"
 msgstr "Sía"
 
 #: package/contents/ui/BackButtonItem.qml:105
-#, fuzzy, kde-format
-#| msgid "Back"
+#, kde-format
 msgctxt "@action:button"
 msgid "Back"
 msgstr "Til baka"
 
 #: package/contents/ui/ConfigFilter.qml:63
-#, fuzzy, kde-format
-#| msgid "Files:"
+#, kde-format
 msgctxt "@label:listbox filter mode"
 msgid "Files:"
-msgstr "Skrár"
+msgstr "Skrár:"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, fuzzy, kde-format
-#| msgid "Show all"
+#, kde-format
 msgctxt "@item:inlistbox filter mode"
 msgid "Show all"
 msgstr "Sýna allt"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, fuzzy, kde-format
-#| msgid "Show matching"
+#, kde-format
 msgctxt "@item:inlistbox filter mode"
 msgid "Show matching"
 msgstr "Sýna samsvarandi"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, fuzzy, kde-format
-#| msgid "Hide matching"
+#, kde-format
 msgctxt "@item:inlistbox filter mode"
 msgid "Hide matching"
 msgstr "Fela samsvarandi"
 
 #: package/contents/ui/ConfigFilter.qml:69
-#, fuzzy, kde-format
-#| msgid "File name pattern:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "File name pattern:"
-msgstr "Mynstur skráarheitis:"
+msgstr "Mynstur skráaheita:"
 
 #: package/contents/ui/ConfigFilter.qml:76
-#, fuzzy, kde-format
-#| msgid "File types:"
+#, kde-format
 msgctxt "@label:textbox filter list by"
 msgid "File types:"
 msgstr "Skráategundir:"
 
 #: package/contents/ui/ConfigFilter.qml:82
-#, fuzzy, kde-format
-#| msgid "Show hidden files:"
+#, kde-format
 msgctxt "@option:check prefix"
 msgid "Show hidden files:"
 msgstr "Sýna faldar skrár:"
 
 #: package/contents/ui/ConfigFilter.qml:111
-#, fuzzy, kde-format
-#| msgid "File Type"
+#, kde-format
 msgctxt "@title:column"
 msgid "File Type"
 msgstr "Skráartegund"
 
 #: package/contents/ui/ConfigFilter.qml:112
-#, fuzzy, kde-format
-#| msgid "Description"
+#, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Lýsing"
 
 #: package/contents/ui/ConfigFilter.qml:182
-#, fuzzy, kde-format
-#| msgid "Select All"
+#, kde-format
 msgctxt "@action:button tooltip only Select all filetypes"
 msgid "Select All"
 msgstr "Velja allt"
 
 #: package/contents/ui/ConfigFilter.qml:192
-#, fuzzy, kde-format
-#| msgid "Deselect All"
+#, kde-format
 msgctxt "@action:button tooltip only Deselect all filetypes"
 msgid "Deselect All"
 msgstr "Afvelja allt"
 
 #: package/contents/ui/ConfigFilter.qml:201
-#, fuzzy, kde-format
-#| msgid "Switch Sort Order"
+#, kde-format
 msgctxt "@action:button tooltip only, ascending/descending"
 msgid "Switch Sort Order"
-msgstr "Svissa röðunarstefnu"
+msgstr "Skipta um röðunarstefnu"
 
 #: package/contents/ui/ConfigIcons.qml:57
-#, fuzzy, kde-format
-#| msgid "Panel button:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox + button"
 msgid "Panel button:"
 msgstr "Skjáborðsstikuhnappur:"
 
 #: package/contents/ui/ConfigIcons.qml:63
-#, fuzzy, kde-format
-#| msgid "Use a custom icon"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use a custom icon"
 msgstr "Nota sérsniðið tákn"
@@ -160,8 +142,7 @@ msgid "Clear Icon"
 msgstr "Hreinsa tákn"
 
 #: package/contents/ui/ConfigIcons.qml:122
-#, fuzzy, kde-format
-#| msgid "Arrangement:"
+#, kde-format
 msgctxt "@label:listbox columns/rows"
 msgid "Arrangement:"
 msgstr "Uppstilling:"
@@ -179,8 +160,7 @@ msgid "In Rows"
 msgstr "Í röðum"
 
 #: package/contents/ui/ConfigIcons.qml:135
-#, fuzzy, kde-format
-#| msgid "Sort Alignment:"
+#, kde-format
 msgctxt "@label:listbox, LtR/RtL"
 msgid "Sort Alignment:"
 msgstr "Röðunarstilling:"
@@ -198,15 +178,13 @@ msgid "Right-to-Left"
 msgstr "Hægri-til-vinstri"
 
 #: package/contents/ui/ConfigIcons.qml:161
-#, fuzzy, kde-format
-#| msgid "Lock in place"
+#, kde-format
 msgctxt "@option:check lock icon positions"
 msgid "Lock in place"
 msgstr "Festa á staðnum"
 
 #: package/contents/ui/ConfigIcons.qml:175
-#, fuzzy, kde-format
-#| msgid "Sort by:"
+#, kde-format
 msgctxt "@label:listbox sort items by field"
 msgid "Sort by:"
 msgstr "Raða eftir:"
@@ -272,31 +250,25 @@ msgid "Grid"
 msgstr "Reitir"
 
 #: package/contents/ui/ConfigIcons.qml:234
-#, fuzzy, kde-format
-#| msgid "Icon size:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Icon size:"
 msgstr "Stærð tákns:"
 
 #: package/contents/ui/ConfigIcons.qml:249
-#, fuzzy, kde-format
-#| msgctxt "@label:slider smallest icon size"
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inrange smallest icon size"
 msgid "Small"
 msgstr "Lítið"
 
 #: package/contents/ui/ConfigIcons.qml:258
-#, fuzzy, kde-format
-#| msgctxt "@label:slider largest icon size"
-#| msgid "Large"
+#, kde-format
 msgctxt "@item:inrange largest icon size"
 msgid "Large"
 msgstr "Stórt"
 
 #: package/contents/ui/ConfigIcons.qml:267
-#, fuzzy, kde-format
-#| msgid "Label width:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Label width:"
 msgstr "Breidd skýringa:"
@@ -320,71 +292,61 @@ msgid "Wide"
 msgstr "Breitt"
 
 #: package/contents/ui/ConfigIcons.qml:280
-#, fuzzy, kde-format
-#| msgid "Text lines:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Text lines:"
 msgstr "Textalínur:"
 
 #: package/contents/ui/ConfigIcons.qml:296
-#, fuzzy, kde-format
-#| msgid "When hovering over icons:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "When hovering over icons:"
 msgstr "Þegar bendill svífur yfir táknmyndum:"
 
 #: package/contents/ui/ConfigIcons.qml:298
-#, fuzzy, kde-format
-#| msgid "Show tooltips"
+#, kde-format
 msgctxt "@option:check When hovering over icons…"
 msgid "Show tooltips"
 msgstr "Sýna vísbendingar"
 
 #: package/contents/ui/ConfigIcons.qml:305
-#, fuzzy, kde-format
-#| msgid "Show selection markers"
+#, kde-format
 msgctxt "@option:check When hovering over icons…"
 msgid "Show selection markers"
 msgstr "Sýna valmerkingar"
 
 #: package/contents/ui/ConfigIcons.qml:312
-#, fuzzy, kde-format
-#| msgid "Show folder preview popups"
+#, kde-format
 msgctxt "@option:check When hovering over icons…"
 msgid "Show folder preview popups"
-msgstr "Birta sprettiglugga með forskoðun á möppum"
+msgstr "Birta sprettglugga með forskoðun á möppum"
 
 #: package/contents/ui/ConfigIcons.qml:322
-#, fuzzy, kde-format
-#| msgid "Rename:"
+#, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Rename:"
 msgstr "Endurnefna:"
 
 #: package/contents/ui/ConfigIcons.qml:326
-#, fuzzy, kde-format
-#| msgid "Rename inline by clicking selected item's text"
+#, kde-format
 msgctxt "@option:check"
 msgid "Rename inline by clicking selected item's text"
 msgstr "Endurnefna í textalínu tákns með því að smella á textann"
 
 #: package/contents/ui/ConfigIcons.qml:337
-#, fuzzy, kde-format
-#| msgid "Previews:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox and button"
 msgid "Previews:"
 msgstr "Forskoðanir:"
 
 #: package/contents/ui/ConfigIcons.qml:339
-#, fuzzy, kde-format
-#| msgid "Show preview thumbnails"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show preview thumbnails"
 msgstr "Sýna forskoðun smámynda"
 
 #: package/contents/ui/ConfigIcons.qml:347
-#, fuzzy, kde-format
-#| msgid "Configure Preview Plugins…"
+#, kde-format
 msgctxt "@action:button opens dialog"
 msgid "Configure Preview Plugins…"
 msgstr "Grunnstilla forskoðunarviðbætur…"
@@ -462,36 +424,31 @@ msgid "Enter title…"
 msgstr "Sláðu inn titil…"
 
 #: package/contents/ui/ConfigOverlay.qml:97
-#, fuzzy, kde-format
-#| msgid "Click and drag to rotate"
+#, kde-format
 msgctxt "@action:button tooltip rotate widget"
 msgid "Click and drag to rotate"
 msgstr "Smella og draga til að snúa"
 
 #: package/contents/ui/ConfigOverlay.qml:183
-#, fuzzy, kde-format
-#| msgid "Hide Background"
+#, kde-format
 msgctxt "@action:button tooltip hide widget background"
 msgid "Hide Background"
 msgstr "Fela bakgrunn"
 
 #: package/contents/ui/ConfigOverlay.qml:183
-#, fuzzy, kde-format
-#| msgid "Show Background"
+#, kde-format
 msgctxt "@action:button tooltip"
 msgid "Show Background"
 msgstr "Birta bakgrunn"
 
 #: package/contents/ui/ConfigOverlay.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button tooltip remove widget"
 msgid "Remove"
 msgstr "Fjarlægja"
 
 #: package/contents/ui/FolderItemPreviewPluginsDialog.qml:18
-#, fuzzy, kde-format
-#| msgid "Preview Plugins"
+#, kde-format
 msgctxt "@title:window"
 msgid "Preview Plugins"
 msgstr "Forskoðunarviðbætur"
@@ -513,18 +470,16 @@ msgid "Folder is empty"
 msgstr "Mappan er tóm"
 
 #: package/contents/ui/FolderViewLayer.qml:357
-#, fuzzy, kde-format
-#| msgid "Icons"
+#, kde-format
 msgctxt "@item:inmenu opens submenu with view options like sorting"
 msgid "Icons"
-msgstr "Tákn"
+msgstr "Táknmyndir"
 
 #: package/contents/ui/main.qml:439
-#, fuzzy, kde-format
-#| msgid "Desktop and Wallpaper"
+#, kde-format
 msgctxt "@action:inmenu opens config dialog"
 msgid "Desktop and Wallpaper"
-msgstr "Skjáborð og veggfóður"
+msgstr "Skjáborð og bakgrunnsmynd"
 
 #: plugins/folder/directorypicker.cpp:32
 #, kde-format

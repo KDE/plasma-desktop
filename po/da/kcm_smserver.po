@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-02-17 00:47+0000\n"
 "PO-Revision-Date: 2024-07-08 13:08+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -53,12 +53,13 @@ msgstr "Kunne ikke anmode genstart af firmware-opsætning: %1"
 #: ui/main.qml:31
 #, fuzzy, kde-format
 #| msgid ""
-#| "Next time the computer is restarted, it will enter the UEFI setup screen."
+#| "Next time the computer is restarted, it will enter the firmware setup "
+#| "screen."
 msgctxt "@info:status inlinemessage"
 msgid ""
-"Next time the computer is restarted, it will enter the UEFI setup screen."
+"Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"Computeren vil gå ind i UEFI-opsætningsskærmen næste gang den genstartes."
+"Computeren vil gå ind i firmware-opsætningsskærmen næste gang den genstartes."
 
 #: ui/main.qml:32
 #, fuzzy, kde-format
@@ -187,16 +188,31 @@ msgid "After next restart:"
 msgstr "Efter næste genstart:"
 
 #: ui/main.qml:145
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Enter firmware setup screen"
 msgctxt "@option:check"
-msgid "Enter UEFI setup screen"
-msgstr "Gå ind i UEFI-opsætningsskærmen"
+msgid "Enter UEFI firmware settings"
+msgstr "Gå ind i firmware-opsætningsskærmen"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Gå ind i firmware-opsætningsskærmen"
+
+#, fuzzy
+#~| msgid ""
+#~| "Next time the computer is restarted, it will enter the UEFI setup screen."
+#~ msgctxt "@info:status inlinemessage"
+#~ msgid ""
+#~ "Next time the computer is restarted, it will enter the UEFI setup screen."
+#~ msgstr ""
+#~ "Computeren vil gå ind i UEFI-opsætningsskærmen næste gang den genstartes."
+
+#~ msgctxt "@option:check"
+#~ msgid "Enter UEFI setup screen"
+#~ msgstr "Gå ind i UEFI-opsætningsskærmen"
 
 #~ msgid ""
 #~ "The system must be restarted before manual session saving becomes active."
