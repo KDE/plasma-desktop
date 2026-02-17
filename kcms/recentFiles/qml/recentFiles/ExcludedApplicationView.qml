@@ -18,7 +18,8 @@ QQC2.ScrollView {
     readonly property bool narrowMode: width < Kirigami.Units.gridUnit * 30
 
     enabled: applicationModel.enabled
-    Component.onCompleted: background.visible = true;
+
+    Kirigami.StyleHints.showFramedBackground: true
 
     GridLayout {
         id: grid
