@@ -1,16 +1,16 @@
 # Translation for plasma_applet_org.kde.plasma.kickoff.po to Euskara/Basque (eu)
-# Copyright (C) 2016-2025 This file is copyright:
+# Copyright (C) 2016-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 02:38+0000\n"
-"PO-Revision-Date: 2025-06-08 10:26+0200\n"
+"PO-Revision-Date: 2026-02-16 12:36+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,17 +18,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: code/tools.js:32
 #, kde-format
 msgid "Remove from Favorites"
-msgstr "Ezabatu gogokoen artetik"
+msgstr "Kendu gogokoetatik"
 
 #: code/tools.js:36
 #, kde-format
 msgid "Add to Favorites"
-msgstr "Erantsi gogokoetara"
+msgstr "Gehitu gogokoetara"
 
 #: code/tools.js:60
 #, kde-format
@@ -46,15 +46,13 @@ msgid "Show in Favorites"
 msgstr "Erakutsi gogokoetan"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Orokorra"
 
 #: ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Ikonoa:"
@@ -85,19 +83,19 @@ msgstr "Ikonoaren izena \"%1\" da"
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
-msgstr "Hautatu..."
+msgstr "Hautatu…"
 
 #: ConfigGeneral.qml:95
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr "Hautatu Aplikazio-abiarazlearentzako ikono bat"
+msgstr "Aplikazio-abiarazlearentzako ikonoa hautatzeko"
 
 #: ConfigGeneral.qml:99
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr "Berrezarri lehenetsitako ikonora"
+msgstr "Berrezarri lehenetsitako ikonoa"
 
 #: ConfigGeneral.qml:105
 #, kde-format
@@ -115,51 +113,46 @@ msgstr "Testu-etiketa:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
-msgstr "Tekleatu hemen testu-etiketa bat gehitzeko"
+msgstr "Hemen tekleatu testu-etiketa bat gehitzeko"
 
 #: ConfigGeneral.qml:132
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
-msgstr "Berrezarri menuko etiketa"
+msgstr "Berrezarri menuaren etiketa"
 
 #: ConfigGeneral.qml:145
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
-msgstr "Testu etiketa bat ezin da ezarri panela bertikala denean."
+msgstr "Panela bertikala denean ezin da testu-etiketa bat ezarri."
 
 #: ConfigGeneral.qml:157
-#, fuzzy, kde-format
-#| msgid "Show applications as:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
-msgstr "Erakutsi aplikazioak honela:"
+msgstr "Aplikazioak honela erakutsi:"
 
 #: ConfigGeneral.qml:159
-#, fuzzy, kde-format
-#| msgid "Name only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Izena bakarrik"
 
 #: ConfigGeneral.qml:159
-#, fuzzy, kde-format
-#| msgid "Description only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Deskribapena bakarrik"
 
 #: ConfigGeneral.qml:159
-#, fuzzy, kde-format
-#| msgid "Name (Description)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
-msgstr "Izena (deskribapena)"
+msgstr "Izena (Deskribapena)"
 
 #: ConfigGeneral.qml:159
-#, fuzzy, kde-format
-#| msgid "Description (Name)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Deskribapena (Izena)"
@@ -174,7 +167,7 @@ msgstr "Orokorra:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
-msgstr "Sailkatu aplikazioak alfabetikoki"
+msgstr "Aplikazioak alfabetikoki ordenatu"
 
 #: ConfigGeneral.qml:175
 #, kde-format
@@ -183,161 +176,137 @@ msgid ""
 "This doesn't affect how applications are sorted in either search results or "
 "the favorites page."
 msgstr ""
-"Honek ez dio eragiten aplikazioak sailkatzeko erari, ez bilaketa emaitzetan "
-"ez eta gogokoak orrian ere."
+"Honek ez dio aplikazioak ordenatzeko erari eragiten, ez bilaketa-emaitzei, "
+"ez gogokoak orrialdeari."
 
 #: ConfigGeneral.qml:181
-#, fuzzy, kde-format
-#| msgid "Use compact list item style"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use compact list item style"
-msgstr "Erabili zerrenda-trinko elementu estiloa"
+msgstr "Erabili zerrenda-trinko elementu-estiloa"
 
 #: ConfigGeneral.qml:187
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
-msgstr "Automatikoki ezgaitua ukimen moduan"
+msgstr "Ukimen moduan automatikoki desgaitzen da"
 
 #: ConfigGeneral.qml:195
-#, fuzzy, kde-format
-#| msgid "Highlight newly installed applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly installed applications"
-msgstr "Nabarmendu aplikazio instalatu berriak"
+msgstr "Aplikazio instalatu berriak nabarmendu"
 
 #: ConfigGeneral.qml:200
-#, fuzzy, kde-format
-#| msgid "Switch sidebar categories when hovering over them"
+#, kde-format
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
-msgstr "Aldatu alboko-barra kategoriak haien gainetik igarotzean"
+msgstr "Alboko-barrako kategoriak aldatu haien gainetik igarotzean"
 
 #: ConfigGeneral.qml:206
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
-msgstr "Konfiguratu bilaketa-pluginak..."
+msgstr "Konfiguratu bilaketa-pluginak…"
 
 #: ConfigGeneral.qml:216
-#, fuzzy, kde-format
-#| msgid "Sidebar position:"
+#, kde-format
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
-msgstr "Alboko barraren kokapena:"
+msgstr "Alboko barraren kokalekua:"
 
 #: ConfigGeneral.qml:217 ConfigGeneral.qml:225
-#, fuzzy, kde-format
-#| msgid "Right"
+#, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr "Eskuinean"
 
 #: ConfigGeneral.qml:217
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "option:radio sidebar position"
 msgid "Left"
 msgstr "Ezkerrean"
 
 #: ConfigGeneral.qml:225
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr "Ezkerrean"
 
 #: ConfigGeneral.qml:233
-#, fuzzy, kde-format
-#| msgid "Show favorites:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
-msgstr "Erakutsi gogokoak:"
+msgstr "Gogokoak erakutsi:"
 
 #: ConfigGeneral.qml:234
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
-#| msgid "In a grid"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "Sareta batean"
 
 #: ConfigGeneral.qml:242
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a list'"
-#| msgid "In a list"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "Zerrenda batean"
 
 #: ConfigGeneral.qml:250
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
-msgstr "Erakutsi beste aplikazio batzuk:"
+msgstr "Beste aplikazio batzuk erakutsi:"
 
 #: ConfigGeneral.qml:251
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
-#| msgid "In a grid"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "Sareta batean"
 
 #: ConfigGeneral.qml:259
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a list'"
-#| msgid "In a list"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "Zerrenda batean"
 
 #: ConfigGeneral.qml:271
-#, fuzzy, kde-format
-#| msgid "Show buttons for:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
-msgstr "Erakutsi honetarako botoiak:"
+msgstr "Honetarako botoiak erakutsi:"
 
 #: ConfigGeneral.qml:272
-#, fuzzy, kde-format
-#| msgid "Power"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power"
-msgstr "Energia"
+msgstr "Itzaltzea"
 
 #: ConfigGeneral.qml:281
-#, fuzzy, kde-format
-#| msgid "Session"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "Saioa"
 
 #: ConfigGeneral.qml:290
-#, fuzzy, kde-format
-#| msgid "Power and session"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
-msgstr "Energia eta saioa"
+msgstr "Itzaltzea eta saioa"
 
 #: ConfigGeneral.qml:299
-#, fuzzy, kde-format
-#| msgid "Show action button captions"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show action button captions"
-msgstr "Erakutsi ekintza botoiko epigrafeak"
+msgstr "Ekintza botoien epigrafeak erakutsi"
 
 #: Footer.qml:101
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@title:tab kickoff sidebar tab"
 msgid "Applications"
 msgstr "Aplikazioak"
 
 #: Footer.qml:117
-#, fuzzy, kde-format
-#| msgid "Places"
+#, kde-format
 msgctxt "@title:tab kickoff sidebar tab"
 msgid "Places"
 msgstr "Lekuak"
@@ -346,18 +315,16 @@ msgstr "Lekuak"
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr "Ez dago bat datorrenik"
+msgstr "Ez dago emaitzarik"
 
 #: Header.qml:86
-#, fuzzy, kde-format
-#| msgid "Open user settings"
+#, kde-format
 msgctxt "@action:button icon-only, for tooltip/Accessible"
 msgid "Open user settings"
-msgstr "Ireki erabiltzailearen ezarpenak"
+msgstr "Ireki erabiltzaile-ezarpenak"
 
 #: Header.qml:266
-#, fuzzy, kde-format
-#| msgid "Keep Open"
+#, kde-format
 msgctxt ""
 "@action:button Pin widget open if it loses focus, icon-only button, for "
 "tooltip/Accessible"
@@ -365,26 +332,22 @@ msgid "Keep Open"
 msgstr "Eduki irekita"
 
 #: KickoffGridDelegate.qml:59
-#, fuzzy, kde-format
-#| msgctxt "Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "@label Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "Berria!"
 
 #: KickoffGridDelegate.qml:60
-#, fuzzy, kde-format
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly installed application"
 msgstr "Aplikazio instalatu berria"
 
 #: KickoffGridView.qml:101
-#, fuzzy, kde-format
-#| msgid "Grid with %1 rows, %2 columns"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Grid with %1 rows, %2 columns"
-msgstr "%1 errenkada, %2 zutabeko sareta"
+msgstr "%1 errenkadako, %2 zutabeko sareta"
 
 #: KickoffListDelegate.qml:117
 #, kde-format
@@ -393,53 +356,46 @@ msgid "New!"
 msgstr "Berria!"
 
 #: KickoffListDelegate.qml:118
-#, fuzzy, kde-format
-#| msgid "There is a newly installed application in this category"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly installed application in this category"
 msgstr "Kategoria honetan aplikazio instalatu berri bat dago"
 
 #: KickoffListDelegate.qml:119
-#, fuzzy, kde-format
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly installed application"
 msgstr "Aplikazio instalatu berria"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Session"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Session"
 msgstr "Saioa"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Power"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Power"
-msgstr "Energia"
+msgstr "Itzaltzea"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "More"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "More"
 msgstr "Gehiago"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Session and Power"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Session and Power"
-msgstr "Saioa eta energia"
+msgstr "Saioa eta Itzaltzea"
 
 #: main.qml:356
-#, fuzzy, kde-format
-#| msgid "Edit Applications…"
+#, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
-msgstr "Editatu aplikazioak..."
+msgstr "Editatu aplikazioak…"
 
 #: PlacesPage.qml:64
 #, kde-format
@@ -457,7 +413,7 @@ msgstr "Historia"
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
-msgstr "Maiz erabilia"
+msgstr "Sarri erabilia"
 
 #~ msgctxt "Part of a sentence: 'Show other applications in a grid'"
 #~ msgid "In a grid"

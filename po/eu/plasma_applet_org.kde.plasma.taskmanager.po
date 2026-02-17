@@ -1,24 +1,24 @@
 # Translation for plasma_applet_org.kde.plasma.taskmanager.po to Euskara/Basque (eu).
-# Copyright (C) 2008-2025 This file is copyright:
+# Copyright (C) 2008-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2008, 2010, 2011, 2014, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2008, 2010, 2011, 2014, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-24 02:39+0000\n"
-"PO-Revision-Date: 2025-12-06 15:42+0100\n"
+"PO-Revision-Date: 2026-02-16 14:14+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: backend.cpp:288
@@ -26,47 +26,47 @@ msgstr ""
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
 msgid_plural "%1 more Places…"
-msgstr[0] "Leku %1 gehiago..."
-msgstr[1] "%1 leku gehiago..."
+msgstr[0] "Leku %1 gehiago…"
+msgstr[1] "%1 leku gehiago…"
 
 #: backend.cpp:372
 #, kde-format
 msgid "Recent Downloads"
-msgstr "Azken aldiko zama-jaitsierak"
+msgstr "Azkenaldiko zama-jaitsierak"
 
 #: backend.cpp:374
 #, kde-format
 msgid "Recent Connections"
-msgstr "Azken aldiko konexioak"
+msgstr "Azkenaldiko konexioak"
 
 #: backend.cpp:376
 #, kde-format
 msgid "Recent Places"
-msgstr "Azken aldiko lekuak"
+msgstr "Azkenaldiko lekuak"
 
 #: backend.cpp:385
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
-msgstr "Ahaztu azken aldiko zama-jaitsierak"
+msgstr "Ahaztu azkenaldiko zama-jaitsierak"
 
 #: backend.cpp:387
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
-msgstr "Ahaztu azken aldiko konexioak"
+msgstr "Ahaztu azkenaldiko konexioak"
 
 #: backend.cpp:389
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
-msgstr "Ahaztu azken aldiko lekuak"
+msgstr "Ahaztu azkenaldiko lekuak"
 
 #: backend.cpp:391
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
-msgstr "Ahaztu azken aldiko fitxategiak"
+msgstr "Ahaztu azkenaldiko fitxategiak"
 
 #: qml/AudioStream.qml:94
 #, kde-format
@@ -105,18 +105,16 @@ msgid "9,999+"
 msgstr "9,999+"
 
 #: qml/config.qml:13
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Appearance"
 msgstr "Itxura"
 
 #: qml/config.qml:18
-#, fuzzy, kde-format
-#| msgid "Behavior"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Behavior"
-msgstr "Portaera"
+msgstr "Jokabidea"
 
 #: qml/ConfigAppearance.qml:49
 #, kde-format
@@ -134,13 +132,13 @@ msgstr "Erakutsi leihoen aurreikuspegi txikiak atazen gainetik igarotzean"
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over previews"
-msgstr "Ezkutatu beste leihoak aurreikuspegien gainetik igarotzean"
+msgstr "Ezkutatu gainerako leihoak aurreikuspegien gainetik igarotzean"
 
 #: qml/ConfigAppearance.qml:55
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over tooltips"
-msgstr "Ezkutatu beste leihoak tresna-iradokizunen gainetik igarotzean"
+msgstr "Ezkutatu gainerako leihoak tresna-iradokizunen gainetik igarotzean"
 
 #: qml/ConfigAppearance.qml:60
 #, kde-format
@@ -152,13 +150,13 @@ msgstr "Erakutsi adierazle bat ataza bat audioa jotzen ari denean"
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
-msgstr "Isilarazi ataza adierazleari klik egitean"
+msgstr "Isilarazi ataza adierazlean klik egitean"
 
 #: qml/ConfigAppearance.qml:78
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
-msgstr "Erakutsi hedabide eta bolumen aginteak tresna-iradokizunean"
+msgstr "Erakutsi hedabide- eta bolumen-aginteak tresna-iradokizunean"
 
 #: qml/ConfigAppearance.qml:86
 #, kde-format
@@ -170,7 +168,7 @@ msgstr "Bete paneleko espazio hutsa"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Maximum task width:"
-msgstr "Atazen zabalera gehienez:"
+msgstr "Atazaren gehienezko zabalera:"
 
 #: qml/ConfigAppearance.qml:101
 #, kde-format
@@ -196,7 +194,7 @@ msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
 "space etc."
 msgid "Use multi-column view:"
-msgstr "Erabili zutabe anitzeko ikuspegia:"
+msgstr "Zutabe anitzeko ikuspegia erabili:"
 
 #: qml/ConfigAppearance.qml:115
 #, kde-format
@@ -204,7 +202,7 @@ msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
 "space etc."
 msgid "Use multi-row view:"
-msgstr "Erabili errenkada anitzeko ikuspegia:"
+msgstr "Errenkada anitzeko ikuspegia erabili:"
 
 #: qml/ConfigAppearance.qml:121
 #, kde-format
@@ -216,25 +214,25 @@ msgstr "Inoiz ez"
 #, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "When panel is low on space and thick enough"
-msgstr "Panelak leku gutxi duenean eta behar bezain lodia denean"
+msgstr "Panelak leku gutxi duenean eta lodiera nahikoa duenean"
 
 #: qml/ConfigAppearance.qml:141
 #, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "Always when panel is thick enough"
-msgstr "Beti, panela behar bezain lodia denean"
+msgstr "Beti, panela lodiera nahikoa duenean"
 
 #: qml/ConfigAppearance.qml:148
 #, kde-format
 msgctxt "@label:spinbox maximum number of columns for tasks"
 msgid "Maximum columns:"
-msgstr "Gehienezko zutabeak:"
+msgstr "Zutabe kopurua gehienez:"
 
 #: qml/ConfigAppearance.qml:149
 #, kde-format
 msgctxt "@label:spinbox maximum number of rows for tasks"
 msgid "Maximum rows:"
-msgstr "Gehienezko errenkadak:"
+msgstr "Errenkada kopurua gehienez:"
 
 #: qml/ConfigAppearance.qml:159
 #, kde-format
@@ -264,7 +262,7 @@ msgstr "Handia"
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch mode"
-msgstr "Automatikoki handia ezarri ukimen moduan"
+msgstr "Ukimen moduan automatikoki Handia ezarri"
 
 #: qml/ConfigBehavior.qml:50
 #, kde-format
@@ -275,10 +273,10 @@ msgid ""
 "behavior. If you don't find one, consider reporting this as a bug to the "
 "app's developer."
 msgstr ""
-"Ezarpen hau arreta maizegi eskatzen duen aplikazio batengatik erabiltzen ari "
-"bazara, aurrena, bilatu aplikazioan jokabide hori ezgaitzeko ezarpen bat. "
-"Aurkitzen ez baduzu, hausnartu aplikazioaren garatzaileari hau akats gisa "
-"jakinarazteko aukera."
+"Ezarpen hau arreta maizegi eskatzen duen aplikazio baten jokabidea "
+"saihesteko erabiltzen ari bazara, lehenik bilatu aplikazioan jokabide hori "
+"desgaitzeko ezarpenik ba ote dagoen. Aurkitzen ez baduzu, kontuan hartu "
+"aplikazioaren garatzaileari hau akats gisa jakinaraztea."
 
 #: qml/ConfigBehavior.qml:66
 #, kde-format
@@ -310,7 +308,7 @@ msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task cycles through "
 "tasks' "
 msgid "Cycles through tasks"
-msgstr "Atazen arteko ibilbidea egiten du"
+msgstr "Atazen arteko zikloa egiten du"
 
 #: qml/ConfigBehavior.qml:85
 #, kde-format
@@ -318,7 +316,7 @@ msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows small "
 "window previews' "
 msgid "Shows small window previews"
-msgstr "Aurreikuspegi leiho txikiak erakusten ditu"
+msgstr "Leiho aurreikuspegi txikiak erakusten ditu"
 
 #: qml/ConfigBehavior.qml:86
 #, kde-format
@@ -326,7 +324,7 @@ msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows large "
 "window previews' "
 msgid "Shows large window previews"
-msgstr "Aurreikuspegi leiho handiak erakusten ditu"
+msgstr "Leiho aurreikuspegi handiak erakusten ditu"
 
 #: qml/ConfigBehavior.qml:87
 #, kde-format
@@ -343,32 +341,32 @@ msgid ""
 "The compositor does not support displaying windows side by side, so a "
 "textual list will be displayed instead."
 msgstr ""
-"Konposatzaileak ez du onartzen leihoak aurrez-aurre aurkeztea, beraz, testu-"
-"zerrenda bat azalduko da horren ordez."
+"Konposatzaileak ez du onartzen leihoak aurrez-aurre aurkeztea, beraz, horren "
+"ordez, testu-zerrenda bat azalduko da."
 
 #: qml/ConfigBehavior.qml:108
 #, kde-format
 msgctxt "@option:check grouped task"
 msgid "Combine into single button"
-msgstr "Batu botoi bakarrean"
+msgstr "Konbinatu botoi bakarrean"
 
 #: qml/ConfigBehavior.qml:115
 #, kde-format
 msgctxt "@option:check grouped task"
 msgid "Group only when the Task Manager is full"
-msgstr "Taldekatu soilik ataza-kudeatzailea betea dagoenean"
+msgstr "Taldekatu ataza-kudeatzailea betea dagoenean bakarrik"
 
 #: qml/ConfigBehavior.qml:127
 #, kde-format
 msgctxt "@label:listbox sort tasks in grouped task"
 msgid "Sort:"
-msgstr "Sailkatzea:"
+msgstr "Ordenatu:"
 
 #: qml/ConfigBehavior.qml:134
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Do not sort"
-msgstr "Ez sailkatu"
+msgstr "Ez ordenatu"
 
 #: qml/ConfigBehavior.qml:138
 #, kde-format
@@ -487,7 +485,7 @@ msgctxt ""
 "through tasks/cycles through the selected task's windows/adjusts the hovered "
 "task’s volume''"
 msgid "Scrolling behavior:"
-msgstr "Kiribiltzearen jokabidea:"
+msgstr "Kiribiltze-jokabidea:"
 
 #: qml/ConfigBehavior.qml:211
 #, kde-format
@@ -501,7 +499,7 @@ msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through all "
 "tasks'"
 msgid "Cycles through all tasks"
-msgstr "Ataza guztien arteko ibilbidea egiten du"
+msgstr "Ataza guztien arteko zikloa egiten du"
 
 #: qml/ConfigBehavior.qml:213
 #, kde-format
@@ -509,7 +507,7 @@ msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through the "
 "hovered task's windows'"
 msgid "Cycles through the hovered task’s windows"
-msgstr "Gainetik igarotako atazaren leihoen arteko ibilbidea egiten du"
+msgstr "Gainetik igarotako atazaren leihoen arteko zikloa egiten du"
 
 #: qml/ConfigBehavior.qml:214
 #, kde-format
@@ -523,7 +521,7 @@ msgstr "Gainetik igarotako atazaren bolumena doitzen du"
 #, kde-format
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
-msgstr "Saltatu ikonotutako atazak"
+msgstr "Saihestu ikonotutako atazak"
 
 #: qml/ConfigBehavior.qml:232
 #, kde-format
@@ -573,7 +571,7 @@ msgstr "Erakutsi leiho batek arreta nahi duenean"
 #, kde-format
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
-msgstr "Ataza berriak agertzen dira:"
+msgstr "Ataza berriak non agertzen diren:"
 
 #: qml/ConfigBehavior.qml:277
 #, kde-format
@@ -600,22 +598,19 @@ msgid "On the top"
 msgstr "Goiko aldean"
 
 #: qml/ContextMenu.qml:100
-#, fuzzy, kde-format
-#| msgid "Places"
+#, kde-format
 msgctxt "@title:group for section of menu items"
 msgid "Places"
 msgstr "Lekuak"
 
 #: qml/ContextMenu.qml:106
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgctxt "@title:group for section of menu items"
 msgid "Recent Files"
-msgstr "Azken aldiko fitxategiak"
+msgstr "Azkenaldiko fitxategiak"
 
 #: qml/ContextMenu.qml:116
-#, fuzzy, kde-format
-#| msgid "Actions"
+#, kde-format
 msgctxt "@title:group for section of menu items"
 msgid "Actions"
 msgstr "Ekintzak"
@@ -663,171 +658,148 @@ msgid "Restore"
 msgstr "Leheneratu"
 
 #: qml/ContextMenu.qml:266
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@option:check inmenu, no separate unmute action"
 msgid "Mute"
 msgstr "Isilarazi"
 
 #: qml/ContextMenu.qml:277
-#, fuzzy, kde-format
-#| msgid "Open New Window"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Open New Window"
 msgstr "Ireki leiho berria"
 
 #: qml/ContextMenu.qml:293
-#, fuzzy, kde-format
-#| msgid "Move to &Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move to &Desktop"
 msgstr "Eraman &mahaigainera"
 
 #: qml/ContextMenu.qml:323
-#, fuzzy, kde-format
-#| msgid "Move &To Current Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move &To Current Desktop"
 msgstr "Eraman &uneko mahaigainera"
 
 #: qml/ContextMenu.qml:332
-#, fuzzy, kde-format
-#| msgid "&All Desktops"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&All Desktops"
 msgstr "Mahaigain &guztietan"
 
 #: qml/ContextMenu.qml:360
-#, fuzzy, kde-format
-#| msgid "&New Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&New Desktop"
 msgstr "Mahaigain &berria"
 
 #: qml/ContextMenu.qml:380
-#, fuzzy, kde-format
-#| msgid "Show in &Activities"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Show in &Activities"
 msgstr "Erakutsi &Jardueretan"
 
 #: qml/ContextMenu.qml:404
-#, fuzzy, kde-format
-#| msgid "Add To Current Activity"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Add To Current Activity"
-msgstr "Gehitu uneko jarduerara"
+msgstr "Gehitu uneko jardueran"
 
 #: qml/ContextMenu.qml:414
-#, fuzzy, kde-format
-#| msgid "All Activities"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "All Activities"
 msgstr "Jarduera guztietan"
 
 #: qml/ContextMenu.qml:470
-#, fuzzy, kde-format
-#| msgid "Move to %1"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move to %1"
-msgstr "Eraman %1(e)ra"
+msgstr "Mugitu %1(e)ra"
 
 #: qml/ContextMenu.qml:496 qml/ContextMenu.qml:512
-#, fuzzy, kde-format
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Pin to Task Manager"
-msgstr "&Iltzatu Ataza Kudeatzailera"
+msgstr "&Iltzatu Ataza Kudeatzailean"
 
 #: qml/ContextMenu.qml:564
-#, fuzzy, kde-format
-#| msgid "On All Activities"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "On All Activities"
 msgstr "Jarduera guztietan"
 
 #: qml/ContextMenu.qml:570
-#, fuzzy, kde-format
-#| msgid "On The Current Activity"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "On The Current Activity"
 msgstr "Uneko jardueran"
 
 #: qml/ContextMenu.qml:594
-#, fuzzy, kde-format
-#| msgid "Unpin from Task Manager"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Unpin from Task Manager"
-msgstr "Iltzagetu ataza kudeatzailetik"
+msgstr "Iltzagetu ataza kudeatzailean"
 
 #: qml/ContextMenu.qml:609
-#, fuzzy, kde-format
-#| msgid "More"
+#, kde-format
 msgctxt "item:inmenu opens submenu"
 msgid "More"
 msgstr "Gehiago"
 
 #: qml/ContextMenu.qml:618
-#, fuzzy, kde-format
-#| msgid "&Move"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Move"
 msgstr "&Mugitu"
 
 #: qml/ContextMenu.qml:627
-#, fuzzy, kde-format
-#| msgid "Re&size"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Re&size"
 msgstr "&Handiera aldatu"
 
 #: qml/ContextMenu.qml:641
-#, fuzzy, kde-format
-#| msgid "Ma&ximize"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Ma&ximize"
 msgstr "Ma&ximizatu"
 
 #: qml/ContextMenu.qml:655
-#, fuzzy, kde-format
-#| msgid "Mi&nimize"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Mi&nimize"
 msgstr "I&konotu"
 
 #: qml/ContextMenu.qml:665
-#, fuzzy, kde-format
-#| msgid "Keep &Above Others"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Keep &Above Others"
 msgstr "M&antendu besteen gainean"
 
 #: qml/ContextMenu.qml:675
-#, fuzzy, kde-format
-#| msgid "Keep &Below Others"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Keep &Below Others"
 msgstr "Mantendu &besteen azpian"
 
 #: qml/ContextMenu.qml:687
-#, fuzzy, kde-format
-#| msgid "&Fullscreen"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Fullscreen"
-msgstr "&Pantaila-betea"
+msgstr "&Pantaila-osoa"
 
 #: qml/ContextMenu.qml:700
-#, fuzzy, kde-format
-#| msgid "&Shade"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Shade"
-msgstr "Bil&du"
+msgstr "&Bildu"
 
 #: qml/ContextMenu.qml:712
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
-msgstr "Titulu-barrarik eta markorik e&z"
+msgstr "E&z titulu-barrarik ez markorik"
 
 #: qml/ContextMenu.qml:725
 #, kde-format
@@ -836,26 +808,22 @@ msgid "&Hide from Screencast"
 msgstr "E&zkutatu pantaila-grabaziotik"
 
 #: qml/ContextMenu.qml:741
-#, fuzzy, kde-format
-#| msgid "Allow this program to be grouped"
+#, kde-format
 msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
-msgstr "Baimendu programa hau taldekatu dadin"
+msgstr "Baimendu programa hau taldekatzea"
 
 #: qml/ContextMenu.qml:787
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu"
-#| msgid "&Close All"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close All"
-msgstr "&Itxi guztia"
+msgstr "&Itxi dena"
 
 #: qml/ContextMenu.qml:787
-#, fuzzy, kde-format
-#| msgid "&Close"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close"
-msgstr "&Itxi"
+msgstr "It&xi"
 
 #: qml/Task.qml:155
 #, kde-format
@@ -875,23 +843,22 @@ msgstr[1] "%1 mezu berri daude."
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
-msgstr "Erakutsi %1(r)en Ataza-argibideak"
+msgstr "Erakutsi %1 atazaren argibidea"
 
 #: qml/Task.qml:172
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
-msgstr "Leihoak aurrez-aurre erakusten ditu %1(e)rako"
+msgstr "Leihoak aurrez-aurre erakutsi, %1(e)rako"
 
 #: qml/Task.qml:177
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
-msgstr "Ireki leihoen testuzko zerrenda bat %1(e)rako"
+msgstr "Ireki leihoen testuzko zerrenda, %1(e)rako"
 
 #: qml/Task.qml:181
-#, fuzzy, kde-format
-#| msgid "Activate %1"
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Activate %1"
 msgstr "Aktibatu %1"
@@ -918,7 +885,7 @@ msgstr "Isilarazi %1"
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
-msgstr "Doitu honen bolumena: %1"
+msgstr "Doitu %1(e)ren bolumena"
 
 #: qml/ToolTipInstance.qml:494
 #, kde-format
@@ -948,7 +915,7 @@ msgstr "Mahaigain guztietan iltzatuta"
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
-msgstr "Erabilgarri jarduera guztietan"
+msgstr "Jarduera guztietan erabilgarri"
 
 #: qml/ToolTipInstance.qml:533
 #, kde-format
