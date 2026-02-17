@@ -79,11 +79,7 @@ Kirigami.Dialog {
                 Layout.fillWidth: true
                 Layout.fillHeight: true
 
-                Component.onCompleted: {
-                    if (background) {
-                        background.visible = true
-                    }
-                }
+                Kirigami.StyleHints.showFramedBackground: true
 
                 contentItem: ListView {
                     id: layoutsView
@@ -103,11 +99,7 @@ Kirigami.Dialog {
                 Layout.fillWidth: true
                 Layout.fillHeight: true
 
-                Component.onCompleted: {
-                    if (background) {
-                        background.visible = true
-                    }
-                }
+                Kirigami.StyleHints.showFramedBackground: true
 
                 contentItem: ListView {
                     id: variantView
