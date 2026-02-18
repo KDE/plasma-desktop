@@ -315,7 +315,7 @@ void KCMKeys::editCommand(const QString &componentName, const QString &name, con
     cg.writeEntry("Exec", finalExec);
     cg.sync();
 
-    m_globalAccelModel->onShortcutChanged(componentName);
+    m_globalAccelModel->updateCommandName(componentName);
 }
 
 QString KCMKeys::quoteUrl(const QUrl &url)

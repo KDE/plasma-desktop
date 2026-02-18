@@ -27,7 +27,7 @@ public:
     QVariant data(const QModelIndex &index, int role) const override;
 
     void addApplication(const QString &desktopFileName, const QString &displayName);
-    void onShortcutChanged(const QString &uniqueName);
+    void updateCommandName(const QString &uniqueName);
 
     void exportToConfig(KConfigBase &config) override;
     void importConfig(const KConfigBase &config) override;
