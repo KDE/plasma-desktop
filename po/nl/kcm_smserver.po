@@ -14,14 +14,14 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-01-08 17:53+0100\n"
+"PO-Revision-Date: 2026-02-17 12:34+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
@@ -55,17 +55,13 @@ msgid "Failed to request restart to firmware setup: %1"
 msgstr "Verzoek om te herstarten naar firmware-instellingen is mislukt: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@info:status inlinemessage"
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"De volgende keer dat de computer wordt herstart zal het naar het firmware "
-"instellingen-scherm gaan."
+"De volgende keer dat de computer wordt herstart zal het naar de UEFI-"
+"firmware-instellingen gaan."
 
 #: ui/main.qml:32
 #, kde-format
@@ -188,12 +184,10 @@ msgid "After next restart:"
 msgstr "Na volgende herstart:"
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr "Het firmware instellingen-scherm starten"
+msgstr "De UEFI-firmware-instellingen ingaan"
 
 #: ui/main.qml:146
 #, kde-format

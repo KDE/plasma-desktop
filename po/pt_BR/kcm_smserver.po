@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-01-08 07:51-0300\n"
+"PO-Revision-Date: 2026-02-17 08:21-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -57,17 +57,13 @@ msgstr ""
 "Não foi possível solicitar o reinício para configuração do firmware: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@info:status inlinemessage"
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"Da próxima vez que reiniciar o computador, ele irá entrar na tela de "
-"configuração do firmware."
+"Da próxima vez que reiniciar o computador, ele entrará nas configurações do "
+"firmware UEFI."
 
 #: ui/main.qml:32
 #, kde-format
@@ -189,12 +185,10 @@ msgid "After next restart:"
 msgstr "Após a próxima reinicialização:"
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr "Entrar na tela de configuração do firmware"
+msgstr "Entrar nas configurações do firmware UEFI"
 
 #: ui/main.qml:146
 #, kde-format

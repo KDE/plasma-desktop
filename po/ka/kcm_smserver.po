@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-01-08 05:15+0100\n"
+"PO-Revision-Date: 2026-02-17 04:13+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -49,17 +49,13 @@ msgid "Failed to request restart to firmware setup: %1"
 msgstr "მიკროკოდის მორგებაზე გადატვირთვის მოთხოვნა ჩავარდა: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@info:status inlinemessage"
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"კომპიუტერის შემდეგი გადატვირთვის შემდეგ თქვენ მიკროკოდის მორგების ეკრანზე "
-"მოხვდებით."
+"კომპიუტერის შემდეგი გადატვირთვის შემდეგ თქვენ UEFI მიკროკოდის მორგების "
+"ეკრანზე მოხვდებით."
 
 #: ui/main.qml:32
 #, kde-format
@@ -181,12 +177,10 @@ msgid "After next restart:"
 msgstr "შემდეგი გადატვირთვის შემდეგ:"
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr "გადატვირთვისას მიკროკოდის ეკრანზე გადასვლა"
+msgstr "UEFI მიკროკოდის მორგებაზე გადასვლა"
 
 #: ui/main.qml:146
 #, kde-format

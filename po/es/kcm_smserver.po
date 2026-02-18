@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcm_smserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-01-09 00:33+0100\n"
+"PO-Revision-Date: 2026-02-17 14:01+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Pablo de Vicente <pvicentea@nexo.es>\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
@@ -56,17 +56,12 @@ msgstr ""
 "No se ha podido solicitar el reinicio para la configuración del firmware: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@info:status inlinemessage"
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"La próxima vez que reinicie el equipo, entrará en la pantalla de "
-"configuración del firmware."
+"La próxima vez que reinicie el equipo, entrará los ajustes del firmware UEFI."
 
 #: ui/main.qml:32
 #, kde-format
@@ -189,26 +184,13 @@ msgid "After next restart:"
 msgstr "Tras el siguiente reinicio:"
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr "Entrar en la pantalla de configuración del firmware"
+msgstr "Entrar en los ajustes del firmware UEFI"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Entrar en la pantalla de configuración del firmware"
-
-#~ msgctxt "@info:status inlinemessage"
-#~ msgid ""
-#~ "Next time the computer is restarted, it will enter the UEFI setup screen."
-#~ msgstr ""
-#~ "La próxima vez que reinicie el equipo, entrará en la pantalla de "
-#~ "configuración de UEFI."
-
-#~ msgctxt "@option:check"
-#~ msgid "Enter UEFI setup screen"
-#~ msgstr "Entrar en la pantalla de configuración de UEFI"

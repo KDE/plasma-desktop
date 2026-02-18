@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcm_smserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-01-08 08:49+0200\n"
+"PO-Revision-Date: 2026-02-17 07:59+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -56,17 +56,13 @@ msgstr ""
 "мікропрограми: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@info:status inlinemessage"
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
 "Під час наступного перезапуску комп'ютер запустить засіб налаштовування "
-"мікропрограми."
+"параметрів мікропрограми UEFI."
 
 #: ui/main.qml:32
 #, kde-format
@@ -189,12 +185,10 @@ msgid "After next restart:"
 msgstr "Після наступного перезапуску:"
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr "Налаштовувати мікропрограму"
+msgstr "Увійти до параметрів мікропрограми UEFI"
 
 #: ui/main.qml:146
 #, kde-format
