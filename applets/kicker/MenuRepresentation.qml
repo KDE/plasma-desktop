@@ -379,7 +379,7 @@ PlasmaComponents3.ScrollView {
 
         anchors.bottom: mainRow.bottom
         anchors.left: parent.left
-        anchors.leftMargin: sideBar.width + spacing
+        anchors.leftMargin: sideBar.visible ? sideBar.width + spacing : 0
 
         readonly property real defaultWidth: Kirigami.Units.gridUnit * 14
 
@@ -422,7 +422,7 @@ PlasmaComponents3.ScrollView {
 
                 PropertyChanges {
                     searchField.anchors.leftMargin: undefined
-                    searchField.anchors.rightMargin: sideBar.width + searchField.spacing
+                    searchField.anchors.rightMargin: sideBar.visible ? sideBar.width + spacing : 0
                 }
             }
         ]
