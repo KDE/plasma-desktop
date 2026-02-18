@@ -28,6 +28,9 @@ T.ProgressBar {
     value: task.smartLauncherItem.progress
 
     contentItem: Item {
+        LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft
+        LayoutMirroring.childrenInherit: false
+
         clip: true
 
         KSvg.FrameSvgItem {
