@@ -5,6 +5,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+import QtCore
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
@@ -114,7 +115,19 @@ KCM.SimpleKCM {
                     Layout.preferredWidth: height
                     Layout.maximumWidth: page.width / 3;
                     Layout.rightMargin: Kirigami.Units.largeSpacing
-                    source: page.metaData.iconName || page.metaData.pluginId
+
+                    source: {
+                        const iconName = page.metaData.iconName;
+                        if (iconName.charAt(0) == "/") {
+                            const fileName = "plasma/plasmoids/" +
+                                page.metaData.pluginId + "/contents" +
+                                iconName;
+                            return StandardPaths.locate(StandardPaths.
+                                GenericDataLocation, fileName);
+                        }
+                        return page.metaData.iconName ||
+                            page.metaData.pluginId;
+                    }
                     fallback: "application-x-plasma"
                 }
 
