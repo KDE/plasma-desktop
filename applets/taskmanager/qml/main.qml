@@ -371,7 +371,7 @@ PlasmoidItem {
 
             onUrlsDropped: urls => {
                 // If all dropped URLs point to application desktop files, we'll add a launcher for each of them.
-                const createLaunchers = urls.every(item => root.backend.isApplication(item));
+                const createLaunchers = urls.every(item => tasks.backend.isApplication(item));
 
                 if (createLaunchers) {
                     urls.forEach(item => addLauncher(item));
