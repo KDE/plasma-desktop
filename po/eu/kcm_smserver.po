@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-02-15 22:43+0100\n"
+"PO-Revision-Date: 2026-02-18 20:05+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -28,7 +28,7 @@ msgstr ""
 #: smserversettings.kcfg:9
 #, kde-format
 msgid "Confirm logout"
-msgstr "Berretsi saioa ixtea"
+msgstr "Saioa ixtea baieztatu"
 
 #. i18n: ectx: label, entry (shutdownType), group (General)
 #: smserversettings.kcfg:13
@@ -56,17 +56,13 @@ msgstr ""
 "Ezin izan da firmwarearen ezarpenetara berrabiarazteko eskaera egin: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@info:status inlinemessage"
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"Ordenagailua berrabiatzen den hurrengo aldian, firmwarearen konfigurazio-"
-"pantailara sartuko da."
+"Ordenagailua berrabiatzen den hurrengo aldian, UEFI "
+"firmwarearenkonfiguraziora sartuko da."
 
 #: ui/main.qml:32
 #, kde-format
@@ -109,7 +105,7 @@ msgstr "Itzaltzean, berrabiatzean, eta saioa ixtean"
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr "Saioa lehengoratzea"
+msgstr "Saioa lehengoratu"
 
 #: ui/main.qml:71
 #, kde-format
@@ -121,13 +117,13 @@ msgstr "Saioa hastean, abiarazi irekita zeuden aplikazioak:"
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr "Saioa ixtean irekita zeudenak"
+msgstr "Saioa ixtean zeudenak"
 
 #: ui/main.qml:85
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "Saioa eskuz gorde zenean irekita zeudenak"
+msgstr "Saioa eskuz gorde zenean zeudenak"
 
 #: ui/main.qml:94
 #, kde-kuit-format
@@ -139,9 +135,9 @@ msgid ""
 "Click it again to replace the set of remembered apps."
 msgstr ""
 "<interface>Aplikazio-abiarazlea</interface> menuan <interface>Gorde saioa</"
-"interface> botoi agertuko da . Sakatzen duzunean, Plasmak irekita dauden "
+"interface> botoia agertuko da . Sakatzen duzunean, Plasmak irekita dauden "
 "aplikazioak gogoratuko ditu eta hurrengo saioa hastean lehengoratuko ditu. "
-"Sakatu berriro gogoratutako aplikazioen multzoa ordezkatzeko."
+"Berriz sakatu gogoratutako aplikazioen multzoa ordezkatzeko."
 
 #: ui/main.qml:99
 #, kde-format
@@ -168,7 +164,7 @@ msgid ""
 "with other session-restored apps."
 msgstr ""
 "Saioa berrezartzean lehengoratutako beste aplikazioekin batera automatikoki "
-"abiatzea saihesteko, idatzi hemen aplikazioen mahaigaineko fitxategiaren "
+"abiaraztea saihesteko, idatzi hemen aplikazioen mahaigaineko fitxategiaren "
 "identifikatzailea edo, X11n, exekutagarriaren izenak (koma edo bi punturen "
 "bidez bereizita; adibidez, 'xterm:org.kde.konsole.desktop' edo 'xterm,org."
 "kde.konsole.desktop')."
@@ -185,12 +181,10 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr "Hurrengo berrabiaraztean:"
+msgstr "Hurrengo berrabioaren ondoren:"
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
 msgstr "Sartu firmwarearen konfigurazio-pantailara"

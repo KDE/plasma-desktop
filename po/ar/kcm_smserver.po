@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-01-08 11:34+0400\n"
+"PO-Revision-Date: 2026-02-18 17:48+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -56,17 +56,13 @@ msgid "Failed to request restart to firmware setup: %1"
 msgstr "فشل طلب إعادة التشغيل لإعداد البرنامج الثابت: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@info:status inlinemessage"
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"في المرة التالية التي يعاد فيها تشغيل الحاسوب، سيدخل إلى شاشة إعداد "
-"البرنامج  الثابت. "
+"عند إعادة تشغيل الحاسوب في المرة القادمة، سيدخل إلى إعدادات البرنامج الثابت "
+"UEFI."
 
 #: ui/main.qml:32
 #, kde-format
@@ -187,12 +183,10 @@ msgid "After next restart:"
 msgstr "بعد إعادة التشغيل التالي:"
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr "ادخل شاشة ضبط البرامج الثابتة"
+msgstr "ادخل إلى إعدادات البرنامج الثابت UEFI"
 
 #: ui/main.qml:146
 #, kde-format

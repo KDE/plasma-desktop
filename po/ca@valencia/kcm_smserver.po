@@ -1,5 +1,5 @@
 # Translation of kcm_smserver.po to Catalan (Valencian)
-# Copyright (C) 2001-2025 This_file_is_part_of_KDE
+# Copyright (C) 2001-2026 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
@@ -7,20 +7,20 @@
 # SPDX-FileCopyrightText: 2003 Antoni Bella Pérez <antonibella5@yahoo.com>
 # SPDX-FileCopyrightText: 2005 Albert Astals Cid <aacid@kde.org>
 # SPDX-FileCopyrightText: 2019 Empar Montoro Martín <montoro_mde@gva.es>
-# SPDX-FileCopyrightText: 2008, 2009, 2010, 2011, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2008, 2009, 2010, 2011, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2025-01-09 09:58+0100\n"
+"PO-Revision-Date: 2026-02-17 09:47+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -57,17 +57,13 @@ msgstr ""
 "microprogramari: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@info:status inlinemessage"
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"La pròxima vegada que es reinicie l'ordinador, presentarà la configuració "
-"del microprogramari."
+"La pròxima vegada que es reinicie l'ordinador, entrarà a la configuració del "
+"microprogramari UEFI."
 
 #: ui/main.qml:32
 #, kde-format
@@ -189,26 +185,13 @@ msgid "After next restart:"
 msgstr "Després del reinici següent:"
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr "Entra a la pantalla de configuració del microprogramari"
+msgstr "Entra a la configuració del microprogramari UEFI"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Entra a la pantalla de configuració del microprogramari"
-
-#~ msgctxt "@info:status inlinemessage"
-#~ msgid ""
-#~ "Next time the computer is restarted, it will enter the UEFI setup screen."
-#~ msgstr ""
-#~ "La pròxima vegada que es reinicie l'ordinador, presentarà la configuració "
-#~ "de la UEFI."
-
-#~ msgctxt "@option:check"
-#~ msgid "Enter UEFI setup screen"
-#~ msgstr "Entra a la pantalla de configuració de la UEFI"
