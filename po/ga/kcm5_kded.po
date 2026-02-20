@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4;\n"
+"3 : 4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -30,16 +30,14 @@ msgid "Your emails"
 msgstr "seoc@iolfree.ie,kscanne@gmail.com"
 
 #: kcmkded.cpp:48
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgid "Background Services"
-msgstr "Seirbhísí Tosaigh"
+msgstr ""
 
 #: kcmkded.cpp:52
-#, fuzzy, kde-format
-#| msgid "(c) 2002 Daniel Molkentin"
+#, kde-format
 msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
-msgstr "© 2002 Daniel Molkentin"
+msgstr ""
 
 #: kcmkded.cpp:53
 #, kde-format
@@ -77,17 +75,7 @@ msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
 msgstr ""
 
 #: package/contents/ui/main.qml:19
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Service Manager</h1><p>This module allows you to have an overview of "
-#| "all plugins of the KDE Daemon, also referred to as KDE Services. "
-#| "Generally, there are two types of service:</p><ul><li>Services invoked at "
-#| "startup</li><li>Services called on demand</li></ul><p>The latter are only "
-#| "listed for convenience. The startup services can be started and stopped. "
-#| "In Administrator mode, you can also define whether services should be "
-#| "loaded at startup.</p><p><b> Use this with care: some services are vital "
-#| "for KDE; do not deactivate services if you do not know what you are doing."
-#| "</b></p>"
+#, kde-format
 msgid ""
 "<p>This module allows you to have an overview of all plugins of the KDE "
 "Daemon, also referred to as KDE Services. Generally, there are two types of "
@@ -98,15 +86,6 @@ msgid ""
 "vital for Plasma; do not deactivate services if you  do not know what you "
 "are doing.</b></p>"
 msgstr ""
-"<h1>Bainisteoir na Seirbhísí</h1><p>Tugann an modúl seo forléargas duit ar "
-"gach breiseán den Deamhan KDE, tugtar \"Seirbhísí KDE\" air seo freisin.  Go "
-"hiondúil, tá dhá chineál de sheirbhísí ann:</p><ul><li>Seirbhísí a "
-"thosaítear ag am tosaithe an ríomhaire</li><li>Seirbhísí a thosaíonn "
-"úsáideoir ar éileamh</li></ul><p>Taispeántar seirbhísí den dara cineál mar "
-"áis duit amháin. Is féidir na seirbhísí tosaigh a thosú agus a stopadh. I "
-"mód an riarthóra, is féidir leat na seirbhísí le luchtú ag am tosaithe a "
-"shocrú.</p><p><b> Úsáid é seo go cúramach: tá roinnt seirbhísí riachtanach "
-"do KDE; ná díghníomhachtaigh seirbhísí mura bhfuil tú cinnte faoi.</b></p>"
 
 #: package/contents/ui/main.qml:38
 #, kde-format
@@ -130,36 +109,31 @@ msgid ""
 msgstr ""
 
 #: package/contents/ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "All Services"
-msgstr "Seirbhís"
+msgstr ""
 
 #: package/contents/ui/main.qml:99
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "List running services"
 msgid "Running"
-msgstr "Ag Rith"
+msgstr ""
 
 #: package/contents/ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid "Not running"
+#, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
-msgstr "Níl sé ag rith"
+msgstr ""
 
 #: package/contents/ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgid "Startup Services"
-msgstr "Seirbhísí Tosaigh"
+msgstr ""
 
 #: package/contents/ui/main.qml:137
-#, fuzzy, kde-format
-#| msgid "Load-on-Demand Services"
+#, kde-format
 msgid "Load-on-Demand Services"
-msgstr "Seirbhísí Luchtaithe-ar-Éileamh"
+msgstr ""
 
 #: package/contents/ui/main.qml:154
 #, kde-format
@@ -167,80 +141,21 @@ msgid "Toggle automatically loading this service on startup"
 msgstr ""
 
 #: package/contents/ui/main.qml:221
-#, fuzzy, kde-format
-#| msgid "Not running"
+#, kde-format
 msgid "Not running"
-msgstr "Níl sé ag rith"
+msgstr ""
 
 #: package/contents/ui/main.qml:222
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgid "Running"
-msgstr "Ag Rith"
+msgstr ""
 
 #: package/contents/ui/main.qml:240
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "Stop Service"
-msgstr "Seirbhís"
+msgstr ""
 
 #: package/contents/ui/main.qml:240
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "Start Service"
-msgstr "Seirbhís"
-
-#~ msgid "kcmkded"
-#~ msgstr "kcmkded"
-
-#~ msgid "KDE Service Manager"
-#~ msgstr "Bainisteoir Seirbhíse KDE"
-
-#~ msgid ""
-#~ "This is a list of available KDE services which will be started on demand. "
-#~ "They are only listed for convenience, as you cannot manipulate these "
-#~ "services."
-#~ msgstr ""
-#~ "Is é seo liosta de sheirbhísí KDE le fáil a thosófar ar éileamh. Níl sa "
-#~ "liosta seo ach áis tagartha, de bharr nach féidir na seirbhísí seo a "
-#~ "láimhseáil."
-
-#~ msgid "Status"
-#~ msgstr "Stádas"
-
-#~ msgid "Description"
-#~ msgstr "Cur Síos"
-
-#, fuzzy
-#~| msgid ""
-#~| "This shows all KDE services that can be loaded on KDE startup. Checked "
-#~| "services will be invoked on next startup. Be careful with deactivation "
-#~| "of unknown services."
-#~ msgid ""
-#~ "This shows all KDE services that can be loaded on Plasma startup. Checked "
-#~ "services will be invoked on next startup. Be careful with deactivation of "
-#~ "unknown services."
-#~ msgstr ""
-#~ "Is é seo liosta de gach seirbhís KDE is féidir luchtú ag am tosaithe KDE. "
-#~ "Tosófar na seirbhísí ticeáilte ag an chéad tosú eile. Bí cúramach nuair a "
-#~ "dhíghníomhachtaíonn tú seirbhísí anaithnide."
-
-#~ msgid "Use"
-#~ msgstr "Úsáid"
-
-#~ msgid "Start"
-#~ msgstr "Tosaigh"
-
-#~ msgid "Stop"
-#~ msgstr "Stad"
-
-#~ msgid "Unable to contact KDED."
-#~ msgstr "Ní féidir dul i dteagmháil le KDED."
-
-#~ msgid "Unable to start service <em>%1</em>.<br /><br /><i>Error: %2</i>"
-#~ msgstr ""
-#~ "Ní féidir seirbhís <em>%1</em> a thosú.<br /><br /><i>Earráid: %2</i>"
-
-#~ msgid "Unable to stop service <em>%1</em>.<br /><br /><i>Error: %2</i>"
-#~ msgstr ""
-#~ "Ní féidir seirbhís <em>%1</em> a stopadh.<br /><br /><i>Earráid: %2</i>"
+msgstr ""

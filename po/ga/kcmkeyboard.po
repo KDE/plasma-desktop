@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4;\n"
+"3 : 4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -52,10 +52,9 @@ msgstr "%1 - %2"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, AddLayoutDialog)
 #: kcm_add_layout_dialog.ui:14
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgid "Add Layout"
-msgstr "Cuir Leagan Amach Leis"
+msgstr ""
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, layoutSearchField)
 #: kcm_add_layout_dialog.ui:20
@@ -65,10 +64,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, shortcutLabel)
 #: kcm_add_layout_dialog.ui:45
-#, fuzzy, kde-format
-#| msgid "Shortcut:"
+#, kde-format
 msgid "Shortcut:"
-msgstr "Aicearra:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, labelLabel)
 #: kcm_add_layout_dialog.ui:55
@@ -79,10 +77,9 @@ msgstr "Lipéad:"
 #. i18n: ectx: property (text), widget (QPushButton, prevbutton)
 #. i18n: ectx: property (text), widget (QPushButton, previewButton)
 #: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:315
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgid "Preview"
-msgstr "Réamhamharc"
+msgstr ""
 
 #: kcm_keyboard.cpp:32
 #, kde-format
@@ -103,17 +100,15 @@ msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
 #: kcm_keyboard.ui:18
-#, fuzzy, kde-format
-#| msgid "Hardware"
+#, kde-format
 msgid "Hardware"
-msgstr "Crua-Earraí"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: kcm_keyboard.ui:33
-#, fuzzy, kde-format
-#| msgid "Keyboard &model:"
+#, kde-format
 msgid "Keyboard &model:"
-msgstr "Samhail an &mhéarchláir:"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, keyboardModelComboBox)
 #: kcm_keyboard.ui:53
@@ -135,10 +130,9 @@ msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
 #: kcm_keyboard.ui:94
-#, fuzzy, kde-format
-#| msgid "Layouts"
+#, kde-format
 msgid "Layouts"
-msgstr "Leaganacha Amach"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
 #: kcm_keyboard.ui:102
@@ -153,52 +147,45 @@ msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
 #: kcm_keyboard.ui:105
-#, fuzzy, kde-format
-#| msgid "Switching Policy"
+#, kde-format
 msgid "Switching Policy"
-msgstr "Polasaí Malairte"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByGlobalRadioBtn)
 #: kcm_keyboard.ui:111
-#, fuzzy, kde-format
-#| msgid "&Global"
+#, kde-format
 msgid "&Global"
-msgstr "&Comhchoiteann"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByDesktopRadioBtn)
 #: kcm_keyboard.ui:124
-#, fuzzy, kde-format
-#| msgid "&Desktop"
+#, kde-format
 msgid "&Desktop"
-msgstr "&Deasc"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByApplicationRadioBtn)
 #: kcm_keyboard.ui:134
-#, fuzzy, kde-format
-#| msgid "&Application"
+#, kde-format
 msgid "&Application"
-msgstr "&Feidhmchlár"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByWindowRadioBtn)
 #: kcm_keyboard.ui:144
-#, fuzzy, kde-format
-#| msgid "&Window"
+#, kde-format
 msgid "&Window"
-msgstr "&Fuinneog"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, shortcutsGroupBox)
 #: kcm_keyboard.ui:157
-#, fuzzy, kde-format
-#| msgid "Shortcuts for Switching Layout"
+#, kde-format
 msgid "Shortcuts for Switching Layout"
-msgstr "Aicearraí a mhalartaíonn an leagan amach"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm_keyboard.ui:163
-#, fuzzy, kde-format
-#| msgid "Main shortcuts:"
+#, kde-format
 msgid "Main shortcuts:"
-msgstr "Príomhaicearraí:"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
 #: kcm_keyboard.ui:176
@@ -227,10 +214,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm_keyboard.ui:193
-#, fuzzy, kde-format
-#| msgid "3rd level shortcuts:"
+#, kde-format
 msgid "3rd level shortcuts:"
-msgstr "Aicearraí tríú leibhéal:"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
 #: kcm_keyboard.ui:206
@@ -245,76 +231,60 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm_keyboard.ui:223
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgid "Alternative shortcut:"
-msgstr "Aicearra malartach:"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
 #: kcm_keyboard.ui:236
-#, fuzzy, kde-format
-#| msgid ""
-#| "This is a shortcut for switching layouts which is handled by KDE. It does "
-#| "not support modifier-only shortcuts and also may not work in some "
-#| "situations (e.g. if popup is active or from screensaver)."
+#, kde-format
 msgid ""
 "This is a shortcut for switching layouts. It does not support modifier-only "
 "shortcuts and also may not work in some situations (e.g. if popup is active "
 "or from screensaver)."
 msgstr ""
-"Seo é aicearra lenar féidir leaganacha amach a mhalartú atá láimhseáilte ag "
-"KDE.  Ní thacaíonn sé le haicearraí mionathraithe-amháin agus seans nach n-"
-"oibreoidh sé i gcásanna áirithe (m.sh. má tá preabfhuinneog ghníomhach ann, "
-"nó ó spárálaí scáileáin)."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
 #: kcm_keyboard.ui:261
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgid "Configure layouts"
-msgstr "Cumasaigh leaganacha amach"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
 #: kcm_keyboard.ui:275
-#, fuzzy, kde-format
-#| msgid "Add"
+#, kde-format
 msgid "Add"
-msgstr "Cuir Leis"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
 #: kcm_keyboard.ui:285
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgid "Remove"
-msgstr "Bain"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
 #: kcm_keyboard.ui:295
-#, fuzzy, kde-format
-#| msgid "Move Up"
+#, kde-format
 msgid "Move Up"
-msgstr "Bog Suas"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
 #: kcm_keyboard.ui:305
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgid "Move Down"
-msgstr "Bog Síos"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
 #: kcm_keyboard.ui:350
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgid "Spare layouts"
-msgstr "Cumasaigh leaganacha amach"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: kcm_keyboard.ui:382
-#, fuzzy, kde-format
-#| msgid "Main shortcuts:"
+#, kde-format
 msgid "Main layout count:"
-msgstr "Príomhaicearraí:"
+msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
 #: kcm_keyboard.ui:412
@@ -324,10 +294,9 @@ msgstr "Casta"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
 #: kcm_keyboard.ui:418
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgid "&Configure keyboard options"
-msgstr "Cumasaigh leaganacha amach"
+msgstr ""
 
 #: kcm_keyboard_widget.cpp:211
 #, kde-format
@@ -358,36 +327,30 @@ msgstr[3] "%1 aicearraí"
 msgstr[4] "%1 aicearraí"
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgctxt "layout map name"
-#| msgid "Map"
+#, kde-format
 msgctxt "layout map name"
 msgid "Map"
-msgstr "Mapa"
+msgstr ""
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "Layout:"
+#, kde-format
 msgid "Layout"
-msgstr "Leagan Amach:"
+msgstr ""
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "Variant:"
+#, kde-format
 msgid "Variant"
-msgstr "Malairt:"
+msgstr ""
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "Label:"
+#, kde-format
 msgid "Label"
-msgstr "Lipéad:"
+msgstr ""
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "Shortcut:"
+#, kde-format
 msgid "Shortcut"
-msgstr "Aicearra:"
+msgstr ""
 
 #: kcm_view_models.cpp:273
 #, kde-format
@@ -421,10 +384,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcmmiscwidget.ui:66
-#, fuzzy, kde-format
-#| msgid "Test area:"
+#, kde-format
 msgid "Test area:"
-msgstr "Limistéar tástála:"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, lineEdit)
 #: kcmmiscwidget.ui:73
@@ -436,40 +398,30 @@ msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
 #: kcmmiscwidget.ui:82
-#, fuzzy, kde-format
-#| msgid ""
-#| "If supported, this option allows you to setup the state of NumLock after "
-#| "KDE startup.<p>You can configure NumLock to be turned on or off, or "
-#| "configure KDE not to set NumLock state."
+#, kde-format
 msgid ""
 "If supported, this option allows you to setup the state of NumLock after "
 "Plasma startup.<p>You can configure NumLock to be turned on or off, or "
 "configure Plasma not to set NumLock state."
 msgstr ""
-"Má thacaítear leis, is féidir staid na heochrach NumLock ag am tosaithe KDE "
-"a shocrú.<p>Is féidir é a shocrú sa chaoi go mbeidh NumLock ann nó as ag am "
-"tosaithe, nó gan a bheith socraithe ar chor ar bith."
 
 #. i18n: ectx: property (title), widget (QGroupBox, numlockGroupBox)
 #: kcmmiscwidget.ui:85
-#, fuzzy, kde-format
-#| msgid "NumLock on KDE Startup"
+#, kde-format
 msgid "NumLock on Plasma Startup"
-msgstr "NumLock ag am tosaithe KDE"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton1)
 #: kcmmiscwidget.ui:97
-#, fuzzy, kde-format
-#| msgid "T&urn on"
+#, kde-format
 msgid "T&urn on"
-msgstr "&Gníomhachtaigh"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton2)
 #: kcmmiscwidget.ui:104
-#, fuzzy, kde-format
-#| msgid "Turn o&ff"
+#, kde-format
 msgid "&Turn off"
-msgstr "&Díghníomhachtaigh"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton3)
 #: kcmmiscwidget.ui:111
@@ -479,10 +431,9 @@ msgstr "Fá&g mar atá"
 
 #. i18n: ectx: property (text), widget (QLabel, lblRate)
 #: kcmmiscwidget.ui:148
-#, fuzzy, kde-format
-#| msgid "&Rate:"
+#, kde-format
 msgid "&Rate:"
-msgstr "&Ráta:"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QSlider, delaySlider)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_repeatDelay)
@@ -510,24 +461,21 @@ msgstr ""
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_repeatRate)
 #: kcmmiscwidget.ui:195
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgid " repeats/s"
-msgstr " uair/s"
+msgstr ""
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_repeatDelay)
 #: kcmmiscwidget.ui:205
-#, fuzzy, kde-format
-#| msgid " ms"
+#, kde-format
 msgid " ms"
-msgstr " ms"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lblDelay)
 #: kcmmiscwidget.ui:246
-#, fuzzy, kde-format
-#| msgid "&Delay:"
+#, kde-format
 msgid "&Delay:"
-msgstr "&Moill:"
+msgstr ""
 
 #: tastenbrett/main.cpp:57
 #, kde-format
@@ -550,123 +498,3 @@ msgid ""
 "will likely also present when you try to use this combination of model, "
 "layout and variant."
 msgstr ""
-
-#~ msgid "Any language"
-#~ msgstr "Teanga ar bith"
-
-#~ msgid "Layout:"
-#~ msgstr "Leagan Amach:"
-
-#~ msgid "Variant:"
-#~ msgstr "Malairt:"
-
-#~ msgid "..."
-#~ msgstr "..."
-
-#~ msgctxt "short layout label - full layout name"
-#~ msgid "%1 - %2"
-#~ msgstr "%1 - %2"
-
-#, fuzzy
-#~| msgid "Shortcuts for Switching Layout"
-#~ msgid "Show for single layout"
-#~ msgstr "Aicearraí a mhalartaíonn an leagan amach"
-
-#~ msgid "Show flag"
-#~ msgstr "Taispeáin bratach"
-
-#~ msgid "Show label"
-#~ msgstr "Taispeáin lipéad"
-
-#~ msgid "Show label on flag"
-#~ msgstr "Taispeáin lipéad ar an mbratach"
-
-#, fuzzy
-#~| msgid "Keyboard Repeat"
-#~ msgctxt "tooltip title"
-#~ msgid "Keyboard Layout"
-#~ msgstr "Athdhéanamh Eochairbhrúnna"
-
-#, fuzzy
-#~| msgid "Configure layouts"
-#~ msgid "Configure Layouts..."
-#~ msgstr "Cumasaigh leaganacha amach"
-
-#~ msgid "Keyboard Repeat"
-#~ msgstr "Athdhéanamh Eochairbhrúnna"
-
-#~ msgid "Turn o&ff"
-#~ msgstr "&Díghníomhachtaigh"
-
-#, fuzzy
-#~| msgid "Leave unchan&ged"
-#~ msgid "&Leave unchanged"
-#~ msgstr "Fá&g mar atá"
-
-#, fuzzy
-#~| msgid "Configure layouts"
-#~ msgid "Configure..."
-#~ msgstr "Cumasaigh leaganacha amach"
-
-#~ msgid ""
-#~ "If supported, this option allows you to hear audible clicks from your "
-#~ "computer's speakers when you press the keys on your keyboard. This might "
-#~ "be useful if your keyboard does not have mechanical keys, or if the sound "
-#~ "that the keys make is very soft.<p>You can change the loudness of the key "
-#~ "click feedback by dragging the slider button or by clicking the up/down "
-#~ "arrows on the spin box. Setting the volume to 0% turns off the key click."
-#~ msgstr ""
-#~ "Má thacaítear leis, ceadaíonn an rogha seo duit cliceanna a chloisteáil ó "
-#~ "challairí do ríomhaire nuair a bhrúnn tú eochracha ar do mhéarchlár. "
-#~ "Rogha áisiúil é seo mura bhfuil eochracha meicniúla ag do mhéarchlár, nó "
-#~ "mura bhfuil ach torann bog ó na heochracha.<p>Is féidir airde na "
-#~ "gcliceanna a athrú tríd an sleamhnán a tharraingt nó trí na saigheada "
-#~ "suas/síos ar an gcasbhosca a chliceáil. Chun na cliceanna a mhúchadh, "
-#~ "socraigh an airde ag 0%."
-
-#, fuzzy
-#~| msgid "Key click &volume:"
-#~ msgid "&Key click volume:"
-#~ msgstr "&Airde na gcliceanna:"
-
-#~ msgid "Backspace"
-#~ msgstr "Cúlspás"
-
-#~ msgid "Caps Lock"
-#~ msgstr "Caps Lock"
-
-#~ msgid "Enter"
-#~ msgstr "Iontráil"
-
-#~ msgid "Ctrl"
-#~ msgstr "Ctrl"
-
-#~ msgid "Alt"
-#~ msgstr "Alt"
-
-#~ msgid "AltGr"
-#~ msgstr "AltGr"
-
-#~ msgid "Esc"
-#~ msgstr "Esc"
-
-#~ msgid "Shift"
-#~ msgstr "Shift"
-
-#~ msgid "Close"
-#~ msgstr "Dún"
-
-#~ msgid ""
-#~ "If you check this option, pressing and holding down a key emits the same "
-#~ "character over and over again. For example, pressing and holding down the "
-#~ "Tab key will have the same effect as that of pressing that key several "
-#~ "times in succession: Tab characters continue to be emitted until you "
-#~ "release the key."
-#~ msgstr ""
-#~ "Má thiceálann tú an rogha seo, cuirfear an carachtar céanna amach arís "
-#~ "agus arís nuair a bhrúnn tú eochair agus é a choinneáil síos. Mar "
-#~ "shampla, má bhrúnn tú an eochair Táb, cuirfear carachtair tháib amach go "
-#~ "dtí go scaoilfidh tú an eochair."
-
-#~ msgid "&Enable keyboard repeat"
-#~ msgstr "Cumasaigh athdhéanamh &eochairbhrúnna"

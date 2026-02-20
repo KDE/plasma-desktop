@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4;\n"
+"3 : 4\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -67,10 +67,9 @@ msgid "Clear Icon"
 msgstr "Deilbhín Glan"
 
 #: package/contents/ui/ConfigGeneral.qml:149
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Show applications as:"
-msgstr "Feidhmchláir"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:151
 #, kde-format
@@ -98,10 +97,9 @@ msgid "Behavior:"
 msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:163
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Sort applications alphabetically"
-msgstr "Feidhmchláir"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:171
 #, kde-format
@@ -114,22 +112,19 @@ msgid "Show icons on the root level of the menu"
 msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:189
-#, fuzzy, kde-format
-#| msgid "Favorite Places"
+#, kde-format
 msgid "Show categories:"
-msgstr "Áiteanna Is Ansa Liom"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:192
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Recent applications"
-msgstr "Feidhmchláir"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:193
-#, fuzzy, kde-format
-#| msgid "Installed Applications"
+#, kde-format
 msgid "Often used applications"
-msgstr "Feidhmchláir Shuiteáilte"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:200
 #, kde-format
@@ -137,22 +132,19 @@ msgid "Recent files"
 msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:201
-#, fuzzy, kde-format
-#| msgid "Installed Applications"
+#, kde-format
 msgid "Often used files"
-msgstr "Feidhmchláir Shuiteáilte"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:208
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Recent contacts"
-msgstr "Feidhmchláir"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:209
-#, fuzzy, kde-format
-#| msgid "Installed Applications"
+#, kde-format
 msgid "Often used contacts"
-msgstr "Feidhmchláir Shuiteáilte"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:215
 #, kde-format
@@ -199,10 +191,9 @@ msgid "Type to search…"
 msgstr ""
 
 #: package/contents/ui/DashboardRepresentation.qml:392
-#, fuzzy, kde-format
-#| msgid "Favorite Places"
+#, kde-format
 msgid "Favorites"
-msgstr "Áiteanna Is Ansa Liom"
+msgstr ""
 
 #: package/contents/ui/DashboardRepresentation.qml:610
 #: package/contents/ui/DashboardTabBar.qml:42
@@ -216,197 +207,6 @@ msgid "Apps & Docs"
 msgstr ""
 
 #: package/contents/ui/main.qml:259
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgid "Edit Applications…"
-msgstr "Feidhmchláir"
-
-#, fuzzy
-#~| msgid "Applications"
-#~ msgid "Edit Application..."
-#~ msgstr "Feidhmchláir"
-
-#, fuzzy
-#~| msgid "Applications"
-#~ msgid "Hide Application"
-#~ msgstr "Feidhmchláir"
-
-#, fuzzy
-#~| msgid "Applications"
-#~ msgid "Applications"
-#~ msgstr "Feidhmchláir"
-
-#, fuzzy
-#~| msgid "Favorite Applications"
-#~ msgid "Unhide Applications in '%1'"
-#~ msgstr "Feidhmchláir Is Ansa Leat"
-
-#, fuzzy
-#~| msgid "Favorite Applications"
-#~ msgid "Forget All Contacts"
-#~ msgstr "Feidhmchláir Is Ansa Leat"
-
-#, fuzzy
-#~| msgid "Favorite Applications"
-#~ msgid "Forget Application"
-#~ msgstr "Feidhmchláir Is Ansa Leat"
-
-#, fuzzy
-#~| msgid "Favorite Applications"
-#~ msgid "Forget All"
-#~ msgstr "Feidhmchláir Is Ansa Leat"
-
-#, fuzzy
-#~| msgid "Favorite Applications"
-#~ msgid "Forget All Applications"
-#~ msgstr "Feidhmchláir Is Ansa Leat"
-
-#~ msgid "All Applications"
-#~ msgstr "Gach Feidhmchlár"
-
-#, fuzzy
-#~| msgid "Applications"
-#~ msgid "Recent Applications"
-#~ msgstr "Feidhmchláir"
-
-#, fuzzy
-#~| msgid "Installed Applications"
-#~ msgid "Often Used Applications"
-#~ msgstr "Feidhmchláir Shuiteáilte"
-
-#, fuzzy
-#~| msgid "Session"
-#~ msgid "Power / Session"
-#~ msgstr "Seisiún"
-
-#, fuzzy
-#~| msgid "Session"
-#~ msgid "Save Session"
-#~ msgstr "Seisiún"
-
-#~ msgid "Session"
-#~ msgstr "Seisiún"
-
-#, fuzzy
-#~| msgid "Session"
-#~ msgid "End session"
-#~ msgstr "Seisiún"
-
-#, fuzzy
-#~| msgid "Applications"
-#~ msgid "Show recent applications"
-#~ msgstr "Feidhmchláir"
-
-#, fuzzy
-#~| msgid "Applications"
-#~ msgid "Show often used applications"
-#~ msgstr "Feidhmchláir"
-
-#, fuzzy
-#~| msgctxt "an action"
-#~| msgid "Logout"
-#~ msgid "Logout"
-#~ msgstr "Logáil Amach"
-
-#, fuzzy
-#~| msgid "Session"
-#~ msgid "New Session"
-#~ msgstr "Seisiún"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Kevin Scannell"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "kscanne@gmail.com"
-
-#, fuzzy
-#~| msgid "Installed Applications"
-#~ msgid "All Installed Applications With Filters"
-#~ msgstr "Feidhmchláir Shuiteáilte"
-
-#~ msgid "Folder"
-#~ msgstr "Fillteán"
-
-#~ msgid "Power Management"
-#~ msgstr "Bainisteoireacht Cumhachta"
-
-#~ msgid "Title:"
-#~ msgstr "Teideal:"
-
-#, fuzzy
-#~| msgctxt "Program name"
-#~| msgid "Homerun"
-#~ msgctxt "KFile System Bookmarks"
-#~ msgid "Home"
-#~ msgstr "Homerun"
-
-#~ msgid "Power"
-#~ msgstr "Cumhacht"
-
-#~ msgid "Hello"
-#~ msgstr "Dia Duit"
-
-#~ msgid "World"
-#~ msgstr "Domhan"
-
-#~ msgid "Hello World"
-#~ msgstr "Dia Dhuit, A Dhomhain"
-
-#~ msgctxt "Used for tabs which have no name"
-#~ msgid "<Untitled>"
-#~ msgstr "<Gan teideal>"
-
-#, fuzzy
-#~| msgid "End Configure"
-#~ msgid "End Configure Tabs"
-#~ msgstr "Cuir deireadh leis an gcumraíocht"
-
-#, fuzzy
-#~| msgid "Configure"
-#~ msgid "Configure Tabs"
-#~ msgstr "Cumraigh"
-
-#~ msgid "About %1"
-#~ msgstr "Maidir le %1"
-
-#~ msgctxt "Program name"
-#~ msgid "Homerun"
-#~ msgstr "Homerun"
-
-#, fuzzy
-#~| msgid "(C) 2012 Blue Systems"
-#~ msgid "(C) 2012-2014 Blue Systems"
-#~ msgstr "© 2012 Blue Systems"
-
-#~ msgid "Shaun Reich"
-#~ msgstr "Shaun Reich"
-
-#~ msgid "Developer"
-#~ msgstr "Forbróir"
-
-#~ msgid "Aurélien Gâteau"
-#~ msgstr "Aurélien Gâteau"
-
-#, fuzzy
-#~| msgctxt "Program name"
-#~| msgid "Homerun"
-#~ msgctxt "Tab title"
-#~ msgid "Home"
-#~ msgstr "Homerun"
-
-#, fuzzy
-#~| msgid "Power"
-#~ msgctxt "Tab title"
-#~ msgid "Power"
-#~ msgstr "Cumhacht"
-
-#, fuzzy
-#~| msgctxt "Program name"
-#~| msgid "Homerun"
-#~ msgid "Homerun Kicker"
-#~ msgstr "Homerun"
-
-#~ msgid "Show on screen <screen>"
-#~ msgstr "Taispeáin ar scáileán <screen>"
+msgstr ""

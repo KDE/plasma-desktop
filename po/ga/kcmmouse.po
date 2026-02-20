@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4;\n"
+"3 : 4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -123,10 +123,9 @@ msgid "Device:"
 msgstr ""
 
 #: kcm/libinput/main.qml:103 kcm/libinput/main_deviceless.qml:54
-#, fuzzy, kde-format
-#| msgid "&General"
+#, kde-format
 msgid "General:"
-msgstr "&Ginearálta"
+msgstr ""
 
 #: kcm/libinput/main.qml:105
 #, kde-format
@@ -139,10 +138,9 @@ msgid "Accept input through this device."
 msgstr ""
 
 #: kcm/libinput/main.qml:130 kcm/libinput/main_deviceless.qml:56
-#, fuzzy, kde-format
-#| msgid "Le&ft handed"
+#, kde-format
 msgid "Left handed mode"
-msgstr "&Ciotach"
+msgstr ""
 
 #: kcm/libinput/main.qml:149 kcm/libinput/main_deviceless.qml:75
 #, kde-format
@@ -161,16 +159,14 @@ msgid ""
 msgstr ""
 
 #: kcm/libinput/main.qml:184 kcm/libinput/main_deviceless.qml:110
-#, fuzzy, kde-format
-#| msgid "Pointer threshold:"
+#, kde-format
 msgid "Pointer speed:"
-msgstr "Tairseach an phointeora:"
+msgstr ""
 
 #: kcm/libinput/main.qml:216 kcm/libinput/main_deviceless.qml:142
-#, fuzzy, kde-format
-#| msgid "Acceleration &profile:"
+#, kde-format
 msgid "Acceleration profile:"
-msgstr "&Próifíl luasghéaraithe:"
+msgstr ""
 
 #: kcm/libinput/main.qml:247 kcm/libinput/main_deviceless.qml:173
 #, kde-format
@@ -198,10 +194,9 @@ msgid "Scrolling:"
 msgstr ""
 
 #: kcm/libinput/main.qml:274 kcm/libinput/main_deviceless.qml:200
-#, fuzzy, kde-format
-#| msgid "Re&verse scroll direction"
+#, kde-format
 msgid "Invert scroll direction"
-msgstr "Iompaigh &treo scrollaithe"
+msgstr ""
 
 #: kcm/libinput/main.qml:289 kcm/libinput/main_deviceless.qml:215
 #, kde-format
@@ -209,10 +204,9 @@ msgid "Touchscreen like scrolling."
 msgstr ""
 
 #: kcm/libinput/main.qml:295
-#, fuzzy, kde-format
-#| msgid "Pointer threshold:"
+#, kde-format
 msgid "Scrolling speed:"
-msgstr "Tairseach an phointeora:"
+msgstr ""
 
 #: kcm/libinput/main.qml:343
 #, kde-format
@@ -257,11 +251,10 @@ msgid "Cancel"
 msgstr "Cealaigh"
 
 #: kcm/libinput/main.qml:448
-#, fuzzy, kde-format
-#| msgid "Press Connect Button"
+#, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
-msgstr "Brúigh an Cnaipe Ceangail"
+msgstr ""
 
 #: kcm/libinput/main.qml:449
 #, kde-format
@@ -353,10 +346,9 @@ msgstr "Casta"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/xlib/kcmmouse.ui:164
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Pointer acceleration:"
-msgstr "Luasghéarú an phointeora:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/kcmmouse.ui:174
@@ -495,10 +487,9 @@ msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, MouseNavigation)
 #: kcm/xlib/kcmmouse.ui:387
-#, fuzzy, kde-format
-#| msgid "Mouse Navigation"
+#, kde-format
 msgid "Keyboard Navigation"
-msgstr "Nascleanúint Luiche"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, mouseKeys)
 #: kcm/xlib/kcmmouse.ui:395
@@ -548,10 +539,9 @@ msgid "Mouse"
 msgstr "Luch"
 
 #: kcm/xlib/xlib_config.cpp:83
-#, fuzzy, kde-format
-#| msgid "(c) 1997 - 2005 Mouse developers"
+#, kde-format
 msgid "(c) 1997 - 2018 Mouse developers"
-msgstr "© 1997 - 2005 Forbróirí Mouse"
+msgstr ""
 
 #: kcm/xlib/xlib_config.cpp:84
 #, kde-format
@@ -607,342 +597,3 @@ msgstr[1] " líne"
 msgstr[2] " líne"
 msgstr[3] " líne"
 msgstr[4] " líne"
-
-#~ msgid "Ralf Nolden"
-#~ msgstr "Ralf Nolden"
-
-#, fuzzy
-#~| msgid "Acceleration &time:"
-#~ msgid "Acceleration:"
-#~ msgstr "Am luasghéarai&the:"
-
-#, fuzzy
-#~| msgid "Acceleration &profile:"
-#~ msgid "Acceleration Profile:"
-#~ msgstr "&Próifíl luasghéaraithe:"
-
-#~ msgid "Icons"
-#~ msgstr "Deilbhíní"
-
-#~ msgid ""
-#~ "The default behavior in KDE is to select and activate icons with a single "
-#~ "click of the left button on your pointing device. This behavior is "
-#~ "consistent with what you would expect when you click links in most web "
-#~ "browsers. If you would prefer to select with a single click, and activate "
-#~ "with a double click, check this option."
-#~ msgstr ""
-#~ "De réir réamhshocraithe, roghnaítear agus gníomhachtaítear deilbhín i KDE "
-#~ "le clic amháin ar an gcnaipe ar chlé ar do ghléas pointeála. Tá sé seo ar "
-#~ "comhréir le hoibriú formhór na mbrabhsálaithe Gréasáin atá ann nuair a "
-#~ "chliceáiltear nasc. Más fearr leat rudaí a roghnú le clic amháin agus a "
-#~ "ghníomhachtú le dhá chlic, cuir tic leis an rogha seo."
-
-#~ msgid ""
-#~ "Dou&ble-click to open files and folders (select icons on first click)"
-#~ msgstr ""
-#~ "&Déchliceáil chun comhaid agus fillteáin a oscailt (roghnaigh an deilbhín "
-#~ "leis an chéad chlic)"
-
-#~ msgid "Activates and opens a file or folder with a single click."
-#~ msgstr "Gníomhachtaigh agus oscail comhad nó fillteán le haon chlic amháin."
-
-#~ msgid "&Single-click to open files and folders"
-#~ msgstr "Cliceáil &uair amháin chun comhaid agus fillteáin a oscailt"
-
-#~ msgid "Select the cursor theme you want to use:"
-#~ msgstr "Roghnaigh an téama cúrsóra le húsáid:"
-
-#~ msgid "Name"
-#~ msgstr "Ainm"
-
-#~ msgid "Description"
-#~ msgstr "Cur Síos"
-
-#~ msgid "You have to restart KDE for these changes to take effect."
-#~ msgstr "Ní mór duit KDE a atosú chun na hathruithe seo a chur i bhfeidhm."
-
-#~ msgid "Cursor Settings Changed"
-#~ msgstr "Athraíodh Socruithe an Chúrsóra"
-
-#~ msgid "Small black"
-#~ msgstr "Beag Dubh"
-
-#~ msgid "Small black cursors"
-#~ msgstr "Cúrsóirí beaga dubha"
-
-#~ msgid "Large black"
-#~ msgstr "Mór Dubh"
-
-#~ msgid "Large black cursors"
-#~ msgstr "Cúrsóirí móra dubha"
-
-#~ msgid "Small white"
-#~ msgstr "Beag Bán"
-
-#~ msgid "Small white cursors"
-#~ msgstr "Cúrsóirí beaga bána"
-
-#~ msgid "Large white"
-#~ msgstr "Mór Bán"
-
-#~ msgid "Large white cursors"
-#~ msgstr "Cúrsóirí móra bána"
-
-#~ msgid "Cha&nge pointer shape over icons"
-#~ msgstr "Athraigh &cruth an phointeora os cionn na ndeilbhíní"
-
-#~ msgid "A&utomatically select icons"
-#~ msgstr "Roghnaigh deilbhíní go h&uathoibríoch"
-
-#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
-#~ msgid "Delay"
-#~ msgstr "Moill"
-
-#~ msgctxt "milliseconds. time to automatically select the items"
-#~ msgid " ms"
-#~ msgstr " ms"
-
-#~ msgid ""
-#~ "If you check this option, pausing the mouse pointer over an icon on the "
-#~ "screen will automatically select that icon. This may be useful when "
-#~ "single clicks activate icons, and you want only to select the icon "
-#~ "without activating it."
-#~ msgstr ""
-#~ "Má chuireann tú tic leis an rogha seo, roghnófar deilbhín go "
-#~ "huathoibríoch nuair a dhéanfaidh an luch moill os a chionn. Rogha áisiúil "
-#~ "é seo nuair a ghníomhachtaítear deilbhíní le clic amháin agus is mian "
-#~ "leat deilbhín a roghnú gan é a ghníomhachtú."
-
-#~ msgid ""
-#~ "If you have checked the option to automatically select icons, this slider "
-#~ "allows you to select how long the mouse pointer must be paused over the "
-#~ "icon before it is selected."
-#~ msgstr ""
-#~ "Má chuireann tú tic leis an rogha a roghnaíonn deilbhíní go "
-#~ "huathoibríoch, is féidir an tréimhse a gcaithfear an luch a choinneáil os "
-#~ "cionn deilbhín a shocrú leis an sleamhnán seo."
-
-#~ msgid "Mouse type: %1"
-#~ msgstr "Cineál luiche: %1"
-
-#~ msgid ""
-#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
-#~ "establish link"
-#~ msgstr ""
-#~ "Socraíodh cainéal RF a haon. Brúigh an cnaipe Ceangail ar an luch chun an "
-#~ "nasc a athbhunú"
-
-#~ msgid ""
-#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
-#~ "establish link"
-#~ msgstr ""
-#~ "Socraíodh cainéal RF a dó. Brúigh an cnaipe Ceangail ar an luch chun an "
-#~ "nasc a athbhunú"
-
-#~ msgctxt "no cordless mouse"
-#~ msgid "none"
-#~ msgstr "neamhní"
-
-#~ msgid "Cordless Mouse"
-#~ msgstr "Luch gan sreang"
-
-#~ msgid "Cordless Wheel Mouse"
-#~ msgstr "Luch le roth gan sreang"
-
-#~ msgid "Cordless MouseMan Wheel"
-#~ msgstr "MouseMan le roth gan sreang"
-
-#~ msgid "Cordless TrackMan Wheel"
-#~ msgstr "TrackMan le roth gan sreang"
-
-#~ msgid "TrackMan Live"
-#~ msgstr "TrackMan Live"
-
-#~ msgid "Cordless TrackMan FX"
-#~ msgstr "TrackMan FX gan sreang"
-
-#~ msgid "Cordless MouseMan Optical"
-#~ msgstr "MouseMan optúil gan sreang"
-
-#~ msgid "Cordless Optical Mouse"
-#~ msgstr "Luch optúil gan sreang"
-
-#~ msgid "Cordless MouseMan Optical (2ch)"
-#~ msgstr "MouseMan optúil gan sreang (2ch)"
-
-#~ msgid "Cordless Optical Mouse (2ch)"
-#~ msgstr "Luch optúil gan sreang (2ch)"
-
-#~ msgid "Cordless Mouse (2ch)"
-#~ msgstr "Luch gan sreang (2ch)"
-
-#~ msgid "Cordless Optical TrackMan"
-#~ msgstr "TrackMan optúil gan sreang"
-
-#~ msgid "MX700 Cordless Optical Mouse"
-#~ msgstr "Luch optúil MX700 gan sreang"
-
-#~ msgid "MX700 Cordless Optical Mouse (2ch)"
-#~ msgstr "Luch optúil MX700 gan sreang (2ch)"
-
-#~ msgid "Unknown mouse"
-#~ msgstr "Luch anaithnid"
-
-#~ msgid "Cordless Name"
-#~ msgstr "Ainm Luiche Gan Sreang"
-
-#~ msgid "Sensor Resolution"
-#~ msgstr "Taifeach an Bhraiteora"
-
-#~ msgid "400 counts per inch"
-#~ msgstr "400 ceann san orlach"
-
-#~ msgid "800 counts per inch"
-#~ msgstr "800 ceann san orlach"
-
-#~ msgid "Battery Level"
-#~ msgstr "Leibhéal an Chadhnra"
-
-#~ msgid "RF Channel"
-#~ msgstr "Cainéal Radaimhinicíochta"
-
-#~ msgid "Channel 1"
-#~ msgstr "Cainéal 1"
-
-#~ msgid "Channel 2"
-#~ msgstr "Cainéal 2"
-
-#~ msgid ""
-#~ "You have a Logitech Mouse connected, and libusb was found at compile "
-#~ "time, but it was not possible to access this mouse. This is probably "
-#~ "caused by a permissions problem - you should consult the manual on how to "
-#~ "fix this."
-#~ msgstr ""
-#~ "Tá Luch Logitech ceangailte agat, agus aimsíodh libusb ag am tiomsaithe, "
-#~ "ach níorbh fhéidir an luch seo a rochtain. Is dócha go bhfuil fadhb éigin "
-#~ "le ceadanna - féach ar an lámhleabhar chun an fhadhb seo a réiteach."
-
-#~ msgid "Cursor Theme"
-#~ msgstr "Téama Cúrsóra"
-
-#~ msgid "(c) 2003-2007 Fredrik Höglund"
-#~ msgstr "© 2003-2007 Fredrik Höglund"
-
-#~ msgid "Fredrik Höglund"
-#~ msgstr "Fredrik Höglund"
-
-#, fuzzy
-#~| msgctxt "@item:inlistbox size"
-#~| msgid "resolution dependent"
-#~ msgctxt "@item:inlistbox size"
-#~ msgid "Resolution dependent"
-#~ msgstr "spleách ar réiteach"
-
-#~ msgid "Drag or Type Theme URL"
-#~ msgstr "Tarraing nó Clóscríobh URL an Téama"
-
-#~ msgid "Unable to find the cursor theme archive %1."
-#~ msgstr "Ní féidir cartlann téama cúrsóra %1 a aimsiú."
-
-#~ msgid ""
-#~ "Unable to download the cursor theme archive; please check that the "
-#~ "address %1 is correct."
-#~ msgstr ""
-#~ "Ní féidir cartlann téama cúrsóra a íosluchtú; bí cinnte go bhfuil seoladh "
-#~ "%1 ceart."
-
-#~ msgid "The file %1 does not appear to be a valid cursor theme archive."
-#~ msgstr "Ní cartlann bhailí téama cúrsóra é an comhad %1 de réir cosúlachta."
-
-#~ msgid ""
-#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
-#~ "switch to another theme first.</qt>"
-#~ msgstr ""
-#~ "<qt>Níl cead agat an téama atá in úsáid faoi láthair a scriosadh.<br />Ní "
-#~ "mór duit an téama a athrú i dtosach báire.</qt>"
-
-#~ msgid ""
-#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
-#~ "will delete all the files installed by this theme.</qt>"
-#~ msgstr ""
-#~ "<qt>An bhfuil tú cinnte gur mian leat téama cúrsóra <i>%1</i> a bhaint?"
-#~ "<br />Scriosfar gach comhad suiteáilte ag an téama seo.</qt>"
-
-#~ msgid "Confirmation"
-#~ msgstr "Deimhniú"
-
-#~ msgid ""
-#~ "A theme named %1 already exists in your icon theme folder. Do you want "
-#~ "replace it with this one?"
-#~ msgstr ""
-#~ "Tá téama darb ainm %1 i bhfillteáin do théamaí deilbhíní. An bhfuil fonn "
-#~ "ort an ceann seo a chur ina ionad?"
-
-#~ msgid "Overwrite Theme?"
-#~ msgstr "Forscríobh an Téama?"
-
-#~ msgid ""
-#~ "Select the cursor theme you want to use (hover preview to test cursor):"
-#~ msgstr ""
-#~ "Roghnaigh an téama cúrsóra ba mhaith leat a úsáid (déan ainliú chun "
-#~ "triail a bhaint as):"
-
-#~ msgid "Get new color schemes from the Internet"
-#~ msgstr "Faigh scéimeanna nua datha ón Idirlíon"
-
-#~ msgid "Get New Theme..."
-#~ msgstr "Faigh Téama Nua..."
-
-#~ msgid "Install From File..."
-#~ msgstr "Suiteáil Ó Chomhad..."
-
-#~ msgid "Remove Theme"
-#~ msgstr "Bain Téama"
-
-#~ msgctxt "@label:listbox cursor size"
-#~ msgid "Size:"
-#~ msgstr "Méid:"
-
-#, fuzzy
-#~| msgctxt ""
-#~| "@info/plain The argument is the list of available sizes (in pixel). "
-#~| "Example: 'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
-#~| msgid "(Available sizes: %1)"
-#~ msgctxt ""
-#~ "@info The argument is the list of available sizes (in pixel). Example: "
-#~ "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
-#~ msgid "(Available sizes: %1)"
-#~ msgstr "(Méideanna le fáil: %1)"
-
-#~ msgid "KDE Classic"
-#~ msgstr "KDE Clasaiceach"
-
-#~ msgid "The default cursor theme in KDE 2 and 3"
-#~ msgstr "Téama réamhshocraithe cúrsóra i KDE 2 agus 3"
-
-#~ msgid "No description available"
-#~ msgstr "Níl cur síos ar fáil"
-
-#~ msgid "Short"
-#~ msgstr "Gearr"
-
-#~ msgid "Long"
-#~ msgstr "Fada"
-
-#~ msgid "Show feedback when clicking an icon"
-#~ msgstr "Taispeáin aiseolas nuair a chliceálann ar dheilbhín"
-
-#~ msgid "Replace"
-#~ msgstr "Ionadaigh"
-
-#~ msgid "No theme"
-#~ msgstr "Gan téama"
-
-#~ msgid "The old classic X cursors"
-#~ msgstr "Cúrsóirí X ar an sean-nós"
-
-#~ msgid "System theme"
-#~ msgstr "Téama chórais"
-
-#~ msgid "Do not change cursor theme"
-#~ msgstr "Ná hathraigh an téama cúrsóra"

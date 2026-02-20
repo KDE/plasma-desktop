@@ -17,13 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4;\n"
+"3 : 4\n"
 
 #: package/contents/config/config.qml:13
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgid "Appearance"
-msgstr "Cuma"
+msgstr ""
 
 #: package/contents/config/config.qml:18
 #, kde-format
@@ -67,10 +66,9 @@ msgid "9,999+"
 msgstr "9,999+"
 
 #: package/contents/ui/ConfigAppearance.qml:33
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgid "General:"
-msgstr "Ginearálta"
+msgstr ""
 
 #: package/contents/ui/ConfigAppearance.qml:34
 #, kde-format
@@ -94,16 +92,14 @@ msgid "Fill free space on Panel"
 msgstr ""
 
 #: package/contents/ui/ConfigAppearance.qml:61
-#, fuzzy, kde-format
-#| msgid "Maximum rows:"
+#, kde-format
 msgid "Maximum columns:"
-msgstr "Líon uasta na rónna:"
+msgstr ""
 
 #: package/contents/ui/ConfigAppearance.qml:61
-#, fuzzy, kde-format
-#| msgid "Maximum rows:"
+#, kde-format
 msgid "Maximum rows:"
-msgstr "Líon uasta na rónna:"
+msgstr ""
 
 #: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
@@ -145,22 +141,19 @@ msgid "Automatically set to Large when in Touch Mode"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:47
-#, fuzzy, kde-format
-#| msgid "Grouping:"
+#, kde-format
 msgid "Group:"
-msgstr "Grúpáil:"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:50
-#, fuzzy, kde-format
-#| msgid "Do Not Group"
+#, kde-format
 msgid "Do not group"
-msgstr "Ná Grúpáil"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:50
-#, fuzzy, kde-format
-#| msgid "By Program Name"
+#, kde-format
 msgid "By program name"
-msgstr "De Réir Ainm an Chláir"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:55
 #, kde-format
@@ -207,16 +200,14 @@ msgid "Combine into single button"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:90
-#, fuzzy, kde-format
-#| msgid "Only when the taskbar is full"
+#, kde-format
 msgid "Group only when the Task Manager is full"
-msgstr "Nuair atá an tascbharra lán amháin"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:101
-#, fuzzy, kde-format
-#| msgid "Sorting:"
+#, kde-format
 msgid "Sort:"
-msgstr "Sórtáil:"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
@@ -224,22 +215,19 @@ msgid "Do not sort"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:104
-#, fuzzy, kde-format
-#| msgid "Manually"
+#, kde-format
 msgid "Manually"
-msgstr "De Láimh"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:104
-#, fuzzy, kde-format
-#| msgid "Alphabetically"
+#, kde-format
 msgid "Alphabetically"
-msgstr "In Ord Aibítre"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:104
-#, fuzzy, kde-format
-#| msgid "By Desktop"
+#, kde-format
 msgid "By desktop"
-msgstr "De Réir Deisce"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
@@ -301,13 +289,12 @@ msgid "Toggles grouping"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:136
-#, fuzzy, kde-format
-#| msgid "Only show tasks from the current desktop"
+#, kde-format
 msgctxt ""
 "Part of a sentence: 'Middle-clicking any task brings it to the current "
 "virtual desktop'"
 msgid "Brings it to the current virtual desktop"
-msgstr "Taispeáin tascanna ón deasc reatha amháin"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:146
 #, kde-format
@@ -327,34 +314,29 @@ msgid "Skip minimized tasks"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:167
-#, fuzzy, kde-format
-#| msgid "Show tooltips"
+#, kde-format
 msgid "Show only tasks:"
-msgstr "Taispeáin leideanna uirlisí"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:168
-#, fuzzy, kde-format
-#| msgid "Only show tasks from the current screen"
+#, kde-format
 msgid "From current screen"
-msgstr "Taispeáin tascanna ón scáileán reatha amháin"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:173
-#, fuzzy, kde-format
-#| msgid "By Desktop"
+#, kde-format
 msgid "From current desktop"
-msgstr "De Réir Deisce"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:178
-#, fuzzy, kde-format
-#| msgid "Only show tasks from the current activity"
+#, kde-format
 msgid "From current activity"
-msgstr "Taispeáin tascanna ón ghníomhaíocht reatha amháin"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:183
-#, fuzzy, kde-format
-#| msgid "Only show tasks that are minimized"
+#, kde-format
 msgid "That are minimized"
-msgstr "Ná taispeáin ach tascanna íoslaghdaithe"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:192
 #, kde-format
@@ -461,35 +443,30 @@ msgid "Open New Window"
 msgstr ""
 
 #: package/contents/ui/ContextMenu.qml:301
-#, fuzzy, kde-format
-#| msgid "By Desktop"
+#, kde-format
 msgid "Move to &Desktop"
-msgstr "De Réir Deisce"
+msgstr ""
 
 #: package/contents/ui/ContextMenu.qml:325
-#, fuzzy, kde-format
-#| msgid "By Desktop"
+#, kde-format
 msgid "Move &To Current Desktop"
-msgstr "De Réir Deisce"
+msgstr ""
 
 #: package/contents/ui/ContextMenu.qml:334
-#, fuzzy, kde-format
-#| msgid "By Desktop"
+#, kde-format
 msgid "&All Desktops"
-msgstr "De Réir Deisce"
+msgstr ""
 
 #: package/contents/ui/ContextMenu.qml:348
-#, fuzzy, kde-format
-#| msgid "By Desktop"
+#, kde-format
 msgctxt "1 = number of desktop, 2 = desktop name"
 msgid "&%1 %2"
-msgstr "De Réir Deisce"
+msgstr ""
 
 #: package/contents/ui/ContextMenu.qml:362
-#, fuzzy, kde-format
-#| msgid "By Desktop"
+#, kde-format
 msgid "&New Desktop"
-msgstr "De Réir Deisce"
+msgstr ""
 
 #: package/contents/ui/ContextMenu.qml:382
 #, kde-format
@@ -507,10 +484,9 @@ msgid "All Activities"
 msgstr ""
 
 #: package/contents/ui/ContextMenu.qml:474
-#, fuzzy, kde-format
-#| msgid "By Desktop"
+#, kde-format
 msgid "Move to %1"
-msgstr "De Réir Deisce"
+msgstr ""
 
 #: package/contents/ui/ContextMenu.qml:502
 #: package/contents/ui/ContextMenu.qml:519
@@ -695,9 +671,6 @@ msgid "%1 more Place"
 msgid_plural "%1 more Places"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: plugin/backend.cpp:468
 #, kde-format
@@ -737,52 +710,3 @@ msgstr "Déan dearmad ar áiteanna le déanaí"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Déan dearmad ar chomhaid le déanaí"
-
-#~ msgid "Show tooltips"
-#~ msgstr "Taispeáin leideanna uirlisí"
-
-#, fuzzy
-#~| msgid "Grouping:"
-#~ msgctxt "When clicking it would toggle grouping windows of a specific app"
-#~ msgid "Group/Ungroup"
-#~ msgstr "Grúpáil:"
-
-#, fuzzy
-#~| msgid "Filters"
-#~ msgid "Filter:"
-#~ msgstr "Scagairí"
-
-#, fuzzy
-#~| msgid "Only show tasks from the current desktop"
-#~ msgid "Show only tasks from the current desktop"
-#~ msgstr "Taispeáin tascanna ón deasc reatha amháin"
-
-#~ msgid "Highlight windows"
-#~ msgstr "Aibhsigh fuinneoga"
-
-#~ msgid "Grouping and Sorting"
-#~ msgstr "Grúpáil agus Sórtáil"
-
-#~ msgid "Do Not Sort"
-#~ msgstr "Ná Sórtáil"
-
-#~ msgid "Force row settings"
-#~ msgstr "Fórsáil socruithe ró"
-
-#~ msgid "Collapse Group"
-#~ msgstr "Laghdaigh Grúpa"
-
-#~ msgid "Expand Group"
-#~ msgstr "Leathnaigh Grúpa"
-
-#~ msgid "Edit Group"
-#~ msgstr "Cuir Grúpa in Eagar"
-
-#~ msgid "New Group Name: "
-#~ msgstr "Ainm Nua: "
-
-#~ msgid "Collapse Parent Group"
-#~ msgstr "Laghdaigh Máthairghrúpa"
-
-#~ msgid "Configure Taskbar"
-#~ msgstr "Cumraigh an Tascbharra"
