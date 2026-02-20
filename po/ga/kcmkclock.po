@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4;\n"
+"3 : 4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -145,76 +145,3 @@ msgstr "Ní féidir an t-am reatha a shocrú"
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Ní féidir crios ama a shocrú"
-
-#~ msgid "To change the local time zone, select your area from the list below."
-#~ msgstr ""
-#~ "Chun an crios ama logánta a athrú, roghnaigh do cheantar as an liosta "
-#~ "thíos."
-
-#~ msgid "Current local time zone:"
-#~ msgstr "Crios ama reatha:"
-
-#, fuzzy
-#~| msgid "Search"
-#~ msgid "Search…"
-#~ msgstr "Cuardaigh"
-
-#, fuzzy
-#~| msgid "Current local time zone:"
-#~ msgctxt "%1 is name of time zone"
-#~ msgid "Current local time zone: %1"
-#~ msgstr "Crios ama reatha:"
-
-#, fuzzy
-#~| msgid "Current local time zone: %1 (%2)"
-#~ msgctxt "%1 is name of time zone, %2 is its abbreviation"
-#~ msgid "Current local time zone: %1 (%2)"
-#~ msgstr "Crios ama reatha: %1 (%2)"
-
-#~ msgid "KDE Clock Control Module"
-#~ msgstr "Modúl Rialaithe Cloig KDE"
-
-#~ msgid "(c) 1996 - 2001 Luca Montecchiani"
-#~ msgstr "© 1996 - 2001 Luca Montecchiani"
-
-#~ msgid "Luca Montecchiani"
-#~ msgstr "Luca Montecchiani"
-
-#~ msgid "Original author"
-#~ msgstr "An chéad údar"
-
-#~ msgid "Paul Campbell"
-#~ msgstr "Paul Campbell"
-
-#~ msgid "Current Maintainer"
-#~ msgstr "Cothaitheoir Reatha"
-
-#~ msgid "Benjamin Meyer"
-#~ msgstr "Benjamin Meyer"
-
-#~ msgid "Added NTP support"
-#~ msgstr "Chuir sé tacaíocht NTP leis"
-
-#~ msgid ""
-#~ "<h1>Date & Time</h1> This control module can be used to set the system "
-#~ "date and time. As these settings do not only affect you as a user, but "
-#~ "rather the whole system, you can only change these settings when you "
-#~ "start the System Settings as root. If you do not have the root password, "
-#~ "but feel the system time should be corrected, please contact your system "
-#~ "administrator."
-#~ msgstr ""
-#~ "<h1>Dáta & Am</h1> Úsáidtear an modúl rialaithe seo chun dáta agus am an "
-#~ "chórais a shocrú. Toisc go dtéann na socruithe seo i bhfeidhm ar an "
-#~ "gcóras ar fad, agus nach ortsa féin amháin, ní féidir na socruithe seo a "
-#~ "athrú murar thosaigh tú Socruithe an Chórais mar an forúsáideoir. Mura "
-#~ "bhfuil focal faire an fhorúsáideora agat, agus tá gá le ham an chórais a "
-#~ "cheartú, téigh i dteagmháil le riarthóir do chórais."
-
-#~ msgid "kcmclock"
-#~ msgstr "kcmclock"
-
-#~ msgid "Failed to set system date/time/time zone."
-#~ msgstr "Theip ar dáta/am/crios ama an chórais a shocrú."
-
-#~ msgid "Date/Time Error"
-#~ msgstr "Earráid Dáta/Ama"
