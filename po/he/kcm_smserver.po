@@ -11,13 +11,13 @@
 #
 # Diego Iastrubni <elcuco@kde.org>, 2005, 2006, 2008, 2012.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2024, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-01-09 17:25+0200\n"
+"PO-Revision-Date: 2026-02-19 09:37+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -59,15 +59,11 @@ msgid "Failed to request restart to firmware setup: %1"
 msgstr "בקשת הפעלה מחדש להגדרת הקושחה נכשלה: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@info:status inlinemessage"
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
-msgstr "בפעם הבאה שהמחשב יופעל מחדש, הוא ייכנס למסך הגדרות הקושלה."
+msgstr "בפעם הבאה שהמחשב יופעל מחדש, הוא ייכנס להגדרות קושחת ה־UEFI."
 
 #: ui/main.qml:32
 #, kde-format
@@ -186,12 +182,10 @@ msgid "After next restart:"
 msgstr "אחרי ההפעלה הבאה מחדש:"
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr "להיכנס למסך הגדרות קושחה"
+msgstr "להיכנס למסך הגדרות קושחה (UEFI)"
 
 #: ui/main.qml:146
 #, kde-format

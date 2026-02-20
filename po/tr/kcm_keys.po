@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-05 00:45+0000\n"
+"POT-Creation-Date: 2026-02-20 00:47+0000\n"
 "PO-Revision-Date: 2026-01-08 17:29+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -60,7 +60,7 @@ msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "%1 eklenirken hata oluştu, herhangi bir eylem yok gibi görünüyor."
 
-#: globalaccelmodel.cpp:422
+#: globalaccelmodel.cpp:445
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Global kısayollar hizmetiyle iletişim kurarken hata oluştu"
@@ -70,7 +70,7 @@ msgstr "Global kısayollar hizmetiyle iletişim kurarken hata oluştu"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Global kısayollar ardalan süreci ile iletişim kurulamadı"
 
-#: kcm_keys.cpp:372
+#: kcm_keys.cpp:373
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -82,7 +82,7 @@ msgstr ""
 "interface> eylemine atanmış.<nl/><nl/>%4 eylemine yeniden atamak istiyor "
 "musunuz?"
 
-#: kcm_keys.cpp:378
+#: kcm_keys.cpp:379
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -95,13 +95,13 @@ msgstr ""
 "><application>%5</application> uygulamasının <interface>%4</interface> "
 "eylemine yeniden atansın mı?"
 
-#: kcm_keys.cpp:387
+#: kcm_keys.cpp:388
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Kısayol Çakışmasını Çöz"
 
-#: kcm_keys.cpp:397
+#: kcm_keys.cpp:398
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -301,7 +301,7 @@ msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr "Kısayol Şemasını Dışa Aktar"
 
-#: ui/main.qml:412 ui/main.qml:553
+#: ui/main.qml:412 ui/main.qml:550
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
@@ -349,55 +349,55 @@ msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "Komut Ekle"
 
-#: ui/main.qml:492
+#: ui/main.qml:489
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr "Bir komut gir veya bir betik dosyası seç:"
 
-#: ui/main.qml:501
+#: ui/main.qml:498
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "Komut:"
 
-#: ui/main.qml:507
+#: ui/main.qml:504
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Komut"
 
-#: ui/main.qml:514
+#: ui/main.qml:511
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Seç…"
 
-#: ui/main.qml:515
+#: ui/main.qml:512
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Betik dosyası seç"
 
-#: ui/main.qml:523
+#: ui/main.qml:520
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "Ad:"
 
-#: ui/main.qml:524
+#: ui/main.qml:521
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "Buraya ad gir"
 
-#: ui/main.qml:536
+#: ui/main.qml:533
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Betik Dosyası Seç"
 
-#: ui/main.qml:538
+#: ui/main.qml:535
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -405,37 +405,37 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "Betik dosyaları (.sh, .bash, .zsh vb.) (*.*sh)"
 
-#: ui/main.qml:561
+#: ui/main.qml:558
 #, kde-format
 msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr "İçe aktarılacak şemayı seç:"
 
-#: ui/main.qml:580
+#: ui/main.qml:577
 #, kde-format
 msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
 msgstr "Özel şema"
 
-#: ui/main.qml:588
+#: ui/main.qml:585
 #, kde-format
 msgctxt "@action:button"
 msgid "Select File…"
 msgstr "Dosya Seç…"
 
-#: ui/main.qml:588
+#: ui/main.qml:585
 #, kde-format
 msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "İçe Aktar"
 
-#: ui/main.qml:590
+#: ui/main.qml:587
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
 msgstr "Kısayol Şeması Dosyası Seç"
 
-#: ui/main.qml:591
+#: ui/main.qml:588
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"

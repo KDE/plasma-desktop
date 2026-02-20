@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-05 00:45+0000\n"
+"POT-Creation-Date: 2026-02-20 00:47+0000\n"
 "PO-Revision-Date: 2026-02-03 21:36+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -59,7 +59,7 @@ msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "%1을(를) 추가하는 동안 오류가 발생했습니다. 작업이 없는 것 같습니다."
 
-#: globalaccelmodel.cpp:422
+#: globalaccelmodel.cpp:445
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "전역 단축키 서비스와 통신하는 중 오류 발생"
@@ -69,7 +69,7 @@ msgstr "전역 단축키 서비스와 통신하는 중 오류 발생"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "전역 단축키 데몬과 통신할 수 없음"
 
-#: kcm_keys.cpp:372
+#: kcm_keys.cpp:373
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -80,7 +80,7 @@ msgstr ""
 "<shortcut>%1</shortcut> 단축키가 이미 %2 공통 동작 <interface>%3</interface>"
 "에 할당되어 있습니다.<nl/><nl/>%4에 다시 할당하시겠습니까?"
 
-#: kcm_keys.cpp:378
+#: kcm_keys.cpp:379
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -92,13 +92,13 @@ msgstr ""
 "<interface>%2</interface> 동작에 할당되어 있습니다.<nl/><nl/><application>"
 "%5</application>의 <interface>%4</interface> 동작에 다시 할당하시겠습니까?"
 
-#: kcm_keys.cpp:387
+#: kcm_keys.cpp:388
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "단축키 충돌 해결"
 
-#: kcm_keys.cpp:397
+#: kcm_keys.cpp:398
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -298,7 +298,7 @@ msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr "단축키 구성표 내보내기"
 
-#: ui/main.qml:412 ui/main.qml:553
+#: ui/main.qml:412 ui/main.qml:550
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
@@ -346,55 +346,55 @@ msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "명령 추가"
 
-#: ui/main.qml:492
+#: ui/main.qml:489
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr "명령을 입력하거나 스크립트 파일 선택:"
 
-#: ui/main.qml:501
+#: ui/main.qml:498
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "명령:"
 
-#: ui/main.qml:507
+#: ui/main.qml:504
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "명령"
 
-#: ui/main.qml:514
+#: ui/main.qml:511
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "선택..."
 
-#: ui/main.qml:515
+#: ui/main.qml:512
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "스크립트 파일 선택"
 
-#: ui/main.qml:523
+#: ui/main.qml:520
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "이름:"
 
-#: ui/main.qml:524
+#: ui/main.qml:521
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "여기에 이름 입력"
 
-#: ui/main.qml:536
+#: ui/main.qml:533
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "스크립트 파일 선택"
 
-#: ui/main.qml:538
+#: ui/main.qml:535
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -402,37 +402,37 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "스크립트 파일 (.sh, .bash, .zsh 등) (*.*sh)"
 
-#: ui/main.qml:561
+#: ui/main.qml:558
 #, kde-format
 msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr "가져올 구성표 선택:"
 
-#: ui/main.qml:580
+#: ui/main.qml:577
 #, kde-format
 msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
 msgstr "사용자 정의 구성표"
 
-#: ui/main.qml:588
+#: ui/main.qml:585
 #, kde-format
 msgctxt "@action:button"
 msgid "Select File…"
 msgstr "파일 선택…"
 
-#: ui/main.qml:588
+#: ui/main.qml:585
 #, kde-format
 msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "가져오기"
 
-#: ui/main.qml:590
+#: ui/main.qml:587
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
 msgstr "단축키 구성표 파일 선택"
 
-#: ui/main.qml:591
+#: ui/main.qml:588
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"

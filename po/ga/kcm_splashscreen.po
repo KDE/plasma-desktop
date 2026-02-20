@@ -15,8 +15,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : (n>2 && n<7) ? 2 :"
-"(n>6 && n<11) ? 3 : 4;\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
 
 #: kcm.cpp:162
 #, kde-format
@@ -59,37 +59,25 @@ msgid "Failed to show the splash screen preview."
 msgstr "Theip ar réamhamharc an splancscáileáin a thaispeáint."
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Preview Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview splash screen"
-msgstr "Réamhamharc ar an Splancscáileán"
+msgstr ""
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Preview Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove splash screen"
-msgstr "Réamhamharc ar an Splancscáileán"
+msgstr ""
 
 #: ui/main.qml:90
-#, fuzzy, kde-format
-#| msgid "You cannot delete the currently selected splash screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active splash screen"
 msgstr ""
-"Ní féidir leat an splancscáileán atá roghnaithe faoi láthair a scriosadh"
 
 #: ui/main.qml:92
-#, fuzzy, kde-format
-#| msgid "You cannot delete the currently selected splash screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed splash screens"
 msgstr ""
-"Ní féidir leat an splancscáileán atá roghnaithe faoi láthair a scriosadh"
-
-#~ msgctxt "@action:button"
-#~ msgid "Uninstall"
-#~ msgstr "Díshuiteáil"

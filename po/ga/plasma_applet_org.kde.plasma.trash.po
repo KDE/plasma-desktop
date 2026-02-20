@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4;\n"
+"3 : 4\n"
 
 #: main.qml:33
 #, kde-format
@@ -65,60 +65,3 @@ msgstr "Folamh"
 msgctxt "@action:inmenu"
 msgid "Trash Settings…"
 msgstr "Socruithe Bruscair…"
-
-#, fuzzy
-#~| msgctxt "The trash is empty. This is not an action, but a state"
-#~| msgid "Empty"
-#~ msgctxt "a verb"
-#~ msgid "Empty"
-#~ msgstr "Folamh"
-
-#, fuzzy
-#~| msgid "Trash"
-#~ msgid ""
-#~ "Trash\n"
-#~ "Empty"
-#~ msgstr "Bruscar"
-
-#, fuzzy
-#~| msgid "One item"
-#~| msgid_plural "%1 items"
-#~ msgid ""
-#~ "Trash\n"
-#~ "One item"
-#~ msgid_plural ""
-#~ "Trash\n"
-#~ " %1 items"
-#~ msgstr[0] "Mír amháin"
-#~ msgstr[1] "%1 mhír"
-#~ msgstr[2] "%1 mhír"
-#~ msgstr[3] "%1 mír"
-#~ msgstr[4] "%1 mír"
-
-#~ msgid "Empty Trash"
-#~ msgstr "Folmhaigh an Bruscar"
-
-#, fuzzy
-#~| msgctxt "@info"
-#~| msgid "Do you really want to empty the trash? All items will be deleted."
-#~ msgid ""
-#~ "Do you really want to empty the trash ? All the items will be deleted."
-#~ msgstr ""
-#~ "An bhfuil tú cinnte gur mian leat an bruscar a fholmhú?  Scriosfar gach "
-#~ "mír."
-
-#~ msgid "Cancel"
-#~ msgstr "Cealaigh"
-
-#~ msgid "&Empty Trashcan"
-#~ msgstr "&Folmhaigh an Bruscar"
-
-#~ msgid "&Menu"
-#~ msgstr "&Roghchlár"
-
-#~ msgctxt "@title:window"
-#~ msgid "Empty Trash"
-#~ msgstr "Folmhaigh an Bruscar"
-
-#~ msgid "Emptying Trashcan..."
-#~ msgstr "Bruscar á Fholmhú..."

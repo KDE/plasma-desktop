@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4;\n"
+"3 : 4\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -50,17 +50,11 @@ msgid "Failed to request restart to firmware setup: %1"
 msgstr "Theip ar atosú a iarraidh chuig socrú dochtearraí: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@info:status inlinemessage"
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"An chéad uair eile a atosófar an ríomhaire, rachaidh sé isteach sa scáileán "
-"socraithe dochtearraí."
 
 #: ui/main.qml:32
 #, kde-format
@@ -182,183 +176,13 @@ msgid "After next restart:"
 msgstr "Tar éis an chéad atosú eile:"
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr "Téigh isteach sa scáileán socraithe dochtearraí"
+msgstr ""
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Téigh isteach sa scáileán socraithe dochtearraí"
-
-#~ msgctxt "@info:status inlinemessage"
-#~ msgid ""
-#~ "Next time the computer is restarted, it will enter the UEFI setup screen."
-#~ msgstr ""
-#~ "An chéad uair eile a atosófar an ríomhaire, rachaidh sé isteach sa "
-#~ "scáileán socraithe UEFI."
-
-#~ msgctxt "@option:check"
-#~ msgid "Enter UEFI setup screen"
-#~ msgstr "Téigh isteach i scáileán socraithe UEFI"
-
-#, fuzzy
-#~| msgid "&Restart computer"
-#~ msgid "Restart"
-#~ msgstr "Atosaigh an &Ríomhaire"
-
-#~ msgid ""
-#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
-#~ "includes options such as whether or not the session exit (logout) should "
-#~ "be confirmed, whether the session should be restored again when logging "
-#~ "in and whether the computer should be automatically shut down after "
-#~ "session exit by default."
-#~ msgstr ""
-#~ "<h1>Bainisteoir an tSeisiúin</h1> Anseo is féidir leat bainisteoir an "
-#~ "tseisiúin a chumrú. Tá roghanna ann lenar féidir leat socrú cé acu an "
-#~ "bhfuil gá le logáil amach a dheimhniú nó nach bhfuil, an cóir an seisiún "
-#~ "a athchóiriú nuair a logálfaidh tú isteach arís nó nach cóir, agus an "
-#~ "cóir an ríomhaire a mhúchadh go huathoibríoch nuair a chuirfidh tú "
-#~ "deireadh le seisiún nó nach cóir."
-
-#, fuzzy
-#~| msgid "Default Leave Option"
-#~ msgid "Default option:"
-#~ msgstr "Rogha Réamhshocraithe Scoir"
-
-#, fuzzy
-#~| msgid "&Restart computer"
-#~ msgctxt "@option:radio"
-#~ msgid "Restart"
-#~ msgstr "Atosaigh an &Ríomhaire"
-
-#, fuzzy
-#~| msgid "Conf&irm logout"
-#~ msgctxt "@option:check"
-#~ msgid "Confirm logout"
-#~ msgstr "&Deimhnigh Logáil Amach"
-
-#, fuzzy
-#~| msgid "&End current session"
-#~ msgctxt ""
-#~ "@option:radio Here 'session' refers to the technical concept of session "
-#~ "restoration, whereby the windows that were open on logout are re-opened "
-#~ "on the next login"
-#~ msgid "End current session"
-#~ msgstr "&Cuir Deireadh leis an Seisiún Reatha"
-
-#, fuzzy
-#~| msgid "&Restart computer"
-#~ msgctxt "@option:radio"
-#~ msgid "Restart computer"
-#~ msgstr "Atosaigh an &Ríomhaire"
-
-#, fuzzy
-#~| msgid "&Turn off computer"
-#~ msgctxt "@option:radio"
-#~ msgid "Turn off computer"
-#~ msgstr "&Múch an Ríomhaire"
-
-#, fuzzy
-#~| msgid "Restore &manually saved session"
-#~ msgctxt ""
-#~ "@option:radio Here 'session' refers to the technical concept of session "
-#~ "restoration, whereby the windows that were open on logout are re-opened "
-#~ "on the next login"
-#~ msgid "Restore last session"
-#~ msgstr "Athchóirigh seisiún a bhí &sábháilte de láimh"
-
-#~ msgid ""
-#~ "Here you can enter a colon or comma separated list of applications that "
-#~ "should not be saved in sessions, and therefore will not be started when "
-#~ "restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
-#~ msgstr ""
-#~ "Anseo is féidir leat liosta d'fheidhmchlár nach cóir iad a shábháil i "
-#~ "seisiúin a iontráil, scartha ag camóga nó idirstadanna.  Ní thosófar iad "
-#~ "seo nuair a athchóireofar seisiún. Mar shampla, 'xterm:konsole' nó 'xterm,"
-#~ "konsole'."
-
-#, fuzzy
-#~| msgid "O&ffer shutdown options"
-#~ msgctxt "@option:check"
-#~ msgid "Offer shutdown options"
-#~ msgstr "&Taispeáin roghanna múchta"
-
-#, fuzzy
-#~| msgid "O&ffer shutdown options"
-#~ msgid "Offer shutdown options"
-#~ msgstr "&Taispeáin roghanna múchta"
-
-#, fuzzy
-#~| msgid "Restore &previous session"
-#~ msgid "Desktop Session"
-#~ msgstr "Athchóirigh an seisiún &roimhe seo"
-
-#, fuzzy
-#~| msgid "Restore &manually saved session"
-#~ msgid "Restore previous saved session"
-#~ msgstr "Athchóirigh seisiún a bhí &sábháilte de láimh"
-
-#~ msgid ""
-#~ "Check this option if you want the session manager to display a logout "
-#~ "confirmation dialog box."
-#~ msgstr ""
-#~ "Cuir tic leis an rogha seo más mian leat go dtaispeánfadh bainisteoir an "
-#~ "tseisiúin dialóg deimhnithe logála amach."
-
-#~ msgid "Conf&irm logout"
-#~ msgstr "&Deimhnigh Logáil Amach"
-
-#~ msgid "O&ffer shutdown options"
-#~ msgstr "&Taispeáin roghanna múchta"
-
-#~ msgid ""
-#~ "Here you can choose what should happen by default when you log out. This "
-#~ "only has meaning, if you logged in through KDM."
-#~ msgstr ""
-#~ "Anseo is féidir leat roghnú cad é ba chóir a tharlú de réir "
-#~ "réamhshocraithe nuair a logálfaidh tú amach. Níl aon éifeacht ag an rogha "
-#~ "seo murar logáil tú isteach trí KDM."
-
-#~ msgid "Default Leave Option"
-#~ msgstr "Rogha Réamhshocraithe Scoir"
-
-#~ msgid ""
-#~ "<ul>\n"
-#~ "<li><b>Restore previous session:</b> Will save all applications running "
-#~ "on exit and restore them when they next start up</li>\n"
-#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
-#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
-#~ "currently started applications will reappear when they next start up.</"
-#~ "li>\n"
-#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
-#~ "up with an empty desktop on next start.</li>\n"
-#~ "</ul>"
-#~ msgstr ""
-#~ "<ul>\n"
-#~ "<li><b>Athchóirigh an seisiún roimhe seo:</b> Sábhálfar gach feidhmchlár "
-#~ "atá ag rith ag am scortha, agus athchóireofar iad nuair a thosófar "
-#~ "seisiún nua</li>\n"
-#~ "<li><b>Athchóirigh seisiún a bhí sábháilte de láimh: </b> Ceadaíonn sé "
-#~ "seo duit an seisiún a shábháil ag am ar bith trí \"Sábháil Seisiún\" sa "
-#~ "Roghchlár K. Ciallaíonn sé seo go dtaispeánfar na feidhmchláir atá ag "
-#~ "rith faoi láthair nuair a thosóidh siad arís.</li>\n"
-#~ "<li><b>Tosaigh le seisiún folamh:</b> Ná sábháil faic. Taispeánfar deasc "
-#~ "fholamh nuair a thosóidh an chéad seisiún eile.</li>\n"
-#~ "</ul>"
-
-#~ msgid "On Login"
-#~ msgstr "Ag Am Logála Isteach"
-
-#~ msgid "Applications to be e&xcluded from sessions:"
-#~ msgstr "Feidhmchláir le hei&siamh ó sheisiúin:"
-
-#~ msgid "Advanced"
-#~ msgstr "Casta"
-
-#~ msgid "Window Manager"
-#~ msgstr "Bainisteoir na bhFuinneog"
