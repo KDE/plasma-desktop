@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-01-09 13:40+0100\n"
+"PO-Revision-Date: 2026-02-20 17:45+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.2\n"
 "X-Text-Markup: kde4\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
@@ -62,17 +62,13 @@ msgid "Failed to request restart to firmware setup: %1"
 msgstr "Impossible de demander un redémarrage pour configurer le firmware : %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@info:status inlinemessage"
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"Au prochain redémarrage, l'ordinateur rentrera dans l'écran de configuration "
-"du micro-logiciel."
+"Au prochain redémarrage de l'ordinateur, celui-ci rentrera dans l'écran de "
+"configuration du micro-programme."
 
 #: ui/main.qml:32
 #, kde-format
@@ -195,12 +191,10 @@ msgid "After next restart:"
 msgstr "Après le prochain re-démarrage :"
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr "Lancer l'écran de configuration du micro-programme"
+msgstr "Rentrer dans l'écran de configuration du micro-programme UEFI"
 
 #: ui/main.qml:146
 #, kde-format

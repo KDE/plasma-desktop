@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-01-13 01:27+0200\n"
+"PO-Revision-Date: 2026-02-21 02:25+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -52,17 +52,13 @@ msgstr ""
 "sąranką: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@info:status inlinemessage"
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"Kitą kartą, kai kompiuteris bus paleistas iš naujo, jis įžengs į programinės "
-"aparatinės įrangos sąrankos langą."
+"Kitą kartą, kai kompiuteris bus paleistas iš naujo, jis įžengs į UEFI "
+"programinės aparatinės įrangos nuostatas."
 
 #: ui/main.qml:32
 #, kde-format
@@ -184,12 +180,10 @@ msgid "After next restart:"
 msgstr "Po kito paleidimo iš naujo:"
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr "Įžengti į programinės aparatinės įrangos sąrankos langą"
+msgstr "Įžengti į UEFI programinės aparatinės įrangos nuostatas"
 
 #: ui/main.qml:146
 #, kde-format
