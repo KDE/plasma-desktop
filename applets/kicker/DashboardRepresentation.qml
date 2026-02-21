@@ -310,6 +310,16 @@ Kicker.DashboardWindow {
                         event.accepted = false
                     }
             }
+            Keys.onReturnPressed: event => {
+                // this mostly should apply to the runner grid, but there are a few ways to
+                // have focus on the search field and have something visually selected, so
+                // fall back to the other possible grids
+                let currentDelegate = runnerGrid.visible  ? runnerGrid.firstGrid?.currentItem :
+                                      allAppsGrid.visible ? allAppsGrid.firstGrid?.currentItem :
+                                                            mainGrid.currentItem
+                currentDelegate.Keys.returnPressed(event)
+            }
+            Keys.onEnterPressed: event => Keys.returnPressed(event)
         }
 
         Row {
