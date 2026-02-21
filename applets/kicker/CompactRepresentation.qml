@@ -81,6 +81,7 @@ Item {
         anchors.fill: parent
 
         visible: root.useCustomButtonImage && status == Image.Ready && aspectRatio !== 1 && source !== ""
+        mipmap: true
 
         source: Plasmoid.icon.startsWith("/") ? "file:" + Plasmoid.icon.split("/").map(encodeURIComponent).join("/") : ""
         onSourceChanged: root.updateSizeHints()
