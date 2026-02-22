@@ -15,6 +15,38 @@ import org.kde.plasma.extras as PlasmaExtras
 BasePage {
     id: root
 
+    property real flashFavorite: 0
+
+    // Flash favorites when adding one.
+    SequentialAnimation {
+        id: flashFavoriteAnimation
+        loops: 2
+        alwaysRunToEnd: true
+
+        NumberAnimation {
+            target: root
+            property: "flashFavorite"
+            from: 0
+            to: 1
+            duration: Kirigami.Units.veryLongDuration
+            easing.type: Easing.OutCubic
+        }
+        NumberAnimation {
+            target: root
+            property: "flashFavorite"
+            to: 0
+            duration: Kirigami.Units.veryLongDuration
+            easing.type: Easing.OutCubic
+        }
+    }
+
+    Connections {
+        target: kickoff.rootModel.favoritesModel
+        function onFavoriteAdded() : void {
+            flashFavoriteAnimation.restart();
+        }
+    }
+
     sideBarComponent: KickoffListView {
         id: sideBar
         focus: true // needed for Loaders
@@ -30,10 +62,11 @@ BasePage {
                 // I have to do this for it to actually fill the item for some reason
                 anchors.fill: parent
                 active: false
-                hovered: sideBarDelegate.mouseArea.containsMouse
+                hovered: sideBarDelegate.mouseArea.containsMouse || (flashFavoriteAnimation.running && sideBarDelegate.index === 0)
                 visible: !Plasmoid.configuration.switchCategoryOnHover
                     && !sideBarDelegate.isSeparator && !sideBarDelegate.ListView.isCurrentItem
                     && hovered
+                opacity: flashFavoriteAnimation.running && sideBarDelegate.index === 0 ? root.flashFavorite : 1
             }
         }
     }
