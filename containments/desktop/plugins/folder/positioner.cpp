@@ -132,8 +132,14 @@ void Positioner::setPerStripe(int perStripe)
             // If no longer deferring positions, update them
             if (!m_deferApplyPositions) {
                 // If it's a new resolution, preserve icon positions by using previous "perStripe" (if available)
+                const bool prevPositionsEmpty = m_positions.empty();
                 updatePositionsList(existingResolution ? 0 : prevPerStripe);
-                maybeRestoreAndApplyChangedPositions(!existingResolution);
+                const bool currPositionsEmpty = m_positions.empty();
+                if (!currPositionsEmpty) {
+                    maybeRestoreAndApplyChangedPositions(!existingResolution);
+                } else if (!prevPositionsEmpty) {
+                    m_deferRestoreChangedPositions = true;
+                }
             } else {
                 m_deferRestoreChangedPositions = true;
             }
@@ -565,7 +571,6 @@ void Positioner::sourceStatusChanged()
             updatePositionsList();
             if (m_deferRestoreChangedPositions) {
                 maybeRestoreAndApplyChangedPositions(false);
-                m_deferRestoreChangedPositions = false;
             }
         }
     }
@@ -766,6 +771,9 @@ void Positioner::sourceRowsInserted(const QModelIndex &parent, int first, int la
         loadAndApplyPositionsConfig();
         // Update positions to append the missing items
         updatePositionsList();
+        if (m_deferRestoreChangedPositions) {
+            maybeRestoreAndApplyChangedPositions(false);
+        }
     }
 }
 
@@ -1261,6 +1269,7 @@ void Positioner::maybeRestoreAndApplyChangedPositions(bool forceConvertAndSave)
     } else if (visited) {
         savePositionsConfig();
     }
+    m_deferRestoreChangedPositions = false;
 }
 
 void Positioner::onItemAboutToRename(const QString &filename)
