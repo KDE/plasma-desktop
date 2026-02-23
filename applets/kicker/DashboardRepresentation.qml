@@ -106,7 +106,11 @@ Kicker.DashboardWindow {
         // complete transparency.
         Rectangle {
             anchors.fill: parent
-            color: Kirigami.Theme.backgroundColor
+            // Intentionally hardcoded to black in dark mode because any other color
+            // looks terrible here. Any bug reports about illegible text or icons
+            // should be considered a color scheme error and sent back to the user
+            // or their distro.
+            color: Plasmoid.configuration.forceDarkMode ? "black" : Kirigami.Theme.backgroundColor
             opacity: 0.737
         }
 
