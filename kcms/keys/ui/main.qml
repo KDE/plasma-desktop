@@ -82,7 +82,10 @@ KCM.AbstractKCM {
                 text: i18nc("@action:menu End of the sentence 'Add New Command or Script…'", "Command or Script…")
                 Accessible.name: i18nc("@action:menu accessible", "Add new command or script")
                 Accessible.role: Accessible.MenuItem
-                onTriggered: addCommandDialog.open()
+                onTriggered: {
+                    addCommandDialog.editing = false
+                    addCommandDialog.open()
+                }
             }
         }
     ]
@@ -453,12 +456,7 @@ KCM.AbstractKCM {
                 }
             }
         }
-        onRejected: {
-            if (addCommandDialog.editing) {
-                addCommandDialog.editing = false;
-            }
-        }
-
+        
         property Kirigami.Action addCommandAction: Kirigami.Action {
             text: addCommandDialog.editing ? i18nc("@action:button in dialog, save changes to custom command", "Save") : i18nc("@action:button in dialog, add entry as new custom command", "Add")
             Accessible.name: addCommandDialog.editing
@@ -472,7 +470,6 @@ KCM.AbstractKCM {
                 } else {
                     kcm.addCommand(cmdField.text, nameField.text);
                 }
-                addCommandDialog.editing = false;
                 addCommandDialog.close();
             }
         }
