@@ -23,7 +23,12 @@ PlasmaComponents3.ScrollView {
     signal interactionConcluded
 
     // can't use effectiveScrollBarWidth, it causes binding loops
-    readonly property var actualScrollBarWidth: (itemList.contentHeight > itemList.height ? PlasmaComponents3.ScrollBar.vertical.width : 0)
+    readonly property int actualScrollBarWidth: scrollBarVisible ? PlasmaComponents3.ScrollBar.vertical.width : 0
+    property bool scrollBarVisible
+    Binding on scrollBarVisible {
+        value: itemList.contentHeight > itemList.height
+        delayed: true // this needs to be delayed or it can get stuck in a resize loop
+    }
     property Item mainSearchField: null
     property Kicker.SubMenu dialog: null
     property Kicker.SubMenu childDialog: null
