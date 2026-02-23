@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-01-08 09:23+0100\n"
+"PO-Revision-Date: 2026-02-17 11:06+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -52,17 +52,13 @@ msgid "Failed to request restart to firmware setup: %1"
 msgstr "Richiesta di riavvio per l'installazione del firmware: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@info:status inlinemessage"
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
 "La prossima volta che il computer sarà riavviato, entrerà nella schermata di "
-"configurazione del firmware."
+"configurazione del firmware UEFI."
 
 #: ui/main.qml:32
 #, kde-format
@@ -185,12 +181,10 @@ msgid "After next restart:"
 msgstr "Dopo il prossimo riavvio:"
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr "Accedere alla schermata di configurazione del firmware"
+msgstr "Accedi alla schermata di configurazione del firmware UEFI"
 
 #: ui/main.qml:146
 #, kde-format
