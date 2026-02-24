@@ -332,7 +332,13 @@ KCM.AbstractKCM {
                         }
                     }
 
-                    onCurrentItemChanged: dm.rootIndex = kcm.filteredModel.index(currentIndex, 0)
+                    onCurrentItemChanged: {
+                        if (!currentItem) {
+                            currentIndex = -1;
+                            return;
+                        }
+                        dm.rootIndex = kcm.filteredModel.index(currentIndex, 0)
+                    }
                     onCurrentIndexChanged: {
                         shortcutsList.selectedIndex = -1;
                     }
