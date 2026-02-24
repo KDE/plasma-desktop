@@ -82,10 +82,11 @@ QQC2.ItemDelegate {
                     elide: Text.ElideRight
                     horizontalAlignment: Text.AlignRight
                     text: {
+                        let noShortcuts = i18nc("@info:status", "No active shortcuts")
                         if (model?.activeShortcuts?.length !== 0) {
-                            return model?.activeShortcuts?.map(s => kcm.keySequenceToString(s)).join(", ")
+                            return model?.activeShortcuts?.map(s => kcm.keySequenceToString(s)).join(", ") ?? noShortcuts
                         } else {
-                            return i18nc("@info:status", "No active shortcuts")
+                            return noShortcuts
                         }
                     }
                     textFormat: Text.PlainText

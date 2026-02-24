@@ -261,11 +261,11 @@ KCM.AbstractKCM {
                                 text: i18nc("@action:button %1 is the name of a shortcut category", "Remove all shortcuts for %1", model.display)
                                 display: QQC2.AbstractButton.IconOnly
 
-                                visible: model.section !== Private.ComponentType.CommonAction
-                                         && model.isRemovable
+                                visible: (model?.section !== Private.ComponentType.CommonAction
+                                         && model?.isRemovable
                                          && !exportActive
-                                         && !model.pendingDeletion
-                                         && (componentDelegate.hovered || componentDelegate.ListView.isCurrentItem)
+                                         && !model?.pendingDeletion
+                                         && (componentDelegate.hovered || componentDelegate.ListView.isCurrentItem)) ?? false
                                 onClicked: {
                                     model.pendingDeletion = true;
                                     componentDelegate.click();
