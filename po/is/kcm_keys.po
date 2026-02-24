@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-20 03:19+0000\n"
+"POT-Creation-Date: 2026-02-24 02:42+0000\n"
 "PO-Revision-Date: 2025-11-22 09:47+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -188,7 +188,7 @@ msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
 msgstr "Flytja út..."
 
-#: ui/main.qml:53 ui/main.qml:125
+#: ui/main.qml:53 ui/main.qml:128
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Export shortcut scheme"
@@ -224,14 +224,14 @@ msgctxt "@action:menu accessible"
 msgid "Add new command or script"
 msgstr "Bæta við nýrri skipun eða skriftu"
 
-#: ui/main.qml:104
+#: ui/main.qml:107
 #, fuzzy, kde-format
 #| msgid "Cannot export scheme while there are unsaved changes"
 msgctxt "@info:status inlinemessage"
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "Get ekki flutt út skema þegar breytingar eru óvistaðar"
 
-#: ui/main.qml:117
+#: ui/main.qml:120
 #, fuzzy, kde-format
 #| msgid ""
 #| "Select the components below that should be included in the exported scheme"
@@ -240,179 +240,179 @@ msgid ""
 "Select the components below that should be included in the exported scheme"
 msgstr "Veldu hlutana fyrir neðan sem á að taka með í útflutta skemanu"
 
-#: ui/main.qml:124
+#: ui/main.qml:127
 #, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
 msgstr "Flytja út"
 
-#: ui/main.qml:221
+#: ui/main.qml:224
 #, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
 msgstr "Flytja út %1"
 
-#: ui/main.qml:231
+#: ui/main.qml:234
 #, kde-format
 msgctxt "@action:button %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Breyta skipun fyrir %1"
 
-#: ui/main.qml:258
+#: ui/main.qml:261
 #, kde-format
 msgctxt "@action:button %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Fjarlægja alla flýtilykla fyrir %1"
 
-#: ui/main.qml:280
+#: ui/main.qml:283
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo deletion"
 msgstr "Afturkalla eyðingu"
 
-#: ui/main.qml:341
+#: ui/main.qml:344
 #, fuzzy, kde-format
 #| msgid "No items matched the search terms"
 msgctxt "@info:status placeholdermessage"
 msgid "No items matched the search terms"
 msgstr "Engin atriði pössuðu við leitarorðin"
 
-#: ui/main.qml:358
+#: ui/main.qml:361
 #, kde-format
 msgctxt "@info"
 msgid "These shortcuts will be deleted when changes are applied."
 msgstr "Þessum flýtilyklum verður eytt þegar breytingarnar virkjast."
 
-#: ui/main.qml:362
+#: ui/main.qml:365
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo"
 msgstr "Afturkalla"
 
-#: ui/main.qml:363
+#: ui/main.qml:366
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo deleting shortcuts"
 msgstr "Afturkalla eyðingu flýtilykla"
 
-#: ui/main.qml:399
+#: ui/main.qml:402
 #, fuzzy, kde-format
 #| msgid "Select an item from the list to view its shortcuts here"
 msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Veldu atriði á listanum til að sjá flýtilykla þess hér"
 
-#: ui/main.qml:412
+#: ui/main.qml:415
 #, fuzzy, kde-format
 #| msgid "Export Shortcut Scheme"
 msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr "Flytja út flýtilyklaskema"
 
-#: ui/main.qml:412 ui/main.qml:550
+#: ui/main.qml:415 ui/main.qml:547
 #, fuzzy, kde-format
 #| msgid "Import Shortcut Scheme"
 msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
 msgstr "Flytja inn flýtilyklaskema"
 
-#: ui/main.qml:414
+#: ui/main.qml:417
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Flýtilyklaskema (*.kksrc)"
 
-#: ui/main.qml:441
+#: ui/main.qml:444
 #, fuzzy, kde-format
 #| msgid "Edit Command"
 msgctxt "@title:window dialog"
 msgid "Edit Command"
 msgstr "Breyta skipun"
 
-#: ui/main.qml:441
+#: ui/main.qml:444
 #, fuzzy, kde-format
 #| msgid "Add Command"
 msgctxt "@title:window dialog"
 msgid "Add Command"
 msgstr "Bæta við skipun"
 
-#: ui/main.qml:463
+#: ui/main.qml:461
 #, fuzzy, kde-format
 #| msgid "Save"
 msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
 msgstr "Vista"
 
-#: ui/main.qml:463
+#: ui/main.qml:461
 #, fuzzy, kde-format
 #| msgid "Add"
 msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
 msgstr "Bæta við"
 
-#: ui/main.qml:465
+#: ui/main.qml:463
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Save command"
 msgstr "Vista skipun"
 
-#: ui/main.qml:466
+#: ui/main.qml:464
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "Bæta við skipun"
 
-#: ui/main.qml:489
+#: ui/main.qml:486
 #, fuzzy, kde-format
 #| msgid "Enter a command or choose a script file:"
 msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr "Sláðu inn skipun eða veldu skriftuskrá:"
 
-#: ui/main.qml:498
+#: ui/main.qml:495
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "Skipun:"
 
-#: ui/main.qml:504
+#: ui/main.qml:501
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Skipun"
 
-#: ui/main.qml:511
+#: ui/main.qml:508
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Velja…"
 
-#: ui/main.qml:512
+#: ui/main.qml:509
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Velja skriftuskrá"
 
-#: ui/main.qml:520
+#: ui/main.qml:517
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "Heiti:"
 
-#: ui/main.qml:521
+#: ui/main.qml:518
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "Sláðu inn heiti hér"
 
-#: ui/main.qml:533
+#: ui/main.qml:530
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Velja skriftuskrá"
 
-#: ui/main.qml:535
+#: ui/main.qml:532
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -420,41 +420,41 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "Skriftuskrár (.sh, .bash, .zsh, etc.) (*.*sh)"
 
-#: ui/main.qml:558
+#: ui/main.qml:555
 #, fuzzy, kde-format
 #| msgid "Select the scheme to import:"
 msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr "Veldu skema sem á að flytja inn:"
 
-#: ui/main.qml:577
+#: ui/main.qml:574
 #, fuzzy, kde-format
 #| msgid "Custom Scheme"
 msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
 msgstr "Sérsniðið skema"
 
-#: ui/main.qml:585
+#: ui/main.qml:582
 #, fuzzy, kde-format
 #| msgid "Select File…"
 msgctxt "@action:button"
 msgid "Select File…"
 msgstr "Veldu skrá..."
 
-#: ui/main.qml:585
+#: ui/main.qml:582
 #, fuzzy, kde-format
 #| msgid "Import"
 msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "Flytja inn"
 
-#: ui/main.qml:587
+#: ui/main.qml:584
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
 msgstr "Velja skemaskrá fyrir flýtilykla"
 
-#: ui/main.qml:588
+#: ui/main.qml:585
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"
