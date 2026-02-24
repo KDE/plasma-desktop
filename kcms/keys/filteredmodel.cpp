@@ -67,8 +67,9 @@ void FilteredShortcutsModel::setFilter(const QString &filter)
     if (filter == m_filter) {
         return;
     }
+    beginFilterChange();
     m_filter = filter;
-    invalidateFilter();
+    endFilterChange();
     Q_EMIT filterChanged();
 }
 
@@ -82,8 +83,9 @@ void FilteredShortcutsModel::setShowsLaunchAction(bool value)
     if (m_showsLaunchAction == value) {
         return;
     }
+    beginFilterChange();
     m_showsLaunchAction = value;
-    invalidateFilter();
+    endFilterChange();
     Q_EMIT showsLaunchActionChanged();
 }
 
