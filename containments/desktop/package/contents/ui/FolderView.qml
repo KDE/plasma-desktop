@@ -557,8 +557,13 @@ FocusScope {
                 height: 0
                 z: 99999
 
+                SystemPalette {
+                    id: sysPalette
+                    colorGroup: SystemPalette.Active
+                }
+
                 radius: Kirigami.Units.cornerRadius
-                border.color: Kirigami.Theme.highlightColor
+                border.color: sysPalette.highlight
                 color: Qt.alpha(border.color, 0.3)
 
                 function intersects(rect) {
