@@ -232,6 +232,7 @@ KCM.SimpleKCM {
                 from: 1
                 to: 11
                 stepSize: 1
+                Kirigami.StyleHints.tickMarkStepSize: 1
                 enabled: root.device?.supportsPointerAcceleration ?? false
 
                 // convert libinput pointer acceleration range [-1, 1] to slider range [1, 11]
@@ -337,6 +338,7 @@ KCM.SimpleKCM {
                 from: 0
                 to: 14
                 stepSize: 1
+                Kirigami.StyleHints.tickMarkStepSize: 1
                 enabled: root.device
 
                 readonly property list<real> values: [

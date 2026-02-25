@@ -267,6 +267,7 @@ Kirigami.Dialog {
                     from: 5400 // or about 45 degrees
                     to: 120 // or about 1 degrees
                     stepSize: 120
+                    Kirigami.StyleHints.tickMarkStepSize: 120
                     snapMode: QQC2.Slider.SnapOnRelease
 
                     onMoved: actionDialog.inputSequence.setThreshold(value)

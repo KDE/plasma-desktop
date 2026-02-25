@@ -171,6 +171,7 @@ KCMUtils.SimpleKCM {
                 from: -4
                 to: 4
                 stepSize: 0.5
+                Kirigami.StyleHints.tickMarkStepSize: 0.5
                 snapMode: QQC2.Slider.SnapAlways
                 onMoved: kcm.globalsSettings.animationDurationFactor =
                     (value === to) ? 0 : (1.0 / Math.pow(2, value))

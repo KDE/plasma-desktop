@@ -43,6 +43,7 @@ Kirigami.FormLayout {
             from: 2
             to: 10
             stepSize: 1
+            Kirigami.StyleHints.tickMarkStepSize: 1
             snapMode: QQC2.Slider.SnapAlways
             value: kcm.shakeCursorSettings.shakeCursorMagnification
             onMoved: kcm.shakeCursorSettings.shakeCursorMagnification = value
