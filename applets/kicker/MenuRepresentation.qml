@@ -28,7 +28,7 @@ PlasmaComponents3.ScrollView {
 
     focus: true
 
-    Layout.minimumWidth: Math.min(mainRow.width, mainRow.implicitWidth, Screen.width - Kirigami.Units.largeSpacing * 4)
+    Layout.minimumWidth: Math.min(Math.max(mainRow.Layout.minimumWidth, mainRow.implicitWidth), Screen.width - Kirigami.Units.largeSpacing * 4)
     Layout.maximumWidth: Layout.minimumWidth
 
     contentWidth: mainRow.implicitWidth
@@ -84,8 +84,9 @@ PlasmaComponents3.ScrollView {
 
         anchors.fill: parent
 
-        spacing: Kirigami.Units.smallSpacing
+        spacing: 0
 
+        Layout.minimumWidth: sideBar.implicitWidth + sideBar.Layout.rightMargin + searchField.defaultWidth
         LayoutMirroring.enabled: ((Plasmoid.location === PlasmaCore.Types.RightEdge)
             || (Application.layoutDirection === Qt.RightToLeft && Plasmoid.location !== PlasmaCore.Types.LeftEdge))
 
@@ -97,6 +98,7 @@ PlasmaComponents3.ScrollView {
             visible: (root.globalFavorites.count + root.systemFavorites.count) > 0
 
             Layout.fillHeight: true
+            Layout.rightMargin: Kirigami.Units.smallSpacing
 
             implicitWidth: Math.max(favoriteApps.implicitWidth, favoriteSystemActions.implicitWidth) + margins.left + margins.right + sideBarScrollView.actualScrollBarWidth
             implicitHeight: sideBarLayout.implicitHeight + margins.top + margins.bottom
@@ -238,7 +240,6 @@ PlasmaComponents3.ScrollView {
             Layout.bottomMargin: searchField.implicitHeight + Kirigami.Units.smallSpacing
             Layout.fillHeight: true
             Layout.fillWidth: true
-            Layout.minimumWidth: searchField.defaultWidth
             Layout.maximumHeight: implicitHeight
 
 
@@ -279,7 +280,6 @@ PlasmaComponents3.ScrollView {
 
             readonly property bool searchResultsPresent: runnerColumns.visibleChildren[0] instanceof RunnerResultsList
 
-            Layout.minimumWidth: (searchResultsPresent || root.runnerModel.querying) ? searchField.defaultWidth : 0
             Layout.fillHeight: true
 
             visible: searchField.text !== "" && root.runnerModel.count > 0
@@ -375,7 +375,7 @@ PlasmaComponents3.ScrollView {
     PlasmaExtras.SearchField {
         id: searchField
 
-        readonly property int spacing: sideBar.width ? mainRow.spacing : 0
+        readonly property int spacing: sideBar.width ? sideBar.Layout.rightMargin : 0
 
         anchors.bottom: mainRow.bottom
         anchors.left: parent.left
@@ -384,7 +384,7 @@ PlasmaComponents3.ScrollView {
         readonly property real defaultWidth: Kirigami.Units.gridUnit * 14
 
         width: runnerColumns.visible
-            ? (runnerColumns.searchResultsPresent ? runnerColumns.visibleChildren[0].width : runnerColumns.width)
+            ? (runnerColumns.searchResultsPresent ? runnerColumns.visibleChildren[0].width : defaultWidth)
             : (rootList.visible ? rootList.width : defaultWidth)
 
         focus: !Kirigami.InputMethod.willShowOnActive
