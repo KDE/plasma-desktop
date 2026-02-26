@@ -325,6 +325,7 @@ PlasmoidItem {
                 Layout.maximumWidth: kickoff.vertical ? Kirigami.Units.iconSizes.huge : -1
                 Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
                 fillMode: Image.PreserveAspectFit
+                mipmap: true
             }
 
             PC3.Label {
