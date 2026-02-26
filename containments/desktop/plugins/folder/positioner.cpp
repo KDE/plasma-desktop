@@ -879,15 +879,11 @@ int Positioner::firstFreeRow() const
 
 void Positioner::convertFolderModelData()
 {
-    // If no screen or no positions, we have nothing to convert
-    if (!screenInUse() || m_positions.isEmpty()) {
-        return;
-    }
-    // We were called while the source model is listing. Defer applying positions
-    // until listing completes.
-    if (m_folderModel->status() == FolderModel::Listing) {
-        m_deferApplyPositions = true;
+    // Check if we need to defer
+    m_deferApplyPositions = (m_folderModel->status() == FolderModel::Listing);
 
+    // If no screen or no positions, we have nothing to convert
+    if (!screenInUse() || m_positions.isEmpty() || m_deferApplyPositions) {
         return;
     }
 
