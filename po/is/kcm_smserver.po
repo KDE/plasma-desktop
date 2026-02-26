@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-02-15 14:26+0000\n"
+"PO-Revision-Date: 2026-02-25 10:39+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -53,15 +53,11 @@ msgid "Failed to request restart to firmware setup: %1"
 msgstr "Mistókst að biðja um endurræsingu til að setja upp fastbúnað: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@info:status inlinemessage"
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
-msgstr "Næst þegar tölvan er endurræst opnast uppsetningarskjár fastbúnaðar."
+msgstr "Næst þegar tölvan er endurræst opnast UEFI-stillingaskjár fastbúnaðar."
 
 #: ui/main.qml:32
 #, kde-format
@@ -182,12 +178,10 @@ msgid "After next restart:"
 msgstr "Eftir næstu endurræsingu:"
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr "Opna uppsetningarskjá fyrir fastbúnað"
+msgstr "Opna UEFI-stillingaskjá fyrir fastbúnað"
 
 #: ui/main.qml:146
 #, kde-format

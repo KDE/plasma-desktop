@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-02-07 23:27+0000\n"
+"PO-Revision-Date: 2026-02-25 20:48+0000\n"
 "Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
 "Language-Team: pt\n"
 "Language: pt\n"
@@ -47,17 +47,13 @@ msgid "Failed to request restart to firmware setup: %1"
 msgstr "Falha ao solicitar reinício para a configuração de 'firmware': %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@info:status inlinemessage"
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
 "Da próxima vez que o computador for reiniciado, entrará no ecrã de "
-"configuração de 'firmware'."
+"configuração UEFI."
 
 #: ui/main.qml:32
 #, kde-format
@@ -179,12 +175,10 @@ msgid "After next restart:"
 msgstr "Após o próximo reinício:"
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr "Entrar no ecrã de configuração da 'firmware'"
+msgstr "Entrar no ecrã de configuração UEFI"
 
 #: ui/main.qml:146
 #, kde-format
