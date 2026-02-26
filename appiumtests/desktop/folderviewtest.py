@@ -12,7 +12,6 @@ import tempfile
 import time
 import unittest
 
-import cv2 as cv
 import gi
 import numpy as np
 from appium import webdriver
@@ -23,7 +22,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 gi.require_version('GdkPixbuf', '2.0')
-from gi.repository import GdkPixbuf, GLib
+gi.require_version('Gdk', '4.0')
+from gi.repository import Gdk, GdkPixbuf, GLib
 
 
 class FolderViewTest(unittest.TestCase):
@@ -93,12 +93,13 @@ class FolderViewTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp_dir:
             # Take desktop screenshot
             saved_image_path: str = os.path.join(temp_dir, "desktop.png")
-            subprocess.check_call(["import", "-window", "root", saved_image_path])
-            cv_first_image = cv.imread(saved_image_path, cv.IMREAD_COLOR)
-            first_image = base64.b64encode(cv.imencode('.png', cv_first_image)[1].tobytes()).decode()
-        cv_second_image = np.zeros((16, 16, 3), dtype=np.uint8)
-        cv_second_image[:, :] = [0, 0, 255]
-        second_image = base64.b64encode(cv.imencode('.png', cv_second_image)[1].tobytes()).decode()
+            self.driver.get_screenshot_as_file(saved_image_path)
+            with open(saved_image_path, 'rb') as f:
+                first_image = base64.b64encode(f.read()).decode()
+        # Create a red square
+        pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 16, 16)
+        pixbuf.fill(0xff0000ff)
+        second_image = base64.b64encode(Gdk.Texture.new_for_pixbuf(pixbuf).save_to_png_bytes().get_data()).decode()
         self.driver.find_image_occurrence(first_image, second_image)
 
     def test_2_bug469260_new_file_appear_without_refresh(self) -> None:
