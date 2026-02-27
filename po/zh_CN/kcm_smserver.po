@@ -48,15 +48,11 @@ msgid "Failed to request restart to firmware setup: %1"
 msgstr "请求重新启动到固件设置失败：%1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@info:status inlinemessage"
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
-msgstr "下次重新启动计算机时，它将进入固件设置。"
+msgstr ""
 
 #: ui/main.qml:32
 #, kde-format
@@ -173,24 +169,13 @@ msgid "After next restart:"
 msgstr "下次重启时："
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr "进入固件设置屏幕"
+msgstr ""
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "进入固件设置屏幕"
-
-#~ msgctxt "@info:status inlinemessage"
-#~ msgid ""
-#~ "Next time the computer is restarted, it will enter the UEFI setup screen."
-#~ msgstr "下次重新启动计算机时，它将进入 UEFI 设置。"
-
-#~ msgctxt "@option:check"
-#~ msgid "Enter UEFI setup screen"
-#~ msgstr "进入 UEFI 设置屏幕"

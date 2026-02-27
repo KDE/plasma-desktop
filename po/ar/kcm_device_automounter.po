@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-23 00:45+0000\n"
-"PO-Revision-Date: 2026-01-24 11:42+0400\n"
+"PO-Revision-Date: 2026-02-26 12:31+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -38,9 +38,9 @@ msgid ""
 "\"Mount all removable media at login\" is unchecked. The same applies for "
 "\"Automount on Attach\"."
 msgstr ""
-"هذه القائمة تحتوي على أجهزة التخزين المعروفة للنظام. إذا كان \"ضم عند الولوج "
-"آليًّا\" مُعلم عليه فإن الأجهزة ستوصل آليًّا حتى لو كان \"ضم الأجهزة القابلة "
-"للحمل عند الولوج\" غير مُعلم عليه، وسيُطبق الإجراء نفسه على \"ضم الأجهزة آليًّا"
+"هذه القائمة تحتوي على أجهزة التخزين المعروفة للنظام. إذا كان \"صِل عند الولوج "
+"آليًّا\" مُعلم عليه فإن الأجهزة ستوصل آليًّا حتى لو كان \"صِل الأجهزة القابلة "
+"للإزالة عند الولوج\" غير مُعلم عليه، وسيُطبق الإجراء نفسه على \"صِل الأجهزة آليًّا"
 "\"."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
@@ -54,9 +54,9 @@ msgid ""
 "not be automatically mounted."
 msgstr ""
 "النقر على هذا الزر يجعل كِيدِي 'تنسى' الأجهزة المحدّدة. هذا مفيد فقط إذا كان "
-"الخيار \"ضم فقط الأجهزة القابلة للحمل التي سبق ضمها يدوياً من قبل\" مُحدّداً. في "
-"حال نسيان الجهاز وضبط كِيدِي على الضم الآليّ للأجهزة المألوفة فقط، فلن يُضم "
-"الجهاز المنسي آليًّا."
+"الخيار \"صِل فقط الأجهزة القابلة للإزالة التي سبق توصيلها يدوياً من قبل\" "
+"مُحدّداً. في حال نسيان الجهاز وضبط كِيدِي على الوصل الآليّ للأجهزة المألوفة فقط، "
+"فلن يُوصل الجهاز المنسي آليًّا."
 
 #. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:57
@@ -75,22 +75,22 @@ msgid ""
 "mounted the next time it is seen. Once they have been accessed, however, the "
 "device's contents will be automatically made available to the system."
 msgstr ""
-"عند عدم تعيين هذا الخيار، ستُضمّ الأجهزة التي تتذكرها كِيدِي فقط. الأجهزة "
-"\"المُتذكرة\" هي التي سبق ضمها من قبل. فمثلاً ليس كافياً وصل مشغلات وسائط USB "
-"لتذكرها طالما لم يُنفذ إلى الملفات بداخلها. ستقوم كِيدِي بضمّ الجهاز آليًّا في "
-"المرة القادمة التي تراه فيها. لكن عند النفاذ إلى ملفات الجهاز، فسيصير محتوى "
-"الجهاز متوفّراً للنظام."
+"عند عدم تعيين هذا الخيار، ستُوصل الأجهزة التي تتذكرها كِيدِي فقط. الأجهزة "
+"\"المُتذكرة\" هي التي سبق وصلها من قبل. فمثلاً ليس كافياً وصل مشغلات وسائط يو "
+"اس بي لتذكرها طالما لم يُنفذ إلى الملفات بداخلها. ستقوم كِيدِي بوصل الجهاز آليًّا "
+"في المرة القادمة التي تراه فيها. لكن عند النفاذ إلى ملفات الجهاز، فسيصير "
+"محتوى الجهاز متوفّراً للنظام."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:70
 #, kde-format
 msgid "Automatically mount removable media that have never been mounted before"
-msgstr "ضُم آليّا الأجهزة القابلة للحمل التي لم يسبق وصلها من قبل قط."
+msgstr "صِل آليّا الأجهزة القابلة للإزالة التي لم يسبق وصلها من قبل قط."
 
 #: DeviceModel.cpp:52
 #, kde-format
 msgid "Automount Device"
-msgstr "ضم آلي للجهاز"
+msgstr "وصل آلي للجهاز"
 
 #: DeviceModel.cpp:54
 #, kde-format
@@ -127,27 +127,27 @@ msgstr "الأجهزة المفصولة"
 #: DeviceModel.cpp:298 DeviceModel.cpp:307
 #, kde-format
 msgid "UDI: %1"
-msgstr "UDI: %1"
+msgstr "‏UDI:‏ %1"
 
 #: DeviceModel.cpp:318
 #, kde-format
 msgid "This device will be automatically mounted at login."
-msgstr "هذا الجهاز سيُضم آليًّا عند الولوج."
+msgstr "هذا الجهاز سيُوصل آليًّا عند الولوج."
 
 #: DeviceModel.cpp:318
 #, kde-format
 msgid "This device will not be automatically mounted at login."
-msgstr "هذا الجهاز لن يُضم آليًّا عند الولوج."
+msgstr "هذا الجهاز لن يُوصل آليًّا عند الولوج."
 
 #: DeviceModel.cpp:326
 #, kde-format
 msgid "This device will be automatically mounted when attached."
-msgstr "هذا الجهاز سيُضم آليًّا عند وصله بالحاسوب"
+msgstr "هذا الجهاز سيُوصل آليًّا عند وصله بالحاسوب"
 
 #: DeviceModel.cpp:327
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
-msgstr "هذا الجهاز لن يُضم آليًّا عند وصله بالحاسوب"
+msgstr "هذا الجهاز لن يُوصل آليًّا عند وصله بالحاسوب"
 
 #~ msgid "Device Automounter"
 #~ msgstr "موصل الأجهزة التلقائي"
