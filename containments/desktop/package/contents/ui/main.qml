@@ -324,6 +324,15 @@ ContainmentItem {
 
                 configOverlaySource: "ConfigOverlay.qml"
 
+                Connections {
+                    target: appletsLayout
+                    function onEditModeChanged(): void {
+                        if (!Plasmoid.containment.corona.editMode) {
+                            appletContainer.cancelEdit();
+                        }
+                    }
+                }
+
                 onAppletChanged: {
                     applet.visible = true
                 }
