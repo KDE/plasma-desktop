@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-24 00:47+0000\n"
+"POT-Creation-Date: 2026-02-28 00:46+0000\n"
 "PO-Revision-Date: 2024-12-25 19:37+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -282,88 +282,88 @@ msgctxt "@action:button"
 msgid "Undo deletion"
 msgstr "लोपं पूर्ववत कुर्वन्तु"
 
-#: ui/main.qml:344
+#: ui/main.qml:350
 #, fuzzy, kde-format
 #| msgid "No items matched the search terms"
 msgctxt "@info:status placeholdermessage"
 msgid "No items matched the search terms"
 msgstr "अन्वेषणपदैः सह कोऽपि द्रव्यः न मेलति स्म"
 
-#: ui/main.qml:361
+#: ui/main.qml:367
 #, kde-format
 msgctxt "@info"
 msgid "These shortcuts will be deleted when changes are applied."
 msgstr ""
 
-#: ui/main.qml:365
+#: ui/main.qml:371
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo"
 msgstr ""
 
-#: ui/main.qml:366
+#: ui/main.qml:372
 #, fuzzy, kde-format
 #| msgid "No default shortcuts"
 msgctxt "@action:button"
 msgid "Undo deleting shortcuts"
 msgstr "पूर्वनिर्धारितशॉर्टकट् नास्ति"
 
-#: ui/main.qml:402
+#: ui/main.qml:408
 #, fuzzy, kde-format
 #| msgid "Select an item from the list to view its shortcuts here"
 msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "अत्र तस्य शॉर्टकट् द्रष्टुं सूचीतः एकं द्रव्यं चिनोतु"
 
-#: ui/main.qml:415
+#: ui/main.qml:421
 #, fuzzy, kde-format
 #| msgid "Export Shortcut Scheme"
 msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr "निर्यात शॉर्टकट योजना"
 
-#: ui/main.qml:415 ui/main.qml:547
+#: ui/main.qml:421 ui/main.qml:553
 #, fuzzy, kde-format
 #| msgid "Import Shortcut Scheme"
 msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
 msgstr "आयात शॉर्टकट योजना"
 
-#: ui/main.qml:417
+#: ui/main.qml:423
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "शॉर्टकट योजना (*.kksrc) 1.1."
 
-#: ui/main.qml:444
+#: ui/main.qml:450
 #, fuzzy, kde-format
 #| msgid "Edit Command"
 msgctxt "@title:window dialog"
 msgid "Edit Command"
 msgstr "सम्पादन आदेश"
 
-#: ui/main.qml:444
+#: ui/main.qml:450
 #, fuzzy, kde-format
 #| msgid "Add Command"
 msgctxt "@title:window dialog"
 msgid "Add Command"
 msgstr "Add Command इति"
 
-#: ui/main.qml:461
+#: ui/main.qml:467
 #, fuzzy, kde-format
 #| msgid "Save"
 msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
 msgstr "रक्ष्"
 
-#: ui/main.qml:461
+#: ui/main.qml:467
 #, fuzzy, kde-format
 #| msgid "Add"
 msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
 msgstr "संयोजयति"
 
-#: ui/main.qml:463
+#: ui/main.qml:469
 #, fuzzy, kde-format
 #| msgctxt "@label:textbox accessible"
 #| msgid "Command"
@@ -371,63 +371,63 @@ msgctxt "@action:button accessible"
 msgid "Save command"
 msgstr "आदेश"
 
-#: ui/main.qml:464
+#: ui/main.qml:470
 #, fuzzy, kde-format
 #| msgid "Add Command"
 msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "Add Command इति"
 
-#: ui/main.qml:486
+#: ui/main.qml:492
 #, fuzzy, kde-format
 #| msgid "Enter a command or choose a script file:"
 msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr "आदेशं प्रविशतु अथवा स्क्रिप्ट् सञ्चिकां चिनोतु:"
 
-#: ui/main.qml:495
+#: ui/main.qml:501
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "आदेश:"
 
-#: ui/main.qml:501
+#: ui/main.qml:507
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "आदेश"
 
-#: ui/main.qml:508
+#: ui/main.qml:514
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "चिनोतु…"
 
-#: ui/main.qml:509
+#: ui/main.qml:515
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "स्क्रिप्ट् सञ्चिकां चिनोतु"
 
-#: ui/main.qml:517
+#: ui/main.qml:523
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "नामः:"
 
-#: ui/main.qml:518
+#: ui/main.qml:524
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "अत्र नाम प्रविशतु"
 
-#: ui/main.qml:530
+#: ui/main.qml:536
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Script File इति चिनोतु"
 
-#: ui/main.qml:532
+#: ui/main.qml:538
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -435,35 +435,35 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "स्क्रिप्ट् सञ्चिकाः (.sh, .bash, .zsh इत्यादयः) (*.*sh)"
 
-#: ui/main.qml:555
+#: ui/main.qml:561
 #, fuzzy, kde-format
 #| msgid "Select the scheme to import:"
 msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr "आयातार्थं योजनां चिनोतु :"
 
-#: ui/main.qml:574
+#: ui/main.qml:580
 #, fuzzy, kde-format
 #| msgid "Custom Scheme"
 msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
 msgstr "कस्टम योजना"
 
-#: ui/main.qml:582
+#: ui/main.qml:588
 #, fuzzy, kde-format
 #| msgid "Select File…"
 msgctxt "@action:button"
 msgid "Select File…"
 msgstr "सञ्चिकां चिनोतु..."
 
-#: ui/main.qml:582
+#: ui/main.qml:588
 #, fuzzy, kde-format
 #| msgid "Import"
 msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "आयात"
 
-#: ui/main.qml:584
+#: ui/main.qml:590
 #, fuzzy, kde-format
 #| msgctxt "@action:button accessible"
 #| msgid "Delete shortcut"
@@ -471,7 +471,7 @@ msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
 msgstr "शॉर्टकट् विलोपयन्तु"
 
-#: ui/main.qml:585
+#: ui/main.qml:591
 #, fuzzy, kde-format
 #| msgid "Export Shortcut Scheme"
 msgctxt "@action:button accessible"
@@ -506,14 +506,14 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:88
+#: ui/ShortcutActionDelegate.qml:85
 #, fuzzy, kde-format
 #| msgid "No active shortcuts"
 msgctxt "@info:status"
 msgid "No active shortcuts"
 msgstr "सक्रियशॉर्टकट् नास्ति"
 
-#: ui/ShortcutActionDelegate.qml:134
+#: ui/ShortcutActionDelegate.qml:135
 #, fuzzy, kde-format
 #| msgctxt "%1 decides if singular or plural will be used"
 #| msgid "Default shortcut"
@@ -524,53 +524,53 @@ msgid_plural "Default shortcuts"
 msgstr[0] "पूर्वनिर्धारित शॉर्टकट"
 msgstr[1] "पूर्वनिर्धारित शॉर्टकट"
 
-#: ui/ShortcutActionDelegate.qml:136
+#: ui/ShortcutActionDelegate.qml:137
 #, fuzzy, kde-format
 #| msgid "No default shortcuts"
 msgctxt "@label for shortcut with no default bindings"
 msgid "No default shortcuts"
 msgstr "पूर्वनिर्धारितशॉर्टकट् नास्ति"
 
-#: ui/ShortcutActionDelegate.qml:145
+#: ui/ShortcutActionDelegate.qml:146
 #, fuzzy, kde-format
 #| msgid "Default shortcut %1 is enabled."
 msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is enabled."
 msgstr "पूर्वनिर्धारितं शॉर्टकट् %1 सक्षमम् अस्ति ।"
 
-#: ui/ShortcutActionDelegate.qml:145
+#: ui/ShortcutActionDelegate.qml:146
 #, fuzzy, kde-format
 #| msgid "Default shortcut %1 is disabled."
 msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is disabled."
 msgstr "पूर्वनिर्धारितं शॉर्टकट् %1 अक्षमम् अस्ति ।"
 
-#: ui/ShortcutActionDelegate.qml:168
+#: ui/ShortcutActionDelegate.qml:169
 #, fuzzy, kde-format
 #| msgid "Custom shortcuts"
 msgctxt "@title:column"
 msgid "Custom shortcuts"
 msgstr "कस्टम शॉर्टकट"
 
-#: ui/ShortcutActionDelegate.qml:195
+#: ui/ShortcutActionDelegate.qml:196
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
 msgstr "शॉर्टकट् विलोपयन्तु"
 
-#: ui/ShortcutActionDelegate.qml:206
+#: ui/ShortcutActionDelegate.qml:207
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
 msgstr "संयोजयति…"
 
-#: ui/ShortcutActionDelegate.qml:207
+#: ui/ShortcutActionDelegate.qml:208
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "कस्टम् शॉर्टकट् योजयन्तु"
 
-#: ui/ShortcutActionDelegate.qml:243
+#: ui/ShortcutActionDelegate.qml:244
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"

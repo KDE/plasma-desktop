@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-24 00:47+0000\n"
+"POT-Creation-Date: 2026-02-28 00:46+0000\n"
 "PO-Revision-Date: 2026-01-24 10:32+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -264,139 +264,139 @@ msgctxt "@action:button"
 msgid "Undo deletion"
 msgstr "Przywróć usunięte"
 
-#: ui/main.qml:344
+#: ui/main.qml:350
 #, kde-format
 msgctxt "@info:status placeholdermessage"
 msgid "No items matched the search terms"
 msgstr "Żaden z elementów nie pasuje do wyszukiwanego wyrażenia"
 
-#: ui/main.qml:361
+#: ui/main.qml:367
 #, kde-format
 msgctxt "@info"
 msgid "These shortcuts will be deleted when changes are applied."
 msgstr "Te skróty zostaną usunięte po zatwierdzeniu zmian."
 
-#: ui/main.qml:365
+#: ui/main.qml:371
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo"
 msgstr "Wycofaj"
 
-#: ui/main.qml:366
+#: ui/main.qml:372
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo deleting shortcuts"
 msgstr "Przywróć usunięte skróty"
 
-#: ui/main.qml:402
+#: ui/main.qml:408
 #, kde-format
 msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Wybierz element z listy, aby obejrzeć tutaj jego skróty"
 
-#: ui/main.qml:415
+#: ui/main.qml:421
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr "Wyeksportuj zestaw skrótów"
 
-#: ui/main.qml:415 ui/main.qml:547
+#: ui/main.qml:421 ui/main.qml:553
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
 msgstr "Zaimportuj zestaw skrótów"
 
-#: ui/main.qml:417
+#: ui/main.qml:423
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Zestaw skrótów (*.kksrc)"
 
-#: ui/main.qml:444
+#: ui/main.qml:450
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Edit Command"
 msgstr "Edytuj polecenie"
 
-#: ui/main.qml:444
+#: ui/main.qml:450
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Add Command"
 msgstr "Dodaj polecenie"
 
-#: ui/main.qml:461
+#: ui/main.qml:467
 #, kde-format
 msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
 msgstr "Zapisz"
 
-#: ui/main.qml:461
+#: ui/main.qml:467
 #, kde-format
 msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
 msgstr "Dodaj"
 
-#: ui/main.qml:463
+#: ui/main.qml:469
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Save command"
 msgstr "Zapisz polecenie"
 
-#: ui/main.qml:464
+#: ui/main.qml:470
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "Dodaj polecenie"
 
-#: ui/main.qml:486
+#: ui/main.qml:492
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr "Wpisz polecenie lub wybierz plik skryptu:"
 
-#: ui/main.qml:495
+#: ui/main.qml:501
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "Polecenie:"
 
-#: ui/main.qml:501
+#: ui/main.qml:507
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Polecenie"
 
-#: ui/main.qml:508
+#: ui/main.qml:514
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Wybierz…"
 
-#: ui/main.qml:509
+#: ui/main.qml:515
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Wybierz plik skryptu"
 
-#: ui/main.qml:517
+#: ui/main.qml:523
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "Nazwa:"
 
-#: ui/main.qml:518
+#: ui/main.qml:524
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "Tutaj wpisz nazwę"
 
-#: ui/main.qml:530
+#: ui/main.qml:536
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Wybierz plik skryptu"
 
-#: ui/main.qml:532
+#: ui/main.qml:538
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -404,37 +404,37 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "Pliki skryptowe (.sh, .bash, .zsh, etc.) (*.*sh)"
 
-#: ui/main.qml:555
+#: ui/main.qml:561
 #, kde-format
 msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr "Wybierz zestaw do zaimportowania:"
 
-#: ui/main.qml:574
+#: ui/main.qml:580
 #, kde-format
 msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
 msgstr "Własny zestaw"
 
-#: ui/main.qml:582
+#: ui/main.qml:588
 #, kde-format
 msgctxt "@action:button"
 msgid "Select File…"
 msgstr "Wybierz plik..."
 
-#: ui/main.qml:582
+#: ui/main.qml:588
 #, kde-format
 msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "Zaimportuj"
 
-#: ui/main.qml:584
+#: ui/main.qml:590
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
 msgstr "Wybierz plik zestawu skrótów"
 
-#: ui/main.qml:585
+#: ui/main.qml:591
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"
@@ -466,13 +466,13 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:88
+#: ui/ShortcutActionDelegate.qml:85
 #, kde-format
 msgctxt "@info:status"
 msgid "No active shortcuts"
 msgstr "Nie przypisano żadnego skrótu"
 
-#: ui/ShortcutActionDelegate.qml:134
+#: ui/ShortcutActionDelegate.qml:135
 #, kde-format
 msgctxt "@title:column %1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -481,49 +481,49 @@ msgstr[0] "Domyślny skrót"
 msgstr[1] "Domyślne skróty"
 msgstr[2] "Domyślne skróty"
 
-#: ui/ShortcutActionDelegate.qml:136
+#: ui/ShortcutActionDelegate.qml:137
 #, kde-format
 msgctxt "@label for shortcut with no default bindings"
 msgid "No default shortcuts"
 msgstr "Brak domyślnych skrótów"
 
-#: ui/ShortcutActionDelegate.qml:145
+#: ui/ShortcutActionDelegate.qml:146
 #, kde-format
 msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is enabled."
 msgstr "Domyślny skrót %1 jest włączony."
 
-#: ui/ShortcutActionDelegate.qml:145
+#: ui/ShortcutActionDelegate.qml:146
 #, kde-format
 msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is disabled."
 msgstr "Domyślny skrót %1 jest wyłączony."
 
-#: ui/ShortcutActionDelegate.qml:168
+#: ui/ShortcutActionDelegate.qml:169
 #, kde-format
 msgctxt "@title:column"
 msgid "Custom shortcuts"
 msgstr "Własne skróty"
 
-#: ui/ShortcutActionDelegate.qml:195
+#: ui/ShortcutActionDelegate.qml:196
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
 msgstr "Usuń skrót"
 
-#: ui/ShortcutActionDelegate.qml:206
+#: ui/ShortcutActionDelegate.qml:207
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
 msgstr "Dodaj…"
 
-#: ui/ShortcutActionDelegate.qml:207
+#: ui/ShortcutActionDelegate.qml:208
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Dodaj własny skrót"
 
-#: ui/ShortcutActionDelegate.qml:243
+#: ui/ShortcutActionDelegate.qml:244
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"

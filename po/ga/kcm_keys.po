@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-24 00:47+0000\n"
+"POT-Creation-Date: 2026-02-28 00:46+0000\n"
 "PO-Revision-Date: 2026-01-21 12:09+0000\n"
 "Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
 "Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
@@ -266,139 +266,139 @@ msgctxt "@action:button"
 msgid "Undo deletion"
 msgstr "Cealaigh scriosadh"
 
-#: ui/main.qml:344
+#: ui/main.qml:350
 #, kde-format
 msgctxt "@info:status placeholdermessage"
 msgid "No items matched the search terms"
 msgstr "Níor mheaitseáil aon mhír na téarmaí cuardaigh"
 
-#: ui/main.qml:361
+#: ui/main.qml:367
 #, kde-format
 msgctxt "@info"
 msgid "These shortcuts will be deleted when changes are applied."
 msgstr "Scriosfar na haicearraí seo nuair a chuirfear athruithe i bhfeidhm."
 
-#: ui/main.qml:365
+#: ui/main.qml:371
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo"
 msgstr "Cuir ar ceal"
 
-#: ui/main.qml:366
+#: ui/main.qml:372
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo deleting shortcuts"
 msgstr "Cealaigh scriosadh aicearraí"
 
-#: ui/main.qml:402
+#: ui/main.qml:408
 #, kde-format
 msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Roghnaigh mír ón liosta chun a aicearraí a fheiceáil anseo"
 
-#: ui/main.qml:415
+#: ui/main.qml:421
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr "Scéim Aicearra Easpórtála"
 
-#: ui/main.qml:415 ui/main.qml:547
+#: ui/main.qml:421 ui/main.qml:553
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
 msgstr "Scéim Aicearra Iompórtála"
 
-#: ui/main.qml:417
+#: ui/main.qml:423
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Scéim Aicearraí (*.kksrc)"
 
-#: ui/main.qml:444
+#: ui/main.qml:450
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Edit Command"
 msgstr "Cuir Ordú in Eagar"
 
-#: ui/main.qml:444
+#: ui/main.qml:450
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Add Command"
 msgstr "Cuir Ordú Leis"
 
-#: ui/main.qml:461
+#: ui/main.qml:467
 #, kde-format
 msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
 msgstr "Sábháil"
 
-#: ui/main.qml:461
+#: ui/main.qml:467
 #, kde-format
 msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
 msgstr "Cuir leis"
 
-#: ui/main.qml:463
+#: ui/main.qml:469
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Save command"
 msgstr "Sábháil an t-ordú"
 
-#: ui/main.qml:464
+#: ui/main.qml:470
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "Cuir ordú leis"
 
-#: ui/main.qml:486
+#: ui/main.qml:492
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr "Cuir isteach ordú nó roghnaigh comhad scripte:"
 
-#: ui/main.qml:495
+#: ui/main.qml:501
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "Ordú:"
 
-#: ui/main.qml:501
+#: ui/main.qml:507
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Ordú"
 
-#: ui/main.qml:508
+#: ui/main.qml:514
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Roghnaigh…"
 
-#: ui/main.qml:509
+#: ui/main.qml:515
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Roghnaigh comhad scripte"
 
-#: ui/main.qml:517
+#: ui/main.qml:523
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "Ainm:"
 
-#: ui/main.qml:518
+#: ui/main.qml:524
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "Cuir isteach ainm anseo"
 
-#: ui/main.qml:530
+#: ui/main.qml:536
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Roghnaigh Comhad Scripte"
 
-#: ui/main.qml:532
+#: ui/main.qml:538
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -406,37 +406,37 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "Comhaid scripte (.sh, .bash, .zsh, srl.) (*.*sh)"
 
-#: ui/main.qml:555
+#: ui/main.qml:561
 #, kde-format
 msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr "Roghnaigh an scéim le hallmhairiú:"
 
-#: ui/main.qml:574
+#: ui/main.qml:580
 #, kde-format
 msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
 msgstr "Scéim Saincheaptha"
 
-#: ui/main.qml:582
+#: ui/main.qml:588
 #, kde-format
 msgctxt "@action:button"
 msgid "Select File…"
 msgstr "Roghnaigh Comhad…"
 
-#: ui/main.qml:582
+#: ui/main.qml:588
 #, kde-format
 msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "Iompórtáil"
 
-#: ui/main.qml:584
+#: ui/main.qml:590
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
 msgstr "Roghnaigh comhad scéime aicearra"
 
-#: ui/main.qml:585
+#: ui/main.qml:591
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"
@@ -468,13 +468,13 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:88
+#: ui/ShortcutActionDelegate.qml:85
 #, kde-format
 msgctxt "@info:status"
 msgid "No active shortcuts"
 msgstr "Gan aon aicearraí gníomhacha"
 
-#: ui/ShortcutActionDelegate.qml:134
+#: ui/ShortcutActionDelegate.qml:135
 #, kde-format
 msgctxt "@title:column %1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -485,49 +485,49 @@ msgstr[2] "Aicearraí réamhshocraithe"
 msgstr[3] "Aicearraí réamhshocraithe"
 msgstr[4] "Aicearraí réamhshocraithe"
 
-#: ui/ShortcutActionDelegate.qml:136
+#: ui/ShortcutActionDelegate.qml:137
 #, kde-format
 msgctxt "@label for shortcut with no default bindings"
 msgid "No default shortcuts"
 msgstr "Gan aicearraí réamhshocraithe"
 
-#: ui/ShortcutActionDelegate.qml:145
+#: ui/ShortcutActionDelegate.qml:146
 #, kde-format
 msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is enabled."
 msgstr "Tá an aicearra réamhshocraithe %1 cumasaithe."
 
-#: ui/ShortcutActionDelegate.qml:145
+#: ui/ShortcutActionDelegate.qml:146
 #, kde-format
 msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is disabled."
 msgstr "Tá an aicearra réamhshocraithe %1 díchumasaithe."
 
-#: ui/ShortcutActionDelegate.qml:168
+#: ui/ShortcutActionDelegate.qml:169
 #, kde-format
 msgctxt "@title:column"
 msgid "Custom shortcuts"
 msgstr "Aicearraí saincheaptha"
 
-#: ui/ShortcutActionDelegate.qml:195
+#: ui/ShortcutActionDelegate.qml:196
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
 msgstr "Scrios aicearra"
 
-#: ui/ShortcutActionDelegate.qml:206
+#: ui/ShortcutActionDelegate.qml:207
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
 msgstr "Cuir leis…"
 
-#: ui/ShortcutActionDelegate.qml:207
+#: ui/ShortcutActionDelegate.qml:208
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Cuir aicearra saincheaptha leis"
 
-#: ui/ShortcutActionDelegate.qml:243
+#: ui/ShortcutActionDelegate.qml:244
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
