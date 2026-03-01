@@ -1,13 +1,14 @@
 # SPDX-FileCopyrightText: 2022, 2024, 2025 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-30 00:46+0000\n"
-"PO-Revision-Date: 2025-01-22 19:35+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2026-02-20 16:29+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
+"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
@@ -68,8 +69,7 @@ msgid "Global theme"
 msgstr ""
 
 #: ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Theme:"
+#, kde-format
 msgctxt "@title:group for light/dark quick switch"
 msgid "Theme:"
 msgstr "テーマ:"
@@ -78,7 +78,7 @@ msgstr "テーマ:"
 #, kde-format
 msgctxt "Switch between dark and light look and feel packages automatically"
 msgid "Automatic"
-msgstr ""
+msgstr "自動設定"
 
 #: ui/main.qml:120
 #, kde-format
@@ -86,7 +86,7 @@ msgctxt ""
 "@info:tooltip 1 is the name of a light global theme, 2 is the name of a dark "
 "global theme"
 msgid "Use “%1” during the day and “%2” at night"
-msgstr ""
+msgstr "日中は “%1”、夜間は “%2” に設定する"
 
 #: ui/main.qml:134
 #, kde-format
@@ -95,8 +95,7 @@ msgid "More appearance settings:"
 msgstr "その他の外観設定:"
 
 #: ui/main.qml:181
-#, fuzzy, kde-format
-#| msgid "Animation speed:"
+#, kde-format
 msgctxt "@title:slider"
 msgid "Animation speed:"
 msgstr "アニメーションの速度:"
@@ -127,11 +126,10 @@ msgid "Selects them"
 msgstr "選択する"
 
 #: ui/main.qml:224
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
-msgstr "ダブルクリックで開く"
+msgstr "開くときにはダブルクリック"
 
 #: ui/main.qml:252
 #, kde-format
@@ -140,11 +138,10 @@ msgid "Opens them"
 msgstr "開く"
 
 #: ui/main.qml:257
-#, fuzzy, kde-format
-#| msgid "Select by clicking on item's selection marker"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
-msgstr "アイテムの選択マーカーをクリックして選択"
+msgstr "選択するときにはアイテムの選択マーカーをクリック"
 
 #: ui/main.qml:283
 #, kde-format
@@ -153,8 +150,7 @@ msgid "More behavior settings:"
 msgstr "その他の動作設定:"
 
 #: ui/main.qml:297
-#, fuzzy, kde-format
-#| msgid "Most used pages:"
+#, kde-format
 msgctxt "@title:group for grid of buttons opening kcms"
 msgid "Most used pages:"
 msgstr "よく使われるページ:"
