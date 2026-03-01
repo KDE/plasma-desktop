@@ -1,4 +1,5 @@
 # Translation of plasma_applet_tasks into Japanese.
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 # This file is distributed under the same license as the kdebase package.
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2008, 2009, 2010.
 # Fuminobu Takeyama <ftake@geeko.jp>, 2018.
@@ -11,9 +12,9 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2024-09-11 06:29+0900\n"
-"Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2026-02-20 20:58+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
+"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -168,7 +169,7 @@ msgstr "グループをクリックした時:"
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task cycles through tasks' "
 msgid "Cycles through tasks"
-msgstr "タスクを循環"
+msgstr "タスクを順に切り替える"
 
 #: package/contents/ui/ConfigBehavior.qml:63
 #, kde-format
@@ -312,7 +313,7 @@ msgstr "マウスホイール:"
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
-msgstr "タスクを循環"
+msgstr "タスクを順に切り替える"
 
 #: package/contents/ui/ConfigBehavior.qml:156
 #, kde-format
@@ -671,7 +672,7 @@ msgstr "%1 で利用可能"
 msgctxt "Show all user Places"
 msgid "%1 more Place"
 msgid_plural "%1 more Places"
-msgstr[0] "その他の場所(%1件)"
+msgstr[0] "その他の場所 (%1件)"
 
 #: plugin/backend.cpp:468
 #, kde-format
