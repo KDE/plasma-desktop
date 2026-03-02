@@ -237,13 +237,6 @@ QString KCMKeys::findBaseName(const QString &filePath) const
     return fileInfo.baseName();
 }
 
-QString KCMKeys::getCommand(const QString component) const
-{
-    KDesktopFile desktopFile(component);
-    KConfigGroup cg = desktopFile.desktopGroup();
-    return cg.readEntry("Exec");
-}
-
 QString KCMKeys::addCommand(const QString &exec, const QString &name)
 {
     // escape %'s in the exec with %%
