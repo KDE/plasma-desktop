@@ -965,8 +965,6 @@ void Positioner::convertFolderModelData()
     }
 
     endResetModel();
-
-    m_deferApplyPositions = false;
 }
 
 void Positioner::flushPendingChanges(bool inserted)
@@ -1049,7 +1047,9 @@ void Positioner::loadAndApplyPositionsConfig(const QString &resolution)
             }
         }
 
-        convertFolderModelData();
+        if (!m_positions.empty()) {
+            convertFolderModelData();
+        }
     }
 }
 
@@ -1299,9 +1299,7 @@ void Positioner::onItemRenamed(const QString &filename, const QString &newFilena
 // geometry changes
 void Positioner::onListingCompleted()
 {
-    if (screenInUse()) {
-        savePositionsConfig();
-    }
+    savePositionsConfig();
 }
 
 void Positioner::connectSignals(FolderModel *model)
