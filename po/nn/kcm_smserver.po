@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2024-07-14 13:03+0200\n"
+"PO-Revision-Date: 2026-03-01 20:27+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 26.03.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -45,29 +45,22 @@ msgid "Applications to be excluded from session"
 msgstr "Program som ikkje skal reknast med i økta"
 
 #: ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Failed to request restart to firmware setup: %1"
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Failed to request restart to firmware setup: %1"
 msgstr "Feil ved førespurnad om omstart for fastvareoppsett: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"Når maskina vert starta på nytt, vil ho starta innstillingane for "
+"Når maskina vert starta på nytt, vil ho starta UEFI-innstillingane for "
 "fastvareoppsett."
 
 #: ui/main.qml:32
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
@@ -76,11 +69,10 @@ msgstr ""
 "fastvareoppsett."
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgctxt "@action:button"
 msgid "Restart Now"
-msgstr "Start på nytt"
+msgstr "Start på nytt no"
 
 #: ui/main.qml:46
 #, kde-format
@@ -111,8 +103,7 @@ msgid "Session Restore"
 msgstr "Øktgjenoppretting"
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid "On login, launch apps that were open:"
+#, kde-format
 msgctxt "@title:group prefix for radiobuttons"
 msgid "On login, launch apps that were open:"
 msgstr "Opna ved innlogging program som var opne:"
@@ -154,14 +145,13 @@ msgid "Start with an empty session"
 msgstr "Start med tom økt"
 
 #: ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Ignored applications:"
 msgstr "Ignorer desse programma:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
@@ -169,9 +159,10 @@ msgid ""
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"Skriv inn namn på programfilene (skilde med komma eller kolon, for eksempel "
-"«xterm:konsole» eller «xterm,konsole») du vil hindra at skal startast "
-"automatisk saman med andre program autostarta frå tidlegare økter."
+"Skriv desktopfil-ID-ar eller, på X11, programnamn (skilde med komma eller "
+"kolon, for eksempel «xterm:org.kde.konsole.desktop» eller «xterm,konsole») "
+"til program du vil hindra at skal startast automatisk saman med andre "
+"program autostarta frå tidlegare økter."
 
 #: ui/main.qml:138
 #, kde-format
@@ -188,12 +179,10 @@ msgid "After next restart:"
 msgstr "Etter neste omstart:"
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr "Gå til fastvareoppsett-skjermen"
+msgstr "Gå til UEFI-innstillingane for fastvareoppsett"
 
 #: ui/main.qml:146
 #, kde-format

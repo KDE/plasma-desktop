@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-14 00:46+0000\n"
-"PO-Revision-Date: 2026-02-26 19:05+0100\n"
+"PO-Revision-Date: 2026-03-01 20:17+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -35,7 +35,7 @@ msgstr "Kritisk feil ved lesing av fundamental einingsinfo for %1."
 #: kcm.cpp:87
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "Klarar ikkje velja eigna motor."
 
 #: kcm.cpp:143
 #, kde-format
@@ -249,3 +249,7 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"Dette fungerer ikkje skikkeleg med program som brukar midtknap-draging, for "
+"eksempel nokre biletredigerings­program, dokument­visarar og dataspel. "
+"Funksjonen kan brukast på alle einingar, men er hovudsakleg meint som "
+"erstatning for rullehjul på einingar som manglar dette."
