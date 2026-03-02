@@ -985,6 +985,11 @@ Kicker.DashboardWindow {
             } else {
                 enabled = false // this immediately triggers other hover events when bound to their hoverEnabled
             }
+
+            onPressed: event => {
+                enabled = false
+                event.accepted = false
+            }
         }
     }
 
