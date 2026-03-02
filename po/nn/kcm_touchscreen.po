@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2024-03-09 18:53+0100\n"
+"PO-Revision-Date: 2026-03-01 20:18+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 26.03.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -30,15 +30,13 @@ msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 – (%2,%3 %4 × %5)"
 
 #: ui/main.qml:29
-#, fuzzy, kde-format
-#| msgid "No touchscreens found"
+#, kde-format
 msgctxt "@info:status placeholdermessage text"
 msgid "No touchscreens found"
 msgstr "Fann ingen trykkskjermar"
 
 #: ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Connect an external touchscreen"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchscreen"
 msgstr "Kopla til ekstern trykkskjerm"
@@ -50,15 +48,13 @@ msgid "Device:"
 msgstr "Eining:"
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgid "Enabled:"
+#, kde-format
 msgctxt "@option:check prefix touchscreen device is enabled"
 msgid "Enabled:"
 msgstr "Slått på:"
 
 #: ui/main.qml:67
-#, fuzzy, kde-format
-#| msgid "Target display:"
+#, kde-format
 msgctxt "@label:listbox this is a compound noun"
 msgid "Target display:"
 msgstr "Mål-eining:"

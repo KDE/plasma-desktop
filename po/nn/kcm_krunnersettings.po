@@ -1,12 +1,11 @@
 # Translation of kcm_krunnersettings to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2015, 2018, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2023-07-15 14:43+0200\n"
+"PO-Revision-Date: 2026-03-01 20:23+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,35 +13,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 26.03.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Position on screen:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Position on screen:"
-msgstr "Plassering:"
+msgstr "Plassering på skjermen:"
 
 #: ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Top"
+#, kde-format
 msgctxt "@option:check Position on top of screen"
 msgid "Top"
 msgstr "Øvst"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Center"
+#, kde-format
 msgctxt "@option:check Position in center of screen"
 msgid "Center"
 msgstr "I midten"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Activation:"
+#, kde-format
 msgctxt "@label prefix for checkbutton"
 msgid "Activation:"
 msgstr "Start:"
@@ -54,39 +49,31 @@ msgid "Activate when pressing any key on the desktop"
 msgstr "Start ved tastetrykk på skrivebordet"
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid "History:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "History:"
 msgstr "Historikk:"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Disabled"
+#, kde-format
 msgctxt "@option:radio History is disabled"
 msgid "Disabled"
 msgstr "Slått av"
 
 #: ui/main.qml:79
-#, fuzzy, kde-format
-#| msgctxt "@option:check The thing being enabled is search history"
-#| msgid "Enable suggestions"
+#, kde-format
 msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable suggestions"
 msgstr "Slå på forslag"
 
 #: ui/main.qml:84
-#, fuzzy, kde-format
-#| msgctxt "@option:check The thing being enabled is search history"
-#| msgid "Enabled auto-complete"
+#, kde-format
 msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable auto-complete"
 msgstr "Bruk autofullføring"
 
 #: ui/main.qml:92
-#, fuzzy, kde-format
-#| msgid "Clear History…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear History…"
 msgstr "Tøm loggen …"
