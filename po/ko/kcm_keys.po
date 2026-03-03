@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"POT-Creation-Date: 2026-03-03 00:48+0000\n"
 "PO-Revision-Date: 2026-02-03 21:36+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -69,7 +69,7 @@ msgstr "전역 단축키 서비스와 통신하는 중 오류 발생"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "전역 단축키 데몬과 통신할 수 없음"
 
-#: kcm_keys.cpp:373
+#: kcm_keys.cpp:366
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -80,7 +80,7 @@ msgstr ""
 "<shortcut>%1</shortcut> 단축키가 이미 %2 공통 동작 <interface>%3</interface>"
 "에 할당되어 있습니다.<nl/><nl/>%4에 다시 할당하시겠습니까?"
 
-#: kcm_keys.cpp:379
+#: kcm_keys.cpp:372
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -92,13 +92,13 @@ msgstr ""
 "<interface>%2</interface> 동작에 할당되어 있습니다.<nl/><nl/><application>"
 "%5</application>의 <interface>%4</interface> 동작에 다시 할당하시겠습니까?"
 
-#: kcm_keys.cpp:388
+#: kcm_keys.cpp:381
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "단축키 충돌 해결"
 
-#: kcm_keys.cpp:398
+#: kcm_keys.cpp:391
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -250,151 +250,151 @@ msgctxt "@action:button %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "%1의 명령 편집"
 
-#: ui/main.qml:261
+#: ui/main.qml:263
 #, kde-format
 msgctxt "@action:button %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "%1의 모든 단축키 삭제"
 
-#: ui/main.qml:283
+#: ui/main.qml:285
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo deletion"
 msgstr "삭제 실행 취소"
 
-#: ui/main.qml:350
+#: ui/main.qml:352
 #, kde-format
 msgctxt "@info:status placeholdermessage"
 msgid "No items matched the search terms"
 msgstr "검색어와 일치하는 항목 없음"
 
-#: ui/main.qml:367
+#: ui/main.qml:369
 #, kde-format
 msgctxt "@info"
 msgid "These shortcuts will be deleted when changes are applied."
 msgstr "변경 사항을 적용하면 다음 단축키를 삭제합니다."
 
-#: ui/main.qml:371
+#: ui/main.qml:373
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo"
 msgstr "실행 취소"
 
-#: ui/main.qml:372
+#: ui/main.qml:374
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo deleting shortcuts"
 msgstr "단축키 삭제 실행 취소"
 
-#: ui/main.qml:408
+#: ui/main.qml:410
 #, kde-format
 msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "여기에서 단축키를 보려면 목록에서 선택하십시오"
 
-#: ui/main.qml:421
+#: ui/main.qml:423
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr "단축키 구성표 내보내기"
 
-#: ui/main.qml:421 ui/main.qml:553
+#: ui/main.qml:423 ui/main.qml:555
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
 msgstr "단축키 구성표 가져오기"
 
-#: ui/main.qml:423
+#: ui/main.qml:425
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "단축키 구성표 (*.kksrc)"
 
-#: ui/main.qml:450
+#: ui/main.qml:452
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Edit Command"
 msgstr "편집 명령"
 
-#: ui/main.qml:450
+#: ui/main.qml:452
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Add Command"
 msgstr "명령 추가"
 
-#: ui/main.qml:467
+#: ui/main.qml:469
 #, kde-format
 msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
 msgstr "저장"
 
-#: ui/main.qml:467
+#: ui/main.qml:469
 #, kde-format
 msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
 msgstr "추가"
 
-#: ui/main.qml:469
+#: ui/main.qml:471
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Save command"
 msgstr "명령 저장"
 
-#: ui/main.qml:470
+#: ui/main.qml:472
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "명령 추가"
 
-#: ui/main.qml:492
+#: ui/main.qml:494
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr "명령을 입력하거나 스크립트 파일 선택:"
 
-#: ui/main.qml:501
+#: ui/main.qml:503
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "명령:"
 
-#: ui/main.qml:507
+#: ui/main.qml:509
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "명령"
 
-#: ui/main.qml:514
+#: ui/main.qml:516
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "선택..."
 
-#: ui/main.qml:515
+#: ui/main.qml:517
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "스크립트 파일 선택"
 
-#: ui/main.qml:523
+#: ui/main.qml:525
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "이름:"
 
-#: ui/main.qml:524
+#: ui/main.qml:526
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "여기에 이름 입력"
 
-#: ui/main.qml:536
+#: ui/main.qml:538
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "스크립트 파일 선택"
 
-#: ui/main.qml:538
+#: ui/main.qml:540
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -402,37 +402,37 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "스크립트 파일 (.sh, .bash, .zsh 등) (*.*sh)"
 
-#: ui/main.qml:561
+#: ui/main.qml:563
 #, kde-format
 msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr "가져올 구성표 선택:"
 
-#: ui/main.qml:580
+#: ui/main.qml:582
 #, kde-format
 msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
 msgstr "사용자 정의 구성표"
 
-#: ui/main.qml:588
+#: ui/main.qml:590
 #, kde-format
 msgctxt "@action:button"
 msgid "Select File…"
 msgstr "파일 선택…"
 
-#: ui/main.qml:588
+#: ui/main.qml:590
 #, kde-format
 msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "가져오기"
 
-#: ui/main.qml:590
+#: ui/main.qml:592
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
 msgstr "단축키 구성표 파일 선택"
 
-#: ui/main.qml:591
+#: ui/main.qml:593
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"

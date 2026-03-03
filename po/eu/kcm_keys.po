@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"POT-Creation-Date: 2026-03-03 00:48+0000\n"
 "PO-Revision-Date: 2026-02-15 21:11+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -71,7 +71,7 @@ msgstr "Errorea lasterbide-globalen zerbitzuarekin komunikatzean"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Ezin izan da lasterbide globalen daimonarekin komunikatu"
 
-#: kcm_keys.cpp:373
+#: kcm_keys.cpp:366
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -82,7 +82,7 @@ msgstr ""
 "<shortcut>%1</shortcut> lasterbidea jada %2 ekintza arruntera <interface>%3</"
 "interface> esleituta dago.<nl/><nl/>%4(e)ra berresleitu?"
 
-#: kcm_keys.cpp:379
+#: kcm_keys.cpp:372
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -94,13 +94,13 @@ msgstr ""
 "<interface>%2</interface> ekintzara esleituta dago.<nl/><nl/><application>"
 "%5</application>(e)ren <interface>%4</interface> ekintzara berresleitu?"
 
-#: kcm_keys.cpp:388
+#: kcm_keys.cpp:381
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Lasterbide-gatazka ebatzi"
 
-#: kcm_keys.cpp:398
+#: kcm_keys.cpp:391
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -254,151 +254,151 @@ msgctxt "@action:button %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Editatu %1(e)rako komandoa"
 
-#: ui/main.qml:261
+#: ui/main.qml:263
 #, kde-format
 msgctxt "@action:button %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Ezabatu %1(e)rako lasterbide guztiak"
 
-#: ui/main.qml:283
+#: ui/main.qml:285
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo deletion"
 msgstr "Desegin ezabatzea"
 
-#: ui/main.qml:350
+#: ui/main.qml:352
 #, kde-format
 msgctxt "@info:status placeholdermessage"
 msgid "No items matched the search terms"
 msgstr "Ez dago bilaketa terminoekin bat datorren elementurik"
 
-#: ui/main.qml:367
+#: ui/main.qml:369
 #, kde-format
 msgctxt "@info"
 msgid "These shortcuts will be deleted when changes are applied."
 msgstr "Aldaketa hauek ezabatu egingo dira aldaketak aplikatzen direnean."
 
-#: ui/main.qml:371
+#: ui/main.qml:373
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo"
 msgstr "Desegin"
 
-#: ui/main.qml:372
+#: ui/main.qml:374
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo deleting shortcuts"
 msgstr "Desegin lasterbideak ezabatzea"
 
-#: ui/main.qml:408
+#: ui/main.qml:410
 #, kde-format
 msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Hautatu zerrendako elementu bat bere lasterbideak hemen ikusteko"
 
-#: ui/main.qml:421
+#: ui/main.qml:423
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr "Esportatu lasterbide-antolaera"
 
-#: ui/main.qml:421 ui/main.qml:553
+#: ui/main.qml:423 ui/main.qml:555
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
 msgstr "Inportatu lasterbide-antolaera"
 
-#: ui/main.qml:423
+#: ui/main.qml:425
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Lasterbide-antolaera (*.kksrc)"
 
-#: ui/main.qml:450
+#: ui/main.qml:452
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Edit Command"
 msgstr "Editatu komandoa"
 
-#: ui/main.qml:450
+#: ui/main.qml:452
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Add Command"
 msgstr "Gehitu komandoa"
 
-#: ui/main.qml:467
+#: ui/main.qml:469
 #, kde-format
 msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
 msgstr "Gorde"
 
-#: ui/main.qml:467
+#: ui/main.qml:469
 #, kde-format
 msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
 msgstr "Gehitu"
 
-#: ui/main.qml:469
+#: ui/main.qml:471
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Save command"
 msgstr "Gorde komandoa"
 
-#: ui/main.qml:470
+#: ui/main.qml:472
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "Gehitu komandoa"
 
-#: ui/main.qml:492
+#: ui/main.qml:494
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr "Sartu komando bat edo hautatu gidoi-fitxategi bat:"
 
-#: ui/main.qml:501
+#: ui/main.qml:503
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "Komandoa:"
 
-#: ui/main.qml:507
+#: ui/main.qml:509
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Komandoa"
 
-#: ui/main.qml:514
+#: ui/main.qml:516
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Hautatu…"
 
-#: ui/main.qml:515
+#: ui/main.qml:517
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Hautatu gidoi-fitxategia"
 
-#: ui/main.qml:523
+#: ui/main.qml:525
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "Izena:"
 
-#: ui/main.qml:524
+#: ui/main.qml:526
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "Sartu izena hemen"
 
-#: ui/main.qml:536
+#: ui/main.qml:538
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Hautatu gidoi-fitxategia"
 
-#: ui/main.qml:538
+#: ui/main.qml:540
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -406,37 +406,37 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "Gidoi-fitxategiak (.sh, .bash, .zsh, etab.) (*.*sh)"
 
-#: ui/main.qml:561
+#: ui/main.qml:563
 #, kde-format
 msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr "Hautatu inportatu beharreko antolaera:"
 
-#: ui/main.qml:580
+#: ui/main.qml:582
 #, kde-format
 msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
 msgstr "Neurrira ipinitako antolaera"
 
-#: ui/main.qml:588
+#: ui/main.qml:590
 #, kde-format
 msgctxt "@action:button"
 msgid "Select File…"
 msgstr "Hautatu fitxategia…"
 
-#: ui/main.qml:588
+#: ui/main.qml:590
 #, kde-format
 msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "Inportatu"
 
-#: ui/main.qml:590
+#: ui/main.qml:592
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
 msgstr "Hautatu lasterbide-antolaera fitxategia"
 
-#: ui/main.qml:591
+#: ui/main.qml:593
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"
