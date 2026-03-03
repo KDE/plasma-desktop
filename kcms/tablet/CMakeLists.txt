@@ -17,11 +17,8 @@ ecm_qt_declare_logging_category(kcm_tablet
         kcm_tablet
 )
 
-if (Qt6_VERSION VERSION_GREATER_EQUAL "6.8.0")
-    set(private_code_option  "PRIVATE_CODE")
-endif()
 qt6_generate_wayland_protocol_client_sources(kcm_tablet
-    ${private_code_option}
+    PRIVATE_CODE
     FILES ${WaylandProtocols_DATADIR}/stable/tablet/tablet-v2.xml
 )
 
