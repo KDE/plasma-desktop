@@ -127,8 +127,9 @@ ColumnLayout {
                 // window title
                 PlasmaComponents3.Label {
                     id: winTitle
-                    maximumLineCount: 1
                     Layout.fillWidth: true
+                    maximumLineCount: 2
+                    wrapMode: Text.Wrap
                     elide: Text.ElideRight
                     property bool somethingVisible: (thumbnailSourceItem.visible ||
                         appNameHeading.visible || subtext.visible)
@@ -143,8 +144,9 @@ ColumnLayout {
                 // subtext
                 PlasmaComponents3.Label {
                     id: subtext
-                    maximumLineCount: 2
                     Layout.fillWidth: true
+                    maximumLineCount: 2
+                    wrapMode: Text.Wrap
                     elide: Text.ElideRight
                     text: toolTipDelegate.isWin ? root.generateSubText() : ""
                     color: (headerHoverHandler.visible && headerHoverHighlight.pressed) ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
