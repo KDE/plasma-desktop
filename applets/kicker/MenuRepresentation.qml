@@ -86,7 +86,7 @@ PlasmaComponents3.ScrollView {
 
         spacing: 0
 
-        Layout.minimumWidth: sideBar.implicitWidth + sideBar.Layout.rightMargin + searchField.defaultWidth
+        Layout.minimumWidth: (sideBar.visible ? sideBar.implicitWidth + sideBar.Layout.rightMargin : 0) + searchField.defaultWidth
         LayoutMirroring.enabled: ((Plasmoid.location === PlasmaCore.Types.RightEdge)
             || (Application.layoutDirection === Qt.RightToLeft && Plasmoid.location !== PlasmaCore.Types.LeftEdge))
 
@@ -136,9 +136,7 @@ PlasmaComponents3.ScrollView {
             PlasmaComponents3.ScrollView {
                 id: sideBarScrollView
 
-                anchors.top: parent.top
-                anchors.horizontalCenter: parent.horizontalCenter
-                height: parent.height
+                anchors.fill: parent
 
                 PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
@@ -165,8 +163,13 @@ PlasmaComponents3.ScrollView {
 
                 ColumnLayout {
                     id: sideBarLayout
-                    height: Math.max(implicitHeight, parent.height)
-                    width: parent.width
+                    height: Math.max(implicitHeight, sideBarScrollView.height - anchors.topMargin - anchors.bottomMargin)
+                    anchors.top: parent.top
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    anchors.topMargin: sideBar.margins.top
+                    anchors.leftMargin: sideBar.margins.left
+                    anchors.rightMargin: sideBar.margins.right
 
                     Accessible.role: Accessible.List
                     Accessible.name: i18nc("@title:group accessible name for favorite group in sidebar", "Favorites")
@@ -176,7 +179,6 @@ PlasmaComponents3.ScrollView {
 
                     LayoutItemProxy {
                         target: sideBar.onTopPanel ? favoriteSystemActions : favoriteApps
-                        Layout.topMargin: sideBar.margins.top
                     }
                     KSvg.SvgItem {
                         id: sidebarSeparator
@@ -194,7 +196,7 @@ PlasmaComponents3.ScrollView {
                     }
                     LayoutItemProxy {
                         target: sideBar.onTopPanel ? favoriteApps : favoriteSystemActions
-                        Layout.topMargin: sideBar.margins.bottom
+                        Layout.bottomMargin: sideBar.margins.bottom
                     }
 
                     SideBarSection {
