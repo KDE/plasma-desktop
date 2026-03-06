@@ -1,0 +1,399 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY kappname "&knetattach;">
+  <!ENTITY package "kdebase"
+><!-- I think this came from kdebase... -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE"
+> 
+
+  <!-- Do not define any other entities; instead, use the entities
+       from entities/general.entities and $LANG/user.entities. -->
+]>
+
+<book id="knetattach" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>دليل مشارك الملفات ك</title>
+
+<authorgroup>
+<author
+>&Orville.Bennett; &Orville.Bennett.mail; </author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+<copyright>
+<year
+>2005</year>
+<holder
+>&Orville.Bennett;</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2015-04-10</date>
+<releaseinfo
+>بلازما 5.3</releaseinfo>
+
+<abstract>
+<para
+>مشارك الملفات ك هو معالج يسهل دمج موارد الشبكة الخاصة بك مع سطح مكتب كيدي. </para>
+</abstract>
+
+<!-- This is a set of Keywords for indexing by search engines.
+Please at least include KDE, the KDE package it is in, the name
+ of your application, and a few relevant keywords. -->
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>kdebase</keyword>
+<keyword
+>مشارك الملفات ك</keyword>
+<keyword
+>مجلدات الشبكة</keyword>
+<keyword
+>معالج مجلدات الشبكة</keyword>
+<keyword
+>معالج مجلدات الشبكة لكيدي</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- 
+in kde 4 no application any more.
+
+konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in Places
+"Add Network Folder" click opens the wizard
+-->
+
+<chapter id="introduction">
+<title
+>مقدمة</title>
+
+<para
+>يسمح معالج مشارك الملفات ك، المعروف فيما يلي باسم معالج مجلدات الشبكة، بإضافة ودمج مجلدات الشبكة المختلفة بسهولة مع سطح مكتب كيدي الخاص بك. يرجى الإبلاغ عن أي مشاكل أو طلبات ميزات عبر موقع علل كيدي. </para>
+</chapter>
+
+<chapter id="using-knetattach">
+<title
+>استخدام مشارك الملفات ك</title>
+
+<para
+>كما سترى في لقطة الشاشة أدناه، يسمح معالج مجلدات الشبكة حالياً بإضافة أربعة أنواع من مجلدات الشبكة: WebDav، و FTP، ومحركات شبكة مايكروسوفت ويندوز (Samba)، و SSH. بالإضافة إلى ذلك يمكنك اختيار اتصال حديث من صندوق القائمة. <screenshot>
+<screeninfo
+>هنا لقطة شاشة لمشارك الملفات ك</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>لقطة شاشة</phrase>
+</textobject>
+<caption>
+<para
+>النافذة الرئيسية لمعالج مجلدات الشبكة</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+
+<sect1 id="knetattach-features">
+<title
+>إضافة مجلدات الشبكة</title>
+
+<para
+>تظهر مجلدات الشبكة في موقع خاص في كنكرر ودولفين يسمى <emphasis
+>مجلد وهمي</emphasis
+>. يُوصَل إلى هذا المجلد الوهمي عن طريق كتابة <userinput
+>remote:/</userinput
+> في شريط الموقع أو عبر اختيار <guilabel
+>الشبكة</guilabel
+> من لوحة <guilabel
+>الأماكن</guilabel
+>. ستتمكن بعد ذلك من رؤية أي مجلدات أُضيفت سابقاً، كما ستتمكن من استخدام المعالج لإضافة مجلدات جديدة. <screenshot>
+<screeninfo
+>هنا لقطة شاشة لمشارك الملفات ك</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>لقطة شاشة</phrase>
+</textobject>
+<caption>
+<para
+>المجلد الوهمي مع معالج مجلدات الشبكة</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>بالحديث عن المعالجات، يهدف معالج مجلدات الشبكة إلى أن يكون سهل الاستخدام للغاية. بعد فتح المعالج، يجب عليك اختيار نوع مجلد الشبكة الذي ترغب في الوصول إليه. عند الانتقال إلى الشاشة التالية، ستحتاج فقط إلى ملء المعلومات المطلوبة. الخطوة الأخيرة هي إدخال اسم المستخدم وكلمة سر الولوج للمشاركة الشبكية التي اخترت الوصول إليها. </para>
+<para
+>فيما يلي قائمة بالمعلومات التي يحتاجها المعالج لإنشاء مجلدات الشبكة. إذا لم يكن الخيار متاحاً لمجلد معين، فلا يلزم إدخاله. لا تتطلب مجلدات Samba مثلاً إدخال <guilabel
+>منفذ</guilabel
+>. </para>
+
+<para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>الاسم:</guilabel
+></term>
+<listitem>
+<para
+>هنا تضع اسماً لاتصال الشبكة. هو محدود فقط بخيالك (أو الأبجدية). </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>المستخدم:</guilabel
+></term>
+<listitem>
+<para
+>هذا هو اسم المستخدم الذي سيُستخدم لإنشاء الاتصال. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>الخادم:</guilabel
+></term>
+<listitem>
+<para
+>هذا هو عنوان الخادم الذي تحاول إضافته. يمكن أن يكون عنوان IP أو اسم نطاق. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>المنفذ:</guilabel
+></term>
+<listitem>
+<para
+>هنا تدخل رقم المنفذ الذي ترغب في الاتصال به. عادة ما تكون القيم المبدئية كافية. <note
+> <para
+>غير متاح لمجلدات مايكروسوفت ويندوز (Samba). </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>المجلد:</guilabel
+></term>
+<listitem>
+<para
+>يجب أن يوضع مسار المجلد الذي ترغب في الاتصال به هنا. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>الترميز:</guilabel
+></term>
+<listitem>
+<para
+>استخدم العناصر الموجودة في صندوق القائمة هذا لاختيار ترميز لاتصالات FTP و SSH. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>أنشئ أيقونة لهذا المجلد البعيد</guilabel
+></term>
+<listitem>
+<para
+>إذا حُدد هذا المربع، فستُنشأ أيقونة تسمح بالوصول من خلال المجلد الوهمي remote:/. إذا لم يُحدد، سيكون الاتصال ممكناً ولكن لن يكون الوصول إليه متاحاً من remote:/. <note
+> <para
+>يتيح خيار <guilabel
+>اتصال حديث:</guilabel
+> إعادة الاتصال بآخر نقطة وصل شبكية اتصلت بها باستخدام المعالج، سواء أُنشئت أيقونة أم لا. </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>استخدم التعمية</guilabel
+></term>
+<listitem>
+<para
+>إذا حُدد، ستُفعل القدرة على إجراء اتصال آمن. <note
+> <para
+>متاح فقط لمجلدات WebDav.</para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+</sect1>
+</chapter>
+
+<chapter id="knetattach-walkthrough">
+<title
+>جولة في مشارك الملفات ك</title>
+
+
+<para
+>ستكون هذه جولة سريعة في معالج مجلدات الشبكة. لا ترمش بعينك وإلا قد تفوتك. </para>
+
+<para
+>ترى أدناه النافذة الرئيسية لمعالج مجلدات الشبكة. هنا نختار نوع المجلد الذي نريد إضافته أو الاتصال به. لأغراض هذه الجولة، سنستخدم FTP. فهو يحتوي على معظم الخيارات التي ستواجهها أثناء استخدام المعالج. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>هنا لقطة شاشة للنافذة الرئيسية لمشارك الملفات ك</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>لقطة شاشة</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>حسناً، لقد اخترنا إضافة مجلد FTP. ترى أدناه مثالاً لنوع المعلومات التي ستحتاج إلى إضافتها لخادم FTP الخاص بك. بعد ملئها نضغط على <guibutton
+>احفظ واتصل</guibutton
+> وننتظر النتيجة. نعم، إذا كان خادمك يتطلب استيثاقاً من نوع ما، فسيُطلب منك ذلك في هذه المرحلة قبل السماح لك بالاتصال. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>لقطة شاشة تظهر إضافة مجلد FTP باستخدام مشارك الملفات ك</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>لقطة شاشة</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>الآن نحن متصلون تماماً وقادرون على تصفح المشاركة التي أُضيفت حديثاً. يا للفرح! </para>
+
+<para>
+<screenshot>
+<screeninfo
+>لقطة شاشة لمجلد FTP المتصل</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>لقطة شاشة</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>للعودة إلى مجلدات الشبكة الخاصة بنا، كل ما يلزم هو كتابة <action
+>remote:/</action
+> في شريط الموقع لكنكرر أو دولفين أو اختيار <guilabel
+>الشبكة</guilabel
+> من لوحة <guilabel
+>الأماكن</guilabel
+>. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>لقطة شاشة للمجلد الوهمي remote:/ مع الاتصال المضاف</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot4.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>لقطة شاشة</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>يمكنك حتى إضافة مجلدات جديدة من نفس الموقع باستخدام رابط <guilabel
+>أضف مجلد شبكة</guilabel
+>. حسناً، هذا يوصلنا إلى نهاية جولتنا (قلت لك إنها ستكون سريعة). أتمنى لك حظاً موفقاً في مغامرات مجلدات الشبكة الخاصة بك ;-) </para>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>الحقوق والترخيص</title>
+
+<para
+>مشارك الملفات ك </para>
+<para
+>حقوق برمجية البرنامج 2004 &George.Staikos; &George.Staikos.mail; </para>
+
+<para
+>حقوق برمجية التوثيق &copy; 2005 &Orville.Bennett; &Orville.Bennett.mail; </para>
+
+<para
+>الترجمة: زايد السعيدي <email
+>zayed.alsaidi@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

@@ -1,0 +1,145 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="mouse" lang="&language;">
+<articleinfo>
+<title
+>الفأرة</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-06</date>
+<releaseinfo
+>بلازما 5.21</releaseinfo>
+
+<abstract>
+<para
+>هذا هو توثيق وحدة إعدادات النظام التي تضبط الفأرة وأجهزة التأشير الأخرى. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>إعدادات النظام</keyword>
+<keyword
+>فأرة</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>تسمح لك هذه الوحدة بضبط جهاز التأشير الخاص بك. قد يكون جهاز التأشير فأرة، أو كرة تتبع، أو لوحة لمس، أو أي قطعة عتاد أخرى تؤدي وظيفة مماثلة.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>عام</guilabel
+></term>
+<listitem>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>فأرة للأعسر</guilabel
+></term>
+<listitem
+><para
+>إذا كنت أعسر، فقد تفضل تبديل وظائف الزرين <mousebutton
+>الأيسر</mousebutton
+> و <mousebutton
+>الأيمن</mousebutton
+> في جهاز التأشير الخاص بك بتحديد هذا الخيار. إذا كان جهاز التأشير يحتوي على أكثر من زرين، فإن الأزرار التي تعمل كـ <mousebutton
+>أيسر</mousebutton
+> و <mousebutton
+>أيمين</mousebutton
+> هي فقط التي ستتأثر. على سبيل المثال، إذا كان لديك فأرة بثلاثة أزرار، فلن يتأثر الزر <mousebutton
+>الأوسط</mousebutton
+>.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>اضغط على الزرين الأيسر والأيمن للنقر الأوسط</guilabel
+></term>
+<listitem
+><para
+>حدد هذا العنصر إذا لم يكن لديك زر فأرة أوسط. يمكنك الضغط على زري الفأرة الأيسر والأيمن في نفس الوقت لمحاكاة النقرة الوسطى. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term id="peripherals-mouse-acceleration">
+<guilabel
+>سرعة المؤشر</guilabel
+></term>
+<listitem
+><para
+>يسمح لك هذا الخيار بتغيير العلاقة بين المسافة التي يتحركها مؤشر الفأرة على الشاشة والحركة النسبية للجهاز الفعلي نفسه (والذي قد يكون فأرة أو كرة تتبع أو أي جهاز تأشير آخر).</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>تسارع المؤشر</guilabel
+></term>
+<listitem
+><para
+>يضبط وضع <guilabel
+>قياسي</guilabel
+> مقدار تسارع المؤشر وفقًا لسرعة تحريكك للفأرة. إذا ضبطته على <guilabel
+>بلا</guilabel
+>، فسيظل التسارع ثابتًا بغض النظر عن السرعة. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>التمرير: اعكس اتجاه التمرير</guilabel
+></term>
+<listitem
+><para
+>عند تحديد خانة الاختيار هذه، ستعمل عجلة التمرير (إن وجدت) في الاتجاه المعاكس (فإذا كان تدوير الجزء العلوي من عجلة التمرير نحوك يؤدي سابقًا إلى التمرير لأسفل، فسيؤدي الآن إلى التمرير لأعلى). </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<note
+><para
+>في بلازما 5.13 تجد إعداد استخدام نقرات الفأرة المفردة أو المزدوجة لفتح الملفات والمجلدات في وحدة <ulink url="help:/kcontrol/workspaceoptions/index.html"
+>مساحة العمل</ulink
+>. </para
+></note>
+
+</article>

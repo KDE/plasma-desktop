@@ -1,0 +1,295 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+]>
+<article id="solid-actions" lang="&language;">
+<articleinfo>
+<title
+>إجراءات الجهاز</title>
+<authorgroup>
+<author
+><firstname
+>Ben</firstname
+><surname
+>Cooksley</surname
+></author>
+<author
+>&Anne-Marie.Mahfouf;</author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2018-12-10</date>
+<releaseinfo
+>بلازما 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>بلازما</keyword>
+<keyword
+>إعدادات النّظام</keyword>
+<keyword
+>Solid</keyword>
+<keyword
+>إجراءات</keyword>
+<keyword
+>أجهزة</keyword>
+<keyword
+>عتاد</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_solid_actions">
+<title
+>إجراءات للأجهزة الجديدة</title>
+<sect2 id="icons-intro">
+<title
+>مقدمة</title>
+
+<para
+>تتيح لك هذه الوحدة ضبط الإجراءات التي تريد ربطها عند وصل أجهزة جديدة.</para>
+<para>
+<screenshot>
+<screeninfo
+>لقطة شاشة لمدير إجراءات الجهاز</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>لقطة شاشة لمدير إجراءات الجهاز</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>سترى قائمة بكافة الإجراءات الممكنة والمتاحة عند وصل الأجهزة. يرجى ملاحظة أنها لن تتوفر إلا في ظل ظروف معينة.</para>
+
+<itemizedlist>
+<listitem
+><para
+><guibutton
+>أضف</guibutton
+> سيطلب منك هذا تزويد اسم لإجرائك الجديد، ثم سيفتح هذا الإجراء للتحرير. إذا لم تقدم كافة التفاصيل المطلوبة في ذلك الحوار، فسيُحذف إجراؤك. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>حرر</guibutton
+> سيتيح لك هذا تغيير الاسم، والأيقونة، والأمر المراد تنفيذه، والظروف التي يجب أن يطابقها الإجراء ليُعرض. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>اطرح / لا يمكن الحذف / أزل</guibutton
+> سيقوم هذا بإجراءات مختلفة، اعتماداً على ما إذا كان الإجراء متوفراً مع نظامك أو أنشأته أنت. يمكنك فقط طرح التغييرات على الإجراءات العامة للنظام، وإذا لم تكن هناك تغييرات فلا يمكن حذف هذه الإجراءات. أما الإجراءات التي أنشأها المستخدم فتُزال تماماً، بما في ذلك كافة التغييرات. </para
+></listitem>
+</itemizedlist>
+
+</sect2>
+
+<sect2 id="add-action">
+<title
+>أضف إجراءً</title>
+
+<para
+>زر <guibutton
+>أضف</guibutton
+> يجلب لك حواراً لإدخال اسم الإجراء الجديد. </para>
+<para>
+<screenshot>
+<screeninfo
+>لقطة شاشة لحوار إضافة إجراء</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="add-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>لقطة شاشة لحوار إضافة إجراء</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>يجب أن يصف اسم الإجراء الإجراءَ بشكل صحيح. بعد إدخال الاسم والنقر على <guibutton
+>موافق</guibutton
+>، سيُعرض حوار تحرير الإجراء للسماح لك بضبط خصائص الإجراء. </para>
+</sect2>
+
+<sect2 id="edit-action">
+<title
+>حرر الإجراء</title>
+
+<para
+>يتيح لك هذا الحوار تغيير إعدادات الإجراء الذي اخترته.</para>
+<para>
+<screenshot>
+<screeninfo
+>لقطة شاشة لحوار تحرير الإجراء</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="edit-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>لقطة شاشة لحوار تحرير الإجراء</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>يتضمن ذلك الأيقونة، واسم الإجراء، وأمر الإجراء والمعاملات المتنوعة. يمكنك تغيير الأيقونة بالنقر عليها.</para>
+<para
+>تُعرض المعاملات في شجرة، ويجب أن يكون العنصر العلوي صحيحاً لكي يُعرض الإجراء.</para>
+
+<sect3 id="edit-parameter">
+<title
+>حرر المعامل</title>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>نوع المعامل</guilabel
+></term>
+<listitem>
+<para
+>يتحكم هذا فيما يمكن احتواؤه بداخله، أو ما هي المطابقة التي تُجرى للتحقق مما إذا كان صحيحاً. <variablelist>
+<varlistentry
+><term
+><guilabel
+>مطابقة الخاصية</guilabel
+></term>
+<listitem>
+<para
+>يقارن الخاصية المحددة للجهاز (باستخدام <guilabel
+>نوع الجهاز</guilabel
+> و <guilabel
+>اسم القيمة</guilabel
+>) وباستخدام المقيم، يقارنها بالنص المقدم.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>عطف المحتوى</guilabel
+></term>
+<listitem>
+<para
+>يجب أن تكون كافة الخصائص الفرعية لهذا صحيحة ليكون هو نفسه صحيحاً.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>فصل المحتوى</guilabel
+></term>
+<listitem>
+<para
+>يمكن أن تكون أي خاصية فرعية لهذا صحيحة ليكون هو نفسه صحيحاً.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>مطابقة واجهة الجهاز</guilabel
+></term>
+<listitem>
+<para
+>يتحقق لمعرفة ما إذا كان يمكن تصنيف الجهاز كنوع الجهاز المحدد.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>نوع الجهاز</guilabel
+></term>
+<listitem>
+<para
+>هذه هي أنواع الأجهزة الممكنة والمدعومة من بلازما على نظامك. تُستخدم في كل من مطابقة الخاصية ومطابقة واجهة الجهاز. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>اسم القيمة</guilabel
+></term>
+<listitem>
+<para
+>هذه قائمة بكافة أسماء الخصائص الممكنة لنوع الجهاز المحدد. ويوفر أيضاً اختيار مقيم القيمة (والذي يكون إما <guilabel
+>يساوي</guilabel
+> أو <guilabel
+>يحتوي</guilabel
+>)، ويسمح بإدخال النص المراد المقارنة به.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>صفر المعامل</guibutton
+></term>
+<listitem>
+<para
+>يعيد أي تغييرات غير محفوظة أجريتها على هذا المعامل.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>احفظ تغييرات المعامل</guibutton
+></term>
+<listitem>
+<para
+>يحفظ التغييرات التي أجريتها على المعامل.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect3>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

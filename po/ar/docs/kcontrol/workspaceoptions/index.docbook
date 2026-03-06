@@ -1,0 +1,245 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="workspaceoptions" lang="&language;">
+<articleinfo>
+<title
+>السلوك العام</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2023-01-30</date>
+
+<releaseinfo
+>بلازما 5.27</releaseinfo>
+
+<keywordset>
+<keyword
+>إعدادات النظام</keyword>
+<keyword
+>سطح المكتب</keyword>
+<keyword
+>مساحة العمل</keyword>
+</keywordset>
+
+</articleinfo>
+
+<para
+>هذه وحدة لضبط سلوك مساحة العمل العام. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>اسمح لبلازما بإظهار تلميحات اللوحة والعناصر الواجهة</guilabel
+></term>
+<listitem>
+<para
+>إذا حدد هذا الخيار، ستعرض تلميحات عند الحوم فوق العناصر في لوحة بلازما أو على سطح المكتب.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>اسمح لبلازما بإظهار منبثقات OSD لتغيرات الحالة</guilabel
+></term>
+<listitem>
+<para
+>إذا حدد هذا الخيار، سيسمح لكل عناصر واجهة بلازما بإظهار منبثقات العرض على الشاشة (OSD) للتغييرات مثل مستوى الصوت ومستوى السطوع، أو تبديل أجهزة الصوت.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>سرعة التحريك</guilabel
+></term>
+<listitem>
+    <para
+>يتيح لك ضبط سرعة تحريكات تأثيرات سطح المكتب من <guilabel
+>بطيء</guilabel
+> إلى <guilabel
+>فوري</guilabel
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>نقر الملفات أو المجلدات</guimenu
+><guimenuitem
+>يفتحها</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>إذا حدد هذا الخيار، فستفتح الملفات والمجلدات بنقرة واحدة بزر الفأرة <mousebutton
+>الأيسر</mousebutton
+>. لتحديد الملفات والمجلدات، يمكنك النقر بالزر <mousebutton
+>الأيسر</mousebutton
+> على علامات التحديد الخاصة بها، أو سحب مستطيل تحديد حولها، أو النقر باستخدام <keycombo action="simul"
+>&Ctrl;<mousebutton
+>الأيسر</mousebutton
+></keycombo
+>. هذا هو السلوك المبدئي، وهو مصمم ليكون متوافقا مع ما تتوقعه عند نقر الروابط في متصفحات الويب.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>نقر الملفات أو المجلدات</guimenu
+><guimenuitem
+>يحددها</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>إذا حدد هذا الخيار، فيجب نقر الملفات والمجلدات نقرا مزدوجا لفتحها، بينما ستحددها النقرة الواحدة. هذا هو السلوك الذي قد تعرفه من أسطح مكتب أو أنظمة تشغيل أخرى.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>النقر في مسار شريط التمرير</guimenu
+><guimenuitem
+>يمرر صفحة واحدة للأعلى وللأسفل</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>هذا هو الإعداد المبدئي. النقر بالأيسر في مسار شريط التمرير يحرك شريط التمرير بمقدار صفحة واحدة.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>النقر في مسار شريط التمرير</guimenu
+><guimenuitem
+>يمرر إلى الموقع المنقور</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>يفعل السلوك الذي يقفز فيه مقبض التمرير مباشرة إلى الموضع الذي نقرت عليه في المستند. هذا هو السلوك الذي قد تعرفه من أسطح مكتب أو أنظمة تشغيل أخرى.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>النقر بالأوسط</guimenu
+><guimenuitem
+>يلصق النص المحدد</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>إذا حدد هذا الخيار، فإن النقر بالأوسط في حقل نصي سيلصق من الحافظة، تماما كما تفعل باستخدام <keycombo action="simul"
+>&Ctrl;<keysym
+>V</keysym
+></keycombo
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>وضع اللمس</guimenuitem
+></term>
+<listitem>
+<para
+>في وضع اللمس، ستصبح العديد من عناصر واجهة المستخدم أكبر لتلائم تفاعل اللمس بسهولة أكبر.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>وضع اللمس</guimenu
+><guimenuitem
+>يُفعل آليا عند الحاجة</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>إذا حدد هذا الخيار، فسيُنشط وضع اللمس آليا كلما اكتشف النظام شاشة لمس دون فأرة أو لوحة لمس. على سبيل المثال: عند طي لوحة مفاتيح حاسوب محمول متحول أو فصلها.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>وضع اللمس</guimenu
+><guimenuitem
+>مفعل دائما</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>إذا حدد هذا الخيار، فسيكون وضع اللمس مفعلا دائما. استخدم هذا الخيار إذا كنت تستخدم بلازما بشكل أساسي مع شاشة لمس، أو تفضل أهداف نقر أكبر لأسباب أخرى.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>وضع اللمس</guimenu
+><guimenuitem
+>غير مفعل أبدا</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>إذا حدد هذا الخيار، فسيكون وضع اللمس معطلا دائما. استخدم هذا الخيار إذا كنت لا تحتاج إلى وضع اللمس على جهازك.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

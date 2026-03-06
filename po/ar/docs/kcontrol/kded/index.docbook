@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kded" lang="&language;">
+<articleinfo>
+
+<title
+>خدمات الخلفيّة</title>
+<authorgroup>
+<author
+><personname
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+></personname
+> <email
+>lueck@hube-lueck.de</email
+> </author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2015-04-08</date>
+<releaseinfo
+>بلازما 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>إعدادات النظام</keyword>
+<keyword
+>الخدمة</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>تسمح لك وحدة <guilabel
+>مدير الخدمات</guilabel
+> بالحصول على نظرة عامة على كل ملحقات عفريت كيدي، والتي يشار إليها أيضًا باسم خدمات كيدي. بشكل عام، هناك نوعان من الخدمات:</para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>خدمات التحميل عند الطلب</guilabel
+></term>
+<listitem
+><para
+>هذه قائمة بخدمات كيدي المتاحة التي ستُبدأ عند الطلب. تُسرد هنا للتسهيل فقط، حيث لا يمكنك التحكم في هذه الخدمات. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>خدمات بدء التشغيل</guilabel
+></term>
+<listitem
+><para
+>يعرض هذا كل خدمات كيدي التي يمكن تحميلها عند بدء تشغيل كيدي. الخدمات المحددة في عمود <guilabel
+>استخدم</guilabel
+> ستُستدعى في بدء التشغيل القادم.</para>
+<para
+>كن حذرًا عند تعطيل خدمات مجهولة: بعض الخدمات حيوية لكيدي؛ لا تعطّل الخدمات إذا كنت لا تعرف ما تفعله. </para>
+<para
+>لتغيير <guilabel
+>حالة</guilabel
+> الخدمة، حددها في القائمة. ثم يمكنك استخدام الأزرار <guibutton
+>ابدأ</guibutton
+> و <guibutton
+>أوقف</guibutton
+> لتغيير حالة الخدمة من <guilabel
+>لا تعمل</guilabel
+> إلى <guilabel
+>تعمل</guilabel
+> والعكس بالعكس. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>
