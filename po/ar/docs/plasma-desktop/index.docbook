@@ -1,0 +1,1039 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&plasma;">
+  <!ENTITY package "kde-module">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+]>
+<book id="plasma-desktop" lang="&language;">
+
+<bookinfo>
+<title
+>دليل بلازما</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Sebastian</firstname
+> <surname
+>Kügler</surname
+> </personname
+> <email
+>sebas@kde.org</email
+> </author>
+<author
+><firstname
+>Claus</firstname
+> <surname
+>Christensen</surname
+></author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2008&ndash;2010</year>
+<holder
+>سيباستيان كوغلر</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2021-07-23</date>
+<releaseinfo
+>بلازما 5.20</releaseinfo>
+
+<abstract>
+<para
+>بلازما هي واجهة المستخدم الأساسية لسطح المكتب. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>بلازما</keyword>
+<keyword
+>بلازمويد</keyword>
+<keyword
+>وِدجَة</keyword>
+<keyword
+>الحاويات</keyword>
+<keyword
+>سطح المكتب</keyword>
+<keyword
+>مشغّل</keyword>
+<keyword
+>كيكر</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>مقدمة</title>
+
+<para
+>توفر بلازما بيئة حديثة وقابلة للتخصيص لتشغيل تطبيقاتك المفضلة والوصول إلى معلوماتك أينما كانت. تشتمل السمات الشائعة الأخرى لسطح مكتب بلازما على إدارة متقدمة للنوافذ وتأثيرات سطح المكتب، ودعم ودجات كيدي بلازما، والبحث المتكامل، وإدارة العتاد، ودرجة عالية من قابلية التخصيص. </para>
+
+</chapter>
+
+<chapter id="using-kapp">
+<title
+>استخدام بلازما</title>
+
+<sect1 id="plasma-components">
+<title
+>مكونات بلازما</title>
+
+<sect2 id="plasmoids-and-containments">
+<title
+>ودجات وحاويات بلازما</title>
+
+<para
+>جوهر بلازما يدور حول مفهومين أساسيين: </para>
+
+<variablelist>
+<varlistentry>
+<term
+>ودجات بلازما</term>
+<listitem>
+<para
+>البريمجات، أو التطبيقات الصغيرة التي تعيش على سطح المكتب. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+>الحاويات</term
+><!--FIXME remove it, just a technical term with no meaning for joe user?-->
+<listitem>
+<para
+>البريمجات التي تعمل كحاوية لودجات بلازما </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>في سطح المكتب المبدئي، يوجد عنصران رئيسيان: اللوحة وسطح المكتب نفسه. كلاهما حاويتان بمفهوم بلازما. </para>
+
+</sect2>
+
+<sect2 id="default-plasma-desktop">
+<title
+>سطح مكتب بلازما المبدئي</title>
+
+<para
+><note
+><para
+>يمكن ضبط سطح مكتب بلازما بطرق لا حصر لها. تظهر لقطة الشاشة أدناه سطح مكتب قياسيًا إلى حد ما. تطبق بعض التوزيعات تخصيصات واسعة، لذا قد يبدو سطح مكتبك مختلفًا. </para>
+<para
+>وبالمثل، يمكن تزيين المظهر الرسومي لعناصر الواجهة. تستخدم لقطات الشاشة هذه نمط بلازما المبدئي، ”نسيم“.</para
+></note>
+</para>
+<para>
+<screenshot>
+<screeninfo
+>سطح مكتب بلازما قياسي إلى حد ما</screeninfo>
+  <mediaobjectco>
+    <imageobjectco>
+      <areaspec units="other" otherunits="imagemap">
+        <area id="im1" linkends="panel-launcher" coords="0,519,31,551"/> <!-- #1 kickoff launcher #-->
+        <area id="im2" linkends="panel-launcher" coords="0,735,30,598"/><!-- #1 kickoff launcher icon -->
+        <!--area linkends="FIXME" coords="37,483,69,516"/--><!-- #2 panel icons # -->
+        <!--area linkends="FIXME" coords="23,558,83,597"/--><!-- #2 panel icons red box -->
+        <!--area linkends="FIXME" coords="97,666,137,707"/--><!-- #3 pager # -->
+        <!--area linkends="FIXME" coords="76,519,107,551"/--><!-- #3 pager plasmoid -->
+        <area id="im3" linkends="panel-taskbar" coords="288,519,320,551"/><!-- #4 task manager # -->
+        <area id="im4" linkends="panel-taskbar" coords="102,558,615,598"/><!-- #4 task manager red box -->
+        <area id="im5" linkends="panel-system-tray" coords="652,519,683,551"/><!-- #5 system tray # -->
+        <area id="im6" linkends="panel-system-tray" coords="618,557,728,598"/><!-- #5 system tray red box -->
+        <area id="im7" linkends="panel-digital-clock" coords="739,534,772,566"/><!-- #6 clock # -->
+        <area id="im8" linkends="panel-digital-clock" coords="729,573,781,598"/><!-- #6 clock plasmoid -->
+        <area id="im9" linkends="panel-toolbox" coords="750,477,782,508"/><!-- #7 panel cashew # -->
+        <area id="im10" linkends="panel-toolbox" coords="783,573,800,598"/><!-- #7 panel cashew icon --> 
+        <!--area linkends="FIXME" coords="733,11,765,44"/--><!-- #8 desktop cashew # -->
+        <!--area linkends="FIXME" coords="772,0,800,25"/--><!-- #8 desktop cashew icon -->
+        <!--area linkends="FIXME" coords="374,88,406,119"/--><!-- #9 folder view # -->
+        <!--area linkends="FIXME" coords="10,18,361,204"/--><!-- #9 folder view plasmoid -->
+       <area id = "im11" linkends="panel-launcher" coords="0,665,40,707"/> <!-- #1 kickoff launcher #-->
+      </areaspec>
+    <imageobject>
+      <imagedata fileref="plasma-desktop-annotated.png" format="PNG"/>
+    </imageobject>
+    </imageobjectco>
+  </mediaobjectco>
+</screenshot>
+</para>
+<orderedlist>
+<listitem
+><para
+>بادئ البرامج. عادة ما يكون هذا <link linkend="panel-launcher"
+>مطلق التطبيقات</link
+>.</para
+></listitem>
+<listitem
+><para
+>زوج من الأيقونات يمنحان وصولاً سهلاً إلى التطبيقات المستخدمة بكثرة</para
+></listitem>
+<!--listitem
+><para
+>The Pager widget</para
+></listitem-->
+<listitem
+><para
+> <link linkend="panel-taskbar"
+>مدير المهام</link
+>، والذي يعرض عناوين النوافذ التابعة للتطبيقات التي تعمل حاليًا. لم يفتح أي تطبيق نافذة عند التقاط لقطة الشاشة</para
+></listitem>
+<listitem
+><para
+><link linkend="panel-system-tray"
+>صينية النظام</link
+></para
+></listitem>
+<listitem
+><para
+>ودجة <link linkend="panel-digital-clock"
+>الساعة الرقمية</link
+></para
+></listitem>
+<listitem
+><para
+><link linkend="panel-toolbox"
+>صندوق أدوات اللوحة</link
+></para
+></listitem>
+<listitem
+><para
+>صندوق أدوات <link linkend="desktop"
+>سطح المكتب</link
+></para
+></listitem>
+<listitem
+><para
+>ودجة عرض المجلدات، تعرض محتوى مجلد سطح المكتب</para
+></listitem>
+</orderedlist>
+
+</sect2>
+</sect1>
+
+<sect1 id="panel">
+<title
+>اللوحة</title>
+
+<para
+>تحتوي اللوحة المبدئية على بعض ودجات بلازما: بدءًا من اليسار، يوجد مطلق التطبيقات.</para>
+
+<sect2 id="panel-launcher">
+<title
+>مطلق التطبيقات</title>
+
+<screenshot>
+<screeninfo
+>مطلق التطبيقات</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>مطلق التطبيقات</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+<para
+>يمكنك استخدامه لبدء تشغيل التطبيقات، وفتح الملفات التي فُتحت مؤخرًا وخيارات تسجيل الخروج/إيقاف التشغيل المعتادة. يوجد أيضًا هيكل يسمح لك بتصفح تطبيقاتك. حُسّن التخطيط لحالة الاستخدام الأكثر شيوعًا: بدء تشغيل تطبيق. علامة التبويب المبدئية هي علامة تبويب <guilabel
+>المفضلة</guilabel
+> التي تحتوي على المدخلات الأكثر استخدامًا. في البداية، ستجد نفسك ربما تستخدم علامة تبويب <guilabel
+>التطبيقات</guilabel
+> بشكل متكرر. بمجرد اكتشاف التطبيقات التي تشغلها بشكل متكرر، انقر بـ <mousebutton
+>اليمين</mousebutton
+> على العناصر وحدد <guimenuitem
+>أضف إلى المفضلة</guimenuitem
+> لإضافتها إلى <guilabel
+>المفضلة</guilabel
+> (أو مباشرة إلى اللوحة أو على سطح المكتب. لاحظ أنك بحاجة إلى ”إلغاء قفل“ بلازما عن طريق النقر بـ <mousebutton
+>اليمين</mousebutton
+> على سطح المكتب لإجراء أي نوع من التعديلات).</para>
+</sect2>
+
+<sect2 id="panel-menu">
+<title
+>قائمة التطبيقات</title>
+
+<para
+>إذا كنت تفضل مطلق التطبيقات بنمط القائمة التقليدي، فقم بتغييره بالنقر بـ <mousebutton
+>اليمين</mousebutton
+> على زر القائمة واختيار <guimenuitem
+>البدائل</guimenuitem
+>. </para>
+<screenshot>
+<screeninfo
+>قائمة التطبيقات</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-menu.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>قائمة التطبيقات</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-launcher-settings">
+<title
+>إعدادات مطلق التطبيقات</title>
+
+<para
+>إذا كنت ترغب في ضبط مطلق التطبيقات، فقم بتغييره بالنقر بـ <mousebutton
+>اليمين</mousebutton
+> على زر القائمة واختيار <guimenuitem
+>اضبط مطلق التطبيقات</guimenuitem
+>. </para>
+<screenshot>
+<screeninfo
+>إعدادات مطلق التطبيقات</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>إعدادات مطلق التطبيقات</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-taskbar">
+<title
+>شريط المهام</title>
+
+<para
+>شريط المهام هو ودجة أخرى على اللوحة. يعرض منطقة لجميع النوافذ المفتوحة في جميع أسطح المكتب بشكل مبدئي. يمكنك جعله يعرض جميع النوافذ المفتوحة على سطح المكتب الحالي فقط عن طريق تحديد <guimenuitem
+>أظهر فقط مهام سطح المكتب الحالي</guimenuitem
+> عند النقر بـ اليمين على مدير المهام، بين نافذتين. يمكن تعيين حجم النص في عناصر شريط المهام في ”إعدادات النظام“ ضمن <menuchoice
+><guimenu
+>المظهر</guimenu
+><guisubmenu
+>الخطوط</guisubmenu
+> </menuchoice
+>. يؤدي النقر بـ اليمين على شريط المهام إلى ظهور حوار الإعدادات حيث يمكنك اختيار خيارات عدة لتخصيص شريط المهام الخاص بك. <screenshot>
+<screeninfo
+>هنا لقطة شاشة لحوار إعدادات شريط المهام</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="taskbar-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>حوار إعدادات شريط المهام</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</sect2>
+
+<sect2 id="panel-system-tray">
+<title
+>صينية النظام</title>
+
+<para
+>عنصر آخر في اللوحة المبدئية هو <application
+>صينية النظام</application
+>، والتي تستخدمها التطبيقات والودجات التقليدية كرصيف. يتيح لك النقر بـ اليمين على <application
+>صينية النظام</application
+> فتح حوار الإعدادات، حيث يمكنك تعيين المدخلات لعرضها ومدى وضوحها. </para>
+<screenshot>
+<screeninfo
+>حوار إعدادات صينية النظام</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="system-tray-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>حوار إعدادات صينية النظام</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="device-notifier">
+<title
+>منبه الأجهزة</title>
+
+<para
+>أيقونة توجد عادةً في صينية النظام وهي <application
+>منبه الأجهزة</application
+>. صِل قرص يو-إس-بي وسيفتح حوار يسمح لك بفتح الجهاز في دولفين أو تطبيق مرتبط آخر. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>يُستخدم <application
+>منبه الأجهزة</application
+> للتعامل مع الأجهزة القابلة للتوصيل مثل ذاكرات يو-إس-بي (تسمى أيضًا محركات الأقراص المحمولة)، والكاميرات الرقمية، وأقراص يو-إس-بي الصلبة الخارجية، وما إلى ذلك. ويبرز دوره أيضًا عند تحميل وسيط مثل قرص مضغوط أو قرص فيديو رقمي في محرك أقراص ضوئي. </para>
+<para
+>عند توصيل جهاز خارجي، أو تحميل وسيط جديد في محرك أقراص، تظهر نافذة <guilabel
+>المنبه</guilabel
+> (يمكنك أيضًا فتحها صراحةً بالنقر فوق أيقونة اللوحة الخاصة بها). تظل مفتوحة بينما يكون المؤشر فوقها، وإلا فإنها تخفي نفسها بعد ثوانٍ قليلة. </para>
+<para
+>تعرض نافذة <guilabel
+>المنبه</guilabel
+> قائمة بجميع الأجهزة التي يعرفها حاليًا. سيؤدي تحريك مؤشر الفأرة فوق جهاز ما إلى إبراز عدد الإجراءات الممكنة المرتبطة بهذا الجهاز. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget_actions.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>يؤدي النقر فوق أي مكان في المربع المظلل حول اسم الجهاز (وليس على أيقونة الإخراج/الفصل إذا كانت موجودة) إلى توسيع المدخل لعرض قائمة الإجراءات الممكنة لذلك الجهاز. تعتمد مجموعة الإجراءات على الجهاز؛ ويمكن ضبطها من قائمة السياق لـ <application
+>منبه الأجهزة</application
+> أو من وحدات ”إعدادات النظام“ <ulink url="help:/kcontrol/solid-actions/index.html"
+>إجراءات الجهاز</ulink
+> و <ulink url="help:/kcontrol/solid-device-automounter/index.html"
+>الأجهزة القابلة للفصل</ulink
+>. ما عليك سوى اختيار واحد بالفأرة أو لوحة المفاتيح لتشغيل هذا الإجراء. </para>
+<para
+>يوجد أيضًا أيقونة صغيرة على يمين كل مدخل توضح ما إذا كان هذا الجهاز متاحًا حاليًا (أو <emphasis
+>موصولاً</emphasis
+>) أم لا. فقط عندما لا يكون الجهاز موصولاً، يكون من الآمن فصله فعليًا عن الحاسوب. يؤدي النقر فوق الأيقونة إلى فصل الجهاز و/أو إخراج الوسيط إذا كان موصولاً حاليًا، وسيوصله إذا لم يكن كذلك. لاحظ أن الفصل/الإخراج قد يفشل إذا كان الجهاز لا يزال يحتوي على ملفات مفتوحة، على سبيل المثال إذا لم تنتهِ عملية نسخ ملف كبير. في معظم الحالات، يمكنك فقط الانتظار لفترة والمحاولة مرة أخرى. عندما ينجح الفصل، ستُعرض أيقونة نجاح على أيقونة <application
+>منبه الأجهزة</application
+>. </para>
+</sect2>
+
+<sect2 id="panel-hidden">
+<title
+>العناصر المخفية</title>
+
+<para
+>تحتوي <application
+>صينية النظام</application
+> عادةً على بعض المدخلات الإضافية مثل كليبر، وكميكس، وما إلى ذلك.</para>
+
+<para
+>تُخفى بعض المدخلات المبدئية في <application
+>صينية النظام</application
+> لتوفير مساحة في الشريط. لعرض هذه المدخلات، انقر فوق المثلث الأبيض الصغير <inlinemediaobject
+><imageobject
+><imagedata fileref="system-tray-up-arrow.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>، ثم استخدم زر الفأرة الأيسر لتشغيل ودجة أو زر الفأرة الأيمن لفتح حوار إعداداتها.</para>
+</sect2>
+
+<sect2 id="panel-digital-clock">
+<title
+>ساعة رقمية</title>
+
+<para
+>تحتوي ودجة بلازما في أقصى يمين اللوحة المبدئية على <application
+>الساعة الرقمية</application
+>. يمكن لهذه الساعة عرض الوقت في مناطق زمنية مختلفة بالإضافة إلى إمكانية تغيير حجمها. ستقوم الساعة بضبط حجم خطها وفقًا للمساحة الممنوحة لها من قبل الحاوية المحيطة بها (وهي اللوحة في هذه الحالة). إذا اخترت عرض التاريخ، فسيُصيّر هذا التاريخ باستخدام خيار <guimenuitem
+>خط صغير</guimenuitem
+> من حوار <guilabel
+>الخطوط</guilabel
+> في ”إعدادات النظام“. سيأخذ الوقت بقية المساحة. لذا في النهاية، ستختار بنفسك كمية المعلومات المعروضة، وما إذا كان ذلك مناسبًا. إذا كنت ترغب في عرض مزيد من المعلومات، فاجعل اللوحة أكبر أو ضع الساعة على سطح المكتب حيث يمكن أن تنمو بحرية. </para>
+</sect2>
+
+<sect2 id="panel-pager">
+<title
+>المنادي</title>
+
+<para
+>عنصر اختياري في لوحتك وهو <application
+>المنادي</application
+>. يتيح لك التنقل بين أسطح المكتب الافتراضية الخاصة بك. إذا قمت بتغيير تخطيط <application
+>المنادي</application
+> من خلال خيار <guimenuitem
+>عدد الصفوف</guimenuitem
+>، فسيؤثر ذلك أيضًا على التخطيط والتحريكات التي تظهر في تأثير <guimenuitem
+>شبكة سطح المكتب</guimenuitem
+> في كوين. بالنسبة للمنادي الأكبر حجمًا، فإن اختيار <guimenuitem
+>أظهر أيقونات النوافذ</guimenuitem
+> يكون منطقيًا عادةً. </para>
+</sect2>
+<!-- other items in a kde compiled from sources -->
+<!-- Activity Manager -->
+<!-- Notifications -->
+<!-- Show the Desktop -->
+
+</sect1>
+
+<sect1 id="panel-toolbox">
+<title
+>صندوق أدوات اللوحة</title>
+
+<para
+>إذا كان سطح مكتبك غير مقفل (يمكنك القيام بذلك عن طريق النقر بـ <mousebutton
+>اليمين</mousebutton
+> على سطح المكتب، أو عندما لا يكون هناك تطبيق في التركيز، باستخدام <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+>)، فسيظهر شعار بلازما صغير في الزاوية اليمنى السفلية في اللوحة. انقر فوق صندوق الأدوات هذا، وسيفتح متحكم اللوحة.</para>
+
+<screenshot>
+<screeninfo
+>إعدادات اللوحة</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="panel-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>إعدادات اللوحة</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>يتيح لك متحكم اللوحة إعادة تمييز اللوحة وتغيير حجمها وإعادة محاذاتها. ستقوم ودجات بلازما الموجودة في هذه اللوحة بضبط حجمها آليًا. تمتلك ودجات بلازما معرفة أساسية حول التحجيم، توفرها الحاوية. وهي مبرمجة للاستفادة من هذا الحجم، وإبلاغ البريمج بمقدار المساحة التي قد يحتاجها. في النهاية، تمنح الحاوية حجمًا ممكنًا للبريمجات، وتلتزم البريمجات بذلك.</para>
+
+</sect1>
+
+<sect1 id="add-applets">
+<title
+>إضافة البريمجات</title>
+
+<para
+>ألغِ قفل سطح المكتب وستتمكن من إضافة وإزالة ودجات بلازما من اللوحة أو سطح المكتب. يمكنك إضافة ودجات بلازما ببساطة عن طريق سحبها إلى المكان الذي تريده. انقر بـ <mousebutton
+>اليمين</mousebutton
+> على ودجة لإزالتها. <screenshot
+> <screeninfo
+>أضف ودجات</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="add-widgets.png" format="PNG"/> </imageobject
+> <textobject
+> <phrase
+>أضف ودجات</phrase
+> </textobject
+> </mediaobject
+> </screenshot
+> يتيح لك زر <guibutton
+>احصل على ودجات جديدة</guibutton
+> إضافة ودجات قمت بتنزيلها مسبقًا وتنزيل ودجات بلازما جديدة. يدعم حاليًا حزم بلازماجيك الأصلية وبعض ودجات لوحة تحكم ماك أو-إس إكس. يمكن الوصول إلى الودجات التي تثبتها بهذه الطريقة تمامًا مثل الودجات العادية المثبتة مسبقًا. </para>
+</sect1>
+
+<sect1 id="desktop">
+<title
+>سطح المكتب</title>
+
+<para
+>سطح المكتب هو في الواقع حاوية أخرى. حاوية لا تضع قيودًا على حجم البريمجات. يمكن نقل البريمجات وتغيير حجمها بحرية. في سطح المكتب غير المقفل، ستعرض ودجات بلازما إطارًا عند تحريك الفأرة فوقها. يتيح لك مقبض البريمج هذا نقل اللوحة وتغيير حجمها وإعادة تمييزها وإعادة محاذاتها. كما يسمح لك بسحب ودجات بلازما على سطح المكتب. تُستخدم الأزرار الموجودة في الزاوية لتغيير الحجم والتدوير والضبط وإزالة البريمج. عند تدويرها، ستتصرف ودجة بلازما بشكل مغناطيسي تجاه الساعة 12، مما يسهل إعادتها إلى وضع معقول. بشكل مبدئي، تحتفظ معظم البريمجات بنسبة عرضها إلى ارتفاعها عند تغيير حجمها. إذا كنت ترغب في تغيير حجم بريمج بحرية، فاستمر في الضغط على مفتاح التحكم أثناء تغيير الحجم. </para>
+
+<para
+>يوفر النقر بـ اليمين على سطح المكتب أيضًا إمكانية ضبط جوانب مثل خلفية الشاشة والتخطيط المستخدم وإجراءات الفأرة. ويوفر تنزيل خلفيات جديدة من خلال ”أشياء كيدي الجديدة“. </para>
+<para
+>في صفحة <guilabel
+>تحسينات</guilabel
+> يمكنك ضبط إخفاء صندوق أدوات سطح المكتب وضبط التعامل مع الودجات. </para>
+
+<screenshot>
+<screeninfo
+>إعدادات سطح المكتب</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="desktop-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>إعدادات سطح المكتب</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>لتغيير سمة بلازما أو تنزيل سمة جديدة من خلال ”أشياء كيدي الجديدة“، افتح صفحة <menuchoice
+><guimenu
+>المظهر</guimenu
+> <guimenuitem
+>سمة سطح المكتب</guimenuitem
+></menuchoice
+> في ”إعدادات النظام“.</para>
+
+<para
+>مع التطبيقات المفتوحة، يصبح من الصعب بسرعة رؤية ودجات بلازما على سطح مكتبك. تقوم <emphasis role="bold"
+>لوحة القيادة</emphasis
+> بوضع ودجات بلازما هذه أمامك، تمامًا مثل وظيفة <guilabel
+>نظرة خاطفة على سطح المكتب</guilabel
+> التي اعتدت عليها في أسطح المكتب التقليدية. </para>
+
+</sect1>
+
+<sect1 id="folder-view">
+<title
+>عرض المجلدات</title>
+<para
+>تُستخدم ودجة <guilabel
+>عرض المجلدات</guilabel
+> لعرض مدخلات مثل المجلدات أو الملفات من مجلد ما، بشكل مبدئي من <filename class="directory"
+>$<envar
+>HOME</envar
+>/Desktop</filename
+>. </para>
+<para
+>يمكنك اختيار عرض جميع الملفات، أو الترشيح إما عن طريق تعبيرات نمطية محددة (على سبيل المثال، جميع الملفات ذات امتداد معين) أو عن طريق نوع الملف (على سبيل المثال، الصور فقط). </para>
+<para
+>تدعم هذه الودجة أيضًا خصائص إدارة الملفات الأساسية (النقل والنسخ والقص واللصق على سبيل المثال)، ويمكنك وضع العدد الذي تريده منها على سطح مكتبك. </para>
+
+<screenshot>
+<screeninfo
+>عرض المجلدات</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="folder-view.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>عرض المجلدات</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>إذا اخترت التخطيط <guilabel
+>عرض المجلدات</guilabel
+> في <guilabel
+>إعدادات سطح المكتب</guilabel
+> يمكنك استخدام عرض مجلد واحد كسطح مكتب كامل، مما يكرر فعليًا نموذج سطح المكتب ”القديم“. </para>
+</sect1>
+
+<sect1 id="krunner">
+<title
+>"مشغلك"</title>
+<para
+>مشغل كيدي هو سطر أوامر صغير متعدد الاستخدامات. يمكنك استخدامه لبدء تشغيل التطبيقات، وفتح صفحات الويب، والوصول إلى العلامات، والبحث في بيانات سطح المكتب، وحساب المعادلات القصيرة، وغير ذلك الكثير. يؤدي الضغط على <keycombo action="simul"
+>&Alt;&Space;</keycombo
+> أو <keycombo action="simul"
+>&Alt;<keysym
+>F2</keysym
+></keycombo
+> إلى فتح حوار مشغل كيدي. ابدأ الكتابة وسيبدأ مشغل كيدي في البحث عن التطابقات بمجرد إدخال أكثر من حرفين. يمكنك فتح حوار الإعدادات للتعرف على وظائف مشغل كيدي، التي توفرها الملحقات. يمكنك التنقل عبر التطابقات باستخدام مفاتيح الجدولة والأسهم. </para>
+<!-- without tab no arrow keys-->
+<screenshot>
+<screeninfo
+>حوار مشغل كيدي</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>حوار مشغل كيدي</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>استخدم زر <inlinemediaobject
+><imageobject
+><imagedata fileref="krunner-configure.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> لفتح وحدة ”إعدادات النظام“ لـ <guilabel
+>مشغل كيدي</guilabel
+> وضبط أين وعما سيبحث مشغل كيدي. </para>
+
+<para
+>يدعم مشغل كيدي ”إجراءات سطح المكتب“ وهي إجراءات إضافية يمكن أن يقدمها التطبيق لأداء إجراءات شائعة أو الانتقال مباشرة إلى مهمة معينة من مدير المهام. الأمثلة الشائعة هي <guilabel
+>افتح نافذة تصفح خفي جديدة</guilabel
+> لفتح متصفحك مباشرة في الوضع الخاص، أو <guilabel
+>أنشئ بريدًا إلكترونيًا</guilabel
+> دون تشغيل عميل البريد الإلكتروني بالكامل أولاً أو الإجراءات التي يوفرها لاقط الشاشة: </para>
+
+<screenshot>
+<screeninfo
+>إجراءات سطح مكتب مشغل كيدي</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner-desktop-actions.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>إجراءات سطح مكتب مشغل كيدي</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>إذا ضغطت على مفتاح الأسفل في مشغل كيدي فارغ، فسيُعرض سجل للمدخلات الحديثة. بعد استدعاء نتيجة بحث، سينتقل استعلامها إلى الأعلى، لذا فإن الأوامر المستخدمة بشكل متكرر لا تسقط أبدًا من القائمة. </para>
+<para
+>أزِل مدخلات مفردة من القائمة باستخدام زر <inlinemediaobject
+><imageobject
+><imagedata fileref="remove.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> أو امسح السجل بالكامل في إعدادات مشغل كيدي. </para>
+
+<para
+>إذا كنت ترغب في معرفة ما يحدث في نظامك، فإن الضغط على <keycombo action="simul"
+>&Ctrl;&Esc;</keycombo
+> يمنحك وصولاً سريعًا إلى قائمة بالنوافذ والعمليات، مع خيارات لمراقبة مخرجاتها وإنهاء العمليات. </para>
+</sect1>
+
+<sect1 id="activities-interface">
+<title
+>الأنشطة</title>
+
+<para
+>صندوق أدوات سطح المكتب، الذي يُوصَل إليه عبر الزاوية اليسرى العليا يحتوي على زر لعرض أنشطتك، والتي تتيح لك بلازما امتلاك أكثر من واحد منها. أساسًا، هذه حاويات سطح مكتب متعددة تستضيف مجموعات متعددة من ودجات بلازما. اعرض شريط ”الأنشطة“، واختر أحد الأنشطة المحددة مسبقًا أو اختر <guilabel
+>أنشئ نشاطًا</guilabel
+> لإنشاء حاوية جديدة، واختر حاويتك الجديدة وخصصها حسب ذوقك. أنشطة بلازما وشبكة سطح مكتب كوين متشابهان في هذا الصدد، ولكن هناك فرق جوهري. بينما تُستخدم أسطح المكتب الافتراضية لتجميع النوافذ وتنظيمها، تُستخدم أنشطة بلازما لتجميع ودجات بلازما وتنظيمها. بهذه الطريقة، يمكنك التبديل بين الأنشطة وامتلاك ودجات بلازما ذات صلة تدعم المهمة التي تحاول إنجازها حاليًا. يمكنك إنشاء نشاط ”وقت الفراغ“، مع الرسوم الهزلية ولغز وودجات بلازما أخرى، ونشاط ”عمل“، مع خلاصات الأخبار والآلة الحاسبة والتقويم، على سبيل المثال. </para>
+
+<para
+>لحذف نشاط ما، اضغط على زر <guibutton
+>أوقف النشاط</guibutton
+> في شريط ”الأنشطة“ (اضغط <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+> ثم <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+> لفتح هذا الشريط) ثم انقر فوق علامة 'X' الحمراء (أو اضغط <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+> ثم <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+>) وأكد الحذف. </para>
+
+</sect1>
+
+<sect1 id="shortcuts">
+<title
+>الاختصارات</title>
+
+<para
+>يمكن الوصول إلى معظم وظائف بلازما أيضًا من خلال اختصارات لوحة المفاتيح. يجب الضغط على التشكيلات المختلفة بالتسلسل، على سبيل المثال <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+> تعني: اضغط &Alt; و <keycap
+>D</keycap
+>، ثم حررهما واضغط <keycap
+>A</keycap
+>. </para>
+<para
+>حاليًا، يمكن استخدام الاختصارات المبدئية التالية: </para>
+
+<variablelist>
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+></term>
+<listitem
+><para
+>أضف ودجات</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>R</keycap
+></term>
+<listitem
+><para
+>أزِل ودجة</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+></term>
+<listitem
+><para
+>اقفل/ألغِ قفل الودجات</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;<keycap
+>=</keycap
+></keycombo
+></term>
+<listitem
+><para
+>بعّد</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;<keycap
+>-</keycap
+></keycombo
+></term>
+<listitem
+><para
+>قرّب</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>N</keycap
+></term>
+<listitem
+><para
+>الودجة التالية</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>P</keycap
+></term>
+<listitem
+><para
+>الودجة السابقة</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>S</keycap
+></term>
+<listitem
+><para
+>إعدادات الودجة</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+></term>
+<listitem
+><para
+>الأنشطة</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+></term>
+<listitem
+><para
+>أزِل هذا النشاط</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>S</keycap
+></keycombo
+></term>
+<listitem
+><para
+>إعدادات سطح المكتب</para
+></listitem
+> <!--FIXME also Panel Settings?-->
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Tab;</keycombo
+></term>
+<listitem
+><para
+>النشاط التالي</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Shift;&Tab;</keycombo
+></term>
+<listitem
+><para
+>النّشاط السابق</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Ctrl;<keycap
+>F12</keycap
+></keycombo
+></term>
+<listitem
+><para
+>نظرة خاطفة على سطح المكتب</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>T</keycap
+></term>
+<listitem
+><para
+>شغّل التطبيق المرتبط</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Tab;</keycombo
+></term>
+<listitem
+><para
+>افتح لوحة الأنشطة</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>الحقوق والرخصة</title>
+
+<para
+>بلازما </para>
+<para
+>حقوق نشر البرنامج 2008 &Aaron.J.Seigo; &Aaron.J.Seigo.mail; </para>
+
+<para
+>حقوق نشر التوثيق &copy; 2008&ndash;2010 Sebastian Kügler <email
+>sebas@kde.org</email
+> </para>
+
+<para
+>الترجمة: زايد السعيدي <email
+>zayed.alsaidi@gmail.com</email
+></para
+> &underFDL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

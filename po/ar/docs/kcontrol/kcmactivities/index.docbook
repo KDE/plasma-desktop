@@ -1,0 +1,223 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmactivities" lang="&language;">
+<title
+>الأنشطة</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+><firstname
+>Yuri</firstname
+><surname
+>Chornoivan</surname
+> <email
+>yurchor@ukr.net</email
+></author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-12</date>
+<releaseinfo
+>بلازما 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>إعدادات النظام</keyword>
+<keyword
+>نشاط</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="activities">
+<title
+>الأنشطة</title>
+<sect2 id="activities-intro">
+
+<title
+>مقدمة</title>
+
+<para
+>تتيح هذه الوحدة إمكانية ضبط الأنشطة. الأنشطة هي وسيلة لامتلاك إعدادات متعددة لبلازما ، حيث تمتلك كل منها مجموعة مختلفة من الأدوات والسمات. يمكن أن تكون بعض الأنشطة خاصة، وهذه الأنشطة لا تتعقب أفعالك؛ فعلى سبيل المثال، لا تتعقب المستندات الأخيرة التي فتحتها. </para>
+
+<para
+>تنقسم هذه الوحدة إلى ثلاثة ألسنة: <link linkend="activities-main"
+><guilabel
+>الأنشطة</guilabel
+></link
+>، و <link linkend="activities-switching"
+><guilabel
+>التبديل</guilabel
+></link
+>، و <link linkend="activities-privacy"
+><guilabel
+>الخصوصية</guilabel
+></link
+>. </para>
+
+<sect3 id="activities-main">
+<title
+><guilabel
+>الأنشطة</guilabel
+></title>
+
+<para
+>يسرد هذا اللسان أنشطتك الحالية. حوم فوق العناصر في القائمة بمؤشر الفأرة لإظهار أزرار ضبط الأنشطة أو إزالتها. </para>
+
+<para
+>استخدم زر التراكب <inlinemediaobject
+><imageobject
+><imagedata fileref="configure.png" format="PNG"/></imageobject
+></inlinemediaobject
+> لضبط النشاط. يمكنك تغيير معاملات النشاط التالية: </para>
+
+<variablelist>
+    <varlistentry>
+        <term
+><guilabel
+>الأيقونة</guilabel
+></term>
+        <listitem>
+            <para
+>يمكن رؤية أيقونة النشاط في منتقي مدير الأنشطة في لوحة بلازما . انقر على الأيقونة الحالية لاختيار أيقونة من أيقونات النظام أو تصفح نظام الملفات لاختيار أيقونة مخصصة. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>الاسم</guilabel
+></term>
+        <listitem>
+            <para
+>امنح نشاطك اسماً مميزاً. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>الوصف</guilabel
+></term>
+        <listitem>
+            <para
+>وصف حر للنشاط يظهر تحت الاسم في منتقي مدير الأنشطة في لوحة بلازما. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>الخصوصية</guilabel
+></term>
+        <listitem>
+            <para
+>أشر على عنصر <guilabel
+>لا تتعقب الاستخدام لهذا النشاط</guilabel
+> لإيقاف أي تعقب لنشاطك. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>اختصار التبديل</guilabel
+></term>
+        <listitem>
+            <para
+>اضغط على الزر الأول لإدخال الاختصار الجديد للتبديل إلى النشاط. اضغط على الزر الثاني لإزالة الاختصار الحالي. </para>
+        </listitem>
+    </varlistentry>
+</variablelist>
+<para
+>يؤدي النقر على زر <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> إلى إزالة النشاط. </para>
+<para
+>يفتح النقر على زر <guibutton
+>أنشئ جديداً...</guibutton
+> أسفل القائمة حوار <guilabel
+>أنشئ نشاطاً جديداً</guilabel
+> الذي يشبه حوار ضبط النشاط الموصوف أعلاه. </para>
+</sect3>
+
+<sect3 id="activities-switching">
+<title
+><guilabel
+>التبديل</guilabel
+></title>
+
+<para
+>يمكنك هنا ضبط ما إذا كان يجب على بلازما &plasma; تذكر <guilabel
+>سطح المكتب الافتراضي الحالي</guilabel
+> لكل نشاط (يتطلب إعادة تشغيل). من الممكن أيضاً ضبط اختصارات للتنقل عبر قائمة الأنشطة. </para>
+<para
+>لمزيد من المعلومات حول كيفية استخدام نظام اختصارات كيدي، راجع قسم <ulink url="help:/fundamentals/shortcuts.html"
+><emphasis
+>استخدام وتخصيص الاختصارات</emphasis
+> في توثيق <emphasis
+>أساسيات كيدي &kde;</emphasis
+></ulink
+>. </para>
+</sect3>
+
+<sect3 id="activities-privacy">
+<title
+><guilabel
+>الخصوصية</guilabel
+></title>
+
+<para
+>يتيح هذا اللسان ضبط وقت الأنشطة من أجل <guilabel
+>الاحتفاظ بالتأريخ</guilabel
+> وتنظيف بعض بيانات التعقب. استخدم زر القائمة المنسدلة <guibutton
+>امسح التأريخ</guibutton
+> لجعل بلازما &plasma; <guimenuitem
+>تنسى الساعة الأخيرة</guimenuitem
+>، أو <guimenuitem
+>تنسى الساعتين الأخيرتين</guimenuitem
+>، أو <guimenuitem
+>تنسى يوماً واحداً</guimenuitem
+>، أو <guimenuitem
+>تنسى كل شيء</guimenuitem
+>. </para>
+<para
+>أدناه، يمكنك ضبط نطاق التطبيقات لتذكر المستندات المفتوحة في أنشطتك. استخدم عنصر <guilabel
+>لكافة التطبيقات</guilabel
+> لتخزين كافة البيانات، أو عنصر <guilabel
+>لا تتذكر</guilabel
+> لإيقاف تخزين البيانات، أو عنصر <guilabel
+>فقط لتطبيقات محددة</guilabel
+> للاختيار الدقيق (يؤدي النقر على عنصر التطبيق إلى تبديل وضعه الحالي). </para>
+<para
+>أشر على عنصر <guilabel
+>أدرج التطبيقات غير الموجودة في القائمة في القائمة السوداء</guilabel
+> لإيقاف التعقب لجميع التطبيقات غير الموجودة في القائمة. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

@@ -1,0 +1,527 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmaccess" lang="&language;">
+<title
+>الإتاحة</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>بلازما 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>إعدادات النظام</keyword>
+<keyword
+>الإتاحة</keyword>
+<keyword
+>مفاتيح</keyword>
+<keyword
+>جرس</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="accessibility">
+<title
+>الإتاحة</title>
+<sect2 id="accessibility-intro">
+
+<title
+>مقدمة</title>
+
+<para
+>صُممت هذه الوحدة لمساعدة المستخدمين الذين يواجهون صعوبة في سماع التنبيهات الصوتية، أو الذين يجدون صعوبة في استخدام لوحة المفاتيح. </para>
+
+<para
+>تنقسم الوحدة إلى ستة ألسنة: <link linkend="access-bell"
+><guilabel
+>الجرس</guilabel
+></link
+>، و<link linkend="access-modifier-keys"
+><guilabel
+>مفاتيح التعديل</guilabel
+></link
+>، و<link linkend="access-keyboard-filters"
+><guilabel
+>مرشحات لوحة المفاتيح</guilabel
+></link
+>، و<link linkend="access-activation-gestures"
+><guilabel
+>إيماءات التفعيل</guilabel
+></link
+>، و<link linkend="mouse-navigation"
+><guilabel
+>التنقل بالفأرة</guilabel
+></link
+>، و<link linkend="access-screenreader"
+><guilabel
+>قارئ الشاشة</guilabel
+></link
+>. </para>
+
+<sect3 id="access-bell">
+<title
+><guilabel
+>الجرس</guilabel
+></title>
+
+<para
+>ينقسم هذا اللوح إلى قسم <guilabel
+>جرس مسموع</guilabel
+> وقسم <guilabel
+>جرس مرئي</guilabel
+>. </para>
+
+<para
+>يحدد مربع التأشير العلوي المسمى <guilabel
+>استخدم جرس النظام</guilabel
+> ما إذا كان جرس النظام العادي سيرن أم لا. إذا عُطّل هذا الخيار، سيُسكت جرس النظام. </para>
+
+<para
+>يمكن استخدام مربع التأشير التالي لتشغيل صوت مختلف كلما فُعّل جرس النظام. للتفعيل، ضع علامة في مربع التأشير المسمى <guilabel
+>استخدم جرسا مخصصا</guilabel
+>، وأدخل مسار ملف الصوت الكامل في المربع النصي المسمى <guilabel
+>الصوت المراد تشغيله</guilabel
+>. إذا أردت، يمكنك تحديد زر <guibutton
+>تصفح</guibutton
+> للتنقل عبر نظام الملفات للعثور على الملف المطلوب. </para>
+
+<para
+>للمستخدمين الذين يواجهون صعوبة في سماع جرس النظام، أو أولئك الذين يملكون حاسوبا صامتا، توفر كيدي <emphasis
+>الجرس المرئي</emphasis
+>. يقدم هذا إشارة مرئية (عكس ألوان الشاشة أو وميض لون عليها) عندما يصدر جرس النظام صوته عادة. </para>
+
+<para
+>لاستخدام الجرس المرئي، ضع أولا علامة في مربع التأشير المسمى <guilabel
+>استخدم الجرس المرئي</guilabel
+>. </para>
+
+<para
+>يمكنك بعدها الاختيار بين <guilabel
+>اعكس الشاشة</guilabel
+>، أو <guilabel
+>أومض الشاشة</guilabel
+>. إذا اخترت <guilabel
+>اعكس الشاشة</guilabel
+>، ستُعكس كل الألوان على الشاشة. وإذا اخترت <guilabel
+>أومض الشاشة</guilabel
+>، يمكنك اختيار اللون بالنقر على الزر الموجود يمين اختيار <guilabel
+>أومض الشاشة</guilabel
+>. </para>
+
+<para
+>يمكن استخدام مربع الأرقام لضبط مدة الجرس المرئي. القيمة المبدئية هي 500 ميلي ثانية، أي نصف ثانية. </para>
+
+</sect3>
+
+<sect3 id="access-modifier-keys">
+<title
+><guilabel
+>مفاتيح التعديل</guilabel
+></title>
+
+<para
+>يوجد قسمان في هذا اللوح هما <guilabel
+>المفاتيح اللاصقة</guilabel
+> و <guilabel
+>مفاتيح القفل</guilabel
+>.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>استخدم المفاتيح اللاصقة</guilabel
+></term>
+<listitem>
+<para
+>إذا فُعّل هذا الخيار، يمكنك ضغط مفاتيح &Shift; أو &Alt; أو &Ctrl; ثم إفلاتها، ثم ضغط مفتاح آخر للحصول على اختصار (مثال: <keycombo action="simul"
+>&Ctrl;&Alt;&Del;</keycombo
+> يمكن تنفيذه بضغط &Ctrl;، ثم &Alt; ثم &Del;). </para>
+
+<para
+>يوجد أيضا في هذا القسم مربع تأشير مسمى <guilabel
+>اقفل المفاتيح اللاصقة</guilabel
+>. إذا فُعّل هذا المربع، ستبقى مفاتيح &Alt; و &Ctrl; و &Shift; <quote
+>مختارة</quote
+> حتى <quote
+>تُلغي اختيارها</quote
+>. </para>
+
+<para
+>على سبيل المثال: </para>
+<variablelist>
+<varlistentry>
+<term
+>عند تعطيل <guilabel
+>اقفل المفاتيح اللاصقة</guilabel
+>:</term>
+<listitem>
+<para
+>إذا ضغطت مفتاح &Shift; ثم ضغطت مفتاح <keycap
+>F</keycap
+>، سيفسر الحاسوب هذا على أنه <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>. أما الآن فإذا كتبت <keycap
+>P</keycap
+>، سيفسره الحاسوب على أنه حرف p (بدون shift). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>عند تفعيل <guilabel
+>اقفل المفاتيح اللاصقة</guilabel
+>:</term>
+<listitem>
+<para
+>إذا ضغطت مفتاح &Shift; <emphasis
+>مرتين</emphasis
+> ثم ضغطت مفتاح <keycap
+>F</keycap
+>، سيفسر الحاسوب هذا على أنه <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>. أما الآن فإذا كتبت <keycap
+>P</keycap
+>، سيفسره الحاسوب على أنه حرف P كبير (<keycombo action="simul"
+>&Shift;<keycap
+>P</keycap
+></keycombo
+>). لإلغاء اختيار مفتاح &Shift;، اضغطه مرة أخرى. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+<!--this is missing - explain it
+<para
+><guilabel
+>Turn sticky keys off when two keys are pressed simultaneously</guilabel
+></para>
+<para
+><guilabel
+>Use system bell whenever a modifier gets latched, locked or unlocked</guilabel
+></para>
+-->
+</listitem>
+</varlistentry>
+<!-- explain use case etc
+<guilabel
+>Locking Keys</guilabel
+> what is that?
+<varlistentry>
+<term
+><guilabel
+>Use system bell whenever a locking key gets activated or deactivated</guilabel
+></term>
+<listitem
+><para
+></para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Use Plasma's system notification mechanism whenever a modifier or locking key 
+changes its state</guilabel
+></term>
+<listitem
+><para
+>Click the <guibutton
+>Configure Notifications...</guibutton
+> button to open a dialog 
+which allows you to edit the notifications for status changes of all keys</para
+></listitem>
+</varlistentry>
+-->
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-keyboard-filters">
+<title
+><guilabel
+>مرشحات لوحة المفاتيح</guilabel
+></title>
+
+<para
+>يوجد قسمان في هذا اللوح.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>استخدم المفاتيح البطيئة</guilabel
+></term>
+<listitem>
+<para
+>إذا فُعّل هذا الخيار، يجب عليك الاستمرار في ضغط المفتاح لفترة زمنية محددة (يمكن ضبطها بمربع الأرقام) قبل أن تُقبل الضغطة. يساعد هذا في منع ضغطات المفاتيح العرضية. </para>
+</listitem>
+</varlistentry>
+<!-- Acceptance delay slider 500 ms default
+Use system bell whenever a key is pressed/accepted/rejected
+-->
+<varlistentry>
+<term
+><guilabel
+>استخدم مفاتيح الارتداد</guilabel
+></term>
+<listitem>
+<para
+>إذا فُعّل هذا الخيار، يجب عليك الانتظار لفترة زمنية محددة (يمكن ضبطها بمربع الأرقام) قبل أن تُقبل الضغطة التالية للمفتاح. يمنع هذا ضغطات المفاتيح المتعددة العرضية. </para>
+</listitem>
+</varlistentry>
+<!-- Debounce time slider 500 ms default
+Use system bell whenever a key is rejected
+-->
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-activation-gestures">
+<title
+><guilabel
+>إيماءات التفعيل</guilabel
+></title>
+
+<para
+>يوجد قسمان في هذا اللوح.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>إيماءات التفعيل</guilabel
+> مع هذه الخيارات:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>استخدم الإيماءات لتفعيل المفاتيح اللاصقة والمفاتيح البطيئة</guilabel
+></member>
+<member
+>يمكنك هنا تفعيل إيماءات لوحة المفاتيح التي تشغل الميزات التالية:</member>
+<member
+>مفاتيح الفأرة: اضغط &Shift;+NumLock</member>
+<member
+>المفاتيح اللاصقة: اضغط مفتاح &Shift; 5 مرات متتالية</member>
+<member
+>المفاتيح البطيئة: استمر في ضغط &Shift; لمدة 8 ثوانٍ</member>
+<member
+><guilabel
+>عطل المفاتيح اللاصقة والمفاتيح البطيئة بعد فترة معينة من الخمول</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>الإشعار</guilabel
+> مع هذه الخيارات:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>استخدم جرس النظام كلما استخدمت إيماءة لتشغيل ميزة إتاحة أو تعطيلها</guilabel
+></member>
+
+<member
+><guilabel
+>أظهر مربع حوار تأكيد كلما شُغلت ميزة إتاحة للوحة المفاتيح أو عُطلت</guilabel
+></member>
+<member
+>إذا أُشر على هذا الخيار، ستظهر كيدي مربع حوار تأكيد كلما شُغلت ميزة إتاحة للوحة المفاتيح أو عُطلت.</member>
+<member
+>تأكد من معرفة ما تفعله إذا ألغيت التأشير عليه، حيث ستُطبق إعدادات إتاحة لوحة المفاتيح دائما حينها دون تأكيد.</member>
+
+<member
+><guilabel
+>استخدم آلية إعلام النظام في كيدي كلما شغلت أو أوقفت ميزة إتاحة لوحة المفاتيح.</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>انقر على زر <guibutton
+>اضبط الإشعارات</guibutton
+> لفتح حوار يتيح لك تحرير إشعارات تغيير حالة جميع المفاتيح.</para>
+
+</sect3>
+
+<sect3 id="mouse-navigation">
+<title
+>التنقل بالفأرة</title>
+
+<para
+>يتيح لك هذا اللسان ضبط مفاتيح لوحة الأرقام لتعمل كجهاز فأرة. قد يكون هذا مفيدا عند العمل على جهاز لا يملك جهاز تأشير آخر، أو عندما لا يكون لديك استخدام آخر للوحة الأرقام. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>حرك المؤشر بواسطة لوحة المفاتيح (باستخدام لوحة الأرقام)</guilabel
+></term>
+<listitem>
+<para
+>لتفعيل وضع فأرة لوحة المفاتيح، يجب تحديد مربع التأشير المسمى <guilabel
+>حرك المؤشر بواسطة لوحة المفاتيح (باستخدام لوحة الأرقام)</guilabel
+>. عند قيامك بذلك، ستُفعل الإعدادات الأخرى، ويمكنك تخصيص سلوك مؤشر لوحة المفاتيح أكثر إذا تطلب الأمر. </para>
+<para
+>تحرك المفاتيح المختلفة في لوحة الأرقام المؤشر في الاتجاهات المتوقعة. لاحظ أنه يمكنك التحرك قطريا بالإضافة إلى الأعلى والأسفل واليسار واليمين. يحاكي المفتاح <keycap
+>5</keycap
+> النقر بزر المؤشر، عادة زر الفأرة الأيسر. يمكنك تغيير الزر الذي تجري محاكاته باستخدام مفتاح <keycap
+>/</keycap
+> (ليصبح الزر الأيسر)، ومفتاح <keycap
+>*</keycap
+> (ليصبح الزر الأوسط) ومفتاح <keycap
+>-</keycap
+> (ليصبح الزر الأيمن). يحاكي مفتاح <keycap
+>+</keycap
+> نقرا مزدوجا لزر المؤشر المختار. يمكنك استخدام مفتاح <keycap
+>0</keycap
+> لمحاكاة الاستمرار في ضغط زر المؤشر المختار (للسحب السهل)، ثم استخدام مفتاح <keycap
+>.</keycap
+> لمحاكاة إفلات زر المؤشر المختار. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>تأخير التسارع</guilabel
+></term>
+<listitem>
+<para
+>هذا هو الوقت (بالميلي ثانية) بين ضغط المفتاح الأولي وأول حدث حركة متكرر لتسارع مفتاح الفأرة. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>فترة التكرار</guilabel
+></term>
+<listitem>
+<para
+>هذا هو الوقت بالميلي ثانية بين أحداث الحركة المتكررة لتسارع مفتاح الفأرة. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>وقت التسارع</guilabel
+></term>
+<listitem>
+<para
+>هذا هو الوقت بالميلي ثانية قبل أن يصل المؤشر إلى السرعة القصوى لتسارع مفتاح الفأرة. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>السرعة القصوى</guilabel
+></term>
+<listitem>
+<para
+>هذه هي السرعة القصوى بالبكسل في الثانية التي يمكن للمؤشر الوصول إليها لتسارع مفتاح الفأرة. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>تشكيلة التسارع</guilabel
+></term>
+<listitem>
+<para
+>هذا هو ميل منحنى التسارع لتسارع مفتاح الفأرة. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-screenreader">
+<title
+><guilabel
+>قارئ الشاشة</guilabel
+></title>
+
+<para
+>ثبّت تطبيق قارئ شاشة مثل <ulink url="https://en.wikipedia.org/wiki/Orca_(assistive_technology)"
+>Orca</ulink
+> مع <application
+>speech-dispatcher</application
+>. </para>
+
+<para
+>اختبر عمل الصوت من مرسل الكلام باستخدام الأمر <command
+>spd-say hello</command
+> في الطرفية. </para>
+
+<para
+>بالإضافة إلى ذلك تحتاج إلى مصطنع نطق مثل <application
+>espeak</application
+>. </para>
+
+<para
+>فعّل قارئ الشاشة في مربع التأشير، ثم اخرج وأعد تشغيل جلسة سطح المكتب. </para>
+
+<para
+>بالنسبة لبلازما نفسها، تأكد من استخدام <guilabel
+>قائمة التطبيقات</guilabel
+> التقليدية، وتحقق من أن هذه القائمة مرتبطة باختصار لوحة مفاتيح (<keycombo action="simul"
+>&Alt;<keycap
+>F1</keycap
+></keycombo
+>). عند ضغط هذا الاختصار، يجب أن تُفتح القائمة وتُقرأ عند التنقل فيها باستخدام مفاتيح الأسهم. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

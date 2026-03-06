@@ -1,0 +1,166 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmsmserver" lang="&language;">
+<articleinfo>
+<title
+>إدارة الجلسات</title>
+<authorgroup>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2023-01-30</date>
+<releaseinfo
+>بلازما 5.27</releaseinfo>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>جلسة</keyword>
+<keyword
+>إعدادات النّظام</keyword>
+<keyword
+>اخرج</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sessions">
+<title
+>جلسة سطح المكتب</title>
+
+<para
+>في وحدة إعدادات النظام هذه، يمكنك ضبط مدير جلسات بلازما وإعدادات الخروج.</para>
+
+<para
+>تشير إدارة الجلسات إلى قدرة بلازما على حفظ حالة التطبيقات والنوافذ عندما تخرج من بلازما واستعادتها عند الولوج مجدداً.</para>
+
+<sect2 id="sessions-logoutscreen">
+<title
+>شاشة الخروج</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>أظهر</guilabel
+></term>
+<listitem>
+<para
+>إذا شُغل هذا الإعداد، ستُعرض شاشة تأكيد الخروج عندما تخرج، أو تغلق الجهاز، أو تعيد التشغيل، أو تضغط على زر الطاقة، أو تنقر على الأزرار أو عناصر القائمة المسماة <guilabel
+>غادر…</guilabel
+>. وعند إيقاف تشغيل الإعداد، سيخرج حاسوبك أو يغلق، إلخ.. فوراً بعد النقر على الزر المعني.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+<sect2 id="sessions-restore">
+<title
+>عند الولوج، شغّل التطبيقات التي كانت مفتوحة</title>
+<para
+>يمكنك اختيار أحد الخيارات الثلاثة لما يجب أن يحدث عند الولوج إلى بلازما:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>عند آخر خروج</guilabel
+></term>
+<listitem
+><para
+>إذا أُشر على هذا الخيار، ستحفظ بلازما حالة جلستك الحالية عندما تخرج. وستستعيد بلازما جلستك في الولوج التالي، لذا يمكنك متابعة العمل مع سطح المكتب تماماً كما تركته.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>عندما تحفظ الجلسة يدوياً</guilabel
+></term>
+<listitem
+><para
+>بدلاً من استعادة بلازما إلى الحالة التي كانت عليها عند آخر خروج، ستُستعاد إلى حالة محددة حفظتها يدوياً.</para
+><para
+>سيظهر زر <guilabel
+>احفظ الجلسة</guilabel
+> في قائمة <guilabel
+>مطلق التطبيقات</guilabel
+> وبحث بلازما. عندما تنقر عليه، ستتذكر بلازما التطبيقات المفتوحة وتستعيدها في الولوج التالي. انقر عليه مجدداً لاستبدال مجموعة التطبيقات المتذكَّرة.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>ابدأ بجلسة فارغة</guilabel
+></term>
+<listitem>
+<para
+>إذا اخترت هذا الخيار، فلن تستعيد بلازما الجلسات التي حفظتها أبداً.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>أخيراً، يمكنك إدخال قائمة من التطبيقات مفصولة بنقطتين متعامدتين (<literal
+>:</literal
+>) أو بفاصلة (<literal
+>,</literal
+>) ليُستثنى من الجلسات، وبالتالي لن تُشغل عند استعادة الجلسة. على سبيل المثال <userinput
+>xterm:konsole</userinput
+> أو <userinput
+>xterm,konsole</userinput
+>.</para>
+</sect2>
+
+<sect2 id="sessions-firmware">
+<title
+>البرمجيات الثابتة</title>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>بعد إعادة التشغيل التالية: ادخل إلى شاشة إعداد UEFI</guilabel
+></term>
+<listitem
+><para
+>إذا فُعّل هذا الخيار، ففي المرة القادمة التي تعيد فيها تشغيل حاسوبك، سيدخل في وضع إعداد البرمجيات الثابتة (BIOS/UEFI). قد يكون هذا أسهل من محاولة دخول إعداد البرمجيات الثابتة عبر الضغط السريع على مفاتيح خاصة أثناء بدء التشغيل.</para
+></listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+</sect1>
+
+</article>
+

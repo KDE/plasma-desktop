@@ -1,0 +1,178 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="workspaceoptions" lang="&language;">
+<articleinfo>
+<title
+>السلوك العام</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2022-05-18</date>
+
+<releaseinfo
+>بلازما 5.25</releaseinfo>
+
+<keywordset>
+<keyword
+>إعدادات النظام</keyword>
+<keyword
+>سطح المكتب</keyword>
+<keyword
+>مساحة العمل</keyword>
+</keywordset>
+
+</articleinfo>
+
+<para
+>هذه وحدة لضبط سلوك مساحة العمل العام. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>اعرض تلميحات معلوماتية عند حوم الفأرة</guilabel
+></term>
+<listitem>
+<para
+>إذا حدد هذا الخيار، ستعرض تلميحات عند الحوم فوق العناصر في لوحة بلازما أو على سطح المكتب.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>اعرض تغذية مرئية لتغيرات الحالة</guilabel
+></term>
+<listitem>
+<para
+>إذا غيرت مثلا السطوع ومستوى الصوت باستخدام لوحة المفاتيح، فستعرض هذه التغيرات في الحالة في OSD.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>سرعة التحريك</guilabel
+></term>
+<listitem>
+    <para
+>يتيح لك ضبط سرعة تحريكات تأثيرات سطح المكتب من <guilabel
+>بطيء</guilabel
+> إلى <guilabel
+>فوري</guilabel
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>نقرة مفردة لفتح الملفات والمجلدات</guilabel
+></term>
+<listitem>
+<para
+>هذا هو الإعداد المبدئي. نقر الأيقونة مرة واحدة سيفتحها. للتحديد يمكنك السحب حول الأيقونة (الأيقونات) أو النقر بـ <keycombo action="simul"
+>&Ctrl;<mousebutton
+>الأيمن</mousebutton
+></keycombo
+>، أو ببساطة انقر واستمر في الضغط لسحبها. يمكن التحديد أيضا بنقر علامة تحديد العنصر.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>نقرة مزدوجة لفتح الملفات والمجلدات</guilabel
+></term>
+<listitem>
+<para
+>إذا لم يحدد هذا الخيار، فستفتح الأيقونات/الملفات بنقرة واحدة بزر الفأرة <mousebutton
+>الأيسر</mousebutton
+>. هذا السلوك المبدئي متوافق مع ما تتوقعه عند نقر الروابط في معظم متصفحات الويب. أما إذا حدد، فستفتح الأيقونات/الملفات بنقرة مزدوجة، بينما تكتفي النقرة الواحدة بتحديد الأيقونة أو الملف. هذا هو السلوك الذي قد تعرفه من أسطح مكتب أو أنظمة تشغيل أخرى.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>النقر في مسار شريط التمرير</guimenu
+><guimenuitem
+>يمرر صفحة واحدة للأعلى وللأسفل</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>هذا هو الإعداد المبدئي. النقر بالأيسر في مسار شريط التمرير يحرك شريط التمرير بمقدار صفحة واحدة.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>النقر في مسار شريط التمرير</guimenu
+><guimenuitem
+>يمرر إلى الموقع المنقور</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>يفعل السلوك الذي يقفز فيه مقبض التمرير مباشرة إلى الموضع الذي نقرت عليه في المستند. هذا هو السلوك الذي قد تعرفه من أسطح مكتب أو أنظمة تشغيل أخرى.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>وضع اللمس</guimenu
+><guimenuitem
+>يُفعل آليا عند الحاجة/لا يُفعل أبدا</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>سيُنشط وضع اللمس آليا كلما اكتشف النظام شاشة لمس دون فأرة أو لوحة لمس. على سبيل المثال: عند طي لوحة مفاتيح حاسوب محمول متحول أو فصلها.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>مفعل دائما (مبدئي)/غير مفعل أبدا</guimenuitem
+></term>
+<listitem>
+<para
+>في وضع اللمس، ستصبح العديد من عناصر واجهة المستخدم أكبر لتلائم تفاعل اللمس بسهولة أكبر.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="default-components">
+<articleinfo>
+
+<title
+>التطبيقات المبدئية</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck;&Burkhard.Lueck.mail;</author>
+
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2022-01-12</date>
+<releaseinfo
+>بلازما 5.24</releaseinfo>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>إعدادات النظام</keyword>
+<keyword
+>المكون</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>في هذه الوحدة، يمكنك تغيير مكونات كيدي المبدئية</para>
+
+<para
+>المكونات هي برامج تتولى المهام الأساسية، مثل متصفح الويب ومحاكي المحطة الطرفية ومدير الملفات وعميل البريد الإلكتروني والخريطة الإلكترونية والمتصل. تحتاج تطبيقات كيدي المختلفة أحيانًا إلى استدعاء محاكي وحدة التحكم وإرسال بريد إلكتروني وإدارة الملفات والمجلدات وعرض الخريطة أو الاتصال برقم على هاتفك.</para
+> 
+
+<para
+>للقيام بذلك بشكل متسق، تستدعي هذه التطبيقات دائمًا نفس المكونات. هنا يمكنك تحديد البرامج التي تتكون منها هذه المكونات.</para>
+
+<para
+>تُظهر القائمة الموجودة على اليسار أنواع المكونات القابلة للضبط:</para>
+<itemizedlist>
+<listitem>
+<para
+>متصفّح الوبّ</para>
+</listitem>
+<listitem>
+<para
+>مدير الملفات</para>
+</listitem>
+<listitem>
+<para
+>عميل البريد الإلكتروني</para>
+</listitem>
+<listitem>
+<para
+>محاكي الطرفية</para>
+</listitem>
+<listitem>
+<para
+>الخريطة</para>
+</listitem>
+<listitem>
+<para
+>تطبيق الاتصال</para>
+</listitem>
+</itemizedlist>
+
+<para
+>انقر فوق مربع التحرير والسرد الخاص بالمكون الذي تريد ضبطه. في القائمة، حدد متصفح الويب المفضل لديك، ومدير الملفات، وعميل البريد الإلكتروني، ومحاكي المحطة الطرفية، والخريطة، وبرنامج الاتصال. اختر <guimenuitem
+>أخرى…</guimenuitem
+> لفتح مربع الحوار <guilabel
+> اختر التطبيق</guilabel
+> وحدد التطبيق يدويًا.</para>
+
+</article>
