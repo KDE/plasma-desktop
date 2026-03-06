@@ -1,0 +1,212 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+]>
+
+<article id="kfontview" lang="&language;">
+
+<articleinfo>
+<title
+>عارض الخط</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2018-03-31</date>
+<releaseinfo
+>بلازما 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>عارض الخطوط</keyword>
+<keyword
+>خطوط</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>عارض الخطوط هو تطبيق لعرض وتثبيت أنواع مختلفة من الخطوط: <itemizedlist>
+<listitem
+><para
+>&TrueType; (<filename class="extension"
+>.ttf</filename
+>)</para
+></listitem>
+<listitem
+><para
+>OpenType (<filename class="extension"
+>otf</filename
+>, <filename class="extension"
+>.ttf</filename
+>)</para
+></listitem>
+<listitem
+><para
+>&PostScript; نوع 1 (امتداد الملف على ويندوز و OS/2 <filename class="extension"
+>.pfb</filename
+>/<filename class="extension"
+>.pfm</filename
+>؛ على يونكس/لينكس <filename class="extension"
+>.pfa</filename
+>/<filename class="extension"
+>.afm</filename
+>)</para
+></listitem>
+<listitem
+><para
+>BDF (تنسيق توزيع الخرائط النقطية، امتداد الملف <filename class="extension"
+>.bdf</filename
+>)</para
+></listitem
+> 
+<listitem
+><para
+>PCF (التنسيق المجمع المحمول، امتداد الملف <filename class="extension"
+>.pcf</filename
+>)</para
+></listitem>
+</itemizedlist>
+</para>
+<para
+>يمكنك استخدامه كبرنامج مستقل لمعاينة وتثبيت خط نُزل من الإنترنت. يمكنك في المعاينة التحقق من أن الخط يحتوي على كل المحارف التي تحتاجها. </para>
+<para
+>بالإضافة إلى ذلك، يمكن إطلاق عارض الخطوط من وحدة إعدادات النظام <ulink url="help:/kcontrol/fontinst/index.html"
+> <guilabel
+>إدارة الخطوط</guilabel
+></ulink
+> لاستخدام إمكانيات المعاينة الموسعة لعارض الخطوط.</para>
+
+<para
+>بدلاً من ذلك، يمكنك استخدام وحدة <guilabel
+>إدارة الخطوط</guilabel
+> لتثبيت الخطوط وإزالتها ومعاينتها وإدارتها جميعا على حاسوبك.</para>
+
+<!--FIXME still valid?
+<para
+>To use &kfontview; in &konqueror; select <guilabel
+>Services</guilabel
+> in
+the sidebar and go to the folders <filename class="directory"
+>Fonts/Personal
+</filename
+> or <filename class="directory"
+>Fonts/System</filename
+>.
+Then open the context menu with a &RMB; click on a font and start &kfontview; 
+by selecting it from the context menu.</para>
+-->
+<!-- used by others as well? -->
+
+<para>
+<screenshot>
+<screeninfo
+>تطبيق عارض الخطوط</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="kfontview.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>تطبيق عارض الخطوط</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>تعرض <guilabel
+>المعاينة القياسية</guilabel
+> فيعارض الخطوط خطك بعدة أحجام مختلفة باستخدام جملة جامعة (جملة تستخدم كل حروف الأبجدية مرة واحدة على الأقل). لذا يمكنك أخذ فكرة جيدة عما سيبدو عليه. يمكنك اختيار أنواع معاينة إضافية من المربع المنسدل في شريط الأدوات: <itemizedlist>
+<listitem
+><para
+>تعرض <guilabel
+>كل المحارف</guilabel
+> جميع المحارف التي يوفرها الخط بحجم واحد. </para
+></listitem>
+<listitem
+><para
+>كتلة يونيكود: يرتب معيار يونيكود مجموعات من المحارف معاً في كتل</para
+></listitem>
+<listitem
+><para
+>نص يونيكود: في يونيكود، النص هو مجموعة من الحروف والعلامات المكتوبة الأخرى المستخدمة لتمثيل المعلومات النصية في نظام كتابة واحد أو أكثر</para
+></listitem>
+<listitem
+><para
+><guibutton
+>غير النص</guibutton
+>: يفتح استخدام هذا الزر حوار <guilabel
+>سلسلة المعاينة</guilabel
+> حيث يمكنك إدراج نص محدد من قبل المستخدم. تمكنك هذه الميزة من التحقق من دعم الخط للمحارف التي تحتاجها. </para
+></listitem>
+</itemizedlist
+></para>
+<para
+>يمكنك استخدام أزرار التقريب أو عجلة الفأرة لتغيير حجم الخط في جميع أنواع المعاينة.</para>
+<para
+>في وضعي معاينة <guilabel
+>كتلة يونيكود</guilabel
+> و <guilabel
+>نص يونيكود</guilabel
+>، تُعرض معلومات تلميح إضافية عند حوم مؤشر الفأرة فوق محرف ما: <guilabel
+>فئة</guilabel
+> يونيكود للمحرف وقيمته في <guilabel
+> UCS-4</guilabel
+> و <guilabel
+>UTF-16</guilabel
+> و <guilabel
+>UTF-8</guilabel
+> و كـ <guilabel
+>كيان عشري XML</guilabel
+>.</para>
+
+<para
+>لتثبيت خط نزلته من الإنترنت، انقر فوق زر <guibutton
+>ثبت</guibutton
+> في الركن السفلي الأيمن. </para>
+
+<para
+>يمكنك تثبيت الخط للاستخدام الشخصي المتاح لك فقط أو على مستوى النظام ليتاح لجميع المستخدمين، ويتطلب الأخير صلاحيات المسؤول.</para>
+
+<para
+>غالباً ما توفر الخطوط في تنسيق أرشيف مثل <literal role="extension"
+>zip</literal
+>. افتح هذه الأرشيفات باستخدام أرك الذي يوفر عارضاً بسيطاً للخطوط. للاستفادة من قدرات عارض الخطوط الموسعة، استخرج الخطوط وافتحها فيعارض الخطوط. </para
+><para
+>يجب إعادة تشغيل التطبيقات لاستخدام الخطوط المثبتة حديثاً.</para>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

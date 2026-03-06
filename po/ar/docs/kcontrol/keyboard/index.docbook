@@ -1,0 +1,298 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keyboard" lang="&language;">
+<title
+>لوحة المفاتيح</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2020-12-05</date>
+<releaseinfo
+>بلازما 5.21</releaseinfo>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>بلازما</keyword>
+<keyword
+>إعدادات النّظام</keyword>
+<keyword
+>لوحة المفاتيح</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>تسمح لك هذه الوحدة باختيار كيفية عمل لوحة المفاتيح.</para>
+
+<para
+>هناك ثلاثة لسانات في هذه الوحدة.</para>
+
+<sect1 id="hardware">
+<title
+>لسان العتاد</title>
+<para
+>يعتمد التأثير الفعلي لضبط هذه الخيارات على الميزات التي يوفرها عتاد لوحة المفاتيح وخادم X الذي تعمل عليه بلازما. على سبيل المثال، قد تجد أن تغيير مستوى صوت نقر المفاتيح ليس له تأثير لأن هذه الميزة غير متوفرة في نظامك. </para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>طراز لوحة المفاتيح:</guilabel
+></term>
+<listitem>
+<para
+>يمكنك هنا ضبط طراز لوحة المفاتيح. هذا الإعداد مستقل عن تخطيط لوحة المفاتيح ويشير إلى طراز "العتاد"، أي الطريقة التي صُنعت بها لوحة المفاتيح. لوحات المفاتيح الحديثة التي تأتي مع الحاسوب عادة ما تحتوي على مفتاحين إضافيين ويُشار إليها بطرازات "104 مفتاحًا"، وهو على الأرجح ما تريده إذا كنت لا تعرف نوع لوحة المفاتيح التي تملكها. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>قفل الأرقام عند بدء تشغيل بلازما</guilabel
+></term>
+<listitem>
+<para
+>يمكنك اختيار إما <guilabel
+>شغّل</guilabel
+> دائمًا أو <guilabel
+>أطفئ</guilabel
+> قفل الأرقام (NumLock) عند بدء تشغيل بلازما، أو يمكنك اختيار أن تترك بلازما قفل الأرقام على أي وضع كان عليه قبل بدء تشغيل بلازما.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>عند الاستمرار بالضغط على مفتاح:</guilabel
+></term>
+<listitem>
+<para
+>من الممكن اختيار أحد الخيارات الثلاثة هنا، وهي</para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>أظهر المحارف المشكولة والمشابهة</guilabel
+></term>
+<listitem>
+<para
+>إذا حُدد هذا الخيار، فعند الاستمرار في الضغط على مفتاح أثناء إدخال النص، ستظهر نافذة منبثقة تتيح لك الاختيار بين أشكال التشكيل المختلفة لهذا المحرف.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>لا تفعل شيئًا</guilabel
+></term>
+<listitem>
+<para
+>يسمح لك هذا الخيار بإيقاف أي أنشطة عند الضغط والاستمرار في الضغط على المفاتيح.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>كرر المفتاح</guilabel
+></term>
+<listitem>
+<para
+>عند تحديد هذا الخيار، فإن الضغط والاستمرار في الضغط على مفتاح يؤدي إلى إرسال نفس المحرف بشكل متكرر حتى يُترك المفتاح. الضغط المستمر على المفتاح سيكون له نفس تأثير ضغطه عدة مرات متتالية.</para>
+<tip
+><para
+>سيرغب جميع المستخدمين تقريبًا في تفعيل هذا الخيار، لأنه يجعل التنقل عبر المستندات بواسطة مفاتيح الأسهم أسهل بكثير. </para
+></tip>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>التأخير</guilabel
+></term>
+<listitem>
+<para
+>يسمح لك هذا الخيار بضبط التأخير الذي يبدأ بعده المفتاح المضغوط في توليد رموز المفاتيح.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>المعدل</guilabel
+></term>
+<listitem>
+<para
+>يسمح لك هذا الخيار بضبط المعدل الذي تُولد به رموز المفاتيح أثناء الضغط على مفتاح.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>اكتب بعض المحارف في مربع نص <guilabel
+>منطقة الاختبار</guilabel
+> للتحقق من الإعدادات.</para>
+<para
+>كثير من الحواسيب لا تدعم هذه الوظيفة.</para>
+
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect1>
+
+<sect1 id="layouts">
+<title
+>لسان التخطيطات</title>
+<para
+>يتيح لك هذا اللسان اختيار تخطيطات لوحة المفاتيح التي تريد استخدامها، والمؤشر الذي تريده في صينية النظام، وكيفية التبديل والاختصارات التي ستستخدمها.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>مؤشر التخطيط</guilabel
+></term>
+<listitem>
+<para
+>يمكنك اختيار <guilabel
+>أظهر مؤشر التخطيط</guilabel
+> الذي سيُظهر اسم اللغة بتنسيق ISO في صينية النظام. يمكنك اختيار إظهار المؤشر حتى لو كان لديك تخطيط واحد مفعل، ويمكنك إظهار علم اللغة بدلًا من رمز ISO فقط عبر تحديد <guilabel
+>أظهر العلم</guilabel
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>سياسة التبديل</guilabel
+></term>
+<listitem>
+<para
+>إذا حددت سياسة التبديل حسب <guilabel
+>التطبيق</guilabel
+> أو <guilabel
+>النافذة</guilabel
+>، فإن تغيير تخطيط لوحة المفاتيح سيؤثر فقط على التطبيق أو النافذة الحالية. خيار <guilabel
+>عام</guilabel
+> سيغير تخطيط لوحة المفاتيح بشكل عام، و <guilabel
+>سطح المكتب</guilabel
+> سيغيره فقط لسطح المكتب الافتراضي الحالي. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>اختصارات تبديل التخطيط</guilabel
+></term>
+<listitem>
+<para
+><guilabel
+>الاختصارات الرئيسية</guilabel
+> هي اختصارات لتبديل التخطيطات يتولاها X.org. <guilabel
+>اختصارات المستوى الثالث</guilabel
+> هي اختصار للتبديل إلى المستوى الثالث من التخطيط النشط (إن وُجد) ويتولاها X.org، وهي تسمح بالاختصارات التي تتكون من مفاتيح تعديل فقط. <guilabel
+>الاختصار البديل</guilabel
+> هو اختصار لتبديل التخطيطات تتولاه بلازما، وهو لا يدعم الاختصارات المكونة من مفاتيح تعديل فقط، وقد لا يعمل في بعض الحالات (مثل إذا كانت هناك نافذة منبثقة نشطة أو من حافظة الشاشة). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>اضبط التخطيطات</guilabel
+></term>
+<listitem>
+<para
+>إذا حددت <guilabel
+>اضبط التخطيطات</guilabel
+> فستتمكن من إضافة وإزالة تخطيطات لوحة المفاتيح للتبديل بينها عند الحاجة. </para>
+<para
+>سيؤدي النقر على <guibutton
+>أضف</guibutton
+> إلى فتح حوار حيث ستتمكن من اختيار تخطيط لوحة المفاتيح الجديد الذي تريد إضافته بالإضافة إلى تنوعه ولصيقته واختصاره. </para>
+<para
+>يمكن تضييق قائمة التخطيطات الموجودة بجانب لصيقة <guilabel
+>تخطيط</guilabel
+> في حوار <guilabel
+>أضف تخطيطًا</guilabel
+> باستخدام القائمة المنسدلة <guilabel
+>قيد الاختيار حسب اللغة</guilabel
+>. يمكنك النقر على زر <guibutton
+>عاين</guibutton
+> لمعاينة التخطيط المختار في نافذة منفصلة. </para>
+<para
+>يمكنك ترتيب التخطيطات باستخدام زري الأعلى والأسفل، ويكون التخطيط العلوي هو المبدئي. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>تخطيطات احتياطية</guilabel
+></term>
+<listitem>
+<para
+>يمكن تفعيل هذا الخيار فقط إذا كان لديك أكثر من تخطيطين.</para>
+<para
+>تسمح التخطيطات الاحتياطية بالتبديل بين عدد صغير من التخطيطات بسهولة مع إبقاء المزيد من التخطيطات في المتناول. على سبيل المثال، قد تستخدم 3 لغات: الإنجليزية والأوكرانية والألمانية، ولكن الأوليين تُستخدمان بكثرة والثالثة أحيانًا فقط. في هذه الحالة يمكنك ضبط الأولين كتخطيطات رئيسية (بضبط <guilabel
+>عدد التخطيطات الرئيسية</guilabel
+>: 2) والألمانية كاحتياطية - عند التبديل بلوحة المفاتيح وزر الفأرة الأيسر سيحدث التبديل بين التخطيطات الرئيسية فقط، ولكن يمكنك دائمًا اختيار التخطيط الثالث من قائمة السياق.</para>
+<para
+>عند اختيار تخطيط احتياطي فإنه يستبدل آخر تخطيط رئيسي (يُفعل ذلك لأسباب تقنية، فعادة ما تعمل الاختصارات العامة بناءً على التخطيط النشط الأول، لذا فمن الأكثر موثوقية الحفاظ على التخطيط الأول عند السماح بتفعيل التخطيطات الاحتياطية).</para>
+<!-- context menu ?-->
+<para
+>بما أن X.org يسمح فقط بـ 4 تخطيطات للتبديل، فإن ميزة "التخطيطات الاحتياطية" تسمح أيضًا بالتغلب على هذا القيد: يمكن للمستخدم امتلاك ما يصل إلى 4 تخطيطات رئيسية (يديرها X.org) و4 تخطيطات احتياطية إضافية (يديرها مبدل التخطيط). وبالتالي يمكن للمستخدم العمل بشكل مريح مع ما يصل إلى 8 تخطيطات إجمالًا (رغم أن حد التخطيطات الاحتياطية الأربعة قد يُرفع في المستقبل). </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="advanced">
+<title
+>اللسان المتقدم</title>
+<para
+>في هذا اللسان، إذا حددت <guilabel
+>اضبط خيارات لوحة المفاتيح</guilabel
+> فستتمكن من ضبط بعض الخيارات المتعلقة بإعدادات مفاتيح خاصة. يمكنك توسيع هذه الخيارات بالنقر على رمز &gt; الموجود على يسار الخيار ثم تختار إعدادك من القائمة الموسعة.</para>
+<para
+>هذه واجهة رسومية للمساعدة في إنشاء تخطيطات لوحة مفاتيح مخصصة لـ X11 باستخدام XKB. </para>
+<para
+>لمزيد من المعلومات يرجى الرجوع إلى قسم <emphasis
+>الروابط</emphasis
+> في <ulink url="https://www.freedesktop.org/wiki/Software/XKeyboardConfig"
+>صفحة XKeyboardConfig على freedesktop.org</ulink
+>. </para>
+</sect1>
+</article>

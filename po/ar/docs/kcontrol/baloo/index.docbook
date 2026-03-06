@@ -1,0 +1,134 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+]>
+<article id="baloo" lang="&language;">
+<title
+>بحث الملفّات</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Vishesh</firstname
+> <surname
+>Handa</surname
+> </author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2023-01-30</date>
+<releaseinfo
+>بلازما 5.27</releaseinfo>
+
+<keywordset>
+<keyword
+>بلازما</keyword>
+<keyword
+>إعدادات النظام</keyword>
+<keyword
+>ابحث</keyword>
+<keyword
+>ملف</keyword>
+<keyword
+>بالو</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>تتيح لك وحدة ”إعدادات النظام“ هذه تكوين الملفات التي يجب فهرستها من أجل البحث السريع. وهي تستخدم داخليًا تقنية تسمى بالو للبحث بكفاءة في الملفات. </para>
+
+<para
+>أضف عنصر واجهة المستخدم <guilabel
+>ابحث</guilabel
+> إلى اللوحة الخاصة بك أو قم بتمكين البحث في مشغلك لاستخدام نتائج الفهرسة للوصول بشكل أسرع إلى مستنداتك. </para>
+
+<para
+>نشّط عنصر <guilabel
+>مكّن بحث الملفات</guilabel
+> إذا كنت ترغب في استخدام قدرات بحث سطح المكتب في دولفين وتطبيقات كِيدِي الأخرى. ألغِ تحديد العنصر إذا كنت لا تريد استخدام بحث الملفات عبر بالو (من الممكن استخدام تقنيات بحث أخرى، مثل "بحثك"). </para>
+
+<para
+>استخدم <guilabel
+>فهرس محتوى الملف أيضًا</guilabel
+> لفهرسة محتويات الملف بالإضافة إلى أسماء الملفات. </para>
+
+<para
+>حدّد عنصر <guilabel
+>فهرس الملفات والمجلدات المخفية</guilabel
+> ليقوم بالو بفهرسة الملفات والمجلدات المخفية. </para>
+
+<note>
+    <para
+>أي اسم ملف أو مجلد يبدأ بنقطة (<literal
+>.</literal
+>) يكون مخفيًا بشكل مبدئي. </para>
+</note>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>ضبط خاص بمجلد</guilabel
+></term>
+<listitem>
+    <para
+>تُعرض لك قائمة بالمجلدات التي يمكن فهرستها. بشكل مبدئي، يُفهرس مجلد <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+> بأكمله فقط، ولا تُفهرس أي مجلدات أو محركات أقراص أخرى. </para>
+    <para
+>لا تُفهرس الوسائط القابلة للفصل أبدًا بشكل مبدئي. يمكن إزالتها صراحةً من قائمة المجلدات المستثناة وعندها ستُفهرس. </para>
+    <para
+>من الممكن استخدام المربع المركب بجانب كل عنصر في القائمة لضبط ما إذا كان <guimenuitem
+>مفهرسًا</guimenuitem
+> أو <guimenuitem
+>غير مفهرس</guimenuitem
+>. </para>
+    <para
+>استخدم زر المهملات لإزالة عنصر من القائمة. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>ابدأ فهرسة مجلد...</guibutton
+>/<guibutton
+>أوقف فهرسة مجلد...</guibutton
+></term>
+<listitem>
+    <para
+>يؤدي النقر فوق أي من الخيارات المذكورة أعلاه إلى عرض مربع حوار بلازما القياسي <guilabel
+>اختر مجلدًا لترشيحه</guilabel
+> ويسمح لك باختيار المجلد ليعامل وفقًا لذلك. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>لمزيد من المعلومات حول خيارات التكوين الإضافية، مثل كيفية إضافة محرك أقراص مثبت خارج مجلد <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+>، يرجى قراءة <ulink url="https://community.kde.org/Baloo/Configuration"
+>Baloo/Configuration</ulink
+>.</para>
+
+</article>

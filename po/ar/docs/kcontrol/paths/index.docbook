@@ -1,0 +1,172 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="paths" lang="&language;">
+<title
+>المواقع</title>
+<articleinfo>
+
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+><email
+>annma@kde.org</email
+></address>
+</affiliation
+></author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-09-05</date>
+<releaseinfo
+>بلازما 5.22</releaseinfo>
+
+<keywordset>
+<keyword
+>بلازما</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>سطح المكتب</keyword>
+<keyword
+>مسارات</keyword>
+<keyword
+>مكان</keyword>
+<keyword
+>إعدادات النظام</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>هذه وحدة لضبط المسارات الأساسية لسطح مكتب بلازما.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>اضبط بعض مسارات كيدي</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="paths.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>اضبط بعض مسارات كيدي</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note>
+    <para
+>لا يمكن استخدام الأقراص التي تُوصل تلقائيًا عند الولوج كمسارات. مثل هذه الأقراص ستعود إلى الإعدادات المبدئية عند إعادة تشغيل بلازما. </para>
+</note>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>مسار سطح المكتب:</guilabel
+></term>
+<listitem
+><para
+>يحتوي مجلد سطح المكتب على جميع الملفات التي تراها في عنصر <guilabel
+>عرض المجلد</guilabel
+> على سطح مكتبك. المسار المبدئي عادة ما يكون <filename class="directory"
+>~/Desktop</filename
+> ولكن يمكنك تغيير مكان هذا المجلد هنا. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>مسار المستندات:</guilabel
+></term>
+<listitem
+><para
+>سيُستخدم هذا المجلد مبدئيًا لتحميل أو حفظ المستندات منه أو إليه.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>مسار التنزيلات:</guilabel
+></term>
+<listitem
+><para
+>سيُستخدم هذا المجلد مبدئيًا لحفظ العناصر التي تُنزلها.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>مسار الفيديوهات:</guilabel
+></term>
+<listitem
+><para
+>سيُستخدم هذا المجلد مبدئيًا لتحميل أو حفظ الأفلام منه أو إليه.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>مسار الصور:</guilabel
+></term>
+<listitem
+><para
+>سيُستخدم هذا المجلد مبدئيًا لتحميل أو حفظ الصور منه أو إليه.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>مسار الموسيقى:</guilabel
+></term>
+<listitem
+><para
+>سيُستخدم هذا المجلد مبدئيًا لتحميل أو حفظ الموسيقى منه أو إليه.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<para
+>إذا غيرت مسارًا ونقرت على <guibutton
+>طبق</guibutton
+>، سيظهر حوار يمكنك من خلاله اختيار نقل المحتوى إلى المجلد الجديد أو استخدام المجلد الجديد بدون نقل الملفات.</para>
+
+</article>
