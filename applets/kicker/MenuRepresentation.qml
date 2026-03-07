@@ -86,7 +86,8 @@ PlasmaComponents3.ScrollView {
 
         spacing: 0
 
-        Layout.minimumWidth: (sideBar.visible ? sideBar.implicitWidth + sideBar.Layout.rightMargin : 0) + searchField.defaultWidth
+        readonly property int minimumMainWidth: Math.max(searchField.defaultWidth, runnerColumns.searchResultsPresent ? 0 : Math.min(rootList.implicitWidth, rootList.Layout.maximumWidth))
+        Layout.minimumWidth: (sideBar.visible ? sideBar.implicitWidth + sideBar.Layout.rightMargin : 0) + minimumMainWidth
         LayoutMirroring.enabled: ((Plasmoid.location === PlasmaCore.Types.RightEdge)
             || (Application.layoutDirection === Qt.RightToLeft && Plasmoid.location !== PlasmaCore.Types.LeftEdge))
 
@@ -343,7 +344,7 @@ PlasmaComponents3.ScrollView {
             property bool searchRunning: false
             property string lastQuery: "" // copy to avoid timing conflicts with visible binding
 
-            Layout.minimumWidth: searchField.defaultWidth
+            Layout.minimumWidth: mainRow.minimumMainWidth
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             visible: lastQuery !== "" && !runnerColumns.searchResultsPresent && (!searchRunning || visible)
@@ -368,7 +369,7 @@ PlasmaComponents3.ScrollView {
             }
 
             Binding {
-                searchField.width: searchField.defaultWidth
+                searchField.width: noMatchesPlaceholder.width
                 when: noMatchesPlaceholder.visible
             }
         }
@@ -385,9 +386,9 @@ PlasmaComponents3.ScrollView {
 
         readonly property real defaultWidth: Kirigami.Units.gridUnit * 14
 
-        width: runnerColumns.visible
-            ? (runnerColumns.searchResultsPresent ? runnerColumns.visibleChildren[0].width : defaultWidth)
-            : (rootList.visible ? rootList.width : defaultWidth)
+        width: runnerColumns.visible && runnerColumns.searchResultsPresent
+            ? runnerColumns.visibleChildren[0].width
+            : (rootList.visible ? rootList.width : mainRow.minimumMainWidth)
 
         focus: !Kirigami.InputMethod.willShowOnActive
 
