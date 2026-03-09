@@ -163,13 +163,6 @@ PlasmaComponents3.ScrollView {
                 }
             }
 
-            Connections {
-                target: itemList.mainSearchField
-
-                function onTextChanged() {
-                    listView.maxDelegateImplicitWidth = 0
-                }
-            }
             onImplicitWidthChanged: {
                 listView.maxDelegateImplicitWidth = Math.max(listView.maxDelegateImplicitWidth, implicitWidth)
             }
