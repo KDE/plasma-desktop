@@ -5,15 +5,15 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-30 00:46+0000\n"
-"PO-Revision-Date: 2025-03-25 06:44+0100\n"
-"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
+"PO-Revision-Date: 2026-03-07 09:52+0100\n"
+"Last-Translator: Kjetil Sorlund <translate@sorlund.no>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.12.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -34,7 +34,7 @@ msgstr "Enkeltklikk for å åpne filer"
 #: landingpage_kdeglobalssettings.kcfg:19
 #, kde-format
 msgid "Switch the look and feel package depending on time of day"
-msgstr ""
+msgstr "Bytt tema basert på klokkeslettet"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:23
@@ -60,17 +60,16 @@ msgstr "Animasjonshastighet"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change global theme"
-msgstr ""
+msgstr "Bytt tema globalt"
 
 #: ui/LookAndFeelBox.qml:180
 #, kde-format
 msgctxt "@label accessible"
 msgid "Global theme"
-msgstr ""
+msgstr "Globalt tema"
 
 #: ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Theme:"
+#, kde-format
 msgctxt "@title:group for light/dark quick switch"
 msgid "Theme:"
 msgstr "Tema:"
@@ -79,7 +78,7 @@ msgstr "Tema:"
 #, kde-format
 msgctxt "Switch between dark and light look and feel packages automatically"
 msgid "Automatic"
-msgstr ""
+msgstr "Automatisk"
 
 #: ui/main.qml:120
 #, kde-format
@@ -87,7 +86,7 @@ msgctxt ""
 "@info:tooltip 1 is the name of a light global theme, 2 is the name of a dark "
 "global theme"
 msgid "Use “%1” during the day and “%2” at night"
-msgstr ""
+msgstr "Bruk «%1» på dagen og «%2» på natta"
 
 #: ui/main.qml:134
 #, kde-format
@@ -96,8 +95,7 @@ msgid "More appearance settings:"
 msgstr "Flere innstillinger for utseende:"
 
 #: ui/main.qml:181
-#, fuzzy, kde-format
-#| msgid "Animation speed:"
+#, kde-format
 msgctxt "@title:slider"
 msgid "Animation speed:"
 msgstr "Animasjonshastighet:"
@@ -128,8 +126,7 @@ msgid "Selects them"
 msgstr "Merker dem"
 
 #: ui/main.qml:224
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "Åpne bare med dobbeltklikking"
@@ -141,8 +138,7 @@ msgid "Opens them"
 msgstr "Åpner dem"
 
 #: ui/main.qml:257
-#, fuzzy, kde-format
-#| msgid "Select by clicking on item's selection marker"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
 msgstr "Merk element ved å trykke på markeringsikonet"
@@ -154,8 +150,7 @@ msgid "More behavior settings:"
 msgstr "Flere innstillinger for programatferd:"
 
 #: ui/main.qml:297
-#, fuzzy, kde-format
-#| msgid "Most used pages:"
+#, kde-format
 msgctxt "@title:group for grid of buttons opening kcms"
 msgid "Most used pages:"
 msgstr "Mest brukte sider:"
