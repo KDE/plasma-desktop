@@ -7,11 +7,6 @@
 import QtQuick
 
 QtObject {
-
-    readonly property string keyboardRepeatRepeat: "repeat"
-    readonly property string keyboardRepeatNothing: "nothing"
-    readonly property string keyboardRepeatAccent: "accent"
-
     // Default value for layoutLoopCount (e.g. we cannot use layout looping feature)
     readonly property int noLooping: -1
 

@@ -104,23 +104,6 @@ KCM.SimpleKCM {
         }
         FormCard.FormCard {
 
-            FormCard.FormSwitchDelegate {
-                id: keyRepeatSwitch
-                text: i18nc("@option:check", "Customize Repeat")
-                checked: kcm.miscSettings.keyboardRepeat === __internal.keyboardRepeatRepeat
-                onToggled: kcm.miscSettings.keyboardRepeat = checked
-                ? __internal.keyboardRepeatRepeat
-                : __internal.keyboardRepeatNothing
-
-                Accessible.name: i18nc("@label:checkbox accessible", "Key repeat")
-
-                KCM.SettingStateBinding {
-                    configObject: kcm.miscSettings
-                    settingName: "keyboardRepeat"
-                }
-
-            }
-
             FormCard.FormSpinBoxDelegate {
                 id: repeatDelaySpinbox
                 Layout.preferredWidth: Kirigami.Units.gridUnit * 8
@@ -150,7 +133,6 @@ KCM.SimpleKCM {
                 KCM.SettingStateBinding {
                     configObject: kcm.miscSettings
                     settingName: "repeatDelay"
-                    extraEnabledConditions: kcm.miscSettings.keyboardRepeat !== __internal.keyboardRepeatNothing
                 }
             }
 
@@ -184,7 +166,6 @@ KCM.SimpleKCM {
                 KCM.SettingStateBinding {
                     configObject: kcm.miscSettings
                     settingName: "repeatRate"
-                    extraEnabledConditions: kcm.miscSettings.keyboardRepeat !== __internal.keyboardRepeatNothing
                 }
             }
         }

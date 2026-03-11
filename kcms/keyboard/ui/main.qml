@@ -146,25 +146,10 @@ KCM.ScrollViewKCM {
             Kirigami.FormData.label: i18nc("@label:checkbox", "Key repeat:")
             spacing: Kirigami.Units.smallSpacing
 
-            QQC2.CheckBox {
-                checked: kcm.miscSettings.keyboardRepeat === __internal.keyboardRepeatRepeat
-                onToggled: kcm.miscSettings.keyboardRepeat = checked
-                           ? __internal.keyboardRepeatRepeat
-                           : __internal.keyboardRepeatNothing
-
-                Accessible.name: i18nc("@label:checkbox accessible", "Key repeat")
-
-                KCM.SettingStateBinding {
-                    configObject: kcm.miscSettings
-                    settingName: "keyboardRepeat"
-                }
-            }
-
             QQC2.Label {
                 // Force the label to use its own Kirigami.Theme object
                 Kirigami.Theme.inherit: false
                 text: i18nc("@label:textbox Key repeat delay", "Delay:")
-                enabled: kcm.miscSettings.keyboardRepeat !== __internal.keyboardRepeatNothing
             }
 
             QQC2.SpinBox {
@@ -195,7 +180,6 @@ KCM.ScrollViewKCM {
                 KCM.SettingStateBinding {
                     configObject: kcm.miscSettings
                     settingName: "repeatDelay"
-                    extraEnabledConditions: kcm.miscSettings.keyboardRepeat !== __internal.keyboardRepeatNothing
                 }
             }
 
@@ -203,7 +187,6 @@ KCM.ScrollViewKCM {
                 // Force the label to use its own Kirigami.Theme object
                 Kirigami.Theme.inherit: false
                 text: i18nc("@label:textbox Key repeat rate", "Rate:")
-                enabled: kcm.miscSettings.keyboardRepeat !== __internal.keyboardRepeatNothing
             }
 
             QQC2.SpinBox {
@@ -234,7 +217,6 @@ KCM.ScrollViewKCM {
                 KCM.SettingStateBinding {
                     configObject: kcm.miscSettings
                     settingName: "repeatRate"
-                    extraEnabledConditions: kcm.miscSettings.keyboardRepeat !== __internal.keyboardRepeatNothing
                 }
             }
         }

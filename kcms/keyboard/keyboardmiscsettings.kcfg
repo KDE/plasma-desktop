@@ -11,9 +11,6 @@ SPDX-License-Identifier: GPL-2.0-or-later
   <include>QtGlobal</include>
   <kcfgfile name="kcminputrc" />
   <group name="Keyboard">
-    <entry name="keyboardRepeat" key="KeyRepeat" type="String">
-      <default code="true">qgetenv("QT_IM_MODULE") == "plasmaim" ? QStringLiteral("accent") : QStringLiteral("repeat")</default>
-    </entry>
     <entry name="numLock" key="NumLock" type="Int">
     <!-- STATE_UNCHANGED -->
       <default>2</default>
