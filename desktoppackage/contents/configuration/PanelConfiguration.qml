@@ -382,19 +382,18 @@ ColumnLayout {
             PC3.ComboBox {
                 id: autoHideBox
                 property int previewIndex: popup.visible ? highlightedIndex : currentIndex
-                property int animationIndex: popup.visible ? highlightedIndex : -1
                 model: [
                     i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Always visible"),
                     i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Auto hide"),
                     i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Dodge windows"),
                     i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox", "Windows go below"),
                 ]
-                onAnimationIndexChanged: {
-                    if (animationIndex == 0 || animationIndex == 3) {
+                onPreviewIndexChanged: {
+                    if (previewIndex == 0 || previewIndex == 3) {
                         visibilityRepresentation.maximizeWindow()
-                    } else if (animationIndex == 1) {
+                    } else if (previewIndex == 1) {
                         visibilityRepresentation.hidePanel()
-                    } else if (animationIndex == 2) {
+                    } else if (previewIndex == 2) {
                         visibilityRepresentation.dodgePanel()
                     }
                 }
