@@ -26,7 +26,7 @@ Item {
     height: list.cellHeight
 
     Accessible.name: i18nc("@action:button accessible only, %1 is widget name", "Add %1", model.name)  + (model.isSupported ? "" : unsupportedTooltip.mainText)
-    Accessible.description: (model.isSupported ? "" : model.unsupportedMessage) + model.description + (overlayedBadge.visible ? countLabel.Accessible.name : "")
+    Accessible.description: (model.isSupported ? "" : model.unsupportedMessage) + model.description + (overlayedBadge.visible ? overlayedBadge.Accessible.name : "")
     Accessible.role: Accessible.Button
 
     HoverHandler {
@@ -161,12 +161,13 @@ Item {
                 anchors.fill: parent
 
                 Rectangle {
-                    x: Math.round(-Kirigami.Units.smallSpacing * 1.5 / 2)
+                    readonly property int offset: Math.round(Kirigami.Units.smallSpacing * 1.5)
+                    x: Math.round(-offset / 2)
                     y: x
-                    width: overlayedBadge.width + Math.round(Kirigami.Units.smallSpacing * 1.5)
-                    height: overlayedBadge.height + Math.round(Kirigami.Units.smallSpacing * 1.5)
+                    width: overlayedBadge.width + offset
+                    height: overlayedBadge.height + offset
                     radius: height
-                    visible: (running && delegate.GridView.isCurrentItem) ?? false
+                    visible: overlayedBadge.visible
                 }
             }
 
@@ -185,28 +186,22 @@ Item {
                 }
             }
 
-            Rectangle {
+            Kirigami.Badge {
                 id: overlayedBadge
-                width: countLabel.width + height
-                height: Math.round(Kirigami.Units.iconSizes.sizeForLabels * 1.3)
-                radius: height
-                color: (running && delegate.GridView.isCurrentItem) ? Kirigami.Theme.highlightColor : Kirigami.Theme.positiveTextColor
+
                 visible: ((running && delegate.GridView.isCurrentItem) || model.recent) ?? false
+
+                type: (running && delegate.GridView.isCurrentItem) ? Kirigami.Badge.Type.Information : Kirigami.Badge.Type.Positive
+
+                text: (running && delegate.GridView.isCurrentItem) ? running : i18ndc("plasma_shell_org.kde.plasma.desktop", "Text displayed on top of newly installed widgets", "New!")
+                Accessible.name: running
+                    ? i18ncp("@info:other accessible for badge showing applet count", "%1 widget active", "%1 widgets active", running)
+                    : i18nc(" @info:other accessible for badge indicating new widget", "Recently installed")
+
+                onTextChanged: maskShaderSource.scheduleUpdate()
+                onTypeChanged: maskShaderSource.scheduleUpdate()
                 onVisibleChanged: maskShaderSource.scheduleUpdate()
-
-                PlasmaComponents.Label {
-                    id: countLabel
-                    height: parent.height
-                    verticalAlignment: Text.AlignVCenter
-                    anchors.centerIn: parent
-                    text: (running && delegate.GridView.isCurrentItem) ? running : i18ndc("plasma_shell_org.kde.plasma.desktop", "Text displayed on top of newly installed widgets", "New!")
-                    Accessible.name: running
-                        ? i18ncp("@info:other accessible for badge showing applet count", "%1 widget active", "%1 widgets active", running)
-                        : i18nc(" @info:other accessible for badge indicating new widget", "Recently installed")
-                    textFormat: Text.PlainText
-                }
             }
-
 
             PlasmaComponents.ToolButton {
                 id: uninstallButton

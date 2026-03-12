@@ -109,14 +109,20 @@ AbstractKickoffItemDelegate {
         }
 
         Loader {
+            Layout.preferredWidth: root.isCategoryListItem ? Kirigami.Units.largeSpacing : implicitWidth
+            Layout.preferredHeight: root.isCategoryListItem ? Kirigami.Units.largeSpacing : implicitHeight
+
             visible: active
             active: root.model?.isNewlyInstalled ?? false
 
-            sourceComponent: Badge {
-                text: root.isCategoryListItem ? "" : Accessible.name
-                Accessible.name: i18nc("Newly installed app, badge, keep short", "New!") // qmllint disable unqualified
-                Accessible.description: root.isCategoryListItem ? i18nc("@info:whatsthis Accessible description for badge", "There is a newly installed application in this category") // qmllint disable unqualified
-                                                         : i18nc("@info:whatsthis Accessible description for badge", "Newly installed application") // qmllint disable unqualified
+            sourceComponent: Kirigami.Badge {
+                text: root.isCategoryListItem ? "" : i18nc("Newly installed app, badge, keep short", "New!")
+
+                type: Kirigami.Badge.Type.Positive
+
+                Accessible.description: root.isCategoryListItem
+                    ? i18n("There is a newly installed application in this category")
+                    : i18n("Newly installed application")
             }
         }
     }

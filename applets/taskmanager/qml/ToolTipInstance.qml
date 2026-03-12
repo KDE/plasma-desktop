@@ -175,10 +175,9 @@ ColumnLayout {
                 Layout.preferredWidth: closeButton.width
                 visible: root.index === 0 && toolTipDelegate.smartLauncherCountVisible
 
-                Badge {
+                Kirigami.Badge {
                     anchors.centerIn: parent
-                    height: Kirigami.Units.iconSizes.smallMedium
-                    number: toolTipDelegate.smartLauncherCount
+                    text: toolTipDelegate.smartLauncherCount
                 }
             }
 
