@@ -177,12 +177,17 @@ KCM.AbstractKCM {
                     model: kcm.filteredModel
                     activeFocusOnTab: true
                     onActiveFocusChanged: currentIndex = Math.max(currentIndex, 0)
-                    add: Transition {
-                        id: transition
-                        PropertyAction {
-                            target: components
-                            property: "currentIndex"
-                            value: transition.ViewTransition.index
+
+                    Connections {
+                        target: kcm.shortcutsModel
+                        function onRowsInserted(parent, first, last) {
+                            const sourceIndex = kcm.shortcutsModel.index(last, 0)
+                            Qt.callLater(() => {
+                                const proxyIndex = kcm.filteredModel.mapFromSource(sourceIndex)
+                                if (proxyIndex.valid) {
+                                    components.currentIndex = proxyIndex.row
+                                }
+                            })
                         }
                     }
 
