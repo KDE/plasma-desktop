@@ -55,8 +55,9 @@ AbstractKickoffItemDelegate {
                 visible: active
                 active: root.model?.isNewlyInstalled ?? false
 
-                sourceComponent: Badge {
+                sourceComponent: Kirigami.Badge {
                     text: i18nc("@label Newly installed app, badge, keep short", "New!") // qmllint disable unqualified
+                    type: Kirigami.BadgeType.Positive
                     Accessible.name: i18nc("@label Accessible name for badge", "Newly installed application") // qmllint disable unqualified
                 }
             }
