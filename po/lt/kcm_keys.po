@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:48+0000\n"
+"POT-Creation-Date: 2026-03-13 00:45+0000\n"
 "PO-Revision-Date: 2026-01-13 00:15+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
@@ -242,165 +242,165 @@ msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
 msgstr "Eksportuoti"
 
-#: ui/main.qml:224
+#: ui/main.qml:229
 #, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
 msgstr "Eksportuoti %1"
 
-#: ui/main.qml:234
+#: ui/main.qml:239
 #, kde-format
 msgctxt "@action:button %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Taisyti komandą, skirtą %1"
 
-#: ui/main.qml:263
+#: ui/main.qml:268
 #, kde-format
 msgctxt "@action:button %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Šalinti visus sparčiuosius klavišus, skirtus %1"
 
-#: ui/main.qml:285
+#: ui/main.qml:290
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo deletion"
 msgstr "Atšaukti ištrynimą"
 
-#: ui/main.qml:352
+#: ui/main.qml:357
 #, kde-format
 msgctxt "@info:status placeholdermessage"
 msgid "No items matched the search terms"
 msgstr "Jokie elementai neatitiko paieškos žodžių"
 
-#: ui/main.qml:369
+#: ui/main.qml:374
 #, kde-format
 msgctxt "@info"
 msgid "These shortcuts will be deleted when changes are applied."
 msgstr "Pritaikius pakeitimus, šie spartieji klavišai bus ištrinti."
 
-#: ui/main.qml:373
+#: ui/main.qml:378
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo"
 msgstr "Atšaukti"
 
-#: ui/main.qml:374
+#: ui/main.qml:379
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo deleting shortcuts"
 msgstr "Atšaukti sparčiųjų klavišų ištrynimą"
 
-#: ui/main.qml:410
+#: ui/main.qml:415
 #, kde-format
 msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
 msgstr ""
 "Pasirinkite elementą iš sąrašo norėdami čia pamatyti jo sparčiuosius klavišus"
 
-#: ui/main.qml:423
+#: ui/main.qml:428
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr "Eksportuoti sparčiųjų klavišų schemą"
 
-#: ui/main.qml:423 ui/main.qml:555
+#: ui/main.qml:428 ui/main.qml:560
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
 msgstr "Importuoti sparčiųjų klavišų schemą"
 
-#: ui/main.qml:425
+#: ui/main.qml:430
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Sparčiųjų klavišų schema (*.kksrc)"
 
-#: ui/main.qml:452
+#: ui/main.qml:457
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Edit Command"
 msgstr "Taisyti komandą"
 
-#: ui/main.qml:452
+#: ui/main.qml:457
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Add Command"
 msgstr "Pridėti komandą"
 
-#: ui/main.qml:469
+#: ui/main.qml:474
 #, kde-format
 msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
 msgstr "Įrašyti"
 
-#: ui/main.qml:469
+#: ui/main.qml:474
 #, kde-format
 msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
 msgstr "Pridėti"
 
-#: ui/main.qml:471
+#: ui/main.qml:476
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Save command"
 msgstr "Įrašyti komandą"
 
-#: ui/main.qml:472
+#: ui/main.qml:477
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "Pridėti komandą"
 
-#: ui/main.qml:494
+#: ui/main.qml:499
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr "Įveskite komandą arba pasirinkite scenarijaus failą:"
 
-#: ui/main.qml:503
+#: ui/main.qml:508
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "Komanda:"
 
-#: ui/main.qml:509
+#: ui/main.qml:514
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Komanda"
 
-#: ui/main.qml:516
+#: ui/main.qml:521
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Pasirinkti…"
 
-#: ui/main.qml:517
+#: ui/main.qml:522
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Pasirinkti scenarijaus failą"
 
-#: ui/main.qml:525
+#: ui/main.qml:530
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "Pavadinimas:"
 
-#: ui/main.qml:526
+#: ui/main.qml:531
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "Įveskite čia pavadinimą"
 
-#: ui/main.qml:538
+#: ui/main.qml:543
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Pasirinkti scenarijaus failą"
 
-#: ui/main.qml:540
+#: ui/main.qml:545
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -408,37 +408,37 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "Scenarijaus failai (.sh, .bash, .zsh ir t.t.) (*.*sh)"
 
-#: ui/main.qml:563
+#: ui/main.qml:568
 #, kde-format
 msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr "Pasirinkite norimą importuoti schemą:"
 
-#: ui/main.qml:582
+#: ui/main.qml:587
 #, kde-format
 msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
 msgstr "Tinkinta schema"
 
-#: ui/main.qml:590
+#: ui/main.qml:595
 #, kde-format
 msgctxt "@action:button"
 msgid "Select File…"
 msgstr "Pasirinkti failą…"
 
-#: ui/main.qml:590
+#: ui/main.qml:595
 #, kde-format
 msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "Importuoti"
 
-#: ui/main.qml:592
+#: ui/main.qml:597
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
 msgstr "Pasirinkti sparčiųjų klavišų schemos failą"
 
-#: ui/main.qml:593
+#: ui/main.qml:598
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-20 00:47+0000\n"
+"POT-Creation-Date: 2026-03-13 00:45+0000\n"
 "PO-Revision-Date: 2026-01-14 16:30+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -497,159 +497,159 @@ msgctxt "@title:group"
 msgid "Visibility"
 msgstr "Zichtbaarheid"
 
-#: contents/configuration/PanelConfiguration.qml:387
+#: contents/configuration/PanelConfiguration.qml:386
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always visible"
 msgstr "Altijd zichtbaar"
 
-#: contents/configuration/PanelConfiguration.qml:388
+#: contents/configuration/PanelConfiguration.qml:387
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Auto hide"
 msgstr "Automatisch verbergen"
 
-#: contents/configuration/PanelConfiguration.qml:389
+#: contents/configuration/PanelConfiguration.qml:388
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Dodge windows"
 msgstr "Ontwijk vensters"
 
-#: contents/configuration/PanelConfiguration.qml:390
+#: contents/configuration/PanelConfiguration.qml:389
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Windows go below"
 msgstr "Vensters gaan hieronder"
 
-#: contents/configuration/PanelConfiguration.qml:450
+#: contents/configuration/PanelConfiguration.qml:449
 #, kde-format
 msgctxt "@title:group"
 msgid "Opacity"
 msgstr "Dekking"
 
-#: contents/configuration/PanelConfiguration.qml:466
+#: contents/configuration/PanelConfiguration.qml:465
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Adaptive"
 msgstr "Adaptief"
 
-#: contents/configuration/PanelConfiguration.qml:467
+#: contents/configuration/PanelConfiguration.qml:466
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Opaque"
 msgstr "Ondoorzichtig"
 
-#: contents/configuration/PanelConfiguration.qml:468
+#: contents/configuration/PanelConfiguration.qml:467
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Translucent"
 msgstr "Transparant"
 
-#: contents/configuration/PanelConfiguration.qml:500
+#: contents/configuration/PanelConfiguration.qml:499
 #, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "Zwevend"
 
-#: contents/configuration/PanelConfiguration.qml:516
+#: contents/configuration/PanelConfiguration.qml:515
 #, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
 msgstr "Uitgeschakeld"
 
-#: contents/configuration/PanelConfiguration.qml:517
+#: contents/configuration/PanelConfiguration.qml:516
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
 msgstr "Alleen applets"
 
-#: contents/configuration/PanelConfiguration.qml:518
+#: contents/configuration/PanelConfiguration.qml:517
 #, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
 msgstr "Paneel en applets"
 
-#: contents/configuration/PanelConfiguration.qml:561
+#: contents/configuration/PanelConfiguration.qml:560
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr "Repareer het"
 
-#: contents/configuration/PanelConfiguration.qml:647
+#: contents/configuration/PanelConfiguration.qml:646
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Panel Width:"
 msgstr "Paneelbreedte:"
 
-#: contents/configuration/PanelConfiguration.qml:648
+#: contents/configuration/PanelConfiguration.qml:647
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Panel Height:"
 msgstr "Paneelhoogte:"
 
-#: contents/configuration/PanelConfiguration.qml:671
+#: contents/configuration/PanelConfiguration.qml:670
 #, kde-format
 msgctxt "@title:group shortcut that moves focus to the panel"
 msgid "Focus shortcut:"
 msgstr "Sneltoets voor focus:"
 
-#: contents/configuration/PanelConfiguration.qml:681
+#: contents/configuration/PanelConfiguration.qml:680
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Deze sneltoets indrukken om focus te verplaatsen naar het paneel"
 
-#: contents/configuration/PanelConfiguration.qml:688
+#: contents/configuration/PanelConfiguration.qml:687
 #, kde-format
 msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
 msgstr "Sneltoets voor focus geven:"
 
-#: contents/configuration/PanelConfiguration.qml:689
+#: contents/configuration/PanelConfiguration.qml:688
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for button"
 msgid "Button to set the shortcut for the panel to gain focus"
 msgstr "Knop om de sneltoets voor het paneel te zetten om focus te verkrijgen"
 
-#: contents/configuration/PanelConfiguration.qml:715
+#: contents/configuration/PanelConfiguration.qml:714
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Paneel verwijderen"
 
-#: contents/configuration/PanelConfiguration.qml:718
+#: contents/configuration/PanelConfiguration.qml:717
 #, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Remove this panel; this action can be undone"
 msgstr "Dit paneel verwijderen; deze actie kan niet ongedaan worden"
 
-#: contents/configuration/PanelConfiguration.qml:727
+#: contents/configuration/PanelConfiguration.qml:726
 #, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "Paneel klonen"
 
-#: contents/configuration/PanelConfiguration.qml:731
+#: contents/configuration/PanelConfiguration.qml:730
 #, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Create a new panel with the same settings and applets"
 msgstr "Een nieuw paneel met dezelfde instellingen en applets aanmaken"
 
-#: contents/configuration/PanelConfiguration.qml:740
+#: contents/configuration/PanelConfiguration.qml:739
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Sluiten"
 
-#: contents/configuration/PanelConfiguration.qml:740
+#: contents/configuration/PanelConfiguration.qml:739
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "Bewerkingsmodus verlaten"
 
-#: contents/configuration/PanelConfiguration.qml:743
+#: contents/configuration/PanelConfiguration.qml:742
 #, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Close Panel Settings window and exit Edit Mode"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:48+0000\n"
+"POT-Creation-Date: 2026-03-13 00:45+0000\n"
 "PO-Revision-Date: 2026-01-13 19:18+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -239,164 +239,164 @@ msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
 msgstr "Eksportēt"
 
-#: ui/main.qml:224
+#: ui/main.qml:229
 #, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
 msgstr "Eksportēt „%1“"
 
-#: ui/main.qml:234
+#: ui/main.qml:239
 #, kde-format
 msgctxt "@action:button %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Rediģēt „%1“ komandu"
 
-#: ui/main.qml:263
+#: ui/main.qml:268
 #, kde-format
 msgctxt "@action:button %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Noņemt visas „%1“ saīsnes"
 
-#: ui/main.qml:285
+#: ui/main.qml:290
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo deletion"
 msgstr "Atsaukt dzēšanu"
 
-#: ui/main.qml:352
+#: ui/main.qml:357
 #, kde-format
 msgctxt "@info:status placeholdermessage"
 msgid "No items matched the search terms"
 msgstr "Meklēšanas vaicājumam neatbilst neviens vienums"
 
-#: ui/main.qml:369
+#: ui/main.qml:374
 #, kde-format
 msgctxt "@info"
 msgid "These shortcuts will be deleted when changes are applied."
 msgstr "Pielietojot izmaiņas, šīs saīsnes tiks dzēstas."
 
-#: ui/main.qml:373
+#: ui/main.qml:378
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo"
 msgstr "Atsaukt"
 
-#: ui/main.qml:374
+#: ui/main.qml:379
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo deleting shortcuts"
 msgstr "Atsaukt saīšņu dzēšanu"
 
-#: ui/main.qml:410
+#: ui/main.qml:415
 #, kde-format
 msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Lai redzētu vienuma saīsnes, atlasiet to sarakstā"
 
-#: ui/main.qml:423
+#: ui/main.qml:428
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr "Eksportēt saīšņu shēmu"
 
-#: ui/main.qml:423 ui/main.qml:555
+#: ui/main.qml:428 ui/main.qml:560
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
 msgstr "Importēt saīšņu shēmu"
 
-#: ui/main.qml:425
+#: ui/main.qml:430
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Saīšņu shēma (*.kksrc)"
 
-#: ui/main.qml:452
+#: ui/main.qml:457
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Edit Command"
 msgstr "Rediģēt komandu"
 
-#: ui/main.qml:452
+#: ui/main.qml:457
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Add Command"
 msgstr "Pievienot komandu"
 
-#: ui/main.qml:469
+#: ui/main.qml:474
 #, kde-format
 msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
 msgstr "Saglabāt"
 
-#: ui/main.qml:469
+#: ui/main.qml:474
 #, kde-format
 msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
 msgstr "Pievienot"
 
-#: ui/main.qml:471
+#: ui/main.qml:476
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Save command"
 msgstr "Saglabāt komandu"
 
-#: ui/main.qml:472
+#: ui/main.qml:477
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "Pievienot komandu"
 
-#: ui/main.qml:494
+#: ui/main.qml:499
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr "Ievadiet komandu vai izvēlieties skripta datni:"
 
-#: ui/main.qml:503
+#: ui/main.qml:508
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "Komanda:"
 
-#: ui/main.qml:509
+#: ui/main.qml:514
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Komanda"
 
-#: ui/main.qml:516
+#: ui/main.qml:521
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Izvēlēties…"
 
-#: ui/main.qml:517
+#: ui/main.qml:522
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Izvēlieties skripta datni"
 
-#: ui/main.qml:525
+#: ui/main.qml:530
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "Nosaukums:"
 
-#: ui/main.qml:526
+#: ui/main.qml:531
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "Ierakstiet te nosaukumu"
 
-#: ui/main.qml:538
+#: ui/main.qml:543
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Izvēlieties skripta datni"
 
-#: ui/main.qml:540
+#: ui/main.qml:545
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -404,37 +404,37 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "Skriptu datnes (.sh, .bash, .zsh, etc.) (*.*sh)"
 
-#: ui/main.qml:563
+#: ui/main.qml:568
 #, kde-format
 msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr "Izvēlieties importējamo shēmu:"
 
-#: ui/main.qml:582
+#: ui/main.qml:587
 #, kde-format
 msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
 msgstr "Pielāgota shēma"
 
-#: ui/main.qml:590
+#: ui/main.qml:595
 #, kde-format
 msgctxt "@action:button"
 msgid "Select File…"
 msgstr "Atlasīt datni…"
 
-#: ui/main.qml:590
+#: ui/main.qml:595
 #, kde-format
 msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "Importēt"
 
-#: ui/main.qml:592
+#: ui/main.qml:597
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
 msgstr "Atlasiet saīšņu shēmas datni"
 
-#: ui/main.qml:593
+#: ui/main.qml:598
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"
