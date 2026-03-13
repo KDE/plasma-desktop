@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-16 02:42+0000\n"
+"POT-Creation-Date: 2026-03-13 02:40+0000\n"
 "PO-Revision-Date: 2026-01-14 04:25+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -496,159 +496,159 @@ msgctxt "@title:group"
 msgid "Visibility"
 msgstr "Видимість"
 
-#: contents/configuration/PanelConfiguration.qml:387
+#: contents/configuration/PanelConfiguration.qml:386
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always visible"
 msgstr "Показувати завжди"
 
-#: contents/configuration/PanelConfiguration.qml:388
+#: contents/configuration/PanelConfiguration.qml:387
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Auto hide"
 msgstr "Автоматично ховати"
 
-#: contents/configuration/PanelConfiguration.qml:389
+#: contents/configuration/PanelConfiguration.qml:388
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Dodge windows"
 msgstr "Стежити за вікнами"
 
-#: contents/configuration/PanelConfiguration.qml:390
+#: contents/configuration/PanelConfiguration.qml:389
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Windows go below"
 msgstr "Перекриває вікна"
 
-#: contents/configuration/PanelConfiguration.qml:450
+#: contents/configuration/PanelConfiguration.qml:449
 #, kde-format
 msgctxt "@title:group"
 msgid "Opacity"
 msgstr "Непрозорість"
 
-#: contents/configuration/PanelConfiguration.qml:466
+#: contents/configuration/PanelConfiguration.qml:465
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Adaptive"
 msgstr "Адаптивна"
 
-#: contents/configuration/PanelConfiguration.qml:467
+#: contents/configuration/PanelConfiguration.qml:466
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Opaque"
 msgstr "Непрозора"
 
-#: contents/configuration/PanelConfiguration.qml:468
+#: contents/configuration/PanelConfiguration.qml:467
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Translucent"
 msgstr "Прозора"
 
-#: contents/configuration/PanelConfiguration.qml:500
+#: contents/configuration/PanelConfiguration.qml:499
 #, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "Рухомість"
 
-#: contents/configuration/PanelConfiguration.qml:516
+#: contents/configuration/PanelConfiguration.qml:515
 #, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
 msgstr "Вимкнено"
 
-#: contents/configuration/PanelConfiguration.qml:517
+#: contents/configuration/PanelConfiguration.qml:516
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
 msgstr "Лише аплети"
 
-#: contents/configuration/PanelConfiguration.qml:518
+#: contents/configuration/PanelConfiguration.qml:517
 #, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
 msgstr "Панелі і аплети"
 
-#: contents/configuration/PanelConfiguration.qml:561
+#: contents/configuration/PanelConfiguration.qml:560
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr "Виправити"
 
-#: contents/configuration/PanelConfiguration.qml:647
+#: contents/configuration/PanelConfiguration.qml:646
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Panel Width:"
 msgstr "Ширина панелі:"
 
-#: contents/configuration/PanelConfiguration.qml:648
+#: contents/configuration/PanelConfiguration.qml:647
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Panel Height:"
 msgstr "Висота панелі:"
 
-#: contents/configuration/PanelConfiguration.qml:671
+#: contents/configuration/PanelConfiguration.qml:670
 #, kde-format
 msgctxt "@title:group shortcut that moves focus to the panel"
 msgid "Focus shortcut:"
 msgstr "Скорочення фокусування:"
 
-#: contents/configuration/PanelConfiguration.qml:681
+#: contents/configuration/PanelConfiguration.qml:680
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Натисніть цю комбінацію клавіш, щоб передати фокус панелі"
 
-#: contents/configuration/PanelConfiguration.qml:688
+#: contents/configuration/PanelConfiguration.qml:687
 #, kde-format
 msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
 msgstr "Засіб встановлення скорочення фокусування"
 
-#: contents/configuration/PanelConfiguration.qml:689
+#: contents/configuration/PanelConfiguration.qml:688
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for button"
 msgid "Button to set the shortcut for the panel to gain focus"
 msgstr "Кнопка для встановлення скорочення для отримання фокусування панеллю"
 
-#: contents/configuration/PanelConfiguration.qml:715
+#: contents/configuration/PanelConfiguration.qml:714
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Вилучити панель"
 
-#: contents/configuration/PanelConfiguration.qml:718
+#: contents/configuration/PanelConfiguration.qml:717
 #, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Remove this panel; this action can be undone"
 msgstr "Вилучити цю панель; наслідки цієї дії можна скасувати"
 
-#: contents/configuration/PanelConfiguration.qml:727
+#: contents/configuration/PanelConfiguration.qml:726
 #, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "Клонувати панель"
 
-#: contents/configuration/PanelConfiguration.qml:731
+#: contents/configuration/PanelConfiguration.qml:730
 #, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Create a new panel with the same settings and applets"
 msgstr "Створити панель із тими самими параметрами і аплетами"
 
-#: contents/configuration/PanelConfiguration.qml:740
+#: contents/configuration/PanelConfiguration.qml:739
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Закрити"
 
-#: contents/configuration/PanelConfiguration.qml:740
+#: contents/configuration/PanelConfiguration.qml:739
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "Вийти з режиму редагування"
 
-#: contents/configuration/PanelConfiguration.qml:743
+#: contents/configuration/PanelConfiguration.qml:742
 #, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Close Panel Settings window and exit Edit Mode"
