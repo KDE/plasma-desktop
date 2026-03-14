@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2023, 2024 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2023, 2024, 2026 Vít Pelčák <vit@pelcak.org>
 # SPDX-FileCopyrightText: 2021, 2022, 2023, 2025 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-28 02:46+0000\n"
-"PO-Revision-Date: 2025-10-01 17:46+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-03-13 11:17+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -46,15 +46,13 @@ msgid "Show in Favorites"
 msgstr "Zobrazit v oblíbených"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Obecné"
 
 #: ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Ikona:"
@@ -130,36 +128,31 @@ msgid "A text label cannot be set when the Panel is vertical."
 msgstr "Pokud je panel svislý, nelze nastavit textový popisek."
 
 #: ConfigGeneral.qml:157
-#, fuzzy, kde-format
-#| msgid "Show applications as:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Zobrazit aplikace jako:"
 
 #: ConfigGeneral.qml:159
-#, fuzzy, kde-format
-#| msgid "Name only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Pouze název"
 
 #: ConfigGeneral.qml:159
-#, fuzzy, kde-format
-#| msgid "Description only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Pouze popis"
 
 #: ConfigGeneral.qml:159
-#, fuzzy, kde-format
-#| msgid "Name (Description)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Název (popis)"
 
 #: ConfigGeneral.qml:159
-#, fuzzy, kde-format
-#| msgid "Description (Name)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Popis (název)"
@@ -187,8 +180,7 @@ msgstr ""
 "stránce oblíbených."
 
 #: ConfigGeneral.qml:181
-#, fuzzy, kde-format
-#| msgid "Use compact list item style"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use compact list item style"
 msgstr "Použít kompaktní styl seznamu položek"
@@ -203,13 +195,13 @@ msgstr "Automaticky zakázáno v dotykovém režimu"
 #, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly installed applications"
-msgstr ""
+msgstr "Zvýraznit nově nainstalované aplikace"
 
 #: ConfigGeneral.qml:200
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
-msgstr ""
+msgstr "Přepínání kategorií postranního panelu při najetí myší"
 
 #: ConfigGeneral.qml:206
 #, kde-format
@@ -218,124 +210,103 @@ msgid "Configure Search Plugins…"
 msgstr "Nastavit pro vyhledávání…"
 
 #: ConfigGeneral.qml:216
-#, fuzzy, kde-format
-#| msgid "Sidebar position:"
+#, kde-format
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr "Pozice postranní lišty:"
 
 #: ConfigGeneral.qml:217 ConfigGeneral.qml:225
-#, fuzzy, kde-format
-#| msgid "Right"
+#, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr "Vpravo"
 
 #: ConfigGeneral.qml:217
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "option:radio sidebar position"
 msgid "Left"
 msgstr "Vlevo"
 
 #: ConfigGeneral.qml:225
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr "Vlevo"
 
 #: ConfigGeneral.qml:233
-#, fuzzy, kde-format
-#| msgid "Show favorites:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
 msgstr "Zobrazit oblíbené:"
 
 #: ConfigGeneral.qml:234
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
-#| msgid "In a grid"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "V mřížce"
 
 #: ConfigGeneral.qml:242
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a list'"
-#| msgid "In a list"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "V seznamu"
 
 #: ConfigGeneral.qml:250
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
 msgstr "Zobrazit ostatní aplikace:"
 
 #: ConfigGeneral.qml:251
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
-#| msgid "In a grid"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "V mřížce"
 
 #: ConfigGeneral.qml:259
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a list'"
-#| msgid "In a list"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "V seznamu"
 
 #: ConfigGeneral.qml:271
-#, fuzzy, kde-format
-#| msgid "Show buttons for:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr "Zobrazit tlačítka pro:"
 
 #: ConfigGeneral.qml:272
-#, fuzzy, kde-format
-#| msgid "Power"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power"
 msgstr "Napájení"
 
 #: ConfigGeneral.qml:281
-#, fuzzy, kde-format
-#| msgid "Session"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "Sezení"
 
 #: ConfigGeneral.qml:290
-#, fuzzy, kde-format
-#| msgid "Power and session"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
 msgstr "Napájení a sezení"
 
 #: ConfigGeneral.qml:299
-#, fuzzy, kde-format
-#| msgid "Show action button captions"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show action button captions"
 msgstr "Zobrazit popisky akčních tlačítek"
 
 #: Footer.qml:101
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@title:tab kickoff sidebar tab"
 msgid "Applications"
 msgstr "Aplikace"
 
 #: Footer.qml:117
-#, fuzzy, kde-format
-#| msgid "Places"
+#, kde-format
 msgctxt "@title:tab kickoff sidebar tab"
 msgid "Places"
 msgstr "Místa"
@@ -347,15 +318,13 @@ msgid "No matches"
 msgstr "Žádné shody"
 
 #: Header.qml:86
-#, fuzzy, kde-format
-#| msgid "Open user settings"
+#, kde-format
 msgctxt "@action:button icon-only, for tooltip/Accessible"
 msgid "Open user settings"
 msgstr "Otevřít nastavení uživatele"
 
 #: Header.qml:266
-#, fuzzy, kde-format
-#| msgid "Keep Open"
+#, kde-format
 msgctxt ""
 "@action:button Pin widget open if it loses focus, icon-only button, for "
 "tooltip/Accessible"
@@ -363,23 +332,19 @@ msgid "Keep Open"
 msgstr "Ponechat otevřené"
 
 #: KickoffGridDelegate.qml:59
-#, fuzzy, kde-format
-#| msgctxt "Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "@label Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "Nové!"
 
 #: KickoffGridDelegate.qml:60
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly installed application"
 msgstr "Zobrazit ostatní aplikace:"
 
 #: KickoffGridView.qml:101
-#, fuzzy, kde-format
-#| msgid "Grid with %1 rows, %2 columns"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Grid with %1 rows, %2 columns"
 msgstr "Mřížka s %1 řádky, %2 sloupci"
@@ -394,32 +359,28 @@ msgstr "Nové!"
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly installed application in this category"
-msgstr ""
+msgstr "V této kategorii je nově nainstalovaná aplikace"
 
 #: KickoffListDelegate.qml:119
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly installed application"
-msgstr "Zobrazit ostatní aplikace:"
+msgstr "Nově instalované aplikace:"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Session"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Session"
 msgstr "Sezení"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Power"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Power"
 msgstr "Napájení"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "More"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "More"
 msgstr "Více"
@@ -428,11 +389,10 @@ msgstr "Více"
 #, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Session and Power"
-msgstr ""
+msgstr "Sezení a napájení"
 
 #: main.qml:357
-#, fuzzy, kde-format
-#| msgid "Edit Applications…"
+#, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
 msgstr "Upravit aplikace…"
