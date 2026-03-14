@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2016, 2023 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2014, 2016, 2023, 2026 Vít Pelčák <vit@pelcak.org>
 # SPDX-FileCopyrightText: 2017, 2019, 2020, 2021, 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2022-02-16 10:11+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-03-12 13:55+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: plasmasearch/kcm.cpp:87
 #, kde-format
@@ -129,6 +129,9 @@ msgid ""
 "author. You can try to uninstall the plugin manually.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Tento plugin neposkytuje odinstalační skript. Kontaktujte prosím autora. "
+"Můžete zkusit plugin odinstalovat ručně.<nl/>Pokud si na to netroufáte nebo "
+"se vám to nelíbí, klikněte nyní na <interface>Zrušit</interface>."
 
 #: plugininstaller/ScriptConfirmationDialog.h:37
 #, kde-kuit-format
@@ -139,6 +142,10 @@ msgid ""
 "the README for instructions from the author.<nl/>If you do not feel capable "
 "or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Tento plugin neposkytuje odinstalační skript. Kontaktujte prosím autora. "
+"Můžete zkusit plugin odinstalovat ručně. Pokyny od autora najdete v souboru "
+"README.<nl/>Pokud si na to netroufáte nebo se vám to nelíbí, klikněte nyní "
+"na <interface>Zrušit</interface>."
 
 #: plugininstaller/ScriptConfirmationDialog.h:43
 #, kde-kuit-format
@@ -148,6 +155,9 @@ msgid ""
 "author. You can try to install the plugin manually.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Tento plugin neposkytuje instalační skript. Kontaktujte prosím autora. "
+"Můžete zkusit plugin nainstalovat ručně.<nl/>Pokud si na to netroufáte nebo "
+"se vám to nelíbí, klikněte nyní na <interface>Zrušit</interface>."
 
 #: plugininstaller/ScriptConfirmationDialog.h:48
 #, kde-kuit-format
@@ -158,6 +168,10 @@ msgid ""
 "the README for instructions from the author.<nl/>If you do not feel capable "
 "or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Tento plugin neobsahuje instalační skript. Kontaktujte prosím autora. Můžete "
+"zkusit plugin nainstalovat ručně. Pokyny od autora najdete v souboru README."
+"<nl/>Pokud si na to netroufáte nebo se vám to nelíbí, klikněte nyní na "
+"<interface>Zrušit</interface>."
 
 #: plugininstaller/ScriptConfirmationDialog.h:54
 #, kde-kuit-format
@@ -168,6 +182,10 @@ msgid ""
 "read the script's source code.<nl/>If you do not feel capable or comfortable "
 "with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Tento plugin používá ke instalaci skript, který může představovat "
+"bezpečnostní riziko. Před instalací prosím zkontrolujte celý obsah pluginu "
+"nebo alespoň si přečtěte zdrojový kód skriptu.<nl/>Pokud se na to necítíte "
+"nebo se vám to nelíbí, klikněte nyní na <interface>Zrušit</interface>."
 
 #: plugininstaller/ScriptConfirmationDialog.h:60
 #, kde-kuit-format
@@ -178,6 +196,11 @@ msgid ""
 "read the README file and the script's source code.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Tento plugin používá ke instalaci skript, který může představovat "
+"bezpečnostní riziko. Před instalací prosím zkontrolujte celý obsah pluginu, "
+"nebo alespoň si přečtěte soubor README a zdrojový kód skriptu.<nl/>Pokud se "
+"na to necítíte nebo se vám to nelíbí, klikněte nyní na <interface>Zrušit</"
+"interface>."
 
 #: plugininstaller/ScriptConfirmationDialog.h:75
 #, kde-format
