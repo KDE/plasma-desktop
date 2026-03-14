@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2020, 2023, 2024 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2020, 2023, 2024, 2026 Vít Pelčák <vit@pelcak.org>
 # SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-28 00:46+0000\n"
-"PO-Revision-Date: 2025-10-02 09:30+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-03-13 11:15+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -24,19 +24,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Location"
-msgstr ""
+msgstr "Místo"
 
 #: package/contents/config/config.qml:24
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Icons"
-msgstr ""
+msgstr "Ikony"
 
 #: package/contents/config/config.qml:31
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Filter"
-msgstr ""
+msgstr "Filtr"
 
 #: package/contents/ui/BackButtonItem.qml:105
 #, kde-format
@@ -48,55 +48,49 @@ msgstr "Zpět"
 #, kde-format
 msgctxt "@label:listbox filter mode"
 msgid "Files:"
-msgstr ""
+msgstr "Soubory:"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@action:inmenu open file manager showing the target file or folder that "
-#| "this link points to"
-#| msgid "Show Target"
+#, kde-format
 msgctxt "@item:inlistbox filter mode"
 msgid "Show all"
-msgstr "Zobrazit cíl"
+msgstr "Ukázat vše"
 
 #: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgctxt "@item:inlistbox filter mode"
 msgid "Show matching"
-msgstr ""
+msgstr "Zobrazovat odpovídající"
 
 #: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgctxt "@item:inlistbox filter mode"
 msgid "Hide matching"
-msgstr ""
+msgstr "Skrýt odpovídající"
 
 #: package/contents/ui/ConfigFilter.qml:69
 #, kde-format
 msgctxt "@label:textbox"
 msgid "File name pattern:"
-msgstr ""
+msgstr "Vzor názvu souborů:"
 
 #: package/contents/ui/ConfigFilter.qml:76
 #, kde-format
 msgctxt "@label:textbox filter list by"
 msgid "File types:"
-msgstr ""
+msgstr "Typy souborů:"
 
 #: package/contents/ui/ConfigFilter.qml:82
 #, kde-format
 msgctxt "@option:check prefix"
 msgid "Show hidden files:"
-msgstr ""
+msgstr "Ukázat skryté soubory:"
 
 #: package/contents/ui/ConfigFilter.qml:111
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox sort icons by file type"
-#| msgid "Type"
+#, kde-format
 msgctxt "@title:column"
 msgid "File Type"
-msgstr "Typ"
+msgstr "Typ souboru"
 
 #: package/contents/ui/ConfigFilter.qml:112
 #, kde-format
@@ -105,35 +99,34 @@ msgid "Description"
 msgstr "Popis"
 
 #: package/contents/ui/ConfigFilter.qml:182
-#, fuzzy, kde-format
-#| msgid "Select Folder"
+#, kde-format
 msgctxt "@action:button tooltip only Select all filetypes"
 msgid "Select All"
-msgstr "Vybrat složku"
+msgstr "Vybrat vše"
 
 #: package/contents/ui/ConfigFilter.qml:192
 #, kde-format
 msgctxt "@action:button tooltip only Deselect all filetypes"
 msgid "Deselect All"
-msgstr ""
+msgstr "Zrušit výběr"
 
 #: package/contents/ui/ConfigFilter.qml:201
 #, kde-format
 msgctxt "@action:button tooltip only, ascending/descending"
 msgid "Switch Sort Order"
-msgstr ""
+msgstr "Přepnout pořadí řazení"
 
 #: package/contents/ui/ConfigIcons.qml:57
 #, kde-format
 msgctxt "@title:group prefix for checkbox + button"
 msgid "Panel button:"
-msgstr ""
+msgstr "Tlačítko panelu:"
 
 #: package/contents/ui/ConfigIcons.qml:63
 #, kde-format
 msgctxt "@option:check"
 msgid "Use a custom icon"
-msgstr ""
+msgstr "Použít vlastní ikonu"
 
 #: package/contents/ui/ConfigIcons.qml:96
 #, kde-format
@@ -148,12 +141,10 @@ msgid "Clear Icon"
 msgstr "Vymazat ikonu"
 
 #: package/contents/ui/ConfigIcons.qml:122
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu arrangement of icons"
-#| msgid "Arrange"
+#, kde-format
 msgctxt "@label:listbox columns/rows"
 msgid "Arrangement:"
-msgstr "Uspořádat"
+msgstr "Uspořádání:"
 
 #: package/contents/ui/ConfigIcons.qml:125
 #, kde-format
@@ -171,7 +162,7 @@ msgstr "V řádcích"
 #, kde-format
 msgctxt "@label:listbox, LtR/RtL"
 msgid "Sort Alignment:"
-msgstr ""
+msgstr "Směr:"
 
 #: package/contents/ui/ConfigIcons.qml:138
 #, kde-format
@@ -189,14 +180,13 @@ msgstr "Zprava doleva"
 #, kde-format
 msgctxt "@option:check lock icon positions"
 msgid "Lock in place"
-msgstr ""
+msgstr "Uzamknout na místě"
 
 #: package/contents/ui/ConfigIcons.qml:175
-#, fuzzy, kde-format
-#| msgid "Sort By"
+#, kde-format
 msgctxt "@label:listbox sort items by field"
 msgid "Sort by:"
-msgstr "Řadit dle"
+msgstr "Seřadit podle:"
 
 #: package/contents/ui/ConfigIcons.qml:183
 #, kde-format
@@ -259,24 +249,19 @@ msgid "Grid"
 msgstr "Mřížka"
 
 #: package/contents/ui/ConfigIcons.qml:234
-#, fuzzy, kde-format
-#| msgid "Icon Size"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Icon size:"
-msgstr "Velikost ikon"
+msgstr "Velikost ikony:"
 
 #: package/contents/ui/ConfigIcons.qml:249
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu size of the icons"
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inrange smallest icon size"
 msgid "Small"
 msgstr "Malá"
 
 #: package/contents/ui/ConfigIcons.qml:258
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu size of the icons"
-#| msgid "Large"
+#, kde-format
 msgctxt "@item:inrange largest icon size"
 msgid "Large"
 msgstr "Velká"
@@ -309,64 +294,61 @@ msgstr "Široký"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Text lines:"
-msgstr ""
+msgstr "Řádky textu:"
 
 #: package/contents/ui/ConfigIcons.qml:296
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "When hovering over icons:"
-msgstr ""
+msgstr "Při přejezdu myší nad ikonami:"
 
 #: package/contents/ui/ConfigIcons.qml:298
 #, kde-format
 msgctxt "@option:check When hovering over icons…"
 msgid "Show tooltips"
-msgstr ""
+msgstr "Zobrazovat nástrojové tipy"
 
 #: package/contents/ui/ConfigIcons.qml:305
 #, kde-format
 msgctxt "@option:check When hovering over icons…"
 msgid "Show selection markers"
-msgstr ""
+msgstr "Zobrazit značkovače výběru"
 
 #: package/contents/ui/ConfigIcons.qml:312
-#, fuzzy, kde-format
-#| msgid "Show Previews"
+#, kde-format
 msgctxt "@option:check When hovering over icons…"
 msgid "Show folder preview popups"
-msgstr "Zobrazit náhled"
+msgstr "Zobrazit náhledy složky"
 
 #: package/contents/ui/ConfigIcons.qml:322
 #, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Rename:"
-msgstr ""
+msgstr "Přejmenovat:"
 
 #: package/contents/ui/ConfigIcons.qml:326
 #, kde-format
 msgctxt "@option:check"
 msgid "Rename inline by clicking selected item's text"
-msgstr ""
+msgstr "Přejmenovat kliknutím na text vybrané položky"
 
 #: package/contents/ui/ConfigIcons.qml:337
-#, fuzzy, kde-format
-#| msgid "Show Previews"
+#, kde-format
 msgctxt "@title:group prefix for checkbox and button"
 msgid "Previews:"
-msgstr "Zobrazit náhled"
+msgstr "Náhledy:"
 
 #: package/contents/ui/ConfigIcons.qml:339
-#, fuzzy, kde-format
-#| msgid "Show Previews"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show preview thumbnails"
-msgstr "Zobrazit náhled"
+msgstr "Zobrazovat miniatury náhledu"
 
 #: package/contents/ui/ConfigIcons.qml:347
 #, kde-format
 msgctxt "@action:button opens dialog"
 msgid "Configure Preview Plugins…"
-msgstr ""
+msgstr "Nastavit moduly náhledu…"
 
 #: package/contents/ui/ConfigLocation.qml:81
 #, kde-format
@@ -444,31 +426,31 @@ msgstr "Zadejte název..."
 #, kde-format
 msgctxt "@action:button tooltip rotate widget"
 msgid "Click and drag to rotate"
-msgstr ""
+msgstr "Rotaci provedete kliknutím a táhnutím"
 
 #: package/contents/ui/ConfigOverlay.qml:183
 #, kde-format
 msgctxt "@action:button tooltip hide widget background"
 msgid "Hide Background"
-msgstr ""
+msgstr "Skrýt pozadí"
 
 #: package/contents/ui/ConfigOverlay.qml:183
 #, kde-format
 msgctxt "@action:button tooltip"
 msgid "Show Background"
-msgstr ""
+msgstr "Zobrazit pozadí"
 
 #: package/contents/ui/ConfigOverlay.qml:231
 #, kde-format
 msgctxt "@action:button tooltip remove widget"
 msgid "Remove"
-msgstr ""
+msgstr "Odstranit"
 
 #: package/contents/ui/FolderItemPreviewPluginsDialog.qml:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Preview Plugins"
-msgstr ""
+msgstr "Moduly pro náhledy"
 
 #: package/contents/ui/FolderView.qml:1236
 #, kde-format
@@ -490,15 +472,13 @@ msgstr "Složka je prázdná"
 #, kde-format
 msgctxt "@item:inmenu opens submenu with view options like sorting"
 msgid "Icons"
-msgstr ""
+msgstr "Ikony"
 
 #: package/contents/ui/main.qml:448
-#, fuzzy, kde-format
-#| msgctxt "@option:radio"
-#| msgid "Desktop folder"
+#, kde-format
 msgctxt "@action:inmenu opens config dialog"
 msgid "Desktop and Wallpaper"
-msgstr "Složka plochy"
+msgstr "Pracovní plocha a tapeta"
 
 #: plugins/folder/directorypicker.cpp:32
 #, kde-format
@@ -521,7 +501,7 @@ msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
 "or folder"
 msgid "Link Target Not Found"
-msgstr ""
+msgstr "Cíl odkazu nebyl nalezen"
 
 #: plugins/folder/foldermodel.cpp:870
 #, kde-kuit-format
@@ -530,6 +510,8 @@ msgid ""
 "<filename>%1</filename> points to <filename>%2</filename>, but that could "
 "not be found. It may have been moved or deleted."
 msgstr ""
+"<filename>%1</filename> odkazuje na <filename>%2</filename>, ale ten nebyl "
+"nalezen. Mohl být přesunut nebo smazán."
 
 #: plugins/folder/foldermodel.cpp:1750
 #, kde-format
@@ -691,7 +673,7 @@ msgstr "V řádcích"
 #: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format
 msgid "Sort Alignment"
-msgstr ""
+msgstr "Směr"
 
 #: plugins/folder/viewpropertiesmenu.cpp:83
 #, kde-format

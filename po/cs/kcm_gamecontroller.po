@@ -1,21 +1,21 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-16 00:45+0000\n"
-"PO-Revision-Date: 2025-12-05 11:00+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-03-12 13:51+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
@@ -53,7 +53,7 @@ msgstr "Kolečko"
 #: device.cpp:20
 #, kde-format
 msgid "Arcade Stick"
-msgstr ""
+msgstr "Arkádová páčka"
 
 #: device.cpp:21
 #, kde-format
@@ -73,17 +73,17 @@ msgstr "Kytara"
 #: device.cpp:24
 #, kde-format
 msgid "Drum Kit"
-msgstr ""
+msgstr "Bicí souprava"
 
 #: device.cpp:25
 #, kde-format
 msgid "Arcade Pad"
-msgstr ""
+msgstr "Arkádový ovladač"
 
 #: device.cpp:26
 #, kde-format
 msgid "Throttle"
-msgstr ""
+msgstr "Plynová páka"
 
 #: device.cpp:31
 #, kde-format
@@ -138,17 +138,17 @@ msgstr "NVidia Shield"
 #: device.cpp:41
 #, kde-format
 msgid "Switch Left Joy-Con"
-msgstr ""
+msgstr "Přepínač levého Joy-Conu"
 
 #: device.cpp:42
 #, kde-format
 msgid "Switch Right Joy-Con"
-msgstr ""
+msgstr "Přepínač pravého Joy-Conu"
 
 #: device.cpp:43
 #, kde-format
 msgid "Switch Paired Joy-Con"
-msgstr ""
+msgstr "Přepínač párového Joy-Conu"
 
 #: device.cpp:48
 #, kde-format
@@ -184,7 +184,7 @@ msgstr "Tlačítko zpět"
 #, kde-format
 msgctxt "The guide game controller button"
 msgid "Guide button"
-msgstr ""
+msgstr "Navigační tlačítko"
 
 #: device.cpp:54
 #, kde-format
@@ -220,25 +220,25 @@ msgstr "Pravé ramenní tlačítko"
 #, kde-format
 msgctxt "The game controller's d-pad Up button"
 msgid "D-pad up button"
-msgstr ""
+msgstr "Tlačítko nahoru na směrovém kříži"
 
 #: device.cpp:60
 #, kde-format
 msgctxt "The game controller's d-pad down button"
 msgid "D-pad down button"
-msgstr ""
+msgstr "Tlačítko dolů na směrovém kříži"
 
 #: device.cpp:61
 #, kde-format
 msgctxt "The game controller's d-pad left button"
 msgid "D-pad left button"
-msgstr ""
+msgstr "Tlačítko vlevo na směrovém kříži"
 
 #: device.cpp:62
 #, kde-format
 msgctxt "The game controller's d-pad right button"
 msgid "D-pad right button"
-msgstr ""
+msgstr "Tlačítko vpravo na směrovém kříži"
 
 #: device.cpp:64
 #, kde-format
@@ -246,31 +246,31 @@ msgctxt ""
 "The game controller's miscellaneous button (Share on Xbox, mic on "
 "Playstation/Luna, capture on Switch)"
 msgid "Miscellaneous button"
-msgstr ""
+msgstr "Různá tlačítka"
 
 #: device.cpp:65
 #, kde-format
 msgctxt "The game controller's 1st paddle button"
 msgid "Paddle button 1"
-msgstr ""
+msgstr "Tlačítko ovladače 1"
 
 #: device.cpp:66
 #, kde-format
 msgctxt "The game controller's 2nd paddle button"
 msgid "Paddle button 2"
-msgstr ""
+msgstr "Tlačítko ovladače 2"
 
 #: device.cpp:67
 #, kde-format
 msgctxt "The game controller's 3rd paddle button"
 msgid "Paddle button 3"
-msgstr ""
+msgstr "Tlačítko ovladače 3"
 
 #: device.cpp:68
 #, kde-format
 msgctxt "The game controller's 4th paddle button"
 msgid "Paddle button 4"
-msgstr ""
+msgstr "Tlačítko ovladače 4"
 
 #: device.cpp:69
 #, kde-format
@@ -316,7 +316,7 @@ msgstr "%1 (%2)"
 #, kde-format
 msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
 msgid "Allow using as pointer and keyboard"
-msgstr ""
+msgstr "Umožnit použití jako kurzor a klávesnice"
 
 #: ui/main.qml:43
 #, kde-kuit-format
@@ -325,19 +325,20 @@ msgid ""
 "Allow game controllers to act like pointer and keyboard devices in Plasma "
 "and non-game applications.<nl/><nl/>Games can always use the controller."
 msgstr ""
+"Umožnit herním ovladačům fungovat jako ukazovací a klávesnicová zařízení v "
+"Plasma a neherních aplikacích.<nl/><nl/>Hry mohou ovladač používat vždy."
 
 #: ui/main.qml:51
-#, fuzzy, kde-format
-#| msgid "Not a controller"
+#, kde-format
 msgctxt "@info placeholdermessage text"
 msgid "No game controllers found"
-msgstr "Není ovladač"
+msgstr "Nebyl nalezen žádný herní ovladač"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "@info:usagetip placeholdermessage text"
 msgid "Connect a wired or wireless controller"
-msgstr ""
+msgstr "Připojit drátový nebo bezdrátový ovladač"
 
 #: ui/main.qml:82
 #, kde-format
@@ -348,6 +349,10 @@ msgid ""
 "controller, or enable automatic blocking by allowing the use as pointer and "
 "keyboard."
 msgstr ""
+"Systém může automaticky přejít do režimu spánku nebo uzamknout obrazovku, "
+"když je ovladač v provozu. Zvažte jejich ruční blokování při používání "
+"ovladače nebo povolte automatické blokování tím, že povolíte použití jako "
+"kurzor a klávesnice."
 
 #: ui/main.qml:97
 #, kde-format
@@ -378,13 +383,13 @@ msgstr "Typ připojení:"
 #, kde-format
 msgctxt "@label Visual representation of the axis position for the left axis"
 msgid "Left position:"
-msgstr ""
+msgstr "Levá pozice:"
 
 #: ui/main.qml:185
 #, kde-format
 msgctxt "@label Visual representation of the axis position for the right axis"
 msgid "Right position:"
-msgstr ""
+msgstr "Pravá pozice:"
 
 #: ui/main.qml:204
 #, kde-format

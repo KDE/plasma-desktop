@@ -1,7 +1,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2013.
-# Vít Pelčák <vit@pelcak.org>, 2015, 2017, 2020.
+# SPDX-FileCopyrightText: 2015, 2017, 2020, 2026 Vít Pelčák <vit@pelcak.org>
 # SPDX-FileCopyrightText: 2021, 2023, 2024 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2024-05-29 11:36+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-03-13 11:07+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: kcmkded.cpp:115
 #, kde-format
@@ -51,6 +51,8 @@ msgid ""
 "If you're disabling something here to work around an issue, please <link "
 "url='%1'>submit a bug report about it as well.</link>"
 msgstr ""
+"Pokud zde něco deaktivujete, abyste vyřešili nějaký problém, <link "
+"url='%1'>zašlete prosím také hlášení o chybě.</link>"
 
 #: ui/main.qml:55
 #, kde-format
@@ -59,6 +61,8 @@ msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
+"Správce služeb na pozadí (kded6) momentálně neběží. Prosím, ujistěte se, že "
+"je správně nainstalován."
 
 #: ui/main.qml:65
 #, kde-format
@@ -67,6 +71,8 @@ msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
+"Některé služby se samy zase vypnou pokud jsou spuštěny manuálně pokud v "
+"současném prostředí nejsou k ničemu."
 
 #: ui/main.qml:75
 #, kde-format
@@ -75,36 +81,38 @@ msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
+"Pro provedení vašich změn byly některé služby automaticky spuštěny/zastaveny "
+"při restartu správce služeb na pozadí (kded6)."
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All Services"
-msgstr ""
+msgstr "Všechny služby"
 
 #: ui/main.qml:124
 #, kde-format
 msgctxt "@item:inlistbox List running services"
 msgid "Running"
-msgstr ""
+msgstr "Spuštěno"
 
 #: ui/main.qml:125
 #, kde-format
 msgctxt "@item:inlistbox List not running services"
 msgid "Not Running"
-msgstr ""
+msgstr "Není spuštěno"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@title:group list section"
 msgid "Startup Services"
-msgstr ""
+msgstr "Služby při spuštění"
 
 #: ui/main.qml:163
 #, kde-format
 msgctxt "@title:group list section"
 msgid "Load-on-Demand Services"
-msgstr ""
+msgstr "Služby na požádání"
 
 #: ui/main.qml:182
 #, kde-format
@@ -119,24 +127,22 @@ msgid "Enable automatically loading %1 on startup"
 msgstr "Povolit automatické spouštění %1 při spuštění"
 
 #: ui/main.qml:183
-#, fuzzy, kde-format
-#| msgctxt "@action:button %1 service name"
-#| msgid "Enable automatically loading %1 on startup"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Toggle automatically loading this service on startup"
-msgstr "Povolit automatické spouštění %1 při spuštění"
+msgstr "Zapnout automatické spouštění této služby při spuštění"
 
 #: ui/main.qml:227
 #, kde-format
 msgctxt "@info:status"
 msgid "Not running"
-msgstr ""
+msgstr "Nespuštěno"
 
 #: ui/main.qml:228
 #, kde-format
 msgctxt "@info:status"
 msgid "Running"
-msgstr ""
+msgstr "Spuštěno"
 
 #: ui/main.qml:248
 #, kde-format
@@ -154,10 +160,10 @@ msgstr "Spustit %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Service"
-msgstr ""
+msgstr "Zastavit službu"
 
 #: ui/main.qml:251
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Service"
-msgstr ""
+msgstr "Spustit službu"

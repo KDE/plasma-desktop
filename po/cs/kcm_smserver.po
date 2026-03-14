@@ -1,6 +1,6 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2010, 2014, 2016, 2019, 2020, 2024 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2010, 2014, 2016, 2019, 2020, 2024, 2026 Vít Pelčák <vit@pelcak.org>
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012.
 # SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
 #
@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2024-08-28 11:24+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-03-12 13:58+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -47,21 +47,21 @@ msgstr "Vyjmout tyto aplikace ze sezení"
 #, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Failed to request restart to firmware setup: %1"
-msgstr ""
+msgstr "Požadavek na restartování do nastavení firmwaru se nezdařil: %1"
 
 #: ui/main.qml:31
 #, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
-msgstr ""
+msgstr "Při dalším restartu počítače bude spuštěno nastavení firmwaru UEFI."
 
 #: ui/main.qml:32
 #, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
-msgstr ""
+msgstr "Při dalším restartu počítače bude spuštěno nastavení firmwaru."
 
 #: ui/main.qml:37
 #, kde-format
@@ -101,7 +101,7 @@ msgstr "Obnovení sezení"
 #, kde-format
 msgctxt "@title:group prefix for radiobuttons"
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "Při přihlášení spustit aplikace, které byly otevřeny:"
 
 #: ui/main.qml:72
 #, kde-format
@@ -124,6 +124,10 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"V nabídce <interface>Spouštěč aplikací</interface> se zobrazí tlačítko "
+"<interface>Uložit relaci</interface>. Po kliknutí na něj si Plasma "
+"zapamatuje otevřené aplikace a při příštím přihlášení je obnoví. Dalším "
+"kliknutím nahradíte sadu zapamatovaných aplikací."
 
 #: ui/main.qml:99
 #, kde-format
@@ -138,7 +142,7 @@ msgstr "Spustit s prázdnou relací"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Ignored applications:"
-msgstr ""
+msgstr "Ignorované aplikace:"
 
 #: ui/main.qml:132
 #, kde-format
@@ -149,6 +153,11 @@ msgid ""
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
+"Zde zadejte identifikátor souboru aplikace na ploše nebo v případě X11 název "
+"spustitelného souboru (oddělené čárkami nebo dvojtečkami, například „xterm:"
+"org.kde.konsole.desktop“ nebo „xterm,org.kde.konsole.desktop“), aby se "
+"zabránilo jejich automatickému spuštění spolu s ostatními aplikacemi "
+"obnovenými v rámci relace."
 
 #: ui/main.qml:138
 #, kde-format
@@ -165,12 +174,10 @@ msgid "After next restart:"
 msgstr "Po následujícím restartu:"
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr "Spustit nastavení firmware"
+msgstr "Spustit nastavení firmware UEFI"
 
 #: ui/main.qml:146
 #, kde-format

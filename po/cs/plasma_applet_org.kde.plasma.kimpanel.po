@@ -1,6 +1,6 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2010, 2011, 2012, 2014, 2015, 2019, 2020.
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2014, 2015, 2019, 2020, 2026 Vít Pelčák <vit@pelcak.org>
 # Lukáš Tinkl <lukas@kde.org>, 2012.
 # Vit Pelcak <vit@pelcak.org>, 2021, 2022.
 #
@@ -9,132 +9,132 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2022-02-16 10:12+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-03-13 11:18+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: qml/ActionMenu.qml:92
 #, kde-format
 msgctxt "@label placeholder for empty menu"
 msgid "(Empty)"
-msgstr ""
+msgstr "(Prázdné)"
 
 #: qml/config.qml:13
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Appearance"
-msgstr ""
+msgstr "Vzhled"
 
 #: qml/ConfigAppearance.qml:31
 #, kde-format
 msgctxt "@title:group for radiobuttons"
 msgid "Input method list:"
-msgstr ""
+msgstr "Seznam vstupních metod:"
 
 #: qml/ConfigAppearance.qml:32
 #, kde-format
 msgctxt "@option:radio IM list orientation"
 msgid "Vertical"
-msgstr ""
+msgstr "Svisle"
 
 #: qml/ConfigAppearance.qml:38
 #, kde-format
 msgctxt "@option:radio IM list orientation"
 msgid "Horizontal"
-msgstr ""
+msgstr "Vodorovně"
 
 #: qml/ConfigAppearance.qml:45
 #, kde-format
 msgctxt "@title group font selection"
 msgid "Font:"
-msgstr ""
+msgstr "Písmo:"
 
 #: qml/ConfigAppearance.qml:51
 #, kde-format
 msgctxt "@option:check use custom font"
 msgid "Use custom:"
-msgstr ""
+msgstr "Použít vlastní:"
 
 #: qml/ConfigAppearance.qml:57
 #, kde-format
 msgctxt "@info The selected font family (%1) and font size (%2)"
 msgid "%1 %2 pt"
-msgstr ""
+msgstr "%1 %2 pt"
 
 #: qml/ConfigAppearance.qml:65
 #, kde-format
 msgctxt "@action:button opens font dialog"
 msgid "Choose Font…"
-msgstr ""
+msgstr "Zvolte písmo...…"
 
 #: qml/ConfigAppearance.qml:78
 #, kde-format
 msgctxt "@title:group The arrangement of icons in the Panel"
 msgid "Panel icon size:"
-msgstr ""
+msgstr "Velikost ikon panelu:"
 
 #: qml/ConfigAppearance.qml:79
 #, kde-format
 msgctxt "@option:radio panel icon size"
 msgid "Small"
-msgstr ""
+msgstr "Malá"
 
 #: qml/ConfigAppearance.qml:87
 #, kde-format
 msgctxt "@option:radio panel icon size"
 msgid "Scale with Panel height"
-msgstr ""
+msgstr "Měnit s výškou panelu"
 
 #: qml/ConfigAppearance.qml:88
 #, kde-format
 msgctxt "@option:radio panel icon size"
 msgid "Scale with Panel width"
-msgstr ""
+msgstr "Měnit s šířkou panelu"
 
 #: qml/ConfigAppearance.qml:96
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Font"
-msgstr "Vyberte písmo"
+msgstr "Vybrat písmo"
 
 #: qml/ContextMenu.qml:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show"
-msgstr ""
+msgstr "Zobrazit"
 
 #: qml/ContextMenu.qml:111
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide %1"
-msgstr ""
+msgstr "Skrýt %1"
 
 #: qml/ContextMenu.qml:120
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Input Method"
-msgstr ""
+msgstr "Nastavit vstupní metodu"
 
 #: qml/ContextMenu.qml:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Reload Config"
-msgstr ""
+msgstr "Znovu načíst nastavení"
 
 #: qml/ContextMenu.qml:136
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Exit Input Method"
-msgstr ""
+msgstr "Ukončit vstupní metodu"
 
 #: qml/main.qml:254
 #, kde-format
 msgctxt "@label placeholder for missing label"
 msgid "Input Method Panel"
-msgstr ""
+msgstr "Panel vstupních metod"
