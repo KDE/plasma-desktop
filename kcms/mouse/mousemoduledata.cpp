@@ -12,12 +12,16 @@ MouseModuleData::MouseModuleData(QObject *parent)
     : KCModuleData(parent)
 {
     m_backend = InputBackend::create();
+    if (!m_backend) {
+        return;
+    }
     connect(m_backend.get(), &InputBackend::inputDevicesChanged, this, &MouseModuleData::updateRelevance);
     updateRelevance();
 }
 
 void MouseModuleData::updateRelevance()
 {
+    Q_ASSERT(m_backend);
     bool relevant = m_backend->deviceCount() > 0;
     setRelevant(relevant);
 }
