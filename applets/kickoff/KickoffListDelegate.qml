@@ -22,7 +22,7 @@ import org.kde.plasma.plasmoid
 AbstractKickoffItemDelegate {
     id: root
 
-    property bool compact: Kirigami.Settings.tabletMode ? false : Plasmoid.configuration.compactMode
+    property bool compact: Plasmoid.configuration.compactMode
 
     leftPadding: KickoffSingleton.listItemMetrics.margins.left
         + (mirrored ? KickoffSingleton.fontMetrics.descent : 0)

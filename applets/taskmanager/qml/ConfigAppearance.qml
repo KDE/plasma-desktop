@@ -174,28 +174,15 @@ KCMUtils.SimpleKCM {
             ]
 
             textRole: "label"
-            enabled: !Kirigami.Settings.tabletMode
 
-            currentIndex: {
-                if (Kirigami.Settings.tabletMode) {
-                    return 2; // Large
-                }
-
-                switch (root.cfg_iconSpacing) {
-                    case 0: return 0; // Small
-                    case 1: return 1; // Normal
-                    case 3: return 2; // Large
-                }
+            currentIndex: switch (root.cfg_iconSpacing) {
+                case 0: return 0; // Small
+                case 1: return 1; // Normal
+                case 3: return 2; // Large
             }
             onActivated: index => {
                 root.cfg_iconSpacing = model[currentIndex]["spacing"];
             }
-        }
-
-        QQC2.Label {
-            visible: Kirigami.Settings.tabletMode
-            text: i18nc("@info:usagetip under a set of radio buttons when Touch Mode is on", "Automatically set to Large when in Touch mode")
-            font: Kirigami.Theme.smallFont
         }
     }
 }
