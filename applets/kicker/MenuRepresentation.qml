@@ -140,6 +140,7 @@ PlasmaComponents3.ScrollView {
                 anchors.fill: parent
 
                 PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
+                contentWidth: availableWidth
 
                 readonly property int actualScrollBarWidth: scrollBarVisible ? sideBarScrollView.PlasmaComponents3.ScrollBar.vertical.width : 0
                 property bool scrollBarVisible
