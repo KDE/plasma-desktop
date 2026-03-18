@@ -147,6 +147,7 @@ PlasmaComponents3.ScrollView {
 
                 PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
                 PlasmaComponents3.ScrollBar.vertical.visible: sideBarScrollView.contentHeight > Math.round(Screen.height * 0.8)
+                contentWidth: availableWidth
 
                 function ensureVisible(item: Item) {
                     let flickable = (contentItem as Flickable)
