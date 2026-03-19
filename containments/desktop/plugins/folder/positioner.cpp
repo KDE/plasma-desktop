@@ -816,7 +816,9 @@ void Positioner::sourceLayoutChanged(const QList<QPersistentModelIndex> &parents
 {
     Q_UNUSED(parents)
 
-    if (m_enabled) {
+    // Only reinitialize maps when in sorted mode. In unsorted mode, we want to preserve
+    // manual icon positions even after layout changes (e.g., after drag and drop).
+    if (m_enabled && m_folderModel->sortMode() != -1) {
         initMaps();
     }
 
