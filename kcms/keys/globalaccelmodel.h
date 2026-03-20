@@ -46,6 +46,7 @@ private:
     Component loadComponent(const QList<KGlobalShortcutInfo> &info);
     void removeComponent(const Component &component);
     void genericErrorOccured(const QString &description, const QDBusError &error);
+    bool saveAction(const Component &component, const Action &action, const QSet<QKeySequence> &shortcutsToSave);
 
     QList<Component> m_pendingComponents;
     KGlobalAccelInterface *m_globalAccelInterface;

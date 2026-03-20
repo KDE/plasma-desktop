@@ -231,35 +231,59 @@ void GlobalAccelModel::save()
         removeComponent(*component);
     }
 
-    for (auto it = m_components.rbegin(); it != m_components.rend(); ++it) {
-        for (auto &action : it->actions) {
+    // removing the keys first ensures there are no temporary conflicts
+    for (auto &component : m_components) {
+        for (auto &action : component.actions) {
             if (action.initialShortcuts != action.activeShortcuts) {
-                const QStringList actionId = buildActionId(it->id, it->displayName, action.id, action.displayName);
-                // TODO: pass action.activeShortcuts to m_globalAccelInterface->setForeignShortcut() as a QSet<QKeySequence>
-                // or QList<QKeySequence>?
-                QList<QKeySequence> keys;
-                keys.reserve(action.activeShortcuts.size());
-                for (const QKeySequence &key : std::as_const(action.activeShortcuts)) {
-                    keys.append(key);
-                }
-                qCDebug(KCMKEYS) << "Saving" << actionId << action.activeShortcuts << keys;
-                auto reply = m_globalAccelInterface->setForeignShortcutKeys(actionId, keys);
-                reply.waitForFinished();
-                if (!reply.isValid()) {
-                    qCCritical(KCMKEYS) << "Error while saving";
-                    if (reply.error().isValid()) {
-                        qCCritical(KCMKEYS) << reply.error().name() << reply.error().message();
+                QSet<QKeySequence> removed = action.initialShortcuts - action.activeShortcuts;
+                if (!removed.isEmpty()) {
+                    QSet<QKeySequence> unchangedShortcuts = action.activeShortcuts & action.initialShortcuts;
+                    bool shortcutsApplied = saveAction(component, action, unchangedShortcuts);
+                    if (shortcutsApplied) {
+                        action.initialShortcuts = unchangedShortcuts;
                     }
-                    Q_EMIT errorOccured(i18nc("%1 is the name of the component, %2 is the action for which saving failed",
-                                              "Error while saving shortcut %1: %2",
-                                              it->displayName,
-                                              it->displayName));
-                } else {
+                }
+            }
+        }
+    }
+
+    for (auto &component : m_components) {
+        for (auto &action : component.actions) {
+            if (action.initialShortcuts != action.activeShortcuts) {
+                bool shortcutsApplied = saveAction(component, action, action.activeShortcuts);
+                if (shortcutsApplied) {
                     action.initialShortcuts = action.activeShortcuts;
                 }
             }
         }
     }
+}
+
+bool GlobalAccelModel::saveAction(const Component &component, const Action &action, const QSet<QKeySequence> &shortcutsToSave)
+{
+    const QStringList actionId = buildActionId(component.id, component.displayName, action.id, action.displayName);
+    // TODO: pass action.activeShortcuts to m_globalAccelInterface->setForeignShortcut() as a QSet<QKeySequence>
+    // or QList<QKeySequence>?
+    QList<QKeySequence> keys;
+    keys.reserve(shortcutsToSave.size());
+    for (const QKeySequence &key : shortcutsToSave) {
+        keys.append(key);
+    }
+    qCDebug(KCMKEYS) << "Saving" << actionId << "target" << action.activeShortcuts << "applying" << keys;
+    auto reply = m_globalAccelInterface->setForeignShortcutKeys(actionId, keys);
+    reply.waitForFinished();
+    if (!reply.isValid()) {
+        qCCritical(KCMKEYS) << "Error while saving";
+        if (reply.error().isValid()) {
+            qCCritical(KCMKEYS) << reply.error().name() << reply.error().message();
+        }
+        Q_EMIT errorOccured(i18nc("%1 is the name of the component, %2 is the action for which saving failed",
+                                  "Error while saving shortcut %1: %2",
+                                  component.displayName,
+                                  action.displayName));
+        return false;
+    }
+    return true;
 }
 
 bool GlobalAccelModel::isValid() const
