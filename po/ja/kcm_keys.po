@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-13 02:40+0000\n"
+"POT-Creation-Date: 2026-03-21 02:43+0000\n"
 "PO-Revision-Date: 2026-02-20 17:29+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -45,21 +45,21 @@ msgctxt "@item:intable"
 msgid "Plasma Workspace"
 msgstr "Plasma ワークスペース"
 
-#: globalaccelmodel.cpp:254
+#: globalaccelmodel.cpp:281
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
 msgstr "ショートカット %1 の保存中にエラーが発生しました: %2"
 
-#: globalaccelmodel.cpp:371
+#: globalaccelmodel.cpp:395
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr ""
 "%1 の追加中にエラーが発生しました。アクションが設定されていないようです。"
 
-#: globalaccelmodel.cpp:445
+#: globalaccelmodel.cpp:469
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "グローバルショートカットサービスとのやり取り中にエラーが発生しました"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-13 02:40+0000\n"
+"POT-Creation-Date: 2026-03-21 02:43+0000\n"
 "PO-Revision-Date: 2026-02-01 17:43+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -45,20 +45,20 @@ msgctxt "@item:intable"
 msgid "Plasma Workspace"
 msgstr "பிளாஸ்மா பணிமேடை"
 
-#: globalaccelmodel.cpp:254
+#: globalaccelmodel.cpp:281
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
 msgstr "%1: %2 என்ற சுருக்குவழியை சேமிப்பதில் சிக்கல்"
 
-#: globalaccelmodel.cpp:371
+#: globalaccelmodel.cpp:395
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "%1 தனை சேர்ப்பதில் சிக்கல்; அதற்கான எந்த செயல்களும் இல்லை."
 
-#: globalaccelmodel.cpp:445
+#: globalaccelmodel.cpp:469
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "பொது சுருக்குவழி சேவையை தொடர்பு கொள்வதில் சிக்கல்"

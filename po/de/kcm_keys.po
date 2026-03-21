@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-13 02:40+0000\n"
+"POT-Creation-Date: 2026-03-21 02:43+0000\n"
 "PO-Revision-Date: 2026-01-09 22:49+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -50,20 +50,20 @@ msgctxt "@item:intable"
 msgid "Plasma Workspace"
 msgstr "Plasma-Arbeitsbereich"
 
-#: globalaccelmodel.cpp:254
+#: globalaccelmodel.cpp:281
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
 msgstr "Fehler beim Speichern des Kurzbefehls %1: %2"
 
-#: globalaccelmodel.cpp:371
+#: globalaccelmodel.cpp:395
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "Fehler beim Hinzufügen von %1, es gibt anscheinen keine Aktionen."
 
-#: globalaccelmodel.cpp:445
+#: globalaccelmodel.cpp:469
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Fehler bei der Kommunikation mit dem Dienst für globale Kurzbefehle"

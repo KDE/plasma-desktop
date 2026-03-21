@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-13 02:40+0000\n"
+"POT-Creation-Date: 2026-03-21 02:43+0000\n"
 "PO-Revision-Date: 2026-01-20 19:44+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -48,14 +48,14 @@ msgctxt "@item:intable"
 msgid "Plasma Workspace"
 msgstr "Среда рабочего стола Plasma"
 
-#: globalaccelmodel.cpp:254
+#: globalaccelmodel.cpp:281
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
 msgstr "Не удалось сохранить комбинацию для %1: %2"
 
-#: globalaccelmodel.cpp:371
+#: globalaccelmodel.cpp:395
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
@@ -63,7 +63,7 @@ msgstr ""
 "Не удалось добавить «%1», вероятно, это приложение не содержит назначенных "
 "действий."
 
-#: globalaccelmodel.cpp:445
+#: globalaccelmodel.cpp:469
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Ошибка обмена данными с глобальной службой комбинаций клавиш"
