@@ -52,7 +52,7 @@ PlasmaComponents3.ScrollView {
     }
 
     function subMenuForCurrentItem(focusOnSpawn=false) {
-        if (!kicker.expanded || !itemList.model || itemList.currentIndex === -1) {
+        if (!kicker.expanded || !itemList.model || itemList.currentIndex === -1 || ActionMenu.opened) {
             return;
         }
         if (itemList && !(itemList.currentItem as ItemListDelegate).hasChildren) {
@@ -93,12 +93,13 @@ PlasmaComponents3.ScrollView {
 
     onHoveredChanged: {
         Qt.callLater( () =>{
-            if (hovered) {
+            if (ActionMenu.opened) {
+                return
+            } else if (hovered) {
                 resetIndexTimer.stop();
             } else if (itemList.childDialog && listView.currentIndex != itemList.childDialog?.index) {
                 listView.currentIndex = childDialog.index
-            } else if ((!itemList.childDialog || !itemList.dialog)
-                && (!itemList.currentItem || !(itemList.currentItem as ItemListDelegate).menu.opened)) {
+            } else if ((!itemList.childDialog || !itemList.dialog) && !itemList.currentItem) {
                 resetIndexTimer.start();
             }
         })
@@ -154,7 +155,7 @@ PlasmaComponents3.ScrollView {
             hoverEnabled: itemList.hoverEnabled
             onInteractionConcluded: itemList.interactionConcluded()
             onHoveredChanged: {
-                if (hovered & !isSeparator) {
+                if (hovered && !isSeparator && !ActionMenu.opened) {
                     listView.currentIndex = index
                     itemList.forceActiveFocus()
                     dialogSpawnTimer.restart()
@@ -197,7 +198,7 @@ PlasmaComponents3.ScrollView {
         }
 
         Connections {
-            target: (listView.currentItem as ItemListDelegate)?.menu ?? null
+            target: ActionMenu
             function onClosed() {
                 resetIndexTimer.restart()
             }

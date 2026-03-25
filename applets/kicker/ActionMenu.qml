@@ -5,17 +5,20 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-
+pragma Singleton
 pragma ComponentBehavior: Bound
 
 import QtQuick
 
 import org.kde.plasma.extras as PlasmaExtras
 
+import "code/tools.js" as Tools
+
 QtObject {
     id: root
 
     property Item visualParent
+    property ItemAbstractDelegate delegate
 
     // See tools.js for a list of possible members
     property var actionList
@@ -34,6 +37,12 @@ QtObject {
     onOpenedChanged: {
         if (!opened) {
             closed();
+        }
+    }
+
+    function triggerAction(actionId: string, actionArgument: var): void {
+        if (Tools.triggerAction(delegate.baseModel, delegate.index, actionId, actionArgument) === true) {
+            delegate.interactionConcluded()
         }
     }
 
@@ -116,7 +125,7 @@ QtObject {
                 checked   : actionItem.checked ?? false
 
                 onClicked: {
-                    root.actionClicked(actionItem.actionId, actionItem.actionArgument);
+                    root.triggerAction(actionItem.actionId, actionItem.actionArgument);
                 }
             }
         }

@@ -28,8 +28,6 @@ PlasmaComponents3.ItemDelegate {
     required property var favoritesModel
     required property var baseModel
 
-    readonly property ActionMenu menu: actionMenu
-
     property bool dialogDefaultRight: Application.layoutDirection !== Qt.RightToLeft
 
     signal interactionConcluded
@@ -40,22 +38,13 @@ PlasmaComponents3.ItemDelegate {
 
     function openActionMenu(x: real, y: real) : void {
         const actionList = item.hasActionList ? item.actionList : [];
-        Tools.fillActionMenu(i18n, actionMenu, actionList, item.favoritesModel, item.favoriteId);
-        if (!actionMenu.actionList.length) {
+        Tools.fillActionMenu(i18n, ActionMenu, actionList, item.favoritesModel, item.favoriteId);
+        if (!ActionMenu.actionList.length) {
             return
         }
-        actionMenu.visualParent = item;
-        actionMenu.open(x, y);
-    }
-
-    ActionMenu {
-        id: actionMenu
-
-        onActionClicked: (actionId, actionArgument) => {
-            if (Tools.triggerAction(item.baseModel, item.index, actionId, actionArgument) === true) {
-                item.interactionConcluded()
-            }
-        }
+        ActionMenu.visualParent = item;
+        ActionMenu.delegate = item;
+        ActionMenu.open(x, y);
     }
 
     MouseArea {

@@ -92,14 +92,6 @@ FocusScope {
         gridView.forceLayout();
     }
 
-    ActionMenu {
-        id: actionMenu
-
-        onActionClicked: (actionId, actionArgument) => {
-            visualParent.actionTriggered(actionId, actionArgument);
-        }
-    }
-
     DropArea {
         id: dropArea
 
@@ -236,12 +228,19 @@ FocusScope {
                     onInteractionConcluded: itemGrid.interactionConcluded()
                     hoverEnabled: itemGrid.hoverEnabled
                     onHoveredChanged: {
-                        if (hovered) {
+                        if (hovered && !ActionMenu.opened) {
                             gridView.currentIndex = index
-                        } else {
-                            if (GridView.isCurrentItem && !actionMenu.opened) {
+                        } else if (GridView.isCurrentItem && !ActionMenu.opened) {
                                 gridView.currentIndex = -1;
-                            }
+                        }
+                    }
+                }
+
+                Connections {
+                    target: ActionMenu
+                    function onClosed() {
+                        if (!gridView.currentItem.hovered) {
+                            gridView.currentIndex = -1;
                         }
                     }
                 }

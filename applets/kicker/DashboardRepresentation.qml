@@ -853,7 +853,7 @@ Kicker.DashboardWindow {
                             onClicked: ListView.view.applyFilter()
 
                             onHoveredChanged: {
-                                if (hovered && !isSeparator) {
+                                if (hovered && !isSeparator && !ActionMenu.opened) {
                                     filterList.currentIndex = index
                                     filterList.forceActiveFocus()
                                     switchFilterTimer.restart()
