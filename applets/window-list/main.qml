@@ -64,7 +64,7 @@ PlasmoidItem {
     TaskManager.TasksModel {
         id: tasksModel
 
-        screenGeometry: Plasmoid.containment.screenGeometry
+        screenGeometry: Qt.rect(Screen.virtualX, Screen.virtualY, Screen.width, Screen.height)
         activity: activityInfo.currentActivity
 
         sortMode: Plasmoid.configuration.sortingStrategy

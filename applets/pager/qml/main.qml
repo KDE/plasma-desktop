@@ -142,7 +142,7 @@ PlasmoidItem {
 
         showOnlyCurrentScreen: Plasmoid.configuration.showOnlyCurrentScreen
         screenName: root.Screen.name
-        screenGeometry: Plasmoid.containment.screenGeometry
+        screenGeometry: Qt.rect(Screen.virtualX, Screen.virtualY, Screen.width, Screen.height)
 
         pagerType: root.isActivityPager ? PagerModel.Activities : PagerModel.VirtualDesktops
     }
