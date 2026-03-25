@@ -154,7 +154,7 @@ PlasmoidItem {
             return launcherCount + startupsWithLaunchers;
         }
 
-        screenGeometry: Plasmoid.containment.screenGeometry
+        screenGeometry: Qt.rect(Screen.virtualX, Screen.virtualY, Screen.width, Screen.height)
         activity: activityInfo.currentActivity
 
         filterByCurrentVirtualDesktop: Plasmoid.configuration.showOnlyCurrentDesktop
