@@ -76,7 +76,11 @@ EmptyPage {
         }
 
         readonly property int columns: Math.floor(availableWidth() / cellWidth)
-        readonly property int rows: Math.floor(availableHeight() / cellHeight)
+        property int rows
+        Binding on rows {
+            value: Math.floor(view.availableHeight() / view.cellHeight)
+            delayed: true
+        }
         property bool movedWithKeyboard: false
         property bool movedWithWheel: false
 

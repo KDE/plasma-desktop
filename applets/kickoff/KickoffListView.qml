@@ -257,7 +257,7 @@ EmptyPage {
                     case Qt.Key_Up: if (!atFirst) {
                         decrementCurrentIndex()
 
-                        if ((currentItem as AbstractKickoffItemDelegate).isSeparator) {
+                        if ((currentItem as AbstractKickoffItemDelegate)?.isSeparator) {
                             decrementCurrentIndex()
                         }
 
@@ -270,7 +270,7 @@ EmptyPage {
                     case Qt.Key_Down: if (!atLast) {
                         incrementCurrentIndex()
 
-                        if ((currentItem as AbstractKickoffItemDelegate).isSeparator) {
+                        if ((currentItem as AbstractKickoffItemDelegate)?.isSeparator) {
                             incrementCurrentIndex()
                         }
 

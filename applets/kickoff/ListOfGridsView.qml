@@ -16,7 +16,7 @@ KickoffListView {
     required property Kicker.AppsModel gridModel
 
     highlight: null // highlight off since it otherwise highlights a whole section
-    model: gridModel.sections
+    model: gridModel?.sections ?? null // avoid error while page is switched
     section.property: "section"
     delegate: ListOfGridsViewDelegate {
         id: delegate
@@ -41,7 +41,7 @@ KickoffListView {
             function trigger(row, actionId, argument) {
                 const filteredIndex = sectionModel.index(row, 0)
                 const sourceIndex = sectionModel.mapToSource(filteredIndex)
-                (sourceModel as Kicker.AppsModel).trigger(sourceIndex.row, actionId, argument)
+                root.gridModel.trigger(sourceIndex.row, actionId, argument)
             }
         }
         onShowSectionView: sectionName => {
