@@ -30,14 +30,12 @@ PlasmaComponents.ScrollView {
     signal keyNavUp()
     signal keyNavDown()
 
-    property bool grabFocus: false
-
     property int cellSize
     property int iconSize
     property alias model: repeater.model
     property alias count: repeater.count
     property alias flickableItem: flickable
-    property var firstGrid
+    property ItemGridView firstGrid
 
     function subGridAt(index) {
         let subgrid = repeater.itemAt(index)
@@ -54,9 +52,6 @@ PlasmaComponents.ScrollView {
                 if (!foundAny) {
                     itemMultiGrid.firstGrid = grid
                     grid.currentIndex = 0
-                    if (itemMultiGrid.grabFocus) {
-                        grid.focus = true
-                    }
                     foundAny = true
                 } else {
                     grid.currentIndex = -1
@@ -103,7 +98,6 @@ PlasmaComponents.ScrollView {
 
         flickableDirection: Flickable.VerticalFlick
         contentHeight: itemColumn.implicitHeight
-        //focusPolicy: Qt.NoFocus
 
         Column {
             id: itemColumn
@@ -121,11 +115,11 @@ PlasmaComponents.ScrollView {
                     width: itemColumn.width - Kirigami.Units.gridUnit
                     height: headerHeight + gridView.height + (index == repeater.count - 1 ? 0 : footerHeight)
 
-                    property int headerHeight: (gridViewLabel.height
+                    readonly property int headerHeight: (gridViewLabel.height
                         + gridViewLabelUnderline.height + Kirigami.Units.gridUnit)
-                    property int footerHeight: (Math.ceil(headerHeight / itemMultiGrid.cellSize) * itemMultiGrid.cellSize) - headerHeight
+                    readonly property int footerHeight: (Math.ceil(headerHeight / itemMultiGrid.cellSize) * itemMultiGrid.cellSize) - headerHeight
 
-                    property Item itemGrid: gridView
+                    property alias itemGrid: gridView
                     visible: gridView.count > 0
 
                     Kirigami.Heading {
@@ -160,11 +154,8 @@ PlasmaComponents.ScrollView {
                         elementId: "horizontal-line"
                     }
 
-                    MouseArea {
-                        width: parent.width
-                        height: parent.height
-
-                        onClicked: itemMultiGrid.interactionConcluded()
+                    TapHandler {
+                        onTapped: itemMultiGrid.interactionConcluded()
                     }
 
                     ItemGridView {
@@ -182,8 +173,6 @@ PlasmaComponents.ScrollView {
                         cellHeight: itemMultiGrid.cellSize
                         iconSize: itemMultiGrid.iconSize
                         hoverEnabled: itemMultiGrid.hoverEnabled
-
-                        verticalScrollBarPolicy: PlasmaComponents.ScrollBar.AlwaysOff
 
                         model: repeater.model.modelForRow(gridDelegate.index)
 

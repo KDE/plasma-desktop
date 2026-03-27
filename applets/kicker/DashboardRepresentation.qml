@@ -28,15 +28,15 @@ Kicker.DashboardWindow {
     required property Kicker.RootModel rootModel
     required property Kicker.RunnerModel runnerModel
 
-    property bool smallScreen: ((Math.floor(width / Kirigami.Units.iconSizes.huge) <= 22) || (Math.floor(height / Kirigami.Units.iconSizes.huge) <= 14))
+    readonly property bool smallScreen: ((Math.floor(width / Kirigami.Units.iconSizes.huge) <= 22) || (Math.floor(height / Kirigami.Units.iconSizes.huge) <= 14))
 
-    property int iconSize: smallScreen ? Kirigami.Units.iconSizes.large : Kirigami.Units.iconSizes.huge
-    property int cellSize: iconSize + (2 * Kirigami.Units.iconSizes.sizeForLabels)
+    readonly property int iconSize: smallScreen ? Kirigami.Units.iconSizes.large : Kirigami.Units.iconSizes.huge
+    readonly property int cellSize: iconSize + (2 * Kirigami.Units.iconSizes.sizeForLabels)
         + (2 * Kirigami.Units.smallSpacing)
         + (2 * Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
                         highlightItemSvg.margins.left + highlightItemSvg.margins.right))
-    property int columns: Math.floor(((smallScreen ? 85 : 80)/100) * Math.ceil(width / cellSize))
-    property bool searching: searchField.text !== ""
+    readonly property int columns: Math.floor(((smallScreen ? 85 : 80)/100) * Math.ceil(width / cellSize))
+    readonly property bool searching: searchField.text !== ""
 
     signal interactionConcluded()
 
@@ -219,10 +219,6 @@ Kicker.DashboardWindow {
             }
         }
 
-        Kicker.ContainmentInterface {
-            id: containmentInterface
-        }
-
         PlasmaExtras.SearchField {
             id: searchField
 
@@ -403,7 +399,7 @@ Kicker.DashboardWindow {
                         topMargin: Kirigami.Units.gridUnit
                     }
 
-                    property int rows: (Math.floor((parent.height - favoritesColumnLabel.height
+                    readonly property int rows: (Math.floor((parent.height - favoritesColumnLabel.height
                         - favoritesColumnLabelUnderline.height - Kirigami.Units.gridUnit) / root.cellSize)
                         - systemFavoritesGrid.rows)
 
@@ -456,7 +452,7 @@ Kicker.DashboardWindow {
                         top: globalFavoritesGrid.bottom
                     }
 
-                    property int rows: Math.ceil(count / Math.floor(width / root.cellSize))
+                    readonly property int rows: Math.ceil(count / Math.floor(width / root.cellSize))
 
                     width: parent.width
                     height: rows * root.cellSize
@@ -540,7 +536,7 @@ Kicker.DashboardWindow {
                 width: (columns * root.cellSize) + Kirigami.Units.gridUnit
                 height: Math.floor(parent.height / root.cellSize) * root.cellSize + mainGridContainer.headerHeight
 
-                property int columns: root.columns - favoritesColumn.columns - filterListColumn.columns
+                readonly property int columns: root.columns - favoritesColumn.columns - filterListColumn.columns
                 property Item visibleGrid: mainGrid
 
                 function tryActivate(row, col) {
@@ -557,7 +553,7 @@ Kicker.DashboardWindow {
 
                     visible: opacity !== 0.0
 
-                    property int headerHeight: mainColumnLabel.height + mainColumnLabelUnderline.height + Kirigami.Units.gridUnit
+                    readonly property int headerHeight: mainColumnLabel.height + mainColumnLabelUnderline.height + Kirigami.Units.gridUnit
 
                     opacity: {
                         if (root.searching) {
@@ -730,7 +726,6 @@ Kicker.DashboardWindow {
                     model: root.runnerModel
 
                     hoverEnabled: !hoverBlock.enabled
-                    grabFocus: false
 
                     opacity: root.searching ? 1.0 : 0.0
 

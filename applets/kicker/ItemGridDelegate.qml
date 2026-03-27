@@ -14,7 +14,6 @@ ItemAbstractDelegate {
     id: item
 
     property alias iconSize: icon.implicitWidth
-    property bool showLabel: true
     property int itemIndex: item.index
     property var m: model
 
@@ -78,7 +77,6 @@ ItemAbstractDelegate {
         PlasmaComponents3.Label {
             id: label
 
-            visible: item.showLabel
             Layout.fillWidth: true
             Layout.preferredHeight: label.lineCount === 1 ? label.implicitHeight * 2 : label.implicitHeight
 

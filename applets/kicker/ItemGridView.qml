@@ -22,11 +22,9 @@ FocusScope {
 
     signal interactionConcluded()
 
-    property bool dragEnabled: true
     property bool dropEnabled: false
-    property bool showLabels: true
     property bool hoverEnabled: true
-    property var view: gridView
+    property GridView view: gridView
 
     property alias currentIndex: gridView.currentIndex
     property alias currentItem: gridView.currentItem
@@ -37,9 +35,6 @@ FocusScope {
     property alias cellWidth: gridView.cellWidth
     property alias cellHeight: gridView.cellHeight
     property alias iconSize: gridView.iconSize
-
-    property var horizontalScrollBarPolicy: PlasmaComponents.ScrollBar.AlwaysOff
-    property var verticalScrollBarPolicy: PlasmaComponents.ScrollBar.AsNeeded
 
     onDropEnabledChanged: {
         if (!dropEnabled && "dropPlaceHolderIndex" in model) {
@@ -171,7 +166,7 @@ FocusScope {
 
             focus: true
 
-            PlasmaComponents.ScrollBar.horizontal.policy: itemGrid.horizontalScrollBarPolicy
+            PlasmaComponents.ScrollBar.horizontal.policy: PlasmaComponents.ScrollBar.AlwaysOff
 
             GridView {
                 id: gridView
@@ -223,7 +218,6 @@ FocusScope {
                 boundsBehavior: Flickable.StopAtBounds
 
                 delegate: ItemGridDelegate {
-                    showLabel: itemGrid.showLabels
                     iconSize: gridView.iconSize
                     onInteractionConcluded: itemGrid.interactionConcluded()
                     hoverEnabled: itemGrid.hoverEnabled
