@@ -28,13 +28,18 @@ ItemAbstractDelegate {
     Accessible.role: Accessible.MenuItem
     Accessible.name: model.display ?? ""
 
+    Keys.onReturnPressed: activate()
+    Keys.onEnterPressed: activate()
+
+    function activate(): void {
+        item.baseModel.trigger(index, "", null);
+        item.interactionConcluded()
+    }
+
     TapHandler {
         // dedicated tapHandler as ItemDelegate's clicked conflicts with DragHandler
         id: tapHandler
-        onTapped: {
-            item.baseModel.trigger(index, "", null);
-            item.interactionConcluded()
-        }
+        onTapped: activate()
     }
 
     DragHandler {

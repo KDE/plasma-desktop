@@ -79,6 +79,4 @@ PlasmaComponents3.ItemDelegate {
             item.openActionMenu()
         }
     }
-    Keys.onReturnPressed: item.clicked()
-    Keys.onEnterPressed: Keys.returnPressed()
 }

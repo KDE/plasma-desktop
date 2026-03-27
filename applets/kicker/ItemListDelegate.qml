@@ -44,6 +44,9 @@ ItemAbstractDelegate {
         }
     }
 
+    Keys.onReturnPressed: item.clicked()
+    Keys.onEnterPressed: item.clicked()
+
     contentItem: RowLayout {
         id: row
 
