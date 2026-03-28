@@ -38,7 +38,7 @@ ItemAbstractDelegate {
     }
 
     onClicked: {
-        if (!item.hasChildren) {
+        if (!item.hasChildren && !dragHandler.active) {
             item.baseModel.trigger(index, "", null);
             item.interactionConcluded()
         }
@@ -119,6 +119,7 @@ ItemAbstractDelegate {
     }
 
     DragHandler {
+        id: dragHandler
         target: null
         onActiveChanged: {
             if (active && item.url) {
