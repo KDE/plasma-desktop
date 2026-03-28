@@ -10,6 +10,8 @@ import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
 import org.kde.plasma.components as PlasmaComponents3
+import org.kde.plasma.private.kicker as Kicker
+
 
 ItemAbstractDelegate {
     id: item
@@ -124,7 +126,15 @@ ItemAbstractDelegate {
         onActiveChanged: {
             if (active && item.url) {
                 // we need dragHelper and can't use attached Drag; submenus are destroyed too soon and Plasma crashes
-                dragHelper.startDrag(kicker, item.url, item.decoration)
+                if (!item.favoriteId) {
+                    dragHelper.startDrag(kicker, item.url, item.decoration)
+                } else {
+                    let type = item.favoritesModel instanceof Kicker.SimpleFavoritesModel
+                        ? "text/xx-kicker-simplefavorite-id"
+                        : "text/xx-kicker-kastatsfavorite-id"
+                    dragHelper.startDrag(kicker, item.url, item.decoration,
+                                         type, item.favoriteId)
+                }
             }
         }
     }

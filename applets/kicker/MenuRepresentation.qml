@@ -211,6 +211,7 @@ PlasmaComponents3.ScrollView {
                         KeyNavigation.down: favoriteSystemActions
 
                         model: root.globalFavorites
+                        favoriteType: SideBarSection.FavoriteType.KAStats
                         onItemFocused: item => sideBarScrollView.ensureVisible(item)
                         onInteractionConcluded: root.interactionConcluded()
 
@@ -228,6 +229,7 @@ PlasmaComponents3.ScrollView {
                         Layout.alignment: Qt.AlignHCenter
 
                         model: root.systemFavorites
+                        favoriteType: SideBarSection.FavoriteType.Simple
                         onItemFocused: item => sideBarScrollView.ensureVisible(item)
                         onInteractionConcluded: root.interactionConcluded()
                         KeyNavigation.up: favoriteApps.bottomSideBarItem

@@ -3,17 +3,20 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.components as PC3
 import org.kde.plasma.extras as PlasmaExtras
+import org.kde.ksvg as KSvg
 
 ItemAbstractDelegate {
     id: item
 
     readonly property int itemIndex: model.index
+    readonly property bool isDropPlaceHolder: "dropPlaceholderIndex" in item.baseModel && item.itemIndex === item.baseModel.dropPlaceholderIndex
 
     Accessible.role: Accessible.ListItem
     icon.source: item.decoration
@@ -38,10 +41,48 @@ ItemAbstractDelegate {
         interactionConcluded()
     }
 
-    PlasmaExtras.Highlight {
+    Loader {
+        active: item.hovered || item.visualFocus || dragHandler.active || item.isDropPlaceHolder
         anchors.fill: parent
-        hovered: item.hovered || item.visualFocus || dragHandler.active
-        pressed: tapHandler.pressed
+
+        sourceComponent: Item {
+            id: highlightItem
+
+            anchors.fill: parent
+
+            PlasmaExtras.Highlight {
+                anchors.fill: parent
+                visible: !item.isDropPlaceHolder
+                hovered: true
+                pressed: tapHandler.pressed ?? false
+            }
+
+            KSvg.FrameSvgItem {
+                anchors.fill: parent
+
+                visible: item.isDropPlaceHolder
+
+                imagePath: "widgets/viewitem"
+                prefix: "selected"
+
+                opacity: 0.5
+
+                Kirigami.Icon {
+                    anchors {
+                        right: parent.right
+                        rightMargin: parent.margins.right
+                        bottom: parent.bottom
+                        bottomMargin: parent.margins.bottom
+                    }
+
+                    width: Kirigami.Units.iconSizes.smallMedium
+                    height: width
+
+                    source: "list-add"
+                    active: false
+                }
+            }
+        }
     }
 
     TapHandler {
