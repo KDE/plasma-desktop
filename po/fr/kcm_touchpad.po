@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-26 00:46+0000\n"
-"PO-Revision-Date: 2026-01-09 18:45+0100\n"
+"PO-Revision-Date: 2026-03-27 08:33+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 "X-Text-Markup: kde4\n"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:46
@@ -59,7 +59,7 @@ msgstr "Impossible de lire la configuration par défaut du pavé tactile"
 #: kcm.cpp:69
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "Impossible de sélectionner le moteur approprié"
 
 #: kcm.cpp:126
 #, kde-format
@@ -72,10 +72,10 @@ msgstr ""
 "configuration."
 
 #: kcm.cpp:129
-#, fuzzy, kde-format
-#| msgid "No touchpad found. Connect touchpad now."
+#, kde-format
 msgid "No pointer device found. Connect now."
-msgstr "Aucun pavé tactile trouvé. Connectez un pavé tactile maintenant."
+msgstr ""
+"Aucun pavé tactile n'a été trouvé. Veuillez en connecter un maintenant."
 
 #: kcm.cpp:138
 #, kde-format
@@ -106,17 +106,18 @@ msgstr ""
 "reconnecter et redémarrer ce module de configuration."
 
 #: kcm.cpp:185
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. Closed its setting dialog."
+#, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
-"Pavé tactile déconnecté. Sa boite de dialogue de configuration a été fermée."
+"Le pavé tactile est déconnecté. Sa boite de dialogue de configuration a été "
+"fermée."
 
 #: kcm.cpp:187
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. No other touchpads found."
+#, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr "Pavé tactile déconnecté. Aucun autre pavé tactile trouvé."
+msgstr ""
+"Le pavé tactile est déconnecté. Il a été impossible de trouver un autre pavé "
+"tactile."
 
 #: ui/main.qml:69
 #, kde-format

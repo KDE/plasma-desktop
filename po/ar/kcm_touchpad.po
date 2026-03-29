@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-26 00:46+0000\n"
-"PO-Revision-Date: 2026-01-08 11:29+0400\n"
+"PO-Revision-Date: 2026-03-28 18:02+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -53,7 +53,7 @@ msgstr "تعذّرت قراءة ضبط لوحة اللمس المبدئي"
 #: kcm.cpp:69
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "غير قادر على تحديد الواجهة الخلفية المناسبة"
 
 #: kcm.cpp:126
 #, kde-format
@@ -65,10 +65,9 @@ msgstr ""
 "وحدة الضبط هذه."
 
 #: kcm.cpp:129
-#, fuzzy, kde-format
-#| msgid "No touchpad found. Connect touchpad now."
+#, kde-format
 msgid "No pointer device found. Connect now."
-msgstr "لم يُعثر على لوحة لمس. صِل لوحة اللمس الآن."
+msgstr "لم يعثر على جهاز مؤشر. صل الآن."
 
 #: kcm.cpp:138
 #, kde-format
@@ -97,16 +96,14 @@ msgstr ""
 "هذه. "
 
 #: kcm.cpp:185
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. Closed its setting dialog."
+#, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr "لوح اللمس غير متصل. أغلقت مربع حوار الإعداد الخاص به."
+msgstr "جهاز المؤشر غير متصل. أغلقت مربع حوار الإعداد الخاص به."
 
 #: kcm.cpp:187
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. No other touchpads found."
+#, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr "لوح اللمس غير متصل. لم يعثر على أجهزة لمس أخرى."
+msgstr "جهاز المؤشر غير متصل. لم يعثر على أجهزة أخرى."
 
 #: ui/main.qml:69
 #, kde-format
