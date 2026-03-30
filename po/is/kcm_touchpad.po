@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-26 00:46+0000\n"
-"PO-Revision-Date: 2026-02-15 14:20+0000\n"
+"PO-Revision-Date: 2026-03-29 14:50+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -53,7 +53,7 @@ msgstr "Get ekki lesið sjálfgefna grunnstillingu snertiplatta"
 #: kcm.cpp:69
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "Tókst ekki að velja viðeigandi bakenda"
 
 #: kcm.cpp:126
 #, kde-format
@@ -65,10 +65,9 @@ msgstr ""
 "Endurræstu þessa grunnstillingaeiningu."
 
 #: kcm.cpp:129
-#, fuzzy, kde-format
-#| msgid "No touchpad found. Connect touchpad now."
+#, kde-format
 msgid "No pointer device found. Connect now."
-msgstr "Enginn snertiplatti fannst. Tengdu snertiplatta núna."
+msgstr "Ekkert benditæki fannst. Tengdu það núna."
 
 #: kcm.cpp:138
 #, kde-format
@@ -98,16 +97,14 @@ msgstr ""
 "grunnstillingaeiningu."
 
 #: kcm.cpp:185
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. Closed its setting dialog."
+#, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr "Snertiplatti aftengdur. Stillingaglugga hans lokað."
+msgstr "Benditæki aftengt. Stillingaglugga tækisins var lokað."
 
 #: kcm.cpp:187
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. No other touchpads found."
+#, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr "Snertiplatti aftengdur. Engir aðrir snertiplattar fundust."
+msgstr "Benditæki aftengt. Engin önnur tæki fundust."
 
 #: ui/main.qml:69
 #, kde-format

@@ -1,7 +1,7 @@
 # Translation for kcm_touchpad.po to Euskara/Basque (eu).
 # Copyright (C) 2017-2026 This file is copyright:
 # This file is distributed under the same license as plasma-desktop package.
-# SPDX-FileCopyrightText: 2024, 2025, 2026 KDE euskaraz proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Ander Elortondo <ander.elor@gmail.com>, 2017.
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-26 00:46+0000\n"
-"PO-Revision-Date: 2026-02-16 10:05+0100\n"
+"PO-Revision-Date: 2026-03-29 21:49+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:46
 #, kde-format
@@ -56,7 +56,7 @@ msgstr "Ezin da irakurri ukipen-saguaren konfigurazio lehenetsia"
 #: kcm.cpp:69
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "Ezin du bizkarraldeko egokirik aukeratu"
 
 #: kcm.cpp:126
 #, kde-format
@@ -68,10 +68,9 @@ msgstr ""
 "Berrabiarazi konfiguratze modulu hau."
 
 #: kcm.cpp:129
-#, fuzzy, kde-format
-#| msgid "No touchpad found. Connect touchpad now."
+#, kde-format
 msgid "No pointer device found. Connect now."
-msgstr "Ez da ukipen-sagua aurkitu. Konektatu ukipen-sagua orain."
+msgstr "Ez da gailu erakuslerik aurkitu. Konektatu orain."
 
 #: kcm.cpp:138
 #, kde-format
@@ -101,16 +100,16 @@ msgstr ""
 "berrabiarazi konfigurazio modulua."
 
 #: kcm.cpp:185
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. Closed its setting dialog."
+#, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr "ukipen-sagua deskonektatua. Itxita bere ezarpen elkarrizketa."
+msgstr ""
+"Gailu erakuslea deskonektatua dago. Itxi egin da bere ezarpen elkarrizketa-"
+"koadroa."
 
 #: kcm.cpp:187
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. No other touchpads found."
+#, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr "ukipen-sagua deskonektatua. Ez da beste ukipen-sagurik aurkitu."
+msgstr "Gailu erakuslea deskonektatua dago. Ez da beste gailurik aurkitu."
 
 #: ui/main.qml:69
 #, kde-format
