@@ -43,10 +43,12 @@ ItemAbstractDelegate {
         onActiveChanged: if (active) {
             item.contentItem.grabToImage(function(result) {
                 item.Drag.imageSource = result.url
+                item.Drag.active = true
             })
+        } else {
+            item.Drag.active = false
         }
     }
-    Drag.active: dragHandler.active
     Drag.dragType: Drag.Automatic
     Drag.mimeData: {
         "text/uri-list" : [item.url]
