@@ -90,14 +90,16 @@ void SolidActions::save()
 void SolidActions::addAction()
 {
     const QString enteredName = addUi.LeActionName->text();
-    KDesktopFile templateDesktop(QStandardPaths::GenericDataLocation, QStringLiteral("kcmsolidactions/solid-action-template.desktop")); // Lets get the template
+    constexpr auto resourceType = QStandardPaths::GenericDataLocation;
+    const auto absolutePath = QStandardPaths::locate(resourceType, QStringLiteral("kcmsolidactions/solid-action-template.desktop"));
+    KDesktopFile templateDesktop(resourceType, absolutePath); // Lets get the template
 
     // Lets get a desktop file
     QString internalName = enteredName; // copy the name the user entered -> we will be making mods
     internalName.replace(QChar(' '), QChar('-'), Qt::CaseSensitive); // replace spaces with dashes
     internalName = KIO::encodeFileName(internalName);
 
-    QString filePath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/solid/actions/"; // Get the location on disk for "data"
+    QString filePath = QStandardPaths::writableLocation(resourceType) + "/solid/actions/"; // Get the location on disk for "data"
     if (!QDir().exists(filePath)) {
         QDir().mkpath(filePath);
     }
