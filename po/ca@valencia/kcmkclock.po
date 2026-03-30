@@ -1,10 +1,10 @@
 # Translation of kcmkclock.po to Catalan (Valencian)
-# Copyright (C) 2001-2025 This_file_is_part_of_KDE
+# Copyright (C) 2001-2026 This_file_is_part_of_KDE
 #
 # SPDX-FileCopyrightText: 2001, 2004, 2005 Sebastià Pla i Sanz <sps@sastia.com>
 # SPDX-FileCopyrightText: 2004 Ivan Lloro Boada <antispam@wanadoo.es>
 # SPDX-FileCopyrightText: 2005 Albert Astals Cid <aacid@kde.org>
-# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2013, 2015, 2019, 2021, 2025 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2013, 2015, 2019, 2021, 2025, 2026 Josep M. Ferrer <txemaq@gmail.com>
 # SPDX-FileCopyrightText: 2014, 2020 Antoni Bella Pérez <antonibella5@yahoo.com>
 # SPDX-FileCopyrightText: 2019 Empar Montoro Martín <montoro_mde@gva.es>
 msgid ""
@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2025-07-06 11:36+0200\n"
+"PO-Revision-Date: 2026-03-29 16:45+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -61,20 +61,20 @@ msgstr "Ací podeu canviar el dia, el mes i l'any de la data del sistema."
 #: dateandtime.ui:122
 #, kde-format
 msgid "Time Zone"
-msgstr "Zona horària"
+msgstr "Fus horari"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: dateandtime.ui:128
 #, kde-format
 msgid "To change the local time zone, select your area from the list below."
 msgstr ""
-"Per a canviar la zona horària local, trieu l'àrea de la llista que seguix."
+"Per a canviar el fus horari local, trieu l'àrea de la llista que seguix."
 
 #. i18n: ectx: property (text), widget (QLabel, m_local)
 #: dateandtime.ui:151
 #, kde-format
 msgid "Current local time zone:"
-msgstr "Zona horària local actual:"
+msgstr "Fus horari local actual:"
 
 #. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
 #: dateandtime.ui:161
@@ -106,13 +106,13 @@ msgstr ""
 #, kde-format
 msgctxt "%1 is name of time zone"
 msgid "Current local time zone: %1"
-msgstr "Zona horària local actual: %1"
+msgstr "Fus horari local actual: %1"
 
 #: dtime.cpp:116
 #, kde-format
 msgctxt "%1 is name of time zone, %2 is its abbreviation"
 msgid "Current local time zone: %1 (%2)"
-msgstr "Zona horària local actual: %1 (%2)"
+msgstr "Fus horari local actual: %1 (%2)"
 
 #: dtime.cpp:203
 #, kde-format
@@ -136,12 +136,12 @@ msgstr "No es pot establir la data."
 #: dtime.cpp:281
 #, kde-format
 msgid "Error setting new time zone."
-msgstr "S'ha produït un error mentre s'establia la nova zona horària."
+msgstr "S'ha produït un error mentre s'establia el fus horari nou."
 
 #: dtime.cpp:281
 #, kde-format
 msgid "Time zone Error"
-msgstr "S'ha produït un error en zona horària"
+msgstr "S'ha produït un error en fus horari"
 
 #: dtime.cpp:299
 #, kde-format
@@ -168,7 +168,7 @@ msgstr "Mòdul de control KDE del rellotge"
 #: main.cpp:53
 #, kde-format
 msgid "(c) 1996 - 2001 Luca Montecchiani"
-msgstr "(c) 1996 - 2001 Luca Montecchiani"
+msgstr "(c) 1996 – 2001 Luca Montecchiani"
 
 #: main.cpp:55
 #, kde-format
@@ -234,4 +234,4 @@ msgstr "No s'ha pogut establir l'hora actual"
 #: main.cpp:154
 #, kde-format
 msgid "Unable to set timezone"
-msgstr "No s'ha pogut establir la zona horària"
+msgstr "No s'ha pogut establir el fus horari"
