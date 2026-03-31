@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-18 00:47+0000\n"
+"POT-Creation-Date: 2026-03-31 00:46+0000\n"
 "PO-Revision-Date: 2024-11-21 20:40\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -195,66 +195,60 @@ msgid "Use compact list item style"
 msgstr "Выкарыстоўваць кампактны спіс элементаў"
 
 #: ConfigGeneral.qml:187
-#, kde-format
-msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
-msgid "Automatically disabled when in Touch Mode"
-msgstr "Аўтаматычна адключаецца ў сэнсарным рэжыме"
-
-#: ConfigGeneral.qml:195
 #, fuzzy, kde-format
 #| msgid "Show other applications:"
 msgctxt "@option:check"
 msgid "Highlight newly installed applications"
 msgstr "Паказваць іншыя праграмы:"
 
-#: ConfigGeneral.qml:200
+#: ConfigGeneral.qml:192
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
 msgstr ""
 
-#: ConfigGeneral.qml:206
+#: ConfigGeneral.qml:198
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "Наладжванне ўбудовы пошуку…"
 
-#: ConfigGeneral.qml:216
+#: ConfigGeneral.qml:208
 #, fuzzy, kde-format
 #| msgid "Sidebar position:"
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr "Пазіцыя бакавой панэлі:"
 
-#: ConfigGeneral.qml:217 ConfigGeneral.qml:225
+#: ConfigGeneral.qml:209 ConfigGeneral.qml:217
 #, fuzzy, kde-format
 #| msgid "Right"
 msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr "Справа"
 
-#: ConfigGeneral.qml:217
+#: ConfigGeneral.qml:209
 #, fuzzy, kde-format
 #| msgid "Left"
 msgctxt "option:radio sidebar position"
 msgid "Left"
 msgstr "Злева"
 
-#: ConfigGeneral.qml:225
+#: ConfigGeneral.qml:217
 #, fuzzy, kde-format
 #| msgid "Left"
 msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr "Злева"
 
-#: ConfigGeneral.qml:233
+#: ConfigGeneral.qml:225
 #, fuzzy, kde-format
 #| msgid "Show favorites:"
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
 msgstr "Паказваць улюбёныя:"
 
-#: ConfigGeneral.qml:234
+#: ConfigGeneral.qml:226
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a grid'"
 #| msgid "In a grid"
@@ -262,7 +256,7 @@ msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "Сеткай"
 
-#: ConfigGeneral.qml:242
+#: ConfigGeneral.qml:234
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a list'"
 #| msgid "In a list"
@@ -270,14 +264,14 @@ msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "Спісам"
 
-#: ConfigGeneral.qml:250
+#: ConfigGeneral.qml:242
 #, fuzzy, kde-format
 #| msgid "Show other applications:"
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
 msgstr "Паказваць іншыя праграмы:"
 
-#: ConfigGeneral.qml:251
+#: ConfigGeneral.qml:243
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a grid'"
 #| msgid "In a grid"
@@ -285,7 +279,7 @@ msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "Сеткай"
 
-#: ConfigGeneral.qml:259
+#: ConfigGeneral.qml:251
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a list'"
 #| msgid "In a list"
@@ -293,35 +287,35 @@ msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "Спісам"
 
-#: ConfigGeneral.qml:271
+#: ConfigGeneral.qml:263
 #, fuzzy, kde-format
 #| msgid "Show buttons for:"
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr "Паказваць кнопкі:"
 
-#: ConfigGeneral.qml:272
+#: ConfigGeneral.qml:264
 #, fuzzy, kde-format
 #| msgid "Power"
 msgctxt "@option:radio Show buttons for"
 msgid "Power"
 msgstr "Сілкаванне"
 
-#: ConfigGeneral.qml:281
+#: ConfigGeneral.qml:273
 #, fuzzy, kde-format
 #| msgid "Session"
 msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "Сеанс"
 
-#: ConfigGeneral.qml:290
+#: ConfigGeneral.qml:282
 #, fuzzy, kde-format
 #| msgid "Power and session"
 msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
 msgstr "Сілкаванне і сеанс"
 
-#: ConfigGeneral.qml:299
+#: ConfigGeneral.qml:291
 #, fuzzy, kde-format
 #| msgid "Show action button captions"
 msgctxt "@option:check"
@@ -455,6 +449,10 @@ msgstr "Гісторыя"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Часта выкарыстоўваюцца"
+
+#~ msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
+#~ msgid "Automatically disabled when in Touch Mode"
+#~ msgstr "Аўтаматычна адключаецца ў сэнсарным рэжыме"
 
 #~ msgctxt "Part of a sentence: 'Show other applications in a grid'"
 #~ msgid "In a grid"

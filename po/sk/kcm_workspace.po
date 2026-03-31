@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-03-31 00:46+0000\n"
 "PO-Revision-Date: 2025-05-30 20:36+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -304,14 +304,14 @@ msgstr "Dotyková"
 #, fuzzy, kde-format
 #| msgid "Touch Mode:"
 msgctxt "@title:group prefix radiobutton group"
-msgid "Enable Touch Mode:"
+msgid "Enable Tablet Mode:"
 msgstr "Dotykový režim:"
 
 #: ui/main.qml:418
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 #| msgid "Automatically enable as needed"
-msgctxt "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
+msgctxt "@option:radio As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Automatické zapnutie podľa potreby"
 
@@ -319,7 +319,7 @@ msgstr "Automatické zapnutie podľa potreby"
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is never enabled'"
 #| msgid "Never enabled"
-msgctxt "option:radio As in: 'Touch Mode is never enabled'"
+msgctxt "option:radio As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Nikdy nepovolené"
 
@@ -331,7 +331,7 @@ msgstr "Nikdy nepovolené"
 #| "laptop's keyboard is flipped around or detached."
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
-"Touch Mode will be automatically activated whenever the system detects a "
+"Tablet Mode will be automatically activated whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
@@ -343,28 +343,23 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is always enabled'"
 #| msgid "Always enabled"
-msgctxt "As in: 'Touch Mode is always enabled'"
+msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always active"
 msgstr "Vždy povolené"
 
 #: ui/main.qml:463
-#, kde-format
-msgctxt "As in: 'Touch Mode is never enabled'"
+#, fuzzy, kde-format
+#| msgctxt "As in: 'Touch Mode is never enabled'"
+#| msgid "Disabled"
+msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Zakázané"
 
 #: ui/main.qml:486
-#, fuzzy, kde-format
-#| msgid ""
-#| "In Touch Mode, many elements of the user interface will become larger to "
-#| "more easily accommodate touch interaction."
+#, kde-format
 msgctxt "@info:usagetip"
-msgid ""
-"In Touch Mode, many elements of the user interface will become larger to "
-"more easily accommodate touch interaction."
+msgid "In Tablet Mode, the virtual keyboard will appear when needed."
 msgstr ""
-"V dotykovom režime sa mnohé prvky používateľského rozhrania zväčšia, aby sa "
-"ľahšie prispôsobili dotykovej interakcii."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -454,6 +449,18 @@ msgstr "OSD pri zmene rozloženia"
 #, kde-format
 msgid "Show a popup on layout changes"
 msgstr "Zobraziť vyskakovacie okno pri zmene rozloženia"
+
+#, fuzzy
+#~| msgid ""
+#~| "In Touch Mode, many elements of the user interface will become larger to "
+#~| "more easily accommodate touch interaction."
+#~ msgctxt "@info:usagetip"
+#~ msgid ""
+#~ "In Touch Mode, many elements of the user interface will become larger to "
+#~ "more easily accommodate touch interaction."
+#~ msgstr ""
+#~ "V dotykovom režime sa mnohé prvky používateľského rozhrania zväčšia, aby "
+#~ "sa ľahšie prispôsobili dotykovej interakcii."
 
 #~ msgid "Animation speed:"
 #~ msgstr "Rýchlosť animácií:"

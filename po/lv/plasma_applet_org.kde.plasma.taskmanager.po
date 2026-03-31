@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-18 00:47+0000\n"
+"POT-Creation-Date: 2026-03-31 00:46+0000\n"
 "PO-Revision-Date: 2026-01-16 18:51+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -255,12 +255,6 @@ msgstr "Normāla"
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Liela"
-
-#: qml/ConfigAppearance.qml:197
-#, kde-format
-msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
-msgid "Automatically set to Large when in Touch mode"
-msgstr "Automātiski iestatīt uz lielām, atrodoties skārienekrāna režīmā"
 
 #: qml/ConfigBehavior.qml:50
 #, kde-format
@@ -927,6 +921,10 @@ msgstr "Tāpat pieejams uz „%1“"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Pieejams uz „%1“"
+
+#~ msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
+#~ msgid "Automatically set to Large when in Touch mode"
+#~ msgstr "Automātiski iestatīt uz lielām, atrodoties skārienekrāna režīmā"
 
 #~ msgctxt "Invalid number of new messages, overlay, keep short"
 #~ msgid "—"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-03-31 00:46+0000\n"
 "PO-Revision-Date: 2026-01-08 05:27+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -280,28 +280,40 @@ msgid "Touch"
 msgstr "შეხება"
 
 #: ui/main.qml:416
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:group prefix radiobutton group"
+#| msgid "Enable Touch Mode:"
 msgctxt "@title:group prefix radiobutton group"
-msgid "Enable Touch Mode:"
+msgid "Enable Tablet Mode:"
 msgstr "შეხების რეჟიმის ჩართვა:"
 
 #: ui/main.qml:418
-#, kde-format
-msgctxt "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
+#| msgid "Automatically enable as needed"
+msgctxt "@option:radio As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "ავტომატური ჩართვა საჭიროებისამებრ"
 
 #: ui/main.qml:418
-#, kde-format
-msgctxt "option:radio As in: 'Touch Mode is never enabled'"
+#, fuzzy, kde-format
+#| msgctxt "option:radio As in: 'Touch Mode is never enabled'"
+#| msgid "Never enabled"
+msgctxt "option:radio As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "არასოდესაა ჩართული"
 
 #: ui/main.qml:435
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
+#| msgid ""
+#| "Touch Mode will be automatically activated whenever the system detects a "
+#| "touchscreen but no mouse or touchpad. For example: when a transformable "
+#| "laptop's keyboard is flipped around or detached."
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
-"Touch Mode will be automatically activated whenever the system detects a "
+"Tablet Mode will be automatically activated whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
@@ -310,26 +322,26 @@ msgstr ""
 "კლავიატურას გამოაძრობთ, ან შეაბრუნებთ."
 
 #: ui/main.qml:440
-#, kde-format
-msgctxt "As in: 'Touch Mode is always enabled'"
+#, fuzzy, kde-format
+#| msgctxt "As in: 'Touch Mode is always enabled'"
+#| msgid "Always active"
+msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always active"
 msgstr "ყოველთვის აქტიურია"
 
 #: ui/main.qml:463
-#, kde-format
-msgctxt "As in: 'Touch Mode is never enabled'"
+#, fuzzy, kde-format
+#| msgctxt "As in: 'Touch Mode is never enabled'"
+#| msgid "Disabled"
+msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "გამორთულია"
 
 #: ui/main.qml:486
 #, kde-format
 msgctxt "@info:usagetip"
-msgid ""
-"In Touch Mode, many elements of the user interface will become larger to "
-"more easily accommodate touch interaction."
+msgid "In Tablet Mode, the virtual keyboard will appear when needed."
 msgstr ""
-"სენსორული ეკრანის რეჟიმში მომხმარებლის ინტერფეისის ძირითადი ნაწილის ზომა "
-"შესამჩნევად იზრდება მათზე თითის მორტყმის გასაადვილებლად."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -419,6 +431,14 @@ msgstr "OSD განლაგების ცვლილების შემ
 #, kde-format
 msgid "Show a popup on layout changes"
 msgstr "განლაგების ცვლილებისას მხტუნავის ჩვენება"
+
+#~ msgctxt "@info:usagetip"
+#~ msgid ""
+#~ "In Touch Mode, many elements of the user interface will become larger to "
+#~ "more easily accommodate touch interaction."
+#~ msgstr ""
+#~ "სენსორული ეკრანის რეჟიმში მომხმარებლის ინტერფეისის ძირითადი ნაწილის ზომა "
+#~ "შესამჩნევად იზრდება მათზე თითის მორტყმის გასაადვილებლად."
 
 #~ msgid "Animation speed:"
 #~ msgstr "ანიმაციის სიჩქარე:"

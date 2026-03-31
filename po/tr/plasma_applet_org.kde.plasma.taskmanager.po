@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-18 00:47+0000\n"
+"POT-Creation-Date: 2026-03-31 00:46+0000\n"
 "PO-Revision-Date: 2026-02-18 18:04+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -251,12 +251,6 @@ msgstr "Olağan"
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Büyük"
-
-#: qml/ConfigAppearance.qml:197
-#, kde-format
-msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
-msgid "Automatically set to Large when in Touch mode"
-msgstr "Dokunmatik Kip’teyken kendiliğinden büyük olarak ayarla"
 
 #: qml/ConfigBehavior.qml:50
 #, kde-format
@@ -922,6 +916,10 @@ msgstr "Ayrıca %1 üzerinde de kullanılabilir"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "%1 üzerinde kullanılabilir"
+
+#~ msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
+#~ msgid "Automatically set to Large when in Touch mode"
+#~ msgstr "Dokunmatik Kip’teyken kendiliğinden büyük olarak ayarla"
 
 #~ msgctxt "Invalid number of new messages, overlay, keep short"
 #~ msgid "—"

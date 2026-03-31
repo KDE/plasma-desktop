@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-18 00:47+0000\n"
+"POT-Creation-Date: 2026-03-31 00:46+0000\n"
 "PO-Revision-Date: 2026-01-31 20:40+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -182,113 +182,107 @@ msgstr "சுருக்கமான காட்சிமுறையை ப�
 
 #: ConfigGeneral.qml:187
 #, kde-format
-msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
-msgid "Automatically disabled when in Touch Mode"
-msgstr "பலகைக்கணினி பயன்முறையில் தானாக முடக்கப்படும்"
-
-#: ConfigGeneral.qml:195
-#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly installed applications"
 msgstr "புதியதாக நிறுவியுள்ள செயலிகளை முன்னிலைப்படுத்து"
 
-#: ConfigGeneral.qml:200
+#: ConfigGeneral.qml:192
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
 msgstr "ஓரப்பட்டையிலுள்ள பகுப்புகளின் மீது சுட்டியை வைக்கும்போது அவற்றிற்கு தாவு"
 
-#: ConfigGeneral.qml:206
+#: ConfigGeneral.qml:198
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "தேடல் செருகுநிரல்களை அமை…"
 
-#: ConfigGeneral.qml:216
+#: ConfigGeneral.qml:208
 #, kde-format
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr "ஓரப்பட்டையின் இருப்பிடம்:"
 
-#: ConfigGeneral.qml:217 ConfigGeneral.qml:225
+#: ConfigGeneral.qml:209 ConfigGeneral.qml:217
 #, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr "வலதில்"
 
-#: ConfigGeneral.qml:217
+#: ConfigGeneral.qml:209
 #, kde-format
 msgctxt "option:radio sidebar position"
 msgid "Left"
 msgstr "இடதில்"
 
-#: ConfigGeneral.qml:225
+#: ConfigGeneral.qml:217
 #, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr "இடதில்"
 
-#: ConfigGeneral.qml:233
+#: ConfigGeneral.qml:225
 #, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
 msgstr "பிடித்தவற்றை காட்டுவது:"
 
-#: ConfigGeneral.qml:234
+#: ConfigGeneral.qml:226
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "நெடுவரிசைகளில்"
 
-#: ConfigGeneral.qml:242
+#: ConfigGeneral.qml:234
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "பட்டியலாக"
 
-#: ConfigGeneral.qml:250
+#: ConfigGeneral.qml:242
 #, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
 msgstr "மற்ற செயலிகளை காட்டுவது:"
 
-#: ConfigGeneral.qml:251
+#: ConfigGeneral.qml:243
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "நெடுவரிசைகளில்"
 
-#: ConfigGeneral.qml:259
+#: ConfigGeneral.qml:251
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "பட்டியலாக"
 
-#: ConfigGeneral.qml:271
+#: ConfigGeneral.qml:263
 #, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr "இவற்றிற்கு பட்டன்களை காட்டு:"
 
-#: ConfigGeneral.qml:272
+#: ConfigGeneral.qml:264
 #, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power"
 msgstr "ஆற்றல்"
 
-#: ConfigGeneral.qml:281
+#: ConfigGeneral.qml:273
 #, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "அமர்வு"
 
-#: ConfigGeneral.qml:290
+#: ConfigGeneral.qml:282
 #, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
 msgstr "ஆற்றல் மற்றும் அமர்வு"
 
-#: ConfigGeneral.qml:299
+#: ConfigGeneral.qml:291
 #, kde-format
 msgctxt "@option:check"
 msgid "Show action button captions"
@@ -409,6 +403,10 @@ msgstr "வரலாறு"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "அடிக்கடி பயன்படுபவை"
+
+#~ msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
+#~ msgid "Automatically disabled when in Touch Mode"
+#~ msgstr "பலகைக்கணினி பயன்முறையில் தானாக முடக்கப்படும்"
 
 #~ msgctxt "Part of a sentence: 'Show other applications in a grid'"
 #~ msgid "In a grid"

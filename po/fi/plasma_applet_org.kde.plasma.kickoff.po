@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-18 00:47+0000\n"
+"POT-Creation-Date: 2026-03-31 00:46+0000\n"
 "PO-Revision-Date: 2025-06-24 17:11+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -191,67 +191,61 @@ msgid "Use compact list item style"
 msgstr "Käytä tiivistä luetelmatyyliä"
 
 #: ConfigGeneral.qml:187
-#, kde-format
-msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
-msgid "Automatically disabled when in Touch Mode"
-msgstr "Poistetaan kosketustilassa automaattisesti käytöstä"
-
-#: ConfigGeneral.qml:195
 #, fuzzy, kde-format
 #| msgid "Highlight newly installed applications"
 msgctxt "@option:check"
 msgid "Highlight newly installed applications"
 msgstr "Korosta vasta-asennetut sovellukset"
 
-#: ConfigGeneral.qml:200
+#: ConfigGeneral.qml:192
 #, fuzzy, kde-format
 #| msgid "Switch sidebar categories when hovering over them"
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
 msgstr "Vaihda sivupaneelin luokkia leijuttaessa niiden yllä"
 
-#: ConfigGeneral.qml:206
+#: ConfigGeneral.qml:198
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "Hakuliitännäisten asetukset…"
 
-#: ConfigGeneral.qml:216
+#: ConfigGeneral.qml:208
 #, fuzzy, kde-format
 #| msgid "Sidebar position:"
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr "Sivupaneelin sijainti:"
 
-#: ConfigGeneral.qml:217 ConfigGeneral.qml:225
+#: ConfigGeneral.qml:209 ConfigGeneral.qml:217
 #, fuzzy, kde-format
 #| msgid "Right"
 msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr "oikealla"
 
-#: ConfigGeneral.qml:217
+#: ConfigGeneral.qml:209
 #, fuzzy, kde-format
 #| msgid "Left"
 msgctxt "option:radio sidebar position"
 msgid "Left"
 msgstr "vasemmalla"
 
-#: ConfigGeneral.qml:225
+#: ConfigGeneral.qml:217
 #, fuzzy, kde-format
 #| msgid "Left"
 msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr "vasemmalla"
 
-#: ConfigGeneral.qml:233
+#: ConfigGeneral.qml:225
 #, fuzzy, kde-format
 #| msgid "Show favorites:"
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
 msgstr "Näytä suosikit:"
 
-#: ConfigGeneral.qml:234
+#: ConfigGeneral.qml:226
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a grid'"
 #| msgid "In a grid"
@@ -259,7 +253,7 @@ msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "ruudukkona"
 
-#: ConfigGeneral.qml:242
+#: ConfigGeneral.qml:234
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a list'"
 #| msgid "In a list"
@@ -267,14 +261,14 @@ msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "luettelona"
 
-#: ConfigGeneral.qml:250
+#: ConfigGeneral.qml:242
 #, fuzzy, kde-format
 #| msgid "Show other applications:"
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
 msgstr "Näytä muut sovellukset:"
 
-#: ConfigGeneral.qml:251
+#: ConfigGeneral.qml:243
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a grid'"
 #| msgid "In a grid"
@@ -282,7 +276,7 @@ msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "ruudukkona"
 
-#: ConfigGeneral.qml:259
+#: ConfigGeneral.qml:251
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a list'"
 #| msgid "In a list"
@@ -290,35 +284,35 @@ msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "luettelona"
 
-#: ConfigGeneral.qml:271
+#: ConfigGeneral.qml:263
 #, fuzzy, kde-format
 #| msgid "Show buttons for:"
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr "Näytä painikkeet:"
 
-#: ConfigGeneral.qml:272
+#: ConfigGeneral.qml:264
 #, fuzzy, kde-format
 #| msgid "Power"
 msgctxt "@option:radio Show buttons for"
 msgid "Power"
 msgstr "Virta"
 
-#: ConfigGeneral.qml:281
+#: ConfigGeneral.qml:273
 #, fuzzy, kde-format
 #| msgid "Session"
 msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "Istunto"
 
-#: ConfigGeneral.qml:290
+#: ConfigGeneral.qml:282
 #, fuzzy, kde-format
 #| msgid "Power and session"
 msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
 msgstr "Virta ja istunto"
 
-#: ConfigGeneral.qml:299
+#: ConfigGeneral.qml:291
 #, fuzzy, kde-format
 #| msgid "Show action button captions"
 msgctxt "@option:check"
@@ -455,6 +449,10 @@ msgstr "Historia"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Usein käytetyt"
+
+#~ msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
+#~ msgid "Automatically disabled when in Touch Mode"
+#~ msgstr "Poistetaan kosketustilassa automaattisesti käytöstä"
 
 #~ msgctxt "Part of a sentence: 'Show other applications in a grid'"
 #~ msgid "In a grid"

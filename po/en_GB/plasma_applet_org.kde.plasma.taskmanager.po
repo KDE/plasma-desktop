@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-18 00:47+0000\n"
+"POT-Creation-Date: 2026-03-31 00:46+0000\n"
 "PO-Revision-Date: 2024-11-08 15:01+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -254,12 +254,6 @@ msgstr "Normal"
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Large"
-
-#: qml/ConfigAppearance.qml:197
-#, kde-format
-msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
-msgid "Automatically set to Large when in Touch mode"
-msgstr "Automatically set to Large when in Touch mode"
 
 #: qml/ConfigBehavior.qml:50
 #, kde-format
@@ -981,6 +975,10 @@ msgstr "Also available on %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Available on %1"
+
+#~ msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
+#~ msgid "Automatically set to Large when in Touch mode"
+#~ msgstr "Automatically set to Large when in Touch mode"
 
 #~ msgctxt "Invalid number of new messages, overlay, keep short"
 #~ msgid "—"

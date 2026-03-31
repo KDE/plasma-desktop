@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-03-31 00:46+0000\n"
 "PO-Revision-Date: 2024-12-20 21:53+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -301,14 +301,14 @@ msgstr "स्पर्शविधिः :"
 #, fuzzy, kde-format
 #| msgid "Touch Mode:"
 msgctxt "@title:group prefix radiobutton group"
-msgid "Enable Touch Mode:"
+msgid "Enable Tablet Mode:"
 msgstr "स्पर्शविधिः :"
 
 #: ui/main.qml:418
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 #| msgid "Automatically enable as needed"
-msgctxt "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
+msgctxt "@option:radio As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "आवश्यकतानुसारं स्वयमेव सक्षमं कुर्वन्तु"
 
@@ -316,7 +316,7 @@ msgstr "आवश्यकतानुसारं स्वयमेव सक�
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is never enabled'"
 #| msgid "Never enabled"
-msgctxt "option:radio As in: 'Touch Mode is never enabled'"
+msgctxt "option:radio As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "कदापि सक्षमं न कृतम्"
 
@@ -328,7 +328,7 @@ msgstr "कदापि सक्षमं न कृतम्"
 #| "laptop's keyboard is flipped around or detached."
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
-"Touch Mode will be automatically activated whenever the system detects a "
+"Tablet Mode will be automatically activated whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
@@ -340,28 +340,21 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is always enabled'"
 #| msgid "Always enabled"
-msgctxt "As in: 'Touch Mode is always enabled'"
+msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always active"
 msgstr "सर्वदा सक्षमम्"
 
 #: ui/main.qml:463
 #, kde-format
-msgctxt "As in: 'Touch Mode is never enabled'"
+msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr ""
 
 #: ui/main.qml:486
-#, fuzzy, kde-format
-#| msgid ""
-#| "In Touch Mode, many elements of the user interface will become larger to "
-#| "more easily accommodate touch interaction."
+#, kde-format
 msgctxt "@info:usagetip"
-msgid ""
-"In Touch Mode, many elements of the user interface will become larger to "
-"more easily accommodate touch interaction."
+msgid "In Tablet Mode, the virtual keyboard will appear when needed."
 msgstr ""
-"स्पर्शविधाने स्पर्शपरस्परक्रियायाः अनुकूलतायै उपयोक्तृ-अन्तरफलकस्य बहवः तत्त्वानि बृहत्तराणि "
-"भविष्यन्ति ।"
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -449,6 +442,18 @@ msgstr "विन्यासपरिवर्तनस्य विषये O
 #, kde-format
 msgid "Show a popup on layout changes"
 msgstr "विन्यासपरिवर्तनेषु एकं पॉपअपं दर्शयतु"
+
+#, fuzzy
+#~| msgid ""
+#~| "In Touch Mode, many elements of the user interface will become larger to "
+#~| "more easily accommodate touch interaction."
+#~ msgctxt "@info:usagetip"
+#~ msgid ""
+#~ "In Touch Mode, many elements of the user interface will become larger to "
+#~ "more easily accommodate touch interaction."
+#~ msgstr ""
+#~ "स्पर्शविधाने स्पर्शपरस्परक्रियायाः अनुकूलतायै उपयोक्तृ-अन्तरफलकस्य बहवः तत्त्वानि "
+#~ "बृहत्तराणि भविष्यन्ति ।"
 
 #~ msgid "Animation speed:"
 #~ msgstr "एनिमेशनवेगः :"

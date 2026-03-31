@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-03-31 00:46+0000\n"
 "PO-Revision-Date: 2026-01-10 15:53+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -285,28 +285,40 @@ msgid "Touch"
 msgstr "Tocco"
 
 #: ui/main.qml:416
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:group prefix radiobutton group"
+#| msgid "Enable Touch Mode:"
 msgctxt "@title:group prefix radiobutton group"
-msgid "Enable Touch Mode:"
+msgid "Enable Tablet Mode:"
 msgstr "Abilita la modalità tattile:"
 
 #: ui/main.qml:418
-#, kde-format
-msgctxt "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
+#| msgid "Automatically enable as needed"
+msgctxt "@option:radio As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Abilita automaticamente se necessaria"
 
 #: ui/main.qml:418
-#, kde-format
-msgctxt "option:radio As in: 'Touch Mode is never enabled'"
+#, fuzzy, kde-format
+#| msgctxt "option:radio As in: 'Touch Mode is never enabled'"
+#| msgid "Never enabled"
+msgctxt "option:radio As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Non abilitare mai"
 
 #: ui/main.qml:435
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
+#| msgid ""
+#| "Touch Mode will be automatically activated whenever the system detects a "
+#| "touchscreen but no mouse or touchpad. For example: when a transformable "
+#| "laptop's keyboard is flipped around or detached."
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
-"Touch Mode will be automatically activated whenever the system detects a "
+"Tablet Mode will be automatically activated whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
@@ -315,26 +327,26 @@ msgstr ""
 "tastiera di un computer portatile convertibile viene capovolta o staccata."
 
 #: ui/main.qml:440
-#, kde-format
-msgctxt "As in: 'Touch Mode is always enabled'"
+#, fuzzy, kde-format
+#| msgctxt "As in: 'Touch Mode is always enabled'"
+#| msgid "Always active"
+msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always active"
 msgstr "Sempre attiva"
 
 #: ui/main.qml:463
-#, kde-format
-msgctxt "As in: 'Touch Mode is never enabled'"
+#, fuzzy, kde-format
+#| msgctxt "As in: 'Touch Mode is never enabled'"
+#| msgid "Disabled"
+msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Disabilitata"
 
 #: ui/main.qml:486
 #, kde-format
 msgctxt "@info:usagetip"
-msgid ""
-"In Touch Mode, many elements of the user interface will become larger to "
-"more easily accommodate touch interaction."
+msgid "In Tablet Mode, the virtual keyboard will appear when needed."
 msgstr ""
-"Per adattarsi più facilmente all'interazione al tocco, nella modalità "
-"tattile molti elementi dell'interfaccia utente diventeranno più grandi."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -427,6 +439,14 @@ msgstr "OSD alla modifica della mappatura"
 #, kde-format
 msgid "Show a popup on layout changes"
 msgstr "Mostra una finestra a comparsa alla modifica della mappatura"
+
+#~ msgctxt "@info:usagetip"
+#~ msgid ""
+#~ "In Touch Mode, many elements of the user interface will become larger to "
+#~ "more easily accommodate touch interaction."
+#~ msgstr ""
+#~ "Per adattarsi più facilmente all'interazione al tocco, nella modalità "
+#~ "tattile molti elementi dell'interfaccia utente diventeranno più grandi."
 
 #~ msgid "Animation speed:"
 #~ msgstr "Velocità animazione:"

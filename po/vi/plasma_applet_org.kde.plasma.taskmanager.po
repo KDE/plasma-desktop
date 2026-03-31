@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-18 00:47+0000\n"
+"POT-Creation-Date: 2026-03-31 00:46+0000\n"
 "PO-Revision-Date: 2023-01-08 16:15+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -263,14 +263,6 @@ msgstr "Trung bình"
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Lớn"
-
-#: qml/ConfigAppearance.qml:197
-#, fuzzy, kde-format
-#| msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
-#| msgid "Automatically set to Large when in Touch Mode"
-msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
-msgid "Automatically set to Large when in Touch mode"
-msgstr "Tự động đặt là \"Lớn\" khi trong chế độ cảm ứng"
 
 #: qml/ConfigBehavior.qml:50
 #, kde-format
@@ -1039,6 +1031,13 @@ msgstr "Còn hiện có ở %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Hiện có ở %1"
+
+#, fuzzy
+#~| msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
+#~| msgid "Automatically set to Large when in Touch Mode"
+#~ msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
+#~ msgid "Automatically set to Large when in Touch mode"
+#~ msgstr "Tự động đặt là \"Lớn\" khi trong chế độ cảm ứng"
 
 #~ msgctxt "Invalid number of new messages, overlay, keep short"
 #~ msgid "—"

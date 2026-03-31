@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-03-31 00:46+0000\n"
 "PO-Revision-Date: 2025-03-15 06:22+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -313,14 +313,14 @@ msgstr "Mode Sentuh:"
 #, fuzzy, kde-format
 #| msgid "Touch Mode:"
 msgctxt "@title:group prefix radiobutton group"
-msgid "Enable Touch Mode:"
+msgid "Enable Tablet Mode:"
 msgstr "Mode Sentuh:"
 
 #: ui/main.qml:418
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 #| msgid "Automatically enable as needed"
-msgctxt "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
+msgctxt "@option:radio As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Fungsikan secara otomatis ketika diperlukan"
 
@@ -328,7 +328,7 @@ msgstr "Fungsikan secara otomatis ketika diperlukan"
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is never enabled'"
 #| msgid "Never enabled"
-msgctxt "option:radio As in: 'Touch Mode is never enabled'"
+msgctxt "option:radio As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Jangan pernah difungsikan"
 
@@ -340,7 +340,7 @@ msgstr "Jangan pernah difungsikan"
 #| "laptop's keyboard is flipped around or detached."
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
-"Touch Mode will be automatically activated whenever the system detects a "
+"Tablet Mode will be automatically activated whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
@@ -352,28 +352,21 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is always enabled'"
 #| msgid "Always enabled"
-msgctxt "As in: 'Touch Mode is always enabled'"
+msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always active"
 msgstr "Selalu fungsikan"
 
 #: ui/main.qml:463
 #, kde-format
-msgctxt "As in: 'Touch Mode is never enabled'"
+msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr ""
 
 #: ui/main.qml:486
-#, fuzzy, kde-format
-#| msgid ""
-#| "In Touch Mode, many elements of the user interface will become larger to "
-#| "more easily accommodate touch interaction."
+#, kde-format
 msgctxt "@info:usagetip"
-msgid ""
-"In Touch Mode, many elements of the user interface will become larger to "
-"more easily accommodate touch interaction."
+msgid "In Tablet Mode, the virtual keyboard will appear when needed."
 msgstr ""
-"Dalam Mode Sentuh, banyak elemen antarmuka pengguna akan menjadi lebih besar "
-"untuk mengakomodasi interaksi sentuh dengan lebih mudah."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -462,6 +455,18 @@ msgstr "OSD saat perubahan tata letak"
 #, kde-format
 msgid "Show a popup on layout changes"
 msgstr "Tampilkan sembulan saat perubahan tata letak"
+
+#, fuzzy
+#~| msgid ""
+#~| "In Touch Mode, many elements of the user interface will become larger to "
+#~| "more easily accommodate touch interaction."
+#~ msgctxt "@info:usagetip"
+#~ msgid ""
+#~ "In Touch Mode, many elements of the user interface will become larger to "
+#~ "more easily accommodate touch interaction."
+#~ msgstr ""
+#~ "Dalam Mode Sentuh, banyak elemen antarmuka pengguna akan menjadi lebih "
+#~ "besar untuk mengakomodasi interaksi sentuh dengan lebih mudah."
 
 #~ msgid "Animation speed:"
 #~ msgstr "Kecepatan animasi:"

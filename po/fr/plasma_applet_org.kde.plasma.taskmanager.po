@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-18 00:47+0000\n"
+"POT-Creation-Date: 2026-03-31 00:46+0000\n"
 "PO-Revision-Date: 2026-01-09 18:54+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
@@ -259,12 +259,6 @@ msgstr "Normal"
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Important"
-
-#: qml/ConfigAppearance.qml:197
-#, kde-format
-msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
-msgid "Automatically set to Large when in Touch mode"
-msgstr "Définir automatiquement à « Important » lorsqu'en mode « Tablette »"
 
 #: qml/ConfigBehavior.qml:50
 #, kde-format
@@ -932,6 +926,10 @@ msgstr "Également disponible sur %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Disponible sur %1"
+
+#~ msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
+#~ msgid "Automatically set to Large when in Touch mode"
+#~ msgstr "Définir automatiquement à « Important » lorsqu'en mode « Tablette »"
 
 #~ msgctxt "Invalid number of new messages, overlay, keep short"
 #~ msgid "—"

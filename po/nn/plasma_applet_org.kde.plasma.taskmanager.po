@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-18 00:47+0000\n"
+"POT-Creation-Date: 2026-03-31 00:46+0000\n"
 "PO-Revision-Date: 2025-10-26 12:41+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -254,12 +254,6 @@ msgstr "Vanleg"
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Stor"
-
-#: qml/ConfigAppearance.qml:197
-#, kde-format
-msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
-msgid "Automatically set to Large when in Touch mode"
-msgstr "Set automatisk til «stor» i trykkskjerm-modus"
 
 #: qml/ConfigBehavior.qml:50
 #, kde-format
@@ -952,3 +946,7 @@ msgstr "Også tilgjengelig på %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Tilgjengeleg på %1"
+
+#~ msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
+#~ msgid "Automatically set to Large when in Touch mode"
+#~ msgstr "Set automatisk til «stor» i trykkskjerm-modus"

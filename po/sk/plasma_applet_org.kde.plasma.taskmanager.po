@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-18 00:47+0000\n"
+"POT-Creation-Date: 2026-03-31 00:46+0000\n"
 "PO-Revision-Date: 2025-05-30 20:39+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -255,12 +255,6 @@ msgstr "Normálne"
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Veľké"
-
-#: qml/ConfigAppearance.qml:197
-#, kde-format
-msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
-msgid "Automatically set to Large when in Touch mode"
-msgstr "Automaticky nastaviť na Veľké v dotykovom režime"
 
 #: qml/ConfigBehavior.qml:50
 #, kde-format
@@ -975,6 +969,10 @@ msgstr "Dostupné aj na %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Dostupné na %1"
+
+#~ msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
+#~ msgid "Automatically set to Large when in Touch mode"
+#~ msgstr "Automaticky nastaviť na Veľké v dotykovom režime"
 
 #~ msgctxt "Invalid number of new messages, overlay, keep short"
 #~ msgid "—"
