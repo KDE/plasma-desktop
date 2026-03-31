@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2026-03-13 11:16+0100\n"
+"PO-Revision-Date: 2026-03-30 11:46+0200\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -21,10 +21,9 @@ msgstr ""
 "X-Source-Language: en_US\n"
 
 #: kcmaccess.cpp:116
-#, fuzzy, kde-format
-#| msgid "AltGraph"
+#, kde-format
 msgid "AltGraph"
-msgstr "Pravý Alt"
+msgstr "AltGraph"
 
 #: kcmaccess.cpp:118
 #, kde-format
@@ -321,12 +320,12 @@ msgstr "Vlastní zvuk:"
 #: package/contents/ui/Bell.qml:76
 #, kde-format
 msgid "Search audio file for the system bell"
-msgstr ""
+msgstr "Vyhledat zvukový soubor pro systémový zvonek"
 
 #: package/contents/ui/Bell.qml:77
 #, kde-format
 msgid "Button search audio file"
-msgstr ""
+msgstr "Vyhledat zvukový soubor pomocí tlačítka"
 
 #: package/contents/ui/Bell.qml:93
 #, kde-format
@@ -378,7 +377,7 @@ msgstr "Povolit"
 #, kde-format
 msgid ""
 "For a key to be accepted, it has to be held until the set amount of time"
-msgstr ""
+msgstr "Aby byla klávesa přijata, je třeba ji držet po stanovenou dobu"
 
 #: package/contents/ui/KeyboardFilters.qml:37
 #, kde-format
@@ -510,7 +509,7 @@ msgstr "Zpětná vazba:"
 #: package/contents/ui/ModifierKeys.qml:72
 #, kde-format
 msgid "Ring system bell when locking keys are toggled"
-msgstr ""
+msgstr "Zazvonit systémovým zvonkem, když se přepnou zámkové klávesy"
 
 #: package/contents/ui/ModifierKeys.qml:83
 #, kde-format
@@ -599,3 +598,5 @@ msgid ""
 "It appears that the Orca Screen Reader is not installed. Please install it "
 "before trying to use this feature, and then log out or reboot"
 msgstr ""
+"Zdá se, že není nainstalován čtečka obrazovky Orca. Před použitím této "
+"funkce ji prosím nainstalujte a poté se odhlaste nebo restartujte počítač."
