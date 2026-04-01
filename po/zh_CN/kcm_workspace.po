@@ -269,61 +269,43 @@ msgid "Touch"
 msgstr "触摸"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgctxt "@title:group prefix radiobutton group"
-#| msgid "Enable Touch Mode:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
-msgstr "启用触摸模式："
+msgstr ""
 
 #: ui/main.qml:418
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
-#| msgid "Automatically enable as needed"
+#, kde-format
 msgctxt "@option:radio As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
-msgstr "按需自动启动"
+msgstr ""
 
 #: ui/main.qml:418
-#, fuzzy, kde-format
-#| msgctxt "option:radio As in: 'Touch Mode is never enabled'"
-#| msgid "Never enabled"
+#, kde-format
 msgctxt "option:radio As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
-msgstr "永不启用"
+msgstr ""
 
 #: ui/main.qml:435
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
-#| msgid ""
-#| "Touch Mode will be automatically activated whenever the system detects a "
-#| "touchscreen but no mouse or touchpad. For example: when a transformable "
-#| "laptop's keyboard is flipped around or detached."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Tablet Mode will be automatically activated whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
-"触摸模式将在系统检测到触摸屏，并且检测不到鼠标和触摸板时自动启用。例如：将变"
-"形本的键盘盖翻转 180 度或拆除时。"
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always active"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always active"
-msgstr "总是启用"
+msgstr ""
 
 #: ui/main.qml:463
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is never enabled'"
-#| msgid "Disabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
-msgstr "禁用"
+msgstr ""
 
 #: ui/main.qml:486
 #, kde-format
@@ -414,9 +396,3 @@ msgstr "布局更改时显示屏显信息"
 #, kde-format
 msgid "Show a popup on layout changes"
 msgstr "在布局更改时显示弹窗通知"
-
-#~ msgctxt "@info:usagetip"
-#~ msgid ""
-#~ "In Touch Mode, many elements of the user interface will become larger to "
-#~ "more easily accommodate touch interaction."
-#~ msgstr "在触摸模式下，用户界面的许多元素将被放大，以便适应触摸操作。"
