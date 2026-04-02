@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-29 03:06+0000\n"
+"POT-Creation-Date: 2026-04-02 02:40+0000\n"
 "PO-Revision-Date: 2026-01-08 11:42+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -19,31 +19,31 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: ConfigOverlay.qml:333
+#: ConfigOverlay.qml:368
 #, kde-format
 msgctxt "@action:inmenu removes widget"
 msgid "Remove"
 msgstr "أزِل"
 
-#: ConfigOverlay.qml:343
+#: ConfigOverlay.qml:378
 #, kde-format
 msgctxt "@action:inmenu opens widget config dialog"
 msgid "Configure…"
 msgstr "اضبط…"
 
-#: ConfigOverlay.qml:354
+#: ConfigOverlay.qml:389
 #, kde-format
 msgctxt "@action:inmenu opens widget alternatives explorer"
 msgid "Show Alternatives…"
 msgstr "أظهر البدائل..."
 
-#: ConfigOverlay.qml:373
+#: ConfigOverlay.qml:408
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Spacer width"
 msgstr "عرض المُباعد"
 
-#: ConfigOverlay.qml:396
+#: ConfigOverlay.qml:431
 #, kde-format
 msgctxt ""
 "@option:check Whether to allow a spacer widget to fill available space"
