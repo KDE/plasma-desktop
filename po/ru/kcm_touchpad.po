@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-26 00:46+0000\n"
+"POT-Creation-Date: 2026-04-02 00:45+0000\n"
 "PO-Revision-Date: 2026-01-22 18:59+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -195,13 +195,13 @@ msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Скорость перемещения курсора:"
 
-#: ui/main.qml:299
+#: ui/main.qml:300
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Включить ускорение курсора:"
 
-#: ui/main.qml:313
+#: ui/main.qml:314
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -210,25 +210,25 @@ msgstr ""
 "При включении, перемещение курсора ускоряется при более быстром перемещении "
 "мыши."
 
-#: ui/main.qml:326
+#: ui/main.qml:327
 #, kde-format
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "Скорость прокрутки:"
 
-#: ui/main.qml:376
+#: ui/main.qml:378
 #, kde-format
 msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "Медленнее"
 
-#: ui/main.qml:383
+#: ui/main.qml:385
 #, kde-format
 msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "Быстрее"
 
-#: ui/main.qml:390
+#: ui/main.qml:392
 #, kde-format
 msgctxt ""
 "@title group begins the sentence 'Scroll by moving two fingers anywhere/"
@@ -236,33 +236,33 @@ msgctxt ""
 msgid "Scroll by:"
 msgstr "Прокрутка:"
 
-#: ui/main.qml:408
+#: ui/main.qml:410
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr "Перемещение двух пальцев в любом месте"
 
-#: ui/main.qml:415
+#: ui/main.qml:417
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr "Перемещение одного пальца по краю"
 
-#: ui/main.qml:423
+#: ui/main.qml:425
 #, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Сменить направление прокрутки (естественная прокрутка)"
 
-#: ui/main.qml:436
+#: ui/main.qml:438
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "Отключить горизонтальную прокрутку"
 
-#: ui/main.qml:457
+#: ui/main.qml:459
 #, kde-format
 msgctxt ""
 "@title:group for radiobutton group, begins the sentence 'right-click by "
@@ -270,7 +270,7 @@ msgctxt ""
 msgid "Right-click by:"
 msgstr "Щелчок правой кнопкой:"
 
-#: ui/main.qml:477
+#: ui/main.qml:479
 #, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-right "
@@ -278,19 +278,19 @@ msgctxt ""
 msgid "Pressing bottom-right corner"
 msgstr "Нажатие правого нижнего угла"
 
-#: ui/main.qml:492
+#: ui/main.qml:494
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "Нажатие по центру внизу — нажатие средней кнопки."
 
-#: ui/main.qml:493
+#: ui/main.qml:495
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Нажатие по центру внизу — нажатие средней кнопки."
 
-#: ui/main.qml:501
+#: ui/main.qml:503
 #, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing with two "
@@ -298,13 +298,13 @@ msgctxt ""
 msgid "Pressing anywhere with two fingers"
 msgstr "Нажатие двумя пальцами в любом месте"
 
-#: ui/main.qml:516
+#: ui/main.qml:518
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
 msgstr "Нажатие тремя пальцами в любом месте — нажатие средней кнопки."
 
-#: ui/main.qml:525
+#: ui/main.qml:527
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'middle-click by pressing "
@@ -312,7 +312,7 @@ msgctxt ""
 msgid "Middle-click by:"
 msgstr "Щелчок средней кнопкой:"
 
-#: ui/main.qml:545
+#: ui/main.qml:547
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-middle "
@@ -320,7 +320,7 @@ msgctxt ""
 msgid "Pressing bottom-middle edge"
 msgstr "Нажатие внизу посередине"
 
-#: ui/main.qml:552
+#: ui/main.qml:554
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-left "
@@ -328,7 +328,7 @@ msgctxt ""
 msgid "Pressing bottom-left and bottom-right corners"
 msgstr "Нажатие левого нижнего и правого нижнего углов"
 
-#: ui/main.qml:559
+#: ui/main.qml:561
 #, kde-format
 msgctxt ""
 "@option:check completes the sentence 'middle-click by pressing anywhere with "
@@ -336,25 +336,25 @@ msgctxt ""
 msgid "Pressing anywhere with three fingers"
 msgstr "Нажатие сенсорного экрана тремя пальцами"
 
-#: ui/main.qml:575
+#: ui/main.qml:577
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Нажатия:"
 
-#: ui/main.qml:576
+#: ui/main.qml:578
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap to click"
 msgstr "Эмуляция кнопок мыши"
 
-#: ui/main.qml:591
+#: ui/main.qml:593
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr "Разрешить перетаскивание после нажатия"
 
-#: ui/main.qml:603
+#: ui/main.qml:605
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -364,40 +364,40 @@ msgstr ""
 "Для перетаскивания нажмите, потом ещё раз коснитесь панели и тащите пальцем. "
 "Отпустите палец для завершения перетаскивания."
 
-#: ui/main.qml:609
+#: ui/main.qml:611
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr ""
 "Разрешить краткое отрывание пальца во время перетаскивания после нажатия"
 
-#: ui/main.qml:622
+#: ui/main.qml:624
 #, kde-format
 msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "Касание двумя пальцами:"
 
-#: ui/main.qml:641
+#: ui/main.qml:643
 #, kde-format
 msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr ""
 "Нажатие правой кнопки (касание тремя пальцами — нажатие средней кнопки)"
 
-#: ui/main.qml:642
+#: ui/main.qml:644
 #, kde-format
 msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "Нажатие правой кнопки"
 
-#: ui/main.qml:650
+#: ui/main.qml:652
 #, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr ""
 "Нажатие средней кнопки (касание тремя пальцами — нажатие правой кнопки)"
 
-#: ui/main.qml:651
+#: ui/main.qml:653
 #, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click"

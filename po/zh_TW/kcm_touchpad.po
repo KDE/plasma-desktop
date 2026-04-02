@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-26 00:46+0000\n"
+"POT-Creation-Date: 2026-04-02 00:45+0000\n"
 "PO-Revision-Date: 2026-01-08 23:56+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -184,38 +184,38 @@ msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "游標速度："
 
-#: ui/main.qml:299
+#: ui/main.qml:300
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "啟用指標加速"
 
-#: ui/main.qml:313
+#: ui/main.qml:314
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr "啟用時，手指移動較快時會使指標移動距離較遠。"
 
-#: ui/main.qml:326
+#: ui/main.qml:327
 #, kde-format
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "捲動速度："
 
-#: ui/main.qml:376
+#: ui/main.qml:378
 #, kde-format
 msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "較慢"
 
-#: ui/main.qml:383
+#: ui/main.qml:385
 #, kde-format
 msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "較快"
 
-#: ui/main.qml:390
+#: ui/main.qml:392
 #, kde-format
 msgctxt ""
 "@title group begins the sentence 'Scroll by moving two fingers anywhere/"
@@ -223,33 +223,33 @@ msgctxt ""
 msgid "Scroll by:"
 msgstr "捲動方式："
 
-#: ui/main.qml:408
+#: ui/main.qml:410
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr "以兩支手指滑動任何地方"
 
-#: ui/main.qml:415
+#: ui/main.qml:417
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr "以單指滑動邊緣"
 
-#: ui/main.qml:423
+#: ui/main.qml:425
 #, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "反轉捲動方向(&N)（自然捲動）"
 
-#: ui/main.qml:436
+#: ui/main.qml:438
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "停用水平捲動(&H)"
 
-#: ui/main.qml:457
+#: ui/main.qml:459
 #, kde-format
 msgctxt ""
 "@title:group for radiobutton group, begins the sentence 'right-click by "
@@ -257,7 +257,7 @@ msgctxt ""
 msgid "Right-click by:"
 msgstr "右鍵點擊方式："
 
-#: ui/main.qml:477
+#: ui/main.qml:479
 #, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-right "
@@ -265,19 +265,19 @@ msgctxt ""
 msgid "Pressing bottom-right corner"
 msgstr "點觸右下角"
 
-#: ui/main.qml:492
+#: ui/main.qml:494
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "同時按下左下角和右下角來進行中鍵點擊。"
 
-#: ui/main.qml:493
+#: ui/main.qml:495
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "按下右下角來進行中鍵點擊。"
 
-#: ui/main.qml:501
+#: ui/main.qml:503
 #, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing with two "
@@ -285,13 +285,13 @@ msgctxt ""
 msgid "Pressing anywhere with two fingers"
 msgstr "用兩指點觸任何地方"
 
-#: ui/main.qml:516
+#: ui/main.qml:518
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
 msgstr "在任何地方三指點觸來進行中鍵點擊。"
 
-#: ui/main.qml:525
+#: ui/main.qml:527
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'middle-click by pressing "
@@ -299,7 +299,7 @@ msgctxt ""
 msgid "Middle-click by:"
 msgstr "中鍵點擊方式："
 
-#: ui/main.qml:545
+#: ui/main.qml:547
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-middle "
@@ -307,7 +307,7 @@ msgctxt ""
 msgid "Pressing bottom-middle edge"
 msgstr "點觸底部邊緣的中間"
 
-#: ui/main.qml:552
+#: ui/main.qml:554
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-left "
@@ -315,7 +315,7 @@ msgctxt ""
 msgid "Pressing bottom-left and bottom-right corners"
 msgstr "按左下角和右下角"
 
-#: ui/main.qml:559
+#: ui/main.qml:561
 #, kde-format
 msgctxt ""
 "@option:check completes the sentence 'middle-click by pressing anywhere with "
@@ -323,25 +323,25 @@ msgctxt ""
 msgid "Pressing anywhere with three fingers"
 msgstr "用三指點觸任何地方"
 
-#: ui/main.qml:575
+#: ui/main.qml:577
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "輕點："
 
-#: ui/main.qml:576
+#: ui/main.qml:578
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap to click"
 msgstr "輕點以點擊"
 
-#: ui/main.qml:591
+#: ui/main.qml:593
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr "允許輕點後拖曳"
 
-#: ui/main.qml:603
+#: ui/main.qml:605
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -351,37 +351,37 @@ msgstr ""
 "輕點，然後再輕點一次但不放開，第二次直接在觸控板上滑動手指來進行拖曳。放開手"
 "指來拖放。"
 
-#: ui/main.qml:609
+#: ui/main.qml:611
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr "允許在輕點後拖曳時抬起手指一下子"
 
-#: ui/main.qml:622
+#: ui/main.qml:624
 #, kde-format
 msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "兩指點擊："
 
-#: ui/main.qml:641
+#: ui/main.qml:643
 #, kde-format
 msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "右鍵(&R)（三指點擊傳出中鍵）"
 
-#: ui/main.qml:642
+#: ui/main.qml:644
 #, kde-format
 msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "點擊右鍵"
 
-#: ui/main.qml:650
+#: ui/main.qml:652
 #, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "中鍵(&M)（三指點擊傳出右鍵）"
 
-#: ui/main.qml:651
+#: ui/main.qml:653
 #, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click"

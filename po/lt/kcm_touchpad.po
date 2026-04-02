@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-26 00:46+0000\n"
+"POT-Creation-Date: 2026-04-02 00:45+0000\n"
 "PO-Revision-Date: 2026-03-27 21:33+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -196,13 +196,13 @@ msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Rodyklės greitis:"
 
-#: ui/main.qml:299
+#: ui/main.qml:300
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Įjungti rodyklės pagreitį"
 
-#: ui/main.qml:313
+#: ui/main.qml:314
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -211,25 +211,25 @@ msgstr ""
 "Kai įjungta, kuo greičiau judinama pelė, tuo labiau padidėja rodyklės "
 "nukeliautas atstumas."
 
-#: ui/main.qml:326
+#: ui/main.qml:327
 #, kde-format
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "Slinkimo greitis:"
 
-#: ui/main.qml:376
+#: ui/main.qml:378
 #, kde-format
 msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "Lėtesnis"
 
-#: ui/main.qml:383
+#: ui/main.qml:385
 #, kde-format
 msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "Greitesnis"
 
-#: ui/main.qml:390
+#: ui/main.qml:392
 #, kde-format
 msgctxt ""
 "@title group begins the sentence 'Scroll by moving two fingers anywhere/"
@@ -237,33 +237,33 @@ msgctxt ""
 msgid "Scroll by:"
 msgstr "Slinkti:"
 
-#: ui/main.qml:408
+#: ui/main.qml:410
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr "Judinant bet kur dviem pirštais"
 
-#: ui/main.qml:415
+#: ui/main.qml:417
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr "Judinant krašte vienu pirštu"
 
-#: ui/main.qml:423
+#: ui/main.qml:425
 #, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Atvirkštinė slinkties kryptis (Natūralus slinkimas)"
 
-#: ui/main.qml:436
+#: ui/main.qml:438
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "Išjungti horizontalųjį slinkimą"
 
-#: ui/main.qml:457
+#: ui/main.qml:459
 #, kde-format
 msgctxt ""
 "@title:group for radiobutton group, begins the sentence 'right-click by "
@@ -271,7 +271,7 @@ msgctxt ""
 msgid "Right-click by:"
 msgstr "Inicijuoti dešinįjį spustelėjimą:"
 
-#: ui/main.qml:477
+#: ui/main.qml:479
 #, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-right "
@@ -279,7 +279,7 @@ msgctxt ""
 msgid "Pressing bottom-right corner"
 msgstr "Paspaudžiant apatinį dešinįjį kampą"
 
-#: ui/main.qml:492
+#: ui/main.qml:494
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
@@ -287,14 +287,14 @@ msgstr ""
 "Inicijuoti viduriniojo mygtuko spustelėjimą paspaudžiant abu apatinius "
 "kampus."
 
-#: ui/main.qml:493
+#: ui/main.qml:495
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr ""
 "Inicijuoti viduriniojo mygtuko spustelėjimą paspaudžiant apačioje per vidurį."
 
-#: ui/main.qml:501
+#: ui/main.qml:503
 #, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing with two "
@@ -302,7 +302,7 @@ msgctxt ""
 msgid "Pressing anywhere with two fingers"
 msgstr "Paspaudžiant bet kur dviem pirštais"
 
-#: ui/main.qml:516
+#: ui/main.qml:518
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
@@ -310,7 +310,7 @@ msgstr ""
 "Inicijuoti viduriniojo mygtuko spustelėjimą paspaudžiant bet kur trimis "
 "pirštais."
 
-#: ui/main.qml:525
+#: ui/main.qml:527
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'middle-click by pressing "
@@ -318,7 +318,7 @@ msgctxt ""
 msgid "Middle-click by:"
 msgstr "Inicijuoti vidurinįjį spustelėjimą:"
 
-#: ui/main.qml:545
+#: ui/main.qml:547
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-middle "
@@ -326,7 +326,7 @@ msgctxt ""
 msgid "Pressing bottom-middle edge"
 msgstr "Paspaudžiant apatinį kraštą per vidurį"
 
-#: ui/main.qml:552
+#: ui/main.qml:554
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-left "
@@ -334,7 +334,7 @@ msgctxt ""
 msgid "Pressing bottom-left and bottom-right corners"
 msgstr "Paspaudžiant apatinį kairįjį ir apatinį dešinįjį kampą"
 
-#: ui/main.qml:559
+#: ui/main.qml:561
 #, kde-format
 msgctxt ""
 "@option:check completes the sentence 'middle-click by pressing anywhere with "
@@ -342,25 +342,25 @@ msgctxt ""
 msgid "Pressing anywhere with three fingers"
 msgstr "Paspaudžiant bet kur trimis pirštais"
 
-#: ui/main.qml:575
+#: ui/main.qml:577
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Bakstelėjimas:"
 
-#: ui/main.qml:576
+#: ui/main.qml:578
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap to click"
 msgstr "Bakstelėti norint spustelėti"
 
-#: ui/main.qml:591
+#: ui/main.qml:593
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr "Leisti po bakstelėjimo tempti"
 
-#: ui/main.qml:603
+#: ui/main.qml:605
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -371,19 +371,19 @@ msgstr ""
 "kilimėliu norėdami tempti. Pakelkite pirštą norėdami paleisti tempiamą "
 "turinį."
 
-#: ui/main.qml:609
+#: ui/main.qml:611
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr "Leisti trumpam pakelti pirštą tempimo metu"
 
-#: ui/main.qml:622
+#: ui/main.qml:624
 #, kde-format
 msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "Bakstelėjimas dviem pirštais:"
 
-#: ui/main.qml:641
+#: ui/main.qml:643
 #, kde-format
 msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
@@ -391,13 +391,13 @@ msgstr ""
 "Dešinysis spustelėjimas (viduriniajam spustelėjimui inicijuoti bakstelėti "
 "trimis pirštais)"
 
-#: ui/main.qml:642
+#: ui/main.qml:644
 #, kde-format
 msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "Dešinysis spustelėjimas"
 
-#: ui/main.qml:650
+#: ui/main.qml:652
 #, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
@@ -405,7 +405,7 @@ msgstr ""
 "Vidurinysis spustelėjimas (dešiniajam spustelėjimui inicijuoti bakstelėti "
 "trimis pirštais)"
 
-#: ui/main.qml:651
+#: ui/main.qml:653
 #, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click"

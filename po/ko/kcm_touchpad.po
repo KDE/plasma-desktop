@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-26 00:46+0000\n"
+"POT-Creation-Date: 2026-04-02 00:45+0000\n"
 "PO-Revision-Date: 2026-02-03 21:45+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -188,13 +188,13 @@ msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "포인터 속도:"
 
-#: ui/main.qml:299
+#: ui/main.qml:300
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "포인터 가속 활성화"
 
-#: ui/main.qml:313
+#: ui/main.qml:314
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -202,25 +202,25 @@ msgid ""
 msgstr ""
 "이 설정을 사용하면 포인터 이동 속도가 빨라지면 그만큼 이동 거리가 증가합니다."
 
-#: ui/main.qml:326
+#: ui/main.qml:327
 #, kde-format
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "스크롤 속도:"
 
-#: ui/main.qml:376
+#: ui/main.qml:378
 #, kde-format
 msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "느리게"
 
-#: ui/main.qml:383
+#: ui/main.qml:385
 #, kde-format
 msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "빠르게"
 
-#: ui/main.qml:390
+#: ui/main.qml:392
 #, kde-format
 msgctxt ""
 "@title group begins the sentence 'Scroll by moving two fingers anywhere/"
@@ -228,33 +228,33 @@ msgctxt ""
 msgid "Scroll by:"
 msgstr "스크롤 방식:"
 
-#: ui/main.qml:408
+#: ui/main.qml:410
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr "어디든지 두 손가락으로 움직이기"
 
-#: ui/main.qml:415
+#: ui/main.qml:417
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr "경계면에서 한 손가락 움직이기"
 
-#: ui/main.qml:423
+#: ui/main.qml:425
 #, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "스크롤 방향 반전(자연 스크롤)"
 
-#: ui/main.qml:436
+#: ui/main.qml:438
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "수평 스크롤 비활성화"
 
-#: ui/main.qml:457
+#: ui/main.qml:459
 #, kde-format
 msgctxt ""
 "@title:group for radiobutton group, begins the sentence 'right-click by "
@@ -262,7 +262,7 @@ msgctxt ""
 msgid "Right-click by:"
 msgstr "오른쪽 단추 클릭 방식:"
 
-#: ui/main.qml:477
+#: ui/main.qml:479
 #, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-right "
@@ -270,19 +270,19 @@ msgctxt ""
 msgid "Pressing bottom-right corner"
 msgstr "오른쪽 아래 꼭짓점 누르기"
 
-#: ui/main.qml:492
+#: ui/main.qml:494
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "아래쪽 꼭짓점을 동시에 누르면 가운데 단추 클릭으로 취급합니다."
 
-#: ui/main.qml:493
+#: ui/main.qml:495
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "아래쪽 가운데를 누르면 가운데 단추 클릭으로 취급합니다."
 
-#: ui/main.qml:501
+#: ui/main.qml:503
 #, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing with two "
@@ -290,13 +290,13 @@ msgctxt ""
 msgid "Pressing anywhere with two fingers"
 msgstr "어디든지 두 손가락으로 누르기"
 
-#: ui/main.qml:516
+#: ui/main.qml:518
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
 msgstr "어디든지 세 손가락으로 눌러서 가운데 단추를 클릭합니다."
 
-#: ui/main.qml:525
+#: ui/main.qml:527
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'middle-click by pressing "
@@ -304,7 +304,7 @@ msgctxt ""
 msgid "Middle-click by:"
 msgstr "가운데 단추 클릭 방식:"
 
-#: ui/main.qml:545
+#: ui/main.qml:547
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-middle "
@@ -312,7 +312,7 @@ msgctxt ""
 msgid "Pressing bottom-middle edge"
 msgstr "아래쪽 가운데 경계 누르기"
 
-#: ui/main.qml:552
+#: ui/main.qml:554
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-left "
@@ -320,7 +320,7 @@ msgctxt ""
 msgid "Pressing bottom-left and bottom-right corners"
 msgstr "왼쪽과 오른쪽 아래 꼭짓점 같이 누르기"
 
-#: ui/main.qml:559
+#: ui/main.qml:561
 #, kde-format
 msgctxt ""
 "@option:check completes the sentence 'middle-click by pressing anywhere with "
@@ -328,25 +328,25 @@ msgctxt ""
 msgid "Pressing anywhere with three fingers"
 msgstr "어디든지 세 손가락으로 누르기"
 
-#: ui/main.qml:575
+#: ui/main.qml:577
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "탭:"
 
-#: ui/main.qml:576
+#: ui/main.qml:578
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap to click"
 msgstr "탭하여 클릭"
 
-#: ui/main.qml:591
+#: ui/main.qml:593
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr "탭 후 드래그 허용"
 
-#: ui/main.qml:603
+#: ui/main.qml:605
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -356,37 +356,37 @@ msgstr ""
 "탭한 후 다시 한 번 탭한 상태에서 손가락을 터치패드에서 움직이면 드래그합니"
 "다. 손가락을 들어 올리면 드롭합니다."
 
-#: ui/main.qml:609
+#: ui/main.qml:611
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr "탭 후 드래그 중 손가락을 잠시 드는 것 허용"
 
-#: ui/main.qml:622
+#: ui/main.qml:624
 #, kde-format
 msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "두 손가락 탭:"
 
-#: ui/main.qml:641
+#: ui/main.qml:643
 #, kde-format
 msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "오른쪽 단추 클릭(세 손가락으로 탭하여 가운데 단추 클릭)"
 
-#: ui/main.qml:642
+#: ui/main.qml:644
 #, kde-format
 msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "오른쪽 클릭"
 
-#: ui/main.qml:650
+#: ui/main.qml:652
 #, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "가운데 단추 클릭(세 손가락으로 탭하여 오른쪽 단추 클릭)"
 
-#: ui/main.qml:651
+#: ui/main.qml:653
 #, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click"

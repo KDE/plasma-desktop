@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-04-02 00:45+0000\n"
 "PO-Revision-Date: 2014-08-11 12:03+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -136,14 +136,14 @@ msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "Toornen tofögen"
 
-#: ui/LayoutDialog.qml:129
+#: ui/LayoutDialog.qml:121
 #, fuzzy, kde-format
 #| msgid "Show layout indicator"
 msgctxt "@label:textbox"
 msgid "Short layout name"
 msgstr "Toornwieser wiesen"
 
-#: ui/LayoutDialog.qml:139
+#: ui/LayoutDialog.qml:131
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -151,14 +151,14 @@ msgid ""
 "system tray. You can change this setting yourself."
 msgstr ""
 
-#: ui/LayoutDialog.qml:147
+#: ui/LayoutDialog.qml:139
 #, fuzzy, kde-format
 #| msgid "Shortcut:"
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Tastkombinatschoon:"
 
-#: ui/LayoutDialog.qml:158 ui/main.qml:287
+#: ui/LayoutDialog.qml:150 ui/main.qml:287
 #, fuzzy, kde-format
 #| msgid "Preview"
 msgctxt "@action:button"

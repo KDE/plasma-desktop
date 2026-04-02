@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-26 00:46+0000\n"
+"POT-Creation-Date: 2026-04-02 00:45+0000\n"
 "PO-Revision-Date: 2020-10-07 23:02+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -198,28 +198,28 @@ msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Osutusseadme kiirus:"
 
-#: ui/main.qml:299
+#: ui/main.qml:300
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Kursori kiirendus:"
 
-#: ui/main.qml:313
+#: ui/main.qml:314
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
 
-#: ui/main.qml:326
+#: ui/main.qml:327
 #, fuzzy, kde-format
 #| msgid "Scrolling speed:"
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "Kerimiskiirus:"
 
-#: ui/main.qml:376
+#: ui/main.qml:378
 #, fuzzy, kde-format
 #| msgctxt "Slower Scroll"
 #| msgid "Slower"
@@ -227,7 +227,7 @@ msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "Aeglasem"
 
-#: ui/main.qml:383
+#: ui/main.qml:385
 #, fuzzy, kde-format
 #| msgctxt "Faster Scroll Speed"
 #| msgid "Faster"
@@ -235,7 +235,7 @@ msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "Kiirem"
 
-#: ui/main.qml:390
+#: ui/main.qml:392
 #, fuzzy, kde-format
 #| msgid "Scrolling:"
 msgctxt ""
@@ -244,35 +244,35 @@ msgctxt ""
 msgid "Scroll by:"
 msgstr "Kerimine:"
 
-#: ui/main.qml:408
+#: ui/main.qml:410
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr ""
 
-#: ui/main.qml:415
+#: ui/main.qml:417
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr ""
 
-#: ui/main.qml:423
+#: ui/main.qml:425
 #, fuzzy, kde-format
 #| msgid "Invert scroll direction (Natural scrolling)"
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Teistpidi kerimissuund (loomulik kerimine)"
 
-#: ui/main.qml:436
+#: ui/main.qml:438
 #, fuzzy, kde-format
 #| msgid "Disable horizontal scrolling"
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "Rõhtsuunas kerimise keelamine"
 
-#: ui/main.qml:457
+#: ui/main.qml:459
 #, fuzzy, kde-format
 #| msgid "Right-click"
 msgctxt ""
@@ -281,7 +281,7 @@ msgctxt ""
 msgid "Right-click by:"
 msgstr "Paremklõps"
 
-#: ui/main.qml:477
+#: ui/main.qml:479
 #, fuzzy, kde-format
 #| msgid "Press bottom-right corner"
 msgctxt ""
@@ -290,21 +290,21 @@ msgctxt ""
 msgid "Pressing bottom-right corner"
 msgstr "Vajutamine alumisse paremasse nurka"
 
-#: ui/main.qml:492
+#: ui/main.qml:494
 #, fuzzy, kde-format
 #| msgid "Press anywhere with three fingers."
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "Vajutamine ükspuha kuhu kolme sõrmega."
 
-#: ui/main.qml:493
+#: ui/main.qml:495
 #, fuzzy, kde-format
 #| msgid "Press anywhere with three fingers."
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Vajutamine ükspuha kuhu kolme sõrmega."
 
-#: ui/main.qml:501
+#: ui/main.qml:503
 #, fuzzy, kde-format
 #| msgid "Press anywhere with two fingers"
 msgctxt ""
@@ -313,14 +313,14 @@ msgctxt ""
 msgid "Pressing anywhere with two fingers"
 msgstr "Vajutus ükspuha kuhu kahe sõrmega"
 
-#: ui/main.qml:516
+#: ui/main.qml:518
 #, fuzzy, kde-format
 #| msgid "Press anywhere with three fingers."
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
 msgstr "Vajutamine ükspuha kuhu kolme sõrmega."
 
-#: ui/main.qml:525
+#: ui/main.qml:527
 #, fuzzy, kde-format
 #| msgid "Middle-click"
 msgctxt ""
@@ -329,7 +329,7 @@ msgctxt ""
 msgid "Middle-click by:"
 msgstr "Keskklõps"
 
-#: ui/main.qml:545
+#: ui/main.qml:547
 #, fuzzy, kde-format
 #| msgid "Press bottom-middle"
 msgctxt ""
@@ -338,7 +338,7 @@ msgctxt ""
 msgid "Pressing bottom-middle edge"
 msgstr "Vajutamine alla keskele"
 
-#: ui/main.qml:552
+#: ui/main.qml:554
 #, fuzzy, kde-format
 #| msgid "Press bottom left and bottom right corners simultaneously"
 msgctxt ""
@@ -347,7 +347,7 @@ msgctxt ""
 msgid "Pressing bottom-left and bottom-right corners"
 msgstr "Vajutamine korraga alumisse vasakusse ja paremasse nurka"
 
-#: ui/main.qml:559
+#: ui/main.qml:561
 #, fuzzy, kde-format
 #| msgid "Press anywhere with three fingers"
 msgctxt ""
@@ -356,27 +356,27 @@ msgctxt ""
 msgid "Pressing anywhere with three fingers"
 msgstr "Vajutamine ükspuha kuhu kolme sõrmega"
 
-#: ui/main.qml:575
+#: ui/main.qml:577
 #, fuzzy, kde-format
 #| msgid "Tapping:"
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Koputamine:"
 
-#: ui/main.qml:576
+#: ui/main.qml:578
 #, fuzzy, kde-format
 #| msgid "Tap to Click"
 msgctxt "@option:check"
 msgid "Tap to click"
 msgstr "Koputamine klõpsamiseks"
 
-#: ui/main.qml:591
+#: ui/main.qml:593
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr ""
 
-#: ui/main.qml:603
+#: ui/main.qml:605
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -384,41 +384,41 @@ msgid ""
 "finger to drop."
 msgstr ""
 
-#: ui/main.qml:609
+#: ui/main.qml:611
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr ""
 
-#: ui/main.qml:622
+#: ui/main.qml:624
 #, fuzzy, kde-format
 #| msgid "Two-finger tap:"
 msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "Kahe sõrmega koputus:"
 
-#: ui/main.qml:641
+#: ui/main.qml:643
 #, fuzzy, kde-format
 #| msgid "Right-click (three-finger tap to middle-click)"
 msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Paremklõps (kolme sõrmega koputus - keskklõps)"
 
-#: ui/main.qml:642
+#: ui/main.qml:644
 #, fuzzy, kde-format
 #| msgid "Right-click"
 msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "Paremklõps"
 
-#: ui/main.qml:650
+#: ui/main.qml:652
 #, fuzzy, kde-format
 #| msgid "Middle-click (three-finger tap right-click)"
 msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Keskklõps (kolme sõrmega koputus - paremklõps)"
 
-#: ui/main.qml:651
+#: ui/main.qml:653
 #, fuzzy, kde-format
 #| msgid "Middle-click"
 msgctxt "@option:radio"

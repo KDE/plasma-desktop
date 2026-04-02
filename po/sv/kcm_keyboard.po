@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-04-02 00:45+0000\n"
 "PO-Revision-Date: 2025-04-05 18:56+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -139,13 +139,13 @@ msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "Lägg till layout"
 
-#: ui/LayoutDialog.qml:129
+#: ui/LayoutDialog.qml:121
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
 msgstr "Kort layoutnamn"
 
-#: ui/LayoutDialog.qml:139
+#: ui/LayoutDialog.qml:131
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -155,13 +155,13 @@ msgstr ""
 "Det förkortade namnet på den valda layouten, som visas i systembrickan. Du "
 "kan själv ändra inställningen."
 
-#: ui/LayoutDialog.qml:147
+#: ui/LayoutDialog.qml:139
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Genväg:"
 
-#: ui/LayoutDialog.qml:158 ui/main.qml:287
+#: ui/LayoutDialog.qml:150 ui/main.qml:287
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview"

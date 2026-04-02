@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-26 00:46+0000\n"
+"POT-Creation-Date: 2026-04-02 00:45+0000\n"
 "PO-Revision-Date: 2025-10-31 22:49+0100\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -202,14 +202,14 @@ msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Markørhastighed:"
 
-#: ui/main.qml:299
+#: ui/main.qml:300
 #, fuzzy, kde-format
 #| msgid "Enable pointer acceleration"
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Aktivér markøracceleration"
 
-#: ui/main.qml:313
+#: ui/main.qml:314
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -218,14 +218,14 @@ msgstr ""
 "Når aktiveret, øges markørens bevægelsesafstand ved højere "
 "bevægelseshastighed."
 
-#: ui/main.qml:326
+#: ui/main.qml:327
 #, fuzzy, kde-format
 #| msgid "Scrolling speed:"
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "Rullehastighed:"
 
-#: ui/main.qml:376
+#: ui/main.qml:378
 #, fuzzy, kde-format
 #| msgctxt "Slower Scroll"
 #| msgid "Slower"
@@ -233,7 +233,7 @@ msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "Langsommere"
 
-#: ui/main.qml:383
+#: ui/main.qml:385
 #, fuzzy, kde-format
 #| msgctxt "Faster Scroll Speed"
 #| msgid "Faster"
@@ -241,7 +241,7 @@ msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "Hurtigere"
 
-#: ui/main.qml:390
+#: ui/main.qml:392
 #, fuzzy, kde-format
 #| msgid "Scrolling:"
 msgctxt ""
@@ -250,35 +250,35 @@ msgctxt ""
 msgid "Scroll by:"
 msgstr "Rulning:"
 
-#: ui/main.qml:408
+#: ui/main.qml:410
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr ""
 
-#: ui/main.qml:415
+#: ui/main.qml:417
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr ""
 
-#: ui/main.qml:423
+#: ui/main.qml:425
 #, fuzzy, kde-format
 #| msgid "Invert scroll direction (Natural scrolling)"
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Omvendt rulleretning (naturlig rulning)"
 
-#: ui/main.qml:436
+#: ui/main.qml:438
 #, fuzzy, kde-format
 #| msgid "Disable horizontal scrolling"
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "Deaktivér vandret rulning"
 
-#: ui/main.qml:457
+#: ui/main.qml:459
 #, fuzzy, kde-format
 #| msgid "Right-click"
 msgctxt ""
@@ -287,7 +287,7 @@ msgctxt ""
 msgid "Right-click by:"
 msgstr "Højreklik"
 
-#: ui/main.qml:477
+#: ui/main.qml:479
 #, fuzzy, kde-format
 #| msgctxt "@option:radio touchpad integrated right-click"
 #| msgid "Press bottom-right corner"
@@ -297,7 +297,7 @@ msgctxt ""
 msgid "Pressing bottom-right corner"
 msgstr "Tryk nederste højre hjørne"
 
-#: ui/main.qml:492
+#: ui/main.qml:494
 #, fuzzy, kde-format
 #| msgctxt "@info shown below radio button"
 #| msgid "Middle-click by pressing both bottom corners."
@@ -305,7 +305,7 @@ msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "Midterklik ved at trykke på de nederste hjørner."
 
-#: ui/main.qml:493
+#: ui/main.qml:495
 #, fuzzy, kde-format
 #| msgctxt "@info shown below radio button"
 #| msgid "Middle-click by pressing bottom center."
@@ -313,7 +313,7 @@ msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Midterklik ved at trykke nederst i midten."
 
-#: ui/main.qml:501
+#: ui/main.qml:503
 #, fuzzy, kde-format
 #| msgctxt "@option:radio touchpad integrated right-click"
 #| msgid "Press touchpad with two fingers"
@@ -323,7 +323,7 @@ msgctxt ""
 msgid "Pressing anywhere with two fingers"
 msgstr "Tryk på touchpad med to fingre"
 
-#: ui/main.qml:516
+#: ui/main.qml:518
 #, fuzzy, kde-format
 #| msgctxt "@info shown below radio button"
 #| msgid "Middle-click by pressing with three fingers."
@@ -331,7 +331,7 @@ msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
 msgstr "Midterklik ved at trykke hvorsomhelst med tre fingre."
 
-#: ui/main.qml:525
+#: ui/main.qml:527
 #, fuzzy, kde-format
 #| msgid "Middle-click"
 msgctxt ""
@@ -340,7 +340,7 @@ msgctxt ""
 msgid "Middle-click by:"
 msgstr "Midterklik"
 
-#: ui/main.qml:545
+#: ui/main.qml:547
 #, fuzzy, kde-format
 #| msgctxt "@option:radio touchpad integrated middle-click"
 #| msgid "Press bottom middle edge"
@@ -350,7 +350,7 @@ msgctxt ""
 msgid "Pressing bottom-middle edge"
 msgstr "Tryk på kanten nederst i midten"
 
-#: ui/main.qml:552
+#: ui/main.qml:554
 #, fuzzy, kde-format
 #| msgctxt "@option:radio touchpad integrated middle-click"
 #| msgid "Press bottom left and bottom right corners"
@@ -360,7 +360,7 @@ msgctxt ""
 msgid "Pressing bottom-left and bottom-right corners"
 msgstr "Tryk på nederste venstre og højre hjørne"
 
-#: ui/main.qml:559
+#: ui/main.qml:561
 #, fuzzy, kde-format
 #| msgctxt "@option:check touchpad integrated middle-click"
 #| msgid "Press touchpad with three fingers"
@@ -370,26 +370,26 @@ msgctxt ""
 msgid "Pressing anywhere with three fingers"
 msgstr "Tryk touchpad med tre fingre"
 
-#: ui/main.qml:575
+#: ui/main.qml:577
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Trykning:"
 
-#: ui/main.qml:576
+#: ui/main.qml:578
 #, fuzzy, kde-format
 #| msgid "Tap to Click"
 msgctxt "@option:check"
 msgid "Tap to click"
 msgstr "Tryk for at klikke"
 
-#: ui/main.qml:591
+#: ui/main.qml:593
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr ""
 
-#: ui/main.qml:603
+#: ui/main.qml:605
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -399,42 +399,42 @@ msgstr ""
 "Tryk, tryk igen og skub straks fingeren over touchpaden for at trække. Løft "
 "finger for at droppe."
 
-#: ui/main.qml:609
+#: ui/main.qml:611
 #, fuzzy, kde-format
 #| msgid "Allow briefly lifting finger during tap-and-drag"
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr "Tillad kortvarigt at løfte fingeren under tryk-og-træk"
 
-#: ui/main.qml:622
+#: ui/main.qml:624
 #, fuzzy, kde-format
 #| msgid "Two-finger tap:"
 msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "Tofingertryk:"
 
-#: ui/main.qml:641
+#: ui/main.qml:643
 #, fuzzy, kde-format
 #| msgid "Right-click (three-finger tap to middle-click)"
 msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Højreklik (trefingertryk for at midterklikke)"
 
-#: ui/main.qml:642
+#: ui/main.qml:644
 #, fuzzy, kde-format
 #| msgid "Right-click"
 msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "Højreklik"
 
-#: ui/main.qml:650
+#: ui/main.qml:652
 #, fuzzy, kde-format
 #| msgid "Middle-click (three-finger tap to right-click)"
 msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Midterklik (trefingertryk for at højreklikke)"
 
-#: ui/main.qml:651
+#: ui/main.qml:653
 #, fuzzy, kde-format
 #| msgid "Middle-click"
 msgctxt "@option:radio"

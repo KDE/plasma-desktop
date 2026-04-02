@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-04-02 00:45+0000\n"
 "PO-Revision-Date: 2026-02-10 23:49+0000\n"
 "Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
 "Language-Team: pt\n"
@@ -133,13 +133,13 @@ msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "Adicionar esquema"
 
-#: ui/LayoutDialog.qml:129
+#: ui/LayoutDialog.qml:121
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
 msgstr "Nome abreviado do esquema"
 
-#: ui/LayoutDialog.qml:139
+#: ui/LayoutDialog.qml:131
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -149,13 +149,13 @@ msgstr ""
 "O nome abreviado do esquema selecionado, que será apresentado na área de "
 "notificação. Pode alterar esta definição manualmente."
 
-#: ui/LayoutDialog.qml:147
+#: ui/LayoutDialog.qml:139
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Atalho:"
 
-#: ui/LayoutDialog.qml:158 ui/main.qml:287
+#: ui/LayoutDialog.qml:150 ui/main.qml:287
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview"

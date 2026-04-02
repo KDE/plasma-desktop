@@ -272,19 +272,19 @@ msgstr "触摸"
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
-msgstr ""
+msgstr "启用平板模式："
 
 #: ui/main.qml:418
 #, kde-format
 msgctxt "@option:radio As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
-msgstr ""
+msgstr "按需自动启动"
 
 #: ui/main.qml:418
 #, kde-format
 msgctxt "option:radio As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
-msgstr ""
+msgstr "永不启用"
 
 #: ui/main.qml:435
 #, kde-format
@@ -294,24 +294,26 @@ msgid ""
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
+"平板模式将在系统检测到触摸屏，并且检测不到鼠标和触摸板时自动启用。例如：将变"
+"形本的键盘盖翻转180度或拆除时。"
 
 #: ui/main.qml:440
 #, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always active"
-msgstr ""
+msgstr "始终启用"
 
 #: ui/main.qml:463
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "已禁用"
 
 #: ui/main.qml:486
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."
-msgstr ""
+msgstr "在平板模式下，虚拟键盘将按需显示。"
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-26 00:46+0000\n"
+"POT-Creation-Date: 2026-04-02 00:45+0000\n"
 "PO-Revision-Date: 2026-01-08 09:46+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -193,13 +193,13 @@ msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Velocità del puntatore:"
 
-#: ui/main.qml:299
+#: ui/main.qml:300
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Abilita accelerazione del puntatore"
 
-#: ui/main.qml:313
+#: ui/main.qml:314
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -208,25 +208,25 @@ msgstr ""
 "Quando è abilitato, la distanza coperta dal puntatore cresce quando il "
 "movimento è più veloce."
 
-#: ui/main.qml:326
+#: ui/main.qml:327
 #, kde-format
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "Velocità di scorrimento:"
 
-#: ui/main.qml:376
+#: ui/main.qml:378
 #, kde-format
 msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "Più lenta"
 
-#: ui/main.qml:383
+#: ui/main.qml:385
 #, kde-format
 msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "Più veloce"
 
-#: ui/main.qml:390
+#: ui/main.qml:392
 #, kde-format
 msgctxt ""
 "@title group begins the sentence 'Scroll by moving two fingers anywhere/"
@@ -234,33 +234,33 @@ msgctxt ""
 msgid "Scroll by:"
 msgstr "Scorrimento:"
 
-#: ui/main.qml:408
+#: ui/main.qml:410
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr "Muovendo due dita in qualsiasi punto"
 
-#: ui/main.qml:415
+#: ui/main.qml:417
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr "Muovendo un dito sul bordo"
 
-#: ui/main.qml:423
+#: ui/main.qml:425
 #, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Inverti la direzione di scorrimento (scorrimento naturale)"
 
-#: ui/main.qml:436
+#: ui/main.qml:438
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "Disabilita lo scorrimento orizzontale"
 
-#: ui/main.qml:457
+#: ui/main.qml:459
 #, kde-format
 msgctxt ""
 "@title:group for radiobutton group, begins the sentence 'right-click by "
@@ -268,7 +268,7 @@ msgctxt ""
 msgid "Right-click by:"
 msgstr "Clic destro:"
 
-#: ui/main.qml:477
+#: ui/main.qml:479
 #, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-right "
@@ -276,19 +276,19 @@ msgctxt ""
 msgid "Pressing bottom-right corner"
 msgstr "Premendo l'angolo in basso a destra"
 
-#: ui/main.qml:492
+#: ui/main.qml:494
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "Clic centrale premendo entrambi gli angoli in basso."
 
-#: ui/main.qml:493
+#: ui/main.qml:495
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Clic centrale premendo il pulsante centrale in basso."
 
-#: ui/main.qml:501
+#: ui/main.qml:503
 #, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing with two "
@@ -296,13 +296,13 @@ msgctxt ""
 msgid "Pressing anywhere with two fingers"
 msgstr "Premendo un qualsiasi punto con due dita"
 
-#: ui/main.qml:516
+#: ui/main.qml:518
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
 msgstr "Clic centrale premendo in qualsiasi punto con tre dita."
 
-#: ui/main.qml:525
+#: ui/main.qml:527
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'middle-click by pressing "
@@ -310,7 +310,7 @@ msgctxt ""
 msgid "Middle-click by:"
 msgstr "Clic centrale:"
 
-#: ui/main.qml:545
+#: ui/main.qml:547
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-middle "
@@ -318,7 +318,7 @@ msgctxt ""
 msgid "Pressing bottom-middle edge"
 msgstr "Premendo il bordo al centro in basso"
 
-#: ui/main.qml:552
+#: ui/main.qml:554
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-left "
@@ -326,7 +326,7 @@ msgctxt ""
 msgid "Pressing bottom-left and bottom-right corners"
 msgstr "Premendo gli angoli in basso a sinistra e in basso a destra"
 
-#: ui/main.qml:559
+#: ui/main.qml:561
 #, kde-format
 msgctxt ""
 "@option:check completes the sentence 'middle-click by pressing anywhere with "
@@ -334,25 +334,25 @@ msgctxt ""
 msgid "Pressing anywhere with three fingers"
 msgstr "Premendo un qualsiasi punto con tre dita"
 
-#: ui/main.qml:575
+#: ui/main.qml:577
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Al tocco:"
 
-#: ui/main.qml:576
+#: ui/main.qml:578
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap to click"
 msgstr "Clic al tocco"
 
-#: ui/main.qml:591
+#: ui/main.qml:593
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr "Permetti il trascinamento dopo il tocco"
 
-#: ui/main.qml:603
+#: ui/main.qml:605
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -362,7 +362,7 @@ msgstr ""
 "Tocca, quindi trascina e immediatamente fai scorrere il dito sul touchpad "
 "per trascinare. Solleva il dito per rilasciare."
 
-#: ui/main.qml:609
+#: ui/main.qml:611
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
@@ -370,31 +370,31 @@ msgstr ""
 "Permette un rapido sollevamento delle dita durante l'operazione tocca-e-"
 "trascina"
 
-#: ui/main.qml:622
+#: ui/main.qml:624
 #, kde-format
 msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "Tocco con due dita:"
 
-#: ui/main.qml:641
+#: ui/main.qml:643
 #, kde-format
 msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Clic destro (tocco con tre dita per clic centrale)"
 
-#: ui/main.qml:642
+#: ui/main.qml:644
 #, kde-format
 msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "Clic destro"
 
-#: ui/main.qml:650
+#: ui/main.qml:652
 #, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Clic centrale (tocco con tre dita per clic destro)"
 
-#: ui/main.qml:651
+#: ui/main.qml:653
 #, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click"

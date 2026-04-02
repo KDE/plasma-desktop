@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-26 00:46+0000\n"
+"POT-Creation-Date: 2026-04-02 00:45+0000\n"
 "PO-Revision-Date: 2025-02-15 13:27+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -201,28 +201,28 @@ msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "ポインタの速度:"
 
-#: ui/main.qml:299
+#: ui/main.qml:300
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "ポインタの加速:"
 
-#: ui/main.qml:313
+#: ui/main.qml:314
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
 
-#: ui/main.qml:326
+#: ui/main.qml:327
 #, fuzzy, kde-format
 #| msgid "Scrolling speed:"
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "スクロールの速さ:"
 
-#: ui/main.qml:376
+#: ui/main.qml:378
 #, fuzzy, kde-format
 #| msgctxt "Slower Scroll"
 #| msgid "Slower"
@@ -230,7 +230,7 @@ msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "遅く"
 
-#: ui/main.qml:383
+#: ui/main.qml:385
 #, fuzzy, kde-format
 #| msgctxt "Faster Scroll Speed"
 #| msgid "Faster"
@@ -238,7 +238,7 @@ msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "速く"
 
-#: ui/main.qml:390
+#: ui/main.qml:392
 #, fuzzy, kde-format
 #| msgid "Scrolling:"
 msgctxt ""
@@ -247,35 +247,35 @@ msgctxt ""
 msgid "Scroll by:"
 msgstr "スクロール:"
 
-#: ui/main.qml:408
+#: ui/main.qml:410
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr ""
 
-#: ui/main.qml:415
+#: ui/main.qml:417
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr ""
 
-#: ui/main.qml:423
+#: ui/main.qml:425
 #, fuzzy, kde-format
 #| msgid "Invert scroll direction (Natural scrolling)"
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "スクロールの方向を反転 (自然なスクロール)"
 
-#: ui/main.qml:436
+#: ui/main.qml:438
 #, fuzzy, kde-format
 #| msgid "Disable horizontal scrolling"
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "水平スクロールを無効化"
 
-#: ui/main.qml:457
+#: ui/main.qml:459
 #, fuzzy, kde-format
 #| msgid "Right-click"
 msgctxt ""
@@ -284,7 +284,7 @@ msgctxt ""
 msgid "Right-click by:"
 msgstr "右クリック"
 
-#: ui/main.qml:477
+#: ui/main.qml:479
 #, fuzzy, kde-format
 #| msgctxt "@option:radio touchpad integrated right-click"
 #| msgid "Press bottom-right corner"
@@ -294,7 +294,7 @@ msgctxt ""
 msgid "Pressing bottom-right corner"
 msgstr "右下の角を押す"
 
-#: ui/main.qml:492
+#: ui/main.qml:494
 #, fuzzy, kde-format
 #| msgctxt "@info shown below radio button"
 #| msgid "Middle-click by pressing both bottom corners."
@@ -302,7 +302,7 @@ msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "下の角のいずれかを押して中クリック。"
 
-#: ui/main.qml:493
+#: ui/main.qml:495
 #, fuzzy, kde-format
 #| msgctxt "@info shown below radio button"
 #| msgid "Middle-click by pressing bottom center."
@@ -310,7 +310,7 @@ msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "下辺の中央を押して中クリック。"
 
-#: ui/main.qml:501
+#: ui/main.qml:503
 #, fuzzy, kde-format
 #| msgctxt "@option:radio touchpad integrated right-click"
 #| msgid "Press touchpad with two fingers"
@@ -320,7 +320,7 @@ msgctxt ""
 msgid "Pressing anywhere with two fingers"
 msgstr "二本指でタッチパッドを押す"
 
-#: ui/main.qml:516
+#: ui/main.qml:518
 #, fuzzy, kde-format
 #| msgctxt "@info shown below radio button"
 #| msgid "Middle-click by pressing with three fingers."
@@ -328,7 +328,7 @@ msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
 msgstr "三本指で押して中クリック。"
 
-#: ui/main.qml:525
+#: ui/main.qml:527
 #, fuzzy, kde-format
 #| msgid "Middle-click"
 msgctxt ""
@@ -337,7 +337,7 @@ msgctxt ""
 msgid "Middle-click by:"
 msgstr "中クリック"
 
-#: ui/main.qml:545
+#: ui/main.qml:547
 #, fuzzy, kde-format
 #| msgctxt "@option:radio touchpad integrated middle-click"
 #| msgid "Press bottom middle edge"
@@ -347,7 +347,7 @@ msgctxt ""
 msgid "Pressing bottom-middle edge"
 msgstr "下辺の中央を押す"
 
-#: ui/main.qml:552
+#: ui/main.qml:554
 #, fuzzy, kde-format
 #| msgctxt "@option:radio touchpad integrated middle-click"
 #| msgid "Press bottom left and bottom right corners"
@@ -357,7 +357,7 @@ msgctxt ""
 msgid "Pressing bottom-left and bottom-right corners"
 msgstr "左下と右下を押す"
 
-#: ui/main.qml:559
+#: ui/main.qml:561
 #, fuzzy, kde-format
 #| msgctxt "@option:check touchpad integrated middle-click"
 #| msgid "Press touchpad with three fingers"
@@ -367,13 +367,13 @@ msgctxt ""
 msgid "Pressing anywhere with three fingers"
 msgstr "三本指でタッチパッドを押す"
 
-#: ui/main.qml:575
+#: ui/main.qml:577
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "タップ:"
 
-#: ui/main.qml:576
+#: ui/main.qml:578
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Tap-to-click"
@@ -381,13 +381,13 @@ msgctxt "@option:check"
 msgid "Tap to click"
 msgstr "タップしてクリック"
 
-#: ui/main.qml:591
+#: ui/main.qml:593
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr ""
 
-#: ui/main.qml:603
+#: ui/main.qml:605
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -395,41 +395,41 @@ msgid ""
 "finger to drop."
 msgstr ""
 
-#: ui/main.qml:609
+#: ui/main.qml:611
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr ""
 
-#: ui/main.qml:622
+#: ui/main.qml:624
 #, fuzzy, kde-format
 #| msgid "Two-finger tap:"
 msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "二本指タップ:"
 
-#: ui/main.qml:641
+#: ui/main.qml:643
 #, fuzzy, kde-format
 #| msgid "Right-click (three-finger tap to middle-click)"
 msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "右クリック (三本指タップで中クリック)"
 
-#: ui/main.qml:642
+#: ui/main.qml:644
 #, fuzzy, kde-format
 #| msgid "Right-click"
 msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "右クリック"
 
-#: ui/main.qml:650
+#: ui/main.qml:652
 #, fuzzy, kde-format
 #| msgid "Middle-click (three-finger tap to right-click)"
 msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "中クリック (三本指タップで右クリック)"
 
-#: ui/main.qml:651
+#: ui/main.qml:653
 #, fuzzy, kde-format
 #| msgid "Middle-click"
 msgctxt "@option:radio"

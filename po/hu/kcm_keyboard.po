@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-04-02 00:45+0000\n"
 "PO-Revision-Date: 2025-05-30 23:16+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -141,13 +141,13 @@ msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "Kiosztás hozzáadása"
 
-#: ui/LayoutDialog.qml:129
+#: ui/LayoutDialog.qml:121
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
 msgstr "Rövid kiosztásnév"
 
-#: ui/LayoutDialog.qml:139
+#: ui/LayoutDialog.qml:131
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -157,13 +157,13 @@ msgstr ""
 "A kiválasztott kiosztás rövidített neve, amely megjelenik a paneltálcán. Ezt "
 "a beállítást megváltoztathatja."
 
-#: ui/LayoutDialog.qml:147
+#: ui/LayoutDialog.qml:139
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Billentyűparancs:"
 
-#: ui/LayoutDialog.qml:158 ui/main.qml:287
+#: ui/LayoutDialog.qml:150 ui/main.qml:287
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview"

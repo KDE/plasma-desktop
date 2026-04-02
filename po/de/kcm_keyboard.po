@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-04-02 00:45+0000\n"
 "PO-Revision-Date: 2026-01-10 21:37+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -137,13 +137,13 @@ msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "Belegung hinzufügen"
 
-#: ui/LayoutDialog.qml:129
+#: ui/LayoutDialog.qml:121
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
 msgstr "Kurzbezeichnung der Belegung"
 
-#: ui/LayoutDialog.qml:139
+#: ui/LayoutDialog.qml:131
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -154,13 +154,13 @@ msgstr ""
 "der Kontrollleiste angezeigt wird. Sie können diese Einstellung selbst "
 "ändern."
 
-#: ui/LayoutDialog.qml:147
+#: ui/LayoutDialog.qml:139
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Kurzbefehl:"
 
-#: ui/LayoutDialog.qml:158 ui/main.qml:287
+#: ui/LayoutDialog.qml:150 ui/main.qml:287
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-19 00:48+0000\n"
-"PO-Revision-Date: 2026-02-04 17:26+0000\n"
+"PO-Revision-Date: 2026-04-01 15:14+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: package/contents/config/config.qml:17
 #, kde-format
@@ -323,20 +323,19 @@ msgstr "Arată bule cu previzualizări de dosare"
 #, kde-format
 msgctxt "@title:group"
 msgid "Typing on the desktop:"
-msgstr ""
+msgstr "Tastarea pe birou:"
 
 #: package/contents/ui/ConfigIcons.qml:334
-#, fuzzy, kde-format
-#| msgid "Select Folder"
+#, kde-format
 msgctxt "@option:radio Typing on the desktop selects items"
 msgid "Selects items"
-msgstr "Alege dosarul"
+msgstr "Alege elemente"
 
 #: package/contents/ui/ConfigIcons.qml:340
 #, kde-format
 msgctxt "@option:radio Typing on the desktop activates KRunner"
 msgid "Activates KRunner"
-msgstr ""
+msgstr "Activează KRunner"
 
 #: package/contents/ui/ConfigIcons.qml:356
 #, kde-format

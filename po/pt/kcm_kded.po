@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-04-02 00:45+0000\n"
 "PO-Revision-Date: 2026-02-06 22:46+0000\n"
 "Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
 "Language-Team: pt\n"
@@ -102,67 +102,67 @@ msgctxt "@item:inlistbox List not running services"
 msgid "Not Running"
 msgstr "Não em execução"
 
-#: ui/main.qml:162
+#: ui/main.qml:146
 #, kde-format
 msgctxt "@title:group list section"
 msgid "Startup Services"
 msgstr "Serviços de Arranque"
 
-#: ui/main.qml:163
+#: ui/main.qml:147
 #, kde-format
 msgctxt "@title:group list section"
 msgid "Load-on-Demand Services"
 msgstr "Serviços de Carregamento por Pedido"
 
-#: ui/main.qml:182
+#: ui/main.qml:166
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Disable automatically loading %1 on startup"
 msgstr "Desativar o carregamento automático de %1 no arranque"
 
-#: ui/main.qml:182
+#: ui/main.qml:166
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Enable automatically loading %1 on startup"
 msgstr "Ativar o carregamento automático de %1 no arranque"
 
-#: ui/main.qml:183
+#: ui/main.qml:167
 #, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Toggle automatically loading this service on startup"
 msgstr "Alternar o carregamento automático deste serviço no arranque"
 
-#: ui/main.qml:227
+#: ui/main.qml:211
 #, kde-format
 msgctxt "@info:status"
 msgid "Not running"
 msgstr "Não em execução"
 
-#: ui/main.qml:228
+#: ui/main.qml:212
 #, kde-format
 msgctxt "@info:status"
 msgid "Running"
 msgstr "Em execução"
 
-#: ui/main.qml:248
+#: ui/main.qml:232
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Stop %1"
 msgstr "Parar %1"
 
-#: ui/main.qml:248
+#: ui/main.qml:232
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Start %1"
 msgstr "Iniciar %1"
 
-#: ui/main.qml:251
+#: ui/main.qml:235
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Service"
 msgstr "Parar serviço"
 
-#: ui/main.qml:251
+#: ui/main.qml:235
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Service"

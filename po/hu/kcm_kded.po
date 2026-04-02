@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-04-02 00:45+0000\n"
 "PO-Revision-Date: 2026-03-12 21:43+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -104,67 +104,67 @@ msgctxt "@item:inlistbox List not running services"
 msgid "Not Running"
 msgstr "Nem fut"
 
-#: ui/main.qml:162
+#: ui/main.qml:146
 #, kde-format
 msgctxt "@title:group list section"
 msgid "Startup Services"
 msgstr "Indítási szolgáltatások"
 
-#: ui/main.qml:163
+#: ui/main.qml:147
 #, kde-format
 msgctxt "@title:group list section"
 msgid "Load-on-Demand Services"
 msgstr "Szükség esetén elinduló szolgáltatások"
 
-#: ui/main.qml:182
+#: ui/main.qml:166
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Disable automatically loading %1 on startup"
 msgstr "A(z) %1 induláskori betöltésének kikapcsolása"
 
-#: ui/main.qml:182
+#: ui/main.qml:166
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Enable automatically loading %1 on startup"
 msgstr "A(z) %1 induláskori betöltésének bekapcsolása"
 
-#: ui/main.qml:183
+#: ui/main.qml:167
 #, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Toggle automatically loading this service on startup"
 msgstr "Szolgáltatás induláskori betöltésének be- vagy kikapcsolása"
 
-#: ui/main.qml:227
+#: ui/main.qml:211
 #, kde-format
 msgctxt "@info:status"
 msgid "Not running"
 msgstr "Nem fut"
 
-#: ui/main.qml:228
+#: ui/main.qml:212
 #, kde-format
 msgctxt "@info:status"
 msgid "Running"
 msgstr "Fut"
 
-#: ui/main.qml:248
+#: ui/main.qml:232
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Stop %1"
 msgstr "A(z) %1 leállítása"
 
-#: ui/main.qml:248
+#: ui/main.qml:232
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Start %1"
 msgstr "A(z) %1 indítása"
 
-#: ui/main.qml:251
+#: ui/main.qml:235
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Service"
 msgstr "Szolgáltatás leállítása"
 
-#: ui/main.qml:251
+#: ui/main.qml:235
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Service"
