@@ -10,6 +10,8 @@ plasma_add_applet(org.kde.plasma.pager
     RESOURCES
         main.xml
     GENERATE_APPLET_CLASS
+    QML_ARGS
+        NO_LINT # https://qt-project.atlassian.net/browse/QTBUG-145572
 )
 
 target_link_libraries(org.kde.plasma.pager PRIVATE
