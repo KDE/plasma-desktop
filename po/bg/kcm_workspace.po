@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-31 00:46+0000\n"
-"PO-Revision-Date: 2026-01-19 21:43+0100\n"
+"PO-Revision-Date: 2026-04-03 01:10+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -281,37 +281,25 @@ msgid "Touch"
 msgstr "Докосване"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgctxt "@title:group prefix radiobutton group"
-#| msgid "Enable Touch Mode:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
-msgstr "Включване на режим докосване:"
+msgstr "Включване на таблетен режим:"
 
 #: ui/main.qml:418
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
-#| msgid "Automatically enable as needed"
+#, kde-format
 msgctxt "@option:radio As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Автоматично активиране при необходимост"
 
 #: ui/main.qml:418
-#, fuzzy, kde-format
-#| msgctxt "option:radio As in: 'Touch Mode is never enabled'"
-#| msgid "Never enabled"
+#, kde-format
 msgctxt "option:radio As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Без активиране"
 
 #: ui/main.qml:435
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
-#| msgid ""
-#| "Touch Mode will be automatically activated whenever the system detects a "
-#| "touchscreen but no mouse or touchpad. For example: when a transformable "
-#| "laptop's keyboard is flipped around or detached."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Tablet Mode will be automatically activated whenever the system detects a "
@@ -323,17 +311,13 @@ msgstr ""
 "трансформиращ се лаптоп е обърната или отделена."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always active"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always active"
 msgstr "Винаги активиран"
 
 #: ui/main.qml:463
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is never enabled'"
-#| msgid "Disabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Деактивиран"
@@ -343,6 +327,7 @@ msgstr "Деактивиран"
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."
 msgstr ""
+"В режим на таблет виртуалната клавиатура ще се появява, когато е необходимо."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9

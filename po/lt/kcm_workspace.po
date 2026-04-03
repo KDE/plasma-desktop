@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-31 00:46+0000\n"
-"PO-Revision-Date: 2026-01-12 23:49+0200\n"
+"PO-Revision-Date: 2026-04-02 14:24+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -287,60 +287,44 @@ msgid "Touch"
 msgstr "Lietimas"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgctxt "@title:group prefix radiobutton group"
-#| msgid "Enable Touch Mode:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
-msgstr "Įjungti lietimo veiksena:"
+msgstr "Įjungti planšetės veiksena:"
 
 #: ui/main.qml:418
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
-#| msgid "Automatically enable as needed"
+#, kde-format
 msgctxt "@option:radio As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Automatiškai įjungti, kai reikia"
 
 #: ui/main.qml:418
-#, fuzzy, kde-format
-#| msgctxt "option:radio As in: 'Touch Mode is never enabled'"
-#| msgid "Never enabled"
+#, kde-format
 msgctxt "option:radio As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Niekada neįjungta"
 
 #: ui/main.qml:435
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
-#| msgid ""
-#| "Touch Mode will be automatically activated whenever the system detects a "
-#| "touchscreen but no mouse or touchpad. For example: when a transformable "
-#| "laptop's keyboard is flipped around or detached."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Tablet Mode will be automatically activated whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
-"Lietimo veiksena bus automatiškai aktyvuojama kas kartą, kai sistema aptiks "
-"jutiklinį ekraną, bet neaptiks pelės ar jutiklinio kilimėlio. Pavyzdžiui, "
-"kai transformuojamojo nešiojamojo kompiuterio klaviatūra yra apverčiama ar "
-"atjungiama."
+"Planšetės veiksena bus automatiškai aktyvuojama kas kartą, kai sistema "
+"aptiks jutiklinį ekraną, bet neaptiks pelės ar jutiklinio kilimėlio. "
+"Pavyzdžiui, kai transformuojamojo nešiojamojo kompiuterio klaviatūra yra "
+"apverčiama ar atjungiama."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always active"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always active"
 msgstr "Visada aktyvi"
 
 #: ui/main.qml:463
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is never enabled'"
-#| msgid "Disabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Išjungta"
@@ -349,7 +333,7 @@ msgstr "Išjungta"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."
-msgstr ""
+msgstr "Planšetės veiksenoje, prireikus, bus rodoma virtuali klaviatūra."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9

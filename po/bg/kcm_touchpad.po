@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-02 00:45+0000\n"
-"PO-Revision-Date: 2026-01-19 21:44+0100\n"
+"PO-Revision-Date: 2026-04-03 01:07+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -52,7 +52,7 @@ msgstr "Не може да се прочете конфигурацията на
 #: kcm.cpp:69
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "Не може да се избере подходящ бекенд"
 
 #: kcm.cpp:126
 #, kde-format
@@ -64,10 +64,9 @@ msgstr ""
 "Моля, рестартирайте този конфигурационен модул."
 
 #: kcm.cpp:129
-#, fuzzy, kde-format
-#| msgid "No touchpad found. Connect touchpad now."
+#, kde-format
 msgid "No pointer device found. Connect now."
-msgstr "Не е намерен тъчпад. Свържете тъчпада сега."
+msgstr "Не е намерено указателно устройство. Свържете го сега."
 
 #: kcm.cpp:138
 #, kde-format
@@ -97,16 +96,16 @@ msgstr ""
 "рестартирайте този конфигурационен модул."
 
 #: kcm.cpp:185
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. Closed its setting dialog."
+#, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr "Тъчпадът е изключен. Затворете диалоговия прозорец за настройка."
+msgstr ""
+"Указателното устройство се изключи и диалоговия прозорец за настройка се "
+"затвори."
 
 #: kcm.cpp:187
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. No other touchpads found."
+#, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr "Тъчпадът е изключен. Не са намерени други устройства."
+msgstr "Указателното устройство е изключено. Не са намерени други устройства."
 
 #: ui/main.qml:69
 #, kde-format
