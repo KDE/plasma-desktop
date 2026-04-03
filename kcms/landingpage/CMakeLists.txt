@@ -11,7 +11,7 @@ kcmutils_add_qml_kcm(kcm_landingpage
         splitnode.cpp
 )
 
-qt_add_shaders(kcm_landingpage "shaders"
+qt6_add_shaders(kcm_landingpage "shaders"
     PRECOMPILE
     BATCHABLE
     OPTIMIZED
