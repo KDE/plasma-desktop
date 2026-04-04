@@ -12,9 +12,9 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-31 00:46+0000\n"
-"PO-Revision-Date: 2026-01-09 14:00+0100\n"
+"PO-Revision-Date: 2026-04-02 09:41+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: \n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 "X-Text-Markup: kde4\n"
 
 #: ui/main.qml:25
@@ -295,59 +295,43 @@ msgid "Touch"
 msgstr "Tactile"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgctxt "@title:group prefix radiobutton group"
-#| msgid "Enable Touch Mode:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
-msgstr "Activer le mode tactile :"
+msgstr "Activer le mode « Tablette » :"
 
 #: ui/main.qml:418
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
-#| msgid "Automatically enable as needed"
+#, kde-format
 msgctxt "@option:radio As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Activer automatiquement lorsque nécessaire"
 
 #: ui/main.qml:418
-#, fuzzy, kde-format
-#| msgctxt "option:radio As in: 'Touch Mode is never enabled'"
-#| msgid "Never enabled"
+#, kde-format
 msgctxt "option:radio As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
-msgstr "Jamais activé"
+msgstr "Toujours désactivé"
 
 #: ui/main.qml:435
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
-#| msgid ""
-#| "Touch Mode will be automatically activated whenever the system detects a "
-#| "touchscreen but no mouse or touchpad. For example: when a transformable "
-#| "laptop's keyboard is flipped around or detached."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Tablet Mode will be automatically activated whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
-"Le mode tactile sera automatiquement activé dès la détection par le système "
-"d'un écran tactile mais pas d'une souris ou d'un pavé tactile. Par exemple : "
-"lorsque le clavier d'un portable modulaire est retourné ou détaché."
+"Le mode « Tablette » sera automatiquement activé dès la détection par le "
+"système d'un écran tactile mais pas d'une souris ou d'un pavé tactile. Par "
+"exemple : lorsque le clavier d'un portable modulaire est retourné ou détaché."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always active"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always active"
 msgstr "Toujours actif"
 
 #: ui/main.qml:463
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is never enabled'"
-#| msgid "Disabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Désactivé"
@@ -357,6 +341,7 @@ msgstr "Désactivé"
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."
 msgstr ""
+"En mode « Tablette », le clavier virtuel apparaîtra lorsque nécessaire."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9

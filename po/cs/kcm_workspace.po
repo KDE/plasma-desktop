@@ -4,15 +4,16 @@
 # SPDX-FileCopyrightText: 2010, 2011, 2017, 2018, 2019, 2020, 2023, 2024, 2026 Vít Pelčák <vit@pelcak.org>
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012.
 # SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2026 Libor Filípek <filipek.libor@protonmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-31 00:46+0000\n"
-"PO-Revision-Date: 2026-03-13 11:13+0100\n"
-"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
-"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-04-03 15:29+0200\n"
+"Last-Translator: Libor Filípek <filipek.libor@protonmail.com>\n"
+"Language-Team: \n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -284,59 +285,43 @@ msgid "Touch"
 msgstr "Dotek"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgctxt "@title:group prefix radiobutton group"
-#| msgid "Enable Touch Mode:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
-msgstr "Povolit dotykový režim:"
+msgstr "Povolit režim tabletu:"
 
 #: ui/main.qml:418
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
-#| msgid "Automatically enable as needed"
+#, kde-format
 msgctxt "@option:radio As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Automaticky povolit pokud je potřeba"
 
 #: ui/main.qml:418
-#, fuzzy, kde-format
-#| msgctxt "option:radio As in: 'Touch Mode is never enabled'"
-#| msgid "Never enabled"
+#, kde-format
 msgctxt "option:radio As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Nikdy nepovolit"
 
 #: ui/main.qml:435
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
-#| msgid ""
-#| "Touch Mode will be automatically activated whenever the system detects a "
-#| "touchscreen but no mouse or touchpad. For example: when a transformable "
-#| "laptop's keyboard is flipped around or detached."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Tablet Mode will be automatically activated whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
-"Dotykový režim bude zapnut pokaždé když systém zjistí dotykovou obrazovku, "
-"ale žádnou myš nebo touchpad. Například pokud je klávesnice odpojena nebo "
-"odklopena dozadu."
+"Režim tabletu bude zapnut pokaždé, když systém zjistí přítomnost dotykové "
+"obrazovky, ale žádnou myš ani touchpad. Například: když je klávesnice "
+"konvertibilního notebooku otočena nebo odpojena."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always active"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always active"
 msgstr "Vždy aktivní"
 
 #: ui/main.qml:463
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is never enabled'"
-#| msgid "Disabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Zakázáno"
@@ -345,7 +330,7 @@ msgstr "Zakázáno"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."
-msgstr ""
+msgstr "V režimu tabletu se virtuální klávesnice zobrazí podle potřeby."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
