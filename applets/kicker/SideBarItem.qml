@@ -21,7 +21,9 @@ ItemAbstractDelegate {
     icon.height: Kirigami.Units.iconSizes.medium
     hoverEnabled: true
 
-    Keys.onSpacePressed: clicked()
+    Keys.onReturnPressed: activate()
+    Keys.onEnterPressed: activate()
+    Keys.onSpacePressed: activate()
 
     background.visible: false // we want the default background's spacing, but not the base color
     contentItem: Kirigami.Icon {
@@ -29,6 +31,11 @@ ItemAbstractDelegate {
         width: item.icon.width
         height: item.icon.height
         source: item.icon.source
+    }
+
+    function activate() : void {
+        favoritesModel.trigger(index, "", null);
+        interactionConcluded()
     }
 
     PlasmaExtras.Highlight {
@@ -40,10 +47,7 @@ ItemAbstractDelegate {
     TapHandler {
         // dedicated tapHandler as ItemDelegate's clicked conflicts with DragHandler
         id: tapHandler
-        onTapped: {
-            favoritesModel.trigger(index, "", null);
-            interactionConcluded()
-        }
+        onTapped: item.activate()
     }
 
     DragHandler {
