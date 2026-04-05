@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-02 00:45+0000\n"
-"PO-Revision-Date: 2026-01-24 10:32+0100\n"
+"PO-Revision-Date: 2026-04-04 19:32+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -51,7 +51,7 @@ msgstr "Nie można odczytać domyślnych ustawień gładzika"
 #: kcm.cpp:69
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "Nie można wybrać nadającego się silnika"
 
 #: kcm.cpp:126
 #, kde-format
@@ -63,10 +63,9 @@ msgstr ""
 "Uruchom moduł ustawień ponownie."
 
 #: kcm.cpp:129
-#, fuzzy, kde-format
-#| msgid "No touchpad found. Connect touchpad now."
+#, kde-format
 msgid "No pointer device found. Connect now."
-msgstr "Nie znaleziono gładzika, więc podłącz go teraz."
+msgstr "Nie znaleziono urządzenia wskazującego. Podłącz je teraz."
 
 #: kcm.cpp:138
 #, kde-format
@@ -96,16 +95,14 @@ msgstr ""
 "uruchom moduł ustawień ponownie."
 
 #: kcm.cpp:185
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. Closed its setting dialog."
+#, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr "Rozłączono gładzik. Zamknięto okno dialogowe jego ustawień."
+msgstr "Odłączono urządzenie wskazujące. Zamknięto jego okno ustawień."
 
 #: kcm.cpp:187
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. No other touchpads found."
+#, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr "Rozłączono gładzik. Nie znaleziono innych gładzików."
+msgstr "Odłączono urządzenie wskazujące. Nie znaleziono innych urządzeń."
 
 #: ui/main.qml:69
 #, kde-format
