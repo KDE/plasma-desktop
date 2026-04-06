@@ -125,5 +125,8 @@
     "OnlyShowIn": "KDE;",
     "X-KDE-Kded-autoload": true,
     "X-KDE-Kded-load-on-demand": false,
-    "X-KDE-Kded-phase": 2
+    "X-KDE-Kded-phase": 2,
+    "X-KDE-OnlyShowOnQtPlatforms": [
+        "xcb"
+    ]
 }
