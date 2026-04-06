@@ -354,6 +354,11 @@ void KCMKeys::requestKeySequence(QQuickItem *context, const QModelIndex &index, 
         return;
     }
 
+    if (conflict == index) {
+        qCDebug(KCMKEYS) << "Ignoring conflict refers to the same action" << conflict;
+        return;
+    }
+
     qCDebug(KCMKEYS) << "Found conflict for" << newSequence << conflict;
     const bool isStandardAction = conflict.parent().data(BaseModel::SectionRole) == ComponentType::CommonAction;
     const QString currentActionName = conflict.data().toString();
