@@ -178,6 +178,7 @@ QQC2.ItemDelegate {
                             spacing: Kirigami.Units.smallSpacing
                             Layout.alignment: Qt.AlignRight
                             KeySequenceItem {
+                                id: keySequenceEditor
                                 Layout.alignment: Qt.AlignRight
                                 keySequence: modelData
                                 showClearButton: false
@@ -189,6 +190,14 @@ QQC2.ItemDelegate {
                                 }
                                 KCM.SettingHighlighter {
                                     highlight: true
+                                }
+                                Connections {
+                                    target: kcm
+                                    function onShortcutChangeRejected() {
+                                        if (keySequenceEditor.keySequence !== modelData) {
+                                            keySequenceEditor.keySequence = Qt.binding(() => modelData)
+                                        }
+                                    }
                                 }
                             }
                             QQC2.Button {

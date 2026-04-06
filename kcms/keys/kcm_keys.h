@@ -55,6 +55,7 @@ public:
 Q_SIGNALS:
     void showComponent(int row);
     void errorOccured();
+    void shortcutChangeRejected();
 
 private:
     void setError(const QString &errorMessage);

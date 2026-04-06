@@ -356,6 +356,7 @@ void KCMKeys::requestKeySequence(QQuickItem *context, const QModelIndex &index, 
 
     if (conflict == index) {
         qCDebug(KCMKEYS) << "Ignoring conflict refers to the same action" << conflict;
+        Q_EMIT shortcutChangeRejected();
         return;
     }
 
@@ -397,13 +398,13 @@ void KCMKeys::requestKeySequence(QQuickItem *context, const QModelIndex &index, 
     KMessageBox::createKMessageBox(dialog, dialogButtons, QMessageBox::Warning, message, {}, QString(), nullptr, KMessageBox::NoExec);
     dialog->show();
 
-    connect(dialog, &QDialog::finished, this, [index, conflict, newSequence, oldSequence](int result) {
+    connect(dialog, &QDialog::finished, this, [this, index, conflict, newSequence, oldSequence](int result) {
         auto model = const_cast<BaseModel *>(static_cast<const BaseModel *>(index.model()));
         if (result != QDialogButtonBox::Ok) {
             // Also Q_EMIT if we are not changing anything, to force the frontend to update and be consistent
             // with the model. It is currently out of sync because it reflects the user input that
             // was rejected now.
-            Q_EMIT model->dataChanged(index, index, {BaseModel::ActiveShortcutsRole, BaseModel::CustomShortcutsRole});
+            Q_EMIT shortcutChangeRejected();
             return;
         }
         const_cast<BaseModel *>(static_cast<const BaseModel *>(conflict.model()))->disableShortcut(conflict, newSequence);
