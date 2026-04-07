@@ -2,14 +2,15 @@
 # Fuminobu TAKEYAMA <ftake@geeko.jp>, 2015.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-28 02:46+0000\n"
-"PO-Revision-Date: 2024-05-04 22:45+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2026-03-27 12:52+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
+"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: package/contents/config/config.qml:17
 #, fuzzy, kde-format
@@ -476,11 +477,10 @@ msgid "Enter title…"
 msgstr "ここにカスタムタイトルを入力..."
 
 #: package/contents/ui/ConfigOverlay.qml:97
-#, fuzzy, kde-format
-#| msgid "Click and drag to rotate"
+#, kde-format
 msgctxt "@action:button tooltip rotate widget"
 msgid "Click and drag to rotate"
-msgstr "クリックしたあとドラッグして回転"
+msgstr "クリックとドラッグで回転"
 
 #: package/contents/ui/ConfigOverlay.qml:183
 #, fuzzy, kde-format
@@ -497,18 +497,16 @@ msgid "Show Background"
 msgstr "背景を表示する"
 
 #: package/contents/ui/ConfigOverlay.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button tooltip remove widget"
 msgid "Remove"
 msgstr "削除"
 
 #: package/contents/ui/FolderItemPreviewPluginsDialog.qml:18
-#, fuzzy, kde-format
-#| msgid "Preview Plugins"
+#, kde-format
 msgctxt "@title:window"
 msgid "Preview Plugins"
-msgstr "プラグインをプレビュー"
+msgstr "プレビュープラグイン"
 
 #: package/contents/ui/FolderView.qml:1236
 #, kde-format
@@ -522,23 +520,19 @@ msgstr ""
 "動させることを検討してください。"
 
 #: package/contents/ui/FolderViewDialog.qml:91
-#, fuzzy, kde-format
-#| msgctxt "@option:check sort icons with folders first"
-#| msgid "Folders first"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Folder is empty"
-msgstr "フォルダを先に"
+msgstr "フォルダは空です"
 
 #: package/contents/ui/FolderViewLayer.qml:357
-#, fuzzy, kde-format
-#| msgid "Icons"
+#, kde-format
 msgctxt "@item:inmenu opens submenu with view options like sorting"
 msgid "Icons"
 msgstr "アイコン"
 
 #: package/contents/ui/main.qml:448
-#, fuzzy, kde-format
-#| msgid "Desktop and Wallpaper"
+#, kde-format
 msgctxt "@action:inmenu opens config dialog"
 msgid "Desktop and Wallpaper"
 msgstr "デスクトップと壁紙"
@@ -591,13 +585,12 @@ msgid "&Open"
 msgstr "開く(&O)"
 
 #: plugins/folder/foldermodel.cpp:1761
-#, fuzzy, kde-format
-#| msgid "Show all"
+#, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
 "link points to"
 msgid "Show Target"
-msgstr "すべて表示"
+msgstr "リンク先を開く"
 
 #: plugins/folder/foldermodel.cpp:1862
 #, kde-format
@@ -606,10 +599,9 @@ msgid "Remove Trash Icon"
 msgstr ""
 
 #: plugins/folder/foldermodel.cpp:1865
-#, fuzzy, kde-format
-#| msgid "&Empty Trash"
+#, kde-format
 msgid "&Move to Trash"
-msgstr "ごみ箱を空にする(&E)"
+msgstr "ごみ箱に移動(&M)"
 
 #: plugins/folder/foldermodel.cpp:1898
 #, kde-format
@@ -725,13 +717,13 @@ msgstr "整列"
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Columns"
-msgstr ""
+msgstr "列で"
 
 #: plugins/folder/viewpropertiesmenu.cpp:74
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Rows"
-msgstr ""
+msgstr "行で"
 
 #: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format
@@ -739,17 +731,13 @@ msgid "Sort Alignment"
 msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Left to Right"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Left-to-Right"
 msgstr "左から右"
 
 #: plugins/folder/viewpropertiesmenu.cpp:84
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Right to Left"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Right-to-Left"
 msgstr "右から左"
@@ -764,42 +752,3 @@ msgstr "プレビューを表示"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "ロック"
-
-#~ msgctxt "@item:inlistbox arrangement of icons"
-#~ msgid "Top to Bottom"
-#~ msgstr "上から下"
-
-#~ msgctxt "@item:inlistbox alignment of icons"
-#~ msgid "Align left"
-#~ msgstr "左揃え"
-
-#~ msgctxt "@item:inlistbox alignment of icons"
-#~ msgid "Align right"
-#~ msgstr "右揃え"
-
-#~ msgctxt "@item:inmenu arrangement of icons"
-#~ msgid "Left to Right"
-#~ msgstr "左から右"
-
-#~ msgctxt "@item:inmenu arrangement of icons"
-#~ msgid "Right to Left"
-#~ msgstr "右から左"
-
-#~ msgctxt "@item:inmenu arrangement of icons"
-#~ msgid "Top to Bottom"
-#~ msgstr "上から下"
-
-#~ msgid "Align"
-#~ msgstr "整列"
-
-#~ msgctxt "@item:inmenu alignment of icons"
-#~ msgid "Left"
-#~ msgstr "左"
-
-#~ msgctxt "@item:inmenu alignment of icons"
-#~ msgid "Right"
-#~ msgstr "右"
-
-#~ msgctxt "Restore from trash"
-#~ msgid "Restore"
-#~ msgstr "復元(&R)"
