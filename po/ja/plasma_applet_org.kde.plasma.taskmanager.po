@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-31 00:46+0000\n"
-"PO-Revision-Date: 2026-02-20 20:58+0900\n"
+"PO-Revision-Date: 2026-03-27 23:51+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: backend.cpp:288
 #, kde-format
@@ -796,7 +796,7 @@ msgstr "タイトルバーとフレームを非表示(&N)"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Hide from Screencast"
-msgstr "画面録画で非表示(&H)"
+msgstr "画面録画から消す(&H)"
 
 #: qml/ContextMenu.qml:741
 #, kde-format
@@ -918,7 +918,3 @@ msgstr "%1 でも利用可能"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "%1 で利用可能"
-
-#~ msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
-#~ msgid "Automatically set to Large when in Touch mode"
-#~ msgstr "タッチモードのときは自動的に「大」に設定"
