@@ -1,4 +1,5 @@
 # Translation of kaccess into Japanese.
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 # This file is distributed under the same license as the kdebase package.
 # Taiki Komoda <kom@kde.gr.jp>, 2002.
 # Shinichi Tsunoda <tsuno@ngy.1st.ne.jp>, 2005.
@@ -10,14 +11,14 @@ msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2015-05-22 22:09-0700\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2026-03-31 10:49+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
+"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -180,14 +181,13 @@ msgstr "Scroll Lock キーが非アクティブになりました。"
 #: kaccess.cpp:302
 #, kde-format
 msgid "Toggle Screen Reader On and Off"
-msgstr ""
+msgstr "スクリーンリーダーをオン/オフ"
 
 #: kaccess.cpp:304
-#, fuzzy, kde-format
-#| msgid "KDE Accessibility Tool"
+#, kde-format
 msgctxt "Name for kaccess shortcuts category"
 msgid "Accessibility"
-msgstr "KDE アクセシビリティ支援ツール"
+msgstr "アクセシビリティ"
 
 #: kaccess.cpp:591
 #, kde-format
@@ -450,10 +450,9 @@ msgid "Mouse keys has been disabled."
 msgstr "マウスキーを無効にしました。"
 
 #: main.cpp:49
-#, fuzzy, kde-format
-#| msgid "KDE Accessibility Tool"
+#, kde-format
 msgid "Accessibility"
-msgstr "KDE アクセシビリティ支援ツール"
+msgstr "アクセシビリティ"
 
 #: main.cpp:49
 #, kde-format
