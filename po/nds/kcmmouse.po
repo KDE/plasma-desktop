@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-02 00:45+0000\n"
+"POT-Creation-Date: 2026-04-08 00:48+0000\n"
 "PO-Revision-Date: 2014-09-18 15:57+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -123,45 +123,45 @@ msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
 msgstr ""
 
-#: ui/main.qml:64
+#: ui/main.qml:66
 #, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr ""
 
-#: ui/main.qml:87
+#: ui/main.qml:89
 #, fuzzy, kde-format
 #| msgid "&General"
 msgctxt "@title:group"
 msgid "General:"
 msgstr "&Allgemeen"
 
-#: ui/main.qml:88
+#: ui/main.qml:90
 #, kde-format
 msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr ""
 
-#: ui/main.qml:105
+#: ui/main.qml:107
 #, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
 msgstr ""
 
-#: ui/main.qml:106
+#: ui/main.qml:108
 #, fuzzy, kde-format
 #| msgid "Le&ft handed"
 msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
 msgstr "&Linkepoot"
 
-#: ui/main.qml:121
+#: ui/main.qml:123
 #, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
 msgstr ""
 
-#: ui/main.qml:133
+#: ui/main.qml:135
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -169,67 +169,67 @@ msgid ""
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
 
-#: ui/main.qml:148
+#: ui/main.qml:147
 #, fuzzy, kde-format
 #| msgid "Pointer threshold:"
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Wieser-Süll:"
 
-#: ui/main.qml:228
+#: ui/main.qml:225
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Wieser beslünigen:"
 
-#: ui/main.qml:242
+#: ui/main.qml:239
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
 
-#: ui/main.qml:255
+#: ui/main.qml:249
 #, fuzzy, kde-format
 #| msgid "Pointer threshold:"
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr "Wieser-Süll:"
 
-#: ui/main.qml:306
+#: ui/main.qml:300
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr ""
 
-#: ui/main.qml:315
+#: ui/main.qml:309
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr ""
 
-#: ui/main.qml:323
+#: ui/main.qml:319
 #, fuzzy, kde-format
 #| msgid "Pointer threshold:"
 msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "Wieser-Süll:"
 
-#: ui/main.qml:324
+#: ui/main.qml:320
 #, fuzzy, kde-format
 #| msgid "Re&verse scroll direction"
 msgctxt "@option:check"
 msgid "Invert scroll direction"
 msgstr "Rullr&icht ümdreihn"
 
-#: ui/main.qml:341
+#: ui/main.qml:335
 #, kde-format
 msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr ""
 
-#: ui/main.qml:353
+#: ui/main.qml:347
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""

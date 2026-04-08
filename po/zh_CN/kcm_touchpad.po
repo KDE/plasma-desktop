@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-02 00:45+0000\n"
+"POT-Creation-Date: 2026-04-08 00:48+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -107,25 +107,25 @@ msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchpad"
 msgstr "连接外置触摸板"
 
-#: ui/main.qml:84
+#: ui/main.qml:87
 #, kde-format
 msgctxt "@label:listbox device selection"
 msgid "Device:"
 msgstr "设备："
 
-#: ui/main.qml:108
+#: ui/main.qml:110
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "常规："
 
-#: ui/main.qml:109
+#: ui/main.qml:111
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable device"
 msgstr "启用设备"
 
-#: ui/main.qml:122
+#: ui/main.qml:126
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
@@ -133,35 +133,35 @@ msgstr "鼠标连接时禁用"
 
 #: ui/main.qml:143
 #, kde-format
-msgctxt "option:check"
-msgid "Disable while typing"
-msgstr "键盘输入时禁用触摸板"
-
-#: ui/main.qml:165
-#, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
 msgstr "这可能会干扰游戏体验。"
 
-#: ui/main.qml:179
+#: ui/main.qml:146
+#, kde-format
+msgctxt "option:check"
+msgid "Disable while typing"
+msgstr "键盘输入时禁用触摸板"
+
+#: ui/main.qml:169
 #, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
 msgstr "左键和右键："
 
-#: ui/main.qml:180
+#: ui/main.qml:170
 #, kde-format
 msgctxt "@option:check"
 msgid "Swap (left-handed mode)"
 msgstr "对调 (左手模式)"
 
-#: ui/main.qml:195
+#: ui/main.qml:185
 #, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
 msgstr "同时按下进行中键点击"
 
-#: ui/main.qml:207
+#: ui/main.qml:197
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -171,44 +171,44 @@ msgstr ""
 "启用此设置会使点击延迟增加 50 毫秒。为了能够正确识别左键和右键的同时点击，额"
 "外的延迟是必要的。"
 
-#: ui/main.qml:220
+#: ui/main.qml:207
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "指针速度："
 
-#: ui/main.qml:300
+#: ui/main.qml:287
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "启用指针加速度"
 
-#: ui/main.qml:314
+#: ui/main.qml:299
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr "启用后，指针的移动距离会随着移动速度的加快而增加。"
 
-#: ui/main.qml:327
+#: ui/main.qml:309
 #, kde-format
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "滚动速度："
 
-#: ui/main.qml:378
+#: ui/main.qml:360
 #, kde-format
 msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "慢"
 
-#: ui/main.qml:385
+#: ui/main.qml:367
 #, kde-format
 msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "快"
 
-#: ui/main.qml:392
+#: ui/main.qml:374
 #, kde-format
 msgctxt ""
 "@title group begins the sentence 'Scroll by moving two fingers anywhere/"
@@ -216,33 +216,33 @@ msgctxt ""
 msgid "Scroll by:"
 msgstr "滚动方式："
 
-#: ui/main.qml:410
+#: ui/main.qml:377
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr "任意位置双指拖动"
 
-#: ui/main.qml:417
+#: ui/main.qml:395
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr "边缘单指拖动"
 
-#: ui/main.qml:425
+#: ui/main.qml:404
 #, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "反向滚动 (自然滚动)"
 
-#: ui/main.qml:438
+#: ui/main.qml:421
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "禁用水平滚动"
 
-#: ui/main.qml:459
+#: ui/main.qml:439
 #, kde-format
 msgctxt ""
 "@title:group for radiobutton group, begins the sentence 'right-click by "
@@ -250,7 +250,7 @@ msgctxt ""
 msgid "Right-click by:"
 msgstr "右键点击方式："
 
-#: ui/main.qml:479
+#: ui/main.qml:443
 #, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-right "
@@ -258,19 +258,25 @@ msgctxt ""
 msgid "Pressing bottom-right corner"
 msgstr "按下触摸板的右下角"
 
-#: ui/main.qml:494
+#: ui/main.qml:448
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "按下底部两角时点击中键。"
 
-#: ui/main.qml:495
+#: ui/main.qml:449
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "按下底部中间位置时点击中键。"
 
-#: ui/main.qml:503
+#: ui/main.qml:468
+#, kde-format
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing anywhere with three fingers."
+msgstr "任意位置三指按下时点击中键。"
+
+#: ui/main.qml:471
 #, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing with two "
@@ -278,13 +284,7 @@ msgctxt ""
 msgid "Pressing anywhere with two fingers"
 msgstr "双指按下触摸板的任意位置"
 
-#: ui/main.qml:518
-#, kde-format
-msgctxt "@info shown below radio button"
-msgid "Middle-click by pressing anywhere with three fingers."
-msgstr "任意位置三指按下时点击中键。"
-
-#: ui/main.qml:527
+#: ui/main.qml:484
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'middle-click by pressing "
@@ -292,7 +292,7 @@ msgctxt ""
 msgid "Middle-click by:"
 msgstr "中键点击方式："
 
-#: ui/main.qml:547
+#: ui/main.qml:487
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-middle "
@@ -300,7 +300,7 @@ msgctxt ""
 msgid "Pressing bottom-middle edge"
 msgstr "按下触摸板底部的中间位置"
 
-#: ui/main.qml:554
+#: ui/main.qml:507
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-left "
@@ -308,7 +308,7 @@ msgctxt ""
 msgid "Pressing bottom-left and bottom-right corners"
 msgstr "按下触摸板的左下角和右下角"
 
-#: ui/main.qml:561
+#: ui/main.qml:519
 #, kde-format
 msgctxt ""
 "@option:check completes the sentence 'middle-click by pressing anywhere with "
@@ -316,25 +316,25 @@ msgctxt ""
 msgid "Pressing anywhere with three fingers"
 msgstr "三指按下触摸板的任意位置"
 
-#: ui/main.qml:577
+#: ui/main.qml:532
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "单指轻触："
 
-#: ui/main.qml:578
+#: ui/main.qml:533
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap to click"
 msgstr "轻触点击"
 
-#: ui/main.qml:593
+#: ui/main.qml:548
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr "允许点击后拖动"
 
-#: ui/main.qml:605
+#: ui/main.qml:560
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -344,37 +344,37 @@ msgstr ""
 "轻触，然后再次轻触并立即在触摸板上滑动手指以拖动对象。手指离开板面以放下对"
 "象。"
 
-#: ui/main.qml:611
+#: ui/main.qml:567
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr "轻触拖动时允许手指短暂离开触摸板"
 
-#: ui/main.qml:624
+#: ui/main.qml:580
 #, kde-format
 msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "双指轻触："
 
-#: ui/main.qml:643
+#: ui/main.qml:586
 #, kde-format
 msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "右键点击 (三指轻触时点击中键)"
 
-#: ui/main.qml:644
+#: ui/main.qml:587
 #, kde-format
 msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "右键点击"
 
-#: ui/main.qml:652
+#: ui/main.qml:608
 #, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "中键点击 (三指轻触时点击右键)"
 
-#: ui/main.qml:653
+#: ui/main.qml:609
 #, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click"

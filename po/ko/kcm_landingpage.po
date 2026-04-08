@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-30 00:46+0000\n"
+"POT-Creation-Date: 2026-04-08 00:48+0000\n"
 "PO-Revision-Date: 2026-02-03 21:40+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -67,19 +67,19 @@ msgctxt "@label accessible"
 msgid "Global theme"
 msgstr "전역 테마"
 
-#: ui/main.qml:35
+#: ui/main.qml:31
 #, kde-format
 msgctxt "@title:group for light/dark quick switch"
 msgid "Theme:"
 msgstr "테마:"
 
-#: ui/main.qml:94
+#: ui/main.qml:90
 #, kde-format
 msgctxt "Switch between dark and light look and feel packages automatically"
 msgid "Automatic"
 msgstr "자동"
 
-#: ui/main.qml:120
+#: ui/main.qml:116
 #, kde-format
 msgctxt ""
 "@info:tooltip 1 is the name of a light global theme, 2 is the name of a dark "
@@ -87,68 +87,68 @@ msgctxt ""
 msgid "Use “%1” during the day and “%2” at night"
 msgstr "주간에는 \"%1\", 야간에는 \"%2\" 사용"
 
-#: ui/main.qml:134
+#: ui/main.qml:126
 #, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More appearance settings:"
 msgstr "더 많은 모양 설정:"
 
-#: ui/main.qml:181
+#: ui/main.qml:175
 #, kde-format
 msgctxt "@title:slider"
 msgid "Animation speed:"
 msgstr "애니메이션 속도:"
 
-#: ui/main.qml:190
+#: ui/main.qml:185
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "느리게"
 
-#: ui/main.qml:197
+#: ui/main.qml:192
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "즉시"
 
-#: ui/main.qml:211
+#: ui/main.qml:202
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "파일이나 폴더를 클릭할 때:"
 
-#: ui/main.qml:219
+#: ui/main.qml:207
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "선택"
 
-#: ui/main.qml:224
+#: ui/main.qml:213
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "대신 두 번 클릭해서 열기"
 
-#: ui/main.qml:252
+#: ui/main.qml:229
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "열기"
 
-#: ui/main.qml:257
+#: ui/main.qml:234
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
 msgstr "항목의 선택 마커를 클릭해서 선택"
 
-#: ui/main.qml:283
+#: ui/main.qml:246
 #, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
 msgstr "더 많은 행동 설정:"
 
-#: ui/main.qml:297
+#: ui/main.qml:257
 #, kde-format
 msgctxt "@title:group for grid of buttons opening kcms"
 msgid "Most used pages:"

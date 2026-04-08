@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-02 00:45+0000\n"
+"POT-Creation-Date: 2026-04-08 00:48+0000\n"
 "PO-Revision-Date: 2025-05-30 20:36+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -135,41 +135,41 @@ msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
 msgstr "Nastaviť extra tlačidlá myši…"
 
-#: ui/main.qml:64
+#: ui/main.qml:66
 #, fuzzy, kde-format
 #| msgid "Device:"
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Zariadenie:"
 
-#: ui/main.qml:87
+#: ui/main.qml:89
 #, fuzzy, kde-format
 #| msgid "General:"
 msgctxt "@title:group"
 msgid "General:"
 msgstr "&Všeobecné:"
 
-#: ui/main.qml:88
+#: ui/main.qml:90
 #, kde-format
 msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr ""
 
-#: ui/main.qml:105
+#: ui/main.qml:107
 #, fuzzy, kde-format
 #| msgid "Swap left and right buttons."
 msgctxt "@title:group"
 msgid "Left and right buttons:"
 msgstr "Vymeniť ľavé a pravé tlačidlo."
 
-#: ui/main.qml:106
+#: ui/main.qml:108
 #, fuzzy, kde-format
 #| msgid "Left-handed mode"
 msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
 msgstr "Režim ľavej ruky"
 
-#: ui/main.qml:121
+#: ui/main.qml:123
 #, fuzzy, kde-format
 #| msgid ""
 #| "Clicking left and right button simultaneously sends middle button click."
@@ -179,7 +179,7 @@ msgstr ""
 "Stlačenie ľavého a pravého tlačidla myši naraz odošle stlačenie stredného "
 "tlačidla."
 
-#: ui/main.qml:133
+#: ui/main.qml:135
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -190,21 +190,21 @@ msgstr ""
 "Dodatočné oneskorenie je potrebné na správne rozpoznanie súčasných kliknutí "
 "ľavým a pravým tlačidlom myši."
 
-#: ui/main.qml:148
+#: ui/main.qml:147
 #, fuzzy, kde-format
 #| msgid "Pointer speed:"
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Rýchlosť ukazovateľa:"
 
-#: ui/main.qml:228
+#: ui/main.qml:225
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Zrýchlenie ukazovateľa:"
 
-#: ui/main.qml:242
+#: ui/main.qml:239
 #, fuzzy, kde-format
 #| msgid "Cursor travel distance depends on the mouse movement speed."
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
@@ -212,46 +212,46 @@ msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr "Vzdialenosť o akú sa kurzor presunie závisí od rýchlosti pohybu myši."
 
-#: ui/main.qml:255
+#: ui/main.qml:249
 #, fuzzy, kde-format
 #| msgid "Scrolling speed:"
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr "Rýchlosť rolovania:"
 
-#: ui/main.qml:306
+#: ui/main.qml:300
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Pomalšie"
 
-#: ui/main.qml:315
+#: ui/main.qml:309
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Rýchlejšie"
 
-#: ui/main.qml:323
+#: ui/main.qml:319
 #, fuzzy, kde-format
 #| msgid "Scrolling:"
 msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "Rolovanie:"
 
-#: ui/main.qml:324
+#: ui/main.qml:320
 #, fuzzy, kde-format
 #| msgid "Invert scroll direction"
 msgctxt "@option:check"
 msgid "Invert scroll direction"
 msgstr "Obrátiť smer rolovania"
 
-#: ui/main.qml:341
+#: ui/main.qml:335
 #, kde-format
 msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr ""
 
-#: ui/main.qml:353
+#: ui/main.qml:347
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""

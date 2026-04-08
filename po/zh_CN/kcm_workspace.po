@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-31 00:46+0000\n"
+"POT-Creation-Date: 2026-04-08 00:48+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -31,25 +31,25 @@ msgctxt "@action:button"
 msgid "Restart"
 msgstr "重新启动"
 
-#: ui/main.qml:47
+#: ui/main.qml:46
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
 msgstr "Plasma"
 
-#: ui/main.qml:52
+#: ui/main.qml:49
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
 msgstr "允许 Plasma 显示："
 
-#: ui/main.qml:59
+#: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
 msgstr "面板和小部件悬停信息"
 
-#: ui/main.qml:69
+#: ui/main.qml:63
 #, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
@@ -61,14 +61,14 @@ msgstr ""
 "允许所有 Plasma 面板和桌面小部件在指针悬停时显示描述性工具提示。此设置对悬停"
 "在单个按钮和其他用户界面元素上时显示的悬停信息没有影响。"
 
-#: ui/main.qml:77
+#: ui/main.qml:70
 #, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
 msgstr "反映状态更改的屏显弹窗"
 
-#: ui/main.qml:87
+#: ui/main.qml:81
 #, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
@@ -78,47 +78,55 @@ msgstr ""
 "允许所有 Plasma 小部件在音量、亮度发生更改或音频设备发生切换时显示屏显 (OSD) "
 "弹窗。"
 
-#: ui/main.qml:94
+#: ui/main.qml:88
 #, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
 msgstr "滚动"
 
-#: ui/main.qml:100
+#: ui/main.qml:94
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
 msgstr "点击滚动条空白位置："
 
-#: ui/main.qml:101
-#, kde-format
+#: ui/main.qml:95
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
+#| "scrolls to the clicked location'"
+#| msgid "Scrolls to the clicked location"
 msgctxt ""
-"@option:radio part of a complete sentence: 'Clicking in scrollbar track "
-"scrolls to the clicked location'"
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
+"the clicked location'"
 msgid "Scrolls to the clicked location"
 msgstr "直接滚动到点击位置"
 
-#: ui/main.qml:119
-#, kde-format
-msgctxt ""
-"@option:radio part of a complete sentence: 'Clicking in scrollbar track "
-"scrolls one page up or down'"
-msgid "Scrolls one page up or down"
-msgstr "向上或向下滚动一页"
-
-#: ui/main.qml:137
+#: ui/main.qml:109
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Middle-click to scroll to clicked location"
 msgstr "提示：中键点击即可直接滚动到点击位置"
 
-#: ui/main.qml:152
+#: ui/main.qml:112
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
+#| "scrolls one page up or down'"
+#| msgid "Scrolls one page up or down"
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
+"page up or down'"
+msgid "Scrolls one page up or down"
+msgstr "向上或向下滚动一页"
+
+#: ui/main.qml:130
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
 msgstr "首选使用平滑滚动"
 
-#: ui/main.qml:162
+#: ui/main.qml:141
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -131,44 +139,44 @@ msgstr ""
 "可能不会遵守此设置，因为它们可能不支持平滑滚动，或者它们有自己的启用或者禁用"
 "平滑滚动的设置。"
 
-#: ui/main.qml:169
+#: ui/main.qml:147
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
 msgstr "点击"
 
-#: ui/main.qml:175
+#: ui/main.qml:150
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "单击文件或文件夹时："
 
-#: ui/main.qml:182
+#: ui/main.qml:154
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "选中"
 
-#: ui/main.qml:201
+#: ui/main.qml:155
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "提示：双击可以打开对象"
 
-#: ui/main.qml:214
+#: ui/main.qml:172
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "打开"
 
-#: ui/main.qml:232
+#: ui/main.qml:173
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
 msgstr "提示：单击对象的选择框可以选中"
 
-#: ui/main.qml:246
+#: ui/main.qml:190
 #, kde-format
 msgctxt ""
 "@label for checkbox, part of a complete sentence: 'Middle-click pastes "
@@ -176,7 +184,7 @@ msgctxt ""
 msgid "Middle-click:"
 msgstr "中键点击："
 
-#: ui/main.qml:248
+#: ui/main.qml:194
 #, kde-format
 msgctxt ""
 "@option:check part of a complete sentence: 'Middle click pastes selected "
@@ -184,26 +192,26 @@ msgctxt ""
 msgid "Pastes selected text"
 msgstr "粘贴选中的文本"
 
-#: ui/main.qml:268
+#: ui/main.qml:212
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Double-click interval:"
 msgstr "双击间隔时间："
 
-#: ui/main.qml:283
+#: ui/main.qml:232
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] "%1 毫秒"
 
-#: ui/main.qml:287
+#: ui/main.qml:236
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgstr "毫秒"
 
-#: ui/main.qml:301
+#: ui/main.qml:251
 #, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
@@ -213,7 +221,7 @@ msgstr ""
 "在这个间隔时长内发生的两次点击将被视作一次双击。有些应用程序可能不遵守此设"
 "置。"
 
-#: ui/main.qml:312
+#: ui/main.qml:262
 #, kde-format
 msgctxt "Test double-click speed"
 msgid ""
@@ -221,25 +229,25 @@ msgid ""
 "increase double-click interval."
 msgstr "双击文件夹进行测试。如果它的外观没有发生变化，请增加双击间隔时间。"
 
-#: ui/main.qml:354
+#: ui/main.qml:306
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr "拖放"
 
-#: ui/main.qml:361
+#: ui/main.qml:311
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "拖动文件或文件夹时："
 
-#: ui/main.qml:362
+#: ui/main.qml:315
 #, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr "总是询问要进行什么操作"
 
-#: ui/main.qml:378
+#: ui/main.qml:316
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -250,43 +258,48 @@ msgstr ""
 "按住 <shortcut>Shift</shortcut> 以移动，按住 <shortcut>Ctrl</shortcut> 以复"
 "制，按住 <shortcut>Shift+Ctrl</shortcut> 以创建符号链接。否则显示对话框。"
 
-#: ui/main.qml:386
+#: ui/main.qml:328
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "如果在同一设备上，则移动"
 
-#: ui/main.qml:402
+#: ui/main.qml:329
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr "拖放时按住 <shortcut>Shift</shortcut> 键以显示其他选项。"
 
-#: ui/main.qml:410
+#: ui/main.qml:339
 #, kde-format
 msgctxt "@title:group"
 msgid "Touch"
 msgstr "触摸"
 
-#: ui/main.qml:416
+#: ui/main.qml:344
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
 msgstr "启用平板模式："
 
-#: ui/main.qml:418
-#, kde-format
-msgctxt "@option:radio As in: 'Tablet Mode is automatically enabled as needed'"
+#: ui/main.qml:347
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@option:radio As in: 'Tablet Mode is automatically enabled as needed'"
+#| msgid "Automatically enable as needed"
+msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "按需自动启动"
 
-#: ui/main.qml:418
-#, kde-format
-msgctxt "option:radio As in: 'Tablet Mode is never enabled'"
+#: ui/main.qml:347
+#, fuzzy, kde-format
+#| msgctxt "option:radio As in: 'Tablet Mode is never enabled'"
+#| msgid "Never enabled"
+msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "永不启用"
 
-#: ui/main.qml:435
+#: ui/main.qml:365
 #, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
@@ -297,19 +310,19 @@ msgstr ""
 "平板模式将在系统检测到触摸屏，并且检测不到鼠标和触摸板时自动启用。例如：将变"
 "形本的键盘盖翻转180度或拆除时。"
 
-#: ui/main.qml:440
+#: ui/main.qml:371
 #, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always active"
 msgstr "始终启用"
 
-#: ui/main.qml:463
+#: ui/main.qml:393
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "已禁用"
 
-#: ui/main.qml:486
+#: ui/main.qml:394
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."

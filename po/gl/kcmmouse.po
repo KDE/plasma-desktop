@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-02 00:45+0000\n"
+"POT-Creation-Date: 2026-04-08 00:48+0000\n"
 "PO-Revision-Date: 2025-05-21 08:54+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -146,41 +146,41 @@ msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
 msgstr "Configurar os botóns adicionais…"
 
-#: ui/main.qml:64
+#: ui/main.qml:66
 #, fuzzy, kde-format
 #| msgid "Device:"
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Dispositivo:"
 
-#: ui/main.qml:87
+#: ui/main.qml:89
 #, fuzzy, kde-format
 #| msgid "General:"
 msgctxt "@title:group"
 msgid "General:"
 msgstr "Xeral:"
 
-#: ui/main.qml:88
+#: ui/main.qml:90
 #, kde-format
 msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr ""
 
-#: ui/main.qml:105
+#: ui/main.qml:107
 #, fuzzy, kde-format
 #| msgid "Swap left and right buttons."
 msgctxt "@title:group"
 msgid "Left and right buttons:"
 msgstr "Intercambiar os botóns esquerdo e dereito."
 
-#: ui/main.qml:106
+#: ui/main.qml:108
 #, fuzzy, kde-format
 #| msgid "Left-handed mode"
 msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
 msgstr "Modo para zurdos"
 
-#: ui/main.qml:121
+#: ui/main.qml:123
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -190,7 +190,7 @@ msgid "Press both simultaneously to middle-click"
 msgstr ""
 "Premer os botóns esquerdo e dereito á vez equivale a premer o botón central."
 
-#: ui/main.qml:133
+#: ui/main.qml:135
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -201,21 +201,21 @@ msgstr ""
 "adicional é necesario para detectar correctamente premas simultáneas dos "
 "botóns esquerdo e dereito."
 
-#: ui/main.qml:148
+#: ui/main.qml:147
 #, fuzzy, kde-format
 #| msgid "Pointer speed:"
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Velocidade do punteiro:"
 
-#: ui/main.qml:228
+#: ui/main.qml:225
 #, fuzzy, kde-format
 #| msgid "Enable pointer acceleration"
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Activar a aceleración do punteiro."
 
-#: ui/main.qml:242
+#: ui/main.qml:239
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip from ContextualHelpButton"
 #| msgid ""
@@ -228,47 +228,47 @@ msgstr ""
 "Cando se activa, a distancia de desprazamento do punteiro aumenta a maior "
 "velocidade de movemento."
 
-#: ui/main.qml:255
+#: ui/main.qml:249
 #, fuzzy, kde-format
 #| msgid "Scrolling speed:"
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr "Velocidade de desprazamento:"
 
-#: ui/main.qml:306
+#: ui/main.qml:300
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Máis amodo"
 
-#: ui/main.qml:315
+#: ui/main.qml:309
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Veloz"
 
-#: ui/main.qml:323
+#: ui/main.qml:319
 #, fuzzy, kde-format
 #| msgid "Scrolling:"
 msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "Desprazamento:"
 
-#: ui/main.qml:324
+#: ui/main.qml:320
 #, fuzzy, kde-format
 #| msgid "Invert scroll direction"
 msgctxt "@option:check"
 msgid "Invert scroll direction"
 msgstr "Inverter a dirección de desprazamento"
 
-#: ui/main.qml:341
+#: ui/main.qml:335
 #, fuzzy, kde-format
 #| msgid "Hold down middle button and move mouse to scroll"
 msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "Manteña premido o botón central e mova o rato para desprazar."
 
-#: ui/main.qml:353
+#: ui/main.qml:347
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip from ContextualHelpButton"
 #| msgid ""
