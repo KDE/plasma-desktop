@@ -92,6 +92,7 @@ PlasmoidItem {
         sorted: Plasmoid.configuration.alphaSort
         showSeparators: !kicker.isDash && !sorted
         showRootSeparator: !kicker.isDash
+        highlightNewlyInstalledApps: Plasmoid.configuration.highlightNewlyInstalledApps
         // TODO: appletInterface property now can be ported to "applet" and have the real Applet* assigned directly
         appletInterface: kicker
 

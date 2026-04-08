@@ -857,19 +857,45 @@ Kicker.DashboardWindow {
                                 }
                             }
 
-                            contentItem: Kirigami.Heading {
-                                id: label
+                            contentItem: Item {
+                                implicitHeight: Math.max(label.implicitHeight, badgeLoader.implicitHeight)
+                                implicitWidth: label.implicitWidth + badgeLoader.implicitWidth
 
-                                elide: Text.ElideRight
-                                wrapMode: Text.NoWrap
-                                opacity: 1.0
+                                Kirigami.Heading {
+                                    id: label
 
-                                color: Kirigami.Theme.textColor
+                                    anchors {
+                                        left: parent.left
+                                        right: badgeLoader.left
+                                    }
 
-                                level: 1
+                                    elide: Text.ElideRight
+                                    wrapMode: Text.NoWrap
+                                    opacity: 1.0
 
-                                text: item.model.display
-                                textFormat: Text.PlainText
+                                    color: Kirigami.Theme.textColor
+
+                                    level: 1
+
+                                    text: item.model.display
+                                    textFormat: Text.PlainText
+                                }
+
+                                Loader {
+                                    id: badgeLoader
+
+                                    anchors.right: parent.right
+                                    anchors.verticalCenter: parent.verticalCenter
+                                    visible: active
+                                    active: item.isNewlyInstalled ?? false
+
+                                    sourceComponent: Kirigami.Badge {
+                                        text: ""
+                                        type: Kirigami.Badge.Type.Positive
+                                        Accessible.name: i18nc("Newly-installed app, badge, keep short", "New!") // qmllint disable unqualified
+                                        Accessible.description: i18nc("@info:whatsthis Accessible description for badge", "There is a newly-installed application in this category") // qmllint disable unqualified
+                                    }
+                                }
                             }
                         }
 

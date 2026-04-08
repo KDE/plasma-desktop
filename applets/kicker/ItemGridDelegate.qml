@@ -72,6 +72,22 @@ ItemAbstractDelegate {
             animated: false
 
             source: item.decoration
+
+            Loader {
+                anchors {
+                    right: parent.right
+                    rightMargin: -item.rightPadding
+                    top: parent.top
+                }
+                visible: active
+                active: item.isNewlyInstalled ?? false
+
+                sourceComponent: Kirigami.Badge {
+                    text: i18nc("@label Newly-installed app, badge, keep short", "New!")
+                    type: Kirigami.Badge.Type.Positive
+                    Accessible.name: i18nc("@label Accessible name for badge", "Newly-installed application")
+                }
+            }
         }
 
         PlasmaComponents3.Label {

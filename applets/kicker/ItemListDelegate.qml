@@ -3,6 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Layouts
@@ -88,6 +89,19 @@ ItemAbstractDelegate {
             color: item.iconAndLabelsShouldlookSelected ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
 
             text: item.model.display ?? ""
+        }
+
+        Loader {
+            visible: active
+            active: item.isNewlyInstalled ?? false
+
+            sourceComponent: Kirigami.Badge {
+                text: item.hasChildren ? "" : Accessible.name
+                type: Kirigami.Badge.Type.Positive
+                Accessible.name: i18nc("Newly-installed app, badge, keep short", "New!") // qmllint disable unqualified
+                Accessible.description: item.hasChildren ? i18nc("@info:whatsthis Accessible description for badge", "There is a newly-installed application in this category") // qmllint disable unqualified
+                : i18nc("@info:whatsthis Accessible description for badge", "Newly-installed application") // qmllint disable unqualified
+            }
         }
 
         Kirigami.Icon {

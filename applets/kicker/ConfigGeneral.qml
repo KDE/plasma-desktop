@@ -34,6 +34,7 @@ KCMUtils.SimpleKCM {
     property alias cfg_showRecentApps: showRecentApps.checked
     property alias cfg_showRecentDocs: showRecentDocs.checked
 
+    property alias cfg_highlightNewlyInstalledApps: highlightNewlyInstalledAppsCheckbox.checked
     property alias cfg_useExtraRunners: useExtraRunners.checked
     property alias cfg_alignResultsToBottom: alignResultsToBottom.checked
     property alias cfg_forceDarkMode: forceDarkMode.checked
@@ -188,6 +189,12 @@ KCMUtils.SimpleKCM {
             visible: !configGeneral.isDash
 
             text: i18nc("@option:check", "Show icons on the root level of the menu")
+        }
+
+        QQC2.CheckBox {
+            id: highlightNewlyInstalledAppsCheckbox
+
+            text: i18nc("@option:check", "Highlight newly-installed applications")
         }
 
         Item {

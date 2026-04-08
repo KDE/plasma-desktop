@@ -78,6 +78,10 @@
       <label>Whether to show icons on the root level of the menu.</label>
       <default>false</default>
     </entry>
+    <entry name="highlightNewlyInstalledApps" type="Bool">
+      <label>Whether to highlight newly-installed applications</label>
+      <default>true</default>
+    </entry>
 
     <entry name="forceDarkMode" type="Bool">
       <label>Whether to force dark mode for the Dashboard.</label>
