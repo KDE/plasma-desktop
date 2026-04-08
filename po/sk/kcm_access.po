@@ -22,8 +22,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.12.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
@@ -148,29 +148,25 @@ msgstr "Invertovať systémové farby na zvončeku"
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
-#, fuzzy, kde-format
-#| msgid "Color of the Visible Bell"
+#, kde-format
 msgid "Color of the Visual Bell"
 msgstr "Farba viditeľného zvončeka"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Duration of the Visible Bell"
+#, kde-format
 msgid "Duration of the Visual Bell"
 msgstr "Trvanie vizuálneho zvončeku"
 
 #. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)
 #: kcmaccessibilitycolorblindnesscorrection.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether Colorblindness Correction is enabled"
 msgstr "Či zatriasť kurzorom je zapnuté"
 
 #. i18n: ectx: label, entry (Invert), group (Plugins)
 #: kcmaccessibilityinvert.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Invert effect is enabled"
 msgstr "Či zatriasť kurzorom je zapnuté"
 
@@ -302,8 +298,7 @@ msgstr "Povoliť čítačku obrazovky"
 
 #. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
 #: kcmaccessibilityshakecursor.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether Shake Pointer is enabled"
 msgstr "Či zatriasť kurzorom je zapnuté"
 
@@ -315,21 +310,18 @@ msgstr "Zväčšenie"
 
 #. i18n: ectx: label, entry (Zoom), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Zoom effect is enabled"
 msgstr "Či zatriasť kurzorom je zapnuté"
 
 #. i18n: ectx: label, entry (Magnifier), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Magnifier effect is enabled"
 msgstr "Či zatriasť kurzorom je zapnuté"
 
 #: ui/ActivationShortcuts.qml:18
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgctxt "@option:check"
 msgid "Activation shortcuts:"
 msgstr "Aktivačné gestá"
@@ -344,17 +336,16 @@ msgstr "Povoliť"
 #, kde-format
 msgctxt "@label"
 msgid "Press Shift 5 times to enable Sticky Keys"
-msgstr ""
+msgstr "Stlačte Shift 5-krát pre aktiváciu Lepkavých kláves"
 
 #: ui/ActivationShortcuts.qml:38
 #, kde-format
 msgctxt "@label"
 msgid "Hold Shift for 8 seconds to enable Slow Keys"
-msgstr ""
+msgstr "Podržte Shift 8 sekúnd pre aktiváciu Pomalých kláves"
 
 #: ui/ActivationShortcuts.qml:47
-#, fuzzy, kde-format
-#| msgid "Turn sticky keys and slow keys off after inactivity:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable sticky and slow keys after:"
 msgstr "Vypnúť lepkavé a pomalé klávesy po určitom čase neaktivity:"
@@ -414,9 +405,7 @@ msgid "Please choose an audio file"
 msgstr "Vyberte zvukový súbor"
 
 #: ui/Bell.qml:21
-#, fuzzy, kde-format
-#| msgctxt "Name filters in a file dialog"
-#| msgid "Audio Files (*.ogg *.wav)"
+#, kde-format
 msgctxt "Name filters in a file dialog. Do not translate `(*.ogg *.oga *.wav)`"
 msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
 msgstr "Zvukové súbory (*.ogg *.wav)"
@@ -440,15 +429,13 @@ msgid "Custom sound:"
 msgstr "Vlastný zvuk:"
 
 #: ui/Bell.qml:75
-#, fuzzy, kde-format
-#| msgid "Search audio file for the system bell"
+#, kde-format
 msgctxt "@action:button icononly tooltip"
 msgid "Choose audio file for the system bell"
 msgstr "Vyhľadajte zvukový súbor pre systémový zvonček"
 
 #: ui/Bell.qml:76
-#, fuzzy, kde-format
-#| msgid "Please choose an audio file"
+#, kde-format
 msgctxt "@action button accessible only"
 msgid "Choose audio file"
 msgstr "Vyberte zvukový súbor"
@@ -457,7 +444,7 @@ msgstr "Vyberte zvukový súbor"
 #, kde-format
 msgctxt "@info:usagetip accessible description for button"
 msgid "Opens dialog"
-msgstr ""
+msgstr "Otvorí dialóg"
 
 #: ui/Bell.qml:93
 #, kde-format
@@ -478,8 +465,7 @@ msgid "Invert screen colors"
 msgstr "Invertovať farby obrazovky"
 
 #: ui/Bell.qml:126
-#, fuzzy, kde-format
-#| msgid "F&lash screen"
+#, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
 msgstr "Za&blikať obrazovkou"
@@ -521,6 +507,8 @@ msgid ""
 "If you have trouble with certain colors on the screen, these filters can "
 "change them into other colors."
 msgstr ""
+"Ak máte problémy s určitými farbami na obrazovke, tieto filtre ich môžu "
+"zmeniť na iné farby."
 
 #: ui/ColorblindnessCorrection.qml:31
 #, kde-format
@@ -533,31 +521,31 @@ msgstr "Povoliť"
 msgctxt ""
 "@label:listbox Difficulty seeing any of the following colors on the screen"
 msgid "Problematic colors:"
-msgstr ""
+msgstr "Problematické farby:"
 
 #: ui/ColorblindnessCorrection.qml:49
 #, kde-format
 msgctxt "@option"
 msgid "Red & purple (Protanopia)"
-msgstr ""
+msgstr "Červená a fialová (Protanopia)"
 
 #: ui/ColorblindnessCorrection.qml:50
 #, kde-format
 msgctxt "@option"
 msgid "Green & purple (Deuteranopia)"
-msgstr ""
+msgstr "Zelená a fialová (Deuteranopia)"
 
 #: ui/ColorblindnessCorrection.qml:51
 #, kde-format
 msgctxt "@option"
 msgid "Yellow, green & purple (Tritanopia)"
-msgstr ""
+msgstr "Žltá, zelená a fialová (Tritanopia)"
 
 #: ui/ColorblindnessCorrection.qml:52
 #, kde-format
 msgctxt "@option"
 msgid "All (grayscale mode)"
-msgstr ""
+msgstr "Všetky (režim odtieňov sivej)"
 
 #: ui/ColorblindnessCorrection.qml:67
 #, kde-format
@@ -569,43 +557,40 @@ msgstr "Intenzita:"
 #, kde-format
 msgctxt "@label Mild color blindness correction intensity"
 msgid "Mild"
-msgstr ""
+msgstr "Mierne"
 
 #: ui/ColorblindnessCorrection.qml:97
 #, kde-format
 msgctxt "@label Intense color blindness correction intensity"
 msgid "Intense"
-msgstr ""
+msgstr "Intenzívne"
 
 #: ui/ColorblindnessCorrection.qml:115
 #, kde-format
 msgctxt "@info"
 msgid "Adjusted colors:"
-msgstr ""
+msgstr "Upravené farby:"
 
 #: ui/ColorblindnessCorrection.qml:132
 #, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Reds:"
-msgstr ""
+msgstr "Červené:"
 
 #: ui/ColorblindnessCorrection.qml:133
-#, fuzzy, kde-format
-#| msgid "Green"
+#, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Greens:"
 msgstr "Zelená"
 
 #: ui/ColorblindnessCorrection.qml:134
-#, fuzzy, kde-format
-#| msgid "Blue"
+#, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Blues:"
 msgstr "Modrá"
 
 #: ui/ColorblindnessCorrection.qml:135
-#, fuzzy, kde-format
-#| msgid "Purple"
+#, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Purples:"
 msgstr "Fialová"
@@ -626,7 +611,7 @@ msgstr "Povoliť"
 #, kde-format
 msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
-msgstr ""
+msgstr "Use shortcuts to toggle inverting display and window colors"
 
 #: ui/Invert.qml:49 ui/ZoomMagnifier.qml:376
 #, kde-format
@@ -654,6 +639,9 @@ msgid ""
 "Useful if you accidentally type more than one key at a time or have "
 "difficulty pressing the key you want the first time."
 msgstr ""
+"For a key to be accepted, it has to be held until the set amount of time. "
+"Useful if you accidentally type more than one key at a time or have "
+"difficulty pressing kľúč you want the first time."
 
 #: ui/KeyboardFilters.qml:41
 #, kde-format
@@ -714,6 +702,9 @@ msgid ""
 "tremors that cause you to press a key multiple times when you only intend to "
 "press once."
 msgstr ""
+"Ignore rapid, repeated keypresses of rovnaký key. Useful ak have hand "
+"tremors that cause you to press a key multiple times when you only intend to "
+"press once."
 
 #: ui/KeyboardFilters.qml:142
 #, kde-format
@@ -740,7 +731,7 @@ msgstr "Použiť systémový zvonček keď je odmietnutý"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Zoom & Magnifier"
-msgstr ""
+msgstr "Zoom & Magnifier"
 
 #: ui/main.qml:33
 #, kde-format
@@ -767,8 +758,7 @@ msgid "Mouse Navigation"
 msgstr "Navigácia myšou"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Activation Shortcuts"
 msgstr "Aktivačné gestá"
@@ -780,8 +770,7 @@ msgid "Screen Reader"
 msgstr "Čítačka obrazovky"
 
 #: ui/main.qml:63
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr "Či zatriasť kurzorom je zapnuté"
@@ -793,9 +782,7 @@ msgid "Invert"
 msgstr "Invertovať"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "Shake cursor to find it"
-#| msgid "Shake Cursor"
+#, kde-format
 msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
 msgstr "Zatriasť kurzorom"
@@ -820,6 +807,9 @@ msgid ""
 "though they “stick in place” and no longer need to be held down when typing "
 "a keyboard shortcut."
 msgstr ""
+"Modifier keys like Ctrl, Shift, Alt, and the Meta/Super/Windows key act as "
+"though they “stick in place” and no longer need to be held down when typing "
+"a keyboard shortcut."
 
 #: ui/ModifierKeys.qml:39
 #, kde-format
@@ -834,6 +824,8 @@ msgid ""
 "Pressing a modifier key twice will keep it in active state until pressed "
 "again."
 msgstr ""
+"Pressing a modifier key twice will keep it in active state until pressed "
+"again."
 
 #: ui/ModifierKeys.qml:57
 #, kde-format
@@ -854,8 +846,7 @@ msgid "Feedback:"
 msgstr "Odozva:"
 
 #: ui/ModifierKeys.qml:93
-#, fuzzy, kde-format
-#| msgid "Ring system bell when locking keys are toggled"
+#, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when locking keys are used"
 msgstr "Pri prepínaní uzamykacích kláves zazvoniť systémový zvonček"
@@ -864,7 +855,7 @@ msgstr "Pri prepínaní uzamykacích kláves zazvoniť systémový zvonček"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
-msgstr ""
+msgstr "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
 
 #: ui/ModifierKeys.qml:108
 #, kde-format
@@ -880,9 +871,7 @@ msgid "Configure Notifications…"
 msgstr "Nastaviť notifikácie..."
 
 #: ui/MouseNavigation.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move pointer:"
 msgstr "Používať číselnú klávesnicu na ovládanie kurzoru:"
@@ -903,6 +892,11 @@ msgid ""
 "up). The keys <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</"
 "shortcut>, and <shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
+"The numpad key <shortcut>5</shortcut> functions as a mouse click. The keys "
+"<shortcut>2</shortcut>, <shortcut>4</shortcut>, <shortcut>6</shortcut>, and "
+"<shortcut>8</shortcut> allow for cardinal movement (down, left, right, and "
+"up). The keys <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</"
+"shortcut>, and <shortcut>9</shortcut> allow for diagonal movement."
 
 #: ui/MouseNavigation.qml:39
 #, kde-format
@@ -972,8 +966,7 @@ msgid "Pointer acceleration:"
 msgstr "Zrýchlenie ukazovateľa:"
 
 #: ui/ScreenReader.qml:20
-#, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
+#, kde-format
 msgctxt "@info Placeholder message title"
 msgid "The Orca Screen Reader is not installed"
 msgstr "Spustiť konfiguráciu čítačky obrazovky Orca..."
@@ -982,7 +975,7 @@ msgstr "Spustiť konfiguráciu čítačky obrazovky Orca..."
 #, kde-format
 msgctxt "@info Placeholder message explanation"
 msgid "Please install it, then close and reopen this window"
-msgstr ""
+msgstr "Please install it, then close and reopen this window"
 
 #: ui/ScreenReader.qml:27
 #, kde-format
@@ -997,9 +990,7 @@ msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Spustiť konfiguráciu čítačky obrazovky Orca..."
 
 #: ui/ShakeCursor.qml:15
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Shake cursor to find it:"
+#, kde-format
 msgctxt "@label"
 msgid "Shake pointer to find it:"
 msgstr "Zatriasť kurzorom na jeho nájdenie:"
@@ -1044,12 +1035,10 @@ msgstr "Celá obrazovka"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Show pixel grid at zoom level:"
-msgstr ""
+msgstr "Show pixel grid at zoom level:"
 
 #: ui/ZoomMagnifier.qml:85
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer appearance:"
 msgstr "Zrýchlenie ukazovateľa:"
@@ -1073,9 +1062,7 @@ msgid "Hide"
 msgstr "Skryť"
 
 #: ui/ZoomMagnifier.qml:123
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer tracking:"
 msgstr "Zrýchlenie ukazovateľa:"
@@ -1090,7 +1077,7 @@ msgstr "Proporcionálne"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with pointer"
-msgstr ""
+msgstr "Zoom area moves in sync with pointer"
 
 #: ui/ZoomMagnifier.qml:133
 #, kde-format
@@ -1102,19 +1089,19 @@ msgstr "Na stred"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, except near screen edges"
-msgstr ""
+msgstr "Pointer stays centered on-screen, except near screen edges"
 
 #: ui/ZoomMagnifier.qml:138
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
-msgstr ""
+msgstr "Centered (Strict)"
 
 #: ui/ZoomMagnifier.qml:139
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, even near screen edges"
-msgstr ""
+msgstr "Pointer stays centered on-screen, even near screen edges"
 
 #: ui/ZoomMagnifier.qml:143
 #, kde-format
@@ -1126,7 +1113,7 @@ msgstr "Tlačiť"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer pushes zoom area at screen edges"
-msgstr ""
+msgstr "Pointer pushes zoom area at screen edges"
 
 #: ui/ZoomMagnifier.qml:148
 #, kde-format
@@ -1138,7 +1125,7 @@ msgstr "Zakázané"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow pointer"
-msgstr ""
+msgstr "Zoom area doesn't follow pointer"
 
 #: ui/ZoomMagnifier.qml:166
 #, kde-format
@@ -1150,7 +1137,7 @@ msgstr "Povoliť sledovanie zamerania"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
-msgstr ""
+msgstr "Povoliť text caret tracking"
 
 #: ui/ZoomMagnifier.qml:194
 #, kde-format
@@ -1201,24 +1188,22 @@ msgstr "Faktor zväčšenia:"
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
-msgstr ""
+msgstr "Scroll gesture modifier keys:"
 
 #: ui/ZoomMagnifier.qml:359
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
-msgstr ""
+msgstr "Zoom scroll gestures are only dostupné on Wayland."
 
 #: ui/ZoomMagnifier.qml:365
-#, fuzzy, kde-format
-#| msgid "Ring system bell when modifier keys are used"
+#, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "Použiť systémový zvonček vždy keď je stlačený modifikačný kláves"
 
 #: ui/ZoomMagnifier.qml:386
-#, fuzzy, kde-format
-#| msgid "Use keys to control the mouse"
+#, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "Požívať klávesy na ovládanie myši"
@@ -1287,7 +1272,6 @@ msgstr "Požívať klávesy na ovládanie myši"
 #~ msgstr "Stlačte %1"
 
 #, fuzzy
-#~| msgid "Use the system bell whenever a key is rejected"
 #~ msgctxt "@label"
 #~ msgid "Flashes the screen whenever certain keys are pressed"
 #~ msgstr "Použiť systémový zvonček vždy keď je kláves odmietnutý"

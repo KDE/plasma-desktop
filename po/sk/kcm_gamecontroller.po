@@ -14,8 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
@@ -53,17 +53,17 @@ msgstr "Volant"
 #: device.cpp:20
 #, kde-format
 msgid "Arcade Stick"
-msgstr ""
+msgstr "Arkádová páčka"
 
 #: device.cpp:21
 #, kde-format
 msgid "Flight Stick"
-msgstr ""
+msgstr "Letecká páčka"
 
 #: device.cpp:22
 #, kde-format
 msgid "Dance Pad"
-msgstr ""
+msgstr "Tanečná podložka"
 
 #: device.cpp:23
 #, kde-format
@@ -73,42 +73,42 @@ msgstr "Gitara"
 #: device.cpp:24
 #, kde-format
 msgid "Drum Kit"
-msgstr ""
+msgstr "Bicia súprava"
 
 #: device.cpp:25
 #, kde-format
 msgid "Arcade Pad"
-msgstr ""
+msgstr "Arkádová podložka"
 
 #: device.cpp:26
 #, kde-format
 msgid "Throttle"
-msgstr ""
+msgstr "Plyn"
 
 #: device.cpp:31
 #, kde-format
 msgid "XBox 360"
-msgstr ""
+msgstr "XBox 360"
 
 #: device.cpp:32
 #, kde-format
 msgid "XBox One"
-msgstr ""
+msgstr "XBox One"
 
 #: device.cpp:33
 #, kde-format
 msgid "Sony Dualshock 3"
-msgstr ""
+msgstr "Sony Dualshock 3"
 
 #: device.cpp:34
 #, kde-format
 msgid "Sony Dualshock 4"
-msgstr ""
+msgstr "Sony Dualshock 4"
 
 #: device.cpp:35
 #, kde-format
 msgid "Switch Pro"
-msgstr ""
+msgstr "Switch Pro"
 
 #: device.cpp:36
 #, kde-format
@@ -118,37 +118,37 @@ msgstr "Virtuálny"
 #: device.cpp:37
 #, kde-format
 msgid "Sony Dualsense"
-msgstr ""
+msgstr "Sony Dualsense"
 
 #: device.cpp:38
 #, kde-format
 msgid "Amazon Luna"
-msgstr ""
+msgstr "Amazon Luna"
 
 #: device.cpp:39
 #, kde-format
 msgid "Google Stadia"
-msgstr ""
+msgstr "Google Stadia"
 
 #: device.cpp:40
 #, kde-format
 msgid "NVidia Shield"
-msgstr ""
+msgstr "NVidia Shield"
 
 #: device.cpp:41
 #, kde-format
 msgid "Switch Left Joy-Con"
-msgstr ""
+msgstr "Switch Ľavý Joy-Con"
 
 #: device.cpp:42
 #, kde-format
 msgid "Switch Right Joy-Con"
-msgstr ""
+msgstr "Switch Pravý Joy-Con"
 
 #: device.cpp:43
 #, kde-format
 msgid "Switch Paired Joy-Con"
-msgstr ""
+msgstr "Switch Spárovaný Joy-Con"
 
 #: device.cpp:48
 #, kde-format
@@ -184,24 +184,22 @@ msgstr "Tlačidlo vzad"
 #, kde-format
 msgctxt "The guide game controller button"
 msgid "Guide button"
-msgstr ""
+msgstr "Tlačidlo Guide"
 
 #: device.cpp:54
 #, kde-format
 msgctxt "The start game controller button"
 msgid "Start button"
-msgstr ""
+msgstr "Tlačidlo Start"
 
 #: device.cpp:55
 #, kde-format
 msgctxt "The button under the game controller's left analog stick"
 msgid "Left analog stick"
-msgstr ""
+msgstr "Ľavá analógová páčka"
 
 #: device.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "@label Visual representation of an axis position"
-#| msgid "Position:"
+#, kde-format
 msgctxt "The button under the game controller's right analog stick"
 msgid "Right analog stick"
 msgstr "Pozícia:"
@@ -210,37 +208,37 @@ msgstr "Pozícia:"
 #, kde-format
 msgctxt "The game controller's left shoulder button"
 msgid "Left shoulder button"
-msgstr ""
+msgstr "Ľavé ramenné tlačidlo"
 
 #: device.cpp:58
 #, kde-format
 msgctxt "The game controller's right shoulder button"
 msgid "Right shoulder button"
-msgstr ""
+msgstr "Pravé ramenné tlačidlo"
 
 #: device.cpp:59
 #, kde-format
 msgctxt "The game controller's d-pad Up button"
 msgid "D-pad up button"
-msgstr ""
+msgstr "Tlačidlo D-pad hore"
 
 #: device.cpp:60
 #, kde-format
 msgctxt "The game controller's d-pad down button"
 msgid "D-pad down button"
-msgstr ""
+msgstr "Tlačidlo D-pad dole"
 
 #: device.cpp:61
 #, kde-format
 msgctxt "The game controller's d-pad left button"
 msgid "D-pad left button"
-msgstr ""
+msgstr "Tlačidlo D-pad vľavo"
 
 #: device.cpp:62
 #, kde-format
 msgctxt "The game controller's d-pad right button"
 msgid "D-pad right button"
-msgstr ""
+msgstr "Tlačidlo D-pad vpravo"
 
 #: device.cpp:64
 #, kde-format
@@ -248,37 +246,37 @@ msgctxt ""
 "The game controller's miscellaneous button (Share on Xbox, mic on "
 "Playstation/Luna, capture on Switch)"
 msgid "Miscellaneous button"
-msgstr ""
+msgstr "Rôzne tlačidlo"
 
 #: device.cpp:65
 #, kde-format
 msgctxt "The game controller's 1st paddle button"
 msgid "Paddle button 1"
-msgstr ""
+msgstr "Tlačidlo vesla 1"
 
 #: device.cpp:66
 #, kde-format
 msgctxt "The game controller's 2nd paddle button"
 msgid "Paddle button 2"
-msgstr ""
+msgstr "Tlačidlo vesla 2"
 
 #: device.cpp:67
 #, kde-format
 msgctxt "The game controller's 3rd paddle button"
 msgid "Paddle button 3"
-msgstr ""
+msgstr "Tlačidlo vesla 3"
 
 #: device.cpp:68
 #, kde-format
 msgctxt "The game controller's 4th paddle button"
 msgid "Paddle button 4"
-msgstr ""
+msgstr "Tlačidlo vesla 4"
 
 #: device.cpp:69
 #, kde-format
 msgctxt "The button under the game controller's touchpad"
 msgid "Touchpad button"
-msgstr ""
+msgstr "Tlačidlo dotykového panelu"
 
 #: device.cpp:73
 #, kde-format
@@ -301,7 +299,7 @@ msgstr "Bluetooth"
 #: device.cpp:83
 #, kde-format
 msgid "Invalid button value"
-msgstr ""
+msgstr "Neplatná hodnota tlačidla"
 
 #: device.cpp:246
 #, kde-format
