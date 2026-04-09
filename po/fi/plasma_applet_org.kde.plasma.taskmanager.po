@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-31 00:46+0000\n"
+"POT-Creation-Date: 2026-04-09 00:46+0000\n"
 "PO-Revision-Date: 2026-01-05 18:02+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -89,12 +89,6 @@ msgstr "Poista vaimennus: %1"
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
 msgstr "Vaimenna: %1"
-
-#: qml/Badge.qml:52
-#, kde-format
-msgctxt "Over 9999 new messages, overlay, keep short"
-msgid "9,999+"
-msgstr "9,999+"
 
 #: qml/config.qml:13
 #, fuzzy, kde-format
@@ -883,67 +877,73 @@ msgctxt "@info:usagetip %1 task name"
 msgid "Activate %1"
 msgstr "Aktivoi %1"
 
-#: qml/ToolTipInstance.qml:202
+#: qml/TaskBadgeOverlay.qml:84
+#, kde-format
+msgctxt "Over 9999 new messages, overlay, keep short"
+msgid "9,999+"
+msgstr "9,999+"
+
+#: qml/ToolTipInstance.qml:201
 #, kde-format
 msgctxt "@info:tooltip Close this window"
 msgid "Close window"
 msgstr "Sulje ikkuna"
 
-#: qml/ToolTipInstance.qml:472
+#: qml/ToolTipInstance.qml:471
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
 msgstr "Vaimenna %1"
 
-#: qml/ToolTipInstance.qml:473
+#: qml/ToolTipInstance.qml:472
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
 msgstr "Vaimenna %1"
 
-#: qml/ToolTipInstance.qml:491
+#: qml/ToolTipInstance.qml:490
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
 msgstr "Säädä äänenvoimakkuutta %1"
 
-#: qml/ToolTipInstance.qml:507
+#: qml/ToolTipInstance.qml:506
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1 %"
 
-#: qml/ToolTipInstance.qml:511
+#: qml/ToolTipInstance.qml:510
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
 msgstr "100 %"
 
-#: qml/ToolTipInstance.qml:527
+#: qml/ToolTipInstance.qml:526
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "Aktiviteet(e)issa %1"
 
-#: qml/ToolTipInstance.qml:530
+#: qml/ToolTipInstance.qml:529
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
 msgstr "Näytetään kaikilla työpöydillä"
 
-#: qml/ToolTipInstance.qml:536
+#: qml/ToolTipInstance.qml:535
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
 msgstr "Käytettävissä kaikissa aktiviteeteissa"
 
-#: qml/ToolTipInstance.qml:546
+#: qml/ToolTipInstance.qml:545
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
 msgstr "Käytettävissä myös aktiviteetissa %1"
 
-#: qml/ToolTipInstance.qml:550
+#: qml/ToolTipInstance.qml:549
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"

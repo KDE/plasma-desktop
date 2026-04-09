@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-05 00:46+0000\n"
+"POT-Creation-Date: 2026-04-09 00:46+0000\n"
 "PO-Revision-Date: 2026-01-31 20:40+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -326,7 +326,7 @@ msgctxt "@label Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "புதியது!"
 
-#: KickoffGridDelegate.qml:60
+#: KickoffGridDelegate.qml:61
 #, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly installed application"
@@ -338,21 +338,23 @@ msgctxt "@info:whatsthis Accessible description"
 msgid "Grid with %1 rows, %2 columns"
 msgstr "%1 வரிசைகளும் %2 நெடுவரிசைகளும் கொண்ட கிரிட்"
 
-#: KickoffListDelegate.qml:117
+#: KickoffListDelegate.qml:119
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "புதியது!"
 
-#: KickoffListDelegate.qml:118
-#, kde-format
-msgctxt "@info:whatsthis Accessible description for badge"
+#: KickoffListDelegate.qml:124
+#, fuzzy, kde-format
+#| msgctxt "@info:whatsthis Accessible description for badge"
+#| msgid "There is a newly installed application in this category"
 msgid "There is a newly installed application in this category"
 msgstr "இப்பகுப்பில் புதியதாக நிறுவியுள்ள செயலி உள்ளது"
 
-#: KickoffListDelegate.qml:119
-#, kde-format
-msgctxt "@info:whatsthis Accessible description for badge"
+#: KickoffListDelegate.qml:125
+#, fuzzy, kde-format
+#| msgctxt "@label Accessible name for badge"
+#| msgid "Newly installed application"
 msgid "Newly installed application"
 msgstr "புதியதாக நிறுவியுள்ள செயலி"
 
@@ -403,6 +405,10 @@ msgstr "வரலாறு"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "அடிக்கடி பயன்படுபவை"
+
+#~ msgctxt "@info:whatsthis Accessible description for badge"
+#~ msgid "Newly installed application"
+#~ msgstr "புதியதாக நிறுவியுள்ள செயலி"
 
 #~ msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 #~ msgid "Automatically disabled when in Touch Mode"

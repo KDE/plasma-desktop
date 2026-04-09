@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-05 00:46+0000\n"
+"POT-Creation-Date: 2026-04-09 00:46+0000\n"
 "PO-Revision-Date: 2026-01-08 23:55+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -330,7 +330,7 @@ msgctxt "@label Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "New!"
 
-#: KickoffGridDelegate.qml:60
+#: KickoffGridDelegate.qml:61
 #, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly installed application"
@@ -344,21 +344,23 @@ msgstr "%1 行 %2 列的圖示網格"
 
 # 徽章寫「新的！」好像怪怪的。
 # --Kisaragi
-#: KickoffListDelegate.qml:117
+#: KickoffListDelegate.qml:119
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "New!"
 
-#: KickoffListDelegate.qml:118
-#, kde-format
-msgctxt "@info:whatsthis Accessible description for badge"
+#: KickoffListDelegate.qml:124
+#, fuzzy, kde-format
+#| msgctxt "@info:whatsthis Accessible description for badge"
+#| msgid "There is a newly installed application in this category"
 msgid "There is a newly installed application in this category"
 msgstr "這個分類中有新安裝的應用程式"
 
-#: KickoffListDelegate.qml:119
-#, kde-format
-msgctxt "@info:whatsthis Accessible description for badge"
+#: KickoffListDelegate.qml:125
+#, fuzzy, kde-format
+#| msgctxt "@label Accessible name for badge"
+#| msgid "Newly installed application"
 msgid "Newly installed application"
 msgstr "新安裝的應用程式"
 
@@ -409,6 +411,10 @@ msgstr "歷史紀錄"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "經常使用"
+
+#~ msgctxt "@info:whatsthis Accessible description for badge"
+#~ msgid "Newly installed application"
+#~ msgstr "新安裝的應用程式"
 
 #~ msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 #~ msgid "Automatically disabled when in Touch Mode"

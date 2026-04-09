@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-31 00:46+0000\n"
+"POT-Creation-Date: 2026-04-09 00:46+0000\n"
 "PO-Revision-Date: 2017-04-07 00:51+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -102,12 +102,6 @@ msgstr ""
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
 msgstr "Utišaj"
-
-#: qml/Badge.qml:52
-#, kde-format
-msgctxt "Over 9999 new messages, overlay, keep short"
-msgid "9,999+"
-msgstr ""
 
 #: qml/config.qml:13
 #, kde-format
@@ -936,35 +930,41 @@ msgctxt "@info:usagetip %1 task name"
 msgid "Activate %1"
 msgstr ""
 
+#: qml/TaskBadgeOverlay.qml:84
+#, kde-format
+msgctxt "Over 9999 new messages, overlay, keep short"
+msgid "9,999+"
+msgstr ""
+
 # >> @item:inlistbox On middle-click:
-#: qml/ToolTipInstance.qml:202
+#: qml/ToolTipInstance.qml:201
 #, fuzzy, kde-format
 #| msgid "Close Window or Group"
 msgctxt "@info:tooltip Close this window"
 msgid "Close window"
 msgstr "zatvori prozor ili grupu"
 
-#: qml/ToolTipInstance.qml:472
+#: qml/ToolTipInstance.qml:471
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
 msgstr ""
 
-#: qml/ToolTipInstance.qml:473
+#: qml/ToolTipInstance.qml:472
 #, fuzzy, kde-format
 #| msgid "Mute"
 msgctxt "button to mute app"
 msgid "Mute %1"
 msgstr "Utišaj"
 
-#: qml/ToolTipInstance.qml:491
+#: qml/ToolTipInstance.qml:490
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
 msgstr ""
 
 # >> @item:inmenu Move To Desktop
-#: qml/ToolTipInstance.qml:507
+#: qml/ToolTipInstance.qml:506
 #, fuzzy, kde-format
 #| msgctxt "1 = number of desktop, 2 = desktop name"
 #| msgid "&%1 %2"
@@ -972,39 +972,39 @@ msgctxt "volume percentage"
 msgid "%1%"
 msgstr "&%1 — %2"
 
-#: qml/ToolTipInstance.qml:511
+#: qml/ToolTipInstance.qml:510
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
 msgstr ""
 
 # >> Which activity a window is currently on. Desktop name is either generic "Desktop %1" from kwin.po, or user supplied.
-#: qml/ToolTipInstance.qml:527
+#: qml/ToolTipInstance.qml:526
 #, fuzzy, kde-format
 #| msgid "On %1"
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "U %1|/|U $[lok %1]"
 
-#: qml/ToolTipInstance.qml:530
+#: qml/ToolTipInstance.qml:529
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
 msgstr ""
 
-#: qml/ToolTipInstance.qml:536
+#: qml/ToolTipInstance.qml:535
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
 msgstr "Dostupan u svim aktivnostima"
 
-#: qml/ToolTipInstance.qml:546
+#: qml/ToolTipInstance.qml:545
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
 msgstr "Takođe dostupan u %1|/|Takođe dostupan u $[lok %1]"
 
-#: qml/ToolTipInstance.qml:550
+#: qml/ToolTipInstance.qml:549
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"

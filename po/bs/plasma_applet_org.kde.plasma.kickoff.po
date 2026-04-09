@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-05 00:46+0000\n"
+"POT-Creation-Date: 2026-04-09 00:46+0000\n"
 "PO-Revision-Date: 2015-02-15 13:05+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -339,7 +339,7 @@ msgctxt "@label Newly installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: KickoffGridDelegate.qml:60
+#: KickoffGridDelegate.qml:61
 #, fuzzy, kde-format
 #| msgid "Recently Used Applications"
 msgctxt "@label Accessible name for badge"
@@ -352,23 +352,21 @@ msgctxt "@info:whatsthis Accessible description"
 msgid "Grid with %1 rows, %2 columns"
 msgstr ""
 
-#: KickoffListDelegate.qml:117
+#: KickoffListDelegate.qml:119
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: KickoffListDelegate.qml:118
+#: KickoffListDelegate.qml:124
 #, fuzzy, kde-format
 #| msgid "Recently Used Applications"
-msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly installed application in this category"
 msgstr "Nedavno korišteni programi"
 
-#: KickoffListDelegate.qml:119
+#: KickoffListDelegate.qml:125
 #, fuzzy, kde-format
 #| msgid "Recently Used Applications"
-msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly installed application"
 msgstr "Nedavno korišteni programi"
 
@@ -424,6 +422,12 @@ msgstr ""
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Nedavno instalirano"
+
+#, fuzzy
+#~| msgid "Recently Used Applications"
+#~ msgctxt "@info:whatsthis Accessible description for badge"
+#~ msgid "Newly installed application"
+#~ msgstr "Nedavno korišteni programi"
 
 #~ msgid "Leave"
 #~ msgstr "Napusti"

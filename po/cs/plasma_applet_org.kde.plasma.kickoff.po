@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-05 00:46+0000\n"
+"POT-Creation-Date: 2026-04-09 00:46+0000\n"
 "PO-Revision-Date: 2026-03-13 11:17+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -331,7 +331,7 @@ msgctxt "@label Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "Nové!"
 
-#: KickoffGridDelegate.qml:60
+#: KickoffGridDelegate.qml:61
 #, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly installed application"
@@ -343,23 +343,25 @@ msgctxt "@info:whatsthis Accessible description"
 msgid "Grid with %1 rows, %2 columns"
 msgstr "Mřížka s %1 řádky, %2 sloupci"
 
-#: KickoffListDelegate.qml:117
+#: KickoffListDelegate.qml:119
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "Nové!"
 
-#: KickoffListDelegate.qml:118
-#, kde-format
-msgctxt "@info:whatsthis Accessible description for badge"
+#: KickoffListDelegate.qml:124
+#, fuzzy, kde-format
+#| msgctxt "@info:whatsthis Accessible description for badge"
+#| msgid "There is a newly installed application in this category"
 msgid "There is a newly installed application in this category"
 msgstr "V této kategorii je nově nainstalovaná aplikace"
 
-#: KickoffListDelegate.qml:119
-#, kde-format
-msgctxt "@info:whatsthis Accessible description for badge"
+#: KickoffListDelegate.qml:125
+#, fuzzy, kde-format
+#| msgctxt "@label Accessible name for badge"
+#| msgid "Newly installed application"
 msgid "Newly installed application"
-msgstr "Nově instalované aplikace:"
+msgstr "Zobrazit ostatní aplikace:"
 
 #: LeaveButtons.qml:171
 #, kde-format
@@ -408,6 +410,10 @@ msgstr "Historie"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Často používané"
+
+#~ msgctxt "@info:whatsthis Accessible description for badge"
+#~ msgid "Newly installed application"
+#~ msgstr "Nově instalované aplikace:"
 
 #~ msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 #~ msgid "Automatically disabled when in Touch Mode"

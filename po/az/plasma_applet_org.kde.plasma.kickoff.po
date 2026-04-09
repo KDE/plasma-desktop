@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-05 00:46+0000\n"
+"POT-Creation-Date: 2026-04-09 00:46+0000\n"
 "PO-Revision-Date: 2025-12-17 23:03+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -354,7 +354,7 @@ msgctxt "@label Newly installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: KickoffGridDelegate.qml:60
+#: KickoffGridDelegate.qml:61
 #, fuzzy, kde-format
 #| msgid "Show other applications:"
 msgctxt "@label Accessible name for badge"
@@ -368,23 +368,21 @@ msgctxt "@info:whatsthis Accessible description"
 msgid "Grid with %1 rows, %2 columns"
 msgstr "%1 sətirli %2 sütunli şəbəkə"
 
-#: KickoffListDelegate.qml:117
+#: KickoffListDelegate.qml:119
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: KickoffListDelegate.qml:118
+#: KickoffListDelegate.qml:124
 #, fuzzy, kde-format
 #| msgid "Show other applications:"
-msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly installed application in this category"
 msgstr "Başqa tətbiqləri göstərmək:"
 
-#: KickoffListDelegate.qml:119
+#: KickoffListDelegate.qml:125
 #, fuzzy, kde-format
 #| msgid "Show other applications:"
-msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly installed application"
 msgstr "Başqa tətbiqləri göstərmək:"
 
@@ -439,6 +437,12 @@ msgstr "Tarixçə"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Tez-tez istifadə olunan"
+
+#, fuzzy
+#~| msgid "Show other applications:"
+#~ msgctxt "@info:whatsthis Accessible description for badge"
+#~ msgid "Newly installed application"
+#~ msgstr "Başqa tətbiqləri göstərmək:"
 
 #~ msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 #~ msgid "Automatically disabled when in Touch Mode"

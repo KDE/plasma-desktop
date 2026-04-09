@@ -14,64 +14,53 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Position on screen:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Position on screen:"
 msgstr "Pozícia na obrazovke:"
 
 #: ui/main.qml:35
-#, fuzzy, kde-format
-#| msgid "Top"
+#, kde-format
 msgctxt "@option:check Position on top of screen"
 msgid "Top"
 msgstr "Hore"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Center"
+#, kde-format
 msgctxt "@option:check Position in center of screen"
 msgid "Center"
 msgstr "V strede"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "History:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "History:"
 msgstr "História:"
 
 #: ui/main.qml:58
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Disabled"
+#, kde-format
 msgctxt "@option:radio History is disabled"
 msgid "Disabled"
 msgstr "Zakázané"
 
 #: ui/main.qml:63
-#, fuzzy, kde-format
-#| msgctxt "@option:check The thing being enabled is search history"
-#| msgid "Enable suggestions"
+#, kde-format
 msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable suggestions"
 msgstr "Povoliť návrhy"
 
 #: ui/main.qml:68
-#, fuzzy, kde-format
-#| msgctxt "@option:check The thing being enabled is search history"
-#| msgid "Enabled auto-complete"
+#, kde-format
 msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable auto-complete"
 msgstr "Povolené automatické dokončovanie"
 
 #: ui/main.qml:76
-#, fuzzy, kde-format
-#| msgid "Clear History…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear History…"
 msgstr "Vyčistiť históriu..."
@@ -101,7 +90,6 @@ msgid "Configure Enabled Search Plugins…"
 msgstr "Nastaviť  povolené doplnky pre vyhľadávanie…"
 
 #, fuzzy
-#~| msgid "Activation:"
 #~ msgctxt "@label prefix for checkbutton"
 #~ msgid "Activation:"
 #~ msgstr "Aktivácia:"

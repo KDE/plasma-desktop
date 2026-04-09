@@ -5,13 +5,13 @@
 # Jeff Huang <s8321414@gmail.com>, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
 # Chaoting Liu <brli@chakralinux.org>, 2021.
-# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023-2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-08 00:48+0000\n"
-"PO-Revision-Date: 2026-01-08 23:56+0900\n"
+"PO-Revision-Date: 2026-04-08 23:46+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 26.07.70\n"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:46
 #, kde-format
@@ -54,7 +54,7 @@ msgstr "無法讀取預設觸控板設定"
 #: kcm.cpp:69
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "無法選擇合適的後端"
 
 #: kcm.cpp:126
 #, kde-format
@@ -64,10 +64,9 @@ msgid ""
 msgstr "載入值時發生錯誤。請見紀錄檔以取得更多資訊。請重新啟動本設定模組。"
 
 #: kcm.cpp:129
-#, fuzzy, kde-format
-#| msgid "No touchpad found. Connect touchpad now."
+#, kde-format
 msgid "No pointer device found. Connect now."
-msgstr "找不到觸控板。請接上觸控板。"
+msgstr "找不到任何指標裝置。請現在連接。"
 
 #: kcm.cpp:138
 #, kde-format
@@ -92,16 +91,14 @@ msgid ""
 msgstr "加入新連線的裝置時發生錯誤。請重新連接它並重新啟動本設定模組。"
 
 #: kcm.cpp:185
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. Closed its setting dialog."
+#, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr "觸控板已斷線。關閉此設定對話框。"
+msgstr "指標裝置已中斷連接。已關閉其設定對話框。"
 
 #: kcm.cpp:187
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. No other touchpads found."
+#, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr "觸控板已斷線。找不到其他的觸控板。"
+msgstr "指標裝置已中斷連接。找不到其他的裝置。"
 
 #: ui/main.qml:69
 #, kde-format

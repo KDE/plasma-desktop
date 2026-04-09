@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-05 00:46+0000\n"
+"POT-Creation-Date: 2026-04-09 00:46+0000\n"
 "PO-Revision-Date: 2025-06-24 17:11+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -363,7 +363,7 @@ msgctxt "@label Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "Uusi!"
 
-#: KickoffGridDelegate.qml:60
+#: KickoffGridDelegate.qml:61
 #, fuzzy, kde-format
 #| msgid "Newly installed application"
 msgctxt "@label Accessible name for badge"
@@ -377,23 +377,21 @@ msgctxt "@info:whatsthis Accessible description"
 msgid "Grid with %1 rows, %2 columns"
 msgstr "%1 rivin × %2 sarakkeen ruudukko"
 
-#: KickoffListDelegate.qml:117
+#: KickoffListDelegate.qml:119
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "Uusi!"
 
-#: KickoffListDelegate.qml:118
+#: KickoffListDelegate.qml:124
 #, fuzzy, kde-format
 #| msgid "There is a newly installed application in this category"
-msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly installed application in this category"
 msgstr "Tässä luokassa on vasta-asennettu sovellus"
 
-#: KickoffListDelegate.qml:119
+#: KickoffListDelegate.qml:125
 #, fuzzy, kde-format
 #| msgid "Newly installed application"
-msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly installed application"
 msgstr "Vasta-asennettu sovellus"
 
@@ -449,6 +447,12 @@ msgstr "Historia"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Usein käytetyt"
+
+#, fuzzy
+#~| msgid "Newly installed application"
+#~ msgctxt "@info:whatsthis Accessible description for badge"
+#~ msgid "Newly installed application"
+#~ msgstr "Vasta-asennettu sovellus"
 
 #~ msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 #~ msgid "Automatically disabled when in Touch Mode"

@@ -12,47 +12,35 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: KeyboardButton.qml:19
-#, fuzzy
-#| msgid "Keyboard Layout: %1"
 msgctxt "@action:button opens layout chooser %1 is current"
 msgid "Keyboard Layout: %1"
 msgstr "Rozloženie klávesnice: %1"
 
 #: Login.qml:86
-#, fuzzy
-#| msgid "Username"
 msgctxt "@info:placeholder in textfield"
 msgid "Username"
 msgstr "Používateľské meno"
 
 #: Login.qml:103
-#, fuzzy
-#| msgid "Password"
 msgctxt "@info:placeholder in textfield"
 msgid "Password"
 msgstr "Heslo"
 
 #: Login.qml:145
-#, fuzzy
-#| msgid "Log In"
 msgctxt "@action:button Accessible name"
 msgid "Log in"
 msgstr "Prihlásiť sa"
 
 #: Login.qml:151
-#, fuzzy
-#| msgid "Log In"
 msgctxt "@action:button"
 msgid "Log In"
 msgstr "Prihlásiť sa"
 
 #: Main.qml:200
-#, fuzzy
-#| msgid "Caps Lock is on"
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "Funkcia Caps Lock je zapnutá"
@@ -60,48 +48,34 @@ msgstr "Funkcia Caps Lock je zapnutá"
 #: Main.qml:212
 msgctxt "Suspend to disk"
 msgid "Hibernate"
-msgstr ""
+msgstr "Hibernovať"
 
 #: Main.qml:218 Main.qml:357
-#, fuzzy
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
 msgctxt "@action:button Suspend to RAM"
 msgid "Sleep"
 msgstr "Uspať"
 
 #: Main.qml:224 Main.qml:363
-#, fuzzy
-#| msgid "Restart"
 msgctxt "@action:button"
 msgid "Restart"
 msgstr "Reštart"
 
 #: Main.qml:230 Main.qml:369
-#, fuzzy
-#| msgid "Shut Down"
 msgctxt "@action:button"
 msgid "Shut Down"
 msgstr "Vypnúť"
 
 #: Main.qml:236
-#, fuzzy
-#| msgctxt "For switching to a username and password prompt"
-#| msgid "Other…"
 msgctxt "@action:button For switching to a username and password prompt"
 msgid "Other…"
-msgstr "Iný…"
+msgstr "Iné…"
 
 #: Main.qml:343
-#, fuzzy
-#| msgid "Type in Username and Password"
 msgctxt "@info:usagetip"
 msgid "Type in Username and Password"
 msgstr "Zadajte používateľské meno a heslo"
 
 #: Main.qml:375
-#, fuzzy
-#| msgid "List Users"
 msgctxt "@action:button"
 msgid "List Users"
 msgstr "Zoznam používateľov"
@@ -112,15 +86,11 @@ msgid "Virtual Keyboard"
 msgstr "Virtuálna klávesnica"
 
 #: Main.qml:516
-#, fuzzy
-#| msgid "Login Failed"
 msgctxt "@info:status"
 msgid "Login Failed"
 msgstr "Prihlásenie zlyhalo"
 
 #: SessionButton.qml:18
-#, fuzzy
-#| msgid "Desktop Session: %1"
 msgctxt "@action:button opens sessions menu %1 is current"
 msgid "Desktop Session: %1"
 msgstr "Sedenie plochy: %1"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-08 00:48+0000\n"
-"PO-Revision-Date: 2026-01-08 09:46+0100\n"
+"PO-Revision-Date: 2026-04-09 00:09+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:46
 #, kde-format
@@ -53,7 +53,7 @@ msgstr "Impossibile leggere la configurazione predefinita del touchpad"
 #: kcm.cpp:69
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "Impossibile selezionare il motore appropriato"
 
 #: kcm.cpp:126
 #, kde-format
@@ -65,10 +65,9 @@ msgstr ""
 "informazioni. Riavviare questo modulo di configurazione."
 
 #: kcm.cpp:129
-#, fuzzy, kde-format
-#| msgid "No touchpad found. Connect touchpad now."
+#, kde-format
 msgid "No pointer device found. Connect now."
-msgstr "Nessun touchpad trovato. Collegare ora il touchpad."
+msgstr "Nessun dispositivo di puntamento trovato. Connettilo adesso."
 
 #: kcm.cpp:138
 #, kde-format
@@ -98,17 +97,15 @@ msgstr ""
 "riavviare questo modulo di configurazione."
 
 #: kcm.cpp:185
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. Closed its setting dialog."
+#, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr ""
-"Touchpad disconnesso. La sua finestra delle impostazioni è stata chiusa."
+msgstr "Dispositivo di puntamento disconnesso; chiudi la sua finestra."
 
 #: kcm.cpp:187
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. No other touchpads found."
+#, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr "Touchpad disconnesso. Nessun altro touchpad trovato."
+msgstr ""
+"Dispositivo di puntamento disconnesso; nessun altro dispositivo trovato."
 
 #: ui/main.qml:69
 #, kde-format

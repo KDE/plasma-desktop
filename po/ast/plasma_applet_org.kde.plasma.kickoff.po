@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-05 00:46+0000\n"
+"POT-Creation-Date: 2026-04-09 00:46+0000\n"
 "PO-Revision-Date: 2024-03-16 23:09+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Assamese <alministradores@softastur.org>\n"
@@ -346,7 +346,7 @@ msgctxt "@label Newly installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: KickoffGridDelegate.qml:60
+#: KickoffGridDelegate.qml:61
 #, fuzzy, kde-format
 #| msgid "Show other applications:"
 msgctxt "@label Accessible name for badge"
@@ -359,23 +359,21 @@ msgctxt "@info:whatsthis Accessible description"
 msgid "Grid with %1 rows, %2 columns"
 msgstr ""
 
-#: KickoffListDelegate.qml:117
+#: KickoffListDelegate.qml:119
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: KickoffListDelegate.qml:118
+#: KickoffListDelegate.qml:124
 #, fuzzy, kde-format
 #| msgid "Show other applications:"
-msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly installed application in this category"
 msgstr "Amosar otres aplicaciones:"
 
-#: KickoffListDelegate.qml:119
+#: KickoffListDelegate.qml:125
 #, fuzzy, kde-format
 #| msgid "Show other applications:"
-msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly installed application"
 msgstr "Amosar otres aplicaciones:"
 
@@ -428,6 +426,12 @@ msgstr "Historial"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "D'usu frecuente"
+
+#, fuzzy
+#~| msgid "Show other applications:"
+#~ msgctxt "@info:whatsthis Accessible description for badge"
+#~ msgid "Newly installed application"
+#~ msgstr "Amosar otres aplicaciones:"
 
 #~ msgctxt "Part of a sentence: 'Show other applications in a grid'"
 #~ msgid "In a grid"
