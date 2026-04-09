@@ -62,11 +62,25 @@ BasePage {
                 // I have to do this for it to actually fill the item for some reason
                 anchors.fill: parent
                 active: false
-                hovered: sideBarDelegate.mouseArea.containsMouse || (flashFavoriteAnimation.running && sideBarDelegate.index === 0)
+                hovered: sideBarDelegate.mouseArea.containsMouse || (flashFavoriteAnimation.running && sideBarDelegate.index === 0) || ((dropAreaLoader.item as DropArea)?.containsDrag ?? false)
                 visible: !Plasmoid.configuration.switchCategoryOnHover
                     && !sideBarDelegate.isSeparator && !sideBarDelegate.ListView.isCurrentItem
                     && hovered
                 opacity: flashFavoriteAnimation.running && sideBarDelegate.index === 0 ? root.flashFavorite : 1
+            }
+
+            Loader {
+                id: dropAreaLoader
+                anchors.fill: parent
+                active: sideBarDelegate.index === 0 && !sideBarDelegate.ListView.isCurrentItem
+                sourceComponent: DropArea {
+                    onDropped: event => {
+                        let draggedItem = kickoff.dragSource.sourceItem as AbstractKickoffItemDelegate
+                        if (draggedItem && !kickoff.rootModel.favoritesModel.isFavorite(draggedItem.model.favoriteId)) {
+                            kickoff.rootModel.favoritesModel.addFavorite(draggedItem.model.favoriteId, sideBar.model.favoritesModel.count);
+                        }
+                    }
+                }
             }
         }
     }
