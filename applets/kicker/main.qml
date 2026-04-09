@@ -101,6 +101,7 @@ PlasmoidItem {
         showTopLevelItems: !kicker.isDash
         showRecentApps: Plasmoid.configuration.showRecentApps
         showRecentDocs: Plasmoid.configuration.showRecentDocs
+        showRecentFolders: Plasmoid.configuration.showRecentFolders
         recentOrdering: Plasmoid.configuration.recentOrdering
 
         onShowRecentAppsChanged: {

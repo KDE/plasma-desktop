@@ -73,7 +73,7 @@ ItemAbstractDelegate {
 
             animated: false
             selected: item.iconAndLabelsShouldlookSelected
-            source: item.icon.name
+            source: item.model.decoration
         }
 
         PlasmaComponents3.Label {

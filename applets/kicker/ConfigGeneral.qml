@@ -33,6 +33,7 @@ KCMUtils.SimpleKCM {
     property alias cfg_recentOrdering: recentOrdering.currentIndex
     property alias cfg_showRecentApps: showRecentApps.checked
     property alias cfg_showRecentDocs: showRecentDocs.checked
+    property alias cfg_showRecentFolders: showRecentFolders.checked
 
     property alias cfg_highlightNewlyInstalledApps: highlightNewlyInstalledAppsCheckbox.checked
     property alias cfg_useExtraRunners: useExtraRunners.checked
@@ -217,6 +218,14 @@ KCMUtils.SimpleKCM {
             text: recentOrdering.currentIndex == 0
                     ? i18nc("@option:check", "Recent files")
                     : i18nc("@option:check", "Often used files")
+        }
+
+        QQC2.CheckBox {
+            id: showRecentFolders
+
+            text: recentOrdering.currentIndex == 0
+                    ? i18nc("@option:check", "Recent places")
+                    : i18nc("@option:check", "Often used places")
         }
 
         QQC2.ComboBox {

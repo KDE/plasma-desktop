@@ -79,7 +79,7 @@ ItemAbstractDelegate {
 
             animated: false
 
-            source: item.decoration
+            source: item.model.decoration
 
             Loader {
                 anchors {
