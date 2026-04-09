@@ -116,13 +116,13 @@ AbstractKickoffItemDelegate {
             active: root.model?.isNewlyInstalled ?? false
 
             sourceComponent: Kirigami.Badge {
-                text: root.isCategoryListItem ? "" : i18nc("Newly installed app, badge, keep short", "New!")
+                text: root.isCategoryListItem ? "" : i18nc("Newly-installed app, badge, keep short", "New!")
 
                 type: Kirigami.Badge.Type.Positive
 
                 Accessible.description: root.isCategoryListItem
-                    ? i18n("There is a newly installed application in this category")
-                    : i18n("Newly installed application")
+                    ? i18n("There is a newly-installed application in this category")
+                    : i18n("Newly-installed application")
             }
         }
     }

@@ -184,7 +184,7 @@ KCM.SimpleKCM {
 
         QQC2.CheckBox {
             id: highlightNewlyInstalledAppsCheckbox
-            text: i18nc("@option:check", "Highlight newly installed applications") // qmllint disable unqualified
+            text: i18nc("@option:check", "Highlight newly-installed applications") // qmllint disable unqualified
         }
 
         QQC2.CheckBox {

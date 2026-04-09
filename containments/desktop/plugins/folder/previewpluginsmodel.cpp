@@ -113,7 +113,7 @@ QStringList PreviewPluginsModel::checkedPlugins() const
 
     // If the list of checked plugins is the default set, return an empty list
     // which denotes the default set.
-    // This ensures newly installed thumbnails are always automatically enabled.
+    // This ensures newly-installed thumbnails are always automatically enabled.
     if (std::is_permutation(list.constBegin(), list.constEnd(), defaultPlugins.begin())) {
         return QStringList();
     }

@@ -193,7 +193,7 @@ Item {
 
                 type: (running && delegate.GridView.isCurrentItem) ? Kirigami.Badge.Type.Information : Kirigami.Badge.Type.Positive
 
-                text: (running && delegate.GridView.isCurrentItem) ? running : i18ndc("plasma_shell_org.kde.plasma.desktop", "Text displayed on top of newly installed widgets", "New!")
+                text: (running && delegate.GridView.isCurrentItem) ? running : i18ndc("plasma_shell_org.kde.plasma.desktop", "Text displayed on top of newly-installed widgets", "New!")
                 Accessible.name: running
                     ? i18ncp("@info:other accessible for badge showing applet count", "%1 widget active", "%1 widgets active", running)
                     : i18nc(" @info:other accessible for badge indicating new widget", "Recently installed")
