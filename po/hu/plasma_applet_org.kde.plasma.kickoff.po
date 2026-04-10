@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-09 00:46+0000\n"
+"POT-Creation-Date: 2026-04-10 00:53+0000\n"
 "PO-Revision-Date: 2026-03-12 21:40+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -186,9 +186,11 @@ msgid "Use compact list item style"
 msgstr "Kompakt listaelemstílus használata"
 
 #: ConfigGeneral.qml:187
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Highlight newly installed applications"
 msgctxt "@option:check"
-msgid "Highlight newly installed applications"
+msgid "Highlight newly-installed applications"
 msgstr "Újonnan telepített alkalmazások kiemelése"
 
 #: ConfigGeneral.qml:192
@@ -326,15 +328,19 @@ msgid "Keep Open"
 msgstr "Tartsa nyitva"
 
 #: KickoffGridDelegate.qml:59
-#, kde-format
-msgctxt "@label Newly installed app, badge, keep short"
+#, fuzzy, kde-format
+#| msgctxt "@label Newly installed app, badge, keep short"
+#| msgid "New!"
+msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Új!"
 
 #: KickoffGridDelegate.qml:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label Accessible name for badge"
+#| msgid "Newly installed application"
 msgctxt "@label Accessible name for badge"
-msgid "Newly installed application"
+msgid "Newly-installed application"
 msgstr "Frissen telepített alkalmazás"
 
 #: KickoffGridView.qml:105
@@ -344,8 +350,10 @@ msgid "Grid with %1 rows, %2 columns"
 msgstr "Rács %1 sorral és %2 oszloppal"
 
 #: KickoffListDelegate.qml:119
-#, kde-format
-msgctxt "Newly installed app, badge, keep short"
+#, fuzzy, kde-format
+#| msgctxt "@label Newly installed app, badge, keep short"
+#| msgid "New!"
+msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Új!"
 
@@ -353,14 +361,14 @@ msgstr "Új!"
 #, fuzzy, kde-format
 #| msgctxt "@info:whatsthis Accessible description for badge"
 #| msgid "There is a newly installed application in this category"
-msgid "There is a newly installed application in this category"
+msgid "There is a newly-installed application in this category"
 msgstr "Van egy újonnan telepített alkalmazás ebben a kategóriában"
 
 #: KickoffListDelegate.qml:125
 #, fuzzy, kde-format
 #| msgctxt "@label Accessible name for badge"
 #| msgid "Newly installed application"
-msgid "Newly installed application"
+msgid "Newly-installed application"
 msgstr "Frissen telepített alkalmazás"
 
 #: LeaveButtons.qml:171
@@ -410,6 +418,10 @@ msgstr "Előzmények"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Gyakran használt"
+
+#~ msgctxt "Newly installed app, badge, keep short"
+#~ msgid "New!"
+#~ msgstr "Új!"
 
 #~ msgctxt "@info:whatsthis Accessible description for badge"
 #~ msgid "Newly installed application"

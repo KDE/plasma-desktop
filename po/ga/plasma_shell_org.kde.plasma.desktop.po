@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-09 00:46+0000\n"
+"POT-Creation-Date: 2026-04-10 00:53+0000\n"
 "PO-Revision-Date: 2026-01-21 14:35+0000\n"
 "Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
 "Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
@@ -774,8 +774,10 @@ msgid "Unsupported Widget"
 msgstr "Giuirléid Gan Tacaíocht"
 
 #: contents/explorer/AppletDelegate.qml:196
-#, kde-format
-msgctxt "Text displayed on top of newly installed widgets"
+#, fuzzy, kde-format
+#| msgctxt "Text displayed on top of newly installed widgets"
+#| msgid "New!"
+msgctxt "Text displayed on top of newly-installed widgets"
 msgid "New!"
 msgstr "Nua!"
 

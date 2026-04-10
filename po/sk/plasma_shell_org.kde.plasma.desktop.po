@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-09 00:46+0000\n"
+"POT-Creation-Date: 2026-04-10 00:53+0000\n"
 "PO-Revision-Date: 2025-05-30 20:38+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -530,7 +530,7 @@ msgstr "Priehľadnosť"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The current Plasma style does not support opacity options."
-msgstr ""
+msgstr "Aktuálny štýl Plasma nepodporuje možnosti priehľadnosti."
 
 #: contents/configuration/PanelConfiguration.qml:480
 #, kde-format
@@ -769,8 +769,10 @@ msgid "Unsupported Widget"
 msgstr "Nepodporovaný widget"
 
 #: contents/explorer/AppletDelegate.qml:196
-#, kde-format
-msgctxt "Text displayed on top of newly installed widgets"
+#, fuzzy, kde-format
+#| msgctxt "Text displayed on top of newly installed widgets"
+#| msgid "New!"
+msgctxt "Text displayed on top of newly-installed widgets"
 msgid "New!"
 msgstr "Nové!"
 

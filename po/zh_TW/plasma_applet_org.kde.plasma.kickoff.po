@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-09 00:46+0000\n"
+"POT-Creation-Date: 2026-04-10 00:53+0000\n"
 "PO-Revision-Date: 2026-01-08 23:55+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -183,9 +183,11 @@ msgid "Use compact list item style"
 msgstr "使用簡潔列表項目風格"
 
 #: ConfigGeneral.qml:187
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Highlight newly installed applications"
 msgctxt "@option:check"
-msgid "Highlight newly installed applications"
+msgid "Highlight newly-installed applications"
 msgstr "突顯新安裝的應用程式"
 
 #: ConfigGeneral.qml:192
@@ -325,15 +327,19 @@ msgstr "保持開啟"
 # 徽章寫「新的！」好像怪怪的。
 # --Kisaragi
 #: KickoffGridDelegate.qml:59
-#, kde-format
-msgctxt "@label Newly installed app, badge, keep short"
+#, fuzzy, kde-format
+#| msgctxt "@label Newly installed app, badge, keep short"
+#| msgid "New!"
+msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "New!"
 
 #: KickoffGridDelegate.qml:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label Accessible name for badge"
+#| msgid "Newly installed application"
 msgctxt "@label Accessible name for badge"
-msgid "Newly installed application"
+msgid "Newly-installed application"
 msgstr "新安裝的應用程式"
 
 #: KickoffGridView.qml:105
@@ -345,8 +351,10 @@ msgstr "%1 行 %2 列的圖示網格"
 # 徽章寫「新的！」好像怪怪的。
 # --Kisaragi
 #: KickoffListDelegate.qml:119
-#, kde-format
-msgctxt "Newly installed app, badge, keep short"
+#, fuzzy, kde-format
+#| msgctxt "@label Newly installed app, badge, keep short"
+#| msgid "New!"
+msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "New!"
 
@@ -354,14 +362,14 @@ msgstr "New!"
 #, fuzzy, kde-format
 #| msgctxt "@info:whatsthis Accessible description for badge"
 #| msgid "There is a newly installed application in this category"
-msgid "There is a newly installed application in this category"
+msgid "There is a newly-installed application in this category"
 msgstr "這個分類中有新安裝的應用程式"
 
 #: KickoffListDelegate.qml:125
 #, fuzzy, kde-format
 #| msgctxt "@label Accessible name for badge"
 #| msgid "Newly installed application"
-msgid "Newly installed application"
+msgid "Newly-installed application"
 msgstr "新安裝的應用程式"
 
 #: LeaveButtons.qml:171
@@ -411,6 +419,12 @@ msgstr "歷史紀錄"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "經常使用"
+
+# 徽章寫「新的！」好像怪怪的。
+# --Kisaragi
+#~ msgctxt "Newly installed app, badge, keep short"
+#~ msgid "New!"
+#~ msgstr "New!"
 
 #~ msgctxt "@info:whatsthis Accessible description for badge"
 #~ msgid "Newly installed application"

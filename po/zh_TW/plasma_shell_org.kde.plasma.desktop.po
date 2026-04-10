@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-09 00:46+0000\n"
+"POT-Creation-Date: 2026-04-10 00:53+0000\n"
 "PO-Revision-Date: 2026-04-08 23:41+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -770,8 +770,10 @@ msgstr "不支援的元件"
 # 這種時候 (badge for new stuff) 感覺好像通常會直接看到寫 "new!"
 # --Kisaragi
 #: contents/explorer/AppletDelegate.qml:196
-#, kde-format
-msgctxt "Text displayed on top of newly installed widgets"
+#, fuzzy, kde-format
+#| msgctxt "Text displayed on top of newly installed widgets"
+#| msgid "New!"
+msgctxt "Text displayed on top of newly-installed widgets"
 msgid "New!"
 msgstr "New!"
 

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-09 00:46+0000\n"
-"PO-Revision-Date: 2026-01-08 18:37+0100\n"
+"POT-Creation-Date: 2026-04-10 00:53+0000\n"
+"PO-Revision-Date: 2026-04-09 06:58+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: LUGOS\n"
 "Language: sl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: code/tools.js:32
 #, kde-format
@@ -187,9 +187,11 @@ msgid "Use compact list item style"
 msgstr "Uporabi slog kompaktnega seznama"
 
 #: ConfigGeneral.qml:187
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Highlight newly installed applications"
 msgctxt "@option:check"
-msgid "Highlight newly installed applications"
+msgid "Highlight newly-installed applications"
 msgstr "Označi novo nameščene aplikacije"
 
 #: ConfigGeneral.qml:192
@@ -328,15 +330,19 @@ msgid "Keep Open"
 msgstr "Ohranjaj odprte"
 
 #: KickoffGridDelegate.qml:59
-#, kde-format
-msgctxt "@label Newly installed app, badge, keep short"
+#, fuzzy, kde-format
+#| msgctxt "@label Newly installed app, badge, keep short"
+#| msgid "New!"
+msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Nova!"
 
 #: KickoffGridDelegate.qml:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label Accessible name for badge"
+#| msgid "Newly installed application"
 msgctxt "@label Accessible name for badge"
-msgid "Newly installed application"
+msgid "Newly-installed application"
 msgstr "Novo nameščena aplikacija"
 
 #: KickoffGridView.qml:105
@@ -346,24 +352,24 @@ msgid "Grid with %1 rows, %2 columns"
 msgstr "Mreža z %1 vrsticami %2 stolpci"
 
 #: KickoffListDelegate.qml:119
-#, kde-format
-msgctxt "Newly installed app, badge, keep short"
+#, fuzzy, kde-format
+#| msgctxt "@label Newly installed app, badge, keep short"
+#| msgid "New!"
+msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Nova!"
 
 #: KickoffListDelegate.qml:124
 #, fuzzy, kde-format
-#| msgctxt "@info:whatsthis Accessible description for badge"
 #| msgid "There is a newly installed application in this category"
-msgid "There is a newly installed application in this category"
+msgid "There is a newly-installed application in this category"
 msgstr "V tej kategoriji je na novo nameščena aplikacija"
 
 #: KickoffListDelegate.qml:125
 #, fuzzy, kde-format
-#| msgctxt "@label Accessible name for badge"
 #| msgid "Newly installed application"
-msgid "Newly installed application"
-msgstr "Novo nameščena aplikacija"
+msgid "Newly-installed application"
+msgstr "Na novo nameščena aplikacija"
 
 #: LeaveButtons.qml:171
 #, kde-format
@@ -412,6 +418,10 @@ msgstr "Zgodovina"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Pogosto uporabljeno"
+
+#~ msgctxt "Newly installed app, badge, keep short"
+#~ msgid "New!"
+#~ msgstr "Nova!"
 
 #~ msgctxt "@info:whatsthis Accessible description for badge"
 #~ msgid "Newly installed application"

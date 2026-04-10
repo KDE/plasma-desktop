@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-09 00:46+0000\n"
-"PO-Revision-Date: 2026-01-08 05:41+0100\n"
+"POT-Creation-Date: 2026-04-10 00:53+0000\n"
+"PO-Revision-Date: 2026-04-09 06:17+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: code/tools.js:32
 #, kde-format
@@ -184,9 +184,11 @@ msgid "Use compact list item style"
 msgstr "ელემენტის კომპაქტური ჩამონათვალის სტილის გამოყენება"
 
 #: ConfigGeneral.qml:187
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Highlight newly installed applications"
 msgctxt "@option:check"
-msgid "Highlight newly installed applications"
+msgid "Highlight newly-installed applications"
 msgstr "ახლად დაყენებული აპლიკაციების გამოკვეთა"
 
 #: ConfigGeneral.qml:192
@@ -325,15 +327,19 @@ msgid "Keep Open"
 msgstr "ღიად დატოვება"
 
 #: KickoffGridDelegate.qml:59
-#, kde-format
-msgctxt "@label Newly installed app, badge, keep short"
+#, fuzzy, kde-format
+#| msgctxt "@label Newly installed app, badge, keep short"
+#| msgid "New!"
+msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "ახალი!"
 
 #: KickoffGridDelegate.qml:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label Accessible name for badge"
+#| msgid "Newly installed application"
 msgctxt "@label Accessible name for badge"
-msgid "Newly installed application"
+msgid "Newly-installed application"
 msgstr "ახლად დაყენებული აპლიკაცია"
 
 #: KickoffGridView.qml:105
@@ -343,23 +349,23 @@ msgid "Grid with %1 rows, %2 columns"
 msgstr "ბადე %1 მწკრივით და %2 სვეტით"
 
 #: KickoffListDelegate.qml:119
-#, kde-format
-msgctxt "Newly installed app, badge, keep short"
+#, fuzzy, kde-format
+#| msgctxt "@label Newly installed app, badge, keep short"
+#| msgid "New!"
+msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "ახალი!"
 
 #: KickoffListDelegate.qml:124
 #, fuzzy, kde-format
-#| msgctxt "@info:whatsthis Accessible description for badge"
 #| msgid "There is a newly installed application in this category"
-msgid "There is a newly installed application in this category"
-msgstr "ამ კატეგორიაში ახლად დაყენებული აპლიკაციები არაა"
+msgid "There is a newly-installed application in this category"
+msgstr "ამ კატეგორიაში არსებობს ახლახან დაყენებული აპლიკაცია"
 
 #: KickoffListDelegate.qml:125
 #, fuzzy, kde-format
-#| msgctxt "@label Accessible name for badge"
 #| msgid "Newly installed application"
-msgid "Newly installed application"
+msgid "Newly-installed application"
 msgstr "ახლად დაყენებული აპლიკაცია"
 
 #: LeaveButtons.qml:171
@@ -409,6 +415,10 @@ msgstr "ისტორია"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "ხშირად გამოყენებული"
+
+#~ msgctxt "Newly installed app, badge, keep short"
+#~ msgid "New!"
+#~ msgstr "ახალი!"
 
 #~ msgctxt "@info:whatsthis Accessible description for badge"
 #~ msgid "Newly installed application"

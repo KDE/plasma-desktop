@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-09 00:46+0000\n"
+"POT-Creation-Date: 2026-04-10 00:53+0000\n"
 "PO-Revision-Date: 2026-02-16 11:11+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -49,159 +49,167 @@ msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Almennt"
 
-#: ConfigGeneral.qml:48
+#: ConfigGeneral.qml:49
 #, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Táknmynd:"
 
-#: ConfigGeneral.qml:133
+#: ConfigGeneral.qml:134
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Velja…"
 
-#: ConfigGeneral.qml:138
+#: ConfigGeneral.qml:139
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Hreinsa tákn"
 
-#: ConfigGeneral.qml:159
+#: ConfigGeneral.qml:160
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Sýna forrit sem:"
 
-#: ConfigGeneral.qml:161
+#: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Einungis heiti"
 
-#: ConfigGeneral.qml:161
+#: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Einungis lýsing"
 
-#: ConfigGeneral.qml:162
+#: ConfigGeneral.qml:163
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Heiti (lýsing)"
 
-#: ConfigGeneral.qml:162
+#: ConfigGeneral.qml:163
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Lýsing (heiti)"
 
-#: ConfigGeneral.qml:172
+#: ConfigGeneral.qml:173
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
 msgstr "Hegðun:"
 
-#: ConfigGeneral.qml:174
+#: ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Raða forritum í stafrófsröð"
 
-#: ConfigGeneral.qml:182
+#: ConfigGeneral.qml:183
 #, kde-format
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
 msgstr "Fletja undirvalmyndir í flata valmynd"
 
-#: ConfigGeneral.qml:190
+#: ConfigGeneral.qml:191
 #, kde-format
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
 msgstr "Sýna tákn í rót valmyndarinnar"
 
-#: ConfigGeneral.qml:200
+#: ConfigGeneral.qml:197
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Often used applications"
+msgctxt "@option:check"
+msgid "Highlight newly-installed applications"
+msgstr "Oft notuð forrit"
+
+#: ConfigGeneral.qml:207
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
 msgstr "Sýna flokka:"
 
-#: ConfigGeneral.qml:203
+#: ConfigGeneral.qml:210
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent applications"
 msgstr "Nýleg forrit"
 
-#: ConfigGeneral.qml:204
+#: ConfigGeneral.qml:211
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used applications"
 msgstr "Oft notuð forrit"
 
-#: ConfigGeneral.qml:211
+#: ConfigGeneral.qml:218
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent files"
 msgstr "Nýlegar skrár"
 
-#: ConfigGeneral.qml:212
+#: ConfigGeneral.qml:219
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used files"
 msgstr "Oft notaðar skrár"
 
-#: ConfigGeneral.qml:218
+#: ConfigGeneral.qml:225
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
 msgstr "Raða atriðum í flokka eftir:"
 
-#: ConfigGeneral.qml:219
+#: ConfigGeneral.qml:226
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Nýlega notað"
 
-#: ConfigGeneral.qml:219
+#: ConfigGeneral.qml:226
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Often used"
 msgstr "Oft notað"
 
-#: ConfigGeneral.qml:229
+#: ConfigGeneral.qml:236
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
 msgstr "Leita:"
 
-#: ConfigGeneral.qml:231
+#: ConfigGeneral.qml:238
 #, kde-format
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Víkka út leit til bókamerkja, skráa og tölvupósts"
 
-#: ConfigGeneral.qml:239
+#: ConfigGeneral.qml:246
 #, kde-format
 msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr "Jafna leitarniðurstöður neðst"
 
-#: ConfigGeneral.qml:244
+#: ConfigGeneral.qml:251
 #, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
 msgstr "Útlit:"
 
-#: ConfigGeneral.qml:249
+#: ConfigGeneral.qml:256
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
 msgstr "Kjósa helst dökkan ham þegar það er í boði"
 
-#: ConfigGeneral.qml:253
+#: ConfigGeneral.qml:260
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -211,25 +219,59 @@ msgstr ""
 "Þessi eiginleiki notar gagnstæða liti úr litastefinu þínu, sem venjulega "
 "ættu að nota dökkan bakgrunn."
 
-#: DashboardRepresentation.qml:373
+#: DashboardRepresentation.qml:369
 #, kde-format
 msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "Eftirlæti"
 
-#: ItemListDelegate.qml:31
+#: DashboardRepresentation.qml:895 ItemListDelegate.qml:101
+#, kde-format
+msgctxt "Newly-installed app, badge, keep short"
+msgid "New!"
+msgstr ""
+
+#: DashboardRepresentation.qml:896 ItemListDelegate.qml:102
+#, kde-format
+msgctxt "@info:whatsthis Accessible description for badge"
+msgid "There is a newly-installed application in this category"
+msgstr ""
+
+#: ItemGridDelegate.qml:86
+#, kde-format
+msgctxt "@label Newly-installed app, badge, keep short"
+msgid "New!"
+msgstr ""
+
+#: ItemGridDelegate.qml:88
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Often used applications"
+msgctxt "@label Accessible name for badge"
+msgid "Newly-installed application"
+msgstr "Oft notuð forrit"
+
+#: ItemListDelegate.qml:34
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
 msgstr "Opna flokk"
 
-#: ItemListDelegate.qml:32
+#: ItemListDelegate.qml:35
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
 msgstr "Keyra"
 
-#: main.qml:206
+#: ItemListDelegate.qml:103
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Often used applications"
+msgctxt "@info:whatsthis Accessible description for badge"
+msgid "Newly-installed application"
+msgstr "Oft notuð forrit"
+
+#: main.qml:207
 #, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
@@ -241,7 +283,7 @@ msgctxt "@title:group accessible name for favorite group in sidebar"
 msgid "Favorites"
 msgstr "Eftirlæti"
 
-#: MenuRepresentation.qml:356
+#: MenuRepresentation.qml:358
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"

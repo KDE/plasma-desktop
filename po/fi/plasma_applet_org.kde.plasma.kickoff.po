@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-09 00:46+0000\n"
+"POT-Creation-Date: 2026-04-10 00:53+0000\n"
 "PO-Revision-Date: 2025-06-24 17:11+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -194,7 +194,7 @@ msgstr "Käytä tiivistä luetelmatyyliä"
 #, fuzzy, kde-format
 #| msgid "Highlight newly installed applications"
 msgctxt "@option:check"
-msgid "Highlight newly installed applications"
+msgid "Highlight newly-installed applications"
 msgstr "Korosta vasta-asennetut sovellukset"
 
 #: ConfigGeneral.qml:192
@@ -359,7 +359,7 @@ msgstr "Pidä avoinna"
 #, fuzzy, kde-format
 #| msgctxt "Newly installed app, badge, keep short"
 #| msgid "New!"
-msgctxt "@label Newly installed app, badge, keep short"
+msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Uusi!"
 
@@ -367,7 +367,7 @@ msgstr "Uusi!"
 #, fuzzy, kde-format
 #| msgid "Newly installed application"
 msgctxt "@label Accessible name for badge"
-msgid "Newly installed application"
+msgid "Newly-installed application"
 msgstr "Vasta-asennettu sovellus"
 
 #: KickoffGridView.qml:105
@@ -378,21 +378,23 @@ msgid "Grid with %1 rows, %2 columns"
 msgstr "%1 rivin × %2 sarakkeen ruudukko"
 
 #: KickoffListDelegate.qml:119
-#, kde-format
-msgctxt "Newly installed app, badge, keep short"
+#, fuzzy, kde-format
+#| msgctxt "Newly installed app, badge, keep short"
+#| msgid "New!"
+msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Uusi!"
 
 #: KickoffListDelegate.qml:124
 #, fuzzy, kde-format
 #| msgid "There is a newly installed application in this category"
-msgid "There is a newly installed application in this category"
+msgid "There is a newly-installed application in this category"
 msgstr "Tässä luokassa on vasta-asennettu sovellus"
 
 #: KickoffListDelegate.qml:125
 #, fuzzy, kde-format
 #| msgid "Newly installed application"
-msgid "Newly installed application"
+msgid "Newly-installed application"
 msgstr "Vasta-asennettu sovellus"
 
 #: LeaveButtons.qml:171
@@ -447,6 +449,10 @@ msgstr "Historia"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Usein käytetyt"
+
+#~ msgctxt "Newly installed app, badge, keep short"
+#~ msgid "New!"
+#~ msgstr "Uusi!"
 
 #, fuzzy
 #~| msgid "Newly installed application"

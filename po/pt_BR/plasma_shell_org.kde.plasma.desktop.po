@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-09 00:46+0000\n"
+"POT-Creation-Date: 2026-04-10 00:53+0000\n"
 "PO-Revision-Date: 2026-03-17 08:11-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -777,8 +777,10 @@ msgid "Unsupported Widget"
 msgstr "Widget sem suporte"
 
 #: contents/explorer/AppletDelegate.qml:196
-#, kde-format
-msgctxt "Text displayed on top of newly installed widgets"
+#, fuzzy, kde-format
+#| msgctxt "Text displayed on top of newly installed widgets"
+#| msgid "New!"
+msgctxt "Text displayed on top of newly-installed widgets"
 msgid "New!"
 msgstr "Novo!"
 

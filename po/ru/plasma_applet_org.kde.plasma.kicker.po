@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-09 00:46+0000\n"
+"POT-Creation-Date: 2026-04-10 00:53+0000\n"
 "PO-Revision-Date: 2026-01-20 19:47+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -51,160 +51,167 @@ msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Основное"
 
-#: ConfigGeneral.qml:48
+#: ConfigGeneral.qml:49
 #, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Значок:"
 
-#: ConfigGeneral.qml:133
+#: ConfigGeneral.qml:134
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Выбрать..."
 
-#: ConfigGeneral.qml:138
+#: ConfigGeneral.qml:139
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Вернуть стандартный значок"
 
-#: ConfigGeneral.qml:159
+#: ConfigGeneral.qml:160
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Формат именования программ:"
 
-#: ConfigGeneral.qml:161
+#: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Только названия"
 
-#: ConfigGeneral.qml:161
+#: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Только описания"
 
-#: ConfigGeneral.qml:162
+#: ConfigGeneral.qml:163
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Название (Описание)"
 
-#: ConfigGeneral.qml:162
+#: ConfigGeneral.qml:163
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Описание (Название)"
 
-#: ConfigGeneral.qml:172
+#: ConfigGeneral.qml:173
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
 msgstr "Поведение:"
 
-#: ConfigGeneral.qml:174
+#: ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Сортировать приложения по алфавиту"
 
-#: ConfigGeneral.qml:182
+#: ConfigGeneral.qml:183
 #, kde-format
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
 msgstr "Упростить вложенные меню до одного уровня"
 
-#: ConfigGeneral.qml:190
+#: ConfigGeneral.qml:191
 #, kde-format
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
 msgstr "Показывать значки объектов верхнего уровня"
 
-#: ConfigGeneral.qml:200
+#: ConfigGeneral.qml:197
+#, fuzzy, kde-format
+#| msgid "All Installed Applications"
+msgctxt "@option:check"
+msgid "Highlight newly-installed applications"
+msgstr "Все установленные приложения"
+
+#: ConfigGeneral.qml:207
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
 msgstr "Показывать категории:"
 
-#: ConfigGeneral.qml:203
+#: ConfigGeneral.qml:210
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent applications"
 msgstr "Последние приложения"
 
-#: ConfigGeneral.qml:204
+#: ConfigGeneral.qml:211
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used applications"
 msgstr "Часто используемые приложения"
 
-#: ConfigGeneral.qml:211
+#: ConfigGeneral.qml:218
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent files"
 msgstr "Последние файлы"
 
-#: ConfigGeneral.qml:212
+#: ConfigGeneral.qml:219
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used files"
 msgstr "Часто используемые файлы"
 
-#: ConfigGeneral.qml:218
+#: ConfigGeneral.qml:225
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
 msgstr "Сортировка объектов:"
 
 # BUGME: where is this visible in UI? --aspotashev
-#: ConfigGeneral.qml:219
+#: ConfigGeneral.qml:226
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "По времени последнего использования"
 
-#: ConfigGeneral.qml:219
+#: ConfigGeneral.qml:226
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Often used"
 msgstr "По частоте использования"
 
-#: ConfigGeneral.qml:229
+#: ConfigGeneral.qml:236
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
 msgstr "Поиск:"
 
-#: ConfigGeneral.qml:231
+#: ConfigGeneral.qml:238
 #, kde-format
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Искать также среди закладок, файлов и электронной почты"
 
-#: ConfigGeneral.qml:239
+#: ConfigGeneral.qml:246
 #, kde-format
 msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr "Расположить результаты поиска внизу"
 
-#: ConfigGeneral.qml:244
+#: ConfigGeneral.qml:251
 #, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
 msgstr "Внешний вид:"
 
-#: ConfigGeneral.qml:249
+#: ConfigGeneral.qml:256
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
 msgstr "Предпочитать тёмный режим, когда он доступен"
 
-#: ConfigGeneral.qml:253
+#: ConfigGeneral.qml:260
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -214,25 +221,58 @@ msgstr ""
 "Эта функция использует дополнительные цвета из цветовой схемы, которые "
 "обычно предполагают использование тёмного фона."
 
-#: DashboardRepresentation.qml:373
+#: DashboardRepresentation.qml:369
 #, kde-format
 msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "Избранное"
 
-#: ItemListDelegate.qml:31
+#: DashboardRepresentation.qml:895 ItemListDelegate.qml:101
+#, kde-format
+msgctxt "Newly-installed app, badge, keep short"
+msgid "New!"
+msgstr ""
+
+#: DashboardRepresentation.qml:896 ItemListDelegate.qml:102
+#, fuzzy, kde-format
+#| msgid "Browse installed applications by categories"
+msgctxt "@info:whatsthis Accessible description for badge"
+msgid "There is a newly-installed application in this category"
+msgstr "Просмотр установленных приложений по категориям"
+
+#: ItemGridDelegate.qml:86
+#, kde-format
+msgctxt "@label Newly-installed app, badge, keep short"
+msgid "New!"
+msgstr ""
+
+#: ItemGridDelegate.qml:88
+#, fuzzy, kde-format
+#| msgid "All Installed Applications"
+msgctxt "@label Accessible name for badge"
+msgid "Newly-installed application"
+msgstr "Все установленные приложения"
+
+#: ItemListDelegate.qml:34
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
 msgstr "Открыть категорю"
 
-#: ItemListDelegate.qml:32
+#: ItemListDelegate.qml:35
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
 msgstr "Запустить"
 
-#: main.qml:206
+#: ItemListDelegate.qml:103
+#, fuzzy, kde-format
+#| msgid "All Installed Applications"
+msgctxt "@info:whatsthis Accessible description for badge"
+msgid "Newly-installed application"
+msgstr "Все установленные приложения"
+
+#: main.qml:207
 #, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
@@ -244,7 +284,7 @@ msgctxt "@title:group accessible name for favorite group in sidebar"
 msgid "Favorites"
 msgstr "Избранное"
 
-#: MenuRepresentation.qml:356
+#: MenuRepresentation.qml:358
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
@@ -524,12 +564,6 @@ msgstr "Совпадений не найдено"
 
 #~ msgid "Runner: %1"
 #~ msgstr "Модуль KRunner: %1"
-
-#~ msgid "Browse installed applications by categories"
-#~ msgstr "Просмотр установленных приложений по категориям"
-
-#~ msgid "All Installed Applications"
-#~ msgstr "Все установленные приложения"
 
 #~ msgid ""
 #~ "List all installed applications in a flat list, grouped by categories"

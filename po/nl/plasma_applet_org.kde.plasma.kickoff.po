@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-09 00:46+0000\n"
-"PO-Revision-Date: 2026-01-08 17:59+0100\n"
+"POT-Creation-Date: 2026-04-10 00:53+0000\n"
+"PO-Revision-Date: 2026-04-09 14:55+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: code/tools.js:32
 #, kde-format
@@ -185,9 +185,11 @@ msgid "Use compact list item style"
 msgstr "Compacte stijl voor lijst gebruiken"
 
 #: ConfigGeneral.qml:187
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Highlight newly installed applications"
 msgctxt "@option:check"
-msgid "Highlight newly installed applications"
+msgid "Highlight newly-installed applications"
 msgstr "Accentueer nieuw geïnstalleerde toepassingen"
 
 #: ConfigGeneral.qml:192
@@ -325,15 +327,19 @@ msgid "Keep Open"
 msgstr "Open houden"
 
 #: KickoffGridDelegate.qml:59
-#, kde-format
-msgctxt "@label Newly installed app, badge, keep short"
+#, fuzzy, kde-format
+#| msgctxt "@label Newly installed app, badge, keep short"
+#| msgid "New!"
+msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Nieuw!"
 
 #: KickoffGridDelegate.qml:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label Accessible name for badge"
+#| msgid "Newly installed application"
 msgctxt "@label Accessible name for badge"
-msgid "Newly installed application"
+msgid "Newly-installed application"
 msgstr "Nieuw geïnstalleerde toepassing"
 
 #: KickoffGridView.qml:105
@@ -343,23 +349,23 @@ msgid "Grid with %1 rows, %2 columns"
 msgstr "Raster met %1 rijen, %2 kolommen"
 
 #: KickoffListDelegate.qml:119
-#, kde-format
-msgctxt "Newly installed app, badge, keep short"
+#, fuzzy, kde-format
+#| msgctxt "@label Newly installed app, badge, keep short"
+#| msgid "New!"
+msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Nieuw!"
 
 #: KickoffListDelegate.qml:124
 #, fuzzy, kde-format
-#| msgctxt "@info:whatsthis Accessible description for badge"
 #| msgid "There is a newly installed application in this category"
-msgid "There is a newly installed application in this category"
+msgid "There is a newly-installed application in this category"
 msgstr "Er is een nieuw geïnstalleerde toepassing in deze categorie"
 
 #: KickoffListDelegate.qml:125
 #, fuzzy, kde-format
-#| msgctxt "@label Accessible name for badge"
 #| msgid "Newly installed application"
-msgid "Newly installed application"
+msgid "Newly-installed application"
 msgstr "Nieuw geïnstalleerde toepassing"
 
 #: LeaveButtons.qml:171
@@ -409,6 +415,10 @@ msgstr "Geschiedenis"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Veel gebruikt"
+
+#~ msgctxt "Newly installed app, badge, keep short"
+#~ msgid "New!"
+#~ msgstr "Nieuw!"
 
 #~ msgctxt "@info:whatsthis Accessible description for badge"
 #~ msgid "Newly installed application"

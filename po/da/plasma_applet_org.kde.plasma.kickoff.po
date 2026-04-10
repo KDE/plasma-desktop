@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-09 00:46+0000\n"
+"POT-Creation-Date: 2026-04-10 00:53+0000\n"
 "PO-Revision-Date: 2025-11-04 22:03+0100\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -195,7 +195,7 @@ msgstr "Brug kompakt stil for listeelementer"
 #, fuzzy, kde-format
 #| msgid "Highlight newly installed applications"
 msgctxt "@option:check"
-msgid "Highlight newly installed applications"
+msgid "Highlight newly-installed applications"
 msgstr "Fremhæv nyligt installerede programmer"
 
 #: ConfigGeneral.qml:192
@@ -359,7 +359,7 @@ msgstr "Hold åben"
 #, fuzzy, kde-format
 #| msgctxt "Newly installed app, badge, keep short"
 #| msgid "New!"
-msgctxt "@label Newly installed app, badge, keep short"
+msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Ny!"
 
@@ -367,7 +367,7 @@ msgstr "Ny!"
 #, fuzzy, kde-format
 #| msgid "Newly installed application"
 msgctxt "@label Accessible name for badge"
-msgid "Newly installed application"
+msgid "Newly-installed application"
 msgstr "Nyligt installerede programmer"
 
 #: KickoffGridView.qml:105
@@ -378,21 +378,23 @@ msgid "Grid with %1 rows, %2 columns"
 msgstr "Gitter med %1 rækker, %2 kolonner"
 
 #: KickoffListDelegate.qml:119
-#, kde-format
-msgctxt "Newly installed app, badge, keep short"
+#, fuzzy, kde-format
+#| msgctxt "Newly installed app, badge, keep short"
+#| msgid "New!"
+msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Ny!"
 
 #: KickoffListDelegate.qml:124
 #, fuzzy, kde-format
 #| msgid "There is a newly installed application in this category"
-msgid "There is a newly installed application in this category"
+msgid "There is a newly-installed application in this category"
 msgstr "Der er et nyligt installeret program i denne kategori"
 
 #: KickoffListDelegate.qml:125
 #, fuzzy, kde-format
 #| msgid "Newly installed application"
-msgid "Newly installed application"
+msgid "Newly-installed application"
 msgstr "Nyligt installerede programmer"
 
 #: LeaveButtons.qml:171
@@ -447,6 +449,10 @@ msgstr "Historik"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Hyppigt anvendt"
+
+#~ msgctxt "Newly installed app, badge, keep short"
+#~ msgid "New!"
+#~ msgstr "Ny!"
 
 #, fuzzy
 #~| msgid "Newly installed application"
