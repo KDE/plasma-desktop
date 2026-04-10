@@ -114,7 +114,8 @@ PlasmaComponents3.ScrollView {
         KSvg.FrameSvgItem {
             id: sideBar
 
-            property bool onTopPanel: Plasmoid.location === PlasmaCore.Types.TopEdge
+            readonly property real innerMargin: 2
+            readonly property bool onTopPanel: Plasmoid.location === PlasmaCore.Types.TopEdge
 
             visible: (root.globalFavorites.count + root.systemFavorites.count) > 0
 
@@ -157,11 +158,16 @@ PlasmaComponents3.ScrollView {
             PlasmaComponents3.ScrollView {
                 id: sideBarScrollView
 
-                anchors.fill: parent
+                anchors {
+                    fill: parent
+                    topMargin: sideBar.innerMargin
+                    bottomMargin: sideBar.innerMargin
+                }
 
                 PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
                 PlasmaComponents3.ScrollBar.vertical.visible: Screen.height > 0 && sideBarScrollView.contentHeight > Math.round(Screen.height * 0.9)
                 contentWidth: availableWidth
+                contentHeight: Math.max(sideBarLayout.implicitHeight + sideBarLayout.anchors.topMargin + sideBarLayout.anchors.bottomMargin, sideBar.height - 2 * sideBar.innerMargin)
 
                 function ensureVisible(item: Item) {
                     let flickable = (contentItem as Flickable)
@@ -179,13 +185,13 @@ PlasmaComponents3.ScrollView {
 
                 ColumnLayout {
                     id: sideBarLayout
-                    height: Math.max(implicitHeight, sideBarScrollView.height - anchors.topMargin - anchors.bottomMargin)
-                    anchors.top: parent.top
-                    anchors.left: parent.left
-                    anchors.right: parent.right
-                    anchors.topMargin: sideBar.margins.top
-                    anchors.leftMargin: sideBar.margins.left
-                    anchors.rightMargin: sideBar.margins.right
+                    anchors {
+                        fill: parent
+                        topMargin: sideBar.margins.top - sideBar.innerMargin
+                        leftMargin: sideBar.margins.left
+                        rightMargin: sideBar.margins.right
+                        bottomMargin: sideBar.margins.bottom - sideBar.innerMargin
+                    }
 
                     Accessible.role: Accessible.List
                     Accessible.name: i18nc("@title:group accessible name for favorite group in sidebar", "Favorites")
@@ -212,7 +218,6 @@ PlasmaComponents3.ScrollView {
                     }
                     LayoutItemProxy {
                         target: sideBar.onTopPanel ? favoriteApps : favoriteSystemActions
-                        Layout.bottomMargin: sideBar.margins.bottom
                     }
 
                     SideBarSection {
