@@ -39,7 +39,7 @@ PlasmaComponents3.ScrollView {
 
     contentWidth: mainRow.implicitWidth
 
-    Layout.minimumHeight: Math.min(Math.max(sideBar.implicitHeight, rootList.implicitHeight + rootList.Layout.bottomMargin), Math.round(Screen.height * 0.8)) + topPadding + bottomPadding
+    Layout.minimumHeight: Math.min(Math.max(sideBar.implicitHeight, rootList.implicitHeight + rootList.Layout.bottomMargin), Math.round(Screen.height * 0.9)) + topPadding + bottomPadding
     Layout.maximumHeight: Layout.minimumHeight
 
     function ensureVisible(item: Item) : void {
@@ -146,7 +146,7 @@ PlasmaComponents3.ScrollView {
                 anchors.fill: parent
 
                 PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
-                PlasmaComponents3.ScrollBar.vertical.visible: sideBarScrollView.contentHeight > Math.round(Screen.height * 0.8)
+                PlasmaComponents3.ScrollBar.vertical.visible: sideBarScrollView.contentHeight > Math.round(Screen.height * 0.9)
                 contentWidth: availableWidth
 
                 function ensureVisible(item: Item) {
