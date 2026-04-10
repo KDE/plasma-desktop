@@ -1,29 +1,23 @@
+# SPDX-FileCopyrightText: 2026 James Graham <james.h.graham@protonmail.com>
+# SPDX-License-Identifier: BSD-2-Clause
+
 # KI18N Translation Domain for this library
-add_definitions(-DTRANSLATION_DOMAIN=\"kcmkclock\")
-########### next target ###############
+add_definitions(-DTRANSLATION_DOMAIN=\"kcmclock\")
 
-set(kcm_clock_PART_SRCS dtime.cpp main.cpp)
+kcmutils_add_qml_kcm(kcm_clock
+    SOURCES
+        dateandtime.cpp
+        dateandtime.h
+        message.h
+)
 
-ki18n_wrap_ui(kcm_clock_PART_SRCS dateandtime.ui)
+qt_add_dbus_interface(kcm_clock_DBUS_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/timedated1.xml timedated_interface)
+target_sources(kcm_clock PRIVATE ${kcm_clock_DBUS_SRCS})
 
-qt_add_dbus_interface(kcm_clock_PART_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/timedated1.xml timedated_interface)
-
-add_library(kcm_clock MODULE ${kcm_clock_PART_SRCS})
-kcmutils_generate_desktop_file(kcm_clock)
-
-add_subdirectory( ui )
-
-target_link_libraries(kcm_clock
+target_link_libraries(kcm_clock PRIVATE
     Qt::DBus
     Qt::Quick
-    Qt::QuickWidgets
-    KF6::ItemViews
-    KF6::GuiAddons
+    KF6::CoreAddons
     KF6::KCMUtils
     KF6::I18n
-    KF6::I18nLocaleData
-    KF6::KIOCore
-    KF6::KIOWidgets
-    KF6::Svg
 )
-install(TARGETS kcm_clock  DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets )
