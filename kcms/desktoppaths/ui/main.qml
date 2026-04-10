@@ -34,7 +34,8 @@ KCM.SimpleKCM {
                                                               pictures.implicitTextFieldWidth,
                                                               music.implicitTextFieldWidth,
                                                               publicPath.implicitTextFieldWidth,
-                                                              templates.implicitTextFieldWidth))
+                                                              templates.implicitTextFieldWidth,
+                                                              projects.implicitTextFieldWidth))
 
     // Need to get the width of a standard button since UrlRequester includes one,
     // so we can subtract it from the available width for the text field.Otherwise
@@ -156,6 +157,20 @@ KCM.SimpleKCM {
             Accessible.description: i18nc("@info:tooltip and accessible description", "This folder will be used by default to open or save file templates.")
 
             onNewLocationSelected: (newLocation) => kcm.settings.templatesLocation = newLocation
+        }
+
+        UrlRequester {
+            id: projects
+
+            Kirigami.FormData.label: i18nc("@label:textbox", "Projects folder:")
+
+            textFieldWidth: root.commonFieldWidth
+
+            location: kcm.settings.projectsLocation
+            defaultLocation: kcm.settings.defaultProjectsLocation
+            Accessible.description: i18nc("@info:tooltip and accessible description", "This folder will be used by default to open or save projects.")
+
+            onNewLocationSelected: (newLocation) => kcm.settings.projectsLocation = newLocation
         }
     }
 }

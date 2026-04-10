@@ -38,6 +38,9 @@ class DesktopPathsSettings : public KCoreConfigSkeleton
     Q_PROPERTY(QUrl templatesLocation READ templatesLocation WRITE setTemplatesLocation NOTIFY templatesLocationChanged)
     Q_PROPERTY(QUrl defaultTemplatesLocation READ defaultTemplatesLocation CONSTANT)
 
+    Q_PROPERTY(QUrl projectsLocation READ projectsLocation WRITE setProjectsLocation NOTIFY projectsLocationChanged)
+    Q_PROPERTY(QUrl defaultProjectsLocation READ defaultProjectsLocation CONSTANT)
+
 public:
     DesktopPathsSettings(QObject *parent = nullptr);
 
@@ -73,6 +76,10 @@ public:
     void setTemplatesLocation(const QUrl &url);
     QUrl defaultTemplatesLocation() const;
 
+    QUrl projectsLocation() const;
+    void setProjectsLocation(const QUrl &url);
+    QUrl defaultProjectsLocation() const;
+
 Q_SIGNALS:
     void desktopLocationChanged();
     void documentsLocationChanged();
@@ -82,6 +89,7 @@ Q_SIGNALS:
     void videosLocationChanged();
     void publicLocationChanged();
     void templatesLocationChanged();
+    void projectsLocationChanged();
 
 private:
     void addItemInternal(const QByteArray &propertyName, const QVariant &defaultValue, const std::function<void()> &signal);

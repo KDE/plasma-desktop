@@ -32,6 +32,7 @@ class XdgPathsSettingsStore : public QObject
     Q_PROPERTY(QUrl videosLocation READ videosLocation WRITE setVideosLocation)
     Q_PROPERTY(QUrl publicLocation READ publicLocation WRITE setPublicLocation)
     Q_PROPERTY(QUrl templatesLocation READ templatesLocation WRITE setTemplatesLocation)
+    Q_PROPERTY(QUrl projectsLocation READ projectsLocation WRITE setProjectsLocation)
 public:
     explicit XdgPathsSettingsStore(DesktopPathsSettings *parent = nullptr)
         : QObject(parent)
@@ -119,6 +120,16 @@ public:
         writeUrl(QStringLiteral("XDG_TEMPLATES_DIR"), url);
     }
 
+    QUrl projectsLocation() const
+    {
+        return readUrl(QStringLiteral("XDG_PROJECTS_DIR"), m_settings->defaultProjectsLocation());
+    }
+
+    void setProjectsLocation(const QUrl &url)
+    {
+        writeUrl(QStringLiteral("XDG_PROJECTS_DIR"), url);
+    }
+
 private:
     QUrl readUrl(const QString &key, const QUrl &defaultValue) const
     {
@@ -185,6 +196,9 @@ DesktopPathsSettings::DesktopPathsSettings(QObject *parent)
     });
     addItemInternal("templatesLocation", defaultTemplatesLocation(), [this] {
         Q_EMIT templatesLocationChanged();
+    });
+    addItemInternal("projectsLocation", defaultProjectsLocation(), [this] {
+        Q_EMIT projectsLocationChanged();
     });
 }
 
@@ -321,6 +335,22 @@ QUrl DesktopPathsSettings::defaultTemplatesLocation() const
 {
     const char *templates = "Templates";
     return QUrl::fromLocalFile(QDir::homePath() + QDir::separator() + i18nd("xdg-user-dirs", templates));
+}
+
+QUrl DesktopPathsSettings::projectsLocation() const
+{
+    return findItem("projectsLocation")->property().toUrl();
+}
+
+void DesktopPathsSettings::setProjectsLocation(const QUrl &url)
+{
+    findItem("projectsLocation")->setProperty(url);
+}
+
+QUrl DesktopPathsSettings::defaultProjectsLocation() const
+{
+    const char *projects = "Projects";
+    return QUrl::fromLocalFile(QDir::homePath() + QDir::separator() + i18nd("xdg-user-dirs", projects));
 }
 
 #include "desktoppathssettings.moc"
