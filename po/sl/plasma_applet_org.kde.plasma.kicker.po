@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-10 00:53+0000\n"
-"PO-Revision-Date: 2026-01-08 18:25+0100\n"
+"POT-Creation-Date: 2026-04-11 00:48+0000\n"
+"PO-Revision-Date: 2026-04-10 06:39+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: code/tools.js:53
 #, kde-format
@@ -124,12 +124,10 @@ msgid "Show icons on the root level of the menu"
 msgstr "Prikaži ikone na korenski ravni menija"
 
 #: ConfigGeneral.qml:197
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
-msgstr "Pogosto uporabljene aplikacije"
+msgstr "Osvetli novo nameščene aplikacije"
 
 #: ConfigGeneral.qml:207
 #, kde-format
@@ -227,51 +225,47 @@ msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "Priljubljene"
 
-#: DashboardRepresentation.qml:895 ItemListDelegate.qml:101
+#: DashboardRepresentation.qml:895 ItemListDelegate.qml:106
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Novo!"
 
-#: DashboardRepresentation.qml:896 ItemListDelegate.qml:102
+#: DashboardRepresentation.qml:896 ItemListDelegate.qml:107
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
-msgstr ""
+msgstr "V tej kategoriji je na novo nameščena aplikacija."
 
 #: ItemGridDelegate.qml:86
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Novo!"
 
 #: ItemGridDelegate.qml:88
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
-msgstr "Pogosto uporabljene aplikacije"
+msgstr "Novo nameščena aplikacija"
 
-#: ItemListDelegate.qml:34
+#: ItemListDelegate.qml:39
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
 msgstr "Odpri kategorijo"
 
-#: ItemListDelegate.qml:35
+#: ItemListDelegate.qml:40
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
 msgstr "Zaženi"
 
-#: ItemListDelegate.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#: ItemListDelegate.qml:108
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
-msgstr "Pogosto uporabljene aplikacije"
+msgstr "Novo nameščena aplikacija"
 
 #: main.qml:207
 #, kde-format

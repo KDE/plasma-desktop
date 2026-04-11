@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.homerun\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-10 00:53+0000\n"
+"POT-Creation-Date: 2026-04-11 00:48+0000\n"
 "PO-Revision-Date: 2026-01-08 09:21+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -223,13 +223,13 @@ msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "Preferiti"
 
-#: DashboardRepresentation.qml:895 ItemListDelegate.qml:101
+#: DashboardRepresentation.qml:895 ItemListDelegate.qml:106
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: DashboardRepresentation.qml:896 ItemListDelegate.qml:102
+#: DashboardRepresentation.qml:896 ItemListDelegate.qml:107
 #, fuzzy, kde-format
 #| msgid "Browse installed applications by categories"
 msgctxt "@info:whatsthis Accessible description for badge"
@@ -249,19 +249,19 @@ msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
 msgstr "Tutte le applicazioni installate"
 
-#: ItemListDelegate.qml:34
+#: ItemListDelegate.qml:39
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
 msgstr "Apri la categoria"
 
-#: ItemListDelegate.qml:35
+#: ItemListDelegate.qml:40
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
 msgstr "Esegui"
 
-#: ItemListDelegate.qml:103
+#: ItemListDelegate.qml:108
 #, fuzzy, kde-format
 #| msgid "All Installed Applications"
 msgctxt "@info:whatsthis Accessible description for badge"

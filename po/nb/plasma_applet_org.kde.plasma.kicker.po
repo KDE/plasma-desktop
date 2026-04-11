@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-10 00:53+0000\n"
+"POT-Creation-Date: 2026-04-11 00:48+0000\n"
 "PO-Revision-Date: 2026-03-03 12:08+0100\n"
 "Last-Translator: Kjetil Sorlund <translate@sorlund.no>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -227,13 +227,13 @@ msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "Favoritter"
 
-#: DashboardRepresentation.qml:895 ItemListDelegate.qml:101
+#: DashboardRepresentation.qml:895 ItemListDelegate.qml:106
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: DashboardRepresentation.qml:896 ItemListDelegate.qml:102
+#: DashboardRepresentation.qml:896 ItemListDelegate.qml:107
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
@@ -253,19 +253,19 @@ msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
 msgstr "Ofte brukte programmer"
 
-#: ItemListDelegate.qml:34
+#: ItemListDelegate.qml:39
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
 msgstr "Åpne kategori"
 
-#: ItemListDelegate.qml:35
+#: ItemListDelegate.qml:40
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
 msgstr "Start"
 
-#: ItemListDelegate.qml:103
+#: ItemListDelegate.qml:108
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Often used applications"

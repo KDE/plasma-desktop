@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-08 00:48+0000\n"
-"PO-Revision-Date: 2026-04-02 09:41+0200\n"
+"PO-Revision-Date: 2026-04-09 12:04+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -301,21 +301,16 @@ msgid "Enable Tablet Mode:"
 msgstr "Activer le mode « Tablette » :"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio As in: 'Tablet Mode is automatically enabled as needed'"
-#| msgid "Automatically enable as needed"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Activer automatiquement lorsque nécessaire"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgctxt "option:radio As in: 'Tablet Mode is never enabled'"
-#| msgid "Never enabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
-msgstr "Toujours désactivé"
+msgstr "Jamais activé"
 
 #: ui/main.qml:365
 #, kde-format

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-10 00:53+0000\n"
-"PO-Revision-Date: 2025-05-30 20:37+0200\n"
+"PO-Revision-Date: 2026-04-10 12:00+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -186,12 +186,10 @@ msgid "Use compact list item style"
 msgstr "Použiť štýl kompaktných položiek zoznamu"
 
 #: ConfigGeneral.qml:187
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Highlight newly installed applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
-msgstr "Zvýrazniť nové nainštalované aplikácie"
+msgstr "Zvýrazniť novo nainštalované aplikácie"
 
 #: ConfigGeneral.qml:192
 #, kde-format
@@ -328,20 +326,16 @@ msgid "Keep Open"
 msgstr "Ponechať otvorené"
 
 #: KickoffGridDelegate.qml:59
-#, fuzzy, kde-format
-#| msgctxt "@label Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Nové!"
 
 #: KickoffGridDelegate.qml:61
-#, fuzzy, kde-format
-#| msgctxt "@label Accessible name for badge"
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
-msgstr "Nová nainštalovaná aplikácia"
+msgstr "Novo nainštalovaná aplikácia"
 
 #: KickoffGridView.qml:105
 #, kde-format
@@ -350,24 +344,20 @@ msgid "Grid with %1 rows, %2 columns"
 msgstr "Mriežka s %1 riadkami, %2 stĺpcami"
 
 #: KickoffListDelegate.qml:119
-#, fuzzy, kde-format
-#| msgctxt "@label Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Nové!"
 
 #: KickoffListDelegate.qml:124
-#, fuzzy, kde-format
-#| msgid "There is a newly installed application in this category"
+#, kde-format
 msgid "There is a newly-installed application in this category"
-msgstr "V tejto kategórii je nová nainštalovaná aplikácia"
+msgstr "V tejto kategórii je novo nainštalovaná aplikácia"
 
 #: KickoffListDelegate.qml:125
-#, fuzzy, kde-format
-#| msgid "Newly installed application"
+#, kde-format
 msgid "Newly-installed application"
-msgstr "Nová nainštalovaná aplikácia"
+msgstr "Novo nainštalovaná aplikácia"
 
 #: LeaveButtons.qml:171
 #, kde-format

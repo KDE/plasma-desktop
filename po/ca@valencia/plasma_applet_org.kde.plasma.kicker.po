@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-10 00:53+0000\n"
-"PO-Revision-Date: 2026-01-08 10:46+0100\n"
+"POT-Creation-Date: 2026-04-11 00:48+0000\n"
+"PO-Revision-Date: 2026-04-10 09:21+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -126,12 +126,10 @@ msgid "Show icons on the root level of the menu"
 msgstr "Mostra les icones al nivell arrel del menú"
 
 #: ConfigGeneral.qml:197
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
-msgstr "Aplicacions utilitzades sovint"
+msgstr "Ressalta les aplicacions instal·lades noves"
 
 #: ConfigGeneral.qml:207
 #, kde-format
@@ -229,51 +227,47 @@ msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "Preferides"
 
-#: DashboardRepresentation.qml:895 ItemListDelegate.qml:101
+#: DashboardRepresentation.qml:895 ItemListDelegate.qml:106
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Nova!"
 
-#: DashboardRepresentation.qml:896 ItemListDelegate.qml:102
+#: DashboardRepresentation.qml:896 ItemListDelegate.qml:107
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
-msgstr ""
+msgstr "Hi ha un aplicació instal·lada nova en esta categoria"
 
 #: ItemGridDelegate.qml:86
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Nova!"
 
 #: ItemGridDelegate.qml:88
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
-msgstr "Aplicacions utilitzades sovint"
+msgstr "Aplicació instal·lada nova"
 
-#: ItemListDelegate.qml:34
+#: ItemListDelegate.qml:39
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
 msgstr "Obri una categoria"
 
-#: ItemListDelegate.qml:35
+#: ItemListDelegate.qml:40
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
 msgstr "Inicia"
 
-#: ItemListDelegate.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#: ItemListDelegate.qml:108
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
-msgstr "Aplicacions utilitzades sovint"
+msgstr "Aplicació instal·lada nova"
 
 #: main.qml:207
 #, kde-format

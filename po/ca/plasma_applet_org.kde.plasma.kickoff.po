@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-10 00:53+0000\n"
-"PO-Revision-Date: 2026-04-09 10:59+0200\n"
+"PO-Revision-Date: 2026-04-10 09:21+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -188,9 +188,7 @@ msgid "Use compact list item style"
 msgstr "Usa un estil compacte d'elements de llista"
 
 #: ConfigGeneral.qml:187
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Highlight newly installed applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "Ressalta les aplicacions instal·lades noves"
@@ -330,17 +328,13 @@ msgid "Keep Open"
 msgstr "Mantén oberta"
 
 #: KickoffGridDelegate.qml:59
-#, fuzzy, kde-format
-#| msgctxt "@label Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Nova!"
 
 #: KickoffGridDelegate.qml:61
-#, fuzzy, kde-format
-#| msgctxt "@label Accessible name for badge"
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
 msgstr "Aplicació instal·lada nova"
@@ -352,22 +346,18 @@ msgid "Grid with %1 rows, %2 columns"
 msgstr "Quadrícula amb %1 files, %2 columnes"
 
 #: KickoffListDelegate.qml:119
-#, fuzzy, kde-format
-#| msgctxt "@label Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Nova!"
 
 #: KickoffListDelegate.qml:124
-#, fuzzy, kde-format
-#| msgid "There is a newly installed application in this category"
+#, kde-format
 msgid "There is a newly-installed application in this category"
 msgstr "Hi ha un aplicació instal·lada nova en aquesta categoria"
 
 #: KickoffListDelegate.qml:125
-#, fuzzy, kde-format
-#| msgid "Newly installed application"
+#, kde-format
 msgid "Newly-installed application"
 msgstr "Aplicació instal·lada nova"
 

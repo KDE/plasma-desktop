@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-10 00:53+0000\n"
-"PO-Revision-Date: 2026-04-09 08:48+0300\n"
+"PO-Revision-Date: 2026-04-10 08:32+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -186,9 +186,7 @@ msgid "Use compact list item style"
 msgstr "Компактний стиль пунктів списку"
 
 #: ConfigGeneral.qml:187
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Highlight newly installed applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "Підсвічувати нововстановлені програми"
@@ -328,17 +326,13 @@ msgid "Keep Open"
 msgstr "Тримати відкритим"
 
 #: KickoffGridDelegate.qml:59
-#, fuzzy, kde-format
-#| msgctxt "@label Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr "Нове!"
+msgstr "Нова!"
 
 #: KickoffGridDelegate.qml:61
-#, fuzzy, kde-format
-#| msgctxt "@label Accessible name for badge"
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
 msgstr "Нововстановлена програма"
@@ -350,22 +344,18 @@ msgid "Grid with %1 rows, %2 columns"
 msgstr "Таблиця з %1 рядків, %2 стовпчиків"
 
 #: KickoffListDelegate.qml:119
-#, fuzzy, kde-format
-#| msgctxt "@label Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr "Нове!"
+msgstr "Нова!"
 
 #: KickoffListDelegate.qml:124
-#, fuzzy, kde-format
-#| msgid "There is a newly installed application in this category"
+#, kde-format
 msgid "There is a newly-installed application in this category"
 msgstr "У цій категорії є нововстановлена програма"
 
 #: KickoffListDelegate.qml:125
-#, fuzzy, kde-format
-#| msgid "Newly installed application"
+#, kde-format
 msgid "Newly-installed application"
 msgstr "Нововстановлена програма"
 
