@@ -10,6 +10,7 @@ import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.plasmoid
 import org.kde.plasma.private.kicker as Kicker
 
 Kicker.SubMenu {
@@ -25,6 +26,7 @@ Kicker.SubMenu {
     signal interactionConcluded
 
     visible: false
+    backgroundHints: Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentPrefersOpaqueBackground ? PlasmaCore.Dialog.SolidBackground : PlasmaCore.Dialog.StandardBackground
     location: PlasmaCore.Types.Floating
     offset: 0 // slightly overlap submenu to match QtWidgets menu behavior
     LayoutMirroring.enabled: dialogMirrored
