@@ -232,8 +232,9 @@ FocusScope {
 
                 Connections {
                     target: ActionMenu
+                    enabled: !!gridView.currentItem
                     function onClosed() {
-                        if (!gridView.currentItem.hovered) {
+                        if (!gridView.currentItem?.hovered) {
                             gridView.currentIndex = -1;
                         }
                     }
