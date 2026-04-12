@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-11 00:48+0000\n"
-"PO-Revision-Date: 2026-01-08 11:41+0400\n"
+"PO-Revision-Date: 2026-04-11 18:03+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -123,12 +123,10 @@ msgid "Show icons on the root level of the menu"
 msgstr "أظهر الأيقونات في المستوى الجذري للقائمة"
 
 #: ConfigGeneral.qml:197
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
-msgstr "التّطبيقات المستخدمة كثيرا"
+msgstr "أبرز التطبيقات المثبتة حديثًا"
 
 #: ConfigGeneral.qml:207
 #, kde-format
@@ -230,27 +228,25 @@ msgstr "المفضّلة"
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "جديد!"
 
 #: DashboardRepresentation.qml:896 ItemListDelegate.qml:107
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
-msgstr ""
+msgstr "يوجد تطبيق مثبت حديثًا في هذه الفئة"
 
 #: ItemGridDelegate.qml:86
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "جديد!"
 
 #: ItemGridDelegate.qml:88
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
-msgstr "التّطبيقات المستخدمة كثيرا"
+msgstr "تطبيق مثبتًا حديثًا"
 
 #: ItemListDelegate.qml:39
 #, kde-format
@@ -265,12 +261,10 @@ msgid "Launch"
 msgstr "شغّل"
 
 #: ItemListDelegate.qml:108
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
-msgstr "التّطبيقات المستخدمة كثيرا"
+msgstr "تطبيق مثبتًا حديثًا"
 
 #: main.qml:207
 #, kde-format

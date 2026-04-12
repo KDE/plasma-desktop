@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-08 00:48+0000\n"
-"PO-Revision-Date: 2026-04-04 19:33+0200\n"
+"PO-Revision-Date: 2026-04-11 09:36+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -97,11 +97,7 @@ msgid "Clicking in scrollbar track:"
 msgstr "Kliknięcie na szynie paska przewijania:"
 
 #: ui/main.qml:95
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
-#| "scrolls to the clicked location'"
-#| msgid "Scrolls to the clicked location"
+#, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
 "the clicked location'"
@@ -115,11 +111,7 @@ msgid "Middle-click to scroll to clicked location"
 msgstr "Kliknięcie środkowym przewija do naciśniętego miejsca"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
-#| "scrolls one page up or down'"
-#| msgid "Scrolls one page up or down"
+#, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
 "page up or down'"
@@ -130,7 +122,7 @@ msgstr "Przewija jedną stronę w górę lub dół"
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
-msgstr "Skłaniaj się ku płynnemu przewijaniu"
+msgstr "Staraj się przewijać płynnie"
 
 #: ui/main.qml:141
 #, kde-format
@@ -157,31 +149,31 @@ msgstr "Klikanie"
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
-msgstr "Kliknięcie na plik lub katalog:"
+msgstr "Kliknięcie na pliku lub katalogu:"
 
 #: ui/main.qml:154
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
-msgstr "Zaznacza je"
+msgstr "Zaznaczy go"
 
 #: ui/main.qml:155
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
-msgstr "Otwórz dwukrotnym kliknięciem"
+msgstr "Aby otworzyć, naciśnij na nim dwukrotnie"
 
 #: ui/main.qml:172
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
-msgstr "Otwiera je"
+msgstr "Otworzy go"
 
 #: ui/main.qml:173
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
-msgstr "Zaznacz, klikając na znaczniku zaznaczania elementu"
+msgstr "Aby zaznaczyć, naciśnij na znaczniku zaznaczania elementu"
 
 #: ui/main.qml:190
 #, kde-format
@@ -244,7 +236,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
-msgstr "Przeciągnij i upuść"
+msgstr "Przeciąganie i upuszczanie"
 
 #: ui/main.qml:311
 #, kde-format
@@ -297,21 +289,16 @@ msgid "Enable Tablet Mode:"
 msgstr "Włącz tryb tabletu:"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio As in: 'Tablet Mode is automatically enabled as needed'"
-#| msgid "Automatically enable as needed"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Włącz sam, gdy zajdzie potrzeba"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgctxt "option:radio As in: 'Tablet Mode is never enabled'"
-#| msgid "Never enabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
-msgstr "Zawsze wyłączony"
+msgstr "Zawsze wyłączone"
 
 #: ui/main.qml:365
 #, kde-format
