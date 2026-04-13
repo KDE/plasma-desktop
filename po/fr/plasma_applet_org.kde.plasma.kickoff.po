@@ -12,9 +12,9 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-10 00:53+0000\n"
-"PO-Revision-Date: 2026-01-09 19:00+0100\n"
+"PO-Revision-Date: 2026-04-11 07:53+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: \n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 "X-Text-Markup: kde4\n"
 
 #: code/tools.js:32
@@ -193,9 +193,7 @@ msgid "Use compact list item style"
 msgstr "Utiliser un style synthétique de liste pour les éléments"
 
 #: ConfigGeneral.qml:187
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Highlight newly installed applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "Mettre en évidence les applications nouvellement installées"
@@ -335,20 +333,16 @@ msgid "Keep Open"
 msgstr "Maintenir ouvert"
 
 #: KickoffGridDelegate.qml:59
-#, fuzzy, kde-format
-#| msgctxt "@label Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Nouveau !"
 
 #: KickoffGridDelegate.qml:61
-#, fuzzy, kde-format
-#| msgctxt "@label Accessible name for badge"
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
-msgstr "Applications récemment installées"
+msgstr "Application nouvellement installées"
 
 #: KickoffGridView.qml:105
 #, kde-format
@@ -357,26 +351,20 @@ msgid "Grid with %1 rows, %2 columns"
 msgstr "Grille avec %1 lignes et %2 colonnes"
 
 #: KickoffListDelegate.qml:119
-#, fuzzy, kde-format
-#| msgctxt "@label Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Nouveau !"
 
 #: KickoffListDelegate.qml:124
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis Accessible description for badge"
-#| msgid "There is a newly installed application in this category"
+#, kde-format
 msgid "There is a newly-installed application in this category"
 msgstr "Il y a une application nouvellement installée dans cette catégorie."
 
 #: KickoffListDelegate.qml:125
-#, fuzzy, kde-format
-#| msgctxt "@label Accessible name for badge"
-#| msgid "Newly installed application"
+#, kde-format
 msgid "Newly-installed application"
-msgstr "Applications récemment installées"
+msgstr "Applications nouvellement installées"
 
 #: LeaveButtons.qml:171
 #, kde-format

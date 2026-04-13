@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-10 00:53+0000\n"
-"PO-Revision-Date: 2026-01-31 20:40+0530\n"
+"PO-Revision-Date: 2026-04-12 18:18+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: code/tools.js:32
 #, kde-format
@@ -181,9 +181,7 @@ msgid "Use compact list item style"
 msgstr "சுருக்கமான காட்சிமுறையை பயன்படுத்து"
 
 #: ConfigGeneral.qml:187
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Highlight newly installed applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "புதியதாக நிறுவியுள்ள செயலிகளை முன்னிலைப்படுத்து"
@@ -323,17 +321,13 @@ msgid "Keep Open"
 msgstr "திறந்தே வைத்திரு"
 
 #: KickoffGridDelegate.qml:59
-#, fuzzy, kde-format
-#| msgctxt "@label Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "புதியது!"
 
 #: KickoffGridDelegate.qml:61
-#, fuzzy, kde-format
-#| msgctxt "@label Accessible name for badge"
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
 msgstr "புதியதாக நிறுவியுள்ள செயலி"
@@ -345,24 +339,18 @@ msgid "Grid with %1 rows, %2 columns"
 msgstr "%1 வரிசைகளும் %2 நெடுவரிசைகளும் கொண்ட கிரிட்"
 
 #: KickoffListDelegate.qml:119
-#, fuzzy, kde-format
-#| msgctxt "@label Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "புதியது!"
 
 #: KickoffListDelegate.qml:124
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis Accessible description for badge"
-#| msgid "There is a newly installed application in this category"
+#, kde-format
 msgid "There is a newly-installed application in this category"
 msgstr "இப்பகுப்பில் புதியதாக நிறுவியுள்ள செயலி உள்ளது"
 
 #: KickoffListDelegate.qml:125
-#, fuzzy, kde-format
-#| msgctxt "@label Accessible name for badge"
-#| msgid "Newly installed application"
+#, kde-format
 msgid "Newly-installed application"
 msgstr "புதியதாக நிறுவியுள்ள செயலி"
 

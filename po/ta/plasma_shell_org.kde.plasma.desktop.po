@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-10 00:53+0000\n"
-"PO-Revision-Date: 2026-01-31 21:11+0530\n"
+"PO-Revision-Date: 2026-04-12 18:18+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
@@ -528,7 +528,7 @@ msgstr "ஒளிபுகாமை"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The current Plasma style does not support opacity options."
-msgstr ""
+msgstr "தற்போதைய பிளாஸ்மா தோற்றத்திட்டம், ஒளிபுகாமையை மாற்றுவதை ஆதரிக்காது."
 
 #: contents/configuration/PanelConfiguration.qml:480
 #, kde-format
@@ -767,9 +767,7 @@ msgid "Unsupported Widget"
 msgstr "ஆதரிக்கப்படாத பிளாஸ்மாய்ட்"
 
 #: contents/explorer/AppletDelegate.qml:196
-#, fuzzy, kde-format
-#| msgctxt "Text displayed on top of newly installed widgets"
-#| msgid "New!"
+#, kde-format
 msgctxt "Text displayed on top of newly-installed widgets"
 msgid "New!"
 msgstr "புதியது!"

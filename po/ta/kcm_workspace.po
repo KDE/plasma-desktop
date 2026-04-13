@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-08 00:48+0000\n"
-"PO-Revision-Date: 2026-01-31 18:13+0530\n"
+"PO-Revision-Date: 2026-04-12 20:05+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -91,16 +91,12 @@ msgid "Clicking in scrollbar track:"
 msgstr "உருள் பட்டையில் கிளிக் செய்வது:"
 
 #: ui/main.qml:95
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
-#| "scrolls to the clicked location'"
-#| msgid "Scrolls to the clicked location"
+#, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
 "the clicked location'"
 msgid "Scrolls to the clicked location"
-msgstr "கிளிக் செய்த இடத்திற்கு செல்லும்"
+msgstr "கிளிக் செய்யும் இடத்திற்கு செல்லும்"
 
 #: ui/main.qml:109
 #, kde-format
@@ -109,11 +105,7 @@ msgid "Middle-click to scroll to clicked location"
 msgstr "கிளிக் செய்யும் இடத்திற்கு செல்ல நடு-கிளிக் செய்யவும்"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
-#| "scrolls one page up or down'"
-#| msgid "Scrolls one page up or down"
+#, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
 "page up or down'"
@@ -282,59 +274,43 @@ msgid "Touch"
 msgstr "தொடுவது"
 
 #: ui/main.qml:344
-#, fuzzy, kde-format
-#| msgctxt "@title:group prefix radiobutton group"
-#| msgid "Enable Touch Mode:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
-msgstr "தொடுதல் பயன்முறையை இயக்குவது:"
+msgstr "பலகைக்கணினி பயன்முறையை:"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
-#| msgid "Automatically enable as needed"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "தேவைக்கேற்ப தானாக இயக்கு"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgctxt "option:radio As in: 'Touch Mode is never enabled'"
-#| msgid "Never enabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "ஒருபோதும் இயக்காதே"
 
 #: ui/main.qml:365
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
-#| msgid ""
-#| "Touch Mode will be automatically activated whenever the system detects a "
-#| "touchscreen but no mouse or touchpad. For example: when a transformable "
-#| "laptop's keyboard is flipped around or detached."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Tablet Mode will be automatically activated whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
-"சுட்டியோ தொடுபலகையோ இல்லாமல் தொடுதிரை மட்டும் இருந்தால் தொடுதல் பயன்முறை தானாக "
+"சுட்டியோ தொடுபலகையோ இல்லாமல் தொடுதிரை மட்டும் இருந்தால் பலகைக்கணினி பயன்முறை தானாக "
 "இயக்கப்படும். எ.கா. வடிவம் மாறக்கூடிய மடிக்கணினியின் விசைப்பலகை கழற்றப்படும்போதோ "
 "மடிக்கப்படும்போதோ."
 
 #: ui/main.qml:371
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always active"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always active"
 msgstr "எப்போதும் இயக்கு"
 
 #: ui/main.qml:393
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is never enabled'"
-#| msgid "Disabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "முடக்கு"
@@ -343,7 +319,7 @@ msgstr "முடக்கு"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."
-msgstr ""
+msgstr "பலகைக்கணினி பயன்முறையில், மெய்நிகர் விசைப்பலகை தேவைக்கேற்ப காட்டப்படும்."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
