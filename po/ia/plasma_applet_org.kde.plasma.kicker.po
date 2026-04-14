@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-11 00:48+0000\n"
-"PO-Revision-Date: 2026-01-30 09:49+0100\n"
+"PO-Revision-Date: 2026-04-13 11:14+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: code/tools.js:53
 #, kde-format
@@ -121,12 +121,10 @@ msgid "Show icons on the root level of the menu"
 msgstr "Monstra icones sur le nivello radice del menu"
 
 #: ConfigGeneral.qml:197
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
-msgstr "Applicationes frequentemente usate"
+msgstr "Evidentia applicationes frequentemente usate"
 
 #: ConfigGeneral.qml:207
 #, kde-format
@@ -228,27 +226,25 @@ msgstr "Favoritos"
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Nove !"
 
 #: DashboardRepresentation.qml:896 ItemListDelegate.qml:107
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
-msgstr ""
+msgstr "Il ha un application installate recentemente in iste categoria"
 
 #: ItemGridDelegate.qml:86
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Nove !"
 
 #: ItemGridDelegate.qml:88
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
-msgstr "Applicationes frequentemente usate"
+msgstr "Applicationes installate recentemente"
 
 #: ItemListDelegate.qml:39
 #, kde-format
@@ -263,12 +259,10 @@ msgid "Launch"
 msgstr "Lancea"
 
 #: ItemListDelegate.qml:108
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
-msgstr "Applicationes frequentemente usate"
+msgstr "Applicationes installate recentemente"
 
 #: main.qml:207
 #, kde-format

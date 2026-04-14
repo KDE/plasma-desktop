@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-10 00:53+0000\n"
-"PO-Revision-Date: 2026-02-16 11:14+0000\n"
+"PO-Revision-Date: 2026-04-13 18:35+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -184,9 +184,7 @@ msgid "Use compact list item style"
 msgstr "Nota þéttan listastíl"
 
 #: ConfigGeneral.qml:187
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Highlight newly installed applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "Auðkenna nýlega uppsett forrit"
@@ -326,17 +324,13 @@ msgid "Keep Open"
 msgstr "Halda opnu"
 
 #: KickoffGridDelegate.qml:59
-#, fuzzy, kde-format
-#| msgctxt "@label Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Nýtt!"
 
 #: KickoffGridDelegate.qml:61
-#, fuzzy, kde-format
-#| msgctxt "@label Accessible name for badge"
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
 msgstr "Nýlega uppsett forrit"
@@ -348,24 +342,18 @@ msgid "Grid with %1 rows, %2 columns"
 msgstr "Reitir í %1 röðum, %2 dálkum"
 
 #: KickoffListDelegate.qml:119
-#, fuzzy, kde-format
-#| msgctxt "@label Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Nýtt!"
 
 #: KickoffListDelegate.qml:124
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis Accessible description for badge"
-#| msgid "There is a newly installed application in this category"
+#, kde-format
 msgid "There is a newly-installed application in this category"
-msgstr "Það eru nýlega uppsett forrit í þessum flokki"
+msgstr "Það er nýlega uppsett forrit í þessum flokki"
 
 #: KickoffListDelegate.qml:125
-#, fuzzy, kde-format
-#| msgctxt "@label Accessible name for badge"
-#| msgid "Newly installed application"
+#, kde-format
 msgid "Newly-installed application"
 msgstr "Nýlega uppsett forrit"
 
