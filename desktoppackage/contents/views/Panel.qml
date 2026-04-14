@@ -102,7 +102,7 @@ Item {
 
     TaskManager.TasksModel {
         id: visibleWindowsModel
-        filterByVirtualDesktop: true
+        filterByCurrentVirtualDesktop: true
         filterByActivity: true
         filterByScreen: false
         filterByRegion: TaskManager.RegionFilterMode.Intersect
@@ -110,7 +110,6 @@ Item {
         filterMinimized: true
 
         screenGeometry: panel.screenGeometry
-        virtualDesktop: virtualDesktopInfo.currentDesktop
         activity: activityInfo.currentActivity
 
         groupMode: TaskManager.TasksModel.GroupDisabled

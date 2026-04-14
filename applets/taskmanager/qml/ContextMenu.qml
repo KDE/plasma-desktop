@@ -322,10 +322,10 @@ PlasmaExtras.Menu {
                 let menuItem = menu.newMenuItem(virtualDesktopsMenu);
                 menuItem.text = i18nc("action:inmenu", "Move &To Current Desktop");
                 menuItem.enabled = Qt.binding(() => {
-                    return menu.visualParent && menu.get(TaskManager.AbstractTasksModel.VirtualDesktops).indexOf(virtualDesktopInfo.currentDesktop) === -1;
+                    return menu.visualParent && menu.get(TaskManager.AbstractTasksModel.VirtualDesktops).indexOf(virtualDesktopInfo.currentDesktopByScreenGeometry(menu.get(TaskManager.AbstractTasksModel.ScreenGeometry))) === -1;
                 });
                 menuItem.clicked.connect(() => {
-                    tasksModel.requestVirtualDesktops(menu.modelIndex, [virtualDesktopInfo.currentDesktop]);
+                    tasksModel.requestVirtualDesktops(menu.modelIndex, [virtualDesktopInfo.currentDesktopByScreenGeometry(menu.get(TaskManager.AbstractTasksModel.ScreenGeometry))]);
                 });
 
                 menuItem = menu.newMenuItem(virtualDesktopsMenu);

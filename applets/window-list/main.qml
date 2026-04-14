@@ -64,14 +64,13 @@ PlasmoidItem {
     TaskManager.TasksModel {
         id: tasksModel
 
-        virtualDesktop: virtualDesktopInfo.currentDesktop
         screenGeometry: Plasmoid.containment.screenGeometry
         activity: activityInfo.currentActivity
 
         sortMode: Plasmoid.configuration.sortingStrategy
         groupMode: TaskManager.TasksModel.GroupDisabled
 
-        filterByVirtualDesktop: Plasmoid.configuration.showOnlyCurrentDesktop
+        filterByCurrentVirtualDesktop: Plasmoid.configuration.showOnlyCurrentDesktop
         filterByScreen: Plasmoid.configuration.showOnlyCurrentScreen
         filterByActivity: Plasmoid.configuration.showOnlyCurrentActivity
         filterNotMinimized: Plasmoid.configuration.showOnlyMinimized

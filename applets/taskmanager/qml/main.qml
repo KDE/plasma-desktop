@@ -154,11 +154,10 @@ PlasmoidItem {
             return launcherCount + startupsWithLaunchers;
         }
 
-        virtualDesktop: virtualDesktopInfo.currentDesktop
         screenGeometry: Plasmoid.containment.screenGeometry
         activity: activityInfo.currentActivity
 
-        filterByVirtualDesktop: Plasmoid.configuration.showOnlyCurrentDesktop
+        filterByCurrentVirtualDesktop: Plasmoid.configuration.showOnlyCurrentDesktop
         filterByScreen: Plasmoid.configuration.showOnlyCurrentScreen
         filterByActivity: Plasmoid.configuration.showOnlyCurrentActivity
         filterNotMinimized: Plasmoid.configuration.showOnlyMinimized

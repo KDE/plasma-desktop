@@ -18,6 +18,8 @@ import org.kde.kirigami as Kirigami
 import plasma.applet.org.kde.plasma.taskmanager as TaskManagerApplet
 import org.kde.plasma.plasmoid
 
+import org.kde.taskmanager as TaskManager
+
 PlasmaCore.ToolTipArea {
     id: task
 
@@ -435,7 +437,7 @@ PlasmaCore.ToolTipArea {
                 } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleGrouping) {
                     tasksModel.requestToggleGrouping(modelIndex());
                 } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.BringToCurrentDesktop) {
-                    tasksModel.requestVirtualDesktops(modelIndex(), [virtualDesktopInfo.currentDesktop]);
+                    tasksModel.requestVirtualDesktops(modelIndex(), [virtualDesktopInfo.currentDesktopByScreenGeometry(tasksModel.data(modelIndex(), TaskManager.AbstractTasksModel.ScreenGeometry))]);
                 }
             } else if (button === Qt.BackButton || button === Qt.ForwardButton) {
                 const playerData = mpris2Source.playerForLauncherUrl(task.model.LauncherUrlWithoutIcon, task.model.AppPid);
