@@ -41,6 +41,7 @@ DropArea {
                     view.currentIndex = source.index
                 }
             }
+            drag.accept(Qt.MoveAction)
         }
     }
     onDropped: drag => {

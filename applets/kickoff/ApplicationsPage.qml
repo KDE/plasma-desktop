@@ -62,23 +62,40 @@ BasePage {
                 // I have to do this for it to actually fill the item for some reason
                 anchors.fill: parent
                 active: false
-                hovered: sideBarDelegate.mouseArea.containsMouse || (flashFavoriteAnimation.running && sideBarDelegate.index === 0) || ((dropAreaLoader.item as DropArea)?.containsDrag ?? false)
+                hovered: sideBarDelegate.mouseArea.containsMouse || (flashFavoriteAnimation.running && sideBarDelegate.index === 0) || ((dropAreaLoader.item as DropArea)?.containsAcceptableDrag ?? false)
                 visible: !Plasmoid.configuration.switchCategoryOnHover
                     && !sideBarDelegate.isSeparator && !sideBarDelegate.ListView.isCurrentItem
                     && hovered
                 opacity: flashFavoriteAnimation.running && sideBarDelegate.index === 0 ? root.flashFavorite : 1
             }
 
+            component FavoritesDropArea: DropArea {
+                readonly property bool containsAcceptableDrag:  acceptableDrag && containsDrag
+                readonly property bool acceptableDrag: {
+                    let draggedItem = kickoff.dragSource.sourceItem as AbstractKickoffItemDelegate
+                    return draggedItem && !kickoff.rootModel.favoritesModel.isFavorite(draggedItem.model.favoriteId)
+                }
+                function evaluateEvent(event: DragEvent) : void {
+                    if (acceptableDrag) {
+                        event.accept(Qt.CopyAction)
+                    } else {
+                        event.accepted = false
+                    }
+                }
+            }
+
             Loader {
                 id: dropAreaLoader
                 anchors.fill: parent
                 active: sideBarDelegate.index === 0 && !sideBarDelegate.ListView.isCurrentItem
-                sourceComponent: DropArea {
+                sourceComponent: FavoritesDropArea {
+                    onPositionChanged: event => evaluateEvent(event)
+                    onEntered: event =>  evaluateEvent(event)
                     onDropped: event => {
-                        let draggedItem = kickoff.dragSource.sourceItem as AbstractKickoffItemDelegate
-                        if (draggedItem && !kickoff.rootModel.favoritesModel.isFavorite(draggedItem.model.favoriteId)) {
-                            kickoff.rootModel.favoritesModel.addFavorite(draggedItem.model.favoriteId, sideBar.model.favoritesModel.count);
+                        if (acceptableDrag) {
+                            kickoff.rootModel.favoritesModel.addFavorite((kickoff.dragSource.sourceItem as AbstractKickoffItemDelegate).model.favoriteId, sideBar.model.favoritesModel.count);
                         }
+                        evaluateEvent(event)
                     }
                 }
             }
