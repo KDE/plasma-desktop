@@ -8,6 +8,7 @@ import QtQuick
 import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
+import org.kde.ksvg as KSvg
 import org.kde.plasma.components as PlasmaComponents3
 
 ItemAbstractDelegate {
@@ -16,6 +17,8 @@ ItemAbstractDelegate {
     property alias iconSize: icon.implicitWidth
     property int itemIndex: item.index
     property var m: model
+    property bool showUnfavoritePlaceholder: false
+    property bool isDraggableFavorite: false
 
     width: GridView.view.cellWidth
     height: width
@@ -54,13 +57,17 @@ ItemAbstractDelegate {
         }
     }
     Drag.dragType: Drag.Automatic
-    Drag.mimeData: {
+    Drag.mimeData: item.isDraggableFavorite ? {
+        'favoritedrag': '',
+        "text/uri-list" : [item.url]
+    } : {
         "text/uri-list" : [item.url]
     }
 
     background.visible: false // we want the default background's spacing, but not the base color
     contentItem: ColumnLayout {
         spacing: Kirigami.Units.smallSpacing
+        visible: !item.showUnfavoritePlaceholder
 
         Kirigami.Icon {
             id: icon
@@ -104,6 +111,37 @@ ItemAbstractDelegate {
 
             text: item.model.display ?? ""
             textFormat: Text.PlainText
+        }
+    }
+
+    Loader {
+        active: item.showUnfavoritePlaceholder
+        anchors.fill: parent
+
+        sourceComponent: Item {
+            KSvg.FrameSvgItem {
+                anchors.fill: parent
+
+                imagePath: "widgets/viewitem"
+                prefix: "selected"
+
+                opacity: 0.5
+
+                Kirigami.Icon {
+                    anchors {
+                        right: parent.right
+                        rightMargin: parent.margins.right
+                        bottom: parent.bottom
+                        bottomMargin: parent.margins.bottom
+                    }
+
+                    width: Kirigami.Units.iconSizes.smallMedium
+                    height: width
+
+                    source: "list-remove"
+                    active: false
+                }
+            }
         }
     }
 

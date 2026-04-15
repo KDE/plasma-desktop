@@ -150,6 +150,10 @@ FocusScope {
                     itemGrid.model.addFavorite(draggedItem.favoriteId, itemGrid.model.dropPlaceholderIndex);
                     gridView.currentIndex = -1;
                     drop.accept(Qt.CopyAction)
+                } else if (draggedItem && draggedItem.parent !== gridView.contentItem && draggedItem.favoritesModel.isFavorite(draggedItem.favoriteId)) {
+                    draggedItem.showUnfavoritePlaceholder = true
+                    draggedItem.favoritesModel.removeFavorite(draggedItem.favoriteId)
+                    drop.accept(Qt.MoveAction)
                 } else if (draggedItem && draggedItem.parent === gridView.contentItem) {
                     drop.accept(Qt.MoveAction)
                 }
@@ -237,6 +241,8 @@ FocusScope {
                             gridView.currentIndex = -1;
                     }
                 }
+                isDraggableFavorite: itemGrid.dropEnabled
+                showUnfavoritePlaceholder: Drag.active && itemGrid.dropEnabled && !(dropAreaLoader.item as DropArea).containsDrag
             }
 
             Connections {

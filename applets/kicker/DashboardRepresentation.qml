@@ -188,6 +188,19 @@ Kicker.DashboardWindow {
             }
         }
 
+        DropArea {
+            anchors.fill: parent
+            keys: ["favoritedrag"]
+            onDropped: drop => {
+                let draggedItem = drag.source as ItemGridDelegate
+                if (draggedItem && draggedItem.favoritesModel.isFavorite(draggedItem.favoriteId)) {
+                    draggedItem.showUnfavoritePlaceholder = true
+                    draggedItem.favoritesModel.removeFavorite(draggedItem.favoriteId)
+                    drop.accept(Qt.MoveAction)
+                }
+            }
+        }
+
         Timer {
             id: preloadAllAppsTimer
 
