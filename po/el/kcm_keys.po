@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-21 00:46+0000\n"
+"POT-Creation-Date: 2026-04-16 00:45+0000\n"
 "PO-Revision-Date: 2024-09-13 18:18+0300\n"
 "Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
 "Language-Team: el <kde-i18n-el@kde.org>\n"
@@ -68,7 +68,7 @@ msgstr "Σφάλμα κατά την επικοινωνία με την υπηρ
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Αποτυχία επικοινωνίας με τον δαίμονα καθολικών συντομεύσεων"
 
-#: kcm_keys.cpp:366
+#: kcm_keys.cpp:372
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -79,7 +79,7 @@ msgstr ""
 "Η συντόμευση <shortcut>%1</shortcut> συγκρούεται με την κοινή ενέργεια %2 "
 "<interface>%3</interface>.<nl/><nl/>Επαναδήλωση της στο %4;"
 
-#: kcm_keys.cpp:372
+#: kcm_keys.cpp:378
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -91,13 +91,13 @@ msgstr ""
 "%2</interface> του <application>%3</application>.<nl/><nl/> Επαναδήλωση στην "
 "ενέργεια <interface>%4</interface> του <application>%5</application>;"
 
-#: kcm_keys.cpp:381
+#: kcm_keys.cpp:387
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Επίλυση σύγκρουσης συντομεύσεων"
 
-#: kcm_keys.cpp:391
+#: kcm_keys.cpp:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -552,25 +552,25 @@ msgctxt "@title:column"
 msgid "Custom shortcuts"
 msgstr "Προσαρμοσμένες συντομεύσεις"
 
-#: ui/ShortcutActionDelegate.qml:196
+#: ui/ShortcutActionDelegate.qml:205
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
 msgstr "Διαγραφή συντόμευσης"
 
-#: ui/ShortcutActionDelegate.qml:207
+#: ui/ShortcutActionDelegate.qml:216
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
 msgstr "Προσθήκη…"
 
-#: ui/ShortcutActionDelegate.qml:208
+#: ui/ShortcutActionDelegate.qml:217
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Προσθήκη προσαρμοσμένης συντόμευσης"
 
-#: ui/ShortcutActionDelegate.qml:244
+#: ui/ShortcutActionDelegate.qml:253
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"

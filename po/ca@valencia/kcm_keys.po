@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-21 00:46+0000\n"
+"POT-Creation-Date: 2026-04-16 00:45+0000\n"
 "PO-Revision-Date: 2025-11-22 07:50+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -73,7 +73,7 @@ msgstr ""
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Ha fallat mentre es comunicava amb el domini de dreceres globals"
 
-#: kcm_keys.cpp:366
+#: kcm_keys.cpp:372
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -84,7 +84,7 @@ msgstr ""
 "La drecera <shortcut>%1</shortcut> ja es troba assignada a l'acció %2 comuna "
 "<interface>%3</interface>.<nl/><nl/>La voleu tornar a assignar a %4?"
 
-#: kcm_keys.cpp:372
+#: kcm_keys.cpp:378
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -97,13 +97,13 @@ msgstr ""
 "torno a assignar a l'acció <interface>%4</interface> de <application>%5</"
 "application>?"
 
-#: kcm_keys.cpp:381
+#: kcm_keys.cpp:387
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Resolució de conflicte de dreceres"
 
-#: kcm_keys.cpp:391
+#: kcm_keys.cpp:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -510,25 +510,25 @@ msgctxt "@title:column"
 msgid "Custom shortcuts"
 msgstr "Dreceres personalitzades"
 
-#: ui/ShortcutActionDelegate.qml:196
+#: ui/ShortcutActionDelegate.qml:205
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
 msgstr "Suprimix la drecera"
 
-#: ui/ShortcutActionDelegate.qml:207
+#: ui/ShortcutActionDelegate.qml:216
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
 msgstr "Afig…"
 
-#: ui/ShortcutActionDelegate.qml:208
+#: ui/ShortcutActionDelegate.qml:217
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Afig una drecera personalitzada"
 
-#: ui/ShortcutActionDelegate.qml:244
+#: ui/ShortcutActionDelegate.qml:253
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-21 00:46+0000\n"
+"POT-Creation-Date: 2026-04-16 00:45+0000\n"
 "PO-Revision-Date: 2026-02-15 21:11+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -71,7 +71,7 @@ msgstr "Errorea lasterbide-globalen zerbitzuarekin komunikatzean"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Ezin izan da lasterbide globalen daimonarekin komunikatu"
 
-#: kcm_keys.cpp:366
+#: kcm_keys.cpp:372
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -82,7 +82,7 @@ msgstr ""
 "<shortcut>%1</shortcut> lasterbidea jada %2 ekintza arruntera <interface>%3</"
 "interface> esleituta dago.<nl/><nl/>%4(e)ra berresleitu?"
 
-#: kcm_keys.cpp:372
+#: kcm_keys.cpp:378
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -94,13 +94,13 @@ msgstr ""
 "<interface>%2</interface> ekintzara esleituta dago.<nl/><nl/><application>"
 "%5</application>(e)ren <interface>%4</interface> ekintzara berresleitu?"
 
-#: kcm_keys.cpp:381
+#: kcm_keys.cpp:387
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Lasterbide-gatazka ebatzi"
 
-#: kcm_keys.cpp:391
+#: kcm_keys.cpp:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -506,25 +506,25 @@ msgctxt "@title:column"
 msgid "Custom shortcuts"
 msgstr "Neurrira ipinitako lasterbideak"
 
-#: ui/ShortcutActionDelegate.qml:196
+#: ui/ShortcutActionDelegate.qml:205
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
 msgstr "Ezabatu lasterbidea"
 
-#: ui/ShortcutActionDelegate.qml:207
+#: ui/ShortcutActionDelegate.qml:216
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
 msgstr "Gehitu…"
 
-#: ui/ShortcutActionDelegate.qml:208
+#: ui/ShortcutActionDelegate.qml:217
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Gehitu neurrira ipinitako lasterbidea"
 
-#: ui/ShortcutActionDelegate.qml:244
+#: ui/ShortcutActionDelegate.qml:253
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"

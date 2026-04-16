@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: KDE Frameworks 5 Applications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-11 00:48+0000\n"
-"PO-Revision-Date: 2026-01-12 23:27+0200\n"
+"PO-Revision-Date: 2026-04-15 12:57+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -124,12 +124,10 @@ msgid "Show icons on the root level of the menu"
 msgstr "Rodyti piktogramas šakniniame meniu lygyje"
 
 #: ConfigGeneral.qml:197
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
-msgstr "Dažniausios programos"
+msgstr "Paryškinti naujai įdiegtas programas"
 
 #: ConfigGeneral.qml:207
 #, kde-format
@@ -231,27 +229,25 @@ msgstr "Žymelės"
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Nauja!"
 
 #: DashboardRepresentation.qml:896 ItemListDelegate.qml:107
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
-msgstr ""
+msgstr "Šioje kategorijoje yra naujai įdiegta programa"
 
 #: ItemGridDelegate.qml:86
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Nauja!"
 
 #: ItemGridDelegate.qml:88
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
-msgstr "Dažniausios programos"
+msgstr "Naujai įdiegta programa"
 
 #: ItemListDelegate.qml:39
 #, kde-format
@@ -266,12 +262,10 @@ msgid "Launch"
 msgstr "Paleisti"
 
 #: ItemListDelegate.qml:108
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
-msgstr "Dažniausios programos"
+msgstr "Naujai įdiegta programa"
 
 #: main.qml:207
 #, kde-format
