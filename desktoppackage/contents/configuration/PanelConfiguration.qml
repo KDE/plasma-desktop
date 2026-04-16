@@ -130,6 +130,13 @@ ColumnLayout {
                     }
 
                     PC3.MenuItem {
+                        text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:menu add a margins separator", "Margins Separator")
+                        icon.name: "distribute-horizontal-margin"
+
+                        onClicked: configDialog.addPanelMarginsSeparator()
+                    }
+
+                    PC3.MenuItem {
                         text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:menu add a widget", "Widgets…")
                         icon.name: "view-group-symbolic"
                         onClicked: {
