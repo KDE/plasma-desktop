@@ -17,6 +17,7 @@ ItemAbstractDelegate {
 
     readonly property int itemIndex: model.index
     readonly property bool isDropPlaceHolder: "dropPlaceholderIndex" in item.baseModel && item.itemIndex === item.baseModel.dropPlaceholderIndex
+    property bool showUnfavoritePlaceholder: false
 
     Accessible.role: Accessible.ListItem
     icon.source: item.decoration
@@ -30,6 +31,7 @@ ItemAbstractDelegate {
 
     background.visible: false // we want the default background's spacing, but not the base color
     contentItem: Kirigami.Icon {
+        visible: !item.showUnfavoritePlaceholder
         active: item.hovered
         width: item.icon.width
         height: item.icon.height
@@ -42,7 +44,7 @@ ItemAbstractDelegate {
     }
 
     Loader {
-        active: item.hovered || item.visualFocus || dragHandler.active || item.isDropPlaceHolder
+        active: item.hovered || item.visualFocus || dragHandler.active || item.isDropPlaceHolder || item.showUnfavoritePlaceholder
         anchors.fill: parent
 
         sourceComponent: Item {
@@ -52,7 +54,7 @@ ItemAbstractDelegate {
 
             PlasmaExtras.Highlight {
                 anchors.fill: parent
-                visible: !item.isDropPlaceHolder
+                visible: !item.isDropPlaceHolder && !item.showUnfavoritePlaceholder
                 hovered: true
                 pressed: tapHandler.pressed ?? false
             }
@@ -60,7 +62,7 @@ ItemAbstractDelegate {
             KSvg.FrameSvgItem {
                 anchors.fill: parent
 
-                visible: item.isDropPlaceHolder
+                visible: item.isDropPlaceHolder || item.showUnfavoritePlaceholder
 
                 imagePath: "widgets/viewitem"
                 prefix: "selected"
@@ -68,17 +70,12 @@ ItemAbstractDelegate {
                 opacity: 0.5
 
                 Kirigami.Icon {
-                    anchors {
-                        right: parent.right
-                        rightMargin: parent.margins.right
-                        bottom: parent.bottom
-                        bottomMargin: parent.margins.bottom
-                    }
+                    anchors.centerIn: parent
 
-                    width: Kirigami.Units.iconSizes.smallMedium
+                    width: item.icon.width
                     height: width
 
-                    source: "list-add"
+                    source: item.isDropPlaceHolder ? "list-add" : "list-remove"
                     active: false
                 }
             }
@@ -105,6 +102,7 @@ ItemAbstractDelegate {
     }
     Drag.dragType: Drag.Automatic
     Drag.mimeData: {
+        'favoritedrag': '',
         "text/uri-list" : [item.url]
     }
 

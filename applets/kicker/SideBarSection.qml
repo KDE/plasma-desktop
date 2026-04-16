@@ -39,20 +39,19 @@ DropArea {
         }
 
         const above = flow.childAt(event.x, event.y) as SideBarItem
+        const eventSource = event.source as SideBarItem
 
-        if (event.source instanceof SideBarItem) {
-            const eventSource = event.source as SideBarItem
-
-            if (above && eventSource && above !== eventSource && eventSource.parent === flow) {
-                repeater.model.moveRow(eventSource.itemIndex, above.itemIndex);
-            }
+        if (above && eventSource && above !== eventSource && eventSource.parent === flow) {
+            repeater.model.moveRow(eventSource.itemIndex, above.itemIndex);
+            event.accept(Qt.MoveAction)
+        } else if (eventSource && eventSource.favoritesModel.isFavorite(eventSource.favoriteId)) {
+            event.accept(Qt.MoveAction)
         } else if (event.formats.includes(root.favoriteTypeMimeType) && !model.isFavorite(event.getDataAsString(root.favoriteTypeMimeType))) {
-            var hasPlaceholder = (model.dropPlaceholderIndex !== -1);
-
-            model.dropPlaceholderIndex = above.itemIndex;
+            model.dropPlaceholderIndex = above?.itemIndex ?? 0;
+            event.accept(Qt.CopyAction)
         } else {
             model.dropPlaceholderIndex = -1;
-            event.accept(Qt.IgnoreAction)
+            event.accepted = false
         }
     }
 
@@ -63,8 +62,14 @@ DropArea {
     }
 
     onDropped: event => {
+        let draggedItem = drag.source as SideBarItem
         if (event.formats.includes(root.favoriteTypeMimeType)) {
             model.addFavorite(event.getDataAsString(root.favoriteTypeMimeType), model.dropPlaceholderIndex)
+            event.accept(Qt.CopyAction)
+        } else if (draggedItem && draggedItem.favoritesModel.isFavorite(draggedItem.favoriteId) && draggedItem.favoritesModel !== root.model) {
+            draggedItem.showUnfavoritePlaceholder = true
+            draggedItem.favoritesModel.removeFavorite(draggedItem.favoriteId)
+            event.accept(Qt.MoveAction)
         }
     }
 
@@ -98,6 +103,7 @@ DropArea {
             delegate: SideBarItem {
                 favoritesModel: repeater.model
                 baseModel: repeater.model
+                showUnfavoritePlaceholder: Drag.active && !root.containsDrag
                 Keys.onUpPressed: event => {
                     if (index > 0) {
                         repeater.itemAt(index - 1).forceActiveFocus(Qt.TabFocusReason)
