@@ -10,6 +10,8 @@
 #include <QDBusMessage>
 #include <QDBusMetaType>
 
+#include <algorithm>
+
 #include <KLocalizedString>
 
 #include "filteredmodel.h"
@@ -137,7 +139,15 @@ void KeysRunner::run(const KRunner::RunnerContext & /*context*/, const KRunner::
     QString dbusPath = data[0];
     // DBus path can only contain ASCII characters, any non-alphanumeric char should
     // be turned into '_'
-    dbusPath.replace(u'.', u'_');
+    auto isNonAscii = [](QChar ch) {
+        const char c = ch.unicode();
+        const bool isAscii = c == '_' //
+            || (c >= 'A' && c <= 'Z') //
+            || (c >= 'a' && c <= 'z') //
+            || (c >= '0' && c <= '9');
+        return !isAscii;
+    };
+    std::replace_if(dbusPath.begin(), dbusPath.end(), isNonAscii, QLatin1Char('_'));
     QDBusMessage msg =
         QDBusMessage::createMethodCall(u"org.kde.kglobalaccel"_s, u"/component/" + dbusPath, u"org.kde.kglobalaccel.Component"_s, u"invokeShortcut"_s);
     msg << data[1];
