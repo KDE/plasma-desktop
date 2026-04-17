@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-15 00:48+0000\n"
+"POT-Creation-Date: 2026-04-17 00:46+0000\n"
 "PO-Revision-Date: 2025-03-23 07:29+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -437,299 +437,305 @@ msgid "Spacer"
 msgstr "Aldoni Spacigilon"
 
 #: contents/configuration/PanelConfiguration.qml:133
+#, kde-format
+msgctxt "@action:menu add a margins separator"
+msgid "Margins Separator"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:140
 #, fuzzy, kde-format
 #| msgid "Widgets"
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
 msgstr "Fenestraĵoj"
 
-#: contents/configuration/PanelConfiguration.qml:162
+#: contents/configuration/PanelConfiguration.qml:169
 #, fuzzy, kde-format
 #| msgid "Position"
 msgctxt "@title:group"
 msgid "Position"
 msgstr "Pozicio"
 
-#: contents/configuration/PanelConfiguration.qml:167
+#: contents/configuration/PanelConfiguration.qml:174
 #, fuzzy, kde-format
 #| msgid "Top"
 msgctxt "@label panel screen edge"
 msgid "Top"
 msgstr "Supre"
 
-#: contents/configuration/PanelConfiguration.qml:168
+#: contents/configuration/PanelConfiguration.qml:175
 #, fuzzy, kde-format
 #| msgid "Right"
 msgctxt "@label panel screen edge"
 msgid "Right"
 msgstr "Ĝuste"
 
-#: contents/configuration/PanelConfiguration.qml:169
+#: contents/configuration/PanelConfiguration.qml:176
 #, fuzzy, kde-format
 #| msgid "Left"
 msgctxt "@label panel screen edge"
 msgid "Left"
 msgstr "Maldekstre"
 
-#: contents/configuration/PanelConfiguration.qml:170
+#: contents/configuration/PanelConfiguration.qml:177
 #, fuzzy, kde-format
 #| msgid "Bottom"
 msgctxt "@label panel screen edge"
 msgid "Bottom"
 msgstr "Fundo"
 
-#: contents/configuration/PanelConfiguration.qml:190
+#: contents/configuration/PanelConfiguration.qml:197
 #, fuzzy, kde-format
 #| msgid "Set Position…"
 msgctxt "action:button"
 msgid "Set Position…"
 msgstr "Meti Pozicion…"
 
-#: contents/configuration/PanelConfiguration.qml:217
+#: contents/configuration/PanelConfiguration.qml:224
 #, fuzzy, kde-format
 #| msgid "Alignment"
 msgctxt "@title:group"
 msgid "Alignment"
 msgstr "Ĝisrandigo"
 
-#: contents/configuration/PanelConfiguration.qml:282
+#: contents/configuration/PanelConfiguration.qml:289
 #, fuzzy, kde-format
 #| msgid "Top"
 msgctxt "@item:inlistbox"
 msgid "Top"
 msgstr "Supre"
 
-#: contents/configuration/PanelConfiguration.qml:282
+#: contents/configuration/PanelConfiguration.qml:289
 #, fuzzy, kde-format
 #| msgid "Left"
 msgctxt "@item:inlistbox"
 msgid "Left"
 msgstr "Maldekstre"
 
-#: contents/configuration/PanelConfiguration.qml:283
+#: contents/configuration/PanelConfiguration.qml:290
 #, fuzzy, kde-format
 #| msgid "Center"
 msgctxt "@item:inlistbox"
 msgid "Center"
 msgstr "Centro"
 
-#: contents/configuration/PanelConfiguration.qml:284
+#: contents/configuration/PanelConfiguration.qml:291
 #, fuzzy, kde-format
 #| msgid "Bottom"
 msgctxt "@item:inlistbox"
 msgid "Bottom"
 msgstr "Fundo"
 
-#: contents/configuration/PanelConfiguration.qml:284
+#: contents/configuration/PanelConfiguration.qml:291
 #, fuzzy, kde-format
 #| msgid "Right"
 msgctxt "@item:inlistbox"
 msgid "Right"
 msgstr "Ĝuste"
 
-#: contents/configuration/PanelConfiguration.qml:314
+#: contents/configuration/PanelConfiguration.qml:321
 #, fuzzy, kde-format
 #| msgid "Height"
 msgctxt "@title:group panel height"
 msgid "Height"
 msgstr "Alteco"
 
-#: contents/configuration/PanelConfiguration.qml:315
+#: contents/configuration/PanelConfiguration.qml:322
 #, fuzzy, kde-format
 #| msgid "Width"
 msgctxt "@title:group panel width"
 msgid "Width"
 msgstr "Larĝeco"
 
-#: contents/configuration/PanelConfiguration.qml:334
+#: contents/configuration/PanelConfiguration.qml:341
 #, fuzzy, kde-format
 #| msgid "Fill height"
 msgctxt "@item:inlistbox panel fills the full height of the display"
 msgid "Fill height"
 msgstr "Plenigi altecon"
 
-#: contents/configuration/PanelConfiguration.qml:334
+#: contents/configuration/PanelConfiguration.qml:341
 #, fuzzy, kde-format
 #| msgid "Fill width"
 msgctxt "@item:inlistbox panel fills the full width of the display"
 msgid "Fill width"
 msgstr "Plenigi larĝecon"
 
-#: contents/configuration/PanelConfiguration.qml:335
+#: contents/configuration/PanelConfiguration.qml:342
 #, fuzzy, kde-format
 #| msgid "Fit content"
 msgctxt "@item:inlistbox panel is just big enough to fit its content"
 msgid "Fit content"
 msgstr "Plenigi enhavon"
 
-#: contents/configuration/PanelConfiguration.qml:336
+#: contents/configuration/PanelConfiguration.qml:343
 #, fuzzy, kde-format
 #| msgid "Custom"
 msgctxt "@item:inlistbox panel size"
 msgid "Custom"
 msgstr "Propra"
 
-#: contents/configuration/PanelConfiguration.qml:369
+#: contents/configuration/PanelConfiguration.qml:376
 #, fuzzy, kde-format
 #| msgid "Visibility"
 msgctxt "@title:group"
 msgid "Visibility"
 msgstr "Videbleco"
 
-#: contents/configuration/PanelConfiguration.qml:386
+#: contents/configuration/PanelConfiguration.qml:393
 #, fuzzy, kde-format
 #| msgid "Always visible"
 msgctxt "@item:inlistbox"
 msgid "Always visible"
 msgstr "Ĉiam videbla"
 
-#: contents/configuration/PanelConfiguration.qml:387
+#: contents/configuration/PanelConfiguration.qml:394
 #, fuzzy, kde-format
 #| msgid "Auto hide"
 msgctxt "@item:inlistbox"
 msgid "Auto hide"
 msgstr "Aŭtomate kaŝi"
 
-#: contents/configuration/PanelConfiguration.qml:388
+#: contents/configuration/PanelConfiguration.qml:395
 #, fuzzy, kde-format
 #| msgid "Dodge windows"
 msgctxt "@item:inlistbox"
 msgid "Dodge windows"
 msgstr "Eviti fenestrojn"
 
-#: contents/configuration/PanelConfiguration.qml:389
+#: contents/configuration/PanelConfiguration.qml:396
 #, fuzzy, kde-format
 #| msgid "Windows go below"
 msgctxt "@item:inlistbox"
 msgid "Windows go below"
 msgstr "Fenestroj malsupreniĝas"
 
-#: contents/configuration/PanelConfiguration.qml:452
+#: contents/configuration/PanelConfiguration.qml:459
 #, fuzzy, kde-format
 #| msgid "Opacity"
 msgctxt "@title:group"
 msgid "Opacity"
 msgstr "Opakeco"
 
-#: contents/configuration/PanelConfiguration.qml:458
+#: contents/configuration/PanelConfiguration.qml:465
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The current Plasma style does not support opacity options."
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:480
+#: contents/configuration/PanelConfiguration.qml:487
 #, fuzzy, kde-format
 #| msgid "Adaptive"
 msgctxt "@item:inlistbox"
 msgid "Adaptive"
 msgstr "Adaptiva"
 
-#: contents/configuration/PanelConfiguration.qml:481
+#: contents/configuration/PanelConfiguration.qml:488
 #, fuzzy, kde-format
 #| msgid "Opaque"
 msgctxt "@item:inlistbox"
 msgid "Opaque"
 msgstr "Maldiafana"
 
-#: contents/configuration/PanelConfiguration.qml:482
+#: contents/configuration/PanelConfiguration.qml:489
 #, fuzzy, kde-format
 #| msgid "Translucent"
 msgctxt "@item:inlistbox"
 msgid "Translucent"
 msgstr "Diafana"
 
-#: contents/configuration/PanelConfiguration.qml:514
+#: contents/configuration/PanelConfiguration.qml:521
 #, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "Gliteco"
 
-#: contents/configuration/PanelConfiguration.qml:530
+#: contents/configuration/PanelConfiguration.qml:537
 #, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
 msgstr "Malŝaltita"
 
-#: contents/configuration/PanelConfiguration.qml:531
+#: contents/configuration/PanelConfiguration.qml:538
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
 msgstr "Nur apletoj"
 
-#: contents/configuration/PanelConfiguration.qml:532
+#: contents/configuration/PanelConfiguration.qml:539
 #, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
 msgstr "Panelo kaj apletoj"
 
-#: contents/configuration/PanelConfiguration.qml:575
+#: contents/configuration/PanelConfiguration.qml:582
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr "Ripari ĝin"
 
-#: contents/configuration/PanelConfiguration.qml:661
+#: contents/configuration/PanelConfiguration.qml:668
 #, fuzzy, kde-format
 #| msgid "Panel Width:"
 msgctxt "@label:spinbox"
 msgid "Panel Width:"
 msgstr "Panel-Larĝeco:"
 
-#: contents/configuration/PanelConfiguration.qml:662
+#: contents/configuration/PanelConfiguration.qml:669
 #, fuzzy, kde-format
 #| msgid "Panel Height:"
 msgctxt "@label:spinbox"
 msgid "Panel Height:"
 msgstr "Panel-Larĝeco:"
 
-#: contents/configuration/PanelConfiguration.qml:685
+#: contents/configuration/PanelConfiguration.qml:692
 #, fuzzy, kde-format
 #| msgid "Focus shortcut:"
 msgctxt "@title:group shortcut that moves focus to the panel"
 msgid "Focus shortcut:"
 msgstr "Fokus-ŝparvojo:"
 
-#: contents/configuration/PanelConfiguration.qml:695
+#: contents/configuration/PanelConfiguration.qml:702
 #, fuzzy, kde-format
 #| msgid "Press this keyboard shortcut to move focus to the Panel"
 msgctxt "@info:tooltip"
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Premu ĉi tiun klavkombinon por movi fokuson al la Panelo"
 
-#: contents/configuration/PanelConfiguration.qml:702
+#: contents/configuration/PanelConfiguration.qml:709
 #, fuzzy, kde-format
 #| msgid "Focus shortcut:"
 msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
 msgstr "Fokus-ŝparvojo:"
 
-#: contents/configuration/PanelConfiguration.qml:703
+#: contents/configuration/PanelConfiguration.qml:710
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for button"
 msgid "Button to set the shortcut for the panel to gain focus"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:730
+#: contents/configuration/PanelConfiguration.qml:737
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Forigi Panelon"
 
-#: contents/configuration/PanelConfiguration.qml:733
+#: contents/configuration/PanelConfiguration.qml:740
 #, fuzzy, kde-format
 #| msgid "Remove this panel; this action is undo-able"
 msgctxt "@info:tooltip for button"
 msgid "Remove this panel; this action can be undone"
 msgstr "Forigi ĉi panelon; tiu ago estas malfarebla"
 
-#: contents/configuration/PanelConfiguration.qml:742
+#: contents/configuration/PanelConfiguration.qml:749
 #, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "Kloni Panelon"
 
-#: contents/configuration/PanelConfiguration.qml:746
+#: contents/configuration/PanelConfiguration.qml:753
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Create a new panel with the same settings and applets"
@@ -737,20 +743,20 @@ msgctxt "@info:tooltip for button"
 msgid "Create a new panel with the same settings and applets"
 msgstr "Krei novan panelon kun la samaj metoj kaj apletoj"
 
-#: contents/configuration/PanelConfiguration.qml:755
+#: contents/configuration/PanelConfiguration.qml:762
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Fermi"
 
-#: contents/configuration/PanelConfiguration.qml:755
+#: contents/configuration/PanelConfiguration.qml:762
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "Eliri Redaktan Reĝimon"
 
-#: contents/configuration/PanelConfiguration.qml:758
+#: contents/configuration/PanelConfiguration.qml:765
 #, fuzzy, kde-format
 #| msgid "Close Panel Settings window and exit Edit Mode"
 msgctxt "@info:tooltip for button"
