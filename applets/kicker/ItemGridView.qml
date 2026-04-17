@@ -278,14 +278,9 @@ FocusScope {
                     opacity: 0.5
 
                     Kirigami.Icon {
-                        anchors {
-                            right: parent.right
-                            rightMargin: parent.margins.right
-                            bottom: parent.bottom
-                            bottomMargin: parent.margins.bottom
-                        }
+                        anchors.centerIn: parent
 
-                        width: Kirigami.Units.iconSizes.smallMedium
+                        width: gridView.iconSize
                         height: width
 
                         source: "list-add"
