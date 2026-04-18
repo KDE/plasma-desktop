@@ -7,6 +7,7 @@
 #pragma once
 
 #include <QObject>
+#include <QString>
 
 #include "inputdevice.h"
 
@@ -24,6 +25,7 @@ class CalibrationTool : public QObject
     Q_PROPERTY(float width READ width WRITE setWidth NOTIFY widthChanged)
     Q_PROPERTY(float height READ height WRITE setHeight NOTIFY heightChanged)
     Q_PROPERTY(int resetSecondsLeft READ resetSecondsLeft NOTIFY resetSecondsLeftChanged)
+    Q_PROPERTY(QString lastCalibrationSummary READ lastCalibrationSummary NOTIFY lastCalibrationSummaryChanged)
 
 public:
     CalibrationTool();
@@ -64,6 +66,16 @@ public:
      */
     int resetSecondsLeft() const;
 
+    /**
+     * @return Human-readable summary of the last computed affine calibration matrix.
+     */
+    QString lastCalibrationSummary() const;
+
+    /**
+     * @brief Returns a copy of a calibration matrix with a translation-only center correction applied.
+     */
+    QMatrix4x4 matrixWithCenterCorrection(const QMatrix4x4 &matrix, double residualX, double residualY) const;
+
 public Q_SLOTS:
     /**
      * @brief Set a point on the screen for calibration.
@@ -92,6 +104,14 @@ public Q_SLOTS:
      * @brief Restarts the calibration process, getting rid of any existing point data.
      */
     void reset();
+
+    /**
+     * @brief Applies a translation-only correction based on a measured residual in testing mode.
+     * @param device The input device to update.
+     * @param residualX Residual X offset in screen pixels.
+     * @param residualY Residual Y offset in screen pixels.
+     */
+    void applyCenterCorrection(KWinDevices::InputDevice *device, double residualX, double residualY);
 
 Q_SIGNALS:
     /**
@@ -125,12 +145,18 @@ Q_SIGNALS:
     void resetSecondsLeftChanged();
 
     /**
+     * @brief Emitted when the last calibration summary changes.
+     */
+    void lastCalibrationSummaryChanged();
+
+    /**
      * @brief Emitted when the device should reset it's calibration matrix to the saved one.
      */
     void resetFromSaved();
 
 private:
     void checkIfFinished();
+    void updateCalibrationSummary(const QMatrix4x4 &matrix);
 
     void playSound(const QString &soundName);
     ca_context *canberraContext();
@@ -142,6 +168,7 @@ private:
     State m_state = State::Calibrating;
     std::array<QPointF, 4> m_screenPoints;
     std::array<QPointF, 4> m_touchPoints;
+    QString m_lastCalibrationSummary;
     int m_resetCountdown = 0;
     QTimer m_resetTimer;
 

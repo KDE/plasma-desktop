@@ -69,6 +69,34 @@ int CalibrationTool::resetSecondsLeft() const
     return m_resetCountdown;
 }
 
+QString CalibrationTool::lastCalibrationSummary() const
+{
+    return m_lastCalibrationSummary;
+}
+
+QMatrix4x4 CalibrationTool::matrixWithCenterCorrection(const QMatrix4x4 &matrix, const double residualX, const double residualY) const
+{
+    Q_ASSERT(m_width > 0.0f);
+    Q_ASSERT(m_height > 0.0f);
+
+    QMatrix4x4 corrected = matrix;
+    corrected(0, 2) -= residualX / m_width;
+    corrected(1, 2) -= residualY / m_height;
+    return corrected;
+}
+
+void CalibrationTool::updateCalibrationSummary(const QMatrix4x4 &matrix)
+{
+    m_lastCalibrationSummary = QStringLiteral("a=%1 b=%2 c=%3 d=%4 e=%5 f=%6")
+                                   .arg(matrix(0, 0), 0, 'f', 6)
+                                   .arg(matrix(0, 1), 0, 'f', 6)
+                                   .arg(matrix(0, 2), 0, 'f', 6)
+                                   .arg(matrix(1, 0), 0, 'f', 6)
+                                   .arg(matrix(1, 1), 0, 'f', 6)
+                                   .arg(matrix(1, 2), 0, 'f', 6);
+    Q_EMIT lastCalibrationSummaryChanged();
+}
+
 void CalibrationTool::calibrate(const double touchX, const double touchY, const double screenX, const double screenY)
 {
     Q_ASSERT(m_calibratedTargets >= 0 && m_calibratedTargets < 4);
@@ -121,6 +149,22 @@ void CalibrationTool::reset()
 
     m_state = State::Calibrating;
     Q_EMIT stateChanged();
+}
+
+void CalibrationTool::applyCenterCorrection(KWinDevices::InputDevice *device, const double residualX, const double residualY)
+{
+    Q_ASSERT(device);
+    Q_ASSERT(m_width > 0.0f);
+    Q_ASSERT(m_height > 0.0f);
+
+    if (!device || m_width <= 0.0f || m_height <= 0.0f) {
+        return;
+    }
+
+    const QMatrix4x4 matrix = matrixWithCenterCorrection(device->calibrationMatrix(), residualX, residualY);
+
+    device->setCalibrationMatrix(matrix);
+    updateCalibrationSummary(matrix);
 }
 
 void ca_finish_callback(ca_context *c, uint32_t id, int error_code, void *userdata)
@@ -196,9 +240,9 @@ void CalibrationTool::checkIfFinished()
                 // clang-format off
                 const std::array screenMatrix
                 {
-                    static_cast<float>(screenA.x()), static_cast<float>(screenA.y()), 1.0f,
-                    static_cast<float>(screenB.x()), static_cast<float>(screenB.y()), 1.0f,
-                    static_cast<float>(screenC.x()), static_cast<float>(screenC.y()), 1.0f,
+                    static_cast<float>(screenA.x()), static_cast<float>(screenB.x()), static_cast<float>(screenC.x()),
+                    static_cast<float>(screenA.y()), static_cast<float>(screenB.y()), static_cast<float>(screenC.y()),
+                    1.0f, 1.0f, 1.0f,
                 };
                 // clang-format on
 
@@ -208,13 +252,13 @@ void CalibrationTool::checkIfFinished()
 
                 // clang-format off
                 const std::array touchMatrix{
-                    static_cast<float>(touchA.x()), static_cast<float>(touchA.y()), 1.0f,
-                    static_cast<float>(touchB.x()), static_cast<float>(touchB.y()), 1.0f,
-                    static_cast<float>(touchC.x()), static_cast<float>(touchC.y()), 1.0f
+                    static_cast<float>(touchA.x()), static_cast<float>(touchB.x()), static_cast<float>(touchC.x()),
+                    static_cast<float>(touchA.y()), static_cast<float>(touchB.y()), static_cast<float>(touchC.y()),
+                    1.0f, 1.0f, 1.0f,
                 };
                 // clang-format on
 
-                sum += invert(QMatrix3x3(touchMatrix.data())) * QMatrix3x3(screenMatrix.data());
+                sum += QMatrix3x3(screenMatrix.data()) * invert(QMatrix3x3(touchMatrix.data()));
             }
 
             QMatrix3x3 average = sum / 4.0f;
@@ -230,6 +274,8 @@ void CalibrationTool::checkIfFinished()
             average(2, 0) = 0.0f;
             average(2, 1) = 0.0f;
             average(2, 2) = 1.0f;
+
+            updateCalibrationSummary(QMatrix4x4(average));
 
             m_state = State::Confirming;
             Q_EMIT stateChanged();
