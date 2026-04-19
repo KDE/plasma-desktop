@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2026-03-28 22:50+0200\n"
+"PO-Revision-Date: 2026-04-18 19:04+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -132,13 +132,13 @@ msgstr "Skambučio garso failas"
 #: kcmaccessibilitybell.kcfg:20
 #, kde-format
 msgid "Use a visual bell instead of a sound"
-msgstr "Vietoje garso, naudoti vaizdinį skambutį"
+msgstr "Vietoj garso, naudoti vaizdinį skambutį"
 
 #. i18n: ectx: label, entry (InvertScreen), group (Bell)
 #: kcmaccessibilitybell.kcfg:24
 #, kde-format
 msgid "Invert the system colors on the bell"
-msgstr "Esant skambučiui, invertuoti sistemos spalvas"
+msgstr "Suskambus skambučiui, invertuoti sistemos spalvas"
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
@@ -413,7 +413,7 @@ msgstr "ogg, oga ir wav garso įrašo failai (*.ogg *.oga *.wav)"
 #, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Audible bell:"
-msgstr "Garsinis skambutis:"
+msgstr "Girdimas skambutis:"
 
 #: ui/Bell.qml:31
 #, kde-format
