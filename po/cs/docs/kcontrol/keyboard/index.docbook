@@ -1,0 +1,328 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Czech "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keyboard" lang="&language;">
+<title
+>Klávesnice</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>Ondřej</firstname
+><surname
+>Šotek</surname
+><affiliation
+><address
+><email
+>ondrej.sotek@seznam.cz</email
+></address
+></affiliation
+><contrib
+>Překlad</contrib
+></othercredit
+> <othercredit role="translator"
+><firstname
+>Jan</firstname
+><surname
+>Bělohoubek</surname
+><affiliation
+><address
+><email
+>j.bel@atlas.cz</email
+></address
+></affiliation
+><contrib
+>Aktualizace překladu</contrib
+></othercredit
+> <othercredit role="translator"
+><firstname
+>Jan</firstname
+><surname
+>Papež</surname
+><affiliation
+><address
+><email
+>honyczek@centrum.cz</email
+></address
+></affiliation
+><contrib
+>Aktualizace překladu</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2026-01-27</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Plasma</keyword>
+<keyword
+>Nastavení systému</keyword>
+<keyword
+>klávesnice</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Tento modul umožňuje měnit chování klávesnice.</para>
+
+<para
+>V tomto modulu jsou tři záložky.</para>
+
+<sect1 id="hardware">
+<title
+>Záložka Hardware</title>
+<para
+>Výsledek nastavení závisí na možnostech hardwaru klávesnice a X serveru, na kterém je &plasma; spuštěna. Můžete například zjistit, že změna hlasitosti stiskem kláves není možná, protože váš systém tuto funkci nepodporuje. </para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Model klávesnice:</guilabel
+></term>
+<listitem>
+<para
+>Zde můžete nastavit model své klávesnice. Toto nastavení je nezávislé na rozložení klávesnice a vztahuje se na &quot;hardwarový&quot; model, tj. na způsob, jakým je vaše klávesnice vyrobena. Moderní klávesnice, které přicházejí s počítačem, obvykle mají dvě další klávesy a označují se jako modely &quot;104 klávesové&quot;, což je pravděpodobně to, co chcete, pokud nevíte, jaký typ klávesnice máte. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>NumLock při startu Plasmy</guilabel
+></term>
+<listitem>
+<para
+>Můžete vybrat buď NumLock vždy <guilabel
+>Zapnuto</guilabel
+> nebo <guilabel
+>Vypnuto</guilabel
+> při startu &plasma;, nebo můžete zvolit: ponechat stav NumLocku jaký byl před startem &plasma;.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Když je podržena klávesa:</guilabel
+></term>
+<listitem>
+<para
+>Zde je možné vybrat jednu ze tří možností, konkrétně</para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Zobrazit znaky s diakritikou a podobné</guilabel
+></term>
+<listitem>
+<para
+>Pokud je tato možnost vybrána, když je klávesa podržena stisknutá při zadávání textu, zobrazí se vyskakovací okno, které umožňuje zvolit mezi různými formami znaků s diakritikou.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Nedělat nic</guilabel
+></term>
+<listitem>
+<para
+>Tato možnost vám umožňuje vypnout jakékoli aktivity, když stisknete a podržíte stisknuté klávesy.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Opakování kláves</guilabel
+></term>
+<listitem>
+<para
+>Je-li volba zaškrtnuta, způsobí stisk a následné držení klávesy opakované vysílání znaku až do uvolnění klávesy. Držení klávesy má stejný význam jako opakované stisknutí klávesy.</para>
+<tip
+><para
+>Většina uživatelů nechává tuto volbu zapnutou, protože je tím výrazně usnadněna navigace mezi dokumenty pomocí kurzorových kláves. </para
+></tip>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Prodleva</guilabel
+></term>
+<listitem>
+<para
+>Tato možnost vám umožňuje nastavit zpoždění, po kterém stisknutá klávesa začne generovat kódy kláves.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Rychlost</guilabel
+></term>
+<listitem>
+<para
+>Tato možnost vám umožňuje nastavit rychlost, při které jsou generovány kódy kláves, když je klávesa stisknutá.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Zadejte nějaké znaky do textového pole <guilabel
+>Testovací oblast</guilabel
+>, abyste ověřili nastavení.</para>
+<para
+>Velké množství počítačů tuto funkci nepodporuje.</para>
+
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect1>
+
+<sect1 id="layouts">
+<title
+>Záložka Rozvržení</title>
+<para
+>Tato záložka vám umožňuje vybrat, které rozložení klávesnice chcete použít, jaký indikátor chcete mít v systémové liště, jak chcete přepínat a které zkratky budete používat.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Indikátor rozložení</guilabel
+></term>
+<listitem>
+<para
+>Můžete zvolit <guilabel
+>Zobrazit indikátor rozložení</guilabel
+>, který zobrazí název jazyka ISO v systémové liště. Můžete zvolit zobrazování indikátoru i v případě, že máte povolené pouze jedno rozložení, a můžete zobrazit vlajku jazyka místo pouze kódu ISO zaškrtnutím <guilabel
+>Zobrazit vlajku</guilabel
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Politika přepínání</guilabel
+></term>
+<listitem>
+<para
+>Pokud vyberete přepínací politiku <guilabel
+>Aplikace</guilabel
+> nebo <guilabel
+>Okno</guilabel
+>, změna rozložení klávesnice ovlivní pouze aktuální aplikaci nebo okno. <guilabel
+>Globální</guilabel
+> změní rozložení klávesnice globálně a <guilabel
+>Pracovní plocha</guilabel
+> změní pouze pro aktuální virtuální pracovní plochu. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Zkratky pro přepínání rozvržení</guilabel
+></term>
+<listitem>
+<para
+><guilabel
+>Hlavní zkratky</guilabel
+> jsou zkratkou pro přepínání rozložení, které je zpracováno X.org. <guilabel
+>Zkratky 3. úrovně</guilabel
+> jsou zkratkou pro přepínání na třetí úroveň aktivního rozložení (pokud jej má), které je zpracováno X.org. Umožňuje zkratky pouze s modifikátorem. <guilabel
+>Alternativní zkratka</guilabel
+> je zkratkou pro přepínání rozložení, které je zpracováno &plasma;. Ne podporuje zkratky pouze s modifikátorem a také nemusí fungovat v některých situacích (např. pokud je aktivní vyskakovací okno nebo ze spořiče obrazovky). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Nastavit rozvržení</guilabel
+></term>
+<listitem>
+<para
+>Pokud zaškrtnete <guilabel
+>Konfigurovat rozložení</guilabel
+>, budete moci přidávat a odstraňovat rozložení klávesnice, abyste mohli přepínat mezi nimi, když je potřeba. </para>
+<para
+>Kliknutím na <guibutton
+>Přidat</guibutton
+> se otevře dialogové okno, ve kterém budete moci zvolit nové rozložení klávesnice, které chcete přidat, stejně jako jeho variantu, štítek a zkratku. </para>
+<para
+>Seznam rozložení vpravo od štítku <guilabel
+>Rozložení</guilabel
+> v dialogovém okně <guilabel
+>Přidat rozložení</guilabel
+> lze zúžit pomocí rozevíracího seznamu <guilabel
+>Omezit výběr podle jazyka</guilabel
+>. Můžete kliknout na tlačítko <guibutton
+>Náhled</guibutton
+> pro náhled zvoleného rozložení v samostatném okně. </para>
+<para
+>Můžete uspořádat rozložení pomocí tlačítek nahoru a dolů, přičemž horní je výchozí. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Náhradní rozvržení</guilabel
+></term>
+<listitem>
+<para
+>Tato možnost může být povolena pouze pokud máte více než dvě rozložení.</para>
+<para
+>Náhradní rozložení umožňují snadno přepínat mezi malým počtem rozložení a zároveň mít více rozložení snadno dostupných poblíž. Například můžete používat 3 jazyky: angličtinu, ukrajinštinu a němčinu, ale první dva jsou často používány a třetí pouze občas. V tomto případě můžete nakonfigurovat první dvě jako hlavní rozložení (nastavení <guilabel
+>Počet hlavních rozložení</guilabel
+>: 2) a německé jako náhradní - když přepnete pomocí klávesnice a levého tlačítka myši, přepínání proběhne pouze mezi hlavními rozloženími, ale vždy můžete vybrat 3. rozložení pomocí kontextové nabídky.</para>
+<para
+>Když je vybráno náhradní rozložení, nahrazuje poslední hlavní rozložení (to je provedeno z technických důvodů, obvykle globální zkratky fungují na základě 1. aktivního rozložení, takže je spolehlivější zachovat 1. rozložení při povolení aktivace náhradních rozložení).</para>
+<!-- context menu ?-->
+<para
+>Protože X.org umožňuje přepínat pouze mezi 4 rozvrženími, funkce <quote
+>náhradní rozložení</quote
+> také umožňuje překonat toto omezení: uživatel může mít až 4 hlavní rozložení (řízená X.org) a navíc až 4 náhradní rozložení (řízená přepínačem rozložení). Uživatel tak může pohodlně pracovat s až 8 rozloženími (ačkoli limit 4 náhradních rozložení může být v budoucnu zvýšen). </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="advanced">
+<title
+>Záložka Pokročilé</title>
+<para
+>Na této záložce, pokud zaškrtnete <guilabel
+>Konfigurovat možnosti klávesnice</guilabel
+>, budete moci nastavit několik možností týkajících se nastavení speciálních kláves. Můžete tyto možnosti rozšířit kliknutím na symbol &gt; vlevo od možnosti a poté zvolit své nastavení v rozšířeném seznamu.</para>
+<para
+>Toto je nástroj s grafickým rozhraním, který pomáhá vytvářet vlastní rozložení klávesnice pro X11 pomocí XKB. </para>
+<para
+>Více informací naleznete v části <emphasis
+>Odkazy</emphasis
+> na <ulink url="https://www.freedesktop.org/wiki/Software/XKeyboardConfig"
+>stránce XKeyboardConfig na freedesktop.org</ulink
+>. </para>
+</sect1>
+</article>
