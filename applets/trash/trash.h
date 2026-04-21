@@ -17,6 +17,7 @@ class Trash : public QObject
     QML_SINGLETON
 
     Q_PROPERTY(bool emptying READ emptying NOTIFY emptyingChanged)
+    Q_PROPERTY(int count READ count NOTIFY countChanged)
 
 public:
     explicit Trash(QObject *parent = nullptr);
@@ -24,6 +25,9 @@ public:
 
     bool emptying() const;
     Q_SIGNAL void emptyingChanged(bool emptying);
+
+    int count() const;
+    Q_SIGNAL void countChanged();
 
     Q_INVOKABLE void openTrash();
     Q_INVOKABLE void trashUrls(const QList<QUrl> &urls);
@@ -33,4 +37,5 @@ public:
 
 private:
     bool m_emptying = false;
+    int m_count = 0;
 };

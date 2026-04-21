@@ -6,22 +6,41 @@
 
 #include "trash.h"
 
-#include <QApplication>
 #include <QFileInfo>
 
-#include <KNotificationJobUiDelegate>
-
+#include <KCoreDirLister>
 #include <KIO/DeleteOrTrashJob>
 #include <KIO/OpenUrlJob>
+#include <KNotificationJobUiDelegate>
+
+using namespace Qt::Literals;
 
 Trash::Trash(QObject *parent)
     : QObject(parent)
 {
+    auto lister = new KCoreDirLister(this);
+
+    connect(lister, &KCoreDirLister::itemsAdded, this, [this](const QUrl & /*directoryUrl*/, const KFileItemList &items) {
+        m_count += items.size();
+        Q_EMIT countChanged();
+    });
+
+    connect(lister, &KCoreDirLister::itemsDeleted, this, [this](const KFileItemList &items) {
+        m_count -= items.count();
+        Q_EMIT countChanged();
+    });
+
+    lister->openUrl(QUrl(u"trash:/"_s));
 }
 
 bool Trash::emptying() const
 {
     return m_emptying;
+}
+
+int Trash::count() const
+{
+    return m_count;
 }
 
 void Trash::openTrash()
