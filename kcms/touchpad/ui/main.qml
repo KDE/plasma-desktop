@@ -140,11 +140,11 @@ KCMUtils.SimpleKCM {
             }
 
             Kirigami.FormEntry {
-                subtitle: i18ndc("kcm_touchpad", "@label 'this' refers to the 'disable touchpad while typing' feature", "This can interfere with video games.")
+                subtitle: dwt.Accessible.description
                 contentItem: QQC2.CheckBox {
                     id: dwt
                     text: i18ndc("kcm_touchpad", "option:check", "Disable while typing")
-                    Accessible.description: dwtInfoLabel.text
+                    Accessible.description: i18ndc("kcm_touchpad", "@label 'this' refers to the 'disable touchpad while typing' feature", "This can interfere with video games.")
                     leftPadding: Application.layoutDirection === Qt.LeftToRight ?
                         deviceEnabled.contentItem.leftPadding : disableEventsOnExternalMouse.padding
                     rightPadding: Application.layoutDirection === Qt.RightToLeft ?
@@ -465,11 +465,11 @@ KCMUtils.SimpleKCM {
             }
 
             Kirigami.FormEntry {
-                subtitle: !noMiddleSoftwareEmulation.visible ? i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by pressing anywhere with three fingers.") : ""
+                subtitle: rightClickMethodClickfinger.Accessible.description
                 contentItem: QQC2.RadioButton {
                     id: rightClickMethodClickfinger
                     text: i18ndc("kcm_touchpad", "@option:radio Completes the sentence 'right-click by pressing with two fingers'", "Pressing anywhere with two fingers")
-                    Accessible.description: rightClickMethodClickfingerInfoLabel.visible ? rightClickMethodClickfingerInfoLabel.text : ""
+                    Accessible.description: !noMiddleSoftwareEmulation.visible ? i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by pressing anywhere with three fingers.") : ""
                     topPadding: Kirigami.Units.smallSpacing // in lieu of rightClickMethod.spacing
                     enabled: root.device?.supportsClickMethodClickfinger ?? false
                     checked: enabled && (root.device?.clickMethodClickfinger ?? false)
