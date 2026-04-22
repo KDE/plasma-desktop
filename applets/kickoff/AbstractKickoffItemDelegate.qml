@@ -40,6 +40,7 @@ T.ItemDelegate {
 
     readonly property Flickable view: ListView.view ?? GridView.view
     property bool isCategoryListItem: false
+    property bool removalPlaceholderActive: false
     readonly property bool hasActionList: model && (model.favoriteId !== null || ("hasActionList" in model && model.hasActionList === true))
     property bool isSearchResult: false
 

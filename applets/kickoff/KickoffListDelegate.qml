@@ -53,7 +53,7 @@ AbstractKickoffItemDelegate {
 
             animated: false
             selected: root.iconAndLabelsShouldlookSelected
-            source: root.decoration || root.icon.name || root.icon.source
+            source: root.removalPlaceholderActive ? "list-remove" : (root.decoration || root.icon.name || root.icon.source)
         }
 
         Item {
@@ -68,6 +68,7 @@ AbstractKickoffItemDelegate {
                 readonly property color textColor: root.iconAndLabelsShouldlookSelected ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
 
                 anchors.fill: parent
+                visible: !root.removalPlaceholderActive
 
                 rows: root.compact ? 1 : 2
                 columns: root.compact ? 2 : 1
@@ -113,7 +114,7 @@ AbstractKickoffItemDelegate {
             Layout.preferredHeight: root.isCategoryListItem ? Kirigami.Units.largeSpacing : implicitHeight
 
             visible: active
-            active: root.model?.isNewlyInstalled ?? false
+            active: (root.model?.isNewlyInstalled ?? false) && !root.removalPlaceholderActive
 
             sourceComponent: Kirigami.Badge {
                 text: root.isCategoryListItem ? "" : i18nc("Newly-installed app, badge, keep short", "New!")

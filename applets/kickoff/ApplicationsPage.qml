@@ -70,16 +70,15 @@ BasePage {
             }
 
             component FavoritesDropArea: DropArea {
+                // should be  "as AbstractKickoffItemDelegate", but the type system gets confused when changing view style at runtime
+                readonly property Item draggedItem: kickoff.dragSource.sourceItem
+                readonly property bool acceptableDrag: draggedItem && !kickoff.rootModel.favoritesModel.isFavorite(draggedItem.model.favoriteId)
                 readonly property bool containsAcceptableDrag:  acceptableDrag && containsDrag
-                readonly property bool acceptableDrag: {
-                    let draggedItem = kickoff.dragSource.sourceItem as AbstractKickoffItemDelegate
-                    return draggedItem && !kickoff.rootModel.favoritesModel.isFavorite(draggedItem.model.favoriteId)
-                }
                 function evaluateEvent(event: DragEvent) : void {
                     if (acceptableDrag) {
                         event.accept(Qt.CopyAction)
                     } else {
-                        event.accepted = false
+                        event.accept(Qt.IgnoreAction)
                     }
                 }
             }
@@ -87,15 +86,17 @@ BasePage {
             Loader {
                 id: dropAreaLoader
                 anchors.fill: parent
-                active: sideBarDelegate.index === 0 && !sideBarDelegate.ListView.isCurrentItem
+                active: sideBarDelegate.index === 0 && !!kickoff.dragSource.sourceItem
                 sourceComponent: FavoritesDropArea {
                     onPositionChanged: event => evaluateEvent(event)
                     onEntered: event =>  evaluateEvent(event)
                     onDropped: event => {
-                        if (acceptableDrag) {
-                            kickoff.rootModel.favoritesModel.addFavorite((kickoff.dragSource.sourceItem as AbstractKickoffItemDelegate).model.favoriteId, sideBar.model.favoritesModel.count);
+                        if (acceptableDrag && !sideBarDelegate.ListView.isCurrentItem) {
+                            kickoff.rootModel.favoritesModel.addFavorite(draggedItem.model.favoriteId, sideBar.model.favoritesModel.count)
+                            event.accept(Qt.CopyAction)
+                        } else {
+                            event.accept(Qt.IgnoreAction)
                         }
-                        evaluateEvent(event)
                     }
                 }
             }

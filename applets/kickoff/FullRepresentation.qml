@@ -16,6 +16,7 @@ import QtQuick
 import QtQuick.Templates as T
 import QtQuick.Layouts
 import org.kde.plasma.plasmoid
+import org.kde.plasma.private.kicker as Kicker
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.extras as PlasmaExtras
 
@@ -208,6 +209,42 @@ EmptyPage {
                         root.interceptedPosition = null
                         contentItemStackView.contentItem.currentIndex = 0
                     }
+                }
+            }
+        }
+    }
+
+    Loader {
+        active: !!kickoff.dragSource.sourceItem
+        anchors.fill: parent
+        sourceComponent: DropArea {
+            id: favoriteRemoveDropArea
+
+            // should be  "as AbstractKickoffItemDelegate", but the type system gets confused when changing view style at runtime
+            readonly property Item draggedItem: kickoff.dragSource.sourceItem
+
+            onEntered: event => {
+                if (draggedItem?.view.model instanceof Kicker.KAStatsFavoritesModel) {
+                    event.accept (Qt.MoveAction)
+                    draggedItem.removalPlaceholderActive = true
+                } else {
+                    event.accepted = false
+                }
+            }
+
+            onDropped: event => {
+                if (draggedItem && kickoff.rootModel.favoritesModel.isFavorite(draggedItem.model.favoriteId) && draggedItem.view.model instanceof Kicker.KAStatsFavoritesModel) {
+                    kickoff.rootModel.favoritesModel.removeFavorite(draggedItem.model.favoriteId);
+                    event.accept(Qt.MoveAction)
+                } else {
+                    draggedItem.removalPlaceholderActive = false
+                    event.accepted = false
+                }
+            }
+
+            onExited: {
+                if (draggedItem) {
+                    draggedItem.removalPlaceholderActive = false
                 }
             }
         }

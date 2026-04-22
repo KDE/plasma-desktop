@@ -44,7 +44,7 @@ AbstractKickoffItemDelegate {
 
             animated: false
             selected: root.iconAndLabelsShouldlookSelected
-            source: root.decoration || root.icon.name || root.icon.source
+            source: root.removalPlaceholderActive ? "list-remove" : (root.decoration || root.icon.name || root.icon.source)
 
             Loader {
                 anchors {
@@ -53,7 +53,7 @@ AbstractKickoffItemDelegate {
                     top: parent.top
                 }
                 visible: active
-                active: root.model?.isNewlyInstalled ?? false
+                active: (root.model?.isNewlyInstalled ?? false) && !root.removalPlaceholderActive
 
                 sourceComponent: Kirigami.Badge {
                     text: i18nc("@label Newly-installed app, badge, keep short", "New!") // qmllint disable unqualified
@@ -65,6 +65,7 @@ AbstractKickoffItemDelegate {
 
         PC3.Label {
             id: label
+            visible: !root.removalPlaceholderActive
             Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
             Layout.fillWidth: true
             Layout.preferredHeight: label.lineCount === 1 ? label.implicitHeight * 2 : label.implicitHeight
