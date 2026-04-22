@@ -362,13 +362,13 @@ KCM.SimpleKCM {
                 trailingItems: Kirigami.ContextualHelpButton {
                     Layout.alignment: Qt.AlignRight
                     visible: KWindowSystem.isPlatformWayland
-                    toolTipText: i18nc("@info:whatsthis contextualhelpbutton tooltip", "Tablet Mode will be automatically activated whenever the system detects a touchscreen but no mouse or touchpad. For example: when a transformable laptop's keyboard is flipped around or detached.")
+                    toolTipText: i18nc("@info:whatsthis contextualhelpbutton tooltip", "Tablet Mode will be automatically enabled whenever the system detects a touchscreen but no mouse or touchpad. For example: when a transformable laptop's keyboard is flipped around or detached.")
                 }
             }
 
             Kirigami.FormEntry {
                 contentItem: QQC2.RadioButton {
-                    text: i18nc("As in: 'Tablet Mode is always enabled'", "Always active")
+                    text: i18nc("As in: 'Tablet Mode is always enabled'", "Always enabled")
                     Accessible.description: touchModeAlwaysOffRadioButton.Accessible.description
                     checked: kcm.kwinSettings.tabletMode === "on"
                     onToggled: {
