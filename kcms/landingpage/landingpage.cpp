@@ -34,7 +34,6 @@
 #include <PlasmaActivities/Stats/ResultModel>
 #include <PlasmaActivities/Stats/ResultSet>
 #include <PlasmaActivities/Stats/Terms>
-#include <qicon.h>
 
 namespace KAStats = KActivities::Stats;
 
