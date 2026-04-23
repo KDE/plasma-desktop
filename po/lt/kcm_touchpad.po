@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2026-03-27 21:33+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -147,17 +147,17 @@ msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "Išjungti, kol yra prijungta pelė"
 
-#: ui/main.qml:143
-#, kde-format
-msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
-msgid "This can interfere with video games."
-msgstr "Tai gali trukdyti video žaidimams."
-
 #: ui/main.qml:146
 #, kde-format
 msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "Išjungti renkant tekstą"
+
+#: ui/main.qml:147
+#, kde-format
+msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
+msgid "This can interfere with video games."
+msgstr "Tai gali trukdyti video žaidimams."
 
 #: ui/main.qml:169
 #, kde-format
@@ -294,14 +294,6 @@ msgid "Middle-click by pressing bottom center."
 msgstr ""
 "Inicijuoti viduriniojo mygtuko spustelėjimą paspaudžiant apačioje per vidurį."
 
-#: ui/main.qml:468
-#, kde-format
-msgctxt "@info shown below radio button"
-msgid "Middle-click by pressing anywhere with three fingers."
-msgstr ""
-"Inicijuoti viduriniojo mygtuko spustelėjimą paspaudžiant bet kur trimis "
-"pirštais."
-
 #: ui/main.qml:471
 #, kde-format
 msgctxt ""
@@ -309,6 +301,14 @@ msgctxt ""
 "fingers'"
 msgid "Pressing anywhere with two fingers"
 msgstr "Paspaudžiant bet kur dviem pirštais"
+
+#: ui/main.qml:472
+#, kde-format
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing anywhere with three fingers."
+msgstr ""
+"Inicijuoti viduriniojo mygtuko spustelėjimą paspaudžiant bet kur trimis "
+"pirštais."
 
 #: ui/main.qml:484
 #, kde-format

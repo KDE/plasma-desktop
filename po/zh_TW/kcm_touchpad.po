@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2026-04-08 23:46+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -136,17 +136,17 @@ msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "插入滑鼠時停用(&I)"
 
-#: ui/main.qml:143
-#, kde-format
-msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
-msgid "This can interfere with video games."
-msgstr "這可能會影響到遊戲的遊玩。"
-
 #: ui/main.qml:146
 #, kde-format
 msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "打字時停用(&W)"
+
+#: ui/main.qml:147
+#, kde-format
+msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
+msgid "This can interfere with video games."
+msgstr "這可能會影響到遊戲的遊玩。"
 
 #: ui/main.qml:169
 #, kde-format
@@ -274,12 +274,6 @@ msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "按下右下角來進行中鍵點擊。"
 
-#: ui/main.qml:468
-#, kde-format
-msgctxt "@info shown below radio button"
-msgid "Middle-click by pressing anywhere with three fingers."
-msgstr "在任何地方三指點觸來進行中鍵點擊。"
-
 #: ui/main.qml:471
 #, kde-format
 msgctxt ""
@@ -287,6 +281,12 @@ msgctxt ""
 "fingers'"
 msgid "Pressing anywhere with two fingers"
 msgstr "用兩指點觸任何地方"
+
+#: ui/main.qml:472
+#, kde-format
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing anywhere with three fingers."
+msgstr "在任何地方三指點觸來進行中鍵點擊。"
 
 #: ui/main.qml:484
 #, kde-format

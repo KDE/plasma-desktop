@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2017-10-30 23:08+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -153,18 +153,18 @@ msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "Деактивирај додирник када се утакне миш"
 
-#: ui/main.qml:143
-#, kde-format
-msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
-msgid "This can interfere with video games."
-msgstr ""
-
 #: ui/main.qml:146
 #, fuzzy, kde-format
 #| msgid "Disable touchpad when typing"
 msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "Деактивирање додирника током куцања"
+
+#: ui/main.qml:147
+#, kde-format
+msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
+msgid "This can interfere with video games."
+msgstr ""
 
 #: ui/main.qml:169
 #, fuzzy, kde-format
@@ -304,12 +304,6 @@ msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr ""
 
-#: ui/main.qml:468
-#, kde-format
-msgctxt "@info shown below radio button"
-msgid "Middle-click by pressing anywhere with three fingers."
-msgstr ""
-
 #: ui/main.qml:471
 #, fuzzy, kde-format
 #| msgid "Disable touchpad when typing"
@@ -318,6 +312,12 @@ msgctxt ""
 "fingers'"
 msgid "Pressing anywhere with two fingers"
 msgstr "Деактивирање додирника током куцања"
+
+#: ui/main.qml:472
+#, kde-format
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing anywhere with three fingers."
+msgstr ""
 
 #: ui/main.qml:484
 #, kde-format

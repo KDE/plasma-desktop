@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2026-02-03 21:45+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -142,17 +142,17 @@ msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "마우스가 연결되었을 때 비활성화"
 
-#: ui/main.qml:143
-#, kde-format
-msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
-msgid "This can interfere with video games."
-msgstr "이 설정은 게임에 영향을 줄 수도 있습니다."
-
 #: ui/main.qml:146
 #, kde-format
 msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "입력할 때 끄기"
+
+#: ui/main.qml:147
+#, kde-format
+msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
+msgid "This can interfere with video games."
+msgstr "이 설정은 게임에 영향을 줄 수도 있습니다."
 
 #: ui/main.qml:169
 #, kde-format
@@ -282,12 +282,6 @@ msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "아래쪽 가운데를 누르면 가운데 단추 클릭으로 취급합니다."
 
-#: ui/main.qml:468
-#, kde-format
-msgctxt "@info shown below radio button"
-msgid "Middle-click by pressing anywhere with three fingers."
-msgstr "어디든지 세 손가락으로 눌러서 가운데 단추를 클릭합니다."
-
 #: ui/main.qml:471
 #, kde-format
 msgctxt ""
@@ -295,6 +289,12 @@ msgctxt ""
 "fingers'"
 msgid "Pressing anywhere with two fingers"
 msgstr "어디든지 두 손가락으로 누르기"
+
+#: ui/main.qml:472
+#, kde-format
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing anywhere with three fingers."
+msgstr "어디든지 세 손가락으로 눌러서 가운데 단추를 클릭합니다."
 
 #: ui/main.qml:484
 #, kde-format

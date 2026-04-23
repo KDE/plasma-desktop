@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2026-03-27 08:33+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
@@ -155,17 +155,17 @@ msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "Désactiver lors d'une connexion de souris"
 
-#: ui/main.qml:143
-#, kde-format
-msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
-msgid "This can interfere with video games."
-msgstr "Cela peut interférer avec les jeux vidéo."
-
 #: ui/main.qml:146
 #, kde-format
 msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "Désactiver lors de la saisie"
+
+#: ui/main.qml:147
+#, kde-format
+msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
+msgid "This can interfere with video games."
+msgstr "Cela peut interférer avec les jeux vidéo."
 
 #: ui/main.qml:169
 #, kde-format
@@ -298,13 +298,6 @@ msgid "Middle-click by pressing bottom center."
 msgstr ""
 "Réaliser un clic central par un appui sur la partie centrale inférieure."
 
-#: ui/main.qml:468
-#, kde-format
-msgctxt "@info shown below radio button"
-msgid "Middle-click by pressing anywhere with three fingers."
-msgstr ""
-"Réalisation d'un clic central par appui avec trois doigts n'importe où."
-
 #: ui/main.qml:471
 #, kde-format
 msgctxt ""
@@ -312,6 +305,13 @@ msgctxt ""
 "fingers'"
 msgid "Pressing anywhere with two fingers"
 msgstr "Par appui n'importe où avec deux doigts"
+
+#: ui/main.qml:472
+#, kde-format
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing anywhere with three fingers."
+msgstr ""
+"Réalisation d'un clic central par appui avec trois doigts n'importe où."
 
 #: ui/main.qml:484
 #, kde-format

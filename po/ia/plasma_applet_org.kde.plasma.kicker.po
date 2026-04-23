@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-22 00:47+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2026-04-13 11:14+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -48,165 +48,181 @@ msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "General"
 
-#: ConfigGeneral.qml:49
+#: ConfigGeneral.qml:50
 #, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Icone:"
 
-#: ConfigGeneral.qml:134
+#: ConfigGeneral.qml:135
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Selige…"
 
-#: ConfigGeneral.qml:139
+#: ConfigGeneral.qml:140
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Netta icones"
 
-#: ConfigGeneral.qml:160
+#: ConfigGeneral.qml:161
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Monstra applicationes como:"
 
-#: ConfigGeneral.qml:162
+#: ConfigGeneral.qml:163
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Solo nomine"
 
-#: ConfigGeneral.qml:162
+#: ConfigGeneral.qml:163
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Solo description"
 
-#: ConfigGeneral.qml:163
+#: ConfigGeneral.qml:164
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Nomine (Description)"
 
-#: ConfigGeneral.qml:163
+#: ConfigGeneral.qml:164
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Description (Nomine)"
 
-#: ConfigGeneral.qml:173
+#: ConfigGeneral.qml:174
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
 msgstr "Comportamento:"
 
-#: ConfigGeneral.qml:175
+#: ConfigGeneral.qml:176
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Ordina applicationes alphabeticamente"
 
-#: ConfigGeneral.qml:183
+#: ConfigGeneral.qml:184
 #, kde-format
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
 msgstr "Applatta sub-menus a un singule nivello"
 
-#: ConfigGeneral.qml:191
+#: ConfigGeneral.qml:192
 #, kde-format
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
 msgstr "Monstra icones sur le nivello radice del menu"
 
-#: ConfigGeneral.qml:197
+#: ConfigGeneral.qml:198
 #, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "Evidentia applicationes frequentemente usate"
 
-#: ConfigGeneral.qml:207
+#: ConfigGeneral.qml:208
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
 msgstr "Monstra categorias:"
 
-#: ConfigGeneral.qml:210
+#: ConfigGeneral.qml:211
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent applications"
 msgstr "Applicationes recente"
 
-#: ConfigGeneral.qml:211
+#: ConfigGeneral.qml:212
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used applications"
 msgstr "Applicationes frequentemente usate"
 
-#: ConfigGeneral.qml:218
+#: ConfigGeneral.qml:219
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent files"
 msgstr "Files recente"
 
-#: ConfigGeneral.qml:219
+#: ConfigGeneral.qml:220
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used files"
 msgstr "Files frequentemente usate"
 
-#: ConfigGeneral.qml:225
+#: ConfigGeneral.qml:227
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Recent files"
+msgctxt "@option:check"
+msgid "Recent places"
+msgstr "Files recente"
+
+#: ConfigGeneral.qml:228
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Often used files"
+msgctxt "@option:check"
+msgid "Often used places"
+msgstr "Files frequentemente usate"
+
+#: ConfigGeneral.qml:234
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
 msgstr "Ordina elementos in categorias per:"
 
-#: ConfigGeneral.qml:226
+#: ConfigGeneral.qml:235
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Recentemente usate"
 
-#: ConfigGeneral.qml:226
+#: ConfigGeneral.qml:235
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Often used"
 msgstr "Soventemente usate"
 
-#: ConfigGeneral.qml:236
+#: ConfigGeneral.qml:245
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
 msgstr "Cerca:"
 
-#: ConfigGeneral.qml:238
+#: ConfigGeneral.qml:247
 #, kde-format
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Expande cerca a marcatores de libro, files e messages de e-posta"
 
-#: ConfigGeneral.qml:246
+#: ConfigGeneral.qml:255
 #, kde-format
 msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr "Alinea resultatos de cerca a basso"
 
-#: ConfigGeneral.qml:251
+#: ConfigGeneral.qml:260
 #, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
 msgstr "Apparentia:"
 
-#: ConfigGeneral.qml:256
+#: ConfigGeneral.qml:265
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
 msgstr "Prefere Modo obscur quando disponibile"
 
-#: ConfigGeneral.qml:260
+#: ConfigGeneral.qml:269
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -264,19 +280,19 @@ msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
 msgstr "Applicationes installate recentemente"
 
-#: main.qml:207
+#: main.qml:208
 #, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
 msgstr "Modifica applicationes..."
 
-#: MenuRepresentation.qml:177
+#: MenuRepresentation.qml:191
 #, kde-format
 msgctxt "@title:group accessible name for favorite group in sidebar"
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: MenuRepresentation.qml:358
+#: MenuRepresentation.qml:372
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"

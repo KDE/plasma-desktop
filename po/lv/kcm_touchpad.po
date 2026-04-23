@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2026-01-13 19:36+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -144,17 +144,17 @@ msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "Izslēgt, kad ir pievienota pele"
 
-#: ui/main.qml:143
-#, kde-format
-msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
-msgid "This can interfere with video games."
-msgstr "Šis iestatījums var traucēt videospēlēs."
-
 #: ui/main.qml:146
 #, kde-format
 msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "Izslēgt rakstīšanas laikā"
+
+#: ui/main.qml:147
+#, kde-format
+msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
+msgid "This can interfere with video games."
+msgstr "Šis iestatījums var traucēt videospēlēs."
 
 #: ui/main.qml:169
 #, kde-format
@@ -286,12 +286,6 @@ msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Vidējais klikšķis, nospiežot apakšā pa vidu."
 
-#: ui/main.qml:468
-#, kde-format
-msgctxt "@info shown below radio button"
-msgid "Middle-click by pressing anywhere with three fingers."
-msgstr "Vidējais klikšķis ar trīs pirkstu pieskārienu."
-
 #: ui/main.qml:471
 #, kde-format
 msgctxt ""
@@ -299,6 +293,12 @@ msgctxt ""
 "fingers'"
 msgid "Pressing anywhere with two fingers"
 msgstr "Pieskaroties uz jebkur skārienpaliktņa ar diviem pirkstiem"
+
+#: ui/main.qml:472
+#, kde-format
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing anywhere with three fingers."
+msgstr "Vidējais klikšķis ar trīs pirkstu pieskārienu."
 
 #: ui/main.qml:484
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2026-04-08 07:07+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -298,10 +298,15 @@ msgid "Never enabled"
 msgstr "არასოდესაა ჩართული"
 
 #: ui/main.qml:365
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
+#| msgid ""
+#| "Tablet Mode will be automatically activated whenever the system detects a "
+#| "touchscreen but no mouse or touchpad. For example: when a transformable "
+#| "laptop's keyboard is flipped around or detached."
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
-"Tablet Mode will be automatically activated whenever the system detects a "
+"Tablet Mode will be automatically enabled whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
@@ -310,9 +315,11 @@ msgstr ""
 "კლავიატურას გამოაძრობთ, ან შეაბრუნებთ."
 
 #: ui/main.qml:371
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "As in: 'Tablet Mode is always enabled'"
+#| msgid "Always active"
 msgctxt "As in: 'Tablet Mode is always enabled'"
-msgid "Always active"
+msgid "Always enabled"
 msgstr "ყოველთვის აქტიურია"
 
 #: ui/main.qml:393

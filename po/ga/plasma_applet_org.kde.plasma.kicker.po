@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.homerun\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-22 00:47+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2026-01-21 11:04+0000\n"
 "Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
 "Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
@@ -50,79 +50,79 @@ msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Ginearálta"
 
-#: ConfigGeneral.qml:49
+#: ConfigGeneral.qml:50
 #, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Deilbhín:"
 
-#: ConfigGeneral.qml:134
+#: ConfigGeneral.qml:135
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Roghnaigh…"
 
-#: ConfigGeneral.qml:139
+#: ConfigGeneral.qml:140
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Deilbhín Glan"
 
-#: ConfigGeneral.qml:160
+#: ConfigGeneral.qml:161
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Taispeáin feidhmchláir mar:"
 
-#: ConfigGeneral.qml:162
+#: ConfigGeneral.qml:163
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Ainm amháin"
 
-#: ConfigGeneral.qml:162
+#: ConfigGeneral.qml:163
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Cur síos amháin"
 
-#: ConfigGeneral.qml:163
+#: ConfigGeneral.qml:164
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Ainm (Cur Síos)"
 
-#: ConfigGeneral.qml:163
+#: ConfigGeneral.qml:164
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Cur Síos (Ainm)"
 
-#: ConfigGeneral.qml:173
+#: ConfigGeneral.qml:174
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
 msgstr "Iompar:"
 
-#: ConfigGeneral.qml:175
+#: ConfigGeneral.qml:176
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Sórtáil iarratais in ord aibítre"
 
-#: ConfigGeneral.qml:183
+#: ConfigGeneral.qml:184
 #, kde-format
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
 msgstr "Fo-roghchláir a leacú go leibhéal amháin"
 
-#: ConfigGeneral.qml:191
+#: ConfigGeneral.qml:192
 #, kde-format
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
 msgstr "Taispeáin deilbhíní ar fhréamhleibhéal an roghchláir"
 
-#: ConfigGeneral.qml:197
+#: ConfigGeneral.qml:198
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Often used applications"
@@ -130,88 +130,104 @@ msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "Feidhmchláir a úsáidtear go minic"
 
-#: ConfigGeneral.qml:207
+#: ConfigGeneral.qml:208
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
 msgstr "Taispeáin catagóirí:"
 
-#: ConfigGeneral.qml:210
+#: ConfigGeneral.qml:211
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent applications"
 msgstr "Iarratais le déanaí"
 
-#: ConfigGeneral.qml:211
+#: ConfigGeneral.qml:212
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used applications"
 msgstr "Feidhmchláir a úsáidtear go minic"
 
-#: ConfigGeneral.qml:218
+#: ConfigGeneral.qml:219
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent files"
 msgstr "Comhaid le déanaí"
 
-#: ConfigGeneral.qml:219
+#: ConfigGeneral.qml:220
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used files"
 msgstr "Comhaid a úsáidtear go minic"
 
-#: ConfigGeneral.qml:225
+#: ConfigGeneral.qml:227
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Recent files"
+msgctxt "@option:check"
+msgid "Recent places"
+msgstr "Comhaid le déanaí"
+
+#: ConfigGeneral.qml:228
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Often used files"
+msgctxt "@option:check"
+msgid "Often used places"
+msgstr "Comhaid a úsáidtear go minic"
+
+#: ConfigGeneral.qml:234
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
 msgstr "Sórtáil míreanna i gcatagóirí de réir:"
 
-#: ConfigGeneral.qml:226
+#: ConfigGeneral.qml:235
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Úsáidte le déanaí"
 
-#: ConfigGeneral.qml:226
+#: ConfigGeneral.qml:235
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Often used"
 msgstr "Úsáidtear go minic"
 
-#: ConfigGeneral.qml:236
+#: ConfigGeneral.qml:245
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
 msgstr "Cuardaigh:"
 
-#: ConfigGeneral.qml:238
+#: ConfigGeneral.qml:247
 #, kde-format
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr ""
 "Leathnaigh an cuardach chuig leabharmharcanna, comhaid agus ríomhphoist"
 
-#: ConfigGeneral.qml:246
+#: ConfigGeneral.qml:255
 #, kde-format
 msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr "Ailínigh torthaí cuardaigh go bun"
 
-#: ConfigGeneral.qml:251
+#: ConfigGeneral.qml:260
 #, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
 msgstr "Dealramh:"
 
-#: ConfigGeneral.qml:256
+#: ConfigGeneral.qml:265
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
 msgstr "Is fearr Mód Dorcha nuair atá sé ar fáil"
 
-#: ConfigGeneral.qml:260
+#: ConfigGeneral.qml:269
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -273,19 +289,19 @@ msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
 msgstr "Feidhmchláir a úsáidtear go minic"
 
-#: main.qml:207
+#: main.qml:208
 #, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
 msgstr "Cuir Feidhmchláir in Eagar…"
 
-#: MenuRepresentation.qml:177
+#: MenuRepresentation.qml:191
 #, kde-format
 msgctxt "@title:group accessible name for favorite group in sidebar"
 msgid "Favorites"
 msgstr "Ceanáin"
 
-#: MenuRepresentation.qml:358
+#: MenuRepresentation.qml:372
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"

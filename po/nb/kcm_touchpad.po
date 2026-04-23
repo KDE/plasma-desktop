@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2026-03-07 20:00+0100\n"
 "Last-Translator: Kjetil Sorlund <translate@sorlund.no>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -144,17 +144,17 @@ msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "Slå av når musa er tilkoblet"
 
-#: ui/main.qml:143
-#, kde-format
-msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
-msgid "This can interfere with video games."
-msgstr "Dette kan ødelegge for dataspill."
-
 #: ui/main.qml:146
 #, kde-format
 msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "Slå av styreplata under skriving"
+
+#: ui/main.qml:147
+#, kde-format
+msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
+msgid "This can interfere with video games."
+msgstr "Dette kan ødelegge for dataspill."
 
 #: ui/main.qml:169
 #, kde-format
@@ -284,12 +284,6 @@ msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Midtklikk ved å trykke nederst i midten."
 
-#: ui/main.qml:468
-#, kde-format
-msgctxt "@info shown below radio button"
-msgid "Middle-click by pressing anywhere with three fingers."
-msgstr "Midtklikk ved å trykke med tre fingre."
-
 #: ui/main.qml:471
 #, kde-format
 msgctxt ""
@@ -297,6 +291,12 @@ msgctxt ""
 "fingers'"
 msgid "Pressing anywhere with two fingers"
 msgstr "Trykk med to fingre hvor som helst"
+
+#: ui/main.qml:472
+#, kde-format
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing anywhere with three fingers."
+msgstr "Midtklikk ved å trykke med tre fingre."
 
 #: ui/main.qml:484
 #, kde-format

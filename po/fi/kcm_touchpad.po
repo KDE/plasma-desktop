@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2026-01-05 17:59+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -149,18 +149,18 @@ msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "Poista käytöstä, kun hiiri on kytketty"
 
-#: ui/main.qml:143
-#, kde-format
-msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
-msgid "This can interfere with video games."
-msgstr "Tämä voi häiritä videopelejä."
-
 #: ui/main.qml:146
 #, fuzzy, kde-format
 #| msgid "Disable while typing"
 msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "Poista käytöstä kirjoitettaessa"
+
+#: ui/main.qml:147
+#, kde-format
+msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
+msgid "This can interfere with video games."
+msgstr "Tämä voi häiritä videopelejä."
 
 #: ui/main.qml:169
 #, kde-format
@@ -307,12 +307,6 @@ msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Keskinapsauta painamalla alareunan keskeltä."
 
-#: ui/main.qml:468
-#, kde-format
-msgctxt "@info shown below radio button"
-msgid "Middle-click by pressing anywhere with three fingers."
-msgstr "Keskinapsautus painamalla minne vain kolmella sormella."
-
 #: ui/main.qml:471
 #, kde-format
 msgctxt ""
@@ -320,6 +314,12 @@ msgctxt ""
 "fingers'"
 msgid "Pressing anywhere with two fingers"
 msgstr "Paina minne vain kahdella sormella"
+
+#: ui/main.qml:472
+#, kde-format
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing anywhere with three fingers."
+msgstr "Keskinapsautus painamalla minne vain kolmella sormella."
 
 #: ui/main.qml:484
 #, kde-format

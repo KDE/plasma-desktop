@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2024-09-07 11:50+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -149,18 +149,18 @@ msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "Disable touchpad when mouse is plugged in"
 
-#: ui/main.qml:143
-#, kde-format
-msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
-msgid "This can interfere with video games."
-msgstr "This can interfere with video games."
-
 #: ui/main.qml:146
 #, fuzzy, kde-format
 #| msgid "Disable while typing"
 msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "Disable while typing"
+
+#: ui/main.qml:147
+#, kde-format
+msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
+msgid "This can interfere with video games."
+msgstr "This can interfere with video games."
 
 #: ui/main.qml:169
 #, fuzzy, kde-format
@@ -310,14 +310,6 @@ msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Middle-click by pressing bottom centre."
 
-#: ui/main.qml:468
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing with three fingers."
-msgctxt "@info shown below radio button"
-msgid "Middle-click by pressing anywhere with three fingers."
-msgstr "Middle-click by pressing with three fingers."
-
 #: ui/main.qml:471
 #, fuzzy, kde-format
 #| msgctxt "@option:radio touchpad integrated right-click"
@@ -327,6 +319,14 @@ msgctxt ""
 "fingers'"
 msgid "Pressing anywhere with two fingers"
 msgstr "Press touchpad with two fingers"
+
+#: ui/main.qml:472
+#, fuzzy, kde-format
+#| msgctxt "@info shown below radio button"
+#| msgid "Middle-click by pressing with three fingers."
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing anywhere with three fingers."
+msgstr "Middle-click by pressing with three fingers."
 
 #: ui/main.qml:484
 #, fuzzy, kde-format

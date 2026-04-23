@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: playground-utils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2026-03-27 00:55+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -143,17 +143,17 @@ msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "Fare takılıyken devre dışı bırak"
 
-#: ui/main.qml:143
-#, kde-format
-msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
-msgid "This can interfere with video games."
-msgstr "Bu ayar, oyun oynarken sorun çıkarabilir."
-
 #: ui/main.qml:146
 #, kde-format
 msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "Yazarken devre dışı bırak"
+
+#: ui/main.qml:147
+#, kde-format
+msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
+msgid "This can interfere with video games."
+msgstr "Bu ayar, oyun oynarken sorun çıkarabilir."
 
 #: ui/main.qml:169
 #, kde-format
@@ -285,12 +285,6 @@ msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Orta tık için alt kısmın ortasına basın."
 
-#: ui/main.qml:468
-#, kde-format
-msgctxt "@info shown below radio button"
-msgid "Middle-click by pressing anywhere with three fingers."
-msgstr "Orta tık için herhangi bir yere üç parmakla basın."
-
 #: ui/main.qml:471
 #, kde-format
 msgctxt ""
@@ -298,6 +292,12 @@ msgctxt ""
 "fingers'"
 msgid "Pressing anywhere with two fingers"
 msgstr "İki parmakla herhangi bir yere bas"
+
+#: ui/main.qml:472
+#, kde-format
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing anywhere with three fingers."
+msgstr "Orta tık için herhangi bir yere üç parmakla basın."
 
 #: ui/main.qml:484
 #, kde-format

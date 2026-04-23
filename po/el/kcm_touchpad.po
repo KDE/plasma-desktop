@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2024-08-12 21:02+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -153,18 +153,18 @@ msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "Απενεργοποίηση της επιφάνειας αφής όταν συνδέεται το ποντίκι"
 
-#: ui/main.qml:143
-#, kde-format
-msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
-msgid "This can interfere with video games."
-msgstr "Αυτό μπορεί να επηρεάσει τα βιντεοπαιχνίδια."
-
 #: ui/main.qml:146
 #, fuzzy, kde-format
 #| msgid "Disable while typing"
 msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "Απενεργοποίηση κατά την πληκτρολόγηση"
+
+#: ui/main.qml:147
+#, kde-format
+msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
+msgid "This can interfere with video games."
+msgstr "Αυτό μπορεί να επηρεάσει τα βιντεοπαιχνίδια."
 
 #: ui/main.qml:169
 #, fuzzy, kde-format
@@ -315,14 +315,6 @@ msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Μεσαίο κλικ πατώντας το κάτω κέντρο."
 
-#: ui/main.qml:468
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing with three fingers."
-msgctxt "@info shown below radio button"
-msgid "Middle-click by pressing anywhere with three fingers."
-msgstr "Μεσαίο κλικ πατώντας με τρία δάχτυλα."
-
 #: ui/main.qml:471
 #, fuzzy, kde-format
 #| msgctxt "@option:radio touchpad integrated right-click"
@@ -332,6 +324,14 @@ msgctxt ""
 "fingers'"
 msgid "Pressing anywhere with two fingers"
 msgstr "Πατήστε την επιφάνειας αφής με δύο δάχτυλα"
+
+#: ui/main.qml:472
+#, fuzzy, kde-format
+#| msgctxt "@info shown below radio button"
+#| msgid "Middle-click by pressing with three fingers."
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing anywhere with three fingers."
+msgstr "Μεσαίο κλικ πατώντας με τρία δάχτυλα."
 
 #: ui/main.qml:484
 #, fuzzy, kde-format

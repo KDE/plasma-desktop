@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2026-01-21 11:04+0000\n"
 "Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
 "Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
@@ -145,17 +145,17 @@ msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "Díchumasaigh agus an luch ceangailte"
 
-#: ui/main.qml:143
-#, kde-format
-msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
-msgid "This can interfere with video games."
-msgstr "Féadann sé seo cur isteach ar chluichí físeáin."
-
 #: ui/main.qml:146
 #, kde-format
 msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "Díchumasaigh agus tú ag clóscríobh"
+
+#: ui/main.qml:147
+#, kde-format
+msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
+msgid "This can interfere with video games."
+msgstr "Féadann sé seo cur isteach ar chluichí físeáin."
 
 #: ui/main.qml:169
 #, kde-format
@@ -286,12 +286,6 @@ msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Cliceáil sa lár trí bhrú ar an mbun lár."
 
-#: ui/main.qml:468
-#, kde-format
-msgctxt "@info shown below radio button"
-msgid "Middle-click by pressing anywhere with three fingers."
-msgstr "Cliceáil sa lár trí bhrú áit ar bith le trí mhéar."
-
 #: ui/main.qml:471
 #, kde-format
 msgctxt ""
@@ -299,6 +293,12 @@ msgctxt ""
 "fingers'"
 msgid "Pressing anywhere with two fingers"
 msgstr "Ag brú áit ar bith le dhá mhéar"
+
+#: ui/main.qml:472
+#, kde-format
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing anywhere with three fingers."
+msgstr "Cliceáil sa lár trí bhrú áit ar bith le trí mhéar."
 
 #: ui/main.qml:484
 #, kde-format

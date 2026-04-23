@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2022-07-31 23:06+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -148,18 +148,18 @@ msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "Toxunma panelini siçan qoşulduqda söndürmək"
 
-#: ui/main.qml:143
-#, kde-format
-msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
-msgid "This can interfere with video games."
-msgstr ""
-
 #: ui/main.qml:146
 #, fuzzy, kde-format
 #| msgid "Disable while typing"
 msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "Yazı zamanı söndürmək"
+
+#: ui/main.qml:147
+#, kde-format
+msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
+msgid "This can interfere with video games."
+msgstr ""
 
 #: ui/main.qml:169
 #, fuzzy, kde-format
@@ -303,13 +303,6 @@ msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Üç barmaqla toxunun."
 
-#: ui/main.qml:468
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers."
-msgctxt "@info shown below radio button"
-msgid "Middle-click by pressing anywhere with three fingers."
-msgstr "Üç barmaqla toxunun."
-
 #: ui/main.qml:471
 #, fuzzy, kde-format
 #| msgid "Press anywhere with two fingers"
@@ -318,6 +311,13 @@ msgctxt ""
 "fingers'"
 msgid "Pressing anywhere with two fingers"
 msgstr "İki barmaqla toxunun"
+
+#: ui/main.qml:472
+#, fuzzy, kde-format
+#| msgid "Press anywhere with three fingers."
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing anywhere with three fingers."
+msgstr "Üç barmaqla toxunun."
 
 #: ui/main.qml:484
 #, fuzzy, kde-format

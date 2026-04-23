@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-22 00:47+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2023-04-12 07:00+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -50,145 +50,159 @@ msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Generalo"
 
-#: ConfigGeneral.qml:49
+#: ConfigGeneral.qml:50
 #, fuzzy, kde-format
 #| msgid "Icon:"
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Piktogramo:"
 
-#: ConfigGeneral.qml:134
+#: ConfigGeneral.qml:135
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Elektu…"
 
-#: ConfigGeneral.qml:139
+#: ConfigGeneral.qml:140
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Klara Piktogramo"
 
-#: ConfigGeneral.qml:160
+#: ConfigGeneral.qml:161
 #, fuzzy, kde-format
 #| msgid "Show applications as:"
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Montri aplikojn kiel:"
 
-#: ConfigGeneral.qml:162
+#: ConfigGeneral.qml:163
 #, fuzzy, kde-format
 #| msgid "Name only"
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Nomo nur"
 
-#: ConfigGeneral.qml:162
+#: ConfigGeneral.qml:163
 #, fuzzy, kde-format
 #| msgid "Description only"
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Nur priskribo"
 
-#: ConfigGeneral.qml:163
+#: ConfigGeneral.qml:164
 #, fuzzy, kde-format
 #| msgid "Name (Description)"
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Nomo (Priskribo)"
 
-#: ConfigGeneral.qml:163
+#: ConfigGeneral.qml:164
 #, fuzzy, kde-format
 #| msgid "Description (Name)"
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Priskribo (Nomo)"
 
-#: ConfigGeneral.qml:173
+#: ConfigGeneral.qml:174
 #, fuzzy, kde-format
 #| msgid "Behavior:"
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
 msgstr "Konduto:"
 
-#: ConfigGeneral.qml:175
+#: ConfigGeneral.qml:176
 #, fuzzy, kde-format
 #| msgid "Sort applications alphabetically"
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Ordigi aplikojn alfabete"
 
-#: ConfigGeneral.qml:183
+#: ConfigGeneral.qml:184
 #, fuzzy, kde-format
 #| msgid "Flatten sub-menus to a single level"
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
 msgstr "Platigi submenuojn al ununura nivelo"
 
-#: ConfigGeneral.qml:191
+#: ConfigGeneral.qml:192
 #, fuzzy, kde-format
 #| msgid "Show icons on the root level of the menu"
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
 msgstr "Montri piktogramojn sur la radika nivelo de la menuo"
 
-#: ConfigGeneral.qml:197
+#: ConfigGeneral.qml:198
 #, fuzzy, kde-format
 #| msgid "Often used applications"
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "Ofte uzataj aplikoj"
 
-#: ConfigGeneral.qml:207
+#: ConfigGeneral.qml:208
 #, fuzzy, kde-format
 #| msgid "Show categories:"
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
 msgstr "Montri kategoriojn:"
 
-#: ConfigGeneral.qml:210
+#: ConfigGeneral.qml:211
 #, fuzzy, kde-format
 #| msgid "Recent applications"
 msgctxt "@option:check"
 msgid "Recent applications"
 msgstr "Lastatempaj aplikoj"
 
-#: ConfigGeneral.qml:211
+#: ConfigGeneral.qml:212
 #, fuzzy, kde-format
 #| msgid "Often used applications"
 msgctxt "@option:check"
 msgid "Often used applications"
 msgstr "Ofte uzataj aplikoj"
 
-#: ConfigGeneral.qml:218
+#: ConfigGeneral.qml:219
 #, fuzzy, kde-format
 #| msgid "Recent files"
 msgctxt "@option:check"
 msgid "Recent files"
 msgstr "Lastatempaj dosieroj"
 
-#: ConfigGeneral.qml:219
+#: ConfigGeneral.qml:220
 #, fuzzy, kde-format
 #| msgid "Often used files"
 msgctxt "@option:check"
 msgid "Often used files"
 msgstr "Ofte uzataj dosieroj"
 
-#: ConfigGeneral.qml:225
+#: ConfigGeneral.qml:227
+#, fuzzy, kde-format
+#| msgid "Recent files"
+msgctxt "@option:check"
+msgid "Recent places"
+msgstr "Lastatempaj dosieroj"
+
+#: ConfigGeneral.qml:228
+#, fuzzy, kde-format
+#| msgid "Often used files"
+msgctxt "@option:check"
+msgid "Often used places"
+msgstr "Ofte uzataj dosieroj"
+
+#: ConfigGeneral.qml:234
 #, fuzzy, kde-format
 #| msgid "Sort items in categories by:"
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
 msgstr "Ordigi erojn en kategorioj per:"
 
-#: ConfigGeneral.qml:226
+#: ConfigGeneral.qml:235
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Lastatempe uzata"
 
-#: ConfigGeneral.qml:226
+#: ConfigGeneral.qml:235
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
@@ -198,40 +212,40 @@ msgctxt ""
 msgid "Often used"
 msgstr "Ofte uzata"
 
-#: ConfigGeneral.qml:236
+#: ConfigGeneral.qml:245
 #, fuzzy, kde-format
 #| msgid "Search:"
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
 msgstr "Serĉi:"
 
-#: ConfigGeneral.qml:238
+#: ConfigGeneral.qml:247
 #, fuzzy, kde-format
 #| msgid "Expand search to bookmarks, files and emails"
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Pligrandigi serĉon al legosignoj, dosieroj kaj retpoŝtoj"
 
-#: ConfigGeneral.qml:246
+#: ConfigGeneral.qml:255
 #, fuzzy, kde-format
 #| msgid "Align search results to bottom"
 msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr "Vicigi serĉrezultojn malsupre"
 
-#: ConfigGeneral.qml:251
+#: ConfigGeneral.qml:260
 #, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
 msgstr ""
 
-#: ConfigGeneral.qml:256
+#: ConfigGeneral.qml:265
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
 msgstr ""
 
-#: ConfigGeneral.qml:260
+#: ConfigGeneral.qml:269
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -290,21 +304,21 @@ msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
 msgstr "Ofte uzataj aplikoj"
 
-#: main.qml:207
+#: main.qml:208
 #, fuzzy, kde-format
 #| msgid "Edit Applications…"
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
 msgstr "Redakti Aplikaĵojn…"
 
-#: MenuRepresentation.qml:177
+#: MenuRepresentation.qml:191
 #, fuzzy, kde-format
 #| msgid "Favorites"
 msgctxt "@title:group accessible name for favorite group in sidebar"
 msgid "Favorites"
 msgstr "Plej ŝatataj"
 
-#: MenuRepresentation.qml:358
+#: MenuRepresentation.qml:372
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2025-05-30 20:35+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -141,17 +141,17 @@ msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "Zakázať, keď je myš pripojená"
 
-#: ui/main.qml:143
-#, kde-format
-msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
-msgid "This can interfere with video games."
-msgstr "To môže zasahovať do videohier."
-
 #: ui/main.qml:146
 #, kde-format
 msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "Zakázať touchpad pri písaní"
+
+#: ui/main.qml:147
+#, kde-format
+msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
+msgid "This can interfere with video games."
+msgstr "To môže zasahovať do videohier."
 
 #: ui/main.qml:169
 #, kde-format
@@ -283,12 +283,6 @@ msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Stlačenie spodného stredu spôsobí stredné kliknutie."
 
-#: ui/main.qml:468
-#, kde-format
-msgctxt "@info shown below radio button"
-msgid "Middle-click by pressing anywhere with three fingers."
-msgstr "Stlačte hocikde s troma prstami na kliknutie stredného tlačidla."
-
 #: ui/main.qml:471
 #, kde-format
 msgctxt ""
@@ -296,6 +290,12 @@ msgctxt ""
 "fingers'"
 msgid "Pressing anywhere with two fingers"
 msgstr "Stlačením kdekoľvek dvoma prstami"
+
+#: ui/main.qml:472
+#, kde-format
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing anywhere with three fingers."
+msgstr "Stlačte hocikde s troma prstami na kliknutie stredného tlačidla."
 
 #: ui/main.qml:484
 #, kde-format
