@@ -289,5 +289,15 @@ PlasmaComponents3.ScrollView {
                 }
             }
         }
+
+        Connections {
+            target: itemList.childDialog?.mainItem ?? null
+            function onHoveredChanged() {
+                const childListView = itemList.childDialog?.mainItem as ItemListView
+                if (childListView.hovered) {
+                    resetIndexTimer.stop()
+                }
+            }
+        }
     }
 }
