@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-23 00:46+0000\n"
-"PO-Revision-Date: 2026-04-08 07:17+0200\n"
+"PO-Revision-Date: 2026-04-23 06:37+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -305,12 +305,7 @@ msgid "Never enabled"
 msgstr "Nikoli omogočeno"
 
 #: ui/main.qml:365
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
-#| msgid ""
-#| "Tablet Mode will be automatically activated whenever the system detects a "
-#| "touchscreen but no mouse or touchpad. For example: when a transformable "
-#| "laptop's keyboard is flipped around or detached."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Tablet Mode will be automatically enabled whenever the system detects a "
@@ -318,16 +313,14 @@ msgid ""
 "laptop's keyboard is flipped around or detached."
 msgstr ""
 "Način tablice bo samodejno aktiviran, kadar sistem zazna zaslon z dotikom a "
-"niti miške niti drsne ploščice. Na primer kadar se prilagodljiva tipkovnica "
+"niti miške niti drsne ploščice. Na primer: kadar se prilagodljiva tipkovnica "
 "preklopi na drugo stran notesnika ali se jo odklopi."
 
 #: ui/main.qml:371
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Tablet Mode is always enabled'"
-#| msgid "Always active"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
-msgstr "Vedno dejavno"
+msgstr "Vedno omogočeno"
 
 #: ui/main.qml:393
 #, kde-format

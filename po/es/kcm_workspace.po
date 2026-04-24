@@ -2,13 +2,13 @@
 # Copyright (C) 2014-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2014, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2014, 2017-2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-23 00:46+0000\n"
-"PO-Revision-Date: 2026-04-09 01:32+0100\n"
+"PO-Revision-Date: 2026-04-23 11:13+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -301,12 +301,7 @@ msgid "Never enabled"
 msgstr "Nunca activado"
 
 #: ui/main.qml:365
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
-#| msgid ""
-#| "Tablet Mode will be automatically activated whenever the system detects a "
-#| "touchscreen but no mouse or touchpad. For example: when a transformable "
-#| "laptop's keyboard is flipped around or detached."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Tablet Mode will be automatically enabled whenever the system detects a "
@@ -318,9 +313,7 @@ msgstr ""
 "teclado de un portátil transformable se pliega o se desprende."
 
 #: ui/main.qml:371
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Tablet Mode is always enabled'"
-#| msgid "Always active"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Siempre activo"

@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the plasma-desktop package.
 # Automatically generated, 2014.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2023, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2014-2017, 2019-2021, 2023, 2025-2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-23 00:46+0000\n"
-"PO-Revision-Date: 2026-04-10 20:37+0100\n"
+"PO-Revision-Date: 2026-04-23 11:14+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: code/tools.js:53
 #, kde-format
@@ -159,20 +159,16 @@ msgid "Often used files"
 msgstr "Archivos usados con frecuencia"
 
 #: ConfigGeneral.qml:227
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Recent files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent places"
-msgstr "Archivos recientes"
+msgstr "Lugares recientes"
 
 #: ConfigGeneral.qml:228
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used places"
-msgstr "Archivos usados con frecuencia"
+msgstr "Lugares usados con frecuencia"
 
 #: ConfigGeneral.qml:234
 #, kde-format

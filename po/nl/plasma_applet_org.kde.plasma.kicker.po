@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2023, 2025, 2026 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2014-2017, 2019-2021, 2023, 2025-2026 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-23 00:46+0000\n"
-"PO-Revision-Date: 2026-04-10 11:31+0200\n"
+"PO-Revision-Date: 2026-04-23 18:55+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: code/tools.js:53
 #, kde-format
@@ -157,20 +157,16 @@ msgid "Often used files"
 msgstr "Vaak gebruikte bestanden"
 
 #: ConfigGeneral.qml:227
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Recent files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent places"
-msgstr "Recente bestanden"
+msgstr "Recente plaatsen"
 
 #: ConfigGeneral.qml:228
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used places"
-msgstr "Vaak gebruikte bestanden"
+msgstr "Vaak gebruikte plaatsen"
 
 #: ConfigGeneral.qml:234
 #, kde-format

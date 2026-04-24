@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-23 00:46+0000\n"
-"PO-Revision-Date: 2026-04-13 21:02+0300\n"
+"PO-Revision-Date: 2026-04-23 08:24+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -299,12 +299,7 @@ msgid "Never enabled"
 msgstr "לא להפעיל אף פעם"
 
 #: ui/main.qml:365
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
-#| msgid ""
-#| "Tablet Mode will be automatically activated whenever the system detects a "
-#| "touchscreen but no mouse or touchpad. For example: when a transformable "
-#| "laptop's keyboard is flipped around or detached."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Tablet Mode will be automatically enabled whenever the system detects a "
@@ -315,9 +310,7 @@ msgstr ""
 "מגע. למשל: כאשר מקלדת של מחשב נייד גמיש מקופלת לאחור או מנותקת."
 
 #: ui/main.qml:371
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Tablet Mode is always enabled'"
-#| msgid "Always active"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "תמיד פעיל"

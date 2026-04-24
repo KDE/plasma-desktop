@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-23 00:46+0000\n"
-"PO-Revision-Date: 2026-04-08 08:45-0300\n"
+"PO-Revision-Date: 2026-04-23 07:38-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -303,26 +303,19 @@ msgid "Never enabled"
 msgstr "Nunca habilitar"
 
 #: ui/main.qml:365
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
-#| msgid ""
-#| "Tablet Mode will be automatically activated whenever the system detects a "
-#| "touchscreen but no mouse or touchpad. For example: when a transformable "
-#| "laptop's keyboard is flipped around or detached."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Tablet Mode will be automatically enabled whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
-"O modo de Tablet será automaticamente ativado sempre que o sistema detectar "
-"uma tela sensível ao toque mas nenhum mouse ou touchpad. Por exemplo, quando "
-"o teclado de um laptop conversível é virado ou desconectado."
+"O modo de Tablet será automaticamente habilitado sempre que o sistema "
+"detectar uma tela sensível ao toque mas nenhum mouse ou touchpad. Por "
+"exemplo, quando o teclado de um laptop conversível é virado ou desconectado."
 
 #: ui/main.qml:371
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Tablet Mode is always enabled'"
-#| msgid "Always active"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Sempre habilitado"

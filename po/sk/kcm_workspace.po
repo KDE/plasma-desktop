@@ -299,26 +299,19 @@ msgid "Never enabled"
 msgstr "Nikdy nepovolené"
 
 #: ui/main.qml:365
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
-#| msgid ""
-#| "Tablet Mode will be automatically activated whenever the system detects a "
-#| "touchscreen but no mouse or touchpad. For example: when a transformable "
-#| "laptop's keyboard is flipped around or detached."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Tablet Mode will be automatically enabled whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
-"Dotykový režim sa automaticky aktivuje vždy, keď systém zistí dotykovú "
-"obrazovku, ale nie myš alebo touchpad. Napríklad: keď otočiteľná klávesnica "
-"prenosného počítača je otočená alebo odpojená."
+"Dotykový režim sa automaticky povolí vždy, keď systém zistí dotykovú "
+"obrazovku, ale nie myš alebo touchpad. Napríklad: keď je otočiteľná "
+"klávesnica prenosného počítača otočená alebo odpojená."
 
 #: ui/main.qml:371
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Tablet Mode is always enabled'"
-#| msgid "Always active"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Vždy povolené"
