@@ -275,6 +275,7 @@ PlasmaComponents3.ScrollView {
 
             LayoutMirroring.enabled: mainRow.LayoutMirroring.enabled
 
+            onExited: rootList.currentIndex = -1
             onInteractionConcluded: root.interactionConcluded()
             onKeyNavigationAtListEnd: {
                 searchField.focus = true;
@@ -286,10 +287,6 @@ PlasmaComponents3.ScrollView {
                 }
                 currentIndex = -1
                 root.focusSideBar()
-            }
-
-            Component.onCompleted: {
-                rootList.exited.connect(root.reset);
             }
         }
 
