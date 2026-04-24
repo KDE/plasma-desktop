@@ -298,14 +298,14 @@ Item {
                     ActionButton {
                         text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Slee&p")
                         icon.name: "system-suspend"
-                        onClicked: root.suspendToRam()
-                        visible: root.suspendToRamSupported
+                        onClicked: sessionManagement.suspend()
+                        visible: sessionManagement.canSuspend
                     },
                     ActionButton {
                         text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "&Hibernate")
                         icon.name: "system-suspend-hibernate"
-                        onClicked: root.suspendToDisk()
-                        visible: root.suspendToDiskSupported
+                        onClicked: sessionManagement.hibernate()
+                        visible: sessionManagement.canHibernate
                     },
                     ActionButton {
                         text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Switch &User")
