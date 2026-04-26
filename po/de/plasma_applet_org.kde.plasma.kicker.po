@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-23 00:46+0000\n"
-"PO-Revision-Date: 2026-01-10 09:46+0100\n"
+"PO-Revision-Date: 2026-04-22 20:50+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: code/tools.js:53
 #, kde-format
@@ -122,11 +122,10 @@ msgid "Show icons on the root level of the menu"
 msgstr "Symbole auf der obersten Ebene des Menüs anzeigen"
 
 #: ConfigGeneral.qml:198
-#, fuzzy, kde-format
-#| msgid "All Installed Applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
-msgstr "Alle Installierten Anwendungen"
+msgstr "Kürzlich installierte Anwendungen hervorheben"
 
 #: ConfigGeneral.qml:208
 #, kde-format
@@ -244,27 +243,25 @@ msgstr "Favoriten"
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Neu!"
 
 #: DashboardRepresentation.qml:909 ItemListDelegate.qml:107
-#, fuzzy, kde-format
-#| msgid "Browse installed applications by categories"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
-msgstr "Installierte Anwendungen kategorisiert durchstöbern"
+msgstr "In dieser Kategorie befindet sich eine kürzlich installierte Anwendung"
 
 #: ItemGridDelegate.qml:94
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Neu!"
 
 #: ItemGridDelegate.qml:96
-#, fuzzy, kde-format
-#| msgid "All Installed Applications"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
-msgstr "Alle Installierten Anwendungen"
+msgstr "Kürzlich installierte Anwendung"
 
 #: ItemListDelegate.qml:39
 #, kde-format
@@ -279,11 +276,10 @@ msgid "Launch"
 msgstr "Starten"
 
 #: ItemListDelegate.qml:108
-#, fuzzy, kde-format
-#| msgid "All Installed Applications"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
-msgstr "Alle Installierten Anwendungen"
+msgstr "Kürzlich installierte Anwendung"
 
 #: main.qml:208
 #, kde-format

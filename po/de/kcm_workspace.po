@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcm_workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-23 00:46+0000\n"
-"PO-Revision-Date: 2026-01-10 10:15+0100\n"
+"PO-Revision-Date: 2026-04-22 20:47+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -286,26 +286,19 @@ msgid "Touch"
 msgstr "Touch"
 
 #: ui/main.qml:344
-#, fuzzy, kde-format
-#| msgctxt "@title:group prefix radiobutton group"
-#| msgid "Enable Touch Mode:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
-msgstr "Touch-Modus aktivieren:"
+msgstr "Tablet-Modus aktivieren:"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
-#| msgid "Automatically enable as needed"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Bei Bedarf automatisch aktivieren"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgctxt "option:radio As in: 'Touch Mode is never enabled'"
-#| msgid "Never enabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Niemals aktiviert"
@@ -337,9 +330,7 @@ msgid "Always enabled"
 msgstr "Immer aktiviert"
 
 #: ui/main.qml:393
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is never enabled'"
-#| msgid "Disabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Deaktiviert"
@@ -348,7 +339,7 @@ msgstr "Deaktiviert"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."
-msgstr ""
+msgstr "Im Tablet-Modus erscheint bei Bedarf die virtuelle Tastatur."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9

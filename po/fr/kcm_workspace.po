@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-23 00:46+0000\n"
-"PO-Revision-Date: 2026-04-09 12:04+0200\n"
+"PO-Revision-Date: 2026-04-24 08:13+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -313,12 +313,7 @@ msgid "Never enabled"
 msgstr "Jamais activé"
 
 #: ui/main.qml:365
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
-#| msgid ""
-#| "Tablet Mode will be automatically activated whenever the system detects a "
-#| "touchscreen but no mouse or touchpad. For example: when a transformable "
-#| "laptop's keyboard is flipped around or detached."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Tablet Mode will be automatically enabled whenever the system detects a "
@@ -326,16 +321,14 @@ msgid ""
 "laptop's keyboard is flipped around or detached."
 msgstr ""
 "Le mode « Tablette » sera automatiquement activé dès la détection par le "
-"système d'un écran tactile mais pas d'une souris ou d'un pavé tactile. Par "
+"système d'un écran tactile mais pas avec une souris ou un pavé tactile. Par "
 "exemple : lorsque le clavier d'un portable modulaire est retourné ou détaché."
 
 #: ui/main.qml:371
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Tablet Mode is always enabled'"
-#| msgid "Always active"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
-msgstr "Toujours actif"
+msgstr "Toujours activé"
 
 #: ui/main.qml:393
 #, kde-format

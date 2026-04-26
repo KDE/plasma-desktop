@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-17 00:46+0000\n"
-"PO-Revision-Date: 2026-03-18 12:00+0100\n"
+"PO-Revision-Date: 2026-04-22 20:52+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -384,7 +384,7 @@ msgstr "Abstandhalter"
 #, kde-format
 msgctxt "@action:menu add a margins separator"
 msgid "Margins Separator"
-msgstr ""
+msgstr "Randabstandstrenner"
 
 #: contents/configuration/PanelConfiguration.qml:140
 #, kde-format
@@ -785,12 +785,10 @@ msgid "Unsupported Widget"
 msgstr "Nicht unterstütztes Miniprogramm"
 
 #: contents/explorer/AppletDelegate.qml:196
-#, fuzzy, kde-format
-#| msgctxt "Text displayed on top of newly installed widgets"
-#| msgid "New!"
+#, kde-format
 msgctxt "Text displayed on top of newly-installed widgets"
 msgid "New!"
-msgstr "Neu"
+msgstr "Neu!"
 
 #: contents/explorer/AppletDelegate.qml:198
 #, kde-format
