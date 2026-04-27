@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-10 00:53+0000\n"
-"PO-Revision-Date: 2026-02-03 21:55+0100\n"
+"PO-Revision-Date: 2026-04-26 21:12+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -183,9 +183,7 @@ msgid "Use compact list item style"
 msgstr "간략한 목록 항목 스타일 사용"
 
 #: ConfigGeneral.qml:187
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Highlight newly installed applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "새로 설치한 앱 강조"
@@ -325,17 +323,13 @@ msgid "Keep Open"
 msgstr "열린 상태로 유지"
 
 #: KickoffGridDelegate.qml:59
-#, fuzzy, kde-format
-#| msgctxt "@label Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "새 앱!"
 
 #: KickoffGridDelegate.qml:61
-#, fuzzy, kde-format
-#| msgctxt "@label Accessible name for badge"
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
 msgstr "새로 설치한 앱"
@@ -347,24 +341,18 @@ msgid "Grid with %1 rows, %2 columns"
 msgstr "%1줄, %2칸 크기 격자"
 
 #: KickoffListDelegate.qml:119
-#, fuzzy, kde-format
-#| msgctxt "@label Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "새 앱!"
 
 #: KickoffListDelegate.qml:124
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis Accessible description for badge"
-#| msgid "There is a newly installed application in this category"
+#, kde-format
 msgid "There is a newly-installed application in this category"
 msgstr "이 분류에 새로 설치한 앱이 있음"
 
 #: KickoffListDelegate.qml:125
-#, fuzzy, kde-format
-#| msgctxt "@label Accessible name for badge"
-#| msgid "Newly installed application"
+#, kde-format
 msgid "Newly-installed application"
 msgstr "새로 설치한 앱"
 

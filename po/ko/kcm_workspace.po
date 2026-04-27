@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-23 00:46+0000\n"
-"PO-Revision-Date: 2026-02-03 21:46+0100\n"
+"PO-Revision-Date: 2026-04-26 21:11+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -94,11 +94,7 @@ msgid "Clicking in scrollbar track:"
 msgstr "스크롤 바의 빈 공간을 클릭했을 때:"
 
 #: ui/main.qml:95
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
-#| "scrolls to the clicked location'"
-#| msgid "Scrolls to the clicked location"
+#, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
 "the clicked location'"
@@ -112,11 +108,7 @@ msgid "Middle-click to scroll to clicked location"
 msgstr "가운데 단추를 클릭했을 때 클릭한 위치로 스크롤"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
-#| "scrolls one page up or down'"
-#| msgid "Scrolls one page up or down"
+#, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
 "page up or down'"
@@ -286,67 +278,51 @@ msgid "Touch"
 msgstr "터치"
 
 #: ui/main.qml:344
-#, fuzzy, kde-format
-#| msgctxt "@title:group prefix radiobutton group"
-#| msgid "Enable Touch Mode:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
-msgstr "터치 모드 활성화:"
+msgstr "태블릿 모드 활성화:"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
-#| msgid "Automatically enable as needed"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "필요할 때 자동으로 활성화"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgctxt "option:radio As in: 'Touch Mode is never enabled'"
-#| msgid "Never enabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "활성화하지 않음"
 
 #: ui/main.qml:365
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
-#| msgid ""
-#| "Touch Mode will be automatically activated whenever the system detects a "
-#| "touchscreen but no mouse or touchpad. For example: when a transformable "
-#| "laptop's keyboard is flipped around or detached."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Tablet Mode will be automatically enabled whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
-"시스템에서 터치스크린이 있지만 마우스나 터치패드가 없을 때 터치 모드를 자동으"
-"로 활성화합니다. 예: 컨버터블 노트북의 키보드가 뒤집혔거나 분리되었을 때."
+"시스템에서 터치스크린이 있지만 마우스나 터치패드가 없을 때 태블릿 모드를 자동"
+"으로 활성화합니다. 예: 컨버터블 노트북의 키보드가 뒤집혔거나 분리되었을 때."
 
 #: ui/main.qml:371
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always active"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "항상 활성화"
 
 #: ui/main.qml:393
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is never enabled'"
-#| msgid "Disabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
-msgstr "사용 안 함"
+msgstr "비활성화됨"
 
 #: ui/main.qml:394
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."
-msgstr ""
+msgstr "태블릿 모드에서는 필요할 때 가상 키보드가 표시됩니다."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
