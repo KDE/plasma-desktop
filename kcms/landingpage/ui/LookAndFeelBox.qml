@@ -15,10 +15,6 @@ import org.kde.plasma.landingpage.kcm
 
 Column {
     id: root
-    Accessible.role: Accessible.RadioButton
-    Accessible.name: text
-    Accessible.onPressAction: button.toggle();
-    Accessible.onToggleAction: button.toggle();
 
     required property ButtonGroup group
     property string packageId
@@ -41,6 +37,8 @@ Column {
 
     AbstractButton {
         id: button
+
+        text: root.text
 
         implicitWidth: root.implicitButtonWidth + implicitIndicatorWidth
         implicitHeight: root.implicitButtonHeight
