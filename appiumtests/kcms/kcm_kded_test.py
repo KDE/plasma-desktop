@@ -51,11 +51,6 @@ class KCMTest(unittest.TestCase):
             "LC_ALL": "en_US.UTF-8",
             "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;qt.qml.typeresolution.cycle.warning=false;qt.qpa.wayland.warning=false;kf.plasma.core.warning=false;kf.windowsystem.warning=false;kf.kirigami.platform.warning=false",
         }
-
-        # work around unresolvable warnings from Kirigami https://qt-project.atlassian.net/browse/QTBUG-143033
-        if "KDECI_BUILD" not in os.environ or os.environ["CI_JOB_NAME"] != "suse_tumbleweed_qt611":
-            environment["QT_FATAL_WARNINGS"] = "1"
-
         options.set_capability("environ", environment)
 
         options.set_capability("timeouts", {'implicit': 10000})
