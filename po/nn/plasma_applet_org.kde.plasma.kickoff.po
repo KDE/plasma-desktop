@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2023-01-15 12:40+0100\n"
+"PO-Revision-Date: 2026-04-27 22:09+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -104,13 +104,13 @@ msgstr "Fjern ikon"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
-msgstr "Tekst-merkelapp:"
+msgstr "Ikontekst:"
 
 #: package/contents/ui/ConfigGeneral.qml:106
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
-msgstr "Skriv her for å leggja til tekst-merkelapp"
+msgstr "Skriv her for å leggja til ikontekst"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
@@ -144,7 +144,7 @@ msgstr "Bruk kompakt listestil"
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
-msgstr "Vert automatisk slått av i trykksjerm-modus"
+msgstr "Vert automatisk slått av i trykkskjerm-modus"
 
 #: package/contents/ui/ConfigGeneral.qml:167
 #, kde-format
