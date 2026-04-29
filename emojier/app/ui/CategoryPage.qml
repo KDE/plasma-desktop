@@ -31,216 +31,163 @@ Kirigami.ScrollablePage {
     horizontalPadding: 0
     Keys.onEscapePressed: Qt.quit()
 
-    titleDelegate: RowLayout {
-        id: titleRowLayout
+    QQC2.ActionGroup {
+        id: skinToneGroup
+        exclusive: true
+    }
 
-        Layout.fillWidth: true
-        Layout.preferredWidth: view.width
+    actions: [
+        Kirigami.Action {
+            text: i18nc("@action Search field action", "Search")
 
-        spacing: Kirigami.Units.smallSpacing
+            displayComponent: Kirigami.SearchField {
+                id: searchField
 
-        Kirigami.Heading {
-            text: view.title
-            textFormat: Text.PlainText
-            elide: Text.ElideRight
-            Layout.fillWidth: true
-        }
+                text: view.searchText
 
-        Kirigami.SearchField {
-            id: searchField
-            Layout.fillWidth: true
-            Layout.minimumWidth: Kirigami.Units.gridUnit * 5
-            Layout.maximumWidth: Math.max((Kirigami.Units.gridUnit * 15) - clearHistoryButton.effectiveWidth - skinToneButton.effectiveWidth, Layout.minimumWidth)
-            text: view.searchText
-            inputMethodHints: Qt.ImhNoPredictiveText
+                inputMethodHints: Qt.ImhNoPredictiveText
 
-            onTextChanged: {
-                forceActiveFocus()
-                emojiModel.search = text
+                onTextChanged: {
+                    forceActiveFocus()
+                    emojiModel.search = text
 
-                // Always focus the first item if there is one
-                if (emojiView.count === 0) {
-                    emojiView.currentIndex = -1;
-                } else {
-                    emojiView.currentIndex = 0;
+                    // Always focus the first item if there is one
+                    if (emojiView.count === 0) {
+                        emojiView.currentIndex = -1;
+                    } else {
+                        emojiView.currentIndex = 0;
+                    }
+
+                    // If nothing was found, try again with all emojis
+                    if (emojiView.currentIndex < 0) {
+                        view.allDataRequested()
+                    }
                 }
 
-                // If nothing was found, try again with all emojis
-                if (emojiView.currentIndex < 0) {
-                    view.allDataRequested()
+                Keys.onEscapePressed: event => {
+                    if (text) {
+                        clear()
+                    } else {
+                        event.accepted = false
+                    }
                 }
-            }
-
-            Keys.onEscapePressed: event => {
-                if (text) {
-                    clear()
-                } else {
+                Keys.onEnterPressed: event => emojiView.currentItem?.Keys.enterPressed(event)
+                Keys.onReturnPressed: event => emojiView.currentItem?.Keys.returnPressed(event)
+                Keys.onDownPressed: event => {
+                    emojiView.currentIndex = Math.max(emojiView.currentIndex, 0)
                     event.accepted = false
                 }
-            }
-            Keys.onEnterPressed: event => emojiView.currentItem?.Keys.enterPressed(event)
-            Keys.onReturnPressed: event => emojiView.currentItem?.Keys.returnPressed(event)
-            Keys.onDownPressed: event => {
-                emojiView.currentIndex = Math.max(emojiView.currentIndex, 0)
-                event.accepted = false
-            }
-            KeyNavigation.down: emojiView
-            KeyNavigation.right: clearHistoryButton
-            Binding {
-                view.Keys.forwardTo: [searchField]
-                view.KeyNavigation.up: searchField.KeyNavigation.down // explicitly set as this and clear button point there
-            }
-            Connections {
-                target: view
-                function onSearchFieldFocusRequested() {
-                    searchField.forceActiveFocus(Qt.TabFocusReason)
+
+                Binding {
+                    view.Keys.forwardTo: [searchField]
+                    view.KeyNavigation.up: searchField.KeyNavigation.down // explicitly set as this and clear button point there
+                }
+                Connections {
+                    target: view
+                    function onSearchFieldFocusRequested() {
+                        searchField.forceActiveFocus(Qt.TabFocusReason)
+                    }
+                }
+
+                Component.onCompleted: {
+                    Qt.callLater(forceActiveFocus);
                 }
             }
-
-            Component.onCompleted: {
-                Qt.callLater(forceActiveFocus);
-            }
-        }
-
-        QQC2.ToolButton {
-            id: clearHistoryButton
-
-            readonly property int effectiveWidth: !visible ? 0 : implicitWidth + titleRowLayout.spacing
-
+        },
+        Kirigami.Action {
             visible: view.showClearHistoryButton
             enabled: emojiView.count > 0
             text: i18nc("@action:button clear emoji history", "Clear History")
             icon.name: "edit-clear-history"
-            onClicked: view.clearHistoryRequested()
-            KeyNavigation.right: skinToneButton
-            Keys.onDownPressed: event => searchField.Keys.downPressed(event)
-        }
+            onTriggered: view.clearHistoryRequested()
+        },
+        Kirigami.Action {
+            text: {
+                let result = i18nc("@action:button Button to open a menu that lets you choose a skin tone", "Skin tone: %1")
 
-
-        QQC2.ToolButton {
-            id: skinToneButton
-
-            readonly property int effectiveWidth: !visible ? 0 : implicitWidth + titleRowLayout.spacing
-            readonly property string label: i18nc("@action:button Button to open a menu that lets you choose a skin tone", "Skin tone:")
-
-            function openMenu() {
-                if (!skinToneMenu.visible) {
-                    skinToneMenu.open()
-                } else {
-                    skinToneMenu.dismiss()
+                switch (view.model.skinTone) {
+                case SkinTone.Neutral:
+                    result = result.arg("🖐️")
+                    break
+                case SkinTone.Light:
+                    result = result.arg("🖐🏻")
+                    break
+                case SkinTone.MediumLight:
+                    result = result.arg("🖐🏼")
+                    break
+                case SkinTone.Medium:
+                    result = result.arg("🖐🏽")
+                    break
+                case SkinTone.MediumDark:
+                    result = result.arg("🖐🏾")
+                    break
+                case SkinTone.Dark:
+                    result = result.arg("🖐🏿")
+                    break
+                default:
+                    break
                 }
+
+                return result
             }
+            visible: view.category === "All" || view.category === "People and Body"
 
-            down: pressed || skinToneMenu.visible
-            visible: view.title === i18nc("@title:page All emojis", "All") || view.category === "People and Body"
-
-            Accessible.name: label
-            Accessible.role: Accessible.ButtonMenu
-
-            contentItem: RowLayout {
-                spacing: Kirigami.Units.smallSpacing
-
-                QQC2.Label {
-                    text: skinToneButton.label
-                }
-                QQC2.Label {
-                    text: {
-                        switch (view.model.skinTone) {
-                        case SkinTone.Neutral:
-                            return "🖐️"
-                        case SkinTone.Light:
-                            return "🖐🏻"
-                        case SkinTone.MediumLight:
-                            return "🖐🏼"
-                        case SkinTone.Medium:
-                            return "🖐🏽"
-                        case SkinTone.MediumDark:
-                            return "🖐🏾"
-                        case SkinTone.Dark:
-                            return "🖐🏿"
-                        default:
-                            return ""
-                        }
-                    }
-                    font.pixelSize: Kirigami.Units.iconSizes.smallMedium
-                }
+            Kirigami.Action {
+                QQC2.ActionGroup.group: skinToneGroup
+                text: i18nc("@action:inmenu Skin Tone", "🖐️ Neutral")
+                Accessible.name: i18nc("@action:inmenu Skin Tone", "Neutral")
+                shortcut: "ctrl+1"
+                checkable: true
+                checked: view.model.skinTone == SkinTone.Neutral
+                onTriggered: view.model.skinTone = SkinTone.Neutral
             }
-
-            Layout.preferredHeight: clearHistoryButton.implicitHeight
-
-            leftPadding: LayoutMirroring.enabled ? Kirigami.Units.iconSizes.smallMedium : Kirigami.Units.largeSpacing
-            rightPadding: LayoutMirroring.enabled ? Kirigami.Units.largeSpacing : Kirigami.Units.iconSizes.smallMedium
-
-            onPressed: openMenu()
-            Keys.onReturnPressed: openMenu()
-            Keys.onEnterPressed: openMenu()
-
-            Keys.onDownPressed: event => searchField.Keys.downPressed(event)
-
-            QQC2.Menu {
-                id: skinToneMenu
-                y: skinToneButton.height
-                QQC2.ActionGroup {
-                    id: skinToneGroup
-                    exclusive: true
-                }
-                Kirigami.Action {
-                    QQC2.ActionGroup.group: skinToneGroup
-                    text: i18nc("@action:inmenu Skin Tone", "🖐️ Neutral")
-                    Accessible.name: i18nc("@action:inmenu Skin Tone", "Neutral")
-                    shortcut: "ctrl+1"
-                    checkable: true
-                    checked: view.model.skinTone == SkinTone.Neutral
-                    onTriggered: view.model.skinTone = SkinTone.Neutral
-                }
-                Kirigami.Action {
-                    QQC2.ActionGroup.group: skinToneGroup
-                    text: i18nc("@action:inmenu Skin Tone", "🖐🏻 Light")
-                    Accessible.name: i18nc("@action:inmenu Skin Tone", "Light")
-                    shortcut: "ctrl+2"
-                    checkable: true
-                    checked: view.model.skinTone == SkinTone.Light
-                    onTriggered: view.model.skinTone = SkinTone.Light
-                }
-                Kirigami.Action {
-                    QQC2.ActionGroup.group: skinToneGroup
-                    text: i18nc("@action:inmenu Skin Tone", "🖐🏼 Medium Light")
-                    Accessible.name: i18nc("@action:inmenu Skin Tone", "Medium Light")
-                    shortcut: "ctrl+3"
-                    checkable: true
-                    checked: view.model.skinTone == SkinTone.MediumLight
-                    onTriggered: view.model.skinTone = SkinTone.MediumLight
-                }
-                Kirigami.Action {
-                    QQC2.ActionGroup.group: skinToneGroup
-                    text: i18nc("@action:inmenu Skin Tone", "🖐🏽 Medium")
-                    Accessible.name: i18nc("@action:inmenu Skin Tone", "Medium")
-                    shortcut: "ctrl+4"
-                    checkable: true
-                    checked: view.model.skinTone == SkinTone.Medium
-                    onTriggered: view.model.skinTone = SkinTone.Medium
-                }
-                Kirigami.Action {
-                    QQC2.ActionGroup.group: skinToneGroup
-                    text: i18nc("@action:inmenu Skin Tone", "🖐🏾 Medium Dark")
-                    Accessible.name: i18nc("@action:inmenu Skin Tone", "Medium Dark")
-                    shortcut: "ctrl+5"
-                    checkable: true
-                    checked: view.model.skinTone == SkinTone.MediumDark
-                    onTriggered: view.model.skinTone = SkinTone.MediumDark
-                }
-                Kirigami.Action {
-                    QQC2.ActionGroup.group: skinToneGroup
-                    text: i18nc("@action:inmenu Skin Tone", "🖐🏿 Dark")
-                    Accessible.name: i18nc("@action:inmenu Skin Tone", "Dark")
-                    shortcut: "ctrl+6"
-                    checkable: true
-                    checked: view.model.skinTone == SkinTone.Dark
-                    onTriggered: view.model.skinTone = SkinTone.Dark
-                }
+            Kirigami.Action {
+                QQC2.ActionGroup.group: skinToneGroup
+                text: i18nc("@action:inmenu Skin Tone", "🖐🏻 Light")
+                Accessible.name: i18nc("@action:inmenu Skin Tone", "Light")
+                shortcut: "ctrl+2"
+                checkable: true
+                checked: view.model.skinTone == SkinTone.Light
+                onTriggered: view.model.skinTone = SkinTone.Light
+            }
+            Kirigami.Action {
+                QQC2.ActionGroup.group: skinToneGroup
+                text: i18nc("@action:inmenu Skin Tone", "🖐🏼 Medium Light")
+                Accessible.name: i18nc("@action:inmenu Skin Tone", "Medium Light")
+                shortcut: "ctrl+3"
+                checkable: true
+                checked: view.model.skinTone == SkinTone.MediumLight
+                onTriggered: view.model.skinTone = SkinTone.MediumLight
+            }
+            Kirigami.Action {
+                QQC2.ActionGroup.group: skinToneGroup
+                text: i18nc("@action:inmenu Skin Tone", "🖐🏽 Medium")
+                Accessible.name: i18nc("@action:inmenu Skin Tone", "Medium")
+                shortcut: "ctrl+4"
+                checkable: true
+                checked: view.model.skinTone == SkinTone.Medium
+                onTriggered: view.model.skinTone = SkinTone.Medium
+            }
+            Kirigami.Action {
+                QQC2.ActionGroup.group: skinToneGroup
+                text: i18nc("@action:inmenu Skin Tone", "🖐🏾 Medium Dark")
+                Accessible.name: i18nc("@action:inmenu Skin Tone", "Medium Dark")
+                shortcut: "ctrl+5"
+                checkable: true
+                checked: view.model.skinTone == SkinTone.MediumDark
+                onTriggered: view.model.skinTone = SkinTone.MediumDark
+            }
+            Kirigami.Action {
+                QQC2.ActionGroup.group: skinToneGroup
+                text: i18nc("@action:inmenu Skin Tone", "🖐🏿 Dark")
+                Accessible.name: i18nc("@action:inmenu Skin Tone", "Dark")
+                shortcut: "ctrl+6"
+                checkable: true
+                checked: view.model.skinTone == SkinTone.Dark
+                onTriggered: view.model.skinTone = SkinTone.Dark
             }
         }
-    }
+    ]
 
     Kirigami.Dialog {
         id: variantDialog
