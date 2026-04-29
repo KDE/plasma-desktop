@@ -287,6 +287,7 @@ void CategoryModelFilter::setCategory(const QString &category)
         beginFilterChange();
         m_category = category;
         endFilterChange(QSortFilterProxyModel::Direction::Rows);
+        Q_EMIT categoryChanged();
     }
 }
 

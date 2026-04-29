@@ -144,13 +144,15 @@ class CategoryModelFilter : public QSortFilterProxyModel
 {
     Q_OBJECT
     QML_ELEMENT
-    Q_PROPERTY(QString category READ category WRITE setCategory)
+    Q_PROPERTY(QString category READ category WRITE setCategory NOTIFY categoryChanged)
 public:
     QString category() const;
 
     void setCategory(const QString &category);
 
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
+
+    Q_SIGNAL void categoryChanged();
 
 private:
     QString m_category;
