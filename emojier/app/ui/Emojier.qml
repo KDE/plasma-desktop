@@ -59,7 +59,7 @@ Kirigami.ApplicationWindow {
 
         icon.name: "document-open-recent-symbolic"
         onTriggered: {
-            window.currentPage.category = "";
+            window.currentPage.category = "Recent";
             window.currentPage.model = recentEmojiModel;
             window.currentPage.title = text;
             window.currentPage.showClearHistoryButton = true;
@@ -74,7 +74,7 @@ Kirigami.ApplicationWindow {
         icon.name: "view-list-icons"
 
         onTriggered: {
-            window.currentPage.category = "";
+            window.currentPage.category = "All";
             window.currentPage.model = emoji;
             window.currentPage.title = text;
             window.currentPage.showClearHistoryButton = false;

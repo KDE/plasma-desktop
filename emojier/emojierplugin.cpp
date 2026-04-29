@@ -292,7 +292,15 @@ void CategoryModelFilter::setCategory(const QString &category)
 
 bool CategoryModelFilter::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
-    return m_category.isEmpty() || sourceModel()->index(source_row, 0, source_parent).data(EmojiModel::CategoryRole).toString() == m_category;
+    if (m_category.isEmpty()) {
+        return true;
+    }
+
+    if (m_category == u"All" || m_category == u"Recent") {
+        return true;
+    }
+
+    return sourceModel()->index(source_row, 0, source_parent).data(EmojiModel::CategoryRole).toString() == m_category;
 }
 
 QString SearchModelFilter::search() const
