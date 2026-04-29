@@ -122,11 +122,15 @@ KCM.ScrollViewKCM {
                         text: model.display
                         Layout.fillWidth: true
                         font.bold: model.checked
+                        padding: Kirigami.Units.smallSpacing
                     }
 
                     QQC2.ToolButton {
+                        Layout.maximumHeight: parent.implicitHeight
                         Layout.rightMargin: Kirigami.Units.largeSpacing
                         icon.name: "edit-reset-symbolic"
+                        icon.width: Kirigami.Units.iconSizes.small
+                        icon.height: Kirigami.Units.iconSizes.small
                         text: i18nc("@action:button", "Reset")
                         visible: model.checked
                         onClicked: kcm.xkbOptionsModel.clearXkbGroup(model.name)
