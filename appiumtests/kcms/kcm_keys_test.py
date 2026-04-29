@@ -97,8 +97,7 @@ class KCMTest(unittest.TestCase):
 
         self.driver.find_element(by=AppiumBy.XPATH, value="//list_item[@name='Emoji Selector']").click()
         self.driver.find_element(by=AppiumBy.NAME, value="Launch:")
-        self.driver.find_element(by=AppiumBy.NAME, value="Meta+.")
-        self.driver.find_element(by=AppiumBy.NAME, value="Meta+Ctrl+Alt+Shift+Space")
+        self.driver.find_element(by=AppiumBy.NAME, value="Meta+., Meta+Ctrl+Alt+Shift+Space")
 
         # Test if the config is saved
         self.driver.find_element(by=AppiumBy.NAME, value="Add custom shortcut").click()
