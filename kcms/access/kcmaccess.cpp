@@ -301,7 +301,9 @@ void KAccessConfig::save()
         || m_data->zoomMagnifierSettings()->findItem(QStringLiteral("ZoomEnableTextCaretTracking"))->isSaveNeeded()
         || m_data->zoomMagnifierSettings()->findItem(QStringLiteral("ZoomUsePatternUpscaler"))->isSaveNeeded()
         || m_data->zoomMagnifierSettings()->findItem(QStringLiteral("ZoomPixelGridZoom"))->isSaveNeeded()
-        || m_data->zoomMagnifierSettings()->findItem(QStringLiteral("ZoomPointerAxisGestureModifiers"))->isSaveNeeded();
+        || m_data->zoomMagnifierSettings()->findItem(QStringLiteral("ZoomPointerAxisGestureModifiers"))->isSaveNeeded()
+        || m_data->zoomMagnifierSettings()->findItem(QStringLiteral("ZoomFocusTrackingMargin"))->isSaveNeeded()
+        || m_data->zoomMagnifierSettings()->findItem(QStringLiteral("ZoomKeepCursorWithinZoomArea"))->isSaveNeeded();
     const bool magnifierSettingsSaveNeeded = m_data->zoomMagnifierSettings()->findItem(QStringLiteral("SharedZoomFactor"))->isSaveNeeded()
         || m_data->zoomMagnifierSettings()->findItem(QStringLiteral("MagnifierWidth"))->isSaveNeeded()
         || m_data->zoomMagnifierSettings()->findItem(QStringLiteral("MagnifierHeight"))->isSaveNeeded();

@@ -117,6 +117,38 @@ Kirigami.Form {
             }
         }
 
+
+        Kirigami.FormEntry {
+            visible: objectModel.visible
+            contentItem: QQC2.SpinBox {
+                id: zoomFocusTrackingMargin
+                Kirigami.FormData.label: i18nc("@label:spinbox", "Focus tracking margin:")
+
+                stepSize: 1
+
+                from: 0
+                to: 1000
+
+                validator: IntValidator {
+                    bottom: Math.min(zoomFocusTrackingMargin.from, zoomFocusTrackingMargin.to)
+                    top: Math.max(zoomFocusTrackingMargin.from, zoomFocusTrackingMargin.to)
+                }
+
+                textFromValue: (value, locale) =>
+                    i18nc("Zoom focus tracking margin expressed in pixels", "%1 px",
+                        (value).toLocaleString(locale, 'f', 0))
+                valueFromText: (text, locale) =>
+                    Number.fromLocaleString(locale, text.replace("px", ""))
+                value: kcm.zoomMagnifierSettings.zoomFocusTrackingMargin
+                onValueModified: kcm.zoomMagnifierSettings.zoomFocusTrackingMargin = value
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.zoomMagnifierSettings
+                    settingName: "zoomFocusTrackingMargin"
+                }
+            }
+        }
+
         Kirigami.FormEntry {
             visible: objectModel.visible
             contentItem: QQC2.CheckBox {
@@ -133,7 +165,8 @@ Kirigami.Form {
 
         Kirigami.FormEntry {
             visible: objectModel.visible
-            contentItem: QQC2.CheckBox {
+            contentItem: QQC2.CheckBox
+            {
                 text: i18nc("@option:check", "Enable text caret tracking")
                 checked: kcm.zoomMagnifierSettings.zoomEnableTextCaretTracking
                 onCheckedChanged: kcm.zoomMagnifierSettings.zoomEnableTextCaretTracking = checked
@@ -141,6 +174,20 @@ Kirigami.Form {
                 KCM.SettingStateBinding {
                     configObject: kcm.zoomMagnifierSettings
                     settingName: "ZoomEnableTextCaretTracking"
+                }
+            }
+        }
+
+        Kirigami.FormEntry {
+            visible: objectModel.visible
+            contentItem: QQC2.CheckBox {
+                text: i18nc("@option:check", "Keep cursor inside focus area")
+                checked: kcm.zoomMagnifierSettings.zoomKeepCursorWithinZoomArea
+                onCheckedChanged: kcm.zoomMagnifierSettings.zoomKeepCursorWithinZoomArea = checked
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.zoomMagnifierSettings
+                    settingName: "ZoomKeepCursorWithinZoomArea"
                 }
             }
         }
