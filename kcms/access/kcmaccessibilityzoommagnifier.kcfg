@@ -36,6 +36,9 @@
     <entry name="ZoomUsePatternUpscaler" key="UsePatternUpscaler" type="Bool">
         <default>true</default>
     </entry>
+    <entry name="ZoomFocusTrackingMargin" key="FocusTrackingMargin" type="UInt">
+      <default>4</default>
+    </entry>
   </group>
   <group name="Effect-magnifier">
     <entry name="MagnifierWidth" key="Width" type="UInt">

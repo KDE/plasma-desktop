@@ -147,6 +147,34 @@ Kirigami.FormLayout {
                 }
             }
 
+            QQC2.SpinBox {
+                id: zoomFocusTrackingMargin
+                Kirigami.FormData.label: i18nc("@label:spinbox", "Focus tracking margin:")
+
+                stepSize: 1
+
+                from: 0
+                to: 1000
+
+                validator: IntValidator {
+                    bottom: Math.min(zoomFocusTrackingMargin.from, zoomFocusTrackingMargin.to)
+                    top: Math.max(zoomFocusTrackingMargin.from, zoomFocusTrackingMargin.to)
+                }
+
+                textFromValue: (value, locale) =>
+                    i18nc("Zoom focus tracking margin expressed in pixels", "%1 px",
+                        (value).toLocaleString(locale, 'f', 0))
+                valueFromText: (text, locale) =>
+                    Number.fromLocaleString(locale, text.replace("px", ""))
+                value: kcm.zoomMagnifierSettings.zoomFocusTrackingMargin
+                onValueModified: kcm.zoomMagnifierSettings.zoomFocusTrackingMargin = value
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.zoomMagnifierSettings
+                    settingName: "zoomFocusTrackingMargin"
+                }
+            }
+
             QQC2.CheckBox {
                 text: i18nc("@option:check", "Sharpen screen content while zoomed in")
                 checked: kcm.zoomMagnifierSettings.zoomUsePatternUpscaler
