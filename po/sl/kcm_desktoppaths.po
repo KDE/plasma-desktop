@@ -1,7 +1,7 @@
 # translation of kcmkonq.po to Slovenian
 # Translation of kcmkonq.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMKONQ.
-# $Id: kcm_desktoppaths.po 1723087 2025-11-17 12:44:32Z scripty $
+# $Id: kcm_desktoppaths.po 1735818 2026-04-30 01:28:00Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-04-30 00:45+0000\n"
 "PO-Revision-Date: 2024-08-30 06:31+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -26,63 +26,63 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Poedit 3.4.4\n"
 
-#: ui/main.qml:52
+#: ui/main.qml:53
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
 msgstr "Mapa namizja:"
 
-#: ui/main.qml:58
+#: ui/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
 msgstr "Ta mapa vsebuje vse datoteke, ki jih vidite na namizju."
 
-#: ui/main.qml:66
+#: ui/main.qml:67
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Documents folder:"
 msgstr "Mapa dokumentov:"
 
-#: ui/main.qml:72
+#: ui/main.qml:73
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
 msgstr ""
 "Ta mapa bo privzeto uporabljena za odpiranje in shranjevanje dokumentov."
 
-#: ui/main.qml:80
+#: ui/main.qml:81
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
 msgstr "Mapa prejemov:"
 
-#: ui/main.qml:86
+#: ui/main.qml:87
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "Ta mapa bo privzeto uporabljena za shranjevanje prejetih predmetov."
 
-#: ui/main.qml:94
+#: ui/main.qml:95
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Videos folder:"
 msgstr "Mapa videov:"
 
-#: ui/main.qml:100
+#: ui/main.qml:101
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
 msgstr ""
 "Ta mapa bo privzeto uporabljena za odpiranje in shranjevanje video datotek."
 
-#: ui/main.qml:108
+#: ui/main.qml:109
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
 msgstr "Mapa slik:"
 
-#: ui/main.qml:114
+#: ui/main.qml:115
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
@@ -90,13 +90,13 @@ msgstr ""
 "Ta mapa bo privzeto uporabljena za odpiranje in shranjevanje slikovnih "
 "datotek."
 
-#: ui/main.qml:122
+#: ui/main.qml:123
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
 msgstr "Mapa glasbe:"
 
-#: ui/main.qml:128
+#: ui/main.qml:129
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
@@ -104,13 +104,13 @@ msgstr ""
 "Ta mapa bo privzeto uporabljena za odpiranje in shranjevanje glasbenih "
 "datotek."
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Public folder:"
 msgstr "Javna mapa:"
 
-#: ui/main.qml:142
+#: ui/main.qml:143
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid ""
@@ -120,18 +120,35 @@ msgstr ""
 "Ta mapa bo privzeto uporabljena za datoteke v javni skupni rabi, kadar je "
 "omogočena skupna raba omrežja."
 
-#: ui/main.qml:150
+#: ui/main.qml:151
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Templates folder:"
 msgstr "Mapa predlog:"
 
-#: ui/main.qml:156
+#: ui/main.qml:157
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
 msgstr ""
 "Ta mapa bo privzeto uporabljena za odpiranje in shranjevanje predlog datotek."
+
+#: ui/main.qml:165
+#, fuzzy, kde-format
+#| msgctxt "@label:textbox"
+#| msgid "Pictures folder:"
+msgctxt "@label:textbox"
+msgid "Projects folder:"
+msgstr "Mapa slik:"
+
+#: ui/main.qml:171
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip and accessible description"
+#| msgid "This folder will be used by default to open or save documents."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save projects."
+msgstr ""
+"Ta mapa bo privzeto uporabljena za odpiranje in shranjevanje dokumentov."
 
 #: ui/UrlRequester.qml:74
 #, kde-format

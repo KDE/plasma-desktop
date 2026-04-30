@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-04-30 00:45+0000\n"
 "PO-Revision-Date: 2023-02-19 16:36+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,27 +17,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.2\n"
 
-#: ui/main.qml:52
+#: ui/main.qml:53
 #, fuzzy, kde-format
 #| msgid "Desktop path:"
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
 msgstr "İş masası yolu:"
 
-#: ui/main.qml:58
+#: ui/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
 msgstr ""
 
-#: ui/main.qml:66
+#: ui/main.qml:67
 #, fuzzy, kde-format
 #| msgid "Documents"
 msgctxt "@label:textbox"
 msgid "Documents folder:"
 msgstr "Sənədlər"
 
-#: ui/main.qml:72
+#: ui/main.qml:73
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -47,14 +47,14 @@ msgstr ""
 "Bu qovluq sənədləri yükləmək və ya saxlamaq üçün standart olaraq istifadə "
 "ediləcəkdir."
 
-#: ui/main.qml:80
+#: ui/main.qml:81
 #, fuzzy, kde-format
 #| msgid "Downloads"
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
 msgstr "Yükləmələr"
 
-#: ui/main.qml:86
+#: ui/main.qml:87
 #, fuzzy, kde-format
 #| msgid "This folder will be used by default to save your downloaded items."
 msgctxt "@info:tooltip and accessible description"
@@ -62,14 +62,14 @@ msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Yüklənənləri saxlamaq üçün bu qovluq standart olaraq istifadə olunacaq."
 
-#: ui/main.qml:94
+#: ui/main.qml:95
 #, fuzzy, kde-format
 #| msgid "Videos path:"
 msgctxt "@label:textbox"
 msgid "Videos folder:"
 msgstr "Videolar yolu:"
 
-#: ui/main.qml:100
+#: ui/main.qml:101
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save movies from or to."
@@ -79,14 +79,14 @@ msgstr ""
 "Bu qovluq videoları yükləmək və ya saxlamaq üçün standart olaraq istifadə "
 "ediləcəkdir."
 
-#: ui/main.qml:108
+#: ui/main.qml:109
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
 msgstr "Şəkillərə yol:"
 
-#: ui/main.qml:114
+#: ui/main.qml:115
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save movies from or to."
@@ -96,13 +96,13 @@ msgstr ""
 "Bu qovluq videoları yükləmək və ya saxlamaq üçün standart olaraq istifadə "
 "ediləcəkdir."
 
-#: ui/main.qml:122
+#: ui/main.qml:123
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
 msgstr ""
 
-#: ui/main.qml:128
+#: ui/main.qml:129
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save music from or to."
@@ -112,14 +112,14 @@ msgstr ""
 "Bu qovluq standart olaraq musiqi yükləmək və ya saxlamaq üçün istifadə "
 "olunacaq."
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, fuzzy, kde-format
 #| msgid "Public path:"
 msgctxt "@label:textbox"
 msgid "Public folder:"
 msgstr "Ümumi yol:"
 
-#: ui/main.qml:142
+#: ui/main.qml:143
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
@@ -130,14 +130,14 @@ msgid ""
 msgstr ""
 "Bu qovluq, adətən şəkilləri yükləmək və ya saxlamaq üçün istifadə olunacaq."
 
-#: ui/main.qml:150
+#: ui/main.qml:151
 #, fuzzy, kde-format
 #| msgid "Templates"
 msgctxt "@label:textbox"
 msgid "Templates folder:"
 msgstr "Şablonlar"
 
-#: ui/main.qml:156
+#: ui/main.qml:157
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save templates from or to."
@@ -146,6 +146,23 @@ msgid "This folder will be used by default to open or save file templates."
 msgstr ""
 "Bu qovluq standart olaraq şablonları yükləmək və ya saxlamaq üçün istifadə "
 "olunacaq."
+
+#: ui/main.qml:165
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Projects folder:"
+msgstr "Şəkillərə yol:"
+
+#: ui/main.qml:171
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save projects."
+msgstr ""
+"Bu qovluq sənədləri yükləmək və ya saxlamaq üçün standart olaraq istifadə "
+"ediləcəkdir."
 
 #: ui/UrlRequester.qml:74
 #, kde-format

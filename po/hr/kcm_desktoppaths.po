@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-04-30 00:45+0000\n"
 "PO-Revision-Date: 2009-12-31 02:12+0100\n"
 "Last-Translator: Andrej Dundovic <adundovi@gmail.com>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -22,27 +22,27 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: ui/main.qml:52
+#: ui/main.qml:53
 #, fuzzy, kde-format
 #| msgid "Desktop %1:"
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
 msgstr "Radna površina%1:"
 
-#: ui/main.qml:58
+#: ui/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
 msgstr ""
 
-#: ui/main.qml:66
+#: ui/main.qml:67
 #, fuzzy, kde-format
 #| msgid "Documents"
 msgctxt "@label:textbox"
 msgid "Documents folder:"
 msgstr "Dokumenti"
 
-#: ui/main.qml:72
+#: ui/main.qml:73
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -50,14 +50,14 @@ msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
 msgstr "Ovaj direktorij će biti korišten kao uobičajeni za čuvanje dokumenata."
 
-#: ui/main.qml:80
+#: ui/main.qml:81
 #, fuzzy, kde-format
 #| msgid "Downloads"
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
 msgstr "Skinute datoteke"
 
-#: ui/main.qml:86
+#: ui/main.qml:87
 #, fuzzy, kde-format
 #| msgid "This folder will be used by default to save your downloaded items."
 msgctxt "@info:tooltip and accessible description"
@@ -65,14 +65,14 @@ msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Ovaj direktorij će biti korišten kao uobičajeni za čuvanje skinutih datoteka."
 
-#: ui/main.qml:94
+#: ui/main.qml:95
 #, fuzzy, kde-format
 #| msgid "Movies path:"
 msgctxt "@label:textbox"
 msgid "Videos folder:"
 msgstr "Putanja filmova:"
 
-#: ui/main.qml:100
+#: ui/main.qml:101
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save movies from or to."
@@ -80,14 +80,14 @@ msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
 msgstr "Ovaj direktorij će biti korišten kao uobičajeni za čuvanje filmova."
 
-#: ui/main.qml:108
+#: ui/main.qml:109
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
 msgstr "Putanja slika:"
 
-#: ui/main.qml:114
+#: ui/main.qml:115
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save movies from or to."
@@ -95,13 +95,13 @@ msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
 msgstr "Ovaj direktorij će biti korišten kao uobičajeni za čuvanje filmova."
 
-#: ui/main.qml:122
+#: ui/main.qml:123
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
 msgstr ""
 
-#: ui/main.qml:128
+#: ui/main.qml:129
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save music from or to."
@@ -109,14 +109,14 @@ msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
 msgstr "Ovaj direktorij će biti korišten kao uobičajeni za čuvanje glazbe."
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, fuzzy, kde-format
 #| msgid "Music path:"
 msgctxt "@label:textbox"
 msgid "Public folder:"
 msgstr "Putanja glazbe:"
 
-#: ui/main.qml:142
+#: ui/main.qml:143
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
@@ -126,20 +126,35 @@ msgid ""
 "sharing is enabled."
 msgstr "Ovaj direktorij će biti korišten kao uobičajeni za čuvanje slika."
 
-#: ui/main.qml:150
+#: ui/main.qml:151
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
 msgctxt "@label:textbox"
 msgid "Templates folder:"
 msgstr "Putanja slika:"
 
-#: ui/main.qml:156
+#: ui/main.qml:157
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
 msgstr "Ovaj direktorij će biti korišten kao uobičajeni za čuvanje slika."
+
+#: ui/main.qml:165
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Projects folder:"
+msgstr "Putanja slika:"
+
+#: ui/main.qml:171
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save projects."
+msgstr "Ovaj direktorij će biti korišten kao uobičajeni za čuvanje dokumenata."
 
 #: ui/UrlRequester.qml:74
 #, kde-format

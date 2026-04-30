@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-04-30 00:45+0000\n"
 "PO-Revision-Date: 2024-12-13 10:10+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -27,37 +27,37 @@ msgstr ""
 "\n"
 "\n"
 
-#: ui/main.qml:52
+#: ui/main.qml:53
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
 msgstr "Skjáborðsmappa:"
 
-#: ui/main.qml:58
+#: ui/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
 msgstr "Þessi mappa inniheldur öll skjölin sem þú sérð á skjáborðinu."
 
-#: ui/main.qml:66
+#: ui/main.qml:67
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Documents folder:"
 msgstr "Mappan Skjöl:"
 
-#: ui/main.qml:72
+#: ui/main.qml:73
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
 msgstr "Þessi mappa verður notuð sjálfgefið til að opna eða vista í skjöl."
 
-#: ui/main.qml:80
+#: ui/main.qml:81
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
 msgstr "Mappan Sóttar skrár:"
 
-#: ui/main.qml:86
+#: ui/main.qml:87
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
@@ -65,49 +65,49 @@ msgstr ""
 "Þessi mappa verður notuð sjálfgefið til að vista í skjöl sem þú sækir af "
 "netinu."
 
-#: ui/main.qml:94
+#: ui/main.qml:95
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Videos folder:"
 msgstr "Mappan Myndskeið:"
 
-#: ui/main.qml:100
+#: ui/main.qml:101
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
 msgstr "Þessi mappa verður notuð sjálfgefið til að opna eða vista í myndskeið."
 
-#: ui/main.qml:108
+#: ui/main.qml:109
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
 msgstr "Mappan Myndir:"
 
-#: ui/main.qml:114
+#: ui/main.qml:115
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
 msgstr "Þessi mappa verður notuð sjálfgefið til að opna eða vista í myndir."
 
-#: ui/main.qml:122
+#: ui/main.qml:123
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
 msgstr "Mappan Tónlist:"
 
-#: ui/main.qml:128
+#: ui/main.qml:129
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
 msgstr "Þessi mappa verður notuð sjálfgefið til að opna eða vista í tónlist."
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Public folder:"
 msgstr "Mappan Opið öllum:"
 
-#: ui/main.qml:142
+#: ui/main.qml:143
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid ""
@@ -117,17 +117,33 @@ msgstr ""
 "Þessi mappa verður notuð sjálfgefið undir skrár sem samnýttar er með öllum "
 "þegar samnýting á neti er virkjuð."
 
-#: ui/main.qml:150
+#: ui/main.qml:151
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Templates folder:"
 msgstr "Mappan Sniðmát:"
 
-#: ui/main.qml:156
+#: ui/main.qml:157
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
 msgstr "Þessi mappa verður notuð sjálfgefið til að opna eða vista í sniðmát."
+
+#: ui/main.qml:165
+#, fuzzy, kde-format
+#| msgctxt "@label:textbox"
+#| msgid "Pictures folder:"
+msgctxt "@label:textbox"
+msgid "Projects folder:"
+msgstr "Mappan Myndir:"
+
+#: ui/main.qml:171
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip and accessible description"
+#| msgid "This folder will be used by default to open or save documents."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save projects."
+msgstr "Þessi mappa verður notuð sjálfgefið til að opna eða vista í skjöl."
 
 #: ui/UrlRequester.qml:74
 #, kde-format

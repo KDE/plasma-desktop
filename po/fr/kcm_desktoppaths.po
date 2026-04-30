@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-04-30 00:45+0000\n"
 "PO-Revision-Date: 2024-08-31 09:56+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -34,51 +34,51 @@ msgstr ""
 "X-Generator: Lokalize 23.08.5\n"
 "X-Text-Markup: kde4\n"
 
-#: ui/main.qml:52
+#: ui/main.qml:53
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
 msgstr "Dossier de bureau :"
 
-#: ui/main.qml:58
+#: ui/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
 msgstr "Ce dossier contient tous les fichiers que vous voyez sur votre bureau."
 
-#: ui/main.qml:66
+#: ui/main.qml:67
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Documents folder:"
 msgstr "Dossier des documents :"
 
-#: ui/main.qml:72
+#: ui/main.qml:73
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
 msgstr ""
 "Ce dossier sera utilisé par défaut pour ouvrir ou enregistrer des documents."
 
-#: ui/main.qml:80
+#: ui/main.qml:81
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
 msgstr "Dossier des téléchargements :"
 
-#: ui/main.qml:86
+#: ui/main.qml:87
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Ce dossier sera utilisé par défaut pour enregistrer vos éléments téléchargés."
 
-#: ui/main.qml:94
+#: ui/main.qml:95
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Videos folder:"
 msgstr "Dossier des vidéos :"
 
-#: ui/main.qml:100
+#: ui/main.qml:101
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
@@ -86,13 +86,13 @@ msgstr ""
 "Ce dossier sera utilisé par défaut pour ouvrir ou enregistrer des fichiers "
 "de vidéos."
 
-#: ui/main.qml:108
+#: ui/main.qml:109
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
 msgstr "Dossier des images :"
 
-#: ui/main.qml:114
+#: ui/main.qml:115
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
@@ -100,13 +100,13 @@ msgstr ""
 "Ce dossier sera utilisé par défaut pour ouvrir ou enregistrer des fichiers "
 "d'images."
 
-#: ui/main.qml:122
+#: ui/main.qml:123
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
 msgstr "Dossier des musiques :"
 
-#: ui/main.qml:128
+#: ui/main.qml:129
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
@@ -114,13 +114,13 @@ msgstr ""
 "Ce dossier sera utilisé par défaut pour ouvrir ou enregistrer des fichiers "
 "de musiques."
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Public folder:"
 msgstr "Dossier public :"
 
-#: ui/main.qml:142
+#: ui/main.qml:143
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid ""
@@ -130,19 +130,36 @@ msgstr ""
 "Ce dossier sera utilisé par défaut pour les fichiers partagés de façon "
 "publique, lorsque le partage de fichiers sur le réseau est activé."
 
-#: ui/main.qml:150
+#: ui/main.qml:151
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Templates folder:"
 msgstr "Dossier des modèles :"
 
-#: ui/main.qml:156
+#: ui/main.qml:157
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
 msgstr ""
 "Ce dossier sera utilisé par défaut pour ouvrir ou enregistrer des fichiers "
 "de modèles."
+
+#: ui/main.qml:165
+#, fuzzy, kde-format
+#| msgctxt "@label:textbox"
+#| msgid "Pictures folder:"
+msgctxt "@label:textbox"
+msgid "Projects folder:"
+msgstr "Dossier des images :"
+
+#: ui/main.qml:171
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip and accessible description"
+#| msgid "This folder will be used by default to open or save documents."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save projects."
+msgstr ""
+"Ce dossier sera utilisé par défaut pour ouvrir ou enregistrer des documents."
 
 #: ui/UrlRequester.qml:74
 #, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2026-04-30 00:45+0000\n"
 "PO-Revision-Date: 2025-10-03 13:39+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -20,25 +20,25 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 25.08.1\n"
 
-#: ui/main.qml:52
+#: ui/main.qml:53
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
 msgstr "Dosarul biroului:"
 
-#: ui/main.qml:58
+#: ui/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
 msgstr "Acest dosar conține toate fișierele pe care le vedeți pe birou."
 
-#: ui/main.qml:66
+#: ui/main.qml:67
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Documents folder:"
 msgstr "Dosar cu documente:"
 
-#: ui/main.qml:72
+#: ui/main.qml:73
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
@@ -46,13 +46,13 @@ msgstr ""
 "Acest dosar va fi folosit în mod implicit pentru a deschide sau salva "
 "documente."
 
-#: ui/main.qml:80
+#: ui/main.qml:81
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
 msgstr "Dosar cu descărcări:"
 
-#: ui/main.qml:86
+#: ui/main.qml:87
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
@@ -60,13 +60,13 @@ msgstr ""
 "Acest dosar va fi folosit în mod implicit pentru a vă salva elementele "
 "descărcate."
 
-#: ui/main.qml:94
+#: ui/main.qml:95
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Videos folder:"
 msgstr "Dosar cu videoclipuri:"
 
-#: ui/main.qml:100
+#: ui/main.qml:101
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
@@ -74,13 +74,13 @@ msgstr ""
 "Acest dosar va fi folosit în mod implicit pentru a deschide sau salva "
 "fișiere video."
 
-#: ui/main.qml:108
+#: ui/main.qml:109
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
 msgstr "Dosar cu poze:"
 
-#: ui/main.qml:114
+#: ui/main.qml:115
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
@@ -88,26 +88,26 @@ msgstr ""
 "Acest dosar va fi folosit în mod implicit pentru a deschide sau salva "
 "imagini."
 
-#: ui/main.qml:122
+#: ui/main.qml:123
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
 msgstr "Dosar cu muzică:"
 
-#: ui/main.qml:128
+#: ui/main.qml:129
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
 msgstr ""
 "Acest dosar va fi folosit în mod implicit pentru a deschide sau salva muzică."
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Public folder:"
 msgstr "Dosar public:"
 
-#: ui/main.qml:142
+#: ui/main.qml:143
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid ""
@@ -117,19 +117,37 @@ msgstr ""
 "Acest dosar va fi folosit implicit pentru fișierele partajate cu publicul "
 "când e activă partajarea prin rețea."
 
-#: ui/main.qml:150
+#: ui/main.qml:151
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Templates folder:"
 msgstr "Dosar cu șabloane:"
 
-#: ui/main.qml:156
+#: ui/main.qml:157
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
 msgstr ""
 "Acest dosar va fi folosit implicit pentru a deschide sau salva șabloane de "
 "fișiere."
+
+#: ui/main.qml:165
+#, fuzzy, kde-format
+#| msgctxt "@label:textbox"
+#| msgid "Pictures folder:"
+msgctxt "@label:textbox"
+msgid "Projects folder:"
+msgstr "Dosar cu poze:"
+
+#: ui/main.qml:171
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip and accessible description"
+#| msgid "This folder will be used by default to open or save documents."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save projects."
+msgstr ""
+"Acest dosar va fi folosit în mod implicit pentru a deschide sau salva "
+"documente."
 
 #: ui/UrlRequester.qml:74
 #, kde-format
