@@ -5,6 +5,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQml
 import QtQuick
 import QtQuick.Controls
@@ -18,6 +20,7 @@ import org.kde.plasma.workspace.keyboardlayout as Keyboards
 import org.kde.plasma.private.keyboardindicator as KeyboardIndicator
 import org.kde.kirigami as Kirigami
 import org.kde.kscreenlocker as ScreenLocker
+import org.kde.ki18n
 
 import org.kde.plasma.private.sessions
 import org.kde.breeze.components
@@ -28,6 +31,9 @@ Item {
     // If we're using software rendering, draw outlines instead of shadows
     // See https://bugs.kde.org/show_bug.cgi?id=398317
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
+    // Whether we expect a given authenticator to prompt for a credential at all.
+    // This is a shortcut around the NoPasswordUnlock.qml screen when dealing with prompt-less authenticators.
+    property bool expectingPrompt: false // this is set for real when an authenticator is selected
 
     function handleMessage(msg) {
         if (!root.notification) {
@@ -37,6 +43,7 @@ Item {
         } else {
             root.notification += "\n" + msg
         }
+        lockScreenRoot.uiVisible = true
     }
 
     property string pendingPassword
@@ -59,6 +66,9 @@ Item {
         }
 
         function onSucceeded() {
+            if (!lockScreenUi.expectingPrompt) {
+                Qt.quit()
+            }
             if (authenticator.hadPrompt) {
                 Qt.quit();
             } else {
@@ -80,12 +90,13 @@ Item {
             lockScreenUi.handleMessage(authenticator.errorMessage);
         }
 
-        function onPromptChanged(msg) {
+        function onPromptChanged() {
             lockScreenUi.handleMessage(authenticator.prompt);
         }
-        function onPromptForSecretChanged(msg) {
+        function onPromptForSecretChanged() {
             mainBlock.showPassword = false;
             mainBlock.mainPasswordBox.forceActiveFocus();
+            lockScreenUi.handleMessage(authenticator.promptForSecret);
         }
     }
 
@@ -145,6 +156,14 @@ Item {
             }
             authenticator.startAuthenticating();
         }
+
+        Timer { // heart beat keeping the backend active for as long as we are in visible state
+            interval: 1000
+            running: parent.uiVisible
+            repeat: true
+            onTriggered: authenticator.startAuthenticating()
+        }
+
         onBlockUIChanged: {
             if (blockUI) {
                 fadeoutTimer.running = false;
@@ -296,6 +315,59 @@ Item {
                 }
                 userListModel: users
 
+                authenticationTypeItem: RowLayout {
+                    Layout.alignment: Qt.AlignHCenter
+                    Layout.fillWidth: true
+                    visible: authenticationTypeRepeater.count > 1
+
+                    Repeater {
+                        id: authenticationTypeRepeater
+                        model: ScreenLocker.AuthenticatorModel
+
+                        delegate: PlasmaComponents3.Button {
+                            required property int type
+                            required property string iconName
+                            required property bool passwordField
+                            required property bool expectingPrompt
+                            required property string tooltip
+                            required property bool functional
+
+                            onFunctionalChanged: {
+                                if (functional) {
+                                    return
+                                }
+                                root.notification = ""
+                                mainBlock.passwordInputVisible = false
+                                lockScreenUi.handleMessage(KI18n.i18ndc(
+                                    "plasma_shell_org.kde.plasma.desktop",
+                                    "@info:status",
+                                    "This authentication method is not functioning correctly. Please try another method, and check your system configuration."))
+                            }
+
+                            // Be careful if you remove this to ensure defunct handling is present in all scenarios (e.g. onClicked)
+                            enabled: functional
+                            icon.name: iconName
+                            icon.color: functional ? undefined : Kirigami.Theme.negativeTextColor
+                            checked: authenticator.authenticator === type
+                            onClicked: {
+                                authenticator.authenticator = type
+                                root.notification = ""
+                                mainBlock.passwordInputVisible = passwordField
+                                lockScreenUi.expectingPrompt = expectingPrompt
+                            }
+
+                            PlasmaComponents3.ToolTip.text: tooltip
+                            PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
+                            PlasmaComponents3.ToolTip.visible: hovered
+
+                            Component.onCompleted: {
+                                if (checked) {
+                                    clicked()
+                                }
+                            }
+                        }
+                    }
+                }
 
                 notificationMessage: {
                     const parts = [];
