@@ -4,6 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQml
 import QtQuick
 import QtQuick.Controls
@@ -25,6 +27,7 @@ Item {
     // If we're using software rendering, draw outlines instead of shadows
     // See https://bugs.kde.org/show_bug.cgi?id=398317
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
+    property bool expectingPrompt: false // set for real when an authenticator is selected
 
     function handleMessage(msg) {
         if (!root.notification) {
@@ -34,6 +37,7 @@ Item {
         } else {
             root.notification += "\n" + msg
         }
+        lockScreenRoot.uiVisible = true
     }
 
     Kirigami.Theme.inherit: false
@@ -53,6 +57,9 @@ Item {
         }
 
         function onSucceeded() {
+            if (!lockScreenUi.expectingPrompt) {
+                Qt.quit()
+            }
             if (authenticator.hadPrompt) {
                 Qt.quit();
             } else {
@@ -74,12 +81,13 @@ Item {
             lockScreenUi.handleMessage(authenticator.errorMessage);
         }
 
-        function onPromptChanged(msg) {
+        function onPromptChanged() {
             lockScreenUi.handleMessage(authenticator.prompt);
         }
-        function onPromptForSecretChanged(msg) {
+        function onPromptForSecretChanged() {
             mainBlock.showPassword = false;
             mainBlock.mainPasswordBox.forceActiveFocus();
+            lockScreenUi.handleMessage(authenticator.promptForSecret);
         }
     }
 
@@ -135,6 +143,14 @@ Item {
             }
             authenticator.startAuthenticating();
         }
+
+        Timer { // heart beat keeping the backend active for as long as we are in visible state
+            interval: 1000
+            running: parent.uiVisible
+            repeat: true
+            onTriggered: authenticator.startAuthenticating()
+        }
+
         onBlockUIChanged: {
             if (blockUI) {
                 fadeoutTimer.running = false;
@@ -278,6 +294,36 @@ Item {
                 }
                 userListModel: users
 
+                authenticationTypeItem: RowLayout {
+                    Layout.alignment: Qt.AlignHCenter
+                    Layout.fillWidth: true
+                    visible: authenticationTypeRepeater.count > 1
+
+                    Repeater {
+                        id: authenticationTypeRepeater
+                        model: ScreenLocker.AuthenticatorModel {}
+
+                        delegate: PlasmaComponents3.Button {
+                            required property int type
+                            required property string iconName
+                            required property bool passwordField
+                            required property bool expectingPrompt
+                            icon.name: iconName
+                            checked: authenticator.authenticator === type
+                            onClicked: {
+                                authenticator.authenticator = type
+                                root.notification = ""
+                                mainBlock.passwordInputVisible = passwordField
+                                lockScreenUi.expectingPrompt = expectingPrompt
+                            }
+                            Component.onCompleted: {
+                                if (checked) {
+                                    clicked()
+                                }
+                            }
+                        }
+                    }
+                }
 
                 notificationMessage: {
                     const parts = [];
