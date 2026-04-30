@@ -22,6 +22,8 @@ RowLayout {
 
     required property int index
 
+    property bool hoverEnabled: true
+
     property alias currentIndex: runnerMatches.currentIndex
     property alias currentItem: runnerMatches.currentItem
     property alias count: runnerMatches.count
@@ -92,6 +94,7 @@ RowLayout {
 
             Accessible.name: header.text
 
+            hoverEnabled: runnerResultsList.hoverEnabled
             dynamicResize: false
             iconsEnabled: true
             showDescriptionInTooltip: true

@@ -323,6 +323,7 @@ PlasmaComponents3.ScrollView {
                     Layout.fillWidth: true
 
                     visible: model.count > 0 || (model.querying && visible)
+                    hoverEnabled: !hoverBlock.enabled
 
                     model: root.runnerModel.modelForRow(index)
                     mainSearchField: searchField
@@ -534,6 +535,15 @@ PlasmaComponents3.ScrollView {
         onPressed: event => {
             enabled = false
             event.accepted = false
+        }
+
+        onWidthChanged: hoverBlock.reset()
+        Connections {
+            target: root.runnerModel
+
+            function onQueryChanged() : void {
+                hoverBlock.reset()
+            }
         }
     }
 }
