@@ -52,6 +52,7 @@ Kirigami.FormLayout {
                         text: modeLayout.index + 1
                         color: Kirigami.Theme.disabledTextColor
                         font.bold: root.padDevice.currentModes[0] === modeLayout.index
+                        visible: modesRepeater.count > 1 // Don't show the mode number unless there's more than one mode to reduce clutter and confusion
                     }
 
                     ActionBinding {
