@@ -65,10 +65,10 @@ Item {
 
                 readonly property real beginX: form.Kirigami.ScenePosition.x - root.Kirigami.ScenePosition.x
                 readonly property real endX: delegate.button.Kirigami.ScenePosition.x - root.Kirigami.ScenePosition.x + delegate.button.width
-                readonly property real midX: (beginX + endX) / 2.0 + (Kirigami.Units.gridUnit * delegate.index)
+                readonly property real midX: Math.round((beginX + endX) / 2.0 + (Kirigami.Units.gridUnit * delegate.index)) + 0.5
 
-                readonly property real beginY: item.Kirigami.ScenePosition.y - root.Kirigami.ScenePosition.y + (item.height / 2)
-                readonly property real endY: delegate.button.Kirigami.ScenePosition.y - root.Kirigami.ScenePosition.y + (delegate.button.height / 2)
+                readonly property real beginY: Math.round(item.Kirigami.ScenePosition.y - root.Kirigami.ScenePosition.y + (item.height / 2)) + 0.5
+                readonly property real endY: Math.round(delegate.button.Kirigami.ScenePosition.y - root.Kirigami.ScenePosition.y + (delegate.button.height / 2)) + 0.5
 
                 function reloadPosition(): void {
                     startX = Qt.binding(() => beginX);
