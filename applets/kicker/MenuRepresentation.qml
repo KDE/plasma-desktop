@@ -345,8 +345,8 @@ PlasmaComponents3.ScrollView {
                         }
                     }
 
-                    onFocusChanged: {
-                        if (!focus) {
+                    onListActiveFocusChanged: {
+                        if (!listActiveFocus) {
                             currentIndex = -1;
                         }
                     }

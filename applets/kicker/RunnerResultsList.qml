@@ -27,6 +27,7 @@ RowLayout {
     property alias count: runnerMatches.count
     property alias mainSearchField: runnerMatches.mainSearchField
     property alias model: runnerMatches.model
+    property alias listActiveFocus: runnerMatches.activeFocus
 
     readonly property bool isFirstColumn: runnerResultsList.parent.visibleChildren[0] === runnerResultsList
     // the final visible child is the repeater, so need to subtract 2 to get the proper index
