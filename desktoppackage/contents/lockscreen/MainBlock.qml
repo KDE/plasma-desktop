@@ -19,6 +19,7 @@ import org.kde.breeze.components
 SessionManagementScreen {
     id: sessionManager
 
+    property alias passwordInputVisible: passwordLayout.visible
     readonly property alias mainPasswordBox: passwordBox
     property bool lockScreenUiVisible: false
     property alias showPassword: passwordBox.showPassword
@@ -54,6 +55,7 @@ SessionManagementScreen {
     }
 
     RowLayout {
+        id: passwordLayout
         Layout.fillWidth: true
 
         PlasmaExtras.PasswordField {
