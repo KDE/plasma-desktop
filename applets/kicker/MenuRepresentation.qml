@@ -513,31 +513,12 @@ PlasmaComponents3.ScrollView {
         rootModel.refresh();
     }
 
-    MouseArea {
-        id: hoverBlock  // don't hover-activate until mouse is moved to not interfere with keyboard use
+    HoverBlocker {
+        id: hoverBlock
+
         anchors.fill: parent
-        hoverEnabled: true
-        propagateComposedEvents: true // clicking should still work if hovering is blocked
-
-        property bool mouseMoved: false
-
-        function reset() {
-            mouseMoved = false
-            enabled = true
-        }
-
-        onPositionChanged: if (!mouseMoved) {
-            mouseMoved = true
-        } else {
-            enabled = false // this immediately triggers other hover events when bound to their hoverEnabled
-        }
-
-        onPressed: event => {
-            enabled = false
-            event.accepted = false
-        }
-
         onWidthChanged: hoverBlock.reset()
+
         Connections {
             target: root.runnerModel
 

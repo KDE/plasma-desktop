@@ -8,6 +8,7 @@ plasma_add_applet(org.kde.plasma.kicker
     CompactRepresentation.qml
     ConfigGeneral.qml
     DashboardRepresentation.qml
+    HoverBlocker.qml
     ItemAbstractDelegate.qml
     ItemGridDelegate.qml
     ItemGridView.qml
