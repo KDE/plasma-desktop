@@ -42,6 +42,7 @@ Kicker.SubMenu {
         height: implicitHeight
         width: Math.min(Math.max(Layout.minimumWidth, implicitWidth), Layout.maximumWidth)
 
+        hoverEnabled: !hoverBlock.enabled
         iconsEnabled: true
         LayoutMirroring.enabled: itemDialog.LayoutMirroring.enabled
         // force tooltip for recent files - the path is relevant no matter the display setting
@@ -69,9 +70,16 @@ Kicker.SubMenu {
             }
 
             onSourceModelChanged: {
+                hoverBlock.reset()
                 itemListView.currentIndex = -1;
                 itemListView.resetDelegateSizing();
             }
+        }
+
+        HoverBlocker {
+            id: hoverBlock
+            anchors.fill: parent
+            z: 10
         }
     }
 
