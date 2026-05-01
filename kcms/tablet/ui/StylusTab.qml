@@ -89,6 +89,7 @@ Item {
                     x: path.endX
                     y: path.endY
                 }
+                Component.onCompleted: reloadPosition()
             }
 
             Connections {
