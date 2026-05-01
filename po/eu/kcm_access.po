@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-02 00:45+0000\n"
+"POT-Creation-Date: 2026-05-01 00:46+0000\n"
 "PO-Revision-Date: 2026-02-07 00:10+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -610,7 +610,7 @@ msgstr ""
 "Erabili lasterbideak bistaratzailearen eta leihoaren koloreak "
 "alderantzikatzeko"
 
-#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:376
+#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:387
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
@@ -1128,28 +1128,34 @@ msgstr "Zoom-eremuak ez dio erakusleari jarraitzen"
 #: ui/ZoomMagnifier.qml:166
 #, kde-format
 msgctxt "@option:check"
+msgid "Sharpen screen content while zoomed in"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:177
+#, kde-format
+msgctxt "@option:check"
 msgid "Enable focus tracking"
 msgstr "Gaitu fokuaren jarraipena"
 
-#: ui/ZoomMagnifier.qml:178
+#: ui/ZoomMagnifier.qml:189
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "Gaitu testu-kurtsorearen jarraipena"
 
-#: ui/ZoomMagnifier.qml:194
+#: ui/ZoomMagnifier.qml:205
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "Handiagotu eskualdea"
 
-#: ui/ZoomMagnifier.qml:221
+#: ui/ZoomMagnifier.qml:232
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "Zabalera:"
 
-#: ui/ZoomMagnifier.qml:232 ui/ZoomMagnifier.qml:257
+#: ui/ZoomMagnifier.qml:243 ui/ZoomMagnifier.qml:268
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1157,49 +1163,49 @@ msgid_plural "%1 px"
 msgstr[0] "px %1"
 msgstr[1] "%1 px"
 
-#: ui/ZoomMagnifier.qml:233 ui/ZoomMagnifier.qml:258
+#: ui/ZoomMagnifier.qml:244 ui/ZoomMagnifier.qml:269
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "px"
 
-#: ui/ZoomMagnifier.qml:246
+#: ui/ZoomMagnifier.qml:257
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "Altuera:"
 
-#: ui/ZoomMagnifier.qml:275
+#: ui/ZoomMagnifier.qml:286
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "Ezgaituta"
 
-#: ui/ZoomMagnifier.qml:288
+#: ui/ZoomMagnifier.qml:299
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "Zoom-proportzioa:"
 
-#: ui/ZoomMagnifier.qml:321
+#: ui/ZoomMagnifier.qml:332
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr "Kiribiltze keinua aldarazteko teklak:"
 
-#: ui/ZoomMagnifier.qml:359
+#: ui/ZoomMagnifier.qml:370
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
 msgstr "Zoomaren kiribiltze keinuak Wayland-en bakarrik eskuragarri daude."
 
-#: ui/ZoomMagnifier.qml:365
+#: ui/ZoomMagnifier.qml:376
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "Kiribildu, tekla aldarazleak zoom egiteko sakatu bitartean"
 
-#: ui/ZoomMagnifier.qml:386
+#: ui/ZoomMagnifier.qml:397
 #, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-23 00:46+0000\n"
-"PO-Revision-Date: 2026-04-09 11:09+0400\n"
+"PO-Revision-Date: 2026-04-30 08:50+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -299,29 +299,22 @@ msgid "Never enabled"
 msgstr "غير ممكن"
 
 #: ui/main.qml:365
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
-#| msgid ""
-#| "Tablet Mode will be automatically activated whenever the system detects a "
-#| "touchscreen but no mouse or touchpad. For example: when a transformable "
-#| "laptop's keyboard is flipped around or detached."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Tablet Mode will be automatically enabled whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
-"وضع اللمس آليًّا عندما يكتشف النظام شاشة تعمل باللمس ولكن لا يوجد فأرة أو لوحة "
-"لمس. على سبيل المثال: عند قلب لوحة مفاتيح الحاسوب المحمول القابل للتحويل أو "
-"فصلها."
+"يفعّل وضع اللمس آليًّا عندما يكتشف النظام شاشة تعمل باللمس ولكن لا يوجد فأرة أو "
+"لوحة لمس. على سبيل المثال: عند قلب لوحة مفاتيح الحاسوب المحمول القابل "
+"للتحويل أو فصلها."
 
 #: ui/main.qml:371
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Tablet Mode is always enabled'"
-#| msgid "Always active"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
-msgstr "نشط دائمًا"
+msgstr "ممكّن دائمًا"
 
 #: ui/main.qml:393
 #, kde-format

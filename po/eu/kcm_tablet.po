@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-02 00:45+0000\n"
+"POT-Creation-Date: 2026-05-01 00:46+0000\n"
 "PO-Revision-Date: 2026-02-16 00:44+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -554,19 +554,19 @@ msgctxt ""
 msgid "pad button %1"
 msgstr "paneleko %1. botoia"
 
-#: ui/StylusTab.qml:222
+#: ui/StylusTab.qml:223
 #, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Left-handed mode:"
 msgstr "Ezkerti modua:"
 
-#: ui/StylusTab.qml:228
+#: ui/StylusTab.qml:229
 #, kde-format
 msgctxt "@option:check Enable left-handed mode"
 msgid "Enable"
 msgstr "Gaitu"
 
-#: ui/StylusTab.qml:234
+#: ui/StylusTab.qml:235
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -579,14 +579,14 @@ msgstr ""
 "funtzionaltasuna atzekoz aurrera ipintzen du tableta buruz behera erabili "
 "ahal izan dadin."
 
-#: ui/StylusTab.qml:246
+#: ui/StylusTab.qml:247
 #, kde-format
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
 msgstr "Modua:"
 
-#: ui/StylusTab.qml:254
+#: ui/StylusTab.qml:255
 #, kde-format
 msgctxt ""
 "@option:radio Pen mode, where the point on the screen is always where you "
@@ -594,20 +594,20 @@ msgctxt ""
 msgid "Pen"
 msgstr "Arkatza"
 
-#: ui/StylusTab.qml:259
+#: ui/StylusTab.qml:260
 #, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "The cursor follows where you touch the pen on the surface"
 msgstr "Kurtsoreak arkatzak gainazala ukitzen duzun lekua jarraitzen du"
 
-#: ui/StylusTab.qml:280
+#: ui/StylusTab.qml:281
 #, kde-format
 msgctxt ""
 "@option:radio Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
 msgstr "Sagua"
 
-#: ui/StylusTab.qml:285
+#: ui/StylusTab.qml:286
 #, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid ""
@@ -617,42 +617,42 @@ msgstr ""
 "Arkatza gainazalean mugitzean kurtsorea zegoen tokiarekiko erlatibo mugitzen "
 "da, sagu batekin bezala"
 
-#: ui/StylusTab.qml:301
+#: ui/StylusTab.qml:302
 #, kde-format
 msgid "Sync with mouse cursor"
 msgstr "Saguaren kurtsorearekin sinkronizatu"
 
-#: ui/StylusTab.qml:361
+#: ui/StylusTab.qml:362
 #, kde-format
 msgctxt "@label prefix for pen pressure curve config"
 msgid "Pen Pressure:"
 msgstr "Arkatzaren presioa:"
 
-#: ui/StylusTab.qml:421
+#: ui/StylusTab.qml:422
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
 msgstr "%%1"
 
-#: ui/StylusTab.qml:429
+#: ui/StylusTab.qml:430
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
 msgstr "%%1"
 
-#: ui/StylusTab.qml:440
+#: ui/StylusTab.qml:441
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "% 100"
 
-#: ui/StylusTab.qml:448
+#: ui/StylusTab.qml:449
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "% 0"
 
-#: ui/StylusTab.qml:452
+#: ui/StylusTab.qml:453
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -662,13 +662,13 @@ msgstr ""
 "Kurba honek arkatzaren presioaren eta aplikazioak jasotako presio-balioen "
 "arteko erlazioa kontrolatzen du."
 
-#: ui/StylusTab.qml:457
+#: ui/StylusTab.qml:458
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
 msgstr "Presio-tartea:"
 
-#: ui/StylusTab.qml:484
+#: ui/StylusTab.qml:485
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -678,31 +678,31 @@ msgstr ""
 "Atalasearen gaineko edo azpiko presioa estutu egingo da, eta hori bihurtuko "
 "da tarte eraginkor berria."
 
-#: ui/StylusTab.qml:495
+#: ui/StylusTab.qml:496
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "Kalibratzen ari da"
 
-#: ui/StylusTab.qml:497
+#: ui/StylusTab.qml:498
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "Kalibratu"
 
-#: ui/StylusTab.qml:500
+#: ui/StylusTab.qml:501
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "Kalibratzea ez da onartzen"
 
-#: ui/StylusTab.qml:541
+#: ui/StylusTab.qml:542
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
 msgstr "Berrezarri neurrira eginiko kalibrazioa"
 
-#: ui/StylusTab.qml:556
+#: ui/StylusTab.qml:557
 #, kde-format
 msgctxt "@info"
 msgid ""

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-02 00:45+0000\n"
+"POT-Creation-Date: 2026-05-01 00:46+0000\n"
 "PO-Revision-Date: 2026-01-31 18:54+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -601,7 +601,7 @@ msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr ""
 "திரையிலுள்ள அல்லது சாளரத்திலுள்ள நிறங்களை விசைச்சுருக்குவழிகளின் மூலம் புரட்டலாம்."
 
-#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:376
+#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:387
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
@@ -1114,28 +1114,34 @@ msgstr "உருப்பெருக்கி சுட்டிக்கு�
 #: ui/ZoomMagnifier.qml:166
 #, kde-format
 msgctxt "@option:check"
+msgid "Sharpen screen content while zoomed in"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:177
+#, kde-format
+msgctxt "@option:check"
 msgid "Enable focus tracking"
 msgstr "குவியத்தைப் பின்தொடர்"
 
-#: ui/ZoomMagnifier.qml:178
+#: ui/ZoomMagnifier.qml:189
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "இடஞ்சுட்டியைப் பின்தொடர்"
 
-#: ui/ZoomMagnifier.qml:194
+#: ui/ZoomMagnifier.qml:205
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "உருப்பெருக்கும் பரப்பளவு"
 
-#: ui/ZoomMagnifier.qml:221
+#: ui/ZoomMagnifier.qml:232
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "அகலம்:"
 
-#: ui/ZoomMagnifier.qml:232 ui/ZoomMagnifier.qml:257
+#: ui/ZoomMagnifier.qml:243 ui/ZoomMagnifier.qml:268
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1143,49 +1149,49 @@ msgid_plural "%1 px"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ui/ZoomMagnifier.qml:233 ui/ZoomMagnifier.qml:258
+#: ui/ZoomMagnifier.qml:244 ui/ZoomMagnifier.qml:269
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:246
+#: ui/ZoomMagnifier.qml:257
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "உயரம்:"
 
-#: ui/ZoomMagnifier.qml:275
+#: ui/ZoomMagnifier.qml:286
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "முடக்கு"
 
-#: ui/ZoomMagnifier.qml:288
+#: ui/ZoomMagnifier.qml:299
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "உருப்பெருக்க விகிதம்:"
 
-#: ui/ZoomMagnifier.qml:321
+#: ui/ZoomMagnifier.qml:332
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr "உருள்வதற்கான மாற்றிவிசைகள்:"
 
-#: ui/ZoomMagnifier.qml:359
+#: ui/ZoomMagnifier.qml:370
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
 msgstr "உருள்வதற்கான சைகைகளை Wayland-இல் மட்டும்தான பயன்படுத்த முடியும்."
 
-#: ui/ZoomMagnifier.qml:365
+#: ui/ZoomMagnifier.qml:376
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "மாற்றிவிசையை அழுத்தியபடியே உருள்வது உருப்பெருக்க விகிதத்தை மாற்றும்"
 
-#: ui/ZoomMagnifier.qml:386
+#: ui/ZoomMagnifier.qml:397
 #, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"

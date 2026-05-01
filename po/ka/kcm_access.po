@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-02 00:45+0000\n"
+"POT-Creation-Date: 2026-05-01 00:46+0000\n"
 "PO-Revision-Date: 2026-01-16 05:15+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -602,7 +602,7 @@ msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr "გამოიყენეთ მალსახმობები ეკრანის და ფანჯრის ფერების ინვერსიისთვის"
 
-#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:376
+#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:387
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
@@ -1116,28 +1116,34 @@ msgstr "გადიდების არე კურსორს არ მ�
 #: ui/ZoomMagnifier.qml:166
 #, kde-format
 msgctxt "@option:check"
+msgid "Sharpen screen content while zoomed in"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:177
+#, kde-format
+msgctxt "@option:check"
 msgid "Enable focus tracking"
 msgstr "ფოკუსის თვალყურის დევნების ჩართვა"
 
-#: ui/ZoomMagnifier.qml:178
+#: ui/ZoomMagnifier.qml:189
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "ტექსტის კარეტის თვალყურის დევნების ჩართვა"
 
-#: ui/ZoomMagnifier.qml:194
+#: ui/ZoomMagnifier.qml:205
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "გადიდების რეგიონი"
 
-#: ui/ZoomMagnifier.qml:221
+#: ui/ZoomMagnifier.qml:232
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "სიგანე:"
 
-#: ui/ZoomMagnifier.qml:232 ui/ZoomMagnifier.qml:257
+#: ui/ZoomMagnifier.qml:243 ui/ZoomMagnifier.qml:268
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1145,49 +1151,49 @@ msgid_plural "%1 px"
 msgstr[0] "%1 პიქს"
 msgstr[1] "%1 პიქს"
 
-#: ui/ZoomMagnifier.qml:233 ui/ZoomMagnifier.qml:258
+#: ui/ZoomMagnifier.qml:244 ui/ZoomMagnifier.qml:269
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "პქს"
 
-#: ui/ZoomMagnifier.qml:246
+#: ui/ZoomMagnifier.qml:257
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "სიმაღლე:"
 
-#: ui/ZoomMagnifier.qml:275
+#: ui/ZoomMagnifier.qml:286
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "გამორთულია"
 
-#: ui/ZoomMagnifier.qml:288
+#: ui/ZoomMagnifier.qml:299
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "გადიდების კოეფიციენტი:"
 
-#: ui/ZoomMagnifier.qml:321
+#: ui/ZoomMagnifier.qml:332
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr "გადახვევის ჟესტის მოდიფიკატორი ღილაკები:"
 
-#: ui/ZoomMagnifier.qml:359
+#: ui/ZoomMagnifier.qml:370
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
 msgstr "მასშტავის გადახვევის ჟესტები, მხოლოდ, Wayland-ზეა ხელმისაწვდომი."
 
-#: ui/ZoomMagnifier.qml:365
+#: ui/ZoomMagnifier.qml:376
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "გადახვევა, როცა მოდიფიკატორი ღილაკი გასადიდებლადაა დაჭერილი"
 
-#: ui/ZoomMagnifier.qml:386
+#: ui/ZoomMagnifier.qml:397
 #, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"

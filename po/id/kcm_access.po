@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-02 00:45+0000\n"
+"POT-Creation-Date: 2026-05-01 00:46+0000\n"
 "PO-Revision-Date: 2025-03-15 05:45+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -632,7 +632,7 @@ msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr ""
 
-#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:376
+#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:387
 #, fuzzy, kde-format
 #| msgid "Configure Notifications…"
 msgctxt "@action:button"
@@ -1215,29 +1215,35 @@ msgstr ""
 #: ui/ZoomMagnifier.qml:166
 #, kde-format
 msgctxt "@option:check"
+msgid "Sharpen screen content while zoomed in"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:177
+#, kde-format
+msgctxt "@option:check"
 msgid "Enable focus tracking"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:178
+#: ui/ZoomMagnifier.qml:189
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:194
+#: ui/ZoomMagnifier.qml:205
 #, fuzzy, kde-format
 #| msgid "Magnification"
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "Pembesaran"
 
-#: ui/ZoomMagnifier.qml:221
+#: ui/ZoomMagnifier.qml:232
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:232 ui/ZoomMagnifier.qml:257
+#: ui/ZoomMagnifier.qml:243 ui/ZoomMagnifier.qml:268
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1245,50 +1251,50 @@ msgid_plural "%1 px"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ui/ZoomMagnifier.qml:233 ui/ZoomMagnifier.qml:258
+#: ui/ZoomMagnifier.qml:244 ui/ZoomMagnifier.qml:269
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:246
+#: ui/ZoomMagnifier.qml:257
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:275
+#: ui/ZoomMagnifier.qml:286
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:288
+#: ui/ZoomMagnifier.qml:299
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:321
+#: ui/ZoomMagnifier.qml:332
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:359
+#: ui/ZoomMagnifier.qml:370
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:365
+#: ui/ZoomMagnifier.qml:376
 #, fuzzy, kde-format
 #| msgid "Ring system bell when modifier keys are used"
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "Deringkan bel sistem ketika tombol pemodif digunakan"
 
-#: ui/ZoomMagnifier.qml:386
+#: ui/ZoomMagnifier.qml:397
 #, fuzzy, kde-format
 #| msgid "Use keys to control the mouse"
 msgctxt "@label Hint for zoom/magnify effect usage"
