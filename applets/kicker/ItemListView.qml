@@ -63,7 +63,7 @@ PlasmaComponents3.ScrollView {
                 mainSearchField: mainSearchField,
                 visualParent: listView.currentItem,
                 model: model.modelForRow(listView.currentIndex),
-                visible: true,
+                visible: Qt.binding(() => itemList.Window.window.visible),
                 dialogMirrored: itemList.LayoutMirroring.enabled
             });
             itemList.childDialog.index = listView.currentIndex;

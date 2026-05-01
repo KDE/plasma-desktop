@@ -479,7 +479,6 @@ PlasmaComponents3.ScrollView {
                 for (let i = 0; i < root.runnerModel.count; ++i) {
                     if (root.runnerModel.modelForRow(i).count) {
                         root.runnerModel.modelForRow(i).trigger(0, "", null);
-                        onInteractionConcluded: root.interactionConcluded()
                         break;
                     }
                 }
