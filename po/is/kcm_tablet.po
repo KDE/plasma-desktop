@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-25 02:46+0000\n"
+"POT-Creation-Date: 2026-05-02 02:38+0000\n"
 "PO-Revision-Date: 2026-03-13 12:03+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -552,19 +552,19 @@ msgctxt ""
 msgid "pad button %1"
 msgstr "bakkahnappur %1"
 
-#: ui/StylusTab.qml:222
+#: ui/StylusTab.qml:223
 #, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Left-handed mode:"
 msgstr "Snið fyrir örvhenta:"
 
-#: ui/StylusTab.qml:228
+#: ui/StylusTab.qml:229
 #, kde-format
 msgctxt "@option:check Enable left-handed mode"
 msgid "Enable"
 msgstr "Virkja"
 
-#: ui/StylusTab.qml:234
+#: ui/StylusTab.qml:235
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -576,14 +576,14 @@ msgstr ""
 "tæki, en oft er virkni bakkahnappanna snúið við þannig að hægt sé að snúa "
 "teikniborðinu öfugt."
 
-#: ui/StylusTab.qml:246
+#: ui/StylusTab.qml:247
 #, kde-format
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
 msgstr "Snið:"
 
-#: ui/StylusTab.qml:254
+#: ui/StylusTab.qml:255
 #, kde-format
 msgctxt ""
 "@option:radio Pen mode, where the point on the screen is always where you "
@@ -591,20 +591,20 @@ msgctxt ""
 msgid "Pen"
 msgstr "Penni"
 
-#: ui/StylusTab.qml:259
+#: ui/StylusTab.qml:260
 #, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "The cursor follows where you touch the pen on the surface"
 msgstr "Bendillinn fer þangað sem þú snertir með pennanum á borðið"
 
-#: ui/StylusTab.qml:280
+#: ui/StylusTab.qml:281
 #, kde-format
 msgctxt ""
 "@option:radio Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
 msgstr "Mús"
 
-#: ui/StylusTab.qml:285
+#: ui/StylusTab.qml:286
 #, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid ""
@@ -614,37 +614,37 @@ msgstr ""
 "Ef penninn er færður til á borðinu færist bendillinn til samræmis, eins og "
 "mús"
 
-#: ui/StylusTab.qml:355
+#: ui/StylusTab.qml:356
 #, kde-format
 msgctxt "@label prefix for pen pressure curve config"
 msgid "Pen Pressure:"
 msgstr "Pennaþrýstingur:"
 
-#: ui/StylusTab.qml:415
+#: ui/StylusTab.qml:416
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:423
+#: ui/StylusTab.qml:424
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:434
+#: ui/StylusTab.qml:435
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100%"
 
-#: ui/StylusTab.qml:442
+#: ui/StylusTab.qml:443
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0%"
 
-#: ui/StylusTab.qml:446
+#: ui/StylusTab.qml:447
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -654,13 +654,13 @@ msgstr ""
 "Þessi kúrva stjórnar sambandinu á milli þrýstingsins á pennann og "
 "þrýstingsgildanna sem forritið fær send."
 
-#: ui/StylusTab.qml:451
+#: ui/StylusTab.qml:452
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
 msgstr "Þrýstingssvið:"
 
-#: ui/StylusTab.qml:478
+#: ui/StylusTab.qml:479
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -670,31 +670,31 @@ msgstr ""
 "Lokað er á þrýsting sem er yfir eða undir mörkunum og þetta verður virka "
 "þrýstingssviðið."
 
-#: ui/StylusTab.qml:489
+#: ui/StylusTab.qml:490
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "Kvörðun í gangi"
 
-#: ui/StylusTab.qml:491
+#: ui/StylusTab.qml:492
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "Kvarða"
 
-#: ui/StylusTab.qml:494
+#: ui/StylusTab.qml:495
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "Kvörðun ekki studd"
 
-#: ui/StylusTab.qml:535
+#: ui/StylusTab.qml:536
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
 msgstr "Endurstilla sérsniðna kvörðun"
 
-#: ui/StylusTab.qml:550
+#: ui/StylusTab.qml:551
 #, kde-format
 msgctxt "@info"
 msgid ""
