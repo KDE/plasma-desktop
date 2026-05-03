@@ -12,6 +12,7 @@ add_subdirectory( ksplash )
 
 add_subdirectory( landingpage )
 add_subdirectory( keys )
+add_subdirectory( shortcuts )
 add_subdirectory( ksmserver )
 add_subdirectory( desktoppaths )
 
