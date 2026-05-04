@@ -27,23 +27,10 @@ ItemAbstractDelegate {
     enabled: !item.disabled
     favoritesModel: GridView.view.model.favoritesModel
     baseModel: GridView.view.model
+    dragActive: dragHandler.active
 
     Accessible.role: Accessible.MenuItem
     Accessible.name: model.display ?? ""
-
-    Keys.onReturnPressed: activate()
-    Keys.onEnterPressed: activate()
-
-    function activate(): void {
-        item.baseModel.trigger(index, "", null);
-        item.interactionConcluded()
-    }
-
-    TapHandler {
-        // dedicated tapHandler as ItemDelegate's clicked conflicts with DragHandler
-        id: tapHandler
-        onTapped: activate()
-    }
 
     DragHandler {
         id: dragHandler

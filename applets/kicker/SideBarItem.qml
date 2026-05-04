@@ -24,10 +24,9 @@ ItemAbstractDelegate {
     icon.width: Kirigami.Units.iconSizes.medium
     icon.height: Kirigami.Units.iconSizes.medium
     hoverEnabled: true
+    dragActive: dragHandler.active
 
-    Keys.onReturnPressed: activate()
-    Keys.onEnterPressed: activate()
-    Keys.onSpacePressed: activate()
+    Keys.onSpacePressed: action.trigger()
 
     background.visible: false // we want the default background's spacing, but not the base color
     contentItem: Kirigami.Icon {
@@ -36,11 +35,6 @@ ItemAbstractDelegate {
         width: item.icon.width
         height: item.icon.height
         source: item.icon.source
-    }
-
-    function activate() : void {
-        favoritesModel.trigger(index, "", null);
-        interactionConcluded()
     }
 
     Loader {
@@ -56,7 +50,7 @@ ItemAbstractDelegate {
                 anchors.fill: parent
                 visible: !item.isDropPlaceHolder && !item.showUnfavoritePlaceholder
                 hovered: true
-                pressed: tapHandler.pressed ?? false
+                pressed: item.pressed
             }
 
             KSvg.FrameSvgItem {
@@ -80,12 +74,6 @@ ItemAbstractDelegate {
                 }
             }
         }
-    }
-
-    TapHandler {
-        // dedicated tapHandler as ItemDelegate's clicked conflicts with DragHandler
-        id: tapHandler
-        onTapped: item.activate()
     }
 
     DragHandler {

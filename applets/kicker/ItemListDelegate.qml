@@ -33,6 +33,7 @@ ItemAbstractDelegate {
     hoverEnabled: false // containsMouse is more robust if the tooltip covers delegates
     favoritesModel: ListView.view.model.favoritesModel
     baseModel: ListView.view.model
+    dragActive: dragHandler.active
 
     Accessible.role: isSeparator ? Accessible.Separator : Accessible.ListItem
     Accessible.description: isParent
@@ -44,22 +45,6 @@ ItemAbstractDelegate {
             ListView.view.currentIndex = -1;
         }
     }
-
-    onClicked: {
-        if (!item.hasChildren && !dragHandler.active) {
-            item.baseModel.trigger(index, "", null);
-            item.interactionConcluded()
-        }
-    }
-
-    Keys.onReturnPressed: event => {
-        if (!item.hasChildren) {
-            item.clicked()
-        } else {
-            event.accepted = false
-        }
-    }
-    Keys.onEnterPressed: event => item.returnPressed(event)
 
     contentItem: RowLayout {
         id: row
