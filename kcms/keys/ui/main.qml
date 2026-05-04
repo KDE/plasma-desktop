@@ -297,14 +297,9 @@ KCM.AbstractKCM {
                                 QQC2.ToolTip.visible: hovered || activeFocus
                                 QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                             }
-                            Rectangle {
-                                id: defaultIndicator
-                                radius: width * 0.5
-                                implicitWidth: Kirigami.Units.largeSpacing
-                                implicitHeight: Kirigami.Units.largeSpacing
-                                visible: kcm.defaultsIndicatorsVisible
-                                opacity: !model.isDefault
-                                color: Kirigami.Theme.neutralTextColor
+
+                            KCM.DefaultIndicator {
+                                highlight: !model.isDefault
                             }
                         }
                     }

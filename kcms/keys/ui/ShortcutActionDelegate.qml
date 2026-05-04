@@ -91,14 +91,8 @@ QQC2.ItemDelegate {
                     }
                     textFormat: Text.PlainText
                 }
-                Rectangle {
-                    id: defaultIndicator
-                    radius: width * 0.5
-                    implicitWidth: Kirigami.Units.largeSpacing
-                    implicitHeight: Kirigami.Units.largeSpacing
-                    visible: kcm.defaultsIndicatorsVisible
-                    opacity: !model.isDefault
-                    color: Kirigami.Theme.neutralTextColor
+                KCM.DefaultIndicator {
+                    highlight: !model.isDefault
                 }
                 QQC2.Button {
                     Layout.alignment: Qt.AlignRight
@@ -142,19 +136,25 @@ QQC2.ItemDelegate {
                     }
                     Repeater {
                         model: defaultShortcuts
-                        QQC2.CheckBox {
-                            Accessible.name: checked ? i18nc("@info:whatsthis accessible name", "Default shortcut %1 is enabled.", modelData) : i18nc("@info:whatsthis accessible name", "Default shortcut %1 is disabled.", modelData)
-                            checked: activeShortcuts.indexOf(modelData) !== -1
-                            text: modelData
-                            onToggled: {
-                                if (checked) {
-                                     kcm.requestKeySequence(this, originalIndex, modelData)
-                                } else {
-                                    originalIndex.model.disableShortcut(originalIndex, modelData)
+                        RowLayout {
+                            QQC2.CheckBox {
+                                id: defaultShortcutCheckbox
+                                Accessible.name: checked ? i18nc("@info:whatsthis accessible name", "Default shortcut %1 is enabled.", modelData) : i18nc("@info:whatsthis accessible name", "Default shortcut %1 is disabled.", modelData)
+                                checked: activeShortcuts.indexOf(modelData) !== -1
+                                text: modelData
+                                onToggled: {
+                                    if (checked) {
+                                        kcm.requestKeySequence(this, originalIndex, modelData)
+                                    } else {
+                                        originalIndex.model.disableShortcut(originalIndex, modelData)
+                                    }
+                                }
+                                KCM.SettingHighlighter {
+                                    highlight: !checked
                                 }
                             }
-                            KCM.SettingHighlighter {
-                                highlight: !checked
+                            KCM.DefaultIndicator {
+                                highlight: !defaultShortcutCheckbox.checked
                             }
                         }
                     }
@@ -177,6 +177,9 @@ QQC2.ItemDelegate {
                         RowLayout {
                             spacing: Kirigami.Units.smallSpacing
                             Layout.alignment: Qt.AlignRight
+                            KCM.DefaultIndicator {
+                                highlight: true
+                            }
                             KeySequenceItem {
                                 id: keySequenceEditor
                                 Layout.alignment: Qt.AlignRight
