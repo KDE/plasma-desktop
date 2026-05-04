@@ -4,14 +4,70 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtCore
 import QtQuick
-import QtQml
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
-import org.kde.kcmutils as KCM
+import org.kde.kcmutils as KCMUtils
 
-KCM.AbstractKCM {
+
+KCMUtils.SimpleKCM {
     id: root
-}
 
+    Kirigami.Form {
+        Kirigami.FormGroup {
+            Kirigami.FormAction {
+                action: Kirigami.Action {
+                    text: i18n("Keyboard Shortcuts")
+                    icon.name: "preferences-desktop-keyboard-shortcut"
+                }
+            }
+
+            Kirigami.FormSeparator {}
+
+            Kirigami.FormAction {
+                action: Kirigami.Action {
+                    text: i18n("Touchpad Gestures")
+                    icon.name:"preferences-desktop-touchpad"
+                }
+            }
+
+            Kirigami.FormSeparator {}
+
+            Kirigami.FormAction {
+                action: Kirigami.Action {
+                    text: i18n("Touchscreen Gestures")
+                    icon.name: "preferences-desktop-gestures-touch"
+                }
+            }
+
+            Kirigami.FormSeparator {}
+
+            Kirigami.FormAction {
+                action: Kirigami.Action {
+                    text: i18n("Screen Edge Gestures")
+                    icon.name: "preferences-desktop-gestures-screenedges"
+                }
+            }
+
+            Kirigami.FormSeparator {}
+
+            Kirigami.FormAction {
+                action: Kirigami.Action {
+                    text: i18n("Line Shape Gestures")
+                    icon.name:"preferences-desktop-mouse"
+                }
+            }
+
+            Kirigami.FormSeparator {}
+
+            Kirigami.FormAction {
+                action: Kirigami.Action {
+                    text: i18n("Scroll Gestures")
+                    icon.name:"preferences-scroll"
+                }
+            }
+        }
+    }
+}
