@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2017, 2019, 2020, 2021, 2023, 2025, 2026 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2014-2015, 2017, 2019-2021, 2023, 2025-2026 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.homerun\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-23 00:46+0000\n"
-"PO-Revision-Date: 2026-01-08 09:21+0100\n"
+"PO-Revision-Date: 2026-04-24 18:06+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: code/tools.js:53
 #, kde-format
@@ -121,11 +121,10 @@ msgid "Show icons on the root level of the menu"
 msgstr "Mostra le icone nel livello principale del menu"
 
 #: ConfigGeneral.qml:198
-#, fuzzy, kde-format
-#| msgid "All Installed Applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
-msgstr "Tutte le applicazioni installate"
+msgstr "Evidenzia le applicazioni installate di recente"
 
 #: ConfigGeneral.qml:208
 #, kde-format
@@ -158,20 +157,16 @@ msgid "Often used files"
 msgstr "File utilizzati spesso"
 
 #: ConfigGeneral.qml:227
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Recent files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent places"
-msgstr "File recenti"
+msgstr "Risorse recenti"
 
 #: ConfigGeneral.qml:228
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used places"
-msgstr "File utilizzati spesso"
+msgstr "Risorse utilizzate spesso"
 
 #: ConfigGeneral.qml:234
 #, kde-format
@@ -243,27 +238,25 @@ msgstr "Preferiti"
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Nuova!"
 
 #: DashboardRepresentation.qml:909 ItemListDelegate.qml:107
-#, fuzzy, kde-format
-#| msgid "Browse installed applications by categories"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
-msgstr "Sfoglia le applicazioni installate per categoria"
+msgstr "In questa categoria è stata appena installata una nuova applicazione."
 
 #: ItemGridDelegate.qml:94
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Nuova!"
 
 #: ItemGridDelegate.qml:96
-#, fuzzy, kde-format
-#| msgid "All Installed Applications"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
-msgstr "Tutte le applicazioni installate"
+msgstr "Applicazione installata di recente"
 
 #: ItemListDelegate.qml:39
 #, kde-format
@@ -278,11 +271,10 @@ msgid "Launch"
 msgstr "Esegui"
 
 #: ItemListDelegate.qml:108
-#, fuzzy, kde-format
-#| msgid "All Installed Applications"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
-msgstr "Tutte le applicazioni installate"
+msgstr "Applicazione installata di recente"
 
 #: main.qml:208
 #, kde-format

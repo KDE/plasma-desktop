@@ -4,7 +4,7 @@
 # Andrea RIZZI <rizzi@kde.org>, 2005.
 # Giovanni Venturi <jumpyj@tiscali.it>, 2006.
 # Pino Toscano <toscano.pino@tiscali.it>, 2006.
-# SPDX-FileCopyrightText: 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2014-2015, 2017, 2019-2026 Vincenzo Reale <smart2128vr@gmail.com>
 # SPDX-FileCopyrightText: 2025 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-01 00:46+0000\n"
-"PO-Revision-Date: 2026-01-16 14:07+0100\n"
+"PO-Revision-Date: 2026-05-02 07:28+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
@@ -1135,6 +1135,7 @@ msgstr "L'area dello zoom non segue il puntatore del mouse"
 msgctxt "@option:check"
 msgid "Sharpen screen content while zoomed in"
 msgstr ""
+"Aumenta la nitidezza dei contenuti dello schermo quando si utilizza lo zoom."
 
 #: ui/ZoomMagnifier.qml:177
 #, kde-format
