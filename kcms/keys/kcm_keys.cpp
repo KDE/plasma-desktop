@@ -7,7 +7,9 @@
 #include "kcm_keys.h"
 
 #include <QDBusMetaType>
+#include <QDir>
 #include <QFile>
+#include <QFileInfo>
 #include <QPushButton>
 #include <QQuickItem>
 #include <QQuickRenderControl>

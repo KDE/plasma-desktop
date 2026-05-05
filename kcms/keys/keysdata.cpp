@@ -7,11 +7,11 @@
 #include "keysdata.h"
 
 #include <KGlobalAccel>
-#include <KGlobalShortcutInfo>
+#include <KGlobalShortcutInfoExt>
 #include <KPluginFactory>
 #include <KStandardShortcut>
-#include <kglobalaccel_component_interface.h>
-#include <kglobalaccel_interface.h>
+#include <kglobalaccel_componentprivatesettings_interface.h>
+#include <kglobalaccel_privatesettings_interface.h>
 
 KeysData::KeysData(QObject *parent)
     : KCModuleData(parent)
@@ -26,8 +26,10 @@ KeysData::KeysData(QObject *parent)
         }
     }
 
-    KGlobalAccelInterface globalAccelInterface(QStringLiteral("org.kde.kglobalaccel"), QStringLiteral("/kglobalaccel"), QDBusConnection::sessionBus());
-    if (!globalAccelInterface.isValid()) {
+    KGlobalAccelPrivateSettingsInterface globalAccelPrivateSettingsInterface(QStringLiteral("org.kde.kglobalaccel"),
+                                                                             QStringLiteral("/kglobalaccel/privatesettings"),
+                                                                             QDBusConnection::sessionBus());
+    if (!globalAccelPrivateSettingsInterface.isValid()) {
         return;
     }
 
@@ -36,7 +38,7 @@ KeysData::KeysData(QObject *parent)
     // manually when were are done.
     disconnect(this, &KCModuleData::aboutToLoad, this, &KCModuleData::loaded);
 
-    auto componentsWatcher = new QDBusPendingCallWatcher(globalAccelInterface.allComponents());
+    auto componentsWatcher = new QDBusPendingCallWatcher(globalAccelPrivateSettingsInterface.allComponents());
     connect(componentsWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
         QDBusPendingReply<QList<QDBusObjectPath>> componentsReply = *watcher;
         if (componentsReply.isError() || componentsReply.value().isEmpty()) {
@@ -45,15 +47,17 @@ KeysData::KeysData(QObject *parent)
         }
         const auto components = componentsReply.value();
         for (const auto &componentPath : components) {
-            KGlobalAccelComponentInterface component(QStringLiteral("org.kde.kglobalaccel"), componentPath.path(), QDBusConnection::sessionBus());
+            KGlobalAccelComponentPrivateSettingsInterface component(QStringLiteral("org.kde.kglobalaccel"),
+                                                                    componentPath.path(),
+                                                                    QDBusConnection::sessionBus());
             ++m_pendingComponentCalls;
             auto shortcutsWatcher = new QDBusPendingCallWatcher(component.allShortcutInfos());
             connect(shortcutsWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
-                QDBusPendingReply<QList<KGlobalShortcutInfo>> shortcutsReply = *watcher;
+                QDBusPendingReply<QList<KGlobalShortcutInfoExt>> shortcutsReply = *watcher;
                 if (shortcutsReply.isValid()) {
                     const auto allShortcuts = shortcutsReply.value();
-                    bool isNotDefault = std::any_of(allShortcuts.cbegin(), allShortcuts.cend(), [](const KGlobalShortcutInfo &info) {
-                        return info.defaultKeys() != info.keys();
+                    bool isNotDefault = std::any_of(allShortcuts.cbegin(), allShortcuts.cend(), [](const KGlobalShortcutInfoExt &infoExt) {
+                        return infoExt.info().defaultKeys() != infoExt.info().keys();
                     });
                     m_isDefault &= isNotDefault;
                 }
