@@ -9,6 +9,7 @@
 #include <QKeySequence>
 #include <QList>
 #include <QSet>
+#include <QString>
 
 struct Action {
     QString id;
@@ -16,6 +17,7 @@ struct Action {
     QSet<QKeySequence> activeShortcuts;
     QSet<QKeySequence> defaultShortcuts;
     QSet<QKeySequence> initialShortcuts;
+    QString inverseAction;
 };
 
 struct Component {
