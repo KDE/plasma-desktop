@@ -14,8 +14,9 @@
 class QDBusError;
 
 class KConfigBase;
-class KGlobalAccelInterface;
+class KGlobalAccelPrivateSettingsInterface;
 class KGlobalShortcutInfo;
+class KGlobalShortcutInfoExt;
 
 class Action;
 class Component;
@@ -48,7 +49,7 @@ Q_SIGNALS:
     void applicationAdded(const Component &);
 
 private:
-    Component loadComponent(const QList<KGlobalShortcutInfo> &info);
+    Component loadComponent(const QList<KGlobalShortcutInfoExt> &info);
     void removeComponent(const Component &component);
     void genericErrorOccured(const QString &description, const QDBusError &error);
     bool saveAction(const Component &component, const Action &action, const QSet<QKeySequence> &shortcutsToSave);

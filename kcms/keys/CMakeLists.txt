@@ -2,21 +2,21 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_keys\")
 
 # D-Bus interfaces
-set(kglobalaccel_xml ${KGLOBALACCEL_DBUS_INTERFACES_DIR}/kf6_org.kde.KGlobalAccel.xml)
-set_source_files_properties(${kglobalaccel_xml} PROPERTIES
-    INCLUDE "kglobalaccel.h"
+set(kglobalaccel_privatesettings_xml ${KGLOBALACCEL_DBUS_INTERFACES_DIR}/org.kde.kglobalaccel.PrivateSettings.xml)
+set_source_files_properties(${kglobalaccel_privatesettings_xml} PROPERTIES
+    INCLUDE "kglobalshortcutinfo.h"
     NO_NAMESPACE TRUE
-    CLASSNAME "KGlobalAccelInterface"
+    CLASSNAME "KGlobalAccelPrivateSettingsInterface"
 )
-qt_add_dbus_interface(kcm_keys_DBUS_SRCS ${kglobalaccel_xml} kglobalaccel_interface)
+qt_add_dbus_interface(kcm_keys_DBUS_SRCS ${kglobalaccel_privatesettings_xml} kglobalaccel_privatesettings_interface)
 
-set(kglobalaccel_component_xml ${KGLOBALACCEL_DBUS_INTERFACES_DIR}/kf6_org.kde.kglobalaccel.Component.xml)
-set_source_files_properties(${kglobalaccel_component_xml} PROPERTIES
-    INCLUDE "kglobalaccel.h"
+set(kglobalaccel_componentprivatesettings_xml ${KGLOBALACCEL_DBUS_INTERFACES_DIR}/org.kde.kglobalaccel.ComponentPrivateSettings.xml)
+set_source_files_properties(${kglobalaccel_componentprivatesettings_xml} PROPERTIES
+    INCLUDE "kglobalshortcutinfoext.h"
     NO_NAMESPACE TRUE
-    CLASSNAME "KGlobalAccelComponentInterface"
+    CLASSNAME "KGlobalAccelComponentPrivateSettingsInterface"
 )
-qt_add_dbus_interface(kcm_keys_DBUS_SRCS ${kglobalaccel_component_xml} kglobalaccel_component_interface)
+qt_add_dbus_interface(kcm_keys_DBUS_SRCS ${kglobalaccel_componentprivatesettings_xml} kglobalaccel_componentprivatesettings_interface)
 
 # Shared library
 add_library(kglobalaccelmodel SHARED)
@@ -40,6 +40,7 @@ target_link_libraries(kglobalaccelmodel
         KF6::GlobalAccel
         KF6::I18n
         KF6::Service
+        K::KGlobalAccelD
 )
 set_target_properties(kglobalaccelmodel PROPERTIES
                       VERSION ${PROJECT_VERSION}
@@ -74,6 +75,7 @@ target_link_libraries(kcm_keys PRIVATE
     KF6::KCMUtils
     KF6::KIOWidgets
     KF6::KCMUtilsQuick
+    K::KGlobalAccelD
     kglobalaccelmodel
 )
 
