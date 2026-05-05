@@ -6,16 +6,27 @@
 
 #pragma once
 
+#include <KGlobalShortcutTrigger>
+
+#include <QHash>
 #include <QKeySequence>
 #include <QList>
 #include <QSet>
+#include <QString>
 
 struct Action {
+    struct TriggerSets {
+        QSet<KGlobalShortcutTrigger> activeTriggers;
+        QSet<KGlobalShortcutTrigger> defaultTriggers;
+        QSet<KGlobalShortcutTrigger> initialTriggers;
+    };
     QString id;
     QString displayName;
     QSet<QKeySequence> activeShortcuts;
     QSet<QKeySequence> defaultShortcuts;
     QSet<QKeySequence> initialShortcuts;
+    QHash<QString, TriggerSets> triggersByType;
+    QString inverseAction;
 };
 
 struct Component {

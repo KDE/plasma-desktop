@@ -50,7 +50,8 @@ void StandardShortcutsModel::load()
                        KStandardShortcut::label(id),
                        listToSet(activeShortcuts),
                        listToSet(defaultShortcuts),
-                       listToSet(activeShortcuts)};
+                       listToSet(activeShortcuts),
+                       QHash<QString, Action::TriggerSets>{}};
         components()[static_cast<int>(category(id))].actions.append(a);
     }
     QCollator collator;
