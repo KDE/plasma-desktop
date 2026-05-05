@@ -31,7 +31,7 @@ PlasmaComponents3.ScrollView {
     // we never want a vertical scrollbar, the components handle those.
     PlasmaComponents3.ScrollBar.vertical.policy: PlasmaComponents3.ScrollBar.AlwaysOff
     // needs to be set explicitly as the default can cause loops
-    PlasmaComponents3.ScrollBar.horizontal.visible: contentWidth > (Screen.width - Kirigami.Units.largeSpacing * 4)
+    PlasmaComponents3.ScrollBar.horizontal.visible: Screen.width > 0 && contentWidth > (Screen.width - Kirigami.Units.largeSpacing * 4)
 
     // ScrollBar's padding is only to make space for the scrollbar, so we don't need it here
     Layout.minimumWidth: Math.min(Math.max(mainRow.Layout.minimumWidth, mainRow.implicitWidth), Screen.width - Kirigami.Units.largeSpacing * 4)
@@ -160,7 +160,7 @@ PlasmaComponents3.ScrollView {
                 anchors.fill: parent
 
                 PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
-                PlasmaComponents3.ScrollBar.vertical.visible: sideBarScrollView.contentHeight > Math.round(Screen.height * 0.9)
+                PlasmaComponents3.ScrollBar.vertical.visible: Screen.height > 0 && sideBarScrollView.contentHeight > Math.round(Screen.height * 0.9)
                 contentWidth: availableWidth
 
                 function ensureVisible(item: Item) {
