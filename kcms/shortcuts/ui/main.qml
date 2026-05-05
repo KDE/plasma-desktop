@@ -30,6 +30,7 @@ KCMUtils.SimpleKCM {
                 action: Kirigami.Action {
                     text: i18n("Touchpad Gestures")
                     icon.name:"preferences-desktop-touchpad"
+                    onTriggered: kcm.push("TouchpadGestures.qml")
                 }
             }
 

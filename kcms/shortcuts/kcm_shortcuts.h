@@ -10,10 +10,25 @@
 
 #include <KQuickConfigModule>
 
+class GlobalAccelModel;
+class ShortcutsModel;
+
 class KCMShortcuts : public KQuickConfigModule
 {
     Q_OBJECT
 
+    Q_PROPERTY(ShortcutsModel *shortcutsModel READ shortcutsModel CONSTANT)
+
 public:
     KCMShortcuts(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+
+    void defaults() override;
+    void load() override;
+    void save() override;
+
+    ShortcutsModel *shortcutsModel() const;
+
+private:
+    GlobalAccelModel *m_globalAccelModel;
+    ShortcutsModel *m_shortcutsModel;
 };
