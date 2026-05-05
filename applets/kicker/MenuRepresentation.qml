@@ -145,7 +145,7 @@ PlasmaComponents3.ScrollView {
                 readonly property int actualScrollBarWidth: scrollBarVisible ? sideBarScrollView.PlasmaComponents3.ScrollBar.vertical.width : 0
                 property bool scrollBarVisible
                 Binding on scrollBarVisible {
-                    value: sideBarScrollView.contentHeight > Screen.width - Kirigami.Units.largeSpacing * 4
+                    value: Screen.width > 0 && sideBarScrollView.contentHeight > (Screen.width - Kirigami.Units.largeSpacing * 4)
                     delayed: true // this needs to be delayed or it can get stuck in a resize loop
                 }
 
