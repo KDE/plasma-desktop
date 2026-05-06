@@ -197,7 +197,6 @@ EmptyPage {
             function onSearchTextChanged() {
                 if ((root.header as Header).searchText.length === 0 &&
                     contentItemStackView.currentItem.objectName !== "normalPage") {
-                    root.blockingHoverFocus = true
                     contentItemStackView.reverseTransitions = true
                     contentItemStackView.replace(normalPage)
                 } else if ((root.header as Header).searchText.length > 0) {
@@ -205,11 +204,11 @@ EmptyPage {
                         contentItemStackView.reverseTransitions = false
                         contentItemStackView.replace(searchViewComponent)
                     } else {
-                        root.blockingHoverFocus = true
-                        root.interceptedPosition = null
                         contentItemStackView.contentItem.currentIndex = 0
                     }
                 }
+                root.blockingHoverFocus = true
+                root.interceptedPosition = null
             }
         }
     }
