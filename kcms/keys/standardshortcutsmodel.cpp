@@ -15,6 +15,7 @@
 #include <KStandardShortcut>
 
 #include "basemodel.h"
+#include "component.h"
 #include "kcmkeys_debug.h"
 
 StandardShortcutsModel::StandardShortcutsModel(QObject *parent)
@@ -25,19 +26,19 @@ StandardShortcutsModel::StandardShortcutsModel(QObject *parent)
 void StandardShortcutsModel::load()
 {
     beginResetModel();
-    m_components.clear();
-    m_components.resize(6);
+    components().clear();
+    components().resize(6);
     const ComponentType sectionName = ComponentType::CommonAction;
     auto index = [](KStandardShortcut::Category category) {
         return static_cast<int>(category);
     };
-    m_components[index(KStandardShortcut::Category::File)] = Component{"File", i18n("File"), sectionName, "document-multiple", {}, false, false};
-    m_components[index(KStandardShortcut::Category::Edit)] = Component{"Edit", i18n("Edit"), sectionName, "edittext", {}, false, false};
-    m_components[index(KStandardShortcut::Category::Navigation)] =
+    components()[index(KStandardShortcut::Category::File)] = Component{"File", i18n("File"), sectionName, "document-multiple", {}, false, false};
+    components()[index(KStandardShortcut::Category::Edit)] = Component{"Edit", i18n("Edit"), sectionName, "edittext", {}, false, false};
+    components()[index(KStandardShortcut::Category::Navigation)] =
         Component{"Navigation", i18n("Navigation"), sectionName, "preferences-desktop-navigation", {}, false, false};
-    m_components[index(KStandardShortcut::Category::View)] = Component{"View", i18n("View"), sectionName, "view-preview", {}, false, false};
-    m_components[index(KStandardShortcut::Category::Settings)] = Component{"Settings", i18n("Settings"), sectionName, "settings-configure", {}, false, false};
-    m_components[index(KStandardShortcut::Category::Help)] = Component{"Help", i18n("Help"), sectionName, "system-help", {}, false, false};
+    components()[index(KStandardShortcut::Category::View)] = Component{"View", i18n("View"), sectionName, "view-preview", {}, false, false};
+    components()[index(KStandardShortcut::Category::Settings)] = Component{"Settings", i18n("Settings"), sectionName, "settings-configure", {}, false, false};
+    components()[index(KStandardShortcut::Category::Help)] = Component{"Help", i18n("Help"), sectionName, "system-help", {}, false, false};
     for (int i = KStandardShortcut::AccelNone + 1; i < KStandardShortcut::StandardShortcutCount; ++i) {
         const auto id = static_cast<KStandardShortcut::StandardShortcut>(i);
         const QList<QKeySequence> activeShortcuts = KStandardShortcut::shortcut(id);
@@ -50,17 +51,17 @@ void StandardShortcutsModel::load()
                        listToSet(activeShortcuts),
                        listToSet(defaultShortcuts),
                        listToSet(activeShortcuts)};
-        m_components[static_cast<int>(category(id))].actions.append(a);
+        components()[static_cast<int>(category(id))].actions.append(a);
     }
     QCollator collator;
     collator.setCaseSensitivity(Qt::CaseInsensitive);
     collator.setNumericMode(true);
-    std::for_each(m_components.begin(), m_components.end(), [&](Component &c) {
+    std::for_each(components().begin(), components().end(), [&](Component &c) {
         std::sort(c.actions.begin(), c.actions.end(), [&](const Action &a1, const Action &a2) {
             return collator.compare(a1.displayName, a2.displayName) < 0;
         });
     });
-    std::sort(m_components.begin(), m_components.end(), [&](Component &c1, Component &c2) {
+    std::sort(components().begin(), components().end(), [&](Component &c1, Component &c2) {
         return collator.compare(c1.displayName, c2.displayName) < 0;
     });
     endResetModel();
@@ -69,7 +70,7 @@ void StandardShortcutsModel::load()
 void StandardShortcutsModel::exportToConfig(KConfigBase &config)
 {
     KConfigGroup group(&config, QStringLiteral("StandardShortcuts"));
-    for (const auto &component : std::as_const(m_components)) {
+    for (const auto &component : std::as_const(components())) {
         if (component.checked) {
             for (const auto &action : component.actions) {
                 const QList<QKeySequence> shortcutsList(action.activeShortcuts.cbegin(), action.activeShortcuts.cend());
@@ -116,10 +117,10 @@ void StandardShortcutsModel::importConfig(const KConfigBase &config)
         case KStandardShortcut::Category::InvalidCategory:
             break;
         }
-        auto cat = std::find_if(m_components.begin(), m_components.end(), [&name](const Component &c) {
+        auto cat = std::find_if(components().begin(), components().end(), [&name](const Component &c) {
             return c.id == name;
         });
-        if (cat == m_components.end()) {
+        if (cat == components().end()) {
             qCWarning(KCMKEYS) << "No category for standard shortcut" << key;
             continue;
         }
@@ -134,7 +135,7 @@ void StandardShortcutsModel::importConfig(const KConfigBase &config)
         const QSet<QKeySequence> shortcutsSet(shortcuts.cbegin(), shortcuts.cend());
         if (shortcutsSet != action->activeShortcuts) {
             action->activeShortcuts = shortcutsSet;
-            const QModelIndex i = index(action - cat->actions.begin(), 0, index(cat - m_components.begin(), 0));
+            const QModelIndex i = index(action - cat->actions.begin(), 0, index(cat - components().begin(), 0));
             Q_EMIT dataChanged(i, i, {CustomShortcutsRole, ActiveShortcutsRole});
         }
     }
@@ -142,7 +143,7 @@ void StandardShortcutsModel::importConfig(const KConfigBase &config)
 
 void StandardShortcutsModel::save()
 {
-    for (auto &component : m_components) {
+    for (auto &component : components()) {
         for (auto &action : component.actions) {
             if (action.initialShortcuts != action.activeShortcuts) {
                 QList<QKeySequence> keys(action.activeShortcuts.cbegin(), action.activeShortcuts.cend());

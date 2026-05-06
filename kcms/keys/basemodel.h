@@ -13,7 +13,10 @@
 
 #include "kglobalaccelmodel_export.h"
 
+class Component;
 class KConfigBase;
+
+class BaseModelPrivate;
 
 // we need to do this to expose the enum to QML
 namespace ComponentNS
@@ -28,24 +31,6 @@ KGLOBALACCELMODEL_EXPORT Q_ENUM_NS(ComponentType)
 };
 
 using namespace ComponentNS;
-
-struct Action {
-    QString id;
-    QString displayName;
-    QSet<QKeySequence> activeShortcuts;
-    QSet<QKeySequence> defaultShortcuts;
-    QSet<QKeySequence> initialShortcuts;
-};
-
-struct Component {
-    QString id;
-    QString displayName;
-    ComponentType type;
-    QString icon;
-    QList<Action> actions;
-    bool checked;
-    bool pendingDeletion;
-};
 
 class KGLOBALACCELMODEL_EXPORT BaseModel : public QAbstractItemModel
 {
@@ -68,6 +53,7 @@ public:
     Q_ENUM(Roles)
 
     BaseModel(QObject *parent = nullptr);
+    ~BaseModel();
 
     Q_INVOKABLE void addShortcut(const QModelIndex &index, const QKeySequence &shortcut);
     Q_INVOKABLE void disableShortcut(const QModelIndex &index, const QKeySequence &shortcut);
@@ -91,5 +77,9 @@ public:
     QHash<int, QByteArray> roleNames() const override;
 
 protected:
-    QList<Component> m_components;
+    QList<Component> &components();
+    const QList<Component> &components() const;
+
+private:
+    std::unique_ptr<BaseModelPrivate> d;
 };

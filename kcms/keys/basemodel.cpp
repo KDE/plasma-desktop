@@ -6,6 +6,8 @@
 
 #include "basemodel.h"
 
+#include "component.h"
+
 #include <KConfigGroup>
 #include <KDesktopFile>
 #include <KLocalizedString>
@@ -13,8 +15,17 @@
 
 #include "kcmkeys_debug.h"
 
+struct BaseModelPrivate {
+    QList<Component> components;
+};
+
 BaseModel::BaseModel(QObject *parent)
     : QAbstractItemModel(parent)
+    , d(new BaseModelPrivate)
+{
+}
+
+BaseModel::~BaseModel()
 {
 }
 
@@ -27,7 +38,7 @@ void BaseModel::addShortcut(const QModelIndex &index, const QKeySequence &shortc
         return;
     }
     qCDebug(KCMKEYS) << "Adding shortcut" << index << shortcut;
-    Action &a = m_components[index.parent().row()].actions[index.row()];
+    Action &a = d->components[index.parent().row()].actions[index.row()];
     a.activeShortcuts.insert(shortcut);
     Q_EMIT dataChanged(index, index, {ActiveShortcutsRole, CustomShortcutsRole, IsDefaultRole});
     Q_EMIT dataChanged(index.parent(), index.parent(), {IsDefaultRole});
@@ -39,7 +50,7 @@ void BaseModel::disableShortcut(const QModelIndex &index, const QKeySequence &sh
         return;
     }
     qCDebug(KCMKEYS) << "Disabling shortcut" << index << shortcut;
-    Action &a = m_components[index.parent().row()].actions[index.row()];
+    Action &a = d->components[index.parent().row()].actions[index.row()];
     a.activeShortcuts.remove(shortcut);
     Q_EMIT dataChanged(index, index, {ActiveShortcutsRole, CustomShortcutsRole, IsDefaultRole});
     Q_EMIT dataChanged(index.parent(), index.parent(), {IsDefaultRole});
@@ -54,7 +65,7 @@ void BaseModel::changeShortcut(const QModelIndex &index, const QKeySequence &old
         return;
     }
     qCDebug(KCMKEYS) << "Changing Shortcut" << index << oldShortcut << " to " << newShortcut;
-    Action &a = m_components[index.parent().row()].actions[index.row()];
+    Action &a = d->components[index.parent().row()].actions[index.row()];
     a.activeShortcuts.remove(oldShortcut);
     a.activeShortcuts.insert(newShortcut);
     Q_EMIT dataChanged(index, index, {ActiveShortcutsRole, CustomShortcutsRole});
@@ -62,21 +73,21 @@ void BaseModel::changeShortcut(const QModelIndex &index, const QKeySequence &old
 
 void BaseModel::defaults()
 {
-    for (int i = 0; i < m_components.size(); ++i) {
+    for (int i = 0; i < d->components.size(); ++i) {
         const auto componentIndex = index(i, 0);
-        for (auto action_it = m_components[i].actions.begin(); action_it != m_components[i].actions.end(); ++action_it) {
+        for (auto action_it = d->components[i].actions.begin(); action_it != d->components[i].actions.end(); ++action_it) {
             action_it->activeShortcuts = action_it->defaultShortcuts;
         }
         Q_EMIT dataChanged(index(0, 0, componentIndex),
-                           index(m_components[i].actions.size() - 1, 0, componentIndex),
+                           index(d->components[i].actions.size() - 1, 0, componentIndex),
                            {ActiveShortcutsRole, CustomShortcutsRole, IsDefaultRole});
     }
-    Q_EMIT dataChanged(index(0, 0), index(m_components.size() - 1, 0), {IsDefaultRole});
+    Q_EMIT dataChanged(index(0, 0), index(d->components.size() - 1, 0), {IsDefaultRole});
 }
 
 bool BaseModel::needsSave() const
 {
-    for (const auto &component : std::as_const(m_components)) {
+    for (const auto &component : std::as_const(d->components)) {
         if (component.pendingDeletion) {
             return true;
         }
@@ -91,7 +102,7 @@ bool BaseModel::needsSave() const
 
 bool BaseModel::isDefault() const
 {
-    for (const auto &component : std::as_const(m_components)) {
+    for (const auto &component : std::as_const(d->components)) {
         for (const auto &action : std::as_const(component.actions)) {
             if (action.defaultShortcuts != action.activeShortcuts) {
                 return false;
@@ -108,7 +119,7 @@ QModelIndex BaseModel::index(int row, int column, const QModelIndex &parent) con
     }
     if (parent.isValid() && row < rowCount(parent)) {
         return createIndex(row, column, parent.row() + 1);
-    } else if (row < m_components.size()) {
+    } else if (row < d->components.size()) {
         return createIndex(row, column, nullptr);
     }
     return QModelIndex();
@@ -128,9 +139,9 @@ int BaseModel::rowCount(const QModelIndex &parent) const
         if (parent.parent().isValid()) {
             return 0;
         }
-        return m_components[parent.row()].actions.size();
+        return d->components[parent.row()].actions.size();
     }
-    return m_components.size();
+    return d->components.size();
 }
 
 int BaseModel::columnCount(const QModelIndex &parent) const
@@ -146,13 +157,13 @@ QVariant BaseModel::data(const QModelIndex &index, int role) const
     }
 
     if (index.parent().isValid()) {
-        const Action &action = m_components[index.parent().row()].actions[index.row()];
+        const Action &action = d->components[index.parent().row()].actions[index.row()];
         switch (role) {
         case Qt::DisplayRole: {
-            KDesktopFile desktopFile(m_components[index.parent().row()].id);
+            KDesktopFile desktopFile(d->components[index.parent().row()].id);
             KConfigGroup cg = desktopFile.desktopGroup();
             if (cg.readEntry<bool>("X-KDE-GlobalAccel-CommandShortcut", false)) {
-                return cg.readEntry("Exec").replace("%%","%");
+                return cg.readEntry("Exec").replace("%%", "%");
             }
             if (action.id == "_launch") {
                 return i18nc("@title:group Launch app", "Launch");
@@ -176,7 +187,7 @@ QVariant BaseModel::data(const QModelIndex &index, int role) const
         }
         return QVariant();
     }
-    const Component &component = m_components[index.row()];
+    const Component &component = d->components[index.row()];
     switch (role) {
     case Qt::DisplayRole: {
         KDesktopFile desktopFile(component.id);
@@ -266,15 +277,15 @@ bool BaseModel::setData(const QModelIndex &index, const QVariant &value, int rol
     const bool boolValue = value.toBool();
     switch (role) {
     case CheckedRole:
-        if (m_components[index.row()].checked != boolValue) {
-            m_components[index.row()].checked = boolValue;
+        if (d->components[index.row()].checked != boolValue) {
+            d->components[index.row()].checked = boolValue;
             Q_EMIT dataChanged(index, index, {CheckedRole});
             return true;
         }
         break;
     case PendingDeletionRole:
-        if (m_components[index.row()].pendingDeletion != boolValue) {
-            m_components[index.row()].pendingDeletion = boolValue;
+        if (d->components[index.row()].pendingDeletion != boolValue) {
+            d->components[index.row()].pendingDeletion = boolValue;
             Q_EMIT dataChanged(index, index, {PendingDeletionRole});
             return true;
         }
@@ -299,6 +310,16 @@ QHash<int, QByteArray> BaseModel::roleNames() const
         {SupportsMultipleKeysRole, QByteArrayLiteral("supportsMultipleKeys")},
         {IsRemovableRole, QByteArrayLiteral("isRemovable")},
     };
+}
+
+QList<Component> &BaseModel::components()
+{
+    return d->components;
+}
+
+const QList<Component> &BaseModel::components() const
+{
+    return d->components;
 }
 
 #include "moc_basemodel.cpp"
