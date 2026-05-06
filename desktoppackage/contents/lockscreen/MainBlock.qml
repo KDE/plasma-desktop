@@ -64,7 +64,6 @@ SessionManagementScreen {
 
             placeholderText: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:placeholder in text field", "Password")
             focus: true
-            enabled: !authenticator.graceLocked
 
             // In Qt this is implicitly active based on focus rather than visibility
             // in any other application having a focussed invisible object would be weird

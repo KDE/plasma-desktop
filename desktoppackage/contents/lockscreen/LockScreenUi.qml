@@ -36,6 +36,8 @@ Item {
         }
     }
 
+    property string pendingPassword
+
     Kirigami.Theme.inherit: false
     Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
 
@@ -47,7 +49,8 @@ Item {
             }
             const msg = i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:status", "Unlocking failed");
             lockScreenUi.handleMessage(msg);
-            graceLockTimer.restart();
+            root.clearPassword();
+            authenticator.startAuthenticating();
             notificationRemoveTimer.restart();
             rejectPasswordAnimation.start();
         }
@@ -176,14 +179,6 @@ Item {
             interval: 3000
             onTriggered: root.notification = ""
         }
-        Timer {
-            id: graceLockTimer
-            interval: 3000
-            onTriggered: {
-                root.clearPassword();
-                authenticator.startAuthenticating();
-            }
-        }
 
         PropertyAnimation {
             id: launchAnimation
@@ -248,6 +243,17 @@ Item {
             }
         }
 
+        Connections {
+            target: authenticator
+            function onPamTimeoutChanged(): void {
+                if (!authenticator.pamTimeout && lockScreenUi.pendingPassword.length > 0) {
+                    authenticator.respond(lockScreenUi.pendingPassword);
+                    lockScreenUi.pendingPassword = "";
+                    mainBlock.enabled = true;
+                }
+            }
+        }
+
         StackView {
             id: mainStack
             anchors {
@@ -265,8 +271,6 @@ Item {
                 lockScreenUiVisible: lockScreenRoot.uiVisible
 
                 showUserList: userList.y + mainStack.y > 0
-
-                enabled: !graceLockTimer.running
 
                 StackView.onStatusChanged: {
                     // prepare for presenting again to the user
@@ -291,7 +295,12 @@ Item {
                 }
 
                 onPasswordResult: password => {
-                    authenticator.respond(password)
+                    if (authenticator.pamTimeout) {
+                        lockScreenUi.pendingPassword = password
+                        mainBlock.enabled = false
+                    } else {
+                        authenticator.respond(password)
+                    }
                 }
 
                 actionItems: [
