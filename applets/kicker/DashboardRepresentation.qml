@@ -235,6 +235,13 @@ Kicker.DashboardWindow {
         PlasmaExtras.SearchField {
             id: searchField
 
+            // actions should ostly apply to the runner grid, but there are a few ways to
+            // have focus on the search field and have something visually selected, so
+            // fall back to the other possible grids if they're showing
+            readonly property ItemGridView targetGrid: runnerGrid.visible  ? runnerGrid.firstGrid
+                                                     : allAppsGrid.visible ? allAppsGrid.firstGrid
+                                                                           : mainGrid
+
             anchors {
                 horizontalCenter: parent.horizontalCenter
             }
@@ -324,15 +331,50 @@ Kicker.DashboardWindow {
                     }
             }
             Keys.onReturnPressed: event => {
-                // this mostly should apply to the runner grid, but there are a few ways to
-                // have focus on the search field and have something visually selected, so
-                // fall back to the other possible grids
-                let currentDelegate = runnerGrid.visible  ? runnerGrid.firstGrid?.currentItem :
-                                      allAppsGrid.visible ? allAppsGrid.firstGrid?.currentItem :
-                                                            mainGrid.currentItem
-                currentDelegate.Keys.returnPressed(event)
+                if (launchMatchTimer.running) {
+                    launchMatchTimer.stop()
+                    launchMatchTimer.triggered()
+                    return
+                }
+                let currentDelegate = searchField.targetGrid?.currentItem as ItemAbstractDelegate
+                if (!root.runnerModel.querying || currentDelegate?.text.toLowerCase().includes(root.runnerModel.query.toLowerCase())) {
+                    launchMatchTimer.triggered()
+                    return
+                }
+                launchMatchTimer.start()
             }
             Keys.onEnterPressed: event => Keys.returnPressed(event)
+
+            Timer {
+                id: launchMatchTimer
+                interval: 750
+                onTriggered: {
+                    let currentDelegate = searchField.targetGrid?.currentItem as ItemAbstractDelegate
+                    if (currentDelegate) {
+                        currentDelegate.action.trigger()
+                    }
+                }
+            }
+
+            Connections {
+                target: searchField.targetGrid
+                enabled: launchMatchTimer.running
+                function onCurrentItemChanged() : void {
+                    if (searchField.targetGrid.currentItem?.text.toLowerCase().includes(root.runnerModel.query.toLowerCase())) {
+                        launchMatchTimer.stop()
+                        launchMatchTimer.triggered()
+                    }
+                }
+            }
+
+            Connections {
+                target: root.runnerModel
+                enabled: launchMatchTimer.running
+                function onQueryFinished() : void {
+                    launchMatchTimer.stop()
+                    Qt.callLater(launchMatchTimer.triggered) // callLater to give bindings time to update
+                }
+            }
         }
 
         Row {
