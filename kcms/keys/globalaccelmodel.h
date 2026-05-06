@@ -17,12 +17,17 @@ class KConfigBase;
 class KGlobalAccelInterface;
 class KGlobalShortcutInfo;
 
+class Action;
+class Component;
+class GlobalAccelModelPrivate;
+
 class KGLOBALACCELMODEL_EXPORT GlobalAccelModel : public BaseModel
 {
     Q_OBJECT
 
 public:
     GlobalAccelModel(QObject *parent = nullptr);
+    ~GlobalAccelModel();
 
     QVariant data(const QModelIndex &index, int role) const override;
 
@@ -48,6 +53,5 @@ private:
     void genericErrorOccured(const QString &description, const QDBusError &error);
     bool saveAction(const Component &component, const Action &action, const QSet<QKeySequence> &shortcutsToSave);
 
-    QList<Component> m_pendingComponents;
-    KGlobalAccelInterface *m_globalAccelInterface;
+    std::unique_ptr<GlobalAccelModelPrivate> d;
 };
