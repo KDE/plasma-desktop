@@ -113,9 +113,11 @@ EmptyPage {
                 Keys.onUpPressed: event => {
                     kickoff.searchField.forceActiveFocus(Qt.BacktabFocusReason)
                 }
-                T.StackView.onActivated: {
-                    kickoff.sideBar = null
-                    kickoff.contentArea = searchView
+                T.StackView.onStatusChanged: {
+                    if (T.StackView.status === T.StackView.Activating || T.StackView.status === T.StackView.Activating) {
+                        kickoff.sideBar = null
+                        kickoff.contentArea = searchView
+                    }
                 }
 
                 Loader {
