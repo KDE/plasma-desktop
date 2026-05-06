@@ -27,7 +27,7 @@ KCMUtils.ScrollViewKCM {
     ListView {
         id: gestureList
 
-        model: kcm.shortcutsModel
+        model: kcm.shortcutsListModel
 
         anchors.fill: parent
         clip: true

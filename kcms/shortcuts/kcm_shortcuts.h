@@ -12,6 +12,7 @@
 
 class GlobalAccelModel;
 class ShortcutsModel;
+class ShortcutsListModel;
 
 class KCMShortcuts : public KQuickConfigModule
 {
@@ -27,8 +28,10 @@ public:
     void save() override;
 
     ShortcutsModel *shortcutsModel() const;
+    ShortcutsListModel *shortcutsListModel() const;
 
 private:
     GlobalAccelModel *m_globalAccelModel;
     ShortcutsModel *m_shortcutsModel;
+    ShortcutsListModel *m_shortcutsListModel;
 };

@@ -10,6 +10,7 @@
 #include <KLocalizedString>
 
 #include "globalaccelmodel.h"
+#include "shortcutslistmodel.h"
 #include "shortcutsmodel.h"
 
 Q_DECLARE_LOGGING_CATEGORY(KCMSHORTCUTS)
@@ -20,10 +21,13 @@ KCMShortcuts::KCMShortcuts(QObject *parent, const KPluginMetaData &metaData, con
 {
     constexpr char uri[] = "org.kde.private.kcms.shortcuts";
     qmlRegisterUncreatableType<ShortcutsModel>(uri, 2, 0, "ShortcutsModel", "Can't create ShortcutsModel");
+    qmlRegisterUncreatableType<ShortcutsListModel>(uri, 2, 0, "ShortcutsListModel", "Can't create ShortcutsListModel");
 
     m_globalAccelModel = new GlobalAccelModel(this);
     m_shortcutsModel = new ShortcutsModel(this);
     m_shortcutsModel->addSourceModel(m_globalAccelModel);
+    m_shortcutsListModel = new ShortcutsListModel(this);
+    m_shortcutsListModel->setSourceModel(m_shortcutsModel);
 }
 
 void KCMShortcuts::load()
@@ -44,6 +48,11 @@ void KCMShortcuts::defaults()
 ShortcutsModel *KCMShortcuts::shortcutsModel() const
 {
     return m_shortcutsModel;
+}
+
+ShortcutsListModel *KCMShortcuts::shortcutsListModel() const
+{
+    return m_shortcutsListModel;
 }
 
 #include "kcm_shortcuts.moc"

@@ -4,6 +4,9 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_shortcuts\")
 # KCM
 kcmutils_add_qml_kcm(kcm_shortcuts)
 
+# KF6
+find_package(KF6 REQUIRED COMPONENTS ItemModels)
+
 # logging
 ecm_qt_declare_logging_category(kcm_shortcuts
     HEADER kcm_shortcuts_debug.h
@@ -16,7 +19,7 @@ ecm_qt_install_logging_categories(EXPORT KCMSHORTCUTS DESTINATION ${KDE_INSTALL_
 
 target_sources(kcm_shortcuts PRIVATE
     kcm_shortcuts.cpp
-    ${kcm_shortcuts_DBUS_SRCS}
+    shortcutslistmodel.cpp   
 )
 
 target_link_libraries(kcm_shortcuts PRIVATE
@@ -25,6 +28,7 @@ target_link_libraries(kcm_shortcuts PRIVATE
     KF6::ConfigGui
     KF6::GlobalAccel
     KF6::I18n
+    KF6::ItemModels
     KF6::KCMUtils
     KF6::KIOWidgets
     KF6::KCMUtilsQuick
