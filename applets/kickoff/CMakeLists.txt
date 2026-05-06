@@ -33,6 +33,8 @@ QML_SOURCES
 RESOURCES
     main.xml
 GENERATE_APPLET_CLASS
+QML_ARGS
+        NO_LINT # https://qt-project.atlassian.net/browse/QTBUG-145572
 )
 
 ecm_target_qml_sources(org.kde.plasma.kickoff SOURCES code/tools.js PATH code)
