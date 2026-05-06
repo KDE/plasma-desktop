@@ -18,9 +18,15 @@
 #include <KService>
 
 #include "basemodel.h"
+#include "component.h"
 #include "kcmkeys_debug.h"
 #include <kglobalaccel_component_interface.h>
 #include <kglobalaccel_interface.h>
+
+struct GlobalAccelModelPrivate {
+    QList<Component> pendingComponents;
+    KGlobalAccelInterface *globalAccelInterface;
+};
 
 static QStringList buildActionId(const QString &componentUnique, const QString &componentFriendly, const QString &actionUnique, const QString &actionFriendly)
 {
@@ -34,20 +40,25 @@ static QStringList buildActionId(const QString &componentUnique, const QString &
 
 GlobalAccelModel::GlobalAccelModel(QObject *parent)
     : BaseModel(parent)
-    , m_globalAccelInterface(new KGlobalAccelInterface(QStringLiteral("org.kde.kglobalaccel"), //
-                                                       QStringLiteral("/kglobalaccel"),
-                                                       QDBusConnection::sessionBus(),
-                                                       this))
+    , d(new GlobalAccelModelPrivate)
 {
-    if (!m_globalAccelInterface->isValid()) {
+    d->globalAccelInterface = new KGlobalAccelInterface(QStringLiteral("org.kde.kglobalaccel"), //
+                                                        QStringLiteral("/kglobalaccel"),
+                                                        QDBusConnection::sessionBus(),
+                                                        this);
+    if (!d->globalAccelInterface->isValid()) {
         qCCritical(KCMKEYS) << "Interface is not valid";
-        if (m_globalAccelInterface->lastError().isValid()) {
-            qCCritical(KCMKEYS) << m_globalAccelInterface->lastError().name() << m_globalAccelInterface->lastError().message();
+        if (d->globalAccelInterface->lastError().isValid()) {
+            qCCritical(KCMKEYS) << d->globalAccelInterface->lastError().name() << d->globalAccelInterface->lastError().message();
         }
     }
 
     qDBusRegisterMetaType<KGlobalShortcutInfo>();
     qDBusRegisterMetaType<QList<KGlobalShortcutInfo>>();
+}
+
+GlobalAccelModel::~GlobalAccelModel()
+{
 }
 
 QVariant GlobalAccelModel::data(const QModelIndex &index, int role) const
@@ -60,11 +71,11 @@ QVariant GlobalAccelModel::data(const QModelIndex &index, int role) const
 
 void GlobalAccelModel::load()
 {
-    if (!m_globalAccelInterface->isValid()) {
+    if (!d->globalAccelInterface->isValid()) {
         return;
     }
 
-    auto componentsWatcher = new QDBusPendingCallWatcher(m_globalAccelInterface->allComponents());
+    auto componentsWatcher = new QDBusPendingCallWatcher(d->globalAccelInterface->allComponents());
     connect(componentsWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *componentsWatcher) {
         QDBusPendingReply<QList<QDBusObjectPath>> componentsReply = *componentsWatcher;
         componentsWatcher->deleteLater();
@@ -72,8 +83,8 @@ void GlobalAccelModel::load()
             genericErrorOccured(QStringLiteral("Error while calling allComponents()"), componentsReply.error());
 
             beginResetModel();
-            m_components.clear();
-            m_pendingComponents.clear();
+            components().clear();
+            d->pendingComponents.clear();
             endResetModel();
 
             return;
@@ -83,14 +94,14 @@ void GlobalAccelModel::load()
         *pendingCalls = componentPaths.size();
         for (const auto &componentPath : componentPaths) {
             const QString path = componentPath.path();
-            KGlobalAccelComponentInterface component(m_globalAccelInterface->service(), path, m_globalAccelInterface->connection());
+            KGlobalAccelComponentInterface component(d->globalAccelInterface->service(), path, d->globalAccelInterface->connection());
             auto watcher = new QDBusPendingCallWatcher(component.allShortcutInfos());
             connect(watcher, &QDBusPendingCallWatcher::finished, this, [path, pendingCalls, this](QDBusPendingCallWatcher *watcher) {
                 QDBusPendingReply<QList<KGlobalShortcutInfo>> reply = *watcher;
                 if (reply.isError()) {
                     genericErrorOccured(QStringLiteral("Error while calling allShortCutInfos of") + path, reply.error());
                 } else if (!reply.value().isEmpty()) {
-                    m_pendingComponents.push_back(loadComponent(reply.value()));
+                    d->pendingComponents.push_back(loadComponent(reply.value()));
                 }
                 watcher->deleteLater();
                 if (--*pendingCalls == 0) {
@@ -98,9 +109,9 @@ void GlobalAccelModel::load()
                     QCollator collator;
                     collator.setCaseSensitivity(Qt::CaseInsensitive);
                     collator.setNumericMode(true);
-                    m_components = m_pendingComponents;
-                    m_pendingComponents.clear();
-                    std::sort(m_components.begin(), m_components.end(), [&](const Component &c1, const Component &c2) {
+                    components() = d->pendingComponents;
+                    d->pendingComponents.clear();
+                    std::sort(components().begin(), components().end(), [&](const Component &c1, const Component &c2) {
                         return c1.type != c2.type ? c1.type < c2.type : collator.compare(c1.displayName, c2.displayName) < 0;
                     });
                     endResetModel();
@@ -221,7 +232,7 @@ void GlobalAccelModel::save()
 {
     QList<Component *> componentsToRemove;
 
-    for (auto it = m_components.rbegin(); it != m_components.rend(); ++it) {
+    for (auto it = components().rbegin(); it != components().rend(); ++it) {
         if (it->pendingDeletion) {
             componentsToRemove.append(&(*it));
         }
@@ -232,7 +243,7 @@ void GlobalAccelModel::save()
     }
 
     // removing the keys first ensures there are no temporary conflicts
-    for (auto &component : m_components) {
+    for (auto &component : components()) {
         for (auto &action : component.actions) {
             if (action.initialShortcuts != action.activeShortcuts) {
                 QSet<QKeySequence> removed = action.initialShortcuts - action.activeShortcuts;
@@ -247,7 +258,7 @@ void GlobalAccelModel::save()
         }
     }
 
-    for (auto &component : m_components) {
+    for (auto &component : components()) {
         for (auto &action : component.actions) {
             if (action.initialShortcuts != action.activeShortcuts) {
                 bool shortcutsApplied = saveAction(component, action, action.activeShortcuts);
@@ -262,7 +273,7 @@ void GlobalAccelModel::save()
 bool GlobalAccelModel::saveAction(const Component &component, const Action &action, const QSet<QKeySequence> &shortcutsToSave)
 {
     const QStringList actionId = buildActionId(component.id, component.displayName, action.id, action.displayName);
-    // TODO: pass action.activeShortcuts to m_globalAccelInterface->setForeignShortcut() as a QSet<QKeySequence>
+    // TODO: pass action.activeShortcuts to d->globalAccelInterface->setForeignShortcut() as a QSet<QKeySequence>
     // or QList<QKeySequence>?
     QList<QKeySequence> keys;
     keys.reserve(shortcutsToSave.size());
@@ -270,7 +281,7 @@ bool GlobalAccelModel::saveAction(const Component &component, const Action &acti
         keys.append(key);
     }
     qCDebug(KCMKEYS) << "Saving" << actionId << "target" << action.activeShortcuts << "applying" << keys;
-    auto reply = m_globalAccelInterface->setForeignShortcutKeys(actionId, keys);
+    auto reply = d->globalAccelInterface->setForeignShortcutKeys(actionId, keys);
     reply.waitForFinished();
     if (!reply.isValid()) {
         qCCritical(KCMKEYS) << "Error while saving";
@@ -288,12 +299,12 @@ bool GlobalAccelModel::saveAction(const Component &component, const Action &acti
 
 bool GlobalAccelModel::isValid() const
 {
-    return m_globalAccelInterface->isValid();
+    return d->globalAccelInterface->isValid();
 }
 
 void GlobalAccelModel::exportToConfig(KConfigBase &config)
 {
-    for (const auto &component : std::as_const(m_components)) {
+    for (const auto &component : std::as_const(components())) {
         if (component.checked) {
             KConfigGroup mainGroup(&config, component.id);
             KConfigGroup group(&mainGroup, QStringLiteral("Global Shortcuts"));
@@ -309,10 +320,10 @@ void GlobalAccelModel::importConfig(const KConfigBase &config)
 {
     const auto groupList = config.groupList();
     for (const auto &componentGroupName : groupList) {
-        auto component = std::find_if(m_components.begin(), m_components.end(), [&](const Component &c) {
+        auto component = std::find_if(components().begin(), components().end(), [&](const Component &c) {
             return c.id == componentGroupName;
         });
-        if (component == m_components.end()) {
+        if (component == components().end()) {
             qCWarning(KCMKEYS) << "Ignoring unknown component" << componentGroupName;
             continue;
         }
@@ -335,7 +346,7 @@ void GlobalAccelModel::importConfig(const KConfigBase &config)
             const QSet<QKeySequence> shortcutsSet(shortcuts.cbegin(), shortcuts.cend());
             if (shortcutsSet != action->activeShortcuts) {
                 action->activeShortcuts = shortcutsSet;
-                const QModelIndex i = index(action - component->actions.begin(), 0, index(component - m_components.begin(), 0));
+                const QModelIndex i = index(action - component->actions.begin(), 0, index(component - components().begin(), 0));
                 Q_EMIT dataChanged(i, i, {CustomShortcutsRole, ActiveShortcutsRole});
             }
         }
@@ -365,15 +376,15 @@ void GlobalAccelModel::addApplication(const QString &desktopFileName, const QStr
 
     // Register a dummy action to trigger kglobalaccel to parse the desktop file
     QStringList actionId = buildActionId(desktopName, displayName, QString(), QString());
-    m_globalAccelInterface->doRegister(actionId);
-    m_globalAccelInterface->unregister(desktopName, QString());
+    d->globalAccelInterface->doRegister(actionId);
+    d->globalAccelInterface->unregister(desktopName, QString());
     QCollator collator;
     collator.setCaseSensitivity(Qt::CaseInsensitive);
     collator.setNumericMode(true);
-    auto pos = std::lower_bound(m_components.begin(), m_components.end(), displayName, [&](const Component &c, const QString &name) {
+    auto pos = std::lower_bound(components().begin(), components().end(), displayName, [&](const Component &c, const QString &name) {
         return c.type != ComponentType::SystemService && (c.type != type ? c.type < type : collator.compare(c.displayName, name) < 0);
     });
-    auto watcher = new QDBusPendingCallWatcher(m_globalAccelInterface->getComponent(desktopName));
+    auto watcher = new QDBusPendingCallWatcher(d->globalAccelInterface->getComponent(desktopName));
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [=, this] {
         QDBusPendingReply<QDBusObjectPath> reply = *watcher;
         watcher->deleteLater();
@@ -381,7 +392,7 @@ void GlobalAccelModel::addApplication(const QString &desktopFileName, const QStr
             genericErrorOccured(QStringLiteral("Error while calling objectPath of added application") + desktopName, reply.error());
             return;
         }
-        KGlobalAccelComponentInterface component(m_globalAccelInterface->service(), reply.value().path(), m_globalAccelInterface->connection());
+        KGlobalAccelComponentInterface component(d->globalAccelInterface->service(), reply.value().path(), d->globalAccelInterface->connection());
         auto infoWatcher = new QDBusPendingCallWatcher(component.allShortcutInfos());
         connect(infoWatcher, &QDBusPendingCallWatcher::finished, this, [=, this] {
             QDBusPendingReply<QList<KGlobalShortcutInfo>> infoReply = *infoWatcher;
@@ -394,10 +405,10 @@ void GlobalAccelModel::addApplication(const QString &desktopFileName, const QStr
                 qCWarning(KCMKEYS()) << "New component has no shortcuts:" << reply.value().path();
                 Q_EMIT errorOccured(i18nc("%1 is the name of an application", "Error while adding %1, it seems it has no actions."));
             }
-            qCDebug(KCMKEYS) << "inserting at " << pos - m_components.begin();
-            beginInsertRows(QModelIndex(), pos - m_components.begin(), pos - m_components.begin());
+            qCDebug(KCMKEYS) << "inserting at " << pos - components().begin();
+            beginInsertRows(QModelIndex(), pos - components().begin(), pos - components().begin());
             auto c = loadComponent(infoReply.value());
-            m_components.insert(pos, c);
+            components().insert(pos, c);
             endInsertRows();
             Q_EMIT applicationAdded(c);
         });
@@ -406,18 +417,22 @@ void GlobalAccelModel::addApplication(const QString &desktopFileName, const QStr
 
 void GlobalAccelModel::updateCommandName(const QString &uniqueName)
 {
-    auto component = std::find_if(m_components.cbegin(), m_components.cend(), [&uniqueName](const Component &c) { return c.id == uniqueName; });
-    if (component == m_components.cend()) {
+    auto component = std::find_if(components().cbegin(), components().cend(), [&uniqueName](const Component &c) {
+        return c.id == uniqueName;
+    });
+    if (component == components().cend()) {
         return;
     }
 
     const auto &actions = component->actions;
-    auto action = std::find_if(actions.begin(), actions.end(), [](const Action &a) { return a.id == QStringLiteral("_launch"); });
+    auto action = std::find_if(actions.begin(), actions.end(), [](const Action &a) {
+        return a.id == QStringLiteral("_launch");
+    });
     if (action == actions.end()) {
         return;
     }
 
-    const int componentRow = std::distance(m_components.cbegin(), component);
+    const int componentRow = std::distance(components().cbegin(), component);
     const int actionRow = std::distance(actions.begin(), action);
 
     const QModelIndex componentIndex = index(componentRow, 0);
@@ -430,7 +445,7 @@ void GlobalAccelModel::updateCommandName(const QString &uniqueName)
 void GlobalAccelModel::removeComponent(const Component &component)
 {
     const QString &uniqueName = component.id;
-    auto componentReply = m_globalAccelInterface->getComponent(uniqueName);
+    auto componentReply = d->globalAccelInterface->getComponent(uniqueName);
     componentReply.waitForFinished();
     if (!componentReply.isValid()) {
         genericErrorOccured(QStringLiteral("Error while calling objectPath of component") + uniqueName, componentReply.error());
@@ -443,7 +458,7 @@ void GlobalAccelModel::removeComponent(const Component &component)
             QFile::remove(service->entryPath());
         }
     }
-    KGlobalAccelComponentInterface componentInterface(m_globalAccelInterface->service(), componentReply.value().path(), m_globalAccelInterface->connection());
+    KGlobalAccelComponentInterface componentInterface(d->globalAccelInterface->service(), componentReply.value().path(), d->globalAccelInterface->connection());
     qCDebug(KCMKEYS) << "Cleaning up component at" << componentReply.value().path();
     auto cleanUpReply = componentInterface.cleanUp();
     cleanUpReply.waitForFinished();
@@ -451,12 +466,12 @@ void GlobalAccelModel::removeComponent(const Component &component)
         genericErrorOccured(QStringLiteral("Error while calling cleanUp of component") + uniqueName, cleanUpReply.error());
         return;
     }
-    auto it = std::find_if(m_components.begin(), m_components.end(), [&](const Component &c) {
+    auto it = std::find_if(components().begin(), components().end(), [&](const Component &c) {
         return c.id == uniqueName;
     });
-    const int row = it - m_components.begin();
+    const int row = it - components().begin();
     beginRemoveRows(QModelIndex(), row, row);
-    m_components.remove(row);
+    components().remove(row);
     endRemoveRows();
 }
 
