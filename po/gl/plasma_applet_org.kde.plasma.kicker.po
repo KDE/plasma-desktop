@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-07 00:46+0000\n"
+"POT-Creation-Date: 2026-05-08 00:46+0000\n"
 "PO-Revision-Date: 2023-06-18 19:33+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -262,13 +262,13 @@ msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: DashboardRepresentation.qml:908 ItemListDelegate.qml:106
+#: DashboardRepresentation.qml:908 ItemListDelegate.qml:112
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: DashboardRepresentation.qml:909 ItemListDelegate.qml:107
+#: DashboardRepresentation.qml:909 ItemListDelegate.qml:113
 #, fuzzy, kde-format
 #| msgid "Browse installed applications by categories"
 msgctxt "@info:whatsthis Accessible description for badge"
@@ -300,7 +300,7 @@ msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
 msgstr ""
 
-#: ItemListDelegate.qml:108
+#: ItemListDelegate.qml:114
 #, fuzzy, kde-format
 #| msgid "All Installed Applications"
 msgctxt "@info:whatsthis Accessible description for badge"
