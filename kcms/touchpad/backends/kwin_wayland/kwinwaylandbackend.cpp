@@ -48,7 +48,7 @@ void KWinWaylandBackend::findTouchpads()
         }
         connect(tp, &KWinWaylandTouchpad::needsSaveChanged, this, &KWinWaylandBackend::needsSaveChanged);
         m_devices.append(tp);
-        qCInfo(KCM_TOUCHPAD).nospace() << "Touchpad found: " << tp->name() << " (" << tp->sysName() << ")";
+        qCInfo(KCM_TOUCHPAD).nospace() << "Touchpad found: " << sysName;
     }
     if (m_devices.isEmpty()) {
         qCInfo(KCM_TOUCHPAD) << "No Devices found.";
