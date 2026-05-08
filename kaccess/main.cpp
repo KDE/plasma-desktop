@@ -32,7 +32,6 @@ int main(int argc, char *argv[])
         qWarning() << "Xlib XKB extension does not match";
         return 1;
     }
-    qDebug() << "Xlib XKB extension major=" << major << " minor=" << minor;
 
     // we need an application object for QX11Info
     QApplication app(argc, argv);
