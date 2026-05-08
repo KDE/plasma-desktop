@@ -41,7 +41,6 @@ ecm_qt_declare_logging_category(kcm_mouse
     HEADER logging.h
     IDENTIFIER KCM_MOUSE
     CATEGORY_NAME kcm_mouse
-    DEFAULT_SEVERITY Critical
     DESCRIPTION "KCM for mouse input"
     EXPORT KCM_MOUSE
 )

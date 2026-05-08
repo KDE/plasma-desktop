@@ -9,8 +9,6 @@ ecm_qt_declare_logging_category(kcm_touchscreen
         KCM_TOUCHSCREEN
     CATEGORY_NAME
         kcm_touchscreen
-    DEFAULT_SEVERITY
-        Critical
     DESCRIPTION
         "KCM for touchscreen input"
     EXPORT

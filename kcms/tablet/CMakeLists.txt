@@ -9,8 +9,6 @@ ecm_qt_declare_logging_category(kcm_tablet
         KCM_TABLET
     CATEGORY_NAME
         kcm_tablet
-    DEFAULT_SEVERITY
-        Critical
     DESCRIPTION
         "KCM for tablet input"
     EXPORT

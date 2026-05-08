@@ -83,7 +83,6 @@ ecm_qt_declare_logging_category(kcm_keyboard_PART_SRCS
     HEADER debug.h
     IDENTIFIER KCM_KEYBOARD
     CATEGORY_NAME org.kde.kcm_keyboard
-    DEFAULT_SEVERITY Warning
     DESCRIPTION "KCM and KDED for keyboard layouts"
     EXPORT kcm_keyboard
 )

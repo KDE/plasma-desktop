@@ -8,8 +8,6 @@ ecm_qt_declare_logging_category(kwindevices_SRCS
         LIBKWINDEVICES
     CATEGORY_NAME
         org.kde.libkwindevices
-    DEFAULT_SEVERITY
-        Critical
     DESCRIPTION
         "Library for kwin devices"
     EXPORT

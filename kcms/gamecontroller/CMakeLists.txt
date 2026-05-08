@@ -12,8 +12,6 @@ ecm_qt_declare_logging_category(kcm_gamecontroller
         KCM_GAMECONTROLLER
     CATEGORY_NAME
         kcm_gamecontroller
-    DEFAULT_SEVERITY
-        Critical
     DESCRIPTION
         "KCM for game controller"
     EXPORT

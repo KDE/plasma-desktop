@@ -13,7 +13,6 @@ qt_add_dbus_interface(kcm_kded_SRCS ${KDED_DBUS_INTERFACE} kded_interface)
 ecm_qt_declare_logging_category(kcm_kded_SRCS HEADER debug.h
                                 IDENTIFIER KCM_KDED
                                 CATEGORY_NAME kcm_kded
-                                DEFAULT_SEVERITY Info
                                 DESCRIPTION "KCM for kded services"
                                 EXPORT kcm_kded)
 
