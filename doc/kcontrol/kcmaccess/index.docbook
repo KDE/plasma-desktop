@@ -13,8 +13,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2021-04-08</date>
-<releaseinfo>Plasma 5.20</releaseinfo>
+<date>2026-05-10</date>
+<releaseinfo>Plasma 6.6</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -35,17 +35,227 @@
 audible cues, or who have difficulty using a keyboard.  </para>
 
 <para>
-The module is divided into six tabs: <link
-linkend="access-bell"><guilabel>Bell</guilabel></link>, <link
+The module is divided into ten tabs: <link
+linkend="access-zoom"><guilabel>Zoom &amp; Magnifier</guilabel></link>,<link
+linkend="access-bell"><guilabel>System Bell</guilabel></link>, <link
 linkend="access-modifier-keys"><guilabel>Modifier keys</guilabel></link>, <link
 linkend="access-keyboard-filters"><guilabel>Keyboard Filters</guilabel></link>, <link
-linkend="access-activation-gestures"><guilabel>Activation Gestures</guilabel></link>, <link
-linkend="mouse-navigation"><guilabel>Mouse Navigation</guilabel></link>, and <link
-linkend="access-screenreader"><guilabel>Screen Reader</guilabel></link>.
+linkend="mouse-navigation"><guilabel>Mouse Navigation</guilabel></link>, <link
+linkend="access-activation-shortcuts"><guilabel>Activation Shortcuts</guilabel></link>, <link
+linkend="access-screenreader"><guilabel>Screen Reader</guilabel></link>, <link
+linkend="access-color-blindness"><guilabel>Color Blindness Correction</guilabel></link>, <link
+linkend="access-invert"><guilabel>Invert</guilabel></link>, and <link
+linkend="access-shake-pointer"><guilabel>Shake Pointer</guilabel></link>.
 </para>
 
+
+<sect3 id="access-zoom">
+<title><guilabel>Zoom &amp; Magnifier</guilabel></title>
+
+<para>
+The Zoom and Magnifier tools in KDE Plasma are designed to enlarge portions of the screen,
+serving as a digital magnifying glass. While they share the goal of making small text and
+fine details more legible, they offer two distinct ways of interacting with the desktop environment.
+</para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Zoom</guilabel></term>
+<listitem>
+<para>
+Here you can switch between the <guilabel>Full screen</guilabel> and <guilabel>Magnify region</guilabel> modes.
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Full screen</guilabel></term>
+<listitem>
+<para>
+Enable fullscreen mode.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Show pixel grid at zoom level</guilabel></term>
+<listitem>
+<para>
+Provide a visual overlay of the individual pixels that make up the image on your screen once you have reached a high enough magnification. If enabled, &plasma; draws a thin grid around every single pixel so you can see exactly where one ends and the next begins.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Pointer appearance</guilabel></term>
+<listitem>
+<para>Controls the mouse pointer appearance when zooming. There are several options: <guilabel>Scale</guilabel>, <guilabel>Keep</guilabel>, and <guilabel>Hide</guilabel>.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Pointer tracking</guilabel></term>
+<listitem>
+<para>
+<variablelist>
+<varlistentry>
+<term><guilabel>Proportional</guilabel></term>
+<listitem>
+<para>
+Zoom area moves in sync with pointer.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Centered</guilabel></term>
+<listitem>
+<para>
+Pointer stays centered on-screen, except near screen edges.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Centered (Strict)</guilabel></term>
+<listitem>
+<para>
+Pointer stays centered on-screen, even near screen edges.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Push</guilabel></term>
+<listitem>
+<para>
+Pointer pushes zoom area at screen edges.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Disabled</guilabel></term>
+<listitem>
+<para>
+Zoom area does not follow pointer.
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Sharpen screen content while zoomed in</guilabel></term>
+<listitem>
+<para>
+If turned on, &kwin; will use pattern recognition to try to scale the shape
+of text/icons on the workspace at extreme zoom levels. This would help improve
+overall text contrast at the cost of font accuracy by avoiding blur or
+pixelation.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Enable focus tracking</guilabel></term>
+<listitem>
+<para>
+Ensures the magnified viewport automatically follows the <quote>active</quote> part of the interface, even if your mouse is not moving. While standard zoom usually follows the mouse cursor, focus tracking monitors the system focus (the text cursor or the currently selected UI element).
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Enable text caret tracking</guilabel></term>
+<listitem>
+<para>
+Allows the system's magnification tools to follow the text cursor rather than just the mouse pointer. In technical environments—whether you are writing code, drafting a research manuscript, or filling out complex forms—your focus is often where you are typing, which may be far away from where your mouse is resting.
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Magnify region</guilabel></term>
+<listitem>
+<para>
+Enable the region magnification mode.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Width</guilabel></term>
+<listitem>
+<para>
+Allows to configure the width of the magnified area.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Height</guilabel></term>
+<listitem>
+<para>
+Allows to configure the height of the magnified area.
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Disabled</guilabel></term>
+<listitem>
+<para>
+Disable the scaling modes.
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Zoom factor</guilabel></term>
+<listitem>
+<para>
+Adjusts how much the screen enlarges with each step (&eg;, 1.2x or 2.0x). &plasma; supports extreme magnification levels (up to 100x), which is significantly higher than most other operating systems.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Scroll gesture modifier keys</guilabel></term>
+<listitem>
+<para>
+Allows you to perform scrolling actions using a combination of a keyboard key and mouse movement, rather than using a physical scroll wheel.
+</para>
+<para>
+This is particularly useful for users who use trackballs, specialized pointing devices without wheels, or who have motor impairments that make using a scroll wheel difficult.
+</para>
+<note>
+<para>
+Zoom scroll gestures are only available on Wayland.
+</para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Scroll while modifier keys are pressed to zoom</guilabel></term>
+<listitem>
+<para>
+When this option enabled, holding down a specific key (usually the &Meta; key) and rotating your mouse wheel (or using a two-finger scroll on a touchpad) will dynamically increase or decrease the magnification of the entire desktop.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Configure Shortcuts…</guilabel></term>
+<listitem>
+<para>
+Use shortcuts to control zoom.
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect3>
+
 <sect3 id="access-bell">
-<title><guilabel>Bell</guilabel></title>
+<title><guilabel>System Bell</guilabel></title>
 
 <para>
 This panel is divided into an <guilabel>Audible Bell</guilabel> section
@@ -210,55 +420,6 @@ Use system bell whenever a key is rejected
 
 </sect3>
 
-<sect3 id="access-activation-gestures">
-<title><guilabel>Activation Gestures</guilabel></title>
-
-<para>There are two sections to this panel.</para>
-
-<variablelist>
-<varlistentry>
-<term><guilabel>Activation Gestures</guilabel> with these options:</term>
-<listitem>
-<para>
-<simplelist>
-<member><guilabel>Use gestures for activating sticky keys and slow keys</guilabel></member>
-<member>Here you can activate keyboard gestures that turn on the following features:</member>
-<member>Mouse Keys: Press &Shift;+NumLock</member>
-<member>Sticky keys: Press &Shift; key 5 consecutive times</member>
-<member>Slow keys: Hold down &Shift; for 8 seconds</member>
-<member><guilabel>Turn sticky keys and slow keys off after a certain period of inactivity</guilabel></member>
-</simplelist>
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Notification</guilabel> with these options:</term>
-<listitem>
-<para>
-<simplelist>
-<member><guilabel>Use the system bell whenever a gesture is used to turn an accessibility 
-feature on or off</guilabel></member>
-
-<member><guilabel>Show a confirmation dialog whenever a keyboard accessibility feature is 
-turned on or off</guilabel></member>
-<member>If this option is checked, &kde; will show a confirmation dialog whenever a 
-keyboard accessibility feature is turned on or off.</member>
-<member>Ensure you know what you are doing if you uncheck it, as the keyboard 
-accessibility settings will then always be applied without confirmation.</member>
-
-<member><guilabel>Use &kde;'s system notification mechanism whenever a keyboard accessibility 
-feature is turned on or off</guilabel></member>
-</simplelist>
-</para>
-</listitem>
-</varlistentry>
-</variablelist>
-<para>Click the <guibutton>Configure Notifications</guibutton> button to open a dialog 
-which allows you to edit the notifications for status changes of all keys.</para>
-
-</sect3>
-
 <sect3 id="mouse-navigation">
 <title>Mouse Navigation</title>
 
@@ -329,6 +490,55 @@ This is the amount of acceleration to apply to mouse key acceleration.
 
 </sect3>
 
+<sect3 id="access-activation-shortcuts">
+<title><guilabel>Activation Shortcuts</guilabel></title>
+
+<para>There are two sections to this panel.</para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Activation Gestures</guilabel> with these options:</term>
+<listitem>
+<para>
+<simplelist>
+<member><guilabel>Use gestures for activating sticky keys and slow keys</guilabel></member>
+<member>Here you can activate keyboard gestures that turn on the following features:</member>
+<member>Mouse Keys: Press &Shift;+NumLock</member>
+<member>Sticky keys: Press &Shift; key 5 consecutive times</member>
+<member>Slow keys: Hold down &Shift; for 8 seconds</member>
+<member><guilabel>Turn sticky keys and slow keys off after a certain period of inactivity</guilabel></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Notification</guilabel> with these options:</term>
+<listitem>
+<para>
+<simplelist>
+<member><guilabel>Use the system bell whenever a gesture is used to turn an accessibility 
+feature on or off</guilabel></member>
+
+<member><guilabel>Show a confirmation dialog whenever a keyboard accessibility feature is 
+turned on or off</guilabel></member>
+<member>If this option is checked, &kde; will show a confirmation dialog whenever a 
+keyboard accessibility feature is turned on or off.</member>
+<member>Ensure you know what you are doing if you uncheck it, as the keyboard 
+accessibility settings will then always be applied without confirmation.</member>
+
+<member><guilabel>Use &kde;'s system notification mechanism whenever a keyboard accessibility 
+feature is turned on or off</guilabel></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para>Click the <guibutton>Configure Notifications</guibutton> button to open a dialog 
+which allows you to edit the notifications for status changes of all keys.</para>
+
+</sect3>
+
 <sect3 id="access-screenreader">
 <title><guilabel>Screen Reader</guilabel></title>
 
@@ -353,6 +563,150 @@ and check that this menu has a keyboard shortcut associated
 When pressing this shortcut, the menu should open and be read when navigating
 the menu with the arrow keys.
 </para>
+</sect3>
+
+<sect3 id="access-color-blindness">
+<title><guilabel>Color Blindness Correction</guilabel></title>
+
+<para>
+It is an accessibility tool designed to help users with color vision deficiencies better distinguish between colors on their screen.
+</para>
+<para>
+Unlike simple filters that change the <quote>look</quote> of the desktop, this feature uses <ulink url="https://en.wikipedia.org/wiki/Color_blindness">daltonization algorithms</ulink>. These algorithms shift problematic color frequencies into parts of the spectrum that the user can see more clearly, helping to restore contrast that would otherwise be lost.
+</para>
+<para>
+Main objectives:
+</para>
+<itemizedlist>
+<listitem>
+<para>
+Many interfaces use color to convey meaning (&eg;, green for <quote>success</quote> and red for <quote>error</quote>). For someone with protanopia or deuteranopia, these may look identical. The correction pane shifts these colors so the distinction becomes visible.
+</para>
+</listitem>
+<listitem>
+<para>
+It ensures that buttons, graphs, and highlighted text are legible, regardless of the original design's color palette.
+</para>
+</listitem>
+<listitem>
+<para>
+Because it is handled at the compositor level (&kwin;), the correction applies to everything—web browsers, specialized engineering software, videos, and the desktop interface itself.
+</para>
+</listitem>
+</itemizedlist>
+<para>
+The pane typically offers adjustments for the three primary types of color blindness:
+</para>
+<itemizedlist>
+<listitem>
+<para>
+Protanopia: Red-blindness (difficulty seeing red light).
+</para>
+</listitem>
+<listitem>
+<para>
+Deuteranopia: Green-blindness (the most common form).
+</para>
+</listitem>
+<listitem>
+<para>
+Tritanopia: Blue-blindness (rarer, difficulty distinguishing blue and yellow).
+</para>
+</listitem>
+</itemizedlist>
+<para>
+The <guilabel>Problematic colors</guilabel> selection: You select the specific type of deficiency.
+</para>
+<para>
+The <guilabel>Intensity</guilabel> slider: This is the most important part of the pane. It allows you to adjust the strength of the shift. Since color vision is a spectrum, a "one size fits all" filter rarely works; the slider lets you fine-tune the correction to your specific vision.
+</para>
+<note>
+<para>
+These filters are intended for accessibility, not for color-accurate work like professional photo editing or digital painting. Because they shift the color spectrum to make it "readable," the colors on the screen will no longer match the "true" hex codes or print values of the files you are viewing.
+</para>
+</note>
+<para>
+You can control the results using <guilabel>Adjusted colors</guilabel> swatches.
+</para>
+</sect3>
+
+<sect3 id="access-invert">
+<title><guilabel>Invert</guilabel></title>
+
+<para>
+This pane configures a tool to flip the color values of your screen—turning white pixels to black, blues to oranges, and so on. This is handled by the &kwin; window manager as a post-processing effect.
+</para>
+<para>
+While it might look like a <quote>Negative</quote> photo filter, its primary purposes are functional rather than aesthetic:
+</para>
+<para>
+For users with specific visual impairments, such as photophobia (light sensitivity) or certain types of low vision, a standard bright screen can cause physical pain or make text appear blurry due to <quote>light bleed.</quote>
+</para>
+<para>
+Inverting the screen turns bright backgrounds dark and dark text light, significantly reducing the amount of light emitted by the monitor while maintaining the contrast needed to read.
+</para>
+<para>
+While most modern applications have native dark modes, some older software or specific web pages are hard-coded with white backgrounds.
+</para>
+<para>
+The Invert tool acts as a <quote>universal dark mode.</quote> If an application doesn't support a dark theme, you can force the colors to invert to save your eyes during late-night work sessions.
+</para>
+<para>
+You can switch on the inversion using the <guilabel>Invert</guilabel> checkbox and <guibutton>Configure Shortcuts...</guibutton> for this action.
+</para>
+</sect3>
+
+<sect3 id="access-shake-pointer">
+<title><guilabel>Shake Pointer</guilabel></title>
+
+<para>
+In the &plasma; desktop environment, the <guilabel>Shake Pointer</guilabel> (often colloquially called "Shake to Find") is an accessibility and productivity feature designed to solve the "lost cursor" problem.
+</para>
+<para>
+If you are using a multi-monitor setup, an ultra-high-resolution display, or simply have a dark wallpaper, it is remarkably easy to lose track of where the mouse cursor is. The purpose of this feature is to provide an immediate visual clue to help you locate it.
+</para>
+<para>
+When the feature is enabled, the system monitors the velocity and direction of mouse movements. If it detects a rapid back-and-forth "shaking" motion:
+</para>
+<itemizedlist>
+<listitem>
+<para>
+Temporary enlargement: The cursor increases in size to the large scale.
+</para>
+</listitem>
+<listitem>
+<para>
+Visual focus: This sudden change in scale catches the human eye’s peripheral vision, instantly revealing the cursor's coordinates.
+</para>
+</listitem>
+<listitem>
+<para>
+Automatic reset: As soon as you stop shaking the mouse, the cursor shrinks back to its normal size.
+</para>
+</listitem>
+</itemizedlist>
+<para>There are several options on this panel.</para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Shake pointer to find it</guilabel></term>
+<listitem>
+<para>
+If this option is enabled, &plasma; enables the shake ponter effect.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Magnification</guilabel></term>
+<listitem>
+<para>
+    Here you can specify pointer magnification level for <guilabel>Normal</guilabel> and <guilabel>Large</guilabel> pointer size.
+</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
 </sect3>
 
 </sect2>
