@@ -54,6 +54,8 @@ PlasmoidItem {
         CompactRepresentation {
             dashWindowComponent: dashboardRepresentationComponent
             toolTipSubText: kicker.toolTipSubText
+            expanded: kicker.expanded
+            onExpandRequested: expanded => kicker.expanded = expanded
         }
     }
 

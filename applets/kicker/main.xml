@@ -18,6 +18,10 @@
       <label>The URL of the custom image to use instead of an icon in the compact representation (e.g. on a small panel).</label>
       <default></default>
     </entry>
+    <entry name="menuLabel" type="String">
+      <label>Text label for the Panel button</label>
+      <default></default>
+    </entry>
 
     <entry name="appNameFormat" type="Int">
       <label>The format used in the display of application names: 0 = NameOnly, 1 = GenericNameOnly, 2 = NameAndGenericName, 3 = GenericNameAndName</label>

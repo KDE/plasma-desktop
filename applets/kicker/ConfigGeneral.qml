@@ -24,6 +24,7 @@ KCMUtils.SimpleKCM {
     property string cfg_icon: Plasmoid.configuration.icon
     property bool cfg_useCustomButtonImage: Plasmoid.configuration.useCustomButtonImage
     property string cfg_customButtonImage: Plasmoid.configuration.customButtonImage
+    property alias cfg_menuLabel: menuLabel.text
 
     property alias cfg_appNameFormat: appNameFormat.currentIndex
     property alias cfg_limitDepth: limitDepth.checked
@@ -142,6 +143,40 @@ KCMUtils.SimpleKCM {
                     onClicked: {
                         configGeneral.cfg_icon = "start-here-kde-symbolic"
                         configGeneral.cfg_customButtonImage = ""
+                        configGeneral.cfg_useCustomButtonImage = false
+                    }
+                }
+                QQC2.MenuItem {
+                    text: i18nc("@action:inmenu", "Remove icon")
+                    icon.name: "delete"
+                    enabled: configGeneral.cfg_icon !== "" && menuLabel.text
+                    onClicked: {
+                        configGeneral.cfg_customButtonImage = ""
+                        configGeneral.cfg_useCustomButtonImage = true
+                    }
+                }
+            }
+        }
+
+        Kirigami.ActionTextField {
+            id: menuLabel
+            Kirigami.FormData.label: i18nc("@label:textbox", "Text label:")
+            placeholderText: i18nc("@info:placeholder", "Type here to add a text label")
+            onTextEdited: {
+                // This is to make sure that we always have a icon if there is no text.
+                // If the user remove the icon and remove the text, without this, we'll have no icon and no text.
+                // This is to force the icon to be there.
+                if (!menuLabel.text && configGeneral.cfg_useCustomButtonImage && !configGeneral.cfg_customButtonImage) {
+                    configGeneral.cfg_useCustomButtonImage = false
+                }
+            }
+            rightActions: QQC2.Action {
+                icon.name: "edit-clear"
+                enabled: menuLabel.text !== ""
+                text: i18nc("@action:button", "Reset menu label")
+                onTriggered: {
+                    menuLabel.clear()
+                    if (configGeneral.cfg_useCustomButtonImage && !configGeneral.cfg_customButtonImage) {
                         configGeneral.cfg_useCustomButtonImage = false
                     }
                 }
