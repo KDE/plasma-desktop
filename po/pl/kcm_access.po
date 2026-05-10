@@ -1,6 +1,6 @@
-# Version: $Revision: 1735908 $
+# Version: $Revision: 1736565 $
 # translation of kcmaccess.po to
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2021, 2022, 2023, 2024, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2014-2017, 2019, 2021-2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
 # Krzysztof Lichota <lichota@mimuw.edu.pl>, 2002, 2005, 2006.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004, 2005.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-01 00:46+0000\n"
-"PO-Revision-Date: 2026-01-24 10:40+0100\n"
+"PO-Revision-Date: 2026-05-09 16:01+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
@@ -200,7 +200,7 @@ msgstr "Przełącz dźwięk klawiszy"
 #: kcmaccessibilitykeyboard.kcfg:29
 #, kde-format
 msgid "Notify when a keyboard modifier is pressed"
-msgstr "Powiadom, gdy naciśnięty zostanie klawisz odmieniający"
+msgstr "Powiadom, gdy naciśnięty zostanie klawisz przełączający"
 
 #. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:9
@@ -1212,7 +1212,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
-msgstr "Przewiń przy naciśniętym klawiszu odmieniającym, aby przybliżyć"
+msgstr "Przewiń przy naciśniętym klawiszu przełączającym, aby przybliżyć"
 
 #: ui/ZoomMagnifier.qml:397
 #, kde-format
