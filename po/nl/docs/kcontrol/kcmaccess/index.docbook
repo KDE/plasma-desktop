@@ -18,9 +18,9 @@
 </authorgroup>
 
 <date
->2021-04-08</date>
+>2026-05-10</date>
 <releaseinfo
->Plasma 5.20</releaseinfo>
+>Plasma 6.6</releaseinfo>
 
 <keywordset>
 <keyword
@@ -48,36 +48,307 @@
 >Deze module is bedoeld voor mensen met een gehoorprobleem, of gebruikers die moeite hebben met het gebruik van een toetsenbord. </para>
 
 <para
->Deze module is verdeeld over zes tabbladen: <link linkend="access-bell"
+>De module is verdeeld in tien tabbladen: <link linkend="access-zoom"
 ><guilabel
->Bel</guilabel
+>Zoom &amp; Vergrootglas</guilabel
 ></link
-> en <link linkend="access-modifier-keys"
+>,<link linkend="access-bell"
 ><guilabel
->Samensteltoetsen</guilabel
+>Systeembel</guilabel
+></link
+>, <link linkend="access-modifier-keys"
+><guilabel
+>Modificatietoetsen</guilabel
 ></link
 >, <link linkend="access-keyboard-filters"
 ><guilabel
 >Toetsenbordfilters</guilabel
 ></link
->, <link linkend="access-activation-gestures"
-><guilabel
->Activeringsgebaren</guilabel
-></link
 >, <link linkend="mouse-navigation"
 ><guilabel
 >Muisnavigatie</guilabel
 ></link
-> en <link linkend="access-screenreader"
+>, <link linkend="access-activation-shortcuts"
+><guilabel
+>Activeringssneltoetsen</guilabel
+></link
+>, <link linkend="access-screenreader"
 ><guilabel
 >Schermlezer</guilabel
 ></link
+>, <link linkend="access-color-blindness"
+><guilabel
+>Correctie voor kleurenblindheid</guilabel
+></link
+>, <link linkend="access-invert"
+><guilabel
+>Omkeren</guilabel
+></link
+>, en <link linkend="access-shake-pointer"
+><guilabel
+>Schuddende aanwijzer</guilabel
+></link
 >. </para>
+
+
+<sect3 id="access-zoom">
+<title
+><guilabel
+>Zoomen &amp; vergrootglas</guilabel
+></title>
+
+<para
+>De zoom- en vergrootglasfuncties in KDE Plasma zijn ontworpen om delen van het scherm te vergroten en fungeren als een digitaal vergrootglas. Hoewel ze beide tot doel hebben kleine tekst en fijne details beter leesbaar te maken, bieden ze twee verschillende manieren om met de bureaubladomgeving interactie te hebben. </para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Zoomen</guilabel
+></term>
+<listitem>
+<para
+>Hier kunt u schakelen tussen de modi <guilabel
+>Volledig scherm</guilabel
+> en <guilabel
+>Gebied vergroten</guilabel
+>. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Volledig scherm</guilabel
+></term>
+<listitem>
+<para
+>Volledig scherm inschakelen. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pixelraster tonen bij zoomniveau</guilabel
+></term>
+<listitem>
+<para
+>Geef een visuele overlay van de individuele pixels waaruit de afbeelding bestaat op uw scherm zodra u een voldoende hoge vergroting hebt bereikt. Indien ingeschakeld, tekent &plasma; een dun raster rond elke pixel, zodat u precies kunt zien waar de ene pixel eindigt en de volgende begint. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Uiterlijk van aanwijzer</guilabel
+></term>
+<listitem>
+<para
+>Hiermee wordt de weergave van de muisaanwijzer tijdens het zoomen geregeld. Er zijn verschillende opties: <guilabel
+>Schalen</guilabel
+>, <guilabel
+>Behouden</guilabel
+> en <guilabel
+>Verbergen</guilabel
+>. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Aanwijzer volgen</guilabel
+></term>
+<listitem>
+<para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Proportioneel</guilabel
+></term>
+<listitem>
+<para
+>Zoomgebied beweegt gelijk met aanwijzer. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Gecentreerd</guilabel
+></term>
+<listitem>
+<para
+>Aanwijzer blijft gecentreerd op het scherm, behalve nabij de schermranden. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Gecentreerd (strikt)</guilabel
+></term>
+<listitem>
+<para
+>Aanwijzer blijft gecentreerd op het scherm, zelfs nabij de schermranden. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Push</guilabel
+></term>
+<listitem>
+<para
+>Aanwijzer drukt het zoomgebied aan de schermranden. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Uitgeschakeld</guilabel
+></term>
+<listitem>
+<para
+>Zoomgebied volgt aanwijzer niet. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Verscherp de scherminhoud terwijl u bent ingezoomd</guilabel
+></term>
+<listitem>
+<para
+>Indien ingeschakeld, zal &kwin; patroonherkenning gebruiken om te proberen de vorm van tekst/pictogrammen op de werkruimte te schalen bij extreme zoomniveaus. Dit zou helpen om het algehele tekstcontrast te verbeteren ten koste van de nauwkeurigheid van het lettertype door onscherpte of pixelvorming te voorkomen. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Volgen van focus inschakelen</guilabel
+></term>
+<listitem>
+<para
+>Zorgt ervoor dat het vergrote venster automatisch het actieve deel van de interface volgt, zelfs als uw muis niet beweegt. Waar standaard zoomen meestal de muiscursor volgt, bewaakt focus volgen de systeemfocus (de tekstcursor of het momenteel geselecteerde UI-element). </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Volgen van tekstdakje inschakelen</guilabel
+></term>
+<listitem>
+<para
+>Hiermee kunnen de vergrotingsfuncties van het systeem de tekstcursor volgen in plaats van alleen de muisaanwijzer. In technische omgevingen – of u nu code schrijft, een onderzoeksmanuscript opstelt of complexe formulieren invult – ligt uw focus vaak op waar u typt, wat ver verwijderd kan zijn van waar uw muis zich bevindt. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Vergrotingsgebied</guilabel
+></term>
+<listitem>
+<para
+>Schakel de regiovergrotingsmodus in. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Breedte</guilabel
+></term>
+<listitem>
+<para
+>Hiermee kunt u de breedte van het vergrote gebied instellen. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Hoogte</guilabel
+></term>
+<listitem>
+<para
+>Hiermee kunt u de hoogte van het vergrote gebied instellen. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Uitgeschakeld</guilabel
+></term>
+<listitem>
+<para
+>Schakel de schaalingsmodi uit. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Zoomfactor</guilabel
+></term>
+<listitem>
+<para
+>Hiermee kan worden aangepast hoeveel het scherm bij elke stap wordt vergroot (bijv. 1,2x of 2,0x). &plasma; ondersteunt extreem hoge vergrotingsniveaus (tot 100x), wat aanzienlijk hoger is dan bij de meeste andere besturingssystemen. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Samensteltoetsen voor schuifgebaar</guilabel
+></term>
+<listitem>
+<para
+>Hiermee kunt u schuifbewegingen uitvoeren met een combinatie van een toets op het toetsenbord en muisbewegingen, in plaats van een fysiek schuifwiel te gebruiken. </para>
+<para
+>Dit is met name handig voor gebruikers die trackballs gebruiken, gespecialiseerde aanwijsapparaten zonder wieltjes, of die motorische beperkingen hebben waardoor het gebruik van een schuifwieltje moeilijk is. </para>
+<note>
+<para
+>Zoom schuifgebaren zijn alleen beschikbaar op Wayland. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Schuif terwijl samensteltoetsen ingedrukt zijn om te zoomen</guilabel
+></term>
+<listitem>
+<para
+>Wanneer deze optie is ingeschakeld, zal het ingedrukt houden van een specifieke toets (meestal de &Meta;-toets) en het draaien aan het muiswiel (of het gebruik van een tweevingerige schuifbeweging op een touchpad) de vergroting van het gehele bureaublad dynamisch verhogen of verlagen. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Sneltoetsen configureren…</guilabel
+></term>
+<listitem>
+<para
+>Sneltoetsen gebruiken om zoom te besturen. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect3>
 
 <sect3 id="access-bell">
 <title
 ><guilabel
->Bel</guilabel
+>Systeembel</guilabel
 ></title>
 
 <para
@@ -292,83 +563,6 @@ Use system bell whenever a key is rejected
 
 </sect3>
 
-<sect3 id="access-activation-gestures">
-<title
-><guilabel
->Activeringsgebaren</guilabel
-></title>
-
-<para
->Er zijn twee secties in dit paneel.</para>
-
-<variablelist>
-<varlistentry>
-<term
-><guilabel
->Activeringsgebaren</guilabel
-> met deze opties:</term>
-<listitem>
-<para>
-<simplelist>
-<member
-><guilabel
->Gebaren gebruiken voor het activeren van plakkende en langzame toetsen</guilabel
-></member>
-<member
->Hier kunt u toetsenbordgebaren activeren die de volgende mogelijkheden aanzetten:</member>
-<member
->Muistoetsen: Druk op &Shift;+NumLock</member>
-<member
->Plakkende toetsen: Druk 5 keer achterelkaar op &Shift;</member>
-<member
->Langzame toetsen: &Shift; 8 seconden ingedrukt houden</member>
-<member
-><guilabel
->Plakkende en langzame toetsen uitschakelen na een bepaalde periode van inactiviteit</guilabel
-></member>
-</simplelist>
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><guilabel
->Meldingen</guilabel
-> bij deze opties:</term>
-<listitem>
-<para>
-<simplelist>
-<member
-><guilabel
->Systeembel gebruiken als een gebaar wordt gebruikt om een toegankelijkheidsfunctie in of uit te schakelen</guilabel
-></member>
-
-<member
-><guilabel
->Bevestigingsdialoog tonen wanneer een toegankelijkheidsfunctie in of uit wordt geschakeld</guilabel
-></member>
-<member
->Als deze optie is ingeschakeld zal &kde; een bevestigingsdialoog tonen wanneer een toegankelijkheidsfunctie in of uit wordt geschakeld.</member>
-<member
->Weet wat u doet als u dit de-activeert, omdat de toegankelijkheidsinstellingen van het toetsenbord dan altijd zonder bevestiging worden toegepast.</member>
-
-<member
-><guilabel
->&kde;''s systeemnotificatie gebruiken als er een toegankelijkheidsfunctie van het toetsenbord wordt in- of uitgeschakeld</guilabel
-></member>
-</simplelist>
-</para>
-</listitem>
-</varlistentry>
-</variablelist>
-<para
->Klik op the knop <guibutton
->Notificaties instellen</guibutton
-> om een dialoog te openen waarin u in staat bent om de notificaties voor statuswijzigingen van alle toetsen te bewerken.</para>
-
-</sect3>
-
 <sect3 id="mouse-navigation">
 <title
 >Muisnavigatie</title>
@@ -466,6 +660,83 @@ Use system bell whenever a key is rejected
 
 </sect3>
 
+<sect3 id="access-activation-shortcuts">
+<title
+><guilabel
+>Sneltoetsen voor activeren</guilabel
+></title>
+
+<para
+>Er zijn twee secties in dit paneel.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Activeringsgebaren</guilabel
+> met deze opties:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Gebaren gebruiken voor het activeren van plakkende en langzame toetsen</guilabel
+></member>
+<member
+>Hier kunt u toetsenbordgebaren activeren die de volgende mogelijkheden aanzetten:</member>
+<member
+>Muistoetsen: Druk op &Shift;+NumLock</member>
+<member
+>Plakkende toetsen: Druk 5 keer achterelkaar op &Shift;</member>
+<member
+>Langzame toetsen: &Shift; 8 seconden ingedrukt houden</member>
+<member
+><guilabel
+>Plakkende en langzame toetsen uitschakelen na een bepaalde periode van inactiviteit</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Meldingen</guilabel
+> bij deze opties:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Systeembel gebruiken als een gebaar wordt gebruikt om een toegankelijkheidsfunctie in of uit te schakelen</guilabel
+></member>
+
+<member
+><guilabel
+>Bevestigingsdialoog tonen wanneer een toegankelijkheidsfunctie in of uit wordt geschakeld</guilabel
+></member>
+<member
+>Als deze optie is ingeschakeld zal &kde; een bevestigingsdialoog tonen wanneer een toegankelijkheidsfunctie in of uit wordt geschakeld.</member>
+<member
+>Weet wat u doet als u dit de-activeert, omdat de toegankelijkheidsinstellingen van het toetsenbord dan altijd zonder bevestiging worden toegepast.</member>
+
+<member
+><guilabel
+>&kde;''s systeemnotificatie gebruiken als er een toegankelijkheidsfunctie van het toetsenbord wordt in- of uitgeschakeld</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Klik op the knop <guibutton
+>Notificaties instellen</guibutton
+> om een dialoog te openen waarin u in staat bent om de notificaties voor statuswijzigingen van alle toetsen te bewerken.</para>
+
+</sect3>
+
 <sect3 id="access-screenreader">
 <title
 ><guilabel
@@ -500,6 +771,153 @@ Use system bell whenever a key is rejected
 >F1</keycap
 ></keycombo
 >). Wanneer op deze sneltoets wordt gedrukt, zou het menu moeten openen en worden gelezen bij navigeren door het menu met de pijltjestoetsen. </para>
+</sect3>
+
+<sect3 id="access-color-blindness">
+<title
+><guilabel
+>Correctie voor kleurenblindheid</guilabel
+></title>
+
+<para
+>Het is een hulpmiddel voor toegankelijkheid dat is ontworpen om gebruikers met kleurenblindheid te helpen kleuren op hun scherm beter te onderscheiden. </para>
+<para
+>In tegenstelling tot eenvoudige filters die het uiterlijk van het bureaublad veranderen, gebruikt deze functie Daltonisatie-algoritmen. Deze algoritmen verschuiven problematische kleurfrequenties naar delen van het spectrum die de gebruiker duidelijker kan zien, waardoor contrast dat anders verloren zou gaan, wordt hersteld. </para>
+<para
+>Hoofddoelen: </para>
+<itemizedlist>
+<listitem>
+<para
+>Veel interfaces gebruiken kleur om betekenis over te brengen (bijvoorbeeld groen voor succes en rood voor fout). Voor iemand met protanopie of deuteranopie kunnen deze kleuren identiek lijken. Het correctievenster verschuift deze kleuren zodat het verschil zichtbaar wordt. </para>
+</listitem>
+<listitem>
+<para
+>Het zorgt ervoor dat knoppen, grafieken en gemarkeerde tekst leesbaar zijn, ongeacht het kleurenpalet van het oorspronkelijke ontwerp. </para>
+</listitem>
+<listitem>
+<para
+>Omdat het op compositorniveau wordt afgehandeld (&kwin;), is de correctie van toepassing op alles: webbrowsers, gespecialiseerde technische software, video's en de desktopinterface zelf. </para>
+</listitem>
+</itemizedlist>
+<para
+>Het scherm biedt doorgaans instellingen voor de drie belangrijkste vormen van kleurenblindheid: </para>
+<itemizedlist>
+<listitem>
+<para
+>Protanopie: roodblindheid (moeite met het zien van rood licht). </para>
+</listitem>
+<listitem>
+<para
+>Deuteranopie: groenblindheid (de meest voorkomende vorm). </para>
+</listitem>
+<listitem>
+<para
+>Tritanopie: blauwblindheid (zeldzamer, moeite met het onderscheiden van blauw en geel). </para>
+</listitem>
+</itemizedlist>
+<para
+>De selectie van <guilabel
+>Problematische kleuren</guilabel
+>: u selecteert het specifieke type tekort. </para>
+<para
+>De schuifregelaar <guilabel
+>Intensiteit</guilabel
+>: dit is het belangrijkste onderdeel van het paneel. Hiermee kunt u de sterkte van de verschuiving aanpassen. Omdat kleurenzicht een spectrum is, werkt een filter dat voor iedereen geschikt is zelden; met de schuifregelaar kunt u de correctie nauwkeurig afstemmen op uw specifieke zicht. </para>
+<note>
+<para
+>Deze filters zijn bedoeld voor toegankelijkheid, niet voor kleurnauwkeurig werk zoals professionele fotobewerking of digitaal schilderen. Omdat ze het kleurenspectrum verschuiven om het "leesbaar" te maken, komen de kleuren op het scherm niet langer overeen met de "echte" hexadecimale codes of afdrukwaarden van de bestanden die u bekijkt. </para>
+</note>
+<para
+>U kunt de resultaten aanpassen met behulp van kleurstalen <guilabel
+>Aangepaste kleuren</guilabel
+>. </para>
+</sect3>
+
+<sect3 id="access-invert">
+<title
+><guilabel
+>Inverteren</guilabel
+></title>
+
+<para
+>Dit venster configureert een hulpmiddel om de kleurwaarden van uw scherm om te keren, waardoor witte pixels zwart worden, blauwe pixels oranje, enzovoort. Dit wordt door de vensterbeheerder &kwin; afgehandeld als een nabewerkingseffect. </para>
+<para
+>Hoewel het er misschien uitziet als een negatief fotofilter, zijn de belangrijkste doelen ervan functioneel in plaats van esthetisch: </para>
+<para
+>Voor gebruikers met specifieke visuele beperkingen, zoals fotofobie (lichtgevoeligheid) of bepaalde vormen van slechtziendheid, kan een standaard helder scherm fysieke pijn veroorzaken of tekst wazig maken door lichtlekkage. </para>
+<para
+>Door het scherm om te keren, worden lichte achtergronden donker en donkere tekst licht, waardoor de hoeveelheid licht die de monitor uitstraalt aanzienlijk wordt verminderd, terwijl het contrast dat nodig is om te lezen behouden blijft. </para>
+<para
+>Hoewel de meeste moderne applicaties een ingebouwde donkere modus hebben, zijn sommige oudere softwareprogramma's of specifieke webpagina's hardgecodeerd met een witte achtergrond. </para>
+<para
+>De hulpmiddel 'Kleuren omkeren' fungeert als een universele donkere modus. Als een applicatie geen donker thema ondersteunt, kunt u de kleuren omkeren om uw ogen te ontlasten tijdens lange werkdagen. </para>
+<para
+>U kunt de inversie inschakelen met behulp van het selectievakje <guilabel
+>Inverteren</guilabel
+> en de knop <guibutton
+>Sneltoetsen configureren...</guibutton
+> voor deze actie. </para>
+</sect3>
+
+<sect3 id="access-shake-pointer">
+<title
+><guilabel
+>Schuddende aanwijzer</guilabel
+></title>
+
+<para
+>In de bureaubladomgeving is de <guilabel
+>Schuddende aanwijzer</guilabel
+> (vaak informeel "Schudden om te zoeken" genoemd) een toegankelijkheids- en productiviteitsfunctie die is ontworpen om het probleem van de "verloren cursor" op te lossen. </para>
+<para
+>Als u een opstelling met meerdere monitoren, een scherm met ultrahoge resolutie of gewoon een donkere achtergrond gebruikt, is het opmerkelijk gemakkelijk om de muiscursor uit het oog te verliezen. Deze functie is bedoeld om u direct een visuele aanwijzing te geven, zodat u de cursor gemakkelijk terugvindt. </para>
+<para
+>Wanneer deze functie is ingeschakeld, controleert het systeem de snelheid en richting van de muisbewegingen. Als het een snelle heen-en-weergaande "schuddende" beweging detecteert: </para>
+<itemizedlist>
+<listitem>
+<para
+>Tijdelijke vergroting: de cursor wordt vergroot tot de maximale grootte. </para>
+</listitem>
+<listitem>
+<para
+>Visuele focus: deze plotselinge schaalverandering trekt de aandacht van het perifere zicht van het menselijk oog, waardoor de coördinaten van de cursor direct zichtbaar worden. </para>
+</listitem>
+<listitem>
+<para
+>Automatische reset: zodra u stopt met het schudden van de muis, krimpt de cursor terug naar zijn normale grootte. </para>
+</listitem>
+</itemizedlist>
+<para
+>Er zijn verschillende opties in dit paneel.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Aanwijzer schudden om het te vinden</guilabel
+></term>
+<listitem>
+<para
+>If this option is enabled, &plasma; enables the shake pointer effect. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Vergroting</guilabel
+></term>
+<listitem>
+<para
+>Hier kunt u het vergrotingsniveau van de muisaanwijzer instellen voor een normale (<guilabel
+>Normale</guilabel
+>) en een grote (<guilabel
+>Grote</guilabel
+>) muisaanwijzergrootte. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
 </sect3>
 
 </sect2>

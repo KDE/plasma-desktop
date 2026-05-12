@@ -18,9 +18,9 @@
 </authorgroup>
 
 <date
->8 d'abril de 2021</date>
+>10 de maig de 2026</date>
 <releaseinfo
->Plasma 5.20</releaseinfo>
+>Plasma 6.6</releaseinfo>
 
 <keywordset>
 <keyword
@@ -48,7 +48,11 @@
 >Aquest mòdul està dissenyat per a ajudar als usuaris que tenen dificultats auditives o que tenen dificultats utilitzant un teclat. </para>
 
 <para
->El mòdul està dividit en sis pestanyes: <link linkend="access-bell"
+>El mòdul està dividit en deu pestanyes: <link linkend="access-zoom"
+><guilabel
+>Zoom i lupa</guilabel
+></link
+>, <link linkend="access-bell"
 ><guilabel
 >Timbre</guilabel
 ></link
@@ -60,24 +64,291 @@
 ><guilabel
 >Filtres de teclat</guilabel
 ></link
-> i <link linkend="access-activation-gestures"
-><guilabel
->Gestos d'activació</guilabel
-></link
 >, <link linkend="mouse-navigation"
 ><guilabel
 >Navegació amb el ratolí</guilabel
 ></link
-> i <link linkend="access-screenreader"
+>, <link linkend="access-activation-shortcuts"
+><guilabel
+>Dreceres d'activació</guilabel
+></link
+>, <link linkend="access-screenreader"
 ><guilabel
 >Lector de pantalla</guilabel
 ></link
+>, <link linkend="access-color-blindness"
+><guilabel
+>Correcció del daltonisme</guilabel
+></link
+>, <link linkend="access-invert"
+><guilabel
+>Inverteix</guilabel
+></link
+> i <link linkend="access-shake-pointer"
+><guilabel
+>Sacseja el punter</guilabel
+></link
 >. </para>
+
+
+<sect3 id="access-zoom">
+<title
+><guilabel
+>Zoom i lupa</guilabel
+></title>
+
+<para
+>Les eines Zoom i Lupa del Plasma del KDE estan dissenyades per a ampliar porcions de la pantalla, servint com a lupa digital. Tot i que comparteixen l'objectiu de fer que el text petit i els detalls fins siguin més llegibles, ofereixen dues maneres diferents d'interactuar amb l'entorn d'escriptori. </para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Zoom</guilabel
+></term>
+<listitem>
+<para
+>Aquí podeu canviar entre els modes de <guilabel
+>Pantalla completa</guilabel
+> i <guilabel
+>Amplia una regió</guilabel
+>. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Pantalla completa</guilabel
+></term>
+<listitem>
+<para
+>Activa el mode de pantalla completa. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Mostra la quadrícula de píxels al nivell de zoom</guilabel
+></term>
+<listitem>
+<para
+>Proporciona una superposició visual dels píxels individuals que componen la imatge a la pantalla una vegada s'ha assolit una ampliació prou alta. Si està activada, el &plasma; dibuixarà una quadrícula fina al voltant de cada píxel de manera que podreu veure exactament on acaba un i on comença el següent. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Aparença del punter</guilabel
+></term>
+<listitem>
+<para
+>Controla l'aparença del punter del ratolí en fer zoom. Hi ha diverses opcions: <guilabel
+>Escala</guilabel
+>, <guilabel
+>Mantén</guilabel
+>, i <guilabel
+>Oculta</guilabel
+>. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Seguiment del punter</guilabel
+></term>
+<listitem>
+<para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Proporcional</guilabel
+></term>
+<listitem>
+<para
+>L'àrea de zoom es mou amb sincronia amb el punter del ratolí. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Centrat</guilabel
+></term>
+<listitem>
+<para
+>El punter roman centrat a la pantalla, excepte a prop de les vores de la pantalla. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Centrat (estricte)</guilabel
+></term>
+<listitem>
+<para
+>El punter roman centrat a la pantalla, inclús a prop de les vores de la pantalla. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Empeny</guilabel
+></term>
+<listitem>
+<para
+>El punter empeny l'àrea de zoom a les vores de la pantalla. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Desactivat</guilabel
+></term>
+<listitem>
+<para
+>L'àrea de zoom no segueix el punter del ratolí. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Aguditza el contingut de la pantalla en ampliar</guilabel
+></term>
+<listitem>
+<para
+>Si està activat, el &kwin; utilitzarà el reconeixement de patrons per a intentar escalar la forma del text/icones de l'espai de treball a nivells de zoom extrems. Això ajudaria a millorar el contrast general del text a costa de la precisió de la lletra evitant el difuminat o la pixelació. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Activa el seguiment del focus</guilabel
+></term>
+<listitem>
+<para
+>Assegura que l'àrea de visualització ampliada segueix automàticament la part «activa» de la interfície, encara que el ratolí no es mogui. Mentre que el zoom estàndard normalment segueix el cursor del ratolí, el seguiment del focus controla el focus del sistema (el cursor de text o l'element actualment seleccionat de la IU). </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Activa el seguiment del cursor de text</guilabel
+></term>
+<listitem>
+<para
+>Permet que les eines d'ampliació del sistema segueixin el cursor de text en lloc de només el punter del ratolí. En entorns tècnics, ja sigui escrivint codi, redactant un manuscrit d'investigació o omplint formularis complexos, el vostre focus sovint és on esteu escrivint, que pot estar molt lluny d'on està el ratolí. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Amplia una regió</guilabel
+></term>
+<listitem>
+<para
+>Activa el mode d'ampliació d'una regió. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Amplada</guilabel
+></term>
+<listitem>
+<para
+>Permet configurar l'amplada de l'àrea ampliada. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Alçada</guilabel
+></term>
+<listitem>
+<para
+>Permet configurar l'alçada de l'àrea ampliada. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Desactivat</guilabel
+></term>
+<listitem>
+<para
+>Desactiva els modes d'escalat. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Factor de zoom</guilabel
+></term>
+<listitem>
+<para
+>Ajusta quant s'amplia la pantalla amb cada pas (&pex;, 1,2x o 2,0x). El &plasma; admet nivells d'ampliació extrems (fins a 100x), que és significativament més alt que la majoria d'altres sistemes operatius. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Tecles modificadores de gestos de desplaçament</guilabel
+></term>
+<listitem>
+<para
+>Permet realitzar accions de desplaçament utilitzant una combinació d'una tecla de teclat i un moviment del ratolí, en lloc d'utilitzar una roda física de desplaçament. </para>
+<para
+>Això és particularment útil per a usuaris que utilitzen ratolins de bola, dispositius apuntadors especialitzats sense rodes, o que tenen deficiències motores que fan difícil l'ús d'una roda de desplaçament. </para>
+<note>
+<para
+>Els gestos de desplaçament del zoom només estan disponibles al Wayland. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Desplaceu mentre es premen les tecles modificadores per a fer zoom</guilabel
+></term>
+<listitem>
+<para
+>Quan aquesta opció està activada, mantenint premuda una tecla específica (normalment la tecla &Meta;) i girant la roda del ratolí (o utilitzant un desplaçament de dos dits en un ratolí tàctil) augmentarà o disminuirà dinàmicament l'ampliació de tot l'escriptori. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Configura les dreceres…</guilabel
+></term>
+<listitem>
+<para
+>Usa dreceres per a controlar el zoom. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect3>
 
 <sect3 id="access-bell">
 <title
 ><guilabel
->Timbre</guilabel
+>Timbre del sistema</guilabel
 ></title>
 
 <para
@@ -290,83 +561,6 @@ Use system bell whenever a key is rejected
 
 </sect3>
 
-<sect3 id="access-activation-gestures">
-<title
-><guilabel
->Gestos d'activació</guilabel
-></title>
-
-<para
->En aquest plafó hi ha tres seccions.</para>
-
-<variablelist>
-<varlistentry>
-<term
-><guilabel
->Gestos d'activació</guilabel
-> disposa de les següents opcions:</term>
-<listitem>
-<para>
-<simplelist>
-<member
-><guilabel
->Usa gestos per a activar les tecles permanents i lentes</guilabel
-></member>
-<member
->Aquí podeu activar els gestos del teclat disposant de les següents característiques:</member>
-<member
->Tecles de ratolí: Preu &Maj;+Bloq Núm</member>
-<member
->Tecles permanents: Premeu la tecla &Maj; cinc vegades consecutives</member>
-<member
->Tecles lentes: Manteniu premut &Maj; durant vuit segons</member>
-<member
-><guilabel
->Desactiva les tecles permanents i lentes després d'un cert període d'inactivitat</guilabel
-></member>
-</simplelist>
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><guilabel
->Notificació</guilabel
-> disposa de les següents opcions:</term>
-<listitem>
-<para>
-<simplelist>
-<member
-><guilabel
->Usa el timbre del sistema quan s'usi un gest per a commutar una característica d'accessibilitat</guilabel
-></member>
-
-<member
-><guilabel
->Mostra un diàleg de confirmació sempre que es commuti una característica d'accessibilitat del teclat</guilabel
-></member>
-<member
->Si aquesta opció està marcada, el &kde; mostrarà un diàleg de confirmació cada vegada que una característica d'accessibilitat del teclat sigui activada o desactivada.</member>
-<member
->Assegureu-vos que sabeu el que esteu fent si la desmarqueu, ja que la configuració d'accessibilitat del teclat sempre s'aplicarà sense confirmació.</member>
-
-<member
-><guilabel
->Usa el sistema de notificació del &kde; sempre que s'activi o desactivi una característica d'accessibilitat del teclat</guilabel
-></member>
-</simplelist>
-</para>
-</listitem>
-</varlistentry>
-</variablelist>
-<para
->Feu clic al botó <guibutton
->Configura les notificacions</guibutton
-> per a obrir un diàleg que permet editar les notificacions de canvis d'estat de totes les tecles.</para>
-
-</sect3>
-
 <sect3 id="mouse-navigation">
 <title
 >Navegació amb el ratolí</title>
@@ -464,6 +658,83 @@ Use system bell whenever a key is rejected
 
 </sect3>
 
+<sect3 id="access-activation-shortcuts">
+<title
+><guilabel
+>Dreceres d'activació</guilabel
+></title>
+
+<para
+>En aquest plafó hi ha tres seccions.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Gestos d'activació</guilabel
+> disposa de les següents opcions:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Usa gestos per a activar les tecles permanents i lentes</guilabel
+></member>
+<member
+>Aquí podeu activar els gestos del teclat disposant de les següents característiques:</member>
+<member
+>Tecles de ratolí: Preu &Maj;+Bloq Núm</member>
+<member
+>Tecles permanents: Premeu la tecla &Maj; cinc vegades consecutives</member>
+<member
+>Tecles lentes: Manteniu premut &Maj; durant vuit segons</member>
+<member
+><guilabel
+>Desactiva les tecles permanents i lentes després d'un cert període d'inactivitat</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Notificació</guilabel
+> disposa de les següents opcions:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Usa el timbre del sistema quan s'usi un gest per a commutar una característica d'accessibilitat</guilabel
+></member>
+
+<member
+><guilabel
+>Mostra un diàleg de confirmació sempre que es commuti una característica d'accessibilitat del teclat</guilabel
+></member>
+<member
+>Si aquesta opció està marcada, el &kde; mostrarà un diàleg de confirmació cada vegada que una característica d'accessibilitat del teclat sigui activada o desactivada.</member>
+<member
+>Assegureu-vos que sabeu el que esteu fent si la desmarqueu, ja que la configuració d'accessibilitat del teclat sempre s'aplicarà sense confirmació.</member>
+
+<member
+><guilabel
+>Usa el sistema de notificació del &kde; sempre que s'activi o desactivi una característica d'accessibilitat del teclat</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Feu clic al botó <guibutton
+>Configura les notificacions</guibutton
+> per a obrir un diàleg que permet editar les notificacions de canvis d'estat de totes les tecles.</para>
+
+</sect3>
+
 <sect3 id="access-screenreader">
 <title
 ><guilabel
@@ -498,6 +769,155 @@ Use system bell whenever a key is rejected
 >F1</keycap
 ></keycombo
 >). En prémer aquesta drecera, el menú s'hauria d'obrir i poder llegir navegant amb les tecles de fletxa. </para>
+</sect3>
+
+<sect3 id="access-color-blindness">
+<title
+><guilabel
+>Correcció del daltonisme</guilabel
+></title>
+
+<para
+>Es tracta d'una eina d'accessibilitat dissenyada per ajudar els usuaris amb deficiències de visió en color a distingir millor entre els colors de la pantalla. </para>
+<para
+>A diferència dels filtres simples que canvien l'«aspecte» de l'escriptori, aquesta característica utilitza <ulink url="https://en.wikipedia.org/wiki/Color_blindness"
+>algorismes de daltonisme</ulink
+>. Aquests algorismes desplacen les freqüències de color problemàtiques a parts de l'espectre que l'usuari pot veure més clarament, ajudant a restaurar el contrast que d'altra manera es perdria. </para>
+<para
+>Objectius principals: </para>
+<itemizedlist>
+<listitem>
+<para
+>Moltes interfícies utilitzen el color per a transmetre un significat (&pex;, verd per a «correcte» i vermell per a «error»). Per a algú amb protanopia o deuteranopia, aquests colors poden semblar idèntics. La subfinestra de correcció desplaça aquests colors de manera que la distinció es fa visible. </para>
+</listitem>
+<listitem>
+<para
+>Assegura que els botons, els gràfics i el text ressaltat són llegibles, independentment de la paleta de colors original del disseny. </para>
+</listitem>
+<listitem>
+<para
+>Com que es gestiona en l'àmbit del compositor (&kwin;), la correcció s'aplica a tot: navegadors web, programari d'enginyeria especialitzat, vídeos i la mateixa interfície d'escriptori. </para>
+</listitem>
+</itemizedlist>
+<para
+>La subfinestra normalment ofereix ajustos per als tres tipus primaris de daltonisme: </para>
+<itemizedlist>
+<listitem>
+<para
+>Protanopia: ceguesa del vermell (dificultat per veure llum vermella). </para>
+</listitem>
+<listitem>
+<para
+>Deuteranopia: ceguesa del verd (la forma més comuna). </para>
+</listitem>
+<listitem>
+<para
+>Tritanopia: ceguesa al blau (rar, dificultat per distingir blau i groc). </para>
+</listitem>
+</itemizedlist>
+<para
+>Selecció de <guilabel
+>Colors problemàtics</guilabel
+>: seleccioneu el tipus específic de deficiència. </para>
+<para
+>El control lliscant <guilabel
+>Intensity</guilabel
+>: aquesta és la part més important de la subfinestra. Permet ajustar la força del desplaçament. Com que la visió dels colors és un espectre, un filtre «d'una mida única» rarament funciona; el control lliscant permet ajustar la correcció a la vostra visió específica. </para>
+<note>
+<para
+>Aquests filtres estan pensats per a l'accessibilitat, no per a treballs acurats en color com l'edició professional de fotos o la pintura digital. Com que desplacen l'espectre de color perquè sigui «llegible», els colors de la pantalla ja no coincidiran amb els codis hexadecimals «veritables» o els valors d'impressió dels fitxers que esteu visualitzant. </para>
+</note>
+<para
+>Podeu controlar els resultats utilitzant mostres de <guilabel
+>Colors ajustats</guilabel
+>. </para>
+</sect3>
+
+<sect3 id="access-invert">
+<title
+><guilabel
+>Inverteix</guilabel
+></title>
+
+<para
+>Aquesta subfinestra configura una eina per a invertir els valors dels colors de la pantalla, convertint els píxels blancs en negres, els blaus en taronges, etc. Això és gestionat pel gestor de finestres del &kwin; com un efecte de postprocessament. </para>
+<para
+>Tot i que podria semblar un filtre de fotos «Negatiu», els seus propòsits principals són funcionals en lloc d'estètics: </para>
+<para
+>Per a usuaris amb deficiències visuals específiques, com la fotofòbia (sensibilitat a la llum) o certs tipus de visió baixa, una pantalla brillant estàndard pot causar dolor físic o fer que el text sembli borrós a causa de «fuites de llum». </para>
+<para
+>Invertir la pantalla fa que els fons lluminosos siguin foscos i el text fosc sigui clar, reduint significativament la quantitat de llum emesa pel monitor mentre es manté el contrast necessari per a llegir. </para>
+<para
+>Mentre que la majoria de les aplicacions modernes tenen modes foscos nadius, alguns programes antics o pàgines web específiques estan codificats amb fons blancs. </para>
+<para
+>L'eina Inverteix actua com un «mode fosc universal». Si una aplicació no admet un tema fosc, podeu forçar que els colors s'inverteixin per protegir els ulls durant les sessions de treball nocturn. </para>
+<para
+>Podeu activar la inversió utilitzant la casella de selecció <guilabel
+>Inverteix</guilabel
+> i <guibutton
+>Configura les dreceres...</guibutton
+> per a aquesta acció. </para>
+</sect3>
+
+<sect3 id="access-shake-pointer">
+<title
+><guilabel
+>Sacseja el punter</guilabel
+></title>
+
+<para
+>En l'entorn d'escriptori &plasma;, el <guilabel
+>Sacseja el punter</guilabel
+> (sovint anomenat col·loquialment «Sacseja per a trobar») és una característica d'accessibilitat i productivitat dissenyada per resoldre el problema del «cursor perdut». </para>
+<para
+>Si utilitzeu una configuració multimonitor, una pantalla d'ultra alta resolució, o simplement teniu un fons de pantalla fosc, és força fàcil perdre la pista d'on és el cursor del ratolí. L'objectiu d'aquesta característica és proporcionar una pista visual immediata per ajudar a localitzar-lo. </para>
+<para
+>Quan la característica està activada, el sistema supervisa la velocitat i la direcció dels moviments del ratolí. Si detecta un moviment ràpid d'anada i tornada «sacsejant»: </para>
+<itemizedlist>
+<listitem>
+<para
+>Engrandiment temporal: el cursor augmenta de mida a una escala gran. </para>
+</listitem>
+<listitem>
+<para
+>Focus visual: aquest canvi sobtat d'escala capta la visió perifèrica de l'ull humà, revelant instantàniament les coordenades del cursor. </para>
+</listitem>
+<listitem>
+<para
+>Restabliment automàtic: tan aviat com deixeu de sacsejar el ratolí, el cursor es redueix a la seva mida normal. </para>
+</listitem>
+</itemizedlist>
+<para
+>En aquest plafó hi ha diverses opcions.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Sacseja el punter per a trobar-lo</guilabel
+></term>
+<listitem>
+<para
+>If this option is enabled, &plasma; enables the shake pointer effect. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Ampliació</guilabel
+></term>
+<listitem>
+<para
+>Aquí podeu especificar el nivell d'ampliació del punter per a la mida <guilabel
+>Normal</guilabel
+> o <guilabel
+>Gran</guilabel
+> del punter. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
 </sect3>
 
 </sect2>
