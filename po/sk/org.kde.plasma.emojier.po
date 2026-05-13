@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: org.kde.plasma.emojier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-28 00:46+0000\n"
+"POT-Creation-Date: 2026-05-13 00:47+0000\n"
 "PO-Revision-Date: 2023-03-16 18:06+0100\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -45,127 +45,131 @@ msgstr "wizzardsk@gmail.com,prescott66@gmail.com"
 msgid "Replace an existing instance"
 msgstr "Nahradiť existujúcu inštanciu"
 
-#: app/ui/CategoryPage.qml:112
+#: app/ui/CategoryPage.qml:41
+#, fuzzy, kde-format
+#| msgid "Search"
+msgctxt "@action Search field action"
+msgid "Search"
+msgstr "Hľadať"
+
+#: app/ui/CategoryPage.qml:100
 #, kde-format
 msgctxt "@action:button clear emoji history"
 msgid "Clear History"
 msgstr "Vyčistiť históriu"
 
-#: app/ui/CategoryPage.qml:124
-#, kde-format
+#: app/ui/CategoryPage.qml:106
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@action:button Button to open a menu that lets you choose a skin tone"
+#| msgid "Skin tone:"
 msgctxt "@action:button Button to open a menu that lets you choose a skin tone"
-msgid "Skin tone:"
+msgid "Skin tone: %1"
 msgstr "Odtieň pokožky"
 
-#: app/ui/CategoryPage.qml:135 app/ui/Emojier.qml:73
-#, kde-format
-msgctxt "@title:page All emojis"
-msgid "All"
-msgstr "Všetko"
-
-#: app/ui/CategoryPage.qml:189
+#: app/ui/CategoryPage.qml:137
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐️ Neutral"
 msgstr "🖐Neutrálny"
 
-#: app/ui/CategoryPage.qml:190
+#: app/ui/CategoryPage.qml:138
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Neutral"
 msgstr "Neutrálny"
 
-#: app/ui/CategoryPage.qml:198
+#: app/ui/CategoryPage.qml:146
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏻 Light"
 msgstr "🖐🏻 Svetlý"
 
-#: app/ui/CategoryPage.qml:199
+#: app/ui/CategoryPage.qml:147
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Light"
 msgstr "Svetlý"
 
-#: app/ui/CategoryPage.qml:207
+#: app/ui/CategoryPage.qml:155
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏼 Medium Light"
 msgstr "🖐🏼 Stredne svetlý"
 
-#: app/ui/CategoryPage.qml:208
+#: app/ui/CategoryPage.qml:156
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium Light"
 msgstr "Stredne svetlý"
 
-#: app/ui/CategoryPage.qml:216
+#: app/ui/CategoryPage.qml:164
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏽 Medium"
 msgstr "🖐🏽 Stredný"
 
-#: app/ui/CategoryPage.qml:217
+#: app/ui/CategoryPage.qml:165
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium"
 msgstr "Stredný"
 
-#: app/ui/CategoryPage.qml:225
+#: app/ui/CategoryPage.qml:173
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏾 Medium Dark"
 msgstr "🖐🏾 Stredne tmavý"
 
-#: app/ui/CategoryPage.qml:226
+#: app/ui/CategoryPage.qml:174
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium Dark"
 msgstr "Stredne tmavý"
 
-#: app/ui/CategoryPage.qml:234
+#: app/ui/CategoryPage.qml:182
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏿 Dark"
 msgstr "🖐🏿 Tmavý"
 
-#: app/ui/CategoryPage.qml:235
+#: app/ui/CategoryPage.qml:183
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Dark"
 msgstr "Tmavý"
 
-#: app/ui/CategoryPage.qml:247
+#: app/ui/CategoryPage.qml:194
 #, kde-format
 msgctxt "@title:window A two-tone skin variant can be selected here"
 msgid "Select Variant"
 msgstr "Select Variant"
 
-#: app/ui/CategoryPage.qml:295
+#: app/ui/CategoryPage.qml:242
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Character"
 msgstr "Kopírovať znak"
 
-#: app/ui/CategoryPage.qml:303
+#: app/ui/CategoryPage.qml:250
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Description"
 msgstr "Kopírovať popis"
 
-#: app/ui/CategoryPage.qml:344
+#: app/ui/CategoryPage.qml:291
 #, kde-format
 msgctxt "@label placeholder for empty recent emoji list"
 msgid "No recent emojis"
 msgstr "Žiadne nedávne emotikony"
 
-#: app/ui/CategoryPage.qml:344
+#: app/ui/CategoryPage.qml:291
 #, kde-format
 msgctxt "@label placeholder for no emoji found in category"
 msgid "No matching emoji found"
 msgstr "Nenašlo sa zhodné emoji"
 
-#: app/ui/CategoryPage.qml:392
+#: app/ui/CategoryPage.qml:339
 #, kde-format
 msgctxt ""
 "@action:button Opens a window where a two-tone skin variant can be selected. "
@@ -184,6 +188,12 @@ msgstr "%1 skopírované do schránky"
 msgctxt "@title page title for Recent Emoji view, and sidebar label for it"
 msgid "Recent"
 msgstr "Nedávne"
+
+#: app/ui/Emojier.qml:73
+#, kde-format
+msgctxt "@title:page All emojis"
+msgid "All"
+msgstr "Všetko"
 
 #: emojicategory.cpp:14
 msgctxt "Emoji Category"
@@ -237,9 +247,6 @@ msgstr "Vlajky"
 
 #~ msgid "Categories"
 #~ msgstr "Kategórie"
-
-#~ msgid "Search"
-#~ msgstr "Hľadať"
 
 #~ msgid "Search…"
 #~ msgstr "Hľadať..."

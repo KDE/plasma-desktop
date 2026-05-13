@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-28 00:46+0000\n"
+"POT-Creation-Date: 2026-05-13 00:47+0000\n"
 "PO-Revision-Date: 2026-01-28 20:02+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -49,127 +49,131 @@ msgstr "pan93412@gmail.com, mail@kisaragi-hiu.com"
 msgid "Replace an existing instance"
 msgstr "取代現存實體"
 
-#: app/ui/CategoryPage.qml:112
+#: app/ui/CategoryPage.qml:41
+#, fuzzy, kde-format
+#| msgid "Search"
+msgctxt "@action Search field action"
+msgid "Search"
+msgstr "搜尋"
+
+#: app/ui/CategoryPage.qml:100
 #, kde-format
 msgctxt "@action:button clear emoji history"
 msgid "Clear History"
 msgstr "清除歷史"
 
-#: app/ui/CategoryPage.qml:124
-#, kde-format
+#: app/ui/CategoryPage.qml:106
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@action:button Button to open a menu that lets you choose a skin tone"
+#| msgid "Skin tone:"
 msgctxt "@action:button Button to open a menu that lets you choose a skin tone"
-msgid "Skin tone:"
+msgid "Skin tone: %1"
 msgstr "膚色："
 
-#: app/ui/CategoryPage.qml:135 app/ui/Emojier.qml:73
-#, kde-format
-msgctxt "@title:page All emojis"
-msgid "All"
-msgstr "全部"
-
-#: app/ui/CategoryPage.qml:189
+#: app/ui/CategoryPage.qml:137
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐️ Neutral"
 msgstr "🖐️ 通用"
 
-#: app/ui/CategoryPage.qml:190
+#: app/ui/CategoryPage.qml:138
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Neutral"
 msgstr "通用"
 
-#: app/ui/CategoryPage.qml:198
+#: app/ui/CategoryPage.qml:146
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏻 Light"
 msgstr "🖐🏻 淺色"
 
-#: app/ui/CategoryPage.qml:199
+#: app/ui/CategoryPage.qml:147
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Light"
 msgstr "淺色"
 
-#: app/ui/CategoryPage.qml:207
+#: app/ui/CategoryPage.qml:155
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏼 Medium Light"
 msgstr "🖐🏼 較淺"
 
-#: app/ui/CategoryPage.qml:208
+#: app/ui/CategoryPage.qml:156
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium Light"
 msgstr "較淺"
 
-#: app/ui/CategoryPage.qml:216
+#: app/ui/CategoryPage.qml:164
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏽 Medium"
 msgstr "🖐🏽 中等"
 
-#: app/ui/CategoryPage.qml:217
+#: app/ui/CategoryPage.qml:165
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium"
 msgstr "中等"
 
-#: app/ui/CategoryPage.qml:225
+#: app/ui/CategoryPage.qml:173
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏾 Medium Dark"
 msgstr "🖐🏾 較深"
 
-#: app/ui/CategoryPage.qml:226
+#: app/ui/CategoryPage.qml:174
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium Dark"
 msgstr "較深"
 
-#: app/ui/CategoryPage.qml:234
+#: app/ui/CategoryPage.qml:182
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏿 Dark"
 msgstr "🖐🏿 深色"
 
-#: app/ui/CategoryPage.qml:235
+#: app/ui/CategoryPage.qml:183
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Dark"
 msgstr "深色"
 
-#: app/ui/CategoryPage.qml:247
+#: app/ui/CategoryPage.qml:194
 #, kde-format
 msgctxt "@title:window A two-tone skin variant can be selected here"
 msgid "Select Variant"
 msgstr "選取變化型"
 
-#: app/ui/CategoryPage.qml:295
+#: app/ui/CategoryPage.qml:242
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Character"
 msgstr "複製字元"
 
-#: app/ui/CategoryPage.qml:303
+#: app/ui/CategoryPage.qml:250
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Description"
 msgstr "複製描述"
 
-#: app/ui/CategoryPage.qml:344
+#: app/ui/CategoryPage.qml:291
 #, kde-format
 msgctxt "@label placeholder for empty recent emoji list"
 msgid "No recent emojis"
 msgstr "沒有最近使用的表情符號"
 
-#: app/ui/CategoryPage.qml:344
+#: app/ui/CategoryPage.qml:291
 #, kde-format
 msgctxt "@label placeholder for no emoji found in category"
 msgid "No matching emoji found"
 msgstr "沒有找到符合的表情符號"
 
-#: app/ui/CategoryPage.qml:392
+#: app/ui/CategoryPage.qml:339
 #, kde-format
 msgctxt ""
 "@action:button Opens a window where a two-tone skin variant can be selected. "
@@ -188,6 +192,12 @@ msgstr "%1 已複製至剪貼簿"
 msgctxt "@title page title for Recent Emoji view, and sidebar label for it"
 msgid "Recent"
 msgstr "最近使用"
+
+#: app/ui/Emojier.qml:73
+#, kde-format
+msgctxt "@title:page All emojis"
+msgid "All"
+msgstr "全部"
 
 #: emojicategory.cpp:14
 msgctxt "Emoji Category"
@@ -241,9 +251,6 @@ msgstr "旗幟"
 
 #~ msgid "Categories"
 #~ msgstr "分類"
-
-#~ msgid "Search"
-#~ msgstr "搜尋"
 
 #~ msgid "Search…"
 #~ msgstr "搜尋…"

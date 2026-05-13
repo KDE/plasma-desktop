@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-28 00:46+0000\n"
+"POT-Creation-Date: 2026-05-13 00:47+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -46,130 +46,130 @@ msgstr "skkalwar999@gmail.com"
 msgid "Replace an existing instance"
 msgstr "विद्यमानं दृष्टान्तं प्रतिस्थापयन्तु"
 
-#: app/ui/CategoryPage.qml:112
+#: app/ui/CategoryPage.qml:41
+#, fuzzy, kde-format
+#| msgid "Search"
+msgctxt "@action Search field action"
+msgid "Search"
+msgstr "अन्वेषण"
+
+#: app/ui/CategoryPage.qml:100
 #, fuzzy, kde-format
 #| msgid "Clear History"
 msgctxt "@action:button clear emoji history"
 msgid "Clear History"
 msgstr "इतिहासं स्पष्टं कुरुत"
 
-#: app/ui/CategoryPage.qml:124
+#: app/ui/CategoryPage.qml:106
 #, kde-format
 msgctxt "@action:button Button to open a menu that lets you choose a skin tone"
-msgid "Skin tone:"
+msgid "Skin tone: %1"
 msgstr ""
 
-#: app/ui/CategoryPage.qml:135 app/ui/Emojier.qml:73
-#, fuzzy, kde-format
-#| msgid "All"
-msgctxt "@title:page All emojis"
-msgid "All"
-msgstr "सर्वे"
-
-#: app/ui/CategoryPage.qml:189
+#: app/ui/CategoryPage.qml:137
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐️ Neutral"
 msgstr ""
 
-#: app/ui/CategoryPage.qml:190
+#: app/ui/CategoryPage.qml:138
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Neutral"
 msgstr ""
 
-#: app/ui/CategoryPage.qml:198
+#: app/ui/CategoryPage.qml:146
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏻 Light"
 msgstr ""
 
-#: app/ui/CategoryPage.qml:199
+#: app/ui/CategoryPage.qml:147
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Light"
 msgstr ""
 
-#: app/ui/CategoryPage.qml:207
+#: app/ui/CategoryPage.qml:155
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏼 Medium Light"
 msgstr ""
 
-#: app/ui/CategoryPage.qml:208
+#: app/ui/CategoryPage.qml:156
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium Light"
 msgstr ""
 
-#: app/ui/CategoryPage.qml:216
+#: app/ui/CategoryPage.qml:164
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏽 Medium"
 msgstr ""
 
-#: app/ui/CategoryPage.qml:217
+#: app/ui/CategoryPage.qml:165
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium"
 msgstr ""
 
-#: app/ui/CategoryPage.qml:225
+#: app/ui/CategoryPage.qml:173
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏾 Medium Dark"
 msgstr ""
 
-#: app/ui/CategoryPage.qml:226
+#: app/ui/CategoryPage.qml:174
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium Dark"
 msgstr ""
 
-#: app/ui/CategoryPage.qml:234
+#: app/ui/CategoryPage.qml:182
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏿 Dark"
 msgstr ""
 
-#: app/ui/CategoryPage.qml:235
+#: app/ui/CategoryPage.qml:183
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Dark"
 msgstr ""
 
-#: app/ui/CategoryPage.qml:247
+#: app/ui/CategoryPage.qml:194
 #, kde-format
 msgctxt "@title:window A two-tone skin variant can be selected here"
 msgid "Select Variant"
 msgstr ""
 
-#: app/ui/CategoryPage.qml:295
+#: app/ui/CategoryPage.qml:242
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Character"
 msgstr "प्रतिलिपि वर्ण"
 
-#: app/ui/CategoryPage.qml:303
+#: app/ui/CategoryPage.qml:250
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Description"
 msgstr "प्रतिलिपि विवरण"
 
-#: app/ui/CategoryPage.qml:344
+#: app/ui/CategoryPage.qml:291
 #, fuzzy, kde-format
 #| msgid "No recent Emojis"
 msgctxt "@label placeholder for empty recent emoji list"
 msgid "No recent emojis"
 msgstr "अद्यतन इमोजिस् नास्ति"
 
-#: app/ui/CategoryPage.qml:344
+#: app/ui/CategoryPage.qml:291
 #, kde-format
 msgctxt "@label placeholder for no emoji found in category"
 msgid "No matching emoji found"
 msgstr ""
 
-#: app/ui/CategoryPage.qml:392
+#: app/ui/CategoryPage.qml:339
 #, kde-format
 msgctxt ""
 "@action:button Opens a window where a two-tone skin variant can be selected. "
@@ -190,6 +190,13 @@ msgstr "%1 क्लिप्बोर्ड् प्रति प्रति�
 msgctxt "@title page title for Recent Emoji view, and sidebar label for it"
 msgid "Recent"
 msgstr "सद्यस्क"
+
+#: app/ui/Emojier.qml:73
+#, fuzzy, kde-format
+#| msgid "All"
+msgctxt "@title:page All emojis"
+msgid "All"
+msgstr "सर्वे"
 
 #: emojicategory.cpp:14
 msgctxt "Emoji Category"
@@ -243,6 +250,3 @@ msgstr "ध्वजाः"
 
 #~ msgid "Categories"
 #~ msgstr "श्रेणियाँ"
-
-#~ msgid "Search"
-#~ msgstr "अन्वेषण"
