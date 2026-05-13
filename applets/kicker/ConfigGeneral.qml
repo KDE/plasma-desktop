@@ -137,7 +137,7 @@ KCMUtils.SimpleKCM {
                     onClicked: iconDialog.open()
                 }
                 QQC2.MenuItem {
-                    text: i18nc("@item:inmenu Reset icon to default", "Clear Icon")
+                    text: i18nc("@item:inmenu Reset icon to default", "Reset to default icon")
                     icon.name: "edit-clear"
                     onClicked: {
                         configGeneral.cfg_icon = "start-here-kde-symbolic"
