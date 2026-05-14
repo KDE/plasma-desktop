@@ -326,25 +326,26 @@ QString KCMKeys::urlFilename(const QUrl &url)
     return url.fileName();
 }
 
-QModelIndex KCMKeys::conflictingIndex(const QKeySequence &keySequence)
+QList<QModelIndex> KCMKeys::conflictingIndices(const QKeySequence &keySequence) const
 {
+    QList<QModelIndex> ret;
     for (int i = 0; i < m_shortcutsModel->rowCount(); ++i) {
         const QModelIndex componentIndex = m_shortcutsModel->index(i, 0);
         for (int j = 0; j < m_shortcutsModel->rowCount(componentIndex); ++j) {
             const QModelIndex actionIndex = m_shortcutsModel->index(j, 0, componentIndex);
             if (m_shortcutsModel->data(actionIndex, BaseModel::ActiveShortcutsRole).value<QSet<QKeySequence>>().contains(keySequence)) {
-                return m_shortcutsModel->mapToSource(actionIndex);
+                ret.append(m_shortcutsModel->mapToSource(actionIndex));
             }
         }
     }
-    return QModelIndex();
+    return ret;
 }
 
 void KCMKeys::requestKeySequence(QQuickItem *context, const QModelIndex &index, const QKeySequence &newSequence, const QKeySequence &oldSequence)
 {
     qCDebug(KCMKEYS) << index << "wants" << newSequence << "instead of" << oldSequence;
-    const QModelIndex conflict = conflictingIndex(newSequence);
-    if (!conflict.isValid()) {
+    const QList<QModelIndex> conflicts = conflictingIndices(newSequence);
+    if (conflicts.isEmpty()) {
         auto model = const_cast<BaseModel *>(static_cast<const BaseModel *>(index.model()));
         if (!oldSequence.isEmpty()) {
             model->changeShortcut(index, oldSequence, newSequence);
@@ -354,34 +355,42 @@ void KCMKeys::requestKeySequence(QQuickItem *context, const QModelIndex &index, 
         return;
     }
 
-    if (conflict == index) {
-        qCDebug(KCMKEYS) << "Ignoring conflict refers to the same action" << conflict;
+    if (conflicts.contains(index)) {
+        qCDebug(KCMKEYS) << "Ignoring conflict refers to the same action" << conflicts;
         Q_EMIT shortcutChangeRejected();
         return;
     }
 
-    qCDebug(KCMKEYS) << "Found conflict for" << newSequence << conflict;
-    const bool isStandardAction = conflict.parent().data(BaseModel::SectionRole) == ComponentType::CommonAction;
-    const QString currentActionName = conflict.data().toString();
-    const QString currentComponentName = conflict.parent().data().toString();
+    qCDebug(KCMKEYS) << "Found conflict for" << newSequence << conflicts;
     const QString newActionName = index.data().toString();
     const QString newComponentName = index.parent().data().toString();
     const QString keysString = newSequence.toString(QKeySequence::NativeText);
-    const QString message = isStandardAction
-        ? xi18nc("@info %2 is the name of a category inside the 'Common Actions' section",
-                 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action <interface>%3</interface>.<nl/><nl/>Re-assign it to %4?",
-                 keysString,
-                 currentComponentName,
-                 currentActionName,
-                 newActionName)
-        : xi18nc("@info",
-                 "Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>%2</interface> of <application>%3</application>.<nl/><nl/>Reassign "
-                 "it to action <interface>%4</interface> of <application>%5</application>?",
-                 keysString,
-                 currentActionName,
-                 currentComponentName,
-                 newActionName,
-                 newComponentName);
+    QString message;
+    for (const QModelIndex &conflict : conflicts) {
+        const bool isStandardAction = conflict.parent().data(BaseModel::SectionRole) == ComponentType::CommonAction;
+        const QString currentActionName = conflict.data().toString();
+        const QString currentComponentName = conflict.parent().data().toString();
+
+        if (!message.isEmpty()) {
+            message += QStringLiteral("<br/><br/>");
+        }
+
+        message += isStandardAction
+            ? xi18nc("@info %2 is the name of a category inside the 'Common Actions' section",
+                     "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action <interface>%3</interface>.<nl/><nl/>Re-assign it to %4?",
+                     keysString,
+                     currentComponentName,
+                     currentActionName,
+                     newActionName)
+            : xi18nc("@info",
+                     "Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>%2</interface> of <application>%3</application>.<nl/><nl/>Reassign "
+                     "it to action <interface>%4</interface> of <application>%5</application>?",
+                     keysString,
+                     currentActionName,
+                     currentComponentName,
+                     newActionName,
+                     newComponentName);
+    }
 
     auto dialog = new QDialog;
     const QString title = i18nc("@title:window", "Resolve Shortcut Conflict");
@@ -398,7 +407,7 @@ void KCMKeys::requestKeySequence(QQuickItem *context, const QModelIndex &index, 
     KMessageBox::createKMessageBox(dialog, dialogButtons, QMessageBox::Warning, message, {}, QString(), nullptr, KMessageBox::NoExec);
     dialog->show();
 
-    connect(dialog, &QDialog::finished, this, [this, index, conflict, newSequence, oldSequence](int result) {
+    connect(dialog, &QDialog::finished, this, [this, index, conflicts, newSequence, oldSequence](int result) {
         auto model = const_cast<BaseModel *>(static_cast<const BaseModel *>(index.model()));
         if (result != QDialogButtonBox::Ok) {
             // Also Q_EMIT if we are not changing anything, to force the frontend to update and be consistent
@@ -407,7 +416,9 @@ void KCMKeys::requestKeySequence(QQuickItem *context, const QModelIndex &index, 
             Q_EMIT shortcutChangeRejected();
             return;
         }
-        const_cast<BaseModel *>(static_cast<const BaseModel *>(conflict.model()))->disableShortcut(conflict, newSequence);
+        for (const QModelIndex &conflict : conflicts) {
+            const_cast<BaseModel *>(static_cast<const BaseModel *>(conflict.model()))->disableShortcut(conflict, newSequence);
+        }
         if (!oldSequence.isEmpty()) {
             model->changeShortcut(index, oldSequence, newSequence);
         } else {
