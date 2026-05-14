@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 00:46+0000\n"
+"POT-Creation-Date: 2026-05-14 00:45+0000\n"
 "PO-Revision-Date: 2026-04-23 09:32+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -63,8 +63,8 @@ msgstr "Selige…"
 #: ConfigGeneral.qml:140
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
-msgid "Clear Icon"
-msgstr "Netta icones"
+msgid "Reset to default icon"
+msgstr ""
 
 #: ConfigGeneral.qml:161
 #, kde-format
@@ -228,49 +228,49 @@ msgstr ""
 "Iste characteristica usa le colores complementari ex tu schema de color, que "
 "usualmente presenta un fundo obscur."
 
-#: DashboardRepresentation.qml:382
+#: DashboardRepresentation.qml:424
 #, kde-format
 msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: DashboardRepresentation.qml:908 ItemListDelegate.qml:112
+#: DashboardRepresentation.qml:950 ItemListDelegate.qml:97
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Nove !"
 
-#: DashboardRepresentation.qml:909 ItemListDelegate.qml:113
+#: DashboardRepresentation.qml:951 ItemListDelegate.qml:98
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
 msgstr "Il ha un application installate recentemente in iste categoria"
 
-#: ItemGridDelegate.qml:94
+#: ItemGridDelegate.qml:81
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Nove !"
 
-#: ItemGridDelegate.qml:96
+#: ItemGridDelegate.qml:83
 #, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
 msgstr "Applicationes installate recentemente"
 
-#: ItemListDelegate.qml:39
+#: ItemListDelegate.qml:40
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
 msgstr "Aperi categoria"
 
-#: ItemListDelegate.qml:40
+#: ItemListDelegate.qml:41
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
 msgstr "Lancea"
 
-#: ItemListDelegate.qml:114
+#: ItemListDelegate.qml:99
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
@@ -293,6 +293,10 @@ msgstr "Favoritos"
 msgctxt "@info:status"
 msgid "No matches"
 msgstr "Nulle correspondentias"
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "Netta icones"
 
 #~ msgid "Searching for '%1'"
 #~ msgstr "Cercante '%1'"

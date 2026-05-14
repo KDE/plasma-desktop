@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 00:46+0000\n"
+"POT-Creation-Date: 2026-05-14 00:45+0000\n"
 "PO-Revision-Date: 2026-01-24 10:31+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -64,8 +64,8 @@ msgstr "Wybierz..."
 #: ConfigGeneral.qml:140
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
-msgid "Clear Icon"
-msgstr "Wyczyść ikonę"
+msgid "Reset to default icon"
+msgstr ""
 
 #: ConfigGeneral.qml:161
 #, kde-format
@@ -235,31 +235,31 @@ msgstr ""
 "Używa to barw dopełniających z twojego zestawu barw, które zazwyczaj stanową "
 "ciemne tło."
 
-#: DashboardRepresentation.qml:382
+#: DashboardRepresentation.qml:424
 #, kde-format
 msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "Ulubione"
 
-#: DashboardRepresentation.qml:908 ItemListDelegate.qml:112
+#: DashboardRepresentation.qml:950 ItemListDelegate.qml:97
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: DashboardRepresentation.qml:909 ItemListDelegate.qml:113
+#: DashboardRepresentation.qml:951 ItemListDelegate.qml:98
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
 msgstr ""
 
-#: ItemGridDelegate.qml:94
+#: ItemGridDelegate.qml:81
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: ItemGridDelegate.qml:96
+#: ItemGridDelegate.qml:83
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Often used applications"
@@ -267,19 +267,19 @@ msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
 msgstr "Najczęściej używane programy"
 
-#: ItemListDelegate.qml:39
+#: ItemListDelegate.qml:40
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
 msgstr "Otwórz kategorię"
 
-#: ItemListDelegate.qml:40
+#: ItemListDelegate.qml:41
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
 msgstr "Uruchom"
 
-#: ItemListDelegate.qml:114
+#: ItemListDelegate.qml:99
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Often used applications"
@@ -304,6 +304,10 @@ msgstr "Ulubione"
 msgctxt "@info:status"
 msgid "No matches"
 msgstr "Brak pasujących wyrażeń"
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "Wyczyść ikonę"
 
 #~ msgid "Searching for '%1'"
 #~ msgstr "Szukanie '%1'"

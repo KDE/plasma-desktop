@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the plasma-desktop package.
 # Automatically generated, 2019.
 #
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2019-2023, 2025-2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: org.kde.plasma.emojier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-13 00:47+0000\n"
-"PO-Revision-Date: 2026-01-28 21:14+0100\n"
+"PO-Revision-Date: 2026-05-13 20:36+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: app/emojier.cpp:43 app/emojier.cpp:45
 #, kde-format
@@ -50,7 +50,7 @@ msgstr "Sustituir una instancia existente"
 #, kde-format
 msgctxt "@action Search field action"
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
 #: app/ui/CategoryPage.qml:100
 #, kde-format
@@ -59,13 +59,10 @@ msgid "Clear History"
 msgstr "Borrar el historial"
 
 #: app/ui/CategoryPage.qml:106
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@action:button Button to open a menu that lets you choose a skin tone"
-#| msgid "Skin tone:"
+#, kde-format
 msgctxt "@action:button Button to open a menu that lets you choose a skin tone"
 msgid "Skin tone: %1"
-msgstr "Tono de piel:"
+msgstr "Tono de piel: %1"
 
 #: app/ui/CategoryPage.qml:137
 #, kde-format

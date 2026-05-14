@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-13 00:47+0000\n"
-"PO-Revision-Date: 2026-01-30 09:46+0100\n"
+"PO-Revision-Date: 2026-05-13 12:17+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: app/emojier.cpp:43 app/emojier.cpp:45
 #, kde-format
@@ -45,8 +45,7 @@ msgid "Replace an existing instance"
 msgstr "Reimplacia un instantia existente"
 
 #: app/ui/CategoryPage.qml:41
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action Search field action"
 msgid "Search"
 msgstr "Cerca"
@@ -58,13 +57,10 @@ msgid "Clear History"
 msgstr "Netta chronologia"
 
 #: app/ui/CategoryPage.qml:106
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@action:button Button to open a menu that lets you choose a skin tone"
-#| msgid "Skin tone:"
+#, kde-format
 msgctxt "@action:button Button to open a menu that lets you choose a skin tone"
 msgid "Skin tone: %1"
-msgstr "Tono de apparentia:"
+msgstr "Tono de apparentia: %1"
 
 #: app/ui/CategoryPage.qml:137
 #, kde-format

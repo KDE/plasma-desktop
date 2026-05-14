@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 00:46+0000\n"
+"POT-Creation-Date: 2026-05-14 00:45+0000\n"
 "PO-Revision-Date: 2026-01-20 19:47+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -64,10 +64,11 @@ msgid "Choose…"
 msgstr "Выбрать..."
 
 #: ConfigGeneral.qml:140
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Restore Tabs to Default"
 msgctxt "@item:inmenu Reset icon to default"
-msgid "Clear Icon"
-msgstr "Вернуть стандартный значок"
+msgid "Reset to default icon"
+msgstr "Восстановить вкладки по умолчанию"
 
 #: ConfigGeneral.qml:161
 #, kde-format
@@ -237,51 +238,51 @@ msgstr ""
 "Эта функция использует дополнительные цвета из цветовой схемы, которые "
 "обычно предполагают использование тёмного фона."
 
-#: DashboardRepresentation.qml:382
+#: DashboardRepresentation.qml:424
 #, kde-format
 msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "Избранное"
 
-#: DashboardRepresentation.qml:908 ItemListDelegate.qml:112
+#: DashboardRepresentation.qml:950 ItemListDelegate.qml:97
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: DashboardRepresentation.qml:909 ItemListDelegate.qml:113
+#: DashboardRepresentation.qml:951 ItemListDelegate.qml:98
 #, fuzzy, kde-format
 #| msgid "Browse installed applications by categories"
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
 msgstr "Просмотр установленных приложений по категориям"
 
-#: ItemGridDelegate.qml:94
+#: ItemGridDelegate.qml:81
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: ItemGridDelegate.qml:96
+#: ItemGridDelegate.qml:83
 #, fuzzy, kde-format
 #| msgid "All Installed Applications"
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
 msgstr "Все установленные приложения"
 
-#: ItemListDelegate.qml:39
+#: ItemListDelegate.qml:40
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
 msgstr "Открыть категорю"
 
-#: ItemListDelegate.qml:40
+#: ItemListDelegate.qml:41
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
 msgstr "Запустить"
 
-#: ItemListDelegate.qml:114
+#: ItemListDelegate.qml:99
 #, fuzzy, kde-format
 #| msgid "All Installed Applications"
 msgctxt "@info:whatsthis Accessible description for badge"
@@ -305,6 +306,10 @@ msgstr "Избранное"
 msgctxt "@info:status"
 msgid "No matches"
 msgstr "Совпадений не найдено"
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "Вернуть стандартный значок"
 
 #~ msgid "Searching for '%1'"
 #~ msgstr "Поиск «%1»"
@@ -766,9 +771,6 @@ msgstr "Совпадений не найдено"
 
 #~ msgid "Configure Shortcuts..."
 #~ msgstr "Настройка комбинаций клавиш..."
-
-#~ msgid "Restore Tabs to Default"
-#~ msgstr "Восстановить вкладки по умолчанию"
 
 #~ msgid ""
 #~ "Are you sure you want to restore tabs?\n"

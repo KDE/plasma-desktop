@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 00:46+0000\n"
+"POT-Creation-Date: 2026-05-14 00:45+0000\n"
 "PO-Revision-Date: 2026-02-01 17:57-0500\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -64,8 +64,8 @@ msgstr "تاللا…"
 #: ConfigGeneral.qml:140
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
-msgid "Clear Icon"
-msgstr "سىنبەلگە تازىلا"
+msgid "Reset to default icon"
+msgstr ""
 
 #: ConfigGeneral.qml:161
 #, kde-format
@@ -235,31 +235,31 @@ msgstr ""
 "بۇ ئىقتىدار رەڭ لايىھەڭىزگە قوشۇمچە رەڭنى ئىشلىتىدۇ، بۇ ئادەتتە قاراڭغۇ "
 "تەگلىكنى كۆرسىتىدۇ."
 
-#: DashboardRepresentation.qml:382
+#: DashboardRepresentation.qml:424
 #, kde-format
 msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "يىغقۇچ"
 
-#: DashboardRepresentation.qml:908 ItemListDelegate.qml:112
+#: DashboardRepresentation.qml:950 ItemListDelegate.qml:97
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: DashboardRepresentation.qml:909 ItemListDelegate.qml:113
+#: DashboardRepresentation.qml:951 ItemListDelegate.qml:98
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
 msgstr ""
 
-#: ItemGridDelegate.qml:94
+#: ItemGridDelegate.qml:81
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: ItemGridDelegate.qml:96
+#: ItemGridDelegate.qml:83
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Often used applications"
@@ -267,19 +267,19 @@ msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
 msgstr "دائىم ئىشلىتىدىغان پىروگرامما"
 
-#: ItemListDelegate.qml:39
+#: ItemListDelegate.qml:40
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
 msgstr "سەھىپە ئاچ"
 
-#: ItemListDelegate.qml:40
+#: ItemListDelegate.qml:41
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
 msgstr "قوزغات"
 
-#: ItemListDelegate.qml:114
+#: ItemListDelegate.qml:99
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Often used applications"
@@ -304,6 +304,10 @@ msgstr "يىغقۇچ"
 msgctxt "@info:status"
 msgid "No matches"
 msgstr "ماس كەلگىنى يوق"
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "سىنبەلگە تازىلا"
 
 #~| msgid "Recent Documents"
 #~ msgid "Recent contacts"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 00:46+0000\n"
+"POT-Creation-Date: 2026-05-14 00:45+0000\n"
 "PO-Revision-Date: 2026-04-26 21:12+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -63,8 +63,8 @@ msgstr "선택…"
 #: ConfigGeneral.qml:140
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
-msgid "Clear Icon"
-msgstr "아이콘 초기화"
+msgid "Reset to default icon"
+msgstr ""
 
 #: ConfigGeneral.qml:161
 #, kde-format
@@ -228,49 +228,49 @@ msgstr ""
 "이 기능은 색 구성표의 보조색을 사용합니다. 해당 색상은 일반적으로 어두운 배경"
 "색에 배정되어 있습니다."
 
-#: DashboardRepresentation.qml:382
+#: DashboardRepresentation.qml:424
 #, kde-format
 msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "책갈피"
 
-#: DashboardRepresentation.qml:908 ItemListDelegate.qml:112
+#: DashboardRepresentation.qml:950 ItemListDelegate.qml:97
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "새 앱!"
 
-#: DashboardRepresentation.qml:909 ItemListDelegate.qml:113
+#: DashboardRepresentation.qml:951 ItemListDelegate.qml:98
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
 msgstr "이 분류에 새로 설치한 앱이 있음"
 
-#: ItemGridDelegate.qml:94
+#: ItemGridDelegate.qml:81
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "새 앱!"
 
-#: ItemGridDelegate.qml:96
+#: ItemGridDelegate.qml:83
 #, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
 msgstr "새로 설치한 앱"
 
-#: ItemListDelegate.qml:39
+#: ItemListDelegate.qml:40
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
 msgstr "분류 열기"
 
-#: ItemListDelegate.qml:40
+#: ItemListDelegate.qml:41
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
 msgstr "실행"
 
-#: ItemListDelegate.qml:114
+#: ItemListDelegate.qml:99
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
@@ -293,6 +293,10 @@ msgstr "책갈피"
 msgctxt "@info:status"
 msgid "No matches"
 msgstr "검색 결과 없음"
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "아이콘 초기화"
 
 #~ msgid "Searching for '%1'"
 #~ msgstr "'%1' 검색 중"

@@ -5,13 +5,13 @@
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2019, 2020.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2019, 2020, 2021, 2022, 2023.
 # SPDX-FileCopyrightText: 2025 Geraldo Simiao <geraldosimiao@fedoraproject.org>
-# SPDX-FileCopyrightText: 2025, 2026 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025-2026 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-13 00:47+0000\n"
-"PO-Revision-Date: 2026-01-28 08:09-0300\n"
+"PO-Revision-Date: 2026-05-13 05:22-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: app/emojier.cpp:43 app/emojier.cpp:45
 #, kde-format
@@ -49,8 +49,7 @@ msgid "Replace an existing instance"
 msgstr "Substituir uma instância existente"
 
 #: app/ui/CategoryPage.qml:41
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action Search field action"
 msgid "Search"
 msgstr "Pesquisar"
@@ -62,13 +61,10 @@ msgid "Clear History"
 msgstr "Limpar histórico"
 
 #: app/ui/CategoryPage.qml:106
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@action:button Button to open a menu that lets you choose a skin tone"
-#| msgid "Skin tone:"
+#, kde-format
 msgctxt "@action:button Button to open a menu that lets you choose a skin tone"
 msgid "Skin tone: %1"
-msgstr "Tom da pele:"
+msgstr "Tom da pele: %1"
 
 #: app/ui/CategoryPage.qml:137
 #, kde-format

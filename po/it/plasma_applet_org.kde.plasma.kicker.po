@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.homerun\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 00:46+0000\n"
+"POT-Creation-Date: 2026-05-14 00:45+0000\n"
 "PO-Revision-Date: 2026-04-24 18:06+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -61,10 +61,11 @@ msgid "Choose…"
 msgstr "Scegli…"
 
 #: ConfigGeneral.qml:140
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Restore Tabs to Default"
 msgctxt "@item:inmenu Reset icon to default"
-msgid "Clear Icon"
-msgstr "Ripristina icona"
+msgid "Reset to default icon"
+msgstr "Ripristina schede ai valori predefiniti"
 
 #: ConfigGeneral.qml:161
 #, kde-format
@@ -228,49 +229,49 @@ msgstr ""
 "Questa funzionalità utilizza i colori complementari del tuo schema di "
 "colori, che solitamente presentano uno sfondo scuro."
 
-#: DashboardRepresentation.qml:382
+#: DashboardRepresentation.qml:424
 #, kde-format
 msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "Preferiti"
 
-#: DashboardRepresentation.qml:908 ItemListDelegate.qml:112
+#: DashboardRepresentation.qml:950 ItemListDelegate.qml:97
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Nuova!"
 
-#: DashboardRepresentation.qml:909 ItemListDelegate.qml:113
+#: DashboardRepresentation.qml:951 ItemListDelegate.qml:98
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
 msgstr "In questa categoria è stata appena installata una nuova applicazione."
 
-#: ItemGridDelegate.qml:94
+#: ItemGridDelegate.qml:81
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Nuova!"
 
-#: ItemGridDelegate.qml:96
+#: ItemGridDelegate.qml:83
 #, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
 msgstr "Applicazione installata di recente"
 
-#: ItemListDelegate.qml:39
+#: ItemListDelegate.qml:40
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
 msgstr "Apri la categoria"
 
-#: ItemListDelegate.qml:40
+#: ItemListDelegate.qml:41
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
 msgstr "Esegui"
 
-#: ItemListDelegate.qml:114
+#: ItemListDelegate.qml:99
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
@@ -293,6 +294,10 @@ msgstr "Preferiti"
 msgctxt "@info:status"
 msgid "No matches"
 msgstr "Nessuna corrispondenza"
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "Ripristina icona"
 
 #~ msgid "Searching for '%1'"
 #~ msgstr "Ricerca di «%1»"
@@ -747,9 +752,6 @@ msgstr "Nessuna corrispondenza"
 
 #~ msgid "Show Desktop Tool Box"
 #~ msgstr "Mostra gli strumenti del desktop"
-
-#~ msgid "Restore Tabs to Default"
-#~ msgstr "Ripristina schede ai valori predefiniti"
 
 #~ msgid ""
 #~ "Are you sure you want to restore tabs?\n"

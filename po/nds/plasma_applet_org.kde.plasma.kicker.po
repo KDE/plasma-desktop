@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 00:46+0000\n"
+"POT-Creation-Date: 2026-05-14 00:45+0000\n"
 "PO-Revision-Date: 2014-08-21 16:22+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -66,7 +66,7 @@ msgstr ""
 #: ConfigGeneral.qml:140
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
-msgid "Clear Icon"
+msgid "Reset to default icon"
 msgstr ""
 
 #: ConfigGeneral.qml:161
@@ -251,51 +251,51 @@ msgid ""
 "usually feature a dark background."
 msgstr ""
 
-#: DashboardRepresentation.qml:382
+#: DashboardRepresentation.qml:424
 #, fuzzy, kde-format
 #| msgid "Add to Favorites"
 msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "Na de Leestekens tofögen"
 
-#: DashboardRepresentation.qml:908 ItemListDelegate.qml:112
+#: DashboardRepresentation.qml:950 ItemListDelegate.qml:97
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: DashboardRepresentation.qml:909 ItemListDelegate.qml:113
+#: DashboardRepresentation.qml:951 ItemListDelegate.qml:98
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
 msgstr ""
 
-#: ItemGridDelegate.qml:94
+#: ItemGridDelegate.qml:81
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: ItemGridDelegate.qml:96
+#: ItemGridDelegate.qml:83
 #, fuzzy, kde-format
 #| msgid "Recent Applications"
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
 msgstr "Tolest bruukt Programmen"
 
-#: ItemListDelegate.qml:39
+#: ItemListDelegate.qml:40
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
 msgstr ""
 
-#: ItemListDelegate.qml:40
+#: ItemListDelegate.qml:41
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
 msgstr ""
 
-#: ItemListDelegate.qml:114
+#: ItemListDelegate.qml:99
 #, fuzzy, kde-format
 #| msgid "Recent Applications"
 msgctxt "@info:whatsthis Accessible description for badge"

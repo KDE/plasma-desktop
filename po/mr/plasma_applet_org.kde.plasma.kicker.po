@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 00:46+0000\n"
+"POT-Creation-Date: 2026-05-14 00:45+0000\n"
 "PO-Revision-Date: 2013-04-13 16:15+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -67,10 +67,10 @@ msgstr ""
 
 #: ConfigGeneral.qml:140
 #, fuzzy, kde-format
-#| msgid "Tab Icon:"
+#| msgid "Restore Tabs to Default"
 msgctxt "@item:inmenu Reset icon to default"
-msgid "Clear Icon"
-msgstr "टॅब चिन्ह :"
+msgid "Reset to default icon"
+msgstr "टॅब्स मूलभूतरित्या पुन्हस्थापित करा"
 
 #: ConfigGeneral.qml:161
 #, fuzzy, kde-format
@@ -245,52 +245,52 @@ msgid ""
 "usually feature a dark background."
 msgstr ""
 
-#: DashboardRepresentation.qml:382
+#: DashboardRepresentation.qml:424
 #, fuzzy, kde-format
 #| msgid "Favorite Places"
 msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "पसंत जागा"
 
-#: DashboardRepresentation.qml:908 ItemListDelegate.qml:112
+#: DashboardRepresentation.qml:950 ItemListDelegate.qml:97
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: DashboardRepresentation.qml:909 ItemListDelegate.qml:113
+#: DashboardRepresentation.qml:951 ItemListDelegate.qml:98
 #, fuzzy, kde-format
 #| msgid "Browse installed applications by categories"
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
 msgstr "प्रतिष्ठापीत केलेले अनुप्रयोग विभागाप्रमाणे संचारण करा"
 
-#: ItemGridDelegate.qml:94
+#: ItemGridDelegate.qml:81
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: ItemGridDelegate.qml:96
+#: ItemGridDelegate.qml:83
 #, fuzzy, kde-format
 #| msgid "All Installed Applications"
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
 msgstr "प्रतिष्ठापीत केलेले अनुप्रयोग"
 
-#: ItemListDelegate.qml:39
+#: ItemListDelegate.qml:40
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
 msgstr ""
 
-#: ItemListDelegate.qml:40
+#: ItemListDelegate.qml:41
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
 msgstr ""
 
-#: ItemListDelegate.qml:114
+#: ItemListDelegate.qml:99
 #, fuzzy, kde-format
 #| msgid "All Installed Applications"
 msgctxt "@info:whatsthis Accessible description for badge"
@@ -316,6 +316,12 @@ msgstr "पसंत जागा"
 msgctxt "@info:status"
 msgid "No matches"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Tab Icon:"
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "टॅब चिन्ह :"
 
 #, fuzzy
 #~| msgid "Recent Documents"
@@ -679,9 +685,6 @@ msgstr ""
 #~| msgid "Configure"
 #~ msgid "Configure Tabs"
 #~ msgstr "संयोजीत करा"
-
-#~ msgid "Restore Tabs to Default"
-#~ msgstr "टॅब्स मूलभूतरित्या पुन्हस्थापित करा"
 
 #~ msgid "Restore Tabs"
 #~ msgstr "टॅब्स पुन्हस्थापित करा"

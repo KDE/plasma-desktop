@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-13 00:47+0000\n"
-"PO-Revision-Date: 2026-01-28 11:18+0100\n"
+"PO-Revision-Date: 2026-05-13 07:03+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: app/emojier.cpp:43 app/emojier.cpp:45
 #, kde-format
@@ -46,8 +46,7 @@ msgid "Replace an existing instance"
 msgstr "Zamenjaj obstoječi pojavek"
 
 #: app/ui/CategoryPage.qml:41
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action Search field action"
 msgid "Search"
 msgstr "Išči"
@@ -59,13 +58,10 @@ msgid "Clear History"
 msgstr "Počisti zgodovino"
 
 #: app/ui/CategoryPage.qml:106
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@action:button Button to open a menu that lets you choose a skin tone"
-#| msgid "Skin tone:"
+#, kde-format
 msgctxt "@action:button Button to open a menu that lets you choose a skin tone"
 msgid "Skin tone: %1"
-msgstr "Kožni ton:"
+msgstr "Kožni ton: %1"
 
 #: app/ui/CategoryPage.qml:137
 #, kde-format
