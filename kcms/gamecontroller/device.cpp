@@ -153,6 +153,10 @@ bool Device::open()
     }
 
     m_joystick = SDL_JoystickOpen(m_deviceIndex);
+    if (!m_joystick) {
+        qCWarning(KCM_GAMECONTROLLER) << "Failed to load joystick at: " << m_deviceIndex;
+        return false;
+    }
 
     short vendor = SDL_JoystickGetVendor(m_joystick);
     short product = SDL_JoystickGetProduct(m_joystick);
