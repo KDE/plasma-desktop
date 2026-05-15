@@ -59,7 +59,7 @@ Q_SIGNALS:
 
 private:
     void setError(const QString &errorMessage);
-    QList<QModelIndex> conflictingIndices(const QKeySequence &keySequence) const;
+    QList<QPersistentModelIndex> conflictingIndices(const QKeySequence &keySequence) const;
 
     QString m_lastError;
     FilteredShortcutsModel *m_filteredModel;
