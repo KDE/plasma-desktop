@@ -32,9 +32,9 @@
 </authorgroup>
 
 <date
->2021‒04‒08</date>
+>2026‒05‒10</date>
 <releaseinfo
->Plasma 5.20</releaseinfo>
+>Plasma 6.6</releaseinfo>
 
 <keywordset>
 <keyword
@@ -62,9 +62,13 @@
 >Bu modül, işitsel ipuçlarını duymakta güçlük çeken veya klavye kullanmakta güçlük çeken kullanıcılara yardımcı olmak için tasarlanmıştır. </para>
 
 <para
->Modül, altı sekmeye bölünmüştür: <link linkend="access-bell"
+>Modül, on ayrı sekmeye bölünmüştür: <link linkend="access-zoom"
 ><guilabel
->Zil</guilabel
+>Yakınlaştırma ve Büyüteç</guilabel
+></link
+>,<link linkend="access-bell"
+><guilabel
+>Sistem Zili</guilabel
 ></link
 >, <link linkend="access-modifier-keys"
 ><guilabel
@@ -74,24 +78,293 @@
 ><guilabel
 >Klavye Süzgeçleri</guilabel
 ></link
->, <link linkend="access-activation-gestures"
-><guilabel
->Etkinleştirme Hareketleri</guilabel
-></link
 >, <link linkend="mouse-navigation"
 ><guilabel
 >Fare Dolaşımı</guilabel
 ></link
->, ve <link linkend="access-screenreader"
+>, <link linkend="access-activation-shortcuts"
+><guilabel
+>Etkinleştirme Kısayolları</guilabel
+></link
+>, <link linkend="access-screenreader"
 ><guilabel
 >Ekran Okuyucusu</guilabel
 ></link
+>, <link linkend="access-color-blindness"
+><guilabel
+>Renk Körlüğü Düzeltmesi</guilabel
+></link
+>, <link linkend="access-invert"
+><guilabel
+>Tersine Çevir</guilabel
+></link
+> ve <link linkend="access-shake-pointer"
+><guilabel
+>İşaretçiyi Salla</guilabel
+></link
 >. </para>
+
+
+<sect3 id="access-zoom">
+<title
+><guilabel
+>Yakınlaştırma ve Büyüteç</guilabel
+></title>
+
+<para
+>KDE Plasma’daki Yakınlaştırma ve Büyüteç araçları, ekranın belirli bölümlerini büyütmek ve sayısal bir büyüteç görevi görmek üzere tasarlanmıştır. Küçük metinleri ve ince ayrıntıları daha okunaklı hale getirme amacını paylaşsalar da, masaüstü ortamıyla etkileşim kurmanın iki farklı yolunu sunarlar. </para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Yakınlaştır</guilabel
+></term>
+<listitem>
+<para
+>Burada <guilabel
+>Tam ekran</guilabel
+> ve <guilabel
+>Bölgeyi büyüt</guilabel
+> kipleri arasında geçiş yapabilirsiniz. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Tam ekran</guilabel
+></term>
+<listitem>
+<para
+>Tam ekran kipini etkinleştirin. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Şu yakınlaştırma düzeyinde piksel ızgarasını göster</guilabel
+></term>
+<listitem>
+<para
+>Yeterince yüksek büyütme oranına ulaştığınızda, ekranınızdaki görüntüyü oluşturan tek tek piksellerin görsel bir katmanını sağlar. Etkinleştirilirse &plasma;, her bir pikselin etrafına ince bir ızgara çizer, böylece birinin nerede bittiğini ve diğerinin nerede başladığını tam olarak görebilirsiniz. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>İşaretçi görünüşü</guilabel
+></term>
+<listitem>
+<para
+>Yakınlaştırma sırasında fare imlecinin görünüşünü denetler. Birkaç seçenek bulunur: <guilabel
+>Ölçeklendir</guilabel
+>, <guilabel
+>Tut</guilabel
+> ve <guilabel
+>Gizle</guilabel
+>. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>İşaretçi izlemesi</guilabel
+></term>
+<listitem>
+<para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Oransal</guilabel
+></term>
+<listitem>
+<para
+>Yakınlaştırma alanı, işaretçiyle eşzamanlı olarak hareket eder. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Ortalanmış</guilabel
+></term>
+<listitem>
+<para
+>İmleç, ekran kenarlarına yakın yerler dışında, ekranın ortasında kalır. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Ortalanmış (Katı)</guilabel
+></term>
+<listitem>
+<para
+>İmleç, ekran kenarlarına yakın olsa bile ekranın ortasında kalır. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>İt</guilabel
+></term>
+<listitem>
+<para
+>İmleç, ekranın kenarlarındaki yakınlaştırma alanını iter. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Devre dışı</guilabel
+></term>
+<listitem>
+<para
+>Yakınlaştırma alanı imleci takip etmez. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Yakınlaştırırken ekran içeriğini keskinleştir</guilabel
+></term>
+<listitem>
+<para
+>Etkinleştirildiğinde &kwin;, aşırı yakınlaştırma düzeylerinde çalışma alanındaki metin/simgelerin şeklini ölçeklendirmek için örüntü tanıma özelliğini kullanacaktır. Bu, bulanıklık veya pikselleşmeyi önleyerek yazıtipi doğruluğundan ödün vererek genel metin karşıtlığını iyileştirmeye yardımcı olur. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Odak izlemeyi etkinleştir</guilabel
+></term>
+<listitem>
+<para
+>Büyütülmüş görüntü alanının, fare imleciniz hareket etmese bile arayüzün <quote
+>etkin</quote
+> bölümünü kendiliğinden takip etmesini sağlar. Standart yakınlaştırma genellikle fare imlecini takip ederken, odak izleme sistem odağını (metin imleci veya şu anda seçili olan kullanıcı arayüzü ögesi) izler. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Metin imlecini izlemeyi etkinleştir</guilabel
+></term>
+<listitem>
+<para
+>Sistemdeki büyütme araçlarının yalnızca fare işaretçisini değil, metin imlecini de takip etmesini sağlar. Teknik ortamlarda —kod yazıyor, araştırma makalesi taslağı hazırlıyor veya karmaşık formlar dolduruyor olsanız da— odak noktanız genellikle yazdığınız yerdir ve bu da farenizin bulunduğu yerden oldukça uzakta olabilir. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Bölgeyi büyüt</guilabel
+></term>
+<listitem>
+<para
+>Bölge büyütme kipini etkinleştirin. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Genişlik</guilabel
+></term>
+<listitem>
+<para
+>Büyütülmüş alanın genişliğini yapılandırmaya olanak tanır. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Yükseklik</guilabel
+></term>
+<listitem>
+<para
+>Büyütülmüş alanın yüksekliğini yapılandırmaya olanak tanır. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Devre dışı</guilabel
+></term>
+<listitem>
+<para
+>Ölçeklendirme kiplerini devre dışı bırakın. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Yakınlaştırma çarpanı</guilabel
+></term>
+<listitem>
+<para
+>Ekranın her adımda ne kadar büyüyeceğini ayarlar (örneğin, 1,2× veya 2,0×). Plasma, diğer işletim sistemlerinin çoğundan önemli ölçüde daha yüksek olan aşırı büyütme düzeylerini (100×’e kadar) destekler. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Sarma hareketini niteleyici düğmeler</guilabel
+></term>
+<listitem>
+<para
+>Fiziksel bir sarma tekerleği kullanmak yerine, klavye düğmesi ve fare hareketinin bir kombinasyonunu kullanarak sarma işlemlerini gerçekleştirmenizi sağlar. </para>
+<para
+>Bu özellik özellikle; tekerleksiz özel işaretleme aygıtları, iz topları veya sarma tekerleğini kullanmayı zorlaştıran motor bozuklukları olan kullanıcılar için oldukça faydalıdır. </para>
+<note>
+<para
+>Yakınlaştırma sarma hareketleri yalnızca Wayland üzerinde kullanılabilir. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Yakınlaştırmak için niteleyici düğmelere basıldığında sar</guilabel
+></term>
+<listitem>
+<para
+>Bu seçenek etkinleştirildiğinde, belirli bir düğmeye (genellikle &Meta; düğmesi) basılı tutarak fare tekerleğini döndürmek (veya dokunmatik yüzeyde iki parmakla sarma yapmak), tüm masaüstünün büyütme oranını devingen olarak artırır veya azaltır. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Kısayolları Yapılandır…</guilabel
+></term>
+<listitem>
+<para
+>Yakınlaştırmayı denetlemek için kısayolları kullanın. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect3>
 
 <sect3 id="access-bell">
 <title
 ><guilabel
->Zil</guilabel
+>Sistem Zili</guilabel
 ></title>
 
 <para
@@ -310,83 +583,6 @@ Use system bell whenever a key is rejected
 
 </sect3>
 
-<sect3 id="access-activation-gestures">
-<title
-><guilabel
->Etkinleştirme Hareketleri</guilabel
-></title>
-
-<para
->Bu panelde iki bölüm vardır.</para>
-
-<variablelist>
-<varlistentry>
-<term
-><guilabel
->Etkinleştirme Hareketleri</guilabel
->’nde şu seçenekler vardır:</term>
-<listitem>
-<para>
-<simplelist>
-<member
-><guilabel
->Yapışkan ve yavaş düğmeleri etkinleştirmek için hareketleri kullan</guilabel
-></member>
-<member
->Buradan, aşağıdaki özellikleri açan klavye hareketlerini etkinleştirebilirsiniz:</member>
-<member
->Fare düğmeleri: &Shift;+Sayı Kilidi düğmelerine bas</member>
-<member
->Yapışkan düğmeler: &Shift; düğmesine 5 kez ard arda bas</member>
-<member
->Yavaş düğmeler: &Shift;düğmesini 8 saniye boyunca basılı tut</member>
-<member
-><guilabel
->Belirli bir süre etkinlik olmaması durumunda yapışkan ve yavaş düğmeleri kapatır</guilabel
-></member>
-</simplelist>
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><guilabel
->Bildirim</guilabel
->’de şu seçenekler vardır:</term>
-<listitem>
-<para>
-<simplelist>
-<member
-><guilabel
->Bir erişilebilirlik özelliğini açmak veya kapatmak için bir hareket kullanıldığında sistem zilini kullan</guilabel
-></member>
-
-<member
-><guilabel
->Bir klavye erişilebilirlik özelliği her açıldığında veya kapatıldığında bir onay iletişim kutusu göster</guilabel
-></member>
-<member
->Bu seçenek işaretliyse &kde;, bir klavye erişilebilirlik özelliği her açıldığında veya kapatıldığında bir onay iletişim kutusu gösterecektir.</member>
-<member
->İşareti kaldırırsanız ne yaptığınızı bildiğinizden emin olun, çünkü klavye erişilebilirlik ayarları her zaman onaylanmadan uygulanacaktır.</member>
-
-<member
-><guilabel
->Bir klavye erişilebilirlik özelliği her açıldığında veya kapatıldığında &kde;’nin sistem bildirim mekanizmasını kullan</guilabel
-></member>
-</simplelist>
-</para>
-</listitem>
-</varlistentry>
-</variablelist>
-<para
->Tüm düğmelerin durum değişiklikleri için bildirimleri düzenlemenizi sağlayan bir iletişim kutusu açmak için <guibutton
->Bildirimleri Yapılandır</guibutton
-> düğmesine tıklayın.</para>
-
-</sect3>
-
 <sect3 id="mouse-navigation">
 <title
 >Fare Dolaşımı</title>
@@ -484,6 +680,83 @@ Use system bell whenever a key is rejected
 
 </sect3>
 
+<sect3 id="access-activation-shortcuts">
+<title
+><guilabel
+>Etkinleştirme Kısayolları</guilabel
+></title>
+
+<para
+>Bu panelde iki bölüm vardır.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Etkinleştirme Hareketleri</guilabel
+>’nde şu seçenekler vardır:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Yapışkan ve yavaş düğmeleri etkinleştirmek için hareketleri kullan</guilabel
+></member>
+<member
+>Buradan, aşağıdaki özellikleri açan klavye hareketlerini etkinleştirebilirsiniz:</member>
+<member
+>Fare düğmeleri: &Shift;+Sayı Kilidi düğmelerine bas</member>
+<member
+>Yapışkan düğmeler: &Shift; düğmesine 5 kez ard arda bas</member>
+<member
+>Yavaş düğmeler: &Shift;düğmesini 8 saniye boyunca basılı tut</member>
+<member
+><guilabel
+>Belirli bir süre etkinlik olmaması durumunda yapışkan ve yavaş düğmeleri kapatır</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Bildirim</guilabel
+>’de şu seçenekler vardır:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Bir erişilebilirlik özelliğini açmak veya kapatmak için bir hareket kullanıldığında sistem zilini kullan</guilabel
+></member>
+
+<member
+><guilabel
+>Bir klavye erişilebilirlik özelliği her açıldığında veya kapatıldığında bir onay iletişim kutusu göster</guilabel
+></member>
+<member
+>Bu seçenek işaretliyse &kde;, bir klavye erişilebilirlik özelliği her açıldığında veya kapatıldığında bir onay iletişim kutusu gösterecektir.</member>
+<member
+>İşareti kaldırırsanız ne yaptığınızı bildiğinizden emin olun, çünkü klavye erişilebilirlik ayarları her zaman onaylanmadan uygulanacaktır.</member>
+
+<member
+><guilabel
+>Bir klavye erişilebilirlik özelliği her açıldığında veya kapatıldığında &kde;’nin sistem bildirim mekanizmasını kullan</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Tüm düğmelerin durum değişiklikleri için bildirimleri düzenlemenizi sağlayan bir iletişim kutusu açmak için <guibutton
+>Bildirimleri Yapılandır</guibutton
+> düğmesine tıklayın.</para>
+
+</sect3>
+
 <sect3 id="access-screenreader">
 <title
 ><guilabel
@@ -518,6 +791,167 @@ Use system bell whenever a key is rejected
 >F1</keycap
 ></keycombo
 >). Bu kısayola basıldığında menü açılmalı ve menüde ok düğmeleriyle dolaşırken etiketler okunmalıdır. </para>
+</sect3>
+
+<sect3 id="access-color-blindness">
+<title
+><guilabel
+>Renk Körlüğü Düzeltmesi</guilabel
+></title>
+
+<para
+>Bu, renk görme bozukluğu olan kullanıcıların ekranlarındaki renkleri daha iyi ayırt etmelerine yardımcı olmak için tasarlanmış bir erişilebilirlik aracıdır. </para>
+<para
+>Masaüstünün <quote
+>görünümünü</quote
+> değiştiren basit süzgeçlerin aksine, bu özellik <ulink url="https://en.wikipedia.org/wiki/Color_blindness"
+>daltonizasyon</ulink
+> algoritmaları kullanır. Bu algoritmalar, sorunlu renk frekanslarını kullanıcının daha net görebileceği tayf bölümlerine kaydırarak, aksi takdirde kaybolacak olan karşıtlığın geri kazanılmasına yardımcı olur. </para>
+<para
+>Ana erekler: </para>
+<itemizedlist>
+<listitem>
+<para
+>Birçok arayüz, anlamı iletmek için renk kullanır (örneğin, <quote
+>başarı</quote
+> için yeşil ve <quote
+>hata</quote
+> için kırmızı). Protanopi veya döteranopi rahatsızlığı olan biri için bunlar aynı görünebilir. Düzeltme paneli, bu renkleri değiştirerek aradaki farkı görünür hale getirir. </para>
+</listitem>
+<listitem>
+<para
+>Bu özellik, özgün tasarımın renk paletinden bağımsız olarak düğmelerin, grafiklerin ve vurgulanan metinlerin okunabilir olmasını sağlar. </para>
+</listitem>
+<listitem>
+<para
+>Bu işlem bileşikleştirici düzeyinde (&kwin;) gerçekleştirildiğinden, düzeltme her şeye uygulanır: Web tarayıcılarına, özel mühendislik yazılımlarına, videolara ve masaüstü arayüzünün kendisine kadar. </para>
+</listitem>
+</itemizedlist>
+<para
+>Bu panel, genellikle üç ana renk körlüğü türü için ayarlama seçenekleri sunar: </para>
+<itemizedlist>
+<listitem>
+<para
+>Protanopi: Kırmızı körlüğü (kırmızı ışığı görmekte zorluk) </para>
+</listitem>
+<listitem>
+<para
+>Döteranopi: Yeşil körlüğü (en yaygın görülen) </para>
+</listitem>
+<listitem>
+<para
+>Tritanopi: Mavi körlüğü (daha nadir görülen, mavi ve sarıyı ayırt etmede zorluk) </para>
+</listitem>
+</itemizedlist>
+<para
+><guilabel
+>Sorunlu renkler</guilabel
+> seçimi: Belirli eksiklik türünü seçersiniz. </para>
+<para
+><guilabel
+>Yoğunluk</guilabel
+> sürgüsü: Bu, panelin en önemli kısmıdır. Kaydırmanın gücünü ayarlamanıza olanak tanır. Renk görme bir tayf olduğundan, “herkese uyan tek bir boyut” süzgeç nadiren işe yarar; sürgü, düzeltmede özel görüşünüze göre ince ayar yapmanıza olanak tanır. </para>
+<note>
+<para
+>Bu süzgeçler, profesyonel fotoğraf düzenleme veya sayısal resim yapma gibi renk doğruluğu gerektiren işler için değil, erişilebilirliği kolaylaştırmak için tasarlanmıştır. Renk tayfını “okunabilir” hale getirmek için kaydırdıkları için ekrandaki renkler artık görüntülediğiniz dosyaların “gerçek” onaltılık kodları veya baskı değerleriyle eşleşmeyecektir. </para>
+</note>
+<para
+><guilabel
+>Ayarlanmış renkler</guilabel
+> renk örneklerini kullanarak sonuçları denetleyebilirsiniz. </para>
+</sect3>
+
+<sect3 id="access-invert">
+<title
+><guilabel
+>Tersine Çevir</guilabel
+></title>
+
+<para
+>Bu panel, ekranınızın renk değerlerini tersine çevirmek için bir aracı yapılandırır; beyaz pikselleri siyaha, mavileri turuncuya vb. dönüştürür. Bu işlem, &kwin; pencere yöneticisi tarafından bir son işlem efekti olarak gerçekleştirilir. </para>
+<para
+>İlk bakışta bir <quote
+>Negatif</quote
+> fotoğraf süzgeci gibi görünse de, asıl amacı estetikten ziyade işlevseldir: </para>
+<para
+>Işık duyarlılığı (fotofobi) veya belirli görme bozuklukları gibi özel görme sorunları olan kullanıcılar için standart parlak bir ekran, <quote
+>ışık sızması</quote
+> nedeniyle fiziksel ağrıya neden olabilir veya metnin bulanık görünmesine yol açabilir. </para>
+<para
+>Ekranı ters çevirmek; parlak arka planları koyu, koyu metinleri ise açık hale getirerek, okuma için gerekli karşıtlığı korurken, monitörden yayılan ışık miktarını önemli ölçüde azaltır. </para>
+<para
+>Çoğu çağdaş uygulamanın yerleşik koyu kipi bulunurken, bazı eski yazılımlar veya belirli web sayfaları beyaz arka planlarla kodlanmıştır. </para>
+<para
+>“Tersine Çevir” aracı, bir <quote
+>evrensel koyu kip</quote
+> görevi görür. Bir uygulama karanlık temayı desteklemiyorsa gece geç saatlerdeki çalışma oturumlarınızda gözlerinizi korumak için renkleri tersine çevirmeye zorlayabilirsiniz. </para>
+<para
+>Bu işlem için <guilabel
+>Ters çevir</guilabel
+> onay kutusunu ve <guibutton
+>Kısayolları Yapılandır…</guibutton
+> seçeneğini kullanarak ters çevirmeyi etkinleştirebilirsiniz. </para>
+</sect3>
+
+<sect3 id="access-shake-pointer">
+<title
+><guilabel
+>İşaretçiyi Salla</guilabel
+></title>
+
+<para
+>&plasma; masaüstü ortamında, <guilabel
+>İmleci Salla</guilabel
+> (genellikle “Bulmak için Salla” olarak adlandırılır), “kaybolan imleç” sorununu çözmek için tasarlanmış bir erişilebilirlik ve verimlilik özelliğidir. </para>
+<para
+>Birden çok monitör kullanıyorsanız, ultra yüksek çözünürlüklü bir ekrana sahipseniz veya koyu renkli bir duvar kağıdınız varsa, fare imlecinin nerede olduğunu takip etmek oldukça zor olabilir. Bu özelliğin amacı, imleci bulmanıza yardımcı olacak anlık bir görsel ipucu sağlamaktır. </para>
+<para
+>Bu özellik etkinleştirildiğinde, sistem fare hareketlerinin hızını ve yönünü izler. Hızlı bir ileri geri “titreme” hareketi algılarsa: </para>
+<itemizedlist>
+<listitem>
+<para
+>Geçici büyütme: İmleç büyük ölçeğe kadar büyür. </para>
+</listitem>
+<listitem>
+<para
+>Görsel odaklanma: Ölçekteki bu ani değişiklik, insan gözünün çevresel görüşünü yakalar ve imlecin koordinatlarını anında ortaya çıkarır. </para>
+</listitem>
+<listitem>
+<para
+>Otomatik sıfırlama: Fareyi sallamayı bıraktığınız anda imleç normal boyutuna geri döner. </para>
+</listitem>
+</itemizedlist>
+<para
+>Bu panelde birkaç seçenek vardır.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>İşaretçiyi bulmak için onu salla</guilabel
+></term>
+<listitem>
+<para
+>Bu seçenek etkinleştirilirse &plasma;, işaretçiyi sallama efektini etkinleştirir. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Büyütme</guilabel
+></term>
+<listitem>
+<para
+>Burada <guilabel
+>Normal</guilabel
+> ve <guilabel
+>Büyük</guilabel
+> imleç boyutları için imleç büyütme düzeyini belirtebilirsiniz. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
 </sect3>
 
 </sect2>
