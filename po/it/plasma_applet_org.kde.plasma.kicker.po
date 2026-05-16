@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.homerun\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-14 00:45+0000\n"
-"PO-Revision-Date: 2026-04-24 18:06+0200\n"
+"PO-Revision-Date: 2026-05-14 11:34+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: code/tools.js:53
 #, kde-format
@@ -61,11 +61,10 @@ msgid "Choose…"
 msgstr "Scegli…"
 
 #: ConfigGeneral.qml:140
-#, fuzzy, kde-format
-#| msgid "Restore Tabs to Default"
+#, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr "Ripristina schede ai valori predefiniti"
+msgstr "Ripristina l'icona predefinita"
 
 #: ConfigGeneral.qml:161
 #, kde-format
