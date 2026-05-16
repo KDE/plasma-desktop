@@ -19,9 +19,6 @@
 
 #include "dtime.h"
 
-#include <KAuth/Action>
-#include <KAuth/ExecuteJob>
-
 #include "timedated_interface.h"
 
 K_PLUGIN_CLASS_WITH_JSON(KclockModule, "kcm_clock.json")

@@ -18,7 +18,6 @@ target_link_libraries(kcm_clock
     Qt::Quick
     Qt::QuickWidgets
     KF6::ItemViews
-    KF6::AuthCore
     KF6::GuiAddons
     KF6::KCMUtils
     KF6::I18n
