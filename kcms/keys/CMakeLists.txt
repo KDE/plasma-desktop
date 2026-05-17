@@ -46,6 +46,8 @@ set_target_properties(kglobalaccelmodel PROPERTIES
                       VERSION ${PROJECT_VERSION}
                       SOVERSION ${PROJECT_VERSION_MAJOR})
 
+qt6_add_qml_module(kglobalaccelmodel URI org.kde.kglobalaccelmodel)
+
 ecm_qt_declare_logging_category(kglobalaccelmodel
     HEADER kcmkeys_debug.h
     IDENTIFIER KCMKEYS

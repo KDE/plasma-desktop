@@ -11,6 +11,7 @@ import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
 import org.kde.kquickcontrols
 import org.kde.kcmutils as KCM
+import org.kde.kglobalaccelmodel as KGAM
 
 QQC2.ItemDelegate {
     id: root
@@ -118,148 +119,178 @@ QQC2.ItemDelegate {
             active: false
             visible: false
             Layout.fillWidth: true
-            sourceComponent: RowLayout {
+            sourceComponent: ColumnLayout {
                 readonly property var originalIndex : {
                     const concatenatedIndex = kcm.filteredModel.mapToSource(dm.modelIndex(index))
                     return kcm.shortcutsModel.mapToSource(concatenatedIndex)
                 }
-                spacing: 0
+                spacing: Kirigami.Units.smallSpacing
 
-                ColumnLayout {
-                    Layout.alignment: Qt.AlignTop
-                    Layout.preferredWidth: parent.width * 0.5
-                    spacing: Kirigami.Units.smallSpacing
-                    Kirigami.Heading {
-                        level: 4
-                        text: model.defaultShortcuts &&  model.defaultShortcuts.length !== 0 ?
-                            i18ncp("@title:column %1 decides if singular or plural will be used", "Default shortcut",
-                            "Default shortcuts", model.defaultShortcuts.length) :
-                            i18nc("@label for shortcut with no default bindings", "No default shortcuts")
-                        textFormat: Text.PlainText
-                    }
-                    Kirigami.Separator {
-                        Layout.fillWidth: true
-                    }
-                    Repeater {
-                        model: defaultShortcuts
-                        QQC2.CheckBox {
-                            Accessible.name: checked ? i18nc("@info:whatsthis accessible name", "Default shortcut %1 is enabled.", modelData) : i18nc("@info:whatsthis accessible name", "Default shortcut %1 is disabled.", modelData)
-                            checked: activeShortcuts.indexOf(modelData) !== -1
-                            text: modelData
-                            onToggled: {
-                                if (checked) {
-                                     kcm.requestKeySequence(this, originalIndex, modelData)
-                                } else {
-                                    originalIndex.model.disableShortcut(originalIndex, modelData)
+                RowLayout {
+                    spacing: 0
+
+                    ColumnLayout {
+                        Layout.alignment: Qt.AlignTop
+                        Layout.preferredWidth: parent.width * 0.5
+                        spacing: Kirigami.Units.smallSpacing
+                        Kirigami.Heading {
+                            level: 4
+                            text: model.defaultShortcuts &&  model.defaultShortcuts.length !== 0 ?
+                                i18ncp("@title:column %1 decides if singular or plural will be used", "Default shortcut",
+                                "Default shortcuts", model.defaultShortcuts.length) :
+                                i18nc("@label for shortcut with no default bindings", "No default shortcuts")
+                            textFormat: Text.PlainText
+                        }
+                        Kirigami.Separator {
+                            Layout.fillWidth: true
+                        }
+                        Repeater {
+                            model: defaultShortcuts
+                            QQC2.CheckBox {
+                                Accessible.name: checked ? i18nc("@info:whatsthis accessible name", "Default shortcut %1 is enabled.", modelData) : i18nc("@info:whatsthis accessible name", "Default shortcut %1 is disabled.", modelData)
+                                checked: activeShortcuts.indexOf(modelData) !== -1
+                                text: modelData
+                                onToggled: {
+                                    if (checked) {
+                                        kcm.requestKeySequence(this, originalIndex, modelData)
+                                    } else {
+                                        originalIndex.model.disableShortcut(originalIndex, modelData)
+                                    }
+                                }
+                                KCM.SettingHighlighter {
+                                    highlight: !checked
                                 }
                             }
-                            KCM.SettingHighlighter {
-                                highlight: !checked
+                        }
+                    }
+
+                    ColumnLayout {
+                        Layout.alignment: Qt.AlignTop | Qt.AlignRight
+                        spacing: Kirigami.Units.smallSpacing
+                        Kirigami.Heading {
+                            level: 4
+                            Layout.alignment: Qt.AlignRight
+                            text: i18nc("@title:column", "Custom shortcuts")
+                            textFormat: Text.PlainText
+                        }
+                        Kirigami.Separator {
+                            Layout.fillWidth: true
+                        }
+                        Repeater {
+                            model: customShortcuts
+                            RowLayout {
+                                spacing: Kirigami.Units.smallSpacing
+                                Layout.alignment: Qt.AlignRight
+                                KeySequenceItem {
+                                    id: keySequenceEditor
+                                    Layout.alignment: Qt.AlignRight
+                                    keySequence: modelData
+                                    showClearButton: false
+                                    patterns: ShortcutPattern.ModifierAndKey | ShortcutPattern.Modifier
+                                    multiKeyShortcutsAllowed: supportsMultipleKeys
+                                    checkForConflictsAgainst: ShortcutType.None
+                                    onCaptureFinished: {
+                                        kcm.requestKeySequence(this, originalIndex, keySequence, modelData)
+                                    }
+                                    KCM.SettingHighlighter {
+                                        highlight: true
+                                    }
+                                    Connections {
+                                        target: kcm
+                                        function onShortcutChangeRejected() {
+                                            if (keySequenceEditor.keySequence !== modelData) {
+                                                keySequenceEditor.keySequence = Qt.binding(() => modelData)
+                                            }
+                                        }
+                                    }
+                                }
+                                QQC2.Button {
+                                    icon.name: "edit-delete"
+                                    text: i18nc("@action:button accessible", "Delete shortcut")
+                                    display: QQC2.AbstractButton.IconOnly
+                                    onClicked: originalIndex.model.disableShortcut(originalIndex, modelData)
+
+                                    QQC2.ToolTip.text: text
+                                    QQC2.ToolTip.visible: hovered || activeFocus
+                                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                                }
+                            }
+                        }
+                        QQC2.Button {
+                            text: i18nc("@action:button Add custom shortcut", "Add…")
+                            Accessible.name: i18nc("@action:button accessible", "Add custom shortcut")
+                            icon.name: "list-add-symbolic"
+                            Layout.alignment: Qt.AlignRight
+                            onClicked: {
+                                this.visible = false
+                                var newKeySequenceItem = newKeySequenceComponent.createObject(parent)
+                                for (var i = 0; i < newKeySequenceItem.children.length; i++) {
+                                    if (newKeySequenceItem.children[i] instanceof KeySequenceItem) {
+                                        var keySequenceItem = newKeySequenceItem.children[i]
+                                    }
+                                }
+                                newKeySequenceItem.finished.connect(() => {
+                                    newKeySequenceItem.destroy()
+                                    this.visible = true
+                                })
+                                keySequenceItem.startCapturing()
+                            }
+                        }
+                        Component {
+                            id: newKeySequenceComponent
+                            RowLayout {
+                                signal finished
+                                Layout.alignment: Qt.AlignRight
+                                spacing: Kirigami.Units.smallSpacing
+                                KeySequenceItem {
+                                    showClearButton: false
+                                    patterns: ShortcutPattern.Modifier | ShortcutPattern.ModifierAndKey
+                                    multiKeyShortcutsAllowed: model.supportsMultipleKeys
+                                    checkForConflictsAgainst: ShortcutType.None
+                                    onCaptureFinished: {
+                                        kcm.requestKeySequence(this, originalIndex, keySequence)
+                                        parent.finished()
+                                    }
+                                }
+                                QQC2.Button {
+                                    icon.name: "dialog-cancel"
+                                    text: i18nc("@action:button accessible", "Cancel capturing shortcut")
+                                    display: QQC2.AbstractButton.IconOnly
+                                    onClicked: parent.finished()
+
+                                    QQC2.ToolTip.text: text
+                                    QQC2.ToolTip.visible: hovered || activeFocus
+                                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                                }
                             }
                         }
                     }
                 }
 
-                ColumnLayout {
-                    Layout.alignment: Qt.AlignTop | Qt.AlignRight
-                    spacing: Kirigami.Units.smallSpacing
-                    Kirigami.Heading {
-                        level: 4
-                        Layout.alignment: Qt.AlignRight
-                        text: i18nc("@title:column", "Custom shortcuts")
-                        textFormat: Text.PlainText
-                    }
-                    Kirigami.Separator {
-                        Layout.fillWidth: true
-                    }
-                    Repeater {
-                        model: customShortcuts
-                        RowLayout {
-                            spacing: Kirigami.Units.smallSpacing
-                            Layout.alignment: Qt.AlignRight
-                            KeySequenceItem {
-                                id: keySequenceEditor
-                                Layout.alignment: Qt.AlignRight
-                                keySequence: modelData
-                                showClearButton: false
-                                patterns: ShortcutPattern.ModifierAndKey | ShortcutPattern.Modifier
-                                multiKeyShortcutsAllowed: supportsMultipleKeys
-                                checkForConflictsAgainst: ShortcutType.None
-                                onCaptureFinished: {
-                                    kcm.requestKeySequence(this, originalIndex, keySequence, modelData)
-                                }
-                                KCM.SettingHighlighter {
-                                    highlight: true
-                                }
-                                Connections {
-                                    target: kcm
-                                    function onShortcutChangeRejected() {
-                                        if (keySequenceEditor.keySequence !== modelData) {
-                                            keySequenceEditor.keySequence = Qt.binding(() => modelData)
-                                        }
-                                    }
-                                }
-                            }
-                            QQC2.Button {
-                                icon.name: "edit-delete"
-                                text: i18nc("@action:button accessible", "Delete shortcut")
-                                display: QQC2.AbstractButton.IconOnly
-                                onClicked: originalIndex.model.disableShortcut(originalIndex, modelData)
+                Kirigami.InlineMessage {
+                    id: reassignInverseAction
+                    property KGAM.InverseActionReassignmentSuggestion suggestion: model.inverseActionReassignmentSuggestion ?? null
+                    Layout.fillWidth: true
+                    text: i18nc("@info:usagetip when the opposite action was changed", "Also change shortcut %1 for \"%2\"?", suggestion?.shortcutNativeText(suggestion?.shortcutToReplace) ?? "-", suggestion?.inverseDisplayName ?? "-")
+                    icon.name: "dialog-question"
+                    type: Kirigami.MessageType.Information
+                    showCloseButton: true
+                    visible: suggestion
+                    actions: [
+                        Kirigami.Action {
+                            // Single ampersand gets interpreted by the button as a mnemonic
+                            // and removed; replace it with a double ampersand so that it
+                            // will be displayed by the button as a single ampersand, or
+                            // else shortcuts with the actual ampersand character will
+                            // appear to be partially empty.
+                            text: i18nc("@action:button Assign new suggested keyboard shortcut", "Change to %1", reassignInverseAction.suggestion?.shortcutNativeText(reassignInverseAction.suggestion?.shortcutSuggestion).replace('&', '&&') ?? "-")
 
-                                QQC2.ToolTip.text: text
-                                QQC2.ToolTip.visible: hovered || activeFocus
-                                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                            onTriggered: {
+                                const s = reassignInverseAction.suggestion
+                                kcm.requestKeySequence(root, s.inverseActionModelIndex(), s.shortcutSuggestion, s.shortcutToReplace)
                             }
                         }
-                    }
-                    QQC2.Button {
-                        text: i18nc("@action:button Add custom shortcut", "Add…")
-                        Accessible.name: i18nc("@action:button accessible", "Add custom shortcut")
-                        icon.name: "list-add-symbolic"
-                        Layout.alignment: Qt.AlignRight
-                        onClicked: {
-                            this.visible = false
-                            var newKeySequenceItem = newKeySequenceComponent.createObject(parent)
-                            for (var i = 0; i < newKeySequenceItem.children.length; i++) {
-                                if (newKeySequenceItem.children[i] instanceof KeySequenceItem) {
-                                    var keySequenceItem = newKeySequenceItem.children[i]
-                                }
-                            }
-                            newKeySequenceItem.finished.connect(() => {
-                                newKeySequenceItem.destroy()
-                                this.visible = true
-                            })
-                            keySequenceItem.startCapturing()
-                        }
-                    }
-                    Component {
-                        id: newKeySequenceComponent
-                        RowLayout {
-                            signal finished
-                            Layout.alignment: Qt.AlignRight
-                            spacing: Kirigami.Units.smallSpacing
-                            KeySequenceItem {
-                                showClearButton: false
-                                patterns: ShortcutPattern.Modifier | ShortcutPattern.ModifierAndKey
-                                multiKeyShortcutsAllowed: model.supportsMultipleKeys
-                                checkForConflictsAgainst: ShortcutType.None
-                                onCaptureFinished: {
-                                    kcm.requestKeySequence(this, originalIndex, keySequence)
-                                    parent.finished()
-                                }
-                            }
-                            QQC2.Button {
-                                icon.name: "dialog-cancel"
-                                text: i18nc("@action:button accessible", "Cancel capturing shortcut")
-                                display: QQC2.AbstractButton.IconOnly
-                                onClicked: parent.finished()
-
-                                QQC2.ToolTip.text: text
-                                QQC2.ToolTip.visible: hovered || activeFocus
-                                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
-                            }
-                        }
-                    }
+                    ]
                 }
             }
         }

@@ -10,12 +10,14 @@
 #include <QKeySequence>
 #include <QList>
 #include <QSet>
+#include <QtQmlIntegration/qqmlintegration.h>
 
 #include "kglobalaccelmodel_export.h"
 
 class Component;
 class KConfigBase;
 
+class BaseModel;
 class BaseModelPrivate;
 
 // we need to do this to expose the enum to QML
@@ -31,6 +33,38 @@ KGLOBALACCELMODEL_EXPORT Q_ENUM_NS(ComponentType)
 };
 
 using namespace ComponentNS;
+
+class InverseActionReassignmentSuggestion : public QObject
+{
+    Q_OBJECT
+    QML_ELEMENT
+    QML_UNCREATABLE("must be created by the shortcut model")
+
+    Q_PROPERTY(QString inverseId MEMBER m_inverseId CONSTANT)
+    Q_PROPERTY(QString inverseDisplayName READ inverseDisplayName CONSTANT)
+    Q_PROPERTY(QKeySequence shortcutToReplace READ shortcutToReplace CONSTANT)
+    Q_PROPERTY(QKeySequence shortcutSuggestion READ shortcutSuggestion CONSTANT)
+
+public:
+    struct Data {
+        QString inverseDisplayName;
+        QPersistentModelIndex inverseIndex;
+        QKeySequence shortcutSuggestion;
+        QKeySequence shortcutToReplace;
+    };
+    InverseActionReassignmentSuggestion(const BaseModel *model, const QString &inverseId, const Data &data);
+
+    Q_INVOKABLE QString shortcutNativeText(const QKeySequence &s) const;
+    Q_INVOKABLE QModelIndex inverseActionModelIndex() const;
+
+    QString inverseDisplayName() const;
+    QKeySequence shortcutSuggestion() const;
+    QKeySequence shortcutToReplace() const;
+
+private:
+    QString m_inverseId;
+    Data m_data;
+};
 
 class KGLOBALACCELMODEL_EXPORT BaseModel : public QAbstractItemModel
 {
@@ -49,6 +83,7 @@ public:
         IsDefaultRole,
         SupportsMultipleKeysRole,
         IsRemovableRole,
+        InverseActionReassignmentSuggestionRole,
     };
     Q_ENUM(Roles)
 

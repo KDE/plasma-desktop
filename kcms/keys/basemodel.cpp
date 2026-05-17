@@ -13,11 +13,74 @@
 #include <KLocalizedString>
 #include <KService>
 
+#include <algorithm>
+
 #include "kcmkeys_debug.h"
 
 struct BaseModelPrivate {
     QList<Component> components;
 };
+
+namespace
+{
+QKeySequence suggestedInverseKeys(const QKeySequence &s)
+{
+    if (s.isEmpty()) {
+        return QKeySequence();
+    }
+    std::array<QKeyCombination, 4> inverse = {s[0], s[1], s[2], s[3]};
+    QKeyCombination &last = inverse[s.count() - 1]; // get reference from an array, this doesn't work on a QKeySequence
+
+    if (last.key() == Qt::Key::Key_Left) {
+        last = last.keyboardModifiers() | Qt::Key::Key_Right;
+    } else if (last.key() == Qt::Key::Key_Right) {
+        last = last.keyboardModifiers() | Qt::Key::Key_Left;
+    } else if (last.key() == Qt::Key::Key_Up) {
+        last = last.keyboardModifiers() | Qt::Key::Key_Down;
+    } else if (last.key() == Qt::Key::Key_Down) {
+        last = last.keyboardModifiers() | Qt::Key::Key_Up;
+    } else if (last.key() == Qt::Key::Key_PageUp) {
+        last = last.keyboardModifiers() | Qt::Key::Key_PageDown;
+    } else if (last.key() == Qt::Key::Key_PageDown) {
+        last = last.keyboardModifiers() | Qt::Key::Key_PageUp;
+    } else {
+        last = last.key() | (last.keyboardModifiers() ^ Qt::KeyboardModifier::ShiftModifier); // toggle Shift
+    }
+    return last == s[s.count() - 1] ? QKeySequence() : QKeySequence(inverse[0], inverse[1], inverse[2], inverse[3]);
+}
+} // namespace
+
+InverseActionReassignmentSuggestion::InverseActionReassignmentSuggestion(const BaseModel *model, const QString &inverseId, const Data &data)
+    : QObject() // QML is meant to take ownership
+    , m_inverseId(inverseId)
+    , m_data(data)
+{
+}
+
+QString InverseActionReassignmentSuggestion::shortcutNativeText(const QKeySequence &s) const
+{
+    return s.toString(QKeySequence::NativeText);
+}
+
+QModelIndex InverseActionReassignmentSuggestion::inverseActionModelIndex() const
+{
+    return m_data.inverseIndex;
+}
+
+QString InverseActionReassignmentSuggestion::inverseDisplayName() const
+{
+    return m_data.inverseDisplayName;
+}
+
+QKeySequence InverseActionReassignmentSuggestion::shortcutToReplace() const
+{
+    return m_data.shortcutToReplace;
+}
+
+QKeySequence InverseActionReassignmentSuggestion::shortcutSuggestion() const
+{
+    return m_data.shortcutSuggestion;
+}
 
 BaseModel::BaseModel(QObject *parent)
     : QAbstractItemModel(parent)
@@ -61,14 +124,30 @@ void BaseModel::changeShortcut(const QModelIndex &index, const QKeySequence &old
     if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid) || !index.parent().isValid()) {
         return;
     }
-    if (newShortcut.isEmpty()) {
+    if (newShortcut.isEmpty() || oldShortcut == newShortcut) {
         return;
     }
     qCDebug(KCMKEYS) << "Changing Shortcut" << index << oldShortcut << " to " << newShortcut;
-    Action &a = d->components[index.parent().row()].actions[index.row()];
+    auto &actions = d->components[index.parent().row()].actions;
+
+    Action &a = actions[index.row()];
     a.activeShortcuts.remove(oldShortcut);
     a.activeShortcuts.insert(newShortcut);
     Q_EMIT dataChanged(index, index, {ActiveShortcutsRole, CustomShortcutsRole});
+
+    const auto inverse = std::find_if(actions.cbegin(), actions.cend(), [id = a.inverseAction](const Action &other) {
+        return other.id == id;
+    });
+    if (inverse != actions.cend()) {
+        const QKeySequence inverseOldKeys = suggestedInverseKeys(oldShortcut);
+        if (inverse->activeShortcuts.contains(inverseOldKeys)) {
+            const QModelIndex inverseIndex = index.siblingAtRow(inverse - actions.cbegin());
+            const QKeySequence suggestedKeys = suggestedInverseKeys(newShortcut);
+            a.inverseActionReassignmentSuggestion =
+                InverseActionReassignmentSuggestion::Data{inverse->displayName, inverseIndex, suggestedKeys, inverseOldKeys};
+            Q_EMIT dataChanged(index, index, {InverseActionReassignmentSuggestionRole});
+        }
+    }
 }
 
 void BaseModel::defaults()
@@ -184,6 +263,11 @@ QVariant BaseModel::data(const QModelIndex &index, int role) const
             return action.activeShortcuts == action.defaultShortcuts;
         case SupportsMultipleKeysRole:
             return true;
+        case InverseActionReassignmentSuggestionRole:
+            if (action.inverseActionReassignmentSuggestion.has_value()) {
+                return QVariant::fromValue(new InverseActionReassignmentSuggestion(this, action.inverseAction, *action.inverseActionReassignmentSuggestion));
+            }
+            return QVariant::fromValue(static_cast<InverseActionReassignmentSuggestion *>(nullptr));
         }
         return QVariant();
     }
@@ -309,6 +393,7 @@ QHash<int, QByteArray> BaseModel::roleNames() const
         {IsDefaultRole, QByteArrayLiteral("isDefault")},
         {SupportsMultipleKeysRole, QByteArrayLiteral("supportsMultipleKeys")},
         {IsRemovableRole, QByteArrayLiteral("isRemovable")},
+        {InverseActionReassignmentSuggestionRole, QByteArrayLiteral("inverseActionReassignmentSuggestion")},
     };
 }
 

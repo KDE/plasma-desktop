@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include "basemodel.h" // for InverseActionReassignmentSuggestion
+
 #include <KGlobalShortcutTrigger>
 
 #include <QHash>
@@ -13,6 +15,7 @@
 #include <QList>
 #include <QSet>
 #include <QString>
+#include <optional>
 
 struct Action {
     struct TriggerSets {
@@ -27,6 +30,7 @@ struct Action {
     QSet<QKeySequence> initialShortcuts;
     QHash<QString, TriggerSets> triggersByType;
     QString inverseAction;
+    std::optional<InverseActionReassignmentSuggestion::Data> inverseActionReassignmentSuggestion;
 };
 
 struct Component {
