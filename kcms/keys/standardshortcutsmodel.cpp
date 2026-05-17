@@ -51,7 +51,9 @@ void StandardShortcutsModel::load()
                        listToSet(activeShortcuts),
                        listToSet(defaultShortcuts),
                        listToSet(activeShortcuts),
-                       QHash<QString, Action::TriggerSets>{}};
+                       QHash<QString, Action::TriggerSets>{},
+                       QString(),
+                       std::nullopt};
         components()[static_cast<int>(category(id))].actions.append(a);
     }
     QCollator collator;

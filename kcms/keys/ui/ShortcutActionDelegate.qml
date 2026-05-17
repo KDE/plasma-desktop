@@ -11,6 +11,7 @@ import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
 import org.kde.kquickcontrols
 import org.kde.kcmutils as KCM
+import org.kde.kglobalaccelmodel as KGAM
 
 QQC2.ItemDelegate {
     id: root
@@ -279,6 +280,42 @@ QQC2.ItemDelegate {
                             }
                         }
                     }
+                }
+
+                Kirigami.InlineMessage {
+                    id: reassignInverseAction
+                    property KGAM.InverseActionReassignmentSuggestion suggestion: model.inverseActionReassignmentSuggestion ?? null
+                    Layout.fillWidth: true
+                    text: suggestion?.willUnassign
+                        ? xi18nc("@info:usagetip remove shortcut when the opposite action was unassigned", "Also unassign shortcut <shortcut>%1</shortcut> for the opposite action <interface>%2</interface>?", suggestion?.shortcutNativeText(suggestion?.shortcutToReplace) ?? "-", suggestion?.inverseDisplayName ?? "-")
+                        : xi18nc("@info:usagetip modify shortcut when the opposite action was reassigned", "Also change shortcut <shortcut>%1</shortcut> for the opposite action <interface>%2</interface>?", suggestion?.shortcutNativeText(suggestion?.shortcutToReplace) ?? "-", suggestion?.inverseDisplayName ?? "-")
+                    icon.name: "dialog-question"
+                    type: Kirigami.MessageType.Information
+                    showCloseButton: true
+                    visible: suggestion
+                    actions: [
+                        Kirigami.Action {
+                            readonly property string newShortcutNativeText: reassignInverseAction.suggestion?.shortcutNativeText(reassignInverseAction.suggestion?.shortcutSuggestion).replace('&', '&&') ?? "-"
+
+                            // Single ampersand gets interpreted by the button as a mnemonic
+                            // and removed; replace it with a double ampersand so that it
+                            // will be displayed by the button as a single ampersand, or
+                            // else shortcuts with the actual ampersand character will
+                            // appear to be partially empty.
+                            text: reassignInverseAction.suggestion?.willUnassign
+                                ? i18nc("@action:button Suggestion to unassign keyboard shortcut", "Unassign")
+                                : i18nc("@action:button Assign new suggested keyboard shortcut", "Change to %1", newShortcutNativeText)
+
+                            onTriggered: {
+                                const s = reassignInverseAction.suggestion
+                                if (s.willUnassign) {
+                                    s.inverseActionModelIndex().model.disableShortcut(s.inverseActionModelIndex(), s.shortcutToReplace)
+                                } else {
+                                    kcm.requestKeySequence(root, s.inverseActionModelIndex(), s.shortcutSuggestion, s.shortcutToReplace)
+                                }
+                            }
+                        }
+                    ]
                 }
             }
         }
