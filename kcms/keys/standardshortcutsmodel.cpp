@@ -51,7 +51,8 @@ void StandardShortcutsModel::load()
                        listToSet(activeShortcuts),
                        listToSet(defaultShortcuts),
                        listToSet(activeShortcuts),
-                       QString()};
+                       QString(),
+                       nullptr};
         components()[static_cast<int>(category(id))].actions.append(a);
     }
     QCollator collator;

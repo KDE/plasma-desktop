@@ -11,6 +11,7 @@ import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
 import org.kde.kquickcontrols
 import org.kde.kcmutils as KCM
+import org.kde.kglobalaccelmodel as KGAM
 
 QQC2.ItemDelegate {
     id: root
@@ -279,6 +280,66 @@ QQC2.ItemDelegate {
                             }
                         }
                     }
+                }
+
+                Kirigami.InlineMessage {
+                    id: reassignInverseAction
+                    property KGAM.inverseActionReassignmentSuggestion suggestion: model.inverseActionReassignmentSuggestion
+                    Layout.fillWidth: true
+                    text: suggestion?.willUnassign
+                        ? xi18nc("@info:usagetip remove shortcut when the opposite action was unassigned", "Unassign shortcut also for the opposite action <interface>%1</interface>?", suggestion.valid ? suggestion.inverseDisplayName : "-")
+                        : xi18nc("@info:usagetip modify shortcut when the opposite action was reassigned", "Change shortcut also for the opposite action <interface>%1</interface>?", suggestion.valid ? suggestion.inverseDisplayName : "-")
+                    icon.name: "dialog-question"
+                    type: Kirigami.MessageType.Information
+                    showCloseButton: true
+                    visible: suggestion.valid
+                    actions: [
+                        Kirigami.Action {
+                            // Single ampersand gets interpreted by the button as a mnemonic
+                            // and removed; replace it with a double ampersand so that it
+                            // will be displayed by the button as a single ampersand, or
+                            // else shortcuts with the actual ampersand character will
+                            // appear to be partially empty.
+                            readonly property string newShortcutNativeText: (reassignInverseAction.suggestion.valid
+                                ? reassignInverseAction.suggestion.shortcutNativeText(reassignInverseAction.suggestion.shortcutSuggestion).replace('&', '&&')
+                                : "-")
+                            readonly property string oldShortcutNativeText: (reassignInverseAction.suggestion.valid
+                                ? reassignInverseAction.suggestion.shortcutNativeText(reassignInverseAction.suggestion.shortcutToReplace).replace('&', '&&')
+                                : "-")
+
+                            text: reassignInverseAction.suggestion.willUnassign
+                                ? i18nc("@action:button Suggestion to unassign keyboard shortcut", "Unassign %1", oldShortcutNativeText)
+                                : i18nc("@action:button Assign new suggested keyboard shortcut", "Change to %1", newShortcutNativeText)
+
+                            onTriggered: {
+                                const s = reassignInverseAction.suggestion
+                                if (s.willUnassign) {
+                                    const newText = xi18nc("@info", "Shortcut for action <interface>%1</interface> was unassigned.", s.inverseDisplayName)
+                                    s.inverseActionModelIndex.model.disableShortcut(s.inverseActionModelIndex, s.shortcutToReplace)
+                                    inverseActionWasReassigned.text = newText
+                                } else {
+                                    const newText = xi18nc("@info", "Shortcut for action <interface>%1</interface> was changed.", s.inverseDisplayName)
+                                    kcm.requestKeySequence(root, s.inverseActionModelIndex, s.shortcutSuggestion, s.shortcutToReplace)
+                                    inverseActionWasReassigned.text = newText
+                                }
+                            }
+                        }
+                    ]
+                    onVisibleChanged: {
+                        if (visible) {
+                            inverseActionWasReassigned.text = ""
+                        }
+                        inverseActionWasReassigned.visible = (inverseActionWasReassigned.text.length > 0) && !suggestion.valid
+                    }
+                }
+
+                Kirigami.InlineMessage {
+                    id: inverseActionWasReassigned
+                    Layout.fillWidth: true
+                    text: "" // to be filled in programmatically
+                    type: Kirigami.MessageType.Information
+                    showCloseButton: true
+                    onTextChanged: visible = true
                 }
             }
         }

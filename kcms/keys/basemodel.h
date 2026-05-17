@@ -10,13 +10,16 @@
 #include <QKeySequence>
 #include <QList>
 #include <QSet>
+#include <QtQmlIntegration/qqmlintegration.h>
 
 #include "kglobalaccelmodel_export.h"
 
-class Component;
-class KConfigBase;
+struct Action;
+struct Component;
+struct InverseActionReassignmentSuggestionPrivate;
 
 class BaseModelPrivate;
+class KConfigBase;
 
 // we need to do this to expose the enum to QML
 namespace ComponentNS
@@ -31,6 +34,39 @@ KGLOBALACCELMODEL_EXPORT Q_ENUM_NS(ComponentType)
 };
 
 using namespace ComponentNS;
+
+class InverseActionReassignmentSuggestion
+{
+    Q_GADGET
+    QML_VALUE_TYPE(inverseActionReassignmentSuggestion)
+
+    Q_PROPERTY(bool valid READ isValid CONSTANT)
+    Q_PROPERTY(QString inverseId READ inverseId CONSTANT)
+    Q_PROPERTY(QString inverseDisplayName READ inverseDisplayName CONSTANT)
+    Q_PROPERTY(QModelIndex inverseActionModelIndex READ inverseActionModelIndex CONSTANT)
+    Q_PROPERTY(QKeySequence shortcutToReplace READ shortcutToReplace CONSTANT)
+    Q_PROPERTY(QKeySequence shortcutSuggestion READ shortcutSuggestion CONSTANT)
+    Q_PROPERTY(bool willUnassign READ willUnassign CONSTANT)
+
+public:
+    InverseActionReassignmentSuggestion();
+    InverseActionReassignmentSuggestion(const std::shared_ptr<const InverseActionReassignmentSuggestionPrivate> &);
+    ~InverseActionReassignmentSuggestion();
+
+    bool isValid() const;
+
+    Q_INVOKABLE QString shortcutNativeText(const QKeySequence &s) const;
+
+    QString inverseId() const;
+    QString inverseDisplayName() const;
+    QModelIndex inverseActionModelIndex() const;
+    QKeySequence shortcutSuggestion() const;
+    QKeySequence shortcutToReplace() const;
+    bool willUnassign() const;
+
+private:
+    std::shared_ptr<const InverseActionReassignmentSuggestionPrivate> d;
+};
 
 class KGLOBALACCELMODEL_EXPORT BaseModel : public QAbstractItemModel
 {
@@ -49,6 +85,7 @@ public:
         IsDefaultRole,
         SupportsMultipleKeysRole,
         IsRemovableRole,
+        InverseActionReassignmentSuggestionRole,
     };
     Q_ENUM(Roles)
 
@@ -81,5 +118,7 @@ protected:
     const QList<Component> &components() const;
 
 private:
+    void onShortcutChanged(QList<Action> &actions, const QModelIndex &index, const QKeySequence &oldShortcut, const QKeySequence &newShortcut);
+
     std::unique_ptr<BaseModelPrivate> d;
 };
