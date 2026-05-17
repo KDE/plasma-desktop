@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2021, 2022, 2023, 2024, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2014-2017, 2019, 2021-2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-14 00:45+0000\n"
-"PO-Revision-Date: 2026-01-24 10:34+0100\n"
+"PO-Revision-Date: 2026-05-16 12:27+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: code/tools.js:32
 #, kde-format
@@ -184,12 +184,10 @@ msgid "Use compact list item style"
 msgstr "Oszczędzaj miejsce przy przedstawianiu na liście"
 
 #: ConfigGeneral.qml:187
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Highlight newly installed applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
-msgstr "Podświetl nowowgrane aplikacje"
+msgstr "Wyróżnij nowo wgrane aplikacje"
 
 #: ConfigGeneral.qml:192
 #, kde-format
@@ -326,20 +324,16 @@ msgid "Keep Open"
 msgstr "Pozostaw otwartym"
 
 #: KickoffGridDelegate.qml:59
-#, fuzzy, kde-format
-#| msgctxt "@label Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Nowa!"
 
 #: KickoffGridDelegate.qml:61
-#, fuzzy, kde-format
-#| msgctxt "@label Accessible name for badge"
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
-msgstr "Nowowgrane aplikacje"
+msgstr "Nowo wgrana aplikacja"
 
 #: KickoffGridView.qml:105
 #, kde-format
@@ -348,26 +342,20 @@ msgid "Grid with %1 rows, %2 columns"
 msgstr "Siatka o %1 wierszach, %2 kolumnach"
 
 #: KickoffListDelegate.qml:120
-#, fuzzy, kde-format
-#| msgctxt "@label Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Nowa!"
 
 #: KickoffListDelegate.qml:125
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis Accessible description for badge"
-#| msgid "There is a newly installed application in this category"
+#, kde-format
 msgid "There is a newly-installed application in this category"
-msgstr "W tej kategorii pojawiła się nowowgrana aplikacja"
+msgstr "W tej kategorii pojawiła się nowo wgrana aplikacja"
 
 #: KickoffListDelegate.qml:126
-#, fuzzy, kde-format
-#| msgctxt "@label Accessible name for badge"
-#| msgid "Newly installed application"
+#, kde-format
 msgid "Newly-installed application"
-msgstr "Nowowgrane aplikacje"
+msgstr "Nowo wgrana aplikacja"
 
 #: LeaveButtons.qml:171
 #, kde-format
