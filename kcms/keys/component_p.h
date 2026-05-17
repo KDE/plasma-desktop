@@ -10,6 +10,15 @@
 #include <QList>
 #include <QSet>
 #include <QString>
+#include <optional>
+
+struct InverseActionReassignmentSuggestionPrivate {
+    QString inverseId;
+    QString inverseDisplayName;
+    QPersistentModelIndex inverseIndex;
+    QKeySequence shortcutSuggestion;
+    QKeySequence shortcutToReplace;
+};
 
 struct Action {
     QString id;
@@ -18,6 +27,7 @@ struct Action {
     QSet<QKeySequence> defaultShortcuts;
     QSet<QKeySequence> initialShortcuts;
     QString inverseAction;
+    std::shared_ptr<const InverseActionReassignmentSuggestionPrivate> inverseActionReassignmentSuggestion;
 };
 
 struct Component {
