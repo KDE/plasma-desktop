@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2023, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2014-2017, 2019-2021, 2023, 2025-2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-14 00:45+0000\n"
-"PO-Revision-Date: 2026-01-24 10:31+0100\n"
+"PO-Revision-Date: 2026-05-16 12:26+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: code/tools.js:53
 #, kde-format
@@ -65,7 +65,7 @@ msgstr "Wybierz..."
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr ""
+msgstr "Przywróć domyślną ikonę"
 
 #: ConfigGeneral.qml:161
 #, kde-format
@@ -122,12 +122,10 @@ msgid "Show icons on the root level of the menu"
 msgstr "Pokaż ikony na poziomie głównym menu"
 
 #: ConfigGeneral.qml:198
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
-msgstr "Najczęściej używane programy"
+msgstr "Wyróżnij nowo wgrane aplikacje"
 
 #: ConfigGeneral.qml:208
 #, kde-format
@@ -157,23 +155,19 @@ msgstr "Ostatnio używane pliki"
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used files"
-msgstr "Często używane pliki"
+msgstr "Często otwierane pliki"
 
 #: ConfigGeneral.qml:227
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Recent files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent places"
-msgstr "Ostatnio używane pliki"
+msgstr "Ostatnio odwiedzone"
 
 #: ConfigGeneral.qml:228
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used places"
-msgstr "Często używane pliki"
+msgstr "Często odwiedzane miejsca"
 
 #: ConfigGeneral.qml:234
 #, kde-format
@@ -245,27 +239,25 @@ msgstr "Ulubione"
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Nowa!"
 
 #: DashboardRepresentation.qml:951 ItemListDelegate.qml:98
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
-msgstr ""
+msgstr "W tej kategorii pojawiła się nowo wgrana aplikacja"
 
 #: ItemGridDelegate.qml:81
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Nowa!"
 
 #: ItemGridDelegate.qml:83
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
-msgstr "Najczęściej używane programy"
+msgstr "Nowo wgrana aplikacja"
 
 #: ItemListDelegate.qml:40
 #, kde-format
@@ -280,12 +272,10 @@ msgid "Launch"
 msgstr "Uruchom"
 
 #: ItemListDelegate.qml:99
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
-msgstr "Najczęściej używane programy"
+msgstr "Nowo wgrana aplikacja"
 
 #: main.qml:208
 #, kde-format
