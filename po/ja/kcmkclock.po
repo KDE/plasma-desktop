@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-05 00:45+0000\n"
+"POT-Creation-Date: 2026-05-18 00:46+0000\n"
 "PO-Revision-Date: 2022-08-20 23:06-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -84,17 +84,17 @@ msgstr ""
 "テム設定を root として起動したときのみ調整できます。あなたに調整する権限がな"
 "い場合は、システム管理者に連絡してください。"
 
-#: main.cpp:60
+#: main.cpp:57
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "NTP の設定を変更できませんでした"
 
-#: main.cpp:73
+#: main.cpp:70
 #, kde-format
 msgid "Unable to set current time"
 msgstr "現在時間を設定できません"
 
-#: main.cpp:85
+#: main.cpp:82
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "タイムゾーンを設定できません"

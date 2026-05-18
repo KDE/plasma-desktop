@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-05 00:45+0000\n"
+"POT-Creation-Date: 2026-05-18 00:46+0000\n"
 "PO-Revision-Date: 2023-11-10 23:22+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -83,17 +83,17 @@ msgstr ""
 "影響使用者，也會影響整個系統，只有當你用 root 身份 啟動系統設定時才能改變這些"
 "設定。假如你沒有 root 密碼，但覺得系統 時刻需要修正，請聯絡你的系統管理者。"
 
-#: main.cpp:60
+#: main.cpp:57
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "無法變更 NTP 設定"
 
-#: main.cpp:73
+#: main.cpp:70
 #, kde-format
 msgid "Unable to set current time"
 msgstr "無法設定目前時間"
 
-#: main.cpp:85
+#: main.cpp:82
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "無法設定時區"
