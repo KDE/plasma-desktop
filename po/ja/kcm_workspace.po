@@ -1,14 +1,15 @@
 # SPDX-FileCopyrightText: 2023, 2024, 2025 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019, 2020.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2021.
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-23 00:46+0000\n"
-"PO-Revision-Date: 2025-03-30 19:13+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2026-05-10 14:33+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
+"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,13 +17,10 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: ui/main.qml:25
-#, fuzzy, kde-format
-#| msgid ""
-#| "The system must be restarted before changes to the middle-click paste "
-#| "setting can take effect."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
@@ -32,8 +30,7 @@ msgstr ""
 "ります。"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgctxt "@action:button"
 msgid "Restart"
 msgstr "再起動"
@@ -42,7 +39,7 @@ msgstr "再起動"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:49
 #, kde-format
@@ -65,6 +62,10 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"ポインターを重ねたときに、すべての Plasma パネルおよびデスクトップウィジェッ"
+"トで説明ツールチップを表示できるようにします。この設定は、個々のボタンやその"
+"他のユーザーインターフェース要素にポインターを重ねた際に表示される小さなツー"
+"ルチップには影響しません。"
 
 #: ui/main.qml:70
 #, kde-format
@@ -74,39 +75,29 @@ msgid "OSD popups for status changes"
 msgstr "状態変更時の OSD ポップアップ"
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgid ""
-#| "Allow Plasma widgets to display small popups for status changes such as "
-#| "brightness or volume"
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
-"Plasma ウィジェットに明るさや音量などの状態が変更された際のポップアップ表示を"
-"許可"
+"すべての Plasma ウィジェットで音量や明るさの変更、音声デバイスの切り替えなど"
+"のオンスクリーンディスプレイ (OSD) ポップアップを表示できるようにします。"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "スクロール:"
+msgstr "スクロール"
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "Clicking in scrollbar track:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
-msgstr "スクロールバーをクリックした際の挙動:"
+msgstr "スクロールバーをクリックしたとき:"
 
 #: ui/main.qml:95
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
-#| "to the clicked location'"
-#| msgid "Scrolls to the clicked location"
+#, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
 "the clicked location'"
@@ -114,18 +105,13 @@ msgid "Scrolls to the clicked location"
 msgstr "クリックした位置にスクロール"
 
 #: ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "Middle-click to scroll to clicked location"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Middle-click to scroll to clicked location"
-msgstr "中クリックされた位置にスクロール"
+msgstr "中クリックした位置にスクロール"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
-#| "one page up or down'"
-#| msgid "Scrolls one page up or down"
+#, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
 "page up or down'"
@@ -156,14 +142,14 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "クリック"
 
 #: ui/main.qml:150
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
-msgstr "ファイル/フォルダをクリックした際の挙動:"
+msgstr "ファイル/フォルダをクリックしたとき:"
 
 #: ui/main.qml:154
 #, kde-format
@@ -172,11 +158,10 @@ msgid "Selects them"
 msgstr "選択する"
 
 #: ui/main.qml:155
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
-msgstr "ダブルクリックして開く"
+msgstr "開く操作はダブルクリックでできます"
 
 #: ui/main.qml:172
 #, kde-format
@@ -185,11 +170,10 @@ msgid "Opens them"
 msgstr "開く"
 
 #: ui/main.qml:173
-#, fuzzy, kde-format
-#| msgid "Select by clicking on item's selection marker"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
-msgstr "アイテムの選択マーカーをクリックして選択"
+msgstr "アイテムの選択アイコンをクリックして選択できます"
 
 #: ui/main.qml:190
 #, kde-format
@@ -208,8 +192,7 @@ msgid "Pastes selected text"
 msgstr "選択されたテキストを貼り付け"
 
 #: ui/main.qml:212
-#, fuzzy, kde-format
-#| msgid "Double-click interval:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Double-click interval:"
 msgstr "ダブルクリックの間隔:"
@@ -228,17 +211,14 @@ msgid "ms"
 msgstr "ミリ秒"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid ""
-#| "Two clicks within this duration are considered a double-click. Some "
-#| "applications may not honor this setting."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
 msgstr ""
-"この期間にされた2回のクリックがダブルクリックと見なされます。いくつかのアプリ"
-"ケーションはこの設定を無視するかもしれません。"
+"この時間内に行われた2回のクリックがダブルクリックとみなされます。一部のアプリ"
+"はこの設定を無視する場合があります。"
 
 #: ui/main.qml:262
 #, kde-format
@@ -247,27 +227,26 @@ msgid ""
 "Double-click the folder to test. If it does not change its appearance, "
 "increase double-click interval."
 msgstr ""
+"フォルダをダブルクリックしてテストできます。フォルダの見た目が変わらない場合"
+"は、ダブルクリックの間隔を増やしてください。"
 
 #: ui/main.qml:306
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
-msgstr ""
+msgstr "ドラッグ＆ドロップ"
 
 #: ui/main.qml:311
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
-msgstr "ファイル/フォルダをクリックした際の挙動:"
+msgstr "ファイル/フォルダをクリックしたとき:"
 
 #: ui/main.qml:315
 #, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
-msgstr ""
+msgstr "操作内容を選択する"
 
 #: ui/main.qml:316
 #, kde-kuit-format
@@ -277,69 +256,62 @@ msgid ""
 "and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
 "dialog."
 msgstr ""
+"<shortcut>Shift</shortcut> を押しながらドラッグすると移動、<shortcut>Ctrl</"
+"shortcut> はコピー、<shortcut>Shift+Ctrl</shortcut> はシンボリックリンクを作"
+"成します。何も押されていない場合はダイアログを表示します。"
 
 #: ui/main.qml:328
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
-msgstr ""
+msgstr "同じデバイスの場合は移動"
 
 #: ui/main.qml:329
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
+"<shortcut>Shift</shortcut> を押しながらドロップするとほかの操作を選択できま"
+"す。"
 
 #: ui/main.qml:339
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "タッチモード:"
+msgstr "タッチ"
 
 #: ui/main.qml:344
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
-msgstr "タッチモード:"
+msgstr "タブレットモードを有効化:"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
-#| msgid "Automatically enable as needed"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "必要なとき自動的に有効化"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is never enabled'"
-#| msgid "Never enabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "有効化しない"
 
 #: ui/main.qml:365
-#, fuzzy, kde-format
-#| msgid ""
-#| "Touch Mode will be automatically activated whenever the system detects a "
-#| "touchscreen but no mouse or touchpad. For example: when a transformable "
-#| "laptop's keyboard is flipped around or detached."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Tablet Mode will be automatically enabled whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
-"タッチモードはシステムがタッチスクリーンを検出し、かつマウスやタッチパッドが"
-"検出されないとき自動的に有効化されます。例: タブレット PC のキーボードがフ"
-"リップされたとき、もしくは取り外されたとき"
+"タブレットモードはシステムがタッチスクリーンを検出し、かつマウスやタッチパッ"
+"ドが検出されないとき自動的に有効化されます。例: タブレット PC のキーボードが"
+"フリップされたとき、もしくは取り外されたとき"
 
 #: ui/main.qml:371
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "常に有効"
@@ -348,13 +320,13 @@ msgstr "常に有効"
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "無効"
 
 #: ui/main.qml:394
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."
-msgstr ""
+msgstr "タブレットモードでは、仮想キーボードが必要なときに表示されます。"
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -440,29 +412,3 @@ msgstr "レイアウト変更時に OSD を表示"
 #, kde-format
 msgid "Show a popup on layout changes"
 msgstr "レイアウト変更時にポップアップを表示"
-
-#, fuzzy
-#~| msgid ""
-#~| "In Touch Mode, many elements of the user interface will become larger to "
-#~| "more easily accommodate touch interaction."
-#~ msgctxt "@info:usagetip"
-#~ msgid ""
-#~ "In Touch Mode, many elements of the user interface will become larger to "
-#~ "more easily accommodate touch interaction."
-#~ msgstr ""
-#~ "タッチモードをオンにすると、ユーザインターフェースが大きくなりタッチ操作が"
-#~ "しやすくなります。"
-
-#~ msgid "Animation speed:"
-#~ msgstr "アニメーションの速度:"
-
-#~ msgctxt "Animation speed"
-#~ msgid "Slow"
-#~ msgstr "ゆっくり"
-
-#~ msgctxt "Animation speed"
-#~ msgid "Instant"
-#~ msgstr "即時"
-
-#~ msgid "Animation speed"
-#~ msgstr "アニメーションの速度"

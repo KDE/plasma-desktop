@@ -7,20 +7,21 @@
 # Shinichi Tsunoda <tsuno@ngy.1st.ne.jp>, 2005.
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2006, 2007, 2008, 2009, 2010.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2005, 2006, 2022.
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-30 00:45+0000\n"
-"PO-Revision-Date: 2025-03-08 20:45+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2026-05-10 18:16+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
+"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 26.04.1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -129,20 +130,17 @@ msgstr ""
 "す。"
 
 #: ui/main.qml:165
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Pictures folder:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Projects folder:"
-msgstr "画像フォルダ:"
+msgstr "プロジェクトフォルダ:"
 
 #: ui/main.qml:171
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip and accessible description"
-#| msgid "This folder will be used by default to open or save documents."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save projects."
-msgstr "このフォルダは文書のデフォルトの読み込み/保存先として使われます。"
+msgstr ""
+"このフォルダはプロジェクトのデフォルトの読み込み/保存先として使われます。"
 
 #: ui/UrlRequester.qml:74
 #, kde-format

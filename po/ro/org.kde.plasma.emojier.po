@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-13 00:47+0000\n"
-"PO-Revision-Date: 2026-03-18 22:04+0000\n"
+"PO-Revision-Date: 2026-05-17 15:21+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -46,8 +46,7 @@ msgid "Replace an existing instance"
 msgstr "Înlocuiește o instanță existentă"
 
 #: app/ui/CategoryPage.qml:41
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action Search field action"
 msgid "Search"
 msgstr "Caută"
@@ -59,13 +58,10 @@ msgid "Clear History"
 msgstr "Curăță istoricul"
 
 #: app/ui/CategoryPage.qml:106
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@action:button Button to open a menu that lets you choose a skin tone"
-#| msgid "Skin tone:"
+#, kde-format
 msgctxt "@action:button Button to open a menu that lets you choose a skin tone"
 msgid "Skin tone: %1"
-msgstr "Culoarea pielii:"
+msgstr "Nuanța pielii: %1"
 
 #: app/ui/CategoryPage.qml:137
 #, kde-format

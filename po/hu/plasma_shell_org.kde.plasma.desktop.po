@@ -4,13 +4,13 @@
 # Balázs Úr <urbalazs@gmail.com>, 2013, 2014.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019.
 # SPDX-FileCopyrightText: 2017, 2020, 2021, 2023 Kiszel Kristóf <kiszel.kristof@gmail.com>
-# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025, 2026 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2021-2022, 2024-2026 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-29 00:47+0000\n"
-"PO-Revision-Date: 2026-03-12 21:53+0100\n"
+"PO-Revision-Date: 2026-05-17 21:18+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
@@ -381,7 +381,7 @@ msgstr "Elválasztó"
 #, kde-format
 msgctxt "@action:menu add a margins separator"
 msgid "Margins Separator"
-msgstr ""
+msgstr "Margóelválasztó"
 
 #: contents/configuration/PanelConfiguration.qml:140
 #, kde-format
@@ -537,7 +537,7 @@ msgstr "Áttetszőség"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The current Plasma style does not support opacity options."
-msgstr ""
+msgstr "A jelenlegi Plasma stílus nem támogat átlátszatlansági beállításokat."
 
 #: contents/configuration/PanelConfiguration.qml:487
 #, kde-format
@@ -778,9 +778,7 @@ msgid "Unsupported Widget"
 msgstr "Nem támogatott widget"
 
 #: contents/explorer/AppletDelegate.qml:196
-#, fuzzy, kde-format
-#| msgctxt "Text displayed on top of newly installed widgets"
-#| msgid "New!"
+#, kde-format
 msgctxt "Text displayed on top of newly-installed widgets"
 msgid "New!"
 msgstr "Új!"

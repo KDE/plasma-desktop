@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-14 00:45+0000\n"
-"PO-Revision-Date: 2026-02-04 17:09+0000\n"
+"PO-Revision-Date: 2026-05-17 15:23+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: code/tools.js:53
 #, kde-format
@@ -66,7 +66,7 @@ msgstr "Alege…"
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr ""
+msgstr "Reinițializează la pictograma implicită"
 
 #: ConfigGeneral.qml:161
 #, kde-format
@@ -123,12 +123,10 @@ msgid "Show icons on the root level of the menu"
 msgstr "Arată pictogramele la nivelul-rădăcină al meniului"
 
 #: ConfigGeneral.qml:198
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
-msgstr "Aplicații folosite des"
+msgstr "Evidențiază aplicațiile instalate recent"
 
 #: ConfigGeneral.qml:208
 #, kde-format
@@ -161,20 +159,16 @@ msgid "Often used files"
 msgstr "Fișiere folosite des"
 
 #: ConfigGeneral.qml:227
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Recent files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent places"
-msgstr "Fișiere recente"
+msgstr "Locuri recente"
 
 #: ConfigGeneral.qml:228
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used places"
-msgstr "Fișiere folosite des"
+msgstr "Locuri des folosite"
 
 #: ConfigGeneral.qml:234
 #, kde-format
@@ -246,27 +240,25 @@ msgstr "Favorite"
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Nouă!"
 
 #: DashboardRepresentation.qml:951 ItemListDelegate.qml:98
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
-msgstr ""
+msgstr "În această categorie este o aplicație instalată recent"
 
 #: ItemGridDelegate.qml:81
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Nouă!"
 
 #: ItemGridDelegate.qml:83
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
-msgstr "Aplicații folosite des"
+msgstr "Aplicație instalată recent"
 
 #: ItemListDelegate.qml:40
 #, kde-format
@@ -281,12 +273,10 @@ msgid "Launch"
 msgstr "Lansează"
 
 #: ItemListDelegate.qml:99
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
-msgstr "Aplicații folosite des"
+msgstr "Aplicație instalată recent"
 
 #: main.qml:208
 #, kde-format

@@ -6,20 +6,21 @@
 # Shinichi Tsunoda <tsuno@ngy.1st.ne.jp>, 2005.
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2006, 2007, 2008.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2024.
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2025-02-23 13:15+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2026-05-10 18:15+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
+"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 26.04.1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -49,38 +50,30 @@ msgid "Applications to be excluded from session"
 msgstr "セッションから除外するアプリケーション"
 
 #: ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Failed to request restart to firmware setup: %1"
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Failed to request restart to firmware setup: %1"
 msgstr "ファームウェア設定のための再起動の要求に失敗しました: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
-msgstr "次回の再起動時にファームウェア設定画面に入ります。"
+msgstr "次回の再起動時に UEFI ファームウェア設定画面に入ります。"
 
 #: ui/main.qml:32
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr "次回の再起動時にファームウェア設定画面に入ります。"
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgctxt "@action:button"
 msgid "Restart Now"
-msgstr "今すぐコンピュータを再起動"
+msgstr "再起動"
 
 #: ui/main.qml:46
 #, kde-format
@@ -111,8 +104,7 @@ msgid "Session Restore"
 msgstr "セッション復元"
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid "On login, launch apps that were open:"
+#, kde-format
 msgctxt "@title:group prefix for radiobuttons"
 msgid "On login, launch apps that were open:"
 msgstr "ログイン時:"
@@ -153,19 +145,13 @@ msgid "Start with an empty session"
 msgstr "空のセッションで開始"
 
 #: ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Ignored applications:"
 msgstr "復元しないアプリケーション:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' desktop file identifier or, on X11, executable names here "
-#| "(separated by commas or colons, for example 'xterm:org.kde.konsole."
-#| "desktop' or 'xterm,org.kde.konsole.desktop') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
@@ -194,27 +180,13 @@ msgid "After next restart:"
 msgstr "次の再起動後:"
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr "ファームウェア設定画面に入る"
+msgstr "UEFI ファームウェア設定画面に入る"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "ファームウェア設定画面に入る"
-
-#, fuzzy
-#~| msgid ""
-#~| "Next time the computer is restarted, it will enter the UEFI setup screen."
-#~ msgctxt "@info:status inlinemessage"
-#~ msgid ""
-#~ "Next time the computer is restarted, it will enter the UEFI setup screen."
-#~ msgstr "次回の再起動時に UEFI 設定画面に入ります。"
-
-#~ msgctxt "@option:check"
-#~ msgid "Enter UEFI setup screen"
-#~ msgstr "UEFI 設定画面に入る"

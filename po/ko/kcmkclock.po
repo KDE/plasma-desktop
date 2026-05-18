@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-05 00:45+0000\n"
+"POT-Creation-Date: 2026-05-18 02:44+0000\n"
 "PO-Revision-Date: 2024-02-09 19:23+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -77,17 +77,17 @@ msgstr ""
 "자(root) 권한으로 시스템 설정을 실행시켜야 합니다. 관리자 암호를 알지 못하지"
 "만, 시스템 시간을 수정해야 한다면 시스템 관리자에게 문의하십시오."
 
-#: main.cpp:60
+#: main.cpp:57
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "NTP 설정을 변경할 수 없음"
 
-#: main.cpp:73
+#: main.cpp:70
 #, kde-format
 msgid "Unable to set current time"
 msgstr "현재 시간을 설정할 수 없음"
 
-#: main.cpp:85
+#: main.cpp:82
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "시간대를 설정할 수 없음"
