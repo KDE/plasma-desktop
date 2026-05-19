@@ -31,8 +31,6 @@ EmptyPage {
 
     Layout.minimumWidth: implicitWidth
     Layout.minimumHeight: implicitHeight
-    Layout.preferredWidth: Math.max(implicitWidth, width)
-    Layout.preferredHeight: Math.max(implicitHeight, height)
 
     property alias normalPage: normalPage
     property bool blockingHoverFocus: true
