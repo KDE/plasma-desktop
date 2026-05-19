@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-16 00:45+0000\n"
+"POT-Creation-Date: 2026-05-19 00:46+0000\n"
 "PO-Revision-Date: 2024-08-24 11:36+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -68,7 +68,7 @@ msgstr "Error while communicating with the global shortcuts service"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Failed to communicate with global shortcuts daemon"
 
-#: kcm_keys.cpp:372
+#: kcm_keys.cpp:380
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -79,7 +79,7 @@ msgstr ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
 "<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 
-#: kcm_keys.cpp:378
+#: kcm_keys.cpp:386
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -91,13 +91,13 @@ msgstr ""
 "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
 "action <interface>%4</interface> of <application>%5</application>?"
 
-#: kcm_keys.cpp:387
+#: kcm_keys.cpp:396
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Resolve Shortcut Conflict"
 
-#: kcm_keys.cpp:397
+#: kcm_keys.cpp:406
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -306,62 +306,62 @@ msgctxt "@action:button"
 msgid "Undo deleting shortcuts"
 msgstr "No default shortcuts"
 
-#: ui/main.qml:415
+#: ui/main.qml:420
 #, fuzzy, kde-format
 #| msgid "Select an item from the list to view its shortcuts here"
 msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Select an item from the list to view its shortcuts here"
 
-#: ui/main.qml:428
+#: ui/main.qml:433
 #, fuzzy, kde-format
 #| msgid "Export Shortcut Scheme"
 msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr "Export Shortcut Scheme"
 
-#: ui/main.qml:428 ui/main.qml:560
+#: ui/main.qml:433 ui/main.qml:565
 #, fuzzy, kde-format
 #| msgid "Import Shortcut Scheme"
 msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
 msgstr "Import Shortcut Scheme"
 
-#: ui/main.qml:430
+#: ui/main.qml:435
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Shortcut Scheme (*.kksrc)"
 
-#: ui/main.qml:457
+#: ui/main.qml:462
 #, fuzzy, kde-format
 #| msgid "Edit Command"
 msgctxt "@title:window dialog"
 msgid "Edit Command"
 msgstr "Edit Command"
 
-#: ui/main.qml:457
+#: ui/main.qml:462
 #, fuzzy, kde-format
 #| msgid "Add Command"
 msgctxt "@title:window dialog"
 msgid "Add Command"
 msgstr "Add Command"
 
-#: ui/main.qml:474
+#: ui/main.qml:479
 #, fuzzy, kde-format
 #| msgid "Save"
 msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
 msgstr "Save"
 
-#: ui/main.qml:474
+#: ui/main.qml:479
 #, fuzzy, kde-format
 #| msgid "Add"
 msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
 msgstr "Add"
 
-#: ui/main.qml:476
+#: ui/main.qml:481
 #, fuzzy, kde-format
 #| msgctxt "@label:textbox accessible"
 #| msgid "Command"
@@ -369,63 +369,63 @@ msgctxt "@action:button accessible"
 msgid "Save command"
 msgstr "Command"
 
-#: ui/main.qml:477
+#: ui/main.qml:482
 #, fuzzy, kde-format
 #| msgid "Add Command"
 msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "Add Command"
 
-#: ui/main.qml:499
+#: ui/main.qml:504
 #, fuzzy, kde-format
 #| msgid "Enter a command or choose a script file:"
 msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr "Enter a command or choose a script file:"
 
-#: ui/main.qml:508
+#: ui/main.qml:513
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "Command:"
 
-#: ui/main.qml:514
+#: ui/main.qml:519
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Command"
 
-#: ui/main.qml:521
+#: ui/main.qml:526
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Choose…"
 
-#: ui/main.qml:522
+#: ui/main.qml:527
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Choose script file"
 
-#: ui/main.qml:530
+#: ui/main.qml:535
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "Name:"
 
-#: ui/main.qml:531
+#: ui/main.qml:536
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "Enter name here"
 
-#: ui/main.qml:543
+#: ui/main.qml:548
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Choose Script File"
 
-#: ui/main.qml:545
+#: ui/main.qml:550
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -433,35 +433,35 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 
-#: ui/main.qml:568
+#: ui/main.qml:573
 #, fuzzy, kde-format
 #| msgid "Select the scheme to import:"
 msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr "Select the scheme to import:"
 
-#: ui/main.qml:587
+#: ui/main.qml:592
 #, fuzzy, kde-format
 #| msgid "Custom Scheme"
 msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
 msgstr "Custom Scheme"
 
-#: ui/main.qml:595
+#: ui/main.qml:600
 #, fuzzy, kde-format
 #| msgid "Select File…"
 msgctxt "@action:button"
 msgid "Select File…"
 msgstr "Select File…"
 
-#: ui/main.qml:595
+#: ui/main.qml:600
 #, fuzzy, kde-format
 #| msgid "Import"
 msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "Import"
 
-#: ui/main.qml:597
+#: ui/main.qml:602
 #, fuzzy, kde-format
 #| msgctxt "@action:button accessible"
 #| msgid "Delete shortcut"
@@ -469,7 +469,7 @@ msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
 msgstr "Delete shortcut"
 
-#: ui/main.qml:598
+#: ui/main.qml:603
 #, fuzzy, kde-format
 #| msgid "Export Shortcut Scheme"
 msgctxt "@action:button accessible"

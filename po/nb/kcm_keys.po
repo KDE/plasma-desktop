@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-16 00:45+0000\n"
+"POT-Creation-Date: 2026-05-19 00:46+0000\n"
 "PO-Revision-Date: 2026-03-05 15:26+0100\n"
 "Last-Translator: Kjetil Sorlund <translate@sorlund.no>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -71,7 +71,7 @@ msgstr "Feil ved kommunikasjon med tjenesten for globale hurtigtaster"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Klarte ikke kommunisere med tjenesten for globale hurtigtaster"
 
-#: kcm_keys.cpp:372
+#: kcm_keys.cpp:380
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -83,7 +83,7 @@ msgstr ""
 "handlinga <interface>%3</interface>.<nl/> <nl/> Vil du tildele den på nytt "
 "til %4?"
 
-#: kcm_keys.cpp:378
+#: kcm_keys.cpp:386
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -96,13 +96,13 @@ msgstr ""
 "den på nytt til <application>%5</application>-handlinga <interface>%4</"
 "interface>?"
 
-#: kcm_keys.cpp:387
+#: kcm_keys.cpp:396
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Løs hurtigtastkonflikt"
 
-#: kcm_keys.cpp:397
+#: kcm_keys.cpp:406
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -290,115 +290,115 @@ msgctxt "@action:button"
 msgid "Undo deleting shortcuts"
 msgstr "Angre sletting av hurtigtaster"
 
-#: ui/main.qml:415
+#: ui/main.qml:420
 #, kde-format
 msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Velg fra lista for å vise tilhørende hurtigtaster her"
 
-#: ui/main.qml:428
+#: ui/main.qml:433
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr "Eksporter hurtigtastoppsett"
 
-#: ui/main.qml:428 ui/main.qml:560
+#: ui/main.qml:433 ui/main.qml:565
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
 msgstr "Importer hurtigtastoppsett"
 
-#: ui/main.qml:430
+#: ui/main.qml:435
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Hurtigtastoppsett (*.kksrc)"
 
-#: ui/main.qml:457
+#: ui/main.qml:462
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Edit Command"
 msgstr "Rediger kommando"
 
-#: ui/main.qml:457
+#: ui/main.qml:462
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Add Command"
 msgstr "Legg til kommando"
 
-#: ui/main.qml:474
+#: ui/main.qml:479
 #, kde-format
 msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
 msgstr "Lagre"
 
-#: ui/main.qml:474
+#: ui/main.qml:479
 #, kde-format
 msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
 msgstr "Legg til"
 
-#: ui/main.qml:476
+#: ui/main.qml:481
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Save command"
 msgstr "Lagre kommando"
 
-#: ui/main.qml:477
+#: ui/main.qml:482
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "Legg til kommando"
 
-#: ui/main.qml:499
+#: ui/main.qml:504
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr "Skriv inn kommando eller velg skriptfil:"
 
-#: ui/main.qml:508
+#: ui/main.qml:513
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "Kommando:"
 
-#: ui/main.qml:514
+#: ui/main.qml:519
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Kommando"
 
-#: ui/main.qml:521
+#: ui/main.qml:526
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Velg …"
 
-#: ui/main.qml:522
+#: ui/main.qml:527
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Velg skriptfil"
 
-#: ui/main.qml:530
+#: ui/main.qml:535
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "Navn:"
 
-#: ui/main.qml:531
+#: ui/main.qml:536
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "Skriv inn navnet"
 
-#: ui/main.qml:543
+#: ui/main.qml:548
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Velg skriptfil"
 
-#: ui/main.qml:545
+#: ui/main.qml:550
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -406,37 +406,37 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "Skriptfiler (.sh, .bash, .zsh, etc.) (*.*sh)"
 
-#: ui/main.qml:568
+#: ui/main.qml:573
 #, kde-format
 msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr "Velg oppsett å importere:"
 
-#: ui/main.qml:587
+#: ui/main.qml:592
 #, kde-format
 msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
 msgstr "Tilpasset oppsett"
 
-#: ui/main.qml:595
+#: ui/main.qml:600
 #, kde-format
 msgctxt "@action:button"
 msgid "Select File…"
 msgstr "Velg fil …"
 
-#: ui/main.qml:595
+#: ui/main.qml:600
 #, kde-format
 msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "Importer"
 
-#: ui/main.qml:597
+#: ui/main.qml:602
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
 msgstr "Velg hurtigtastoppsett"
 
-#: ui/main.qml:598
+#: ui/main.qml:603
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"

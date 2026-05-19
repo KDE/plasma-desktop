@@ -3,20 +3,21 @@
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
+# SPDX-FileCopyrightText: 2026 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-23 00:45+0000\n"
-"PO-Revision-Date: 2021-10-17 16:24+0200\n"
-"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"PO-Revision-Date: 2026-05-18 21:31+0200\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.08.2\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -30,12 +31,7 @@ msgstr "kiszel.kristof@gmail.com"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "This list contains the storage devices known to the system. If "
-#| "\"Automount on Login\" is checked, the device will be automatically "
-#| "mounted even though \"Mount all removable media at login\" is unchecked. "
-#| "The same applies for \"Automount on Attach\"."
+#, kde-format
 msgid ""
 "This list contains the storage devices known to the system. If \"Automount "
 "on Login\" is checked, devices will be automatically mounted even though "
@@ -43,8 +39,8 @@ msgid ""
 "\"Automount on Attach\"."
 msgstr ""
 "Ez a lista a KDE által ismert eszközöket tartalmazza. Ha az „Automatikus "
-"csatolás bejelentkezéskor” be van kapcsolva, az eszköz automatikusan "
-"csatolva lesz, még ha az „Összes cserélhető eszköz csatolása "
+"csatolás bejelentkezéskor” be van kapcsolva, az eszközök automatikusan "
+"csatolva lesznek, még ha az „Összes cserélhető eszköz csatolása "
 "bejelentkezéskor” ki is van kapcsolva. Ugyanez érvényez az „Automatikus "
 "csatolás csatlakoztatáskor” beállításra is."
 

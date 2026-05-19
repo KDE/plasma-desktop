@@ -2,13 +2,13 @@
 # Marcell Lengyel <miketkf@yahoo.com>, 1999.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010.
 # SPDX-FileCopyrightText: 2017, 2020, 2021, 2023 Kiszel Kristóf <kiszel.kristof@gmail.com>
-# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2024, 2026 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-30 00:45+0000\n"
-"PO-Revision-Date: 2024-09-13 15:35+0200\n"
+"PO-Revision-Date: 2026-05-18 21:31+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: ui/main.qml:53
 #, kde-format
@@ -124,21 +124,17 @@ msgstr ""
 "A fájlsablonok megnyitásához és mentéséhez használt alapértelmezett mappa."
 
 #: ui/main.qml:165
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Pictures folder:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Projects folder:"
-msgstr "Képek mappa:"
+msgstr "Projektek mappa:"
 
 #: ui/main.qml:171
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip and accessible description"
-#| msgid "This folder will be used by default to open or save documents."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save projects."
 msgstr ""
-"A dokumentumok megnyitásához és mentéséhez használt alapértelmezett mappa."
+"A projektek megnyitásához és mentéséhez használt alapértelmezett mappa."
 
 #: ui/UrlRequester.qml:74
 #, kde-format

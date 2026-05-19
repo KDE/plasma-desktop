@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-16 00:45+0000\n"
+"POT-Creation-Date: 2026-05-19 00:46+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -68,7 +68,7 @@ msgstr "与全局快捷键服务通信时出错"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "与全局快捷键守护进程通信失败"
 
-#: kcm_keys.cpp:372
+#: kcm_keys.cpp:380
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -79,7 +79,7 @@ msgstr ""
 "快捷键 <shortcut>%1</shortcut> 已经分配给了 %2 通用操作<interface>%3</"
 "interface>。<nl/><nl/>您想要将它重新分配给 %4 吗？"
 
-#: kcm_keys.cpp:378
+#: kcm_keys.cpp:386
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -91,13 +91,13 @@ msgstr ""
 "<interface>%2</interface> 操作。<nl/><nl/>您想要将它重新分配给 <application>"
 "%4</application> 的 <interface>%5</interface> 操作吗？"
 
-#: kcm_keys.cpp:387
+#: kcm_keys.cpp:396
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "解决快捷键冲突"
 
-#: kcm_keys.cpp:397
+#: kcm_keys.cpp:406
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -285,115 +285,115 @@ msgctxt "@action:button"
 msgid "Undo deleting shortcuts"
 msgstr "撤销删除快捷键"
 
-#: ui/main.qml:415
+#: ui/main.qml:420
 #, kde-format
 msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "在列表中选择一项以查看其快捷键"
 
-#: ui/main.qml:428
+#: ui/main.qml:433
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr "导出快捷键方案"
 
-#: ui/main.qml:428 ui/main.qml:560
+#: ui/main.qml:433 ui/main.qml:565
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
 msgstr "导入快捷键方案"
 
-#: ui/main.qml:430
+#: ui/main.qml:435
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "快捷键方案 (*.kksrc)"
 
-#: ui/main.qml:457
+#: ui/main.qml:462
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Edit Command"
 msgstr "编辑命令"
 
-#: ui/main.qml:457
+#: ui/main.qml:462
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Add Command"
 msgstr "添加命令"
 
-#: ui/main.qml:474
+#: ui/main.qml:479
 #, kde-format
 msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
 msgstr "保存"
 
-#: ui/main.qml:474
+#: ui/main.qml:479
 #, kde-format
 msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
 msgstr "添加"
 
-#: ui/main.qml:476
+#: ui/main.qml:481
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Save command"
 msgstr "保存命令"
 
-#: ui/main.qml:477
+#: ui/main.qml:482
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "新增命令"
 
-#: ui/main.qml:499
+#: ui/main.qml:504
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr "输入命令或者选择脚本文件："
 
-#: ui/main.qml:508
+#: ui/main.qml:513
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "命令："
 
-#: ui/main.qml:514
+#: ui/main.qml:519
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "命令"
 
-#: ui/main.qml:521
+#: ui/main.qml:526
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "选择…"
 
-#: ui/main.qml:522
+#: ui/main.qml:527
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "选择脚本文件"
 
-#: ui/main.qml:530
+#: ui/main.qml:535
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "名称："
 
-#: ui/main.qml:531
+#: ui/main.qml:536
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "在此输入名称"
 
-#: ui/main.qml:543
+#: ui/main.qml:548
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "选择脚本文件"
 
-#: ui/main.qml:545
+#: ui/main.qml:550
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -401,37 +401,37 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "脚本文件 (.sh, .bash, .zsh, etc.) (*.*sh)"
 
-#: ui/main.qml:568
+#: ui/main.qml:573
 #, kde-format
 msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr "选择要导入的方案："
 
-#: ui/main.qml:587
+#: ui/main.qml:592
 #, kde-format
 msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
 msgstr "自定义方案"
 
-#: ui/main.qml:595
+#: ui/main.qml:600
 #, kde-format
 msgctxt "@action:button"
 msgid "Select File…"
 msgstr "选择文件…"
 
-#: ui/main.qml:595
+#: ui/main.qml:600
 #, kde-format
 msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "导入"
 
-#: ui/main.qml:597
+#: ui/main.qml:602
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
 msgstr "选择快捷键方案文件"
 
-#: ui/main.qml:598
+#: ui/main.qml:603
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-16 00:45+0000\n"
+"POT-Creation-Date: 2026-05-19 00:46+0000\n"
 "PO-Revision-Date: 2026-02-07 22:03+0000\n"
 "Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
 "Language-Team: pt\n"
@@ -66,7 +66,7 @@ msgstr "Erro ao comunicar com o serviço de atalhos globais"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Falha na comunicação com o serviço de atalhos globais"
 
-#: kcm_keys.cpp:372
+#: kcm_keys.cpp:380
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -77,7 +77,7 @@ msgstr ""
 "O atalho <shortcut>%1</shortcut> já está atribuído à ação comum %2 "
 "<interface>%3</interface>.Reatribuí-lo a %4?"
 
-#: kcm_keys.cpp:378
+#: kcm_keys.cpp:386
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -89,13 +89,13 @@ msgstr ""
 "interface> da aplicação <application>%3</application>.Reatribuí-lo à ação "
 "<interface>%4</interface> da aplicação <application>%5</application>?"
 
-#: kcm_keys.cpp:387
+#: kcm_keys.cpp:396
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Resolver Conflito de Atalho"
 
-#: kcm_keys.cpp:397
+#: kcm_keys.cpp:406
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -285,115 +285,115 @@ msgctxt "@action:button"
 msgid "Undo deleting shortcuts"
 msgstr "Anular eliminação de atalhos"
 
-#: ui/main.qml:415
+#: ui/main.qml:420
 #, kde-format
 msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Selecione um item da lista para ver os respetivos atalhos aqui"
 
-#: ui/main.qml:428
+#: ui/main.qml:433
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
 msgstr "Exportar Esquema de Atalhos"
 
-#: ui/main.qml:428 ui/main.qml:560
+#: ui/main.qml:433 ui/main.qml:565
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
 msgstr "Importar Esquema de Atalhos"
 
-#: ui/main.qml:430
+#: ui/main.qml:435
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Esquema de Atalhos (*.kksrc)"
 
-#: ui/main.qml:457
+#: ui/main.qml:462
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Edit Command"
 msgstr "Editar comando"
 
-#: ui/main.qml:457
+#: ui/main.qml:462
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Add Command"
 msgstr "Adicionar comando"
 
-#: ui/main.qml:474
+#: ui/main.qml:479
 #, kde-format
 msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
 msgstr "Guardar"
 
-#: ui/main.qml:474
+#: ui/main.qml:479
 #, kde-format
 msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
 msgstr "Adicionar "
 
-#: ui/main.qml:476
+#: ui/main.qml:481
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Save command"
 msgstr "Guardar comando"
 
-#: ui/main.qml:477
+#: ui/main.qml:482
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "Adicionar comando"
 
-#: ui/main.qml:499
+#: ui/main.qml:504
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr "Introduza um comando ou escolha um ficheiro de programa:"
 
-#: ui/main.qml:508
+#: ui/main.qml:513
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "Comando:"
 
-#: ui/main.qml:514
+#: ui/main.qml:519
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Comando"
 
-#: ui/main.qml:521
+#: ui/main.qml:526
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Escolher…"
 
-#: ui/main.qml:522
+#: ui/main.qml:527
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Escolher ficheiro de programa"
 
-#: ui/main.qml:530
+#: ui/main.qml:535
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "Nome:"
 
-#: ui/main.qml:531
+#: ui/main.qml:536
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "Introduza o nome aqui"
 
-#: ui/main.qml:543
+#: ui/main.qml:548
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Escolher ficheiro de programa"
 
-#: ui/main.qml:545
+#: ui/main.qml:550
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -401,37 +401,37 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "Ficheiros de programa (.sh, .bash, .zsh, etc.) (*.*sh)"
 
-#: ui/main.qml:568
+#: ui/main.qml:573
 #, kde-format
 msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
 msgstr "Selecione o esquema a importar:"
 
-#: ui/main.qml:587
+#: ui/main.qml:592
 #, kde-format
 msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
 msgstr "Esquema personalizado"
 
-#: ui/main.qml:595
+#: ui/main.qml:600
 #, kde-format
 msgctxt "@action:button"
 msgid "Select File…"
 msgstr "Selecionar ficheiro…"
 
-#: ui/main.qml:595
+#: ui/main.qml:600
 #, kde-format
 msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "Importar"
 
-#: ui/main.qml:597
+#: ui/main.qml:602
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
 msgstr "Selecione o ficheiro de esquema de atalhos"
 
-#: ui/main.qml:598
+#: ui/main.qml:603
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"
