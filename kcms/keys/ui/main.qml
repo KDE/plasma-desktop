@@ -404,6 +404,11 @@ KCM.AbstractKCM {
                             delegate: ShortcutActionDelegate {
                                 showExpandButton: shortcutsList.count > 1
                                 enabled: !shortcutsList.contentsWillBeDeleted
+                                onHeightChanged: {
+                                    if (shortcutsList.selectedIndex == index) {
+                                        ListView.view.positionViewAtIndex(index, ListView.Contain)
+                                    }
+                                }
                             }
                             KeyNavigation.left: components
                         }
