@@ -160,6 +160,7 @@ EmptyPage {
                     root.blockingHoverFocus = true
                     root.interceptedPosition = null
                 }
+                root.visible = kickoff.expanded
             }
         }
 
