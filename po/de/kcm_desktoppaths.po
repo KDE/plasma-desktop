@@ -7,20 +7,21 @@
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
 # SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
 # SPDX-FileCopyrightText: 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2026 Alois Spitzbart <spitz234@hotmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-30 00:45+0000\n"
-"PO-Revision-Date: 2026-01-18 02:02+0100\n"
-"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
+"PO-Revision-Date: 2026-05-16 13:56+0200\n"
+"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 26.07.70\n"
 
 #: ui/main.qml:53
 #, kde-format
@@ -136,21 +137,17 @@ msgstr ""
 "verwendet."
 
 #: ui/main.qml:165
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Pictures folder:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Projects folder:"
-msgstr "Bilderordner:"
+msgstr "Projektordner:"
 
 #: ui/main.qml:171
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip and accessible description"
-#| msgid "This folder will be used by default to open or save documents."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save projects."
 msgstr ""
-"Dieser Ordner wird standardmäßig zum Öffnen oder Speichern von Dokumenten "
+"Dieser Ordner wird standardmäßig zum Öffnen oder Speichern von Projekten "
 "verwendet."
 
 #: ui/UrlRequester.qml:74
