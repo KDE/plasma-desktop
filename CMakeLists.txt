@@ -216,7 +216,7 @@ find_package(UDev)
 set_package_properties(UDev PROPERTIES
     DESCRIPTION "API for enumerating and introspecting local devices (part of systemd)"
     URL "https://www.freedesktop.org/wiki/Software/systemd/"
-    PURPOSE "Required for device discovery in keyboard daemon and game controller kcm"
+    PURPOSE "Required for device discovery in game controller kcm"
     TYPE OPTIONAL
 )
 
