@@ -4,13 +4,13 @@
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2023.
 # SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 # SPDX-FileCopyrightText: 2025, 2026 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
-# SPDX-FileCopyrightText: 2025, 2026 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025-2026 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-16 00:45+0000\n"
-"PO-Revision-Date: 2026-01-08 07:54-0300\n"
+"PO-Revision-Date: 2026-05-19 12:35-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
@@ -354,9 +354,9 @@ msgid ""
 "keyboard."
 msgstr ""
 "O sistema pode entrar em modo de suspensão ou bloquear a tela "
-"automaticamente enquanto o controlador estiver em uso. Considere bloqueá-lo "
-"manualmente ao usar o controlador ou habilite o bloqueio automático "
-"permitindo seu uso como ponteiro e teclado."
+"automaticamente enquanto o controlador estiver em uso. Considere habilitar o "
+"bloqueio manual ao usar o controlador ou habilite o bloqueio automático "
+"permitindo o uso do controlador como ponteiro e teclado."
 
 #: ui/main.qml:97
 #, kde-format
@@ -387,13 +387,13 @@ msgstr "Tipo de conexão:"
 #, kde-format
 msgctxt "@label Visual representation of the axis position for the left axis"
 msgid "Left position:"
-msgstr "Posição esquerda:"
+msgstr "Posição do eixo esquerdo:"
 
 #: ui/main.qml:185
 #, kde-format
 msgctxt "@label Visual representation of the axis position for the right axis"
 msgid "Right position:"
-msgstr "Posição direita:"
+msgstr "Posição do eixo direito:"
 
 #: ui/main.qml:204
 #, kde-format
