@@ -14,6 +14,7 @@ Item {
 
     readonly property int iconWidthDelta: (icon.width - icon.paintedWidth) / 2
     readonly property bool shiftBadgeDown: (Plasmoid.pluginName === "org.kde.plasma.icontasks") && task.audioStreamIcon !== null
+    readonly property int badgeMaskY: shiftBadgeDown ? root.height - badgeRect.height : 0
     readonly property int offset: Math.round(Math.max(Kirigami.Units.smallSpacing / 2, badgeMask.width / 32))
 
     Item {
@@ -24,7 +25,7 @@ Item {
 
             anchors.right: parent.right
             anchors.rightMargin: -root.offset
-            y: root.shiftBadgeDown ? (icon.height / 2) : 0
+            y: root.badgeMaskY
 
             Behavior on y {
                 NumberAnimation { duration: Kirigami.Units.longDuration }
@@ -70,7 +71,7 @@ Item {
         id: badgeRect
 
         anchors.right: parent.right
-        y: root.offset + (root.shiftBadgeDown ? (icon.height / 2) : 0)
+        y: root.badgeMaskY + root.offset
 
         Behavior on y {
             NumberAnimation { duration: Kirigami.Units.longDuration }
