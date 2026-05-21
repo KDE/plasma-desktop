@@ -81,22 +81,6 @@ Kirigami.FormLayout {
                 }
             }
 
-            QQC2.ComboBox {
-                Kirigami.FormData.label: i18nc("@label:listbox", "Pointer appearance:")
-
-                model: [i18nc("@item:inlistbox", "Scale"), i18nc("@item:inlistbox", "Keep"), i18nc("@item:inlistbox", "Hide")]
-                currentIndex: kcm.zoomMagnifierSettings.zoomMousePointer
-                onActivated: (index) => kcm.zoomMagnifierSettings.zoomMousePointer = index
-                visible: kcm.isPlatformX11
-
-                Layout.preferredWidth: Kirigami.Units.gridUnit * 15
-
-                KCM.SettingStateBinding {
-                    configObject: kcm.zoomMagnifierSettings
-                    settingName: "ZoomMousePointer"
-                }
-            }
-
             Component {
                 id: mouseTrackingItemDelegate
 
