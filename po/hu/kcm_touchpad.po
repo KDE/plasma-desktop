@@ -4,13 +4,13 @@
 # Balázs Úr <urbalazs@gmail.com>, 2014.
 # SPDX-FileCopyrightText: 2017, 2023 Kiszel Kristóf <kiszel.kristof@gmail.com>
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2019, 2020, 2021.
-# SPDX-FileCopyrightText: 2024, 2025, 2026 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2024-2026 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-23 00:46+0000\n"
-"PO-Revision-Date: 2026-03-12 22:01+0100\n"
+"PO-Revision-Date: 2026-05-20 22:32+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:46
 #, kde-format
@@ -53,7 +53,7 @@ msgstr "Nem lehet olvasni az érintőtábla alapértelmezett beállításait"
 #: kcm.cpp:69
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "Nem lehet kiválasztani a megfelelő háttéralkalmazást"
 
 #: kcm.cpp:126
 #, kde-format
@@ -65,10 +65,9 @@ msgstr ""
 "újra a modult."
 
 #: kcm.cpp:129
-#, fuzzy, kde-format
-#| msgid "No touchpad found. Connect touchpad now."
+#, kde-format
 msgid "No pointer device found. Connect now."
-msgstr "Nem található érintőtábla. Csatlakoztassa az érintőtáblát."
+msgstr "Nem található mutatóeszköz, csatlakoztasson egyet."
 
 #: kcm.cpp:138
 #, kde-format
@@ -98,16 +97,14 @@ msgstr ""
 "indítsa újra ezt a modult."
 
 #: kcm.cpp:185
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. Closed its setting dialog."
+#, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr "Az értintőpárna nincs csatlakoztatva. A beállítóablak bezárva."
+msgstr "Mutatóeszköz leválasztva, a beállítóablak bezárul."
 
 #: kcm.cpp:187
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. No other touchpads found."
+#, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr "Az értintőtábla nincs csatlakoztatva. Nem található másik érintőtábla."
+msgstr "Mutatóeszköz leválasztva, nem található másik eszköz."
 
 #: ui/main.qml:69
 #, kde-format
