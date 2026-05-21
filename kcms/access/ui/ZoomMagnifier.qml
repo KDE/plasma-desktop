@@ -87,6 +87,7 @@ Kirigami.FormLayout {
                 model: [i18nc("@item:inlistbox", "Scale"), i18nc("@item:inlistbox", "Keep"), i18nc("@item:inlistbox", "Hide")]
                 currentIndex: kcm.zoomMagnifierSettings.zoomMousePointer
                 onActivated: (index) => kcm.zoomMagnifierSettings.zoomMousePointer = index
+                visible: kcm.isPlatformX11
 
                 Layout.preferredWidth: Kirigami.Units.gridUnit * 15
 
