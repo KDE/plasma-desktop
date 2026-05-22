@@ -189,6 +189,8 @@ Rules Rules::readRules()
 
     postProcess(rules);
 
+    rxkb_context_unref(context);
+
     return rules;
 }
 
