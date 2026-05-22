@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-01 00:46+0000\n"
+"POT-Creation-Date: 2026-05-22 02:48+0000\n"
 "PO-Revision-Date: 2026-05-01 15:11+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -610,7 +610,7 @@ msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr "Görüntü ve pencere renklerini tersine çevirmek için kısayollar kullan"
 
-#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:387
+#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:388
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
@@ -1058,104 +1058,104 @@ msgctxt "@item:inlistbox"
 msgid "Hide"
 msgstr "Gizle"
 
-#: ui/ZoomMagnifier.qml:123
+#: ui/ZoomMagnifier.qml:124
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer tracking:"
 msgstr "İşaretçi izlemesi:"
 
-#: ui/ZoomMagnifier.qml:128
+#: ui/ZoomMagnifier.qml:129
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
 msgstr "Oransal"
 
-#: ui/ZoomMagnifier.qml:129
+#: ui/ZoomMagnifier.qml:130
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with pointer"
 msgstr "Yakınlaştırma alanı, işaretçiyle eşzamanlı hareket eder"
 
-#: ui/ZoomMagnifier.qml:133
+#: ui/ZoomMagnifier.qml:134
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Ortalanmış"
 
-#: ui/ZoomMagnifier.qml:134
+#: ui/ZoomMagnifier.qml:135
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, except near screen edges"
 msgstr "İşaretçi, ekran kenarları dışında ekranda ortalanmış olarak durur"
 
-#: ui/ZoomMagnifier.qml:138
+#: ui/ZoomMagnifier.qml:139
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
 msgstr "Ortalanmış (Katı)"
 
-#: ui/ZoomMagnifier.qml:139
+#: ui/ZoomMagnifier.qml:140
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, even near screen edges"
 msgstr ""
 "İşaretçi, ekran kenarları yakınında bile ekranda ortalanmış olarak durur"
 
-#: ui/ZoomMagnifier.qml:143
+#: ui/ZoomMagnifier.qml:144
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
 msgstr "İt"
 
-#: ui/ZoomMagnifier.qml:144
+#: ui/ZoomMagnifier.qml:145
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer pushes zoom area at screen edges"
 msgstr "İşaretçi, ekran kenarlarında yakınlaştırma alanını iter"
 
-#: ui/ZoomMagnifier.qml:148
+#: ui/ZoomMagnifier.qml:149
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
 msgstr "Devre dışı"
 
-#: ui/ZoomMagnifier.qml:149
+#: ui/ZoomMagnifier.qml:150
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow pointer"
 msgstr "Yakınlaştırma alanı işaretçiyi takip etmez"
 
-#: ui/ZoomMagnifier.qml:166
+#: ui/ZoomMagnifier.qml:167
 #, kde-format
 msgctxt "@option:check"
 msgid "Sharpen screen content while zoomed in"
 msgstr "Yakınlaştırırken ekran içeriğini keskinleştir"
 
-#: ui/ZoomMagnifier.qml:177
+#: ui/ZoomMagnifier.qml:178
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable focus tracking"
 msgstr "Odak izlemeyi etkinleştir"
 
-#: ui/ZoomMagnifier.qml:189
+#: ui/ZoomMagnifier.qml:190
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "Metin imlecini izlemeyi etkinleştir"
 
-#: ui/ZoomMagnifier.qml:205
+#: ui/ZoomMagnifier.qml:206
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "Bölgeyi büyüt"
 
-#: ui/ZoomMagnifier.qml:232
+#: ui/ZoomMagnifier.qml:233
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "Genişlik:"
 
-#: ui/ZoomMagnifier.qml:243 ui/ZoomMagnifier.qml:268
+#: ui/ZoomMagnifier.qml:244 ui/ZoomMagnifier.qml:269
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1163,50 +1163,50 @@ msgid_plural "%1 px"
 msgstr[0] "%1 pks"
 msgstr[1] "%1 pks"
 
-#: ui/ZoomMagnifier.qml:244 ui/ZoomMagnifier.qml:269
+#: ui/ZoomMagnifier.qml:245 ui/ZoomMagnifier.qml:270
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "pks"
 
-#: ui/ZoomMagnifier.qml:257
+#: ui/ZoomMagnifier.qml:258
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "Yükseklik:"
 
-#: ui/ZoomMagnifier.qml:286
+#: ui/ZoomMagnifier.qml:287
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "Devre dışı"
 
-#: ui/ZoomMagnifier.qml:299
+#: ui/ZoomMagnifier.qml:300
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "Yakınlaştırma çarpanı:"
 
-#: ui/ZoomMagnifier.qml:332
+#: ui/ZoomMagnifier.qml:333
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr "Sarma hareketini niteleyici düğmeler:"
 
-#: ui/ZoomMagnifier.qml:370
+#: ui/ZoomMagnifier.qml:371
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
 msgstr ""
 "Yakınlaştırma sarma hareketleri, yalnızca Wayland üzerinde kullanılabilir."
 
-#: ui/ZoomMagnifier.qml:376
+#: ui/ZoomMagnifier.qml:377
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "Yakınlaştırmak için niteleyici düğmelere basıldığında sar"
 
-#: ui/ZoomMagnifier.qml:397
+#: ui/ZoomMagnifier.qml:398
 #, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"

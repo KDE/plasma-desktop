@@ -1,13 +1,13 @@
 #
 # Tamas Szanto <tszanto@interware.hu>, 2000.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2019, 2020, 2021.
-# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 Kristof Kiszel <kiszel.kristof@gmail.com>
+# SPDX-FileCopyrightText: 2023-2026 Kristof Kiszel <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-03-12 21:44+0100\n"
+"PO-Revision-Date: 2026-05-21 22:20+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -48,15 +48,13 @@ msgid "Failed to request restart to firmware setup: %1"
 msgstr "Nem sikerült az újraindítás a firmware telepítéshez: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"A számítógép következő újraindításakor a firmware-beállító képernyőre kerül."
+"A számítógép a következő újraindításakor belép az UEFI firmware-"
+"beállításokba."
 
 #: ui/main.qml:32
 #, kde-format
@@ -178,12 +176,10 @@ msgid "After next restart:"
 msgstr "Következő újraindításkor:"
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr "Belépés a firmware-beállító képernyőre"
+msgstr "Belépés az UEFI firmware-beállításokba"
 
 #: ui/main.qml:146
 #, kde-format
