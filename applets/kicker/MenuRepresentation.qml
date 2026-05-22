@@ -106,7 +106,7 @@ PlasmaComponents3.ScrollView {
 
         spacing: 0
 
-        readonly property int minimumMainWidth: Math.max(searchField.defaultWidth, runnerColumns.searchResultsPresent ? 0 : Math.min(rootList.implicitWidth, rootList.Layout.maximumWidth))
+        readonly property int minimumMainWidth: Math.max(searchField.defaultWidth, root.runnerModel.resultsPresent ? 0 : Math.min(rootList.implicitWidth, rootList.Layout.maximumWidth))
         Layout.minimumWidth: (sideBar.visible ? sideBar.implicitWidth + sideBar.Layout.rightMargin : 0) + minimumMainWidth
         LayoutMirroring.enabled: ((Plasmoid.location === PlasmaCore.Types.RightEdge)
             || (Application.layoutDirection === Qt.RightToLeft && Plasmoid.location !== PlasmaCore.Types.LeftEdge))
@@ -293,11 +293,9 @@ PlasmaComponents3.ScrollView {
         RowLayout {
             id: runnerColumns
 
-            readonly property bool searchResultsPresent: runnerColumns.visibleChildren[0] instanceof RunnerResultsList
-
             Layout.fillHeight: true
 
-            visible: searchField.text !== "" && root.runnerModel.count > 0 && (!initialDelayTimer.active || !root.runnerModel.querying || searchResultsPresent)
+            visible: searchField.text !== "" && root.runnerModel.count > 0 && (!initialDelayTimer.active || !root.runnerModel.querying || root.runnerModel.resultsPresent)
 
             spacing: 0
 
@@ -365,7 +363,7 @@ PlasmaComponents3.ScrollView {
             Layout.minimumWidth: mainRow.minimumMainWidth
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
-            visible: root.runnerModel.query !== "" && !runnerColumns.searchResultsPresent && ((!root.runnerModel.querying && !initialDelayTimer.active) || visible)
+            visible: root.runnerModel.query !== "" && !root.runnerModel.resultsPresent && ((!root.runnerModel.querying && !initialDelayTimer.active) || visible)
             iconName: "edit-none"
             text: i18nc("@info:status", "No matches")
 
@@ -387,7 +385,7 @@ PlasmaComponents3.ScrollView {
 
         readonly property real defaultWidth: Kirigami.Units.gridUnit * 14
 
-        width: runnerColumns.visible && runnerColumns.searchResultsPresent
+        width: runnerColumns.visible && root.runnerModel.resultsPresent
             ? runnerColumns.visibleChildren[0].width - (runnerColumns.visibleChildren.length > 2 ? Kirigami.Units.smallSpacing : 0)
             : (rootList.visible ? rootList.width : mainRow.minimumMainWidth)
 
