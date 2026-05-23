@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-01 00:46+0000\n"
+"POT-Creation-Date: 2026-05-23 00:46+0000\n"
 "PO-Revision-Date: 2026-05-06 10:19+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -607,7 +607,7 @@ msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr "Nota flýtilykla til að víxla umsnúningi á skjá- og gluggalitum"
 
-#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:387
+#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:372
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
@@ -1029,127 +1029,103 @@ msgctxt "@label:spinbox"
 msgid "Show pixel grid at zoom level:"
 msgstr "Sýna pixlanet á aðdráttarstigi:"
 
-#: ui/ZoomMagnifier.qml:85
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Pointer appearance:"
-msgstr "Útlit bendils:"
-
-#: ui/ZoomMagnifier.qml:87
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Scale"
-msgstr "Kvarði"
-
-#: ui/ZoomMagnifier.qml:87
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Keep"
-msgstr "Halda"
-
-#: ui/ZoomMagnifier.qml:87
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Hide"
-msgstr "Fela"
-
-#: ui/ZoomMagnifier.qml:123
+#: ui/ZoomMagnifier.qml:108
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer tracking:"
 msgstr "Fylgni bendils:"
 
-#: ui/ZoomMagnifier.qml:128
+#: ui/ZoomMagnifier.qml:113
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
 msgstr "Hlutfallslegt"
 
-#: ui/ZoomMagnifier.qml:129
+#: ui/ZoomMagnifier.qml:114
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with pointer"
 msgstr "Aðdregið svæði hreyfist samstillt með bendli"
 
-#: ui/ZoomMagnifier.qml:133
+#: ui/ZoomMagnifier.qml:118
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Miðjað"
 
-#: ui/ZoomMagnifier.qml:134
+#: ui/ZoomMagnifier.qml:119
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, except near screen edges"
 msgstr "Bendill helst miðjaður á skjá, nema nálægt skjájöðrum"
 
-#: ui/ZoomMagnifier.qml:138
+#: ui/ZoomMagnifier.qml:123
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
 msgstr "Miðjað (strangt)"
 
-#: ui/ZoomMagnifier.qml:139
+#: ui/ZoomMagnifier.qml:124
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, even near screen edges"
 msgstr "Bendill helst miðjaður á skjá, jafnvel nálægt skjájöðrum"
 
-#: ui/ZoomMagnifier.qml:143
+#: ui/ZoomMagnifier.qml:128
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
 msgstr "Ýta til"
 
-#: ui/ZoomMagnifier.qml:144
+#: ui/ZoomMagnifier.qml:129
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer pushes zoom area at screen edges"
 msgstr "Bendill ýtir aðdráttarsvæði að skjájöðrum"
 
-#: ui/ZoomMagnifier.qml:148
+#: ui/ZoomMagnifier.qml:133
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
 msgstr "Óvirkt"
 
-#: ui/ZoomMagnifier.qml:149
+#: ui/ZoomMagnifier.qml:134
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow pointer"
 msgstr "Aðdregið svæði fylgir ekki bendli"
 
-#: ui/ZoomMagnifier.qml:166
+#: ui/ZoomMagnifier.qml:151
 #, kde-format
 msgctxt "@option:check"
 msgid "Sharpen screen content while zoomed in"
 msgstr "Skerpa efni á skjánum við aðdrátt"
 
-#: ui/ZoomMagnifier.qml:177
+#: ui/ZoomMagnifier.qml:162
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable focus tracking"
 msgstr "Kveikja á fókusrakningu"
 
-#: ui/ZoomMagnifier.qml:189
+#: ui/ZoomMagnifier.qml:174
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "Kveikja á rakningu textabendils"
 
-#: ui/ZoomMagnifier.qml:205
+#: ui/ZoomMagnifier.qml:190
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "Stækka svæði"
 
-#: ui/ZoomMagnifier.qml:232
+#: ui/ZoomMagnifier.qml:217
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "Breidd:"
 
-#: ui/ZoomMagnifier.qml:243 ui/ZoomMagnifier.qml:268
+#: ui/ZoomMagnifier.qml:228 ui/ZoomMagnifier.qml:253
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1157,53 +1133,69 @@ msgid_plural "%1 px"
 msgstr[0] "%1 px"
 msgstr[1] "%1 px"
 
-#: ui/ZoomMagnifier.qml:244 ui/ZoomMagnifier.qml:269
+#: ui/ZoomMagnifier.qml:229 ui/ZoomMagnifier.qml:254
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "px"
 
-#: ui/ZoomMagnifier.qml:257
+#: ui/ZoomMagnifier.qml:242
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "Hæð:"
 
-#: ui/ZoomMagnifier.qml:286
+#: ui/ZoomMagnifier.qml:271
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "Óvirkt"
 
-#: ui/ZoomMagnifier.qml:299
+#: ui/ZoomMagnifier.qml:284
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "Aðdráttarstuðull:"
 
-#: ui/ZoomMagnifier.qml:332
+#: ui/ZoomMagnifier.qml:317
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr "Breytilyklar fyrir skrunhreyfiskipun:"
 
-#: ui/ZoomMagnifier.qml:370
+#: ui/ZoomMagnifier.qml:355
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
 msgstr "Skrunhreyfiskipanir fyrir aðdrátt eru aðeins í boði í Wayland."
 
-#: ui/ZoomMagnifier.qml:376
+#: ui/ZoomMagnifier.qml:361
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "Skruna á meðan ýtt er á breytilykla til að breyta aðdrætti"
 
-#: ui/ZoomMagnifier.qml:397
+#: ui/ZoomMagnifier.qml:382
 #, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "Nota flýtilykla til að stjórna aðdrætti"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Pointer appearance:"
+#~ msgstr "Útlit bendils:"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Scale"
+#~ msgstr "Kvarði"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Keep"
+#~ msgstr "Halda"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Hide"
+#~ msgstr "Fela"
 
 #~ msgid "Button search audio file"
 #~ msgstr "Leitarhnappur fyrir hljóðskrá"

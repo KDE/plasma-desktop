@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-01 00:46+0000\n"
+"POT-Creation-Date: 2026-05-23 00:46+0000\n"
 "PO-Revision-Date: 2026-03-29 17:22+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -607,7 +607,7 @@ msgstr ""
 "Ekranın və pəncərənin rənglərinin tərsinə çevrilməsi üçün qısayollardan "
 "istifadə"
 
-#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:387
+#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:372
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
@@ -1029,127 +1029,103 @@ msgctxt "@label:spinbox"
 msgid "Show pixel grid at zoom level:"
 msgstr "Miqyas səviyyəsində piksel toru:"
 
-#: ui/ZoomMagnifier.qml:85
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Pointer appearance:"
-msgstr "Kursorun görünüşü:"
-
-#: ui/ZoomMagnifier.qml:87
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Scale"
-msgstr "Miqyas"
-
-#: ui/ZoomMagnifier.qml:87
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Keep"
-msgstr "Saxlamaq"
-
-#: ui/ZoomMagnifier.qml:87
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Hide"
-msgstr "Gizlətmək"
-
-#: ui/ZoomMagnifier.qml:123
+#: ui/ZoomMagnifier.qml:108
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer tracking:"
 msgstr "Kursorun izlənilməsi:"
 
-#: ui/ZoomMagnifier.qml:128
+#: ui/ZoomMagnifier.qml:113
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
 msgstr "Mütənasib"
 
-#: ui/ZoomMagnifier.qml:129
+#: ui/ZoomMagnifier.qml:114
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with pointer"
 msgstr "Miqyaslama sahəsi kursor ilə eyni hərəkət edir"
 
-#: ui/ZoomMagnifier.qml:133
+#: ui/ZoomMagnifier.qml:118
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Mərkəzləşmiş"
 
-#: ui/ZoomMagnifier.qml:134
+#: ui/ZoomMagnifier.qml:119
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, except near screen edges"
 msgstr "Kursor, ekranın kənarında olmazsa ekranın mərkəzində qalır"
 
-#: ui/ZoomMagnifier.qml:138
+#: ui/ZoomMagnifier.qml:123
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
 msgstr "Mərkəzləşmiş (Qəti olaraq)"
 
-#: ui/ZoomMagnifier.qml:139
+#: ui/ZoomMagnifier.qml:124
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, even near screen edges"
 msgstr "Kursor, hətta ekranın kənarlarında olsa belə mərkəzdə qalır"
 
-#: ui/ZoomMagnifier.qml:143
+#: ui/ZoomMagnifier.qml:128
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
 msgstr "İrəliləyən"
 
-#: ui/ZoomMagnifier.qml:144
+#: ui/ZoomMagnifier.qml:129
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer pushes zoom area at screen edges"
 msgstr "Kursor miqyaslama sahəni ekranın kənarına itir"
 
-#: ui/ZoomMagnifier.qml:148
+#: ui/ZoomMagnifier.qml:133
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
 msgstr "Söndürülüb"
 
-#: ui/ZoomMagnifier.qml:149
+#: ui/ZoomMagnifier.qml:134
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow pointer"
 msgstr "Miqyaslama sahəsi kursoru izləmir"
 
-#: ui/ZoomMagnifier.qml:166
+#: ui/ZoomMagnifier.qml:151
 #, kde-format
 msgctxt "@option:check"
 msgid "Sharpen screen content while zoomed in"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:177
+#: ui/ZoomMagnifier.qml:162
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable focus tracking"
 msgstr "Fokusun izlənməsini aktiv etmək"
 
-#: ui/ZoomMagnifier.qml:189
+#: ui/ZoomMagnifier.qml:174
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "Mətn kursoru izlənməsini aktiv etmək"
 
-#: ui/ZoomMagnifier.qml:205
+#: ui/ZoomMagnifier.qml:190
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "Böyütmə sahəsi"
 
-#: ui/ZoomMagnifier.qml:232
+#: ui/ZoomMagnifier.qml:217
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "Eni:"
 
-#: ui/ZoomMagnifier.qml:243 ui/ZoomMagnifier.qml:268
+#: ui/ZoomMagnifier.qml:228 ui/ZoomMagnifier.qml:253
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1157,53 +1133,69 @@ msgid_plural "%1 px"
 msgstr[0] "%1 piks."
 msgstr[1] "%1 piks"
 
-#: ui/ZoomMagnifier.qml:244 ui/ZoomMagnifier.qml:269
+#: ui/ZoomMagnifier.qml:229 ui/ZoomMagnifier.qml:254
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "piks."
 
-#: ui/ZoomMagnifier.qml:257
+#: ui/ZoomMagnifier.qml:242
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "Hündürlüyü:"
 
-#: ui/ZoomMagnifier.qml:286
+#: ui/ZoomMagnifier.qml:271
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "Söndürülüb"
 
-#: ui/ZoomMagnifier.qml:299
+#: ui/ZoomMagnifier.qml:284
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "Miqyas əmsalı:"
 
-#: ui/ZoomMagnifier.qml:332
+#: ui/ZoomMagnifier.qml:317
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr "Sürüşdürmə dəyişdirici düymələri:"
 
-#: ui/ZoomMagnifier.qml:370
+#: ui/ZoomMagnifier.qml:355
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
 msgstr "Miqyas sürüşdürmə jestləri yalnız Wayland-da mövcuddur."
 
-#: ui/ZoomMagnifier.qml:376
+#: ui/ZoomMagnifier.qml:361
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "Miqyaslama üçün dəyişdirici düymə istifadə edən zaman sürüşdürmək"
 
-#: ui/ZoomMagnifier.qml:397
+#: ui/ZoomMagnifier.qml:382
 #, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "Miqyası idarə etmək üçün qısayollardan istifadə etmək"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Pointer appearance:"
+#~ msgstr "Kursorun görünüşü:"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Scale"
+#~ msgstr "Miqyas"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Keep"
+#~ msgstr "Saxlamaq"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Hide"
+#~ msgstr "Gizlətmək"
 
 #~ msgid "Button search audio file"
 #~ msgstr "Səs faylı düyməsi"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-01 00:46+0000\n"
+"POT-Creation-Date: 2026-05-23 00:46+0000\n"
 "PO-Revision-Date: 2026-03-03 13:22+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -612,7 +612,7 @@ msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr "Lai pārslēgt displeja un logu krāsu invertēšanu, izmantojiet saīsnes"
 
-#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:387
+#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:372
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
@@ -1043,127 +1043,103 @@ msgctxt "@label:spinbox"
 msgid "Show pixel grid at zoom level:"
 msgstr "Rādīt pikseļu režģi tuvinājuma līmenim:"
 
-#: ui/ZoomMagnifier.qml:85
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Pointer appearance:"
-msgstr "Peles rādītāja izskats:"
-
-#: ui/ZoomMagnifier.qml:87
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Scale"
-msgstr "Mērogs"
-
-#: ui/ZoomMagnifier.qml:87
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Keep"
-msgstr "Paturēt"
-
-#: ui/ZoomMagnifier.qml:87
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Hide"
-msgstr "Slēpt"
-
-#: ui/ZoomMagnifier.qml:123
+#: ui/ZoomMagnifier.qml:108
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer tracking:"
 msgstr "Peles rādītāja izsekošana:"
 
-#: ui/ZoomMagnifier.qml:128
+#: ui/ZoomMagnifier.qml:113
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
 msgstr "Proporcionāli"
 
-#: ui/ZoomMagnifier.qml:129
+#: ui/ZoomMagnifier.qml:114
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with pointer"
 msgstr "Tuvinājuma apgabali pārvietojas līdz ar peles rādītāju"
 
-#: ui/ZoomMagnifier.qml:133
+#: ui/ZoomMagnifier.qml:118
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Centrēts"
 
-#: ui/ZoomMagnifier.qml:134
+#: ui/ZoomMagnifier.qml:119
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, except near screen edges"
 msgstr "Peles rādītājs paliek centrēts ekrānā, izņemot pie ekrāna malām"
 
-#: ui/ZoomMagnifier.qml:138
+#: ui/ZoomMagnifier.qml:123
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
 msgstr "Centrēts (strikts)"
 
-#: ui/ZoomMagnifier.qml:139
+#: ui/ZoomMagnifier.qml:124
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, even near screen edges"
 msgstr "Peles rādītājs paliek centrēts ekrānā arī pie ekrāna malām"
 
-#: ui/ZoomMagnifier.qml:143
+#: ui/ZoomMagnifier.qml:128
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
 msgstr "Spiest"
 
-#: ui/ZoomMagnifier.qml:144
+#: ui/ZoomMagnifier.qml:129
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer pushes zoom area at screen edges"
 msgstr "Peles rādītājs spiež tuvinājuma apgabalu pie ekrāna malām"
 
-#: ui/ZoomMagnifier.qml:148
+#: ui/ZoomMagnifier.qml:133
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
 msgstr "Izslēgts"
 
-#: ui/ZoomMagnifier.qml:149
+#: ui/ZoomMagnifier.qml:134
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow pointer"
 msgstr "Tuvinājuma zona neseko peles rādītājam"
 
-#: ui/ZoomMagnifier.qml:166
+#: ui/ZoomMagnifier.qml:151
 #, kde-format
 msgctxt "@option:check"
 msgid "Sharpen screen content while zoomed in"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:177
+#: ui/ZoomMagnifier.qml:162
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable focus tracking"
 msgstr "Ieslēgt fokusa izsekošanu"
 
-#: ui/ZoomMagnifier.qml:189
+#: ui/ZoomMagnifier.qml:174
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "Ieslēgt teksta kursora izsekošanu"
 
-#: ui/ZoomMagnifier.qml:205
+#: ui/ZoomMagnifier.qml:190
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "Tuvināt reģionu"
 
-#: ui/ZoomMagnifier.qml:232
+#: ui/ZoomMagnifier.qml:217
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "Platums:"
 
-#: ui/ZoomMagnifier.qml:243 ui/ZoomMagnifier.qml:268
+#: ui/ZoomMagnifier.qml:228 ui/ZoomMagnifier.qml:253
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1172,53 +1148,69 @@ msgstr[0] "%1 piks."
 msgstr[1] "%1 piks."
 msgstr[2] "%1 piks."
 
-#: ui/ZoomMagnifier.qml:244 ui/ZoomMagnifier.qml:269
+#: ui/ZoomMagnifier.qml:229 ui/ZoomMagnifier.qml:254
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "piks."
 
-#: ui/ZoomMagnifier.qml:257
+#: ui/ZoomMagnifier.qml:242
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "Augstums:"
 
-#: ui/ZoomMagnifier.qml:286
+#: ui/ZoomMagnifier.qml:271
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "Izslēgts"
 
-#: ui/ZoomMagnifier.qml:299
+#: ui/ZoomMagnifier.qml:284
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "Tālummaiņas koeficients:"
 
-#: ui/ZoomMagnifier.qml:332
+#: ui/ZoomMagnifier.qml:317
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr "Ritināšanas žestu modifikatora taustiņi:"
 
-#: ui/ZoomMagnifier.qml:370
+#: ui/ZoomMagnifier.qml:355
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
 msgstr "Tuvinājuma ritināšanas žesti ir pieejami tikai ar „Wayland“."
 
-#: ui/ZoomMagnifier.qml:376
+#: ui/ZoomMagnifier.qml:361
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "Tālummaiņai ritiniet, turiet nospiestus modifikatora taustiņus"
 
-#: ui/ZoomMagnifier.qml:397
+#: ui/ZoomMagnifier.qml:382
 #, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "Tālummaiņu mainiet ar saīsnēm"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Pointer appearance:"
+#~ msgstr "Peles rādītāja izskats:"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Scale"
+#~ msgstr "Mērogs"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Keep"
+#~ msgstr "Paturēt"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Hide"
+#~ msgstr "Slēpt"
 
 #~ msgid "Button search audio file"
 #~ msgstr "Skaņas datnes meklēšanas poga"

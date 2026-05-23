@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-01 00:46+0000\n"
+"POT-Creation-Date: 2026-05-23 00:46+0000\n"
 "PO-Revision-Date: 2026-05-01 04:39+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -602,7 +602,7 @@ msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr "გამოიყენეთ მალსახმობები ეკრანის და ფანჯრის ფერების ინვერსიისთვის"
 
-#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:387
+#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:372
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
@@ -1023,127 +1023,103 @@ msgctxt "@label:spinbox"
 msgid "Show pixel grid at zoom level:"
 msgstr "პიქსელების ბადის ჩვენება გადიდების დონეზე:"
 
-#: ui/ZoomMagnifier.qml:85
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Pointer appearance:"
-msgstr "კურსორის გარეგნობა:"
-
-#: ui/ZoomMagnifier.qml:87
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Scale"
-msgstr "მასშტაბი"
-
-#: ui/ZoomMagnifier.qml:87
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Keep"
-msgstr "შენარჩუნება"
-
-#: ui/ZoomMagnifier.qml:87
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Hide"
-msgstr "დამალვა"
-
-#: ui/ZoomMagnifier.qml:123
+#: ui/ZoomMagnifier.qml:108
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer tracking:"
 msgstr "კურსორის თვალყურის დევნება:"
 
-#: ui/ZoomMagnifier.qml:128
+#: ui/ZoomMagnifier.qml:113
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
 msgstr "პროპორციული"
 
-#: ui/ZoomMagnifier.qml:129
+#: ui/ZoomMagnifier.qml:114
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with pointer"
 msgstr "ადგილის გადიდება კურსორთან ერთად მოძრაობს"
 
-#: ui/ZoomMagnifier.qml:133
+#: ui/ZoomMagnifier.qml:118
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "შუაზე გასწორებული"
 
-#: ui/ZoomMagnifier.qml:134
+#: ui/ZoomMagnifier.qml:119
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, except near screen edges"
 msgstr "კურსორი რჩება ცენტრში, ეკრანის წიბოებთან სიახლოვის გარდა"
 
-#: ui/ZoomMagnifier.qml:138
+#: ui/ZoomMagnifier.qml:123
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
 msgstr "შუაზე გასწორებული (მკაცრად)"
 
-#: ui/ZoomMagnifier.qml:139
+#: ui/ZoomMagnifier.qml:124
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, even near screen edges"
 msgstr "კურსორი რჩება ცენტრში ეკრანის წიბოებთან ახლოსაც კი"
 
-#: ui/ZoomMagnifier.qml:143
+#: ui/ZoomMagnifier.qml:128
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
 msgstr "პუში"
 
-#: ui/ZoomMagnifier.qml:144
+#: ui/ZoomMagnifier.qml:129
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer pushes zoom area at screen edges"
 msgstr "კურსორი გადიდების არეს ეკრანის წიბოებისკენ გასწევს"
 
-#: ui/ZoomMagnifier.qml:148
+#: ui/ZoomMagnifier.qml:133
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
 msgstr "გამორთული"
 
-#: ui/ZoomMagnifier.qml:149
+#: ui/ZoomMagnifier.qml:134
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow pointer"
 msgstr "გადიდების არე კურსორს არ მიჰყვება"
 
-#: ui/ZoomMagnifier.qml:166
+#: ui/ZoomMagnifier.qml:151
 #, kde-format
 msgctxt "@option:check"
 msgid "Sharpen screen content while zoomed in"
 msgstr "ეკრანის შემცველობის გამკვეთრება, როცა ის გადიდებულია"
 
-#: ui/ZoomMagnifier.qml:177
+#: ui/ZoomMagnifier.qml:162
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable focus tracking"
 msgstr "ფოკუსის თვალყურის დევნების ჩართვა"
 
-#: ui/ZoomMagnifier.qml:189
+#: ui/ZoomMagnifier.qml:174
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "ტექსტის კარეტის თვალყურის დევნების ჩართვა"
 
-#: ui/ZoomMagnifier.qml:205
+#: ui/ZoomMagnifier.qml:190
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "გადიდების რეგიონი"
 
-#: ui/ZoomMagnifier.qml:232
+#: ui/ZoomMagnifier.qml:217
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "სიგანე:"
 
-#: ui/ZoomMagnifier.qml:243 ui/ZoomMagnifier.qml:268
+#: ui/ZoomMagnifier.qml:228 ui/ZoomMagnifier.qml:253
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1151,53 +1127,69 @@ msgid_plural "%1 px"
 msgstr[0] "%1 პიქს"
 msgstr[1] "%1 პიქს"
 
-#: ui/ZoomMagnifier.qml:244 ui/ZoomMagnifier.qml:269
+#: ui/ZoomMagnifier.qml:229 ui/ZoomMagnifier.qml:254
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "პქს"
 
-#: ui/ZoomMagnifier.qml:257
+#: ui/ZoomMagnifier.qml:242
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "სიმაღლე:"
 
-#: ui/ZoomMagnifier.qml:286
+#: ui/ZoomMagnifier.qml:271
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "გამორთულია"
 
-#: ui/ZoomMagnifier.qml:299
+#: ui/ZoomMagnifier.qml:284
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "გადიდების კოეფიციენტი:"
 
-#: ui/ZoomMagnifier.qml:332
+#: ui/ZoomMagnifier.qml:317
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr "გადახვევის ჟესტის მოდიფიკატორი ღილაკები:"
 
-#: ui/ZoomMagnifier.qml:370
+#: ui/ZoomMagnifier.qml:355
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
 msgstr "მასშტავის გადახვევის ჟესტები, მხოლოდ, Wayland-ზეა ხელმისაწვდომი."
 
-#: ui/ZoomMagnifier.qml:376
+#: ui/ZoomMagnifier.qml:361
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "გადახვევა, როცა მოდიფიკატორი ღილაკი გასადიდებლადაა დაჭერილი"
 
-#: ui/ZoomMagnifier.qml:397
+#: ui/ZoomMagnifier.qml:382
 #, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "მალსახმობების გამოყენება გადიდების სამართავად"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Pointer appearance:"
+#~ msgstr "კურსორის გარეგნობა:"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Scale"
+#~ msgstr "მასშტაბი"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Keep"
+#~ msgstr "შენარჩუნება"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Hide"
+#~ msgstr "დამალვა"
 
 #~ msgid "Button search audio file"
 #~ msgstr "ხმოვანი ფაილის მოძებნის ღილაკი"

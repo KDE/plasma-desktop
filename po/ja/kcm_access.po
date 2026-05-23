@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-01 00:46+0000\n"
+"POT-Creation-Date: 2026-05-23 00:46+0000\n"
 "PO-Revision-Date: 2026-05-10 18:32+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -615,7 +615,7 @@ msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr "ショートカットで画面やウィンドウの色の反転を切り替えることができます"
 
-#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:387
+#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:372
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
@@ -1028,178 +1028,170 @@ msgctxt "@label:spinbox"
 msgid "Show pixel grid at zoom level:"
 msgstr "次のズームレベルでピクセルグリッドを表示:"
 
-#: ui/ZoomMagnifier.qml:85
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Pointer appearance:"
-msgstr "ポインタの見た目:"
-
-#: ui/ZoomMagnifier.qml:87
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Scale"
-msgstr "拡大"
-
-#: ui/ZoomMagnifier.qml:87
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Keep"
-msgstr "そのまま"
-
-#: ui/ZoomMagnifier.qml:87
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Hide"
-msgstr "非表示"
-
-#: ui/ZoomMagnifier.qml:123
+#: ui/ZoomMagnifier.qml:108
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer tracking:"
 msgstr "ポインタ追従:"
 
-#: ui/ZoomMagnifier.qml:128
+#: ui/ZoomMagnifier.qml:113
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
 msgstr "相対的"
 
-#: ui/ZoomMagnifier.qml:129
+#: ui/ZoomMagnifier.qml:114
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with pointer"
 msgstr "ポインタに合わせてズームエリアが動きます"
 
-#: ui/ZoomMagnifier.qml:133
+#: ui/ZoomMagnifier.qml:118
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "中央"
 
-#: ui/ZoomMagnifier.qml:134
+#: ui/ZoomMagnifier.qml:119
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, except near screen edges"
 msgstr "ポインタを画面中央に保ちます (画面端は除く)"
 
-#: ui/ZoomMagnifier.qml:138
+#: ui/ZoomMagnifier.qml:123
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
 msgstr "中央 (強制)"
 
-#: ui/ZoomMagnifier.qml:139
+#: ui/ZoomMagnifier.qml:124
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, even near screen edges"
 msgstr "画面端でもポインタを画面中央に保ちます"
 
-#: ui/ZoomMagnifier.qml:143
+#: ui/ZoomMagnifier.qml:128
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
 msgstr "プッシュ"
 
-#: ui/ZoomMagnifier.qml:144
+#: ui/ZoomMagnifier.qml:129
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer pushes zoom area at screen edges"
 msgstr "ポインタが画面端に近づくとズームエリアが動きます"
 
-#: ui/ZoomMagnifier.qml:148
+#: ui/ZoomMagnifier.qml:133
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
 msgstr "無効"
 
-#: ui/ZoomMagnifier.qml:149
+#: ui/ZoomMagnifier.qml:134
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow pointer"
 msgstr "ズームエリアをポインタに合わせて動かしません"
 
-#: ui/ZoomMagnifier.qml:166
+#: ui/ZoomMagnifier.qml:151
 #, kde-format
 msgctxt "@option:check"
 msgid "Sharpen screen content while zoomed in"
 msgstr "ズーム中に画面の解像度を補正する"
 
-#: ui/ZoomMagnifier.qml:177
+#: ui/ZoomMagnifier.qml:162
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable focus tracking"
 msgstr "フォーカス中のウィンドウに合わせる"
 
-#: ui/ZoomMagnifier.qml:189
+#: ui/ZoomMagnifier.qml:174
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "入力中はテキストカーソルに合わせる"
 
-#: ui/ZoomMagnifier.qml:205
+#: ui/ZoomMagnifier.qml:190
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "拡大鏡の拡大領域"
 
-#: ui/ZoomMagnifier.qml:232
+#: ui/ZoomMagnifier.qml:217
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "幅:"
 
-#: ui/ZoomMagnifier.qml:243 ui/ZoomMagnifier.qml:268
+#: ui/ZoomMagnifier.qml:228 ui/ZoomMagnifier.qml:253
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
 msgid_plural "%1 px"
 msgstr[0] "%1 px"
 
-#: ui/ZoomMagnifier.qml:244 ui/ZoomMagnifier.qml:269
+#: ui/ZoomMagnifier.qml:229 ui/ZoomMagnifier.qml:254
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "px"
 
-#: ui/ZoomMagnifier.qml:257
+#: ui/ZoomMagnifier.qml:242
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "高さ:"
 
-#: ui/ZoomMagnifier.qml:286
+#: ui/ZoomMagnifier.qml:271
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "無効"
 
-#: ui/ZoomMagnifier.qml:299
+#: ui/ZoomMagnifier.qml:284
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "ズーム感度:"
 
-#: ui/ZoomMagnifier.qml:332
+#: ui/ZoomMagnifier.qml:317
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr "スクロールジェスチャーの修飾キー:"
 
-#: ui/ZoomMagnifier.qml:370
+#: ui/ZoomMagnifier.qml:355
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
 msgstr "ズームのスクロールジェスチャーは Wayland のみ対応しています。"
 
 # ACCELERATOR changed by translator
-#: ui/ZoomMagnifier.qml:376
+#: ui/ZoomMagnifier.qml:361
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "修飾キーを押しながらスクロールするとズームできます"
 
-#: ui/ZoomMagnifier.qml:397
+#: ui/ZoomMagnifier.qml:382
 #, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "ショートカットでズームを操作できます"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Pointer appearance:"
+#~ msgstr "ポインタの見た目:"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Scale"
+#~ msgstr "拡大"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Keep"
+#~ msgstr "そのまま"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Hide"
+#~ msgstr "非表示"
