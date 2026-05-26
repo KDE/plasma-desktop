@@ -141,7 +141,6 @@ private Q_SLOTS:
     void sourceRowsMoved(const QModelIndex &sourceParent, int sourceStart, int sourceEnd, const QModelIndex &destinationParent, int destinationRow);
     void sourceRowsRemoved(const QModelIndex &parent, int first, int last);
     void sourceLayoutChanged(const QList<QPersistentModelIndex> &parents, QAbstractItemModel::LayoutChangeHint hint);
-    void onItemAboutToRename(const QString &filename);
     void onItemRenamed(const QString &filename, const QString &newFilename);
     void onListingCompleted();
 
@@ -189,8 +188,6 @@ private:
     QString m_resolution;
 
     Plasma::Applet *m_applet = nullptr;
-
-    std::optional<QPair<QString, GridPosition>> m_toRename;
 
     friend class PositionerTest;
 };

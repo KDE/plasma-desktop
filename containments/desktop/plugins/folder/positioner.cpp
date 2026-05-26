@@ -541,7 +541,6 @@ void Positioner::updatePositionsList(int perStripeForPositions)
             perStripeForPositions = m_perStripe;
 
         m_positionsHeader.emplace(PositionsHeader{.numStripes = 1 + ((rowCount() - 1) / m_perStripe), .perStripe = m_perStripe});
-        m_positions.clear();
 
         QHashIterator<int, int> it(m_proxyToSource);
 
@@ -1270,29 +1269,21 @@ void Positioner::maybeRestoreAndApplyChangedPositions(bool forceConvertAndSave)
     m_deferRestoreChangedPositions = false;
 }
 
-void Positioner::onItemAboutToRename(const QString &filename)
-{
-    // Store old item position
-    if (auto positionsIt = m_positions.constFind(filename); positionsIt != m_positions.constEnd()) {
-        m_toRename = {filename, positionsIt.value()};
-    }
-}
-
 void Positioner::onItemRenamed(const QString &filename, const QString &newFilename)
 {
     updatePositionsList();
-    // "m_toRename" has 3 items: filename, row, stripe-pos
-    if (m_toRename.has_value() && m_toRename->first == filename && filename != newFilename) {
+    if (filename != newFilename) {
         // Restore item position after rename
-        if (auto positionsIt = m_positions.find(newFilename); positionsIt != m_positions.end()) {
-            // Assign two items: row, stripe-pos
-            positionsIt->stripe = m_toRename->second.stripe;
-            positionsIt->pos = m_toRename->second.pos;
-            convertFolderModelData();
+        if (auto positionsIt = m_positions.find(filename); positionsIt != m_positions.end()) {
+            m_positions[newFilename] = {
+                .stripe = qMax(0, positionsIt->stripe),
+                .pos = qMax(0, positionsIt->pos),
+            };
         }
     }
-    m_toRename.reset();
+    m_positions.remove(filename);
     m_changedPositions[newFilename] = std::nullopt;
+    convertFolderModelData();
     savePositionsConfig();
 }
 
@@ -1317,7 +1308,6 @@ void Positioner::connectSignals(FolderModel *model)
     connect(model, &QAbstractItemModel::layoutChanged, this, &Positioner::sourceLayoutChanged, Qt::UniqueConnection);
     connect(m_folderModel, &FolderModel::urlChanged, this, &Positioner::reset, Qt::UniqueConnection);
     connect(m_folderModel, &FolderModel::statusChanged, this, &Positioner::sourceStatusChanged, Qt::UniqueConnection);
-    connect(m_folderModel, &FolderModel::itemAboutToRename, this, &Positioner::onItemAboutToRename, Qt::UniqueConnection);
     connect(m_folderModel, &FolderModel::itemRenamed, this, &Positioner::onItemRenamed, Qt::UniqueConnection);
     connect(m_folderModel, &FolderModel::listingCompleted, this, &Positioner::onListingCompleted, Qt::UniqueConnection);
 }
@@ -1335,7 +1325,6 @@ void Positioner::disconnectSignals(FolderModel *model)
     disconnect(model, &QAbstractItemModel::layoutChanged, this, &Positioner::sourceLayoutChanged);
     disconnect(m_folderModel, &FolderModel::urlChanged, this, &Positioner::reset);
     disconnect(m_folderModel, &FolderModel::statusChanged, this, &Positioner::sourceStatusChanged);
-    disconnect(m_folderModel, &FolderModel::itemAboutToRename, this, &Positioner::onItemAboutToRename);
     disconnect(m_folderModel, &FolderModel::itemRenamed, this, &Positioner::onItemRenamed);
     disconnect(m_folderModel, &FolderModel::listingCompleted, this, &Positioner::onListingCompleted);
 }
