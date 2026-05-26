@@ -494,7 +494,7 @@ PlasmaComponents3.ScrollView {
         }
 
         Connections {
-            target: runnerColumns.visibleChildren[0] ?? null
+            target: runnerColumns,visibleChildren[0] instanceof RunnerResultsList ? runnerColumns.visibleChildren[0] : null
             enabled: launchMatchTimer.running
             function onCurrentItemChanged() : void {
                 if (runnerColumns.visibleChildren[0]?.currentItem?.text.toLowerCase().includes(root.runnerModel.query.toLowerCase())) {
