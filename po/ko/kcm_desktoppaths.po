@@ -8,7 +8,7 @@
 # Hongsoo Byun <hsbyun@haansoft.com>, 2005.
 # Youngbin Park <shrike@nate.com>, 2005.
 # Sung-Jae, Cho <jachin@hanafos.com>, 2005.
-# SPDX-FileCopyrightText: 2007, 2008, 2009, 2017, 2020, 2021, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2017, 2020, 2021, 2023, 2024, 2026 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2021.
 #
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-30 00:45+0000\n"
-"PO-Revision-Date: 2024-11-29 00:26+0100\n"
+"PO-Revision-Date: 2026-05-25 22:02+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ui/main.qml:53
 #, kde-format
@@ -129,20 +129,16 @@ msgid "This folder will be used by default to open or save file templates."
 msgstr "이 폴더는 템플릿을 열거나 저장하는 기본 폴더로 사용됩니다."
 
 #: ui/main.qml:165
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Pictures folder:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Projects folder:"
-msgstr "사진 폴더:"
+msgstr "프로젝트 폴더:"
 
 #: ui/main.qml:171
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip and accessible description"
-#| msgid "This folder will be used by default to open or save documents."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save projects."
-msgstr "이 폴더는 문서를 열거나 저장하는 기본 폴더로 사용됩니다."
+msgstr "이 폴더는 프로젝트를 열거나 저장하는 기본 폴더로 사용됩니다."
 
 #: ui/UrlRequester.qml:74
 #, kde-format
