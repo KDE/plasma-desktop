@@ -121,9 +121,7 @@ PlasmaComponents.ScrollView {
             }
         }
 
-        Keys.onReleased: event => {
-            adjustSize();
-        }
+        onTextChanged: adjustSize();
 
         function getXY() {
             if (!targetItem) {
