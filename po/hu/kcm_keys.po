@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-19 00:46+0000\n"
-"PO-Revision-Date: 2026-05-21 22:32+0200\n"
+"PO-Revision-Date: 2026-05-26 22:37+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -105,7 +105,7 @@ msgstr "Gyorsbillentyű-ütközések feloldása"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr "Igen, az új"
+msgstr "Igen"
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format
@@ -252,7 +252,7 @@ msgstr "%1 exportálása"
 #, kde-format
 msgctxt "@action:button %1 is the name of a custom command"
 msgid "Edit command for %1"
-msgstr "A(z) %1 parancsának szerkesztése"
+msgstr "A(z) %1 parancs szerkesztése"
 
 #: ui/main.qml:268
 #, kde-format
@@ -276,7 +276,8 @@ msgstr "Nincsenek találatok a keresésre"
 #, kde-format
 msgctxt "@info"
 msgid "These shortcuts will be deleted when changes are applied."
-msgstr "Ezek a gyorsbillentyűk lesznek törölve a változtatások alkalmazásakor."
+msgstr ""
+"Ezek a gyorsbillentyűk törlésre kerülnek a változtatások alkalmazásakor."
 
 #: ui/main.qml:378
 #, kde-format
