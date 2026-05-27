@@ -32,25 +32,25 @@ KickoffGridView {
     view.height: view.cellHeight * Math.ceil(count / view.columns)
     view.implicitHeight: view.contentHeight
     blockTargetWheel: false
-    view.highlight: PlasmaExtras.Highlight {
-        visible: root.isCurrentSectionGrid
-        // The default Z value for delegates is 1. The default Z value for the section delegate is 2.
-        // The highlight gets a value of 3 while the drag is active and then goes back to the default value of 0.
-        z: (root.currentItem?.Drag.active ?? false) ? 3 : 0
-
-        pressed: (root.view.currentItem as T.AbstractButton)?.down ?? false
-
-        width: root.view.cellWidth
-        height: root.view.cellHeight
-        active: root.view.activeFocus
-            || (kickoff.contentArea === root
-                && kickoff.searchField.activeFocus)
-    }
 
     delegate: KickoffGridDelegate {
         id: itemDelegate
         width: view.cellWidth
         Accessible.role: Accessible.Cell
+
+        background: Loader {
+            active: itemDelegate.GridView.isCurrentItem && root.isCurrentSectionGrid
+            sourceComponent: PlasmaExtras.Highlight {
+                anchors.fill: parent
+                z: (root.Drag.active ?? false) ? 3 : 0
+                hovered: true
+
+                pressed: itemDelegate.down
+
+                active: root.view.activeFocus ||
+                        (kickoff.contentArea === root && kickoff.searchField.activeFocus)
+            }
+        }
 
         Connections {
             target: itemDelegate.mouseArea

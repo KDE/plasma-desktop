@@ -126,19 +126,7 @@ EmptyPage {
 
         // This is actually needed. The highlight will animate from thin to wide otherwise.
         highlightResizeDuration: 0
-        highlightMoveDuration: 0
-        highlight: PlasmaExtras.Highlight {
-            // The default Z value for delegates is 1. The default Z value for the section delegate is 2.
-            // The highlight gets a value of 3 while the drag is active and then goes back to the default value of 0.
-            z: (root.currentItem?.Drag.active ?? false) ? 3 : 0
-
-            pressed: ((view.currentItem as T.AbstractButton)?.down ?? false)
-                && !((view.currentItem as AbstractKickoffItemDelegate)?.isCategoryListItem ?? false)
-
-            active: view.activeFocus
-                || (kickoff.contentArea === root
-                    && kickoff.searchField.activeFocus)
-        }
+        highlightFollowsCurrentItem: false
 
         onCountChanged: {
             if (!activeFocus) {
@@ -261,6 +249,7 @@ EmptyPage {
 
         function focusCurrentItem(event, focusReason) {
             currentItem.forceActiveFocus(focusReason)
+            positionViewAtIndex(currentIndex, ListView.Contain)
             event.accepted = true
         }
 

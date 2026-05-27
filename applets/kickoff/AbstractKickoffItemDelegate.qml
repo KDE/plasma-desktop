@@ -16,6 +16,7 @@ import QtQuick
 import QtQuick.Templates as T
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components as PC3
+import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
 import "code/tools.js" as Tools
 import org.kde.plasma.plasmoid
@@ -259,5 +260,17 @@ T.ItemDelegate {
     PC3.ToolTip.visible: mouseArea.containsMouse && PC3.ToolTip.text.length > 0
     PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
 
-    background: null
+    background: Loader {
+        active: (root.GridView?.isCurrentItem || root.ListView?.isCurrentItem) ?? false
+        sourceComponent: PlasmaExtras.Highlight {
+            anchors.fill: parent
+            z: (root.Drag.active ?? false) ? 3 : 0
+            hovered: true
+
+            pressed: root.down  && !root.isCategoryListItem
+
+            active: root.view.activeFocus ||
+                    (kickoff.contentArea === root && kickoff.searchField.activeFocus)
+        }
+    }
 }
