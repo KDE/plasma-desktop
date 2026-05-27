@@ -52,7 +52,7 @@ PlasmaComponents3.ScrollView {
         listView.maxDelegateImplicitWidth = 0
     }
 
-    function subMenuForCurrentItem(focusOnSpawn=false) {
+    function subMenuForCurrentItem() {
         if (!kicker.expanded || !itemList.model || itemList.currentIndex === -1 || ActionMenu.opened) {
             return;
         }
@@ -72,9 +72,6 @@ PlasmaComponents3.ScrollView {
             itemList.childDialog.mainItem.forceActiveFocus(Qt.TabFocusReason)
             windowSystem.forceActive(itemList.childDialog.mainItem); // only for X11; TODO Plasma 6.8: remove
 
-            if (focusOnSpawn) {
-                itemList.childDialog.mainItem.currentIndex = 0;
-            }
         } else {
             itemList.childDialog.model = model.modelForRow(itemList.currentIndex);
             itemList.childDialog.visualParent = listView.currentItem;
@@ -145,10 +142,6 @@ PlasmaComponents3.ScrollView {
         Accessible.name: itemList.Accessible.name
         Accessible.role: Accessible.List
 
-        function updateImplicitWidth () {
-            implicitWidth = maxDelegateImplicitWidth
-        }
-
         delegate: ItemListDelegate {
             width: listView.width - itemList.innerRightMargin
             anchors.left: listView.contentItem.left
@@ -156,6 +149,11 @@ PlasmaComponents3.ScrollView {
             showDescriptionInTooltip: itemList.showDescriptionInTooltip
             dialogDefaultRight: !itemList.LayoutMirroring.enabled
             onInteractionConcluded: itemList.interactionConcluded()
+            onOpenCategory: keyboardInitiated => {
+                listView.currentIndex = index
+                listView.openOrFocusSubmenu()
+                if (keyboardInitiated) { itemList.childDialog.mainItem.currentIndex = 0; }
+            }
             onContainsMouseChanged: {
                 if (containsMouse && itemList.hoverEnabled && !isSeparator && !ActionMenu.opened) {
                     listView.currentIndex = index
@@ -206,7 +204,17 @@ PlasmaComponents3.ScrollView {
             }
         }
 
-        function handleLeftRightArrowEnter(event: KeyEvent) : void {
+        function openOrFocusSubmenu() : void {
+            if (itemList.childDialog === null) {
+                itemList.subMenuForCurrentItem();
+            } else {
+                windowSystem.forceActive(itemList.childDialog.mainItem); // only for X11; TODO Plasma 6.8: remove
+                itemList.childDialog.requestActivate()
+                itemList.childDialog.mainItem.forceActiveFocus(Qt.TabFocusReason);
+            }
+        }
+
+        function handleLeftRightArrow(event: KeyEvent) : void {
             let backArrowKey = (event.key === Qt.Key_Left && !itemList.LayoutMirroring.enabled) ||
                 (event.key === Qt.Key_Right && itemList.LayoutMirroring.enabled)
             let forwardArrowKey = (event.key === Qt.Key_Right && !itemList.LayoutMirroring.enabled) ||
@@ -218,20 +226,10 @@ PlasmaComponents3.ScrollView {
                 } else {
                     itemList.navigateLeftRequested();
                 }
-            } else if (forwardArrowKey || event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
+            } else if (forwardArrowKey) {
                 if (listView.currentItem !== null && (listView.currentItem as ItemListDelegate).hasChildren) {
-                    if (itemList.childDialog === null) {
-                        itemList.subMenuForCurrentItem(true);
-                    } else {
-                        windowSystem.forceActive(itemList.childDialog.mainItem); // only for X11; TODO Plasma 6.8: remove
-                        const childListView = itemList.childDialog.mainItem as ItemListView
-                        childListView.forceActiveFocus(Qt.TabFocusReason);
-                        childListView.currentIndex = 0;
-                    }
-                } else if (forwardArrowKey) {
-                    itemList.navigateRightRequested();
-                } else {
-                    event.accepted = false;
+                    openOrFocusSubmenu()
+                    itemList.childDialog.mainItem.currentIndex = 0;
                 }
             }
         }
@@ -254,10 +252,8 @@ PlasmaComponents3.ScrollView {
             }
         }
 
-        Keys.onLeftPressed: event => handleLeftRightArrowEnter(event)
-        Keys.onRightPressed: event => handleLeftRightArrowEnter(event)
-        Keys.onEnterPressed: event => handleLeftRightArrowEnter(event)
-        Keys.onReturnPressed: event => handleLeftRightArrowEnter(event)
+        Keys.onLeftPressed: event => handleLeftRightArrow(event)
+        Keys.onRightPressed: event => handleLeftRightArrow(event)
         Keys.onUpPressed: event => handleUpDownArrow(event)
         Keys.onDownPressed: event => handleUpDownArrow(event)
         Keys.onEscapePressed: itemList.interactionConcluded()

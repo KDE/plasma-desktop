@@ -35,16 +35,20 @@ PlasmaComponents3.ItemDelegate {
     property bool dragActive: false
 
     signal interactionConcluded
+    signal openCategory(bool keyboardInitiated)
 
     text: model.display
     icon.name: decoration
     hoverEnabled: true
 
     action: Kirigami.Action {
-        onTriggered: {
-            if (!item.hasChildren && !item.dragActive) {
+        onTriggered: source => {
+            if (item.dragActive) { return }
+            if (!item.hasChildren) {
                 item.baseModel.trigger(item.index, "", null);
                 item.interactionConcluded()
+            } else {
+                item.openCategory(source instanceof KeyEvent)
             }
         }
     }
@@ -76,14 +80,9 @@ PlasmaComponents3.ItemDelegate {
 
     contentItem: null
 
-    Keys.onReturnPressed: event => {
-        if (!item.hasChildren) {
-            action.trigger()
-        } else {
-            event.accepted = false
-        }
-    }
-    Keys.onEnterPressed: event => item.Keys.returnPressed(event)
+    Keys.onReturnPressed: event => action.trigger(event)
+    Keys.onEnterPressed: event => action.trigger(event)
+    Keys.onSpacePressed: event => action.trigger(event)
     Keys.onMenuPressed: {
         if (item.hasActionList || item.favoriteId !== null) {
             item.openActionMenu()
