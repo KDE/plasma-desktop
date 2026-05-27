@@ -107,17 +107,33 @@ class KCMTest(unittest.TestCase):
         Start/stop the accent color service
         """
         self.driver.find_element(AppiumBy.NAME, "Background Services")
-        self.driver.find_element(AppiumBy.NAME, "Start Accent Color").click()
 
         wait = WebDriverWait(self.driver, 30)
-        stop_button: WebElement = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Stop Accent Color")))
+
+        START_BUTTON_NAME: Final = "Start Accent Color"
+        STOP_BUTTON_NAME: Final = "Stop Accent Color"
+        SERVICE_NAME: Final = "plasma_accentcolor_service"  # The id is from plasma-workspace
 
         session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
-        self.assertIn("plasma_accentcolor_service", loadedModules(session_bus))  # The service id is from plasma-workspace
 
+        # The service has X-KDE-Kded-autoload: true, so it is always loaded when kded is running.
+        # Wait for autoloading to complete, then stop it to get into a known stopped state.
+        wait.until(EC.element_to_be_clickable((AppiumBy.NAME, STOP_BUTTON_NAME))).click()
+        wait.until(EC.element_to_be_clickable((AppiumBy.NAME, START_BUTTON_NAME)))
+        wait.until(lambda _: SERVICE_NAME not in loadedModules(session_bus))
+        self.assertNotIn(SERVICE_NAME, loadedModules(session_bus))
+
+        # Start the service again, and verify it is loaded.
+        wait.until(EC.element_to_be_clickable((AppiumBy.NAME, START_BUTTON_NAME))).click()
+        stop_button: WebElement = wait.until(EC.element_to_be_clickable((AppiumBy.NAME, STOP_BUTTON_NAME)))
+        wait.until(lambda _: SERVICE_NAME in loadedModules(session_bus))
+        self.assertIn(SERVICE_NAME, loadedModules(session_bus))
+
+        # Stop the service again to make sure it can be stopped again after being started.
         stop_button.click()
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Start Accent Color")))
-        self.assertNotIn("plasma_accentcolor_service", loadedModules(session_bus))
+        wait.until(EC.element_to_be_clickable((AppiumBy.NAME, START_BUTTON_NAME)))
+        wait.until(lambda _: SERVICE_NAME not in loadedModules(session_bus))
+        self.assertNotIn(SERVICE_NAME, loadedModules(session_bus))
 
     def test_1_toggle_automatically_loading_service(self) -> None:
         """
