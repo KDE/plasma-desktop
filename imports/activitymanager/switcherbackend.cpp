@@ -30,10 +30,14 @@
 #include <KLocalizedString>
 #include <KWindowInfo>
 #include <KWindowSystem>
+#if HAVE_X11
 #include <KX11Extras>
+#endif
 #include <waylandtasksmodel.h>
 #include <windowtasksmodel.h>
+#if HAVE_X11
 #include <xwindowtasksmodel.h>
+#endif
 
 static const char *s_action_name_next_activity = "next activity";
 static const char *s_action_name_previous_activity = "previous activity";
@@ -443,9 +447,11 @@ void SwitcherBackend::setDropMode(bool value)
 
 bool SwitcherBackend::dragContainsWindows(QMimeData *mimeData) const
 {
+#if HAVE_X11
     if (KWindowSystem::isPlatformX11()) {
         return TaskManager::XWindowTasksModel::winIdsFromMimeData(mimeData).count();
     }
+#endif
     if (KWindowSystem::isPlatformWayland()) {
         return TaskManager::WaylandTasksModel::winIdsFromMimeData(mimeData).count();
     }
