@@ -950,21 +950,19 @@ void FolderModel::rename(int row, const QString &name)
 
     QModelIndex idx = index(row, 0);
     const QString filename = data(idx, UrlRole).toString();
-    Q_EMIT itemAboutToRename(filename);
-    m_dirModel->setData(mapToSource(idx), name, Qt::EditRole);
+    const QString newFilename = QStringLiteral("desktop:/%1").arg(name);
     connect(
-        m_dirModel,
-        &KDirModel::dataChanged,
+        this,
+        &QAbstractItemModel::dataChanged,
         this,
         [=, this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles) {
-            Q_UNUSED(roles)
-            QString newFilename;
-            if (topLeft == bottomRight) {
-                newFilename = data(mapFromSource(topLeft), UrlRole).toString();
-            }
+            Q_UNUSED(roles);
+            Q_UNUSED(topLeft);
+            Q_UNUSED(bottomRight);
             Q_EMIT itemRenamed(filename, newFilename);
         },
         Qt::SingleShotConnection);
+    setData(idx, name, Qt::EditRole);
 }
 
 int FolderModel::fileExtensionBoundary(int row)
