@@ -43,8 +43,4 @@ target_link_libraries(kcm_landingpage PRIVATE
     KF6::Service
 )
 
-if(X11_FOUND)
-    target_link_libraries(kcm_landingpage PRIVATE X11::X11)
-endif()
-
 install(FILES landingpage_kdeglobalssettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
