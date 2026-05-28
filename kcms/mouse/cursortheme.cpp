@@ -7,8 +7,6 @@
 
 #include "cursortheme.h"
 
-#include <config-X11.h>
-
 #include <QFile>
 
 #include <KConfigGroup>
@@ -16,13 +14,10 @@
 
 #include <private/qtx11extras_p.h>
 
-#if HAVE_XCURSOR
 #include <X11/Xcursor/Xcursor.h>
-#endif
 
 void CursorTheme::applyCursorTheme(const QString &theme, int size)
 {
-#if HAVE_XCURSOR
     // Apply the KDE cursor theme to ourselves
     if (!theme.isEmpty()) {
         XcursorSetTheme(QX11Info::display(), QFile::encodeName(theme));
@@ -37,5 +32,4 @@ void CursorTheme::applyCursorTheme(const QString &theme, int size)
     XDefineCursor(QX11Info::display(), DefaultRootWindow(QX11Info::display()), handle);
     XFreeCursor(QX11Info::display(), handle); // Don't leak the cursor
     XFlush(QX11Info::display());
-#endif
 }
