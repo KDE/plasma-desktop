@@ -2,17 +2,19 @@ remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_STRICT_ITERATORS -DQT_NO_CAST_FR
 
 add_subdirectory(libkwindevices)
 
-if(X11_Xkb_FOUND AND XCB_XKB_FOUND)
-    add_subdirectory( keyboard )
-endif()
+if(WITH_X11)
+    if(X11_Xkb_FOUND AND XCB_XKB_FOUND)
+        add_subdirectory( keyboard )
+    endif()
 
-add_subdirectory( access )
+    add_subdirectory( access )
+    add_subdirectory( ksmserver )
+endif()
 add_subdirectory( dateandtime )
 add_subdirectory( ksplash )
 
 add_subdirectory( landingpage )
 add_subdirectory( keys )
-add_subdirectory( ksmserver )
 add_subdirectory( desktoppaths )
 
 if (TARGET SDL2::SDL2)

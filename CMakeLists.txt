@@ -38,10 +38,17 @@ include(ECMConfiguredInstall)
 
 option(BUILD_DOC "Whether to build the documentation" ON)
 option(BUILD_KCM_MOUSE_KWIN_WAYLAND "Build the Mouse KCM's KWin+Wayland backend" ON)
-option(BUILD_KCM_MOUSE_X11 "Build the Mouse KCM's X11 backend" ON)
 option(BUILD_KCM_TOUCHPAD_KWIN_WAYLAND "Build the Touchpad KCM's KWin+Wayland backend" ON)
-option(BUILD_KCM_TOUCHPAD_X11 "Build the Touchpad KCM's X11 backend" ON)
 option(BUILD_KCM_TABLET "Build the Tablet KCM" ON)
+option(WITH_X11 "Build with X11 support (when OFF, disables X11 only features)." ON)
+
+if(WITH_X11)
+    option(BUILD_KCM_MOUSE_X11 "Build the Mouse KCM's X11 backend" ON)
+    option(BUILD_KCM_TOUCHPAD_X11 "Build the Touchpad KCM's X11 backend" ON)
+else()
+    set(BUILD_KCM_MOUSE_X11 OFF)
+    set(BUILD_KCM_TOUCHPAD_X11 OFF)
+endif()
 
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Quick
@@ -188,7 +195,6 @@ find_package(LibTaskManager ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
 find_package(KWinDBusInterface CONFIG REQUIRED)
 find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
 find_package(KRunnerAppDBusInterface CONFIG REQUIRED)
-find_package(KSMServerDBusInterface CONFIG REQUIRED)
 find_package(KF6ItemModels CONFIG REQUIRED)
 find_package(KSysGuard CONFIG REQUIRED)
 find_package(KF6KDED CONFIG REQUIRED)
@@ -200,16 +206,18 @@ set_package_properties(KF6Baloo PROPERTIES
     TYPE RECOMMENDED
 )
 
-find_package(X11)
-set_package_properties(X11 PROPERTIES
-    DESCRIPTION "X11 libraries"
-    URL "https://www.x.org"
-    PURPOSE "Required for building the X11 based workspace"
-    TYPE REQUIRED
-)
-
-if(X11_FOUND)
-  set(HAVE_X11 1)
+if(WITH_X11)
+    find_package(KSMServerDBusInterface CONFIG REQUIRED)
+    find_package(X11)
+    set_package_properties(X11 PROPERTIES
+        DESCRIPTION "X11 libraries"
+        URL "https://www.x.org"
+        PURPOSE "Required for building the X11 based workspace"
+        TYPE REQUIRED
+    )
+    set(HAVE_X11 1)
+    find_package(XCB OPTIONAL_COMPONENTS XKB)
+    add_feature_info("XCB-XKB" XCB_XKB_FOUND "Required for building kcm/keyboard")
 endif()
 
 find_package(UDev)
@@ -224,7 +232,7 @@ find_package(XCB
     REQUIRED COMPONENTS
         XCB SHM IMAGE
     OPTIONAL_COMPONENTS
-        XKB XINPUT ATOM RECORD
+        XINPUT ATOM RECORD
 )
 
 if (BUILD_KCM_TOUCHPAD_X11)
@@ -235,9 +243,7 @@ if (BUILD_KCM_TOUCHPAD_X11)
     )
 endif()
 
-
 set_package_properties(XCB PROPERTIES TYPE REQUIRED)
-add_feature_info("XCB-XKB" XCB_XKB_FOUND "Required for building kcm/keyboard")
 
 pkg_check_modules(XORGLIBINPUT xorg-libinput IMPORTED_TARGET)
 pkg_check_modules(XORGSERVER xorg-server IMPORTED_TARGET)

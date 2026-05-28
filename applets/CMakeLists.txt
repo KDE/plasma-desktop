@@ -16,4 +16,7 @@ endif()
 add_subdirectory(minimizeall)
 add_subdirectory(showdesktop)
 add_subdirectory(kimpanel)
-add_subdirectory(keyboardlayout)
+
+if(WITH_X11)
+   add_subdirectory(keyboardlayout)
+endif()
