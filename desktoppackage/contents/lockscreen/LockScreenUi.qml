@@ -11,6 +11,7 @@ import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.components as PlasmaComponents3
+import org.kde.plasma.private.accessibility
 import org.kde.plasma.workspace.components as PW
 import org.kde.plasma.private.keyboardindicator as KeyboardIndicator
 import org.kde.kirigami as Kirigami
@@ -88,6 +89,10 @@ Item {
 
     SessionManagement {
         id: sessionManagement
+    }
+
+    AccessibilityStatus {
+        id: accessibilityStatus
     }
 
     KeyboardIndicator.KeyState {
@@ -287,6 +292,9 @@ Item {
                     const parts = [];
                     if (capsLockState.locked) {
                         parts.push(i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:status", "Caps Lock is on"));
+                    }
+                    if (accessibilityStatus.slowKeysEnabled) {
+                        parts.push(i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:status", "Slow Keys are enabled"));
                     }
                     if (root.notification) {
                         parts.push(root.notification);
