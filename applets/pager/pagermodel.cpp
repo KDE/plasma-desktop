@@ -9,11 +9,15 @@
 #include "pagermodel.h"
 #include "windowmodel.h"
 
+#include <config-X11.h>
+
 #include <activityinfo.h>
 #include <virtualdesktopinfo.h>
 #include <waylandtasksmodel.h>
 #include <windowtasksmodel.h>
+#if HAVE_X11
 #include <xwindowtasksmodel.h>
+#endif
 
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -24,8 +28,6 @@
 #include <QUuid>
 
 #include <KWindowSystem>
-
-#include <config-X11.h>
 
 #include <PlasmaActivities/Controller>
 
@@ -561,11 +563,14 @@ void PagerModel::drop(QMimeData *mimeData, int modifiers, const QVariant &itemId
 
     bool ok = false;
     QList<QModelIndex> indices;
-    if (KWindowSystem::isPlatformX11()) {
-        indices = findWindows(TaskManager::XWindowTasksModel::winIdsFromMimeData(mimeData, &ok));
-    } else if (KWindowSystem::isPlatformWayland()) {
+    if (KWindowSystem::isPlatformWayland()) {
         indices = findWindows(TaskManager::WaylandTasksModel::winIdsFromMimeData(mimeData, &ok));
     }
+#if HAVE_X11
+    else if (KWindowSystem::isPlatformX11()) {
+        indices = findWindows(TaskManager::XWindowTasksModel::winIdsFromMimeData(mimeData, &ok));
+    }
+#endif
     if (!ok) {
         return;
     }
