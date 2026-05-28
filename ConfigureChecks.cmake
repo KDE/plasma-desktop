@@ -22,6 +22,3 @@ check_include_files("sys/types.h;sys/statfs.h" HAVE_SYS_STATFS_H)
 check_include_files(unistd.h HAVE_UNISTD_H)
 
 set(CMAKE_EXTRA_INCLUDE_FILES sys/socket.h)
-
-set(CMAKE_REQUIRED_INCLUDES ${X11_Xrandr_INCLUDE_PATH}/Xrandr.h)
-set(CMAKE_REQUIRED_LIBRARIES ${X11_Xrandr_LIB})
