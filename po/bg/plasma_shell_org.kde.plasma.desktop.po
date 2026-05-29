@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022-2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-29 00:47+0000\n"
-"PO-Revision-Date: 2026-04-03 00:56+0200\n"
+"PO-Revision-Date: 2026-05-28 13:55+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
@@ -380,7 +380,7 @@ msgstr "Разделител"
 #, kde-format
 msgctxt "@action:menu add a margins separator"
 msgid "Margins Separator"
-msgstr ""
+msgstr "Разделител на полета"
 
 #: contents/configuration/PanelConfiguration.qml:140
 #, kde-format
@@ -777,9 +777,7 @@ msgid "Unsupported Widget"
 msgstr "Неподдържан уиджет"
 
 #: contents/explorer/AppletDelegate.qml:196
-#, fuzzy, kde-format
-#| msgctxt "Text displayed on top of newly installed widgets"
-#| msgid "New!"
+#, kde-format
 msgctxt "Text displayed on top of newly-installed widgets"
 msgid "New!"
 msgstr "Ново!"
@@ -1074,9 +1072,3 @@ msgstr "Излизане от режим на редактиране"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Индикатор за фокус на панела"
-
-#~ msgid "Configure activity"
-#~ msgstr "Конфигурирайте дейност"
-
-#~ msgid "Delete"
-#~ msgstr "Изтриване"

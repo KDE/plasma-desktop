@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022-2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-14 00:45+0000\n"
-"PO-Revision-Date: 2026-01-19 21:48+0100\n"
+"PO-Revision-Date: 2026-05-28 13:59+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: code/tools.js:53
 #, kde-format
@@ -64,7 +64,7 @@ msgstr "Избиране…"
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr ""
+msgstr "Възстановяване на стандартната икона"
 
 #: ConfigGeneral.qml:161
 #, kde-format
@@ -121,12 +121,10 @@ msgid "Show icons on the root level of the menu"
 msgstr "Показване на икони на основното ниво на менюто"
 
 #: ConfigGeneral.qml:198
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
-msgstr "Често използвани приложения"
+msgstr "Маркиране на новоинсталирани приложения"
 
 #: ConfigGeneral.qml:208
 #, kde-format
@@ -159,20 +157,16 @@ msgid "Often used files"
 msgstr "Често използвани файлове"
 
 #: ConfigGeneral.qml:227
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Recent files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent places"
-msgstr "Скоро отваряни файлове"
+msgstr "Скорошни места"
 
 #: ConfigGeneral.qml:228
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used places"
-msgstr "Често използвани файлове"
+msgstr "Често използвани места"
 
 #: ConfigGeneral.qml:234
 #, kde-format
@@ -244,27 +238,25 @@ msgstr "Предпочитани"
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Ново!"
 
 #: DashboardRepresentation.qml:951 ItemListDelegate.qml:98
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
-msgstr ""
+msgstr "В тази категория има новоинсталирано приложение"
 
 #: ItemGridDelegate.qml:81
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Ново!"
 
 #: ItemGridDelegate.qml:83
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
-msgstr "Често използвани приложения"
+msgstr "Новоинсталирано приложение"
 
 #: ItemListDelegate.qml:40
 #, kde-format
@@ -279,12 +271,10 @@ msgid "Launch"
 msgstr "Стартиране"
 
 #: ItemListDelegate.qml:99
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
-msgstr "Често използвани приложения"
+msgstr "Новоинсталирано приложение"
 
 #: main.qml:208
 #, kde-format
@@ -303,7 +293,3 @@ msgstr "Предпочитани"
 msgctxt "@info:status"
 msgid "No matches"
 msgstr "Няма съвпадения"
-
-#~ msgctxt "@item:inmenu Reset icon to default"
-#~ msgid "Clear Icon"
-#~ msgstr "Изчистване на икона"

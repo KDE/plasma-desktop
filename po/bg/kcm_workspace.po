@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022-2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-23 00:46+0000\n"
-"PO-Revision-Date: 2026-04-03 01:10+0200\n"
+"PO-Revision-Date: 2026-05-28 13:58+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -96,11 +96,7 @@ msgid "Clicking in scrollbar track:"
 msgstr "Кликване в лентата за превъртане:"
 
 #: ui/main.qml:95
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
-#| "scrolls to the clicked location'"
-#| msgid "Scrolls to the clicked location"
+#, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
 "the clicked location'"
@@ -114,11 +110,7 @@ msgid "Middle-click to scroll to clicked location"
 msgstr "Кликване със среден бутон за превъртане до избраното място"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
-#| "scrolls one page up or down'"
-#| msgid "Scrolls one page up or down"
+#, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
 "page up or down'"
@@ -295,29 +287,19 @@ msgid "Enable Tablet Mode:"
 msgstr "Включване на таблетен режим:"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio As in: 'Tablet Mode is automatically enabled as needed'"
-#| msgid "Automatically enable as needed"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Автоматично активиране при необходимост"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgctxt "option:radio As in: 'Tablet Mode is never enabled'"
-#| msgid "Never enabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Без активиране"
 
 #: ui/main.qml:365
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
-#| msgid ""
-#| "Tablet Mode will be automatically activated whenever the system detects a "
-#| "touchscreen but no mouse or touchpad. For example: when a transformable "
-#| "laptop's keyboard is flipped around or detached."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Tablet Mode will be automatically enabled whenever the system detects a "
@@ -329,9 +311,7 @@ msgstr ""
 "трансформиращ се лаптоп е обърната или отделена."
 
 #: ui/main.qml:371
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Tablet Mode is always enabled'"
-#| msgid "Always active"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Винаги активиран"
@@ -438,11 +418,3 @@ msgstr "Показване на екранен символ при промян�
 #, kde-format
 msgid "Show a popup on layout changes"
 msgstr "Показване на изскачащо съобщение при промяна на оформлението"
-
-#~ msgctxt "@info:usagetip"
-#~ msgid ""
-#~ "In Touch Mode, many elements of the user interface will become larger to "
-#~ "more easily accommodate touch interaction."
-#~ msgstr ""
-#~ "В режим на таблет много елементи на потребителския интерфейс се "
-#~ "уголемяват за по-лесно адаптиране на действията с докосване."

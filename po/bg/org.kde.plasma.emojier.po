@@ -1,20 +1,20 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2025, 2026 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022-2023, 2025-2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-13 00:47+0000\n"
-"PO-Revision-Date: 2026-01-29 22:56+0100\n"
+"PO-Revision-Date: 2026-05-28 13:57+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 26.04.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: app/emojier.cpp:43 app/emojier.cpp:45
@@ -48,7 +48,7 @@ msgstr "Заменяне на съществуваща инстанция"
 #, kde-format
 msgctxt "@action Search field action"
 msgid "Search"
-msgstr ""
+msgstr "Търсене"
 
 #: app/ui/CategoryPage.qml:100
 #, kde-format
@@ -57,13 +57,10 @@ msgid "Clear History"
 msgstr "Изчистване на историята"
 
 #: app/ui/CategoryPage.qml:106
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@action:button Button to open a menu that lets you choose a skin tone"
-#| msgid "Skin tone:"
+#, kde-format
 msgctxt "@action:button Button to open a menu that lets you choose a skin tone"
 msgid "Skin tone: %1"
-msgstr "Тен на кожата"
+msgstr "Тен на кожата: %1"
 
 #: app/ui/CategoryPage.qml:137
 #, kde-format
