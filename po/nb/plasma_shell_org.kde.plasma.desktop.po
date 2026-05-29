@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:45+0000\n"
+"POT-Creation-Date: 2026-05-29 00:45+0000\n"
 "PO-Revision-Date: 2026-03-03 11:59+0100\n"
 "Last-Translator: Kjetil Sorlund <translate@sorlund.no>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -953,43 +953,49 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Vis under opplåsingsvindu"
 
-#: contents/lockscreen/LockScreenUi.qml:50
+#: contents/lockscreen/LockScreenUi.qml:51
 #, kde-format
 msgctxt "@info:status"
 msgid "Unlocking failed"
 msgstr "Klarte ikke låse opp"
 
-#: contents/lockscreen/LockScreenUi.qml:289
+#: contents/lockscreen/LockScreenUi.qml:294
 #, kde-format
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "«Caps Lock» er på"
 
-#: contents/lockscreen/LockScreenUi.qml:308
+#: contents/lockscreen/LockScreenUi.qml:297
+#, kde-format
+msgctxt "@info:status"
+msgid "Slow Keys are enabled"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:316
 #, kde-format
 msgctxt "@action:button"
 msgid "Slee&p"
 msgstr "&Hvilemodus"
 
-#: contents/lockscreen/LockScreenUi.qml:314
+#: contents/lockscreen/LockScreenUi.qml:322
 #, kde-format
 msgctxt "@action:button"
 msgid "&Hibernate"
 msgstr "&Dvalemodus"
 
-#: contents/lockscreen/LockScreenUi.qml:320
+#: contents/lockscreen/LockScreenUi.qml:328
 #, kde-format
 msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "Bytt &bruker"
 
-#: contents/lockscreen/LockScreenUi.qml:381
+#: contents/lockscreen/LockScreenUi.qml:389
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Virtuelt tastatur"
 
-#: contents/lockscreen/LockScreenUi.qml:405
+#: contents/lockscreen/LockScreenUi.qml:413
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

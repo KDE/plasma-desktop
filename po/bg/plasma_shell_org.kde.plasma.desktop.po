@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022-2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:45+0000\n"
-"PO-Revision-Date: 2026-04-03 00:56+0200\n"
+"POT-Creation-Date: 2026-05-29 00:45+0000\n"
+"PO-Revision-Date: 2026-05-28 13:55+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
@@ -380,7 +380,7 @@ msgstr "Разделител"
 #, kde-format
 msgctxt "@action:menu add a margins separator"
 msgid "Margins Separator"
-msgstr ""
+msgstr "Разделител на полета"
 
 #: contents/configuration/PanelConfiguration.qml:140
 #, kde-format
@@ -777,9 +777,7 @@ msgid "Unsupported Widget"
 msgstr "Неподдържан уиджет"
 
 #: contents/explorer/AppletDelegate.qml:196
-#, fuzzy, kde-format
-#| msgctxt "Text displayed on top of newly installed widgets"
-#| msgid "New!"
+#, kde-format
 msgctxt "Text displayed on top of newly-installed widgets"
 msgid "New!"
 msgstr "Ново!"
@@ -955,43 +953,49 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Показване под полето за отключване"
 
-#: contents/lockscreen/LockScreenUi.qml:50
+#: contents/lockscreen/LockScreenUi.qml:51
 #, kde-format
 msgctxt "@info:status"
 msgid "Unlocking failed"
 msgstr "Отключването е неуспешно"
 
-#: contents/lockscreen/LockScreenUi.qml:289
+#: contents/lockscreen/LockScreenUi.qml:294
 #, kde-format
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "Клавишът \"Caps Lock\" е натиснат"
 
-#: contents/lockscreen/LockScreenUi.qml:308
+#: contents/lockscreen/LockScreenUi.qml:297
+#, kde-format
+msgctxt "@info:status"
+msgid "Slow Keys are enabled"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:316
 #, kde-format
 msgctxt "@action:button"
 msgid "Slee&p"
 msgstr "Приспи&ване"
 
-#: contents/lockscreen/LockScreenUi.qml:314
+#: contents/lockscreen/LockScreenUi.qml:322
 #, kde-format
 msgctxt "@action:button"
 msgid "&Hibernate"
 msgstr "&Хибернация"
 
-#: contents/lockscreen/LockScreenUi.qml:320
+#: contents/lockscreen/LockScreenUi.qml:328
 #, kde-format
 msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "П&ревключване на потребител"
 
-#: contents/lockscreen/LockScreenUi.qml:381
+#: contents/lockscreen/LockScreenUi.qml:389
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Виртуална клавиатура"
 
-#: contents/lockscreen/LockScreenUi.qml:405
+#: contents/lockscreen/LockScreenUi.qml:413
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

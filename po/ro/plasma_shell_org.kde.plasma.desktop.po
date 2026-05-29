@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:45+0000\n"
+"POT-Creation-Date: 2026-05-29 00:45+0000\n"
 "PO-Revision-Date: 2026-05-17 15:22+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -961,43 +961,49 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Arată sub dialogul de deblocare"
 
-#: contents/lockscreen/LockScreenUi.qml:50
+#: contents/lockscreen/LockScreenUi.qml:51
 #, kde-format
 msgctxt "@info:status"
 msgid "Unlocking failed"
 msgstr "Deblocare eșuată"
 
-#: contents/lockscreen/LockScreenUi.qml:289
+#: contents/lockscreen/LockScreenUi.qml:294
 #, kde-format
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "Caps Lock e activ"
 
-#: contents/lockscreen/LockScreenUi.qml:308
+#: contents/lockscreen/LockScreenUi.qml:297
+#, kde-format
+msgctxt "@info:status"
+msgid "Slow Keys are enabled"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:316
 #, kde-format
 msgctxt "@action:button"
 msgid "Slee&p"
 msgstr "A&dormi"
 
-#: contents/lockscreen/LockScreenUi.qml:314
+#: contents/lockscreen/LockScreenUi.qml:322
 #, kde-format
 msgctxt "@action:button"
 msgid "&Hibernate"
 msgstr "&Hibernează"
 
-#: contents/lockscreen/LockScreenUi.qml:320
+#: contents/lockscreen/LockScreenUi.qml:328
 #, kde-format
 msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "Schimbă &utilizatorul"
 
-#: contents/lockscreen/LockScreenUi.qml:381
+#: contents/lockscreen/LockScreenUi.qml:389
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Tastatură virtuală"
 
-#: contents/lockscreen/LockScreenUi.qml:405
+#: contents/lockscreen/LockScreenUi.qml:413
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

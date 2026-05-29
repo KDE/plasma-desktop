@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:45+0000\n"
+"POT-Creation-Date: 2026-05-29 00:45+0000\n"
 "PO-Revision-Date: 2025-10-12 17:37+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -1066,48 +1066,54 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "näytä lukituksen avauskehotteen alla"
 
-#: contents/lockscreen/LockScreenUi.qml:50
+#: contents/lockscreen/LockScreenUi.qml:51
 #, fuzzy, kde-format
 #| msgid "Unlocking failed"
 msgctxt "@info:status"
 msgid "Unlocking failed"
 msgstr "Lukituksen avaaminen epäonnistui"
 
-#: contents/lockscreen/LockScreenUi.qml:289
+#: contents/lockscreen/LockScreenUi.qml:294
 #, fuzzy, kde-format
 #| msgid "Caps Lock is on"
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "Vaihtolukko on käytössä"
 
-#: contents/lockscreen/LockScreenUi.qml:308
+#: contents/lockscreen/LockScreenUi.qml:297
+#, kde-format
+msgctxt "@info:status"
+msgid "Slow Keys are enabled"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:316
 #, fuzzy, kde-format
 #| msgid "Slee&p"
 msgctxt "@action:button"
 msgid "Slee&p"
 msgstr "&Valmiustila"
 
-#: contents/lockscreen/LockScreenUi.qml:314
+#: contents/lockscreen/LockScreenUi.qml:322
 #, fuzzy, kde-format
 #| msgid "&Hibernate"
 msgctxt "@action:button"
 msgid "&Hibernate"
 msgstr "L&epotila"
 
-#: contents/lockscreen/LockScreenUi.qml:320
+#: contents/lockscreen/LockScreenUi.qml:328
 #, fuzzy, kde-format
 #| msgid "Switch &User"
 msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "Vai&hda käyttäjää"
 
-#: contents/lockscreen/LockScreenUi.qml:381
+#: contents/lockscreen/LockScreenUi.qml:389
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Näyttönäppäimistö"
 
-#: contents/lockscreen/LockScreenUi.qml:405
+#: contents/lockscreen/LockScreenUi.qml:413
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:45+0000\n"
+"POT-Creation-Date: 2026-05-29 00:45+0000\n"
 "PO-Revision-Date: 2026-04-17 02:56-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -959,43 +959,49 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Mostrar sob o prompt de desbloqueio"
 
-#: contents/lockscreen/LockScreenUi.qml:50
+#: contents/lockscreen/LockScreenUi.qml:51
 #, kde-format
 msgctxt "@info:status"
 msgid "Unlocking failed"
 msgstr "Desbloqueio falhou"
 
-#: contents/lockscreen/LockScreenUi.qml:289
+#: contents/lockscreen/LockScreenUi.qml:294
 #, kde-format
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "Caps lock está ativado"
 
-#: contents/lockscreen/LockScreenUi.qml:308
+#: contents/lockscreen/LockScreenUi.qml:297
+#, kde-format
+msgctxt "@info:status"
+msgid "Slow Keys are enabled"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:316
 #, kde-format
 msgctxt "@action:button"
 msgid "Slee&p"
 msgstr "Sus&pender"
 
-#: contents/lockscreen/LockScreenUi.qml:314
+#: contents/lockscreen/LockScreenUi.qml:322
 #, kde-format
 msgctxt "@action:button"
 msgid "&Hibernate"
 msgstr "&Hibernar"
 
-#: contents/lockscreen/LockScreenUi.qml:320
+#: contents/lockscreen/LockScreenUi.qml:328
 #, kde-format
 msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "Alternar &usuário"
 
-#: contents/lockscreen/LockScreenUi.qml:381
+#: contents/lockscreen/LockScreenUi.qml:389
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Teclado virtual"
 
-#: contents/lockscreen/LockScreenUi.qml:405
+#: contents/lockscreen/LockScreenUi.qml:413
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
