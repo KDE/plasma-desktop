@@ -437,7 +437,9 @@ PlasmaCore.ToolTipArea {
                 } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleGrouping) {
                     tasksModel.requestToggleGrouping(modelIndex());
                 } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.BringToCurrentDesktop) {
-                    tasksModel.requestVirtualDesktops(modelIndex(), [virtualDesktopInfo.currentDesktopByScreenGeometry(tasksModel.data(modelIndex(), TaskManager.AbstractTasksModel.ScreenGeometry))]);
+                    TaskManagerApplet.TaskTools.foreachChildTask((childIndex) => {
+                        tasksModel.requestVirtualDesktops(childIndex, [virtualDesktopInfo.currentDesktopByScreenGeometry(tasksModel.data(childIndex, TaskManager.AbstractTasksModel.ScreenGeometry))]);
+                    }, modelIndex(), tasksModel);
                 }
             } else if (button === Qt.BackButton || button === Qt.ForwardButton) {
                 const playerData = mpris2Source.playerForLauncherUrl(task.model.LauncherUrlWithoutIcon, task.model.AppPid);
