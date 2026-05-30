@@ -60,9 +60,9 @@
 </authorgroup>
 
 <date
->2021-04-08</date>
+>2026-05-10</date>
 <releaseinfo
->Plasma 5.20</releaseinfo>
+>Plasma 6.6</releaseinfo>
 
 <keywordset>
 <keyword
@@ -90,9 +90,13 @@
 >Este módulo está diseñado para ayudar a los usuarios que tienen dificultades auditivas, o que tienen dificultades utilizando el teclado. </para>
 
 <para
->El módulo está dividido en seis pestañas: <link linkend="access-bell"
+>El módulo está dividido en diez pestañas: <link linkend="access-zoom"
 ><guilabel
->Timbre</guilabel
+>Ampliación y lupa</guilabel
+></link
+>,<link linkend="access-bell"
+><guilabel
+>Timbre del sistema</guilabel
 ></link
 >, <link linkend="access-modifier-keys"
 ><guilabel
@@ -100,26 +104,293 @@
 ></link
 >, <link linkend="access-keyboard-filters"
 ><guilabel
->Filtros del teclado</guilabel
-></link
->, <link linkend="access-activation-gestures"
-><guilabel
->Gestos de activación</guilabel
+>Filtros de teclado</guilabel
 ></link
 >, <link linkend="mouse-navigation"
 ><guilabel
 >Navegación con el ratón</guilabel
 ></link
-> y <link linkend="access-screenreader"
+>, <link linkend="access-activation-shortcuts"
+><guilabel
+>Atajos de teclado de activación</guilabel
+></link
+>, <link linkend="access-screenreader"
 ><guilabel
 >Lector de pantalla</guilabel
 ></link
+>, <link linkend="access-color-blindness"
+><guilabel
+>Corrección para daltonismo</guilabel
+></link
+>, <link linkend="access-invert"
+><guilabel
+>Invertir</guilabel
+></link
+> y <link linkend="access-shake-pointer"
+><guilabel
+>Sacudir el puntero</guilabel
+></link
 >. </para>
+
+
+<sect3 id="access-zoom">
+<title
+><guilabel
+>Ampliación y lupa</guilabel
+></title>
+
+<para
+>Las herramientas de «Ampliación y lupa» de KDE Plasma se han diseñado para agrandar porciones de la pantalla, actuando como una lupa digital. Aunque ambas comparten el objetivo de hacer más legibles el texto pequeño y los detalles finos, ofrecen dos modos distintos de interacción con el entorno de escritorio. </para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Ampliación</guilabel
+></term>
+<listitem>
+<para
+>Aquí se puede cambiar entre los modos <guilabel
+>Pantalla completa</guilabel
+> y <guilabel
+>Aumentar región</guilabel
+>. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Pantalla completa</guilabel
+></term>
+<listitem>
+<para
+>Activar el modo a pantalla completa. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Mostrar cuadrícula de píxeles en el nivel de ampliación</guilabel
+></term>
+<listitem>
+<para
+>Proporciona una capa visual superpuesta con los píxeles individuales que componen la imagen de la pantalla en cuanto se alcanza una ampliación lo suficientemente alta. Si se activa, &plasma; dibuja una delgada cuadrícula alrededor de cada píxel para que sea visible con exactitud dónde termina uno y empieza el siguiente. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Aspecto del puntero</guilabel
+></term>
+<listitem>
+<para
+>Controla el aspecto del puntero del ratón cuando de amplía. Existen varias opciones: <guilabel
+>Escalar</guilabel
+>, <guilabel
+>Conservar</guilabel
+> y <guilabel
+>Ocultar</guilabel
+>. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Seguimiento del puntero</guilabel
+></term>
+<listitem>
+<para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Proporcional</guilabel
+></term>
+<listitem>
+<para
+>El área ampliada se mueve en sincronía con el puntero. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Centrado</guilabel
+></term>
+<listitem>
+<para
+>El puntero permanece centrado en la pantalla, excepto cuando está cerca de los bordes de la pantalla. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Centrado (estricto)</guilabel
+></term>
+<listitem>
+<para
+>El puntero permanece centrado en la pantalla, incluso cuando está cerca de los bordes de la pantalla. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Empujar</guilabel
+></term>
+<listitem>
+<para
+>El puntero empuja el área ampliada en los bordes de la pantalla. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Desactivado</guilabel
+></term>
+<listitem>
+<para
+>El área ampliada no sigue al puntero. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Mejorar la nitidez del contenido de la pantalla al ampliar</guilabel
+></term>
+<listitem>
+<para
+>Si se activa, &kwin; usará reconocimiento de patrones para intentar escalar la forma del texto o de los iconos del espacio de trabajo en niveles extremos de ampliación. Esto ayudaría a mejorar el contraste general del texto a costa de la precisión de la fuente, evitando la borrosidad o la pixelación. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Activar seguimiento del foco</guilabel
+></term>
+<listitem>
+<para
+>Garantiza que la vista ampliada siga automáticamente la parte «activa» de la interfaz, incluso si el ratón no se mueve. Mientras que la ampliación estándar suele seguir el cursor del ratón, el seguimiento del foco monitoriza el foco del sistema (el cursor de texto o el elemento de la interfaz de usuario seleccionado). </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Activar seguimiento del cursor de texto</guilabel
+></term>
+<listitem>
+<para
+>Permite que las herramientas de ampliación del sistema sigan el cursor de texto en lugar del puntero del ratón. En entornos técnicos (ya sea escribiendo código, creando el borrador de un manuscrito o rellenando formularios complejos), el foco suele estar donde se está escribiendo, que puede estar bastante lejos de donde descansa el puntero del ratón. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Aumentar región</guilabel
+></term>
+<listitem>
+<para
+>Activar el modo de ampliación de región. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Anchura</guilabel
+></term>
+<listitem>
+<para
+>Permite configurar la anchura del área ampliada. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Altura</guilabel
+></term>
+<listitem>
+<para
+>Permite configurar la altura del área ampliada. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Desactivado</guilabel
+></term>
+<listitem>
+<para
+>Desactivar los modos de escalado. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Factor de ampliación</guilabel
+></term>
+<listitem>
+<para
+>Ajusta cuánto se agranda la pantalla con cada paso (por ejemplo, 1,20 o 2,00 veces). &plasma; es compatible con niveles de ampliación extremos (de hasta 100 veces), que es significativamente más alto que en otros sistemas operativos. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Teclas modificadoras del gesto de desplazamiento</guilabel
+></term>
+<listitem>
+<para
+>Permite realizar acciones de desplazamiento usando una combinación de teclas del teclado y movimientos del ratón, en lugar de usar una rueda de desplazamiento física. </para>
+<para
+>Esto resulta especialmente útil para los usuarios que usan «trackballs», dispositivos apuntadores especializados sin ruedas o para los que sufren de algún tipo de impedimento motriz que les dificulte usar una rueda de desplazamiento. </para>
+<note>
+<para
+>Los gestos de desplazamiento de la ampliación solo están disponibles en Wayland. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Desplazar para ampliar mientras están pulsadas las teclas modificadoras</guilabel
+></term>
+<listitem>
+<para
+>Cuando esta opción está activada, se puede mantener pulsada una determinada tecla (normalmente la tecla &Meta;) y girar la rueda del ratón (o usar desplazamiento con dos dedos en el panel táctil) para aumentar o disminuir dinámicamente la ampliación de todo el escritorio. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Configurar atajos de teclado…</guilabel
+></term>
+<listitem>
+<para
+>Usar atajos de teclado para controlar la ampliación. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect3>
 
 <sect3 id="access-bell">
 <title
 ><guilabel
->Timbre</guilabel
+>Timbre del sistema</guilabel
 ></title>
 
 <para
@@ -334,83 +605,6 @@ Use system bell whenever a key is rejected
 
 </sect3>
 
-<sect3 id="access-activation-gestures">
-<title
-><guilabel
->Gestos de activación</guilabel
-></title>
-
-<para
->Hay dos secciones en este panel.</para>
-
-<variablelist>
-<varlistentry>
-<term
-><guilabel
->Gestos de activación</guilabel
-> con estas opciones:</term>
-<listitem>
-<para>
-<simplelist>
-<member
-><guilabel
->Usar gestos para activar teclas adhesivas y teclas lentas</guilabel
-></member>
-<member
->Aquí, puede activar gestos de teclado que activan las siguientes funcionalidades:</member>
-<member
->Teclas del ratón: pulse &Shift;+BloqNúm</member>
-<member
->Teclas adhesivas: pulse la tecla &Shift; cinco veces consecutivas</member>
-<member
->Teclas lentas: mantenga pulsada la tecla &Shift; durante 8 segundos</member>
-<member
-><guilabel
->Desactivar las teclas adhesivas y las teclas lentas tras cierto periodo de inactividad</guilabel
-></member>
-</simplelist>
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><guilabel
->Notificación</guilabel
-> con estas opciones:</term>
-<listitem>
-<para>
-<simplelist>
-<member
-><guilabel
->Usar el timbre del sistema cuando se active o desactive una función de accesibilidad del teclado</guilabel
-></member>
-
-<member
-><guilabel
->Mostrar un diálogo de confirmación cuando se active o desactive una función de accesibilidad del teclado</guilabel
-></member>
-<member
->Si esta opción está marcada, &kde; mostrará un diálogo de configuración cada vez que se active o desactive una característica de accesibilidad.</member>
-<member
->Asegúrese de que sabe lo que hace cuando desactiva esta opción, ya que entonces las preferencias de accesibilidad del teclado se aplicarán sin confirmación.</member>
-
-<member
-><guilabel
->Utilizar el mecanismo de notificación del sistema de &kde; cada vez que una funcionalidad de accesibilidad de teclado se active o desactive.</guilabel
-></member>
-</simplelist>
-</para>
-</listitem>
-</varlistentry>
-</variablelist>
-<para
->Pulse el botón <guibutton
->Configurar notificaciones</guibutton
-> para abrir un diálogo que le permita editar las notificaciones para los cambios de estado de todas las teclas.</para>
-
-</sect3>
-
 <sect3 id="mouse-navigation">
 <title
 >Navegación con el ratón</title>
@@ -508,6 +702,83 @@ Use system bell whenever a key is rejected
 
 </sect3>
 
+<sect3 id="access-activation-shortcuts">
+<title
+><guilabel
+>Atajos de teclado de activación</guilabel
+></title>
+
+<para
+>Hay dos secciones en este panel.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Gestos de activación</guilabel
+> con estas opciones:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Usar gestos para activar teclas adhesivas y teclas lentas</guilabel
+></member>
+<member
+>Aquí, puede activar gestos de teclado que activan las siguientes funcionalidades:</member>
+<member
+>Teclas del ratón: pulse &Shift;+BloqNúm</member>
+<member
+>Teclas adhesivas: pulse la tecla &Shift; cinco veces consecutivas</member>
+<member
+>Teclas lentas: mantenga pulsada la tecla &Shift; durante 8 segundos</member>
+<member
+><guilabel
+>Desactivar las teclas adhesivas y las teclas lentas tras cierto periodo de inactividad</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Notificación</guilabel
+> con estas opciones:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Usar el timbre del sistema cuando se active o desactive una función de accesibilidad del teclado</guilabel
+></member>
+
+<member
+><guilabel
+>Mostrar un diálogo de confirmación cuando se active o desactive una función de accesibilidad del teclado</guilabel
+></member>
+<member
+>Si esta opción está marcada, &kde; mostrará un diálogo de configuración cada vez que se active o desactive una característica de accesibilidad.</member>
+<member
+>Asegúrese de que sabe lo que hace cuando desactiva esta opción, ya que entonces las preferencias de accesibilidad del teclado se aplicarán sin confirmación.</member>
+
+<member
+><guilabel
+>Utilizar el mecanismo de notificación del sistema de &kde; cada vez que una funcionalidad de accesibilidad de teclado se active o desactive.</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Pulse el botón <guibutton
+>Configurar notificaciones</guibutton
+> para abrir un diálogo que le permita editar las notificaciones para los cambios de estado de todas las teclas.</para>
+
+</sect3>
+
 <sect3 id="access-screenreader">
 <title
 ><guilabel
@@ -542,6 +813,155 @@ Use system bell whenever a key is rejected
 >F1</keycap
 ></keycombo
 >). Cuando pulse este atajo, el menú debería abrirse y poderse leer al navegar por el menú con las teclas de las flechas. </para>
+</sect3>
+
+<sect3 id="access-color-blindness">
+<title
+><guilabel
+>Corrección para daltonismo</guilabel
+></title>
+
+<para
+>Es una herramienta de accesibilidad diseñada para ayudar a los usuarios con problemas de visión del color a distinguir mejor los colores de la pantalla. </para>
+<para
+>Al contrario de los filtros sencillos que cambian el «aspecto» del escritorio, esta función usa <ulink url="https://es.wikipedia.org/wiki/Daltonismo"
+>algoritmos de daltonismo</ulink
+>. Estos algoritmos desplazan las frecuencias de colores problemáticas a otras partes del espectro que el usuario puede distinguir con más claridad, ayudando a restaurar el contraste que de otra forma se perdería. </para>
+<para
+>Objetivos principales: </para>
+<itemizedlist>
+<listitem>
+<para
+>Muchas interfaces usan el color para transmitir información (por ejemplo, verde para «éxito» y rojo para «error»). Para una persona con protanopia o deuteranopia, estos colores pueden parecer idénticos. El panel de corrección modifica estos colores para que la distinción sea visible. </para>
+</listitem>
+<listitem>
+<para
+>Garantiza que los botones, los gráficos y el texto resaltado sean legibles, independientemente de la paleta de colores del diseño original. </para>
+</listitem>
+<listitem>
+<para
+>Dado que se gestiona a nivel del compositor (&kwin;), la corrección se aplica a todo: navegadores web, software de ingeniería especializado, vídeos y la propia interfaz de escritorio. </para>
+</listitem>
+</itemizedlist>
+<para
+>El panel suele ofrecer ajustes para los tres tipos principales de daltonismo: </para>
+<itemizedlist>
+<listitem>
+<para
+>Protanopia: ceguera al rojo (dificultad para ver la luz roja). </para>
+</listitem>
+<listitem>
+<para
+>Deuteranopia: ceguera al verde (la forma más común). </para>
+</listitem>
+<listitem>
+<para
+>Tritanopia: ceguera al azul (más rara, dificultad para distinguir el azul del amarillo). </para>
+</listitem>
+</itemizedlist>
+<para
+>La selección <guilabel
+>Colores problemáticos</guilabel
+>: Seleccione el tipo específico de deficiencia. </para>
+<para
+>El deslizador <guilabel
+>Intensidad</guilabel
+>: Esta es la parte más importante del panel. Permite ajustar la intensidad del cambio. Como la visión del color es un espectro, un filtro universal rara vez funciona; el deslizador permite ajustar con precisión la corrección a su visión. </para>
+<note>
+<para
+>Estos filtros están diseñados para mejorar la accesibilidad, no para trabajos que requieran una reproducción cromática precisa, como la edición fotográfica profesional o la pintura digital. Como modifican el espectro de color para hacerlo más legible, los colores de la pantalla ya no coincidirán con los códigos hexadecimales o valores de impresión originales de los archivos que esté visualizando. </para>
+</note>
+<para
+>Se puede controlar el resultado usando las muestras de <guilabel
+>Colores ajustados</guilabel
+>. </para>
+</sect3>
+
+<sect3 id="access-invert">
+<title
+><guilabel
+>Invertir</guilabel
+></title>
+
+<para
+>Este panel configura una herramienta para invertir los valores de color de la pantalla: los píxeles blancos se convierten en negros, los azules en naranjas, etc. El gestor de ventanas &kwin; se encarga de esto como un efecto de posprocesamiento. </para>
+<para
+>Aunque pueda parecer un filtro de fotos «negativo», sus propósito principal es más funcional que estético: </para>
+<para
+>Para los usuarios con deficiencias visuales específicas, como fotofobia (sensibilidad a la luz) o ciertos tipos de baja visión, una pantalla brillante estándar puede causar dolor físico o hacer que el texto aparezca borroso debido a la «fuga de luz». </para>
+<para
+>Al invertir la pantalla, los fondos brillantes se vuelven oscuros y el texto oscuro se vuelve claro, lo que reduce significativamente la cantidad de luz emitida por el monitor, manteniendo al mismo tiempo el contraste necesario para la lectura. </para>
+<para
+>Si bien la mayoría de las aplicaciones modernas tienen modos oscuros nativos, algunos programas más antiguos o determinadas páginas web tienen fondos blancos preprogramados. </para>
+<para
+>La herramienta «Invertir» funciona como un «modo oscuro universal». Si una aplicación no admite un tema oscuro, se puede forzar la inversión de los colores para proteger los ojos durante las sesiones de trabajo nocturnas. </para>
+<para
+>Puedes activar la inversión usando la casilla <guilabel
+>Invertir</guilabel
+> y <guibutton
+>Configurar atajos de teclado…</guibutton
+> para esta acción. </para>
+</sect3>
+
+<sect3 id="access-shake-pointer">
+<title
+><guilabel
+>Sacudir el puntero</guilabel
+></title>
+
+<para
+>En el entorno de escritorio &plasma;, <guilabel
+>Sacudir el puntero</guilabel
+> (también conocido coloquialmente como «Sacudir para encontrar») es una función de accesibilidad y productividad diseñada para resolver el problema del «cursor perdido». </para>
+<para
+>Cuando se usa una configuración con varios monitores, una pantalla con resolución muy alta o se tiene un fondo de pantalla oscuro, resulta extraordinariamente fácil perder el rastro de dónde está el cursor. El propósito de esta función es proporcionar una pista visual inmediata para ayuda a encontrarlo. </para>
+<para
+>Cuando esta función está activada, el sistema monitoriza la velocidad y la dirección de los movimientos del ratón. Si detecta un movimiento de «sacudida» rápida hacia adelante y hacia atrás: </para>
+<itemizedlist>
+<listitem>
+<para
+>Ampliación temporal: El tamaño del cursor aumenta hasta alcanzar su máximo. </para>
+</listitem>
+<listitem>
+<para
+>Enfoque visual: Este cambio repentino de escala capta la visión periférica del ojo humano, revelando instantáneamente las coordenadas del cursor. </para>
+</listitem>
+<listitem>
+<para
+>Reinicio automático: En cuanto deje de agitar el ratón, el cursor volverá a su tamaño normal. </para>
+</listitem>
+</itemizedlist>
+<para
+>Existen varias opciones en este panel.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Sacudir el puntero para encontrarlo</guilabel
+></term>
+<listitem>
+<para
+>Si esta opción está activada, &plasma; habilita el efecto de sacudir el puntero. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Ampliación</guilabel
+></term>
+<listitem>
+<para
+>Aquí puede indicar el nivel de ampliación del puntero entre <guilabel
+>Normal</guilabel
+> y <guilabel
+>Grande</guilabel
+>. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
 </sect3>
 
 </sect2>
