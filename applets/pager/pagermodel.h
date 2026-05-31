@@ -10,7 +10,7 @@
 #include <memory>
 #include <qqmlregistration.h>
 
-class QMimeData;
+#include <QMimeData> // class QMimeData;
 
 class PagerModel : public QAbstractListModel, public QQmlParserStatus
 {
