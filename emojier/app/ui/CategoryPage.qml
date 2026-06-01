@@ -103,32 +103,32 @@ Kirigami.ScrollablePage {
         },
         Kirigami.Action {
             text: {
-                let result = i18nc("@action:button Button to open a menu that lets you choose a skin tone", "Skin tone: %1")
+                let example = "";
 
                 switch (view.model.skinTone) {
                 case SkinTone.Neutral:
-                    result = result.arg("🖐️")
+                    example = "🖐️";
                     break
                 case SkinTone.Light:
-                    result = result.arg("🖐🏻")
+                    example = "🖐🏻";
                     break
                 case SkinTone.MediumLight:
-                    result = result.arg("🖐🏼")
+                    example ="🖐🏼";
                     break
                 case SkinTone.Medium:
-                    result = result.arg("🖐🏽")
+                    example = "🖐🏽";
                     break
                 case SkinTone.MediumDark:
-                    result = result.arg("🖐🏾")
+                    example = "🖐🏾";
                     break
                 case SkinTone.Dark:
-                    result = result.arg("🖐🏿")
+                    example = "🖐🏿";
                     break
                 default:
                     break
                 }
 
-                return result
+                return i18nc("@action:button Button to open a menu that lets you choose a skin tone", "Skin tone: %1", example);
             }
             visible: view.category === "All" || view.category === "People and Body"
 
