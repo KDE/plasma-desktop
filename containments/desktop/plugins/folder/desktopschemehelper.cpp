@@ -20,7 +20,7 @@ DesktopSchemeHelper::~DesktopSchemeHelper()
 {
 }
 
-QString DesktopSchemeHelper::getDesktopUrl(const QString &absoluteUrlString)
+QString DesktopSchemeHelper::getDesktopUrl(const QString &absoluteUrlString, const Options &opt)
 {
     QUrl absoluteUrl(absoluteUrlString);
     QUrl absoluteFileUrl(absoluteUrlString);
@@ -40,7 +40,10 @@ QString DesktopSchemeHelper::getDesktopUrl(const QString &absoluteUrlString)
             relativePath.chop(1);
         }
 
-        QString relativeUrlString = QStringLiteral("desktop:/") + relativePath + QStringLiteral("/");
+        QString relativeUrlString = QStringLiteral("desktop:/") + relativePath;
+        if (opt == TrailingSlash) {
+            relativeUrlString += QStringLiteral("/");
+        }
 
         // Collapse redundant slashes
         QRegularExpression slashRegex(QStringLiteral("/+"));

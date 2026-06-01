@@ -949,20 +949,24 @@ void FolderModel::rename(int row, const QString &name)
     }
 
     QModelIndex idx = index(row, 0);
-    const QString filename = data(idx, UrlRole).toString();
-    const QString newFilename = QStringLiteral("desktop:/%1").arg(name);
+    const QUrl oldUrl = QUrl::fromLocalFile(DesktopSchemeHelper::getFileUrl(data(idx, UrlRole).toString()));
+    const QUrl newUrl = QUrl::fromLocalFile(DesktopSchemeHelper::getFileUrl(QStringLiteral("desktop:/%1").arg(name)));
+
+    auto job = KIO::moveAs(oldUrl, newUrl);
     connect(
+        job,
+        &KIO::CopyJob::copyingDone,
         this,
-        &QAbstractItemModel::dataChanged,
-        this,
-        [=, this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles) {
-            Q_UNUSED(roles);
-            Q_UNUSED(topLeft);
-            Q_UNUSED(bottomRight);
-            Q_EMIT itemRenamed(filename, newFilename);
+        [this](KIO::Job *job, const QUrl &from, const QUrl &to) {
+            if (job && job->error() == 0) {
+                const QString oldName = DesktopSchemeHelper::getDesktopUrl(from.toLocalFile(), DesktopSchemeHelper::NoTrailingSlash);
+                const QString newName = DesktopSchemeHelper::getDesktopUrl(to.toLocalFile(), DesktopSchemeHelper::NoTrailingSlash);
+                Q_EMIT itemRenamed(oldName, newName);
+            }
         },
         Qt::SingleShotConnection);
-    setData(idx, name, Qt::EditRole);
+    KIO::FileUndoManager::self()->recordJob(KIO::FileUndoManager::Rename, {oldUrl}, newUrl, job);
+    job->uiDelegate()->setAutoErrorHandlingEnabled(true);
 }
 
 int FolderModel::fileExtensionBoundary(int row)

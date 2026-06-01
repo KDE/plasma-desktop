@@ -19,10 +19,15 @@ class DesktopSchemeHelper : public QObject
     QML_SINGLETON
 
 public:
+    enum Options {
+        TrailingSlash = 0,
+        NoTrailingSlash,
+    };
+
     explicit DesktopSchemeHelper(QObject *parent = nullptr);
     ~DesktopSchemeHelper() override;
 
-    Q_INVOKABLE static QString getDesktopUrl(const QString &absoluteUrlString);
+    Q_INVOKABLE static QString getDesktopUrl(const QString &absoluteUrlString, const Options &opt = Options::TrailingSlash);
     Q_INVOKABLE static QString getFileUrl(const QString &UrlRelativeToDesktopString);
 };
 

@@ -28,6 +28,8 @@ void DesktopSchemeHelperTest::returnsExpectedValues()
     QCOMPARE(h.getDesktopUrl(desktopWithTrailingSlash), QStringLiteral("desktop:/"));
     QCOMPARE(h.getDesktopUrl(parentOfDesktop), parentOfDesktop);
     QCOMPARE(h.getDesktopUrl(remotePath), remotePath);
+    QCOMPARE(h.getDesktopUrl(childOfDesktop + QStringLiteral("test.txt"), DesktopSchemeHelper::NoTrailingSlash),
+             QStringLiteral("desktop:/Productivity/test.txt"));
 
     // desktop: -> file: if possible
     QCOMPARE(h.getFileUrl(QStringLiteral("desktop:/Productivity/")), childOfDesktop);
