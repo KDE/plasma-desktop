@@ -2,64 +2,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_keyboard\")
 
 add_subdirectory(tastenbrett)
 
-option(HAVE_XINPUT "X11 XInput" OFF)
-
-if (X11_Xinput_FOUND)
-    set(HAVE_XINPUT ON)
-    message(STATUS "X11 XInput is not found but required to keep layouts with keyboard hotplugging")
-endif()
-
-### kded daemon ###
-
-set( kded_keyboard_SRCS
-    ${CMAKE_CURRENT_BINARY_DIR}/debug.cpp
-    keyboard_daemon.cpp
-    layout_memory.cpp
-    layout_memory_persister.cpp
-    x11_helper.cpp
-    xinput_helper.cpp
-    xkb_helper.cpp
-    keyboard_config.cpp
-    keyboard_hardware.cpp
-    bindings.cpp
-    flags.cpp
-    xkb_rules.cpp
-    layoutnames.cpp
-)
-
-kconfig_add_kcfg_files(kded_keyboard_SRCS keyboardsettings.kcfgc GENERATE_MOC)
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
-
-kcoreaddons_add_plugin(kded_keyboard SOURCES ${kded_keyboard_SRCS} INSTALL_NAMESPACE kf6/kded)
-set_target_properties(kded_keyboard PROPERTIES OUTPUT_NAME keyboard)
-
-target_link_libraries(kded_keyboard
-    Qt::Concurrent
-    Qt::Widgets
-    Qt::Xml
-    KF6::ConfigCore
-    KF6::CoreAddons
-    KF6::KCMUtils
-    KF6::DBusAddons
-    KF6::GlobalAccel
-    KF6::I18n
-    KF6::Notifications
-    KF6::WindowSystem
-    Plasma::Plasma
-    KF6::XmlGui
-    KF6::GuiAddons
-    XCB::XCB
-    XCB::XKB
-    X11::X11
-    X11::xkbfile
-    PkgConfig::XKBREGISTRY
- )
-target_link_libraries(kded_keyboard Qt::GuiPrivate)
-
-if (HAVE_XINPUT)
-    target_link_libraries(kded_keyboard X11::Xi)
-endif()
 
 ### kcm keyboard ###
 kcmutils_add_qml_kcm(kcm_keyboard SOURCES kcmmain.cpp)
@@ -71,7 +14,6 @@ set( kcm_keyboard_PART_SRCS
     flags.cpp
     tastenbrett.cpp
     x11_helper.cpp
-    xkb_helper.cpp
     xkb_rules.cpp
     shortcuthelper.cpp
     xkboptionsmodel.cpp
