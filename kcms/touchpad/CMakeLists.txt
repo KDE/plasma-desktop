@@ -21,17 +21,8 @@ endif()
 
 add_subdirectory(icon)
 
-qt_generate_dbus_interface(kded/kded.h org.kde.touchpad.xml)
-qt_add_dbus_interfaces(TOUCHPAD_DBUS_SRCS
-                        ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
-)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
-        DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR}
-)
-
 add_library(touchpad_common STATIC
     touchpadbackend.cpp
-    ${TOUCHPAD_DBUS_SRCS}
 )
 set_property(TARGET touchpad_common PROPERTY POSITION_INDEPENDENT_CODE ON)
 
@@ -59,7 +50,6 @@ target_link_libraries(touchpad_common
 )
 
 add_subdirectory(backends)
-add_subdirectory(kded)
 
 kcmutils_add_qml_kcm(kcm_touchpad)
 target_sources(kcm_touchpad PRIVATE kcm.cpp touchpadmoduledata.cpp)
