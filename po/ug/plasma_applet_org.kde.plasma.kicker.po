@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-14 00:45+0000\n"
-"PO-Revision-Date: 2026-02-01 17:57-0500\n"
+"PO-Revision-Date: 2026-06-01 17:52-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: code/tools.js:53
 #, kde-format
@@ -31,7 +31,7 @@ msgstr "يىغقۇچقا قوش"
 #: code/tools.js:83
 #, kde-format
 msgid "On All Activities"
-msgstr "بارلىق پائالىيەتتە"
+msgstr "ھەممە پائالىيەتتە"
 
 #: code/tools.js:133
 #, kde-format
@@ -122,12 +122,10 @@ msgid "Show icons on the root level of the menu"
 msgstr "غول تىزىملىك دەرىجىسىدە سىنبەلگە كۆرسىتىدۇ"
 
 #: ConfigGeneral.qml:198
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
-msgstr "دائىم ئىشلىتىدىغان پىروگرامما"
+msgstr ""
 
 #: ConfigGeneral.qml:208
 #, kde-format
@@ -160,20 +158,16 @@ msgid "Often used files"
 msgstr "دائىم ئىشلىتىدىغان ھۆججەت"
 
 #: ConfigGeneral.qml:227
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Recent files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent places"
-msgstr "يېقىنقى ھۆججەت"
+msgstr ""
 
 #: ConfigGeneral.qml:228
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used places"
-msgstr "دائىم ئىشلىتىدىغان ھۆججەت"
+msgstr ""
 
 #: ConfigGeneral.qml:234
 #, kde-format
@@ -245,7 +239,7 @@ msgstr "يىغقۇچ"
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "يېڭى!"
 
 #: DashboardRepresentation.qml:951 ItemListDelegate.qml:98
 #, kde-format
@@ -257,15 +251,13 @@ msgstr ""
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "يېڭى!"
 
 #: ItemGridDelegate.qml:83
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
-msgstr "دائىم ئىشلىتىدىغان پىروگرامما"
+msgstr ""
 
 #: ItemListDelegate.qml:40
 #, kde-format
@@ -280,12 +272,10 @@ msgid "Launch"
 msgstr "قوزغات"
 
 #: ItemListDelegate.qml:99
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
-msgstr "دائىم ئىشلىتىدىغان پىروگرامما"
+msgstr ""
 
 #: main.qml:208
 #, kde-format

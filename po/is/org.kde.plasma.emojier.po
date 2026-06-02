@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-13 00:47+0000\n"
-"PO-Revision-Date: 2026-02-15 15:47+0000\n"
+"POT-Creation-Date: 2026-06-02 00:45+0000\n"
+"PO-Revision-Date: 2026-06-01 16:39+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -46,8 +46,7 @@ msgid "Replace an existing instance"
 msgstr "Skipta út fyrirliggjandi tilviki"
 
 #: app/ui/CategoryPage.qml:41
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action Search field action"
 msgid "Search"
 msgstr "Leita"
@@ -58,14 +57,11 @@ msgctxt "@action:button clear emoji history"
 msgid "Clear History"
 msgstr "Hreinsa feril"
 
-#: app/ui/CategoryPage.qml:106
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@action:button Button to open a menu that lets you choose a skin tone"
-#| msgid "Skin tone:"
+#: app/ui/CategoryPage.qml:131
+#, kde-format
 msgctxt "@action:button Button to open a menu that lets you choose a skin tone"
 msgid "Skin tone: %1"
-msgstr "Húðlitur:"
+msgstr "Húðlitur: %1"
 
 #: app/ui/CategoryPage.qml:137
 #, kde-format

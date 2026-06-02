@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-30 00:45+0000\n"
-"PO-Revision-Date: 2026-02-01 17:56-0500\n"
+"PO-Revision-Date: 2026-06-01 17:47-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: ui/main.qml:53
 #, kde-format
@@ -123,20 +123,16 @@ msgstr ""
 "بۇ قىسقۇچ كۆڭۈلدىكى ئەھۋالدا ھۆججەت قېلىپىنى ئېچىش ۋە ساقلاشقا ئىشلىتىلىدۇ."
 
 #: ui/main.qml:165
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Pictures folder:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Projects folder:"
-msgstr "رەسىم قىسقۇچى:"
+msgstr "قۇرۇلۇش قىسقۇچى:"
 
 #: ui/main.qml:171
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip and accessible description"
-#| msgid "This folder will be used by default to open or save documents."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save projects."
-msgstr "بۇ قىسقۇچ پۈتۈك ئېچىش ۋە ساقلاشقا ئىشلىتىلىدۇ."
+msgstr "بۇ قىسقۇچ قۇرۇلۇش ئېچىش ۋە ساقلاشقا ئىشلىتىلىدۇ."
 
 #: ui/UrlRequester.qml:74
 #, kde-format

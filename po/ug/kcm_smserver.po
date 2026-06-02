@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-02-01 17:57-0500\n"
+"PO-Revision-Date: 2026-06-01 17:48-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -49,17 +49,11 @@ msgid "Failed to request restart to firmware setup: %1"
 msgstr "قايتا قوزغىتىپ مۇقىم دېتال تەڭشەشنى ئىلتىماس قىلالمىدى: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@info:status inlinemessage"
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"كېيىنكى قېتىم كومپيۇتېر قايتا قوزغالغاندا، مۇقىم دېتال تەڭشەش ئېكرانىغا "
-"كىرىدۇ."
 
 #: ui/main.qml:32
 #, kde-format
@@ -183,12 +177,10 @@ msgid "After next restart:"
 msgstr "كېيىنكى قېتىم قايتا قوزغالغاندىن كېيىن:"
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr "مۇقىم دېتال تەڭشەك ئېكرانىغا كىرىدۇ"
+msgstr ""
 
 #: ui/main.qml:146
 #, kde-format
