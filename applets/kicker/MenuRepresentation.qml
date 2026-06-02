@@ -295,7 +295,7 @@ PlasmaComponents3.ScrollView {
 
             Layout.fillHeight: true
 
-            visible: searchField.text !== "" && root.runnerModel.count > 0 && (!initialDelayTimer.active || !root.runnerModel.querying || root.runnerModel.resultsPresent)
+            visible: searchField.text !== "" && root.runnerModel.count > 0 && !initialDelayTimer.active && root.runnerModel.resultsPresent
 
             spacing: 0
 
@@ -305,7 +305,7 @@ PlasmaComponents3.ScrollView {
                 property bool active: false
                 id: initialDelayTimer
                 interval: 250 // match KRunner's delay for multi-runner queries
-                onRunningChanged: if (running) { active = true }
+                onRunningChanged: if (running && !root.runnerModel.resultsPresent) { active = true }
                 onTriggered: active = false
             }
 
