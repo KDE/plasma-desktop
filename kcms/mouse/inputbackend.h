@@ -31,10 +31,6 @@ public:
     static std::unique_ptr<InputBackend> create();
     static void registerImplementationTypes(const char *uri);
 
-    virtual void kcmInit()
-    {
-    }
-
     virtual bool save()
     {
         return false;

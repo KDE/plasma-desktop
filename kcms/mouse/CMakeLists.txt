@@ -30,14 +30,6 @@ kcmutils_add_qml_kcm(kcm_mouse
         mousemoduledata.h
 )
 
-if (BUILD_KCM_MOUSE_X11)
-    target_sources(kcm_mouse PRIVATE
-        cursortheme.cpp
-        cursortheme.h
-    )
-    target_link_libraries(kcm_mouse PRIVATE Qt6::GuiPrivate X11::Xcursor)
-endif()
-
 ecm_qt_declare_logging_category(kcm_mouse
     HEADER logging.h
     IDENTIFIER KCM_MOUSE
@@ -61,13 +53,3 @@ target_link_libraries(kcm_mouse PRIVATE
 )
 
 add_subdirectory(backends)
-
-########### install files ###############
-
-add_custom_command(
-    TARGET kcm_mouse
-    POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E create_symlink "../kcms/systemsettings/kcm_mouse.so" "kcm_mouse_init.so"
-)
-
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kcm_mouse_init.so DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcminit)

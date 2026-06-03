@@ -6,7 +6,6 @@
 */
 
 #include "kcm.h"
-#include "cursortheme.h"
 #include "inputbackend.h"
 #include "logging.h"
 #include "mousemoduledata.h"
@@ -25,27 +24,6 @@
 using namespace Qt::StringLiterals;
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMMouseFactory, "kcm_mouse.json", registerPlugin<KCMMouse>(); registerPlugin<MouseModuleData>();)
-
-extern "C" {
-Q_DECL_EXPORT void kcminit()
-{
-    std::unique_ptr<InputBackend> backend = InputBackend::create();
-    if (backend) {
-        backend->kcmInit();
-    }
-
-#if BUILD_KCM_MOUSE_X11
-    if (KWindowSystem::isPlatformX11()) {
-        auto config = KSharedConfig::openConfig(u"kcminputrc"_s, KConfig::NoGlobals);
-        KConfigGroup group = config->group(QStringLiteral("Mouse"));
-        const QString theme = group.readEntry("cursorTheme", QStringLiteral("breeze_cursors"));
-        const int size = group.readEntry("cursorSize", 24);
-
-        CursorTheme::applyCursorTheme(theme, size);
-    }
-#endif
-}
-}
 
 Message::Message() = default;
 
