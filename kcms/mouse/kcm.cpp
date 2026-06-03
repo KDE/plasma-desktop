@@ -41,8 +41,6 @@ Q_DECL_EXPORT void kcminit()
         const QString theme = group.readEntry("cursorTheme", QStringLiteral("breeze_cursors"));
         const int size = group.readEntry("cursorSize", 24);
 
-        // Note: If you update this code, update kapplymousetheme as well.
-
         CursorTheme::applyCursorTheme(theme, size);
     }
 #endif

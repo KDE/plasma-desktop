@@ -51,25 +51,6 @@ ecm_qt_install_logging_categories(
     DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
 )
 
-if (BUILD_KCM_MOUSE_X11)
-    # kapplymousetheme is an X11-only tool, called by startplasma-x11 but not startplasma-wayland
-    add_executable(kapplymousetheme
-        kapplymousetheme.cpp
-
-        cursortheme.cpp
-        cursortheme.h
-    )
-    target_link_libraries(kapplymousetheme
-        KF6::ConfigCore
-        KF6::CoreAddons
-        KF6::WindowSystem
-        Qt::Gui
-        Qt::GuiPrivate
-        X11::Xcursor
-    )
-    install(TARGETS kapplymousetheme ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-endif()
-
 target_link_libraries(kcm_mouse PRIVATE
     KF6::I18n
     KF6::KCMUtilsQuick
