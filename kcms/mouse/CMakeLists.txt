@@ -35,6 +35,7 @@ if (BUILD_KCM_MOUSE_X11)
         cursortheme.cpp
         cursortheme.h
     )
+    target_link_libraries(kcm_mouse PRIVATE Qt6::GuiPrivate X11::Xcursor)
 endif()
 
 ecm_qt_declare_logging_category(kcm_mouse
