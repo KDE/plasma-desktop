@@ -32,6 +32,8 @@ ItemAbstractDelegate {
         item.baseModel.trigger(index, "", null);
         item.interactionConcluded()
     }
+    Keys.onReturnPressed: item.clicked()
+    Keys.onEnterPressed: Keys.returnPressed()
 
     background.visible: false // we want the default background's spacing, but not the base color
     contentItem: ColumnLayout {
