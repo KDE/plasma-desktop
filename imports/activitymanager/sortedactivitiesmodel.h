@@ -13,8 +13,6 @@
 #include <PlasmaActivities/ActivitiesModel>
 #include <PlasmaActivities/Consumer>
 
-#include <config-X11.h> // Required by files that include this header
-
 namespace TaskManager
 {
 class WindowTasksModel;
