@@ -35,19 +35,10 @@ public:
     const QList<LayoutUnit> &layouts() const;
     QList<LayoutUnit> &layouts();
 
-    QList<LayoutUnit> defaultLayouts() const;
-    QList<LayoutUnit> extraLayouts() const;
-
     KeyboardSettings *keyboardSettings() const;
 
     bool isDefaults() const;
     bool isSaveNeeded() const;
-
-    // Initialize layouts list when activating 'Configure Layouts' option and there is none.
-    QList<LayoutUnit> getDefaultLayouts() const;
-    QList<LayoutUnit> getExtraLayouts() const;
-
-    static QString getSwitchingPolicyString(SwitchingPolicy switchingPolicy);
 
 private:
     SwitchingPolicy policyFromString(const QString &string) const;
