@@ -10,9 +10,6 @@
 #if BUILD_KCM_TOUCHPAD_KWIN_WAYLAND
 #include "backends/kwin_wayland/kwinwaylandbackend.h"
 #endif
-#if BUILD_KCM_TOUCHPAD_X11
-#include "backends/x11/xlibbackend.h"
-#endif
 
 #include "logging.h"
 
@@ -27,17 +24,6 @@ void TouchpadBackend::setMode(TouchpadInputBackendMode mode)
 
 TouchpadBackend *TouchpadBackend::implementation()
 {
-    // There are multiple possible backends
-#if BUILD_KCM_TOUCHPAD_X11
-    if (KWindowSystem::isPlatformX11()) {
-        static QThreadStorage<std::shared_ptr<XlibBackend>> backend;
-        if (!backend.hasLocalData()) {
-            qCDebug(KCM_TOUCHPAD) << "Using X11 backend";
-            backend.setLocalData(std::shared_ptr<XlibBackend>(XlibBackend::initialize()));
-        }
-        return backend.localData().get();
-    }
-#endif
 #if BUILD_KCM_TOUCHPAD_KWIN_WAYLAND
     // TODO: test on kwin_wayland specifically? What about possibly other compositors under Wayland?
     if (KWindowSystem::isPlatformWayland()) {

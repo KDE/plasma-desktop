@@ -25,11 +25,6 @@ K_PLUGIN_FACTORY_WITH_JSON(KCMTouchpadFactory, "kcm_touchpad.json", registerPlug
 extern "C" {
 Q_DECL_EXPORT void kcminit()
 {
-#if BUILD_KCM_TOUCHPAD_X11
-    if (KWindowSystem::isPlatformX11()) {
-        KCMTouchpad::kcmInit();
-    }
-#endif
 }
 }
 
@@ -106,13 +101,6 @@ void KCMTouchpad::setCurrentDeviceIndex(int index)
 
 void KCMTouchpad::kcmInit()
 {
-#if BUILD_KCM_TOUCHPAD_X11
-    TouchpadBackend *backend = TouchpadBackend::implementation();
-    if (backend->getMode() == TouchpadInputBackendMode::XLibinput) {
-        backend->load();
-        backend->save();
-    }
-#endif
 }
 
 void KCMTouchpad::load()

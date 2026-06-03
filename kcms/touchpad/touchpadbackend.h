@@ -20,9 +20,6 @@ enum class TouchpadInputBackendMode {
 #if BUILD_KCM_TOUCHPAD_KWIN_WAYLAND
     WaylandLibinput = 1,
 #endif
-#if BUILD_KCM_TOUCHPAD_X11
-    XLibinput = 2,
-#endif
 };
 
 class Q_DECL_EXPORT TouchpadBackend : public QObject

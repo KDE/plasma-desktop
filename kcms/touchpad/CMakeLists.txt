@@ -1,24 +1,6 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_touchpad\")
 
-if (BUILD_KCM_TOUCHPAD_X11)
-    if (NOT XORGLIBINPUT_FOUND)
-        list(APPEND MISSING_DEPS "xorg-libinput")
-    endif()
-    if (NOT X11_XCB_FOUND)
-        list(APPEND MISSING_DEPS "X11_XCB")
-    endif()
-    if (NOT X11_Xi_FOUND)
-        list(APPEND MISSING_DEPS "X11_Xi")
-    endif()
-    if (NOT XORGSERVER_FOUND)
-        list(APPEND MISSING_DEPS "xorg-server")
-    endif()
-    if (MISSING_DEPS)
-        message(FATAL_ERROR "Missing X11 dependencies for kcm_touchpad: ${MISSING_DEPS}. Install dependencies or set CMake option -DBUILD_KCM_TOUCHPAD_X11=OFF.")
-    endif()
-endif()
-
 add_subdirectory(icon)
 
 add_library(touchpad_common STATIC

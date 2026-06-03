@@ -40,7 +40,6 @@ option(BUILD_DOC "Whether to build the documentation" ON)
 option(BUILD_KCM_MOUSE_KWIN_WAYLAND "Build the Mouse KCM's KWin+Wayland backend" ON)
 option(BUILD_KCM_MOUSE_X11 "Build the Mouse KCM's X11 backend" ON)
 option(BUILD_KCM_TOUCHPAD_KWIN_WAYLAND "Build the Touchpad KCM's KWin+Wayland backend" ON)
-option(BUILD_KCM_TOUCHPAD_X11 "Build the Touchpad KCM's X11 backend" ON)
 option(BUILD_KCM_TABLET "Build the Tablet KCM" ON)
 
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
@@ -226,15 +225,6 @@ find_package(XCB
     OPTIONAL_COMPONENTS
         XKB XINPUT ATOM RECORD
 )
-
-if (BUILD_KCM_TOUCHPAD_X11)
-    find_package(X11_XCB)
-    set_package_properties(X11_XCB PROPERTIES
-        PURPOSE "Required for touchpad KCM (X11 backend) when option BUILD_KCM_TOUCHPAD_X11=ON"
-        TYPE REQUIRED
-    )
-endif()
-
 
 set_package_properties(XCB PROPERTIES TYPE REQUIRED)
 add_feature_info("XCB-XKB" XCB_XKB_FOUND "Required for building kcm/keyboard")
