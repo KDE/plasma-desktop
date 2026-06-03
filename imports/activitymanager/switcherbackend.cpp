@@ -56,8 +56,7 @@ bool areModifiersPressed(const QKeySequence &seq, const KModifierKeyInfo &modifi
     if (mod & Qt::AltModifier && modifierInfo.isKeyPressed(Qt::Key_Alt)) {
         return true;
     }
-    // On X11 KModifierKeyInfo reports what we call Meta via Key_Super_L
-    if (mod & Qt::MetaModifier && (modifierInfo.isKeyPressed(Qt::Key_Meta) || modifierInfo.isKeyPressed(Qt::Key_Super_L))) {
+    if (mod & Qt::MetaModifier && (modifierInfo.isKeyPressed(Qt::Key_Meta))) {
         return true;
     }
     return false;
