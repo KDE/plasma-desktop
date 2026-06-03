@@ -22,12 +22,6 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMTouchpadFactory, "kcm_touchpad.json", registerPlugin<KCMTouchpad>(); registerPlugin<TouchpadModuleData>();)
 
-extern "C" {
-Q_DECL_EXPORT void kcminit()
-{
-}
-}
-
 Message::Message() = default;
 
 Message::Message(MessageType::MessageType type, const QString &text)
@@ -97,10 +91,6 @@ void KCMTouchpad::setCurrentDeviceIndex(int index)
         m_currentDeviceIndex = index;
         Q_EMIT currentDeviceIndexChanged();
     }
-}
-
-void KCMTouchpad::kcmInit()
-{
 }
 
 void KCMTouchpad::load()

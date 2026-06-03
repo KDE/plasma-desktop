@@ -54,8 +54,6 @@ class KCMTouchpad : public KQuickConfigModule
 public:
     explicit KCMTouchpad(QObject *parent, const KPluginMetaData &data);
 
-    static void kcmInit();
-
     TouchpadBackend *backend() const;
 
     int currentDeviceIndex() const;

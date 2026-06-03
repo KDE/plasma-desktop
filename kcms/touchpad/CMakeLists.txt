@@ -49,11 +49,6 @@ target_link_libraries(kcm_touchpad
     touchpad_common
 )
 
-add_custom_command(TARGET kcm_touchpad POST_BUILD
-                   COMMAND ${CMAKE_COMMAND} -E create_symlink "../kcms/systemsettings/kcm_touchpad.so" "kcm_touchpad_init.so")
-
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kcm_touchpad_init.so DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcminit)
-
 install(FILES org.kde.touchpadshortcuts.desktop DESTINATION ${KDE_INSTALL_DATADIR}/kglobalaccel)
 
 ecm_qt_install_logging_categories(
