@@ -257,3 +257,15 @@ function createGroupDialog(visualParent, tasks) {
 
     tasks.groupDialog = tasks.groupDialogComponent.createObject(tasks, { visualParent });
 }
+
+function foreachChildTask(callback, modelIndex, tasksModel) {
+    const childCount = tasksModel.rowCount(modelIndex);
+    if (childCount > 0) {
+        for (let i = 0; i < childCount; ++i) {
+            const childIndex = tasksModel.index(i, 0, modelIndex);
+            callback(childIndex);
+        }
+    } else {
+        callback(modelIndex);
+    }
+}

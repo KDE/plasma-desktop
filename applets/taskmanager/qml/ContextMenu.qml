@@ -322,10 +322,23 @@ PlasmaExtras.Menu {
                 let menuItem = menu.newMenuItem(virtualDesktopsMenu);
                 menuItem.text = i18nc("action:inmenu", "Move &To Current Desktop");
                 menuItem.enabled = Qt.binding(() => {
-                    return menu.visualParent && menu.get(TaskManager.AbstractTasksModel.VirtualDesktops).indexOf(virtualDesktopInfo.currentDesktopByScreenGeometry(menu.get(TaskManager.AbstractTasksModel.ScreenGeometry))) === -1;
+                    if (!menu.visualParent) {
+                        return false;
+                    }
+
+                    let isAnyTaskNotOnCurrentDesktop = false;
+                    TaskManagerApplet.TaskTools.foreachChildTask((childIndex) => {
+                        const screenGeometry = tasksModel.data(childIndex, TaskManager.AbstractTasksModel.ScreenGeometry);
+                        const currentDesktop = virtualDesktopInfo.currentDesktopByScreenGeometry(screenGeometry);
+                        isAnyTaskNotOnCurrentDesktop = isAnyTaskNotOnCurrentDesktop || tasksModel.data(childIndex, TaskManager.AbstractTasksModel.VirtualDesktops).indexOf(currentDesktop) === -1;
+                    }, menu.modelIndex, tasksModel);
+
+                    return isAnyTaskNotOnCurrentDesktop;
                 });
                 menuItem.clicked.connect(() => {
-                    tasksModel.requestVirtualDesktops(menu.modelIndex, [virtualDesktopInfo.currentDesktopByScreenGeometry(menu.get(TaskManager.AbstractTasksModel.ScreenGeometry))]);
+                    TaskManagerApplet.TaskTools.foreachChildTask((childIndex) => {
+                        tasksModel.requestVirtualDesktops(childIndex, [virtualDesktopInfo.currentDesktopByScreenGeometry(tasksModel.data(childIndex, TaskManager.AbstractTasksModel.ScreenGeometry))]);
+                    }, menu.modelIndex, tasksModel);
                 });
 
                 menuItem = menu.newMenuItem(virtualDesktopsMenu);
