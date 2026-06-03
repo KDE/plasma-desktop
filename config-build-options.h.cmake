@@ -1,2 +1,0 @@
-#cmakedefine01 BUILD_KCM_MOUSE_KWIN_WAYLAND
-#cmakedefine01 BUILD_KCM_MOUSE_X11

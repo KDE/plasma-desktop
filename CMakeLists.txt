@@ -37,8 +37,6 @@ include(ECMQmlModule)
 include(ECMConfiguredInstall)
 
 option(BUILD_DOC "Whether to build the documentation" ON)
-option(BUILD_KCM_MOUSE_KWIN_WAYLAND "Build the Mouse KCM's KWin+Wayland backend" ON)
-option(BUILD_KCM_MOUSE_X11 "Build the Mouse KCM's X11 backend" ON)
 option(BUILD_KCM_TABLET "Build the Tablet KCM" ON)
 
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
@@ -270,7 +268,6 @@ add_definitions(
 
 configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-workspace.h)
 configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
-configure_file(config-build-options.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-build-options.h)
 
 plasma_install_package(desktoppackage org.kde.plasma.desktop shells shell)
 

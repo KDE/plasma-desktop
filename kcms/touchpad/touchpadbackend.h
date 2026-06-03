@@ -9,8 +9,6 @@
 
 #include "backends/libinputcommon.h"
 
-#include <config-build-options.h>
-
 #include <QList>
 #include <QObject>
 #include <QVariantHash>

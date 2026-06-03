@@ -9,7 +9,6 @@
 #include "logging.h"
 #include "touchpadbackend.h"
 #include "touchpadmoduledata.h"
-#include <config-build-options.h>
 
 #include <KLocalizedContext>
 #include <KLocalizedString>
