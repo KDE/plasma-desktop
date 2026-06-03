@@ -40,8 +40,6 @@ public:
     Q_INVOKABLE void clearXkbGroup(const QString &group);
     Q_INVOKABLE void navigateToGroup(const QString &group);
 
-    void populateWithCurrentXkbOptions();
-
 Q_SIGNALS:
     void navigateTo(const QModelIndex &index);
 

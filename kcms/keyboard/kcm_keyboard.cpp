@@ -43,11 +43,6 @@ KCMKeyboard::KCMKeyboard(QObject *parent, const KPluginMetaData &data)
 
     connect(m_data->keyboardSettings(), &KeyboardSettings::configureLayoutsChanged, this, [this]() -> void {
         if (m_data->keyboardSettings()->configureLayouts()) {
-            const QList<LayoutUnit> layouts = X11Helper::getLayoutsList();
-            for (const auto &layoutUnit : layouts) {
-                m_config->layouts().append(layoutUnit);
-            }
-
             m_userLayoutModel->reset();
         } else {
             m_userLayoutModel->clear();
@@ -56,7 +51,6 @@ KCMKeyboard::KCMKeyboard(QObject *parent, const KPluginMetaData &data)
 
     connect(m_data->keyboardSettings(), &KeyboardSettings::resetOldXkbOptionsChanged, this, [this]() -> void {
         if (m_data->keyboardSettings()->resetOldXkbOptions()) {
-            m_xkbOptionsModel->populateWithCurrentXkbOptions();
             m_data->keyboardSettings()->setXkbOptions(m_xkbOptionsModel->xkbOptions());
         }
     });
@@ -110,7 +104,8 @@ XkbOptionsModel *KCMKeyboard::xkbOptionsModel() const
 
 int KCMKeyboard::maxGroupCount() const
 {
-    return X11Helper::MAX_GROUP_COUNT;
+    // more information about the limit https://bugs.freedesktop.org/show_bug.cgi?id=19501
+    return 4;
 }
 
 bool KCMKeyboard::hasAccentSupport()

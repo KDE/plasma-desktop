@@ -62,10 +62,6 @@ target_link_libraries(kcm_keyboard_static
     Plasma::Plasma
     KF6::XmlGui
     KF6::GuiAddons
-    XCB::XCB
-    XCB::XKB
-    X11::X11
-    X11::xkbfile
     PkgConfig::XKBREGISTRY
 )
 

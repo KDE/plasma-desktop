@@ -10,8 +10,6 @@ macro(KEYBOARD_DAEMON_UNIT_TESTS _testname)
                                      Qt::Test
                                      KF6::I18n
                                      KF6::WindowSystem
-                                     X11::xkbfile
-                                     X11::X11
                                      PkgConfig::XKBREGISTRY
                )
                target_link_libraries(${_testname}_test Qt::GuiPrivate)
@@ -34,11 +32,7 @@ target_link_libraries(flags_test
                       KF6::I18n
                       Plasma::Plasma
                       KF6::WindowSystem
-                      XCB::XCB
-                      XCB::XKB
                       PkgConfig::XKBREGISTRY
-                      X11::xkbfile
-                      X11::X11
 )
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config/base.1.1.xml ${CMAKE_CURRENT_BINARY_DIR}/config/base.1.1.xml COPYONLY)

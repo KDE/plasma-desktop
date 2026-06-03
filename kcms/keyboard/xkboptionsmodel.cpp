@@ -12,8 +12,6 @@
 #include <KWindowSystem>
 
 #include "debug.h"
-#include "keyboardsettings.h"
-#include "x11_helper.h"
 #include "xkb_rules.h"
 
 XkbOptionsModel::XkbOptionsModel(QObject *parent)
@@ -193,22 +191,6 @@ void XkbOptionsModel::navigateToGroup(const QString &group)
     if (index != -1) {
         Q_EMIT navigateTo(createIndex(index, 0));
     }
-}
-
-void XkbOptionsModel::populateWithCurrentXkbOptions()
-{
-    if (!KWindowSystem::isPlatformX11()) {
-        // TODO: implement for Wayland - query dbus maybe?
-        return;
-    }
-
-    XkbConfig xkbConfig;
-    QStringList xkbOptions;
-    if (X11Helper::getGroupNames(QX11Info::display(), &xkbConfig, X11Helper::ALL)) {
-        xkbOptions = xkbConfig.options;
-    }
-
-    setXkbOptions(xkbOptions);
 }
 
 bool XkbOptionsModel::setData(const QModelIndex &index, const QVariant &value, int role)
