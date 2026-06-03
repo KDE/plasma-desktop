@@ -228,8 +228,6 @@ find_package(XCB
 set_package_properties(XCB PROPERTIES TYPE REQUIRED)
 add_feature_info("XCB-XKB" XCB_XKB_FOUND "Required for building kcm/keyboard")
 
-pkg_check_modules(XORGLIBINPUT xorg-libinput IMPORTED_TARGET)
-pkg_check_modules(XORGSERVER xorg-server IMPORTED_TARGET)
 pkg_check_modules(XKBREGISTRY xkbregistry REQUIRED IMPORTED_TARGET)
 
 ecm_find_qmlmodule(org.kde.pipewire 0.1)

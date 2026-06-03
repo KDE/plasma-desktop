@@ -1,21 +1,6 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcmmouse\")
 
-if (BUILD_KCM_MOUSE_X11)
-    if (NOT XORGLIBINPUT_FOUND)
-        list(APPEND MISSING_DEPS "xorg-libinput")
-    endif()
-    if (NOT X11_Xi_FOUND)
-        list(APPEND MISSING_DEPS "X11_Xi")
-    endif()
-    if (NOT X11_Xinput_FOUND)
-        list(APPEND MISSING_DEPS "X11_Xinput")
-    endif()
-    if (MISSING_DEPS)
-        message(FATAL_ERROR "Missing X11 dependencies for kcm_mouse: ${MISSING_DEPS}. Install dependencies or set CMake option -DBUILD_KCM_MOUSE_X11=OFF.")
-    endif()
-endif()
-
 add_subdirectory(misc)
 
 kcmutils_add_qml_kcm(kcm_mouse
