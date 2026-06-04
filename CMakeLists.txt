@@ -202,10 +202,6 @@ set_package_properties(X11 PROPERTIES
     TYPE REQUIRED
 )
 
-if(X11_FOUND)
-  set(HAVE_X11 1)
-endif()
-
 find_package(UDev)
 set_package_properties(UDev PROPERTIES
     DESCRIPTION "API for enumerating and introspecting local devices (part of systemd)"
@@ -214,15 +210,7 @@ set_package_properties(UDev PROPERTIES
     TYPE OPTIONAL
 )
 
-find_package(XCB
-    REQUIRED COMPONENTS
-        XCB SHM IMAGE
-    OPTIONAL_COMPONENTS
-        XKB XINPUT ATOM RECORD
-)
-
-set_package_properties(XCB PROPERTIES TYPE REQUIRED)
-add_feature_info("XCB-XKB" XCB_XKB_FOUND "Required for building kcm/keyboard")
+find_package(XCB REQUIRED COMPONENTS XCB)
 
 pkg_check_modules(XKBREGISTRY xkbregistry REQUIRED IMPORTED_TARGET)
 
@@ -265,7 +253,6 @@ add_definitions(
 )
 
 configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-workspace.h)
-configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
 
 plasma_install_package(desktoppackage org.kde.plasma.desktop shells shell)
 
@@ -301,7 +288,7 @@ endif()
 add_subdirectory(imports/activitymanager/)
 add_subdirectory(solid-device-automounter)
 add_subdirectory(emojier)
-if(X11_Xkb_FOUND AND XCB_XKB_FOUND)
+if(X11_FOUND)
     add_subdirectory(kaccess)
 endif()
 install(FILES org.kde.plasmashell.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})

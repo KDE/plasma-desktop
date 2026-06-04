@@ -1,11 +1,7 @@
 remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_STRICT_ITERATORS -DQT_NO_CAST_FROM_BYTEARRAY -DQT_NO_KEYWORDS)
 
 add_subdirectory(libkwindevices)
-
-if(X11_Xkb_FOUND AND XCB_XKB_FOUND)
-    add_subdirectory( keyboard )
-endif()
-
+add_subdirectory( keyboard )
 add_subdirectory( access )
 add_subdirectory( dateandtime )
 add_subdirectory( ksplash )
