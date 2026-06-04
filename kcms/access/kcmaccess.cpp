@@ -31,7 +31,6 @@
 #include <KShortcutsDialog>
 #include <KWindowSystem>
 
-#include "kcmaccessibilityactivationgestures.h"
 #include "kcmaccessibilitybell.h"
 #include "kcmaccessibilitycolorblindnesscorrection.h"
 #include "kcmaccessibilitydata.h"
@@ -72,7 +71,6 @@ KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData)
     qmlRegisterAnonymousType<BellSettings>("org.kde.plasma.access.kcm", 0);
     qmlRegisterAnonymousType<KeyboardSettings>("org.kde.plasma.access.kcm", 0);
     qmlRegisterAnonymousType<KeyboardFiltersSettings>("org.kde.plasma.access.kcm", 0);
-    qmlRegisterAnonymousType<ActivationGesturesSettings>("org.kde.plasma.access.kcm", 0);
     qmlRegisterAnonymousType<ScreenReaderSettings>("org.kde.plasma.access.kcm", 0);
     qmlRegisterAnonymousType<ShakeCursorSettings>("org.kde.plasma.access.kcm", 0);
     qmlRegisterAnonymousType<ColorblindnessCorrectionSettings>("org.kde.plasma.access.kcm", 0);
@@ -87,7 +85,6 @@ KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData)
 
     connect(m_data->bellSettings(), &BellSettings::configChanged, this, &KAccessConfig::bellIsDefaultsChanged);
     connect(m_data->mouseSettings(), &MouseSettings::configChanged, this, &KAccessConfig::mouseIsDefaultsChanged);
-    connect(m_data->activationGesturesSettings(), &ActivationGesturesSettings::configChanged, this, &KAccessConfig::activationGesturesIsDefaultsChanged);
     connect(m_data->keyboardFiltersSettings(), &KeyboardFiltersSettings::configChanged, this, &KAccessConfig::keyboardFiltersIsDefaultsChanged);
     connect(m_data->keyboardSettings(), &KeyboardSettings::configChanged, this, &KAccessConfig::keyboardModifiersIsDefaultsChanged);
     connect(m_data->screenReaderSettings(), &ScreenReaderSettings::configChanged, this, &KAccessConfig::screenReaderIsDefaultsChanged);
@@ -435,11 +432,6 @@ KeyboardFiltersSettings *KAccessConfig::keyboardFiltersSettings() const
     return m_data->keyboardFiltersSettings();
 }
 
-ActivationGesturesSettings *KAccessConfig::activationGesturesSettings() const
-{
-    return m_data->activationGesturesSettings();
-}
-
 ScreenReaderSettings *KAccessConfig::screenReaderSettings() const
 {
     return m_data->screenReaderSettings();
@@ -483,11 +475,6 @@ bool KAccessConfig::keyboardFiltersIsDefaults() const
 bool KAccessConfig::keyboardModifiersIsDefaults() const
 {
     return keyboardSettings()->isDefaults();
-}
-
-bool KAccessConfig::activationGesturesIsDefaults() const
-{
-    return activationGesturesSettings()->isDefaults();
 }
 
 bool KAccessConfig::screenReaderIsDefaults() const

@@ -42,14 +42,6 @@ kconfig_target_kcfg_file(kaccess_settings
 
 kconfig_target_kcfg_file(kaccess_settings
     GENERATE_MOC
-    FILE kcmaccessibilityactivationgestures.kcfg
-    HEADER kcmaccessibilityactivationgestures.h
-    CLASS_NAME ActivationGesturesSettings
-    MUTATORS DEFAULT_VALUE_GETTERS GENERATE_PROPERTIES PARENT_IN_CONSTRUCTOR NOTIFIERS
-)
-
-kconfig_target_kcfg_file(kaccess_settings
-    GENERATE_MOC
     FILE kcmaccessibilityscreenreader.kcfg
     HEADER kcmaccessibilityscreenreader.h
     CLASS_NAME ScreenReaderSettings
@@ -91,8 +83,8 @@ kconfig_target_kcfg_file(kaccess_settings
 kcmutils_generate_module_data(kcm_access
     MODULE_DATA_HEADER kcmaccessibilitydata.h
     MODULE_DATA_CLASS_NAME AccessibilityData
-    SETTINGS_HEADERS kcmaccessibilitybell.h kcmaccessibilitykeyboard.h kcmaccessibilitykeyboardfilters.h kcmaccessibilitymouse.h kcmaccessibilityactivationgestures.h kcmaccessibilityscreenreader.h kcmaccessibilityshakecursor.h kcmaccessibilitycolorblindnesscorrection.h kcmaccessibilityinvert.h kcmaccessibilityzoommagnifier.h
-    SETTINGS_CLASSES BellSettings KeyboardSettings KeyboardFiltersSettings MouseSettings ActivationGesturesSettings ScreenReaderSettings ShakeCursorSettings ColorblindnessCorrectionSettings InvertSettings ZoomMagnifierSettings
+    SETTINGS_HEADERS kcmaccessibilitybell.h kcmaccessibilitykeyboard.h kcmaccessibilitykeyboardfilters.h kcmaccessibilitymouse.h  kcmaccessibilityscreenreader.h kcmaccessibilityshakecursor.h kcmaccessibilitycolorblindnesscorrection.h kcmaccessibilityinvert.h kcmaccessibilityzoommagnifier.h
+    SETTINGS_CLASSES BellSettings KeyboardSettings KeyboardFiltersSettings MouseSettings ScreenReaderSettings ShakeCursorSettings ColorblindnessCorrectionSettings InvertSettings ZoomMagnifierSettings
 )
 
 target_link_libraries(kcm_access PRIVATE

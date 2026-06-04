@@ -15,7 +15,6 @@ class MouseSettings;
 class BellSettings;
 class KeyboardSettings;
 class KeyboardFiltersSettings;
-class ActivationGesturesSettings;
 class ScreenReaderSettings;
 class AccessibilityData;
 class ShakeCursorSettings;
@@ -30,7 +29,6 @@ class KAccessConfig : public KQuickManagedConfigModule
     Q_PROPERTY(BellSettings *bellSettings READ bellSettings CONSTANT)
     Q_PROPERTY(KeyboardSettings *keyboardSettings READ keyboardSettings CONSTANT)
     Q_PROPERTY(KeyboardFiltersSettings *keyboardFiltersSettings READ keyboardFiltersSettings CONSTANT)
-    Q_PROPERTY(ActivationGesturesSettings *activationGesturesSettings READ activationGesturesSettings CONSTANT)
     Q_PROPERTY(ScreenReaderSettings *screenReaderSettings READ screenReaderSettings CONSTANT)
     Q_PROPERTY(ShakeCursorSettings *shakeCursorSettings READ shakeCursorSettings CONSTANT)
     Q_PROPERTY(ColorblindnessCorrectionSettings *colorblindnessCorrectionSettings READ colorblindnessCorrectionSettings CONSTANT)
@@ -42,7 +40,6 @@ class KAccessConfig : public KQuickManagedConfigModule
     Q_PROPERTY(bool mouseIsDefaults READ mouseIsDefaults NOTIFY mouseIsDefaultsChanged)
     Q_PROPERTY(bool keyboardFiltersIsDefaults READ keyboardFiltersIsDefaults NOTIFY keyboardFiltersIsDefaultsChanged)
     Q_PROPERTY(bool keyboardModifiersIsDefaults READ keyboardModifiersIsDefaults NOTIFY keyboardModifiersIsDefaultsChanged)
-    Q_PROPERTY(bool activationGesturesIsDefaults READ activationGesturesIsDefaults NOTIFY activationGesturesIsDefaultsChanged)
     Q_PROPERTY(bool screenReaderIsDefaults READ screenReaderIsDefaults NOTIFY screenReaderIsDefaultsChanged)
     Q_PROPERTY(bool shakeCursorIsDefaults READ shakeCursorIsDefaults NOTIFY shakeCursorIsDefaultsChanged)
     Q_PROPERTY(bool colorblindnessCorrectionIsDefaults READ colorblindnessCorrectionIsDefaults NOTIFY colorblindnessCorrectionIsDefaultsChanged)
@@ -70,7 +67,6 @@ public:
     BellSettings *bellSettings() const;
     KeyboardSettings *keyboardSettings() const;
     KeyboardFiltersSettings *keyboardFiltersSettings() const;
-    ActivationGesturesSettings *activationGesturesSettings() const;
     ScreenReaderSettings *screenReaderSettings() const;
     ShakeCursorSettings *shakeCursorSettings() const;
     ColorblindnessCorrectionSettings *colorblindnessCorrectionSettings() const;
@@ -81,7 +77,6 @@ public:
     bool mouseIsDefaults() const;
     bool keyboardFiltersIsDefaults() const;
     bool keyboardModifiersIsDefaults() const;
-    bool activationGesturesIsDefaults() const;
     bool screenReaderIsDefaults() const;
     bool shakeCursorIsDefaults() const;
     bool colorblindnessCorrectionIsDefaults() const;
@@ -94,7 +89,6 @@ Q_SIGNALS:
     void mouseIsDefaultsChanged();
     void keyboardFiltersIsDefaultsChanged();
     void keyboardModifiersIsDefaultsChanged();
-    void activationGesturesIsDefaultsChanged();
     void screenReaderIsDefaultsChanged();
     void shakeCursorIsDefaultsChanged();
     void colorblindnessCorrectionIsDefaultsChanged();

@@ -49,11 +49,6 @@ KCMUtils.AbstractKCM {
             defaultnessKey: "mouseIsDefaults"
         },
         {
-            icon: "input-caps-on",
-            title: i18nc("@title Category name in sidebar", "Activation Shortcuts"),
-            defaultnessKey: "activationGesturesIsDefaults"
-        },
-        {
             icon: "text-speak",
             title: i18nc("@title Category name in sidebar", "Screen Reader"),
             defaultnessKey: "screenReaderIsDefaults"
@@ -179,7 +174,6 @@ KCMUtils.AbstractKCM {
                         ModifierKeys {}
                         KeyboardFilters {}
                         MouseNavigation {}
-                        ActivationShortcuts {}
                         ScreenReader {}
                         ColorblindnessCorrection {}
                         Invert {}
