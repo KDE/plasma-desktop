@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-04 00:46+0000\n"
 "PO-Revision-Date: 2026-04-11 21:38+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -25,49 +25,24 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr "שגיאה קריטית בקריאת מידע בסיסי של התקן בשביל משטח מגע %1."
 
-#: backends/x11/xlibbackend.cpp:69
-#, kde-format
-msgid "Cannot connect to X server"
-msgstr "ההתחברות לשרת X נכשלה"
-
-#: backends/x11/xlibbackend.cpp:80
-#, kde-format
-msgid "No touchpad found"
-msgstr "לא נמצא משטח מגע"
-
-#: backends/x11/xlibbackend.cpp:120
-#, kde-format
-msgid "Cannot apply touchpad configuration"
-msgstr "לא ניתן להחיל את הגדרות משטח המגע"
-
-#: backends/x11/xlibbackend.cpp:134
-#, kde-format
-msgid "Cannot read touchpad configuration"
-msgstr "לא ניתן לקרוא את הגדרות משטח המגע"
-
-#: backends/x11/xlibbackend.cpp:147
-#, kde-format
-msgid "Cannot read default touchpad configuration"
-msgstr "אי אפשר לקרוא את הגדרות משטח המגע כברירת מחדל"
-
-#: kcm.cpp:69
+#: kcm.cpp:58
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "לא ניתן לבחור מנגנון מתאים"
 
-#: kcm.cpp:126
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr "שגיאה בטעינת ערכים. יש להפעיל מודול הגדרות זה מחדש."
 
-#: kcm.cpp:129
+#: kcm.cpp:107
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "לא נמצא התקן הצבעה. יש לחבר אותו כעת."
 
-#: kcm.cpp:138
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -76,7 +51,7 @@ msgstr ""
 "לא ניתן לשמור את כל השינויים. ביומני המערכת יש פירוט נוסף. נא להפעיל את "
 "מודול הגדרות זה מחדש ולנסות שוב."
 
-#: kcm.cpp:157
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -84,7 +59,7 @@ msgid ""
 msgstr ""
 "שגיאה בטעינת ערכי ברירת המחדל. הגדרת חלק מהאפשרויות לברירות המחדל שלהן נכשלה."
 
-#: kcm.cpp:172
+#: kcm.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -92,12 +67,12 @@ msgid ""
 msgstr ""
 "שגיאה בהוספת התקן חדש שחובר. נא לחבר אותו מחדש ולהפעיל את ההגדרות מחדש."
 
-#: kcm.cpp:185
+#: kcm.cpp:163
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "התקן הצבעה מנותק. חלונית ההגדרות שלו נסגרה."
 
-#: kcm.cpp:187
+#: kcm.cpp:165
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "התקן הצבעה מנותק. לא נמצאו התקנים אחרים."
@@ -386,6 +361,21 @@ msgstr "לחיצה אמצעית (נקישה בשלוש אצבעות ללחיצה
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "לחיצה אמצעית"
+
+#~ msgid "Cannot connect to X server"
+#~ msgstr "ההתחברות לשרת X נכשלה"
+
+#~ msgid "No touchpad found"
+#~ msgstr "לא נמצא משטח מגע"
+
+#~ msgid "Cannot apply touchpad configuration"
+#~ msgstr "לא ניתן להחיל את הגדרות משטח המגע"
+
+#~ msgid "Cannot read touchpad configuration"
+#~ msgstr "לא ניתן לקרוא את הגדרות משטח המגע"
+
+#~ msgid "Cannot read default touchpad configuration"
+#~ msgstr "אי אפשר לקרוא את הגדרות משטח המגע כברירת מחדל"
 
 #~ msgid "Querying input devices failed. Please reopen this settings module."
 #~ msgstr "תשאול התקני קלט נכשלה. יש לפתוח את מסך ההגדרות הזה מחדש."

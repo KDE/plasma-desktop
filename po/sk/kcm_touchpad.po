@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-04 00:46+0000\n"
 "PO-Revision-Date: 2025-05-30 20:35+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -24,37 +24,12 @@ msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr ""
 "Kritická chyba pri čítaní základných informácií zariadenia pre touchpad %1."
 
-#: backends/x11/xlibbackend.cpp:69
-#, kde-format
-msgid "Cannot connect to X server"
-msgstr "Nemôžem sa pripojiť k X serveru"
-
-#: backends/x11/xlibbackend.cpp:80
-#, kde-format
-msgid "No touchpad found"
-msgstr "Nenašiel sa touchpad"
-
-#: backends/x11/xlibbackend.cpp:120
-#, kde-format
-msgid "Cannot apply touchpad configuration"
-msgstr "Nemôžem použiť nastavenie touchpadu"
-
-#: backends/x11/xlibbackend.cpp:134
-#, kde-format
-msgid "Cannot read touchpad configuration"
-msgstr "Nemôžem čítať nastavenie touchpadu"
-
-#: backends/x11/xlibbackend.cpp:147
-#, kde-format
-msgid "Cannot read default touchpad configuration"
-msgstr "Nemôžem čítať predvolené nastavenia touchpadu"
-
-#: kcm.cpp:69
+#: kcm.cpp:58
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "Nie je možné vybrať vhodný backend"
 
-#: kcm.cpp:126
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -63,12 +38,12 @@ msgstr ""
 "Chyba počas načítavania zmien. Pozrite si záznamy pre viac informácií. "
 "Prosím, reštartujte konfiguračný modul."
 
-#: kcm.cpp:129
+#: kcm.cpp:107
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Nenájdené žiadne ukazovacie zariadenie. Pripojte ho teraz."
 
-#: kcm.cpp:138
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -77,7 +52,7 @@ msgstr ""
 "Nepodarilo sa uložiť všetky zmeny. Pozrite si záznamy pre viac informácií. "
 "Prosím, reštartujte konfiguračný modul."
 
-#: kcm.cpp:157
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -86,7 +61,7 @@ msgstr ""
 "Chyba počas načítavania predvolených hodnôt. Nie všetky alebo žiadne voľby "
 "boli možné nastaviť na predvolené hodnoty."
 
-#: kcm.cpp:172
+#: kcm.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -95,12 +70,12 @@ msgstr ""
 "Chyba počas pridávania novo pripojeného zariadenia. Prosím, znovu ho "
 "pripojte a reštartujte konfiguračný modul."
 
-#: kcm.cpp:185
+#: kcm.cpp:163
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Ukazovacie zariadenie odpojené. Zatvorte tento dialóg nastavení."
 
-#: kcm.cpp:187
+#: kcm.cpp:165
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Ukazovacie zariadenie odpojené. Žiadne iné zariadenie nebolo nájdené."
@@ -392,6 +367,21 @@ msgstr "Stredný klik (troj-klik na pravý klik)"
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Stredný klik"
+
+#~ msgid "Cannot connect to X server"
+#~ msgstr "Nemôžem sa pripojiť k X serveru"
+
+#~ msgid "No touchpad found"
+#~ msgstr "Nenašiel sa touchpad"
+
+#~ msgid "Cannot apply touchpad configuration"
+#~ msgstr "Nemôžem použiť nastavenie touchpadu"
+
+#~ msgid "Cannot read touchpad configuration"
+#~ msgstr "Nemôžem čítať nastavenie touchpadu"
+
+#~ msgid "Cannot read default touchpad configuration"
+#~ msgstr "Nemôžem čítať predvolené nastavenia touchpadu"
 
 #~ msgid "Querying input devices failed. Please reopen this settings module."
 #~ msgstr ""

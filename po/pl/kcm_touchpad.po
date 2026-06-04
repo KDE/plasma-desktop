@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-04 00:46+0000\n"
 "PO-Revision-Date: 2026-04-04 19:32+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -23,37 +23,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr "Krytyczny błąd przy odczycie podstawowych informacji o gładziku %1."
 
-#: backends/x11/xlibbackend.cpp:69
-#, kde-format
-msgid "Cannot connect to X server"
-msgstr "Nie można połączyć z serwerem X"
-
-#: backends/x11/xlibbackend.cpp:80
-#, kde-format
-msgid "No touchpad found"
-msgstr "Nie znaleziono gładzika"
-
-#: backends/x11/xlibbackend.cpp:120
-#, kde-format
-msgid "Cannot apply touchpad configuration"
-msgstr "Nie można zastosować ustawień gładzika"
-
-#: backends/x11/xlibbackend.cpp:134
-#, kde-format
-msgid "Cannot read touchpad configuration"
-msgstr "Nie można odczytać ustawień gładzika"
-
-#: backends/x11/xlibbackend.cpp:147
-#, kde-format
-msgid "Cannot read default touchpad configuration"
-msgstr "Nie można odczytać domyślnych ustawień gładzika"
-
-#: kcm.cpp:69
+#: kcm.cpp:58
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "Nie można wybrać nadającego się silnika"
 
-#: kcm.cpp:126
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -62,12 +37,12 @@ msgstr ""
 "Błąd podczas wczytywania wartości. Zajrzyj do dziennika po szczegóły. "
 "Uruchom moduł ustawień ponownie."
 
-#: kcm.cpp:129
+#: kcm.cpp:107
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Nie znaleziono urządzenia wskazującego. Podłącz je teraz."
 
-#: kcm.cpp:138
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -76,7 +51,7 @@ msgstr ""
 "Nie można zapisać wszystkich zmian. Zajrzyj do dziennika po szczegóły. "
 "Uruchom moduł ustawień ponownie."
 
-#: kcm.cpp:157
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -85,7 +60,7 @@ msgstr ""
 "Błąd wczytywania wartości domyślnych. Nie można ustawić wszystkich lub "
 "części opcji do wartości domyślnych."
 
-#: kcm.cpp:172
+#: kcm.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -94,12 +69,12 @@ msgstr ""
 "Błąd podczas dodawania nowopodłączonego urządzenia. Podłącz je ponownie i "
 "uruchom moduł ustawień ponownie."
 
-#: kcm.cpp:185
+#: kcm.cpp:163
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Odłączono urządzenie wskazujące. Zamknięto jego okno ustawień."
 
-#: kcm.cpp:187
+#: kcm.cpp:165
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Odłączono urządzenie wskazujące. Nie znaleziono innych urządzeń."
@@ -393,6 +368,21 @@ msgstr ""
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Kliknięcie środkowym"
+
+#~ msgid "Cannot connect to X server"
+#~ msgstr "Nie można połączyć z serwerem X"
+
+#~ msgid "No touchpad found"
+#~ msgstr "Nie znaleziono gładzika"
+
+#~ msgid "Cannot apply touchpad configuration"
+#~ msgstr "Nie można zastosować ustawień gładzika"
+
+#~ msgid "Cannot read touchpad configuration"
+#~ msgstr "Nie można odczytać ustawień gładzika"
+
+#~ msgid "Cannot read default touchpad configuration"
+#~ msgstr "Nie można odczytać domyślnych ustawień gładzika"
 
 #~ msgid "Querying input devices failed. Please reopen this settings module."
 #~ msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-04 00:46+0000\n"
 "PO-Revision-Date: 2026-05-17 15:20+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -25,37 +25,12 @@ msgstr ""
 "Eroare critică la citirea informațiilor fundamentale de dispozitiv ale zonei "
 "tactile %1."
 
-#: backends/x11/xlibbackend.cpp:69
-#, kde-format
-msgid "Cannot connect to X server"
-msgstr "Nu se poate conecta la serverul X"
-
-#: backends/x11/xlibbackend.cpp:80
-#, kde-format
-msgid "No touchpad found"
-msgstr "Nu a fost detectată o zonă tactilă"
-
-#: backends/x11/xlibbackend.cpp:120
-#, kde-format
-msgid "Cannot apply touchpad configuration"
-msgstr "Nu se poate aplica configurația zonei tactile"
-
-#: backends/x11/xlibbackend.cpp:134
-#, kde-format
-msgid "Cannot read touchpad configuration"
-msgstr "Nu se poate citi configurația zonei tactile"
-
-#: backends/x11/xlibbackend.cpp:147
-#, kde-format
-msgid "Cannot read default touchpad configuration"
-msgstr "Nu se poate citi configurația implicită a zonei tactile"
-
-#: kcm.cpp:69
+#: kcm.cpp:58
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "Platforma corectă nu poate fi aleasă"
 
-#: kcm.cpp:126
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -64,12 +39,12 @@ msgstr ""
 "Eroare la încărcarea valorilor. Vedeți jurnalul pentru informații "
 "suplimentare. Reporniți acest modul de configurare."
 
-#: kcm.cpp:129
+#: kcm.cpp:107
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Nu s-a găsit niciun dispozitiv de indicare. Conectați acum."
 
-#: kcm.cpp:138
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -78,7 +53,7 @@ msgstr ""
 "Nu s-au putut salva toate modificările. Vedeți jurnalul pentru informații "
 "suplimentare. Reporniți acest modul de configurare și reîncercați."
 
-#: kcm.cpp:157
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -87,7 +62,7 @@ msgstr ""
 "Eroare la încărcarea valorilor implicite. Stabilirea unor opțiuni la valori "
 "implicite a eșuat."
 
-#: kcm.cpp:172
+#: kcm.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -96,13 +71,13 @@ msgstr ""
 "Eroare la adăugarea dispozitivului nou conectat. Reconectați-l și reporniți "
 "acest modul de configurare."
 
-#: kcm.cpp:185
+#: kcm.cpp:163
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Dispozitiv de indicare deconectat. Dialogul său de configurare a fost închis."
 
-#: kcm.cpp:187
+#: kcm.cpp:165
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Dispozitiv de indicare deconectat. Nu au fost găsite alte dispozitive."
@@ -394,6 +369,21 @@ msgstr "Clic mijlociu (tapare cu trei degete pentru clic drept)"
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Clic mijlociu"
+
+#~ msgid "Cannot connect to X server"
+#~ msgstr "Nu se poate conecta la serverul X"
+
+#~ msgid "No touchpad found"
+#~ msgstr "Nu a fost detectată o zonă tactilă"
+
+#~ msgid "Cannot apply touchpad configuration"
+#~ msgstr "Nu se poate aplica configurația zonei tactile"
+
+#~ msgid "Cannot read touchpad configuration"
+#~ msgstr "Nu se poate citi configurația zonei tactile"
+
+#~ msgid "Cannot read default touchpad configuration"
+#~ msgstr "Nu se poate citi configurația implicită a zonei tactile"
 
 #~ msgid "Querying input devices failed. Please reopen this settings module."
 #~ msgstr ""

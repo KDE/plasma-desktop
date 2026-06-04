@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-04 00:46+0000\n"
 "PO-Revision-Date: 2026-01-21 11:04+0000\n"
 "Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
 "Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
@@ -25,37 +25,12 @@ msgstr ""
 "Earráid chriticiúil agus faisnéis bhunúsach faoin ngléas á léamh don "
 "phainéal tadhaill %1."
 
-#: backends/x11/xlibbackend.cpp:69
-#, kde-format
-msgid "Cannot connect to X server"
-msgstr "Ní féidir ceangal leis an bhfreastalaí X"
-
-#: backends/x11/xlibbackend.cpp:80
-#, kde-format
-msgid "No touchpad found"
-msgstr "Níor aimsíodh aon phainéal tadhaill"
-
-#: backends/x11/xlibbackend.cpp:120
-#, kde-format
-msgid "Cannot apply touchpad configuration"
-msgstr "Ní féidir cumraíocht an tslat tadhaill a chur i bhfeidhm"
-
-#: backends/x11/xlibbackend.cpp:134
-#, kde-format
-msgid "Cannot read touchpad configuration"
-msgstr "Ní féidir cumraíocht an tslat tadhaill a léamh"
-
-#: backends/x11/xlibbackend.cpp:147
-#, kde-format
-msgid "Cannot read default touchpad configuration"
-msgstr "Ní féidir cumraíocht réamhshocraithe an tadhaill a léamh"
-
-#: kcm.cpp:69
+#: kcm.cpp:58
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr ""
 
-#: kcm.cpp:126
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -64,13 +39,13 @@ msgstr ""
 "Earráid agus luachanna á lódáil. Féach na logaí le haghaidh tuilleadh "
 "eolais. Atosaigh an modúl cumraíochta seo le do thoil."
 
-#: kcm.cpp:129
+#: kcm.cpp:107
 #, fuzzy, kde-format
 #| msgid "No touchpad found. Connect touchpad now."
 msgid "No pointer device found. Connect now."
 msgstr "Níor aimsíodh aon tadhaill-cheap. Ceangail an tadhaill-cheap anois."
 
-#: kcm.cpp:138
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -79,7 +54,7 @@ msgstr ""
 "Ní féidir na hathruithe go léir a shábháil. Féach na logaí le haghaidh "
 "tuilleadh eolais. Atosaigh an modúl cumraíochta seo agus déan iarracht arís."
 
-#: kcm.cpp:157
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -88,7 +63,7 @@ msgstr ""
 "Earráid agus luachanna réamhshocraithe á lódáil. Theip ar roinnt roghanna a "
 "shocrú chuig a luachanna réamhshocraithe."
 
-#: kcm.cpp:172
+#: kcm.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -97,13 +72,13 @@ msgstr ""
 "Earráid agus gléas nua-cheangailte á chur leis. Athcheangail é agus atosú an "
 "modúl cumraíochta seo le do thoil."
 
-#: kcm.cpp:185
+#: kcm.cpp:163
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. Closed its setting dialog."
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "An ceap tadhaill dícheangailte. Dhún sé a dhialóg socruithe."
 
-#: kcm.cpp:187
+#: kcm.cpp:165
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. No other touchpads found."
 msgid "Pointer device disconnected. No other devices found."
@@ -395,6 +370,21 @@ msgstr "Cliceáil sa lár (tapáil le trí mhéar chun cliceáil ar dheis)"
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Cliceáil sa lár"
+
+#~ msgid "Cannot connect to X server"
+#~ msgstr "Ní féidir ceangal leis an bhfreastalaí X"
+
+#~ msgid "No touchpad found"
+#~ msgstr "Níor aimsíodh aon phainéal tadhaill"
+
+#~ msgid "Cannot apply touchpad configuration"
+#~ msgstr "Ní féidir cumraíocht an tslat tadhaill a chur i bhfeidhm"
+
+#~ msgid "Cannot read touchpad configuration"
+#~ msgstr "Ní féidir cumraíocht an tslat tadhaill a léamh"
+
+#~ msgid "Cannot read default touchpad configuration"
+#~ msgstr "Ní féidir cumraíocht réamhshocraithe an tadhaill a léamh"
 
 #~ msgid "Querying input devices failed. Please reopen this settings module."
 #~ msgstr ""

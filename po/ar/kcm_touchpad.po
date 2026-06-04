@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-04 00:46+0000\n"
 "PO-Revision-Date: 2026-03-28 18:02+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -25,37 +25,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr "خطأ فادح في قراءة معلومات الجهاز الأساسية للوح اللمس %1."
 
-#: backends/x11/xlibbackend.cpp:69
-#, kde-format
-msgid "Cannot connect to X server"
-msgstr "تعذّر الاتّصال بخادم X"
-
-#: backends/x11/xlibbackend.cpp:80
-#, kde-format
-msgid "No touchpad found"
-msgstr "لم يُعثر على لوحة لمس"
-
-#: backends/x11/xlibbackend.cpp:120
-#, kde-format
-msgid "Cannot apply touchpad configuration"
-msgstr "تعذّر تطبيق ضبط لوحة اللمس"
-
-#: backends/x11/xlibbackend.cpp:134
-#, kde-format
-msgid "Cannot read touchpad configuration"
-msgstr "تعذّرت قراءة ضبط لوحة اللمس"
-
-#: backends/x11/xlibbackend.cpp:147
-#, kde-format
-msgid "Cannot read default touchpad configuration"
-msgstr "تعذّرت قراءة ضبط لوحة اللمس المبدئي"
-
-#: kcm.cpp:69
+#: kcm.cpp:58
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "غير قادر على تحديد الواجهة الخلفية المناسبة"
 
-#: kcm.cpp:126
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -64,12 +39,12 @@ msgstr ""
 "خطأ أثناء تحميل القيم. انظر السجلات لمزيد من المعلومات. يرجى إعادة تشغيل "
 "وحدة الضبط هذه."
 
-#: kcm.cpp:129
+#: kcm.cpp:107
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "لم يعثر على جهاز مؤشر. صل الآن."
 
-#: kcm.cpp:138
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -78,7 +53,7 @@ msgstr ""
 "غير قادر على حفظ كل التغييرات. انظر السجلات لمزيد من المعلومات. يرجى إعادة "
 "تشغيل وحدة الضبط هذه والمحاولة مرة أخرى."
 
-#: kcm.cpp:157
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -86,7 +61,7 @@ msgid ""
 msgstr ""
 "خطأ أثناء تحميل القيم المبدئية. فشل في تعيين بعض الخيارات لقيمها المبدئية."
 
-#: kcm.cpp:172
+#: kcm.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -95,12 +70,12 @@ msgstr ""
 "خطأ أثناء إضافة جهاز متصل حديثًا. يرجى إعادة توصيله وإعادة تشغيل وحدة الضبط "
 "هذه. "
 
-#: kcm.cpp:185
+#: kcm.cpp:163
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "جهاز المؤشر غير متصل. أغلقت مربع حوار الإعداد الخاص به."
 
-#: kcm.cpp:187
+#: kcm.cpp:165
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "جهاز المؤشر غير متصل. لم يعثر على أجهزة أخرى."
@@ -390,6 +365,21 @@ msgstr "النقر الأوسط (الطَرْق بثلاثة أصابع للنق
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "النّقر بالوسط"
+
+#~ msgid "Cannot connect to X server"
+#~ msgstr "تعذّر الاتّصال بخادم X"
+
+#~ msgid "No touchpad found"
+#~ msgstr "لم يُعثر على لوحة لمس"
+
+#~ msgid "Cannot apply touchpad configuration"
+#~ msgstr "تعذّر تطبيق ضبط لوحة اللمس"
+
+#~ msgid "Cannot read touchpad configuration"
+#~ msgstr "تعذّرت قراءة ضبط لوحة اللمس"
+
+#~ msgid "Cannot read default touchpad configuration"
+#~ msgstr "تعذّرت قراءة ضبط لوحة اللمس المبدئي"
 
 #~ msgid "Querying input devices failed. Please reopen this settings module."
 #~ msgstr "فشل الاستعلام عن أجهزة الإدخال. يرجى إعادة فتح وحدة الإعدادات هذه."

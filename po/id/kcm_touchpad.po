@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-04 00:46+0000\n"
 "PO-Revision-Date: 2025-03-15 06:29+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -23,37 +23,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr "Galat kritis saat pembacaan pokok info peranti untuk papan sentuh %1."
 
-#: backends/x11/xlibbackend.cpp:69
-#, kde-format
-msgid "Cannot connect to X server"
-msgstr "Tidak bisa mengkoneksikan ke server X"
-
-#: backends/x11/xlibbackend.cpp:80
-#, kde-format
-msgid "No touchpad found"
-msgstr "Tidak ada papan sentuh yang ditemukan"
-
-#: backends/x11/xlibbackend.cpp:120
-#, kde-format
-msgid "Cannot apply touchpad configuration"
-msgstr "Tidak bisa menerapkan konfigurasi papan sentuh"
-
-#: backends/x11/xlibbackend.cpp:134
-#, kde-format
-msgid "Cannot read touchpad configuration"
-msgstr "Tidak bisa membaca konfigurasi papan sentuh"
-
-#: backends/x11/xlibbackend.cpp:147
-#, kde-format
-msgid "Cannot read default touchpad configuration"
-msgstr "Tidak bisa membaca konfigurasi papan sentuh baku"
-
-#: kcm.cpp:69
+#: kcm.cpp:58
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr ""
 
-#: kcm.cpp:126
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -62,14 +37,14 @@ msgstr ""
 "Error selagi memuat nilai. Lihat log untuk informasi selebihnya. Silakan "
 "jalankan ulang modul konfigurasi ini."
 
-#: kcm.cpp:129
+#: kcm.cpp:107
 #, fuzzy, kde-format
 #| msgid "No touchpad found. Connect touchpad now."
 msgid "No pointer device found. Connect now."
 msgstr ""
 "Tidak ada papan sentuh yang ditemukan. Koneksikan papan sentuh sekarang."
 
-#: kcm.cpp:138
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -78,7 +53,7 @@ msgstr ""
 "Tidak dapat menyimpan semua perubahan. Lihat log untuk informasi selebihnya. "
 "Silakan jalankan ulang modul konfigurasi ini dan coba lagi."
 
-#: kcm.cpp:157
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -87,7 +62,7 @@ msgstr ""
 "Error selagi memuat nilai baku. Gagal mengeset beberapa opsi ke nilai "
 "bakunya."
 
-#: kcm.cpp:172
+#: kcm.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -96,13 +71,13 @@ msgstr ""
 "Error selagi menambahkan peranti yang baru terkoneksi. Silakan koneksikan "
 "ulang dan jalankan ulang modul konfigurasi ini."
 
-#: kcm.cpp:185
+#: kcm.cpp:163
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. Closed its setting dialog."
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Papan sentuh terputus. Tutuplah dialog pengaturan."
 
-#: kcm.cpp:187
+#: kcm.cpp:165
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. No other touchpads found."
 msgid "Pointer device disconnected. No other devices found."
@@ -438,6 +413,21 @@ msgstr "Klik-tengah (ketuk tiga-jari untuk klik-kanan)"
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Klik-tengah"
+
+#~ msgid "Cannot connect to X server"
+#~ msgstr "Tidak bisa mengkoneksikan ke server X"
+
+#~ msgid "No touchpad found"
+#~ msgstr "Tidak ada papan sentuh yang ditemukan"
+
+#~ msgid "Cannot apply touchpad configuration"
+#~ msgstr "Tidak bisa menerapkan konfigurasi papan sentuh"
+
+#~ msgid "Cannot read touchpad configuration"
+#~ msgstr "Tidak bisa membaca konfigurasi papan sentuh"
+
+#~ msgid "Cannot read default touchpad configuration"
+#~ msgstr "Tidak bisa membaca konfigurasi papan sentuh baku"
 
 #~ msgid "Querying input devices failed. Please reopen this settings module."
 #~ msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-04 00:46+0000\n"
 "PO-Revision-Date: 2026-03-26 06:41+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -25,37 +25,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr "Kritična napaka med branjem bistvenih podatkov o sledilni ploščici %1."
 
-#: backends/x11/xlibbackend.cpp:69
-#, kde-format
-msgid "Cannot connect to X server"
-msgstr "Ni se bilo mogoče povezati s strežnikom X"
-
-#: backends/x11/xlibbackend.cpp:80
-#, kde-format
-msgid "No touchpad found"
-msgstr "Najdene ni bilo nobene sledilne ploščice"
-
-#: backends/x11/xlibbackend.cpp:120
-#, kde-format
-msgid "Cannot apply touchpad configuration"
-msgstr "Ni mogoče uveljaviti nastavitev sledilne ploščice"
-
-#: backends/x11/xlibbackend.cpp:134
-#, kde-format
-msgid "Cannot read touchpad configuration"
-msgstr "Ni mogoče prebrati nastavitev sledilne ploščice"
-
-#: backends/x11/xlibbackend.cpp:147
-#, kde-format
-msgid "Cannot read default touchpad configuration"
-msgstr "Ni mogoče prebrati privzetih nastavitev sledilne ploščice"
-
-#: kcm.cpp:69
+#: kcm.cpp:58
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "Ni mogoče izbrati ustreznega zaledja"
 
-#: kcm.cpp:126
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -64,12 +39,12 @@ msgstr ""
 "Napaka med nalaganjem vrednosti. Za več podrobnosti si oglejte dnevnike. "
 "Znova zaženite ta nastavitveni modul."
 
-#: kcm.cpp:129
+#: kcm.cpp:107
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Ni najdene nobene kazalne naprave. Povežite se zdaj."
 
-#: kcm.cpp:138
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -78,7 +53,7 @@ msgstr ""
 "Vseh sprememb ni bilo mogoče shraniti. Za več podrobnosti si oglejte "
 "dnevnike. Znova zaženite ta nastavitveni modul in poskusite znova."
 
-#: kcm.cpp:157
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -87,7 +62,7 @@ msgstr ""
 "Napaka med nalaganjem privzetih vrednosti. Nekaterih možnosti ni bilo mogoče "
 "ponastaviti na privzete."
 
-#: kcm.cpp:172
+#: kcm.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -96,13 +71,13 @@ msgstr ""
 "Napaka med dodajanjem novo povezane naprave. Povežite jo znova in znova "
 "zaženite ta nastavitveni modul."
 
-#: kcm.cpp:185
+#: kcm.cpp:163
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Kazalna naprava je odklopljena. Zaprto je bilo pogovorno okno z nastavitvami."
 
-#: kcm.cpp:187
+#: kcm.cpp:165
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Kazalna naprava odklopljena. Nobene druge naprave ni najdene."
@@ -394,6 +369,21 @@ msgstr "Srednji klik (trepljanje s tremi prsti je desni klik)"
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Srednji klik"
+
+#~ msgid "Cannot connect to X server"
+#~ msgstr "Ni se bilo mogoče povezati s strežnikom X"
+
+#~ msgid "No touchpad found"
+#~ msgstr "Najdene ni bilo nobene sledilne ploščice"
+
+#~ msgid "Cannot apply touchpad configuration"
+#~ msgstr "Ni mogoče uveljaviti nastavitev sledilne ploščice"
+
+#~ msgid "Cannot read touchpad configuration"
+#~ msgstr "Ni mogoče prebrati nastavitev sledilne ploščice"
+
+#~ msgid "Cannot read default touchpad configuration"
+#~ msgstr "Ni mogoče prebrati privzetih nastavitev sledilne ploščice"
 
 #~ msgid "Querying input devices failed. Please reopen this settings module."
 #~ msgstr ""

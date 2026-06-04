@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: playground-utils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-04 00:46+0000\n"
 "PO-Revision-Date: 2026-03-27 00:55+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -24,37 +24,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr "Dokunmatik alan %1 için temel aygıt bilgi okumasında kritik hata."
 
-#: backends/x11/xlibbackend.cpp:69
-#, kde-format
-msgid "Cannot connect to X server"
-msgstr "X sunucusuna bağlanılamıyor"
-
-#: backends/x11/xlibbackend.cpp:80
-#, kde-format
-msgid "No touchpad found"
-msgstr "Bulunan dokunmatik yüzey yok"
-
-#: backends/x11/xlibbackend.cpp:120
-#, kde-format
-msgid "Cannot apply touchpad configuration"
-msgstr "Dokunmatik yüzey yapılandırması uygulanamıyor"
-
-#: backends/x11/xlibbackend.cpp:134
-#, kde-format
-msgid "Cannot read touchpad configuration"
-msgstr "Dokunmatik yüzey yapılandırması okunamıyor"
-
-#: backends/x11/xlibbackend.cpp:147
-#, kde-format
-msgid "Cannot read default touchpad configuration"
-msgstr "Öntanımlı dokunmatik yüzey yapılandırması okunamıyor"
-
-#: kcm.cpp:69
+#: kcm.cpp:58
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "Uygun arka uç seçilemiyor"
 
-#: kcm.cpp:126
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -63,13 +38,13 @@ msgstr ""
 "Değerler yüklenirken hata oluştu. Daha fazla bilgi için günlüklere bakın. "
 "Lütfen bu yapılandırma modülünü yeniden başlatın."
 
-#: kcm.cpp:129
+#: kcm.cpp:107
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr ""
 "Herhangi bir işaretçi aygıt bulunamadı. Bir tanesini bağlayabilirsiniz."
 
-#: kcm.cpp:138
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -78,7 +53,7 @@ msgstr ""
 "Tüm değişiklikler kaydedilemiyor. Daha fazla bilgi için günlüklere bakın. "
 "Lütfen bu yapılandırma modülünü yeniden başlatın ve yeniden deneyin."
 
-#: kcm.cpp:157
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -87,7 +62,7 @@ msgstr ""
 "Öntanımlı değerler yüklenirken hata oluştu. Bazı seçenekleri öntanımlı "
 "değerlerine ayarlama başarısız."
 
-#: kcm.cpp:172
+#: kcm.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -96,12 +71,12 @@ msgstr ""
 "Yeni bir aygıt eklenirken hata oluştu. Lütfen yeniden bağlayın ve bu "
 "yapılandırma modülünü yeniden başlatın."
 
-#: kcm.cpp:185
+#: kcm.cpp:163
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "İşaretçi aygıt bağlantısı kesildi. Ayar iletişim kutusu kapatıldı."
 
-#: kcm.cpp:187
+#: kcm.cpp:165
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr ""
@@ -395,6 +370,21 @@ msgstr "Orta tık (sağ tık için üç parmakla vurun)"
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Orta tık"
+
+#~ msgid "Cannot connect to X server"
+#~ msgstr "X sunucusuna bağlanılamıyor"
+
+#~ msgid "No touchpad found"
+#~ msgstr "Bulunan dokunmatik yüzey yok"
+
+#~ msgid "Cannot apply touchpad configuration"
+#~ msgstr "Dokunmatik yüzey yapılandırması uygulanamıyor"
+
+#~ msgid "Cannot read touchpad configuration"
+#~ msgstr "Dokunmatik yüzey yapılandırması okunamıyor"
+
+#~ msgid "Cannot read default touchpad configuration"
+#~ msgstr "Öntanımlı dokunmatik yüzey yapılandırması okunamıyor"
 
 #~ msgid "Querying input devices failed. Please reopen this settings module."
 #~ msgstr ""

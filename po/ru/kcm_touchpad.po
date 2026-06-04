@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-04 00:46+0000\n"
 "PO-Revision-Date: 2026-04-03 20:28+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -27,38 +27,12 @@ msgstr ""
 "Критическая ошибка при чтении основных сведений об устройстве для сенсорной "
 "панели %1."
 
-#: backends/x11/xlibbackend.cpp:69
-#, kde-format
-msgid "Cannot connect to X server"
-msgstr "Не удалось подключиться к X-серверу"
-
-#: backends/x11/xlibbackend.cpp:80
-#, kde-format
-msgid "No touchpad found"
-msgstr "Не найдено ни одной сенсорной панели"
-
-#: backends/x11/xlibbackend.cpp:120
-#, kde-format
-msgid "Cannot apply touchpad configuration"
-msgstr "Не удалось применить конфигурацию сенсорной панели"
-
-#: backends/x11/xlibbackend.cpp:134
-#, kde-format
-msgid "Cannot read touchpad configuration"
-msgstr "Не удалось прочитать конфигурацию сенсорной панели"
-
-#: backends/x11/xlibbackend.cpp:147
-#, kde-format
-msgid "Cannot read default touchpad configuration"
-msgstr ""
-"Не удалось прочитать заданную по умолчанию конфигурацию сенсорной панели"
-
-#: kcm.cpp:69
+#: kcm.cpp:58
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "Не удалось выбрать подходящий модуль"
 
-#: kcm.cpp:126
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -67,12 +41,12 @@ msgstr ""
 "Ошибка при загрузке значений. Более подробная информация сохранена в "
 "журналах. Закройте и снова откройте этот модуль настройки."
 
-#: kcm.cpp:129
+#: kcm.cpp:107
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Устройство указания не найдено. Подключить."
 
-#: kcm.cpp:138
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -82,7 +56,7 @@ msgstr ""
 "журналах. Закройте и снова откройте этот модуль настройки, затем повторите "
 "попытку."
 
-#: kcm.cpp:157
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -90,7 +64,7 @@ msgid ""
 msgstr ""
 "Произошла ошибка: не всем параметрам удалось назначить значения по умолчанию."
 
-#: kcm.cpp:172
+#: kcm.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -99,12 +73,12 @@ msgstr ""
 "При добавлении недавно подключённого устройства возникла ошибка. Отключите и "
 "снова подключите устройство, а также перезапустите этот модуль настройки."
 
-#: kcm.cpp:185
+#: kcm.cpp:163
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Устройство ввода отключено. Его окно настройки закрыто."
 
-#: kcm.cpp:187
+#: kcm.cpp:165
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Устройство ввода отключено. Других устройств не найдено."
@@ -399,6 +373,22 @@ msgstr ""
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Нажатие средней кнопки"
+
+#~ msgid "Cannot connect to X server"
+#~ msgstr "Не удалось подключиться к X-серверу"
+
+#~ msgid "No touchpad found"
+#~ msgstr "Не найдено ни одной сенсорной панели"
+
+#~ msgid "Cannot apply touchpad configuration"
+#~ msgstr "Не удалось применить конфигурацию сенсорной панели"
+
+#~ msgid "Cannot read touchpad configuration"
+#~ msgstr "Не удалось прочитать конфигурацию сенсорной панели"
+
+#~ msgid "Cannot read default touchpad configuration"
+#~ msgstr ""
+#~ "Не удалось прочитать заданную по умолчанию конфигурацию сенсорной панели"
 
 #~ msgid "Querying input devices failed. Please reopen this settings module."
 #~ msgstr ""

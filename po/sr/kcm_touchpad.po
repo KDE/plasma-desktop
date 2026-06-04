@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-04 00:46+0000\n"
 "PO-Revision-Date: 2017-10-30 23:08+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -23,38 +23,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr "Критична грешка при читању основних података уређаја за додирник %1."
 
-#: backends/x11/xlibbackend.cpp:69
-#, kde-format
-msgid "Cannot connect to X server"
-msgstr "Не могу да се повежем на икс сервер"
-
-#: backends/x11/xlibbackend.cpp:80
-#, kde-format
-msgid "No touchpad found"
-msgstr ""
-
-#: backends/x11/xlibbackend.cpp:120
-#, kde-format
-msgid "Cannot apply touchpad configuration"
-msgstr "Не могу да применим поставу додирника."
-
-#: backends/x11/xlibbackend.cpp:134
-#, kde-format
-msgid "Cannot read touchpad configuration"
-msgstr "Не могу да прочитам поставу додирника."
-
-#: backends/x11/xlibbackend.cpp:147
-#, fuzzy, kde-format
-#| msgid "Cannot read touchpad configuration"
-msgid "Cannot read default touchpad configuration"
-msgstr "Не могу да прочитам поставу додирника."
-
-#: kcm.cpp:69
+#: kcm.cpp:58
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr ""
 
-#: kcm.cpp:126
+#: kcm.cpp:104
 #, fuzzy, kde-format
 #| msgid ""
 #| "Error while loading values. See logs for more informations. Please "
@@ -66,13 +40,13 @@ msgstr ""
 "Грешка при учитавању вредности. Погледајте дневник за више детаља. Покрените "
 "поново овај поставни модул."
 
-#: kcm.cpp:129
+#: kcm.cpp:107
 #, fuzzy, kde-format
 #| msgid "No touchpad found. Connect touchpad now."
 msgid "No pointer device found. Connect now."
 msgstr "Нема ниједног додирника. Повежите га сада."
 
-#: kcm.cpp:138
+#: kcm.cpp:116
 #, fuzzy, kde-format
 #| msgid ""
 #| "Not able to save all changes. See logs for more informations. Please "
@@ -84,7 +58,7 @@ msgstr ""
 "Не могу да сачувам све измене. Погледајте дневник за више детаља. Покрените "
 "поново овај поставни модул па покушајте још опет."
 
-#: kcm.cpp:157
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -93,7 +67,7 @@ msgstr ""
 "Грешка при учитавању подразумеваних вредности. Неке од опција не могу да се "
 "поставе на подразумеване вредности."
 
-#: kcm.cpp:172
+#: kcm.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -102,13 +76,13 @@ msgstr ""
 "Грешка при додавању новог повезаног уређаја. Повежите га опет и покрените "
 "поново овај поставни модул."
 
-#: kcm.cpp:185
+#: kcm.cpp:163
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. Closed its setting dialog."
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Додирник откачен. Затворите његов дијалог поставки."
 
-#: kcm.cpp:187
+#: kcm.cpp:165
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. No other touchpads found."
 msgid "Pointer device disconnected. No other devices found."
@@ -419,6 +393,20 @@ msgstr ""
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr ""
+
+#~ msgid "Cannot connect to X server"
+#~ msgstr "Не могу да се повежем на икс сервер"
+
+#~ msgid "Cannot apply touchpad configuration"
+#~ msgstr "Не могу да применим поставу додирника."
+
+#~ msgid "Cannot read touchpad configuration"
+#~ msgstr "Не могу да прочитам поставу додирника."
+
+#, fuzzy
+#~| msgid "Cannot read touchpad configuration"
+#~ msgid "Cannot read default touchpad configuration"
+#~ msgstr "Не могу да прочитам поставу додирника."
 
 #~ msgid "Querying input devices failed. Please reopen this settings module."
 #~ msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-04 00:46+0000\n"
 "PO-Revision-Date: 2025-10-31 22:49+0100\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -23,37 +23,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr "Kritisk fejl ved læsning af enhedsinformationer for touchpad %1."
 
-#: backends/x11/xlibbackend.cpp:69
-#, kde-format
-msgid "Cannot connect to X server"
-msgstr "Kan ikke forbinde til X-server"
-
-#: backends/x11/xlibbackend.cpp:80
-#, kde-format
-msgid "No touchpad found"
-msgstr "Ingen touchpad fundet"
-
-#: backends/x11/xlibbackend.cpp:120
-#, kde-format
-msgid "Cannot apply touchpad configuration"
-msgstr "Kan ikke anvende touchpad-konfiguration"
-
-#: backends/x11/xlibbackend.cpp:134
-#, kde-format
-msgid "Cannot read touchpad configuration"
-msgstr "Kan ikke læse touchpad-konfiguration"
-
-#: backends/x11/xlibbackend.cpp:147
-#, kde-format
-msgid "Cannot read default touchpad configuration"
-msgstr "Kan ikke læse standard touchpad-konfiguration"
-
-#: kcm.cpp:69
+#: kcm.cpp:58
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr ""
 
-#: kcm.cpp:126
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -62,13 +37,13 @@ msgstr ""
 "Fejl under indlæsning af værdier. Se logge for mere information. Genstart "
 "venligst dette konfigurationsmodul."
 
-#: kcm.cpp:129
+#: kcm.cpp:107
 #, fuzzy, kde-format
 #| msgid "No touchpad found. Connect touchpad now."
 msgid "No pointer device found. Connect now."
 msgstr "Ingen touchpad fundet. Tilslut touchpad nu."
 
-#: kcm.cpp:138
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -77,7 +52,7 @@ msgstr ""
 "Kan ikke gemme alle ændringer. Se logge for mere information. Genstart "
 "venligst dette konfigurationsmodul og prøv igen."
 
-#: kcm.cpp:157
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -86,7 +61,7 @@ msgstr ""
 "Fejl under indlæsning af standardværdier. Nogle indstillinger kunne ikke "
 "sættes til deres standardværdier."
 
-#: kcm.cpp:172
+#: kcm.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -95,13 +70,13 @@ msgstr ""
 "Fejl under tilføjelse af ny tilsluttet enhed. Tilslut venligst igen og "
 "genstart dette konfigurationsmodul."
 
-#: kcm.cpp:185
+#: kcm.cpp:163
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. Closed its setting dialog."
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Touchpad ikke længere tilsluttet. Indstillingsdialogen blev lukket."
 
-#: kcm.cpp:187
+#: kcm.cpp:165
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. No other touchpads found."
 msgid "Pointer device disconnected. No other devices found."
@@ -440,6 +415,21 @@ msgstr "Midterklik (trefingertryk for at højreklikke)"
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Midterklik"
+
+#~ msgid "Cannot connect to X server"
+#~ msgstr "Kan ikke forbinde til X-server"
+
+#~ msgid "No touchpad found"
+#~ msgstr "Ingen touchpad fundet"
+
+#~ msgid "Cannot apply touchpad configuration"
+#~ msgstr "Kan ikke anvende touchpad-konfiguration"
+
+#~ msgid "Cannot read touchpad configuration"
+#~ msgstr "Kan ikke læse touchpad-konfiguration"
+
+#~ msgid "Cannot read default touchpad configuration"
+#~ msgstr "Kan ikke læse standard touchpad-konfiguration"
 
 #~ msgid "Querying input devices failed. Please reopen this settings module."
 #~ msgstr ""

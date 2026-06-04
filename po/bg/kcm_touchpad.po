@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-04 00:46+0000\n"
 "PO-Revision-Date: 2026-04-03 01:07+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -24,37 +24,12 @@ msgstr ""
 "Критична грешка при четене на информация за основното устройство за тъчпад "
 "%1."
 
-#: backends/x11/xlibbackend.cpp:69
-#, kde-format
-msgid "Cannot connect to X server"
-msgstr "Не може да се свърже с X сървър"
-
-#: backends/x11/xlibbackend.cpp:80
-#, kde-format
-msgid "No touchpad found"
-msgstr "Не е намерен тъчпад"
-
-#: backends/x11/xlibbackend.cpp:120
-#, kde-format
-msgid "Cannot apply touchpad configuration"
-msgstr "Не може да се приложи конфигурация на тъчпада"
-
-#: backends/x11/xlibbackend.cpp:134
-#, kde-format
-msgid "Cannot read touchpad configuration"
-msgstr "Не може да се прочете конфигурацията на тъчпада"
-
-#: backends/x11/xlibbackend.cpp:147
-#, kde-format
-msgid "Cannot read default touchpad configuration"
-msgstr "Не може да се прочете конфигурацията на тъчпада по подразбиране"
-
-#: kcm.cpp:69
+#: kcm.cpp:58
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "Не може да се избере подходящ бекенд"
 
-#: kcm.cpp:126
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -63,12 +38,12 @@ msgstr ""
 "Грешка при зареждане на стойности. Вижте дневниците за повече информация. "
 "Моля, рестартирайте този конфигурационен модул."
 
-#: kcm.cpp:129
+#: kcm.cpp:107
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Не е намерено указателно устройство. Свържете го сега."
 
-#: kcm.cpp:138
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -77,7 +52,7 @@ msgstr ""
 "Не може да се запазят всички промени. Вижте дневниците за повече информация. "
 "Моля, рестартирайте този конфигурационен модул и опитайте отново."
 
-#: kcm.cpp:157
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -86,7 +61,7 @@ msgstr ""
 "Грешка при зареждането на стойностите по подразбиране. Неуспешно задаване на "
 "някои опции и на техните стойности по подразбиране."
 
-#: kcm.cpp:172
+#: kcm.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -95,14 +70,14 @@ msgstr ""
 "Грешка при добавяне на ново свързано устройство. Моля, свържете го отново и "
 "рестартирайте този конфигурационен модул."
 
-#: kcm.cpp:185
+#: kcm.cpp:163
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Указателното устройство се изключи и диалоговия прозорец за настройка се "
 "затвори."
 
-#: kcm.cpp:187
+#: kcm.cpp:165
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Указателното устройство е изключено. Не са намерени други устройства."
@@ -399,6 +374,21 @@ msgstr "Средно кликване (докосване с три пръста
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Кликване със среден бутон"
+
+#~ msgid "Cannot connect to X server"
+#~ msgstr "Не може да се свърже с X сървър"
+
+#~ msgid "No touchpad found"
+#~ msgstr "Не е намерен тъчпад"
+
+#~ msgid "Cannot apply touchpad configuration"
+#~ msgstr "Не може да се приложи конфигурация на тъчпада"
+
+#~ msgid "Cannot read touchpad configuration"
+#~ msgstr "Не може да се прочете конфигурацията на тъчпада"
+
+#~ msgid "Cannot read default touchpad configuration"
+#~ msgstr "Не може да се прочете конфигурацията на тъчпада по подразбиране"
 
 #~ msgid "Querying input devices failed. Please reopen this settings module."
 #~ msgstr ""

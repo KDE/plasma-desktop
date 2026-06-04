@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-04 00:46+0000\n"
 "PO-Revision-Date: 2026-03-26 04:11+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -26,37 +26,12 @@ msgstr ""
 "Ha ocurrido un error crítico al leer información fundamental del dispositivo "
 "de panel táctil %1."
 
-#: backends/x11/xlibbackend.cpp:69
-#, kde-format
-msgid "Cannot connect to X server"
-msgstr "No se puede conectar con el servidor X"
-
-#: backends/x11/xlibbackend.cpp:80
-#, kde-format
-msgid "No touchpad found"
-msgstr "No se ha encontrado ningún panel táctil"
-
-#: backends/x11/xlibbackend.cpp:120
-#, kde-format
-msgid "Cannot apply touchpad configuration"
-msgstr "No se puede aplicar la configuración del panel táctil"
-
-#: backends/x11/xlibbackend.cpp:134
-#, kde-format
-msgid "Cannot read touchpad configuration"
-msgstr "No se puede leer la configuración del panel táctil"
-
-#: backends/x11/xlibbackend.cpp:147
-#, kde-format
-msgid "Cannot read default touchpad configuration"
-msgstr "No se puede leer la configuración predeterminada del panel táctil"
-
-#: kcm.cpp:69
+#: kcm.cpp:58
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "No se puede seleccionar el motor apropiado"
 
-#: kcm.cpp:126
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -65,12 +40,12 @@ msgstr ""
 "Ha ocurrido un error al cargar los valores. Consulte los registros para más "
 "información. Por favor, reinicie este módulo de configuración."
 
-#: kcm.cpp:129
+#: kcm.cpp:107
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "No se ha encontrado ningún dispositivo apuntador. Conecte uno ahora."
 
-#: kcm.cpp:138
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -80,7 +55,7 @@ msgstr ""
 "más información. Por favor, reinicie este módulo de configuración y vuelva a "
 "probar."
 
-#: kcm.cpp:157
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -89,7 +64,7 @@ msgstr ""
 "Ha ocurrido un error al cargar los valores predeterminados. Ha fallado la "
 "inicialización de algunas opciones a sus valores predeterminados."
 
-#: kcm.cpp:172
+#: kcm.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -98,13 +73,13 @@ msgstr ""
 "Ha ocurrido un error al añadir el dispositivo recién conectado. Por favor, "
 "vuelva a conectarlo y reinicie este módulo de configuración."
 
-#: kcm.cpp:185
+#: kcm.cpp:163
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Dispositivo apuntador desconectado. Se ha cerrado su diálogo de preferencias."
 
-#: kcm.cpp:187
+#: kcm.cpp:165
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr ""
@@ -397,3 +372,18 @@ msgstr "Clic central (toque con tres dedos para hacer un clic derecho)."
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Clic central"
+
+#~ msgid "Cannot connect to X server"
+#~ msgstr "No se puede conectar con el servidor X"
+
+#~ msgid "No touchpad found"
+#~ msgstr "No se ha encontrado ningún panel táctil"
+
+#~ msgid "Cannot apply touchpad configuration"
+#~ msgstr "No se puede aplicar la configuración del panel táctil"
+
+#~ msgid "Cannot read touchpad configuration"
+#~ msgstr "No se puede leer la configuración del panel táctil"
+
+#~ msgid "Cannot read default touchpad configuration"
+#~ msgstr "No se puede leer la configuración predeterminada del panel táctil"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-27 00:47+0000\n"
+"POT-Creation-Date: 2026-06-04 00:46+0000\n"
 "PO-Revision-Date: 2022-10-19 22:48+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -750,166 +750,166 @@ msgctxt "action:inmenu"
 msgid "Move &To Current Desktop"
 msgstr "Liiguta &aktiivsele töölauale"
 
-#: qml/ContextMenu.qml:332
+#: qml/ContextMenu.qml:345
 #, fuzzy, kde-format
 #| msgid "&All Desktops"
 msgctxt "action:inmenu"
 msgid "&All Desktops"
 msgstr "Kõik tööl&auad"
 
-#: qml/ContextMenu.qml:360
+#: qml/ContextMenu.qml:373
 #, fuzzy, kde-format
 #| msgid "&New Desktop"
 msgctxt "action:inmenu"
 msgid "&New Desktop"
 msgstr "&Uus töölaud"
 
-#: qml/ContextMenu.qml:380
+#: qml/ContextMenu.qml:393
 #, fuzzy, kde-format
 #| msgid "Show in &Activities"
 msgctxt "action:inmenu"
 msgid "Show in &Activities"
 msgstr "Näita &tegevustes"
 
-#: qml/ContextMenu.qml:404
+#: qml/ContextMenu.qml:417
 #, fuzzy, kde-format
 #| msgid "Add To Current Activity"
 msgctxt "action:inmenu"
 msgid "Add To Current Activity"
 msgstr "Lisa aktiivsele tegevusele"
 
-#: qml/ContextMenu.qml:414
+#: qml/ContextMenu.qml:427
 #, fuzzy, kde-format
 #| msgid "All Activities"
 msgctxt "action:inmenu"
 msgid "All Activities"
 msgstr "Kõik tegevused"
 
-#: qml/ContextMenu.qml:470
+#: qml/ContextMenu.qml:483
 #, fuzzy, kde-format
 #| msgid "Move to %1"
 msgctxt "action:inmenu"
 msgid "Move to %1"
 msgstr "Liiguta tegevusele %1"
 
-#: qml/ContextMenu.qml:496 qml/ContextMenu.qml:512
+#: qml/ContextMenu.qml:509 qml/ContextMenu.qml:525
 #, fuzzy, kde-format
 #| msgid "&Pin to Task Manager"
 msgctxt "action:inmenu"
 msgid "&Pin to Task Manager"
 msgstr "K&innista tegumihaldurile"
 
-#: qml/ContextMenu.qml:564
+#: qml/ContextMenu.qml:577
 #, fuzzy, kde-format
 #| msgid "On All Activities"
 msgctxt "action:inmenu"
 msgid "On All Activities"
 msgstr "Kõigis tegevustes"
 
-#: qml/ContextMenu.qml:570
+#: qml/ContextMenu.qml:583
 #, fuzzy, kde-format
 #| msgid "On The Current Activity"
 msgctxt "action:inmenu"
 msgid "On The Current Activity"
 msgstr "Aktiivses tegevuses"
 
-#: qml/ContextMenu.qml:594
+#: qml/ContextMenu.qml:607
 #, fuzzy, kde-format
 #| msgid "Unpin from Task Manager"
 msgctxt "action:inmenu"
 msgid "Unpin from Task Manager"
 msgstr "Eemalda tegumihaldurilt"
 
-#: qml/ContextMenu.qml:609
+#: qml/ContextMenu.qml:622
 #, fuzzy, kde-format
 #| msgid "More"
 msgctxt "item:inmenu opens submenu"
 msgid "More"
 msgstr "Rohkem"
 
-#: qml/ContextMenu.qml:618
+#: qml/ContextMenu.qml:631
 #, fuzzy, kde-format
 #| msgid "&Move"
 msgctxt "action:inmenu"
 msgid "&Move"
 msgstr "Lii&guta"
 
-#: qml/ContextMenu.qml:627
+#: qml/ContextMenu.qml:640
 #, fuzzy, kde-format
 #| msgid "Re&size"
 msgctxt "action:inmenu"
 msgid "Re&size"
 msgstr "&Muuda suurust"
 
-#: qml/ContextMenu.qml:641
+#: qml/ContextMenu.qml:654
 #, fuzzy, kde-format
 #| msgid "Ma&ximize"
 msgctxt "action:inmenu"
 msgid "Ma&ximize"
 msgstr "Ma&ksimeeri"
 
-#: qml/ContextMenu.qml:655
+#: qml/ContextMenu.qml:668
 #, fuzzy, kde-format
 #| msgid "Mi&nimize"
 msgctxt "action:inmenu"
 msgid "Mi&nimize"
 msgstr "Mi&nimeeri"
 
-#: qml/ContextMenu.qml:665
+#: qml/ContextMenu.qml:678
 #, fuzzy, kde-format
 #| msgid "Keep &Above Others"
 msgctxt "action:inmenu"
 msgid "Keep &Above Others"
 msgstr "&Teiste peal"
 
-#: qml/ContextMenu.qml:675
+#: qml/ContextMenu.qml:688
 #, fuzzy, kde-format
 #| msgid "Keep &Below Others"
 msgctxt "action:inmenu"
 msgid "Keep &Below Others"
 msgstr "T&eiste all"
 
-#: qml/ContextMenu.qml:687
+#: qml/ContextMenu.qml:700
 #, fuzzy, kde-format
 #| msgid "&Fullscreen"
 msgctxt "action:inmenu"
 msgid "&Fullscreen"
 msgstr "Täisek&raan"
 
-#: qml/ContextMenu.qml:700
+#: qml/ContextMenu.qml:713
 #, fuzzy, kde-format
 #| msgid "&Shade"
 msgctxt "action:inmenu"
 msgid "&Shade"
 msgstr "&Keri kokku"
 
-#: qml/ContextMenu.qml:712
+#: qml/ContextMenu.qml:725
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
 msgstr ""
 
-#: qml/ContextMenu.qml:725
+#: qml/ContextMenu.qml:738
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Hide from Screencast"
 msgstr ""
 
-#: qml/ContextMenu.qml:741
+#: qml/ContextMenu.qml:754
 #, fuzzy, kde-format
 #| msgid "Allow this program to be grouped"
 msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr "Luba seda rakendust grupeerida"
 
-#: qml/ContextMenu.qml:787
+#: qml/ContextMenu.qml:800
 #, fuzzy, kde-format
 #| msgid "&Close"
 msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "&Sulge"
 
-#: qml/ContextMenu.qml:787
+#: qml/ContextMenu.qml:800
 #, fuzzy, kde-format
 #| msgid "&Close"
 msgctxt "@action:inmenu"

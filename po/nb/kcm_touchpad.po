@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-04 00:46+0000\n"
 "PO-Revision-Date: 2026-03-07 20:00+0100\n"
 "Last-Translator: Kjetil Sorlund <translate@sorlund.no>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -24,37 +24,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr "Kritisk feil ved lasting av fundamentale enhetsinfo for styreplata %1."
 
-#: backends/x11/xlibbackend.cpp:69
-#, kde-format
-msgid "Cannot connect to X server"
-msgstr "Klarte ikke koble til X-tjeneren"
-
-#: backends/x11/xlibbackend.cpp:80
-#, kde-format
-msgid "No touchpad found"
-msgstr "Fant ingen styreplate"
-
-#: backends/x11/xlibbackend.cpp:120
-#, kde-format
-msgid "Cannot apply touchpad configuration"
-msgstr "Klarte ikke ta i bruk styreplate-oppsettet"
-
-#: backends/x11/xlibbackend.cpp:134
-#, kde-format
-msgid "Cannot read touchpad configuration"
-msgstr "Klarte ikke lese styreplate-oppsettet"
-
-#: backends/x11/xlibbackend.cpp:147
-#, kde-format
-msgid "Cannot read default touchpad configuration"
-msgstr "Klarte ikke lese standard styreplate-oppsett"
-
-#: kcm.cpp:69
+#: kcm.cpp:58
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr ""
 
-#: kcm.cpp:126
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -63,13 +38,13 @@ msgstr ""
 "Feil ved innlesing av data. Se loggen for mer informasjon. Prøv å starte "
 "oppsettsmodulen på nytt."
 
-#: kcm.cpp:129
+#: kcm.cpp:107
 #, fuzzy, kde-format
 #| msgid "No touchpad found. Connect touchpad now."
 msgid "No pointer device found. Connect now."
 msgstr "Fant ingen styreplate. Prøv å koble den til."
 
-#: kcm.cpp:138
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -78,7 +53,7 @@ msgstr ""
 "Klarte ikke lagre alle endringene. Se loggen for mer informasjon. Prøv å "
 "starte oppsettsmodulen på nytt og prøv igjen."
 
-#: kcm.cpp:157
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -87,7 +62,7 @@ msgstr ""
 "Klarte ikke laste standardverdiene. Noen av verdiene kunne ikke settes til "
 "standardverdier."
 
-#: kcm.cpp:172
+#: kcm.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -96,13 +71,13 @@ msgstr ""
 "Klarte ikke legge til nylig tilkoblet enhet. Prøv og koble den til en gang "
 "til, og start så oppsettsmodulen på nytt."
 
-#: kcm.cpp:185
+#: kcm.cpp:163
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. Closed its setting dialog."
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Styreplata er koblet fra, og innstillingsvinduet blir derfor lukket."
 
-#: kcm.cpp:187
+#: kcm.cpp:165
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. No other touchpads found."
 msgid "Pointer device disconnected. No other devices found."
@@ -393,3 +368,18 @@ msgstr "Midtklikk (trefingertrykk for høyreklikk)"
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Midtklikk"
+
+#~ msgid "Cannot connect to X server"
+#~ msgstr "Klarte ikke koble til X-tjeneren"
+
+#~ msgid "No touchpad found"
+#~ msgstr "Fant ingen styreplate"
+
+#~ msgid "Cannot apply touchpad configuration"
+#~ msgstr "Klarte ikke ta i bruk styreplate-oppsettet"
+
+#~ msgid "Cannot read touchpad configuration"
+#~ msgstr "Klarte ikke lese styreplate-oppsettet"
+
+#~ msgid "Cannot read default touchpad configuration"
+#~ msgstr "Klarte ikke lese standard styreplate-oppsett"

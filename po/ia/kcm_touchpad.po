@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-04 00:46+0000\n"
 "PO-Revision-Date: 2026-03-26 10:16+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -24,37 +24,12 @@ msgstr ""
 "Error critic in le leger informationes de dispositivo fundamental per "
 "pannello tactile %1"
 
-#: backends/x11/xlibbackend.cpp:69
-#, kde-format
-msgid "Cannot connect to X server"
-msgstr "Non pote connecter a servitor X"
-
-#: backends/x11/xlibbackend.cpp:80
-#, kde-format
-msgid "No touchpad found"
-msgstr "Necun pannello tactile (touchpad) trovate"
-
-#: backends/x11/xlibbackend.cpp:120
-#, kde-format
-msgid "Cannot apply touchpad configuration"
-msgstr "Nn pote applicar configuration de touchpad"
-
-#: backends/x11/xlibbackend.cpp:134
-#, kde-format
-msgid "Cannot read touchpad configuration"
-msgstr "Non pote leger configuration de touchpad"
-
-#: backends/x11/xlibbackend.cpp:147
-#, kde-format
-msgid "Cannot read default touchpad configuration"
-msgstr "Non pote leger configuration predefinite de touchpad"
-
-#: kcm.cpp:69
+#: kcm.cpp:58
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "Incapace a seliger retro-administration appropriate"
 
-#: kcm.cpp:126
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -63,12 +38,12 @@ msgstr ""
 "Error durante que il incarga valores. Tu vide registros (logs) per ulterior "
 "information. Pro favor reinitia iste modulo de configuration."
 
-#: kcm.cpp:129
+#: kcm.cpp:107
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Necun dispositico de punctar esseva trovate. Nunc connecte."
 
-#: kcm.cpp:138
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -78,7 +53,7 @@ msgstr ""
 "information. Pro favor tu restarta iste modulo de configuration e essaya de "
 "novo."
 
-#: kcm.cpp:157
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -87,7 +62,7 @@ msgstr ""
 "Error quando il cargava valores predefinite. Il falleva a fixar alcun "
 "optiones a lor valor predefinite."
 
-#: kcm.cpp:172
+#: kcm.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -96,13 +71,13 @@ msgstr ""
 "Error durante que il adde dispositivos connectite recentemente. Pro favor "
 "reconnecte lo e restarta iste modulo de configuration."
 
-#: kcm.cpp:185
+#: kcm.cpp:163
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Dispositivo de punctar disconnectite. Claudite su dialogo de preferentias."
 
-#: kcm.cpp:187
+#: kcm.cpp:165
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr ""
@@ -396,6 +371,21 @@ msgstr "Click de medio (colpos de tres digitos per cliccar a dextera)"
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Click in medio"
+
+#~ msgid "Cannot connect to X server"
+#~ msgstr "Non pote connecter a servitor X"
+
+#~ msgid "No touchpad found"
+#~ msgstr "Necun pannello tactile (touchpad) trovate"
+
+#~ msgid "Cannot apply touchpad configuration"
+#~ msgstr "Nn pote applicar configuration de touchpad"
+
+#~ msgid "Cannot read touchpad configuration"
+#~ msgstr "Non pote leger configuration de touchpad"
+
+#~ msgid "Cannot read default touchpad configuration"
+#~ msgstr "Non pote leger configuration predefinite de touchpad"
 
 #~ msgid "Querying input devices failed. Please reopen this settings module."
 #~ msgstr ""

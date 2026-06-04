@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-04 00:46+0000\n"
 "PO-Revision-Date: 2025-05-17 13:16+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -25,37 +25,12 @@ msgstr ""
 "Produciuse un erro crítico ao ler información de dispositivo fundamental da "
 "área táctil %1."
 
-#: backends/x11/xlibbackend.cpp:69
-#, kde-format
-msgid "Cannot connect to X server"
-msgstr "Non é posíbel conectar ao servidor das X."
-
-#: backends/x11/xlibbackend.cpp:80
-#, kde-format
-msgid "No touchpad found"
-msgstr "Non se atopou ningún touchpad."
-
-#: backends/x11/xlibbackend.cpp:120
-#, kde-format
-msgid "Cannot apply touchpad configuration"
-msgstr "Non é posíbel aplicar a configuración da área táctil."
-
-#: backends/x11/xlibbackend.cpp:134
-#, kde-format
-msgid "Cannot read touchpad configuration"
-msgstr "Non é posíbel obter a configuración da área táctil."
-
-#: backends/x11/xlibbackend.cpp:147
-#, kde-format
-msgid "Cannot read default touchpad configuration"
-msgstr "Non é posíbel ler a configuración predeterminada da área táctil"
-
-#: kcm.cpp:69
+#: kcm.cpp:58
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr ""
 
-#: kcm.cpp:126
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -64,13 +39,13 @@ msgstr ""
 "Erro ao cargar os valores. Consulte o rexistro para máis información. "
 "Reinicie este módulo de configuración."
 
-#: kcm.cpp:129
+#: kcm.cpp:107
 #, fuzzy, kde-format
 #| msgid "No touchpad found. Connect touchpad now."
 msgid "No pointer device found. Connect now."
 msgstr "Non se atopou ningunha área táctil."
 
-#: kcm.cpp:138
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -79,7 +54,7 @@ msgstr ""
 "Non foi posíbel gardar todos os cambios. Consulte o rexistro para máis "
 "información. Reinicie o módulo de configuración e inténteo de novo."
 
-#: kcm.cpp:157
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -88,7 +63,7 @@ msgstr ""
 "Erro ao cargar os valores predeterminados. Non se puido asignarlle a "
 "algunhas opcións os seus valores predeterminados."
 
-#: kcm.cpp:172
+#: kcm.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -97,13 +72,13 @@ msgstr ""
 "Erro ao engadir o dispositivo que acababa de conectar. Conécteo de novo e "
 "reinicie o módulo de configuración."
 
-#: kcm.cpp:185
+#: kcm.cpp:163
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. Closed its setting dialog."
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Desconectouse a área táctil. Pechouse o seu diálogo de configuración."
 
-#: kcm.cpp:187
+#: kcm.cpp:165
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. No other touchpads found."
 msgid "Pointer device disconnected. No other devices found."
@@ -442,6 +417,21 @@ msgstr "Clic central (toque con tres dedos para clic dereito)"
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Clic central"
+
+#~ msgid "Cannot connect to X server"
+#~ msgstr "Non é posíbel conectar ao servidor das X."
+
+#~ msgid "No touchpad found"
+#~ msgstr "Non se atopou ningún touchpad."
+
+#~ msgid "Cannot apply touchpad configuration"
+#~ msgstr "Non é posíbel aplicar a configuración da área táctil."
+
+#~ msgid "Cannot read touchpad configuration"
+#~ msgstr "Non é posíbel obter a configuración da área táctil."
+
+#~ msgid "Cannot read default touchpad configuration"
+#~ msgstr "Non é posíbel ler a configuración predeterminada da área táctil"
 
 #~ msgid "Querying input devices failed. Please reopen this settings module."
 #~ msgstr ""

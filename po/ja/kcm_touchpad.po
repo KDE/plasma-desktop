@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-04 00:46+0000\n"
 "PO-Revision-Date: 2025-02-15 13:27+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -24,37 +24,12 @@ msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr ""
 "タッチパッド %1 のデバイス情報の読み込み中に深刻なエラーが発生しました。"
 
-#: backends/x11/xlibbackend.cpp:69
-#, kde-format
-msgid "Cannot connect to X server"
-msgstr "X サーバに接続できません"
-
-#: backends/x11/xlibbackend.cpp:80
-#, kde-format
-msgid "No touchpad found"
-msgstr "タッチパッドが見つかりません"
-
-#: backends/x11/xlibbackend.cpp:120
-#, kde-format
-msgid "Cannot apply touchpad configuration"
-msgstr "タッチパッドの設定を適用できません"
-
-#: backends/x11/xlibbackend.cpp:134
-#, kde-format
-msgid "Cannot read touchpad configuration"
-msgstr "タッチパッドの設定を読み取れません"
-
-#: backends/x11/xlibbackend.cpp:147
-#, kde-format
-msgid "Cannot read default touchpad configuration"
-msgstr "デフォルトのタッチパッドの設定を読み込めません"
-
-#: kcm.cpp:69
+#: kcm.cpp:58
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr ""
 
-#: kcm.cpp:126
+#: kcm.cpp:104
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -63,13 +38,13 @@ msgstr ""
 "数値の読み込み中にエラーが発生しました。さらなる情報を得るにはログを確認して"
 "ください。この設定モジュールを再起動してください。"
 
-#: kcm.cpp:129
+#: kcm.cpp:107
 #, fuzzy, kde-format
 #| msgid "No touchpad found. Connect touchpad now."
 msgid "No pointer device found. Connect now."
 msgstr "タッチパッドが見つかりません。タッチパッドを接続してください。"
 
-#: kcm.cpp:138
+#: kcm.cpp:116
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -78,7 +53,7 @@ msgstr ""
 "すべての変更を保存できませんでした。さらなる情報を得るにはログを確認してくだ"
 "さい。この設定モジュールを再起動して再試行してください。"
 
-#: kcm.cpp:157
+#: kcm.cpp:135
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -87,7 +62,7 @@ msgstr ""
 "デフォルトの数値の読み込み中にエラーが発生しました。いくつかのオプションにデ"
 "フォルトの数値を設定できませんでした。"
 
-#: kcm.cpp:172
+#: kcm.cpp:150
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -96,13 +71,13 @@ msgstr ""
 "新しく追加されたデバイスの読み込み中にエラーが発生しました。再接続してこの設"
 "定モジュールを再起動してください。"
 
-#: kcm.cpp:185
+#: kcm.cpp:163
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. Closed its setting dialog."
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "タッチパッドが切断されました。設定ダイアログを閉じました。"
 
-#: kcm.cpp:187
+#: kcm.cpp:165
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. No other touchpads found."
 msgid "Pointer device disconnected. No other devices found."
@@ -435,6 +410,21 @@ msgstr "中クリック (三本指タップで右クリック)"
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "中クリック"
+
+#~ msgid "Cannot connect to X server"
+#~ msgstr "X サーバに接続できません"
+
+#~ msgid "No touchpad found"
+#~ msgstr "タッチパッドが見つかりません"
+
+#~ msgid "Cannot apply touchpad configuration"
+#~ msgstr "タッチパッドの設定を適用できません"
+
+#~ msgid "Cannot read touchpad configuration"
+#~ msgstr "タッチパッドの設定を読み取れません"
+
+#~ msgid "Cannot read default touchpad configuration"
+#~ msgstr "デフォルトのタッチパッドの設定を読み込めません"
 
 #~ msgid "Querying input devices failed. Please reopen this settings module."
 #~ msgstr ""
