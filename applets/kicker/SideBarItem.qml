@@ -30,7 +30,7 @@ ItemAbstractDelegate {
 
     background.visible: false // we want the default background's spacing, but not the base color
     contentItem: Kirigami.Icon {
-        visible: !item.showUnfavoritePlaceholder
+        visible: !item.showUnfavoritePlaceholder && !item.isDropPlaceHolder
         active: item.hovered
         width: item.icon.width
         height: item.icon.height
