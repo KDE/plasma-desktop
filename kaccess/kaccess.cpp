@@ -350,9 +350,6 @@ bool KAccessApp::nativeEventFilter(const QByteArray &eventType, void *message, q
             // See also https://bugs.freedesktop.org/show_bug.cgi?id=51295
             const int eventType = pow(2, ev->xkbType);
             switch (eventType) {
-            case XCB_XKB_EVENT_TYPE_STATE_NOTIFY:
-                xkbStateNotify();
-                break;
             case XCB_XKB_EVENT_TYPE_BELL_NOTIFY:
                 xkbBellNotify(reinterpret_cast<xcb_xkb_bell_notify_event_t *>(event));
                 break;
@@ -361,47 +358,6 @@ bool KAccessApp::nativeEventFilter(const QByteArray &eventType, void *message, q
         }
     }
     return false;
-}
-
-void KAccessApp::xkbStateNotify()
-{
-    // On Wayland kaccess runs as XWayland app.
-    // Depending on the key sniffing settings we may or may not get key
-    // events from XWayland.
-    // On Wayland KWin shows these notifications, so don't do anything here
-    if (qEnvironmentVariable("XDG_SESSION_TYPE") == QLatin1String("wayland")) {
-        return;
-    }
-
-    XkbStateRec state_return;
-    XkbGetState(QX11Info::display(), XkbUseCoreKbd, &state_return);
-    unsigned char latched = XkbStateMods(&state_return);
-    unsigned char locked = XkbModLocks(&state_return);
-    int mods = ((int)locked) << 8 | latched;
-
-    if (state != mods) {
-        if (m_keyboardSettings.keyboardNotifyModifiers())
-            for (int i = 0; i < 8; i++) {
-                if (keys[i] != -1) {
-                    if (modifierKeys[keys[i]].latchedText.isEmpty() && ((((mods >> i) & 0x101) != 0) != (((state >> i) & 0x101) != 0))) {
-                        if ((mods >> i) & 1) {
-                            KNotification::event(QStringLiteral("lockkey-locked"), modifierKeys[keys[i]].lockedText.toString());
-                        } else {
-                            KNotification::event(QStringLiteral("lockkey-unlocked"), modifierKeys[keys[i]].unlatchedText.toString());
-                        }
-                    } else if (!modifierKeys[keys[i]].latchedText.isEmpty() && (((mods >> i) & 0x101) != ((state >> i) & 0x101))) {
-                        if ((mods >> i) & 0x100) {
-                            KNotification::event(QStringLiteral("modifierkey-locked"), modifierKeys[keys[i]].lockedText.toString());
-                        } else if ((mods >> i) & 1) {
-                            KNotification::event(QStringLiteral("modifierkey-latched"), modifierKeys[keys[i]].latchedText.toString());
-                        } else {
-                            KNotification::event(QStringLiteral("modifierkey-unlatched"), modifierKeys[keys[i]].unlatchedText.toString());
-                        }
-                    }
-                }
-            }
-        state = mods;
-    }
 }
 
 void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)

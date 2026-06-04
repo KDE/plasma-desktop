@@ -47,7 +47,6 @@ public:
 protected:
     void readSettings();
 
-    void xkbStateNotify();
     void xkbBellNotify(xcb_xkb_bell_notify_event_t *event);
 
 private Q_SLOTS:
