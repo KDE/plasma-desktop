@@ -37,9 +37,7 @@ if (BUILD_KCM_MOUSE_KWIN_WAYLAND OR BUILD_KCM_MOUSE_X11)
     add_subdirectory(mouse)
 endif()
 
-if (BUILD_KCM_TOUCHPAD_KWIN_WAYLAND)
-    add_subdirectory(touchpad)
-endif()
+add_subdirectory(touchpad)
 
 if(BUILD_KCM_TABLET)
     add_subdirectory(tablet)

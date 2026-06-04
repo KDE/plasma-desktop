@@ -7,9 +7,7 @@
 
 #include "touchpadbackend.h"
 
-#if BUILD_KCM_TOUCHPAD_KWIN_WAYLAND
 #include "backends/kwin_wayland/kwinwaylandbackend.h"
-#endif
 
 #include "logging.h"
 
@@ -24,7 +22,6 @@ void TouchpadBackend::setMode(TouchpadInputBackendMode mode)
 
 TouchpadBackend *TouchpadBackend::implementation()
 {
-#if BUILD_KCM_TOUCHPAD_KWIN_WAYLAND
     // TODO: test on kwin_wayland specifically? What about possibly other compositors under Wayland?
     if (KWindowSystem::isPlatformWayland()) {
         static QThreadStorage<std::shared_ptr<KWinWaylandBackend>> backend;
@@ -34,7 +31,6 @@ TouchpadBackend *TouchpadBackend::implementation()
         }
         return backend.localData().get();
     }
-#endif
 
     qCCritical(KCM_TOUCHPAD) << "Not able to select appropriate backend.";
     return nullptr;
