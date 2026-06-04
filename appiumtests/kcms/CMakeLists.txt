@@ -11,7 +11,7 @@ add_test(
     NAME kcm_keys_test
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_keys_test.py --failfast
 )
-set_tests_properties(kcm_keys_test PROPERTIES TIMEOUT 120 ENVIRONMENT "LC_ALL=en_US.UTF-8;TEST_WITH_KWIN_WAYLAND=0;USE_CUSTOM_BUS=1;KGLOBALACCELD_PATH=${KDE_INSTALL_FULL_LIBEXECDIR}/kglobalacceld;KACTIVITYMANAGERD_PATH=${KDE_INSTALL_FULL_LIBEXECDIR}/kactivitymanagerd")
+set_tests_properties(kcm_keys_test PROPERTIES TIMEOUT 120 ENVIRONMENT "LC_ALL=en_US.UTF-8;USE_CUSTOM_BUS=1;KACTIVITYMANAGERD_PATH=${KDE_INSTALL_FULL_LIBEXECDIR}/kactivitymanagerd")
 
 add_test(
     NAME kcm_plasmasearch_test

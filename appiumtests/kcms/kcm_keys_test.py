@@ -15,6 +15,7 @@ from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 from gi.repository import GLib
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, "desktop"))
@@ -22,7 +23,6 @@ from desktoptest import name_has_owner, start_kactivitymanagerd
 
 KDE_VERSION: Final = 6
 KCM_ID: Final = "kcm_keys"
-KGLOBALACCELD_PATH: Final = os.getenv("KGLOBALACCELD_PATH", "/usr/libexec/kglobalacceld")
 
 
 class KCMTest(unittest.TestCase):
@@ -32,13 +32,9 @@ class KCMTest(unittest.TestCase):
 
     driver: webdriver.Remote
     kactivitymanagerd: subprocess.Popen | None = None
-    kglobalacceld: subprocess.Popen | None = None
 
     @classmethod
     def setUpClass(cls) -> None:
-        # Start KGlobalAccel daemon service
-        if not name_has_owner(None, "org.kde.kglobalaccel"):
-            cls.kglobalacceld = subprocess.Popen([KGLOBALACCELD_PATH], stdout=sys.stderr, stderr=sys.stderr)
         # Install applications.menu
         cls.kactivitymanagerd = start_kactivitymanagerd()
 
@@ -74,9 +70,6 @@ class KCMTest(unittest.TestCase):
         cls.driver.find_element(AppiumBy.XPATH, "//*[@name='Cancel' and contains(@accessibility-id, 'Button')]").click()
         if cls.kactivitymanagerd is not None:
             cls.kactivitymanagerd.kill()
-        if cls.kglobalacceld is not None:
-            subprocess.check_output([f"kquitapp{KDE_VERSION}", f"kglobalaccel"], stderr=sys.stderr)
-            cls.kglobalacceld.wait()
         cls.driver.quit()
 
     def test_0_open(self) -> None:
@@ -101,7 +94,7 @@ class KCMTest(unittest.TestCase):
 
         # Test if the config is saved
         self.driver.find_element(by=AppiumBy.NAME, value="Add custom shortcut").click()
-        subprocess.check_call(["xdotool", "key", "Ctrl+0x002e"])  # https://gitlab.com/nokun/gestures/-/wikis/xdotool-list-of-key-codes
+        ActionChains(self.driver).key_down(Keys.CONTROL).send_keys(".").key_up(Keys.CONTROL).perform()
         delete_button = self.driver.find_element(by=AppiumBy.NAME, value="Delete shortcut")
         apply_button = self.driver.find_element(AppiumBy.XPATH, "//*[@name='Apply' and contains(@accessibility-id, 'Button')]")
         apply_button.click()
@@ -115,21 +108,9 @@ class KCMTest(unittest.TestCase):
 
     def test_2_add_new(self) -> None:
         self.assertTrue(name_has_owner(None, "org.kde.kglobalaccel"))
-        # Maximize the window to update rect
-        window_id = subprocess.check_output(["xdotool", "search", "Shortcuts"]).decode().strip()
-        subprocess.check_call(["xdotool", "windowmove", window_id, "0", "0"])
 
         # Open the dialog
-        button_rect = self.driver.find_element(AppiumBy.NAME, "Add New").rect
-        scale = 1.0
-        if "KDECI_BUILD" not in os.environ:
-            xrdb_output = subprocess.check_output(["xrdb", "-query"]).decode().splitlines()
-            for l in xrdb_output:
-                if l.startswith("Xft.dpi"):
-                    scale = int(l.removeprefix("Xft.dpi:").strip()) / 90
-
-        logging.info(f"button rect: {button_rect}")
-        subprocess.check_call(["xdotool", "mousemove", str(int(button_rect["x"] * scale + 10)), str(int(button_rect["y"] * scale + 10)), "click", "1"])
+        self.driver.find_element(AppiumBy.NAME, "Add New").click()
         self.driver.find_element(AppiumBy.NAME, "Add new command or script").click()
 
         # Add a new command
@@ -142,7 +123,7 @@ class KCMTest(unittest.TestCase):
         self.driver.find_element(AppiumBy.NAME, f"{command}:")
         self.driver.find_element(AppiumBy.NAME, "No default shortcuts")
         self.driver.find_element(by=AppiumBy.NAME, value="Add custom shortcut").click()
-        subprocess.check_call(["xdotool", "key", "Ctrl+0x002e"])
+        ActionChains(self.driver).key_down(Keys.CONTROL).send_keys(".").key_up(Keys.CONTROL).perform()
         delete_button = self.driver.find_element(by=AppiumBy.NAME, value="Delete shortcut")
         apply_button = self.driver.find_element(AppiumBy.XPATH, "//*[@name='Apply' and contains(@accessibility-id, 'Button')]")
         apply_button.click()
@@ -174,6 +155,5 @@ class KCMTest(unittest.TestCase):
 
 if __name__ == '__main__':
     assert os.getenv("LC_ALL") == "en_US.UTF-8"
-    assert os.getenv("TEST_WITH_KWIN_WAYLAND") == "0"  # On Wayland kglobalshortcutsrc is not updated
     logging.getLogger().setLevel(logging.INFO)
     unittest.main()
