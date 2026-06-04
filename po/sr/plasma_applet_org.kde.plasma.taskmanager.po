@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-27 02:42+0000\n"
+"POT-Creation-Date: 2026-06-04 02:57+0000\n"
 "PO-Revision-Date: 2017-04-07 00:51+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -724,7 +724,7 @@ msgid "Move &To Current Desktop"
 msgstr "Премести на &текућу површ"
 
 # >> @item:inmenu Move To Desktop
-#: qml/ContextMenu.qml:332
+#: qml/ContextMenu.qml:345
 #, fuzzy, kde-format
 #| msgid "&All Desktops"
 msgctxt "action:inmenu"
@@ -732,156 +732,156 @@ msgid "&All Desktops"
 msgstr "&све површи"
 
 # >> @item:inmenu Move To Desktop
-#: qml/ContextMenu.qml:360
+#: qml/ContextMenu.qml:373
 #, fuzzy, kde-format
 #| msgid "&New Desktop"
 msgctxt "action:inmenu"
 msgid "&New Desktop"
 msgstr "&нова површ"
 
-#: qml/ContextMenu.qml:380
+#: qml/ContextMenu.qml:393
 #, fuzzy, kde-format
 #| msgid "All Activities"
 msgctxt "action:inmenu"
 msgid "Show in &Activities"
 msgstr "Све активности"
 
-#: qml/ContextMenu.qml:404
+#: qml/ContextMenu.qml:417
 #, fuzzy, kde-format
 #| msgid "Add To Current Activity"
 msgctxt "action:inmenu"
 msgid "Add To Current Activity"
 msgstr "Додај у текућу активност"
 
-#: qml/ContextMenu.qml:414
+#: qml/ContextMenu.qml:427
 #, fuzzy, kde-format
 #| msgid "All Activities"
 msgctxt "action:inmenu"
 msgid "All Activities"
 msgstr "Све активности"
 
-#: qml/ContextMenu.qml:470
+#: qml/ContextMenu.qml:483
 #, fuzzy, kde-format
 #| msgid "Move To &Desktop"
 msgctxt "action:inmenu"
 msgid "Move to %1"
 msgstr "Премести на &површ"
 
-#: qml/ContextMenu.qml:496 qml/ContextMenu.qml:512
+#: qml/ContextMenu.qml:509 qml/ContextMenu.qml:525
 #, kde-format
 msgctxt "action:inmenu"
 msgid "&Pin to Task Manager"
 msgstr ""
 
-#: qml/ContextMenu.qml:564
+#: qml/ContextMenu.qml:577
 #, fuzzy, kde-format
 #| msgid "On All Activities"
 msgctxt "action:inmenu"
 msgid "On All Activities"
 msgstr "У свим активностима"
 
-#: qml/ContextMenu.qml:570
+#: qml/ContextMenu.qml:583
 #, fuzzy, kde-format
 #| msgid "On The Current Activity"
 msgctxt "action:inmenu"
 msgid "On The Current Activity"
 msgstr "У текућој активности"
 
-#: qml/ContextMenu.qml:594
+#: qml/ContextMenu.qml:607
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Unpin from Task Manager"
 msgstr ""
 
-#: qml/ContextMenu.qml:609
+#: qml/ContextMenu.qml:622
 #, kde-format
 msgctxt "item:inmenu opens submenu"
 msgid "More"
 msgstr ""
 
-#: qml/ContextMenu.qml:618
+#: qml/ContextMenu.qml:631
 #, fuzzy, kde-format
 #| msgid "&Move"
 msgctxt "action:inmenu"
 msgid "&Move"
 msgstr "&Премести"
 
-#: qml/ContextMenu.qml:627
+#: qml/ContextMenu.qml:640
 #, fuzzy, kde-format
 #| msgid "Re&size"
 msgctxt "action:inmenu"
 msgid "Re&size"
 msgstr "Промени &величину"
 
-#: qml/ContextMenu.qml:641
+#: qml/ContextMenu.qml:654
 #, fuzzy, kde-format
 #| msgid "Ma&ximize"
 msgctxt "action:inmenu"
 msgid "Ma&ximize"
 msgstr "Ма&ксимизуј"
 
-#: qml/ContextMenu.qml:655
+#: qml/ContextMenu.qml:668
 #, fuzzy, kde-format
 #| msgid "Mi&nimize"
 msgctxt "action:inmenu"
 msgid "Mi&nimize"
 msgstr "Ми&нимизуј"
 
-#: qml/ContextMenu.qml:665
+#: qml/ContextMenu.qml:678
 #, fuzzy, kde-format
 #| msgid "Keep &Above Others"
 msgctxt "action:inmenu"
 msgid "Keep &Above Others"
 msgstr "Држи из&над осталих"
 
-#: qml/ContextMenu.qml:675
+#: qml/ContextMenu.qml:688
 #, fuzzy, kde-format
 #| msgid "Keep &Below Others"
 msgctxt "action:inmenu"
 msgid "Keep &Below Others"
 msgstr "Држи ис&под осталих"
 
-#: qml/ContextMenu.qml:687
+#: qml/ContextMenu.qml:700
 #, fuzzy, kde-format
 #| msgid "&Fullscreen"
 msgctxt "action:inmenu"
 msgid "&Fullscreen"
 msgstr "Преко &целог екрана"
 
-#: qml/ContextMenu.qml:700
+#: qml/ContextMenu.qml:713
 #, fuzzy, kde-format
 #| msgid "&Shade"
 msgctxt "action:inmenu"
 msgid "&Shade"
 msgstr "&Намотај"
 
-#: qml/ContextMenu.qml:712
+#: qml/ContextMenu.qml:725
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
 msgstr ""
 
-#: qml/ContextMenu.qml:725
+#: qml/ContextMenu.qml:738
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Hide from Screencast"
 msgstr ""
 
-#: qml/ContextMenu.qml:741
+#: qml/ContextMenu.qml:754
 #, fuzzy, kde-format
 #| msgid "Allow this program to be grouped"
 msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr "Дозволи груписање за овај програм"
 
-#: qml/ContextMenu.qml:787
+#: qml/ContextMenu.qml:800
 #, fuzzy, kde-format
 #| msgid "&Close"
 msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "&Затвори"
 
-#: qml/ContextMenu.qml:787
+#: qml/ContextMenu.qml:800
 #, fuzzy, kde-format
 #| msgid "&Close"
 msgctxt "@action:inmenu"
