@@ -51,9 +51,6 @@ int main(int argc, char *argv[])
     KCrash::initialize();
 
     KAccessApp acc;
-    if (acc.isFailed()) {
-        return 1;
-    }
 
     // verify the X server has matching XKB extension
     // if yes, the XKB extension is initialized
