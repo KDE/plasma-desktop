@@ -7,7 +7,6 @@
 
 #pragma once
 
-#include "kcmaccessibilityactivationgestures.h"
 #include "kcmaccessibilitybell.h"
 #include "kcmaccessibilitykeyboard.h"
 #include "kcmaccessibilitykeyboardfilters.h"
@@ -50,19 +49,11 @@ protected:
 
     void xkbStateNotify();
     void xkbBellNotify(xcb_xkb_bell_notify_event_t *event);
-    void xkbControlsNotify(xcb_xkb_controls_notify_event_t *event);
 
 private Q_SLOTS:
-
-    void notifyChanges();
-    void applyChanges();
-    void yesClicked();
-    void noClicked();
-    void dialogClosed();
     void toggleScreenReader();
 
 private:
-    void createDialogContents();
     void initMasks();
     void setScreenReaderEnabled(bool enabled);
 
@@ -71,7 +62,6 @@ private:
     KeyboardFiltersSettings m_keyboardFiltersSettings;
     MouseSettings m_mouseSettings;
     ScreenReaderSettings m_screenReaderSettings;
-    ActivationGesturesSettings m_activationGesturesSettings;
     KConfig m_kdeglobals;
 
     int xkb_opcode;
