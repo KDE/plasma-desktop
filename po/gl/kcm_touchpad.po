@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-04 00:46+0000\n"
+"POT-Creation-Date: 2026-06-05 00:46+0000\n"
 "PO-Revision-Date: 2025-05-17 13:16+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -25,12 +25,12 @@ msgstr ""
 "Produciuse un erro crítico ao ler información de dispositivo fundamental da "
 "área táctil %1."
 
-#: kcm.cpp:58
+#: kcm.cpp:57
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr ""
 
-#: kcm.cpp:104
+#: kcm.cpp:103
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -39,13 +39,13 @@ msgstr ""
 "Erro ao cargar os valores. Consulte o rexistro para máis información. "
 "Reinicie este módulo de configuración."
 
-#: kcm.cpp:107
+#: kcm.cpp:106
 #, fuzzy, kde-format
 #| msgid "No touchpad found. Connect touchpad now."
 msgid "No pointer device found. Connect now."
 msgstr "Non se atopou ningunha área táctil."
 
-#: kcm.cpp:116
+#: kcm.cpp:115
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -54,7 +54,7 @@ msgstr ""
 "Non foi posíbel gardar todos os cambios. Consulte o rexistro para máis "
 "información. Reinicie o módulo de configuración e inténteo de novo."
 
-#: kcm.cpp:135
+#: kcm.cpp:134
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -63,7 +63,7 @@ msgstr ""
 "Erro ao cargar os valores predeterminados. Non se puido asignarlle a "
 "algunhas opcións os seus valores predeterminados."
 
-#: kcm.cpp:150
+#: kcm.cpp:149
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -72,13 +72,13 @@ msgstr ""
 "Erro ao engadir o dispositivo que acababa de conectar. Conécteo de novo e "
 "reinicie o módulo de configuración."
 
-#: kcm.cpp:163
+#: kcm.cpp:162
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. Closed its setting dialog."
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Desconectouse a área táctil. Pechouse o seu diálogo de configuración."
 
-#: kcm.cpp:165
+#: kcm.cpp:164
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. No other touchpads found."
 msgid "Pointer device disconnected. No other devices found."

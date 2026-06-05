@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-04 00:46+0000\n"
+"POT-Creation-Date: 2026-06-05 00:46+0000\n"
 "PO-Revision-Date: 2026-04-11 21:38+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -25,24 +25,24 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr "שגיאה קריטית בקריאת מידע בסיסי של התקן בשביל משטח מגע %1."
 
-#: kcm.cpp:58
+#: kcm.cpp:57
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "לא ניתן לבחור מנגנון מתאים"
 
-#: kcm.cpp:104
+#: kcm.cpp:103
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr "שגיאה בטעינת ערכים. יש להפעיל מודול הגדרות זה מחדש."
 
-#: kcm.cpp:107
+#: kcm.cpp:106
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "לא נמצא התקן הצבעה. יש לחבר אותו כעת."
 
-#: kcm.cpp:116
+#: kcm.cpp:115
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -51,7 +51,7 @@ msgstr ""
 "לא ניתן לשמור את כל השינויים. ביומני המערכת יש פירוט נוסף. נא להפעיל את "
 "מודול הגדרות זה מחדש ולנסות שוב."
 
-#: kcm.cpp:135
+#: kcm.cpp:134
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -59,7 +59,7 @@ msgid ""
 msgstr ""
 "שגיאה בטעינת ערכי ברירת המחדל. הגדרת חלק מהאפשרויות לברירות המחדל שלהן נכשלה."
 
-#: kcm.cpp:150
+#: kcm.cpp:149
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -67,12 +67,12 @@ msgid ""
 msgstr ""
 "שגיאה בהוספת התקן חדש שחובר. נא לחבר אותו מחדש ולהפעיל את ההגדרות מחדש."
 
-#: kcm.cpp:163
+#: kcm.cpp:162
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "התקן הצבעה מנותק. חלונית ההגדרות שלו נסגרה."
 
-#: kcm.cpp:165
+#: kcm.cpp:164
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "התקן הצבעה מנותק. לא נמצאו התקנים אחרים."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-04 00:46+0000\n"
+"POT-Creation-Date: 2026-06-05 00:46+0000\n"
 "PO-Revision-Date: 2025-03-15 06:29+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -23,12 +23,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr "Galat kritis saat pembacaan pokok info peranti untuk papan sentuh %1."
 
-#: kcm.cpp:58
+#: kcm.cpp:57
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr ""
 
-#: kcm.cpp:104
+#: kcm.cpp:103
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -37,14 +37,14 @@ msgstr ""
 "Error selagi memuat nilai. Lihat log untuk informasi selebihnya. Silakan "
 "jalankan ulang modul konfigurasi ini."
 
-#: kcm.cpp:107
+#: kcm.cpp:106
 #, fuzzy, kde-format
 #| msgid "No touchpad found. Connect touchpad now."
 msgid "No pointer device found. Connect now."
 msgstr ""
 "Tidak ada papan sentuh yang ditemukan. Koneksikan papan sentuh sekarang."
 
-#: kcm.cpp:116
+#: kcm.cpp:115
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -53,7 +53,7 @@ msgstr ""
 "Tidak dapat menyimpan semua perubahan. Lihat log untuk informasi selebihnya. "
 "Silakan jalankan ulang modul konfigurasi ini dan coba lagi."
 
-#: kcm.cpp:135
+#: kcm.cpp:134
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -62,7 +62,7 @@ msgstr ""
 "Error selagi memuat nilai baku. Gagal mengeset beberapa opsi ke nilai "
 "bakunya."
 
-#: kcm.cpp:150
+#: kcm.cpp:149
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -71,13 +71,13 @@ msgstr ""
 "Error selagi menambahkan peranti yang baru terkoneksi. Silakan koneksikan "
 "ulang dan jalankan ulang modul konfigurasi ini."
 
-#: kcm.cpp:163
+#: kcm.cpp:162
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. Closed its setting dialog."
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Papan sentuh terputus. Tutuplah dialog pengaturan."
 
-#: kcm.cpp:165
+#: kcm.cpp:164
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. No other touchpads found."
 msgid "Pointer device disconnected. No other devices found."

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-06-05 00:46+0000\n"
 "PO-Revision-Date: 2026-02-02 17:15+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -30,12 +30,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Alvarleg villa við að lesa grunnupplýsingar tækisins %1"
 
-#: kcm.cpp:87
+#: kcm.cpp:63
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "Tókst ekki að velja viðeigandi bakenda"
 
-#: kcm.cpp:143
+#: kcm.cpp:119
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -44,12 +44,12 @@ msgstr ""
 "Villa þegar gildi voru hlaðin inn. Sjá frekari upplýsingar í annálaskrám. "
 "Endurræstu þessa grunnstillingaeiningu."
 
-#: kcm.cpp:146
+#: kcm.cpp:122
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Ekkert benditæki fannst. Tengdu það núna."
 
-#: kcm.cpp:155
+#: kcm.cpp:131
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -58,7 +58,7 @@ msgstr ""
 "Ekki tókst að vista allar breytingar. Sjá frekari upplýsingar í annálaskrám. "
 "Endurræstu þessa grunnstillingaeiningu og reyndu aftur."
 
-#: kcm.cpp:173
+#: kcm.cpp:149
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -67,7 +67,7 @@ msgstr ""
 "Villa þegar sjálfgefin gildi voru hlaðin inn. Mistókst að stilla suma "
 "valkosti á sjálfgefin gildi."
 
-#: kcm.cpp:188
+#: kcm.cpp:164
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -76,12 +76,12 @@ msgstr ""
 "Villa þegar nýtengdu tæki var bætt við. Tengdu það aftur og endurræstu þessa "
 "grunnstillingaeiningu."
 
-#: kcm.cpp:201
+#: kcm.cpp:177
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Benditæki aftengt. Stillingaglugga tækisins var lokað."
 
-#: kcm.cpp:203
+#: kcm.cpp:179
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Benditæki aftengt. Engin önnur tæki fundust."

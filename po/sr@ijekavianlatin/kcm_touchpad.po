@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-04 00:46+0000\n"
+"POT-Creation-Date: 2026-06-05 00:46+0000\n"
 "PO-Revision-Date: 2017-10-30 23:08+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -23,12 +23,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr "Kritična greška pri čitanju osnovnih podataka uređaja za dodirnik %1."
 
-#: kcm.cpp:58
+#: kcm.cpp:57
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr ""
 
-#: kcm.cpp:104
+#: kcm.cpp:103
 #, fuzzy, kde-format
 #| msgid ""
 #| "Error while loading values. See logs for more informations. Please "
@@ -40,13 +40,13 @@ msgstr ""
 "Greška pri učitavanju vrednosti. Pogledajte dnevnik za više detalja. "
 "Pokrenite ponovo ovaj postavni modul."
 
-#: kcm.cpp:107
+#: kcm.cpp:106
 #, fuzzy, kde-format
 #| msgid "No touchpad found. Connect touchpad now."
 msgid "No pointer device found. Connect now."
 msgstr "Nema nijednog dodirnika. Povežite ga sada."
 
-#: kcm.cpp:116
+#: kcm.cpp:115
 #, fuzzy, kde-format
 #| msgid ""
 #| "Not able to save all changes. See logs for more informations. Please "
@@ -58,7 +58,7 @@ msgstr ""
 "Ne mogu da sačuvam sve izmene. Pogledajte dnevnik za više detalja. Pokrenite "
 "ponovo ovaj postavni modul pa pokušajte još opet."
 
-#: kcm.cpp:135
+#: kcm.cpp:134
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -67,7 +67,7 @@ msgstr ""
 "Greška pri učitavanju podrazumevanih vrednosti. Neke od opcija ne mogu da se "
 "postave na podrazumevane vrednosti."
 
-#: kcm.cpp:150
+#: kcm.cpp:149
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -76,13 +76,13 @@ msgstr ""
 "Greška pri dodavanju novog povezanog uređaja. Povežite ga opet i pokrenite "
 "ponovo ovaj postavni modul."
 
-#: kcm.cpp:163
+#: kcm.cpp:162
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. Closed its setting dialog."
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Dodirnik otkačen. Zatvorite njegov dijalog postavki."
 
-#: kcm.cpp:165
+#: kcm.cpp:164
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. No other touchpads found."
 msgid "Pointer device disconnected. No other devices found."

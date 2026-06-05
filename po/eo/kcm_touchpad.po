@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-04 00:46+0000\n"
+"POT-Creation-Date: 2026-06-05 00:46+0000\n"
 "PO-Revision-Date: 2025-02-12 07:01+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -24,12 +24,12 @@ msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr ""
 "Kritika eraro dum legado de fundamentaj aparataj informoj por tuŝplato %1."
 
-#: kcm.cpp:58
+#: kcm.cpp:57
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr ""
 
-#: kcm.cpp:104
+#: kcm.cpp:103
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -38,13 +38,13 @@ msgstr ""
 "Eraro dum ŝarĝo de valoroj. Vidu protokolojn por pliaj informoj. Bonvolu "
 "rekomenci ĉi tiun agordan modulon."
 
-#: kcm.cpp:107
+#: kcm.cpp:106
 #, fuzzy, kde-format
 #| msgid "No touchpad found. Connect touchpad now."
 msgid "No pointer device found. Connect now."
 msgstr "Neniu tuŝplato trovita. Konektu tuŝplaton nun."
 
-#: kcm.cpp:116
+#: kcm.cpp:115
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -53,7 +53,7 @@ msgstr ""
 "Ne eblas konservi ĉiujn ŝanĝojn. Vidu protokolojn por pliaj informoj. "
 "Bonvolu rekomenci ĉi tiun agordan modulon kaj provi denove."
 
-#: kcm.cpp:135
+#: kcm.cpp:134
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -62,7 +62,7 @@ msgstr ""
 "Eraro dum ŝarĝo de defaŭltaj valoroj. Malsukcesis agordi kelkajn opciojn al "
 "iliaj defaŭltaj valoroj."
 
-#: kcm.cpp:150
+#: kcm.cpp:149
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -71,13 +71,13 @@ msgstr ""
 "Eraro dum aldono de lastatempe konektita aparato. Bonvolu rekonekti ĝin kaj "
 "rekomenci ĉi tiun agordan modulon."
 
-#: kcm.cpp:163
+#: kcm.cpp:162
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. Closed its setting dialog."
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Tuŝplato malkonektita. Fermis ĝian agordan dialogon."
 
-#: kcm.cpp:165
+#: kcm.cpp:164
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. No other touchpads found."
 msgid "Pointer device disconnected. No other devices found."

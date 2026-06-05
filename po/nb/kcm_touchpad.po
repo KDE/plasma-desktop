@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-04 00:46+0000\n"
+"POT-Creation-Date: 2026-06-05 00:46+0000\n"
 "PO-Revision-Date: 2026-03-07 20:00+0100\n"
 "Last-Translator: Kjetil Sorlund <translate@sorlund.no>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -24,12 +24,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr "Kritisk feil ved lasting av fundamentale enhetsinfo for styreplata %1."
 
-#: kcm.cpp:58
+#: kcm.cpp:57
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr ""
 
-#: kcm.cpp:104
+#: kcm.cpp:103
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -38,13 +38,13 @@ msgstr ""
 "Feil ved innlesing av data. Se loggen for mer informasjon. Prøv å starte "
 "oppsettsmodulen på nytt."
 
-#: kcm.cpp:107
+#: kcm.cpp:106
 #, fuzzy, kde-format
 #| msgid "No touchpad found. Connect touchpad now."
 msgid "No pointer device found. Connect now."
 msgstr "Fant ingen styreplate. Prøv å koble den til."
 
-#: kcm.cpp:116
+#: kcm.cpp:115
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -53,7 +53,7 @@ msgstr ""
 "Klarte ikke lagre alle endringene. Se loggen for mer informasjon. Prøv å "
 "starte oppsettsmodulen på nytt og prøv igjen."
 
-#: kcm.cpp:135
+#: kcm.cpp:134
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -62,7 +62,7 @@ msgstr ""
 "Klarte ikke laste standardverdiene. Noen av verdiene kunne ikke settes til "
 "standardverdier."
 
-#: kcm.cpp:150
+#: kcm.cpp:149
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -71,13 +71,13 @@ msgstr ""
 "Klarte ikke legge til nylig tilkoblet enhet. Prøv og koble den til en gang "
 "til, og start så oppsettsmodulen på nytt."
 
-#: kcm.cpp:163
+#: kcm.cpp:162
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. Closed its setting dialog."
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Styreplata er koblet fra, og innstillingsvinduet blir derfor lukket."
 
-#: kcm.cpp:165
+#: kcm.cpp:164
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. No other touchpads found."
 msgid "Pointer device disconnected. No other devices found."

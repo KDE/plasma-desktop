@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-06-05 00:46+0000\n"
 "PO-Revision-Date: 2026-01-08 08:47+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -30,12 +30,12 @@ msgid "Critical error on reading fundamental device infos of %1."
 msgstr ""
 "Критична помилка під час читання основних відомостей щодо пристрою для %1."
 
-#: kcm.cpp:87
+#: kcm.cpp:63
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "Не вдалося вибрати відповідний модуль обробки"
 
-#: kcm.cpp:143
+#: kcm.cpp:119
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -44,12 +44,12 @@ msgstr ""
 "Помилка під час завантаження значень. Докладнішу інформацію можна знайти у "
 "журналі. Будь ласка, перезапустіть модуль керування сенсорними панелями."
 
-#: kcm.cpp:146
+#: kcm.cpp:122
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Не знайдено координатного пристрою. З'єднайте пристрій з комп'ютером."
 
-#: kcm.cpp:155
+#: kcm.cpp:131
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -59,7 +59,7 @@ msgstr ""
 "Будь ласка, перезапустіть модуль керування сенсорними панелями, потім "
 "повторіть спробу."
 
-#: kcm.cpp:173
+#: kcm.cpp:149
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -68,7 +68,7 @@ msgstr ""
 "Помилка під час спроби завантажити типові значення. Не вдалося встановити "
 "типові значення для усіх параметрів."
 
-#: kcm.cpp:188
+#: kcm.cpp:164
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -78,13 +78,13 @@ msgstr ""
 "спробуйте з’єднати його з комп’ютером ще раз, потім перезапустіть модуль "
 "керування сенсорними панелями."
 
-#: kcm.cpp:201
+#: kcm.cpp:177
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Координатний пристрій від’єднано. Діалогове вікно його параметрів закрито."
 
-#: kcm.cpp:203
+#: kcm.cpp:179
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Координатний пристрій від’єднано. Інших пристроїв не знайдено."

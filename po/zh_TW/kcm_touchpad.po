@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-04 00:46+0000\n"
+"POT-Creation-Date: 2026-06-05 00:46+0000\n"
 "PO-Revision-Date: 2026-04-08 23:46+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -26,24 +26,24 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr "在讀取觸控板 %1 的基礎裝置資訊時發生嚴重錯誤。"
 
-#: kcm.cpp:58
+#: kcm.cpp:57
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "無法選擇合適的後端"
 
-#: kcm.cpp:104
+#: kcm.cpp:103
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr "載入值時發生錯誤。請見紀錄檔以取得更多資訊。請重新啟動本設定模組。"
 
-#: kcm.cpp:107
+#: kcm.cpp:106
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "找不到任何指標裝置。請現在連接。"
 
-#: kcm.cpp:116
+#: kcm.cpp:115
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -51,26 +51,26 @@ msgid ""
 msgstr ""
 "無法儲存所有變更。請見紀錄檔以取得更多資訊。請重新啟動本設定模組並再次嘗試。"
 
-#: kcm.cpp:135
+#: kcm.cpp:134
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr "載入預設值時發生錯誤。將部份選項設定為它們的預設值時失敗。"
 
-#: kcm.cpp:150
+#: kcm.cpp:149
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr "加入新連線的裝置時發生錯誤。請重新連接它並重新啟動本設定模組。"
 
-#: kcm.cpp:163
+#: kcm.cpp:162
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "指標裝置已中斷連接。已關閉其設定對話框。"
 
-#: kcm.cpp:165
+#: kcm.cpp:164
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "指標裝置已中斷連接。找不到其他的裝置。"

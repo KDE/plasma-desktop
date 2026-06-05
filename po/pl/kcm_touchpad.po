@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-04 00:46+0000\n"
+"POT-Creation-Date: 2026-06-05 00:46+0000\n"
 "PO-Revision-Date: 2026-04-04 19:32+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -23,12 +23,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr "Krytyczny błąd przy odczycie podstawowych informacji o gładziku %1."
 
-#: kcm.cpp:58
+#: kcm.cpp:57
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "Nie można wybrać nadającego się silnika"
 
-#: kcm.cpp:104
+#: kcm.cpp:103
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -37,12 +37,12 @@ msgstr ""
 "Błąd podczas wczytywania wartości. Zajrzyj do dziennika po szczegóły. "
 "Uruchom moduł ustawień ponownie."
 
-#: kcm.cpp:107
+#: kcm.cpp:106
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Nie znaleziono urządzenia wskazującego. Podłącz je teraz."
 
-#: kcm.cpp:116
+#: kcm.cpp:115
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -51,7 +51,7 @@ msgstr ""
 "Nie można zapisać wszystkich zmian. Zajrzyj do dziennika po szczegóły. "
 "Uruchom moduł ustawień ponownie."
 
-#: kcm.cpp:135
+#: kcm.cpp:134
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -60,7 +60,7 @@ msgstr ""
 "Błąd wczytywania wartości domyślnych. Nie można ustawić wszystkich lub "
 "części opcji do wartości domyślnych."
 
-#: kcm.cpp:150
+#: kcm.cpp:149
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -69,12 +69,12 @@ msgstr ""
 "Błąd podczas dodawania nowopodłączonego urządzenia. Podłącz je ponownie i "
 "uruchom moduł ustawień ponownie."
 
-#: kcm.cpp:163
+#: kcm.cpp:162
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Odłączono urządzenie wskazujące. Zamknięto jego okno ustawień."
 
-#: kcm.cpp:165
+#: kcm.cpp:164
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Odłączono urządzenie wskazujące. Nie znaleziono innych urządzeń."

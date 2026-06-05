@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-04 00:46+0000\n"
+"POT-Creation-Date: 2026-06-05 00:46+0000\n"
 "PO-Revision-Date: 2026-04-03 20:28+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -27,12 +27,12 @@ msgstr ""
 "Критическая ошибка при чтении основных сведений об устройстве для сенсорной "
 "панели %1."
 
-#: kcm.cpp:58
+#: kcm.cpp:57
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "Не удалось выбрать подходящий модуль"
 
-#: kcm.cpp:104
+#: kcm.cpp:103
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -41,12 +41,12 @@ msgstr ""
 "Ошибка при загрузке значений. Более подробная информация сохранена в "
 "журналах. Закройте и снова откройте этот модуль настройки."
 
-#: kcm.cpp:107
+#: kcm.cpp:106
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Устройство указания не найдено. Подключить."
 
-#: kcm.cpp:116
+#: kcm.cpp:115
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -56,7 +56,7 @@ msgstr ""
 "журналах. Закройте и снова откройте этот модуль настройки, затем повторите "
 "попытку."
 
-#: kcm.cpp:135
+#: kcm.cpp:134
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -64,7 +64,7 @@ msgid ""
 msgstr ""
 "Произошла ошибка: не всем параметрам удалось назначить значения по умолчанию."
 
-#: kcm.cpp:150
+#: kcm.cpp:149
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -73,12 +73,12 @@ msgstr ""
 "При добавлении недавно подключённого устройства возникла ошибка. Отключите и "
 "снова подключите устройство, а также перезапустите этот модуль настройки."
 
-#: kcm.cpp:163
+#: kcm.cpp:162
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Устройство ввода отключено. Его окно настройки закрыто."
 
-#: kcm.cpp:165
+#: kcm.cpp:164
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Устройство ввода отключено. Других устройств не найдено."

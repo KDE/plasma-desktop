@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-04 00:46+0000\n"
+"POT-Creation-Date: 2026-06-05 00:46+0000\n"
 "PO-Revision-Date: 2024-08-12 21:02+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -25,12 +25,12 @@ msgstr ""
 "Κρίσιμο σφάλμα κατά την ανάγνωση θεμελιωδών πληροφοριών συσκευής για το "
 "επιφάνεια αφής %1."
 
-#: kcm.cpp:58
+#: kcm.cpp:57
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr ""
 
-#: kcm.cpp:104
+#: kcm.cpp:103
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -39,13 +39,13 @@ msgstr ""
 "Σφάλμα κατά τη φόρτωση τιμών. Δείτε τα αρχεία καταγραφής για περισσότερες "
 "πληροφορίες. Παρακαλώ επανεκκινήστε αυτή τη μονάδα διαμόρφωσης."
 
-#: kcm.cpp:107
+#: kcm.cpp:106
 #, fuzzy, kde-format
 #| msgid "No touchpad found. Connect touchpad now."
 msgid "No pointer device found. Connect now."
 msgstr "Δεν βρέθηκε επιφάνεια αφής. Συνδέστε μια επιφάνεια αφής τώρα."
 
-#: kcm.cpp:116
+#: kcm.cpp:115
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -55,7 +55,7 @@ msgstr ""
 "περισσότερες πληροφορίες. Παρακαλώ επανεκκινήστε αυτή τη μονάδα διαμόρφωσης "
 "και δοκιμάστε ξανά."
 
-#: kcm.cpp:135
+#: kcm.cpp:134
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -64,7 +64,7 @@ msgstr ""
 "Αδυναμία φόρτωσης των προκαθορισμένων τιμών. Αποτυχία καθορισμού κάποιων "
 "επιλογών στις προκαθορισμένες τιμές."
 
-#: kcm.cpp:150
+#: kcm.cpp:149
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -73,13 +73,13 @@ msgstr ""
 "Σφάλμα κατά την προσθήκη της πρόσφατα συνδεδεμένης συσκευής. Παρακαλώ "
 "επανασυνδέστε τη και επανεκκινήστε το άρθρωμα διαμόρφωσης."
 
-#: kcm.cpp:163
+#: kcm.cpp:162
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. Closed its setting dialog."
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Αποσύνδεση επιφάνειας αφής. Κλείσιμο του διαλόγου ρυθμίσεων."
 
-#: kcm.cpp:165
+#: kcm.cpp:164
 #, fuzzy, kde-format
 #| msgid "Touchpad disconnected. No other touchpads found."
 msgid "Pointer device disconnected. No other devices found."

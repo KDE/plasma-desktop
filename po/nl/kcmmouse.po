@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-06-05 00:46+0000\n"
 "PO-Revision-Date: 2026-01-08 17:58+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -36,12 +36,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Kritieke fout bij lezen van fundamentele apparaatinformatie van %1."
 
-#: kcm.cpp:87
+#: kcm.cpp:63
 #, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "Niet in staat een toepasselijke backend te selecteren"
 
-#: kcm.cpp:143
+#: kcm.cpp:119
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -50,12 +50,12 @@ msgstr ""
 "Fout bij laden van waarden. Zie logs voor meer informatie. Start deze "
 "configuratiemodule opnieuw."
 
-#: kcm.cpp:146
+#: kcm.cpp:122
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Geen aanwijsapparaat gevonden. Nu verbinden."
 
-#: kcm.cpp:155
+#: kcm.cpp:131
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -64,7 +64,7 @@ msgstr ""
 "Kan niet alle wijzigen opslaan. Zie logs voor meer informatie. Start deze "
 "configuratiemodule opnieuw."
 
-#: kcm.cpp:173
+#: kcm.cpp:149
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -73,7 +73,7 @@ msgstr ""
 "Fout bij laden van standaard waarden. Enige opties konden niet ingesteld "
 "worden op hun standaard waarden."
 
-#: kcm.cpp:188
+#: kcm.cpp:164
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -82,13 +82,13 @@ msgstr ""
 "Fout bij toevoegen van nieuw verbonden apparaat. Maak opnieuw verbinding en "
 "start deze configuratiemodule opnieuw."
 
-#: kcm.cpp:201
+#: kcm.cpp:177
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Verbinding met aanwijsapparaat verbroken. Instellingendialoog is gesloten."
 
-#: kcm.cpp:203
+#: kcm.cpp:179
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr ""
