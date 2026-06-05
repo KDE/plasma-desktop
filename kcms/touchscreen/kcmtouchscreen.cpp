@@ -11,6 +11,8 @@
 #include "inputdevice.h"
 #include "touchscreenmoduledata.h"
 
+#include <qqml.h>
+
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>

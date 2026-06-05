@@ -7,6 +7,8 @@
 
 #include "workspaceoptions.h"
 
+#include <qqml.h>
+
 #include <KLocalizedString>
 #include <KPluginFactory>
 
