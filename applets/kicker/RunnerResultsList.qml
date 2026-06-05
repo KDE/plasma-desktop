@@ -35,6 +35,8 @@ RowLayout {
     // the final visible child is the repeater, so need to subtract 2 to get the proper index
     readonly property bool isLastColumn: runnerResultsList.parent.visibleChildren[runnerResultsList.parent.visibleChildren.length - 2] === runnerResultsList
 
+    // We may still be invisible when the results come in; set currentIndex later if needed
+    onIsFirstColumnChanged: if (isFirstColumn && runnerMatches.mainSearchField.focus) { runnerMatches.currentIndex = 0 }
 
     spacing: Kirigami.Units.smallSpacing
 
