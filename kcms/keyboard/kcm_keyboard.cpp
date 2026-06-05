@@ -11,6 +11,8 @@
 #include <QDBusConnection>
 #include <QDBusMessage>
 
+#include <qqml.h>
+
 #include <KGlobalAccel>
 
 #include "bindings.h"

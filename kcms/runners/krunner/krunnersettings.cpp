@@ -12,6 +12,8 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 
+#include <qqml.h>
+
 #include <QDBusConnection>
 #include <QDBusMessage>
 

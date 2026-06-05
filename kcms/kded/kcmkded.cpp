@@ -10,6 +10,8 @@
 
 #include "debug.h"
 
+#include <qqml.h>
+
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QDBusPendingCall>
