@@ -13,6 +13,8 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 
+#include <qqml.h>
+
 #include <QDir>
 #include <QProcess>
 #include <QSortFilterProxyModel>

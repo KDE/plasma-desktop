@@ -8,6 +8,8 @@
 #include "kcm_activities.h"
 #include "activityconfig.h"
 
+#include <qqml.h>
+
 #include <KAuthorized>
 #include <KLocalizedString>
 #include <KPluginFactory>

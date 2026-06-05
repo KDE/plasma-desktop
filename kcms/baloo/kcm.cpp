@@ -10,6 +10,8 @@
 #include "kcm.h"
 #include "fileexcludefilters.h"
 
+#include <qqml.h>
+
 #include <KFormat>
 #include <KLocalizedString>
 #include <KPluginFactory>
