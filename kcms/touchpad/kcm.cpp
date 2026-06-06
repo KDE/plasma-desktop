@@ -6,8 +6,8 @@
 
 #include "kcm.h"
 
-#include "backends/kwin_wayland/kwinwaylandbackend.h"
-#include "backends/kwin_wayland/kwinwaylandtouchpad.h"
+#include "kwinwaylandbackend.h"
+#include "kwinwaylandtouchpad.h"
 #include "logging.h"
 #include "touchpadmoduledata.h"
 

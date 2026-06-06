@@ -5,7 +5,7 @@
  */
 
 #include "touchpadmoduledata.h"
-#include "backends/kwin_wayland/kwinwaylandbackend.h"
+#include "kwinwaylandbackend.h"
 
 TouchpadModuleData::TouchpadModuleData(QObject *parent)
     : KCModuleData(parent)
