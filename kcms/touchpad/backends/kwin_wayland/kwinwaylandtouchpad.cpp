@@ -11,6 +11,9 @@
 #include <QDBusMessage>
 #include <QDBusReply>
 #include <QList>
+#include <QThreadStorage>
+
+#include <KWindowSystem>
 
 #include "logging.h"
 

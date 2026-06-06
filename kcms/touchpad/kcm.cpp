@@ -6,9 +6,9 @@
 
 #include "kcm.h"
 
+#include "backends/kwin_wayland/kwinwaylandbackend.h"
 #include "backends/kwin_wayland/kwinwaylandtouchpad.h"
 #include "logging.h"
-#include "touchpadbackend.h"
 #include "touchpadmoduledata.h"
 
 #include <KLocalizedContext>
@@ -50,9 +50,9 @@ KCMTouchpad::KCMTouchpad(QObject *parent, const KPluginMetaData &data)
     qmlRegisterUncreatableType<Message>(uri, 1, 0, "message", QString());
     qmlRegisterUncreatableMetaObject(MessageType::staticMetaObject, uri, 1, 0, "MessageType", QString());
     qmlRegisterUncreatableType<KCMTouchpad>(uri, 1, 0, "KCMTouchpad", QString());
-    qmlRegisterUncreatableType<TouchpadBackend>(uri, 1, 0, "TouchpadBackend", QString());
+    qmlRegisterUncreatableType<KWinWaylandBackend>(uri, 1, 0, "TouchpadBackend", QString());
 
-    m_backend = TouchpadBackend::implementation();
+    m_backend = KWinWaylandBackend::implementation();
     if (!m_backend) {
         m_initError = true;
         setSaveLoadMessage(Message::error(i18n("Not able to select appropriate backend")));
@@ -65,14 +65,14 @@ KCMTouchpad::KCMTouchpad(QObject *parent, const KPluginMetaData &data)
     if (m_initError) {
         setSaveLoadMessage(Message::error(m_backend->errorString()));
     } else {
-        connect(m_backend, &TouchpadBackend::needsSaveChanged, this, &KCMTouchpad::updateKcmNeedsSave);
-        connect(m_backend, &TouchpadBackend::deviceAdded, this, &KCMTouchpad::onDeviceAdded);
-        connect(m_backend, &TouchpadBackend::deviceRemoved, this, &KCMTouchpad::onDeviceRemoved);
+        connect(m_backend, &KWinWaylandBackend::needsSaveChanged, this, &KCMTouchpad::updateKcmNeedsSave);
+        connect(m_backend, &KWinWaylandBackend::deviceAdded, this, &KCMTouchpad::onDeviceAdded);
+        connect(m_backend, &KWinWaylandBackend::deviceRemoved, this, &KCMTouchpad::onDeviceRemoved);
     }
     setCurrentDeviceIndex(0);
 }
 
-TouchpadBackend *KCMTouchpad::backend() const
+KWinWaylandBackend *KCMTouchpad::backend() const
 {
     return m_backend;
 }

@@ -8,7 +8,7 @@
 
 #include <KCModuleData>
 
-class TouchpadBackend;
+class KWinWaylandBackend;
 
 class TouchpadModuleData : public KCModuleData
 {
@@ -20,5 +20,5 @@ public:
 private:
     void updateRelevance();
 
-    TouchpadBackend *m_backend = nullptr;
+    KWinWaylandBackend *m_backend = nullptr;
 };

@@ -9,7 +9,7 @@
 #include <KPluginMetaData>
 #include <KQuickConfigModule>
 
-class TouchpadBackend;
+class KWinWaylandBackend;
 class TouchpadConfigPlugin;
 
 namespace MessageType
@@ -48,13 +48,13 @@ class KCMTouchpad : public KQuickConfigModule
     Q_OBJECT
     Q_PROPERTY(Message saveLoadMessage MEMBER m_saveLoadMessage NOTIFY saveLoadMessageChanged FINAL)
     Q_PROPERTY(Message hotplugMessage MEMBER m_hotplugMessage NOTIFY hotplugMessageChanged FINAL)
-    Q_PROPERTY(TouchpadBackend *backend READ backend CONSTANT FINAL)
+    Q_PROPERTY(KWinWaylandBackend *backend READ backend CONSTANT FINAL)
     Q_PROPERTY(int currentDeviceIndex READ currentDeviceIndex WRITE setCurrentDeviceIndex NOTIFY currentDeviceIndexChanged FINAL)
 
 public:
     explicit KCMTouchpad(QObject *parent, const KPluginMetaData &data);
 
-    TouchpadBackend *backend() const;
+    KWinWaylandBackend *backend() const;
 
     int currentDeviceIndex() const;
     void setCurrentDeviceIndex(int index);
@@ -80,7 +80,7 @@ private:
 
     Message m_saveLoadMessage;
     Message m_hotplugMessage;
-    TouchpadBackend *m_backend;
+    KWinWaylandBackend *m_backend;
     bool m_initError = false;
     int m_currentDeviceIndex = 0;
 };

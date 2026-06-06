@@ -7,7 +7,6 @@
 #pragma once
 
 #include "kwinwaylandtouchpad.h"
-#include "touchpadbackend.h"
 
 #include <QList>
 
@@ -16,32 +15,48 @@ namespace KWinDevices
 class DevicesModel;
 }
 
-class KWinWaylandBackend : public TouchpadBackend
+class KWinWaylandBackend : public QObject
 {
     Q_OBJECT
+
+    Q_PROPERTY(QList<KWinWaylandTouchpad *> inputDevices READ inputDevices NOTIFY inputDevicesChanged FINAL)
 
 public:
     explicit KWinWaylandBackend(QObject *parent = nullptr);
     ~KWinWaylandBackend();
 
-    bool save() override;
-    bool load() override;
-    bool defaults() override;
-    bool isSaveNeeded() const override;
+    static KWinWaylandBackend *implementation();
 
-    QString errorString() const override
+    bool save();
+    bool load();
+    bool defaults();
+    bool isSaveNeeded() const;
+
+    QString errorString() const
     {
         return m_errorString;
     }
 
-    int deviceCount() const override
+    int deviceCount() const
     {
         return m_devices.count();
     }
-    QList<KWinWaylandTouchpad *> inputDevices() const override
+    QList<KWinWaylandTouchpad *> inputDevices() const
     {
         return m_devices;
     }
+
+Q_SIGNALS:
+    void needsSaveChanged();
+
+    void touchpadStateChanged();
+    void touchpadReset();
+    void keyboardActivityStarted();
+    void keyboardActivityFinished();
+
+    void inputDevicesChanged();
+    void deviceAdded(bool success);
+    void deviceRemoved(int index);
 
 private:
     void findTouchpads();

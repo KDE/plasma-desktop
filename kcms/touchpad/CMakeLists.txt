@@ -3,9 +3,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_touchpad\")
 
 add_subdirectory(icon)
 
-add_library(touchpad_common STATIC
-    touchpadbackend.cpp
-)
+add_library(touchpad_common STATIC)
 set_property(TARGET touchpad_common PROPERTY POSITION_INDEPENDENT_CODE ON)
 
 ecm_qt_declare_logging_category(touchpad_common
