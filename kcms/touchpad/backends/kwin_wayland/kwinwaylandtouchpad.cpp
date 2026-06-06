@@ -15,7 +15,7 @@
 #include "logging.h"
 
 KWinWaylandTouchpad::KWinWaylandTouchpad(const QString &dbusName)
-    : LibinputCommon()
+    : QObject()
     , m_dbusName(dbusName)
 {
 }

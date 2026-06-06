@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include "kwinwaylandtouchpad.h"
 #include "touchpadbackend.h"
 
 #include <QList>
@@ -37,7 +38,7 @@ public:
     {
         return m_devices.count();
     }
-    QList<LibinputCommon *> inputDevices() const override
+    QList<KWinWaylandTouchpad *> inputDevices() const override
     {
         return m_devices;
     }
@@ -49,7 +50,7 @@ private:
     void onDeviceRowsAboutToBeRemoved(const QModelIndex &parent, int first, int last);
 
     KWinDevices::DevicesModel *m_devicesModel;
-    QList<LibinputCommon *> m_devices;
+    QList<KWinWaylandTouchpad *> m_devices;
 
     QString m_errorString = QString();
 };

@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "backends/libinputcommon.h"
+#include "backends/kwin_wayland/kwinwaylandtouchpad.h"
 
 #include <QList>
 #include <QObject>
@@ -22,7 +22,7 @@ class Q_DECL_EXPORT TouchpadBackend : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(QList<LibinputCommon *> inputDevices READ inputDevices NOTIFY inputDevicesChanged FINAL)
+    Q_PROPERTY(QList<KWinWaylandTouchpad *> inputDevices READ inputDevices NOTIFY inputDevicesChanged FINAL)
 
 protected:
     explicit TouchpadBackend(QObject *parent)
@@ -62,7 +62,7 @@ public:
         return QString();
     }
 
-    virtual QList<LibinputCommon *> inputDevices() const
+    virtual QList<KWinWaylandTouchpad *> inputDevices() const
     {
         return {};
     }

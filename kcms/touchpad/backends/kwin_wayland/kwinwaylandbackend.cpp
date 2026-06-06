@@ -57,28 +57,28 @@ void KWinWaylandBackend::findTouchpads()
 
 bool KWinWaylandBackend::save()
 {
-    return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](LibinputCommon *t) {
+    return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](KWinWaylandTouchpad *t) {
         return t->save();
     });
 }
 
 bool KWinWaylandBackend::load()
 {
-    return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](LibinputCommon *t) {
+    return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](KWinWaylandTouchpad *t) {
         return t->load();
     });
 }
 
 bool KWinWaylandBackend::defaults()
 {
-    return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](LibinputCommon *t) {
+    return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](KWinWaylandTouchpad *t) {
         return t->defaults();
     });
 }
 
 bool KWinWaylandBackend::isSaveNeeded() const
 {
-    return std::any_of(m_devices.constBegin(), m_devices.constEnd(), [](LibinputCommon *t) {
+    return std::any_of(m_devices.constBegin(), m_devices.constEnd(), [](KWinWaylandTouchpad *t) {
         return t->isSaveNeeded();
     });
 }
@@ -105,7 +105,7 @@ void KWinWaylandBackend::onDeviceRowsAboutToBeRemoved(const QModelIndex &parent,
     for (int i = first; i <= last; ++i) {
         const QString sysName = m_devicesModel->index(first, 0, parent).data(KWinDevices::DevicesModel::SysNameRole).toString();
 
-        QList<LibinputCommon *>::const_iterator it = std::find_if(m_devices.constBegin(), m_devices.constEnd(), [&sysName](LibinputCommon *t) {
+        QList<KWinWaylandTouchpad *>::const_iterator it = std::find_if(m_devices.constBegin(), m_devices.constEnd(), [&sysName](KWinWaylandTouchpad *t) {
             return static_cast<KWinWaylandTouchpad *>(t)->sysName() == sysName;
         });
         if (it == m_devices.cend()) {

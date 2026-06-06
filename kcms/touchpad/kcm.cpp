@@ -6,6 +6,7 @@
 
 #include "kcm.h"
 
+#include "backends/kwin_wayland/kwinwaylandtouchpad.h"
 #include "logging.h"
 #include "touchpadbackend.h"
 #include "touchpadmoduledata.h"
@@ -45,7 +46,7 @@ KCMTouchpad::KCMTouchpad(QObject *parent, const KPluginMetaData &data)
     : KQuickConfigModule(parent, data)
 {
     const auto uri = "org.kde.plasma.private.kcm_touchpad";
-    qmlRegisterUncreatableType<LibinputCommon>(uri, 1, 0, "InputDevice", QString());
+    qmlRegisterUncreatableType<KWinWaylandTouchpad>(uri, 1, 0, "InputDevice", QString());
     qmlRegisterUncreatableType<Message>(uri, 1, 0, "message", QString());
     qmlRegisterUncreatableMetaObject(MessageType::staticMetaObject, uri, 1, 0, "MessageType", QString());
     qmlRegisterUncreatableType<KCMTouchpad>(uri, 1, 0, "KCMTouchpad", QString());
