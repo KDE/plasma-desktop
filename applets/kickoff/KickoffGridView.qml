@@ -91,15 +91,6 @@ EmptyPage {
         // and many of them have bad visual flaws. This way works pretty well.
         // Not center aligning when there might be a scrollbar to keep click target positions consistent.
         anchors.horizontalCenter: undefined
-        anchors.horizontalCenterOffset: if (kickoff.mayHaveGridWithScrollBar) {
-            if (root.mirrored) {
-                return verticalScrollBar.implicitWidth/2
-            } else {
-                return -verticalScrollBar.implicitWidth/2
-            }
-        } else {
-            return 0
-        }
         width: Math.min(parent.width, Math.floor((parent.width - leftMargin - rightMargin - (kickoff.mayHaveGridWithScrollBar ? verticalScrollBar.implicitWidth : 0)) / cellWidth) * cellWidth + leftMargin + rightMargin)
 
         states: [
