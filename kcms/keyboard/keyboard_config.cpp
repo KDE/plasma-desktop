@@ -9,7 +9,7 @@
 
 #include "debug.h"
 #include "keyboardsettings.h"
-#include "x11_helper.h"
+#include "layoutunit.h"
 #include "xkb_rules.h"
 
 const QMap<KeyboardConfig::SwitchingPolicy, QString> switchingPolicyNames = {

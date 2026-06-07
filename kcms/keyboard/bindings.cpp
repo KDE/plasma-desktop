@@ -15,7 +15,7 @@
 #include <QList>
 
 #include "flags.h"
-#include "x11_helper.h"
+#include "layoutunit.h"
 
 KeyboardLayoutActionCollection::KeyboardLayoutActionCollection(QObject *parent, bool configAction_)
     : KActionCollection(parent, QStringLiteral("KDE Keyboard Layout Switcher"))

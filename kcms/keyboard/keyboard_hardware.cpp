@@ -14,7 +14,7 @@
 #include <math.h>
 
 #include "debug.h"
-#include "x11_helper.h"
+#include "layoutunit.h"
 
 #include <X11/XKBlib.h>
 #include <X11/Xlib.h>

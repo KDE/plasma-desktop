@@ -20,11 +20,11 @@
 #include "keyboardmiscsettings.h"
 #include "keyboardsettings.h"
 #include "keyboardsettingsdata.h"
+#include "layoutunit.h"
 #include "shortcuthelper.h"
 #include "tastenbrett.h"
 #include "userlayoutmodel.h"
 #include "workspace_options.h"
-#include "x11_helper.h"
 #include "xkboptionsmodel.h"
 
 #include "debug.h"

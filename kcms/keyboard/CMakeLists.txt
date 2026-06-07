@@ -13,7 +13,7 @@ set( kcm_keyboard_PART_SRCS
     bindings.cpp
     flags.cpp
     tastenbrett.cpp
-    x11_helper.cpp
+    layoutunit.cpp
     xkb_rules.cpp
     shortcuthelper.cpp
     xkboptionsmodel.cpp

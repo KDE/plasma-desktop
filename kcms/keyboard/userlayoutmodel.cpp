@@ -10,7 +10,7 @@
 
 #include "debug.h"
 #include "keyboard_config.h"
-#include "x11_helper.h"
+#include "layoutunit.h"
 #include "xkb_rules.h"
 
 UserLayoutModel::UserLayoutModel(KeyboardConfig *config, QObject *parent) noexcept

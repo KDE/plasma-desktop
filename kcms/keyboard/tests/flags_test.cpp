@@ -10,7 +10,7 @@
 #include "../flags.h"
 #include "../keyboard_config.h"
 #include "../keyboardsettings.h"
-#include "../x11_helper.h"
+#include "../layoutunit.h"
 
 class FlagsTest : public QObject
 {

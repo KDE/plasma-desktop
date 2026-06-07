@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "x11_helper.h"
+#include "layoutunit.h"
 
 #include <QDebug>
 
@@ -36,5 +36,3 @@ QString LayoutUnit::toString() const
 }
 
 const int LayoutUnit::MAX_LABEL_LENGTH = 3;
-
-#include "moc_x11_helper.cpp"
