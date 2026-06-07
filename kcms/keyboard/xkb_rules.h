@@ -46,11 +46,6 @@ struct LayoutInfo {
     {
         return findByName(variantInfos, variantName);
     }
-
-    bool isLanguageSupportedByLayout(const QString &lang) const;
-    bool isLanguageSupportedByDefaultVariant(const QString &lang) const;
-    bool isLanguageSupportedByVariants(const QString &lang) const;
-    bool isLanguageSupportedByVariant(const VariantInfo *variantInfo, const QString &lang) const;
 };
 
 struct ModelInfo {
