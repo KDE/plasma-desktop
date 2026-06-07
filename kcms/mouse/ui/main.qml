@@ -150,8 +150,9 @@ KCMUtils.SimpleKCM {
                     spacing: Kirigami.Units.smallSpacing
 
                     function onAccelSpeedChanged(value: int): void {
-                        if (root.device && (value / 1000) !== root.device.pointerAcceleration) {
-                            root.device.pointerAcceleration = value / 100
+                        const newPointerAcceleration = value / 100
+                        if (root.device && newPointerAcceleration !== root.device.pointerAcceleration) {
+                            root.device.pointerAcceleration = newPointerAcceleration
                         }
                     }
 
