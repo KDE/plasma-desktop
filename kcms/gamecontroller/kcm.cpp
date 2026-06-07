@@ -16,6 +16,7 @@
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusPendingCall>
+#include <qqml.h>
 
 #include "axesmodel.h"
 #include "axesproxymodel.h"
