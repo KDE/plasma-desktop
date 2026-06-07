@@ -64,10 +64,6 @@ public:
     {
         return m_layout.isEmpty();
     }
-    bool isValid() const
-    {
-        return !isEmpty();
-    }
     bool operator==(const LayoutUnit &layoutItem) const
     {
         // FIXME: why not compare the other properties?
