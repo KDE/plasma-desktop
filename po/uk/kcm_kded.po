@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_kded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-02 00:45+0000\n"
+"POT-Creation-Date: 2026-06-07 00:47+0000\n"
 "PO-Revision-Date: 2026-01-08 08:41+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -23,27 +23,27 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: kcmkded.cpp:115
+#: kcmkded.cpp:117
 #, kde-format
 msgid "Failed to stop service: %1"
 msgstr "Не вдалося зупинити роботу служби: %1"
 
-#: kcmkded.cpp:117
+#: kcmkded.cpp:119
 #, kde-format
 msgid "Failed to start service: %1"
 msgstr "Не вдалося запустити службу: %1"
 
-#: kcmkded.cpp:124
+#: kcmkded.cpp:126
 #, kde-format
 msgid "Failed to stop service."
 msgstr "Не вдалося зупинити роботу служби."
 
-#: kcmkded.cpp:126
+#: kcmkded.cpp:128
 #, kde-format
 msgid "Failed to start service."
 msgstr "Не вдалося запустити службу."
 
-#: kcmkded.cpp:224
+#: kcmkded.cpp:226
 #, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""

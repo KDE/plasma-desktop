@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-02 00:45+0000\n"
+"POT-Creation-Date: 2026-06-07 00:47+0000\n"
 "PO-Revision-Date: 2009-10-20 18:13+0200\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -21,31 +21,31 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2)\n"
 
-#: kcmkded.cpp:115
+#: kcmkded.cpp:117
 #, fuzzy, kde-format
 #| msgid "Unable to stop server <em>%1</em>."
 msgid "Failed to stop service: %1"
 msgstr "Nie mòże zatrzëmac serwerë <em>%1</em>."
 
-#: kcmkded.cpp:117
+#: kcmkded.cpp:119
 #, fuzzy, kde-format
 #| msgid "Unable to start server <em>%1</em>."
 msgid "Failed to start service: %1"
 msgstr "Nie mòże wësztartowac serwerë <em>%1</em>."
 
-#: kcmkded.cpp:124
+#: kcmkded.cpp:126
 #, fuzzy, kde-format
 #| msgid "Unable to stop server <em>%1</em>."
 msgid "Failed to stop service."
 msgstr "Nie mòże zatrzëmac serwerë <em>%1</em>."
 
-#: kcmkded.cpp:126
+#: kcmkded.cpp:128
 #, fuzzy, kde-format
 #| msgid "Unable to start server <em>%1</em>."
 msgid "Failed to start service."
 msgstr "Nie mòże wësztartowac serwerë <em>%1</em>."
 
-#: kcmkded.cpp:224
+#: kcmkded.cpp:226
 #, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
