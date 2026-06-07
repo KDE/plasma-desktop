@@ -24,24 +24,24 @@ public:
 
     QString getRawDisplayName() const
     {
-        return displayName;
+        return m_displayName;
     }
     QString getDisplayName() const
     {
-        return !displayName.isEmpty() ? displayName : m_layout;
+        return !m_displayName.isEmpty() ? m_displayName : m_layout;
     }
     void setDisplayName(const QString &name)
     {
-        displayName = name;
+        m_displayName = name;
     }
 
     void setShortcut(const QKeySequence &shortcut)
     {
-        this->shortcut = shortcut;
+        this->m_shortcut = shortcut;
     }
     QKeySequence getShortcut() const
     {
-        return shortcut;
+        return m_shortcut;
     }
     QString layout() const
     {
@@ -80,31 +80,31 @@ public:
     QString toString() const;
 
 private:
-    QString displayName;
-    QKeySequence shortcut;
+    QString m_displayName;
+    QKeySequence m_shortcut;
     QString m_layout;
     QString m_variant;
 };
 
 struct LayoutSet {
-    QList<LayoutUnit> layouts;
-    LayoutUnit currentLayout;
+    QList<LayoutUnit> m_layouts;
+    LayoutUnit m_currentLayout;
 
     bool isValid() const
     {
-        return currentLayout.isValid() && layouts.contains(currentLayout);
+        return m_currentLayout.isValid() && m_layouts.contains(m_currentLayout);
     }
 
     bool operator==(const LayoutSet &currentLayouts) const
     {
-        return this->layouts == currentLayouts.layouts && this->currentLayout == currentLayouts.currentLayout;
+        return this->m_layouts == currentLayouts.m_layouts && this->m_currentLayout == currentLayouts.m_currentLayout;
     }
 
     QString toString() const
     {
-        QString str(currentLayout.toString());
+        QString str(m_currentLayout.toString());
         str += QLatin1String(": ");
-        for (const auto &layoutUnit : std::as_const(layouts)) {
+        for (const auto &layoutUnit : std::as_const(m_layouts)) {
             str += layoutUnit.toString() + QLatin1Char(' ');
         }
         return str;
