@@ -85,37 +85,3 @@ private:
     QString m_layout;
     QString m_variant;
 };
-
-struct LayoutSet {
-    QList<LayoutUnit> m_layouts;
-    LayoutUnit m_currentLayout;
-
-    bool isValid() const
-    {
-        return m_currentLayout.isValid() && m_layouts.contains(m_currentLayout);
-    }
-
-    bool operator==(const LayoutSet &currentLayouts) const
-    {
-        return this->m_layouts == currentLayouts.m_layouts && this->m_currentLayout == currentLayouts.m_currentLayout;
-    }
-
-    QString toString() const
-    {
-        QString str(m_currentLayout.toString());
-        str += QLatin1String(": ");
-        for (const auto &layoutUnit : std::as_const(m_layouts)) {
-            str += layoutUnit.toString() + QLatin1Char(' ');
-        }
-        return str;
-    }
-
-    static QString toString(const QList<LayoutUnit> &layoutUnits)
-    {
-        QString str;
-        for (const auto &layoutUnit : layoutUnits) {
-            str += layoutUnit.toString() + QLatin1Char(',');
-        }
-        return str;
-    }
-};
