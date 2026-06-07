@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-02 00:45+0000\n"
+"POT-Creation-Date: 2026-06-07 02:48+0000\n"
 "PO-Revision-Date: 2024-10-18 10:30+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -23,28 +23,28 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: kcmkded.cpp:115
+#: kcmkded.cpp:117
 #, kde-format
 msgid "Failed to stop service: %1"
 msgstr "Ei voitu pysäyttää palvelua: %1"
 
-#: kcmkded.cpp:117
+#: kcmkded.cpp:119
 #, kde-format
 msgid "Failed to start service: %1"
 msgstr "Ei voitu käynnistää palvelua: %1"
 
-#: kcmkded.cpp:124
+#: kcmkded.cpp:126
 #, kde-format
 msgid "Failed to stop service."
 msgstr "Palvelua ei voitu pysäyttää."
 
-#: kcmkded.cpp:126
+#: kcmkded.cpp:128
 #, kde-format
 msgid "Failed to start service."
 msgstr "Palvelua ei voitu käynnistää."
 
 # *** HUOM: Oletan, että ”saved changed” on kirjoitusvirhe, ja oikein olisi ”saved changes”
-#: kcmkded.cpp:224
+#: kcmkded.cpp:226
 #, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
