@@ -1,6 +1,0 @@
-#ifndef CONFIG_KEYBOARD_H
-#define CONFIG_KEYBOARD_H
-
-#cmakedefine01 HAVE_XINPUT
-
-#endif // CONFIG_KEYBOARD_H

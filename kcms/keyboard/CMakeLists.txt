@@ -67,8 +67,6 @@ target_link_libraries(kcm_keyboard_static
 
 target_link_libraries(kcm_keyboard kcm_keyboard_static)
 
-configure_file(config-keyboard.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-keyboard.h)
-
 # Declarative module
 ecm_add_qml_module(kcm_keyboard_declarative
     URI "org.kde.plasma.private.kcm_keyboard"
