@@ -10,18 +10,6 @@
 #include <QString>
 #include <QStringList>
 
-struct XkbConfig {
-    QString keyboardModel;
-    QStringList layouts;
-    QStringList variants;
-    QStringList options;
-
-    bool isValid()
-    {
-        return !layouts.empty();
-    }
-};
-
 class LayoutUnit
 {
 public:
