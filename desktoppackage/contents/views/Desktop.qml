@@ -97,7 +97,7 @@ Item {
     MouseArea {
         id: desktopMouseArea
         anchors.fill: parent
-        onClicked: containment.plasmoid.corona.editMode = false
+        onClicked: root.containment.plasmoid.corona.editMode = false
     }
 
     // Coverts the edit mode area and consumes the click events inside it so that
@@ -111,17 +111,17 @@ Item {
         height: root.height
         readonly property real extraScale: desktop.configuredPanel || sidePanel.visible ? 0.95 : 0.9
         property real scaleFactor: Math.min(editModeRect.width / root.width, editModeRect.height / root.height) * extraScale
-        scale: containment?.plasmoid.corona.editMode ? scaleFactor : 1
+        scale: root.containment?.plasmoid.corona.editMode ? scaleFactor : 1
     }
 
     Loader {
         id: editModeLoader
         anchors.fill: parent
         sourceComponent: DesktopEditMode {}
-        active: containment?.plasmoid.corona.editMode || editModeUiTimer.running
+        active: root.containment?.plasmoid.corona.editMode || editModeUiTimer.running
         Timer {
             id: editModeUiTimer
-            property bool editMode: containment?.plasmoid.corona.editMode ?? false
+            property bool editMode: root.containment?.plasmoid.corona.editMode ?? false
             onEditModeChanged: restart()
             interval: 200
         }
@@ -199,7 +199,7 @@ Item {
         // and we use the strictAvailableScreenRect, which accounts for all
         // of them. If we're not configuring anything, we instead use the
         // entire screen rect, without fear of overlapping panels.
-        property var referenceRect: containment?.plasmoid.corona.editMode ? desktop.strictAvailableScreenRect : Qt.rect(0, 0, desktop.screenGeometry.width, desktop.screenGeometry.height)
+        property var referenceRect: root.containment?.plasmoid.corona.editMode ? desktop.strictAvailableScreenRect : Qt.rect(0, 0, desktop.screenGeometry.width, desktop.screenGeometry.height)
 
 
         readonly property bool sideBarOnRightEdge: {
@@ -227,7 +227,7 @@ Item {
 
         x: {
             let result = desktop.x;
-            if (!containment) {
+            if (!root.containment) {
                 return result;
             }
 
@@ -240,7 +240,7 @@ Item {
 
             return result;
         }
-        y: desktop.y + (containment ? referenceRect.y : 0)
+        y: desktop.y + (root.containment ? referenceRect.y : 0)
 
         onVisibleChanged: {
             if (!visible) {
