@@ -31,7 +31,6 @@ add_subdirectory(workspaceoptions)
 if (KF6Baloo_FOUND)
    add_subdirectory(baloo)
 endif()
-add_subdirectory(solid_actions)
 
 if (BUILD_KCM_MOUSE_KWIN_WAYLAND OR BUILD_KCM_MOUSE_X11)
     add_subdirectory(mouse)
