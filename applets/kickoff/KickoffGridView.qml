@@ -90,7 +90,7 @@ EmptyPage {
         // There are lots of ways to try to center the content of a GridView
         // and many of them have bad visual flaws. This way works pretty well.
         // Not center aligning when there might be a scrollbar to keep click target positions consistent.
-        anchors.horizontalCenter: kickoff.mayHaveGridWithScrollBar ? undefined : parent.horizontalCenter
+        anchors.horizontalCenter: undefined
         anchors.horizontalCenterOffset: if (kickoff.mayHaveGridWithScrollBar) {
             if (root.mirrored) {
                 return verticalScrollBar.implicitWidth/2
@@ -101,6 +101,17 @@ EmptyPage {
             return 0
         }
         width: Math.min(parent.width, Math.floor((parent.width - leftMargin - rightMargin - (kickoff.mayHaveGridWithScrollBar ? verticalScrollBar.implicitWidth : 0)) / cellWidth) * cellWidth + leftMargin + rightMargin)
+
+        states: [
+            State {
+                name: "centered"
+                when: !kickoff.mayHaveGridWithScrollBar
+                AnchorChanges {
+                    target: view
+                    anchors.horizontalCenter : parent.horizontalCenter
+                }
+            }
+        ]
 
         Accessible.description: i18nc("@info:whatsthis Accessible description", "Grid with %1 rows, %2 columns", rows, columns) // can't use i18np here
 
