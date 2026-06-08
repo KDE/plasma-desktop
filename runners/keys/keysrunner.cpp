@@ -19,6 +19,25 @@
 
 using namespace Qt::StringLiterals;
 
+// Don't show actions that are handled by other runners (e.g. Desktop Sessions / Power)
+static const QMap<QString, QStringList> ignoredComponentActions = {
+    { u"org_kde_powerdevil"_s /* "Power Managment" */, {
+        u"Hibernate"_s,
+        u"PowerDown"_s,
+        u"PowerOff"_s,
+        u"Sleep"_s
+    }},
+    { u"ksmserver"_s /* Session Management */, {
+        u"Lock Session"_s,
+        u"LogOut"_s,
+        u"Log Out Without Confirmation"_s,
+        u"Reboot"_s,
+        u"Reboot Without Confirmation"_s,
+        u"Shut Down"_s,
+        u"Halt Without Confirmation"_s
+    }}
+};
+
 QDBusArgument &operator<<(QDBusArgument &argument, const QKeySequence &sequence)
 {
     argument.beginStructure();
@@ -102,9 +121,15 @@ void KeysRunner::match(KRunner::RunnerContext &context)
         for (int j = 0, childCount = m_filteredModel->rowCount(componentIdx); j < childCount; ++j) {
             const QModelIndex actionIdx = m_filteredModel->index(j, 0, componentIdx);
             const QString actionName = actionIdx.data(Qt::DisplayRole).toString();
+            const QString action = actionIdx.data(BaseModel::ActionRole).toString();
             if (actionName.isEmpty()) {
                 continue;
             }
+
+            auto it = ignoredComponentActions.constFind(componentUniqueName);
+            if (it != ignoredComponentActions.cend() && it->contains(action)) {
+                continue;
+            };
 
             KRunner::QueryMatch match(this);
             match.setText(i18nc("@label action - app", "%1 - %2", actionName, componentFriendlyName));
@@ -126,7 +151,7 @@ void KeysRunner::match(KRunner::RunnerContext &context)
             }
 
             match.setIconName(iconName);
-            match.setData(QStringList{componentUniqueName, actionIdx.data(BaseModel::ActionRole).toString()});
+            match.setData(QStringList{componentUniqueName, action});
             context.addMatch(match);
         }
     }
