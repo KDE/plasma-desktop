@@ -8,21 +8,21 @@
 # Frank Weng (a.k.a. Franklin) <franklin@mail.everfocus.com.tw>, 2007.
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2007, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2016.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-09 00:45+0000\n"
-"PO-Revision-Date: 2022-12-21 04:16+0900\n"
+"PO-Revision-Date: 2026-06-07 16:00+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "dot tw>\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 26.07.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
@@ -230,7 +230,7 @@ msgstr "停止使用所有 AccessX 功能 & 筆勢"
 #: kaccess.cpp:640 kaccess.cpp:642
 #, kde-format
 msgid "Slow keys"
-msgstr "篩選鍵"
+msgstr "慢速按鍵"
 
 #: kaccess.cpp:645 kaccess.cpp:647
 #, kde-format
@@ -381,12 +381,12 @@ msgstr ""
 msgid ""
 "Slow keys has been enabled. From now on, you need to press each key for a "
 "certain length of time before it gets accepted."
-msgstr "Slow 鍵已啟用。從現在起，您必須按下每個按鍵一段時間後才會產生作用。"
+msgstr "慢速按鍵已啟用。從現在起，您必須按下每個按鍵一段時間後才會產生作用。"
 
 #: kaccess.cpp:794
 #, kde-format
 msgid "Slow keys has been disabled."
-msgstr "Slow 鍵已停用。"
+msgstr "慢速按鍵已停用。"
 
 #: kaccess.cpp:798
 #, kde-format
