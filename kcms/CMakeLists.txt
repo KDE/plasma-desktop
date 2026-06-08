@@ -27,7 +27,6 @@ add_subdirectory(workspaceoptions)
 if (KF6Baloo_FOUND)
    add_subdirectory(baloo)
 endif()
-add_subdirectory(solid_actions)
 
 add_subdirectory(mouse)
 
