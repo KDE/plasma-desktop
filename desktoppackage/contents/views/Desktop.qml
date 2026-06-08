@@ -10,6 +10,7 @@ import QtQuick
 import org.kde.plasma.core as PlasmaCore
 import org.kde.kwindowsystem
 import org.kde.plasma.activityswitcher as ActivitySwitcher
+import org.kde.plasma.plasmoid
 import "../activitymanager"
 import "../explorer"
 import org.kde.kirigami as Kirigami
@@ -17,7 +18,7 @@ import org.kde.kirigami as Kirigami
 Item {
     id: root
 
-    property Item containment
+    property ContainmentItem containment
 
     property QtObject widgetExplorer
 

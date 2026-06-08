@@ -21,7 +21,7 @@ import org.kde.plasma.plasmoid
 Item {
     id: root
 
-    property Item containment
+    property ContainmentItem containment
 
     property bool floatingPrefix: floatingPanelSvg.usedPrefix === "floating"
     readonly property bool verticalPanel: containment?.plasmoid?.formFactor === PlasmaCore.Types.Vertical
