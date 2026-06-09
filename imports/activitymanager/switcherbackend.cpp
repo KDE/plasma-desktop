@@ -360,7 +360,7 @@ void SwitcherBackend::removeActivity(const QString &activity)
 
 bool SwitcherBackend::dropEnabled() const
 {
-    return false;
+    return true;
 }
 
 void SwitcherBackend::dropCopy(QMimeData *mimeData, const QVariant &activityId)
