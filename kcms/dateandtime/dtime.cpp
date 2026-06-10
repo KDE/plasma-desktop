@@ -25,6 +25,7 @@
 #include <KConfigGroup>
 #include <KMessageBox>
 #include <KProcess>
+#include <KSharedConfig>
 #include <KTreeWidgetSearchLine>
 #include <QDebug>
 #include <QGridLayout>
