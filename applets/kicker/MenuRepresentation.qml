@@ -502,15 +502,19 @@ PlasmaComponents3.ScrollView {
             function onCurrentItemChanged() : void {
                 if (runnerColumns.visibleChildren[0]?.currentItem?.text.toLowerCase().includes(root.runnerModel.query.toLowerCase())) {
                     launchMatchTimer.stop()
-                    launchMatchTimer.triggered()
+                    Qt.callLater(launchMatchTimer.triggered) // callLater to resolve spurious binding loop
                 }
             }
         }
 
         Connections {
             target: root.runnerModel
-            enabled: launchMatchTimer.running
+            enabled: launchMatchTimer.running || initialDelayTimer.active
             function onQueryFinished() : void {
+                // queryFinish may be emitted for intermediate queries, ignore those
+                if (root.runnerModel.querying) { return }
+                initialDelayTimer.triggered()
+                if (!launchMatchTimer.running) { return }
                 launchMatchTimer.stop()
                 Qt.callLater(launchMatchTimer.triggered) // callLater to give bindings time to update
             }
