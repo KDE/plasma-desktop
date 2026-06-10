@@ -186,8 +186,7 @@ Item {
     property bool isTransparent: panel.opacityMode === Panel.Translucent
     property bool isAdaptive: panel.opacityMode === Panel.Adaptive
     property bool floating: panel.floating
-    property bool hasCompositing: KWindowSystem.isPlatformX11 ? KX11Extras.compositingActive : true
-    property var stateTriggers: [floating, touchingWindow, isOpaque, isAdaptive, isTransparent, hasCompositing, containment, panel.floatingApplets]
+    property var stateTriggers: [floating, touchingWindow, isOpaque, isAdaptive, isTransparent, containment, panel.floatingApplets]
     onStateTriggersChanged: {
         let opaqueApplets = false
         let floatingApplets = false
@@ -217,10 +216,6 @@ Item {
         if (panel.visibilityMode != Panel.NormalPanel && floating) {
             floatingnessTarget = 1
             floatingApplets = true
-        }
-        if (!KWindowSystem.isPlatformWayland && !KX11Extras.compositingActive) {
-            opaqueApplets = false
-            panelOpacity = 0
         }
 
         // Not using panelOpacity to check as it has a NumberAnimation, and it will thus
