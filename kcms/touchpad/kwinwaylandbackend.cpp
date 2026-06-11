@@ -16,8 +16,6 @@
 #include <QStringList>
 #include <QThreadStorage>
 
-#include <KWindowSystem>
-
 #include "devicesmodel.h"
 #include "logging.h"
 
@@ -124,18 +122,11 @@ void KWinWaylandBackend::onDeviceRowsAboutToBeRemoved(const QModelIndex &parent,
 
 KWinWaylandBackend *KWinWaylandBackend::implementation()
 {
-    // TODO: test on kwin_wayland specifically? What about possibly other compositors under Wayland?
-    if (KWindowSystem::isPlatformWayland()) {
-        static QThreadStorage<std::shared_ptr<KWinWaylandBackend>> backend;
-        if (!backend.hasLocalData()) {
-            qCDebug(KCM_TOUCHPAD) << "Using KWin+Wayland backend";
-            backend.setLocalData(std::shared_ptr<KWinWaylandBackend>(new KWinWaylandBackend()));
-        }
-        return backend.localData().get();
+    static QThreadStorage<std::shared_ptr<KWinWaylandBackend>> backend;
+    if (!backend.hasLocalData()) {
+        backend.setLocalData(std::shared_ptr<KWinWaylandBackend>(new KWinWaylandBackend()));
     }
-
-    qCCritical(KCM_TOUCHPAD) << "Not able to select appropriate backend.";
-    return nullptr;
+    return backend.localData().get();
 }
 
 #include "moc_kwinwaylandbackend.cpp"

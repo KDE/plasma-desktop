@@ -13,8 +13,6 @@
 #include <QList>
 #include <QThreadStorage>
 
-#include <KWindowSystem>
-
 #include "logging.h"
 
 KWinWaylandTouchpad::KWinWaylandTouchpad(const QString &dbusName)

@@ -14,7 +14,6 @@
 #include <KLocalizedContext>
 #include <KLocalizedString>
 #include <KPluginFactory>
-#include <KWindowSystem>
 
 #include <qqml.h>
 
