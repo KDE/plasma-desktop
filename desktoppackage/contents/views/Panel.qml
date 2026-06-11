@@ -14,7 +14,7 @@ import org.kde.ksvg as KSvg
 import org.kde.taskmanager as TaskManager
 import org.kde.kwindowsystem
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.shell.panel as Panel
+import org.kde.plasma.shell
 
 import org.kde.plasma.plasmoid
 
@@ -116,7 +116,7 @@ Item {
 
         Binding on regionGeometry {
             delayed: true
-            value: panel.width, panel.height, panel.x, panel.y, panel.dogdeGeometryByDistance(panel.visibilityMode === Panel.Global.DodgeWindows ? -1 : 1) // +1 is for overlap detection, -1 is for snapping to panel
+            value: panel.width, panel.height, panel.x, panel.y, panel.dogdeGeometryByDistance(panel.visibilityMode === Panel.DodgeWindows ? -1 : 1) // +1 is for overlap detection, -1 is for snapping to panel
         }
     }
 
@@ -182,9 +182,9 @@ Item {
         root.parent.focus = false
     }
 
-    property bool isOpaque: panel.opacityMode === Panel.Global.Opaque
-    property bool isTransparent: panel.opacityMode === Panel.Global.Translucent
-    property bool isAdaptive: panel.opacityMode === Panel.Global.Adaptive
+    property bool isOpaque: panel.opacityMode === Panel.Opaque
+    property bool isTransparent: panel.opacityMode === Panel.Translucent
+    property bool isAdaptive: panel.opacityMode === Panel.Adaptive
     property bool floating: panel.floating
     property bool hasCompositing: KWindowSystem.isPlatformX11 ? KX11Extras.compositingActive : true
     property var stateTriggers: [floating, touchingWindow, isOpaque, isAdaptive, isTransparent, hasCompositing, containment, panel.floatingApplets]
@@ -214,7 +214,7 @@ Item {
         // Exceptions: panels with not NormalPanel visibilityMode
         // should never de-float, and we should not have transparent
         // panels when on X11 with compositing not active.
-        if (panel.visibilityMode != Panel.Global.NormalPanel && floating) {
+        if (panel.visibilityMode != Panel.NormalPanel && floating) {
             floatingnessTarget = 1
             floatingApplets = true
         }
@@ -285,7 +285,7 @@ Item {
             }
             if (root.verticalPanel) {
                 if (root.containment.Layout.fillHeight) {
-                    if (panel.lengthMode == Panel.Global.Custom) {
+                    if (panel.lengthMode == Panel.Custom) {
                         return panel.maximumHeight
                     } else {
                         return panel.screenGeometry.height
@@ -294,7 +294,7 @@ Item {
                 return root.containment.Layout.preferredHeight
             } else {
                 if (root.containment.Layout.fillWidth) {
-                    if (panel.lengthMode == Panel.Global.Custom) {
+                    if (panel.lengthMode == Panel.Custom) {
                         return panel.maximumWidth
                     } else {
                         return panel.screenGeometry.width
