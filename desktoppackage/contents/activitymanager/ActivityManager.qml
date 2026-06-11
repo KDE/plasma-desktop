@@ -23,7 +23,7 @@ FocusScope {
 
     property bool showSwitcherOnly: false
 
-    width: Kirigami.Units.gridUnit * 16
+    implicitWidth: Kirigami.Units.gridUnit * 16
 
     Item {
         id: activityBrowser

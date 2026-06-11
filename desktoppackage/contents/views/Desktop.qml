@@ -14,6 +14,7 @@ import org.kde.plasma.plasmoid
 import "../activitymanager"
 import "../explorer"
 import org.kde.kirigami as Kirigami
+import org.kde.layershell 1.0 as LayerShell
 
 Item {
     id: root
@@ -192,55 +193,30 @@ Item {
         onTriggered: uninstall()
     }
 
-    PlasmaCore.Dialog {
+    PlasmaCore.Window {
         id: sidePanel
 
-        // If we are currently in edit mode, all panels are being shown
-        // and we use the strictAvailableScreenRect, which accounts for all
-        // of them. If we're not configuring anything, we instead use the
-        // entire screen rect, without fear of overlapping panels.
-        property var referenceRect: root.containment?.plasmoid.corona.editMode ? desktop.strictAvailableScreenRect : Qt.rect(0, 0, desktop.screenGeometry.width, desktop.screenGeometry.height)
+        LayerShell.Window.scope: "sidepanel"
+        LayerShell.Window.anchors: Application.layoutDirection === Qt.RightToLeft ?
+            LayerShell.Window.AnchorRight | LayerShell.Window.AnchorTop | LayerShell.Window.AnchorBottom :
+            LayerShell.Window.AnchorLeft | LayerShell.Window.AnchorTop | LayerShell.Window.AnchorBottom
 
+        LayerShell.Window.layer: LayerShell.Window.LayerTop
+        LayerShell.Window.margins.top: Kirigami.Units.largeSpacing * 2
+        LayerShell.Window.margins.bottom: Kirigami.Units.largeSpacing * 2
 
-        readonly property bool sideBarOnRightEdge: {
-            if (!sidePanelStack.active) {
-                return false;
-            }
+        borders: Application.layoutDirection === Qt.RightToLeft ?
+            Qt.LeftEdge | Qt.TopEdge | Qt.BottomEdge :
+            Qt.RightEdge | Qt.TopEdge | Qt.BottomEdge
 
-            const item = sidePanelStack.item;
-            if (!item) {
-                return false;
-            }
-
-            const rightEdgeParent = (item.containment
-                                     && item.containment !== containment.plasmoid
-                                     && item.containment.location == PlasmaCore.Types.RightEdge);
-
-            return rightEdgeParent || Application.layoutDirection === Qt.RightToLeft;
-        }
-
-        location: sideBarOnRightEdge ? PlasmaCore.Types.RightEdge : PlasmaCore.Types.LeftEdge
-        type: PlasmaCore.Dialog.Dock
         flags: Qt.WindowStaysOnTopHint
 
-        hideOnWindowDeactivate: true
+        width: mainItem.implicitWidth + sidePanel.leftPadding + sidePanel.rightPadding
 
-        x: {
-            let result = desktop.x;
-            if (!root.containment) {
-                return result;
-            }
-
-            const rect = referenceRect;
-            result += rect.x;
-
-            if (sideBarOnRightEdge) {
-                result += rect.width - sidePanel.width;
-            }
-
-            return result;
+        property bool hideOnWindowDeactivate: true
+        onActiveChanged: if (!active && hideOnWindowDeactivate) {
+            visible = false;
         }
-        y: desktop.y + (root.containment ? referenceRect.y : 0)
 
         onVisibleChanged: {
             if (!visible) {
@@ -252,8 +228,7 @@ Item {
         mainItem: Loader {
             id: sidePanelStack
             asynchronous: true
-            width: item ? item.width : 0
-            height: containment ? sidePanel.referenceRect.height - sidePanel.margins.top - sidePanel.margins.bottom : 1000
+            anchors.fill: parent
             state: "closed"
 
             function bindingWithItem(callback: var, defaults: var): var {
@@ -283,8 +258,6 @@ Item {
                         break;
                     case "widgetExplorer":
                         sidePanel.hideOnWindowDeactivate = bindingWithItem(item => !item.preventWindowHide, false);
-                        sidePanel.opacity = bindingWithItem(item => item.opacity, 1);
-                        sidePanel.outputOnly = bindingWithItem(item => item.outputOnly, false);
                         break;
                     default:
                         sidePanel.hideOnWindowDeactivate = true;

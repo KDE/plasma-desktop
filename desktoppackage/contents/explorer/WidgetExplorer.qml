@@ -22,7 +22,7 @@ import org.kde.plasma.private.shell
 PC3.Page {
     id: main
 
-    width: Math.max(heading.paintedWidth, Kirigami.Units.iconSizes.enormous * 3 + Kirigami.Units.smallSpacing * 4 + Kirigami.Units.gridUnit * 5)
+    implicitWidth: Math.max(heading.paintedWidth, Kirigami.Units.iconSizes.enormous * 3 + Kirigami.Units.smallSpacing * 4 + Kirigami.Units.gridUnit * 5)
     height: 800//Screen.height
 
     opacity: draggingWidget ? 0.3 : 1
@@ -31,7 +31,7 @@ PC3.Page {
 
     property QtObject containment
 
-    property PlasmaCore.Dialog sidePanel
+    property PlasmaCore.Window sidePanel
 
     //external drop events can cause a raise event causing us to lose focus and
     //therefore get deleted whilst we are still in a drag exec()
@@ -159,9 +159,9 @@ PC3.Page {
 
     header: PlasmaExtras.PlasmoidHeading {
         // Subtract page's own margins since we touch the top, left, and right
-        topPadding: main.contentMargins - main.sidePanel.margins.top
-        leftPadding: main.contentMargins - main.sidePanel.margins.left
-        rightPadding: main.contentMargins - main.sidePanel.margins.right
+        topPadding: main.contentMargins - main.sidePanel.topPadding
+        leftPadding: main.contentMargins - main.sidePanel.leftPadding
+        rightPadding: main.contentMargins - main.sidePanel.rightPadding
         bottomPadding: main.contentMargins
 
         contentItem: ColumnLayout {
@@ -252,9 +252,9 @@ PC3.Page {
 
         // Subtract page's own margins since we touch the left, right, and bottom
         topPadding: main.contentMargins
-        leftPadding: main.contentMargins - main.sidePanel.margins.left
-        rightPadding: main.contentMargins - main.sidePanel.margins.right
-        bottomPadding: main.contentMargins - main.sidePanel.margins.bottom
+        leftPadding: main.contentMargins - main.sidePanel.leftPadding
+        rightPadding: main.contentMargins - main.sidePanel.rightPadding
+        bottomPadding: main.contentMargins - main.sidePanel.bottomPadding
 
         position: PC3.ToolBar.Footer
         visible: pendingUninstallTimer.applets.length > 0
@@ -280,9 +280,9 @@ PC3.Page {
             fill: parent
             // Subtract page's own margins since we touch the left, right, and sometimes bottom
             topMargin: -1 // account for PlasmoidHeading's pixel
-            leftMargin: - main.sidePanel.margins.left
-            rightMargin: - main.sidePanel.margins.right
-            bottomMargin: footerContainer.visible ? 0 : - main.sidePanel.margins.bottom
+            leftMargin: - main.sidePanel.leftPadding
+            rightMargin: - main.sidePanel.rightPadding
+            bottomMargin: footerContainer.visible ? 0 : - main.sidePanel.bottomPadding
         }
 
         // The scrollbar changing visibility can lead to the content size changing due to word wrap

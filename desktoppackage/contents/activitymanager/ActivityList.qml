@@ -13,7 +13,6 @@ import org.kde.plasma.activityswitcher as ActivitySwitcher
 Flickable {
     id: root
 
-    // contentWidth: content.width
     contentHeight: content.height
 
     property var    model: ActivitySwitcher.Backend.runningActivitiesModel()
