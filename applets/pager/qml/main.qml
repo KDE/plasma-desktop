@@ -298,7 +298,7 @@ PlasmoidItem {
             }
         ]
 
-        property int innerSpacing: (effectiveRows - 1) * spacing
+        property int innerSpacing: effectiveRows * spacing
         property int rowHeight: Math.floor((root.height - innerSpacing) / effectiveRows)
         property int columnWidth: Math.floor(rowHeight * pagerItemSizeRatio)
 
