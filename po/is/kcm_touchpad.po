@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-05 00:46+0000\n"
+"POT-Creation-Date: 2026-06-12 00:45+0000\n"
 "PO-Revision-Date: 2026-03-29 14:50+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -17,13 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.5\n"
-
-#: backends/kwin_wayland/kwinwaylandbackend.cpp:46
-#, kde-format
-msgid "Critical error on reading fundamental device infos for touchpad %1."
-msgstr ""
-"Alvarleg villa við lestur á nauðsynlegum tækisupplýsingum fyrir snertiplatta "
-"%1."
 
 #: kcm.cpp:57
 #, kde-format
@@ -80,6 +73,13 @@ msgstr "Benditæki aftengt. Stillingaglugga tækisins var lokað."
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Benditæki aftengt. Engin önnur tæki fundust."
+
+#: kwinwaylandbackend.cpp:45
+#, kde-format
+msgid "Critical error on reading fundamental device infos for touchpad %1."
+msgstr ""
+"Alvarleg villa við lestur á nauðsynlegum tækisupplýsingum fyrir snertiplatta "
+"%1."
 
 #: ui/main.qml:69
 #, kde-format

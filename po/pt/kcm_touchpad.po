@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-05 00:46+0000\n"
+"POT-Creation-Date: 2026-06-12 00:45+0000\n"
 "PO-Revision-Date: 2026-02-08 21:20+0000\n"
 "Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
 "Language-Team: pt\n"
@@ -19,13 +19,6 @@ msgstr ""
 "X-POFile-SpellExtra: Mezin Zaytsev Alexander Libinput Roman Gilg tácteis\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.12.2\n"
-
-#: backends/kwin_wayland/kwinwaylandbackend.cpp:46
-#, kde-format
-msgid "Critical error on reading fundamental device infos for touchpad %1."
-msgstr ""
-"Erro crítico ao ler as informações fundamentais do dispositivo para o "
-"touchpad %1."
 
 #: kcm.cpp:57
 #, kde-format
@@ -86,6 +79,13 @@ msgstr "Touchpad desligado. Fechou-se a respetiva janela de definições."
 #| msgid "Touchpad disconnected. No other touchpads found."
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Touchpad desligado. Não foram encontrados outros touchpads."
+
+#: kwinwaylandbackend.cpp:45
+#, kde-format
+msgid "Critical error on reading fundamental device infos for touchpad %1."
+msgstr ""
+"Erro crítico ao ler as informações fundamentais do dispositivo para o "
+"touchpad %1."
 
 #: ui/main.qml:69
 #, kde-format

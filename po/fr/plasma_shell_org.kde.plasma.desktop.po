@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-29 00:45+0000\n"
+"POT-Creation-Date: 2026-06-12 00:45+0000\n"
 "PO-Revision-Date: 2026-05-30 07:53+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -591,89 +591,82 @@ msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
 msgstr "Panneaux et applets"
 
-#: contents/configuration/PanelConfiguration.qml:582
-#, kde-format
-msgctxt ""
-"@action:button Revert an unsupported configuration back to the defaults"
-msgid "Fix it"
-msgstr "Corriger cela"
-
-#: contents/configuration/PanelConfiguration.qml:668
+#: contents/configuration/PanelConfiguration.qml:636
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Panel Width:"
 msgstr "Largeur du panneau :"
 
-#: contents/configuration/PanelConfiguration.qml:669
+#: contents/configuration/PanelConfiguration.qml:637
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Panel Height:"
 msgstr "Hauteur du panneau :"
 
-#: contents/configuration/PanelConfiguration.qml:692
+#: contents/configuration/PanelConfiguration.qml:660
 #, kde-format
 msgctxt "@title:group shortcut that moves focus to the panel"
 msgid "Focus shortcut:"
 msgstr "Raccourci pour le focus :"
 
-#: contents/configuration/PanelConfiguration.qml:702
+#: contents/configuration/PanelConfiguration.qml:670
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 "Appuyez sur ce raccourci de clavier pour déplacer le focus vers le panneau"
 
-#: contents/configuration/PanelConfiguration.qml:709
+#: contents/configuration/PanelConfiguration.qml:677
 #, kde-format
 msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
 msgstr "Réglage de raccourci de focus"
 
-#: contents/configuration/PanelConfiguration.qml:710
+#: contents/configuration/PanelConfiguration.qml:678
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for button"
 msgid "Button to set the shortcut for the panel to gain focus"
 msgstr ""
 "Bouton pour définir le raccourci permettant de donner le focus au panneau"
 
-#: contents/configuration/PanelConfiguration.qml:737
+#: contents/configuration/PanelConfiguration.qml:705
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Supprimer le panneau"
 
-#: contents/configuration/PanelConfiguration.qml:740
+#: contents/configuration/PanelConfiguration.qml:708
 #, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Remove this panel; this action can be undone"
 msgstr "Supprimer ce panneau. Cette action ne peut être annulée."
 
-#: contents/configuration/PanelConfiguration.qml:749
+#: contents/configuration/PanelConfiguration.qml:717
 #, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "Cloner le panneau"
 
-#: contents/configuration/PanelConfiguration.qml:753
+#: contents/configuration/PanelConfiguration.qml:721
 #, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Create a new panel with the same settings and applets"
 msgstr "Créer un nouveau panneau avec les mêmes paramètres et applets"
 
-#: contents/configuration/PanelConfiguration.qml:762
+#: contents/configuration/PanelConfiguration.qml:730
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Fermer"
 
-#: contents/configuration/PanelConfiguration.qml:762
+#: contents/configuration/PanelConfiguration.qml:730
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "Quitter le mode d'édition"
 
-#: contents/configuration/PanelConfiguration.qml:765
+#: contents/configuration/PanelConfiguration.qml:733
 #, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Close Panel Settings window and exit Edit Mode"
@@ -1097,6 +1090,11 @@ msgstr "Quitter le mode d'édition"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Indicateur de focus pour les panneaux"
+
+#~ msgctxt ""
+#~ "@action:button Revert an unsupported configuration back to the defaults"
+#~ msgid "Fix it"
+#~ msgstr "Corriger cela"
 
 #~ msgid "Configure activity"
 #~ msgstr "Configurer l'activité"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-05 00:46+0000\n"
+"POT-Creation-Date: 2026-06-12 00:45+0000\n"
 "PO-Revision-Date: 2022-07-31 23:06+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -16,11 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.04.3\n"
-
-#: backends/kwin_wayland/kwinwaylandbackend.cpp:46
-#, kde-format
-msgid "Critical error on reading fundamental device infos for touchpad %1."
-msgstr "%1 toxunma paneli üçün əsas cihaz məlumatlarının oxunmasında xəta."
 
 #: kcm.cpp:57
 #, kde-format
@@ -80,6 +75,11 @@ msgstr "Toxunma paneli ayrildı. Onun ayarlar dialoqu pəncərəsi bağlandı."
 #| msgid "Touchpad disconnected. No other touchpads found."
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Toxunma paneli ayrıldı, başqa toxunma panelləri tapılmadı."
+
+#: kwinwaylandbackend.cpp:45
+#, kde-format
+msgid "Critical error on reading fundamental device infos for touchpad %1."
+msgstr "%1 toxunma paneli üçün əsas cihaz məlumatlarının oxunmasında xəta."
 
 #: ui/main.qml:69
 #, fuzzy, kde-format

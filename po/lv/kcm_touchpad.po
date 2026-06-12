@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-05 00:46+0000\n"
+"POT-Creation-Date: 2026-06-12 00:45+0000\n"
 "PO-Revision-Date: 2026-01-13 19:36+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -17,12 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 "X-Generator: Lokalize 25.12.0\n"
-
-#: backends/kwin_wayland/kwinwaylandbackend.cpp:46
-#, kde-format
-msgid "Critical error on reading fundamental device infos for touchpad %1."
-msgstr ""
-"Kritiska kļūda, nolasot skārienpaliktņa „%1“ pamata ierīces informāciju."
 
 #: kcm.cpp:57
 #, kde-format
@@ -82,6 +76,12 @@ msgstr "Skārienpaliktnis ir atvienots. Aizvērts tā iestatījumu lodziņš."
 #| msgid "Touchpad disconnected. No other touchpads found."
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Skārienpaliktnis ir atvienots. Citas ierīces nav atrastas."
+
+#: kwinwaylandbackend.cpp:45
+#, kde-format
+msgid "Critical error on reading fundamental device infos for touchpad %1."
+msgstr ""
+"Kritiska kļūda, nolasot skārienpaliktņa „%1“ pamata ierīces informāciju."
 
 #: ui/main.qml:69
 #, kde-format

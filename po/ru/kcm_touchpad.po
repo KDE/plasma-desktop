@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-05 00:46+0000\n"
+"POT-Creation-Date: 2026-06-12 00:45+0000\n"
 "PO-Revision-Date: 2026-04-03 20:28+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -19,13 +19,6 @@ msgstr ""
 "X-Generator: Lokalize 25.12.3\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-
-#: backends/kwin_wayland/kwinwaylandbackend.cpp:46
-#, kde-format
-msgid "Critical error on reading fundamental device infos for touchpad %1."
-msgstr ""
-"Критическая ошибка при чтении основных сведений об устройстве для сенсорной "
-"панели %1."
 
 #: kcm.cpp:57
 #, kde-format
@@ -82,6 +75,13 @@ msgstr "Устройство ввода отключено. Его окно на
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Устройство ввода отключено. Других устройств не найдено."
+
+#: kwinwaylandbackend.cpp:45
+#, kde-format
+msgid "Critical error on reading fundamental device infos for touchpad %1."
+msgstr ""
+"Критическая ошибка при чтении основных сведений об устройстве для сенсорной "
+"панели %1."
 
 #: ui/main.qml:69
 #, kde-format

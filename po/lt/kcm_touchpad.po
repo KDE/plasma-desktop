@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-05 00:46+0000\n"
+"POT-Creation-Date: 2026-06-12 00:45+0000\n"
 "PO-Revision-Date: 2026-03-27 21:33+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -20,13 +20,6 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.8\n"
-
-#: backends/kwin_wayland/kwinwaylandbackend.cpp:46
-#, kde-format
-msgid "Critical error on reading fundamental device infos for touchpad %1."
-msgstr ""
-"Kritinė klaida skaitant %1 jutiklinio kilimėlio pagrindinio įrenginio "
-"informaciją."
 
 #: kcm.cpp:57
 #, kde-format
@@ -84,6 +77,13 @@ msgstr "Rodomasis įrenginys atsijungė. Užvėrė savo nuostatos dialogą."
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Rodomasis įrenginys atsijungė. Jokių kitų įrenginių nerasta."
+
+#: kwinwaylandbackend.cpp:45
+#, kde-format
+msgid "Critical error on reading fundamental device infos for touchpad %1."
+msgstr ""
+"Kritinė klaida skaitant %1 jutiklinio kilimėlio pagrindinio įrenginio "
+"informaciją."
 
 #: ui/main.qml:69
 #, kde-format

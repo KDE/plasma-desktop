@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-29 00:45+0000\n"
+"POT-Creation-Date: 2026-06-12 00:45+0000\n"
 "PO-Revision-Date: 2025-09-20 10:02+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -661,74 +661,67 @@ msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
 msgstr "Paneler och miniprogram"
 
-#: contents/configuration/PanelConfiguration.qml:582
-#, kde-format
-msgctxt ""
-"@action:button Revert an unsupported configuration back to the defaults"
-msgid "Fix it"
-msgstr "Rätta det"
-
-#: contents/configuration/PanelConfiguration.qml:668
+#: contents/configuration/PanelConfiguration.qml:636
 #, fuzzy, kde-format
 #| msgid "Panel Width:"
 msgctxt "@label:spinbox"
 msgid "Panel Width:"
 msgstr "Panelbredd:"
 
-#: contents/configuration/PanelConfiguration.qml:669
+#: contents/configuration/PanelConfiguration.qml:637
 #, fuzzy, kde-format
 #| msgid "Panel Height:"
 msgctxt "@label:spinbox"
 msgid "Panel Height:"
 msgstr "Panelhöjd:"
 
-#: contents/configuration/PanelConfiguration.qml:692
+#: contents/configuration/PanelConfiguration.qml:660
 #, fuzzy, kde-format
 #| msgid "Focus shortcut:"
 msgctxt "@title:group shortcut that moves focus to the panel"
 msgid "Focus shortcut:"
 msgstr "Fokuseringsgenväg:"
 
-#: contents/configuration/PanelConfiguration.qml:702
+#: contents/configuration/PanelConfiguration.qml:670
 #, fuzzy, kde-format
 #| msgid "Press this keyboard shortcut to move focus to the Panel"
 msgctxt "@info:tooltip"
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Håll nere snabbtangenten för att flytta fokus till panelen"
 
-#: contents/configuration/PanelConfiguration.qml:709
+#: contents/configuration/PanelConfiguration.qml:677
 #, fuzzy, kde-format
 #| msgid "Focus shortcut:"
 msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
 msgstr "Fokuseringsgenväg:"
 
-#: contents/configuration/PanelConfiguration.qml:710
+#: contents/configuration/PanelConfiguration.qml:678
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for button"
 msgid "Button to set the shortcut for the panel to gain focus"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:737
+#: contents/configuration/PanelConfiguration.qml:705
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Ta bort panel"
 
-#: contents/configuration/PanelConfiguration.qml:740
+#: contents/configuration/PanelConfiguration.qml:708
 #, fuzzy, kde-format
 #| msgid "Remove this panel; this action is undo-able"
 msgctxt "@info:tooltip for button"
 msgid "Remove this panel; this action can be undone"
 msgstr "Ta bort panelen. Åtgärden går inte att ångra."
 
-#: contents/configuration/PanelConfiguration.qml:749
+#: contents/configuration/PanelConfiguration.qml:717
 #, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "Duplicera panel"
 
-#: contents/configuration/PanelConfiguration.qml:753
+#: contents/configuration/PanelConfiguration.qml:721
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Create a new panel with the same settings and applets"
@@ -736,20 +729,20 @@ msgctxt "@info:tooltip for button"
 msgid "Create a new panel with the same settings and applets"
 msgstr "Skapa en ny panel med samma inställningar och miniprogram"
 
-#: contents/configuration/PanelConfiguration.qml:762
+#: contents/configuration/PanelConfiguration.qml:730
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Stäng"
 
-#: contents/configuration/PanelConfiguration.qml:762
+#: contents/configuration/PanelConfiguration.qml:730
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "Avsluta redigeringsläge"
 
-#: contents/configuration/PanelConfiguration.qml:765
+#: contents/configuration/PanelConfiguration.qml:733
 #, fuzzy, kde-format
 #| msgid "Close Panel Settings window and exit Edit Mode"
 msgctxt "@info:tooltip for button"
@@ -1207,6 +1200,11 @@ msgstr "Avsluta redigeringsläge"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Panelfokuseringsindikator"
+
+#~ msgctxt ""
+#~ "@action:button Revert an unsupported configuration back to the defaults"
+#~ msgid "Fix it"
+#~ msgstr "Rätta det"
 
 #~ msgid "Configure activity"
 #~ msgstr "Anpassa aktivitet"

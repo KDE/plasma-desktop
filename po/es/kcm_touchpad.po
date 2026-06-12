@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-05 00:46+0000\n"
+"POT-Creation-Date: 2026-06-12 00:45+0000\n"
 "PO-Revision-Date: 2026-03-26 04:11+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -18,13 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.12.3\n"
-
-#: backends/kwin_wayland/kwinwaylandbackend.cpp:46
-#, kde-format
-msgid "Critical error on reading fundamental device infos for touchpad %1."
-msgstr ""
-"Ha ocurrido un error crítico al leer información fundamental del dispositivo "
-"de panel táctil %1."
 
 #: kcm.cpp:57
 #, kde-format
@@ -84,6 +77,13 @@ msgstr ""
 msgid "Pointer device disconnected. No other devices found."
 msgstr ""
 "Dispositivo apuntador desconectado. No se han encontrado otros dispositivos."
+
+#: kwinwaylandbackend.cpp:45
+#, kde-format
+msgid "Critical error on reading fundamental device infos for touchpad %1."
+msgstr ""
+"Ha ocurrido un error crítico al leer información fundamental del dispositivo "
+"de panel táctil %1."
 
 #: ui/main.qml:69
 #, kde-format

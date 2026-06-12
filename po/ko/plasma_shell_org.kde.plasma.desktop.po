@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-29 00:45+0000\n"
+"POT-Creation-Date: 2026-06-12 00:45+0000\n"
 "PO-Revision-Date: 2026-06-06 14:12+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -579,87 +579,80 @@ msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
 msgstr "패널과 애플릿"
 
-#: contents/configuration/PanelConfiguration.qml:582
-#, kde-format
-msgctxt ""
-"@action:button Revert an unsupported configuration back to the defaults"
-msgid "Fix it"
-msgstr "고치기"
-
-#: contents/configuration/PanelConfiguration.qml:668
+#: contents/configuration/PanelConfiguration.qml:636
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Panel Width:"
 msgstr "패널 너비:"
 
-#: contents/configuration/PanelConfiguration.qml:669
+#: contents/configuration/PanelConfiguration.qml:637
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Panel Height:"
 msgstr "패널 높이:"
 
-#: contents/configuration/PanelConfiguration.qml:692
+#: contents/configuration/PanelConfiguration.qml:660
 #, kde-format
 msgctxt "@title:group shortcut that moves focus to the panel"
 msgid "Focus shortcut:"
 msgstr "포커스 단축키:"
 
-#: contents/configuration/PanelConfiguration.qml:702
+#: contents/configuration/PanelConfiguration.qml:670
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "패널에 포커스를 맞추려면 이 키보드 단축키를 누르십시오"
 
-#: contents/configuration/PanelConfiguration.qml:709
+#: contents/configuration/PanelConfiguration.qml:677
 #, kde-format
 msgctxt "@action:button accessible name"
 msgid "Focus Shortcut Setter"
 msgstr "포커스 단축키 설정자"
 
-#: contents/configuration/PanelConfiguration.qml:710
+#: contents/configuration/PanelConfiguration.qml:678
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for button"
 msgid "Button to set the shortcut for the panel to gain focus"
 msgstr "패널에 포커스를 부여하기 위한 단축키를 설정하는 단추"
 
-#: contents/configuration/PanelConfiguration.qml:737
+#: contents/configuration/PanelConfiguration.qml:705
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "패널 삭제"
 
-#: contents/configuration/PanelConfiguration.qml:740
+#: contents/configuration/PanelConfiguration.qml:708
 #, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Remove this panel; this action can be undone"
 msgstr "이 패널을 삭제합니다. 실행 취소할 수 없습니다"
 
-#: contents/configuration/PanelConfiguration.qml:749
+#: contents/configuration/PanelConfiguration.qml:717
 #, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "패널 복제"
 
-#: contents/configuration/PanelConfiguration.qml:753
+#: contents/configuration/PanelConfiguration.qml:721
 #, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Create a new panel with the same settings and applets"
 msgstr "같은 설정과 애플릿을 사용하여 새 패널 만들기"
 
-#: contents/configuration/PanelConfiguration.qml:762
+#: contents/configuration/PanelConfiguration.qml:730
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "닫기"
 
-#: contents/configuration/PanelConfiguration.qml:762
+#: contents/configuration/PanelConfiguration.qml:730
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "편집 모드 끝내기"
 
-#: contents/configuration/PanelConfiguration.qml:765
+#: contents/configuration/PanelConfiguration.qml:733
 #, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Close Panel Settings window and exit Edit Mode"
@@ -1072,6 +1065,11 @@ msgstr "편집 모드 끝내기"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "패널 포커스 표시기"
+
+#~ msgctxt ""
+#~ "@action:button Revert an unsupported configuration back to the defaults"
+#~ msgid "Fix it"
+#~ msgstr "고치기"
 
 #~ msgid "Configure activity"
 #~ msgstr "활동 설정"

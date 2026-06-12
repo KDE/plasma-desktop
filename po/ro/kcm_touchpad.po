@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-05 00:46+0000\n"
+"POT-Creation-Date: 2026-06-12 00:45+0000\n"
 "PO-Revision-Date: 2026-05-17 15:20+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -17,13 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 25.12.3\n"
-
-#: backends/kwin_wayland/kwinwaylandbackend.cpp:46
-#, kde-format
-msgid "Critical error on reading fundamental device infos for touchpad %1."
-msgstr ""
-"Eroare critică la citirea informațiilor fundamentale de dispozitiv ale zonei "
-"tactile %1."
 
 #: kcm.cpp:57
 #, kde-format
@@ -81,6 +74,13 @@ msgstr ""
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Dispozitiv de indicare deconectat. Nu au fost găsite alte dispozitive."
+
+#: kwinwaylandbackend.cpp:45
+#, kde-format
+msgid "Critical error on reading fundamental device infos for touchpad %1."
+msgstr ""
+"Eroare critică la citirea informațiilor fundamentale de dispozitiv ale zonei "
+"tactile %1."
 
 #: ui/main.qml:69
 #, kde-format

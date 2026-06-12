@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-05 00:46+0000\n"
+"POT-Creation-Date: 2026-06-12 00:45+0000\n"
 "PO-Revision-Date: 2026-06-01 17:49-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -17,11 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#: backends/kwin_wayland/kwinwaylandbackend.cpp:46
-#, kde-format
-msgid "Critical error on reading fundamental device infos for touchpad %1."
-msgstr ""
 
 #: kcm.cpp:57
 #, kde-format
@@ -78,6 +73,11 @@ msgstr "نىشانلىغۇچ ئۈسكۈنىسى ئۈزۈلدى. ئۇنىڭ تە�
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "نىشانلىغۇچ ئۈسكۈنىسى ئۈزۈلدى. باشقا ئۈسكۈنە تېپىلمىدى."
+
+#: kwinwaylandbackend.cpp:45
+#, kde-format
+msgid "Critical error on reading fundamental device infos for touchpad %1."
+msgstr ""
 
 #: ui/main.qml:69
 #, kde-format
