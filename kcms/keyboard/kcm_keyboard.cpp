@@ -43,14 +43,6 @@ KCMKeyboard::KCMKeyboard(QObject *parent, const KPluginMetaData &data)
     qmlRegisterAnonymousType<KeyboardSettings>(uri, 1);
     qmlRegisterUncreatableMetaObject(NumLockState::staticMetaObject, uri, 1, 0, "NumLockState", QString());
 
-    connect(m_data->keyboardSettings(), &KeyboardSettings::configureLayoutsChanged, this, [this]() -> void {
-        if (m_data->keyboardSettings()->configureLayouts()) {
-            m_userLayoutModel->reset();
-        } else {
-            m_userLayoutModel->clear();
-        }
-    });
-
     connect(m_data->keyboardSettings(), &KeyboardSettings::resetOldXkbOptionsChanged, this, [this]() -> void {
         if (m_data->keyboardSettings()->resetOldXkbOptions()) {
             m_data->keyboardSettings()->setXkbOptions(m_xkbOptionsModel->xkbOptions());
