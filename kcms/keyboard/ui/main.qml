@@ -244,6 +244,19 @@ KCM.ScrollViewKCM {
 
         readonly property int maxKeySequenceItemWidth: Math.max(...contentItem.children.map(item => item?.keySequenceItemWidth || 0))
 
+        Item {
+            anchors.fill: parent
+            anchors.topMargin: list.headerItem.height
+            Kirigami.PlaceholderMessage {
+                text: i18nc("@info:usagetip %1 is the name of a keyboard layout", "Using system-wide layout “%1”", kcm.defaultLayout)
+                explanation:  xi18nc("@info:usagetip", "To override this or add more layouts for this user account, press the <interface>Add New…</interface> button.")
+                anchors.centerIn: parent
+                width: parent.width - (Kirigami.Units.largeSpacing * 4)
+                visible: list.count === 0
+            }
+        }
+
+
         delegate: LayoutDelegate {
             id: delegate
             onMove: (oldIndex, newIndex) => kcm.userLayoutModel.move(oldIndex, newIndex)

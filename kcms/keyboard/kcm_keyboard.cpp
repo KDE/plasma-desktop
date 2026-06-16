@@ -25,6 +25,7 @@
 #include "tastenbrett.h"
 #include "userlayoutmodel.h"
 #include "workspace_options.h"
+#include "xkb_rules.h"
 #include "xkboptionsmodel.h"
 
 #include "debug.h"
@@ -177,6 +178,19 @@ void KCMKeyboard::resetShortcuts()
 
     m_shortcutHelper->actionColletion()->resetLayoutShortcuts();
     m_shortcutHelper->actionColletion()->setLayoutShortcuts(m_config->layouts());
+}
+
+QString KCMKeyboard::defaultLayout() const
+{
+    const auto code = qgetenv("XKB_DEFAULT_LAYOUT");
+
+    const auto layout = std::ranges::find_if(Rules::self().layoutInfos, [code](const auto &layout) {
+        return layout.name == code;
+    });
+    if (layout == Rules::self().layoutInfos.end()) {
+        return code;
+    }
+    return layout->description;
 }
 
 #include "kcm_keyboard.moc"

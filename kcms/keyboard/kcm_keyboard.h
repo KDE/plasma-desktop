@@ -42,6 +42,7 @@ class KCMKeyboard final : public KQuickManagedConfigModule
     Q_PROPERTY(XkbOptionsModel *xkbOptionsModel READ xkbOptionsModel CONSTANT)
 
     Q_PROPERTY(int maxGroupCount READ maxGroupCount CONSTANT)
+    Q_PROPERTY(QString defaultLayout READ defaultLayout CONSTANT)
 
 public:
     KCMKeyboard(QObject *parent, const KPluginMetaData &data);
@@ -55,6 +56,8 @@ public:
     XkbOptionsModel *xkbOptionsModel() const;
 
     int maxGroupCount() const;
+
+    QString defaultLayout() const;
 
     Q_INVOKABLE bool hasAccentSupport();
     Q_INVOKABLE void requestPreview(const QString &model, const QString &layout, const QString &variant, const QString &title = QString());
