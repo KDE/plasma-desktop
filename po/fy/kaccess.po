@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-09 00:45+0000\n"
+"POT-Creation-Date: 2026-06-16 00:47+0000\n"
 "PO-Revision-Date: 2009-12-19 18:27+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -26,429 +26,17 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "jmpeeringa@hetnet.nl,rinsedevries@kde.nl,berendy@bigfoot.com"
 
-#: kaccess.cpp:65
-msgid ""
-"The Shift key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"De toets Shift is beskoattele en is no aktyf foar alle neikommende "
-"toetsoanslaggen."
-
-#: kaccess.cpp:66
-msgid "The Shift key is now active."
-msgstr "De toets Shift is no aktyf."
-
-#: kaccess.cpp:67
-msgid "The Shift key is now inactive."
-msgstr "De toets Shift is no ynaktyf."
-
-#: kaccess.cpp:71
-msgid ""
-"The Control key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"De toets Control is beskoattele en is no aktyf foar alle folgjende "
-"toetsoanslaggen"
-
-#: kaccess.cpp:72
-msgid "The Control key is now active."
-msgstr "De toets Control is no aktyf."
-
-#: kaccess.cpp:73
-msgid "The Control key is now inactive."
-msgstr "De toets Control is nu ynaktyf."
-
-#: kaccess.cpp:77
-msgid ""
-"The Alt key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"De toets Alt is beskoattele en is no aktyf foar alle neikommende "
-"toetsoanslaggen."
-
-#: kaccess.cpp:78
-msgid "The Alt key is now active."
-msgstr "De toets Alt is no aktyf."
-
-#: kaccess.cpp:79
-msgid "The Alt key is now inactive."
-msgstr "De toets Alt is no ynaktyf."
-
-#: kaccess.cpp:83
-msgid ""
-"The Win key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"De toets Win is beskoattele en is no aktyf foar alle neikommende "
-"toetsoanslaggen."
-
-#: kaccess.cpp:84
-msgid "The Win key is now active."
-msgstr "De toets Win is no aktyf."
-
-#: kaccess.cpp:85
-msgid "The Win key is now inactive."
-msgstr "De toets Win is no ynaktyf."
-
-#: kaccess.cpp:89
-msgid ""
-"The Meta key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"De toets Meta is beskoattele en is no aktyf foar alle neikommende "
-"toetsoanslaggen."
-
-#: kaccess.cpp:90
-msgid "The Meta key is now active."
-msgstr "De toets Meta is no aktyf."
-
-#: kaccess.cpp:91
-msgid "The Meta key is now inactive."
-msgstr "De toets Meta is no ynaktyf."
-
-#: kaccess.cpp:95
-msgid ""
-"The Super key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"De toets Super is beskoattele en is no aktyf foar alle neikommende "
-"toetsoanslaggen."
-
-#: kaccess.cpp:96
-msgid "The Super key is now active."
-msgstr "De toets Super is no aktyf."
-
-#: kaccess.cpp:97
-msgid "The Super key is now inactive."
-msgstr "De toets Super is no ynaktyf."
-
-#: kaccess.cpp:101
-msgid ""
-"The Hyper key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"De toets Hyper is beskoattele en is no aktyf foar alle neikommende "
-"toetsoanslaggen."
-
-#: kaccess.cpp:102
-msgid "The Hyper key is now active."
-msgstr "De toets Hyper is no aktyf."
-
-#: kaccess.cpp:103
-msgid "The Hyper key is now inactive."
-msgstr "De toets Hyper is no ynaktyf."
-
-#: kaccess.cpp:107
-msgid ""
-"The Alt Graph key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"De toets Alt Graph is beskoattele en is no aktyf foar alle folgjende "
-"toetsoanslaggen."
-
-#: kaccess.cpp:108
-msgid "The Alt Graph key is now active."
-msgstr "De toets Alt Graph is no aktyf."
-
-#: kaccess.cpp:109
-msgid "The Alt Graph key is now inactive."
-msgstr "De toets Alt Graph is no ynaktyf."
-
-#: kaccess.cpp:110
-msgid "The Num Lock key has been activated."
-msgstr "De toets Siferskoattel is aktivearre."
-
-#: kaccess.cpp:110
-msgid "The Num Lock key is now inactive."
-msgstr "De toets Siferskoattel is no ynaktyf."
-
-#: kaccess.cpp:111
-msgid "The Caps Lock key has been activated."
-msgstr "De toets Kapitaalskoattel is aktivearre."
-
-#: kaccess.cpp:111
-msgid "The Caps Lock key is now inactive."
-msgstr "De toets Kapitaalskoattel is no ynaktyf."
-
-#: kaccess.cpp:112
-msgid "The Scroll Lock key has been activated."
-msgstr "De toets Rôlskoattel is aktivearre."
-
-#: kaccess.cpp:112
-msgid "The Scroll Lock key is now inactive."
-msgstr "De toets Rôlskoattel is no ynaktyf"
-
-#: kaccess.cpp:144
+#: kaccess.cpp:36
 #, kde-format
 msgid "Toggle Screen Reader On and Off"
 msgstr ""
 
-#: kaccess.cpp:146
+#: kaccess.cpp:38
 #, fuzzy, kde-format
 #| msgid "KDE Accessibility Tool"
 msgctxt "Name for kaccess shortcuts category"
 msgid "Accessibility"
 msgstr "KDE Tagonklikens Ark"
-
-#: kaccess.cpp:538
-#, kde-format
-msgid "AltGraph"
-msgstr "AltGraph"
-
-#: kaccess.cpp:540
-#, kde-format
-msgid "Hyper"
-msgstr "Hyper"
-
-#: kaccess.cpp:542
-#, kde-format
-msgid "Super"
-msgstr "Super"
-
-#: kaccess.cpp:544
-#, kde-format
-msgid "Meta"
-msgstr "Meta"
-
-#: kaccess.cpp:561
-#, kde-format
-msgid "Warning"
-msgstr "Warskôging"
-
-#: kaccess.cpp:589
-#, kde-format
-msgid "&When a gesture was used:"
-msgstr "As in stjoering b&rûkt is"
-
-#: kaccess.cpp:595
-#, kde-format
-msgid "Change Settings Without Asking"
-msgstr "Ynstellingen wizigje sûnder te freegjen."
-
-#: kaccess.cpp:596
-#, kde-format
-msgid "Show This Confirmation Dialog"
-msgstr "Dizze befêstiging sjen litte"
-
-#: kaccess.cpp:597
-#, kde-format
-msgid "Deactivate All AccessX Features & Gestures"
-msgstr "Alle AccessX-funksjes en-stjoerings deaktivearje"
-
-#: kaccess.cpp:640 kaccess.cpp:642
-#, kde-format
-msgid "Slow keys"
-msgstr "Stadige toetsen"
-
-#: kaccess.cpp:645 kaccess.cpp:647
-#, kde-format
-msgid "Bounce keys"
-msgstr "Stuiterjende toetsen"
-
-#: kaccess.cpp:650 kaccess.cpp:652
-#, kde-format
-msgid "Sticky keys"
-msgstr "Kliemske toetsen"
-
-#: kaccess.cpp:655 kaccess.cpp:657
-#, kde-format
-msgid "Mouse keys"
-msgstr "Mûstoetsen"
-
-#: kaccess.cpp:664
-#, kde-format
-msgid "Do you really want to deactivate \"%1\"?"
-msgstr "Wolle jo \"%1\" deaktivearje?"
-
-#: kaccess.cpp:667
-#, kde-format
-msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
-msgstr "Wolle jo  \"%1\" en \"%2\" deaktivearje?"
-
-#: kaccess.cpp:671
-#, kde-format
-msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
-msgstr "Wolle jo \"%1\", \"%2\" en \"%3\" deaktivearje?"
-
-#: kaccess.cpp:674
-#, kde-format
-msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr "Wolle jo \"%1\", \"%2\", \"%3\" en \"%4\" deaktivearje?"
-
-#: kaccess.cpp:685
-#, kde-format
-msgid "Do you really want to activate \"%1\"?"
-msgstr "Wolle jo \"%1\" aktivearje?"
-
-#: kaccess.cpp:688
-#, kde-format
-msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
-msgstr "Wolle jo \"%1\" aktivearje en \"%2\" deaktivearje?"
-
-#: kaccess.cpp:691
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
-msgstr "Wole jo \"%1\" aktivearje en \"%2\" en \"%3\" deaktivearje?"
-
-#: kaccess.cpp:697
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
-"\"%4\"?"
-msgstr "Wolle jo \"%1\" aktivearje en \"%2\", \"%3\", en \"%4\" deaktivearje?"
-
-#: kaccess.cpp:708
-#, kde-format
-msgid "Do you really want to activate \"%1\" and \"%2\"?"
-msgstr "Wolle jo \"%1\" en \"%2\" aktivearje?"
-
-#: kaccess.cpp:711
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
-msgstr "Wolle jo  \"%1\" en \"%2\" aktivearje en \"%3\" deaktivearje?"
-
-#: kaccess.cpp:717
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
-"and \"%4\"?"
-msgstr "Wolle jo \"%1\" en \"%2\" aktivearje en \"%3\" en \"%4\" deaktivearje?"
-
-#: kaccess.cpp:728
-#, kde-format
-msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
-msgstr "Wolle jo \"%1\", \"%2\" en \"%3\" aktivearje?"
-
-#: kaccess.cpp:731
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
-"\"%4\"?"
-msgstr "Wolle jo \"%1\", \"%2\" en \"%3\" aktivearje en \"%4\" deaktivearje?"
-
-#: kaccess.cpp:740
-#, kde-format
-msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr "Wolle jo \"%1\", \"%2\", \"%3\" en \"%4\" aktivearje?"
-
-#: kaccess.cpp:749
-#, kde-format
-msgid "An application has requested to change this setting."
-msgstr "In programma freget om dizze ynstelling te wizigjen."
-
-#: kaccess.cpp:753
-#, kde-format
-msgid ""
-"You held down the Shift key for 8 seconds or an application has requested to "
-"change this setting."
-msgstr ""
-"Jo ha foar 8 sekonden de toets Shift yndrukt hân of in programma hat frege "
-"om de ynstelling te wizigjen."
-
-#: kaccess.cpp:755
-#, kde-format
-msgid ""
-"You pressed the Shift key 5 consecutive times or an application has "
-"requested to change this setting."
-msgstr ""
-"Jo ha de toets Shift 5 kear efter elkoar yndrukt of in programma hat frege "
-"om dizze ynstelling te wizigjen."
-
-#: kaccess.cpp:759
-#, kde-format
-msgid "You pressed %1 or an application has requested to change this setting."
-msgstr ""
-"Jo hawwe %1 yndrukt of in programma hat frege om dizze ynstelling te "
-"wizigjen."
-
-#: kaccess.cpp:764
-#, kde-format
-msgid ""
-"An application has requested to change these settings, or you used a "
-"combination of several keyboard gestures."
-msgstr ""
-"In programma hat frege om dizze ynstellings te wizigjen, of jo hawwe in "
-"kombinaasje fan ferskillende toetseboerdstjoerings brûkt."
-
-#: kaccess.cpp:766
-#, kde-format
-msgid "An application has requested to change these settings."
-msgstr "In programma hat frege om dizze ynstellings te wizigjen."
-
-#: kaccess.cpp:771
-#, kde-format
-msgid ""
-"These AccessX settings are needed for some users with motion impairments and "
-"can be configured in the KDE System Settings. You can also turn them on and "
-"off with standardized keyboard gestures.\n"
-"\n"
-"If you do not need them, you can select \"Deactivate all AccessX features "
-"and gestures\"."
-msgstr ""
-"Dizze AccessX-ynstellings binne nedich foar brûkers mei bewegingsbeheining "
-"en kinne yn de KDE systeem ynstellings ynsteld wurde. Jo kinne se dêr yn- of "
-"útskeakelje troch gebrûk fan toetseboerdstjoerings.\n"
-"\n"
-"As jo se net nedich ha, dan kinne jo se yn de opsje \"Alle AccessX-funksjes "
-"en -stjoerings deaktivearje\" selektearje."
-
-#: kaccess.cpp:792
-#, kde-format
-msgid ""
-"Slow keys has been enabled. From now on, you need to press each key for a "
-"certain length of time before it gets accepted."
-msgstr ""
-"Trage toetsen binne aktivearre. No moatte jo eltse toets inige tiid yndrukt "
-"hâlde faordat dizze effekt hat."
-
-#: kaccess.cpp:794
-#, kde-format
-msgid "Slow keys has been disabled."
-msgstr "Trage toetsen binne ûntaktivearre."
-
-#: kaccess.cpp:798
-#, kde-format
-msgid ""
-"Bounce keys has been enabled. From now on, each key will be blocked for a "
-"certain length of time after it was used."
-msgstr ""
-"Stuiterjende  toetsen binne aktivearre. No wurdt eltse toets foar inige tiid "
-"blokearre neidat dizze brûkt is."
-
-#: kaccess.cpp:800
-#, kde-format
-msgid "Bounce keys has been disabled."
-msgstr "Stuiterjende toetsen binne ûntaktivearre."
-
-#: kaccess.cpp:804
-#, kde-format
-msgid ""
-"Sticky keys has been enabled. From now on, modifier keys will stay latched "
-"after you have released them."
-msgstr ""
-"Kliemske toetsen binne aktivearre. Fan ôf dit punt moatte jo eltse toets in "
-"tydsje yndrukt hâlde foardat dizze effekt hat."
-
-#: kaccess.cpp:806
-#, kde-format
-msgid "Sticky keys has been disabled."
-msgstr "Kliemske toetsen binne ûntaktivearre."
-
-#: kaccess.cpp:810
-#, kde-format
-msgid ""
-"Mouse keys has been enabled. From now on, you can use the number pad of your "
-"keyboard in order to control the mouse."
-msgstr ""
-"Mûstoetsen binne aktivearre. Fan ôf dit punt moatte jo eltse toets in tydsje "
-"yndrukt hâlde foardat dizze effekt hat."
-
-#: kaccess.cpp:812
-#, kde-format
-msgid "Mouse keys has been disabled."
-msgstr "Mûstoetsen binne ûntaktivearre."
 
 #: main.cpp:40
 #, fuzzy, kde-format
@@ -470,6 +58,309 @@ msgstr "Matthias Hoelzer-Kluepfel"
 #, kde-format
 msgid "Author"
 msgstr "Skriuwer"
+
+#~ msgid ""
+#~ "The Shift key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "De toets Shift is beskoattele en is no aktyf foar alle neikommende "
+#~ "toetsoanslaggen."
+
+#~ msgid "The Shift key is now active."
+#~ msgstr "De toets Shift is no aktyf."
+
+#~ msgid "The Shift key is now inactive."
+#~ msgstr "De toets Shift is no ynaktyf."
+
+#~ msgid ""
+#~ "The Control key has been locked and is now active for all of the "
+#~ "following keypresses."
+#~ msgstr ""
+#~ "De toets Control is beskoattele en is no aktyf foar alle folgjende "
+#~ "toetsoanslaggen"
+
+#~ msgid "The Control key is now active."
+#~ msgstr "De toets Control is no aktyf."
+
+#~ msgid "The Control key is now inactive."
+#~ msgstr "De toets Control is nu ynaktyf."
+
+#~ msgid ""
+#~ "The Alt key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "De toets Alt is beskoattele en is no aktyf foar alle neikommende "
+#~ "toetsoanslaggen."
+
+#~ msgid "The Alt key is now active."
+#~ msgstr "De toets Alt is no aktyf."
+
+#~ msgid "The Alt key is now inactive."
+#~ msgstr "De toets Alt is no ynaktyf."
+
+#~ msgid ""
+#~ "The Win key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "De toets Win is beskoattele en is no aktyf foar alle neikommende "
+#~ "toetsoanslaggen."
+
+#~ msgid "The Win key is now active."
+#~ msgstr "De toets Win is no aktyf."
+
+#~ msgid "The Win key is now inactive."
+#~ msgstr "De toets Win is no ynaktyf."
+
+#~ msgid ""
+#~ "The Meta key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "De toets Meta is beskoattele en is no aktyf foar alle neikommende "
+#~ "toetsoanslaggen."
+
+#~ msgid "The Meta key is now active."
+#~ msgstr "De toets Meta is no aktyf."
+
+#~ msgid "The Meta key is now inactive."
+#~ msgstr "De toets Meta is no ynaktyf."
+
+#~ msgid ""
+#~ "The Super key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "De toets Super is beskoattele en is no aktyf foar alle neikommende "
+#~ "toetsoanslaggen."
+
+#~ msgid "The Super key is now active."
+#~ msgstr "De toets Super is no aktyf."
+
+#~ msgid "The Super key is now inactive."
+#~ msgstr "De toets Super is no ynaktyf."
+
+#~ msgid ""
+#~ "The Hyper key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "De toets Hyper is beskoattele en is no aktyf foar alle neikommende "
+#~ "toetsoanslaggen."
+
+#~ msgid "The Hyper key is now active."
+#~ msgstr "De toets Hyper is no aktyf."
+
+#~ msgid "The Hyper key is now inactive."
+#~ msgstr "De toets Hyper is no ynaktyf."
+
+#~ msgid ""
+#~ "The Alt Graph key has been locked and is now active for all of the "
+#~ "following keypresses."
+#~ msgstr ""
+#~ "De toets Alt Graph is beskoattele en is no aktyf foar alle folgjende "
+#~ "toetsoanslaggen."
+
+#~ msgid "The Alt Graph key is now active."
+#~ msgstr "De toets Alt Graph is no aktyf."
+
+#~ msgid "The Alt Graph key is now inactive."
+#~ msgstr "De toets Alt Graph is no ynaktyf."
+
+#~ msgid "The Num Lock key has been activated."
+#~ msgstr "De toets Siferskoattel is aktivearre."
+
+#~ msgid "The Num Lock key is now inactive."
+#~ msgstr "De toets Siferskoattel is no ynaktyf."
+
+#~ msgid "The Caps Lock key has been activated."
+#~ msgstr "De toets Kapitaalskoattel is aktivearre."
+
+#~ msgid "The Caps Lock key is now inactive."
+#~ msgstr "De toets Kapitaalskoattel is no ynaktyf."
+
+#~ msgid "The Scroll Lock key has been activated."
+#~ msgstr "De toets Rôlskoattel is aktivearre."
+
+#~ msgid "The Scroll Lock key is now inactive."
+#~ msgstr "De toets Rôlskoattel is no ynaktyf"
+
+#~ msgid "AltGraph"
+#~ msgstr "AltGraph"
+
+#~ msgid "Hyper"
+#~ msgstr "Hyper"
+
+#~ msgid "Super"
+#~ msgstr "Super"
+
+#~ msgid "Meta"
+#~ msgstr "Meta"
+
+#~ msgid "Warning"
+#~ msgstr "Warskôging"
+
+#~ msgid "&When a gesture was used:"
+#~ msgstr "As in stjoering b&rûkt is"
+
+#~ msgid "Change Settings Without Asking"
+#~ msgstr "Ynstellingen wizigje sûnder te freegjen."
+
+#~ msgid "Show This Confirmation Dialog"
+#~ msgstr "Dizze befêstiging sjen litte"
+
+#~ msgid "Deactivate All AccessX Features & Gestures"
+#~ msgstr "Alle AccessX-funksjes en-stjoerings deaktivearje"
+
+#~ msgid "Slow keys"
+#~ msgstr "Stadige toetsen"
+
+#~ msgid "Bounce keys"
+#~ msgstr "Stuiterjende toetsen"
+
+#~ msgid "Sticky keys"
+#~ msgstr "Kliemske toetsen"
+
+#~ msgid "Mouse keys"
+#~ msgstr "Mûstoetsen"
+
+#~ msgid "Do you really want to deactivate \"%1\"?"
+#~ msgstr "Wolle jo \"%1\" deaktivearje?"
+
+#~ msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
+#~ msgstr "Wolle jo  \"%1\" en \"%2\" deaktivearje?"
+
+#~ msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
+#~ msgstr "Wolle jo \"%1\", \"%2\" en \"%3\" deaktivearje?"
+
+#~ msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+#~ msgstr "Wolle jo \"%1\", \"%2\", \"%3\" en \"%4\" deaktivearje?"
+
+#~ msgid "Do you really want to activate \"%1\"?"
+#~ msgstr "Wolle jo \"%1\" aktivearje?"
+
+#~ msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
+#~ msgstr "Wolle jo \"%1\" aktivearje en \"%2\" deaktivearje?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
+#~ msgstr "Wole jo \"%1\" aktivearje en \"%2\" en \"%3\" deaktivearje?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" "
+#~ "and \"%4\"?"
+#~ msgstr ""
+#~ "Wolle jo \"%1\" aktivearje en \"%2\", \"%3\", en \"%4\" deaktivearje?"
+
+#~ msgid "Do you really want to activate \"%1\" and \"%2\"?"
+#~ msgstr "Wolle jo \"%1\" en \"%2\" aktivearje?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
+#~ msgstr "Wolle jo  \"%1\" en \"%2\" aktivearje en \"%3\" deaktivearje?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\", and \"%2\" and to deactivate "
+#~ "\"%3\" and \"%4\"?"
+#~ msgstr ""
+#~ "Wolle jo \"%1\" en \"%2\" aktivearje en \"%3\" en \"%4\" deaktivearje?"
+
+#~ msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
+#~ msgstr "Wolle jo \"%1\", \"%2\" en \"%3\" aktivearje?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\", \"%2\" and \"%3\" and to "
+#~ "deactivate \"%4\"?"
+#~ msgstr ""
+#~ "Wolle jo \"%1\", \"%2\" en \"%3\" aktivearje en \"%4\" deaktivearje?"
+
+#~ msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+#~ msgstr "Wolle jo \"%1\", \"%2\", \"%3\" en \"%4\" aktivearje?"
+
+#~ msgid "An application has requested to change this setting."
+#~ msgstr "In programma freget om dizze ynstelling te wizigjen."
+
+#~ msgid ""
+#~ "You held down the Shift key for 8 seconds or an application has requested "
+#~ "to change this setting."
+#~ msgstr ""
+#~ "Jo ha foar 8 sekonden de toets Shift yndrukt hân of in programma hat "
+#~ "frege om de ynstelling te wizigjen."
+
+#~ msgid ""
+#~ "You pressed the Shift key 5 consecutive times or an application has "
+#~ "requested to change this setting."
+#~ msgstr ""
+#~ "Jo ha de toets Shift 5 kear efter elkoar yndrukt of in programma hat "
+#~ "frege om dizze ynstelling te wizigjen."
+
+#~ msgid ""
+#~ "You pressed %1 or an application has requested to change this setting."
+#~ msgstr ""
+#~ "Jo hawwe %1 yndrukt of in programma hat frege om dizze ynstelling te "
+#~ "wizigjen."
+
+#~ msgid ""
+#~ "An application has requested to change these settings, or you used a "
+#~ "combination of several keyboard gestures."
+#~ msgstr ""
+#~ "In programma hat frege om dizze ynstellings te wizigjen, of jo hawwe in "
+#~ "kombinaasje fan ferskillende toetseboerdstjoerings brûkt."
+
+#~ msgid "An application has requested to change these settings."
+#~ msgstr "In programma hat frege om dizze ynstellings te wizigjen."
+
+#~ msgid ""
+#~ "These AccessX settings are needed for some users with motion impairments "
+#~ "and can be configured in the KDE System Settings. You can also turn them "
+#~ "on and off with standardized keyboard gestures.\n"
+#~ "\n"
+#~ "If you do not need them, you can select \"Deactivate all AccessX features "
+#~ "and gestures\"."
+#~ msgstr ""
+#~ "Dizze AccessX-ynstellings binne nedich foar brûkers mei "
+#~ "bewegingsbeheining en kinne yn de KDE systeem ynstellings ynsteld wurde. "
+#~ "Jo kinne se dêr yn- of útskeakelje troch gebrûk fan "
+#~ "toetseboerdstjoerings.\n"
+#~ "\n"
+#~ "As jo se net nedich ha, dan kinne jo se yn de opsje \"Alle AccessX-"
+#~ "funksjes en -stjoerings deaktivearje\" selektearje."
+
+#~ msgid ""
+#~ "Slow keys has been enabled. From now on, you need to press each key for a "
+#~ "certain length of time before it gets accepted."
+#~ msgstr ""
+#~ "Trage toetsen binne aktivearre. No moatte jo eltse toets inige tiid "
+#~ "yndrukt hâlde faordat dizze effekt hat."
+
+#~ msgid "Slow keys has been disabled."
+#~ msgstr "Trage toetsen binne ûntaktivearre."
+
+#~ msgid ""
+#~ "Bounce keys has been enabled. From now on, each key will be blocked for a "
+#~ "certain length of time after it was used."
+#~ msgstr ""
+#~ "Stuiterjende  toetsen binne aktivearre. No wurdt eltse toets foar inige "
+#~ "tiid blokearre neidat dizze brûkt is."
+
+#~ msgid "Bounce keys has been disabled."
+#~ msgstr "Stuiterjende toetsen binne ûntaktivearre."
+
+#~ msgid ""
+#~ "Sticky keys has been enabled. From now on, modifier keys will stay "
+#~ "latched after you have released them."
+#~ msgstr ""
+#~ "Kliemske toetsen binne aktivearre. Fan ôf dit punt moatte jo eltse toets "
+#~ "in tydsje yndrukt hâlde foardat dizze effekt hat."
+
+#~ msgid "Sticky keys has been disabled."
+#~ msgstr "Kliemske toetsen binne ûntaktivearre."
+
+#~ msgid ""
+#~ "Mouse keys has been enabled. From now on, you can use the number pad of "
+#~ "your keyboard in order to control the mouse."
+#~ msgstr ""
+#~ "Mûstoetsen binne aktivearre. Fan ôf dit punt moatte jo eltse toets in "
+#~ "tydsje yndrukt hâlde foardat dizze effekt hat."
+
+#~ msgid "Mouse keys has been disabled."
+#~ msgstr "Mûstoetsen binne ûntaktivearre."
 
 #~ msgid "KDE Accessibility Tool"
 #~ msgstr "KDE Tagonklikens Ark"

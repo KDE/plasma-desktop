@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-16 00:47+0000\n"
 "PO-Revision-Date: 2026-05-18 22:21+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -18,96 +18,60 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 26.04.0\n"
 
-#: kcmaccess.cpp:127 kcmaccess.cpp:155
+#: kcmaccess.cpp:124 kcmaccess.cpp:152
 #, kde-format
 msgid "KWin"
 msgstr "KWin"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:127
 #, kde-format
 msgid "Toggle Invert Effect"
 msgstr "Invertálás ki-be"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Toggle Invert Effect on Window"
 msgstr "Invertálás az ablakon ki-be"
 
-#: kcmaccess.cpp:178
+#: kcmaccess.cpp:175
 #, kde-format
 msgid "Move Left"
 msgstr "Balra"
 
-#: kcmaccess.cpp:185
+#: kcmaccess.cpp:182
 #, kde-format
 msgid "Move Right"
 msgstr "Jobbra"
 
-#: kcmaccess.cpp:192
+#: kcmaccess.cpp:189
 #, kde-format
 msgid "Move Up"
 msgstr "Fel"
 
-#: kcmaccess.cpp:199
+#: kcmaccess.cpp:196
 #, kde-format
 msgid "Move Down"
 msgstr "Le"
 
-#: kcmaccess.cpp:206
+#: kcmaccess.cpp:203
 #, kde-format
 msgid "Move Mouse to Focus"
 msgstr "Egér mozgatása a fókuszra"
 
-#: kcmaccess.cpp:213
+#: kcmaccess.cpp:210
 #, kde-format
 msgid "Move Mouse to Center"
 msgstr "Egér mozgatása középre"
 
-#: kcmaccess.cpp:256
+#: kcmaccess.cpp:253
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Nem lehet beállítani a gsettings-et az Orcához: a(z) „%1” sikertelen"
 
-#: kcmaccess.cpp:263
+#: kcmaccess.cpp:260
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Hiba: nem lehet futtatni az „orca --setup” parancsot"
-
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:9
-#, kde-format
-msgid "Use Gestures"
-msgstr "Kézmozdulatok használata"
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:13
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr "Megerősítés kérése kézmozdulatkor"
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:17
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr "Hozzáférés megerősítése a billentyűzethez"
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:21
-#, kde-format
-msgid "Use a timeout delay"
-msgstr "Időtúllépési késleltetés"
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:25
-#, kde-format
-msgid "Delay for timeout"
-msgstr "Késleltetés időkorlátja"
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:29
-#, kde-format
-msgid "Use a beep for access"
-msgstr "Hangjelzés hozzáféréskor"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
@@ -312,83 +276,6 @@ msgstr "A Nagyítás effektus be van-e kapcsolva"
 #, kde-format
 msgid "Whether the Magnifier effect is enabled"
 msgstr "A Felnagyítás effektus be van-e kapcsolva"
-
-#: ui/ActivationShortcuts.qml:18
-#, kde-format
-msgctxt "@option:check"
-msgid "Activation shortcuts:"
-msgstr "Aktiválási gyorsbillentyűk:"
-
-#: ui/ActivationShortcuts.qml:19
-#, kde-format
-msgctxt "Enable activation shortcuts"
-msgid "Enable"
-msgstr "Bekapcsolás"
-
-#: ui/ActivationShortcuts.qml:31
-#, kde-format
-msgctxt "@label"
-msgid "Press Shift 5 times to enable Sticky Keys"
-msgstr "Nyomja meg ötször a Shiftet a ragadó billentyűk bekapcsolásához"
-
-#: ui/ActivationShortcuts.qml:38
-#, kde-format
-msgctxt "@label"
-msgid "Hold Shift for 8 seconds to enable Slow Keys"
-msgstr ""
-"Tartsa lenyomva a Shiftet 8 másodpercig a lassú billentyűk bekapcsolásához"
-
-#: ui/ActivationShortcuts.qml:47
-#, kde-format
-msgctxt "@option:check"
-msgid "Disable sticky and slow keys after:"
-msgstr "Ragadós és lassú billentyűk kikapcsolása ennyi inaktivitás után:"
-
-#: ui/ActivationShortcuts.qml:71
-#, kde-format
-msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
-msgid "%1 min"
-msgid_plural "%1 min"
-msgstr[0] "%1 perc"
-msgstr[1] "%1 perc"
-
-#: ui/ActivationShortcuts.qml:80
-#, kde-format
-msgctxt "short for minute(s)"
-msgid "min"
-msgid_plural "min"
-msgstr[0] "perc"
-msgstr[1] "perc"
-
-#: ui/ActivationShortcuts.qml:89
-#, kde-format
-msgctxt "@title:group for checkbox group"
-msgid "When a shortcut is used:"
-msgstr "Gyorsbillentyű használatakor:"
-
-#: ui/ActivationShortcuts.qml:90
-#, kde-format
-msgctxt "@option:check when shortcut used"
-msgid "Display a confirmation dialog"
-msgstr "Megerősítéskérő ablak megjelenítése"
-
-#: ui/ActivationShortcuts.qml:101
-#, kde-format
-msgctxt "@option:check when shortcut used"
-msgid "Ring the system bell"
-msgstr "Rendszercsengő megszólaltatása"
-
-#: ui/ActivationShortcuts.qml:112
-#, kde-format
-msgctxt "@option:check when shortcut used"
-msgid "Show a notification"
-msgstr "Értesítés megjelenítése"
-
-#: ui/ActivationShortcuts.qml:123
-#, kde-format
-msgctxt "@action:button opens Notifications kcm"
-msgid "Configure Notifications…"
-msgstr "Értesítések beállítása…"
 
 #: ui/Bell.qml:19
 #, kde-format
@@ -750,28 +637,22 @@ msgstr "Egeres navigáció"
 #: ui/main.qml:53
 #, kde-format
 msgctxt "@title Category name in sidebar"
-msgid "Activation Shortcuts"
-msgstr "Aktiválási gyorsbillentyűk"
-
-#: ui/main.qml:58
-#, kde-format
-msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "Képernyőolvasó"
 
-#: ui/main.qml:63
+#: ui/main.qml:58
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr "Színvakság-korrekció"
 
-#: ui/main.qml:68
+#: ui/main.qml:63
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
 msgstr "Invertálás"
 
-#: ui/main.qml:73
+#: ui/main.qml:68
 #, kde-format
 msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
@@ -1182,6 +1063,81 @@ msgstr "Nagyításhoz görgessen a módosító billentyűk lenyomva tartásakor"
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "Gyorsbillentyűk használata a nagyítás vezérléséhez"
+
+#~ msgid "Use Gestures"
+#~ msgstr "Kézmozdulatok használata"
+
+#~ msgid "Ask for Confirmation for a gesture"
+#~ msgstr "Megerősítés kérése kézmozdulatkor"
+
+#~ msgid "Confirm access to the Keyboard"
+#~ msgstr "Hozzáférés megerősítése a billentyűzethez"
+
+#~ msgid "Use a timeout delay"
+#~ msgstr "Időtúllépési késleltetés"
+
+#~ msgid "Delay for timeout"
+#~ msgstr "Késleltetés időkorlátja"
+
+#~ msgid "Use a beep for access"
+#~ msgstr "Hangjelzés hozzáféréskor"
+
+#~ msgctxt "@option:check"
+#~ msgid "Activation shortcuts:"
+#~ msgstr "Aktiválási gyorsbillentyűk:"
+
+#~ msgctxt "Enable activation shortcuts"
+#~ msgid "Enable"
+#~ msgstr "Bekapcsolás"
+
+#~ msgctxt "@label"
+#~ msgid "Press Shift 5 times to enable Sticky Keys"
+#~ msgstr "Nyomja meg ötször a Shiftet a ragadó billentyűk bekapcsolásához"
+
+#~ msgctxt "@label"
+#~ msgid "Hold Shift for 8 seconds to enable Slow Keys"
+#~ msgstr ""
+#~ "Tartsa lenyomva a Shiftet 8 másodpercig a lassú billentyűk bekapcsolásához"
+
+#~ msgctxt "@option:check"
+#~ msgid "Disable sticky and slow keys after:"
+#~ msgstr "Ragadós és lassú billentyűk kikapcsolása ennyi inaktivitás után:"
+
+#~ msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
+#~ msgid "%1 min"
+#~ msgid_plural "%1 min"
+#~ msgstr[0] "%1 perc"
+#~ msgstr[1] "%1 perc"
+
+#~ msgctxt "short for minute(s)"
+#~ msgid "min"
+#~ msgid_plural "min"
+#~ msgstr[0] "perc"
+#~ msgstr[1] "perc"
+
+#~ msgctxt "@title:group for checkbox group"
+#~ msgid "When a shortcut is used:"
+#~ msgstr "Gyorsbillentyű használatakor:"
+
+#~ msgctxt "@option:check when shortcut used"
+#~ msgid "Display a confirmation dialog"
+#~ msgstr "Megerősítéskérő ablak megjelenítése"
+
+#~ msgctxt "@option:check when shortcut used"
+#~ msgid "Ring the system bell"
+#~ msgstr "Rendszercsengő megszólaltatása"
+
+#~ msgctxt "@option:check when shortcut used"
+#~ msgid "Show a notification"
+#~ msgstr "Értesítés megjelenítése"
+
+#~ msgctxt "@action:button opens Notifications kcm"
+#~ msgid "Configure Notifications…"
+#~ msgstr "Értesítések beállítása…"
+
+#~ msgctxt "@title Category name in sidebar"
+#~ msgid "Activation Shortcuts"
+#~ msgstr "Aktiválási gyorsbillentyűk"
 
 #~ msgctxt "@label:listbox"
 #~ msgid "Pointer appearance:"

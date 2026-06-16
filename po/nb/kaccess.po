@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-09 00:45+0000\n"
+"POT-Creation-Date: 2026-06-16 00:47+0000\n"
 "PO-Revision-Date: 2025-03-29 12:21+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@nuug.no>\n"
@@ -36,417 +36,16 @@ msgstr ""
 "bieker@kde.org,fri_programvare@bojer.no,slx@nilsk.net,bjornst@skogkatt."
 "homelinux.org,mh306602@gmail.com"
 
-#: kaccess.cpp:65
-msgid ""
-"The Shift key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"«Shift»-tasten er låst og kan nå brukes sammen med alle følgende tastetrykk."
-
-#: kaccess.cpp:66
-msgid "The Shift key is now active."
-msgstr "«Shift»-tasten er nå slått på."
-
-#: kaccess.cpp:67
-msgid "The Shift key is now inactive."
-msgstr "«Shift»-tasten er nå slått av."
-
-#: kaccess.cpp:71
-msgid ""
-"The Control key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"«Ctrl»-tasten er låst og kan nå brukes sammen med alle følgende tastetrykk."
-
-#: kaccess.cpp:72
-msgid "The Control key is now active."
-msgstr "«Ctrl»-tasten er nå slått på."
-
-#: kaccess.cpp:73
-msgid "The Control key is now inactive."
-msgstr "«Ctrl»-tasten er nå slått av."
-
-#: kaccess.cpp:77
-msgid ""
-"The Alt key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"«Alt»-tasten er låst og kan nå brukes sammen med alle følgende tastetrykk."
-
-#: kaccess.cpp:78
-msgid "The Alt key is now active."
-msgstr "«Alt»-tasten er nå slått på."
-
-#: kaccess.cpp:79
-msgid "The Alt key is now inactive."
-msgstr "«Alt»-tasten er nå slått av."
-
-#: kaccess.cpp:83
-msgid ""
-"The Win key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"«Windows»-tasten er låst og kan nå brukes sammen med alle følgende "
-"tastetrykk."
-
-#: kaccess.cpp:84
-msgid "The Win key is now active."
-msgstr "«Windows»-tasten er nå slått på."
-
-#: kaccess.cpp:85
-msgid "The Win key is now inactive."
-msgstr "«Windows»-tasten er nå slått av."
-
-#: kaccess.cpp:89
-msgid ""
-"The Meta key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"«Meta»-tasten er låst og kan nå brukes sammen med alle følgende tastetrykk."
-
-#: kaccess.cpp:90
-msgid "The Meta key is now active."
-msgstr "«Meta»-tasten er nå slått på."
-
-#: kaccess.cpp:91
-msgid "The Meta key is now inactive."
-msgstr "«Meta»-tasten er nå slått av."
-
-#: kaccess.cpp:95
-msgid ""
-"The Super key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"«Super»-tasten er låst og kan nå brukes sammen med alle følgende tastetrykk."
-
-#: kaccess.cpp:96
-msgid "The Super key is now active."
-msgstr "«Super»-tasten er nå slått på."
-
-#: kaccess.cpp:97
-msgid "The Super key is now inactive."
-msgstr "«Super»-tasten er nå slått av."
-
-#: kaccess.cpp:101
-msgid ""
-"The Hyper key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"«Hyper»-tasten er låst og kan nå brukes sammen med alle følgende tastetrykk."
-
-#: kaccess.cpp:102
-msgid "The Hyper key is now active."
-msgstr "«Hyper»-tasten er nå slått på."
-
-#: kaccess.cpp:103
-msgid "The Hyper key is now inactive."
-msgstr "«Hyper»-tasten er nå slått av."
-
-#: kaccess.cpp:107
-msgid ""
-"The Alt Graph key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"«Alt Gr»-tasten er låst og kan nå brukes sammen med alle følgende tastetrykk."
-
-#: kaccess.cpp:108
-msgid "The Alt Graph key is now active."
-msgstr "«Alt Gr»-tasten er nå slått på."
-
-#: kaccess.cpp:109
-msgid "The Alt Graph key is now inactive."
-msgstr "«Alt Gr»-tasten er nå slått av."
-
-#: kaccess.cpp:110
-msgid "The Num Lock key has been activated."
-msgstr "«Num Lock»-tasten er nå slått på."
-
-#: kaccess.cpp:110
-msgid "The Num Lock key is now inactive."
-msgstr "«Num Lock»-tasten er nå slått av."
-
-#: kaccess.cpp:111
-msgid "The Caps Lock key has been activated."
-msgstr "«Caps Lock»-tasten er nå slått på."
-
-#: kaccess.cpp:111
-msgid "The Caps Lock key is now inactive."
-msgstr "«Caps Lock»-tasten er nå slått av."
-
-#: kaccess.cpp:112
-msgid "The Scroll Lock key has been activated."
-msgstr "«Scroll Lock»-tasten er nå slått på."
-
-#: kaccess.cpp:112
-msgid "The Scroll Lock key is now inactive."
-msgstr "«Scroll Lock»-tasten er nå slått av."
-
-#: kaccess.cpp:144
+#: kaccess.cpp:36
 #, kde-format
 msgid "Toggle Screen Reader On and Off"
 msgstr "Slå av/på skjermleser"
 
-#: kaccess.cpp:146
+#: kaccess.cpp:38
 #, kde-format
 msgctxt "Name for kaccess shortcuts category"
 msgid "Accessibility"
 msgstr "Tilgjengelighet"
-
-#: kaccess.cpp:538
-#, kde-format
-msgid "AltGraph"
-msgstr "Alt Graph"
-
-#: kaccess.cpp:540
-#, kde-format
-msgid "Hyper"
-msgstr "Hyper"
-
-#: kaccess.cpp:542
-#, kde-format
-msgid "Super"
-msgstr "Super"
-
-#: kaccess.cpp:544
-#, kde-format
-msgid "Meta"
-msgstr "Meta"
-
-#: kaccess.cpp:561
-#, kde-format
-msgid "Warning"
-msgstr "Advarsel"
-
-#: kaccess.cpp:589
-#, kde-format
-msgid "&When a gesture was used:"
-msgstr "&Når en musebevegelse ble brukt:"
-
-#: kaccess.cpp:595
-#, kde-format
-msgid "Change Settings Without Asking"
-msgstr "Endre innstillingene uten spørsmål"
-
-#: kaccess.cpp:596
-#, kde-format
-msgid "Show This Confirmation Dialog"
-msgstr "Vis dette vinduet for bekreftelse"
-
-#: kaccess.cpp:597
-#, kde-format
-msgid "Deactivate All AccessX Features & Gestures"
-msgstr "Slå av alle AccessX-funksjoner og musebevegelser"
-
-#: kaccess.cpp:640 kaccess.cpp:642
-#, kde-format
-msgid "Slow keys"
-msgstr "Trege taster"
-
-#: kaccess.cpp:645 kaccess.cpp:647
-#, kde-format
-msgid "Bounce keys"
-msgstr "Filtertaster"
-
-#: kaccess.cpp:650 kaccess.cpp:652
-#, kde-format
-msgid "Sticky keys"
-msgstr "Faste valgtaster"
-
-#: kaccess.cpp:655 kaccess.cpp:657
-#, kde-format
-msgid "Mouse keys"
-msgstr "Musetaster"
-
-#: kaccess.cpp:664
-#, kde-format
-msgid "Do you really want to deactivate \"%1\"?"
-msgstr "Er du sikker på at du vil slå av «%1»?"
-
-#: kaccess.cpp:667
-#, kde-format
-msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
-msgstr "Er du sikker på at du vil slå av «%1» og «%2»?"
-
-#: kaccess.cpp:671
-#, kde-format
-msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
-msgstr "Er du sikker på at du vil slå av «%1», «%2» og «%3»?"
-
-#: kaccess.cpp:674
-#, kde-format
-msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr "Er du sikker på at du vil slå av «%1», «%2», «%3» og «%4»?"
-
-#: kaccess.cpp:685
-#, kde-format
-msgid "Do you really want to activate \"%1\"?"
-msgstr "Er du sikker på at du vil slå på «%1»?"
-
-#: kaccess.cpp:688
-#, kde-format
-msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
-msgstr "Er du sikker på at du vil slå på «%1» og slå av «%2»?"
-
-#: kaccess.cpp:691
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
-msgstr "Er du sikker på at du vil slå på «%1» og slå av «%2» og «%3»?"
-
-#: kaccess.cpp:697
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
-"\"%4\"?"
-msgstr "Er du sikker på at du vil slå på «%1» og slå av «%2», «%3» og «%4»?"
-
-#: kaccess.cpp:708
-#, kde-format
-msgid "Do you really want to activate \"%1\" and \"%2\"?"
-msgstr "Er du sikker på at du vil slå på «%1» og «%2»?"
-
-#: kaccess.cpp:711
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
-msgstr "Er du sikker på at du vil slå på «%1» og «%2» og slå av «%3»?"
-
-#: kaccess.cpp:717
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
-"and \"%4\"?"
-msgstr "Er du sikker på at du vil slå på «%1», «%2» og slå av «%3» og «%4»?"
-
-#: kaccess.cpp:728
-#, kde-format
-msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
-msgstr "Er du sikker på at du vil slå på «%1», «%2» og «%3»?"
-
-#: kaccess.cpp:731
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
-"\"%4\"?"
-msgstr "Er du sikker på at du vil slå på «%1», «%2» og «%3» og slå av «%4»?"
-
-#: kaccess.cpp:740
-#, kde-format
-msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr "Er du sikker på at du vil slå på «%1», «%2», «%3» og «%4»?"
-
-#: kaccess.cpp:749
-#, kde-format
-msgid "An application has requested to change this setting."
-msgstr "Et program ba om å få endre dette valget."
-
-#: kaccess.cpp:753
-#, kde-format
-msgid ""
-"You held down the Shift key for 8 seconds or an application has requested to "
-"change this setting."
-msgstr ""
-"Du holdt «Shift»-knappen nede i mer enn 8 sekunder eller et program ba om å "
-"endre dette valget."
-
-#: kaccess.cpp:755
-#, kde-format
-msgid ""
-"You pressed the Shift key 5 consecutive times or an application has "
-"requested to change this setting."
-msgstr ""
-"Du holdt «Shift»-knappen 5 ganger på rad eller et program ba om å endre "
-"dette valget."
-
-#: kaccess.cpp:759
-#, kde-format
-msgid "You pressed %1 or an application has requested to change this setting."
-msgstr "Du trykket %1 eller et program ba om å endre dette valget."
-
-#: kaccess.cpp:764
-#, kde-format
-msgid ""
-"An application has requested to change these settings, or you used a "
-"combination of several keyboard gestures."
-msgstr ""
-"Et program ba om å endre disse valgene, eller du brukte bestemte tastetrykk."
-
-#: kaccess.cpp:766
-#, kde-format
-msgid "An application has requested to change these settings."
-msgstr "Et program ba om å endre disse valgene."
-
-#: kaccess.cpp:771
-#, kde-format
-msgid ""
-"These AccessX settings are needed for some users with motion impairments and "
-"can be configured in the KDE System Settings. You can also turn them on and "
-"off with standardized keyboard gestures.\n"
-"\n"
-"If you do not need them, you can select \"Deactivate all AccessX features "
-"and gestures\"."
-msgstr ""
-"Disse AccessX-valgene behøves er nødvendig for noen brukere med "
-"bevegelseshemmelser. Du kan endre valgene i KDE Systeminnstillinger. Du kan "
-"også slå dem av eller på med standardiserte tastetrykk.\n"
-"\n"
-"Hvis du ikke har bruk for dem, kan du velge «slå av alle AccessX-funksjoner "
-"og tastetrykk»."
-
-#: kaccess.cpp:792
-#, kde-format
-msgid ""
-"Slow keys has been enabled. From now on, you need to press each key for a "
-"certain length of time before it gets accepted."
-msgstr ""
-"Trege taster er nå slått på. Fra nå av må du holde nede tastene en liten "
-"stund før tastetrykket blir registrert."
-
-#: kaccess.cpp:794
-#, kde-format
-msgid "Slow keys has been disabled."
-msgstr "Trege taster er slått av."
-
-#: kaccess.cpp:798
-#, kde-format
-msgid ""
-"Bounce keys has been enabled. From now on, each key will be blocked for a "
-"certain length of time after it was used."
-msgstr ""
-"Filtertaster er slått på. Fra nå av blir hver tast blokkert en liten stund "
-"etter at den er brukt."
-
-#: kaccess.cpp:800
-#, kde-format
-msgid "Bounce keys has been disabled."
-msgstr "Filtertaster er slått av."
-
-#: kaccess.cpp:804
-#, kde-format
-msgid ""
-"Sticky keys has been enabled. From now on, modifier keys will stay latched "
-"after you have released them."
-msgstr ""
-"Faste valgtaster er slått på. Fra nå av vil valgtastene kunne brukes selv "
-"etter at du har sluppet dem."
-
-#: kaccess.cpp:806
-#, kde-format
-msgid "Sticky keys has been disabled."
-msgstr "Faste valgtaster er nå slått av."
-
-#: kaccess.cpp:810
-#, kde-format
-msgid ""
-"Mouse keys has been enabled. From now on, you can use the number pad of your "
-"keyboard in order to control the mouse."
-msgstr ""
-"Musetastene er nå slått på. Fra nå av kan du styre musa med talltastaturet."
-
-#: kaccess.cpp:812
-#, kde-format
-msgid "Mouse keys has been disabled."
-msgstr "Musetastene er nå slått av."
 
 #: main.cpp:40
 #, kde-format
@@ -467,3 +66,299 @@ msgstr "Matthias Hoelzer-Kluepfel"
 #, kde-format
 msgid "Author"
 msgstr "Opphavsperson"
+
+#~ msgid ""
+#~ "The Shift key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "«Shift»-tasten er låst og kan nå brukes sammen med alle følgende "
+#~ "tastetrykk."
+
+#~ msgid "The Shift key is now active."
+#~ msgstr "«Shift»-tasten er nå slått på."
+
+#~ msgid "The Shift key is now inactive."
+#~ msgstr "«Shift»-tasten er nå slått av."
+
+#~ msgid ""
+#~ "The Control key has been locked and is now active for all of the "
+#~ "following keypresses."
+#~ msgstr ""
+#~ "«Ctrl»-tasten er låst og kan nå brukes sammen med alle følgende "
+#~ "tastetrykk."
+
+#~ msgid "The Control key is now active."
+#~ msgstr "«Ctrl»-tasten er nå slått på."
+
+#~ msgid "The Control key is now inactive."
+#~ msgstr "«Ctrl»-tasten er nå slått av."
+
+#~ msgid ""
+#~ "The Alt key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "«Alt»-tasten er låst og kan nå brukes sammen med alle følgende tastetrykk."
+
+#~ msgid "The Alt key is now active."
+#~ msgstr "«Alt»-tasten er nå slått på."
+
+#~ msgid "The Alt key is now inactive."
+#~ msgstr "«Alt»-tasten er nå slått av."
+
+#~ msgid ""
+#~ "The Win key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "«Windows»-tasten er låst og kan nå brukes sammen med alle følgende "
+#~ "tastetrykk."
+
+#~ msgid "The Win key is now active."
+#~ msgstr "«Windows»-tasten er nå slått på."
+
+#~ msgid "The Win key is now inactive."
+#~ msgstr "«Windows»-tasten er nå slått av."
+
+#~ msgid ""
+#~ "The Meta key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "«Meta»-tasten er låst og kan nå brukes sammen med alle følgende "
+#~ "tastetrykk."
+
+#~ msgid "The Meta key is now active."
+#~ msgstr "«Meta»-tasten er nå slått på."
+
+#~ msgid "The Meta key is now inactive."
+#~ msgstr "«Meta»-tasten er nå slått av."
+
+#~ msgid ""
+#~ "The Super key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "«Super»-tasten er låst og kan nå brukes sammen med alle følgende "
+#~ "tastetrykk."
+
+#~ msgid "The Super key is now active."
+#~ msgstr "«Super»-tasten er nå slått på."
+
+#~ msgid "The Super key is now inactive."
+#~ msgstr "«Super»-tasten er nå slått av."
+
+#~ msgid ""
+#~ "The Hyper key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "«Hyper»-tasten er låst og kan nå brukes sammen med alle følgende "
+#~ "tastetrykk."
+
+#~ msgid "The Hyper key is now active."
+#~ msgstr "«Hyper»-tasten er nå slått på."
+
+#~ msgid "The Hyper key is now inactive."
+#~ msgstr "«Hyper»-tasten er nå slått av."
+
+#~ msgid ""
+#~ "The Alt Graph key has been locked and is now active for all of the "
+#~ "following keypresses."
+#~ msgstr ""
+#~ "«Alt Gr»-tasten er låst og kan nå brukes sammen med alle følgende "
+#~ "tastetrykk."
+
+#~ msgid "The Alt Graph key is now active."
+#~ msgstr "«Alt Gr»-tasten er nå slått på."
+
+#~ msgid "The Alt Graph key is now inactive."
+#~ msgstr "«Alt Gr»-tasten er nå slått av."
+
+#~ msgid "The Num Lock key has been activated."
+#~ msgstr "«Num Lock»-tasten er nå slått på."
+
+#~ msgid "The Num Lock key is now inactive."
+#~ msgstr "«Num Lock»-tasten er nå slått av."
+
+#~ msgid "The Caps Lock key has been activated."
+#~ msgstr "«Caps Lock»-tasten er nå slått på."
+
+#~ msgid "The Caps Lock key is now inactive."
+#~ msgstr "«Caps Lock»-tasten er nå slått av."
+
+#~ msgid "The Scroll Lock key has been activated."
+#~ msgstr "«Scroll Lock»-tasten er nå slått på."
+
+#~ msgid "The Scroll Lock key is now inactive."
+#~ msgstr "«Scroll Lock»-tasten er nå slått av."
+
+#~ msgid "AltGraph"
+#~ msgstr "Alt Graph"
+
+#~ msgid "Hyper"
+#~ msgstr "Hyper"
+
+#~ msgid "Super"
+#~ msgstr "Super"
+
+#~ msgid "Meta"
+#~ msgstr "Meta"
+
+#~ msgid "Warning"
+#~ msgstr "Advarsel"
+
+#~ msgid "&When a gesture was used:"
+#~ msgstr "&Når en musebevegelse ble brukt:"
+
+#~ msgid "Change Settings Without Asking"
+#~ msgstr "Endre innstillingene uten spørsmål"
+
+#~ msgid "Show This Confirmation Dialog"
+#~ msgstr "Vis dette vinduet for bekreftelse"
+
+#~ msgid "Deactivate All AccessX Features & Gestures"
+#~ msgstr "Slå av alle AccessX-funksjoner og musebevegelser"
+
+#~ msgid "Slow keys"
+#~ msgstr "Trege taster"
+
+#~ msgid "Bounce keys"
+#~ msgstr "Filtertaster"
+
+#~ msgid "Sticky keys"
+#~ msgstr "Faste valgtaster"
+
+#~ msgid "Mouse keys"
+#~ msgstr "Musetaster"
+
+#~ msgid "Do you really want to deactivate \"%1\"?"
+#~ msgstr "Er du sikker på at du vil slå av «%1»?"
+
+#~ msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
+#~ msgstr "Er du sikker på at du vil slå av «%1» og «%2»?"
+
+#~ msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
+#~ msgstr "Er du sikker på at du vil slå av «%1», «%2» og «%3»?"
+
+#~ msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+#~ msgstr "Er du sikker på at du vil slå av «%1», «%2», «%3» og «%4»?"
+
+#~ msgid "Do you really want to activate \"%1\"?"
+#~ msgstr "Er du sikker på at du vil slå på «%1»?"
+
+#~ msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
+#~ msgstr "Er du sikker på at du vil slå på «%1» og slå av «%2»?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
+#~ msgstr "Er du sikker på at du vil slå på «%1» og slå av «%2» og «%3»?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" "
+#~ "and \"%4\"?"
+#~ msgstr "Er du sikker på at du vil slå på «%1» og slå av «%2», «%3» og «%4»?"
+
+#~ msgid "Do you really want to activate \"%1\" and \"%2\"?"
+#~ msgstr "Er du sikker på at du vil slå på «%1» og «%2»?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
+#~ msgstr "Er du sikker på at du vil slå på «%1» og «%2» og slå av «%3»?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\", and \"%2\" and to deactivate "
+#~ "\"%3\" and \"%4\"?"
+#~ msgstr "Er du sikker på at du vil slå på «%1», «%2» og slå av «%3» og «%4»?"
+
+#~ msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
+#~ msgstr "Er du sikker på at du vil slå på «%1», «%2» og «%3»?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\", \"%2\" and \"%3\" and to "
+#~ "deactivate \"%4\"?"
+#~ msgstr "Er du sikker på at du vil slå på «%1», «%2» og «%3» og slå av «%4»?"
+
+#~ msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+#~ msgstr "Er du sikker på at du vil slå på «%1», «%2», «%3» og «%4»?"
+
+#~ msgid "An application has requested to change this setting."
+#~ msgstr "Et program ba om å få endre dette valget."
+
+#~ msgid ""
+#~ "You held down the Shift key for 8 seconds or an application has requested "
+#~ "to change this setting."
+#~ msgstr ""
+#~ "Du holdt «Shift»-knappen nede i mer enn 8 sekunder eller et program ba om "
+#~ "å endre dette valget."
+
+#~ msgid ""
+#~ "You pressed the Shift key 5 consecutive times or an application has "
+#~ "requested to change this setting."
+#~ msgstr ""
+#~ "Du holdt «Shift»-knappen 5 ganger på rad eller et program ba om å endre "
+#~ "dette valget."
+
+#~ msgid ""
+#~ "You pressed %1 or an application has requested to change this setting."
+#~ msgstr "Du trykket %1 eller et program ba om å endre dette valget."
+
+#~ msgid ""
+#~ "An application has requested to change these settings, or you used a "
+#~ "combination of several keyboard gestures."
+#~ msgstr ""
+#~ "Et program ba om å endre disse valgene, eller du brukte bestemte "
+#~ "tastetrykk."
+
+#~ msgid "An application has requested to change these settings."
+#~ msgstr "Et program ba om å endre disse valgene."
+
+#~ msgid ""
+#~ "These AccessX settings are needed for some users with motion impairments "
+#~ "and can be configured in the KDE System Settings. You can also turn them "
+#~ "on and off with standardized keyboard gestures.\n"
+#~ "\n"
+#~ "If you do not need them, you can select \"Deactivate all AccessX features "
+#~ "and gestures\"."
+#~ msgstr ""
+#~ "Disse AccessX-valgene behøves er nødvendig for noen brukere med "
+#~ "bevegelseshemmelser. Du kan endre valgene i KDE Systeminnstillinger. Du "
+#~ "kan også slå dem av eller på med standardiserte tastetrykk.\n"
+#~ "\n"
+#~ "Hvis du ikke har bruk for dem, kan du velge «slå av alle AccessX-"
+#~ "funksjoner og tastetrykk»."
+
+#~ msgid ""
+#~ "Slow keys has been enabled. From now on, you need to press each key for a "
+#~ "certain length of time before it gets accepted."
+#~ msgstr ""
+#~ "Trege taster er nå slått på. Fra nå av må du holde nede tastene en liten "
+#~ "stund før tastetrykket blir registrert."
+
+#~ msgid "Slow keys has been disabled."
+#~ msgstr "Trege taster er slått av."
+
+#~ msgid ""
+#~ "Bounce keys has been enabled. From now on, each key will be blocked for a "
+#~ "certain length of time after it was used."
+#~ msgstr ""
+#~ "Filtertaster er slått på. Fra nå av blir hver tast blokkert en liten "
+#~ "stund etter at den er brukt."
+
+#~ msgid "Bounce keys has been disabled."
+#~ msgstr "Filtertaster er slått av."
+
+#~ msgid ""
+#~ "Sticky keys has been enabled. From now on, modifier keys will stay "
+#~ "latched after you have released them."
+#~ msgstr ""
+#~ "Faste valgtaster er slått på. Fra nå av vil valgtastene kunne brukes selv "
+#~ "etter at du har sluppet dem."
+
+#~ msgid "Sticky keys has been disabled."
+#~ msgstr "Faste valgtaster er nå slått av."
+
+#~ msgid ""
+#~ "Mouse keys has been enabled. From now on, you can use the number pad of "
+#~ "your keyboard in order to control the mouse."
+#~ msgstr ""
+#~ "Musetastene er nå slått på. Fra nå av kan du styre musa med "
+#~ "talltastaturet."
+
+#~ msgid "Mouse keys has been disabled."
+#~ msgstr "Musetastene er nå slått av."

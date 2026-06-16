@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-16 00:47+0000\n"
 "PO-Revision-Date: 2023-01-08 16:18+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -19,97 +19,60 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.12.0\n"
 
-#: kcmaccess.cpp:127 kcmaccess.cpp:155
+#: kcmaccess.cpp:124 kcmaccess.cpp:152
 #, kde-format
 msgid "KWin"
 msgstr ""
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:127
 #, kde-format
 msgid "Toggle Invert Effect"
 msgstr ""
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Toggle Invert Effect on Window"
 msgstr ""
 
-#: kcmaccess.cpp:178
+#: kcmaccess.cpp:175
 #, kde-format
 msgid "Move Left"
 msgstr ""
 
-#: kcmaccess.cpp:185
+#: kcmaccess.cpp:182
 #, kde-format
 msgid "Move Right"
 msgstr ""
 
-#: kcmaccess.cpp:192
+#: kcmaccess.cpp:189
 #, kde-format
 msgid "Move Up"
 msgstr ""
 
-#: kcmaccess.cpp:199
+#: kcmaccess.cpp:196
 #, kde-format
 msgid "Move Down"
 msgstr ""
 
-#: kcmaccess.cpp:206
+#: kcmaccess.cpp:203
 #, kde-format
 msgid "Move Mouse to Focus"
 msgstr ""
 
-#: kcmaccess.cpp:213
+#: kcmaccess.cpp:210
 #, kde-format
 msgid "Move Mouse to Center"
 msgstr ""
 
-#: kcmaccess.cpp:256
+#: kcmaccess.cpp:253
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Không đặt được gsettings cho Orca: \"%1\" thất bại"
 
-#: kcmaccess.cpp:263
+#: kcmaccess.cpp:260
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Lỗi: Không khởi chạy được \"orca --setup\""
-
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:9
-#, kde-format
-msgid "Use Gestures"
-msgstr "Dùng động tác"
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:13
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr "Yêu cầu xác nhận động tác"
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:17
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr "Xác nhận truy cập bàn phím"
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:21
-#, kde-format
-msgid "Use a timeout delay"
-msgstr "Dùng một khoảng trễ"
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:25
-#, fuzzy, kde-format
-#| msgid "Delay for the mouse movement"
-msgid "Delay for timeout"
-msgstr "Độ trễ cho di chuyển chuột"
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:29
-#, kde-format
-msgid "Use a beep for access"
-msgstr "Dùng tiếng bíp để hỗ trợ"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
@@ -317,91 +280,6 @@ msgstr ""
 #, kde-format
 msgid "Whether the Magnifier effect is enabled"
 msgstr ""
-
-#: ui/ActivationShortcuts.qml:18
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
-msgctxt "@option:check"
-msgid "Activation shortcuts:"
-msgstr "Động tác khởi động"
-
-#: ui/ActivationShortcuts.qml:19
-#, fuzzy, kde-format
-#| msgid "Enable"
-msgctxt "Enable activation shortcuts"
-msgid "Enable"
-msgstr "Bật"
-
-#: ui/ActivationShortcuts.qml:31
-#, kde-format
-msgctxt "@label"
-msgid "Press Shift 5 times to enable Sticky Keys"
-msgstr ""
-
-#: ui/ActivationShortcuts.qml:38
-#, kde-format
-msgctxt "@label"
-msgid "Hold Shift for 8 seconds to enable Slow Keys"
-msgstr ""
-
-#: ui/ActivationShortcuts.qml:47
-#, fuzzy, kde-format
-#| msgid ""
-#| "Turn sticky keys and slow keys off after a certain time of inactivity"
-msgctxt "@option:check"
-msgid "Disable sticky and slow keys after:"
-msgstr "Tắt phím dính và phím chậm sau khi không dùng một thời gian"
-
-#: ui/ActivationShortcuts.qml:71
-#, fuzzy, kde-format
-#| msgid " min"
-msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
-msgid "%1 min"
-msgid_plural "%1 min"
-msgstr[0] " phút"
-
-#: ui/ActivationShortcuts.qml:80
-#, fuzzy, kde-format
-#| msgid " min"
-msgctxt "short for minute(s)"
-msgid "min"
-msgid_plural "min"
-msgstr[0] " phút"
-
-#: ui/ActivationShortcuts.qml:89
-#, fuzzy, kde-format
-#| msgid "When a gesture is used:"
-msgctxt "@title:group for checkbox group"
-msgid "When a shortcut is used:"
-msgstr "Khi một động tác được dùng:"
-
-#: ui/ActivationShortcuts.qml:90
-#, fuzzy, kde-format
-#| msgid "Display a confirmation dialog"
-msgctxt "@option:check when shortcut used"
-msgid "Display a confirmation dialog"
-msgstr "Hiển thi một hộp thoại xác nhận"
-
-#: ui/ActivationShortcuts.qml:101
-#, fuzzy, kde-format
-#| msgid "Ring the System Bell"
-msgctxt "@option:check when shortcut used"
-msgid "Ring the system bell"
-msgstr "Rung chuông hệ thống"
-
-#: ui/ActivationShortcuts.qml:112
-#, fuzzy, kde-format
-#| msgid "Show a notification"
-msgctxt "@option:check when shortcut used"
-msgid "Show a notification"
-msgstr "Hiện một thông báo"
-
-#: ui/ActivationShortcuts.qml:123
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
-msgctxt "@action:button opens Notifications kcm"
-msgid "Configure Notifications…"
-msgstr "Cấu hình thông báo…"
 
 #: ui/Bell.qml:19
 #, fuzzy, kde-format
@@ -787,32 +665,25 @@ msgstr "Điều hướng chuột"
 
 #: ui/main.qml:53
 #, fuzzy, kde-format
-#| msgid "Activation Gestures"
-msgctxt "@title Category name in sidebar"
-msgid "Activation Shortcuts"
-msgstr "Động tác khởi động"
-
-#: ui/main.qml:58
-#, fuzzy, kde-format
 #| msgctxt "System mouse navigation"
 #| msgid "Screen Reader"
 msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "Trình đọc màn hình"
 
-#: ui/main.qml:63
+#: ui/main.qml:58
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr ""
 
-#: ui/main.qml:68
+#: ui/main.qml:63
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
 msgstr ""
 
-#: ui/main.qml:73
+#: ui/main.qml:68
 #, kde-format
 msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
@@ -1230,6 +1101,95 @@ msgstr "Rung chuông hệ thống khi phím bổ trợ được dùng"
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "Dùng các phím để điều khiển chuột"
+
+#~ msgid "Use Gestures"
+#~ msgstr "Dùng động tác"
+
+#~ msgid "Ask for Confirmation for a gesture"
+#~ msgstr "Yêu cầu xác nhận động tác"
+
+#~ msgid "Confirm access to the Keyboard"
+#~ msgstr "Xác nhận truy cập bàn phím"
+
+#~ msgid "Use a timeout delay"
+#~ msgstr "Dùng một khoảng trễ"
+
+#, fuzzy
+#~| msgid "Delay for the mouse movement"
+#~ msgid "Delay for timeout"
+#~ msgstr "Độ trễ cho di chuyển chuột"
+
+#~ msgid "Use a beep for access"
+#~ msgstr "Dùng tiếng bíp để hỗ trợ"
+
+#, fuzzy
+#~| msgid "Activation Gestures"
+#~ msgctxt "@option:check"
+#~ msgid "Activation shortcuts:"
+#~ msgstr "Động tác khởi động"
+
+#, fuzzy
+#~| msgid "Enable"
+#~ msgctxt "Enable activation shortcuts"
+#~ msgid "Enable"
+#~ msgstr "Bật"
+
+#, fuzzy
+#~| msgid ""
+#~| "Turn sticky keys and slow keys off after a certain time of inactivity"
+#~ msgctxt "@option:check"
+#~ msgid "Disable sticky and slow keys after:"
+#~ msgstr "Tắt phím dính và phím chậm sau khi không dùng một thời gian"
+
+#, fuzzy
+#~| msgid " min"
+#~ msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
+#~ msgid "%1 min"
+#~ msgid_plural "%1 min"
+#~ msgstr[0] " phút"
+
+#, fuzzy
+#~| msgid " min"
+#~ msgctxt "short for minute(s)"
+#~ msgid "min"
+#~ msgid_plural "min"
+#~ msgstr[0] " phút"
+
+#, fuzzy
+#~| msgid "When a gesture is used:"
+#~ msgctxt "@title:group for checkbox group"
+#~ msgid "When a shortcut is used:"
+#~ msgstr "Khi một động tác được dùng:"
+
+#, fuzzy
+#~| msgid "Display a confirmation dialog"
+#~ msgctxt "@option:check when shortcut used"
+#~ msgid "Display a confirmation dialog"
+#~ msgstr "Hiển thi một hộp thoại xác nhận"
+
+#, fuzzy
+#~| msgid "Ring the System Bell"
+#~ msgctxt "@option:check when shortcut used"
+#~ msgid "Ring the system bell"
+#~ msgstr "Rung chuông hệ thống"
+
+#, fuzzy
+#~| msgid "Show a notification"
+#~ msgctxt "@option:check when shortcut used"
+#~ msgid "Show a notification"
+#~ msgstr "Hiện một thông báo"
+
+#, fuzzy
+#~| msgid "Configure Notifications…"
+#~ msgctxt "@action:button opens Notifications kcm"
+#~ msgid "Configure Notifications…"
+#~ msgstr "Cấu hình thông báo…"
+
+#, fuzzy
+#~| msgid "Activation Gestures"
+#~ msgctxt "@title Category name in sidebar"
+#~ msgid "Activation Shortcuts"
+#~ msgstr "Động tác khởi động"
 
 #, fuzzy
 #~| msgid "Acceleration time:"

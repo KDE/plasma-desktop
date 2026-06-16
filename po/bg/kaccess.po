@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-09 00:45+0000\n"
+"POT-Creation-Date: 2026-06-16 00:47+0000\n"
 "PO-Revision-Date: 2024-11-09 20:10+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -29,422 +29,16 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "radnev@yahoo.com"
 
-#: kaccess.cpp:65
-msgid ""
-"The Shift key has been locked and is now active for all of the following "
-"keypresses."
-msgstr "Клавишът Shift е натиснат и е активен за всички последващи клавиши."
-
-#: kaccess.cpp:66
-msgid "The Shift key is now active."
-msgstr "Клавишът Shift е активен."
-
-#: kaccess.cpp:67
-msgid "The Shift key is now inactive."
-msgstr "Клавишът Shift е неактивен."
-
-#: kaccess.cpp:71
-msgid ""
-"The Control key has been locked and is now active for all of the following "
-"keypresses."
-msgstr "Клавишът Ctrl е натиснат и е активен за всички последващи клавиши."
-
-#: kaccess.cpp:72
-msgid "The Control key is now active."
-msgstr "Клавишът Ctrl е активен."
-
-#: kaccess.cpp:73
-msgid "The Control key is now inactive."
-msgstr "Клавишът Ctrl е неактивен."
-
-#: kaccess.cpp:77
-msgid ""
-"The Alt key has been locked and is now active for all of the following "
-"keypresses."
-msgstr "Клавишът Alt е натиснат и е активен за всички последващи клавиши."
-
-#: kaccess.cpp:78
-msgid "The Alt key is now active."
-msgstr "Клавишът Alt е активен."
-
-#: kaccess.cpp:79
-msgid "The Alt key is now inactive."
-msgstr "Клавишът Alt е неактивен."
-
-#: kaccess.cpp:83
-msgid ""
-"The Win key has been locked and is now active for all of the following "
-"keypresses."
-msgstr "Клавишът Win е натиснат и е активен за всички последващи клавиши."
-
-#: kaccess.cpp:84
-msgid "The Win key is now active."
-msgstr "Клавишът Win е активен."
-
-#: kaccess.cpp:85
-msgid "The Win key is now inactive."
-msgstr "Клавишът Win е неактивен."
-
-#: kaccess.cpp:89
-msgid ""
-"The Meta key has been locked and is now active for all of the following "
-"keypresses."
-msgstr "Клавишът Meta е натиснат и е активен за всички последващи клавиши."
-
-#: kaccess.cpp:90
-msgid "The Meta key is now active."
-msgstr "Клавишът Meta е активен."
-
-#: kaccess.cpp:91
-msgid "The Meta key is now inactive."
-msgstr "Клавишът Meta е неактивен."
-
-#: kaccess.cpp:95
-msgid ""
-"The Super key has been locked and is now active for all of the following "
-"keypresses."
-msgstr "Клавишът Super е натиснат и е активен за всички последващи клавиши."
-
-#: kaccess.cpp:96
-msgid "The Super key is now active."
-msgstr "Клавишът Super е активен."
-
-#: kaccess.cpp:97
-msgid "The Super key is now inactive."
-msgstr "Клавишът Super е неактивен."
-
-#: kaccess.cpp:101
-msgid ""
-"The Hyper key has been locked and is now active for all of the following "
-"keypresses."
-msgstr "Клавишът Hyper е натиснат и е активен за всички последващи клавиши."
-
-#: kaccess.cpp:102
-msgid "The Hyper key is now active."
-msgstr "Клавишът Hyper е активен."
-
-#: kaccess.cpp:103
-msgid "The Hyper key is now inactive."
-msgstr "Клавишът Hyper е неактивен."
-
-#: kaccess.cpp:107
-msgid ""
-"The Alt Graph key has been locked and is now active for all of the following "
-"keypresses."
-msgstr "Клавишът Alt Gr е натиснат и е активен за всички последващи клавиши."
-
-#: kaccess.cpp:108
-msgid "The Alt Graph key is now active."
-msgstr "Клавишът Alt Gr е активен."
-
-#: kaccess.cpp:109
-msgid "The Alt Graph key is now inactive."
-msgstr "Клавишът Alt Gr е неактивен."
-
-#: kaccess.cpp:110
-msgid "The Num Lock key has been activated."
-msgstr "Клавишът Num Lock е активен."
-
-#: kaccess.cpp:110
-msgid "The Num Lock key is now inactive."
-msgstr "Клавишът Num Lock е неактивен."
-
-#: kaccess.cpp:111
-msgid "The Caps Lock key has been activated."
-msgstr "Клавишът Caps Lock е активен."
-
-#: kaccess.cpp:111
-msgid "The Caps Lock key is now inactive."
-msgstr "Клавишът Caps Lock е неактивен."
-
-#: kaccess.cpp:112
-msgid "The Scroll Lock key has been activated."
-msgstr "Клавишът Scroll Lock е активен."
-
-#: kaccess.cpp:112
-msgid "The Scroll Lock key is now inactive."
-msgstr "Клавишът Scroll Lock е неактивен."
-
-#: kaccess.cpp:144
+#: kaccess.cpp:36
 #, kde-format
 msgid "Toggle Screen Reader On and Off"
 msgstr "Превключване на четеца на екран"
 
-#: kaccess.cpp:146
+#: kaccess.cpp:38
 #, kde-format
 msgctxt "Name for kaccess shortcuts category"
 msgid "Accessibility"
 msgstr "Достъпност"
-
-#: kaccess.cpp:538
-#, kde-format
-msgid "AltGraph"
-msgstr "AltGraph"
-
-#: kaccess.cpp:540
-#, kde-format
-msgid "Hyper"
-msgstr "Hyper"
-
-#: kaccess.cpp:542
-#, kde-format
-msgid "Super"
-msgstr "Super"
-
-#: kaccess.cpp:544
-#, kde-format
-msgid "Meta"
-msgstr "Meta"
-
-#: kaccess.cpp:561
-#, kde-format
-msgid "Warning"
-msgstr "Предупреждение"
-
-#: kaccess.cpp:589
-#, kde-format
-msgid "&When a gesture was used:"
-msgstr "При използване на &жест:"
-
-#: kaccess.cpp:595
-#, kde-format
-msgid "Change Settings Without Asking"
-msgstr "Промяна на настройките без потвърждение"
-
-#: kaccess.cpp:596
-#, kde-format
-msgid "Show This Confirmation Dialog"
-msgstr "Показване на диалог за потвърждение"
-
-#: kaccess.cpp:597
-#, kde-format
-msgid "Deactivate All AccessX Features & Gestures"
-msgstr "Изключване на всички жестове и възможности на AccessX"
-
-#: kaccess.cpp:640 kaccess.cpp:642
-#, kde-format
-msgid "Slow keys"
-msgstr "Бавни клавиши"
-
-#: kaccess.cpp:645 kaccess.cpp:647
-#, kde-format
-msgid "Bounce keys"
-msgstr "Подскачащи клавиши"
-
-#: kaccess.cpp:650 kaccess.cpp:652
-#, kde-format
-msgid "Sticky keys"
-msgstr "Залепващи клавиши"
-
-#: kaccess.cpp:655 kaccess.cpp:657
-#, kde-format
-msgid "Mouse keys"
-msgstr "Клавиши за мишката"
-
-#: kaccess.cpp:664
-#, kde-format
-msgid "Do you really want to deactivate \"%1\"?"
-msgstr "Сигурни ли сте, че искате да бъдат деактивирани „%1“?"
-
-#: kaccess.cpp:667
-#, kde-format
-msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
-msgstr "Сигурни ли сте, че искате да бъдат деактивирани „%1“ и „%2“?"
-
-#: kaccess.cpp:671
-#, kde-format
-msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
-msgstr "Сигурни ли сте, че искате да бъдат деактивирани „%1“, „%2“ и „%3“?"
-
-#: kaccess.cpp:674
-#, kde-format
-msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr ""
-"Сигурни ли сте, че искате да бъдат деактивирани „%1“, „%2“, „%3“ и „%4“?"
-
-#: kaccess.cpp:685
-#, kde-format
-msgid "Do you really want to activate \"%1\"?"
-msgstr "Сигурни ли сте, че искате да бъдат активирани „%1“?"
-
-#: kaccess.cpp:688
-#, kde-format
-msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
-msgstr ""
-"Сигурни ли сте, че искате да бъдат активирани „%1“ и деактивирани „%2“?"
-
-#: kaccess.cpp:691
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
-msgstr ""
-"Сигурни ли сте, че искате да бъдат активирани „%1“ и деактивирани „%2“ и "
-"„%3“?"
-
-#: kaccess.cpp:697
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
-"\"%4\"?"
-msgstr ""
-"Сигурни ли сте, че искате да бъдат активирани „%1“ и деактивирани „%2“, „%3“ "
-"и „%4“?"
-
-#: kaccess.cpp:708
-#, kde-format
-msgid "Do you really want to activate \"%1\" and \"%2\"?"
-msgstr "Сигурни ли сте, че искате да бъдат активирани „%1“ и „%2“?"
-
-#: kaccess.cpp:711
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
-msgstr ""
-"Сигурни ли сте, че искате да бъдат активирани „%1“ и „%2“ и деактивирани "
-"„%3“?"
-
-#: kaccess.cpp:717
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
-"and \"%4\"?"
-msgstr ""
-"Сигурни ли сте, че искате да бъдат активирани „%1“ и „%2“ и деактивирани "
-"„%3“ и „%4“?"
-
-#: kaccess.cpp:728
-#, kde-format
-msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
-msgstr "Сигурни ли сте, че искате да бъдат активирани „%1“, „%2“ и „%3“?"
-
-#: kaccess.cpp:731
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
-"\"%4\"?"
-msgstr ""
-"Сигурни ли сте, че искате да бъдат активирани „%1“, „%2“ и „%3“ и "
-"деактивирани „%4“?"
-
-#: kaccess.cpp:740
-#, kde-format
-msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr "Сигурни ли сте, че искате да бъдат активирани „%1“, „%2“, „%3“ и „%4“?"
-
-#: kaccess.cpp:749
-#, kde-format
-msgid "An application has requested to change this setting."
-msgstr "Програма направи заявка за промяна на настройката."
-
-#: kaccess.cpp:753
-#, kde-format
-msgid ""
-"You held down the Shift key for 8 seconds or an application has requested to "
-"change this setting."
-msgstr ""
-"Задържахте клавиша Shift за 8 секунди или програма направи заявка за промяна "
-"на настройката."
-
-#: kaccess.cpp:755
-#, kde-format
-msgid ""
-"You pressed the Shift key 5 consecutive times or an application has "
-"requested to change this setting."
-msgstr ""
-"Натиснахте 5 последователни пъти клавиша Shift или програма направи заявка "
-"за промяна на настройката."
-
-#: kaccess.cpp:759
-#, kde-format
-msgid "You pressed %1 or an application has requested to change this setting."
-msgstr "Натиснахте „%1“ или програма направи заявка за промяна на настройката."
-
-#: kaccess.cpp:764
-#, kde-format
-msgid ""
-"An application has requested to change these settings, or you used a "
-"combination of several keyboard gestures."
-msgstr ""
-"Използвахте комбинация от няколко клавиатурни жеста или програма направи "
-"заявка за промяна на настройката."
-
-#: kaccess.cpp:766
-#, kde-format
-msgid "An application has requested to change these settings."
-msgstr "Програма направи заявка за промяна на настройките."
-
-#: kaccess.cpp:771
-#, kde-format
-msgid ""
-"These AccessX settings are needed for some users with motion impairments and "
-"can be configured in the KDE System Settings. You can also turn them on and "
-"off with standardized keyboard gestures.\n"
-"\n"
-"If you do not need them, you can select \"Deactivate all AccessX features "
-"and gestures\"."
-msgstr ""
-"Тези настройки на AccessX са нужни за някои трудноподвижни потребители и "
-"могат да бъдат настроени от Контролния център на KDE. Може също да ги "
-"включвате и изключвате със стандартни жестове от клавиатурата.\n"
-"\n"
-"Ако нямате нужда от тях, може да ги изключите чрез \"Изключване на всички "
-"жестове и възможности на AccessX\"."
-
-#: kaccess.cpp:792
-#, kde-format
-msgid ""
-"Slow keys has been enabled. From now on, you need to press each key for a "
-"certain length of time before it gets accepted."
-msgstr ""
-"Бавните клавиши са включени. Занапред трябва да задържите натиснат всеки "
-"клавиш определено време преди да бъде приет."
-
-#: kaccess.cpp:794
-#, kde-format
-msgid "Slow keys has been disabled."
-msgstr "Бавните клавиши са изключени."
-
-#: kaccess.cpp:798
-#, kde-format
-msgid ""
-"Bounce keys has been enabled. From now on, each key will be blocked for a "
-"certain length of time after it was used."
-msgstr ""
-"Подскачащите клавиши са включени. Занапред всеки клавиш ще бъде блокиран за "
-"определено време след като е бил използван."
-
-#: kaccess.cpp:800
-#, kde-format
-msgid "Bounce keys has been disabled."
-msgstr "Подскачащите клавиши са изключени."
-
-#: kaccess.cpp:804
-#, kde-format
-msgid ""
-"Sticky keys has been enabled. From now on, modifier keys will stay latched "
-"after you have released them."
-msgstr ""
-"Залепващите клавиши са включени. Занапред клавишите модификатори ще останат "
-"включени след като сте ги освободили."
-
-#: kaccess.cpp:806
-#, kde-format
-msgid "Sticky keys has been disabled."
-msgstr "Залепващите клавиши са изключени."
-
-#: kaccess.cpp:810
-#, kde-format
-msgid ""
-"Mouse keys has been enabled. From now on, you can use the number pad of your "
-"keyboard in order to control the mouse."
-msgstr ""
-"Клавишите за мишката са включени. Занапред може да използвате малката "
-"цифрова клавиатура, за да контролирате показалеца на мишката."
-
-#: kaccess.cpp:812
-#, kde-format
-msgid "Mouse keys has been disabled."
-msgstr "Клавишите за мишката са изключени."
 
 #: main.cpp:40
 #, kde-format
@@ -465,3 +59,299 @@ msgstr "Matthias Hoelzer-Kluepfel"
 #, kde-format
 msgid "Author"
 msgstr "Author"
+
+#~ msgid ""
+#~ "The Shift key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr "Клавишът Shift е натиснат и е активен за всички последващи клавиши."
+
+#~ msgid "The Shift key is now active."
+#~ msgstr "Клавишът Shift е активен."
+
+#~ msgid "The Shift key is now inactive."
+#~ msgstr "Клавишът Shift е неактивен."
+
+#~ msgid ""
+#~ "The Control key has been locked and is now active for all of the "
+#~ "following keypresses."
+#~ msgstr "Клавишът Ctrl е натиснат и е активен за всички последващи клавиши."
+
+#~ msgid "The Control key is now active."
+#~ msgstr "Клавишът Ctrl е активен."
+
+#~ msgid "The Control key is now inactive."
+#~ msgstr "Клавишът Ctrl е неактивен."
+
+#~ msgid ""
+#~ "The Alt key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr "Клавишът Alt е натиснат и е активен за всички последващи клавиши."
+
+#~ msgid "The Alt key is now active."
+#~ msgstr "Клавишът Alt е активен."
+
+#~ msgid "The Alt key is now inactive."
+#~ msgstr "Клавишът Alt е неактивен."
+
+#~ msgid ""
+#~ "The Win key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr "Клавишът Win е натиснат и е активен за всички последващи клавиши."
+
+#~ msgid "The Win key is now active."
+#~ msgstr "Клавишът Win е активен."
+
+#~ msgid "The Win key is now inactive."
+#~ msgstr "Клавишът Win е неактивен."
+
+#~ msgid ""
+#~ "The Meta key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr "Клавишът Meta е натиснат и е активен за всички последващи клавиши."
+
+#~ msgid "The Meta key is now active."
+#~ msgstr "Клавишът Meta е активен."
+
+#~ msgid "The Meta key is now inactive."
+#~ msgstr "Клавишът Meta е неактивен."
+
+#~ msgid ""
+#~ "The Super key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr "Клавишът Super е натиснат и е активен за всички последващи клавиши."
+
+#~ msgid "The Super key is now active."
+#~ msgstr "Клавишът Super е активен."
+
+#~ msgid "The Super key is now inactive."
+#~ msgstr "Клавишът Super е неактивен."
+
+#~ msgid ""
+#~ "The Hyper key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr "Клавишът Hyper е натиснат и е активен за всички последващи клавиши."
+
+#~ msgid "The Hyper key is now active."
+#~ msgstr "Клавишът Hyper е активен."
+
+#~ msgid "The Hyper key is now inactive."
+#~ msgstr "Клавишът Hyper е неактивен."
+
+#~ msgid ""
+#~ "The Alt Graph key has been locked and is now active for all of the "
+#~ "following keypresses."
+#~ msgstr ""
+#~ "Клавишът Alt Gr е натиснат и е активен за всички последващи клавиши."
+
+#~ msgid "The Alt Graph key is now active."
+#~ msgstr "Клавишът Alt Gr е активен."
+
+#~ msgid "The Alt Graph key is now inactive."
+#~ msgstr "Клавишът Alt Gr е неактивен."
+
+#~ msgid "The Num Lock key has been activated."
+#~ msgstr "Клавишът Num Lock е активен."
+
+#~ msgid "The Num Lock key is now inactive."
+#~ msgstr "Клавишът Num Lock е неактивен."
+
+#~ msgid "The Caps Lock key has been activated."
+#~ msgstr "Клавишът Caps Lock е активен."
+
+#~ msgid "The Caps Lock key is now inactive."
+#~ msgstr "Клавишът Caps Lock е неактивен."
+
+#~ msgid "The Scroll Lock key has been activated."
+#~ msgstr "Клавишът Scroll Lock е активен."
+
+#~ msgid "The Scroll Lock key is now inactive."
+#~ msgstr "Клавишът Scroll Lock е неактивен."
+
+#~ msgid "AltGraph"
+#~ msgstr "AltGraph"
+
+#~ msgid "Hyper"
+#~ msgstr "Hyper"
+
+#~ msgid "Super"
+#~ msgstr "Super"
+
+#~ msgid "Meta"
+#~ msgstr "Meta"
+
+#~ msgid "Warning"
+#~ msgstr "Предупреждение"
+
+#~ msgid "&When a gesture was used:"
+#~ msgstr "При използване на &жест:"
+
+#~ msgid "Change Settings Without Asking"
+#~ msgstr "Промяна на настройките без потвърждение"
+
+#~ msgid "Show This Confirmation Dialog"
+#~ msgstr "Показване на диалог за потвърждение"
+
+#~ msgid "Deactivate All AccessX Features & Gestures"
+#~ msgstr "Изключване на всички жестове и възможности на AccessX"
+
+#~ msgid "Slow keys"
+#~ msgstr "Бавни клавиши"
+
+#~ msgid "Bounce keys"
+#~ msgstr "Подскачащи клавиши"
+
+#~ msgid "Sticky keys"
+#~ msgstr "Залепващи клавиши"
+
+#~ msgid "Mouse keys"
+#~ msgstr "Клавиши за мишката"
+
+#~ msgid "Do you really want to deactivate \"%1\"?"
+#~ msgstr "Сигурни ли сте, че искате да бъдат деактивирани „%1“?"
+
+#~ msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
+#~ msgstr "Сигурни ли сте, че искате да бъдат деактивирани „%1“ и „%2“?"
+
+#~ msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
+#~ msgstr "Сигурни ли сте, че искате да бъдат деактивирани „%1“, „%2“ и „%3“?"
+
+#~ msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+#~ msgstr ""
+#~ "Сигурни ли сте, че искате да бъдат деактивирани „%1“, „%2“, „%3“ и „%4“?"
+
+#~ msgid "Do you really want to activate \"%1\"?"
+#~ msgstr "Сигурни ли сте, че искате да бъдат активирани „%1“?"
+
+#~ msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
+#~ msgstr ""
+#~ "Сигурни ли сте, че искате да бъдат активирани „%1“ и деактивирани „%2“?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
+#~ msgstr ""
+#~ "Сигурни ли сте, че искате да бъдат активирани „%1“ и деактивирани „%2“ и "
+#~ "„%3“?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" "
+#~ "and \"%4\"?"
+#~ msgstr ""
+#~ "Сигурни ли сте, че искате да бъдат активирани „%1“ и деактивирани „%2“, "
+#~ "„%3“ и „%4“?"
+
+#~ msgid "Do you really want to activate \"%1\" and \"%2\"?"
+#~ msgstr "Сигурни ли сте, че искате да бъдат активирани „%1“ и „%2“?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
+#~ msgstr ""
+#~ "Сигурни ли сте, че искате да бъдат активирани „%1“ и „%2“ и деактивирани "
+#~ "„%3“?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\", and \"%2\" and to deactivate "
+#~ "\"%3\" and \"%4\"?"
+#~ msgstr ""
+#~ "Сигурни ли сте, че искате да бъдат активирани „%1“ и „%2“ и деактивирани "
+#~ "„%3“ и „%4“?"
+
+#~ msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
+#~ msgstr "Сигурни ли сте, че искате да бъдат активирани „%1“, „%2“ и „%3“?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\", \"%2\" and \"%3\" and to "
+#~ "deactivate \"%4\"?"
+#~ msgstr ""
+#~ "Сигурни ли сте, че искате да бъдат активирани „%1“, „%2“ и „%3“ и "
+#~ "деактивирани „%4“?"
+
+#~ msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+#~ msgstr ""
+#~ "Сигурни ли сте, че искате да бъдат активирани „%1“, „%2“, „%3“ и „%4“?"
+
+#~ msgid "An application has requested to change this setting."
+#~ msgstr "Програма направи заявка за промяна на настройката."
+
+#~ msgid ""
+#~ "You held down the Shift key for 8 seconds or an application has requested "
+#~ "to change this setting."
+#~ msgstr ""
+#~ "Задържахте клавиша Shift за 8 секунди или програма направи заявка за "
+#~ "промяна на настройката."
+
+#~ msgid ""
+#~ "You pressed the Shift key 5 consecutive times or an application has "
+#~ "requested to change this setting."
+#~ msgstr ""
+#~ "Натиснахте 5 последователни пъти клавиша Shift или програма направи "
+#~ "заявка за промяна на настройката."
+
+#~ msgid ""
+#~ "You pressed %1 or an application has requested to change this setting."
+#~ msgstr ""
+#~ "Натиснахте „%1“ или програма направи заявка за промяна на настройката."
+
+#~ msgid ""
+#~ "An application has requested to change these settings, or you used a "
+#~ "combination of several keyboard gestures."
+#~ msgstr ""
+#~ "Използвахте комбинация от няколко клавиатурни жеста или програма направи "
+#~ "заявка за промяна на настройката."
+
+#~ msgid "An application has requested to change these settings."
+#~ msgstr "Програма направи заявка за промяна на настройките."
+
+#~ msgid ""
+#~ "These AccessX settings are needed for some users with motion impairments "
+#~ "and can be configured in the KDE System Settings. You can also turn them "
+#~ "on and off with standardized keyboard gestures.\n"
+#~ "\n"
+#~ "If you do not need them, you can select \"Deactivate all AccessX features "
+#~ "and gestures\"."
+#~ msgstr ""
+#~ "Тези настройки на AccessX са нужни за някои трудноподвижни потребители и "
+#~ "могат да бъдат настроени от Контролния център на KDE. Може също да ги "
+#~ "включвате и изключвате със стандартни жестове от клавиатурата.\n"
+#~ "\n"
+#~ "Ако нямате нужда от тях, може да ги изключите чрез \"Изключване на всички "
+#~ "жестове и възможности на AccessX\"."
+
+#~ msgid ""
+#~ "Slow keys has been enabled. From now on, you need to press each key for a "
+#~ "certain length of time before it gets accepted."
+#~ msgstr ""
+#~ "Бавните клавиши са включени. Занапред трябва да задържите натиснат всеки "
+#~ "клавиш определено време преди да бъде приет."
+
+#~ msgid "Slow keys has been disabled."
+#~ msgstr "Бавните клавиши са изключени."
+
+#~ msgid ""
+#~ "Bounce keys has been enabled. From now on, each key will be blocked for a "
+#~ "certain length of time after it was used."
+#~ msgstr ""
+#~ "Подскачащите клавиши са включени. Занапред всеки клавиш ще бъде блокиран "
+#~ "за определено време след като е бил използван."
+
+#~ msgid "Bounce keys has been disabled."
+#~ msgstr "Подскачащите клавиши са изключени."
+
+#~ msgid ""
+#~ "Sticky keys has been enabled. From now on, modifier keys will stay "
+#~ "latched after you have released them."
+#~ msgstr ""
+#~ "Залепващите клавиши са включени. Занапред клавишите модификатори ще "
+#~ "останат включени след като сте ги освободили."
+
+#~ msgid "Sticky keys has been disabled."
+#~ msgstr "Залепващите клавиши са изключени."
+
+#~ msgid ""
+#~ "Mouse keys has been enabled. From now on, you can use the number pad of "
+#~ "your keyboard in order to control the mouse."
+#~ msgstr ""
+#~ "Клавишите за мишката са включени. Занапред може да използвате малката "
+#~ "цифрова клавиатура, за да контролирате показалеца на мишката."
+
+#~ msgid "Mouse keys has been disabled."
+#~ msgstr "Клавишите за мишката са изключени."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-09 00:45+0000\n"
+"POT-Creation-Date: 2026-06-16 00:47+0000\n"
 "PO-Revision-Date: 2020-12-18 18:58+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -29,427 +29,16 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mirodav@gmail.com,hornicek@globtel.sk"
 
-#: kaccess.cpp:65
-msgid ""
-"The Shift key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Kláves Shift bol uzamknutý a je teraz aktívny pre všetky nasledujúce "
-"stlačenia kláves."
-
-#: kaccess.cpp:66
-msgid "The Shift key is now active."
-msgstr "Kláves Shift je teraz aktívny."
-
-#: kaccess.cpp:67
-msgid "The Shift key is now inactive."
-msgstr "Kláves Shift je teraz neaktívny."
-
-#: kaccess.cpp:71
-msgid ""
-"The Control key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Kláves Ctrl bol uzamknutý a je teraz aktívny pre všetky nasledujúce "
-"stlačenia kláves."
-
-#: kaccess.cpp:72
-msgid "The Control key is now active."
-msgstr "Kláves Ctrl je teraz aktívny."
-
-#: kaccess.cpp:73
-msgid "The Control key is now inactive."
-msgstr "Kláves Ctrl je teraz neaktívny."
-
-#: kaccess.cpp:77
-msgid ""
-"The Alt key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Kláves Alt bol uzamknutý a je teraz aktívny pre všetky nasledujúce stlačenia "
-"kláves."
-
-#: kaccess.cpp:78
-msgid "The Alt key is now active."
-msgstr "Kláves Alt je teraz aktívny."
-
-#: kaccess.cpp:79
-msgid "The Alt key is now inactive."
-msgstr "Kláves Alt je teraz neaktívny."
-
-#: kaccess.cpp:83
-msgid ""
-"The Win key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Kláves Win bol uzamknutý a je teraz aktívny pre všetky nasledujúce stlačenia "
-"kláves."
-
-#: kaccess.cpp:84
-msgid "The Win key is now active."
-msgstr "Kláves Win je teraz aktívny."
-
-#: kaccess.cpp:85
-msgid "The Win key is now inactive."
-msgstr "Kláves Win je teraz neaktívny."
-
-#: kaccess.cpp:89
-msgid ""
-"The Meta key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Kláves Meta bol uzamknutý a je teraz aktívny pre všetky nasledujúce "
-"stlačenia kláves."
-
-#: kaccess.cpp:90
-msgid "The Meta key is now active."
-msgstr "Kláves Meta je teraz aktívny."
-
-#: kaccess.cpp:91
-msgid "The Meta key is now inactive."
-msgstr "Kláves Meta je teraz neaktívny."
-
-#: kaccess.cpp:95
-msgid ""
-"The Super key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Kláves Super bol uzamknutý a je teraz aktívny pre všetky nasledujúce "
-"stlačenia kláves."
-
-#: kaccess.cpp:96
-msgid "The Super key is now active."
-msgstr "Kláves Super je teraz aktívny."
-
-#: kaccess.cpp:97
-msgid "The Super key is now inactive."
-msgstr "Kláves Super je teraz neaktívny."
-
-#: kaccess.cpp:101
-msgid ""
-"The Hyper key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Kláves Hyper bol uzamknutý a je teraz aktívny pre všetky nasledujúce "
-"stlačenia kláves."
-
-#: kaccess.cpp:102
-msgid "The Hyper key is now active."
-msgstr "Kláves Hyper je teraz aktívny."
-
-#: kaccess.cpp:103
-msgid "The Hyper key is now inactive."
-msgstr "Kláves Hyper je teraz neaktívny."
-
-#: kaccess.cpp:107
-msgid ""
-"The Alt Graph key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Kláves Alt Gr bol uzamknutý a je teraz aktívny pre všetky nasledujúce "
-"stlačenia kláves."
-
-#: kaccess.cpp:108
-msgid "The Alt Graph key is now active."
-msgstr "Kláves Alt Gr je teraz aktívny."
-
-#: kaccess.cpp:109
-msgid "The Alt Graph key is now inactive."
-msgstr "Kláves Alt Gr je teraz neaktívny."
-
-#: kaccess.cpp:110
-msgid "The Num Lock key has been activated."
-msgstr "Kláves Num Lock bol aktivovaný."
-
-#: kaccess.cpp:110
-msgid "The Num Lock key is now inactive."
-msgstr "Kláves Num Lock bol deaktivovaný."
-
-#: kaccess.cpp:111
-msgid "The Caps Lock key has been activated."
-msgstr "Kláves Caps Lock bol aktivovaný."
-
-#: kaccess.cpp:111
-msgid "The Caps Lock key is now inactive."
-msgstr "Kláves Caps Lock bol deaktivovaný."
-
-#: kaccess.cpp:112
-msgid "The Scroll Lock key has been activated."
-msgstr "Kláves Scroll Lock bol aktivovaný."
-
-#: kaccess.cpp:112
-msgid "The Scroll Lock key is now inactive."
-msgstr "Kláves Scroll Lock bol deaktivovaný."
-
-#: kaccess.cpp:144
+#: kaccess.cpp:36
 #, kde-format
 msgid "Toggle Screen Reader On and Off"
 msgstr "Prepnúť čítanie obsahu obrazovky"
 
-#: kaccess.cpp:146
+#: kaccess.cpp:38
 #, kde-format
 msgctxt "Name for kaccess shortcuts category"
 msgid "Accessibility"
 msgstr "Prístupnosť"
-
-#: kaccess.cpp:538
-#, kde-format
-msgid "AltGraph"
-msgstr "AltGraph"
-
-#: kaccess.cpp:540
-#, kde-format
-msgid "Hyper"
-msgstr "Hyper"
-
-#: kaccess.cpp:542
-#, kde-format
-msgid "Super"
-msgstr "Super"
-
-#: kaccess.cpp:544
-#, kde-format
-msgid "Meta"
-msgstr "Meta"
-
-#: kaccess.cpp:561
-#, kde-format
-msgid "Warning"
-msgstr "Varovanie"
-
-#: kaccess.cpp:589
-#, kde-format
-msgid "&When a gesture was used:"
-msgstr "&Keď bolo použité gesto:"
-
-#: kaccess.cpp:595
-#, kde-format
-msgid "Change Settings Without Asking"
-msgstr "Zmeniť nastavenia bez opýtania"
-
-#: kaccess.cpp:596
-#, kde-format
-msgid "Show This Confirmation Dialog"
-msgstr "Zobraziť toto potvrdzujúce dialógové okno"
-
-#: kaccess.cpp:597
-#, kde-format
-msgid "Deactivate All AccessX Features & Gestures"
-msgstr "Deaktivovať všetky AccessX vlastnosti a gestá"
-
-#: kaccess.cpp:640 kaccess.cpp:642
-#, kde-format
-msgid "Slow keys"
-msgstr "Pomalé klávesy"
-
-#: kaccess.cpp:645 kaccess.cpp:647
-#, kde-format
-msgid "Bounce keys"
-msgstr "Bounce klávesy"
-
-#: kaccess.cpp:650 kaccess.cpp:652
-#, kde-format
-msgid "Sticky keys"
-msgstr "Lepkavé klávesy"
-
-#: kaccess.cpp:655 kaccess.cpp:657
-#, kde-format
-msgid "Mouse keys"
-msgstr "Klávesy myši"
-
-#: kaccess.cpp:664
-#, kde-format
-msgid "Do you really want to deactivate \"%1\"?"
-msgstr "Naozaj chcete deaktivovať \"%1\"?"
-
-#: kaccess.cpp:667
-#, kde-format
-msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
-msgstr "Naozaj chcete deaktivoať \"%1\" a \"%2\"?"
-
-#: kaccess.cpp:671
-#, kde-format
-msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
-msgstr "Naozaj chcete deaktivovať \"%1\", \"%2\" a \"%3\"?"
-
-#: kaccess.cpp:674
-#, kde-format
-msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr "Naozaj chcete deaktivovať \"%1\", \"%2\", \"%3\" a \"%4\"?"
-
-#: kaccess.cpp:685
-#, kde-format
-msgid "Do you really want to activate \"%1\"?"
-msgstr "Naozaj chcete aktivovať \"%1\"?"
-
-#: kaccess.cpp:688
-#, kde-format
-msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
-msgstr "Naozaj chcete aktivovať \"%1\" a deaktivovať \"%2\"?"
-
-#: kaccess.cpp:691
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
-msgstr "Naozaj chcete aktivovať \"%1\" a deaktivovať \"%2\" a \"%3\"?"
-
-#: kaccess.cpp:697
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
-"\"%4\"?"
-msgstr "Naozaj chcete aktivovať \"%1\" a deaktivovať \"%2\", \"%3\" a \"%4\"?"
-
-#: kaccess.cpp:708
-#, kde-format
-msgid "Do you really want to activate \"%1\" and \"%2\"?"
-msgstr "Naozaj chcete aktivovať \"%1\" a \"%2\"?"
-
-#: kaccess.cpp:711
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
-msgstr "Naozaj chcete aktivovať \"%1\" a \"%2\" a deaktivovať \"%3\"?"
-
-#: kaccess.cpp:717
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
-"and \"%4\"?"
-msgstr ""
-"Naozaj chcete aktivovať \"%1\", a \"%2\" a deaktivovať \"%3\" a \"%4\"?"
-
-#: kaccess.cpp:728
-#, kde-format
-msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
-msgstr "Naozaj chcete aktivovať \"%1\", \"%2\" a \"%3\"?"
-
-#: kaccess.cpp:731
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
-"\"%4\"?"
-msgstr "Naozaj chcete aktivovať \"%1\", \"%2\" a \"%3\" a deaktivovať \"%4\"?"
-
-#: kaccess.cpp:740
-#, kde-format
-msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr "Naozaj chcete aktivovať \"%1\", \"%2\", \"%3\" a \"%4\"?"
-
-#: kaccess.cpp:749
-#, kde-format
-msgid "An application has requested to change this setting."
-msgstr "Aplikácia požiadala o zmenu tohoto nastavenia."
-
-#: kaccess.cpp:753
-#, kde-format
-msgid ""
-"You held down the Shift key for 8 seconds or an application has requested to "
-"change this setting."
-msgstr ""
-"Držali ste stlačený kláves Shift dlhšie ako 8 sekúnd alebo aplikácia "
-"požiadala o zmenu tohoto nastavenia."
-
-#: kaccess.cpp:755
-#, kde-format
-msgid ""
-"You pressed the Shift key 5 consecutive times or an application has "
-"requested to change this setting."
-msgstr ""
-"Stlačili ste kláves Shift 5-krát po sebe alebo aplikácia požiadala o zmenu "
-"tohoto nastavenia."
-
-#: kaccess.cpp:759
-#, kde-format
-msgid "You pressed %1 or an application has requested to change this setting."
-msgstr "Stlačili ste %1 alebo aplikácia požiadala o zmenu tohoto nastavenia."
-
-#: kaccess.cpp:764
-#, kde-format
-msgid ""
-"An application has requested to change these settings, or you used a "
-"combination of several keyboard gestures."
-msgstr ""
-"Aplikácia požiadala o zmenu týchto nastavení alebo ste použili kombináciu "
-"niekoľkých klávesnicových gest."
-
-#: kaccess.cpp:766
-#, kde-format
-msgid "An application has requested to change these settings."
-msgstr "Aplikácia požiadala o zmenu týchto nastavení."
-
-#: kaccess.cpp:771
-#, kde-format
-msgid ""
-"These AccessX settings are needed for some users with motion impairments and "
-"can be configured in the KDE System Settings. You can also turn them on and "
-"off with standardized keyboard gestures.\n"
-"\n"
-"If you do not need them, you can select \"Deactivate all AccessX features "
-"and gestures\"."
-msgstr ""
-"Tieto AccessX nastavenia sú potrebné pre niektoých používateľov s pohybovými "
-"problémami a môžu sa nastaviť v KDE System Settings. Taktiež ich môžte "
-"zapnúť a vypnúť pomocou štandardizovaných klávesnicových gest.\n"
-"\n"
-"Ak ich nepotrebujete, môžete zvoliť \"Deaktivovať všetky AccessX vlastnosti "
-"a gestá\"."
-
-#: kaccess.cpp:792
-#, kde-format
-msgid ""
-"Slow keys has been enabled. From now on, you need to press each key for a "
-"certain length of time before it gets accepted."
-msgstr ""
-"Pomalé klávesy boli zapnuté. Odteraz musíte každý kláves podržať stlačený po "
-"určitý čas kým bude akceptovaný."
-
-#: kaccess.cpp:794
-#, kde-format
-msgid "Slow keys has been disabled."
-msgstr "Pomalé klávesy boli vypnuté."
-
-#: kaccess.cpp:798
-#, kde-format
-msgid ""
-"Bounce keys has been enabled. From now on, each key will be blocked for a "
-"certain length of time after it was used."
-msgstr ""
-"Bounce klávesy boli zapnuté. Odteraz bude každý kláves blokovaný po určitý "
-"čas po tom ako bol použitý."
-
-#: kaccess.cpp:800
-#, kde-format
-msgid "Bounce keys has been disabled."
-msgstr "Bounce klávesy boli vypnuté."
-
-#: kaccess.cpp:804
-#, kde-format
-msgid ""
-"Sticky keys has been enabled. From now on, modifier keys will stay latched "
-"after you have released them."
-msgstr ""
-"Lepkavé klávesy boli zapnuté. Odteraz budú modifikačné klávesy zamknuté "
-"potom ako ich uvoľníte."
-
-#: kaccess.cpp:806
-#, kde-format
-msgid "Sticky keys has been disabled."
-msgstr "Lepkavé klávesy boli vypnuté."
-
-#: kaccess.cpp:810
-#, kde-format
-msgid ""
-"Mouse keys has been enabled. From now on, you can use the number pad of your "
-"keyboard in order to control the mouse."
-msgstr ""
-"Klávesy myši boli zapnuté. Odteraz môžte použivať na riadenie myši klávesy "
-"na numerickej klávesnici."
-
-#: kaccess.cpp:812
-#, kde-format
-msgid "Mouse keys has been disabled."
-msgstr "Klávesy myši boli vypnuté."
 
 #: main.cpp:40
 #, kde-format
@@ -470,6 +59,307 @@ msgstr "Matthias Hoelzer-Kluepfel"
 #, kde-format
 msgid "Author"
 msgstr "Autor"
+
+#~ msgid ""
+#~ "The Shift key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Kláves Shift bol uzamknutý a je teraz aktívny pre všetky nasledujúce "
+#~ "stlačenia kláves."
+
+#~ msgid "The Shift key is now active."
+#~ msgstr "Kláves Shift je teraz aktívny."
+
+#~ msgid "The Shift key is now inactive."
+#~ msgstr "Kláves Shift je teraz neaktívny."
+
+#~ msgid ""
+#~ "The Control key has been locked and is now active for all of the "
+#~ "following keypresses."
+#~ msgstr ""
+#~ "Kláves Ctrl bol uzamknutý a je teraz aktívny pre všetky nasledujúce "
+#~ "stlačenia kláves."
+
+#~ msgid "The Control key is now active."
+#~ msgstr "Kláves Ctrl je teraz aktívny."
+
+#~ msgid "The Control key is now inactive."
+#~ msgstr "Kláves Ctrl je teraz neaktívny."
+
+#~ msgid ""
+#~ "The Alt key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Kláves Alt bol uzamknutý a je teraz aktívny pre všetky nasledujúce "
+#~ "stlačenia kláves."
+
+#~ msgid "The Alt key is now active."
+#~ msgstr "Kláves Alt je teraz aktívny."
+
+#~ msgid "The Alt key is now inactive."
+#~ msgstr "Kláves Alt je teraz neaktívny."
+
+#~ msgid ""
+#~ "The Win key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Kláves Win bol uzamknutý a je teraz aktívny pre všetky nasledujúce "
+#~ "stlačenia kláves."
+
+#~ msgid "The Win key is now active."
+#~ msgstr "Kláves Win je teraz aktívny."
+
+#~ msgid "The Win key is now inactive."
+#~ msgstr "Kláves Win je teraz neaktívny."
+
+#~ msgid ""
+#~ "The Meta key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Kláves Meta bol uzamknutý a je teraz aktívny pre všetky nasledujúce "
+#~ "stlačenia kláves."
+
+#~ msgid "The Meta key is now active."
+#~ msgstr "Kláves Meta je teraz aktívny."
+
+#~ msgid "The Meta key is now inactive."
+#~ msgstr "Kláves Meta je teraz neaktívny."
+
+#~ msgid ""
+#~ "The Super key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Kláves Super bol uzamknutý a je teraz aktívny pre všetky nasledujúce "
+#~ "stlačenia kláves."
+
+#~ msgid "The Super key is now active."
+#~ msgstr "Kláves Super je teraz aktívny."
+
+#~ msgid "The Super key is now inactive."
+#~ msgstr "Kláves Super je teraz neaktívny."
+
+#~ msgid ""
+#~ "The Hyper key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Kláves Hyper bol uzamknutý a je teraz aktívny pre všetky nasledujúce "
+#~ "stlačenia kláves."
+
+#~ msgid "The Hyper key is now active."
+#~ msgstr "Kláves Hyper je teraz aktívny."
+
+#~ msgid "The Hyper key is now inactive."
+#~ msgstr "Kláves Hyper je teraz neaktívny."
+
+#~ msgid ""
+#~ "The Alt Graph key has been locked and is now active for all of the "
+#~ "following keypresses."
+#~ msgstr ""
+#~ "Kláves Alt Gr bol uzamknutý a je teraz aktívny pre všetky nasledujúce "
+#~ "stlačenia kláves."
+
+#~ msgid "The Alt Graph key is now active."
+#~ msgstr "Kláves Alt Gr je teraz aktívny."
+
+#~ msgid "The Alt Graph key is now inactive."
+#~ msgstr "Kláves Alt Gr je teraz neaktívny."
+
+#~ msgid "The Num Lock key has been activated."
+#~ msgstr "Kláves Num Lock bol aktivovaný."
+
+#~ msgid "The Num Lock key is now inactive."
+#~ msgstr "Kláves Num Lock bol deaktivovaný."
+
+#~ msgid "The Caps Lock key has been activated."
+#~ msgstr "Kláves Caps Lock bol aktivovaný."
+
+#~ msgid "The Caps Lock key is now inactive."
+#~ msgstr "Kláves Caps Lock bol deaktivovaný."
+
+#~ msgid "The Scroll Lock key has been activated."
+#~ msgstr "Kláves Scroll Lock bol aktivovaný."
+
+#~ msgid "The Scroll Lock key is now inactive."
+#~ msgstr "Kláves Scroll Lock bol deaktivovaný."
+
+#~ msgid "AltGraph"
+#~ msgstr "AltGraph"
+
+#~ msgid "Hyper"
+#~ msgstr "Hyper"
+
+#~ msgid "Super"
+#~ msgstr "Super"
+
+#~ msgid "Meta"
+#~ msgstr "Meta"
+
+#~ msgid "Warning"
+#~ msgstr "Varovanie"
+
+#~ msgid "&When a gesture was used:"
+#~ msgstr "&Keď bolo použité gesto:"
+
+#~ msgid "Change Settings Without Asking"
+#~ msgstr "Zmeniť nastavenia bez opýtania"
+
+#~ msgid "Show This Confirmation Dialog"
+#~ msgstr "Zobraziť toto potvrdzujúce dialógové okno"
+
+#~ msgid "Deactivate All AccessX Features & Gestures"
+#~ msgstr "Deaktivovať všetky AccessX vlastnosti a gestá"
+
+#~ msgid "Slow keys"
+#~ msgstr "Pomalé klávesy"
+
+#~ msgid "Bounce keys"
+#~ msgstr "Bounce klávesy"
+
+#~ msgid "Sticky keys"
+#~ msgstr "Lepkavé klávesy"
+
+#~ msgid "Mouse keys"
+#~ msgstr "Klávesy myši"
+
+#~ msgid "Do you really want to deactivate \"%1\"?"
+#~ msgstr "Naozaj chcete deaktivovať \"%1\"?"
+
+#~ msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
+#~ msgstr "Naozaj chcete deaktivoať \"%1\" a \"%2\"?"
+
+#~ msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
+#~ msgstr "Naozaj chcete deaktivovať \"%1\", \"%2\" a \"%3\"?"
+
+#~ msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+#~ msgstr "Naozaj chcete deaktivovať \"%1\", \"%2\", \"%3\" a \"%4\"?"
+
+#~ msgid "Do you really want to activate \"%1\"?"
+#~ msgstr "Naozaj chcete aktivovať \"%1\"?"
+
+#~ msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
+#~ msgstr "Naozaj chcete aktivovať \"%1\" a deaktivovať \"%2\"?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
+#~ msgstr "Naozaj chcete aktivovať \"%1\" a deaktivovať \"%2\" a \"%3\"?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" "
+#~ "and \"%4\"?"
+#~ msgstr ""
+#~ "Naozaj chcete aktivovať \"%1\" a deaktivovať \"%2\", \"%3\" a \"%4\"?"
+
+#~ msgid "Do you really want to activate \"%1\" and \"%2\"?"
+#~ msgstr "Naozaj chcete aktivovať \"%1\" a \"%2\"?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
+#~ msgstr "Naozaj chcete aktivovať \"%1\" a \"%2\" a deaktivovať \"%3\"?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\", and \"%2\" and to deactivate "
+#~ "\"%3\" and \"%4\"?"
+#~ msgstr ""
+#~ "Naozaj chcete aktivovať \"%1\", a \"%2\" a deaktivovať \"%3\" a \"%4\"?"
+
+#~ msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
+#~ msgstr "Naozaj chcete aktivovať \"%1\", \"%2\" a \"%3\"?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\", \"%2\" and \"%3\" and to "
+#~ "deactivate \"%4\"?"
+#~ msgstr ""
+#~ "Naozaj chcete aktivovať \"%1\", \"%2\" a \"%3\" a deaktivovať \"%4\"?"
+
+#~ msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+#~ msgstr "Naozaj chcete aktivovať \"%1\", \"%2\", \"%3\" a \"%4\"?"
+
+#~ msgid "An application has requested to change this setting."
+#~ msgstr "Aplikácia požiadala o zmenu tohoto nastavenia."
+
+#~ msgid ""
+#~ "You held down the Shift key for 8 seconds or an application has requested "
+#~ "to change this setting."
+#~ msgstr ""
+#~ "Držali ste stlačený kláves Shift dlhšie ako 8 sekúnd alebo aplikácia "
+#~ "požiadala o zmenu tohoto nastavenia."
+
+#~ msgid ""
+#~ "You pressed the Shift key 5 consecutive times or an application has "
+#~ "requested to change this setting."
+#~ msgstr ""
+#~ "Stlačili ste kláves Shift 5-krát po sebe alebo aplikácia požiadala o "
+#~ "zmenu tohoto nastavenia."
+
+#~ msgid ""
+#~ "You pressed %1 or an application has requested to change this setting."
+#~ msgstr ""
+#~ "Stlačili ste %1 alebo aplikácia požiadala o zmenu tohoto nastavenia."
+
+#~ msgid ""
+#~ "An application has requested to change these settings, or you used a "
+#~ "combination of several keyboard gestures."
+#~ msgstr ""
+#~ "Aplikácia požiadala o zmenu týchto nastavení alebo ste použili kombináciu "
+#~ "niekoľkých klávesnicových gest."
+
+#~ msgid "An application has requested to change these settings."
+#~ msgstr "Aplikácia požiadala o zmenu týchto nastavení."
+
+#~ msgid ""
+#~ "These AccessX settings are needed for some users with motion impairments "
+#~ "and can be configured in the KDE System Settings. You can also turn them "
+#~ "on and off with standardized keyboard gestures.\n"
+#~ "\n"
+#~ "If you do not need them, you can select \"Deactivate all AccessX features "
+#~ "and gestures\"."
+#~ msgstr ""
+#~ "Tieto AccessX nastavenia sú potrebné pre niektoých používateľov s "
+#~ "pohybovými problémami a môžu sa nastaviť v KDE System Settings. Taktiež "
+#~ "ich môžte zapnúť a vypnúť pomocou štandardizovaných klávesnicových gest.\n"
+#~ "\n"
+#~ "Ak ich nepotrebujete, môžete zvoliť \"Deaktivovať všetky AccessX "
+#~ "vlastnosti a gestá\"."
+
+#~ msgid ""
+#~ "Slow keys has been enabled. From now on, you need to press each key for a "
+#~ "certain length of time before it gets accepted."
+#~ msgstr ""
+#~ "Pomalé klávesy boli zapnuté. Odteraz musíte každý kláves podržať stlačený "
+#~ "po určitý čas kým bude akceptovaný."
+
+#~ msgid "Slow keys has been disabled."
+#~ msgstr "Pomalé klávesy boli vypnuté."
+
+#~ msgid ""
+#~ "Bounce keys has been enabled. From now on, each key will be blocked for a "
+#~ "certain length of time after it was used."
+#~ msgstr ""
+#~ "Bounce klávesy boli zapnuté. Odteraz bude každý kláves blokovaný po "
+#~ "určitý čas po tom ako bol použitý."
+
+#~ msgid "Bounce keys has been disabled."
+#~ msgstr "Bounce klávesy boli vypnuté."
+
+#~ msgid ""
+#~ "Sticky keys has been enabled. From now on, modifier keys will stay "
+#~ "latched after you have released them."
+#~ msgstr ""
+#~ "Lepkavé klávesy boli zapnuté. Odteraz budú modifikačné klávesy zamknuté "
+#~ "potom ako ich uvoľníte."
+
+#~ msgid "Sticky keys has been disabled."
+#~ msgstr "Lepkavé klávesy boli vypnuté."
+
+#~ msgid ""
+#~ "Mouse keys has been enabled. From now on, you can use the number pad of "
+#~ "your keyboard in order to control the mouse."
+#~ msgstr ""
+#~ "Klávesy myši boli zapnuté. Odteraz môžte použivať na riadenie myši "
+#~ "klávesy na numerickej klávesnici."
+
+#~ msgid "Mouse keys has been disabled."
+#~ msgstr "Klávesy myši boli vypnuté."
 
 #~ msgid "KDE Accessibility Tool"
 #~ msgstr "Sprístupnenie KDE"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-16 00:47+0000\n"
 "PO-Revision-Date: 2024-09-17 21:39+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -20,96 +20,60 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: kcmaccess.cpp:127 kcmaccess.cpp:155
+#: kcmaccess.cpp:124 kcmaccess.cpp:152
 #, kde-format
 msgid "KWin"
 msgstr ""
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:127
 #, kde-format
 msgid "Toggle Invert Effect"
 msgstr ""
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Toggle Invert Effect on Window"
 msgstr ""
 
-#: kcmaccess.cpp:178
+#: kcmaccess.cpp:175
 #, kde-format
 msgid "Move Left"
 msgstr ""
 
-#: kcmaccess.cpp:185
+#: kcmaccess.cpp:182
 #, kde-format
 msgid "Move Right"
 msgstr ""
 
-#: kcmaccess.cpp:192
+#: kcmaccess.cpp:189
 #, kde-format
 msgid "Move Up"
 msgstr ""
 
-#: kcmaccess.cpp:199
+#: kcmaccess.cpp:196
 #, kde-format
 msgid "Move Down"
 msgstr ""
 
-#: kcmaccess.cpp:206
+#: kcmaccess.cpp:203
 #, kde-format
 msgid "Move Mouse to Focus"
 msgstr ""
 
-#: kcmaccess.cpp:213
+#: kcmaccess.cpp:210
 #, kde-format
 msgid "Move Mouse to Center"
 msgstr ""
 
-#: kcmaccess.cpp:256
+#: kcmaccess.cpp:253
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Ne eblis agordi g-agordojn por Orca: \"%1\" malsukcesis"
 
-#: kcmaccess.cpp:263
+#: kcmaccess.cpp:260
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Eraro: Ne eblis lanĉi \"orca --setup\""
-
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:9
-#, kde-format
-msgid "Use Gestures"
-msgstr "Uzi Gestojn"
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:13
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr "Peti Konfirmon por gesto"
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:17
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr "Konfirmi aliron al la Klavaro"
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:21
-#, kde-format
-msgid "Use a timeout delay"
-msgstr "Uzi tempoprokraston"
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:25
-#, kde-format
-msgid "Delay for timeout"
-msgstr "Prokrasto por eltempiĝo"
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:29
-#, kde-format
-msgid "Use a beep for access"
-msgstr "Uzi pepon por aliro"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
@@ -320,89 +284,6 @@ msgstr "Ĉu Skui-Kursoron estas ŝaltita"
 #| msgid "Whether Shake Cursor is enabled"
 msgid "Whether the Magnifier effect is enabled"
 msgstr "Ĉu Skui-Kursoron estas ŝaltita"
-
-#: ui/ActivationShortcuts.qml:18
-#, kde-format
-msgctxt "@option:check"
-msgid "Activation shortcuts:"
-msgstr "Aktivigaj gestoj:"
-
-#: ui/ActivationShortcuts.qml:19
-#, kde-format
-msgctxt "Enable activation shortcuts"
-msgid "Enable"
-msgstr "Ebligi"
-
-#: ui/ActivationShortcuts.qml:31
-#, kde-format
-msgctxt "@label"
-msgid "Press Shift 5 times to enable Sticky Keys"
-msgstr "Premi Shift 5 fojojn por ebligi Persistajn Klavojn"
-
-#: ui/ActivationShortcuts.qml:38
-#, kde-format
-msgctxt "@label"
-msgid "Hold Shift for 8 seconds to enable Slow Keys"
-msgstr "Teni Shift dum 8 sekundoj por ebligi Malrapidajn Klavojn"
-
-#: ui/ActivationShortcuts.qml:47
-#, kde-format
-msgctxt "@option:check"
-msgid "Disable sticky and slow keys after:"
-msgstr "Malŝalti persistajn klavojn kaj malrapidajn klavojn post:"
-
-#: ui/ActivationShortcuts.qml:71
-#, fuzzy, kde-format
-#| msgid "%1 min"
-#| msgid_plural "%1 min"
-msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
-msgid "%1 min"
-msgid_plural "%1 min"
-msgstr[0] "%1 min"
-msgstr[1] "%1 min"
-
-#: ui/ActivationShortcuts.qml:80
-#, kde-format
-msgctxt "short for minute(s)"
-msgid "min"
-msgid_plural "min"
-msgstr[0] "min"
-msgstr[1] "min"
-
-#: ui/ActivationShortcuts.qml:89
-#, fuzzy, kde-format
-#| msgid "When a shortcut is used:"
-msgctxt "@title:group for checkbox group"
-msgid "When a shortcut is used:"
-msgstr "Kiam gesto estas uzata:"
-
-#: ui/ActivationShortcuts.qml:90
-#, fuzzy, kde-format
-#| msgid "Display a confirmation dialog"
-msgctxt "@option:check when shortcut used"
-msgid "Display a confirmation dialog"
-msgstr "Montri konfirman dialogon"
-
-#: ui/ActivationShortcuts.qml:101
-#, fuzzy, kde-format
-#| msgid "Ring the system bell"
-msgctxt "@option:check when shortcut used"
-msgid "Ring the system bell"
-msgstr "Sonorigi la sistempepon"
-
-#: ui/ActivationShortcuts.qml:112
-#, fuzzy, kde-format
-#| msgid "Show a notification"
-msgctxt "@option:check when shortcut used"
-msgid "Show a notification"
-msgstr "Montri avizon"
-
-#: ui/ActivationShortcuts.qml:123
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
-msgctxt "@action:button opens Notifications kcm"
-msgid "Configure Notifications…"
-msgstr "Agordi Avizojn…"
 
 #: ui/Bell.qml:19
 #, fuzzy, kde-format
@@ -799,20 +680,13 @@ msgstr "Musa Navigo"
 
 #: ui/main.qml:53
 #, fuzzy, kde-format
-#| msgid "Activation Shortcuts"
-msgctxt "@title Category name in sidebar"
-msgid "Activation Shortcuts"
-msgstr "Aktivigaj Gestoj"
-
-#: ui/main.qml:58
-#, fuzzy, kde-format
 #| msgctxt "System mouse navigation"
 #| msgid "Screen Reader"
 msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "Ekranlegilo"
 
-#: ui/main.qml:63
+#: ui/main.qml:58
 #, fuzzy, kde-format
 #| msgctxt "Correction for color blindness"
 #| msgid "Color Blindness Correction"
@@ -820,13 +694,13 @@ msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr "Korekto por Kolorblindeco"
 
-#: ui/main.qml:68
+#: ui/main.qml:63
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
 msgstr ""
 
-#: ui/main.qml:73
+#: ui/main.qml:68
 #, fuzzy, kde-format
 #| msgctxt "Shake cursor to find it"
 #| msgid "Shake Cursor"
@@ -1249,6 +1123,95 @@ msgstr "Sonorigi la sistempepon kiam modifklavoj estas uzataj"
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "Uzi klavojn por gvidi la muson"
+
+#~ msgid "Use Gestures"
+#~ msgstr "Uzi Gestojn"
+
+#~ msgid "Ask for Confirmation for a gesture"
+#~ msgstr "Peti Konfirmon por gesto"
+
+#~ msgid "Confirm access to the Keyboard"
+#~ msgstr "Konfirmi aliron al la Klavaro"
+
+#~ msgid "Use a timeout delay"
+#~ msgstr "Uzi tempoprokraston"
+
+#~ msgid "Delay for timeout"
+#~ msgstr "Prokrasto por eltempiĝo"
+
+#~ msgid "Use a beep for access"
+#~ msgstr "Uzi pepon por aliro"
+
+#~ msgctxt "@option:check"
+#~ msgid "Activation shortcuts:"
+#~ msgstr "Aktivigaj gestoj:"
+
+#~ msgctxt "Enable activation shortcuts"
+#~ msgid "Enable"
+#~ msgstr "Ebligi"
+
+#~ msgctxt "@label"
+#~ msgid "Press Shift 5 times to enable Sticky Keys"
+#~ msgstr "Premi Shift 5 fojojn por ebligi Persistajn Klavojn"
+
+#~ msgctxt "@label"
+#~ msgid "Hold Shift for 8 seconds to enable Slow Keys"
+#~ msgstr "Teni Shift dum 8 sekundoj por ebligi Malrapidajn Klavojn"
+
+#~ msgctxt "@option:check"
+#~ msgid "Disable sticky and slow keys after:"
+#~ msgstr "Malŝalti persistajn klavojn kaj malrapidajn klavojn post:"
+
+#, fuzzy
+#~| msgid "%1 min"
+#~| msgid_plural "%1 min"
+#~ msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
+#~ msgid "%1 min"
+#~ msgid_plural "%1 min"
+#~ msgstr[0] "%1 min"
+#~ msgstr[1] "%1 min"
+
+#~ msgctxt "short for minute(s)"
+#~ msgid "min"
+#~ msgid_plural "min"
+#~ msgstr[0] "min"
+#~ msgstr[1] "min"
+
+#, fuzzy
+#~| msgid "When a shortcut is used:"
+#~ msgctxt "@title:group for checkbox group"
+#~ msgid "When a shortcut is used:"
+#~ msgstr "Kiam gesto estas uzata:"
+
+#, fuzzy
+#~| msgid "Display a confirmation dialog"
+#~ msgctxt "@option:check when shortcut used"
+#~ msgid "Display a confirmation dialog"
+#~ msgstr "Montri konfirman dialogon"
+
+#, fuzzy
+#~| msgid "Ring the system bell"
+#~ msgctxt "@option:check when shortcut used"
+#~ msgid "Ring the system bell"
+#~ msgstr "Sonorigi la sistempepon"
+
+#, fuzzy
+#~| msgid "Show a notification"
+#~ msgctxt "@option:check when shortcut used"
+#~ msgid "Show a notification"
+#~ msgstr "Montri avizon"
+
+#, fuzzy
+#~| msgid "Configure Notifications…"
+#~ msgctxt "@action:button opens Notifications kcm"
+#~ msgid "Configure Notifications…"
+#~ msgstr "Agordi Avizojn…"
+
+#, fuzzy
+#~| msgid "Activation Shortcuts"
+#~ msgctxt "@title Category name in sidebar"
+#~ msgid "Activation Shortcuts"
+#~ msgstr "Aktivigaj Gestoj"
 
 #, fuzzy
 #~| msgctxt "@label:spinbox"

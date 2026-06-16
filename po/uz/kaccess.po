@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-09 00:45+0000\n"
+"POT-Creation-Date: 2026-06-16 00:47+0000\n"
 "PO-Revision-Date: 2006-03-29 22:33+0200\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -28,399 +28,17 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kmashrab@uni-bremen.de"
 
-#: kaccess.cpp:65
-msgid ""
-"The Shift key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-
-#: kaccess.cpp:66
-msgid "The Shift key is now active."
-msgstr "Shift tugmasi aktiv."
-
-#: kaccess.cpp:67
-msgid "The Shift key is now inactive."
-msgstr "Shift tugmasi aktiv emas."
-
-#: kaccess.cpp:71
-msgid ""
-"The Control key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-
-#: kaccess.cpp:72
-#, fuzzy
-msgid "The Control key is now active."
-msgstr "Ctrl tugmasi aktiv."
-
-#: kaccess.cpp:73
-#, fuzzy
-msgid "The Control key is now inactive."
-msgstr "Ctrl tugmasi aktiv emas."
-
-#: kaccess.cpp:77
-msgid ""
-"The Alt key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-
-#: kaccess.cpp:78
-msgid "The Alt key is now active."
-msgstr "Alt tugmasi aktiv."
-
-#: kaccess.cpp:79
-msgid "The Alt key is now inactive."
-msgstr "Alt tugmasi aktiv emas."
-
-#: kaccess.cpp:83
-msgid ""
-"The Win key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-
-#: kaccess.cpp:84
-msgid "The Win key is now active."
-msgstr "Win tugmasi aktiv."
-
-#: kaccess.cpp:85
-msgid "The Win key is now inactive."
-msgstr "Win tugmasi aktiv emas."
-
-#: kaccess.cpp:89
-msgid ""
-"The Meta key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-
-#: kaccess.cpp:90
-msgid "The Meta key is now active."
-msgstr "Meta tugmasi aktiv."
-
-#: kaccess.cpp:91
-msgid "The Meta key is now inactive."
-msgstr "Meta tugmasi aktiv emas."
-
-#: kaccess.cpp:95
-msgid ""
-"The Super key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-
-#: kaccess.cpp:96
-msgid "The Super key is now active."
-msgstr "Super tugmasi aktiv."
-
-#: kaccess.cpp:97
-msgid "The Super key is now inactive."
-msgstr "Super tugmasi aktiv emas."
-
-#: kaccess.cpp:101
-msgid ""
-"The Hyper key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-
-#: kaccess.cpp:102
-msgid "The Hyper key is now active."
-msgstr "Hyper tugmasi aktiv."
-
-#: kaccess.cpp:103
-msgid "The Hyper key is now inactive."
-msgstr "Hyper tugmasi aktiv emas."
-
-#: kaccess.cpp:107
-msgid ""
-"The Alt Graph key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-
-#: kaccess.cpp:108
-#, fuzzy
-msgid "The Alt Graph key is now active."
-msgstr "AltGr tugmasi aktiv."
-
-#: kaccess.cpp:109
-#, fuzzy
-msgid "The Alt Graph key is now inactive."
-msgstr "AltGr tugmasi aktiv emas."
-
-#: kaccess.cpp:110
-msgid "The Num Lock key has been activated."
-msgstr "NumLock tugmasi aktiv."
-
-#: kaccess.cpp:110
-msgid "The Num Lock key is now inactive."
-msgstr "NumLock tugmasi aktiv emas."
-
-#: kaccess.cpp:111
-msgid "The Caps Lock key has been activated."
-msgstr "CapsLock tugmasi aktiv."
-
-#: kaccess.cpp:111
-msgid "The Caps Lock key is now inactive."
-msgstr "CapsLock tugmasi aktiv emas."
-
-#: kaccess.cpp:112
-msgid "The Scroll Lock key has been activated."
-msgstr "ScrollLock tugmasi aktiv."
-
-#: kaccess.cpp:112
-msgid "The Scroll Lock key is now inactive."
-msgstr "ScrollLock tugmasi aktiv emas."
-
-#: kaccess.cpp:144
+#: kaccess.cpp:36
 #, kde-format
 msgid "Toggle Screen Reader On and Off"
 msgstr ""
 
-#: kaccess.cpp:146
+#: kaccess.cpp:38
 #, fuzzy, kde-format
 #| msgid "KDE Accessibility Tool"
 msgctxt "Name for kaccess shortcuts category"
 msgid "Accessibility"
 msgstr "KDE qulaylik vositasi"
-
-#: kaccess.cpp:538
-#, kde-format
-msgid "AltGraph"
-msgstr "AltGr"
-
-#: kaccess.cpp:540
-#, kde-format
-msgid "Hyper"
-msgstr "Hyper"
-
-#: kaccess.cpp:542
-#, kde-format
-msgid "Super"
-msgstr "Super"
-
-#: kaccess.cpp:544
-#, kde-format
-msgid "Meta"
-msgstr "Meta"
-
-#: kaccess.cpp:561
-#, kde-format
-msgid "Warning"
-msgstr ""
-
-#: kaccess.cpp:589
-#, kde-format
-msgid "&When a gesture was used:"
-msgstr ""
-
-#: kaccess.cpp:595
-#, kde-format
-msgid "Change Settings Without Asking"
-msgstr "Soʻramasdan moslamalarni oʻzgartirish"
-
-#: kaccess.cpp:596
-#, kde-format
-msgid "Show This Confirmation Dialog"
-msgstr "Shu tasdiqlash oynasini koʻrsatish"
-
-#: kaccess.cpp:597
-#, kde-format
-msgid "Deactivate All AccessX Features & Gestures"
-msgstr ""
-
-#: kaccess.cpp:640 kaccess.cpp:642
-#, kde-format
-msgid "Slow keys"
-msgstr "Sekin tugmalar"
-
-#: kaccess.cpp:645 kaccess.cpp:647
-#, kde-format
-msgid "Bounce keys"
-msgstr ""
-
-#: kaccess.cpp:650 kaccess.cpp:652
-#, kde-format
-msgid "Sticky keys"
-msgstr "Yopishqoq tugmalar"
-
-#: kaccess.cpp:655 kaccess.cpp:657
-#, kde-format
-msgid "Mouse keys"
-msgstr "Sichqonchaning tugmalari"
-
-#: kaccess.cpp:664
-#, kde-format
-msgid "Do you really want to deactivate \"%1\"?"
-msgstr ""
-
-#: kaccess.cpp:667
-#, kde-format
-msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
-msgstr ""
-
-#: kaccess.cpp:671
-#, kde-format
-msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
-msgstr ""
-
-#: kaccess.cpp:674
-#, kde-format
-msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr ""
-
-#: kaccess.cpp:685
-#, kde-format
-msgid "Do you really want to activate \"%1\"?"
-msgstr ""
-
-#: kaccess.cpp:688
-#, kde-format
-msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
-msgstr ""
-
-#: kaccess.cpp:691
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
-msgstr ""
-
-#: kaccess.cpp:697
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
-"\"%4\"?"
-msgstr ""
-
-#: kaccess.cpp:708
-#, kde-format
-msgid "Do you really want to activate \"%1\" and \"%2\"?"
-msgstr ""
-
-#: kaccess.cpp:711
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
-msgstr ""
-
-#: kaccess.cpp:717
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
-"and \"%4\"?"
-msgstr ""
-
-#: kaccess.cpp:728
-#, kde-format
-msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
-msgstr ""
-
-#: kaccess.cpp:731
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
-"\"%4\"?"
-msgstr ""
-
-#: kaccess.cpp:740
-#, kde-format
-msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr ""
-
-#: kaccess.cpp:749
-#, kde-format
-msgid "An application has requested to change this setting."
-msgstr "Dastur bu moslamani oʻzgartirishni soʻradi."
-
-#: kaccess.cpp:753
-#, kde-format
-msgid ""
-"You held down the Shift key for 8 seconds or an application has requested to "
-"change this setting."
-msgstr ""
-"Shift tugmasi 8 soniya bosib turildi yoki dastur bu moslamani oʻzgartirishni "
-"soʻradi."
-
-#: kaccess.cpp:755
-#, kde-format
-msgid ""
-"You pressed the Shift key 5 consecutive times or an application has "
-"requested to change this setting."
-msgstr ""
-"Shift tugmasi 5 marta bosildi yoki dastur bu moslamani oʻzgartirishni "
-"soʻradi."
-
-#: kaccess.cpp:759
-#, kde-format
-msgid "You pressed %1 or an application has requested to change this setting."
-msgstr "%1 tugmasi bosildi yoki dastur bu moslamani oʻzgartirishni soʻradi."
-
-#: kaccess.cpp:764
-#, kde-format
-msgid ""
-"An application has requested to change these settings, or you used a "
-"combination of several keyboard gestures."
-msgstr ""
-
-#: kaccess.cpp:766
-#, kde-format
-msgid "An application has requested to change these settings."
-msgstr "Dastur bu moslamani oʻzgartirishni soʻradi."
-
-#: kaccess.cpp:771
-#, kde-format
-msgid ""
-"These AccessX settings are needed for some users with motion impairments and "
-"can be configured in the KDE System Settings. You can also turn them on and "
-"off with standardized keyboard gestures.\n"
-"\n"
-"If you do not need them, you can select \"Deactivate all AccessX features "
-"and gestures\"."
-msgstr ""
-
-#: kaccess.cpp:792
-#, kde-format
-msgid ""
-"Slow keys has been enabled. From now on, you need to press each key for a "
-"certain length of time before it gets accepted."
-msgstr ""
-
-#: kaccess.cpp:794
-#, kde-format
-msgid "Slow keys has been disabled."
-msgstr ""
-
-#: kaccess.cpp:798
-#, kde-format
-msgid ""
-"Bounce keys has been enabled. From now on, each key will be blocked for a "
-"certain length of time after it was used."
-msgstr ""
-
-#: kaccess.cpp:800
-#, kde-format
-msgid "Bounce keys has been disabled."
-msgstr ""
-
-#: kaccess.cpp:804
-#, kde-format
-msgid ""
-"Sticky keys has been enabled. From now on, modifier keys will stay latched "
-"after you have released them."
-msgstr ""
-
-#: kaccess.cpp:806
-#, kde-format
-msgid "Sticky keys has been disabled."
-msgstr ""
-
-#: kaccess.cpp:810
-#, kde-format
-msgid ""
-"Mouse keys has been enabled. From now on, you can use the number pad of your "
-"keyboard in order to control the mouse."
-msgstr ""
-
-#: kaccess.cpp:812
-#, kde-format
-msgid "Mouse keys has been disabled."
-msgstr ""
 
 #: main.cpp:40
 #, fuzzy, kde-format
@@ -443,6 +61,127 @@ msgstr "(C) 2000, Matias Xoʻlser-Klyupfel (Matthias Hölzer-Klüpfel)"
 #, kde-format
 msgid "Author"
 msgstr "Muallif"
+
+#~ msgid "The Shift key is now active."
+#~ msgstr "Shift tugmasi aktiv."
+
+#~ msgid "The Shift key is now inactive."
+#~ msgstr "Shift tugmasi aktiv emas."
+
+#, fuzzy
+#~ msgid "The Control key is now active."
+#~ msgstr "Ctrl tugmasi aktiv."
+
+#, fuzzy
+#~ msgid "The Control key is now inactive."
+#~ msgstr "Ctrl tugmasi aktiv emas."
+
+#~ msgid "The Alt key is now active."
+#~ msgstr "Alt tugmasi aktiv."
+
+#~ msgid "The Alt key is now inactive."
+#~ msgstr "Alt tugmasi aktiv emas."
+
+#~ msgid "The Win key is now active."
+#~ msgstr "Win tugmasi aktiv."
+
+#~ msgid "The Win key is now inactive."
+#~ msgstr "Win tugmasi aktiv emas."
+
+#~ msgid "The Meta key is now active."
+#~ msgstr "Meta tugmasi aktiv."
+
+#~ msgid "The Meta key is now inactive."
+#~ msgstr "Meta tugmasi aktiv emas."
+
+#~ msgid "The Super key is now active."
+#~ msgstr "Super tugmasi aktiv."
+
+#~ msgid "The Super key is now inactive."
+#~ msgstr "Super tugmasi aktiv emas."
+
+#~ msgid "The Hyper key is now active."
+#~ msgstr "Hyper tugmasi aktiv."
+
+#~ msgid "The Hyper key is now inactive."
+#~ msgstr "Hyper tugmasi aktiv emas."
+
+#, fuzzy
+#~ msgid "The Alt Graph key is now active."
+#~ msgstr "AltGr tugmasi aktiv."
+
+#, fuzzy
+#~ msgid "The Alt Graph key is now inactive."
+#~ msgstr "AltGr tugmasi aktiv emas."
+
+#~ msgid "The Num Lock key has been activated."
+#~ msgstr "NumLock tugmasi aktiv."
+
+#~ msgid "The Num Lock key is now inactive."
+#~ msgstr "NumLock tugmasi aktiv emas."
+
+#~ msgid "The Caps Lock key has been activated."
+#~ msgstr "CapsLock tugmasi aktiv."
+
+#~ msgid "The Caps Lock key is now inactive."
+#~ msgstr "CapsLock tugmasi aktiv emas."
+
+#~ msgid "The Scroll Lock key has been activated."
+#~ msgstr "ScrollLock tugmasi aktiv."
+
+#~ msgid "The Scroll Lock key is now inactive."
+#~ msgstr "ScrollLock tugmasi aktiv emas."
+
+#~ msgid "AltGraph"
+#~ msgstr "AltGr"
+
+#~ msgid "Hyper"
+#~ msgstr "Hyper"
+
+#~ msgid "Super"
+#~ msgstr "Super"
+
+#~ msgid "Meta"
+#~ msgstr "Meta"
+
+#~ msgid "Change Settings Without Asking"
+#~ msgstr "Soʻramasdan moslamalarni oʻzgartirish"
+
+#~ msgid "Show This Confirmation Dialog"
+#~ msgstr "Shu tasdiqlash oynasini koʻrsatish"
+
+#~ msgid "Slow keys"
+#~ msgstr "Sekin tugmalar"
+
+#~ msgid "Sticky keys"
+#~ msgstr "Yopishqoq tugmalar"
+
+#~ msgid "Mouse keys"
+#~ msgstr "Sichqonchaning tugmalari"
+
+#~ msgid "An application has requested to change this setting."
+#~ msgstr "Dastur bu moslamani oʻzgartirishni soʻradi."
+
+#~ msgid ""
+#~ "You held down the Shift key for 8 seconds or an application has requested "
+#~ "to change this setting."
+#~ msgstr ""
+#~ "Shift tugmasi 8 soniya bosib turildi yoki dastur bu moslamani "
+#~ "oʻzgartirishni soʻradi."
+
+#~ msgid ""
+#~ "You pressed the Shift key 5 consecutive times or an application has "
+#~ "requested to change this setting."
+#~ msgstr ""
+#~ "Shift tugmasi 5 marta bosildi yoki dastur bu moslamani oʻzgartirishni "
+#~ "soʻradi."
+
+#~ msgid ""
+#~ "You pressed %1 or an application has requested to change this setting."
+#~ msgstr "%1 tugmasi bosildi yoki dastur bu moslamani oʻzgartirishni soʻradi."
+
+#~ msgid "An application has requested to change these settings."
+#~ msgstr "Dastur bu moslamani oʻzgartirishni soʻradi."
 
 #~ msgid "KDE Accessibility Tool"
 #~ msgstr "KDE qulaylik vositasi"

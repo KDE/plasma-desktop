@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-16 00:47+0000\n"
 "PO-Revision-Date: 2025-03-15 05:45+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -20,96 +20,60 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.12.1\n"
 
-#: kcmaccess.cpp:127 kcmaccess.cpp:155
+#: kcmaccess.cpp:124 kcmaccess.cpp:152
 #, kde-format
 msgid "KWin"
 msgstr ""
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:127
 #, kde-format
 msgid "Toggle Invert Effect"
 msgstr ""
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Toggle Invert Effect on Window"
 msgstr ""
 
-#: kcmaccess.cpp:178
+#: kcmaccess.cpp:175
 #, kde-format
 msgid "Move Left"
 msgstr ""
 
-#: kcmaccess.cpp:185
+#: kcmaccess.cpp:182
 #, kde-format
 msgid "Move Right"
 msgstr ""
 
-#: kcmaccess.cpp:192
+#: kcmaccess.cpp:189
 #, kde-format
 msgid "Move Up"
 msgstr ""
 
-#: kcmaccess.cpp:199
+#: kcmaccess.cpp:196
 #, kde-format
 msgid "Move Down"
 msgstr ""
 
-#: kcmaccess.cpp:206
+#: kcmaccess.cpp:203
 #, kde-format
 msgid "Move Mouse to Focus"
 msgstr ""
 
-#: kcmaccess.cpp:213
+#: kcmaccess.cpp:210
 #, kde-format
 msgid "Move Mouse to Center"
 msgstr ""
 
-#: kcmaccess.cpp:256
+#: kcmaccess.cpp:253
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Tidak dapat mengeset gsettings untuk Orca: \"%1\" gagal"
 
-#: kcmaccess.cpp:263
+#: kcmaccess.cpp:260
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Galat: Tidak bisa meluncurkan \"orca --setup\""
-
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:9
-#, kde-format
-msgid "Use Gestures"
-msgstr "Gunakan Gestur"
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:13
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr "Tanyakan Konfirmasi untuk gestur"
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:17
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr "Akses konfirmasi untuk Keyboard"
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:21
-#, kde-format
-msgid "Use a timeout delay"
-msgstr "Gunakan tundaan timeout"
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:25
-#, kde-format
-msgid "Delay for timeout"
-msgstr "Tundaan untuk timeout"
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:29
-#, kde-format
-msgid "Use a beep for access"
-msgstr "Gunakan bunyi tit untuk akses"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
@@ -320,89 +284,6 @@ msgstr "Apakah Kursor Guncang difungsikan"
 #| msgid "Whether Shake Cursor is enabled"
 msgid "Whether the Magnifier effect is enabled"
 msgstr "Apakah Kursor Guncang difungsikan"
-
-#: ui/ActivationShortcuts.qml:18
-#, kde-format
-msgctxt "@option:check"
-msgid "Activation shortcuts:"
-msgstr "Pintasan aktivasi:"
-
-#: ui/ActivationShortcuts.qml:19
-#, kde-format
-msgctxt "Enable activation shortcuts"
-msgid "Enable"
-msgstr "Fungsikan"
-
-#: ui/ActivationShortcuts.qml:31
-#, kde-format
-msgctxt "@label"
-msgid "Press Shift 5 times to enable Sticky Keys"
-msgstr "Tekan Shift 5 kali untuk memfungsikan Tombol Lekat"
-
-#: ui/ActivationShortcuts.qml:38
-#, kde-format
-msgctxt "@label"
-msgid "Hold Shift for 8 seconds to enable Slow Keys"
-msgstr "Tahan Shift selama 8 detik untuk memfungsikan Tombol Pelan"
-
-#: ui/ActivationShortcuts.qml:47
-#, kde-format
-msgctxt "@option:check"
-msgid "Disable sticky and slow keys after:"
-msgstr "Nonfungsikan tombol lekat dan tombol pelan setelah:"
-
-#: ui/ActivationShortcuts.qml:71
-#, fuzzy, kde-format
-#| msgid "%1 min"
-#| msgid_plural "%1 min"
-msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
-msgid "%1 min"
-msgid_plural "%1 min"
-msgstr[0] "%1 mnt"
-msgstr[1] "%1 mnt"
-
-#: ui/ActivationShortcuts.qml:80
-#, kde-format
-msgctxt "short for minute(s)"
-msgid "min"
-msgid_plural "min"
-msgstr[0] "min"
-msgstr[1] "min"
-
-#: ui/ActivationShortcuts.qml:89
-#, fuzzy, kde-format
-#| msgid "When a shortcut is used:"
-msgctxt "@title:group for checkbox group"
-msgid "When a shortcut is used:"
-msgstr "Ketika pintasan digunakan:"
-
-#: ui/ActivationShortcuts.qml:90
-#, fuzzy, kde-format
-#| msgid "Display a confirmation dialog"
-msgctxt "@option:check when shortcut used"
-msgid "Display a confirmation dialog"
-msgstr "Tampilan dialog konfirmasi"
-
-#: ui/ActivationShortcuts.qml:101
-#, fuzzy, kde-format
-#| msgid "Ring the system bell"
-msgctxt "@option:check when shortcut used"
-msgid "Ring the system bell"
-msgstr "Deringkan bel sistem"
-
-#: ui/ActivationShortcuts.qml:112
-#, fuzzy, kde-format
-#| msgid "Show a notification"
-msgctxt "@option:check when shortcut used"
-msgid "Show a notification"
-msgstr "Tampilkan notifikasi"
-
-#: ui/ActivationShortcuts.qml:123
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
-msgctxt "@action:button opens Notifications kcm"
-msgid "Configure Notifications…"
-msgstr "Konfigurasi Notifikasi..."
 
 #: ui/Bell.qml:19
 #, fuzzy, kde-format
@@ -806,20 +687,13 @@ msgstr "Navigasi Mouse"
 
 #: ui/main.qml:53
 #, fuzzy, kde-format
-#| msgid "Activation Shortcuts"
-msgctxt "@title Category name in sidebar"
-msgid "Activation Shortcuts"
-msgstr "Pintasan Aktivasi"
-
-#: ui/main.qml:58
-#, fuzzy, kde-format
 #| msgctxt "System mouse navigation"
 #| msgid "Screen Reader"
 msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "Screen Reader"
 
-#: ui/main.qml:63
+#: ui/main.qml:58
 #, fuzzy, kde-format
 #| msgctxt "Correction for color blindness"
 #| msgid "Color Blindness Correction"
@@ -827,13 +701,13 @@ msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr "Koreksi Buta Warna"
 
-#: ui/main.qml:68
+#: ui/main.qml:63
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
 msgstr ""
 
-#: ui/main.qml:73
+#: ui/main.qml:68
 #, fuzzy, kde-format
 #| msgctxt "Shake cursor to find it"
 #| msgid "Shake Cursor"
@@ -1274,6 +1148,95 @@ msgstr "Deringkan bel sistem ketika tombol pemodif digunakan"
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "Gunakan tombol untuk mengontrol mouse"
+
+#~ msgid "Use Gestures"
+#~ msgstr "Gunakan Gestur"
+
+#~ msgid "Ask for Confirmation for a gesture"
+#~ msgstr "Tanyakan Konfirmasi untuk gestur"
+
+#~ msgid "Confirm access to the Keyboard"
+#~ msgstr "Akses konfirmasi untuk Keyboard"
+
+#~ msgid "Use a timeout delay"
+#~ msgstr "Gunakan tundaan timeout"
+
+#~ msgid "Delay for timeout"
+#~ msgstr "Tundaan untuk timeout"
+
+#~ msgid "Use a beep for access"
+#~ msgstr "Gunakan bunyi tit untuk akses"
+
+#~ msgctxt "@option:check"
+#~ msgid "Activation shortcuts:"
+#~ msgstr "Pintasan aktivasi:"
+
+#~ msgctxt "Enable activation shortcuts"
+#~ msgid "Enable"
+#~ msgstr "Fungsikan"
+
+#~ msgctxt "@label"
+#~ msgid "Press Shift 5 times to enable Sticky Keys"
+#~ msgstr "Tekan Shift 5 kali untuk memfungsikan Tombol Lekat"
+
+#~ msgctxt "@label"
+#~ msgid "Hold Shift for 8 seconds to enable Slow Keys"
+#~ msgstr "Tahan Shift selama 8 detik untuk memfungsikan Tombol Pelan"
+
+#~ msgctxt "@option:check"
+#~ msgid "Disable sticky and slow keys after:"
+#~ msgstr "Nonfungsikan tombol lekat dan tombol pelan setelah:"
+
+#, fuzzy
+#~| msgid "%1 min"
+#~| msgid_plural "%1 min"
+#~ msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
+#~ msgid "%1 min"
+#~ msgid_plural "%1 min"
+#~ msgstr[0] "%1 mnt"
+#~ msgstr[1] "%1 mnt"
+
+#~ msgctxt "short for minute(s)"
+#~ msgid "min"
+#~ msgid_plural "min"
+#~ msgstr[0] "min"
+#~ msgstr[1] "min"
+
+#, fuzzy
+#~| msgid "When a shortcut is used:"
+#~ msgctxt "@title:group for checkbox group"
+#~ msgid "When a shortcut is used:"
+#~ msgstr "Ketika pintasan digunakan:"
+
+#, fuzzy
+#~| msgid "Display a confirmation dialog"
+#~ msgctxt "@option:check when shortcut used"
+#~ msgid "Display a confirmation dialog"
+#~ msgstr "Tampilan dialog konfirmasi"
+
+#, fuzzy
+#~| msgid "Ring the system bell"
+#~ msgctxt "@option:check when shortcut used"
+#~ msgid "Ring the system bell"
+#~ msgstr "Deringkan bel sistem"
+
+#, fuzzy
+#~| msgid "Show a notification"
+#~ msgctxt "@option:check when shortcut used"
+#~ msgid "Show a notification"
+#~ msgstr "Tampilkan notifikasi"
+
+#, fuzzy
+#~| msgid "Configure Notifications…"
+#~ msgctxt "@action:button opens Notifications kcm"
+#~ msgid "Configure Notifications…"
+#~ msgstr "Konfigurasi Notifikasi..."
+
+#, fuzzy
+#~| msgid "Activation Shortcuts"
+#~ msgctxt "@title Category name in sidebar"
+#~ msgid "Activation Shortcuts"
+#~ msgstr "Pintasan Aktivasi"
 
 #, fuzzy
 #~| msgctxt "@label:spinbox"

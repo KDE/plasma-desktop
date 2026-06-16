@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-16 00:47+0000\n"
 "PO-Revision-Date: 2024-12-20 21:53+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -19,96 +19,60 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: kcmaccess.cpp:127 kcmaccess.cpp:155
+#: kcmaccess.cpp:124 kcmaccess.cpp:152
 #, kde-format
 msgid "KWin"
 msgstr ""
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:127
 #, kde-format
 msgid "Toggle Invert Effect"
 msgstr ""
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Toggle Invert Effect on Window"
 msgstr ""
 
-#: kcmaccess.cpp:178
+#: kcmaccess.cpp:175
 #, kde-format
 msgid "Move Left"
 msgstr ""
 
-#: kcmaccess.cpp:185
+#: kcmaccess.cpp:182
 #, kde-format
 msgid "Move Right"
 msgstr ""
 
-#: kcmaccess.cpp:192
+#: kcmaccess.cpp:189
 #, kde-format
 msgid "Move Up"
 msgstr ""
 
-#: kcmaccess.cpp:199
+#: kcmaccess.cpp:196
 #, kde-format
 msgid "Move Down"
 msgstr ""
 
-#: kcmaccess.cpp:206
+#: kcmaccess.cpp:203
 #, kde-format
 msgid "Move Mouse to Focus"
 msgstr ""
 
-#: kcmaccess.cpp:213
+#: kcmaccess.cpp:210
 #, kde-format
 msgid "Move Mouse to Center"
 msgstr ""
 
-#: kcmaccess.cpp:256
+#: kcmaccess.cpp:253
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Orca कृते gsettings सेट् कर्तुं न शक्यते: \"%1\" विफलम्"
 
-#: kcmaccess.cpp:263
+#: kcmaccess.cpp:260
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "त्रुटिः \"orca --setup\" प्रारम्भं कर्तुं न शक्यते ।"
-
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:9
-#, kde-format
-msgid "Use Gestures"
-msgstr "इशाराणां प्रयोगं कुर्वन्तु"
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:13
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr "इशारस्य कृते Confirmation याचत"
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:17
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr "कीबोर्ड् मध्ये प्रवेशस्य पुष्टिं कुर्वन्तु"
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:21
-#, kde-format
-msgid "Use a timeout delay"
-msgstr "समयसमाप्तविलम्बस्य उपयोगं कुर्वन्तु"
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:25
-#, kde-format
-msgid "Delay for timeout"
-msgstr "समयसमाप्त्यर्थं विलम्बः"
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:29
-#, kde-format
-msgid "Use a beep for access"
-msgstr "अभिगमनाय बीपस्य उपयोगं कुर्वन्तु"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
@@ -319,89 +283,6 @@ msgstr "Shake Cursor सक्षमम् अस्ति वा"
 #| msgid "Whether Shake Cursor is enabled"
 msgid "Whether the Magnifier effect is enabled"
 msgstr "Shake Cursor सक्षमम् अस्ति वा"
-
-#: ui/ActivationShortcuts.qml:18
-#, kde-format
-msgctxt "@option:check"
-msgid "Activation shortcuts:"
-msgstr "सक्रियीकरणस्य शॉर्टकट् :"
-
-#: ui/ActivationShortcuts.qml:19
-#, kde-format
-msgctxt "Enable activation shortcuts"
-msgid "Enable"
-msgstr "सक्रियं करोतु"
-
-#: ui/ActivationShortcuts.qml:31
-#, kde-format
-msgctxt "@label"
-msgid "Press Shift 5 times to enable Sticky Keys"
-msgstr "Sticky Keys सक्षमीकरणाय Shift 5 वारं नुदन्तु"
-
-#: ui/ActivationShortcuts.qml:38
-#, kde-format
-msgctxt "@label"
-msgid "Hold Shift for 8 seconds to enable Slow Keys"
-msgstr "Slow Keys सक्षमीकरणाय Shift 8 सेकण्ड् यावत् धारयन्तु"
-
-#: ui/ActivationShortcuts.qml:47
-#, kde-format
-msgctxt "@option:check"
-msgid "Disable sticky and slow keys after:"
-msgstr "ततः परं चिपचिपां मन्दं च कीलं निष्क्रियं कुर्वन्तु:"
-
-#: ui/ActivationShortcuts.qml:71
-#, fuzzy, kde-format
-#| msgid "%1 min"
-#| msgid_plural "%1 min"
-msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
-msgid "%1 min"
-msgid_plural "%1 min"
-msgstr[0] "%1 मि"
-msgstr[1] "%1 मि"
-
-#: ui/ActivationShortcuts.qml:80
-#, kde-format
-msgctxt "short for minute(s)"
-msgid "min"
-msgid_plural "min"
-msgstr[0] "मि"
-msgstr[1] "मि"
-
-#: ui/ActivationShortcuts.qml:89
-#, fuzzy, kde-format
-#| msgid "When a shortcut is used:"
-msgctxt "@title:group for checkbox group"
-msgid "When a shortcut is used:"
-msgstr "यदा शॉर्टकट् प्रयुक्तः भवति तदा :"
-
-#: ui/ActivationShortcuts.qml:90
-#, fuzzy, kde-format
-#| msgid "Display a confirmation dialog"
-msgctxt "@option:check when shortcut used"
-msgid "Display a confirmation dialog"
-msgstr "पुष्टिकरणसंवादं प्रदर्शयन्तु"
-
-#: ui/ActivationShortcuts.qml:101
-#, fuzzy, kde-format
-#| msgid "Ring the system bell"
-msgctxt "@option:check when shortcut used"
-msgid "Ring the system bell"
-msgstr "प्रणालीघण्टां ध्वनयन्तु"
-
-#: ui/ActivationShortcuts.qml:112
-#, fuzzy, kde-format
-#| msgid "Show a notification"
-msgctxt "@option:check when shortcut used"
-msgid "Show a notification"
-msgstr "सूचनां दर्शयतु"
-
-#: ui/ActivationShortcuts.qml:123
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
-msgctxt "@action:button opens Notifications kcm"
-msgid "Configure Notifications…"
-msgstr "सूचनाः विन्यस्यताम्..."
 
 #: ui/Bell.qml:19
 #, fuzzy, kde-format
@@ -803,20 +684,13 @@ msgstr "मूषक नेविगेशन"
 
 #: ui/main.qml:53
 #, fuzzy, kde-format
-#| msgid "Activation Shortcuts"
-msgctxt "@title Category name in sidebar"
-msgid "Activation Shortcuts"
-msgstr "सक्रियीकरण शॉर्टकट"
-
-#: ui/main.qml:58
-#, fuzzy, kde-format
 #| msgctxt "System mouse navigation"
 #| msgid "Screen Reader"
 msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "स्क्रीन रीडर"
 
-#: ui/main.qml:63
+#: ui/main.qml:58
 #, fuzzy, kde-format
 #| msgctxt "Correction for color blindness"
 #| msgid "Color Blindness Correction"
@@ -824,13 +698,13 @@ msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr "वर्ण अन्धता सुधार"
 
-#: ui/main.qml:68
+#: ui/main.qml:63
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
 msgstr ""
 
-#: ui/main.qml:73
+#: ui/main.qml:68
 #, fuzzy, kde-format
 #| msgctxt "Shake cursor to find it"
 #| msgid "Shake Cursor"
@@ -1268,6 +1142,95 @@ msgstr "यदा संशोधककुंजीः उपयुज्यन�
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "मूषकस्य नियन्त्रणार्थं कीलानां उपयोगं कुर्वन्तु"
+
+#~ msgid "Use Gestures"
+#~ msgstr "इशाराणां प्रयोगं कुर्वन्तु"
+
+#~ msgid "Ask for Confirmation for a gesture"
+#~ msgstr "इशारस्य कृते Confirmation याचत"
+
+#~ msgid "Confirm access to the Keyboard"
+#~ msgstr "कीबोर्ड् मध्ये प्रवेशस्य पुष्टिं कुर्वन्तु"
+
+#~ msgid "Use a timeout delay"
+#~ msgstr "समयसमाप्तविलम्बस्य उपयोगं कुर्वन्तु"
+
+#~ msgid "Delay for timeout"
+#~ msgstr "समयसमाप्त्यर्थं विलम्बः"
+
+#~ msgid "Use a beep for access"
+#~ msgstr "अभिगमनाय बीपस्य उपयोगं कुर्वन्तु"
+
+#~ msgctxt "@option:check"
+#~ msgid "Activation shortcuts:"
+#~ msgstr "सक्रियीकरणस्य शॉर्टकट् :"
+
+#~ msgctxt "Enable activation shortcuts"
+#~ msgid "Enable"
+#~ msgstr "सक्रियं करोतु"
+
+#~ msgctxt "@label"
+#~ msgid "Press Shift 5 times to enable Sticky Keys"
+#~ msgstr "Sticky Keys सक्षमीकरणाय Shift 5 वारं नुदन्तु"
+
+#~ msgctxt "@label"
+#~ msgid "Hold Shift for 8 seconds to enable Slow Keys"
+#~ msgstr "Slow Keys सक्षमीकरणाय Shift 8 सेकण्ड् यावत् धारयन्तु"
+
+#~ msgctxt "@option:check"
+#~ msgid "Disable sticky and slow keys after:"
+#~ msgstr "ततः परं चिपचिपां मन्दं च कीलं निष्क्रियं कुर्वन्तु:"
+
+#, fuzzy
+#~| msgid "%1 min"
+#~| msgid_plural "%1 min"
+#~ msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
+#~ msgid "%1 min"
+#~ msgid_plural "%1 min"
+#~ msgstr[0] "%1 मि"
+#~ msgstr[1] "%1 मि"
+
+#~ msgctxt "short for minute(s)"
+#~ msgid "min"
+#~ msgid_plural "min"
+#~ msgstr[0] "मि"
+#~ msgstr[1] "मि"
+
+#, fuzzy
+#~| msgid "When a shortcut is used:"
+#~ msgctxt "@title:group for checkbox group"
+#~ msgid "When a shortcut is used:"
+#~ msgstr "यदा शॉर्टकट् प्रयुक्तः भवति तदा :"
+
+#, fuzzy
+#~| msgid "Display a confirmation dialog"
+#~ msgctxt "@option:check when shortcut used"
+#~ msgid "Display a confirmation dialog"
+#~ msgstr "पुष्टिकरणसंवादं प्रदर्शयन्तु"
+
+#, fuzzy
+#~| msgid "Ring the system bell"
+#~ msgctxt "@option:check when shortcut used"
+#~ msgid "Ring the system bell"
+#~ msgstr "प्रणालीघण्टां ध्वनयन्तु"
+
+#, fuzzy
+#~| msgid "Show a notification"
+#~ msgctxt "@option:check when shortcut used"
+#~ msgid "Show a notification"
+#~ msgstr "सूचनां दर्शयतु"
+
+#, fuzzy
+#~| msgid "Configure Notifications…"
+#~ msgctxt "@action:button opens Notifications kcm"
+#~ msgid "Configure Notifications…"
+#~ msgstr "सूचनाः विन्यस्यताम्..."
+
+#, fuzzy
+#~| msgid "Activation Shortcuts"
+#~ msgctxt "@title Category name in sidebar"
+#~ msgid "Activation Shortcuts"
+#~ msgstr "सक्रियीकरण शॉर्टकट"
 
 #, fuzzy
 #~| msgctxt "@label:spinbox"

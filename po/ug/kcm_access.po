@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-16 00:47+0000\n"
 "PO-Revision-Date: 2026-06-01 17:46-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -18,96 +18,60 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 3.9\n"
 
-#: kcmaccess.cpp:127 kcmaccess.cpp:155
+#: kcmaccess.cpp:124 kcmaccess.cpp:152
 #, kde-format
 msgid "KWin"
 msgstr "KWin"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:127
 #, kde-format
 msgid "Toggle Invert Effect"
 msgstr "تەتۈر قىلىش ئۈنۈمىنى ئالماشتۇر"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Toggle Invert Effect on Window"
 msgstr "كۆزنەك تەتۈر قىلىش ئۈنۈمىنى ئالماشتۇر"
 
-#: kcmaccess.cpp:178
+#: kcmaccess.cpp:175
 #, kde-format
 msgid "Move Left"
 msgstr "سولغا يۆتكە"
 
-#: kcmaccess.cpp:185
+#: kcmaccess.cpp:182
 #, kde-format
 msgid "Move Right"
 msgstr "ئوڭغا يۆتكە"
 
-#: kcmaccess.cpp:192
+#: kcmaccess.cpp:189
 #, kde-format
 msgid "Move Up"
 msgstr "ئۈستىگە"
 
-#: kcmaccess.cpp:199
+#: kcmaccess.cpp:196
 #, kde-format
 msgid "Move Down"
 msgstr "ئاستىغا"
 
-#: kcmaccess.cpp:206
+#: kcmaccess.cpp:203
 #, kde-format
 msgid "Move Mouse to Focus"
 msgstr "چاشقىنەكنى فوكۇسقا يۆتكە"
 
-#: kcmaccess.cpp:213
+#: kcmaccess.cpp:210
 #, kde-format
 msgid "Move Mouse to Center"
 msgstr "چاشقىنەكنى مەركەزگە يۆتكە"
 
-#: kcmaccess.cpp:256
+#: kcmaccess.cpp:253
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Orca ئۈچۈن gsettings نى تەڭشىيەلمەيدۇ: «%1» مەغلۇپ بولدى"
 
-#: kcmaccess.cpp:263
+#: kcmaccess.cpp:260
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "خاتالىق: ‪«orca --setup»‬ نى قوزغىتالمايدۇ"
-
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:9
-#, kde-format
-msgid "Use Gestures"
-msgstr "قول ئىشارىتى ئىشلەت"
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:13
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr "قول ئىشارىتىنى جەزملەشنى سورايدۇ"
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:17
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr "ھەرپتاختا زىيارىتىنى جەزملەيدۇ"
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:21
-#, kde-format
-msgid "Use a timeout delay"
-msgstr "مۆھلىتىنى كېچىكتۈرۈشنى ئىشلىتىدۇ"
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:25
-#, kde-format
-msgid "Delay for timeout"
-msgstr "مۆھلىتىنى كېچىكتۈرۈش"
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilityactivationgestures.kcfg:29
-#, kde-format
-msgid "Use a beep for access"
-msgstr "قولايلىق ئىقتىدارغا ئاۋاز ئەسكەرتىشى ئىشلىتىدۇ"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
@@ -313,80 +277,6 @@ msgstr "چوڭايتىش ئۈنۈمى قوزغىتامدۇ يوق"
 #, kde-format
 msgid "Whether the Magnifier effect is enabled"
 msgstr "چوڭايتقۇچ ئۈنۈمىنى قوزغىتامدۇ يوق"
-
-#: ui/ActivationShortcuts.qml:18
-#, kde-format
-msgctxt "@option:check"
-msgid "Activation shortcuts:"
-msgstr "ئاكتىپلاش تېزلەتمىسى:"
-
-#: ui/ActivationShortcuts.qml:19
-#, kde-format
-msgctxt "Enable activation shortcuts"
-msgid "Enable"
-msgstr "قوزغات"
-
-#: ui/ActivationShortcuts.qml:31
-#, kde-format
-msgctxt "@label"
-msgid "Press Shift 5 times to enable Sticky Keys"
-msgstr "Shift كۇنۇپكىسى 5 قېتىم بېسىلسا يېپىشقاق كۇنۇپكىنى قوزغىتىدۇ"
-
-#: ui/ActivationShortcuts.qml:38
-#, kde-format
-msgctxt "@label"
-msgid "Hold Shift for 8 seconds to enable Slow Keys"
-msgstr "Shift كۇنۇپكىسى 8 سېكۇنت بېسىپ تۇرۇلسا ئاستا كۇنۇپكىنى قوزغىتىدۇ"
-
-#: ui/ActivationShortcuts.qml:47
-#, kde-format
-msgctxt "@option:check"
-msgid "Disable sticky and slow keys after:"
-msgstr "مۇئەييەن ۋاقىت ئىشلىتىلمىسا يېپىشقاق ۋە ئاستا كۇنۇپكا چەكلىنىدۇ:"
-
-#: ui/ActivationShortcuts.qml:71
-#, kde-format
-msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
-msgid "%1 min"
-msgid_plural "%1 min"
-msgstr[0] "%1 مىنۇت"
-
-#: ui/ActivationShortcuts.qml:80
-#, kde-format
-msgctxt "short for minute(s)"
-msgid "min"
-msgid_plural "min"
-msgstr[0] "مىنۇت"
-
-#: ui/ActivationShortcuts.qml:89
-#, kde-format
-msgctxt "@title:group for checkbox group"
-msgid "When a shortcut is used:"
-msgstr "تېزلەتمە ئىشلىتىلگەندە:"
-
-#: ui/ActivationShortcuts.qml:90
-#, kde-format
-msgctxt "@option:check when shortcut used"
-msgid "Display a confirmation dialog"
-msgstr "جەزملەش سۆزلەشكۈسىنى كۆرسىتىدۇ"
-
-#: ui/ActivationShortcuts.qml:101
-#, kde-format
-msgctxt "@option:check when shortcut used"
-msgid "Ring the system bell"
-msgstr "سىستېما قوڭغۇرىقى جىرىڭشىيدۇ"
-
-#: ui/ActivationShortcuts.qml:112
-#, kde-format
-msgctxt "@option:check when shortcut used"
-msgid "Show a notification"
-msgstr "ئۇقتۇرۇش كۆرسىتىدۇ"
-
-#: ui/ActivationShortcuts.qml:123
-#, kde-format
-msgctxt "@action:button opens Notifications kcm"
-msgid "Configure Notifications…"
-msgstr "ئۇقتۇرۇش سەپلە…"
 
 #: ui/Bell.qml:19
 #, kde-format
@@ -743,28 +633,22 @@ msgstr "چاشقىنەك يولباشچىسى"
 #: ui/main.qml:53
 #, kde-format
 msgctxt "@title Category name in sidebar"
-msgid "Activation Shortcuts"
-msgstr "ئاكتىپلاش تېزلەتمىسى"
-
-#: ui/main.qml:58
-#, kde-format
-msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "ئېكران ئوقۇغۇچ"
 
-#: ui/main.qml:63
+#: ui/main.qml:58
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr "رەڭ قارىغۇسىنى تۈزىتىش"
 
-#: ui/main.qml:68
+#: ui/main.qml:63
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
 msgstr "ئەكسى رەڭگە ئالماشتۇر"
 
-#: ui/main.qml:73
+#: ui/main.qml:68
 #, kde-format
 msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
@@ -1169,6 +1053,78 @@ msgstr "بىرىكمە كۇنۇپكىنى بېسىپ سىيرىغاندا يىر
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "تېزلەتمىدە يىراق يېقىنلىق نىسبىتىنى تىزگىنلەيدۇ"
+
+#~ msgid "Use Gestures"
+#~ msgstr "قول ئىشارىتى ئىشلەت"
+
+#~ msgid "Ask for Confirmation for a gesture"
+#~ msgstr "قول ئىشارىتىنى جەزملەشنى سورايدۇ"
+
+#~ msgid "Confirm access to the Keyboard"
+#~ msgstr "ھەرپتاختا زىيارىتىنى جەزملەيدۇ"
+
+#~ msgid "Use a timeout delay"
+#~ msgstr "مۆھلىتىنى كېچىكتۈرۈشنى ئىشلىتىدۇ"
+
+#~ msgid "Delay for timeout"
+#~ msgstr "مۆھلىتىنى كېچىكتۈرۈش"
+
+#~ msgid "Use a beep for access"
+#~ msgstr "قولايلىق ئىقتىدارغا ئاۋاز ئەسكەرتىشى ئىشلىتىدۇ"
+
+#~ msgctxt "@option:check"
+#~ msgid "Activation shortcuts:"
+#~ msgstr "ئاكتىپلاش تېزلەتمىسى:"
+
+#~ msgctxt "Enable activation shortcuts"
+#~ msgid "Enable"
+#~ msgstr "قوزغات"
+
+#~ msgctxt "@label"
+#~ msgid "Press Shift 5 times to enable Sticky Keys"
+#~ msgstr "Shift كۇنۇپكىسى 5 قېتىم بېسىلسا يېپىشقاق كۇنۇپكىنى قوزغىتىدۇ"
+
+#~ msgctxt "@label"
+#~ msgid "Hold Shift for 8 seconds to enable Slow Keys"
+#~ msgstr "Shift كۇنۇپكىسى 8 سېكۇنت بېسىپ تۇرۇلسا ئاستا كۇنۇپكىنى قوزغىتىدۇ"
+
+#~ msgctxt "@option:check"
+#~ msgid "Disable sticky and slow keys after:"
+#~ msgstr "مۇئەييەن ۋاقىت ئىشلىتىلمىسا يېپىشقاق ۋە ئاستا كۇنۇپكا چەكلىنىدۇ:"
+
+#~ msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
+#~ msgid "%1 min"
+#~ msgid_plural "%1 min"
+#~ msgstr[0] "%1 مىنۇت"
+
+#~ msgctxt "short for minute(s)"
+#~ msgid "min"
+#~ msgid_plural "min"
+#~ msgstr[0] "مىنۇت"
+
+#~ msgctxt "@title:group for checkbox group"
+#~ msgid "When a shortcut is used:"
+#~ msgstr "تېزلەتمە ئىشلىتىلگەندە:"
+
+#~ msgctxt "@option:check when shortcut used"
+#~ msgid "Display a confirmation dialog"
+#~ msgstr "جەزملەش سۆزلەشكۈسىنى كۆرسىتىدۇ"
+
+#~ msgctxt "@option:check when shortcut used"
+#~ msgid "Ring the system bell"
+#~ msgstr "سىستېما قوڭغۇرىقى جىرىڭشىيدۇ"
+
+#~ msgctxt "@option:check when shortcut used"
+#~ msgid "Show a notification"
+#~ msgstr "ئۇقتۇرۇش كۆرسىتىدۇ"
+
+#~ msgctxt "@action:button opens Notifications kcm"
+#~ msgid "Configure Notifications…"
+#~ msgstr "ئۇقتۇرۇش سەپلە…"
+
+#~ msgctxt "@title Category name in sidebar"
+#~ msgid "Activation Shortcuts"
+#~ msgstr "ئاكتىپلاش تېزلەتمىسى"
 
 #~ msgctxt "@label:listbox"
 #~ msgid "Pointer appearance:"

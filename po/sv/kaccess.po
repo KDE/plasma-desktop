@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-09 00:45+0000\n"
+"POT-Creation-Date: 2026-06-16 00:47+0000\n"
 "PO-Revision-Date: 2020-11-04 08:13+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -28,431 +28,16 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "per.lindstrom@osd.privataccess.nu"
 
-#: kaccess.cpp:65
-msgid ""
-"The Shift key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Skifttangenten har låsts och är nu aktiverad för alla följande "
-"tangentnertryckningar."
-
-#: kaccess.cpp:66
-msgid "The Shift key is now active."
-msgstr "Skifttangenten är nu aktiverad."
-
-#: kaccess.cpp:67
-msgid "The Shift key is now inactive."
-msgstr "Skifttangenten är nu inaktiverad."
-
-#: kaccess.cpp:71
-msgid ""
-"The Control key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Ctrl-tangenten har låsts och är nu aktiverad för alla följande "
-"tangentnertryckningar."
-
-#: kaccess.cpp:72
-msgid "The Control key is now active."
-msgstr "Ctrl-tangenten är nu aktiverad."
-
-#: kaccess.cpp:73
-msgid "The Control key is now inactive."
-msgstr "Ctrl-tangenten är nu inaktiverad."
-
-#: kaccess.cpp:77
-msgid ""
-"The Alt key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Alt-tangenten har låsts och är nu aktiverad för alla följande "
-"tangentnertryckningar."
-
-#: kaccess.cpp:78
-msgid "The Alt key is now active."
-msgstr "Alt-tangenten är nu aktiverad."
-
-#: kaccess.cpp:79
-msgid "The Alt key is now inactive."
-msgstr "Alt-tangenten är nu inaktiverad."
-
-#: kaccess.cpp:83
-msgid ""
-"The Win key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Win-tangenten har låsts och är nu aktiverad för alla följande "
-"tangentnertryckningar."
-
-#: kaccess.cpp:84
-msgid "The Win key is now active."
-msgstr "Win-tangenten är nu aktiverad."
-
-#: kaccess.cpp:85
-msgid "The Win key is now inactive."
-msgstr "Win-tangenten är nu inaktiverad."
-
-#: kaccess.cpp:89
-msgid ""
-"The Meta key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Meta-tangenten har låsts och är nu aktiverad för alla följande "
-"tangentnertryckningar."
-
-#: kaccess.cpp:90
-msgid "The Meta key is now active."
-msgstr "Meta-tangenten är nu aktiverad."
-
-#: kaccess.cpp:91
-msgid "The Meta key is now inactive."
-msgstr "Meta-tangenten är nu inaktiverad."
-
-#: kaccess.cpp:95
-msgid ""
-"The Super key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Super-tangenten har låsts och är nu aktiverad för alla följande "
-"tangentnertryckningar."
-
-#: kaccess.cpp:96
-msgid "The Super key is now active."
-msgstr "Super-tangenten är nu aktiverad."
-
-#: kaccess.cpp:97
-msgid "The Super key is now inactive."
-msgstr "Super-tangenten är nu inaktiverad."
-
-#: kaccess.cpp:101
-msgid ""
-"The Hyper key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Hyper-tangenten har låsts och är nu aktiverad för alla följande "
-"tangentnertryckningar."
-
-#: kaccess.cpp:102
-msgid "The Hyper key is now active."
-msgstr "Hyper-tangenten är nu aktiverad."
-
-#: kaccess.cpp:103
-msgid "The Hyper key is now inactive."
-msgstr "Hyper-tangenten är nu inaktiverad."
-
-#: kaccess.cpp:107
-msgid ""
-"The Alt Graph key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Alt Gr-tangenten har låsts och är nu aktiverad för alla följande "
-"tangentnertryckningar."
-
-#: kaccess.cpp:108
-msgid "The Alt Graph key is now active."
-msgstr "Alt Gr-tangenten är nu aktiverad."
-
-#: kaccess.cpp:109
-msgid "The Alt Graph key is now inactive."
-msgstr "Alt Gr-tangenten är nu inaktiverad."
-
-#: kaccess.cpp:110
-msgid "The Num Lock key has been activated."
-msgstr "Num Lock-tangenten har aktiverats."
-
-#: kaccess.cpp:110
-msgid "The Num Lock key is now inactive."
-msgstr "Num Lock-tangenten är nu inaktiverad."
-
-#: kaccess.cpp:111
-msgid "The Caps Lock key has been activated."
-msgstr "Caps Lock-tangenten har aktiverats."
-
-#: kaccess.cpp:111
-msgid "The Caps Lock key is now inactive."
-msgstr "Caps Lock-tangenten är nu inaktiverad."
-
-#: kaccess.cpp:112
-msgid "The Scroll Lock key has been activated."
-msgstr "Scroll Lock-tangenten har aktiverats."
-
-#: kaccess.cpp:112
-msgid "The Scroll Lock key is now inactive."
-msgstr "Scroll Lock-tangenten är nu inaktiverad."
-
-#: kaccess.cpp:144
+#: kaccess.cpp:36
 #, kde-format
 msgid "Toggle Screen Reader On and Off"
 msgstr "Stäng av eller sätt på skärmläsare"
 
-#: kaccess.cpp:146
+#: kaccess.cpp:38
 #, kde-format
 msgctxt "Name for kaccess shortcuts category"
 msgid "Accessibility"
 msgstr "Handikappstöd"
-
-#: kaccess.cpp:538
-#, kde-format
-msgid "AltGraph"
-msgstr "Alt Gr"
-
-#: kaccess.cpp:540
-#, kde-format
-msgid "Hyper"
-msgstr "Hyper"
-
-#: kaccess.cpp:542
-#, kde-format
-msgid "Super"
-msgstr "Super"
-
-#: kaccess.cpp:544
-#, kde-format
-msgid "Meta"
-msgstr "Meta"
-
-#: kaccess.cpp:561
-#, kde-format
-msgid "Warning"
-msgstr "Varning"
-
-#: kaccess.cpp:589
-#, kde-format
-msgid "&When a gesture was used:"
-msgstr "&När en gest användes:"
-
-#: kaccess.cpp:595
-#, kde-format
-msgid "Change Settings Without Asking"
-msgstr "Ändra inställningar utan att fråga"
-
-#: kaccess.cpp:596
-#, kde-format
-msgid "Show This Confirmation Dialog"
-msgstr "Visa den här bekräftelsedialogrutan"
-
-#: kaccess.cpp:597
-#, kde-format
-msgid "Deactivate All AccessX Features & Gestures"
-msgstr "Inaktivera alla Access X-funktioner och gester"
-
-#: kaccess.cpp:640 kaccess.cpp:642
-#, kde-format
-msgid "Slow keys"
-msgstr "Långsamma tangenter"
-
-#: kaccess.cpp:645 kaccess.cpp:647
-#, kde-format
-msgid "Bounce keys"
-msgstr "Studsande tangenter"
-
-#: kaccess.cpp:650 kaccess.cpp:652
-#, kde-format
-msgid "Sticky keys"
-msgstr "Klistriga tangenter"
-
-#: kaccess.cpp:655 kaccess.cpp:657
-#, kde-format
-msgid "Mouse keys"
-msgstr "Mustangenter"
-
-#: kaccess.cpp:664
-#, kde-format
-msgid "Do you really want to deactivate \"%1\"?"
-msgstr "Vill du verkligen inaktivera \"%1\"?"
-
-#: kaccess.cpp:667
-#, kde-format
-msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
-msgstr "Vill du verkligen inaktivera \"%1\" och \"%2\"?"
-
-#: kaccess.cpp:671
-#, kde-format
-msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
-msgstr "Vill du verkligen inaktivera \"%1\", \"%2\" och \"%3\"?"
-
-#: kaccess.cpp:674
-#, kde-format
-msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr "Vill du verkligen inaktivera \"%1\", \"%2\", \"%3\" och \"%4\"?"
-
-#: kaccess.cpp:685
-#, kde-format
-msgid "Do you really want to activate \"%1\"?"
-msgstr "Vill du verkligen aktivera \"%1\"?"
-
-#: kaccess.cpp:688
-#, kde-format
-msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
-msgstr "Vill du verkligen aktivera \"%1\" och inaktivera \"%2\"?"
-
-#: kaccess.cpp:691
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
-msgstr "Vill du verkligen aktivera \"%1\" och inaktivera \"%2\" och \"%3\"?"
-
-#: kaccess.cpp:697
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
-"\"%4\"?"
-msgstr ""
-"Vill du verkligen aktivera \"%1\" och inaktivera \"%2\", \"%3\" och \"%4\"?"
-
-#: kaccess.cpp:708
-#, kde-format
-msgid "Do you really want to activate \"%1\" and \"%2\"?"
-msgstr "Vill du verkligen aktivera \"%1\" och \"%2\"?"
-
-#: kaccess.cpp:711
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
-msgstr "Vill du verkligen aktivera \"%1\" och \"%2\" och inaktivera \"%3\"?"
-
-#: kaccess.cpp:717
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
-"and \"%4\"?"
-msgstr ""
-"Vill du verkligen aktivera \"%1\" och \"%2\" och inaktivera \"%3\" och "
-"\"%4\"?"
-
-#: kaccess.cpp:728
-#, kde-format
-msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
-msgstr "Vill du verkligen aktivera \"%1\", \"%2\" och \"%3\"?"
-
-#: kaccess.cpp:731
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
-"\"%4\"?"
-msgstr ""
-"Vill du verkligen aktivera \"%1\", \"%2\" och \"%3\" och inaktivera \"%4\"?"
-
-#: kaccess.cpp:740
-#, kde-format
-msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr "Vill du verkligen aktivera \"%1\", \"%2\", \"%3\" och \"%4\"?"
-
-#: kaccess.cpp:749
-#, kde-format
-msgid "An application has requested to change this setting."
-msgstr "Ett program har begärt att den här inställningen ska ändras."
-
-#: kaccess.cpp:753
-#, kde-format
-msgid ""
-"You held down the Shift key for 8 seconds or an application has requested to "
-"change this setting."
-msgstr ""
-"Du har hållit nere skifttangenten under 8 sekunder, eller har ett program "
-"begärt att få ändra inställningen."
-
-#: kaccess.cpp:755
-#, kde-format
-msgid ""
-"You pressed the Shift key 5 consecutive times or an application has "
-"requested to change this setting."
-msgstr ""
-"Du tryckte på skifttangenten 5 gånger i följd, eller har ett program begärt "
-"att få ändra inställningen."
-
-#: kaccess.cpp:759
-#, kde-format
-msgid "You pressed %1 or an application has requested to change this setting."
-msgstr ""
-"Du tryckte på %1, eller har ett program begärt att få ändra inställningen."
-
-#: kaccess.cpp:764
-#, kde-format
-msgid ""
-"An application has requested to change these settings, or you used a "
-"combination of several keyboard gestures."
-msgstr ""
-"Ett program har begärt att få ändra inställningarna, eller har du använt en "
-"kombination av flera tangentbordsgester."
-
-#: kaccess.cpp:766
-#, kde-format
-msgid "An application has requested to change these settings."
-msgstr "Ett program har begärt att få ändra inställningarna."
-
-#: kaccess.cpp:771
-#, kde-format
-msgid ""
-"These AccessX settings are needed for some users with motion impairments and "
-"can be configured in the KDE System Settings. You can also turn them on and "
-"off with standardized keyboard gestures.\n"
-"\n"
-"If you do not need them, you can select \"Deactivate all AccessX features "
-"and gestures\"."
-msgstr ""
-"Följande Access X-inställningar behövs av vissa användare med rörelsehinder, "
-"och kan ställas in i KDE:s systeminställningar. Du kan också aktivera eller "
-"inaktivera dem med standardiserade tangentbordsgester.\n"
-"\n"
-"Om du inte behöver dem, kan du välja \"Inaktivera alla Access X-funktioner "
-"och gester\"."
-
-#: kaccess.cpp:792
-#, kde-format
-msgid ""
-"Slow keys has been enabled. From now on, you need to press each key for a "
-"certain length of time before it gets accepted."
-msgstr ""
-"Långsamma tangenter har aktiverats. Från och med nu, måste du hålla nere "
-"varje tangent en viss tid innan den accepteras."
-
-#: kaccess.cpp:794
-#, kde-format
-msgid "Slow keys has been disabled."
-msgstr "Långsamma tangenter har inaktiverats."
-
-#: kaccess.cpp:798
-#, kde-format
-msgid ""
-"Bounce keys has been enabled. From now on, each key will be blocked for a "
-"certain length of time after it was used."
-msgstr ""
-"Studsande tangenter har aktiverats. Från och med nu, blockeras varje tangent "
-"en viss tid efter den använts."
-
-#: kaccess.cpp:800
-#, kde-format
-msgid "Bounce keys has been disabled."
-msgstr "Studsande tangenter har inaktiverats."
-
-#: kaccess.cpp:804
-#, kde-format
-msgid ""
-"Sticky keys has been enabled. From now on, modifier keys will stay latched "
-"after you have released them."
-msgstr ""
-"Klistriga tangenter har aktiverats. Från och med nu, förblir väljartangenter "
-"aktiva efter du har släppt dem."
-
-#: kaccess.cpp:806
-#, kde-format
-msgid "Sticky keys has been disabled."
-msgstr "Klistriga tangenter har inaktiverats."
-
-#: kaccess.cpp:810
-#, kde-format
-msgid ""
-"Mouse keys has been enabled. From now on, you can use the number pad of your "
-"keyboard in order to control the mouse."
-msgstr ""
-"Mustangenter har aktiverats. Från och med nu, kan du använda "
-"nummertangenterna på tangentbordet för att styra musen."
-
-#: kaccess.cpp:812
-#, kde-format
-msgid "Mouse keys has been disabled."
-msgstr "Mustangenter har inaktiverats."
 
 #: main.cpp:40
 #, kde-format
@@ -473,6 +58,311 @@ msgstr "Matthias Hoelzer-Kluepfel"
 #, kde-format
 msgid "Author"
 msgstr "Upphovsman"
+
+#~ msgid ""
+#~ "The Shift key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Skifttangenten har låsts och är nu aktiverad för alla följande "
+#~ "tangentnertryckningar."
+
+#~ msgid "The Shift key is now active."
+#~ msgstr "Skifttangenten är nu aktiverad."
+
+#~ msgid "The Shift key is now inactive."
+#~ msgstr "Skifttangenten är nu inaktiverad."
+
+#~ msgid ""
+#~ "The Control key has been locked and is now active for all of the "
+#~ "following keypresses."
+#~ msgstr ""
+#~ "Ctrl-tangenten har låsts och är nu aktiverad för alla följande "
+#~ "tangentnertryckningar."
+
+#~ msgid "The Control key is now active."
+#~ msgstr "Ctrl-tangenten är nu aktiverad."
+
+#~ msgid "The Control key is now inactive."
+#~ msgstr "Ctrl-tangenten är nu inaktiverad."
+
+#~ msgid ""
+#~ "The Alt key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Alt-tangenten har låsts och är nu aktiverad för alla följande "
+#~ "tangentnertryckningar."
+
+#~ msgid "The Alt key is now active."
+#~ msgstr "Alt-tangenten är nu aktiverad."
+
+#~ msgid "The Alt key is now inactive."
+#~ msgstr "Alt-tangenten är nu inaktiverad."
+
+#~ msgid ""
+#~ "The Win key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Win-tangenten har låsts och är nu aktiverad för alla följande "
+#~ "tangentnertryckningar."
+
+#~ msgid "The Win key is now active."
+#~ msgstr "Win-tangenten är nu aktiverad."
+
+#~ msgid "The Win key is now inactive."
+#~ msgstr "Win-tangenten är nu inaktiverad."
+
+#~ msgid ""
+#~ "The Meta key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Meta-tangenten har låsts och är nu aktiverad för alla följande "
+#~ "tangentnertryckningar."
+
+#~ msgid "The Meta key is now active."
+#~ msgstr "Meta-tangenten är nu aktiverad."
+
+#~ msgid "The Meta key is now inactive."
+#~ msgstr "Meta-tangenten är nu inaktiverad."
+
+#~ msgid ""
+#~ "The Super key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Super-tangenten har låsts och är nu aktiverad för alla följande "
+#~ "tangentnertryckningar."
+
+#~ msgid "The Super key is now active."
+#~ msgstr "Super-tangenten är nu aktiverad."
+
+#~ msgid "The Super key is now inactive."
+#~ msgstr "Super-tangenten är nu inaktiverad."
+
+#~ msgid ""
+#~ "The Hyper key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Hyper-tangenten har låsts och är nu aktiverad för alla följande "
+#~ "tangentnertryckningar."
+
+#~ msgid "The Hyper key is now active."
+#~ msgstr "Hyper-tangenten är nu aktiverad."
+
+#~ msgid "The Hyper key is now inactive."
+#~ msgstr "Hyper-tangenten är nu inaktiverad."
+
+#~ msgid ""
+#~ "The Alt Graph key has been locked and is now active for all of the "
+#~ "following keypresses."
+#~ msgstr ""
+#~ "Alt Gr-tangenten har låsts och är nu aktiverad för alla följande "
+#~ "tangentnertryckningar."
+
+#~ msgid "The Alt Graph key is now active."
+#~ msgstr "Alt Gr-tangenten är nu aktiverad."
+
+#~ msgid "The Alt Graph key is now inactive."
+#~ msgstr "Alt Gr-tangenten är nu inaktiverad."
+
+#~ msgid "The Num Lock key has been activated."
+#~ msgstr "Num Lock-tangenten har aktiverats."
+
+#~ msgid "The Num Lock key is now inactive."
+#~ msgstr "Num Lock-tangenten är nu inaktiverad."
+
+#~ msgid "The Caps Lock key has been activated."
+#~ msgstr "Caps Lock-tangenten har aktiverats."
+
+#~ msgid "The Caps Lock key is now inactive."
+#~ msgstr "Caps Lock-tangenten är nu inaktiverad."
+
+#~ msgid "The Scroll Lock key has been activated."
+#~ msgstr "Scroll Lock-tangenten har aktiverats."
+
+#~ msgid "The Scroll Lock key is now inactive."
+#~ msgstr "Scroll Lock-tangenten är nu inaktiverad."
+
+#~ msgid "AltGraph"
+#~ msgstr "Alt Gr"
+
+#~ msgid "Hyper"
+#~ msgstr "Hyper"
+
+#~ msgid "Super"
+#~ msgstr "Super"
+
+#~ msgid "Meta"
+#~ msgstr "Meta"
+
+#~ msgid "Warning"
+#~ msgstr "Varning"
+
+#~ msgid "&When a gesture was used:"
+#~ msgstr "&När en gest användes:"
+
+#~ msgid "Change Settings Without Asking"
+#~ msgstr "Ändra inställningar utan att fråga"
+
+#~ msgid "Show This Confirmation Dialog"
+#~ msgstr "Visa den här bekräftelsedialogrutan"
+
+#~ msgid "Deactivate All AccessX Features & Gestures"
+#~ msgstr "Inaktivera alla Access X-funktioner och gester"
+
+#~ msgid "Slow keys"
+#~ msgstr "Långsamma tangenter"
+
+#~ msgid "Bounce keys"
+#~ msgstr "Studsande tangenter"
+
+#~ msgid "Sticky keys"
+#~ msgstr "Klistriga tangenter"
+
+#~ msgid "Mouse keys"
+#~ msgstr "Mustangenter"
+
+#~ msgid "Do you really want to deactivate \"%1\"?"
+#~ msgstr "Vill du verkligen inaktivera \"%1\"?"
+
+#~ msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
+#~ msgstr "Vill du verkligen inaktivera \"%1\" och \"%2\"?"
+
+#~ msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
+#~ msgstr "Vill du verkligen inaktivera \"%1\", \"%2\" och \"%3\"?"
+
+#~ msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+#~ msgstr "Vill du verkligen inaktivera \"%1\", \"%2\", \"%3\" och \"%4\"?"
+
+#~ msgid "Do you really want to activate \"%1\"?"
+#~ msgstr "Vill du verkligen aktivera \"%1\"?"
+
+#~ msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
+#~ msgstr "Vill du verkligen aktivera \"%1\" och inaktivera \"%2\"?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
+#~ msgstr "Vill du verkligen aktivera \"%1\" och inaktivera \"%2\" och \"%3\"?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" "
+#~ "and \"%4\"?"
+#~ msgstr ""
+#~ "Vill du verkligen aktivera \"%1\" och inaktivera \"%2\", \"%3\" och "
+#~ "\"%4\"?"
+
+#~ msgid "Do you really want to activate \"%1\" and \"%2\"?"
+#~ msgstr "Vill du verkligen aktivera \"%1\" och \"%2\"?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
+#~ msgstr "Vill du verkligen aktivera \"%1\" och \"%2\" och inaktivera \"%3\"?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\", and \"%2\" and to deactivate "
+#~ "\"%3\" and \"%4\"?"
+#~ msgstr ""
+#~ "Vill du verkligen aktivera \"%1\" och \"%2\" och inaktivera \"%3\" och "
+#~ "\"%4\"?"
+
+#~ msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
+#~ msgstr "Vill du verkligen aktivera \"%1\", \"%2\" och \"%3\"?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\", \"%2\" and \"%3\" and to "
+#~ "deactivate \"%4\"?"
+#~ msgstr ""
+#~ "Vill du verkligen aktivera \"%1\", \"%2\" och \"%3\" och inaktivera "
+#~ "\"%4\"?"
+
+#~ msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+#~ msgstr "Vill du verkligen aktivera \"%1\", \"%2\", \"%3\" och \"%4\"?"
+
+#~ msgid "An application has requested to change this setting."
+#~ msgstr "Ett program har begärt att den här inställningen ska ändras."
+
+#~ msgid ""
+#~ "You held down the Shift key for 8 seconds or an application has requested "
+#~ "to change this setting."
+#~ msgstr ""
+#~ "Du har hållit nere skifttangenten under 8 sekunder, eller har ett program "
+#~ "begärt att få ändra inställningen."
+
+#~ msgid ""
+#~ "You pressed the Shift key 5 consecutive times or an application has "
+#~ "requested to change this setting."
+#~ msgstr ""
+#~ "Du tryckte på skifttangenten 5 gånger i följd, eller har ett program "
+#~ "begärt att få ändra inställningen."
+
+#~ msgid ""
+#~ "You pressed %1 or an application has requested to change this setting."
+#~ msgstr ""
+#~ "Du tryckte på %1, eller har ett program begärt att få ändra inställningen."
+
+#~ msgid ""
+#~ "An application has requested to change these settings, or you used a "
+#~ "combination of several keyboard gestures."
+#~ msgstr ""
+#~ "Ett program har begärt att få ändra inställningarna, eller har du använt "
+#~ "en kombination av flera tangentbordsgester."
+
+#~ msgid "An application has requested to change these settings."
+#~ msgstr "Ett program har begärt att få ändra inställningarna."
+
+#~ msgid ""
+#~ "These AccessX settings are needed for some users with motion impairments "
+#~ "and can be configured in the KDE System Settings. You can also turn them "
+#~ "on and off with standardized keyboard gestures.\n"
+#~ "\n"
+#~ "If you do not need them, you can select \"Deactivate all AccessX features "
+#~ "and gestures\"."
+#~ msgstr ""
+#~ "Följande Access X-inställningar behövs av vissa användare med "
+#~ "rörelsehinder, och kan ställas in i KDE:s systeminställningar. Du kan "
+#~ "också aktivera eller inaktivera dem med standardiserade "
+#~ "tangentbordsgester.\n"
+#~ "\n"
+#~ "Om du inte behöver dem, kan du välja \"Inaktivera alla Access X-"
+#~ "funktioner och gester\"."
+
+#~ msgid ""
+#~ "Slow keys has been enabled. From now on, you need to press each key for a "
+#~ "certain length of time before it gets accepted."
+#~ msgstr ""
+#~ "Långsamma tangenter har aktiverats. Från och med nu, måste du hålla nere "
+#~ "varje tangent en viss tid innan den accepteras."
+
+#~ msgid "Slow keys has been disabled."
+#~ msgstr "Långsamma tangenter har inaktiverats."
+
+#~ msgid ""
+#~ "Bounce keys has been enabled. From now on, each key will be blocked for a "
+#~ "certain length of time after it was used."
+#~ msgstr ""
+#~ "Studsande tangenter har aktiverats. Från och med nu, blockeras varje "
+#~ "tangent en viss tid efter den använts."
+
+#~ msgid "Bounce keys has been disabled."
+#~ msgstr "Studsande tangenter har inaktiverats."
+
+#~ msgid ""
+#~ "Sticky keys has been enabled. From now on, modifier keys will stay "
+#~ "latched after you have released them."
+#~ msgstr ""
+#~ "Klistriga tangenter har aktiverats. Från och med nu, förblir "
+#~ "väljartangenter aktiva efter du har släppt dem."
+
+#~ msgid "Sticky keys has been disabled."
+#~ msgstr "Klistriga tangenter har inaktiverats."
+
+#~ msgid ""
+#~ "Mouse keys has been enabled. From now on, you can use the number pad of "
+#~ "your keyboard in order to control the mouse."
+#~ msgstr ""
+#~ "Mustangenter har aktiverats. Från och med nu, kan du använda "
+#~ "nummertangenterna på tangentbordet för att styra musen."
+
+#~ msgid "Mouse keys has been disabled."
+#~ msgstr "Mustangenter har inaktiverats."
 
 #~ msgid "KDE Accessibility Tool"
 #~ msgstr "KDE-verktyg för handikappstöd"

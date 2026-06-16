@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-09 00:45+0000\n"
+"POT-Creation-Date: 2026-06-16 00:47+0000\n"
 "PO-Revision-Date: 2021-05-20 17:18+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -28,426 +28,16 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "phu.nguyen@kdemail.net,teppi82@gmail.com"
 
-#: kaccess.cpp:65
-msgid ""
-"The Shift key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Phím Shift đã được khoá và hiện đang hoạt động cho tất cả những lần nhấn "
-"phím sau."
-
-#: kaccess.cpp:66
-msgid "The Shift key is now active."
-msgstr "Phím Shift hiện đang hoạt động."
-
-#: kaccess.cpp:67
-msgid "The Shift key is now inactive."
-msgstr "Phím Shift hiện đang bất hoạt."
-
-#: kaccess.cpp:71
-msgid ""
-"The Control key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Phím Control đã được khoá và hiện đang hoạt động cho tất cả những lần nhấn "
-"phím sau."
-
-#: kaccess.cpp:72
-msgid "The Control key is now active."
-msgstr "Phím Control hiện đang hoạt động."
-
-#: kaccess.cpp:73
-msgid "The Control key is now inactive."
-msgstr "Phím Control hiện đang bất hoạt."
-
-#: kaccess.cpp:77
-msgid ""
-"The Alt key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Phím Alt đã được khoá và hiện đang hoạt động cho tất cả những lần nhấn phím "
-"sau."
-
-#: kaccess.cpp:78
-msgid "The Alt key is now active."
-msgstr "Phím Alt hiện đang hoạt động."
-
-#: kaccess.cpp:79
-msgid "The Alt key is now inactive."
-msgstr "Phím Alt hiện đang bất hoạt."
-
-#: kaccess.cpp:83
-msgid ""
-"The Win key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Phím Win đã được khoá và hiện đang hoạt động cho tất cả những lần nhấn phím "
-"sau."
-
-#: kaccess.cpp:84
-msgid "The Win key is now active."
-msgstr "Phím Win hiện đang hoạt động."
-
-#: kaccess.cpp:85
-msgid "The Win key is now inactive."
-msgstr "Phím Win hiện đang bất hoạt."
-
-#: kaccess.cpp:89
-msgid ""
-"The Meta key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Phím Meta đã được khoá và hiện đang hoạt động cho tất cả những lần nhấn phím "
-"sau."
-
-#: kaccess.cpp:90
-msgid "The Meta key is now active."
-msgstr "Phím Meta hiện đang hoạt động."
-
-#: kaccess.cpp:91
-msgid "The Meta key is now inactive."
-msgstr "Phím Meta hiện đang bất hoạt."
-
-#: kaccess.cpp:95
-msgid ""
-"The Super key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Phím Super đã được khoá và hiện đang hoạt động cho tất cả những lần nhấn "
-"phím sau."
-
-#: kaccess.cpp:96
-msgid "The Super key is now active."
-msgstr "Phím Super hiện đang hoạt động."
-
-#: kaccess.cpp:97
-msgid "The Super key is now inactive."
-msgstr "Phím Super hiện đang bất hoạt."
-
-#: kaccess.cpp:101
-msgid ""
-"The Hyper key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Phím Hyper đã được khoá và hiện đang hoạt động cho tất cả những lần nhấn "
-"phím sau."
-
-#: kaccess.cpp:102
-msgid "The Hyper key is now active."
-msgstr "Phím Hyper hiện đang hoạt động."
-
-#: kaccess.cpp:103
-msgid "The Hyper key is now inactive."
-msgstr "Phím Hyper hiện đang bất hoạt."
-
-#: kaccess.cpp:107
-msgid ""
-"The Alt Graph key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Phím Alt Graph đã được khoá và hiện đang hoạt động cho tất cả những lần nhấn "
-"phím sau."
-
-#: kaccess.cpp:108
-msgid "The Alt Graph key is now active."
-msgstr "Phím Alt Graph hiện đang hoạt động."
-
-#: kaccess.cpp:109
-msgid "The Alt Graph key is now inactive."
-msgstr "Phím Alt Graph hiện đang bất hoạt."
-
-#: kaccess.cpp:110
-msgid "The Num Lock key has been activated."
-msgstr "Phím Num Lock đã được bật."
-
-#: kaccess.cpp:110
-msgid "The Num Lock key is now inactive."
-msgstr "Phím Num Lock hiện đang bất hoạt."
-
-#: kaccess.cpp:111
-msgid "The Caps Lock key has been activated."
-msgstr "Phím Caps Lock đã được bật."
-
-#: kaccess.cpp:111
-msgid "The Caps Lock key is now inactive."
-msgstr "Phím Caps Lock hiện đang bất hoạt."
-
-#: kaccess.cpp:112
-msgid "The Scroll Lock key has been activated."
-msgstr "Phím Scroll Lock đã được bật."
-
-#: kaccess.cpp:112
-msgid "The Scroll Lock key is now inactive."
-msgstr "Phím Scroll Lock hiện đang bất hoạt."
-
-#: kaccess.cpp:144
+#: kaccess.cpp:36
 #, kde-format
 msgid "Toggle Screen Reader On and Off"
 msgstr "Bật và tắt trình đọc màn hình"
 
-#: kaccess.cpp:146
+#: kaccess.cpp:38
 #, kde-format
 msgctxt "Name for kaccess shortcuts category"
 msgid "Accessibility"
 msgstr "Hỗ trợ truy cập"
-
-#: kaccess.cpp:538
-#, kde-format
-msgid "AltGraph"
-msgstr "AltGraph"
-
-#: kaccess.cpp:540
-#, kde-format
-msgid "Hyper"
-msgstr "Hyper"
-
-#: kaccess.cpp:542
-#, kde-format
-msgid "Super"
-msgstr "Super"
-
-#: kaccess.cpp:544
-#, kde-format
-msgid "Meta"
-msgstr "Meta"
-
-#: kaccess.cpp:561
-#, kde-format
-msgid "Warning"
-msgstr "Cảnh báo"
-
-#: kaccess.cpp:589
-#, kde-format
-msgid "&When a gesture was used:"
-msgstr "&Khi một động tác được dùng:"
-
-#: kaccess.cpp:595
-#, kde-format
-msgid "Change Settings Without Asking"
-msgstr "Thay đổi thiết lập không cần hỏi"
-
-#: kaccess.cpp:596
-#, kde-format
-msgid "Show This Confirmation Dialog"
-msgstr "Hiện hộp thoại xác nhận này"
-
-#: kaccess.cpp:597
-#, kde-format
-msgid "Deactivate All AccessX Features & Gestures"
-msgstr "Tắt tất cả các tính năng & động tác AccessX"
-
-#: kaccess.cpp:640 kaccess.cpp:642
-#, kde-format
-msgid "Slow keys"
-msgstr "Phím chậm"
-
-#: kaccess.cpp:645 kaccess.cpp:647
-#, kde-format
-msgid "Bounce keys"
-msgstr "Phím nảy"
-
-#: kaccess.cpp:650 kaccess.cpp:652
-#, kde-format
-msgid "Sticky keys"
-msgstr "Phím dính"
-
-#: kaccess.cpp:655 kaccess.cpp:657
-#, kde-format
-msgid "Mouse keys"
-msgstr "Phím chuột"
-
-#: kaccess.cpp:664
-#, kde-format
-msgid "Do you really want to deactivate \"%1\"?"
-msgstr "Bạn có thật sự muốn tắt \"%1\"?"
-
-#: kaccess.cpp:667
-#, kde-format
-msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
-msgstr "Bạn có thật sự muốn tắt \"%1\" và \"%2\"?"
-
-#: kaccess.cpp:671
-#, kde-format
-msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
-msgstr "Bạn có thật sự muốn tắt \"%1\", \"%2\" và \"%3\"?"
-
-#: kaccess.cpp:674
-#, kde-format
-msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr "Bạn có thật sự muốn tắt \"%1\", \"%2\"; \"%3\" và \"%4\"?"
-
-#: kaccess.cpp:685
-#, kde-format
-msgid "Do you really want to activate \"%1\"?"
-msgstr "Bạn có thật sự muốn bật \"%1\"?"
-
-#: kaccess.cpp:688
-#, kde-format
-msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
-msgstr "Bạn có thật sự muốn bật \"%1\" và tắt \"%2\"?"
-
-#: kaccess.cpp:691
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
-msgstr "Bạn có thật sự muốn bật \"%1\" và tắt \"%2\" và \"%3\"?"
-
-#: kaccess.cpp:697
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
-"\"%4\"?"
-msgstr "Bạn có thật sự muốn bật \"%1\" và tắt \"%2\", \"%3\" và \"%4\"?"
-
-#: kaccess.cpp:708
-#, kde-format
-msgid "Do you really want to activate \"%1\" and \"%2\"?"
-msgstr "Bạn có thật sự muốn bật \"%1\" và \"%2\"?"
-
-#: kaccess.cpp:711
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
-msgstr "Bạn có thật sự muốn bật \"%1\" và \"%2\" và tắt \"%3\"?"
-
-#: kaccess.cpp:717
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
-"and \"%4\"?"
-msgstr "Bạn có thật sự muốn bật \"%1\", \"%2\" và tắt \"%3\", \"%4\"?"
-
-#: kaccess.cpp:728
-#, kde-format
-msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
-msgstr "Bạn có thật sự muốn bật \"%1\", \"%2\" và \"%3\"?"
-
-#: kaccess.cpp:731
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
-"\"%4\"?"
-msgstr "Bạn có thật sự muốn bật \"%1\", \"%2\" và \"%3\" và tắt \"%4\"?"
-
-#: kaccess.cpp:740
-#, kde-format
-msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr "Bạn có thật sự muốn bật \"%1\", \"%2\", \"%3\" và \"%4\"?"
-
-#: kaccess.cpp:749
-#, kde-format
-msgid "An application has requested to change this setting."
-msgstr "Một ứng dụng đã yêu cầu thay đổi thiết lập này."
-
-#: kaccess.cpp:753
-#, kde-format
-msgid ""
-"You held down the Shift key for 8 seconds or an application has requested to "
-"change this setting."
-msgstr ""
-"Bạn đã giữ phím Shift 8 giây hoặc một ứng dụng đã yêu cầu thay đổi thiết lập "
-"này."
-
-#: kaccess.cpp:755
-#, kde-format
-msgid ""
-"You pressed the Shift key 5 consecutive times or an application has "
-"requested to change this setting."
-msgstr ""
-"Bạn đã nhấn phím Shift 5 lần liên tiếp hoặc một ứng dụng đã yêu cầu thay đổi "
-"thiết lập này."
-
-#: kaccess.cpp:759
-#, kde-format
-msgid "You pressed %1 or an application has requested to change this setting."
-msgstr "Bạn đã nhấn %1 hoặc một ứng dụng đã yêu cầu thay đổi thiết lập này."
-
-#: kaccess.cpp:764
-#, kde-format
-msgid ""
-"An application has requested to change these settings, or you used a "
-"combination of several keyboard gestures."
-msgstr ""
-"Một ứng dụng đã yêu cầu thay đổi những thiết lập này, hoặc bạn đã dùng một "
-"tổ hợp vài động tác bàn phím."
-
-#: kaccess.cpp:766
-#, kde-format
-msgid "An application has requested to change these settings."
-msgstr "Một ứng dụng đã yêu cầu thay đổi những thiết lập này."
-
-#: kaccess.cpp:771
-#, kde-format
-msgid ""
-"These AccessX settings are needed for some users with motion impairments and "
-"can be configured in the KDE System Settings. You can also turn them on and "
-"off with standardized keyboard gestures.\n"
-"\n"
-"If you do not need them, you can select \"Deactivate all AccessX features "
-"and gestures\"."
-msgstr ""
-"Những thiết lập AccessX này cần cho một số người bị suy giảm khả năng cử "
-"động và có thể được cấu hình trong Thiết lập hệ thống KDE. Bạn cũng có thể "
-"bật và tắt chúng bằng các động tác bàn phím chuẩn hoá.\n"
-"\n"
-"Nếu không cần đến chúng, bạn có thể chọn \"Tắt tất cả các tính năng và động "
-"tác AccessX\"."
-
-#: kaccess.cpp:792
-#, kde-format
-msgid ""
-"Slow keys has been enabled. From now on, you need to press each key for a "
-"certain length of time before it gets accepted."
-msgstr ""
-"Phím chậm đã được bật. Từ giờ trở đi, bạn cần nhấn mỗi phím trong một khoảng "
-"thời gian nhất định trước khi nó được nhận."
-
-#: kaccess.cpp:794
-#, kde-format
-msgid "Slow keys has been disabled."
-msgstr "Phím chậm đã được tắt."
-
-#: kaccess.cpp:798
-#, kde-format
-msgid ""
-"Bounce keys has been enabled. From now on, each key will be blocked for a "
-"certain length of time after it was used."
-msgstr ""
-"Phím nảy đã được bật. Từ giờ trở đi, mỗi phím sẽ bị chặn trong một khoảng "
-"thời gian nhất định sau khi nó được bấm."
-
-#: kaccess.cpp:800
-#, kde-format
-msgid "Bounce keys has been disabled."
-msgstr "Phím nảy đã được tắt."
-
-#: kaccess.cpp:804
-#, kde-format
-msgid ""
-"Sticky keys has been enabled. From now on, modifier keys will stay latched "
-"after you have released them."
-msgstr ""
-"Phím dính đã được bật. Từ giờ trở đi, các phím bổ trợ sẽ được chốt giữ sau "
-"khi bạn đã nhấn chúng và thả tay."
-
-#: kaccess.cpp:806
-#, kde-format
-msgid "Sticky keys has been disabled."
-msgstr "Phím dính đã được tắt."
-
-#: kaccess.cpp:810
-#, kde-format
-msgid ""
-"Mouse keys has been enabled. From now on, you can use the number pad of your "
-"keyboard in order to control the mouse."
-msgstr ""
-"Phím chuột đã được bật. Từ giờ trở đi, bạn có thể dùng bàn phím số để điều "
-"khiển chuột."
-
-#: kaccess.cpp:812
-#, kde-format
-msgid "Mouse keys has been disabled."
-msgstr "Phím chuột đã được tắt."
 
 #: main.cpp:40
 #, kde-format
@@ -468,6 +58,303 @@ msgstr "Matthias Hoelzer-Kluepfel"
 #, kde-format
 msgid "Author"
 msgstr "Tác giả"
+
+#~ msgid ""
+#~ "The Shift key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Phím Shift đã được khoá và hiện đang hoạt động cho tất cả những lần nhấn "
+#~ "phím sau."
+
+#~ msgid "The Shift key is now active."
+#~ msgstr "Phím Shift hiện đang hoạt động."
+
+#~ msgid "The Shift key is now inactive."
+#~ msgstr "Phím Shift hiện đang bất hoạt."
+
+#~ msgid ""
+#~ "The Control key has been locked and is now active for all of the "
+#~ "following keypresses."
+#~ msgstr ""
+#~ "Phím Control đã được khoá và hiện đang hoạt động cho tất cả những lần "
+#~ "nhấn phím sau."
+
+#~ msgid "The Control key is now active."
+#~ msgstr "Phím Control hiện đang hoạt động."
+
+#~ msgid "The Control key is now inactive."
+#~ msgstr "Phím Control hiện đang bất hoạt."
+
+#~ msgid ""
+#~ "The Alt key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Phím Alt đã được khoá và hiện đang hoạt động cho tất cả những lần nhấn "
+#~ "phím sau."
+
+#~ msgid "The Alt key is now active."
+#~ msgstr "Phím Alt hiện đang hoạt động."
+
+#~ msgid "The Alt key is now inactive."
+#~ msgstr "Phím Alt hiện đang bất hoạt."
+
+#~ msgid ""
+#~ "The Win key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Phím Win đã được khoá và hiện đang hoạt động cho tất cả những lần nhấn "
+#~ "phím sau."
+
+#~ msgid "The Win key is now active."
+#~ msgstr "Phím Win hiện đang hoạt động."
+
+#~ msgid "The Win key is now inactive."
+#~ msgstr "Phím Win hiện đang bất hoạt."
+
+#~ msgid ""
+#~ "The Meta key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Phím Meta đã được khoá và hiện đang hoạt động cho tất cả những lần nhấn "
+#~ "phím sau."
+
+#~ msgid "The Meta key is now active."
+#~ msgstr "Phím Meta hiện đang hoạt động."
+
+#~ msgid "The Meta key is now inactive."
+#~ msgstr "Phím Meta hiện đang bất hoạt."
+
+#~ msgid ""
+#~ "The Super key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Phím Super đã được khoá và hiện đang hoạt động cho tất cả những lần nhấn "
+#~ "phím sau."
+
+#~ msgid "The Super key is now active."
+#~ msgstr "Phím Super hiện đang hoạt động."
+
+#~ msgid "The Super key is now inactive."
+#~ msgstr "Phím Super hiện đang bất hoạt."
+
+#~ msgid ""
+#~ "The Hyper key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Phím Hyper đã được khoá và hiện đang hoạt động cho tất cả những lần nhấn "
+#~ "phím sau."
+
+#~ msgid "The Hyper key is now active."
+#~ msgstr "Phím Hyper hiện đang hoạt động."
+
+#~ msgid "The Hyper key is now inactive."
+#~ msgstr "Phím Hyper hiện đang bất hoạt."
+
+#~ msgid ""
+#~ "The Alt Graph key has been locked and is now active for all of the "
+#~ "following keypresses."
+#~ msgstr ""
+#~ "Phím Alt Graph đã được khoá và hiện đang hoạt động cho tất cả những lần "
+#~ "nhấn phím sau."
+
+#~ msgid "The Alt Graph key is now active."
+#~ msgstr "Phím Alt Graph hiện đang hoạt động."
+
+#~ msgid "The Alt Graph key is now inactive."
+#~ msgstr "Phím Alt Graph hiện đang bất hoạt."
+
+#~ msgid "The Num Lock key has been activated."
+#~ msgstr "Phím Num Lock đã được bật."
+
+#~ msgid "The Num Lock key is now inactive."
+#~ msgstr "Phím Num Lock hiện đang bất hoạt."
+
+#~ msgid "The Caps Lock key has been activated."
+#~ msgstr "Phím Caps Lock đã được bật."
+
+#~ msgid "The Caps Lock key is now inactive."
+#~ msgstr "Phím Caps Lock hiện đang bất hoạt."
+
+#~ msgid "The Scroll Lock key has been activated."
+#~ msgstr "Phím Scroll Lock đã được bật."
+
+#~ msgid "The Scroll Lock key is now inactive."
+#~ msgstr "Phím Scroll Lock hiện đang bất hoạt."
+
+#~ msgid "AltGraph"
+#~ msgstr "AltGraph"
+
+#~ msgid "Hyper"
+#~ msgstr "Hyper"
+
+#~ msgid "Super"
+#~ msgstr "Super"
+
+#~ msgid "Meta"
+#~ msgstr "Meta"
+
+#~ msgid "Warning"
+#~ msgstr "Cảnh báo"
+
+#~ msgid "&When a gesture was used:"
+#~ msgstr "&Khi một động tác được dùng:"
+
+#~ msgid "Change Settings Without Asking"
+#~ msgstr "Thay đổi thiết lập không cần hỏi"
+
+#~ msgid "Show This Confirmation Dialog"
+#~ msgstr "Hiện hộp thoại xác nhận này"
+
+#~ msgid "Deactivate All AccessX Features & Gestures"
+#~ msgstr "Tắt tất cả các tính năng & động tác AccessX"
+
+#~ msgid "Slow keys"
+#~ msgstr "Phím chậm"
+
+#~ msgid "Bounce keys"
+#~ msgstr "Phím nảy"
+
+#~ msgid "Sticky keys"
+#~ msgstr "Phím dính"
+
+#~ msgid "Mouse keys"
+#~ msgstr "Phím chuột"
+
+#~ msgid "Do you really want to deactivate \"%1\"?"
+#~ msgstr "Bạn có thật sự muốn tắt \"%1\"?"
+
+#~ msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
+#~ msgstr "Bạn có thật sự muốn tắt \"%1\" và \"%2\"?"
+
+#~ msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
+#~ msgstr "Bạn có thật sự muốn tắt \"%1\", \"%2\" và \"%3\"?"
+
+#~ msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+#~ msgstr "Bạn có thật sự muốn tắt \"%1\", \"%2\"; \"%3\" và \"%4\"?"
+
+#~ msgid "Do you really want to activate \"%1\"?"
+#~ msgstr "Bạn có thật sự muốn bật \"%1\"?"
+
+#~ msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
+#~ msgstr "Bạn có thật sự muốn bật \"%1\" và tắt \"%2\"?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
+#~ msgstr "Bạn có thật sự muốn bật \"%1\" và tắt \"%2\" và \"%3\"?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" "
+#~ "and \"%4\"?"
+#~ msgstr "Bạn có thật sự muốn bật \"%1\" và tắt \"%2\", \"%3\" và \"%4\"?"
+
+#~ msgid "Do you really want to activate \"%1\" and \"%2\"?"
+#~ msgstr "Bạn có thật sự muốn bật \"%1\" và \"%2\"?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
+#~ msgstr "Bạn có thật sự muốn bật \"%1\" và \"%2\" và tắt \"%3\"?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\", and \"%2\" and to deactivate "
+#~ "\"%3\" and \"%4\"?"
+#~ msgstr "Bạn có thật sự muốn bật \"%1\", \"%2\" và tắt \"%3\", \"%4\"?"
+
+#~ msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
+#~ msgstr "Bạn có thật sự muốn bật \"%1\", \"%2\" và \"%3\"?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\", \"%2\" and \"%3\" and to "
+#~ "deactivate \"%4\"?"
+#~ msgstr "Bạn có thật sự muốn bật \"%1\", \"%2\" và \"%3\" và tắt \"%4\"?"
+
+#~ msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+#~ msgstr "Bạn có thật sự muốn bật \"%1\", \"%2\", \"%3\" và \"%4\"?"
+
+#~ msgid "An application has requested to change this setting."
+#~ msgstr "Một ứng dụng đã yêu cầu thay đổi thiết lập này."
+
+#~ msgid ""
+#~ "You held down the Shift key for 8 seconds or an application has requested "
+#~ "to change this setting."
+#~ msgstr ""
+#~ "Bạn đã giữ phím Shift 8 giây hoặc một ứng dụng đã yêu cầu thay đổi thiết "
+#~ "lập này."
+
+#~ msgid ""
+#~ "You pressed the Shift key 5 consecutive times or an application has "
+#~ "requested to change this setting."
+#~ msgstr ""
+#~ "Bạn đã nhấn phím Shift 5 lần liên tiếp hoặc một ứng dụng đã yêu cầu thay "
+#~ "đổi thiết lập này."
+
+#~ msgid ""
+#~ "You pressed %1 or an application has requested to change this setting."
+#~ msgstr "Bạn đã nhấn %1 hoặc một ứng dụng đã yêu cầu thay đổi thiết lập này."
+
+#~ msgid ""
+#~ "An application has requested to change these settings, or you used a "
+#~ "combination of several keyboard gestures."
+#~ msgstr ""
+#~ "Một ứng dụng đã yêu cầu thay đổi những thiết lập này, hoặc bạn đã dùng "
+#~ "một tổ hợp vài động tác bàn phím."
+
+#~ msgid "An application has requested to change these settings."
+#~ msgstr "Một ứng dụng đã yêu cầu thay đổi những thiết lập này."
+
+#~ msgid ""
+#~ "These AccessX settings are needed for some users with motion impairments "
+#~ "and can be configured in the KDE System Settings. You can also turn them "
+#~ "on and off with standardized keyboard gestures.\n"
+#~ "\n"
+#~ "If you do not need them, you can select \"Deactivate all AccessX features "
+#~ "and gestures\"."
+#~ msgstr ""
+#~ "Những thiết lập AccessX này cần cho một số người bị suy giảm khả năng cử "
+#~ "động và có thể được cấu hình trong Thiết lập hệ thống KDE. Bạn cũng có "
+#~ "thể bật và tắt chúng bằng các động tác bàn phím chuẩn hoá.\n"
+#~ "\n"
+#~ "Nếu không cần đến chúng, bạn có thể chọn \"Tắt tất cả các tính năng và "
+#~ "động tác AccessX\"."
+
+#~ msgid ""
+#~ "Slow keys has been enabled. From now on, you need to press each key for a "
+#~ "certain length of time before it gets accepted."
+#~ msgstr ""
+#~ "Phím chậm đã được bật. Từ giờ trở đi, bạn cần nhấn mỗi phím trong một "
+#~ "khoảng thời gian nhất định trước khi nó được nhận."
+
+#~ msgid "Slow keys has been disabled."
+#~ msgstr "Phím chậm đã được tắt."
+
+#~ msgid ""
+#~ "Bounce keys has been enabled. From now on, each key will be blocked for a "
+#~ "certain length of time after it was used."
+#~ msgstr ""
+#~ "Phím nảy đã được bật. Từ giờ trở đi, mỗi phím sẽ bị chặn trong một khoảng "
+#~ "thời gian nhất định sau khi nó được bấm."
+
+#~ msgid "Bounce keys has been disabled."
+#~ msgstr "Phím nảy đã được tắt."
+
+#~ msgid ""
+#~ "Sticky keys has been enabled. From now on, modifier keys will stay "
+#~ "latched after you have released them."
+#~ msgstr ""
+#~ "Phím dính đã được bật. Từ giờ trở đi, các phím bổ trợ sẽ được chốt giữ "
+#~ "sau khi bạn đã nhấn chúng và thả tay."
+
+#~ msgid "Sticky keys has been disabled."
+#~ msgstr "Phím dính đã được tắt."
+
+#~ msgid ""
+#~ "Mouse keys has been enabled. From now on, you can use the number pad of "
+#~ "your keyboard in order to control the mouse."
+#~ msgstr ""
+#~ "Phím chuột đã được bật. Từ giờ trở đi, bạn có thể dùng bàn phím số để "
+#~ "điều khiển chuột."
+
+#~ msgid "Mouse keys has been disabled."
+#~ msgstr "Phím chuột đã được tắt."
 
 #~ msgid "KDE Accessibility Tool"
 #~ msgstr "Công cụ hỗ trợ người tàn tật KDE"

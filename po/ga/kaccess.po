@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-09 00:45+0000\n"
+"POT-Creation-Date: 2026-06-16 00:47+0000\n"
 "PO-Revision-Date: 2026-01-21 12:09+0000\n"
 "Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
 "Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
@@ -30,447 +30,16 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "seoc@iolfree.ie,kscanne@gmail.com,aindriu80@yahoo.com"
 
-#: kaccess.cpp:65
-msgid ""
-"The Shift key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Tá an eochair Shift faoi ghlas agus tá sé gníomhach anois le haghaidh na n-"
-"eochairbhrúnna seo a leanas."
-
-#: kaccess.cpp:66
-msgid "The Shift key is now active."
-msgstr "Tá eochair Shift gníomhach anois."
-
-#: kaccess.cpp:67
-msgid "The Shift key is now inactive."
-msgstr "Tá eochair Shift neamhghníomhach anois."
-
-#: kaccess.cpp:71
-msgid ""
-"The Control key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Tá an eochair Control faoi ghlas agus tá sé gníomhach anois le haghaidh na n-"
-"eochairbhrúnna seo a leanas."
-
-#: kaccess.cpp:72
-msgid "The Control key is now active."
-msgstr "Tá eochair Control gníomhach anois."
-
-#: kaccess.cpp:73
-msgid "The Control key is now inactive."
-msgstr "Tá eochair Control neamhghníomhach anois."
-
-#: kaccess.cpp:77
-msgid ""
-"The Alt key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Tá an eochair Alt faoi ghlas agus tá sé gníomhach anois le haghaidh na n-"
-"eochairbhrúnna seo a leanas."
-
-#: kaccess.cpp:78
-msgid "The Alt key is now active."
-msgstr "Tá eochair Alt gníomhach anois."
-
-#: kaccess.cpp:79
-msgid "The Alt key is now inactive."
-msgstr "Tá eochair Alt neamhghníomhach anois."
-
-#: kaccess.cpp:83
-msgid ""
-"The Win key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Tá an eochair Win faoi ghlas agus tá sé gníomhach anois le haghaidh na n-"
-"eochairbhrúnna seo a leanas."
-
-#: kaccess.cpp:84
-msgid "The Win key is now active."
-msgstr "Tá eochair Win gníomhach anois."
-
-#: kaccess.cpp:85
-msgid "The Win key is now inactive."
-msgstr "Tá eochair Win neamhghníomhach anois."
-
-#: kaccess.cpp:89
-msgid ""
-"The Meta key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Tá an eochair Meta faoi ghlas agus tá sé gníomhach anois le haghaidh na n-"
-"eochairbhrúnna seo a leanas."
-
-#: kaccess.cpp:90
-msgid "The Meta key is now active."
-msgstr "Tá eochair Meta gníomhach anois."
-
-#: kaccess.cpp:91
-msgid "The Meta key is now inactive."
-msgstr "Tá eochair Meta neamhghníomhach anois."
-
-#: kaccess.cpp:95
-msgid ""
-"The Super key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Tá an eochair Super faoi ghlas agus tá sé gníomhach anois le haghaidh na n-"
-"eochairbhrúnna seo a leanas."
-
-#: kaccess.cpp:96
-msgid "The Super key is now active."
-msgstr "Tá eochair Super gníomhach anois."
-
-#: kaccess.cpp:97
-msgid "The Super key is now inactive."
-msgstr "Tá eochair Super neamhghníomhach anois."
-
-#: kaccess.cpp:101
-msgid ""
-"The Hyper key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Tá an eochair Hyper faoi ghlas agus tá sé gníomhach anois le haghaidh na n-"
-"eochairbhrúnna seo a leanas."
-
-#: kaccess.cpp:102
-msgid "The Hyper key is now active."
-msgstr "Tá eochair Hyper gníomhach anois."
-
-#: kaccess.cpp:103
-msgid "The Hyper key is now inactive."
-msgstr "Tá eochair Hyper neamhghníomhach anois."
-
-#: kaccess.cpp:107
-msgid ""
-"The Alt Graph key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Tá an eochair Alt Graph faoi ghlas agus tá sé gníomhach anois le haghaidh na "
-"n-eochairbhrúnna seo a leanas."
-
-#: kaccess.cpp:108
-msgid "The Alt Graph key is now active."
-msgstr "Tá eochair Alt Graph gníomhach anois."
-
-#: kaccess.cpp:109
-msgid "The Alt Graph key is now inactive."
-msgstr "Tá eochair Alt Graph neamhghníomhach anois."
-
-#: kaccess.cpp:110
-msgid "The Num Lock key has been activated."
-msgstr "Tá eochair Num Lock gníomhach anois."
-
-#: kaccess.cpp:110
-msgid "The Num Lock key is now inactive."
-msgstr "Tá eochair Num Lock neamhghníomhach anois."
-
-#: kaccess.cpp:111
-msgid "The Caps Lock key has been activated."
-msgstr "Tá eochair Caps Lock gníomhach anois."
-
-#: kaccess.cpp:111
-msgid "The Caps Lock key is now inactive."
-msgstr "Tá eochair Caps Lock neamhghníomhach anois."
-
-#: kaccess.cpp:112
-msgid "The Scroll Lock key has been activated."
-msgstr "Tá eochair Scroll Lock gníomhach anois."
-
-#: kaccess.cpp:112
-msgid "The Scroll Lock key is now inactive."
-msgstr "Tá eochair Scroll Lock neamhghníomhach anois."
-
-#: kaccess.cpp:144
+#: kaccess.cpp:36
 #, kde-format
 msgid "Toggle Screen Reader On and Off"
 msgstr "Léitheoir Scáileáin a Athrú Air agus As"
 
-#: kaccess.cpp:146
+#: kaccess.cpp:38
 #, kde-format
 msgctxt "Name for kaccess shortcuts category"
 msgid "Accessibility"
 msgstr "Inrochtaineacht"
-
-#: kaccess.cpp:538
-#, kde-format
-msgid "AltGraph"
-msgstr "AltGraph"
-
-#: kaccess.cpp:540
-#, kde-format
-msgid "Hyper"
-msgstr "Hyper"
-
-#: kaccess.cpp:542
-#, kde-format
-msgid "Super"
-msgstr "Super"
-
-#: kaccess.cpp:544
-#, kde-format
-msgid "Meta"
-msgstr "Meta"
-
-#: kaccess.cpp:561
-#, kde-format
-msgid "Warning"
-msgstr "Rabhadh"
-
-#: kaccess.cpp:589
-#, kde-format
-msgid "&When a gesture was used:"
-msgstr "N&uair a úsáideadh gotha:"
-
-#: kaccess.cpp:595
-#, kde-format
-msgid "Change Settings Without Asking"
-msgstr "Athraigh Socruithe Gan Fiafraí"
-
-#: kaccess.cpp:596
-#, kde-format
-msgid "Show This Confirmation Dialog"
-msgstr "Taispeáin an Dialóg Dheimhnithe Seo"
-
-#: kaccess.cpp:597
-#, kde-format
-msgid "Deactivate All AccessX Features & Gestures"
-msgstr "Díghníomhachtaigh Gach Gné agus Gotha AccessX"
-
-#: kaccess.cpp:640 kaccess.cpp:642
-#, kde-format
-msgid "Slow keys"
-msgstr "Eochracha malla"
-
-#: kaccess.cpp:645 kaccess.cpp:647
-#, kde-format
-msgid "Bounce keys"
-msgstr "Eochracha preabtha"
-
-#: kaccess.cpp:650 kaccess.cpp:652
-#, kde-format
-msgid "Sticky keys"
-msgstr "Eochracha greamaitheacha"
-
-#: kaccess.cpp:655 kaccess.cpp:657
-#, kde-format
-msgid "Mouse keys"
-msgstr "Eochracha luiche"
-
-#: kaccess.cpp:664
-#, kde-format
-msgid "Do you really want to deactivate \"%1\"?"
-msgstr "An bhfuil tú cinnte gur mhaith leat \"%1\" a dhíghníomhachtú?"
-
-#: kaccess.cpp:667
-#, kde-format
-msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
-msgstr ""
-"An bhfuil tú cinnte gur mhaith leat \"%1\" agus \"%2\" a dhíghníomhachtú?"
-
-#: kaccess.cpp:671
-#, kde-format
-msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
-msgstr ""
-"An bhfuil tú cinnte gur mhaith leat \"%1\", \"%2\" agus \"%3\" a "
-"dhíghníomhachtú?"
-
-#: kaccess.cpp:674
-#, kde-format
-msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr ""
-"An bhfuil tú cinnte gur mhaith leat \"%1\", \"%2\", \"%3\" agus \"%4\" a "
-"dhíghníomhachtú?"
-
-#: kaccess.cpp:685
-#, kde-format
-msgid "Do you really want to activate \"%1\"?"
-msgstr "An bhfuil tú cinnte gur mhaith \"%1\" a ghníomhachtú?"
-
-#: kaccess.cpp:688
-#, kde-format
-msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
-msgstr ""
-"An bhfuil tú cinnte gur mhaith \"%1\" a ghníomhachtú agus \"%2\" a "
-"dhíghníomhachtú?"
-
-#: kaccess.cpp:691
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
-msgstr ""
-"An bhfuil tú cinnte gur mhaith leat \"%1\" a ghníomhachtú agus \"%2\" agus "
-"\"%3\" a ghníomhachtú?"
-
-#: kaccess.cpp:697
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
-"\"%4\"?"
-msgstr ""
-"An bhfuil tú cinnte gur mhaith \"%1\" a ghníomhachtú agus \"%2\", \"%3\" "
-"agus \"%4\" a dhíghníomhachtú?"
-
-#: kaccess.cpp:708
-#, kde-format
-msgid "Do you really want to activate \"%1\" and \"%2\"?"
-msgstr "An bhfuil tú cinnte gur mhaith \"%1\" agus \"%2\" a ghníomhachtú?"
-
-#: kaccess.cpp:711
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
-msgstr ""
-"An bhfuil tú cinnte gur mhaith leat \"%1\" agus \"%2\" a ghníomhachtú agus "
-"\"%3\" a dhíghníomhachtú?"
-
-#: kaccess.cpp:717
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
-"and \"%4\"?"
-msgstr ""
-"An bhfuil tú cinnte gur mhaith leat \"%1\" agus \"%2\" a ghníomhachtú agus "
-"\"%3\" agus \"%4\" a dhíghníomhachtú?"
-
-#: kaccess.cpp:728
-#, kde-format
-msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
-msgstr ""
-"An bhfuil tú cinnte gur mhaith leat \"%1\", \"%2\" agus \"%3\" a "
-"ghníomhachtú?"
-
-#: kaccess.cpp:731
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
-"\"%4\"?"
-msgstr ""
-"An bhfuil tú cinnte gur mhaith leat \"%1\", \"%2\" agus \"%3\" a "
-"ghníomhachtú agus \"%4\" a dhíghníomhachtú?"
-
-#: kaccess.cpp:740
-#, kde-format
-msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr ""
-"An bhfuil tú cinnte gur mhaith leat \"%1\", \"%2\", \"%3\" agus \"%4\" a "
-"ghníomhachtú?"
-
-#: kaccess.cpp:749
-#, kde-format
-msgid "An application has requested to change this setting."
-msgstr "Rinne feidhmchlár iarracht ar an socrú seo a athrú."
-
-#: kaccess.cpp:753
-#, kde-format
-msgid ""
-"You held down the Shift key for 8 seconds or an application has requested to "
-"change this setting."
-msgstr ""
-"Choinnigh tú an eochair Shift síos ar feadh 8 soicind, nó rinne feidhmchlár "
-"iarracht ar an socrú seo a athrú."
-
-#: kaccess.cpp:755
-#, kde-format
-msgid ""
-"You pressed the Shift key 5 consecutive times or an application has "
-"requested to change this setting."
-msgstr ""
-"Bhrúigh tú an eochair Shift 5 uaire as a chéile, nó rinne feidhmchlár "
-"iarracht ar an socrú seo a athrú."
-
-#: kaccess.cpp:759
-#, kde-format
-msgid "You pressed %1 or an application has requested to change this setting."
-msgstr "Bhrúigh tú %1, nó rinne feidhmchlár iarracht ar an socrú seo a athrú."
-
-#: kaccess.cpp:764
-#, kde-format
-msgid ""
-"An application has requested to change these settings, or you used a "
-"combination of several keyboard gestures."
-msgstr ""
-"D'iarr feidhmchlár ar na socruithe seo a athrú, nó d'úsáid tú teaglaim de "
-"roinnt gothaí méarchláir."
-
-#: kaccess.cpp:766
-#, kde-format
-msgid "An application has requested to change these settings."
-msgstr "Rinne feidhmchlár iarracht ar na socruithe seo a athrú."
-
-#: kaccess.cpp:771
-#, kde-format
-msgid ""
-"These AccessX settings are needed for some users with motion impairments and "
-"can be configured in the KDE System Settings. You can also turn them on and "
-"off with standardized keyboard gestures.\n"
-"\n"
-"If you do not need them, you can select \"Deactivate all AccessX features "
-"and gestures\"."
-msgstr ""
-"Tá na socruithe seo AccessX de dhíth ar úsáideoirí áirithe le máchail "
-"ghluaisne, agus is féidir iad a chumrú i Socruithe an Chórais KDE. Is féidir "
-"iad a athrú le gothaí caighdeánaithe méarchláir freisin.\n"
-"\n"
-"Mura bhfuil siad de dhíth ortsa féin, is féidir leat \"Díghníomhachtaigh "
-"Gach Gné agus Gotha AccessX\" a roghnú."
-
-#: kaccess.cpp:792
-#, kde-format
-msgid ""
-"Slow keys has been enabled. From now on, you need to press each key for a "
-"certain length of time before it gets accepted."
-msgstr ""
-"Cumasaíodh eochracha malla. As seo amach, caithfidh tú gach eochair a bhrú "
-"ar feadh tréimhse áirithe sula nglactar leis."
-
-#: kaccess.cpp:794
-#, kde-format
-msgid "Slow keys has been disabled."
-msgstr "Díchumasaíodh eochracha malla."
-
-#: kaccess.cpp:798
-#, kde-format
-msgid ""
-"Bounce keys has been enabled. From now on, each key will be blocked for a "
-"certain length of time after it was used."
-msgstr ""
-"Cumasaíodh eochracha preabtha. As seo amach, cuirfear bac ar gach eochair ar "
-"feadh tréimhse áirithe tar éis a húsáidte."
-
-#: kaccess.cpp:800
-#, kde-format
-msgid "Bounce keys has been disabled."
-msgstr "Díchumasaíodh eochracha preabtha."
-
-#: kaccess.cpp:804
-#, kde-format
-msgid ""
-"Sticky keys has been enabled. From now on, modifier keys will stay latched "
-"after you have released them."
-msgstr ""
-"Cumasaíodh eochracha greamaitheacha. As seo amach, fanfaidh eochracha "
-"mionathraithe laisteáilte tar éis a scaoilte."
-
-#: kaccess.cpp:806
-#, kde-format
-msgid "Sticky keys has been disabled."
-msgstr "Díchumasaíodh eochracha greamaitheacha."
-
-#: kaccess.cpp:810
-#, kde-format
-msgid ""
-"Mouse keys has been enabled. From now on, you can use the number pad of your "
-"keyboard in order to control the mouse."
-msgstr ""
-"Cumasaíodh eochracha luiche. As seo amach, is féidir leat an eochaircheap "
-"uimhriúil a úsáid chun an luch a rialú."
-
-#: kaccess.cpp:812
-#, kde-format
-msgid "Mouse keys has been disabled."
-msgstr "Díchumasaíodh eochracha luiche."
 
 #: main.cpp:40
 #, kde-format
@@ -491,3 +60,322 @@ msgstr "Matthias Hoelzer-Kluepfel"
 #, kde-format
 msgid "Author"
 msgstr "Údar"
+
+#~ msgid ""
+#~ "The Shift key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Tá an eochair Shift faoi ghlas agus tá sé gníomhach anois le haghaidh na "
+#~ "n-eochairbhrúnna seo a leanas."
+
+#~ msgid "The Shift key is now active."
+#~ msgstr "Tá eochair Shift gníomhach anois."
+
+#~ msgid "The Shift key is now inactive."
+#~ msgstr "Tá eochair Shift neamhghníomhach anois."
+
+#~ msgid ""
+#~ "The Control key has been locked and is now active for all of the "
+#~ "following keypresses."
+#~ msgstr ""
+#~ "Tá an eochair Control faoi ghlas agus tá sé gníomhach anois le haghaidh "
+#~ "na n-eochairbhrúnna seo a leanas."
+
+#~ msgid "The Control key is now active."
+#~ msgstr "Tá eochair Control gníomhach anois."
+
+#~ msgid "The Control key is now inactive."
+#~ msgstr "Tá eochair Control neamhghníomhach anois."
+
+#~ msgid ""
+#~ "The Alt key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Tá an eochair Alt faoi ghlas agus tá sé gníomhach anois le haghaidh na n-"
+#~ "eochairbhrúnna seo a leanas."
+
+#~ msgid "The Alt key is now active."
+#~ msgstr "Tá eochair Alt gníomhach anois."
+
+#~ msgid "The Alt key is now inactive."
+#~ msgstr "Tá eochair Alt neamhghníomhach anois."
+
+#~ msgid ""
+#~ "The Win key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Tá an eochair Win faoi ghlas agus tá sé gníomhach anois le haghaidh na n-"
+#~ "eochairbhrúnna seo a leanas."
+
+#~ msgid "The Win key is now active."
+#~ msgstr "Tá eochair Win gníomhach anois."
+
+#~ msgid "The Win key is now inactive."
+#~ msgstr "Tá eochair Win neamhghníomhach anois."
+
+#~ msgid ""
+#~ "The Meta key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Tá an eochair Meta faoi ghlas agus tá sé gníomhach anois le haghaidh na n-"
+#~ "eochairbhrúnna seo a leanas."
+
+#~ msgid "The Meta key is now active."
+#~ msgstr "Tá eochair Meta gníomhach anois."
+
+#~ msgid "The Meta key is now inactive."
+#~ msgstr "Tá eochair Meta neamhghníomhach anois."
+
+#~ msgid ""
+#~ "The Super key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Tá an eochair Super faoi ghlas agus tá sé gníomhach anois le haghaidh na "
+#~ "n-eochairbhrúnna seo a leanas."
+
+#~ msgid "The Super key is now active."
+#~ msgstr "Tá eochair Super gníomhach anois."
+
+#~ msgid "The Super key is now inactive."
+#~ msgstr "Tá eochair Super neamhghníomhach anois."
+
+#~ msgid ""
+#~ "The Hyper key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Tá an eochair Hyper faoi ghlas agus tá sé gníomhach anois le haghaidh na "
+#~ "n-eochairbhrúnna seo a leanas."
+
+#~ msgid "The Hyper key is now active."
+#~ msgstr "Tá eochair Hyper gníomhach anois."
+
+#~ msgid "The Hyper key is now inactive."
+#~ msgstr "Tá eochair Hyper neamhghníomhach anois."
+
+#~ msgid ""
+#~ "The Alt Graph key has been locked and is now active for all of the "
+#~ "following keypresses."
+#~ msgstr ""
+#~ "Tá an eochair Alt Graph faoi ghlas agus tá sé gníomhach anois le haghaidh "
+#~ "na n-eochairbhrúnna seo a leanas."
+
+#~ msgid "The Alt Graph key is now active."
+#~ msgstr "Tá eochair Alt Graph gníomhach anois."
+
+#~ msgid "The Alt Graph key is now inactive."
+#~ msgstr "Tá eochair Alt Graph neamhghníomhach anois."
+
+#~ msgid "The Num Lock key has been activated."
+#~ msgstr "Tá eochair Num Lock gníomhach anois."
+
+#~ msgid "The Num Lock key is now inactive."
+#~ msgstr "Tá eochair Num Lock neamhghníomhach anois."
+
+#~ msgid "The Caps Lock key has been activated."
+#~ msgstr "Tá eochair Caps Lock gníomhach anois."
+
+#~ msgid "The Caps Lock key is now inactive."
+#~ msgstr "Tá eochair Caps Lock neamhghníomhach anois."
+
+#~ msgid "The Scroll Lock key has been activated."
+#~ msgstr "Tá eochair Scroll Lock gníomhach anois."
+
+#~ msgid "The Scroll Lock key is now inactive."
+#~ msgstr "Tá eochair Scroll Lock neamhghníomhach anois."
+
+#~ msgid "AltGraph"
+#~ msgstr "AltGraph"
+
+#~ msgid "Hyper"
+#~ msgstr "Hyper"
+
+#~ msgid "Super"
+#~ msgstr "Super"
+
+#~ msgid "Meta"
+#~ msgstr "Meta"
+
+#~ msgid "Warning"
+#~ msgstr "Rabhadh"
+
+#~ msgid "&When a gesture was used:"
+#~ msgstr "N&uair a úsáideadh gotha:"
+
+#~ msgid "Change Settings Without Asking"
+#~ msgstr "Athraigh Socruithe Gan Fiafraí"
+
+#~ msgid "Show This Confirmation Dialog"
+#~ msgstr "Taispeáin an Dialóg Dheimhnithe Seo"
+
+#~ msgid "Deactivate All AccessX Features & Gestures"
+#~ msgstr "Díghníomhachtaigh Gach Gné agus Gotha AccessX"
+
+#~ msgid "Slow keys"
+#~ msgstr "Eochracha malla"
+
+#~ msgid "Bounce keys"
+#~ msgstr "Eochracha preabtha"
+
+#~ msgid "Sticky keys"
+#~ msgstr "Eochracha greamaitheacha"
+
+#~ msgid "Mouse keys"
+#~ msgstr "Eochracha luiche"
+
+#~ msgid "Do you really want to deactivate \"%1\"?"
+#~ msgstr "An bhfuil tú cinnte gur mhaith leat \"%1\" a dhíghníomhachtú?"
+
+#~ msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
+#~ msgstr ""
+#~ "An bhfuil tú cinnte gur mhaith leat \"%1\" agus \"%2\" a dhíghníomhachtú?"
+
+#~ msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
+#~ msgstr ""
+#~ "An bhfuil tú cinnte gur mhaith leat \"%1\", \"%2\" agus \"%3\" a "
+#~ "dhíghníomhachtú?"
+
+#~ msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+#~ msgstr ""
+#~ "An bhfuil tú cinnte gur mhaith leat \"%1\", \"%2\", \"%3\" agus \"%4\" a "
+#~ "dhíghníomhachtú?"
+
+#~ msgid "Do you really want to activate \"%1\"?"
+#~ msgstr "An bhfuil tú cinnte gur mhaith \"%1\" a ghníomhachtú?"
+
+#~ msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
+#~ msgstr ""
+#~ "An bhfuil tú cinnte gur mhaith \"%1\" a ghníomhachtú agus \"%2\" a "
+#~ "dhíghníomhachtú?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
+#~ msgstr ""
+#~ "An bhfuil tú cinnte gur mhaith leat \"%1\" a ghníomhachtú agus \"%2\" "
+#~ "agus \"%3\" a ghníomhachtú?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" "
+#~ "and \"%4\"?"
+#~ msgstr ""
+#~ "An bhfuil tú cinnte gur mhaith \"%1\" a ghníomhachtú agus \"%2\", \"%3\" "
+#~ "agus \"%4\" a dhíghníomhachtú?"
+
+#~ msgid "Do you really want to activate \"%1\" and \"%2\"?"
+#~ msgstr "An bhfuil tú cinnte gur mhaith \"%1\" agus \"%2\" a ghníomhachtú?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
+#~ msgstr ""
+#~ "An bhfuil tú cinnte gur mhaith leat \"%1\" agus \"%2\" a ghníomhachtú "
+#~ "agus \"%3\" a dhíghníomhachtú?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\", and \"%2\" and to deactivate "
+#~ "\"%3\" and \"%4\"?"
+#~ msgstr ""
+#~ "An bhfuil tú cinnte gur mhaith leat \"%1\" agus \"%2\" a ghníomhachtú "
+#~ "agus \"%3\" agus \"%4\" a dhíghníomhachtú?"
+
+#~ msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
+#~ msgstr ""
+#~ "An bhfuil tú cinnte gur mhaith leat \"%1\", \"%2\" agus \"%3\" a "
+#~ "ghníomhachtú?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\", \"%2\" and \"%3\" and to "
+#~ "deactivate \"%4\"?"
+#~ msgstr ""
+#~ "An bhfuil tú cinnte gur mhaith leat \"%1\", \"%2\" agus \"%3\" a "
+#~ "ghníomhachtú agus \"%4\" a dhíghníomhachtú?"
+
+#~ msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+#~ msgstr ""
+#~ "An bhfuil tú cinnte gur mhaith leat \"%1\", \"%2\", \"%3\" agus \"%4\" a "
+#~ "ghníomhachtú?"
+
+#~ msgid "An application has requested to change this setting."
+#~ msgstr "Rinne feidhmchlár iarracht ar an socrú seo a athrú."
+
+#~ msgid ""
+#~ "You held down the Shift key for 8 seconds or an application has requested "
+#~ "to change this setting."
+#~ msgstr ""
+#~ "Choinnigh tú an eochair Shift síos ar feadh 8 soicind, nó rinne "
+#~ "feidhmchlár iarracht ar an socrú seo a athrú."
+
+#~ msgid ""
+#~ "You pressed the Shift key 5 consecutive times or an application has "
+#~ "requested to change this setting."
+#~ msgstr ""
+#~ "Bhrúigh tú an eochair Shift 5 uaire as a chéile, nó rinne feidhmchlár "
+#~ "iarracht ar an socrú seo a athrú."
+
+#~ msgid ""
+#~ "You pressed %1 or an application has requested to change this setting."
+#~ msgstr ""
+#~ "Bhrúigh tú %1, nó rinne feidhmchlár iarracht ar an socrú seo a athrú."
+
+#~ msgid ""
+#~ "An application has requested to change these settings, or you used a "
+#~ "combination of several keyboard gestures."
+#~ msgstr ""
+#~ "D'iarr feidhmchlár ar na socruithe seo a athrú, nó d'úsáid tú teaglaim de "
+#~ "roinnt gothaí méarchláir."
+
+#~ msgid "An application has requested to change these settings."
+#~ msgstr "Rinne feidhmchlár iarracht ar na socruithe seo a athrú."
+
+#~ msgid ""
+#~ "These AccessX settings are needed for some users with motion impairments "
+#~ "and can be configured in the KDE System Settings. You can also turn them "
+#~ "on and off with standardized keyboard gestures.\n"
+#~ "\n"
+#~ "If you do not need them, you can select \"Deactivate all AccessX features "
+#~ "and gestures\"."
+#~ msgstr ""
+#~ "Tá na socruithe seo AccessX de dhíth ar úsáideoirí áirithe le máchail "
+#~ "ghluaisne, agus is féidir iad a chumrú i Socruithe an Chórais KDE. Is "
+#~ "féidir iad a athrú le gothaí caighdeánaithe méarchláir freisin.\n"
+#~ "\n"
+#~ "Mura bhfuil siad de dhíth ortsa féin, is féidir leat \"Díghníomhachtaigh "
+#~ "Gach Gné agus Gotha AccessX\" a roghnú."
+
+#~ msgid ""
+#~ "Slow keys has been enabled. From now on, you need to press each key for a "
+#~ "certain length of time before it gets accepted."
+#~ msgstr ""
+#~ "Cumasaíodh eochracha malla. As seo amach, caithfidh tú gach eochair a "
+#~ "bhrú ar feadh tréimhse áirithe sula nglactar leis."
+
+#~ msgid "Slow keys has been disabled."
+#~ msgstr "Díchumasaíodh eochracha malla."
+
+#~ msgid ""
+#~ "Bounce keys has been enabled. From now on, each key will be blocked for a "
+#~ "certain length of time after it was used."
+#~ msgstr ""
+#~ "Cumasaíodh eochracha preabtha. As seo amach, cuirfear bac ar gach eochair "
+#~ "ar feadh tréimhse áirithe tar éis a húsáidte."
+
+#~ msgid "Bounce keys has been disabled."
+#~ msgstr "Díchumasaíodh eochracha preabtha."
+
+#~ msgid ""
+#~ "Sticky keys has been enabled. From now on, modifier keys will stay "
+#~ "latched after you have released them."
+#~ msgstr ""
+#~ "Cumasaíodh eochracha greamaitheacha. As seo amach, fanfaidh eochracha "
+#~ "mionathraithe laisteáilte tar éis a scaoilte."
+
+#~ msgid "Sticky keys has been disabled."
+#~ msgstr "Díchumasaíodh eochracha greamaitheacha."
+
+#~ msgid ""
+#~ "Mouse keys has been enabled. From now on, you can use the number pad of "
+#~ "your keyboard in order to control the mouse."
+#~ msgstr ""
+#~ "Cumasaíodh eochracha luiche. As seo amach, is féidir leat an eochaircheap "
+#~ "uimhriúil a úsáid chun an luch a rialú."
+
+#~ msgid "Mouse keys has been disabled."
+#~ msgstr "Díchumasaíodh eochracha luiche."

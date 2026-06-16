@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-09 00:45+0000\n"
+"POT-Creation-Date: 2026-06-16 00:47+0000\n"
 "PO-Revision-Date: 2016-11-28 01:32+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -31,474 +31,16 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "caslav.ilic@gmx.net"
 
-#: kaccess.cpp:65
-msgid ""
-"The Shift key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Тастер Shift је закључан и сада је активан за све наредне притиске на "
-"тастере."
-
-#: kaccess.cpp:66
-msgid "The Shift key is now active."
-msgstr "Тастер Shift је сада активан."
-
-#: kaccess.cpp:67
-msgid "The Shift key is now inactive."
-msgstr "Тастер Shift сада није активан."
-
-#: kaccess.cpp:71
-msgid ""
-"The Control key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Тастер Control је закључан и сада је активан за све наредне притиске на "
-"тастере."
-
-#: kaccess.cpp:72
-msgid "The Control key is now active."
-msgstr "Тастер Control је сада активан."
-
-#: kaccess.cpp:73
-msgid "The Control key is now inactive."
-msgstr "Тастер Control сада није активан."
-
-#: kaccess.cpp:77
-msgid ""
-"The Alt key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Тастер Alt је закључан и сада је активан за све наредне притиске на тастере."
-
-#: kaccess.cpp:78
-msgid "The Alt key is now active."
-msgstr "Тастер Alt је сада активан."
-
-#: kaccess.cpp:79
-msgid "The Alt key is now inactive."
-msgstr "Тастер Alt сада није активан."
-
-#: kaccess.cpp:83
-msgid ""
-"The Win key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Тастер Win је закључан и сада је активан за све наредне притиске на тастере."
-
-#: kaccess.cpp:84
-msgid "The Win key is now active."
-msgstr "Тастер Win је сада активан."
-
-#: kaccess.cpp:85
-msgid "The Win key is now inactive."
-msgstr "Тастер Win сада није активан."
-
-#: kaccess.cpp:89
-msgid ""
-"The Meta key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Тастер Meta је закључан и сада је активан за све наредне притиске на тастере."
-
-#: kaccess.cpp:90
-msgid "The Meta key is now active."
-msgstr "Тастер Meta је сада активан."
-
-#: kaccess.cpp:91
-msgid "The Meta key is now inactive."
-msgstr "Тастер Meta сада није активан."
-
-#: kaccess.cpp:95
-msgid ""
-"The Super key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Тастер Super је закључан и сада је активан за све наредне притиске на "
-"тастере."
-
-#: kaccess.cpp:96
-msgid "The Super key is now active."
-msgstr "Тастер Super је сада активан."
-
-#: kaccess.cpp:97
-msgid "The Super key is now inactive."
-msgstr "Тастер Super сада није активан."
-
-#: kaccess.cpp:101
-msgid ""
-"The Hyper key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Тастер Hyper је закључан и сада је активан за све наредне притиске на "
-"тастере."
-
-#: kaccess.cpp:102
-msgid "The Hyper key is now active."
-msgstr "Тастер Hyper је сада активан."
-
-#: kaccess.cpp:103
-msgid "The Hyper key is now inactive."
-msgstr "Тастер Hyper сада није активан."
-
-#: kaccess.cpp:107
-msgid ""
-"The Alt Graph key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Тастер AltGr је закључан и сада је активан за све наредне притиске на "
-"тастере."
-
-#: kaccess.cpp:108
-msgid "The Alt Graph key is now active."
-msgstr "Тастер AltGr је сада активан."
-
-#: kaccess.cpp:109
-msgid "The Alt Graph key is now inactive."
-msgstr "Тастер AltGr сада није активан."
-
-#: kaccess.cpp:110
-msgid "The Num Lock key has been activated."
-msgstr "Тастер NumLock је активиран."
-
-#: kaccess.cpp:110
-msgid "The Num Lock key is now inactive."
-msgstr "Тастер NumLock сада није активан."
-
-#: kaccess.cpp:111
-msgid "The Caps Lock key has been activated."
-msgstr "Тастер CapsLock је активиран."
-
-#: kaccess.cpp:111
-msgid "The Caps Lock key is now inactive."
-msgstr "Тастер CapsLock сада није активан."
-
-#: kaccess.cpp:112
-msgid "The Scroll Lock key has been activated."
-msgstr "Тастер ScrollLock је активиран."
-
-#: kaccess.cpp:112
-msgid "The Scroll Lock key is now inactive."
-msgstr "Тастер ScrollLock сада није активан."
-
-#: kaccess.cpp:144
+#: kaccess.cpp:36
 #, kde-format
 msgid "Toggle Screen Reader On and Off"
 msgstr "Укључи или искључи читач текста"
 
-#: kaccess.cpp:146
+#: kaccess.cpp:38
 #, kde-format
 msgctxt "Name for kaccess shortcuts category"
 msgid "Accessibility"
 msgstr "Приступачност"
-
-#: kaccess.cpp:538
-#, kde-format
-msgid "AltGraph"
-msgstr "AltGr"
-
-#: kaccess.cpp:540
-#, kde-format
-msgid "Hyper"
-msgstr "Hyper"
-
-#: kaccess.cpp:542
-#, kde-format
-msgid "Super"
-msgstr "Super"
-
-#: kaccess.cpp:544
-#, kde-format
-msgid "Meta"
-msgstr "Meta"
-
-#: kaccess.cpp:561
-#, kde-format
-msgid "Warning"
-msgstr "Упозорење"
-
-#: kaccess.cpp:589
-#, kde-format
-msgid "&When a gesture was used:"
-msgstr "&Када се гест употреби:"
-
-#: kaccess.cpp:595
-#, kde-format
-msgid "Change Settings Without Asking"
-msgstr "Промени поставке без питања"
-
-#: kaccess.cpp:596
-#, kde-format
-msgid "Show This Confirmation Dialog"
-msgstr "Прикажи овај дијалог за потврду"
-
-#: kaccess.cpp:597
-#, kde-format
-msgid "Deactivate All AccessX Features & Gestures"
-msgstr "Деактивирај све аксес‑икс могућности и гестове"
-
-# >> @item:intext Key type used in deactivate/activate questions below.
-#: kaccess.cpp:640 kaccess.cpp:642
-#, kde-format
-msgid "Slow keys"
-msgstr "спори тастери|/|$[својства аку 'споре тастере']"
-
-# >> @item:intext Key type used in deactivate/activate questions below.
-#: kaccess.cpp:645 kaccess.cpp:647
-#, kde-format
-msgid "Bounce keys"
-msgstr "одскочни тастери|/|$[својства аку 'одскочне тастере']"
-
-# >> @item:intext Key type used in deactivate/activate questions below.
-#: kaccess.cpp:650 kaccess.cpp:652
-#, kde-format
-msgid "Sticky keys"
-msgstr "лепљиви тастери|/|$[својства аку 'лепљиве тастере']"
-
-# >> @item:intext Key type used in deactivate/activate questions below.
-#: kaccess.cpp:655 kaccess.cpp:657
-#, kde-format
-msgid "Mouse keys"
-msgstr "тастери за миш|/|$[својства аку 'тастере за миш']"
-
-# >> Arguments are key types translated above.
-#: kaccess.cpp:664
-#, kde-format
-msgid "Do you really want to deactivate \"%1\"?"
-msgstr ""
-"Желите ли заиста да деактивирате „%1“?|/|Желите ли заиста да деактивирате "
-"$[аку %1]?"
-
-# >> Arguments are key types translated above.
-#: kaccess.cpp:667
-#, kde-format
-msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
-msgstr ""
-"Желите ли заиста да деактивирате „%1“ и „%2“?|/|Желите ли заиста да "
-"деактивирате $[аку %1] и $[аку %2]?"
-
-# >> Arguments are key types translated above.
-#: kaccess.cpp:671
-#, kde-format
-msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
-msgstr ""
-"Желите ли заиста да деактивирате „%1“, „%2“ и „%3“?|/|Желите ли заиста да "
-"деактивирате $[аку %1], $[аку %2] и $[аку %3]?"
-
-# >> Arguments are key types translated above.
-#: kaccess.cpp:674
-#, kde-format
-msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr ""
-"Желите ли заиста да деактивирате „%1“, „%2“, „%3“ и „%4“?|/|Желите ли заиста "
-"да деактивирате $[аку %1], $[аку %2], $[аку %3] и $[аку %4]?"
-
-# >> Arguments are key types translated above.
-#: kaccess.cpp:685
-#, kde-format
-msgid "Do you really want to activate \"%1\"?"
-msgstr ""
-"Желите ли заиста да активирате „%1“?|/|Желите ли заиста да активирате $[аку "
-"%1]?"
-
-# >> Arguments are key types translated above.
-#: kaccess.cpp:688
-#, kde-format
-msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
-msgstr ""
-"Желите ли заиста да активирате „%1“ и деактивирате „%2“?|/|Желите ли заиста "
-"да активирате $[аку %1] и деактивирате $[аку %2]?"
-
-# >> Arguments are key types translated above.
-#: kaccess.cpp:691
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
-msgstr ""
-"Желите ли заиста да активирате „%1“ и деактивирате „%2“ и „%3“?|/|Желите ли "
-"заиста да активирате $[аку %1] и деактивирате $[аку %2] и $[аку %3]?"
-
-# >> Arguments are key types translated above.
-#: kaccess.cpp:697
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
-"\"%4\"?"
-msgstr ""
-"Желите ли заиста да активирате „%1“ и деактивирате „%2“, „%3“ и „%4“?|/|"
-"Желите ли заиста да активирате $[аку %1] и деактивирате $[аку %2], $[аку %3] "
-"и $[аку %4]?"
-
-# >> Arguments are key types translated above.
-#: kaccess.cpp:708
-#, kde-format
-msgid "Do you really want to activate \"%1\" and \"%2\"?"
-msgstr ""
-"Желите ли заиста да активирате „%1“ и „%2“?|/|Желите ли заиста да активирате "
-"$[аку %1] и $[аку %2]?"
-
-# >> Arguments are key types translated above.
-#: kaccess.cpp:711
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
-msgstr ""
-"Желите ли заиста да активирате „%1“ и „%2“ и деактивирате „%3“?|/|Желите ли "
-"заиста да активирате $[аку %1] и $[аку %2] и деактивирате $[аку %3]?"
-
-# >> Arguments are key types translated above.
-#: kaccess.cpp:717
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
-"and \"%4\"?"
-msgstr ""
-"Желите ли заиста да активирате „%1“ и „%2“ и деактивирате „%3“ и „%4“?|/|"
-"Желите ли заиста да активирате $[аку %1] и $[аку %2] и деактивирате $[аку "
-"%3] и $[аку %4]?"
-
-# >> Arguments are key types translated above.
-#: kaccess.cpp:728
-#, kde-format
-msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
-msgstr ""
-"Желите ли заиста да активирате „%1“, „%2“ и „%3“?|/|Желите ли заиста да "
-"активирате $[аку %1], $[аку %2] и $[аку %3]?"
-
-# >> Arguments are key types translated above.
-#: kaccess.cpp:731
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
-"\"%4\"?"
-msgstr ""
-"Желите ли заиста да активирате „%1“, „%2“ и „%3“ и деактивирате „%4“?|/|"
-"Желите ли заиста да активирате $[аку %1], $[аку %2] и $[аку %3] и "
-"деактивирате $[аку %4]?"
-
-# >> Arguments are key types translated above.
-#: kaccess.cpp:740
-#, kde-format
-msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr ""
-"Желите ли заиста да активирате „%1“, „%2“, „%3“ и „%4“?|/|Желите ли заиста "
-"да активирате $[аку %1], $[аку %2], $[аку %3] и $[аку %4]?"
-
-#: kaccess.cpp:749
-#, kde-format
-msgid "An application has requested to change this setting."
-msgstr "Програм је затражио да промени ову поставку."
-
-#: kaccess.cpp:753
-#, kde-format
-msgid ""
-"You held down the Shift key for 8 seconds or an application has requested to "
-"change this setting."
-msgstr ""
-"Држали сте тастер Shift током осам секунди или је програм затражио да "
-"промени ову поставку."
-
-#: kaccess.cpp:755
-#, kde-format
-msgid ""
-"You pressed the Shift key 5 consecutive times or an application has "
-"requested to change this setting."
-msgstr ""
-"Притиснули сте тастер Shift пет пута за редом или је програм затражио да "
-"промени ову поставку."
-
-#: kaccess.cpp:759
-#, kde-format
-msgid "You pressed %1 or an application has requested to change this setting."
-msgstr ""
-"Притиснули сте %1 или је програм затражио да промени ово подешавање.|/|"
-"Притиснули сте $[аку %1] или је програм затражио да промени ову поставку."
-
-#: kaccess.cpp:764
-#, kde-format
-msgid ""
-"An application has requested to change these settings, or you used a "
-"combination of several keyboard gestures."
-msgstr ""
-"Програм је затражио да промени ове поставке, или сте употребили комбинацију "
-"неколико гестова са тастатуре."
-
-#: kaccess.cpp:766
-#, kde-format
-msgid "An application has requested to change these settings."
-msgstr "Програм је затражио да промени ове поставке."
-
-#: kaccess.cpp:771
-#, kde-format
-msgid ""
-"These AccessX settings are needed for some users with motion impairments and "
-"can be configured in the KDE System Settings. You can also turn them on and "
-"off with standardized keyboard gestures.\n"
-"\n"
-"If you do not need them, you can select \"Deactivate all AccessX features "
-"and gestures\"."
-msgstr ""
-"Ове аксес‑икс поставке потребне су корисницима са ограниченом покретљивошћу "
-"и могу се подесити у Системским поставкама КДЕ‑а. Такође их можете "
-"укључивати и искључивати помоћу стандардизованих гестова са тастатуре.\n"
-"\n"
-"Ако вам нису потребна, можете изабрати „Деактивирај све аксес‑икс могућности "
-"и гестове“."
-
-#: kaccess.cpp:792
-#, kde-format
-msgid ""
-"Slow keys has been enabled. From now on, you need to press each key for a "
-"certain length of time before it gets accepted."
-msgstr ""
-"Укључени су спори тастери. Од сада, сваки тастер морате држати притиснут "
-"неко време пре него што се прихвати."
-
-#: kaccess.cpp:794
-#, kde-format
-msgid "Slow keys has been disabled."
-msgstr "Спори тастери су искључени."
-
-#: kaccess.cpp:798
-#, kde-format
-msgid ""
-"Bounce keys has been enabled. From now on, each key will be blocked for a "
-"certain length of time after it was used."
-msgstr ""
-"Укључени су одскочни тастери. Од сада, сваки тастер ће бити блокиран неко "
-"време пошто се притисне."
-
-#: kaccess.cpp:800
-#, kde-format
-msgid "Bounce keys has been disabled."
-msgstr "Одскочни тастери су искључени."
-
-#: kaccess.cpp:804
-#, kde-format
-msgid ""
-"Sticky keys has been enabled. From now on, modifier keys will stay latched "
-"after you have released them."
-msgstr ""
-"Укључени су лепљиви тастери. Од сада, модификаторски тастери ће остати "
-"запети пошто их отпустите."
-
-#: kaccess.cpp:806
-#, kde-format
-msgid "Sticky keys has been disabled."
-msgstr "Лепљиви тастери су искључени."
-
-#: kaccess.cpp:810
-#, kde-format
-msgid ""
-"Mouse keys has been enabled. From now on, you can use the number pad of your "
-"keyboard in order to control the mouse."
-msgstr ""
-"Укључени су тастери за миш. Од сада, можете користити нумерички део "
-"тастатуре за контролисање миша."
-
-#: kaccess.cpp:812
-#, kde-format
-msgid "Mouse keys has been disabled."
-msgstr "Тастери за миш су искључени."
 
 #: main.cpp:40
 #, fuzzy, kde-format
@@ -521,6 +63,355 @@ msgstr "Матијас Хелцер-Клипфел"
 #, kde-format
 msgid "Author"
 msgstr "аутор"
+
+#~ msgid ""
+#~ "The Shift key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Тастер Shift је закључан и сада је активан за све наредне притиске на "
+#~ "тастере."
+
+#~ msgid "The Shift key is now active."
+#~ msgstr "Тастер Shift је сада активан."
+
+#~ msgid "The Shift key is now inactive."
+#~ msgstr "Тастер Shift сада није активан."
+
+#~ msgid ""
+#~ "The Control key has been locked and is now active for all of the "
+#~ "following keypresses."
+#~ msgstr ""
+#~ "Тастер Control је закључан и сада је активан за све наредне притиске на "
+#~ "тастере."
+
+#~ msgid "The Control key is now active."
+#~ msgstr "Тастер Control је сада активан."
+
+#~ msgid "The Control key is now inactive."
+#~ msgstr "Тастер Control сада није активан."
+
+#~ msgid ""
+#~ "The Alt key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Тастер Alt је закључан и сада је активан за све наредне притиске на "
+#~ "тастере."
+
+#~ msgid "The Alt key is now active."
+#~ msgstr "Тастер Alt је сада активан."
+
+#~ msgid "The Alt key is now inactive."
+#~ msgstr "Тастер Alt сада није активан."
+
+#~ msgid ""
+#~ "The Win key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Тастер Win је закључан и сада је активан за све наредне притиске на "
+#~ "тастере."
+
+#~ msgid "The Win key is now active."
+#~ msgstr "Тастер Win је сада активан."
+
+#~ msgid "The Win key is now inactive."
+#~ msgstr "Тастер Win сада није активан."
+
+#~ msgid ""
+#~ "The Meta key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Тастер Meta је закључан и сада је активан за све наредне притиске на "
+#~ "тастере."
+
+#~ msgid "The Meta key is now active."
+#~ msgstr "Тастер Meta је сада активан."
+
+#~ msgid "The Meta key is now inactive."
+#~ msgstr "Тастер Meta сада није активан."
+
+#~ msgid ""
+#~ "The Super key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Тастер Super је закључан и сада је активан за све наредне притиске на "
+#~ "тастере."
+
+#~ msgid "The Super key is now active."
+#~ msgstr "Тастер Super је сада активан."
+
+#~ msgid "The Super key is now inactive."
+#~ msgstr "Тастер Super сада није активан."
+
+#~ msgid ""
+#~ "The Hyper key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Тастер Hyper је закључан и сада је активан за све наредне притиске на "
+#~ "тастере."
+
+#~ msgid "The Hyper key is now active."
+#~ msgstr "Тастер Hyper је сада активан."
+
+#~ msgid "The Hyper key is now inactive."
+#~ msgstr "Тастер Hyper сада није активан."
+
+#~ msgid ""
+#~ "The Alt Graph key has been locked and is now active for all of the "
+#~ "following keypresses."
+#~ msgstr ""
+#~ "Тастер AltGr је закључан и сада је активан за све наредне притиске на "
+#~ "тастере."
+
+#~ msgid "The Alt Graph key is now active."
+#~ msgstr "Тастер AltGr је сада активан."
+
+#~ msgid "The Alt Graph key is now inactive."
+#~ msgstr "Тастер AltGr сада није активан."
+
+#~ msgid "The Num Lock key has been activated."
+#~ msgstr "Тастер NumLock је активиран."
+
+#~ msgid "The Num Lock key is now inactive."
+#~ msgstr "Тастер NumLock сада није активан."
+
+#~ msgid "The Caps Lock key has been activated."
+#~ msgstr "Тастер CapsLock је активиран."
+
+#~ msgid "The Caps Lock key is now inactive."
+#~ msgstr "Тастер CapsLock сада није активан."
+
+#~ msgid "The Scroll Lock key has been activated."
+#~ msgstr "Тастер ScrollLock је активиран."
+
+#~ msgid "The Scroll Lock key is now inactive."
+#~ msgstr "Тастер ScrollLock сада није активан."
+
+#~ msgid "AltGraph"
+#~ msgstr "AltGr"
+
+#~ msgid "Hyper"
+#~ msgstr "Hyper"
+
+#~ msgid "Super"
+#~ msgstr "Super"
+
+#~ msgid "Meta"
+#~ msgstr "Meta"
+
+#~ msgid "Warning"
+#~ msgstr "Упозорење"
+
+#~ msgid "&When a gesture was used:"
+#~ msgstr "&Када се гест употреби:"
+
+#~ msgid "Change Settings Without Asking"
+#~ msgstr "Промени поставке без питања"
+
+#~ msgid "Show This Confirmation Dialog"
+#~ msgstr "Прикажи овај дијалог за потврду"
+
+#~ msgid "Deactivate All AccessX Features & Gestures"
+#~ msgstr "Деактивирај све аксес‑икс могућности и гестове"
+
+# >> @item:intext Key type used in deactivate/activate questions below.
+#~ msgid "Slow keys"
+#~ msgstr "спори тастери|/|$[својства аку 'споре тастере']"
+
+# >> @item:intext Key type used in deactivate/activate questions below.
+#~ msgid "Bounce keys"
+#~ msgstr "одскочни тастери|/|$[својства аку 'одскочне тастере']"
+
+# >> @item:intext Key type used in deactivate/activate questions below.
+#~ msgid "Sticky keys"
+#~ msgstr "лепљиви тастери|/|$[својства аку 'лепљиве тастере']"
+
+# >> @item:intext Key type used in deactivate/activate questions below.
+#~ msgid "Mouse keys"
+#~ msgstr "тастери за миш|/|$[својства аку 'тастере за миш']"
+
+# >> Arguments are key types translated above.
+#~ msgid "Do you really want to deactivate \"%1\"?"
+#~ msgstr ""
+#~ "Желите ли заиста да деактивирате „%1“?|/|Желите ли заиста да деактивирате "
+#~ "$[аку %1]?"
+
+# >> Arguments are key types translated above.
+#~ msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
+#~ msgstr ""
+#~ "Желите ли заиста да деактивирате „%1“ и „%2“?|/|Желите ли заиста да "
+#~ "деактивирате $[аку %1] и $[аку %2]?"
+
+# >> Arguments are key types translated above.
+#~ msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
+#~ msgstr ""
+#~ "Желите ли заиста да деактивирате „%1“, „%2“ и „%3“?|/|Желите ли заиста да "
+#~ "деактивирате $[аку %1], $[аку %2] и $[аку %3]?"
+
+# >> Arguments are key types translated above.
+#~ msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+#~ msgstr ""
+#~ "Желите ли заиста да деактивирате „%1“, „%2“, „%3“ и „%4“?|/|Желите ли "
+#~ "заиста да деактивирате $[аку %1], $[аку %2], $[аку %3] и $[аку %4]?"
+
+# >> Arguments are key types translated above.
+#~ msgid "Do you really want to activate \"%1\"?"
+#~ msgstr ""
+#~ "Желите ли заиста да активирате „%1“?|/|Желите ли заиста да активирате "
+#~ "$[аку %1]?"
+
+# >> Arguments are key types translated above.
+#~ msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
+#~ msgstr ""
+#~ "Желите ли заиста да активирате „%1“ и деактивирате „%2“?|/|Желите ли "
+#~ "заиста да активирате $[аку %1] и деактивирате $[аку %2]?"
+
+# >> Arguments are key types translated above.
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
+#~ msgstr ""
+#~ "Желите ли заиста да активирате „%1“ и деактивирате „%2“ и „%3“?|/|Желите "
+#~ "ли заиста да активирате $[аку %1] и деактивирате $[аку %2] и $[аку %3]?"
+
+# >> Arguments are key types translated above.
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" "
+#~ "and \"%4\"?"
+#~ msgstr ""
+#~ "Желите ли заиста да активирате „%1“ и деактивирате „%2“, „%3“ и „%4“?|/|"
+#~ "Желите ли заиста да активирате $[аку %1] и деактивирате $[аку %2], $[аку "
+#~ "%3] и $[аку %4]?"
+
+# >> Arguments are key types translated above.
+#~ msgid "Do you really want to activate \"%1\" and \"%2\"?"
+#~ msgstr ""
+#~ "Желите ли заиста да активирате „%1“ и „%2“?|/|Желите ли заиста да "
+#~ "активирате $[аку %1] и $[аку %2]?"
+
+# >> Arguments are key types translated above.
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
+#~ msgstr ""
+#~ "Желите ли заиста да активирате „%1“ и „%2“ и деактивирате „%3“?|/|Желите "
+#~ "ли заиста да активирате $[аку %1] и $[аку %2] и деактивирате $[аку %3]?"
+
+# >> Arguments are key types translated above.
+#~ msgid ""
+#~ "Do you really want to activate \"%1\", and \"%2\" and to deactivate "
+#~ "\"%3\" and \"%4\"?"
+#~ msgstr ""
+#~ "Желите ли заиста да активирате „%1“ и „%2“ и деактивирате „%3“ и „%4“?|/|"
+#~ "Желите ли заиста да активирате $[аку %1] и $[аку %2] и деактивирате $[аку "
+#~ "%3] и $[аку %4]?"
+
+# >> Arguments are key types translated above.
+#~ msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
+#~ msgstr ""
+#~ "Желите ли заиста да активирате „%1“, „%2“ и „%3“?|/|Желите ли заиста да "
+#~ "активирате $[аку %1], $[аку %2] и $[аку %3]?"
+
+# >> Arguments are key types translated above.
+#~ msgid ""
+#~ "Do you really want to activate \"%1\", \"%2\" and \"%3\" and to "
+#~ "deactivate \"%4\"?"
+#~ msgstr ""
+#~ "Желите ли заиста да активирате „%1“, „%2“ и „%3“ и деактивирате „%4“?|/|"
+#~ "Желите ли заиста да активирате $[аку %1], $[аку %2] и $[аку %3] и "
+#~ "деактивирате $[аку %4]?"
+
+# >> Arguments are key types translated above.
+#~ msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+#~ msgstr ""
+#~ "Желите ли заиста да активирате „%1“, „%2“, „%3“ и „%4“?|/|Желите ли "
+#~ "заиста да активирате $[аку %1], $[аку %2], $[аку %3] и $[аку %4]?"
+
+#~ msgid "An application has requested to change this setting."
+#~ msgstr "Програм је затражио да промени ову поставку."
+
+#~ msgid ""
+#~ "You held down the Shift key for 8 seconds or an application has requested "
+#~ "to change this setting."
+#~ msgstr ""
+#~ "Држали сте тастер Shift током осам секунди или је програм затражио да "
+#~ "промени ову поставку."
+
+#~ msgid ""
+#~ "You pressed the Shift key 5 consecutive times or an application has "
+#~ "requested to change this setting."
+#~ msgstr ""
+#~ "Притиснули сте тастер Shift пет пута за редом или је програм затражио да "
+#~ "промени ову поставку."
+
+#~ msgid ""
+#~ "You pressed %1 or an application has requested to change this setting."
+#~ msgstr ""
+#~ "Притиснули сте %1 или је програм затражио да промени ово подешавање.|/|"
+#~ "Притиснули сте $[аку %1] или је програм затражио да промени ову поставку."
+
+#~ msgid ""
+#~ "An application has requested to change these settings, or you used a "
+#~ "combination of several keyboard gestures."
+#~ msgstr ""
+#~ "Програм је затражио да промени ове поставке, или сте употребили "
+#~ "комбинацију неколико гестова са тастатуре."
+
+#~ msgid "An application has requested to change these settings."
+#~ msgstr "Програм је затражио да промени ове поставке."
+
+#~ msgid ""
+#~ "These AccessX settings are needed for some users with motion impairments "
+#~ "and can be configured in the KDE System Settings. You can also turn them "
+#~ "on and off with standardized keyboard gestures.\n"
+#~ "\n"
+#~ "If you do not need them, you can select \"Deactivate all AccessX features "
+#~ "and gestures\"."
+#~ msgstr ""
+#~ "Ове аксес‑икс поставке потребне су корисницима са ограниченом "
+#~ "покретљивошћу и могу се подесити у Системским поставкама КДЕ‑а. Такође их "
+#~ "можете укључивати и искључивати помоћу стандардизованих гестова са "
+#~ "тастатуре.\n"
+#~ "\n"
+#~ "Ако вам нису потребна, можете изабрати „Деактивирај све аксес‑икс "
+#~ "могућности и гестове“."
+
+#~ msgid ""
+#~ "Slow keys has been enabled. From now on, you need to press each key for a "
+#~ "certain length of time before it gets accepted."
+#~ msgstr ""
+#~ "Укључени су спори тастери. Од сада, сваки тастер морате држати притиснут "
+#~ "неко време пре него што се прихвати."
+
+#~ msgid "Slow keys has been disabled."
+#~ msgstr "Спори тастери су искључени."
+
+#~ msgid ""
+#~ "Bounce keys has been enabled. From now on, each key will be blocked for a "
+#~ "certain length of time after it was used."
+#~ msgstr ""
+#~ "Укључени су одскочни тастери. Од сада, сваки тастер ће бити блокиран неко "
+#~ "време пошто се притисне."
+
+#~ msgid "Bounce keys has been disabled."
+#~ msgstr "Одскочни тастери су искључени."
+
+#~ msgid ""
+#~ "Sticky keys has been enabled. From now on, modifier keys will stay "
+#~ "latched after you have released them."
+#~ msgstr ""
+#~ "Укључени су лепљиви тастери. Од сада, модификаторски тастери ће остати "
+#~ "запети пошто их отпустите."
+
+#~ msgid "Sticky keys has been disabled."
+#~ msgstr "Лепљиви тастери су искључени."
+
+#~ msgid ""
+#~ "Mouse keys has been enabled. From now on, you can use the number pad of "
+#~ "your keyboard in order to control the mouse."
+#~ msgstr ""
+#~ "Укључени су тастери за миш. Од сада, можете користити нумерички део "
+#~ "тастатуре за контролисање миша."
+
+#~ msgid "Mouse keys has been disabled."
+#~ msgstr "Тастери за миш су искључени."
 
 #~ msgid "KDE Accessibility Tool"
 #~ msgstr "КДЕ‑ова алатка за приступачност"

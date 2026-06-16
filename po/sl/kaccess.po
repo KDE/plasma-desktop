@@ -1,7 +1,7 @@
 # translation of kaccess.po to Slovenian
 # Translation of kaccess.po to Slovenian
 # SLOVENIAN TRANSLATION OF KACCESS.
-# $Id: kaccess.po 1736512 2026-05-09 01:28:43Z scripty $
+# $Id: kaccess.po 1739199 2026-06-16 01:29:37Z scripty $
 # $Source$
 #
 # Copyright (C) 2000, 2003, 2005, 2006 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-09 00:45+0000\n"
+"POT-Creation-Date: 2026-06-16 00:47+0000\n"
 "PO-Revision-Date: 2020-11-05 09:21+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -36,411 +36,16 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "roman.maurer@amis.net,jlp@holodeck1.com,andrejm@ubuntu.si"
 
-#: kaccess.cpp:65
-msgid ""
-"The Shift key has been locked and is now active for all of the following "
-"keypresses."
-msgstr "Tipka Shift je zaklenjena in bo vključena za vse nadaljnje tipkanje."
-
-#: kaccess.cpp:66
-msgid "The Shift key is now active."
-msgstr "Tipka Shift je sedaj vključena."
-
-#: kaccess.cpp:67
-msgid "The Shift key is now inactive."
-msgstr "Tipka Shift je sedaj izključena."
-
-#: kaccess.cpp:71
-msgid ""
-"The Control key has been locked and is now active for all of the following "
-"keypresses."
-msgstr "Tipka Control je zaklenjena in bo vključena za vse nadaljnje tipkanje."
-
-#: kaccess.cpp:72
-msgid "The Control key is now active."
-msgstr "Tipka Control je sedaj vključena."
-
-#: kaccess.cpp:73
-msgid "The Control key is now inactive."
-msgstr "Tipka Control je sedaj izključena."
-
-#: kaccess.cpp:77
-msgid ""
-"The Alt key has been locked and is now active for all of the following "
-"keypresses."
-msgstr "Tipka Alt je zaklenjena in bo vključena za vse nadaljnje tipkanje."
-
-#: kaccess.cpp:78
-msgid "The Alt key is now active."
-msgstr "Tipka Alt je sedaj vključena."
-
-#: kaccess.cpp:79
-msgid "The Alt key is now inactive."
-msgstr "Tipka Alt je sedaj izključena."
-
-#: kaccess.cpp:83
-msgid ""
-"The Win key has been locked and is now active for all of the following "
-"keypresses."
-msgstr "Tipka Win je zaklenjena in bo vključena za vse nadaljnje tipkanje."
-
-#: kaccess.cpp:84
-msgid "The Win key is now active."
-msgstr "Tipka Win je sedaj vključena."
-
-#: kaccess.cpp:85
-msgid "The Win key is now inactive."
-msgstr "Tipka Win je sedaj izključena."
-
-#: kaccess.cpp:89
-msgid ""
-"The Meta key has been locked and is now active for all of the following "
-"keypresses."
-msgstr "Tipka Meta je zaklenjena in bo vključena za vse nadaljnje tipkanje."
-
-#: kaccess.cpp:90
-msgid "The Meta key is now active."
-msgstr "Tipka Meta je sedaj vključena."
-
-#: kaccess.cpp:91
-msgid "The Meta key is now inactive."
-msgstr "Tipka Meta je sedaj izključena."
-
-#: kaccess.cpp:95
-msgid ""
-"The Super key has been locked and is now active for all of the following "
-"keypresses."
-msgstr "Tipka Super je zaklenjena in bo vključena za vse nadaljnje tipkanje."
-
-#: kaccess.cpp:96
-msgid "The Super key is now active."
-msgstr "Tipka Super je sedaj vključena."
-
-#: kaccess.cpp:97
-msgid "The Super key is now inactive."
-msgstr "Tipka Super je sedaj izključena."
-
-#: kaccess.cpp:101
-msgid ""
-"The Hyper key has been locked and is now active for all of the following "
-"keypresses."
-msgstr "Tipka Hyper je zaklenjena in bo vključena za vse nadaljnje tipkanje."
-
-#: kaccess.cpp:102
-msgid "The Hyper key is now active."
-msgstr "Tipka Hyper je sedaj vključena."
-
-#: kaccess.cpp:103
-msgid "The Hyper key is now inactive."
-msgstr "Tipka Hyper je sedaj izključena."
-
-#: kaccess.cpp:107
-msgid ""
-"The Alt Graph key has been locked and is now active for all of the following "
-"keypresses."
-msgstr "Tipka Alt Gr je zaklenjena in bo vključena za vse nadaljnje tipkanje."
-
-#: kaccess.cpp:108
-msgid "The Alt Graph key is now active."
-msgstr "Tipka Alt Gr je sedaj vključena."
-
-#: kaccess.cpp:109
-msgid "The Alt Graph key is now inactive."
-msgstr "Tipka Alt Gr je sedaj izključena."
-
-#: kaccess.cpp:110
-msgid "The Num Lock key has been activated."
-msgstr "Tipka Num Lock je sedaj vključena."
-
-#: kaccess.cpp:110
-msgid "The Num Lock key is now inactive."
-msgstr "Tipka Num Lock je sedaj izključena."
-
-#: kaccess.cpp:111
-msgid "The Caps Lock key has been activated."
-msgstr "Tipka Caps Lock je sedaj vključena."
-
-#: kaccess.cpp:111
-msgid "The Caps Lock key is now inactive."
-msgstr "Tipka Caps Lock je sedaj izključena."
-
-#: kaccess.cpp:112
-msgid "The Scroll Lock key has been activated."
-msgstr "Tipka Scroll Lock je sedaj vključena."
-
-#: kaccess.cpp:112
-msgid "The Scroll Lock key is now inactive."
-msgstr "Tipka Scroll Lock je sedaj izključena."
-
-#: kaccess.cpp:144
+#: kaccess.cpp:36
 #, kde-format
 msgid "Toggle Screen Reader On and Off"
 msgstr "Preklopi bralnik zaslona"
 
-#: kaccess.cpp:146
+#: kaccess.cpp:38
 #, kde-format
 msgctxt "Name for kaccess shortcuts category"
 msgid "Accessibility"
 msgstr "Dostopnost"
-
-#: kaccess.cpp:538
-#, kde-format
-msgid "AltGraph"
-msgstr "AltGraph"
-
-#: kaccess.cpp:540
-#, kde-format
-msgid "Hyper"
-msgstr "Hyper"
-
-#: kaccess.cpp:542
-#, kde-format
-msgid "Super"
-msgstr "Super"
-
-#: kaccess.cpp:544
-#, kde-format
-msgid "Meta"
-msgstr "Meta"
-
-#: kaccess.cpp:561
-#, kde-format
-msgid "Warning"
-msgstr "Opozorilo"
-
-#: kaccess.cpp:589
-#, kde-format
-msgid "&When a gesture was used:"
-msgstr "&Kdaj je bila kretnja uporabljena:"
-
-#: kaccess.cpp:595
-#, kde-format
-msgid "Change Settings Without Asking"
-msgstr "Spremeni nastavitve brez vprašanja"
-
-#: kaccess.cpp:596
-#, kde-format
-msgid "Show This Confirmation Dialog"
-msgstr "Prikaži to potrditveno okno"
-
-#: kaccess.cpp:597
-#, kde-format
-msgid "Deactivate All AccessX Features & Gestures"
-msgstr "Izključi vse kretnje in možnosti AccessX"
-
-#: kaccess.cpp:640 kaccess.cpp:642
-#, kde-format
-msgid "Slow keys"
-msgstr "Počasne tipke"
-
-#: kaccess.cpp:645 kaccess.cpp:647
-#, kde-format
-msgid "Bounce keys"
-msgstr "Odbijajoče tipke"
-
-#: kaccess.cpp:650 kaccess.cpp:652
-#, kde-format
-msgid "Sticky keys"
-msgstr "Lepljive tipke"
-
-#: kaccess.cpp:655 kaccess.cpp:657
-#, kde-format
-msgid "Mouse keys"
-msgstr "Miškine tipke"
-
-#: kaccess.cpp:664
-#, kde-format
-msgid "Do you really want to deactivate \"%1\"?"
-msgstr "Ali zares želite izključiti »%1«?"
-
-#: kaccess.cpp:667
-#, kde-format
-msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
-msgstr "Ali zares želite izključiti »%1« in »%2«?"
-
-#: kaccess.cpp:671
-#, kde-format
-msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
-msgstr "Ali zares želite izključiti »%1«, »%2« in »%3«?"
-
-#: kaccess.cpp:674
-#, kde-format
-msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr "Ali zares želite izključiti »%1«, »%2«, »%3« in »%4«?"
-
-#: kaccess.cpp:685
-#, kde-format
-msgid "Do you really want to activate \"%1\"?"
-msgstr "Ali zares želite vključiti »%1«?"
-
-#: kaccess.cpp:688
-#, kde-format
-msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
-msgstr "Ali zares želite vključiti »%1« in izključiti »%2«?"
-
-#: kaccess.cpp:691
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
-msgstr "Ali zares želite vključiti »%1« in izključiti »%2« ter »%3«?"
-
-#: kaccess.cpp:697
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
-"\"%4\"?"
-msgstr "Ali zares želite vključiti »%1« in izključiti »%2«, »%3« ter »%4«?"
-
-#: kaccess.cpp:708
-#, kde-format
-msgid "Do you really want to activate \"%1\" and \"%2\"?"
-msgstr "Ali zares želite vključiti »%1« in »%2«?"
-
-#: kaccess.cpp:711
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
-msgstr "Ali zares želite vključiti »%1« ter »%2« in izključiti »%3«?"
-
-#: kaccess.cpp:717
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
-"and \"%4\"?"
-msgstr "Ali zares želite vključiti »%1« ter »%2« in izključiti »%3« ter »%4«?"
-
-#: kaccess.cpp:728
-#, kde-format
-msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
-msgstr "Ali zares želite vključiti »%1«, »%2« in »%3«?"
-
-#: kaccess.cpp:731
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
-"\"%4\"?"
-msgstr "Ali zares želite vključiti »%1«, »%2« ter »%3« in izključiti »%4«?"
-
-#: kaccess.cpp:740
-#, kde-format
-msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr "Ali zares želite vključiti »%1«, »%2«, »%3« in »%4«?"
-
-#: kaccess.cpp:749
-#, kde-format
-msgid "An application has requested to change this setting."
-msgstr "Program je zahteval spremembo te nastavitve."
-
-#: kaccess.cpp:753
-#, kde-format
-msgid ""
-"You held down the Shift key for 8 seconds or an application has requested to "
-"change this setting."
-msgstr ""
-"Imeli ste pritisnjeno tipko Shift (dvigalko) 8 sekund ali pa je program "
-"zahteval spremembo te nastavitve."
-
-#: kaccess.cpp:755
-#, kde-format
-msgid ""
-"You pressed the Shift key 5 consecutive times or an application has "
-"requested to change this setting."
-msgstr ""
-"Petkrat ste zaporedno pritisnili tipko Shift (dvigalko) ali pa je program "
-"zahteval spremembo te nastavitve."
-
-#: kaccess.cpp:759
-#, kde-format
-msgid "You pressed %1 or an application has requested to change this setting."
-msgstr ""
-"Pritisnili ste tipko %1 ali pa je program zahteval spremembo te nastavitve."
-
-#: kaccess.cpp:764
-#, kde-format
-msgid ""
-"An application has requested to change these settings, or you used a "
-"combination of several keyboard gestures."
-msgstr ""
-"Program je zahteval spremembo te nastavitve, ali pa ste uporabili "
-"kombinacijo več tipkovnih kretenj."
-
-#: kaccess.cpp:766
-#, kde-format
-msgid "An application has requested to change these settings."
-msgstr "Program je zahteval spremembo teh nastavitev."
-
-#: kaccess.cpp:771
-#, kde-format
-msgid ""
-"These AccessX settings are needed for some users with motion impairments and "
-"can be configured in the KDE System Settings. You can also turn them on and "
-"off with standardized keyboard gestures.\n"
-"\n"
-"If you do not need them, you can select \"Deactivate all AccessX features "
-"and gestures\"."
-msgstr ""
-"Te nastavitve AccessX so potrebne za nekatere uporabnike z gibalnimi "
-"težavami in se lahko nastavijo v KDE-jevih sistemskih nastavitvah. Lahko jih "
-"tudi vklopite ali izklopite s standardiziranimi tipkovnimi kretnjami.\n"
-"\n"
-"Če jih ne potrebujete, lahko izberete »Izključi vse kretnje in možnosti "
-"AccessX«."
-
-#: kaccess.cpp:792
-#, kde-format
-msgid ""
-"Slow keys has been enabled. From now on, you need to press each key for a "
-"certain length of time before it gets accepted."
-msgstr ""
-"Omogočene so počasne tipke. Od sedaj dalje morate vsako tipko držati daljši "
-"čas, da učinkuje."
-
-#: kaccess.cpp:794
-#, kde-format
-msgid "Slow keys has been disabled."
-msgstr "Počasne tipke so onemogočene."
-
-#: kaccess.cpp:798
-#, kde-format
-msgid ""
-"Bounce keys has been enabled. From now on, each key will be blocked for a "
-"certain length of time after it was used."
-msgstr ""
-"Omogočene so odbijajoče tipke. Od sedaj dalje bo vsaka tipka po uporabi za "
-"nekaj časa blokirana."
-
-#: kaccess.cpp:800
-#, kde-format
-msgid "Bounce keys has been disabled."
-msgstr "Odbijajoče tipke so onemogočene."
-
-#: kaccess.cpp:804
-#, kde-format
-msgid ""
-"Sticky keys has been enabled. From now on, modifier keys will stay latched "
-"after you have released them."
-msgstr ""
-"Omogočene so lepljive tipke. Od sedaj dalje bodo spremenilne tipke v veljavi "
-"tudi po tem ko jih sprostite."
-
-#: kaccess.cpp:806
-#, kde-format
-msgid "Sticky keys has been disabled."
-msgstr "Spremenilne tipke so onemogočene."
-
-#: kaccess.cpp:810
-#, kde-format
-msgid ""
-"Mouse keys has been enabled. From now on, you can use the number pad of your "
-"keyboard in order to control the mouse."
-msgstr ""
-"Omogočene so miškine tipke. Od sedaj dalje lahko namesto miške uporabljate "
-"številčni del svoje tipkovnice."
-
-#: kaccess.cpp:812
-#, kde-format
-msgid "Mouse keys has been disabled."
-msgstr "Miškine tipke so onemogočene."
 
 #: main.cpp:40
 #, kde-format
@@ -461,6 +66,296 @@ msgstr "Matthias Hoelzer-Kluepfel"
 #, kde-format
 msgid "Author"
 msgstr "Avtor"
+
+#~ msgid ""
+#~ "The Shift key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Tipka Shift je zaklenjena in bo vključena za vse nadaljnje tipkanje."
+
+#~ msgid "The Shift key is now active."
+#~ msgstr "Tipka Shift je sedaj vključena."
+
+#~ msgid "The Shift key is now inactive."
+#~ msgstr "Tipka Shift je sedaj izključena."
+
+#~ msgid ""
+#~ "The Control key has been locked and is now active for all of the "
+#~ "following keypresses."
+#~ msgstr ""
+#~ "Tipka Control je zaklenjena in bo vključena za vse nadaljnje tipkanje."
+
+#~ msgid "The Control key is now active."
+#~ msgstr "Tipka Control je sedaj vključena."
+
+#~ msgid "The Control key is now inactive."
+#~ msgstr "Tipka Control je sedaj izključena."
+
+#~ msgid ""
+#~ "The Alt key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr "Tipka Alt je zaklenjena in bo vključena za vse nadaljnje tipkanje."
+
+#~ msgid "The Alt key is now active."
+#~ msgstr "Tipka Alt je sedaj vključena."
+
+#~ msgid "The Alt key is now inactive."
+#~ msgstr "Tipka Alt je sedaj izključena."
+
+#~ msgid ""
+#~ "The Win key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr "Tipka Win je zaklenjena in bo vključena za vse nadaljnje tipkanje."
+
+#~ msgid "The Win key is now active."
+#~ msgstr "Tipka Win je sedaj vključena."
+
+#~ msgid "The Win key is now inactive."
+#~ msgstr "Tipka Win je sedaj izključena."
+
+#~ msgid ""
+#~ "The Meta key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr "Tipka Meta je zaklenjena in bo vključena za vse nadaljnje tipkanje."
+
+#~ msgid "The Meta key is now active."
+#~ msgstr "Tipka Meta je sedaj vključena."
+
+#~ msgid "The Meta key is now inactive."
+#~ msgstr "Tipka Meta je sedaj izključena."
+
+#~ msgid ""
+#~ "The Super key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Tipka Super je zaklenjena in bo vključena za vse nadaljnje tipkanje."
+
+#~ msgid "The Super key is now active."
+#~ msgstr "Tipka Super je sedaj vključena."
+
+#~ msgid "The Super key is now inactive."
+#~ msgstr "Tipka Super je sedaj izključena."
+
+#~ msgid ""
+#~ "The Hyper key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Tipka Hyper je zaklenjena in bo vključena za vse nadaljnje tipkanje."
+
+#~ msgid "The Hyper key is now active."
+#~ msgstr "Tipka Hyper je sedaj vključena."
+
+#~ msgid "The Hyper key is now inactive."
+#~ msgstr "Tipka Hyper je sedaj izključena."
+
+#~ msgid ""
+#~ "The Alt Graph key has been locked and is now active for all of the "
+#~ "following keypresses."
+#~ msgstr ""
+#~ "Tipka Alt Gr je zaklenjena in bo vključena za vse nadaljnje tipkanje."
+
+#~ msgid "The Alt Graph key is now active."
+#~ msgstr "Tipka Alt Gr je sedaj vključena."
+
+#~ msgid "The Alt Graph key is now inactive."
+#~ msgstr "Tipka Alt Gr je sedaj izključena."
+
+#~ msgid "The Num Lock key has been activated."
+#~ msgstr "Tipka Num Lock je sedaj vključena."
+
+#~ msgid "The Num Lock key is now inactive."
+#~ msgstr "Tipka Num Lock je sedaj izključena."
+
+#~ msgid "The Caps Lock key has been activated."
+#~ msgstr "Tipka Caps Lock je sedaj vključena."
+
+#~ msgid "The Caps Lock key is now inactive."
+#~ msgstr "Tipka Caps Lock je sedaj izključena."
+
+#~ msgid "The Scroll Lock key has been activated."
+#~ msgstr "Tipka Scroll Lock je sedaj vključena."
+
+#~ msgid "The Scroll Lock key is now inactive."
+#~ msgstr "Tipka Scroll Lock je sedaj izključena."
+
+#~ msgid "AltGraph"
+#~ msgstr "AltGraph"
+
+#~ msgid "Hyper"
+#~ msgstr "Hyper"
+
+#~ msgid "Super"
+#~ msgstr "Super"
+
+#~ msgid "Meta"
+#~ msgstr "Meta"
+
+#~ msgid "Warning"
+#~ msgstr "Opozorilo"
+
+#~ msgid "&When a gesture was used:"
+#~ msgstr "&Kdaj je bila kretnja uporabljena:"
+
+#~ msgid "Change Settings Without Asking"
+#~ msgstr "Spremeni nastavitve brez vprašanja"
+
+#~ msgid "Show This Confirmation Dialog"
+#~ msgstr "Prikaži to potrditveno okno"
+
+#~ msgid "Deactivate All AccessX Features & Gestures"
+#~ msgstr "Izključi vse kretnje in možnosti AccessX"
+
+#~ msgid "Slow keys"
+#~ msgstr "Počasne tipke"
+
+#~ msgid "Bounce keys"
+#~ msgstr "Odbijajoče tipke"
+
+#~ msgid "Sticky keys"
+#~ msgstr "Lepljive tipke"
+
+#~ msgid "Mouse keys"
+#~ msgstr "Miškine tipke"
+
+#~ msgid "Do you really want to deactivate \"%1\"?"
+#~ msgstr "Ali zares želite izključiti »%1«?"
+
+#~ msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
+#~ msgstr "Ali zares želite izključiti »%1« in »%2«?"
+
+#~ msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
+#~ msgstr "Ali zares želite izključiti »%1«, »%2« in »%3«?"
+
+#~ msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+#~ msgstr "Ali zares želite izključiti »%1«, »%2«, »%3« in »%4«?"
+
+#~ msgid "Do you really want to activate \"%1\"?"
+#~ msgstr "Ali zares želite vključiti »%1«?"
+
+#~ msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
+#~ msgstr "Ali zares želite vključiti »%1« in izključiti »%2«?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
+#~ msgstr "Ali zares želite vključiti »%1« in izključiti »%2« ter »%3«?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" "
+#~ "and \"%4\"?"
+#~ msgstr "Ali zares želite vključiti »%1« in izključiti »%2«, »%3« ter »%4«?"
+
+#~ msgid "Do you really want to activate \"%1\" and \"%2\"?"
+#~ msgstr "Ali zares želite vključiti »%1« in »%2«?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
+#~ msgstr "Ali zares želite vključiti »%1« ter »%2« in izključiti »%3«?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\", and \"%2\" and to deactivate "
+#~ "\"%3\" and \"%4\"?"
+#~ msgstr ""
+#~ "Ali zares želite vključiti »%1« ter »%2« in izključiti »%3« ter »%4«?"
+
+#~ msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
+#~ msgstr "Ali zares želite vključiti »%1«, »%2« in »%3«?"
+
+#~ msgid ""
+#~ "Do you really want to activate \"%1\", \"%2\" and \"%3\" and to "
+#~ "deactivate \"%4\"?"
+#~ msgstr "Ali zares želite vključiti »%1«, »%2« ter »%3« in izključiti »%4«?"
+
+#~ msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+#~ msgstr "Ali zares želite vključiti »%1«, »%2«, »%3« in »%4«?"
+
+#~ msgid "An application has requested to change this setting."
+#~ msgstr "Program je zahteval spremembo te nastavitve."
+
+#~ msgid ""
+#~ "You held down the Shift key for 8 seconds or an application has requested "
+#~ "to change this setting."
+#~ msgstr ""
+#~ "Imeli ste pritisnjeno tipko Shift (dvigalko) 8 sekund ali pa je program "
+#~ "zahteval spremembo te nastavitve."
+
+#~ msgid ""
+#~ "You pressed the Shift key 5 consecutive times or an application has "
+#~ "requested to change this setting."
+#~ msgstr ""
+#~ "Petkrat ste zaporedno pritisnili tipko Shift (dvigalko) ali pa je program "
+#~ "zahteval spremembo te nastavitve."
+
+#~ msgid ""
+#~ "You pressed %1 or an application has requested to change this setting."
+#~ msgstr ""
+#~ "Pritisnili ste tipko %1 ali pa je program zahteval spremembo te "
+#~ "nastavitve."
+
+#~ msgid ""
+#~ "An application has requested to change these settings, or you used a "
+#~ "combination of several keyboard gestures."
+#~ msgstr ""
+#~ "Program je zahteval spremembo te nastavitve, ali pa ste uporabili "
+#~ "kombinacijo več tipkovnih kretenj."
+
+#~ msgid "An application has requested to change these settings."
+#~ msgstr "Program je zahteval spremembo teh nastavitev."
+
+#~ msgid ""
+#~ "These AccessX settings are needed for some users with motion impairments "
+#~ "and can be configured in the KDE System Settings. You can also turn them "
+#~ "on and off with standardized keyboard gestures.\n"
+#~ "\n"
+#~ "If you do not need them, you can select \"Deactivate all AccessX features "
+#~ "and gestures\"."
+#~ msgstr ""
+#~ "Te nastavitve AccessX so potrebne za nekatere uporabnike z gibalnimi "
+#~ "težavami in se lahko nastavijo v KDE-jevih sistemskih nastavitvah. Lahko "
+#~ "jih tudi vklopite ali izklopite s standardiziranimi tipkovnimi "
+#~ "kretnjami.\n"
+#~ "\n"
+#~ "Če jih ne potrebujete, lahko izberete »Izključi vse kretnje in možnosti "
+#~ "AccessX«."
+
+#~ msgid ""
+#~ "Slow keys has been enabled. From now on, you need to press each key for a "
+#~ "certain length of time before it gets accepted."
+#~ msgstr ""
+#~ "Omogočene so počasne tipke. Od sedaj dalje morate vsako tipko držati "
+#~ "daljši čas, da učinkuje."
+
+#~ msgid "Slow keys has been disabled."
+#~ msgstr "Počasne tipke so onemogočene."
+
+#~ msgid ""
+#~ "Bounce keys has been enabled. From now on, each key will be blocked for a "
+#~ "certain length of time after it was used."
+#~ msgstr ""
+#~ "Omogočene so odbijajoče tipke. Od sedaj dalje bo vsaka tipka po uporabi "
+#~ "za nekaj časa blokirana."
+
+#~ msgid "Bounce keys has been disabled."
+#~ msgstr "Odbijajoče tipke so onemogočene."
+
+#~ msgid ""
+#~ "Sticky keys has been enabled. From now on, modifier keys will stay "
+#~ "latched after you have released them."
+#~ msgstr ""
+#~ "Omogočene so lepljive tipke. Od sedaj dalje bodo spremenilne tipke v "
+#~ "veljavi tudi po tem ko jih sprostite."
+
+#~ msgid "Sticky keys has been disabled."
+#~ msgstr "Spremenilne tipke so onemogočene."
+
+#~ msgid ""
+#~ "Mouse keys has been enabled. From now on, you can use the number pad of "
+#~ "your keyboard in order to control the mouse."
+#~ msgstr ""
+#~ "Omogočene so miškine tipke. Od sedaj dalje lahko namesto miške "
+#~ "uporabljate številčni del svoje tipkovnice."
+
+#~ msgid "Mouse keys has been disabled."
+#~ msgstr "Miškine tipke so onemogočene."
 
 #~ msgid "KDE Accessibility Tool"
 #~ msgstr "Orodje za dostopnost KDE"

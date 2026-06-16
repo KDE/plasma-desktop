@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-09 00:45+0000\n"
+"POT-Creation-Date: 2026-06-16 00:47+0000\n"
 "PO-Revision-Date: 2007-12-22 19:04+0100\n"
 "Last-Translator: Børre Gaup <boerre@skolelinux.no>\n"
 "Language-Team: Northern Sami <l10n-no@nuug.no>\n"
@@ -29,407 +29,15 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "boerre@skolelinux.no"
 
-#: kaccess.cpp:65
-msgid ""
-"The Shift key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Shift-boallu lea lohkkaduvvon ja lea dál aktiivalaš čuovvuvaš "
-"boallodeaddilemiide."
-
-#: kaccess.cpp:66
-msgid "The Shift key is now active."
-msgstr "Shift-boallu lea aktiivalaš"
-
-#: kaccess.cpp:67
-msgid "The Shift key is now inactive."
-msgstr "Shift-boallu ii leat šat aktiivalaš."
-
-#: kaccess.cpp:71
-msgid ""
-"The Control key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Ctrl-boallu lea lohkkaduvvon ja lea dál aktiivalaš čuovvuvaš "
-"boallodeaddilemiide."
-
-#: kaccess.cpp:72
-msgid "The Control key is now active."
-msgstr "Ctrl-boallu lea aktiivalaš."
-
-#: kaccess.cpp:73
-msgid "The Control key is now inactive."
-msgstr "Ctrl-boallu ii leat šat aktiivalaš."
-
-#: kaccess.cpp:77
-msgid ""
-"The Alt key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Alt-boallu lea lohkkaduvvon ja lea dál aktiivalaš čuovvuvaš "
-"boallodeaddilemiide."
-
-#: kaccess.cpp:78
-msgid "The Alt key is now active."
-msgstr "Alt-boallu lea aktiivalaš."
-
-#: kaccess.cpp:79
-msgid "The Alt key is now inactive."
-msgstr "Alt-boallu ii leat šat aktiivalaš."
-
-#: kaccess.cpp:83
-msgid ""
-"The Win key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Win-boallu lea lohkkaduvvon ja lea dál aktiivalaš čuovvuvaš "
-"boallodeaddilemiide."
-
-#: kaccess.cpp:84
-msgid "The Win key is now active."
-msgstr "Win-boallu lea aktiivalaš."
-
-#: kaccess.cpp:85
-msgid "The Win key is now inactive."
-msgstr "Win-boallu ii lea šat aktiivalaš."
-
-#: kaccess.cpp:89
-msgid ""
-"The Meta key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Meta-boallu lea lohkkaduvvon ja lea dál aktiivalaš čuovvuvaš "
-"boallodeaddilemiide."
-
-#: kaccess.cpp:90
-msgid "The Meta key is now active."
-msgstr "Meta-boallu lea aktiivalaš."
-
-#: kaccess.cpp:91
-msgid "The Meta key is now inactive."
-msgstr "Meta-boallu ii leat šat aktiivalaš."
-
-#: kaccess.cpp:95
-msgid ""
-"The Super key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Super-boallu lea lohkkaduvvon ja lea dál aktiivalaš čuovvuvaš "
-"boallodeaddilemiide."
-
-#: kaccess.cpp:96
-msgid "The Super key is now active."
-msgstr "Super-boallu lea aktiivalaš."
-
-#: kaccess.cpp:97
-msgid "The Super key is now inactive."
-msgstr "Super-boallu ii leat šat aktiivalaš."
-
-#: kaccess.cpp:101
-msgid ""
-"The Hyper key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Hyper-boallu lea lohkkaduvvon ja lea dál aktiivalaš čuovvuvaš "
-"boallodeaddilemiide."
-
-#: kaccess.cpp:102
-msgid "The Hyper key is now active."
-msgstr "Hyper-boallu lea aktiivalaš."
-
-#: kaccess.cpp:103
-msgid "The Hyper key is now inactive."
-msgstr "Hyper-boallu ii leat šat aktiivalaš."
-
-#: kaccess.cpp:107
-msgid ""
-"The Alt Graph key has been locked and is now active for all of the following "
-"keypresses."
-msgstr ""
-"Alt Gr-boallu lea lohkkaduvvon ja lea dál aktiivalaš čuovvuvaš "
-"boallodeaddilemiide."
-
-#: kaccess.cpp:108
-msgid "The Alt Graph key is now active."
-msgstr "Alt Gr-boallu lea aktiivalaš."
-
-#: kaccess.cpp:109
-msgid "The Alt Graph key is now inactive."
-msgstr "Alt Gr-boallu ii leat šat aktiivalaš."
-
-#: kaccess.cpp:110
-msgid "The Num Lock key has been activated."
-msgstr "Num Lock-boallu lea dál aktiverejuvvon."
-
-#: kaccess.cpp:110
-msgid "The Num Lock key is now inactive."
-msgstr "Num Lock-boallu ii leat šat aktiivalaš."
-
-#: kaccess.cpp:111
-msgid "The Caps Lock key has been activated."
-msgstr "Caps Lock-boallu lea aktiverejuvvon."
-
-#: kaccess.cpp:111
-msgid "The Caps Lock key is now inactive."
-msgstr "Caps Lock-boallu ii leat šat aktiivalaš."
-
-#: kaccess.cpp:112
-msgid "The Scroll Lock key has been activated."
-msgstr "Scroll Lock-boallu lea aktiverejuvvon."
-
-#: kaccess.cpp:112
-msgid "The Scroll Lock key is now inactive."
-msgstr "Scroll Lock ii leat šat aktiivalaš."
-
-#: kaccess.cpp:144
+#: kaccess.cpp:36
 #, kde-format
 msgid "Toggle Screen Reader On and Off"
 msgstr ""
 
-#: kaccess.cpp:146
+#: kaccess.cpp:38
 #, kde-format
 msgctxt "Name for kaccess shortcuts category"
 msgid "Accessibility"
-msgstr ""
-
-#: kaccess.cpp:538
-#, kde-format
-msgid "AltGraph"
-msgstr "Alt Graph"
-
-#: kaccess.cpp:540
-#, kde-format
-msgid "Hyper"
-msgstr "Hyper"
-
-#: kaccess.cpp:542
-#, kde-format
-msgid "Super"
-msgstr "Super"
-
-#: kaccess.cpp:544
-#, kde-format
-msgid "Meta"
-msgstr "Meta"
-
-#: kaccess.cpp:561
-#, kde-format
-msgid "Warning"
-msgstr "Váruhus"
-
-#: kaccess.cpp:589
-#, kde-format
-msgid "&When a gesture was used:"
-msgstr ""
-
-#: kaccess.cpp:595
-#, kde-format
-msgid "Change Settings Without Asking"
-msgstr "Rievdat heivehusaid jearakeahttá"
-
-#: kaccess.cpp:596
-#, kde-format
-msgid "Show This Confirmation Dialog"
-msgstr "Čájet dán nannenláseža"
-
-#: kaccess.cpp:597
-#, kde-format
-msgid "Deactivate All AccessX Features & Gestures"
-msgstr ""
-
-#: kaccess.cpp:640 kaccess.cpp:642
-#, kde-format
-msgid "Slow keys"
-msgstr "Njoahces boalut"
-
-#: kaccess.cpp:645 kaccess.cpp:647
-#, kde-format
-msgid "Bounce keys"
-msgstr ""
-
-#: kaccess.cpp:650 kaccess.cpp:652
-#, kde-format
-msgid "Sticky keys"
-msgstr "Giddes modifikáhtorboaluid"
-
-#: kaccess.cpp:655 kaccess.cpp:657
-#, kde-format
-msgid "Mouse keys"
-msgstr "Sáhpánboalut"
-
-#: kaccess.cpp:664
-#, kde-format
-msgid "Do you really want to deactivate \"%1\"?"
-msgstr ""
-
-#: kaccess.cpp:667
-#, kde-format
-msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
-msgstr ""
-
-#: kaccess.cpp:671
-#, kde-format
-msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
-msgstr ""
-
-#: kaccess.cpp:674
-#, kde-format
-msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr ""
-
-#: kaccess.cpp:685
-#, kde-format
-msgid "Do you really want to activate \"%1\"?"
-msgstr "Háliidatgo duođas aktiveret «%1»?"
-
-#: kaccess.cpp:688
-#, kde-format
-msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
-msgstr ""
-
-#: kaccess.cpp:691
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
-msgstr ""
-
-#: kaccess.cpp:697
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
-"\"%4\"?"
-msgstr ""
-
-#: kaccess.cpp:708
-#, kde-format
-msgid "Do you really want to activate \"%1\" and \"%2\"?"
-msgstr "Háliidatgo duođas aktiveret «%1» ja «%2»?"
-
-#: kaccess.cpp:711
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
-msgstr ""
-
-#: kaccess.cpp:717
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
-"and \"%4\"?"
-msgstr ""
-
-#: kaccess.cpp:728
-#, kde-format
-msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
-msgstr "Háliidatgo duođas aktiveret «%1», «%2» ja «%3»?"
-
-#: kaccess.cpp:731
-#, kde-format
-msgid ""
-"Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
-"\"%4\"?"
-msgstr ""
-
-#: kaccess.cpp:740
-#, kde-format
-msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr "Háliidatgo duođas aktiveret «%1», «%2», «%3» ja «%4»?"
-
-#: kaccess.cpp:749
-#, kde-format
-msgid "An application has requested to change this setting."
-msgstr "Prográmma lea jearran jus oažžu rievdadit dán heivehusa."
-
-#: kaccess.cpp:753
-#, kde-format
-msgid ""
-"You held down the Shift key for 8 seconds or an application has requested to "
-"change this setting."
-msgstr ""
-"Don leat doallan Shift-boalu eanetgo 8 sekundda, dahje prográmma lea jearran "
-"jus oažžu rievdadit dán heivehusa."
-
-#: kaccess.cpp:755
-#, kde-format
-msgid ""
-"You pressed the Shift key 5 consecutive times or an application has "
-"requested to change this setting."
-msgstr ""
-
-#: kaccess.cpp:759
-#, kde-format
-msgid "You pressed %1 or an application has requested to change this setting."
-msgstr ""
-
-#: kaccess.cpp:764
-#, kde-format
-msgid ""
-"An application has requested to change these settings, or you used a "
-"combination of several keyboard gestures."
-msgstr ""
-
-#: kaccess.cpp:766
-#, kde-format
-msgid "An application has requested to change these settings."
-msgstr ""
-
-#: kaccess.cpp:771
-#, kde-format
-msgid ""
-"These AccessX settings are needed for some users with motion impairments and "
-"can be configured in the KDE System Settings. You can also turn them on and "
-"off with standardized keyboard gestures.\n"
-"\n"
-"If you do not need them, you can select \"Deactivate all AccessX features "
-"and gestures\"."
-msgstr ""
-
-#: kaccess.cpp:792
-#, kde-format
-msgid ""
-"Slow keys has been enabled. From now on, you need to press each key for a "
-"certain length of time before it gets accepted."
-msgstr ""
-
-#: kaccess.cpp:794
-#, kde-format
-msgid "Slow keys has been disabled."
-msgstr ""
-
-#: kaccess.cpp:798
-#, kde-format
-msgid ""
-"Bounce keys has been enabled. From now on, each key will be blocked for a "
-"certain length of time after it was used."
-msgstr ""
-
-#: kaccess.cpp:800
-#, kde-format
-msgid "Bounce keys has been disabled."
-msgstr ""
-
-#: kaccess.cpp:804
-#, kde-format
-msgid ""
-"Sticky keys has been enabled. From now on, modifier keys will stay latched "
-"after you have released them."
-msgstr ""
-
-#: kaccess.cpp:806
-#, kde-format
-msgid "Sticky keys has been disabled."
-msgstr ""
-
-#: kaccess.cpp:810
-#, kde-format
-msgid ""
-"Mouse keys has been enabled. From now on, you can use the number pad of your "
-"keyboard in order to control the mouse."
-msgstr ""
-
-#: kaccess.cpp:812
-#, kde-format
-msgid "Mouse keys has been disabled."
 msgstr ""
 
 #: main.cpp:40
@@ -451,3 +59,177 @@ msgstr "Matthias Hölzer-Klüpfel"
 #, kde-format
 msgid "Author"
 msgstr "Čálli"
+
+#~ msgid ""
+#~ "The Shift key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Shift-boallu lea lohkkaduvvon ja lea dál aktiivalaš čuovvuvaš "
+#~ "boallodeaddilemiide."
+
+#~ msgid "The Shift key is now active."
+#~ msgstr "Shift-boallu lea aktiivalaš"
+
+#~ msgid "The Shift key is now inactive."
+#~ msgstr "Shift-boallu ii leat šat aktiivalaš."
+
+#~ msgid ""
+#~ "The Control key has been locked and is now active for all of the "
+#~ "following keypresses."
+#~ msgstr ""
+#~ "Ctrl-boallu lea lohkkaduvvon ja lea dál aktiivalaš čuovvuvaš "
+#~ "boallodeaddilemiide."
+
+#~ msgid "The Control key is now active."
+#~ msgstr "Ctrl-boallu lea aktiivalaš."
+
+#~ msgid "The Control key is now inactive."
+#~ msgstr "Ctrl-boallu ii leat šat aktiivalaš."
+
+#~ msgid ""
+#~ "The Alt key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Alt-boallu lea lohkkaduvvon ja lea dál aktiivalaš čuovvuvaš "
+#~ "boallodeaddilemiide."
+
+#~ msgid "The Alt key is now active."
+#~ msgstr "Alt-boallu lea aktiivalaš."
+
+#~ msgid "The Alt key is now inactive."
+#~ msgstr "Alt-boallu ii leat šat aktiivalaš."
+
+#~ msgid ""
+#~ "The Win key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Win-boallu lea lohkkaduvvon ja lea dál aktiivalaš čuovvuvaš "
+#~ "boallodeaddilemiide."
+
+#~ msgid "The Win key is now active."
+#~ msgstr "Win-boallu lea aktiivalaš."
+
+#~ msgid "The Win key is now inactive."
+#~ msgstr "Win-boallu ii lea šat aktiivalaš."
+
+#~ msgid ""
+#~ "The Meta key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Meta-boallu lea lohkkaduvvon ja lea dál aktiivalaš čuovvuvaš "
+#~ "boallodeaddilemiide."
+
+#~ msgid "The Meta key is now active."
+#~ msgstr "Meta-boallu lea aktiivalaš."
+
+#~ msgid "The Meta key is now inactive."
+#~ msgstr "Meta-boallu ii leat šat aktiivalaš."
+
+#~ msgid ""
+#~ "The Super key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Super-boallu lea lohkkaduvvon ja lea dál aktiivalaš čuovvuvaš "
+#~ "boallodeaddilemiide."
+
+#~ msgid "The Super key is now active."
+#~ msgstr "Super-boallu lea aktiivalaš."
+
+#~ msgid "The Super key is now inactive."
+#~ msgstr "Super-boallu ii leat šat aktiivalaš."
+
+#~ msgid ""
+#~ "The Hyper key has been locked and is now active for all of the following "
+#~ "keypresses."
+#~ msgstr ""
+#~ "Hyper-boallu lea lohkkaduvvon ja lea dál aktiivalaš čuovvuvaš "
+#~ "boallodeaddilemiide."
+
+#~ msgid "The Hyper key is now active."
+#~ msgstr "Hyper-boallu lea aktiivalaš."
+
+#~ msgid "The Hyper key is now inactive."
+#~ msgstr "Hyper-boallu ii leat šat aktiivalaš."
+
+#~ msgid ""
+#~ "The Alt Graph key has been locked and is now active for all of the "
+#~ "following keypresses."
+#~ msgstr ""
+#~ "Alt Gr-boallu lea lohkkaduvvon ja lea dál aktiivalaš čuovvuvaš "
+#~ "boallodeaddilemiide."
+
+#~ msgid "The Alt Graph key is now active."
+#~ msgstr "Alt Gr-boallu lea aktiivalaš."
+
+#~ msgid "The Alt Graph key is now inactive."
+#~ msgstr "Alt Gr-boallu ii leat šat aktiivalaš."
+
+#~ msgid "The Num Lock key has been activated."
+#~ msgstr "Num Lock-boallu lea dál aktiverejuvvon."
+
+#~ msgid "The Num Lock key is now inactive."
+#~ msgstr "Num Lock-boallu ii leat šat aktiivalaš."
+
+#~ msgid "The Caps Lock key has been activated."
+#~ msgstr "Caps Lock-boallu lea aktiverejuvvon."
+
+#~ msgid "The Caps Lock key is now inactive."
+#~ msgstr "Caps Lock-boallu ii leat šat aktiivalaš."
+
+#~ msgid "The Scroll Lock key has been activated."
+#~ msgstr "Scroll Lock-boallu lea aktiverejuvvon."
+
+#~ msgid "The Scroll Lock key is now inactive."
+#~ msgstr "Scroll Lock ii leat šat aktiivalaš."
+
+#~ msgid "AltGraph"
+#~ msgstr "Alt Graph"
+
+#~ msgid "Hyper"
+#~ msgstr "Hyper"
+
+#~ msgid "Super"
+#~ msgstr "Super"
+
+#~ msgid "Meta"
+#~ msgstr "Meta"
+
+#~ msgid "Warning"
+#~ msgstr "Váruhus"
+
+#~ msgid "Change Settings Without Asking"
+#~ msgstr "Rievdat heivehusaid jearakeahttá"
+
+#~ msgid "Show This Confirmation Dialog"
+#~ msgstr "Čájet dán nannenláseža"
+
+#~ msgid "Slow keys"
+#~ msgstr "Njoahces boalut"
+
+#~ msgid "Sticky keys"
+#~ msgstr "Giddes modifikáhtorboaluid"
+
+#~ msgid "Mouse keys"
+#~ msgstr "Sáhpánboalut"
+
+#~ msgid "Do you really want to activate \"%1\"?"
+#~ msgstr "Háliidatgo duođas aktiveret «%1»?"
+
+#~ msgid "Do you really want to activate \"%1\" and \"%2\"?"
+#~ msgstr "Háliidatgo duođas aktiveret «%1» ja «%2»?"
+
+#~ msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
+#~ msgstr "Háliidatgo duođas aktiveret «%1», «%2» ja «%3»?"
+
+#~ msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
+#~ msgstr "Háliidatgo duođas aktiveret «%1», «%2», «%3» ja «%4»?"
+
+#~ msgid "An application has requested to change this setting."
+#~ msgstr "Prográmma lea jearran jus oažžu rievdadit dán heivehusa."
+
+#~ msgid ""
+#~ "You held down the Shift key for 8 seconds or an application has requested "
+#~ "to change this setting."
+#~ msgstr ""
+#~ "Don leat doallan Shift-boalu eanetgo 8 sekundda, dahje prográmma lea "
+#~ "jearran jus oažžu rievdadit dán heivehusa."
