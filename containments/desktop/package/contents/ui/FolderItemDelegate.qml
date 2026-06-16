@@ -293,8 +293,8 @@ Item {
                         leftMargin: Kirigami.Units.smallSpacing
                     }
 
-                    width: root.useListViewMode ? main.GridView.view.iconSize : (parent.width - 2 * Kirigami.Units.smallSpacing)
-                    height: main.GridView.view.iconSize
+                    Kirigami.AlignedSize.width: root.useListViewMode ? main.GridView.view.iconSize : (parent.width - 2 * Kirigami.Units.smallSpacing)
+                    Kirigami.AlignedSize.height: main.GridView.view.iconSize
 
                     opacity: {
                         if (root.useListViewMode && impl.selectionButton.visible) {
