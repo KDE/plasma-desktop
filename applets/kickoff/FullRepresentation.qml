@@ -81,6 +81,8 @@ EmptyPage {
         id: contentItemStackView
         focus: true
         movementTransitionsEnabled: true
+        implicitHeight: normalPage.implicitHeight + topPadding + bottomPadding
+        implicitWidth: normalPage.implicitWidth + leftPadding + rightPadding
         // Not using a component to prevent it from being destroyed
         initialItem: NormalPage {
             id: normalPage
