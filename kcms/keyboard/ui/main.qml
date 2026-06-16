@@ -51,21 +51,6 @@ KCM.ScrollViewKCM {
         text: i18nc("@action:button Layout", "Add…")
         Accessible.name: i18nc("@action:button accessible", "Add layout")
         onTriggered: _cLayoutDialog.incubateObject(root, {}, Qt.Asynchronous)
-        enabled: kcm.keyboardSettings.configureLayouts
-    }
-
-    readonly property Kirigami.Action configureLayoutsAction: Kirigami.Action {
-        displayComponent: QQC2.Switch {
-            text: i18nc("@label:checkbox configure layouts option", "Enable")
-            Accessible.name: i18nc("@label:checkbox accessible", "Configure Layouts")
-            checked: kcm.keyboardSettings.configureLayouts
-            onToggled: kcm.keyboardSettings.configureLayouts = checked
-
-            KCM.SettingStateBinding {
-                configObject: kcm.keyboardSettings
-                settingName: "configureLayouts"
-            }
-        }
     }
 
     header: Kirigami.FormLayout {
@@ -254,7 +239,7 @@ KCM.ScrollViewKCM {
         header: Kirigami.InlineViewHeader {
             width: list.width
             text: i18nc("@title:view", "Layouts")
-            actions: [ configureLayoutsAction, addLayoutAction ]
+            actions: [ addLayoutAction ]
         }
 
         readonly property int maxKeySequenceItemWidth: Math.max(...contentItem.children.map(item => item?.keySequenceItemWidth || 0))
@@ -316,8 +301,7 @@ KCM.ScrollViewKCM {
                 }
 
                 checked: {
-                    // If the configureLayouts is turned off or the available value is less than the minimum, then the option is disabled
-                    if (!kcm.keyboardSettings.configureLayouts || __internal.minimumAvailableLoops < __internal.minimumLoopingCount) {
+                    if (__internal.minimumAvailableLoops < __internal.minimumLoopingCount) {
                         return false;
                     }
 
@@ -328,11 +312,6 @@ KCM.ScrollViewKCM {
                 }
 
                 enabled: {
-                    // If the configureLayouts is turned off, then the element is disabled
-                    if (!kcm.keyboardSettings.configureLayouts) {
-                        return false;
-                    }
-
                     // If the number of layouts is within the range of acceptable values, then enable the element
                     return __internal.minimumAvailableLoops >= __internal.minimumLoopingCount
                         && __internal.minimumAvailableLoops < kcm.maxGroupCount
@@ -345,7 +324,7 @@ KCM.ScrollViewKCM {
 
                 Accessible.name: i18nc("@label:spinbox", "Number of spared main layouts")
 
-                enabled: layoutLoopingCheckBox.checked && kcm.keyboardSettings.configureLayouts
+                enabled: layoutLoopingCheckBox.checked
                 to: Math.max(from, __internal.minimumAvailableLoops)
                 from: {
                     if (layoutLoopingCheckBox.checked) {
@@ -356,10 +335,6 @@ KCM.ScrollViewKCM {
                 }
 
                 value: {
-                    if (!kcm.keyboardSettings.configureLayouts) {
-                        return __internal.noLooping;
-                    }
-
                     if (kcm.keyboardSettings.layoutLoopCount > to){
                         return to
                     }

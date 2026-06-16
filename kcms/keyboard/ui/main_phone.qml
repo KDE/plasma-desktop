@@ -67,19 +67,6 @@ KCM.SimpleKCM {
                 }
             }
 
-            FormCard.FormSwitchDelegate {
-                id: enableLayouts
-                text: i18nc("@option:check", "Custom Layout")
-                checked: kcm.keyboardSettings.configureLayouts
-                onCheckedChanged: {
-                    kcm.keyboardSettings.configureLayouts = checked
-                }
-                KCM.SettingStateBinding {
-                    configObject: kcm.keyboardSettings
-                    settingName: "configureLayouts"
-                }
-            }
-
             Repeater {
                 id: list
                 model: kcm.userLayoutModel
@@ -95,7 +82,6 @@ KCM.SimpleKCM {
                 icon.name: "preferences-desktop-keyboard"
                 text: i18nc("@action:button", "Change Layout...")
                 onClicked: _cLayoutDialog.incubateObject(root, {}, Qt.Asynchronous)
-                enabled: kcm.keyboardSettings.configureLayouts
             }
         }
 

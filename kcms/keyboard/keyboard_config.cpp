@@ -158,7 +158,7 @@ void KeyboardConfig::load()
     m_referenceLayouts = m_layouts;
     m_referenceLayoutLoopCount = m_settings->layoutLoopCount();
 
-    qCDebug(KCM_KEYBOARD) << "configuring layouts" << m_settings->configureLayouts() << "configuring options" << m_settings->resetOldXkbOptions();
+    qCDebug(KCM_KEYBOARD) << "configuring options" << m_settings->resetOldXkbOptions();
 }
 
 void KeyboardConfig::defaults()
