@@ -2360,6 +2360,7 @@ void FolderModel::moveSelectedToTrash()
 
     using Iface = KIO::AskUserActionInterface;
     auto *job = new KIO::DeleteOrTrashJob(selectedUrls(), Iface::Trash, Iface::DefaultConfirmation, this);
+    job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
     job->start();
 }
 
