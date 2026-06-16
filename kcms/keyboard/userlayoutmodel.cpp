@@ -44,11 +44,11 @@ QVariant UserLayoutModel::data(const QModelIndex &index, int role) const
         return QVariant::fromValue(layout.variant());
     } else if (role == Roles::VariantNameRole) {
         if (layout.variant().isEmpty())
-            return QVariant();
+            return QString();
 
         const std::optional<LayoutInfo> layoutInfo = Rules::self().getLayoutInfo(layout.layout());
         if (!layoutInfo)
-            return QVariant();
+            return QString();
 
         const std::optional<VariantInfo> variantInfo = layoutInfo->getVariantInfo(layout.variant());
         return variantInfo ? variantInfo->description : layout.variant();
