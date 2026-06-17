@@ -454,8 +454,9 @@ Rectangle {
         QQC2.Action {
             id: acceptAction
             onTriggered: {
-                applyAction.trigger();
+                applyButton.enabled = false;
                 configDialog.close();
+                applyAction.trigger();
             }
         }
 
