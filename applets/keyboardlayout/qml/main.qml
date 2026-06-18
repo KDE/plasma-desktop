@@ -91,9 +91,6 @@ PlasmoidItem {
             BadgeOverlay {
                 anchors.bottom: parent.bottom
                 anchors.right: parent.right
-                // The parent component has it set really tight to save space;
-                // we need to undo that here for legibility
-                horizontalPadding: Kirigami.Units.smallSpacing
 
                 visible: !countryCode.visible && Plasmoid.configuration.displayStyle === 2
 
