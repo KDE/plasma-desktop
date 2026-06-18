@@ -12,10 +12,13 @@ import org.kde.plasma.plasmoid
 Item {
     id: root
 
-    readonly property int iconWidthDelta: (icon.width - icon.paintedWidth) / 2
+    readonly property bool verySmallIcon:
+        icon.width < Kirigami.Units.iconSizes.smallMedium ||
+        icon.height < Kirigami.Units.iconSizes.smallMedium
     readonly property bool shiftBadgeDown: (Plasmoid.pluginName === "org.kde.plasma.icontasks") && task.audioStreamIcon !== null
     readonly property int badgeMaskY: shiftBadgeDown ? root.height - badgeRect.height : 0
     readonly property int offset: Math.round(Math.max(Kirigami.Units.smallSpacing / 2, badgeMask.width / 32))
+    readonly property int extraHorizontalOffset: verySmallIcon && badgeRect.text.length > 2 ? -2 : 0
 
 
     // The small font is likely to not be small enough here for very space-constrained
@@ -32,7 +35,7 @@ Item {
         Rectangle {
 
             anchors.right: parent.right
-            anchors.rightMargin: -root.offset
+            anchors.rightMargin: -root.offset + root.extraHorizontalOffset
             y: root.badgeMaskY
 
             Behavior on y {
@@ -79,6 +82,7 @@ Item {
         id: badgeRect
 
         anchors.right: parent.right
+        anchors.rightMargin: root.extraHorizontalOffset
         y: root.badgeMaskY + root.offset
 
         Behavior on y {
@@ -91,8 +95,16 @@ Item {
 
         font.pointSize: Math.floor((Kirigami.Theme.smallFont.pointSize * root.badgeScaleFactor))
 
-        text: task.smartLauncherItem.count > 9999
-            ? i18nc("Over 9999 new messages, overlay, keep short", "9,999+")
-            : task.smartLauncherItem.count.toLocaleString(Qt.locale(), 'f', 0)
+        text: {
+            let unreadCount = task.smartLauncherItem.count;
+            if (unreadCount > 9999) {
+                return i18nc("'k' is a suffix for 'thousand'; keep to one character or else the badge could overflow!", "9k+");
+            } else if (unreadCount > 999) {
+                let rounded = Math.floor(unreadCount / 1000);
+                return i18nc("'k' is a suffix for 'thousand'; keep to one character or else the badge could overflow!", "%1k", rounded);
+            } else {
+               return unreadCount.toLocaleString(Qt.locale(), 'f', 0);
+            }
+        }
     }
 }
