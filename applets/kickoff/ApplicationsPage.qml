@@ -63,9 +63,7 @@ BasePage {
                 anchors.fill: parent
                 active: false
                 hovered: sideBarDelegate.mouseArea.containsMouse || (flashFavoriteAnimation.running && sideBarDelegate.index === 0) || ((dropAreaLoader.item as DropArea)?.containsAcceptableDrag ?? false) || sideBarDelegate.ListView.isCurrentItem
-                visible: !Plasmoid.configuration.switchCategoryOnHover
-                    && !sideBarDelegate.isSeparator
-                    && hovered
+                visible: !sideBarDelegate.isSeparator && hovered
                 opacity: flashFavoriteAnimation.running && sideBarDelegate.index === 0 ? root.flashFavorite : 1
             }
 
