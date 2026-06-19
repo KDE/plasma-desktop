@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-04 02:57+0000\n"
+"POT-Creation-Date: 2026-06-19 02:40+0000\n"
 "PO-Revision-Date: 2025-03-15 06:59+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -904,11 +904,23 @@ msgctxt "@info:usagetip %1 task name"
 msgid "Activate %1"
 msgstr "Aktifkan %1"
 
-#: qml/TaskBadgeOverlay.qml:95
+#: qml/TaskBadgeOverlay.qml:101
 #, kde-format
-msgctxt "Over 9999 new messages, overlay, keep short"
-msgid "9,999+"
-msgstr "9,999+"
+msgctxt ""
+"'k' is a suffix for 'thousand'; keep to one character or else the badge "
+"could overflow!"
+msgid "9k+"
+msgstr ""
+
+#: qml/TaskBadgeOverlay.qml:104
+#, fuzzy, kde-format
+#| msgctxt "volume percentage"
+#| msgid "%1%"
+msgctxt ""
+"'k' is a suffix for 'thousand'; keep to one character or else the badge "
+"could overflow!"
+msgid "%1k"
+msgstr "%1%"
 
 #: qml/ToolTipInstance.qml:201
 #, fuzzy, kde-format
@@ -979,6 +991,10 @@ msgstr "Juga tersedia di %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Tersedia di %1"
+
+#~ msgctxt "Over 9999 new messages, overlay, keep short"
+#~ msgid "9,999+"
+#~ msgstr "9,999+"
 
 #~ msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 #~ msgid "Automatically set to Large when in Touch mode"

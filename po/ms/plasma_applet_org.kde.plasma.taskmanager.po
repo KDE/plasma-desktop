@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-04 02:57+0000\n"
+"POT-Creation-Date: 2026-06-19 02:40+0000\n"
 "PO-Revision-Date: 2010-07-19 21:42+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -861,11 +861,22 @@ msgctxt "@info:usagetip %1 task name"
 msgid "Activate %1"
 msgstr ""
 
-#: qml/TaskBadgeOverlay.qml:95
+#: qml/TaskBadgeOverlay.qml:101
 #, kde-format
-msgctxt "Over 9999 new messages, overlay, keep short"
-msgid "9,999+"
+msgctxt ""
+"'k' is a suffix for 'thousand'; keep to one character or else the badge "
+"could overflow!"
+msgid "9k+"
 msgstr ""
+
+#: qml/TaskBadgeOverlay.qml:104
+#, fuzzy, kde-format
+#| msgid "By Desktop"
+msgctxt ""
+"'k' is a suffix for 'thousand'; keep to one character or else the badge "
+"could overflow!"
+msgid "%1k"
+msgstr "Mengikut Desktop"
 
 #: qml/ToolTipInstance.qml:201
 #, kde-format

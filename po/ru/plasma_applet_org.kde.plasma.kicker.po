@@ -3,13 +3,13 @@
 #
 # Yuri Efremov <yur.arh@gmail.com>, 2013.
 # Alexander Potashev <aspotashev@gmail.com>, 2014, 2015, 2016, 2017, 2019.
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2025, 2026 Alexander Yavorsky <kekcuha@gmail.com>
+# SPDX-FileCopyrightText: 2019-2021, 2023, 2025-2026 Alexander Yavorsky <kekcuha@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-09 02:39+0000\n"
-"PO-Revision-Date: 2026-01-20 19:47+0300\n"
+"PO-Revision-Date: 2026-06-14 18:59+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: code/tools.js:53
 #, kde-format
@@ -64,11 +64,10 @@ msgid "Choose…"
 msgstr "Выбрать..."
 
 #: ConfigGeneral.qml:140
-#, fuzzy, kde-format
-#| msgid "Restore Tabs to Default"
+#, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr "Восстановить вкладки по умолчанию"
+msgstr "Значок по умолчанию"
 
 #: ConfigGeneral.qml:161
 #, kde-format
@@ -125,11 +124,10 @@ msgid "Show icons on the root level of the menu"
 msgstr "Показывать значки объектов верхнего уровня"
 
 #: ConfigGeneral.qml:198
-#, fuzzy, kde-format
-#| msgid "All Installed Applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
-msgstr "Все установленные приложения"
+msgstr "Выделять недавно установленные приложения"
 
 #: ConfigGeneral.qml:208
 #, kde-format
@@ -162,20 +160,16 @@ msgid "Often used files"
 msgstr "Часто используемые файлы"
 
 #: ConfigGeneral.qml:227
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Recent files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent places"
-msgstr "Последние файлы"
+msgstr "Последние места"
 
 #: ConfigGeneral.qml:228
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used places"
-msgstr "Часто используемые файлы"
+msgstr "Часто используемые точки входа"
 
 #: ConfigGeneral.qml:234
 #, kde-format
@@ -248,27 +242,25 @@ msgstr "Избранное"
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Новое"
 
 #: DashboardRepresentation.qml:951 ItemListDelegate.qml:98
-#, fuzzy, kde-format
-#| msgid "Browse installed applications by categories"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
-msgstr "Просмотр установленных приложений по категориям"
+msgstr "В этом разделе имеются недавно установленные приложения"
 
 #: ItemGridDelegate.qml:81
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Новое"
 
 #: ItemGridDelegate.qml:83
-#, fuzzy, kde-format
-#| msgid "All Installed Applications"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
-msgstr "Все установленные приложения"
+msgstr "Недавно установленное приложение"
 
 #: ItemListDelegate.qml:40
 #, kde-format
@@ -283,11 +275,10 @@ msgid "Launch"
 msgstr "Запустить"
 
 #: ItemListDelegate.qml:99
-#, fuzzy, kde-format
-#| msgid "All Installed Applications"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
-msgstr "Все установленные приложения"
+msgstr "Недавно установленное приложение"
 
 #: main.qml:208
 #, kde-format
