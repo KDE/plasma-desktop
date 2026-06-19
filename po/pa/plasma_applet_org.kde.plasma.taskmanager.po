@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-05 00:46+0000\n"
+"POT-Creation-Date: 2026-06-19 00:46+0000\n"
 "PO-Revision-Date: 2026-01-24 08:38-0600\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -835,11 +835,23 @@ msgctxt "@info:usagetip %1 task name"
 msgid "Activate %1"
 msgstr "%1 ਨੂੰ ਸਰਗਰਮ ਕਰੋ"
 
-#: qml/TaskBadgeOverlay.qml:95
+#: qml/TaskBadgeOverlay.qml:101
 #, kde-format
-msgctxt "Over 9999 new messages, overlay, keep short"
-msgid "9,999+"
-msgstr "9,999+"
+msgctxt ""
+"'k' is a suffix for 'thousand'; keep to one character or else the badge "
+"could overflow!"
+msgid "9k+"
+msgstr ""
+
+#: qml/TaskBadgeOverlay.qml:104
+#, fuzzy, kde-format
+#| msgctxt "volume percentage"
+#| msgid "%1%"
+msgctxt ""
+"'k' is a suffix for 'thousand'; keep to one character or else the badge "
+"could overflow!"
+msgid "%1k"
+msgstr "%1%"
 
 #: qml/ToolTipInstance.qml:201
 #, kde-format
@@ -906,6 +918,10 @@ msgstr "%1 ਉੱਤੇ ਵੀ ਉਪਲੱਬਧ"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "%1 ਉੱਤੇ ਉਪਲੱਬਧ"
+
+#~ msgctxt "Over 9999 new messages, overlay, keep short"
+#~ msgid "9,999+"
+#~ msgstr "9,999+"
 
 #~ msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 #~ msgid "Automatically set to Large when in Touch mode"

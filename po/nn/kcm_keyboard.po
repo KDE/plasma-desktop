@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-05 00:46+0000\n"
+"POT-Creation-Date: 2026-06-19 00:46+0000\n"
 "PO-Revision-Date: 2026-03-01 20:33+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
@@ -94,10 +94,12 @@ msgstr ""
 "likevel vil fungera."
 
 #: ui/KeyBindings.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Key Bindings"
 msgctxt "@title"
-msgid "Configure Key Bindings…"
-msgstr "Set opp snøggtastar …"
+msgid "Key Bindings"
+msgstr "Tastebindingar"
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -554,3 +556,7 @@ msgstr[1] "%1 snarvegar"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Ingen"
+
+#~ msgctxt "@title"
+#~ msgid "Configure Key Bindings…"
+#~ msgstr "Set opp snøggtastar …"

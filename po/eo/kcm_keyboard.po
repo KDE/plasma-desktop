@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-05 00:46+0000\n"
+"POT-Creation-Date: 2026-06-19 00:46+0000\n"
 "PO-Revision-Date: 2025-03-22 22:36+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -95,12 +95,10 @@ msgstr ""
 "funkcii bone se aplikitaj"
 
 #: ui/KeyBindings.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Switching…"
+#, kde-format
 msgctxt "@title"
-msgid "Configure Key Bindings…"
-msgstr "Agordi Ŝanĝadon…"
+msgid "Key Bindings"
+msgstr "Klavkombinoj"
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -561,6 +559,9 @@ msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Neniu"
 
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Configure Switching…"
 #~ msgctxt "@title"
-#~ msgid "Key Bindings"
-#~ msgstr "Klavkombinoj"
+#~ msgid "Configure Key Bindings…"
+#~ msgstr "Agordi Ŝanĝadon…"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-05 00:46+0000\n"
+"POT-Creation-Date: 2026-06-19 00:46+0000\n"
 "PO-Revision-Date: 2024-09-19 17:26+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -101,12 +101,10 @@ msgstr ""
 "Αυτά μπορεί να εξακολουθούν να λειτουργούν κανονικά εάν εφαρμοστούν"
 
 #: ui/KeyBindings.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Switching…"
+#, kde-format
 msgctxt "@title"
-msgid "Configure Key Bindings…"
-msgstr "Ρύθμιση εναλλαγής…"
+msgid "Key Bindings"
+msgstr "Δεσμευμένα πλήκτρα"
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -583,9 +581,12 @@ msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Καμία"
 
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Configure Switching…"
 #~ msgctxt "@title"
-#~ msgid "Key Bindings"
-#~ msgstr "Δεσμευμένα πλήκτρα"
+#~ msgid "Configure Key Bindings…"
+#~ msgstr "Ρύθμιση εναλλαγής…"
 
 #, fuzzy
 #~| msgid "&Turn off"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-05 00:46+0000\n"
+"POT-Creation-Date: 2026-06-19 00:46+0000\n"
 "PO-Revision-Date: 2026-01-27 18:41+0100\n"
 "Last-Translator: Jan Papez (honyczek) <honyczek@centrum.cz>\n"
 "Language-Team: Czech <kde-i18n-cs@kde.org>\n"
@@ -96,10 +96,12 @@ msgstr ""
 "fungovat správně."
 
 #: ui/KeyBindings.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Key Bindings"
 msgctxt "@title"
-msgid "Configure Key Bindings…"
-msgstr "Nastavit klávesové zkratky..."
+msgid "Key Bindings"
+msgstr "Klávesové zkratky"
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -559,3 +561,7 @@ msgstr[2] "%1 zkratek"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Žádné"
+
+#~ msgctxt "@title"
+#~ msgid "Configure Key Bindings…"
+#~ msgstr "Nastavit klávesové zkratky..."

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-05 00:46+0000\n"
+"POT-Creation-Date: 2026-06-19 00:46+0000\n"
 "PO-Revision-Date: 2026-01-09 00:32+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -98,10 +98,12 @@ msgstr ""
 "bien si se aplican."
 
 #: ui/KeyBindings.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Key Bindings"
 msgctxt "@title"
-msgid "Configure Key Bindings…"
-msgstr "Configurar las asignaciones de teclas…"
+msgid "Key Bindings"
+msgstr "Asociaciones de teclas"
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -562,3 +564,7 @@ msgstr[1] "%1 atajos de teclado"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Ninguno"
+
+#~ msgctxt "@title"
+#~ msgid "Configure Key Bindings…"
+#~ msgstr "Configurar las asignaciones de teclas…"

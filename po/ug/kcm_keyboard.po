@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-05 00:46+0000\n"
+"POT-Creation-Date: 2026-06-19 00:46+0000\n"
 "PO-Revision-Date: 2026-06-01 17:47-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -94,10 +94,12 @@ msgstr ""
 "ئادەتتىكىدەك ئىشلەيدۇ"
 
 #: ui/KeyBindings.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Key Bindings"
 msgctxt "@title"
-msgid "Configure Key Bindings…"
-msgstr "كۇنۇپكا باغلىنىشىنى سەپلەيدۇ…"
+msgid "Key Bindings"
+msgstr "كۇنۇپكا باغلىنىشى"
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -556,6 +558,10 @@ msgstr[0] "%1 تېزلەتمە"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "يوق"
+
+#~ msgctxt "@title"
+#~ msgid "Configure Key Bindings…"
+#~ msgstr "كۇنۇپكا باغلىنىشىنى سەپلەيدۇ…"
 
 #~| msgid "Turn o&ff"
 #~ msgctxt "@option:radio"
