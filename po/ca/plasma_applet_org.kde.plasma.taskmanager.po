@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-19 00:46+0000\n"
-"PO-Revision-Date: 2026-01-08 10:46+0100\n"
+"PO-Revision-Date: 2026-06-19 08:56+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -854,17 +854,15 @@ msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "9k+"
-msgstr ""
+msgstr "9m+"
 
 #: qml/TaskBadgeOverlay.qml:104
-#, fuzzy, kde-format
-#| msgctxt "volume percentage"
-#| msgid "%1%"
+#, kde-format
 msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "%1k"
-msgstr "%1%"
+msgstr "%1m"
 
 #: qml/ToolTipInstance.qml:201
 #, kde-format

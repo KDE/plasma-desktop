@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-19 00:46+0000\n"
-"PO-Revision-Date: 2026-05-13 06:58+0200\n"
+"PO-Revision-Date: 2026-06-19 22:37+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: backend.cpp:288
 #, kde-format
@@ -850,17 +850,15 @@ msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "9k+"
-msgstr ""
+msgstr "9k+"
 
 #: qml/TaskBadgeOverlay.qml:104
-#, fuzzy, kde-format
-#| msgctxt "volume percentage"
-#| msgid "%1%"
+#, kde-format
 msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "%1k"
-msgstr "%1%"
+msgstr "%1k"
 
 #: qml/ToolTipInstance.qml:201
 #, kde-format

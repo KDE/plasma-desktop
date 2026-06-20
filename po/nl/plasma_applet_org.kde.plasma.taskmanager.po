@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2014-2026 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-19 00:46+0000\n"
-"PO-Revision-Date: 2026-01-08 18:05+0100\n"
+"PO-Revision-Date: 2026-06-19 10:05+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: backend.cpp:288
 #, kde-format
@@ -847,17 +847,15 @@ msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "9k+"
-msgstr ""
+msgstr "9k+"
 
 #: qml/TaskBadgeOverlay.qml:104
-#, fuzzy, kde-format
-#| msgctxt "volume percentage"
-#| msgid "%1%"
+#, kde-format
 msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "%1k"
-msgstr "%1%"
+msgstr "%1k"
 
 #: qml/ToolTipInstance.qml:201
 #, kde-format
