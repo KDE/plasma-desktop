@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-29 02:43+0000\n"
-"PO-Revision-Date: 2026-06-01 18:49+0900\n"
+"PO-Revision-Date: 2026-06-14 21:02+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: package/contents/config/config.qml:17
 #, fuzzy, kde-format
@@ -178,11 +178,10 @@ msgid "In Rows"
 msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:139
-#, fuzzy, kde-format
-#| msgid "Sorting:"
+#, kde-format
 msgctxt "@label:listbox, LtR/RtL"
 msgid "Sort Alignment:"
-msgstr "ソート:"
+msgstr "ソート方向:"
 
 #: package/contents/ui/ConfigIcons.qml:142
 #, fuzzy, kde-format

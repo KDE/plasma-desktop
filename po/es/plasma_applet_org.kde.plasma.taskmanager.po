@@ -2,13 +2,13 @@
 # Copyright (C) 2014-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2014-2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-19 02:40+0000\n"
-"PO-Revision-Date: 2026-01-09 00:43+0100\n"
+"PO-Revision-Date: 2026-06-19 12:10+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: backend.cpp:288
 #, kde-format
@@ -851,17 +851,15 @@ msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "9k+"
-msgstr ""
+msgstr "9 k+"
 
 #: qml/TaskBadgeOverlay.qml:104
-#, fuzzy, kde-format
-#| msgctxt "volume percentage"
-#| msgid "%1%"
+#, kde-format
 msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "%1k"
-msgstr "%1 %"
+msgstr "%1 k"
 
 #: qml/ToolTipInstance.qml:201
 #, kde-format
@@ -928,15 +926,3 @@ msgstr "También disponible en %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "También en %1"
-
-#~ msgctxt "Over 9999 new messages, overlay, keep short"
-#~ msgid "9,999+"
-#~ msgstr "9.999+"
-
-#~ msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
-#~ msgid "Automatically set to Large when in Touch mode"
-#~ msgstr "Definir automáticamente como «Grande» en el modo táctil"
-
-#~ msgctxt "Invalid number of new messages, overlay, keep short"
-#~ msgid "—"
-#~ msgstr "—"

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-19 02:40+0000\n"
-"PO-Revision-Date: 2026-01-08 10:46+0100\n"
+"PO-Revision-Date: 2026-06-19 08:56+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -854,17 +854,15 @@ msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "9k+"
-msgstr ""
+msgstr "9 m+"
 
 #: qml/TaskBadgeOverlay.qml:104
-#, fuzzy, kde-format
-#| msgctxt "volume percentage"
-#| msgid "%1%"
+#, kde-format
 msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "%1k"
-msgstr "%1%"
+msgstr "%1 m"
 
 #: qml/ToolTipInstance.qml:201
 #, kde-format
@@ -931,11 +929,3 @@ msgstr "També disponible en %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Disponible en %1"
-
-#~ msgctxt "Over 9999 new messages, overlay, keep short"
-#~ msgid "9,999+"
-#~ msgstr "9.999+"
-
-#~ msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
-#~ msgid "Automatically set to Large when in Touch mode"
-#~ msgstr "S'establix automàticament a Gran en el mode tàctil"
