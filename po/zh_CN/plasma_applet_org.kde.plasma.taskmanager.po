@@ -846,14 +846,12 @@ msgid "9k+"
 msgstr ""
 
 #: qml/TaskBadgeOverlay.qml:104
-#, fuzzy, kde-format
-#| msgctxt "volume percentage"
-#| msgid "%1%"
+#, kde-format
 msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "%1k"
-msgstr "%1%"
+msgstr ""
 
 #: qml/ToolTipInstance.qml:201
 #, kde-format
@@ -920,7 +918,3 @@ msgstr "同时位于 %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "位于 %1"
-
-#~ msgctxt "Over 9999 new messages, overlay, keep short"
-#~ msgid "9,999+"
-#~ msgstr "9,999+"
