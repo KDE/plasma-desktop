@@ -82,7 +82,7 @@ Item {
             lockScreenUi.handleMessage(authenticator.prompt);
         }
         function onPromptForSecretChanged(msg) {
-            mainBlock.showPassword = false;
+            LockscreenState.showPassword = false;
             mainBlock.mainPasswordBox.forceActiveFocus();
         }
     }
@@ -114,71 +114,34 @@ Item {
 
     MouseArea {
         id: lockScreenRoot
+        anchors.fill: parent
 
-        property bool uiVisible: false
-        property bool seenPositionChange: false
-        property bool blockUI: containsMouse && (mainStack.depth > 1 || mainBlock.mainPasswordBox.text.length > 0 || inputPanel.keyboardActive)
+        property bool uiVisible: LockscreenState.activeWindow === Window.window
 
-        x: parent.x
-        y: parent.y
-        width: parent.width
-        height: parent.height
         hoverEnabled: true
-        cursorShape: uiVisible ? Qt.ArrowCursor : Qt.BlankCursor
-        drag.filterChildren: true
-        onPressed: uiVisible = true;
-        onPositionChanged: {
-            uiVisible = seenPositionChange;
-            seenPositionChange = true;
-        }
-        onUiVisibleChanged: {
-            if (uiVisible) {
-                Window.window.requestActivate();
-            }
 
-            if (blockUI) {
-                fadeoutTimer.running = false;
-            } else if (uiVisible) {
-                fadeoutTimer.restart();
-            }
-            authenticator.startAuthenticating();
-        }
-        onBlockUIChanged: {
-            if (blockUI) {
-                fadeoutTimer.running = false;
-                uiVisible = true;
-            } else {
-                fadeoutTimer.restart();
+        cursorShape: uiVisible ? Qt.ArrowCursor : Qt.BlankCursor
+
+        onPressed: LockscreenState.activateWindow(Window.window)
+        onPositionChanged: LockscreenState.activateWindow(Window.window)
+
+        onUiVisibleChanged: {
+            if (!uiVisible && inputPanel.keyboardActive) {
+                inputPanel.showHide();
             }
         }
-        onExited: {
-            uiVisible = false;
-        }
-        Keys.onEscapePressed: {
-            // If the escape key is pressed, kscreenlocker will turn off the screen.
-            // We do not want to show the password prompt in this case.
-            if (uiVisible) {
-                uiVisible = false;
-                if (inputPanel.keyboardActive) {
-                    inputPanel.showHide();
-                }
-                root.clearPassword();
-            }
-        }
+
+        //property bool blockUI: containsMouse && (mainStack.depth > 1 || mainBlock.mainPasswordBox.text.length > 0 || inputPanel.keyboardActive)
+
         Keys.onPressed: event => {
-            uiVisible = true;
-            event.accepted = false;
+            Qt.callLater(() => LockscreenState.activateWindow(lockScreenRoot.Window.window));
         }
-        Timer {
-            id: fadeoutTimer
-            interval: 10000
-            onTriggered: {
-                if (!lockScreenRoot.blockUI) {
-                    mainBlock.mainPasswordBox.showPassword = false;
-                    lockScreenRoot.uiVisible = false;
-                }
-            }
+
+        Keys.onEscapePressed: {
+            LockscreenState.timeoutWindow(lockScreenRoot.Window.window);
+            root.clearPassword();
         }
+
         Timer {
             id: notificationRemoveTimer
             interval: 3000

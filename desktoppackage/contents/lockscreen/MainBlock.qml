@@ -21,7 +21,6 @@ SessionManagementScreen {
 
     readonly property alias mainPasswordBox: passwordBox
     property bool lockScreenUiVisible: false
-    property alias showPassword: passwordBox.showPassword
 
     //the y position that should be ensured visible when the on screen keyboard is visible
     property int visibleBoundary: mapFromItem(loginButton, 0, 0).y
@@ -60,7 +59,8 @@ SessionManagementScreen {
             id: passwordBox
             font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
             Layout.fillWidth: true
-            text: PasswordSync.password
+            text: LockscreenState.password
+            showPassword: LockscreenState.showPassword
 
             placeholderText: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:placeholder in text field", "Password")
             focus: true
@@ -95,7 +95,7 @@ SessionManagementScreen {
                 function onClearPassword() {
                     passwordBox.forceActiveFocus()
                     passwordBox.text = "";
-                    passwordBox.text = Qt.binding(() => PasswordSync.password);
+                    passwordBox.text = Qt.binding(() => LockscreenState.password);
                 }
                 function onNotificationRepeated() {
                     sessionManager.playHighlightAnimation();
@@ -103,9 +103,14 @@ SessionManagementScreen {
             }
         }
         Binding {
-            target: PasswordSync
+            target: LockscreenState
             property: "password"
             value: passwordBox.text
+        }
+        Binding {
+            target: LockscreenState
+            property: "showPassword"
+            value: passwordBox.showPassword
         }
 
         PlasmaComponents3.Button {
