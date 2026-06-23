@@ -62,16 +62,25 @@ Column {
         }
 
         background: Kirigami.ShadowedRectangle {
-            color: {
-                if (button.checked) {
-                    return Kirigami.Theme.highlightColor;
-                } else if (button.hovered) {
-                    return Qt.rgba(Kirigami.Theme.highlightColor.r, Kirigami.Theme.highlightColor.g, Kirigami.Theme.highlightColor.b, 0.5);
-                } else {
-                    return Kirigami.Theme.backgroundColor
+            Rectangle {
+                width: root.implicitButtonWidth
+                height: root.implicitButtonHeight
+                topLeftRadius: parent.radius
+                bottomLeftRadius: parent.radius
+                topRightRadius: indicator.visible ? 0 : parent.radius;
+                bottomRightRadius: indicator.visible ? 0 : parent.radius
+                color: {
+                    if (button.checked) {
+                        return Kirigami.Theme.highlightColor;
+                    } else if (button.hovered) {
+                        return  Qt.rgba(Kirigami.Theme.highlightColor.r, Kirigami.Theme.highlightColor.g, Kirigami.Theme.highlightColor.b, 0.5);
+                    } else {
+                        return Kirigami.Theme.backgroundColor;
+                    }
                 }
             }
 
+            color: Kirigami.Theme.backgroundColor
             radius: Kirigami.Units.cornerRadius
 
             shadow {
