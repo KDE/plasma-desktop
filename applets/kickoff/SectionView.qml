@@ -9,6 +9,7 @@ pragma ComponentBehavior: Bound
 import QtQuick
 
 import org.kde.plasma.components as PC3
+import org.kde.plasma.extras as PlasmaExtras
 import org.kde.plasma.plasmoid
 
 KickoffGridView {
@@ -47,6 +48,19 @@ KickoffGridView {
         }
 
         padding: fontMetrics.descent / 2
+
+        background: Loader {
+            active: delegate.GridView.isCurrentItem
+            sourceComponent: PlasmaExtras.Highlight {
+                anchors.fill: parent
+                z: (root.Drag.active ?? false) ? 3 : 0
+                hovered: true
+
+                pressed: delegate.down
+
+                active: root.view.activeFocus || (kickoff.contentArea === root && kickoff.searchField.activeFocus)
+            }
+        }
 
         contentItem: PC3.Label {
             horizontalAlignment: Text.AlignHCenter
