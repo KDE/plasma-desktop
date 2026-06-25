@@ -270,7 +270,7 @@ int Device::buttonCount() const
 bool Device::buttonState(int index) const
 {
     // Invalid index
-    if (index < 0 || index > m_buttonCount)
+    if (index < 0 || index >= m_buttonCount)
         return false;
 
     // If we are a game controller, use that api to get button state

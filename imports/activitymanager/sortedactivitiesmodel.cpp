@@ -217,7 +217,7 @@ SortedActivitiesModel::SortedActivitiesModel(QObject *parent)
     connect(m_windowTasksModel, &TaskManager::WindowTasksModel::dataChanged, this, &SortedActivitiesModel::onWindowChanged);
 
     // Update windows at start
-    onWindowAdded(QModelIndex(), 0, m_windowTasksModel->rowCount());
+    onWindowAdded(QModelIndex(), 0, m_windowTasksModel->rowCount() - 1);
 }
 
 SortedActivitiesModel::~SortedActivitiesModel()

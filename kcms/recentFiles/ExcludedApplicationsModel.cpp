@@ -43,7 +43,7 @@ ExcludedApplicationsModel::ExcludedApplicationsModel(QObject *parent)
     : QAbstractListModel(parent)
 {
     d->enabled = false;
-    d->pluginConfig = new KActivityManagerdPluginsSettings;
+    d->pluginConfig = new KActivityManagerdPluginsSettings(this);
 }
 
 ExcludedApplicationsModel::~ExcludedApplicationsModel()
@@ -147,7 +147,7 @@ void ExcludedApplicationsModel::defaults()
 
 void ExcludedApplicationsModel::toggleApplicationBlocked(int index)
 {
-    if (index > rowCount()) {
+    if (index < 0 || index >= rowCount()) {
         return;
     }
 
@@ -171,7 +171,7 @@ void ExcludedApplicationsModel::toggleApplicationBlocked(int index)
 
     const auto allowedApplicationsItem = d->pluginConfig->findItem("allowedApplications");
     Q_ASSERT(allowedApplicationsItem);
-    const auto blockedApplicationsItem = d->pluginConfig->findItem("allowedApplications");
+    const auto blockedApplicationsItem = d->pluginConfig->findItem("blockedApplications");
     Q_ASSERT(blockedApplicationsItem);
 
     Q_EMIT changed(blockedApplicationsItem->isSaveNeeded() && allowedApplicationsItem->isSaveNeeded());
@@ -190,7 +190,7 @@ QVariant ExcludedApplicationsModel::data(const QModelIndex &modelIndex, int role
 {
     const auto index = modelIndex.row();
 
-    if (index > rowCount()) {
+    if (index < 0 || index >= rowCount()) {
         return QVariant();
     }
 

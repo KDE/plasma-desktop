@@ -254,7 +254,7 @@ void ScreenMapper::addScreenTransition(int screenSrc, int screenDst, const QStri
 void ScreenMapper::setSharedDesktop(bool sharedDesktops)
 {
     if (m_sharedDesktops != sharedDesktops) {
-        m_sharedDesktops = true;
+        m_sharedDesktops = sharedDesktops;
         if (!m_corona)
             return;
 

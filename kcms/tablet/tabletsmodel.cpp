@@ -150,13 +150,13 @@ bool TabletsModel::isSaveNeeded() const
 
 bool TabletsModel::isDefaults() const
 {
-    return std::any_of(m_devices.cbegin(), m_devices.cend(), [](auto &dev) {
-        bool isDefaults = false;
+    return std::all_of(m_devices.cbegin(), m_devices.cend(), [](auto &dev) {
+        bool isDefaults = true;
         if (dev.penDevice) {
-            isDefaults |= dev.penDevice->isDefaults();
+            isDefaults &= dev.penDevice->isDefaults();
         }
         if (dev.padDevice) {
-            isDefaults |= dev.padDevice->isDefaults();
+            isDefaults &= dev.padDevice->isDefaults();
         }
         return isDefaults;
     });

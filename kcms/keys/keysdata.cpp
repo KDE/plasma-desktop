@@ -55,7 +55,7 @@ KeysData::KeysData(QObject *parent)
                     bool isNotDefault = std::any_of(allShortcuts.cbegin(), allShortcuts.cend(), [](const KGlobalShortcutInfo &info) {
                         return info.defaultKeys() != info.keys();
                     });
-                    m_isDefault &= isNotDefault;
+                    m_isDefault &= !isNotDefault;
                 }
                 if (--m_pendingComponentCalls == 0) {
                     Q_EMIT loaded();

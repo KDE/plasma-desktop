@@ -101,6 +101,9 @@ void ActionModel::buildActionList()
             it.next();
             const QString desktop = it.filePath();
             const KService::Ptr desktopService = KService::serviceByStorageId(it.filePath());
+            if (!desktopService) {
+                continue;
+            }
             // Get contained services list
             const QList<KServiceAction> services = desktopService->actions();
             for (const KServiceAction &deviceAction : services) {

@@ -393,6 +393,7 @@ void GlobalAccelModel::addApplication(const QString &desktopFileName, const QStr
             if (infoReply.value().isEmpty()) {
                 qCWarning(KCMKEYS()) << "New component has no shortcuts:" << reply.value().path();
                 Q_EMIT errorOccured(i18nc("%1 is the name of an application", "Error while adding %1, it seems it has no actions."));
+                return;
             }
             qCDebug(KCMKEYS) << "inserting at " << pos - m_components.begin();
             beginInsertRows(QModelIndex(), pos - m_components.begin(), pos - m_components.begin());

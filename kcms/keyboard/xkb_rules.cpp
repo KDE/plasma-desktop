@@ -91,6 +91,11 @@ static void rxkbLogHandler(rxkb_context *context, rxkb_log_level priority, const
     Q_UNUSED(context)
     char buf[1024];
     int length = std::vsnprintf(buf, 1023, format, args);
+    // vsnprintf returns the number of characters that would have been written;
+    // clamp to what actually fit in the buffer to avoid reading past it.
+    if (length > 1022) {
+        length = 1022;
+    }
     while (length > 0 && std::isspace(buf[length - 1])) {
         --length;
     }

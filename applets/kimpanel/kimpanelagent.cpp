@@ -8,6 +8,8 @@
 #include "kimpanelagent.h"
 #include "impaneladaptor.h"
 
+#include <algorithm>
+
 // Qt
 #include <QByteArray>
 #include <QDBusServiceWatcher>
@@ -168,7 +170,11 @@ static KimpanelLookupTable Args2LookupTable(const QStringList &labels, const QSt
 
     KimpanelLookupTable result;
 
-    for (int i = 0; i < labels.size(); i++) {
+    // The lists come from external DBus input and may be malformed (mismatched
+    // sizes), in which case the asserts above are no-ops in release builds.
+    // Bound the loop to the shortest list to avoid out-of-bounds access.
+    const int count = std::min({labels.size(), candis.size(), attrs.size()});
+    for (int i = 0; i < count; i++) {
         KimpanelLookupTable::Entry entry;
 
         entry.label = labels.at(i);

@@ -26,6 +26,7 @@ void ZypperRPMJob::executeOperation(const QFileInfo &fileInfo, const QString & /
         const auto infoMatch = QRegularExpression(QStringLiteral("Name *: (.+)")).match(rpmInfo);
         if (!infoMatch.hasMatch()) {
             Q_EMIT error(i18nc("@info", "Could not resolve package name of %1", fileInfo.baseName()));
+            return;
         }
         const QString rpmPackageName = KShell::quoteArg(infoMatch.captured(1));
         QProcess *process = new QProcess(this);

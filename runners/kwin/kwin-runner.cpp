@@ -66,7 +66,7 @@ void KWinRunner::checkAvailability(const QString &name, const QString & /*oldOwn
         m_enabled = enabled;
 
         if (m_enabled) {
-            RunnerSyntax(s_keywords, i18n("Opens the KWin (Plasma Window Manager) debug console."));
+            addSyntax(RunnerSyntax(s_keywords, i18n("Opens the KWin (Plasma Window Manager) debug console.")));
         } else {
             setSyntaxes(QList<RunnerSyntax>());
         }

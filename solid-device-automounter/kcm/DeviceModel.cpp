@@ -392,8 +392,12 @@ void DeviceModel::updateCheckedColumns(int column)
 {
     for (int parent = RowAttached; parent < rowCount(); parent++) {
         const auto parentIndex = index(parent, 0);
+        const int childCount = rowCount(parentIndex);
+        if (childCount == 0) {
+            continue;
+        }
         Q_EMIT dataChanged(index(0, (column > 0 ? column : 1), parentIndex),
-                           index(rowCount(parentIndex), column > 0 ? column : 2, parentIndex),
+                           index(childCount - 1, column > 0 ? column : 2, parentIndex),
                            {Qt::CheckStateRole, Qt::ToolTipRole});
     }
 }

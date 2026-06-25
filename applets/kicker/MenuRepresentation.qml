@@ -133,7 +133,7 @@ PlasmaComponents3.ScrollView {
                     (event.key === Qt.Key_Right && mainRow.LayoutMirroring.enabled)
                 let forwardArrowKey = (event.key === Qt.Key_Right && !mainRow.LayoutMirroring.enabled) ||
                     (event.key === Qt.Key_Left && mainRow.LayoutMirroring.enabled)
-                if (backArrowKey & runnerColumns.visibleChildren.length > 1) {
+                if (backArrowKey && runnerColumns.visibleChildren.length > 1) {
                     root.focusRunnerColumn(runnerColumns.visibleChildren.length - 2, true)
                 } else if (forwardArrowKey) {
                     if (runnerColumns.visibleChildren.length > 1) {
@@ -461,7 +461,7 @@ PlasmaComponents3.ScrollView {
                 if (!sideBar.visible && !runnerColumns.visible) {
                     return;
                 }
-                if (runnerColumns.visibleChildren[0]?.length > 1) {
+                if (runnerColumns.visibleChildren[0]?.count > 1) {
                     runnerColumns.visibleChildren[0].currentIndex = -1;
                 }
                 if (sideBar.visible) {

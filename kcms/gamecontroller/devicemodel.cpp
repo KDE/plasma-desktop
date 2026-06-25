@@ -101,7 +101,7 @@ void DeviceModel::poll()
             break;
         case SDL_JOYBUTTONDOWN:
         case SDL_JOYBUTTONUP:
-            if (m_devices.contains(event.jbutton.which) && !m_devices.value(event.jaxis.which)->isController()) {
+            if (m_devices.contains(event.jbutton.which) && !m_devices.value(event.jbutton.which)->isController()) {
                 m_devices.value(event.jbutton.which)->onButtonEvent(event.jbutton);
             }
             break;

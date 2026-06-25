@@ -86,8 +86,8 @@ FocusScope {
         anchors.fill: parent
         active: false
         onActiveChanged: {
-            if (!active && "dropPlaceHolderIndex" in model) {
-                model.dropPlaceHolderIndex = -1;
+            if (!active && "dropPlaceholderIndex" in model) {
+                model.dropPlaceholderIndex = -1;
             }
         }
 

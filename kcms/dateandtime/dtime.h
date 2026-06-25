@@ -68,7 +68,7 @@ private:
     QString timeServer;
     int BufI;
     bool refresh;
-    bool ontimeout;
+    bool ontimeout = false;
     QString m_selectedTimeZone;
 };
 

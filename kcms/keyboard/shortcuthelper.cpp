@@ -67,7 +67,7 @@ bool ShortcutHelper::isSaveNeeded()
 
 bool ShortcutHelper::isDefaults()
 {
-    return m_alternativeShortcut == DefaultAlternativeShortcut || m_lastUsedShortcut == DefaultLastUsedShortcut;
+    return m_alternativeShortcut == DefaultAlternativeShortcut && m_lastUsedShortcut == DefaultLastUsedShortcut;
 }
 
 KeyboardLayoutActionCollection *ShortcutHelper::actionColletion()

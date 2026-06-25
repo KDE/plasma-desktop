@@ -186,9 +186,8 @@ void XkbOptionsModel::navigateToGroup(const QString &group)
         return groupInfo.name == group;
     });
 
-    int index = std::distance(Rules::self().optionGroupInfos.cbegin(), it);
-
-    if (index != -1) {
+    if (it != Rules::self().optionGroupInfos.cend()) {
+        int index = std::distance(Rules::self().optionGroupInfos.cbegin(), it);
         Q_EMIT navigateTo(createIndex(index, 0));
     }
 }

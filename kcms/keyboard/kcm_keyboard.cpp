@@ -175,8 +175,8 @@ bool KCMKeyboard::isSaveNeeded() const
 
 bool KCMKeyboard::isDefaults() const
 {
-    return m_data->workspaceOptions()->isDefaults() || m_data->keyboardMiscSettings()->isDefaults() || m_config->isDefaults()
-        || m_shortcutHelper->isSaveNeeded() || m_xkbOptionsModel->xkbOptions() == m_data->keyboardSettings()->xkbOptions();
+    return m_data->workspaceOptions()->isDefaults() && m_data->keyboardMiscSettings()->isDefaults() && m_config->isDefaults()
+        && m_shortcutHelper->isDefaults() && m_xkbOptionsModel->xkbOptions() == m_data->keyboardSettings()->defaultXkbOptionsValue();
 }
 
 void KCMKeyboard::resetShortcuts()
