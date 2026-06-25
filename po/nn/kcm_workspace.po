@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-23 00:46+0000\n"
-"PO-Revision-Date: 2025-10-26 12:04+0100\n"
+"PO-Revision-Date: 2026-06-24 20:48+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -13,16 +13,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.07.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
 #: ui/main.qml:25
-#, fuzzy, kde-format
-#| msgid ""
-#| "The system must be restarted before changes to the middle-click paste "
-#| "setting can take effect."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
@@ -32,8 +29,7 @@ msgstr ""
 "skal tre i kraft."
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgctxt "@action:button"
 msgid "Restart"
 msgstr "Start på nytt"
@@ -67,11 +63,11 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "Vis sprettopp ved endringar i utforming"
+msgstr "Skjermmeldings-sprettopp for statusendringar"
 
 #: ui/main.qml:81
 #, fuzzy, kde-format
@@ -90,8 +86,7 @@ msgid "Scrolling"
 msgstr "Rulling"
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "Clicking in scrollbar track:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
 msgstr "Klikking i rullefelt:"
@@ -105,8 +100,7 @@ msgid "Scrolls to the clicked location"
 msgstr "Rullar til vald plass"
 
 #: ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "Middle-click to scroll to clicked location"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Middle-click to scroll to clicked location"
 msgstr "Midtklikk for å rulla til vald plass"
@@ -159,8 +153,7 @@ msgid "Selects them"
 msgstr "Merkjer dei"
 
 #: ui/main.qml:155
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "Opna berre med dobbeltklikking"
@@ -172,8 +165,7 @@ msgid "Opens them"
 msgstr "Opnar dei"
 
 #: ui/main.qml:173
-#, fuzzy, kde-format
-#| msgid "Select by clicking on item's selection marker"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
 msgstr "Merk element ved å trykkja på markerings­ikonet"
@@ -195,8 +187,7 @@ msgid "Pastes selected text"
 msgstr "Lim inn merkt tekst"
 
 #: ui/main.qml:212
-#, fuzzy, kde-format
-#| msgid "Double-click interval:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Double-click interval:"
 msgstr "Dobbeltklikkintervall:"
@@ -216,10 +207,7 @@ msgid "ms"
 msgstr "ms"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid ""
-#| "Two clicks within this duration are considered a double-click. Some "
-#| "applications may not honor this setting."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "
@@ -239,22 +227,19 @@ msgstr ""
 "utsjånad, auk dobbeltklikk­intervallet."
 
 #: ui/main.qml:306
-#, fuzzy, kde-format
-#| msgid "Drag and Drop"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr "Dra og slepp"
 
 #: ui/main.qml:311
-#, fuzzy, kde-format
-#| msgid "When dragging files or folders:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "Ved draging av filer og mapper:"
 
 #: ui/main.qml:315
-#, fuzzy, kde-format
-#| msgid "Always ask what to do"
+#, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr "Spør alltid om kva som skal gjerast"
@@ -269,11 +254,10 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:328
-#, fuzzy, kde-format
-#| msgid "Move if on the same device"
+#, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
-msgstr "Flytt viss der på same eining"
+msgstr "Flytt viss det er på same eining"
 
 #: ui/main.qml:329
 #, kde-kuit-format
@@ -288,57 +272,44 @@ msgid "Touch"
 msgstr "Trykkskjerm"
 
 #: ui/main.qml:344
-#, fuzzy, kde-format
-#| msgid "Enable Touch Mode:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
-msgstr "Slå på trykkskjerm-modus:"
+msgstr "Bruk teikneplate-modus:"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
-#| msgid "Automatically enable as needed"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Ta automatisk i bruk ved behov"
 
 # Vert lettare å lesa/forstå om denne og teksten nedanfor begge brukar ordet «alltid».
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is never enabled'"
-#| msgid "Never enabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Alltid av"
 
 #: ui/main.qml:365
-#, fuzzy, kde-format
-#| msgid ""
-#| "Touch Mode will be automatically activated whenever the system detects a "
-#| "touchscreen but no mouse or touchpad. For example: when a transformable "
-#| "laptop's keyboard is flipped around or detached."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Tablet Mode will be automatically enabled whenever the system detects a "
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
-"Trykkskjerm-modus vert automatisk teken i bruk når systemet oppdagar ein "
-"trykkskjerm, men inga mus eller styreplate. Eit eksempel er når eit "
+"Teikneplate-modus vert automatisk teken i bruk når systemet oppdagar ei "
+"teikneplate, men inga mus eller styreplate. Eit eksempel er når eit "
 "fleksibelt tastatur på ei berbar maskin vert snudd eller kopla frå."
 
 #: ui/main.qml:371
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always active"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Alltid på"
 
 #: ui/main.qml:393
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is never enabled'"
-#| msgid "Disabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Slått av"
@@ -348,6 +319,7 @@ msgstr "Slått av"
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."
 msgstr ""
+"I teikneplate-modus vil eit virtuelt tastatur dukka opp når det trengst."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -397,7 +369,7 @@ msgstr "Midtklikk for å lima inn utval"
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "Vis forstørra panel og hjelpebobler"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
