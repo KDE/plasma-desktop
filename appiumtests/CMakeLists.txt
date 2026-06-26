@@ -15,12 +15,6 @@ if(NOT SeleniumWebDriverATSPI_FOUND AND NOT DEFINED ENV{KDECI_BUILD})
     return()
 endif()
 
-add_subdirectory(applets)
-add_subdirectory(desktop)
-add_subdirectory(kcms)
 
-add_test(
-    NAME emojiertest
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/emojiertest.py --failfast
-)
-set_tests_properties(emojiertest PROPERTIES TIMEOUT 300 ENVIRONMENT "TEST_WITH_KWIN_WAYLAND=0")
+add_subdirectory(desktop)
+

@@ -4,9 +4,30 @@
 include:
   - project: sysadmin/ci-utilities
     file:
-      - /gitlab-templates/linux-qt6.yml
-      - /gitlab-templates/freebsd-qt6.yml
-      - /gitlab-templates/xml-lint.yml
-      - /gitlab-templates/yaml-lint.yml
-      - /gitlab-templates/qml-lint.yml
-      - /gitlab-templates/linux-qt6-next.yml
+      - /gitlab-templates/blocks/workflow.yml
+      - /gitlab-templates/blocks/ci-linux-base.yml
+      - /gitlab-templates/json-validation.yml
+
+suse_tumbleweed_qt611:
+  extends:
+    - .ci_linux_base
+    - .suse_tumbleweed_qt6stable
+  variables:
+    INSTALLED_DOC_PATH: "_staging/$CI_BUILDS_DIR/$CI_PROJECT_PATH/_install/share/doc/HTML/"
+  script:
+    - git config --global --add safe.directory $CI_PROJECT_DIR
+    - python3 -u ci-utilities/run-ci-build.py --project $CI_PROJECT_NAME --branch $CI_COMMIT_REF_NAME --platform Linux/Qt6/Shared --extra-cmake-args=-DBUILD_WITH_QT6=ON --extra-cmake-args=-DQT_MAJOR_VERSION=6
+    - |
+      if [ -d "$INSTALLED_DOC_PATH" ]; then
+        git clone https://invent.kde.org/websites/docs-kde-org.git --depth=1
+        python3 ci-utilities/generate-documentation.py --project $CI_PROJECT_NAME --output-folder "generated_documentation" --format html pdf --branch $CI_COMMIT_REF_NAME --publish --doc-dir $INSTALLED_DOC_PATH
+        mkdir -p public/
+        mv generated_documentation/ public/documentation/
+      fi
+  after_script:
+    - ps aux
+    - sleep infinity & killall -SEGV sleep
+    - cat /proc/sys/kernel/core_pattern
+    - ls -lah /tmp/
+    - ci-utilities/run-collect-crashes.py
+

@@ -32,7 +32,7 @@ add_test(
     NAME bug482267test
     COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/bug482267.py --failfast
 )
-set_tests_properties(bug482267test PROPERTIES TIMEOUT 600 ENVIRONMENT "CMAKE_BINARY_DIR=${CMAKE_BINARY_DIR};KACTIVITYMANAGERD_PATH=${KDE_INSTALL_FULL_LIBEXECDIR}/kactivitymanagerd")
+set_tests_properties(bug482267test PROPERTIES TIMEOUT 60 ENVIRONMENT "QT_MESSAGE_PATTERN=%{appname}(%{pid})/(%{category}) %{if-debug}%{endif}%{function}: %{message};CMAKE_BINARY_DIR=${CMAKE_BINARY_DIR};KACTIVITYMANAGERD_PATH=${KDE_INSTALL_FULL_LIBEXECDIR}/kactivitymanagerd")
 
 add_test(
     NAME panel_focus_test
