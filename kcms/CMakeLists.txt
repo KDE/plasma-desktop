@@ -24,6 +24,7 @@ add_subdirectory(qtquicksettings)
 add_subdirectory(touchscreen)
 
 add_subdirectory(workspaceoptions)
+add_subdirectory(workspacepresets)
 if (KF6Baloo_FOUND)
    add_subdirectory(baloo)
 endif()
