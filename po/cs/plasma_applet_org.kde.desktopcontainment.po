@@ -3,20 +3,21 @@
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2020, 2023, 2024, 2026 Vít Pelčák <vit@pelcak.org>
 # SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Vit Pelcak <vit@pelcak.org>
 #
+# SPDX-FileCopyrightText: 2026 Jan Papez (honyczek)
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-29 02:43+0000\n"
-"PO-Revision-Date: 2026-03-30 11:46+0200\n"
-"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
-"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-06-26 23:28+0200\n"
+"Last-Translator: Jan Papez (honyczek) <honyczek@centrum.cz>\n"
+"Language-Team: Czech <kde-i18n-cs@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.2\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -324,7 +325,7 @@ msgstr "Zobrazit náhledy složky"
 #, kde-format
 msgctxt "@title:group"
 msgid "Typing on the desktop:"
-msgstr "Psaní na počítači:"
+msgstr "Psaní na pracovní ploše:"
 
 #: package/contents/ui/ConfigIcons.qml:334
 #, kde-format
@@ -336,7 +337,7 @@ msgstr "Vybrat položky"
 #, kde-format
 msgctxt "@option:radio Typing on the desktop activates KRunner"
 msgid "Activates KRunner"
-msgstr "Aktivace KRunneru"
+msgstr "Aktivovat KRunner"
 
 #: package/contents/ui/ConfigIcons.qml:356
 #, kde-format
