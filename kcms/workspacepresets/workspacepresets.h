@@ -9,6 +9,7 @@
 #include <KQuickConfigModule>
 
 #include <QHash>
+#include <QStringList>
 #include <QVariantList>
 
 class PresetsModel;
@@ -107,5 +108,5 @@ private:
     bool m_applyShortcuts = false;
     bool m_initialLoadDone = false; // first load() is the framework's; later ones are Reset
     bool m_appliedDiffersFromLaunch = false; // a preset was applied since the module opened
-    QHash<QString, QString> m_launchPresets; // per-screen preset applied when the module opened
+    QStringList m_launchScreens; // screen names present when the module opened
 };

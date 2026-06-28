@@ -17,6 +17,7 @@
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDateTime>
+#include <QDebug>
 #include <QDir>
 #include <QFile>
 #include <QGuiApplication>
@@ -398,19 +399,48 @@ bool WorkspacePresets::captureLayoutScript(const QString &destPath)
     }
 
     // The reply is a JS script: 'var plasma = ...; var layout = {...}; plasma.loadSerializedLayout(layout);'.
-    // Extract the JSON object assigned to 'layout'.
+    // Extract the JSON object assigned to 'layout' by brace-matching from the assignment, so the
+    // extraction does not depend on the exact wrapper text/whitespace around it.
     const QByteArray dump = reply.arguments().value(0).toByteArray();
-    const QByteArray startMarker = "var layout = ";
-    const int start = dump.indexOf(startMarker);
-    const int end = dump.indexOf(";\n\nplasma.loadSerializedLayout");
-    if (start < 0 || end < 0 || end <= start) {
+    const int assign = dump.indexOf("layout = ");
+    const int braceStart = assign >= 0 ? dump.indexOf('{', assign) : -1;
+    if (braceStart < 0) {
+        qWarning() << "workspacepresets: could not locate the layout object in dumpCurrentLayoutJS output";
         return false;
     }
-    const QByteArray jsonBytes = dump.mid(start + startMarker.size(), end - (start + startMarker.size()));
+    int depth = 0;
+    bool inString = false;
+    bool escaped = false;
+    int braceEnd = -1;
+    for (int i = braceStart; i < dump.size(); ++i) {
+        const char c = dump.at(i);
+        if (inString) {
+            if (escaped) {
+                escaped = false;
+            } else if (c == '\\') {
+                escaped = true;
+            } else if (c == '"') {
+                inString = false;
+            }
+        } else if (c == '"') {
+            inString = true;
+        } else if (c == '{') {
+            ++depth;
+        } else if (c == '}' && --depth == 0) {
+            braceEnd = i;
+            break;
+        }
+    }
+    if (braceEnd < 0) {
+        qWarning() << "workspacepresets: dumpCurrentLayoutJS output has an unterminated layout object";
+        return false;
+    }
+    const QByteArray jsonBytes = dump.mid(braceStart, braceEnd - braceStart + 1);
 
     QJsonParseError parseError;
     const QJsonDocument doc = QJsonDocument::fromJson(jsonBytes, &parseError);
     if (parseError.error != QJsonParseError::NoError || !doc.isObject()) {
+        qWarning() << "workspacepresets: could not parse the serialized layout:" << parseError.errorString();
         return false;
     }
     QJsonObject layout = doc.object();
@@ -483,11 +513,11 @@ void WorkspacePresets::snapshotLaunchState()
     QFile::copy(PresetStorage::liveShortcutsPath(), PresetStorage::previousShortcutsPath());
 
     // The launch layout is represented by the transient "Previous Layout" entry on every screen.
-    m_launchPresets.clear();
+    m_launchScreens.clear();
     m_launchPanels.clear();
     const auto screens = QGuiApplication::screens();
     for (const QScreen *screen : screens) {
-        m_launchPresets.insert(screen->name(), PresetStorage::currentPresetId());
+        m_launchScreens.append(screen->name());
         setCurrentPreset(PresetStorage::currentPresetId(), screen->name());
     }
 }
@@ -524,8 +554,8 @@ void WorkspacePresets::restoreLaunchState()
     // Preferred path: replay the on-load panels live across all screens (no plasmashell restart).
     QFile scriptFile(PresetStorage::previousLayoutScriptPath());
     if (scriptFile.open(QIODevice::ReadOnly) && replaySerializedLayout(scriptFile.readAll(), QString())) {
-        for (auto it = m_launchPresets.constBegin(); it != m_launchPresets.constEnd(); ++it) {
-            setCurrentPreset(it.value(), it.key());
+        for (const QString &screenName : std::as_const(m_launchScreens)) {
+            setCurrentPreset(PresetStorage::currentPresetId(), screenName);
         }
         m_appliedDiffersFromLaunch = false;
         return;
@@ -542,11 +572,16 @@ void WorkspacePresets::restoreLaunchState()
         Q_EMIT errorOccurred(i18n("Could not restore the layout."));
         return;
     }
-    for (auto it = m_launchPresets.constBegin(); it != m_launchPresets.constEnd(); ++it) {
-        setCurrentPreset(it.value(), it.key());
+    for (const QString &screenName : std::as_const(m_launchScreens)) {
+        setCurrentPreset(PresetStorage::currentPresetId(), screenName);
     }
     blendDesktopRestart();
-    QProcess::startDetached(QStringLiteral("plasmashell"), {QStringLiteral("--replace")});
+    if (!QProcess::startDetached(QStringLiteral("plasmashell"), {QStringLiteral("--replace")})) {
+        // The on-load config is back on disk but the running shell still shows the applied layout.
+        // Keep m_appliedDiffersFromLaunch set so Reset stays available to retry.
+        Q_EMIT errorOccurred(i18n("The layout was restored but plasmashell could not be restarted. Log out and back in to apply it."));
+        return;
+    }
     m_appliedDiffersFromLaunch = false;
 }
 
@@ -566,7 +601,9 @@ void WorkspacePresets::load()
         restoreLaunchState();
     }
     m_initialLoadDone = true;
-    setNeedsSave(false);
+    // Normally clean after a reset; but if restoreLaunchState() could not restart the shell it
+    // leaves the flag set, so keep Reset available to retry rather than greying it out.
+    setNeedsSave(m_appliedDiffersFromLaunch);
     Q_EMIT reinitialise();
 }
 
@@ -583,9 +620,14 @@ void WorkspacePresets::save()
     }
     // The "Previous Layout" preview deliberately stays on the as-opened state so it remains a way
     // back; it is not refreshed to the just-applied layout.
-    // Stay "modified" while the live layout differs from the on-load state, so Reset stays active
-    // and restores it. The host clears needsSave right after a successful Apply, so re-assert it on
-    // a queued call (after that reset) to keep Reset usable while the desktop differs from on-load.
+    //
+    // This module repurposes "needsSave" to mean "the live desktop differs from its on-load state"
+    // (so Reset reverts the desktop) rather than the framework's "there are unsaved config changes".
+    // A single needsSave flag drives both Apply and Reset, and the host treats a successful Apply as
+    // "saved" and clears needsSave afterwards - which would grey out Reset even though the desktop
+    // still differs from on-load. There is no separate "keep modified" hook, so re-assert needsSave
+    // on a queued call that runs after the host's post-Apply reset. Keep this until the framework
+    // offers a way to express "applied but still revertible".
     setNeedsSave(m_appliedDiffersFromLaunch);
     if (m_appliedDiffersFromLaunch) {
         QMetaObject::invokeMethod(

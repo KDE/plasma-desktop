@@ -24,9 +24,16 @@ KCM.GridViewKCM {
         view.currentIndex = kcm.presets.indexOfId(id);
         kcm.setSelection(id, root.currentScreenName);
     }
-    // Reselect whatever preset is applied on the current screen (initial load / Reset).
+    // Reselect whatever preset is applied on the current screen (initial load / Reset). If the
+    // screen has no recorded preset (e.g. it was connected after the module opened), fall back to
+    // the first entry (the "Previous Layout"/current layout) so the grid never ends up with nothing
+    // selected.
     function syncToCurrent() {
-        selectId(kcm.currentPresetForScreen(root.currentScreenName));
+        var id = kcm.currentPresetForScreen(root.currentScreenName);
+        if (id === "" || kcm.presets.indexOfId(id) < 0) {
+            id = kcm.presets.idAt(0);
+        }
+        selectId(id);
     }
 
     Component.onCompleted: {
