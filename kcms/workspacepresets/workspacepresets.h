@@ -85,6 +85,9 @@ private:
     void applyBuiltInShortcuts(const QString &id);
     void restoreUserShortcuts(const QString &id);
     void snapshotLaunchState();
+    // Slow, DBus-heavy part of capturing the on-load state (serialized layout + per-screen panel
+    // previews); deferred off the constructor so it does not block the settings window appearing.
+    void captureLaunchState();
     void restoreLaunchState();
     void setCurrentPreset(const QString &id, const QString &screenName);
     static void reloadShortcuts();

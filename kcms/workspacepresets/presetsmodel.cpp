@@ -12,6 +12,9 @@
 #include <KLocalizedString>
 
 #include <QFile>
+#include <QJsonArray>
+#include <QJsonDocument>
+#include <QJsonObject>
 
 PresetsModel::PresetsModel(QObject *parent)
     : QAbstractListModel(parent)
@@ -109,18 +112,44 @@ QVariantList PresetsModel::parsePanels(const QString &appletsrcPath, const QStri
     return result;
 }
 
+QVariantList PresetsModel::parsePanelsFromScript(const QString &jsonPath)
+{
+    QFile file(jsonPath);
+    if (!file.open(QIODevice::ReadOnly)) {
+        return {};
+    }
+    const QJsonDocument doc = QJsonDocument::fromJson(file.readAll());
+    if (!doc.isObject()) {
+        return {};
+    }
+
+    static const QStringList edges = {QStringLiteral("top"), QStringLiteral("bottom"), QStringLiteral("left"), QStringLiteral("right")};
+    QVariantList result;
+    const QJsonArray panelsArray = doc.object().value(QStringLiteral("panels")).toArray();
+    for (const QJsonValue &value : panelsArray) {
+        const QJsonObject panelObject = value.toObject();
+        const QString edge = panelObject.value(QStringLiteral("location")).toString();
+        if (!edges.contains(edge)) {
+            continue;
+        }
+        const bool vertical = (edge == QLatin1String("left") || edge == QLatin1String("right"));
+        // height is serialized in grid units; queryLivePanels() treats <= 2 grid units as "thin".
+        const double height = panelObject.value(QStringLiteral("height")).toDouble();
+        const QString lengthMode = panelObject.value(QStringLiteral("lengthMode")).toString();
+        const bool fill = lengthMode.isEmpty() || lengthMode == QLatin1String("fill");
+        const bool thin = !vertical && height > 0 && height <= 2.0;
+        // "floating" lives in the panel's root config group ("/") as a bool stored by KConfig.
+        const QJsonObject rootConfig = panelObject.value(QStringLiteral("config")).toObject().value(QStringLiteral("/")).toObject();
+        const QJsonValue floatingValue = rootConfig.value(QStringLiteral("floating"));
+        const bool floating = floatingValue.toString() == QLatin1String("true") || floatingValue.toBool();
+        result.append(panel(edge, fill, thin, floating));
+    }
+    return result;
+}
+
 void PresetsModel::setCurrentLayoutScreen(const QString &screenName)
 {
     m_currentLayoutScreen = screenName;
-}
-
-void PresetsModel::refreshCurrentLayout()
-{
-    const int row = indexOfId(PresetStorage::currentPresetId());
-    if (row >= 0) {
-        m_presets[row].panels = parsePanels(PresetStorage::liveConfigPath(), m_currentLayoutScreen);
-        Q_EMIT dataChanged(index(row), index(row), {PanelsRole});
-    }
 }
 
 void PresetsModel::setCurrentLayoutPanels(const QVariantList &panels)
@@ -147,7 +176,12 @@ void PresetsModel::loadUserPresets()
         preset.name = group.readEntry(QStringLiteral("Name"), uuid);
         preset.description = i18n("Custom layout saved on %1", group.readEntry(QStringLiteral("Created")));
         preset.builtIn = false;
-        preset.panels = parsePanels(PresetStorage::snapshotPath(uuid));
+        // Prefer the serialized layout (accurate geometry); fall back to the appletsrc snapshot for
+        // presets saved before the serialized form existed.
+        preset.panels = parsePanelsFromScript(PresetStorage::layoutScriptPath(uuid));
+        if (preset.panels.isEmpty()) {
+            preset.panels = parsePanels(PresetStorage::snapshotPath(uuid));
+        }
         m_presets.append(preset);
     }
 }

@@ -34,9 +34,11 @@ WorkspacePresets::WorkspacePresets(QObject *parent, const KPluginMetaData &data)
 {
     m_applyShortcuts = PresetStorage::index()->group(QStringLiteral("State")).readEntry("ApplyShortcuts", false);
     // Remember the layout in effect when the module opens, so it can be restored, then refresh the
-    // model so the transient "Current Layout" entry (backed by that snapshot) appears.
+    // model so the transient "Previous Layout" entry (backed by that snapshot) appears. The fast
+    // file snapshot runs now; the slow DBus capture is deferred so it does not stall module open.
     snapshotLaunchState();
     m_presets->reload();
+    QMetaObject::invokeMethod(this, &WorkspacePresets::captureLaunchState, Qt::QueuedConnection);
 }
 
 PresetsModel *WorkspacePresets::presets() const
@@ -430,9 +432,11 @@ void WorkspacePresets::applyBuiltInShortcuts(const QString &id)
     KConfigGroup kwin = config.group(QStringLiteral("kwin"));
     for (auto it = preset.kwin.constBegin(); it != preset.kwin.constEnd(); ++it) {
         // The entry format is "active,default,FriendlyName"; replace only the active field so the
-        // upstream default binding and the display name are preserved.
+        // upstream default binding and the display name are preserved. When there is no existing
+        // entry the upstream default is unknown, so leave that field empty rather than recording the
+        // preset binding as if it were the default (which would mislead "Reset to defaults").
         const QStringList parts = kwin.readEntry(it.key(), QString()).split(QLatin1Char(','));
-        const QString defaultKey = parts.size() > 1 ? parts.at(1) : it.value();
+        const QString defaultKey = parts.size() > 1 ? parts.at(1) : QString();
         const QString friendly = parts.size() > 2 ? parts.mid(2).join(QLatin1Char(',')) : it.key();
         kwin.writeEntry(it.key(), QStringList{it.value(), defaultKey, friendly}.join(QLatin1Char(',')));
     }
@@ -461,7 +465,10 @@ void WorkspacePresets::restoreUserShortcuts(const QString &id)
     }
     const QString live = PresetStorage::liveShortcutsPath();
     QFile::remove(live);
-    QFile::copy(snapshot, live);
+    if (!QFile::copy(snapshot, live)) {
+        Q_EMIT errorOccurred(i18n("Could not restore the saved keyboard shortcuts."));
+        return;
+    }
     reloadShortcuts();
 }
 
@@ -475,19 +482,28 @@ void WorkspacePresets::snapshotLaunchState()
     QFile::remove(PresetStorage::previousShortcutsPath());
     QFile::copy(PresetStorage::liveShortcutsPath(), PresetStorage::previousShortcutsPath());
 
-    // Also capture the on-load layout in serialized form so Reset can replay it live (no restart).
-    captureLayoutScript(PresetStorage::previousLayoutScriptPath());
-
     // The launch layout is represented by the transient "Previous Layout" entry on every screen.
-    // Capture the panels actually shown on each screen now, so its preview stays fixed on the
-    // as-opened state even after presets are applied.
     m_launchPresets.clear();
     m_launchPanels.clear();
     const auto screens = QGuiApplication::screens();
     for (const QScreen *screen : screens) {
         m_launchPresets.insert(screen->name(), PresetStorage::currentPresetId());
-        m_launchPanels.insert(screen->name(), queryLivePanels(screen->name()));
         setCurrentPreset(PresetStorage::currentPresetId(), screen->name());
+    }
+}
+
+void WorkspacePresets::captureLaunchState()
+{
+    // The DBus round-trips below (one layout dump plus one panel query per screen) are too slow to
+    // run from the constructor without stalling the settings window, so they are deferred until
+    // after the module is shown. They only need to complete before the first Apply/Reset.
+    captureLayoutScript(PresetStorage::previousLayoutScriptPath());
+
+    // Capture the panels actually shown on each screen now, so the "Previous Layout" preview stays
+    // fixed on the as-opened state even after presets are applied.
+    const auto screens = QGuiApplication::screens();
+    for (const QScreen *screen : screens) {
+        m_launchPanels.insert(screen->name(), queryLivePanels(screen->name()));
     }
 }
 
@@ -498,8 +514,11 @@ void WorkspacePresets::restoreLaunchState()
     if (QFile::exists(shortcuts)) {
         const QString liveShortcuts = PresetStorage::liveShortcutsPath();
         QFile::remove(liveShortcuts);
-        QFile::copy(shortcuts, liveShortcuts);
-        reloadShortcuts();
+        if (QFile::copy(shortcuts, liveShortcuts)) {
+            reloadShortcuts();
+        } else {
+            Q_EMIT errorOccurred(i18n("Could not restore the keyboard shortcuts."));
+        }
     }
 
     // Preferred path: replay the on-load panels live across all screens (no plasmashell restart).

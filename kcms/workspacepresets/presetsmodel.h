@@ -46,22 +46,22 @@ public:
     /// Record the screen the "Current Layout" preview is scoped to (used by the file-based fallback).
     Q_INVOKABLE void setCurrentLayoutScreen(const QString &screenName);
 
-    /// Re-read the live layout file into the "Current Layout" preview. This is a best-effort
-    /// fallback: the file can list orphaned panel containments the running shell no longer shows,
-    /// so prefer setCurrentLayoutPanels() with live data queried from plasmashell.
-    void refreshCurrentLayout();
-
-    /// Replace the "Current Layout" preview with panels queried live from the running shell.
+    /// Replace the "Previous Layout" preview with panels queried live from the running shell.
     void setCurrentLayoutPanels(const QVariantList &panels);
 
     /// Build a panel descriptor (the same shape stored in PanelsRole), for callers assembling a
     /// preview from live data.
     static QVariantMap panel(const QString &edge, bool fill, bool thin = false, bool floating = false);
 
-    /// Parse the panels from a layout file. When screenName is given and the file carries a
-    /// screen-connector mapping, only that screen's panels are returned, otherwise all of them.
-    /// Best-effort: the file can list orphaned containments, so prefer live data when available.
+    /// Parse the panels from an appletsrc layout file. When screenName is given and the file carries
+    /// a screen-connector mapping, only that screen's panels are returned, otherwise all of them.
+    /// Best-effort: the appletsrc does not carry panel thickness/length here, so geometry is
+    /// approximated; prefer parsePanelsFromScript() (accurate) or live data when available.
     static QVariantList parsePanels(const QString &appletsrcPath, const QString &screenName = QString());
+
+    /// Parse the panels from a serialized layout (dumpCurrentLayoutJS JSON). This carries accurate
+    /// geometry (height, length mode, floating), so the preview matches the running shell.
+    static QVariantList parsePanelsFromScript(const QString &jsonPath);
 
 private:
     struct Preset {
