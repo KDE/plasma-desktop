@@ -1308,11 +1308,12 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
         if (dropTargetUrl != m_dirModel->dirLister()->url()) {
             QString mappedUrl = url.toString();
             const auto local = dropTargetUrl.toString();
-            const auto internal = m_dirModel->dirLister()->url().toString();
+            auto internal = m_dirModel->dirLister()->url();
             if (mappedUrl.startsWith(local)) {
-                mappedUrl.replace(0, local.size(), internal);
+                mappedUrl.replace(0, local.size(), QString());
             }
-            return ScreenMapper::stringToUrl(mappedUrl);
+            internal.setPath(mappedUrl);
+            return ScreenMapper::stringToUrl(internal.toString());
         }
         return url;
     };
