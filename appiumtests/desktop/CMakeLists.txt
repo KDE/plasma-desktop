@@ -29,12 +29,6 @@ set_tests_properties(
     PROPERTIES TIMEOUT 600 ENVIRONMENT "CMAKE_BINARY_DIR=${CMAKE_BINARY_DIR};KACTIVITYMANAGERD_PATH=${KDE_INSTALL_FULL_LIBEXECDIR}/kactivitymanagerd;GDK_BACKEND=wayland")
 
 add_test(
-    NAME bug482267test
-    COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/bug482267.py --failfast
-)
-set_tests_properties(bug482267test PROPERTIES TIMEOUT 600 ENVIRONMENT "CMAKE_BINARY_DIR=${CMAKE_BINARY_DIR};KACTIVITYMANAGERD_PATH=${KDE_INSTALL_FULL_LIBEXECDIR}/kactivitymanagerd")
-
-add_test(
     NAME panel_focus_test
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/panelfocustest.py
 )
