@@ -7,6 +7,7 @@ import os
 import subprocess
 import sys
 import unittest
+import time
 from typing import Final
 
 from appium import webdriver
@@ -18,7 +19,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, "desktop"))
-from desktoptest import start_kded
 
 KDE_VERSION: Final = 6
 KCM_ID: Final = "kcm_kded"
@@ -28,6 +28,32 @@ def loadedModules(session_bus: Gio.DBusConnection) -> list[str]:
     kded_reply: GLib.Variant = session_bus.call_sync(f"org.kde.kded{KDE_VERSION}", "/kded", f"org.kde.kded{KDE_VERSION}", "loadedModules", None, GLib.VariantType("(as)"), Gio.DBusSendMessageFlags.NONE, 1000)
     return kded_reply.get_child_value(0).unpack()
 
+def name_has_owner(session_bus: Gio.DBusConnection | None, name: str) -> bool:
+    """
+    Whether the given name is available on session bus
+    """
+    if session_bus is None:
+        session_bus = Gio.bus_get_sync(Gio.BusType.SESSION)
+    message: Gio.DBusMessage = Gio.DBusMessage.new_method_call("org.freedesktop.DBus", "/", "org.freedesktop.DBus", "NameHasOwner")
+    message.set_body(GLib.Variant("(s)", [name]))
+    reply, _ = session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)
+    return reply and reply.get_signature() == 'b' and reply.get_body().get_child_value(0).get_boolean()
+
+def start_kded() -> subprocess.Popen | None:
+    session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
+    kded = None
+    if not name_has_owner(session_bus, f"org.kde.kded{KDE_VERSION}"):
+        kded = subprocess.Popen([f"kded{KDE_VERSION}"], stdout=sys.stderr, stderr=sys.stderr)
+        kded_started: bool = False
+        for _ in range(10):
+            if name_has_owner(session_bus, f"org.kde.kded{KDE_VERSION}"):
+                kded_started = True
+                break
+            print(f"waiting for kded{KDE_VERSION} to appear on the dbus session")
+            time.sleep(1)
+        assert kded_started
+
+    return kded
 
 class KCMTest(unittest.TestCase):
     """
