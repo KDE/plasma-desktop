@@ -70,8 +70,6 @@ PlasmaComponents3.ScrollView {
             (itemList.childDialog as ItemListDialog).interactionConcluded.connect(itemList.interactionConcluded)
 
             itemList.childDialog.mainItem.forceActiveFocus(Qt.TabFocusReason)
-            windowSystem.forceActive(itemList.childDialog.mainItem); // only for X11; TODO Plasma 6.8: remove
-
         } else {
             itemList.childDialog.model = model.modelForRow(itemList.currentIndex);
             itemList.childDialog.visualParent = listView.currentItem;
@@ -208,7 +206,6 @@ PlasmaComponents3.ScrollView {
             if (itemList.childDialog === null) {
                 itemList.subMenuForCurrentItem();
             } else {
-                windowSystem.forceActive(itemList.childDialog.mainItem); // only for X11; TODO Plasma 6.8: remove
                 itemList.childDialog.requestActivate()
                 itemList.childDialog.mainItem.forceActiveFocus(Qt.TabFocusReason);
             }

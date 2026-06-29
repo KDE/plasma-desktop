@@ -189,10 +189,6 @@ PlasmoidItem {
         id: processRunner
     }
 
-    Kicker.WindowSystem { // only for X11; TODO Plasma 6.8: remove (also from plasma-workspace)
-        id: windowSystem
-    }
-
     Connections {
         target: kicker
 
