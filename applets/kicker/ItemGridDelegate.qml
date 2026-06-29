@@ -13,10 +13,10 @@ import org.kde.ksvg as KSvg
 import org.kde.plasma.components as PlasmaComponents3
 
 ItemAbstractDelegate {
-    id: item
+    id: root
 
     property alias iconSize: icon.implicitWidth
-    property int itemIndex: item.index
+    property int itemIndex: root.index
     property var m: model
     property bool showUnfavoritePlaceholder: false
     property bool isDraggableFavorite: false
@@ -24,7 +24,7 @@ ItemAbstractDelegate {
     width: GridView.view.cellWidth
     height: width
 
-    enabled: !item.disabled
+    enabled: !root.disabled
     favoritesModel: GridView.view.model.favoritesModel
     baseModel: GridView.view.model
     dragActive: dragHandler.active
@@ -36,26 +36,26 @@ ItemAbstractDelegate {
         id: dragHandler
         target: null
         onActiveChanged: if (active) {
-            item.contentItem.grabToImage(function(result) {
-                item.Drag.imageSource = result.url
-                item.Drag.active = true
+            root.contentItem.grabToImage(function(result) {
+                root.Drag.imageSource = result.url
+                root.Drag.active = true
             })
         } else {
-            item.Drag.active = false
+            root.Drag.active = false
         }
     }
     Drag.dragType: Drag.Automatic
-    Drag.mimeData: item.isDraggableFavorite ? {
+    Drag.mimeData: root.isDraggableFavorite ? {
         'favoritedrag': '',
-        "text/uri-list" : [item.url]
+        "text/uri-list" : [root.url]
     } : {
-        "text/uri-list" : [item.url]
+        "text/uri-list" : [root.url]
     }
 
     background.visible: false // we want the default background's spacing, but not the base color
     contentItem: ColumnLayout {
         spacing: Kirigami.Units.smallSpacing
-        visible: !item.showUnfavoritePlaceholder
+        visible: !root.showUnfavoritePlaceholder
 
         Kirigami.Icon {
             id: icon
@@ -66,16 +66,16 @@ ItemAbstractDelegate {
 
             animated: false
 
-            source: item.model.decoration
+            source: root.model.decoration
 
             Loader {
                 anchors {
                     right: parent.right
-                    rightMargin: -item.rightPadding
+                    rightMargin: -root.rightPadding
                     top: parent.top
                 }
                 visible: active
-                active: item.isNewlyInstalled ?? false
+                active: root.isNewlyInstalled ?? false
 
                 sourceComponent: Kirigami.Badge {
                     text: i18nc("@label Newly-installed app, badge, keep short", "New!")
@@ -97,13 +97,13 @@ ItemAbstractDelegate {
             elide: Text.ElideMiddle
             wrapMode: Text.Wrap
 
-            text: item.model.display ?? ""
+            text: root.model.display ?? ""
             textFormat: Text.PlainText
         }
     }
 
     Loader {
-        active: item.showUnfavoritePlaceholder
+        active: root.showUnfavoritePlaceholder
         anchors.fill: parent
 
         sourceComponent: Item {
@@ -118,7 +118,7 @@ ItemAbstractDelegate {
                 Kirigami.Icon {
                     anchors.centerIn: parent
 
-                    width: item.iconSize
+                    width: root.iconSize
                     height: width
 
                     source: "list-remove"
@@ -129,7 +129,7 @@ ItemAbstractDelegate {
     }
 
     PlasmaComponents3.ToolTip {
-        text: item.model.description ?? ""
-        visible: item.hovered && !ActionMenu.opened
+        text: root.model.description ?? ""
+        visible: root.hovered && !ActionMenu.opened
     }
 }

@@ -86,8 +86,8 @@ FocusScope {
         anchors.fill: parent
         active: false
         onActiveChanged: {
-            if (!active && "dropPlaceHolderIndex" in model) {
-                model.dropPlaceHolderIndex = -1;
+            if (!active && "dropPlaceHolderIndex" in itemGrid.model) {
+                itemGrid.model.dropPlaceHolderIndex = -1;
             }
         }
 
@@ -357,8 +357,8 @@ FocusScope {
                     // Fix moveCurrentIndexDown()'s lack of proper spatial nav down
                     // into partial columns.
                     event.accepted = true;
-                    var columns = Math.floor(width / cellWidth);
-                    var newIndex = currentIndex + columns;
+                    const columns = Math.floor(width / cellWidth);
+                    const newIndex = currentIndex + columns;
                     currentIndex = Math.min(newIndex, count - 1);
                     positionViewAtIndex(currentIndex, GridView.Contain);
                 } else {

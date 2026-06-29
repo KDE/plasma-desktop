@@ -237,7 +237,7 @@ PlasmaComponents.ScrollView {
 
                         onKeyNavDown: {
                             if (gridDelegate.index < repeater.count - 1) {
-                                for (var i = gridDelegate.index + 1; i < repeater.count; i++) {
+                                for (let i = gridDelegate.index + 1; i < repeater.count; i++) {
                                     if (itemMultiGrid.subGridAt(i).count > 0) {
                                         itemMultiGrid.subGridAt(i).tryActivate(0, currentCol());
                                         break;

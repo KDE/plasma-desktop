@@ -44,8 +44,8 @@ RowLayout {
 
     onIsFirstColumnChanged: setDefaultCurrentIndex()
     Connections {
-        target: model
-        function onQueryingChanged() { setDefaultCurrentIndex() }
+        target: runnerResultsList.model
+        function onQueryingChanged() { runnerResultsList.setDefaultCurrentIndex() }
     }
 
     spacing: Kirigami.Units.smallSpacing

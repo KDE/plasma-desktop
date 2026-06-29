@@ -360,7 +360,8 @@ Kicker.DashboardWindow {
                 target: searchField.targetGrid
                 enabled: launchMatchTimer.running
                 function onCurrentItemChanged() : void {
-                    if (searchField.targetGrid.currentItem?.text.toLowerCase().includes(root.runnerModel.query.toLowerCase())) {
+                    const targetItem = searchField.targetGrid.currentItem as ItemGridDelegate
+                    if (targetItem?.text.toLowerCase().includes(root.runnerModel.query.toLowerCase())) {
                         launchMatchTimer.stop()
                         launchMatchTimer.triggered()
                     }
@@ -889,18 +890,18 @@ Kicker.DashboardWindow {
                         keyNavigationWraps: true
 
                         delegate: ItemAbstractDelegate {
-                            id: item
+                            id: filterDelegate
 
                             property var m: model
                             property int textWidth: label.contentWidth
 
-                            width: ListView.view.width
+                            width: filterList.width
                             height: implicitHeight
                             hoverEnabled: !hoverBlock.enabled
                             baseModel: filterList.model
                             favoritesModel: baseModel.favoritesModel
 
-                            onClicked: ListView.view.applyFilter()
+                            onClicked: filterList.applyFilter()
 
                             onHoveredChanged: {
                                 if (hovered && !isSeparator && !ActionMenu.opened) {
@@ -932,7 +933,7 @@ Kicker.DashboardWindow {
 
                                     level: 1
 
-                                    text: item.model.display
+                                    text: filterDelegate.model.display
                                     textFormat: Text.PlainText
                                 }
 
@@ -942,7 +943,7 @@ Kicker.DashboardWindow {
                                     anchors.right: parent.right
                                     anchors.verticalCenter: parent.verticalCenter
                                     visible: active
-                                    active: item.isNewlyInstalled ?? false
+                                    active: filterDelegate.isNewlyInstalled ?? false
 
                                     sourceComponent: Kirigami.Badge {
                                         text: ""
@@ -984,7 +985,7 @@ Kicker.DashboardWindow {
                                     preloadAllAppsTimer.stop();
                                 }
 
-                                var model = root.rootModel.modelForRow(currentIndex);
+                                const model = root.rootModel.modelForRow(currentIndex);
 
                                 if (model.description === "KICKER_ALL_MODEL") {
                                     allAppsGrid.model = model;

@@ -9,7 +9,6 @@ import QtQuick
 import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.components as PlasmaComponents3
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid
 import org.kde.plasma.private.kicker as Kicker
@@ -37,8 +36,8 @@ PlasmoidItem {
         ItemListDialog {}
     }
 
-    property Kicker.KAStatsFavoritesModel globalFavorites: rootModel.favoritesModel as Kicker.KAStatsFavoritesModel
-    property Kicker.SimpleFavoritesModel systemFavorites: rootModel.systemFavoritesModel as Kicker.SimpleFavoritesModel
+    property Kicker.KAStatsFavoritesModel globalFavorites: rootModelInstance.favoritesModel as Kicker.KAStatsFavoritesModel
+    property Kicker.SimpleFavoritesModel systemFavorites: rootModelInstance.systemFavoritesModel as Kicker.SimpleFavoritesModel
 
     Plasmoid.icon: Plasmoid.configuration.useCustomButtonImage ? Plasmoid.configuration.customButtonImage : Plasmoid.configuration.icon
 
@@ -65,8 +64,8 @@ PlasmoidItem {
         MenuRepresentation {
             globalFavorites: kicker.globalFavorites
             systemFavorites: kicker.systemFavorites
-            rootModel: rootModel
-            runnerModel: runnerModel
+            rootModel: rootModelInstance
+            runnerModel: runnerModelInstance
             onInteractionConcluded: kicker.expanded = false
         }
     }
@@ -76,14 +75,14 @@ PlasmoidItem {
         DashboardRepresentation {
             globalFavorites: kicker.globalFavorites
             systemFavorites: kicker.systemFavorites
-            rootModel: rootModel
-            runnerModel: runnerModel
+            rootModel: rootModelInstance
+            runnerModel: runnerModelInstance
             onInteractionConcluded: toggle()
         }
     }
 
     Kicker.RootModel {
-        id: rootModel
+        id: rootModelInstance
 
         autoPopulate: false
 
@@ -145,7 +144,7 @@ PlasmoidItem {
     }
 
     Kicker.RunnerModel {
-        id: runnerModel
+        id: runnerModelInstance
 
         appletInterface: kicker
 
@@ -201,6 +200,6 @@ PlasmoidItem {
             Plasmoid.activationTogglesExpanded = !kicker.isDash
         }
 
-        rootModel.refreshed.connect(modelRefreshed);
+        rootModelInstance.refreshed.connect(modelRefreshed);
     }
 }
