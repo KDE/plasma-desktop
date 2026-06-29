@@ -35,8 +35,18 @@ RowLayout {
     // the final visible child is the repeater, so need to subtract 2 to get the proper index
     readonly property bool isLastColumn: runnerResultsList.parent.visibleChildren[runnerResultsList.parent.visibleChildren.length - 2] === runnerResultsList
 
-    // We may still be invisible when the results come in; set currentIndex later if needed
-    onIsFirstColumnChanged: if (isFirstColumn && runnerMatches.mainSearchField.focus) { runnerMatches.currentIndex = 0 }
+    function setDefaultCurrentIndex() {
+        if (!runnerMatches.mainSearchField.activeFocus) {
+            return
+        }
+        runnerMatches.currentIndex = isFirstColumn ? 0 : -1
+    }
+
+    onIsFirstColumnChanged: setDefaultCurrentIndex()
+    Connections {
+        target: model
+        function onQueryingChanged() { setDefaultCurrentIndex() }
+    }
 
     spacing: Kirigami.Units.smallSpacing
 
@@ -105,21 +115,6 @@ RowLayout {
 
             resetOnExitDelay: 0
 
-            Connections {
-                target: runnerModel
-                function onAnyRunnerFinished () {
-                    Qt.callLater( () => { // these come in quickly at the start
-                        if (runnerMatches.activeFocus) {
-                            return; // don't interfere if the user has already moved focus
-                        }
-                        if (searchFieldPlaceholder.visible && runnerMatches.mainSearchField.focus) {
-                            runnerMatches.currentIndex = 0;
-                        } else {
-                            runnerMatches.currentIndex = -1;
-                        }
-                    })
-                }
-            }
             onNavigateLeftRequested: runnerResultsList.navigateLeftRequested()
             onNavigateRightRequested: runnerResultsList.navigateRightRequested()
             onKeyNavigationAtListEnd: mainSearchField.forceActiveFocus(Qt.TabFocusReason)
