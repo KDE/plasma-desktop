@@ -129,14 +129,6 @@ PlasmoidItem {
     }
 
     Connections {
-        target: kicker.globalFavorites
-
-        function onFavoritesChanged() {
-            Plasmoid.configuration.favoriteApps = kicker.globalFavorites.favorites;
-        }
-    }
-
-    Connections {
         target: kicker.systemFavorites
 
         function onFavoritesChanged() {
@@ -146,10 +138,6 @@ PlasmoidItem {
 
     Connections {
         target: Plasmoid.configuration
-
-        function onFavoriteAppsChanged() {
-            kicker.globalFavorites.favorites = Plasmoid.configuration.favoriteApps;
-        }
 
         function onFavoriteSystemActionsChanged() {
             kicker.systemFavorites.favorites = Plasmoid.configuration.favoriteSystemActions;
