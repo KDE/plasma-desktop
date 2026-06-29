@@ -9,7 +9,6 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Templates as T
 import org.kde.plasma.extras as PlasmaExtras
-import org.kde.plasma.plasmoid
 
 BasePage {
     id: root
@@ -30,10 +29,8 @@ BasePage {
                 // I have to do this for it to actually fill the item for some reason
                 anchors.fill: parent
                 active: false
-                hovered: delegate.mouseArea.containsMouse
-                visible: !Plasmoid.configuration.switchCategoryOnHover
-                    && !delegate.isSeparator && !parent.ListView.isCurrentItem
-                    && hovered
+                hovered: delegate.mouseArea.containsMouse || delegate.ListView.isCurrentItem
+                visible: !delegate.isSeparator && hovered
             }
         }
     }
