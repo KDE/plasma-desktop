@@ -87,14 +87,13 @@ KCM.SimpleKCM {
         Kirigami.FormGroup {
             title: i18nc("@title:group", "Scrolling")
 
-            QQC2.ButtonGroup { id: scrollHandleBehaviorGroup }
-
             Kirigami.FormEntry {
                 contentItem: QQC2.RadioButton {
                     Kirigami.FormData.label: i18nc("@title:group prefix radiobutton group", "Clicking in scrollbar track:")
                     text: i18nc("@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to the clicked location'", "Scrolls to the clicked location")
                     checked: !kcm.globalsSettings.scrollbarLeftClickNavigatesByPage
                     onToggled: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage = false
+                    QQC2.ButtonGroup { id: scrollHandleBehaviorGroup }
                     QQC2.ButtonGroup.group: scrollHandleBehaviorGroup
 
                     KCM.SettingStateBinding {
@@ -106,11 +105,11 @@ KCM.SimpleKCM {
             }
 
             Kirigami.FormEntry {
-                subtitle: i18nc("@info:usagetip", "Middle-click to scroll to clicked location")
+                subtitle: scrollbarLeftClickNavigatesByPage.Accessible.description
                 contentItem: QQC2.RadioButton {
                     id: scrollbarLeftClickNavigatesByPage
                     text: i18nc("@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one page up or down'", "Scrolls one page up or down")
-                    Accessible.description: scrollbarLeftClickNavigatesByPageHelperText.text
+                    Accessible.description: i18nc("@info:usagetip", "Middle-click to scroll to clicked location")
                     checked: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage
                     onToggled: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage = true
                     QQC2.ButtonGroup.group: scrollHandleBehaviorGroup
@@ -173,6 +172,7 @@ KCM.SimpleKCM {
                     Accessible.description: i18nc("@info:usagetip", "Select by clicking on item's selection marker")
                     checked: kcm.globalsSettings.singleClick
                     onToggled: kcm.globalsSettings.singleClick = true
+                    QQC2.ButtonGroup { id: singleClickGroup }
                     QQC2.ButtonGroup.group: singleClickGroup
 
                     KCM.SettingStateBinding {
@@ -305,8 +305,6 @@ KCM.SimpleKCM {
         Kirigami.FormGroup {
             title: i18nc("@title:group prefix radiobutton group", "Drag and Drop")
 
-            QQC2.ButtonGroup { id: dndBehaviorGroup }
-
             Kirigami.FormEntry {
                 title: i18nc("@title:group prefix radiobutton group", "When dragging files or folders:")
                 subtitle: dndBehaviorAsk.Accessible.description
@@ -317,6 +315,7 @@ KCM.SimpleKCM {
                     enabled: !kcm.globalsSettings.isImmutable("dndBehavior")
                     checked: kcm.globalsSettings.dndBehavior === WorkspaceOptionsGlobalsSettings.AlwaysAsk
                     onToggled: kcm.globalsSettings.dndBehavior = WorkspaceOptionsGlobalsSettings.AlwaysAsk
+                    QQC2.ButtonGroup { id: dndBehaviorGroup }
                     QQC2.ButtonGroup.group: dndBehaviorGroup
                 }
             }
@@ -338,8 +337,6 @@ KCM.SimpleKCM {
         Kirigami.FormGroup {
             title: i18nc("@title:group", "Touch")
 
-            QQC2.ButtonGroup { id: tabletModeBehaviorGroup }
-
             Kirigami.FormEntry {
                 title: i18nc("@title:group prefix radiobutton group", "Enable Tablet Mode:")
                 contentItem: QQC2.RadioButton {
@@ -352,6 +349,7 @@ KCM.SimpleKCM {
                             kcm.kwinSettings.tabletMode = "auto"
                         }
                     }
+                    QQC2.ButtonGroup { id: tabletModeBehaviorGroup }
                     QQC2.ButtonGroup.group: tabletModeBehaviorGroup
 
                     KCM.SettingStateBinding {
