@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-30 00:45+0000\n"
 "PO-Revision-Date: 2026-01-16 11:16+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -89,13 +89,13 @@ msgctxt "@title:group"
 msgid "Scrolling"
 msgstr "Ritināšana"
 
-#: ui/main.qml:94
+#: ui/main.qml:92
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
 msgstr "Klikšķis uz ritjoslas:"
 
-#: ui/main.qml:95
+#: ui/main.qml:93
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
@@ -107,13 +107,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "Ritina līdz norādītajai vietai"
 
-#: ui/main.qml:109
-#, kde-format
-msgctxt "@info:usagetip"
-msgid "Middle-click to scroll to clicked location"
-msgstr "Vidējais klikšķis pārvieto un noklikšķinātās vietas"
-
-#: ui/main.qml:112
+#: ui/main.qml:111
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
@@ -125,13 +119,19 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Ritina vienu lapu uz priekšu vai atpakaļ"
 
-#: ui/main.qml:130
+#: ui/main.qml:112
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Middle-click to scroll to clicked location"
+msgstr "Vidējais klikšķis pārvieto un noklikšķinātās vietas"
+
+#: ui/main.qml:129
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
 msgstr "Dot priekšroku gludai ritināšanai"
 
-#: ui/main.qml:141
+#: ui/main.qml:140
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -145,38 +145,38 @@ msgstr ""
 "neatbalsta gludo ritināšanu vai tām ir savi iestatījumi šīs funkcijas "
 "ieslēgšanai vai izslēgšanai."
 
-#: ui/main.qml:147
+#: ui/main.qml:146
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
 msgstr "Klikšķināšana"
 
-#: ui/main.qml:150
+#: ui/main.qml:149
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Klikšķis uz datnēm vai mapēm:"
 
-#: ui/main.qml:154
+#: ui/main.qml:153
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Tās atlasa"
 
-#: ui/main.qml:155
+#: ui/main.qml:154
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "Atver ar dubultklikšķi"
 
-#: ui/main.qml:172
+#: ui/main.qml:171
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Tās atver"
 
-#: ui/main.qml:173
+#: ui/main.qml:172
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
@@ -245,19 +245,19 @@ msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr "Vilkšana un nomešana"
 
-#: ui/main.qml:311
+#: ui/main.qml:309
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "Velkot datnes vai mapes:"
 
-#: ui/main.qml:315
+#: ui/main.qml:313
 #, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr "Vienmēr jautāt, ko darīt"
 
-#: ui/main.qml:316
+#: ui/main.qml:314
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -270,13 +270,13 @@ msgstr ""
 "saiti — <shortcut>Shift+Ctrl</shortcut> taustiņu kombināciju. Pretējā "
 "gadījumā jautās, ko darīt."
 
-#: ui/main.qml:328
+#: ui/main.qml:327
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "Pārvietot, ja darbība notiek tajā pašā ierīcē"
 
-#: ui/main.qml:329
+#: ui/main.qml:328
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
@@ -284,13 +284,13 @@ msgstr ""
 "Lai redzētu citas iespējas, turiet nospiestu <shortcut>Shift</shortcut> "
 "taustiņu."
 
-#: ui/main.qml:339
+#: ui/main.qml:338
 #, kde-format
 msgctxt "@title:group"
 msgid "Touch"
 msgstr "Skārienjutība"
 
-#: ui/main.qml:344
+#: ui/main.qml:341
 #, fuzzy, kde-format
 #| msgctxt "@title:group prefix radiobutton group"
 #| msgid "Enable Touch Mode:"
@@ -298,7 +298,7 @@ msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
 msgstr "Ieslēgt skārienjutīgo režīmu:"
 
-#: ui/main.qml:347
+#: ui/main.qml:344
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
@@ -307,7 +307,7 @@ msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Ieslēgt automātiska pēc vajadzības"
 
-#: ui/main.qml:347
+#: ui/main.qml:344
 #, fuzzy, kde-format
 #| msgctxt "option:radio As in: 'Touch Mode is never enabled'"
 #| msgid "Never enabled"
@@ -315,7 +315,7 @@ msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Nekad neieslēgt"
 
-#: ui/main.qml:365
+#: ui/main.qml:363
 #, fuzzy, kde-format
 #| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 #| msgid ""
@@ -333,7 +333,7 @@ msgstr ""
 "Piemēram, ja pārveidojama portatīvā datora tastatūra tiek apgriezta otrādi "
 "vai atvienota."
 
-#: ui/main.qml:371
+#: ui/main.qml:369
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is always enabled'"
 #| msgid "Always active"
@@ -341,7 +341,7 @@ msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Vienmēr ieslēgts"
 
-#: ui/main.qml:393
+#: ui/main.qml:391
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is never enabled'"
 #| msgid "Disabled"
@@ -349,7 +349,7 @@ msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Izslēgts"
 
-#: ui/main.qml:394
+#: ui/main.qml:392
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."

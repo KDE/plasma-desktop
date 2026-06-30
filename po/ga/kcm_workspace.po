@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-30 00:45+0000\n"
 "PO-Revision-Date: 2026-01-21 11:04+0000\n"
 "Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
 "Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
@@ -91,13 +91,13 @@ msgctxt "@title:group"
 msgid "Scrolling"
 msgstr "Scrolláil"
 
-#: ui/main.qml:94
+#: ui/main.qml:92
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
 msgstr "Ag cliceáil sa rian scrollbharra:"
 
-#: ui/main.qml:95
+#: ui/main.qml:93
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
@@ -109,13 +109,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "Scrollaíonn sé go dtí an áit ar cliceáladh"
 
-#: ui/main.qml:109
-#, kde-format
-msgctxt "@info:usagetip"
-msgid "Middle-click to scroll to clicked location"
-msgstr "Cliceáil sa lár chun scrollú go dtí an áit a ndearnadh cliceáil uirthi"
-
-#: ui/main.qml:112
+#: ui/main.qml:111
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
@@ -127,13 +121,19 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Scrollaíonn sé leathanach amháin suas nó síos"
 
-#: ui/main.qml:130
+#: ui/main.qml:112
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Middle-click to scroll to clicked location"
+msgstr "Cliceáil sa lár chun scrollú go dtí an áit a ndearnadh cliceáil uirthi"
+
+#: ui/main.qml:129
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
 msgstr "Is fearr liom scrollú réidh"
 
-#: ui/main.qml:141
+#: ui/main.qml:140
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -147,38 +147,38 @@ msgstr ""
 "feidhmchlár an socrú seo toisc nach dtacaíonn siad le scrollú réidh, nó go "
 "bhfuil a socrú féin acu chun é a chumasú agus a dhíchumasú."
 
-#: ui/main.qml:147
+#: ui/main.qml:146
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
 msgstr "Ag cliceáil"
 
-#: ui/main.qml:150
+#: ui/main.qml:149
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Cliceáil ar chomhaid nó ar fhillteáin:"
 
-#: ui/main.qml:154
+#: ui/main.qml:153
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Roghnaíonn siad iad"
 
-#: ui/main.qml:155
+#: ui/main.qml:154
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "Oscail trí chliceáil faoi dhó ina ionad sin"
 
-#: ui/main.qml:172
+#: ui/main.qml:171
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Osclaíonn siad iad"
 
-#: ui/main.qml:173
+#: ui/main.qml:172
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
@@ -249,19 +249,19 @@ msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr "Tarraing agus Scaoil"
 
-#: ui/main.qml:311
+#: ui/main.qml:309
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "Agus comhaid nó fillteáin á dtarraingt agat:"
 
-#: ui/main.qml:315
+#: ui/main.qml:313
 #, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr "Fiafraigh i gcónaí cad atá le déanamh"
 
-#: ui/main.qml:316
+#: ui/main.qml:314
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -273,13 +273,13 @@ msgstr ""
 "shortcut> le cóipeáil, agus <shortcut>Shift+Ctrl</shortcut> le nasc "
 "siombalach a chruthú. Seachas sin, taispeáin dialóg."
 
-#: ui/main.qml:328
+#: ui/main.qml:327
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "Bog más ar an ngléas céanna é"
 
-#: ui/main.qml:329
+#: ui/main.qml:328
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
@@ -287,13 +287,13 @@ msgstr ""
 "Coinnigh <shortcut>Shift</shortcut> síos agus tú ag scaoileadh chun roghanna "
 "eile a thaispeáint."
 
-#: ui/main.qml:339
+#: ui/main.qml:338
 #, kde-format
 msgctxt "@title:group"
 msgid "Touch"
 msgstr "Teagmháil"
 
-#: ui/main.qml:344
+#: ui/main.qml:341
 #, fuzzy, kde-format
 #| msgctxt "@title:group prefix radiobutton group"
 #| msgid "Enable Touch Mode:"
@@ -301,7 +301,7 @@ msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
 msgstr "Cumasaigh Mód Tadhaill:"
 
-#: ui/main.qml:347
+#: ui/main.qml:344
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
@@ -310,7 +310,7 @@ msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Cumasaigh go huathoibríoch de réir mar is gá"
 
-#: ui/main.qml:347
+#: ui/main.qml:344
 #, fuzzy, kde-format
 #| msgctxt "option:radio As in: 'Touch Mode is never enabled'"
 #| msgid "Never enabled"
@@ -318,7 +318,7 @@ msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Níor cuireadh ar chumas riamh"
 
-#: ui/main.qml:365
+#: ui/main.qml:363
 #, fuzzy, kde-format
 #| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 #| msgid ""
@@ -335,7 +335,7 @@ msgstr ""
 "córas scáileán tadhaill ach gan luch ná ceap tadhaill. Mar shampla: nuair a "
 "chasfar nó a bhaintear méarchlár ríomhaire glúine in-athraithe."
 
-#: ui/main.qml:371
+#: ui/main.qml:369
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is always enabled'"
 #| msgid "Always active"
@@ -343,7 +343,7 @@ msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Gníomhach i gcónaí"
 
-#: ui/main.qml:393
+#: ui/main.qml:391
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is never enabled'"
 #| msgid "Disabled"
@@ -351,7 +351,7 @@ msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Díchumasaithe"
 
-#: ui/main.qml:394
+#: ui/main.qml:392
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-30 00:45+0000\n"
 "PO-Revision-Date: 2026-05-16 12:22+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -90,13 +90,13 @@ msgctxt "@title:group"
 msgid "Scrolling"
 msgstr "Przewijanie"
 
-#: ui/main.qml:94
+#: ui/main.qml:92
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
 msgstr "Kliknięcie na szynie paska przewijania:"
 
-#: ui/main.qml:95
+#: ui/main.qml:93
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -104,13 +104,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "Przewija do naciśniętego miejsca"
 
-#: ui/main.qml:109
-#, kde-format
-msgctxt "@info:usagetip"
-msgid "Middle-click to scroll to clicked location"
-msgstr "Kliknięcie środkowym przewija do naciśniętego miejsca"
-
-#: ui/main.qml:112
+#: ui/main.qml:111
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -118,13 +112,19 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Przewija jedną stronę w górę lub dół"
 
-#: ui/main.qml:130
+#: ui/main.qml:112
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Middle-click to scroll to clicked location"
+msgstr "Kliknięcie środkowym przewija do naciśniętego miejsca"
+
+#: ui/main.qml:129
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
 msgstr "Staraj się przewijać płynnie"
 
-#: ui/main.qml:141
+#: ui/main.qml:140
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -138,38 +138,38 @@ msgstr ""
 "ustawienia, bo albo nie obsługują płynnego przewijania albo mają swoje "
 "własne ustawienie do jego włączania i wyłączania."
 
-#: ui/main.qml:147
+#: ui/main.qml:146
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
 msgstr "Klikanie"
 
-#: ui/main.qml:150
+#: ui/main.qml:149
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Kliknięcie na pliku lub katalogu:"
 
-#: ui/main.qml:154
+#: ui/main.qml:153
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Zaznaczy go"
 
-#: ui/main.qml:155
+#: ui/main.qml:154
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "Aby otworzyć, naciśnij na nim dwukrotnie"
 
-#: ui/main.qml:172
+#: ui/main.qml:171
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Otworzy go"
 
-#: ui/main.qml:173
+#: ui/main.qml:172
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
@@ -238,19 +238,19 @@ msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr "Przeciąganie i upuszczanie"
 
-#: ui/main.qml:311
+#: ui/main.qml:309
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "Przy przeciąganiu plików lub katalogów:"
 
-#: ui/main.qml:315
+#: ui/main.qml:313
 #, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr "Za każdym razem pytaj, co zrobić"
 
-#: ui/main.qml:316
+#: ui/main.qml:314
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -262,13 +262,13 @@ msgstr ""
 "shortcut> aby skopiować oraz <shortcut>Shift+Ctrl</shortcut> aby utworzyć "
 "dowiązanie symboliczne. W przeciwnym przypadku pokaż okno."
 
-#: ui/main.qml:328
+#: ui/main.qml:327
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "Przenieś, gdy na tym samym urządzeniu"
 
-#: ui/main.qml:329
+#: ui/main.qml:328
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
@@ -276,31 +276,31 @@ msgstr ""
 "Przytrzymaj <shortcut>Shift</shortcut> przy upuszczaniu, aby pokazać inne "
 "możliwości."
 
-#: ui/main.qml:339
+#: ui/main.qml:338
 #, kde-format
 msgctxt "@title:group"
 msgid "Touch"
 msgstr "Dotyk"
 
-#: ui/main.qml:344
+#: ui/main.qml:341
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
 msgstr "Włącz tryb tabletu:"
 
-#: ui/main.qml:347
+#: ui/main.qml:344
 #, kde-format
 msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Włącz sam, gdy zajdzie potrzeba"
 
-#: ui/main.qml:347
+#: ui/main.qml:344
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Zawsze wyłączone"
 
-#: ui/main.qml:365
+#: ui/main.qml:363
 #, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
@@ -312,19 +312,19 @@ msgstr ""
 "i nie wykryje myszy, czy gładzika. Na przykład: gdy klawiatura "
 "przekształcalnego laptopa zostanie obrócona lub odłączona."
 
-#: ui/main.qml:371
+#: ui/main.qml:369
 #, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Zawsze włączony"
 
-#: ui/main.qml:393
+#: ui/main.qml:391
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Wyłączony"
 
-#: ui/main.qml:394
+#: ui/main.qml:392
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."

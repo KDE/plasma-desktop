@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-30 00:45+0000\n"
 "PO-Revision-Date: 2026-04-23 08:24+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -89,13 +89,13 @@ msgctxt "@title:group"
 msgid "Scrolling"
 msgstr "גלילה"
 
-#: ui/main.qml:94
+#: ui/main.qml:92
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
 msgstr "לחיצה במסילת פס הגלילה:"
 
-#: ui/main.qml:95
+#: ui/main.qml:93
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -103,13 +103,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "גוללת למקום שנלחץ"
 
-#: ui/main.qml:109
-#, kde-format
-msgctxt "@info:usagetip"
-msgid "Middle-click to scroll to clicked location"
-msgstr "לחיצה אמצעית גוללת למקום הנבחר"
-
-#: ui/main.qml:112
+#: ui/main.qml:111
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -117,13 +111,19 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "גוללת מעלה או מטה בעמוד שלם"
 
-#: ui/main.qml:130
+#: ui/main.qml:112
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Middle-click to scroll to clicked location"
+msgstr "לחיצה אמצעית גוללת למקום הנבחר"
+
+#: ui/main.qml:129
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
 msgstr "העדפת גלילה חלקה"
 
-#: ui/main.qml:141
+#: ui/main.qml:140
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -136,38 +136,38 @@ msgstr ""
 "מהיישומים עלולים שלא לכבד את ההגדרות הזאת או מפני שאינם תומכים בגלילה חלקה "
 "או שיש להם הגדרה עצמאית להפעיל ולהשבית אותה."
 
-#: ui/main.qml:147
+#: ui/main.qml:146
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
 msgstr "לחיצה"
 
-#: ui/main.qml:150
+#: ui/main.qml:149
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "לחיצה על קבצים או תיקיות"
 
-#: ui/main.qml:154
+#: ui/main.qml:153
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "בוחרת אותם"
 
-#: ui/main.qml:155
+#: ui/main.qml:154
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "פתיחה בלחיצה כפולה במקום"
 
-#: ui/main.qml:172
+#: ui/main.qml:171
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "פותחת אותם"
 
-#: ui/main.qml:173
+#: ui/main.qml:172
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
@@ -237,19 +237,19 @@ msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr "גרירה ושחרור"
 
-#: ui/main.qml:311
+#: ui/main.qml:309
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "כאשר קבצים או תיקיות נגררים:"
 
-#: ui/main.qml:315
+#: ui/main.qml:313
 #, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr "תמיד לשאול מה לעשות"
 
-#: ui/main.qml:316
+#: ui/main.qml:314
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -260,13 +260,13 @@ msgstr ""
 "החזקת <shortcut>Shift</shortcut> בנוסף תעביר, <shortcut>Ctrl</shortcut> "
 "תעתיק, ו־<shortcut>Shift+Ctrl</shortcut> תיצור קישור סמלי. אחרת תוצג חלונית."
 
-#: ui/main.qml:328
+#: ui/main.qml:327
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "להעביר קבצים אם באותו המכשיר"
 
-#: ui/main.qml:329
+#: ui/main.qml:328
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
@@ -274,31 +274,31 @@ msgstr ""
 "יש להחזיק <shortcut>Shift</shortcut> בעת שחרור גרירה כי להציג אפשרויות "
 "נוספות."
 
-#: ui/main.qml:339
+#: ui/main.qml:338
 #, kde-format
 msgctxt "@title:group"
 msgid "Touch"
 msgstr "מגע"
 
-#: ui/main.qml:344
+#: ui/main.qml:341
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
 msgstr "הפעלת מצב מחשב לוח:"
 
-#: ui/main.qml:347
+#: ui/main.qml:344
 #, kde-format
 msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "להפעיל אוטומטית כנדרש"
 
-#: ui/main.qml:347
+#: ui/main.qml:344
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "לא להפעיל אף פעם"
 
-#: ui/main.qml:365
+#: ui/main.qml:363
 #, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
@@ -309,19 +309,19 @@ msgstr ""
 "מצב מחשב לוח יופעל אוטומטית כשהמערכת מזהה מסך מגע אך לא מזהה עכבר או משטח "
 "מגע. למשל: כאשר מקלדת של מחשב נייד גמיש מקופלת לאחור או מנותקת."
 
-#: ui/main.qml:371
+#: ui/main.qml:369
 #, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "תמיד פעיל"
 
-#: ui/main.qml:393
+#: ui/main.qml:391
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "מושבת"
 
-#: ui/main.qml:394
+#: ui/main.qml:392
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."

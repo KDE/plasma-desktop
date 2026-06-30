@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-30 00:45+0000\n"
 "PO-Revision-Date: 2026-04-30 08:50+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -87,13 +87,13 @@ msgctxt "@title:group"
 msgid "Scrolling"
 msgstr "التمرير"
 
-#: ui/main.qml:94
+#: ui/main.qml:92
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
 msgstr "النقر في شريط التمرير:"
 
-#: ui/main.qml:95
+#: ui/main.qml:93
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -101,13 +101,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "يمرر إلى المكان المنقور عليه"
 
-#: ui/main.qml:109
-#, kde-format
-msgctxt "@info:usagetip"
-msgid "Middle-click to scroll to clicked location"
-msgstr "انقر بزر الفأرة الأوسط للتمرير إلى الموقع الذي نقر فوقه"
-
-#: ui/main.qml:112
+#: ui/main.qml:111
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -115,13 +109,19 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "يمرر صفحة واحدة للأعلى أو الأسفل"
 
-#: ui/main.qml:130
+#: ui/main.qml:112
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Middle-click to scroll to clicked location"
+msgstr "انقر بزر الفأرة الأوسط للتمرير إلى الموقع الذي نقر فوقه"
+
+#: ui/main.qml:129
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
 msgstr "فضل التمرير السلس"
 
-#: ui/main.qml:141
+#: ui/main.qml:140
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -134,38 +134,38 @@ msgstr ""
 "عجلة الفأرة أو لوحة المفاتيح. قد لا تحترم بعض التطبيقات هذا الإعداد لأنها "
 "إما لا تتيح التمرير السلس، أو لديها إعداد خاص بها لتمكينه وتعطيله."
 
-#: ui/main.qml:147
+#: ui/main.qml:146
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
 msgstr "النقر"
 
-#: ui/main.qml:150
+#: ui/main.qml:149
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "النقر على الملفات و المجلدات:"
 
-#: ui/main.qml:154
+#: ui/main.qml:153
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "يحددها"
 
-#: ui/main.qml:155
+#: ui/main.qml:154
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "فتح بواسطة النقر المزدوج  بدلا عن ذلك"
 
-#: ui/main.qml:172
+#: ui/main.qml:171
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "يفتحها"
 
-#: ui/main.qml:173
+#: ui/main.qml:172
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
@@ -237,19 +237,19 @@ msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr "السحب والإفلات"
 
-#: ui/main.qml:311
+#: ui/main.qml:309
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "عند سحب الملفات أو المجلدات:"
 
-#: ui/main.qml:315
+#: ui/main.qml:313
 #, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr "اسأل دائمًا ماذا ستفعل"
 
-#: ui/main.qml:316
+#: ui/main.qml:314
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -261,44 +261,44 @@ msgstr ""
 "للنسخ، و<shortcut>Shift+Ctrl</shortcut> لإنشاء رابط رمزي. وإلا، فسيظهر مربع "
 "حوار."
 
-#: ui/main.qml:328
+#: ui/main.qml:327
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "نقل إذا كان على نفس الجهاز"
 
-#: ui/main.qml:329
+#: ui/main.qml:328
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
 "اضغط باستمرار على <shortcut>Shift</shortcut> عند الإسقاط لإظهار خيارات أخرى."
 
-#: ui/main.qml:339
+#: ui/main.qml:338
 #, kde-format
 msgctxt "@title:group"
 msgid "Touch"
 msgstr "اللمس"
 
-#: ui/main.qml:344
+#: ui/main.qml:341
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
 msgstr "مكّن وضع جهاز اللوحي:"
 
-#: ui/main.qml:347
+#: ui/main.qml:344
 #, kde-format
 msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "يفعله عند الحاجة آليّا"
 
-#: ui/main.qml:347
+#: ui/main.qml:344
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "غير ممكن"
 
-#: ui/main.qml:365
+#: ui/main.qml:363
 #, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
@@ -310,19 +310,19 @@ msgstr ""
 "لوحة لمس. على سبيل المثال: عند قلب لوحة مفاتيح الحاسوب المحمول القابل "
 "للتحويل أو فصلها."
 
-#: ui/main.qml:371
+#: ui/main.qml:369
 #, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "ممكّن دائمًا"
 
-#: ui/main.qml:393
+#: ui/main.qml:391
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "معطّل"
 
-#: ui/main.qml:394
+#: ui/main.qml:392
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."
