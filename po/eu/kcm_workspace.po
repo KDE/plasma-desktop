@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-30 02:35+0000\n"
 "PO-Revision-Date: 2026-02-16 10:33+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -92,13 +92,13 @@ msgctxt "@title:group"
 msgid "Scrolling"
 msgstr "Kiribiltzea"
 
-#: ui/main.qml:94
+#: ui/main.qml:92
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
 msgstr "Kiribiltzeko-barraren arrastoan klik egitea:"
 
-#: ui/main.qml:95
+#: ui/main.qml:93
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
@@ -110,13 +110,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "klik egindako lekura kiribiltzen da"
 
-#: ui/main.qml:109
-#, kde-format
-msgctxt "@info:usagetip"
-msgid "Middle-click to scroll to clicked location"
-msgstr "Erdiko klik, klik egindako lekura kiribiltzeko"
-
-#: ui/main.qml:112
+#: ui/main.qml:111
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
@@ -128,13 +122,19 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Orrialde bat gora edo behera kiribiltzen da"
 
-#: ui/main.qml:130
+#: ui/main.qml:112
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Middle-click to scroll to clicked location"
+msgstr "Erdiko klik, klik egindako lekura kiribiltzeko"
+
+#: ui/main.qml:129
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
 msgstr "Kiribiltze leuna hobetsi"
 
-#: ui/main.qml:141
+#: ui/main.qml:140
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -148,38 +148,38 @@ msgstr ""
 "ezarpen hori ez errespetatzea, kiribiltze leunerako euskarririk ez dutelako, "
 "edo hura gaitzeko eta ezgaitzeko ezarpen propioak dituztelako."
 
-#: ui/main.qml:147
+#: ui/main.qml:146
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
 msgstr "Klik egitea"
 
-#: ui/main.qml:150
+#: ui/main.qml:149
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Fitxategiei edo karpetei klik egitean:"
 
-#: ui/main.qml:154
+#: ui/main.qml:153
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Haiek hautatzen ditu"
 
-#: ui/main.qml:155
+#: ui/main.qml:154
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "Horren ordez, ireki klik bikoitza eginez"
 
-#: ui/main.qml:172
+#: ui/main.qml:171
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Haiek irekitzen ditu"
 
-#: ui/main.qml:173
+#: ui/main.qml:172
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
@@ -247,19 +247,19 @@ msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr "Arrastatu eta jaregin"
 
-#: ui/main.qml:311
+#: ui/main.qml:309
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "Fitxategiak edo karpetak arrastatzean:"
 
-#: ui/main.qml:315
+#: ui/main.qml:313
 #, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr "Beti galdetu zer egin behar den"
 
-#: ui/main.qml:316
+#: ui/main.qml:314
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -271,26 +271,26 @@ msgstr ""
 "kopiatzeko, eta <shortcut>Maius+Ktrl</shortcut> esteka sinbolikoa sortzeko. "
 "Bestela, erakutsi elkarrizketa-koadro bat."
 
-#: ui/main.qml:328
+#: ui/main.qml:327
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "Mugitu gailu berean badago"
 
-#: ui/main.qml:329
+#: ui/main.qml:328
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
 "Eutsi <shortcut>Maius</shortcut> jaregitean, beste aukera batzuk erakusteko."
 
-#: ui/main.qml:339
+#: ui/main.qml:338
 #, kde-format
 msgctxt "@title:group"
 msgid "Touch"
 msgstr "Ukimena"
 
-#: ui/main.qml:344
+#: ui/main.qml:341
 #, fuzzy, kde-format
 #| msgctxt "@title:group prefix radiobutton group"
 #| msgid "Enable Touch Mode:"
@@ -298,7 +298,7 @@ msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
 msgstr "Gaitu ukimen modua:"
 
-#: ui/main.qml:347
+#: ui/main.qml:344
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
@@ -307,7 +307,7 @@ msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Behar denean automatikoki gaitu"
 
-#: ui/main.qml:347
+#: ui/main.qml:344
 #, fuzzy, kde-format
 #| msgctxt "option:radio As in: 'Touch Mode is never enabled'"
 #| msgid "Never enabled"
@@ -315,7 +315,7 @@ msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Ez gaitu inoiz"
 
-#: ui/main.qml:365
+#: ui/main.qml:363
 #, fuzzy, kde-format
 #| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 #| msgid ""
@@ -332,7 +332,7 @@ msgstr ""
 "hautematen duenean baina sagurik edo ukimen-sagurik ez. Adibidez: magaleko "
 "bihurgarri baten teklatua biratzen edo askatzen denean."
 
-#: ui/main.qml:371
+#: ui/main.qml:369
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is always enabled'"
 #| msgid "Always active"
@@ -340,7 +340,7 @@ msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Beti aktibo"
 
-#: ui/main.qml:393
+#: ui/main.qml:391
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is never enabled'"
 #| msgid "Disabled"
@@ -348,7 +348,7 @@ msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Ezgaituta"
 
-#: ui/main.qml:394
+#: ui/main.qml:392
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."

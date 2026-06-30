@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-30 02:35+0000\n"
 "PO-Revision-Date: 2023-02-19 16:48+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -92,14 +92,14 @@ msgctxt "@title:group"
 msgid "Scrolling"
 msgstr ""
 
-#: ui/main.qml:94
+#: ui/main.qml:92
 #, fuzzy, kde-format
 #| msgid "Clicking in scrollbar track:"
 msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
 msgstr "Sürüşdürmə çubuğuna klikləyərək"
 
-#: ui/main.qml:95
+#: ui/main.qml:93
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
@@ -111,14 +111,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "Seçilmiş yerə sürüşdürür"
 
-#: ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "Middle-click to scroll to clicked location"
-msgctxt "@info:usagetip"
-msgid "Middle-click to scroll to clicked location"
-msgstr "Seçilmiş yerə sürüşdürmək üçün orta düymə kliki"
-
-#: ui/main.qml:112
+#: ui/main.qml:111
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls "
@@ -130,13 +123,20 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Bir səhifə yuxarı və ya aşağı sürüşdürür"
 
-#: ui/main.qml:130
+#: ui/main.qml:112
+#, fuzzy, kde-format
+#| msgid "Middle-click to scroll to clicked location"
+msgctxt "@info:usagetip"
+msgid "Middle-click to scroll to clicked location"
+msgstr "Seçilmiş yerə sürüşdürmək üçün orta düymə kliki"
+
+#: ui/main.qml:129
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
 msgstr ""
 
-#: ui/main.qml:141
+#: ui/main.qml:140
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -146,39 +146,39 @@ msgid ""
 "setting for enabling and disabling it."
 msgstr ""
 
-#: ui/main.qml:147
+#: ui/main.qml:146
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
 msgstr ""
 
-#: ui/main.qml:150
+#: ui/main.qml:149
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Faylları və qovluqları açmaq üçün klikləmə:"
 
-#: ui/main.qml:154
+#: ui/main.qml:153
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Onları seçmək"
 
-#: ui/main.qml:155
+#: ui/main.qml:154
 #, fuzzy, kde-format
 #| msgid "Open by double-clicking instead"
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "Əvəzinə cüt kliklə açmaq"
 
-#: ui/main.qml:172
+#: ui/main.qml:171
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Onları açmaq"
 
-#: ui/main.qml:173
+#: ui/main.qml:172
 #, fuzzy, kde-format
 #| msgid "Select by clicking on item's selection marker"
 msgctxt "@info:usagetip"
@@ -246,7 +246,7 @@ msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr ""
 
-#: ui/main.qml:311
+#: ui/main.qml:309
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
@@ -255,13 +255,13 @@ msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "Faylları və qovluqları açmaq üçün klikləmə:"
 
-#: ui/main.qml:315
+#: ui/main.qml:313
 #, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr ""
 
-#: ui/main.qml:316
+#: ui/main.qml:314
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -270,33 +270,33 @@ msgid ""
 "dialog."
 msgstr ""
 
-#: ui/main.qml:328
+#: ui/main.qml:327
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr ""
 
-#: ui/main.qml:329
+#: ui/main.qml:328
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
 
-#: ui/main.qml:339
+#: ui/main.qml:338
 #, fuzzy, kde-format
 #| msgid "Touch Mode:"
 msgctxt "@title:group"
 msgid "Touch"
 msgstr "Toxunma sensoru rejimi"
 
-#: ui/main.qml:344
+#: ui/main.qml:341
 #, fuzzy, kde-format
 #| msgid "Touch Mode:"
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
 msgstr "Toxunma sensoru rejimi"
 
-#: ui/main.qml:347
+#: ui/main.qml:344
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 #| msgid "Automatically enable as needed"
@@ -304,7 +304,7 @@ msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Lazım gəldikdə avtomatik aktiv edilsin"
 
-#: ui/main.qml:347
+#: ui/main.qml:344
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is never enabled'"
 #| msgid "Never enabled"
@@ -312,7 +312,7 @@ msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Heç vaxt aktiv edilməsin"
 
-#: ui/main.qml:365
+#: ui/main.qml:363
 #, fuzzy, kde-format
 #| msgid ""
 #| "Touch Mode will be automatically activated whenever the system detects a "
@@ -328,7 +328,7 @@ msgstr ""
 "aşkarlandıqda avtomatik aktiv olunacaq. Məsələn transformer noutbuklarda "
 "klaviatura modulu arxaya qatlandıqda və ya çıxarıldığında."
 
-#: ui/main.qml:371
+#: ui/main.qml:369
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is always enabled'"
 #| msgid "Always enabled"
@@ -336,13 +336,13 @@ msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Həmişə aktivdir"
 
-#: ui/main.qml:393
+#: ui/main.qml:391
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr ""
 
-#: ui/main.qml:394
+#: ui/main.qml:392
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."
