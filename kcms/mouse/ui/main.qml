@@ -61,11 +61,11 @@ KCMUtils.SimpleKCM {
         Kirigami.FormGroup {
             // Device
             Kirigami.FormEntry {
+                visible: !root.backend.isAnonymousInputDevice
+                enabled: count > 1
                 contentItem: QQC2.ComboBox {
                     id: deviceSelector
                     Kirigami.FormData.label: i18ndc("kcmmouse", "@title:listbox select device", "Device:")
-                    visible: !root.backend.isAnonymousInputDevice
-                    enabled: count > 1
                     Layout.fillWidth: true
                     model: root.backend.inputDevices
                     textRole: "name"
@@ -84,12 +84,12 @@ KCMUtils.SimpleKCM {
 
             // General
             Kirigami.FormEntry {
+                visible: !root.backend.isAnonymousInputDevice
+                enabled: root.device?.supportsDisableEvents ?? false
                 contentItem: QQC2.CheckBox {
                     id: deviceEnabled
                     Kirigami.FormData.label: i18ndc("kcmmouse", "@title:group", "General:")
                     text: i18ndc("kcmmouse", "@option:check enable this mouse device", "Enable device")
-                    visible: !root.backend.isAnonymousInputDevice
-                    enabled: root.device?.supportsDisableEvents ?? false
                     checked: root.device && (!root.device.supportsDisableEvents || root.device.enabled)
 
                     onToggled: {
@@ -221,11 +221,11 @@ KCMUtils.SimpleKCM {
             }
 
             Kirigami.FormEntry {
+                enabled: root.device?.supportsPointerAccelerationProfileAdaptive ?? false
+                visible: enabled
                 contentItem: QQC2.CheckBox {
                     id: accelProfileEnabled
                     text: i18ndc("kcmmouse", "@option:check", "Enable pointer acceleration")
-                    enabled: root.device?.supportsPointerAccelerationProfileAdaptive ?? false
-                    visible: enabled
                     checked: enabled && !(root.device?.pointerAccelerationProfileFlat ?? false)
 
                     onToggled: {
@@ -245,13 +245,13 @@ KCMUtils.SimpleKCM {
             Kirigami.FormSeparator {}
 
             Kirigami.FormEntry {
+                visible: !root.backend.isAnonymousInputDevice
                 // Scroll Speed aka scroll Factor
                 contentItem: GridLayout {
                     Kirigami.FormData.label: i18ndc("kcmmouse", "@label:slider and @label:spinbox", "Scrolling speed:")
                     Kirigami.FormData.buddyFor: scrollFactor
                     Layout.fillWidth: true
 
-                    visible: !root.backend.isAnonymousInputDevice
                     columns: 3
 
                     QQC2.Slider {
