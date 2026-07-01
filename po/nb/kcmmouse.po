@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-08 00:47+0000\n"
+"POT-Creation-Date: 2026-07-01 00:47+0000\n"
 "PO-Revision-Date: 2026-03-03 15:22+0100\n"
 "Last-Translator: Kjetil Sorlund <translate@sorlund.no>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@nuug.no>\n"
@@ -134,19 +134,19 @@ msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
 msgstr "Sett opp ekstraknapper …"
 
-#: ui/main.qml:66
+#: ui/main.qml:68
 #, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Enhet:"
 
-#: ui/main.qml:89
+#: ui/main.qml:91
 #, kde-format
 msgctxt "@title:group"
 msgid "General:"
 msgstr "Generelt:"
 
-#: ui/main.qml:90
+#: ui/main.qml:92
 #, kde-format
 msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
@@ -187,7 +187,7 @@ msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Pekerhastighet:"
 
-#: ui/main.qml:226
+#: ui/main.qml:228
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
@@ -201,7 +201,7 @@ msgid ""
 msgstr ""
 "Når dette er slått på, vil pekerekkevidden øke med raskere musebevegelser."
 
-#: ui/main.qml:250
+#: ui/main.qml:251
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"

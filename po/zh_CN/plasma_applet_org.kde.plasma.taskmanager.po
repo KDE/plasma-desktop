@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-19 00:46+0000\n"
+"POT-Creation-Date: 2026-07-01 00:47+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -764,37 +764,31 @@ msgctxt "action:inmenu"
 msgid "&Fullscreen"
 msgstr "全屏(&F)"
 
-#: qml/ContextMenu.qml:713
-#, kde-format
-msgctxt "action:inmenu"
-msgid "&Shade"
-msgstr "折叠(&S)"
-
-#: qml/ContextMenu.qml:725
+#: qml/ContextMenu.qml:712
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
 msgstr "无标题栏和边框(&N)"
 
-#: qml/ContextMenu.qml:738
+#: qml/ContextMenu.qml:725
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Hide from Screencast"
 msgstr "在录屏中隐藏(&H)"
 
-#: qml/ContextMenu.qml:754
+#: qml/ContextMenu.qml:741
 #, kde-format
 msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr "允许将此程序的所有窗口合并为一个分组"
 
-#: qml/ContextMenu.qml:800
+#: qml/ContextMenu.qml:787
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "关闭全部(&C)"
 
-#: qml/ContextMenu.qml:800
+#: qml/ContextMenu.qml:787
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close"
@@ -918,3 +912,7 @@ msgstr "同时位于 %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "位于 %1"
+
+#~ msgctxt "action:inmenu"
+#~ msgid "&Shade"
+#~ msgstr "折叠(&S)"

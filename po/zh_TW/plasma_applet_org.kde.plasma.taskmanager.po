@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-19 00:46+0000\n"
+"POT-Creation-Date: 2026-07-01 00:47+0000\n"
 "PO-Revision-Date: 2026-06-25 23:57+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -770,37 +770,31 @@ msgctxt "action:inmenu"
 msgid "&Fullscreen"
 msgstr "全螢幕(&F)"
 
-#: qml/ContextMenu.qml:713
-#, kde-format
-msgctxt "action:inmenu"
-msgid "&Shade"
-msgstr "收起(&S)"
-
-#: qml/ContextMenu.qml:725
+#: qml/ContextMenu.qml:712
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
 msgstr "沒有標題列及框架(&N)"
 
-#: qml/ContextMenu.qml:738
+#: qml/ContextMenu.qml:725
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Hide from Screencast"
 msgstr "從螢幕錄製當中隱藏(&H)"
 
-#: qml/ContextMenu.qml:754
+#: qml/ContextMenu.qml:741
 #, kde-format
 msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr "允許此程式被分組"
 
-#: qml/ContextMenu.qml:800
+#: qml/ContextMenu.qml:787
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "全部關閉(&C)"
 
-#: qml/ContextMenu.qml:800
+#: qml/ContextMenu.qml:787
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close"
@@ -924,6 +918,10 @@ msgstr "也可在 %1 上使用"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "於 %1 上可用"
+
+#~ msgctxt "action:inmenu"
+#~ msgid "&Shade"
+#~ msgstr "收起(&S)"
 
 #~ msgctxt "Over 9999 new messages, overlay, keep short"
 #~ msgid "9,999+"

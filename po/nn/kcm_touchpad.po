@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-12 00:45+0000\n"
-"PO-Revision-Date: 2026-02-26 19:08+0100\n"
+"PO-Revision-Date: 2026-06-30 22:32+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 26.07.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: kcm.cpp:57
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "Klarar ikkje velja passande motor."
 
 #: kcm.cpp:103
 #, kde-format
@@ -33,10 +33,9 @@ msgstr ""
 "starta oppsettmodulen på nytt."
 
 #: kcm.cpp:106
-#, fuzzy, kde-format
-#| msgid "No touchpad found. Connect touchpad now."
+#, kde-format
 msgid "No pointer device found. Connect now."
-msgstr "Fann ikkje noka styreplate. Prøv å kopla ho til."
+msgstr "Fann inga peikareining. Prøv å kopla til ei eining no."
 
 #: kcm.cpp:115
 #, kde-format
@@ -66,16 +65,15 @@ msgstr ""
 "til, og start så oppsettmodulen på nytt."
 
 #: kcm.cpp:162
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. Closed its setting dialog."
+#, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr "Styreplata er kopla frå, og innstillingsvindauget vart derfor lukka."
+msgstr ""
+"Peikareininga er kopla frå, og innstillingsvindauget vart derfor lukka."
 
 #: kcm.cpp:164
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. No other touchpads found."
+#, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr "Styreplata er kopla frå. Finn ingen andre styreplater."
+msgstr "Peikareininga er kopla frå. Fann ingen andre einingar."
 
 #: kwinwaylandbackend.cpp:45
 #, kde-format

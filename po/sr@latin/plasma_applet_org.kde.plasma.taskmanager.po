@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-19 00:46+0000\n"
+"POT-Creation-Date: 2026-07-01 00:47+0000\n"
 "PO-Revision-Date: 2017-04-07 00:51+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -848,40 +848,33 @@ msgctxt "action:inmenu"
 msgid "&Fullscreen"
 msgstr "Preko &celog ekrana"
 
-#: qml/ContextMenu.qml:713
-#, fuzzy, kde-format
-#| msgid "&Shade"
-msgctxt "action:inmenu"
-msgid "&Shade"
-msgstr "&Namotaj"
-
-#: qml/ContextMenu.qml:725
+#: qml/ContextMenu.qml:712
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
 msgstr ""
 
-#: qml/ContextMenu.qml:738
+#: qml/ContextMenu.qml:725
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Hide from Screencast"
 msgstr ""
 
-#: qml/ContextMenu.qml:754
+#: qml/ContextMenu.qml:741
 #, fuzzy, kde-format
 #| msgid "Allow this program to be grouped"
 msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr "Dozvoli grupisanje za ovaj program"
 
-#: qml/ContextMenu.qml:800
+#: qml/ContextMenu.qml:787
 #, fuzzy, kde-format
 #| msgid "&Close"
 msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "&Zatvori"
 
-#: qml/ContextMenu.qml:800
+#: qml/ContextMenu.qml:787
 #, fuzzy, kde-format
 #| msgid "&Close"
 msgctxt "@action:inmenu"
@@ -1022,6 +1015,12 @@ msgstr "Takođe dostupan u %1|/|Takođe dostupan u $[lok %1]"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Dostupan u %1|/|Dostupan u $[lok %1]"
+
+#, fuzzy
+#~| msgid "&Shade"
+#~ msgctxt "action:inmenu"
+#~ msgid "&Shade"
+#~ msgstr "&Namotaj"
 
 #, fuzzy
 #~| msgid "Cycle through tasks with mouse wheel"

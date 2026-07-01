@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-19 00:46+0000\n"
+"POT-Creation-Date: 2026-07-01 00:47+0000\n"
 "PO-Revision-Date: 2022-10-19 22:48+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -876,40 +876,33 @@ msgctxt "action:inmenu"
 msgid "&Fullscreen"
 msgstr "Täisek&raan"
 
-#: qml/ContextMenu.qml:713
-#, fuzzy, kde-format
-#| msgid "&Shade"
-msgctxt "action:inmenu"
-msgid "&Shade"
-msgstr "&Keri kokku"
-
-#: qml/ContextMenu.qml:725
+#: qml/ContextMenu.qml:712
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
 msgstr ""
 
-#: qml/ContextMenu.qml:738
+#: qml/ContextMenu.qml:725
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Hide from Screencast"
 msgstr ""
 
-#: qml/ContextMenu.qml:754
+#: qml/ContextMenu.qml:741
 #, fuzzy, kde-format
 #| msgid "Allow this program to be grouped"
 msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr "Luba seda rakendust grupeerida"
 
-#: qml/ContextMenu.qml:800
+#: qml/ContextMenu.qml:787
 #, fuzzy, kde-format
 #| msgid "&Close"
 msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "&Sulge"
 
-#: qml/ContextMenu.qml:800
+#: qml/ContextMenu.qml:787
 #, fuzzy, kde-format
 #| msgid "&Close"
 msgctxt "@action:inmenu"
@@ -1041,6 +1034,12 @@ msgstr "Saadaval ka tegevuses %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Saadaval tegevuses %1"
+
+#, fuzzy
+#~| msgid "&Shade"
+#~ msgctxt "action:inmenu"
+#~ msgid "&Shade"
+#~ msgstr "&Keri kokku"
 
 #~ msgctxt "Over 9999 new messages, overlay, keep short"
 #~ msgid "9,999+"

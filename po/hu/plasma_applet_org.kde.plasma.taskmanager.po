@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-19 00:46+0000\n"
+"POT-Creation-Date: 2026-07-01 00:47+0000\n"
 "PO-Revision-Date: 2026-06-19 22:37+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -770,37 +770,31 @@ msgctxt "action:inmenu"
 msgid "&Fullscreen"
 msgstr "&Teljes képernyő"
 
-#: qml/ContextMenu.qml:713
-#, kde-format
-msgctxt "action:inmenu"
-msgid "&Shade"
-msgstr "&Felgördítés"
-
-#: qml/ContextMenu.qml:725
+#: qml/ContextMenu.qml:712
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
 msgstr "&Nincs címsor és keret"
 
-#: qml/ContextMenu.qml:738
+#: qml/ContextMenu.qml:725
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Hide from Screencast"
 msgstr "Elre&jtés a képernyőátjátszásból"
 
-#: qml/ContextMenu.qml:754
+#: qml/ContextMenu.qml:741
 #, kde-format
 msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr "A program legyen csoportosítható"
 
-#: qml/ContextMenu.qml:800
+#: qml/ContextMenu.qml:787
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "Össz&es bezárása"
 
-#: qml/ContextMenu.qml:800
+#: qml/ContextMenu.qml:787
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close"
@@ -925,6 +919,10 @@ msgstr "Szintén elérhető ezen: %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Elérhető ezen: %1"
+
+#~ msgctxt "action:inmenu"
+#~ msgid "&Shade"
+#~ msgstr "&Felgördítés"
 
 #~ msgctxt "Over 9999 new messages, overlay, keep short"
 #~ msgid "9,999+"

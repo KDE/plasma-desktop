@@ -1,4 +1,4 @@
-# Version: $Revision: 1738674 $
+# Version: $Revision: 1740279 $
 # translation of kcminput.po to
 # SPDX-FileCopyrightText: 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Piotr Roszatycki <dexter@debian.org>, 1998-2000.
@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-08 00:47+0000\n"
+"POT-Creation-Date: 2026-07-01 00:47+0000\n"
 "PO-Revision-Date: 2026-01-24 10:20+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -132,19 +132,19 @@ msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
 msgstr "Ustawienia dodatkowych przycisków…"
 
-#: ui/main.qml:66
+#: ui/main.qml:68
 #, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Urządzenie:"
 
-#: ui/main.qml:89
+#: ui/main.qml:91
 #, kde-format
 msgctxt "@title:group"
 msgid "General:"
 msgstr "Ogólne:"
 
-#: ui/main.qml:90
+#: ui/main.qml:92
 #, kde-format
 msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
@@ -185,7 +185,7 @@ msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Szybkość wskaźnika:"
 
-#: ui/main.qml:226
+#: ui/main.qml:228
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
@@ -200,7 +200,7 @@ msgstr ""
 "Po włączeniu, odległość przemieszczania się wskaźnika wzrasta wraz z "
 "szybszymi ruchami użytkownika."
 
-#: ui/main.qml:250
+#: ui/main.qml:251
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"

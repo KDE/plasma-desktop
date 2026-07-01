@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-19 00:46+0000\n"
+"POT-Creation-Date: 2026-07-01 00:47+0000\n"
 "PO-Revision-Date: 2026-06-19 11:29+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -773,37 +773,31 @@ msgctxt "action:inmenu"
 msgid "&Fullscreen"
 msgstr "Na celou o&brazovku"
 
-#: qml/ContextMenu.qml:713
-#, kde-format
-msgctxt "action:inmenu"
-msgid "&Shade"
-msgstr "Z&asunout"
-
-#: qml/ContextMenu.qml:725
+#: qml/ContextMenu.qml:712
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
 msgstr "&Bez titulku a rámu"
 
-#: qml/ContextMenu.qml:738
+#: qml/ContextMenu.qml:725
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Hide from Screencast"
 msgstr "S&krýt ze snímku obrazovky"
 
-#: qml/ContextMenu.qml:754
+#: qml/ContextMenu.qml:741
 #, kde-format
 msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr "Povolit programu seskupování"
 
-#: qml/ContextMenu.qml:800
+#: qml/ContextMenu.qml:787
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "&Zavřít vše"
 
-#: qml/ContextMenu.qml:800
+#: qml/ContextMenu.qml:787
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close"
@@ -929,6 +923,10 @@ msgstr "Také dostupné na %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Dostupné na %1"
+
+#~ msgctxt "action:inmenu"
+#~ msgid "&Shade"
+#~ msgstr "Z&asunout"
 
 #~ msgctxt "Over 9999 new messages, overlay, keep short"
 #~ msgid "9,999+"

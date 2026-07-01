@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-19 00:46+0000\n"
+"POT-Creation-Date: 2026-07-01 00:47+0000\n"
 "PO-Revision-Date: 2025-11-04 22:01+0100\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -811,33 +811,26 @@ msgctxt "action:inmenu"
 msgid "&Fullscreen"
 msgstr "&Fuldskærm"
 
-#: qml/ContextMenu.qml:713
-#, fuzzy, kde-format
-#| msgid "&Shade"
-msgctxt "action:inmenu"
-msgid "&Shade"
-msgstr "&Skyg"
-
-#: qml/ContextMenu.qml:725
+#: qml/ContextMenu.qml:712
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
 msgstr "&Ingen titellinje og ramme"
 
-#: qml/ContextMenu.qml:738
+#: qml/ContextMenu.qml:725
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Hide from Screencast"
 msgstr ""
 
-#: qml/ContextMenu.qml:754
+#: qml/ContextMenu.qml:741
 #, fuzzy, kde-format
 #| msgid "Allow this program to be grouped"
 msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr "Tillad dette program at blive grupperet"
 
-#: qml/ContextMenu.qml:800
+#: qml/ContextMenu.qml:787
 #, fuzzy, kde-format
 #| msgctxt "@item:inmenu"
 #| msgid "&Close All"
@@ -845,7 +838,7 @@ msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "&Luk alle"
 
-#: qml/ContextMenu.qml:800
+#: qml/ContextMenu.qml:787
 #, fuzzy, kde-format
 #| msgid "&Close"
 msgctxt "@action:inmenu"
@@ -978,6 +971,12 @@ msgstr "Også tilgængelig på %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Tilgængelig på %1"
+
+#, fuzzy
+#~| msgid "&Shade"
+#~ msgctxt "action:inmenu"
+#~ msgid "&Shade"
+#~ msgstr "&Skyg"
 
 #~ msgctxt "Over 9999 new messages, overlay, keep short"
 #~ msgid "9,999+"

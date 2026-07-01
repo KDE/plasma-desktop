@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-19 00:46+0000\n"
+"POT-Creation-Date: 2026-07-01 00:47+0000\n"
 "PO-Revision-Date: 2026-06-19 10:05+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -767,37 +767,31 @@ msgctxt "action:inmenu"
 msgid "&Fullscreen"
 msgstr "&Volledig scherm"
 
-#: qml/ContextMenu.qml:713
-#, kde-format
-msgctxt "action:inmenu"
-msgid "&Shade"
-msgstr "Op&rollen"
-
-#: qml/ContextMenu.qml:725
+#: qml/ContextMenu.qml:712
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
 msgstr "Gee&n titelbalk en rand"
 
-#: qml/ContextMenu.qml:738
+#: qml/ContextMenu.qml:725
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Hide from Screencast"
 msgstr "&Verbergen van schermvideo"
 
-#: qml/ContextMenu.qml:754
+#: qml/ContextMenu.qml:741
 #, kde-format
 msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr "Toestaan dat dit programma wordt gegroepeerd"
 
-#: qml/ContextMenu.qml:800
+#: qml/ContextMenu.qml:787
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "Alles &sluiten"
 
-#: qml/ContextMenu.qml:800
+#: qml/ContextMenu.qml:787
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close"
@@ -922,6 +916,10 @@ msgstr "Ook beschikbaar op %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Beschikbaar op %1"
+
+#~ msgctxt "action:inmenu"
+#~ msgid "&Shade"
+#~ msgstr "Op&rollen"
 
 #~ msgctxt "Over 9999 new messages, overlay, keep short"
 #~ msgid "9,999+"
