@@ -230,6 +230,8 @@ PlasmaComponents3.ScrollView {
                 if (listView.currentItem !== null && (listView.currentItem as ItemListDelegate).hasChildren) {
                     openOrFocusSubmenu()
                     itemList.childDialog.mainItem.currentIndex = 0;
+                } else {
+                    itemList.navigateRightRequested();
                 }
             }
         }
