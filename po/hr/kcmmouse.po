@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-08 02:42+0000\n"
+"POT-Creation-Date: 2026-07-01 02:43+0000\n"
 "PO-Revision-Date: 2011-07-12 16:40+0200\n"
 "Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -127,20 +127,20 @@ msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
 msgstr ""
 
-#: ui/main.qml:66
+#: ui/main.qml:68
 #, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr ""
 
-#: ui/main.qml:89
+#: ui/main.qml:91
 #, fuzzy, kde-format
 #| msgid "&General"
 msgctxt "@title:group"
 msgid "General:"
 msgstr "&Općenito"
 
-#: ui/main.qml:90
+#: ui/main.qml:92
 #, kde-format
 msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
@@ -180,7 +180,7 @@ msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Prag pokazivača:"
 
-#: ui/main.qml:226
+#: ui/main.qml:228
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
 msgctxt "@option:check"
@@ -194,7 +194,7 @@ msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
 
-#: ui/main.qml:250
+#: ui/main.qml:251
 #, fuzzy, kde-format
 #| msgid "Pointer threshold:"
 msgctxt "@label:slider and @label:spinbox"
