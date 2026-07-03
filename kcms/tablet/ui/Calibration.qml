@@ -104,7 +104,7 @@ QQC2.ApplicationWindow {
                     if (closestTarget === centerAnchor) {
                         tool.applyCenterCorrection(device, residualX, residualY);
                         root.recordedResiduals = ({});
-                        root.testingActionSummary = i18nc("@info", "Applied center correction: X=%1 px, Y=%2 px. Retap the targets to refresh residuals.", Math.round(residualX), Math.round(residualY));
+                        root.testingActionSummary = i18nc("@info", "Applied center correction: (%1 px, %2 px). Retap the targets to redo corrections.", Math.round(residualX), Math.round(residualY));
                         return;
                     }
 
@@ -305,7 +305,7 @@ QQC2.ApplicationWindow {
     Target {
         id: topLeftAnchor
         diagnosticKey: "topLeft"
-        diagnosticLabel: i18nc("@info", "Top-left")
+        diagnosticLabel: i18nc("@info Name used in the diagnostic log", "Top-left")
 
         visible: tool.state === KCM.CalibrationTool.Testing || tool.currentTarget === 0
 
@@ -324,7 +324,7 @@ QQC2.ApplicationWindow {
     Target {
         id: topRightAnchor
         diagnosticKey: "topRight"
-        diagnosticLabel: i18nc("@info", "Top-right")
+        diagnosticLabel: i18nc("@info Name used in the diagnostic log", "Top-right")
 
         visible: tool.state === KCM.CalibrationTool.Testing || tool.currentTarget === 1
 
@@ -343,7 +343,7 @@ QQC2.ApplicationWindow {
     Target {
         id: bottomLeftAnchor
         diagnosticKey: "bottomLeft"
-        diagnosticLabel: i18nc("@info", "Bottom-left")
+        diagnosticLabel: i18nc("@info Name used in the diagnostic log", "Bottom-left")
 
         visible: tool.state === KCM.CalibrationTool.Testing || tool.currentTarget === 2
 
@@ -362,7 +362,7 @@ QQC2.ApplicationWindow {
     Target {
         id: bottomRightAnchor
         diagnosticKey: "bottomRight"
-        diagnosticLabel: i18nc("@info", "Bottom-right")
+        diagnosticLabel: i18nc("@info Name used in the diagnostic log", "Bottom-right")
 
         visible: tool.state === KCM.CalibrationTool.Testing || tool.currentTarget === 3
 
@@ -381,7 +381,7 @@ QQC2.ApplicationWindow {
     Target {
         id: centerAnchor
         diagnosticKey: "center"
-        diagnosticLabel: i18nc("@info", "Center")
+        diagnosticLabel: i18nc("@info Name used in the diagnostic log", "Center")
 
         visible: tool.state === KCM.CalibrationTool.Testing
 
