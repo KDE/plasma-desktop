@@ -75,9 +75,15 @@ Item {
         },
         Transition {
              to: ""
-             NumberAnimation {
-                 property: "opacity"
-                 duration: Kirigami.Units.longDuration
+             SequentialAnimation {
+                 PauseAnimation {
+                     // don't trigger on double click fullscreen in video players
+                     duration: inPopup ? 0 : Application.styleHints.mouseDoubleClickInterval
+                 }
+                NumberAnimation {
+                    property: "opacity"
+                    duration: Kirigami.Units.longDuration
+                }
              }
         }
     ]
