@@ -70,7 +70,7 @@ QQC2.ApplicationWindow {
                 continue;
             }
 
-            parts.push(i18nc("@info", "%1: X=%2 px, Y=%3 px", residual.label, Math.round(residual.x), Math.round(residual.y)));
+            parts.push(i18nc("@info", "%1: (%2 px, %3 px)", residual.label, Math.round(residual.x), Math.round(residual.y)));
         }
 
         return parts.join("\n");
@@ -104,7 +104,7 @@ QQC2.ApplicationWindow {
                     if (closestTarget === centerAnchor) {
                         tool.applyCenterCorrection(device, residualX, residualY);
                         root.recordedResiduals = ({});
-                        root.testingActionSummary = i18nc("@info", "Applied center correction: (%1 px, %2 px). Retap the targets to redo corrections.", Math.round(residualX), Math.round(residualY));
+                        root.testingActionSummary = i18nc("@info", "Applied center correction (%1 px, %2 px). Retap the targets to redo the correction.", Math.round(residualX), Math.round(residualY));
                         return;
                     }
 
@@ -156,7 +156,7 @@ QQC2.ApplicationWindow {
     ColumnLayout {
         anchors {
             top: parent.top
-            topMargin: Kirigami.Units.gridUnit * 3
+            topMargin: Kirigami.Units.gridUnit * 7
             horizontalCenter: parent.horizontalCenter
         }
 
@@ -164,6 +164,7 @@ QQC2.ApplicationWindow {
 
         QQC2.Label {
             Layout.maximumWidth: root.width - (Kirigami.Units.gridUnit * 8)
+            Layout.fillWidth: true
             horizontalAlignment: Text.AlignHCenter
             wrapMode: Text.Wrap
 
@@ -173,7 +174,7 @@ QQC2.ApplicationWindow {
                 }
 
                 if (tool.state === KCM.CalibrationTool.Testing) {
-                    return i18nc("@info", "Calibration is completed and saved.\n\nRefine the calibration further or close the window.\n\nTap the center target once to fine-tune alignment. Afterwards, retap any targets to verify the result.");
+                    return i18nc("@info", "Calibration is completed and saved.\n\nTap the center target once to fine-tune alignment. You can retap the other targets to verify the result.");
                 }
 
                 return i18nc("@info", "Tap the center of each target.");
@@ -183,6 +184,7 @@ QQC2.ApplicationWindow {
         QQC2.Label {
             visible: tool.state === KCM.CalibrationTool.Testing && (root.testingActionSummary.length > 0 || root.residualSummary().length > 0)
             Layout.maximumWidth: root.width - (Kirigami.Units.gridUnit * 8)
+            Layout.fillWidth: true
             horizontalAlignment: Text.AlignHCenter
             wrapMode: Text.Wrap
             textFormat: Text.PlainText
@@ -196,58 +198,63 @@ QQC2.ApplicationWindow {
 
                 const residualSummary = root.residualSummary();
                 if (residualSummary.length > 0) {
-                    sections.push(i18nc("@info", "Measured residuals:\n%1", residualSummary));
+                    sections.push(i18nc("@info", "Offset Correction:\n%1", residualSummary));
                 }
 
                 return sections.join("\n\n");
             }
         }
 
-        QQC2.Button {
-            visible: tool.state === KCM.CalibrationTool.Testing
+        RowLayout {
+            spacing: Kirigami.Units.largeSpacing
 
-            text: i18nc("@action:button", "Refine Existing Calibration")
-            icon.name: "edit-redo"
+            Layout.alignment: Qt.AlignHCenter
 
-            onClicked: {
-                root.resetTestingFeedback();
-                tool.reset();
+            QQC2.Button {
+                visible: tool.state === KCM.CalibrationTool.Testing
+
+                text: i18nc("@action:button", "Refine Existing Calibration")
+                icon.name: "edit-redo"
+
+                onClicked: {
+                    root.resetTestingFeedback();
+                    tool.reset();
+                }
+
+                Layout.alignment: Qt.AlignHCenter
             }
 
-            Layout.alignment: Qt.AlignHCenter
-        }
+            QQC2.Button {
+                text: tool.state === KCM.CalibrationTool.Confirming ? i18nc("@action:button", "Reset and Try Again") : i18nc("@action:button", "Calibrate from Scratch")
+                icon.name: "kt-restore-defaults"
+                focus: true
+                visible: tool.state === KCM.CalibrationTool.Confirming || tool.state === KCM.CalibrationTool.Testing
 
-        QQC2.Button {
-            text: tool.state === KCM.CalibrationTool.Confirming ? i18nc("@action:button", "Reset and Try Again") : i18nc("@action:button", "Calibrate from Scratch")
-            icon.name: "kt-restore-defaults"
-            focus: true
-            visible: tool.state === KCM.CalibrationTool.Confirming || tool.state === KCM.CalibrationTool.Testing
+                onClicked: {
+                    root.resetTestingFeedback();
+                    tool.restoreDefaults(root.device);
+                    tool.reset();
+                }
 
-            onClicked: {
-                root.resetTestingFeedback();
-                tool.restoreDefaults(root.device);
-                tool.reset();
+                Layout.alignment: Qt.AlignHCenter
             }
 
-            Layout.alignment: Qt.AlignHCenter
-        }
+            QQC2.Button {
+                text: tool.state === KCM.CalibrationTool.Testing ? i18nc("@action:button", "Close") : i18nc("@action:button", "Cancel")
+                icon.name: "dialog-cancel"
 
-        QQC2.Button {
-            text: tool.state === KCM.CalibrationTool.Testing ? i18nc("@action:button", "Close") : i18nc("@action:button", "Cancel")
-            icon.name: "dialog-cancel"
+                onClicked: root.close()
 
-            onClicked: root.close()
-
-            Layout.alignment: Qt.AlignHCenter
+                Layout.alignment: Qt.AlignHCenter
+            }
         }
     }
 
     component Target: QQC2.ToolButton {
         property string diagnosticKey: ""
         property string diagnosticLabel: ""
-        readonly property point centerInWindow: root.targetCenter(this)
-        readonly property real positionX: centerInWindow.x
-        readonly property real positionY: centerInWindow.y
+        readonly property real positionX: Kirigami.ScenePosition.x + width / 2
+        readonly property real positionY: Kirigami.ScenePosition.y + height / 2
 
         icon.name: "crosshairs"
         focusPolicy: Qt.NoFocus
@@ -259,8 +266,8 @@ QQC2.ApplicationWindow {
         }
 
         down: {
-            const isX = Math.abs(root.currentPenToolX - positionX) <= width / 2;
-            const isY = Math.abs(root.currentPenToolY - positionY) <= height / 2;
+            const isX = root.currentPenToolX >= Kirigami.ScenePosition.x && root.currentPenToolX <= Kirigami.ScenePosition.x + width;
+            const isY = root.currentPenToolY >= Kirigami.ScenePosition.y && root.currentPenToolY <= Kirigami.ScenePosition.y + height;
             return isX && isY;
         }
     }
