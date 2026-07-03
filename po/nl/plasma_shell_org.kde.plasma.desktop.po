@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-02 00:46+0000\n"
-"PO-Revision-Date: 2026-05-29 14:49+0200\n"
+"PO-Revision-Date: 2026-07-02 13:23+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
@@ -1062,35 +1062,40 @@ msgstr "Ontgrendelen"
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
 msgstr[0] ""
+"Elementen voor bijwerken van software installeren en na 1 seconde herstarten"
 msgstr[1] ""
+"Elementen voor bijwerken van software installeren en na %1 seconden "
+"herstarten"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Na 1 seconde opnieuw opstarten"
+msgstr[1] "Na %1 seconden opnieuw starten"
 
 #: contents/logout/Logout.qml:155
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Na 1 seconde afmelden"
+msgstr[1] "Na %1 seconden afmelden"
 
 #: contents/logout/Logout.qml:158
 #, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
 msgstr[0] ""
+"Elementen voor bijwerken van software installeren en na 1 seconde afsluiten"
 msgstr[1] ""
+"Elementen voor bijwerken van software installeren en na %1 seconden afsluiten"
 
 #: contents/logout/Logout.qml:159
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Afsluiten na 1 seconde."
+msgstr[1] "Afsluiten na %1 seconden."
 
 #: contents/logout/Logout.qml:174
 #, kde-format
@@ -1101,107 +1106,102 @@ msgid_plural ""
 "%1 other users are currently logged in. If the computer is shut down or "
 "restarted, those users may lose work."
 msgstr[0] ""
+"Er is nog één andere gebruiker ingelogd. Als de computer wordt afgesloten of "
+"opnieuw gestart, dan kan die gebruiker werk verliezen."
 msgstr[1] ""
+"Er zijn %1 andere gebruikers nu ingelogd. Als de computer wordt afgesloten "
+"of opnieuw gestart, dan kunnen die gebruikers werk verliezen."
 
 #: contents/logout/Logout.qml:191
 #, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
 msgstr ""
+"Na het herstarten zal de computer de UEFI-firmware-instellingen ingaan."
 
 #: contents/logout/Logout.qml:193
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
-msgstr ""
+msgstr "Na de herstart zal de computer naar het firmware setup scherm gaan."
 
 #: contents/logout/Logout.qml:208
 #, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr ""
+msgstr "Bij herstarten zal de computer naar het bootloader menu gaan."
 
 #: contents/logout/Logout.qml:221
 #, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr ""
+msgstr "Bij herstarten zal de computer omschakelen naar %1."
 
 #: contents/logout/Logout.qml:243
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Slee&p"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "Sla&pen"
 
 #: contents/logout/Logout.qml:244
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Slee&p"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
-msgstr "Sla&pen"
+msgstr "Nu sla&pen"
 
 #: contents/logout/Logout.qml:253
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Hibernate"
+#, kde-format
 msgid "&Hibernate"
 msgstr "Slaapstand naar sc&hijf"
 
 #: contents/logout/Logout.qml:254
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Hibernate"
+#, kde-format
 msgid "&Hibernate Now"
-msgstr "Slaapstand naar sc&hijf"
+msgstr "Nu naar slaapstand naar sc&hijf"
 
 #: contents/logout/Logout.qml:265
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
-msgstr ""
+msgstr "Software updates installeren en herstarten"
 
 #: contents/logout/Logout.qml:267 contents/logout/Logout.qml:286
 #, kde-format
 msgid "&Restart"
-msgstr ""
+msgstr "He&rstarten"
 
 #: contents/logout/Logout.qml:268 contents/logout/Logout.qml:287
 #, kde-format
 msgid "&Restart Now"
-msgstr ""
+msgstr "Nu he&rstarten"
 
 #: contents/logout/Logout.qml:300
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr ""
+msgstr "Software updates installeren en afsluiten"
 
 #: contents/logout/Logout.qml:302 contents/logout/Logout.qml:321
 #, kde-format
 msgid "&Shut Down"
-msgstr ""
+msgstr "Af&sluiten"
 
 #: contents/logout/Logout.qml:303 contents/logout/Logout.qml:322
 #, kde-format
 msgid "&Shut Down Now"
-msgstr ""
+msgstr "Nu af&sluiten"
 
 #: contents/logout/Logout.qml:334
 #, kde-format
 msgid "&Log Out"
-msgstr ""
+msgstr "Afme&lden"
 
 #: contents/logout/Logout.qml:335
 #, kde-format
 msgid "&Log Out Now"
-msgstr ""
+msgstr "Nu afme&lden"
 
 #: contents/logout/Logout.qml:345
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgid "&Cancel"
-msgstr "Annuleren"
+msgstr "&Annuleren"
 
 #: contents/views/DesktopEditMode.qml:135
 #, kde-format

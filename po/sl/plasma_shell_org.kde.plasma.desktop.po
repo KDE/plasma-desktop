@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-02 00:46+0000\n"
-"PO-Revision-Date: 2026-05-29 06:39+0200\n"
+"PO-Revision-Date: 2026-07-02 07:23+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -1068,45 +1068,53 @@ msgstr "Odkleni"
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
 msgstr[0] ""
+"Nameščanje posodobitev programske opreme in ponovni zagon v %1 sekundah"
 msgstr[1] ""
+"Nameščanje posodobitev programske opreme in ponovni zagon v %1 sekundi"
 msgstr[2] ""
+"Nameščanje posodobitev programske opreme in ponovni zagon v %1 sekundah"
 msgstr[3] ""
+"Nameščanje posodobitev programske opreme in ponovni zagon v %1 sekundah"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Ponovni zagon čez %1 sekund"
+msgstr[1] "Ponovni zagon čez %1 sekundo"
+msgstr[2] "Ponovni zagon čez %1 sekundi"
+msgstr[3] "Ponovni zagon čez %1 sekunde"
 
 #: contents/logout/Logout.qml:155
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Odjava čez %1 sekund"
+msgstr[1] "Odjava čez %1 sekundo"
+msgstr[2] "Odjava čez %1 sekundi"
+msgstr[3] "Odjava čez %1 sekunde"
 
 #: contents/logout/Logout.qml:158
 #, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
 msgstr[0] ""
+"Nameščanje posodobitev programske opreme in zaustavitev v %1 sekundah"
 msgstr[1] ""
+"Nameščanje posodobitev programske opreme in zaustavitev v %1 sekundi"
 msgstr[2] ""
+"Nameščanje posodobitev programske opreme in zaustavitev v %1 sekundah"
 msgstr[3] ""
+"Nameščanje posodobitev programske opreme in zaustavitev v %1 sekundah"
 
 #: contents/logout/Logout.qml:159
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Izklop čez %1 sekund"
+msgstr[1] "Izklop čez %1 sekundo"
+msgstr[2] "Izklop čez %1 sekundi"
+msgstr[3] "Izklop čez %1 sekunde"
 
 #: contents/logout/Logout.qml:174
 #, kde-format
@@ -1117,107 +1125,110 @@ msgid_plural ""
 "%1 other users are currently logged in. If the computer is shut down or "
 "restarted, those users may lose work."
 msgstr[0] ""
+"Trenutno je prijavljenih %1 drugih uporabnikov. Če računalnik izklopite ali "
+"znova zaženete, lahko ti uporabniki izgubijo delo."
 msgstr[1] ""
+"Trenutno je prijavljen %1 drug uporabnik. Če računalnik izklopite ali znova "
+"zaženete, lahko ta uporabnik izgubi delo."
 msgstr[2] ""
+"Trenutno sta prijavljena %1 druga uporabnika. Če računalnik izklopite ali "
+"znova zaženete, lahko ta uporabnika izgubita delo."
 msgstr[3] ""
+"Trenutno je prijavljenih %1 drugih uporabnikov. Če računalnik izklopite ali "
+"znova zaženete, lahko ti uporabniki izgubijo delo."
 
 #: contents/logout/Logout.qml:191
 #, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
 msgstr ""
+"Ob ponovnem zagonu bo računalnik vnesel nastavitve vdelane programske opreme "
+"UEFI."
 
 #: contents/logout/Logout.qml:193
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
+"Ko se računalnik znova zažene, se prikaže zaslon za nastavitev vdelane "
+"programske opreme."
 
 #: contents/logout/Logout.qml:208
 #, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr ""
+"Ko se računalnik znova zažene, se bo prikazal meni zagonskega nalagalnika."
 
 #: contents/logout/Logout.qml:221
 #, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr ""
+msgstr "Ob ponovnem zagonu bo računalnik preklopil na %1."
 
 #: contents/logout/Logout.qml:243
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Slee&p"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "Zaspi"
 
 #: contents/logout/Logout.qml:244
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Slee&p"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
-msgstr "Zaspi"
+msgstr "Zaspi zdaj"
 
 #: contents/logout/Logout.qml:253
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Hibernate"
+#, kde-format
 msgid "&Hibernate"
 msgstr "V mirovanje"
 
 #: contents/logout/Logout.qml:254
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Hibernate"
+#, kde-format
 msgid "&Hibernate Now"
-msgstr "V mirovanje"
+msgstr "V mirovanje zdaj"
 
 #: contents/logout/Logout.qml:265
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
-msgstr ""
+msgstr "Namesti posodobitve in znova zaženi"
 
 #: contents/logout/Logout.qml:267 contents/logout/Logout.qml:286
 #, kde-format
 msgid "&Restart"
-msgstr ""
+msgstr "Ponovno zaženi"
 
 #: contents/logout/Logout.qml:268 contents/logout/Logout.qml:287
 #, kde-format
 msgid "&Restart Now"
-msgstr ""
+msgstr "Ponovno zaženi zdaj"
 
 #: contents/logout/Logout.qml:300
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr ""
+msgstr "Namesti posodobitve in zaustavi sistem"
 
 #: contents/logout/Logout.qml:302 contents/logout/Logout.qml:321
 #, kde-format
 msgid "&Shut Down"
-msgstr ""
+msgstr "Zaustavi sistem"
 
 #: contents/logout/Logout.qml:303 contents/logout/Logout.qml:322
 #, kde-format
 msgid "&Shut Down Now"
-msgstr ""
+msgstr "Zaustavi sistem zdaj"
 
 #: contents/logout/Logout.qml:334
 #, kde-format
 msgid "&Log Out"
-msgstr ""
+msgstr "Odjavi se"
 
 #: contents/logout/Logout.qml:335
 #, kde-format
 msgid "&Log Out Now"
-msgstr ""
+msgstr "Odjavi se zdaj"
 
 #: contents/logout/Logout.qml:345
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgid "&Cancel"
 msgstr "Prekliči"
 

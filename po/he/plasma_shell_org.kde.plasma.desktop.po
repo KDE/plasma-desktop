@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-02 00:46+0000\n"
-"PO-Revision-Date: 2026-05-29 11:38+0300\n"
+"PO-Revision-Date: 2026-07-02 08:21+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -1061,46 +1061,46 @@ msgstr "שחרור נעילה"
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "התקנת עדכוני תוכנה והפעלה מחדש בעוד שנייה"
+msgstr[1] "התקנת עדכוני תוכנה והפעלה מחדש בעוד שתי שניות"
+msgstr[2] "התקנת עדכוני תוכנה והפעלה מחדש בעוד %1 שניות"
+msgstr[3] "התקנת עדכוני תוכנה והפעלה מחדש בעוד %1 שניות"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "מופעל מחדש עוד שנייה"
+msgstr[1] "מופעל מחדש עוד שתי שניות"
+msgstr[2] "מופעל מחדש עוד %1 שניות"
+msgstr[3] "מופעל מחדש עוד %1 שניות"
 
 #: contents/logout/Logout.qml:155
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "יציאה מהפעלה עוד שנייה"
+msgstr[1] "יציאה מהפעלה עוד שתי שניות"
+msgstr[2] "יציאה מהפעלה עוד %1 שניות"
+msgstr[3] "יציאה מהפעלה עוד %1 שניות"
 
 #: contents/logout/Logout.qml:158
 #, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "התקנת עדכוני תוכנה וכיבוי בעוד שנייה"
+msgstr[1] "התקנת עדכוני תוכנה וכיבוי בעוד שתי שניות"
+msgstr[2] "התקנת עדכוני תוכנה וכיבוי בעוד %1 שניות"
+msgstr[3] "התקנת עדכוני תוכנה וכיבוי בעוד %1 שניות"
 
 #: contents/logout/Logout.qml:159
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "נכבה עוד שנייה"
+msgstr[1] "נכבה עוד שתי שניות"
+msgstr[2] "נכבה עוד %1 שניות"
+msgstr[3] "נכבה עוד %1 שניות"
 
 #: contents/logout/Logout.qml:174
 #, kde-format
@@ -1111,109 +1111,107 @@ msgid_plural ""
 "%1 other users are currently logged in. If the computer is shut down or "
 "restarted, those users may lose work."
 msgstr[0] ""
+"יש עוד משתמש במערכת. אם המחשב יכבה או יופעל מחדש זה עלול להוביל לאובדן מידע "
+"שלו."
 msgstr[1] ""
+"יש עוד שני משתמשים במערכת. אם המחשב יכבה או יופעל מחדש זה עלול להוביל לאובדן "
+"מידע שלהם."
 msgstr[2] ""
+"יש עוד %1 משתמשים במערכת. אם המחשב יכבה או יופעל מחדש זה עלול להוביל לאובדן "
+"מידע שלהם."
 msgstr[3] ""
+"יש עוד %1 משתמשים במערכת. אם המחשב יכבה או יופעל מחדש זה עלול להוביל לאובדן "
+"מידע שלהם."
 
 #: contents/logout/Logout.qml:191
 #, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
-msgstr ""
+msgstr "לאחר הפעלה מחדש, המחשב ייכנס להגדרות קושחת ה־UEFI."
 
 #: contents/logout/Logout.qml:193
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
-msgstr ""
+msgstr "לאחר הפעלה מחדש, המחשב ייכנס למסך הגדרת הקושחה."
 
 #: contents/logout/Logout.qml:208
 #, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr ""
+msgstr "לאחר הפעלה מחדש, המחשב ייכנס לתפריט בחירת אמצעי טעינה."
 
 #: contents/logout/Logout.qml:221
 #, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr ""
+msgstr "לאחר הפעלה מחדש, המחשב יעבור למצב %1."
 
 #: contents/logout/Logout.qml:243
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Slee&p"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "&שינה"
 
 #: contents/logout/Logout.qml:244
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Slee&p"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
-msgstr "&שינה"
+msgstr "&שינה כעת"
 
 #: contents/logout/Logout.qml:253
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Hibernate"
+#, kde-format
 msgid "&Hibernate"
 msgstr "&תרדמת"
 
 #: contents/logout/Logout.qml:254
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Hibernate"
+#, kde-format
 msgid "&Hibernate Now"
-msgstr "&תרדמת"
+msgstr "&תרדמת כעת"
 
 #: contents/logout/Logout.qml:265
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
-msgstr ""
+msgstr "התקנת עדכונים והפעלה מחדש"
 
 #: contents/logout/Logout.qml:267 contents/logout/Logout.qml:286
 #, kde-format
 msgid "&Restart"
-msgstr ""
+msgstr "ה&פעלה מחדש"
 
 #: contents/logout/Logout.qml:268 contents/logout/Logout.qml:287
 #, kde-format
 msgid "&Restart Now"
-msgstr ""
+msgstr "ה&פעלה מחדש כעת"
 
 #: contents/logout/Logout.qml:300
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr ""
+msgstr "התקנת עדכונים וכיבוי"
 
 #: contents/logout/Logout.qml:302 contents/logout/Logout.qml:321
 #, kde-format
 msgid "&Shut Down"
-msgstr ""
+msgstr "&כיבוי"
 
 #: contents/logout/Logout.qml:303 contents/logout/Logout.qml:322
 #, kde-format
 msgid "&Shut Down Now"
-msgstr ""
+msgstr "&כיבוי כעת"
 
 #: contents/logout/Logout.qml:334
 #, kde-format
 msgid "&Log Out"
-msgstr ""
+msgstr "י&ציאה"
 
 #: contents/logout/Logout.qml:335
 #, kde-format
 msgid "&Log Out Now"
-msgstr ""
+msgstr "י&ציאה כעת"
 
 #: contents/logout/Logout.qml:345
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgid "&Cancel"
-msgstr "ביטול"
+msgstr "&ביטול"
 
 #: contents/views/DesktopEditMode.qml:135
 #, kde-format

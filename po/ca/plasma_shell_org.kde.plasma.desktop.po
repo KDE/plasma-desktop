@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-02 00:46+0000\n"
-"PO-Revision-Date: 2026-05-29 10:30+0200\n"
+"PO-Revision-Date: 2026-07-02 08:48+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -1062,35 +1062,39 @@ msgstr "Desbloqueja"
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
 msgstr[0] ""
+"S'estan instal·lant les actualitzacions i es reiniciarà d'aquí a 1 segon"
 msgstr[1] ""
+"S'estan instal·lant les actualitzacions i es reiniciarà d'aquí a %1 segons"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Es tornarà a reiniciar d'aquí a 1 segon"
+msgstr[1] "Es tornarà a reiniciar d'aquí a %1 segons"
 
 #: contents/logout/Logout.qml:155
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "La sessió es tancarà d'aquí a 1 segon"
+msgstr[1] "La sessió es tancarà d'aquí a %1 segons"
 
 #: contents/logout/Logout.qml:158
 #, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
 msgstr[0] ""
+"S'estan instal·lant les actualitzacions i s'aturarà d'aquí a 1 segon"
 msgstr[1] ""
+"S'estan instal·lant les actualitzacions i s'aturarà d'aquí a %1 segons"
 
 #: contents/logout/Logout.qml:159
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Es tancarà d'aquí a 1 segon"
+msgstr[1] "Es tancarà d'aquí a %1 segons"
 
 #: contents/logout/Logout.qml:174
 #, kde-format
@@ -1101,107 +1105,104 @@ msgid_plural ""
 "%1 other users are currently logged in. If the computer is shut down or "
 "restarted, those users may lose work."
 msgstr[0] ""
+"Un altre usuari està connectat. Si l'ordinador s'apaga o reinicia, aquest "
+"usuari podria perdre la feina."
 msgstr[1] ""
+"%1 usuaris més estan connectats. Si l'ordinador s'apaga o reinicia, aquests "
+"usuaris podrien perdre la feina."
 
 #: contents/logout/Logout.qml:191
 #, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
 msgstr ""
+"En reiniciar, l'ordinador entrarà a la configuració del microprogramari UEFI."
 
 #: contents/logout/Logout.qml:193
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
+"En reiniciar, l'ordinador presentarà la pantalla de configuració del "
+"microprogramari."
 
 #: contents/logout/Logout.qml:208
 #, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr ""
+msgstr "En reiniciar, l'ordinador presentarà el menú del gestor d'arrancada."
 
 #: contents/logout/Logout.qml:221
 #, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr ""
+msgstr "En reiniciar, l'ordinador canviarà a %1."
 
 #: contents/logout/Logout.qml:243
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Slee&p"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "Sus&pèn"
 
 #: contents/logout/Logout.qml:244
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Slee&p"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
-msgstr "Sus&pèn"
+msgstr "Sus&pèn ara"
 
 #: contents/logout/Logout.qml:253
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Hibernate"
+#, kde-format
 msgid "&Hibernate"
 msgstr "&Hiberna"
 
 #: contents/logout/Logout.qml:254
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Hibernate"
+#, kde-format
 msgid "&Hibernate Now"
-msgstr "&Hiberna"
+msgstr "&Hiberna ara"
 
 #: contents/logout/Logout.qml:265
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
-msgstr ""
+msgstr "Instal·la les actualitzacions i reinicia"
 
 #: contents/logout/Logout.qml:267 contents/logout/Logout.qml:286
 #, kde-format
 msgid "&Restart"
-msgstr ""
+msgstr "&Reinicia"
 
 #: contents/logout/Logout.qml:268 contents/logout/Logout.qml:287
 #, kde-format
 msgid "&Restart Now"
-msgstr ""
+msgstr "&Reinicia ara"
 
 #: contents/logout/Logout.qml:300
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr ""
+msgstr "Instal·la les actualitzacions i atura"
 
 #: contents/logout/Logout.qml:302 contents/logout/Logout.qml:321
 #, kde-format
 msgid "&Shut Down"
-msgstr ""
+msgstr "&Atura"
 
 #: contents/logout/Logout.qml:303 contents/logout/Logout.qml:322
 #, kde-format
 msgid "&Shut Down Now"
-msgstr ""
+msgstr "&Atura ara"
 
 #: contents/logout/Logout.qml:334
 #, kde-format
 msgid "&Log Out"
-msgstr ""
+msgstr "&Surt"
 
 #: contents/logout/Logout.qml:335
 #, kde-format
 msgid "&Log Out Now"
-msgstr ""
+msgstr "&Surt ara"
 
 #: contents/logout/Logout.qml:345
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgid "&Cancel"
-msgstr "Cancel·la"
+msgstr "&Cancel·la"
 
 #: contents/views/DesktopEditMode.qml:135
 #, kde-format
