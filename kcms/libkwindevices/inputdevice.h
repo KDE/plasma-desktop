@@ -17,6 +17,8 @@
 
 #include "kwindevices-logging.h"
 
+class InputDeviceTest;
+
 class InputDevice : public QObject
 {
     Q_OBJECT
@@ -258,6 +260,12 @@ Q_SIGNALS:
     void relativeChanged();
     void currentModesChanged();
 
+protected:
+    static QString serializeMatrix(const QMatrix4x4 &matrix);
+    static QMatrix4x4 deserializeMatrix(const QString &matrix);
+
+    friend class ::InputDeviceTest;
+
 private:
     template<typename T>
     struct Prop {
@@ -380,9 +388,6 @@ private:
         mutable std::optional<T> m_configValue;
         mutable std::optional<T> m_value;
     };
-
-    static QString serializeMatrix(const QMatrix4x4 &matrix);
-    static QMatrix4x4 deserializeMatrix(const QString &matrix);
 
     //
     // general

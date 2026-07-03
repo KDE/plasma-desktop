@@ -25,3 +25,7 @@ target_link_libraries(kwindevices
     Qt::DBus
     Qt::Gui
 )
+
+if(BUILD_TESTING)
+    add_subdirectory(tests)
+endif()
