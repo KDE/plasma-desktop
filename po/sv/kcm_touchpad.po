@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2024, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2013-2015, 2017-2021, 2024-2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-23 00:46+0000\n"
-"PO-Revision-Date: 2025-05-31 12:43+0200\n"
+"PO-Revision-Date: 2026-07-04 15:38+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:46
 #, kde-format
@@ -52,7 +52,7 @@ msgstr "Kan inte läsa tryckplattans standardinställning"
 #: kcm.cpp:69
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "Kan inte välja lämpligt gränssnitt"
 
 #: kcm.cpp:126
 #, kde-format
@@ -64,10 +64,9 @@ msgstr ""
 "inställningsmodulen."
 
 #: kcm.cpp:129
-#, fuzzy, kde-format
-#| msgid "No touchpad found. Connect touchpad now."
+#, kde-format
 msgid "No pointer device found. Connect now."
-msgstr "Ingen tryckplatta hittades. Anslut tryckplatta nu."
+msgstr "Ingen pekarenhet hittades. Anslut nu."
 
 #: kcm.cpp:138
 #, kde-format
@@ -97,52 +96,44 @@ msgstr ""
 "inställningsmodulen."
 
 #: kcm.cpp:185
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. Closed its setting dialog."
+#, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr "Tryckplatta bortkopplad. Stäng dess inställningsdialogruta."
+msgstr "Pekarenhet bortkopplad. Stänger inställningsdialogrutan."
 
 #: kcm.cpp:187
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. No other touchpads found."
+#, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr "Tryckplatta bortkopplad. Inga andra tryckplattor hittades."
+msgstr "Pekarenhet bortkopplad. Inga andra enheter hittades."
 
 #: ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "No touchpad found"
+#, kde-format
 msgctxt "@info:status placeholdermessage text"
 msgid "No touchpad found"
 msgstr "Ingen tryckplatta hittades"
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Connect an external touchpad"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchpad"
 msgstr "Anslut en extern tryckplatta"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@label:listbox device selection"
 msgid "Device:"
 msgstr "Enhet:"
 
 #: ui/main.qml:110
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "Allmänt:"
 
 #: ui/main.qml:111
-#, fuzzy, kde-format
-#| msgctxt "Coasting"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable device"
-msgstr "Aktivera"
+msgstr "Aktivera enhet"
 
 #: ui/main.qml:126
 #, kde-format
@@ -151,8 +142,7 @@ msgid "Disable while mouse is connected"
 msgstr "Inaktivera medan musen är ansluten"
 
 #: ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Disable while typing"
+#, kde-format
 msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "Inaktivera vid skrivning på tangentbordet"
@@ -164,26 +154,22 @@ msgid "This can interfere with video games."
 msgstr "Det kan störa videospel."
 
 #: ui/main.qml:169
-#, fuzzy, kde-format
-#| msgid "Swap left and right buttons."
+#, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
-msgstr "Byt vänster- och högerknapp."
+msgstr "Vänster- och högerknappar:"
 
 #: ui/main.qml:170
-#, fuzzy, kde-format
-#| msgid "Left-handed mode"
+#, kde-format
 msgctxt "@option:check"
 msgid "Swap (left-handed mode)"
-msgstr "Vänsterhänt läge"
+msgstr "Byt (vänsterhänt läge)"
 
 #: ui/main.qml:185
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Press left and right buttons to middle-click"
+#, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
-msgstr "Tryck på vänster- och högerknapp för mittenklick"
+msgstr "Tryck på båda samtidigt för att mittenklicka"
 
 #: ui/main.qml:197
 #, kde-format
@@ -197,15 +183,13 @@ msgstr ""
 "högertryck."
 
 #: ui/main.qml:207
-#, fuzzy, kde-format
-#| msgid "Pointer speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Pekarhastighet:"
 
 #: ui/main.qml:287
-#, fuzzy, kde-format
-#| msgid "Enable pointer acceleration"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Aktivera pekaracceleration"
@@ -220,156 +204,130 @@ msgstr ""
 "rörelsehastighet."
 
 #: ui/main.qml:309
-#, fuzzy, kde-format
-#| msgid "Scrolling speed:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "Rullningshastighet:"
 
 #: ui/main.qml:360
-#, fuzzy, kde-format
-#| msgctxt "Slower Scroll"
-#| msgid "Slower"
+#, kde-format
 msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "Långsammare"
 
 #: ui/main.qml:367
-#, fuzzy, kde-format
-#| msgctxt "Faster Scroll Speed"
-#| msgid "Faster"
+#, kde-format
 msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "Snabbare"
 
 #: ui/main.qml:374
-#, fuzzy, kde-format
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt ""
 "@title group begins the sentence 'Scroll by moving two fingers anywhere/"
 "moving one finger on edge'"
 msgid "Scroll by:"
-msgstr "Rullning:"
+msgstr "Rulla genom att:"
 
 #: ui/main.qml:377
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
-msgstr ""
+msgstr "Flyttar två fingrar vart som helst"
 
 #: ui/main.qml:395
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
-msgstr ""
+msgstr "Flyttar ett finger längs kanten"
 
 #: ui/main.qml:404
-#, fuzzy, kde-format
-#| msgid "Invert scroll direction (Natural scrolling)"
+#, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Omvänd rullningsriktning (naturlig rullning)"
 
 #: ui/main.qml:421
-#, fuzzy, kde-format
-#| msgid "Disable horizontal scrolling"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "Inaktivera horisontell rullning"
 
 #: ui/main.qml:439
-#, fuzzy, kde-format
-#| msgid "Right-click"
+#, kde-format
 msgctxt ""
 "@title:group for radiobutton group, begins the sentence 'right-click by "
 "pressing bottom-right corner/pressing with two fingers'"
 msgid "Right-click by:"
-msgstr "Högerklick"
+msgstr "Högerklicka genom att:"
 
 #: ui/main.qml:443
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated right-click"
-#| msgid "Press bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-right "
 "corner'"
 msgid "Pressing bottom-right corner"
-msgstr "Tryck i nedre högra hörnet"
+msgstr "Trycka i nedre högra hörnet"
 
 #: ui/main.qml:448
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing both bottom corners."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
-msgstr "Mittenklick genom att trycka på båda nedre hörnen."
+msgstr "Mittenklicka genom att trycka på båda nedre hörnen."
 
 #: ui/main.qml:449
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing bottom center."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr "Mittenklick genom att trycka nederst i mitten."
+msgstr "Mittenklicka genom att trycka nederst i mitten."
 
 #: ui/main.qml:471
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated right-click"
-#| msgid "Press touchpad with two fingers"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing with two "
 "fingers'"
 msgid "Pressing anywhere with two fingers"
-msgstr "Tryck på tryckplattan med två fingrar"
+msgstr "Trycka var som helst med två fingrar"
 
 #: ui/main.qml:472
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing with three fingers."
+#, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
-msgstr "Mittenklick genom att trycka med tre fingrar."
+msgstr "Mittenklicka genom att trycka var som helst med tre fingrar."
 
 #: ui/main.qml:484
-#, fuzzy, kde-format
-#| msgid "Middle-click"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'middle-click by pressing "
 "bottom-middle edge/by pressing anywhere with three fingers'"
 msgid "Middle-click by:"
-msgstr "Mittenklick"
+msgstr "Mittenklicka genom att:"
 
 #: ui/main.qml:487
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated middle-click"
-#| msgid "Press bottom middle edge"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-middle "
 "edge'"
 msgid "Pressing bottom-middle edge"
-msgstr "Tryck längst ner i mitten på kanten"
+msgstr "Trycka längst ner i mitten på kanten"
 
 #: ui/main.qml:507
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated middle-click"
-#| msgid "Press bottom left and bottom right corners"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-left "
 "and bottom-right corners'"
 msgid "Pressing bottom-left and bottom-right corners"
-msgstr "Tryck på nedre vänstra och högra hörnen"
+msgstr "Trycka på nedre vänstra och högra hörnen"
 
 #: ui/main.qml:519
-#, fuzzy, kde-format
-#| msgctxt "@option:check touchpad integrated middle-click"
-#| msgid "Press touchpad with three fingers"
+#, kde-format
 msgctxt ""
 "@option:check completes the sentence 'middle-click by pressing anywhere with "
 "three fingers'"
 msgid "Pressing anywhere with three fingers"
-msgstr "Tryck på tryckplattan med tre fingrar"
+msgstr "Trycka var som helst med tre fingrar"
 
 #: ui/main.qml:532
 #, kde-format
@@ -378,8 +336,7 @@ msgid "Tapping:"
 msgstr "Tryck:"
 
 #: ui/main.qml:533
-#, fuzzy, kde-format
-#| msgid "Tap to Click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Tap to click"
 msgstr "Tryck för att klicka"
@@ -388,7 +345,7 @@ msgstr "Tryck för att klicka"
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
-msgstr ""
+msgstr "Tillåt dra efter tryck"
 
 #: ui/main.qml:560
 #, kde-format
@@ -401,43 +358,37 @@ msgstr ""
 "att dra. Lyft fingret för att släppa."
 
 #: ui/main.qml:567
-#, fuzzy, kde-format
-#| msgid "Allow briefly lifting finger during tap-and-drag"
+#, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr "Tillåt att kort lyfta fingret under tryck och dra"
 
 #: ui/main.qml:580
-#, fuzzy, kde-format
-#| msgid "Two-finger tap:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Two-finger tap:"
-msgstr "Tryck med två fingrar"
+msgstr "Tryck med två fingrar:"
 
 #: ui/main.qml:586
-#, fuzzy, kde-format
-#| msgid "Right-click (three-finger tap to middle-click)"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Högerklick (tryck med tre fingrar för att mittenklicka)"
 
 #: ui/main.qml:587
-#, fuzzy, kde-format
-#| msgid "Right-click"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "Högerklick"
 
 #: ui/main.qml:608
-#, fuzzy, kde-format
-#| msgid "Middle-click (three-finger tap to right-click)"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Mittenklick (tryck med tre fingrar för att högerklicka)"
 
 #: ui/main.qml:609
-#, fuzzy, kde-format
-#| msgid "Middle-click"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Mittenklick"

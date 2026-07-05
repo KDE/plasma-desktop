@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2018, 2019, 2020, 2021, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2014-2015, 2018-2021, 2024, 2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-07 02:48+0000\n"
-"PO-Revision-Date: 2024-06-21 11:35+0200\n"
+"PO-Revision-Date: 2026-07-04 09:49+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: kcm.cpp:164
 #, kde-format
@@ -45,46 +45,40 @@ msgid "Name of the current splash theme"
 msgstr "Namn på aktuellt starttema"
 
 #: ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "&Get New…"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Get New…"
-msgstr "&Hämta nytt…"
+msgstr "&Hämta ny…"
 
 #: ui/main.qml:50
-#, fuzzy, kde-format
-#| msgid "Failed to show the splash screen preview."
+#, kde-format
 msgctxt "@info:status"
 msgid "Failed to show the splash screen preview."
 msgstr "Misslyckades visa förhandsgranskning av startskärm."
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgid "Preview Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview splash screen"
 msgstr "Förhandsgranska startskärm"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgid "Preview Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove splash screen"
-msgstr "Förhandsgranska startskärm"
+msgstr "Ta bort startskärm"
 
 #: ui/main.qml:90
-#, fuzzy, kde-format
-#| msgid "You cannot delete the currently selected splash screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active splash screen"
-msgstr "Du kan inte ta bort startskärmen som för närvarande är vald"
+msgstr "Kan inte ta bort den aktiva startskärmen"
 
 #: ui/main.qml:92
-#, fuzzy, kde-format
-#| msgid "You cannot delete the currently selected splash screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed splash screens"
-msgstr "Du kan inte ta bort startskärmen som för närvarande är vald"
+msgstr "Kan inte ta bort systeminstallerade startskärmar"
 
 #, fuzzy
 #~| msgid "Uninstall"
