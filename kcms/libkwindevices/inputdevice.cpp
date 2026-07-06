@@ -139,10 +139,12 @@ bool InputDevice::pressureCurveIsDefault() const
 QString InputDevice::serializeMatrix(const QMatrix4x4 &matrix)
 {
     QString result;
-    for (int i = 0; i < 16; i++) {
-        result.append(QString::number(matrix.constData()[i]));
-        if (i != 15) {
-            result.append(QLatin1Char(','));
+    for (int i = 0; i < 4; ++i) {
+        for (int j = 0; j < 4; ++j) {
+            if (!result.isEmpty()) {
+                result.append(QLatin1Char(','));
+            }
+            result.append(QString::number(matrix(i, j)));
         }
     }
     return result;
