@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-03 00:45+0000\n"
-"PO-Revision-Date: 2026-07-04 11:35+0200\n"
+"PO-Revision-Date: 2026-07-05 16:24+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -129,7 +129,7 @@ msgstr "Strekk og fyll"
 #, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
-msgstr "Hald fast på høgd/breidd-forhold og tilpass"
+msgstr "Hald fast på høgd/breidd-forholdet og tilpass"
 
 #: kcmtablet.cpp:166 ui/DisplayTab.qml:100
 #, kde-format
@@ -449,7 +449,7 @@ msgstr "Fann ingen teikneplater"
 #, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect a drawing tablet"
-msgstr "Kopla til teikneplate"
+msgstr "Kopla til ei teikneplate"
 
 #: ui/main.qml:47
 #, kde-format
@@ -465,6 +465,9 @@ msgid ""
 "driver to configure the tablet instead of using the settings here, unless "
 "specifically instructed otherwise."
 msgstr ""
+"Eininga vert handtert av ein drivar du har installert i brukar­området. Bruk "
+"den drivaren til å setja opp teikneplata i staden for å bruka innstillingane "
+"her, med mindre du har fått beskjed om noko anna."
 
 #: ui/main.qml:106
 #, kde-format
@@ -504,7 +507,7 @@ msgid ""
 "this device is missing."
 msgstr ""
 "Fann ingen knappar aller andre inndata-kontrollar. Grunnen kan vera at det "
-"manglar drivar for eininga."
+"manglar drivar for teikneplata."
 
 #: ui/PadTab.qml:37
 #, kde-format
@@ -652,12 +655,14 @@ msgid ""
 "This curve controls the relationship between the pressure on the stylus and "
 "the pressure values received by applications."
 msgstr ""
+"Denne kurva styrer forholdet mellom det fysiske penne­trykket og trykk­"
+"verdiane mottekne av program."
 
 #: ui/StylusTab.qml:458
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
-msgstr ""
+msgstr "Trykkintervall:"
 
 #: ui/StylusTab.qml:485
 #, kde-format
@@ -666,12 +671,14 @@ msgid ""
 "Pressure above or below the threshold will be clamped, and this becomes the "
 "new effective range."
 msgstr ""
+"Trykk over eller under grensene vert låste til høvesvis øvre/nedre "
+"intervallgrense."
 
 #: ui/StylusTab.qml:496
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr "Kalibrering pågår"
+msgstr "Kalibrering i gang"
 
 #: ui/StylusTab.qml:498
 #, kde-format
@@ -686,12 +693,10 @@ msgid "Calibration Not Supported"
 msgstr "Kalibrering er ikkje støtta"
 
 #: ui/StylusTab.qml:542
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Refine Existing Calibration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr "Finjuster kalibrering"
+msgstr "Nullstill tilpassa kalibrering"
 
 #: ui/StylusTab.qml:557
 #, kde-format
@@ -700,6 +705,8 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"Du har manuelt kalibrert teikneplata. Viss ho ikkje lenger fungerer "
+"skikkeleg, prøv først å nullstilla kalibreringa."
 
 #: ui/Tester.qml:25
 #, kde-format
@@ -762,9 +769,7 @@ msgid ""
 msgstr ""
 "## Forklaring:\n"
 "# x, y – koordinatar til hendinga\n"
-"\n"
 "# t – trykk/styrke\n"
-"\n"
 "# tx, ty – vinkel (x- og y-retning)\n"
 
 #: ui/Tester.qml:225
