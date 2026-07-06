@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-02 00:45+0000\n"
-"PO-Revision-Date: 2025-10-26 12:33+0100\n"
+"PO-Revision-Date: 2026-07-05 12:43+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.04.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -49,11 +49,10 @@ msgstr "Erstatt ein instans som finst frå før"
 #, kde-format
 msgctxt "@action Search field action"
 msgid "Search"
-msgstr ""
+msgstr "Søk"
 
 #: app/ui/CategoryPage.qml:100
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:button clear emoji history"
 msgid "Clear History"
 msgstr "Tøm loggen"
@@ -62,85 +61,85 @@ msgstr "Tøm loggen"
 #, kde-format
 msgctxt "@action:button Button to open a menu that lets you choose a skin tone"
 msgid "Skin tone: %1"
-msgstr ""
+msgstr "Hudfarge: %1"
 
 #: app/ui/CategoryPage.qml:137
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐️ Neutral"
-msgstr ""
+msgstr "🖐️ Nøytral"
 
 #: app/ui/CategoryPage.qml:138
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Neutral"
-msgstr ""
+msgstr "Nøytral"
 
 #: app/ui/CategoryPage.qml:146
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏻 Light"
-msgstr ""
+msgstr "🖐🏻 Lys"
 
 #: app/ui/CategoryPage.qml:147
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Light"
-msgstr ""
+msgstr "Lys"
 
 #: app/ui/CategoryPage.qml:155
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏼 Medium Light"
-msgstr ""
+msgstr "🖐🏼 Middels lys"
 
 #: app/ui/CategoryPage.qml:156
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium Light"
-msgstr ""
+msgstr "Middels lys"
 
 #: app/ui/CategoryPage.qml:164
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏽 Medium"
-msgstr ""
+msgstr "🖐🏽 Middels"
 
 #: app/ui/CategoryPage.qml:165
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium"
-msgstr ""
+msgstr "Middels"
 
 #: app/ui/CategoryPage.qml:173
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏾 Medium Dark"
-msgstr ""
+msgstr "🖐🏾 Middels mørk"
 
 #: app/ui/CategoryPage.qml:174
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Medium Dark"
-msgstr ""
+msgstr "Middels mørk"
 
 #: app/ui/CategoryPage.qml:182
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "🖐🏿 Dark"
-msgstr ""
+msgstr "🖐🏿 Mørk"
 
 #: app/ui/CategoryPage.qml:183
 #, kde-format
 msgctxt "@action:inmenu Skin Tone"
 msgid "Dark"
-msgstr ""
+msgstr "Mørk"
 
 #: app/ui/CategoryPage.qml:194
 #, kde-format
 msgctxt "@title:window A two-tone skin variant can be selected here"
 msgid "Select Variant"
-msgstr ""
+msgstr "Vel variant"
 
 #: app/ui/CategoryPage.qml:242
 #, kde-format
@@ -155,8 +154,7 @@ msgid "Copy Description"
 msgstr "Kopier skildring"
 
 #: app/ui/CategoryPage.qml:291
-#, fuzzy, kde-format
-#| msgid "No recent Emojis"
+#, kde-format
 msgctxt "@label placeholder for empty recent emoji list"
 msgid "No recent emojis"
 msgstr "Ingen nylege emojiar"
@@ -165,7 +163,7 @@ msgstr "Ingen nylege emojiar"
 #, kde-format
 msgctxt "@label placeholder for no emoji found in category"
 msgid "No matching emoji found"
-msgstr ""
+msgstr "Fann ingen emojiar i kategorien"
 
 #: app/ui/CategoryPage.qml:339
 #, kde-format
@@ -173,18 +171,16 @@ msgctxt ""
 "@action:button Opens a window where a two-tone skin variant can be selected. "
 "%1 is the emoji's name"
 msgid "Select Variant of \"%1\""
-msgstr ""
+msgstr "Vel variant av «%1»"
 
 #: app/ui/Emojier.qml:44
-#, fuzzy, kde-format
-#| msgid "%1 copied to the clipboard"
+#, kde-format
 msgctxt "@info:status passive notification as action feedback, %1 is an emoji"
 msgid "%1 copied to the clipboard"
 msgstr "%1 kopiert til utklippstavla"
 
 #: app/ui/Emojier.qml:58
-#, fuzzy, kde-format
-#| msgid "Recent"
+#, kde-format
 msgctxt "@title page title for Recent Emoji view, and sidebar label for it"
 msgid "Recent"
 msgstr "Nylege"

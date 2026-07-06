@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-16 00:47+0000\n"
-"PO-Revision-Date: 2026-06-24 20:55+0200\n"
+"PO-Revision-Date: 2026-07-05 13:28+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.07.70\n"
+"X-Generator: Lokalize 26.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -29,12 +29,12 @@ msgstr "KWin"
 #: kcmaccess.cpp:127
 #, kde-format
 msgid "Toggle Invert Effect"
-msgstr "Slå av/på omsnuingseffekt"
+msgstr "Slå på/av omsnuingseffekt"
 
 #: kcmaccess.cpp:133
 #, kde-format
 msgid "Toggle Invert Effect on Window"
-msgstr "Slå av/på omsnuingseffekt på vindauge"
+msgstr "Slå på/av omsnuingseffekt på vindauge"
 
 #: kcmaccess.cpp:175
 #, kde-format
@@ -333,29 +333,28 @@ msgid "Opens dialog"
 msgstr ""
 
 #: ui/Bell.qml:93
-#, fuzzy, kde-format
-#| msgid "Visual bell:"
+#, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Visual bell:"
 msgstr "Visuell bjølle:"
 
 #: ui/Bell.qml:94
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check Enable visual bell"
 msgid "Enable"
 msgstr "Slå på"
 
 #: ui/Bell.qml:108
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
-msgstr "Negativ skjerm"
+msgstr "Snu om skjermfargar"
 
 #: ui/Bell.qml:126
 #, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
-msgstr ""
+msgstr "Blink skjermen"
 
 #: ui/Bell.qml:137
 #, kde-format
@@ -370,20 +369,20 @@ msgid "Duration:"
 msgstr "Tid:"
 
 #: ui/Bell.qml:166
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:valuesuffix %1 is visible bell duration"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "1 minutt"
-msgstr[1] "%1 minutt"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
 
 #: ui/Bell.qml:170 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
 #, kde-format
 msgctxt "@label:valuesuffix short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ms"
+msgstr[1] "ms"
 
 #: ui/ColorblindnessCorrection.qml:21
 #, kde-format
@@ -392,9 +391,11 @@ msgid ""
 "If you have trouble with certain colors on the screen, these filters can "
 "change them into other colors."
 msgstr ""
+"Dersom du har problem med enkelte fargar på skjermen, kan desse filtra endra "
+"dei til andre fargar."
 
 #: ui/ColorblindnessCorrection.qml:31
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option check, Enable color blindness correction effect"
 msgid "Enable"
 msgstr "Slå på"
@@ -404,55 +405,55 @@ msgstr "Slå på"
 msgctxt ""
 "@label:listbox Difficulty seeing any of the following colors on the screen"
 msgid "Problematic colors:"
-msgstr ""
+msgstr "Problematiske fargar:"
 
 #: ui/ColorblindnessCorrection.qml:49
 #, kde-format
 msgctxt "@option"
 msgid "Red & purple (Protanopia)"
-msgstr ""
+msgstr "Raud og lilla (protanopi)"
 
 #: ui/ColorblindnessCorrection.qml:50
 #, kde-format
 msgctxt "@option"
 msgid "Green & purple (Deuteranopia)"
-msgstr ""
+msgstr "Grøn og lilla (deuteranopi)"
 
 #: ui/ColorblindnessCorrection.qml:51
 #, kde-format
 msgctxt "@option"
 msgid "Yellow, green & purple (Tritanopia)"
-msgstr ""
+msgstr "gul, grøn og lilla (tritanopi)"
 
 #: ui/ColorblindnessCorrection.qml:52
 #, kde-format
 msgctxt "@option"
 msgid "All (grayscale mode)"
-msgstr ""
+msgstr "Alle (gråtonemodus)"
 
 #: ui/ColorblindnessCorrection.qml:67
 #, kde-format
 msgctxt "@label"
 msgid "Intensity:"
-msgstr ""
+msgstr "Intensitet:"
 
 #: ui/ColorblindnessCorrection.qml:90
 #, kde-format
 msgctxt "@label Mild color blindness correction intensity"
 msgid "Mild"
-msgstr ""
+msgstr "Mild"
 
 #: ui/ColorblindnessCorrection.qml:97
 #, kde-format
 msgctxt "@label Intense color blindness correction intensity"
 msgid "Intense"
-msgstr ""
+msgstr "Intens"
 
 #: ui/ColorblindnessCorrection.qml:115
 #, kde-format
 msgctxt "@info"
 msgid "Adjusted colors:"
-msgstr ""
+msgstr "Justerte fargar:"
 
 #: ui/ColorblindnessCorrection.qml:132
 #, kde-format
@@ -482,10 +483,10 @@ msgstr "Lillafargar:"
 #, kde-format
 msgctxt "@label"
 msgid "Invert:"
-msgstr ""
+msgstr "Snu fargane:"
 
 #: ui/Invert.qml:23
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option check, Enable invert effect"
 msgid "Enable"
 msgstr "Slå på"
@@ -497,21 +498,19 @@ msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr ""
 
 #: ui/Invert.qml:49 ui/ZoomMagnifier.qml:372
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
-msgstr "Set opp varslingar …"
+msgstr "Set opp snøggtastar …"
 
 #: ui/KeyboardFilters.qml:18
-#, fuzzy, kde-format
-#| msgid "Slow keys:"
+#, kde-format
 msgctxt "@title:group prefix"
 msgid "Slow keys:"
 msgstr "Trege tastar:"
 
 #: ui/KeyboardFilters.qml:23
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check Enable slow keys"
 msgid "Enable"
 msgstr "Slå på"
@@ -526,62 +525,52 @@ msgid ""
 msgstr ""
 
 #: ui/KeyboardFilters.qml:41
-#, fuzzy, kde-format
-#| msgctxt "Slow keys Delay"
-#| msgid "Delay:"
+#, kde-format
 msgctxt "@label:spinbox Slow keys Delay"
 msgid "Delay:"
 msgstr "Forseinking:"
 
 #: ui/KeyboardFilters.qml:56
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:valuesuffix %1 is slow keys delay"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "1 minutt"
-msgstr[1] "%1 minutt"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
 
 #: ui/KeyboardFilters.qml:74
-#, fuzzy, kde-format
-#| msgid "Ring system bell:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Ring system bell:"
 msgstr "Ring systembjølla:"
 
 # Stor forbokstav for konsistens med lignande radioknappar i andre modular.
 #: ui/KeyboardFilters.qml:75
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is pressed"
-#| msgid "when any key is &pressed"
+#, kde-format
 msgctxt "@option:check Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "Ved vilkårleg &tastetrykk"
 
 #: ui/KeyboardFilters.qml:89
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is accepted"
-#| msgid "when any key is &accepted"
+#, kde-format
 msgctxt "@option:check Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "Når vilkårleg tastetrykk vert &godteke"
 
 #: ui/KeyboardFilters.qml:103
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is rejected"
-#| msgid "when any key is &rejected"
+#, kde-format
 msgctxt "@option:check Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "Når vilkårleg tastetrykk vert &avvist"
 
 #: ui/KeyboardFilters.qml:119
-#, fuzzy, kde-format
-#| msgid "Bounce keys:"
+#, kde-format
 msgctxt "@title:group prefix"
 msgid "Bounce keys:"
 msgstr "Filtertastar:"
 
 #: ui/KeyboardFilters.qml:124
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check Bounce keys enable"
 msgid "Enable"
 msgstr "Slå på"
@@ -596,24 +585,21 @@ msgid ""
 msgstr ""
 
 #: ui/KeyboardFilters.qml:142
-#, fuzzy, kde-format
-#| msgctxt "Slow keys Delay"
-#| msgid "Delay:"
+#, kde-format
 msgctxt "@label:spinbox Bounce keys delay"
 msgid "Delay:"
 msgstr "Forseinking:"
 
 #: ui/KeyboardFilters.qml:157
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:valuesuffix %1 is bounce keys delay"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "1 minutt"
-msgstr[1] "%1 minutt"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
 
 #: ui/KeyboardFilters.qml:171
-#, fuzzy, kde-format
-#| msgid "Ring system bell when rejected"
+#, kde-format
 msgctxt "@option:check for bounce keys"
 msgid "Ring system bell when rejected"
 msgstr "Ring systembjølla ved avvising"
@@ -625,39 +611,31 @@ msgid "Zoom & Magnifier"
 msgstr ""
 
 #: ui/main.qml:33
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "System Bell"
-msgstr "Bruk systembjølle"
+msgstr "Systembjølle"
 
 #: ui/main.qml:38
-#, fuzzy, kde-format
-#| msgctxt "System Modifier Keys"
-#| msgid "Modifier Keys"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Modifier Keys"
 msgstr "Valtastar"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgctxt "System keyboard filters"
-#| msgid "Keyboard Filters"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Keyboard Filters"
 msgstr "Tastefilter"
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgctxt "System mouse navigation"
-#| msgid "Mouse Navigation"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Mouse Navigation"
 msgstr "Musestyring"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgctxt "System mouse navigation"
-#| msgid "Screen Reader"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "Skjermlesar"
@@ -672,24 +650,22 @@ msgstr "Korrigering for fargeblindskap"
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
-msgstr ""
+msgstr "Snu fargane"
 
 #: ui/main.qml:68
-#, fuzzy, kde-format
-#| msgctxt "Shake cursor to find it"
-#| msgid "Shake Cursor"
+#, kde-format
 msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
-msgstr "Rist på peikaren"
+msgstr "Rist musepeikaren"
 
 #: ui/ModifierKeys.qml:17
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Sticky keys:"
 msgstr "Faste valtastar:"
 
 #: ui/ModifierKeys.qml:22
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
 msgstr "Slå på"
@@ -704,7 +680,7 @@ msgid ""
 msgstr ""
 
 #: ui/ModifierKeys.qml:39
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Lock sticky keys"
 msgstr "Lås faste valtastar"
@@ -718,27 +694,25 @@ msgid ""
 msgstr ""
 
 #: ui/ModifierKeys.qml:57
-#, fuzzy, kde-format
-#| msgid "Disable when two keys are held down"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable when two keys are held down"
 msgstr "Slå av når to tastar vert haldne nede"
 
 #: ui/ModifierKeys.qml:70
-#, fuzzy, kde-format
-#| msgid "Ring system bell when modifier keys are used"
+#, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when modifier keys are used"
 msgstr "Ring systembjølla når valtastar vert brukte"
 
 #: ui/ModifierKeys.qml:88
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
 msgstr "Tilbakemelding:"
 
 #: ui/ModifierKeys.qml:93
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when locking keys are used"
 msgstr "Ring systembjølla når låsetastar vert slegne på/av"
@@ -750,25 +724,25 @@ msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
 msgstr ""
 
 #: ui/ModifierKeys.qml:108
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
 msgstr "Vis varsling når val- eller låsetastar vert brukte"
 
 #: ui/ModifierKeys.qml:120
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Notifications…"
 msgstr "Set opp varslingar …"
 
 #: ui/MouseNavigation.qml:17
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move pointer:"
 msgstr "Bruk taltastaturet til å flytta peikaren:"
 
 #: ui/MouseNavigation.qml:22
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "Slå på"
@@ -787,18 +761,18 @@ msgid ""
 msgstr ""
 
 #: ui/MouseNavigation.qml:39
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "Forseinking for akselerasjon:"
 
 #: ui/MouseNavigation.qml:53
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:valuesuffix acceleration delay spinbox %1 is value"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "1 minutt"
-msgstr[1] "%1 minutt"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
 
 #: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
 #: ui/MouseNavigation.qml:114
@@ -806,107 +780,99 @@ msgstr[1] "%1 minutt"
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
+msgstr[0] "ms"
 msgstr[1] ""
 
 #: ui/MouseNavigation.qml:66
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Gjentakingsintervall:"
 
 #: ui/MouseNavigation.qml:84
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:valuesuffix repeat interval spinbox %1 is value"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "1 minutt"
-msgstr[1] "%1 minutt"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
 
 #: ui/MouseNavigation.qml:93
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Akselerasjonstid:"
 
 #: ui/MouseNavigation.qml:110
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "1 minutt"
-msgstr[1] "%1 minutt"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
 
 #: ui/MouseNavigation.qml:118
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
-msgstr "Høgste fart:"
+msgstr "Høgaste fart:"
 
 #: ui/MouseNavigation.qml:132
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
 msgstr "Peikarakselerasjon:"
 
 #: ui/ScreenReader.qml:20
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info Placeholder message title"
 msgid "The Orca Screen Reader is not installed"
-msgstr "Set opp skjermlesaren Orca …"
+msgstr "Skjermlesaren Orca er ikkje installert"
 
 #: ui/ScreenReader.qml:21
 #, kde-format
 msgctxt "@info Placeholder message explanation"
 msgid "Please install it, then close and reopen this window"
-msgstr ""
+msgstr "Installer han, og så lukk og opna dette vindauget på nytt"
 
 #: ui/ScreenReader.qml:27
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Screen Reader"
 msgstr "Bruk skjermlesar"
 
 #: ui/ScreenReader.qml:39
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Set opp skjermlesaren Orca …"
 
 #: ui/ShakeCursor.qml:15
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Shake cursor to find it:"
+#, kde-format
 msgctxt "@label"
 msgid "Shake pointer to find it:"
 msgstr "Rist på peikaren for å finna han:"
 
 #: ui/ShakeCursor.qml:16
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option check, Enable shake pointer effect"
 msgid "Enable"
 msgstr "Slå på"
 
 #: ui/ShakeCursor.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@label Cursor magnification level"
-#| msgid "Magnification:"
+#, kde-format
 msgctxt "@label Pointer magnification level"
 msgid "Magnification:"
 msgstr "Forstørring:"
 
 #: ui/ShakeCursor.qml:56
-#, fuzzy, kde-format
-#| msgctxt "@label Normal cursor size"
-#| msgid "Normal"
+#, kde-format
 msgctxt "@label Normal pointer size"
 msgid "Normal"
 msgstr "Vanleg"
 
 #: ui/ShakeCursor.qml:63
-#, fuzzy, kde-format
-#| msgctxt "@label Large cursor size"
-#| msgid "Large"
+#, kde-format
 msgctxt "@label Large pointer size"
 msgid "Large"
 msgstr "Stor"
@@ -915,31 +881,31 @@ msgstr "Stor"
 #, kde-format
 msgctxt "@label, followed by 'full screen' or 'magnify region'"
 msgid "Zoom:"
-msgstr ""
+msgstr "Forstørring:"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format
 msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
 msgid "Full screen"
-msgstr ""
+msgstr "Fullskjerm"
 
 #: ui/ZoomMagnifier.qml:53
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Show pixel grid at zoom level:"
-msgstr ""
+msgstr "Vis pikselrutenett ved forstørringsnivå:"
 
 #: ui/ZoomMagnifier.qml:108
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer tracking:"
-msgstr "Peikarakselerasjon:"
+msgstr "Peikarsporing:"
 
 #: ui/ZoomMagnifier.qml:113
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
-msgstr ""
+msgstr "Proporsjonal"
 
 #: ui/ZoomMagnifier.qml:114
 #, kde-format
@@ -951,7 +917,7 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
-msgstr ""
+msgstr "Sentrert"
 
 #: ui/ZoomMagnifier.qml:119
 #, kde-format
@@ -987,7 +953,7 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
-msgstr ""
+msgstr "Slått av"
 
 #: ui/ZoomMagnifier.qml:134
 #, kde-format
@@ -1005,7 +971,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable focus tracking"
-msgstr ""
+msgstr "Bruk fokusfølging"
 
 #: ui/ZoomMagnifier.qml:174
 #, kde-format
@@ -1024,15 +990,15 @@ msgstr "Forstørring"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
-msgstr ""
+msgstr "Breidd:"
 
 #: ui/ZoomMagnifier.qml:228 ui/ZoomMagnifier.qml:253
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
 msgid_plural "%1 px"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 pikslar"
+msgstr[1] "%1 pikslar"
 
 #: ui/ZoomMagnifier.qml:229 ui/ZoomMagnifier.qml:254
 #, kde-format
@@ -1044,13 +1010,13 @@ msgstr ""
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
-msgstr ""
+msgstr "Høgd:"
 
 #: ui/ZoomMagnifier.qml:271
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
-msgstr ""
+msgstr "Slått av"
 
 #: ui/ZoomMagnifier.qml:284
 #, kde-format
