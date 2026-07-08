@@ -151,8 +151,15 @@ Item {
                 fadeoutTimer.restart();
             }
         }
-        onExited: {
-            uiVisible = false;
+        ScreenLocker.ActiveScreenMonitor {
+            id: activeScreenMonitor
+            lockscreenState: ScreenLocker.LockscreenState
+            window: lockScreenRoot.Window.window
+            onActiveChanged: {
+                if(!active) {
+                    lockScreenRoot.uiVisible = false;
+                }
+            }
         }
         Keys.onEscapePressed: {
             // If the escape key is pressed, kscreenlocker will turn off the screen.
