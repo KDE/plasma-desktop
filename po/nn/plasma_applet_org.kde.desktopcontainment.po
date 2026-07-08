@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-30 02:35+0000\n"
-"PO-Revision-Date: 2026-07-06 20:58+0200\n"
+"PO-Revision-Date: 2026-07-07 18:42+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -158,11 +158,10 @@ msgid "In Rows"
 msgstr "I rader"
 
 #: package/contents/ui/ConfigIcons.qml:139
-#, fuzzy, kde-format
-#| msgid "Sorting:"
+#, kde-format
 msgctxt "@label:listbox, LtR/RtL"
 msgid "Sort Alignment:"
-msgstr "Sortering:"
+msgstr "Sorteringsretning:"
 
 #: package/contents/ui/ConfigIcons.qml:142
 #, kde-format
@@ -267,11 +266,10 @@ msgid "Large"
 msgstr "Stor"
 
 #: package/contents/ui/ConfigIcons.qml:271
-#, fuzzy, kde-format
-#| msgid "Label width:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Label width:"
-msgstr "Skriftbreidd:"
+msgstr "Breidd på namnelapp:"
 
 #: package/contents/ui/ConfigIcons.qml:274
 #, kde-format
@@ -320,7 +318,7 @@ msgstr "Vis utvalsmarkør"
 #, kde-format
 msgctxt "@option:check When hovering over icons…"
 msgid "Show folder preview popups"
-msgstr "Vis infobobler for førehandsvising av mapper"
+msgstr "Vis infoboble med førehandsvising av mappe"
 
 #: package/contents/ui/ConfigIcons.qml:328
 #, kde-format
@@ -388,11 +386,12 @@ msgctxt "@option:radio"
 msgid "Files linked to the current activity"
 msgstr "Filer kopla til den gjeldande aktiviteten"
 
+# Viser ei av mappene som er tilgjengeleg under «Stad» i sidestolpen i Dolphin.
 #: package/contents/ui/ConfigLocation.qml:100
 #, kde-format
 msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
-msgstr "Panelkategorien «Stadar»:"
+msgstr "Mappe under «Stadar»:"
 
 #: package/contents/ui/ConfigLocation.qml:137
 #, kde-format
@@ -467,8 +466,7 @@ msgid "Remove"
 msgstr "Fjern"
 
 #: package/contents/ui/FolderItemPreviewPluginsDialog.qml:18
-#, fuzzy, kde-format
-#| msgid "Preview Plugins"
+#, kde-format
 msgctxt "@title:window"
 msgid "Preview Plugins"
 msgstr "Tillegg for førehandsvising"
@@ -694,7 +692,7 @@ msgstr "I rader"
 #: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format
 msgid "Sort Alignment"
-msgstr ""
+msgstr "Sorteringsretning"
 
 #: plugins/folder/viewpropertiesmenu.cpp:83
 #, kde-format

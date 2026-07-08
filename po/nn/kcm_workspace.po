@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-30 02:35+0000\n"
-"PO-Revision-Date: 2026-06-24 20:48+0200\n"
+"PO-Revision-Date: 2026-07-07 18:50+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.07.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -61,6 +61,10 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"Lèt alle Plasma-panel og skjerm­element visa hjelpe­bobler med informasjon når "
+"peikaren er over. Denne innstillinga har ingen effekt på dei små hjelpe­"
+"boblene som vert viste når du held peikaren over knappar og andre brukarflate­"
+"element."
 
 #: ui/main.qml:70
 #, kde-format
@@ -70,14 +74,14 @@ msgid "OSD popups for status changes"
 msgstr "Skjermmeldings-sprettopp for statusendringar"
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
-"Vis ei melding på skjermen ved statusendringar, for eksempel for lys- eller "
-"lydstyrke."
+"Lèt alle Plasma-element visa skjerm­meldingar (OSD) der du kan endra for "
+"eksempel lyd- og lysstyrke eller byta opptaks­eining for lyd."
 
 #: ui/main.qml:88
 #, kde-format
@@ -244,6 +248,7 @@ msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr "Spør alltid om kva som skal gjerast"
 
+# Ctrl + Shift i staden for Shift + Ctrl, då dette er standard skrivemåte.
 #: ui/main.qml:314
 #, kde-kuit-format
 msgctxt "@info"
@@ -252,6 +257,9 @@ msgid ""
 "and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
 "dialog."
 msgstr ""
+"Hald inne <shortcut>Shift</shortcut> for å flytta, <shortcut>Ctrl</shortcut> "
+"for å kopiera og <shortcut>Ctrl + Shift</shortcut> for å oppretta symbolsk "
+"lenkje. Vis elles dialogvindauge."
 
 #: ui/main.qml:327
 #, kde-format
