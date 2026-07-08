@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2024-05-04 22:45+0900\n"
+"PO-Revision-Date: 2026-07-06 00:57+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -21,88 +21,105 @@ msgstr ""
 "X-Generator: Lokalize 26.04.2\n"
 
 #: package/contents/config/config.qml:16
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Location"
 msgid "Location"
 msgstr "場所"
 
 #: package/contents/config/config.qml:23
 #: package/contents/ui/FolderViewLayer.qml:435
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icons"
 msgid "Icons"
 msgstr "アイコン"
 
 #: package/contents/config/config.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Filter"
 msgid "Filter"
 msgstr "フィルタ"
 
 #: package/contents/ui/BackButtonItem.qml:103
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Back"
 msgid "Back"
 msgstr "戻る"
 
 #: package/contents/ui/ConfigFilter.qml:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Files:"
 msgid "Files:"
 msgstr "ファイル:"
 
 #: package/contents/ui/ConfigFilter.qml:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show all"
 msgid "Show all"
 msgstr "すべて表示"
 
 #: package/contents/ui/ConfigFilter.qml:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show matching"
 msgid "Show matching"
 msgstr "マッチするファイルを表示"
 
 #: package/contents/ui/ConfigFilter.qml:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hide matching"
 msgid "Hide matching"
 msgstr "マッチするファイルを隠す"
 
 #: package/contents/ui/ConfigFilter.qml:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File name pattern:"
 msgid "File name pattern:"
 msgstr "ファイル名パターン:"
 
 #: package/contents/ui/ConfigFilter.qml:77
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File types:"
 msgid "File types:"
 msgstr "ファイルタイプ:"
 
 #: package/contents/ui/ConfigFilter.qml:83
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show hidden files:"
 msgid "Show hidden files:"
 msgstr "隠しファイルを表示:"
 
 #: package/contents/ui/ConfigFilter.qml:179
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "File type"
 msgid "File type"
 msgstr "ファイルタイプ"
 
 #: package/contents/ui/ConfigFilter.qml:188
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Description"
 msgid "Description"
 msgstr "説明"
 
 #: package/contents/ui/ConfigFilter.qml:201
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select All"
 msgid "Select All"
 msgstr "すべて選択"
 
 #: package/contents/ui/ConfigFilter.qml:211
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Deselect All"
 msgid "Deselect All"
 msgstr "すべて選択解除"
 
 #: package/contents/ui/ConfigIcons.qml:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Panel button:"
 msgid "Panel button:"
 msgstr "パネルのボタン:"
 
 #: package/contents/ui/ConfigIcons.qml:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use a custom icon"
 msgid "Use a custom icon"
 msgstr "カスタムアイコンを使う"
 
@@ -119,47 +136,60 @@ msgid "Clear Icon"
 msgstr "アイコンをクリア"
 
 #: package/contents/ui/ConfigIcons.qml:128
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Arrangement:"
 msgid "Arrangement:"
 msgstr "配置:"
 
 #: package/contents/ui/ConfigIcons.qml:132
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox arrangement of icons"
+#| msgid "Left to Right"
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Left to Right"
 msgstr "左から右"
 
 #: package/contents/ui/ConfigIcons.qml:133
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox arrangement of icons"
+#| msgid "Right to Left"
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Right to Left"
 msgstr "右から左"
 
 #: package/contents/ui/ConfigIcons.qml:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox arrangement of icons"
+#| msgid "Top to Bottom"
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Top to Bottom"
 msgstr "上から下"
 
 #: package/contents/ui/ConfigIcons.qml:143
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox alignment of icons"
+#| msgid "Align left"
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align left"
 msgstr "左揃え"
 
 #: package/contents/ui/ConfigIcons.qml:144
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox alignment of icons"
+#| msgid "Align right"
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align right"
 msgstr "右揃え"
 
 #: package/contents/ui/ConfigIcons.qml:159
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Lock in place"
 msgid "Lock in place"
 msgstr "位置を固定する"
 
 #: package/contents/ui/ConfigIcons.qml:173
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sorting:"
 msgid "Sorting:"
 msgstr "ソート:"
 
@@ -224,24 +254,30 @@ msgid "Grid"
 msgstr "グリッド"
 
 #: package/contents/ui/ConfigIcons.qml:232
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Icon size:"
 msgid "Icon size:"
 msgstr "アイコンサイズ:"
 
 #: package/contents/ui/ConfigIcons.qml:247
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider smallest icon size"
+#| msgid "Small"
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "小"
 
 #: package/contents/ui/ConfigIcons.qml:256
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:slider largest icon size"
+#| msgid "Large"
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "大"
 
 #: package/contents/ui/ConfigIcons.qml:265
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Label width:"
 msgid "Label width:"
 msgstr "ラベルの幅:"
 
@@ -264,142 +300,170 @@ msgid "Wide"
 msgstr "広め"
 
 #: package/contents/ui/ConfigIcons.qml:278
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Text lines:"
 msgid "Text lines:"
 msgstr "テキスト行数:"
 
 #: package/contents/ui/ConfigIcons.qml:294
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "When hovering over icons:"
 msgid "When hovering over icons:"
 msgstr "アイコンにカーソルを重ねたとき:"
 
 #: package/contents/ui/ConfigIcons.qml:296
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show tooltips"
 msgid "Show tooltips"
 msgstr "ツールチップを表示"
 
 #: package/contents/ui/ConfigIcons.qml:303
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show selection markers"
 msgid "Show selection markers"
 msgstr "選択マーカーを表示"
 
 #: package/contents/ui/ConfigIcons.qml:310
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show folder preview popups"
 msgid "Show folder preview popups"
 msgstr "フォルダプレビューポップアップを表示"
 
 #: package/contents/ui/ConfigIcons.qml:320
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename:"
 msgid "Rename:"
 msgstr "名前変更:"
 
 #: package/contents/ui/ConfigIcons.qml:324
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename inline by clicking selected item's text"
 msgid "Rename inline by clicking selected item's text"
 msgstr "選択されたアイテムのテキストをクリックして名前を変更"
 
 #: package/contents/ui/ConfigIcons.qml:335
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Previews:"
 msgid "Previews:"
 msgstr "プレビュー:"
 
 #: package/contents/ui/ConfigIcons.qml:337
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show preview thumbnails"
 msgid "Show preview thumbnails"
 msgstr "プレビューのサムネイルを表示"
 
 #: package/contents/ui/ConfigIcons.qml:345
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Preview Plugins…"
 msgid "Configure Preview Plugins…"
 msgstr "プレビュー用のプラグインを設定..."
 
 #: package/contents/ui/ConfigLocation.qml:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show:"
 msgid "Show:"
 msgstr "表示:"
 
 #: package/contents/ui/ConfigLocation.qml:83
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Desktop folder"
 msgid "Desktop folder"
 msgstr "デスクトップフォルダ"
 
 #: package/contents/ui/ConfigLocation.qml:90
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Files linked to the current activity"
 msgid "Files linked to the current activity"
 msgstr "現在のアクティビティにリンクされたファイル"
 
 #: package/contents/ui/ConfigLocation.qml:97
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Places panel item:"
 msgid "Places panel item:"
 msgstr "場所パネルのアイテム:"
 
 #: package/contents/ui/ConfigLocation.qml:130
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom location:"
 msgid "Custom location:"
 msgstr "特定の場所:"
 
 #: package/contents/ui/ConfigLocation.qml:138
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Type path or URL…"
 msgid "Type path or URL…"
 msgstr "パスまたは URL を入力..."
 
 #: package/contents/ui/ConfigLocation.qml:181
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Title:"
 msgid "Title:"
 msgstr "タイトル:"
 
 #: package/contents/ui/ConfigLocation.qml:183
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "None"
 msgid "None"
 msgstr "なし"
 
 #: package/contents/ui/ConfigLocation.qml:183
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Default"
 msgid "Default"
 msgstr "標準"
 
 #: package/contents/ui/ConfigLocation.qml:183
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Full path"
 msgid "Full path"
 msgstr "フルパス"
 
 #: package/contents/ui/ConfigLocation.qml:183
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom title"
 msgid "Custom title"
 msgstr "カスタムタイトル"
 
 #: package/contents/ui/ConfigLocation.qml:198
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enter custom title…"
 msgid "Enter custom title…"
 msgstr "ここにカスタムタイトルを入力..."
 
 #: package/contents/ui/ConfigOverlay.qml:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rotate"
 msgid "Rotate"
 msgstr "回転"
 
 #: package/contents/ui/ConfigOverlay.qml:181
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Externally"
 msgid "Open Externally"
 msgstr "外部で開く"
 
 #: package/contents/ui/ConfigOverlay.qml:193
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hide Background"
 msgid "Hide Background"
 msgstr "背景を隠す"
 
 #: package/contents/ui/ConfigOverlay.qml:193
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Background"
 msgid "Show Background"
 msgstr "背景を表示する"
 
 #: package/contents/ui/ConfigOverlay.qml:241
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove"
 msgid "Remove"
 msgstr "削除"
 
 #: package/contents/ui/FolderItemPreviewPluginsDialog.qml:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preview Plugins"
 msgid "Preview Plugins"
 msgstr "プラグインをプレビュー"
 
@@ -415,7 +479,8 @@ msgstr ""
 "動させることを検討してください。"
 
 #: package/contents/ui/main.qml:356
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Desktop and Wallpaper…"
 msgid "Configure Desktop and Wallpaper…"
 msgstr "デスクトップと壁紙を設定..."
 
@@ -440,7 +505,9 @@ msgid "&Empty Trash"
 msgstr "ごみ箱を空にする(&E)"
 
 #: plugins/folder/foldermodel.cpp:1644
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "Restore from trash"
+#| msgid "Restore"
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "復元(&R)"
@@ -561,36 +628,47 @@ msgid "Arrange"
 msgstr "整列"
 
 #: plugins/folder/viewpropertiesmenu.cpp:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inmenu arrangement of icons"
+#| msgid "Left to Right"
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Left to Right"
 msgstr "左から右"
 
 #: plugins/folder/viewpropertiesmenu.cpp:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inmenu arrangement of icons"
+#| msgid "Right to Left"
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Right to Left"
 msgstr "右から左"
 
 #: plugins/folder/viewpropertiesmenu.cpp:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inmenu arrangement of icons"
+#| msgid "Top to Bottom"
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Top to Bottom"
 msgstr "上から下"
 
 #: plugins/folder/viewpropertiesmenu.cpp:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Align"
 msgid "Align"
 msgstr "整列"
 
 #: plugins/folder/viewpropertiesmenu.cpp:84
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inmenu alignment of icons"
+#| msgid "Left"
 msgctxt "@item:inmenu alignment of icons"
 msgid "Left"
 msgstr "左"
 
 #: plugins/folder/viewpropertiesmenu.cpp:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inmenu alignment of icons"
+#| msgid "Right"
 msgctxt "@item:inmenu alignment of icons"
 msgid "Right"
 msgstr "右"
