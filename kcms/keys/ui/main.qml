@@ -400,6 +400,8 @@ KCM.AbstractKCM {
 
                         model: DelegateModel {
                             id: dm
+
+                            onRootIndexChanged: shortcutsList.positionViewAtBeginning()
                             model: rootIndex.valid ?  kcm.filteredModel : undefined
                             delegate: ShortcutActionDelegate {
                                 showExpandButton: shortcutsList.count > 1
