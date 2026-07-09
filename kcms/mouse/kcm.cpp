@@ -58,13 +58,6 @@ KCMMouse::KCMMouse(QObject *parent, const KPluginMetaData &data, [[maybe_unused]
 
     m_inputBackend = std::make_unique<InputBackend>();
 
-    if (!m_inputBackend) {
-        m_initError = true;
-        setSaveLoadMessage(Message::error(i18n("Not able to select appropriate backend")));
-        qCCritical(KCM_MOUSE) << "Not able to select appropriate backend.";
-        return;
-    }
-
     m_initError = !m_inputBackend->errorString().isNull();
 
     if (m_initError) {
