@@ -18,7 +18,6 @@ class InputBackend : public QObject
     Q_OBJECT
 
     Q_PROPERTY(QList<InputDevice *> inputDevices READ inputDevices NOTIFY inputDevicesChanged FINAL)
-    Q_PROPERTY(bool isAnonymousInputDevice READ isAnonymousInputDevice CONSTANT FINAL)
     Q_PROPERTY(QVariantMap buttonMapping READ buttonMapping WRITE setButtonMapping NOTIFY buttonMappingChanged FINAL)
     Q_PROPERTY(int buttonMappingCount READ buttonMappingCount NOTIFY buttonMappingChanged STORED false FINAL)
 
@@ -57,11 +56,6 @@ public:
     virtual int deviceCount() const
     {
         return 0;
-    }
-
-    virtual bool isAnonymousInputDevice() const
-    {
-        return false;
     }
 
     virtual QList<InputDevice *> inputDevices() const

@@ -37,9 +37,6 @@ KCMUtils.SimpleKCM {
         text: i18ndc("kcmmouse", "@action:button", "Configure Extra Buttons…")
 
         visible: {
-            if (root.backend.isAnonymousInputDevice) {
-                return false;
-            }
             return root.backend.buttonMappingCount > 0
                 || root.backend.inputDevices.some(root.supportsExtraButtons);
         }
@@ -61,7 +58,6 @@ KCMUtils.SimpleKCM {
         Kirigami.FormGroup {
             // Device
             Kirigami.FormEntry {
-                visible: !root.backend.isAnonymousInputDevice
                 enabled: deviceSelector.count > 1
                 contentItem: QQC2.ComboBox {
                     id: deviceSelector
@@ -84,7 +80,6 @@ KCMUtils.SimpleKCM {
 
             // General
             Kirigami.FormEntry {
-                visible: !root.backend.isAnonymousInputDevice
                 enabled: root.device?.supportsDisableEvents ?? false
                 contentItem: QQC2.CheckBox {
                     id: deviceEnabled
@@ -245,7 +240,6 @@ KCMUtils.SimpleKCM {
             Kirigami.FormSeparator {}
 
             Kirigami.FormEntry {
-                visible: !root.backend.isAnonymousInputDevice
                 // Scroll Speed aka scroll Factor
                 contentItem: GridLayout {
                     Kirigami.FormData.label: i18ndc("kcmmouse", "@label:slider and @label:spinbox", "Scrolling speed:")
