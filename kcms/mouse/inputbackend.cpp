@@ -7,17 +7,21 @@
 #include "inputbackend.h"
 #include "logging.h"
 
+#include <KLocalizedString>
+#include <KSharedConfig>
 #include <KWindowSystem>
 
+#include <QKeySequence>
 #include <qqml.h>
 
-#include "backends/kwin_wl/kwin_wl_backend.h"
+#include "devicesmodel.h"
+#include "logging.h"
 
 std::unique_ptr<InputBackend> InputBackend::create()
 {
     if (KWindowSystem::isPlatformWayland()) {
         qCDebug(KCM_MOUSE) << "Using KWin+Wayland backend";
-        return std::make_unique<KWinWaylandBackend>();
+        return std::make_unique<InputBackend>();
     }
 
     qCCritical(KCM_MOUSE) << "Not able to select appropriate backend.";
@@ -26,7 +30,185 @@ std::unique_ptr<InputBackend> InputBackend::create()
 
 void InputBackend::registerImplementationTypes(const char *uri)
 {
-    qmlRegisterUncreatableType<KWinWaylandBackend>(uri, 1, 0, "KWinWaylandBackend", QString());
+    qmlRegisterUncreatableType<InputBackend>(uri, 1, 0, "KWinWaylandBackend", QString());
+}
+
+InputBackend::InputBackend()
+    : QObject()
+    , m_devicesModel(new KWinDevices::DevicesModel(KWinDevices::DevicesModel::Kind::Pointers, {{QStringLiteral("touchpad"), false}}, this))
+{
+    connect(m_devicesModel, &QAbstractItemModel::rowsInserted, this, &InputBackend::onDeviceRowsInserted);
+    connect(m_devicesModel, &QAbstractItemModel::rowsAboutToBeRemoved, this, &InputBackend::onDeviceRowsAboutToBeRemoved);
+
+    connect(this, &InputBackend::buttonMappingChanged, this, &InputBackend::needsSaveChanged);
+
+    findDevices();
+}
+
+InputBackend::~InputBackend()
+{
+}
+
+void InputBackend::findDevices()
+{
+    for (int i = 0; i < m_devicesModel->rowCount(QModelIndex()); ++i) {
+        const QString sysName = m_devicesModel->index(i).data(KWinDevices::DevicesModel::SysNameRole).toString();
+
+        auto dev = std::make_unique<KWinWaylandDevice>(sysName);
+        if (!dev->init()) {
+            qCCritical(KCM_MOUSE) << "Error on creating device object" << sysName;
+            m_errorString = i18n("Critical error on reading fundamental device infos of %1.", sysName);
+            return;
+        }
+        connect(dev.get(), &KWinWaylandDevice::needsSaveChanged, this, &InputBackend::needsSaveChanged);
+        qCDebug(KCM_MOUSE).nospace() << "Device found: " << dev->name() << " (" << dev->sysName() << ")";
+        m_devices.push_back(std::move(dev));
+    }
+}
+
+bool InputBackend::forAllDevices(bool (KWinWaylandDevice::*f)()) const
+{
+    bool ok = true;
+    for (const auto &device : std::as_const(m_devices)) {
+        ok &= (device.get()->*f)();
+    }
+    return ok;
+}
+
+KConfigGroup InputBackend::mouseButtonRebindsConfigGroup()
+{
+    return KSharedConfig::openConfig(u"kcminputrc"_s)->group(u"ButtonRebinds"_s).group(u"Mouse"_s);
+}
+
+bool InputBackend::save()
+{
+    KConfigGroup buttonGroup = mouseButtonRebindsConfigGroup();
+
+    for (const auto &[buttonName, variant] : std::as_const(m_buttonMapping).asKeyValueRange()) {
+        if (const auto keySequence = variant.value<QKeySequence>(); !keySequence.isEmpty()) {
+            const auto value = QStringList{u"Key"_s, keySequence.toString(QKeySequence::PortableText)};
+            buttonGroup.writeEntry(buttonName, value, KConfig::Notify);
+        } else {
+            buttonGroup.deleteEntry(buttonName, KConfig::Notify);
+        }
+    }
+
+    return forAllDevices(&KWinWaylandDevice::save);
+}
+
+bool InputBackend::load()
+{
+    m_loadedButtonMapping.clear();
+    const KConfigGroup buttonGroup = mouseButtonRebindsConfigGroup();
+
+    for (int i = 1; i <= 24; ++i) {
+        const auto buttonName = QLatin1String("ExtraButton%1").arg(QString::number(i));
+        const auto entry = buttonGroup.readEntry(buttonName, QStringList());
+        if (entry.size() == 2 && entry.first() == QLatin1String("Key")) {
+            if (const auto keySequence = QKeySequence::fromString(entry.at(1), QKeySequence::PortableText); !keySequence.isEmpty()) {
+                m_loadedButtonMapping.insert(buttonName, keySequence);
+            }
+        }
+    }
+    setButtonMapping(m_loadedButtonMapping);
+
+    return forAllDevices(&KWinWaylandDevice::init);
+}
+
+bool InputBackend::defaults()
+{
+    return forAllDevices(&KWinWaylandDevice::defaults);
+}
+
+bool InputBackend::isSaveNeeded() const
+{
+    return m_buttonMapping != m_loadedButtonMapping || std::ranges::any_of(std::as_const(m_devices), [](const std::unique_ptr<KWinWaylandDevice> &device) {
+               return device->isSaveNeeded();
+           });
+}
+
+QVariantMap InputBackend::buttonMapping() const
+{
+    return m_buttonMapping;
+}
+
+void InputBackend::setButtonMapping(const QVariantMap &mapping)
+{
+    if (m_buttonMapping != mapping) {
+        m_buttonMapping = mapping;
+        Q_EMIT buttonMappingChanged();
+    }
+}
+
+void InputBackend::onDeviceRowsInserted(const QModelIndex &parent, int first, int last)
+{
+    for (int i = first; i <= last; ++i) {
+        const QString sysName = m_devicesModel->index(i, 0, parent).data(KWinDevices::DevicesModel::SysNameRole).toString();
+
+        auto dev = std::make_unique<KWinWaylandDevice>(sysName);
+        if (!dev->init()) {
+            Q_EMIT deviceAdded(false);
+            return;
+        }
+
+        connect(dev.get(), &KWinWaylandDevice::needsSaveChanged, this, &InputBackend::needsSaveChanged);
+        qCDebug(KCM_MOUSE).nospace() << "Device connected: " << dev->name() << " (" << dev->sysName() << ")";
+        m_devices.push_back(std::move(dev));
+        Q_EMIT deviceAdded(true);
+        Q_EMIT inputDevicesChanged();
+    }
+}
+
+void InputBackend::onDeviceRowsAboutToBeRemoved(const QModelIndex &parent, int first, int last)
+{
+    bool deviceNeededSave = true;
+    for (int i = first; i <= last; ++i) {
+        const QString sysName = m_devicesModel->index(i, 0, parent).data(KWinDevices::DevicesModel::SysNameRole).toString();
+
+        const auto it = std::ranges::find_if(std::as_const(m_devices), [&sysName](const std::unique_ptr<KWinWaylandDevice> &device) {
+            return device->sysName() == sysName;
+        });
+        if (it == m_devices.cend()) {
+            continue;
+        }
+        const int index = std::distance(m_devices.cbegin(), it);
+
+        // delete at the end of the function, after change signals have been fired
+        std::unique_ptr<KWinWaylandDevice> dev = std::move(m_devices[index]);
+        m_devices.erase(m_devices.cbegin() + index);
+
+        deviceNeededSave &= dev->isSaveNeeded();
+        disconnect(dev.get(), nullptr, this, nullptr);
+
+        qCDebug(KCM_MOUSE).nospace() << "Device disconnected: " << dev->name() << " (" << sysName << ")";
+
+        Q_EMIT deviceRemoved(index);
+        Q_EMIT inputDevicesChanged();
+    }
+
+    if (deviceNeededSave) {
+        Q_EMIT needsSaveChanged();
+    }
+}
+
+QList<InputDevice *> InputBackend::inputDevices() const
+{
+    QList<InputDevice *> devices;
+    devices.reserve(m_devices.size());
+    for (const auto &device : m_devices) {
+        devices.append(device.get());
+    }
+    return devices;
+}
+
+int InputBackend::deviceCount() const
+{
+    return m_devices.size();
+}
+
+QString InputBackend::errorString() const
+{
+    return m_errorString;
 }
 
 #include <fixx11h.h>

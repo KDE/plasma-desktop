@@ -2,7 +2,6 @@
 
 target_sources(kcm_mouse
     PUBLIC
-        kwin_wl/kwin_wl_backend.cpp
         kwin_wl/kwin_wl_device.cpp
 )
 
