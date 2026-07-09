@@ -31,7 +31,6 @@ class InputBackend : public QObject
     Q_PROPERTY(int buttonMappingCount READ buttonMappingCount NOTIFY buttonMappingChanged STORED false FINAL)
 
 public:
-    static std::unique_ptr<InputBackend> create();
     static void registerImplementationTypes(const char *uri);
 
     explicit InputBackend();

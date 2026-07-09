@@ -56,7 +56,7 @@ KCMMouse::KCMMouse(QObject *parent, const KPluginMetaData &data, [[maybe_unused]
     qmlRegisterUncreatableType<InputDevice>(uri, 1, 0, "InputDevice", QString());
     InputBackend::registerImplementationTypes(uri);
 
-    m_inputBackend = InputBackend::create();
+    m_inputBackend = std::make_unique<InputBackend>();
 
     if (!m_inputBackend) {
         m_initError = true;

@@ -17,17 +17,6 @@
 #include "devicesmodel.h"
 #include "logging.h"
 
-std::unique_ptr<InputBackend> InputBackend::create()
-{
-    if (KWindowSystem::isPlatformWayland()) {
-        qCDebug(KCM_MOUSE) << "Using KWin+Wayland backend";
-        return std::make_unique<InputBackend>();
-    }
-
-    qCCritical(KCM_MOUSE) << "Not able to select appropriate backend.";
-    return nullptr;
-}
-
 void InputBackend::registerImplementationTypes(const char *uri)
 {
     qmlRegisterUncreatableType<InputBackend>(uri, 1, 0, "KWinWaylandBackend", QString());
