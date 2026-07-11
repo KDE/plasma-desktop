@@ -7,6 +7,7 @@ pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Window
+import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore

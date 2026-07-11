@@ -7,6 +7,7 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
+import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.plasma.private.keyboardindicator as KeyboardIndicator
