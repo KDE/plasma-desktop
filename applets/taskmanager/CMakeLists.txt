@@ -48,11 +48,13 @@ target_link_libraries(org.kde.plasma.taskmanager PRIVATE
                       Plasma::Activities
                       Plasma::ActivitiesStats
                       KF6::ConfigGui
+                      KF6::GlobalAccel
                       KF6::I18n
                       KF6::KIOCore
                       KF6::KIOGui
                       KF6::KIOFileWidgets # KFilePlacesModel
                       KF6::Notifications # KNotificationJobUiDelegate
+                      KF6::XmlGui
                       Plasma::Plasma
                       KSysGuard::ProcessCore
                       KF6::Service

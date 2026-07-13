@@ -233,8 +233,32 @@ PlasmoidItem {
     readonly property TaskManagerApplet.Backend backend: TaskManagerApplet.Backend {
         id: backend
 
+        screen: Plasmoid.screen
+        hasActiveTask: tasksModel.count > 0 && tasksModel.activeTask.valid
+        showsOnlyCurrentScreen: Plasmoid.configuration.showOnlyCurrentScreen
+
         onAddLauncher: url => {
             tasks.addLauncher(url);
+        }
+
+        onActivateTaskAtIndexRequested: index => {
+            tasks.activateTaskAtIndex(index);
+        }
+
+        onActivatePreviousTaskRequested: () => {
+            tasks.activatePreviousTask();
+        }
+
+        onActivateNextTaskRequested: () => {
+            tasks.activateNextTask();
+        }
+
+        onMoveActiveTaskBackwardRequested: () => {
+            tasks.moveActiveTaskBackward();
+        }
+
+        onMoveActiveTaskForwardRequested: () => {
+            tasks.moveActiveTaskForward();
         }
     }
 
@@ -536,6 +560,91 @@ PlasmoidItem {
         if (task) {
             TaskManagerApplet.TaskTools.activateTask(task.modelIndex(), task.model, null, task, Plasmoid, this, effectWatcher.registered);
         }
+    }
+
+    // Shared helpers for activatePreviousTask/activateNextTask.
+
+    function buildFlatTaskList() {
+        const count = taskRepeater.count;
+        if (count === 0) return [];
+
+        let taskIndexList = [];
+        for (let i = 0; i < count; ++i) {
+            const item = taskRepeater.itemAt(i);
+            if (!item || item.model.IsLauncher || item.model.IsStartup) continue;
+
+            if (item.model.IsGroupParent) {
+                for (let j = 0; j < tasksModel.rowCount(item.modelIndex()); ++j) {
+                    taskIndexList.push(tasksModel.makeModelIndex(i, j));
+                }
+            } else if (item.model.IsWindow) {
+                taskIndexList.push(item.modelIndex());
+            }
+        }
+        return taskIndexList;
+    }
+
+    function findActivePosition(taskIndexList): int {
+        for (let i = 0; i < taskIndexList.length; ++i) {
+            if (tasksModel.data(taskIndexList[i], TaskManager.AbstractTasksModel.IsActive)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    function activatePreviousTask(): void {
+        const taskIndexList = buildFlatTaskList();
+        if (taskIndexList.length === 0) return;
+
+        const activePos = findActivePosition(taskIndexList);
+        if (activePos < 0) return;
+
+        const prevPos = (activePos - 1 + taskIndexList.length) % taskIndexList.length;
+        tasksModel.requestActivate(taskIndexList[prevPos]);
+    }
+
+    function activateNextTask(): void {
+        const taskIndexList = buildFlatTaskList();
+        if (taskIndexList.length === 0) return;
+
+        const activePos = findActivePosition(taskIndexList);
+        if (activePos < 0) return;
+
+        const nextPos = (activePos + 1) % taskIndexList.length;
+        tasksModel.requestActivate(taskIndexList[nextPos]);
+    }
+
+    // Shared helper for moveActiveTaskBackward/moveActiveTaskForward.
+
+    function getActiveRow(): int {
+        if (tasksModel.count === 0) return -1;
+
+        // Switch to manual sorting via the config so the binding and the
+        // settings UI stay in sync.
+        Plasmoid.configuration.sortingStrategy = 1; // Manual
+
+        // Find the active task's top-level row from the now-resorted model.
+        const activeModelIndex = tasksModel.activeTask;
+        if (!activeModelIndex.valid) return -1;
+
+        // If the active task is a group child, find its parent's row.
+        const parentIndex = activeModelIndex.parent;
+        return parentIndex.valid ? parentIndex.row : activeModelIndex.row;
+    }
+
+    function moveActiveTaskBackward(): void {
+        const activeRow = getActiveRow();
+        if (activeRow <= 0) return; // Already leftmost
+
+        tasksModel.move(activeRow, activeRow - 1);
+    }
+
+    function moveActiveTaskForward(): void {
+        const activeRow = getActiveRow();
+        if (activeRow < 0 || activeRow >= tasksModel.count - 1) return; // Already rightmost
+
+        tasksModel.move(activeRow, activeRow + 1);
     }
 
     function createContextMenu(rootTask, modelIndex, args = {}) {

@@ -7,6 +7,8 @@
 #include "backend.h"
 
 #include "log_settings.h"
+
+#include <KActionCollection>
 #include <KConfigGroup>
 #include <KDesktopFile>
 #include <KFileItem>
@@ -33,6 +35,10 @@
 #include <QTimer>
 #include <QVersionNumber>
 
+#include <KGlobalAccel>
+
+#include <mutex>
+
 #include <PlasmaActivities/Consumer>
 #include <PlasmaActivities/Stats/Cleaning>
 #include <PlasmaActivities/Stats/ResultSet>
@@ -48,6 +54,8 @@ using namespace KAStats::Terms;
 
 static constexpr int NoApplications = 2; // kactivitymanager StatsPlugin WhatToRemember.
 
+QVector<Backend *> Backend::s_instances;
+
 Backend::Backend(QObject *parent)
     : QObject(parent)
     , m_actionGroup(new QActionGroup(this))
@@ -62,10 +70,53 @@ Backend::Backend(QObject *parent)
                     m_activityManagerPluginsSettings.load();
                 }
             });
+
+    s_instances.append(this);
+    setupShortcuts();
 }
 
 Backend::~Backend()
 {
+    s_instances.removeAll(this);
+}
+
+int Backend::screen() const
+{
+    return m_screen;
+}
+
+void Backend::setScreen(int screen)
+{
+    if (m_screen != screen) {
+        m_screen = screen;
+        Q_EMIT screenChanged();
+    }
+}
+
+bool Backend::hasActiveTask() const
+{
+    return m_hasActiveTask;
+}
+
+void Backend::setHasActiveTask(bool active)
+{
+    if (m_hasActiveTask != active) {
+        m_hasActiveTask = active;
+        Q_EMIT hasActiveTaskChanged();
+    }
+}
+
+bool Backend::showsOnlyCurrentScreen() const
+{
+    return m_showsOnlyCurrentScreen;
+}
+
+void Backend::setShowsOnlyCurrentScreen(bool shows)
+{
+    if (m_showsOnlyCurrentScreen != shows) {
+        m_showsOnlyCurrentScreen = shows;
+        Q_EMIT showsOnlyCurrentScreenChanged();
+    }
 }
 
 QUrl Backend::tryDecodeApplicationsUrl(const QUrl &launcherUrl)
@@ -516,6 +567,105 @@ qint64 Backend::parentPid(qint64 pid) const
     }
 
     return -1;
+}
+
+void Backend::setupShortcuts()
+{
+    static std::once_flag once;
+    std::call_once(once, [] {
+        auto *collection = new KActionCollection(QCoreApplication::instance());
+
+        auto *activatePreviousTaskAction = collection->addAction(QStringLiteral("activate previous task manager entry"));
+        QObject::connect(activatePreviousTaskAction, &QAction::triggered, collection, [](bool) {
+            dispatchActivatePreviousTask();
+        });
+        activatePreviousTaskAction->setText(i18n("Activate Previous Task Manager Entry"));
+        KGlobalAccel::self()->setGlobalShortcut(activatePreviousTaskAction, QList<QKeySequence>() << QKeySequence(Qt::META | Qt::CTRL | Qt::Key_PageUp));
+
+        auto *activateNextTaskAction = collection->addAction(QStringLiteral("activate next task manager entry"));
+        QObject::connect(activateNextTaskAction, &QAction::triggered, collection, [](bool) {
+            dispatchActivateNextTask();
+        });
+        activateNextTaskAction->setText(i18n("Activate Next Task Manager Entry"));
+        KGlobalAccel::self()->setGlobalShortcut(activateNextTaskAction, QList<QKeySequence>() << QKeySequence(Qt::META | Qt::CTRL | Qt::Key_PageDown));
+
+        auto *moveTaskBackwardAction = collection->addAction(QStringLiteral("move active task to left"));
+        QObject::connect(moveTaskBackwardAction, &QAction::triggered, collection, [](bool) {
+            dispatchMoveActiveTaskBackward();
+        });
+        moveTaskBackwardAction->setText(i18n("Move Active Task Manager Entry Backward"));
+        KGlobalAccel::self()->setGlobalShortcut(moveTaskBackwardAction,
+                                                QList<QKeySequence>() << QKeySequence(Qt::META | Qt::CTRL | Qt::SHIFT | Qt::Key_PageUp));
+
+        auto *moveTaskForwardAction = collection->addAction(QStringLiteral("move active task to right"));
+        QObject::connect(moveTaskForwardAction, &QAction::triggered, collection, [](bool) {
+            dispatchMoveActiveTaskForward();
+        });
+        moveTaskForwardAction->setText(i18n("Move Active Task Manager Entry Forward"));
+        KGlobalAccel::self()->setGlobalShortcut(moveTaskForwardAction,
+                                                QList<QKeySequence>() << QKeySequence(Qt::META | Qt::CTRL | Qt::SHIFT | Qt::Key_PageDown));
+    });
+}
+
+Backend *Backend::findTargetBackend()
+{
+    // Prefer a bar that shows tasks from all screens so that cycling
+    // shortcuts can see the full task list.  Screen-filtered bars are
+    // only used as fallback when no full-view bar has the active task.
+    // This avoids trapping shortcuts on a screen-filtered bar that may
+    // only have a single task to cycle through (e.g. when a grouped app
+    // has its only visible child on that screen).
+
+    Backend *fallback = nullptr;
+
+    for (auto *instance : s_instances) {
+        if (!instance->m_hasActiveTask) {
+            continue;
+        }
+        if (!instance->m_showsOnlyCurrentScreen) {
+            return instance;
+        }
+        if (!fallback) {
+            fallback = instance;
+        }
+    }
+
+    return fallback;
+}
+
+void Backend::dispatchActivateTaskAtIndex(int index)
+{
+    for (auto *instance : s_instances) {
+        Q_EMIT instance->activateTaskAtIndexRequested(index);
+    }
+}
+
+void Backend::dispatchActivatePreviousTask()
+{
+    if (auto *target = findTargetBackend()) {
+        Q_EMIT target->activatePreviousTaskRequested();
+    }
+}
+
+void Backend::dispatchActivateNextTask()
+{
+    if (auto *target = findTargetBackend()) {
+        Q_EMIT target->activateNextTaskRequested();
+    }
+}
+
+void Backend::dispatchMoveActiveTaskBackward()
+{
+    if (auto *target = findTargetBackend()) {
+        Q_EMIT target->moveActiveTaskBackwardRequested();
+    }
+}
+
+void Backend::dispatchMoveActiveTaskForward()
+{
+    if (auto *target = findTargetBackend()) {
+        Q_EMIT target->moveActiveTaskForwardRequested();
+    }
 }
 
 #include "moc_backend.cpp"

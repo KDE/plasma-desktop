@@ -17,6 +17,7 @@
 
 #include "kactivitymanagerd_plugins_settings.h"
 
+class KActionCollection;
 class QAction;
 class QActionGroup;
 class QQuickItem;
@@ -45,6 +46,10 @@ public:
 
     Q_ENUM(MiddleClickAction)
 
+    Q_PROPERTY(int screen READ screen WRITE setScreen NOTIFY screenChanged)
+    Q_PROPERTY(bool hasActiveTask READ hasActiveTask WRITE setHasActiveTask NOTIFY hasActiveTaskChanged)
+    Q_PROPERTY(bool showsOnlyCurrentScreen READ showsOnlyCurrentScreen WRITE setShowsOnlyCurrentScreen NOTIFY showsOnlyCurrentScreenChanged)
+
     explicit Backend(QObject *parent = nullptr);
     ~Backend() override;
 
@@ -62,19 +67,52 @@ public:
     Q_INVOKABLE static QUrl tryDecodeApplicationsUrl(const QUrl &launcherUrl);
     Q_INVOKABLE static QStringList applicationCategories(const QUrl &launcherUrl);
 
+    int screen() const;
+    void setScreen(int screen);
+
+    bool hasActiveTask() const;
+    void setHasActiveTask(bool active);
+
+    bool showsOnlyCurrentScreen() const;
+    void setShowsOnlyCurrentScreen(bool shows);
+
 Q_SIGNALS:
     void addLauncher(const QUrl &url) const;
 
     void showAllPlaces();
 
+    void screenChanged();
+    void hasActiveTaskChanged();
+    void showsOnlyCurrentScreenChanged();
+
+    void activateTaskAtIndexRequested(int index);
+    void activatePreviousTaskRequested();
+    void activateNextTaskRequested();
+    void moveActiveTaskBackwardRequested();
+    void moveActiveTaskForwardRequested();
+
 private Q_SLOTS:
     void handleRecentDocumentAction() const;
 
 private:
+    static void setupShortcuts();
+    static Backend *findTargetBackend();
+    static void dispatchActivateTaskAtIndex(int index);
+    static void dispatchActivatePreviousTask();
+    static void dispatchActivateNextTask();
+    static void dispatchMoveActiveTaskBackward();
+    static void dispatchMoveActiveTaskForward();
+
     QVariantList systemSettingsActions(QObject *parent) const;
 
     QActionGroup *m_actionGroup = nullptr;
     KActivities::Consumer *m_activitiesConsumer = nullptr;
+
+    static QVector<Backend *> s_instances;
+
+    int m_screen = -1;
+    bool m_hasActiveTask = false;
+    bool m_showsOnlyCurrentScreen = false;
 
     KActivityManagerdPluginsSettings m_activityManagerPluginsSettings;
     KConfigWatcher::Ptr m_activityManagerPluginsSettingsWatcher;
