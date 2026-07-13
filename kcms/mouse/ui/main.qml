@@ -62,7 +62,7 @@ KCMUtils.SimpleKCM {
             // Device
             Kirigami.FormEntry {
                 visible: !root.backend.isAnonymousInputDevice
-                enabled: count > 1
+                enabled: deviceSelector.count > 1
                 contentItem: QQC2.ComboBox {
                     id: deviceSelector
                     Kirigami.FormData.label: i18ndc("kcmmouse", "@title:listbox select device", "Device:")
