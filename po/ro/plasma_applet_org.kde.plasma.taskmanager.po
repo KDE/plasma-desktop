@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-01 00:47+0000\n"
+"POT-Creation-Date: 2026-07-14 00:46+0000\n"
 "PO-Revision-Date: 2026-01-28 23:01+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 25.08.1\n"
 
-#: backend.cpp:288
+#: backend.cpp:339
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
@@ -31,44 +31,66 @@ msgstr[0] "Încă %1 loc…"
 msgstr[1] "Încă %1 locuri…"
 msgstr[2] "Încă %1 de locuri…"
 
-#: backend.cpp:372
+#: backend.cpp:423
 #, kde-format
 msgid "Recent Downloads"
 msgstr "Descărcări recente"
 
-#: backend.cpp:374
+#: backend.cpp:425
 #, kde-format
 msgid "Recent Connections"
 msgstr "Conexiuni recente"
 
-#: backend.cpp:376
+#: backend.cpp:427
 #, kde-format
 msgid "Recent Places"
 msgstr "Locuri recente"
 
-#: backend.cpp:385
+#: backend.cpp:436
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
 msgstr "Uită descărcările recente"
 
-#: backend.cpp:387
+#: backend.cpp:438
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
 msgstr "Uită conexiunile recente"
 
-#: backend.cpp:389
+#: backend.cpp:440
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
 msgstr "Uită locurile recente"
 
-#: backend.cpp:391
+#: backend.cpp:442
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Uită fișierele recente"
+
+#: backend.cpp:582
+#, kde-format
+msgid "Activate Previous Task Manager Entry"
+msgstr ""
+
+#: backend.cpp:589
+#, fuzzy, kde-format
+#| msgctxt "action:inmenu"
+#| msgid "&Pin to Task Manager"
+msgid "Activate Next Task Manager Entry"
+msgstr "&Fixează la gestionarul de sarcini"
+
+#: backend.cpp:596
+#, kde-format
+msgid "Move Active Task Manager Entry Backward"
+msgstr ""
+
+#: backend.cpp:604
+#, kde-format
+msgid "Move Active Task Manager Entry Forward"
+msgstr ""
 
 #: qml/AudioStream.qml:94
 #, kde-format

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-01 00:47+0000\n"
+"POT-Creation-Date: 2026-07-14 00:46+0000\n"
 "PO-Revision-Date: 2026-06-19 06:09-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 26.04.2\n"
 
-#: backend.cpp:288
+#: backend.cpp:339
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
@@ -32,44 +32,66 @@ msgid_plural "%1 more Places…"
 msgstr[0] "mais %1 lugar…"
 msgstr[1] "mais %1 lugares…"
 
-#: backend.cpp:372
+#: backend.cpp:423
 #, kde-format
 msgid "Recent Downloads"
 msgstr "Downloads recentes"
 
-#: backend.cpp:374
+#: backend.cpp:425
 #, kde-format
 msgid "Recent Connections"
 msgstr "Conexões recentes"
 
-#: backend.cpp:376
+#: backend.cpp:427
 #, kde-format
 msgid "Recent Places"
 msgstr "Locais recentes"
 
-#: backend.cpp:385
+#: backend.cpp:436
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
 msgstr "Esquecer os downloads recentes"
 
-#: backend.cpp:387
+#: backend.cpp:438
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
 msgstr "Esquecer as conexões recentes"
 
-#: backend.cpp:389
+#: backend.cpp:440
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
 msgstr "Esquecer os locais recentes"
 
-#: backend.cpp:391
+#: backend.cpp:442
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Esquecer os arquivos recentes"
+
+#: backend.cpp:582
+#, kde-format
+msgid "Activate Previous Task Manager Entry"
+msgstr ""
+
+#: backend.cpp:589
+#, fuzzy, kde-format
+#| msgctxt "action:inmenu"
+#| msgid "&Pin to Task Manager"
+msgid "Activate Next Task Manager Entry"
+msgstr "&Fixar no gerenciador de tarefas"
+
+#: backend.cpp:596
+#, kde-format
+msgid "Move Active Task Manager Entry Backward"
+msgstr ""
+
+#: backend.cpp:604
+#, kde-format
+msgid "Move Active Task Manager Entry Forward"
+msgstr ""
 
 #: qml/AudioStream.qml:94
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-01 00:47+0000\n"
+"POT-Creation-Date: 2026-07-14 00:46+0000\n"
 "PO-Revision-Date: 2021-11-04 09:14+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
 
-#: backend.cpp:288
+#: backend.cpp:339
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
@@ -27,43 +27,63 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: backend.cpp:372
+#: backend.cpp:423
 #, kde-format
 msgid "Recent Downloads"
 msgstr ""
 
-#: backend.cpp:374
+#: backend.cpp:425
 #, kde-format
 msgid "Recent Connections"
 msgstr ""
 
-#: backend.cpp:376
+#: backend.cpp:427
 #, kde-format
 msgid "Recent Places"
 msgstr ""
 
-#: backend.cpp:385
+#: backend.cpp:436
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
 msgstr ""
 
-#: backend.cpp:387
+#: backend.cpp:438
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
 msgstr ""
 
-#: backend.cpp:389
+#: backend.cpp:440
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
 msgstr ""
 
-#: backend.cpp:391
+#: backend.cpp:442
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
+msgstr ""
+
+#: backend.cpp:582
+#, kde-format
+msgid "Activate Previous Task Manager Entry"
+msgstr ""
+
+#: backend.cpp:589
+#, kde-format
+msgid "Activate Next Task Manager Entry"
+msgstr ""
+
+#: backend.cpp:596
+#, kde-format
+msgid "Move Active Task Manager Entry Backward"
+msgstr ""
+
+#: backend.cpp:604
+#, kde-format
+msgid "Move Active Task Manager Entry Forward"
 msgstr ""
 
 #: qml/AudioStream.qml:94
