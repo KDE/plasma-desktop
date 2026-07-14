@@ -21,8 +21,6 @@ Item {
     id: root
     Kirigami.Theme.inherit: false
     Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-    height: screenGeometry.height
-    width: screenGeometry.width
 
     signal logoutRequested()
     signal haltRequested()
