@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-14 00:46+0000\n"
-"PO-Revision-Date: 2026-06-19 12:10+0100\n"
+"PO-Revision-Date: 2026-07-14 17:30+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: backend.cpp:339
 #, kde-format
@@ -68,24 +68,22 @@ msgstr "Olvidar los archivos recientes"
 #: backend.cpp:582
 #, kde-format
 msgid "Activate Previous Task Manager Entry"
-msgstr ""
+msgstr "Activar la entrada anterior del gestor de tareas"
 
 #: backend.cpp:589
-#, fuzzy, kde-format
-#| msgctxt "action:inmenu"
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgid "Activate Next Task Manager Entry"
-msgstr "&Fijar en el gestor de tareas"
+msgstr "Activar la entrada siguiente del gestor de tareas"
 
 #: backend.cpp:596
 #, kde-format
 msgid "Move Active Task Manager Entry Backward"
-msgstr ""
+msgstr "Mover atrás la entrada activa del gestor de tareas"
 
 #: backend.cpp:604
 #, kde-format
 msgid "Move Active Task Manager Entry Forward"
-msgstr ""
+msgstr "Mover adelante la entrada activa del gestor de tareas"
 
 #: qml/AudioStream.qml:94
 #, kde-format
@@ -942,7 +940,3 @@ msgstr "También disponible en %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "También en %1"
-
-#~ msgctxt "action:inmenu"
-#~ msgid "&Shade"
-#~ msgstr "&Recoger"

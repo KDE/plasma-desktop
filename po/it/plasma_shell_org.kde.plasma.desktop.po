@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-09 00:46+0000\n"
+"POT-Creation-Date: 2026-07-15 00:47+0000\n"
 "PO-Revision-Date: 2026-07-03 08:48+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -1059,28 +1059,28 @@ msgctxt "@action:button no-password unlock"
 msgid "Unlock"
 msgstr "Sblocca"
 
-#: contents/logout/Logout.qml:152
+#: contents/logout/Logout.qml:150
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
 msgstr[0] "Installazione degli aggiornamenti software e riavvio tra 1 secondo"
 msgstr[1] "Installazione degli aggiornamenti software e riavvio tra %1 secondi"
 
-#: contents/logout/Logout.qml:153
+#: contents/logout/Logout.qml:151
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
 msgstr[0] "Riavvio tra 1 secondo"
 msgstr[1] "Riavvio tra %1 secondi"
 
-#: contents/logout/Logout.qml:155
+#: contents/logout/Logout.qml:153
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
 msgstr[0] "Chiusura della sessione in 1 secondo"
 msgstr[1] "Chiusura della sessione in %1 secondi"
 
-#: contents/logout/Logout.qml:158
+#: contents/logout/Logout.qml:156
 #, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
@@ -1089,14 +1089,14 @@ msgstr[0] ""
 msgstr[1] ""
 "Installazione degli aggiornamenti software e spegnimento tra %1 secondi"
 
-#: contents/logout/Logout.qml:159
+#: contents/logout/Logout.qml:157
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
 msgstr[0] "Spegnimento in 1 secondo"
 msgstr[1] "Spegnimento in %1 secondi"
 
-#: contents/logout/Logout.qml:174
+#: contents/logout/Logout.qml:172
 #, kde-format
 msgid ""
 "One other user is currently logged in. If the computer is shut down or "
@@ -1111,96 +1111,96 @@ msgstr[1] ""
 "%1 altri utenti hanno attualmente eseguito l'accesso. Se il computer viene "
 "spento o riavviato, tali utenti potrebbero perdere il loro lavoro."
 
-#: contents/logout/Logout.qml:191
+#: contents/logout/Logout.qml:189
 #, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
 msgstr ""
 "Se riavviato, il computer accederà alla schermata di configurazione del "
 "firmware UEFI."
 
-#: contents/logout/Logout.qml:193
+#: contents/logout/Logout.qml:191
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 "Se riavviato, il computer accederà alla schermata di configurazione del "
 "firmware."
 
-#: contents/logout/Logout.qml:208
+#: contents/logout/Logout.qml:206
 #, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "Se riavviato, il computer accederà alla menu del boot loader."
 
-#: contents/logout/Logout.qml:221
+#: contents/logout/Logout.qml:219
 #, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
 msgstr "Al riavvio, il computer passerà a %1."
 
-#: contents/logout/Logout.qml:243
+#: contents/logout/Logout.qml:241
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "Sos&pendi"
 
-#: contents/logout/Logout.qml:244
+#: contents/logout/Logout.qml:242
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "Sos&pendi subito"
 
-#: contents/logout/Logout.qml:253
+#: contents/logout/Logout.qml:251
 #, kde-format
 msgid "&Hibernate"
 msgstr "I&berna"
 
-#: contents/logout/Logout.qml:254
+#: contents/logout/Logout.qml:252
 #, kde-format
 msgid "&Hibernate Now"
 msgstr "I&berna subito"
 
-#: contents/logout/Logout.qml:265
+#: contents/logout/Logout.qml:263
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "Installa gli aggiornamenti e riavvia"
 
-#: contents/logout/Logout.qml:267 contents/logout/Logout.qml:286
+#: contents/logout/Logout.qml:265 contents/logout/Logout.qml:284
 #, kde-format
 msgid "&Restart"
 msgstr "&Riavvia"
 
-#: contents/logout/Logout.qml:268 contents/logout/Logout.qml:287
+#: contents/logout/Logout.qml:266 contents/logout/Logout.qml:285
 #, kde-format
 msgid "&Restart Now"
 msgstr "&Riavvia subito"
 
-#: contents/logout/Logout.qml:300
+#: contents/logout/Logout.qml:298
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr "Installa gli aggiornamenti e spegni"
 
-#: contents/logout/Logout.qml:302 contents/logout/Logout.qml:321
+#: contents/logout/Logout.qml:300 contents/logout/Logout.qml:319
 #, kde-format
 msgid "&Shut Down"
 msgstr "&Spegni"
 
-#: contents/logout/Logout.qml:303 contents/logout/Logout.qml:322
+#: contents/logout/Logout.qml:301 contents/logout/Logout.qml:320
 #, kde-format
 msgid "&Shut Down Now"
 msgstr "&Spegni subito"
 
-#: contents/logout/Logout.qml:334
+#: contents/logout/Logout.qml:332
 #, kde-format
 msgid "&Log Out"
 msgstr "&Chiudi sessione"
 
-#: contents/logout/Logout.qml:335
+#: contents/logout/Logout.qml:333
 #, kde-format
 msgid "&Log Out Now"
 msgstr "&Chiudi sessione subito"
 
-#: contents/logout/Logout.qml:345
+#: contents/logout/Logout.qml:343
 #, kde-format
 msgid "&Cancel"
 msgstr "&Annulla"

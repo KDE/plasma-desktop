@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-09 00:46+0000\n"
+"POT-Creation-Date: 2026-07-15 00:47+0000\n"
 "PO-Revision-Date: 2026-07-11 19:55+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -1052,7 +1052,7 @@ msgctxt "@action:button no-password unlock"
 msgid "Unlock"
 msgstr "Kilidi Aç"
 
-#: contents/logout/Logout.qml:152
+#: contents/logout/Logout.qml:150
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
@@ -1061,35 +1061,35 @@ msgstr[0] ""
 msgstr[1] ""
 "Yazılım güncellemeleri kuruluyor ve %1 saniye içinde yeniden başlatılacak…"
 
-#: contents/logout/Logout.qml:153
+#: contents/logout/Logout.qml:151
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
 msgstr[0] "1 saniye içinde yeniden başlatılacak…"
 msgstr[1] "%1 saniye içinde yeniden başlatılacak…"
 
-#: contents/logout/Logout.qml:155
+#: contents/logout/Logout.qml:153
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
 msgstr[0] "Oturum, 1 saniye içinde kapatılacak…"
 msgstr[1] "Oturum, %1 saniye içinde kapatılacak…"
 
-#: contents/logout/Logout.qml:158
+#: contents/logout/Logout.qml:156
 #, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
 msgstr[0] "Yazılım güncellemeleri kuruluyor ve 1 saniye içinde kapatılacak…"
 msgstr[1] "Yazılım güncellemeleri kuruluyor ve %1 saniye içinde kapatılacak…"
 
-#: contents/logout/Logout.qml:159
+#: contents/logout/Logout.qml:157
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
 msgstr[0] "1 saniye içinde kapatılacak…"
 msgstr[1] "%1 saniye içinde kapatılacak…"
 
-#: contents/logout/Logout.qml:174
+#: contents/logout/Logout.qml:172
 #, kde-format
 msgid ""
 "One other user is currently logged in. If the computer is shut down or "
@@ -1104,93 +1104,93 @@ msgstr[1] ""
 "Oturum açmış %1 kullanıcı daha var. Bilgisayar kapatılır veya yeniden "
 "başlatılırsa bu kullanıcının çalışmaları kaybolabilir."
 
-#: contents/logout/Logout.qml:191
+#: contents/logout/Logout.qml:189
 #, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
 msgstr "Yeniden başlatıldığında bilgisayar, UEFI ayarlarına girecek."
 
-#: contents/logout/Logout.qml:193
+#: contents/logout/Logout.qml:191
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 "Yeniden başlatıldığında bilgisayar, donanım yazılımı ayar ekranına girecek."
 
-#: contents/logout/Logout.qml:208
+#: contents/logout/Logout.qml:206
 #, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "Yeniden başlatıldığında bilgisayar, önyükleyici menüsüne girecek."
 
-#: contents/logout/Logout.qml:221
+#: contents/logout/Logout.qml:219
 #, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
 msgstr "Yeniden başlatıldığında bilgisayar, %1 girdisine giriş yapacak."
 
-#: contents/logout/Logout.qml:243
+#: contents/logout/Logout.qml:241
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "&Uyut"
 
-#: contents/logout/Logout.qml:244
+#: contents/logout/Logout.qml:242
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "Şim&di Uyut"
 
-#: contents/logout/Logout.qml:253
+#: contents/logout/Logout.qml:251
 #, kde-format
 msgid "&Hibernate"
 msgstr "&Derin Uykuya Geçir"
 
-#: contents/logout/Logout.qml:254
+#: contents/logout/Logout.qml:252
 #, kde-format
 msgid "&Hibernate Now"
 msgstr "Şimdi Derin Uykuya &Geçir"
 
-#: contents/logout/Logout.qml:265
+#: contents/logout/Logout.qml:263
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "Güncellemeleri Kur ve Yeniden Başlat"
 
-#: contents/logout/Logout.qml:267 contents/logout/Logout.qml:286
+#: contents/logout/Logout.qml:265 contents/logout/Logout.qml:284
 #, kde-format
 msgid "&Restart"
 msgstr "&Yeniden Başlat"
 
-#: contents/logout/Logout.qml:268 contents/logout/Logout.qml:287
+#: contents/logout/Logout.qml:266 contents/logout/Logout.qml:285
 #, kde-format
 msgid "&Restart Now"
 msgstr "Şimdi Y&eniden Başlat"
 
-#: contents/logout/Logout.qml:300
+#: contents/logout/Logout.qml:298
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr "Güncellemeleri Kur ve Kapat"
 
-#: contents/logout/Logout.qml:302 contents/logout/Logout.qml:321
+#: contents/logout/Logout.qml:300 contents/logout/Logout.qml:319
 #, kde-format
 msgid "&Shut Down"
 msgstr "&Kapat"
 
-#: contents/logout/Logout.qml:303 contents/logout/Logout.qml:322
+#: contents/logout/Logout.qml:301 contents/logout/Logout.qml:320
 #, kde-format
 msgid "&Shut Down Now"
 msgstr "Ş&imdi Kapat"
 
-#: contents/logout/Logout.qml:334
+#: contents/logout/Logout.qml:332
 #, kde-format
 msgid "&Log Out"
 msgstr "&Oturumu Kapat"
 
-#: contents/logout/Logout.qml:335
+#: contents/logout/Logout.qml:333
 #, kde-format
 msgid "&Log Out Now"
 msgstr "Şi&mdi Oturumu Kapat"
 
-#: contents/logout/Logout.qml:345
+#: contents/logout/Logout.qml:343
 #, kde-format
 msgid "&Cancel"
 msgstr "İ&ptal"
