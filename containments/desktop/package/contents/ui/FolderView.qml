@@ -1095,8 +1095,7 @@ FocusScope {
                         dir.refresh();
                     } else if (event.matches(StandardKey.SelectAll)) {
                         positioner.setRangeSelected(0, count - 1);
-                    } else if ( (!Plasmoid.isContainment || !main.krunnerAvailable || Plasmoid.configuration.useTypeAhead) && event.text.length === 1 && event.modifiers === Qt.NoModifier) {
-                        // If View is not the Desktop there is no need to check if useTypeAhead is enabled.
+                    } else if ( (root.isPopup || !main.krunnerAvailable || Plasmoid.configuration.useTypeAhead) && event.text.length === 1 && event.modifiers === Qt.NoModifier) {
                         typeAheadTimer.restart();
                         const charPressed = event.text.toLowerCase();
 
