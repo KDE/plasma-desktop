@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-14 00:46+0000\n"
-"PO-Revision-Date: 2026-06-19 15:51+0200\n"
+"PO-Revision-Date: 2026-07-14 15:24+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: backend.cpp:339
 #, kde-format
@@ -69,24 +69,22 @@ msgstr "Dimentica i file recenti"
 #: backend.cpp:582
 #, kde-format
 msgid "Activate Previous Task Manager Entry"
-msgstr ""
+msgstr "Attiva la voce precedente del gestore dei processi"
 
 #: backend.cpp:589
-#, fuzzy, kde-format
-#| msgctxt "action:inmenu"
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgid "Activate Next Task Manager Entry"
-msgstr "Blocca sulla barra delle a&pplicazioni"
+msgstr "Attiva la voce successiva del gestore dei processi"
 
 #: backend.cpp:596
 #, kde-format
 msgid "Move Active Task Manager Entry Backward"
-msgstr ""
+msgstr "Sposta indietro la voce attiva del gestore dei processi"
 
 #: backend.cpp:604
 #, kde-format
 msgid "Move Active Task Manager Entry Forward"
-msgstr ""
+msgstr "Sposta in avanti la voce attiva del gestore dei processi"
 
 #: qml/AudioStream.qml:94
 #, kde-format
