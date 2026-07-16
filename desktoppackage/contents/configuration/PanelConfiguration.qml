@@ -203,7 +203,7 @@ ColumnLayout {
                     }
                     panel.location = newLocation;
                     if (associatedWindow !== null) {
-                        panel.screenToFollow = dialogRoot.panelConfiguration.screenFromWindow(associatedWindow);
+                        panel.moveToScreen(dialogRoot.panelConfiguration.screenFromWindow(associatedWindow));
                     }
                     setPositionButton.checked = false;
                 }
