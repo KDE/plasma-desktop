@@ -604,6 +604,18 @@ void Backend::setupShortcuts()
         moveTaskForwardAction->setText(i18n("Move Active Task Manager Entry Forward"));
         KGlobalAccel::self()->setGlobalShortcut(moveTaskForwardAction,
                                                 QList<QKeySequence>() << QKeySequence(Qt::META | Qt::CTRL | Qt::SHIFT | Qt::Key_PageDown));
+
+        for (int i = 0; i < 10; ++i) {
+            const int entryNumber = i + 1;
+            const auto key = static_cast<Qt::Key>(Qt::Key_0 + (entryNumber % 10));
+
+            QAction *action = collection->addAction(QStringLiteral("activate task manager entry %1").arg(QString::number(entryNumber)));
+            action->setText(i18n("Activate Task Manager Entry %1", entryNumber));
+            KGlobalAccel::setGlobalShortcut(action, entryNumber < 10 ? QKeySequence(Qt::META | key) : QKeySequence());
+            QObject::connect(action, &QAction::triggered, collection, [i](bool) {
+                dispatchActivateTaskAtIndex(i);
+            });
+        }
     });
 }
 
@@ -635,8 +647,29 @@ Backend *Backend::findTargetBackend()
 
 void Backend::dispatchActivateTaskAtIndex(int index)
 {
+    // Prefer the same priority order as the other task shortcuts:
+    // 1. Non-screen-filtered taskbar with the active task
+    // 2. Screen-filtered taskbar with the active task
+    if (auto *target = findTargetBackend()) {
+        Q_EMIT target->activateTaskAtIndexRequested(index);
+        return;
+    }
+
+    // If no task is active on any taskmanager (e.g. the user wants to
+    // launch a pinned app), fallback: prefer a non-screen-filtered
+    // instance, then the first available instance.
+    Backend *fallback = nullptr;
     for (auto *instance : std::as_const(s_instances)) {
-        Q_EMIT instance->activateTaskAtIndexRequested(index);
+        if (!instance->m_showsOnlyCurrentScreen) {
+            Q_EMIT instance->activateTaskAtIndexRequested(index);
+            return;
+        }
+        if (!fallback) {
+            fallback = instance;
+        }
+    }
+    if (fallback) {
+        Q_EMIT fallback->activateTaskAtIndexRequested(index);
     }
 }
 
