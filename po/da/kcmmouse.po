@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-01 00:47+0000\n"
+"POT-Creation-Date: 2026-07-17 00:46+0000\n"
 "PO-Revision-Date: 2024-10-26 11:52+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -21,17 +21,12 @@ msgstr ""
 "X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:44
+#: inputbackend.cpp:49
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Kritisk fejl ved læsning af fundamentale enhedsinformationer for %1."
 
-#: kcm.cpp:63
-#, kde-format
-msgid "Not able to select appropriate backend"
-msgstr ""
-
-#: kcm.cpp:119
+#: kcm.cpp:112
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -40,12 +35,12 @@ msgstr ""
 "Fejl under indlæsning af værdier. Se logge for mere information. Genstart "
 "venligst dette konfigurationsmodul."
 
-#: kcm.cpp:122
+#: kcm.cpp:115
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Intet pegeredskab fundet. Tilslut det nu."
 
-#: kcm.cpp:131
+#: kcm.cpp:124
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -54,7 +49,7 @@ msgstr ""
 "Kan ikke gemme alle ændringer. Se logge for mere information. Genstart "
 "venligst dette konfigurationsmodul og prøv igen."
 
-#: kcm.cpp:149
+#: kcm.cpp:142
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -63,7 +58,7 @@ msgstr ""
 "Fejl under indlæsning af standardværdier. Nogle indstillinger kunne ikke "
 "sættes til deres standardværdier."
 
-#: kcm.cpp:164
+#: kcm.cpp:157
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -72,12 +67,12 @@ msgstr ""
 "Fejl under tilføjelse af ny tilsluttet enhed. Tilslut venligst igen og "
 "genstart dette konfigurationsmodul."
 
-#: kcm.cpp:177
+#: kcm.cpp:170
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Pegeredskab frakoblet. Lukkede indstillingsdialogen."
 
-#: kcm.cpp:179
+#: kcm.cpp:172
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Pegeredskab frakoblet. Ingen andre enheder fundet."
@@ -130,41 +125,41 @@ msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
 msgstr "Indstil ekstra knapper…"
 
-#: ui/main.qml:68
+#: ui/main.qml:64
 #, fuzzy, kde-format
 #| msgid "Device:"
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Enhed:"
 
-#: ui/main.qml:91
+#: ui/main.qml:86
 #, fuzzy, kde-format
 #| msgid "General:"
 msgctxt "@title:group"
 msgid "General:"
 msgstr "Generelt:"
 
-#: ui/main.qml:92
+#: ui/main.qml:87
 #, kde-format
 msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr ""
 
-#: ui/main.qml:107
+#: ui/main.qml:102
 #, fuzzy, kde-format
 #| msgid "Swap left and right buttons."
 msgctxt "@title:group"
 msgid "Left and right buttons:"
 msgstr "Skift mellem venstre og højre knap."
 
-#: ui/main.qml:108
+#: ui/main.qml:103
 #, fuzzy, kde-format
 #| msgid "Left-handed mode"
 msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
 msgstr "Venstrehåndstilstand"
 
-#: ui/main.qml:123
+#: ui/main.qml:118
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -173,7 +168,7 @@ msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
 msgstr "Klik på venstre og højre knap samtidig agerer som midterklik."
 
-#: ui/main.qml:135
+#: ui/main.qml:130
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -184,21 +179,21 @@ msgstr ""
 "forsinkelse er nødvendigt for at detektere samtidige venstre- og højreklik "
 "korrekt."
 
-#: ui/main.qml:147
+#: ui/main.qml:142
 #, fuzzy, kde-format
 #| msgid "Pointer speed:"
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Markørhastighed:"
 
-#: ui/main.qml:228
+#: ui/main.qml:223
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Markørens acceleration:"
 
-#: ui/main.qml:240
+#: ui/main.qml:235
 #, fuzzy, kde-format
 #| msgid "Cursor travel distance depends on the mouse movement speed."
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
@@ -206,47 +201,47 @@ msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr "Markørens vandringsafstand afhænger af musens bevægelseshastighed."
 
-#: ui/main.qml:251
+#: ui/main.qml:245
 #, fuzzy, kde-format
 #| msgid "Scrolling speed:"
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr "Rullehastighed:"
 
-#: ui/main.qml:301
+#: ui/main.qml:295
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Langsommere"
 
-#: ui/main.qml:310
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Hurtigere"
 
-#: ui/main.qml:320
+#: ui/main.qml:314
 #, fuzzy, kde-format
 #| msgid "Scrolling:"
 msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "Rulning:"
 
-#: ui/main.qml:321
+#: ui/main.qml:315
 #, fuzzy, kde-format
 #| msgid "Invert scroll direction"
 msgctxt "@option:check"
 msgid "Invert scroll direction"
 msgstr "Vend rulleretning"
 
-#: ui/main.qml:336
+#: ui/main.qml:330
 #, fuzzy, kde-format
 #| msgid "Press middle button and move mouse to scroll"
 msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "Midterklik og flyt musen for at scrolle"
 
-#: ui/main.qml:348
+#: ui/main.qml:342
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""

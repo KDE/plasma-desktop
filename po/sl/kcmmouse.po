@@ -1,7 +1,7 @@
 # translation of kcminput.po to Slovenian
 # Translation of kcminput.po to Slovenian
 # KCMINPUT TRANSLATION TO SLOVENE LANGUAGE.
-# $Id: kcmmouse.po 1740279 2026-07-01 01:30:01Z scripty $
+# $Id: kcmmouse.po 1741552 2026-07-17 01:28:01Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-01 00:47+0000\n"
+"POT-Creation-Date: 2026-07-17 00:46+0000\n"
 "PO-Revision-Date: 2026-01-08 10:46+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -28,17 +28,12 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.8\n"
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:44
+#: inputbackend.cpp:49
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Kritična napaka pri branju osnovnih informacij o napravi %1."
 
-#: kcm.cpp:63
-#, kde-format
-msgid "Not able to select appropriate backend"
-msgstr "Ni mogoče izbrati ustreznega zaledja"
-
-#: kcm.cpp:119
+#: kcm.cpp:112
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -47,12 +42,12 @@ msgstr ""
 "Napaka pri nalaganju vrednosti. Za več informacij si oglejte dnevnike. "
 "Ponovno zaženite ta nastavitveni modul."
 
-#: kcm.cpp:122
+#: kcm.cpp:115
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Ni bilo mogoče najti nobene kazalne naprave . Povežite jih."
 
-#: kcm.cpp:131
+#: kcm.cpp:124
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -61,7 +56,7 @@ msgstr ""
 "Vseh sprememb ni mogoče shraniti. Za več informacij glejte dnevnike. Ponovno "
 "zaženite ta nastavitveni modul in spet poskusite."
 
-#: kcm.cpp:149
+#: kcm.cpp:142
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -70,7 +65,7 @@ msgstr ""
 "Napaka med nalaganjem privzetih vrednosti. Nekaterih nastavitev ni bilo "
 "mogoče nastaviti na privzete vrednosti."
 
-#: kcm.cpp:164
+#: kcm.cpp:157
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -79,13 +74,13 @@ msgstr ""
 "Napaka pri dodajanju na novo povezane naprave. Ponovno jo povežite in "
 "ponovno zaženite ta nastavitveni modul."
 
-#: kcm.cpp:177
+#: kcm.cpp:170
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Kazalna naprava je izključena. Pogovorno okno z nastavitvami je zaprto."
 
-#: kcm.cpp:179
+#: kcm.cpp:172
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Kazalna naprava je izključena. Ni najti nobene druge naprave."
@@ -138,43 +133,43 @@ msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
 msgstr "Konfiguriraj dodatne gumbe…"
 
-#: ui/main.qml:68
+#: ui/main.qml:64
 #, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Naprava:"
 
-#: ui/main.qml:91
+#: ui/main.qml:86
 #, kde-format
 msgctxt "@title:group"
 msgid "General:"
 msgstr "Splošno:"
 
-#: ui/main.qml:92
+#: ui/main.qml:87
 #, kde-format
 msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr "Omogoči napravo"
 
-#: ui/main.qml:107
+#: ui/main.qml:102
 #, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
 msgstr "Leva in desna gumba:"
 
-#: ui/main.qml:108
+#: ui/main.qml:103
 #, kde-format
 msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
 msgstr "Zamenjava (način za levičarje)"
 
-#: ui/main.qml:123
+#: ui/main.qml:118
 #, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
 msgstr "Hkrati pritisnite oba za srednji klik"
 
-#: ui/main.qml:135
+#: ui/main.qml:130
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -185,19 +180,19 @@ msgstr ""
 "zakasnitev je nujna za pravilno zaznavanje istočasnih levih in desnih klikov "
 "miške."
 
-#: ui/main.qml:147
+#: ui/main.qml:142
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Hitrost kazalca:"
 
-#: ui/main.qml:228
+#: ui/main.qml:223
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Omogoči pospešek kazalca"
 
-#: ui/main.qml:240
+#: ui/main.qml:235
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
@@ -206,43 +201,43 @@ msgstr ""
 "Ko je omogočeno, se razdalja poti kazalca povečuje z večjo hitrostjo "
 "premikanja."
 
-#: ui/main.qml:251
+#: ui/main.qml:245
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr "Hitrost drsenja:"
 
-#: ui/main.qml:301
+#: ui/main.qml:295
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Počasneje"
 
-#: ui/main.qml:310
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Hitreje"
 
-#: ui/main.qml:320
+#: ui/main.qml:314
 #, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "Drsenje zaslona:"
 
-#: ui/main.qml:321
+#: ui/main.qml:315
 #, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction"
 msgstr "Obrni smer drsenja zaslona"
 
-#: ui/main.qml:336
+#: ui/main.qml:330
 #, kde-format
 msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "Pritisnite srednji gumb in premikajte miško za drsenje"
 
-#: ui/main.qml:348
+#: ui/main.qml:342
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
@@ -255,6 +250,9 @@ msgstr ""
 "nekateri urejevalniki slik, pregledovalniki dokumentov ali videoigre. "
 "Uporablja se lahko na kateri koli napravi, vendar je namenjeno predvsem kot "
 "nadomestilo za drsni kolešček v napravah, ki ga nimajo."
+
+#~ msgid "Not able to select appropriate backend"
+#~ msgstr "Ni mogoče izbrati ustreznega zaledja"
 
 #~ msgid "Querying input devices failed. Please reopen this settings module."
 #~ msgstr ""

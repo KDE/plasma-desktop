@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-01 00:47+0000\n"
+"POT-Creation-Date: 2026-07-17 00:46+0000\n"
 "PO-Revision-Date: 2025-05-21 08:54+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -30,19 +30,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.04.1\n"
 
-#: backends/kwin_wl/kwin_wl_backend.cpp:44
+#: inputbackend.cpp:49
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr ""
 "Produciuse un erro crítico ao ler información de dispositivo fundamental de "
 "%1."
 
-#: kcm.cpp:63
-#, kde-format
-msgid "Not able to select appropriate backend"
-msgstr "Non foi posíbel seleccionar un motor axeitado."
-
-#: kcm.cpp:119
+#: kcm.cpp:112
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -51,12 +46,12 @@ msgstr ""
 "Erro ao cargar os valores. Consulte o rexistro para máis información. "
 "Reinicie este módulo de configuración."
 
-#: kcm.cpp:122
+#: kcm.cpp:115
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Non se atopou ningún dispositivo de punteiro. Conécteo."
 
-#: kcm.cpp:131
+#: kcm.cpp:124
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -65,7 +60,7 @@ msgstr ""
 "Non foi posíbel gardar todos os cambios. Consulte o rexistro para máis "
 "información. Reinicie o módulo de configuración e inténteo de novo."
 
-#: kcm.cpp:149
+#: kcm.cpp:142
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -74,7 +69,7 @@ msgstr ""
 "Erro ao cargar os valores predeterminados. Non se puideron definir algunhas "
 "opcións cos seus valores predeterminados."
 
-#: kcm.cpp:164
+#: kcm.cpp:157
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -83,14 +78,14 @@ msgstr ""
 "Erro ao engadir o dispositivo que acababa de conectar. Conécteo de novo e "
 "reinicie o módulo de configuración."
 
-#: kcm.cpp:177
+#: kcm.cpp:170
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Desconectouse o dispositivo de punteiro. Pechouse o seu diálogo de "
 "configuración."
 
-#: kcm.cpp:179
+#: kcm.cpp:172
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr ""
@@ -146,41 +141,41 @@ msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
 msgstr "Configurar os botóns adicionais…"
 
-#: ui/main.qml:68
+#: ui/main.qml:64
 #, fuzzy, kde-format
 #| msgid "Device:"
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Dispositivo:"
 
-#: ui/main.qml:91
+#: ui/main.qml:86
 #, fuzzy, kde-format
 #| msgid "General:"
 msgctxt "@title:group"
 msgid "General:"
 msgstr "Xeral:"
 
-#: ui/main.qml:92
+#: ui/main.qml:87
 #, kde-format
 msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr ""
 
-#: ui/main.qml:107
+#: ui/main.qml:102
 #, fuzzy, kde-format
 #| msgid "Swap left and right buttons."
 msgctxt "@title:group"
 msgid "Left and right buttons:"
 msgstr "Intercambiar os botóns esquerdo e dereito."
 
-#: ui/main.qml:108
+#: ui/main.qml:103
 #, fuzzy, kde-format
 #| msgid "Left-handed mode"
 msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
 msgstr "Modo para zurdos"
 
-#: ui/main.qml:123
+#: ui/main.qml:118
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -190,7 +185,7 @@ msgid "Press both simultaneously to middle-click"
 msgstr ""
 "Premer os botóns esquerdo e dereito á vez equivale a premer o botón central."
 
-#: ui/main.qml:135
+#: ui/main.qml:130
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -201,21 +196,21 @@ msgstr ""
 "adicional é necesario para detectar correctamente premas simultáneas dos "
 "botóns esquerdo e dereito."
 
-#: ui/main.qml:147
+#: ui/main.qml:142
 #, fuzzy, kde-format
 #| msgid "Pointer speed:"
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Velocidade do punteiro:"
 
-#: ui/main.qml:228
+#: ui/main.qml:223
 #, fuzzy, kde-format
 #| msgid "Enable pointer acceleration"
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Activar a aceleración do punteiro."
 
-#: ui/main.qml:240
+#: ui/main.qml:235
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip from ContextualHelpButton"
 #| msgid ""
@@ -228,47 +223,47 @@ msgstr ""
 "Cando se activa, a distancia de desprazamento do punteiro aumenta a maior "
 "velocidade de movemento."
 
-#: ui/main.qml:251
+#: ui/main.qml:245
 #, fuzzy, kde-format
 #| msgid "Scrolling speed:"
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr "Velocidade de desprazamento:"
 
-#: ui/main.qml:301
+#: ui/main.qml:295
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Máis amodo"
 
-#: ui/main.qml:310
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Veloz"
 
-#: ui/main.qml:320
+#: ui/main.qml:314
 #, fuzzy, kde-format
 #| msgid "Scrolling:"
 msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "Desprazamento:"
 
-#: ui/main.qml:321
+#: ui/main.qml:315
 #, fuzzy, kde-format
 #| msgid "Invert scroll direction"
 msgctxt "@option:check"
 msgid "Invert scroll direction"
 msgstr "Inverter a dirección de desprazamento"
 
-#: ui/main.qml:336
+#: ui/main.qml:330
 #, fuzzy, kde-format
 #| msgid "Hold down middle button and move mouse to scroll"
 msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "Manteña premido o botón central e mova o rato para desprazar."
 
-#: ui/main.qml:348
+#: ui/main.qml:342
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip from ContextualHelpButton"
 #| msgid ""
@@ -287,6 +282,9 @@ msgstr ""
 "como algúns editores de imaxes, visores de documentos ou videoxogos. Pode "
 "usarse en calquera dispositivo, pero están pensado principalmente como "
 "substituto para rodas de desprazamento en dispositivos que non as teñen."
+
+#~ msgid "Not able to select appropriate backend"
+#~ msgstr "Non foi posíbel seleccionar un motor axeitado."
 
 #~ msgid "Querying input devices failed. Please reopen this settings module."
 #~ msgstr ""
