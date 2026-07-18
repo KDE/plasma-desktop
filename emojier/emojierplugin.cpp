@@ -81,7 +81,7 @@ QVariant TwoToneEmojiModel::data(const QModelIndex &index, int role) const
             emoji = &m_twoToneEmojis[m_twoToneIndex + index.row() - skintone];
         }
     } else {
-        const int mappedIndex = twoToneSortFilterMap[m_settings.skinTone()][index.row()];
+        const int mappedIndex = twoToneSortFilterMap[m_settings.skinTone()].at(index.row());
         emoji = &m_twoToneEmojis[m_twoToneIndex + mappedIndex];
     }
 
