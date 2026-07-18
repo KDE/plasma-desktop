@@ -300,7 +300,7 @@ void SwitcherBackend::onCurrentActivityChanged(const QString &id)
     KConfig config(QStringLiteral("plasma/activitiesstaterc"), KConfig::SimpleConfig, QStandardPaths::GenericStateLocation);
     KConfigGroup times(&config, QStringLiteral("LastUsed"));
 
-    const auto now = QDateTime::currentDateTime().toSecsSinceEpoch();
+    const auto now = QDateTime::currentSecsSinceEpoch();
 
     // Updating the time for the activity we just switched to
     // in the case we do not power off properly, and on the next
