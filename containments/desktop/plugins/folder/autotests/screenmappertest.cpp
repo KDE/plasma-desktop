@@ -267,7 +267,6 @@ void ScreenMapperTest::tst_readAndSaveItemsOnActivitiesOnDisabledScreens()
     QCOMPARE(mapping.count(), expectedMapping.size() * expectedMapping[0].size());
 
     for (int i = 0; i < mapping.count() - (expectedMapping[0].size() - 1); i += expectedMapping[0].size()) {
-        const QStringList configGroup{mapping[i], mapping[i + 1], mapping[i + 2], mapping[i + 3], mapping[i + 4]};
         bool matched = false;
         for (const QStringList &expectedConfigGroup : expectedMapping) {
             if (expectedConfigGroup[0] == mapping[i] && expectedConfigGroup[1] == mapping[i + 1]) {

@@ -382,7 +382,6 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
     const QString downloadsPath = QStandardPaths::writableLocation(QStandardPaths::DownloadLocation);
 
     while (actionCount < 5 && resultIt != results.end()) {
-        const QString resource = (*resultIt).resource();
         const QString mimetype = (*resultIt).mimetype();
         const QUrl url = (*resultIt).url();
         ++resultIt;

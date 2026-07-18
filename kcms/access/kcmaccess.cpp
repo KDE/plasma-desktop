@@ -54,7 +54,6 @@ public:
         QRegularExpression re("\\d+");
         QRegularExpressionMatchIterator i = re.globalMatch(text);
 
-        QString numbers;
         while (i.hasNext()) {
             QRegularExpressionMatch match = i.next();
             strippedText += match.captured();
