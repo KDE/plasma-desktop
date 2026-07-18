@@ -8,7 +8,6 @@
 
 #include <QKeySequence>
 #include <QStringList>
-#include <QtQml>
 
 /**
  * @brief Represents an input sequence that happens on a tablet button action, which could be a variety of types.
