@@ -15,7 +15,7 @@ LayoutModel::LayoutModel() noexcept
     : QAbstractListModel()
 {
     for (const LayoutInfo &layoutInfo : std::as_const(Rules::self().layoutInfos)) {
-        m_data.append(Data(layoutInfo.name, layoutInfo.description, QStringLiteral("")));
+        m_data.append(Data(layoutInfo.name, layoutInfo.description, QString()));
 
         for (const VariantInfo &variantInfo : layoutInfo.variantInfos) {
             m_data.append(Data(layoutInfo.name, variantInfo.description, variantInfo.name));
