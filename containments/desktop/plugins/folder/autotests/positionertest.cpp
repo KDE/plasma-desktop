@@ -443,8 +443,8 @@ void PositionerTest::checkDefaultPositions(int perStripe)
 {
     ensureFolderModelReady();
     QCOMPARE(perStripe, m_positioner->perStripe());
-    QCOMPARE(m_positioner->positions()[0].toInt(), 1 + ((m_positioner->rowCount() - 1) / perStripe)); // rows
-    QCOMPARE(m_positioner->positions()[1].toInt(), perStripe); // columns
+    QCOMPARE(m_positioner->positions().at(0).toInt(), 1 + ((m_positioner->rowCount() - 1) / perStripe)); // rows
+    QCOMPARE(m_positioner->positions().at(1).toInt(), perStripe); // columns
     const auto currentPositions = getPositionHash(m_positioner->positions());
     // Checking default positions ignores configuration completely
     // instead, it compares that the default values match, since the

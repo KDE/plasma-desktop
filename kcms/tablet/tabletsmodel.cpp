@@ -273,7 +273,7 @@ void TabletsModel::loadReply(QDBusMessage reply)
 
     QStringList devicesSysNames;
     if (reply.type() == QDBusMessage::ReplyMessage) {
-        devicesSysNames = reply.arguments().first().value<QDBusVariant>().variant().toStringList();
+        devicesSysNames = reply.arguments().constFirst().value<QDBusVariant>().variant().toStringList();
     } else {
         qCWarning(KCM_TABLET) << "Error on receiving device list from KWin:" << reply.errorMessage();
         return;

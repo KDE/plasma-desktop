@@ -406,7 +406,7 @@ void FolderModelTest::tst_initializeOnCorrectScreens()
     QSignalSpy screenMapSpy(screenMapper, &ScreenMapper::screenMappingChanged);
     screenMapper->setScreenMapping(newMap);
     QCOMPARE(screenMapSpy.count(), 1);
-    QCOMPARE(screenMapper->screenMapping()[1], QStringLiteral("0"));
+    QCOMPARE(screenMapper->screenMapping().at(1), QStringLiteral("0"));
 
     // Create screen_1
     auto folderSecondScreen = new FolderModel(this);
