@@ -310,6 +310,9 @@ Item {
 
                     animated: false
 
+                    // Previews have arbitrary aspect ratios, so do not snap to a square icon size.
+                    roundToIconSize: false
+
                     source: main.decoration
                 }
 
