@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-29 00:47+0000\n"
-"PO-Revision-Date: 2026-02-20 21:54+0900\n"
+"PO-Revision-Date: 2026-07-12 18:32+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
@@ -381,7 +381,7 @@ msgstr "スペーサー"
 #, kde-format
 msgctxt "@action:menu add a margins separator"
 msgid "Margins Separator"
-msgstr ""
+msgstr "仕切り"
 
 #: contents/configuration/PanelConfiguration.qml:140
 #, kde-format
@@ -537,7 +537,7 @@ msgstr "透明度"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The current Plasma style does not support opacity options."
-msgstr ""
+msgstr "現在使用中の Plasma スタイルは不透明度を変更することができません。"
 
 #: contents/configuration/PanelConfiguration.qml:487
 #, kde-format
@@ -776,9 +776,7 @@ msgid "Unsupported Widget"
 msgstr "サポートされていないウィジェット"
 
 #: contents/explorer/AppletDelegate.qml:196
-#, fuzzy, kde-format
-#| msgctxt "Text displayed on top of newly installed widgets"
-#| msgid "New!"
+#, kde-format
 msgctxt "Text displayed on top of newly-installed widgets"
 msgid "New!"
 msgstr "New!"
@@ -977,7 +975,7 @@ msgstr "スリープ(&P)"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Hibernate"
-msgstr "休止状態(&H)"
+msgstr "ハイバネート(&H)"
 
 #: contents/lockscreen/LockScreenUi.qml:311
 #, kde-format
@@ -1070,8 +1068,7 @@ msgid "Exit Edit Mode"
 msgstr "編集モードを終了"
 
 #: contents/views/Panel.qml:325
-#, fuzzy, kde-format
-#| msgid "Panel Focus Indicator"
+#, kde-format
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "パネルフォーカスインジケータ"
