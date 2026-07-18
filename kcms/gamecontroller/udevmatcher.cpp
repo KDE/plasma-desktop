@@ -31,6 +31,9 @@ std::string UDevMatcher::deviceToUdevId(const std::string &device_path)
     } else if (lastPart.starts_with("event")) {
         // input devpaths end with eventXY
         snprintf(sys_path, sizeof(sys_path), "/sys/class/input/%s", lastPart.c_str());
+    } else {
+        // Return empty if it doesn't match expected types
+        return devicePath;
     }
     std::unique_ptr<struct udev, decltype(&udev_unref)> udev(udev_new(), &udev_unref);
     if (!udev) {
