@@ -1,3 +1,3 @@
 #! /usr/bin/env bash
-$EXTRACTRC *.ui >> rc.cpp
-$XGETTEXT *.cpp -o $podir/kcmkclock.pot
+$EXTRACTRC `find -name \*.ui` >> rc.cpp
+$XGETTEXT `find . -name "*.cpp" -o -name "*.qml"` -o $podir/kcm_clock.pot

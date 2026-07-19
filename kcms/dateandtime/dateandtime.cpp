@@ -14,6 +14,7 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 
+#include "datetime_logging.h"
 #include "message.h"
 #include "timedated_interface.h"
 
@@ -36,11 +37,6 @@ DateAndTime::DateAndTime(QObject *parent, const KPluginMetaData &data)
         refresh();
     });
 
-    initialize();
-}
-
-void DateAndTime::initialize()
-{
     setButtons(Help | Apply);
 }
 
@@ -69,18 +65,23 @@ void DateAndTime::addMessage(const Message &message, bool isTemporary, const QSt
 
 QString DateAndTime::timeZone() const
 {
-    return m_timeZone;
+    return timeZoneToUse().id();
+}
+
+QTimeZone DateAndTime::timeZoneToUse() const
+{
+    return m_timeZone.isValid() ? m_timeZone : m_systemTimeZone;
 }
 
 void DateAndTime::setTimeZone(QString timeZone)
 {
-    if (m_timeZone == timeZone) {
+    if (m_timeZone.id() == timeZone) {
         return;
     }
-    m_timeZoneModified = true;
-    m_timeZone = timeZone;
-    setNeedsSave(true);
+    m_timeZone = QTimeZone(timeZone.toLatin1());
+    checkNeedsSave();
     Q_EMIT timeZoneChanged();
+    Q_EMIT dateTimeChanged();
 }
 
 bool DateAndTime::ntpAvailable() const
@@ -90,7 +91,7 @@ bool DateAndTime::ntpAvailable() const
 
 bool DateAndTime::ntpEnabled() const
 {
-    return m_ntpEnabled;
+    return m_ntpEnabledSet ? m_ntpEnabled : m_systemNtpEnabled;
 }
 
 void DateAndTime::setNtpEnabled(bool ntpEnabled)
@@ -98,9 +99,9 @@ void DateAndTime::setNtpEnabled(bool ntpEnabled)
     if (m_ntpEnabled == ntpEnabled) {
         return;
     }
-    m_ntpEnabledModified = true;
+    m_ntpEnabledSet = true;
     m_ntpEnabled = ntpEnabled;
-    setNeedsSave(true);
+    checkNeedsSave();
     Q_EMIT ntpChanged();
 
     if (m_ntpEnabled) {
@@ -111,7 +112,7 @@ void DateAndTime::setNtpEnabled(bool ntpEnabled)
 
 QDateTime DateAndTime::dateTime() const
 {
-    return m_dateTime;
+    return m_dateTime.isValid() ? m_dateTime : m_systemDateTime;
 }
 
 void DateAndTime::setDateTime(const QDateTime &dateTime)
@@ -119,9 +120,8 @@ void DateAndTime::setDateTime(const QDateTime &dateTime)
     if (m_ntpEnabled || m_dateTime == dateTime) {
         return;
     }
-    m_dateTimeModified = true;
     m_dateTime = dateTime;
-    setNeedsSave(true);
+    checkNeedsSave();
     Q_EMIT dateTimeChanged();
 }
 
@@ -130,9 +130,8 @@ void DateAndTime::setDate(const QDate &date)
     if (m_ntpEnabled || m_dateTime.date() == date) {
         return;
     }
-    m_dateTimeModified = true;
     m_dateTime.setDate(date);
-    setNeedsSave(true);
+    checkNeedsSave();
     Q_EMIT dateTimeChanged();
 }
 
@@ -141,20 +140,27 @@ void DateAndTime::setTime(const QTime &time)
     if (m_ntpEnabled || m_dateTime.time() == time) {
         return;
     }
-    m_dateTimeModified = true;
     m_dateTime.setTime(time);
-    setNeedsSave(true);
+    checkNeedsSave();
     Q_EMIT dateTimeChanged();
 }
 
 QString DateAndTime::timeString() const
 {
-    return m_dateTime.toLocalTime().time().toString(QLocale::system().timeFormat(QLocale::ShortFormat));
+    return dateTime().toTimeZone(timeZoneToUse()).time().toString(QLocale::system().timeFormat(QLocale::ShortFormat));
 }
 
 QString DateAndTime::dateString() const
 {
-    return m_dateTime.toLocalTime().date().toString(QLocale::system().dateFormat(QLocale::ShortFormat));
+    return dateTime().toTimeZone(timeZoneToUse()).date().toString(QLocale::system().dateFormat(QLocale::ShortFormat));
+}
+
+void DateAndTime::checkNeedsSave()
+{
+    bool timeZoneChanged = m_systemTimeZone.isValid() && m_timeZone.isValid() && m_systemTimeZone != m_timeZone;
+    bool ntpChanged = m_systemNtpEnabledSet && m_ntpEnabledSet && m_systemNtpEnabled != m_ntpEnabled;
+    bool dateTimeChanged = m_systemDateTime.isValid() && m_dateTime.isValid() && m_systemDateTime != m_dateTime;
+    setNeedsSave(timeZoneChanged || ntpChanged || dateTimeChanged);
 }
 
 void DateAndTime::save()
@@ -168,42 +174,47 @@ void DateAndTime::save()
 
 void DateAndTime::load()
 {
-    m_timeZoneModified = false;
-    m_ntpEnabledModified = false;
-    m_dateTimeModified = false;
-    refresh(true);
+    m_systemTimeZone = {};
+    m_timeZone = {};
+    m_systemNtpEnabled = false;
+    m_systemNtpEnabledSet = false;
+    m_ntpEnabled = false;
+    m_ntpEnabledSet = false;
+    m_systemDateTime = {};
+    m_dateTime = {};
+    refresh();
     m_refreshTimer.start(1000);
 }
 
-void DateAndTime::refresh(bool forceNtp)
+void DateAndTime::refresh()
 {
-    if (!m_ntpEnabledModified && (!m_ntpAvailable || forceNtp)) {
+    if (!m_systemNtpEnabledSet || !m_ntpAvailable) {
         OrgFreedesktopTimedate1Interface timeDatedIface("org.freedesktop.timedate1"_L1, "/org/freedesktop/timedate1"_L1, QDBusConnection::systemBus());
         const auto oldNtpAvailable = std::exchange(m_ntpAvailable, timeDatedIface.canNTP());
         if (m_ntpAvailable) {
             m_messages.remove(NtpUnavailableKey);
-            Q_EMIT ntpChanged();
         } else {
             addMessage(Message::error(i18n("Unable to change NTP settings")), false, NtpUnavailableKey);
         }
-        const auto oldNtpEnabled = std::exchange(m_ntpEnabled, timeDatedIface.nTP());
-        if (oldNtpAvailable != m_ntpAvailable || oldNtpEnabled != m_ntpEnabled) {
+        const auto oldSystemNtpEnabled = std::exchange(m_systemNtpEnabled, timeDatedIface.nTP());
+        m_systemNtpEnabledSet = true;
+        if (oldNtpAvailable != m_ntpAvailable || oldSystemNtpEnabled != m_systemNtpEnabled) {
             Q_EMIT ntpChanged();
         }
     }
 
     // Reset to the current date and time
-    if (!m_dateTimeModified) {
-        const auto oldDateTime = std::exchange(m_dateTime, QDateTime::currentDateTime());
-        if (oldDateTime != m_dateTime) {
+    if (m_systemDateTime.isNull()) {
+        const auto oldSystemDateTime = std::exchange(m_systemDateTime, QDateTime::currentDateTime());
+        if (oldSystemDateTime != m_systemDateTime) {
             Q_EMIT dateTimeChanged();
         }
     }
 
     // Timezone
-    if (!m_timeZoneModified) {
-        const auto oldTimeZone = std::exchange(m_timeZone, QTimeZone::systemTimeZone().id());
-        if (oldTimeZone != m_timeZone) {
+    if (!m_systemTimeZone.isValid()) {
+        const auto oldSystemTimeZone = std::exchange(m_systemTimeZone, QTimeZone::systemTimeZone());
+        if (oldSystemTimeZone != m_systemTimeZone) {
             Q_EMIT timeZoneChanged();
         }
     }
@@ -226,7 +237,7 @@ bool DateAndTime::timedateSave()
         } else {
             addMessage(Message::error(i18n("Permission to change NTP setting denied")));
         }
-        qWarning() << "Failed to enable NTP" << reply.error().name() << reply.error().message();
+        qCWarning(KCM_CLOCK) << "Failed to enable NTP" << reply.error().name() << reply.error().message();
         return false;
     }
 
@@ -241,12 +252,12 @@ bool DateAndTime::timedateSave()
             } else {
                 addMessage(Message::error(i18n("Permission to date and time setting denied")));
             }
-            qWarning() << "Failed to set current time" << reply.error().name() << reply.error().message();
+            qCWarning(KCM_CLOCK) << "Failed to set current time" << reply.error().name() << reply.error().message();
             return false;
         }
     }
-    if (!m_timeZone.isEmpty()) {
-        auto reply = timedateIface.SetTimezone(m_timeZone, true);
+    if (!m_timeZone.isValid()) {
+        auto reply = timedateIface.SetTimezone(m_timeZone.id(), true);
         reply.waitForFinished();
         if (reply.isError()) {
             if (reply.error().name() != QDBusError::errorString(QDBusError::AccessDenied)) {
@@ -254,7 +265,7 @@ bool DateAndTime::timedateSave()
             } else {
                 addMessage(Message::error(i18n("Permission to change time zone denied")));
             }
-            qWarning() << "Failed to set time zone" << reply.error().name() << reply.error().message();
+            qCWarning(KCM_CLOCK) << "Failed to set time zone" << reply.error().name() << reply.error().message();
             return false;
         }
     }
