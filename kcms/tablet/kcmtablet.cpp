@@ -369,7 +369,7 @@ void Tablet::save()
 
     auto generalGroup = KSharedConfig::openConfig("kcminputrc")->group("ButtonRebinds");
     // regular rebinds
-    for (const auto &device : QStringList{"Tablet", "TabletTool", "TabletDial"}) {
+    for (const auto &device : std::to_array<QString>({"Tablet", "TabletTool", "TabletDial"})) {
         for (auto it = m_unsavedMappings[device].cbegin(), itEnd = m_unsavedMappings[device].cend(); it != itEnd; ++it) {
             auto configGroup = generalGroup.group(device).group(it.key());
             for (auto itDevice = it->cbegin(), itDeviceEnd = it->cend(); itDevice != itDeviceEnd; ++itDevice) {
@@ -385,7 +385,7 @@ void Tablet::save()
         }
     }
     // mode-based rebinds
-    for (const auto &device : QStringList{"TabletRing"}) {
+    for (const auto &device : std::to_array<QString>({"TabletRing"})) {
         for (auto it = m_unsavedMappings[device].cbegin(), itEnd = m_unsavedMappings[device].cend(); it != itEnd; ++it) {
             auto configGroup = generalGroup.group(device).group(it.key());
             for (auto itDevice = it->cbegin(), itDeviceEnd = it->cend(); itDevice != itDeviceEnd; ++itDevice) {
