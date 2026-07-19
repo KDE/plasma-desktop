@@ -57,7 +57,7 @@ void EmojiDict::load(const QString &path)
     int skinToneVariantIndex = 0;
     int twoToneVariantIndex = 0;
     bool searchNeutralForTwoTone = false;
-    for (const auto &emoji : emojis) {
+    for (const auto &emoji : std::as_const(emojis)) {
         if (auto iter = m_processedEmojis.find(emoji.content); iter != m_processedEmojis.end()) {
             // Overwrite with new data but keep previous description as fallback.
             replaceEmoji(m_emojis[iter.value()], emoji);

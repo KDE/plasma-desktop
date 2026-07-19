@@ -48,7 +48,7 @@ inline QDataStream &operator>>(QDataStream &stream, Emoji &emoji)
     stream >> emoji.category;
     QList<QByteArray> annotationBuffers;
     stream >> annotationBuffers;
-    for (const auto &annotation : annotationBuffers) {
+    for (const auto &annotation : std::as_const(annotationBuffers)) {
         emoji.annotations << QString::fromUtf8(annotation);
     }
 

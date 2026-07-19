@@ -161,7 +161,7 @@ public:
 
         // Removing the activities from the list if we haven't found them
         // while traversing through the containments
-        for (const auto &activity : ghostActivities) {
+        for (const auto &activity : std::as_const(ghostActivities)) {
             newForActivity.remove(activity);
         }
 
@@ -169,7 +169,7 @@ public:
         if (!changedActivities.isEmpty()) {
             forActivity = newForActivity;
 
-            for (auto model : models) {
+            for (auto model : std::as_const(models)) {
                 model->onBackgroundsUpdated(changedActivities);
             }
         }

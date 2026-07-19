@@ -618,7 +618,7 @@ Backend *Backend::findTargetBackend()
 
     Backend *fallback = nullptr;
 
-    for (auto *instance : s_instances) {
+    for (auto *instance : std::as_const(s_instances)) {
         if (!instance->m_hasActiveTask) {
             continue;
         }
@@ -635,7 +635,7 @@ Backend *Backend::findTargetBackend()
 
 void Backend::dispatchActivateTaskAtIndex(int index)
 {
-    for (auto *instance : s_instances) {
+    for (auto *instance : std::as_const(s_instances)) {
         Q_EMIT instance->activateTaskAtIndexRequested(index);
     }
 }

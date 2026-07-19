@@ -156,7 +156,7 @@ EmojiModel::EmojiModel()
     }
     m_emoji = std::move(dict.m_emojis);
     m_tonedEmojis = std::move(dict.m_tonedEmojis);
-    for (const auto &emoji : m_emoji) {
+    for (const auto &emoji : std::as_const(m_emoji)) {
         categories.insert(emoji.categoryName());
     }
     m_categories = categories.values();
@@ -185,7 +185,7 @@ EmojiModel::~EmojiModel()
 
 QString EmojiModel::findFirstEmojiForCategory(const QString &category)
 {
-    for (const Emoji &emoji : m_emoji) {
+    for (const Emoji &emoji : std::as_const(m_emoji)) {
         if (emoji.categoryName() == category)
             return emoji.content;
     }
