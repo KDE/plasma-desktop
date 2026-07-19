@@ -86,7 +86,7 @@ public:
     {
         clear();
 
-        auto screens = qGuiApp->screens();
+        const auto screens = qGuiApp->screens();
         auto it = new QStandardItem(i18n("Follow the Current Screen"));
         it->setData(screens[0]->physicalSize(), Qt::UserRole + 1); // we use the first display to give an idea
         it->setData(screens[0]->size(), Qt::UserRole + 2);
@@ -97,7 +97,7 @@ public:
         it->setData(screens[0]->virtualSize(), Qt::UserRole + 2);
         appendRow(it);
 
-        for (auto screen : screens) {
+        for (const auto screen : screens) {
             auto geo = screen->geometry();
             auto name = screen->model().isEmpty() ? screen->name() : screen->model();
             auto it = new QStandardItem(i18nc("model - (x,y widthxheight)",

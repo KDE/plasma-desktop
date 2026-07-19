@@ -263,7 +263,7 @@ void RecentEmojiModel::refresh()
     const auto oldCount = m_emoji.count();
 
     beginResetModel();
-    auto recent = m_settings.recent();
+    const auto recent = m_settings.recent();
     auto recentDescriptions = m_settings.recentDescriptions();
     int i = 0;
     m_emoji.clear();

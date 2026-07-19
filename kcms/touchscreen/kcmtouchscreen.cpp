@@ -45,10 +45,10 @@ public:
     {
         clear();
 
-        auto screens = qGuiApp->screens();
         auto it = new QStandardItem(i18n("Automatic"));
         appendRow(it);
 
+        const auto screens = qGuiApp->screens();
         for (auto screen : screens) {
             auto geo = screen->geometry();
             auto it = new QStandardItem(i18nc("model - (x,y widthxheight)",
