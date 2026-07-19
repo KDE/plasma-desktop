@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <QTimeZone>
 #include <QTimer>
 
 #include <KQuickConfigModule>
@@ -48,7 +49,7 @@ public:
 
     void save() override;
     void load() override;
-    void refresh(bool forceNtp = false);
+    void refresh();
 
 Q_SIGNALS:
     void messagesChanged();
@@ -59,20 +60,23 @@ Q_SIGNALS:
     void message(Message message);
 
 private:
-    void initialize();
-
     QHash<QString, Message> m_messages;
     int m_nextKey = 0;
     void addMessage(const Message &message, bool isTemporary = true, const QString &id = {});
 
-    QString m_timeZone;
-    bool m_timeZoneModified = false;
+    QTimeZone m_systemTimeZone = {};
+    QTimeZone m_timeZone = {};
+    QTimeZone timeZoneToUse() const;
     bool m_ntpAvailable = false;
+    bool m_systemNtpEnabled = false;
+    bool m_systemNtpEnabledSet = false;
     bool m_ntpEnabled = false;
-    bool m_ntpEnabledModified = false;
-    QDateTime m_dateTime;
-    bool m_dateTimeModified = false;
+    bool m_ntpEnabledSet = false;
+    QDateTime m_systemDateTime = {};
+    QDateTime m_dateTime = {};
     QTimer m_refreshTimer;
+
+    void checkNeedsSave();
 
     bool timedateSave();
 };
