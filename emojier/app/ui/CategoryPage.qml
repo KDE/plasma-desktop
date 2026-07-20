@@ -76,6 +76,7 @@ Kirigami.ScrollablePage {
                 Keys.onDownPressed: event => {
                     emojiView.currentIndex = Math.max(emojiView.currentIndex, 0)
                     event.accepted = false
+                    emojiView.forceActiveFocus(Qt.TabFocusReason)
                 }
 
                 Binding {
