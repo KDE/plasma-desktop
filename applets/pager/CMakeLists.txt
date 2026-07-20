@@ -16,7 +16,6 @@ plasma_add_applet(org.kde.plasma.pager
 
 target_link_libraries(org.kde.plasma.pager PRIVATE
     KF6::WindowSystem
-    Plasma::Plasma
     Plasma::Activities
     PW::LibTaskManager
     Qt::Core

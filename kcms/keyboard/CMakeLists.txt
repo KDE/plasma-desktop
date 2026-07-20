@@ -59,7 +59,6 @@ target_link_libraries(kcm_keyboard_static
     KF6::GlobalAccel
     KF6::I18n
     KF6::WindowSystem
-    Plasma::Plasma
     KF6::XmlGui
     KF6::GuiAddons
     PkgConfig::XKBREGISTRY

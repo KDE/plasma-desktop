@@ -29,7 +29,6 @@ target_link_libraries(kcm_touchpad
     KF6::CoreAddons
     KF6::I18n
     KF6::KCMUtilsQuick
-    Plasma::Plasma
     KF6::WindowSystem
     kwindevices
 )

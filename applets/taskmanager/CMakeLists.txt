@@ -55,7 +55,6 @@ target_link_libraries(org.kde.plasma.taskmanager PRIVATE
                       KF6::KIOFileWidgets # KFilePlacesModel
                       KF6::Notifications # KNotificationJobUiDelegate
                       KF6::XmlGui
-                      Plasma::Plasma
                       KSysGuard::ProcessCore
                       KF6::Service
                       KF6::WindowSystem
