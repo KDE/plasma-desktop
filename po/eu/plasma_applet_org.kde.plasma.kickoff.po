@@ -1,7 +1,7 @@
 # Translation for plasma_applet_org.kde.plasma.kickoff.po to Euskara/Basque (eu)
 # Copyright (C) 2016-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023-2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-30 02:35+0000\n"
-"PO-Revision-Date: 2026-02-16 12:36+0100\n"
+"PO-Revision-Date: 2026-07-20 00:21+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: code/tools.js:32
 #, kde-format
@@ -186,12 +186,10 @@ msgid "Use compact list item style"
 msgstr "Erabili zerrenda-trinko elementu-estiloa"
 
 #: ConfigGeneral.qml:187
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Highlight newly installed applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
-msgstr "Aplikazio instalatu berriak nabarmendu"
+msgstr "Berriki instalatutako aplikazioak nabarmendu"
 
 #: ConfigGeneral.qml:192
 #, kde-format
@@ -328,20 +326,16 @@ msgid "Keep Open"
 msgstr "Eduki irekita"
 
 #: KickoffGridDelegate.qml:59
-#, fuzzy, kde-format
-#| msgctxt "@label Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Berria!"
 
 #: KickoffGridDelegate.qml:61
-#, fuzzy, kde-format
-#| msgctxt "@label Accessible name for badge"
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
-msgstr "Aplikazio instalatu berria"
+msgstr "Berriki instalatutako aplikazioa"
 
 #: KickoffGridView.qml:116
 #, kde-format
@@ -350,26 +344,20 @@ msgid "Grid with %1 rows, %2 columns"
 msgstr "%1 errenkadako, %2 zutabeko sareta"
 
 #: KickoffListDelegate.qml:120
-#, fuzzy, kde-format
-#| msgctxt "@label Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Berria!"
 
 #: KickoffListDelegate.qml:125
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis Accessible description for badge"
-#| msgid "There is a newly installed application in this category"
+#, kde-format
 msgid "There is a newly-installed application in this category"
-msgstr "Kategoria honetan aplikazio instalatu berri bat dago"
+msgstr "Kategoria honetan berriki instalatutako aplikazio bat dago"
 
 #: KickoffListDelegate.qml:126
-#, fuzzy, kde-format
-#| msgctxt "@label Accessible name for badge"
-#| msgid "Newly installed application"
+#, kde-format
 msgid "Newly-installed application"
-msgstr "Aplikazio instalatu berria"
+msgstr "Berriki instalatutako aplikazioa"
 
 #: LeaveButtons.qml:171
 #, kde-format

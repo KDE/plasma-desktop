@@ -1,7 +1,7 @@
 # Translation for plasma_applet_org.kde.plasma.kicker.po to Euskara/Basque (eu)
 # Copyright (C) 2016-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024-2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2025, 2026.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-09 02:39+0000\n"
-"PO-Revision-Date: 2026-02-16 12:03+0100\n"
+"PO-Revision-Date: 2026-07-20 00:17+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: code/tools.js:53
 #, kde-format
@@ -67,7 +67,7 @@ msgstr "Hautatu…"
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr ""
+msgstr "Lehenetsitako ikonoa berrezarri"
 
 #: ConfigGeneral.qml:161
 #, kde-format
@@ -124,12 +124,10 @@ msgid "Show icons on the root level of the menu"
 msgstr "Ikonoak erakutsi menuaren erroko mailan"
 
 #: ConfigGeneral.qml:198
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
-msgstr "Maiz erabilitako aplikazioak"
+msgstr "Berriki instalatutako aplikazioak nabarmendu"
 
 #: ConfigGeneral.qml:208
 #, kde-format
@@ -162,20 +160,16 @@ msgid "Often used files"
 msgstr "Maiz erabilitako fitxategiak"
 
 #: ConfigGeneral.qml:227
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Recent files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent places"
-msgstr "Berriki erabilitako fitxategiak"
+msgstr "Azken aldiko lekuak"
 
 #: ConfigGeneral.qml:228
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used places"
-msgstr "Maiz erabilitako fitxategiak"
+msgstr "Maiz erabilitako lekuak"
 
 #: ConfigGeneral.qml:234
 #, kde-format
@@ -247,27 +241,25 @@ msgstr "Gogokoak"
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Berria!"
 
 #: DashboardRepresentation.qml:951 ItemListDelegate.qml:98
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
-msgstr ""
+msgstr "Kategoria honetan berriki instalatutako aplikazio bat dago"
 
 #: ItemGridDelegate.qml:81
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Berria!"
 
 #: ItemGridDelegate.qml:83
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
-msgstr "Maiz erabilitako aplikazioak"
+msgstr "Berriki instalatutako aplikazioa"
 
 #: ItemListDelegate.qml:40
 #, kde-format
@@ -282,12 +274,10 @@ msgid "Launch"
 msgstr "Abiarazi"
 
 #: ItemListDelegate.qml:99
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
-msgstr "Maiz erabilitako aplikazioak"
+msgstr "Berriki instalatutako aplikazioa"
 
 #: main.qml:208
 #, kde-format
