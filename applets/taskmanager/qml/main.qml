@@ -549,13 +549,7 @@ PlasmoidItem {
         }
     }
 
-    // This is called by plasmashell in response to a Meta+number shortcut.
-    // TODO: Change type to int
-    function activateTaskAtIndex(index: var): void {
-        if (typeof index !== "number") {
-            return;
-        }
-
+    function activateTaskAtIndex(index: int): void {
         const task = taskRepeater.itemAt(index) as Task;
         if (task) {
             TaskManagerApplet.TaskTools.activateTask(task.modelIndex(), task.model, null, task, Plasmoid, this, effectWatcher.registered);
