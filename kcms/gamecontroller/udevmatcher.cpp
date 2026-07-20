@@ -52,7 +52,7 @@ std::string UDevMatcher::deviceToUdevId(const std::string &device_path)
     qCDebug(KCM_GAMECONTROLLER) << "Looking for ID of " << devicePath;
 
     // If the bit after the last / is a digit, stop, we found it
-    while (!std::isdigit(devicePath.at(slash + 1))) {
+    while (slash != std::string::npos && (slash + 1) < devicePath.length() && !std::isdigit(devicePath.at(slash + 1))) {
         // Remove the last bit
         devicePath = devicePath.substr(0, slash);
 
