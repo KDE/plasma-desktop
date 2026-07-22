@@ -541,25 +541,6 @@ KCMUtils.SimpleKCM {
             }
 
             Kirigami.FormEntry {
-                contentItem: QQC2.CheckBox {
-                    id: tapAndDrag
-                    text: i18ndc("kcm_touchpad", "@option:check", "Allow dragging after tapping")
-                    enabled: root.device?.tapFingerCount > 0 && tapToClick.checked
-                    checked: enabled && (root.device?.tapAndDrag ?? false)
-
-                    onToggled: {
-                        if (root.device) {
-                            root.device.tapAndDrag = checked
-                        }
-                    }
-                }
-
-                trailingItems: Kirigami.ContextualHelpButton {
-                    toolTipText: i18ndc("kcm_touchpad", "@info:tooltip from ContextualHelpButton", "Tap, then touch down again and slide finger over the touchpad to drag. Lift finger to drop. Briefly lift and reposition finger to continue dragging.")
-                }
-            }
-
-            Kirigami.FormEntry {
                 title: i18ndc("kcm_touchpad", "@title:group", "Two-finger tap:")
                 visible: root.device?.supportsLmrTapButtonMap
                 enabled: root.device?.supportsLmrTapButtonMap && tapToClick.checked
@@ -599,6 +580,81 @@ KCMUtils.SimpleKCM {
                     checked: enabled && (root.device?.lmrTapButtonMap ?? false)
                 }
                 subtitle: multiTapMiddleClick.Accessible.description
+            }
+        }
+
+        // Dragging section
+        Kirigami.FormGroup {
+            id: draggingGroup
+
+            Kirigami.FormEntry {
+                title: i18ndc("kcm_touchpad", "@title:group", "Drag by:")
+                contentItem: QQC2.CheckBox {
+                    id: tapAndDrag
+                    text: i18ndc("kcm_touchpad", "@option:check Completes the sentence 'Drag by moving one finger after tapping twice'", "Moving one finger after tapping twice")
+                    enabled: root.device?.tapFingerCount > 0 && tapToClick.checked
+                    checked: enabled && (root.device?.tapAndDrag ?? false)
+
+                    onToggled: {
+                        if (root.device) {
+                            root.device.tapAndDrag = checked
+                        }
+                    }
+                }
+
+                trailingItems: Kirigami.ContextualHelpButton {
+                    toolTipText: i18ndc("kcm_touchpad", "@info:tooltip from ContextualHelpButton", "Tap, then touch down again and slide finger over the touchpad to drag. Lift finger to drop. Briefly lift and reposition finger to continue dragging.")
+                }
+            }
+
+            Kirigami.FormEntry {
+                id: multiFingerDragFormEntry
+                visible: (root.device?.multiFingerDragMaxFingerCount ?? 0) > 0
+
+                contentItem: RowLayout {
+                    spacing: Kirigami.Units.largeSpacing
+                    Kirigami.FormData.buddyFor: multiFingerDrag
+
+                    QQC2.CheckBox {
+                        id: multiFingerDrag
+                        text: ((root.device?.multiFingerDragMaxFingerCount ?? 0) === 3
+                               ? i18ndc("kcm_touchpad", "@option:check Completes the sentence 'Drag by moving three fingers'", "Moving three fingers")
+                               : i18ndc("kcm_touchpad", "@option:check Completes the sentence 'Drag by moving multiple fingers: (3/4 fingers)'", "Moving multiple fingers:"))
+                        checked: (root.device?.multiFingerDrag ?? 0) > 0
+
+                        onToggled: setFingerCount(checked ? selectedFingerCount : 0)
+
+                        property int selectedFingerCount: 3
+                        Component.onCompleted: {
+                            selectedFingerCount = root.device?.multiFingerDrag === 4 ? 4 : 3
+                        }
+
+                        function setFingerCount(fingerCount) {
+                            if (fingerCount > 0) {
+                                selectedFingerCount = fingerCount
+                            }
+                            if (root.device) {
+                                root.device.multiFingerDrag = fingerCount
+                            }
+                        }
+                    }
+
+                    QQC2.ComboBox {
+                        id: fingerCountCombo
+                        visible: (root.device?.multiFingerDragMaxFingerCount ?? 0) >= 4
+
+                        readonly property var options: [
+                            { fingerCount: 3, label: i18ndc("kcm_touchpad", "@item:inlistbox following the label 'Drag by moving multiple fingers:'", "3 fingers") },
+                            { fingerCount: 4, label: i18ndc("kcm_touchpad", "@item:inlistbox following the label 'Drag by moving multiple fingers:'", "4 fingers") },
+                        ]
+                        model: options.map((elem) => elem.label)
+                        currentIndex: options.findIndex((elem) => elem.fingerCount === multiFingerDrag.selectedFingerCount)
+
+                        onActivated: {
+                            multiFingerDrag.setFingerCount(options[currentIndex].fingerCount);
+                        }
+                    }
+                }
             }
         }
     }

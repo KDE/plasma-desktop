@@ -117,6 +117,10 @@ class KWinWaylandTouchpad : public QObject
     Q_PROPERTY(bool tapAndDragEnabledByDefault READ tapAndDragEnabledByDefault CONSTANT)
     Q_PROPERTY(bool tapAndDrag READ isTapAndDrag WRITE setTapAndDrag NOTIFY tapAndDragChanged)
 
+    Q_PROPERTY(int multiFingerDragMaxFingerCount READ multiFingerDragMaxFingerCount CONSTANT)
+    Q_PROPERTY(int defaultMultiFingerDrag READ defaultMultiFingerDrag CONSTANT)
+    Q_PROPERTY(int multiFingerDrag READ multiFingerDrag WRITE setMultiFingerDrag NOTIFY multiFingerDragChanged)
+
     //
     // scrolling
     Q_PROPERTY(bool supportsNaturalScroll READ supportsNaturalScroll CONSTANT)
@@ -302,6 +306,22 @@ public:
     void setTapAndDrag(bool set)
     {
         m_tapAndDrag.set(set);
+    }
+    int multiFingerDragMaxFingerCount() const
+    {
+        return m_multiFingerDragMaxFingerCount.val;
+    }
+    int defaultMultiFingerDrag() const
+    {
+        return m_defaultMultiFingerDrag.val;
+    }
+    int multiFingerDrag() const
+    {
+        return m_multiFingerDrag.val;
+    }
+    void setMultiFingerDrag(int fingerCount)
+    {
+        m_multiFingerDrag.set(fingerCount);
     }
 
     //
@@ -499,10 +519,11 @@ Q_SIGNALS:
     void needsSaveChanged();
 
     void enabledChanged();
-    // Tapping
+    // tapping and dragging
     void tapToClickChanged();
     void lmrTapButtonMapChanged();
     void tapAndDragChanged();
+    void multiFingerDragChanged();
     // Advanced
     void leftHandedChanged();
     void disableEventsOnExternalMouseChanged();
@@ -635,7 +656,7 @@ private:
         PropBool(this, "pointerAccelerationProfileAdaptive", &KWinWaylandTouchpad::pointerAccelerationProfileAdaptiveChanged);
 
     //
-    // tapping
+    // tapping and dragging
     Prop<int> m_tapFingerCount = PropInt(this, "tapFingerCount");
     PropBool m_tapToClickEnabledByDefault = PropBool(this, "tapToClickEnabledByDefault");
     PropBool m_tapToClick = PropBool(this, "tapToClick", &KWinWaylandTouchpad::tapToClickChanged);
@@ -645,6 +666,10 @@ private:
 
     PropBool m_tapAndDragEnabledByDefault = PropBool(this, "tapAndDragEnabledByDefault");
     PropBool m_tapAndDrag = PropBool(this, "tapAndDrag", &KWinWaylandTouchpad::tapAndDragChanged);
+
+    PropInt m_multiFingerDragMaxFingerCount = PropInt(this, "multiFingerDragMaxFingerCount");
+    PropInt m_defaultMultiFingerDrag = PropInt(this, "defaultMultiFingerDrag");
+    PropInt m_multiFingerDrag = PropInt(this, "multiFingerDrag", &KWinWaylandTouchpad::multiFingerDragChanged);
 
     //
     // scrolling
