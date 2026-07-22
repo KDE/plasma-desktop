@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-14 00:46+0000\n"
+"POT-Creation-Date: 2026-07-22 00:47+0000\n"
 "PO-Revision-Date: 2026-07-14 09:02+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -89,6 +89,12 @@ msgstr "העברת רשומת מנהל המשימות הפעילה אחורה"
 #, kde-format
 msgid "Move Active Task Manager Entry Forward"
 msgstr "העברת רשומת מנהל המשימות הפעילה קדימה"
+
+#: backend.cpp:613
+#, fuzzy, kde-format
+#| msgid "Activate Next Task Manager Entry"
+msgid "Activate Task Manager Entry %1"
+msgstr "הפעלת רשומת מנהל המשימות הבאה"
 
 #: qml/AudioStream.qml:94
 #, kde-format

@@ -13,15 +13,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-14 00:46+0000\n"
-"PO-Revision-Date: 2026-06-25 23:57+0900\n"
+"POT-Creation-Date: 2026-07-22 00:47+0000\n"
+"PO-Revision-Date: 2026-07-22 01:05+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.07.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: backend.cpp:339
@@ -73,24 +73,28 @@ msgstr "忘掉最近的檔案"
 #: backend.cpp:582
 #, kde-format
 msgid "Activate Previous Task Manager Entry"
-msgstr ""
+msgstr "切換到上一個工作管理員項目"
 
 #: backend.cpp:589
-#, fuzzy, kde-format
-#| msgctxt "action:inmenu"
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgid "Activate Next Task Manager Entry"
-msgstr "釘選至工作管理員(&P)"
+msgstr "切換到下一個工作管理員項目"
 
 #: backend.cpp:596
 #, kde-format
 msgid "Move Active Task Manager Entry Backward"
-msgstr ""
+msgstr "將目前的工作管理員項目往後移動"
 
 #: backend.cpp:604
 #, kde-format
 msgid "Move Active Task Manager Entry Forward"
-msgstr ""
+msgstr "將目前的工作管理員項目往前移動"
+
+#: backend.cpp:613
+#, fuzzy, kde-format
+#| msgid "Activate Next Task Manager Entry"
+msgid "Activate Task Manager Entry %1"
+msgstr "切換到下一個工作管理員項目"
 
 #: qml/AudioStream.qml:94
 #, kde-format

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-14 00:46+0000\n"
+"POT-Creation-Date: 2026-07-22 00:47+0000\n"
 "PO-Revision-Date: 2026-07-18 22:06+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -92,6 +92,12 @@ msgstr "Perkelti aktyvų užduočių tvarkytuvės įrašą atgal"
 #, kde-format
 msgid "Move Active Task Manager Entry Forward"
 msgstr "Perkelti aktyvų užduočių tvarkytuvės įrašą pirmyn"
+
+#: backend.cpp:613
+#, fuzzy, kde-format
+#| msgid "Activate Next Task Manager Entry"
+msgid "Activate Task Manager Entry %1"
+msgstr "Aktyvuoti kitą užduočių tvarkytuvės įrašą"
 
 #: qml/AudioStream.qml:94
 #, kde-format

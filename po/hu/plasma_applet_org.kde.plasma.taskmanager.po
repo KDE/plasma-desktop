@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-14 00:46+0000\n"
+"POT-Creation-Date: 2026-07-22 00:47+0000\n"
 "PO-Revision-Date: 2026-06-19 22:37+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -88,6 +88,13 @@ msgstr ""
 #, kde-format
 msgid "Move Active Task Manager Entry Forward"
 msgstr ""
+
+#: backend.cpp:613
+#, fuzzy, kde-format
+#| msgctxt "action:inmenu"
+#| msgid "&Pin to Task Manager"
+msgid "Activate Task Manager Entry %1"
+msgstr "&Rögzítés a panelen"
 
 #: qml/AudioStream.qml:94
 #, kde-format

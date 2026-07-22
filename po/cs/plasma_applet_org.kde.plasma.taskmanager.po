@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-14 00:46+0000\n"
+"POT-Creation-Date: 2026-07-22 00:47+0000\n"
 "PO-Revision-Date: 2026-07-14 11:31+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -89,6 +89,12 @@ msgstr "Posunout aktivní položku Správce úloh dozadu"
 #, kde-format
 msgid "Move Active Task Manager Entry Forward"
 msgstr "Posunout aktivní položku Správce úloh dopředu"
+
+#: backend.cpp:613
+#, fuzzy, kde-format
+#| msgid "Activate Next Task Manager Entry"
+msgid "Activate Task Manager Entry %1"
+msgstr "Aktivovat další záznam ve Správci úloh"
 
 #: qml/AudioStream.qml:94
 #, kde-format

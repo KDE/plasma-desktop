@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-14 00:46+0000\n"
+"POT-Creation-Date: 2026-07-22 00:47+0000\n"
 "PO-Revision-Date: 2023-01-08 16:15+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -87,6 +87,12 @@ msgstr ""
 #, kde-format
 msgid "Move Active Task Manager Entry Forward"
 msgstr ""
+
+#: backend.cpp:613
+#, fuzzy, kde-format
+#| msgid "&Pin to Task Manager"
+msgid "Activate Task Manager Entry %1"
+msgstr "Ghim vào Trình &quản lí tác vụ"
 
 #: qml/AudioStream.qml:94
 #, kde-format

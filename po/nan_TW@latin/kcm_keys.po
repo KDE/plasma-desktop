@@ -1,0 +1,529 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-07-10 00:46+0000\n"
+"PO-Revision-Date: 2026-07-22 00:16+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 26.11.70\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kisaragi Hiu"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "mail@kisaragi-hiu.com"
+
+#: basemodel.cpp:158
+#, kde-format
+msgctxt "@title:group Launch app"
+msgid "Launch"
+msgstr "Khí-tōng"
+
+#: basemodel.cpp:191
+#, kde-format
+msgctxt "@item:intable"
+msgid "Window Management"
+msgstr "Sī-thang Kuán-lí"
+
+#: basemodel.cpp:194
+#, kde-format
+msgctxt "@item:intable"
+msgid "Plasma Workspace"
+msgstr "Plasma Kang-tsok-khu"
+
+#: globalaccelmodel.cpp:281
+#, kde-format
+msgctxt ""
+"%1 is the name of the component, %2 is the action for which saving failed"
+msgid "Error while saving shortcut %1: %2"
+msgstr "Tû-tsûn khuài-sok-khí %1 ê sî-tsūn ū tshò-gōo: %2"
+
+#: globalaccelmodel.cpp:395
+#, kde-format
+msgctxt "%1 is the name of an application"
+msgid "Error while adding %1, it seems it has no actions."
+msgstr "Thiam %1 ê sî-tsūn ū tshò-gōo, i kan-na bô tōng-tsok."
+
+#: globalaccelmodel.cpp:469
+#, kde-format
+msgid "Error while communicating with the global shortcuts service"
+msgstr "Kap tsuân-i̍k khuài-sok-khí ho̍k-bū thong-sìn ê sî-tsūn ū tshò-gōo"
+
+#: kcm_keys.cpp:56
+#, kde-format
+msgid "Failed to communicate with global shortcuts daemon"
+msgstr "Kap tsuân-i̍k khuài-sok-khí daemon thong-sìn ê sî-tsūn sit-pāi--ah"
+
+#: kcm_keys.cpp:380
+#, kde-kuit-format
+msgctxt ""
+"@info %2 is the name of a category inside the 'Common Actions' section"
+msgid ""
+"Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
+"<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
+msgstr ""
+"Khuài-sok-khí <shortcut>%1</shortcut> í-king tsí-phài hōo kiōng-thong tōng-"
+"tsok %2 ê <interface>%3</interface>--ah.<nl/><nl/>Kám ài kā i tîng-tsí-phài "
+"hōo %4?"
+
+#: kcm_keys.cpp:386
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
+"%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
+"action <interface>%4</interface> of <application>%5</application>?"
+msgstr ""
+"Khuài-sok-khí <shortcut>%1</shortcut> í-king tsí-phài hōo <application>%3</"
+"application> ê tōng-tsok <interface>%2</interface>--ah.<nl/><nl/>Kám ài kā i "
+"tîng-tsí-phài hōo <application>%5</application> ê tōng-tsok <interface>%4</"
+"interface>?"
+
+#: kcm_keys.cpp:396
+#, kde-format
+msgctxt "@title:window"
+msgid "Resolve Shortcut Conflict"
+msgstr "Kái-kuat Khuài-sok-khí Tshiong-tu̍t"
+
+#: kcm_keys.cpp:406
+#, kde-format
+msgctxt "@action:button"
+msgid "Reassign"
+msgstr "Tîng-tsí-phài"
+
+#: standardshortcutsmodel.cpp:34
+#, kde-format
+msgid "File"
+msgstr "Tóng-àn"
+
+#: standardshortcutsmodel.cpp:35
+#, kde-format
+msgid "Edit"
+msgstr "Pian-tsi̍p"
+
+#: standardshortcutsmodel.cpp:37
+#, kde-format
+msgid "Navigation"
+msgstr "Liû-lám"
+
+#: standardshortcutsmodel.cpp:38
+#, kde-format
+msgid "View"
+msgstr "Kiám-sī"
+
+#: standardshortcutsmodel.cpp:39
+#, kde-format
+msgid "Settings"
+msgstr "Siat-tīng"
+
+#: standardshortcutsmodel.cpp:40
+#, kde-format
+msgid "Help"
+msgstr "Suat-bîng"
+
+#: ui/main.qml:27
+#, kde-format
+msgctxt "@title:group list section name"
+msgid "Applications"
+msgstr "Îng-ióng-tîng-sik"
+
+#: ui/main.qml:27
+#, kde-format
+msgctxt "@title:group list section name"
+msgid "Commands"
+msgstr "Tsí-līng"
+
+#: ui/main.qml:27
+#, kde-format
+msgctxt "@title:group list section name"
+msgid "System Services"
+msgstr "Hē-thóng Ho̍k-bū"
+
+#: ui/main.qml:27
+#, kde-format
+msgctxt "@title:group list section name"
+msgid "Common Actions"
+msgstr "Kiōng-thong Tōng-tsok"
+
+#: ui/main.qml:43
+#, kde-format
+msgctxt "@action:button Import shortcut scheme"
+msgid "Import…"
+msgstr "Huē-ji̍p…"
+
+#: ui/main.qml:44
+#, kde-format
+msgctxt "@action:button accessible"
+msgid "Import shortcut scheme"
+msgstr "Huē-ji̍p khuài-sok-khí hong-àn"
+
+#: ui/main.qml:49
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel Export"
+msgstr "Tshú-siau Huē-tshut"
+
+#: ui/main.qml:50
+#, kde-format
+msgctxt "@action:button Export shortcut scheme"
+msgid "Export…"
+msgstr "Huē-tshut…"
+
+#: ui/main.qml:53 ui/main.qml:128
+#, kde-format
+msgctxt "@action:button accessible"
+msgid "Export shortcut scheme"
+msgstr "Huē-tshut khuài-sok-khí hong-àn"
+
+#: ui/main.qml:66
+#, kde-format
+msgctxt "@action:button Add new shortcut"
+msgid "Add New"
+msgstr "Thiam Sin-ê"
+
+#: ui/main.qml:74
+#, kde-format
+msgctxt "@action:menu End of the sentence 'Add New Application…'"
+msgid "Application…"
+msgstr "Ìng-iōng-tîng-sik…"
+
+#: ui/main.qml:75
+#, kde-format
+msgctxt "@action:menu accessible"
+msgid "Add new application"
+msgstr "Thiam sin-ê ìng-iōng-tîng-sik"
+
+#: ui/main.qml:82
+#, kde-format
+msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
+msgid "Command or Script…"
+msgstr "Tsí-līng á-sī Bûn-kó…"
+
+#: ui/main.qml:83
+#, kde-format
+msgctxt "@action:menu accessible"
+msgid "Add new command or script"
+msgstr "Thiam sin-ê tsí-līng á-sī bûn-kó"
+
+#: ui/main.qml:107
+#, kde-format
+msgctxt "@info:status inlinemessage"
+msgid "Cannot export scheme while there are unsaved changes"
+msgstr ""
+"Koh-ū á-buē tû-tsûn ê piàn-king ê sî-tsūn bô-huat-tōo huē-tshut hong-àn"
+
+#: ui/main.qml:120
+#, kde-format
+msgctxt "@info:usagetip"
+msgid ""
+"Select the components below that should be included in the exported scheme"
+msgstr ""
+"Tshiánn suán-ti̍k ài pau-kuat tī-leh huē-tshut liáu-āu ê hong-àn ê guân-kiānn"
+
+#: ui/main.qml:127
+#, kde-format
+msgctxt "@action:button Export shortcut scheme"
+msgid "Export"
+msgstr "Huē-tshut"
+
+#: ui/main.qml:229
+#, kde-format
+msgctxt ""
+"@option:check accessible export shortcuts %1 is application/group name"
+msgid "Export %1"
+msgstr "Huē-tshut %1"
+
+#: ui/main.qml:239
+#, kde-format
+msgctxt "@action:button %1 is the name of a custom command"
+msgid "Edit command for %1"
+msgstr "Pian-tsi̍p %1 ê tsí-līng"
+
+#: ui/main.qml:268
+#, kde-format
+msgctxt "@action:button %1 is the name of a shortcut category"
+msgid "Remove all shortcuts for %1"
+msgstr "Î-tû %1 ê sóo-ū ê khuài-sok-khí"
+
+#: ui/main.qml:290
+#, kde-format
+msgctxt "@action:button"
+msgid "Undo deletion"
+msgstr "Ho̍k-guân thâi-tiāu"
+
+#: ui/main.qml:357
+#, kde-format
+msgctxt "@info:status placeholdermessage"
+msgid "No items matched the search terms"
+msgstr "Bô hû-ha̍p tshiau-tshuē ê hāng-bo̍k"
+
+#: ui/main.qml:374
+#, kde-format
+msgctxt "@info"
+msgid "These shortcuts will be deleted when changes are applied."
+msgstr "Tsia-ê khuài-sok-khí ē tī thò-iōng piàn-king ê sî-tsūn thâi-tiāu."
+
+#: ui/main.qml:378
+#, kde-format
+msgctxt "@action:button"
+msgid "Undo"
+msgstr "Ho̍k-guân"
+
+#: ui/main.qml:379
+#, kde-format
+msgctxt "@action:button"
+msgid "Undo deleting shortcuts"
+msgstr "Ho̍k-guân thâi-tiāu khuài-sok-khí"
+
+#: ui/main.qml:422
+#, kde-format
+msgctxt "@info:usagetip placeholdermessage"
+msgid "Select an item from the list to view its shortcuts here"
+msgstr ""
+
+#: ui/main.qml:435
+#, kde-format
+msgctxt "@title:window dialog"
+msgid "Export Shortcut Scheme"
+msgstr ""
+
+#: ui/main.qml:435 ui/main.qml:567
+#, kde-format
+msgctxt "@title:window dialog"
+msgid "Import Shortcut Scheme"
+msgstr ""
+
+#: ui/main.qml:437
+#, kde-format
+msgctxt "Template for file dialog"
+msgid "Shortcut Scheme (*.kksrc)"
+msgstr ""
+
+#: ui/main.qml:464
+#, kde-format
+msgctxt "@title:window dialog"
+msgid "Edit Command"
+msgstr "Pian-tsi̍p Tsí-līng"
+
+#: ui/main.qml:464
+#, kde-format
+msgctxt "@title:window dialog"
+msgid "Add Command"
+msgstr "Thiam Tsí-līng"
+
+#: ui/main.qml:481
+#, kde-format
+msgctxt "@action:button in dialog, save changes to custom command"
+msgid "Save"
+msgstr "Tû-tsûn"
+
+#: ui/main.qml:481
+#, kde-format
+msgctxt "@action:button in dialog, add entry as new custom command"
+msgid "Add"
+msgstr "Thiam"
+
+#: ui/main.qml:483
+#, kde-format
+msgctxt "@action:button accessible"
+msgid "Save command"
+msgstr "Tû-tsûn tsí-līng"
+
+#: ui/main.qml:484
+#, kde-format
+msgctxt "@action:button accessible"
+msgid "Add command"
+msgstr "Thiam tsí-līng"
+
+#: ui/main.qml:506
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Enter a command or choose a script file:"
+msgstr "Su-ji̍p tsí-līng á-sī suán tsi̍t-ê bûn-kó tóng-àn:"
+
+#: ui/main.qml:515
+#, kde-format
+msgctxt "@label:textbox A shell command"
+msgid "Command:"
+msgstr "Tsí-līng:"
+
+#: ui/main.qml:521
+#, kde-format
+msgctxt "@label:textbox accessible"
+msgid "Command"
+msgstr "Tsí-līng"
+
+#: ui/main.qml:528
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose…"
+msgstr "Suán…"
+
+#: ui/main.qml:529
+#, kde-format
+msgctxt "@action:button accessible"
+msgid "Choose script file"
+msgstr "Suán bûn-kó tóng-àn"
+
+#: ui/main.qml:537
+#, kde-format
+msgctxt "@label:textfield Human-readable name given to a shell command"
+msgid "Name:"
+msgstr "Miâ:"
+
+#: ui/main.qml:538
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Enter name here"
+msgstr "Tī tsia su-ji̍p miâ"
+
+#: ui/main.qml:550
+#, kde-format
+msgctxt "@title:window"
+msgid "Choose Script File"
+msgstr "Suán Bûn-kó Tóng-àn"
+
+#: ui/main.qml:552
+#, kde-format
+msgctxt ""
+"Filename filters for file dialog. Do not translate any of the filename "
+"extensions"
+msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
+msgstr "Bûn-kó tóng-àn (.sh, .bash, .zsh tíng-tíng) (*.*sh)"
+
+#: ui/main.qml:575
+#, kde-format
+msgctxt "@label:listbox regarding 'shortcut schemes'"
+msgid "Select the scheme to import:"
+msgstr "Suán ài huē-ji̍p ê hong-àn:"
+
+#: ui/main.qml:594
+#, kde-format
+msgctxt "@item:inlistbox regarding 'shortcut schemes'"
+msgid "Custom Scheme"
+msgstr "Tsū-tīng Hong-àn"
+
+#: ui/main.qml:602
+#, kde-format
+msgctxt "@action:button"
+msgid "Select File…"
+msgstr "Suán Tóng-àn…"
+
+#: ui/main.qml:602
+#, kde-format
+msgctxt "@action:button import shortcut scheme"
+msgid "Import"
+msgstr "Huē-ji̍p"
+
+#: ui/main.qml:604
+#, kde-format
+msgctxt "@action:button accessible"
+msgid "Select shortcut scheme file"
+msgstr "Suán khuài-sok-khí hong-àn tóng-àn"
+
+#: ui/main.qml:605
+#, kde-format
+msgctxt "@action:button accessible"
+msgid "Add shortcut scheme"
+msgstr "Thiam khuài-sok-khí hong-àn"
+
+#: ui/ShortcutActionDelegate.qml:31
+#, kde-format
+msgctxt "@action:button Collapse shortcuts view"
+msgid "Collapse"
+msgstr ""
+
+#: ui/ShortcutActionDelegate.qml:32
+#, kde-format
+msgctxt "@action:button"
+msgid "Expand to configure shortcuts"
+msgstr ""
+
+#: ui/ShortcutActionDelegate.qml:38
+#, kde-format
+msgctxt "@info:whatsthis accessible name %1 is shortcut label (not sequence)"
+msgid "Editing shortcut: %1"
+msgstr "Leh pian-tsi̍p khuài-sok-khí: %1"
+
+#: ui/ShortcutActionDelegate.qml:63
+#, kde-format
+msgctxt ""
+"%1 is the name action that is triggered by the key sequences following "
+"after :"
+msgid "%1:"
+msgstr "%1:"
+
+#: ui/ShortcutActionDelegate.qml:85
+#, kde-format
+msgctxt "@info:status"
+msgid "No active shortcuts"
+msgstr ""
+
+#: ui/ShortcutActionDelegate.qml:135
+#, kde-format
+msgctxt "@title:column %1 decides if singular or plural will be used"
+msgid "Default shortcut"
+msgid_plural "Default shortcuts"
+msgstr[0] "Ū-siat khuài-sok-khí"
+
+#: ui/ShortcutActionDelegate.qml:137
+#, kde-format
+msgctxt "@label for shortcut with no default bindings"
+msgid "No default shortcuts"
+msgstr "Bô ū-siat khuài-sok-khí"
+
+#: ui/ShortcutActionDelegate.qml:146
+#, kde-format
+msgctxt "@info:whatsthis accessible name"
+msgid "Default shortcut %1 is enabled."
+msgstr "Ū-siat khuài-sok-khí %1 khé-iōng--ah."
+
+#: ui/ShortcutActionDelegate.qml:146
+#, kde-format
+msgctxt "@info:whatsthis accessible name"
+msgid "Default shortcut %1 is disabled."
+msgstr "Ū-siat khuài-sok-khí %1 thîng-iōng--ah."
+
+#: ui/ShortcutActionDelegate.qml:169
+#, kde-format
+msgctxt "@title:column"
+msgid "Custom shortcuts"
+msgstr "Tsū-tīng khuài-sok-khí"
+
+#: ui/ShortcutActionDelegate.qml:205
+#, kde-format
+msgctxt "@action:button accessible"
+msgid "Delete shortcut"
+msgstr "Thâi-tiāu khuài-sok-khí"
+
+#: ui/ShortcutActionDelegate.qml:216
+#, kde-format
+msgctxt "@action:button Add custom shortcut"
+msgid "Add…"
+msgstr "Thiam…"
+
+#: ui/ShortcutActionDelegate.qml:217
+#, kde-format
+msgctxt "@action:button accessible"
+msgid "Add custom shortcut"
+msgstr "Thiam tsū-tīng khuài-sok-khí"
+
+#: ui/ShortcutActionDelegate.qml:253
+#, kde-format
+msgctxt "@action:button accessible"
+msgid "Cancel capturing shortcut"
+msgstr "Tshú-siau siat-tīng khuài-sok-khí"

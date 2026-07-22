@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-14 00:46+0000\n"
+"POT-Creation-Date: 2026-07-22 00:47+0000\n"
 "PO-Revision-Date: 2026-07-14 15:24+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -85,6 +85,12 @@ msgstr "Sposta indietro la voce attiva del gestore dei processi"
 #, kde-format
 msgid "Move Active Task Manager Entry Forward"
 msgstr "Sposta in avanti la voce attiva del gestore dei processi"
+
+#: backend.cpp:613
+#, fuzzy, kde-format
+#| msgid "Activate Next Task Manager Entry"
+msgid "Activate Task Manager Entry %1"
+msgstr "Attiva la voce successiva del gestore dei processi"
 
 #: qml/AudioStream.qml:94
 #, kde-format

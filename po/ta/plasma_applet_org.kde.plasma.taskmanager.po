@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-14 00:46+0000\n"
+"POT-Creation-Date: 2026-07-22 00:47+0000\n"
 "PO-Revision-Date: 2026-01-31 18:05+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -85,6 +85,13 @@ msgstr ""
 #, kde-format
 msgid "Move Active Task Manager Entry Forward"
 msgstr ""
+
+#: backend.cpp:613
+#, fuzzy, kde-format
+#| msgctxt "action:inmenu"
+#| msgid "&Pin to Task Manager"
+msgid "Activate Task Manager Entry %1"
+msgstr "பணி மேலாளியில் தக்கவை"
 
 #: qml/AudioStream.qml:94
 #, kde-format
