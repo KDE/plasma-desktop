@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-22 00:47+0000\n"
-"PO-Revision-Date: 2026-07-14 07:48+0200\n"
+"PO-Revision-Date: 2026-07-22 07:42+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: LUGOS\n"
 "Language: sl\n"
@@ -91,10 +91,9 @@ msgid "Move Active Task Manager Entry Forward"
 msgstr "Premakni aktivni vnos upravljalnika opravil naprej"
 
 #: backend.cpp:613
-#, fuzzy, kde-format
-#| msgid "Activate Next Task Manager Entry"
+#, kde-format
 msgid "Activate Task Manager Entry %1"
-msgstr "Aktiviraj naslednji vnos v upravljalniku opravil"
+msgstr "Aktiviraj vnos v upravljalniku opravil %1"
 
 #: qml/AudioStream.qml:94
 #, kde-format

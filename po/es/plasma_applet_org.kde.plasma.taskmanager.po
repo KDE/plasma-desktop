@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-22 00:47+0000\n"
-"PO-Revision-Date: 2026-07-14 17:30+0100\n"
+"PO-Revision-Date: 2026-07-22 12:29+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -86,10 +86,9 @@ msgid "Move Active Task Manager Entry Forward"
 msgstr "Mover adelante la entrada activa del gestor de tareas"
 
 #: backend.cpp:613
-#, fuzzy, kde-format
-#| msgid "Activate Next Task Manager Entry"
+#, kde-format
 msgid "Activate Task Manager Entry %1"
-msgstr "Activar la entrada siguiente del gestor de tareas"
+msgstr "Activar la entrada %1 del gestor de tareas"
 
 #: qml/AudioStream.qml:94
 #, kde-format

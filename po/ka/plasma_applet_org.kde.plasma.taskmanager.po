@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-22 00:47+0000\n"
-"PO-Revision-Date: 2026-07-16 06:05+0200\n"
+"PO-Revision-Date: 2026-07-22 07:32+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -86,10 +86,9 @@ msgid "Move Active Task Manager Entry Forward"
 msgstr "აქტიური ამოცანების მმართველის ჩანაწერის წინ გადატანა"
 
 #: backend.cpp:613
-#, fuzzy, kde-format
-#| msgid "Activate Next Task Manager Entry"
+#, kde-format
 msgid "Activate Task Manager Entry %1"
-msgstr "შემდეგი ამოცანების მმართველის ჩანაწერის გააქტიურება"
+msgstr "ამოცანების მენეჯერის ჩანაწერის აქტივაცია: %1"
 
 #: qml/AudioStream.qml:94
 #, kde-format

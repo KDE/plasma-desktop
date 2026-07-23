@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-22 00:47+0000\n"
-"PO-Revision-Date: 2026-07-14 07:28+0200\n"
+"PO-Revision-Date: 2026-07-22 08:43+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -85,10 +85,9 @@ msgid "Move Active Task Manager Entry Forward"
 msgstr "Flytta aktiv post i aktivitetshanteraren framåt"
 
 #: backend.cpp:613
-#, fuzzy, kde-format
-#| msgid "Activate Next Task Manager Entry"
+#, kde-format
 msgid "Activate Task Manager Entry %1"
-msgstr "Aktivera nästa post i aktivitetshanteraren"
+msgstr "Aktivera post %1 i aktivitetshanteraren"
 
 #: qml/AudioStream.qml:94
 #, kde-format
