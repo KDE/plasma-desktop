@@ -88,3 +88,5 @@ if(BUILD_TESTING)
 endif()
 
 add_dependencies(kcm_keyboard tastenbrett)
+
+install(FILES keyboardsettings.kcfg keyboardmiscsettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})

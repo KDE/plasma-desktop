@@ -52,3 +52,5 @@ target_link_libraries(kcm_gamecontroller PRIVATE
     Qt::DBus
     UDev::UDev
 )
+
+install(FILES gamecontrolleremulationsettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})

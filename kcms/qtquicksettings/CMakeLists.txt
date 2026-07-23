@@ -13,3 +13,5 @@ target_link_libraries(kcm_qtquicksettings
     KF6::KCMUtils
     KF6::I18n
 )
+
+install(FILES renderer.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR} RENAME plasma-renderersettings.kcfg)
