@@ -51,7 +51,7 @@ find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Sql # kcms/activities
 )
 
-find_package(Qt6GuiPrivate ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
+find_package(Qt6GuiPrivate ${QT_MIN_VERSION} REQUIRED NO_MODULE)
 
 if(BUILD_KCM_TABLET)
     find_package(Qt6WaylandClient ${QT_MIN_VERSION} CONFIG REQUIRED)
