@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-15 00:47+0000\n"
-"PO-Revision-Date: 2026-05-29 12:01+0200\n"
+"PO-Revision-Date: 2026-07-23 19:44+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
@@ -1058,36 +1058,36 @@ msgstr "Отключване"
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Инсталиране на актуализациите и рестартиране след 1 секунда"
+msgstr[1] "Инсталиране на актуализациите и рестартиране след %1 секунди"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Рестартиране след 1 секунда"
+msgstr[1] "Рестартиране след %1 секунди"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Излизане след 1 секунда"
+msgstr[1] "Излизане след %1 секунди"
 
 #: contents/logout/Logout.qml:156
 #, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Инсталиране на актуализациите и изключване след 1 секунда"
+msgstr[1] "Инсталиране на актуализациите и изключване след %1 секунди"
 
 #: contents/logout/Logout.qml:157
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Изключване след 1 секунда"
+msgstr[1] "Изключване след %1 секунди"
 
 #: contents/logout/Logout.qml:172
 #, kde-format
@@ -1098,107 +1098,105 @@ msgid_plural ""
 "%1 other users are currently logged in. If the computer is shut down or "
 "restarted, those users may lose work."
 msgstr[0] ""
+"В момента е влязъл още един потребител. Ако компютърът бъде изключен или "
+"рестартиран, този потребител може да загуби данни."
 msgstr[1] ""
+"В момента са влезли %1 потребители. Ако компютърът бъде изключен или "
+"рестартиран, тези потребители може да загубят данни."
 
 #: contents/logout/Logout.qml:189
 #, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
 msgstr ""
+"Когато се рестартира, компютърът ще влезе в екрана за настройка на UEFI."
 
 #: contents/logout/Logout.qml:191
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
+"Когато се рестартира, компютърът ще влезе в екрана за настройка на фърмуера."
 
 #: contents/logout/Logout.qml:206
 #, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr ""
+"Когато се рестартира, компютърът ще влезе в екрана за настройка на "
+"програмата за начално зареждане."
 
 #: contents/logout/Logout.qml:219
 #, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr ""
+msgstr "Когато се рестартира, компютърът ще превключи към %1 ."
 
 #: contents/logout/Logout.qml:241
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Slee&p"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "Приспи&ване"
 
 #: contents/logout/Logout.qml:242
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Slee&p"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
-msgstr "Приспи&ване"
+msgstr "М&оментално приспиване"
 
 #: contents/logout/Logout.qml:251
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Hibernate"
+#, kde-format
 msgid "&Hibernate"
 msgstr "&Хибернация"
 
 #: contents/logout/Logout.qml:252
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Hibernate"
+#, kde-format
 msgid "&Hibernate Now"
-msgstr "&Хибернация"
+msgstr "&Моментална хибернация"
 
 #: contents/logout/Logout.qml:263
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
-msgstr ""
+msgstr "Инсталиране на актуализациите и рестартиране"
 
 #: contents/logout/Logout.qml:265 contents/logout/Logout.qml:284
 #, kde-format
 msgid "&Restart"
-msgstr ""
+msgstr "Рес&тартиране"
 
 #: contents/logout/Logout.qml:266 contents/logout/Logout.qml:285
 #, kde-format
 msgid "&Restart Now"
-msgstr ""
+msgstr "Моментално &рестартиране"
 
 #: contents/logout/Logout.qml:298
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr ""
+msgstr "Инсталиране на актуализациите и изключване"
 
 #: contents/logout/Logout.qml:300 contents/logout/Logout.qml:319
 #, kde-format
 msgid "&Shut Down"
-msgstr ""
+msgstr "Из&ключване"
 
 #: contents/logout/Logout.qml:301 contents/logout/Logout.qml:320
 #, kde-format
 msgid "&Shut Down Now"
-msgstr ""
+msgstr "&Моментално изключване"
 
 #: contents/logout/Logout.qml:332
 #, kde-format
 msgid "&Log Out"
-msgstr ""
+msgstr "И&злизане от сесия"
 
 #: contents/logout/Logout.qml:333
 #, kde-format
 msgid "&Log Out Now"
-msgstr ""
+msgstr "&Излизане от сесия сега"
 
 #: contents/logout/Logout.qml:343
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgid "&Cancel"
-msgstr "Отказ"
+msgstr "&Отказ"
 
 #: contents/views/DesktopEditMode.qml:135
 #, kde-format
