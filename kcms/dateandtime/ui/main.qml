@@ -20,7 +20,6 @@ KCMUtils.SimpleKCM {
     id: root
 
     header: MessageViewer {
-        id: messageViewer
         messages: root.KCMUtils.ConfigModule.messages
     }
 
@@ -29,22 +28,24 @@ KCMUtils.SimpleKCM {
             title: i18ndc("kcm_clock", "@title", "Date and Time")
 
             Kirigami.FormEntry {
-                title: i18ndc("kcm_clock", "@title", "Current date:")
+                title: i18ndc("kcm_clock", "@label", "Current date:")
                 contentItem: RowLayout {
+                    spacing: Kirigami.Units.largeSpacing
                     QQC2.Label {
                         Layout.fillWidth: true
                         Layout.minimumHeight: dateButton.implicitHeight
                         text: root.KCMUtils.ConfigModule.dateString
+                        elide: Text.ElideRight
                         verticalAlignment: Text.AlignVCenter
                     }
                     QQC2.Button {
                         id: dateButton
                         visible: !root.KCMUtils.ConfigModule.ntpEnabled
-                        text: i18ndc("kcm_clock", "@action:button as in set the current date on the machine", "Set date")
+                        text: i18ndc("kcm_clock", "@action:button as in set the current date on the machine", "Set Date")
                         onClicked: {
                             let dialog = Qt.createComponent("org.kde.kirigamiaddons.dateandtime", "DatePopup").createObject(QQC2.Overlay.overlay, {
-                                width: 300,
-                                height: 300,
+                                width: Kirigami.Units.gridUnit * 18,
+                                height: Kirigami.Units.gridUnit * 18,
                                 value: root.KCMUtils.ConfigModule.dateTime
                             }) as DateAndTime.DatePopup;
                             dialog.onAccepted.connect(() => {
@@ -56,22 +57,24 @@ KCMUtils.SimpleKCM {
                 }
             }
             Kirigami.FormEntry {
-                title: i18ndc("kcm_clock", "@title", "Current time:")
+                title: i18ndc("kcm_clock", "@label", "Current time:")
                 contentItem: RowLayout {
+                    spacing: Kirigami.Units.largeSpacing
                     QQC2.Label {
                         Layout.fillWidth: true
                         Layout.minimumHeight: dateButton.implicitHeight
                         text: root.KCMUtils.ConfigModule.timeString
+                        elide: Text.ElideRight
                         verticalAlignment: Text.AlignVCenter
                     }
                     QQC2.Button {
                         id: timeButton
                         visible: !root.KCMUtils.ConfigModule.ntpEnabled
-                        text: i18ndc("kcm_clock", "@action:button as in set the current time on the machine", "Set time")
+                        text: i18ndc("kcm_clock", "@action:button as in set the current time on the machine", "Set Time")
                         onClicked: {
                             let dialog = Qt.createComponent("org.kde.kirigamiaddons.dateandtime", "TimePopup").createObject(QQC2.Overlay.overlay, {
-                                width: 200,
-                                height: 300,
+                                width: Kirigami.Units.gridUnit * 12,
+                                height: Kirigami.Units.gridUnit * 18,
                                 value: root.KCMUtils.ConfigModule.dateTime
                             }) as DateAndTime.TimePopup;
                             dialog.onAccepted.connect(() => {
@@ -84,7 +87,7 @@ KCMUtils.SimpleKCM {
             }
             Kirigami.FormEntry {
                 contentItem: QQC2.CheckBox {
-                    text: i18ndc("kcm_clock", "@option:check enable this mouse device", "Set date and time automatically")
+                    text: i18ndc("kcm_clock", "@option", "Set date and time automatically")
                     enabled: root.KCMUtils.ConfigModule.ntpAvailable
                     checked: root.KCMUtils.ConfigModule.ntpEnabled
 
@@ -98,17 +101,10 @@ KCMUtils.SimpleKCM {
             Kirigami.FormEntry {
                 contentItem: TimeZone.TimezoneSelector {
                     id: selector
-                    implicitWidth: 600
-                    implicitHeight: width * 3 / 4
+                    implicitWidth: Kirigami.Units.gridUnit * 34
+                    implicitHeight: Math.round(width * 3 / 4)
 
-                    Component.onCompleted: selectedTimeZone = root.KCMUtils.ConfigModule.timeZone
-
-                    Connections {
-                        target: root.KCMUtils.ConfigModule
-                        function onTimeZoneChanged(): void {
-                            selector.selectedTimeZone = root.KCMUtils.ConfigModule.timeZone
-                        }
-                    }
+                    selectedTimeZone: root.KCMUtils.ConfigModule.timeZone
 
                     onSelectedTimeZoneChanged: {
                         root.KCMUtils.ConfigModule.timeZone = selectedTimeZone
