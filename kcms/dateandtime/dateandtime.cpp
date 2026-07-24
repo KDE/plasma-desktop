@@ -75,13 +75,16 @@ QTimeZone DateAndTime::timeZoneToUse() const
 
 void DateAndTime::setTimeZone(QString timeZone)
 {
-    if (m_timeZone.id() == timeZone) {
+    if (m_timeZone.isValid() && m_timeZone.id() == timeZone) {
         return;
     }
+    bool emitSignals = !m_timeZone.isValid() && timeZone != m_systemTimeZone.id();
     m_timeZone = QTimeZone(timeZone.toLatin1());
     checkNeedsSave();
-    Q_EMIT timeZoneChanged();
-    Q_EMIT dateTimeChanged();
+    if (emitSignals) {
+        Q_EMIT timeZoneChanged();
+        Q_EMIT dateTimeChanged();
+    }
 }
 
 bool DateAndTime::ntpAvailable() const
@@ -96,7 +99,7 @@ bool DateAndTime::ntpEnabled() const
 
 void DateAndTime::setNtpEnabled(bool ntpEnabled)
 {
-    if (m_ntpEnabled == ntpEnabled) {
+    if (m_ntpEnabledSet && m_ntpEnabled == ntpEnabled) {
         return;
     }
     m_ntpEnabledSet = true;
@@ -203,19 +206,19 @@ void DateAndTime::refresh()
         }
     }
 
-    // Reset to the current date and time
-    if (m_systemDateTime.isNull()) {
-        const auto oldSystemDateTime = std::exchange(m_systemDateTime, QDateTime::currentDateTime());
-        if (oldSystemDateTime != m_systemDateTime) {
-            Q_EMIT dateTimeChanged();
-        }
-    }
-
     // Timezone
     if (!m_systemTimeZone.isValid()) {
         const auto oldSystemTimeZone = std::exchange(m_systemTimeZone, QTimeZone::systemTimeZone());
         if (oldSystemTimeZone != m_systemTimeZone) {
             Q_EMIT timeZoneChanged();
+        }
+    }
+
+    // Reset to the current date and time
+    if (m_systemDateTime.isNull()) {
+        const auto oldSystemDateTime = std::exchange(m_systemDateTime, QDateTime::currentDateTime());
+        if (oldSystemDateTime != m_systemDateTime) {
+            Q_EMIT dateTimeChanged();
         }
     }
 }
