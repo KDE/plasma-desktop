@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-10 00:46+0000\n"
-"PO-Revision-Date: 2026-06-01 17:48-0400\n"
+"PO-Revision-Date: 2026-07-22 17:21-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -44,30 +44,32 @@ msgstr "كۆزنەك باشقۇرۇش"
 #, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Workspace"
-msgstr ""
+msgstr "Plasma خىزمەت بوشلۇقى"
 
 #: globalaccelmodel.cpp:281
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
-msgstr ""
+msgstr "تېزلەتمە %1 نى ساقلاۋاتقاندا خاتالىق كۆرۈلدى: %2"
 
 #: globalaccelmodel.cpp:395
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr ""
+"%1 نى قوشۇۋاتقاندا خاتالىق كۆرۈلدى، ئۇنىڭدا باغلانغان مەشغۇلات يوقتەك قىلىدۇ."
 
 #: globalaccelmodel.cpp:469
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
-msgstr ""
+msgstr "ئومۇمىيەت تېزلەتمە مۇلازىمىتى بىلەن ئالاقىلىشىۋاتقاندا خاتالىق كۆرۈلدى"
 
 #: kcm_keys.cpp:56
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr ""
+"ئومۇمىيەت تېزلەتمە نازارەتچىسى بىلەن ئالاقىلىشىۋاتقاندا خاتالىق كۆرۈلدى"
 
 #: kcm_keys.cpp:380
 #, kde-kuit-format
@@ -77,6 +79,8 @@ msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
 "<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
+"تېزلەتمە <shortcut>%1</shortcut> نى %2 دائىملىق مەشغۇلاتتىكى <interface>%3</"
+"interface> غا تەقسىملىگەن.<nl/><nl/>ئۇنى %4 غا قايتا تەقسىملەمدۇ؟"
 
 #: kcm_keys.cpp:386
 #, kde-kuit-format
@@ -86,12 +90,15 @@ msgid ""
 "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
 "action <interface>%4</interface> of <application>%5</application>?"
 msgstr ""
+"تېزلەتمە <shortcut>%1</shortcut> نى %2 دائىملىق مەشغۇلاتتىكى <interface>%3</"
+"interface> غا تەقسىملىگەن.<nl/><nl/>ئۇنى <application>%5</application> نىڭ "
+"%4 غا قايتا تەقسىملەمدۇ؟"
 
 #: kcm_keys.cpp:396
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
-msgstr ""
+msgstr "تېزلەتمە توقۇنۇشىنى ھەل قىلىدۇ"
 
 #: kcm_keys.cpp:406
 #, kde-format
@@ -145,13 +152,13 @@ msgstr "بۇيرۇق"
 #, kde-format
 msgctxt "@title:group list section name"
 msgid "System Services"
-msgstr ""
+msgstr "سىستېما مۇلازىمىتى"
 
 #: ui/main.qml:27
 #, kde-format
 msgctxt "@title:group list section name"
 msgid "Common Actions"
-msgstr ""
+msgstr "دائىملىق مەشغۇلات"
 
 #: ui/main.qml:43
 #, kde-format
@@ -163,7 +170,7 @@ msgstr "ئەكىر…"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Import shortcut scheme"
-msgstr ""
+msgstr "تېزلەتمە لايىھەسىنى ئەكىر"
 
 #: ui/main.qml:49
 #, kde-format
@@ -181,7 +188,7 @@ msgstr "چىقار…"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Export shortcut scheme"
-msgstr ""
+msgstr "تېزلەتمە لايىھەسىنى چىقار"
 
 #: ui/main.qml:66
 #, kde-format
@@ -199,32 +206,32 @@ msgstr "پىروگرامما…"
 #, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new application"
-msgstr ""
+msgstr "يېڭى پىروگرامما قوش"
 
 #: ui/main.qml:82
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
-msgstr ""
+msgstr "بۇيرۇق ياكى قوليازما…"
 
 #: ui/main.qml:83
 #, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new command or script"
-msgstr ""
+msgstr "يېڭى بۇيرۇق ياكى قوليازما قوش"
 
 #: ui/main.qml:107
 #, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Cannot export scheme while there are unsaved changes"
-msgstr ""
+msgstr "ساقلانمىغان ئۆزگەرتىش بولسا لايىھەنى چىقىرالمايدۇ"
 
 #: ui/main.qml:120
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Select the components below that should be included in the exported scheme"
-msgstr ""
+msgstr "چىقىرىدىغان لايىھەدە بولۇشى كېرەك بولغان بۆلەك تۆۋەندىن تاللىنىدۇ"
 
 #: ui/main.qml:127
 #, kde-format
@@ -243,31 +250,31 @@ msgstr "%1 نى چىقار"
 #, kde-format
 msgctxt "@action:button %1 is the name of a custom command"
 msgid "Edit command for %1"
-msgstr ""
+msgstr "%1 نىڭ بۇيرۇقىنى تەھرىرلە"
 
 #: ui/main.qml:268
 #, kde-format
 msgctxt "@action:button %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
-msgstr ""
+msgstr "%1 نىڭ ھەممە تېزلەتمىسىنى چىقىرىۋەت"
 
 #: ui/main.qml:290
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo deletion"
-msgstr ""
+msgstr "ئۆچۈرۈشتىن يېنىۋال"
 
 #: ui/main.qml:357
 #, kde-format
 msgctxt "@info:status placeholdermessage"
 msgid "No items matched the search terms"
-msgstr ""
+msgstr "ئىزدىگەن ئاتالغۇغا ھېچ قانداق تۈر ماس كەلمىدى"
 
 #: ui/main.qml:374
 #, kde-format
 msgctxt "@info"
 msgid "These shortcuts will be deleted when changes are applied."
-msgstr ""
+msgstr "ئۆزگەرتىش قوللىنىلغاندا بۇ تېزلەتمە ئۆچۈرۈلىدۇ."
 
 #: ui/main.qml:378
 #, kde-format
@@ -279,43 +286,43 @@ msgstr "يېنىۋال"
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo deleting shortcuts"
-msgstr ""
+msgstr "تېزلەتمە ئۆچۈرۈشتىن يېنىۋال"
 
 #: ui/main.qml:422
 #, kde-format
 msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
-msgstr ""
+msgstr "بۇ جايدا تېزلەتمىسىنى كۆرسىتىشتە تىزىمدىن تۈر تاللىنىدۇ"
 
 #: ui/main.qml:435
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
-msgstr ""
+msgstr "تېزلەتمە لايىھەسىنى چىقار"
 
 #: ui/main.qml:435 ui/main.qml:567
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
-msgstr ""
+msgstr "تېزلەتمە لايىھەسىنى ئەكىر"
 
 #: ui/main.qml:437
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
-msgstr ""
+msgstr "تېزلەتمە لايىھەسى (*.kksrc)"
 
 #: ui/main.qml:464
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Edit Command"
-msgstr ""
+msgstr "بۇيرۇق تەھرىر"
 
 #: ui/main.qml:464
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Add Command"
-msgstr ""
+msgstr "بۇيرۇق قوش"
 
 #: ui/main.qml:481
 #, kde-format
@@ -333,19 +340,19 @@ msgstr "قوش"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Save command"
-msgstr ""
+msgstr "بۇيرۇق ساقلا"
 
 #: ui/main.qml:484
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add command"
-msgstr ""
+msgstr "بۇيرۇق قوش"
 
 #: ui/main.qml:506
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
-msgstr ""
+msgstr "بۇيرۇق كىرگۈزۈلىدۇ ياكى قوليازما ھۆججەت تاللىنىدۇ:"
 
 #: ui/main.qml:515
 #, kde-format
@@ -381,13 +388,13 @@ msgstr "ئاتى:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
-msgstr ""
+msgstr "بۇ جايغا ئات كىرگۈزۈلىدۇ"
 
 #: ui/main.qml:550
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
-msgstr ""
+msgstr "قوليازما ھۆججەت تاللىنىدۇ"
 
 #: ui/main.qml:552
 #, kde-format
@@ -395,25 +402,25 @@ msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
 "extensions"
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
-msgstr ""
+msgstr "قوليازما ھۆججەت (.sh, .bash, .zsh, etc.) (*.*sh)"
 
 #: ui/main.qml:575
 #, kde-format
 msgctxt "@label:listbox regarding 'shortcut schemes'"
 msgid "Select the scheme to import:"
-msgstr ""
+msgstr "ئەكىرىدىغان لايىھە تاللىنىدۇ:"
 
 #: ui/main.qml:594
 #, kde-format
 msgctxt "@item:inlistbox regarding 'shortcut schemes'"
 msgid "Custom Scheme"
-msgstr ""
+msgstr "ئىختىيارى لايىھە"
 
 #: ui/main.qml:602
 #, kde-format
 msgctxt "@action:button"
 msgid "Select File…"
-msgstr ""
+msgstr "ھۆججەت تاللا…"
 
 #: ui/main.qml:602
 #, kde-format
@@ -425,13 +432,13 @@ msgstr "ئەكىر"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
-msgstr ""
+msgstr "تېزلەتمە لايىھە ھۆججىتى تاللا"
 
 #: ui/main.qml:605
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"
-msgstr ""
+msgstr "تېزلەتمە لايىھەسى قوش"
 
 #: ui/ShortcutActionDelegate.qml:31
 #, kde-format
@@ -443,13 +450,13 @@ msgstr "يىغ"
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand to configure shortcuts"
-msgstr ""
+msgstr "تېزلەتمە سەپلەشتە ياي"
 
 #: ui/ShortcutActionDelegate.qml:38
 #, kde-format
 msgctxt "@info:whatsthis accessible name %1 is shortcut label (not sequence)"
 msgid "Editing shortcut: %1"
-msgstr ""
+msgstr "تېزلەتمە تەھرىر: %1"
 
 #: ui/ShortcutActionDelegate.qml:63
 #, kde-format
@@ -463,44 +470,44 @@ msgstr "%1:"
 #, kde-format
 msgctxt "@info:status"
 msgid "No active shortcuts"
-msgstr ""
+msgstr "ئاكتىپ تېزلەتمە يوق"
 
 #: ui/ShortcutActionDelegate.qml:135
 #, kde-format
 msgctxt "@title:column %1 decides if singular or plural will be used"
 msgid "Default shortcut"
 msgid_plural "Default shortcuts"
-msgstr[0] ""
+msgstr[0] "كۆڭۈلدىكى تېزلەتمە"
 
 #: ui/ShortcutActionDelegate.qml:137
 #, kde-format
 msgctxt "@label for shortcut with no default bindings"
 msgid "No default shortcuts"
-msgstr ""
+msgstr "كۆڭۈلدىكى تېزلەتمە يوق"
 
 #: ui/ShortcutActionDelegate.qml:146
 #, kde-format
 msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is enabled."
-msgstr ""
+msgstr "كۆڭۈلدىكى تېزلەتمە %1 قوزغىتىلدى."
 
 #: ui/ShortcutActionDelegate.qml:146
 #, kde-format
 msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is disabled."
-msgstr ""
+msgstr "كۆڭۈلدىكى تېزلەتمە %1 چەكلەندى."
 
 #: ui/ShortcutActionDelegate.qml:169
 #, kde-format
 msgctxt "@title:column"
 msgid "Custom shortcuts"
-msgstr ""
+msgstr "ئىختىيارى تېزلەتمە"
 
 #: ui/ShortcutActionDelegate.qml:205
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
-msgstr ""
+msgstr "تېزلەتمە ئۆچۈر"
 
 #: ui/ShortcutActionDelegate.qml:216
 #, kde-format
@@ -512,10 +519,10 @@ msgstr "قوش…"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
-msgstr ""
+msgstr "ئىختىيارى تېزلەتمە قوش"
 
 #: ui/ShortcutActionDelegate.qml:253
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
-msgstr ""
+msgstr "تېزلەتمە تۇتۇشتىن ۋاز كەچ"

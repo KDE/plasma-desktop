@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-30 00:45+0000\n"
-"PO-Revision-Date: 2026-06-01 17:49-0400\n"
+"PO-Revision-Date: 2026-07-22 17:23-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -25,6 +25,8 @@ msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr ""
+"سىستېما قايتا قوزغىتىلغاندىلا ئاندىن ئوتتۇرا چېكىشتە چاپلاش تەڭشىكىنى "
+"ئۆزگەرتكىلى بولىدۇ."
 
 #: ui/main.qml:31
 #, kde-format
@@ -42,13 +44,13 @@ msgstr "Plasma"
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Plasma نىڭ كۆرسىتىشىگە يول قويىدۇ:"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "كۆزنەكچە ۋە ئەپچە كۆرسەتمىسى"
 
 #: ui/main.qml:63
 #, kde-format
@@ -59,6 +61,10 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"نۇر بەلگىسى بارلىق Plasma كۆزنەكچە ۋە ئۈستەلئۈستى ئەپچە ئۈستىگە "
+"توغرىلانغاندا بايان خاراكتېرلىك كۆرسەتمە كۆرسىتىشكە يول قويىدۇ. نىشانلىغۇچ "
+"يەككە توپچە ۋە باشقا ئىشلەتكۈچى ئارايۈز ئېلېمېنتى ئۈستىگە توغرىلانغاندا "
+"كۆرسىتىدىغان كىچىك كۆرسەتمىگە بۇ تەڭشەك تەسىر كۆرسەتمەيدۇ."
 
 #: ui/main.qml:70
 #, kde-format
@@ -66,6 +72,7 @@ msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
 msgstr ""
+"ھالىتى ئۆزگەرگەنلىكىنى ئەكس ئەتتۈرىدىغان ئېكران قاڭقىش كۆزنىكىنى كۆرسىتىدۇ"
 
 #: ui/main.qml:81
 #, kde-format
@@ -74,6 +81,8 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"بارلىق Plasma ئەپچەنىڭ ئاۋاز مىقدارى، يورۇقلۇق دەرىجىسى ئۆزگەرگەندە ياكى "
+"ئاۋاز ئۈسكۈنىسى ئالماشقاندا ئېكراندا كۆزنەك قاڭقىتىشىغا يول قويىدۇ."
 
 #: ui/main.qml:88
 #, kde-format
@@ -85,7 +94,7 @@ msgstr "سىيرىش"
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
-msgstr ""
+msgstr "سىيرىش يولى چېكىلىدۇ:"
 
 #: ui/main.qml:93
 #, kde-format
@@ -93,7 +102,7 @@ msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
 "the clicked location'"
 msgid "Scrolls to the clicked location"
-msgstr ""
+msgstr "چېكىلگەن جايغا سىيرىلىدۇ"
 
 #: ui/main.qml:111
 #, kde-format
@@ -101,19 +110,19 @@ msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
 "page up or down'"
 msgid "Scrolls one page up or down"
-msgstr ""
+msgstr "ئۈستى ياكى ئاستىغا بىر بەت سىيرىلىدۇ"
 
 #: ui/main.qml:112
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Middle-click to scroll to clicked location"
-msgstr ""
+msgstr "ئوتتۇرا توپچە چېكىلسە چېكىلگەن جايغا سىيرىلىدۇ"
 
 #: ui/main.qml:129
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
-msgstr ""
+msgstr "راۋان سىيرىش مايىللىقى"
 
 #: ui/main.qml:140
 #, kde-format
@@ -124,43 +133,47 @@ msgid ""
 "because they either do not support smooth scrolling, or have their own "
 "setting for enabling and disabling it."
 msgstr ""
+"بۇ تەڭشەك چاشقىنەك غالتىكى ياكى ھەرپتاختىدا سىيرىغاندىكى ھەرىكەتلىك "
+"ئۆتۈشمىنى قوزغىتىش ياكى چەكلەشكە ئىشلىتىلىدۇ. بەزى پىروگرامما بۇ تەڭشەككە "
+"بويسۇنماسلىقى مۇمكىن چۈنكى ئۇلار راۋان سىيرىشنى قوللىمايدۇ ياكى ئۇلارنىڭ "
+"ئۆزىنىڭ راۋان سىيرىشنى قوزغىتىش ياكى چەكلەش تەڭشىكى بار."
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "چېكىش"
 
 #: ui/main.qml:149
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
-msgstr ""
+msgstr "ھۆججەت ياكى قىسقۇچ چېكىش:"
 
 #: ui/main.qml:153
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
-msgstr ""
+msgstr "تاللايدۇ"
 
 #: ui/main.qml:154
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
-msgstr ""
+msgstr "قوش چېكىلسە ئاچىدۇ"
 
 #: ui/main.qml:171
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
-msgstr ""
+msgstr "ئاچىدۇ"
 
 #: ui/main.qml:172
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
-msgstr ""
+msgstr "تۈرنىڭ تاللاش بەلگىسى چېكىلىپ تاللىنىدۇ"
 
 #: ui/main.qml:190
 #, kde-format
@@ -168,7 +181,7 @@ msgctxt ""
 "@label for checkbox, part of a complete sentence: 'Middle-click pastes "
 "selected text'"
 msgid "Middle-click:"
-msgstr ""
+msgstr "ئوتتۇرا چېكىش:"
 
 #: ui/main.qml:194
 #, kde-format
@@ -176,13 +189,13 @@ msgctxt ""
 "@option:check part of a complete sentence: 'Middle click pastes selected "
 "text'"
 msgid "Pastes selected text"
-msgstr ""
+msgstr "تاللىغان تېكىستنى چاپلايدۇ"
 
 #: ui/main.qml:212
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Double-click interval:"
-msgstr ""
+msgstr "قوش چېكىش ئارىلىق ۋاقتى:"
 
 #: ui/main.qml:232
 #, kde-format
@@ -204,6 +217,8 @@ msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
 msgstr ""
+"بۇ ۋاقىت ئارىلىقىدا يۈز بەرگەن قوش چېكىشنى بىر قېتىملىق قوش چېكىش دەپ "
+"تونۇيدۇ. بەزى پىروگرامما بۇ تەڭشەككە بويسۇنماسلىقى مۇمكىن."
 
 #: ui/main.qml:262
 #, kde-format
@@ -212,24 +227,26 @@ msgid ""
 "Double-click the folder to test. If it does not change its appearance, "
 "increase double-click interval."
 msgstr ""
+"قىسقۇچنى قوش چېكىپ سىناڭ. ئەگەر ئۇنىڭ قىياپىتى ئۆزگەرمىسە، قوش چېكىش ۋاقىت "
+"ئارىلىقىنى ئاشۇرۇڭ."
 
 #: ui/main.qml:306
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
-msgstr ""
+msgstr "سۆرەپ تاشلاش"
 
 #: ui/main.qml:309
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
-msgstr ""
+msgstr "ھۆججەت ياكى قىسقۇچ سۆرەلگەندە:"
 
 #: ui/main.qml:313
 #, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
-msgstr ""
+msgstr "نېمە قىلىش كېرەكلىكىنى ھەمىشە سورايدۇ"
 
 #: ui/main.qml:314
 #, kde-kuit-format
@@ -239,18 +256,23 @@ msgid ""
 "and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
 "dialog."
 msgstr ""
+"يۆتكەشتە <shortcut>Shift</shortcut>، كۆچۈرۈشتە <shortcut>Ctrl</shortcut> ۋە "
+"بەلگە ئۇلانما قۇرۇشتا <shortcut>Shift+Ctrl</shortcut> بېسىپ تۇرۇلىدۇ. ئۇنداق "
+"بولمىسا سۆزلەشكۈنى كۆرسىتىدۇ."
 
 #: ui/main.qml:327
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
-msgstr ""
+msgstr "ئەگەر ئوخشاش بىر ئۈسكۈنىدە بولسا يۆتكەيدۇ"
 
 #: ui/main.qml:328
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
+"تاشلاۋاتقاندا <shortcut>Shift</shortcut> بېسىپ تۇرۇلسا باشقا تاللانمىنى "
+"كۆرسىتىدۇ."
 
 #: ui/main.qml:338
 #, kde-format
@@ -262,19 +284,19 @@ msgstr "چەك"
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
-msgstr ""
+msgstr "سەزگۈر تاختا ھالىتىنى قوزغات:"
 
 #: ui/main.qml:344
 #, kde-format
 msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
-msgstr ""
+msgstr "ئېھتىياجغا ئاساسەن ئۆزلۈكىدىن قوزغىتىدۇ"
 
 #: ui/main.qml:344
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
-msgstr ""
+msgstr "ھەرگىز قوزغاتمايدۇ"
 
 #: ui/main.qml:363
 #, kde-format
@@ -284,6 +306,10 @@ msgid ""
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
+"ھېچقانداق چاشقىنەك ياكى سەزگۈر تاختا يوق ئەھۋالدا سەزگۈر تاختا ھالىتىنى "
+"سىستېما سەزگۈر ئېكراننى بايقاش ياكى بايقىماسلىقىدىن قەتئىينەزەر ئۆزلۈكىدىن "
+"قوزغىتىدۇ. مەسىلەن: ئۆزگەرتكىلى بولىدىغان يان كومپيۇتېر ھەرپتاختىسىنى "
+"ئۆرۈگەن ياكى چۇۋۇغاندا."
 
 #: ui/main.qml:369
 #, kde-format
@@ -301,13 +327,13 @@ msgstr "چەكلەنگەن"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."
-msgstr ""
+msgstr "سەزگۈر تاختا ھالىتىدە، لازىم بولغاندا مەۋھۇم ھەرپتاختا كۆرۈنىدۇ."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
 #, kde-format
 msgid "Single click to open files"
-msgstr ""
+msgstr "ھۆججەت ئېچىشتا يەككە چېكىلىدۇ"
 
 #. i18n: ectx: label, entry (dndBehavior), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:13
@@ -316,42 +342,44 @@ msgid ""
 "For local files on the same device, whether dragging and dropping will "
 "perform a move operation instead of showing the options menu"
 msgstr ""
+"ئوخشا بىر ئۈسكۈنىدىكى يەرلىك ھۆججەتكە نىسبەتەن، سۆرەپ تاشلاش مەشغۇلاتىدا "
+"تاللانما تىزىملىك كۆرسىتىشنىڭ ئورنىغا يۆتكەش مەشغۇلاتى ئىجرا قىلىنامدۇ يوق"
 
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
 #, kde-format
 msgid "Smooth scrolling"
-msgstr ""
+msgstr "راۋان سىيرىش"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:25
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
-msgstr ""
+msgstr "سىيرىش يولىدىكى بوش جاي سول چېكىلسە بىر بەت سىيرىلىدۇ"
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:29
 #, kde-format
 msgid "Double click interval"
-msgstr ""
+msgstr "قوش چېكىش ئارىلىق ۋاقتى"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9
 #, kde-format
 msgid "Automatically switch to touch-optimized mode"
-msgstr ""
+msgstr "ئۆزلۈكىدىن سەزگۈرلۈككە ئەلالاشتۇرۇش ھالىتىگە ئالماشتۇرىدۇ"
 
 #. i18n: ectx: label, entry (primarySelection), group (Wayland)
 #: workspaceoptions_kwinsettings.kcfg:15
 #, kde-format
 msgid "Enable middle click selection pasting"
-msgstr ""
+msgstr "ئوتتۇرا توپچا چېكىلسە چاپلاشنى قوزغىتىدۇ"
 
 #. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "چوڭ كۆزنەكچە ۋە ئەپچە كۆرسەتمىسىنى كۆرسىتىدۇ"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -359,12 +387,14 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"Plasma ئەپچەنىڭ نۇر بەلگىدە نىشانلانغاندا چوڭ كۆزنەكچە ۋە ئەپچە كۆرسەتمە "
+"ئۇچۇرىنى كۆرسىتىشكە يول قويىدۇ"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
 #, kde-format
 msgid "Display small popups for status changes"
-msgstr ""
+msgstr "ھالەت ئۆزگىرىشىنى ئەكس ئەتتۈرىدىغان كىچىك قاڭقىش كۆزنىكىنى كۆرسىتىدۇ"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
@@ -373,15 +403,17 @@ msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
 msgstr ""
+"Plasma ئەپچەنىڭ يورۇقلۇق ياكى ئاۋازنىڭ ھالەت ئۆزگىرىشىنى ئەكس ئەتتۈرىدىغان "
+"كىچىك قاڭقىش كۆزنىكىنى كۆرسىتىشىگە يول قويىدۇ"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
 #, kde-format
 msgid "OSD on layout change"
-msgstr ""
+msgstr "جايلاشتۇرۇش ئۆزگەرگەندىكى ئېكران ئۇچۇرى"
 
 #. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:22
 #, kde-format
 msgid "Show a popup on layout changes"
-msgstr ""
+msgstr "جايلاشتۇرۇش ئۆزگەرگەندە قاڭقىش كۆزنىكى ئۇقتۇرۇشىنى كۆرسىتىدۇ"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-30 00:45+0000\n"
-"PO-Revision-Date: 2026-06-01 17:52-0400\n"
+"PO-Revision-Date: 2026-07-22 17:24-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,7 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: code/tools.js:32
 #, kde-format
@@ -59,7 +58,7 @@ msgstr "سىنبەلگە:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr ""
+msgstr "پىروگرامما قوزغاتقۇچ سىنبەلگىسىنى ئۆزگەرت"
 
 #: ConfigGeneral.qml:54
 #, kde-format
@@ -68,12 +67,14 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"نۆۋەتتىكى سىنبەلگە %1. چېكىلسە تىزىملىكنى ئېچىپ نۆۋەتتىكى سىنبەلگىنى "
+"ئۆزگەرتىدۇ ياكى كۆڭۈلدىكى سىنبەلگىگە ئەسلىگە قايتۇرىدۇ."
 
 #: ConfigGeneral.qml:58
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
-msgstr ""
+msgstr "سىنبەلگە ئاتى «%1»"
 
 #: ConfigGeneral.qml:93
 #, kde-format
@@ -85,43 +86,43 @@ msgstr "تاللا…"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr ""
+msgstr "پىروگرامما قوزغاتقۇچقا سىنبەلگە تاللىنىدۇ"
 
 #: ConfigGeneral.qml:99
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr ""
+msgstr "كۆڭۈلدىكى سىنبەلگىگە ئەسلىگە قايتۇر"
 
 #: ConfigGeneral.qml:105
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
-msgstr ""
+msgstr "سىنبەلگىنى چىقىرىۋەت"
 
 #: ConfigGeneral.qml:116
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
-msgstr ""
+msgstr "تېكىست ئەن:"
 
 #: ConfigGeneral.qml:118
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
-msgstr ""
+msgstr "بۇ جايغا قوشىدىغان تېكىست ئەن كىرگۈزۈلىدۇ"
 
 #: ConfigGeneral.qml:132
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
-msgstr ""
+msgstr "تىزىملىك ئەننى ئەسلىگە قايتۇر"
 
 #: ConfigGeneral.qml:145
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
-msgstr ""
+msgstr "كۆزنەكچە بويىغا ھالەتتە بولغاندا تېكىست ئەن تەڭشىگىلى بولمايدۇ."
 
 #: ConfigGeneral.qml:157
 #, kde-format
@@ -172,36 +173,38 @@ msgid ""
 "This doesn't affect how applications are sorted in either search results or "
 "the favorites page."
 msgstr ""
+"بۇ پىروگراممىنىڭ ئىزدەش نەتىجىسى ياكى ياقتۇرىدىغان بەتتىكى تەرتىپلىنىشىگە "
+"تەسىر كۆرسەتمەيدۇ."
 
 #: ConfigGeneral.qml:181
 #, kde-format
 msgctxt "@option:check"
 msgid "Use compact list item style"
-msgstr ""
+msgstr "ئىخچام تىزىم تۈرى ئۇسلۇبىنى ئىشلىتىدۇ"
 
 #: ConfigGeneral.qml:187
 #, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
-msgstr ""
+msgstr "يېڭى ئورنىتىلغان پىروگراممىنى يورۇتىدۇ"
 
 #: ConfigGeneral.qml:192
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
-msgstr ""
+msgstr "نىشانلىغۇچ يان بالداق تۈرىگە توغرىلانغاندا ئالمىشىدۇ"
 
 #: ConfigGeneral.qml:198
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
-msgstr ""
+msgstr "ئىزدەش قىستۇرمىسىنى سەپلە…"
 
 #: ConfigGeneral.qml:208
 #, kde-format
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
-msgstr ""
+msgstr "يان بالداق ئورنى:"
 
 #: ConfigGeneral.qml:209 ConfigGeneral.qml:217
 #, kde-format
@@ -225,43 +228,43 @@ msgstr "سول"
 #, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
-msgstr ""
+msgstr "ياقتۇرىدىغاننى كۆرسەت:"
 
 #: ConfigGeneral.qml:226
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
-msgstr ""
+msgstr "شادىدا"
 
 #: ConfigGeneral.qml:234
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
-msgstr ""
+msgstr "تىزىمدا"
 
 #: ConfigGeneral.qml:242
 #, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
-msgstr ""
+msgstr "باشقا پىروگراممىنى كۆرسەت:"
 
 #: ConfigGeneral.qml:243
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
-msgstr ""
+msgstr "شادىدا"
 
 #: ConfigGeneral.qml:251
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
-msgstr ""
+msgstr "تىزىمدا"
 
 #: ConfigGeneral.qml:263
 #, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
-msgstr ""
+msgstr "توپچە كۆرسەت:"
 
 #: ConfigGeneral.qml:264
 #, kde-format
@@ -279,13 +282,13 @@ msgstr "جەريانچاق"
 #, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
-msgstr ""
+msgstr "توك مەنبە ۋە جەريانچاق"
 
 #: ConfigGeneral.qml:291
 #, kde-format
 msgctxt "@option:check"
 msgid "Show action button captions"
-msgstr ""
+msgstr "مەشغۇلات توپچە چۈشەندۈرۈشىنى كۆرسىتىدۇ"
 
 #: Footer.qml:101
 #, kde-format
@@ -309,7 +312,7 @@ msgstr "ماس كەلگىنى يوق"
 #, kde-format
 msgctxt "@action:button icon-only, for tooltip/Accessible"
 msgid "Open user settings"
-msgstr ""
+msgstr "ئىشلەتكۈچى تەڭشىكىنى ئاچ"
 
 #: Header.qml:276
 #, kde-format
@@ -329,13 +332,13 @@ msgstr "يېڭى!"
 #, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
-msgstr ""
+msgstr "يېڭى ئورنىتىلغان پىروگرامما"
 
 #: KickoffGridView.qml:116
 #, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Grid with %1 rows, %2 columns"
-msgstr ""
+msgstr "%1 قۇر، %2 رەت شادا"
 
 #: KickoffListDelegate.qml:120
 #, kde-format
@@ -346,12 +349,12 @@ msgstr "يېڭى!"
 #: KickoffListDelegate.qml:125
 #, kde-format
 msgid "There is a newly-installed application in this category"
-msgstr ""
+msgstr "بۇ سەھىپىدىكى يېڭى ئورنىتىلغان پىروگرامما"
 
 #: KickoffListDelegate.qml:126
 #, kde-format
 msgid "Newly-installed application"
-msgstr ""
+msgstr "يېڭى ئورنىتىلغان پىروگرامما"
 
 #: LeaveButtons.qml:171
 #, kde-format
@@ -375,7 +378,7 @@ msgstr "تېخىمۇ كۆپ"
 #, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Session and Power"
-msgstr ""
+msgstr "جەريانچاق ۋە توك مەنبە"
 
 #: main.qml:358
 #, kde-format
@@ -399,4 +402,4 @@ msgstr "تارىخ"
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
-msgstr ""
+msgstr "دائىم ئىشلىتىدىغان"

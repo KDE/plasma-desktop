@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-05 00:46+0000\n"
-"PO-Revision-Date: 2026-06-01 17:47-0400\n"
+"PO-Revision-Date: 2026-07-22 17:21-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,7 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
@@ -28,7 +27,7 @@ msgstr "قىممەت"
 #, kde-format
 msgctxt "Status of a gamepad button"
 msgid "PRESSED"
-msgstr ""
+msgstr "بېسىلغان"
 
 #: buttonmodel.cpp:81
 #, kde-format
@@ -54,87 +53,87 @@ msgstr "غالتەك"
 #: device.cpp:20
 #, kde-format
 msgid "Arcade Stick"
-msgstr ""
+msgstr "ئويۇن رولى"
 
 #: device.cpp:21
 #, kde-format
 msgid "Flight Stick"
-msgstr ""
+msgstr "ئۇچقۇ رولى"
 
 #: device.cpp:22
 #, kde-format
 msgid "Dance Pad"
-msgstr ""
+msgstr "ئۇسسۇل تاختىسى"
 
 #: device.cpp:23
 #, kde-format
 msgid "Guitar"
-msgstr ""
+msgstr "گىتار"
 
 #: device.cpp:24
 #, kde-format
 msgid "Drum Kit"
-msgstr ""
+msgstr "چاتما دۇمباق"
 
 #: device.cpp:25
 #, kde-format
 msgid "Arcade Pad"
-msgstr ""
+msgstr "ئويۇن تاختىسى"
 
 #: device.cpp:26
 #, kde-format
 msgid "Throttle"
-msgstr ""
+msgstr "سۈرئەت چەكلەش"
 
 #: device.cpp:31
 #, kde-format
 msgid "XBox 360"
-msgstr ""
+msgstr "XBox 360"
 
 #: device.cpp:32
 #, kde-format
 msgid "XBox One"
-msgstr ""
+msgstr "XBox One"
 
 #: device.cpp:33
 #, kde-format
 msgid "Sony Dualshock 3"
-msgstr ""
+msgstr "Sony Dualshock 3"
 
 #: device.cpp:34
 #, kde-format
 msgid "Sony Dualshock 4"
-msgstr ""
+msgstr "Sony Dualshock 4"
 
 #: device.cpp:35
 #, kde-format
 msgid "Switch Pro"
-msgstr ""
+msgstr "Switch Pro"
 
 #: device.cpp:36
 #, kde-format
 msgid "Virtual"
-msgstr ""
+msgstr "مەۋھۇم"
 
 #: device.cpp:37
 #, kde-format
 msgid "Sony Dualsense"
-msgstr ""
+msgstr "Sony Dualsense"
 
 #: device.cpp:38
 #, kde-format
 msgid "Amazon Luna"
-msgstr ""
+msgstr "Amazon Luna"
 
 #: device.cpp:39
 #, kde-format
 msgid "Google Stadia"
-msgstr ""
+msgstr "Google Stadia"
 
 #: device.cpp:40
 #, kde-format
 msgid "NVidia Shield"
-msgstr ""
+msgstr "NVidia Shield"
 
 #: device.cpp:41
 #, kde-format
@@ -155,67 +154,67 @@ msgstr ""
 #, kde-format
 msgctxt "The game controller button with a letter A on it"
 msgid "A button"
-msgstr ""
+msgstr "A توپچە"
 
 #: device.cpp:49
 #, kde-format
 msgctxt "The game controller button with a letter B on it"
 msgid "B button"
-msgstr ""
+msgstr "B توپچە"
 
 #: device.cpp:50
 #, kde-format
 msgctxt "The game controller button with a letter X on it"
 msgid "X button"
-msgstr ""
+msgstr "X توپچە"
 
 #: device.cpp:51
 #, kde-format
 msgctxt "The game controller button with a letter Y on it"
 msgid "Y button"
-msgstr ""
+msgstr "Y توپچە"
 
 #: device.cpp:52
 #, kde-format
 msgctxt "The back game controller button"
 msgid "Back button"
-msgstr ""
+msgstr "قايت توپچە"
 
 #: device.cpp:53
 #, kde-format
 msgctxt "The guide game controller button"
 msgid "Guide button"
-msgstr ""
+msgstr "يولباشچى توپچە"
 
 #: device.cpp:54
 #, kde-format
 msgctxt "The start game controller button"
 msgid "Start button"
-msgstr ""
+msgstr "باشلا توپچە"
 
 #: device.cpp:55
 #, kde-format
 msgctxt "The button under the game controller's left analog stick"
 msgid "Left analog stick"
-msgstr ""
+msgstr "سول تەقلىد رول"
 
 #: device.cpp:56
 #, kde-format
 msgctxt "The button under the game controller's right analog stick"
 msgid "Right analog stick"
-msgstr ""
+msgstr "ئوڭ تەقلىد رول"
 
 #: device.cpp:57
 #, kde-format
 msgctxt "The game controller's left shoulder button"
 msgid "Left shoulder button"
-msgstr ""
+msgstr "سول مۈرە توپچە"
 
 #: device.cpp:58
 #, kde-format
 msgctxt "The game controller's right shoulder button"
 msgid "Right shoulder button"
-msgstr ""
+msgstr "ئوڭ مۈرە توپچە"
 
 #: device.cpp:59
 #, kde-format
@@ -300,12 +299,12 @@ msgstr "كۆكچىش"
 #: device.cpp:83
 #, kde-format
 msgid "Invalid button value"
-msgstr ""
+msgstr "ئىناۋەتسىز توپچە قىممىتى"
 
 #: device.cpp:251
 #, kde-format
 msgid "Not a controller"
-msgstr ""
+msgstr "تىزگىنلىگۈچ ئەمەس"
 
 #: devicemodel.cpp:68
 #, kde-format
@@ -331,13 +330,13 @@ msgstr ""
 #, kde-format
 msgctxt "@info placeholdermessage text"
 msgid "No game controllers found"
-msgstr ""
+msgstr "ھېچقانداق ئويۇن تىزگىنىكى تېپىلمىدى"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "@info:usagetip placeholdermessage text"
 msgid "Connect a wired or wireless controller"
-msgstr ""
+msgstr "سىملىق ياكى سىمسىز تىزگىنلىگۈچ باغلىنىش"
 
 #: ui/main.qml:82
 #, kde-format
@@ -366,7 +365,7 @@ msgstr "ئۈسكۈنە تۈرى:"
 #, kde-format
 msgctxt "@label game controller controller type (which brand, etc.)"
 msgid "Controller type:"
-msgstr ""
+msgstr "تىزگىنلىگۈچ تۈرى:"
 
 #: ui/main.qml:151
 #, kde-format
@@ -378,22 +377,22 @@ msgstr "باغلىنىش تۈرى:"
 #, kde-format
 msgctxt "@label Visual representation of the axis position for the left axis"
 msgid "Left position:"
-msgstr ""
+msgstr "سول ئورنى:"
 
 #: ui/main.qml:185
 #, kde-format
 msgctxt "@label Visual representation of the axis position for the right axis"
 msgid "Right position:"
-msgstr ""
+msgstr "ئوڭ ئورنى:"
 
 #: ui/main.qml:204
 #, kde-format
 msgctxt "@label Gamepad buttons"
 msgid "Buttons:"
-msgstr ""
+msgstr "توپچە:"
 
 #: ui/main.qml:226
 #, kde-format
 msgctxt "@label Gamepad axes (sticks)"
 msgid "Axes:"
-msgstr ""
+msgstr "ئوق:"

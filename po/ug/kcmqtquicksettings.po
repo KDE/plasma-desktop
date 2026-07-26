@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2026-06-01 17:51-0400\n"
+"PO-Revision-Date: 2026-07-22 17:23-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,7 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -36,12 +35,15 @@ msgid ""
 "settings can break your desktop. Only adjust these settings if you know what "
 "you are doing."
 msgstr ""
+"بۇ تەڭشەك Plasma ئىشلىتىدىغان QtQuick تەڭشىكىنى تەڭشەيدۇ. بۇ تەڭشەك ئۆزگەرسە "
+"ئۈستەلئۈستىنىڭ بۇزۇلۇشىنى كەلتۈرۈپ چىقىرىشى مۇمكىن. نېمە ئىش "
+"قىلىۋاتقانلىقىڭىزنى تولۇق چۈشەنگەندىلا ئاندىن بۇ تەڭشەكلەرنى ئۆزگەرتىڭ."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcmqtquicksettingswidget.ui:41
 #, kde-format
 msgid "Rendering Backend:"
-msgstr ""
+msgstr "شەكىللەندۈرۈش ئارقا ئۇچى:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
@@ -54,7 +56,7 @@ msgstr "ئاپتوماتىك"
 #: kcmqtquicksettingswidget.ui:54
 #, kde-format
 msgid "Open GL"
-msgstr ""
+msgstr "Open GL"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #: kcmqtquicksettingswidget.ui:59
@@ -72,13 +74,13 @@ msgstr "Vulkan"
 #: kcmqtquicksettingswidget.ui:72
 #, kde-format
 msgid "GL Core Profile:"
-msgstr ""
+msgstr "GL يادرولۇق سەپلىمە ھۆججەت:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcmqtquicksettingswidget.ui:79
 #, kde-format
 msgid "Render Loop:"
-msgstr ""
+msgstr "شەكىللەندۈرۈش دەۋرىيلىكى:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
 #: kcmqtquicksettingswidget.ui:92
@@ -90,7 +92,7 @@ msgstr "ئاساس"
 #: kcmqtquicksettingswidget.ui:97
 #, kde-format
 msgid "Threaded"
-msgstr ""
+msgstr "كۆپ جەريانچاق"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ForceGlCoreProfile)
 #: kcmqtquicksettingswidget.ui:105

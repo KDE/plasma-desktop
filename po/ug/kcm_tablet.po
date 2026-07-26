@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-03 00:45+0000\n"
-"PO-Revision-Date: 2026-06-01 17:49-0400\n"
+"PO-Revision-Date: 2026-07-22 17:22-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,7 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -34,7 +33,7 @@ msgstr "يوق"
 #, kde-format
 msgctxt "@action:button Two keybinds for a dial, up & down"
 msgid "%1 && %2"
-msgstr ""
+msgstr "%1 ۋە %2"
 
 #: inputsequence.cpp:216
 #, kde-format
@@ -46,37 +45,37 @@ msgstr "يوق"
 #, kde-format
 msgctxt "@action:button"
 msgid "Left mouse button"
-msgstr ""
+msgstr "چاشقىنەك سول توپچە"
 
 #: inputsequence.cpp:223
 #, kde-format
 msgctxt "@action:button"
 msgid "Right mouse button"
-msgstr ""
+msgstr "چاشقىنەك ئوڭ توپچە"
 
 #: inputsequence.cpp:225
 #, kde-format
 msgctxt "@action:button"
 msgid "Middle mouse button"
-msgstr ""
+msgstr "چاشقىنەك ئوتتۇرا توپچە"
 
 #: inputsequence.cpp:231
 #, kde-format
 msgctxt "@action:button"
 msgid "Application-defined"
-msgstr ""
+msgstr "پىروگرامما ئېنىقلىغان"
 
 #: inputsequence.cpp:233
 #, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr ""
+msgstr "%1-قەلەم توپچە"
 
 #: inputsequence.cpp:235
 #, kde-format
 msgctxt "@action:button"
 msgid "Scroll wheel"
-msgstr ""
+msgstr "سىيرىش غالتىكى"
 
 #: kcmtablet.cpp:36
 #, kde-format
@@ -96,52 +95,52 @@ msgstr "توغرىسىغا"
 #: kcmtablet.cpp:39
 #, kde-format
 msgid "Inverted Portrait"
-msgstr ""
+msgstr "بويىغا ئۆرۈ"
 
 #: kcmtablet.cpp:40
 #, kde-format
 msgid "Inverted Landscape"
-msgstr ""
+msgstr "توغرىسىغا ئۆرۈ"
 
 #: kcmtablet.cpp:90
 #, kde-format
 msgid "Follow the Current Screen"
-msgstr ""
+msgstr "نۆۋەتتىكى ئېكرانغا ئەگەش"
 
 #: kcmtablet.cpp:95
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "ھەممە ئېكران"
 
 #: kcmtablet.cpp:104
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
-msgstr ""
+msgstr "%1 - (%2,%3 %4×%5)"
 
 #: kcmtablet.cpp:164 ui/DisplayTab.qml:97 ui/DisplayTab.qml:98
 #, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
-msgstr ""
+msgstr "ياي ۋە تولدۇر"
 
 #: kcmtablet.cpp:165 ui/DisplayTab.qml:99
 #, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
-msgstr ""
+msgstr "تەرەپ نىسبىتىنى ساقلاپ قال ۋە تولدۇر"
 
 #: kcmtablet.cpp:166 ui/DisplayTab.qml:100
 #, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
-msgstr ""
+msgstr "ئېكران دائىرىسىنى خەرىتىلە"
 
 #: kcmtablet.cpp:269
 #, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr ""
+msgstr "%1-قەلەم توپچە:"
 
 #: kcmtablet.cpp:270
 #, kde-format
@@ -149,67 +148,67 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr ""
+msgstr "%1-قەلەم توپچە"
 
 #: ui/ActionDialog.qml:27
 #, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial/Ring Action"
-msgstr ""
+msgstr "نومۇر بۇراش/ھالقا مەشغۇلاتى تاللىنىدۇ"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
 msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
-msgstr ""
+msgstr "توپچە مەشغۇلاتى تاللىنىدۇ"
 
 #: ui/ActionDialog.qml:87
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when rotating %1:"
-msgstr ""
+msgstr "%1 نى ئايلاندۇرغاندا قانداق مەشغۇلاتنى ئىجرا قىلىدىغانلىقى تاللىنىدۇ:"
 
 #: ui/ActionDialog.qml:88
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
-msgstr ""
+msgstr "%1 نى باسقاندا قانداق مەشغۇلاتنى ئىجرا قىلىدىغانلىقى تاللىنىدۇ:"
 
 #: ui/ActionDialog.qml:102
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
-msgstr ""
+msgstr "پىروگرامما بەلگىلەيدۇ"
 
 #: ui/ActionDialog.qml:117
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
-msgstr ""
+msgstr "ھەرپتاختا ھەرپ بېسىلىشىنى يوللايدۇ"
 
 #: ui/ActionDialog.qml:133
 #, kde-format
 msgctxt "@option:radio Set this action to a up/down keyboard type"
 msgid "Send keyboard keys"
-msgstr ""
+msgstr "ھەرپتاختا ھەرپ بېسىلىشىنى يوللايدۇ"
 
 #: ui/ActionDialog.qml:148
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
-msgstr ""
+msgstr "چاشقىنەك توپچە چېكىلىشىنى يوللايدۇ"
 
 #: ui/ActionDialog.qml:164
 #, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr ""
+msgstr "قەلەم توپچە بېسىلىشىنى يوللايدۇ"
 
 #: ui/ActionDialog.qml:181
 #, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
-msgstr ""
+msgstr "سىيرىش غالتىكى مەشغۇلاتى"
 
 #: ui/ActionDialog.qml:199
 #, kde-format
@@ -224,6 +223,8 @@ msgid ""
 "This tablet button is forwarded to the focused application, which can decide "
 "how to handle it."
 msgstr ""
+"بۇ سەزگۈر تاختا توپچە فوكۇسلانغان پىروگراممىغا ئۇلاپ يوللىنىدۇ، شۇ "
+"پىروگرامما قانداق بىر تەرەپ قىلىشنى قارار قىلىدۇ."
 
 #: ui/ActionDialog.qml:248
 #, kde-format
@@ -231,7 +232,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "upwards"
 msgid "Up:"
-msgstr ""
+msgstr "ئۈستى:"
 
 #: ui/ActionDialog.qml:261
 #, kde-format
@@ -239,7 +240,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "downwards"
 msgid "Down:"
-msgstr ""
+msgstr "ئاستى:"
 
 #: ui/ActionDialog.qml:275
 #, kde-format
@@ -252,19 +253,19 @@ msgstr "سۈرئەت:"
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
-msgstr ""
+msgstr "سول چېكىش"
 
 #: ui/ActionDialog.qml:291
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
-msgstr ""
+msgstr "ئوتتۇرا چېكىش"
 
 #: ui/ActionDialog.qml:292
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
-msgstr ""
+msgstr "ئوڭ چېكىش"
 
 #: ui/ActionDialog.qml:319
 #, kde-format
@@ -312,19 +313,19 @@ msgstr "3-توپچە"
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
-msgstr ""
+msgstr "چاشقىنەكتىكى سىيرىش غالتىكى مەشغۇلاتى."
 
 #: ui/ActionDialog.qml:376
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
-msgstr ""
+msgstr "بۇ توپچە چەكلەنگەن ۋە ھېچنېمە قىلمايدۇ."
 
 #: ui/Calibration.qml:30
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr ""
+msgstr "قەلەم توغرىلاش"
 
 #: ui/Calibration.qml:98
 #, kde-kuit-format
@@ -334,6 +335,9 @@ msgid ""
 "revert to default calibration in %1 seconds unless further action is taken.</"
 "b>"
 msgstr ""
+"نىشان قايتا چېكىلسە يېڭى توغرىلاش جەزملىنىدۇ.<nl/><nl/><b>ئەگەر ھېچقانداق "
+"مەشغۇلات ئېلىپ بېرىلمىسا، %1 سېكۇنتتىن كېيىن كۆڭۈلدىكى توغرىلاش ھالىتىگە "
+"ئەسلىگە قايتۇرۇلىدۇ.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -342,30 +346,32 @@ msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
 msgstr ""
+"توغرىلاش تاماملاندى ۋە ساقلاندى.<nl/><nl/>توغرىلاشنى تېخىمۇ ياخشىلىغىلى ياكى "
+"كۆزنەكنى ياپقىلى بولىدۇ."
 
 #: ui/Calibration.qml:105
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "ھەر بىر نىشاننىڭ مەركىزى چېكىلىدۇ."
 
 #: ui/Calibration.qml:112
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr ""
+msgstr "مەۋجۇت توغرىلاشنى ياخشىلا"
 
 #: ui/Calibration.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "ئەسلىگە قايتۇر ۋە قايتا سىنا"
 
 #: ui/Calibration.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr ""
+msgstr "باشتىن توغرىلا"
 
 #: ui/Calibration.qml:135
 #, kde-format
@@ -383,7 +389,7 @@ msgstr "ۋاز كەچ"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Map to screen:"
-msgstr ""
+msgstr "ئېكرانغا خەرىتىلە:"
 
 #: ui/DisplayTab.qml:73
 #, kde-format
@@ -395,61 +401,61 @@ msgstr "يۆنىلىش:"
 #, kde-format
 msgctxt "@label substitute for unavailable orientation change"
 msgid "Not Applicable"
-msgstr ""
+msgstr "ماس كەلمەيدۇ"
 
 #: ui/DisplayTab.qml:93
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mapped Area:"
-msgstr ""
+msgstr "خەرىتىلەنگەن دائىرە:"
 
 #: ui/ExternalScreenMapping.qml:110
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
-msgstr ""
+msgstr "تەرەپ نىسبىتىنى قۇلۇپلايدۇ"
 
 #: ui/ExternalScreenMapping.qml:151
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
-msgstr ""
+msgstr "%1,%2 - %3×%4"
 
 #: ui/ExternalScreenMapping.qml:190
 #, kde-format
 msgctxt "@action:button"
 msgid "Resize the screen area"
-msgstr ""
+msgstr "ئېكران دائىرىسىنىڭ چوڭلۇقىنى ئۆزگەرت"
 
 #: ui/ExternalScreenMapping.qml:267
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr ""
+msgstr "%1%,%2% - %3%×%4%"
 
 #: ui/ExternalScreenMapping.qml:301
 #, kde-format
 msgctxt "@action:button"
 msgid "Resize the tablet area"
-msgstr ""
+msgstr "سەزگۈر تاختا دائىرىسىنىڭ چوڭلۇقىنى ئۆزگەرت"
 
 #: ui/main.qml:38
 #, kde-format
 msgctxt "@info placeholdermessage text"
 msgid "No drawing tablets found"
-msgstr ""
+msgstr "سىزمىچىلىق سەزگۈر تاختا تېپىلمىدى"
 
 #: ui/main.qml:39
 #, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect a drawing tablet"
-msgstr ""
+msgstr "سىزمىچىلىق سەزگۈر تاختىغا باغلان"
 
 #: ui/main.qml:47
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr ""
+msgstr "سەزگۈر تاختا سىنا…"
 
 #: ui/main.qml:87
 #, kde-format
@@ -459,6 +465,9 @@ msgid ""
 "driver to configure the tablet instead of using the settings here, unless "
 "specifically instructed otherwise."
 msgstr ""
+"بۇ ئۈسكۈنىنى سىز ئورناتقان ئىشلەتكۈچى بوشلۇق قوزغاتقۇ پىروگراممىسى "
+"باشقۇرىدۇ. شۇ قوزغاتقۇ ئارقىلىق سەزگۈر تاختا سەپلىنىدۇ. ئېنىق "
+"بەلگىلەنمىگەندىن باشقىسى بۇ جايدىكى تەڭشەكنى ئىشلەتمەيدۇ."
 
 #: ui/main.qml:106
 #, kde-format
@@ -476,19 +485,19 @@ msgstr "كۆرسەتكۈچ"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "قەلەم"
 
 #: ui/main.qml:199
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr ""
+msgstr "سەزگۈر تاختا"
 
 #: ui/MissingPadTab.qml:15
 #, kde-format
 msgctxt "@info placeholdermessage main text"
 msgid "No pad inputs found"
-msgstr ""
+msgstr "سەزگۈر تاختىدا ھېچقانداق كىرگۈزۈش بايقالمىدى"
 
 #: ui/MissingPadTab.qml:16
 #, kde-format
@@ -497,12 +506,14 @@ msgid ""
 "No buttons or other inputs were detected. This could mean the driver for "
 "this device is missing."
 msgstr ""
+"ھېچقانداق توپچە ياكى باشقا كىرگۈزۈش بايقالمىدى. بۇ ئۈسكۈنىنىڭ قوزغاتقۇسى "
+"يوقلۇقىدىن دېرەك بېرىشى مۇمكىن."
 
 #: ui/PadTab.qml:37
 #, kde-format
 msgctxt "@label for graphics tablet ring config, % is number of ring"
 msgid "Pad ring %1:"
-msgstr ""
+msgstr "سەزگۈر تاختا ھالقىسى %1:"
 
 #: ui/PadTab.qml:61
 #, kde-format
@@ -510,13 +521,13 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "ring/dial 0'"
 msgid "pad ring/dial %1"
-msgstr ""
+msgstr "سەزگۈر تاختا ھالقىسى /نومۇر تاختىسى %1"
 
 #: ui/PadTab.qml:101
 #, kde-format
 msgctxt "@label for graphics tablet ring config, % is number of dial"
 msgid "Pad dial %1:"
-msgstr ""
+msgstr "سەزگۈر تاختا نومۇر تاختىسى %1:"
 
 #: ui/PadTab.qml:103
 #, kde-format
@@ -524,13 +535,13 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad dial %1"
-msgstr ""
+msgstr "سەزگۈر تاختا نومۇر تاختىسى %1"
 
 #: ui/PadTab.qml:139
 #, kde-format
 msgctxt "@label for graphics tablet button config, % is number of button"
 msgid "Pad button %1:"
-msgstr ""
+msgstr "سەزگۈر تاختا توپچە %1:"
 
 #: ui/PadTab.qml:142
 #, kde-format
@@ -538,13 +549,13 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr ""
+msgstr "سەزگۈر تاختا توپچە %1"
 
 #: ui/StylusTab.qml:223
 #, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Left-handed mode:"
-msgstr ""
+msgstr "سولخاي ھالىتى:"
 
 #: ui/StylusTab.qml:229
 #, kde-format
@@ -560,6 +571,9 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"ئۈسكۈنىنى سولخاي ئىشلەتكۈچىگە نىسبەتەن مۇناسىپ تەڭشەيدۇ. ئۈنۈمى ئۈسكۈنىگە "
+"قاراپ ئوخشاش بولمايدۇ ئەمما ئادەتتە سەزگۈر تاختا توپچە يۆنىلىشىنى ئەكسىچە "
+"توغرىلاپ ئىشلىتىشكە تەڭشەيدۇ."
 
 #: ui/StylusTab.qml:247
 #, kde-format
@@ -574,13 +588,13 @@ msgctxt ""
 "@option:radio Pen mode, where the point on the screen is always where you "
 "touch the stylus"
 msgid "Pen"
-msgstr ""
+msgstr "قەلەم"
 
 #: ui/StylusTab.qml:260
 #, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "The cursor follows where you touch the pen on the surface"
-msgstr ""
+msgstr "نۇر بەلگە قەلەم ئۇچى بىلەن سەزگۈر تاختا تېگىشىش نۇقتىسىدا يۆتكىلىدۇ"
 
 #: ui/StylusTab.qml:281
 #, kde-format
@@ -596,17 +610,19 @@ msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
 "like a mouse"
 msgstr ""
+"قەلەم تاختىدا يۆتكەلسە نۇر بەلگىسىنىڭ ئورنىمۇ ئىلگىرىگە نىسبەتەن يۆتكىلىدۇ، "
+"خۇددى چاشقىنەككە ئوخشاش"
 
 #: ui/StylusTab.qml:302
 #, kde-format
 msgid "Sync with mouse cursor"
-msgstr ""
+msgstr "چاشقىنەك نۇربەلگىسى بىلەن قەدەمداشلا"
 
 #: ui/StylusTab.qml:362
 #, kde-format
 msgctxt "@label prefix for pen pressure curve config"
 msgid "Pen Pressure:"
-msgstr ""
+msgstr "قەلەم بېسىمى:"
 
 #: ui/StylusTab.qml:422
 #, kde-format
@@ -630,7 +646,7 @@ msgstr "100%"
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
-msgstr ""
+msgstr "0%"
 
 #: ui/StylusTab.qml:453
 #, kde-format
@@ -639,12 +655,14 @@ msgid ""
 "This curve controls the relationship between the pressure on the stylus and "
 "the pressure values received by applications."
 msgstr ""
+"بۇ ئەگرى سىزىق ئەمەلىي قەلەم بېسىمى بىلەن پىروگرامما تاپشۇرۇۋالغان بېسىم "
+"قىممىتىنىڭ مۇناسىۋىتىنى تىزگىنلەيدۇ."
 
 #: ui/StylusTab.qml:458
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
-msgstr ""
+msgstr "بېسىم دائىرىسى:"
 
 #: ui/StylusTab.qml:485
 #, kde-format
@@ -653,12 +671,15 @@ msgid ""
 "Pressure above or below the threshold will be clamped, and this becomes the "
 "new effective range."
 msgstr ""
+"بوسۇغا قىممەتتىن يۇقىرى ياكى تۆۋەن بېسىم بوسۇغا قىممەتنىڭ ئىچىدە "
+"تىزگىنلىنىدۇ ۋە بۇ جايدا تەڭشەلگەن بېسىم دائىرىسى يېڭى ئۈنۈملۈك دائىرىسى "
+"بولىدۇ."
 
 #: ui/StylusTab.qml:496
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr ""
+msgstr "توغرىلاۋاتىدۇ"
 
 #: ui/StylusTab.qml:498
 #, kde-format
@@ -670,13 +691,13 @@ msgstr "توغرىلا"
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
-msgstr ""
+msgstr "توغرىلاشنى قوللىمايدۇ"
 
 #: ui/StylusTab.qml:542
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr ""
+msgstr "ئىختىيارىي توغرىلاشنى ئەسلىگە قايتۇر"
 
 #: ui/StylusTab.qml:557
 #, kde-format
@@ -685,19 +706,21 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"بۇ سەزگۈر تاختىنى قولدا توغرىلىدىڭىز. ئەگەر ئەمدى توغرا ئىشلىمىسە، ئالدى "
+"بىلەن ئۇنى قايتا تەڭشەڭ."
 
 #: ui/Tester.qml:25
 #, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr ""
+msgstr "سەزگۈر تاختا سىنىغۇچ"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgctxt ""
 "A tablet stylus was pressed onto the surface X=[x position] Y=[y position]"
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "قەلەم بېسىلىشى X=%1 Y=%2"
 
 #: ui/Tester.qml:58
 #, kde-format
@@ -705,7 +728,7 @@ msgctxt ""
 "A tablet stylus has 'released' or was lifted from the surface X=[x position] "
 "Y=[y position]"
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "قەلەم قويۇۋېتىلىشى X=%1 Y=%2"
 
 #: ui/Tester.qml:68
 #, kde-format
@@ -713,19 +736,19 @@ msgctxt ""
 "A tablet stylus has moved over the surface X=[x position] Y=[y position] "
 "P=[pressure] TX=[tilt x] TY=[tilt y]"
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr ""
+msgstr "قەلەم يۆتكىلىشى X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:75
 #, kde-format
 msgctxt "A tablet pad's button has been pressed B=[the button number]"
 msgid "Pad button press B=%1"
-msgstr ""
+msgstr "سەزگۈر تاختا توپچە بېسىلىشى B=%1"
 
 #: ui/Tester.qml:77
 #, kde-format
 msgctxt "A tablet pad's button has been released B=[the button number]"
 msgid "Pad button release B=%1"
-msgstr ""
+msgstr "سەزگۈر تاختا توپچە قويۇۋېتىلىشى B=%1"
 
 #: ui/Tester.qml:83
 #, kde-format
@@ -733,7 +756,7 @@ msgctxt ""
 "A tablet pad's dial has moved, V120 here refers to 'Value 120' which is a "
 "technical term that should be kept as is"
 msgid "Pad dial moved V120=%1"
-msgstr ""
+msgstr "سەزگۈر تاختا نومۇر تاختا يۆتكىلىشى V120=%1"
 
 #: ui/Tester.qml:219
 #, kde-format
@@ -744,6 +767,10 @@ msgid ""
 "# P - pressure\n"
 "# TX,TY - tilt\n"
 msgstr ""
+"## رەسىملىك چۈشەندۈرۈش:\n"
+"# X, Y - ھادىسە كوردىناتى\n"
+"# P - بېسىم\n"
+"# TX,TY - يانتۇلۇق\n"
 
 #: ui/Tester.qml:225
 #, kde-format
