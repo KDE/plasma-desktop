@@ -608,8 +608,8 @@ static void impanel_set_engine(IBusPanelImpanel *impanel, const char *name)
             IBusEngineDesc *engine_desc = ibus_bus_get_global_engine(impanel->bus);
             if (engine_desc) {
                 impanel->xkbLayoutManager->setLayout(engine_desc);
+                g_object_unref(engine_desc);
             }
-            g_object_unref(engine_desc);
         }
         impanel->engineManager->setCurrentEngine(name);
     } else {
