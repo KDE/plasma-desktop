@@ -100,6 +100,7 @@ class EmojiModel : public AbstractEmojiModel
     QML_ELEMENT
     Q_PROPERTY(QStringList categories MEMBER m_categories CONSTANT)
     Q_PROPERTY(int skinTone READ skinTone WRITE setSkinTone NOTIFY skinToneChanged)
+    Q_PROPERTY(qreal emojiZoom READ emojiZoom WRITE setEmojiZoom NOTIFY emojiZoomChanged)
     Q_PROPERTY(QAbstractItemModel *twoToneEmojiModel MEMBER m_TwoToneEmojiModel CONSTANT)
 public:
     enum EmojiRole {
@@ -116,6 +117,12 @@ public:
     void setSkinTone(int skinTone);
 
     Q_SIGNAL void skinToneChanged();
+
+    qreal emojiZoom() const;
+
+    void setEmojiZoom(qreal emojiZoom);
+
+    Q_SIGNAL void emojiZoomChanged();
 
 private:
     QStringList m_categories;

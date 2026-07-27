@@ -22,7 +22,7 @@ Kirigami.ApplicationWindow {
     minimumWidth: Math.round(minimumHeight * 1.25)
     // minimumHeight is set in Component.onCompleted to avoid a binding loop
 
-    width: Kirigami.Units.gridUnit * 25
+    width: Kirigami.Units.gridUnit * 27
     height: Kirigami.Units.gridUnit * 25
 
     pageStack.initialPage: Qt.resolvedUrl("CategoryPage.qml")// { }

@@ -205,6 +205,23 @@ int EmojiModel::skinTone() const
     return m_settings.skinTone();
 }
 
+void EmojiModel::setEmojiZoom(qreal emojiZoom)
+{
+    if (m_settings.emojiZoom() == emojiZoom) {
+        return;
+    }
+    m_settings.setEmojiZoom(emojiZoom);
+    // Persist immediately rather than at destruction: the emojier is a
+    // launch-pick-close popup, and its recent list is saved the same way.
+    m_settings.save();
+    Q_EMIT emojiZoomChanged();
+}
+
+qreal EmojiModel::emojiZoom() const
+{
+    return m_settings.emojiZoom();
+}
+
 RecentEmojiModel::RecentEmojiModel()
 {
     refresh();

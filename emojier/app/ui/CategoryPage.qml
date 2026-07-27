@@ -187,6 +187,39 @@ Kirigami.ScrollablePage {
                 checked: view.model.skinTone == SkinTone.Dark
                 onTriggered: view.model.skinTone = SkinTone.Dark
             }
+        },
+        Kirigami.Action {
+            icon.name: "zoom-out"
+            displayHint: Kirigami.DisplayHint.IconOnly
+            enabled: emojiView.targetSize > emojiView.minSize + 0.5
+            text: i18nc("@action:button zoom the emoji grid out", "Zoom Out")
+            onTriggered: emojiView.applyZoom(-1)
+        },
+        Kirigami.Action {
+            text: i18nc("@info:status label for the current zoom-level indicator", "Zoom level")
+            displayComponent: QQC2.Label {
+                text: i18nc("@info:status current emoji zoom level as a percentage, %1 is a number", "%1%",
+                            Math.round(emojiView.targetSize / emojiView.defaultSize * 100))
+                textFormat: Text.PlainText
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                leftPadding: Kirigami.Units.smallSpacing
+                rightPadding: Kirigami.Units.smallSpacing
+            }
+        },
+        Kirigami.Action {
+            icon.name: "zoom-in"
+            displayHint: Kirigami.DisplayHint.IconOnly
+            enabled: emojiView.targetSize < emojiView.maxSize - 0.5
+            text: i18nc("@action:button zoom the emoji grid in", "Zoom In")
+            onTriggered: emojiView.applyZoom(1)
+        },
+        Kirigami.Action {
+            icon.name: "zoom-original"
+            displayHint: Kirigami.DisplayHint.IconOnly
+            enabled: Math.abs(emojiView.targetSize - emojiView.defaultSize) > 0.5
+            text: i18nc("@action:button reset the emoji grid zoom to 100%", "Reset Zoom")
+            onTriggered: emojiView.resetZoom()
         }
     ]
 
@@ -200,7 +233,8 @@ Kirigami.ScrollablePage {
 
                 Layout.alignment: Qt.AlignHCenter
                 Layout.preferredHeight: contentHeight
-                readonly property real desiredSize: Kirigami.Units.gridUnit * 3
+                // Track the main grid's zoom so variants match the chosen size.
+                readonly property real desiredSize: emojiView.desiredSize
 
                 cellWidth: desiredSize
                 cellHeight: desiredSize
@@ -227,6 +261,22 @@ Kirigami.ScrollablePage {
         onActivated: {
             emojiView.currentItem.Keys.returnPressed(null)
         }
+    }
+
+    Shortcut {
+        sequences: [StandardKey.ZoomIn]
+        enabled: emojiView.targetSize < emojiView.maxSize - 0.5
+        onActivated: emojiView.applyZoom(1)
+    }
+    Shortcut {
+        sequences: [StandardKey.ZoomOut]
+        enabled: emojiView.targetSize > emojiView.minSize + 0.5
+        onActivated: emojiView.applyZoom(-1)
+    }
+    Shortcut {
+        sequence: "Ctrl+0"
+        enabled: Math.abs(emojiView.targetSize - emojiView.defaultSize) > 0.5
+        onActivated: emojiView.resetZoom()
     }
 
     Component {
@@ -260,13 +310,65 @@ Kirigami.ScrollablePage {
     GridView {
         id: emojiView
 
-        readonly property real desiredSize: Kirigami.Units.gridUnit * 3
+        readonly property real defaultSize: Kirigami.Units.gridUnit * 3
+        readonly property real minSize: Kirigami.Units.gridUnit * 1.5
+        readonly property real maxSize: defaultSize * 2.75
+        readonly property real zoomStep: 0.25
+
+        property real desiredSize: defaultSize
+        // Ctrl+wheel zoom accumulates into targetSize; desiredSize (which drives
+        // the relayout) is updated on a throttle so a fast wheel spin coalesces
+        // into at most one relayout per frame instead of one per event.
+        property real targetSize: defaultSize
         readonly property int columnsToHave: Math.ceil(width / desiredSize)
         readonly property int delayInterval: Math.min(300, columnsToHave * 10)
         property int hoveredIndex: -1
 
+        function applyZoom(steps: int): void {
+            const stepPx = defaultSize * zoomStep
+            const index = Math.round((targetSize - defaultSize) / stepPx) + steps
+            targetSize = Math.max(minSize, Math.min(maxSize, defaultSize + index * stepPx))
+            emoji.emojiZoom = targetSize / defaultSize
+            if (!zoomThrottle.running) {
+                desiredSize = targetSize
+                zoomThrottle.start()
+            }
+        }
+
+        function resetZoom(): void {
+            targetSize = defaultSize
+            desiredSize = defaultSize
+            emoji.emojiZoom = 1
+        }
+
+        // Clamp in case the stored zoom or the size bounds changed since it was saved.
+        Component.onCompleted: {
+            const saved = Math.max(minSize, Math.min(maxSize, defaultSize * emoji.emojiZoom))
+            targetSize = saved
+            desiredSize = saved
+        }
+
         cellWidth: width / columnsToHave
         cellHeight: desiredSize
+
+        Timer {
+            id: zoomThrottle
+            interval: 33 // ms; caps relayouts at ~30 Hz so a fast spin coalesces
+            onTriggered: emojiView.desiredSize = emojiView.targetSize
+        }
+
+        MouseArea {
+            anchors.fill: parent
+            acceptedButtons: Qt.NoButton
+            onWheel: wheel => {
+                if (wheel.modifiers & Qt.ControlModifier) {
+                    emojiView.applyZoom(wheel.angleDelta.y > 0 ? 1 : -1)
+                    wheel.accepted = true
+                } else {
+                    wheel.accepted = false
+                }
+            }
+        }
 
         model: CategoryModelFilter {
             id: filter
@@ -322,9 +424,8 @@ Kirigami.ScrollablePage {
 
             text: model.display
             contentItem: QQC2.Label {
-                font.pointSize: 25
+                font.pixelSize: Math.round(emojiLabel.height * 0.6)
                 font.family: 'emoji' // Avoid monochrome fonts like DejaVu Sans
-                minimumPointSize: 10
                 text: emojiLabel.text
                 textFormat: Text.PlainText
                 horizontalAlignment: Text.AlignHCenter
