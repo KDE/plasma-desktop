@@ -340,7 +340,6 @@ void App::setTriggerKeys(QList<TriggerKey> triggersList)
 void App::setDoGrab(bool doGrab)
 {
     if (m_doGrab != doGrab) {
-        ;
         if (doGrab) {
             grabKey();
         } else {
