@@ -84,7 +84,8 @@ void ExcludedApplicationsModel::load()
         return;
     }
 
-    auto query = database.exec(QStringLiteral("SELECT DISTINCT(initiatingAgent) FROM ResourceScoreCache ORDER BY initiatingAgent"));
+    QSqlQuery query(database);
+    query.exec(QStringLiteral("SELECT DISTINCT(initiatingAgent) FROM ResourceScoreCache ORDER BY initiatingAgent"));
 
     if (d->applications.length() > 0) {
         beginRemoveRows(QModelIndex(), 0, d->applications.length() - 1);
