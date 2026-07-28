@@ -199,7 +199,7 @@ bool XkbOptionsModel::setData(const QModelIndex &index, const QVariant &value, i
         return false;
     }
 
-    if (role != Roles::CheckedRole || !value.canConvert(QMetaType::Bool)) {
+    if (role != Roles::CheckedRole || !value.canConvert<bool>()) {
         return false;
     }
 
