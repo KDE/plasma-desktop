@@ -75,16 +75,19 @@ QTimeZone DateAndTime::timeZoneToUse() const
 
 void DateAndTime::setTimeZone(QString timeZone)
 {
-    if (m_timeZone.isValid() && m_timeZone.id() == timeZone) {
+    auto oldTimeZone = timeZoneToUse();
+    if (oldTimeZone.id() == timeZone) {
         return;
     }
-    bool emitSignals = !m_timeZone.isValid() && timeZone != m_systemTimeZone.id();
-    m_timeZone = QTimeZone(timeZone.toLatin1());
-    checkNeedsSave();
-    if (emitSignals) {
-        Q_EMIT timeZoneChanged();
-        Q_EMIT dateTimeChanged();
+
+    if (timeZone == m_systemTimeZone.id()) {
+        m_timeZone = {};
+    } else {
+        m_timeZone = QTimeZone(timeZone.toLatin1());
     }
+    checkNeedsSave();
+    Q_EMIT timeZoneChanged();
+    Q_EMIT dateTimeChanged();
 }
 
 bool DateAndTime::ntpAvailable() const
@@ -150,12 +153,12 @@ void DateAndTime::setTime(const QTime &time)
 
 QString DateAndTime::timeString() const
 {
-    return dateTime().toTimeZone(timeZoneToUse()).time().toString(QLocale::system().timeFormat(QLocale::ShortFormat));
+    return dateTime().toTimeZone(timeZoneToUse()).time().toString(QLocale::system().timeFormat(QLocale::LongFormat));
 }
 
 QString DateAndTime::dateString() const
 {
-    return dateTime().toTimeZone(timeZoneToUse()).date().toString(QLocale::system().dateFormat(QLocale::ShortFormat));
+    return dateTime().toTimeZone(timeZoneToUse()).date().toString(QLocale::system().dateFormat(QLocale::LongFormat));
 }
 
 void DateAndTime::checkNeedsSave()
@@ -185,6 +188,7 @@ void DateAndTime::load()
     m_ntpEnabledSet = false;
     m_systemDateTime = {};
     m_dateTime = {};
+    setNeedsSave(false);
     refresh();
     m_refreshTimer.start(1000);
 }
