@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-07-30 00:46+0000\n"
 "PO-Revision-Date: 2026-05-11 09:29+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -23,57 +23,57 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: kcmaccess.cpp:124 kcmaccess.cpp:152
+#: kcmaccess.cpp:123 kcmaccess.cpp:151
 #, kde-format
 msgid "KWin"
 msgstr "KWin"
 
-#: kcmaccess.cpp:127
+#: kcmaccess.cpp:126
 #, kde-format
 msgid "Toggle Invert Effect"
 msgstr "Перемкнути ефект інвертування"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Toggle Invert Effect on Window"
 msgstr "Перемкнути ефект інвертування для вікна"
 
-#: kcmaccess.cpp:175
+#: kcmaccess.cpp:174
 #, kde-format
 msgid "Move Left"
 msgstr "Пересунути ліворуч"
 
-#: kcmaccess.cpp:182
+#: kcmaccess.cpp:181
 #, kde-format
 msgid "Move Right"
 msgstr "Пересунути праворуч"
 
-#: kcmaccess.cpp:189
+#: kcmaccess.cpp:188
 #, kde-format
 msgid "Move Up"
 msgstr "Пересунути вище"
 
-#: kcmaccess.cpp:196
+#: kcmaccess.cpp:195
 #, kde-format
 msgid "Move Down"
 msgstr "Пересунути нижче"
 
-#: kcmaccess.cpp:203
+#: kcmaccess.cpp:202
 #, kde-format
 msgid "Move Mouse to Focus"
 msgstr "Пересунути мишу за фокусуванням"
 
-#: kcmaccess.cpp:210
+#: kcmaccess.cpp:209
 #, kde-format
 msgid "Move Mouse to Center"
 msgstr "Пересунути мишу у центр"
 
-#: kcmaccess.cpp:253
+#: kcmaccess.cpp:252
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Не вдалося встановити налаштування для Orca: помилка «%1»"
 
-#: kcmaccess.cpp:260
+#: kcmaccess.cpp:259
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Помилка: не вдалося запустити «orca --setup»"

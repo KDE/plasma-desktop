@@ -1,4 +1,4 @@
-# Version: $Revision: 1739199 $
+# Version: $Revision: 1742551 $
 # translation of kcmaccess.po to
 # SPDX-FileCopyrightText: 2014-2017, 2019, 2021-2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-07-30 00:46+0000\n"
 "PO-Revision-Date: 2026-05-16 12:21+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -21,57 +21,57 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 26.04.0\n"
 
-#: kcmaccess.cpp:124 kcmaccess.cpp:152
+#: kcmaccess.cpp:123 kcmaccess.cpp:151
 #, kde-format
 msgid "KWin"
 msgstr "KWin"
 
-#: kcmaccess.cpp:127
+#: kcmaccess.cpp:126
 #, kde-format
 msgid "Toggle Invert Effect"
 msgstr "Włącz/wyłącz efekt odwrócenia"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Toggle Invert Effect on Window"
 msgstr "Włącz/wyłącz efekt odwrócenia na oknie"
 
-#: kcmaccess.cpp:175
+#: kcmaccess.cpp:174
 #, kde-format
 msgid "Move Left"
 msgstr "Ruch w lewo"
 
-#: kcmaccess.cpp:182
+#: kcmaccess.cpp:181
 #, kde-format
 msgid "Move Right"
 msgstr "Ruch w prawo"
 
-#: kcmaccess.cpp:189
+#: kcmaccess.cpp:188
 #, kde-format
 msgid "Move Up"
 msgstr "Ruch w górę"
 
-#: kcmaccess.cpp:196
+#: kcmaccess.cpp:195
 #, kde-format
 msgid "Move Down"
 msgstr "Ruch w dół"
 
-#: kcmaccess.cpp:203
+#: kcmaccess.cpp:202
 #, kde-format
 msgid "Move Mouse to Focus"
 msgstr "Rusz myszą, aby uaktywnić"
 
-#: kcmaccess.cpp:210
+#: kcmaccess.cpp:209
 #, kde-format
 msgid "Move Mouse to Center"
 msgstr "Ruch myszą, aby wyśrodkować"
 
-#: kcmaccess.cpp:253
+#: kcmaccess.cpp:252
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Nie można ustawić Orki: niepowodzenie \"%1\""
 
-#: kcmaccess.cpp:260
+#: kcmaccess.cpp:259
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Błąd: Nie można uruchomić \"orca --setup\""
