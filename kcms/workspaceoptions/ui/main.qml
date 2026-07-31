@@ -317,6 +317,11 @@ KCM.SimpleKCM {
                     onToggled: kcm.globalsSettings.dndBehavior = WorkspaceOptionsGlobalsSettings.AlwaysAsk
                     QQC2.ButtonGroup { id: dndBehaviorGroup }
                     QQC2.ButtonGroup.group: dndBehaviorGroup
+
+                    KCM.SettingStateBinding {
+                        configObject: kcm.globalsSettings
+                        settingName: "dndBehavior"
+                    }
                 }
             }
 
@@ -330,6 +335,11 @@ KCM.SimpleKCM {
                     checked: kcm.globalsSettings.dndBehavior === WorkspaceOptionsGlobalsSettings.MoveIfSameDevice
                     onToggled: kcm.globalsSettings.dndBehavior = WorkspaceOptionsGlobalsSettings.MoveIfSameDevice
                     QQC2.ButtonGroup.group: dndBehaviorGroup
+
+                    KCM.SettingStateBinding {
+                        configObject: kcm.globalsSettings
+                        settingName: "dndBehavior"
+                    }
                 }
             }
         }
