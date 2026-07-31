@@ -21,6 +21,7 @@ set(INSTALL_SDDM_THEME TRUE)
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
+include(ECMDeprecationSettings)
 include(ECMFindQmlModule)
 include(ECMGenerateExportHeader)
 include(ECMInstallIcons)
@@ -244,6 +245,10 @@ pkg_check_modules(GOBJECT gobject-2.0 IMPORTED_TARGET)
 pkg_check_modules(SCIM scim IMPORTED_TARGET)
 
 ecm_setup_version(${PROJECT_VERSION} VARIABLE_PREFIX PLASMA VERSION_HEADER plasma_version.h)
+
+ecm_set_disabled_deprecation_versions(
+    QT ${QT_MIN_VERSION}
+    KF ${KF6_MIN_VERSION})
 
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
