@@ -233,7 +233,7 @@ PlasmoidItem {
     readonly property TaskManagerApplet.Backend backend: TaskManagerApplet.Backend {
         id: backend
 
-        screen: Plasmoid.screen
+        screen: Plasmoid.screen ?? -1
         hasActiveTask: tasksModel.count > 0 && tasksModel.activeTask.valid
         showsOnlyCurrentScreen: Plasmoid.configuration.showOnlyCurrentScreen
 
