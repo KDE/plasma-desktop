@@ -89,26 +89,23 @@ Kirigami.Form {
 
         Kirigami.FormEntry {
             title: i18nc("@option:check Feedback options:", "Feedback:")
-            contentItem: RowLayout{
-                spacing: Kirigami.Units.smallSpacing
-                Kirigami.FormData.buddyFor: toggleKeysBeep
-                QQC2.CheckBox {
-                    id: toggleKeysBeep
-                    Layout.fillWidth: true
-                    text: i18nc("@option:check", "Ring system bell when locking keys are used")
+            contentItem: QQC2.CheckBox {
+                Layout.fillWidth: true
+                text: i18nc("@option:check", "Ring system bell when locking keys are used")
 
-                    KCMUtils.SettingStateBinding {
-                        configObject: kcm.keyboardSettings
-                        settingName: "ToggleKeysBeep"
-                    }
-
-                    checked: kcm.keyboardSettings.toggleKeysBeep
-                    onToggled: kcm.keyboardSettings.toggleKeysBeep = checked
+                KCMUtils.SettingStateBinding {
+                    configObject: kcm.keyboardSettings
+                    settingName: "ToggleKeysBeep"
                 }
+
+                checked: kcm.keyboardSettings.toggleKeysBeep
+                onToggled: kcm.keyboardSettings.toggleKeysBeep = checked
+            }
+            trailingItems: [
                 Kirigami.ContextualHelpButton {
                     toolTipText: i18nc("@info:tooltip", "The locking keys are Caps Lock, Num Lock, and Scroll Lock.")
                 }
-            }
+            ]
         }
         Kirigami.FormEntry {
             contentItem: QQC2.CheckBox {
