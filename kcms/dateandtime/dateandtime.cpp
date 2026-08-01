@@ -219,11 +219,9 @@ void DateAndTime::refresh()
     }
 
     // Reset to the current date and time
-    if (m_systemDateTime.isNull()) {
-        const auto oldSystemDateTime = std::exchange(m_systemDateTime, QDateTime::currentDateTime());
-        if (oldSystemDateTime != m_systemDateTime) {
-            Q_EMIT dateTimeChanged();
-        }
+    const auto oldSystemDateTime = std::exchange(m_systemDateTime, QDateTime::currentDateTime());
+    if (oldSystemDateTime != m_systemDateTime) {
+        Q_EMIT dateTimeChanged();
     }
 }
 
