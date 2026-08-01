@@ -106,7 +106,7 @@ KCMUtils.SimpleKCM {
 
             Kirigami.FormEntry {
                 contentItem: TimeZone.TimezoneSelector {
-                    id: selector
+                    id: timeZoneSelector
                     implicitWidth: Kirigami.Units.gridUnit * 50
                     implicitHeight: Math.round(width * 3 / 4)
 
@@ -126,68 +126,10 @@ KCMUtils.SimpleKCM {
             }
             Kirigami.FormEntry {
                 clickEnabled: false
-                contentItem: RowLayout {
-                    spacing: Kirigami.Units.largeSpacing
-                    QQC2.Label {
-                        text: i18ndc("kcm_clock", "@label:listbox In the context of time zone selection", "Region:")
-                        textFormat: Text.PlainText
-                    }
-                    QQC2.ComboBox {
-                        id: regionComboBox
-                        Layout.fillWidth: true
+                contentItem: TimeZone.TimeZoneComboBox {
+                    selector: timeZoneSelector
 
-                        model: [chooseText, ...selector.regionsModel]
-
-                        property string chooseText: i18ndc("kcm_clock", "Placeholder for empty time zone combobox selector", "Choose…")
-
-                        displayText: currentText
-
-                        Accessible.name: i18nd("kcm_clock", "Timezone region selector")
-
-                        Connections {
-                            target: selector
-                            function onSelectedTimeZoneChanged() {
-                                regionComboBox.currentIndex = Math.max(regionComboBox.model.indexOf(selector.split(selector.selectedTimeZone)[0]), 0)
-                            }
-                        }
-
-                        onActivated: {
-                            if (regionComboBox.currentText === chooseText) return;
-                            if (regionComboBox.currentText !== selector.split(selector.selectedTimeZone)[0]) {
-                                let locations = selector.areasByRegion[regionComboBox.currentText]
-                                locationComboBox.forceActiveFocus();
-                                locationComboBox.model = locations
-                                locationComboBox.popup.visible = true
-                            }
-                        }
-                    }
-                    QQC2.Label {
-                        text: i18ndc("kcm_clock", "@label:listbox In the context of time zone selection", "Time zone:")
-                        visible: locationComboBox.visible
-                        textFormat: Text.PlainText
-                    }
-                    QQC2.ComboBox {
-                        id: locationComboBox
-                        Layout.fillWidth: true
-
-                        visible: regionComboBox.currentText !== regionComboBox.chooseText
-                        displayText: currentText
-
-                        Accessible.name: i18nd("kcm_clock", "Timezone location selector")
-
-                        Connections {
-                            target: selector
-                            function onSelectedTimeZoneChanged() {
-                                let [prefix, suffix] = selector.split(selector.selectedTimeZone)
-                                locationComboBox.model = selector.areasByRegion[prefix]
-                                locationComboBox.currentIndex = locationComboBox.model.indexOf(suffix)
-                            }
-                        }
-
-                        onActivated: {
-                            root.KCMUtils.ConfigModule.timeZone = selector.technical(regionComboBox.currentText) + '/' + selector.technical(locationComboBox.currentText)
-                        }
-                    }
+                    onSelected: timeZone => root.KCMUtils.ConfigModule.timeZone = timeZone
                 }
             }
         }
