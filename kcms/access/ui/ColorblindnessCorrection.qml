@@ -24,78 +24,87 @@ ColumnLayout {
         horizontalAlignment: Text.AlignHCenter
     }
 
-    Kirigami.FormLayout {
-        id: formLayout
+    Kirigami.Form {
+        Layout.fillWidth: true
+        Kirigami.FormGroup {
+            Kirigami.FormEntry {
+                contentItem: QQC2.CheckBox {
+                    text: i18nc("@option check, Enable color blindness correction effect", "Enable")
 
-        QQC2.CheckBox {
-            text: i18nc("@option check, Enable color blindness correction effect", "Enable")
+                    KCM.SettingStateBinding {
+                        configObject: kcm.colorblindnessCorrectionSettings
+                        settingName: "ColorblindnessCorrection"
+                    }
 
-            KCM.SettingStateBinding {
-                configObject: kcm.colorblindnessCorrectionSettings
-                settingName: "ColorblindnessCorrection"
+                    checked: kcm.colorblindnessCorrectionSettings.colorblindnessCorrection
+                    onToggled: kcm.colorblindnessCorrectionSettings.colorblindnessCorrection = checked
+                }
             }
 
-            checked: kcm.colorblindnessCorrectionSettings.colorblindnessCorrection
-            onToggled: kcm.colorblindnessCorrectionSettings.colorblindnessCorrection = checked
-        }
+            Kirigami.FormEntry {
+                title: i18nc("@label:listbox Difficulty seeing any of the following colors on the screen", "Problematic colors:")
+                contentItem: QQC2.ComboBox {
+                    id: colorComboBox
+                    currentIndex: kcm.colorblindnessCorrectionSettings.mode
+                    textRole: "text"
+                    valueRole: "value"
+                    model: [
+                        { value: 0, text: i18nc("@option", "Red & purple (Protanopia)") },
+                        { value: 1, text: i18nc("@option", "Green & purple (Deuteranopia)") },
+                        { value: 2, text: i18nc("@option", "Yellow, green & purple (Tritanopia)") },
+                        { value: 3, text: i18nc("@option", "All (grayscale mode)") },
+                    ]
 
-        QQC2.ComboBox {
-            id: colorComboBox
-            Kirigami.FormData.label: i18nc("@label:listbox Difficulty seeing any of the following colors on the screen", "Problematic colors:")
-            currentIndex: kcm.colorblindnessCorrectionSettings.mode
-            textRole: "text"
-            valueRole: "value"
-            model: [
-                { value: 0, text: i18nc("@option", "Red & purple (Protanopia)") },
-                { value: 1, text: i18nc("@option", "Green & purple (Deuteranopia)") },
-                { value: 2, text: i18nc("@option", "Yellow, green & purple (Tritanopia)") },
-                { value: 3, text: i18nc("@option", "All (grayscale mode)") },
-            ]
+                    Layout.preferredWidth: Kirigami.Units.gridUnit * 15
 
-            Layout.preferredWidth: Kirigami.Units.gridUnit * 15
+                    KCM.SettingStateBinding {
+                        configObject: kcm.colorblindnessCorrectionSettings
+                        settingName: "Mode"
+                        extraEnabledConditions: kcm.colorblindnessCorrectionSettings.colorblindnessCorrection
+                    }
 
-            KCM.SettingStateBinding {
-                configObject: kcm.colorblindnessCorrectionSettings
-                settingName: "Mode"
-                extraEnabledConditions: kcm.colorblindnessCorrectionSettings.colorblindnessCorrection
+                    onActivated: kcm.colorblindnessCorrectionSettings.mode = currentValue
+                }
             }
 
-            onActivated: kcm.colorblindnessCorrectionSettings.mode = currentValue
-        }
+            Kirigami.FormEntry {
+                title: i18nc("@label", "Intensity:")
+                contentItem: ColumnLayout {
+                    Kirigami.FormData.buddyFor: intensitySlider
+                    spacing: Kirigami.Units.smallSpacing
 
-        ColumnLayout {
-            Kirigami.FormData.label: i18nc("@label", "Intensity:")
-            Kirigami.FormData.buddyFor: intensitySlider
-            spacing: Kirigami.Units.smallSpacing
+                    QQC2.Slider {
+                        id: intensitySlider
+                        Layout.preferredWidth: Kirigami.Units.gridUnit * 15
 
-            QQC2.Slider {
-                id: intensitySlider
-                Layout.preferredWidth: Kirigami.Units.gridUnit * 15
+                        KCM.SettingStateBinding {
+                            configObject: kcm.colorblindnessCorrectionSettings
+                            settingName: "Intensity"
+                            extraEnabledConditions: kcm.colorblindnessCorrectionSettings.colorblindnessCorrection
+                        }
 
-                KCM.SettingStateBinding {
-                    configObject: kcm.colorblindnessCorrectionSettings
-                    settingName: "Intensity"
-                    extraEnabledConditions: kcm.colorblindnessCorrectionSettings.colorblindnessCorrection
-                }
+                        from: 0.05 // 0.0 just rolls over to 1? hacky
+                        to: 1.0
+                        value: kcm.colorblindnessCorrectionSettings.intensity
+                        onMoved: kcm.colorblindnessCorrectionSettings.intensity = value
+                    }
 
-                from: 0.05 // 0.0 just rolls over to 1? hacky
-                to: 1.0
-                value: kcm.colorblindnessCorrectionSettings.intensity
-                onMoved: kcm.colorblindnessCorrectionSettings.intensity = value
-            }
-            RowLayout {
-                spacing: 0
+                    RowLayout {
+                        spacing: 0
+                        Layout.preferredWidth: intensitySlider.width
 
-                QQC2.Label {
-                    text: i18nc("@label Mild color blindness correction intensity", "Mild")
-                    textFormat: Text.PlainText
-                }
-                Item {
-                    Layout.fillWidth: true
-                }
-                QQC2.Label {
-                    text: i18nc("@label Intense color blindness correction intensity", "Intense")
-                    textFormat: Text.PlainText
+                        QQC2.Label {
+                            text: i18nc("@label Mild color blindness correction intensity", "Mild")
+                            textFormat: Text.PlainText
+                        }
+                        Item {
+                            Layout.fillWidth: true
+                        }
+                        QQC2.Label {
+                            text: i18nc("@label Intense color blindness correction intensity", "Intense")
+                            textFormat: Text.PlainText
+                        }
+                    }
                 }
             }
         }

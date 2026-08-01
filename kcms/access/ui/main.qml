@@ -26,48 +26,57 @@ KCMUtils.AbstractKCM {
         {
             icon: "zoom-in",
             title: i18nc("@title Category name in sidebar", "Zoom & Magnifier"),
-            defaultnessKey: "zoomMagnifierIsDefaults"
+            defaultnessKey: "zoomMagnifierIsDefaults",
+            componentUrl: Qt.resolvedUrl("ZoomMagnifier.qml")
         },
         {
             icon: "notifications",
             title: i18nc("@title Category name in sidebar", "System Bell"),
-            defaultnessKey: "bellIsDefaults"
+            defaultnessKey: "bellIsDefaults",
+            componentUrl: Qt.resolvedUrl("Bell.qml")
         },
         {
             icon: "input-keyboard",
             title: i18nc("@title Category name in sidebar", "Modifier Keys"),
-            defaultnessKey: "keyboardModifiersIsDefaults"
+            defaultnessKey: "keyboardModifiersIsDefaults",
+            componentUrl: Qt.resolvedUrl("ModifierKeys.qml")
         },
         {
             icon: "view-filter",
             title: i18nc("@title Category name in sidebar", "Keyboard Filters"),
-            defaultnessKey: "keyboardFiltersIsDefaults"
+            defaultnessKey: "keyboardFiltersIsDefaults",
+            componentUrl: Qt.resolvedUrl("KeyboardFilters.qml")
         },
         {
             icon: "input-mouse",
             title: i18nc("@title Category name in sidebar", "Mouse Navigation"),
-            defaultnessKey: "mouseIsDefaults"
+            defaultnessKey: "mouseIsDefaults",
+            componentUrl: Qt.resolvedUrl("MouseNavigation.qml")
         },
         {
             icon: "text-speak",
             title: i18nc("@title Category name in sidebar", "Screen Reader"),
-            defaultnessKey: "screenReaderIsDefaults"
+            defaultnessKey: "screenReaderIsDefaults",
+            componentUrl: Qt.resolvedUrl("ScreenReader.qml")
         },
         {
             icon: "view-visible",
             title: i18nc("@title Category name in sidebar", "Color Blindness Correction"),
-            defaultnessKey: "colorblindnessCorrectionIsDefaults"
+            defaultnessKey: "colorblindnessCorrectionIsDefaults",
+            componentUrl: Qt.resolvedUrl("ColorblindnessCorrection.qml")
         },
         {
             icon: "image-invert-symbolic",
             title: i18nc("@title Category name in sidebar, for inverting screen colors", "Invert"),
-            defaultnessKey: "invertIsDefaults"
+            defaultnessKey: "invertIsDefaults",
+            componentUrl: Qt.resolvedUrl("Invert.qml")
         },
         {
             icon: "cursor-arrow",
             title: i18nc("@title Category name in sidebar, shake pointer to find it", "Shake Pointer"),
             defaultnessKey: "shakeCursorIsDefaults",
-            available: KWindowSystem.isPlatformWayland
+            available: KWindowSystem.isPlatformWayland,
+            componentUrl: Qt.resolvedUrl("ShakeCursor.qml")
         }
     ]
 
@@ -147,37 +156,14 @@ KCMUtils.AbstractKCM {
             QQC2.ScrollView {
                 id: scrollView
                 anchors.fill: parent
-
-                Item {
-                    id: containerItem
-                    // Ensures we have correct margins on our content, which should
-                    // fill the scrollView or scroll vertically when larger
-
-                    readonly property int margins: Kirigami.Units.gridUnit
-
-                    width: scrollView.availableWidth
-                    height: Math.max(implicitHeight, scrollView.availableHeight)
-                    // NOTE: No need to calculate implicitWidth, as we don't use it for sizing and
-                    //       if present, the ScrollView will use it to show horizontal scroll bars
-                    //implicitWidth: stackLayout.implicitWidth + margins * 2
-                    implicitHeight: stackLayout.implicitHeight + margins * 2
-
-                    StackLayout {
-                        id: stackLayout
-                        anchors.fill: parent
-                        anchors.margins: containerItem.margins
-
-                        currentIndex: listView.currentIndex
-
-                        ZoomMagnifier {}
-                        Bell {}
-                        ModifierKeys {}
-                        KeyboardFilters {}
-                        MouseNavigation {}
-                        ScreenReader {}
-                        ColorblindnessCorrection {}
-                        Invert {}
-                        ShakeCursor {}
+                contentWidth: availableWidth
+                contentHeight: pageLoader.implicitHeight > 0 ? undefined : availableHeight
+                Kirigami.Padding {
+                    anchors.fill: parent
+                    padding: Kirigami.Units.gridUnit
+                    contentItem: Loader {
+                        id: pageLoader
+                        source: listView.currentItem?.modelData?.componentUrl ?? ""
                     }
                 }
             }
