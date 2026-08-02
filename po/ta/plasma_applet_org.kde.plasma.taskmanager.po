@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021-2026 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-30 00:46+0000\n"
-"PO-Revision-Date: 2026-01-31 18:05+0530\n"
+"PO-Revision-Date: 2026-08-01 17:55+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: backend.cpp:339
 #, kde-format
@@ -67,31 +67,27 @@ msgstr "சமீப கோப்புகளை மறந்துவிடு"
 #: backend.cpp:581
 #, kde-format
 msgid "Activate Previous Task Manager Entry"
-msgstr ""
+msgstr "பணி மேலாளியிலுள்ள முந்தைய பதிவை இயக்கு"
 
 #: backend.cpp:588
-#, fuzzy, kde-format
-#| msgctxt "action:inmenu"
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgid "Activate Next Task Manager Entry"
-msgstr "பணி மேலாளியில் தக்கவை"
+msgstr "பணி மேலாளிலுள்ள அடுத்த பதிவை இயக்கு"
 
 #: backend.cpp:595
 #, kde-format
 msgid "Move Active Task Manager Entry Backward"
-msgstr ""
+msgstr "பணி மேலாளியின் தற்போதைய பதிவை பின்னோக்கி நகர்த்து"
 
 #: backend.cpp:603
 #, kde-format
 msgid "Move Active Task Manager Entry Forward"
-msgstr ""
+msgstr "பணி மேலாளியின் தற்போதைய பதிவை முன்னோக்கி நகர்த்து"
 
 #: backend.cpp:612
-#, fuzzy, kde-format
-#| msgctxt "action:inmenu"
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgid "Activate Task Manager Entry %1"
-msgstr "பணி மேலாளியில் தக்கவை"
+msgstr "பணி மேலாளியிலுள்ள %1-வது பதிவை இயக்கு"
 
 #: qml/AudioStream.qml:94
 #, kde-format
@@ -869,17 +865,15 @@ msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "9k+"
-msgstr ""
+msgstr "9ஆ+"
 
 #: qml/TaskBadgeOverlay.qml:104
-#, fuzzy, kde-format
-#| msgctxt "volume percentage"
-#| msgid "%1%"
+#, kde-format
 msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "%1k"
-msgstr "%1%"
+msgstr "%1ஆ"
 
 #: qml/ToolTipInstance.qml:201
 #, kde-format
