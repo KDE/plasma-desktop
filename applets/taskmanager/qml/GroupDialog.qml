@@ -27,12 +27,22 @@ PlasmaCore.PopupPlasmaWindow {
             : PlasmaCore.AppletPopup.AtScreenEdges | PlasmaCore.AppletPopup.AtPanelEdges
 
     margin: (Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentPrefersFloatingApplets) ? Kirigami.Units.largeSpacing : 0
-    onActiveChanged: {
-        if (!active) {
-            visible = false;
+
+    Timer {
+        id: closeOnTimer
+        interval: 100
+        onTriggered: {
+            if (!active && !mouseHandler.containsDrag) {
+                visible = false;
+            }
         }
     }
 
+    onActiveChanged: {
+        if (!active) {
+            closeOnTimer.restart();
+        }
+    }
 
     popupDirection: switch (Plasmoid.location) {
         case PlasmaCore.Types.TopEdge:
@@ -83,6 +93,12 @@ PlasmaCore.PopupPlasmaWindow {
 
         Keys.onEscapePressed: event => {
             groupDialog.visible = false;
+        }
+
+        onContainsDragChanged: {
+            if (!active && !containsDrag) {
+                groupDialog.visible = false;
+            }
         }
 
         function moveRow(event: KeyEvent, insertAt: int): void {
