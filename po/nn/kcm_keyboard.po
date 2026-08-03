@@ -1,19 +1,20 @@
 # Translation of kcm_keyboard to Norwegian Nynorsk
 #
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2021.
+# Karl Ove Hufthammer <karl@huftis.org>, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-30 00:45+0000\n"
-"PO-Revision-Date: 2026-03-01 20:33+0100\n"
+"PO-Revision-Date: 2026-08-02 10:56+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -93,11 +94,12 @@ msgstr ""
 "støtta, og vil òg utløysa denne feilmeldinga. Men det kan vera utformingane "
 "likevel vil fungera."
 
+# Dette er *ikkje* det same som snøggtastar.
 #: ui/KeyBindings.qml:18
 #, kde-format
 msgctxt "@title"
 msgid "Configure Key Bindings…"
-msgstr "Set opp snøggtastar …"
+msgstr "Set opp tastebindingar …"
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -524,8 +526,8 @@ msgid ""
 "page."
 msgstr ""
 "Historiske X11-snøggtastar tillèt finjustering av snøggtastar som berre er "
-"valtastar og har litt betre støtte for i X11. Dei kan òg brukast i Wayland."
-"<nl/><nl/>Oppsett av disse snøggtastane tek deg til «Snarvegar»-sida."
+"valtastar og har litt betre støtte i X11. Dei kan òg brukast i Wayland.<nl/"
+"><nl/>Oppsett av disse snøgg­tastane tek deg til «Snarvegar»-sida."
 
 #: ui/Switching.qml:180
 #, kde-format
