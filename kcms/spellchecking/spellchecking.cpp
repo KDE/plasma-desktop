@@ -66,8 +66,10 @@ void SonnetSpellCheckingModule::stateChanged()
     unmanagedChangeState |= currentPreferredLanguagesList != refPreferredLanguagesList;
     unmanagedDefaultState &= currentPreferredLanguagesList == defaultPreferredLanguagesList;
 
-    unmanagedChangeState |= skeleton()->defaultLanguage() != m_configWidget->language();
-    unmanagedDefaultState &= m_configWidget->language() == Sonnet::Settings::defaultDefaultLanguage();
+    if (!skeleton()->clients().isEmpty() && !m_configWidget->language().isEmpty()) {
+        unmanagedChangeState |= skeleton()->defaultLanguage() != m_configWidget->language();
+        unmanagedDefaultState &= m_configWidget->language() == Sonnet::Settings::defaultDefaultLanguage();
+    }
 
     unmanagedWidgetDefaultState(unmanagedDefaultState);
     unmanagedWidgetChangeState(unmanagedChangeState);
