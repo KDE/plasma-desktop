@@ -90,6 +90,12 @@ ColumnLayout {
         // match margins of DefaultToolTip.qml in plasma-framework
         Layout.margins: toolTipDelegate.isWin && Plasmoid.configuration.showToolTips ? 0 : Kirigami.Units.gridUnit / 2
 
+        // With thumbnails the header has no margins, so that the thumbnail below it
+        // can span the entire width of the tooltip. That leaves the text labels flush
+        // against the tooltip's edges, so inset them by the same amount the thumbnail
+        // is, to line them up
+        readonly property int labelInset: toolTipDelegate.isWin && Plasmoid.configuration.showToolTips ? pipeWireLoader.anchors.margins : 0
+
         RowLayout {
             id: header
             width: parent.width
@@ -110,6 +116,10 @@ ColumnLayout {
             // all textlabels
             ColumnLayout {
                 spacing: 0
+                // Keep the inset on the side away from the close button, which is meant to sit in the corner
+                Layout.leftMargin: closeButtonFlippedItemProxy.visible ? 0 : headerItem.labelInset
+                Layout.rightMargin: closeButtonFlippedItemProxy.visible ? headerItem.labelInset : 0
+                Layout.topMargin: headerItem.labelInset
                 // app name
                 Kirigami.Heading {
                     id: appNameHeading
