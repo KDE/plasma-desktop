@@ -21,7 +21,6 @@
 #include <QWindow>
 
 #include <KActionCollection>
-#include <KConfigGroup>
 #include <KGlobalAccel>
 #include <KKeyServer>
 #include <KLocalizedString>
@@ -286,13 +285,6 @@ void KAccessConfig::save()
         || m_data->zoomMagnifierSettings()->findItem(QStringLiteral("MagnifierHeight"))->isSaveNeeded();
 
     KQuickManagedConfigModule::save();
-
-    if (bellSettings()->systemBell() || bellSettings()->customBell() || bellSettings()->visibleBell()) {
-        KConfig _cfg(QStringLiteral("kdeglobals"), KConfig::NoGlobals);
-        KConfigGroup cfg(&_cfg, QStringLiteral("General"));
-        cfg.writeEntry("UseSystemBell", true);
-        cfg.sync();
-    }
 
     // make kaccess reread the configuration
     // turning a11y features off needs to be done by kaccess
