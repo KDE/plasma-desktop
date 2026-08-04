@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:45+0000\n"
+"POT-Creation-Date: 2026-08-04 00:46+0000\n"
 "PO-Revision-Date: 2026-05-12 02:55+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -253,43 +253,43 @@ msgstr ""
 "按住 <shortcut>Shift</shortcut> 來移動，<shortcut>Ctrl</shortcut> 來複製，"
 "<shortcut>Shift+Ctrl</shortcut> 來建立符號連結。否則顯示對話框。"
 
-#: ui/main.qml:327
+#: ui/main.qml:332
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "同裝置時移動"
 
-#: ui/main.qml:328
+#: ui/main.qml:333
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr "放開時按住 <shortcut>Shift</shortcut> 來顯示其他選項。"
 
-#: ui/main.qml:338
+#: ui/main.qml:348
 #, kde-format
 msgctxt "@title:group"
 msgid "Touch"
 msgstr "觸控"
 
-#: ui/main.qml:341
+#: ui/main.qml:351
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
 msgstr "啟用平板模式："
 
-#: ui/main.qml:344
+#: ui/main.qml:354
 #, kde-format
 msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "自動在需要時啟用"
 
-#: ui/main.qml:344
+#: ui/main.qml:354
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "永不啟用"
 
-#: ui/main.qml:363
+#: ui/main.qml:373
 #, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
@@ -300,19 +300,19 @@ msgstr ""
 "系統偵測到觸控螢幕但是沒有滑鼠或觸控板的時候——例如變形筆電的鍵盤被翻轉或分離"
 "時——將會自動啟用平板模式。"
 
-#: ui/main.qml:369
+#: ui/main.qml:379
 #, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "總是啟用"
 
-#: ui/main.qml:391
+#: ui/main.qml:401
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "已停用"
 
-#: ui/main.qml:392
+#: ui/main.qml:402
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."

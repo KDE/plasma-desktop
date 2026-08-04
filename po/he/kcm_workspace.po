@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:45+0000\n"
+"POT-Creation-Date: 2026-08-04 00:46+0000\n"
 "PO-Revision-Date: 2026-04-23 08:24+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -260,13 +260,13 @@ msgstr ""
 "החזקת <shortcut>Shift</shortcut> בנוסף תעביר, <shortcut>Ctrl</shortcut> "
 "תעתיק, ו־<shortcut>Shift+Ctrl</shortcut> תיצור קישור סמלי. אחרת תוצג חלונית."
 
-#: ui/main.qml:327
+#: ui/main.qml:332
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "להעביר קבצים אם באותו המכשיר"
 
-#: ui/main.qml:328
+#: ui/main.qml:333
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
@@ -274,31 +274,31 @@ msgstr ""
 "יש להחזיק <shortcut>Shift</shortcut> בעת שחרור גרירה כי להציג אפשרויות "
 "נוספות."
 
-#: ui/main.qml:338
+#: ui/main.qml:348
 #, kde-format
 msgctxt "@title:group"
 msgid "Touch"
 msgstr "מגע"
 
-#: ui/main.qml:341
+#: ui/main.qml:351
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
 msgstr "הפעלת מצב מחשב לוח:"
 
-#: ui/main.qml:344
+#: ui/main.qml:354
 #, kde-format
 msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "להפעיל אוטומטית כנדרש"
 
-#: ui/main.qml:344
+#: ui/main.qml:354
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "לא להפעיל אף פעם"
 
-#: ui/main.qml:363
+#: ui/main.qml:373
 #, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
@@ -309,19 +309,19 @@ msgstr ""
 "מצב מחשב לוח יופעל אוטומטית כשהמערכת מזהה מסך מגע אך לא מזהה עכבר או משטח "
 "מגע. למשל: כאשר מקלדת של מחשב נייד גמיש מקופלת לאחור או מנותקת."
 
-#: ui/main.qml:369
+#: ui/main.qml:379
 #, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "תמיד פעיל"
 
-#: ui/main.qml:391
+#: ui/main.qml:401
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "מושבת"
 
-#: ui/main.qml:392
+#: ui/main.qml:402
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."

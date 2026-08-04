@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:45+0000\n"
+"POT-Creation-Date: 2026-08-04 00:46+0000\n"
 "PO-Revision-Date: 2025-10-31 22:53+0100\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -283,14 +283,14 @@ msgstr ""
 "shortcut> inde for at kopiere og hold<shortcut>Skift+Ctrl</shortcut> inde "
 "for at oprette et symlink. Ellers vis en dialog."
 
-#: ui/main.qml:327
+#: ui/main.qml:332
 #, fuzzy, kde-format
 #| msgid "Move if on the same device"
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "Flyt hvis på samme enhed"
 
-#: ui/main.qml:328
+#: ui/main.qml:333
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
@@ -298,20 +298,20 @@ msgstr ""
 "Hold <shortcut>Skift</shortcut> inde mens du trækker for at vise andre "
 "muligheder."
 
-#: ui/main.qml:338
+#: ui/main.qml:348
 #, kde-format
 msgctxt "@title:group"
 msgid "Touch"
 msgstr "Touch"
 
-#: ui/main.qml:341
+#: ui/main.qml:351
 #, fuzzy, kde-format
 #| msgid "Enable Touch Mode:"
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
 msgstr "Slå touch-tilstand til:"
 
-#: ui/main.qml:344
+#: ui/main.qml:354
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 #| msgid "Automatically enable as needed"
@@ -319,7 +319,7 @@ msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Aktivér automatisk efter behov"
 
-#: ui/main.qml:344
+#: ui/main.qml:354
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is never enabled'"
 #| msgid "Never enabled"
@@ -327,7 +327,7 @@ msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Aldrig aktiveret"
 
-#: ui/main.qml:363
+#: ui/main.qml:373
 #, fuzzy, kde-format
 #| msgid ""
 #| "Touch Mode will be automatically activated whenever the system detects a "
@@ -343,7 +343,7 @@ msgstr ""
 "men ingen mus eller touchpad. For eksempel: Når en transformerbar laptops "
 "tastatur vendes rundt eller frakobles."
 
-#: ui/main.qml:369
+#: ui/main.qml:379
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is always enabled'"
 #| msgid "Always active"
@@ -351,7 +351,7 @@ msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Altid aktiv"
 
-#: ui/main.qml:391
+#: ui/main.qml:401
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is never enabled'"
 #| msgid "Disabled"
@@ -359,7 +359,7 @@ msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Deaktiveret"
 
-#: ui/main.qml:392
+#: ui/main.qml:402
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."

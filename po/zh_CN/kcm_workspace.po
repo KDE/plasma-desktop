@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:45+0000\n"
+"POT-Creation-Date: 2026-08-04 00:46+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -250,43 +250,43 @@ msgstr ""
 "按住 <shortcut>Shift</shortcut> 以移动，按住 <shortcut>Ctrl</shortcut> 以复"
 "制，按住 <shortcut>Shift+Ctrl</shortcut> 以创建符号链接。否则显示对话框。"
 
-#: ui/main.qml:327
+#: ui/main.qml:332
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "如果在同一设备上，则移动"
 
-#: ui/main.qml:328
+#: ui/main.qml:333
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr "拖放时按住 <shortcut>Shift</shortcut> 键以显示其他选项。"
 
-#: ui/main.qml:338
+#: ui/main.qml:348
 #, kde-format
 msgctxt "@title:group"
 msgid "Touch"
 msgstr "触摸"
 
-#: ui/main.qml:341
+#: ui/main.qml:351
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
 msgstr "启用平板模式："
 
-#: ui/main.qml:344
+#: ui/main.qml:354
 #, kde-format
 msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "按需自动启用"
 
-#: ui/main.qml:344
+#: ui/main.qml:354
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "永不启用"
 
-#: ui/main.qml:363
+#: ui/main.qml:373
 #, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
@@ -297,19 +297,19 @@ msgstr ""
 "平板模式将在系统检测到触摸屏，并且检测不到鼠标和触摸板时自动启用。例如：将变"
 "形本的键盘盖翻转 180 度或拆除时。"
 
-#: ui/main.qml:369
+#: ui/main.qml:379
 #, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "始终启用"
 
-#: ui/main.qml:391
+#: ui/main.qml:401
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "已禁用"
 
-#: ui/main.qml:392
+#: ui/main.qml:402
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."

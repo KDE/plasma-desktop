@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:45+0000\n"
+"POT-Creation-Date: 2026-08-04 00:46+0000\n"
 "PO-Revision-Date: 2026-02-10 23:55+0000\n"
 "Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
 "Language-Team: pt\n"
@@ -266,13 +266,13 @@ msgstr ""
 "shortcut> para copiar e <shortcut>Shift+Ctrl</shortcut> para criar uma "
 "ligação simbólica. Caso contrário, mostrar um diálogo."
 
-#: ui/main.qml:327
+#: ui/main.qml:332
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "Mover se a origem e o destino forem no mesmo dispositivo"
 
-#: ui/main.qml:328
+#: ui/main.qml:333
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
@@ -280,13 +280,13 @@ msgstr ""
 "Mantenha premido <shortcut>Shift</shortcut> ao largar para mostrar outras "
 "opções."
 
-#: ui/main.qml:338
+#: ui/main.qml:348
 #, kde-format
 msgctxt "@title:group"
 msgid "Touch"
 msgstr "Toque"
 
-#: ui/main.qml:341
+#: ui/main.qml:351
 #, fuzzy, kde-format
 #| msgctxt "@title:group prefix radiobutton group"
 #| msgid "Enable Touch Mode:"
@@ -294,7 +294,7 @@ msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
 msgstr "Ativar Modo Táctil"
 
-#: ui/main.qml:344
+#: ui/main.qml:354
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
@@ -303,7 +303,7 @@ msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Ativar automaticamente conforme necessário"
 
-#: ui/main.qml:344
+#: ui/main.qml:354
 #, fuzzy, kde-format
 #| msgctxt "option:radio As in: 'Touch Mode is never enabled'"
 #| msgid "Never enabled"
@@ -311,7 +311,7 @@ msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Nunca ativado"
 
-#: ui/main.qml:363
+#: ui/main.qml:373
 #, fuzzy, kde-format
 #| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 #| msgid ""
@@ -328,7 +328,7 @@ msgstr ""
 "ecrã táctil, mas nenhum rato ou touchpad. Por exemplo: quando o teclado de "
 "um portátil conversível é rodado ou desligado."
 
-#: ui/main.qml:369
+#: ui/main.qml:379
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is always enabled'"
 #| msgid "Always active"
@@ -336,7 +336,7 @@ msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Sempre ativo"
 
-#: ui/main.qml:391
+#: ui/main.qml:401
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is never enabled'"
 #| msgid "Disabled"
@@ -344,7 +344,7 @@ msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Desativado"
 
-#: ui/main.qml:392
+#: ui/main.qml:402
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."

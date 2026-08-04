@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:45+0000\n"
+"POT-Creation-Date: 2026-08-04 00:46+0000\n"
 "PO-Revision-Date: 2025-06-19 10:36+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -291,34 +291,34 @@ msgstr ""
 "shortcut> para copiar, e <shortcut>Maiús+Ctrl</shortcut> para crear unha "
 "ligazón simbólica. Senón, amosar un diálogo."
 
-#: ui/main.qml:327
+#: ui/main.qml:332
 #, fuzzy, kde-format
 #| msgid "Move if on the same device"
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "Mover se o dispositivo é o mesmo"
 
-#: ui/main.qml:328
+#: ui/main.qml:333
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
 "Manter <shortcut>Maiús</shortcut> ao soltar para amosar outras opcións."
 
-#: ui/main.qml:338
+#: ui/main.qml:348
 #, kde-format
 msgctxt "@title:group"
 msgid "Touch"
 msgstr "Tacto"
 
-#: ui/main.qml:341
+#: ui/main.qml:351
 #, fuzzy, kde-format
 #| msgid "Enable Touch Mode:"
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
 msgstr "Activar o modo táctil:"
 
-#: ui/main.qml:344
+#: ui/main.qml:354
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 #| msgid "Automatically enable as needed"
@@ -326,7 +326,7 @@ msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Activar automaticamente cando se necesite"
 
-#: ui/main.qml:344
+#: ui/main.qml:354
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is never enabled'"
 #| msgid "Never enabled"
@@ -334,7 +334,7 @@ msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Non activar nunca"
 
-#: ui/main.qml:363
+#: ui/main.qml:373
 #, fuzzy, kde-format
 #| msgid ""
 #| "Touch Mode will be automatically activated whenever the system detects a "
@@ -350,7 +350,7 @@ msgstr ""
 "pantalla táctil e ningún rato ou área táctil. Por exemplo,  cando ao teclado "
 "dun portátil transformábel se lle dá a volta ou se desconecta."
 
-#: ui/main.qml:369
+#: ui/main.qml:379
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is always enabled'"
 #| msgid "Always active"
@@ -358,7 +358,7 @@ msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Sempre activo"
 
-#: ui/main.qml:391
+#: ui/main.qml:401
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is never enabled'"
 #| msgid "Disabled"
@@ -366,7 +366,7 @@ msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Desactivado"
 
-#: ui/main.qml:392
+#: ui/main.qml:402
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."

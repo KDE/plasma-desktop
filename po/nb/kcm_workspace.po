@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:45+0000\n"
+"POT-Creation-Date: 2026-08-04 00:46+0000\n"
 "PO-Revision-Date: 2026-03-07 23:54+0100\n"
 "Last-Translator: Kjetil Sorlund <translate@sorlund.no>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@nuug.no>\n"
@@ -263,25 +263,25 @@ msgstr ""
 "å kopiere og <shortcut>Shift+Ctrl</shortcut> for å lage en symbolsk lenge. "
 "Ellers vis sprettopp."
 
-#: ui/main.qml:327
+#: ui/main.qml:332
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "Flytt om det er på samme enhet"
 
-#: ui/main.qml:328
+#: ui/main.qml:333
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr "Hold <shortcut>Shift</shortcut> når du dropper for å vise valg."
 
-#: ui/main.qml:338
+#: ui/main.qml:348
 #, kde-format
 msgctxt "@title:group"
 msgid "Touch"
 msgstr "Trykkskjerm"
 
-#: ui/main.qml:341
+#: ui/main.qml:351
 #, fuzzy, kde-format
 #| msgctxt "@title:group prefix radiobutton group"
 #| msgid "Enable Touch Mode:"
@@ -289,7 +289,7 @@ msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
 msgstr "Slå på berøringsmodus:"
 
-#: ui/main.qml:344
+#: ui/main.qml:354
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
@@ -298,7 +298,7 @@ msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Slå på automatisk ved behov"
 
-#: ui/main.qml:344
+#: ui/main.qml:354
 #, fuzzy, kde-format
 #| msgctxt "option:radio As in: 'Touch Mode is never enabled'"
 #| msgid "Never enabled"
@@ -306,7 +306,7 @@ msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Alltid av"
 
-#: ui/main.qml:363
+#: ui/main.qml:373
 #, fuzzy, kde-format
 #| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 #| msgid ""
@@ -323,7 +323,7 @@ msgstr ""
 "trykkskjerm, men ingen mus eller styreplate. Et eksempel er når et "
 "fleksibelt tastatur på en bærbar maskin snus rundt eller kobles fra."
 
-#: ui/main.qml:369
+#: ui/main.qml:379
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is always enabled'"
 #| msgid "Always active"
@@ -331,7 +331,7 @@ msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Alltid på"
 
-#: ui/main.qml:391
+#: ui/main.qml:401
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is never enabled'"
 #| msgid "Disabled"
@@ -339,7 +339,7 @@ msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Slått av"
 
-#: ui/main.qml:392
+#: ui/main.qml:402
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."

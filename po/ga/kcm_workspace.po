@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:45+0000\n"
+"POT-Creation-Date: 2026-08-04 00:46+0000\n"
 "PO-Revision-Date: 2026-01-21 11:04+0000\n"
 "Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
 "Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
@@ -273,13 +273,13 @@ msgstr ""
 "shortcut> le cóipeáil, agus <shortcut>Shift+Ctrl</shortcut> le nasc "
 "siombalach a chruthú. Seachas sin, taispeáin dialóg."
 
-#: ui/main.qml:327
+#: ui/main.qml:332
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "Bog más ar an ngléas céanna é"
 
-#: ui/main.qml:328
+#: ui/main.qml:333
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
@@ -287,13 +287,13 @@ msgstr ""
 "Coinnigh <shortcut>Shift</shortcut> síos agus tú ag scaoileadh chun roghanna "
 "eile a thaispeáint."
 
-#: ui/main.qml:338
+#: ui/main.qml:348
 #, kde-format
 msgctxt "@title:group"
 msgid "Touch"
 msgstr "Teagmháil"
 
-#: ui/main.qml:341
+#: ui/main.qml:351
 #, fuzzy, kde-format
 #| msgctxt "@title:group prefix radiobutton group"
 #| msgid "Enable Touch Mode:"
@@ -301,7 +301,7 @@ msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
 msgstr "Cumasaigh Mód Tadhaill:"
 
-#: ui/main.qml:344
+#: ui/main.qml:354
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
@@ -310,7 +310,7 @@ msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Cumasaigh go huathoibríoch de réir mar is gá"
 
-#: ui/main.qml:344
+#: ui/main.qml:354
 #, fuzzy, kde-format
 #| msgctxt "option:radio As in: 'Touch Mode is never enabled'"
 #| msgid "Never enabled"
@@ -318,7 +318,7 @@ msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Níor cuireadh ar chumas riamh"
 
-#: ui/main.qml:363
+#: ui/main.qml:373
 #, fuzzy, kde-format
 #| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 #| msgid ""
@@ -335,7 +335,7 @@ msgstr ""
 "córas scáileán tadhaill ach gan luch ná ceap tadhaill. Mar shampla: nuair a "
 "chasfar nó a bhaintear méarchlár ríomhaire glúine in-athraithe."
 
-#: ui/main.qml:369
+#: ui/main.qml:379
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is always enabled'"
 #| msgid "Always active"
@@ -343,7 +343,7 @@ msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Gníomhach i gcónaí"
 
-#: ui/main.qml:391
+#: ui/main.qml:401
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is never enabled'"
 #| msgid "Disabled"
@@ -351,7 +351,7 @@ msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Díchumasaithe"
 
-#: ui/main.qml:392
+#: ui/main.qml:402
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."
