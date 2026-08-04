@@ -159,18 +159,6 @@ Kirigami.FormLayout {
             }
 
             QQC2.CheckBox {
-                text: i18nc("@option:check", "Enable focus tracking")
-                checked: kcm.zoomMagnifierSettings.zoomEnableFocusTracking
-                onCheckedChanged: kcm.zoomMagnifierSettings.zoomEnableFocusTracking = checked
-                visible: KWindowSystem.isPlatformX11
-
-                KCM.SettingStateBinding {
-                    configObject: kcm.zoomMagnifierSettings
-                    settingName: "ZoomEnableFocusTracking"
-                }
-            }
-
-            QQC2.CheckBox {
                 text: i18nc("@option:check", "Enable text caret tracking")
                 checked: kcm.zoomMagnifierSettings.zoomEnableTextCaretTracking
                 onCheckedChanged: kcm.zoomMagnifierSettings.zoomEnableTextCaretTracking = checked
@@ -321,7 +309,7 @@ Kirigami.FormLayout {
         Item {
             // For some reason, here setting enabled directly on
             // KeySequenceItem does not work, so we wrap it
-            enabled: !kcm.isPlatformX11 && (kcm.zoomMagnifierSettings.zoom || kcm.zoomMagnifierSettings.magnifier)
+            enabled: kcm.zoomMagnifierSettings.zoom || kcm.zoomMagnifierSettings.magnifier
 
             implicitWidth: zoomPointerAxisGestureModifiersBox.implicitWidth
             implicitHeight: zoomPointerAxisGestureModifiersBox.implicitHeight
@@ -349,15 +337,10 @@ Kirigami.FormLayout {
                 }
             }
         }
-
-        Kirigami.ContextualHelpButton {
-            visible: kcm.isPlatformX11
-            toolTipText: i18nc("@info:tooltip, indicates feature unavailable on X11", "Zoom scroll gestures are only available on Wayland.")
-        }
     }
 
     QQC2.Label {
-        enabled: !kcm.isPlatformX11 && zoomPointerAxisGestureModifiersBox.keySequence != ""
+        enabled: zoomPointerAxisGestureModifiersBox.keySequence != ""
         text: i18nc("@label Hint for scroll gestures", "Scroll while modifier keys are pressed to zoom")
         textFormat: Text.PlainText
         wrapMode: Text.Wrap

@@ -45,7 +45,6 @@ class KAccessConfig : public KQuickManagedConfigModule
     Q_PROPERTY(bool colorblindnessCorrectionIsDefaults READ colorblindnessCorrectionIsDefaults NOTIFY colorblindnessCorrectionIsDefaultsChanged)
     Q_PROPERTY(bool invertIsDefaults READ invertIsDefaults NOTIFY invertIsDefaultsChanged)
     Q_PROPERTY(bool zoomMagnifierIsDefaults READ zoomMagnifierIsDefaults NOTIFY zoomMagnifierIsDefaultsChanged)
-    Q_PROPERTY(bool isPlatformX11 READ isPlatformX11 CONSTANT)
 
 public:
     KAccessConfig(QObject *parent, const KPluginMetaData &);
@@ -60,8 +59,6 @@ public:
     Q_INVOKABLE bool orcaInstalled();
 
     QString orcaLaunchFeedback() const;
-
-    bool isPlatformX11() const;
 
     MouseSettings *mouseSettings() const;
     BellSettings *bellSettings() const;
