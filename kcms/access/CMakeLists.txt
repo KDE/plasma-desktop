@@ -97,12 +97,9 @@ target_link_libraries(kcm_access PRIVATE
     KF6::GlobalAccel
     KF6::GuiAddons
     KF6::I18n
-    KF6::NewStuffCore
     KF6::KCMUtilsQuick
-    KF6::WindowSystem
     KF6::NotifyConfig
     KF6::XmlGui
-    X11::X11
 )
 
 install(

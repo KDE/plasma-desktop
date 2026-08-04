@@ -22,13 +22,10 @@
 
 #include <KActionCollection>
 #include <KGlobalAccel>
-#include <KKeyServer>
 #include <KLocalizedString>
 #include <KNotifyConfigWidget>
 #include <KPluginFactory>
-#include <KSharedConfig>
 #include <KShortcutsDialog>
-#include <KWindowSystem>
 
 #include "kcmaccessibilitybell.h"
 #include "kcmaccessibilitycolorblindnesscorrection.h"
