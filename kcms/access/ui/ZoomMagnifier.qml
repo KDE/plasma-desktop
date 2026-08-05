@@ -348,7 +348,6 @@ Kirigami.Form {
         Kirigami.FormSeparator {}
         Kirigami.FormAction {
             enabled: action.enabled
-            subtitle: i18nc("@label Hint for zoom/magnify effect usage", "Use shortcuts to control zoom")
             action: QQC2.Action {
                 enabled: (kcm.zoomMagnifierSettings.zoom || kcm.zoomMagnifierSettings.magnifier)
                 text: i18nc("@action:button", "Configure Shortcuts…")
