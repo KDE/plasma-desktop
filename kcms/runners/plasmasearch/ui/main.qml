@@ -96,6 +96,10 @@ KCMUtils.ScrollViewKCM {
                 ]
                 onConfigTriggered: kcm.showKCM(model.config, [], model.metaData)
                 highlighted: false
+
+                KCMUtils.SettingHighlighter {
+                    highlight: model.enabled !== enabledByDefault
+                }
             }
         }
     }
