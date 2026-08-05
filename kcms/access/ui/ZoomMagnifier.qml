@@ -16,207 +16,205 @@ import org.kde.kwindowsystem
 Kirigami.Form {
     id: pageLayout
 
-    Kirigami.FormAlignmentGroup {
-        id: alignmentGroup
-    }
+    component FullScreenZoomSettingsModel : ObjectModel {
+        id: objectModel
+        property bool visible: kcm.zoomMagnifierSettings.zoom
+        Kirigami.FormEntry {
+            visible: objectModel.visible
+            title: i18nc("@label:spinbox", "Show pixel grid at zoom level:")
+            contentItem: QQC2.SpinBox {
+                id: zoomPixelGridZoomSpinBox
 
-    component FullScreenZoomSettingsForm : Kirigami.Form {
-        Kirigami.FormAlignmentGroup.group: alignmentGroup
-        enabled: kcm.zoomMagnifierSettings.zoom
-        Kirigami.FormGroup {
-            Kirigami.FormEntry {
-                title: i18nc("@label:spinbox", "Show pixel grid at zoom level:")
-                contentItem: QQC2.SpinBox {
-                    id: zoomPixelGridZoomSpinBox
+                from: toInt(0)
+                to: toInt(100)
+                stepSize: toInt(1)
 
-                    from: toInt(0)
-                    to: toInt(100)
-                    stepSize: toInt(1)
+                validator: IntValidator {
+                    bottom: Math.min(zoomPixelGridZoomSpinBox.from, zoomPixelGridZoomSpinBox.to)
+                    top: Math.max(zoomPixelGridZoomSpinBox.from, zoomPixelGridZoomSpinBox.to)
+                }
 
-                    validator: IntValidator {
-                        bottom: Math.min(zoomPixelGridZoomSpinBox.from, zoomPixelGridZoomSpinBox.to)
-                        top: Math.max(zoomPixelGridZoomSpinBox.from, zoomPixelGridZoomSpinBox.to)
-                    }
+                textFromValue: (value, locale) => fromInt(value).toLocaleString(locale, 'f', 2)
+                valueFromText: (text, locale) => Math.round(toInt(Number.fromLocaleString(locale, text)))
 
-                    textFromValue: (value, locale) => fromInt(value).toLocaleString(locale, 'f', 2)
-                    valueFromText: (text, locale) => Math.round(toInt(Number.fromLocaleString(locale, text)))
+                value: toInt(kcm.zoomMagnifierSettings.zoomPixelGridZoom)
+                onValueModified: kcm.zoomMagnifierSettings.zoomPixelGridZoom = fromInt(value)
 
-                    value: toInt(kcm.zoomMagnifierSettings.zoomPixelGridZoom)
-                    onValueModified: kcm.zoomMagnifierSettings.zoomPixelGridZoom = fromInt(value)
+                function toInt(value: double) : int {
+                    return value * 100;
+                }
 
-                    function toInt(value: double) : int {
-                        return value * 100;
-                    }
+                function fromInt(value: int) : double {
+                    return value / 100;
+                }
 
-                    function fromInt(value: int) : double {
-                        return value / 100;
-                    }
-
-                    KCM.SettingStateBinding {
-                        configObject: kcm.zoomMagnifierSettings
-                        settingName: "ZoomPixelGridZoom"
-                    }
+                KCM.SettingStateBinding {
+                    configObject: kcm.zoomMagnifierSettings
+                    settingName: "ZoomPixelGridZoom"
                 }
             }
+        }
 
-            Kirigami.FormEntry {
-                title: i18nc("@label:listbox", "Pointer tracking:")
-                contentItem: QQC2.ComboBox {
-                    delegate: QQC2.ItemDelegate {
-                        id: delegate
+        Kirigami.FormEntry {
+            visible: objectModel.visible
+            title: i18nc("@label:listbox", "Pointer tracking:")
+            contentItem: QQC2.ComboBox {
+                delegate: QQC2.ItemDelegate {
+                    id: delegate
 
-                        required property string title
-                        required property string description
+                    required property string title
+                    required property string description
 
-                        width: parent?.width ?? 0
+                    width: parent?.width ?? 0
 
-                        text: delegate.title
+                    text: delegate.title
 
-                        contentItem: Kirigami.TitleSubtitle {
-                            title: delegate.title
-                            subtitle: delegate.description
-                            font: delegate.font
-                            selected: delegate.highlighted || delegate.down
-                            wrapMode: Text.Wrap
-                        }
-                    }
-                    model: [
-                        {
-                            title: i18nc("@item:inlistbox", "Proportional"),
-                            description: i18nc("@item:inlistbox", "Zoom area moves in sync with pointer"),
-                            settingIndex: 0
-                        },
-                        {
-                            title: i18nc("@item:inlistbox", "Centered"),
-                            description: i18nc("@item:inlistbox", "Pointer stays centered on-screen, except near screen edges"),
-                            settingIndex: 1
-                        },
-                        {
-                            title: i18nc("@item:inlistbox", "Centered (Strict)"),
-                            description: i18nc("@item:inlistbox", "Pointer stays centered on-screen, even near screen edges"),
-                            settingIndex: 4
-                        },
-                        {
-                            title: i18nc("@item:inlistbox", "Push"),
-                            description: i18nc("@item:inlistbox", "Pointer pushes zoom area at screen edges"),
-                            settingIndex: 2
-                        },
-                        {
-                            title: i18nc("@item:inlistbox", "Disabled"),
-                            description: i18nc("@item:inlistbox", "Zoom area doesn't follow pointer"),
-                            settingIndex: 3
-                        }
-                    ]
-                    textRole: "title"
-                    currentIndex: model.findIndex(m => m.settingIndex === kcm.zoomMagnifierSettings.zoomMouseTracking)
-                    onActivated: index => kcm.zoomMagnifierSettings.zoomMouseTracking = model[index].settingIndex
-
-                    Layout.preferredWidth: Kirigami.Units.gridUnit * 15
-
-                    KCM.SettingStateBinding {
-                        configObject: kcm.zoomMagnifierSettings
-                        settingName: "ZoomMouseTracking"
+                    contentItem: Kirigami.TitleSubtitle {
+                        title: delegate.title
+                        subtitle: delegate.description
+                        font: delegate.font
+                        selected: delegate.highlighted || delegate.down
+                        wrapMode: Text.Wrap
                     }
                 }
-            }
-
-            Kirigami.FormEntry {
-                contentItem: QQC2.CheckBox {
-                    text: i18nc("@option:check", "Sharpen screen content while zoomed in")
-                    checked: kcm.zoomMagnifierSettings.zoomUsePatternUpscaler
-                    onCheckedChanged: kcm.zoomMagnifierSettings.zoomUsePatternUpscaler = checked
-
-                    KCM.SettingStateBinding {
-                        configObject: kcm.zoomMagnifierSettings
-                        settingName: "ZoomUsePatternUpscaler"
+                model: [
+                    {
+                        title: i18nc("@item:inlistbox", "Proportional"),
+                        description: i18nc("@item:inlistbox", "Zoom area moves in sync with pointer"),
+                        settingIndex: 0
+                    },
+                    {
+                        title: i18nc("@item:inlistbox", "Centered"),
+                        description: i18nc("@item:inlistbox", "Pointer stays centered on-screen, except near screen edges"),
+                        settingIndex: 1
+                    },
+                    {
+                        title: i18nc("@item:inlistbox", "Centered (Strict)"),
+                        description: i18nc("@item:inlistbox", "Pointer stays centered on-screen, even near screen edges"),
+                        settingIndex: 4
+                    },
+                    {
+                        title: i18nc("@item:inlistbox", "Push"),
+                        description: i18nc("@item:inlistbox", "Pointer pushes zoom area at screen edges"),
+                        settingIndex: 2
+                    },
+                    {
+                        title: i18nc("@item:inlistbox", "Disabled"),
+                        description: i18nc("@item:inlistbox", "Zoom area doesn't follow pointer"),
+                        settingIndex: 3
                     }
+                ]
+                textRole: "title"
+                currentIndex: model.findIndex(m => m.settingIndex === kcm.zoomMagnifierSettings.zoomMouseTracking)
+                onActivated: index => kcm.zoomMagnifierSettings.zoomMouseTracking = model[index].settingIndex
+
+                Layout.preferredWidth: Kirigami.Units.gridUnit * 15
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.zoomMagnifierSettings
+                    settingName: "ZoomMouseTracking"
                 }
             }
+        }
 
-            Kirigami.FormEntry {
-                visible: KWindowSystem.isPlatformX11
-                contentItem: QQC2.CheckBox {
-                    text: i18nc("@option:check", "Enable focus tracking")
-                    checked: kcm.zoomMagnifierSettings.zoomEnableFocusTracking
-                    onCheckedChanged: kcm.zoomMagnifierSettings.zoomEnableFocusTracking = checked
+        Kirigami.FormEntry {
+            visible: objectModel.visible
+            contentItem: QQC2.CheckBox {
+                text: i18nc("@option:check", "Sharpen screen content while zoomed in")
+                checked: kcm.zoomMagnifierSettings.zoomUsePatternUpscaler
+                onCheckedChanged: kcm.zoomMagnifierSettings.zoomUsePatternUpscaler = checked
 
-                    KCM.SettingStateBinding {
-                        configObject: kcm.zoomMagnifierSettings
-                        settingName: "ZoomEnableFocusTracking"
-                    }
+                KCM.SettingStateBinding {
+                    configObject: kcm.zoomMagnifierSettings
+                    settingName: "ZoomUsePatternUpscaler"
                 }
             }
+        }
 
-            Kirigami.FormEntry {
-                contentItem: QQC2.CheckBox {
-                    text: i18nc("@option:check", "Enable text caret tracking")
-                    checked: kcm.zoomMagnifierSettings.zoomEnableTextCaretTracking
-                    onCheckedChanged: kcm.zoomMagnifierSettings.zoomEnableTextCaretTracking = checked
+        Kirigami.FormEntry {
+            visible: objectModel.visible && KWindowSystem.isPlatformX11
+            contentItem: QQC2.CheckBox {
+                text: i18nc("@option:check", "Enable focus tracking")
+                checked: kcm.zoomMagnifierSettings.zoomEnableFocusTracking
+                onCheckedChanged: kcm.zoomMagnifierSettings.zoomEnableFocusTracking = checked
 
-                    KCM.SettingStateBinding {
-                        configObject: kcm.zoomMagnifierSettings
-                        settingName: "ZoomEnableTextCaretTracking"
-                    }
+                KCM.SettingStateBinding {
+                    configObject: kcm.zoomMagnifierSettings
+                    settingName: "ZoomEnableFocusTracking"
+                }
+            }
+        }
+
+        Kirigami.FormEntry {
+            visible: objectModel.visible
+            contentItem: QQC2.CheckBox {
+                text: i18nc("@option:check", "Enable text caret tracking")
+                checked: kcm.zoomMagnifierSettings.zoomEnableTextCaretTracking
+                onCheckedChanged: kcm.zoomMagnifierSettings.zoomEnableTextCaretTracking = checked
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.zoomMagnifierSettings
+                    settingName: "ZoomEnableTextCaretTracking"
                 }
             }
         }
     }
 
-    component MagnifierZoomSettingsForm : Kirigami.Form {
-        Kirigami.FormAlignmentGroup.group: alignmentGroup
-        enabled: kcm.zoomMagnifierSettings.magnifier
-        Kirigami.FormGroup {
-            Kirigami.FormEntry {
-                title: i18nc("@label:spinbox", "Width:")
-                contentItem: QQC2.SpinBox {
-                    id: magnifierWidthSpinBox
+    component MagnifierZoomSettingsModel : ObjectModel {
+        id: objectModel
+        property bool visible: kcm.zoomMagnifierSettings.magnifier
+        Kirigami.FormEntry {
+            visible: objectModel.visible
+            title: i18nc("@label:spinbox", "Width:")
+            contentItem: QQC2.SpinBox {
+                id: magnifierWidthSpinBox
 
-                    from: 100
-                    to: 2000
-                    stepSize: 10
+                from: 100
+                to: 2000
+                stepSize: 10
 
-                    validator: IntValidator {
-                        bottom: Math.min(magnifierWidthSpinBox.from, magnifierWidthSpinBox.to)
-                        top: Math.max(magnifierWidthSpinBox.from, magnifierWidthSpinBox.to)
-                    }
+                validator: IntValidator {
+                    bottom: Math.min(magnifierWidthSpinBox.from, magnifierWidthSpinBox.to)
+                    top: Math.max(magnifierWidthSpinBox.from, magnifierWidthSpinBox.to)
+                }
 
-                    textFromValue: (value, locale) => { return i18ncp("short for pixel(s)", "%1 px", "%1 px", value); }
-                    valueFromText: (text, locale) => { return Number.fromLocaleString(locale, text.replace(i18nc("short for pixel(s)", "px"), "")); }
+                textFromValue: (value, locale) => { return i18ncp("short for pixel(s)", "%1 px", "%1 px", value); }
+                valueFromText: (text, locale) => { return Number.fromLocaleString(locale, text.replace(i18nc("short for pixel(s)", "px"), "")); }
 
-                    value: kcm.zoomMagnifierSettings.magnifierWidth
-                    onValueModified: kcm.zoomMagnifierSettings.magnifierWidth = value
+                value: kcm.zoomMagnifierSettings.magnifierWidth
+                onValueModified: kcm.zoomMagnifierSettings.magnifierWidth = value
 
-                    KCM.SettingStateBinding {
-                        configObject: kcm.zoomMagnifierSettings
-                        settingName: "MagnifierWidth"
-                    }
+                KCM.SettingStateBinding {
+                    configObject: kcm.zoomMagnifierSettings
+                    settingName: "MagnifierWidth"
                 }
             }
+        }
 
-            Kirigami.FormEntry {
-                title: i18nc("@label:spinbox", "Height:")
-                contentItem: QQC2.SpinBox {
-                    id: magnifierHeightSpinBox
+        Kirigami.FormEntry {
+            visible: objectModel.visible
+            title: i18nc("@label:spinbox", "Height:")
+            contentItem: QQC2.SpinBox {
+                id: magnifierHeightSpinBox
 
-                    from: 100
-                    to: 2000
-                    stepSize: 10
+                from: 100
+                to: 2000
+                stepSize: 10
 
-                    validator: IntValidator {
-                        bottom: Math.min(magnifierHeightSpinBox.from, magnifierHeightSpinBox.to)
-                        top: Math.max(magnifierHeightSpinBox.from, magnifierHeightSpinBox.to)
-                    }
+                validator: IntValidator {
+                    bottom: Math.min(magnifierHeightSpinBox.from, magnifierHeightSpinBox.to)
+                    top: Math.max(magnifierHeightSpinBox.from, magnifierHeightSpinBox.to)
+                }
 
-                    textFromValue: (value, locale) => { return i18ncp("short for pixel(s)", "%1 px", "%1 px", value); }
-                    valueFromText: (text, locale) => { return Number.fromLocaleString(locale, text.replace(i18nc("short for pixel(s)", "px"), "")); }
+                textFromValue: (value, locale) => { return i18ncp("short for pixel(s)", "%1 px", "%1 px", value); }
+                valueFromText: (text, locale) => { return Number.fromLocaleString(locale, text.replace(i18nc("short for pixel(s)", "px"), "")); }
 
-                    value: kcm.zoomMagnifierSettings.magnifierHeight
-                    onValueModified: kcm.zoomMagnifierSettings.magnifierHeight = value
+                value: kcm.zoomMagnifierSettings.magnifierHeight
+                onValueModified: kcm.zoomMagnifierSettings.magnifierHeight = value
 
-                    KCM.SettingStateBinding {
-                        configObject: kcm.zoomMagnifierSettings
-                        settingName: "MagnifierHeight"
-                    }
+                KCM.SettingStateBinding {
+                    configObject: kcm.zoomMagnifierSettings
+                    settingName: "MagnifierHeight"
                 }
             }
         }
@@ -239,10 +237,6 @@ Kirigami.Form {
             }
         }
 
-        FullScreenZoomSettingsForm {
-            Layout.fillWidth: true
-        }
-
         Kirigami.FormEntry {
             contentItem: QQC2.RadioButton {
                 id: magnifierRadioButton
@@ -256,10 +250,6 @@ Kirigami.Form {
             }
         }
 
-        MagnifierZoomSettingsForm {
-            Layout.fillWidth: true
-        }
-
         Kirigami.FormEntry {
             contentItem: QQC2.RadioButton {
                 id: noneRadioButton
@@ -271,6 +261,16 @@ Kirigami.Form {
 
                 KCM.SettingHighlighter { highlight: !kcm.zoomMagnifierSettings.zoom }
             }
+        }
+
+        Kirigami.FormSeparator { visible: kcm.zoomMagnifierSettings.zoom || kcm.zoomMagnifierSettings.magnifier}
+
+        Repeater {
+            model: FullScreenZoomSettingsModel {}
+        }
+
+        Repeater {
+            model: MagnifierZoomSettingsModel {}
         }
 
         Kirigami.FormSeparator {}
