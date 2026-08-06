@@ -93,6 +93,23 @@ function save() {
     updateMargins();
 }
 
+function reorderApplets(order) {
+    let containerById = {};
+
+    for (let i = 0; i < appletsModel.count; ++i) {
+        let container = appletsModel.get(i).applet.parent;
+        containerById[container.applet.Plasmoid.id] = container
+    }
+
+    let i = 0;
+    order.forEach((appletId) => {
+        if (appletId in containerById) {
+            move(containerById[appletId], i);
+        }
+        ++i;
+    });
+}
+
 function childAtCoordinates(x, y) {
     if (root.isHorizontal) {
         y = layout.height / 2;
