@@ -18,7 +18,7 @@ import org.kde.kquickcontrols
 
 Item {
     id: outputAreaView
-    
+
     required property KCM.InputDevice device
     required property int mode
     required property bool displayVisible
@@ -217,8 +217,25 @@ Item {
         anchors {
             top: outputItem.bottom
             topMargin: Kirigami.Units.largeSpacing
-            horizontalCenter: parent.horizontalCenter
         }
+
+        states: [
+            State {
+                when: outputAreaView.displayVisible
+                AnchorChanges {
+                    target: tabletItem
+                    anchors.left: undefined
+                    anchors.horizontalCenter: tabletItem.parent.horizontalCenter
+                }
+            },
+            State {
+                AnchorChanges {
+                    target: tabletItem
+                    anchors.left: tabletItem.parent.left
+                    anchors.horizontalCenter: undefined
+                }
+            }
+        ]
 
         readonly property size outputSize: outputAreaView.device.size
         readonly property real aspectRatio: outputSize.width / outputSize.height
