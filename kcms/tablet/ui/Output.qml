@@ -31,7 +31,7 @@ Item {
 
     // Padding between the items
     readonly property real padding: Kirigami.Units.smallSpacing
-
+implicitWidth: implicitHeight * aspectRatio
     implicitHeight: outputHeight + Kirigami.Units.gridUnit + padding * 3
 
     Rectangle {

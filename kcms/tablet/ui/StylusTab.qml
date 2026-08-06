@@ -215,352 +215,319 @@ Item {
             }
         }
 
-        Kirigami.FormLayout {
+        Kirigami.Form {
             id: form
+            Layout.alignment: Qt.AlignTop
+            Layout.fillWidth: true
+            Layout.maximumWidth: implicitWidth
 
-            Layout.fillWidth: false
-            RowLayout {
-                Kirigami.FormData.label: i18ndc("kcm_tablet", "@label prefix for checkbox", "Left-handed mode:")
-                Kirigami.FormData.buddyFor: leftHandedCheckbox
-                spacing: 0
-
-                QQC2.CheckBox {
-                    id: leftHandedCheckbox
-                    text: i18nc("@option:check Enable left-handed mode", "Enable")
-                    enabled: root.device && root.device.supportsLeftHanded
-                    checked: root.device && root.device.leftHanded
-                    onCheckedChanged: root.device.leftHanded = checked
-                }
-                Kirigami.ContextualHelpButton {
-                    toolTipText: xi18nc("@info", "Tells the device to accommodate left-handed users. Effects will vary by device, but often it reverses the pad buttonsʼ functionality so the tablet can be used upside-down.")
-                }
-                SettingHighlighter {
-                    // No device has a default of left-handed, so this is always an explicit user choice
-                    highlight: leftHandedCheckbox.checked
-                }
-            }
-
-            // Click behavior settings
-            QQC2.ButtonGroup { id: isRelativeGroup }
-
-            ColumnLayout {
-                Kirigami.FormData.label: i18nc("'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)", "Mode:")
-                Kirigami.FormData.buddyFor: absoluteMode
-
-                Layout.fillWidth: true
-                spacing: 0
-
-                QQC2.RadioButton {
-                    id: absoluteMode
-                    text: i18nc("@option:radio Pen mode, where the point on the screen is always where you touch the stylus", "Pen")
-                    checked: root.device && !root.device.relative
-                    onToggled: root.device.relative = false
-                    QQC2.ButtonGroup.group: isRelativeGroup
-
-                    Accessible.description: i18nc("@info:whatsthis Accessible description", "The cursor follows where you touch the pen on the surface")
-                }
-
-                QQC2.Label {
-                    // Layout.fillWidth: true
-                    leftPadding: absoluteMode.indicator.width
-                    text: absoluteMode.Accessible.description
-                    textFormat: Text.PlainText
-                    elide: Text.ElideRight
-                    font: Kirigami.Theme.smallFont
-                    Layout.maximumWidth: 300
-                    wrapMode: Text.Wrap
-                }
-            }
-
-            ColumnLayout {
-                Layout.fillWidth: true
-                spacing: 0
-
-                QQC2.RadioButton {
-                    id: relativeMode
-                    text: i18nc("@option:radio Mouse mode, or like using the tablet like a giant touchpad", "Mouse")
-                    checked: root.device && root.device.relative
-                    onToggled: root.device.relative = true
-                    QQC2.ButtonGroup.group: isRelativeGroup
-
-                    Accessible.description: i18nc("@info:whatsthis Accessible description", "Moving the pen on the surface moves the cursor relative to where it was, like a mouse")
-                }
-
-                QQC2.Label {
-                    Layout.fillWidth: true
-                    leftPadding: relativeMode.indicator.width
-                    text: relativeMode.Accessible.description
-                    textFormat: Text.PlainText
-                    elide: Text.ElideRight
-                    font: Kirigami.Theme.smallFont
-                    Layout.maximumWidth: 300
-                    wrapMode: Text.Wrap
-                }
-            }
-
-            QQC2.CheckBox {
-                text: i18n("Sync with mouse cursor")
-                checked: kcm.syncWithMouse
-                onCheckedChanged: kcm.syncWithMouse = checked
-            }
-
-            Repeater {
-                id: buttonRepeater
-
-                model: KCM.StylusButtonsModel {
-                    device: root.device
-                    db: root.db
-                }
-
-                delegate: ActionBinding {
-                    id: seq
-
-                    required property string label
-                    required property int value // Gives us BTN_STYLUS, etc which KWin accepts
-                    required name
-
-                    Kirigami.FormData.label: (buttonPressed ? "<b>" : "") + label + (buttonPressed ? "</b>" : "")
-                    property bool buttonPressed: false
-
-                    Connections {
-                        target: root.tabletEvents
-
-                        function onToolButtonReceived(hardware_serial_hi: int, hardware_serial_lo: int, button: int, pressed: bool): void {
-                            if (button !== seq.value) {
-                                return;
-                            }
-                            seq.buttonPressed = pressed;
-                        }
+            Kirigami.FormGroup {
+                Kirigami.FormEntry {
+                    title: i18ndc("kcm_tablet", "@label prefix for checkbox", "Left-handed mode:")
+                    contentItem: QQC2.CheckBox {
+                        id: leftHandedCheckbox
+                        text: i18nc("@option:check Enable left-handed mode", "Enable")
+                        enabled: root.device && root.device.supportsLeftHanded
+                        checked: root.device && root.device.leftHanded
+                        onCheckedChanged: root.device.leftHanded = checked
                     }
-
-                    Connections {
-                        target: root
-
-                        function onSettingsRestored(): void {
-                            refreshInputSequence();
-                        }
+                    trailingItems: Kirigami.ContextualHelpButton {
+                        toolTipText: xi18nc("@info", "Tells the device to accommodate left-handed users. Effects will vary by device, but often it reverses the pad buttonsʼ functionality so the tablet can be used upside-down.")
                     }
-
-                    function refreshInputSequence(): void {
-                        seq.inputSequence = kcm.toolButtonMapping(root.device.name, seq.value);
-                    }
-
-                    Component.onCompleted: refreshInputSequence()
-
-                    onGotInputSequence: sequence => {
-                        kcm.assignToolButtonMapping(root.device.name, seq.value, sequence);
-                    }
-
                     SettingHighlighter {
-                        // Currently, application-defined is the default
-                        highlight: seq.inputSequence.type !== KCM.InputSequence.ApplicationDefined
+                        // No device has a default of left-handed, so this is always an explicit user choice
+                        highlight: leftHandedCheckbox.checked
+                    }
+                }
+
+                // Click behavior settings
+                Kirigami.FormEntry {
+                    title: i18nc("'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)", "Mode:")
+                    subtitle: absoluteMode.Accessible.description
+                    contentItem: QQC2.RadioButton {
+                        id: absoluteMode
+                        text: i18nc("@option:radio Pen mode, where the point on the screen is always where you touch the stylus", "Pen")
+                        checked: root.device && !root.device.relative
+                        onToggled: root.device.relative = false
+                        QQC2.ButtonGroup.group: isRelativeGroup
+
+                        Accessible.description: i18nc("@info:whatsthis Accessible description", "The cursor follows where you touch the pen on the surface")
+                        QQC2.ButtonGroup { id: isRelativeGroup }
+                    }
+                }
+
+                Kirigami.FormEntry {
+                    subtitle: relativeMode.Accessible.description
+                    contentItem: QQC2.RadioButton {
+                        id: relativeMode
+                        text: i18nc("@option:radio Mouse mode, or like using the tablet like a giant touchpad", "Mouse")
+                        checked: root.device && root.device.relative
+                        onToggled: root.device.relative = true
+                        QQC2.ButtonGroup.group: isRelativeGroup
+
+                        Accessible.description: i18nc("@info:whatsthis Accessible description", "Moving the pen on the surface moves the cursor relative to where it was, like a mouse")
+                    }
+                }
+
+                Kirigami.FormEntry {
+                    contentItem: QQC2.CheckBox {
+                        text: i18n("Sync with mouse cursor")
+                        checked: kcm.syncWithMouse
+                        onCheckedChanged: kcm.syncWithMouse = checked
                     }
                 }
             }
 
-            RowLayout {
-                Kirigami.FormData.label: i18ndc("kcm_tablet", "@label prefix for pen pressure curve config", "Pen Pressure:")
+            Kirigami.FormGroup {
+                Repeater {
+                    id: buttonRepeater
 
-                Layout.fillWidth: true
-
-                spacing: Kirigami.Units.smallSpacing
-
-                ColumnLayout {
-                    spacing: Kirigami.Units.smallSpacing
-
-                    PressureCurve {
-                        id: pressureCurve
-
-                        property bool loadedSettings: false
-
-                        onControlPoint1Changed: saveSettings()
-                        onControlPoint2Changed: saveSettings()
-                        isDefault: root.device.pressureCurveIsDefault
-
-                        Layout.fillWidth: true
-
-                        Component.onCompleted: reloadSettings()
-
-                        function reloadSettings(): void {
-                            if (!root.device) {
-                                return;
-                            }
-
-                            const points = kcm.fromSerializedCurve(root.device.pressureCurve);
-                            if (points.length === 2) {
-                                pressureCurve.controlPoint1 = points[0];
-                                pressureCurve.controlPoint2 = points[1];
-                                pressureCurve.forceReloadControlPoints();
-                            } else {
-                                pressureCurve.controlPoint1 = Qt.point(0.0, 0.0);
-                                pressureCurve.controlPoint2 = Qt.point(1.0, 1.0);
-                            }
-
-                            loadedSettings = true;
-                        }
-
-                        function saveSettings(): void {
-                            // We need to make sure not to re-save the settings we are loading in reloadSettings()
-                            if (!root.device || !loadedSettings) {
-                                return;
-                            }
-
-                            root.device.pressureCurve = kcm.toSerializedCurve(pressureCurve.controlPoint1, pressureCurve.controlPoint2);
-                        }
-
-                        Connections {
-                            target: root.device
-
-                            // For reloading the curve when it's reset/set to default
-                            function onPressureCurveChanged(): void {
-                                pressureCurve.reloadSettings();
-                            }
-                        }
-                    }
-                    RowLayout {
-                        QQC2.Label {
-                            text: i18ndc("kcm_tablet", "% of minimum pen pressure", "%1%", Math.round(root.device.pressureRangeMin * 100.0))
-                        }
-
-                        Item {
-                            Layout.fillWidth: true
-                        }
-
-                        QQC2.Label {
-                            text: i18ndc("kcm_tablet", "% of maximum pen pressure", "%1%", Math.round(root.device.pressureRangeMax * 100.0))
-                        }
-                    }
-                }
-                ColumnLayout {
-                    Layout.maximumHeight: pressureCurve.implicitHeight
-                    Layout.alignment: Qt.AlignTop
-
-                    spacing: Kirigami.Units.smallSpacing
-
-                    QQC2.Label {
-                        text: i18ndc("kcm_tablet", "100% or maximum pen pressure", "100%")
+                    model: KCM.StylusButtonsModel {
+                        device: root.device
+                        db: root.db
                     }
 
-                    Item {
-                        Layout.fillHeight: true
-                    }
+                    delegate: Kirigami.FormEntry {
+                        id: bindingDelegate
+                        required property string name
+                        required property string label
+                        required property int value // Gives us BTN_STYLUS, etc which KWin accepts
+                        title: (seq.buttonPressed ? "<b>" : "") + label + (seq.buttonPressed ? "</b>" : "")
+                        contentItem: ActionBinding {
+                            id: seq
 
-                    QQC2.Label {
-                        text: i18ndc("kcm_tablet", "0% or zero pen pressure", "0%")
-                    }
-                }
-                Kirigami.ContextualHelpButton {
-                    toolTipText: i18ndc("kcm_tablet", "@info", "This curve controls the relationship between the pressure on the stylus and the pressure values received by applications.")
-                }
-            }
+                            name: bindingDelegate.name
 
-            RowLayout {
-                Kirigami.FormData.label: i18ndc("kcm_tablet", "Pen pressure range", "Pressure Range:")
+                            property bool buttonPressed: false
 
-                spacing: Kirigami.Units.smallSpacing
-                enabled: root.device.supportsPressureRange
+                            Connections {
+                                target: root.tabletEvents
 
-                Layout.fillWidth: true
-
-                QQC2.RangeSlider {
-                    from: 0
-                    to: 1
-                    first {
-                        value: root.device.pressureRangeMin
-                        onMoved: root.device.pressureRangeMin = first.value
-                    }
-                    second {
-                        value: root.device.pressureRangeMax
-                        onMoved: root.device.pressureRangeMax = second.value
-                    }
-
-                    Layout.preferredWidth: pressureCurve.width
-                }
-
-                Item {
-                    Layout.fillWidth: true
-                }
-
-                Kirigami.ContextualHelpButton {
-                    toolTipText: i18ndc("kcm_tablet", "@info", "Pressure above or below the threshold will be clamped, and this becomes the new effective range.")
-                }
-            }
-
-            RowLayout {
-                spacing: Kirigami.Units.smallSpacing
-
-                QQC2.Button {
-                    text: {
-                        if (root.supportsCalibration) {
-                            if (root.calibrationWindowOpen) {
-                                return i18nc("@action:button Calibration in progress", "Calibration in Progress");
-                            } else {
-                                return i18nc("@action:button Calibrate the pen display", "Calibrate");
-                            }
-                        } else {
-                            return i18nc("@action:button Pen display doesn't support calibration", "Calibration Not Supported");
-                        }
-                    }
-                    icon.name: "crosshairs"
-                    enabled: root.supportsCalibration && !root.calibrationWindowOpen
-                    onClicked: {
-                        const component = Qt.createComponent("Calibration.qml");
-                        if (component.status === Component.Ready) {
-                            let screenIndex = 0;
-                            for (let i = 0; i < Qt.application.screens.length; i++) {
-                                if (Qt.application.screens[i].name === root.device.outputName) {
-                                    screenIndex = i;
-                                    break;
+                                function onToolButtonReceived(hardware_serial_hi: int, hardware_serial_lo: int, button: int, pressed: bool): void {
+                                    if (button !== bindingDelegate.value) {
+                                        return;
+                                    }
+                                    seq.buttonPressed = pressed;
                                 }
                             }
 
-                            const window = component.createObject(root, {
-                                device: root.device,
-                                tabletEvents: root.tabletEvents
-                            });
-                            // We need to show the window first, because Qt will override screen based on position.
-                            // Working around QTBUG-129989
-                            window.show();
-                            // Then override the screen, try showing it again and now it'll be on the correct screen:
-                            window.screen = Qt.application.screens[screenIndex];
-                            window.showFullScreen();
-                            window.closing.connect(close => {
-                                root.calibrationWindow = null;
-                            });
+                            Connections {
+                                target: root
 
-                            root.currentCalibrationSysName = root.device.sysName;
-                            root.calibrationWindow = window;
+                                function onSettingsRestored(): void {
+                                    refreshInputSequence();
+                                }
+                            }
+
+                            function refreshInputSequence(): void {
+                                seq.inputSequence = kcm.toolButtonMapping(root.device.name, seq.value);
+                            }
+
+                            Component.onCompleted: refreshInputSequence()
+
+                            onGotInputSequence: sequence => {
+                                kcm.assignToolButtonMapping(root.device.name, seq.value, sequence);
+                            }
+
+                            SettingHighlighter {
+                                // Currently, application-defined is the default
+                                highlight: seq.inputSequence.type !== KCM.InputSequence.ApplicationDefined
+                            }
                         }
                     }
-
-                    SettingHighlighter {
-                        highlight: !root.device.calibrationMatrixIsDefault
-                    }
-                }
-
-                QQC2.Button {
-                    text: i18nc("@action:button", "Reset Custom Calibration")
-                    icon.name: "edit-undo-symbolic"
-                    enabled: !root.device.calibrationMatrixIsDefault
-                    visible: root.supportsCalibration
-                    display: QQC2.AbstractButton.IconOnly
-
-                    onClicked: root.device.resetCalibrationMatrix()
-
-                    QQC2.ToolTip.text: text
-                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
-                    QQC2.ToolTip.visible: hovered
                 }
             }
 
-            QQC2.Label {
-                text: i18nc("@info", "You have manually calibrated this tablet. If it's no longer working correctly, try resetting this first.")
-                visible: !root.device.calibrationMatrixIsDefault && root.supportsCalibration
-                textFormat: Text.PlainText
-                wrapMode: Text.WordWrap
-                font: Kirigami.Theme.smallFont
+            Kirigami.FormGroup {
+                Kirigami.FormEntry {
+                    title: i18ndc("kcm_tablet", "@label prefix for pen pressure curve config", "Pen Pressure:")
+                    contentItem: RowLayout {
+                        Layout.fillWidth: false
+                        spacing: Kirigami.Units.smallSpacing
+                        ColumnLayout {
+                            spacing: Kirigami.Units.smallSpacing
 
-                Layout.preferredWidth: 260
+                            PressureCurve {
+                                id: pressureCurve
+
+                                property bool loadedSettings: false
+
+                                onControlPoint1Changed: saveSettings()
+                                onControlPoint2Changed: saveSettings()
+                                isDefault: root.device.pressureCurveIsDefault
+
+                                Component.onCompleted: reloadSettings()
+
+                                function reloadSettings(): void {
+                                    if (!root.device) {
+                                        return;
+                                    }
+
+                                    const points = kcm.fromSerializedCurve(root.device.pressureCurve);
+                                    if (points.length === 2) {
+                                        pressureCurve.controlPoint1 = points[0];
+                                        pressureCurve.controlPoint2 = points[1];
+                                        pressureCurve.forceReloadControlPoints();
+                                    } else {
+                                        pressureCurve.controlPoint1 = Qt.point(0.0, 0.0);
+                                        pressureCurve.controlPoint2 = Qt.point(1.0, 1.0);
+                                    }
+
+                                    loadedSettings = true;
+                                }
+
+                                function saveSettings(): void {
+                                    // We need to make sure not to re-save the settings we are loading in reloadSettings()
+                                    if (!root.device || !loadedSettings) {
+                                        return;
+                                    }
+
+                                    root.device.pressureCurve = kcm.toSerializedCurve(pressureCurve.controlPoint1, pressureCurve.controlPoint2);
+                                }
+
+                                Connections {
+                                    target: root.device
+
+                                    // For reloading the curve when it's reset/set to default
+                                    function onPressureCurveChanged(): void {
+                                        pressureCurve.reloadSettings();
+                                    }
+                                }
+                            }
+                            RowLayout {
+                                QQC2.Label {
+                                    text: i18ndc("kcm_tablet", "% of minimum pen pressure", "%1%", Math.round(root.device.pressureRangeMin * 100.0))
+                                }
+
+                                Item {
+                                    Layout.fillWidth: true
+                                }
+
+                                QQC2.Label {
+                                    text: i18ndc("kcm_tablet", "% of maximum pen pressure", "%1%", Math.round(root.device.pressureRangeMax * 100.0))
+                                }
+                            }
+                        }
+                        ColumnLayout {
+                            Layout.maximumHeight: pressureCurve.implicitHeight
+                            Layout.alignment: Qt.AlignTop
+
+                            spacing: Kirigami.Units.smallSpacing
+
+                            QQC2.Label {
+                                text: i18ndc("kcm_tablet", "100% or maximum pen pressure", "100%")
+                            }
+
+                            Item {
+                                Layout.fillHeight: true
+                            }
+
+                            QQC2.Label {
+                                text: i18ndc("kcm_tablet", "0% or zero pen pressure", "0%")
+                            }
+                        }
+                    }
+                    trailingItems: Kirigami.ContextualHelpButton {
+                        toolTipText: i18ndc("kcm_tablet", "@info", "This curve controls the relationship between the pressure on the stylus and the pressure values received by applications.")
+                    }
+                }
+
+                Kirigami.FormEntry {
+                    title: i18ndc("kcm_tablet", "Pen pressure range", "Pressure Range:")
+
+                    contentItem: QQC2.RangeSlider {
+                        from: 0
+                        to: 1
+                        first {
+                            value: root.device.pressureRangeMin
+                            onMoved: root.device.pressureRangeMin = first.value
+                        }
+                        second {
+                            value: root.device.pressureRangeMax
+                            onMoved: root.device.pressureRangeMax = second.value
+                        }
+
+                        implicitWidth: pressureCurve.width
+                    }
+
+                    trailingItems: Kirigami.ContextualHelpButton {
+                        toolTipText: i18ndc("kcm_tablet", "@info", "Pressure above or below the threshold will be clamped, and this becomes the new effective range.")
+                    }
+                }
+
+                Kirigami.FormEntry {
+                    subtitle: i18nc("@info", "You have manually calibrated this tablet. If it's no longer working correctly, try resetting this first.")
+                    contentItem: RowLayout {
+                        spacing: Kirigami.Units.smallSpacing
+                        Layout.fillWidth: parent
+
+                        QQC2.Button {
+                            text: {
+                                if (root.supportsCalibration) {
+                                    if (root.calibrationWindowOpen) {
+                                        return i18nc("@action:button Calibration in progress", "Calibration in Progress");
+                                    } else {
+                                        return i18nc("@action:button Calibrate the pen display", "Calibrate");
+                                    }
+                                } else {
+                                    return i18nc("@action:button Pen display doesn't support calibration", "Calibration Not Supported");
+                                }
+                            }
+                            icon.name: "crosshairs"
+                            enabled: root.supportsCalibration && !root.calibrationWindowOpen
+                            onClicked: {
+                                const component = Qt.createComponent("Calibration.qml");
+                                if (component.status === Component.Ready) {
+                                    let screenIndex = 0;
+                                    for (let i = 0; i < Qt.application.screens.length; i++) {
+                                        if (Qt.application.screens[i].name === root.device.outputName) {
+                                            screenIndex = i;
+                                            break;
+                                        }
+                                    }
+
+                                    const window = component.createObject(root, {
+                                        device: root.device,
+                                        tabletEvents: root.tabletEvents
+                                    });
+                                    // We need to show the window first, because Qt will override screen based on position.
+                                    // Working around QTBUG-129989
+                                    window.show();
+                                    // Then override the screen, try showing it again and now it'll be on the correct screen:
+                                    window.screen = Qt.application.screens[screenIndex];
+                                    window.showFullScreen();
+                                    window.closing.connect(close => {
+                                        root.calibrationWindow = null;
+                                    });
+
+                                    root.currentCalibrationSysName = root.device.sysName;
+                                    root.calibrationWindow = window;
+                                }
+                            }
+
+                            SettingHighlighter {
+                                highlight: !root.device.calibrationMatrixIsDefault
+                            }
+                        }
+
+                        QQC2.Button {
+                            text: i18nc("@action:button", "Reset Custom Calibration")
+                            icon.name: "edit-undo-symbolic"
+                            enabled: !root.device.calibrationMatrixIsDefault
+                            visible: root.supportsCalibration
+                            display: QQC2.AbstractButton.IconOnly
+
+                            onClicked: root.device.resetCalibrationMatrix()
+
+                            QQC2.ToolTip.text: text
+                            QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                            QQC2.ToolTip.visible: hovered
+                        }
+                        Item {
+                            Layout.fillWidth: parent
+                        }
+                    }
+                }
             }
 
             ActionDialog {

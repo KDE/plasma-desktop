@@ -21,8 +21,8 @@ Item {
 
     readonly property real padding: Kirigami.Units.smallSpacing
 
-    width: outputWidth + padding * 2
-    height: outputHeight + Kirigami.Units.gridUnit + padding * 3
+    implicitWidth: outputWidth + padding * 2
+    implicitHeight: outputHeight + Kirigami.Units.gridUnit + padding * 3
 
     Rectangle {
         id: outline
