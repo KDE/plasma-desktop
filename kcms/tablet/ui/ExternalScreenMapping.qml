@@ -18,7 +18,7 @@ import org.kde.kquickcontrols
 
 Item {
     id: outputAreaView
-    
+
     required property KCM.InputDevice device
     required property int mode
     required property bool displayVisible
