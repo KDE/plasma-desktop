@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-30 00:46+0000\n"
-"PO-Revision-Date: 2026-08-02 19:01+0200\n"
+"PO-Revision-Date: 2026-08-05 19:18+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -123,14 +123,13 @@ msgstr "Tid å visa visuell bjølle"
 #: kcmaccessibilitycolorblindnesscorrection.kcfg:13
 #, kde-format
 msgid "Whether Colorblindness Correction is enabled"
-msgstr "Om korrigering for fargeblindskap"
+msgstr "Om korrigering for fargeblindskap skal brukast"
 
 #. i18n: ectx: label, entry (Invert), group (Plugins)
 #: kcmaccessibilityinvert.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Invert effect is enabled"
-msgstr "Om risting av peikaren skal brukast."
+msgstr "Om omsnuingseffekten skal brukast"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -260,10 +259,9 @@ msgstr "Bruk skjermlesar"
 
 #. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
 #: kcmaccessibilityshakecursor.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether Shake Pointer is enabled"
-msgstr "Om risting av peikaren skal brukast."
+msgstr "Om risting av peikaren skal brukast"
 
 #. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
 #: kcmaccessibilityshakecursor.kcfg:15
@@ -273,17 +271,15 @@ msgstr "Forstørring"
 
 #. i18n: ectx: label, entry (Zoom), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Zoom effect is enabled"
-msgstr "Om risting av peikaren skal brukast."
+msgstr "Om forstørringseffekten skal brukast"
 
 #. i18n: ectx: label, entry (Magnifier), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Magnifier effect is enabled"
-msgstr "Om risting av peikaren skal brukast."
+msgstr "Om forstørringseffekten skal brukast"
 
 #: ui/Bell.qml:19
 #, kde-format
@@ -496,7 +492,7 @@ msgstr "Slå på"
 #, kde-format
 msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
-msgstr ""
+msgstr "Bruk snøggtastar for å slå på/av skjerm- og vindaugsfargar"
 
 #: ui/Invert.qml:49 ui/ZoomMagnifier.qml:372
 #, kde-format
@@ -524,6 +520,9 @@ msgid ""
 "Useful if you accidentally type more than one key at a time or have "
 "difficulty pressing the key you want the first time."
 msgstr ""
+"Tasten må haldast inne så lenge for at eit tastetrykk skal registrerast. "
+"Dette er nyttig om du ved eit uhell trykkjer på meir enn éin tast eller har "
+"vanskar med å trykkja på rett tast."
 
 #: ui/KeyboardFilters.qml:41
 #, kde-format
@@ -584,6 +583,9 @@ msgid ""
 "tremors that cause you to press a key multiple times when you only intend to "
 "press once."
 msgstr ""
+"Ignorer snøgt gjentekne trykk på same tast. Dette er nyttig om du skjelv på "
+"hendene slik at du trykkjer på ein tast fleire gongar (sjølv om du berre "
+"meinte å trykkja éin gong)."
 
 #: ui/KeyboardFilters.qml:142
 #, kde-format
@@ -609,7 +611,7 @@ msgstr "Ring systembjølla ved avvising"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Zoom & Magnifier"
-msgstr ""
+msgstr "Forstørring og lupe"
 
 #: ui/main.qml:33
 #, kde-format
@@ -679,6 +681,9 @@ msgid ""
 "though they “stick in place” and no longer need to be held down when typing "
 "a keyboard shortcut."
 msgstr ""
+"Valtastar som «Ctrl», «Shift», «Alt» og «Meta»/«Super»/«Windows» vert låste "
+"i nedtrykt tilstand, slik at du ikkje treng å halda dei inne for å tasta "
+"snøggtastar."
 
 #: ui/ModifierKeys.qml:39
 #, kde-format
@@ -693,6 +698,8 @@ msgid ""
 "Pressing a modifier key twice will keep it in active state until pressed "
 "again."
 msgstr ""
+"Om du trykker på ein valtast to gongar, vil han vera verksam heilt til du "
+"trykker på han igjen."
 
 #: ui/ModifierKeys.qml:57
 #, kde-format
@@ -722,7 +729,7 @@ msgstr "Ring systembjølla når låsetastar vert slegne på/av"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
-msgstr ""
+msgstr "Låsetastane er «Caps Lock», «Num Lock» og «Scroll Lock»."
 
 #: ui/ModifierKeys.qml:108
 #, kde-format
@@ -760,6 +767,14 @@ msgid ""
 "<shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</shortcut>, and "
 "<shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
+"Bruk tasten <shortcut>5</shortcut> på tal­tastaturet for å gjera eit muse­"
+"klikk. Hald inne <shortcut>/</shortcut> for midt­klikk, <shortcut>*</"
+"shortcut> for høgre­klikk og <shortcut>Num Lock</shortcut> for venstre­klikk. "
+"Bruk tastane <shortcut>2</shortcut>, <shortcut>4</shortcut>, <shortcut>6</"
+"shortcut> og <shortcut>8</shortcut> for å flytta peikaren høvesvis ned, til "
+"venstre, til høgre og opp. Bruk tastane <shortcut>1</shortcut>, <shortcut>3</"
+"shortcut>, <shortcut>7</shortcut> og <shortcut>9</shortcut> for å flytta "
+"peikaren på skrå."
 
 #: ui/MouseNavigation.qml:39
 #, kde-format
@@ -782,7 +797,7 @@ msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
 msgstr[0] "ms"
-msgstr[1] ""
+msgstr[1] "ms"
 
 #: ui/MouseNavigation.qml:66
 #, kde-format
@@ -912,7 +927,7 @@ msgstr "Proporsjonal"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with pointer"
-msgstr ""
+msgstr "Forstørringsområdet følgjer musepeikaren"
 
 #: ui/ZoomMagnifier.qml:118
 #, kde-format
@@ -925,30 +940,34 @@ msgstr "Sentrert"
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, except near screen edges"
 msgstr ""
+"Musepeikaren vert verande i midten av skjermen, utanom når ein er nær "
+"skjermkantane"
 
 #: ui/ZoomMagnifier.qml:123
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
-msgstr "Midtstilt (strengt)"
+msgstr "Sentrert (strengt)"
 
 #: ui/ZoomMagnifier.qml:124
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, even near screen edges"
 msgstr ""
+"Musepeikaren vert verande i midten av skjermen, òg når ein er nær "
+"skjermkantane"
 
 #: ui/ZoomMagnifier.qml:128
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
-msgstr ""
+msgstr "Skubb"
 
 #: ui/ZoomMagnifier.qml:129
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer pushes zoom area at screen edges"
-msgstr ""
+msgstr "Musepeikaren skubbar forstørringsområdet når ein når områdekantane"
 
 #: ui/ZoomMagnifier.qml:133
 #, kde-format
@@ -966,7 +985,7 @@ msgstr "Forstørringsområdet følgjer ikkje musepeikaren"
 #, kde-format
 msgctxt "@option:check"
 msgid "Sharpen screen content while zoomed in"
-msgstr ""
+msgstr "Skarp opp det forstørra skjermbiletet"
 
 #: ui/ZoomMagnifier.qml:162
 #, kde-format
@@ -978,14 +997,13 @@ msgstr "Bruk fokusfølging"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
-msgstr ""
+msgstr "Slå på sporing av skrivemerke"
 
 #: ui/ZoomMagnifier.qml:190
-#, fuzzy, kde-format
-#| msgid "Magnification"
+#, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
-msgstr "Forstørring"
+msgstr "Forstørringsområde"
 
 #: ui/ZoomMagnifier.qml:217
 #, kde-format
@@ -1005,7 +1023,7 @@ msgstr[1] "%1 pikslar"
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
-msgstr ""
+msgstr "pikslar"
 
 #: ui/ZoomMagnifier.qml:242
 #, kde-format
@@ -1023,30 +1041,28 @@ msgstr "Slått av"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
-msgstr ""
+msgstr "Skalering:"
 
 #: ui/ZoomMagnifier.qml:317
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
-msgstr ""
+msgstr "Valtastar for rullerørsle:"
 
 #: ui/ZoomMagnifier.qml:355
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
-msgstr ""
+msgstr "Valtastar for rullerørsle er berre tilgjengeleg på Wayland."
 
 #: ui/ZoomMagnifier.qml:361
-#, fuzzy, kde-format
-#| msgid "Ring system bell when modifier keys are used"
+#, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
-msgstr "Ring systembjølla når valtastar vert brukte"
+msgstr "Rull mens du held inn ein valtast for å forstørra"
 
 #: ui/ZoomMagnifier.qml:382
-#, fuzzy, kde-format
-#| msgid "Use keys to control the mouse"
+#, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
-msgstr "Bruk tastaturet til å styra musepeikaren"
+msgstr "Bruk snøggtastar for å styra forstørringa"
