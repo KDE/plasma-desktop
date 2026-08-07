@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-30 00:46+0000\n"
+"POT-Creation-Date: 2026-08-07 00:48+0000\n"
 "PO-Revision-Date: 2026-05-12 02:55+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -19,57 +19,57 @@ msgstr ""
 "X-Generator: Lokalize 26.07.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: kcmaccess.cpp:123 kcmaccess.cpp:151
+#: kcmaccess.cpp:119 kcmaccess.cpp:147
 #, kde-format
 msgid "KWin"
 msgstr "KWin"
 
-#: kcmaccess.cpp:126
+#: kcmaccess.cpp:122
 #, kde-format
 msgid "Toggle Invert Effect"
 msgstr "切換反轉效果"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:128
 #, kde-format
 msgid "Toggle Invert Effect on Window"
 msgstr "在視窗上切換反轉效果"
 
-#: kcmaccess.cpp:174
+#: kcmaccess.cpp:170
 #, kde-format
 msgid "Move Left"
 msgstr "左移"
 
-#: kcmaccess.cpp:181
+#: kcmaccess.cpp:177
 #, kde-format
 msgid "Move Right"
 msgstr "右移"
 
-#: kcmaccess.cpp:188
+#: kcmaccess.cpp:184
 #, kde-format
 msgid "Move Up"
 msgstr "上移"
 
-#: kcmaccess.cpp:195
+#: kcmaccess.cpp:191
 #, kde-format
 msgid "Move Down"
 msgstr "下移"
 
-#: kcmaccess.cpp:202
+#: kcmaccess.cpp:198
 #, kde-format
 msgid "Move Mouse to Focus"
 msgstr "將滑鼠移至焦點"
 
-#: kcmaccess.cpp:209
+#: kcmaccess.cpp:205
 #, kde-format
 msgid "Move Mouse to Center"
 msgstr "將滑鼠移至中央"
 
-#: kcmaccess.cpp:252
+#: kcmaccess.cpp:248
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "無法為 Orca: \"%1\" 設定 gsettings。"
 
-#: kcmaccess.cpp:259
+#: kcmaccess.cpp:255
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "錯誤：無法執行「orca --setup」"
@@ -487,7 +487,7 @@ msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr "使用快捷鍵來切換反轉螢幕與視窗色彩"
 
-#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:372
+#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:355
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
@@ -968,81 +968,77 @@ msgstr "放大時將螢幕內容銳利化"
 #: ui/ZoomMagnifier.qml:162
 #, kde-format
 msgctxt "@option:check"
-msgid "Enable focus tracking"
-msgstr "開啟焦點追蹤"
-
-#: ui/ZoomMagnifier.qml:174
-#, kde-format
-msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "開啟文字游標追蹤"
 
-#: ui/ZoomMagnifier.qml:190
+#: ui/ZoomMagnifier.qml:178
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "放大區域"
 
-#: ui/ZoomMagnifier.qml:217
+#: ui/ZoomMagnifier.qml:205
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "寬度："
 
-#: ui/ZoomMagnifier.qml:228 ui/ZoomMagnifier.qml:253
+#: ui/ZoomMagnifier.qml:216 ui/ZoomMagnifier.qml:241
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
 msgid_plural "%1 px"
 msgstr[0] "%1 px"
 
-#: ui/ZoomMagnifier.qml:229 ui/ZoomMagnifier.qml:254
+#: ui/ZoomMagnifier.qml:217 ui/ZoomMagnifier.qml:242
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "px"
 
-#: ui/ZoomMagnifier.qml:242
+#: ui/ZoomMagnifier.qml:230
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "高度："
 
-#: ui/ZoomMagnifier.qml:271
+#: ui/ZoomMagnifier.qml:259
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "已停用"
 
-#: ui/ZoomMagnifier.qml:284
+#: ui/ZoomMagnifier.qml:272
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "縮放係數："
 
-#: ui/ZoomMagnifier.qml:317
+#: ui/ZoomMagnifier.qml:305
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr "捲動手勢修飾鍵："
 
-#: ui/ZoomMagnifier.qml:355
-#, kde-format
-msgctxt "@info:tooltip, indicates feature unavailable on X11"
-msgid "Zoom scroll gestures are only available on Wayland."
-msgstr "縮放捲動手勢只能在 Wayland 上使用。"
-
-#: ui/ZoomMagnifier.qml:361
+#: ui/ZoomMagnifier.qml:344
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "按住修飾鍵時進行捲動來縮放"
 
-#: ui/ZoomMagnifier.qml:382
+#: ui/ZoomMagnifier.qml:365
 #, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "用快捷鍵控制縮放"
+
+#~ msgctxt "@option:check"
+#~ msgid "Enable focus tracking"
+#~ msgstr "開啟焦點追蹤"
+
+#~ msgctxt "@info:tooltip, indicates feature unavailable on X11"
+#~ msgid "Zoom scroll gestures are only available on Wayland."
+#~ msgstr "縮放捲動手勢只能在 Wayland 上使用。"
 
 #~ msgid "Use Gestures"
 #~ msgstr "使用手勢"

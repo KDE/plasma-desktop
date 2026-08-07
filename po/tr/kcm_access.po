@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-30 00:46+0000\n"
+"POT-Creation-Date: 2026-08-07 00:48+0000\n"
 "PO-Revision-Date: 2026-05-01 15:11+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -23,57 +23,57 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 25.12.3\n"
 
-#: kcmaccess.cpp:123 kcmaccess.cpp:151
+#: kcmaccess.cpp:119 kcmaccess.cpp:147
 #, kde-format
 msgid "KWin"
 msgstr "KWin"
 
-#: kcmaccess.cpp:126
+#: kcmaccess.cpp:122
 #, kde-format
 msgid "Toggle Invert Effect"
 msgstr "Tersine Çevirme Efektini Aç/Kapat"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:128
 #, kde-format
 msgid "Toggle Invert Effect on Window"
 msgstr "Pencerede Tersine Çevirme Efektini Aç/Kapat"
 
-#: kcmaccess.cpp:174
+#: kcmaccess.cpp:170
 #, kde-format
 msgid "Move Left"
 msgstr "Sola Taşı"
 
-#: kcmaccess.cpp:181
+#: kcmaccess.cpp:177
 #, kde-format
 msgid "Move Right"
 msgstr "Sağa Taşı"
 
-#: kcmaccess.cpp:188
+#: kcmaccess.cpp:184
 #, kde-format
 msgid "Move Up"
 msgstr "Yukarı Taşı"
 
-#: kcmaccess.cpp:195
+#: kcmaccess.cpp:191
 #, kde-format
 msgid "Move Down"
 msgstr "Aşağı Taşı"
 
-#: kcmaccess.cpp:202
+#: kcmaccess.cpp:198
 #, kde-format
 msgid "Move Mouse to Focus"
 msgstr "Fareyi Odağa Taşı"
 
-#: kcmaccess.cpp:209
+#: kcmaccess.cpp:205
 #, kde-format
 msgid "Move Mouse to Center"
 msgstr "Fareyi Merkeze Taşı"
 
-#: kcmaccess.cpp:252
+#: kcmaccess.cpp:248
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Orca için gsettings ayarlanamadı: “%1” başarısız oldu"
 
-#: kcmaccess.cpp:259
+#: kcmaccess.cpp:255
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Hata: “orca --setup” başlatılamadı"
@@ -495,7 +495,7 @@ msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr "Görüntü ve pencere renklerini tersine çevirmek için kısayollar kullan"
 
-#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:372
+#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:355
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
@@ -989,28 +989,22 @@ msgstr "Yakınlaştırırken ekran içeriğini keskinleştir"
 #: ui/ZoomMagnifier.qml:162
 #, kde-format
 msgctxt "@option:check"
-msgid "Enable focus tracking"
-msgstr "Odak izlemeyi etkinleştir"
-
-#: ui/ZoomMagnifier.qml:174
-#, kde-format
-msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "Metin imlecini izlemeyi etkinleştir"
 
-#: ui/ZoomMagnifier.qml:190
+#: ui/ZoomMagnifier.qml:178
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "Bölgeyi büyüt"
 
-#: ui/ZoomMagnifier.qml:217
+#: ui/ZoomMagnifier.qml:205
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "Genişlik:"
 
-#: ui/ZoomMagnifier.qml:228 ui/ZoomMagnifier.qml:253
+#: ui/ZoomMagnifier.qml:216 ui/ZoomMagnifier.qml:241
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1018,54 +1012,56 @@ msgid_plural "%1 px"
 msgstr[0] "%1 pks"
 msgstr[1] "%1 pks"
 
-#: ui/ZoomMagnifier.qml:229 ui/ZoomMagnifier.qml:254
+#: ui/ZoomMagnifier.qml:217 ui/ZoomMagnifier.qml:242
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "pks"
 
-#: ui/ZoomMagnifier.qml:242
+#: ui/ZoomMagnifier.qml:230
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "Yükseklik:"
 
-#: ui/ZoomMagnifier.qml:271
+#: ui/ZoomMagnifier.qml:259
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "Devre dışı"
 
-#: ui/ZoomMagnifier.qml:284
+#: ui/ZoomMagnifier.qml:272
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "Yakınlaştırma çarpanı:"
 
-#: ui/ZoomMagnifier.qml:317
+#: ui/ZoomMagnifier.qml:305
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr "Sarma hareketini niteleyici düğmeler:"
 
-#: ui/ZoomMagnifier.qml:355
-#, kde-format
-msgctxt "@info:tooltip, indicates feature unavailable on X11"
-msgid "Zoom scroll gestures are only available on Wayland."
-msgstr ""
-"Yakınlaştırma sarma hareketleri, yalnızca Wayland üzerinde kullanılabilir."
-
-#: ui/ZoomMagnifier.qml:361
+#: ui/ZoomMagnifier.qml:344
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "Yakınlaştırmak için niteleyici düğmelere basıldığında sar"
 
-#: ui/ZoomMagnifier.qml:382
+#: ui/ZoomMagnifier.qml:365
 #, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "Yakınlaştırmayı denetlemek için kısayollar kullan"
+
+#~ msgctxt "@option:check"
+#~ msgid "Enable focus tracking"
+#~ msgstr "Odak izlemeyi etkinleştir"
+
+#~ msgctxt "@info:tooltip, indicates feature unavailable on X11"
+#~ msgid "Zoom scroll gestures are only available on Wayland."
+#~ msgstr ""
+#~ "Yakınlaştırma sarma hareketleri, yalnızca Wayland üzerinde kullanılabilir."
 
 #~ msgid "Use Gestures"
 #~ msgstr "Hareketleri Kullan"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-30 00:46+0000\n"
+"POT-Creation-Date: 2026-08-07 00:48+0000\n"
 "PO-Revision-Date: 2026-05-06 10:19+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -23,57 +23,57 @@ msgstr ""
 "\n"
 "\n"
 
-#: kcmaccess.cpp:123 kcmaccess.cpp:151
+#: kcmaccess.cpp:119 kcmaccess.cpp:147
 #, kde-format
 msgid "KWin"
 msgstr "KWin"
 
-#: kcmaccess.cpp:126
+#: kcmaccess.cpp:122
 #, kde-format
 msgid "Toggle Invert Effect"
 msgstr "Víxla umsnúningsáhrifum"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:128
 #, kde-format
 msgid "Toggle Invert Effect on Window"
 msgstr "Víxla umsnúningsáhrifum á glugga"
 
-#: kcmaccess.cpp:174
+#: kcmaccess.cpp:170
 #, kde-format
 msgid "Move Left"
 msgstr "Færa til vinstri"
 
-#: kcmaccess.cpp:181
+#: kcmaccess.cpp:177
 #, kde-format
 msgid "Move Right"
 msgstr "Færa til hægri"
 
-#: kcmaccess.cpp:188
+#: kcmaccess.cpp:184
 #, kde-format
 msgid "Move Up"
 msgstr "Færa upp"
 
-#: kcmaccess.cpp:195
+#: kcmaccess.cpp:191
 #, kde-format
 msgid "Move Down"
 msgstr "Færa niður"
 
-#: kcmaccess.cpp:202
+#: kcmaccess.cpp:198
 #, kde-format
 msgid "Move Mouse to Focus"
 msgstr "Færa mús til að fá fókus"
 
-#: kcmaccess.cpp:209
+#: kcmaccess.cpp:205
 #, kde-format
 msgid "Move Mouse to Center"
 msgstr "Færa mús á miðju"
 
-#: kcmaccess.cpp:252
+#: kcmaccess.cpp:248
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Gat ekki stillt gsettings fyrir Orca: \"%1\" mistókst."
 
-#: kcmaccess.cpp:259
+#: kcmaccess.cpp:255
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Villa: Tókst ekki að keyra \"orca --setup\""
@@ -495,7 +495,7 @@ msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr "Nota flýtilykla til að víxla umsnúningi á skjá- og gluggalitum"
 
-#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:372
+#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:355
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
@@ -986,28 +986,22 @@ msgstr "Skerpa efni á skjánum við aðdrátt"
 #: ui/ZoomMagnifier.qml:162
 #, kde-format
 msgctxt "@option:check"
-msgid "Enable focus tracking"
-msgstr "Kveikja á fókusrakningu"
-
-#: ui/ZoomMagnifier.qml:174
-#, kde-format
-msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "Kveikja á rakningu textabendils"
 
-#: ui/ZoomMagnifier.qml:190
+#: ui/ZoomMagnifier.qml:178
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "Stækka svæði"
 
-#: ui/ZoomMagnifier.qml:217
+#: ui/ZoomMagnifier.qml:205
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "Breidd:"
 
-#: ui/ZoomMagnifier.qml:228 ui/ZoomMagnifier.qml:253
+#: ui/ZoomMagnifier.qml:216 ui/ZoomMagnifier.qml:241
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1015,53 +1009,55 @@ msgid_plural "%1 px"
 msgstr[0] "%1 px"
 msgstr[1] "%1 px"
 
-#: ui/ZoomMagnifier.qml:229 ui/ZoomMagnifier.qml:254
+#: ui/ZoomMagnifier.qml:217 ui/ZoomMagnifier.qml:242
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "px"
 
-#: ui/ZoomMagnifier.qml:242
+#: ui/ZoomMagnifier.qml:230
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "Hæð:"
 
-#: ui/ZoomMagnifier.qml:271
+#: ui/ZoomMagnifier.qml:259
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "Óvirkt"
 
-#: ui/ZoomMagnifier.qml:284
+#: ui/ZoomMagnifier.qml:272
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "Aðdráttarstuðull:"
 
-#: ui/ZoomMagnifier.qml:317
+#: ui/ZoomMagnifier.qml:305
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr "Breytilyklar fyrir skrunhreyfiskipun:"
 
-#: ui/ZoomMagnifier.qml:355
-#, kde-format
-msgctxt "@info:tooltip, indicates feature unavailable on X11"
-msgid "Zoom scroll gestures are only available on Wayland."
-msgstr "Skrunhreyfiskipanir fyrir aðdrátt eru aðeins í boði í Wayland."
-
-#: ui/ZoomMagnifier.qml:361
+#: ui/ZoomMagnifier.qml:344
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "Skruna á meðan ýtt er á breytilykla til að breyta aðdrætti"
 
-#: ui/ZoomMagnifier.qml:382
+#: ui/ZoomMagnifier.qml:365
 #, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "Nota flýtilykla til að stjórna aðdrætti"
+
+#~ msgctxt "@option:check"
+#~ msgid "Enable focus tracking"
+#~ msgstr "Kveikja á fókusrakningu"
+
+#~ msgctxt "@info:tooltip, indicates feature unavailable on X11"
+#~ msgid "Zoom scroll gestures are only available on Wayland."
+#~ msgstr "Skrunhreyfiskipanir fyrir aðdrátt eru aðeins í boði í Wayland."
 
 #~ msgid "Use Gestures"
 #~ msgstr "Nota hreyfiskipanir"

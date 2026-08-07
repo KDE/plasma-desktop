@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-30 00:46+0000\n"
+"POT-Creation-Date: 2026-08-07 00:48+0000\n"
 "PO-Revision-Date: 2026-07-16 15:35+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -20,57 +20,57 @@ msgstr ""
 "X-Generator: Lokalize 26.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: kcmaccess.cpp:123 kcmaccess.cpp:151
+#: kcmaccess.cpp:119 kcmaccess.cpp:147
 #, kde-format
 msgid "KWin"
 msgstr "Kwin"
 
-#: kcmaccess.cpp:126
+#: kcmaccess.cpp:122
 #, kde-format
 msgid "Toggle Invert Effect"
 msgstr "Sätt på eller stäng av inverteringseffekt"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:128
 #, kde-format
 msgid "Toggle Invert Effect on Window"
 msgstr "Sätt på eller stäng av inverteringseffekt för fönster"
 
-#: kcmaccess.cpp:174
+#: kcmaccess.cpp:170
 #, kde-format
 msgid "Move Left"
 msgstr "Flytta åt vänster"
 
-#: kcmaccess.cpp:181
+#: kcmaccess.cpp:177
 #, kde-format
 msgid "Move Right"
 msgstr "Flytta åt höger"
 
-#: kcmaccess.cpp:188
+#: kcmaccess.cpp:184
 #, kde-format
 msgid "Move Up"
 msgstr "Flytta upp"
 
-#: kcmaccess.cpp:195
+#: kcmaccess.cpp:191
 #, kde-format
 msgid "Move Down"
 msgstr "Flytta ner"
 
-#: kcmaccess.cpp:202
+#: kcmaccess.cpp:198
 #, kde-format
 msgid "Move Mouse to Focus"
 msgstr "Flytta musen till fokus"
 
-#: kcmaccess.cpp:209
+#: kcmaccess.cpp:205
 #, kde-format
 msgid "Move Mouse to Center"
 msgstr "Flytta musen till mitten"
 
-#: kcmaccess.cpp:252
+#: kcmaccess.cpp:248
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Kunde inte ställa in g-inställningar för Orca: \"%1\" misslyckades"
 
-#: kcmaccess.cpp:259
+#: kcmaccess.cpp:255
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Fel: Kunde inte starta \"orca --setup\""
@@ -492,7 +492,7 @@ msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr "Använd genvägar för att ändra invertering av skärmen och fönsterfärger"
 
-#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:372
+#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:355
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
@@ -983,28 +983,22 @@ msgstr "Gör skärminnehåll skarpare vid inzoomning"
 #: ui/ZoomMagnifier.qml:162
 #, kde-format
 msgctxt "@option:check"
-msgid "Enable focus tracking"
-msgstr "Aktivera fokusföljning"
-
-#: ui/ZoomMagnifier.qml:174
-#, kde-format
-msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "Aktivera textmarkörföljning"
 
-#: ui/ZoomMagnifier.qml:190
+#: ui/ZoomMagnifier.qml:178
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "Förstora område"
 
-#: ui/ZoomMagnifier.qml:217
+#: ui/ZoomMagnifier.qml:205
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "Bredd:"
 
-#: ui/ZoomMagnifier.qml:228 ui/ZoomMagnifier.qml:253
+#: ui/ZoomMagnifier.qml:216 ui/ZoomMagnifier.qml:241
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1012,53 +1006,55 @@ msgid_plural "%1 px"
 msgstr[0] "%1 bildpunkt"
 msgstr[1] "%1 bildpunkter"
 
-#: ui/ZoomMagnifier.qml:229 ui/ZoomMagnifier.qml:254
+#: ui/ZoomMagnifier.qml:217 ui/ZoomMagnifier.qml:242
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "bildpunkter"
 
-#: ui/ZoomMagnifier.qml:242
+#: ui/ZoomMagnifier.qml:230
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "Höjd:"
 
-#: ui/ZoomMagnifier.qml:271
+#: ui/ZoomMagnifier.qml:259
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "Inaktiverad"
 
-#: ui/ZoomMagnifier.qml:284
+#: ui/ZoomMagnifier.qml:272
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "Zoomfaktor:"
 
-#: ui/ZoomMagnifier.qml:317
+#: ui/ZoomMagnifier.qml:305
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr "Väljartangenter för panoreringsgest:"
 
-#: ui/ZoomMagnifier.qml:355
-#, kde-format
-msgctxt "@info:tooltip, indicates feature unavailable on X11"
-msgid "Zoom scroll gestures are only available on Wayland."
-msgstr "Zoomrullningsgester är bara tillgängliga på Wayland."
-
-#: ui/ZoomMagnifier.qml:361
+#: ui/ZoomMagnifier.qml:344
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "Rulla medan väljartangenterna är nertryckta för att zooma"
 
-#: ui/ZoomMagnifier.qml:382
+#: ui/ZoomMagnifier.qml:365
 #, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "Använd genvägar för att kontrollera zoomning"
+
+#~ msgctxt "@option:check"
+#~ msgid "Enable focus tracking"
+#~ msgstr "Aktivera fokusföljning"
+
+#~ msgctxt "@info:tooltip, indicates feature unavailable on X11"
+#~ msgid "Zoom scroll gestures are only available on Wayland."
+#~ msgstr "Zoomrullningsgester är bara tillgängliga på Wayland."
 
 #~ msgid "Use Gestures"
 #~ msgstr "Använd gester"
