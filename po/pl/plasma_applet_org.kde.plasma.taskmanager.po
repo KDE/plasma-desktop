@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-04 00:46+0000\n"
-"PO-Revision-Date: 2026-07-18 16:46+0200\n"
+"PO-Revision-Date: 2026-08-08 12:10+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -69,31 +69,27 @@ msgstr "Zapomnij o ostatnio otwartych"
 #: backend.cpp:581
 #, kde-format
 msgid "Activate Previous Task Manager Entry"
-msgstr ""
+msgstr "Przełącz na poprzedni wpis na pasku zadań"
 
 #: backend.cpp:588
-#, fuzzy, kde-format
-#| msgctxt "action:inmenu"
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgid "Activate Next Task Manager Entry"
-msgstr "&Przypnij do paska zadań"
+msgstr "Przełącz na następny wpis na pasku zadań"
 
 #: backend.cpp:595
 #, kde-format
 msgid "Move Active Task Manager Entry Backward"
-msgstr ""
+msgstr "Przesuń bieżący wpis paska zadań w tył"
 
 #: backend.cpp:603
 #, kde-format
 msgid "Move Active Task Manager Entry Forward"
-msgstr ""
+msgstr "Przesuń bieżący wpis paska zadań w przód"
 
 #: backend.cpp:612
-#, fuzzy, kde-format
-#| msgctxt "action:inmenu"
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgid "Activate Task Manager Entry %1"
-msgstr "&Przypnij do paska zadań"
+msgstr "Przełącz na wpis %1 na pasku zadań"
 
 #: qml/AudioStream.qml:94
 #, kde-format
