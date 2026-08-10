@@ -53,7 +53,7 @@ PlasmaCore.ToolTipArea {
 
     readonly property int pid: model.AppPid
     readonly property string appName: model.AppName
-    readonly property string appId: model.AppId.replace(/\.desktop/, '')
+    readonly property string appId: model.AppId
     readonly property bool isIcon: tasksRoot.iconsOnly || model.IsLauncher
     property bool toolTipOpen: false
     property bool inPopup: false
