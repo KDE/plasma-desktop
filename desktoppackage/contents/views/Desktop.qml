@@ -143,8 +143,7 @@ Item {
             onPaletteChanged: {
                 if (!Qt.colorEqual(root.containment.wallpaper.accentColor, "transparent")) {
                     desktop.accentColor = root.containment.wallpaper.accentColor;
-                }
-                if (this.palette.length === 0) {
+                } else if (this.palette.length === 0) {
                     desktop.accentColor = "transparent";
                 } else {
                     desktop.accentColor = this.dominant;
