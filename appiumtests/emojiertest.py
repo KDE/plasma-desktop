@@ -67,6 +67,13 @@ class EmojierTest(unittest.TestCase):
         self.driver.find_element(AppiumBy.NAME, "Recent").click()
         self.driver.find_element(AppiumBy.NAME, "grinning face")
 
+    def test_3_select_variant(self) -> None:
+        self.driver.find_element(AppiumBy.NAME, "All").click()
+        self.driver.find_element(AppiumBy.NAME, "Search").send_keys("handshake")
+        self.driver.find_element(AppiumBy.NAME, "Select Variant of \"handshake\"").click()
+        self.driver.find_element(AppiumBy.NAME, "handshake: light skin tone, medium skin tone").click()
+        time.sleep(1)
+        self.assertEqual(self.driver.get_clipboard_text(), "🫱🏻‍🫲🏽")
 
 if __name__ == '__main__':
     unittest.main()

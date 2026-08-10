@@ -24,6 +24,21 @@ CLDR_URL = f"https://unicode.org/Public/cldr/{CLDR_VERSION}/{CLDR_FILE}"
 CLDR_ANNOTATIONS_DIR = "common/annotations"
 CLDR_ANNOTATIONS_DERIVED_DIR = "common/annotationsDerived"
 
+SKIN_TONES = {
+    b"light skin tone",
+    b"medium-light skin tone",
+    b"medium skin tone",
+    b"medium-dark skin tone",
+    b"dark skin tone",
+}
+
+GENDER_SYMBOLS = {
+    "\u200D♂️",
+    "👨",
+    "\u200D♀️",
+    "👩",
+}
+
 class EmojiAnnotation(object):
     def __init__(self):
         self.description = ""
@@ -34,6 +49,42 @@ class EmojiParser(object):
         self.variantMapping = dict()
         self.categoryNames = []
         self.emojis = collections.OrderedDict()
+
+        self.descriptionEmojiMap = {}
+        self.skinToneMap = collections.defaultdict(list)
+        self.genderMap = collections.defaultdict(lambda: [None, None, None])
+        self.genderAndSkinToneVariants = set()
+
+    def addToGenderMap(self, emoji):
+        isMale = "👨" in emoji or "\u200D♂️" in emoji
+        isFemale = "👩" in emoji or "\u200D♀️" in emoji
+
+        if isMale and isFemale:
+            genderIndex = 0
+        elif isMale:
+            genderIndex = 1
+        else:
+            genderIndex = 2
+
+        neutralEmoji = emoji.replace("\u200D♂️", "")
+        neutralEmoji = neutralEmoji.replace("👨", "🧑")
+        neutralEmoji = neutralEmoji.replace("\u200D♀️", "")
+        neutralEmoji = neutralEmoji.replace("👩", "🧑")
+
+        if neutralEmoji not in self.emojis:
+            return
+
+        self.genderMap[neutralEmoji][genderIndex] = emoji
+        self.genderAndSkinToneVariants.add(emoji)
+
+    def getSkinToneVariantsDict(self, emoji):
+        if emoji is None:
+            return {}
+
+        skinToneVariants = {emoji: self.emojis[emoji]}
+        for variant in self.skinToneMap[emoji]:
+            skinToneVariants[variant] = self.emojis[variant]
+        return skinToneVariants
 
     def parseEmojiTest(self, emojiTestData):
         descriptionMapping = dict()
@@ -69,12 +120,56 @@ class EmojiParser(object):
                 if status == b"fully-qualified":
                     self.emojis[emoji] = currentGroup
                     descriptionMapping[description] = emoji
+
+                    # description format: "version emoji name: modifiers"
+                    versionNameDelimiter = description.index(b" ")
+                    descriptionWithoutVersion = description[versionNameDelimiter+1:]
+                    self.descriptionEmojiMap[descriptionWithoutVersion] = emoji
                 else:
                     fullyQualified = descriptionMapping.get(description, None);
                     if fullyQualified:
                         self.variantMapping[emoji] = fullyQualified;
             except e:
                 pass
+
+        for description, emoji in self.descriptionEmojiMap.items():
+            # description format: "emoji name: modifier 1, modifier 2, ..., modifier n"
+            nameAndModifiers = description.split(b": ")
+            if len(nameAndModifiers) == 2:
+                name, modifiers = nameAndModifiers
+
+                if any(skinTone in modifiers for skinTone in SKIN_TONES):
+                    modifiers = modifiers.split(b", ")
+                    modifiersWithoutSkinTone = b", ".join(mod for mod in modifiers if mod not in SKIN_TONES and mod != b"person")
+                    descriptionWithoutSkinTone = name + (b": " + modifiersWithoutSkinTone if modifiersWithoutSkinTone else b"")
+
+                    try:
+                        neutralEmoji = self.descriptionEmojiMap[descriptionWithoutSkinTone]
+                        self.skinToneMap[neutralEmoji].append(emoji)
+                        self.genderAndSkinToneVariants.add(emoji)
+                    except:
+                        pass
+                elif any(gender in emoji for gender in GENDER_SYMBOLS):
+                    self.addToGenderMap(emoji)
+            elif any(gender in emoji for gender in GENDER_SYMBOLS):
+                self.addToGenderMap(emoji)
+
+        self.genderMap["🧑‍🤝‍🧑"] = ["👫", "👬", "👭"]
+        self.genderAndSkinToneVariants.update(["👫", "👬", "👭"])
+
+        sortedEmojis = {}
+        for emoji, group in self.emojis.items():
+            if emoji in self.genderAndSkinToneVariants:
+                pass
+            elif emoji in self.genderMap:
+                for genderEmoji in [emoji] + self.genderMap[emoji]:
+                    sortedEmojis.update(self.getSkinToneVariantsDict(genderEmoji))
+            elif emoji in self.skinToneMap:
+                sortedEmojis.update(self.getSkinToneVariantsDict(emoji))
+            else:
+                sortedEmojis[emoji] = group
+
+        self.emojis = sortedEmojis
 
     def parseCldr(self, cldrList):
         annotations = dict()
