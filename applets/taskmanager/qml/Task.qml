@@ -311,9 +311,14 @@ PlasmaCore.ToolTipArea {
             return;
         }
 
+        var streams = [];
+
         // Check appid first for app using portal
         // https://docs.pipewire.org/page_portal.html
-        var streams = pa.streamsForAppId(task.appId);
+        if (task.appId) {
+            streams = pa.streamsForAppId(task.appId);
+        }
+
         if (!streams.length) {
             streams = pa.streamsForPid(model.AppPid);
             if (streams.length) {
