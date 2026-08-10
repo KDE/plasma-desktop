@@ -79,89 +79,95 @@ KCM.ScrollViewKCM {
             }
         }
 
+        QQC2.Label {
+            text: i18nc("@info:usagetip", "File Search helps you quickly locate your files. You can choose which folders and what types of file data are indexed.")
+            textFormat: Text.PlainText
+            Layout.fillWidth: true
+            Layout.maximumWidth: Kirigami.Units.gridUnit * 24
+            Layout.alignment: Qt.AlignHCenter
+            Layout.topMargin: Kirigami.Units.largeSpacing * 2
+            Layout.bottomMargin: Kirigami.Units.largeSpacing
+            horizontalAlignment: Text.AlignHCenter
+            wrapMode: Text.WordWrap
+        }
         // By disabling header margins to make the header banners look correct,
         // we have to re-add some margins for the content area so it doesn't
         // touch the window edges and look ugly. To make it apply to everything,
         // we wrap it all in another ColumnLayout with its own margins.
-        ColumnLayout {
-            spacing: Kirigami.Units.smallSpacing
-            Layout.margins: Kirigami.Units.gridUnit
+        Kirigami.Form {
+            Layout.bottomMargin: Kirigami.Units.largeSpacing * 2
+            Layout.fillWidth: true
+            Kirigami.FormGroup {
+                Kirigami.FormEntry {
+                    title: i18nc("@title:group", "Data to index:")
+                    contentItem: QQC2.RadioButton {
+                        id: fileSearchDisabled
 
-            QQC2.Label {
-                text: i18nc("@info:usagetip", "File Search helps you quickly locate your files. You can choose which folders and what types of file data are indexed.")
-                textFormat: Text.PlainText
-                Layout.fillWidth: true
-                Layout.maximumWidth: Kirigami.Units.gridUnit * 24
-                Layout.alignment: Qt.AlignHCenter
-                Layout.bottomMargin: Kirigami.Units.largeSpacing
-                horizontalAlignment: Text.AlignHCenter
-                wrapMode: Text.WordWrap
-            }
+                        text: i18nc("@option:radio Data to index", "Nothing (disable indexing entirely)")
+                        checked: !kcm.balooSettings.indexingEnabled
+                        onToggled: kcm.balooSettings.indexingEnabled = false
 
-            Kirigami.FormLayout {
-                QQC2.ButtonGroup {
-                    id: indexingStyleGroup
-                }
-                QQC2.RadioButton {
-                    id: fileSearchDisabled
+                        QQC2.ButtonGroup.group: indexingStyleGroup
 
-                    Kirigami.FormData.label: i18nc("@title:group", "Data to index:")
-                    text: i18nc("@option:radio Data to index", "Nothing (disable indexing entirely)")
-                    checked: !kcm.balooSettings.indexingEnabled
-                    onToggled: kcm.balooSettings.indexingEnabled = false
-
-                    QQC2.ButtonGroup.group: indexingStyleGroup
-
-                    KCM.SettingStateBinding {
-                        configObject: kcm.balooSettings
-                        settingName: "indexingEnabled"
-                    }
-                }
-                QQC2.RadioButton {
-                    text: i18nc("@option:radio Data to index", "File names only")
-                    checked: kcm.balooSettings.indexingEnabled && kcm.balooSettings.onlyBasicIndexing
-                    onToggled: {
-                        kcm.balooSettings.indexingEnabled = true;
-                        kcm.balooSettings.onlyBasicIndexing = true;
-                    }
-
-                    QQC2.ButtonGroup.group: indexingStyleGroup
-
-                    KCM.SettingStateBinding {
-                        configObject: kcm.balooSettings
-                        settingName: "onlyBasicIndexing"
-                    }
-                }
-                QQC2.RadioButton {
-                    text: i18nc("@option:radio Data to index", "File names and contents")
-                    checked: kcm.balooSettings.indexingEnabled && !kcm.balooSettings.onlyBasicIndexing
-                    onToggled: {
-                        kcm.balooSettings.indexingEnabled = true;
-                        kcm.balooSettings.onlyBasicIndexing = false;
-                    }
-
-                    QQC2.ButtonGroup.group: indexingStyleGroup
-
-                    KCM.SettingStateBinding {
-                        configObject: kcm.balooSettings
-                        settingName: "onlyBasicIndexing"
+                        KCM.SettingStateBinding {
+                            configObject: kcm.balooSettings
+                            settingName: "indexingEnabled"
+                        }
+                        QQC2.ButtonGroup {
+                            id: indexingStyleGroup
+                        }
                     }
                 }
 
-                Item {
-                    implicitHeight: Kirigami.Units.smallSpacing
+                Kirigami.FormEntry {
+                    contentItem: QQC2.RadioButton {
+                        text: i18nc("@option:radio Data to index", "File names only")
+                        checked: kcm.balooSettings.indexingEnabled && kcm.balooSettings.onlyBasicIndexing
+                        onToggled: {
+                            kcm.balooSettings.indexingEnabled = true;
+                            kcm.balooSettings.onlyBasicIndexing = true;
+                        }
+
+                        QQC2.ButtonGroup.group: indexingStyleGroup
+
+                        KCM.SettingStateBinding {
+                            configObject: kcm.balooSettings
+                            settingName: "onlyBasicIndexing"
+                        }
+                    }
                 }
 
-                QQC2.CheckBox {
-                    id: indexHiddenFolders
-                    text: i18nc("@option:check", "Also index hidden files and folders")
-                    checked: kcm.balooSettings.indexHiddenFolders
-                    onCheckStateChanged: kcm.balooSettings.indexHiddenFolders = checked
+                Kirigami.FormEntry {
+                    contentItem: QQC2.RadioButton {
+                        text: i18nc("@option:radio Data to index", "File names and contents")
+                        checked: kcm.balooSettings.indexingEnabled && !kcm.balooSettings.onlyBasicIndexing
+                        onToggled: {
+                            kcm.balooSettings.indexingEnabled = true;
+                            kcm.balooSettings.onlyBasicIndexing = false;
+                        }
 
-                    KCM.SettingStateBinding {
-                        configObject: kcm.balooSettings
-                        settingName: "indexHiddenFolders"
-                        extraEnabledConditions: !fileSearchDisabled.checked
+                        QQC2.ButtonGroup.group: indexingStyleGroup
+
+                        KCM.SettingStateBinding {
+                            configObject: kcm.balooSettings
+                            settingName: "onlyBasicIndexing"
+                        }
+                    }
+                }
+
+
+                Kirigami.FormEntry {
+                    contentItem: QQC2.CheckBox {
+                        id: indexHiddenFolders
+                        text: i18nc("@option:check", "Also index hidden files and folders")
+                        checked: kcm.balooSettings.indexHiddenFolders
+                        onCheckStateChanged: kcm.balooSettings.indexHiddenFolders = checked
+
+                        KCM.SettingStateBinding {
+                            configObject: kcm.balooSettings
+                            settingName: "indexHiddenFolders"
+                            extraEnabledConditions: !fileSearchDisabled.checked
+                        }
                     }
                 }
             }
