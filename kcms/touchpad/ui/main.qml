@@ -306,12 +306,31 @@ KCMUtils.SimpleKCM {
             // Scroll Speed aka scroll Factor
             Kirigami.FormEntry {
                 contentItem: GridLayout {
+                    id: scrollProfile
                     Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label:slider", "Scrolling speed:")
                     Kirigami.FormData.buddyFor: scrollFactor
                     Layout.fillWidth: true
 
                     visible: root.device?.supportsScrollFactor ?? false
-                    columns: 3
+                    columns: 4
+
+                    readonly property list<real> values: [
+                        0.1,
+                        0.3,
+                        0.5,
+                        0.75,
+                        1, // default
+                        1.5,
+                        2,
+                        3,
+                        4,
+                        5,
+                        7,
+                        9,
+                        12,
+                        15,
+                        20
+                    ]
 
                     QQC2.Slider {
                         id: scrollFactor
@@ -324,38 +343,51 @@ KCMUtils.SimpleKCM {
                         Kirigami.StyleHints.tickMarkStepSize: 1
                         enabled: root.device
 
-                        readonly property list<real> values: [
-                            0.1,
-                            0.3,
-                            0.5,
-                            0.75,
-                            1, // default
-                            1.5,
-                            2,
-                            3,
-                            4,
-                            5,
-                            7,
-                            9,
-                            12,
-                            15,
-                            20
-                        ]
-
                         function indexOf(val) {
-                            const index = values.indexOf(val)
-                            return index === -1 ? values.indexOf(1) : index
+                            const index = scrollProfile.values.indexOf(val)
+                            return index === -1 ? scrollProfile.values.indexOf(1) : index
                         }
                         value: indexOf(root.device?.scrollFactor ?? 1)
 
                         onMoved: {
                             if (root.device) {
-                                root.device.scrollFactor = values[value]
+                                root.device.scrollFactor = scrollProfile.values[value]
                             }
                         }
                     }
 
                     //row 2
+                    QQC2.SpinBox {
+                        id: scrollFactorSpinBox
+
+                        Layout.minimumWidth: Kirigami.Units.gridUnit * 4
+
+                        from: 0
+                        to: 14
+                        stepSize: 1
+
+                        function indexOf(val: real): int {
+                            const index = scrollProfile.values.indexOf(val)
+                            return index === -1 ? scrollProfile.values.indexOf(1) : index
+                        }
+                        value: indexOf(root.device?.scrollFactor ?? 1)
+
+                        onValueChanged: {
+                            if (root.device) {
+                                root.device.scrollFactor = scrollProfile.values[value]
+                            }
+                        }
+
+                        textFromValue: function(val, locale) {
+                            return Number(val + 1).toLocaleString(locale, "d", 0)
+                        }
+
+                        valueFromText: function(text, locale) {
+                            return Number.fromLocaleString(locale, text) - 1
+                        }
+                    }
+
+                    //row 3
                     QQC2.Label {
                         text: i18ndc("kcm_touchpad", "@item:inrange Slower Scroll", "Slower")
                         textFormat: Text.PlainText

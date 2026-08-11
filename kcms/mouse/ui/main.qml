@@ -241,12 +241,31 @@ KCMUtils.SimpleKCM {
 
             Kirigami.FormEntry {
                 // Scroll Speed aka scroll Factor
+                id: scrollProfile
+                readonly property list<real> values: [
+                    0.1,
+                    0.3,
+                    0.5,
+                    0.75,
+                    1, // default
+                    1.5,
+                    2,
+                    3,
+                    4,
+                    5,
+                    7,
+                    9,
+                    12,
+                    15,
+                    20,
+                ]
+
                 contentItem: GridLayout {
                     Kirigami.FormData.label: i18ndc("kcmmouse", "@label:slider and @label:spinbox", "Scrolling speed:")
                     Kirigami.FormData.buddyFor: scrollFactor
                     Layout.fillWidth: true
 
-                    columns: 3
+                    columns: 4
 
                     QQC2.Slider {
                         id: scrollFactor
@@ -259,36 +278,50 @@ KCMUtils.SimpleKCM {
                         Kirigami.StyleHints.tickMarkStepSize: 1
                         enabled: root.device !== null
 
-                        readonly property list<real> values: [
-                            0.1,
-                            0.3,
-                            0.5,
-                            0.75,
-                            1, // default
-                            1.5,
-                            2,
-                            3,
-                            4,
-                            5,
-                            7,
-                            9,
-                            12,
-                            15,
-                            20,
-                        ]
-
                         function indexOf(val: real): int {
-                            const index = values.indexOf(val)
-                            return index === -1 ? values.indexOf(1) : index
+                            const index = scrollProfile.values.indexOf(val)
+                            return index === -1 ? scrollProfile.values.indexOf(1) : index
                         }
                         value: indexOf(root.device?.scrollFactor ?? 1)
 
                         onMoved: {
                             if (root.device) {
-                                root.device.scrollFactor = values[value]
+                                root.device.scrollFactor = scrollProfile.values[value]
                             }
                         }
                     }
+
+                    QQC2.SpinBox {
+                        id: scrollFactorSpinBox
+
+                        Layout.minimumWidth: Kirigami.Units.gridUnit * 4
+
+                        from: 0
+                        to: 14
+                        stepSize: 1
+
+                        function indexOf(val: real): int {
+                            const index = scrollProfile.values.indexOf(val)
+                            return index === -1 ? scrollProfile.values.indexOf(1) : index
+                        }
+                        value: indexOf(root.device?.scrollFactor ?? 1)
+
+                        onValueChanged: {
+                            if (root.device) {
+                                root.device.scrollFactor = scrollProfile.values[value]
+                            }
+                        }
+
+
+                        textFromValue: function(val, locale) {
+                            return Number(val + 1).toLocaleString(locale, "d", 0)
+                        }
+
+                        valueFromText: function(text, locale) {
+                            return Number.fromLocaleString(locale, text) - 1
+                        }
+                    }
+
 
                     //row 2
                     QQC2.Label {
