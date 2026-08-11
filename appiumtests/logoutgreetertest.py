@@ -44,19 +44,19 @@ class LogoutGreeterTests(unittest.TestCase):
         self.assertEqual(expected, outLines[(len(outLines) - 1)].decode('UTF-8'))
 
     def test_sleep(self):
-        self.driver.find_element(AppiumBy.XPATH, "//button[contains(@name, 'Slee') and contains(@accessibility-id, 'LogoutButton')]").click()
+        self.driver.find_element(AppiumBy.XPATH, "//button[contains(@name, 'Slee') and contains(@accessibility-id, 'suspendButton')]").click()
         self.assertStdOutLine("suspend")
 
     def test_hibernate(self):
-        self.driver.find_element(AppiumBy.XPATH, "//button[contains(@name, 'Hibernate') and contains(@accessibility-id, 'LogoutButton')]").click()
+        self.driver.find_element(AppiumBy.XPATH, "//button[contains(@name, 'Hibernate') and contains(@accessibility-id, 'hibernateButton')]").click()
         self.assertStdOutLine("hibernate")
 
     def test_restart(self):
-        self.driver.find_element(AppiumBy.XPATH, "//button[contains(@name, 'Restart') and contains(@accessibility-id, 'LogoutButton')]").click()
+        self.driver.find_element(AppiumBy.XPATH, "//button[contains(@name, 'Restart') and contains(@accessibility-id, 'rebootButton')]").click()
         self.assertStdOutLine("reboot")
 
     def test_shutdown(self):
-        self.driver.find_element(AppiumBy.XPATH, "//button[contains(@name, 'Shut Down') and contains(@accessibility-id, 'LogoutButton')]").click()
+        self.driver.find_element(AppiumBy.XPATH, "//button[contains(@name, 'Shut Down') and contains(@accessibility-id, 'shutdownButton')]").click()
         self.assertStdOutLine("shutdown")
 
 

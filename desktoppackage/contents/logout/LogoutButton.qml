@@ -27,7 +27,8 @@ ActionButton {
     font.underline: false // See https://phabricator.kde.org/D9452
     opacity: activeFocus || hovered ? 1 : 0.75
 
-    Keys.onPressed: {
+    Keys.onPressed: (event) => {
         AutoTriggerTimer.cancelAutoTrigger();
+        event.accepted = false;
     }
 }
