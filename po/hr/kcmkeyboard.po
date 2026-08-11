@@ -39,7 +39,8 @@ msgid "Keyboard Layout Switcher"
 msgstr "Raspored tipkovnice"
 
 #: bindings.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Switch to Next Keyboard Layout"
 msgid "Switch to Next Keyboard Layout"
 msgstr "Prebaci na sljedeći raspored tipki"
 
@@ -50,7 +51,9 @@ msgid "Switch keyboard layout to %1"
 msgstr "Prebaci na sljedeći raspored tipki"
 
 #: flags.cpp:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "layout - variant"
+#| msgid "%1 - %2"
 msgctxt "layout - variant"
 msgid "%1 - %2"
 msgstr "%1 – %2"
@@ -88,17 +91,22 @@ msgid "Preview"
 msgstr "Brzina ponavljanja znaka na tipkovnici"
 
 #: kcm_keyboard.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "KDE Keyboard Control Module"
 msgid "KDE Keyboard Control Module"
 msgstr "KDE-ov kontrolni modul za tipkovnicu"
 
 #: kcm_keyboard.cpp:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "(c) 2010 Andriy Rysin"
 msgid "(c) 2010 Andriy Rysin"
 msgstr "© 2010 Andriy Rysin"
 
 #: kcm_keyboard.cpp:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Keyboard</h1> This control module can be used to configure keyboard "
+#| "parameters and layouts."
 msgid ""
 "<h1>Keyboard</h1> This control module can be used to configure keyboard "
 "parameters and layouts."
@@ -313,13 +321,17 @@ msgid "&Configure keyboard options"
 msgstr "Podesi opcije tipkovnice"
 
 #: kcm_keyboard_widget.cpp:211
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "unknown keyboard model vendor"
+#| msgid "Unknown"
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
 msgstr "Nepoznato"
 
 #: kcm_keyboard_widget.cpp:213
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "vendor | keyboard model"
+#| msgid "%1 | %2"
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
 msgstr "%1 | %2"
@@ -342,28 +354,27 @@ msgstr[1] "Prečac:"
 msgstr[2] "Prečac:"
 
 #: kcm_view_models.cpp:200
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "layout map name"
+#| msgid "Map"
 msgctxt "layout map name"
 msgid "Map"
 msgstr "Preslikavanje"
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "Layout:"
+#, kde-format
 msgid "Layout"
-msgstr "Raspored:"
+msgstr "Raspored"
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "Variant:"
+#, kde-format
 msgid "Variant"
-msgstr "Varijanta:"
+msgstr "Varijanta"
 
 #: kcm_view_models.cpp:200
-#, fuzzy, kde-format
-#| msgid "Label:"
+#, kde-format
 msgid "Label"
-msgstr "Natpis:"
+msgstr "Natpis"
 
 #: kcm_view_models.cpp:200
 #, fuzzy, kde-format
@@ -372,7 +383,9 @@ msgid "Shortcut"
 msgstr "Prečac:"
 
 #: kcm_view_models.cpp:273
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "variant"
+#| msgid "Default"
 msgctxt "variant"
 msgid "Default"
 msgstr "Zadano"
