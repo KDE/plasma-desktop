@@ -39,7 +39,8 @@ msgid "Keyboard Layout Switcher"
 msgstr "Raspored tipkovnice"
 
 #: bindings.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Switch to Next Keyboard Layout"
 msgid "Switch to Next Keyboard Layout"
 msgstr "Prebaci na sljedeći raspored tipki"
 
@@ -56,13 +57,17 @@ msgid "Switch keyboard layout to %1"
 msgstr "Prebaci na sljedeći raspored tipki"
 
 #: keyboardmodel.cpp:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "unknown keyboard model vendor"
+#| msgid "Unknown"
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
 msgstr "Nepoznato"
 
 #: keyboardmodel.cpp:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "vendor | keyboard model"
+#| msgid "%1 | %2"
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
 msgstr "%1 | %2"
