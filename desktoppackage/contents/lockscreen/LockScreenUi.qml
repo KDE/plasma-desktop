@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2014 Aleix Pol Gonzalez <aleixpol@blue-systems.com>
+    SPDX-FileCopyrightText: 2026 Kristen McWilliam <kristen@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -13,6 +14,7 @@ import Qt5Compat.GraphicalEffects
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.plasma.private.accessibility
 import org.kde.plasma.workspace.components as PW
+import org.kde.plasma.workspace.keyboardlayout as Keyboards
 import org.kde.plasma.private.keyboardindicator as KeyboardIndicator
 import org.kde.kirigami as Kirigami
 import org.kde.kscreenlocker as ScreenLocker
@@ -117,7 +119,7 @@ Item {
 
         property bool uiVisible: false
         property bool seenPositionChange: false
-        property bool blockUI: containsMouse && (mainStack.depth > 1 || mainBlock.mainPasswordBox.text.length > 0 || inputPanel.keyboardActive)
+        property bool blockUI: containsMouse && (mainStack.depth > 1 || mainBlock.mainPasswordBox.text.length > 0 || Keyboards.KWinVirtualKeyboard.visible)
 
         x: parent.x
         y: parent.y
@@ -166,8 +168,8 @@ Item {
             // We do not want to show the password prompt in this case.
             if (uiVisible) {
                 uiVisible = false;
-                if (inputPanel.keyboardActive) {
-                    inputPanel.showHide();
+                if (Keyboards.KWinVirtualKeyboard.visible) {
+                    Keyboards.KWinVirtualKeyboard.active = false;
                 }
                 root.clearPassword();
             }
@@ -351,17 +353,6 @@ Item {
             }
         }
 
-        VirtualKeyboardLoader {
-            id: inputPanel
-
-            z: 1
-
-            screenRoot: lockScreenRoot
-            mainStack: mainStack
-            mainBlock: mainBlock
-            passwordField: mainBlock.mainPasswordBox
-        }
-
         Loader {
             z: 2
             active: root.viewVisible
@@ -394,15 +385,17 @@ Item {
 
                 focusPolicy: Qt.TabFocus
                 text: i18ndc("plasma_shell_org.kde.plasma.desktop", "Button to show/hide virtual keyboard", "Virtual Keyboard")
-                icon.name: inputPanel.keyboardActive ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
+                icon.name: Keyboards.KWinVirtualKeyboard.visible ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
                 onClicked: {
-                    // Otherwise the password field loses focus and virtual keyboard
-                    // keystrokes get eaten
-                    mainBlock.mainPasswordBox.forceActiveFocus();
-                    inputPanel.showHide()
+                    if (Keyboards.KWinVirtualKeyboard.visible) {
+                        Keyboards.KWinVirtualKeyboard.active = false;
+                    } else {
+                        // Otherwise the password field loses focus and on-screen keyboard
+                        // keystrokes get eaten
+                        mainBlock.mainPasswordBox.forceActiveFocus();
+                        Keyboards.KWinVirtualKeyboard.forceActivate();
+                    }
                 }
-
-                visible: inputPanel.status === Loader.Ready
 
                 Layout.fillHeight: true
                 containmentMask: Item {
