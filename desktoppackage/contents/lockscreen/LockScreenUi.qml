@@ -168,9 +168,6 @@ Item {
             // We do not want to show the password prompt in this case.
             if (uiVisible) {
                 uiVisible = false;
-                if (Keyboards.KWinVirtualKeyboard.visible) {
-                    Keyboards.KWinVirtualKeyboard.active = false;
-                }
                 root.clearPassword();
             }
         }
@@ -385,15 +382,13 @@ Item {
 
                 focusPolicy: Qt.TabFocus
                 text: i18ndc("plasma_shell_org.kde.plasma.desktop", "Button to show/hide virtual keyboard", "Virtual Keyboard")
-                icon.name: Keyboards.KWinVirtualKeyboard.visible ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
+                icon.name: Keyboards.KWinVirtualKeyboard.mode == Keyboards.KWinVirtualKeyboard.Never ? "input-keyboard-virtual-off" : "input-keyboard-virtual-on"
                 onClicked: {
-                    if (Keyboards.KWinVirtualKeyboard.visible) {
-                        Keyboards.KWinVirtualKeyboard.active = false;
+                    if (Keyboards.KWinVirtualKeyboard.mode == Keyboards.KWinVirtualKeyboard.AnyInput) {
+                        Keyboards.KWinVirtualKeyboard.mode = Keyboards.KWinVirtualKeyboard.Never;
                     } else {
-                        // Otherwise the password field loses focus and on-screen keyboard
-                        // keystrokes get eaten
-                        mainBlock.mainPasswordBox.forceActiveFocus();
-                        Keyboards.KWinVirtualKeyboard.forceActivate();
+                        Keyboards.KWinVirtualKeyboard.mode = Keyboards.KWinVirtualKeyboard.AnyInput;
+                        Qt.inputMethod.show();
                     }
                 }
 
