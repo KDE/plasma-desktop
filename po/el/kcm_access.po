@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-07 00:48+0000\n"
+"POT-Creation-Date: 2026-08-12 00:48+0000\n"
 "PO-Revision-Date: 2024-09-19 17:24+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -294,66 +294,66 @@ msgstr "Εάν είναι ενεργό το κούνημα δρομέα"
 msgid "Whether the Magnifier effect is enabled"
 msgstr "Εάν είναι ενεργό το κούνημα δρομέα"
 
-#: ui/Bell.qml:19
+#: ui/Bell.qml:18
 #, fuzzy, kde-format
 #| msgid "Please choose an audio file"
 msgctxt "@title:window dialog"
 msgid "Please choose an audio file"
 msgstr "Επιλέξτε ένα αρχείο ήχου"
 
-#: ui/Bell.qml:21
+#: ui/Bell.qml:20
 #, kde-format
 msgctxt "Name filters in a file dialog. Do not translate `(*.ogg *.oga *.wav)`"
 msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
 msgstr "αρχεία ήχου ogg, oga και wav (*.ogg *.oga *.wav)"
 
-#: ui/Bell.qml:30
+#: ui/Bell.qml:28
 #, fuzzy, kde-format
 #| msgid "Audible bell:"
 msgctxt "@label prefix for checkbox"
 msgid "Audible bell:"
 msgstr "Ακουστικό κουδούνι:"
 
-#: ui/Bell.qml:31
+#: ui/Bell.qml:32
 #, kde-format
 msgctxt "Enable the system bell"
 msgid "Enable"
 msgstr "Ενεργοποίηση"
 
-#: ui/Bell.qml:42
+#: ui/Bell.qml:44
 #, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
 msgstr "Προσαρμοσμένος ήχος:"
 
-#: ui/Bell.qml:75
+#: ui/Bell.qml:74
 #, fuzzy, kde-format
 #| msgid "Search audio file for the system bell"
 msgctxt "@action:button icononly tooltip"
 msgid "Choose audio file for the system bell"
 msgstr "Αναζήτηση αρχείου ήχου για το κουδούνι συστήματος"
 
-#: ui/Bell.qml:76
+#: ui/Bell.qml:75
 #, fuzzy, kde-format
 #| msgid "Please choose an audio file"
 msgctxt "@action button accessible only"
 msgid "Choose audio file"
 msgstr "Επιλέξτε ένα αρχείο ήχου"
 
-#: ui/Bell.qml:77
+#: ui/Bell.qml:76
 #, kde-format
 msgctxt "@info:usagetip accessible description for button"
 msgid "Opens dialog"
 msgstr ""
 
-#: ui/Bell.qml:93
+#: ui/Bell.qml:91
 #, fuzzy, kde-format
 #| msgid "Visual bell:"
 msgctxt "@label prefix for checkbox"
 msgid "Visual bell:"
 msgstr "Οπτικό κουδούνι:"
 
-#: ui/Bell.qml:94
+#: ui/Bell.qml:95
 #, fuzzy, kde-format
 #| msgctxt "Enable the system bell"
 #| msgid "Enable"
@@ -361,32 +361,32 @@ msgctxt "@option:check Enable visual bell"
 msgid "Enable"
 msgstr "Ενεργοποίηση"
 
-#: ui/Bell.qml:108
+#: ui/Bell.qml:111
 #, fuzzy, kde-format
 #| msgid "I&nvert screen"
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
 msgstr "Αντιστροφή οθόνης"
 
-#: ui/Bell.qml:126
+#: ui/Bell.qml:129
 #, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
 msgstr "Αναλαμπή οθόνης"
 
-#: ui/Bell.qml:137
+#: ui/Bell.qml:141
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr "Χρώμα"
 
-#: ui/Bell.qml:151
+#: ui/Bell.qml:157
 #, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "Διάρκεια:"
 
-#: ui/Bell.qml:166
+#: ui/Bell.qml:173
 #, fuzzy, kde-format
 #| msgid "%1 ms"
 #| msgid_plural "%1 ms"
@@ -396,7 +396,7 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/Bell.qml:170 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
+#: ui/Bell.qml:177 ui/KeyboardFilters.qml:66 ui/KeyboardFilters.qml:170
 #, kde-format
 msgctxt "@label:valuesuffix short for millisecond(s)"
 msgid "ms"
@@ -412,98 +412,104 @@ msgid ""
 "change them into other colors."
 msgstr ""
 
-#: ui/ColorblindnessCorrection.qml:31
+#: ui/ColorblindnessCorrection.qml:32
 #, kde-format
 msgctxt "@option check, Enable color blindness correction effect"
 msgid "Enable"
 msgstr ""
 
-#: ui/ColorblindnessCorrection.qml:44
+#: ui/ColorblindnessCorrection.qml:45
 #, kde-format
 msgctxt ""
 "@label:listbox Difficulty seeing any of the following colors on the screen"
 msgid "Problematic colors:"
 msgstr ""
 
-#: ui/ColorblindnessCorrection.qml:49
+#: ui/ColorblindnessCorrection.qml:52
 #, kde-format
 msgctxt "@option"
 msgid "Red & purple (Protanopia)"
 msgstr ""
 
-#: ui/ColorblindnessCorrection.qml:50
+#: ui/ColorblindnessCorrection.qml:53
 #, kde-format
 msgctxt "@option"
 msgid "Green & purple (Deuteranopia)"
 msgstr ""
 
-#: ui/ColorblindnessCorrection.qml:51
+#: ui/ColorblindnessCorrection.qml:54
 #, kde-format
 msgctxt "@option"
 msgid "Yellow, green & purple (Tritanopia)"
 msgstr ""
 
-#: ui/ColorblindnessCorrection.qml:52
+#: ui/ColorblindnessCorrection.qml:55
 #, kde-format
 msgctxt "@option"
 msgid "All (grayscale mode)"
 msgstr ""
 
-#: ui/ColorblindnessCorrection.qml:67
+#: ui/ColorblindnessCorrection.qml:71
 #, kde-format
 msgctxt "@label"
 msgid "Intensity:"
 msgstr ""
 
-#: ui/ColorblindnessCorrection.qml:90
+#: ui/ColorblindnessCorrection.qml:97
 #, kde-format
 msgctxt "@label Mild color blindness correction intensity"
 msgid "Mild"
 msgstr ""
 
-#: ui/ColorblindnessCorrection.qml:97
+#: ui/ColorblindnessCorrection.qml:104
 #, kde-format
 msgctxt "@label Intense color blindness correction intensity"
 msgid "Intense"
 msgstr ""
 
-#: ui/ColorblindnessCorrection.qml:115
+#: ui/ColorblindnessCorrection.qml:124
 #, kde-format
 msgctxt "@info"
 msgid "Adjusted colors:"
 msgstr ""
 
-#: ui/ColorblindnessCorrection.qml:132
+#: ui/ColorblindnessCorrection.qml:141
 #, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Reds:"
 msgstr ""
 
-#: ui/ColorblindnessCorrection.qml:133
+#: ui/ColorblindnessCorrection.qml:142
 #, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Greens:"
 msgstr ""
 
-#: ui/ColorblindnessCorrection.qml:134
+#: ui/ColorblindnessCorrection.qml:143
 #, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Blues:"
 msgstr ""
 
-#: ui/ColorblindnessCorrection.qml:135
+#: ui/ColorblindnessCorrection.qml:144
 #, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Purples:"
 msgstr ""
 
-#: ui/Invert.qml:22
+#: ui/Invert.qml:17
 #, kde-format
 msgctxt "@label"
 msgid "Invert:"
 msgstr ""
 
-#: ui/Invert.qml:23
+#: ui/Invert.qml:18
+#, kde-format
+msgctxt "@label Hint for invert effect enable button"
+msgid "Use shortcuts to toggle inverting display and window colors"
+msgstr ""
+
+#: ui/Invert.qml:21
 #, fuzzy, kde-format
 #| msgctxt "Enable the system bell"
 #| msgid "Enable"
@@ -511,13 +517,7 @@ msgctxt "@option check, Enable invert effect"
 msgid "Enable"
 msgstr "Ενεργοποίηση"
 
-#: ui/Invert.qml:38
-#, kde-format
-msgctxt "@label Hint for invert effect enable button"
-msgid "Use shortcuts to toggle inverting display and window colors"
-msgstr ""
-
-#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:355
+#: ui/Invert.qml:39 ui/ZoomMagnifier.qml:333
 #, fuzzy, kde-format
 #| msgid "Configure Notifications…"
 msgctxt "@action:button"
@@ -531,7 +531,7 @@ msgctxt "@title:group prefix"
 msgid "Slow keys:"
 msgstr "Αργά πλήκτρα:"
 
-#: ui/KeyboardFilters.qml:23
+#: ui/KeyboardFilters.qml:21
 #, fuzzy, kde-format
 #| msgctxt "Enable the system bell"
 #| msgid "Enable"
@@ -539,7 +539,7 @@ msgctxt "@option:check Enable slow keys"
 msgid "Enable"
 msgstr "Ενεργοποίηση"
 
-#: ui/KeyboardFilters.qml:34
+#: ui/KeyboardFilters.qml:33
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -552,7 +552,7 @@ msgstr ""
 "πλήκτρα ταυτόχρονα ή αν έχετε δυσκολία να πατήσετε το πλήκτρο που θέλετε από "
 "την πρώτη φορά."
 
-#: ui/KeyboardFilters.qml:41
+#: ui/KeyboardFilters.qml:39
 #, fuzzy, kde-format
 #| msgctxt "Slow keys Delay"
 #| msgid "Delay:"
@@ -560,7 +560,7 @@ msgctxt "@label:spinbox Slow keys Delay"
 msgid "Delay:"
 msgstr "Καθυστέρηση:"
 
-#: ui/KeyboardFilters.qml:56
+#: ui/KeyboardFilters.qml:57
 #, fuzzy, kde-format
 #| msgid "%1 ms"
 #| msgid_plural "%1 ms"
@@ -570,14 +570,14 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/KeyboardFilters.qml:74
+#: ui/KeyboardFilters.qml:72
 #, fuzzy, kde-format
 #| msgid "Ring system bell:"
 msgctxt "@title:group prefix for checkbox group"
 msgid "Ring system bell:"
 msgstr "Χρήση κουδουνιού συστήματος:"
 
-#: ui/KeyboardFilters.qml:75
+#: ui/KeyboardFilters.qml:76
 #, fuzzy, kde-format
 #| msgctxt "Use system bell when a key is pressed"
 #| msgid "when any key is &pressed"
@@ -585,7 +585,7 @@ msgctxt "@option:check Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "όταν πατηθεί οποιοδήποτε πλήκτρο"
 
-#: ui/KeyboardFilters.qml:89
+#: ui/KeyboardFilters.qml:92
 #, fuzzy, kde-format
 #| msgctxt "Use system bell when a key is accepted"
 #| msgid "when any key is &accepted"
@@ -593,7 +593,7 @@ msgctxt "@option:check Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "όταν οποιοδήποτε πλήκτρο είναι &αποδεκτό"
 
-#: ui/KeyboardFilters.qml:103
+#: ui/KeyboardFilters.qml:108
 #, fuzzy, kde-format
 #| msgctxt "Use system bell when a key is rejected"
 #| msgid "when any key is &rejected"
@@ -601,14 +601,14 @@ msgctxt "@option:check Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "όταν οποιοδήποτε πλήκτρο έχει &απορριφθεί"
 
-#: ui/KeyboardFilters.qml:119
+#: ui/KeyboardFilters.qml:123
 #, fuzzy, kde-format
 #| msgid "Bounce keys:"
 msgctxt "@title:group prefix"
 msgid "Bounce keys:"
 msgstr "Πλήκτρα αναπήδησης"
 
-#: ui/KeyboardFilters.qml:124
+#: ui/KeyboardFilters.qml:127
 #, fuzzy, kde-format
 #| msgctxt "Enable the system bell"
 #| msgid "Enable"
@@ -616,7 +616,7 @@ msgctxt "@option:check Bounce keys enable"
 msgid "Enable"
 msgstr "Ενεργοποίηση"
 
-#: ui/KeyboardFilters.qml:135
+#: ui/KeyboardFilters.qml:139
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -625,7 +625,7 @@ msgid ""
 "press once."
 msgstr "Αγνόηση γρήγορων, επαναλαμβανόμενων πατημάτων του ίδιου πλήκτρου."
 
-#: ui/KeyboardFilters.qml:142
+#: ui/KeyboardFilters.qml:145
 #, fuzzy, kde-format
 #| msgctxt "Slow keys Delay"
 #| msgid "Delay:"
@@ -633,7 +633,7 @@ msgctxt "@label:spinbox Bounce keys delay"
 msgid "Delay:"
 msgstr "Καθυστέρηση:"
 
-#: ui/KeyboardFilters.qml:157
+#: ui/KeyboardFilters.qml:163
 #, fuzzy, kde-format
 #| msgid "%1 ms"
 #| msgid_plural "%1 ms"
@@ -643,7 +643,7 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/KeyboardFilters.qml:171
+#: ui/KeyboardFilters.qml:179
 #, fuzzy, kde-format
 #| msgid "Ring system bell when rejected"
 msgctxt "@option:check for bounce keys"
@@ -656,13 +656,13 @@ msgctxt "@title Category name in sidebar"
 msgid "Zoom & Magnifier"
 msgstr ""
 
-#: ui/main.qml:33
+#: ui/main.qml:34
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "System Bell"
 msgstr "Χρήση κουδουνιού &συστήματος"
 
-#: ui/main.qml:38
+#: ui/main.qml:40
 #, fuzzy, kde-format
 #| msgctxt "System Modifier Keys"
 #| msgid "Modifier Keys"
@@ -670,7 +670,7 @@ msgctxt "@title Category name in sidebar"
 msgid "Modifier Keys"
 msgstr "Πλήκτρα τροποποιητή"
 
-#: ui/main.qml:43
+#: ui/main.qml:46
 #, fuzzy, kde-format
 #| msgctxt "System keyboard filters"
 #| msgid "Keyboard Filters"
@@ -678,7 +678,7 @@ msgctxt "@title Category name in sidebar"
 msgid "Keyboard Filters"
 msgstr "Φίλτρα πληκτρολογίου"
 
-#: ui/main.qml:48
+#: ui/main.qml:52
 #, fuzzy, kde-format
 #| msgctxt "System mouse navigation"
 #| msgid "Mouse Navigation"
@@ -686,7 +686,7 @@ msgctxt "@title Category name in sidebar"
 msgid "Mouse Navigation"
 msgstr "Πλοήγηση ποντικιού"
 
-#: ui/main.qml:53
+#: ui/main.qml:58
 #, fuzzy, kde-format
 #| msgctxt "System mouse navigation"
 #| msgid "Screen Reader"
@@ -694,19 +694,19 @@ msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "Αναγνώστης οθόνης"
 
-#: ui/main.qml:58
+#: ui/main.qml:64
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr ""
 
-#: ui/main.qml:63
+#: ui/main.qml:70
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
 msgstr ""
 
-#: ui/main.qml:68
+#: ui/main.qml:76
 #, fuzzy, kde-format
 #| msgctxt "Shake cursor to find it"
 #| msgid "Shake Cursor"
@@ -720,13 +720,13 @@ msgctxt "@option:check"
 msgid "Sticky keys:"
 msgstr "Κολλημένα πλήκτρα:"
 
-#: ui/ModifierKeys.qml:22
+#: ui/ModifierKeys.qml:20
 #, kde-format
 msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
 msgstr "Ενεργοποίηση"
 
-#: ui/ModifierKeys.qml:33
+#: ui/ModifierKeys.qml:32
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -744,7 +744,7 @@ msgctxt "@option:check"
 msgid "Lock sticky keys"
 msgstr "Κλείδωμα κολλημένων πλήκτρων"
 
-#: ui/ModifierKeys.qml:51
+#: ui/ModifierKeys.qml:52
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -752,46 +752,46 @@ msgid ""
 "again."
 msgstr ""
 
-#: ui/ModifierKeys.qml:57
+#: ui/ModifierKeys.qml:60
 #, fuzzy, kde-format
 #| msgid "Disable when two keys are held down"
 msgctxt "@option:check"
 msgid "Disable when two keys are held down"
 msgstr "Απενεργοποίηση όταν δύο πλήκτρα είναι πατημένα"
 
-#: ui/ModifierKeys.qml:70
+#: ui/ModifierKeys.qml:75
 #, fuzzy, kde-format
 #| msgid "Ring system bell when modifier keys are used"
 msgctxt "@option:check"
 msgid "Ring system bell when modifier keys are used"
 msgstr "Χρήση κουδουνιού συστήματος όταν γίνεται χρήση πλήκτρων τροποποίησης"
 
-#: ui/ModifierKeys.qml:88
+#: ui/ModifierKeys.qml:91
 #, kde-format
 msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
 msgstr "Ανάδραση:"
 
-#: ui/ModifierKeys.qml:93
+#: ui/ModifierKeys.qml:94
 #, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when locking keys are used"
 msgstr "Χρήση κουδουνιού συστήματος όταν αλλάζουν τα πλήκτρα κλειδώματος"
 
-#: ui/ModifierKeys.qml:104
+#: ui/ModifierKeys.qml:106
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
 msgstr ""
 
-#: ui/ModifierKeys.qml:108
+#: ui/ModifierKeys.qml:112
 #, kde-format
 msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
 msgstr ""
 "Εμφάνιση ειδοποίησης όταν γίνεται χρήση πλήκτρων τροποποίησης ή κλειδώματος"
 
-#: ui/ModifierKeys.qml:120
+#: ui/ModifierKeys.qml:126
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Notifications…"
@@ -805,13 +805,13 @@ msgctxt "@option:check"
 msgid "Use number pad to move pointer:"
 msgstr "Χρήση αριθμητικού πληκτρολογίου για μετακίνηση του δρομέα:"
 
-#: ui/MouseNavigation.qml:22
+#: ui/MouseNavigation.qml:19
 #, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "Ενεργοποίηση"
 
-#: ui/MouseNavigation.qml:33
+#: ui/MouseNavigation.qml:31
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -824,7 +824,7 @@ msgid ""
 "<shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
 
-#: ui/MouseNavigation.qml:39
+#: ui/MouseNavigation.qml:37
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
@@ -840,8 +840,8 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
-#: ui/MouseNavigation.qml:114
+#: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:90
+#: ui/MouseNavigation.qml:118
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
@@ -855,7 +855,7 @@ msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Επανάληψη διαστήματος:"
 
-#: ui/MouseNavigation.qml:84
+#: ui/MouseNavigation.qml:86
 #, fuzzy, kde-format
 #| msgid "%1 ms"
 #| msgid_plural "%1 ms"
@@ -865,13 +865,13 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/MouseNavigation.qml:93
+#: ui/MouseNavigation.qml:95
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Χρόνος επιτάχυνσης:"
 
-#: ui/MouseNavigation.qml:110
+#: ui/MouseNavigation.qml:114
 #, fuzzy, kde-format
 #| msgid "%1 ms"
 #| msgid_plural "%1 ms"
@@ -881,26 +881,26 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/MouseNavigation.qml:118
+#: ui/MouseNavigation.qml:123
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Μέγιστη ταχύτητα:"
 
-#: ui/MouseNavigation.qml:132
+#: ui/MouseNavigation.qml:139
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
 msgstr "Επιτάχυνση δρομέα:"
 
-#: ui/ScreenReader.qml:20
+#: ui/ScreenReader.qml:22
 #, fuzzy, kde-format
 #| msgid "Screen reader enabled"
 msgctxt "@info Placeholder message title"
 msgid "The Orca Screen Reader is not installed"
 msgstr "Αναγνώστης οθόνης ενεργοποιημένος"
 
-#: ui/ScreenReader.qml:21
+#: ui/ScreenReader.qml:23
 #, kde-format
 msgctxt "@info Placeholder message explanation"
 msgid "Please install it, then close and reopen this window"
@@ -908,19 +908,19 @@ msgstr ""
 "Παρακαλώ εγκαταστήστε το, στη συνέχεια κλείστε και ξανανοίξτε αυτό το "
 "παράθυρο."
 
-#: ui/ScreenReader.qml:27
+#: ui/ScreenReader.qml:30
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable Screen Reader"
 msgstr "Ενεργοποίηση αναγνώστη οθόνης"
 
-#: ui/ScreenReader.qml:39
+#: ui/ScreenReader.qml:45
 #, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Εκκίνηση της διαμόρφωσης του αναγνώστη οθόνης Orca…"
 
-#: ui/ShakeCursor.qml:15
+#: ui/ShakeCursor.qml:16
 #, fuzzy, kde-format
 #| msgctxt "@label"
 #| msgid "Shake cursor to find it:"
@@ -928,7 +928,7 @@ msgctxt "@label"
 msgid "Shake pointer to find it:"
 msgstr "Κουνήστε τον δρομέα για να το βρείτε:"
 
-#: ui/ShakeCursor.qml:16
+#: ui/ShakeCursor.qml:18
 #, fuzzy, kde-format
 #| msgctxt "Enable the system bell"
 #| msgid "Enable"
@@ -936,7 +936,7 @@ msgctxt "@option check, Enable shake pointer effect"
 msgid "Enable"
 msgstr "Ενεργοποίηση"
 
-#: ui/ShakeCursor.qml:28
+#: ui/ShakeCursor.qml:31
 #, fuzzy, kde-format
 #| msgctxt "@label Cursor magnification level"
 #| msgid "Magnification:"
@@ -944,7 +944,7 @@ msgctxt "@label Pointer magnification level"
 msgid "Magnification:"
 msgstr "Μεγέθυνση:"
 
-#: ui/ShakeCursor.qml:56
+#: ui/ShakeCursor.qml:60
 #, fuzzy, kde-format
 #| msgctxt "@label Normal cursor size"
 #| msgid "Normal"
@@ -952,7 +952,7 @@ msgctxt "@label Normal pointer size"
 msgid "Normal"
 msgstr "Κανονικό"
 
-#: ui/ShakeCursor.qml:63
+#: ui/ShakeCursor.qml:67
 #, fuzzy, kde-format
 #| msgctxt "@label Large cursor size"
 #| msgid "Large"
@@ -960,27 +960,13 @@ msgctxt "@label Large pointer size"
 msgid "Large"
 msgstr "Μεγάλο"
 
-#: ui/ZoomMagnifier.qml:22
-#, kde-format
-msgctxt "@label, followed by 'full screen' or 'magnify region'"
-msgid "Zoom:"
-msgstr ""
-
 #: ui/ZoomMagnifier.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Flash screen when a system bell is rung"
-#| msgid "Flash screen"
-msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
-msgid "Full screen"
-msgstr "Αναλαμπή οθόνης"
-
-#: ui/ZoomMagnifier.qml:53
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Show pixel grid at zoom level:"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:108
+#: ui/ZoomMagnifier.qml:60
 #, fuzzy, kde-format
 #| msgctxt "@label:spinbox"
 #| msgid "Pointer acceleration:"
@@ -988,92 +974,85 @@ msgctxt "@label:listbox"
 msgid "Pointer tracking:"
 msgstr "Επιτάχυνση δρομέα:"
 
-#: ui/ZoomMagnifier.qml:113
+#: ui/ZoomMagnifier.qml:82
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:114
+#: ui/ZoomMagnifier.qml:83
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with pointer"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:118
+#: ui/ZoomMagnifier.qml:87
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:119
+#: ui/ZoomMagnifier.qml:88
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, except near screen edges"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:123
+#: ui/ZoomMagnifier.qml:92
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:124
+#: ui/ZoomMagnifier.qml:93
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, even near screen edges"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:128
+#: ui/ZoomMagnifier.qml:97
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:129
+#: ui/ZoomMagnifier.qml:98
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer pushes zoom area at screen edges"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:133
+#: ui/ZoomMagnifier.qml:102
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:134
+#: ui/ZoomMagnifier.qml:103
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow pointer"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:151
+#: ui/ZoomMagnifier.qml:123
 #, kde-format
 msgctxt "@option:check"
 msgid "Sharpen screen content while zoomed in"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:162
+#: ui/ZoomMagnifier.qml:137
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:178
-#, fuzzy, kde-format
-#| msgid "Magnification"
-msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
-msgid "Magnify region"
-msgstr "Μεγέθυνση"
-
-#: ui/ZoomMagnifier.qml:205
+#: ui/ZoomMagnifier.qml:154
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:216 ui/ZoomMagnifier.qml:241
+#: ui/ZoomMagnifier.qml:167 ui/ZoomMagnifier.qml:195
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1081,49 +1060,69 @@ msgid_plural "%1 px"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ui/ZoomMagnifier.qml:217 ui/ZoomMagnifier.qml:242
+#: ui/ZoomMagnifier.qml:168 ui/ZoomMagnifier.qml:196
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:230
+#: ui/ZoomMagnifier.qml:182
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:259
+#: ui/ZoomMagnifier.qml:211
+#, kde-format
+msgctxt "@label, followed by 'full screen' or 'magnify region'"
+msgid "Zoom:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:216
+#, fuzzy, kde-format
+#| msgctxt "@option:radio Flash screen when a system bell is rung"
+#| msgid "Flash screen"
+msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
+msgid "Full screen"
+msgstr "Αναλαμπή οθόνης"
+
+#: ui/ZoomMagnifier.qml:231
+#, fuzzy, kde-format
+#| msgid "Magnification"
+msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
+msgid "Magnify region"
+msgstr "Μεγέθυνση"
+
+#: ui/ZoomMagnifier.qml:244
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:272
+#: ui/ZoomMagnifier.qml:265
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:305
+#: ui/ZoomMagnifier.qml:303
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:344
+#: ui/ZoomMagnifier.qml:304
 #, fuzzy, kde-format
 #| msgid "Ring system bell when modifier keys are used"
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "Χρήση κουδουνιού συστήματος όταν γίνεται χρήση πλήκτρων τροποποίησης"
 
-#: ui/ZoomMagnifier.qml:365
-#, fuzzy, kde-format
-#| msgid "Use keys to control the mouse"
-msgctxt "@label Hint for zoom/magnify effect usage"
-msgid "Use shortcuts to control zoom"
-msgstr "Χρήση πλήκτρων για τον έλεγχο ποντικιού"
+#, fuzzy
+#~| msgid "Use keys to control the mouse"
+#~ msgctxt "@label Hint for zoom/magnify effect usage"
+#~ msgid "Use shortcuts to control zoom"
+#~ msgstr "Χρήση πλήκτρων για τον έλεγχο ποντικιού"
 
 #~ msgid "Use Gestures"
 #~ msgstr "Χρήση χειρονομιών"

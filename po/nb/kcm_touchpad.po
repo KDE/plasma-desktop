@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-08-12 00:49+0000\n"
 "PO-Revision-Date: 2026-03-07 20:00+0100\n"
 "Last-Translator: Kjetil Sorlund <translate@sorlund.no>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@nuug.no>\n"
@@ -181,25 +181,25 @@ msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr "Når i bruk, så vil pekerekkevidden øke med raskere musebevegelser."
 
-#: ui/main.qml:309
+#: ui/main.qml:310
 #, kde-format
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "Rullehastighet:"
 
-#: ui/main.qml:360
+#: ui/main.qml:392
 #, kde-format
 msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "Saktere"
 
-#: ui/main.qml:367
+#: ui/main.qml:399
 #, kde-format
 msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "Raskere"
 
-#: ui/main.qml:374
+#: ui/main.qml:406
 #, kde-format
 msgctxt ""
 "@title group begins the sentence 'Scroll by moving two fingers anywhere/"
@@ -207,33 +207,33 @@ msgctxt ""
 msgid "Scroll by:"
 msgstr "Rull med:"
 
-#: ui/main.qml:377
+#: ui/main.qml:409
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr "Flytte to fingre hvor som helst"
 
-#: ui/main.qml:395
+#: ui/main.qml:427
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr "Flytte en finger langs kanten"
 
-#: ui/main.qml:404
+#: ui/main.qml:436
 #, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Omvendt rulleretning (naturlig rulling)"
 
-#: ui/main.qml:421
+#: ui/main.qml:453
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "Slå av vannrett rulling"
 
-#: ui/main.qml:439
+#: ui/main.qml:471
 #, kde-format
 msgctxt ""
 "@title:group for radiobutton group, begins the sentence 'right-click by "
@@ -241,7 +241,7 @@ msgctxt ""
 msgid "Right-click by:"
 msgstr "Høyreklikk med:"
 
-#: ui/main.qml:443
+#: ui/main.qml:475
 #, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-right "
@@ -249,19 +249,19 @@ msgctxt ""
 msgid "Pressing bottom-right corner"
 msgstr "Trykk nederst til høyre"
 
-#: ui/main.qml:448
+#: ui/main.qml:480
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "Midtklikk ved å trykke på begge nederste hjørner samtidig."
 
-#: ui/main.qml:449
+#: ui/main.qml:481
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Midtklikk ved å trykke nederst i midten."
 
-#: ui/main.qml:471
+#: ui/main.qml:503
 #, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing with two "
@@ -269,13 +269,13 @@ msgctxt ""
 msgid "Pressing anywhere with two fingers"
 msgstr "Trykk med to fingre hvor som helst"
 
-#: ui/main.qml:472
+#: ui/main.qml:504
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
 msgstr "Midtklikk ved å trykke med tre fingre."
 
-#: ui/main.qml:484
+#: ui/main.qml:516
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'middle-click by pressing "
@@ -283,7 +283,7 @@ msgctxt ""
 msgid "Middle-click by:"
 msgstr "Midtklikk med:"
 
-#: ui/main.qml:487
+#: ui/main.qml:519
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-middle "
@@ -291,7 +291,7 @@ msgctxt ""
 msgid "Pressing bottom-middle edge"
 msgstr "Trykk nederst på midtkanten"
 
-#: ui/main.qml:507
+#: ui/main.qml:539
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-left "
@@ -299,7 +299,7 @@ msgctxt ""
 msgid "Pressing bottom-left and bottom-right corners"
 msgstr "Trykk nederste venstre- og høyreknappe hjørne"
 
-#: ui/main.qml:519
+#: ui/main.qml:551
 #, kde-format
 msgctxt ""
 "@option:check completes the sentence 'middle-click by pressing anywhere with "
@@ -307,25 +307,25 @@ msgctxt ""
 msgid "Pressing anywhere with three fingers"
 msgstr "Trykk med tre fingre hvor som helst"
 
-#: ui/main.qml:532
+#: ui/main.qml:564
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Trykking:"
 
-#: ui/main.qml:533
+#: ui/main.qml:565
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap to click"
 msgstr "Trykk for å klikke"
 
-#: ui/main.qml:548
+#: ui/main.qml:580
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr "Tillat å dra etter tapping"
 
-#: ui/main.qml:560
+#: ui/main.qml:592
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -335,37 +335,37 @@ msgstr ""
 "Dra ved å tappe og tappe på ny umiddelbart mens du drar fingeren over "
 "styreplata. Løft fingeren for å slippe."
 
-#: ui/main.qml:567
+#: ui/main.qml:599
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr "Tillat kort løft av fingeren ved tapp-og-dra"
 
-#: ui/main.qml:580
+#: ui/main.qml:612
 #, kde-format
 msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "Tofingertrykk:"
 
-#: ui/main.qml:586
+#: ui/main.qml:618
 #, kde-format
 msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Høyreklikk (trefingertrykk for midtklikk)"
 
-#: ui/main.qml:587
+#: ui/main.qml:619
 #, kde-format
 msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "Høyreklikk"
 
-#: ui/main.qml:608
+#: ui/main.qml:640
 #, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Midtklikk (trefingertrykk for høyreklikk)"
 
-#: ui/main.qml:609
+#: ui/main.qml:641
 #, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click"

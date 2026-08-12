@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-08-12 00:49+0000\n"
 "PO-Revision-Date: 2026-01-13 19:36+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -181,25 +181,25 @@ msgstr ""
 "Kad ieslēgts, attālums, kādā pārvietojas rādītājs, ir atkarīgs arī no "
 "kustības ātruma."
 
-#: ui/main.qml:309
+#: ui/main.qml:310
 #, kde-format
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "Ritināšanas ātrums:"
 
-#: ui/main.qml:360
+#: ui/main.qml:392
 #, kde-format
 msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "Lēnāks"
 
-#: ui/main.qml:367
+#: ui/main.qml:399
 #, kde-format
 msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "Ātrāks"
 
-#: ui/main.qml:374
+#: ui/main.qml:406
 #, kde-format
 msgctxt ""
 "@title group begins the sentence 'Scroll by moving two fingers anywhere/"
@@ -207,33 +207,33 @@ msgctxt ""
 msgid "Scroll by:"
 msgstr "Ritināšana:"
 
-#: ui/main.qml:377
+#: ui/main.qml:409
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr "Slidinot divus pirkstus jebkurā vietā"
 
-#: ui/main.qml:395
+#: ui/main.qml:427
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr "Slidinot vienu pirkstu gar malu"
 
-#: ui/main.qml:404
+#: ui/main.qml:436
 #, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Apgriezt ritināšanas virzienu (dabiskā ritināšana)"
 
-#: ui/main.qml:421
+#: ui/main.qml:453
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "Izslēgt horizontālo ritināšanu"
 
-#: ui/main.qml:439
+#: ui/main.qml:471
 #, kde-format
 msgctxt ""
 "@title:group for radiobutton group, begins the sentence 'right-click by "
@@ -241,7 +241,7 @@ msgctxt ""
 msgid "Right-click by:"
 msgstr "Labais klikšķis:"
 
-#: ui/main.qml:443
+#: ui/main.qml:475
 #, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-right "
@@ -249,19 +249,19 @@ msgctxt ""
 msgid "Pressing bottom-right corner"
 msgstr "Nospiežot apakšējā labajā stūrī"
 
-#: ui/main.qml:448
+#: ui/main.qml:480
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "Vidējais klikšķis, nospiežot abus apakšējos stūrus."
 
-#: ui/main.qml:449
+#: ui/main.qml:481
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Vidējais klikšķis, nospiežot apakšā pa vidu."
 
-#: ui/main.qml:471
+#: ui/main.qml:503
 #, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing with two "
@@ -269,13 +269,13 @@ msgctxt ""
 msgid "Pressing anywhere with two fingers"
 msgstr "Pieskaroties uz jebkur skārienpaliktņa ar diviem pirkstiem"
 
-#: ui/main.qml:472
+#: ui/main.qml:504
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
 msgstr "Vidējais klikšķis ar trīs pirkstu pieskārienu."
 
-#: ui/main.qml:484
+#: ui/main.qml:516
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'middle-click by pressing "
@@ -283,7 +283,7 @@ msgctxt ""
 msgid "Middle-click by:"
 msgstr "Vidējais klikšķis:"
 
-#: ui/main.qml:487
+#: ui/main.qml:519
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-middle "
@@ -291,7 +291,7 @@ msgctxt ""
 msgid "Pressing bottom-middle edge"
 msgstr "Nospiežot apakšējās malas centrā"
 
-#: ui/main.qml:507
+#: ui/main.qml:539
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-left "
@@ -299,7 +299,7 @@ msgctxt ""
 msgid "Pressing bottom-left and bottom-right corners"
 msgstr "Nospiežot reizē apakšējo kreiso un apakšējo labo stūri"
 
-#: ui/main.qml:519
+#: ui/main.qml:551
 #, kde-format
 msgctxt ""
 "@option:check completes the sentence 'middle-click by pressing anywhere with "
@@ -307,25 +307,25 @@ msgctxt ""
 msgid "Pressing anywhere with three fingers"
 msgstr "Nospiežot jebkur ar trim pirkstiem"
 
-#: ui/main.qml:532
+#: ui/main.qml:564
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Pieskaršanās:"
 
-#: ui/main.qml:533
+#: ui/main.qml:565
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap to click"
 msgstr "Pieskāriens nozīmē klikšķi"
 
-#: ui/main.qml:548
+#: ui/main.qml:580
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr "Atļaut vilkšanu pēc pieskāriena atlaišanas"
 
-#: ui/main.qml:560
+#: ui/main.qml:592
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -335,38 +335,38 @@ msgstr ""
 "Lai vilktu, ātri pieskarieties divas reizes, otru pieskārienu neatlaižot un "
 "velkot. Paceliet pirkstu, lai nomestu."
 
-#: ui/main.qml:567
+#: ui/main.qml:599
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr "Ļaut uz mirkli pacelt pirkstu pieskaršanās un vilkšanas laikā"
 
-#: ui/main.qml:580
+#: ui/main.qml:612
 #, kde-format
 msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "Divu pirkstu pieskāriens:"
 
-#: ui/main.qml:586
+#: ui/main.qml:618
 #, kde-format
 msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr ""
 "Labais klikšķis (pieskāriens ar trim pirkstiem kā vidējā taustiņa nospiešana)"
 
-#: ui/main.qml:587
+#: ui/main.qml:619
 #, kde-format
 msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "Labais klikšķis"
 
-#: ui/main.qml:608
+#: ui/main.qml:640
 #, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Vidējais klikšķis (trīs pirkstu pieskāriens ir labais taustiņš)"
 
-#: ui/main.qml:609
+#: ui/main.qml:641
 #, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click"

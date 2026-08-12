@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-07 00:48+0000\n"
+"POT-Creation-Date: 2026-08-12 00:48+0000\n"
 "PO-Revision-Date: 2026-06-02 21:04+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -283,91 +283,91 @@ msgstr "Se l'effetto Ingrandimento è abilitato"
 msgid "Whether the Magnifier effect is enabled"
 msgstr "Se l'effetto Lente d'ingrandimento è abilitato"
 
-#: ui/Bell.qml:19
+#: ui/Bell.qml:18
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Please choose an audio file"
 msgstr "Scegli un file audio"
 
-#: ui/Bell.qml:21
+#: ui/Bell.qml:20
 #, kde-format
 msgctxt "Name filters in a file dialog. Do not translate `(*.ogg *.oga *.wav)`"
 msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
 msgstr "File audio ogg, oga, e wav (*.ogg *.oga *.wav)"
 
-#: ui/Bell.qml:30
+#: ui/Bell.qml:28
 #, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Audible bell:"
 msgstr "Campanella udibile:"
 
-#: ui/Bell.qml:31
+#: ui/Bell.qml:32
 #, kde-format
 msgctxt "Enable the system bell"
 msgid "Enable"
 msgstr "Abilita"
 
-#: ui/Bell.qml:42
+#: ui/Bell.qml:44
 #, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
 msgstr "Suono personalizzato:"
 
-#: ui/Bell.qml:75
+#: ui/Bell.qml:74
 #, kde-format
 msgctxt "@action:button icononly tooltip"
 msgid "Choose audio file for the system bell"
 msgstr "Cerca file audio per la campanella di sistema"
 
-#: ui/Bell.qml:76
+#: ui/Bell.qml:75
 #, kde-format
 msgctxt "@action button accessible only"
 msgid "Choose audio file"
 msgstr "Scegli file audio"
 
-#: ui/Bell.qml:77
+#: ui/Bell.qml:76
 #, kde-format
 msgctxt "@info:usagetip accessible description for button"
 msgid "Opens dialog"
 msgstr "Apre la finestra"
 
-#: ui/Bell.qml:93
+#: ui/Bell.qml:91
 #, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Visual bell:"
 msgstr "Campanella visiva:"
 
-#: ui/Bell.qml:94
+#: ui/Bell.qml:95
 #, kde-format
 msgctxt "@option:check Enable visual bell"
 msgid "Enable"
 msgstr "Abilita"
 
-#: ui/Bell.qml:108
+#: ui/Bell.qml:111
 #, kde-format
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
 msgstr "Inverti i colori dello schermo"
 
-#: ui/Bell.qml:126
+#: ui/Bell.qml:129
 #, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
 msgstr "Fa lampeggiare lo schermo"
 
-#: ui/Bell.qml:137
+#: ui/Bell.qml:141
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr "Colore"
 
-#: ui/Bell.qml:151
+#: ui/Bell.qml:157
 #, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "Durata:"
 
-#: ui/Bell.qml:166
+#: ui/Bell.qml:173
 #, kde-format
 msgctxt "@label:valuesuffix %1 is visible bell duration"
 msgid "%1 ms"
@@ -375,7 +375,7 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/Bell.qml:170 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
+#: ui/Bell.qml:177 ui/KeyboardFilters.qml:66 ui/KeyboardFilters.qml:170
 #, kde-format
 msgctxt "@label:valuesuffix short for millisecond(s)"
 msgid "ms"
@@ -393,104 +393,98 @@ msgstr ""
 "Se hai problemi con determinati colori sullo schermo, questi filtri possono "
 "trasformarli in altri colori."
 
-#: ui/ColorblindnessCorrection.qml:31
+#: ui/ColorblindnessCorrection.qml:32
 #, kde-format
 msgctxt "@option check, Enable color blindness correction effect"
 msgid "Enable"
 msgstr "Abilita"
 
-#: ui/ColorblindnessCorrection.qml:44
+#: ui/ColorblindnessCorrection.qml:45
 #, kde-format
 msgctxt ""
 "@label:listbox Difficulty seeing any of the following colors on the screen"
 msgid "Problematic colors:"
 msgstr "Colori problematici:"
 
-#: ui/ColorblindnessCorrection.qml:49
+#: ui/ColorblindnessCorrection.qml:52
 #, kde-format
 msgctxt "@option"
 msgid "Red & purple (Protanopia)"
 msgstr "Rosso e viola (Protanopia)"
 
-#: ui/ColorblindnessCorrection.qml:50
+#: ui/ColorblindnessCorrection.qml:53
 #, kde-format
 msgctxt "@option"
 msgid "Green & purple (Deuteranopia)"
 msgstr "Verde e viola (Deuteranopia)"
 
-#: ui/ColorblindnessCorrection.qml:51
+#: ui/ColorblindnessCorrection.qml:54
 #, kde-format
 msgctxt "@option"
 msgid "Yellow, green & purple (Tritanopia)"
 msgstr "Giallo, verde e viola (Tritanopia)"
 
-#: ui/ColorblindnessCorrection.qml:52
+#: ui/ColorblindnessCorrection.qml:55
 #, kde-format
 msgctxt "@option"
 msgid "All (grayscale mode)"
 msgstr "Tutti (modalità scala di grigi)"
 
-#: ui/ColorblindnessCorrection.qml:67
+#: ui/ColorblindnessCorrection.qml:71
 #, kde-format
 msgctxt "@label"
 msgid "Intensity:"
 msgstr "Intensità:"
 
-#: ui/ColorblindnessCorrection.qml:90
+#: ui/ColorblindnessCorrection.qml:97
 #, kde-format
 msgctxt "@label Mild color blindness correction intensity"
 msgid "Mild"
 msgstr "Leggera"
 
-#: ui/ColorblindnessCorrection.qml:97
+#: ui/ColorblindnessCorrection.qml:104
 #, kde-format
 msgctxt "@label Intense color blindness correction intensity"
 msgid "Intense"
 msgstr "Intensa"
 
-#: ui/ColorblindnessCorrection.qml:115
+#: ui/ColorblindnessCorrection.qml:124
 #, kde-format
 msgctxt "@info"
 msgid "Adjusted colors:"
 msgstr "Colori regolati:"
 
-#: ui/ColorblindnessCorrection.qml:132
+#: ui/ColorblindnessCorrection.qml:141
 #, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Reds:"
 msgstr "Rossi:"
 
-#: ui/ColorblindnessCorrection.qml:133
+#: ui/ColorblindnessCorrection.qml:142
 #, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Greens:"
 msgstr "Verdi:"
 
-#: ui/ColorblindnessCorrection.qml:134
+#: ui/ColorblindnessCorrection.qml:143
 #, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Blues:"
 msgstr "Blu:"
 
-#: ui/ColorblindnessCorrection.qml:135
+#: ui/ColorblindnessCorrection.qml:144
 #, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Purples:"
 msgstr "Viola:"
 
-#: ui/Invert.qml:22
+#: ui/Invert.qml:17
 #, kde-format
 msgctxt "@label"
 msgid "Invert:"
 msgstr "Inverti:"
 
-#: ui/Invert.qml:23
-#, kde-format
-msgctxt "@option check, Enable invert effect"
-msgid "Enable"
-msgstr "Abilita"
-
-#: ui/Invert.qml:38
+#: ui/Invert.qml:18
 #, kde-format
 msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
@@ -498,7 +492,13 @@ msgstr ""
 "Utilizza le scorciatoie per attivare/disattivare l'inversione dei colori di "
 "visualizzazione e delle finestre"
 
-#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:355
+#: ui/Invert.qml:21
+#, kde-format
+msgctxt "@option check, Enable invert effect"
+msgid "Enable"
+msgstr "Abilita"
+
+#: ui/Invert.qml:39 ui/ZoomMagnifier.qml:333
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
@@ -510,13 +510,13 @@ msgctxt "@title:group prefix"
 msgid "Slow keys:"
 msgstr "Rallentamento dei tasti:"
 
-#: ui/KeyboardFilters.qml:23
+#: ui/KeyboardFilters.qml:21
 #, kde-format
 msgctxt "@option:check Enable slow keys"
 msgid "Enable"
 msgstr "Abilita"
 
-#: ui/KeyboardFilters.qml:34
+#: ui/KeyboardFilters.qml:33
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -528,13 +528,13 @@ msgstr ""
 "di tempo impostato. Utile se si digita accidentalmente più di un tasto alla "
 "volta o si ha difficoltà a premere il tasto desiderato la prima volta."
 
-#: ui/KeyboardFilters.qml:41
+#: ui/KeyboardFilters.qml:39
 #, kde-format
 msgctxt "@label:spinbox Slow keys Delay"
 msgid "Delay:"
 msgstr "Ritardo:"
 
-#: ui/KeyboardFilters.qml:56
+#: ui/KeyboardFilters.qml:57
 #, kde-format
 msgctxt "@label:valuesuffix %1 is slow keys delay"
 msgid "%1 ms"
@@ -542,43 +542,43 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/KeyboardFilters.qml:74
+#: ui/KeyboardFilters.qml:72
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Ring system bell:"
 msgstr "Suona la campanella di sistema:"
 
-#: ui/KeyboardFilters.qml:75
+#: ui/KeyboardFilters.qml:76
 #, kde-format
 msgctxt "@option:check Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "quando viene &premuto un tasto qualsiasi"
 
-#: ui/KeyboardFilters.qml:89
+#: ui/KeyboardFilters.qml:92
 #, kde-format
 msgctxt "@option:check Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "quando viene &accettato un tasto qualsiasi"
 
-#: ui/KeyboardFilters.qml:103
+#: ui/KeyboardFilters.qml:108
 #, kde-format
 msgctxt "@option:check Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "quando viene &rifiutato un tasto qualsiasi"
 
-#: ui/KeyboardFilters.qml:119
+#: ui/KeyboardFilters.qml:123
 #, kde-format
 msgctxt "@title:group prefix"
 msgid "Bounce keys:"
 msgstr "Pressione ravvicinata dei tasti:"
 
-#: ui/KeyboardFilters.qml:124
+#: ui/KeyboardFilters.qml:127
 #, kde-format
 msgctxt "@option:check Bounce keys enable"
 msgid "Enable"
 msgstr "Abilita"
 
-#: ui/KeyboardFilters.qml:135
+#: ui/KeyboardFilters.qml:139
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -590,13 +590,13 @@ msgstr ""
 "tremori alle mani che ti costringono a premere più volte un tasto quando "
 "intendi premerlo solo una volta."
 
-#: ui/KeyboardFilters.qml:142
+#: ui/KeyboardFilters.qml:145
 #, kde-format
 msgctxt "@label:spinbox Bounce keys delay"
 msgid "Delay:"
 msgstr "Ritardo:"
 
-#: ui/KeyboardFilters.qml:157
+#: ui/KeyboardFilters.qml:163
 #, kde-format
 msgctxt "@label:valuesuffix %1 is bounce keys delay"
 msgid "%1 ms"
@@ -604,7 +604,7 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/KeyboardFilters.qml:171
+#: ui/KeyboardFilters.qml:179
 #, kde-format
 msgctxt "@option:check for bounce keys"
 msgid "Ring system bell when rejected"
@@ -616,49 +616,49 @@ msgctxt "@title Category name in sidebar"
 msgid "Zoom & Magnifier"
 msgstr "Zoom e lente d'ingrandimento"
 
-#: ui/main.qml:33
+#: ui/main.qml:34
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "System Bell"
 msgstr "Campanella di sistema"
 
-#: ui/main.qml:38
+#: ui/main.qml:40
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Modifier Keys"
 msgstr "Tasti modificatori"
 
-#: ui/main.qml:43
+#: ui/main.qml:46
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Keyboard Filters"
 msgstr "Filtri tastiera"
 
-#: ui/main.qml:48
+#: ui/main.qml:52
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Mouse Navigation"
 msgstr "Navigazione con mouse"
 
-#: ui/main.qml:53
+#: ui/main.qml:58
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "Lettore dello schermo"
 
-#: ui/main.qml:58
+#: ui/main.qml:64
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr "Correzione del daltonismo"
 
-#: ui/main.qml:63
+#: ui/main.qml:70
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
 msgstr "Inverti"
 
-#: ui/main.qml:68
+#: ui/main.qml:76
 #, kde-format
 msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
@@ -670,13 +670,13 @@ msgctxt "@option:check"
 msgid "Sticky keys:"
 msgstr "Permanenza dei tasti:"
 
-#: ui/ModifierKeys.qml:22
+#: ui/ModifierKeys.qml:20
 #, kde-format
 msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
 msgstr "Abilita"
 
-#: ui/ModifierKeys.qml:33
+#: ui/ModifierKeys.qml:32
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -694,7 +694,7 @@ msgctxt "@option:check"
 msgid "Lock sticky keys"
 msgstr "Blocca la permanenza dei tasti"
 
-#: ui/ModifierKeys.qml:51
+#: ui/ModifierKeys.qml:52
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -704,46 +704,46 @@ msgstr ""
 "Premendo due volte un tasto modificatore, questo rimarrà attivo finché non "
 "sarà premuto nuovamente."
 
-#: ui/ModifierKeys.qml:57
+#: ui/ModifierKeys.qml:60
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable when two keys are held down"
 msgstr "Disabilita quando si tengono premuti due tasti"
 
-#: ui/ModifierKeys.qml:70
+#: ui/ModifierKeys.qml:75
 #, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when modifier keys are used"
 msgstr ""
 "Suona la campanella di sistema quando vengono utilizzati i tasti modificatori"
 
-#: ui/ModifierKeys.qml:88
+#: ui/ModifierKeys.qml:91
 #, kde-format
 msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
 msgstr "Risposta:"
 
-#: ui/ModifierKeys.qml:93
+#: ui/ModifierKeys.qml:94
 #, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when locking keys are used"
 msgstr ""
 "Suona la campanella di sistema quando vengono utilizzati tasti di blocco"
 
-#: ui/ModifierKeys.qml:104
+#: ui/ModifierKeys.qml:106
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
 msgstr "I tasti di blocco sono Bloc Maiusc, Bloc Num e Bloc Scorr."
 
-#: ui/ModifierKeys.qml:108
+#: ui/ModifierKeys.qml:112
 #, kde-format
 msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
 msgstr ""
 "Mostra le notifiche quando si utilizzano tasti modificatori o di blocco"
 
-#: ui/ModifierKeys.qml:120
+#: ui/ModifierKeys.qml:126
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Notifications…"
@@ -755,13 +755,13 @@ msgctxt "@option:check"
 msgid "Use number pad to move pointer:"
 msgstr "Usa il tastierino numerico per spostare il puntatore:"
 
-#: ui/MouseNavigation.qml:22
+#: ui/MouseNavigation.qml:19
 #, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "Abilita"
 
-#: ui/MouseNavigation.qml:33
+#: ui/MouseNavigation.qml:31
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -782,7 +782,7 @@ msgstr ""
 "shortcut>, <shortcut>3</shortcut>, <shortcut>7</shortcut> e <shortcut>9</"
 "shortcut> consentono movimenti diagonali."
 
-#: ui/MouseNavigation.qml:39
+#: ui/MouseNavigation.qml:37
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
@@ -796,8 +796,8 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
-#: ui/MouseNavigation.qml:114
+#: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:90
+#: ui/MouseNavigation.qml:118
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
@@ -811,7 +811,7 @@ msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Intervallo di ripetizione:"
 
-#: ui/MouseNavigation.qml:84
+#: ui/MouseNavigation.qml:86
 #, kde-format
 msgctxt "@label:valuesuffix repeat interval spinbox %1 is value"
 msgid "%1 ms"
@@ -819,13 +819,13 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/MouseNavigation.qml:93
+#: ui/MouseNavigation.qml:95
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Tempo di accelerazione:"
 
-#: ui/MouseNavigation.qml:110
+#: ui/MouseNavigation.qml:114
 #, kde-format
 msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
 msgid "%1 ms"
@@ -833,115 +833,103 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/MouseNavigation.qml:118
+#: ui/MouseNavigation.qml:123
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Velocità massima:"
 
-#: ui/MouseNavigation.qml:132
+#: ui/MouseNavigation.qml:139
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
 msgstr "Accelerazione del puntatore:"
 
-#: ui/ScreenReader.qml:20
+#: ui/ScreenReader.qml:22
 #, kde-format
 msgctxt "@info Placeholder message title"
 msgid "The Orca Screen Reader is not installed"
 msgstr "Il lettore dello schermo Orca non è installato"
 
-#: ui/ScreenReader.qml:21
+#: ui/ScreenReader.qml:23
 #, kde-format
 msgctxt "@info Placeholder message explanation"
 msgid "Please install it, then close and reopen this window"
 msgstr "Installalo, poi chiudi e riapri questa finestra"
 
-#: ui/ScreenReader.qml:27
+#: ui/ScreenReader.qml:30
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable Screen Reader"
 msgstr "Abilita il lettore dello schermo"
 
-#: ui/ScreenReader.qml:39
+#: ui/ScreenReader.qml:45
 #, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Avvia la configurazione del lettore dello schermo Orca..."
 
-#: ui/ShakeCursor.qml:15
+#: ui/ShakeCursor.qml:16
 #, kde-format
 msgctxt "@label"
 msgid "Shake pointer to find it:"
 msgstr "Scuoti il puntatore per trovarlo:"
 
-#: ui/ShakeCursor.qml:16
+#: ui/ShakeCursor.qml:18
 #, kde-format
 msgctxt "@option check, Enable shake pointer effect"
 msgid "Enable"
 msgstr "Abilita"
 
-#: ui/ShakeCursor.qml:28
+#: ui/ShakeCursor.qml:31
 #, kde-format
 msgctxt "@label Pointer magnification level"
 msgid "Magnification:"
 msgstr "Ingrandimento:"
 
-#: ui/ShakeCursor.qml:56
+#: ui/ShakeCursor.qml:60
 #, kde-format
 msgctxt "@label Normal pointer size"
 msgid "Normal"
 msgstr "Normale"
 
-#: ui/ShakeCursor.qml:63
+#: ui/ShakeCursor.qml:67
 #, kde-format
 msgctxt "@label Large pointer size"
 msgid "Large"
 msgstr "Grande"
 
-#: ui/ZoomMagnifier.qml:22
-#, kde-format
-msgctxt "@label, followed by 'full screen' or 'magnify region'"
-msgid "Zoom:"
-msgstr "Ingrandimento:"
-
 #: ui/ZoomMagnifier.qml:24
-#, kde-format
-msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
-msgid "Full screen"
-msgstr "Schermo intero"
-
-#: ui/ZoomMagnifier.qml:53
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Show pixel grid at zoom level:"
 msgstr "Mostra la griglia dei pixel al livello di zoom:"
 
-#: ui/ZoomMagnifier.qml:108
+#: ui/ZoomMagnifier.qml:60
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer tracking:"
 msgstr "Tracciamento del puntatore:"
 
-#: ui/ZoomMagnifier.qml:113
+#: ui/ZoomMagnifier.qml:82
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
 msgstr "Proporzionale"
 
-#: ui/ZoomMagnifier.qml:114
+#: ui/ZoomMagnifier.qml:83
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with pointer"
 msgstr "L'area dello zoom si sposta in sincronia con il puntatore del mouse"
 
-#: ui/ZoomMagnifier.qml:118
+#: ui/ZoomMagnifier.qml:87
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Centrato"
 
-#: ui/ZoomMagnifier.qml:119
+#: ui/ZoomMagnifier.qml:88
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, except near screen edges"
@@ -949,13 +937,13 @@ msgstr ""
 "Il puntatore del mouse rimane centrato sullo schermo, tranne vicino ai bordi "
 "dello schermo"
 
-#: ui/ZoomMagnifier.qml:123
+#: ui/ZoomMagnifier.qml:92
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
 msgstr "Centrato (preciso)"
 
-#: ui/ZoomMagnifier.qml:124
+#: ui/ZoomMagnifier.qml:93
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, even near screen edges"
@@ -963,56 +951,50 @@ msgstr ""
 "Il puntatore del mouse rimane centrato sullo schermo, anche vicino ai bordi "
 "dello schermo"
 
-#: ui/ZoomMagnifier.qml:128
+#: ui/ZoomMagnifier.qml:97
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
 msgstr "Sposta"
 
-#: ui/ZoomMagnifier.qml:129
+#: ui/ZoomMagnifier.qml:98
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer pushes zoom area at screen edges"
 msgstr "Il puntatore del mouse sposta l'area di zoom sui bordi dello schermo"
 
-#: ui/ZoomMagnifier.qml:133
+#: ui/ZoomMagnifier.qml:102
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
 msgstr "Disabilitato"
 
-#: ui/ZoomMagnifier.qml:134
+#: ui/ZoomMagnifier.qml:103
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow pointer"
 msgstr "L'area dello zoom non segue il puntatore del mouse"
 
-#: ui/ZoomMagnifier.qml:151
+#: ui/ZoomMagnifier.qml:123
 #, kde-format
 msgctxt "@option:check"
 msgid "Sharpen screen content while zoomed in"
 msgstr ""
 "Aumenta la nitidezza dei contenuti dello schermo quando si utilizza lo zoom."
 
-#: ui/ZoomMagnifier.qml:162
+#: ui/ZoomMagnifier.qml:137
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "Abilita il tracciamento del cursore del testo"
 
-#: ui/ZoomMagnifier.qml:178
-#, kde-format
-msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
-msgid "Magnify region"
-msgstr "Ingrandisci la regione"
-
-#: ui/ZoomMagnifier.qml:205
+#: ui/ZoomMagnifier.qml:154
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "Larghezza:"
 
-#: ui/ZoomMagnifier.qml:216 ui/ZoomMagnifier.qml:241
+#: ui/ZoomMagnifier.qml:167 ui/ZoomMagnifier.qml:195
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1020,47 +1002,63 @@ msgid_plural "%1 px"
 msgstr[0] "%1 px"
 msgstr[1] "%1 px"
 
-#: ui/ZoomMagnifier.qml:217 ui/ZoomMagnifier.qml:242
+#: ui/ZoomMagnifier.qml:168 ui/ZoomMagnifier.qml:196
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "px"
 
-#: ui/ZoomMagnifier.qml:230
+#: ui/ZoomMagnifier.qml:182
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "Altezza:"
 
-#: ui/ZoomMagnifier.qml:259
+#: ui/ZoomMagnifier.qml:211
+#, kde-format
+msgctxt "@label, followed by 'full screen' or 'magnify region'"
+msgid "Zoom:"
+msgstr "Ingrandimento:"
+
+#: ui/ZoomMagnifier.qml:216
+#, kde-format
+msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
+msgid "Full screen"
+msgstr "Schermo intero"
+
+#: ui/ZoomMagnifier.qml:231
+#, kde-format
+msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
+msgid "Magnify region"
+msgstr "Ingrandisci la regione"
+
+#: ui/ZoomMagnifier.qml:244
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "Disabilitato"
 
-#: ui/ZoomMagnifier.qml:272
+#: ui/ZoomMagnifier.qml:265
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "Fattore di ingrandimento:"
 
-#: ui/ZoomMagnifier.qml:305
+#: ui/ZoomMagnifier.qml:303
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr "Tasti modificatori del gesto di scorrimento:"
 
-#: ui/ZoomMagnifier.qml:344
+#: ui/ZoomMagnifier.qml:304
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "Scorri durante la pressione dei tasti modificatori per ingrandire"
 
-#: ui/ZoomMagnifier.qml:365
-#, kde-format
-msgctxt "@label Hint for zoom/magnify effect usage"
-msgid "Use shortcuts to control zoom"
-msgstr "Utilizza le scorciatoie per controllare l'ingrandimento"
+#~ msgctxt "@label Hint for zoom/magnify effect usage"
+#~ msgid "Use shortcuts to control zoom"
+#~ msgstr "Utilizza le scorciatoie per controllare l'ingrandimento"
 
 #~ msgctxt "@option:check"
 #~ msgid "Enable focus tracking"

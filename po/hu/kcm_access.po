@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-07 00:48+0000\n"
+"POT-Creation-Date: 2026-08-12 00:48+0000\n"
 "PO-Revision-Date: 2026-05-18 22:21+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -277,91 +277,91 @@ msgstr "A Nagyítás effektus be van-e kapcsolva"
 msgid "Whether the Magnifier effect is enabled"
 msgstr "A Felnagyítás effektus be van-e kapcsolva"
 
-#: ui/Bell.qml:19
+#: ui/Bell.qml:18
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Please choose an audio file"
 msgstr "Válasszon ki egy hangfájlt"
 
-#: ui/Bell.qml:21
+#: ui/Bell.qml:20
 #, kde-format
 msgctxt "Name filters in a file dialog. Do not translate `(*.ogg *.oga *.wav)`"
 msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
 msgstr "Hangfájlok (*.ogg *.oga *.wav)"
 
-#: ui/Bell.qml:30
+#: ui/Bell.qml:28
 #, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Audible bell:"
 msgstr "Hallható csengő:"
 
-#: ui/Bell.qml:31
+#: ui/Bell.qml:32
 #, kde-format
 msgctxt "Enable the system bell"
 msgid "Enable"
 msgstr "Bekapcsolás"
 
-#: ui/Bell.qml:42
+#: ui/Bell.qml:44
 #, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
 msgstr "Egyéni hang:"
 
-#: ui/Bell.qml:75
+#: ui/Bell.qml:74
 #, kde-format
 msgctxt "@action:button icononly tooltip"
 msgid "Choose audio file for the system bell"
 msgstr "Hangfájl keresése a rendszercsengőhöz"
 
-#: ui/Bell.qml:76
+#: ui/Bell.qml:75
 #, kde-format
 msgctxt "@action button accessible only"
 msgid "Choose audio file"
 msgstr "Válasszon ki egy hangfájlt"
 
-#: ui/Bell.qml:77
+#: ui/Bell.qml:76
 #, kde-format
 msgctxt "@info:usagetip accessible description for button"
 msgid "Opens dialog"
 msgstr "Megnyit egy párbeszédablakot"
 
-#: ui/Bell.qml:93
+#: ui/Bell.qml:91
 #, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Visual bell:"
 msgstr "Vizuális csengő:"
 
-#: ui/Bell.qml:94
+#: ui/Bell.qml:95
 #, kde-format
 msgctxt "@option:check Enable visual bell"
 msgid "Enable"
 msgstr "Bekapcsolás"
 
-#: ui/Bell.qml:108
+#: ui/Bell.qml:111
 #, kde-format
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
 msgstr "Képernyőszínek invertálása"
 
-#: ui/Bell.qml:126
+#: ui/Bell.qml:129
 #, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
 msgstr "Képernyő villogtatása"
 
-#: ui/Bell.qml:137
+#: ui/Bell.qml:141
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr "Szín"
 
-#: ui/Bell.qml:151
+#: ui/Bell.qml:157
 #, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "Időtartam:"
 
-#: ui/Bell.qml:166
+#: ui/Bell.qml:173
 #, kde-format
 msgctxt "@label:valuesuffix %1 is visible bell duration"
 msgid "%1 ms"
@@ -369,7 +369,7 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/Bell.qml:170 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
+#: ui/Bell.qml:177 ui/KeyboardFilters.qml:66 ui/KeyboardFilters.qml:170
 #, kde-format
 msgctxt "@label:valuesuffix short for millisecond(s)"
 msgid "ms"
@@ -387,104 +387,98 @@ msgstr ""
 "Ha problémája van a képernyőn megjelenő bizonyos színekkel, ezek a szűrők "
 "más színekre változtathatják azokat."
 
-#: ui/ColorblindnessCorrection.qml:31
+#: ui/ColorblindnessCorrection.qml:32
 #, kde-format
 msgctxt "@option check, Enable color blindness correction effect"
 msgid "Enable"
 msgstr "Bekapcsolás"
 
-#: ui/ColorblindnessCorrection.qml:44
+#: ui/ColorblindnessCorrection.qml:45
 #, kde-format
 msgctxt ""
 "@label:listbox Difficulty seeing any of the following colors on the screen"
 msgid "Problematic colors:"
 msgstr "Problémás színek:"
 
-#: ui/ColorblindnessCorrection.qml:49
+#: ui/ColorblindnessCorrection.qml:52
 #, kde-format
 msgctxt "@option"
 msgid "Red & purple (Protanopia)"
 msgstr "Vörös és lila (protanópia)"
 
-#: ui/ColorblindnessCorrection.qml:50
+#: ui/ColorblindnessCorrection.qml:53
 #, kde-format
 msgctxt "@option"
 msgid "Green & purple (Deuteranopia)"
 msgstr "Zöld és lila (deuteranópia)"
 
-#: ui/ColorblindnessCorrection.qml:51
+#: ui/ColorblindnessCorrection.qml:54
 #, kde-format
 msgctxt "@option"
 msgid "Yellow, green & purple (Tritanopia)"
 msgstr "Sárga, zöld és lila (tritanópia)"
 
-#: ui/ColorblindnessCorrection.qml:52
+#: ui/ColorblindnessCorrection.qml:55
 #, kde-format
 msgctxt "@option"
 msgid "All (grayscale mode)"
 msgstr "Mind (szürkeárnyalatos mód)"
 
-#: ui/ColorblindnessCorrection.qml:67
+#: ui/ColorblindnessCorrection.qml:71
 #, kde-format
 msgctxt "@label"
 msgid "Intensity:"
 msgstr "Intenzitás:"
 
-#: ui/ColorblindnessCorrection.qml:90
+#: ui/ColorblindnessCorrection.qml:97
 #, kde-format
 msgctxt "@label Mild color blindness correction intensity"
 msgid "Mild"
 msgstr "Enyhe"
 
-#: ui/ColorblindnessCorrection.qml:97
+#: ui/ColorblindnessCorrection.qml:104
 #, kde-format
 msgctxt "@label Intense color blindness correction intensity"
 msgid "Intense"
 msgstr "Intenzív"
 
-#: ui/ColorblindnessCorrection.qml:115
+#: ui/ColorblindnessCorrection.qml:124
 #, kde-format
 msgctxt "@info"
 msgid "Adjusted colors:"
 msgstr "Módosított színek:"
 
-#: ui/ColorblindnessCorrection.qml:132
+#: ui/ColorblindnessCorrection.qml:141
 #, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Reds:"
 msgstr "Vörösek:"
 
-#: ui/ColorblindnessCorrection.qml:133
+#: ui/ColorblindnessCorrection.qml:142
 #, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Greens:"
 msgstr "Zöldek:"
 
-#: ui/ColorblindnessCorrection.qml:134
+#: ui/ColorblindnessCorrection.qml:143
 #, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Blues:"
 msgstr "Kékek:"
 
-#: ui/ColorblindnessCorrection.qml:135
+#: ui/ColorblindnessCorrection.qml:144
 #, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Purples:"
 msgstr "Lilák:"
 
-#: ui/Invert.qml:22
+#: ui/Invert.qml:17
 #, kde-format
 msgctxt "@label"
 msgid "Invert:"
 msgstr "Invertálás:"
 
-#: ui/Invert.qml:23
-#, kde-format
-msgctxt "@option check, Enable invert effect"
-msgid "Enable"
-msgstr "Bekapcsolás"
-
-#: ui/Invert.qml:38
+#: ui/Invert.qml:18
 #, kde-format
 msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
@@ -492,7 +486,13 @@ msgstr ""
 "Gyorsbillentyűk használata a kijelző- és ablakszínek invertálásának be-/"
 "kikapcsolásához"
 
-#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:355
+#: ui/Invert.qml:21
+#, kde-format
+msgctxt "@option check, Enable invert effect"
+msgid "Enable"
+msgstr "Bekapcsolás"
+
+#: ui/Invert.qml:39 ui/ZoomMagnifier.qml:333
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
@@ -504,13 +504,13 @@ msgctxt "@title:group prefix"
 msgid "Slow keys:"
 msgstr "Lassú billentyűk:"
 
-#: ui/KeyboardFilters.qml:23
+#: ui/KeyboardFilters.qml:21
 #, kde-format
 msgctxt "@option:check Enable slow keys"
 msgid "Enable"
 msgstr "Bekapcsolás"
 
-#: ui/KeyboardFilters.qml:34
+#: ui/KeyboardFilters.qml:33
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -522,13 +522,13 @@ msgstr ""
 "Hasznos, ha véletlenül egyszerre több billentyűt nyom le, vagy ha véletlenül "
 "nehezen nyomja meg a kívánt billentyűt első alkalommal."
 
-#: ui/KeyboardFilters.qml:41
+#: ui/KeyboardFilters.qml:39
 #, kde-format
 msgctxt "@label:spinbox Slow keys Delay"
 msgid "Delay:"
 msgstr "Késleltetés:"
 
-#: ui/KeyboardFilters.qml:56
+#: ui/KeyboardFilters.qml:57
 #, kde-format
 msgctxt "@label:valuesuffix %1 is slow keys delay"
 msgid "%1 ms"
@@ -536,43 +536,43 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/KeyboardFilters.qml:74
+#: ui/KeyboardFilters.qml:72
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Ring system bell:"
 msgstr "Rendszercsengő megszólaltatása:"
 
-#: ui/KeyboardFilters.qml:75
+#: ui/KeyboardFilters.qml:76
 #, kde-format
 msgctxt "@option:check Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "Billentyű megny&omásakor"
 
-#: ui/KeyboardFilters.qml:89
+#: ui/KeyboardFilters.qml:92
 #, kde-format
 msgctxt "@option:check Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "Billentyű &elfogadásakor"
 
-#: ui/KeyboardFilters.qml:103
+#: ui/KeyboardFilters.qml:108
 #, kde-format
 msgctxt "@option:check Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "Billentyű &visszautasításakor"
 
-#: ui/KeyboardFilters.qml:119
+#: ui/KeyboardFilters.qml:123
 #, kde-format
 msgctxt "@title:group prefix"
 msgid "Bounce keys:"
 msgstr "Visszaugró billentyűk:"
 
-#: ui/KeyboardFilters.qml:124
+#: ui/KeyboardFilters.qml:127
 #, kde-format
 msgctxt "@option:check Bounce keys enable"
 msgid "Enable"
 msgstr "Bekapcsolás"
 
-#: ui/KeyboardFilters.qml:135
+#: ui/KeyboardFilters.qml:139
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -584,13 +584,13 @@ msgstr ""
 "Hasznos, ha kézremegés miatt többször is megnyom egy billentyűt, amikor csak "
 "egyszer akarja megnyomni."
 
-#: ui/KeyboardFilters.qml:142
+#: ui/KeyboardFilters.qml:145
 #, kde-format
 msgctxt "@label:spinbox Bounce keys delay"
 msgid "Delay:"
 msgstr "Késleltetés:"
 
-#: ui/KeyboardFilters.qml:157
+#: ui/KeyboardFilters.qml:163
 #, kde-format
 msgctxt "@label:valuesuffix %1 is bounce keys delay"
 msgid "%1 ms"
@@ -598,7 +598,7 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/KeyboardFilters.qml:171
+#: ui/KeyboardFilters.qml:179
 #, kde-format
 msgctxt "@option:check for bounce keys"
 msgid "Ring system bell when rejected"
@@ -610,49 +610,49 @@ msgctxt "@title Category name in sidebar"
 msgid "Zoom & Magnifier"
 msgstr "Nagyítás és felnagyítás"
 
-#: ui/main.qml:33
+#: ui/main.qml:34
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "System Bell"
 msgstr "Rendszercsengő"
 
-#: ui/main.qml:38
+#: ui/main.qml:40
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Modifier Keys"
 msgstr "Módosítóbillentyűk"
 
-#: ui/main.qml:43
+#: ui/main.qml:46
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Keyboard Filters"
 msgstr "Billentyűzetszűrők"
 
-#: ui/main.qml:48
+#: ui/main.qml:52
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Mouse Navigation"
 msgstr "Egeres navigáció"
 
-#: ui/main.qml:53
+#: ui/main.qml:58
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "Képernyőolvasó"
 
-#: ui/main.qml:58
+#: ui/main.qml:64
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr "Színvakság-korrekció"
 
-#: ui/main.qml:63
+#: ui/main.qml:70
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
 msgstr "Invertálás"
 
-#: ui/main.qml:68
+#: ui/main.qml:76
 #, kde-format
 msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
@@ -664,13 +664,13 @@ msgctxt "@option:check"
 msgid "Sticky keys:"
 msgstr "Ragadó billentyűk:"
 
-#: ui/ModifierKeys.qml:22
+#: ui/ModifierKeys.qml:20
 #, kde-format
 msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
 msgstr "Bekapcsolás"
 
-#: ui/ModifierKeys.qml:33
+#: ui/ModifierKeys.qml:32
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -688,7 +688,7 @@ msgctxt "@option:check"
 msgid "Lock sticky keys"
 msgstr "Ragadó billentyűk zárolása"
 
-#: ui/ModifierKeys.qml:51
+#: ui/ModifierKeys.qml:52
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -698,43 +698,43 @@ msgstr ""
 "Egy módosító billentyű kétszeri megnyomásával a billentyű aktív állapotban "
 "marad, amíg újra meg nem nyomja azt."
 
-#: ui/ModifierKeys.qml:57
+#: ui/ModifierKeys.qml:60
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable when two keys are held down"
 msgstr "Kikapcsolás, ha két billentyű van lenyomva tartva"
 
-#: ui/ModifierKeys.qml:70
+#: ui/ModifierKeys.qml:75
 #, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when modifier keys are used"
 msgstr "Csengetés módosítóbillentyűk használatakor"
 
-#: ui/ModifierKeys.qml:88
+#: ui/ModifierKeys.qml:91
 #, kde-format
 msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
 msgstr "Visszajelzés:"
 
-#: ui/ModifierKeys.qml:93
+#: ui/ModifierKeys.qml:94
 #, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when locking keys are used"
 msgstr "Csengetés zárolóbillentyűk használatakor"
 
-#: ui/ModifierKeys.qml:104
+#: ui/ModifierKeys.qml:106
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
 msgstr "A zárolóbillentyűk a Caps Lock, Num Lock és a Scroll Lock."
 
-#: ui/ModifierKeys.qml:108
+#: ui/ModifierKeys.qml:112
 #, kde-format
 msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
 msgstr "Értesítés megjelenítése módosító- vagy zárolóbillentyű használatakor"
 
-#: ui/ModifierKeys.qml:120
+#: ui/ModifierKeys.qml:126
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Notifications…"
@@ -746,13 +746,13 @@ msgctxt "@option:check"
 msgid "Use number pad to move pointer:"
 msgstr "Mutató mozgatása a számbillentyűzettel:"
 
-#: ui/MouseNavigation.qml:22
+#: ui/MouseNavigation.qml:19
 #, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "Bekapcsolás"
 
-#: ui/MouseNavigation.qml:33
+#: ui/MouseNavigation.qml:31
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -775,7 +775,7 @@ msgstr ""
 "shortcut>-es és <shortcut>9</shortcut>-es billentyűk az átlós mozgást teszik "
 "lehetővé."
 
-#: ui/MouseNavigation.qml:39
+#: ui/MouseNavigation.qml:37
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
@@ -789,8 +789,8 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
-#: ui/MouseNavigation.qml:114
+#: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:90
+#: ui/MouseNavigation.qml:118
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
@@ -804,7 +804,7 @@ msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Ismétlési időköz:"
 
-#: ui/MouseNavigation.qml:84
+#: ui/MouseNavigation.qml:86
 #, kde-format
 msgctxt "@label:valuesuffix repeat interval spinbox %1 is value"
 msgid "%1 ms"
@@ -812,13 +812,13 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/MouseNavigation.qml:93
+#: ui/MouseNavigation.qml:95
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Gyorsítási idő:"
 
-#: ui/MouseNavigation.qml:110
+#: ui/MouseNavigation.qml:114
 #, kde-format
 msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
 msgid "%1 ms"
@@ -826,183 +826,165 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/MouseNavigation.qml:118
+#: ui/MouseNavigation.qml:123
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Maximális sebesség:"
 
-#: ui/MouseNavigation.qml:132
+#: ui/MouseNavigation.qml:139
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
 msgstr "Mutatógyorsítás:"
 
-#: ui/ScreenReader.qml:20
+#: ui/ScreenReader.qml:22
 #, kde-format
 msgctxt "@info Placeholder message title"
 msgid "The Orca Screen Reader is not installed"
 msgstr "Az Orca képernyőolvasó nincs telepítve"
 
-#: ui/ScreenReader.qml:21
+#: ui/ScreenReader.qml:23
 #, kde-format
 msgctxt "@info Placeholder message explanation"
 msgid "Please install it, then close and reopen this window"
 msgstr "Kérjük, telepítse, majd zárja be és nyissa meg újra ezt az ablakot"
 
-#: ui/ScreenReader.qml:27
+#: ui/ScreenReader.qml:30
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable Screen Reader"
 msgstr "Képernyőolvasó bekapcsolása"
 
-#: ui/ScreenReader.qml:39
+#: ui/ScreenReader.qml:45
 #, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Az Orca beállításainak betöltése…"
 
-#: ui/ShakeCursor.qml:15
+#: ui/ShakeCursor.qml:16
 #, kde-format
 msgctxt "@label"
 msgid "Shake pointer to find it:"
 msgstr "Mutató rázása a megtalálásához:"
 
-#: ui/ShakeCursor.qml:16
+#: ui/ShakeCursor.qml:18
 #, kde-format
 msgctxt "@option check, Enable shake pointer effect"
 msgid "Enable"
 msgstr "Bekapcsolás"
 
-#: ui/ShakeCursor.qml:28
+#: ui/ShakeCursor.qml:31
 #, kde-format
 msgctxt "@label Pointer magnification level"
 msgid "Magnification:"
 msgstr "Nagyítás:"
 
-#: ui/ShakeCursor.qml:56
+#: ui/ShakeCursor.qml:60
 #, kde-format
 msgctxt "@label Normal pointer size"
 msgid "Normal"
 msgstr "Normál"
 
-#: ui/ShakeCursor.qml:63
+#: ui/ShakeCursor.qml:67
 #, kde-format
 msgctxt "@label Large pointer size"
 msgid "Large"
 msgstr "Nagy"
 
-#: ui/ZoomMagnifier.qml:22
-#, kde-format
-msgctxt "@label, followed by 'full screen' or 'magnify region'"
-msgid "Zoom:"
-msgstr "Nagyítás:"
-
 #: ui/ZoomMagnifier.qml:24
-#, kde-format
-msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
-msgid "Full screen"
-msgstr "Teljes képernyő"
-
-#: ui/ZoomMagnifier.qml:53
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Show pixel grid at zoom level:"
 msgstr "Képpontrács megjelenítése nagyítási szinten:"
 
-#: ui/ZoomMagnifier.qml:108
+#: ui/ZoomMagnifier.qml:60
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer tracking:"
 msgstr "Mutatókövetés:"
 
-#: ui/ZoomMagnifier.qml:113
+#: ui/ZoomMagnifier.qml:82
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
 msgstr "Arányosan"
 
-#: ui/ZoomMagnifier.qml:114
+#: ui/ZoomMagnifier.qml:83
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with pointer"
 msgstr "A nagyított terület a mutatóval együtt mozog"
 
-#: ui/ZoomMagnifier.qml:118
+#: ui/ZoomMagnifier.qml:87
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Középre igazítva"
 
-#: ui/ZoomMagnifier.qml:119
+#: ui/ZoomMagnifier.qml:88
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, except near screen edges"
 msgstr ""
 "A mutató a képernyő közepén marad, kivéve a képernyő széleinek közelében"
 
-#: ui/ZoomMagnifier.qml:123
+#: ui/ZoomMagnifier.qml:92
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
 msgstr "Középre igazítva (szigorú)"
 
-#: ui/ZoomMagnifier.qml:124
+#: ui/ZoomMagnifier.qml:93
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, even near screen edges"
 msgstr ""
 "A mutató a képernyő közepén marad, még a képernyő széleinek közelében is"
 
-#: ui/ZoomMagnifier.qml:128
+#: ui/ZoomMagnifier.qml:97
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
 msgstr "Nyomásra"
 
-#: ui/ZoomMagnifier.qml:129
+#: ui/ZoomMagnifier.qml:98
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer pushes zoom area at screen edges"
 msgstr "A mutató a képernyő szélén lévő nagyítási területet tolja"
 
-#: ui/ZoomMagnifier.qml:133
+#: ui/ZoomMagnifier.qml:102
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
 msgstr "Kikapcsolva"
 
-#: ui/ZoomMagnifier.qml:134
+#: ui/ZoomMagnifier.qml:103
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow pointer"
 msgstr "A nagyított terület nem követi a mutatót"
 
-#: ui/ZoomMagnifier.qml:151
+#: ui/ZoomMagnifier.qml:123
 #, kde-format
 msgctxt "@option:check"
 msgid "Sharpen screen content while zoomed in"
 msgstr "A képernyő tartalmának élesítése nagyításkor"
 
-#: ui/ZoomMagnifier.qml:162
+#: ui/ZoomMagnifier.qml:137
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "Szövegkurzor követés bekapcsolása"
 
-#: ui/ZoomMagnifier.qml:178
-#, kde-format
-msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
-msgid "Magnify region"
-msgstr "Terület felnagyítása"
-
-#: ui/ZoomMagnifier.qml:205
+#: ui/ZoomMagnifier.qml:154
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "Szélesség:"
 
-#: ui/ZoomMagnifier.qml:216 ui/ZoomMagnifier.qml:241
+#: ui/ZoomMagnifier.qml:167 ui/ZoomMagnifier.qml:195
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1010,47 +992,63 @@ msgid_plural "%1 px"
 msgstr[0] "%1 képpont"
 msgstr[1] "%1 képpont"
 
-#: ui/ZoomMagnifier.qml:217 ui/ZoomMagnifier.qml:242
+#: ui/ZoomMagnifier.qml:168 ui/ZoomMagnifier.qml:196
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "képpont"
 
-#: ui/ZoomMagnifier.qml:230
+#: ui/ZoomMagnifier.qml:182
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "Magasság:"
 
-#: ui/ZoomMagnifier.qml:259
+#: ui/ZoomMagnifier.qml:211
+#, kde-format
+msgctxt "@label, followed by 'full screen' or 'magnify region'"
+msgid "Zoom:"
+msgstr "Nagyítás:"
+
+#: ui/ZoomMagnifier.qml:216
+#, kde-format
+msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
+msgid "Full screen"
+msgstr "Teljes képernyő"
+
+#: ui/ZoomMagnifier.qml:231
+#, kde-format
+msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
+msgid "Magnify region"
+msgstr "Terület felnagyítása"
+
+#: ui/ZoomMagnifier.qml:244
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "Kikapcsolva"
 
-#: ui/ZoomMagnifier.qml:272
+#: ui/ZoomMagnifier.qml:265
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "Nagyítási arány:"
 
-#: ui/ZoomMagnifier.qml:305
+#: ui/ZoomMagnifier.qml:303
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr "Görgetési mozdulat módosítóbillentyűi:"
 
-#: ui/ZoomMagnifier.qml:344
+#: ui/ZoomMagnifier.qml:304
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "Nagyításhoz görgessen a módosító billentyűk lenyomva tartásakor"
 
-#: ui/ZoomMagnifier.qml:365
-#, kde-format
-msgctxt "@label Hint for zoom/magnify effect usage"
-msgid "Use shortcuts to control zoom"
-msgstr "Gyorsbillentyűk használata a nagyítás vezérléséhez"
+#~ msgctxt "@label Hint for zoom/magnify effect usage"
+#~ msgid "Use shortcuts to control zoom"
+#~ msgstr "Gyorsbillentyűk használata a nagyítás vezérléséhez"
 
 #~ msgctxt "@option:check"
 #~ msgid "Enable focus tracking"
