@@ -242,7 +242,7 @@ FocusScope {
 
         acceptedButtons: {
             if (hoveredItem === null && main.isRootView) {
-                return root.isPopup ? (Qt.LeftButton | Qt.MiddleButton | Qt.BackButton) : Qt.LeftButton;
+                return root.isPopup ? (Qt.LeftButton | Qt.MiddleButton | Qt.RightButton | Qt.BackButton) : Qt.LeftButton | Qt.RightButton;
             }
 
             return root.isPopup ? (Qt.LeftButton | Qt.MiddleButton | Qt.RightButton | Qt.BackButton)
