@@ -46,9 +46,9 @@
 </authorgroup>
 
 <date
->08/04/2021</date>
+>10/5/2026</date>
 <releaseinfo
->Plasma 5.20</releaseinfo>
+>Plasma 6.6</releaseinfo>
 
 <keywordset>
 <keyword
@@ -76,9 +76,13 @@
 >Questo modulo è progettato per aiutare gli utenti che hanno difficoltà nell'ascoltare segnali, oppure ad usare una tastiera. </para>
 
 <para
->Il modulo è diviso in sei schede: <link linkend="access-bell"
+>Questo modulo è diviso in dieci schede: <link linkend="access-zoom"
 ><guilabel
->Campanella</guilabel
+>Ingrandimento &amp; Lente di ingrandimento</guilabel
+></link
+>,<link linkend="access-bell"
+><guilabel
+>Campanella di sistema</guilabel
 ></link
 >, <link linkend="access-modifier-keys"
 ><guilabel
@@ -88,22 +92,293 @@
 ><guilabel
 >Filtri tastiera</guilabel
 ></link
->, <link linkend="access-activation-gestures"
-><guilabel
->Gesti di attivazione</guilabel
-></link
 >, <link linkend="mouse-navigation"
 ><guilabel
 >Navigazione con mouse</guilabel
 ></link
-> e <guilabel
+>, <link linkend="access-activation-shortcuts"
+><guilabel
+>Scorciatoie di attivazione</guilabel
+></link
+>, <link linkend="access-screenreader"
+><guilabel
 >Lettore dello schermo</guilabel
+></link
+>, <link linkend="access-color-blindness"
+><guilabel
+>Correzione del daltonismo</guilabel
+></link
+>, <link linkend="access-invert"
+><guilabel
+>Inverti</guilabel
+></link
+>, e <link linkend="access-shake-pointer"
+><guilabel
+>Scuoti il puntatore</guilabel
+></link
 >. </para>
+
+
+<sect3 id="access-zoom">
+<title
+><guilabel
+>Ingrandimento e lente d'ingrandimento</guilabel
+></title>
+
+<para
+>Gli strumenti Ingrandimento e Lente di ingrandimento in KDE Plasma sono progettati per ingrandire porzioni dello schermo, fungendo da lente di ingrandimento digitale. Pur condividendo l'obiettivo di rendere più leggibili i testi di piccole dimensioni e i dettagli più minuti, offrono due modi distinti di interagire con l'ambiente desktop. </para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Ingrandimento</guilabel
+></term>
+<listitem>
+<para
+>Qui puoi passare dalla modalità <guilabel
+>Schermo intero</guilabel
+> a <guilabel
+>Ingrandisci la regione</guilabel
+>. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Schermo intero</guilabel
+></term>
+<listitem>
+<para
+>Abilita la modalità a schermo intero. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Mostra la griglia dei pixel al livello di ingrandimento</guilabel
+></term>
+<listitem>
+<para
+>Una volta raggiunto un ingrandimento sufficiente, viene visualizzata una griglia che evidenzia i singoli pixel che compongono l'immagine sullo schermo. Se questa opzione è abilitata, &plasma; disegna una sottile griglia attorno a ogni singolo pixel: puoi così vedere esattamente dove finisce uno, e dove inizia il successivo. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Aspetto del puntatore</guilabel
+></term>
+<listitem>
+<para
+>Controlla l'aspetto del puntatore del mouse durante l'ingrandimento. Ci sono varie opzioni: <guilabel
+>Ridimensiona</guilabel
+>, <guilabel
+>Mantieni</guilabel
+>, e <guilabel
+>Nascondi</guilabel
+>. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Tracciamento del puntatore</guilabel
+></term>
+<listitem>
+<para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Proporzionale</guilabel
+></term>
+<listitem>
+<para
+>L'area dell'ingrandimento si sposta in sincronia con il puntatore del mouse. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Centrato</guilabel
+></term>
+<listitem>
+<para
+>Il puntatore del mouse rimane centrato sullo schermo, tranne vicino ai bordi dello schermo. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Centrato (preciso)</guilabel
+></term>
+<listitem>
+<para
+>Il puntatore del mouse rimane centrato sullo schermo, anche vicino ai bordi dello schermo. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Sposta</guilabel
+></term>
+<listitem>
+<para
+>Il puntatore del mouse sposta l'area dell'ingrandimento sui bordi dello schermo. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Disabilitato</guilabel
+></term>
+<listitem>
+<para
+>L'area dell'ingrandimento non segue il puntatore. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Migliora la nitidezza dei contenuti sullo schermo durante l'ingrandimento</guilabel
+></term>
+<listitem>
+<para
+>Se questa opzione è attivata, &kwin; utilizzerà il riconoscimento dei modelli per cercare di ridimensionare la forma del testo e delle icone sull'area di lavoro ai livelli d'ingrandimento estremi. Ciò dovrebbe contribuire a migliorare il contrasto complessivo del testo a scapito della precisione dei caratteri, evitando sfocature o pixelatura. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Abilita l'inseguimento del punto focale</guilabel
+></term>
+<listitem>
+<para
+>Assicura che l'area di visualizzazione ingrandita segua automaticamente la parte <quote
+>attiva</quote
+> dell'interfaccia, anche se il mouse non si sta spostando. Mentre l'ingrandimento standard segue solitamente il cursore del mouse, il tracciamento del punto focale monitora il punto focale di sistema (il cursore di testo, o l'elemento dell'interfaccia utente attualmente selezionato). </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Abilita il tracciamento del cursore del testo</guilabel
+></term>
+<listitem>
+<para
+>Consente agli strumenti di ingrandimento del sistema di seguire il cursore del testo anziché solo il puntatore del mouse. Negli ambienti tecnici, che si tratti di scrivere codice, di redigere un articolo di ricerca, o di compilare dei moduli complessi, l'attenzione è spesso concentrata sul punto in cui si sta digitando; questo potrebbe trovarsi lontano dalla posizione del mouse. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Ingrandisci la regione</guilabel
+></term>
+<listitem>
+<para
+>Attiva la modalità di ingrandimento della regione. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Larghezza</guilabel
+></term>
+<listitem>
+<para
+>Permette di impostare la larghezza della regione ingrandita. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Altezza</guilabel
+></term>
+<listitem>
+<para
+>Permette di impostare l'altezza della regione ingrandita. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Disabilitato</guilabel
+></term>
+<listitem>
+<para
+>Disattiva le modalità di ridimensionamento. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Fattore di ingrandimento</guilabel
+></term>
+<listitem>
+<para
+>Regola il grado di ingrandimento dello schermo ad ogni passo (&eg;, 1,2x o 2,0x). &plasma; supporta dei livelli di ingrandimento estremi (fino a 100x), notevolmente superiori alla maggior parte degli altri sistemi operativi. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Tasti modificatori del gesto di scorrimento</guilabel
+></term>
+<listitem>
+<para
+>Permette di eseguire le operazioni di scorrimento utilizzando una combinazione di tasti della tastiera e movimenti del mouse, anziché ricorrere alla rotellina di scorrimento fisica. </para>
+<para
+>Ciò risulta particolarmente utile per gli utenti che utilizzano trackball, dispositivi di puntamento specializzati privi di rotellina, o che presentano difficoltà motorie che rendono complicato l'uso della rotellina di scorrimento. </para>
+<note>
+<para
+>I gesti di scorrimento per l'ingrandimento sono disponibili solo su Wayland. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Scorri durante la pressione dei tasti modificatori per ingrandire</guilabel
+></term>
+<listitem>
+<para
+>Quando questa opzione è attivata, tenendo premuto uno specifico tasto (di solito il tasto &Meta;) e ruotando la rotellina del mouse (o scorrendo con due dita sul touchpad) è possibile aumentare o diminuire dinamicamente l'ingrandimento dell'intero desktop. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Configura le scorciatoie…</guilabel
+></term>
+<listitem>
+<para
+>Utilizza le scorciatoie per controllare l'ingrandimento. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect3>
 
 <sect3 id="access-bell">
 <title
 ><guilabel
->Campanella</guilabel
+>Campanella di sistema</guilabel
 ></title>
 
 <para
@@ -322,83 +597,6 @@ Use system bell whenever a key is rejected
 
 </sect3>
 
-<sect3 id="access-activation-gestures">
-<title
-><guilabel
->Gesti di attivazione</guilabel
-></title>
-
-<para
->Ci sono due sezioni in questo pannello.</para>
-
-<variablelist>
-<varlistentry>
-<term
-><guilabel
->Gesti di attivazione</guilabel
-> con le seguenti opzioni:</term>
-<listitem>
-<para>
-<simplelist>
-<member
-><guilabel
->Usa i gesti per attivare il rallentamento o la permanenza dei tasti</guilabel
-></member>
-<member
->Qui puoi attivare i gesti della tastiera, che abiliteranno le seguenti caratteristiche:</member>
-<member
->Tasti del mouse: Premi &Shift;+BlocNum</member>
-<member
->Tasti permanenti: Premi &Shift; per 5 volte consecutive</member>
-<member
->Rallentamento tasti: Tieni premuto &Shift; per 8 secondi</member>
-<member
-><guilabel
->Disattiva la permanenza o il rallentamento dei tasti dopo un certo periodo di inattività</guilabel
-></member>
-</simplelist>
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><guilabel
->Notifiche</guilabel
-> con le seguenti opzioni:</term>
-<listitem>
-<para>
-<simplelist>
-<member
-><guilabel
->Usa la campanella di sistema ogni volta che vengono usati i gesti per attivare o per disattivare una funzione di accessibilità</guilabel
-></member>
-
-<member
-><guilabel
->Mostra una finestra di conferma ogni volta che una funzione di accessibilità della tastiera viene attivata o disattivata</guilabel
-></member>
-<member
->Se questa opzione è marcata &kde; mostrerà una finestra di conferma ogni volta che una funzione di accessibilità della tastiera viene attivata o disattivata.</member>
-<member
->Assicurati di sapere ciò che stai facendo quando deselezioni quest'opzione: le impostazioni di accessibilità della tastiera vengono sempre applicate senza conferma.</member>
-
-<member
-><guilabel
->Usa il sistema di notifiche di &kde; ogni volta che una funzione di accessibilità della tastiera viene attivata o disattivata</guilabel
-></member>
-</simplelist>
-</para>
-</listitem>
-</varlistentry>
-</variablelist>
-<para
->Fai clic sul pulsante <guibutton
->Configura notifiche</guibutton
-> per aprire una finestra che permette di modificare le notifiche per il cambiamento di stato di tutti i tasti.</para>
-
-</sect3>
-
 <sect3 id="mouse-navigation">
 <title
 >Navigazione con mouse</title>
@@ -496,6 +694,83 @@ Use system bell whenever a key is rejected
 
 </sect3>
 
+<sect3 id="access-activation-shortcuts">
+<title
+><guilabel
+>Scorciatoie di attivazione</guilabel
+></title>
+
+<para
+>Ci sono due sezioni in questo pannello.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Gesti di attivazione</guilabel
+> con le seguenti opzioni:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Usa i gesti per attivare il rallentamento o la permanenza dei tasti</guilabel
+></member>
+<member
+>Qui puoi attivare i gesti della tastiera, che abiliteranno le seguenti caratteristiche:</member>
+<member
+>Tasti del mouse: Premi &Shift;+BlocNum</member>
+<member
+>Tasti permanenti: Premi &Shift; per 5 volte consecutive</member>
+<member
+>Rallentamento tasti: Tieni premuto &Shift; per 8 secondi</member>
+<member
+><guilabel
+>Disattiva la permanenza o il rallentamento dei tasti dopo un certo periodo di inattività</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Notifiche</guilabel
+> con le seguenti opzioni:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Usa la campanella di sistema ogni volta che vengono usati i gesti per attivare o per disattivare una funzione di accessibilità</guilabel
+></member>
+
+<member
+><guilabel
+>Mostra una finestra di conferma ogni volta che una funzione di accessibilità della tastiera viene attivata o disattivata</guilabel
+></member>
+<member
+>Se questa opzione è marcata &kde; mostrerà una finestra di conferma ogni volta che una funzione di accessibilità della tastiera viene attivata o disattivata.</member>
+<member
+>Assicurati di sapere ciò che stai facendo quando deselezioni quest'opzione: le impostazioni di accessibilità della tastiera vengono sempre applicate senza conferma.</member>
+
+<member
+><guilabel
+>Usa il sistema di notifiche di &kde; ogni volta che una funzione di accessibilità della tastiera viene attivata o disattivata</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Fai clic sul pulsante <guibutton
+>Configura notifiche</guibutton
+> per aprire una finestra che permette di modificare le notifiche per il cambiamento di stato di tutti i tasti.</para>
+
+</sect3>
+
 <sect3 id="access-screenreader">
 <title
 ><guilabel
@@ -530,6 +805,167 @@ Use system bell whenever a key is rejected
 >F1</keycap
 ></keycombo
 >). Alla pressione di questa scorciatoia il menu dovrebbe aprirsi ed essere letto nella navigazione del menu con i tasti freccia. </para>
+</sect3>
+
+<sect3 id="access-color-blindness">
+<title
+><guilabel
+>Correzione del daltonismo</guilabel
+></title>
+
+<para
+>È uno strumento di accessibilità progettato per aiutare gli utenti con deficit nella percezione dei colori a distinguere meglio i colori sullo schermo. </para>
+<para
+>A differenza dei semplici filtri che modificano <quote
+>l'aspetto</quote
+> del desktop, questa funzione utilizza <ulink url="https://it.wikipedia.org/wiki/Discromatopsia"
+>algoritmi di daltonizzazione</ulink
+>. Questi spostano le frequenze cromatiche problematiche verso le porzioni dello spettro che l'utente è in grado di percepire con maggiore chiarezza, contribuendo a ripristinare il contrasto che altrimenti andrebbe perso. </para>
+<para
+>Obiettivi principali: </para>
+<itemizedlist>
+<listitem>
+<para
+>Molte interfacce utilizzano i colori per trasmettere un significato (&eg; il verde per indicare <quote
+>successo</quote
+>, oppure il rosso per indicare <quote
+>errore</quote
+>): ma per chi soffre di protanopia o deuteranopia, questi colori possono apparire identici. Il pannello di correzione modifica questi colori in modo da rendere visibile la differenza. </para>
+</listitem>
+<listitem>
+<para
+>Garantisce che pulsanti, grafici e testo evidenziato siano leggibili, indipendentemente dalla tavolozza dei colori del progetto originale. </para>
+</listitem>
+<listitem>
+<para
+>Poiché viene gestita a livello di compositore (&kwin;), la correzione si applica a tutto: browser web, software di ingegneria specializzati, video, nonché la stessa interfaccia del desktop. </para>
+</listitem>
+</itemizedlist>
+<para
+>Il pannello offre tipicamente le regolazioni per i tre tipi principali di cecità ai colori: </para>
+<itemizedlist>
+<listitem>
+<para
+>Protanopia: cecità al rosso (difficoltà a distinguere la luce rossa). </para>
+</listitem>
+<listitem>
+<para
+>Deuteranopia: cecità ai verdi (la forma più comune). </para>
+</listitem>
+<listitem>
+<para
+>Tritanopia: cecità al blu (forma più rara, è la difficoltà a distinguere il blu dal giallo). </para>
+</listitem>
+</itemizedlist>
+<para
+>La selezione <guilabel
+>Colori problematici</guilabel
+>: seleziona il tipo specifico di deficit. </para>
+<para
+>Il cursore <guilabel
+>Intensità</guilabel
+>: è la parte più importante del pannello, quella che permette di regolare l'intensità della correzione. Poiché la percezione dei colori è uno spettro, un filtro “universale” raramente funziona; il cursore permette di regolare con precisione la correzione in base alle proprie esigenze visive specifiche. </para>
+<note>
+<para
+>Questi filtri sono pensati per facilitare l'accessibilità, non per lavori che richiedono una resa cromatica accurata, ad esempio il fotoritocco professionale o la pittura digitale. Poiché spostano lo spettro dei colori per renderlo “leggibile”, i colori visualizzati sullo schermo non corrisponderanno più ai codici esadecimali “reali” o ai valori di stampa dei file che stai visualizzando. </para>
+</note>
+<para
+>Puoi controllare i risultati usando gli interruttori <guilabel
+>Colori regolati</guilabel
+>. </para>
+</sect3>
+
+<sect3 id="access-invert">
+<title
+><guilabel
+>Inverti</guilabel
+></title>
+
+<para
+>Questo pannello configura uno strumento che inverte i valori cromatici dello schermo: i pixel bianchi vengono trasformati in neri, quelli blu in arancioni, e così via. Questa operazione viene gestita dal gestore di finestre &kwin; come effetto di post-elaborazione. </para>
+<para
+>Sebbene possa sembrare un filtro fotografico <quote
+>Negativo</quote
+>, i suoi scopi principali sono funzionali, non estetici. </para>
+<para
+>Per gli utenti con delle disabilità visive specifiche, come la fotofobia (sensibilità alla luce) o determinati tipi di ipovisione, uno schermo luminoso standard può causare dolore fisico, oppure rendere il testo sfocato a causa della <quote
+>diffusione della luce</quote
+>. </para>
+<para
+>Invertendo i colori dello schermo, gli sfondi chiari diventano scuri e il testo scuro diventa chiaro: in questo modo si riduce notevolmente la quantità di luce emessa dallo schermo, anche se il contrasto necessario per la lettura si mantiene. </para>
+<para
+>Sebbene la maggior parte delle applicazioni moderne disponga di una modalità scura nativa, alcuni software meno recenti, oppure determinate pagine web, presentano degli sfondi bianchi fissati nel codice. </para>
+<para
+>Lo strumento Inverti funge da <quote
+>modalità scura universale</quote
+>: se un'applicazione non supporta il tema scuro, allora puoi forzare l'inversione dei colori così da proteggere gli occhi nelle sessioni di lavoro notturne. </para>
+<para
+>Puoi attivare l'inversione usando la casella <guilabel
+>Inverti</guilabel
+>, e anche <guibutton
+>Configura le scorciatoie...</guibutton
+> per questa azione. </para>
+</sect3>
+
+<sect3 id="access-shake-pointer">
+<title
+><guilabel
+>Scuoti il puntatore</guilabel
+></title>
+
+<para
+>Nell'ambiente desktop &plasma;, la funzione <guilabel
+>Scuoti il puntatore</guilabel
+> (spesso chiamata in gergo “Scuoti per trovare”) è una funzionalità di accessibilità e di produttività pensata per risolvere il problema del “cursore smarrito”. </para>
+<para
+>Se utilizzi una configurazione multi-monitor, uno schermo ad altissima risoluzione, o se hai semplicemente uno sfondo scuro, è molto facile perdere di vista la posizione del cursore del mouse. Lo scopo di questa funzionalità è quello di fornire un'indicazione visiva immediata per aiutarti a individuarlo. </para>
+<para
+>Quando questa funzionalità è abilitata, il sistema monitora la velocità e la direzione dei movimenti del mouse. Se rileva un movimento rapido di "scuotimento" in avanti e indietro: </para>
+<itemizedlist>
+<listitem>
+<para
+>Allargamento temporaneo: il puntatore aumenta notevolmente la sua dimensione. </para>
+</listitem>
+<listitem>
+<para
+>Focalizzazione visiva: questo cambiamento improvviso di dimensione cattura la visione periferica dell'occhio umano, rivelando immediatamente le coordinate del cursore. </para>
+</listitem>
+<listitem>
+<para
+>Ripristino automatico: non appena smetti di scuotere il puntatore, il puntatore ritorna alla sua dimensione normale. </para>
+</listitem>
+</itemizedlist>
+<para
+>Ci sono molte opzioni in questo pannello.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Scuoti il puntatore per trovarlo</guilabel
+></term>
+<listitem>
+<para
+>Se questa opzione è abilitata, &plasma; abilita l'effetto scuoti il puntatore. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Ingrandimento</guilabel
+></term>
+<listitem>
+<para
+>Qui puoi specificare il livello d'ingrandimento per la dimensione del puntatore <guilabel
+>Normale</guilabel
+> e <guilabel
+>Grande</guilabel
+>. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
 </sect3>
 
 </sect2>
