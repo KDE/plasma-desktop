@@ -20,7 +20,6 @@ KSvg.FrameSvgItem {
 
     visible: history.length !== 0
 
-    property bool ignoreClick: false
     property bool containsDrag: false
     property alias active: hoverActivateTimer.running
 
@@ -51,13 +50,11 @@ KSvg.FrameSvgItem {
         onPressed: mouse => {
             if (mouse.buttons & Qt.BackButton) {
                 doBack();
-                backButton.ignoreClick = true;
             }
         }
 
         onClicked: mouse => {
-            if (backButton.ignoreClick) {
-                backButton.ignoreClick = false;
+            if (mouse.button == Qt.BackButton) {
                 return;
             }
 
