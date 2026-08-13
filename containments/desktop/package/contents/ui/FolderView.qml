@@ -191,12 +191,16 @@ FocusScope {
         gridView.currentIndex = -1;
     }
 
-    function doBack() {
+    function doBack() : bool {
+        if (!root.useListViewMode || history.length < 1) {
+            return false
+        }
         goingBack = true;
         gridView.currentIndex = -1;
         lastPosition = history.pop();
         url = lastPosition.url;
         historyChanged();
+        return true
     }
 
     Loader {
@@ -265,11 +269,7 @@ FocusScope {
             scrollArea.focus = true;
 
             if (mouse.buttons & Qt.BackButton) {
-                if (root.isPopup && dir.resolvedUrl !== dir.resolve(Plasmoid.configuration.url)) {
-                    main.doBack();
-                    mouse.accepted = true;
-                }
-
+                mouse.accepted = main.doBack();
                 return;
             }
 
@@ -1130,10 +1130,8 @@ FocusScope {
                 }
 
                 Keys.onLeftPressed: event => {
-                    if (root.isPopup && root.useListViewMode) {
-                        if (dir.resolvedUrl !== dir.resolve(Plasmoid.configuration.url)) {
-                            main.doBack();
-                        }
+                    if (main.doBack()) {
+                        return;
                     } else if (positioner.enabled) {
                         const newIndex = positioner.nearestItem(currentIndex,
                             FolderTools.effectiveNavDirection(gridView.flow, gridView.effectiveLayoutDirection, Qt.LeftArrow));
@@ -1156,7 +1154,7 @@ FocusScope {
                 }
 
                 Keys.onRightPressed: event => {
-                    if (root.isPopup && root.useListViewMode) {
+                    if (root.useListViewMode) {
                         if (currentIndex !== -1 && dir.hasSelection() && currentItem.isDir) {
                             main.doCd(positioner.map(currentIndex));
                         }
@@ -1226,9 +1224,7 @@ FocusScope {
                 }
 
                 Keys.onBackPressed: event => {
-                    if (root.isPopup && dir.resolvedUrl !== dir.resolve(Plasmoid.configuration.url)) {
-                        main.doBack();
-                    }
+                    event.accepted = main.doBack();
                 }
 
                 Connections {

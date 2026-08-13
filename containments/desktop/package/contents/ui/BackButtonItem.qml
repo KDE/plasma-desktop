@@ -7,7 +7,6 @@
 */
 
 import QtQuick
-import org.kde.plasma.plasmoid
 
 import org.kde.ksvg as KSvg
 import org.kde.plasma.components as PlasmaComponents3
@@ -51,10 +50,8 @@ KSvg.FrameSvgItem {
 
         onPressed: mouse => {
             if (mouse.buttons & Qt.BackButton) {
-                if (root.isPopup && dir.resolvedUrl !== dir.resolve(Plasmoid.configuration.url)) {
-                    doBack();
-                    backButton.ignoreClick = true;
-                }
+                doBack();
+                backButton.ignoreClick = true;
             }
         }
 
@@ -98,7 +95,7 @@ KSvg.FrameSvgItem {
 
         textFormat: Text.PlainText
 
-        maximumLineCount: root.isPopup ? 1 : Plasmoid.configuration.textLines
+        maximumLineCount: 1
         wrapMode: Text.Wrap
         elide: Text.ElideRight
 
