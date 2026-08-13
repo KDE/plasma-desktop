@@ -14,7 +14,7 @@ import org.kde.plasma.components as PlasmaComponents3
 import org.kde.kirigami as Kirigami
 
 KSvg.FrameSvgItem {
-    id: upButton
+    id: backButton
 
     width: gridView.cellWidth
     height: visible ? gridView.cellHeight : 0
@@ -53,14 +53,14 @@ KSvg.FrameSvgItem {
             if (mouse.buttons & Qt.BackButton) {
                 if (root.isPopup && dir.resolvedUrl !== dir.resolve(Plasmoid.configuration.url)) {
                     doBack();
-                    upButton.ignoreClick = true;
+                    backButton.ignoreClick = true;
                 }
             }
         }
 
         onClicked: mouse => {
-            if (upButton.ignoreClick) {
-                upButton.ignoreClick = false;
+            if (backButton.ignoreClick) {
+                backButton.ignoreClick = false;
                 return;
             }
 
@@ -116,10 +116,10 @@ KSvg.FrameSvgItem {
     states: [
         State {
             name: "hover"
-            when: mouseArea.containsMouse || upButton.containsDrag
+            when: mouseArea.containsMouse || backButton.containsDrag
 
             PropertyChanges {
-                upButton.prefix: "hover"
+                backButton.prefix: "hover"
             }
         }
     ]
