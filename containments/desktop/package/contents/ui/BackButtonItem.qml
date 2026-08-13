@@ -15,13 +15,12 @@ import org.kde.kirigami as Kirigami
 KSvg.FrameSvgItem {
     id: backButton
 
-    width: gridView.cellWidth
-    height: visible ? gridView.cellHeight : 0
-
-    visible: history.length !== 0
-
+    property int iconSize
     property bool containsDrag: false
     property alias active: hoverActivateTimer.running
+    property alias containsMouse: mouseArea.containsMouse
+
+    signal backRequested()
 
     imagePath: "widgets/viewitem"
 
@@ -43,13 +42,9 @@ KSvg.FrameSvgItem {
         acceptedButtons: Qt.LeftButton | Qt.BackButton
         hoverEnabled: true
 
-        onContainsMouseChanged: {
-            gridView.hoveredItem = null;
-        }
-
         onPressed: mouse => {
             if (mouse.buttons & Qt.BackButton) {
-                doBack();
+                backButton.backRequested();
             }
         }
 
@@ -58,7 +53,7 @@ KSvg.FrameSvgItem {
                 return;
             }
 
-            doBack();
+            backButton.backRequested();
         }
     }
 
@@ -71,8 +66,8 @@ KSvg.FrameSvgItem {
             verticalCenter: parent.verticalCenter
         }
 
-        width: gridView.iconSize
-        height: gridView.iconSize
+        width: backButton.iconSize
+        height: backButton.iconSize
 
         source: "arrow-left"
     }
@@ -104,7 +99,7 @@ KSvg.FrameSvgItem {
 
         interval: root.hoverActivateDelay
 
-        onTriggered: doBack()
+        onTriggered: backButton.backRequested()
     }
 
     states: [

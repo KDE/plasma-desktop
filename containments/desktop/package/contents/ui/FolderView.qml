@@ -206,7 +206,17 @@ FocusScope {
     Loader {
         id: backButtonLoader
         active: root.useListViewMode
-        source: "BackButtonItem.qml"
+        sourceComponent: BackButtonItem {
+            width: gridView.cellWidth
+            height: gridView.cellHeight
+            visible: main.history.length !== 0
+            iconSize: gridView.iconSize
+
+            onBackRequested: main.doBack()
+            onContainsMouseChanged: {
+                gridView.hoveredItem = null;
+            }
+        }
     }
 
     Folder.EventGenerator {
@@ -219,7 +229,7 @@ FocusScope {
         enabled: !Plasmoid.containment.corona.editMode
 
         anchors {
-            topMargin: main.backButton !== null ? main.backButton.height : undefined
+            topMargin: main.backButton?.visible ? main.backButton.height : undefined
             fill: parent
         }
 
