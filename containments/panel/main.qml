@@ -77,6 +77,13 @@ ContainmentItem {
         }
         return "";
     }
+
+    // This function is called externally by the Plasma scripting language to setup
+    // the panel layout
+    function reorderApplets(order) {
+        LayoutManager.reorderApplets(order);
+    }
+
 //END functions
 
 //BEGIN connections
@@ -140,6 +147,7 @@ ContainmentItem {
         });
         component.destroy();
     }
+
 //END connections
 
     TapHandler {
