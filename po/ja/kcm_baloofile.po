@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 08:43+0000\n"
+"POT-Creation-Date: 2026-08-13 00:52+0000\n"
 "PO-Revision-Date: 2026-03-01 18:20+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -59,7 +59,7 @@ msgctxt "@action:button"
 msgid "Delete Index Data"
 msgstr "インデックスデータを削除"
 
-#: ui/main.qml:91
+#: ui/main.qml:83
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -69,91 +69,91 @@ msgstr ""
 "ファイル検索機能でファイルを素早く見つけられます。インデックスするフォルダや"
 "ファイルのタイプを選択できます。"
 
-#: ui/main.qml:108
+#: ui/main.qml:102
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr "インデックスするデータ:"
 
-#: ui/main.qml:109
+#: ui/main.qml:106
 #, kde-format
 msgctxt "@option:radio Data to index"
 msgid "Nothing (disable indexing entirely)"
 msgstr "なし (完全にインデックスを無効化)"
 
-#: ui/main.qml:121
+#: ui/main.qml:124
 #, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names only"
 msgstr "ファイル名のみ"
 
-#: ui/main.qml:136
+#: ui/main.qml:142
 #, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names and contents"
 msgstr "ファイル名と内容"
 
-#: ui/main.qml:157
+#: ui/main.qml:162
 #, kde-format
 msgctxt "@option:check"
 msgid "Also index hidden files and folders"
 msgstr "隠しファイルと隠しフォルダをインデックス"
 
-#: ui/main.qml:183
+#: ui/main.qml:189
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr "場所"
 
-#: ui/main.qml:186
+#: ui/main.qml:192
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "フォルダのインデックス作成を開始..."
 
-#: ui/main.qml:194
+#: ui/main.qml:200
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "フォルダのインデックス作成を停止..."
 
-#: ui/main.qml:212
+#: ui/main.qml:218
 #, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr "%1, %2% 完了"
 
-#: ui/main.qml:219
+#: ui/main.qml:225
 #, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
 msgstr "現在インデックス中: <filename>%1</filename>"
 
-#: ui/main.qml:270
+#: ui/main.qml:276
 #, kde-format
 msgctxt "@info:status"
 msgid "Not indexed"
 msgstr "インデックスしない"
 
-#: ui/main.qml:271
+#: ui/main.qml:277
 #, kde-format
 msgctxt "@info:status"
 msgid "Indexed"
 msgstr "インデックスする"
 
-#: ui/main.qml:297
+#: ui/main.qml:303
 #, kde-format
 msgctxt "Remove the list item for this filesystem path"
 msgid "Remove entry"
 msgstr "エントリを削除"
 
-#: ui/main.qml:318
+#: ui/main.qml:324
 #, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to include"
 msgstr "追加するフォルダを選択"
 
-#: ui/main.qml:318
+#: ui/main.qml:324
 #, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to exclude"

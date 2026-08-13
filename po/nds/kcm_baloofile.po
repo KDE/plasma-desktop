@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 08:43+0000\n"
+"POT-Creation-Date: 2026-08-13 00:52+0000\n"
 "PO-Revision-Date: 2014-05-08 15:36+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -55,7 +55,7 @@ msgctxt "@action:button"
 msgid "Delete Index Data"
 msgstr ""
 
-#: ui/main.qml:91
+#: ui/main.qml:83
 #, fuzzy, kde-format
 #| msgid ""
 #| "Desktop Search helps you quickly locate all your files based on their "
@@ -67,96 +67,96 @@ msgid ""
 msgstr ""
 "De Schriefdischsöök hölpt Di, all Dien Dateien na ehr Inholt to finnen."
 
-#: ui/main.qml:108
+#: ui/main.qml:102
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr ""
 
-#: ui/main.qml:109
+#: ui/main.qml:106
 #, kde-format
 msgctxt "@option:radio Data to index"
 msgid "Nothing (disable indexing entirely)"
 msgstr ""
 
-#: ui/main.qml:121
+#: ui/main.qml:124
 #, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names only"
 msgstr ""
 
-#: ui/main.qml:136
+#: ui/main.qml:142
 #, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names and contents"
 msgstr ""
 
-#: ui/main.qml:157
+#: ui/main.qml:162
 #, fuzzy, kde-format
 #| msgid "Show hidden folders"
 msgctxt "@option:check"
 msgid "Also index hidden files and folders"
 msgstr "Versteken Ornern wiesen"
 
-#: ui/main.qml:183
+#: ui/main.qml:189
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr ""
 
-#: ui/main.qml:186
+#: ui/main.qml:192
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr ""
 
-#: ui/main.qml:194
+#: ui/main.qml:200
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr ""
 
-#: ui/main.qml:212
+#: ui/main.qml:218
 #, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr ""
 
-#: ui/main.qml:219
+#: ui/main.qml:225
 #, fuzzy, kde-kuit-format
 #| msgid "File Indexing"
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
 msgstr "Dateiindizeren"
 
-#: ui/main.qml:270
+#: ui/main.qml:276
 #, fuzzy, kde-format
 #| msgid "Index Audio"
 msgctxt "@info:status"
 msgid "Not indexed"
 msgstr "Klangdateien indizeren"
 
-#: ui/main.qml:271
+#: ui/main.qml:277
 #, fuzzy, kde-format
 #| msgid "Index Audio"
 msgctxt "@info:status"
 msgid "Indexed"
 msgstr "Klangdateien indizeren"
 
-#: ui/main.qml:297
+#: ui/main.qml:303
 #, kde-format
 msgctxt "Remove the list item for this filesystem path"
 msgid "Remove entry"
 msgstr ""
 
-#: ui/main.qml:318
+#: ui/main.qml:324
 #, fuzzy, kde-format
 #| msgid "Select the folder which should be excluded"
 msgctxt "@title:window"
 msgid "Select a folder to include"
 msgstr "Den Orner fastleggen, den Du utsluten wullt"
 
-#: ui/main.qml:318
+#: ui/main.qml:324
 #, fuzzy, kde-format
 #| msgid "Select the folder which should be excluded"
 msgctxt "@title:window"

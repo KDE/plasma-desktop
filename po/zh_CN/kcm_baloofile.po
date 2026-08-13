@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 08:43+0000\n"
+"POT-Creation-Date: 2026-08-13 00:52+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -57,7 +57,7 @@ msgctxt "@action:button"
 msgid "Delete Index Data"
 msgstr "删除索引数据"
 
-#: ui/main.qml:91
+#: ui/main.qml:83
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -67,91 +67,91 @@ msgstr ""
 "文件搜索功能可以帮助您快速找到您想要的文件。您可以选择对哪些文件夹和文件数据"
 "类型进行索引。"
 
-#: ui/main.qml:108
+#: ui/main.qml:102
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr "要索引的数据："
 
-#: ui/main.qml:109
+#: ui/main.qml:106
 #, kde-format
 msgctxt "@option:radio Data to index"
 msgid "Nothing (disable indexing entirely)"
 msgstr "无 (完全禁用索引)"
 
-#: ui/main.qml:121
+#: ui/main.qml:124
 #, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names only"
 msgstr "仅文件名"
 
-#: ui/main.qml:136
+#: ui/main.qml:142
 #, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names and contents"
 msgstr "文件名和内容"
 
-#: ui/main.qml:157
+#: ui/main.qml:162
 #, kde-format
 msgctxt "@option:check"
 msgid "Also index hidden files and folders"
 msgstr "同时索引隐藏文件和文件夹"
 
-#: ui/main.qml:183
+#: ui/main.qml:189
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr "位置"
 
-#: ui/main.qml:186
+#: ui/main.qml:192
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "添加要索引的文件夹…"
 
-#: ui/main.qml:194
+#: ui/main.qml:200
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "添加不索引的文件夹…"
 
-#: ui/main.qml:212
+#: ui/main.qml:218
 #, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr "%1，%2% 已完成"
 
-#: ui/main.qml:219
+#: ui/main.qml:225
 #, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
 msgstr "正在索引：<filename>%1</filename>"
 
-#: ui/main.qml:270
+#: ui/main.qml:276
 #, kde-format
 msgctxt "@info:status"
 msgid "Not indexed"
 msgstr "不索引"
 
-#: ui/main.qml:271
+#: ui/main.qml:277
 #, kde-format
 msgctxt "@info:status"
 msgid "Indexed"
 msgstr "索引"
 
-#: ui/main.qml:297
+#: ui/main.qml:303
 #, kde-format
 msgctxt "Remove the list item for this filesystem path"
 msgid "Remove entry"
 msgstr "移除条目"
 
-#: ui/main.qml:318
+#: ui/main.qml:324
 #, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to include"
 msgstr "选择要索引的文件夹"
 
-#: ui/main.qml:318
+#: ui/main.qml:324
 #, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to exclude"
