@@ -686,7 +686,9 @@ FocusScope {
 
                 property bool isRootView: false
 
-                property int iconSize: makeIconSize()
+                readonly property int iconSize: root.useListViewMode
+                    ? Kirigami.Units.iconSizes.small
+                    : FolderTools.iconSizeFromTheme(Plasmoid.configuration.iconSize)
                 property int verticalDropHitscanOffset: 0
 
                 property FolderItemDelegate hoveredItem: null
@@ -922,14 +924,6 @@ FocusScope {
 
                     dir.updateSelection(cachedRectangleSelection.map(row => positioner.map(row)),
                         gridView.ctrlPressed);
-                }
-
-                function makeIconSize() {
-                    if (root.useListViewMode) {
-                        return Kirigami.Units.iconSizes.small;
-                    }
-
-                    return FolderTools.iconSizeFromTheme(Plasmoid.configuration.iconSize);
                 }
 
                 function updateSelection(modifier) {
@@ -1249,14 +1243,6 @@ FocusScope {
 
                 Connections {
                     target: Plasmoid.configuration
-
-                    function onIconSizeChanged() {
-                        gridView.iconSize = gridView.makeIconSize();
-                    }
-
-                    function onViewModeChanged() {
-                        gridView.iconSize = gridView.makeIconSize();
-                    }
 
                     function onUrlChanged() {
                         main.history = [];
