@@ -37,11 +37,15 @@ DropArea {
             return;
         }
 
+        // RtL horizontal TaskLists do not include the spacer (which are initial in this
+        // configuration), if any, but the mouse event coordinates do. We need to subtract
+        // them, or we end thinking we're dragging way right of where we actually are.
+        const rtlSpacerAdjustment = target.LayoutMirroring.enabled ? tasks.width - target.width : 0;
         let above;
         if (isGroupDialog) {
-            above = target.itemAt(event.x, event.y);
+            above = target.itemAt(event.x - rtlSpacerAdjustment, event.y);
         } else {
-            above = target.childAt(event.x, event.y);
+            above = target.childAt(event.x - rtlSpacerAdjustment, event.y);
         }
 
         if (!above) {
