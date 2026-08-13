@@ -140,22 +140,6 @@ FocusScope {
     }
 
     Connections {
-        target: dir
-        function onPopupMenuAboutToShow(dropJob, mimeData, x, y) {
-            if (Plasmoid.isContainment && !Plasmoid.immutable) {
-                root.processMimeData(mimeData, x, y, dropJob);
-            }
-        }
-
-        // Create drag images before dragging
-        // Due to async operations we can't call this before dragging starts,
-        // but we have to call it after a selection is done
-        function onSelectionDone() {
-            main.generateDragImage();
-        }
-    }
-
-    Connections {
         target: root
         function onExpandedChanged() {
             if (root.expanded && dir.status === Folder.FolderModel.Ready && !gridView.model) {
@@ -1265,6 +1249,19 @@ FocusScope {
             previewPlugins: Plasmoid.configuration.previewPlugins
             applet: Plasmoid
 
+            onRequestRename: main.rename()
+
+            onPopupMenuAboutToShow: (dropJob, mimeData, x, y) => {
+                if (Plasmoid.isContainment && !Plasmoid.immutable) {
+                    root.processMimeData(mimeData, x, y, dropJob);
+                }
+            }
+
+            // Create drag images before dragging
+            // Due to async operations we can't call this before dragging starts,
+            // but we have to call it after a selection is done
+            onSelectionDone: main.generateDragImage()
+
             onListingCompleted: {
                 if (!gridView.model && root.expanded) {
                     gridView.model = positioner;
@@ -1411,10 +1408,6 @@ FocusScope {
                     }
                 }
             }
-        }
-
-        Component.onCompleted: {
-            dir.requestRename.connect(main.rename);
         }
     }
 }
