@@ -12,27 +12,17 @@ import org.kde.ksvg as KSvg
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.kirigami as Kirigami
 
-KSvg.FrameSvgItem {
+DropArea {
     id: backButton
 
     property int iconSize
-    property bool containsDrag: false
     property alias active: hoverActivateTimer.running
     property alias containsMouse: mouseArea.containsMouse
 
     signal backRequested()
 
-    imagePath: "widgets/viewitem"
-
-    function handleDragMove() {
-        containsDrag = true;
-        hoverActivateTimer.restart();
-    }
-
-    function endDragMove() {
-        containsDrag = false;
-        hoverActivateTimer.stop();
-    }
+    onEntered: hoverActivateTimer.restart();
+    onExited: hoverActivateTimer.stop();
 
     MouseArea {
         id: mouseArea
@@ -55,6 +45,12 @@ KSvg.FrameSvgItem {
 
             backButton.backRequested();
         }
+    }
+
+    KSvg.FrameSvgItem {
+        id: background
+        anchors.fill: parent
+        imagePath: "widgets/viewitem"
     }
 
     Kirigami.Icon {
@@ -108,7 +104,7 @@ KSvg.FrameSvgItem {
             when: mouseArea.containsMouse || backButton.containsDrag
 
             PropertyChanges {
-                backButton.prefix: "hover"
+                background.prefix: "hover"
             }
         }
     ]

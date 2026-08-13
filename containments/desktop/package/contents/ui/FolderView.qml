@@ -92,31 +92,18 @@ FocusScope {
     }
 
     function handleDragMove(x, y) {
-        let child = childAt(x, y);
+        let pos = mapToItem(gridView.contentItem, x, y);
+        let item = gridView.safeItemAt(pos.x, pos.y);
 
-        if (child !== null && child === backButtonLoader && backButtonLoader.active) {
-            hoveredItem = null;
-            main.backButton.handleDragMove();
+        if (item && item.isDir) {
+            hoveredItem = item;
         } else {
-            if (main.backButton && main.backButton.containsDrag) {
-                main.backButton.endDragMove();
-            }
-
-            let pos = mapToItem(gridView.contentItem, x, y);
-            let item = gridView.safeItemAt(pos.x, pos.y);
-
-            if (item && item.isDir) {
-                hoveredItem = item;
-            } else {
-                hoveredItem = null;
-            }
+            hoveredItem = null;
         }
     }
 
     function endDragMove() {
-        if (main.backButton && main.backButton.active) {
-            main.backButton.endDragMove();
-        } else if (hoveredItem && !hoveredItem.popupDialog) {
+        if (hoveredItem && !hoveredItem.popupDialog) {
             hoveredItem = null;
         }
     }
@@ -214,7 +201,9 @@ FocusScope {
 
             onBackRequested: main.doBack()
             onContainsMouseChanged: {
-                gridView.hoveredItem = null;
+                if (containsMouse) {
+                    gridView.hoveredItem = null;
+                }
             }
         }
     }
