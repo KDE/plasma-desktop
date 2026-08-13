@@ -55,7 +55,7 @@ FocusScope {
     property var lastPosition: null
     property bool goingBack: false
     readonly property bool krunnerAvailable: Folder.KRunnerChecker.krunnerAvailable
-    property BackButtonItem backButton: null
+    readonly property BackButtonItem backButton: backButtonLoader.item as BackButtonItem
     property var dialog: null
     property Item editor: null
     property string searchString: ""
@@ -94,7 +94,7 @@ FocusScope {
     function handleDragMove(x, y) {
         let child = childAt(x, y);
 
-        if (child !== null && child === main.backButton) {
+        if (child !== null && child === backButtonLoader && backButtonLoader.active) {
             hoveredItem = null;
             main.backButton.handleDragMove();
         } else {
@@ -184,10 +184,6 @@ FocusScope {
         restoreMode: Binding.RestoreBinding
     }
 
-    function makeBackButton() {
-        return Qt.createQmlObject("BackButtonItem {}", main);
-    }
-
     function doCd(row) {
         history.push({ url: url, index: gridView.currentIndex, yPosition: gridView.visibleArea.yPosition});
         historyChanged();
@@ -203,16 +199,10 @@ FocusScope {
         historyChanged();
     }
 
-    Connections {
-        target: root
-
-        function onIsPopupChanged() {
-            if (main.backButton === null && root.useListViewMode) {
-                main.backButton = main.makeBackButton();
-            } else if (main.backButton !== null) {
-                main.backButton.destroy();
-            }
-        }
+    Loader {
+        id: backButtonLoader
+        active: root.useListViewMode
+        source: "BackButtonItem.qml"
     }
 
     Folder.EventGenerator {
@@ -1430,12 +1420,6 @@ FocusScope {
 
         Component.onCompleted: {
             dir.requestRename.connect(main.rename);
-        }
-    }
-
-    Component.onCompleted: {
-        if (main.backButton === null && root.useListViewMode) {
-            main.backButton = makeBackButton();
         }
     }
 }
