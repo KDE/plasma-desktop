@@ -128,7 +128,6 @@ Item {
 
             onHoveredChanged: {
                 if (hovered) {
-
                     if (main.isDir) {
                         if (!main.GridView.view.isRootView || root.containsDrag) {
                             hoverActivateTimer.restart();
@@ -169,19 +168,12 @@ Item {
                 interactive: false
                 location: root.useListViewMode ? (Plasmoid.location === PlasmaCore.Types.LeftEdge ? PlasmaCore.Types.LeftEdge : PlasmaCore.Types.RightEdge) : Plasmoid.location
 
+                icon: main.decoration
+                mainText: main.display
+                subText: main.type + (main.size == undefined ? "" : "\n" + main.size)
+
                 onContainsMouseChanged:  {
                     if (containsMouse && !main.blank) {
-                        if (toolTip.active) {
-                            toolTip.icon = main.decoration;
-                            toolTip.mainText = main.display;
-
-                            if (main.size !== undefined) {
-                                toolTip.subText = main.type + "\n" + main.size;
-                            } else {
-                                toolTip.subText = main.type;
-                            }
-                        }
-
                         Qt.callLater(() => {
                             // Workaround for Qt Bug: https://bugreports.qt.io/browse/QTBUG-117444
                             // In some cases the signal order is reversed:
