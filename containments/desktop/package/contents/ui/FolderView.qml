@@ -60,8 +60,6 @@ FocusScope {
     property Item editor: null
     property string searchString: ""
 
-    property int previouslySelectedItemIndex: -1
-
     function positionViewAtBeginning() {
         gridView.positionViewAtBeginning();
     }
@@ -215,6 +213,7 @@ FocusScope {
         property int dragY: -1
         property var cPress: null
         property bool doubleClickInProgress: false
+        property bool itemWasSingleSelectionWhenPressed: false
         property bool renameByLabelClickInitiated: false
 
         acceptedButtons: {
@@ -282,7 +281,6 @@ FocusScope {
             if (!hoveredItem || hoveredItem.blank) {
                 if (!gridView.ctrlPressed) {
                     gridView.currentIndex = -1;
-                    main.previouslySelectedItemIndex = -1;
                     dir.clearSelection();
                 }
 
@@ -298,6 +296,7 @@ FocusScope {
                 }
             } else {
                 pressedItem = hoveredItem;
+                itemWasSingleSelectionWhenPressed = hoveredItem.selected && dir.selectionCount === 1;
 
                 let pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
 
@@ -307,7 +306,6 @@ FocusScope {
                     } else {
                         // Deselecting everything else when one item is clicked is handled in onReleased in order to distinguish between drag and click
                         if (!gridView.ctrlPressed && !dir.isSelected(positioner.map(hoveredItem.index))) {
-                            main.previouslySelectedItemIndex = -1;
                             dir.clearSelection();
                         }
 
@@ -383,7 +381,6 @@ FocusScope {
             // hoveredItem) and abort.
             if (pos.x < 0 || pos.x > hoveredItem.width || pos.y < 0 || pos.y > hoveredItem.height) {
                 hoveredItem = null;
-                main.previouslySelectedItemIndex = -1;
                 dir.clearSelection();
 
                 return;
@@ -404,7 +401,7 @@ FocusScope {
                     && pos.x <= hoveredItem.labelArea.x + hoveredItem.labelArea.width
                     && pos.y > hoveredItem.labelArea.y
                     && pos.y <= hoveredItem.labelArea.y + hoveredItem.labelArea.height
-                    && main.previouslySelectedItemIndex === gridView.currentIndex
+                    && itemWasSingleSelectionWhenPressed
                     && gridView.currentIndex !== -1
                     && !Application.styleHints.singleClickActivation
                     && Plasmoid.configuration.renameInline
@@ -421,13 +418,11 @@ FocusScope {
                     } else {
                         dir.run(positioner.map(gridView.currentIndex));
                     }
-                    main.previouslySelectedItemIndex = gridView.currentIndex;
                     hoveredItem = null;
                 } else {
                     // None of the above: select it
                     doubleClickInProgress = true;
                     doubleClickTimer.start();
-                    main.previouslySelectedItemIndex = gridView.currentIndex;
                 }
             }
         }
@@ -905,10 +900,6 @@ FocusScope {
                     } else {
                         dir.clearSelection();
                         dir.setSelected(positioner.map(currentIndex));
-                        if (currentIndex === -1) {
-                            main.previouslySelectedItemIndex = -1;
-                        }
-                        main.previouslySelectedItemIndex = currentIndex;
                     }
                 }
 
@@ -995,7 +986,6 @@ FocusScope {
 
                 Keys.onEscapePressed: event => {
                     if (!main.editor || !main.editor.targetItem) {
-                        main.previouslySelectedItemIndex = -1;
                         dir.clearSelection();
                         event.accepted = false;
                     }
@@ -1345,8 +1335,6 @@ FocusScope {
                     gridView.currentIndex = positioner.move(moves);
                     gridView.forceLayout();
                 }
-
-                main.previouslySelectedItemIndex = -1;
             }
         }
 

@@ -286,6 +286,7 @@ FolderModel::FolderModel(QObject *parent)
     m_selectionModel = new QItemSelectionModel(this, this);
     connect(m_selectionModel, &QItemSelectionModel::selectionChanged, this, &FolderModel::changeSelection);
     connect(m_selectionModel, &QItemSelectionModel::selectionChanged, this, &FolderModel::selectionChanged);
+    connect(m_selectionModel, &QItemSelectionModel::selectionChanged, this, &FolderModel::selectionCountChanged);
 
     setSourceModel(m_dirModel);
 
@@ -995,6 +996,11 @@ int FolderModel::fileExtensionBoundary(int row)
 bool FolderModel::hasSelection() const
 {
     return m_selectionModel->hasSelection();
+}
+
+int FolderModel::selectionCount() const
+{
+    return m_selectionModel->selectedIndexes().count();
 }
 
 bool FolderModel::isSelected(int row)
