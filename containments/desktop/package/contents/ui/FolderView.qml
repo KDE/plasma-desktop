@@ -406,13 +406,13 @@ FocusScope {
                     && pos.y <= hoveredItem.labelArea.y + hoveredItem.labelArea.height
                     && main.previouslySelectedItemIndex === gridView.currentIndex
                     && gridView.currentIndex !== -1
-                    && !Qt.styleHints.singleClickActivation
+                    && !Application.styleHints.singleClickActivation
                     && Plasmoid.configuration.renameInline
                 )
 
                 // Single-click mode and single-clicked on the item or
                 // double-click mode and double-clicked on the item: activate it
-                if (Qt.styleHints.singleClickActivation || doubleClickInProgress || mouse.source === Qt.MouseEventSynthesizedByQt) {
+                if (Application.styleHints.singleClickActivation || doubleClickInProgress || mouse.source === Qt.MouseEventSynthesizedByQt) {
                     doubleClickInProgress = false
                     if (mouse.modifiers & Qt.AltModifier) {
                         dir.openPropertiesDialog();
@@ -426,7 +426,6 @@ FocusScope {
                 } else {
                     // None of the above: select it
                     doubleClickInProgress = true;
-                    doubleClickTimer.interval = Qt.styleHints.mouseDoubleClickInterval;
                     doubleClickTimer.start();
                     main.previouslySelectedItemIndex = gridView.currentIndex;
                 }
@@ -609,6 +608,7 @@ FocusScope {
         Timer {
             id: doubleClickTimer
 
+            interval: Application.styleHints.mouseDoubleClickInterval
             onTriggered: {
                 if (listener.renameByLabelClickInitiated && listener.doubleClickInProgress) {
                     main.rename()
