@@ -45,33 +45,32 @@ KSvg.SvgItem {
         NumberAnimation { duration: Kirigami.Units.shortDuration }
     }
 
-    MouseArea {
-        id: actionButtonMouseArea
+    states: [
+        State {
+            name: "hover"
+            when: hoverHandler.hovered && !tapHandler.pressed
 
-        anchors.fill: actionButton
-
-        acceptedButtons: Qt.LeftButton
-        hoverEnabled: true
-
-        onClicked: mouse => actionButton.clicked()
-
-        states: [
-            State {
-                name: "hover"
-                when: actionButtonMouseArea.containsMouse && !actionButtonMouseArea.pressed
-
-                PropertyChanges {
-                    actionButton.elementId: actionButton.element + "-hover"
-                }
-            },
-            State {
-                name: "pressed"
-                when: actionButtonMouseArea.pressed
-
-                PropertyChanges {
-                    actionButton.elementId: actionButton.element + "-pressed"
-                }
+            PropertyChanges {
+                actionButton.elementId: actionButton.element + "-hover"
             }
-        ]
+        },
+        State {
+            name: "pressed"
+            when: tapHandler.pressed
+
+            PropertyChanges {
+                actionButton.elementId: actionButton.element + "-pressed"
+            }
+        }
+    ]
+
+    HoverHandler {
+        id: hoverHandler
+    }
+
+    TapHandler {
+        id: tapHandler
+        acceptedButtons: Qt.LeftButton
+        onTapped: actionButton.clicked()
     }
 }
