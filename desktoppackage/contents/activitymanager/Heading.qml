@@ -80,18 +80,34 @@ Item {
 
         PlasmaComponents.ToolButton {
             id: searchButton
-            icon.name: "edit-find"
 
-            // checkable: true
-            // onClicked: root.closeRequested()
-            onClicked: root.showingSearch = !root.showingSearch
+            icon.name: "edit-find"
+            display: PlasmaComponents.AbstractButton.IconOnly
+            text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button tooltip only", "Search")
+
+            checkable: true
             checked: root.showingSearch
+
+            PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
+            PlasmaComponents.ToolTip.visible: hovered || activeFocus
+            PlasmaComponents.ToolTip.text: text
+
+            onClicked: root.showingSearch = !root.showingSearch
         }
 
         PlasmaComponents.ToolButton {
             id: configureButton
+
             icon.name: "configure"
+            display: PlasmaComponents.AbstractButton.IconOnly
+            text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button tooltip only, opens kcm", "Configure Activities")
+
             visible: KConfig.KAuthorized.authorizeControlModule("kcm_activities")
+
+            PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
+            PlasmaComponents.ToolTip.visible: hovered || activeFocus
+            PlasmaComponents.ToolTip.text: text
+
             onClicked: {
                 KCM.KCMLauncher.openSystemSettings("kcm_activities");
                 root.closeRequested();
@@ -100,7 +116,15 @@ Item {
 
         PlasmaComponents.ToolButton {
             id: closeButton
+
             icon.name: "window-close"
+            display: PlasmaComponents.AbstractButton.IconOnly
+            text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button tooltip only, close panel", "Close")
+
+            PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
+            PlasmaComponents.ToolTip.visible: hovered || activeFocus
+            PlasmaComponents.ToolTip.text: text
+
             onClicked: root.closeRequested()
         }
 

@@ -330,9 +330,12 @@ Item {
                 id: configButton
 
                 icon.name: "configure"
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button tooltip only, opens kcm showing the indicated activity", "Configure Activity “%1”", root.title)
+                display: PlasmaComponents.AbstractButton.IconOnly
+
                 PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
-                PlasmaComponents.ToolTip.visible: hovered
-                PlasmaComponents.ToolTip.text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button tooltip only, opens kcm", "Configure")
+                PlasmaComponents.ToolTip.visible: hovered || activeFocus
+                PlasmaComponents.ToolTip.text: text
 
                 onClicked: KCMLauncher.openSystemSettings("kcm_activities", root.activityId);
 
