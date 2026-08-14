@@ -11,10 +11,9 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
 
-import org.kde.plasma.components as PlasmaComponents3
 import org.kde.plasma.private.accessibility
-import org.kde.plasma.workspace.components as PW
 import org.kde.plasma.workspace.keyboardlayout as Keyboards
+import org.kde.plasma.workspace.loginlockscreen as LoginLockScreen
 import org.kde.plasma.private.keyboardindicator as KeyboardIndicator
 import org.kde.kirigami as Kirigami
 import org.kde.kscreenlocker as ScreenLocker
@@ -364,81 +363,10 @@ Item {
             }
         }
 
-        // Note: Containment masks stretch clickable area of their buttons to
-        // the screen edges, essentially making them adhere to Fitts's law.
-        // Due to virtual keyboard button having an icon, buttons may have
-        // different heights, so fillHeight is required.
-        //
-        // Note for contributors: Keep this in sync with SDDM Main.qml footer.
-        RowLayout {
-            id: footer
-            anchors {
-                bottom: parent.bottom
-                left: parent.left
-                right: parent.right
-                margins: Kirigami.Units.smallSpacing
+        LoginLockScreen.Footer {
+            onOskActivated: {
+                mainBlock.mainPasswordBox.forceActiveFocus();
             }
-            spacing: Kirigami.Units.smallSpacing
-
-            PlasmaComponents3.ToolButton {
-                id: virtualKeyboardButton
-
-                focusPolicy: Qt.TabFocus
-                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "Button to show/hide virtual keyboard", "Virtual Keyboard")
-                icon.name: Keyboards.KWinVirtualKeyboard.visible ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
-                onClicked: {
-                    if (Keyboards.KWinVirtualKeyboard.visible) {
-                        Keyboards.KWinVirtualKeyboard.active = false;
-                    } else {
-                        // Otherwise the password field loses focus and on-screen keyboard
-                        // keystrokes get eaten
-                        mainBlock.mainPasswordBox.forceActiveFocus();
-                        Keyboards.KWinVirtualKeyboard.forceActivate();
-                    }
-                }
-
-                Layout.fillHeight: true
-                containmentMask: Item {
-                    parent: virtualKeyboardButton
-                    anchors.fill: parent
-                    anchors.leftMargin: -footer.anchors.margins
-                    anchors.bottomMargin: -footer.anchors.margins
-                }
-            }
-
-            PlasmaComponents3.ToolButton {
-                id: keyboardButton
-
-                focusPolicy: Qt.TabFocus
-                Accessible.description: i18ndc("plasma_shell_org.kde.plasma.desktop", "Button to change keyboard layout", "Switch layout")
-                icon.name: "input-keyboard"
-
-                PW.KeyboardLayoutSwitcher {
-                    id: keyboardLayoutSwitcher
-
-                    anchors.fill: parent
-                    acceptedButtons: Qt.NoButton
-                }
-
-                text: keyboardLayoutSwitcher.layoutNames.longName
-                onClicked: keyboardLayoutSwitcher.keyboardLayout.switchToNextLayout()
-
-                visible: keyboardLayoutSwitcher.hasMultipleKeyboardLayouts
-
-                Layout.fillHeight: true
-                containmentMask: Item {
-                    parent: keyboardButton
-                    anchors.fill: parent
-                    anchors.leftMargin: virtualKeyboardButton.visible ? 0 : -footer.anchors.margins
-                    anchors.bottomMargin: -footer.anchors.margins
-                }
-            }
-
-            Item {
-                Layout.fillWidth: true
-            }
-
-            Battery {}
         }
     }
 }

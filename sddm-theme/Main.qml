@@ -10,9 +10,9 @@ import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 import Qt5Compat.GraphicalEffects
 
-import org.kde.plasma.components as PlasmaComponents3
 import org.kde.plasma.private.keyboardindicator as KeyboardIndicator
 import org.kde.plasma.workspace.keyboardlayout as Keyboards
+import org.kde.plasma.workspace.loginlockscreen as LoginLockScreen
 import org.kde.kirigami as Kirigami
 
 import org.kde.breeze.components
@@ -412,95 +412,10 @@ Item {
             }
         }
 
-        // Note: Containment masks stretch clickable area of their buttons to
-        // the screen edges, essentially making them adhere to Fitts's law.
-        // Due to virtual keyboard button having an icon, buttons may have
-        // different heights, so fillHeight is required.
-        //
-        // Note for contributors: Keep this in sync with LockScreenUi.qml footer.
-        RowLayout {
-            id: footer
-            anchors {
-                bottom: parent.bottom
-                left: parent.left
-                right: parent.right
-                margins: Kirigami.Units.smallSpacing
+        LoginLockScreen.Footer {
+            onOskActivated: {
+                userListComponent.mainPasswordBox.forceActiveFocus();
             }
-            spacing: Kirigami.Units.smallSpacing
-
-            Behavior on opacity {
-                OpacityAnimator {
-                    duration: Kirigami.Units.longDuration
-                }
-            }
-
-            PlasmaComponents3.ToolButton {
-                id: virtualKeyboardButton
-
-                text: i18ndc("plasma-desktop-sddm-theme", "Button to show/hide virtual keyboard", "Virtual Keyboard")
-                icon.name: Keyboards.KWinVirtualKeyboard.visible ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
-                onClicked: {
-                    if (Keyboards.KWinVirtualKeyboard.visible) {
-                        Keyboards.KWinVirtualKeyboard.active = false;
-                    } else {
-                        // Otherwise the password field loses focus and on-screen keyboard
-                        // keystrokes get eaten
-                        userListComponent.mainPasswordBox.forceActiveFocus();
-                        Keyboards.KWinVirtualKeyboard.forceActivate();
-                    }
-                }
-
-                Layout.fillHeight: true
-                containmentMask: Item {
-                    parent: virtualKeyboardButton
-                    anchors.fill: parent
-                    anchors.leftMargin: -footer.anchors.margins
-                    anchors.bottomMargin: -footer.anchors.margins
-                }
-            }
-
-            KeyboardButton {
-                id: keyboardButton
-
-                onKeyboardLayoutChanged: {
-                    // Otherwise the password field loses focus and virtual keyboard
-                    // keystrokes get eaten
-                    userListComponent.mainPasswordBox.forceActiveFocus();
-                }
-
-                Layout.fillHeight: true
-                containmentMask: Item {
-                    parent: keyboardButton
-                    anchors.fill: parent
-                    anchors.leftMargin: virtualKeyboardButton.visible ? 0 : -footer.anchors.margins
-                    anchors.bottomMargin: -footer.anchors.margins
-                }
-            }
-
-            SessionButton {
-                id: sessionButton
-
-                onSessionChanged: {
-                    // Otherwise the password field loses focus and virtual keyboard
-                    // keystrokes get eaten
-                    userListComponent.mainPasswordBox.forceActiveFocus();
-                }
-
-                Layout.fillHeight: true
-                containmentMask: Item {
-                    parent: sessionButton
-                    anchors.fill: parent
-                    anchors.leftMargin: virtualKeyboardButton.visible || keyboardButton.visible
-                        ? 0 : -footer.anchors.margins
-                    anchors.bottomMargin: -footer.anchors.margins
-                }
-            }
-
-            Item {
-                Layout.fillWidth: true
-            }
-
-            Battery {}
         }
     }
 
