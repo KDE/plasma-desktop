@@ -216,14 +216,9 @@ FocusScope {
         property bool itemWasSingleSelectionWhenPressed: false
         property bool renameByLabelClickInitiated: false
 
-        acceptedButtons: {
-            if (hoveredItem === null && main.isRootView) {
-                return root.isPopup ? (Qt.LeftButton | Qt.MiddleButton | Qt.RightButton | Qt.BackButton) : Qt.LeftButton | Qt.RightButton;
-            }
-
-            return root.isPopup ? (Qt.LeftButton | Qt.MiddleButton | Qt.RightButton | Qt.BackButton)
-                : (Qt.LeftButton | Qt.RightButton);
-        }
+        acceptedButtons: root.isPopup
+            ? (Qt.LeftButton | Qt.MiddleButton | Qt.RightButton | Qt.BackButton)
+            : (Qt.LeftButton | Qt.RightButton)
 
         hoverEnabled: true
 
