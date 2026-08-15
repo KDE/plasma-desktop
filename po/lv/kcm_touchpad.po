@@ -1,14 +1,14 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2023-2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-12 00:49+0000\n"
-"PO-Revision-Date: 2026-01-13 19:36+0200\n"
-"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2026-08-12 11:45+0300\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: kcm.cpp:57
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "Neizdodas izvēlēties atbilstošu aizmugursistēmu"
 
 #: kcm.cpp:103
 #, kde-format
@@ -33,10 +33,9 @@ msgstr ""
 "Pārstartējiet šo konfigurācijas moduli."
 
 #: kcm.cpp:106
-#, fuzzy, kde-format
-#| msgid "No touchpad found. Connect touchpad now."
+#, kde-format
 msgid "No pointer device found. Connect now."
-msgstr "Skārienpaliktņi nav atrasti. Pievienojiet skārienpaliktni."
+msgstr "Nav atrastas rādītājierīces. Pievienojiet kādu."
 
 #: kcm.cpp:115
 #, kde-format
@@ -66,16 +65,14 @@ msgstr ""
 "pārstartējiet šo konfigurācijas moduli."
 
 #: kcm.cpp:162
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. Closed its setting dialog."
+#, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr "Skārienpaliktnis ir atvienots. Aizvērts tā iestatījumu lodziņš."
+msgstr "Rādītājierīce ir atvienota. Aizvērts tās iestatījumu lodziņš."
 
 #: kcm.cpp:164
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. No other touchpads found."
+#, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr "Skārienpaliktnis ir atvienots. Citas ierīces nav atrastas."
+msgstr "Rādītājierīce ir atvienota. Citas ierīces nav atrastas."
 
 #: kwinwaylandbackend.cpp:45
 #, kde-format

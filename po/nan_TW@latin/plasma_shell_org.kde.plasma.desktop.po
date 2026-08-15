@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-13 00:52+0000\n"
-"PO-Revision-Date: 2026-07-22 00:38+0900\n"
+"PO-Revision-Date: 2026-08-14 23:10+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -290,7 +290,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Layout:"
-msgstr ""
+msgstr "Pòo-kio̍k:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:114
 #, kde-format
@@ -741,31 +741,31 @@ msgstr "Î-tû Bīn-pán"
 #, kde-format
 msgctxt "@info % is screen name"
 msgid "%1 (primary)"
-msgstr ""
+msgstr "%1 (tsú-iàu)"
 
 #: contents/explorer/AppletAlternatives.qml:70
 #, kde-format
 msgctxt "@title:window for widget alternatives explorer"
 msgid "Alternative Widgets"
-msgstr ""
+msgstr "Tāi-thè ê Guân-kiānn"
 
 #: contents/explorer/AppletDelegate.qml:28
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Add %1"
-msgstr ""
+msgstr "Thiam %1"
 
 #: contents/explorer/AppletDelegate.qml:47
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Unsupported Widget"
-msgstr ""
+msgstr "Bô Tsi-uān ê Guân-kiānn"
 
 #: contents/explorer/AppletDelegate.qml:196
 #, kde-format
 msgctxt "Text displayed on top of newly-installed widgets"
 msgid "New!"
-msgstr ""
+msgstr "Sin-ê!"
 
 #: contents/explorer/AppletDelegate.qml:198
 #, kde-format
@@ -784,13 +784,13 @@ msgstr "Kīn-lâi an-tsong ê"
 #, kde-format
 msgctxt "@action:button tooltip and accessible cancel uninstall widget"
 msgid "Cancel Uninstallation"
-msgstr ""
+msgstr "Tshú-siau Kái-tû-an-tsong"
 
 #: contents/explorer/AppletDelegate.qml:213
 #, kde-format
 msgctxt "@action:button tooltip and accessible uninstall widget"
 msgid "Mark for Uninstallation"
-msgstr ""
+msgstr "Piau-tsò ài Kái-tû-an-tsong"
 
 #: contents/explorer/AppletDelegate.qml:217
 #, kde-format
@@ -867,19 +867,19 @@ msgstr "Luī-pia̍t"
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Uninstall (%1 Widget)"
 msgid_plural "Uninstall (%1 Widgets)"
-msgstr[0] ""
+msgstr[0] "Kái-tû-an-tsong (%1 ê Guân-kiānn)"
 
 #: contents/explorer/WidgetExplorer.qml:395
 #, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets matched the search terms"
-msgstr ""
+msgstr "Bô hû-ha̍p tshiau-tshuē ê guân-kiānn"
 
 #: contents/explorer/WidgetExplorer.qml:395
 #, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets available"
-msgstr ""
+msgstr "Bô ē-sái iōng ê guân-kiānn"
 
 #: contents/lockscreen/config.qml:23
 #, kde-format
@@ -891,25 +891,25 @@ msgstr "Hián-sī sî-tsing:"
 #, kde-format
 msgctxt "@option:radio Clock always shown"
 msgid "Always"
-msgstr ""
+msgstr "Tsóng-sī"
 
 #: contents/lockscreen/config.qml:25
 #, kde-format
 msgctxt "@option:radio"
 msgid "Always show clock"
-msgstr ""
+msgstr "Tsóng-sī hián-sī sî-tsing"
 
 #: contents/lockscreen/config.qml:40
 #, kde-format
 msgctxt "@option:radio Clock shown only while unlock prompt is visible"
 msgid "On unlocking prompt"
-msgstr ""
+msgstr "Tī kái-tû só-tīng ê uē-bīn hián-sī"
 
 #: contents/lockscreen/config.qml:41
 #, kde-format
 msgctxt "@option:radio"
 msgid "Show clock only on unlocking prompt"
-msgstr ""
+msgstr "Kan-na tī kái-tû só-tīng ê uē-bīn hián-sī sî-tsing"
 
 #: contents/lockscreen/config.qml:54
 #, kde-format
@@ -933,19 +933,19 @@ msgstr "Muî-thé khòng-tsè:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "Tī kái-tû só-tīng uē-bīn hián-sī"
 
 #: contents/lockscreen/LockScreenUi.qml:53
 #, kde-format
 msgctxt "@info:status"
 msgid "Unlocking failed"
-msgstr ""
+msgstr "Kái-tû só-tīng sit-pāi"
 
 #: contents/lockscreen/LockScreenUi.qml:303
 #, kde-format
 msgctxt "@info:status"
 msgid "Caps Lock is on"
-msgstr ""
+msgstr "Caps Lock khui--ê"
 
 #: contents/lockscreen/LockScreenUi.qml:306
 #, kde-format
@@ -969,7 +969,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Switch &User"
-msgstr ""
+msgstr "Tshiat-&uānn Iōng-tsiá"
 
 #: contents/lockscreen/LockScreenUi.qml:387
 #, kde-format
@@ -981,7 +981,7 @@ msgstr ""
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr ""
+msgstr "Tshiat-uānn pòo-kio̍k"
 
 #: contents/lockscreen/MainBlock.qml:65
 #, kde-format
@@ -993,7 +993,7 @@ msgstr "Bi̍t-bé"
 #, kde-format
 msgctxt "@action:button accessible only"
 msgid "Unlock"
-msgstr ""
+msgstr "Kái-tû só-tīng"
 
 #: contents/lockscreen/MainBlock.qml:162
 #, kde-format
@@ -1029,7 +1029,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Accessible only"
 msgid "Play or Pause media"
-msgstr ""
+msgstr "Muî-thé Hòng-sàng á-sī Tsiām-thîng"
 
 #: contents/lockscreen/MediaControls.qml:110
 #, kde-format
@@ -1041,7 +1041,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button no-password unlock"
 msgid "Unlock"
-msgstr ""
+msgstr "Kái-tû só-tīng"
 
 #: contents/logout/LogoutControls.qml:97
 #, kde-format
@@ -1130,7 +1130,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
-msgstr ""
+msgstr "An-tsong King-sin jiân-āu Tîng-khí-tōng"
 
 #: contents/logout/LogoutControls.qml:215
 #: contents/logout/LogoutControls.qml:235
@@ -1148,7 +1148,7 @@ msgstr "Tsit-má Tîng-khí-tōng(&R)"
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr ""
+msgstr "An-tsong King-sin jiân-āu Kuainn-ki"
 
 #: contents/logout/LogoutControls.qml:252
 #: contents/logout/LogoutControls.qml:272
@@ -1193,4 +1193,4 @@ msgstr "Lī-khui Pian-tsi̍p Bôo-sik"
 #, kde-format
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
-msgstr ""
+msgstr "Bīn-pán Tsiau-tiám Tsí-sī-khì"

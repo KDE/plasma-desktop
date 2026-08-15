@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Maris Nartiss <maris.kde@gmail.com>, 2019.
-# SPDX-FileCopyrightText: 2024, 2025, 2026 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024-2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-30 00:45+0000\n"
-"PO-Revision-Date: 2026-01-16 18:33+0200\n"
-"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2026-08-12 11:55+0300\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: code/tools.js:32
 #, kde-format
@@ -185,12 +185,10 @@ msgid "Use compact list item style"
 msgstr "Izmantot kompakta saraksta stilu"
 
 #: ConfigGeneral.qml:187
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Highlight newly installed applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
-msgstr "Izcelt nesen instalētās programmas"
+msgstr "Izcelt nesen ieinstalētās lietojumprogrammas"
 
 #: ConfigGeneral.qml:192
 #, kde-format
@@ -327,20 +325,16 @@ msgid "Keep Open"
 msgstr "Paturēt atvērtu"
 
 #: KickoffGridDelegate.qml:59
-#, fuzzy, kde-format
-#| msgctxt "@label Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Jauna!"
 
 #: KickoffGridDelegate.qml:61
-#, fuzzy, kde-format
-#| msgctxt "@label Accessible name for badge"
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
-msgstr "Nesen instalēta programma"
+msgstr "Nesen ieinstalēta programma"
 
 #: KickoffGridView.qml:116
 #, kde-format
@@ -349,26 +343,20 @@ msgid "Grid with %1 rows, %2 columns"
 msgstr "Režģis ar %1 rindām, %2 kolonnām"
 
 #: KickoffListDelegate.qml:120
-#, fuzzy, kde-format
-#| msgctxt "@label Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "Jauna!"
 
 #: KickoffListDelegate.qml:125
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis Accessible description for badge"
-#| msgid "There is a newly installed application in this category"
+#, kde-format
 msgid "There is a newly-installed application in this category"
-msgstr "Šī kategorija satur nesen instalētu programmu"
+msgstr "Šī kategorijas satur nesen ieinstalētu programmu"
 
 #: KickoffListDelegate.qml:126
-#, fuzzy, kde-format
-#| msgctxt "@label Accessible name for badge"
-#| msgid "Newly installed application"
+#, kde-format
 msgid "Newly-installed application"
-msgstr "Nesen instalēta programma"
+msgstr "Nesen ieinstalēta programma"
 
 #: LeaveButtons.qml:171
 #, kde-format

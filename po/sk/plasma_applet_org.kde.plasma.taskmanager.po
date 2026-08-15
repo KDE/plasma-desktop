@@ -71,31 +71,27 @@ msgstr "Zabudnúť nedávne súbory"
 #: backend.cpp:581
 #, kde-format
 msgid "Activate Previous Task Manager Entry"
-msgstr ""
+msgstr "Aktivovať predchádzajúcu položku správcu úloh"
 
 #: backend.cpp:588
-#, fuzzy, kde-format
-#| msgctxt "action:inmenu"
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgid "Activate Next Task Manager Entry"
-msgstr "&Pripnúť k správcovi úloh"
+msgstr "Aktivovať ďalšiu položku správcu úloh"
 
 #: backend.cpp:595
 #, kde-format
 msgid "Move Active Task Manager Entry Backward"
-msgstr ""
+msgstr "Presunúť aktívnu položku správcu úloh dozadu"
 
 #: backend.cpp:603
 #, kde-format
 msgid "Move Active Task Manager Entry Forward"
-msgstr ""
+msgstr "Presunúť aktívnu položku správcu úloh dopredu"
 
 #: backend.cpp:612
-#, fuzzy, kde-format
-#| msgctxt "action:inmenu"
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgid "Activate Task Manager Entry %1"
-msgstr "&Pripnúť k správcovi úloh"
+msgstr "Aktivovať položku správcu úloh %1"
 
 #: qml/AudioStream.qml:94
 #, kde-format
@@ -875,17 +871,15 @@ msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "9k+"
-msgstr ""
+msgstr "9k+"
 
 #: qml/TaskBadgeOverlay.qml:104
-#, fuzzy, kde-format
-#| msgctxt "volume percentage"
-#| msgid "%1%"
+#, kde-format
 msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "%1k"
-msgstr "%1%"
+msgstr "%1k"
 
 #: qml/ToolTipInstance.qml:211
 #, kde-format

@@ -5,20 +5,20 @@
 # Maris Nartiss <maris.kde@gmail.com>, 2007, 2008.
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2007, 2008.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
-# SPDX-FileCopyrightText: 2023, 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2023-2024, 2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-30 00:45+0000\n"
-"PO-Revision-Date: 2024-09-10 10:26+0300\n"
-"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2026-08-12 11:44+0300\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 26.04.3\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -26,7 +26,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
-msgstr "Darvirsmas mape:"
+msgstr "Darbvirsmas mape:"
 
 #: ui/main.qml:59
 #, kde-format
@@ -123,20 +123,16 @@ msgid "This folder will be used by default to open or save file templates."
 msgstr "Šī mape ir noklusējuma mape datņu veidņu atvēršanai un saglabāšanai."
 
 #: ui/main.qml:165
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Pictures folder:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Projects folder:"
-msgstr "Attēlu mape:"
+msgstr "Projektu mape:"
 
 #: ui/main.qml:171
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip and accessible description"
-#| msgid "This folder will be used by default to open or save documents."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save projects."
-msgstr "Šī mape ir noklusējuma mape dokumentu atvēršanai un saglabāšanai."
+msgstr "Šī mape ir noklusējuma mape projektu atvēršanai un saglabāšanai."
 
 #: ui/UrlRequester.qml:74
 #, kde-format

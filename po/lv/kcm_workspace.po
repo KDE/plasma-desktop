@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2023-2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-04 00:46+0000\n"
-"PO-Revision-Date: 2026-01-16 11:16+0200\n"
+"PO-Revision-Date: 2026-08-12 11:48+0300\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -25,8 +25,8 @@ msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr ""
-"Peles vidējā klikšķi ielīmēšanas iestatījumi būs spēkā tikai pēc sistēmas "
-"pārstartēšanas."
+"Ielīmēšanas ar peles vidējās pogas klikšķi iestatījumi būs spēkā tikai pēc "
+"sistēmas pārstartēšanas."
 
 #: ui/main.qml:31
 #, kde-format
@@ -96,28 +96,20 @@ msgid "Clicking in scrollbar track:"
 msgstr "Klikšķis uz ritjoslas:"
 
 #: ui/main.qml:93
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
-#| "scrolls to the clicked location'"
-#| msgid "Scrolls to the clicked location"
+#, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
 "the clicked location'"
 msgid "Scrolls to the clicked location"
-msgstr "Ritina līdz norādītajai vietai"
+msgstr "Ritina līdz noklikšķinātajai vietai"
 
 #: ui/main.qml:111
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
-#| "scrolls one page up or down'"
-#| msgid "Scrolls one page up or down"
+#, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
 "page up or down'"
 msgid "Scrolls one page up or down"
-msgstr "Ritina vienu lapu uz priekšu vai atpakaļ"
+msgstr "Ritina vienu lapu augšup vai lejup"
 
 #: ui/main.qml:112
 #, kde-format
@@ -291,37 +283,25 @@ msgid "Touch"
 msgstr "Skārienjutība"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgctxt "@title:group prefix radiobutton group"
-#| msgid "Enable Touch Mode:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
-msgstr "Ieslēgt skārienjutīgo režīmu:"
+msgstr "Ieslēgt planšetdatora režīmu:"
 
 #: ui/main.qml:354
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
-#| msgid "Automatically enable as needed"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
-msgstr "Ieslēgt automātiska pēc vajadzības"
+msgstr "Ieslēgt automātiski pēc vajadzības"
 
 #: ui/main.qml:354
-#, fuzzy, kde-format
-#| msgctxt "option:radio As in: 'Touch Mode is never enabled'"
-#| msgid "Never enabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Nekad neieslēgt"
 
 #: ui/main.qml:373
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
-#| msgid ""
-#| "Touch Mode will be automatically activated whenever the system detects a "
-#| "touchscreen but no mouse or touchpad. For example: when a transformable "
-#| "laptop's keyboard is flipped around or detached."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Tablet Mode will be automatically enabled whenever the system detects a "
@@ -329,22 +309,18 @@ msgid ""
 "laptop's keyboard is flipped around or detached."
 msgstr ""
 "Skārienjutīgais režīms automātiski ieslēdzas, kad sistēma konstatē "
-"pievienotu skārienjutīgu ekrāni un nepievienotu peli vai skārienpaliktni. "
+"pievienotu skārienjutīgu ekrānu un nepievienotu peli vai skārienpaliktni. "
 "Piemēram, ja pārveidojama portatīvā datora tastatūra tiek apgriezta otrādi "
 "vai atvienota."
 
 #: ui/main.qml:379
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always active"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Vienmēr ieslēgts"
 
 #: ui/main.qml:401
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is never enabled'"
-#| msgid "Disabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Izslēgts"
@@ -353,7 +329,7 @@ msgstr "Izslēgts"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."
-msgstr ""
+msgstr "Planšetdatora režīmā virtuālā tastatūra atvērsies pēc vajadzības."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9

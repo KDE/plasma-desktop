@@ -1,14 +1,14 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2023, 2025, 2026 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2023, 2025-2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-28 00:47+0000\n"
-"PO-Revision-Date: 2026-03-03 13:24+0200\n"
-"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2026-08-12 11:49+0300\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: app/emojier.cpp:43 app/emojier.cpp:45
 #, kde-format
@@ -46,8 +46,7 @@ msgid "Replace an existing instance"
 msgstr "Aizvietot eksistējošu instanci"
 
 #: app/ui/CategoryPage.qml:41
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action Search field action"
 msgid "Search"
 msgstr "Meklēt"
@@ -59,13 +58,10 @@ msgid "Clear History"
 msgstr "Notīrīt vēsturi"
 
 #: app/ui/CategoryPage.qml:132
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@action:button Button to open a menu that lets you choose a skin tone"
-#| msgid "Skin tone:"
+#, kde-format
 msgctxt "@action:button Button to open a menu that lets you choose a skin tone"
 msgid "Skin tone: %1"
-msgstr "Ādas tonis:"
+msgstr "Ādas tonis: %1"
 
 #: app/ui/CategoryPage.qml:138
 #, kde-format
@@ -143,31 +139,31 @@ msgstr "Tumšs"
 #, kde-format
 msgctxt "@action:button zoom the emoji grid out"
 msgid "Zoom Out"
-msgstr ""
+msgstr "Tālināt"
 
 #: app/ui/CategoryPage.qml:199
 #, kde-format
 msgctxt "@info:status label for the current zoom-level indicator"
 msgid "Zoom level"
-msgstr ""
+msgstr "Tālummaiņas līmenis"
 
 #: app/ui/CategoryPage.qml:201
 #, kde-format
 msgctxt "@info:status current emoji zoom level as a percentage, %1 is a number"
 msgid "%1%"
-msgstr ""
+msgstr "%1 %"
 
 #: app/ui/CategoryPage.qml:214
 #, kde-format
 msgctxt "@action:button zoom the emoji grid in"
 msgid "Zoom In"
-msgstr ""
+msgstr "Tuvināt"
 
 #: app/ui/CategoryPage.qml:221
 #, kde-format
 msgctxt "@action:button reset the emoji grid zoom to 100%"
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Atiestatīt tālummaiņu"
 
 #: app/ui/CategoryPage.qml:228
 #, kde-format
