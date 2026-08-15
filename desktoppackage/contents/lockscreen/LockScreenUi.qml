@@ -322,18 +322,21 @@ Item {
 
                 actionItems: [
                     ActionButton {
+                        Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
                         text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Slee&p")
                         icon.name: "system-suspend"
                         onClicked: sessionManagement.suspend()
                         visible: sessionManagement.canSuspend
                     },
                     ActionButton {
+                        Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
                         text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "&Hibernate")
                         icon.name: "system-suspend-hibernate"
                         onClicked: sessionManagement.hibernate()
                         visible: sessionManagement.canHibernate
                     },
                     ActionButton {
+                        Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
                         text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Switch &User")
                         icon.name: "system-switch-user"
                         onClicked: {
