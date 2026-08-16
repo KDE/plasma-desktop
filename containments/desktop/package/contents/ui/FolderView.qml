@@ -4,6 +4,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQml
@@ -57,7 +58,7 @@ FocusScope {
     readonly property bool krunnerAvailable: Folder.KRunnerChecker.krunnerAvailable
     readonly property BackButtonItem backButton: backButtonLoader.item as BackButtonItem
     property var dialog: null
-    property Item editor: null
+    property RenameEditor editor: null
     property string searchString: ""
 
     function positionViewAtBeginning() {
@@ -200,7 +201,7 @@ FocusScope {
 
         property alias hoveredItem: gridView.hoveredItem
 
-        property Item pressedItem: null
+        property FolderItemDelegate pressedItem: null
         property int pressX: -1
         property int pressY: -1
         property var cPress: null
@@ -995,14 +996,14 @@ FocusScope {
                     }
 
                     onCreateFolder: {
-                        model.createFolder();
+                        dir.createFolder();
                     }
                 }
 
                 Timer {
                     id: typeAheadTimer
                     interval: 500 // Resets search string after 0.5 seconds of inactivity
-                    onTriggered: searchString = ""
+                    onTriggered: main.searchString = ""
                 }
 
                 Keys.onPressed: event => {
@@ -1039,23 +1040,23 @@ FocusScope {
                         typeAheadTimer.restart();
                         const charPressed = event.text.toLowerCase();
 
-                        if (searchString.length >= 1 && searchString.indexOf(charPressed) !== 0) {
-                            searchString += charPressed;
-                        } else if (searchString !== charPressed) {
-                            searchString = charPressed;
+                        if (main.searchString.length >= 1 && main.searchString.indexOf(charPressed) !== 0) {
+                            main.searchString += charPressed;
+                        } else if (main.searchString !== charPressed) {
+                            main.searchString = charPressed;
                         }
 
                         let matches = [];
                         for (let i = 0; i < gridView.count; i++) {
                             const itemData = positioner.data(positioner.index(i, 0), Qt.DisplayRole);
-                            if (itemData && itemData.toLowerCase().indexOf(searchString) === 0) {
+                            if (itemData && itemData.toLowerCase().indexOf(main.searchString) === 0) {
                                 matches.push(i);
                             }
                         }
 
                         if (matches.length > 0) {
                             let nextIdx = matches[0];
-                            if (searchString.length === 1) {
+                            if (main.searchString.length === 1) {
                                 for (let j = 0; j < matches.length; j++) {
                                     if (matches[j] > gridView.currentIndex) {
                                         nextIdx = matches[j];
@@ -1067,7 +1068,7 @@ FocusScope {
                             dir.clearSelection();
                             dir.setSelected(positioner.map(nextIdx));
                         } else {
-                            searchString = charPressed;
+                            main.searchString = charPressed;
                         }
                     }
                     // Fallback for everything else (Escape, Enter, or if Type-Ahead is disabled)
