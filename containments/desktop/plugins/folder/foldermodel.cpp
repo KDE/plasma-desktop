@@ -80,6 +80,7 @@
 #include <PlasmaActivities/Consumer>
 
 #include <chrono>
+#include <qqmlintegration.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <unistd.h>
@@ -88,64 +89,39 @@ using namespace std::chrono_literals;
 
 Q_LOGGING_CATEGORY(FOLDERMODEL, "plasma.containments.desktop.folder.foldermodel")
 
-// Small helper exposed to QML to check whether KRunner is installed/running.
-class KRunnerChecker : public QObject
-{
-    Q_OBJECT
-    Q_PROPERTY(bool krunnerAvailable READ krunnerAvailable NOTIFY krunnerAvailableChanged)
-
-public:
-    explicit KRunnerChecker(QObject *parent = nullptr)
+KRunnerChecker::KRunnerChecker(QObject *parent)
     : QObject(parent)
     , m_krunnerAvailable(false)
-    {
-        const QString serviceName = QStringLiteral("org.kde.krunner");
-        const QString serviceFile = QStringLiteral("dbus-1/services/org.kde.krunner.service");
-
-        bool isRunning = QDBusConnection::sessionBus().interface()->isServiceRegistered(serviceName);
-        bool isInstalled = !QStandardPaths::locate(QStandardPaths::GenericDataLocation, serviceFile).isEmpty();
-
-        m_krunnerAvailable = isRunning || isInstalled;
-
-        auto iface = QDBusConnection::sessionBus().interface();
-        connect(iface, &QDBusConnectionInterface::serviceOwnerChanged, this, [this, serviceName, serviceFile](const QString &name, const QString &/*oldOwner*/, const QString &newOwner) {
-            if (name == serviceName) {
-                bool currentlyActive = !newOwner.isEmpty();
-                bool stillAvailable = currentlyActive;
-
-                // Fallback: If it stopped running, check if the service file still exists
-                if (!stillAvailable) {
-                    stillAvailable = !QStandardPaths::locate(QStandardPaths::GenericDataLocation, serviceFile).isEmpty();
-                }
-
-                if (stillAvailable != m_krunnerAvailable) {
-                    m_krunnerAvailable = stillAvailable;
-                    Q_EMIT krunnerAvailableChanged();
-                }
-            }
-        });
-    }
-
-    bool krunnerAvailable() const { return m_krunnerAvailable; }
-
-Q_SIGNALS:
-    void krunnerAvailableChanged();
-
-private:
-    bool m_krunnerAvailable;
-};
-
-static QObject *krunner_checker_provider(QQmlEngine *, QJSEngine *)
 {
-    return new KRunnerChecker();
-}
+    const QString serviceName = QStringLiteral("org.kde.krunner");
+    const QString serviceFile = QStringLiteral("dbus-1/services/org.kde.krunner.service");
 
-static void registerKRunnerChecker()
-{
-    qmlRegisterSingletonType<KRunnerChecker>("org.kde.private.desktopcontainment.folder", 1, 0, "KRunnerChecker", krunner_checker_provider);
-}
+    bool isRunning = QDBusConnection::sessionBus().interface()->isServiceRegistered(serviceName);
+    bool isInstalled = !QStandardPaths::locate(QStandardPaths::GenericDataLocation, serviceFile).isEmpty();
 
-Q_COREAPP_STARTUP_FUNCTION(registerKRunnerChecker)
+    m_krunnerAvailable = isRunning || isInstalled;
+
+    auto iface = QDBusConnection::sessionBus().interface();
+    connect(iface,
+            &QDBusConnectionInterface::serviceOwnerChanged,
+            this,
+            [this, serviceName, serviceFile](const QString &name, const QString & /*oldOwner*/, const QString &newOwner) {
+                if (name == serviceName) {
+                    bool currentlyActive = !newOwner.isEmpty();
+                    bool stillAvailable = currentlyActive;
+
+                    // Fallback: If it stopped running, check if the service file still exists
+                    if (!stillAvailable) {
+                        stillAvailable = !QStandardPaths::locate(QStandardPaths::GenericDataLocation, serviceFile).isEmpty();
+                    }
+
+                    if (stillAvailable != m_krunnerAvailable) {
+                        m_krunnerAvailable = stillAvailable;
+                        Q_EMIT krunnerAvailableChanged();
+                    }
+                }
+            });
+}
 
 class DragTrackerSingleton
 {

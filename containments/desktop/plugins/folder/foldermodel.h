@@ -64,6 +64,29 @@ private:
     void handleJobError(KIO::Job *job);
 };
 
+// Small helper exposed to QML to check whether KRunner is installed/running.
+class KRunnerChecker : public QObject
+{
+    Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
+    Q_PROPERTY(bool krunnerAvailable READ krunnerAvailable NOTIFY krunnerAvailableChanged)
+
+public:
+    explicit KRunnerChecker(QObject *parent = nullptr);
+
+    bool krunnerAvailable() const
+    {
+        return m_krunnerAvailable;
+    }
+
+Q_SIGNALS:
+    void krunnerAvailableChanged();
+
+private:
+    bool m_krunnerAvailable;
+};
+
 class FolderModel : public QSortFilterProxyModel, public QQmlParserStatus
 {
     Q_OBJECT
