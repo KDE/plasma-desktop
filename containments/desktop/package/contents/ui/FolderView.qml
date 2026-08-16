@@ -52,6 +52,7 @@ FocusScope {
     property alias scrollUp: gridView.scrollUp
     property alias scrollDown: gridView.scrollDown
     property alias hoveredItem: gridView.hoveredItem
+    property alias containsMouse: listener.containsMouse
     property var history: []
     property var lastPosition: null
     property bool goingBack: false

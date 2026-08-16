@@ -19,21 +19,21 @@ Folder.SubDialog {
 
     visible: false
 
-    property bool containsDrag: {
+    readonly property bool containsDrag: {
         if (folderViewDropArea.containsDrag) {
             return true;
         }
 
         if (folderView.hoveredItem && folderView.hoveredItem.popupDialog) {
-            return folderView.hoveredItem.popupDialog.containsDrag;
+            return childDialog.containsDrag;
         }
 
         return false;
     }
 
-    property QtObject closeTimer: closeTimer
-    property QtObject childDialog: (folderView.hoveredItem !== null) ? folderView.hoveredItem.popupDialog : null
-    property bool containsMouse: folderView.containsMouse || (childDialog !== null && childDialog.containsMouse)
+    readonly property Timer closeTimer: closeTimer
+    readonly property FolderViewDialog childDialog: (folderView.hoveredItem?.popupDialog as FolderViewDialog) ?? null
+    readonly property bool containsMouse: folderView.containsMouse || (childDialog !== null && childDialog.containsMouse)
 
     property alias url: folderView.url
 
@@ -120,7 +120,7 @@ Folder.SubDialog {
     }
 
     function delayedDestroy() {
-        Qt.callLater(() => itemDialog.destroy());
+        Qt.callLater(() => dialog.destroy());
     }
 
     Component.onDestruction: {
