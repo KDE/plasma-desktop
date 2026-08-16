@@ -119,13 +119,7 @@ FocusScope {
 
     function drop(target, event, pos) {
         let dropPos = mapToItem(gridView.contentItem, pos.x, pos.y);
-        let dropIndex = gridView.safeIndexAt(dropPos.x, dropPos.y);
-        let dragPos = mapToItem(gridView.contentItem, listener.dragX, listener.dragY);
-        let dragIndex = gridView.safeIndexAt(dragPos.x, dragPos.y);
-
-        if (listener.dragX === -1 || dragIndex !== dropIndex) {
-            dir.drop(target, event, dropItemAt(dropPos), Plasmoid.isContainment && !Plasmoid.immutable);
-        }
+        dir.drop(target, event, dropItemAt(dropPos), Plasmoid.isContainment && !Plasmoid.immutable);
     }
 
     function generateDragImage() {
@@ -209,8 +203,6 @@ FocusScope {
         property Item pressedItem: null
         property int pressX: -1
         property int pressY: -1
-        property int dragX: -1
-        property int dragY: -1
         property var cPress: null
         property bool doubleClickInProgress: false
         property bool itemWasSingleSelectionWhenPressed: false
@@ -483,12 +475,8 @@ FocusScope {
             if (pressX !== -1 && root.isDrag(pressX, pressY, mouse.x, mouse.y)) {
                 if (pressedItem !== null && dir.isSelected(positioner.map(pressedItem.index))) {
                     pressedItem.hideToolTip();
-                    dragX = mouse.x;
-                    dragY = mouse.y;
                     gridView.verticalDropHitscanOffset = pressedItem.iconArea.y + (pressedItem.iconArea.height / 2);
                     dir.dragSelected(mouse.x, mouse.y);
-                    dragX = -1;
-                    dragY = -1;
                     clearPressState();
                 } else {
                     // Disable rubberband in popup list view mode or while renaming
@@ -1290,8 +1278,8 @@ FocusScope {
                     }
 
                     // The +(gridView.cellWidth / 2) is kept here to make it easier to drag items between cells.
-                    itemX = dropPos.x + offset.x + (listener.dragX % gridView.cellWidth) + (gridView.cellWidth / 2);
-                    itemY = dropPos.y + offset.y + (listener.dragY % gridView.cellHeight) + gridView.verticalDropHitscanOffset;
+                    itemX = dropPos.x + offset.x + (gridView.cellWidth / 2);
+                    itemY = dropPos.y + offset.y + gridView.verticalDropHitscanOffset;
 
 
                     if (gridView.effectiveLayoutDirection === Qt.RightToLeft) {
