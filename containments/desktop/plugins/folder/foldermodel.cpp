@@ -9,6 +9,7 @@
 */
 
 #include "foldermodel.h"
+#include "debug.h"
 #include "desktopschemehelper.h"
 #include "itemviewadapter.h"
 #include "positioner.h"
@@ -86,8 +87,6 @@
 #include <unistd.h>
 
 using namespace std::chrono_literals;
-
-Q_LOGGING_CATEGORY(FOLDERMODEL, "plasma.containments.desktop.folder.foldermodel")
 
 KRunnerChecker::KRunnerChecker(QObject *parent)
     : QObject(parent)
@@ -254,7 +253,7 @@ FolderModel::FolderModel(QObject *parent)
     m_dropTargetPositionsCleanup->setSingleShot(true);
     connect(m_dropTargetPositionsCleanup, &QTimer::timeout, this, [this]() {
         if (!m_dropTargetPositions.isEmpty()) {
-            qCDebug(FOLDERMODEL) << "clearing drop target positions after timeout:" << m_dropTargetPositions;
+            qCDebug(FOLDER) << "clearing drop target positions after timeout:" << m_dropTargetPositions;
             m_dropTargetPositions.clear();
         }
     });
