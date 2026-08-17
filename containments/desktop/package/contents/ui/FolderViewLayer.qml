@@ -45,7 +45,7 @@ FocusScope {
             const actionName = sharedActions[i];
             const appletAction = Plasmoid.internalAction(actionName);
             if (appletAction) {
-                modelAction = folderView.model.action(actionName);
+                const modelAction = folderView.model.action(actionName);
                 appletAction.text = modelAction.text;
                 appletAction.enabled = modelAction.enabled;
                 appletAction.visible = modelAction.visible;
