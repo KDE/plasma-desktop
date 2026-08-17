@@ -1365,6 +1365,9 @@ FocusScope {
 
                 visible: false
 
+                isPopup: root.isPopup
+                useListViewMode: root.useListViewMode
+
                 onCommit: {
                     if (targetItem) {
                         dir.rename(positioner.map(targetItem.index), text);

@@ -17,6 +17,8 @@ import org.kde.kirigami as Kirigami
 PlasmaComponents.ScrollView {
     id: root
 
+    required property bool useListViewMode
+    required property bool isPopup
     property alias text: editor.text
     property alias targetItem: editor.targetItem
     signal commit
@@ -74,7 +76,7 @@ PlasmaComponents.ScrollView {
                 text = targetItem.display;
                 adjustSize();
                 editor.select(0, dir.fileExtensionBoundary(positioner.map(targetItem.index)));
-                if (isPopup) {
+                if (root.isPopup) {
                     root.contentItem.contentX = Math.max(root.contentItem.contentWidth - contentItem.width, 0);
                 } else {
                     root.contentItem.contentY = Math.max(root.contentItem.contentHeight - contentItem.height, 0);
@@ -159,7 +161,7 @@ PlasmaComponents.ScrollView {
                 return 0;
             }
             var _height;
-            if (isPopup || init) {
+            if (root.isPopup || init) {
                 _height = targetItem.labelArea.height + editor.topPadding + editor.bottomPadding;
             } else {
                 var realHeight = contentHeight + editor.topPadding + editor.bottomPadding;
@@ -174,7 +176,7 @@ PlasmaComponents.ScrollView {
         }
 
         function adjustSize() {
-            if (isPopup) {
+            if (root.isPopup) {
                 if(contentWidth + editor.leftPadding + editor.rightPadding > root.width) {
                     root.visible = targetItem !== null;
                     root.PlasmaComponents.ScrollBar.horizontal.policy = Qt.ScrollBarAlwaysOn;
