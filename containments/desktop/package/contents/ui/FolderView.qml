@@ -210,7 +210,7 @@ FocusScope {
         property bool itemWasSingleSelectionWhenPressed: false
         property bool renameByLabelClickInitiated: false
 
-        acceptedButtons: root.isPopup
+        acceptedButtons: root.inPanel
             ? (Qt.LeftButton | Qt.MiddleButton | Qt.RightButton | Qt.BackButton)
             : (Qt.LeftButton | Qt.RightButton)
 
@@ -1037,7 +1037,7 @@ FocusScope {
                         dir.refresh();
                     } else if (event.matches(StandardKey.SelectAll)) {
                         positioner.setRangeSelected(0, count - 1);
-                    } else if ( (root.isPopup || !main.krunnerAvailable || Plasmoid.configuration.useTypeAhead) && event.text.length === 1 && event.modifiers === Qt.NoModifier) {
+                    } else if ( (root.inPanel || !main.krunnerAvailable || Plasmoid.configuration.useTypeAhead) && event.text.length === 1 && event.modifiers === Qt.NoModifier) {
                         typeAheadTimer.restart();
                         const charPressed = event.text.toLowerCase();
 
@@ -1240,7 +1240,7 @@ FocusScope {
             onListingCompleted: {
                 if (!gridView.model && root.expanded) {
                     gridView.model = positioner;
-                    gridView.currentIndex = isPopup ? 0 : -1;
+                    gridView.currentIndex = inPanel ? 0 : -1;
                 } else if (main.goingBack) {
                     main.goingBack = false;
                     gridView.currentIndex = Math.min(main.lastPosition.index, gridView.count - 1);
@@ -1365,7 +1365,7 @@ FocusScope {
 
                 visible: false
 
-                isPopup: root.isPopup
+                inPanel: root.inPanel
                 useListViewMode: root.useListViewMode
 
                 onCommit: {

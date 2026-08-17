@@ -20,7 +20,7 @@ FocusScope {
     id: folderViewLayerComponent
 
     // these need to be passed in from main, but required properties with Loaders are awkward
-    /*required*/ property bool isPopup
+    /*required*/ property bool inPanel
     /*required*/ property bool useListViewMode
 
     property var sharedActions: ["newMenu", "paste", "undo", "emptyTrash"]
@@ -84,7 +84,7 @@ FocusScope {
     Folder.ViewPropertiesMenu {
         id: viewPropertiesMenu
 
-        showLayoutActions: !folderViewLayerComponent.isPopup
+        showLayoutActions: !folderViewLayerComponent.inPanel
         showLockAction: Plasmoid.isContainment
         showIconSizeActions: !folderViewLayerComponent.useListViewMode
 
@@ -151,7 +151,7 @@ FocusScope {
         target: root
 
         function onExpandedChanged() {
-            if (folderViewLayerComponent.isPopup) {
+            if (folderViewLayerComponent.inPanel) {
                 if (root.expanded) {
                     folderView.currentIndex = -1;
                     folderView.forceActiveFocus();
@@ -242,7 +242,7 @@ FocusScope {
             // propagates recursively) and that confuses the Label, hence the temp property.
             readonly property bool active: (Plasmoid.configuration.labelMode !== 0)
 
-            readonly property bool showPin: folderViewLayerComponent.isPopup && root.compactRepresentationItem && root.compactRepresentationItem.visible
+            readonly property bool showPin: folderViewLayerComponent.inPanel && root.compactRepresentationItem && root.compactRepresentationItem.visible
 
             width: parent.width
             height: active ? folderViewLayerComponent.labelHeight : 0
@@ -253,7 +253,7 @@ FocusScope {
             property Item homeButton: null
 
             onVisibleChanged: {
-                if (folderViewLayerComponent.isPopup && !visible) {
+                if (folderViewLayerComponent.inPanel && !visible) {
                     root.hideOnWindowDeactivate = true;
                 }
             }
@@ -323,7 +323,7 @@ FocusScope {
 
                     visible: label.showPin
 
-                    width: folderViewLayerComponent.isPopup ? Math.round(Kirigami.Units.gridUnit * 1.25) : 0
+                    width: folderViewLayerComponent.inPanel ? Math.round(Kirigami.Units.gridUnit * 1.25) : 0
                     height: width
                     checkable: true
                     icon.name: "window-pin"
@@ -339,9 +339,9 @@ FocusScope {
 
                     anchors.left: parent.left
 
-                    visible: folderViewLayerComponent.isPopup && folderView.url !== Plasmoid.configuration.url
+                    visible: folderViewLayerComponent.inPanel && folderView.url !== Plasmoid.configuration.url
 
-                    width: folderViewLayerComponent.isPopup ? Math.round(Kirigami.Units.gridUnit * 1.25) : 0
+                    width: folderViewLayerComponent.inPanel ? Math.round(Kirigami.Units.gridUnit * 1.25) : 0
                     height: width
                     icon.name: "go-home"
 

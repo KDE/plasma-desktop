@@ -35,12 +35,12 @@ ContainmentItem {
 
     objectName: isFolder ? "folder" : "desktop"
 
-    width: isPopup ? undefined : preferredWidth(false) // Initial size when adding to e.g. desktop.
-    height: isPopup ? undefined : preferredHeight(false) // Initial size when adding to e.g. desktop.
+    width: inPanel ? undefined : preferredWidth(false) // Initial size when adding to e.g. desktop.
+    height: inPanel ? undefined : preferredHeight(false) // Initial size when adding to e.g. desktop.
 
     function switchSize() {
         // Support expanding into the full representation on very thick vertical panels.
-        if (isPopup && Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
+        if (inPanel && Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
             return Kirigami.Units.gridUnit * 8;
         }
 
@@ -52,8 +52,8 @@ ContainmentItem {
 
     property bool isFolder: (Plasmoid.pluginName === "org.kde.plasma.folder")
     property bool isContainment: Plasmoid.isContainment
-    property bool isPopup: (Plasmoid.location !== PlasmaCore.Types.Floating)
-    property bool useListViewMode: isPopup && Plasmoid.configuration.viewMode === 0
+    property bool inPanel: (Plasmoid.location !== PlasmaCore.Types.Floating)
+    property bool useListViewMode: inPanel && Plasmoid.configuration.viewMode === 0
 
     property Component appletAppearanceComponent
 
@@ -92,7 +92,7 @@ ContainmentItem {
     }
 
     function preferredWidth(forMinimumSize: bool): real {
-        if ((isContainment || !folderViewLayer.ready) || (isPopup && !compactRepresentationItem.visible)) {
+        if ((isContainment || !folderViewLayer.ready) || (inPanel && !compactRepresentationItem.visible)) {
             return -1;
         } else if (useListViewMode) {
             return (forMinimumSize ? folderViewLayer.view.cellHeight * 4 : Kirigami.Units.gridUnit * 16);
@@ -103,7 +103,7 @@ ContainmentItem {
 
     function preferredHeight(forMinimumSize: bool): real {
         let height;
-        if ((isContainment || !folderViewLayer.ready) || (isPopup && !compactRepresentationItem.visible)) {
+        if ((isContainment || !folderViewLayer.ready) || (inPanel && !compactRepresentationItem.visible)) {
             return -1;
         } else if (useListViewMode) {
             height = (folderViewLayer.view.cellHeight * (forMinimumSize ? 1 : 15)) + Kirigami.Units.smallSpacing;
@@ -152,7 +152,7 @@ ContainmentItem {
 
         visible: false
 
-        imagePath: root.isPopup ? "widgets/viewitem" : ""
+        imagePath: root.inPanel ? "widgets/viewitem" : ""
         prefix: "hover"
     }
 
@@ -161,7 +161,7 @@ ContainmentItem {
 
         visible: false
 
-        imagePath: root.isPopup ? "widgets/viewitem" : ""
+        imagePath: root.inPanel ? "widgets/viewitem" : ""
         prefix: "normal"
     }
 
@@ -422,8 +422,8 @@ ContainmentItem {
 
                 Binding {
                     target: folderViewLayer.item
-                    property: "isPopup"
-                    value: root.isPopup
+                    property: "inPanel"
+                    value: root.inPanel
                 }
 
                 Binding {
@@ -454,8 +454,8 @@ ContainmentItem {
         Component.onCompleted: {
             // Layout bindings need to be set delayed; the intermediate steps as the other bindings happen cause loops
             Qt.callLater( () => {
-                dropArea.Layout.minimumWidth = Qt.binding(() => root.preferredWidth(root.isPopup))
-                dropArea.Layout.minimumHeight = Qt.binding(() => root.preferredHeight(root.isPopup))
+                dropArea.Layout.minimumWidth = Qt.binding(() => root.preferredWidth(root.inPanel))
+                dropArea.Layout.minimumHeight = Qt.binding(() => root.preferredHeight(root.inPanel))
 
                 dropArea.Layout.preferredWidth = Qt.binding(() => root.preferredWidth(false))
                 dropArea.Layout.preferredHeight = Qt.binding(() => root.preferredHeight(false))
