@@ -290,6 +290,10 @@ ContainmentItem {
                     anchors.fill: parent
                     // index -1 is for floating applets, which do not need a margin highlight
                     opacity: Plasmoid.containment.corona.editMode && dropArea.marginAreasEnabled && !(root.configOverlay?.dragAndDropping ?? false) && container.index != -1 ? 1 : 0
+                    // These are only ever seen while editing, and an item at zero opacity still has its
+                    // textures made and uploaded, one of them as long as the applet: taking it out of the
+                    // scene until it fades in costs the panel nothing the rest of the time.
+                    visible: opacity > 0
                     Behavior on opacity {
                         NumberAnimation {
                             duration: Kirigami.Units.longDuration
