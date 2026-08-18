@@ -1,76 +1,75 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
 #
-# Yasen Pramatarov <yasen@lindeas.com>, 2009, 2010, 2011.
-# SPDX-FileCopyrightText: 2022-2026 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: kcmkeyboard\n"
+"Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-19 00:46+0000\n"
-"PO-Revision-Date: 2026-06-19 18:42+0200\n"
-"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
-"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
-"Language: bg\n"
+"PO-Revision-Date: 2026-08-18 03:17+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.04.2\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 26.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Ясен Праматаров"
+msgstr "Kisaragi Hiu"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "yasen@lindeas.com"
+msgstr "mail@kisaragi-hiu.com"
 
 #: bindings.cpp:24
 #, kde-format
 msgid "Keyboard Layout Switcher"
-msgstr "Превключвател за клавиатурна подредба"
+msgstr "齒盤佈局切換器"
 
 #: bindings.cpp:26
 #, kde-format
 msgid "Switch to Next Keyboard Layout"
-msgstr "Превключване на следваща клавиатурна подредба"
+msgstr ""
 
 #: bindings.cpp:30
 #, kde-format
 msgid "Switch to Last-Used Keyboard Layout"
-msgstr "Превключване към последно използваната клавиатурна подредба"
+msgstr ""
 
 #: bindings.cpp:60
 #, kde-format
 msgid "Switch keyboard layout to %1"
-msgstr "Превключване подредбата на клавиатурата на %1"
+msgstr ""
 
 #: keyboardmodel.cpp:35
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
-msgstr "Неизвестно"
+msgstr "毋知"
 
 #: keyboardmodel.cpp:39
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
-msgstr "%1 | %2"
+msgstr ""
 
 #: tastenbrett/main.cpp:52
 #, kde-format
 msgctxt "app display name"
 msgid "Keyboard Preview"
-msgstr "Преглед на клавиатурата"
+msgstr "齒盤預覽"
 
 #: tastenbrett/main.cpp:54
 #, kde-format
 msgctxt "app description"
 msgid "Keyboard layout visualization"
-msgstr "Визуализация на клавиатурна подредба"
+msgstr "齒盤佈局視覺化"
 
 #: tastenbrett/main.cpp:139
 #, kde-format
@@ -84,61 +83,54 @@ msgid ""
 "not supported and  will also trigger this message. These might still work "
 "fine if applied"
 msgstr ""
-"Геометрията на клавиатурата не успя да се зареди. Това често показва, че "
-"избраният модел не поддържа конкретна подредба или вариант на подредба. Този "
-"проблем вероятно ще се появи и когато се опитате да използвате тази "
-"комбинация от модел, подредба и вариант. Предварителният преглед на "
-"подредби, които са дефинирани извън директорията xkb на вашата система, не "
-"се поддържа и също ще задейства това съобщение. Но, ако са зададени, те също "
-"може да работят добре."
 
 #: ui/KeyBindings.qml:18
 #, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
-msgstr "Клавишни комбинации"
+msgstr ""
 
 #: ui/KeyBindings.qml:62
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
-msgstr "Настройки на клавиатурата"
+msgstr "設定齒盤選項"
 
 #: ui/KeyBindings.qml:134
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset"
-msgstr "Нулиране"
+msgstr "重設"
 
 #: ui/KeyBindings.qml:138
 #, kde-format
 msgctxt "@info accessible"
 msgid "Reset selected options for this group"
-msgstr "Нулиране на избраните опции за тази група"
+msgstr "重設這个群組已經選擇 ê 選項"
 
 #: ui/KeyBindings.qml:139
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Reset selected options for this group"
-msgstr "Нулиране на избраните опции за тази група"
+msgstr "重設這个群組已經選擇 ê 選項"
 
 #: ui/LayoutDialog.qml:22
 #, kde-format
 msgctxt "@title:window"
 msgid "Set Layout"
-msgstr "Задаване на подредба"
+msgstr "設定佈局"
 
 #: ui/LayoutDialog.qml:22
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Layout"
-msgstr "Добавяне на подредба"
+msgstr "添佈局"
 
 #: ui/LayoutDialog.qml:121
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
-msgstr "Кратко име на подредбата"
+msgstr "佈局短名"
 
 #: ui/LayoutDialog.qml:131
 #, kde-format
@@ -146,93 +138,91 @@ msgctxt "@info"
 msgid ""
 "The abbreviated name of the selected layout, which will be displayed in the "
 "system tray. You can change this setting yourself."
-msgstr ""
-"Съкратеното име на избраната подредба, което ще се показва в системната "
-"област. Можете сами да промените тази настройка."
+msgstr "選 ê 佈局 ê 簡略 ê 名，會用來佇系統匣顯示。你 ē-sái 家己改變這个設定。"
 
 #: ui/LayoutDialog.qml:139
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
-msgstr "Клавишна комбинация:"
+msgstr "快速齒："
 
 #: ui/LayoutDialog.qml:150 ui/main.qml:287
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview"
-msgstr "Предварителен преглед"
+msgstr "預覽"
 
 #: ui/main.qml:37
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Switching…"
-msgstr "Настройка на превключване на подредбите…"
+msgstr "設定切換…"
 
 #: ui/main.qml:38
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Configure Switching"
-msgstr "Настройка на превключване на подредбите"
+msgstr "設定切換"
 
 #: ui/main.qml:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Key Bindings"
-msgstr "Клавишни комбинации"
+msgstr ""
 
 #: ui/main.qml:45
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Key Bindings"
-msgstr "Клавишни комбинации"
+msgstr ""
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@action:button Layout"
 msgid "Add…"
-msgstr "Добавяне…"
+msgstr "添…"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add layout"
-msgstr "Добавяне на подредба"
+msgstr "添佈局"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "@label:checkbox configure layouts option"
 msgid "Enable"
-msgstr "Включване"
+msgstr "啟用"
 
 #: ui/main.qml:60
 #, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Configure Layouts"
-msgstr "Настройка на подредбите"
+msgstr "設定佈局"
 
 #: ui/main.qml:76
 #, kde-format
 msgctxt "@label:listbox Keyboard model"
 msgid "Model:"
-msgstr "Модел:"
+msgstr "型號："
 
 #: ui/main.qml:104
 #, kde-format
 msgctxt "@label:listbox"
 msgid "NumLock on startup:"
-msgstr "NumLock при стартиране:"
+msgstr "啟動時 ê NumLock 狀態："
 
 #: ui/main.qml:112
 #, kde-format
 msgctxt "@item:inlistbox Turn on \"NumLock\" on startup"
 msgid "Turn on"
-msgstr "Включване"
+msgstr "啟用"
 
 #: ui/main.qml:116
 #, kde-format
 msgctxt "@item:inlistbox Turn off \"NumLock\" on startup"
 msgid "Turn off"
-msgstr "Изключване"
+msgstr "停用"
 
 #: ui/main.qml:120
 #, kde-format
@@ -240,145 +230,145 @@ msgctxt ""
 "@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma "
 "started up"
 msgid "Leave unchanged"
-msgstr "Без промяна"
+msgstr "莫改變"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Key repeat:"
-msgstr "Повторение на клавиш:"
+msgstr "重複齒："
 
 #: ui/main.qml:155 ui/main_phone.qml:115
 #, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
-msgstr "Повторение на клавиш"
+msgstr "重複齒"
 
 #: ui/main.qml:166 ui/main_phone.qml:131
 #, kde-format
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
-msgstr "Забавяне:"
+msgstr "延遲："
 
 #: ui/main.qml:180 ui/main_phone.qml:135
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
-msgstr "Забавяне на повторение на клавиш %1"
+msgstr "重複齒延遲 %1"
 
 #: ui/main.qml:188 ui/main_phone.qml:143
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
-msgstr "%1 ms"
+msgstr ""
 
 #: ui/main.qml:192 ui/main_phone.qml:147
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
-msgstr "ms"
+msgstr ""
 
 #: ui/main.qml:205 ui/main_phone.qml:162
 #, kde-format
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
-msgstr "Скорост:"
+msgstr "速率："
 
 #: ui/main.qml:219 ui/main_phone.qml:169
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
-msgstr "Скорост на повторение на клавиш %1"
+msgstr "重複齒速率 %1"
 
 #: ui/main.qml:227 ui/main_phone.qml:177
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
-msgstr "%1 повторение/я"
+msgstr "%1 kái 重複/秒"
 
 #: ui/main.qml:231 ui/main_phone.qml:181
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
-msgstr "повторение/я"
+msgstr "kái 重複/秒"
 
 #: ui/main.qml:243
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Test area:"
-msgstr "Място за пробване:"
+msgstr ""
 
 #: ui/main.qml:245
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to test settings"
-msgstr "Пишете тук за да тествате настройките"
+msgstr ""
 
 #: ui/main.qml:256
 #, kde-format
 msgctxt "@title:view"
 msgid "Layouts"
-msgstr "Подредби"
+msgstr "佈局"
 
 #: ui/main.qml:270
 #, kde-format
 msgctxt "@action:button"
 msgid "Move Up"
-msgstr "Преместване нагоре"
+msgstr "徙去頂懸"
 
 #: ui/main.qml:271
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
-msgstr "Преместване на %1 подредба нагоре"
+msgstr "Kā %1 佈局徙去頂懸"
 
 #: ui/main.qml:277
 #, kde-format
 msgctxt "@action:button"
 msgid "Move Down"
-msgstr "Преместване надолу"
+msgstr "徙去下跤"
 
 #: ui/main.qml:278
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
-msgstr "Преместване на %1 подредба надолу"
+msgstr "Kā %1 佈局徙去下跤"
 
 #: ui/main.qml:288
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Preview"
-msgstr "Предварителен преглед"
+msgstr "預覽"
 
 #: ui/main.qml:296
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove"
-msgstr "Премахване"
+msgstr "移除"
 
 #: ui/main.qml:297
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
-msgstr "Премахване на подредба %1"
+msgstr "移除佈局 %1"
 
 #: ui/main.qml:309
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
-msgstr "Резервни подредби:"
+msgstr "備用 ê 佈局："
 
 #: ui/main.qml:346
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
-msgstr "Брой запазени основни подредби"
+msgstr "備用 ê 主要佈局 ê 數"
 
 #: ui/main.qml:378
 #, kde-format
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
-msgstr "основни подредби"
+msgstr "主要佈局"
 
 #: ui/main.qml:382
 #, kde-format
@@ -389,130 +379,126 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
-"Можете да имате до 4 основни подредби, всички останали подредби са резервни. "
-"Резервните подредби не се включват при превключването, но могат да бъдат "
-"достъпни през индикатора на клавиатурата в системната област или чрез "
-"задаване на потребителска клавишна комбинация."
 
 #: ui/main.qml:387
 #, kde-format
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
-msgstr "Промяна клавишните комбинации на подредбите:"
+msgstr "換佈局 ê 快速齒："
 
 #: ui/main.qml:410
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
-msgstr "или"
+msgstr "猶是"
 
 #: ui/main_phone.qml:36
 #, kde-format
 msgctxt "@title form header"
 msgid "Model & Layout"
-msgstr "Модел и подредба"
+msgstr "型號 kap 佈局"
 
 #: ui/main_phone.qml:43
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Keyboard Model"
-msgstr "Модел на клавиатурата"
+msgstr "齒盤型號"
 
 #: ui/main_phone.qml:72
 #, kde-format
 msgctxt "@option:check"
 msgid "Custom Layout"
-msgstr "Потребителска подредба"
+msgstr "自訂佈局"
 
 #: ui/main_phone.qml:96
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Layout..."
-msgstr "Промяна на подредбата..."
+msgstr "換佈局…"
 
 #: ui/main_phone.qml:103
 #, kde-format
 msgctxt "@title:group"
 msgid "Key Repeat"
-msgstr "Повторение на клавиш"
+msgstr "重複齒"
 
 #: ui/main_phone.qml:109
 #, kde-format
 msgctxt "@option:check"
 msgid "Customize Repeat"
-msgstr "Персонализиране на повторенията"
+msgstr "設定重複"
 
 #: ui/Switching.qml:17
 #, kde-format
 msgctxt "@title"
 msgid "Configure Switching"
-msgstr "Настройка на превключване на подредбите"
+msgstr "設定切換"
 
 #: ui/Switching.qml:23
 #, kde-format
 msgctxt "@title:group"
 msgid "Behavior"
-msgstr "Поведение"
+msgstr "行為"
 
 #: ui/Switching.qml:28
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Switching layout affects:"
-msgstr "Превключването на подредбата засяга:"
+msgstr "切換佈局會影響："
 
 #: ui/Switching.qml:35
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows"
-msgstr "Всички прозорци"
+msgstr "所有 ê 視窗"
 
 #: ui/Switching.qml:39
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows on current desktop"
-msgstr "Всички прозорци на текущия работен плот"
+msgstr "所有這馬桌面頂懸 ê 視窗"
 
 #: ui/Switching.qml:43
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows of current application"
-msgstr "Всички прозорци на текущото приложение"
+msgstr "所有這馬應用程式 ê 視窗"
 
 #: ui/Switching.qml:47
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Current window only"
-msgstr "Само текущият прозорец"
+msgstr "干焦這馬 ê 視窗"
 
 #: ui/Switching.qml:74
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Show OSD popup on layout change"
-msgstr "Показване на изскачащо съобщение при промяна на подредбата"
+msgstr "換佈局 ê 時陣顯示 OSD 彈出"
 
 #: ui/Switching.qml:86
 #, kde-format
 msgctxt "@title:group"
 msgid "Shortcuts"
-msgstr "Клавишни комбинации"
+msgstr "快速齒"
 
 #: ui/Switching.qml:91 ui/Switching.qml:151
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
-msgstr "Промяна на подредбата:"
+msgstr "換佈局："
 
 #: ui/Switching.qml:111
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
-msgstr "Превключване към последно използваната клавиатурна подредба:"
+msgstr "切換到頂 kái 用 ê 佈局："
 
 #: ui/Switching.qml:131
 #, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
-msgstr "Наследени клавишни комбинации"
+msgstr "舊式快速齒"
 
 #: ui/Switching.qml:139
 #, kde-kuit-format
@@ -523,16 +509,12 @@ msgid ""
 "Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
 "page."
 msgstr ""
-"Наследените клавишни комбинации на X11 позволяват по-фин контрол на само за "
-"модификатори и имат малко по-добра поддръжка за X11 в крайните случаи. Те "
-"могат да се използват и на Wayland.<nl/><nl/>Задаването на тези клавишни "
-"комбинации  ще ви отведе до страницата за настройки на клавишните комбинации."
 
 #: ui/Switching.qml:180
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
-msgstr "Алтернативни символи:"
+msgstr "代替 ê 符號："
 
 #: ui/Switching.qml:206
 #, kde-format
@@ -541,18 +523,15 @@ msgid ""
 "Modifier keys can be used to type additional characters, symbols, and "
 "diacritical marks."
 msgstr ""
-"Модифициращите клавиши могат да се използват за въвеждане на допълнителни "
-"знаци, символи и диакритични знаци."
 
 #: xkboptionsmodel.cpp:163
 #, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
-msgstr[0] "%1 клавишна комбинация"
-msgstr[1] "%1 клавишни комбинации"
+msgstr[0] "%1 个快速齒"
 
 #: xkboptionsmodel.cpp:166
 #, kde-format
 msgctxt "no shortcuts defined"
 msgid "None"
-msgstr "Без"
+msgstr "無"
