@@ -291,7 +291,17 @@ if(X11_FOUND)
     add_subdirectory(kaccess)
 endif()
 install(FILES org.kde.plasmashell.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
-install(FILES kde-mimeapps.list DESTINATION ${KDE_INSTALL_APPDIR})
+
+# Only link Discover to debian files in the debian world.
+find_program(DPKG dpkg)
+if (DPKG)
+    file(COPY_FILE kde-mimeapps.list ${CMAKE_BINARY_DIR}/kde-mimeapps.list)
+    file(APPEND ${CMAKE_BINARY_DIR}/kde-mimeapps.list "\n# Discover (extra *.deb) \napplication/vnd.debian.binary-package=org.kde.discover.desktop\n")
+    install(FILES ${CMAKE_BINARY_DIR}/kde-mimeapps.list DESTINATION ${KDE_INSTALL_APPDIR})
+else()
+    install(FILES kde-mimeapps.list DESTINATION ${KDE_INSTALL_APPDIR})
+endif ()
+
 
 install(FILES kconf_update/50-krunner-activate-typing.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
 install(PROGRAMS kconf_update/50-krunner-activate-typing.sh DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
