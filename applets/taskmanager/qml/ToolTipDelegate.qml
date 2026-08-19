@@ -37,6 +37,7 @@ Loader {
     property url launcherUrl
     property bool isLauncher
     property bool isMinimized
+    property bool isReadyForPainting
 
     // Needed for generateSubtext()
     property string display
@@ -74,6 +75,7 @@ Loader {
             appPid: toolTipDelegate.pidParent
             display: toolTipDelegate.display
             isMinimized: toolTipDelegate.isMinimized
+            isReadyForPainting: toolTipDelegate.isReadyForPainting
             isOnAllVirtualDesktops: toolTipDelegate.isOnAllVirtualDesktops
             virtualDesktops: toolTipDelegate.virtualDesktops
             activities: toolTipDelegate.activities
@@ -162,6 +164,7 @@ Loader {
                     appPid: model.AppPid
                     // 'display' is required already
                     isMinimized: model.IsMinimized
+                    isReadyForPainting: model.Geometry.width > 0 && model.Geometry.height > 0
                     isOnAllVirtualDesktops: model.IsOnAllVirtualDesktops
                     virtualDesktops: model.VirtualDesktops
                     activities: model.Activities
