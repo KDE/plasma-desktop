@@ -3,20 +3,21 @@
 #
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2017-05-16 11:32-0400\n"
-"Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-08-18 11:43+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -30,6 +31,8 @@ msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
 msgstr ""
+"פעולה זו תשבית את חיפוש הקבצים בתפריטי KRunner והמשכר ותסיר תצוגת נתוני־על "
+"מורחבת מכל יישומי KDE."
 
 #: package/contents/ui/main.qml:67
 #, kde-format
@@ -42,7 +45,7 @@ msgstr ""
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgid "Delete Index Data"
-msgstr ""
+msgstr "מחיקת נתוני מפתח"
 
 #: package/contents/ui/main.qml:89
 #, kde-format
@@ -56,18 +59,15 @@ msgid "Restart"
 msgstr ""
 
 #: package/contents/ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid ""
-#| "File Search helps you quickly locate all your files based on their content"
+#, kde-format
 msgid ""
 "File Search helps you quickly locate all your files based on their content."
-msgstr "חיפוש קבצים עוזר לך למצוא במהירות את הקבצים שלך על בסיס תוכנם"
+msgstr "חיפוש קבצים מסייע לך לאתר את כל הקבצים שלך לפי התוכן שלהם במהירות."
 
 #: package/contents/ui/main.qml:107
-#, fuzzy, kde-format
-#| msgid "Enable File Search"
+#, kde-format
 msgid "Enable File Search"
-msgstr "אפשר חיפוש קבצים"
+msgstr "הפעלת חיפוש קבצים"
 
 #: package/contents/ui/main.qml:122
 #, kde-format
@@ -87,59 +87,57 @@ msgstr ""
 #: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Pause Indexer"
-msgstr ""
+msgstr "עצירת המתעד"
 
 #: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Resume Indexer"
-msgstr ""
+msgstr "המשך המתעד"
 
 #: package/contents/ui/main.qml:178
 #, kde-format
 msgid "Currently indexing: %1"
-msgstr ""
+msgstr "מתועד במפתח כעת: %1"
 
 #: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Folder specific configuration:"
-msgstr ""
+msgstr "להגדרות מסוימות:"
 
 #: package/contents/ui/main.qml:213
 #, kde-format
 msgid "Start indexing a folder…"
-msgstr ""
+msgstr "התחלת תיעוד תיקייה…"
 
 #: package/contents/ui/main.qml:224
 #, kde-format
 msgid "Stop indexing a folder…"
-msgstr ""
+msgstr "עצירת תיעוד תיקייה…"
 
 #: package/contents/ui/main.qml:275
 #, kde-format
 msgid "Not indexed"
-msgstr ""
+msgstr "לא במפתח"
 
 #: package/contents/ui/main.qml:276
 #, kde-format
 msgid "Indexed"
-msgstr ""
+msgstr "מתועד במפתח"
 
 #: package/contents/ui/main.qml:306
 #, kde-format
 msgid "Delete entry"
-msgstr ""
+msgstr "מחיקת רשומה"
 
 #: package/contents/ui/main.qml:321
-#, fuzzy, kde-format
-#| msgid "Select the folder which should be excluded"
+#, kde-format
 msgid "Select a folder to include"
-msgstr "בחר את התיקיות שימנעו מחיפוש"
+msgstr "נא לבחור תיקייה להכללה"
 
 #: package/contents/ui/main.qml:321
-#, fuzzy, kde-format
-#| msgid "Select the folder which should be excluded"
+#, kde-format
 msgid "Select a folder to exclude"
-msgstr "בחר את התיקיות שימנעו מחיפוש"
+msgstr "נא לבחור תיקייה להחרגה"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

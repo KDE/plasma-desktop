@@ -4,19 +4,20 @@
 # Diego Iastrubni <elcuco@kde.org>, 2008, 2012.
 # elkana bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2017-05-23 10:22-0400\n"
-"Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-08-18 11:31+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 26.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -30,20 +31,19 @@ msgid "Your emails"
 msgstr "kde-l10n-he@kde.org"
 
 #: bindings.cpp:24
-#, fuzzy, kde-format
-#| msgid "KDE Keyboard Layout Switcher"
+#, kde-format
 msgid "Keyboard Layout Switcher"
-msgstr "משנה פריסת מקלדת של KDE"
+msgstr "מחליף פריסות מקלדת"
 
 #: bindings.cpp:26
 #, kde-format
 msgid "Switch to Next Keyboard Layout"
-msgstr "עבור לפריסת המקלדת הבאה"
+msgstr "מעבר לפריסת המקלדת הבאה"
 
 #: bindings.cpp:49
 #, kde-format
 msgid "Switch keyboard layout to %1"
-msgstr "עבור לפריסת המקלדת %1"
+msgstr "העברה לפריסת המקלדת %1"
 
 #: flags.cpp:122
 #, kde-format
@@ -55,13 +55,13 @@ msgstr "%1 - %2"
 #: kcm_add_layout_dialog.ui:14
 #, kde-format
 msgid "Add Layout"
-msgstr "הוסף פריסה"
+msgstr "הוספת פריסה"
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, layoutSearchField)
 #: kcm_add_layout_dialog.ui:20
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "חיפוש…"
 
 #. i18n: ectx: property (text), widget (QLabel, shortcutLabel)
 #: kcm_add_layout_dialog.ui:45
@@ -85,12 +85,12 @@ msgstr "תצוגה מקדימה"
 #: kcm_keyboard.cpp:32
 #, kde-format
 msgid "KDE Keyboard Control Module"
-msgstr "כלי החלפת פריסת המקלדת של KDE"
+msgstr "מודול שליטה במקלדות KDE"
 
 #: kcm_keyboard.cpp:36
 #, kde-format
 msgid "(c) 2010 Andriy Rysin"
-msgstr "כל הזכויות שמורות (C)‏ 1010 Andriy Rysin"
+msgstr "(c) 2010 אנדריי רייזין"
 
 #: kcm_keyboard.cpp:40
 #, kde-format
@@ -122,10 +122,10 @@ msgid ""
 "is probably what you want if you do not know what kind of keyboard you "
 "have.\n"
 msgstr ""
-"כאם באפשרותך לבחור דגם של מקדת. אפשרות זו לא תלויה בפריסה של המקלדת ומתייחסת "
-"אך ורק לדגם החומרה, הווה אומר ליצרן של המקלדת. מקלדות חדשות שמגיעות עם "
-"המחשבים החדשים בדרך כלל כוללות שני מקשים נוספים הנקראות \"מקלדות 104 מקשים"
-"\", וזה הדגם שאתה צריך לבחור אם אינך יודע את סוג המקלדת שיש לך.\n"
+"כאן אפשר לבחור דגם מקלדת. אפשרות זו לא תלויה בפריסת המקלדת ומתייחסת אך ורק "
+"לדגם החומרה, כלומר ליצרן של המקלדת. מקלדות חדשות שמגיעות עם המחשבים החדשים "
+"בדרך כלל כוללות שני מקשים נוספים וקוראים להן „מקלדות 104 מקשים”, וזה הדגם "
+"שיש לבחור אם אין לך מושג מה סוג המקלדת שלך.\n"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
 #: kcm_keyboard.ui:94
@@ -140,8 +140,8 @@ msgid ""
 "If you select \"Application\" or \"Window\" switching policy, changing the "
 "keyboard layout will only affect the current application or window."
 msgstr ""
-"אם תבחר במדיניות \"יישום\" או \"חלונות\", החלפת הפריסה תשפיע רק על החלון או "
-"היישום הנוכחי."
+"בחירה במדיניות החלפה „יישום” או „חלון”, תגרום לכך ששינוי פריסת המקלדת ישפיע "
+"רק על היישום או החלון הנוכחי."
 
 #. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
 #: kcm_keyboard.ui:105
@@ -153,7 +153,7 @@ msgstr "מדיניות החלפה"
 #: kcm_keyboard.ui:111
 #, kde-format
 msgid "&Global"
-msgstr "&גלובלי"
+msgstr "מ&קיף"
 
 #. i18n: ectx: property (text), widget (QRadioButton, switchByDesktopRadioBtn)
 #: kcm_keyboard.ui:124
@@ -177,7 +177,7 @@ msgstr "&חלון"
 #: kcm_keyboard.ui:157
 #, kde-format
 msgid "Shortcuts for Switching Layout"
-msgstr "קיצורים להחלפת פריסה"
+msgstr "מקשי קיצור להחלפת פריסה"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm_keyboard.ui:163
@@ -192,8 +192,7 @@ msgid ""
 "This is a shortcut for switching layouts which is handled by X.org. It "
 "allows modifier-only shortcuts."
 msgstr ""
-"זהו הקיצור שיחליף פריסות בטיפול של X.org. הוא מאפשר רק קיצורים של משני מצב "
-"בלבד."
+"זהו הקיצור שיחליף פריסות בטיפול של X.org. הוא מאפשר רק קיצורים עם מקשי החלפה."
 
 #. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
 #. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
@@ -208,7 +207,7 @@ msgstr "ללא"
 #: kcm_keyboard.ui:186 kcm_keyboard.ui:216
 #, kde-format
 msgid "…"
-msgstr ""
+msgstr "…"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm_keyboard.ui:193
@@ -224,64 +223,60 @@ msgid ""
 "it has one) which is handled by X.org. It allows modifier-only shortcuts."
 msgstr ""
 "זהו קיצור להחלפה של הפריסה למצב שלישי (אם קיים) כפי שמנוהל על ידי X.org. "
-"מאפשר רק מקשים משני מצב."
+"מאפשר קיצורים עם מקשי החלפה בלבד."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm_keyboard.ui:223
 #, kde-format
 msgid "Alternative shortcut:"
-msgstr "פריסה אלטרנטיבית:"
+msgstr "פריסה חלופית:"
 
 #. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
 #: kcm_keyboard.ui:236
-#, fuzzy, kde-format
-#| msgid ""
-#| "This is a shortcut for switching layouts which is handled by KDE. It does "
-#| "not support modifier-only shortcuts and also may not work in some "
-#| "situations (e.g. if popup is active or from screensaver)."
+#, kde-format
 msgid ""
 "This is a shortcut for switching layouts. It does not support modifier-only "
 "shortcuts and also may not work in some situations (e.g. if popup is active "
 "or from screensaver)."
 msgstr ""
-"זוהי הפריסה האלטרנטיבית המנוהלת על ידי KDE. היא לא תומכת במקשים משני מצב "
-"בלבד, ולא פועלת במצבים מסוימים (למשל אם מופעל חלון מתוך שומר מסך)."
+"זוהי הפריסה החלופית המנוהלת על ידי KDE. היא לא תומכת בקיצורים עם מקשי החלפה "
+"בלבד, ולא פועלת במצבים מסוימים (למשל אם קופצת חלונית או מתוך שומר מסך)."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
 #: kcm_keyboard.ui:261
 #, kde-format
 msgid "Configure layouts"
-msgstr "הגדר פריסות"
+msgstr "הגדרת פריסות"
 
 #. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
 #: kcm_keyboard.ui:275
 #, kde-format
 msgid "Add"
-msgstr "הוסף"
+msgstr "הוספה"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
 #: kcm_keyboard.ui:285
 #, kde-format
 msgid "Remove"
-msgstr "הסר"
+msgstr "הסרה"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
 #: kcm_keyboard.ui:295
 #, kde-format
 msgid "Move Up"
-msgstr "הזז מעלה"
+msgstr "העלאה למעלה"
 
 #. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
 #: kcm_keyboard.ui:305
 #, kde-format
 msgid "Move Down"
-msgstr "הזז למטה"
+msgstr "הורדה למטה"
 
 #. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
 #: kcm_keyboard.ui:350
 #, kde-format
 msgid "Spare layouts"
-msgstr "פריסות מיותרות"
+msgstr "פריסות עודפות"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: kcm_keyboard.ui:382
@@ -299,7 +294,7 @@ msgstr "מתקדם"
 #: kcm_keyboard.ui:418
 #, kde-format
 msgid "&Configure keyboard options"
-msgstr "&הגדר אפשרויות של המקלדת"
+msgstr "ה&גדרת אפשרויות מקלדת"
 
 #: kcm_keyboard_widget.cpp:211
 #, kde-format
@@ -323,7 +318,7 @@ msgstr "ללא"
 #, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
-msgstr[0] "%1 קיצור דרך:"
+msgstr[0] "קיצור דרך אחד"
 msgstr[1] "%1 קיצורי דרך"
 
 #: kcm_view_models.cpp:200
@@ -335,52 +330,52 @@ msgstr "מפה"
 #: kcm_view_models.cpp:200
 #, kde-format
 msgid "Layout"
-msgstr "פריסה:"
+msgstr "פריסה"
 
 #: kcm_view_models.cpp:200
 #, kde-format
 msgid "Variant"
-msgstr "חלופה:"
+msgstr "הגוון"
 
 #: kcm_view_models.cpp:200
 #, kde-format
 msgid "Label"
-msgstr "תווית:"
+msgstr "תווית"
 
 #: kcm_view_models.cpp:200
 #, kde-format
 msgid "Shortcut"
-msgstr "קיצור דרך:"
+msgstr "קיצור דרך"
 
 #: kcm_view_models.cpp:273
 #, kde-format
 msgctxt "variant"
 msgid "Default"
-msgstr "ברירת־מחדל"
+msgstr "ברירת מחדל"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcmmiscwidget.ui:31
 #, kde-format
 msgid "When a key is held:"
-msgstr ""
+msgstr "מתי שמקש מוחזק:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, accentMenuRadioButton)
 #: kcmmiscwidget.ui:38
 #, kde-format
 msgid "&Show accented and similar characters "
-msgstr ""
+msgstr "לה&ציג תווים חלופיים ודומים "
 
 #. i18n: ectx: property (text), widget (QRadioButton, repeatRadioButton)
 #: kcmmiscwidget.ui:45
 #, kde-format
 msgid "&Repeat the key"
-msgstr ""
+msgstr "לח&זור על ההקשה"
 
 #. i18n: ectx: property (text), widget (QRadioButton, nothingRadioButton)
 #: kcmmiscwidget.ui:52
 #, kde-format
 msgid "&Do nothing"
-msgstr ""
+msgstr "לא לעשות &כלום"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcmmiscwidget.ui:66
@@ -395,7 +390,7 @@ msgid ""
 "Allows to test keyboard repeat and click volume (just don't forget to apply "
 "the changes)."
 msgstr ""
-"מאפשר לבדוק את החזרה על המקלדת ועומת הלחיצה (אל תשכח להחיל את השינויים)."
+"מאפשר לבדוק את החזרה על המקלדת ועוצמת ההקלדה (לא לשכוח להחיל את השינויים)."
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
 #: kcmmiscwidget.ui:82
@@ -419,19 +414,19 @@ msgstr "מצב NumLock בהפעלת KDE"
 #: kcmmiscwidget.ui:97
 #, kde-format
 msgid "T&urn on"
-msgstr "&הפעל"
+msgstr "ה&פעלה"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton2)
 #: kcmmiscwidget.ui:104
 #, kde-format
 msgid "&Turn off"
-msgstr "&כבה"
+msgstr "&כיבוי"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton3)
 #: kcmmiscwidget.ui:111
 #, kde-format
 msgid "Leave unchan&ged"
-msgstr "&ללא שינוי"
+msgstr "להשאיר &ללא שינוי"
 
 #. i18n: ectx: property (text), widget (QLabel, lblRate)
 #: kcmmiscwidget.ui:148
@@ -476,21 +471,19 @@ msgstr " אלפיות שנייה"
 #: kcmmiscwidget.ui:246
 #, kde-format
 msgid "&Delay:"
-msgstr "&השהייה:"
+msgstr "ה&שהייה:"
 
 #: tastenbrett/main.cpp:57
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "app display name"
 msgid "Keyboard Preview"
-msgstr "חזרה של מקלדת"
+msgstr "תצוגה מקדימה של מקלדת"
 
 #: tastenbrett/main.cpp:59
-#, fuzzy, kde-format
-#| msgid "KDE Keyboard Layout Switcher"
+#, kde-format
 msgctxt "app description"
 msgid "Keyboard layout visualization"
-msgstr "משנה פריסת מקלדת של KDE"
+msgstr "המחשת פריסת מקלדת"
 
 #: tastenbrett/main.cpp:144
 #, kde-format
@@ -501,6 +494,9 @@ msgid ""
 "will likely also present when you try to use this combination of model, "
 "layout and variant."
 msgstr ""
+"טעינת תוואי המקלדת נכשלה. בדרך כלל מציין שהדגם הנבחר לא תומך בפריסה או "
+"בהגוון פריסה מסוים. זה כנראה יקרה גם בעת ניסיון להשתמש בצירוף כזה של דגם, "
+"פריסה והגוון."
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "משנה פריסת מקלדת של KDE"

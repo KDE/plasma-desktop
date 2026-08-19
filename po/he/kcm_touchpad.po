@@ -3,36 +3,36 @@
 #
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2017-05-16 12:05-0400\n"
-"Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-08-18 11:40+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "אלקנה ברדוגו"
+msgstr "אלקנה ברדוגו,צוות התרגום של KDE ישראל"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ttv200@gmail.com"
+msgstr "ttv200@gmail.com,kde-l10n-he@kde.org"
 
 #: actions.cpp:19
-#, fuzzy, kde-format
-#| msgid "Touchpad KCM"
+#, kde-format
 msgid "Touchpad"
-msgstr "משטח מגע KCM"
+msgstr "משטח מגע"
 
 #: actions.cpp:22
 #, kde-format
@@ -67,7 +67,7 @@ msgstr "ההתחברות לשרת X נכשלה"
 #: backends/x11/xlibbackend.cpp:90 kcm/libinput/touchpad.qml:98
 #, kde-format
 msgid "No touchpad found"
-msgstr ""
+msgstr "לא נמצא משטח מגע"
 
 #: backends/x11/xlibbackend.cpp:136 backends/x11/xlibbackend.cpp:150
 #, kde-format
@@ -80,59 +80,54 @@ msgid "Cannot read touchpad configuration"
 msgstr "לא יכול לקרוא הגדרות משטח מגע"
 
 #: backends/x11/xlibbackend.cpp:190
-#, fuzzy, kde-format
-#| msgid "Cannot read touchpad configuration"
+#, kde-format
 msgid "Cannot read default touchpad configuration"
-msgstr "לא יכול לקרוא הגדרות משטח מגע"
+msgstr "אי אפשר לקרוא את הגדרות משטח המגע כברירת מחדל"
 
 #: kcm/libinput/touchpad.qml:112
 #, kde-format
 msgid "Device:"
-msgstr ""
+msgstr "התקן:"
 
 #: kcm/libinput/touchpad.qml:137
 #, kde-format
 msgid "General:"
-msgstr ""
+msgstr "כללי:"
 
 #: kcm/libinput/touchpad.qml:139
 #, kde-format
 msgid "Device enabled"
-msgstr ""
+msgstr "התקן פעיל"
 
 #: kcm/libinput/touchpad.qml:143
 #, kde-format
 msgid "Accept input through this device."
-msgstr ""
+msgstr "קבלת קלט דרך ההתקן הזה."
 
 #: kcm/libinput/touchpad.qml:167
-#, fuzzy, kde-format
-#| msgid "Disable touchpad when typing"
+#, kde-format
 msgid "Disable while typing"
-msgstr "בטל את משטח מגע בהקלדה"
+msgstr "השבתה בעת הקלדה"
 
 #: kcm/libinput/touchpad.qml:171
-#, fuzzy, kde-format
-#| msgid "Disable touchpad when typing"
+#, kde-format
 msgid "Disable touchpad while typing to prevent accidental inputs."
-msgstr "בטל את משטח מגע בהקלדה"
+msgstr "השבתת משטח מגע בזמן הקלדה כדי למנוע קלט בלתי רצוני."
 
 #: kcm/libinput/touchpad.qml:195
-#, fuzzy, kde-format
-#| msgctxt "Touchpad Edge"
-#| msgid "Left edge"
+#, kde-format
 msgid "Left handed mode"
-msgstr "קצה שמאל"
+msgstr "מצב שמאליים"
 
 #: kcm/libinput/touchpad.qml:199
 #, kde-format
 msgid "Swap left and right buttons."
-msgstr ""
+msgstr "החלפת הלחצנים השמאלי והימני."
 
 #: kcm/libinput/touchpad.qml:223
 #, kde-format
 msgid "Press left and right buttons for middle click"
-msgstr ""
+msgstr "לחיצה על הלחצנים השמאלי והימני מייצרים לחיצה אמצעית"
 
 #: kcm/libinput/touchpad.qml:227 kcm/libinput/touchpad.qml:859
 #, kde-format
@@ -141,251 +136,232 @@ msgid ""
 msgstr ""
 
 #: kcm/libinput/touchpad.qml:258
-#, fuzzy, kde-format
-#| msgctxt "Pointer acceleration"
-#| msgid "Acceleration:"
+#, kde-format
 msgid "Pointer acceleration:"
-msgstr "האצה:"
+msgstr "האצת סמן:"
 
 #: kcm/libinput/touchpad.qml:353
-#, fuzzy, kde-format
-#| msgctxt "Pointer acceleration"
-#| msgid "Acceleration:"
+#, kde-format
 msgid "Acceleration profile:"
-msgstr "האצה:"
+msgstr "פרופיל האצה:"
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
 msgid "Flat"
-msgstr ""
+msgstr "שטוח"
 
 #: kcm/libinput/touchpad.qml:389
 #, kde-format
 msgid "Cursor moves the same distance as finger."
-msgstr ""
+msgstr "הסמן עובר את אותו המרחק כמו האצבע."
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
 msgid "Adaptive"
-msgstr ""
+msgstr "מסתגל"
 
 #: kcm/libinput/touchpad.qml:402
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
-msgstr ""
+msgstr "הסמן עובר מרחק כתלות במהירות התנועה של האצבע."
 
 #: kcm/libinput/touchpad.qml:416
 #, kde-format
 msgid "Tapping:"
-msgstr ""
+msgstr "נקישה:"
 
 #: kcm/libinput/touchpad.qml:418
 #, kde-format
 msgid "Tap-to-click"
-msgstr ""
+msgstr "נקישה ללחיצה"
 
 #: kcm/libinput/touchpad.qml:422
 #, kde-format
 msgid "Single tap is left button click."
-msgstr ""
+msgstr "נקישה בודדת זה לחיצה על לחצן שמאלי."
 
 #: kcm/libinput/touchpad.qml:451
-#, fuzzy, kde-format
-#| msgid "Tap-and-Drag Gesture"
+#, kde-format
 msgid "Tap-and-drag"
-msgstr "מחוות לחיצה וגלילה"
+msgstr "נקישה וגרירה"
 
 #: kcm/libinput/touchpad.qml:455
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
-msgstr ""
+msgstr "החלקה על משטח המגע ישירות לאחר נקישה גוררת."
 
 #: kcm/libinput/touchpad.qml:482
-#, fuzzy, kde-format
-#| msgid "Tap-and-Drag Gesture"
+#, kde-format
 msgid "Tap-and-drag lock"
-msgstr "מחוות לחיצה וגלילה"
+msgstr "נעילת נקישה וגרירה"
 
 #: kcm/libinput/touchpad.qml:486
 #, kde-format
 msgid "Dragging continues after a short finger lift."
-msgstr ""
+msgstr "גרירה ממשיכה לאחר הרמת אצבע קצרה."
 
 #: kcm/libinput/touchpad.qml:505
-#, fuzzy, kde-format
-#| msgctxt "Tapping"
-#| msgid "Two fingers:"
+#, kde-format
 msgid "Two-finger tap:"
-msgstr "שתי אצבעות:"
+msgstr "נקישה בשתי אצבעות:"
 
 #: kcm/libinput/touchpad.qml:514
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
-msgstr ""
+msgstr "לחיצה ימנית (נקישה בשלוש אצבעות היא לחיצה אמצעית)"
 
 #: kcm/libinput/touchpad.qml:515
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
 msgstr ""
+"נקישה עם שתי אצבעות היא לחיצה שמאלית, נקישה עם שלוש אצבעות היא לחיצה אמצעית."
 
 #: kcm/libinput/touchpad.qml:517
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
-msgstr ""
+msgstr "לחיצה אמצעית (נקישה בשלוש אצבעות ללחיצה ימנית)"
 
 #: kcm/libinput/touchpad.qml:518
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
-msgstr ""
+msgstr "נקישה עם שתי אצבעות ללחיצה אמצעית, נקישה בשלוש אצבעות ללחיצה ימני."
 
 #: kcm/libinput/touchpad.qml:520
 #, kde-format
 msgid "Right-click"
-msgstr ""
+msgstr "לחיצה ימנית"
 
 #: kcm/libinput/touchpad.qml:521
 #, kde-format
 msgid "Tap with two fingers to right-click."
-msgstr ""
+msgstr "נקישה בשתי אצבעות ללחיצה ימנית."
 
 #: kcm/libinput/touchpad.qml:523
 #, kde-format
 msgid "Middle-click"
-msgstr ""
+msgstr "לחיצה אמצעית"
 
 #: kcm/libinput/touchpad.qml:524
 #, kde-format
 msgid "Tap with two fingers to middle-click."
-msgstr ""
+msgstr "נקישה בשתי אצבעות ללחיצה אמצעית."
 
 #: kcm/libinput/touchpad.qml:582
-#, fuzzy, kde-format
-#| msgid "Scrolling"
+#, kde-format
 msgid "Scrolling:"
-msgstr "גלילה"
+msgstr "גלילה:"
 
 #: kcm/libinput/touchpad.qml:612
-#, fuzzy, kde-format
-#| msgctxt "Tapping"
-#| msgid "Two fingers:"
+#, kde-format
 msgid "Two fingers"
-msgstr "שתי אצבעות:"
+msgstr "שתי אצבעות"
 
 #: kcm/libinput/touchpad.qml:616
 #, kde-format
 msgid "Slide with two fingers scrolls."
-msgstr ""
+msgstr "החלקה עם שתי אצבעות גוללת."
 
 #: kcm/libinput/touchpad.qml:624
-#, fuzzy, kde-format
-#| msgctxt "Touchpad Edge"
-#| msgid "Top edge"
+#, kde-format
 msgid "Touchpad edges"
-msgstr "קצה עליון"
+msgstr "קצוות משטח המגע"
 
 #: kcm/libinput/touchpad.qml:628
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
-msgstr ""
+msgstr "החלקה על קצה משטח המגע גוללת."
 
 #: kcm/libinput/touchpad.qml:638
-#, fuzzy, kde-format
-#| msgid "Reverse horizontal scrolling"
+#, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
-msgstr "הפוך גלילה אופקית"
+msgstr "היפוך כיוון גלילה (גלילה אופקית)"
 
 #: kcm/libinput/touchpad.qml:654
 #, kde-format
 msgid "Touchscreen like scrolling."
-msgstr ""
+msgstr "גלילה כמו מסך מגע."
 
 #: kcm/libinput/touchpad.qml:662 kcm/libinput/touchpad.qml:679
-#, fuzzy, kde-format
-#| msgid "Reverse horizontal scrolling"
+#, kde-format
 msgid "Disable horizontal scrolling"
-msgstr "הפוך גלילה אופקית"
+msgstr "השבתת גלילה אופקית"
 
 #: kcm/libinput/touchpad.qml:687
-#, fuzzy, kde-format
-#| msgid "Scrolling"
+#, kde-format
 msgid "Scrolling speed:"
-msgstr "גלילה"
+msgstr "מהירות גלילה:"
 
 #: kcm/libinput/touchpad.qml:736
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
-msgstr ""
+msgstr "איטית יותר"
 
 #: kcm/libinput/touchpad.qml:742
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
-msgstr ""
+msgstr "מהירה יותר"
 
 #: kcm/libinput/touchpad.qml:751
 #, kde-format
 msgid "Right-click:"
-msgstr ""
+msgstr "לחיצה ימנית:"
 
 #: kcm/libinput/touchpad.qml:784
-#, fuzzy, kde-format
-#| msgctxt "Touchpad Edge"
-#| msgid "Bottom right corner"
+#, kde-format
 msgid "Press bottom-right corner"
-msgstr "פינה ימנית תחתונה"
+msgstr "לחיצה על הפינה הימנית התחתונה"
 
 #: kcm/libinput/touchpad.qml:788
 #, kde-format
 msgid ""
 "Software enabled buttons will be added to bottom portion of your touchpad."
-msgstr ""
+msgstr "לחצנים מוגדרי תוכנה יתווספו לחלק התחתון של משטח המגע שלך."
 
 #: kcm/libinput/touchpad.qml:796
 #, kde-format
 msgid "Press anywhere with two fingers"
-msgstr ""
+msgstr "יש ללחוץ איפשהו עם שתי אצבעות"
 
 #: kcm/libinput/touchpad.qml:800
 #, kde-format
 msgid "Tap with two finger to enable right click."
-msgstr ""
+msgstr "נקישה בשתי אצבעות מפעילה לחיצה ימנית."
 
 #: kcm/libinput/touchpad.qml:813
 #, kde-format
 msgid "Middle-click: "
-msgstr ""
+msgstr "לחיצה אמצעית: "
 
 #: kcm/libinput/touchpad.qml:843
-#, fuzzy, kde-format
-#| msgctxt "Touchpad Edge"
-#| msgid "Bottom right corner"
+#, kde-format
 msgid "Press bottom-middle"
-msgstr "פינה ימנית תחתונה"
+msgstr "לחיצה באמצע למטה"
 
 #: kcm/libinput/touchpad.qml:847
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
 "touchpad."
-msgstr ""
+msgstr "לחצן אמצעי מוגדר תוכנה יתווסף לחלק התחתון של משטח המגע שלך."
 
 #: kcm/libinput/touchpad.qml:855
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
-msgstr ""
+msgstr "לחיצה על הפינות התחתונות השמאלית והימנית בו־זמנית"
 
 #: kcm/libinput/touchpad.qml:868
 #, kde-format
 msgid "Press anywhere with three fingers"
-msgstr ""
+msgstr "יש ללחוץ איפשהו עם שלוש אצבעות"
 
 #: kcm/libinput/touchpad.qml:874
 #, kde-format
 msgid "Press anywhere with three fingers."
-msgstr ""
+msgstr "יש ללחוץ איפשהו עם שלוש אצבעות."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:30
 #: kcm/xlib/touchpadconfigxlib.cpp:82
@@ -415,14 +391,13 @@ msgid "Roman Gilg"
 msgstr "Roman Gilg"
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:91
-#, fuzzy, kde-format
-#| msgid ""
-#| "Error while loading values. See logs for more informations. Please "
-#| "restart this configuration module."
+#, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
-msgstr "שגיאה בעת טעינת הערכים, הפעל מחדש את מסך הגדרות הזה."
+msgstr ""
+"שגיאה בטעינת ערכים. יש מידע נוסף ביומנים. נא להפעיל את מודול ההגדרות הזה "
+"מחדש."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:94
 #, kde-format
@@ -430,16 +405,13 @@ msgid "No touchpad found. Connect touchpad now."
 msgstr "לא נמצא לוח מגע. חבר אותו עכשיו."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:103
-#, fuzzy, kde-format
-#| msgid ""
-#| "Not able to save all changes. See logs for more informations. Please "
-#| "restart this configuration module and try again."
+#, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
-"לא ניתן לשמור את כל השינויים. ראה עוד מידע ביומני מערכת. הפעל מחדש את מסך "
-"הגדרות הזה כדי לנסות שוב"
+"אי אפשר לשמור את כל השינויים. יש מידע נוסף ביומן. נא להפעיל את מודול הגדרות "
+"זה מחדש ולנסות שוב."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:122
 #, kde-format
@@ -590,19 +562,17 @@ msgstr "אפשר או בטל את משטח המגע"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, KdedForm)
 #: kcm/xlib/ui/kded.ui:14
-#, fuzzy, kde-format
-#| msgid "Enable/Disable Touchpad"
+#, kde-format
 msgctxt "@title:window"
 msgid "Enable/Disable Touchpad"
-msgstr "אפשר או בטל את משטח המגע"
+msgstr "הפעלת/השבתת משטח מגע"
 
 #. i18n: ectx: property (text), widget (QPushButton, configureShortcutsButton)
 #. i18n: ectx: property (text), widget (QPushButton, configureNotificationsButton)
 #: kcm/xlib/ui/kded.ui:35 kcm/xlib/ui/kded.ui:146
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgid "Configure…"
-msgstr "הגדר"
+msgstr "הגדרה…"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/xlib/ui/kded.ui:47
@@ -1191,7 +1161,7 @@ msgstr "נגיעות"
 #: kcm/xlib/ui/tap.ui:28
 #, kde-format
 msgid "Tap to Click"
-msgstr ""
+msgstr "נקישה ללחיצה"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/xlib/ui/tap.ui:43

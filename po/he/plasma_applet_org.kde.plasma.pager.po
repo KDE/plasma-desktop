@@ -7,19 +7,20 @@
 # Tahmar1900 <tahmar1900@gmail.com>, 2011.
 # elkana bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2017-05-22 05:25-0400\n"
-"Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-08-18 11:32+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 26.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/config/config.qml:13
@@ -28,26 +29,24 @@ msgid "General"
 msgstr "כללי"
 
 #: package/contents/ui/configGeneral.qml:40
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgid "General:"
-msgstr "כללי"
+msgstr "כללי:"
 
 #: package/contents/ui/configGeneral.qml:42
 #, kde-format
 msgid "Show application icons on window outlines"
-msgstr ""
+msgstr "הצגת סמלי יישומים במתארי החלונות"
 
 #: package/contents/ui/configGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Only the current screen"
+#, kde-format
 msgid "Show only current screen"
-msgstr "רק במסך הנוכחי"
+msgstr "הצגת המסך הנוכחי בלבד"
 
 #: package/contents/ui/configGeneral.qml:52
 #, kde-format
 msgid "Navigation wraps around"
-msgstr ""
+msgstr "ניווט חוזר להתחלה"
 
 #: package/contents/ui/configGeneral.qml:64
 #, kde-format
@@ -71,10 +70,9 @@ msgid "Vertical"
 msgstr "אנכי"
 
 #: package/contents/ui/configGeneral.qml:80
-#, fuzzy, kde-format
-#| msgid "Display:"
+#, kde-format
 msgid "Text display:"
-msgstr "תצוגות:"
+msgstr "תצוגת טקסט:"
 
 #: package/contents/ui/configGeneral.qml:83
 #, kde-format
@@ -102,16 +100,14 @@ msgid "Desktop name"
 msgstr "שם שולחן העבודה"
 
 #: package/contents/ui/configGeneral.qml:113
-#, fuzzy, kde-format
-#| msgid "Selecting current desktop:"
+#, kde-format
 msgid "Selecting current Activity:"
-msgstr "בוחר את שולחן העבודה הנוכחי:"
+msgstr "בחירת הפעילות הנוכחית:"
 
 #: package/contents/ui/configGeneral.qml:113
-#, fuzzy, kde-format
-#| msgid "Selecting current desktop:"
+#, kde-format
 msgid "Selecting current virtual desktop:"
-msgstr "בוחר את שולחן העבודה הנוכחי:"
+msgstr "בחירת שולחן העבודה הווירטואלי הנוכחי:"
 
 #: package/contents/ui/configGeneral.qml:116
 #, kde-format
@@ -119,19 +115,16 @@ msgid "Does nothing"
 msgstr "לא עושה כלום"
 
 #: package/contents/ui/configGeneral.qml:124
-#, fuzzy, kde-format
-#| msgid "Shows desktop"
+#, kde-format
 msgid "Shows the desktop"
-msgstr "מראה שולחן־עבודה"
+msgstr "מציגה את שולחן העבודה"
 
 #: package/contents/ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "...and %1 other window"
-#| msgid_plural "...and %1 other windows"
+#, kde-format
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
-msgstr[0] "...וחלון אחד אחר"
-msgstr[1] "...ו־%1 חלונות אחרים"
+msgstr[0] "...וחלון אחד נוסף"
+msgstr[1] "...ו־%1 חלונות נוספים"
 
 #: package/contents/ui/main.qml:362
 #, kde-format
@@ -148,22 +141,20 @@ msgstr[0] "%1 חלון ממוזער"
 msgstr[1] "%1 חלונות ממוזערים"
 
 #: package/contents/ui/main.qml:449
-#, fuzzy, kde-format
-#| msgid "Desktop name"
+#, kde-format
 msgid "Desktop %1"
-msgstr "שם שולחן העבודה"
+msgstr "שולחן עבודה %1"
 
 #: package/contents/ui/main.qml:450
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
-msgstr ""
+msgstr "מעבר אל %1"
 
 #: package/contents/ui/main.qml:595
-#, fuzzy, kde-format
-#| msgid "Show Activity Manager..."
+#, kde-format
 msgid "Show Activity Manager…"
-msgstr "הראה מנהל פעילויות..."
+msgstr "הצגת מנהל פעילות…"
 
 #: package/contents/ui/main.qml:598
 #, kde-format
@@ -176,10 +167,9 @@ msgid "Remove Virtual Desktop"
 msgstr "&הסר את שולחן עבודה וירטואלי"
 
 #: package/contents/ui/main.qml:602
-#, fuzzy, kde-format
-#| msgid "Configure Desktops..."
+#, kde-format
 msgid "Configure Virtual Desktops…"
-msgstr "הגדרת שולחנות עבודה..."
+msgstr "הגדרת שולחנות עבודה וירטואליים…"
 
 #~ msgid "Icons"
 #~ msgstr "סמלים"

@@ -15,81 +15,76 @@
 # Diego Iastrubni <elcuco@kde.org>, 2008, 2012.
 # elkana bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_kded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2017-05-16 11:18-0400\n"
-"Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-08-18 11:47+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 26.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "דרור לוין"
+msgstr "דרור לוין,צוות התרגום של KDE ישראל"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "spatz@012.net.il"
+msgstr "spatz@012.net.il,kde-l10n-he@kde.org"
 
 #: kcmkded.cpp:48
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgid "Background Services"
-msgstr "שירותי אתחול"
+msgstr "שירותי רקע"
 
 #: kcmkded.cpp:52
-#, fuzzy, kde-format
-#| msgid "(c) 2002 Daniel Molkentin"
+#, kde-format
 msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
-msgstr "(c) 2002 Daniel Molkentin"
+msgstr "(c) 2002 דניאל מולקנטין, (c) 2020 קאי אווה ברוליק"
 
 #: kcmkded.cpp:53
 #, kde-format
 msgid "Daniel Molkentin"
-msgstr "Daniel Molkentin"
+msgstr "דניאל מולקנטין"
 
 #: kcmkded.cpp:54
 #, kde-format
 msgid "Kai Uwe Broulik"
-msgstr ""
+msgstr "קאי אווה ברוליק"
 
 #: kcmkded.cpp:125
-#, fuzzy, kde-format
-#| msgid "Unable to stop service <em>%1</em>."
+#, kde-format
 msgid "Failed to stop service: %1"
-msgstr "אין אפשרות לעצור את התהליך <em>%1</em>."
+msgstr "עצירת השירות נכשלה: %1"
 
 #: kcmkded.cpp:127
-#, fuzzy, kde-format
-#| msgid "Unable to start server <em>%1</em>."
+#, kde-format
 msgid "Failed to start service: %1"
-msgstr "אין אפשרות להפעיל את השרת <em>%1</em>."
+msgstr "הפעלת השירות נכשלה: %1"
 
 #: kcmkded.cpp:134
-#, fuzzy, kde-format
-#| msgid "Unable to stop service <em>%1</em>."
+#, kde-format
 msgid "Failed to stop service."
-msgstr "אין אפשרות לעצור את התהליך <em>%1</em>."
+msgstr "עצירת השירות נכשלה."
 
 #: kcmkded.cpp:136
-#, fuzzy, kde-format
-#| msgid "Unable to start server <em>%1</em>."
+#, kde-format
 msgid "Failed to start service."
-msgstr "אין אפשרות להפעיל את השרת <em>%1</em>."
+msgstr "הפעלת השירות נכשלה."
 
 #: kcmkded.cpp:234
 #, kde-format
 msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
-msgstr ""
+msgstr "שליחת הודעה למנהל שירות KDE‏ (kded5) על השינויים שנשמרו נכשלה: %1"
 
 #: package/contents/ui/main.qml:19
 #, fuzzy, kde-format
@@ -126,7 +121,7 @@ msgstr ""
 msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
 "it is installed correctly."
-msgstr ""
+msgstr "מנהל שירותי הרקע (kded5) לא פעיל כרגע. נא לוודא שהוא מותקן כראוי."
 
 #: package/contents/ui/main.qml:47
 #, kde-format
@@ -134,6 +129,8 @@ msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
+"חלק מהשירותים משביתים את עצמם שוב כשמופעלים ידנית אם אינם מביאים תועלת "
+"בסביבה הנוכחית."
 
 #: package/contents/ui/main.qml:56
 #, kde-format
@@ -141,30 +138,28 @@ msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded5) was restarted to apply your changes."
 msgstr ""
+"חלק מהשירותים הופעלו/נעצרו אוטומטית כאשר מנהל שירותי הרקע (kded5) הופעל מחדש "
+"כדי להחיל את השינויים שלך."
 
 #: package/contents/ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "All Services"
-msgstr "שירות"
+msgstr "כל השירותים"
 
 #: package/contents/ui/main.qml:99
-#, fuzzy, kde-format
-#| msgid "Running"
+#, kde-format
 msgctxt "List running services"
 msgid "Running"
-msgstr "פועל"
+msgstr "פעילים"
 
 #: package/contents/ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid "Not running"
+#, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
-msgstr "לא פועל"
+msgstr "לא פעילים"
 
 #: package/contents/ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgid "Startup Services"
 msgstr "שירותי אתחול"
 
@@ -176,7 +171,7 @@ msgstr "שירותים הנטענים לפי דרישה"
 #: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
-msgstr ""
+msgstr "החלפת מצב טעינה אוטומטי של השירות הזה עם הפתיחה"
 
 #: package/contents/ui/main.qml:221
 #, kde-format
@@ -189,16 +184,14 @@ msgid "Running"
 msgstr "פועל"
 
 #: package/contents/ui/main.qml:240
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "Stop Service"
-msgstr "שירות"
+msgstr "עצירת שירות"
 
 #: package/contents/ui/main.qml:240
-#, fuzzy, kde-format
-#| msgid "Service"
+#, kde-format
 msgid "Start Service"
-msgstr "שירות"
+msgstr "הפעלת שירות"
 
 #~ msgid "kcmkded"
 #~ msgstr "kcmkded"
