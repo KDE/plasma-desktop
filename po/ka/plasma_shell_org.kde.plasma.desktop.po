@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-18 00:47+0000\n"
+"POT-Creation-Date: 2026-08-19 00:48+0000\n"
 "PO-Revision-Date: 2026-07-02 06:08+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -947,73 +947,81 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "განბლოკვის შეტყობინების ქვეშ ჩვენება"
 
-#: contents/lockscreen/LockScreenUi.qml:53
+#: contents/lockscreen/LockScreenUi.qml:60
 #, kde-format
 msgctxt "@info:status"
 msgid "Unlocking failed"
 msgstr "განბლოკვის შეცდომა"
 
-#: contents/lockscreen/LockScreenUi.qml:303
+#: contents/lockscreen/LockScreenUi.qml:344
+#, kde-format
+msgctxt "@info:status"
+msgid ""
+"This authentication method is not functioning correctly. Please try another "
+"method, and check your system configuration."
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:375
 #, kde-format
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "CapsLock ჩართულია"
 
-#: contents/lockscreen/LockScreenUi.qml:306
+#: contents/lockscreen/LockScreenUi.qml:378
 #, kde-format
 msgctxt "@info:status"
 msgid "Slow Keys are enabled"
 msgstr "ნელი ღილაკები ჩართულია"
 
-#: contents/lockscreen/LockScreenUi.qml:326
+#: contents/lockscreen/LockScreenUi.qml:398
 #, kde-format
 msgctxt "@action:button"
 msgid "Slee&p"
 msgstr "ძი&ლი"
 
-#: contents/lockscreen/LockScreenUi.qml:333
+#: contents/lockscreen/LockScreenUi.qml:405
 #, kde-format
 msgctxt "@action:button"
 msgid "&Hibernate"
 msgstr "პ&როგრამული ძილი"
 
-#: contents/lockscreen/LockScreenUi.qml:340
+#: contents/lockscreen/LockScreenUi.qml:412
 #, kde-format
 msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "მ&ომხმარებლის გადართვა"
 
-#: contents/lockscreen/LockScreenUi.qml:390
+#: contents/lockscreen/LockScreenUi.qml:462
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "ვირტუალური კლავიატურა"
 
-#: contents/lockscreen/LockScreenUi.qml:416
+#: contents/lockscreen/LockScreenUi.qml:488
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
 msgstr "განლაგების გადართვა"
 
-#: contents/lockscreen/MainBlock.qml:65
+#: contents/lockscreen/MainBlock.qml:67
 #, kde-format
 msgctxt "@info:placeholder in text field"
 msgid "Password"
 msgstr "პაროლი"
 
-#: contents/lockscreen/MainBlock.qml:113
+#: contents/lockscreen/MainBlock.qml:115
 #, kde-format
 msgctxt "@action:button accessible only"
 msgid "Unlock"
 msgstr "განბლოკვა"
 
-#: contents/lockscreen/MainBlock.qml:162
+#: contents/lockscreen/MainBlock.qml:164
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "(or scan your fingerprint on the reader)"
 msgstr "(aნ დაადეთ თქვენი თითი ანაბეჭდის წამკითხველს)"
 
-#: contents/lockscreen/MainBlock.qml:166
+#: contents/lockscreen/MainBlock.qml:168
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "(or scan your smartcard)"

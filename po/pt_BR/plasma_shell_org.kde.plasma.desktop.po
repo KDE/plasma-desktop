@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-18 00:47+0000\n"
+"POT-Creation-Date: 2026-08-19 00:48+0000\n"
 "PO-Revision-Date: 2026-07-02 08:24-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -952,73 +952,81 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Mostrar sob o prompt de desbloqueio"
 
-#: contents/lockscreen/LockScreenUi.qml:53
+#: contents/lockscreen/LockScreenUi.qml:60
 #, kde-format
 msgctxt "@info:status"
 msgid "Unlocking failed"
 msgstr "Desbloqueio falhou"
 
-#: contents/lockscreen/LockScreenUi.qml:303
+#: contents/lockscreen/LockScreenUi.qml:344
+#, kde-format
+msgctxt "@info:status"
+msgid ""
+"This authentication method is not functioning correctly. Please try another "
+"method, and check your system configuration."
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:375
 #, kde-format
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "Caps lock está ativado"
 
-#: contents/lockscreen/LockScreenUi.qml:306
+#: contents/lockscreen/LockScreenUi.qml:378
 #, kde-format
 msgctxt "@info:status"
 msgid "Slow Keys are enabled"
 msgstr "Teclas lentas estão ativadas"
 
-#: contents/lockscreen/LockScreenUi.qml:326
+#: contents/lockscreen/LockScreenUi.qml:398
 #, kde-format
 msgctxt "@action:button"
 msgid "Slee&p"
 msgstr "Sus&pender"
 
-#: contents/lockscreen/LockScreenUi.qml:333
+#: contents/lockscreen/LockScreenUi.qml:405
 #, kde-format
 msgctxt "@action:button"
 msgid "&Hibernate"
 msgstr "&Hibernar"
 
-#: contents/lockscreen/LockScreenUi.qml:340
+#: contents/lockscreen/LockScreenUi.qml:412
 #, kde-format
 msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "Alternar &usuário"
 
-#: contents/lockscreen/LockScreenUi.qml:390
+#: contents/lockscreen/LockScreenUi.qml:462
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Teclado virtual"
 
-#: contents/lockscreen/LockScreenUi.qml:416
+#: contents/lockscreen/LockScreenUi.qml:488
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
 msgstr "Trocar layout"
 
-#: contents/lockscreen/MainBlock.qml:65
+#: contents/lockscreen/MainBlock.qml:67
 #, kde-format
 msgctxt "@info:placeholder in text field"
 msgid "Password"
 msgstr "Senha"
 
-#: contents/lockscreen/MainBlock.qml:113
+#: contents/lockscreen/MainBlock.qml:115
 #, kde-format
 msgctxt "@action:button accessible only"
 msgid "Unlock"
 msgstr "Desbloquear"
 
-#: contents/lockscreen/MainBlock.qml:162
+#: contents/lockscreen/MainBlock.qml:164
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "(or scan your fingerprint on the reader)"
 msgstr "(ou escaneie sua impressão digital no leitor)"
 
-#: contents/lockscreen/MainBlock.qml:166
+#: contents/lockscreen/MainBlock.qml:168
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "(or scan your smartcard)"
