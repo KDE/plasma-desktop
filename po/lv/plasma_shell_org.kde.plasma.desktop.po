@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-19 00:48+0000\n"
+"POT-Creation-Date: 2026-08-20 00:47+0000\n"
 "PO-Revision-Date: 2026-08-12 23:05+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -44,11 +44,12 @@ msgstr ""
 "Parādīt arī\n"
 "šajā aktivitātē"
 
-#: contents/activitymanager/ActivityItem.qml:335
-#, kde-format
-msgctxt "@action:button tooltip only, opens kcm"
-msgid "Configure"
-msgstr "Pārvaldīt"
+#: contents/activitymanager/ActivityItem.qml:333
+#, fuzzy, kde-format
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
+msgid "Configure Activity “%1”"
+msgstr "Pārvaldīt aktivitāti"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -61,6 +62,27 @@ msgstr "Izveidot aktivitāti…"
 msgctxt "@title:window"
 msgid "Activities"
 msgstr "Aktivitātes"
+
+#: contents/activitymanager/Heading.qml:86
+#, kde-format
+msgctxt "@action:button tooltip only"
+msgid "Search"
+msgstr ""
+
+#: contents/activitymanager/Heading.qml:103
+#, fuzzy, kde-format
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm"
+msgid "Configure Activities"
+msgstr "Pārvaldīt aktivitāti"
+
+#: contents/activitymanager/Heading.qml:122
+#, fuzzy, kde-format
+#| msgctxt "@action:button Close the panel configuration window"
+#| msgid "Close"
+msgctxt "@action:button tooltip only, close panel"
+msgid "Close"
+msgstr "Aizvērt"
 
 #: contents/applet/AppletError.qml:165
 #, kde-format
@@ -1238,13 +1260,14 @@ msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Paneļa fokusa indikators"
 
+#~ msgctxt "@action:button tooltip only, opens kcm"
+#~ msgid "Configure"
+#~ msgstr "Pārvaldīt"
+
 #~ msgctxt ""
 #~ "@action:button Revert an unsupported configuration back to the defaults"
 #~ msgid "Fix it"
 #~ msgstr "Salabot"
-
-#~ msgid "Configure activity"
-#~ msgstr "Pārvaldīt aktivitāti"
 
 #~ msgid "Delete"
 #~ msgstr "Dzēst"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-19 00:48+0000\n"
+"POT-Creation-Date: 2026-08-20 00:47+0000\n"
 "PO-Revision-Date: 2026-07-04 09:39+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -51,11 +51,12 @@ msgstr ""
 "Afficher aussi\n"
 "dans cette activité"
 
-#: contents/activitymanager/ActivityItem.qml:335
-#, kde-format
-msgctxt "@action:button tooltip only, opens kcm"
-msgid "Configure"
-msgstr "Configurer"
+#: contents/activitymanager/ActivityItem.qml:333
+#, fuzzy, kde-format
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
+msgid "Configure Activity “%1”"
+msgstr "Configurer l'activité"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -68,6 +69,28 @@ msgstr "Créer une activité…"
 msgctxt "@title:window"
 msgid "Activities"
 msgstr "Activités"
+
+#: contents/activitymanager/Heading.qml:86
+#, fuzzy, kde-format
+#| msgid "Search…"
+msgctxt "@action:button tooltip only"
+msgid "Search"
+msgstr "Rechercher..."
+
+#: contents/activitymanager/Heading.qml:103
+#, fuzzy, kde-format
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm"
+msgid "Configure Activities"
+msgstr "Configurer l'activité"
+
+#: contents/activitymanager/Heading.qml:122
+#, fuzzy, kde-format
+#| msgctxt "@action:button Close the panel configuration window"
+#| msgid "Close"
+msgctxt "@action:button tooltip only, close panel"
+msgid "Close"
+msgstr "Fermer"
 
 #: contents/applet/AppletError.qml:165
 #, kde-format
@@ -1255,13 +1278,14 @@ msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Indicateur de focus pour les panneaux"
 
+#~ msgctxt "@action:button tooltip only, opens kcm"
+#~ msgid "Configure"
+#~ msgstr "Configurer"
+
 #~ msgctxt ""
 #~ "@action:button Revert an unsupported configuration back to the defaults"
 #~ msgid "Fix it"
 #~ msgstr "Corriger cela"
-
-#~ msgid "Configure activity"
-#~ msgstr "Configurer l'activité"
 
 #~ msgid "Delete"
 #~ msgstr "Supprimer"
@@ -1492,9 +1516,6 @@ msgstr "Indicateur de focus pour les panneaux"
 
 #~ msgid "Appearance"
 #~ msgstr "Apparence"
-
-#~ msgid "Search…"
-#~ msgstr "Rechercher..."
 
 #~ msgid "Screen Edge"
 #~ msgstr "Bord de l'écran"

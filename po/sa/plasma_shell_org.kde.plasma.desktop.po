@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-19 00:48+0000\n"
+"POT-Creation-Date: 2026-08-20 00:47+0000\n"
 "PO-Revision-Date: 2024-12-20 21:53+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -52,12 +52,12 @@ msgstr ""
 "अपि दर्शयतु\n"
 "अस्मिन् कार्ये"
 
-#: contents/activitymanager/ActivityItem.qml:335
+#: contents/activitymanager/ActivityItem.qml:333
 #, fuzzy, kde-format
-#| msgid "Configure"
-msgctxt "@action:button tooltip only, opens kcm"
-msgid "Configure"
-msgstr "विन्यस्तं कुर्वन्तु"
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
+msgid "Configure Activity “%1”"
+msgstr "क्रियाकलापं विन्यस्यताम्"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, fuzzy, kde-format
@@ -72,6 +72,27 @@ msgstr "क्रियाकलापं रचयन्तु..."
 msgctxt "@title:window"
 msgid "Activities"
 msgstr "गतिविधयः"
+
+#: contents/activitymanager/Heading.qml:86
+#, kde-format
+msgctxt "@action:button tooltip only"
+msgid "Search"
+msgstr ""
+
+#: contents/activitymanager/Heading.qml:103
+#, fuzzy, kde-format
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm"
+msgid "Configure Activities"
+msgstr "क्रियाकलापं विन्यस्यताम्"
+
+#: contents/activitymanager/Heading.qml:122
+#, fuzzy, kde-format
+#| msgctxt "@action:button Close the panel configuration window"
+#| msgid "Close"
+msgctxt "@action:button tooltip only, close panel"
+msgid "Close"
+msgstr "पिधानं करोतु"
 
 #: contents/applet/AppletError.qml:165
 #, fuzzy, kde-format
@@ -1376,13 +1397,16 @@ msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "फलक फोकस सूचक"
 
+#, fuzzy
+#~| msgid "Configure"
+#~ msgctxt "@action:button tooltip only, opens kcm"
+#~ msgid "Configure"
+#~ msgstr "विन्यस्तं कुर्वन्तु"
+
 #~ msgctxt ""
 #~ "@action:button Revert an unsupported configuration back to the defaults"
 #~ msgid "Fix it"
 #~ msgstr "तत् समाधातु"
-
-#~ msgid "Configure activity"
-#~ msgstr "क्रियाकलापं विन्यस्यताम्"
 
 #~ msgid "Delete"
 #~ msgstr "लुप्"

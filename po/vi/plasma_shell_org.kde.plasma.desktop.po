@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-19 00:48+0000\n"
+"POT-Creation-Date: 2026-08-20 00:47+0000\n"
 "PO-Revision-Date: 2023-01-08 16:18+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -50,12 +50,12 @@ msgstr ""
 "Hiện cả trong\n"
 "Hoạt động này"
 
-#: contents/activitymanager/ActivityItem.qml:335
+#: contents/activitymanager/ActivityItem.qml:333
 #, fuzzy, kde-format
-#| msgid "Configure"
-msgctxt "@action:button tooltip only, opens kcm"
-msgid "Configure"
-msgstr "Cấu hình"
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
+msgid "Configure Activity “%1”"
+msgstr "Cấu hình Hoạt động"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, fuzzy, kde-format
@@ -70,6 +70,27 @@ msgstr "Tạo Hoạt động…"
 msgctxt "@title:window"
 msgid "Activities"
 msgstr "Hoạt động"
+
+#: contents/activitymanager/Heading.qml:86
+#, fuzzy, kde-format
+#| msgid "Search…"
+msgctxt "@action:button tooltip only"
+msgid "Search"
+msgstr "Tìm kiếm…"
+
+#: contents/activitymanager/Heading.qml:103
+#, fuzzy, kde-format
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm"
+msgid "Configure Activities"
+msgstr "Cấu hình Hoạt động"
+
+#: contents/activitymanager/Heading.qml:122
+#, fuzzy, kde-format
+#| msgid "Close"
+msgctxt "@action:button tooltip only, close panel"
+msgid "Close"
+msgstr "Đóng"
 
 #: contents/applet/AppletError.qml:165
 #, fuzzy, kde-format
@@ -1339,8 +1360,11 @@ msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr ""
 
-#~ msgid "Configure activity"
-#~ msgstr "Cấu hình Hoạt động"
+#, fuzzy
+#~| msgid "Configure"
+#~ msgctxt "@action:button tooltip only, opens kcm"
+#~ msgid "Configure"
+#~ msgstr "Cấu hình"
 
 #~ msgid "Delete"
 #~ msgstr "Xoá"
@@ -1436,9 +1460,6 @@ msgstr ""
 
 #~ msgid "Appearance"
 #~ msgstr "Diện mạo"
-
-#~ msgid "Search…"
-#~ msgstr "Tìm kiếm…"
 
 #~ msgid "Screen Edge"
 #~ msgstr "Cạnh màn hình"

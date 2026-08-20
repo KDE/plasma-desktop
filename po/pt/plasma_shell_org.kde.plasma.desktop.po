@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-19 00:48+0000\n"
+"POT-Creation-Date: 2026-08-20 00:47+0000\n"
 "PO-Revision-Date: 2026-02-11 00:00+0000\n"
 "Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
 "Language-Team: pt\n"
@@ -45,11 +45,12 @@ msgstr ""
 "Mostrar também\n"
 "nesta atividade"
 
-#: contents/activitymanager/ActivityItem.qml:335
-#, kde-format
-msgctxt "@action:button tooltip only, opens kcm"
-msgid "Configure"
-msgstr "Configurar"
+#: contents/activitymanager/ActivityItem.qml:333
+#, fuzzy, kde-format
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
+msgid "Configure Activity “%1”"
+msgstr "Configurar a atividade"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -62,6 +63,27 @@ msgstr "Criar Atividade..."
 msgctxt "@title:window"
 msgid "Activities"
 msgstr "Atividades"
+
+#: contents/activitymanager/Heading.qml:86
+#, kde-format
+msgctxt "@action:button tooltip only"
+msgid "Search"
+msgstr ""
+
+#: contents/activitymanager/Heading.qml:103
+#, fuzzy, kde-format
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm"
+msgid "Configure Activities"
+msgstr "Configurar a atividade"
+
+#: contents/activitymanager/Heading.qml:122
+#, fuzzy, kde-format
+#| msgctxt "@action:button Close the panel configuration window"
+#| msgid "Close"
+msgctxt "@action:button tooltip only, close panel"
+msgid "Close"
+msgstr "Fechar"
 
 #: contents/applet/AppletError.qml:165
 #, kde-format
@@ -1235,13 +1257,14 @@ msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Indicador de foco do painel"
 
+#~ msgctxt "@action:button tooltip only, opens kcm"
+#~ msgid "Configure"
+#~ msgstr "Configurar"
+
 #~ msgctxt ""
 #~ "@action:button Revert an unsupported configuration back to the defaults"
 #~ msgid "Fix it"
 #~ msgstr "Corrigir"
-
-#~ msgid "Configure activity"
-#~ msgstr "Configurar a atividade"
 
 #~ msgid "Delete"
 #~ msgstr "Apagar"

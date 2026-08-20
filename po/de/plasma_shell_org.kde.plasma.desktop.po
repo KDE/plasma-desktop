@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-19 00:48+0000\n"
+"POT-Creation-Date: 2026-08-20 00:47+0000\n"
 "PO-Revision-Date: 2026-06-03 18:27+0200\n"
 "Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -47,11 +47,12 @@ msgstr ""
 "Auch in dieser\n"
 "Aktivität anzeigen"
 
-#: contents/activitymanager/ActivityItem.qml:335
-#, kde-format
-msgctxt "@action:button tooltip only, opens kcm"
-msgid "Configure"
-msgstr "Einrichten"
+#: contents/activitymanager/ActivityItem.qml:333
+#, fuzzy, kde-format
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
+msgid "Configure Activity “%1”"
+msgstr "Aktivität einrichten"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -64,6 +65,28 @@ msgstr "Aktivität erstellen …"
 msgctxt "@title:window"
 msgid "Activities"
 msgstr "Aktivitäten"
+
+#: contents/activitymanager/Heading.qml:86
+#, fuzzy, kde-format
+#| msgid "Search…"
+msgctxt "@action:button tooltip only"
+msgid "Search"
+msgstr "Suchen ..."
+
+#: contents/activitymanager/Heading.qml:103
+#, fuzzy, kde-format
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm"
+msgid "Configure Activities"
+msgstr "Aktivität einrichten"
+
+#: contents/activitymanager/Heading.qml:122
+#, fuzzy, kde-format
+#| msgctxt "@action:button Close the panel configuration window"
+#| msgid "Close"
+msgctxt "@action:button tooltip only, close panel"
+msgid "Close"
+msgstr "Schließen"
 
 #: contents/applet/AppletError.qml:165
 #, kde-format
@@ -1236,13 +1259,14 @@ msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Indikator für den Fokus der Kontrollleiste"
 
+#~ msgctxt "@action:button tooltip only, opens kcm"
+#~ msgid "Configure"
+#~ msgstr "Einrichten"
+
 #~ msgctxt ""
 #~ "@action:button Revert an unsupported configuration back to the defaults"
 #~ msgid "Fix it"
 #~ msgstr "Beheben"
-
-#~ msgid "Configure activity"
-#~ msgstr "Aktivität einrichten"
 
 #~ msgid "Delete"
 #~ msgstr "Löschen"
@@ -1362,9 +1386,6 @@ msgstr "Indikator für den Fokus der Kontrollleiste"
 
 #~ msgid "Appearance"
 #~ msgstr "Erscheinungsbild"
-
-#~ msgid "Search…"
-#~ msgstr "Suchen ..."
 
 #~ msgid "Screen Edge"
 #~ msgstr "Bildschirmkante"

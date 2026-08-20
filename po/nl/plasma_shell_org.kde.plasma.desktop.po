@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-19 00:48+0000\n"
+"POT-Creation-Date: 2026-08-20 00:47+0000\n"
 "PO-Revision-Date: 2026-08-19 14:10+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -44,11 +44,12 @@ msgstr ""
 "Toon ook\n"
 "in deze activiteit"
 
-#: contents/activitymanager/ActivityItem.qml:335
-#, kde-format
-msgctxt "@action:button tooltip only, opens kcm"
-msgid "Configure"
-msgstr "Configureren"
+#: contents/activitymanager/ActivityItem.qml:333
+#, fuzzy, kde-format
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
+msgid "Configure Activity “%1”"
+msgstr "Activiteit instellen"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -61,6 +62,28 @@ msgstr "Activiteit aanmaken…"
 msgctxt "@title:window"
 msgid "Activities"
 msgstr "Activiteiten"
+
+#: contents/activitymanager/Heading.qml:86
+#, fuzzy, kde-format
+#| msgid "Search…"
+msgctxt "@action:button tooltip only"
+msgid "Search"
+msgstr "Zoeken…"
+
+#: contents/activitymanager/Heading.qml:103
+#, fuzzy, kde-format
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm"
+msgid "Configure Activities"
+msgstr "Activiteit instellen"
+
+#: contents/activitymanager/Heading.qml:122
+#, fuzzy, kde-format
+#| msgctxt "@action:button Close the panel configuration window"
+#| msgid "Close"
+msgctxt "@action:button tooltip only, close panel"
+msgid "Close"
+msgstr "Sluiten"
 
 #: contents/applet/AppletError.qml:165
 #, kde-format
@@ -1235,13 +1258,14 @@ msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Focusindicator van paneel"
 
+#~ msgctxt "@action:button tooltip only, opens kcm"
+#~ msgid "Configure"
+#~ msgstr "Configureren"
+
 #~ msgctxt ""
 #~ "@action:button Revert an unsupported configuration back to the defaults"
 #~ msgid "Fix it"
 #~ msgstr "Repareer het"
-
-#~ msgid "Configure activity"
-#~ msgstr "Activiteit instellen"
 
 #~ msgid "Delete"
 #~ msgstr "Verwijderen"
@@ -1475,9 +1499,6 @@ msgstr "Focusindicator van paneel"
 
 #~ msgid "Appearance"
 #~ msgstr "Uiterlijk"
-
-#~ msgid "Search…"
-#~ msgstr "Zoeken…"
 
 #~ msgid "Screen Edge"
 #~ msgstr "Schermrand"

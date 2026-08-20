@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-19 00:48+0000\n"
+"POT-Creation-Date: 2026-08-20 00:47+0000\n"
 "PO-Revision-Date: 2026-04-10 12:00+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -47,11 +47,12 @@ msgstr ""
 "Zobraziť aj\n"
 "v tejto aktivite"
 
-#: contents/activitymanager/ActivityItem.qml:335
-#, kde-format
-msgctxt "@action:button tooltip only, opens kcm"
-msgid "Configure"
-msgstr "Nastaviť"
+#: contents/activitymanager/ActivityItem.qml:333
+#, fuzzy, kde-format
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
+msgid "Configure Activity “%1”"
+msgstr "Nastaviť aktivitu"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -64,6 +65,28 @@ msgstr "Vytvoriť aktivitu..."
 msgctxt "@title:window"
 msgid "Activities"
 msgstr "Aktivity"
+
+#: contents/activitymanager/Heading.qml:86
+#, fuzzy, kde-format
+#| msgid "Search…"
+msgctxt "@action:button tooltip only"
+msgid "Search"
+msgstr "Hľadať..."
+
+#: contents/activitymanager/Heading.qml:103
+#, fuzzy, kde-format
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm"
+msgid "Configure Activities"
+msgstr "Nastaviť aktivitu"
+
+#: contents/activitymanager/Heading.qml:122
+#, fuzzy, kde-format
+#| msgctxt "@action:button Close the panel configuration window"
+#| msgid "Close"
+msgctxt "@action:button tooltip only, close panel"
+msgid "Close"
+msgstr "Zatvoriť"
 
 #: contents/applet/AppletError.qml:165
 #, kde-format
@@ -1233,13 +1256,14 @@ msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Indikátor zamerania panela"
 
+#~ msgctxt "@action:button tooltip only, opens kcm"
+#~ msgid "Configure"
+#~ msgstr "Nastaviť"
+
 #~ msgctxt ""
 #~ "@action:button Revert an unsupported configuration back to the defaults"
 #~ msgid "Fix it"
 #~ msgstr "Opraviť to"
-
-#~ msgid "Configure activity"
-#~ msgstr "Nastaviť aktivitu"
 
 #~ msgid "Delete"
 #~ msgstr "Vymazať"
@@ -1425,9 +1449,6 @@ msgstr "Indikátor zamerania panela"
 
 #~ msgid "Appearance"
 #~ msgstr "Vzhľad"
-
-#~ msgid "Search…"
-#~ msgstr "Hľadať..."
 
 #~ msgid "Screen Edge"
 #~ msgstr "Hrana obrazovky"

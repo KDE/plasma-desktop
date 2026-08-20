@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-19 00:48+0000\n"
+"POT-Creation-Date: 2026-08-20 00:47+0000\n"
 "PO-Revision-Date: 2026-07-22 01:04+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -46,11 +46,12 @@ msgstr ""
 "也在\n"
 "此活動顯示"
 
-#: contents/activitymanager/ActivityItem.qml:335
-#, kde-format
-msgctxt "@action:button tooltip only, opens kcm"
-msgid "Configure"
-msgstr "設定"
+#: contents/activitymanager/ActivityItem.qml:333
+#, fuzzy, kde-format
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
+msgid "Configure Activity “%1”"
+msgstr "設定活動"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -63,6 +64,28 @@ msgstr "建立活動…"
 msgctxt "@title:window"
 msgid "Activities"
 msgstr "活動"
+
+#: contents/activitymanager/Heading.qml:86
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgctxt "@action:button tooltip only"
+msgid "Search"
+msgstr "搜尋..."
+
+#: contents/activitymanager/Heading.qml:103
+#, fuzzy, kde-format
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm"
+msgid "Configure Activities"
+msgstr "設定活動"
+
+#: contents/activitymanager/Heading.qml:122
+#, fuzzy, kde-format
+#| msgctxt "@action:button Close the panel configuration window"
+#| msgid "Close"
+msgctxt "@action:button tooltip only, close panel"
+msgid "Close"
+msgstr "關閉"
 
 #: contents/applet/AppletError.qml:165
 #, kde-format
@@ -1212,13 +1235,14 @@ msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "面板焦點指示器"
 
+#~ msgctxt "@action:button tooltip only, opens kcm"
+#~ msgid "Configure"
+#~ msgstr "設定"
+
 #~ msgctxt ""
 #~ "@action:button Revert an unsupported configuration back to the defaults"
 #~ msgid "Fix it"
 #~ msgstr "修正它"
-
-#~ msgid "Configure activity"
-#~ msgstr "設定活動"
 
 #~ msgid "Delete"
 #~ msgstr "刪除"
@@ -1424,11 +1448,6 @@ msgstr "面板焦點指示器"
 
 #~ msgid "Makes the panel remain attached to the edge of the screen."
 #~ msgstr "讓面板接附在螢幕邊緣。"
-
-#, fuzzy
-#~| msgid "Search..."
-#~ msgid "Search…"
-#~ msgstr "搜尋..."
 
 #~ msgid "Screen Edge"
 #~ msgstr "螢幕邊緣"

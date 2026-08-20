@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-19 00:48+0000\n"
+"POT-Creation-Date: 2026-08-20 00:47+0000\n"
 "PO-Revision-Date: 2023-02-19 16:55+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -50,12 +50,12 @@ msgstr ""
 "Yalnız bu İş otağında\n"
 "göstərmək"
 
-#: contents/activitymanager/ActivityItem.qml:335
+#: contents/activitymanager/ActivityItem.qml:333
 #, fuzzy, kde-format
-#| msgid "Configure"
-msgctxt "@action:button tooltip only, opens kcm"
-msgid "Configure"
-msgstr "Tənzimləmək"
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
+msgid "Configure Activity “%1”"
+msgstr "İş otağını tənzimləmək"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, fuzzy, kde-format
@@ -70,6 +70,27 @@ msgstr "İş otağı yaratmaq…"
 msgctxt "@title:window"
 msgid "Activities"
 msgstr "İş otaqları"
+
+#: contents/activitymanager/Heading.qml:86
+#, fuzzy, kde-format
+#| msgid "Search…"
+msgctxt "@action:button tooltip only"
+msgid "Search"
+msgstr "Axtarış…"
+
+#: contents/activitymanager/Heading.qml:103
+#, fuzzy, kde-format
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm"
+msgid "Configure Activities"
+msgstr "İş otağını tənzimləmək"
+
+#: contents/activitymanager/Heading.qml:122
+#, fuzzy, kde-format
+#| msgid "Close"
+msgctxt "@action:button tooltip only, close panel"
+msgid "Close"
+msgstr "Bağlamaq"
 
 #: contents/applet/AppletError.qml:165
 #, fuzzy, kde-format
@@ -1348,8 +1369,11 @@ msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr ""
 
-#~ msgid "Configure activity"
-#~ msgstr "İş otağını tənzimləmək"
+#, fuzzy
+#~| msgid "Configure"
+#~ msgctxt "@action:button tooltip only, opens kcm"
+#~ msgid "Configure"
+#~ msgstr "Tənzimləmək"
 
 #~ msgid "Delete"
 #~ msgstr "Silmək"
@@ -1445,9 +1469,6 @@ msgstr ""
 
 #~ msgid "Appearance"
 #~ msgstr "Xarici görünüş"
-
-#~ msgid "Search…"
-#~ msgstr "Axtarış…"
 
 #~ msgid "Screen Edge"
 #~ msgstr "Ekran kənarı"

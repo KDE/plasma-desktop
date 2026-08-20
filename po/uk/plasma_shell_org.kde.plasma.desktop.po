@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-19 00:48+0000\n"
+"POT-Creation-Date: 2026-08-20 00:47+0000\n"
 "PO-Revision-Date: 2026-07-02 11:26+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -46,11 +46,12 @@ msgstr ""
 "Також показати у\n"
 "цьому просторі дій"
 
-#: contents/activitymanager/ActivityItem.qml:335
-#, kde-format
-msgctxt "@action:button tooltip only, opens kcm"
-msgid "Configure"
-msgstr "Налаштувати"
+#: contents/activitymanager/ActivityItem.qml:333
+#, fuzzy, kde-format
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
+msgid "Configure Activity “%1”"
+msgstr "Налаштувати простір дій"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -63,6 +64,28 @@ msgstr "Створити простір дій…"
 msgctxt "@title:window"
 msgid "Activities"
 msgstr "Простори дій"
+
+#: contents/activitymanager/Heading.qml:86
+#, fuzzy, kde-format
+#| msgid "Search…"
+msgctxt "@action:button tooltip only"
+msgid "Search"
+msgstr "Шукати…"
+
+#: contents/activitymanager/Heading.qml:103
+#, fuzzy, kde-format
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm"
+msgid "Configure Activities"
+msgstr "Налаштувати простір дій"
+
+#: contents/activitymanager/Heading.qml:122
+#, fuzzy, kde-format
+#| msgctxt "@action:button Close the panel configuration window"
+#| msgid "Close"
+msgctxt "@action:button tooltip only, close panel"
+msgid "Close"
+msgstr "Закрити"
 
 #: contents/applet/AppletError.qml:165
 #, kde-format
@@ -1265,13 +1288,14 @@ msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Індикатор фокусування панелі"
 
+#~ msgctxt "@action:button tooltip only, opens kcm"
+#~ msgid "Configure"
+#~ msgstr "Налаштувати"
+
 #~ msgctxt ""
 #~ "@action:button Revert an unsupported configuration back to the defaults"
 #~ msgid "Fix it"
 #~ msgstr "Виправити"
-
-#~ msgid "Configure activity"
-#~ msgstr "Налаштувати простір дій"
 
 #~ msgid "Delete"
 #~ msgstr "Вилучити"
@@ -1512,9 +1536,6 @@ msgstr "Індикатор фокусування панелі"
 
 #~ msgid "Appearance"
 #~ msgstr "Вигляд"
-
-#~ msgid "Search…"
-#~ msgstr "Шукати…"
 
 #~ msgid "Screen Edge"
 #~ msgstr "Край екрана"

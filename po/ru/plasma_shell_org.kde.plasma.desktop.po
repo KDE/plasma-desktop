@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-19 00:48+0000\n"
+"POT-Creation-Date: 2026-08-20 00:47+0000\n"
 "PO-Revision-Date: 2026-06-14 19:05+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -53,11 +53,11 @@ msgstr ""
 "Показывать также\n"
 "в этой комнате"
 
-# BUGME: please change to "configure activity" --aspotashev
-#: contents/activitymanager/ActivityItem.qml:335
-#, kde-format
-msgctxt "@action:button tooltip only, opens kcm"
-msgid "Configure"
+#: contents/activitymanager/ActivityItem.qml:333
+#, fuzzy, kde-format
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
+msgid "Configure Activity “%1”"
 msgstr "Настроить комнату"
 
 #: contents/activitymanager/ActivityManager.qml:118
@@ -71,6 +71,28 @@ msgstr "Создать комнату…"
 msgctxt "@title:window"
 msgid "Activities"
 msgstr "Комнаты"
+
+#: contents/activitymanager/Heading.qml:86
+#, fuzzy, kde-format
+#| msgid "Search…"
+msgctxt "@action:button tooltip only"
+msgid "Search"
+msgstr "Поиск"
+
+#: contents/activitymanager/Heading.qml:103
+#, fuzzy, kde-format
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm"
+msgid "Configure Activities"
+msgstr "Настроить комнату"
+
+#: contents/activitymanager/Heading.qml:122
+#, fuzzy, kde-format
+#| msgctxt "@action:button Close the panel configuration window"
+#| msgid "Close"
+msgctxt "@action:button tooltip only, close panel"
+msgid "Close"
+msgstr "Закрыть"
 
 #: contents/applet/AppletError.qml:165
 #, kde-format
@@ -1259,13 +1281,15 @@ msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Индикатор получения фокуса панелью"
 
+# BUGME: please change to "configure activity" --aspotashev
+#~ msgctxt "@action:button tooltip only, opens kcm"
+#~ msgid "Configure"
+#~ msgstr "Настроить комнату"
+
 #~ msgctxt ""
 #~ "@action:button Revert an unsupported configuration back to the defaults"
 #~ msgid "Fix it"
 #~ msgstr "Исправить"
-
-#~ msgid "Configure activity"
-#~ msgstr "Настроить комнату"
 
 #~ msgid "Delete"
 #~ msgstr "Удалить"
@@ -1399,9 +1423,6 @@ msgstr "Индикатор получения фокуса панелью"
 
 #~ msgid "Appearance"
 #~ msgstr "Внешний вид"
-
-#~ msgid "Search…"
-#~ msgstr "Поиск"
 
 #~ msgid "Screen Edge"
 #~ msgstr "Край экрана"

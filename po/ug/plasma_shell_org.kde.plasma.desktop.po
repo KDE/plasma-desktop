@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-19 00:48+0000\n"
+"POT-Creation-Date: 2026-08-20 00:47+0000\n"
 "PO-Revision-Date: 2026-07-22 17:24-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -40,11 +40,11 @@ msgid ""
 "in this activity"
 msgstr "بۇ پائالىيەتتىمۇ كۆرسەت"
 
-#: contents/activitymanager/ActivityItem.qml:335
+#: contents/activitymanager/ActivityItem.qml:333
 #, kde-format
-msgctxt "@action:button tooltip only, opens kcm"
-msgid "Configure"
-msgstr "سەپلە"
+msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
+msgid "Configure Activity “%1”"
+msgstr ""
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -57,6 +57,28 @@ msgstr "پائالىيەت قۇر…"
 msgctxt "@title:window"
 msgid "Activities"
 msgstr "پائالىيەت"
+
+#: contents/activitymanager/Heading.qml:86
+#, kde-format
+msgctxt "@action:button tooltip only"
+msgid "Search"
+msgstr ""
+
+#: contents/activitymanager/Heading.qml:103
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Activities"
+msgctxt "@action:button tooltip only, opens kcm"
+msgid "Configure Activities"
+msgstr "پائالىيەت"
+
+#: contents/activitymanager/Heading.qml:122
+#, fuzzy, kde-format
+#| msgctxt "@action:button Close the panel configuration window"
+#| msgid "Close"
+msgctxt "@action:button tooltip only, close panel"
+msgid "Close"
+msgstr "ياپ"
 
 #: contents/applet/AppletError.qml:165
 #, kde-format
@@ -1217,6 +1239,10 @@ msgstr "تەھرىرلەش ھالىتىدىن چېكىنىدۇ"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "كۆزنەكچە فوكۇس كۆرسەتكۈچ"
+
+#~ msgctxt "@action:button tooltip only, opens kcm"
+#~ msgid "Configure"
+#~ msgstr "سەپلە"
 
 #~ msgctxt ""
 #~ "@action:button Revert an unsupported configuration back to the defaults"

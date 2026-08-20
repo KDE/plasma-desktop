@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-19 00:48+0000\n"
+"POT-Creation-Date: 2026-08-20 00:47+0000\n"
 "PO-Revision-Date: 2025-10-12 17:37+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -52,12 +52,12 @@ msgstr ""
 "Näytä myös\n"
 "tässä aktiviteetissa"
 
-#: contents/activitymanager/ActivityItem.qml:335
+#: contents/activitymanager/ActivityItem.qml:333
 #, fuzzy, kde-format
-#| msgid "Configure"
-msgctxt "@action:button tooltip only, opens kcm"
-msgid "Configure"
-msgstr "Asetukset"
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
+msgid "Configure Activity “%1”"
+msgstr "Muokkaa aktiviteetin asetuksia"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, fuzzy, kde-format
@@ -72,6 +72,28 @@ msgstr "Luo aktiviteetti…"
 msgctxt "@title:window"
 msgid "Activities"
 msgstr "Aktiviteetit"
+
+#: contents/activitymanager/Heading.qml:86
+#, fuzzy, kde-format
+#| msgid "Search…"
+msgctxt "@action:button tooltip only"
+msgid "Search"
+msgstr "Etsi…"
+
+#: contents/activitymanager/Heading.qml:103
+#, fuzzy, kde-format
+#| msgid "Configure activity"
+msgctxt "@action:button tooltip only, opens kcm"
+msgid "Configure Activities"
+msgstr "Muokkaa aktiviteetin asetuksia"
+
+#: contents/activitymanager/Heading.qml:122
+#, fuzzy, kde-format
+#| msgctxt "@action:button Close the panel configuration window"
+#| msgid "Close"
+msgctxt "@action:button tooltip only, close panel"
+msgid "Close"
+msgstr "Sulje"
 
 #: contents/applet/AppletError.qml:165
 #, fuzzy, kde-format
@@ -1355,13 +1377,16 @@ msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Paneelin kohdistuksen osoitin"
 
+#, fuzzy
+#~| msgid "Configure"
+#~ msgctxt "@action:button tooltip only, opens kcm"
+#~ msgid "Configure"
+#~ msgstr "Asetukset"
+
 #~ msgctxt ""
 #~ "@action:button Revert an unsupported configuration back to the defaults"
 #~ msgid "Fix it"
 #~ msgstr "Korjaa"
-
-#~ msgid "Configure activity"
-#~ msgstr "Muokkaa aktiviteetin asetuksia"
 
 #~ msgid "Delete"
 #~ msgstr "Poista"
@@ -1534,9 +1559,6 @@ msgstr "Paneelin kohdistuksen osoitin"
 
 #~ msgid "Appearance"
 #~ msgstr "Ulkoasu"
-
-#~ msgid "Search…"
-#~ msgstr "Etsi…"
 
 #~ msgid "Screen Edge"
 #~ msgstr "Näytön reuna"
