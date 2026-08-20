@@ -164,7 +164,7 @@ Loader {
                     appPid: model.AppPid
                     // 'display' is required already
                     isMinimized: model.IsMinimized
-                    isReadyForPainting: model.Geometry.width > 0 && model.Geometry.height > 0
+                    isReadyForPainting: model.IsMapped
                     isOnAllVirtualDesktops: model.IsOnAllVirtualDesktops
                     virtualDesktops: model.VirtualDesktops
                     activities: model.Activities
