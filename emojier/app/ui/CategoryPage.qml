@@ -75,13 +75,13 @@ Kirigami.ScrollablePage {
                 Keys.onReturnPressed: event => emojiView.currentItem?.Keys.returnPressed(event)
                 Keys.onDownPressed: event => {
                     emojiView.currentIndex = Math.max(emojiView.currentIndex, 0)
-                    event.accepted = false
-                    emojiView.forceActiveFocus(Qt.TabFocusReason)
+                    event.accepted = false // pass to KeyNavigation
                 }
+                KeyNavigation.down: emojiView
 
                 Binding {
                     view.Keys.forwardTo: [searchField]
-                    view.KeyNavigation.up: searchField.KeyNavigation.down // explicitly set as this and clear button point there
+                    emojiView.KeyNavigation.up: searchField
                 }
                 Connections {
                     target: view
@@ -383,7 +383,7 @@ Kirigami.ScrollablePage {
             if (currentIndex < columnsToHave - 1) {
                 currentIndex = -1
             }
-            event.accepted = false
+            event.accepted = false // pass to ListView or KeyNavigation.up, bound from header
         }
 
         delegate: emojiDelegateComponent
