@@ -17,6 +17,7 @@ class KeyboardSettings;
 class KeyboardFiltersSettings;
 class AccessibilityData;
 class ShakeCursorSettings;
+class DwellClickerSettings;
 class ColorblindnessCorrectionSettings;
 class InvertSettings;
 class ZoomMagnifierSettings;
@@ -29,6 +30,7 @@ class KAccessConfig : public KQuickManagedConfigModule
     Q_PROPERTY(KeyboardSettings *keyboardSettings READ keyboardSettings CONSTANT)
     Q_PROPERTY(KeyboardFiltersSettings *keyboardFiltersSettings READ keyboardFiltersSettings CONSTANT)
     Q_PROPERTY(ShakeCursorSettings *shakeCursorSettings READ shakeCursorSettings CONSTANT)
+    Q_PROPERTY(DwellClickerSettings *dwellClickerSettings READ dwellClickerSettings CONSTANT)
     Q_PROPERTY(ColorblindnessCorrectionSettings *colorblindnessCorrectionSettings READ colorblindnessCorrectionSettings CONSTANT)
     Q_PROPERTY(InvertSettings *invertSettings READ invertSettings CONSTANT)
     Q_PROPERTY(ZoomMagnifierSettings *zoomMagnifierSettings READ zoomMagnifierSettings CONSTANT)
@@ -40,6 +42,7 @@ class KAccessConfig : public KQuickManagedConfigModule
     Q_PROPERTY(bool keyboardModifiersIsDefaults READ keyboardModifiersIsDefaults NOTIFY keyboardModifiersIsDefaultsChanged)
     Q_PROPERTY(bool screenReaderIsDefaults READ screenReaderIsDefaults NOTIFY screenReaderIsDefaultsChanged)
     Q_PROPERTY(bool shakeCursorIsDefaults READ shakeCursorIsDefaults NOTIFY shakeCursorIsDefaultsChanged)
+    Q_PROPERTY(bool dwellClickerIsDefaults READ dwellClickerIsDefaults NOTIFY dwellClickerIsDefaultsChanged)
     Q_PROPERTY(bool colorblindnessCorrectionIsDefaults READ colorblindnessCorrectionIsDefaults NOTIFY colorblindnessCorrectionIsDefaultsChanged)
     Q_PROPERTY(bool invertIsDefaults READ invertIsDefaults NOTIFY invertIsDefaultsChanged)
     Q_PROPERTY(bool zoomMagnifierIsDefaults READ zoomMagnifierIsDefaults NOTIFY zoomMagnifierIsDefaultsChanged)
@@ -68,6 +71,7 @@ public:
     KeyboardSettings *keyboardSettings() const;
     KeyboardFiltersSettings *keyboardFiltersSettings() const;
     ShakeCursorSettings *shakeCursorSettings() const;
+    DwellClickerSettings *dwellClickerSettings() const;
     ColorblindnessCorrectionSettings *colorblindnessCorrectionSettings() const;
     InvertSettings *invertSettings() const;
     ZoomMagnifierSettings *zoomMagnifierSettings() const;
@@ -78,6 +82,7 @@ public:
     bool keyboardModifiersIsDefaults() const;
     bool screenReaderIsDefaults() const;
     bool shakeCursorIsDefaults() const;
+    bool dwellClickerIsDefaults() const;
     bool colorblindnessCorrectionIsDefaults() const;
     bool invertIsDefaults() const;
     bool zoomMagnifierIsDefaults() const;
@@ -93,6 +98,7 @@ Q_SIGNALS:
     void keyboardModifiersIsDefaultsChanged();
     void screenReaderIsDefaultsChanged();
     void shakeCursorIsDefaultsChanged();
+    void dwellClickerIsDefaultsChanged();
     void colorblindnessCorrectionIsDefaultsChanged();
     void invertIsDefaultsChanged();
     void zoomMagnifierIsDefaultsChanged();

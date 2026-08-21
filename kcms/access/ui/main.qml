@@ -54,6 +54,12 @@ KCMUtils.AbstractKCM {
             componentUrl: Qt.resolvedUrl("MouseNavigation.qml")
         },
         {
+            icon: "input-mouse-click-left",
+            title: i18nc("@title Category name in sidebar", "Dwell Clicker"),
+            defaultnessKey: "dwellClickerIsDefaults",
+            componentUrl: Qt.resolvedUrl("DwellClicker.qml")
+        },
+        {
             icon: "text-speak",
             title: i18nc("@title Category name in sidebar", "Screen Reader"),
             defaultnessKey: "screenReaderIsDefaults",

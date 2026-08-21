@@ -50,6 +50,14 @@ kconfig_target_kcfg_file(kaccess_settings
 
 kconfig_target_kcfg_file(kaccess_settings
     GENERATE_MOC
+    FILE kcmaccessibilitydwellclicker.kcfg
+    HEADER kcmaccessibilitydwellclicker.h
+    CLASS_NAME DwellClickerSettings
+    MUTATORS DEFAULT_VALUE_GETTERS GENERATE_PROPERTIES PARENT_IN_CONSTRUCTOR NOTIFIERS
+)
+
+kconfig_target_kcfg_file(kaccess_settings
+    GENERATE_MOC
     FILE kcmaccessibilitycolorblindnesscorrection.kcfg
     HEADER kcmaccessibilitycolorblindnesscorrection.h
     CLASS_NAME ColorblindnessCorrectionSettings
@@ -75,8 +83,8 @@ kconfig_target_kcfg_file(kaccess_settings
 kcmutils_generate_module_data(kcm_access
     MODULE_DATA_HEADER kcmaccessibilitydata.h
     MODULE_DATA_CLASS_NAME AccessibilityData
-    SETTINGS_HEADERS kcmaccessibilitybell.h kcmaccessibilitykeyboard.h kcmaccessibilitykeyboardfilters.h kcmaccessibilitymouse.h kcmaccessibilityshakecursor.h kcmaccessibilitycolorblindnesscorrection.h kcmaccessibilityinvert.h kcmaccessibilityzoommagnifier.h
-    SETTINGS_CLASSES BellSettings KeyboardSettings KeyboardFiltersSettings MouseSettings ShakeCursorSettings ColorblindnessCorrectionSettings InvertSettings ZoomMagnifierSettings
+    SETTINGS_HEADERS kcmaccessibilitybell.h kcmaccessibilitykeyboard.h kcmaccessibilitykeyboardfilters.h kcmaccessibilitymouse.h kcmaccessibilityshakecursor.h kcmaccessibilitycolorblindnesscorrection.h kcmaccessibilityinvert.h kcmaccessibilityzoommagnifier.h kcmaccessibilitydwellclicker.h
+    SETTINGS_CLASSES BellSettings KeyboardSettings KeyboardFiltersSettings MouseSettings ShakeCursorSettings ColorblindnessCorrectionSettings InvertSettings ZoomMagnifierSettings DwellClickerSettings
 )
 
 ecm_qt_declare_logging_category(kcm_access

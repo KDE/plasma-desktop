@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SPDX-FileCopyrightText: 2026 Sebastian Sauer <dipesh@gmx.de>
+SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+-->
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="kwinrc" />
+  <group name="Plugins">
+    <entry name="DwellClicker" key="dwellclickerEnabled" type="Bool">
+      <label>Whether Dwell Clicker is enabled</label>
+      <default>false</default>
+    </entry>
+  </group>
+  <group name="Effect-dwellclicker">
+    <entry name="DwellClickerDelayTime" key="DelayTime" type="UInt">
+      <label>Delay Time</label>
+      <default>150</default>
+      <min>0</min>
+    </entry>
+    <entry name="DwellClickerDwellTime" key="DwellTime" type="UInt">
+        <label>Dwell Time</label>
+        <default>500</default>
+        <min>0</min>
+    </entry>
+    <entry name="DwellClickerDwellColor" key="DwellColor" type="Color">
+        <label>Dwell Color</label>
+        <default>#a0ff0000</default>
+    </entry>
+    <entry name="DwellClickerMotionThreshold" key="MotionThreshold" type="UInt">
+        <label>Motion Threshold</label>
+        <default>5</default>
+        <min>0</min>
+    </entry>
+  </group>
+</kcfg>

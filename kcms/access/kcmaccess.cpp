@@ -36,6 +36,7 @@
 #include "kcmaccessibilitykeyboardfilters.h"
 #include "kcmaccessibilitymouse.h"
 #include "kcmaccessibilityshakecursor.h"
+#include "kcmaccessibilitydwellclicker.h"
 #include "kcmaccessibilityzoommagnifier.h"
 #include "logging.h"
 
@@ -70,6 +71,7 @@ KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData)
     qmlRegisterAnonymousType<KeyboardSettings>("org.kde.plasma.access.kcm", 0);
     qmlRegisterAnonymousType<KeyboardFiltersSettings>("org.kde.plasma.access.kcm", 0);
     qmlRegisterAnonymousType<ShakeCursorSettings>("org.kde.plasma.access.kcm", 0);
+    qmlRegisterAnonymousType<DwellClickerSettings>("org.kde.plasma.access.kcm", 0);
     qmlRegisterAnonymousType<ColorblindnessCorrectionSettings>("org.kde.plasma.access.kcm", 0);
     qmlRegisterAnonymousType<InvertSettings>("org.kde.plasma.access.kcm", 0);
     qmlRegisterAnonymousType<ZoomMagnifierSettings>("org.kde.plasma.access.kcm", 0);
@@ -85,6 +87,7 @@ KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData)
     connect(m_data->keyboardFiltersSettings(), &KeyboardFiltersSettings::configChanged, this, &KAccessConfig::keyboardFiltersIsDefaultsChanged);
     connect(m_data->keyboardSettings(), &KeyboardSettings::configChanged, this, &KAccessConfig::keyboardModifiersIsDefaultsChanged);
     connect(m_data->shakeCursorSettings(), &ShakeCursorSettings::configChanged, this, &KAccessConfig::shakeCursorIsDefaultsChanged);
+    connect(m_data->dwellClickerSettings(), &DwellClickerSettings::configChanged, this, &KAccessConfig::dwellClickerIsDefaultsChanged);
     connect(m_data->colorblindnessCorrectionSettings(),
             &ColorblindnessCorrectionSettings::configChanged,
             this,
@@ -278,6 +281,12 @@ void KAccessConfig::save()
     const bool shakeCursorSaveNeeded = m_data->shakeCursorSettings()->findItem(QStringLiteral("ShakeCursor"))->isSaveNeeded();
     const bool shakeCursorMagnificationSaveNeeded = m_data->shakeCursorSettings()->findItem(QStringLiteral("ShakeCursorMagnification"))->isSaveNeeded();
 
+    const bool dwellClickerSaveNeeded = m_data->dwellClickerSettings()->findItem(QStringLiteral("DwellClicker"))->isSaveNeeded();
+    const bool dwellClickerDelayTimeSaveNeeded = m_data->dwellClickerSettings()->findItem(QStringLiteral("DwellClickerDelayTime"))->isSaveNeeded();
+    const bool dwellClickerDwellTimeSaveNeeded = m_data->dwellClickerSettings()->findItem(QStringLiteral("DwellClickerDwellTime"))->isSaveNeeded();
+    const bool dwellClickerDwellColorSaveNeeded = m_data->dwellClickerSettings()->findItem(QStringLiteral("DwellClickerDwellColor"))->isSaveNeeded();
+    const bool dwellClickerMotionThresholdSaveNeeded = m_data->dwellClickerSettings()->findItem(QStringLiteral("DwellClickerMotionThreshold"))->isSaveNeeded();
+
     const bool colorblindnessCorrectionSaveNeeded =
         m_data->colorblindnessCorrectionSettings()->findItem(QStringLiteral("ColorblindnessCorrection"))->isSaveNeeded();
     const bool colorblindnessCorrectionSettingsSaveNeeded = m_data->colorblindnessCorrectionSettings()->findItem(QStringLiteral("Mode"))->isSaveNeeded()
@@ -319,6 +328,24 @@ void KAccessConfig::save()
                                                                          QStringLiteral("org.kde.kwin.Effects"),
                                                                          QStringLiteral("reconfigureEffect"));
         reconfigureMessage.setArguments({QStringLiteral("shakecursor")});
+        QDBusConnection::sessionBus().call(reconfigureMessage);
+    }
+
+    if (dwellClickerSaveNeeded) {
+        QDBusMessage reloadMessage =
+            QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
+                                           QStringLiteral("/Effects"),
+                                           QStringLiteral("org.kde.kwin.Effects"),
+                                           dwellClickerSettings()->dwellClicker() ? QStringLiteral("loadEffect") : QStringLiteral("unloadEffect"));
+        reloadMessage.setArguments({QStringLiteral("dwellclicker")});
+        QDBusConnection::sessionBus().call(reloadMessage);
+    }
+    if (dwellClickerDelayTimeSaveNeeded || dwellClickerDwellTimeSaveNeeded || dwellClickerDwellColorSaveNeeded || dwellClickerMotionThresholdSaveNeeded) {
+        QDBusMessage reconfigureMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
+                                                                         QStringLiteral("/Effects"),
+                                                                         QStringLiteral("org.kde.kwin.Effects"),
+                                                                         QStringLiteral("reconfigureEffect"));
+        reconfigureMessage.setArguments({QStringLiteral("dwellclicker")});
         QDBusConnection::sessionBus().call(reconfigureMessage);
     }
 
@@ -473,6 +500,11 @@ ShakeCursorSettings *KAccessConfig::shakeCursorSettings() const
     return m_data->shakeCursorSettings();
 }
 
+DwellClickerSettings *KAccessConfig::dwellClickerSettings() const
+{
+    return m_data->dwellClickerSettings();
+}
+
 ColorblindnessCorrectionSettings *KAccessConfig::colorblindnessCorrectionSettings() const
 {
     return m_data->colorblindnessCorrectionSettings();
@@ -523,6 +555,11 @@ bool KAccessConfig::screenReaderIsDefaults() const
 bool KAccessConfig::shakeCursorIsDefaults() const
 {
     return shakeCursorSettings()->isDefaults();
+}
+
+bool KAccessConfig::dwellClickerIsDefaults() const
+{
+    return dwellClickerSettings()->isDefaults();
 }
 
 bool KAccessConfig::colorblindnessCorrectionIsDefaults() const
