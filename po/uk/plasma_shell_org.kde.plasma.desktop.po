@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Yuri Chornoivan <yurchor@ukr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-20 00:47+0000\n"
-"PO-Revision-Date: 2026-07-02 11:26+0300\n"
+"PO-Revision-Date: 2026-08-20 11:31+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
@@ -47,11 +47,10 @@ msgstr ""
 "цьому просторі дій"
 
 #: contents/activitymanager/ActivityItem.qml:333
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
 msgid "Configure Activity “%1”"
-msgstr "Налаштувати простір дій"
+msgstr "Налаштувати простір дій «%1»"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -66,23 +65,19 @@ msgid "Activities"
 msgstr "Простори дій"
 
 #: contents/activitymanager/Heading.qml:86
-#, fuzzy, kde-format
-#| msgid "Search…"
+#, kde-format
 msgctxt "@action:button tooltip only"
 msgid "Search"
-msgstr "Шукати…"
+msgstr "Пошук"
 
 #: contents/activitymanager/Heading.qml:103
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm"
 msgid "Configure Activities"
-msgstr "Налаштувати простір дій"
+msgstr "Налаштувати простори дій"
 
 #: contents/activitymanager/Heading.qml:122
-#, fuzzy, kde-format
-#| msgctxt "@action:button Close the panel configuration window"
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button tooltip only, close panel"
 msgid "Close"
 msgstr "Закрити"
@@ -987,6 +982,8 @@ msgid ""
 "This authentication method is not functioning correctly. Please try another "
 "method, and check your system configuration."
 msgstr ""
+"Цей спосіб розпізнавання просто не працює належним чином. Будь ласка, "
+"спробуйте інший спосіб і виправте налаштування вашої системи."
 
 #: contents/lockscreen/LockScreenUi.qml:375
 #, kde-format

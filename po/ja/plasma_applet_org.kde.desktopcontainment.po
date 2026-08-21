@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:46+0000\n"
+"POT-Creation-Date: 2026-08-21 00:46+0000\n"
 "PO-Revision-Date: 2026-07-06 00:57+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -38,7 +38,7 @@ msgctxt "@title:group for configuration dialog page"
 msgid "Filter"
 msgstr "フィルタ"
 
-#: package/contents/ui/BackButtonItem.qml:105
+#: package/contents/ui/BackButtonItem.qml:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Back"
@@ -470,7 +470,7 @@ msgctxt "@title:window"
 msgid "Preview Plugins"
 msgstr "プレビュープラグイン"
 
-#: package/contents/ui/FolderView.qml:1273
+#: package/contents/ui/FolderView.qml:1203
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -504,17 +504,17 @@ msgstr "デスクトップと壁紙"
 msgid "Select Folder"
 msgstr "フォルダを選択"
 
-#: plugins/folder/foldermodel.cpp:569
+#: plugins/folder/foldermodel.cpp:545
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "デスクトップを更新(&R)"
 
-#: plugins/folder/foldermodel.cpp:569 plugins/folder/foldermodel.cpp:1804
+#: plugins/folder/foldermodel.cpp:545 plugins/folder/foldermodel.cpp:1785
 #, kde-format
 msgid "&Refresh View"
 msgstr "ビューを更新(&R)"
 
-#: plugins/folder/foldermodel.cpp:932
+#: plugins/folder/foldermodel.cpp:908
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -522,7 +522,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr "リンクのターゲットが見つかりませんでした"
 
-#: plugins/folder/foldermodel.cpp:934
+#: plugins/folder/foldermodel.cpp:910
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -532,23 +532,23 @@ msgstr ""
 "<filename>%1</filename> は <filename>%2</filename> とリンクされていますが、見"
 "つかりませんでした。移動または削除された可能性があります。"
 
-#: plugins/folder/foldermodel.cpp:1813
+#: plugins/folder/foldermodel.cpp:1794
 #, kde-format
 msgid "&Empty Trash"
 msgstr "ごみ箱を空にする(&E)"
 
-#: plugins/folder/foldermodel.cpp:1816
+#: plugins/folder/foldermodel.cpp:1797
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "以前の位置を復元"
 
-#: plugins/folder/foldermodel.cpp:1819
+#: plugins/folder/foldermodel.cpp:1800
 #, kde-format
 msgid "&Open"
 msgstr "開く(&O)"
 
-#: plugins/folder/foldermodel.cpp:1823
+#: plugins/folder/foldermodel.cpp:1804
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -556,23 +556,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "リンク先を開く"
 
-#: plugins/folder/foldermodel.cpp:1924
+#: plugins/folder/foldermodel.cpp:1905
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "ごみ箱アイコンを削除"
 
-#: plugins/folder/foldermodel.cpp:1927
+#: plugins/folder/foldermodel.cpp:1908
 #, kde-format
 msgid "&Move to Trash"
 msgstr "ごみ箱に移動(&M)"
 
-#: plugins/folder/foldermodel.cpp:1960
+#: plugins/folder/foldermodel.cpp:1941
 #, kde-format
 msgid "&Paste"
 msgstr "貼り付け(&P)"
 
-#: plugins/folder/foldermodel.cpp:2111
+#: plugins/folder/foldermodel.cpp:2092
 #, kde-format
 msgid "&Properties"
 msgstr "プロパティ(&P)"

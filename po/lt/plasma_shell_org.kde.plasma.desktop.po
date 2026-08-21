@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-20 00:47+0000\n"
-"PO-Revision-Date: 2026-07-05 00:50+0300\n"
+"PO-Revision-Date: 2026-08-20 11:54+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -48,11 +48,10 @@ msgstr ""
 "šioje veikloje"
 
 #: contents/activitymanager/ActivityItem.qml:333
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
 msgid "Configure Activity “%1”"
-msgstr "Konfigūruoti veiklą"
+msgstr "Konfigūruoti veiklą „%1“"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -67,23 +66,19 @@ msgid "Activities"
 msgstr "Veiklos"
 
 #: contents/activitymanager/Heading.qml:86
-#, fuzzy, kde-format
-#| msgid "Search…"
+#, kde-format
 msgctxt "@action:button tooltip only"
 msgid "Search"
-msgstr "Ieškoti…"
+msgstr "Ieškoti"
 
 #: contents/activitymanager/Heading.qml:103
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm"
 msgid "Configure Activities"
-msgstr "Konfigūruoti veiklą"
+msgstr "Konfigūruoti veiklas"
 
 #: contents/activitymanager/Heading.qml:122
-#, fuzzy, kde-format
-#| msgctxt "@action:button Close the panel configuration window"
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button tooltip only, close panel"
 msgid "Close"
 msgstr "Užverti"
@@ -992,6 +987,8 @@ msgid ""
 "This authentication method is not functioning correctly. Please try another "
 "method, and check your system configuration."
 msgstr ""
+"Šis tapatybės nustatymo metodas nefunkcionuoja teisingai. Pabandykite kitą "
+"metodą ir patikrinkite sistemos konfigūraciją."
 
 #: contents/lockscreen/LockScreenUi.qml:375
 #, kde-format

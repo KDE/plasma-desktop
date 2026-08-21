@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:46+0000\n"
+"POT-Creation-Date: 2026-08-21 00:46+0000\n"
 "PO-Revision-Date: 2013-05-28 03:59+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -47,7 +47,7 @@ msgctxt "@title:group for configuration dialog page"
 msgid "Filter"
 msgstr "Сүзгі"
 
-#: package/contents/ui/BackButtonItem.qml:105
+#: package/contents/ui/BackButtonItem.qml:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Back"
@@ -538,7 +538,7 @@ msgctxt "@title:window"
 msgid "Preview Plugins"
 msgstr "Мазмұнын көру:"
 
-#: package/contents/ui/FolderView.qml:1273
+#: package/contents/ui/FolderView.qml:1203
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -573,17 +573,17 @@ msgstr "Үстелді &жаңарту"
 msgid "Select Folder"
 msgstr "Барлығын таңдау"
 
-#: plugins/folder/foldermodel.cpp:569
+#: plugins/folder/foldermodel.cpp:545
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "Үстелді &жаңарту"
 
-#: plugins/folder/foldermodel.cpp:569 plugins/folder/foldermodel.cpp:1804
+#: plugins/folder/foldermodel.cpp:545 plugins/folder/foldermodel.cpp:1785
 #, kde-format
 msgid "&Refresh View"
 msgstr "Көрінсін &жаңартү"
 
-#: plugins/folder/foldermodel.cpp:932
+#: plugins/folder/foldermodel.cpp:908
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -591,7 +591,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:934
+#: plugins/folder/foldermodel.cpp:910
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -599,24 +599,24 @@ msgid ""
 "not be found. It may have been moved or deleted."
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1813
+#: plugins/folder/foldermodel.cpp:1794
 #, fuzzy, kde-format
 #| msgid "&Empty Trash Bin"
 msgid "&Empty Trash"
 msgstr "'Өшіргендер' шелегін &босату"
 
-#: plugins/folder/foldermodel.cpp:1816
+#: plugins/folder/foldermodel.cpp:1797
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1819
+#: plugins/folder/foldermodel.cpp:1800
 #, kde-format
 msgid "&Open"
 msgstr "&Ашу"
 
-#: plugins/folder/foldermodel.cpp:1823
+#: plugins/folder/foldermodel.cpp:1804
 #, fuzzy, kde-format
 #| msgid "Show a place:"
 msgctxt ""
@@ -625,23 +625,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Көрсететіні:"
 
-#: plugins/folder/foldermodel.cpp:1924
+#: plugins/folder/foldermodel.cpp:1905
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1927
+#: plugins/folder/foldermodel.cpp:1908
 #, kde-format
 msgid "&Move to Trash"
 msgstr "Өшірілгендерге &тастау"
 
-#: plugins/folder/foldermodel.cpp:1960
+#: plugins/folder/foldermodel.cpp:1941
 #, kde-format
 msgid "&Paste"
 msgstr "&Орналастыру"
 
-#: plugins/folder/foldermodel.cpp:2111
+#: plugins/folder/foldermodel.cpp:2092
 #, kde-format
 msgid "&Properties"
 msgstr "Қасиетте&р"

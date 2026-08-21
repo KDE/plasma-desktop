@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-20 00:47+0000\n"
-"PO-Revision-Date: 2026-08-19 11:45+0200\n"
+"PO-Revision-Date: 2026-08-20 12:38+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -50,7 +50,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
 msgid "Configure Activity “%1”"
-msgstr ""
+msgstr "Nastavit aktivitu \"%1\""
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -68,20 +68,16 @@ msgstr "Aktivity"
 #, kde-format
 msgctxt "@action:button tooltip only"
 msgid "Search"
-msgstr ""
+msgstr "Hledat"
 
 #: contents/activitymanager/Heading.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Activities"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm"
 msgid "Configure Activities"
-msgstr "Aktivity"
+msgstr "Nastavit aktivity"
 
 #: contents/activitymanager/Heading.qml:122
-#, fuzzy, kde-format
-#| msgctxt "@action:button Close the panel configuration window"
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button tooltip only, close panel"
 msgid "Close"
 msgstr "Zavřít"

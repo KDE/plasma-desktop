@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-20 00:47+0000\n"
-"PO-Revision-Date: 2026-08-13 09:42+0200\n"
+"PO-Revision-Date: 2026-08-20 17:35+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -47,7 +47,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
 msgid "Configure Activity “%1”"
-msgstr ""
+msgstr "Конфигурирайте дейност „%1“"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -65,20 +65,16 @@ msgstr "Дейности"
 #, kde-format
 msgctxt "@action:button tooltip only"
 msgid "Search"
-msgstr ""
+msgstr "Търсене"
 
 #: contents/activitymanager/Heading.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Activities"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm"
 msgid "Configure Activities"
-msgstr "Дейности"
+msgstr "Конфигуриране на дейности"
 
 #: contents/activitymanager/Heading.qml:122
-#, fuzzy, kde-format
-#| msgctxt "@action:button Close the panel configuration window"
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button tooltip only, close panel"
 msgid "Close"
 msgstr "Затваряне"
@@ -981,6 +977,8 @@ msgid ""
 "This authentication method is not functioning correctly. Please try another "
 "method, and check your system configuration."
 msgstr ""
+"Този метод за удостоверяване не функционира правилно. Моля, опитайте друг "
+"метод и проверете системната конфигурация."
 
 #: contents/lockscreen/LockScreenUi.qml:375
 #, kde-format

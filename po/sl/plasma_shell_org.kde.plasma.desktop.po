@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-20 00:47+0000\n"
-"PO-Revision-Date: 2026-08-19 06:57+0200\n"
+"PO-Revision-Date: 2026-08-20 07:12+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -48,11 +48,10 @@ msgstr ""
 "v tej dejavnosti"
 
 #: contents/activitymanager/ActivityItem.qml:333
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
 msgid "Configure Activity “%1”"
-msgstr "Nastavi dejavnost"
+msgstr "Konfiguriraj dejavnost “%1”"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -67,23 +66,19 @@ msgid "Activities"
 msgstr "Dejavnosti"
 
 #: contents/activitymanager/Heading.qml:86
-#, fuzzy, kde-format
-#| msgid "Search…"
+#, kde-format
 msgctxt "@action:button tooltip only"
 msgid "Search"
-msgstr "Poišči…"
+msgstr "Poišči"
 
 #: contents/activitymanager/Heading.qml:103
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm"
 msgid "Configure Activities"
-msgstr "Nastavi dejavnost"
+msgstr "Konfiguriraj dejavnosti"
 
 #: contents/activitymanager/Heading.qml:122
-#, fuzzy, kde-format
-#| msgctxt "@action:button Close the panel configuration window"
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button tooltip only, close panel"
 msgid "Close"
 msgstr "Zapri"
