@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<!--
+    SPDX-FileCopyrightText: 2021 Yuri Chornoivan <yurchor@ukr.net>
+    SPDX-FileCopyrightText: 2023 Méven Car <meven@kde.org>
+
+    SPDX-License-Identifier: GPL-2.0-or-later
+-->
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Russian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcm_recentFiles" lang="&language;">
+<articleinfo>
+    
+<title
+>Последние файлы</title>
+<authorgroup>
+<author
+><firstname
+>Yuri</firstname
+><surname
+>Chornoivan</surname
+> <email
+>yurchor@ukr.net</email
+></author>
+<othercredit role="translator"
+><firstname
+>Мария</firstname
+><surname
+>Шикунова</surname
+><affiliation
+><address
+><email
+>maremarie@altlinux.org</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>30 ноября 2023 г.</date>
+<releaseinfo
+>Plasma 6.0</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Параметры системы</keyword>
+<keyword
+>Последние файлы</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Этот модуль позволяет настроить период времени, в течение которого можно будет <guilabel
+>Хранить историю</guilabel
+> открытых файлов, а также удалять некоторые данные об их использовании. С помощью кнопки с раскрывающимся списком <guibutton
+>Очистить журнал</guibutton
+> можно выбрать следующие действия: <guimenuitem
+>Стереть последний час</guimenuitem
+>, <guimenuitem
+>Стереть последние два часа</guimenuitem
+>, <guimenuitem
+>Стереть день</guimenuitem
+> или <guimenuitem
+>Стереть всё</guimenuitem
+>. </para>
+    
+<para
+>Ниже можно выбрать приложения, для которых будет сохраняться история открытых документов. Выберите <guilabel
+>Для всех приложений</guilabel
+>, чтобы сохранять все данные, <guilabel
+>Не запоминать</guilabel
+>, чтобы отключить сохранение данных, или <guilabel
+>Только для определённых приложений</guilabel
+>, чтобы настроить список приложений вручную. Нажатие на приложение переключает режим сохранения истории для него. </para>
+
+<para
+>Установите флажок <guilabel
+>Исключить приложения, кроме перечисленных</guilabel
+>, чтобы отключить сохранение истории для всех приложений, отсутствующих в списке. </para>
+
+</article>

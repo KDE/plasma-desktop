@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-20 00:47+0000\n"
-"PO-Revision-Date: 2026-08-19 13:38+0300\n"
+"PO-Revision-Date: 2026-08-21 19:23+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -46,11 +46,10 @@ msgstr ""
 "etkinlikte göster"
 
 #: contents/activitymanager/ActivityItem.qml:333
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
 msgid "Configure Activity “%1”"
-msgstr "Etkinliği yapılandır"
+msgstr "“%1” etkinliğini yapılandır"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -68,19 +67,16 @@ msgstr "Etkinlikler"
 #, kde-format
 msgctxt "@action:button tooltip only"
 msgid "Search"
-msgstr ""
+msgstr "Ara"
 
 #: contents/activitymanager/Heading.qml:103
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm"
 msgid "Configure Activities"
-msgstr "Etkinliği yapılandır"
+msgstr "Etkinlikleri yapılandır"
 
 #: contents/activitymanager/Heading.qml:122
-#, fuzzy, kde-format
-#| msgctxt "@action:button Close the panel configuration window"
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button tooltip only, close panel"
 msgid "Close"
 msgstr "Kapat"

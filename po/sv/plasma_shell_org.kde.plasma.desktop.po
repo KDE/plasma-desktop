@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-20 00:47+0000\n"
-"PO-Revision-Date: 2026-07-08 11:17+0200\n"
+"PO-Revision-Date: 2026-08-21 19:54+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -44,11 +44,10 @@ msgstr ""
 "här aktiviteten"
 
 #: contents/activitymanager/ActivityItem.qml:333
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
 msgid "Configure Activity “%1”"
-msgstr "Anpassa aktivitet"
+msgstr "Anpassa aktivitet \"%1\""
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -63,23 +62,19 @@ msgid "Activities"
 msgstr "Aktiviteter"
 
 #: contents/activitymanager/Heading.qml:86
-#, fuzzy, kde-format
-#| msgid "Search…"
+#, kde-format
 msgctxt "@action:button tooltip only"
 msgid "Search"
-msgstr "Sök…"
+msgstr "Sök"
 
 #: contents/activitymanager/Heading.qml:103
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm"
 msgid "Configure Activities"
-msgstr "Anpassa aktivitet"
+msgstr "Anpassa aktiviteter"
 
 #: contents/activitymanager/Heading.qml:122
-#, fuzzy, kde-format
-#| msgctxt "@action:button Close the panel configuration window"
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button tooltip only, close panel"
 msgid "Close"
 msgstr "Stäng"
@@ -980,6 +975,8 @@ msgid ""
 "This authentication method is not functioning correctly. Please try another "
 "method, and check your system configuration."
 msgstr ""
+"Den här metoden för behörighetskontroll fungerar inte korrekt. Försök med en "
+"annan metod och kontrollera systemets inställning."
 
 #: contents/lockscreen/LockScreenUi.qml:375
 #, kde-format

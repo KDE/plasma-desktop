@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-20 00:47+0000\n"
-"PO-Revision-Date: 2026-07-20 00:52+0200\n"
+"PO-Revision-Date: 2026-08-21 13:03+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
@@ -47,11 +47,10 @@ msgstr ""
 "jarduera honetan ere"
 
 #: contents/activitymanager/ActivityItem.qml:333
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
 msgid "Configure Activity “%1”"
-msgstr "Konfiguratu jarduera"
+msgstr "“%1” jarduera konfiguratu"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -66,23 +65,19 @@ msgid "Activities"
 msgstr "Jarduerak"
 
 #: contents/activitymanager/Heading.qml:86
-#, fuzzy, kde-format
-#| msgid "Search…"
+#, kde-format
 msgctxt "@action:button tooltip only"
 msgid "Search"
-msgstr "Bilatu..."
+msgstr "Bilatu"
 
 #: contents/activitymanager/Heading.qml:103
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm"
 msgid "Configure Activities"
-msgstr "Konfiguratu jarduera"
+msgstr "Jarduerak konfiguratu"
 
 #: contents/activitymanager/Heading.qml:122
-#, fuzzy, kde-format
-#| msgctxt "@action:button Close the panel configuration window"
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button tooltip only, close panel"
 msgid "Close"
 msgstr "Itxi"
@@ -91,7 +86,7 @@ msgstr "Itxi"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr "Kopiatu arbelean"
+msgstr "Arbelera kopiatu"
 
 #: contents/applet/AppletError.qml:188
 #, kde-format
@@ -983,6 +978,8 @@ msgid ""
 "This authentication method is not functioning correctly. Please try another "
 "method, and check your system configuration."
 msgstr ""
+"Autentifikazio-metodo hau ez dabil behar bezala. Saiatu beste metodo batekin "
+"eta egiaztatu sistemaren konfigurazioa."
 
 #: contents/lockscreen/LockScreenUi.qml:375
 #, kde-format
