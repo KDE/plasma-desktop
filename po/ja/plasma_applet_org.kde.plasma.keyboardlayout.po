@@ -1,12 +1,13 @@
 # Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2022-08-20 23:16-0700\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
+"PO-Revision-Date: 2026-08-02 15:45+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -15,18 +16,16 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: qml/config.qml:6
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "全般"
 
 #: qml/configGeneral.qml:31
-#, fuzzy, kde-format
-#| msgid "Display style:"
+#, kde-format
 msgctxt "@title:group of radio buttons, options are language codes or images"
 msgid "Display style:"
 msgstr "表示スタイル:"
@@ -35,18 +34,16 @@ msgstr "表示スタイル:"
 #, kde-format
 msgctxt "@info:placeholder Make this translation as short as possible"
 msgid "No flag available"
-msgstr ""
+msgstr "国旗がありません"
 
 #: qml/configGeneral.qml:102
-#, fuzzy, kde-format
-#| msgid "Layouts:"
+#, kde-format
 msgctxt "@label prefixed to button, as in 'keyboard layouts'"
 msgid "Layouts:"
 msgstr "レイアウト:"
 
 #: qml/configGeneral.qml:103
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:button opens kcm_keyboard"
 msgid "Configure…"
-msgstr "設定..."
+msgstr "設定…"
