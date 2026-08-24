@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2026-08-18 11:40+0300\n"
+"PO-Revision-Date: 2026-08-18 18:07+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -133,7 +133,7 @@ msgstr "לחיצה על הלחצנים השמאלי והימני מייצרים 
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
-msgstr ""
+msgstr "לחיצה על הלחצנים השמאלי והימני בו־זמנית שולחת לחיצה אמצעית."
 
 #: kcm/libinput/touchpad.qml:258
 #, kde-format
@@ -1045,10 +1045,9 @@ msgstr "זווית:"
 
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
 #: kcm/xlib/ui/scroll.ui:345
-#, fuzzy, kde-format
-#| msgid "Move angle (radians) of finger to generate a scroll event"
+#, kde-format
 msgid "Move angle (degrees) of finger to generate a scroll event"
-msgstr "הזזת האצבע בצורה מעגלית כדי לגלול"
+msgstr "זווית התנועה (במעלות) של האצבע כדי לייצר אירוע גלילה"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
 #: kcm/xlib/ui/scroll.ui:348

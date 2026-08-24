@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm5_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2026-08-18 11:43+0300\n"
+"PO-Revision-Date: 2026-08-18 18:10+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -23,7 +23,7 @@ msgstr ""
 #, kde-format
 msgid ""
 "This module lets you configure the file indexer and search functionality."
-msgstr ""
+msgstr "המודול הזה מאפשר לך להגדיר את מתעד הקבצים במפתח ואת יכולות החיפוש."
 
 #: package/contents/ui/main.qml:58
 #, kde-format
@@ -41,6 +41,9 @@ msgid ""
 "if indexing is re-enabled later, the entire index will have to be re-created "
 "from scratch. This may take some time, depending on how many files you have."
 msgstr ""
+"לשמור את הנתונים שתועדו במפתח? %1 של נפח יתפנו, אבל אם התיעוד במפתח יופעל "
+"שוב בהמשך, יהיה צורך ליצור את כל המפתח מאפס. זה עלול לערוך זמן מה כתלות "
+"בכמות הקבצים שיש לך."
 
 #: package/contents/ui/main.qml:69
 #, kde-format
@@ -50,13 +53,13 @@ msgstr "מחיקת נתוני מפתח"
 #: package/contents/ui/main.qml:89
 #, kde-format
 msgid "The system must be restarted before these changes will take effect."
-msgstr ""
+msgstr "יש להפעיל את המערכת מחדש לפני שהשינויים האלו ייכנסו לתוקף."
 
 #: package/contents/ui/main.qml:93
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
-msgstr ""
+msgstr "הפעלה מחדש"
 
 #: package/contents/ui/main.qml:100
 #, kde-format
@@ -77,12 +80,12 @@ msgstr "אנדקס גם את תוכן הקבצים"
 #: package/contents/ui/main.qml:136
 #, kde-format
 msgid "Index hidden files and folders"
-msgstr ""
+msgstr "לתעד קבצים ותיקיות נסתרים"
 
 #: package/contents/ui/main.qml:160
 #, kde-format
 msgid "Status: %1, %2% complete"
-msgstr ""
+msgstr "מצב: %1, %2% הושלמו"
 
 #: package/contents/ui/main.qml:165
 #, kde-format
