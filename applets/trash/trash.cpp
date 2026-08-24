@@ -9,6 +9,7 @@
 #include <QApplication>
 #include <QFileInfo>
 
+#include <KCoreDirLister>
 #include <KNotificationJobUiDelegate>
 
 #include <KIO/DeleteOrTrashJob>
@@ -16,7 +17,56 @@
 
 Trash::Trash(QObject *parent)
     : QObject(parent)
+    , m_lister(new KCoreDirLister(this))
 {
+    connect(m_lister, &KCoreDirLister::started, this, [this] {
+        setListing(true);
+    });
+    connect(m_lister, &KCoreDirLister::listingDirCompleted, this, [this] {
+        setListing(false);
+    });
+    connect(m_lister, &KCoreDirLister::listingDirCanceled, this, [this] {
+        setListing(false);
+    });
+
+    connect(m_lister, &KCoreDirLister::itemsAdded, this, [this] {
+        // No need to cause binding updates for temporary numbers we don't care about.
+        if (!m_listing) {
+            Q_EMIT countChanged();
+        }
+    });
+
+    connect(m_lister, &KCoreDirLister::itemsDeleted, this, [this] {
+        if (!m_listing) {
+            Q_EMIT countChanged();
+        }
+    });
+
+    m_lister->openUrl(QUrl(QStringLiteral("trash:/")), KCoreDirLister::OpenUrlFlag::Reload);
+}
+
+int Trash::count() const
+{
+    return m_lister->items(KCoreDirLister::AllItems).count();
+}
+
+bool Trash::listing() const
+{
+    return m_listing;
+}
+
+void Trash::setListing(bool listing)
+{
+    if (m_listing == listing) {
+        return;
+    }
+
+    if (!listing) {
+        Q_EMIT countChanged();
+    }
+
+    m_listing = listing;
+    Q_EMIT listingChanged(listing);
 }
 
 bool Trash::emptying() const

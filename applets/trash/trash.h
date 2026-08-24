@@ -10,17 +10,27 @@
 #include <QQmlEngine>
 #include <QUrl>
 
+class KCoreDirLister;
+
 class Trash : public QObject
 {
     Q_OBJECT
     QML_ELEMENT
     QML_SINGLETON
 
+    Q_PROPERTY(int count READ count NOTIFY countChanged)
+    Q_PROPERTY(bool listing READ listing NOTIFY listingChanged)
     Q_PROPERTY(bool emptying READ emptying NOTIFY emptyingChanged)
 
 public:
     explicit Trash(QObject *parent = nullptr);
     ~Trash() override = default;
+
+    int count() const;
+    Q_SIGNAL void countChanged();
+
+    bool listing() const;
+    Q_SIGNAL void listingChanged(bool listing);
 
     bool emptying() const;
     Q_SIGNAL void emptyingChanged(bool emptying);
@@ -32,5 +42,9 @@ public:
     Q_INVOKABLE QList<QUrl> trashableUrls(const QList<QUrl> &urls) const;
 
 private:
+    void setListing(bool listing);
+
+    KCoreDirLister *m_lister;
+    bool m_listing = false;
     bool m_emptying = false;
 };

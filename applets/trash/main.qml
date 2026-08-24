@@ -26,7 +26,7 @@ PlasmoidItem {
         || Plasmoid.location === PlasmaCore.Types.RightEdge
         || Plasmoid.location === PlasmaCore.Types.BottomEdge
         || Plasmoid.location === PlasmaCore.Types.LeftEdge)
-    readonly property bool hasContents: dirModel.count > 0
+    readonly property bool hasContents: TrashPrivate.Trash.count > 0
 
     property bool containsAcceptableDrag: false
 
@@ -34,8 +34,10 @@ PlasmoidItem {
     toolTipSubText: {
         if (TrashPrivate.Trash.emptying) {
             return i18nc("@info:status The trash is being emptied", "Emptying…"); // qmllint disable unqualified
+        } else if (TrashPrivate.Trash.listing && !delayListingTimer.running) {
+            return i18nc("@info:status Counting the number of items in trash", "Counting…"); // qmllint disable unqualified
         } else if (hasContents) {
-            return i18ncp("@info:status The trash contains this many items in it", "One item", "%1 items", dirModel.count); // qmllint disable unqualified
+            return i18ncp("@info:status The trash contains this many items in it", "One item", "%1 items", TrashPrivate.Trash.count); // qmllint disable unqualified
         } else {
             return i18nc("@info:status The trash is empty", "Empty"); // qmllint disable unqualified
         }
@@ -70,11 +72,6 @@ PlasmoidItem {
     Accessible.description: toolTipSubText
     Accessible.role: Accessible.Button
 
-    TrashPrivate.DirModel {
-        id: dirModel
-        url: "trash:/"
-    }
-
     Plasmoid.contextualActions: [
         PlasmaCore.Action {
             text: i18nc("@action:inmenu Open the trash", "Open") // qmllint disable unqualified
@@ -97,6 +94,14 @@ PlasmoidItem {
 
     Component.onCompleted: {
         Plasmoid.removeInternalAction("configure");
+    }
+
+    // Avoid briefly flashing "Counting"
+    Timer {
+        id: delayListingTimer
+        interval: 500
+        running: TrashPrivate.Trash.listing
+        repeat: false
     }
 
     // Only exists because the default CompactRepresentation doesn't:
