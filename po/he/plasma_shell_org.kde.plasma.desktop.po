@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-20 00:47+0000\n"
-"PO-Revision-Date: 2026-07-02 08:21+0300\n"
+"PO-Revision-Date: 2026-08-20 11:15+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
@@ -47,11 +47,10 @@ msgstr ""
 "בפעילות הזאת"
 
 #: contents/activitymanager/ActivityItem.qml:333
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
 msgid "Configure Activity “%1”"
-msgstr "הגדרת פעילות"
+msgstr "הגדרת הפעילות „%1”"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -66,23 +65,19 @@ msgid "Activities"
 msgstr "פעילויות"
 
 #: contents/activitymanager/Heading.qml:86
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@action:button tooltip only"
 msgid "Search"
-msgstr "חפש..."
+msgstr "חיפוש"
 
 #: contents/activitymanager/Heading.qml:103
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm"
 msgid "Configure Activities"
-msgstr "הגדרת פעילות"
+msgstr "הגדרת פעילויות"
 
 #: contents/activitymanager/Heading.qml:122
-#, fuzzy, kde-format
-#| msgctxt "@action:button Close the panel configuration window"
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button tooltip only, close panel"
 msgid "Close"
 msgstr "סגירה"
@@ -985,6 +980,8 @@ msgid ""
 "This authentication method is not functioning correctly. Please try another "
 "method, and check your system configuration."
 msgstr ""
+"שיטת האימות הזאת לא מתפקדת כראוי. נא לנסות שיטה אחרת ולבדוק שהגדרות המערכת "
+"שלך תקינות."
 
 #: contents/lockscreen/LockScreenUi.qml:375
 #, kde-format
