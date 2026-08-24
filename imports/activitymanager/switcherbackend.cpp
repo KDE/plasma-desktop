@@ -118,12 +118,10 @@ ThumbnailImageResponse::ThumbnailImageResponse(const QString &id, const QSize &r
 
     connect(
         job,
-        &KIO::PreviewJob::gotPreview,
+        &KIO::PreviewJob::generated,
         this,
-        [this, file](const KFileItem &item, const QPixmap &pixmap) {
+        [this, file](const KFileItem &item, const QImage &image) {
             Q_UNUSED(item);
-
-            auto image = pixmap.toImage();
 
             m_texture = QQuickTextureFactory::textureFactoryForImage(image);
             Q_EMIT finished();
