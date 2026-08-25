@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-23 00:46+0000\n"
-"PO-Revision-Date: 2026-01-05 17:59+0200\n"
+"PO-Revision-Date: 2026-02-25 20:28+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -108,40 +108,34 @@ msgid "Pointer device disconnected. No other devices found."
 msgstr "Kosketuslevy irrotettiin. Muita kosketuslevyjä ei löytynyt."
 
 #: ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "No touchpad found"
+#, kde-format
 msgctxt "@info:status placeholdermessage text"
 msgid "No touchpad found"
 msgstr "Kosketuslevyä ei löydy"
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Connect an external touchpad"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchpad"
 msgstr "Kytke ulkoinen kosketuslevy"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@label:listbox device selection"
 msgid "Device:"
 msgstr "Laite:"
 
 #: ui/main.qml:110
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
-msgstr "Yleistä:"
+msgstr "Perusasetukset:"
 
 #: ui/main.qml:111
-#, fuzzy, kde-format
-#| msgctxt "Coasting"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable device"
-msgstr "Ota käyttöön"
+msgstr "ota laite käyttöön"
 
 #: ui/main.qml:126
 #, kde-format
@@ -150,11 +144,10 @@ msgid "Disable while mouse is connected"
 msgstr "Poista käytöstä, kun hiiri on kytketty"
 
 #: ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Disable while typing"
+#, kde-format
 msgctxt "option:check"
 msgid "Disable while typing"
-msgstr "Poista käytöstä kirjoitettaessa"
+msgstr "poista käytöstä kirjoitettaessa"
 
 #: ui/main.qml:147
 #, kde-format
@@ -169,11 +162,10 @@ msgid "Left and right buttons:"
 msgstr "Vasen ja oikea painike:"
 
 #: ui/main.qml:170
-#, fuzzy, kde-format
-#| msgid "Left-handed mode"
+#, kde-format
 msgctxt "@option:check"
 msgid "Swap (left-handed mode)"
-msgstr "Vasenkätinen tila"
+msgstr "käännä (vasenkätinen tila)"
 
 #: ui/main.qml:185
 #, kde-format
@@ -193,18 +185,16 @@ msgstr ""
 "tunnistamiseksi."
 
 #: ui/main.qml:207
-#, fuzzy, kde-format
-#| msgid "Pointer speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Osoittimen nopeus:"
 
 #: ui/main.qml:287
-#, fuzzy, kde-format
-#| msgid "Enable pointer acceleration"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
-msgstr "Käytä osoittimen kiihdytystä"
+msgstr "käytä osoittimen kiihdytystä"
 
 #: ui/main.qml:299
 #, kde-format
@@ -215,31 +205,25 @@ msgstr ""
 "Jos käytössä, osoittimen kulkema matka kasvaa sen liikkuessa nopeammin."
 
 #: ui/main.qml:309
-#, fuzzy, kde-format
-#| msgid "Scrolling speed:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "Vieritysnopeus:"
 
 #: ui/main.qml:360
-#, fuzzy, kde-format
-#| msgctxt "Slower Scroll"
-#| msgid "Slower"
+#, kde-format
 msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
-msgstr "Hitaampi"
+msgstr "hitaampi"
 
 #: ui/main.qml:367
-#, fuzzy, kde-format
-#| msgctxt "Faster Scroll Speed"
-#| msgid "Faster"
+#, kde-format
 msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
-msgstr "Nopeampi"
+msgstr "nopeampi"
 
 #: ui/main.qml:374
-#, fuzzy, kde-format
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt ""
 "@title group begins the sentence 'Scroll by moving two fingers anywhere/"
 "moving one finger on edge'"
@@ -251,37 +235,34 @@ msgstr "Vieritys:"
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
-msgstr ""
+msgstr "liikuttamalla kahta sormea missä vain"
 
 #: ui/main.qml:395
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
-msgstr ""
+msgstr "liikuttamalla yhtä sormea reunalla"
 
 #: ui/main.qml:404
-#, fuzzy, kde-format
-#| msgid "Invert scroll direction (Natural scrolling)"
+#, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
-msgstr "Käänteinen vierityssuunta (”luonnollinen” vieritys)"
+msgstr "käänteinen vierityssuunta (”luonnollinen” vieritys)"
 
 #: ui/main.qml:421
-#, fuzzy, kde-format
-#| msgid "Disable horizontal scrolling"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
-msgstr "Poista vaakavieritys käytöstä"
+msgstr "poista vaakavieritys käytöstä"
 
 #: ui/main.qml:439
-#, fuzzy, kde-format
-#| msgid "Right-click"
+#, kde-format
 msgctxt ""
 "@title:group for radiobutton group, begins the sentence 'right-click by "
 "pressing bottom-right corner/pressing with two fingers'"
 msgid "Right-click by:"
-msgstr "Oikean painikkeen napsautus"
+msgstr "Oikean painikkeen napsautus:"
 
 #: ui/main.qml:443
 #, kde-format
@@ -292,17 +273,13 @@ msgid "Pressing bottom-right corner"
 msgstr "Paina oikeaa alakulmaa"
 
 #: ui/main.qml:448
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing both bottom corners."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "Keskinapsauta painamalla kumpaakin alakulmaa."
 
 #: ui/main.qml:449
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing bottom center."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Keskinapsauta painamalla alareunan keskeltä."
@@ -369,7 +346,7 @@ msgstr "Napsauta napauttamalla"
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
-msgstr ""
+msgstr "salli vetäminen napautuksen jälkeen"
 
 #: ui/main.qml:560
 #, kde-format
@@ -382,46 +359,40 @@ msgstr ""
 "kosketuslevyllä. Pudota nostamalla sormi."
 
 #: ui/main.qml:567
-#, fuzzy, kde-format
-#| msgid "Allow briefly lifting finger during tap-and-drag"
+#, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
-msgstr "Salli sormen hetkellinen nosto napautuksen ja vedon aikana"
+msgstr "salli sormen hetkellinen nosto napautuksen ja vedon aikana"
 
 #: ui/main.qml:580
-#, fuzzy, kde-format
-#| msgid "Two-finger tap:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "Kahden sormen napautus:"
 
 #: ui/main.qml:586
-#, fuzzy, kde-format
-#| msgid "Right-click (three-finger tap to middle-click)"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
-msgstr "Oikean painikkeen napsautus (kolmella sormella keskipainikkeen)"
+msgstr "oikean painikkeen napsautus (kolmella sormella keskipainikkeen)"
 
 #: ui/main.qml:587
-#, fuzzy, kde-format
-#| msgid "Right-click"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Right-click"
-msgstr "Oikean painikkeen napsautus"
+msgstr "oikean painikkeen napsautus"
 
 #: ui/main.qml:608
-#, fuzzy, kde-format
-#| msgid "Middle-click (three-finger tap to right-click)"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
-msgstr "Keskipainikkeen napsautus (kolmella sormella oikean)"
+msgstr "keskipainikkeen napsautus (kolmella sormella oikean)"
 
 #: ui/main.qml:609
-#, fuzzy, kde-format
-#| msgid "Middle-click"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click"
-msgstr "Keskipainikkeen napsautus"
+msgstr "keskipainikkeen napsautus"
 
 #~ msgid "Querying input devices failed. Please reopen this settings module."
 #~ msgstr ""
