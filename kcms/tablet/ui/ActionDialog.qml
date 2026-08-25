@@ -241,7 +241,7 @@ Kirigami.Dialog {
 
                     onCaptureFinished: actionDialog.inputSequence.setUpKeySequence(keySequence)
 
-                    Kirigami.FormData.label: i18ndc("kcm_tablet", "@label prefix for configuring Keybind to send when dial/ring is turned upwards", "Up:")
+                    Kirigami.FormData.label: i18ndc("kcm_tablet", "@label prefix for configuring Keybind to send when dial/ring is turned upwards", "Clockwise:")
                 }
 
                 KeySequenceItem {
@@ -254,7 +254,7 @@ Kirigami.Dialog {
 
                     onCaptureFinished: actionDialog.inputSequence.setDownKeySequence(keySequence)
 
-                    Kirigami.FormData.label: i18ndc("kcm_tablet", "@label prefix for configuring Keybind to send when dial/ring is turned downwards", "Down:")
+                    Kirigami.FormData.label: i18ndc("kcm_tablet", "@label prefix for configuring Keybind to send when dial/ring is turned downwards", "Counterclockwise:")
                 }
 
                 QQC2.Slider {
