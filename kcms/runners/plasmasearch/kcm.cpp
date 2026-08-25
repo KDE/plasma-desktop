@@ -59,7 +59,7 @@ SearchConfigModule::SearchConfigModule(QObject *parent, const KPluginMetaData &d
 
     connect(m_model, &KPluginModel::defaulted, this, [this](bool isDefaults) {
         checkNeedsSave();
-        setRepresentsDefaults(isDefaults);
+        setRepresentsDefaults(isDefaults && defaultFavoriteIds() == getFavPluginIds());
     });
     connect(m_model, &KPluginModel::isSaveNeededChanged, this, &SearchConfigModule::checkNeedsSave);
 }
@@ -85,18 +85,7 @@ void SearchConfigModule::reloadPlugins()
 
     m_model->setConfig(m_config->group("Plugins"));
     m_initialFavs = m_config->group("Plugins").group("Favorites").readEntry("plugins", defaultFavoriteIds());
-
-    QList<KPluginMetaData> metaDataList = KRunner::RunnerManager::runnerMetaDataList();
-    auto it = std::partition(metaDataList.begin(), metaDataList.end(), [this](const KPluginMetaData &plugin) {
-        return m_initialFavs.contains(plugin.pluginId());
-    });
-
-    m_favoriteMetaDataList = QList<KPluginMetaData>(metaDataList.begin(), it);
-    std::sort(m_favoriteMetaDataList.begin(), m_favoriteMetaDataList.end(), [this](const KPluginMetaData &data1, const KPluginMetaData &data2) {
-        return m_initialFavs.indexOf(data1.pluginId()) < m_initialFavs.indexOf(data2.pluginId());
-    });
-    m_model->addUnsortablePlugins(m_favoriteMetaDataList, m_favoriteCategory);
-    m_model->addPlugins(QList<KPluginMetaData>(it, metaDataList.end()), m_normalCategory);
+    loadPlugins(m_initialFavs);
     setNeedsSave(false);
 }
 void SearchConfigModule::addToFavorites(const KPluginMetaData &data)
@@ -156,6 +145,7 @@ void SearchConfigModule::save()
     KQuickManagedConfigModule::save();
     KConfigGroup grp = m_config->group(QStringLiteral("Plugins")).group(QStringLiteral("Favorites"));
     grp.writeEntry("plugins", getFavPluginIds(), KConfigGroup::Notify);
+    m_initialFavs = getFavPluginIds();
     m_model->save();
 
     QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/krunnerrc"), QStringLiteral("org.kde.kconfig.notify"), QStringLiteral("ConfigChanged"));
@@ -168,7 +158,26 @@ void SearchConfigModule::defaults()
 {
     KQuickManagedConfigModule::defaults();
 
+    m_model->clear();
+    loadPlugins(defaultFavoriteIds());
     m_model->defaults();
+
+    checkNeedsSave();
+}
+
+void SearchConfigModule::loadPlugins(const QStringList &currentFavoriteIds)
+{
+    QList<KPluginMetaData> metaDataList = KRunner::RunnerManager::runnerMetaDataList();
+    auto it = std::partition(metaDataList.begin(), metaDataList.end(), [&currentFavoriteIds](const KPluginMetaData &plugin) {
+        return currentFavoriteIds.contains(plugin.pluginId());
+    });
+
+    m_favoriteMetaDataList = QList<KPluginMetaData>(metaDataList.begin(), it);
+    std::sort(m_favoriteMetaDataList.begin(), m_favoriteMetaDataList.end(), [&currentFavoriteIds](const KPluginMetaData &data1, const KPluginMetaData &data2) {
+        return currentFavoriteIds.indexOf(data1.pluginId()) < currentFavoriteIds.indexOf(data2.pluginId());
+    });
+    m_model->addUnsortablePlugins(m_favoriteMetaDataList, m_favoriteCategory);
+    m_model->addPlugins(QList<KPluginMetaData>(it, metaDataList.end()), m_normalCategory);
 }
 
 #include "kcm.moc"

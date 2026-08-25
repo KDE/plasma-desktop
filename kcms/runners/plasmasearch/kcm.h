@@ -50,6 +50,7 @@ public Q_SLOTS:
     void movePlugin(const KPluginMetaData &data, qsizetype destIndex);
 
 private:
+    void loadPlugins(const QStringList &currentFavoriteIds);
     QStringList getFavPluginIds() const
     {
         QStringList favIds;
