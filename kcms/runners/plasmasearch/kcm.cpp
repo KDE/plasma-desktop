@@ -171,12 +171,6 @@ void SearchConfigModule::defaults()
     m_model->defaults();
 }
 
-void SearchConfigModule::setDefaultIndicatorVisible(QWidget *widget, bool visible)
-{
-    widget->setProperty("_kde_highlight_neutral", visible);
-    widget->update();
-}
-
 #include "kcm.moc"
 
 #include "moc_kcm.cpp"
