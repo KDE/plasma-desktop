@@ -33,7 +33,7 @@ public:
             return false;
         }
         return std::all_of(runnerData.begin(), runnerData.end(), [&cfgGroup](const KPluginMetaData &pluginData) {
-            return pluginData.isEnabled(cfgGroup) != pluginData.isEnabledByDefault();
+            return pluginData.isEnabled(cfgGroup) == pluginData.isEnabledByDefault();
         });
     }
 
