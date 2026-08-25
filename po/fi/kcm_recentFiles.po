@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2016.
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2024, 2026 Tommi Nieminen <translator@legisign.org>
 #
 #
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2021-07-22 13:29+0300\n"
+"PO-Revision-Date: 2026-02-24 13:31+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -17,52 +17,52 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:10
 #, kde-format
 msgid "How many months keep the activity history"
-msgstr "Montako kuukautta aktiviteetin historiaa säilytetään"
+msgstr "Montako kuukautta toimintahistoriaa säilytetään"
 
 #. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:17
 #, kde-format
 msgid "Which data to keep in activity history"
-msgstr "Mitä tietoja aktiviteetin historiassa säilytetään"
+msgstr "Mitä tietoja toimintahistoriassa säilytetään"
 
 #. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:21
 #, kde-format
 msgid "List of Applications whose activity history to save"
-msgstr "Sovellukset, joiden aktiviteettihistoria tallennetaan"
+msgstr "Sovellukset, joiden toimintahistoria tallennetaan"
 
 #. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:24
 #, kde-format
 msgid "List of Applications whose activity history not to save"
-msgstr "Sovellukset, joiden aktiviteettihistoriaa ei tallenneta"
+msgstr "Sovellukset, joiden toimintahistoriaa ei tallenneta"
 
 #: kcm_recentFiles.cpp:64
 #, kde-format
 msgctxt "unlimited number of months"
 msgid "Forever"
-msgstr "Ikuisesti"
+msgstr "ikuisesti"
 
 #: kcm_recentFiles.cpp:73
 #, kde-format
 msgid "Forget the last hour"
-msgstr "Unohda viime tunti"
+msgstr "Unohda viimeisin tunti"
 
 #: kcm_recentFiles.cpp:74
 #, kde-format
 msgid "Forget the last two hours"
-msgstr "Unohda viime kaksi tuntia"
+msgstr "Unohda kaksi viime tuntia"
 
 #: kcm_recentFiles.cpp:75
 #, kde-format
 msgid "Forget a day"
-msgstr "Unohda viime päivä"
+msgstr "Unohda päivä"
 
 #: kcm_recentFiles.cpp:76
 #, kde-format
@@ -88,7 +88,7 @@ msgstr " "
 #: ui/RecentFiles.ui:17
 #, kde-format
 msgid "Cleared the activity history."
-msgstr "Aktiviteetin historia tyhjennetty."
+msgstr "Toimintahistoria tyhjennetty."
 
 #. i18n: ectx: property (text), widget (QLabel, labelKeepHistory)
 #: ui/RecentFiles.ui:36
@@ -106,19 +106,19 @@ msgstr "Tyhjennä historia"
 #: ui/RecentFiles.ui:70
 #, kde-format
 msgid "For a&ll applications"
-msgstr "&Kaikkien sovellusten tiedostot"
+msgstr "k&aikkien sovellusten tiedostot"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioDontRememberApplications)
 #: ui/RecentFiles.ui:80
 #, kde-format
 msgid "&Do not remember"
-msgstr "&Älä muista tiedostoja"
+msgstr "&älä muista tiedostoja"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioRememberSpecificApplications)
 #: ui/RecentFiles.ui:87
 #, kde-format
 msgid "O&nly for specific applications:"
-msgstr "&Vain valituille sovelluksille:"
+msgstr "ainoastaan &valituissa sovelluksissa:"
 
 #. i18n: ectx: property (text), widget (QLabel, labelRememberDocuments)
 #: ui/RecentFiles.ui:97
@@ -130,4 +130,4 @@ msgstr "Muista avatut tiedostot:"
 #: ui/RecentFiles.ui:130
 #, kde-format
 msgid "Blacklist applications not on the list"
-msgstr "Estä sovellukset, joita ei ole luettelossa"
+msgstr "Estä sovellukset, joita luettelossa ei ole"

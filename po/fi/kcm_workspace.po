@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the kde-workspace package.
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
 # Lasse Liehu <lliehu@kolumbus.fi>, 2010, 2011.
-# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Tommi Nieminen <translator@legisign.org>
 #
 # KDE Finnish translation sprint participants:
 # Author: Artnay
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2024-04-07 11:20+0300\n"
+"PO-Revision-Date: 2026-02-24 19:21+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: package/contents/ui/main.qml:27
 #, kde-format
@@ -45,13 +45,13 @@ msgstr "Näyttötoiminnot:"
 #: package/contents/ui/main.qml:51 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
-msgstr "Näytä työkaluvihjeet hiiren leijuessa yllä"
+msgstr "näytä työkaluvihjeet hiiren leijuessa yllä"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: package/contents/ui/main.qml:62 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
-msgstr "Näkyvä palaute tilan muututtua"
+msgstr "näkyvä palaute tilan muututtua"
 
 #: package/contents/ui/main.qml:80
 #, kde-format
@@ -62,13 +62,13 @@ msgstr "Animointinopeus:"
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
-msgstr "Hidas"
+msgstr "verkkainen"
 
 #: package/contents/ui/main.qml:109
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
-msgstr "Välitön"
+msgstr "välitön"
 
 #: package/contents/ui/main.qml:124
 #, kde-format
@@ -144,7 +144,7 @@ msgstr "Kosketustila:"
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
-msgstr "Ota tarvittaessa automaattisesti käyttöön"
+msgstr "ota automaattisesti käyttöön tarvittaessa"
 
 #: package/contents/ui/main.qml:238 package/contents/ui/main.qml:267
 #, kde-format
