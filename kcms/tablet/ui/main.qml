@@ -26,6 +26,7 @@ SimpleKCM {
     implicitWidth: Kirigami.Units.gridUnit * 38
     implicitHeight: Kirigami.Units.gridUnit * 35
 
+    topPadding: 0
     leftPadding: 0
     rightPadding: 0
     bottomPadding: 0
