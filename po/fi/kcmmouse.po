@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-12 00:49+0000\n"
-"PO-Revision-Date: 2026-01-05 18:00+0200\n"
+"PO-Revision-Date: 2026-02-24 19:44+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -134,24 +134,22 @@ msgid "Configure Extra Buttons…"
 msgstr "Lisäpainikkeiden asetukset…"
 
 #: ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Laite:"
 
 #: ui/main.qml:86
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General:"
-msgstr "Yleistä"
+msgstr "Perusasetukset:"
 
 #: ui/main.qml:87
 #, kde-format
 msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
-msgstr ""
+msgstr "Ota laite käyttöön"
 
 #: ui/main.qml:102
 #, kde-format
@@ -160,11 +158,10 @@ msgid "Left and right buttons:"
 msgstr "Vasen ja oikea painike:"
 
 #: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Left-handed mode"
+#, kde-format
 msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
-msgstr "Vasenkätinen tila"
+msgstr "Käännä (vasenkätinen tila)"
 
 #: ui/main.qml:118
 #, kde-format
@@ -184,25 +181,19 @@ msgstr ""
 "tunnistamiseksi."
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid "Pointer speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Osoittimen nopeus:"
 
 #: ui/main.qml:223
-#, fuzzy, kde-format
-#| msgid "Enable pointer acceleration"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Käytä osoittimen kiihdytystä"
 
 #: ui/main.qml:235
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip from ContextualHelpButton"
-#| msgid ""
-#| "When enabled, pointer travel distance increases with faster movement "
-#| "speed."
+#, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
@@ -210,8 +201,7 @@ msgstr ""
 "Jos käytössä, osoittimen kulkema matka kasvaa sen liikkuessa nopeammin."
 
 #: ui/main.qml:264
-#, fuzzy, kde-format
-#| msgid "Scrolling speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr "Vieritysnopeus:"
@@ -229,34 +219,25 @@ msgid "Faster"
 msgstr "Nopeampi"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "Vieritys:"
 
 #: ui/main.qml:348
-#, fuzzy, kde-format
-#| msgid "Invert scroll direction"
+#, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction"
-msgstr "Käännä vierityssuunta"
+msgstr "käännä vierityssuunta"
 
 #: ui/main.qml:363
-#, fuzzy, kde-format
-#| msgid "Hold down middle button and move mouse to scroll"
+#, kde-format
 msgctxt "@option:check"
 msgid "Hold down middle button and move mouse to scroll"
-msgstr "Vieritä painamalla keskipainiketta ja liikuttamalla hiirtä"
+msgstr "vieritä painamalla keskipainiketta ja liikuttamalla hiirtä"
 
 #: ui/main.qml:375
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip from ContextualHelpButton"
-#| msgid ""
-#| "This will interfere with applications that use middle-button drag, such "
-#| "as some image editors, document viewers, or video games. It may be used "
-#| "on any device, but is intended primarily as a substitute for scroll "
-#| "wheels on devices that do not have any."
+#, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "This will interfere with applications that use middle-button drag, such as "

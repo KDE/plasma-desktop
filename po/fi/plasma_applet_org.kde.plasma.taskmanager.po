@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-21 00:46+0000\n"
-"PO-Revision-Date: 2026-01-05 18:02+0200\n"
+"PO-Revision-Date: 2026-02-25 20:13+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -118,15 +118,13 @@ msgid "Mute %1"
 msgstr "Vaimenna: %1"
 
 #: qml/config.qml:13
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Appearance"
 msgstr "Ulkoasu"
 
 #: qml/config.qml:18
-#, fuzzy, kde-format
-#| msgid "Behavior"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Behavior"
 msgstr "Toiminta"
@@ -606,22 +604,19 @@ msgid "On the top"
 msgstr "ylös"
 
 #: qml/ContextMenu.qml:100
-#, fuzzy, kde-format
-#| msgid "Places"
+#, kde-format
 msgctxt "@title:group for section of menu items"
 msgid "Places"
 msgstr "Sijainnit"
 
 #: qml/ContextMenu.qml:106
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgctxt "@title:group for section of menu items"
 msgid "Recent Files"
 msgstr "Viimeisimmät tiedostot"
 
 #: qml/ContextMenu.qml:116
-#, fuzzy, kde-format
-#| msgid "Actions"
+#, kde-format
 msgctxt "@title:group for section of menu items"
 msgid "Actions"
 msgstr "Toiminnot"
@@ -669,160 +664,138 @@ msgid "Restore"
 msgstr "Palauta"
 
 #: qml/ContextMenu.qml:266
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@option:check inmenu, no separate unmute action"
 msgid "Mute"
 msgstr "Vaimenna"
 
 #: qml/ContextMenu.qml:277
-#, fuzzy, kde-format
-#| msgid "Open New Window"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Open New Window"
 msgstr "Avaa uusi ikkuna"
 
 # *** TARKISTA: Siirrä vai siirry? Sama koskee seuraavaa
 #: qml/ContextMenu.qml:293
-#, fuzzy, kde-format
-#| msgid "Move to &Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move to &Desktop"
 msgstr "Siirrä &työpöydälle"
 
 #: qml/ContextMenu.qml:323
-#, fuzzy, kde-format
-#| msgid "Move &To Current Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move &To Current Desktop"
-msgstr "Siirrä &nykyiselle työpöydälle"
+msgstr "Siirrä n&ykyiselle työpöydälle"
 
 #: qml/ContextMenu.qml:345
-#, fuzzy, kde-format
-#| msgid "&All Desktops"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&All Desktops"
-msgstr "Näytä k&aikilla työpöydillä"
+msgstr "K&aikille työpöydille"
 
 #: qml/ContextMenu.qml:373
-#, fuzzy, kde-format
-#| msgid "&New Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&New Desktop"
-msgstr "&Uusi työpöytä"
+msgstr "&Uudelle työpöydälle"
 
 #: qml/ContextMenu.qml:393
-#, fuzzy, kde-format
-#| msgid "Show in &Activities"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Show in &Activities"
 msgstr "Näytä &aktiviteeteissa"
 
 #: qml/ContextMenu.qml:417
-#, fuzzy, kde-format
-#| msgid "Add To Current Activity"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Add To Current Activity"
 msgstr "Lisää nykyiseen aktiviteettiin"
 
 #: qml/ContextMenu.qml:427
-#, fuzzy, kde-format
-#| msgid "All Activities"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "All Activities"
 msgstr "Kaikissa aktiviteeteissa"
 
 # *** TARKISTA: Siirrä vai siirry?
 #: qml/ContextMenu.qml:483
-#, fuzzy, kde-format
-#| msgid "Move to %1"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move to %1"
-msgstr "Siirrä kohteeseen %1"
+msgstr "Siirrä → %1"
 
 #: qml/ContextMenu.qml:509 qml/ContextMenu.qml:525
-#, fuzzy, kde-format
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Pin to Task Manager"
-msgstr "K&iinnitä tehtävienhallintaan"
+msgstr "&Kiinnitä tehtävienhallintaan"
 
 #: qml/ContextMenu.qml:577
-#, fuzzy, kde-format
-#| msgid "On All Activities"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "On All Activities"
 msgstr "Kaikkiin aktiviteetteihin"
 
 #: qml/ContextMenu.qml:583
-#, fuzzy, kde-format
-#| msgid "On The Current Activity"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "On The Current Activity"
 msgstr "Nykyiseen aktiviteettiin"
 
 #: qml/ContextMenu.qml:607
-#, fuzzy, kde-format
-#| msgid "Unpin from Task Manager"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Unpin from Task Manager"
 msgstr "Poista kiinnitys tehtävienhallinnasta"
 
 #: qml/ContextMenu.qml:622
-#, fuzzy, kde-format
-#| msgid "More"
+#, kde-format
 msgctxt "item:inmenu opens submenu"
 msgid "More"
 msgstr "Lisää"
 
 #: qml/ContextMenu.qml:631
-#, fuzzy, kde-format
-#| msgid "&Move"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Move"
 msgstr "&Siirrä"
 
 #: qml/ContextMenu.qml:640
-#, fuzzy, kde-format
-#| msgid "Re&size"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Re&size"
 msgstr "&Muuta kokoa"
 
 #: qml/ContextMenu.qml:654
-#, fuzzy, kde-format
-#| msgid "Ma&ximize"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Ma&ximize"
-msgstr "S&uurenna"
+msgstr "&Suurenna"
 
 #: qml/ContextMenu.qml:668
-#, fuzzy, kde-format
-#| msgid "Mi&nimize"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Mi&nimize"
-msgstr "P&ienennä"
+msgstr "&Pienennä"
 
 #: qml/ContextMenu.qml:678
-#, fuzzy, kde-format
-#| msgid "Keep &Above Others"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Keep &Above Others"
 msgstr "Pidä &ylinnä"
 
 #: qml/ContextMenu.qml:688
-#, fuzzy, kde-format
-#| msgid "Keep &Below Others"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Keep &Below Others"
 msgstr "Pidä &alinna"
 
 #: qml/ContextMenu.qml:700
-#, fuzzy, kde-format
-#| msgid "&Fullscreen"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Fullscreen"
-msgstr "&Koko näyttö"
+msgstr "K&oko näyttö"
 
 #: qml/ContextMenu.qml:712
 #, kde-format
@@ -837,23 +810,19 @@ msgid "&Hide from Screencast"
 msgstr "P&iilota ruutulähetyksestä"
 
 #: qml/ContextMenu.qml:741
-#, fuzzy, kde-format
-#| msgid "Allow this program to be grouped"
+#, kde-format
 msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr "Salli tämän ohjelman ryhmittely"
 
 #: qml/ContextMenu.qml:787
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu"
-#| msgid "&Close All"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "Sulje k&aikki"
 
 #: qml/ContextMenu.qml:787
-#, fuzzy, kde-format
-#| msgid "&Close"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close"
 msgstr "&Sulje"
@@ -891,8 +860,7 @@ msgid "Open textual list of windows for %1"
 msgstr "Avaa tehtävän %1 ikkunat luetteloksi"
 
 #: qml/Task.qml:183
-#, fuzzy, kde-format
-#| msgid "Activate %1"
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Activate %1"
 msgstr "Aktivoi %1"

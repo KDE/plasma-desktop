@@ -7,7 +7,7 @@
 # Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
 # SPDX-FileCopyrightText: 2011, 2012, 2022, 2024 Lasse Liehu <lasse.liehu@gmail.com>
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Tommi Nieminen <translator@legisign.org>
 #
 # KDE Finnish translation sprint participants:
 # Author: Lliehu
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2025-02-16 11:01+0200\n"
+"PO-Revision-Date: 2026-02-25 20:33+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -51,39 +51,31 @@ msgid "Applications to be excluded from session"
 msgstr "Istunnoista pois suljetut sovellukset"
 
 #: ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Failed to request restart to firmware setup: %1"
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Failed to request restart to firmware setup: %1"
 msgstr "Pyyntö käynnistää laiteohjelmiston asetusohjelmaan epäonnistui: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"Kun tietokone seuraavan kerran käynnistyy, mennään laiteohjelmiston "
-"asetusnäyttöön."
+"Tietokoneen seuraavan kerran käynnistyessä siirrytään laiteohjelmiston "
+"asetuksiin."
 
 #: ui/main.qml:32
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
-"Kun tietokone seuraavan kerran käynnistyy, mennään laiteohjelmiston "
-"asetusnäyttöön."
+"Tietokoneen seuraavan kerran käynnistyessä siirrytään laiteohjelmiston "
+"asetuksiin."
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgctxt "@action:button"
 msgid "Restart Now"
 msgstr "Käynnistä uudelleen nyt"
@@ -118,11 +110,10 @@ msgstr "Istunnon palautus"
 
 # Tämä jatkuu eri ehdoin, mikä pakottaa relatiivisivulauseen käyttöön
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid "On login, launch apps that were open:"
+#, kde-format
 msgctxt "@title:group prefix for radiobuttons"
 msgid "On login, launch apps that were open:"
-msgstr "Käynnistä kirjauduttaessa sovellukset, jotka olivat auki:"
+msgstr "Kirjauduttaessa käynnistä sovellukset, jotka olivat auki:"
 
 #: ui/main.qml:72
 #, kde-format
@@ -161,19 +152,13 @@ msgid "Start with an empty session"
 msgstr "aloita tyhjä istunto"
 
 #: ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Ignored applications:"
 msgstr "Sivuutetut sovellukset:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' desktop file identifier or, on X11, executable names here "
-#| "(separated by commas or colons, for example 'xterm:org.kde.konsole."
-#| "desktop' or 'xterm,org.kde.konsole.desktop') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
@@ -182,9 +167,10 @@ msgid ""
 "with other session-restored apps."
 msgstr ""
 "Kirjoita tähän sovellusten työpöytätiedostotunnisteet tai (X11:ssä) "
-"ohjelmatiedostojen nimet (pilkuin tai kaksoispistein erotettuna, esim. "
-"”xterm:org.kde.konsole.desktop”) estääksesi niitä käynnistymästä istunnon "
-"palauttamien sovellusten kanssa automaattisesti."
+"ohjelmatiedostojen nimet pilkuin tai kaksoispistein erotettuna, esim. ”xterm:"
+"org.kde.konsole.desktop” tai ”xterm,org.kde.konsole.desktop” estääksesi "
+"niitä käynnistymästä istunnon palauttamien sovellusten kanssa "
+"automaattisesti."
 
 #: ui/main.qml:138
 #, kde-format
@@ -201,12 +187,10 @@ msgid "After next restart:"
 msgstr "Seuraavan käynnistyksen jälkeen:"
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr "Siirry laiteohjelmiston asetuksiin"
+msgstr "Siirry UEFI-laiteohjelmistoasetuksiin"
 
 #: ui/main.qml:146
 #, kde-format

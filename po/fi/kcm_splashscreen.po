@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2014, 2015.
-# Tommi Nieminen <translator@legisign.org>, 2018, 2019, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2023, 2026 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-07 00:47+0000\n"
-"PO-Revision-Date: 2023-03-04 19:55+0200\n"
+"PO-Revision-Date: 2026-02-25 20:30+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: kcm.cpp:164
 #, kde-format
@@ -45,46 +46,40 @@ msgid "Name of the current splash theme"
 msgstr "Nykyisen tervetuloruututeeman nimi"
 
 #: ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "&Get New…"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Get New…"
 msgstr "&Hae uusia…"
 
 #: ui/main.qml:50
-#, fuzzy, kde-format
-#| msgid "Failed to show the splash screen preview."
+#, kde-format
 msgctxt "@info:status"
 msgid "Failed to show the splash screen preview."
 msgstr "Tervetuloruudun esikatselu epäonnistui."
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgid "Preview Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview splash screen"
-msgstr "Kokeile tervetuloruutua"
+msgstr "Esikatsele tervetuloruutua"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgid "Preview Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove splash screen"
-msgstr "Kokeile tervetuloruutua"
+msgstr "Poista tervetuloruutu"
 
 #: ui/main.qml:90
-#, fuzzy, kde-format
-#| msgid "You cannot delete the currently selected splash screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active splash screen"
-msgstr "Käytössä olevaa tervetuloruutua ei voi poistaa"
+msgstr "Aktiivista tervetuloruutua ei voi poistaa"
 
 #: ui/main.qml:92
-#, fuzzy, kde-format
-#| msgid "You cannot delete the currently selected splash screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed splash screens"
-msgstr "Käytössä olevaa tervetuloruutua ei voi poistaa"
+msgstr "Järjestelmän asentamaa tervetuloruutua ei voi poistaa"
 
 #, fuzzy
 #~| msgid "Uninstall"

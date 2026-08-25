@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-15 00:48+0000\n"
-"PO-Revision-Date: 2026-01-05 18:04+0200\n"
+"PO-Revision-Date: 2026-02-25 20:11+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -53,15 +53,13 @@ msgid "Name"
 msgstr "nimi"
 
 #: ConfigGeneral.qml:91
-#, fuzzy, kde-format
-#| msgid "Only icons can be shown when the Panel is vertical."
+#, kde-format
 msgctxt "@info:usagetip display mode for active application"
 msgid "Only icons can be shown when the Panel is vertical."
 msgstr "Paneelin ollessa pystysuuntainen näytetään vain kuvakkeet."
 
 #: ConfigGeneral.qml:93
-#, fuzzy, kde-format
-#| msgid "Not applicable when the widget is on the Desktop."
+#, kde-format
 msgctxt "@info:usagetip display mode for active application"
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "Ei käytettävissä, kun sovelma on työpöydällä."
@@ -83,8 +81,8 @@ msgstr "Käytössä, viive:"
 msgctxt "@item:valuesuffix, %1 is hover activation delay in ms"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
 
 #: ConfigGeneral.qml:133
 #, kde-format
@@ -135,43 +133,43 @@ msgstr "pienennetyt tehtävät"
 #, kde-format
 msgctxt "@label:listbox sort windows is list"
 msgid "Sort:"
-msgstr ""
+msgstr "Lajittele:"
 
 #: ConfigGeneral.qml:178
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "By time opened"
-msgstr ""
+msgstr "avaamisajan mukaan"
 
 #: ConfigGeneral.qml:182
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "Alphabetically"
-msgstr ""
+msgstr "aakkosiin"
 
 #: ConfigGeneral.qml:186
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "Alphabetically, grouped by virtual desktop"
-msgstr ""
+msgstr "aakkosiin ryhmiteltynä virtuaalityöpöydän mukaan"
 
 #: ConfigGeneral.qml:190
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "Alphabetically, grouped by activity"
-msgstr ""
+msgstr "aakkosiin ryhmiteltynä aktiviteetin mukaan"
 
 #: ConfigGeneral.qml:194
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "By last activated time"
-msgstr ""
+msgstr "viimeisimmän aktivointiajan mukaan"
 
 #: ConfigGeneral.qml:198
 #, kde-format
 msgctxt "@item:inlistbox sort windows in list"
 msgid "By horizontal window position"
-msgstr ""
+msgstr "ikkunan vaakasijainnin mukaan"
 
 #: main.qml:41
 #, kde-format

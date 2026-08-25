@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-13 00:52+0000\n"
-"PO-Revision-Date: 2024-10-18 10:24+0300\n"
+"PO-Revision-Date: 2026-02-25 20:38+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -20,39 +20,29 @@ msgstr ""
 "X-Generator: Lokalize 25.04.0\n"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Pause Indexer"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pause Indexer"
 msgstr "Keskeytä indeksointi"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Resume Indexer"
+#, kde-format
 msgctxt "@action:button"
 msgid "Resume Indexer"
 msgstr "Jatka indeksointia"
 
 #: ui/main.qml:61
-#, fuzzy, kde-format
-#| msgid ""
-#| "This will disable file searching in KRunner and launcher menus, and "
-#| "remove extended metadata display from all KDE applications."
+#, kde-format
 msgctxt "@info inlinemessage"
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
 msgstr ""
-"Tämä poistaa KRunnerissa ja käynnistysvalikoissa tiedostohaun käytöstä sekä "
+"Tämä poistaa tiedostohaun käytöstä KRunnerissa ja käynnistysvalikoissa sekä "
 "poistaa laajennetun metatietonäkymän kaikista KDE-sovelluksista."
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid ""
-#| "Do you want to delete the saved index data? %1 of space will be freed, "
-#| "but if indexing is re-enabled later, the entire index will have to be re-"
-#| "created from scratch. This may take some time, depending on how many "
-#| "files you have."
+#, kde-format
 msgctxt "@info:inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -65,17 +55,13 @@ msgstr ""
 "uudelleen, mikä tiedostojen määrän mukaan voi kestää kauan."
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgid "Delete Index Data"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delete Index Data"
 msgstr "Poista indeksitiedot"
 
 #: ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid ""
-#| "File Search helps you quickly locate your files. You can choose which "
-#| "folders and what types of file data are indexed."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
@@ -94,28 +80,25 @@ msgstr "Indeksoitava tieto:"
 #, kde-format
 msgctxt "@option:radio Data to index"
 msgid "Nothing (disable indexing entirely)"
-msgstr ""
+msgstr "ei mitään (poista indeksointi kokonaan käytöstä)"
 
 #: ui/main.qml:124
-#, fuzzy, kde-format
-#| msgid "File names only"
+#, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names only"
-msgstr "Vain tiedostojen nimet"
+msgstr "vain tiedostojen nimet"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid "File names and contents"
+#, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names and contents"
-msgstr "Tiedostojen nimet ja sisältö"
+msgstr "tiedostojen nimet ja sisältö"
 
 #: ui/main.qml:162
-#, fuzzy, kde-format
-#| msgid "Hidden files and folders"
+#, kde-format
 msgctxt "@option:check"
 msgid "Also index hidden files and folders"
-msgstr "Piilotiedostot ja -kansiot"
+msgstr "indeksoi myös piilotiedostot ja -kansiot"
 
 #: ui/main.qml:189
 #, kde-format
@@ -149,19 +132,17 @@ msgstr "Nyt indeksoidaan: <filename>%1</filename>"
 
 # Pudotusvalikko, josta valitaan, indeksoidaanko kansio vai ei
 #: ui/main.qml:276
-#, fuzzy, kde-format
-#| msgid "Not indexed"
+#, kde-format
 msgctxt "@info:status"
 msgid "Not indexed"
-msgstr "Älä indeksoi"
+msgstr "älä indeksoi"
 
 # Pudotusvalikko, josta valitaan, indeksoidaanko kansio vai ei
 #: ui/main.qml:277
-#, fuzzy, kde-format
-#| msgid "Indexed"
+#, kde-format
 msgctxt "@info:status"
 msgid "Indexed"
-msgstr "Indeksoi"
+msgstr "indeksoi"
 
 #: ui/main.qml:303
 #, kde-format
@@ -170,15 +151,13 @@ msgid "Remove entry"
 msgstr "Poista tietue"
 
 #: ui/main.qml:324
-#, fuzzy, kde-format
-#| msgid "Select a folder to include"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to include"
 msgstr "Valitse mukaan otettava kansio"
 
 #: ui/main.qml:324
-#, fuzzy, kde-format
-#| msgid "Select a folder to exclude"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to exclude"
 msgstr "Valitse pois jätettävä kansio"

@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-12 00:48+0000\n"
-"PO-Revision-Date: 2026-01-05 17:55+0200\n"
+"PO-Revision-Date: 2026-02-24 21:31+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -264,8 +264,7 @@ msgstr "Käytä näyttölukijaa"
 
 #. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
 #: kcmaccessibilityshakecursor.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether Shake Pointer is enabled"
 msgstr "Käytetäänkö osoittimen ravistamista"
 
@@ -288,8 +287,7 @@ msgid "Whether the Magnifier effect is enabled"
 msgstr "Käytetäänkö suurennuslasitehostetta"
 
 #: ui/Bell.qml:18
-#, fuzzy, kde-format
-#| msgid "Please choose an audio file"
+#, kde-format
 msgctxt "@title:window dialog"
 msgid "Please choose an audio file"
 msgstr "Valitse äänitiedosto"
@@ -301,8 +299,7 @@ msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
 msgstr "Ogg-, Oga- ja Wav-äänitiedostot (*.ogg *.oga *.wav)"
 
 #: ui/Bell.qml:28
-#, fuzzy, kde-format
-#| msgid "Audible bell:"
+#, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Audible bell:"
 msgstr "Kuuluva äänimerkki:"
@@ -320,15 +317,13 @@ msgid "Custom sound:"
 msgstr "Mukautettu ääni:"
 
 #: ui/Bell.qml:74
-#, fuzzy, kde-format
-#| msgid "Search audio file for the system bell"
+#, kde-format
 msgctxt "@action:button icononly tooltip"
 msgid "Choose audio file for the system bell"
 msgstr "Etsi järjestelmän äänimerkin äänitiedostoa"
 
 #: ui/Bell.qml:75
-#, fuzzy, kde-format
-#| msgid "Please choose an audio file"
+#, kde-format
 msgctxt "@action button accessible only"
 msgid "Choose audio file"
 msgstr "Valitse äänitiedosto"
@@ -337,22 +332,19 @@ msgstr "Valitse äänitiedosto"
 #, kde-format
 msgctxt "@info:usagetip accessible description for button"
 msgid "Opens dialog"
-msgstr ""
+msgstr "Avaa kyselyikkunan"
 
 #: ui/Bell.qml:91
-#, fuzzy, kde-format
-#| msgid "Visual bell:"
+#, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Visual bell:"
 msgstr "Näkyvä äänimerkki:"
 
 #: ui/Bell.qml:95
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable visual bell"
 msgid "Enable"
-msgstr "Käytä"
+msgstr "käytä"
 
 #: ui/Bell.qml:111
 #, kde-format
@@ -379,9 +371,7 @@ msgid "Duration:"
 msgstr "Kesto:"
 
 #: ui/Bell.qml:173
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is visible bell duration"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -389,10 +379,7 @@ msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
 #: ui/Bell.qml:177 ui/KeyboardFilters.qml:66 ui/KeyboardFilters.qml:170
-#, fuzzy, kde-format
-#| msgctxt "short for millisecond(s)"
-#| msgid "ms"
-#| msgid_plural "ms"
+#, kde-format
 msgctxt "@label:valuesuffix short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
@@ -471,29 +458,25 @@ msgid "Adjusted colors:"
 msgstr "Mukautetut värit:"
 
 #: ui/ColorblindnessCorrection.qml:141
-#, fuzzy, kde-format
-#| msgid "Reds:"
+#, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Reds:"
 msgstr "Punaiset:"
 
 #: ui/ColorblindnessCorrection.qml:142
-#, fuzzy, kde-format
-#| msgid "Greens:"
+#, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Greens:"
 msgstr "Vihreät:"
 
 #: ui/ColorblindnessCorrection.qml:143
-#, fuzzy, kde-format
-#| msgid "Blues:"
+#, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Blues:"
 msgstr "Siniset:"
 
 #: ui/ColorblindnessCorrection.qml:144
-#, fuzzy, kde-format
-#| msgid "Purples:"
+#, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Purples:"
 msgstr "Violetit:"
@@ -523,19 +506,16 @@ msgid "Configure Shortcuts…"
 msgstr "Pikanäppäinasetukset…"
 
 #: ui/KeyboardFilters.qml:18
-#, fuzzy, kde-format
-#| msgid "Slow keys:"
+#, kde-format
 msgctxt "@title:group prefix"
 msgid "Slow keys:"
 msgstr "Hitaat näppäimet:"
 
 #: ui/KeyboardFilters.qml:21
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable slow keys"
 msgid "Enable"
-msgstr "Käytä"
+msgstr "käytä"
 
 #: ui/KeyboardFilters.qml:33
 #, kde-format
@@ -550,17 +530,13 @@ msgstr ""
 "haluttua näppäintä."
 
 #: ui/KeyboardFilters.qml:39
-#, fuzzy, kde-format
-#| msgctxt "Slow keys Delay"
-#| msgid "Delay:"
+#, kde-format
 msgctxt "@label:spinbox Slow keys Delay"
 msgid "Delay:"
 msgstr "Viive:"
 
 #: ui/KeyboardFilters.qml:57
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is slow keys delay"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -568,50 +544,40 @@ msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
 #: ui/KeyboardFilters.qml:72
-#, fuzzy, kde-format
-#| msgid "Ring system bell:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Ring system bell:"
 msgstr "Käytä järjestelmän äänimerkkiä:"
 
 #: ui/KeyboardFilters.qml:76
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is pressed"
-#| msgid "when any key is &pressed"
+#, kde-format
 msgctxt "@option:check Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "painettaessa &mitä tahansa näppäintä"
 
 #: ui/KeyboardFilters.qml:92
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is accepted"
-#| msgid "when any key is &accepted"
+#, kde-format
 msgctxt "@option:check Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "&hyväksyttäessä mikä tahansa näppäin"
 
 #: ui/KeyboardFilters.qml:108
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is rejected"
-#| msgid "when any key is &rejected"
+#, kde-format
 msgctxt "@option:check Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "h&ylättäessä mikä tahansa näppäin"
 
 #: ui/KeyboardFilters.qml:123
-#, fuzzy, kde-format
-#| msgid "Bounce keys:"
+#, kde-format
 msgctxt "@title:group prefix"
 msgid "Bounce keys:"
 msgstr "Toistavat näppäimet:"
 
 #: ui/KeyboardFilters.qml:127
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Bounce keys enable"
 msgid "Enable"
-msgstr "Käytä"
+msgstr "käytä"
 
 #: ui/KeyboardFilters.qml:139
 #, kde-format
@@ -625,17 +591,13 @@ msgstr ""
 "käden vapina aiheuttaa useamman näppäinpainalluksen kuin oli tarkoitus."
 
 #: ui/KeyboardFilters.qml:145
-#, fuzzy, kde-format
-#| msgctxt "Slow keys Delay"
-#| msgid "Delay:"
+#, kde-format
 msgctxt "@label:spinbox Bounce keys delay"
 msgid "Delay:"
 msgstr "Viive:"
 
 #: ui/KeyboardFilters.qml:163
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is bounce keys delay"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -643,11 +605,10 @@ msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
 #: ui/KeyboardFilters.qml:179
-#, fuzzy, kde-format
-#| msgid "Ring system bell when rejected"
+#, kde-format
 msgctxt "@option:check for bounce keys"
 msgid "Ring system bell when rejected"
-msgstr "Anna järjestelmän äänimerkki hylättäessä"
+msgstr "Anna hylättäessä järjestelmän äänimerkki"
 
 #: ui/main.qml:28
 #, kde-format
@@ -662,41 +623,31 @@ msgid "System Bell"
 msgstr "Järjestelmän äänimerkki"
 
 #: ui/main.qml:40
-#, fuzzy, kde-format
-#| msgctxt "System Modifier Keys"
-#| msgid "Modifier Keys"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Modifier Keys"
 msgstr "Muuntonäppäimet"
 
 #: ui/main.qml:46
-#, fuzzy, kde-format
-#| msgctxt "System keyboard filters"
-#| msgid "Keyboard Filters"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Keyboard Filters"
 msgstr "Näppäimistösuodattimet"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgctxt "System mouse navigation"
-#| msgid "Mouse Navigation"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Mouse Navigation"
 msgstr "Hiirinavigointi"
 
 #: ui/main.qml:58
-#, fuzzy, kde-format
-#| msgctxt "System mouse navigation"
-#| msgid "Screen Reader"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "Näyttölukija"
 
 #: ui/main.qml:64
-#, fuzzy, kde-format
-#| msgctxt "Correction for color blindness"
-#| msgid "Color Blindness Correction"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr "Värisokeuskorjaus"
@@ -708,9 +659,7 @@ msgid "Invert"
 msgstr "Käännä"
 
 #: ui/main.qml:76
-#, fuzzy, kde-format
-#| msgctxt "Shake cursor to find it"
-#| msgid "Shake Cursor"
+#, kde-format
 msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
 msgstr "Ravista osoitinta"
@@ -756,15 +705,13 @@ msgstr ""
 "painetaan uudelleen."
 
 #: ui/ModifierKeys.qml:60
-#, fuzzy, kde-format
-#| msgid "Disable when two keys are held down"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable when two keys are held down"
 msgstr "Poista käytöstä, kun kahta näppäintä pidetään pohjassa"
 
 #: ui/ModifierKeys.qml:75
-#, fuzzy, kde-format
-#| msgid "Ring system bell when modifier keys are used"
+#, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when modifier keys are used"
 msgstr "Käytä järjestelmän äänimerkkiä painettaessa muuntonäppäimiä"
@@ -800,9 +747,7 @@ msgid "Configure Notifications…"
 msgstr "Ilmoitusasetukset…"
 
 #: ui/MouseNavigation.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move pointer:"
 msgstr "Liikuta osoitinta numeronäppäimin:"
@@ -814,15 +759,7 @@ msgid "Enable"
 msgstr "Käytä"
 
 #: ui/MouseNavigation.qml:31
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "The numpad key <shortcut>5</shortcut> functions as a mouse click. The "
-#| "keys <shortcut>2</shortcut>, <shortcut>4</shortcut>, <shortcut>6</"
-#| "shortcut>, and <shortcut>8</shortcut> allow for cardinal movement (down, "
-#| "left, right, and up). The keys <shortcut>1</shortcut>, <shortcut>3</"
-#| "shortcut>, <shortcut>7</shortcut>, and <shortcut>9</shortcut> allow for "
-#| "diagonal movement."
+#, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
 "The numpad key <shortcut>5</shortcut> functions as a mouse click, toggled by "
@@ -847,9 +784,7 @@ msgid "Acceleration delay:"
 msgstr "Kiihdytysviive:"
 
 #: ui/MouseNavigation.qml:53
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix acceleration delay spinbox %1 is value"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -872,9 +807,7 @@ msgid "Repeat interval:"
 msgstr "Toistoväli:"
 
 #: ui/MouseNavigation.qml:86
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix repeat interval spinbox %1 is value"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -888,9 +821,7 @@ msgid "Acceleration time:"
 msgstr "Kiihdytysaika:"
 
 #: ui/MouseNavigation.qml:114
-#, fuzzy, kde-format
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -934,44 +865,34 @@ msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Käynnistä &Orca-näyttölukijan määritys…"
 
 #: ui/ShakeCursor.qml:16
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Shake cursor to find it:"
+#, kde-format
 msgctxt "@label"
 msgid "Shake pointer to find it:"
-msgstr "Löydä osoitin ravistamalla sitä:"
+msgstr "Paikanna osoitin ravistamalla sitä:"
 
 #: ui/ShakeCursor.qml:18
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable shake pointer effect"
 msgid "Enable"
-msgstr "Käytä"
+msgstr "käytä"
 
 #: ui/ShakeCursor.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@label Cursor magnification level"
-#| msgid "Magnification:"
+#, kde-format
 msgctxt "@label Pointer magnification level"
 msgid "Magnification:"
 msgstr "Suurennus:"
 
 #: ui/ShakeCursor.qml:60
-#, fuzzy, kde-format
-#| msgctxt "@label Normal cursor size"
-#| msgid "Normal"
+#, kde-format
 msgctxt "@label Normal pointer size"
 msgid "Normal"
-msgstr "Tavallinen"
+msgstr "tavallinen"
 
 #: ui/ShakeCursor.qml:67
-#, fuzzy, kde-format
-#| msgctxt "@label Large cursor size"
-#| msgid "Large"
+#, kde-format
 msgctxt "@label Large pointer size"
 msgid "Large"
-msgstr "Suuri"
+msgstr "suuri"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format
@@ -980,9 +901,7 @@ msgid "Show pixel grid at zoom level:"
 msgstr "Näytä kuvapisteruudukko lähennystasolla:"
 
 #: ui/ZoomMagnifier.qml:60
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox"
-#| msgid "Mouse tracking:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer tracking:"
 msgstr "Hiiren jäljitys:"
@@ -997,7 +916,7 @@ msgstr "Suhteellinen"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with pointer"
-msgstr ""
+msgstr "lähennetty alue liikkuu hiiriosoittimen myötä"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
@@ -1009,7 +928,7 @@ msgstr "Keskitetty"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, except near screen edges"
-msgstr ""
+msgstr "hiiriosoitin pysyy keskellä näyttöä paitsi lähellä näytön reunoja"
 
 #: ui/ZoomMagnifier.qml:92
 #, kde-format
@@ -1021,7 +940,7 @@ msgstr "Keskitetty (tiukka)"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, even near screen edges"
-msgstr ""
+msgstr "hiiriosoitin pysyy keskellä näyttöä myös näytön reunoilla"
 
 #: ui/ZoomMagnifier.qml:97
 #, kde-format
@@ -1033,7 +952,7 @@ msgstr "Lähetä"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer pushes zoom area at screen edges"
-msgstr ""
+msgstr "hiiriosoitin työntää lähennettyä aluetta näytön reunoilla"
 
 #: ui/ZoomMagnifier.qml:102
 #, kde-format
@@ -1045,7 +964,7 @@ msgstr "Ei käytössä"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow pointer"
-msgstr ""
+msgstr "lähennetty alue ei seuraa hiiriosoitinta"
 
 #: ui/ZoomMagnifier.qml:123
 #, kde-format
