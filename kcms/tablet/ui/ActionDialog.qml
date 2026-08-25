@@ -29,12 +29,8 @@ Kirigami.Dialog {
     modal: true
 
     maximumWidth: Kirigami.Units.gridUnit * 20
-    maximumHeight: Kirigami.Units.gridUnit * 20
 
-    topPadding: 0
-    leftPadding: Kirigami.Units.largeSpacing
-    rightPadding: Kirigami.Units.largeSpacing
-    bottomPadding: 0
+    padding: Kirigami.Units.largeSpacing
 
     standardButtons: QQC2.Dialog.Ok | QQC2.Dialog.Cancel
     showCloseButton: false
