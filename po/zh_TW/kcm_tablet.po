@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-03 00:45+0000\n"
+"POT-Creation-Date: 2026-08-26 00:50+0000\n"
 "PO-Revision-Date: 2026-07-06 05:36+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -121,19 +121,19 @@ msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
-#: kcmtablet.cpp:164 ui/DisplayTab.qml:97 ui/DisplayTab.qml:98
+#: kcmtablet.cpp:164 ui/DisplayTab.qml:102 ui/DisplayTab.qml:103
 #, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
 msgstr "拉伸並填滿螢幕"
 
-#: kcmtablet.cpp:165 ui/DisplayTab.qml:99
+#: kcmtablet.cpp:165 ui/DisplayTab.qml:104
 #, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
 msgstr "維持寬高比並調整為適合螢幕大小"
 
-#: kcmtablet.cpp:166 ui/DisplayTab.qml:100
+#: kcmtablet.cpp:166 ui/DisplayTab.qml:105
 #, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
@@ -165,61 +165,61 @@ msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
 msgstr "選擇按鈕動作"
 
-#: ui/ActionDialog.qml:87
+#: ui/ActionDialog.qml:83
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when rotating %1:"
 msgstr "選擇轉動 %1 時要進行什麼動作："
 
-#: ui/ActionDialog.qml:88
+#: ui/ActionDialog.qml:84
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
 msgstr "選擇按下 %1 時要進行什麼動作："
 
-#: ui/ActionDialog.qml:102
+#: ui/ActionDialog.qml:98
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
 msgstr "交給應用程式決定"
 
-#: ui/ActionDialog.qml:117
+#: ui/ActionDialog.qml:113
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
 msgstr "傳送鍵盤按鍵"
 
-#: ui/ActionDialog.qml:133
+#: ui/ActionDialog.qml:129
 #, kde-format
 msgctxt "@option:radio Set this action to a up/down keyboard type"
 msgid "Send keyboard keys"
 msgstr "傳送鍵盤按鍵"
 
-#: ui/ActionDialog.qml:148
+#: ui/ActionDialog.qml:144
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
 msgstr "傳送滑鼠按鍵點擊"
 
-#: ui/ActionDialog.qml:164
+#: ui/ActionDialog.qml:160
 #, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
 msgstr "送出畫筆按鈕"
 
-#: ui/ActionDialog.qml:181
+#: ui/ActionDialog.qml:177
 #, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
 msgstr "裝作滾輪"
 
-#: ui/ActionDialog.qml:199
+#: ui/ActionDialog.qml:195
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
 msgstr "什麼都不做"
 
-#: ui/ActionDialog.qml:219
+#: ui/ActionDialog.qml:215
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -227,7 +227,7 @@ msgid ""
 "how to handle it."
 msgstr "這個平板按鍵按下時會轉交給聚焦的應用程式，讓它決定如何處理它。"
 
-#: ui/ActionDialog.qml:248
+#: ui/ActionDialog.qml:244
 #, kde-format
 msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
@@ -235,7 +235,7 @@ msgctxt ""
 msgid "Up:"
 msgstr "上："
 
-#: ui/ActionDialog.qml:261
+#: ui/ActionDialog.qml:257
 #, kde-format
 msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
@@ -243,145 +243,204 @@ msgctxt ""
 msgid "Down:"
 msgstr "下："
 
-#: ui/ActionDialog.qml:275
+#: ui/ActionDialog.qml:271
 #, kde-format
 msgctxt ""
 "@label:slider Speed for how often this dial/ring should emit key events"
 msgid "Speed:"
 msgstr "速度："
 
-#: ui/ActionDialog.qml:290
+#: ui/ActionDialog.qml:286
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
 msgstr "左鍵點擊"
 
-#: ui/ActionDialog.qml:291
+#: ui/ActionDialog.qml:287
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
 msgstr "中鍵點擊"
 
-#: ui/ActionDialog.qml:292
+#: ui/ActionDialog.qml:288
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
 msgstr "右鍵點擊"
 
-#: ui/ActionDialog.qml:319
+#: ui/ActionDialog.qml:315
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: ui/ActionDialog.qml:326
+#: ui/ActionDialog.qml:322
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
 msgstr "Alt"
 
-#: ui/ActionDialog.qml:333
+#: ui/ActionDialog.qml:329
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
 msgstr "Meta"
 
-#: ui/ActionDialog.qml:340
+#: ui/ActionDialog.qml:336
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
 msgstr "Shift"
 
-#: ui/ActionDialog.qml:356
+#: ui/ActionDialog.qml:352
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
 msgstr "按鈕 1"
 
-#: ui/ActionDialog.qml:357
+#: ui/ActionDialog.qml:353
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
 msgstr "按鈕 2"
 
-#: ui/ActionDialog.qml:358
+#: ui/ActionDialog.qml:354
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
 msgstr "按鈕 3"
 
-#: ui/ActionDialog.qml:367
+#: ui/ActionDialog.qml:363
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
 msgstr "裝作滑鼠上的滾輪。"
 
-#: ui/ActionDialog.qml:376
+#: ui/ActionDialog.qml:372
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
 msgstr "這個按鍵已停用而不會做任何事。"
 
-#: ui/Calibration.qml:30
+#: ui/Calibration.qml:32
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
 msgstr "畫筆校準"
 
-#: ui/Calibration.qml:98
-#, kde-kuit-format
+#: ui/Calibration.qml:73
+#, kde-format
+msgctxt "@info"
+msgid "%1: (%2 px, %3 px)"
+msgstr ""
+
+#: ui/Calibration.qml:107
+#, kde-format
 msgctxt "@info"
 msgid ""
-"Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-"revert to default calibration in %1 seconds unless further action is taken.</"
-"b>"
+"Applied center correction (%1 px, %2 px). Retap the targets to redo the "
+"correction."
+msgstr ""
+
+#: ui/Calibration.qml:173
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
+#| "revert to default calibration in %1 seconds unless further action is "
+#| "taken.</b>"
+msgctxt "@info"
+msgid ""
+"Tap the targets again to confirm the new calibration.<nl/><nl/><emphasis "
+"strong='true'>Will revert to default calibration in %1 seconds unless "
+"further action is taken.</emphasis>"
 msgstr ""
 "再次輕點各個目標來確認使用新的校準。<nl/><nl/><b>未確認時將於 %1 秒後還原成預"
 "設校準，除非進行更多動作。</b>"
 
-#: ui/Calibration.qml:102
-#, kde-kuit-format
+#: ui/Calibration.qml:177
+#, kde-format
 msgctxt "@info"
 msgid ""
-"Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
-"or close the window."
-msgstr "校準已完成並已儲存。<nl/><nl/>可以繼續加強校準或是關閉視窗。"
+"Calibration is completed and saved.\n"
+"\n"
+"Tap the center target once to fine-tune alignment. You can retap the other "
+"targets to verify the result."
+msgstr ""
 
-#: ui/Calibration.qml:105
+#: ui/Calibration.qml:180
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
 msgstr "輕點每個目標的中心。"
 
-#: ui/Calibration.qml:112
+#: ui/Calibration.qml:201
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Offset Correction:\n"
+"%1"
+msgstr ""
+
+#: ui/Calibration.qml:216
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
 msgstr "加強現有校準"
 
-#: ui/Calibration.qml:121
+#: ui/Calibration.qml:228
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
 msgstr "重設並再試一次"
 
-#: ui/Calibration.qml:121
+#: ui/Calibration.qml:228
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
 msgstr "從頭開始校準"
 
-#: ui/Calibration.qml:135
+#: ui/Calibration.qml:243
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "關閉"
 
-#: ui/Calibration.qml:135
+#: ui/Calibration.qml:243
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "取消"
+
+#: ui/Calibration.qml:315
+#, kde-format
+msgctxt "@info Name used in the diagnostic log"
+msgid "Top-left"
+msgstr ""
+
+#: ui/Calibration.qml:334
+#, kde-format
+msgctxt "@info Name used in the diagnostic log"
+msgid "Top-right"
+msgstr ""
+
+#: ui/Calibration.qml:353
+#, kde-format
+msgctxt "@info Name used in the diagnostic log"
+msgid "Bottom-left"
+msgstr ""
+
+#: ui/Calibration.qml:372
+#, kde-format
+msgctxt "@info Name used in the diagnostic log"
+msgid "Bottom-right"
+msgstr ""
+
+#: ui/Calibration.qml:391
+#, kde-format
+msgctxt "@info Name used in the diagnostic log"
+msgid "Center"
+msgstr ""
 
 #: ui/DisplayTab.qml:46
 #, kde-format
@@ -389,19 +448,19 @@ msgctxt "@label:listbox"
 msgid "Map to screen:"
 msgstr "映射到螢幕："
 
-#: ui/DisplayTab.qml:73
+#: ui/DisplayTab.qml:76
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Orientation:"
 msgstr "方向："
 
-#: ui/DisplayTab.qml:79
+#: ui/DisplayTab.qml:83
 #, kde-format
 msgctxt "@label substitute for unavailable orientation change"
 msgid "Not Applicable"
 msgstr "不適用"
 
-#: ui/DisplayTab.qml:93
+#: ui/DisplayTab.qml:96
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mapped Area:"
@@ -437,25 +496,25 @@ msgctxt "@action:button"
 msgid "Resize the tablet area"
 msgstr "調整繪圖板區域"
 
-#: ui/main.qml:38
+#: ui/main.qml:39
 #, kde-format
 msgctxt "@info placeholdermessage text"
 msgid "No drawing tablets found"
 msgstr "沒有找到繪圖平板"
 
-#: ui/main.qml:39
+#: ui/main.qml:40
 #, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect a drawing tablet"
 msgstr "請連接繪圖平板"
 
-#: ui/main.qml:47
+#: ui/main.qml:48
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
 msgstr "測試繪圖板…"
 
-#: ui/main.qml:87
+#: ui/main.qml:88
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -466,25 +525,25 @@ msgstr ""
 "這台裝置由您所安裝的使用者驅動程式所管理。請使用該驅動程式的設定來配置繪圖"
 "板，除非該驅動程式有請您使用此處的設定。"
 
-#: ui/main.qml:106
+#: ui/main.qml:107
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "裝置："
 
-#: ui/main.qml:174
+#: ui/main.qml:175
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
 msgstr "顯示器"
 
-#: ui/main.qml:187
+#: ui/main.qml:188
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
 msgstr "畫筆"
 
-#: ui/main.qml:199
+#: ui/main.qml:200
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
@@ -504,13 +563,13 @@ msgid ""
 "this device is missing."
 msgstr "沒有找到按鈕或其他輸入。這代表可能缺乏驅動程式或是找不到此裝置。"
 
-#: ui/PadTab.qml:37
+#: ui/PadTab.qml:35
 #, kde-format
 msgctxt "@label for graphics tablet ring config, % is number of ring"
 msgid "Pad ring %1:"
 msgstr "繪圖板觸控環 %1："
 
-#: ui/PadTab.qml:61
+#: ui/PadTab.qml:62
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
@@ -518,13 +577,13 @@ msgctxt ""
 msgid "pad ring/dial %1"
 msgstr "繪圖板觸控環/旋鈕 %1"
 
-#: ui/PadTab.qml:101
+#: ui/PadTab.qml:104
 #, kde-format
 msgctxt "@label for graphics tablet ring config, % is number of dial"
 msgid "Pad dial %1:"
 msgstr "繪圖板旋鈕 %1："
 
-#: ui/PadTab.qml:103
+#: ui/PadTab.qml:108
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
@@ -532,13 +591,13 @@ msgctxt ""
 msgid "pad dial %1"
 msgstr "繪圖板旋鈕 %1"
 
-#: ui/PadTab.qml:139
+#: ui/PadTab.qml:146
 #, kde-format
 msgctxt "@label for graphics tablet button config, % is number of button"
 msgid "Pad button %1:"
 msgstr "繪圖板按鈕 %1："
 
-#: ui/PadTab.qml:142
+#: ui/PadTab.qml:152
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
@@ -546,19 +605,19 @@ msgctxt ""
 msgid "pad button %1"
 msgstr "繪圖板按鈕 %1"
 
-#: ui/StylusTab.qml:223
+#: ui/StylusTab.qml:228
 #, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Left-handed mode:"
 msgstr "左手模式："
 
-#: ui/StylusTab.qml:229
+#: ui/StylusTab.qml:231
 #, kde-format
 msgctxt "@option:check Enable left-handed mode"
 msgid "Enable"
 msgstr "啟用"
 
-#: ui/StylusTab.qml:235
+#: ui/StylusTab.qml:241
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -576,7 +635,7 @@ msgctxt ""
 msgid "Mode:"
 msgstr "模式："
 
-#: ui/StylusTab.qml:255
+#: ui/StylusTab.qml:251
 #, kde-format
 msgctxt ""
 "@option:radio Pen mode, where the point on the screen is always where you "
@@ -584,20 +643,20 @@ msgctxt ""
 msgid "Pen"
 msgstr "畫筆"
 
-#: ui/StylusTab.qml:260
+#: ui/StylusTab.qml:256
 #, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "The cursor follows where you touch the pen on the surface"
 msgstr "游標跟隨您的筆在繪圖板上的位置"
 
-#: ui/StylusTab.qml:281
+#: ui/StylusTab.qml:265
 #, kde-format
 msgctxt ""
 "@option:radio Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
 msgstr "滑鼠"
 
-#: ui/StylusTab.qml:286
+#: ui/StylusTab.qml:270
 #, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid ""
@@ -605,42 +664,42 @@ msgid ""
 "like a mouse"
 msgstr "在繪圖板上移動畫筆會讓游標從它先前的位置開始移動，就像滑鼠一樣"
 
-#: ui/StylusTab.qml:302
+#: ui/StylusTab.qml:276
 #, kde-format
 msgid "Sync with mouse cursor"
 msgstr "與滑鼠游標同步"
 
-#: ui/StylusTab.qml:362
+#: ui/StylusTab.qml:345
 #, kde-format
 msgctxt "@label prefix for pen pressure curve config"
 msgid "Pen Pressure:"
 msgstr "筆壓："
 
-#: ui/StylusTab.qml:422
+#: ui/StylusTab.qml:401
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:430
+#: ui/StylusTab.qml:409
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:441
+#: ui/StylusTab.qml:420
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100%"
 
-#: ui/StylusTab.qml:449
+#: ui/StylusTab.qml:428
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0%"
 
-#: ui/StylusTab.qml:453
+#: ui/StylusTab.qml:433
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -648,13 +707,13 @@ msgid ""
 "the pressure values received by applications."
 msgstr "這個曲線控制筆尖上的壓力與應用程式實際收到的壓力值之間的關係。"
 
-#: ui/StylusTab.qml:458
+#: ui/StylusTab.qml:438
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
 msgstr "筆壓範圍："
 
-#: ui/StylusTab.qml:485
+#: ui/StylusTab.qml:456
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -662,37 +721,37 @@ msgid ""
 "new effective range."
 msgstr "高於或低於閥值的筆壓會視為最高值或最低值，而這會變成新的實際範圍。"
 
-#: ui/StylusTab.qml:496
-#, kde-format
-msgctxt "@action:button Calibration in progress"
-msgid "Calibration in Progress"
-msgstr "校準進行中"
-
-#: ui/StylusTab.qml:498
-#, kde-format
-msgctxt "@action:button Calibrate the pen display"
-msgid "Calibrate"
-msgstr "校準"
-
-#: ui/StylusTab.qml:501
-#, kde-format
-msgctxt "@action:button Pen display doesn't support calibration"
-msgid "Calibration Not Supported"
-msgstr "不支援校準"
-
-#: ui/StylusTab.qml:542
-#, kde-format
-msgctxt "@action:button"
-msgid "Reset Custom Calibration"
-msgstr "重設自訂校準"
-
-#: ui/StylusTab.qml:557
+#: ui/StylusTab.qml:461
 #, kde-format
 msgctxt "@info"
 msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr "您已手動校準了這個繪圖板。如果它目前並非正常運作，請先試著重設校準。"
+
+#: ui/StylusTab.qml:470
+#, kde-format
+msgctxt "@action:button Calibration in progress"
+msgid "Calibration in Progress"
+msgstr "校準進行中"
+
+#: ui/StylusTab.qml:472
+#, kde-format
+msgctxt "@action:button Calibrate the pen display"
+msgid "Calibrate"
+msgstr "校準"
+
+#: ui/StylusTab.qml:475
+#, kde-format
+msgctxt "@action:button Pen display doesn't support calibration"
+msgid "Calibration Not Supported"
+msgstr "不支援校準"
+
+#: ui/StylusTab.qml:516
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset Custom Calibration"
+msgstr "重設自訂校準"
 
 #: ui/Tester.qml:25
 #, kde-format
@@ -762,6 +821,12 @@ msgstr ""
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
 msgstr "清除"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Calibration is completed and saved.<nl/><nl/>Refine the calibration "
+#~ "further or close the window."
+#~ msgstr "校準已完成並已儲存。<nl/><nl/>可以繼續加強校準或是關閉視窗。"
 
 #~ msgctxt ""
 #~ "Pen mode, where the point on the screen is always where you touch the "
