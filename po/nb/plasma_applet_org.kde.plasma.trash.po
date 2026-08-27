@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_trash\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
+"POT-Creation-Date: 2026-08-27 00:47+0000\n"
 "PO-Revision-Date: 2026-01-19 13:38+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@nuug.no>\n"
@@ -33,6 +33,14 @@ msgid "Emptying…"
 msgstr "Tømmer …"
 
 #: main.qml:38
+#, fuzzy, kde-format
+#| msgctxt "@info:status The trash is being emptied"
+#| msgid "Emptying…"
+msgctxt "@info:status Counting the number of items in trash"
+msgid "Counting…"
+msgstr "Tømmer …"
+
+#: main.qml:40
 #, kde-format
 msgctxt "@info:status The trash contains this many items in it"
 msgid "One item"
@@ -40,25 +48,25 @@ msgid_plural "%1 items"
 msgstr[0] "Ett element"
 msgstr[1] "%1 elementer"
 
-#: main.qml:40
+#: main.qml:42
 #, kde-format
 msgctxt "@info:status The trash is empty"
 msgid "Empty"
 msgstr "Tom"
 
-#: main.qml:80
+#: main.qml:77
 #, kde-format
 msgctxt "@action:inmenu Open the trash"
 msgid "Open"
 msgstr "Åpne"
 
-#: main.qml:85
+#: main.qml:82
 #, kde-format
 msgctxt "@action:inmenu Empty the trash"
 msgid "Empty"
 msgstr "Tøm"
 
-#: main.qml:91
+#: main.qml:88
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Trash Settings…"

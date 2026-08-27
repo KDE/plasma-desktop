@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:50+0000\n"
+"POT-Creation-Date: 2026-08-27 00:47+0000\n"
 "PO-Revision-Date: 2026-01-31 21:30+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -231,16 +231,16 @@ msgstr ""
 msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "upwards"
-msgid "Up:"
-msgstr "மேலே:"
+msgid "Clockwise:"
+msgstr ""
 
 #: ui/ActionDialog.qml:257
 #, kde-format
 msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "downwards"
-msgid "Down:"
-msgstr "கீழே:"
+msgid "Counterclockwise:"
+msgstr ""
 
 #: ui/ActionDialog.qml:271
 #, kde-format
@@ -829,6 +829,18 @@ msgstr ""
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
 msgstr "காலியாக்கு"
+
+#~ msgctxt ""
+#~ "@label prefix for configuring Keybind to send when dial/ring is turned "
+#~ "upwards"
+#~ msgid "Up:"
+#~ msgstr "மேலே:"
+
+#~ msgctxt ""
+#~ "@label prefix for configuring Keybind to send when dial/ring is turned "
+#~ "downwards"
+#~ msgid "Down:"
+#~ msgstr "கீழே:"
 
 #~ msgctxt "@info"
 #~ msgid ""

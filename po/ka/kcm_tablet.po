@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:50+0000\n"
-"PO-Revision-Date: 2026-02-15 02:51+0100\n"
+"POT-Creation-Date: 2026-08-27 00:47+0000\n"
+"PO-Revision-Date: 2026-08-26 06:37+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -232,16 +232,16 @@ msgstr ""
 msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "upwards"
-msgid "Up:"
-msgstr "მაღლა:"
+msgid "Clockwise:"
+msgstr ""
 
 #: ui/ActionDialog.qml:257
 #, kde-format
 msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "downwards"
-msgid "Down:"
-msgstr "დაბლა:"
+msgid "Counterclockwise:"
+msgstr ""
 
 #: ui/ActionDialog.qml:271
 #, kde-format
@@ -332,7 +332,7 @@ msgstr "კალმის კალიბრაცია"
 #, kde-format
 msgctxt "@info"
 msgid "%1: (%2 px, %3 px)"
-msgstr ""
+msgstr "%1: (%2 პიქს, %3 პიქს)"
 
 #: ui/Calibration.qml:107
 #, kde-format
@@ -341,14 +341,11 @@ msgid ""
 "Applied center correction (%1 px, %2 px). Retap the targets to redo the "
 "correction."
 msgstr ""
+"გამოყენებულია ცენტრის კორექცია (%1 პიქს, %2 პიქს). თავიდან კორექციისთვის "
+"დაატყაპუნეთ სამიზნეებზე კიდევ ერთხელ."
 
 #: ui/Calibration.qml:173
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds unless further action is "
-#| "taken.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><emphasis "
@@ -356,7 +353,8 @@ msgid ""
 "further action is taken.</emphasis>"
 msgstr ""
 "დაატყაპუნეთ სამიზნეებზე კიდევ ერთხელ ახალი კალიბრაციის დასადასტურებლად.<nl/"
-"><nl/><b>ნაგულისხმევ კალიბრაციაზე დაბრუნება მოხდება %1 წამში.</b>"
+"><nl/><emphasis strong='true'>ნაგულისხმევ კალიბრაციაზე დაბრუნება მოხდება %1 "
+"წამში.</emphasis>"
 
 #: ui/Calibration.qml:177
 #, kde-format
@@ -367,6 +365,10 @@ msgid ""
 "Tap the center target once to fine-tune alignment. You can retap the other "
 "targets to verify the result."
 msgstr ""
+"კალიბრაცია დასრულდა და შენახულია.\n"
+"\n"
+"დაატყაპუნეთ ცენტრალურ სამიზნეზე ერთხელ გასწორების დასაზუსტებლად. შედეგების "
+"გადასამოწმებლად შეგიძლიათ, სხვა სამიზნეებზეც დაატყაპუნოთ."
 
 #: ui/Calibration.qml:180
 #, kde-format
@@ -381,6 +383,8 @@ msgid ""
 "Offset Correction:\n"
 "%1"
 msgstr ""
+"წანაცვლების კორექცია:\n"
+"%1"
 
 #: ui/Calibration.qml:216
 #, kde-format
@@ -416,31 +420,31 @@ msgstr "გაუქმება"
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-left"
-msgstr ""
+msgstr "ზედა მარცხენა"
 
 #: ui/Calibration.qml:334
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-right"
-msgstr ""
+msgstr "ზედა მარჯვენა"
 
 #: ui/Calibration.qml:353
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-left"
-msgstr ""
+msgstr "ქვედა მარცხენა"
 
 #: ui/Calibration.qml:372
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-right"
-msgstr ""
+msgstr "ქვედა მარჯვენა"
 
 #: ui/Calibration.qml:391
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Center"
-msgstr ""
+msgstr "ცენტრი"
 
 #: ui/DisplayTab.qml:46
 #, kde-format
@@ -831,6 +835,18 @@ msgstr ""
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
 msgstr "გასუფთავება"
+
+#~ msgctxt ""
+#~ "@label prefix for configuring Keybind to send when dial/ring is turned "
+#~ "upwards"
+#~ msgid "Up:"
+#~ msgstr "მაღლა:"
+
+#~ msgctxt ""
+#~ "@label prefix for configuring Keybind to send when dial/ring is turned "
+#~ "downwards"
+#~ msgid "Down:"
+#~ msgstr "დაბლა:"
 
 #~ msgctxt "@info"
 #~ msgid ""

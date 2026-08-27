@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
+"POT-Creation-Date: 2026-08-27 00:47+0000\n"
 "PO-Revision-Date: 2021-05-28 19:36+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -33,6 +33,13 @@ msgstr "Boşaldın"
 
 #: main.qml:38
 #, fuzzy, kde-format
+#| msgid "Empty"
+msgctxt "@info:status Counting the number of items in trash"
+msgid "Counting…"
+msgstr "Boşaldın"
+
+#: main.qml:40
+#, fuzzy, kde-format
 #| msgid "One item"
 #| msgid_plural "%1 items"
 msgctxt "@info:status The trash contains this many items in it"
@@ -41,14 +48,14 @@ msgid_plural "%1 items"
 msgstr[0] "%1 element"
 msgstr[1] "%1 element"
 
-#: main.qml:40
+#: main.qml:42
 #, fuzzy, kde-format
 #| msgid "Empty"
 msgctxt "@info:status The trash is empty"
 msgid "Empty"
 msgstr "Boşaldın"
 
-#: main.qml:80
+#: main.qml:77
 #, fuzzy, kde-format
 #| msgctxt "a verb"
 #| msgid "Open"
@@ -56,14 +63,14 @@ msgctxt "@action:inmenu Open the trash"
 msgid "Open"
 msgstr "Açmaq"
 
-#: main.qml:85
+#: main.qml:82
 #, fuzzy, kde-format
 #| msgid "Empty"
 msgctxt "@action:inmenu Empty the trash"
 msgid "Empty"
 msgstr "Boşaldın"
 
-#: main.qml:91
+#: main.qml:88
 #, fuzzy, kde-format
 #| msgid "Trash Settings…"
 msgctxt "@action:inmenu"

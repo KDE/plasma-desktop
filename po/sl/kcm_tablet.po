@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:50+0000\n"
-"PO-Revision-Date: 2026-02-15 09:18+0100\n"
+"POT-Creation-Date: 2026-08-27 00:47+0000\n"
+"PO-Revision-Date: 2026-08-26 07:33+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -232,16 +232,16 @@ msgstr ""
 msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "upwards"
-msgid "Up:"
-msgstr "Gor:"
+msgid "Clockwise:"
+msgstr ""
 
 #: ui/ActionDialog.qml:257
 #, kde-format
 msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "downwards"
-msgid "Down:"
-msgstr "Dol:"
+msgid "Counterclockwise:"
+msgstr ""
 
 #: ui/ActionDialog.qml:271
 #, kde-format
@@ -332,7 +332,7 @@ msgstr "Umerjanje peresa"
 #, kde-format
 msgctxt "@info"
 msgid "%1: (%2 px, %3 px)"
-msgstr ""
+msgstr "%1: (%2 px, %3 px)"
 
 #: ui/Calibration.qml:107
 #, kde-format
@@ -341,23 +341,20 @@ msgid ""
 "Applied center correction (%1 px, %2 px). Retap the targets to redo the "
 "correction."
 msgstr ""
+"Uporabljena je bila korekcija središča (%1 px, %2 px). Za ponovitev "
+"korekcije se ponovno dotaknite tarč."
 
 #: ui/Calibration.qml:173
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds unless further action is "
-#| "taken.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><emphasis "
 "strong='true'>Will revert to default calibration in %1 seconds unless "
 "further action is taken.</emphasis>"
 msgstr ""
-"Znova se dotaknite tarč za potrditev nove kalibracije.<nl/><nl/><b>Čez %1 "
-"sekundo se bo kalibracija vrnila na privzeto vrednost, če ne boste nič "
-"ukrenili.</b>"
+"Za potrditev nove kalibracije se znova dotaknite tarč.<nl/><nl/><emphasis "
+"strong='true'>Kalibracija se bo vrnila na privzeto vrednost čez %1 sekundo, "
+"če ne boste ukrepali.</emphasis>"
 
 #: ui/Calibration.qml:177
 #, kde-format
@@ -368,6 +365,10 @@ msgid ""
 "Tap the center target once to fine-tune alignment. You can retap the other "
 "targets to verify the result."
 msgstr ""
+"Kalibracija je končana in shranjena.\n"
+"\n"
+"Za natančno poravnavo enkrat dotaknite sredinsko tarčo. Rezultat lahko "
+"preverite z dodatnimi dotiki."
 
 #: ui/Calibration.qml:180
 #, kde-format
@@ -382,6 +383,8 @@ msgid ""
 "Offset Correction:\n"
 "%1"
 msgstr ""
+"Popravek odmika:\n"
+"%1"
 
 #: ui/Calibration.qml:216
 #, kde-format
@@ -417,31 +420,31 @@ msgstr "Prekliči"
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-left"
-msgstr ""
+msgstr "Zgoraj levo"
 
 #: ui/Calibration.qml:334
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-right"
-msgstr ""
+msgstr "Zgoraj desno"
 
 #: ui/Calibration.qml:353
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-left"
-msgstr ""
+msgstr "Spodaj levo"
 
 #: ui/Calibration.qml:372
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-right"
-msgstr ""
+msgstr "Spodaj desno"
 
 #: ui/Calibration.qml:391
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Center"
-msgstr ""
+msgstr "Sredina"
 
 #: ui/DisplayTab.qml:46
 #, kde-format
@@ -833,6 +836,18 @@ msgstr ""
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
 msgstr "Očisti"
+
+#~ msgctxt ""
+#~ "@label prefix for configuring Keybind to send when dial/ring is turned "
+#~ "upwards"
+#~ msgid "Up:"
+#~ msgstr "Gor:"
+
+#~ msgctxt ""
+#~ "@label prefix for configuring Keybind to send when dial/ring is turned "
+#~ "downwards"
+#~ msgid "Down:"
+#~ msgstr "Dol:"
 
 #~ msgctxt "@info"
 #~ msgid ""

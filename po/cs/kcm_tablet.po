@@ -1,21 +1,22 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 # SPDX-FileCopyrightText: 2021, 2023, 2024, 2025, 2026 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2026 Libor Filípek <libor.filipek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:50+0000\n"
-"PO-Revision-Date: 2026-03-30 11:46+0200\n"
-"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
+"POT-Creation-Date: 2026-08-27 00:47+0000\n"
+"PO-Revision-Date: 2026-08-26 11:05+0200\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -233,16 +234,16 @@ msgstr ""
 msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "upwards"
-msgid "Up:"
-msgstr "Nahoru:"
+msgid "Clockwise:"
+msgstr ""
 
 #: ui/ActionDialog.qml:257
 #, kde-format
 msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "downwards"
-msgid "Down:"
-msgstr "Dolů:"
+msgid "Counterclockwise:"
+msgstr ""
 
 #: ui/ActionDialog.qml:271
 #, kde-format
@@ -333,7 +334,7 @@ msgstr "Kalibrace pera"
 #, kde-format
 msgctxt "@info"
 msgid "%1: (%2 px, %3 px)"
-msgstr ""
+msgstr "%1: (%2 px, %3 px)"
 
 #: ui/Calibration.qml:107
 #, kde-format
@@ -342,22 +343,20 @@ msgid ""
 "Applied center correction (%1 px, %2 px). Retap the targets to redo the "
 "correction."
 msgstr ""
+"Byla provedena korekce středu (%1 px, %2 px). Chcete-li korekci provést "
+"znovu, klepněte na cíle znovu."
 
 #: ui/Calibration.qml:173
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds unless further action is "
-#| "taken.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><emphasis "
 "strong='true'>Will revert to default calibration in %1 seconds unless "
 "further action is taken.</emphasis>"
 msgstr ""
-"Klepněte znovu na cíle, abyste potvrdili novou kalibraci.<nl/><nl/><b>Pokud "
-"neprovedete další akci, do %1 sekund se vrátí výchozí kalibrace.</b>"
+"Klepněte na cíle znovu, abyste potvrdili novou kalibraci.<nl/><nl/><emphasis "
+"strong='true'>Pokud neprovedete žádné další kroky, za %1 sekund se systém "
+"vrátí k výchozí kalibraci.</emphasis>"
 
 #: ui/Calibration.qml:177
 #, kde-format
@@ -368,6 +367,10 @@ msgid ""
 "Tap the center target once to fine-tune alignment. You can retap the other "
 "targets to verify the result."
 msgstr ""
+"Kalibrace byla dokončena a uložena.\n"
+"\n"
+"Jedním klepnutím na středový terč proveďte jemné doladění zarovnání. "
+"Výsledek můžete ověřit dalším klepnutím na ostatní terče."
 
 #: ui/Calibration.qml:180
 #, kde-format
@@ -381,7 +384,7 @@ msgctxt "@info"
 msgid ""
 "Offset Correction:\n"
 "%1"
-msgstr ""
+msgstr "Korekce offsetu: %1"
 
 #: ui/Calibration.qml:216
 #, kde-format
@@ -417,31 +420,31 @@ msgstr "Zrušit"
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-left"
-msgstr ""
+msgstr "Vlevo nahoře"
 
 #: ui/Calibration.qml:334
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-right"
-msgstr ""
+msgstr "Vpravo nahoře"
 
 #: ui/Calibration.qml:353
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-left"
-msgstr ""
+msgstr "Vlevo dole"
 
 #: ui/Calibration.qml:372
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-right"
-msgstr ""
+msgstr "Vpravo dole"
 
 #: ui/Calibration.qml:391
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Center"
-msgstr ""
+msgstr "Střed"
 
 #: ui/DisplayTab.qml:46
 #, kde-format
@@ -833,6 +836,18 @@ msgstr ""
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
 msgstr "Vymazat"
+
+#~ msgctxt ""
+#~ "@label prefix for configuring Keybind to send when dial/ring is turned "
+#~ "upwards"
+#~ msgid "Up:"
+#~ msgstr "Nahoru:"
+
+#~ msgctxt ""
+#~ "@label prefix for configuring Keybind to send when dial/ring is turned "
+#~ "downwards"
+#~ msgid "Down:"
+#~ msgstr "Dolů:"
 
 #~ msgctxt "@info"
 #~ msgid ""

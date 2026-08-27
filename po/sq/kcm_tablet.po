@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:50+0000\n"
+"POT-Creation-Date: 2026-08-27 00:47+0000\n"
 "PO-Revision-Date: 2026-01-03 12:29-0500\n"
 "Last-Translator: Agron Selimaj <as9902613@gmail.com>\n"
 "Language-Team: sq\n"
@@ -225,22 +225,20 @@ msgid ""
 msgstr ""
 
 #: ui/ActionDialog.qml:244
-#, fuzzy, kde-format
-#| msgid "Up:"
+#, kde-format
 msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "upwards"
-msgid "Up:"
-msgstr "Lart:"
+msgid "Clockwise:"
+msgstr ""
 
 #: ui/ActionDialog.qml:257
-#, fuzzy, kde-format
-#| msgid "Down:"
+#, kde-format
 msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "downwards"
-msgid "Down:"
-msgstr "Poshtë:"
+msgid "Counterclockwise:"
+msgstr ""
 
 #: ui/ActionDialog.qml:271
 #, fuzzy, kde-format
@@ -815,6 +813,22 @@ msgstr ""
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
 msgstr "Pastro"
+
+#, fuzzy
+#~| msgid "Up:"
+#~ msgctxt ""
+#~ "@label prefix for configuring Keybind to send when dial/ring is turned "
+#~ "upwards"
+#~ msgid "Up:"
+#~ msgstr "Lart:"
+
+#, fuzzy
+#~| msgid "Down:"
+#~ msgctxt ""
+#~ "@label prefix for configuring Keybind to send when dial/ring is turned "
+#~ "downwards"
+#~ msgid "Down:"
+#~ msgstr "Poshtë:"
 
 #~ msgctxt ""
 #~ "Pen mode, where the point on the screen is always where you touch the "

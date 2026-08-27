@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
+"POT-Creation-Date: 2026-08-27 00:47+0000\n"
 "PO-Revision-Date: 2024-06-20 05:35\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -37,6 +37,14 @@ msgid "Emptying…"
 msgstr "пустая"
 
 #: main.qml:38
+#, fuzzy, kde-format
+#| msgctxt "@info:status The trash is empty"
+#| msgid "Empty"
+msgctxt "@info:status Counting the number of items in trash"
+msgid "Counting…"
+msgstr "пустая"
+
+#: main.qml:40
 #, kde-format
 msgctxt "@info:status The trash contains this many items in it"
 msgid "One item"
@@ -46,25 +54,25 @@ msgstr[1] "%1 аб’ектаў"
 msgstr[2] "%1 элементаў"
 msgstr[3] "%1 элементы"
 
-#: main.qml:40
+#: main.qml:42
 #, kde-format
 msgctxt "@info:status The trash is empty"
 msgid "Empty"
 msgstr "пустая"
 
-#: main.qml:80
+#: main.qml:77
 #, kde-format
 msgctxt "@action:inmenu Open the trash"
 msgid "Open"
 msgstr "Адкрыць"
 
-#: main.qml:85
+#: main.qml:82
 #, kde-format
 msgctxt "@action:inmenu Empty the trash"
 msgid "Empty"
 msgstr "Ачысціць"
 
-#: main.qml:91
+#: main.qml:88
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Trash Settings…"
