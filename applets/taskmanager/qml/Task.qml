@@ -79,7 +79,7 @@ PlasmaCore.ToolTipArea {
         || (task.contextMenu && task.contextMenu.status === PlasmaExtras.Menu.Open)
         || (!!tasksRoot.groupDialog && tasksRoot.groupDialog.visualParent === task)
 
-    active: !inPopup && !tasksRoot.groupDialog && task.contextMenu?.status !== PlasmaExtras.Menu.Open
+    active: !inPopup && !tasksRoot.groupDialog && task.contextMenu?.status !== PlasmaExtras.Menu.Open && task === (tasksRoot.toolTipOpenedByClick ?? task)
     interactive: model.IsWindow || mainItem.playerData
     location: Plasmoid.location
     mainItem: !Plasmoid.configuration.showToolTips || !model.IsWindow ? pinnedAppToolTipDelegate : openWindowToolTipDelegate
@@ -195,12 +195,12 @@ PlasmaCore.ToolTipArea {
     }
 
     onContainsMouseChanged: {
-        if (containsMouse) {
+        if (tasksRoot.toolTipOpenedByClick && tasksRoot.toolTipOpenedByClick === mainItem.parentTask) {
+            tasksRoot.toolTipOpenedByClick.showToolTip();
+        } else if (containsMouse) {
             task.forceActiveFocus(Qt.MouseFocusReason);
             task.updateMainItemBindings();
-        } else {
-            tasksRoot.toolTipOpenedByClick = null;
-        }
+        } 
     }
 
     onHighlightedChanged: {
