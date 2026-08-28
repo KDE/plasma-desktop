@@ -34,6 +34,8 @@ Item {
     // Whether we expect a given authenticator to prompt for a credential at all.
     // This is a shortcut around the NoPasswordUnlock.qml screen when dealing with prompt-less authenticators.
     property bool expectingPrompt: false // this is set for real when an authenticator is selected
+    // <!* Whether we are expected to visualize the prompt message for the authenticator *>
+    property bool showPrompt: false // this is set for real when an authenticator is selected
 
     function handleMessage(msg) {
         if (!root.notification) {
@@ -96,7 +98,9 @@ Item {
         function onPromptForSecretChanged() {
             mainBlock.showPassword = false;
             mainBlock.mainPasswordBox.forceActiveFocus();
-            lockScreenUi.handleMessage(authenticator.promptForSecret);
+            if (lockScreenUi.showPrompt) {
+                lockScreenUi.handleMessage(authenticator.promptForSecret);
+            }
         }
     }
 
@@ -330,6 +334,7 @@ Item {
                             required property bool passwordField
                             required property bool expectingPrompt
                             required property string tooltip
+                            required property bool showPrompt
                             required property bool functional
 
                             onFunctionalChanged: {
@@ -354,6 +359,7 @@ Item {
                                 root.notification = ""
                                 mainBlock.passwordInputVisible = passwordField
                                 lockScreenUi.expectingPrompt = expectingPrompt
+                                lockScreenUi.showPrompt = showPrompt
                             }
 
                             PlasmaComponents3.ToolTip.text: tooltip
