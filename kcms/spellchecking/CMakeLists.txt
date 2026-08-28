@@ -1,16 +1,13 @@
-set(kcm_spellchecking_SRCS
-   spellcheckingskeleton.cpp
-   spellchecking.cpp
-    spellcheckingdata.cpp
-   )
+# SPDX-FileCopyrightText: 2026 Tobias Fella <tobias.fella@kde.org>
+# SPDX-License-Identifier: BSD-2-Clause
 
-add_library(kcm_spellchecking MODULE ${kcm_spellchecking_SRCS})
-kcmutils_generate_desktop_file(kcm_spellchecking)
+kcmutils_add_qml_kcm(kcm_spellchecking SOURCES
+   spellchecking.cpp
+   spellcheckingdata.cpp
+)
 
 target_link_libraries(kcm_spellchecking
-                      KF6::KCMUtils
-                      KF6::SonnetCore
-                      KF6::SonnetUi
-                     )
-
-install(TARGETS kcm_spellchecking   DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets )
+   KF6::KCMUtils
+   KF6::SonnetCore
+   KF6::SonnetUi
+)
