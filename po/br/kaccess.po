@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2004-09-19 14:10+0200\n"
 "Last-Translator: Thierry Vignaud <tvignaud.com>\n"
 "Language-Team: Brezhoneg <Suav.Icb.fr>\n"
@@ -23,18 +23,6 @@ msgstr "Thierry Vignaud, Jañ-Mai Drapier"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "tvignaud@mandriva.com, jdrapier@club-internet.fr"
-
-#: kaccess.cpp:36
-#, kde-format
-msgid "Toggle Screen Reader On and Off"
-msgstr ""
-
-#: kaccess.cpp:38
-#, fuzzy, kde-format
-#| msgid "KDE Accessibility Tool"
-msgctxt "Name for kaccess shortcuts category"
-msgid "Accessibility"
-msgstr "Ostilh haezadusted KDE"
 
 #: main.cpp:40
 #, fuzzy, kde-format
@@ -57,6 +45,12 @@ msgstr "(c) 2000, Matthias Hoelzer-Kluepfel"
 #, kde-format
 msgid "Author"
 msgstr "Oberour"
+
+#, fuzzy
+#~| msgid "KDE Accessibility Tool"
+#~ msgctxt "Name for kaccess shortcuts category"
+#~ msgid "Accessibility"
+#~ msgstr "Ostilh haezadusted KDE"
 
 #~ msgid "The Shift key is now active."
 #~ msgstr "Bev eo stokell Pennlizh."

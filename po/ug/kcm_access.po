@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:48+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2026-06-01 17:46-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -18,57 +18,57 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 3.9\n"
 
-#: kcmaccess.cpp:119 kcmaccess.cpp:147
+#: kcmaccess.cpp:120 kcmaccess.cpp:148
 #, kde-format
 msgid "KWin"
 msgstr "KWin"
 
-#: kcmaccess.cpp:122
+#: kcmaccess.cpp:123
 #, kde-format
 msgid "Toggle Invert Effect"
 msgstr "تەتۈر قىلىش ئۈنۈمىنى ئالماشتۇر"
 
-#: kcmaccess.cpp:128
+#: kcmaccess.cpp:129
 #, kde-format
 msgid "Toggle Invert Effect on Window"
 msgstr "كۆزنەك تەتۈر قىلىش ئۈنۈمىنى ئالماشتۇر"
 
-#: kcmaccess.cpp:170
+#: kcmaccess.cpp:171
 #, kde-format
 msgid "Move Left"
 msgstr "سولغا يۆتكە"
 
-#: kcmaccess.cpp:177
+#: kcmaccess.cpp:178
 #, kde-format
 msgid "Move Right"
 msgstr "ئوڭغا يۆتكە"
 
-#: kcmaccess.cpp:184
+#: kcmaccess.cpp:185
 #, kde-format
 msgid "Move Up"
 msgstr "ئۈستىگە"
 
-#: kcmaccess.cpp:191
+#: kcmaccess.cpp:192
 #, kde-format
 msgid "Move Down"
 msgstr "ئاستىغا"
 
-#: kcmaccess.cpp:198
+#: kcmaccess.cpp:199
 #, kde-format
 msgid "Move Mouse to Focus"
 msgstr "چاشقىنەكنى فوكۇسقا يۆتكە"
 
-#: kcmaccess.cpp:205
+#: kcmaccess.cpp:206
 #, kde-format
 msgid "Move Mouse to Center"
 msgstr "چاشقىنەكنى مەركەزگە يۆتكە"
 
-#: kcmaccess.cpp:248
+#: kcmaccess.cpp:249
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Orca ئۈچۈن gsettings نى تەڭشىيەلمەيدۇ: «%1» مەغلۇپ بولدى"
 
-#: kcmaccess.cpp:255
+#: kcmaccess.cpp:256
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "خاتالىق: ‪«orca --setup»‬ نى قوزغىتالمايدۇ"
@@ -247,12 +247,6 @@ msgstr "ئەڭ يۇقىرى سۈرئىتى"
 #, kde-format
 msgid "Mouse Key Curve"
 msgstr "چاشقىنەك كۇنۇپكا ئەگرى سىزىقى"
-
-#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
-#: kcmaccessibilityscreenreader.kcfg:9
-#, kde-format
-msgid "Enable Screen Reader"
-msgstr "ئېكران ئوقۇغۇچنى قوزغىتىدۇ"
 
 #. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
 #: kcmaccessibilityshakecursor.kcfg:9
@@ -845,7 +839,7 @@ msgctxt "@option:check"
 msgid "Enable Screen Reader"
 msgstr "ئېكران ئوقۇغۇچنى قوزغىتىدۇ"
 
-#: ui/ScreenReader.qml:45
+#: ui/ScreenReader.qml:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
@@ -1034,6 +1028,9 @@ msgstr "سىيرىش قول ئىشارىتى بىرىكمە كۇنۇپكىسى:"
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "بىرىكمە كۇنۇپكىنى بېسىپ سىيرىغاندا يىراق يېقىنلىق نىسبىتىنى ئۆزگەرتىدۇ"
+
+#~ msgid "Enable Screen Reader"
+#~ msgstr "ئېكران ئوقۇغۇچنى قوزغىتىدۇ"
 
 #~ msgctxt "@label Hint for zoom/magnify effect usage"
 #~ msgid "Use shortcuts to control zoom"

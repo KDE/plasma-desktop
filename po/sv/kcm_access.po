@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:48+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2026-07-16 15:35+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -20,57 +20,57 @@ msgstr ""
 "X-Generator: Lokalize 26.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: kcmaccess.cpp:119 kcmaccess.cpp:147
+#: kcmaccess.cpp:120 kcmaccess.cpp:148
 #, kde-format
 msgid "KWin"
 msgstr "Kwin"
 
-#: kcmaccess.cpp:122
+#: kcmaccess.cpp:123
 #, kde-format
 msgid "Toggle Invert Effect"
 msgstr "Sätt på eller stäng av inverteringseffekt"
 
-#: kcmaccess.cpp:128
+#: kcmaccess.cpp:129
 #, kde-format
 msgid "Toggle Invert Effect on Window"
 msgstr "Sätt på eller stäng av inverteringseffekt för fönster"
 
-#: kcmaccess.cpp:170
+#: kcmaccess.cpp:171
 #, kde-format
 msgid "Move Left"
 msgstr "Flytta åt vänster"
 
-#: kcmaccess.cpp:177
+#: kcmaccess.cpp:178
 #, kde-format
 msgid "Move Right"
 msgstr "Flytta åt höger"
 
-#: kcmaccess.cpp:184
+#: kcmaccess.cpp:185
 #, kde-format
 msgid "Move Up"
 msgstr "Flytta upp"
 
-#: kcmaccess.cpp:191
+#: kcmaccess.cpp:192
 #, kde-format
 msgid "Move Down"
 msgstr "Flytta ner"
 
-#: kcmaccess.cpp:198
+#: kcmaccess.cpp:199
 #, kde-format
 msgid "Move Mouse to Focus"
 msgstr "Flytta musen till fokus"
 
-#: kcmaccess.cpp:205
+#: kcmaccess.cpp:206
 #, kde-format
 msgid "Move Mouse to Center"
 msgstr "Flytta musen till mitten"
 
-#: kcmaccess.cpp:248
+#: kcmaccess.cpp:249
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Kunde inte ställa in g-inställningar för Orca: \"%1\" misslyckades"
 
-#: kcmaccess.cpp:255
+#: kcmaccess.cpp:256
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Fel: Kunde inte starta \"orca --setup\""
@@ -248,12 +248,6 @@ msgstr "Maximal hastighet"
 #, kde-format
 msgid "Mouse Key Curve"
 msgstr "Mustangentkurva"
-
-#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
-#: kcmaccessibilityscreenreader.kcfg:9
-#, kde-format
-msgid "Enable Screen Reader"
-msgstr "Aktivera skärmläsare"
 
 #. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
 #: kcmaccessibilityshakecursor.kcfg:9
@@ -854,7 +848,7 @@ msgctxt "@option:check"
 msgid "Enable Screen Reader"
 msgstr "Aktivera skärmläsare"
 
-#: ui/ScreenReader.qml:45
+#: ui/ScreenReader.qml:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
@@ -1041,6 +1035,9 @@ msgstr "Väljartangenter för panoreringsgest:"
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "Rulla medan väljartangenterna är nertryckta för att zooma"
+
+#~ msgid "Enable Screen Reader"
+#~ msgstr "Aktivera skärmläsare"
 
 #~ msgctxt "@label Hint for zoom/magnify effect usage"
 #~ msgid "Use shortcuts to control zoom"

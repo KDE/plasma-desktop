@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-20 00:47+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2026-08-20 17:35+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -964,13 +964,13 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Показване под полето за отключване"
 
-#: contents/lockscreen/LockScreenUi.qml:60
+#: contents/lockscreen/LockScreenUi.qml:59
 #, kde-format
 msgctxt "@info:status"
 msgid "Unlocking failed"
 msgstr "Отключването е неуспешно"
 
-#: contents/lockscreen/LockScreenUi.qml:344
+#: contents/lockscreen/LockScreenUi.qml:343
 #, kde-format
 msgctxt "@info:status"
 msgid ""
@@ -980,47 +980,35 @@ msgstr ""
 "Този метод за удостоверяване не функционира правилно. Моля, опитайте друг "
 "метод и проверете системната конфигурация."
 
-#: contents/lockscreen/LockScreenUi.qml:375
+#: contents/lockscreen/LockScreenUi.qml:374
 #, kde-format
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "Клавишът \"Caps Lock\" е натиснат"
 
-#: contents/lockscreen/LockScreenUi.qml:378
+#: contents/lockscreen/LockScreenUi.qml:377
 #, kde-format
 msgctxt "@info:status"
 msgid "Slow Keys are enabled"
 msgstr "Бавните бутони са активирани"
 
-#: contents/lockscreen/LockScreenUi.qml:398
+#: contents/lockscreen/LockScreenUi.qml:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Slee&p"
 msgstr "Приспи&ване"
 
-#: contents/lockscreen/LockScreenUi.qml:405
+#: contents/lockscreen/LockScreenUi.qml:404
 #, kde-format
 msgctxt "@action:button"
 msgid "&Hibernate"
 msgstr "&Хибернация"
 
-#: contents/lockscreen/LockScreenUi.qml:412
+#: contents/lockscreen/LockScreenUi.qml:411
 #, kde-format
 msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "П&ревключване на потребител"
-
-#: contents/lockscreen/LockScreenUi.qml:462
-#, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "Виртуална клавиатура"
-
-#: contents/lockscreen/LockScreenUi.qml:488
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Превключване на клавиатурата"
 
 #: contents/lockscreen/MainBlock.qml:67
 #, kde-format
@@ -1247,6 +1235,14 @@ msgstr "Излизане от режим на редактиране"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Индикатор за фокус на панела"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Виртуална клавиатура"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Превключване на клавиатурата"
 
 #~ msgctxt "@action:button tooltip only, opens kcm"
 #~ msgid "Configure"

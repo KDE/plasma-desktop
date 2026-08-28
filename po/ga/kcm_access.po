@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:48+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2026-01-21 15:09+0000\n"
 "Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
 "Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
@@ -20,57 +20,57 @@ msgstr ""
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
 
-#: kcmaccess.cpp:119 kcmaccess.cpp:147
+#: kcmaccess.cpp:120 kcmaccess.cpp:148
 #, kde-format
 msgid "KWin"
 msgstr "KWin"
 
-#: kcmaccess.cpp:122
+#: kcmaccess.cpp:123
 #, kde-format
 msgid "Toggle Invert Effect"
 msgstr "Éifeacht Inbhéartaithe a Athrú"
 
-#: kcmaccess.cpp:128
+#: kcmaccess.cpp:129
 #, kde-format
 msgid "Toggle Invert Effect on Window"
 msgstr "Éifeacht Inbhéartaithe a Scoráil ar Fhuinneog"
 
-#: kcmaccess.cpp:170
+#: kcmaccess.cpp:171
 #, kde-format
 msgid "Move Left"
 msgstr "Bog ar Chlé"
 
-#: kcmaccess.cpp:177
+#: kcmaccess.cpp:178
 #, kde-format
 msgid "Move Right"
 msgstr "Bog ar Dheis"
 
-#: kcmaccess.cpp:184
+#: kcmaccess.cpp:185
 #, kde-format
 msgid "Move Up"
 msgstr "Bog Suas"
 
-#: kcmaccess.cpp:191
+#: kcmaccess.cpp:192
 #, kde-format
 msgid "Move Down"
 msgstr "Bog Síos"
 
-#: kcmaccess.cpp:198
+#: kcmaccess.cpp:199
 #, kde-format
 msgid "Move Mouse to Focus"
 msgstr "Bog an Luch chun Díriú"
 
-#: kcmaccess.cpp:205
+#: kcmaccess.cpp:206
 #, kde-format
 msgid "Move Mouse to Center"
 msgstr "Bog an Luch go dtí an Lár"
 
-#: kcmaccess.cpp:248
+#: kcmaccess.cpp:249
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Níorbh fhéidir socruithe g a shocrú don Orca: theip ar \"%1\""
 
-#: kcmaccess.cpp:255
+#: kcmaccess.cpp:256
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Earráid: Níorbh fhéidir \"orca --setup\" a sheoladh"
@@ -250,12 +250,6 @@ msgstr "Uasmhéid Luas"
 #, kde-format
 msgid "Mouse Key Curve"
 msgstr "Cuar Eochrach Luiche"
-
-#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
-#: kcmaccessibilityscreenreader.kcfg:9
-#, kde-format
-msgid "Enable Screen Reader"
-msgstr "Cumasaigh Léitheoir Scáileáin"
 
 #. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
 #: kcmaccessibilityshakecursor.kcfg:9
@@ -885,7 +879,7 @@ msgctxt "@option:check"
 msgid "Enable Screen Reader"
 msgstr "Cumasaigh Léitheoir Scáileáin"
 
-#: ui/ScreenReader.qml:45
+#: ui/ScreenReader.qml:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
@@ -1077,6 +1071,9 @@ msgstr "Eochracha modhnúcháin gotha scrolla:"
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "Scrollaigh agus na heochracha mionathraithe á mbrú chun súmáil isteach"
+
+#~ msgid "Enable Screen Reader"
+#~ msgstr "Cumasaigh Léitheoir Scáileáin"
 
 #~ msgctxt "@label Hint for zoom/magnify effect usage"
 #~ msgid "Use shortcuts to control zoom"

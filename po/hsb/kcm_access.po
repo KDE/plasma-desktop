@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:48+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2004-04-26 14:51+0200\n"
 "Last-Translator: Prof. Dr. Eduard Werner <e.werner@rz.uni-leipzig.de>\n"
 "Language-Team: Upper Sorbian\n"
@@ -17,57 +17,57 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
 
-#: kcmaccess.cpp:119 kcmaccess.cpp:147
+#: kcmaccess.cpp:120 kcmaccess.cpp:148
 #, kde-format
 msgid "KWin"
 msgstr ""
 
-#: kcmaccess.cpp:122
+#: kcmaccess.cpp:123
 #, kde-format
 msgid "Toggle Invert Effect"
 msgstr ""
 
-#: kcmaccess.cpp:128
+#: kcmaccess.cpp:129
 #, kde-format
 msgid "Toggle Invert Effect on Window"
 msgstr ""
 
-#: kcmaccess.cpp:170
+#: kcmaccess.cpp:171
 #, kde-format
 msgid "Move Left"
 msgstr ""
 
-#: kcmaccess.cpp:177
+#: kcmaccess.cpp:178
 #, kde-format
 msgid "Move Right"
 msgstr ""
 
-#: kcmaccess.cpp:184
+#: kcmaccess.cpp:185
 #, kde-format
 msgid "Move Up"
 msgstr ""
 
-#: kcmaccess.cpp:191
+#: kcmaccess.cpp:192
 #, kde-format
 msgid "Move Down"
 msgstr ""
 
-#: kcmaccess.cpp:198
+#: kcmaccess.cpp:199
 #, kde-format
 msgid "Move Mouse to Focus"
 msgstr ""
 
-#: kcmaccess.cpp:205
+#: kcmaccess.cpp:206
 #, kde-format
 msgid "Move Mouse to Center"
 msgstr ""
 
-#: kcmaccess.cpp:248
+#: kcmaccess.cpp:249
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr ""
 
-#: kcmaccess.cpp:255
+#: kcmaccess.cpp:256
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr ""
@@ -252,12 +252,6 @@ msgstr ""
 #: kcmaccessibilitymouse.kcfg:29
 #, kde-format
 msgid "Mouse Key Curve"
-msgstr ""
-
-#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
-#: kcmaccessibilityscreenreader.kcfg:9
-#, kde-format
-msgid "Enable Screen Reader"
 msgstr ""
 
 #. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
@@ -869,7 +863,7 @@ msgctxt "@option:check"
 msgid "Enable Screen Reader"
 msgstr ""
 
-#: ui/ScreenReader.qml:45
+#: ui/ScreenReader.qml:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"

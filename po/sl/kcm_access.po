@@ -1,7 +1,7 @@
 # translation of kcmaccess.po to Slovenian
 # Translation of kcmaccess.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMACCESS.
-# $Id: kcm_access.po 1743592 2026-08-12 01:32:10Z scripty $
+# $Id: kcm_access.po 1744920 2026-08-28 01:30:48Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2005, 2006 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:48+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2026-05-01 06:43+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -27,57 +27,57 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.9\n"
 
-#: kcmaccess.cpp:119 kcmaccess.cpp:147
+#: kcmaccess.cpp:120 kcmaccess.cpp:148
 #, kde-format
 msgid "KWin"
 msgstr "KWin"
 
-#: kcmaccess.cpp:122
+#: kcmaccess.cpp:123
 #, kde-format
 msgid "Toggle Invert Effect"
 msgstr "Preklopi inverzni učinek"
 
-#: kcmaccess.cpp:128
+#: kcmaccess.cpp:129
 #, kde-format
 msgid "Toggle Invert Effect on Window"
 msgstr "Preklopi inverzni učinek na oknu"
 
-#: kcmaccess.cpp:170
+#: kcmaccess.cpp:171
 #, kde-format
 msgid "Move Left"
 msgstr "Premakni levo"
 
-#: kcmaccess.cpp:177
+#: kcmaccess.cpp:178
 #, kde-format
 msgid "Move Right"
 msgstr "Premakni desno"
 
-#: kcmaccess.cpp:184
+#: kcmaccess.cpp:185
 #, kde-format
 msgid "Move Up"
 msgstr "Premakni gor"
 
-#: kcmaccess.cpp:191
+#: kcmaccess.cpp:192
 #, kde-format
 msgid "Move Down"
 msgstr "Premakni dol"
 
-#: kcmaccess.cpp:198
+#: kcmaccess.cpp:199
 #, kde-format
 msgid "Move Mouse to Focus"
 msgstr "Premakni miško v fokus"
 
-#: kcmaccess.cpp:205
+#: kcmaccess.cpp:206
 #, kde-format
 msgid "Move Mouse to Center"
 msgstr "Premakni miško na sredino"
 
-#: kcmaccess.cpp:248
+#: kcmaccess.cpp:249
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Ni bilo mogoče nastaviti gsettings za Orco: \"%1\" ni uspelo"
 
-#: kcmaccess.cpp:255
+#: kcmaccess.cpp:256
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Napaka: ni bilo mogoče zagnati »orca --setup«"
@@ -255,12 +255,6 @@ msgstr "Največja hitrost"
 #, kde-format
 msgid "Mouse Key Curve"
 msgstr "Krivulja tipke miške"
-
-#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
-#: kcmaccessibilityscreenreader.kcfg:9
-#, kde-format
-msgid "Enable Screen Reader"
-msgstr "Omogoči bralnik zaslona"
 
 #. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
 #: kcmaccessibilityshakecursor.kcfg:9
@@ -879,7 +873,7 @@ msgctxt "@option:check"
 msgid "Enable Screen Reader"
 msgstr "Omogoči bralnik zaslona"
 
-#: ui/ScreenReader.qml:45
+#: ui/ScreenReader.qml:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
@@ -1068,6 +1062,9 @@ msgstr "Tipke za spreminjanje kretnje pomikanja:"
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "Premakni med pritiskom na spremenilne tipke za zoom"
+
+#~ msgid "Enable Screen Reader"
+#~ msgstr "Omogoči bralnik zaslona"
 
 #~ msgctxt "@label Hint for zoom/magnify effect usage"
 #~ msgid "Use shortcuts to control zoom"

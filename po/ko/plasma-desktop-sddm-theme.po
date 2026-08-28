@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-13 00:52+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2026-02-03 22:01+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -83,12 +83,7 @@ msgctxt "@action:button"
 msgid "List Users"
 msgstr "사용자 목록"
 
-#: Main.qml:440
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "가상 키보드"
-
-#: Main.qml:510
+#: Main.qml:425
 msgctxt "@info:status"
 msgid "Login Failed"
 msgstr "로그인 실패"
@@ -97,3 +92,7 @@ msgstr "로그인 실패"
 msgctxt "@action:button opens sessions menu %1 is current"
 msgid "Desktop Session: %1"
 msgstr "데스크톱 세션: %1"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "가상 키보드"

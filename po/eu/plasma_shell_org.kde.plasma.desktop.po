@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-20 00:47+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2026-08-21 13:03+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -965,13 +965,13 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Erakutsi giltzapetik askatzeko gonbitaren azpian"
 
-#: contents/lockscreen/LockScreenUi.qml:60
+#: contents/lockscreen/LockScreenUi.qml:59
 #, kde-format
 msgctxt "@info:status"
 msgid "Unlocking failed"
 msgstr "Giltzapetik askatzea huts egin du"
 
-#: contents/lockscreen/LockScreenUi.qml:344
+#: contents/lockscreen/LockScreenUi.qml:343
 #, kde-format
 msgctxt "@info:status"
 msgid ""
@@ -981,47 +981,35 @@ msgstr ""
 "Autentifikazio-metodo hau ez dabil behar bezala. Saiatu beste metodo batekin "
 "eta egiaztatu sistemaren konfigurazioa."
 
-#: contents/lockscreen/LockScreenUi.qml:375
+#: contents/lockscreen/LockScreenUi.qml:374
 #, kde-format
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "Blok Maius aktibatuta dago"
 
-#: contents/lockscreen/LockScreenUi.qml:378
+#: contents/lockscreen/LockScreenUi.qml:377
 #, kde-format
 msgctxt "@info:status"
 msgid "Slow Keys are enabled"
 msgstr "Tekla motelak gaituta daude"
 
-#: contents/lockscreen/LockScreenUi.qml:398
+#: contents/lockscreen/LockScreenUi.qml:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Slee&p"
 msgstr "Egin &lo"
 
-#: contents/lockscreen/LockScreenUi.qml:405
+#: contents/lockscreen/LockScreenUi.qml:404
 #, kde-format
 msgctxt "@action:button"
 msgid "&Hibernate"
 msgstr "&Hibernatu"
 
-#: contents/lockscreen/LockScreenUi.qml:412
+#: contents/lockscreen/LockScreenUi.qml:411
 #, kde-format
 msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "Aldatu era&biltzailea"
-
-#: contents/lockscreen/LockScreenUi.qml:462
-#, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "Alegiazko teklatua"
-
-#: contents/lockscreen/LockScreenUi.qml:488
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Aldatu antolaera"
 
 #: contents/lockscreen/MainBlock.qml:67
 #, kde-format
@@ -1244,6 +1232,14 @@ msgstr "Irten editatzeko modutik"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Panelaren foku-adierazlea"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Alegiazko teklatua"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Aldatu antolaera"
 
 #~ msgctxt "@action:button tooltip only, opens kcm"
 #~ msgid "Configure"

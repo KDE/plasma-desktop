@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-20 00:47+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2026-08-20 07:12+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -973,13 +973,13 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Prikaži pod pozivom za odklepanje"
 
-#: contents/lockscreen/LockScreenUi.qml:60
+#: contents/lockscreen/LockScreenUi.qml:59
 #, kde-format
 msgctxt "@info:status"
 msgid "Unlocking failed"
 msgstr "Odklepanje ni uspelo"
 
-#: contents/lockscreen/LockScreenUi.qml:344
+#: contents/lockscreen/LockScreenUi.qml:343
 #, kde-format
 msgctxt "@info:status"
 msgid ""
@@ -989,47 +989,35 @@ msgstr ""
 "Ta metoda avtentikacije ne deluje pravilno. Poskusite z drugo metodo in "
 "preverite konfiguracijo sistema."
 
-#: contents/lockscreen/LockScreenUi.qml:375
+#: contents/lockscreen/LockScreenUi.qml:374
 #, kde-format
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "Caps Lock je vklopljen"
 
-#: contents/lockscreen/LockScreenUi.qml:378
+#: contents/lockscreen/LockScreenUi.qml:377
 #, kde-format
 msgctxt "@info:status"
 msgid "Slow Keys are enabled"
 msgstr "Počasne tipke so omogočene"
 
-#: contents/lockscreen/LockScreenUi.qml:398
+#: contents/lockscreen/LockScreenUi.qml:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Slee&p"
 msgstr "Zaspi"
 
-#: contents/lockscreen/LockScreenUi.qml:405
+#: contents/lockscreen/LockScreenUi.qml:404
 #, kde-format
 msgctxt "@action:button"
 msgid "&Hibernate"
 msgstr "V mirovanje"
 
-#: contents/lockscreen/LockScreenUi.qml:412
+#: contents/lockscreen/LockScreenUi.qml:411
 #, kde-format
 msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "Preklopi uporabnika"
-
-#: contents/lockscreen/LockScreenUi.qml:462
-#, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "Navidezna tipkovnica"
-
-#: contents/lockscreen/LockScreenUi.qml:488
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Preklopi postavitev"
 
 #: contents/lockscreen/MainBlock.qml:67
 #, kde-format
@@ -1281,6 +1269,14 @@ msgstr "Izhod iz urejevalnega načina"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Indikator fokusa plošče"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Navidezna tipkovnica"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Preklopi postavitev"
 
 #~ msgctxt "@action:button tooltip only, opens kcm"
 #~ msgid "Configure"

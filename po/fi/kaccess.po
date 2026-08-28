@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2021-01-04 16:39+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -41,17 +41,6 @@ msgstr ""
 "enkovaara@iki.fi,piippo@cc.helsinki.fi,karvonen.jorma@gmail.com,lasse."
 "liehu@gmail.com"
 
-#: kaccess.cpp:36
-#, kde-format
-msgid "Toggle Screen Reader On and Off"
-msgstr "Ota näyttölukija käyttöön tai poista se käytöstä"
-
-#: kaccess.cpp:38
-#, kde-format
-msgctxt "Name for kaccess shortcuts category"
-msgid "Accessibility"
-msgstr "Esteettömyys"
-
 #: main.cpp:40
 #, kde-format
 msgid "Accessibility"
@@ -71,6 +60,13 @@ msgstr "Matthias Hoelzer-Kluepfel"
 #, kde-format
 msgid "Author"
 msgstr "Tekijä"
+
+#~ msgid "Toggle Screen Reader On and Off"
+#~ msgstr "Ota näyttölukija käyttöön tai poista se käytöstä"
+
+#~ msgctxt "Name for kaccess shortcuts category"
+#~ msgid "Accessibility"
+#~ msgstr "Esteettömyys"
 
 #~ msgid ""
 #~ "The Shift key has been locked and is now active for all of the following "

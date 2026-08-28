@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-20 00:47+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2026-08-20 06:02-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -970,13 +970,13 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Mostrar sob o prompt de desbloqueio"
 
-#: contents/lockscreen/LockScreenUi.qml:60
+#: contents/lockscreen/LockScreenUi.qml:59
 #, kde-format
 msgctxt "@info:status"
 msgid "Unlocking failed"
 msgstr "Desbloqueio falhou"
 
-#: contents/lockscreen/LockScreenUi.qml:344
+#: contents/lockscreen/LockScreenUi.qml:343
 #, kde-format
 msgctxt "@info:status"
 msgid ""
@@ -986,47 +986,35 @@ msgstr ""
 "Este método de autenticação não está funcionando corretamente. Por favor, "
 "tente outro método e verifique a configuração do seu sistema."
 
-#: contents/lockscreen/LockScreenUi.qml:375
+#: contents/lockscreen/LockScreenUi.qml:374
 #, kde-format
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "Caps lock está ativado"
 
-#: contents/lockscreen/LockScreenUi.qml:378
+#: contents/lockscreen/LockScreenUi.qml:377
 #, kde-format
 msgctxt "@info:status"
 msgid "Slow Keys are enabled"
 msgstr "Teclas lentas estão ativadas"
 
-#: contents/lockscreen/LockScreenUi.qml:398
+#: contents/lockscreen/LockScreenUi.qml:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Slee&p"
 msgstr "Sus&pender"
 
-#: contents/lockscreen/LockScreenUi.qml:405
+#: contents/lockscreen/LockScreenUi.qml:404
 #, kde-format
 msgctxt "@action:button"
 msgid "&Hibernate"
 msgstr "&Hibernar"
 
-#: contents/lockscreen/LockScreenUi.qml:412
+#: contents/lockscreen/LockScreenUi.qml:411
 #, kde-format
 msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "Alternar &usuário"
-
-#: contents/lockscreen/LockScreenUi.qml:462
-#, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "Teclado virtual"
-
-#: contents/lockscreen/LockScreenUi.qml:488
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Trocar layout"
 
 #: contents/lockscreen/MainBlock.qml:67
 #, kde-format
@@ -1252,6 +1240,14 @@ msgstr "Sair do modo de edição"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Indicador de foco do painel"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Teclado virtual"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Trocar layout"
 
 #~ msgctxt "@action:button tooltip only, opens kcm"
 #~ msgid "Configure"

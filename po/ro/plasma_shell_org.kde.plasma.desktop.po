@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-20 00:47+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2026-06-15 16:28+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -977,13 +977,13 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Arată sub dialogul de deblocare"
 
-#: contents/lockscreen/LockScreenUi.qml:60
+#: contents/lockscreen/LockScreenUi.qml:59
 #, kde-format
 msgctxt "@info:status"
 msgid "Unlocking failed"
 msgstr "Deblocare eșuată"
 
-#: contents/lockscreen/LockScreenUi.qml:344
+#: contents/lockscreen/LockScreenUi.qml:343
 #, kde-format
 msgctxt "@info:status"
 msgid ""
@@ -991,47 +991,35 @@ msgid ""
 "method, and check your system configuration."
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:375
+#: contents/lockscreen/LockScreenUi.qml:374
 #, kde-format
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "Caps Lock e activ"
 
-#: contents/lockscreen/LockScreenUi.qml:378
+#: contents/lockscreen/LockScreenUi.qml:377
 #, kde-format
 msgctxt "@info:status"
 msgid "Slow Keys are enabled"
 msgstr "Tastele lente sunt active"
 
-#: contents/lockscreen/LockScreenUi.qml:398
+#: contents/lockscreen/LockScreenUi.qml:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Slee&p"
 msgstr "A&dormi"
 
-#: contents/lockscreen/LockScreenUi.qml:405
+#: contents/lockscreen/LockScreenUi.qml:404
 #, kde-format
 msgctxt "@action:button"
 msgid "&Hibernate"
 msgstr "&Hibernează"
 
-#: contents/lockscreen/LockScreenUi.qml:412
+#: contents/lockscreen/LockScreenUi.qml:411
 #, kde-format
 msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "Schimbă &utilizatorul"
-
-#: contents/lockscreen/LockScreenUi.qml:462
-#, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "Tastatură virtuală"
-
-#: contents/lockscreen/LockScreenUi.qml:488
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Schimbă aranjamentul"
 
 #: contents/lockscreen/MainBlock.qml:67
 #, kde-format
@@ -1266,6 +1254,14 @@ msgstr "Ieși din regim de modificare"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Indicator de focalizare a panoului"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Tastatură virtuală"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Schimbă aranjamentul"
 
 #~ msgctxt "@action:button tooltip only, opens kcm"
 #~ msgid "Configure"

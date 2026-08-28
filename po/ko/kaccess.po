@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2021-05-16 23:11+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -31,17 +31,6 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: kaccess.cpp:36
-#, kde-format
-msgid "Toggle Screen Reader On and Off"
-msgstr "스크린 리더 켜고 끄기"
-
-#: kaccess.cpp:38
-#, kde-format
-msgctxt "Name for kaccess shortcuts category"
-msgid "Accessibility"
-msgstr "접근성"
-
 #: main.cpp:40
 #, kde-format
 msgid "Accessibility"
@@ -61,6 +50,13 @@ msgstr "Matthias Hoelzer-Kluepfel"
 #, kde-format
 msgid "Author"
 msgstr "작성자"
+
+#~ msgid "Toggle Screen Reader On and Off"
+#~ msgstr "스크린 리더 켜고 끄기"
+
+#~ msgctxt "Name for kaccess shortcuts category"
+#~ msgid "Accessibility"
+#~ msgstr "접근성"
 
 #~ msgid ""
 #~ "The Shift key has been locked and is now active for all of the following "

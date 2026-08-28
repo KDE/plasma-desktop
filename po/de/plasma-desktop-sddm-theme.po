@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop-sddm-theme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-13 00:52+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2026-01-10 20:10+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -83,12 +83,7 @@ msgctxt "@action:button"
 msgid "List Users"
 msgstr "Benutzer anzeigen"
 
-#: Main.qml:440
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "Virtuelle Tastatur"
-
-#: Main.qml:510
+#: Main.qml:425
 msgctxt "@info:status"
 msgid "Login Failed"
 msgstr "Anmeldung fehlgeschlagen"
@@ -97,3 +92,7 @@ msgstr "Anmeldung fehlgeschlagen"
 msgctxt "@action:button opens sessions menu %1 is current"
 msgid "Desktop Session: %1"
 msgstr "Arbeitsflächensitzung: %1"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Virtuelle Tastatur"

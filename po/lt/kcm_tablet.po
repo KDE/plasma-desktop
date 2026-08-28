@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-27 00:47+0000\n"
-"PO-Revision-Date: 2026-02-17 01:08+0200\n"
+"PO-Revision-Date: 2026-08-27 13:38+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -234,7 +234,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "upwards"
 msgid "Clockwise:"
-msgstr ""
+msgstr "Pagal laikrodžio rodyklę:"
 
 #: ui/ActionDialog.qml:257
 #, kde-format
@@ -242,7 +242,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "downwards"
 msgid "Counterclockwise:"
-msgstr ""
+msgstr "Prieš laikrodžio rodyklę:"
 
 #: ui/ActionDialog.qml:271
 #, kde-format
@@ -333,7 +333,7 @@ msgstr "Rašiklio kalibravimas"
 #, kde-format
 msgctxt "@info"
 msgid "%1: (%2 px, %3 px)"
-msgstr ""
+msgstr "%1: (%2 piks., %3 piks.)"
 
 #: ui/Calibration.qml:107
 #, kde-format
@@ -342,14 +342,11 @@ msgid ""
 "Applied center correction (%1 px, %2 px). Retap the targets to redo the "
 "correction."
 msgstr ""
+"Pritaikytas centro koregavimas (%1 piks., %2 piks.). Bakstelėkite iš naujo "
+"ant objektų norėdami perdaryti koregavimą."
 
 #: ui/Calibration.qml:173
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds unless further action is "
-#| "taken.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><emphasis "
@@ -357,8 +354,8 @@ msgid ""
 "further action is taken.</emphasis>"
 msgstr ""
 "Dar kartą bakstelėkite ant objektų, kad patvirtintumėte naują kalibravimą."
-"<nl/><nl/><b>Po %1 sekundžių bus sugrąžinta į numatytąjį kalibravimą, nebent "
-"bus imtasi tolimesnių veiksmų.</b>"
+"<nl/><nl/><emphasis strong='true'>Po %1 sekundžių bus sugrąžinta į "
+"numatytąjį kalibravimą, nebent bus imtasi tolimesnių veiksmų.</emphasis>"
 
 #: ui/Calibration.qml:177
 #, kde-format
@@ -369,6 +366,11 @@ msgid ""
 "Tap the center target once to fine-tune alignment. You can retap the other "
 "targets to verify the result."
 msgstr ""
+"Kalibravimas užbaigtas ir įrašytas.\n"
+"\n"
+"Bakstelėkite vieną kartą ant centrinio objekto norėdami patobulinti "
+"lygiavimą. Galite bakstelėti iš naujo ant kitų objektų, kad patvirtintumėte "
+"rezultatą."
 
 #: ui/Calibration.qml:180
 #, kde-format
@@ -383,6 +385,8 @@ msgid ""
 "Offset Correction:\n"
 "%1"
 msgstr ""
+"Poslinkio koregavimas:\n"
+"%1"
 
 #: ui/Calibration.qml:216
 #, kde-format
@@ -418,31 +422,31 @@ msgstr "Atsisakyti"
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-left"
-msgstr ""
+msgstr "Viršutinė kairė"
 
 #: ui/Calibration.qml:334
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-right"
-msgstr ""
+msgstr "Viršutinė dešinė"
 
 #: ui/Calibration.qml:353
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-left"
-msgstr ""
+msgstr "Apatinė kairė"
 
 #: ui/Calibration.qml:372
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-right"
-msgstr ""
+msgstr "Apatinė dešinė"
 
 #: ui/Calibration.qml:391
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Center"
-msgstr ""
+msgstr "Centras"
 
 #: ui/DisplayTab.qml:46
 #, kde-format

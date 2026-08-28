@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-20 00:47+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2024-11-06 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -1109,14 +1109,14 @@ msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Паказваць пад запытам разблакавання"
 
-#: contents/lockscreen/LockScreenUi.qml:60
+#: contents/lockscreen/LockScreenUi.qml:59
 #, fuzzy, kde-format
 #| msgid "Unlocking failed"
 msgctxt "@info:status"
 msgid "Unlocking failed"
 msgstr "Не ўдалося разблакаваць"
 
-#: contents/lockscreen/LockScreenUi.qml:344
+#: contents/lockscreen/LockScreenUi.qml:343
 #, kde-format
 msgctxt "@info:status"
 msgid ""
@@ -1124,51 +1124,39 @@ msgid ""
 "method, and check your system configuration."
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:375
+#: contents/lockscreen/LockScreenUi.qml:374
 #, fuzzy, kde-format
 #| msgid "Caps Lock is on"
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "Caps Lock уключаны"
 
-#: contents/lockscreen/LockScreenUi.qml:378
+#: contents/lockscreen/LockScreenUi.qml:377
 #, kde-format
 msgctxt "@info:status"
 msgid "Slow Keys are enabled"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:398
+#: contents/lockscreen/LockScreenUi.qml:397
 #, fuzzy, kde-format
 #| msgid "Sleep"
 msgctxt "@action:button"
 msgid "Slee&p"
 msgstr "Прыпыніць у RAM"
 
-#: contents/lockscreen/LockScreenUi.qml:405
+#: contents/lockscreen/LockScreenUi.qml:404
 #, fuzzy, kde-format
 #| msgid "Hibernate"
 msgctxt "@action:button"
 msgid "&Hibernate"
 msgstr "Перавесці ў рэжым сну"
 
-#: contents/lockscreen/LockScreenUi.qml:412
+#: contents/lockscreen/LockScreenUi.qml:411
 #, fuzzy, kde-format
 #| msgid "Switch User"
 msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "Пераключыць карыстальніка"
-
-#: contents/lockscreen/LockScreenUi.qml:462
-#, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "Віртуальная клавіятура"
-
-#: contents/lockscreen/LockScreenUi.qml:488
-#, kde-format
-msgctxt "Button to change keyboard layout"
-msgid "Switch layout"
-msgstr "Пераключыць раскладку"
 
 #: contents/lockscreen/MainBlock.qml:67
 #, fuzzy, kde-format
@@ -1416,6 +1404,14 @@ msgstr "Выйсці з рэжыму рэдагавання"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Індыкатар фокуса панэлі"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Віртуальная клавіятура"
+
+#~ msgctxt "Button to change keyboard layout"
+#~ msgid "Switch layout"
+#~ msgstr "Пераключыць раскладку"
 
 #, fuzzy
 #~| msgid "Configure"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2009-12-19 18:27+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -25,18 +25,6 @@ msgstr "Johannes Peeringa,Rinse de Vries,Berend Ytsma"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "jmpeeringa@hetnet.nl,rinsedevries@kde.nl,berendy@bigfoot.com"
-
-#: kaccess.cpp:36
-#, kde-format
-msgid "Toggle Screen Reader On and Off"
-msgstr ""
-
-#: kaccess.cpp:38
-#, fuzzy, kde-format
-#| msgid "KDE Accessibility Tool"
-msgctxt "Name for kaccess shortcuts category"
-msgid "Accessibility"
-msgstr "KDE Tagonklikens Ark"
 
 #: main.cpp:40
 #, fuzzy, kde-format
@@ -58,6 +46,12 @@ msgstr "Matthias Hoelzer-Kluepfel"
 #, kde-format
 msgid "Author"
 msgstr "Skriuwer"
+
+#, fuzzy
+#~| msgid "KDE Accessibility Tool"
+#~ msgctxt "Name for kaccess shortcuts category"
+#~ msgid "Accessibility"
+#~ msgstr "KDE Tagonklikens Ark"
 
 #~ msgid ""
 #~ "The Shift key has been locked and is now active for all of the following "

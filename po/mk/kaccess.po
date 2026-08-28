@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2010-01-29 22:17+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -32,18 +32,6 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "bobibobi@freemail.com.mk"
 
-#: kaccess.cpp:36
-#, kde-format
-msgid "Toggle Screen Reader On and Off"
-msgstr ""
-
-#: kaccess.cpp:38
-#, fuzzy, kde-format
-#| msgid "KDE Accessibility Tool"
-msgctxt "Name for kaccess shortcuts category"
-msgid "Accessibility"
-msgstr "Алатка за пристапливост во KDE "
-
 #: main.cpp:40
 #, fuzzy, kde-format
 #| msgid "KDE Accessibility Tool"
@@ -64,6 +52,12 @@ msgstr "Matthias Hoelzer-Kluepfel"
 #, kde-format
 msgid "Author"
 msgstr "Автор"
+
+#, fuzzy
+#~| msgid "KDE Accessibility Tool"
+#~ msgctxt "Name for kaccess shortcuts category"
+#~ msgid "Accessibility"
+#~ msgstr "Алатка за пристапливост во KDE "
 
 #~ msgid ""
 #~ "The Shift key has been locked and is now active for all of the following "
