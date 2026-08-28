@@ -10,45 +10,51 @@
 
 #include <Sonnet/Settings>
 
-#include "spellcheckingskeleton.h"
-
 SpellCheckingData::SpellCheckingData(QObject *parent)
     : KCModuleData(parent)
-    , m_settings(new SpellCheckingSkeleton(this))
+    , m_settings(new Sonnet::Settings(this))
 {
-    autoRegisterSkeletons();
-}
-
-SpellCheckingSkeleton *SpellCheckingData::settings() const
-{
-    return m_settings;
 }
 
 bool SpellCheckingData::isDefaults() const
 {
-    bool isDefaults = KCModuleData::isDefaults();
+    if (m_settings->skipUppercase() != Sonnet::Settings::defaultSkipUppercase()) {
+        return false;
+    }
 
-    QStringList refIgnoreList(m_settings->ignoreList());
-    refIgnoreList.removeDuplicates();
-    refIgnoreList.sort();
+    if (m_settings->autodetectLanguage() != Sonnet::Settings::defaultAutodetectLanguage()) {
+        return false;
+    }
 
-    QStringList defaultIgnoreList(Sonnet::Settings::defaultIgnoreList());
-    defaultIgnoreList.removeDuplicates();
-    defaultIgnoreList.sort();
+    if (m_settings->backgroundCheckerEnabled() != Sonnet::Settings::defaultBackgroundCheckerEnabled()) {
+        return false;
+    }
 
-    QStringList refPreferredLanguagesList(m_settings->preferredLanguages());
-    refPreferredLanguagesList.removeDuplicates();
-    refPreferredLanguagesList.sort();
+    if (m_settings->checkerEnabledByDefault() != Sonnet::Settings::defaultCheckerEnabledByDefault()) {
+        return false;
+    }
 
-    QStringList defaultPreferredLanguagesList(Sonnet::Settings::defaultPreferredLanguages());
-    defaultPreferredLanguagesList.removeDuplicates();
-    defaultPreferredLanguagesList.sort();
+    if (m_settings->skipRunTogether() != Sonnet::Settings::defaultSkipRunTogether()) {
+        return false;
+    }
 
-    isDefaults &= refIgnoreList == defaultIgnoreList;
-    isDefaults &= refPreferredLanguagesList == defaultPreferredLanguagesList;
-    isDefaults &= m_settings->defaultLanguage() == Sonnet::Settings::defaultDefaultLanguage();
+    if (m_settings->defaultLanguage() != Sonnet::Settings::defaultDefaultLanguage()) {
+        return false;
+    }
 
-    return isDefaults;
+    const auto &currentIgnoreList = m_settings->currentIgnoreList();
+    const auto &defaultIgnoreList = Sonnet::Settings::defaultIgnoreList();
+    if (QSet(currentIgnoreList.begin(), currentIgnoreList.end()) != QSet(defaultIgnoreList.begin(), defaultIgnoreList.end())) {
+        return false;
+    }
+
+    const auto &currentPreferredLanguages = m_settings->preferredLanguages();
+    const auto &defaultPreferredLanguages = Sonnet::Settings::defaultPreferredLanguages();
+    if (QSet(currentPreferredLanguages.begin(), currentPreferredLanguages.end()) != QSet(defaultPreferredLanguages.begin(), defaultPreferredLanguages.end())) {
+        return false;
+    }
+
+    return KCModuleData::isDefaults();
 }
 
 #include "spellcheckingdata.moc"
