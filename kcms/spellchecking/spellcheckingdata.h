@@ -10,7 +10,10 @@
 
 #include "kcmoduledata.h"
 
-class SpellCheckingSkeleton;
+namespace Sonnet
+{
+class Settings;
+}
 
 class SpellCheckingData : public KCModuleData
 {
@@ -18,9 +21,8 @@ class SpellCheckingData : public KCModuleData
 
 public:
     explicit SpellCheckingData(QObject *parent = nullptr);
-    SpellCheckingSkeleton *settings() const;
     bool isDefaults() const override;
 
 private:
-    SpellCheckingSkeleton *m_settings;
+    Sonnet::Settings *m_settings;
 };
