@@ -7,110 +7,57 @@
 
 #include "spellchecking.h"
 
-#include <QBoxLayout>
-#include <QSet>
-
 #include "spellcheckingdata.h"
-#include <KConfigDialogManager>
+
 #include <KPluginFactory>
-#include <Sonnet/ConfigView>
 #include <Sonnet/Settings>
 
 K_PLUGIN_FACTORY_WITH_JSON(SpellFactory, "kcm_spellchecking.json", registerPlugin<SonnetSpellCheckingModule>(); registerPlugin<SpellCheckingData>();)
 
 SonnetSpellCheckingModule::SonnetSpellCheckingModule(QObject *parent, const KPluginMetaData &data)
-    : KCModule(parent, data)
+    : KQuickConfigModule(parent, data)
     , m_data(new SpellCheckingData(this))
 {
-    QBoxLayout *layout = new QVBoxLayout(widget());
-    layout->setContentsMargins(0, 0, 0, 0);
-    m_configWidget = new Sonnet::ConfigView(widget());
-    m_configWidget->setNoBackendFoundVisible(skeleton()->clients().isEmpty());
-    layout->addWidget(m_configWidget);
-    m_managedConfig = addConfig(skeleton(), m_configWidget);
-    connect(m_configWidget, &Sonnet::ConfigView::configChanged, this, &SonnetSpellCheckingModule::stateChanged);
-}
+    connect(settings(), &Sonnet::Settings::modifiedChanged, this, [this] {
+        setNeedsSave(settings()->modified());
+    });
 
-void SonnetSpellCheckingModule::stateChanged()
-{
-    bool unmanagedChangeState = false;
-    bool unmanagedDefaultState = true;
-
-    QStringList refIgnoreList(skeleton()->ignoreList());
-    refIgnoreList.removeDuplicates();
-    refIgnoreList.sort();
-
-    QStringList currentIgnoreList(m_configWidget->ignoreList());
-    currentIgnoreList.removeDuplicates();
-    currentIgnoreList.sort();
-
-    QStringList defaultIgnoreList(Sonnet::Settings::defaultIgnoreList());
-    defaultIgnoreList.removeDuplicates();
-    defaultIgnoreList.sort();
-
-    unmanagedChangeState |= currentIgnoreList != refIgnoreList;
-    unmanagedDefaultState &= currentIgnoreList == defaultIgnoreList;
-
-    QStringList refPreferredLanguagesList(skeleton()->preferredLanguages());
-    refPreferredLanguagesList.removeDuplicates();
-    refPreferredLanguagesList.sort();
-
-    QStringList currentPreferredLanguagesList(m_configWidget->preferredLanguages());
-    currentPreferredLanguagesList.removeDuplicates();
-    currentPreferredLanguagesList.sort();
-
-    QStringList defaultPreferredLanguagesList(Sonnet::Settings::defaultPreferredLanguages());
-    defaultPreferredLanguagesList.removeDuplicates();
-    defaultPreferredLanguagesList.sort();
-
-    unmanagedChangeState |= currentPreferredLanguagesList != refPreferredLanguagesList;
-    unmanagedDefaultState &= currentPreferredLanguagesList == defaultPreferredLanguagesList;
-
-    if (!skeleton()->clients().isEmpty() && !m_configWidget->language().isEmpty()) {
-        unmanagedChangeState |= skeleton()->defaultLanguage() != m_configWidget->language();
-        unmanagedDefaultState &= m_configWidget->language() == Sonnet::Settings::defaultDefaultLanguage();
-    }
-
-    unmanagedWidgetDefaultState(unmanagedDefaultState);
-    unmanagedWidgetChangeState(unmanagedChangeState);
-}
-
-SonnetSpellCheckingModule::~SonnetSpellCheckingModule()
-{
+    const auto updateRepresentsDefaults = [this] {
+        setRepresentsDefaults(m_data->settingsAreDefaults());
+    };
+    connect(settings(), &Sonnet::Settings::skipUppercaseChanged, this, updateRepresentsDefaults);
+    connect(settings(), &Sonnet::Settings::autodetectLanguageChanged, this, updateRepresentsDefaults);
+    connect(settings(), &Sonnet::Settings::backgroundCheckerEnabledChanged, this, updateRepresentsDefaults);
+    connect(settings(), &Sonnet::Settings::checkerEnabledByDefaultChanged, this, updateRepresentsDefaults);
+    connect(settings(), &Sonnet::Settings::skipRunTogetherChanged, this, updateRepresentsDefaults);
+    connect(settings(), &Sonnet::Settings::defaultLanguageChanged, this, updateRepresentsDefaults);
+    connect(settings(), &Sonnet::Settings::preferredLanguagesChanged, this, updateRepresentsDefaults);
+    connect(settings(), &Sonnet::Settings::currentIgnoreListChanged, this, updateRepresentsDefaults);
 }
 
 void SonnetSpellCheckingModule::load()
 {
-    KCModule::load();
-    // Set unmanaged widget value
-    m_configWidget->setIgnoreList(skeleton()->ignoreList());
-    m_configWidget->setPreferredLanguages(skeleton()->preferredLanguages());
-    m_configWidget->setLanguage(skeleton()->defaultLanguage());
+    settings()->restore();
 }
 
 void SonnetSpellCheckingModule::save()
 {
-    skeleton()->setIgnoreList(m_configWidget->ignoreList());
-    skeleton()->setPreferredLanguages(m_configWidget->preferredLanguages());
-    skeleton()->setDefaultLanguage(m_configWidget->language());
-
-    // with addConfig, save on skeleton will be trigger only if one managed widget changed
-    if (!m_managedConfig->hasChanged()) {
-        skeleton()->save();
-    }
-    KCModule::save();
+    settings()->save();
 }
 
 void SonnetSpellCheckingModule::defaults()
 {
-    KCModule::defaults();
-    // set default value for unmanaged widgets
-    m_configWidget->setIgnoreList(Sonnet::Settings::defaultIgnoreList());
-    m_configWidget->setPreferredLanguages(Sonnet::Settings::defaultPreferredLanguages());
-    m_configWidget->setLanguage(Sonnet::Settings::defaultDefaultLanguage());
+    settings()->setCurrentIgnoreList(Sonnet::Settings::defaultIgnoreList());
+    settings()->setSkipUppercase(Sonnet::Settings::defaultSkipUppercase());
+    settings()->setAutodetectLanguage(Sonnet::Settings::defaultAutodetectLanguage());
+    settings()->setBackgroundCheckerEnabled(Sonnet::Settings::defaultBackgroundCheckerEnabled());
+    settings()->setCheckerEnabledByDefault(Sonnet::Settings::defaultCheckerEnabledByDefault());
+    settings()->setSkipRunTogether(Sonnet::Settings::defaultSkipRunTogether());
+    settings()->setDefaultLanguage(Sonnet::Settings::defaultDefaultLanguage());
+    settings()->setPreferredLanguages(Sonnet::Settings::defaultPreferredLanguages());
 }
 
-SpellCheckingSkeleton *SonnetSpellCheckingModule::skeleton() const
+Sonnet::Settings *SonnetSpellCheckingModule::settings() const
 {
     return m_data->settings();
 }
