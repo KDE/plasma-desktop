@@ -340,20 +340,13 @@ msgid ""
 msgstr ""
 
 #: ui/Calibration.qml:173
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds unless further action is "
-#| "taken.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><emphasis "
 "strong='true'>Will revert to default calibration in %1 seconds unless "
 "further action is taken.</emphasis>"
 msgstr ""
-"再次点击目标以确认新的校准。<nl/><nl/><b>如果不进行任何操作，%1 秒后将恢复默"
-"认校准状态。</b>"
 
 #: ui/Calibration.qml:177
 #, kde-format
@@ -819,22 +812,3 @@ msgstr ""
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
 msgstr "清除"
-
-#~ msgctxt ""
-#~ "@label prefix for configuring Keybind to send when dial/ring is turned "
-#~ "upwards"
-#~ msgid "Up:"
-#~ msgstr "向上："
-
-#~ msgctxt ""
-#~ "@label prefix for configuring Keybind to send when dial/ring is turned "
-#~ "downwards"
-#~ msgid "Down:"
-#~ msgstr "向下："
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Calibration is completed and saved.<nl/><nl/>Refine the calibration "
-#~ "further or close the window."
-#~ msgstr ""
-#~ "校准已经完成并保存。<nl/><nl/>您可以进一步优化现有校准，或者关闭此窗口。"

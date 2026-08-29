@@ -1,18 +1,18 @@
-# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025, 2026 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2021-2022, 2024-2026 Xavier Besnard <xavier.besnard@kde.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-27 00:47+0000\n"
-"PO-Revision-Date: 2026-02-20 17:46+0100\n"
+"PO-Revision-Date: 2026-08-27 19:20+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: \n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -328,7 +328,7 @@ msgstr "Calibration du stylo"
 #, kde-format
 msgctxt "@info"
 msgid "%1: (%2 px, %3 px)"
-msgstr ""
+msgstr "%1 : (%2 px, %3 px)"
 
 #: ui/Calibration.qml:107
 #, kde-format
@@ -337,14 +337,11 @@ msgid ""
 "Applied center correction (%1 px, %2 px). Retap the targets to redo the "
 "correction."
 msgstr ""
+"Correction du centre appliquée (%1 px, %2 px). Tapotez à nouveau sur les "
+"cibles pour ré-appliquer la correction."
 
 #: ui/Calibration.qml:173
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds unless further action is "
-#| "taken.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><emphasis "
@@ -352,8 +349,8 @@ msgid ""
 "further action is taken.</emphasis>"
 msgstr ""
 "Tapotez à nouveau sur les cibles pour confirmer la nouvelle calibration.<nl/"
-"><nl/><b>Si aucune action n'est effectuée durant %1 secondes, la calibration "
-"par défaut sera appliquée.</b>"
+"><nl/><emphasis strong='true'>Reviendra à la calibration par défaut dans %1 "
+"secondes, sauf si d’autres actions sont effectuées.</emphasis>"
 
 #: ui/Calibration.qml:177
 #, kde-format
@@ -364,6 +361,10 @@ msgid ""
 "Tap the center target once to fine-tune alignment. You can retap the other "
 "targets to verify the result."
 msgstr ""
+"La calibration est terminé et enregistrée.\n"
+"\n"
+"Tapotez une fois sur la cible centrale pour ajuster l’alignement. Vous "
+"pouvez tapoter à nouveau sur les autres cibles pour vérifier le résultat."
 
 #: ui/Calibration.qml:180
 #, kde-format
@@ -378,6 +379,8 @@ msgid ""
 "Offset Correction:\n"
 "%1"
 msgstr ""
+"Correction de décalage : \n"
+"%1"
 
 #: ui/Calibration.qml:216
 #, kde-format
@@ -413,31 +416,31 @@ msgstr "Annuler"
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-left"
-msgstr ""
+msgstr "En haut à gauche"
 
 #: ui/Calibration.qml:334
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-right"
-msgstr ""
+msgstr "En haut à droite"
 
 #: ui/Calibration.qml:353
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-left"
-msgstr ""
+msgstr "En bas à gauche"
 
 #: ui/Calibration.qml:372
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-right"
-msgstr ""
+msgstr "En bas à droite"
 
 #: ui/Calibration.qml:391
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Center"
-msgstr ""
+msgstr "Au centre"
 
 #: ui/DisplayTab.qml:46
 #, kde-format
