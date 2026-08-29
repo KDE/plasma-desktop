@@ -110,13 +110,6 @@ Kirigami.Form {
                     bottom: accelerationTime.from
                     top: accelerationTime.to
                 }
-                textFromValue: function(value, locale) {
-                    return i18ncp("@label:valuesuffix acceleration time spinbox %1 is value", "%1 ms", "%1 ms", value)
-                }
-
-                valueFromText: (text, locale) => {
-                    return Number.fromLocaleString(locale, text.replace(i18ncp("short for millisecond(s)", "ms", "ms"), ""))
-                }
             }
         }
         Kirigami.FormEntry {
