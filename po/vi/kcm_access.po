@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:47+0000\n"
+"POT-Creation-Date: 2026-08-30 00:48+0000\n"
 "PO-Revision-Date: 2023-01-08 16:18+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -812,7 +812,6 @@ msgid_plural "%1 ms"
 msgstr[0] " phút"
 
 #: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:90
-#: ui/MouseNavigation.qml:118
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
@@ -841,22 +840,14 @@ msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Thời gian gia tốc:"
 
-#: ui/MouseNavigation.qml:114
-#, fuzzy, kde-format
-#| msgid " min"
-msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
-msgid "%1 ms"
-msgid_plural "%1 ms"
-msgstr[0] " phút"
-
-#: ui/MouseNavigation.qml:123
+#: ui/MouseNavigation.qml:116
 #, fuzzy, kde-format
 #| msgid "Maximum speed:"
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Tốc độ tối đa:"
 
-#: ui/MouseNavigation.qml:139
+#: ui/MouseNavigation.qml:132
 #, fuzzy, kde-format
 #| msgid "Acceleration time:"
 msgctxt "@label:spinbox"
@@ -1076,6 +1067,13 @@ msgstr ""
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "Rung chuông hệ thống khi phím bổ trợ được dùng"
+
+#, fuzzy
+#~| msgid " min"
+#~ msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
+#~ msgid "%1 ms"
+#~ msgid_plural "%1 ms"
+#~ msgstr[0] " phút"
 
 #~ msgid "Enable Screen Reader"
 #~ msgstr "Bật trình đọc màn hình"

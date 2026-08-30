@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:47+0000\n"
+"POT-Creation-Date: 2026-08-30 00:48+0000\n"
 "PO-Revision-Date: 2026-05-26 21:47+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -772,7 +772,6 @@ msgid_plural "%1 ms"
 msgstr[0] "%1밀리초"
 
 #: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:90
-#: ui/MouseNavigation.qml:118
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
@@ -798,20 +797,13 @@ msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "가속 시간:"
 
-#: ui/MouseNavigation.qml:114
-#, kde-format
-msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
-msgid "%1 ms"
-msgid_plural "%1 ms"
-msgstr[0] "%1밀리초"
-
-#: ui/MouseNavigation.qml:123
+#: ui/MouseNavigation.qml:116
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "최대 속도:"
 
-#: ui/MouseNavigation.qml:139
+#: ui/MouseNavigation.qml:132
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
@@ -1021,6 +1013,11 @@ msgstr "스크롤 제스처 수정자 키:"
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "수정자 키를 누르면서 스크롤 시 확대/축소로 전달"
+
+#~ msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
+#~ msgid "%1 ms"
+#~ msgid_plural "%1 ms"
+#~ msgstr[0] "%1밀리초"
 
 #~ msgid "Enable Screen Reader"
 #~ msgstr "스크린 리더 활성화"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:47+0000\n"
+"POT-Creation-Date: 2026-08-30 00:48+0000\n"
 "PO-Revision-Date: 2009-01-06 14:07+0200\n"
 "Last-Translator: Erdal Ronahi <erdal.ronahi@nospam.gmail.com>\n"
 "Language-Team: Kurdish <kde-i18n-doc@lists.kde.org>\n"
@@ -809,7 +809,6 @@ msgstr[0] " xul"
 msgstr[1] " xul"
 
 #: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:90
-#: ui/MouseNavigation.qml:118
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
@@ -838,22 +837,13 @@ msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr ""
 
-#: ui/MouseNavigation.qml:114
-#, fuzzy, kde-format
-#| msgid " min"
-msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
-msgid "%1 ms"
-msgid_plural "%1 ms"
-msgstr[0] " xul"
-msgstr[1] " xul"
-
-#: ui/MouseNavigation.qml:123
+#: ui/MouseNavigation.qml:116
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr ""
 
-#: ui/MouseNavigation.qml:139
+#: ui/MouseNavigation.qml:132
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
@@ -1070,6 +1060,14 @@ msgid "Scroll while modifier keys are pressed to zoom"
 msgstr ""
 "Dema ku guherker kilîtkirin, vekirin an jî tiştekî din guherand, zingila  "
 "pergalê bi kar bîne"
+
+#, fuzzy
+#~| msgid " min"
+#~ msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
+#~ msgid "%1 ms"
+#~ msgid_plural "%1 ms"
+#~ msgstr[0] " xul"
+#~ msgstr[1] " xul"
 
 #, fuzzy
 #~| msgid "Notification"

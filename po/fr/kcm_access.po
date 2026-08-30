@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:47+0000\n"
+"POT-Creation-Date: 2026-08-30 00:48+0000\n"
 "PO-Revision-Date: 2026-05-02 11:48+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -809,7 +809,6 @@ msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
 #: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:90
-#: ui/MouseNavigation.qml:118
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
@@ -837,21 +836,13 @@ msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Temps d'accélération :"
 
-#: ui/MouseNavigation.qml:114
-#, kde-format
-msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
-msgid "%1 ms"
-msgid_plural "%1 ms"
-msgstr[0] "%1 ms"
-msgstr[1] "%1 ms"
-
-#: ui/MouseNavigation.qml:123
+#: ui/MouseNavigation.qml:116
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Vitesse maximale :"
 
-#: ui/MouseNavigation.qml:139
+#: ui/MouseNavigation.qml:132
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
@@ -1070,6 +1061,12 @@ msgid "Scroll while modifier keys are pressed to zoom"
 msgstr ""
 "Faire défiler lors d'un appui sur les touches de modifications pour faire un "
 "zoom."
+
+#~ msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
+#~ msgid "%1 ms"
+#~ msgid_plural "%1 ms"
+#~ msgstr[0] "%1 ms"
+#~ msgstr[1] "%1 ms"
 
 #~ msgid "Enable Screen Reader"
 #~ msgstr "Activer le lecteur d'écran"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:47+0000\n"
+"POT-Creation-Date: 2026-08-30 00:48+0000\n"
 "PO-Revision-Date: 2009-01-16 22:16+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -798,7 +798,6 @@ msgstr[0] " ని"
 msgstr[1] " ని"
 
 #: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:90
-#: ui/MouseNavigation.qml:118
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
@@ -828,22 +827,13 @@ msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "(&y) అమోదముకు ఆలస్యము:"
 
-#: ui/MouseNavigation.qml:114
-#, fuzzy, kde-format
-#| msgid " min"
-msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
-msgid "%1 ms"
-msgid_plural "%1 ms"
-msgstr[0] " ని"
-msgstr[1] " ని"
-
-#: ui/MouseNavigation.qml:123
+#: ui/MouseNavigation.qml:116
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr ""
 
-#: ui/MouseNavigation.qml:139
+#: ui/MouseNavigation.qml:132
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
 msgctxt "@label:spinbox"
@@ -1060,6 +1050,14 @@ msgstr ""
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "(&U) కీ వత్తబడినప్పుడు సిస్టమ్ బెల్‌ను వుపయోగించుము"
+
+#, fuzzy
+#~| msgid " min"
+#~ msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
+#~ msgid "%1 ms"
+#~ msgid_plural "%1 ms"
+#~ msgstr[0] " ని"
+#~ msgstr[1] " ని"
 
 #, fuzzy
 #~| msgid "Activation Gestures"

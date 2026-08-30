@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-27 00:47+0000\n"
-"PO-Revision-Date: 2026-02-24 22:41+0400\n"
+"PO-Revision-Date: 2026-08-29 17:22+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -233,7 +233,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "upwards"
 msgid "Clockwise:"
-msgstr ""
+msgstr "مع عقارب السّاعة:"
 
 #: ui/ActionDialog.qml:257
 #, kde-format
@@ -241,7 +241,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "downwards"
 msgid "Counterclockwise:"
-msgstr ""
+msgstr "عكس عقارب الساعة:"
 
 #: ui/ActionDialog.qml:271
 #, kde-format
@@ -332,7 +332,7 @@ msgstr "معايرة القلم"
 #, kde-format
 msgctxt "@info"
 msgid "%1: (%2 px, %3 px)"
-msgstr ""
+msgstr "%1: (%2 بكسل, %3 بكسل)"
 
 #: ui/Calibration.qml:107
 #, kde-format
@@ -341,22 +341,20 @@ msgid ""
 "Applied center correction (%1 px, %2 px). Retap the targets to redo the "
 "correction."
 msgstr ""
+"طُبّق تصحيح المركز (%1 بكسل، %2 بكسل). اضغط مرة أخرى على الأهداف لإعادة "
+"التصحيح."
 
 #: ui/Calibration.qml:173
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds unless further action is "
-#| "taken.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><emphasis "
 "strong='true'>Will revert to default calibration in %1 seconds unless "
 "further action is taken.</emphasis>"
 msgstr ""
-"اطرق على الأهداف مرة أخرى لتأكيد المعايرة الجديدة.<nl/><nl/><b>سيعود إلى "
-"المعايرة المبدئية خلال %1 ثانية ما لم  تأخذ أي إجراء.</b>"
+"اطرق على الأهداف مرة أخرى لتأكيد المعايرة الجديدة.<nl/><nl/><emphasis "
+"strong='true'>سيعود إلى المعايرة المبدئية خلال %1 ثانية ما لم  تأخذ أي إجراء."
+"</emphasis>"
 
 #: ui/Calibration.qml:177
 #, kde-format
@@ -367,6 +365,10 @@ msgid ""
 "Tap the center target once to fine-tune alignment. You can retap the other "
 "targets to verify the result."
 msgstr ""
+"اكتملت عملية المعايرة وحُفظت.\n"
+"\n"
+"انقر مرة واحدة على الهدف المركزي لضبط المحاذاة بدقة. يمكنك النقر مرة أخرى "
+"على الأهداف الأخرى للتحقق من النتيجة."
 
 #: ui/Calibration.qml:180
 #, kde-format
@@ -381,6 +383,8 @@ msgid ""
 "Offset Correction:\n"
 "%1"
 msgstr ""
+"تصحيح الإزاحة:\n"
+"%1"
 
 #: ui/Calibration.qml:216
 #, kde-format
@@ -416,31 +420,31 @@ msgstr "ألغِ"
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-left"
-msgstr ""
+msgstr "أعلى يسار"
 
 #: ui/Calibration.qml:334
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-right"
-msgstr ""
+msgstr "أعلى يسار"
 
 #: ui/Calibration.qml:353
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-left"
-msgstr ""
+msgstr "أسفل يسار"
 
 #: ui/Calibration.qml:372
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-right"
-msgstr ""
+msgstr "أسفل يمين"
 
 #: ui/Calibration.qml:391
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Center"
-msgstr ""
+msgstr "وسط"
 
 #: ui/DisplayTab.qml:46
 #, kde-format

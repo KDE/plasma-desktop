@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-29 00:47+0000\n"
-"PO-Revision-Date: 2026-08-19 17:53+0400\n"
+"PO-Revision-Date: 2026-08-29 12:17+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -47,11 +47,10 @@ msgstr ""
 "في هذه النشاط"
 
 #: contents/activitymanager/ActivityItem.qml:333
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
 msgid "Configure Activity “%1”"
-msgstr "اضبط النّشاط"
+msgstr "اضبط النشاط ”%1“"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -66,23 +65,19 @@ msgid "Activities"
 msgstr "الأنشطة"
 
 #: contents/activitymanager/Heading.qml:86
-#, fuzzy, kde-format
-#| msgid "Search…"
+#, kde-format
 msgctxt "@action:button tooltip only"
 msgid "Search"
-msgstr "ابحث..."
+msgstr "ابحث"
 
 #: contents/activitymanager/Heading.qml:103
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm"
 msgid "Configure Activities"
-msgstr "اضبط النّشاط"
+msgstr "اضبط الأنشطة"
 
 #: contents/activitymanager/Heading.qml:122
-#, fuzzy, kde-format
-#| msgctxt "@action:button Close the panel configuration window"
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button tooltip only, close panel"
 msgid "Close"
 msgstr "أغلق"
