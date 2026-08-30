@@ -8,7 +8,9 @@
 
 #include <KConfigWatcher>
 
+#include <QAction>
 #include <QObject>
+#include <QQuickItem>
 #include <QRect>
 
 #include <netwm.h>
@@ -18,7 +20,6 @@
 #include "kactivitymanagerd_plugins_settings.h"
 
 class KActionCollection;
-class QAction;
 class QActionGroup;
 class QQuickItem;
 class QQuickWindow;
