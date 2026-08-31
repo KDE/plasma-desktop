@@ -12,7 +12,7 @@ KItemModels.KSortFilterProxyModel {
     id: variantProxy
     sourceModel: layoutSearchProxy
     sortRoleName: "searchScore"
-    sortOrder: Qt.DescendingOrder
+    sortOrder: Qt.AscendingOrder
 
     filterRowCallback: function (row, parent): bool {
         if (!layoutsView.currentItem) {
