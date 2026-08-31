@@ -28,6 +28,8 @@ import org.kde.breeze.components
 Item {
     id: lockScreenUi
 
+    required property MessageManager messageManager
+
     // If we're using software rendering, draw outlines instead of shadows
     // See https://bugs.kde.org/show_bug.cgi?id=398317
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
@@ -85,22 +87,37 @@ Item {
         }
 
         function onInfoMessageChanged() {
-            lockScreenUi.handleMessage(authenticator.infoMessage);
+            lockScreenUi.messageManager.showMessage('notification', authenticator.infoMessage)
         }
 
         function onErrorMessageChanged() {
-            lockScreenUi.handleMessage(authenticator.errorMessage);
+            lockScreenUi.messageManager.showMessage('error', authenticator.errorMessage)
         }
 
         function onPromptChanged() {
+            if (authenticator.prompt === "") {
+                return;
+            }
+
+            lockScreenUi.messageManager.showMessage('prompt', authenticator.prompt)
             lockScreenUi.handleMessage(authenticator.prompt);
+
+            mainBlock.passwordInputVisible = true
         }
+
         function onPromptForSecretChanged() {
+            if (authenticator.promptForSecret === "") {
+                return;
+            }
+
+            lockScreenUi.messageManager.showMessage('prompt', authenticator.promptForSecret)
             mainBlock.showPassword = false;
             mainBlock.mainPasswordBox.forceActiveFocus();
             if (lockScreenUi.showPrompt) {
                 lockScreenUi.handleMessage(authenticator.promptForSecret);
             }
+
+            mainBlock.passwordInputVisible = true
         }
     }
 
@@ -284,9 +301,12 @@ Item {
             target: authenticator
             function onPamTimeoutChanged(): void {
                 if (!authenticator.pamTimeout && lockScreenUi.pendingPassword.length > 0) {
-                    authenticator.respond(lockScreenUi.pendingPassword);
-                    lockScreenUi.pendingPassword = "";
-                    mainBlock.enabled = true;
+                    authenticator.respond(lockScreenUi.pendingPassword)
+                    lockScreenUi.messageManager.clearMessages()
+                    lockScreenUi.pendingPassword = ""
+                    root.clearPassword()
+                    root.notification = ""
+                    mainBlock.enabled = true
                 }
             }
         }
@@ -357,7 +377,7 @@ Item {
                             onClicked: {
                                 authenticator.authenticator = type
                                 root.notification = ""
-                                mainBlock.passwordInputVisible = passwordField
+                                mainBlock.passwordInputVisible = false
                                 lockScreenUi.expectingPrompt = expectingPrompt
                                 lockScreenUi.showPrompt = showPrompt
                             }
@@ -395,6 +415,10 @@ Item {
                         mainBlock.enabled = false
                     } else {
                         authenticator.respond(password)
+                        lockScreenUi.messageManager.clearMessages()
+                        lockScreenUi.pendingPassword = ""
+                        root.clearPassword()
+                        root.notification = ""
                     }
                 }
 

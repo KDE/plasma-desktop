@@ -22,7 +22,14 @@ Item {
     implicitWidth: 800
     implicitHeight: 600
 
+    MessageManager {
+        id: messageManager
+        anchors.fill: parent
+        z: 99999
+    }
+
     LockScreenUi {
         anchors.fill: parent
+        messageManager: messageManager
     }
 }
