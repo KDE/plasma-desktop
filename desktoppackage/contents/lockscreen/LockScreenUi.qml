@@ -88,23 +88,45 @@ Item {
         }
 
         function onInfoMessageChanged() {
-            lockScreenUi.handleMessage(authenticator.infoMessage);
+            messageManager.showMessage(MessageManager.NotificationType, authenticator.infoMessage)
         }
 
         function onErrorMessageChanged() {
-            lockScreenUi.handleMessage(authenticator.errorMessage);
+            messageManager.showMessage(MessageManager.ErrorType, authenticator.errorMessage)
         }
 
         function onPromptChanged() {
+            if (authenticator.prompt === "") {
+                return;
+            }
+
+            messageManager.showMessage(MessageManager.PromptType, authenticator.prompt)
             lockScreenUi.handleMessage(authenticator.prompt);
+
+            mainBlock.passwordInputVisible = true
         }
+
         function onPromptForSecretChanged() {
+            if (authenticator.promptForSecret === "") {
+                return;
+            }
+
+            messageManager.showMessage('prompt', authenticator.promptForSecret)
             mainBlock.showPassword = false;
             mainBlock.mainPasswordBox.forceActiveFocus();
             if (lockScreenUi.showPrompt) {
                 lockScreenUi.handleMessage(authenticator.promptForSecret);
             }
+
+            mainBlock.passwordInputVisible = true
         }
+    }
+
+    MessageManager {
+        id: messageManager
+        anchors.fill: parent
+        visible: lockScreenUi.showPrompt
+        z: 99999
     }
 
     SessionManagement {
@@ -287,9 +309,12 @@ Item {
             target: authenticator
             function onPamTimeoutChanged(): void {
                 if (!authenticator.pamTimeout && lockScreenUi.pendingPassword.length > 0) {
-                    authenticator.respond(lockScreenUi.pendingPassword);
-                    lockScreenUi.pendingPassword = "";
-                    mainBlock.enabled = true;
+                    authenticator.respond(lockScreenUi.pendingPassword)
+                    messageManager.clearMessages()
+                    lockScreenUi.pendingPassword = ""
+                    root.clearPassword()
+                    root.notification = ""
+                    mainBlock.enabled = true
                 }
             }
         }
@@ -398,6 +423,10 @@ Item {
                         mainBlock.enabled = false
                     } else {
                         authenticator.respond(password)
+                        messageManager.clearMessages()
+                        lockScreenUi.pendingPassword = ""
+                        root.clearPassword()
+                        root.notification = ""
                     }
                 }
 
