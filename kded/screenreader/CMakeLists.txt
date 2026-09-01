@@ -33,5 +33,5 @@ ecm_qt_install_logging_categories(
 
 target_link_libraries(screenreader PRIVATE KF6::CoreAddons KF6::DBusAddons KF6::ConfigGui)
 
-install(FILES org.kde.screenreader.desktop DESTINATION ${KDE_INSTALL_DATADIR}/kglobalaccel)
+install(PROGRAMS org.kde.screenreader.desktop DESTINATION ${KDE_INSTALL_DATADIR}/kglobalaccel)
 install(FILES kcmaccessibilityscreenreader.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
