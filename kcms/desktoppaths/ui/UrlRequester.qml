@@ -6,31 +6,24 @@
 
 import QtCore
 import QtQuick
+import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 import QtQuick.Dialogs
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 
-Row {
+pragma ComponentBehavior: Bound
+
+Kirigami.FormEntry {
     id: urlRequester
 
     required property url location
     required property url defaultLocation
-    required property int textFieldWidth
-
-    readonly property int implicitTextFieldWidth: metrics.width + textField.leftPadding + textField.rightPadding
 
     /**
      * Emitted when the user selects a new folder
      */
     signal newLocationSelected(url newLocation)
-
-    spacing: Kirigami.Units.smallSpacing
-
-    TextMetrics {
-        id: metrics
-        text: textField.text
-    }
 
     Component {
         id: fileDialogComponent
@@ -49,14 +42,13 @@ Row {
     }
 
     KCM.SettingHighlighter {
-        highlight: location !== defaultLocation
+        highlight: urlRequester.location !== urlRequester.defaultLocation
     }
 
-    QQC2.TextField {
+    contentItem: QQC2.TextField {
         id: textField
-        width: urlRequester.textFieldWidth
-        height: Math.max(fileDialogButton.implicitHeight, textField.implicitHeight)
-        text: location.toString().substr(7)
+        Layout.preferredHeight: Math.max(fileDialogButton.implicitHeight, textField.implicitHeight)
+        text: urlRequester.location.toString().substr(7)
         readOnly: true
 
         Accessible.description: urlRequester.Accessible.description
@@ -65,19 +57,20 @@ Row {
         QQC2.ToolTip.visible: textField.hovered
     }
 
-    QQC2.Button {
-        id: fileDialogButton
-        anchors.verticalCenter: textField.verticalCenter
+    trailingItems: [
+        QQC2.Button {
+            id: fileDialogButton
 
-        display: QQC2.AbstractButton.IconOnly
-        icon.name: "document-open"
-        text: i18nc("@action:button", "Choose new location")
+            display: QQC2.AbstractButton.IconOnly
+            icon.name: "document-open"
+            text: i18nc("@action:button", "Choose new location")
 
-        Accessible.description: text
-        QQC2.ToolTip.text: text
-        QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
-        QQC2.ToolTip.visible: fileDialogButton.hovered
+            Accessible.description: text
+            QQC2.ToolTip.text: text
+            QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+            QQC2.ToolTip.visible: fileDialogButton.hovered
 
-        onClicked: fileDialogComponent.incubateObject(urlRequester)
-    }
+            onClicked: fileDialogComponent.incubateObject(urlRequester)
+        }
+    ]
 }
