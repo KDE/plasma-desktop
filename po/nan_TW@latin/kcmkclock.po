@@ -1,0 +1,95 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
+"PO-Revision-Date: 2026-09-02 03:38+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 26.11.70\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kisaragi Hiu"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "mail@kisaragi-hiu.com"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:37
+#, kde-format
+msgid "Date and Time"
+msgstr "Ji̍t-kî kap Sî-kan"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:61
+#, kde-format
+msgid "Set date and time &automatically"
+msgstr "Tsū-tōng si&at-tīng ji̍t-kî kap sî-kan"
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:91
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr "Tsia ē-sái siat-tīng hē-thóng ê ji̍t-kî."
+
+#. i18n: ectx: attribute (title), widget (QQuickWidget, timezoneViewer)
+#: dateandtime.ui:140
+#, kde-format
+msgid "Time Zone"
+msgstr "Sî-khu"
+
+#: dtime.cpp:71
+#, kde-format
+msgid ""
+"Here you can change the system time. Click into the hours, minutes or "
+"seconds field to change the relevant value, either using the up and down "
+"buttons to the right or by entering a new value."
+msgstr ""
+"Tsia ē-sái siat-tīng hē-thóng ê sî-kan. Tiám-tsing, hun-tsing kap bió ê lân-"
+"uī ē-sái tshi̍h pinn-á ê siōng-hā tshi̍h-liú lâi kái in ê ti̍t, mā ē-sái ti̍t-"
+"tsiap su-ji̍p sin ê ti̍t."
+
+#: dtime.cpp:194
+#, kde-format
+msgid ""
+"<h1>Date & Time</h1> This system settings module can be used to set the "
+"system date and time. As these settings do not only affect you as a user, "
+"but rather the whole system, you can only change these settings when you "
+"start the System Settings as root. If you do not have the root password, but "
+"feel the system time should be corrected, please contact your system "
+"administrator."
+msgstr ""
+"<h1>Ji̍t-kî kap Sî-kan</h1> Tsit-ê hē-thóng siat-tīng bôo-tsoo sī iōng-lâi "
+"siat-tīng hē-thóng ê ji̍t-kî kap sî-kan ê. In-uī tsia ê siat-tīng ē íng-hióng "
+"tio̍h kui-ê hē-thóng, m̄-sī tsí-ū lí ka-kī ê iōng-tsiá, su-iàu ū kuán-lí-tsiá "
+"(root) khuân-hān tsiah ē-sái kái tsia-ê siat-tīng. Nā lí bô root ê bi̍t-bé á-"
+"sī bô khuân-hān m̄-koh kám-kak hē-thóng sî-kan su-iàu siu-tsìng, tio̍h tshiánn "
+"kap lí ê hē-thóng kuán-lí-tsiá liân-lo̍k."
+
+#: main.cpp:57
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr "Bô-huat-tōo kái-piàn NTP siat-tīng"
+
+#: main.cpp:70
+#, kde-format
+msgid "Unable to set current time"
+msgstr "Bô-huat-tōo siat-tīng tsit-má ê sî-kan"
+
+#: main.cpp:82
+#, kde-format
+msgid "Unable to set timezone"
+msgstr "Bô-huat-tōo siat-tīng sî-khu"
