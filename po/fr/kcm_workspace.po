@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2025-05-02 16:42+0200\n"
+"PO-Revision-Date: 2026-04-24 08:13+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -163,8 +163,9 @@ msgid ""
 "laptop's keyboard is flipped around or detached."
 msgstr ""
 "Le mode « Tablette » sera automatiquement activé dès la détection par le "
-"système d'un écran tactile mais pas d'une souris ou d'un pavé tactile. Par "
-"exemple : lorsque le clavier d'un portable modulaire est retourné ou détaché."
+"système d'un écran tactile en l'absence d'une souris ou d'un pavé tactile. "
+"Par exemple : lorsque le clavier d'un portable modulaire est retourné ou "
+"détaché."
 
 #: package/contents/ui/main.qml:255
 #, kde-format
@@ -199,8 +200,8 @@ msgstr "Vitesse d'animation"
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
 msgstr ""
-"Faites un clic gauche sur le curseur de la barre de défilement fait avancer "
-"d'une page"
+"Un clic gauche sur le curseur de la barre de défilement fait avancer d'une "
+"page"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9
