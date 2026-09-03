@@ -94,6 +94,9 @@ bool KWinWaylandDevice::init()
     success &= valueLoader(m_scrollOnButtonDownEnabledByDefault);
     success &= valueLoader(m_scrollOnButtonDown);
 
+    success &= valueLoader(m_scrollButtonLockEnabledByDefault);
+    success &= valueLoader(m_scrollButtonLock);
+
     return success;
 }
 
@@ -111,6 +114,7 @@ bool KWinWaylandDevice::defaults()
     m_naturalScroll.set(m_naturalScrollEnabledByDefault);
     m_scrollFactor.set(1.0);
     m_scrollOnButtonDown.set(m_scrollOnButtonDownEnabledByDefault);
+    m_scrollButtonLock.set(m_scrollButtonLockEnabledByDefault);
 
     return true;
 }
@@ -131,6 +135,7 @@ bool KWinWaylandDevice::save()
     success &= valueWriter(m_naturalScroll);
     success &= valueWriter(m_scrollFactor);
     success &= valueWriter(m_scrollOnButtonDown);
+    success &= valueWriter(m_scrollButtonLock);
 
     return success;
 }
@@ -148,7 +153,8 @@ bool KWinWaylandDevice::isSaveNeeded() const
         // scrolling
         || m_naturalScroll.isSaveNeeded() //
         || m_scrollFactor.isSaveNeeded() //
-        || m_scrollOnButtonDown.isSaveNeeded();
+        || m_scrollOnButtonDown.isSaveNeeded() //
+        || m_scrollButtonLock.isSaveNeeded();
 }
 
 template<typename T>

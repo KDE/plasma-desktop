@@ -359,8 +359,8 @@ KCMUtils.SimpleKCM {
 
             Kirigami.FormEntry {
                 contentItem: QQC2.CheckBox {
-                    id: scrollOnButtonDown
-                    text: i18ndc("kcmmouse", "@option:check", "Hold down middle button and move mouse to scroll")
+                    id: scrollButton
+                    text: i18ndc("kcmmouse", "@option:check", "Scroll when moving the pointer")
                     enabled: root.device?.supportsScrollOnButtonDown ?? false
                     checked: enabled && (root.device?.scrollOnButtonDown ?? false)
 
@@ -370,9 +370,53 @@ KCMUtils.SimpleKCM {
                         }
                     }
                 }
+            }
+
+            QQC2.ButtonGroup { id: autoScrollRadioGroup }
+
+            Kirigami.FormEntry {
+                contentItem: QQC2.RadioButton {
+                    leftPadding: Kirigami.Units.largeSpacing
+                    enabled: scrollButton.checked
+
+                    id: scrollOnButtonDown
+                    text: i18ndc("kcmmouse", "@option:radio", "while pressing the middle button")
+                    checked: !(root.device?.scrollButtonLock ?? false)
+
+                    QQC2.ButtonGroup.group: autoScrollRadioGroup
+
+                    onToggled: {
+                        if (root.device) {
+                            root.device.scrollButtonLock = false
+                        }
+                    }
+                }
 
                 trailingItems: Kirigami.ContextualHelpButton {
                     toolTipText: i18ndc("kcmmouse", "@info:whatsthis ContextualHelpButton tooltip", "This will interfere with applications that use middle-button drag, such as some image editors, document viewers, or video games. It may be used on any device, but is intended primarily as a substitute for scroll wheels on devices that do not have any.")
+                }
+            }
+
+            Kirigami.FormEntry {
+                contentItem: QQC2.RadioButton {
+                    leftPadding: Kirigami.Units.largeSpacing
+                    enabled: scrollButton.checked
+
+                    id: scrollButtonLock
+                    text: i18ndc("kcmmouse", "@option:radio", "after clicking the middle button")
+                    checked: root.device?.scrollButtonLock ?? false
+
+                    QQC2.ButtonGroup.group: autoScrollRadioGroup
+
+                    onToggled: {
+                        if (root.device) {
+                            root.device.scrollButtonLock = true
+                        }
+                    }
+                }
+
+                trailingItems: Kirigami.ContextualHelpButton {
+                    toolTipText: i18ndc("kcmmouse", "@info:whatsthis ContextualHelpButton tooltip", "This will interfere with middle-clicks in general; middle-click twice when you want the application to receive a single middle-click. This includes middle-click dragging.")
                 }
             }
         }
