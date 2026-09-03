@@ -133,8 +133,9 @@ ItemAbstractDelegate {
     DragHandler {
         id: dragHandler
         target: null
+        enabled: (item.url && item.url.toString() !== "") || (item.favoriteId != "")
         onActiveChanged: {
-            if (active && item.url) {
+            if (active) {
                 // we need dragHelper and can't use attached Drag; submenus are destroyed too soon and Plasma crashes
                 if (!item.favoriteId) {
                     dragHelper.startDrag(kicker, item.url, item.decoration)
