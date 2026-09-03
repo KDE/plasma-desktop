@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-30 00:48+0000\n"
+"POT-Creation-Date: 2026-09-03 00:45+0000\n"
 "PO-Revision-Date: 2026-01-24 08:26-0600\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -20,57 +20,57 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 
-#: kcmaccess.cpp:120 kcmaccess.cpp:148
+#: kcmaccess.cpp:123 kcmaccess.cpp:151
 #, kde-format
 msgid "KWin"
 msgstr "ਕੇ-ਵਿਨ"
 
-#: kcmaccess.cpp:123
+#: kcmaccess.cpp:126
 #, kde-format
 msgid "Toggle Invert Effect"
 msgstr ""
 
-#: kcmaccess.cpp:129
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Toggle Invert Effect on Window"
 msgstr ""
 
-#: kcmaccess.cpp:171
+#: kcmaccess.cpp:174
 #, kde-format
 msgid "Move Left"
 msgstr "ਖੱਬੇ ਭੇਜੋ"
 
-#: kcmaccess.cpp:178
+#: kcmaccess.cpp:181
 #, kde-format
 msgid "Move Right"
 msgstr "ਸੱਜੇ ਭੇਜੋ"
 
-#: kcmaccess.cpp:185
+#: kcmaccess.cpp:188
 #, kde-format
 msgid "Move Up"
 msgstr "ਉੱਤੇ ਭੇਜੋ"
 
-#: kcmaccess.cpp:192
+#: kcmaccess.cpp:195
 #, kde-format
 msgid "Move Down"
 msgstr "ਹੇਠਾਂ ਭੇਜੋ"
 
-#: kcmaccess.cpp:199
+#: kcmaccess.cpp:202
 #, kde-format
 msgid "Move Mouse to Focus"
 msgstr "ਫੋਕਸ ਲਈ ਮਾਊਸ ਨੂੰ ਹਿਲਾਓ"
 
-#: kcmaccess.cpp:206
+#: kcmaccess.cpp:209
 #, kde-format
 msgid "Move Mouse to Center"
 msgstr "ਸੈੰਟਰ ਲਈ ਮਾਊਸ ਨੂੰ ਹਿਲਾਓ"
 
-#: kcmaccess.cpp:249
+#: kcmaccess.cpp:252
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr ""
 
-#: kcmaccess.cpp:256
+#: kcmaccess.cpp:259
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr ""
@@ -121,6 +121,39 @@ msgstr "ਦਿੱਖ ਘੰਟੀ ਦਾ ਅੰਤਰਾਲ"
 #: kcmaccessibilitycolorblindnesscorrection.kcfg:13
 #, kde-format
 msgid "Whether Colorblindness Correction is enabled"
+msgstr ""
+
+#. i18n: ectx: label, entry (DwellClicker), group (Plugins)
+#: kcmaccessibilitydwellclicker.kcfg:13
+#, kde-format
+msgid "Whether Dwell Clicker is enabled"
+msgstr ""
+
+#. i18n: ectx: label, entry (DwellClickerDelayTime), group (Effect-dwellclicker)
+#: kcmaccessibilitydwellclicker.kcfg:19
+#, fuzzy, kde-format
+#| msgid "Delay for timeout"
+msgid "Delay Time"
+msgstr "ਟਾਈਮ-ਆਉਟ ਲਈ ਦੇਰੀ"
+
+#. i18n: ectx: label, entry (DwellClickerDwellTime), group (Effect-dwellclicker)
+#: kcmaccessibilitydwellclicker.kcfg:24
+#, kde-format
+msgid "Dwell Time"
+msgstr ""
+
+#. i18n: ectx: label, entry (DwellClickerDwellColor), group (Effect-dwellclicker)
+#: kcmaccessibilitydwellclicker.kcfg:29
+#, fuzzy, kde-format
+#| msgctxt "Color of the system bell"
+#| msgid "Color"
+msgid "Dwell Color"
+msgstr "ਰੰਗ"
+
+#. i18n: ectx: label, entry (DwellClickerMotionThreshold), group (Effect-dwellclicker)
+#: kcmaccessibilitydwellclicker.kcfg:33
+#, kde-format
+msgid "Motion Threshold"
 msgstr ""
 
 #. i18n: ectx: label, entry (Invert), group (Plugins)
@@ -376,7 +409,8 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/Bell.qml:177 ui/KeyboardFilters.qml:66 ui/KeyboardFilters.qml:170
+#: ui/Bell.qml:177 ui/DwellClicker.qml:95 ui/DwellClicker.qml:126
+#: ui/KeyboardFilters.qml:66 ui/KeyboardFilters.qml:170
 #, fuzzy, kde-format
 #| msgctxt "short for millisecond(s)"
 #| msgid "ms"
@@ -482,6 +516,89 @@ msgstr "ਨੀਲਾ"
 msgctxt "@title:group for color rectangles"
 msgid "Purples:"
 msgstr "ਪਰਪਲ"
+
+#: ui/DwellClicker.qml:19
+#, kde-format
+msgctxt "@label"
+msgid "Click when pointer remains still:"
+msgstr ""
+
+#: ui/DwellClicker.qml:21
+#, fuzzy, kde-format
+#| msgctxt "Enable the system bell"
+#| msgid "Enable"
+msgctxt "@option check, Enable dwell clicker effect"
+msgid "Enable"
+msgstr "ਸਮਰੱਥ"
+
+#: ui/DwellClicker.qml:33
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Automatically click when pointer remains still for a set amount of time."
+msgstr ""
+
+#: ui/DwellClicker.qml:39
+#, kde-format
+msgctxt "@label:spinbox Slow keys Delay"
+msgid "Motion Threshold:"
+msgstr ""
+
+#: ui/DwellClicker.qml:55
+#, kde-format
+msgctxt "@label:valuesuffix %1 is the motion threshold"
+msgid "%1 px"
+msgid_plural "%1 px"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/DwellClicker.qml:64
+#, kde-format
+msgctxt "@label:valuesuffix short for pixel(s)"
+msgid "px"
+msgid_plural "px"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/DwellClicker.qml:70
+#, fuzzy, kde-format
+#| msgctxt "Slow keys Delay"
+#| msgid "Delay:"
+msgctxt "@label:spinbox Dwell clicker delay time"
+msgid "Delay Time:"
+msgstr "ਦੇਰੀ:"
+
+#: ui/DwellClicker.qml:86
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix %1 is the delay time"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+
+#: ui/DwellClicker.qml:101
+#, kde-format
+msgctxt "@label:spinbox Dwell clicker dwell time"
+msgid "Dwell Time:"
+msgstr ""
+
+#: ui/DwellClicker.qml:117
+#, fuzzy, kde-format
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix %1 is the dwell time"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+
+#: ui/DwellClicker.qml:132
+#, kde-format
+msgctxt "@label:button Dwell clicker dwell color"
+msgid "Dwell Color:"
+msgstr ""
 
 #: ui/Invert.qml:17
 #, kde-format
@@ -669,6 +786,12 @@ msgid "Mouse Navigation"
 msgstr "ਮਾਊਸ ਨੇਵੀਗੇਸ਼ਨ"
 
 #: ui/main.qml:58
+#, kde-format
+msgctxt "@title Category name in sidebar"
+msgid "Dwell Clicker"
+msgstr ""
+
+#: ui/main.qml:64
 #, fuzzy, kde-format
 #| msgctxt "System mouse navigation"
 #| msgid "Screen Reader"
@@ -676,7 +799,7 @@ msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "ਸਕਰੀਨ ਰੀਡਰ"
 
-#: ui/main.qml:64
+#: ui/main.qml:70
 #, fuzzy, kde-format
 #| msgctxt "Correction for color blindness"
 #| msgid "Color Blindness Correction"
@@ -684,13 +807,13 @@ msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr "ਰੰਗ ਅੰਧਰਾਤਾ ਸੋਧ"
 
-#: ui/main.qml:70
+#: ui/main.qml:76
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
 msgstr ""
 
-#: ui/main.qml:76
+#: ui/main.qml:82
 #, kde-format
 msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
@@ -1102,9 +1225,6 @@ msgstr "ਜਦੋਂ ਸੋਧਕ ਸਵਿੱਚਾਂ ਦਬਾਈਆਂ ਜ�
 
 #~ msgid "Confirm access to the Keyboard"
 #~ msgstr "ਕੀਬੋਰਡ ਲਈ ਪਹੁੰਚ ਵਾਸਤੇ ਤਸਦੀਕ"
-
-#~ msgid "Delay for timeout"
-#~ msgstr "ਟਾਈਮ-ਆਉਟ ਲਈ ਦੇਰੀ"
 
 #~ msgctxt "@option:check"
 #~ msgid "Activation shortcuts:"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-30 00:48+0000\n"
+"POT-Creation-Date: 2026-09-03 00:45+0000\n"
 "PO-Revision-Date: 2026-05-01 15:11+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -23,57 +23,57 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 25.12.3\n"
 
-#: kcmaccess.cpp:120 kcmaccess.cpp:148
+#: kcmaccess.cpp:123 kcmaccess.cpp:151
 #, kde-format
 msgid "KWin"
 msgstr "KWin"
 
-#: kcmaccess.cpp:123
+#: kcmaccess.cpp:126
 #, kde-format
 msgid "Toggle Invert Effect"
 msgstr "Tersine Çevirme Efektini Aç/Kapat"
 
-#: kcmaccess.cpp:129
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Toggle Invert Effect on Window"
 msgstr "Pencerede Tersine Çevirme Efektini Aç/Kapat"
 
-#: kcmaccess.cpp:171
+#: kcmaccess.cpp:174
 #, kde-format
 msgid "Move Left"
 msgstr "Sola Taşı"
 
-#: kcmaccess.cpp:178
+#: kcmaccess.cpp:181
 #, kde-format
 msgid "Move Right"
 msgstr "Sağa Taşı"
 
-#: kcmaccess.cpp:185
+#: kcmaccess.cpp:188
 #, kde-format
 msgid "Move Up"
 msgstr "Yukarı Taşı"
 
-#: kcmaccess.cpp:192
+#: kcmaccess.cpp:195
 #, kde-format
 msgid "Move Down"
 msgstr "Aşağı Taşı"
 
-#: kcmaccess.cpp:199
+#: kcmaccess.cpp:202
 #, kde-format
 msgid "Move Mouse to Focus"
 msgstr "Fareyi Odağa Taşı"
 
-#: kcmaccess.cpp:206
+#: kcmaccess.cpp:209
 #, kde-format
 msgid "Move Mouse to Center"
 msgstr "Fareyi Merkeze Taşı"
 
-#: kcmaccess.cpp:249
+#: kcmaccess.cpp:252
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Orca için gsettings ayarlanamadı: “%1” başarısız oldu"
 
-#: kcmaccess.cpp:256
+#: kcmaccess.cpp:259
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Hata: “orca --setup” başlatılamadı"
@@ -125,6 +125,40 @@ msgstr "Görsel zilin süresi"
 #, kde-format
 msgid "Whether Colorblindness Correction is enabled"
 msgstr "Renk Körlüğü Düzeltmesi’nin etkin olup olmadığı"
+
+#. i18n: ectx: label, entry (DwellClicker), group (Plugins)
+#: kcmaccessibilitydwellclicker.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Whether Shake Pointer is enabled"
+msgid "Whether Dwell Clicker is enabled"
+msgstr "İşaretçiyi Salla’nın etkin olup olmadığı"
+
+#. i18n: ectx: label, entry (DwellClickerDelayTime), group (Effect-dwellclicker)
+#: kcmaccessibilitydwellclicker.kcfg:19
+#, fuzzy, kde-format
+#| msgid "Delay for timeout"
+msgid "Delay Time"
+msgstr "Zaman aşımı gecikmesi"
+
+#. i18n: ectx: label, entry (DwellClickerDwellTime), group (Effect-dwellclicker)
+#: kcmaccessibilitydwellclicker.kcfg:24
+#, kde-format
+msgid "Dwell Time"
+msgstr ""
+
+#. i18n: ectx: label, entry (DwellClickerDwellColor), group (Effect-dwellclicker)
+#: kcmaccessibilitydwellclicker.kcfg:29
+#, fuzzy, kde-format
+#| msgctxt "Color of the system bell"
+#| msgid "Color"
+msgid "Dwell Color"
+msgstr "Renk"
+
+#. i18n: ectx: label, entry (DwellClickerMotionThreshold), group (Effect-dwellclicker)
+#: kcmaccessibilitydwellclicker.kcfg:33
+#, kde-format
+msgid "Motion Threshold"
+msgstr ""
 
 #. i18n: ectx: label, entry (Invert), group (Plugins)
 #: kcmaccessibilityinvert.kcfg:9
@@ -368,7 +402,8 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/Bell.qml:177 ui/KeyboardFilters.qml:66 ui/KeyboardFilters.qml:170
+#: ui/Bell.qml:177 ui/DwellClicker.qml:95 ui/DwellClicker.qml:126
+#: ui/KeyboardFilters.qml:66 ui/KeyboardFilters.qml:170
 #, kde-format
 msgctxt "@label:valuesuffix short for millisecond(s)"
 msgid "ms"
@@ -470,6 +505,96 @@ msgstr "Maviler:"
 msgctxt "@title:group for color rectangles"
 msgid "Purples:"
 msgstr "Morlar:"
+
+#: ui/DwellClicker.qml:19
+#, kde-format
+msgctxt "@label"
+msgid "Click when pointer remains still:"
+msgstr ""
+
+#: ui/DwellClicker.qml:21
+#, fuzzy, kde-format
+#| msgctxt "Enable the system bell"
+#| msgid "Enable"
+msgctxt "@option check, Enable dwell clicker effect"
+msgid "Enable"
+msgstr "Etkinleştir"
+
+#: ui/DwellClicker.qml:33
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Automatically click when pointer remains still for a set amount of time."
+msgstr ""
+
+#: ui/DwellClicker.qml:39
+#, kde-format
+msgctxt "@label:spinbox Slow keys Delay"
+msgid "Motion Threshold:"
+msgstr ""
+
+#: ui/DwellClicker.qml:55
+#, fuzzy, kde-format
+#| msgctxt "short for pixel(s)"
+#| msgid "%1 px"
+#| msgid_plural "%1 px"
+msgctxt "@label:valuesuffix %1 is the motion threshold"
+msgid "%1 px"
+msgid_plural "%1 px"
+msgstr[0] "%1 pks"
+msgstr[1] "%1 pks"
+
+#: ui/DwellClicker.qml:64
+#, fuzzy, kde-format
+#| msgctxt "short for pixel(s)"
+#| msgid "px"
+msgctxt "@label:valuesuffix short for pixel(s)"
+msgid "px"
+msgid_plural "px"
+msgstr[0] "pks"
+msgstr[1] "pks"
+
+#: ui/DwellClicker.qml:70
+#, fuzzy, kde-format
+#| msgctxt "@label:spinbox Slow keys Delay"
+#| msgid "Delay:"
+msgctxt "@label:spinbox Dwell clicker delay time"
+msgid "Delay Time:"
+msgstr "Gecikme:"
+
+#: ui/DwellClicker.qml:86
+#, fuzzy, kde-format
+#| msgctxt "@label:valuesuffix %1 is visible bell duration"
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix %1 is the delay time"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+
+#: ui/DwellClicker.qml:101
+#, kde-format
+msgctxt "@label:spinbox Dwell clicker dwell time"
+msgid "Dwell Time:"
+msgstr ""
+
+#: ui/DwellClicker.qml:117
+#, fuzzy, kde-format
+#| msgctxt "@label:valuesuffix %1 is visible bell duration"
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix %1 is the dwell time"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+
+#: ui/DwellClicker.qml:132
+#, kde-format
+msgctxt "@label:button Dwell clicker dwell color"
+msgid "Dwell Color:"
+msgstr ""
 
 #: ui/Invert.qml:17
 #, kde-format
@@ -635,22 +760,28 @@ msgstr "Fare Dolaşımı"
 #: ui/main.qml:58
 #, kde-format
 msgctxt "@title Category name in sidebar"
+msgid "Dwell Clicker"
+msgstr ""
+
+#: ui/main.qml:64
+#, kde-format
+msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "Ekran Okuyucusu"
 
-#: ui/main.qml:64
+#: ui/main.qml:70
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr "Renk Körlüğü Düzeltmesi"
 
-#: ui/main.qml:70
+#: ui/main.qml:76
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
 msgstr "Tersine Çevir"
 
-#: ui/main.qml:76
+#: ui/main.qml:82
 #, kde-format
 msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
@@ -1066,9 +1197,6 @@ msgstr "Yakınlaştırmak için niteleyici düğmelere basıldığında sar"
 
 #~ msgid "Use a timeout delay"
 #~ msgstr "Zaman aşımı gecikmesi kullan"
-
-#~ msgid "Delay for timeout"
-#~ msgstr "Zaman aşımı gecikmesi"
 
 #~ msgid "Use a beep for access"
 #~ msgstr "Erişim için bir bip sesi kullan"

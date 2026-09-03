@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-30 00:48+0000\n"
+"POT-Creation-Date: 2026-09-03 00:45+0000\n"
 "PO-Revision-Date: 2026-07-19 23:48+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -24,57 +24,57 @@ msgstr ""
 "X-Generator: Lokalize 26.04.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: kcmaccess.cpp:120 kcmaccess.cpp:148
+#: kcmaccess.cpp:123 kcmaccess.cpp:151
 #, kde-format
 msgid "KWin"
 msgstr "KWin"
 
-#: kcmaccess.cpp:123
+#: kcmaccess.cpp:126
 #, kde-format
 msgid "Toggle Invert Effect"
 msgstr "Txandakatu alderantzikatzeko efektua"
 
-#: kcmaccess.cpp:129
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Toggle Invert Effect on Window"
 msgstr "Txandakatu leihoan alderantzikatzeko efektua"
 
-#: kcmaccess.cpp:171
+#: kcmaccess.cpp:174
 #, kde-format
 msgid "Move Left"
 msgstr "Mugitu ezkerrera"
 
-#: kcmaccess.cpp:178
+#: kcmaccess.cpp:181
 #, kde-format
 msgid "Move Right"
 msgstr "Mugitu eskuinera"
 
-#: kcmaccess.cpp:185
+#: kcmaccess.cpp:188
 #, kde-format
 msgid "Move Up"
 msgstr "Eraman gora"
 
-#: kcmaccess.cpp:192
+#: kcmaccess.cpp:195
 #, kde-format
 msgid "Move Down"
 msgstr "Eraman behera"
 
-#: kcmaccess.cpp:199
+#: kcmaccess.cpp:202
 #, kde-format
 msgid "Move Mouse to Focus"
 msgstr "Mugitu sagua fokura"
 
-#: kcmaccess.cpp:206
+#: kcmaccess.cpp:209
 #, kde-format
 msgid "Move Mouse to Center"
 msgstr "Mugitu sagua erdialdera"
 
-#: kcmaccess.cpp:249
+#: kcmaccess.cpp:252
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Ezin izan dira orcarentzako gsettings ezarri: \"%1\" huts egin du"
 
-#: kcmaccess.cpp:256
+#: kcmaccess.cpp:259
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Errorea: Ezin izan da \"orca --setup\" abiarazi"
@@ -126,6 +126,40 @@ msgstr "Irudizko txirrinaren iraupena"
 #, kde-format
 msgid "Whether Colorblindness Correction is enabled"
 msgstr "Kolore-itsutasunerako zuzenketa gaituta dagoen edo ez"
+
+#. i18n: ectx: label, entry (DwellClicker), group (Plugins)
+#: kcmaccessibilitydwellclicker.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Whether Shake Pointer is enabled"
+msgid "Whether Dwell Clicker is enabled"
+msgstr "Astindu kurtsorea gaituta dagoen"
+
+#. i18n: ectx: label, entry (DwellClickerDelayTime), group (Effect-dwellclicker)
+#: kcmaccessibilitydwellclicker.kcfg:19
+#, fuzzy, kde-format
+#| msgid "Delay for timeout"
+msgid "Delay Time"
+msgstr "Denbora-mugaren atzerapena"
+
+#. i18n: ectx: label, entry (DwellClickerDwellTime), group (Effect-dwellclicker)
+#: kcmaccessibilitydwellclicker.kcfg:24
+#, kde-format
+msgid "Dwell Time"
+msgstr ""
+
+#. i18n: ectx: label, entry (DwellClickerDwellColor), group (Effect-dwellclicker)
+#: kcmaccessibilitydwellclicker.kcfg:29
+#, fuzzy, kde-format
+#| msgctxt "Color of the system bell"
+#| msgid "Color"
+msgid "Dwell Color"
+msgstr "Kolorea"
+
+#. i18n: ectx: label, entry (DwellClickerMotionThreshold), group (Effect-dwellclicker)
+#: kcmaccessibilitydwellclicker.kcfg:33
+#, kde-format
+msgid "Motion Threshold"
+msgstr ""
 
 #. i18n: ectx: label, entry (Invert), group (Plugins)
 #: kcmaccessibilityinvert.kcfg:9
@@ -369,7 +403,8 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/Bell.qml:177 ui/KeyboardFilters.qml:66 ui/KeyboardFilters.qml:170
+#: ui/Bell.qml:177 ui/DwellClicker.qml:95 ui/DwellClicker.qml:126
+#: ui/KeyboardFilters.qml:66 ui/KeyboardFilters.qml:170
 #, kde-format
 msgctxt "@label:valuesuffix short for millisecond(s)"
 msgid "ms"
@@ -471,6 +506,96 @@ msgstr "Urdinak:"
 msgctxt "@title:group for color rectangles"
 msgid "Purples:"
 msgstr "Moreak:"
+
+#: ui/DwellClicker.qml:19
+#, kde-format
+msgctxt "@label"
+msgid "Click when pointer remains still:"
+msgstr ""
+
+#: ui/DwellClicker.qml:21
+#, fuzzy, kde-format
+#| msgctxt "Enable the system bell"
+#| msgid "Enable"
+msgctxt "@option check, Enable dwell clicker effect"
+msgid "Enable"
+msgstr "Gaitu"
+
+#: ui/DwellClicker.qml:33
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Automatically click when pointer remains still for a set amount of time."
+msgstr ""
+
+#: ui/DwellClicker.qml:39
+#, kde-format
+msgctxt "@label:spinbox Slow keys Delay"
+msgid "Motion Threshold:"
+msgstr ""
+
+#: ui/DwellClicker.qml:55
+#, fuzzy, kde-format
+#| msgctxt "short for pixel(s)"
+#| msgid "%1 px"
+#| msgid_plural "%1 px"
+msgctxt "@label:valuesuffix %1 is the motion threshold"
+msgid "%1 px"
+msgid_plural "%1 px"
+msgstr[0] "px %1"
+msgstr[1] "%1 px"
+
+#: ui/DwellClicker.qml:64
+#, fuzzy, kde-format
+#| msgctxt "short for pixel(s)"
+#| msgid "px"
+msgctxt "@label:valuesuffix short for pixel(s)"
+msgid "px"
+msgid_plural "px"
+msgstr[0] "px"
+msgstr[1] "px"
+
+#: ui/DwellClicker.qml:70
+#, fuzzy, kde-format
+#| msgctxt "@label:spinbox Slow keys Delay"
+#| msgid "Delay:"
+msgctxt "@label:spinbox Dwell clicker delay time"
+msgid "Delay Time:"
+msgstr "Atzerapena:"
+
+#: ui/DwellClicker.qml:86
+#, fuzzy, kde-format
+#| msgctxt "@label:valuesuffix %1 is visible bell duration"
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix %1 is the delay time"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+
+#: ui/DwellClicker.qml:101
+#, kde-format
+msgctxt "@label:spinbox Dwell clicker dwell time"
+msgid "Dwell Time:"
+msgstr ""
+
+#: ui/DwellClicker.qml:117
+#, fuzzy, kde-format
+#| msgctxt "@label:valuesuffix %1 is visible bell duration"
+#| msgid "%1 ms"
+#| msgid_plural "%1 ms"
+msgctxt "@label:valuesuffix %1 is the dwell time"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+
+#: ui/DwellClicker.qml:132
+#, kde-format
+msgctxt "@label:button Dwell clicker dwell color"
+msgid "Dwell Color:"
+msgstr ""
 
 #: ui/Invert.qml:17
 #, kde-format
@@ -637,22 +762,28 @@ msgstr "Sagu bidez nabigatzea"
 #: ui/main.qml:58
 #, kde-format
 msgctxt "@title Category name in sidebar"
+msgid "Dwell Clicker"
+msgstr ""
+
+#: ui/main.qml:64
+#, kde-format
+msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "Pantaila-irakurlea"
 
-#: ui/main.qml:64
+#: ui/main.qml:70
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr "Kolore-itsutasunerako zuzenketa"
 
-#: ui/main.qml:70
+#: ui/main.qml:76
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
 msgstr "Alderantzikatu"
 
-#: ui/main.qml:76
+#: ui/main.qml:82
 #, kde-format
 msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
@@ -1068,9 +1199,6 @@ msgstr "Kiribildu, tekla aldarazleak zoom egiteko sakatu bitartean"
 
 #~ msgid "Use a timeout delay"
 #~ msgstr "Erabili denbora-mugako atzerapen bat"
-
-#~ msgid "Delay for timeout"
-#~ msgstr "Denbora-mugaren atzerapena"
 
 #~ msgid "Use a beep for access"
 #~ msgstr "Erabili bip bat sartzeko"
