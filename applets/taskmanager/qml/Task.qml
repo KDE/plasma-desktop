@@ -81,6 +81,7 @@ PlasmaCore.ToolTipArea {
 
     active: !inPopup && !tasksRoot.groupDialog && task.contextMenu?.status !== PlasmaExtras.Menu.Open && task === (tasksRoot.toolTipOpenedByClick ?? task)
     interactive: model.IsWindow || mainItem.playerData
+    hideOnClick: !(hasAudioStream && audioIndicatorsEnabled)
     location: Plasmoid.location
     mainItem: !Plasmoid.configuration.showToolTips || !model.IsWindow ? pinnedAppToolTipDelegate : openWindowToolTipDelegate
 
