@@ -28,7 +28,7 @@ SimpleKCM {
     Kirigami.FormLayout {
         RadioButton {
             id: showLabel
-            Kirigami.FormData.label: i18nc("@title:group of radio buttons, options are language codes or images", "Display style:") // qmllint disable unqualified
+            Kirigami.FormData.label: i18nc("@title:group of radio buttons, options are language codes or images", "Display style:")
             text: root.displayName.length > 0 ? root.displayName: root.layoutShortName
             checked: root.cfg_displayStyle === 0
             onToggled: root.cfg_displayStyle = 0;
@@ -62,7 +62,7 @@ SimpleKCM {
 
                 }
                 Label {
-                    text: i18nc("@info:placeholder Make this translation as short as possible", "No flag available") // qmllint disable unqualified
+                    text: i18nc("@info:placeholder Make this translation as short as possible", "No flag available")
                     visible: !flagImage.visible
 
                 }
@@ -99,8 +99,8 @@ SimpleKCM {
         }
 
         Button {
-            Kirigami.FormData.label: i18nc("@label prefixed to button, as in 'keyboard layouts'", "Layouts:") // qmllint disable unqualified
-            text: i18nc("@action:button opens kcm_keyboard", "Configure…") // qmllint disable unqualified
+            Kirigami.FormData.label: i18nc("@label prefixed to button, as in 'keyboard layouts'", "Layouts:")
+            text: i18nc("@action:button opens kcm_keyboard", "Configure…")
             icon.name: "configure"
             onClicked: KCMLauncher.openSystemSettings("kcm_keyboard", "--tab=layouts")
         }

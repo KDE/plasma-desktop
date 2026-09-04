@@ -10,7 +10,7 @@ import org.kde.plasma.configuration
 
 ConfigModel {
     ConfigCategory {
-         name: i18nc("@title page", "Appearance") // qmllint disable unqualified
+         name: i18nc("@title page", "Appearance")
          icon: "activities"
          source: "ConfigAppearance.qml"
     }

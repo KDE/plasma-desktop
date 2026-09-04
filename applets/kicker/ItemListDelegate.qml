@@ -94,9 +94,9 @@ ItemAbstractDelegate {
             sourceComponent: Kirigami.Badge {
                 text: item.hasChildren ? "" : Accessible.name
                 type: Kirigami.Badge.Type.Positive
-                Accessible.name: i18nc("Newly-installed app, badge, keep short", "New!") // qmllint disable unqualified
-                Accessible.description: item.hasChildren ? i18nc("@info:whatsthis Accessible description for badge", "There is a newly-installed application in this category") // qmllint disable unqualified
-                : i18nc("@info:whatsthis Accessible description for badge", "Newly-installed application") // qmllint disable unqualified
+                Accessible.name: i18nc("Newly-installed app, badge, keep short", "New!")
+                Accessible.description: item.hasChildren ? i18nc("@info:whatsthis Accessible description for badge", "There is a newly-installed application in this category")
+                : i18nc("@info:whatsthis Accessible description for badge", "Newly-installed application")
             }
         }
 

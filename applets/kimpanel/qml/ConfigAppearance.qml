@@ -28,33 +28,33 @@ KCM.SimpleKCM {
 
         QQC2.RadioButton {
             id: verticalLayoutRadioButton
-            Kirigami.FormData.label: i18nc("@title:group for radiobuttons", "Input method list:") // qmllint disable unqualified
-            text: i18nc("@option:radio IM list orientation", "Vertical") // qmllint disable unqualified
+            Kirigami.FormData.label: i18nc("@title:group for radiobuttons", "Input method list:")
+            text: i18nc("@option:radio IM list orientation", "Vertical")
             checked: root.cfg_vertical_lookup_table == true
             onToggled: root.cfg_vertical_lookup_table = checked
             QQC2.ButtonGroup.group: layoutRadioGroup
         }
         QQC2.RadioButton {
-            text: i18nc("@option:radio IM list orientation", "Horizontal") // qmllint disable unqualified
+            text: i18nc("@option:radio IM list orientation", "Horizontal")
             checked: root.cfg_vertical_lookup_table == false
             onToggled: root.cfg_vertical_lookup_table = !checked
             QQC2.ButtonGroup.group: layoutRadioGroup
         }
 
         RowLayout {
-            Kirigami.FormData.label: i18nc("@title group font selection", "Font:") // qmllint disable unqualified
+            Kirigami.FormData.label: i18nc("@title group font selection", "Font:")
 
             QQC2.CheckBox {
                 id: useCustomFont
                 checked: !root.cfg_use_default_font
                 onClicked: root.cfg_use_default_font = !checked
-                text: i18nc("@option:check use custom font", "Use custom:") // qmllint disable unqualified
+                text: i18nc("@option:check use custom font", "Use custom:")
             }
 
             QQC2.TextField {
                 enabled: useCustomFont.checked
                 readOnly: true
-                text: i18nc("@info The selected font family (%1) and font size (%2)", "%1 %2 pt", font.family, font.pointSize) // qmllint disable unqualified
+                text: i18nc("@info The selected font family (%1) and font size (%2)", "%1 %2 pt", font.family, font.pointSize)
                 font: root.cfg_font
                 Layout.fillHeight: true
             }
@@ -62,7 +62,7 @@ KCM.SimpleKCM {
             QQC2.Button {
                 id: chooseFontButton
                 enabled: useCustomFont.checked
-                text: i18nc("@action:button opens font dialog", "Choose Font…") // qmllint disable unqualified
+                text: i18nc("@action:button opens font dialog", "Choose Font…")
                 display: QQC2.AbstractButton.IconOnly
                 icon.name: "document-edit"
                 onClicked: fontDialog.open();
@@ -75,8 +75,8 @@ KCM.SimpleKCM {
         }
 
         QQC2.RadioButton {
-            Kirigami.FormData.label: i18nc("@title:group The arrangement of icons in the Panel", "Panel icon size:") // qmllint disable unqualified
-            text: i18nc("@option:radio panel icon size", "Small") // qmllint disable unqualified
+            Kirigami.FormData.label: i18nc("@title:group The arrangement of icons in the Panel", "Panel icon size:")
+            text: i18nc("@option:radio panel icon size", "Small")
             checked: root.cfg_scaleIconsToFit == false
             onToggled: root.cfg_scaleIconsToFit = !checked
             QQC2.ButtonGroup.group: scaleRadioGroup
@@ -84,8 +84,8 @@ KCM.SimpleKCM {
         QQC2.RadioButton {
             id: automaticScaleRadioButton
             text: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
-                ? i18nc("@option:radio panel icon size", "Scale with Panel height") // qmllint disable unqualified
-                : i18nc("@option:radio panel icon size", "Scale with Panel width") // qmllint disable unqualified
+                ? i18nc("@option:radio panel icon size", "Scale with Panel height")
+                : i18nc("@option:radio panel icon size", "Scale with Panel width")
             checked: root.cfg_scaleIconsToFit == true
             onToggled: root.cfg_scaleIconsToFit = checked
             QQC2.ButtonGroup.group: scaleRadioGroup
@@ -93,7 +93,7 @@ KCM.SimpleKCM {
 
         QtDialogs.FontDialog {
             id: fontDialog
-            title: i18nc("@title:window", "Select Font") // qmllint disable unqualified
+            title: i18nc("@title:window", "Select Font")
 
             selectedFont: !root.cfg_font || root.cfg_font.family === "" ? Kirigami.Theme.defaultFont : root.cfg_font
 

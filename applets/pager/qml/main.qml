@@ -84,7 +84,7 @@ PlasmoidItem {
             + "</li></ul>";
 
         if (windows.length > maximum) {
-            text += i18ncp("@info:tooltip overflow label", "…and %1 other window", "…and %1 other windows", windows.length - maximum) // qmllint disable unqualified
+            text += i18ncp("@info:tooltip overflow label", "…and %1 other window", "…and %1 other windows", windows.length - maximum)
         }
 
         return text
@@ -349,7 +349,7 @@ PlasmoidItem {
                     if (visibleWindows.length === 1) {
                         text += visibleWindows[0]
                     } else if (visibleWindows.length > 1) {
-                        text += i18ncp("@info:tooltip start of list", "%1 Window:", "%1 Windows:", visibleWindows.length) // qmllint disable unqualified
+                        text += i18ncp("@info:tooltip start of list", "%1 Window:", "%1 Windows:", visibleWindows.length)
                             + root.generateWindowList(visibleWindows)
                     }
 
@@ -361,7 +361,7 @@ PlasmoidItem {
                     }
 
                     if (minimizedWindows.length > 0) {
-                        text += i18ncp("@info:tooltip", "%1 Minimized Window:", "%1 Minimized Windows:", minimizedWindows.length) // qmllint disable unqualified
+                        text += i18ncp("@info:tooltip", "%1 Minimized Window:", "%1 Minimized Windows:", minimizedWindows.length)
                             + root.generateWindowList(minimizedWindows)
                     }
 
@@ -437,8 +437,8 @@ PlasmoidItem {
                     onClicked: mouse => {
                         pagerModel.changePage(desktop.index);
                     }
-                    Accessible.name: Plasmoid.configuration.displayedText ? desktop.display : i18nc("@info:whatsthis Accessible name for pager section", "Desktop %1", (desktop.index + 1)) // qmllint disable unqualified
-                    Accessible.description: Plasmoid.configuration.displayedText ? i18nc("@info:tooltip %1 is the name of a virtual desktop or an activity", "Switch to %1", desktop.display) : i18nc("@info:tooltip %1 is the name of a virtual desktop or an activity", "Switch to %1", (desktop.index + 1)) // qmllint disable unqualified
+                    Accessible.name: Plasmoid.configuration.displayedText ? desktop.display : i18nc("@info:whatsthis Accessible name for pager section", "Desktop %1", (desktop.index + 1))
+                    Accessible.description: Plasmoid.configuration.displayedText ? i18nc("@info:tooltip %1 is the name of a virtual desktop or an activity", "Switch to %1", desktop.display) : i18nc("@info:tooltip %1 is the name of a virtual desktop or an activity", "Switch to %1", (desktop.index + 1))
                     Accessible.role: Accessible.Button
                     Keys.onPressed: event => {
                         switch (event.key) {
@@ -590,31 +590,31 @@ PlasmoidItem {
 
     Plasmoid.contextualActions: [
         PlasmaCore.Action {
-            text: i18nc("@action:inmenu widget context menu", "Show Activity Manager") // qmllint disable unqualified
+            text: i18nc("@action:inmenu widget context menu", "Show Activity Manager")
             icon.name: "activities"
             visible: root.isActivityPager
             onTriggered: ActivitySwitcher.Backend.toggleActivityManager()
         },
         PlasmaCore.Action {
-            text: i18nc("@action:inmenu widget context menu", "Add Virtual Desktop") // qmllint disable unqualified
+            text: i18nc("@action:inmenu widget context menu", "Add Virtual Desktop")
             icon.name: "list-add"
             visible: !root.isActivityPager && KConfig.KAuthorized.authorize("kcm_kwin_virtualdesktops")
             onTriggered: pagerModel.addDesktop()
         },
         PlasmaCore.Action {
-            text: i18nc("@action:inmenu widget context menu", "Remove Virtual Desktop") // qmllint disable unqualified
+            text: i18nc("@action:inmenu widget context menu", "Remove Virtual Desktop")
             icon.name: "list-remove"
             visible: !root.isActivityPager && KConfig.KAuthorized.authorize("kcm_kwin_virtualdesktops")
             enabled: repeater.count > 1
             onTriggered: pagerModel.removeDesktop()
         },
         PlasmaCore.Action {
-            text: i18nc("@action:inmenu widget context menu", "&Configure Activities…") // qmllint disable unqualified
+            text: i18nc("@action:inmenu widget context menu", "&Configure Activities…")
             visible: root.isActivityPager && KConfig.KAuthorized.authorize("kcm_activities")
             onTriggered: KCM.KCMLauncher.openSystemSettings("kcm_activities")
         },
         PlasmaCore.Action {
-            text: i18nc("@action:inmenu widget context menu", "Configure Virtual Desktops…") // qmllint disable unqualified
+            text: i18nc("@action:inmenu widget context menu", "Configure Virtual Desktops…")
             visible: !root.isActivityPager && KConfig.KAuthorized.authorize("kcm_kwin_virtualdesktops")
             onTriggered: {
                 if (Qt.platform.pluginName.includes("wayland"))

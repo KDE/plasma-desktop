@@ -10,7 +10,7 @@ import org.kde.plasma.configuration
 
 ConfigModel {
     ConfigCategory {
-         name: i18nc("@title:group for configuration dialog page", "Appearance") // qmllint disable unqualified
+         name: i18nc("@title:group for configuration dialog page", "Appearance")
          icon: "preferences-desktop-color"
          source: "ConfigAppearance.qml"
     }

@@ -89,7 +89,7 @@ Item {
     Component {
         id: emptyMenuItemComponent
         PlasmaExtras.MenuItem {
-            text: i18nc("@label placeholder for empty menu", "(Empty)") // qmllint disable unqualified
+            text: i18nc("@label placeholder for empty menu", "(Empty)")
             enabled: false
         }
     }

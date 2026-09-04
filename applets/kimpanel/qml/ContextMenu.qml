@@ -93,7 +93,7 @@ Item {
             PlasmaExtras.MenuItem {
                 id: showItem
                 visible: separatorItem.visible
-                text: i18nc("@action:inmenu", "Show") // qmllint disable unqualified
+                text: i18nc("@action:inmenu", "Show")
 
                 property PlasmaExtras.Menu _subShowMenu: PlasmaExtras.Menu {
                     id: subShowMenu
@@ -108,7 +108,7 @@ Item {
             }
 
             PlasmaExtras.MenuItem {
-                text: i18nc("@action:inmenu", "Hide %1", menu.actionItem.label) // qmllint disable unqualified
+                text: i18nc("@action:inmenu", "Hide %1", menu.actionItem.label)
                 onClicked: {
                     root.hideAction(menu.actionItem.key);
                 }
@@ -117,7 +117,7 @@ Item {
             }
 
             PlasmaExtras.MenuItem {
-                text: i18nc("@action:inmenu", "Configure Input Method") // qmllint disable unqualified
+                text: i18nc("@action:inmenu", "Configure Input Method")
                 icon: "configure"
                 onClicked: {
                     root.helper.configure();
@@ -125,7 +125,7 @@ Item {
             }
 
             PlasmaExtras.MenuItem {
-                text: i18nc("@action:inmenu", "Reload Config") // qmllint disable unqualified
+                text: i18nc("@action:inmenu", "Reload Config")
                 icon: "view-refresh"
                 onClicked: {
                     root.helper.reloadConfig();
@@ -133,7 +133,7 @@ Item {
             }
 
             PlasmaExtras.MenuItem {
-                text: i18nc("@action:inmenu", "Exit Input Method") // qmllint disable unqualified
+                text: i18nc("@action:inmenu", "Exit Input Method")
                 icon: "application-exit"
                 onClicked: {
                     root.helper.exit();
