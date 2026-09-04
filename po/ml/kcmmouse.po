@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:49+0000\n"
+"POT-Creation-Date: 2026-09-04 00:47+0000\n"
 "PO-Revision-Date: 2019-12-12 22:36+0000\n"
 "Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -214,10 +214,16 @@ msgstr "&സ്ക്രോള്‍ എതിര്‍ദിശയിലാക�
 #: ui/main.qml:363
 #, kde-format
 msgctxt "@option:check"
-msgid "Hold down middle button and move mouse to scroll"
+msgid "Scroll when moving the pointer"
 msgstr ""
 
-#: ui/main.qml:375
+#: ui/main.qml:383
+#, kde-format
+msgctxt "@option:radio"
+msgid "while pressing the middle button"
+msgstr ""
+
+#: ui/main.qml:396
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
@@ -225,6 +231,21 @@ msgid ""
 "some image editors, document viewers, or video games. It may be used on any "
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
+msgstr ""
+
+#: ui/main.qml:406
+#, kde-format
+msgctxt "@option:radio"
+msgid "after clicking the middle button"
+msgstr ""
+
+#: ui/main.qml:419
+#, kde-format
+msgctxt "@info:whatsthis ContextualHelpButton tooltip"
+msgid ""
+"This will interfere with middle-clicks in general; middle-click twice when "
+"you want the application to receive a single middle-click. This includes "
+"middle-click dragging."
 msgstr ""
 
 #~ msgctxt "NAME OF TRANSLATORS"

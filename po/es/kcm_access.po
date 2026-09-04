@@ -2,8 +2,8 @@
 # Copyright (C) 2001-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2001, 2002, 2005, 2006 Pablo de Vicente <pablo.devicente@gmail.com>
-# SPDX-FileCopyrightText: 2003, 2005, 2007, 2008 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2001-2002, 2005-2006 Pablo de Vicente <pablo.devicente@gmail.com>
+# SPDX-FileCopyrightText: 2003, 2005, 2007-2008 Jaime Robles <jaime@kde.org>
 # SPDX-FileCopyrightText: 2003 Miguel Revilla Rodríguez <yo@miguelrevilla.com>
 # SPDX-FileCopyrightText: 2005, 2010, 2014-2015, 2017, 2019-2026 Eloy Cuadra <ecuadra@eloihr.net>
 # SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcm_access\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-03 00:45+0000\n"
-"PO-Revision-Date: 2026-05-01 13:41+0100\n"
+"PO-Revision-Date: 2026-09-04 01:01+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Andrea Mara Pimenta Alonso <pimenta@conectiva.com.br>\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Lokalize 26.08.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kcmaccess.cpp:123 kcmaccess.cpp:151
@@ -129,37 +129,33 @@ msgstr "Indica si la corrección para daltonismo está activada"
 
 #. i18n: ectx: label, entry (DwellClicker), group (Plugins)
 #: kcmaccessibilitydwellclicker.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Whether Shake Pointer is enabled"
+#, kde-format
 msgid "Whether Dwell Clicker is enabled"
-msgstr "Indica si «Sacudir el puntero» está activado"
+msgstr "Indica si «Clic por inmovilidad» está activado"
 
 #. i18n: ectx: label, entry (DwellClickerDelayTime), group (Effect-dwellclicker)
 #: kcmaccessibilitydwellclicker.kcfg:19
-#, fuzzy, kde-format
-#| msgid "Delay for timeout"
+#, kde-format
 msgid "Delay Time"
-msgstr "Demora para la espera"
+msgstr "Tiempo de retardo"
 
 #. i18n: ectx: label, entry (DwellClickerDwellTime), group (Effect-dwellclicker)
 #: kcmaccessibilitydwellclicker.kcfg:24
 #, kde-format
 msgid "Dwell Time"
-msgstr ""
+msgstr "Tiempo de inmovilidad"
 
 #. i18n: ectx: label, entry (DwellClickerDwellColor), group (Effect-dwellclicker)
 #: kcmaccessibilitydwellclicker.kcfg:29
-#, fuzzy, kde-format
-#| msgctxt "Color of the system bell"
-#| msgid "Color"
+#, kde-format
 msgid "Dwell Color"
-msgstr "Color"
+msgstr "Color de inmovilidad"
 
 #. i18n: ectx: label, entry (DwellClickerMotionThreshold), group (Effect-dwellclicker)
 #: kcmaccessibilitydwellclicker.kcfg:33
 #, kde-format
 msgid "Motion Threshold"
-msgstr ""
+msgstr "Umbral de movimiento"
 
 #. i18n: ectx: label, entry (Invert), group (Plugins)
 #: kcmaccessibilityinvert.kcfg:9
@@ -512,12 +508,10 @@ msgstr "Morados:"
 #, kde-format
 msgctxt "@label"
 msgid "Click when pointer remains still:"
-msgstr ""
+msgstr "Hacer clic cuando el puntero permanece inmóvil:"
 
 #: ui/DwellClicker.qml:21
-#, fuzzy, kde-format
-#| msgctxt "Enable the system bell"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable dwell clicker effect"
 msgid "Enable"
 msgstr "Activar"
@@ -528,18 +522,17 @@ msgctxt "@info:tooltip"
 msgid ""
 "Automatically click when pointer remains still for a set amount of time."
 msgstr ""
+"Hacer clic automáticamente cuando el puntero permanece inmóvil durante "
+"cierto tiempo."
 
 #: ui/DwellClicker.qml:39
 #, kde-format
 msgctxt "@label:spinbox Slow keys Delay"
 msgid "Motion Threshold:"
-msgstr ""
+msgstr "Umbral de movimiento:"
 
 #: ui/DwellClicker.qml:55
-#, fuzzy, kde-format
-#| msgctxt "short for pixel(s)"
-#| msgid "%1 px"
-#| msgid_plural "%1 px"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is the motion threshold"
 msgid "%1 px"
 msgid_plural "%1 px"
@@ -547,9 +540,7 @@ msgstr[0] "%1 px"
 msgstr[1] "%1 px"
 
 #: ui/DwellClicker.qml:64
-#, fuzzy, kde-format
-#| msgctxt "short for pixel(s)"
-#| msgid "px"
+#, kde-format
 msgctxt "@label:valuesuffix short for pixel(s)"
 msgid "px"
 msgid_plural "px"
@@ -557,18 +548,13 @@ msgstr[0] "px"
 msgstr[1] "px"
 
 #: ui/DwellClicker.qml:70
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox Slow keys Delay"
-#| msgid "Delay:"
+#, kde-format
 msgctxt "@label:spinbox Dwell clicker delay time"
 msgid "Delay Time:"
-msgstr "Demora:"
+msgstr "Tiempo de retardo:"
 
 #: ui/DwellClicker.qml:86
-#, fuzzy, kde-format
-#| msgctxt "@label:valuesuffix %1 is visible bell duration"
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is the delay time"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -579,13 +565,10 @@ msgstr[1] "%1 ms"
 #, kde-format
 msgctxt "@label:spinbox Dwell clicker dwell time"
 msgid "Dwell Time:"
-msgstr ""
+msgstr "Tiempo de inmovilidad:"
 
 #: ui/DwellClicker.qml:117
-#, fuzzy, kde-format
-#| msgctxt "@label:valuesuffix %1 is visible bell duration"
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is the dwell time"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -596,7 +579,7 @@ msgstr[1] "%1 ms"
 #, kde-format
 msgctxt "@label:button Dwell clicker dwell color"
 msgid "Dwell Color:"
-msgstr ""
+msgstr "Color de inmovilidad:"
 
 #: ui/Invert.qml:17
 #, kde-format
@@ -765,7 +748,7 @@ msgstr "Navegación con el ratón"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Dwell Clicker"
-msgstr ""
+msgstr "Clic por inmovilidad"
 
 #: ui/main.qml:64
 #, kde-format
@@ -1175,115 +1158,3 @@ msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr ""
 "Desplazar para ampliar mientras están pulsadas las teclas modificadoras"
-
-#~ msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
-#~ msgid "%1 ms"
-#~ msgid_plural "%1 ms"
-#~ msgstr[0] "%1 ms"
-#~ msgstr[1] "%1 ms"
-
-#~ msgid "Enable Screen Reader"
-#~ msgstr "Activar el lector de pantalla"
-
-#~ msgctxt "@label Hint for zoom/magnify effect usage"
-#~ msgid "Use shortcuts to control zoom"
-#~ msgstr "Usar atajos de teclado para controlar la ampliación"
-
-#~ msgctxt "@option:check"
-#~ msgid "Enable focus tracking"
-#~ msgstr "Activar seguimiento del foco"
-
-#~ msgctxt "@info:tooltip, indicates feature unavailable on X11"
-#~ msgid "Zoom scroll gestures are only available on Wayland."
-#~ msgstr ""
-#~ "Los gestos del desplazamiento de ampliación solo están disponibles en "
-#~ "Wayland."
-
-#~ msgid "Use Gestures"
-#~ msgstr "Usar gestos"
-
-#~ msgid "Ask for Confirmation for a gesture"
-#~ msgstr "Pedir confirmación para un gesto"
-
-#~ msgid "Confirm access to the Keyboard"
-#~ msgstr "Confirmar acceso al teclado"
-
-#~ msgid "Use a timeout delay"
-#~ msgstr "Usar una demora de espera"
-
-#~ msgid "Use a beep for access"
-#~ msgstr "Usar un pitido para acceder"
-
-#~ msgctxt "@option:check"
-#~ msgid "Activation shortcuts:"
-#~ msgstr "Atajos de teclado de activación:"
-
-#~ msgctxt "Enable activation shortcuts"
-#~ msgid "Enable"
-#~ msgstr "Activar"
-
-#~ msgctxt "@label"
-#~ msgid "Press Shift 5 times to enable Sticky Keys"
-#~ msgstr ""
-#~ "Pulsar 5 veces la tecla Mayúsculas para activar las teclas adhesivas"
-
-#~ msgctxt "@label"
-#~ msgid "Hold Shift for 8 seconds to enable Slow Keys"
-#~ msgstr ""
-#~ "Pulsar la tecla Mayúsculas 8 segundos para activar las teclas lentas"
-
-#~ msgctxt "@option:check"
-#~ msgid "Disable sticky and slow keys after:"
-#~ msgstr "Desactivar las teclas adhesivas y las teclas lentas tras:"
-
-#~ msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
-#~ msgid "%1 min"
-#~ msgid_plural "%1 min"
-#~ msgstr[0] "%1 minuto"
-#~ msgstr[1] "%1 minutos"
-
-#~ msgctxt "short for minute(s)"
-#~ msgid "min"
-#~ msgid_plural "min"
-#~ msgstr[0] "minuto"
-#~ msgstr[1] "minutos"
-
-#~ msgctxt "@title:group for checkbox group"
-#~ msgid "When a shortcut is used:"
-#~ msgstr "Cuando se usa un atajo de teclado:"
-
-#~ msgctxt "@option:check when shortcut used"
-#~ msgid "Display a confirmation dialog"
-#~ msgstr "Mostrar un diálogo de confirmación"
-
-#~ msgctxt "@option:check when shortcut used"
-#~ msgid "Ring the system bell"
-#~ msgstr "Hacer sonar el timbre del sistema"
-
-#~ msgctxt "@option:check when shortcut used"
-#~ msgid "Show a notification"
-#~ msgstr "Mostrar una notificación"
-
-#~ msgctxt "@action:button opens Notifications kcm"
-#~ msgid "Configure Notifications…"
-#~ msgstr "Configurar notificaciones…"
-
-#~ msgctxt "@title Category name in sidebar"
-#~ msgid "Activation Shortcuts"
-#~ msgstr "Atajos de teclado de activación"
-
-#~ msgctxt "@label:listbox"
-#~ msgid "Pointer appearance:"
-#~ msgstr "Aspecto del puntero:"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Scale"
-#~ msgstr "Escalar"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Keep"
-#~ msgstr "Conservar"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Hide"
-#~ msgstr "Ocultar"

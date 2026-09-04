@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:49+0000\n"
+"POT-Creation-Date: 2026-09-04 00:47+0000\n"
 "PO-Revision-Date: 2026-02-03 21:46+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -222,10 +222,16 @@ msgstr "스크롤 방향 뒤집기"
 #: ui/main.qml:363
 #, kde-format
 msgctxt "@option:check"
-msgid "Hold down middle button and move mouse to scroll"
-msgstr "마우스 가운데 단추를 누르면서 이동하여 스크롤"
+msgid "Scroll when moving the pointer"
+msgstr ""
 
-#: ui/main.qml:375
+#: ui/main.qml:383
+#, kde-format
+msgctxt "@option:radio"
+msgid "while pressing the middle button"
+msgstr ""
+
+#: ui/main.qml:396
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
@@ -237,6 +243,25 @@ msgstr ""
 "일부 그림 편집기, 문서 뷰어, 게임 등 가운데 단추 드래그를 사용하는 앱에서는 "
 "의도한 대로 작동하지 않을 수도 있습니다. 장치에 관계 없이 사용할 수 있으나, "
 "스크롤 휠이 없는 장치에서 스크롤 휠 대체용으로 사용될 것을 가정했습니다."
+
+#: ui/main.qml:406
+#, kde-format
+msgctxt "@option:radio"
+msgid "after clicking the middle button"
+msgstr ""
+
+#: ui/main.qml:419
+#, kde-format
+msgctxt "@info:whatsthis ContextualHelpButton tooltip"
+msgid ""
+"This will interfere with middle-clicks in general; middle-click twice when "
+"you want the application to receive a single middle-click. This includes "
+"middle-click dragging."
+msgstr ""
+
+#~ msgctxt "@option:check"
+#~ msgid "Hold down middle button and move mouse to scroll"
+#~ msgstr "마우스 가운데 단추를 누르면서 이동하여 스크롤"
 
 #~ msgid "Not able to select appropriate backend"
 #~ msgstr "적합한 백엔드를 선택할 수 없음"

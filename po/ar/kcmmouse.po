@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:49+0000\n"
+"POT-Creation-Date: 2026-09-04 00:47+0000\n"
 "PO-Revision-Date: 2026-01-08 11:30+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -229,10 +229,16 @@ msgstr "اعكس اتّجاه التّمرير"
 #: ui/main.qml:363
 #, kde-format
 msgctxt "@option:check"
-msgid "Hold down middle button and move mouse to scroll"
-msgstr "اضغط باستمرار على الزر الأوسط وحرك الفأرة للتمرير"
+msgid "Scroll when moving the pointer"
+msgstr ""
 
-#: ui/main.qml:375
+#: ui/main.qml:383
+#, kde-format
+msgctxt "@option:radio"
+msgid "while pressing the middle button"
+msgstr ""
+
+#: ui/main.qml:396
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
@@ -245,6 +251,25 @@ msgstr ""
 "تحرير الصور أو عارضات المستندات أو ألعاب الفيديو. يمكن استخدامه على أي جهاز، "
 "ولكنه مخصص بشكل أساسي كبديل لعجلات التمرير على الأجهزة التي لا تحتوي على أي "
 "منها."
+
+#: ui/main.qml:406
+#, kde-format
+msgctxt "@option:radio"
+msgid "after clicking the middle button"
+msgstr ""
+
+#: ui/main.qml:419
+#, kde-format
+msgctxt "@info:whatsthis ContextualHelpButton tooltip"
+msgid ""
+"This will interfere with middle-clicks in general; middle-click twice when "
+"you want the application to receive a single middle-click. This includes "
+"middle-click dragging."
+msgstr ""
+
+#~ msgctxt "@option:check"
+#~ msgid "Hold down middle button and move mouse to scroll"
+#~ msgstr "اضغط باستمرار على الزر الأوسط وحرك الفأرة للتمرير"
 
 #~ msgid "Not able to select appropriate backend"
 #~ msgstr "غير قادر على تحديد الواجهة الخلفية المناسبة"

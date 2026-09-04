@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:49+0000\n"
+"POT-Creation-Date: 2026-09-04 00:47+0000\n"
 "PO-Revision-Date: 2026-01-08 17:58+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -238,10 +238,17 @@ msgstr "Scrollrichting omdraaien"
 #: ui/main.qml:363
 #, kde-format
 msgctxt "@option:check"
-msgid "Hold down middle button and move mouse to scroll"
-msgstr "Middelste muisknop ingedrukt houden en muis verplaatsen om te schuiven"
+msgid "Scroll when moving the pointer"
+msgstr ""
 
-#: ui/main.qml:375
+#: ui/main.qml:383
+#, fuzzy, kde-format
+#| msgid "Emulate middle button"
+msgctxt "@option:radio"
+msgid "while pressing the middle button"
+msgstr "Middelste muisknop emuleren"
+
+#: ui/main.qml:396
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
@@ -254,6 +261,27 @@ msgstr ""
 "gebruiken, zoals sommige afbeeldingsbewerkers, documentviewers of "
 "videogames. Het kan gebruikt worden op elke apparaat, maar is primair "
 "bedoeld als een vervanger voor draaiwielen op apparaten die er geen hebben."
+
+#: ui/main.qml:406
+#, fuzzy, kde-format
+#| msgid "Emulate middle button"
+msgctxt "@option:radio"
+msgid "after clicking the middle button"
+msgstr "Middelste muisknop emuleren"
+
+#: ui/main.qml:419
+#, kde-format
+msgctxt "@info:whatsthis ContextualHelpButton tooltip"
+msgid ""
+"This will interfere with middle-clicks in general; middle-click twice when "
+"you want the application to receive a single middle-click. This includes "
+"middle-click dragging."
+msgstr ""
+
+#~ msgctxt "@option:check"
+#~ msgid "Hold down middle button and move mouse to scroll"
+#~ msgstr ""
+#~ "Middelste muisknop ingedrukt houden en muis verplaatsen om te schuiven"
 
 #~ msgid "Not able to select appropriate backend"
 #~ msgstr "Niet in staat een toepasselijke backend te selecteren"
@@ -549,9 +577,6 @@ msgstr ""
 
 #~ msgid "General settings:"
 #~ msgstr "Algemene instellingen:"
-
-#~ msgid "Emulate middle button"
-#~ msgstr "Middelste muisknop emuleren"
 
 #~ msgid "Acceleration:"
 #~ msgstr "Versnelling:"

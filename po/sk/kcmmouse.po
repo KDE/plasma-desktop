@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:49+0000\n"
+"POT-Creation-Date: 2026-09-04 00:47+0000\n"
 "PO-Revision-Date: 2025-05-30 20:36+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -231,10 +231,16 @@ msgstr "Obrátiť smer rolovania"
 #: ui/main.qml:363
 #, kde-format
 msgctxt "@option:check"
-msgid "Hold down middle button and move mouse to scroll"
-msgstr "Podržte stredné tlačidlo a pohybujte myšou, aby ste posúvali"
+msgid "Scroll when moving the pointer"
+msgstr ""
 
-#: ui/main.qml:375
+#: ui/main.qml:383
+#, kde-format
+msgctxt "@option:radio"
+msgid "while pressing the middle button"
+msgstr ""
+
+#: ui/main.qml:396
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
@@ -247,6 +253,25 @@ msgstr ""
 "ako sú niektoré editory obrázkov, prehliadače dokumentov alebo videohry. "
 "Môže sa používať na akomkoľvek zariadení, ale je určený predovšetkým ako "
 "náhrada za rolovacie kolieska na zariadeniach, ktoré ich nemajú."
+
+#: ui/main.qml:406
+#, kde-format
+msgctxt "@option:radio"
+msgid "after clicking the middle button"
+msgstr ""
+
+#: ui/main.qml:419
+#, kde-format
+msgctxt "@info:whatsthis ContextualHelpButton tooltip"
+msgid ""
+"This will interfere with middle-clicks in general; middle-click twice when "
+"you want the application to receive a single middle-click. This includes "
+"middle-click dragging."
+msgstr ""
+
+#~ msgctxt "@option:check"
+#~ msgid "Hold down middle button and move mouse to scroll"
+#~ msgstr "Podržte stredné tlačidlo a pohybujte myšou, aby ste posúvali"
 
 #~ msgid "Not able to select appropriate backend"
 #~ msgstr "Nie je možné vybrať vhodný backend"

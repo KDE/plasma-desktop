@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:49+0000\n"
+"POT-Creation-Date: 2026-09-04 00:47+0000\n"
 "PO-Revision-Date: 2026-01-08 05:30+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -223,10 +223,16 @@ msgstr "გადახვევის მიმართულების ი�
 #: ui/main.qml:363
 #, kde-format
 msgctxt "@option:check"
-msgid "Hold down middle button and move mouse to scroll"
-msgstr "გადასახვევად დააწექით შუა ღილაკს და გაამოძრავეთ თაგუნა"
+msgid "Scroll when moving the pointer"
+msgstr ""
 
-#: ui/main.qml:375
+#: ui/main.qml:383
+#, kde-format
+msgctxt "@option:radio"
+msgid "while pressing the middle button"
+msgstr ""
+
+#: ui/main.qml:396
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
@@ -240,6 +246,25 @@ msgstr ""
 "თამაშები. შეიძლება, გამოყენებული იყოს ნებისმიერ მოწყობილობაზე, მაგრამ "
 "ძირითადად განკუთვნილია, ჩაანაცვლოს გადახვევის ბორბალი მოწყობილობებზე, "
 "რომლებსაც ის არ აქვთ."
+
+#: ui/main.qml:406
+#, kde-format
+msgctxt "@option:radio"
+msgid "after clicking the middle button"
+msgstr ""
+
+#: ui/main.qml:419
+#, kde-format
+msgctxt "@info:whatsthis ContextualHelpButton tooltip"
+msgid ""
+"This will interfere with middle-clicks in general; middle-click twice when "
+"you want the application to receive a single middle-click. This includes "
+"middle-click dragging."
+msgstr ""
+
+#~ msgctxt "@option:check"
+#~ msgid "Hold down middle button and move mouse to scroll"
+#~ msgstr "გადასახვევად დააწექით შუა ღილაკს და გაამოძრავეთ თაგუნა"
 
 #~ msgid "Not able to select appropriate backend"
 #~ msgstr "შეუძლებელია შესაბამისი უკანაბოლოს არჩევა"

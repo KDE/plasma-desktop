@@ -230,7 +230,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "upwards"
 msgid "Clockwise:"
-msgstr ""
+msgstr "顺时针："
 
 #: ui/ActionDialog.qml:257
 #, kde-format
@@ -238,7 +238,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "downwards"
 msgid "Counterclockwise:"
-msgstr ""
+msgstr "逆时针："
 
 #: ui/ActionDialog.qml:271
 #, kde-format
@@ -329,7 +329,7 @@ msgstr "压感笔校准"
 #, kde-format
 msgctxt "@info"
 msgid "%1: (%2 px, %3 px)"
-msgstr ""
+msgstr "%1：(%2 像素，%3 像素)"
 
 #: ui/Calibration.qml:107
 #, kde-format
@@ -337,7 +337,7 @@ msgctxt "@info"
 msgid ""
 "Applied center correction (%1 px, %2 px). Retap the targets to redo the "
 "correction."
-msgstr ""
+msgstr "已应用中心校准 (%1 像素，%2 像素)。再次点击目标可以重新校准。"
 
 #: ui/Calibration.qml:173
 #, kde-kuit-format
@@ -361,6 +361,9 @@ msgid ""
 "Tap the center target once to fine-tune alignment. You can retap the other "
 "targets to verify the result."
 msgstr ""
+"校准已完成并保存。\n"
+"\n"
+"点击中心目标以微调对齐。点击其他目标以验证校准结果。"
 
 #: ui/Calibration.qml:180
 #, kde-format
@@ -375,6 +378,8 @@ msgid ""
 "Offset Correction:\n"
 "%1"
 msgstr ""
+"偏移校准：\n"
+"%1"
 
 #: ui/Calibration.qml:216
 #, kde-format
@@ -410,31 +415,31 @@ msgstr "取消"
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-left"
-msgstr ""
+msgstr "左上"
 
 #: ui/Calibration.qml:334
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-right"
-msgstr ""
+msgstr "右上"
 
 #: ui/Calibration.qml:353
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-left"
-msgstr ""
+msgstr "左下"
 
 #: ui/Calibration.qml:372
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-right"
-msgstr ""
+msgstr "右下"
 
 #: ui/Calibration.qml:391
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Center"
-msgstr ""
+msgstr "中心"
 
 #: ui/DisplayTab.qml:46
 #, kde-format

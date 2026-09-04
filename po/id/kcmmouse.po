@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:49+0000\n"
+"POT-Creation-Date: 2026-09-04 00:47+0000\n"
 "PO-Revision-Date: 2025-03-15 06:31+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -242,13 +242,18 @@ msgid "Invert scroll direction"
 msgstr "Kebalikan arah gulir"
 
 #: ui/main.qml:363
-#, fuzzy, kde-format
-#| msgid "Press middle button and move mouse to scroll"
+#, kde-format
 msgctxt "@option:check"
-msgid "Hold down middle button and move mouse to scroll"
-msgstr "Tekan tombol tengah dan pindahkan mouse untuk gulir"
+msgid "Scroll when moving the pointer"
+msgstr ""
 
-#: ui/main.qml:375
+#: ui/main.qml:383
+#, kde-format
+msgctxt "@option:radio"
+msgid "while pressing the middle button"
+msgstr ""
+
+#: ui/main.qml:396
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
@@ -257,6 +262,27 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+
+#: ui/main.qml:406
+#, kde-format
+msgctxt "@option:radio"
+msgid "after clicking the middle button"
+msgstr ""
+
+#: ui/main.qml:419
+#, kde-format
+msgctxt "@info:whatsthis ContextualHelpButton tooltip"
+msgid ""
+"This will interfere with middle-clicks in general; middle-click twice when "
+"you want the application to receive a single middle-click. This includes "
+"middle-click dragging."
+msgstr ""
+
+#, fuzzy
+#~| msgid "Press middle button and move mouse to scroll"
+#~ msgctxt "@option:check"
+#~ msgid "Hold down middle button and move mouse to scroll"
+#~ msgstr "Tekan tombol tengah dan pindahkan mouse untuk gulir"
 
 #~ msgid "Not able to select appropriate backend"
 #~ msgstr "Tidak dapat memilih backend yang sesuai"

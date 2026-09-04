@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:49+0000\n"
+"POT-Creation-Date: 2026-09-04 00:47+0000\n"
 "PO-Revision-Date: 2026-06-18 21:42+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -225,11 +225,16 @@ msgstr "Görgetés irányának megfordítása"
 #: ui/main.qml:363
 #, kde-format
 msgctxt "@option:check"
-msgid "Hold down middle button and move mouse to scroll"
+msgid "Scroll when moving the pointer"
 msgstr ""
-"Tartsa lenyomva a középső egérgombot és mozgassa az egeret a görgetéshez"
 
-#: ui/main.qml:375
+#: ui/main.qml:383
+#, kde-format
+msgctxt "@option:radio"
+msgid "while pressing the middle button"
+msgstr ""
+
+#: ui/main.qml:396
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
@@ -242,6 +247,26 @@ msgstr ""
 "példáulegyes képszerkesztők, dokumentummegjelenítők vagy videojátékok. "
 "Bármilyen eszközön használható, de elsősorban a görgetőkerekek "
 "helyettesítésére szolgál olyan eszközökön, amelyek nem rendelkeznek azzal."
+
+#: ui/main.qml:406
+#, kde-format
+msgctxt "@option:radio"
+msgid "after clicking the middle button"
+msgstr ""
+
+#: ui/main.qml:419
+#, kde-format
+msgctxt "@info:whatsthis ContextualHelpButton tooltip"
+msgid ""
+"This will interfere with middle-clicks in general; middle-click twice when "
+"you want the application to receive a single middle-click. This includes "
+"middle-click dragging."
+msgstr ""
+
+#~ msgctxt "@option:check"
+#~ msgid "Hold down middle button and move mouse to scroll"
+#~ msgstr ""
+#~ "Tartsa lenyomva a középső egérgombot és mozgassa az egeret a görgetéshez"
 
 #~ msgid "Not able to select appropriate backend"
 #~ msgstr "Nem lehet kiválasztani a megfelelő háttéralkalmazást"

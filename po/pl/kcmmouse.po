@@ -1,4 +1,4 @@
-# Version: $Revision: 1743592 $
+# Version: $Revision: 1745488 $
 # translation of kcminput.po to
 # SPDX-FileCopyrightText: 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Piotr Roszatycki <dexter@debian.org>, 1998-2000.
@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:49+0000\n"
+"POT-Creation-Date: 2026-09-04 00:47+0000\n"
 "PO-Revision-Date: 2026-01-24 10:20+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -228,10 +228,17 @@ msgstr "Odwróć kierunek przewijania"
 #: ui/main.qml:363
 #, kde-format
 msgctxt "@option:check"
-msgid "Hold down middle button and move mouse to scroll"
-msgstr "Przytrzymaj środkowy przycisk i przesuń myszą, aby przewinąć"
+msgid "Scroll when moving the pointer"
+msgstr ""
 
-#: ui/main.qml:375
+#: ui/main.qml:383
+#, fuzzy, kde-format
+#| msgid "Emulate middle button"
+msgctxt "@option:radio"
+msgid "while pressing the middle button"
+msgstr "Emuluj środkowy przycisk"
+
+#: ui/main.qml:396
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
@@ -244,6 +251,26 @@ msgstr ""
 "środkowym, jak np. edytory obrazów, przeglądarki dokumentów, czy gry "
 "komputerowe. Można tego użyć na dowolnym urządzeniu, ale docelowo zostało "
 "przewidziane jako rolka do przewijania dla urządzeń, które takiej nie mają."
+
+#: ui/main.qml:406
+#, fuzzy, kde-format
+#| msgid "Emulate middle button"
+msgctxt "@option:radio"
+msgid "after clicking the middle button"
+msgstr "Emuluj środkowy przycisk"
+
+#: ui/main.qml:419
+#, kde-format
+msgctxt "@info:whatsthis ContextualHelpButton tooltip"
+msgid ""
+"This will interfere with middle-clicks in general; middle-click twice when "
+"you want the application to receive a single middle-click. This includes "
+"middle-click dragging."
+msgstr ""
+
+#~ msgctxt "@option:check"
+#~ msgid "Hold down middle button and move mouse to scroll"
+#~ msgstr "Przytrzymaj środkowy przycisk i przesuń myszą, aby przewinąć"
 
 #~ msgid "Not able to select appropriate backend"
 #~ msgstr "Nie można wybrać nadającego się silnika"
@@ -529,9 +556,6 @@ msgstr ""
 
 #~ msgid "General settings:"
 #~ msgstr "Ustawienia ogólne:"
-
-#~ msgid "Emulate middle button"
-#~ msgstr "Emuluj środkowy przycisk"
 
 #~ msgid "Acceleration:"
 #~ msgstr "Przyspieszenie:"

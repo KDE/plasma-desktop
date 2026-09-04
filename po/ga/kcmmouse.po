@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:49+0000\n"
+"POT-Creation-Date: 2026-09-04 00:47+0000\n"
 "PO-Revision-Date: 2026-01-21 11:04+0000\n"
 "Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
 "Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
@@ -223,10 +223,16 @@ msgstr "Inbhéartaigh treo an scrolla"
 #: ui/main.qml:363
 #, kde-format
 msgctxt "@option:check"
-msgid "Hold down middle button and move mouse to scroll"
-msgstr "Coinnigh síos an cnaipe lár agus bog an luch le scrollú"
+msgid "Scroll when moving the pointer"
+msgstr ""
 
-#: ui/main.qml:375
+#: ui/main.qml:383
+#, kde-format
+msgctxt "@option:radio"
+msgid "while pressing the middle button"
+msgstr ""
+
+#: ui/main.qml:396
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
@@ -239,6 +245,25 @@ msgstr ""
 "amhail roinnt eagarthóirí íomhá, breathnóirí doiciméad, nó cluichí físeáin. "
 "Is féidir é a úsáid ar aon fheiste, ach tá sé beartaithe go príomha mar "
 "ionadach ar rothaí scrolla ar fheistí nach bhfuil aon cheann acu."
+
+#: ui/main.qml:406
+#, kde-format
+msgctxt "@option:radio"
+msgid "after clicking the middle button"
+msgstr ""
+
+#: ui/main.qml:419
+#, kde-format
+msgctxt "@info:whatsthis ContextualHelpButton tooltip"
+msgid ""
+"This will interfere with middle-clicks in general; middle-click twice when "
+"you want the application to receive a single middle-click. This includes "
+"middle-click dragging."
+msgstr ""
+
+#~ msgctxt "@option:check"
+#~ msgid "Hold down middle button and move mouse to scroll"
+#~ msgstr "Coinnigh síos an cnaipe lár agus bog an luch le scrollú"
 
 #~ msgid "Not able to select appropriate backend"
 #~ msgstr "Ní féidir an cúltaca cuí a roghnú"
