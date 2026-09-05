@@ -26,8 +26,6 @@ ItemAbstractDelegate {
     hoverEnabled: true
     dragActive: dragHandler.active
 
-    Keys.onSpacePressed: action.trigger()
-
     background.visible: false // we want the default background's spacing, but not the base color
     contentItem: Kirigami.Icon {
         visible: !item.showUnfavoritePlaceholder && !item.isDropPlaceHolder
