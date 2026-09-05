@@ -1,5 +1,5 @@
 # Translation of kcmmouse.po to Catalan
-# Copyright (C) 1998-2025 This_file_is_part_of_KDE
+# Copyright (C) 1998-2026 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
@@ -7,13 +7,13 @@
 # SPDX-FileCopyrightText: 2003, 2011, 2014, 2018, 2020 Antoni Bella Pérez <antonibella5@yahoo.com>
 # SPDX-FileCopyrightText: 2004-2005 Albert Astals Cid <aacid@kde.org>
 # SPDX-FileCopyrightText: 2019 Empar Montoro Martín <montoro_mde@gva.es>
-# SPDX-FileCopyrightText: 2007-2012, 2015-2025 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2007-2012, 2015-2026 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-04 00:47+0000\n"
-"PO-Revision-Date: 2025-12-04 11:42+0100\n"
+"PO-Revision-Date: 2026-09-04 09:54+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -235,13 +235,13 @@ msgstr "Inverteix la direcció de desplaçament"
 #, kde-format
 msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
-msgstr ""
+msgstr "Desplaça en moure el punter"
 
 #: ui/main.qml:383
 #, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
-msgstr ""
+msgstr "mentre es prem el botó del mig"
 
 #: ui/main.qml:396
 #, kde-format
@@ -262,7 +262,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
-msgstr ""
+msgstr "després de fer clic al botó del mig"
 
 #: ui/main.qml:419
 #, kde-format
@@ -272,6 +272,9 @@ msgid ""
 "you want the application to receive a single middle-click. This includes "
 "middle-click dragging."
 msgstr ""
+"Això interferirà amb els clics del mig en general; feu clic del mig dues "
+"vegades quan vulgueu que l'aplicació rebi un únic clic del mig. Això inclou "
+"l'arrossegament amb el clic del mig."
 
 #~ msgctxt "@option:check"
 #~ msgid "Hold down middle button and move mouse to scroll"

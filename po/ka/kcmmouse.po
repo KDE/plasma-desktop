@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-04 00:47+0000\n"
-"PO-Revision-Date: 2026-01-08 05:30+0100\n"
+"PO-Revision-Date: 2026-09-04 07:49+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: inputbackend.cpp:49
 #, kde-format
@@ -224,13 +224,13 @@ msgstr "გადახვევის მიმართულების ი�
 #, kde-format
 msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
-msgstr ""
+msgstr "გადახვევა მაჩვენებლის გადაადგილებისას"
 
 #: ui/main.qml:383
 #, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
-msgstr ""
+msgstr "შუა ღილაკზე დაჭერისას"
 
 #: ui/main.qml:396
 #, kde-format
@@ -251,7 +251,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
-msgstr ""
+msgstr "შუა ღილაკზე დაწკაპუნების შემდეგ"
 
 #: ui/main.qml:419
 #, kde-format
@@ -261,6 +261,8 @@ msgid ""
 "you want the application to receive a single middle-click. This includes "
 "middle-click dragging."
 msgstr ""
+"ეს ხელს შეუშლის ზოგადად შუა დაწკაპუნებებს; შუა წკაპი ორჯერ, როდესაც გსურთ, "
+"რომ აპლიკაციამ მიიღოს ერთი შუა წკაპი. ეს მოიცავს შუა წკაპით გადატანას."
 
 #~ msgctxt "@option:check"
 #~ msgid "Hold down middle button and move mouse to scroll"

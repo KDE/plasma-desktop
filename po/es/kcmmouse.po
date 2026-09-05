@@ -2,20 +2,20 @@
 # Copyright (C) 2000-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2000, 2001, 2002, 2004, 2005, 2006 Pablo de Vicente <pablo.devicente@gmail.com>
-# SPDX-FileCopyrightText: 2003, 2004 Miguel Revilla Rodríguez <yo@miguelrevilla.com>
-# SPDX-FileCopyrightText: 2003, 2007, 2008, 2009 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2000-2002, 2004-2006 Pablo de Vicente <pablo.devicente@gmail.com>
+# SPDX-FileCopyrightText: 2003-2004 Miguel Revilla Rodríguez <yo@miguelrevilla.com>
+# SPDX-FileCopyrightText: 2003, 2007-2009 Jaime Robles <jaime@kde.org>
 # SPDX-FileCopyrightText: 2005 Juan Manuel Garcia Molina <juanma@superiodico.net>
 # SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
-# SPDX-FileCopyrightText: 2008, 2009, 2014, 2015, 2016, 2017, 2018, 2020, 2022, 2023, 2024, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
-# SPDX-FileCopyrightText: 2010, 2011 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
-# SPDX-FileCopyrightText: 2011, 2012 Javier Vinal <fjvinal@gmail.com>
+# SPDX-FileCopyrightText: 2008-2009, 2014-2018, 2020, 2022-2026 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2010-2011 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
+# SPDX-FileCopyrightText: 2011-2012 Javier Vinal <fjvinal@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-04 00:47+0000\n"
-"PO-Revision-Date: 2026-01-09 00:40+0100\n"
+"PO-Revision-Date: 2026-09-04 23:43+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 26.08.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: inputbackend.cpp:49
@@ -238,13 +238,13 @@ msgstr "Invertir la dirección de desplazamiento"
 #, kde-format
 msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
-msgstr ""
+msgstr "Desplazar al mover el puntero"
 
 #: ui/main.qml:383
 #, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
-msgstr ""
+msgstr "mientras se pulsa el botón central"
 
 #: ui/main.qml:396
 #, kde-format
@@ -265,7 +265,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
-msgstr ""
+msgstr "tras pulsar el botón central"
 
 #: ui/main.qml:419
 #, kde-format
@@ -275,15 +275,6 @@ msgid ""
 "you want the application to receive a single middle-click. This includes "
 "middle-click dragging."
 msgstr ""
-
-#~ msgctxt "@option:check"
-#~ msgid "Hold down middle button and move mouse to scroll"
-#~ msgstr "Mantener pulsado el botón central y mover el ratón para desplazar"
-
-#~ msgid "Not able to select appropriate backend"
-#~ msgstr "No se puede seleccionar el motor apropiado"
-
-#~ msgid "Querying input devices failed. Please reopen this settings module."
-#~ msgstr ""
-#~ "La consulta de los dispositivos de entrada ha fallado. Por favor, vuelva "
-#~ "a abrir este módulo de preferencias."
+"Esto interferirá con los clics del botón central en general; haga un clic "
+"central dos veces cuando quiera que la aplicación reciba un solo clic "
+"central. Esto incluye el arrastre con el clic central."

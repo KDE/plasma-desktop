@@ -12,7 +12,7 @@
 # Wilbert Berendsen <wbsoft@xs4all.nl>, 2003.
 # Rinse de Vries <rinsedevries@kde.nl>, 2004, 2005, 2006, 2007, 2008.
 # Antoon Tolboom <atolboo@casema.nl>, 2008.
-# SPDX-FileCopyrightText: 2010, 2024, 2025, 2026 Freek de Kruijf <f.de.kruijf@hetnet.nl>
+# SPDX-FileCopyrightText: 2010, 2024-2026 Freek de Kruijf <f.de.kruijf@hetnet.nl>
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2010, 2011.
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2020, 2022, 2023.
 # SPDX-FileCopyrightText: 2024 pieter <pieterkristensen@gmail.com>
@@ -21,14 +21,14 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-04 00:47+0000\n"
-"PO-Revision-Date: 2026-01-08 17:58+0100\n"
+"PO-Revision-Date: 2026-09-04 13:37+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 26.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: inputbackend.cpp:49
@@ -239,14 +239,13 @@ msgstr "Scrollrichting omdraaien"
 #, kde-format
 msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
-msgstr ""
+msgstr "Schuiven bij het verplaatsen van de aanwijzer"
 
 #: ui/main.qml:383
-#, fuzzy, kde-format
-#| msgid "Emulate middle button"
+#, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
-msgstr "Middelste muisknop emuleren"
+msgstr "bij indrukken van de middelste muisknop"
 
 #: ui/main.qml:396
 #, kde-format
@@ -263,11 +262,10 @@ msgstr ""
 "bedoeld als een vervanger voor draaiwielen op apparaten die er geen hebben."
 
 #: ui/main.qml:406
-#, fuzzy, kde-format
-#| msgid "Emulate middle button"
+#, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
-msgstr "Middelste muisknop emuleren"
+msgstr "Na klikken van de middelste muisknop"
 
 #: ui/main.qml:419
 #, kde-format
@@ -277,6 +275,10 @@ msgid ""
 "you want the application to receive a single middle-click. This includes "
 "middle-click dragging."
 msgstr ""
+"Dit verstoort het gebruik van de middelste muisknop in het algemeen; klik "
+"twee keer met de middelste muisknop wanneer u wilt dat de toepassing één "
+"enkele klik met de middelste muisknop ontvangt. Dit geldt ook voor slepen "
+"met de middelste muisknop."
 
 #~ msgctxt "@option:check"
 #~ msgid "Hold down middle button and move mouse to scroll"
