@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-04 00:47+0000\n"
-"PO-Revision-Date: 2026-01-12 23:40+0200\n"
+"PO-Revision-Date: 2026-09-05 12:24+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: inputbackend.cpp:49
 #, kde-format
@@ -230,13 +230,13 @@ msgstr "Atvirkštinė slinkimo kryptis"
 #, kde-format
 msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
-msgstr ""
+msgstr "Slinkti judinant pelės rodyklę"
 
 #: ui/main.qml:383
 #, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
-msgstr ""
+msgstr "laikant paspaustą vidurinįjį pelės mygtuką"
 
 #: ui/main.qml:396
 #, kde-format
@@ -256,7 +256,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
-msgstr ""
+msgstr "spustelėjus vidurinįjį pelės mygtuką"
 
 #: ui/main.qml:419
 #, kde-format
@@ -266,6 +266,10 @@ msgid ""
 "you want the application to receive a single middle-click. This includes "
 "middle-click dragging."
 msgstr ""
+"Tai iš esmės trukdys viduriniojo pelės mygtuko spustelėjimams; spustelėkite "
+"vidurinįjį pelės mygtuką du kartus, kai norite, kad programą gautų vieną "
+"spustelėjimą viduriniuoju mygtuku. Į tai įeina ir tempimas viduriniuoju "
+"pelės mygtuko spustelėjimu."
 
 #~ msgctxt "@option:check"
 #~ msgid "Hold down middle button and move mouse to scroll"

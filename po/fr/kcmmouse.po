@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-04 00:47+0000\n"
-"PO-Revision-Date: 2026-08-29 19:47+0200\n"
+"PO-Revision-Date: 2026-09-04 11:18+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -247,14 +247,13 @@ msgstr "Inverser la direction de défilement"
 #, kde-format
 msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
-msgstr ""
+msgstr "Faire défiler par un déplacement du pointeur"
 
 #: ui/main.qml:383
-#, fuzzy, kde-format
-#| msgid "Emulate middle button"
+#, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
-msgstr "Émuler le bouton central"
+msgstr "lors de l'appui sur le bouton central"
 
 #: ui/main.qml:396
 #, kde-format
@@ -272,11 +271,10 @@ msgstr ""
 "molettes de défilement sur les périphériques n'en possédant pas."
 
 #: ui/main.qml:406
-#, fuzzy, kde-format
-#| msgid "Emulate middle button"
+#, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
-msgstr "Émuler le bouton central"
+msgstr "après un clic avec le bouton central"
 
 #: ui/main.qml:419
 #, kde-format
@@ -286,6 +284,9 @@ msgid ""
 "you want the application to receive a single middle-click. This includes "
 "middle-click dragging."
 msgstr ""
+"Cela interférera avec les clics du bouton central en général. Veuillez faire "
+"un clic central deux fois lorsque vous souhaitez que l'application reçoive "
+"un seul clic central. Cela inclut le glisser-déposer avec le clic central."
 
 #~ msgctxt "@option:check"
 #~ msgid "Hold down middle button and move mouse to scroll"
