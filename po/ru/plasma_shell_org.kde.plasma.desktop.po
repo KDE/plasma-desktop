@@ -13,14 +13,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-29 00:47+0000\n"
-"PO-Revision-Date: 2026-06-14 19:05+0200\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2026-09-06 15:37+0200\n"
+"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.08.0\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Environment: kde\n"
@@ -54,11 +54,10 @@ msgstr ""
 "в этой комнате"
 
 #: contents/activitymanager/ActivityItem.qml:333
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
 msgid "Configure Activity “%1”"
-msgstr "Настроить комнату"
+msgstr "Настроить комнату «%1»"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -73,23 +72,19 @@ msgid "Activities"
 msgstr "Комнаты"
 
 #: contents/activitymanager/Heading.qml:86
-#, fuzzy, kde-format
-#| msgid "Search…"
+#, kde-format
 msgctxt "@action:button tooltip only"
 msgid "Search"
 msgstr "Поиск"
 
 #: contents/activitymanager/Heading.qml:103
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm"
 msgid "Configure Activities"
-msgstr "Настроить комнату"
+msgstr "Настроить комнаты Plasma"
 
 #: contents/activitymanager/Heading.qml:122
-#, fuzzy, kde-format
-#| msgctxt "@action:button Close the panel configuration window"
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button tooltip only, close panel"
 msgid "Close"
 msgstr "Закрыть"
@@ -998,6 +993,8 @@ msgid ""
 "This authentication method is not functioning correctly. Please try another "
 "method, and check your system configuration."
 msgstr ""
+"Ошибка: этот способ проверки подлинности работает некорректно. Попробуйте "
+"другой способ и проверьте конфигурацию системы."
 
 #: contents/lockscreen/LockScreenUi.qml:375
 #, kde-format
@@ -1093,46 +1090,46 @@ msgstr "Разблокировать"
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Установка обновлений и перезагрузка через %1 секунду"
+msgstr[1] "Установка обновлений и перезагрузка через %1 секунды"
+msgstr[2] "Установка обновлений и перезагрузка через %1 секунд"
+msgstr[3] "Установка обновлений и перезагрузка через 1 секунду"
 
 #: contents/logout/LogoutControls.qml:98
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Перезагрузка через %1 секунду"
+msgstr[1] "Перезагрузка через %1 секунды"
+msgstr[2] "Перезагрузка через %1 секунд"
+msgstr[3] "Перезагрузка через %1 секунду"
 
 #: contents/logout/LogoutControls.qml:100
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Завершение сеанса через %1 секунду"
+msgstr[1] "Завершение сеанса через %1 секунды"
+msgstr[2] "Завершение сеанса через %1 секунд"
+msgstr[3] "Завершение сеанса через %1 секунду"
 
 #: contents/logout/LogoutControls.qml:103
 #, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Установка обновлений и выключение через %1 секунду"
+msgstr[1] "Установка обновлений и выключение через %1 секунды"
+msgstr[2] "Установка обновлений и выключение через %1 секунд"
+msgstr[3] "Установка обновлений и выключение через %1 секунду"
 
 #: contents/logout/LogoutControls.qml:104
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Выключение компьютера через %1 секунду"
+msgstr[1] "Выключение компьютера через %1 секунды"
+msgstr[2] "Выключение компьютера через %1 секунд"
+msgstr[3] "Выключение компьютера через %1 секунду"
 
 #: contents/logout/LogoutControls.qml:119
 #, kde-format
@@ -1143,58 +1140,64 @@ msgid_plural ""
 "%1 other users are currently logged in. If the computer is shut down or "
 "restarted, those users may lose work."
 msgstr[0] ""
+"В системе сейчас работает %1 другой пользователь. При выключении или "
+"перезагрузке компьютера этот пользователь может потерять результаты своей "
+"работы."
 msgstr[1] ""
+"В системе сейчас работают %1 других пользователя. При выключении или "
+"перезагрузке компьютера эти пользователи могут потерять результаты своей "
+"работы."
 msgstr[2] ""
+"В системе сейчас работают %1 других пользователей. При выключении или "
+"перезагрузке компьютера эти пользователи могут потерять результаты своей "
+"работы."
 msgstr[3] ""
+"В системе сейчас работает ещё один пользователь. При выключении или "
+"перезагрузке компьютера этот пользователь может потерять результаты своей "
+"работы."
 
 #: contents/logout/LogoutControls.qml:136
 #, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
-msgstr ""
+msgstr "После перезагрузки компьютер перейдёт в настройки прошивки UEFI."
 
 #: contents/logout/LogoutControls.qml:138
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
+"После перезагрузки будет открыт экран настройки встроенной микропрограммы "
+"компьютера."
 
 #: contents/logout/LogoutControls.qml:153
 #, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr ""
+msgstr "После перезагрузки компьютера будет показан экран загрузчика."
 
 #: contents/logout/LogoutControls.qml:166
 #, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr ""
+msgstr "После перезагрузки компьютера будет выбран вариант загрузки «%1»."
 
 #: contents/logout/LogoutControls.qml:189
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Slee&p"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
-msgstr "Спящий режим"
+msgstr "&Спящий режим"
 
 #: contents/logout/LogoutControls.qml:190
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Slee&p"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
-msgstr "Спящий режим"
+msgstr "&Спящий режим"
 
 #: contents/logout/LogoutControls.qml:200
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Hibernate"
+#, kde-format
 msgid "&Hibernate"
 msgstr "&Гибернация"
 
 #: contents/logout/LogoutControls.qml:201
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Hibernate"
+#, kde-format
 msgid "&Hibernate Now"
 msgstr "&Гибернация"
 
@@ -1202,54 +1205,52 @@ msgstr "&Гибернация"
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
-msgstr ""
+msgstr "Установить обновления и перезагрузить"
 
 #: contents/logout/LogoutControls.qml:215
 #: contents/logout/LogoutControls.qml:235
 #, kde-format
 msgid "&Restart"
-msgstr ""
+msgstr "П&ерезагрузить"
 
 #: contents/logout/LogoutControls.qml:216
 #: contents/logout/LogoutControls.qml:236
 #, kde-format
 msgid "&Restart Now"
-msgstr ""
+msgstr "&Перезагрузить"
 
 #: contents/logout/LogoutControls.qml:250
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr ""
+msgstr "Установить обновления и выключить"
 
 #: contents/logout/LogoutControls.qml:252
 #: contents/logout/LogoutControls.qml:272
 #, kde-format
 msgid "&Shut Down"
-msgstr ""
+msgstr "&Выключить"
 
 #: contents/logout/LogoutControls.qml:253
 #: contents/logout/LogoutControls.qml:273
 #, kde-format
 msgid "&Shut Down Now"
-msgstr ""
+msgstr "&Выключить"
 
 #: contents/logout/LogoutControls.qml:286
 #, kde-format
 msgid "&Log Out"
-msgstr ""
+msgstr "&Завершить сеанс"
 
 #: contents/logout/LogoutControls.qml:287
 #, kde-format
 msgid "&Log Out Now"
-msgstr ""
+msgstr "&Завершить сеанс"
 
 #: contents/logout/LogoutControls.qml:298
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgid "&Cancel"
-msgstr "Отмена"
+msgstr "&Отмена"
 
 #: contents/views/DesktopEditMode.qml:135
 #, kde-format

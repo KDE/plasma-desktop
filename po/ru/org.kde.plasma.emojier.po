@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-28 00:47+0000\n"
-"PO-Revision-Date: 2026-06-18 19:44+0200\n"
+"PO-Revision-Date: 2026-09-06 19:15+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: app/emojier.cpp:43 app/emojier.cpp:45
 #, kde-format
@@ -140,31 +140,31 @@ msgstr "Тёмный"
 #, kde-format
 msgctxt "@action:button zoom the emoji grid out"
 msgid "Zoom Out"
-msgstr ""
+msgstr "Уменьшить"
 
 #: app/ui/CategoryPage.qml:199
 #, kde-format
 msgctxt "@info:status label for the current zoom-level indicator"
 msgid "Zoom level"
-msgstr ""
+msgstr "Масштаб:"
 
 #: app/ui/CategoryPage.qml:201
 #, kde-format
 msgctxt "@info:status current emoji zoom level as a percentage, %1 is a number"
 msgid "%1%"
-msgstr ""
+msgstr "%1 %"
 
 #: app/ui/CategoryPage.qml:214
 #, kde-format
 msgctxt "@action:button zoom the emoji grid in"
 msgid "Zoom In"
-msgstr ""
+msgstr "Увеличить"
 
 #: app/ui/CategoryPage.qml:221
 #, kde-format
 msgctxt "@action:button reset the emoji grid zoom to 100%"
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Сбросить масштаб"
 
 #: app/ui/CategoryPage.qml:228
 #, kde-format
