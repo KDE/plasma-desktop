@@ -31,7 +31,14 @@ EmptyPage {
     readonly property var appletInterface: kickoff
 
     Layout.minimumWidth: implicitWidth
-    Layout.minimumHeight: implicitHeight
+    Layout.minimumHeight: {
+        const stackView = normalPage.contentItem as HorizontalStackView
+        const basePage = stackView.currentItem as BasePage
+        const contentAreaItem = basePage.contentAreaItem as Item
+
+        return root.calculateTotalHeightForContentHeight(
+            normalPage.calculateTotalHeightForContentHeight(contentAreaItem.implicitHeight))
+    }
 
     property alias normalPage: normalPage
     property bool blockingHoverFocus: true

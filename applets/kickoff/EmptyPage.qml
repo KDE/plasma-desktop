@@ -23,10 +23,13 @@ T.Page {
                             contentWidth + leftPadding + rightPadding,
                             implicitHeaderWidth2,
                             implicitFooterWidth2)
-    implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
-                             contentHeight + topPadding + bottomPadding
-                             + (implicitHeaderHeight2 > 0 ? implicitHeaderHeight2 + spacing : 0)
-                             + (implicitFooterHeight2 > 0 ? implicitFooterHeight2 + spacing : 0))
+    function calculateTotalHeightForContentHeight(baseHeight: double): double {
+        return Math.max(implicitBackgroundHeight + topInset + bottomInset,
+                        baseHeight + topPadding + bottomPadding
+                        + (implicitHeaderHeight2 > 0 ? implicitHeaderHeight2 + spacing : 0)
+                        + (implicitFooterHeight2 > 0 ? implicitFooterHeight2 + spacing : 0))
+    }
+    implicitHeight: calculateTotalHeightForContentHeight(contentHeight)
 
     Accessible.ignored: true
 }
