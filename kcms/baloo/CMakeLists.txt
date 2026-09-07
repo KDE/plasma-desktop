@@ -19,4 +19,5 @@ target_link_libraries(kcm_baloofile PRIVATE
     KF6::KIOCore
     Qt::DBus
     Qt::Widgets
+    Qt::Qml
 )

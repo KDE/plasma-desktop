@@ -19,6 +19,7 @@ target_link_libraries(kcm_workspace PRIVATE
     KF6::I18n
     KF6::ConfigGui
     Qt::DBus
+    Qt::Qml
 )
 
 ########### install files ###############

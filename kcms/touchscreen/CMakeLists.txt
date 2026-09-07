@@ -27,5 +27,6 @@ target_link_libraries(kcm_touchscreen PRIVATE
 
     Qt::Gui
     Qt::DBus
+    Qt::Qml
     kwindevices
 )

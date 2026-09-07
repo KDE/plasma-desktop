@@ -112,6 +112,7 @@ target_link_libraries(kcm_keyboard_static
     Qt::Concurrent
     Qt::Widgets
     Qt::Xml
+    Qt::Qml
     Qt::GuiPrivate
     KF6::KCMUtils
     KF6::GlobalAccel
