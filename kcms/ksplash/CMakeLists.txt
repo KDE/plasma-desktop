@@ -20,6 +20,7 @@ target_link_libraries(kcm_splashscreen PRIVATE
   KF6::NewStuffCore
   KF6::Package
   Qt::DBus
+  Qt::Qml
 )
 
 install(FILES splashscreensettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
