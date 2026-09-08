@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-05 00:46+0000\n"
+"POT-Creation-Date: 2026-09-08 00:47+0000\n"
 "PO-Revision-Date: 2017-09-25 19:53+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -273,20 +273,20 @@ msgid ""
 "usually feature a dark background."
 msgstr ""
 
-#: DashboardRepresentation.qml:424
+#: DashboardRepresentation.qml:425
 #, fuzzy, kde-format
 #| msgid "Favorites"
 msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "Омиљено"
 
-#: DashboardRepresentation.qml:950 ItemListDelegate.qml:97
+#: DashboardRepresentation.qml:951 ItemListDelegate.qml:97
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: DashboardRepresentation.qml:951 ItemListDelegate.qml:98
+#: DashboardRepresentation.qml:952 ItemListDelegate.qml:98
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
@@ -328,7 +328,7 @@ msgstr ""
 "Често коришћени програми|/|$[својства ген 'често коришћених програма' аку "
 "'често коришћене програме']"
 
-#: main.qml:208
+#: main.qml:191
 #, fuzzy, kde-format
 #| msgid "Edit Applications..."
 msgctxt "@action:inmenu launches kmenuedit"

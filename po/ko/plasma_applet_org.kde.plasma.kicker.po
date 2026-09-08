@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-05 00:46+0000\n"
+"POT-Creation-Date: 2026-09-08 00:47+0000\n"
 "PO-Revision-Date: 2026-05-25 22:01+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -228,19 +228,19 @@ msgstr ""
 "이 기능은 색 구성표의 보조색을 사용합니다. 해당 색상은 일반적으로 어두운 배경"
 "색에 배정되어 있습니다."
 
-#: DashboardRepresentation.qml:424
+#: DashboardRepresentation.qml:425
 #, kde-format
 msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "책갈피"
 
-#: DashboardRepresentation.qml:950 ItemListDelegate.qml:97
+#: DashboardRepresentation.qml:951 ItemListDelegate.qml:97
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr "새 앱!"
 
-#: DashboardRepresentation.qml:951 ItemListDelegate.qml:98
+#: DashboardRepresentation.qml:952 ItemListDelegate.qml:98
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
@@ -276,7 +276,7 @@ msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
 msgstr "새로 설치한 앱"
 
-#: main.qml:208
+#: main.qml:191
 #, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
