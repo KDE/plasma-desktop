@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:50+0000\n"
+"POT-Creation-Date: 2026-09-09 00:52+0000\n"
 "PO-Revision-Date: 2024-02-03 00:36+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt\n"
@@ -19,17 +19,17 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.0.1\n"
 
-#: sortedactivitiesmodel.cpp:301
+#: sortedactivitiesmodel.cpp:366
 #, kde-format
 msgid "Used some time ago"
 msgstr "Naudota prieš kurį laiką"
 
-#: sortedactivitiesmodel.cpp:317
+#: sortedactivitiesmodel.cpp:382
 #, kde-format
 msgid "Used more than a year ago"
 msgstr "Naudota daugiau nei prieš metus"
 
-#: sortedactivitiesmodel.cpp:318
+#: sortedactivitiesmodel.cpp:383
 #, kde-format
 msgctxt "amount in months"
 msgid "Used a month ago"
@@ -39,7 +39,7 @@ msgstr[1] "Naudota prieš %1 mėnesius"
 msgstr[2] "Naudota prieš %1 mėnesių"
 msgstr[3] "Naudota prieš %1 mėnesį"
 
-#: sortedactivitiesmodel.cpp:319
+#: sortedactivitiesmodel.cpp:384
 #, kde-format
 msgctxt "amount in days"
 msgid "Used a day ago"
@@ -49,7 +49,7 @@ msgstr[1] "Naudota prieš %1 dienas"
 msgstr[2] "Naudota prieš %1 dienų"
 msgstr[3] "Naudota prieš %1 dieną"
 
-#: sortedactivitiesmodel.cpp:320
+#: sortedactivitiesmodel.cpp:385
 #, kde-format
 msgctxt "amount in hours"
 msgid "Used an hour ago"
@@ -59,7 +59,7 @@ msgstr[1] "Naudota prieš %1 valandas"
 msgstr[2] "Naudota prieš %1 valandų"
 msgstr[3] "Naudota prieš %1 valandą"
 
-#: sortedactivitiesmodel.cpp:321
+#: sortedactivitiesmodel.cpp:386
 #, kde-format
 msgctxt "amount in minutes"
 msgid "Used a minute ago"
@@ -69,7 +69,7 @@ msgstr[1] "Naudota prieš %1 minutes"
 msgstr[2] "Naudota prieš %1 minučių"
 msgstr[3] "Naudota prieš %1 minutę"
 
-#: sortedactivitiesmodel.cpp:322
+#: sortedactivitiesmodel.cpp:387
 #, kde-format
 msgid "Used a moment ago"
 msgstr "Naudota prieš akimirką"

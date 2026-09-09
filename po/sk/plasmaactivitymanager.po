@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmaactivitymanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:50+0000\n"
+"POT-Creation-Date: 2026-09-09 00:52+0000\n"
 "PO-Revision-Date: 2016-04-09 13:33+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -15,17 +15,17 @@ msgstr ""
 "X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: sortedactivitiesmodel.cpp:301
+#: sortedactivitiesmodel.cpp:366
 #, kde-format
 msgid "Used some time ago"
 msgstr "Použité pred nejakým časom"
 
-#: sortedactivitiesmodel.cpp:317
+#: sortedactivitiesmodel.cpp:382
 #, kde-format
 msgid "Used more than a year ago"
 msgstr "Použité pred viac ako rokom"
 
-#: sortedactivitiesmodel.cpp:318
+#: sortedactivitiesmodel.cpp:383
 #, kde-format
 msgctxt "amount in months"
 msgid "Used a month ago"
@@ -34,7 +34,7 @@ msgstr[0] "Použité pred mesiacom"
 msgstr[1] "Použité pred %1 mesiacmi"
 msgstr[2] "Použité pred %1 mesiacmi"
 
-#: sortedactivitiesmodel.cpp:319
+#: sortedactivitiesmodel.cpp:384
 #, kde-format
 msgctxt "amount in days"
 msgid "Used a day ago"
@@ -43,7 +43,7 @@ msgstr[0] "Použite včera"
 msgstr[1] "Použité pred %1 dňami"
 msgstr[2] "Použité pred %1 dňami"
 
-#: sortedactivitiesmodel.cpp:320
+#: sortedactivitiesmodel.cpp:385
 #, kde-format
 msgctxt "amount in hours"
 msgid "Used an hour ago"
@@ -52,7 +52,7 @@ msgstr[0] "Použité pred hodinou"
 msgstr[1] "Použité pred %1 hodinami"
 msgstr[2] "Použité pred %1 hodinami"
 
-#: sortedactivitiesmodel.cpp:321
+#: sortedactivitiesmodel.cpp:386
 #, kde-format
 msgctxt "amount in minutes"
 msgid "Used a minute ago"
@@ -61,7 +61,7 @@ msgstr[0] "Použité pred minútou"
 msgstr[1] "Použité pred %1 minútami"
 msgstr[2] "Použité pred %1 minútami"
 
-#: sortedactivitiesmodel.cpp:322
+#: sortedactivitiesmodel.cpp:387
 #, kde-format
 msgid "Used a moment ago"
 msgstr "Použité pred chvíľou"

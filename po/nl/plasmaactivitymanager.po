@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:50+0000\n"
+"POT-Creation-Date: 2026-09-09 00:52+0000\n"
 "PO-Revision-Date: 2024-04-26 14:59+0200\n"
 "Last-Translator: pieter <pieterkristensen@gmail.com>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.02.2\n"
 
-#: sortedactivitiesmodel.cpp:301
+#: sortedactivitiesmodel.cpp:366
 #, kde-format
 msgid "Used some time ago"
 msgstr "Enige tijd geleden gebruikt"
 
-#: sortedactivitiesmodel.cpp:317
+#: sortedactivitiesmodel.cpp:382
 #, kde-format
 msgid "Used more than a year ago"
 msgstr "Meer dan een jaar geleden gebruikt"
 
-#: sortedactivitiesmodel.cpp:318
+#: sortedactivitiesmodel.cpp:383
 #, kde-format
 msgctxt "amount in months"
 msgid "Used a month ago"
@@ -36,7 +36,7 @@ msgid_plural "Used %1 months ago"
 msgstr[0] "Een maand geleden gebruikt"
 msgstr[1] "%1 maanden geleden gebruikt"
 
-#: sortedactivitiesmodel.cpp:319
+#: sortedactivitiesmodel.cpp:384
 #, kde-format
 msgctxt "amount in days"
 msgid "Used a day ago"
@@ -44,7 +44,7 @@ msgid_plural "Used %1 days ago"
 msgstr[0] "Een dag geleden gebruikt"
 msgstr[1] "%1 dagen geleden gebruikt"
 
-#: sortedactivitiesmodel.cpp:320
+#: sortedactivitiesmodel.cpp:385
 #, kde-format
 msgctxt "amount in hours"
 msgid "Used an hour ago"
@@ -52,7 +52,7 @@ msgid_plural "Used %1 hours ago"
 msgstr[0] "Een uur geleden gebruikt"
 msgstr[1] "%1 uren geleden gebruikt"
 
-#: sortedactivitiesmodel.cpp:321
+#: sortedactivitiesmodel.cpp:386
 #, kde-format
 msgctxt "amount in minutes"
 msgid "Used a minute ago"
@@ -60,7 +60,7 @@ msgid_plural "Used %1 minutes ago"
 msgstr[0] "Een minuut geleden gebruikt"
 msgstr[1] "%1 minuten geleden gebruikt"
 
-#: sortedactivitiesmodel.cpp:322
+#: sortedactivitiesmodel.cpp:387
 #, kde-format
 msgid "Used a moment ago"
 msgstr "Een ogenblik geleden gebruikt"
