@@ -19,9 +19,6 @@ AbstractButton {
 
     hoverEnabled: true
 
-    Kirigami.MnemonicData.controlType: Kirigami.MnemonicData.SecondaryControl
-    Kirigami.MnemonicData.label: controlRoot.text
-
     leftPadding: rest.margins.left
     rightPadding: rest.margins.right
 
@@ -81,7 +78,7 @@ AbstractButton {
             id: label
             visible: Plasmoid.formFactor === PlasmaCore.Types.Horizontal && Plasmoid.configuration.showText
 
-            text: controlRoot.Kirigami.MnemonicData.richTextLabel
+            text: controlRoot.text
             color: controlRoot.down || controlRoot.hovered ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
             verticalAlignment: Text.AlignVCenter
             Layout.fillHeight: true
