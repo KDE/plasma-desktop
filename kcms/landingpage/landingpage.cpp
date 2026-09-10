@@ -59,7 +59,12 @@ MostUsedModel::MostUsedModel(QObject *parent)
         const auto actions = service->actions();
         for (const KServiceAction &action : actions) {
             QStandardItem *item = new QStandardItem();
-            item->setData(QUrl(QStringLiteral("kcm:%1.desktop").arg(action.name())), ResultModel::ResourceRole);
+            // This assumes the exec to be "systemsettings kcm_foo"
+            const auto split = action.exec().split(" ");
+            if (split.size() < 2) {
+                continue;
+            }
+            item->setData(QUrl(QStringLiteral("kcm:%1.desktop").arg(split[1])), ResultModel::ResourceRole);
             m_defaultModel->appendRow(item);
         }
     } else {
@@ -114,11 +119,6 @@ bool MostUsedModel::filterAcceptsRow(int source_row, const QModelIndex &source_p
     };
 
     const QString desktopName = sourceModel()->index(source_row, 0, source_parent).data(ResultModel::ResourceRole).toUrl().path();
-
-    if (desktopName.endsWith(QLatin1String(".desktop"))) {
-        ignoreKCM(desktopName);
-        return false;
-    }
 
     if (!KAuthorized::authorizeControlModule(desktopName)) {
         ignoreKCM(desktopName);
