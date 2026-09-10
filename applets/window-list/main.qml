@@ -112,7 +112,7 @@ PlasmoidItem {
 
     Connections {
         target: tasksModel
-        function onModelReset() { updateLongestWindowTitle(); }
+        function onModelReset() { root.updateLongestWindowTitle(); }
     }
 
     Component {
@@ -130,43 +130,43 @@ PlasmoidItem {
             Binding {
                 target: windowListView
                 property: "Layout.preferredWidth"
-                when: !inPanel
+                when: !root.inPanel
                 value: Kirigami.Units.gridUnit * 28
             }
 
             Binding {
                 target: windowListView
                 property: "Layout.preferredHeight"
-                when: !inPanel
+                when: !root.inPanel
                 value: Kirigami.Units.gridUnit * 24
             }
 
             Binding {
                 target: windowListView
                 property: "Layout.maximumHeight"
-                when: inPanel
-                value: contentHeight
+                when: root.inPanel
+                value: windowListView.contentHeight
             }
             Binding {
                 target: windowListView
                 property: "Layout.minimumHeight"
-                when: inPanel
-                value: contentHeight
+                when: root.inPanel
+                value: windowListView.contentHeight
             }
             Binding {
                 target: windowListView
                 property: "Layout.maximumWidth"
-                when: inPanel
+                when: root.inPanel
                 value: root.fullRepresentationDynamicWidth
             }
             Binding {
                 target: windowListView
                 property: "Layout.minimumWidth"
-                when: inPanel
+                when: root.inPanel
                 value: root.fullRepresentationDynamicWidth
             }
 
-            model: inPanel && tasksModel.count === 0 ? noWindowModel : tasksModel
+            model: root.inPanel && tasksModel.count === 0 ? root.noWindowModel : tasksModel
         
             Connections {
                 target: root
@@ -249,7 +249,7 @@ PlasmoidItem {
                 required property var decoration
 
                 width: {
-                    if (inPanel) {
+                    if (root.inPanel) {
                         return root.fullRepresentationDynamicWidth 
                     } else {
                         return ListView.view.width;
@@ -310,7 +310,7 @@ PlasmoidItem {
             Kirigami.PlaceholderMessage {
                 anchors.centerIn: parent
                 width: parent.width - (Kirigami.Units.largeSpacing * 2)
-                visible: !inPanel && windowListView.count === 0
+                visible: !root.inPanel && windowListView.count === 0
                 icon.source: "edit-none"
                 text: placeholderMetrics.text
             }
