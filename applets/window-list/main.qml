@@ -204,18 +204,6 @@ PlasmoidItem {
             highlightMoveDuration: 0
             highlightResizeDuration: 0
 
-            Keys.onEnterPressed: {
-                if (currentIndex >= 0 && currentIndex < windowListView.count) {
-                    tasksModel.requestActivate(tasksModel.makeModelIndex(currentIndex));
-                }
-            }
-
-            Keys.onReturnPressed: {
-                if (currentIndex >= 0 && currentIndex < windowListView.count) {
-                    tasksModel.requestActivate(tasksModel.makeModelIndex(currentIndex));
-                }
-            }
-
             Keys.onTabPressed: {
                 incrementCurrentIndex();
             }
@@ -309,6 +297,9 @@ PlasmoidItem {
                     tasksModel.requestActivate(tasksModel.makeModelIndex(model.index))
                     focus = false // or it persists invisibly after closing
                 }
+
+                Keys.onReturnPressed: animateClick()
+                Keys.onEnterPressed: animateClick()
 
                 TapHandler {
                     acceptedButtons: Qt.RightButton
