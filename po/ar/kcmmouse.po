@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-04 00:47+0000\n"
-"PO-Revision-Date: 2026-01-08 11:30+0400\n"
+"PO-Revision-Date: 2026-09-09 18:15+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: inputbackend.cpp:49
 #, kde-format
@@ -230,13 +230,13 @@ msgstr "اعكس اتّجاه التّمرير"
 #, kde-format
 msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
-msgstr ""
+msgstr "التمرير عند تحريك المؤشر"
 
 #: ui/main.qml:383
 #, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
-msgstr ""
+msgstr "مع الضغط على الزر الأوسط"
 
 #: ui/main.qml:396
 #, kde-format
@@ -256,7 +256,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
-msgstr ""
+msgstr "بعد النقر على الزر الأوسط"
 
 #: ui/main.qml:419
 #, kde-format
@@ -266,6 +266,9 @@ msgid ""
 "you want the application to receive a single middle-click. This includes "
 "middle-click dragging."
 msgstr ""
+"سيؤدي هذا إلى التداخل مع النقرات بالزر الأوسط بشكل عام؛ حيث يتعين عليك النقر "
+"مرتين بالزر الأوسط عندما تريد أن يستجيب التطبيق لنقرة واحدة بالزر الأوسط. "
+"ويشمل ذلك السحب باستخدام الزر الأوسط."
 
 #~ msgctxt "@option:check"
 #~ msgid "Hold down middle button and move mouse to scroll"
