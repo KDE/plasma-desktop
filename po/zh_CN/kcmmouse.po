@@ -213,13 +213,13 @@ msgstr "反转滚动方向"
 #, kde-format
 msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
-msgstr ""
+msgstr "移动指针时滚动"
 
 #: ui/main.qml:383
 #, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
-msgstr ""
+msgstr "按住中键时"
 
 #: ui/main.qml:396
 #, kde-format
@@ -237,7 +237,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
-msgstr ""
+msgstr "点击中键后"
 
 #: ui/main.qml:419
 #, kde-format
@@ -247,7 +247,4 @@ msgid ""
 "you want the application to receive a single middle-click. This includes "
 "middle-click dragging."
 msgstr ""
-
-#~ msgctxt "@option:check"
-#~ msgid "Hold down middle button and move mouse to scroll"
-#~ msgstr "按住中键并移动鼠标以滚动"
+"这将影响一般中键点击的操作；中键单击需双击才能触发；中键拖拽也同样如此。"
