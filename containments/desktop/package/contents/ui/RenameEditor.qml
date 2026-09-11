@@ -45,6 +45,9 @@ PlasmaComponents.ScrollView {
 
         Kirigami.SpellCheck.enabled: false
 
+        // Temporary workaround until PlasmaComponents.TextArea gets a context menu
+        color: Kirigami.Theme.textColor
+
         background: Rectangle {
             color: Kirigami.Theme.backgroundColor
             radius: Kirigami.Units.cornerRadius
