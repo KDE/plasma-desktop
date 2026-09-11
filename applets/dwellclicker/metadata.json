@@ -4,6 +4,8 @@
             {
                 "Email": "dipesh@gmx.de",
                 "Name": "Sebastian Sauer",
+                "Name[ar]": "سيباستيان ساوير",
+                "Name[bg]": "Sebastian Sauer",
                 "Name[ca@valencia]": "Sebastian Sauer",
                 "Name[ca]": "Sebastian Sauer",
                 "Name[cs]": "Sebastian Sauer",
@@ -19,11 +21,14 @@
                 "Name[sl]": "Sebastian Sauer",
                 "Name[sv]": "Sebastian Sauer",
                 "Name[tr]": "Sebastian Sauer",
-                "Name[uk]": "Sebastian Sauer"
+                "Name[uk]": "Sebastian Sauer",
+                "Name[zh_CN]": "Sebastian Sauer"
             }
         ],
         "Category": "Accessibility",
         "Description": "Automatically click when pointer remains still for a set amount of time",
+        "Description[ar]": "ينقر آليًا عندما يظل المؤشر ثابتًا لمدة محددة",
+        "Description[bg]": "Автоматично кликване, когато показалецът остане неподвижен за определено време",
         "Description[ca@valencia]": "Clica automàticament quan el punter roman immòbil durant un temps determinat",
         "Description[ca]": "Fa clic automàticament quan el punter roman immòbil durant un temps determinat",
         "Description[cs]": "Automatické kliknutí, když kurzor zůstane nehybný po stanovenou dobu",
@@ -40,10 +45,13 @@
         "Description[sv]": "Klicka automatiskt när pekaren hålls stilla under en viss inställd tid",
         "Description[tr]": "İşaretçi belirli bir süre hareketsiz kaldığında kendiliğinden tıklatma gerçekleştirir",
         "Description[uk]": "Автоматично клацати, якщо вказівник лишатиметься нерухомим встановлений проміжок часу",
+        "Description[zh_CN]": "指针保持静止一段时间后自动点击。",
         "EnabledByDefault": true,
         "Icon": "input-mouse-click-left",
         "License": "GPL",
         "Name": "Dwell Clicker",
+        "Name[ar]": "ناقر دويل",
+        "Name[bg]": "Автоматично кликване при задържане",
         "Name[ca@valencia]": "Clic d'estancament",
         "Name[ca]": "Clic d'estancament",
         "Name[cs]": "Dwell Clicker",
@@ -59,7 +67,8 @@
         "Name[sl]": "Kliker zadrževanja",
         "Name[sv]": "Hållklicka",
         "Name[tr]": "Bekleyince Tıklat",
-        "Name[uk]": "Клацання з затримкою"
+        "Name[uk]": "Клацання з затримкою",
+        "Name[zh_CN]": "悬停点击"
     },
     "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-NotificationArea": "true",
