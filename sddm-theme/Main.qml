@@ -110,7 +110,7 @@ Item {
             state: loginScreenRoot.uiVisible ? "on" : "off"
             source: wallpaper
             mainStack: mainStack
-            footer: loginLockScreenFooter
+            footer: footer
             clock: clock
         }
 
@@ -396,7 +396,7 @@ Item {
             visible: config.showlogo === "shown"
             source: config.logo
             anchors.horizontalCenter: parent.horizontalCenter
-            anchors.bottom: loginLockScreenFooter.top
+            anchors.bottom: footer.top
             anchors.bottomMargin: Kirigami.Units.largeSpacing
             asynchronous: true
             sourceSize.height: height
@@ -413,8 +413,6 @@ Item {
         }
 
         LoginLockScreen.Footer {
-            id: loginLockScreenFooter
-
             onOskActivated: {
                 userListComponent.mainPasswordBox.forceActiveFocus();
             }
@@ -425,7 +423,7 @@ Item {
         target: sddm
         function onLoginFailed() {
             notificationMessage = i18ndc("plasma-desktop-sddm-theme", "@info:status", "Login Failed")
-            loginLockScreenFooter.enabled = true
+            footer.enabled = true
             mainStack.enabled = true
             userListComponent.userList.opacity = 1
             rejectPasswordAnimation.start()
@@ -435,7 +433,7 @@ Item {
             //there is no certainty any transition will finish, it depends on the time it
             //takes to complete the init
             mainStack.opacity = 0
-            loginLockScreenFooter.opacity = 0
+            footer.opacity = 0
         }
     }
 
