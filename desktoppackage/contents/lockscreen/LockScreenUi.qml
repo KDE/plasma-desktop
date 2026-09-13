@@ -229,7 +229,7 @@ Item {
             state: lockScreenRoot.uiVisible ? "on" : "off"
             source: wallpaper
             mainStack: mainStack
-            footer: loginLockScreenFooter
+            footer: footer
             clock: clock
             alwaysShowClock: config.alwaysShowClock && !config.hideClockWhenIdle
         }
@@ -440,8 +440,6 @@ Item {
         }
 
         LoginLockScreen.Footer {
-            id: loginLockScreenFooter
-
             onOskActivated: {
                 mainBlock.mainPasswordBox.forceActiveFocus();
             }
