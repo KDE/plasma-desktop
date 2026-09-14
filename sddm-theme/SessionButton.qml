@@ -1,55 +1,35 @@
 /*
-    SPDX-FileCopyrightText: 2016 David Edmundson <davidedmundson@kde.org>
-    SPDX-FileCopyrightText: 2022 Aleix Pol Gonzalez <aleixpol@kde.org>
+    SPDX-FileCopyrightText: 2026 Oliver Beard <olib141@outlook.com>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 import QtQuick
+import QtQuick.Controls as QQC2
 
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.kirigami as Kirigami
 
-PlasmaComponents.ToolButton {
+PlasmaComponents.ComboBox {
     id: root
 
-    property int currentIndex: -1
+    model: sessionModel
+    textRole: "name"
 
-    text: i18ndc("plasma-desktop-sddm-theme", "@action:button opens sessions menu %1 is current", "Desktop Session: %1", instantiator.objectAt(currentIndex).text || "")
-    visible: menu.count > 1
+    visible: count > 1
+    flat: true
+    displayText: i18nd("plasma_login", "Desktop Session: %1", currentText)
 
-    Component.onCompleted: {
-        currentIndex = sessionModel.lastIndex
-    }
-    checkable: true
-    checked: menu.opened
-    onToggled: {
-        if (checked) {
-            menu.popup(root, 0, 0)
-        } else {
-            menu.dismiss()
-        }
+    contentItem: QQC2.Label {
+        font: root.font
+        horizontalAlignment: Text.AlignLeft
+        verticalAlignment: Text.AlignVCenter
+        elide: Text.ElideRight
+
+        text: root.displayText
     }
 
-    signal sessionChanged()
-
-    PlasmaComponents.Menu {
-        Kirigami.Theme.colorSet: Kirigami.Theme.Window
-        Kirigami.Theme.inherit: false
-
-        id: menu
-        Instantiator {
-            id: instantiator
-            model: sessionModel
-            onObjectAdded: (index, object) => menu.insertItem(index, object)
-            onObjectRemoved: (index, object) => menu.removeItem(object)
-            delegate: PlasmaComponents.MenuItem {
-                text: model.name
-                onTriggered: {
-                    root.currentIndex = model.index
-                    sessionChanged()
-                }
-            }
-        }
-    }
+    PlasmaComponents.ToolTip.text: currentText
+    PlasmaComponents.ToolTip.visible: hovered && contentItem.truncated && !popup.visible
+    PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
 }

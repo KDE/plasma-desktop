@@ -17,6 +17,9 @@ SessionManagementScreen {
     property string lastUserName
     property bool loginScreenUiVisible: false
 
+    property int sessionIndex
+    signal sessionChanged(sessionIndex: int)
+
     //the y position that should be ensured visible when the on screen keyboard is visible
     property int visibleBoundary: mapFromItem(loginButton, 0, 0).y
     onHeightChanged: visibleBoundary = mapFromItem(loginButton, 0, 0).y + loginButton.height + Kirigami.Units.smallSpacing
@@ -62,7 +65,7 @@ SessionManagementScreen {
         const username = showUsernamePrompt ? userNameInput.text : userList.selectedUser
         const password = passwordBox.text
 
-        footer.enabled = false
+        loginLockScreenFooter.enabled = false
         mainStack.enabled = false
         userListComponent.userList.opacity = 0.75
 
@@ -152,6 +155,22 @@ SessionManagementScreen {
             onClicked: startLogin()
             Keys.onEnterPressed: clicked()
             Keys.onReturnPressed: clicked()
+        }
+    }
+
+    onSessionIndexChanged: sessionButton.currentIndex = sessionIndex
+
+    SessionButton {
+        id: sessionButton
+        Layout.fillWidth: true
+
+        currentIndex: root.sessionIndex
+        onCurrentIndexChanged: {
+            root.sessionChanged(currentIndex)
+
+            // Otherwise the password field loses focus and virtual keyboard
+            // keystrokes get eaten
+            userListComponent.mainPasswordBox.forceActiveFocus();
         }
     }
 }

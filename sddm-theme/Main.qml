@@ -32,6 +32,8 @@ Item {
 
     property string notificationMessage
 
+    property int sessionIndex: sessionModel.lastIndex
+
     LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
@@ -240,9 +242,12 @@ Item {
                         visible: !userListComponent.showUsernamePrompt
                     }]
 
+                sessionIndex: root.sessionIndex
+                onSessionChanged: (index) => root.sessionIndex = index
+
                 onLoginRequest: {
                     root.notificationMessage = ""
-                    sddm.login(username, password, sessionButton.currentIndex)
+                    sddm.login(username, password, root.sessionIndex)
                 }
             }
 
@@ -336,9 +341,12 @@ Item {
                     }
                 }
 
+                sessionIndex: root.sessionIndex
+                onSessionChanged: (index) => root.sessionIndex = index
+
                 onLoginRequest: {
                     root.notificationMessage = ""
-                    sddm.login(username, password, sessionButton.currentIndex)
+                    sddm.login(username, password, root.sessionIndex)
                 }
 
                 actionItemsVisible: !Keyboards.KWinVirtualKeyboard.visible
