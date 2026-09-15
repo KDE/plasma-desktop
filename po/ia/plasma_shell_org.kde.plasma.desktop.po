@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-29 00:47+0000\n"
-"PO-Revision-Date: 2026-07-17 16:08+0200\n"
+"POT-Creation-Date: 2026-09-15 02:47+0000\n"
+"PO-Revision-Date: 2026-09-14 11:38+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -44,11 +44,10 @@ msgstr ""
 "in iste activitate"
 
 #: contents/activitymanager/ActivityItem.qml:333
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
 msgid "Configure Activity “%1”"
-msgstr "Configura activitate "
+msgstr "Configura activitate  “%1”"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -63,23 +62,19 @@ msgid "Activities"
 msgstr "Activitates"
 
 #: contents/activitymanager/Heading.qml:86
-#, fuzzy, kde-format
-#| msgid "Search…"
+#, kde-format
 msgctxt "@action:button tooltip only"
 msgid "Search"
-msgstr "Cerca…"
+msgstr "Cerca"
 
 #: contents/activitymanager/Heading.qml:103
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm"
 msgid "Configure Activities"
-msgstr "Configura activitate "
+msgstr "Configura Activitates"
 
 #: contents/activitymanager/Heading.qml:122
-#, fuzzy, kde-format
-#| msgctxt "@action:button Close the panel configuration window"
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button tooltip only, close panel"
 msgid "Close"
 msgstr "Claude"
@@ -984,6 +979,8 @@ msgid ""
 "This authentication method is not functioning correctly. Please try another "
 "method, and check your system configuration."
 msgstr ""
+"Iste methodo de authentication non functiona correctemente. Per favor, "
+"essaya un altere methodo, e verifica le configuration de tu systema."
 
 #: contents/lockscreen/LockScreenUi.qml:375
 #, kde-format
@@ -1014,6 +1011,18 @@ msgstr "&Hiberna"
 msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "Commuta &Usator"
+
+#: contents/lockscreen/LockScreenUi.qml:462
+#, kde-format
+msgctxt "Button to show/hide virtual keyboard"
+msgid "Virtual Keyboard"
+msgstr "Claviero virtual"
+
+#: contents/lockscreen/LockScreenUi.qml:488
+#, kde-format
+msgctxt "Button to change keyboard layout"
+msgid "Switch layout"
+msgstr "Commuta disposition"
 
 #: contents/lockscreen/MainBlock.qml:67
 #, kde-format
@@ -1079,7 +1088,7 @@ msgstr "Disbloca"
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
+msgstr[0] "Installante actualisationes de software e reinitiante in 1 secunda"
 msgstr[1] ""
 "Installante actualisationes de software e reinitiante in %1 secundas"
 
@@ -1242,14 +1251,6 @@ msgstr "Exi modo de modificar"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Indicator de foco de pannello"
-
-#~ msgctxt "Button to show/hide virtual keyboard"
-#~ msgid "Virtual Keyboard"
-#~ msgstr "Claviero virtual"
-
-#~ msgctxt "Button to change keyboard layout"
-#~ msgid "Switch layout"
-#~ msgstr "Commuta disposition"
 
 #~ msgctxt "@action:button tooltip only, opens kcm"
 #~ msgid "Configure"

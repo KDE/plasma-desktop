@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-05 00:48+0000\n"
+"POT-Creation-Date: 2026-09-15 02:47+0000\n"
 "PO-Revision-Date: 2026-01-16 19:10+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -83,7 +83,12 @@ msgctxt "@action:button"
 msgid "List Users"
 msgstr "Uzskaitīt lietotājus"
 
-#: Main.qml:427
+#: Main.qml:440
+msgctxt "Button to show/hide virtual keyboard"
+msgid "Virtual Keyboard"
+msgstr "Virtuālā tastatūra"
+
+#: Main.qml:510
 msgctxt "@info:status"
 msgid "Login Failed"
 msgstr "Ierakstīšanās neizdevās"
@@ -92,7 +97,3 @@ msgstr "Ierakstīšanās neizdevās"
 msgctxt "@action:button opens sessions menu %1 is current"
 msgid "Desktop Session: %1"
 msgstr "Darbvirsmas sesija: %1"
-
-#~ msgctxt "Button to show/hide virtual keyboard"
-#~ msgid "Virtual Keyboard"
-#~ msgstr "Virtuālā tastatūra"

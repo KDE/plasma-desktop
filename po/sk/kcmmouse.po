@@ -16,8 +16,8 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-04 00:47+0000\n"
-"PO-Revision-Date: 2025-05-30 20:36+0200\n"
-"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
+"PO-Revision-Date: 2026-09-14 20:10+0200\n"
+"Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -232,13 +232,13 @@ msgstr "Obrátiť smer rolovania"
 #, kde-format
 msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
-msgstr ""
+msgstr "Rolovať pri pohybe ukazovateľa"
 
 #: ui/main.qml:383
 #, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
-msgstr ""
+msgstr "počas stlačenia stredného tlačidla"
 
 #: ui/main.qml:396
 #, kde-format
@@ -258,7 +258,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
-msgstr ""
+msgstr "po kliknutí stredným tlačidlom"
 
 #: ui/main.qml:419
 #, kde-format
@@ -268,6 +268,9 @@ msgid ""
 "you want the application to receive a single middle-click. This includes "
 "middle-click dragging."
 msgstr ""
+"Toto bude vo všeobecnosti prekážať kliknutiam stredným tlačidlom; ak chcete, "
+"aby aplikácia dostala jedno kliknutie stredným tlačidlom, kliknite ním "
+"dvakrát. Týka sa to aj ťahania stredným tlačidlom."
 
 #~ msgctxt "@option:check"
 #~ msgid "Hold down middle button and move mouse to scroll"

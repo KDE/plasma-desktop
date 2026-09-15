@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-05 00:48+0000\n"
+"POT-Creation-Date: 2026-09-15 02:47+0000\n"
 "PO-Revision-Date: 2022-11-16 22:07+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -110,7 +110,12 @@ msgctxt "@action:button"
 msgid "List Users"
 msgstr "Daftar Pengguna"
 
-#: Main.qml:427
+#: Main.qml:440
+msgctxt "Button to show/hide virtual keyboard"
+msgid "Virtual Keyboard"
+msgstr "Keyboard Virtual"
+
+#: Main.qml:510
 #, fuzzy
 #| msgid "Login Failed"
 msgctxt "@info:status"
@@ -123,7 +128,3 @@ msgstr "Gagal Masuk"
 msgctxt "@action:button opens sessions menu %1 is current"
 msgid "Desktop Session: %1"
 msgstr "Sesi Desktop: %1"
-
-#~ msgctxt "Button to show/hide virtual keyboard"
-#~ msgid "Virtual Keyboard"
-#~ msgstr "Keyboard Virtual"

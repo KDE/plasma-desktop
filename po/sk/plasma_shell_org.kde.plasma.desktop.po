@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-29 00:47+0000\n"
-"PO-Revision-Date: 2026-04-10 12:00+0200\n"
-"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
+"POT-Creation-Date: 2026-09-15 02:47+0000\n"
+"PO-Revision-Date: 2026-09-14 20:10+0200\n"
+"Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -48,11 +48,10 @@ msgstr ""
 "v tejto aktivite"
 
 #: contents/activitymanager/ActivityItem.qml:333
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
 msgid "Configure Activity “%1”"
-msgstr "Nastaviť aktivitu"
+msgstr "Nastaviť aktivitu „%1“"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -67,23 +66,19 @@ msgid "Activities"
 msgstr "Aktivity"
 
 #: contents/activitymanager/Heading.qml:86
-#, fuzzy, kde-format
-#| msgid "Search…"
+#, kde-format
 msgctxt "@action:button tooltip only"
 msgid "Search"
-msgstr "Hľadať..."
+msgstr "Hľadať"
 
 #: contents/activitymanager/Heading.qml:103
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm"
 msgid "Configure Activities"
-msgstr "Nastaviť aktivitu"
+msgstr "Nastaviť aktivity"
 
 #: contents/activitymanager/Heading.qml:122
-#, fuzzy, kde-format
-#| msgctxt "@action:button Close the panel configuration window"
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button tooltip only, close panel"
 msgid "Close"
 msgstr "Zatvoriť"
@@ -983,6 +978,8 @@ msgid ""
 "This authentication method is not functioning correctly. Please try another "
 "method, and check your system configuration."
 msgstr ""
+"Táto metóda overenia nefunguje správne. Skúste, prosím, inú metódu a "
+"skontrolujte nastavenie systému."
 
 #: contents/lockscreen/LockScreenUi.qml:375
 #, kde-format
@@ -1013,6 +1010,18 @@ msgstr "Hibernovať"
 msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "Prepnúť používateľa"
+
+#: contents/lockscreen/LockScreenUi.qml:462
+#, kde-format
+msgctxt "Button to show/hide virtual keyboard"
+msgid "Virtual Keyboard"
+msgstr "Virtuálna klávesnica"
+
+#: contents/lockscreen/LockScreenUi.qml:488
+#, kde-format
+msgctxt "Button to change keyboard layout"
+msgid "Switch layout"
+msgstr "Prepnúť rozloženie"
 
 #: contents/lockscreen/MainBlock.qml:67
 #, kde-format
@@ -1243,14 +1252,6 @@ msgstr "Ukončiť režim úprav"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Indikátor zamerania panela"
-
-#~ msgctxt "Button to show/hide virtual keyboard"
-#~ msgid "Virtual Keyboard"
-#~ msgstr "Virtuálna klávesnica"
-
-#~ msgctxt "Button to change keyboard layout"
-#~ msgid "Switch layout"
-#~ msgstr "Prepnúť rozloženie"
 
 #~ msgctxt "@action:button tooltip only, opens kcm"
 #~ msgid "Configure"

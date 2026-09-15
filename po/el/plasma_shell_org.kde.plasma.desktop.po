@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-29 00:47+0000\n"
+"POT-Creation-Date: 2026-09-15 02:47+0000\n"
 "PO-Revision-Date: 2024-09-19 17:30+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -1157,6 +1157,18 @@ msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "Εναλλα&γή χρήστη"
 
+#: contents/lockscreen/LockScreenUi.qml:462
+#, kde-format
+msgctxt "Button to show/hide virtual keyboard"
+msgid "Virtual Keyboard"
+msgstr "Εικονικό πληκτρολόγιο"
+
+#: contents/lockscreen/LockScreenUi.qml:488
+#, kde-format
+msgctxt "Button to change keyboard layout"
+msgid "Switch layout"
+msgstr "Εναλλαγή διάταξης"
+
 #: contents/lockscreen/MainBlock.qml:67
 #, fuzzy, kde-format
 #| msgid "Password"
@@ -1391,14 +1403,6 @@ msgstr "Έξοδος λειτουργίας επεξεργασίας"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Δείκτης εστίασης πίνακα"
-
-#~ msgctxt "Button to show/hide virtual keyboard"
-#~ msgid "Virtual Keyboard"
-#~ msgstr "Εικονικό πληκτρολόγιο"
-
-#~ msgctxt "Button to change keyboard layout"
-#~ msgid "Switch layout"
-#~ msgstr "Εναλλαγή διάταξης"
 
 #, fuzzy
 #~| msgid "Configure"
