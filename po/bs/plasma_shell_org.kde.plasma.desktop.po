@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-29 00:47+0000\n"
+"POT-Creation-Date: 2026-09-15 00:46+0000\n"
 "PO-Revision-Date: 2014-12-28 11:53+0000\n"
 "Last-Translator: Ajla Alic <aalic2@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -1087,6 +1087,19 @@ msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "Prekidač"
 
+#: contents/lockscreen/LockScreenUi.qml:462
+#, kde-format
+msgctxt "Button to show/hide virtual keyboard"
+msgid "Virtual Keyboard"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:488
+#, fuzzy, kde-format
+#| msgid "Switch"
+msgctxt "Button to change keyboard layout"
+msgid "Switch layout"
+msgstr "Prekidač"
+
 #: contents/lockscreen/MainBlock.qml:67
 #, kde-format
 msgctxt "@info:placeholder in text field"
@@ -1311,12 +1324,6 @@ msgstr ""
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr ""
-
-#, fuzzy
-#~| msgid "Switch"
-#~ msgctxt "Button to change keyboard layout"
-#~ msgid "Switch layout"
-#~ msgstr "Prekidač"
 
 #, fuzzy
 #~| msgid "Create activity..."

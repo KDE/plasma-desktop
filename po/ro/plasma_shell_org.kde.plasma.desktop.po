@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-29 00:47+0000\n"
+"POT-Creation-Date: 2026-09-15 00:46+0000\n"
 "PO-Revision-Date: 2026-06-15 16:28+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -1021,6 +1021,18 @@ msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "Schimbă &utilizatorul"
 
+#: contents/lockscreen/LockScreenUi.qml:462
+#, kde-format
+msgctxt "Button to show/hide virtual keyboard"
+msgid "Virtual Keyboard"
+msgstr "Tastatură virtuală"
+
+#: contents/lockscreen/LockScreenUi.qml:488
+#, kde-format
+msgctxt "Button to change keyboard layout"
+msgid "Switch layout"
+msgstr "Schimbă aranjamentul"
+
 #: contents/lockscreen/MainBlock.qml:67
 #, kde-format
 msgctxt "@info:placeholder in text field"
@@ -1254,14 +1266,6 @@ msgstr "Ieși din regim de modificare"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Indicator de focalizare a panoului"
-
-#~ msgctxt "Button to show/hide virtual keyboard"
-#~ msgid "Virtual Keyboard"
-#~ msgstr "Tastatură virtuală"
-
-#~ msgctxt "Button to change keyboard layout"
-#~ msgid "Switch layout"
-#~ msgstr "Schimbă aranjamentul"
 
 #~ msgctxt "@action:button tooltip only, opens kcm"
 #~ msgid "Configure"

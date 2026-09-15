@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-29 00:47+0000\n"
+"POT-Creation-Date: 2026-09-15 00:46+0000\n"
 "PO-Revision-Date: 2026-08-12 23:05+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -1013,6 +1013,18 @@ msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "&Pārslēgt lietotāju"
 
+#: contents/lockscreen/LockScreenUi.qml:462
+#, kde-format
+msgctxt "Button to show/hide virtual keyboard"
+msgid "Virtual Keyboard"
+msgstr "Virtuālā tastatūra"
+
+#: contents/lockscreen/LockScreenUi.qml:488
+#, kde-format
+msgctxt "Button to change keyboard layout"
+msgid "Switch layout"
+msgstr "Pārslēgt izkārtojumu"
+
 #: contents/lockscreen/MainBlock.qml:67
 #, kde-format
 msgctxt "@info:placeholder in text field"
@@ -1247,14 +1259,6 @@ msgstr "Iziet no rediģēšanas režīma"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Paneļa fokusa indikators"
-
-#~ msgctxt "Button to show/hide virtual keyboard"
-#~ msgid "Virtual Keyboard"
-#~ msgstr "Virtuālā tastatūra"
-
-#~ msgctxt "Button to change keyboard layout"
-#~ msgid "Switch layout"
-#~ msgstr "Pārslēgt izkārtojumu"
 
 #~ msgctxt "@action:button tooltip only, opens kcm"
 #~ msgid "Configure"

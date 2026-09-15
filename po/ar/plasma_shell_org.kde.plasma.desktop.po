@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-29 00:47+0000\n"
+"POT-Creation-Date: 2026-09-15 00:46+0000\n"
 "PO-Revision-Date: 2026-08-29 12:17+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -1020,6 +1020,18 @@ msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "بدّل ال&مستخدم"
 
+#: contents/lockscreen/LockScreenUi.qml:462
+#, kde-format
+msgctxt "Button to show/hide virtual keyboard"
+msgid "Virtual Keyboard"
+msgstr "لوحة مفاتيح افتراضية"
+
+#: contents/lockscreen/LockScreenUi.qml:488
+#, kde-format
+msgctxt "Button to change keyboard layout"
+msgid "Switch layout"
+msgstr "بدّل التخطيط"
+
 #: contents/lockscreen/MainBlock.qml:67
 #, kde-format
 msgctxt "@info:placeholder in text field"
@@ -1273,14 +1285,6 @@ msgstr "اخرج من نمط التحرير"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "مؤشر التركيز على اللوحة"
-
-#~ msgctxt "Button to show/hide virtual keyboard"
-#~ msgid "Virtual Keyboard"
-#~ msgstr "لوحة مفاتيح افتراضية"
-
-#~ msgctxt "Button to change keyboard layout"
-#~ msgid "Switch layout"
-#~ msgstr "بدّل التخطيط"
 
 #~ msgctxt "@action:button tooltip only, opens kcm"
 #~ msgid "Configure"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-04 00:47+0000\n"
-"PO-Revision-Date: 2026-01-30 09:42+0100\n"
+"PO-Revision-Date: 2026-09-14 17:06+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: inputbackend.cpp:49
 #, kde-format
@@ -227,13 +227,13 @@ msgstr "Reverte direction de rolar"
 #, kde-format
 msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
-msgstr ""
+msgstr "Rola quano on move le punctator"
 
 #: ui/main.qml:383
 #, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
-msgstr ""
+msgstr "durante que on pressa le button central"
 
 #: ui/main.qml:396
 #, kde-format
@@ -253,7 +253,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
-msgstr ""
+msgstr "post cliccar le button in central"
 
 #: ui/main.qml:419
 #, kde-format
@@ -263,6 +263,9 @@ msgid ""
 "you want the application to receive a single middle-click. This includes "
 "middle-click dragging."
 msgstr ""
+"Isto interferera con le clics central in general; clicca duo vices con le  "
+"button central quando tu vole que le application recipe un singule  clic "
+"central. Isto include le traher con le button central."
 
 #~ msgctxt "@option:check"
 #~ msgid "Hold down middle button and move mouse to scroll"

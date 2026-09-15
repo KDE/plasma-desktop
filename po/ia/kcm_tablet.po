@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-31 00:45+0000\n"
-"PO-Revision-Date: 2026-02-19 16:29+0100\n"
+"PO-Revision-Date: 2026-09-14 17:06+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -232,7 +232,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "upwards"
 msgid "Clockwise:"
-msgstr ""
+msgstr "In senso horari:"
 
 #: ui/ActionDialog.qml:257
 #, kde-format
@@ -240,7 +240,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "downwards"
 msgid "Counterclockwise:"
-msgstr ""
+msgstr "In senso anti-horari"
 
 #: ui/ActionDialog.qml:271
 #, kde-format
@@ -331,7 +331,7 @@ msgstr "Calibration de Penna"
 #, kde-format
 msgctxt "@info"
 msgid "%1: (%2 px, %3 px)"
-msgstr ""
+msgstr "%1: (%2 px, %3 px)"
 
 #: ui/Calibration.qml:107
 #, kde-format
@@ -340,14 +340,11 @@ msgid ""
 "Applied center correction (%1 px, %2 px). Retap the targets to redo the "
 "correction."
 msgstr ""
+"Correction de centro applicate (%1 px, %2 px). Retocca le objectivos  pro "
+"refacer le correction."
 
 #: ui/Calibration.qml:173
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds unless further action is "
-#| "taken.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><emphasis "
@@ -362,9 +359,9 @@ msgstr[0] ""
 "<b>Retornera al calibration predefinite in %1 secundas a minuse que ulterior "
 "action es prendite.</b>"
 msgstr[1] ""
-"Tocca le objectivos novemente per confirmar le nove calibration.<nl/><nl/> "
-"<b>Retornera al calibration predefinite in %1 secundas a minuse que ulterior "
-"action es prendite.</b>"
+"Tocca le objectivos novemente per confirmar le nove calibration.<nl/><nl/"
+"><emphasis strong='true'>Retornera al calibration predefinite in %1 secundas "
+"a minus que ulterior action es prendite.</emphasis>"
 
 #: ui/Calibration.qml:177
 #, kde-format
@@ -375,6 +372,9 @@ msgid ""
 "Tap the center target once to fine-tune alignment. You can retap the other "
 "targets to verify the result."
 msgstr ""
+"Calibration es completate e salveguardate.Tocca le objectivo central un vice "
+"pro ajustar precisemente le alineamento. Tu pote retoccar le altere "
+"objectivos pro verificar le resultato."
 
 #: ui/Calibration.qml:180
 #, kde-format
@@ -389,6 +389,8 @@ msgid ""
 "Offset Correction:\n"
 "%1"
 msgstr ""
+"Correction de displaciamento (offset):\n"
+"%1"
 
 #: ui/Calibration.qml:216
 #, kde-format
@@ -424,31 +426,31 @@ msgstr "Cancella"
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-left"
-msgstr ""
+msgstr "Culmine a sinistra"
 
 #: ui/Calibration.qml:334
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-right"
-msgstr ""
+msgstr "Culmine a dextera"
 
 #: ui/Calibration.qml:353
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-left"
-msgstr ""
+msgstr "Basso a sinistra"
 
 #: ui/Calibration.qml:372
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-right"
-msgstr ""
+msgstr "Basso a dextera"
 
 #: ui/Calibration.qml:391
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Center"
-msgstr ""
+msgstr "Centro"
 
 #: ui/DisplayTab.qml:46
 #, kde-format
