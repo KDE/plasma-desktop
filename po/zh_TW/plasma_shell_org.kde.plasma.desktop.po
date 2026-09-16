@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-15 02:47+0000\n"
-"PO-Revision-Date: 2026-07-22 01:04+0900\n"
+"PO-Revision-Date: 2026-09-15 17:53+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -47,11 +47,10 @@ msgstr ""
 "此活動顯示"
 
 #: contents/activitymanager/ActivityItem.qml:333
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
 msgid "Configure Activity “%1”"
-msgstr "設定活動"
+msgstr "設定活動「%1」"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -66,23 +65,19 @@ msgid "Activities"
 msgstr "活動"
 
 #: contents/activitymanager/Heading.qml:86
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@action:button tooltip only"
 msgid "Search"
-msgstr "搜尋..."
+msgstr "搜尋"
 
 #: contents/activitymanager/Heading.qml:103
-#, fuzzy, kde-format
-#| msgid "Configure activity"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm"
 msgid "Configure Activities"
 msgstr "設定活動"
 
 #: contents/activitymanager/Heading.qml:122
-#, fuzzy, kde-format
-#| msgctxt "@action:button Close the panel configuration window"
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button tooltip only, close panel"
 msgid "Close"
 msgstr "關閉"
@@ -978,6 +973,7 @@ msgid ""
 "This authentication method is not functioning correctly. Please try another "
 "method, and check your system configuration."
 msgstr ""
+"這個認證方式目前無法正常運作。請試試看使用別的方法，並檢查您的系統設定。"
 
 #: contents/lockscreen/LockScreenUi.qml:375
 #, kde-format

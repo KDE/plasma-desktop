@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-31 00:45+0000\n"
-"PO-Revision-Date: 2026-07-06 05:36+0900\n"
+"PO-Revision-Date: 2026-09-15 18:00+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.11.70\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -233,7 +233,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "upwards"
 msgid "Clockwise:"
-msgstr ""
+msgstr "順時針："
 
 #: ui/ActionDialog.qml:257
 #, kde-format
@@ -241,7 +241,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "downwards"
 msgid "Counterclockwise:"
-msgstr ""
+msgstr "逆時針："
 
 #: ui/ActionDialog.qml:271
 #, kde-format
@@ -332,7 +332,7 @@ msgstr "畫筆校準"
 #, kde-format
 msgctxt "@info"
 msgid "%1: (%2 px, %3 px)"
-msgstr ""
+msgstr "%1：(%2 px, %3 px)"
 
 #: ui/Calibration.qml:107
 #, kde-format
@@ -340,15 +340,10 @@ msgctxt "@info"
 msgid ""
 "Applied center correction (%1 px, %2 px). Retap the targets to redo the "
 "correction."
-msgstr ""
+msgstr "已套用中心矯正 (%1 px, %2 px)。重新輕點目標來重新進行矯正。"
 
 #: ui/Calibration.qml:173
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds unless further action is "
-#| "taken.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><emphasis "
@@ -359,8 +354,8 @@ msgid_plural ""
 "strong='true'>Will revert to default calibration in %1 seconds unless "
 "further action is taken.</emphasis>"
 msgstr[0] ""
-"再次輕點各個目標來確認使用新的校準。<nl/><nl/><b>未確認時將於 %1 秒後還原成預"
-"設校準，除非進行更多動作。</b>"
+"再次輕點各個目標來確認使用新的校準。<nl/><nl/><emphasis strong='true'>未確認"
+"時將於 %1 秒後還原成預設校準，除非進行更多動作。</emphasis>"
 
 #: ui/Calibration.qml:177
 #, kde-format
@@ -371,6 +366,9 @@ msgid ""
 "Tap the center target once to fine-tune alignment. You can retap the other "
 "targets to verify the result."
 msgstr ""
+"校準已完成並儲存。\n"
+"\n"
+"請輕點中央的目標來微調對齊。您可以重新輕點其他目標來檢驗結果。"
 
 #: ui/Calibration.qml:180
 #, kde-format
@@ -385,6 +383,8 @@ msgid ""
 "Offset Correction:\n"
 "%1"
 msgstr ""
+"偏移矯正：\n"
+"%1"
 
 #: ui/Calibration.qml:216
 #, kde-format
@@ -420,31 +420,31 @@ msgstr "取消"
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-left"
-msgstr ""
+msgstr "左上"
 
 #: ui/Calibration.qml:334
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-right"
-msgstr ""
+msgstr "右上"
 
 #: ui/Calibration.qml:353
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-left"
-msgstr ""
+msgstr "左下"
 
 #: ui/Calibration.qml:372
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-right"
-msgstr ""
+msgstr "右下"
 
 #: ui/Calibration.qml:391
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Center"
-msgstr ""
+msgstr "中心"
 
 #: ui/DisplayTab.qml:46
 #, kde-format
