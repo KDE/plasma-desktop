@@ -127,6 +127,7 @@ Name[sv]=Stäng av eller sätt på skärmläsare
 Name[tr]=Ekran Okuyucusunu Aç/Kapat
 Name[uk]=Увімкнути чи вимкнути читання з екрана
 Name[zh_CN]=屏幕阅读器打开/关闭
+Name[zh_TW]=切換螢幕閱讀器開關
 Exec=dbus-send --type=method_call --print-reply --dest=org.kde.kded6 /modules/screenreader org.kde.screenreader.toggle
 X-KDE-Shortcuts=Meta+Alt+S
 X-KDE-Migrate-Shortcut=kaccess,Toggle Screen Reader On and Off
