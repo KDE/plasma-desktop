@@ -60,7 +60,7 @@ ContainmentItem {
     property int handleDelay: 800
     property real haloOpacity: 0.5
 
-    readonly property bool isUiReady: Plasmoid.containment.corona.isScreenUiReady(root.screen)
+    property bool isUiReady: Plasmoid.containment.corona.isScreenUiReady(root.screen)
 
     readonly property int hoverActivateDelay: 750 // Magic number that matches Dolphin's auto-expand folders delay.
 
@@ -70,6 +70,8 @@ ContainmentItem {
     // Plasmoid.title is set by a Binding {} in FolderViewLayer
     toolTipSubText: ""
     Plasmoid.icon: (!Plasmoid.configuration.useCustomIcon && folderViewLayer.ready) ? symbolicizeIconName(folderViewLayer.view?.model.iconName) : Plasmoid.configuration.icon
+
+    onScreenChanged: isUiReady = Plasmoid.containment.corona.isScreenUiReady(root.screen)
 
     // We want to do this here rather than in the model because we don't always want
     // symbolic icons everywhere, but we do know that we always want them in this
@@ -278,9 +280,8 @@ ContainmentItem {
             // When adding panels, sizes change. We want to make sure all panels
             // are loaded, and when they all are loaded, we tell the folderViewLayer loader to start.
             function onScreenUiReadyChanged(screen: int, newLayoutReady: bool) {
-                if (root.isContainment && root.isFolder && !folderViewLayer.ready && root.screen === screen && newLayoutReady){
-                    // We skip x and y since that is handled by the parent of folderViewLayer
-                    folderViewLayer.active = true;
+                if (root.screen === screen) {
+                    root.isUiReady = newLayoutReady;
                 }
             }
         }
