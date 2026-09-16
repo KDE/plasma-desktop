@@ -9,7 +9,11 @@
 #include "foldermodel.h"
 #include "screenmapper.h"
 
+#include <KConfigGroup>
+#include <KSharedConfig>
+
 #include <QSignalSpy>
+#include <QStandardPaths>
 #include <QTemporaryDir>
 #include <QTest>
 
@@ -39,6 +43,16 @@ void FolderModelTest::createTestFolder(const QString &path)
         f.open(QFile::WriteOnly);
         f.close();
     }
+}
+
+void FolderModelTest::initTestCase()
+{
+    QStandardPaths::setTestModeEnabled(true);
+
+    KConfigGroup confirmGroup(KSharedConfig::openConfig(QStringLiteral("kiorc"), KConfig::NoGlobals), QStringLiteral("Confirmations"));
+    confirmGroup.writeEntry("ConfirmRenameFileType", false);
+    confirmGroup.writeEntry("ConfirmHide", false);
+    confirmGroup.sync();
 }
 
 void FolderModelTest::init()

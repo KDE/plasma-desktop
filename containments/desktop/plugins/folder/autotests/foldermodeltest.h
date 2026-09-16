@@ -17,6 +17,7 @@ class FolderModelTest : public QObject
     Q_OBJECT
 
 private Q_SLOTS:
+    void initTestCase();
     void init();
     void cleanup();
     void tst_listing();

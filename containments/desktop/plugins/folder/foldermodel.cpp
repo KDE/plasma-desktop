@@ -65,6 +65,10 @@
 #include <KIO/PreviewJob>
 #include <KIO/RestoreJob>
 #include <KIO/StatJob>
+#include <kio_version.h>
+#if KIO_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+#include <KIO/RenameFileWarningDialog>
+#endif
 #include <KLocalizedString>
 #include <KNotification>
 #include <KNotificationJobUiDelegate>
@@ -924,9 +928,49 @@ void FolderModel::rename(int row, const QString &name)
         return;
     }
 
-    QModelIndex idx = index(row, 0);
+    const QModelIndex idx = index(row, 0);
+    if (!idx.isValid()) {
+        return;
+    }
+
+    const KFileItem oldItem = itemForIndex(idx);
+    if (name.isEmpty() || name == oldItem.text() || name == QLatin1Char('.') || name == QLatin1String("..")) {
+        return;
+    }
+
+    const QUrl oldUrl = oldItem.url();
+    const QString oldName = oldItem.name();
     const QString filename = data(idx, UrlRole).toString();
     const QString newFilename = QStringLiteral("desktop:/%1").arg(name);
+
+#if KIO_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+    auto *renameWarning = new KIO::RenameFileWarningDialog(oldItem, name, nullptr, showHiddenFiles());
+    connect(renameWarning, &KIO::RenameFileWarningDialog::result, this, [this, oldUrl, oldName, filename, newFilename, name](bool proceed) {
+        if (!proceed) {
+            return;
+        }
+        if (!renameTargetStillMatches(oldUrl, oldName)) {
+            return;
+        }
+        const int targetRow = indexForUrl(oldUrl);
+        if (targetRow < 0) {
+            return;
+        }
+        connect(
+            this,
+            &QAbstractItemModel::dataChanged,
+            this,
+            [=, this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles) {
+                Q_UNUSED(roles);
+                Q_UNUSED(topLeft);
+                Q_UNUSED(bottomRight);
+                Q_EMIT itemRenamed(filename, newFilename);
+            },
+            Qt::SingleShotConnection);
+        setData(index(targetRow, 0), name, Qt::EditRole);
+    });
+    renameWarning->exec();
+#else
     connect(
         this,
         &QAbstractItemModel::dataChanged,
@@ -939,6 +983,18 @@ void FolderModel::rename(int row, const QString &name)
         },
         Qt::SingleShotConnection);
     setData(idx, name, Qt::EditRole);
+#endif
+}
+
+bool FolderModel::renameTargetStillMatches(const QUrl &oldUrl, const QString &expectedName) const
+{
+    const int row = indexForUrl(oldUrl);
+    if (row < 0) {
+        return false;
+    }
+
+    const KFileItem item = itemForIndex(index(row, 0));
+    return item.name() == expectedName;
 }
 
 int FolderModel::fileExtensionBoundary(int row)

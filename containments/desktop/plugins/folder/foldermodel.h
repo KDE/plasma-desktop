@@ -363,6 +363,7 @@ private:
     void createActions();
     void addDragImage(QDrag *drag, int x, int y);
     void setStatus(Status status);
+    bool renameTargetStillMatches(const QUrl &oldUrl, const QString &expectedName) const;
     static bool isTrashEmpty();
     static bool isDeleteCommandShown();
     QList<QUrl> selectedUrls() const;

@@ -22,4 +22,4 @@ ecm_add_tests(
    LINK_LIBRARIES Qt::Test foldertest
 )
 
-
+target_link_libraries(foldermodeltest KF6::ConfigCore)
