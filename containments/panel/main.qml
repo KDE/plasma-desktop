@@ -24,7 +24,7 @@ ContainmentItem {
     height: 48
 
 //BEGIN properties
-    Layout.preferredWidth: fixedWidth || currentLayout.implicitWidth + currentLayout.horizontalDisplacement
+    Layout.preferredWidth: Math.max(addWidgetsButton.implicitWidth * addWidgetsButton.visible, fixedWidth || currentLayout.implicitWidth + currentLayout.horizontalDisplacement)
     Layout.preferredHeight: fixedHeight || currentLayout.implicitHeight + currentLayout.verticalDisplacement
     Layout.fillWidth: {
         return currentLayout.children
