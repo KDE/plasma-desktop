@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-21 00:46+0000\n"
+"POT-Creation-Date: 2026-09-17 00:46+0000\n"
 "PO-Revision-Date: 2009-01-27 18:31+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -549,7 +549,7 @@ msgctxt "@item:inmenu opens submenu with view options like sorting"
 msgid "Icons"
 msgstr "चिनहा"
 
-#: package/contents/ui/main.qml:448
+#: package/contents/ui/main.qml:449
 #, fuzzy, kde-format
 #| msgid "&Refresh Desktop"
 msgctxt "@action:inmenu opens config dialog"
@@ -562,17 +562,17 @@ msgstr "डेस्कटाप ताजा करव (&R)"
 msgid "Select Folder"
 msgstr "सब्बो चुनव"
 
-#: plugins/folder/foldermodel.cpp:545
+#: plugins/folder/foldermodel.cpp:549
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "डेस्कटाप ताजा करव (&R)"
 
-#: plugins/folder/foldermodel.cpp:545 plugins/folder/foldermodel.cpp:1785
+#: plugins/folder/foldermodel.cpp:549 plugins/folder/foldermodel.cpp:1841
 #, kde-format
 msgid "&Refresh View"
 msgstr "दृस्य ताजा करव (&R)"
 
-#: plugins/folder/foldermodel.cpp:908
+#: plugins/folder/foldermodel.cpp:912
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -580,7 +580,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:910
+#: plugins/folder/foldermodel.cpp:914
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -588,24 +588,24 @@ msgid ""
 "not be found. It may have been moved or deleted."
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1794
+#: plugins/folder/foldermodel.cpp:1850
 #, fuzzy, kde-format
 #| msgid "&Empty Trash Bin"
 msgid "&Empty Trash"
 msgstr "घुरुवा खाली करव (&E)"
 
-#: plugins/folder/foldermodel.cpp:1797
+#: plugins/folder/foldermodel.cpp:1853
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1800
+#: plugins/folder/foldermodel.cpp:1856
 #, kde-format
 msgid "&Open"
 msgstr "खोलव (&O)"
 
-#: plugins/folder/foldermodel.cpp:1804
+#: plugins/folder/foldermodel.cpp:1860
 #, fuzzy, kde-format
 #| msgid "Show a Place:"
 msgctxt ""
@@ -614,23 +614,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "जगह देखाव:"
 
-#: plugins/folder/foldermodel.cpp:1905
+#: plugins/folder/foldermodel.cpp:1961
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1908
+#: plugins/folder/foldermodel.cpp:1964
 #, kde-format
 msgid "&Move to Trash"
 msgstr "घुरुवा मं डालव (&M)"
 
-#: plugins/folder/foldermodel.cpp:1941
+#: plugins/folder/foldermodel.cpp:1997
 #, kde-format
 msgid "&Paste"
 msgstr "चिपकाव (&P)"
 
-#: plugins/folder/foldermodel.cpp:2092
+#: plugins/folder/foldermodel.cpp:2148
 #, kde-format
 msgid "&Properties"
 msgstr "गुन (&P)"
