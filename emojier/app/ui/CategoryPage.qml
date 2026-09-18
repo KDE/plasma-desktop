@@ -49,6 +49,7 @@ Kirigami.ScrollablePage {
 
                 onTextChanged: {
                     forceActiveFocus()
+                    view.searchText = text
                     emojiModel.search = text
 
                     // Always focus the first item if there is one
@@ -391,8 +392,8 @@ Kirigami.ScrollablePage {
         Kirigami.PlaceholderMessage {
             anchors.centerIn: parent
             width: parent.width - (Kirigami.Units.largeSpacing * 8)
-            text: view.showClearHistoryButton ? i18nc("@label placeholder for empty recent emoji list", "No recent emojis") : i18nc("@label placeholder for no emoji found in category", "No matching emoji found")
-            visible: emojiView.count === 0 && view.showClearHistoryButton
+            text: view.searchText.length === 0 ? i18nc("@label placeholder for empty recent emoji list", "No recent emojis") : i18nc("@label placeholder for no emoji found in category", "No matching emoji found")
+            visible: emojiView.count === 0
         }
     }
 

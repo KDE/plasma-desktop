@@ -165,10 +165,10 @@ Kirigami.ApplicationWindow {
         function onClearHistoryRequested() : void { window.clearHistory() }
         function onAllDataRequested() : void {
             if (window.currentPage.category.length > 0 || window.currentPage.model != emoji) {
-                window.currentPage.category = "";
+                window.currentPage.category = "All";
                 window.currentPage.model = emoji;
                 window.currentPage.title = allAction.text
-                window.currentPage.showClearHistoryButton = true;
+                window.currentPage.showClearHistoryButton = false;
             }
         }
     }
