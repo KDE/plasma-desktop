@@ -16,8 +16,6 @@ import org.kde.plasma.private.kicker as Kicker
 PlasmoidItem {
     id: kicker
 
-    anchors.fill: parent
-
     signal reset
     signal modelRefreshed
 
