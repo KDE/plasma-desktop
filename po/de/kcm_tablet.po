@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-31 00:45+0000\n"
-"PO-Revision-Date: 2026-09-02 18:27+0200\n"
-"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
+"PO-Revision-Date: 2026-09-17 20:51+0200\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.11.70\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -347,12 +347,7 @@ msgstr ""
 "die Ziele, um die Korrektur zu wiederholen."
 
 #: ui/Calibration.qml:173
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds unless further action is "
-#| "taken.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><emphasis "
@@ -364,12 +359,12 @@ msgid_plural ""
 "further action is taken.</emphasis>"
 msgstr[0] ""
 "Tippen Sie erneut auf die Ziele, um die neue Kalibrierung zu bestätigen.<nl/"
-"><nl/><b>Wenn Sie nichts weiter tun, wird in %1 Sekunden auf die "
-"Standardkalibrierung zurückgesetzt.</b>"
+"><nl/><emphasis strong='true'>Wenn Sie nichts weiter tun, wird in %1 Sekunde "
+"auf die Standardkalibrierung zurückgesetzt.</emphasis>"
 msgstr[1] ""
 "Tippen Sie erneut auf die Ziele, um die neue Kalibrierung zu bestätigen.<nl/"
-"><nl/><b>Wenn Sie nichts weiter tun, wird in %1 Sekunden auf die "
-"Standardkalibrierung zurückgesetzt.</b>"
+"><nl/><emphasis strong='true'>Wenn Sie nichts weiter tun, wird in %1 "
+"Sekunden auf die Standardkalibrierung zurückgesetzt.</emphasis>"
 
 #: ui/Calibration.qml:177
 #, kde-format
