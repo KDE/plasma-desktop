@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-04 00:47+0000\n"
-"PO-Revision-Date: 2026-05-21 16:08+0200\n"
+"PO-Revision-Date: 2026-09-17 20:55+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: inputbackend.cpp:49
 #, kde-format
@@ -238,13 +238,13 @@ msgstr "Laufrichtung umkehren"
 #, kde-format
 msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
-msgstr ""
+msgstr "Beim Bewegen des Zeigers scrollen"
 
 #: ui/main.qml:383
 #, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
-msgstr ""
+msgstr "während die mittlere Maustaste gedrückt wird"
 
 #: ui/main.qml:396
 #, kde-format
@@ -264,7 +264,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
-msgstr ""
+msgstr "nachdem die mittlere Maustaste gedrückt wurde"
 
 #: ui/main.qml:419
 #, kde-format
@@ -274,6 +274,9 @@ msgid ""
 "you want the application to receive a single middle-click. This includes "
 "middle-click dragging."
 msgstr ""
+"Dies beeinträchtigt den Mittelklick generell. Klicken Sie zwei Mal mit der "
+"mittleren Maustaste, wenn die Anwendung einen einzelnen Mittelklick erhalten "
+"soll. Dies gilt auch für das Ziehen mit der mittleren Maustaste."
 
 #~ msgctxt "@option:check"
 #~ msgid "Hold down middle button and move mouse to scroll"
