@@ -9,6 +9,7 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Templates as T
 import org.kde.plasma.extras as PlasmaExtras
+import org.kde.plasma.plasmoid
 
 BasePage {
     id: root
@@ -18,6 +19,7 @@ BasePage {
         focus: true // needed for Loaders
         model: placesCategoryModel
         isSidebar: true
+        defaultCurrentIndex: Math.max(0, Plasmoid.configuration.defaultPage - 2)
         delegate: KickoffListDelegate {
             id: delegate
             url: ""

@@ -12,6 +12,7 @@ import org.kde.ksvg as KSvg
 import org.kde.plasma.components as PC3
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
+import org.kde.plasma.plasmoid
 
 PlasmaExtras.PlasmoidHeading {
     id: root
@@ -19,6 +20,7 @@ PlasmaExtras.PlasmoidHeading {
     readonly property alias tabBar: tabBar
     property real preferredTabBarWidth: 0
     readonly property alias leaveButtons: leaveButtons
+    readonly property int defaultTab: Plasmoid.configuration.defaultPage > 1 ? 1 : 0
 
     contentWidth: tabBar.implicitWidth + spacing
     contentHeight: leaveButtons.implicitHeight
@@ -43,6 +45,7 @@ PlasmaExtras.PlasmoidHeading {
         property real tabWidth: Math.max(applicationsTab.implicitWidth, placesTab.implicitWidth)
 
         focus: true
+        currentIndex: root.defaultTab
 
         width: root.preferredTabBarWidth > 0 ? root.preferredTabBarWidth : undefined
         implicitWidth: contentWidth + leftPadding + rightPadding
@@ -121,7 +124,7 @@ PlasmaExtras.PlasmoidHeading {
             target: kickoff
             function onExpandedChanged() {
                 if (!kickoff.expanded) {
-                    tabBar.currentIndex = 0
+                    tabBar.currentIndex = root.defaultTab;
                 }
             }
         }

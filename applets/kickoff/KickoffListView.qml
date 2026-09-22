@@ -27,6 +27,7 @@ EmptyPage {
     property alias model: view.model
     property alias count: view.count
     property alias currentIndex: view.currentIndex
+    property int defaultCurrentIndex: 0
     property alias currentItem: view.currentItem
     property alias delegate: view.delegate
     property alias section: view.section
@@ -113,7 +114,7 @@ EmptyPage {
         leftMargin: kickoff.backgroundMetrics.leftPadding
         rightMargin: kickoff.backgroundMetrics.rightPadding
 
-        currentIndex: count > 0 ? 0 : -1
+        currentIndex: count > 0 ? root.defaultCurrentIndex : -1
         focus: true
         interactive: height < contentHeight
         pixelAligned: true
@@ -130,7 +131,7 @@ EmptyPage {
 
         onCountChanged: {
             if (!activeFocus) {
-                currentIndex = (count > 0 ? 0 : -1)
+                currentIndex = (count > 0 ? root.defaultCurrentIndex : -1)
             } else if (count > 0 && currentIndex !== -1) {
                 positionViewAtIndex(currentIndex, ListView.Contain)
             }
@@ -201,7 +202,7 @@ EmptyPage {
             target: kickoff
             function onExpandedChanged() {
                 if (!kickoff.expanded) {
-                    view.currentIndex = 0
+                    view.currentIndex = root.defaultCurrentIndex;
                     view.positionViewAtBeginning()
                 }
             }

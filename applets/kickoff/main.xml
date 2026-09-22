@@ -73,5 +73,9 @@
             <label>Whether to highlight newly-installed applications</label>
             <default>true</default>
         </entry>
+        <entry name="defaultPage" type="Int">
+            <label>What page to open Kickoff by default: 0 = Favorites (default), 1 = All Apps, 2 = Computer, 3 = Recently Used, 4 = Most Frequently Used</label>
+            <default>0</default>
+        </entry>
     </group>
 </kcfg>

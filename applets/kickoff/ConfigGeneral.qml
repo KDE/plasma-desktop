@@ -39,6 +39,7 @@ KCM.SimpleKCM {
     property alias cfg_compactMode: compactModeCheckbox.checked
     property alias cfg_highlightNewlyInstalledApps: highlightNewlyInstalledAppsCheckbox.checked
     property alias cfg_switchCategoryOnHover: switchCategoryOnHoverCheckbox.checked
+    property alias cfg_defaultPage: defaultPageCombo.currentIndex
 
     Kirigami.FormLayout {
         QQC2.Button {
@@ -201,6 +202,18 @@ KCM.SimpleKCM {
 
         Item {
             Kirigami.FormData.isSection: true
+        }
+
+        QQC2.ComboBox {
+            id: defaultPageCombo
+            Kirigami.FormData.label: i18nc("@label:group Open Kickoff on page by default", "Default page:")
+            model: [
+                i18nc("@item:inlistbox Open Kickoff on favorites page by default", "Favorites"),
+                i18nc("@item:inlistbox Open Kickoff on all apps page by default", "All Applications"),
+                i18nc("@item:inlistbox Open Kickoff on This Computer page by default", "Computer"),
+                i18nc("@item:inlistbox Open Kickoff on history page by default", "History"),
+                i18nc("@item:inlistbox Open Kickoff on frequently used page by default", "Frequencly Used")
+            ]
         }
 
         QQC2.RadioButton {

@@ -52,6 +52,7 @@ BasePage {
         focus: true // needed for Loaders
         model: kickoff.rootModel
         isSidebar: true
+        defaultCurrentIndex: Math.max(0, Math.min(1, Plasmoid.configuration.defaultPage))
         // needed otherwise app displayed at top-level will show a first character as group.
         section.property: ""
         delegate: KickoffListDelegate {
