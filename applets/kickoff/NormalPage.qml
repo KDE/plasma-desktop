@@ -8,6 +8,8 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Templates as T
 
+import org.kde.plasma.plasmoid
+
 EmptyPage {
     id: root
     property real preferredSideBarWidth: Math.max(footer.tabBar.implicitWidth, applicationsPage.implicitSideBarWidth)
@@ -16,9 +18,13 @@ EmptyPage {
         id: stackView
         focus: true
         reverseTransitions: footer.tabBar.currentIndex === 1
-        initialItem: ApplicationsPage {
+        initialItem: Plasmoid.configuration.defaultPage > 1 ? placesPage : applicationsPage
+
+        ApplicationsPage {
             id: applicationsPage
             preferredSideBarWidth: root.preferredSideBarWidth + kickoff.backgroundMetrics.leftPadding
+            // TODO Make it possible to put this in a Component.
+            visible: false
         }
         Component {
             id: placesPage
