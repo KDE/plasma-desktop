@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-10 00:46+0000\n"
+"POT-Creation-Date: 2026-09-22 02:51+0000\n"
 "PO-Revision-Date: 2024-10-25 23:51-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -500,7 +500,7 @@ msgctxt "@info:status"
 msgid "No active shortcuts"
 msgstr "ਕੋਈ ਸਰਗਰਮ ਸ਼ਾਰਟਕੱਟ ਨਹੀਂ ਹੈ"
 
-#: ui/ShortcutActionDelegate.qml:135
+#: ui/ShortcutActionDelegate.qml:136
 #, fuzzy, kde-format
 #| msgctxt "%1 decides if singular or plural will be used"
 #| msgid "Default shortcut"
@@ -511,55 +511,55 @@ msgid_plural "Default shortcuts"
 msgstr[0] "ਡਿਫਾਲਟ ਸ਼ਾਰਟਕੱਟ"
 msgstr[1] "ਡਿਫਾਲਟ ਸ਼ਾਰਟਕੱਟ"
 
-#: ui/ShortcutActionDelegate.qml:137
+#: ui/ShortcutActionDelegate.qml:138
 #, fuzzy, kde-format
 #| msgid "No default shortcuts"
 msgctxt "@label for shortcut with no default bindings"
 msgid "No default shortcuts"
 msgstr "ਕੋਈ ਡਿਫਾਲਟ ਸ਼ਾਰਟਕੱਟ ਨਹੀਂ ਹੈ"
 
-#: ui/ShortcutActionDelegate.qml:146
-#, fuzzy, kde-format
-#| msgid "Default shortcut %1 is enabled."
-msgctxt "@info:whatsthis accessible name"
-msgid "Default shortcut %1 is enabled."
-msgstr "ਡਿਫਾਲਟ ਸ਼ਾਰਟਕੱਟ %1 ਸਮਰੱਥ ਹੈ।"
-
-#: ui/ShortcutActionDelegate.qml:146
-#, fuzzy, kde-format
-#| msgid "Default shortcut %1 is disabled."
-msgctxt "@info:whatsthis accessible name"
-msgid "Default shortcut %1 is disabled."
-msgstr "ਡਿਫਾਲਟ ਸ਼ਾਰਟਕੱਟ %1 ਅਸਮਰੱਥ ਹੈ।"
-
-#: ui/ShortcutActionDelegate.qml:169
+#: ui/ShortcutActionDelegate.qml:147
 #, fuzzy, kde-format
 #| msgid "Custom shortcuts"
 msgctxt "@title:column"
 msgid "Custom shortcuts"
 msgstr "ਪਸੰਦੀਦਾ ਸ਼ਾਰਟਕੱਟ"
 
-#: ui/ShortcutActionDelegate.qml:205
+#: ui/ShortcutActionDelegate.qml:172
+#, fuzzy, kde-format
+#| msgid "Default shortcut %1 is enabled."
+msgctxt "@info:whatsthis accessible name"
+msgid "Default shortcut %1 is enabled."
+msgstr "ਡਿਫਾਲਟ ਸ਼ਾਰਟਕੱਟ %1 ਸਮਰੱਥ ਹੈ।"
+
+#: ui/ShortcutActionDelegate.qml:172
+#, fuzzy, kde-format
+#| msgid "Default shortcut %1 is disabled."
+msgctxt "@info:whatsthis accessible name"
+msgid "Default shortcut %1 is disabled."
+msgstr "ਡਿਫਾਲਟ ਸ਼ਾਰਟਕੱਟ %1 ਅਸਮਰੱਥ ਹੈ।"
+
+#: ui/ShortcutActionDelegate.qml:223
 #, fuzzy, kde-format
 #| msgid "Delete this shortcut"
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
 msgstr "ਇਹ ਸ਼ਾਰਟਕੱਟ ਹਟਾਓ"
 
-#: ui/ShortcutActionDelegate.qml:216
+#: ui/ShortcutActionDelegate.qml:234
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
 msgstr "…ਜੋੜੋ"
 
-#: ui/ShortcutActionDelegate.qml:217
+#: ui/ShortcutActionDelegate.qml:235
 #, fuzzy, kde-format
 #| msgid "Add custom shortcut"
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "ਕਸਟਮ ਸ਼ਾਰਟਕੱਟ ਨੂੰ ਜੋੜੋ"
 
-#: ui/ShortcutActionDelegate.qml:253
+#: ui/ShortcutActionDelegate.qml:271
 #, fuzzy, kde-format
 #| msgid "Delete this shortcut"
 msgctxt "@action:button accessible"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-10 00:46+0000\n"
+"POT-Creation-Date: 2026-09-22 02:51+0000\n"
 "PO-Revision-Date: 2024-09-13 18:18+0300\n"
 "Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
 "Language-Team: el <kde-i18n-el@kde.org>\n"
@@ -513,7 +513,7 @@ msgctxt "@info:status"
 msgid "No active shortcuts"
 msgstr "Δεν υπάρχουν ενεργές συντομεύσεις"
 
-#: ui/ShortcutActionDelegate.qml:135
+#: ui/ShortcutActionDelegate.qml:136
 #, fuzzy, kde-format
 #| msgctxt "%1 decides if singular or plural will be used"
 #| msgid "Default shortcut"
@@ -524,53 +524,53 @@ msgid_plural "Default shortcuts"
 msgstr[0] "Προεπιλεγμένη συντόμευση"
 msgstr[1] "Προεπιλεγμένες συντομεύσεις"
 
-#: ui/ShortcutActionDelegate.qml:137
+#: ui/ShortcutActionDelegate.qml:138
 #, fuzzy, kde-format
 #| msgid "No default shortcuts"
 msgctxt "@label for shortcut with no default bindings"
 msgid "No default shortcuts"
 msgstr "Δεν υπάρχουν προεπιλεγμένες συντομεύσεις"
 
-#: ui/ShortcutActionDelegate.qml:146
-#, fuzzy, kde-format
-#| msgid "Default shortcut %1 is enabled."
-msgctxt "@info:whatsthis accessible name"
-msgid "Default shortcut %1 is enabled."
-msgstr "Η προεπιλεγμένη συντόμευση %1 είναι ενεργή."
-
-#: ui/ShortcutActionDelegate.qml:146
-#, fuzzy, kde-format
-#| msgid "Default shortcut %1 is disabled."
-msgctxt "@info:whatsthis accessible name"
-msgid "Default shortcut %1 is disabled."
-msgstr "Η προεπιλεγμένη συντόμευση %1 είναι ανενεργή."
-
-#: ui/ShortcutActionDelegate.qml:169
+#: ui/ShortcutActionDelegate.qml:147
 #, fuzzy, kde-format
 #| msgid "Custom shortcuts"
 msgctxt "@title:column"
 msgid "Custom shortcuts"
 msgstr "Προσαρμοσμένες συντομεύσεις"
 
-#: ui/ShortcutActionDelegate.qml:205
+#: ui/ShortcutActionDelegate.qml:172
+#, fuzzy, kde-format
+#| msgid "Default shortcut %1 is enabled."
+msgctxt "@info:whatsthis accessible name"
+msgid "Default shortcut %1 is enabled."
+msgstr "Η προεπιλεγμένη συντόμευση %1 είναι ενεργή."
+
+#: ui/ShortcutActionDelegate.qml:172
+#, fuzzy, kde-format
+#| msgid "Default shortcut %1 is disabled."
+msgctxt "@info:whatsthis accessible name"
+msgid "Default shortcut %1 is disabled."
+msgstr "Η προεπιλεγμένη συντόμευση %1 είναι ανενεργή."
+
+#: ui/ShortcutActionDelegate.qml:223
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
 msgstr "Διαγραφή συντόμευσης"
 
-#: ui/ShortcutActionDelegate.qml:216
+#: ui/ShortcutActionDelegate.qml:234
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
 msgstr "Προσθήκη…"
 
-#: ui/ShortcutActionDelegate.qml:217
+#: ui/ShortcutActionDelegate.qml:235
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Προσθήκη προσαρμοσμένης συντόμευσης"
 
-#: ui/ShortcutActionDelegate.qml:253
+#: ui/ShortcutActionDelegate.qml:271
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
