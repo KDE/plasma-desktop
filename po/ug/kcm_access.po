@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-03 00:45+0000\n"
-"PO-Revision-Date: 2026-06-01 17:46-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
-"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: kcmaccess.cpp:123 kcmaccess.cpp:151
 #, kde-format
 msgid "KWin"
-msgstr "KWin"
+msgstr ""
 
 #: kcmaccess.cpp:126
 #, kde-format
@@ -395,7 +395,7 @@ msgstr "داۋاملىشىش ۋاقتى:"
 msgctxt "@label:valuesuffix %1 is visible bell duration"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 ms"
+msgstr[0] ""
 
 #: ui/Bell.qml:177 ui/DwellClicker.qml:95 ui/DwellClicker.qml:126
 #: ui/KeyboardFilters.qml:66 ui/KeyboardFilters.qml:170
@@ -403,7 +403,7 @@ msgstr[0] "%1 ms"
 msgctxt "@label:valuesuffix short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] "ms"
+msgstr[0] ""
 
 #: ui/ColorblindnessCorrection.qml:21
 #, kde-format
@@ -508,7 +508,7 @@ msgstr ""
 
 #: ui/DwellClicker.qml:21
 #, fuzzy, kde-format
-#| msgctxt "Enable the system bell"
+#| msgctxt "Enable activation shortcuts"
 #| msgid "Enable"
 msgctxt "@option check, Enable dwell clicker effect"
 msgid "Enable"
@@ -528,23 +528,18 @@ msgid "Motion Threshold:"
 msgstr ""
 
 #: ui/DwellClicker.qml:55
-#, fuzzy, kde-format
-#| msgctxt "short for pixel(s)"
-#| msgid "%1 px"
-#| msgid_plural "%1 px"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is the motion threshold"
 msgid "%1 px"
 msgid_plural "%1 px"
-msgstr[0] "%1 px"
+msgstr[0] ""
 
 #: ui/DwellClicker.qml:64
-#, fuzzy, kde-format
-#| msgctxt "short for pixel(s)"
-#| msgid "px"
+#, kde-format
 msgctxt "@label:valuesuffix short for pixel(s)"
 msgid "px"
 msgid_plural "px"
-msgstr[0] "px"
+msgstr[0] ""
 
 #: ui/DwellClicker.qml:70
 #, fuzzy, kde-format
@@ -556,13 +551,13 @@ msgstr "كېچىكىش:"
 
 #: ui/DwellClicker.qml:86
 #, fuzzy, kde-format
-#| msgctxt "@label:valuesuffix %1 is visible bell duration"
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#| msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
+#| msgid "%1 min"
+#| msgid_plural "%1 min"
 msgctxt "@label:valuesuffix %1 is the delay time"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 ms"
+msgstr[0] "%1 مىنۇت"
 
 #: ui/DwellClicker.qml:101
 #, kde-format
@@ -572,13 +567,13 @@ msgstr ""
 
 #: ui/DwellClicker.qml:117
 #, fuzzy, kde-format
-#| msgctxt "@label:valuesuffix %1 is visible bell duration"
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#| msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
+#| msgid "%1 min"
+#| msgid_plural "%1 min"
 msgctxt "@label:valuesuffix %1 is the dwell time"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 ms"
+msgstr[0] "%1 مىنۇت"
 
 #: ui/DwellClicker.qml:132
 #, kde-format
@@ -630,10 +625,6 @@ msgid ""
 "Useful if you accidentally type more than one key at a time or have "
 "difficulty pressing the key you want the first time."
 msgstr ""
-"بىر كۇنۇپكىنىڭ كىرگۈزۈلۈشىنى قوبۇل قىلىشتىن ئىلگىرى، چوقۇم بەلگىلەنگەن ۋاقىت "
-"بېسىپ تۇرۇلىدۇ. ئەگەر تاسادىپىي كۆپ كۇنۇپكا كىرگۈزمەكچى ياكى تۇنجى قېتىم "
-"سىنىغاندا ئۆزىڭىز باسماقچى بولغان كۇنۇپكىنى بېسىشتا قىينالغان بولسىڭىز، بۇ "
-"ئىقتىدارنى سىناپ باقسىڭىز بولىدۇ."
 
 #: ui/KeyboardFilters.qml:39
 #, kde-format
@@ -646,7 +637,7 @@ msgstr "كېچىكىش:"
 msgctxt "@label:valuesuffix %1 is slow keys delay"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 ms"
+msgstr[0] ""
 
 #: ui/KeyboardFilters.qml:72
 #, kde-format
@@ -692,9 +683,6 @@ msgid ""
 "tremors that cause you to press a key multiple times when you only intend to "
 "press once."
 msgstr ""
-"بىر كۇنۇپكىنىڭ تېز سۈرئەتتە تەكرار بېسىلىشىغا پەرۋا قىلمايدۇ. ئەگەر قولىڭىز "
-"تىترەيدىغان بولسا، كۇنۇپكىنى بىر قېتىم باسسىڭىز كۆپ قېتىم بېسىلىپ كېتىدۇ، "
-"شۇڭا بۇ ئىقتىدارنى ئىشلەتسىڭىز بولىدۇ."
 
 #: ui/KeyboardFilters.qml:145
 #, kde-format
@@ -707,7 +695,7 @@ msgstr "كېچىكىش:"
 msgctxt "@label:valuesuffix %1 is bounce keys delay"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 ms"
+msgstr[0] ""
 
 #: ui/KeyboardFilters.qml:179
 #, kde-format
@@ -881,13 +869,6 @@ msgid ""
 "<shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</shortcut>, and "
 "<shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
-"رەقەم تاختا كۇنۇپكىسى <shortcut>5</shortcut> چاشقىنەكتىكى چېكىش، <shortcut>/"
-"</shortcut> ئوتتۇرا چېكىش، <shortcut>*</shortcut> ئوڭ چېكىش ۋە "
-"<shortcut>NumLock</shortcut> سول چېكىش رولىنى ئوينايدۇ. <shortcut>2</"
-"shortcut>، <shortcut>4</shortcut>، <shortcut>6</shortcut> ۋە <shortcut>8</"
-"shortcut> كۇنۇپكىسى نىشانلىغۇچنى (ئاستى، سول، ئوڭ ۋە ئۈستى) ئاساسىي يۆتكەشكە "
-"يول قويىدۇ. <shortcut>1</shortcut>، <shortcut>3</shortcut>، <shortcut>7</"
-"shortcut> ۋە <shortcut>9</shortcut> كۇنۇپكا دىياگونال يۆتكەشكە يول قويىدۇ.."
 
 #: ui/MouseNavigation.qml:37
 #, kde-format
@@ -900,14 +881,14 @@ msgstr "تېزلىتىشنى كېچىكتۈرۈش:"
 msgctxt "@label:valuesuffix acceleration delay spinbox %1 is value"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 ms"
+msgstr[0] ""
 
 #: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:90
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] "ms"
+msgstr[0] ""
 
 #: ui/MouseNavigation.qml:66
 #, kde-format
@@ -920,7 +901,7 @@ msgstr "قايتىلاش ئارىلىقى:"
 msgctxt "@label:valuesuffix repeat interval spinbox %1 is value"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 ms"
+msgstr[0] ""
 
 #: ui/MouseNavigation.qml:95
 #, kde-format
@@ -1092,13 +1073,13 @@ msgstr "كەڭلىك:"
 msgctxt "short for pixel(s)"
 msgid "%1 px"
 msgid_plural "%1 px"
-msgstr[0] "%1 px"
+msgstr[0] ""
 
 #: ui/ZoomMagnifier.qml:168 ui/ZoomMagnifier.qml:196
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
-msgstr "px"
+msgstr ""
 
 #: ui/ZoomMagnifier.qml:182
 #, kde-format
@@ -1148,27 +1129,6 @@ msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "بىرىكمە كۇنۇپكىنى بېسىپ سىيرىغاندا يىراق يېقىنلىق نىسبىتىنى ئۆزگەرتىدۇ"
 
-#~ msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
-#~ msgid "%1 ms"
-#~ msgid_plural "%1 ms"
-#~ msgstr[0] "%1 ms"
-
-#~ msgid "Enable Screen Reader"
-#~ msgstr "ئېكران ئوقۇغۇچنى قوزغىتىدۇ"
-
-#~ msgctxt "@label Hint for zoom/magnify effect usage"
-#~ msgid "Use shortcuts to control zoom"
-#~ msgstr "تېزلەتمىدە يىراق يېقىنلىق نىسبىتىنى تىزگىنلەيدۇ"
-
-#~ msgctxt "@option:check"
-#~ msgid "Enable focus tracking"
-#~ msgstr "فوكۇسنى ئىزلاشنى قوزغىتىدۇ"
-
-#~ msgctxt "@info:tooltip, indicates feature unavailable on X11"
-#~ msgid "Zoom scroll gestures are only available on Wayland."
-#~ msgstr ""
-#~ "سىيرىش قول ئىشارىتىنىڭ يىراق يېقىنلىق نىسبىتى پەقەت Wayland دىلا ئىشلەيدۇ."
-
 #~ msgid "Use Gestures"
 #~ msgstr "قول ئىشارىتى ئىشلەت"
 
@@ -1184,13 +1144,12 @@ msgstr "بىرىكمە كۇنۇپكىنى بېسىپ سىيرىغاندا يىر
 #~ msgid "Use a beep for access"
 #~ msgstr "قولايلىق ئىقتىدارغا ئاۋاز ئەسكەرتىشى ئىشلىتىدۇ"
 
+#~ msgid "Enable Screen Reader"
+#~ msgstr "ئېكران ئوقۇغۇچنى قوزغىتىدۇ"
+
 #~ msgctxt "@option:check"
 #~ msgid "Activation shortcuts:"
 #~ msgstr "ئاكتىپلاش تېزلەتمىسى:"
-
-#~ msgctxt "Enable activation shortcuts"
-#~ msgid "Enable"
-#~ msgstr "قوزغات"
 
 #~ msgctxt "@label"
 #~ msgid "Press Shift 5 times to enable Sticky Keys"
@@ -1203,11 +1162,6 @@ msgstr "بىرىكمە كۇنۇپكىنى بېسىپ سىيرىغاندا يىر
 #~ msgctxt "@option:check"
 #~ msgid "Disable sticky and slow keys after:"
 #~ msgstr "مۇئەييەن ۋاقىت ئىشلىتىلمىسا يېپىشقاق ۋە ئاستا كۇنۇپكا چەكلىنىدۇ:"
-
-#~ msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
-#~ msgid "%1 min"
-#~ msgid_plural "%1 min"
-#~ msgstr[0] "%1 مىنۇت"
 
 #~ msgctxt "short for minute(s)"
 #~ msgid "min"
@@ -1237,6 +1191,19 @@ msgstr "بىرىكمە كۇنۇپكىنى بېسىپ سىيرىغاندا يىر
 #~ msgctxt "@title Category name in sidebar"
 #~ msgid "Activation Shortcuts"
 #~ msgstr "ئاكتىپلاش تېزلەتمىسى"
+
+#~ msgctxt "@option:check"
+#~ msgid "Enable focus tracking"
+#~ msgstr "فوكۇسنى ئىزلاشنى قوزغىتىدۇ"
+
+#~ msgctxt "@info:tooltip, indicates feature unavailable on X11"
+#~ msgid "Zoom scroll gestures are only available on Wayland."
+#~ msgstr ""
+#~ "سىيرىش قول ئىشارىتىنىڭ يىراق يېقىنلىق نىسبىتى پەقەت Wayland دىلا ئىشلەيدۇ."
+
+#~ msgctxt "@label Hint for zoom/magnify effect usage"
+#~ msgid "Use shortcuts to control zoom"
+#~ msgstr "تېزلەتمىدە يىراق يېقىنلىق نىسبىتىنى تىزگىنلەيدۇ"
 
 #~ msgctxt "@label:listbox"
 #~ msgid "Pointer appearance:"

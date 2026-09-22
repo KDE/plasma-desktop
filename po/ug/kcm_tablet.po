@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-31 00:45+0000\n"
-"PO-Revision-Date: 2026-07-22 17:22-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,7 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -117,7 +116,7 @@ msgstr "ھەممە ئېكران"
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
-msgstr "%1 - (%2,%3 %4×%5)"
+msgstr ""
 
 #: kcmtablet.cpp:164 ui/DisplayTab.qml:102 ui/DisplayTab.qml:103
 #, kde-format
@@ -272,25 +271,25 @@ msgstr "ئوڭ چېكىش"
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
-msgstr "Ctrl"
+msgstr ""
 
 #: ui/ActionDialog.qml:322
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
-msgstr "Alt"
+msgstr ""
 
 #: ui/ActionDialog.qml:329
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
-msgstr "Meta"
+msgstr ""
 
 #: ui/ActionDialog.qml:336
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
-msgstr "Shift"
+msgstr ""
 
 #: ui/ActionDialog.qml:352
 #, kde-format
@@ -359,6 +358,10 @@ msgid_plural ""
 "strong='true'>Will revert to default calibration in %1 seconds unless "
 "further action is taken.</emphasis>"
 msgstr[0] ""
+"نىشان قايتا چېكىلسە يېڭى توغرىلاش جەزملىنىدۇ.<nl/><nl/><b>ئەگەر ھېچقانداق "
+"مەشغۇلات ئېلىپ بېرىلمىسا، %1 سېكۇنتتىن كېيىن كۆڭۈلدىكى توغرىلاش ھالىتىگە "
+"ئەسلىگە قايتۇرۇلىدۇ.</b>"
+msgstr[1] ""
 "نىشان قايتا چېكىلسە يېڭى توغرىلاش جەزملىنىدۇ.<nl/><nl/><b>ئەگەر ھېچقانداق "
 "مەشغۇلات ئېلىپ بېرىلمىسا، %1 سېكۇنتتىن كېيىن كۆڭۈلدىكى توغرىلاش ھالىتىگە "
 "ئەسلىگە قايتۇرۇلىدۇ.</b>"
@@ -481,7 +484,7 @@ msgstr "تەرەپ نىسبىتىنى قۇلۇپلايدۇ"
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
-msgstr "%1,%2 - %3×%4"
+msgstr ""
 
 #: ui/ExternalScreenMapping.qml:190
 #, kde-format
@@ -493,7 +496,7 @@ msgstr "ئېكران دائىرىسىنىڭ چوڭلۇقىنى ئۆزگەرت"
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr "%1%,%2% - %3%×%4%"
+msgstr ""
 
 #: ui/ExternalScreenMapping.qml:301
 #, kde-format
@@ -527,9 +530,6 @@ msgid ""
 "driver to configure the tablet instead of using the settings here, unless "
 "specifically instructed otherwise."
 msgstr ""
-"بۇ ئۈسكۈنىنى سىز ئورناتقان ئىشلەتكۈچى بوشلۇق قوزغاتقۇ پىروگراممىسى "
-"باشقۇرىدۇ. شۇ قوزغاتقۇ ئارقىلىق سەزگۈر تاختا سەپلىنىدۇ. ئېنىق "
-"بەلگىلەنمىگەندىن باشقىسى بۇ جايدىكى تەڭشەكنى ئىشلەتمەيدۇ."
 
 #: ui/main.qml:107
 #, kde-format
@@ -568,8 +568,6 @@ msgid ""
 "No buttons or other inputs were detected. This could mean the driver for "
 "this device is missing."
 msgstr ""
-"ھېچقانداق توپچە ياكى باشقا كىرگۈزۈش بايقالمىدى. بۇ ئۈسكۈنىنىڭ قوزغاتقۇسى "
-"يوقلۇقىدىن دېرەك بېرىشى مۇمكىن."
 
 #: ui/PadTab.qml:35
 #, kde-format
@@ -633,9 +631,6 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
-"ئۈسكۈنىنى سولخاي ئىشلەتكۈچىگە نىسبەتەن مۇناسىپ تەڭشەيدۇ. ئۈنۈمى ئۈسكۈنىگە "
-"قاراپ ئوخشاش بولمايدۇ ئەمما ئادەتتە سەزگۈر تاختا توپچە يۆنىلىشىنى ئەكسىچە "
-"توغرىلاپ ئىشلىتىشكە تەڭشەيدۇ."
 
 #: ui/StylusTab.qml:247
 #, kde-format
@@ -690,25 +685,25 @@ msgstr "قەلەم بېسىمى:"
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr "%1%"
+msgstr ""
 
 #: ui/StylusTab.qml:409
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr "%1%"
+msgstr ""
 
 #: ui/StylusTab.qml:420
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
-msgstr "100%"
+msgstr ""
 
 #: ui/StylusTab.qml:428
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
-msgstr "0%"
+msgstr ""
 
 #: ui/StylusTab.qml:433
 #, kde-format
@@ -744,8 +739,6 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
-"بۇ سەزگۈر تاختىنى قولدا توغرىلىدىڭىز. ئەگەر ئەمدى توغرا ئىشلىمىسە، ئالدى "
-"بىلەن ئۇنى قايتا تەڭشەڭ."
 
 #: ui/StylusTab.qml:470
 #, kde-format
