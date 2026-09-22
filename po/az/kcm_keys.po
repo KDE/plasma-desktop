@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-10 00:46+0000\n"
+"POT-Creation-Date: 2026-09-22 00:47+0000\n"
 "PO-Revision-Date: 2023-02-19 16:39+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -524,7 +524,7 @@ msgctxt "@info:status"
 msgid "No active shortcuts"
 msgstr "Aktiv qısayol yoxdur"
 
-#: ui/ShortcutActionDelegate.qml:135
+#: ui/ShortcutActionDelegate.qml:136
 #, fuzzy, kde-format
 #| msgctxt "%1 decides if singular or plural will be used"
 #| msgid "Default shortcut"
@@ -535,55 +535,55 @@ msgid_plural "Default shortcuts"
 msgstr[0] "Standart qısayol"
 msgstr[1] "Standart qısayollar"
 
-#: ui/ShortcutActionDelegate.qml:137
+#: ui/ShortcutActionDelegate.qml:138
 #, fuzzy, kde-format
 #| msgid "No default shortcuts"
 msgctxt "@label for shortcut with no default bindings"
 msgid "No default shortcuts"
 msgstr "Standart qısayollar yoxdur"
 
-#: ui/ShortcutActionDelegate.qml:146
-#, fuzzy, kde-format
-#| msgid "Default shortcut %1 is enabled."
-msgctxt "@info:whatsthis accessible name"
-msgid "Default shortcut %1 is enabled."
-msgstr "Standart %1 qısayolu aktiv edildi."
-
-#: ui/ShortcutActionDelegate.qml:146
-#, fuzzy, kde-format
-#| msgid "Default shortcut %1 is disabled."
-msgctxt "@info:whatsthis accessible name"
-msgid "Default shortcut %1 is disabled."
-msgstr "Standart %1 qısayolu söndürüldü."
-
-#: ui/ShortcutActionDelegate.qml:169
+#: ui/ShortcutActionDelegate.qml:147
 #, fuzzy, kde-format
 #| msgid "Custom shortcuts"
 msgctxt "@title:column"
 msgid "Custom shortcuts"
 msgstr "Fərdi qısayollar"
 
-#: ui/ShortcutActionDelegate.qml:205
+#: ui/ShortcutActionDelegate.qml:172
+#, fuzzy, kde-format
+#| msgid "Default shortcut %1 is enabled."
+msgctxt "@info:whatsthis accessible name"
+msgid "Default shortcut %1 is enabled."
+msgstr "Standart %1 qısayolu aktiv edildi."
+
+#: ui/ShortcutActionDelegate.qml:172
+#, fuzzy, kde-format
+#| msgid "Default shortcut %1 is disabled."
+msgctxt "@info:whatsthis accessible name"
+msgid "Default shortcut %1 is disabled."
+msgstr "Standart %1 qısayolu söndürüldü."
+
+#: ui/ShortcutActionDelegate.qml:223
 #, fuzzy, kde-format
 #| msgid "Delete this shortcut"
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
 msgstr "Bu qısayolu silmək"
 
-#: ui/ShortcutActionDelegate.qml:216
+#: ui/ShortcutActionDelegate.qml:234
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
 msgstr ""
 
-#: ui/ShortcutActionDelegate.qml:217
+#: ui/ShortcutActionDelegate.qml:235
 #, fuzzy, kde-format
 #| msgid "Add custom shortcut"
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Fərdi qısayol əlavə etmək"
 
-#: ui/ShortcutActionDelegate.qml:253
+#: ui/ShortcutActionDelegate.qml:271
 #, fuzzy, kde-format
 #| msgid "Cancel capturing of new shortcut"
 msgctxt "@action:button accessible"

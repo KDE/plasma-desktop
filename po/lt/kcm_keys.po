@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-10 00:46+0000\n"
+"POT-Creation-Date: 2026-09-22 00:47+0000\n"
 "PO-Revision-Date: 2026-01-13 00:15+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
@@ -476,7 +476,7 @@ msgctxt "@info:status"
 msgid "No active shortcuts"
 msgstr "Nėra aktyvių sparčiųjų klavišų"
 
-#: ui/ShortcutActionDelegate.qml:135
+#: ui/ShortcutActionDelegate.qml:136
 #, kde-format
 msgctxt "@title:column %1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -486,49 +486,49 @@ msgstr[1] "Numatytieji spartieji klavišai"
 msgstr[2] "Numatytieji spartieji klavišai"
 msgstr[3] "Numatytieji spartieji klavišai"
 
-#: ui/ShortcutActionDelegate.qml:137
+#: ui/ShortcutActionDelegate.qml:138
 #, kde-format
 msgctxt "@label for shortcut with no default bindings"
 msgid "No default shortcuts"
 msgstr "Nėra numatytųjų sparčiųjų klavišų"
 
-#: ui/ShortcutActionDelegate.qml:146
-#, kde-format
-msgctxt "@info:whatsthis accessible name"
-msgid "Default shortcut %1 is enabled."
-msgstr "Numatytasis spartusis klavišas %1 yra įjungtas."
-
-#: ui/ShortcutActionDelegate.qml:146
-#, kde-format
-msgctxt "@info:whatsthis accessible name"
-msgid "Default shortcut %1 is disabled."
-msgstr "Numatytasis spartusis klavišas %1 yra išjungtas."
-
-#: ui/ShortcutActionDelegate.qml:169
+#: ui/ShortcutActionDelegate.qml:147
 #, kde-format
 msgctxt "@title:column"
 msgid "Custom shortcuts"
 msgstr "Tinkinti spartieji klavišai"
 
-#: ui/ShortcutActionDelegate.qml:205
+#: ui/ShortcutActionDelegate.qml:172
+#, kde-format
+msgctxt "@info:whatsthis accessible name"
+msgid "Default shortcut %1 is enabled."
+msgstr "Numatytasis spartusis klavišas %1 yra įjungtas."
+
+#: ui/ShortcutActionDelegate.qml:172
+#, kde-format
+msgctxt "@info:whatsthis accessible name"
+msgid "Default shortcut %1 is disabled."
+msgstr "Numatytasis spartusis klavišas %1 yra išjungtas."
+
+#: ui/ShortcutActionDelegate.qml:223
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
 msgstr "Ištrinti spartųjį klavišą"
 
-#: ui/ShortcutActionDelegate.qml:216
+#: ui/ShortcutActionDelegate.qml:234
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
 msgstr "Pridėti…"
 
-#: ui/ShortcutActionDelegate.qml:217
+#: ui/ShortcutActionDelegate.qml:235
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Pridėti tinkintą spartųjį klavišą"
 
-#: ui/ShortcutActionDelegate.qml:253
+#: ui/ShortcutActionDelegate.qml:271
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"

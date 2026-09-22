@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-10 00:46+0000\n"
+"POT-Creation-Date: 2026-09-22 00:47+0000\n"
 "PO-Revision-Date: 2026-01-09 22:49+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -483,7 +483,7 @@ msgctxt "@info:status"
 msgid "No active shortcuts"
 msgstr "Keine aktiven Kurzbefehle"
 
-#: ui/ShortcutActionDelegate.qml:135
+#: ui/ShortcutActionDelegate.qml:136
 #, kde-format
 msgctxt "@title:column %1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -491,49 +491,49 @@ msgid_plural "Default shortcuts"
 msgstr[0] "Standard-Kurzbefehl"
 msgstr[1] "Standard-Kurzbefehle"
 
-#: ui/ShortcutActionDelegate.qml:137
+#: ui/ShortcutActionDelegate.qml:138
 #, kde-format
 msgctxt "@label for shortcut with no default bindings"
 msgid "No default shortcuts"
 msgstr "Keine Standard-Kurzbefehle"
 
-#: ui/ShortcutActionDelegate.qml:146
-#, kde-format
-msgctxt "@info:whatsthis accessible name"
-msgid "Default shortcut %1 is enabled."
-msgstr "Der Standard-Kurzbefehl %1 ist aktiviert."
-
-#: ui/ShortcutActionDelegate.qml:146
-#, kde-format
-msgctxt "@info:whatsthis accessible name"
-msgid "Default shortcut %1 is disabled."
-msgstr "Der Standard-Kurzbefehl %1 ist deaktiviert."
-
-#: ui/ShortcutActionDelegate.qml:169
+#: ui/ShortcutActionDelegate.qml:147
 #, kde-format
 msgctxt "@title:column"
 msgid "Custom shortcuts"
 msgstr "Benutzerdefinierte Kurzbefehle"
 
-#: ui/ShortcutActionDelegate.qml:205
+#: ui/ShortcutActionDelegate.qml:172
+#, kde-format
+msgctxt "@info:whatsthis accessible name"
+msgid "Default shortcut %1 is enabled."
+msgstr "Der Standard-Kurzbefehl %1 ist aktiviert."
+
+#: ui/ShortcutActionDelegate.qml:172
+#, kde-format
+msgctxt "@info:whatsthis accessible name"
+msgid "Default shortcut %1 is disabled."
+msgstr "Der Standard-Kurzbefehl %1 ist deaktiviert."
+
+#: ui/ShortcutActionDelegate.qml:223
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
 msgstr "Kurzbefehl löschen"
 
-#: ui/ShortcutActionDelegate.qml:216
+#: ui/ShortcutActionDelegate.qml:234
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
 msgstr "Hinzufügen …"
 
-#: ui/ShortcutActionDelegate.qml:217
+#: ui/ShortcutActionDelegate.qml:235
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Eigenen Kurzbefehl hinzufügen"
 
-#: ui/ShortcutActionDelegate.qml:253
+#: ui/ShortcutActionDelegate.qml:271
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
