@@ -21,6 +21,7 @@
 #include <QCollator>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
+#include <QDBusServiceWatcher>
 #include <QDir>
 #include <QDrag>
 #include <QImage>
@@ -104,24 +105,22 @@ KRunnerChecker::KRunnerChecker(QObject *parent)
 
     m_krunnerAvailable = isRunning || isInstalled;
 
-    auto iface = QDBusConnection::sessionBus().interface();
-    connect(iface,
-            &QDBusConnectionInterface::serviceOwnerChanged,
+    auto watcher = new QDBusServiceWatcher(serviceName, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForOwnerChange, this);
+    connect(watcher,
+            &QDBusServiceWatcher::serviceOwnerChanged,
             this,
-            [this, serviceName, serviceFile](const QString &name, const QString & /*oldOwner*/, const QString &newOwner) {
-                if (name == serviceName) {
-                    bool currentlyActive = !newOwner.isEmpty();
-                    bool stillAvailable = currentlyActive;
+            [this, serviceFile](const QString & /*name*/, const QString & /*oldOwner*/, const QString &newOwner) {
+                bool currentlyActive = !newOwner.isEmpty();
+                bool stillAvailable = currentlyActive;
 
-                    // Fallback: If it stopped running, check if the service file still exists
-                    if (!stillAvailable) {
-                        stillAvailable = !QStandardPaths::locate(QStandardPaths::GenericDataLocation, serviceFile).isEmpty();
-                    }
+                // Fallback: If it stopped running, check if the service file still exists
+                if (!stillAvailable) {
+                    stillAvailable = !QStandardPaths::locate(QStandardPaths::GenericDataLocation, serviceFile).isEmpty();
+                }
 
-                    if (stillAvailable != m_krunnerAvailable) {
-                        m_krunnerAvailable = stillAvailable;
-                        Q_EMIT krunnerAvailableChanged();
-                    }
+                if (stillAvailable != m_krunnerAvailable) {
+                    m_krunnerAvailable = stillAvailable;
+                    Q_EMIT krunnerAvailableChanged();
                 }
             });
 }
