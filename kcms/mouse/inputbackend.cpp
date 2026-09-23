@@ -24,7 +24,7 @@ void InputBackend::registerImplementationTypes(const char *uri)
 
 InputBackend::InputBackend()
     : QObject()
-    , m_devicesModel(new KWinDevices::DevicesModel(KWinDevices::DevicesModel::Kind::Pointers, {{QStringLiteral("touchpad"), false}}, this))
+    , m_devicesModel(new KWinDevices::DevicesModel(KWinDevices::DevicesModel::Kind::Pointers, {{QStringLiteral("mouse"), true}}, this))
 {
     connect(m_devicesModel, &QAbstractItemModel::rowsInserted, this, &InputBackend::onDeviceRowsInserted);
     connect(m_devicesModel, &QAbstractItemModel::rowsAboutToBeRemoved, this, &InputBackend::onDeviceRowsAboutToBeRemoved);
