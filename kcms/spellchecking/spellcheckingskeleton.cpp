@@ -17,7 +17,7 @@ SpellCheckingSkeleton::SpellCheckingSkeleton(QObject *parent)
     addItem(new KPropertySkeletonItem(m_store, "autodetectLanguage", Sonnet::Settings::defaultAutodetectLanguage()), "autodetectLanguage");
     addItem(new KPropertySkeletonItem(m_store, "backgroundCheckerEnabled", Sonnet::Settings::defaultBackgroundCheckerEnabled()), "backgroundCheckerEnabled");
     addItem(new KPropertySkeletonItem(m_store, "checkerEnabledByDefault", Sonnet::Settings::defaultCheckerEnabledByDefault()), "checkerEnabledByDefault");
-    addItem(new KPropertySkeletonItem(m_store, "skipRunTogether", Sonnet::Settings::defauktSkipRunTogether()), "skipRunTogether");
+    addItem(new KPropertySkeletonItem(m_store, "skipRunTogether", Sonnet::Settings::defaultSkipRunTogether()), "skipRunTogether");
     usrRead();
 }
 
