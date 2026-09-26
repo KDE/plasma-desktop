@@ -36,6 +36,8 @@ public:
 
     TaskManager::WindowTasksModel *const m_windowTasksModel;
 
+    bool inhibitUpdates() const;
+
 protected:
     uint lastUsedTime(const QString &activity) const;
     bool lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const override;
@@ -48,15 +50,10 @@ protected:
     };
 
 public Q_SLOTS:
-    bool inhibitUpdates() const;
     void setInhibitUpdates(bool sortByLastUsedTime);
 
     void onBackgroundsUpdated(const QStringList &changedBackgrounds);
     void onCurrentActivityChanged(const QString &currentActivity);
-
-    QString activityIdForRow(int row) const;
-    QString activityIdForIndex(const QModelIndex &index) const;
-    int rowForActivityId(const QString &activity) const;
 
     void rowChanged(int row, const QList<int> &roles);
 
@@ -76,6 +73,10 @@ private:
     KActivities::Consumer *m_activities = nullptr;
 
     QHash<QString, QVariantList> m_activitiesWindows;
+
+    QString activityIdForIndex(const QModelIndex &index) const;
+    QString activityIdForRow(int row) const;
+    int rowForActivityId(const QString &activity) const;
 
     QVariant getWinIdList(const QModelIndex &parent, int row);
 };

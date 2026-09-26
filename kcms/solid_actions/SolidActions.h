@@ -29,12 +29,14 @@ private Q_SLOTS:
     void addAction();
     void editAction();
     void deleteAction();
-    ActionItem *selectedAction() const;
     void fillActionsList();
     void acceptActionChanges();
     void toggleEditDelete();
     void slotTextChanged(const QString &);
     void slotShowAddDialog();
+
+private:
+    ActionItem *selectedAction() const;
 
 private:
     Ui::SolidActions mainUi;
