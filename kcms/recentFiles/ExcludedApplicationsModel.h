@@ -43,7 +43,6 @@ public Q_SLOTS:
     void toggleApplicationBlocked(int index);
 
     void setEnabled(bool);
-    bool enabled() const;
 
     void load();
     void save();
@@ -51,4 +50,6 @@ public Q_SLOTS:
 
 private:
     D_PTR;
+
+    bool enabled() const;
 };

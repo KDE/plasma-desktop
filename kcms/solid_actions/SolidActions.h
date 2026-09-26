@@ -29,7 +29,6 @@ private Q_SLOTS:
     void addAction();
     void editAction();
     void deleteAction();
-    ActionItem *selectedAction() const;
     void fillActionsList();
     void acceptActionChanges();
     void toggleEditDelete();
@@ -40,6 +39,7 @@ private:
     Ui::SolidActions mainUi;
     ActionModel *actionModel;
     ActionEditor *editUi;
+    ActionItem *selectedAction() const;
     Ui::AddAction addUi;
     QDialog *addDialog;
 };
