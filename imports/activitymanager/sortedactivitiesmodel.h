@@ -48,15 +48,10 @@ protected:
     };
 
 public Q_SLOTS:
-    bool inhibitUpdates() const;
     void setInhibitUpdates(bool sortByLastUsedTime);
 
     void onBackgroundsUpdated(const QStringList &changedBackgrounds);
     void onCurrentActivityChanged(const QString &currentActivity);
-
-    QString activityIdForRow(int row) const;
-    QString activityIdForIndex(const QModelIndex &index) const;
-    int rowForActivityId(const QString &activity) const;
 
     void rowChanged(int row, const QList<int> &roles);
 
@@ -76,6 +71,11 @@ private:
     KActivities::Consumer *m_activities = nullptr;
 
     QHash<QString, QVariantList> m_activitiesWindows;
+
+    QString activityIdForIndex(const QModelIndex &index) const;
+    QString activityIdForRow(int row) const;
+    bool inhibitUpdates() const;
+    int rowForActivityId(const QString &activity) const;
 
     QVariant getWinIdList(const QModelIndex &parent, int row);
 };

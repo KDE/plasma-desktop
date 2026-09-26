@@ -40,8 +40,6 @@ public:
     void defaults();
     bool isSaveNeeded() const;
     bool isDefaults() const;
-
-public Q_SLOTS:
     KWinDevices::InputDevice *penAt(int row) const;
     KWinDevices::InputDevice *padAt(int row) const;
 
