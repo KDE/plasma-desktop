@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-25 00:48+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-09-24 20:11-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -67,29 +67,27 @@ msgstr "يېقىنقى ھۆججەتنى ئۇنتۇ"
 #: backend.cpp:581
 #, kde-format
 msgid "Activate Previous Task Manager Entry"
-msgstr ""
+msgstr "ئالدىنقى ۋەزىپە باشقۇرغۇچ تۈرىنى ئاكتىپلا"
 
 #: backend.cpp:588
-#, fuzzy, kde-format
-#| msgctxt "action:inmenu"
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgid "Activate Next Task Manager Entry"
-msgstr "ۋەزىپە باشقۇرغۇچقا مىخلا(&P)"
+msgstr "كېيىنكى ۋەزىپە باشقۇرغۇچ تۈرىنى ئاكتىپلا"
 
 #: backend.cpp:595
 #, kde-format
 msgid "Move Active Task Manager Entry Backward"
-msgstr ""
+msgstr "ئاكتىپ ۋەزىپە باشقۇرغۇچ تۈرىنى كەينىگە يۆتكە"
 
 #: backend.cpp:603
 #, kde-format
 msgid "Move Active Task Manager Entry Forward"
-msgstr ""
+msgstr "ئاكتىپ ۋەزىپە باشقۇرغۇچ تۈرىنى ئالدىغا يۆتكە"
 
 #: backend.cpp:612
 #, kde-format
 msgid "Activate Task Manager Entry %1"
-msgstr ""
+msgstr "ۋەزىپە باشقۇرغۇچ تۈرى %1 نى ئاكتىپلا"
 
 #: qml/AudioStream.qml:100
 #, kde-format
@@ -196,7 +194,7 @@ msgstr "تار"
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Medium"
-msgstr "ئوتتۇراھال"
+msgstr "ئوتتۇرا ھال"
 
 #: qml/ConfigAppearance.qml:103
 #, kde-format
@@ -283,6 +281,11 @@ msgid ""
 "behavior. If you don't find one, consider reporting this as a bug to the "
 "app's developer."
 msgstr ""
+"ئەگەر بۇ تەڭشەكنى ئىشلىتىپ مەلۇم بىر پىروگراممىنىڭ دائىم قاڭقىش ئۇقتۇرۇشى "
+"كۆرسىتىش ئەھۋالىنى ھەل قىلماقچى بولسىڭىز، ئالدى بىلەن پىروگراممىدا قاڭقىش "
+"قىلمىشىنى چەكلەيدىغان مۇناسىپ تەڭشەكنىڭ بار يوقلۇقىنى تەكشۈرۈڭ. ئەگەر "
+"تاپالمىسىڭىز، بۇ مەسىلىنى پىروگرامما كەمتۈكلۈكى سۈپىتىدە پىروگرامما "
+"ئىجادكارىغا مەلۇم قىلىڭ."
 
 #: qml/ConfigBehavior.qml:66
 #, kde-format
@@ -868,7 +871,7 @@ msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "9k+"
-msgstr ""
+msgstr "9k+"
 
 #: qml/TaskBadgeOverlay.qml:104
 #, kde-format
@@ -876,7 +879,7 @@ msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "%1k"
-msgstr ""
+msgstr "%1k"
 
 #: qml/ToolTipInstance.qml:212
 #, kde-format
@@ -906,13 +909,13 @@ msgstr "%1 نىڭ ئاۋاز تەڭشىكى"
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: qml/ToolTipInstance.qml:465
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: qml/ToolTipInstance.qml:481
 #, kde-format

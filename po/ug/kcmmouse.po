@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-04 00:47+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-09-24 20:03-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -29,11 +29,13 @@ msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr ""
+"قىممىتىنى يۈكلەۋاتقاندا خاتالىق كۆرۈلدى. خاتىرە ھۆججىتىدىكى تەپسىلىي ئۇچۇرنى "
+"كۆرۈڭ. بۇ سەپلىمە بۆلىكىنى قايتا قوزغىتىڭ."
 
 #: kcm.cpp:115
 #, kde-format
 msgid "No pointer device found. Connect now."
-msgstr ""
+msgstr "ھېچقانداق نىشانلىغۇچ ئۈسكۈنىسى تېپىلمىدى. ھازىر ئۇلاڭ."
 
 #: kcm.cpp:124
 #, kde-format
@@ -41,6 +43,8 @@ msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
+"ھەممە ئۆزگىرىشنى ساقلىيالمايدۇ. خاتىرە ھۆججىتىدىكى تەپسىلىي ئۇچۇرنى كۆرۈڭ. "
+"سەپلىمە  بۆلىكىنى قايتا قوزغىتىپ ئاندىن قايتا سىناڭ."
 
 #: kcm.cpp:142
 #, kde-format
@@ -48,6 +52,8 @@ msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr ""
+"كۆڭۈلدىكى قىممەتنى يۈكلەۋاتقاندا خاتالىق كۆرۈلدى. بەزى تاللانمىنى  ئۇلارنىڭ "
+"كۆڭۈلدىكى قىممىتىگە تەڭشىيەلمىدى."
 
 #: kcm.cpp:157
 #, kde-format
@@ -55,16 +61,18 @@ msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr ""
+"يېڭىدىن باغلانغان ئۈسكۈنىنى قوشۇۋاتقاندا خاتالىق كۆرۈلدى. ئۇنى قايتا باغلاپ "
+"بۇ سەپلىمە بۆلىكىنى قايتا قوزغىتىڭ."
 
 #: kcm.cpp:170
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr ""
+msgstr "نىشانلىغۇچ ئۈسكۈنىسى ئۈزۈلدى. ئۇنىڭ تەڭشەك سۆزلەشكۈسى تاقالدى."
 
 #: kcm.cpp:172
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr ""
+msgstr "نىشانلىغۇچ ئۈسكۈنىسى ئۈزۈلدى. باشقا ئۈسكۈنە تېپىلمىدى."
 
 #: ui/bindings.qml:27
 #, kde-format
@@ -82,13 +90,13 @@ msgstr "قوشۇمچە توپچە %1:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
-msgstr "توپچە باغلىنىشى قوشىدىغان چاشقىنەك توپچىسىنى چەك"
+msgstr "توپچە باغلىنىشى قوشىدىغان چاشقىنەك توپچىسى چېكىلىدۇ"
 
 #: ui/bindings.qml:108
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
-msgstr "%1 غا يېڭى كۇنۇپكا بىرىكمىسى كىرگۈز"
+msgstr "%1 غا يېڭى كۇنۇپكا بىرىكمىسى كىرگۈزۈلىدۇ"
 
 #: ui/bindings.qml:112
 #, kde-format
@@ -100,7 +108,7 @@ msgstr "ۋاز كەچ"
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button"
-msgstr "چاشقىنەك توپچىسىنى باس"
+msgstr "چاشقىنەك توپچىسى بېسىلىدۇ"
 
 #: ui/bindings.qml:131
 #, kde-format
@@ -157,6 +165,8 @@ msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"بۇ تەڭشەك ئاكتىپلانسا چېكىلىش 50ms كېچىكتۈرۈلىدۇ. سول ۋە ئوڭ توپچىنىڭ بىرلا "
+"ۋاقىتتا توغرا چېكىلىشىنى بايقاش ئۈچۈن زىيادە كېچىكىش زۆرۈر."
 
 #: ui/main.qml:142
 #, kde-format
@@ -213,13 +223,13 @@ msgstr "ئەكسى سىيرىش يۆنىلىشى"
 #, kde-format
 msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
-msgstr ""
+msgstr "نىشانلىغۇچنى يۆتكىگەندە سىيرىيدۇ"
 
 #: ui/main.qml:383
 #, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
-msgstr ""
+msgstr "ئوتتۇرا توپچىنى باسقاندا"
 
 #: ui/main.qml:396
 #, kde-format
@@ -230,12 +240,16 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"بۇ ئوتتۇرا توپچىدا سۆرەلگەن پىروگراممىغا دەخلى قىلىدۇ، مەسىلەن، بەزى سۈرەت "
+"تەھرىرلىگۈچ، پۈتۈك كۆرگۈچ ياكى سىنلىق ئويۇن. بۇ ئىقتىدارنى خالىغان ئۈسكۈنىدە "
+"ئىشلەتكىلى بولىدۇ، ئەمما ئاساسلىقى دومىلىتىش چاقى يوق ئۈسكۈنىدە دومىلىتىش "
+"يەنى سىيرىشنىڭ ئورنىغا ئىشلىتىلىدۇ."
 
 #: ui/main.qml:406
 #, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
-msgstr ""
+msgstr "ئوتتۇرا توپچىنى چەككەندىن كېيىن"
 
 #: ui/main.qml:419
 #, kde-format
@@ -245,6 +259,9 @@ msgid ""
 "you want the application to receive a single middle-click. This includes "
 "middle-click dragging."
 msgstr ""
+"بۇ مەشغۇلات ئادەتتە ئوتتۇرا چېكىلىشكە دەخلى قىلىدۇ؛ پىروگراممىنىڭ يەككە "
+"ئوتتۇرا چېكىشىنى تاپشۇرۇۋالماقچى بولغاندا ئىككى قېتىم ئوتتۇرا چېكىلىدۇ. بۇ "
+"ئوتتۇرا چېكىپ سۆرەشنىمۇ ئۆز ئىچىگە ئالىدۇ."
 
 #~ msgid "Not able to select appropriate backend"
 #~ msgstr "مۇۋاپىق ئارقا ئۇچ پىروگراممىسىنى تاللىغىلى بولمايدۇ"

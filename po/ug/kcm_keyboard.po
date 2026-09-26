@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-19 00:46+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-09-24 20:00-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -58,7 +58,7 @@ msgstr "يوچۇن"
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
-msgstr ""
+msgstr "%1 | %2"
 
 #: tastenbrett/main.cpp:52
 #, kde-format
@@ -84,11 +84,17 @@ msgid ""
 "not supported and  will also trigger this message. These might still work "
 "fine if applied"
 msgstr ""
+"ھەرپتاختا ئۇچۇرىنى يۈكلىيەلمىدى. ئادەتتە بۇ تاللانغان ھەرپتاختىنىڭ "
+"بەلگىلەنگەن جايلاشتۇرۇش ياكى جايلاشتۇرۇش شەكلىنى قوللىمايدىغانلىقىنى "
+"كۆرسىتىدۇ. بۇ سىزنىڭ مەزكۇر مودېل، جايلاشتۇرۇش ۋە شەكلىنى ئىشلىتىشكە مەسىلە "
+"پەيدا قىلىشى مۇمكىن.\n"
+"پىروگرامما مەزكۇر سىستېمىنىڭ xkb مۇندەرىجىسىنىڭ سىرتىدىكى جايلاشتۇرۇشنى "
+"ئالدىن كۆزىتىشنى قوللىمايدۇ، بۇ خىل جايلاشتۇرۇشنى ئالدىن كۆزەتكەندە مەزكۇر "
+"ئەسكەرتىش ئۇچۇرىنى قوزغىتىدۇ. ئەگەر بۇ ھەرپتاختا جايلاشتۇرۇشى قوللىنىلسا "
+"ئادەتتىكىدەك ئىشلەيدۇ"
 
 #: ui/KeyBindings.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
 msgstr "كۇنۇپكا باغلىنىشى"
@@ -142,6 +148,8 @@ msgid ""
 "The abbreviated name of the selected layout, which will be displayed in the "
 "system tray. You can change this setting yourself."
 msgstr ""
+"تاللانغان جايلاشتۇرۇشنىڭ قىسقا ئاتى، ئۇ سىستېما قوندىقىدا كۆرسىتىلىدۇ. بۇ "
+"تەڭشەكنى ئۆزىڭىز ئۆزگەرتەلەيسىز."
 
 #: ui/LayoutDialog.qml:139
 #, kde-format
@@ -263,13 +271,13 @@ msgstr "كۇنۇپكا تەكرارلىقىنى كېچىكتۈرۈشى %1"
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
-msgstr ""
+msgstr "%1 ms"
 
 #: ui/main.qml:192 ui/main_phone.qml:147
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
-msgstr ""
+msgstr "ms"
 
 #: ui/main.qml:205 ui/main_phone.qml:162
 #, kde-format
@@ -382,6 +390,10 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"ئەڭ كۆپ بولغاندا 4 ئاساسلىق جايلاشتۇرۇش سەپلىيەلەيسىز، باشقا بارلىق "
+"جايلاشتۇرۇش قوشۇمچە جايلاشتۇرۇش دەپ قارىلىدۇ. قوشۇمچە جايلاشتۇرۇش دەۋرىي "
+"ئالماشتۇرىدىغان جايلاشنىڭ ئىچىدە بولمايدۇ ئەمما ھەرپتاختا كۆرسەتكۈچ "
+"قوللانچاق ياكى ئىختىيارى تېزلەتمە ئارقىلىق تەڭشەپ زىيارەت قىلغىلى بولىدۇ."
 
 #: ui/main.qml:387
 #, kde-format
@@ -483,7 +495,7 @@ msgstr "جايلاشتۇرۇش ئۆزگەرگەندە  قاڭقىش ئۇقتۇر
 #, kde-format
 msgctxt "@title:group"
 msgid "Shortcuts"
-msgstr "تېزلەتمە"
+msgstr "ىتېزلەتمە"
 
 #: ui/Switching.qml:91 ui/Switching.qml:151
 #, kde-format
@@ -512,6 +524,10 @@ msgid ""
 "Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
 "page."
 msgstr ""
+"كونا X11 تېزلەتمە بىرىكمە كۇنۇپكىنى تېخىمۇ  تەپسىلىي تىزگىنلەشكە يول قويىدۇ "
+"ھەمدە X11 مۇھىتىدىكى ئالاھىدە ئەھۋالدا ماسلىشىشچانلىقى سەل ياخشى. بۇ "
+"تېزلەتمىنى Wayland مۇھىتىدىمۇ ئىشلەتكىلى بولىدۇ.<nl/><nl/>بۇ تېزلەتمىنى "
+"تەڭشەش بىرىكمە كۇنۇپكا باغلاش بېتىگە باشلايدۇ."
 
 #: ui/Switching.qml:180
 #, kde-format

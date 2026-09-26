@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-31 00:45+0000\n"
-"PO-Revision-Date: 2026-07-05 16:24+0200\n"
+"PO-Revision-Date: 2026-09-25 18:19+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -234,7 +234,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "upwards"
 msgid "Clockwise:"
-msgstr ""
+msgstr "Med klokka:"
 
 #: ui/ActionDialog.qml:257
 #, kde-format
@@ -242,7 +242,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "downwards"
 msgid "Counterclockwise:"
-msgstr ""
+msgstr "Mot klokka:"
 
 #: ui/ActionDialog.qml:271
 #, kde-format
@@ -333,7 +333,7 @@ msgstr "Pennekalibrering"
 #, kde-format
 msgctxt "@info"
 msgid "%1: (%2 px, %3 px)"
-msgstr ""
+msgstr "%1: (%2 pikslar, %3 pikslar)"
 
 #: ui/Calibration.qml:107
 #, kde-format
@@ -342,14 +342,11 @@ msgid ""
 "Applied center correction (%1 px, %2 px). Retap the targets to redo the "
 "correction."
 msgstr ""
+"Tok i bruk senterkorreksjon (%1 pikslar, %2 pikslar). Trykk på måla på nytt "
+"for å gjenta kalibreringa."
 
 #: ui/Calibration.qml:173
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds unless further action is "
-#| "taken.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><emphasis "
@@ -360,11 +357,13 @@ msgid_plural ""
 "strong='true'>Will revert to default calibration in %1 seconds unless "
 "further action is taken.</emphasis>"
 msgstr[0] ""
-"Trykk på måla igjen for å stadfesta kalibreringa.<nl/><nl/><b>Går tilbake "
-"til standard kalibrering om %1 sekund dersom du ikkje gjer noko.</b>"
+"Trykk på måla igjen for å stadfesta kalibreringa.<nl/><nl/><emphasis "
+"strong='true'>Går tilbake til standard kalibrering om %1 sekund dersom du "
+"ikkje gjer noko.</emphasis>"
 msgstr[1] ""
-"Trykk på måla igjen for å stadfesta kalibreringa.<nl/><nl/><b>Går tilbake "
-"til standard kalibrering om %1 sekund dersom du ikkje gjer noko.</b>"
+"Trykk på måla igjen for å stadfesta kalibreringa.<nl/><nl/><emphasis "
+"strong='true'>Går tilbake til standard kalibrering om %1 sekund dersom du "
+"ikkje gjer noko.</emphasis>"
 
 #: ui/Calibration.qml:177
 #, kde-format
@@ -375,6 +374,10 @@ msgid ""
 "Tap the center target once to fine-tune alignment. You can retap the other "
 "targets to verify the result."
 msgstr ""
+"Kalibreringa er fullført og lagra.\n"
+"\n"
+"Trykt på midtmålet for å finkalibrera. Du kan òg trykkja på dei andre måla "
+"for å kontrollera kalibreringa."
 
 #: ui/Calibration.qml:180
 #, kde-format
@@ -389,6 +392,8 @@ msgid ""
 "Offset Correction:\n"
 "%1"
 msgstr ""
+"Forskyvingskorreksjon:\n"
+"%1"
 
 #: ui/Calibration.qml:216
 #, kde-format
@@ -424,31 +429,31 @@ msgstr "Avbryt"
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-left"
-msgstr ""
+msgstr "Oppe til venstre"
 
 #: ui/Calibration.qml:334
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-right"
-msgstr ""
+msgstr "Oppe til høgre"
 
 #: ui/Calibration.qml:353
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-left"
-msgstr ""
+msgstr "Nedre til venstre"
 
 #: ui/Calibration.qml:372
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-right"
-msgstr ""
+msgstr "Nede til høgre"
 
 #: ui/Calibration.qml:391
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Center"
-msgstr ""
+msgstr "Midten"
 
 #: ui/DisplayTab.qml:46
 #, kde-format

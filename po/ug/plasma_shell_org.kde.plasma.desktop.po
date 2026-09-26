@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-20 00:47+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-09-24 20:13-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -44,7 +44,7 @@ msgstr "بۇ پائالىيەتتىمۇ كۆرسەت"
 #, kde-format
 msgctxt "@action:button tooltip only, opens kcm showing the indicated activity"
 msgid "Configure Activity “%1”"
-msgstr ""
+msgstr "«%1» پائالىيەتنى سەپلە"
 
 #: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
@@ -62,20 +62,16 @@ msgstr "پائالىيەت"
 #, kde-format
 msgctxt "@action:button tooltip only"
 msgid "Search"
-msgstr ""
+msgstr "ئىزدە"
 
 #: contents/activitymanager/Heading.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Activities"
+#, kde-format
 msgctxt "@action:button tooltip only, opens kcm"
 msgid "Configure Activities"
-msgstr "پائالىيەت"
+msgstr "پائالىيەت سەپلە"
 
 #: contents/activitymanager/Heading.qml:122
-#, fuzzy, kde-format
-#| msgctxt "@action:button Close the panel configuration window"
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button tooltip only, close panel"
 msgid "Close"
 msgstr "ياپ"
@@ -194,6 +190,8 @@ msgctxt "@label dialog body"
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
 msgstr ""
+"نۆۋەتتىكى بەتتە تېخى ساقلانمىغان ئۆزگىرىش بار. ئۆزگىرىشنى قوللىنامدۇ ياكى "
+"تاشلىۋېتەمدۇ؟"
 
 #: contents/configuration/AppletConfiguration.qml:418
 #, kde-format
@@ -267,31 +265,31 @@ msgstr "توغرىسىغا سۈرگۈچ"
 #, kde-format
 msgctxt "@label for shortcuts"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:29
 #, kde-format
 msgctxt "@label for shortcuts"
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:30
 #, kde-format
 msgctxt "@label for shortcuts"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:31
 #, kde-format
 msgctxt "@label for shortcuts"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:72
 #, kde-format
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:139
 #, kde-format
@@ -714,7 +712,7 @@ msgid ""
 "Drag to change position on this screen edge.\n"
 "Double-click to reset."
 msgstr ""
-"Drag to change position on this screen edge.\n"
+"ئېكران گىرۋىكىدىكى ئورنىنى ئۆزگەرتىش ئۈچۈن سۆرىلىدۇ.\n"
 "قوش چېكىلسە ئەسلىگە قايتۇرىدۇ."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
@@ -827,7 +825,7 @@ msgstr "%1 ئەپچىنى كېچىكتۈرۈپ سۆكۈشتىن ۋاز كەچ"
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Mark widget %1 for uninstallation. Requires confirmation"
-msgstr ""
+msgstr "%1 ئەپچىگە سۆكۈش بەلگىسى سالىدۇ. جەزملەش زۆرۈر"
 
 #: contents/explorer/AppletDelegate.qml:260
 #, kde-format
@@ -973,6 +971,8 @@ msgid ""
 "This authentication method is not functioning correctly. Please try another "
 "method, and check your system configuration."
 msgstr ""
+"بۇ كىملىك دەلىللەش ئۇسۇلى توغرا ئىشلىمەيدۇ. باشقا ئۇسۇلنى سىناڭ، سىستېما "
+"سەپلىمىڭىزنى تەكشۈرۈڭ."
 
 #: contents/lockscreen/LockScreenUi.qml:381
 #, kde-format
@@ -1081,30 +1081,31 @@ msgstr "قۇلۇپ ئاچ"
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
 msgstr[0] ""
+"يۇمشاق دېتال يېڭىلانمىسىنى ئورنىتىۋاتىدۇ ۋە ‏‎%1‎‏ سېكۇنتتا قايتا قوزغىلىدۇ"
 
 #: contents/logout/LogoutControls.qml:98
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
-msgstr[0] ""
+msgstr[0] "%1 سېكۇنتتا قايتا قوزغىلىدۇ"
 
 #: contents/logout/LogoutControls.qml:100
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
-msgstr[0] ""
+msgstr[0] "يەنە %1 سېكۇنتتا تىزىمدىن چىقىدۇ"
 
 #: contents/logout/LogoutControls.qml:103
 #, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] ""
+msgstr[0] "يۇمشاق دېتال يېڭىلانمىسىنى ئورنىتىۋاتىدۇ ۋە ‏‎%1‎‏ سېكۇنتتا تاقايدۇ"
 
 #: contents/logout/LogoutControls.qml:104
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
-msgstr[0] ""
+msgstr[0] "%1‎‏ سېكۇنتتا تاقىلىدۇ"
 
 #: contents/logout/LogoutControls.qml:119
 #, kde-format
@@ -1115,110 +1116,102 @@ msgid_plural ""
 "%1 other users are currently logged in. If the computer is shut down or "
 "restarted, those users may lose work."
 msgstr[0] ""
+"نۆۋەتتە باشقا %1 ئىشلەتكۈچى تىزىمغا كىرگەن. ئەگەر كومپيۇتېر تاقالسا ياكى "
+"قايتا قوزغىتىلسا، ئۇ ئىشلەتكۈچىنىڭ قىلىۋاتقان ئىشى يوقاپ كېتىشى مۇمكىن."
 
 #: contents/logout/LogoutControls.qml:136
 #, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
-msgstr ""
+msgstr "قايتا قوزغالغاندا، كومپيۇتېر UEFI مۇقىم دېتال تەڭشىكىگە كىرىدۇ."
 
 #: contents/logout/LogoutControls.qml:138
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
-msgstr ""
+msgstr "قايتا قوزغالغاندا، كومپيۇتېر مۇقىم دېتال تەڭشەك ئېكرانىغا كىرىدۇ."
 
 #: contents/logout/LogoutControls.qml:153
 #, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr ""
+msgstr "قايتا قوزغالغاندا، كومپيۇتېر قوزغىتىش يۈكلىگۈچ تىزىملىكىگە كىرىدۇ."
 
 #: contents/logout/LogoutControls.qml:166
 #, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr ""
+msgstr "قايتا قوزغالغاندا، كومپيۇتېر %1 غا ئالمىشىدۇ."
 
 #: contents/logout/LogoutControls.qml:189
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Slee&p"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "ئۇخلات(&P)"
 
 #: contents/logout/LogoutControls.qml:190
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Slee&p"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
-msgstr "ئۇخلات(&P)"
+msgstr "ھازىرلا ئۇخلات(&P)"
 
 #: contents/logout/LogoutControls.qml:200
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Hibernate"
+#, kde-format
 msgid "&Hibernate"
 msgstr "ئۈچەك(&H)"
 
 #: contents/logout/LogoutControls.qml:201
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Hibernate"
+#, kde-format
 msgid "&Hibernate Now"
-msgstr "ئۈچەك(&H)"
+msgstr "ھازىرلا ئۈچەككە كىر(&H)"
 
 #: contents/logout/LogoutControls.qml:213
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
-msgstr ""
+msgstr "يېڭىلانمىنى ئورنىتىپ قايتا قوزغات"
 
 #: contents/logout/LogoutControls.qml:215
 #: contents/logout/LogoutControls.qml:235
 #, kde-format
 msgid "&Restart"
-msgstr ""
+msgstr "قايتا قوزغات(&R)"
 
 #: contents/logout/LogoutControls.qml:216
 #: contents/logout/LogoutControls.qml:236
 #, kde-format
 msgid "&Restart Now"
-msgstr ""
+msgstr "ھازىرلا قايتا قوزغات(&R)"
 
 #: contents/logout/LogoutControls.qml:250
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr ""
+msgstr "يېڭىلانمىنى ئورنىتىپ ئاندىن تاقا"
 
 #: contents/logout/LogoutControls.qml:252
 #: contents/logout/LogoutControls.qml:272
 #, kde-format
 msgid "&Shut Down"
-msgstr ""
+msgstr "تاقا(&S)"
 
 #: contents/logout/LogoutControls.qml:253
 #: contents/logout/LogoutControls.qml:273
 #, kde-format
 msgid "&Shut Down Now"
-msgstr ""
+msgstr "ھازىرلا تاقا(&S)"
 
 #: contents/logout/LogoutControls.qml:286
 #, kde-format
 msgid "&Log Out"
-msgstr ""
+msgstr "تىزىمدىن چىق(&L)"
 
 #: contents/logout/LogoutControls.qml:287
 #, kde-format
 msgid "&Log Out Now"
-msgstr ""
+msgstr "ھازىرلا تىزىمدىن چىق(&L)"
 
 #: contents/logout/LogoutControls.qml:298
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgid "&Cancel"
-msgstr "ۋاز كەچ"
+msgstr "ۋاز كەچ(&C)"
 
 #: contents/views/DesktopEditMode.qml:135
 #, kde-format

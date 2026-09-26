@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_trash\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-27 00:47+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-09-24 20:12-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -31,12 +31,10 @@ msgid "Emptying…"
 msgstr "بوشىتىۋاتىدۇ…"
 
 #: main.qml:38
-#, fuzzy, kde-format
-#| msgctxt "@info:status The trash is being emptied"
-#| msgid "Emptying…"
+#, kde-format
 msgctxt "@info:status Counting the number of items in trash"
 msgid "Counting…"
-msgstr "بوشىتىۋاتىدۇ…"
+msgstr "ساناۋاتىدۇ…"
 
 #: main.qml:40
 #, kde-format
