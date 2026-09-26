@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-03 00:45+0000\n"
-"PO-Revision-Date: 2026-08-05 19:18+0200\n"
+"PO-Revision-Date: 2026-09-25 18:21+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.11.70\n"
+"X-Generator: Lokalize 26.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -127,38 +127,33 @@ msgstr "Om korrigering for fargeblindskap skal brukast"
 
 #. i18n: ectx: label, entry (DwellClicker), group (Plugins)
 #: kcmaccessibilitydwellclicker.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Whether Shake Pointer is enabled"
+#, kde-format
 msgid "Whether Dwell Clicker is enabled"
-msgstr "Om risting av peikaren skal brukast"
+msgstr "Om kviletidsklikkar skal brukast"
 
 #. i18n: ectx: label, entry (DwellClickerDelayTime), group (Effect-dwellclicker)
 #: kcmaccessibilitydwellclicker.kcfg:19
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox Slow keys Delay"
-#| msgid "Delay:"
+#, kde-format
 msgid "Delay Time"
-msgstr "Forseinking:"
+msgstr "Forseinkingstid"
 
 #. i18n: ectx: label, entry (DwellClickerDwellTime), group (Effect-dwellclicker)
 #: kcmaccessibilitydwellclicker.kcfg:24
 #, kde-format
 msgid "Dwell Time"
-msgstr ""
+msgstr "Kviletid"
 
 #. i18n: ectx: label, entry (DwellClickerDwellColor), group (Effect-dwellclicker)
 #: kcmaccessibilitydwellclicker.kcfg:29
-#, fuzzy, kde-format
-#| msgctxt "Color of the system bell"
-#| msgid "Color"
+#, kde-format
 msgid "Dwell Color"
-msgstr "Farge"
+msgstr "Kviletidsfarge"
 
 #. i18n: ectx: label, entry (DwellClickerMotionThreshold), group (Effect-dwellclicker)
 #: kcmaccessibilitydwellclicker.kcfg:33
 #, kde-format
 msgid "Motion Threshold"
-msgstr ""
+msgstr "Terskel for rørsle"
 
 #. i18n: ectx: label, entry (Invert), group (Plugins)
 #: kcmaccessibilityinvert.kcfg:9
@@ -510,12 +505,10 @@ msgstr "Lillafargar:"
 #, kde-format
 msgctxt "@label"
 msgid "Click when pointer remains still:"
-msgstr ""
+msgstr "Klikk når peikaren står i ro:"
 
 #: ui/DwellClicker.qml:21
-#, fuzzy, kde-format
-#| msgctxt "Enable the system bell"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable dwell clicker effect"
 msgid "Enable"
 msgstr "Slå på"
@@ -525,19 +518,16 @@ msgstr "Slå på"
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically click when pointer remains still for a set amount of time."
-msgstr ""
+msgstr "Klikk automatisk når peikaren står i ro i ei fastsett tid."
 
 #: ui/DwellClicker.qml:39
 #, kde-format
 msgctxt "@label:spinbox Slow keys Delay"
 msgid "Motion Threshold:"
-msgstr ""
+msgstr "Terskel for rørsle:"
 
 #: ui/DwellClicker.qml:55
-#, fuzzy, kde-format
-#| msgctxt "short for pixel(s)"
-#| msgid "%1 px"
-#| msgid_plural "%1 px"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is the motion threshold"
 msgid "%1 px"
 msgid_plural "%1 px"
@@ -545,9 +535,7 @@ msgstr[0] "%1 pikslar"
 msgstr[1] "%1 pikslar"
 
 #: ui/DwellClicker.qml:64
-#, fuzzy, kde-format
-#| msgctxt "short for pixel(s)"
-#| msgid "px"
+#, kde-format
 msgctxt "@label:valuesuffix short for pixel(s)"
 msgid "px"
 msgid_plural "px"
@@ -555,18 +543,13 @@ msgstr[0] "pikslar"
 msgstr[1] "pikslar"
 
 #: ui/DwellClicker.qml:70
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox Slow keys Delay"
-#| msgid "Delay:"
+#, kde-format
 msgctxt "@label:spinbox Dwell clicker delay time"
 msgid "Delay Time:"
-msgstr "Forseinking:"
+msgstr "Forseinkingstid:"
 
 #: ui/DwellClicker.qml:86
-#, fuzzy, kde-format
-#| msgctxt "@label:valuesuffix %1 is visible bell duration"
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is the delay time"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -577,13 +560,10 @@ msgstr[1] "%1 ms"
 #, kde-format
 msgctxt "@label:spinbox Dwell clicker dwell time"
 msgid "Dwell Time:"
-msgstr ""
+msgstr "Kviletid:"
 
 #: ui/DwellClicker.qml:117
-#, fuzzy, kde-format
-#| msgctxt "@label:valuesuffix %1 is visible bell duration"
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is the dwell time"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -594,7 +574,7 @@ msgstr[1] "%1 ms"
 #, kde-format
 msgctxt "@label:button Dwell clicker dwell color"
 msgid "Dwell Color:"
-msgstr ""
+msgstr "Kviletidsfarge:"
 
 #: ui/Invert.qml:17
 #, kde-format
@@ -761,7 +741,7 @@ msgstr "Musestyring"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Dwell Clicker"
-msgstr ""
+msgstr "Kviletids­klikkar"
 
 #: ui/main.qml:64
 #, kde-format
