@@ -29,3 +29,8 @@ target_link_libraries(kcm_clock PRIVATE
     KF6::KCMUtils
     KF6::I18n
 )
+
+add_test(NAME kcm_clock_smoketest COMMAND kcmshell6 --smoke-test kcm_clock)
+set_tests_properties(kcm_clock_smoketest PROPERTIES
+    ENVIRONMENT_MODIFICATION QT_PLUGIN_PATH=path_list_prepend:${CMAKE_BINARY_DIR}/bin
+)
