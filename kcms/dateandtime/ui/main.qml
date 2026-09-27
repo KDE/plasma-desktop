@@ -31,63 +31,14 @@ KCMUtils.SimpleKCM {
             title: i18ndc("kcm_clock", "@title", "Date and Time")
 
             Kirigami.FormEntry {
-                contentItem: ColumnLayout {
-                    spacing: Kirigami.Units.smallSpacing
-                    RowLayout {
-                        spacing: Kirigami.Units.largeSpacing
-                        QQC2.Label{
-                            Layout.fillWidth: true
-                            text: root.KCMUtils.ConfigModule.timeString
-                            color: Kirigami.Theme.textColor
-                            font {
-                                pointSize: Kirigami.Theme.defaultFont.pointSize * 2
-                                weight: Font.DemiBold
-                            }
-                        }
-                        QQC2.Button {
-                            id: timeButton
-                            visible: !root.KCMUtils.ConfigModule.ntpEnabled
-                            text: i18ndc("kcm_clock", "@action:button as in set the current time on the machine", "Set Time")
-                            onClicked: {
-                                let dialog = Qt.createComponent("org.kde.kirigamiaddons.dateandtime", "TimePopup").createObject(QQC2.Overlay.overlay, {
-                                    width: Kirigami.Units.gridUnit * 12,
-                                    height: Kirigami.Units.gridUnit * 18,
-                                    value: root.KCMUtils.ConfigModule.dateTime
-                                }) as DateAndTime.TimePopup;
-                                dialog.onAccepted.connect(() => {
-                                    root.KCMUtils.ConfigModule.setTime(dialog.value);
-                                });
-                                dialog.open();
-                            }
-                        }
-                    }
-                    RowLayout {
-                        spacing: Kirigami.Units.largeSpacing
-                        QQC2.Label{
-                            Layout.fillWidth: true
-                            text: root.KCMUtils.ConfigModule.dateString
-                            color: Kirigami.Theme.textColor
-                            font {
-                                pointSize: Kirigami.Theme.defaultFont.pointSize * 2
-                                weight: Font.DemiBold
-                            }
-                        }
-                        QQC2.Button {
-                            id: dateButton
-                            visible: !root.KCMUtils.ConfigModule.ntpEnabled
-                            text: i18ndc("kcm_clock", "@action:button as in set the current date on the machine", "Set Date")
-                            onClicked: {
-                                let dialog = Qt.createComponent("org.kde.kirigamiaddons.dateandtime", "DatePopup").createObject(QQC2.Overlay.overlay, {
-                                    width: Kirigami.Units.gridUnit * 18,
-                                    height: Kirigami.Units.gridUnit * 18,
-                                    value: root.KCMUtils.ConfigModule.dateTime
-                                }) as DateAndTime.DatePopup;
-                                dialog.onAccepted.connect(() => {
-                                    root.KCMUtils.ConfigModule.setDate(dialog.value);
-                                });
-                                dialog.open();
-                            }
-                        }
+                contentItem: QQC2.Label{
+                    Layout.fillWidth: true
+                    text: root.KCMUtils.ConfigModule.dateTimeString
+                    color: Kirigami.Theme.textColor
+                    wrapMode: Text.Wrap
+                    font {
+                        pointSize: Kirigami.Theme.defaultFont.pointSize * 2
+                        weight: Font.DemiBold
                     }
                 }
             }
@@ -100,10 +51,61 @@ KCMUtils.SimpleKCM {
                     onToggled: root.KCMUtils.ConfigModule.ntpEnabled = !root.KCMUtils.ConfigModule.ntpEnabled
                 }
             }
+            Kirigami.FormEntry {
+                visible: !root.KCMUtils.ConfigModule.ntpEnabled
+                contentItem: RowLayout {
+                    spacing: Kirigami.Units.smallSpacing
+
+                    QQC2.Button {
+                        id: timeButton
+                        Layout.fillWidth: true
+                        text: i18ndc("kcm_clock", "@action:button as in set the current time on the machine", "Set Time")
+                        onClicked: {
+                            let dialog = Qt.createComponent("org.kde.kirigamiaddons.dateandtime", "TimePopup").createObject(QQC2.Overlay.overlay, {
+                                width: Kirigami.Units.gridUnit * 12,
+                                height: Kirigami.Units.gridUnit * 18,
+                                value: root.KCMUtils.ConfigModule.dateTime
+                            }) as DateAndTime.TimePopup;
+                            dialog.onAccepted.connect(() => {
+                                root.KCMUtils.ConfigModule.setTime(dialog.value);
+                            });
+                            dialog.open();
+                        }
+                    }
+                    QQC2.Button {
+                        id: dateButton
+                        Layout.fillWidth: true
+                        text: i18ndc("kcm_clock", "@action:button as in set the current date on the machine", "Set Date")
+                        onClicked: {
+                            let dialog = Qt.createComponent("org.kde.kirigamiaddons.dateandtime", "DatePopup").createObject(QQC2.Overlay.overlay, {
+                                width: Kirigami.Units.gridUnit * 18,
+                                height: Kirigami.Units.gridUnit * 18,
+                                value: root.KCMUtils.ConfigModule.dateTime
+                            }) as DateAndTime.DatePopup;
+                            dialog.onAccepted.connect(() => {
+                                root.KCMUtils.ConfigModule.setDate(dialog.value);
+                            });
+                            dialog.open();
+                        }
+                    }
+                }
+            }
         }
         Kirigami.FormGroup {
             title: i18ndc("kcm_clock", "@title", "Time Zone")
 
+            Kirigami.FormEntry {
+                contentItem: QQC2.Label{
+                    Layout.fillWidth: true
+                    text: root.KCMUtils.ConfigModule.timeZoneString
+                    color: Kirigami.Theme.textColor
+                    wrapMode: Text.Wrap
+                    font {
+                        pointSize: Kirigami.Theme.defaultFont.pointSize * 2
+                        weight: Font.DemiBold
+                    }
+                }
+            }
             Kirigami.FormEntry {
                 contentItem: TimeZone.TimezoneSelector {
                     id: timeZoneSelector
