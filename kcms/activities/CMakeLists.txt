@@ -19,3 +19,8 @@ target_link_libraries (kcm_activities PRIVATE
    KF6::GlobalAccel
    Plasma::Activities
 )
+
+add_test(NAME kcm_activities_smoketest COMMAND kcmshell6 --smoke-test kcm_activities)
+set_tests_properties(kcm_activities_smoketest PROPERTIES
+    ENVIRONMENT_MODIFICATION QT_PLUGIN_PATH=path_list_prepend:${CMAKE_BINARY_DIR}/bin
+)

@@ -132,3 +132,8 @@ install(
     DESTINATION
         ${KDE_INSTALL_KCFGDIR}
 )
+
+add_test(NAME kcm_access_smoketest COMMAND kcmshell6 --smoke-test kcm_access)
+set_tests_properties(kcm_access_smoketest PROPERTIES
+    ENVIRONMENT_MODIFICATION QT_PLUGIN_PATH=path_list_prepend:${CMAKE_BINARY_DIR}/bin
+)

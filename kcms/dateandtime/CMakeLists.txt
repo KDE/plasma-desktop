@@ -27,3 +27,8 @@ target_link_libraries(kcm_clock
     KF6::Svg
 )
 install(TARGETS kcm_clock  DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets )
+
+add_test(NAME kcm_clock_smoketest COMMAND kcmshell6 --smoke-test kcm_clock)
+set_tests_properties(kcm_clock_smoketest PROPERTIES
+    ENVIRONMENT_MODIFICATION QT_PLUGIN_PATH=path_list_prepend:${CMAKE_BINARY_DIR}/bin
+)
