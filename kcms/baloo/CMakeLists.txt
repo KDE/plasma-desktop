@@ -21,3 +21,8 @@ target_link_libraries(kcm_baloofile PRIVATE
     Qt::Widgets
     Qt::Qml
 )
+
+add_test(NAME kcm_baloofile_smoketest COMMAND kcmshell6 --smoke-test kcm_baloofile)
+set_tests_properties(kcm_baloofile_smoketest PROPERTIES
+    ENVIRONMENT_MODIFICATION QT_PLUGIN_PATH=path_list_prepend:${CMAKE_BINARY_DIR}/bin
+)
