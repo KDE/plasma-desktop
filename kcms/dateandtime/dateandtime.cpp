@@ -90,6 +90,11 @@ void DateAndTime::setTimeZone(QString timeZone)
     Q_EMIT dateTimeChanged();
 }
 
+QString DateAndTime::timeZoneString() const
+{
+    return dateTime().toTimeZone(timeZoneToUse()).toString("tttt (t) UTC ttt "_L1);
+}
+
 bool DateAndTime::ntpAvailable() const
 {
     return m_ntpAvailable;
@@ -151,14 +156,12 @@ void DateAndTime::setTime(const QTime &time)
     Q_EMIT dateTimeChanged();
 }
 
-QString DateAndTime::timeString() const
+QString DateAndTime::dateTimeString() const
 {
-    return dateTime().toTimeZone(timeZoneToUse()).time().toString(QLocale::system().timeFormat(QLocale::LongFormat));
-}
-
-QString DateAndTime::dateString() const
-{
-    return dateTime().toTimeZone(timeZoneToUse()).date().toString(QLocale::system().dateFormat(QLocale::LongFormat));
+    const auto dateString = dateTime().toTimeZone(timeZoneToUse()).toString(QLocale::system().dateFormat(QLocale::LongFormat));
+    auto longFormatNoTimeZone = QLocale::system().timeFormat(QLocale::LongFormat).remove(u"tttt"_s).trimmed();
+    const auto timeString = dateTime().toTimeZone(timeZoneToUse()).toString(longFormatNoTimeZone);
+    return u"%1 %2"_s.arg(dateString, timeString);
 }
 
 void DateAndTime::checkNeedsSave()
@@ -222,6 +225,7 @@ void DateAndTime::refresh()
     const auto oldSystemDateTime = std::exchange(m_systemDateTime, QDateTime::currentDateTime());
     if (oldSystemDateTime != m_systemDateTime) {
         Q_EMIT dateTimeChanged();
+        Q_EMIT timeZoneChanged();
     }
 }
 
@@ -255,7 +259,7 @@ bool DateAndTime::timedateSave()
             if (reply.error().name() != QDBusError::errorString(QDBusError::AccessDenied)) {
                 addMessage(Message::error(i18n("Unable to set current time")));
             } else {
-                addMessage(Message::error(i18n("Permission to date and time setting denied")));
+                addMessage(Message::error(i18n("Permission to change date and time setting denied")));
             }
             qCWarning(KCM_CLOCK) << "Failed to set current time" << reply.error().name() << reply.error().message();
             return false;
