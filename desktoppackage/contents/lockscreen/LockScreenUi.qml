@@ -36,6 +36,8 @@ Item {
     property bool expectingPrompt: false // this is set for real when an authenticator is selected
     // <!* Whether we are expected to visualize the prompt message for the authenticator *>
     property bool showPrompt: false // this is set for real when an authenticator is selected
+    // <!* Whether the session is already unlocked. Used for the NoPasswordUnlock use case *>
+    property bool locked: true
 
     function handleMessage(msg) {
         if (!root.notification) {
@@ -68,6 +70,8 @@ Item {
         }
 
         function onSucceeded() {
+            authenticator.stopAuthenticating()
+            lockScreenUi.locked = false
             if (!lockScreenUi.expectingPrompt) {
                 Qt.quit()
             }
@@ -163,7 +167,7 @@ Item {
 
         Timer { // heart beat keeping the backend active for as long as we are in visible state
             interval: 1000
-            running: parent.uiVisible
+            running: lockScreenUi.locked && parent.uiVisible
             repeat: true
             onTriggered: authenticator.startAuthenticating()
         }
