@@ -68,6 +68,9 @@ Item {
         }
 
         function onSucceeded() {
+            // This is important. It stops the all pending authentication processes, preventing timeouts etc.
+            authenticator.stopAuthenticating()
+
             if (!lockScreenUi.expectingPrompt) {
                 Qt.quit()
             }
@@ -163,7 +166,7 @@ Item {
 
         Timer { // heart beat keeping the backend active for as long as we are in visible state
             interval: 1000
-            running: parent.uiVisible
+            running: !authenticator.unlocked && parent.uiVisible
             repeat: true
             onTriggered: authenticator.startAuthenticating()
         }
