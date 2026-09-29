@@ -126,8 +126,8 @@ KCM.SimpleKCM {
             Kirigami.FormData.label: i18nc("@label:listbox columns/rows", "Arrangement:")
 
             model: [
-                i18nc("@item:inlistbox arrangement of icons", "In Columns"),
                 i18nc("@item:inlistbox arrangement of icons", "In Rows"),
+                i18nc("@item:inlistbox arrangement of icons", "In Columns"),
             ]
         }
 
