@@ -67,11 +67,11 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent)
     m_arrangementMenu = m_menu->addMenu(QIcon::fromTheme(QStringLiteral("object-rows")), i18nc("@item:inmenu arrangement of icons", "Arrange"));
     m_arrangement = new QActionGroup(this);
     connect(m_arrangement, &QActionGroup::triggered, this, &ViewPropertiesMenu::arrangementChanged);
-    action = m_arrangementMenu->addAction(i18nc("@item:inmenu arrangement of icons", "In Columns"));
+    action = m_arrangementMenu->addAction(i18nc("@item:inmenu arrangement of icons", "In Rows"));
     action->setCheckable(true);
     action->setData(0);
     m_arrangement->addAction(action);
-    action = m_arrangementMenu->addAction(i18nc("@item:inmenu arrangement of icons", "In Rows"));
+    action = m_arrangementMenu->addAction(i18nc("@item:inmenu arrangement of icons", "In Columns"));
     action->setData(1);
     action->setCheckable(true);
     m_arrangement->addAction(action);

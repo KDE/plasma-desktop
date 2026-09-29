@@ -123,11 +123,11 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
             visible: !configIcons.inPanel || viewMode.currentIndex === 1 /* Icons mode */
 
-            Kirigami.FormData.label: i18nc("@label:listbox columns/rows", "Arrangement:")
+            Kirigami.FormData.label: i18nc("@label:listbox rows/columns", "Arrangement:")
 
             model: [
-                i18nc("@item:inlistbox arrangement of icons", "In Columns"),
                 i18nc("@item:inlistbox arrangement of icons", "In Rows"),
+                i18nc("@item:inlistbox arrangement of icons", "In Columns"),
             ]
         }
 
