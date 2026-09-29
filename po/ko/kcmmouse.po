@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-04 00:47+0000\n"
-"PO-Revision-Date: 2026-02-03 21:46+0100\n"
+"PO-Revision-Date: 2026-09-29 00:30+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: inputbackend.cpp:49
 #, kde-format
@@ -223,13 +223,13 @@ msgstr "스크롤 방향 뒤집기"
 #, kde-format
 msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
-msgstr ""
+msgstr "포인터를 움직일 때 스크롤"
 
 #: ui/main.qml:383
 #, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
-msgstr ""
+msgstr "가운데 단추를 누르고 있을 때"
 
 #: ui/main.qml:396
 #, kde-format
@@ -248,7 +248,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
-msgstr ""
+msgstr "가운데 단추를 클릭한 후"
 
 #: ui/main.qml:419
 #, kde-format
@@ -258,6 +258,9 @@ msgid ""
 "you want the application to receive a single middle-click. This includes "
 "middle-click dragging."
 msgstr ""
+"이 설정은 가운데 단추 클릭에 간섭합니다. 앱에서 가운데 단추 한 번 클릭 기능"
+"을 사용하려면 가운데 단추를 두 번 클릭하십시오. 가운데 단추 드래그에도 해당합"
+"니다."
 
 #~ msgctxt "@option:check"
 #~ msgid "Hold down middle button and move mouse to scroll"
