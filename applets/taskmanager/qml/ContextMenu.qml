@@ -495,6 +495,80 @@ PlasmaExtras.Menu {
     }
 
     PlasmaExtras.MenuItem {
+        id: screensMenuItem
+
+        visible: screensInstantiator.count > 1
+            && (menu.visualParent && !menu.get(TaskManager.AbstractTasksModel.IsLauncher)
+            && !menu.get(TaskManager.AbstractTasksModel.IsStartup))
+        enabled: visible
+
+        text: i18nc("action:inmenu", "Move to &Screen")
+        icon: "computer"
+
+        readonly property PlasmaCore.ActionGroup _screensActionGroup: PlasmaCore.ActionGroup {
+            id: screensActionGroup
+        }
+
+        readonly property PlasmaExtras.Menu _screensMenu: PlasmaExtras.Menu {
+            id: screensMenu
+            visualParent: screensMenuItem.action
+        }
+
+        readonly property Instantiator _screensInstantiator: Instantiator {
+            id: screensInstantiator
+
+            model: PlasmaCore.ScreensModel {
+                id: screensModel
+            }
+
+            delegate: PlasmaExtras.MenuItem {
+                id: screenMenuItem
+                required property int index
+                required property string name
+                required property var screenHandle
+
+                parent: screensMenu
+                action: PlasmaCore.Action {
+                    text: {
+                        const name = screenMenuItem.screenHandle.name;
+                        if (name.startsWith("eDP-") || name.startsWith("LVDS-") || name.startsWith("DSI-")) {
+                            return i18nc("@item:inmenu List of all Screens to send a window to.", "Built-in Screen");
+                        } else {
+                            return i18nc("@item:inmenu List of all Screens to send a window to, manufacturer, model (output identifier)",
+                                         "%1 %2 (%3)", screenMenuItem.screenHandle.manufacturer, screenMenuItem.screenHandle.model, name);
+                        }
+                    }
+                    actionGroup: screensActionGroup
+                    checkable: true
+                }
+
+                // This is not done on the PlasmaCore.Action because it has a "menu" property
+                // which shadows the "menu" id of the ContextMenu.
+                checked: {
+                    const currentScreenGeometry = screenMenuItem.screenHandle.geometry;
+
+                    let isAnyTaskNotOnCurrentScreen = false;
+                    TaskManagerApplet.TaskTools.foreachChildTask((childIndex) => {
+                        const screenGeometry = tasksModel.data(childIndex, TaskManager.AbstractTasksModel.ScreenGeometry);
+                                                                     console.log(screenGeometry, currentScreenGeometry);
+                        // TODO Expose current screen as QScreen in WindowTasksModel.
+                        isAnyTaskNotOnCurrentScreen = isAnyTaskNotOnCurrentScreen ||
+                            (screenGeometry.x !== currentScreenGeometry.x
+                             || screenGeometry.y !== currentScreenGeometry.y
+                             || screenGeometry.width !== currentScreenGeometry.width
+                             || screenGeometry.height !== currentScreenGeometry.height);
+                    }, menu.modelIndex, tasksModel);
+                    return !isAnyTaskNotOnCurrentScreen;
+                }
+
+                onClicked: {
+                    tasksModel.requestSendToOutput(menu.modelIndex, screenMenuItem.screenHandle);
+                }
+            }
+        }
+    }
+
+    PlasmaExtras.MenuItem {
         id: launcherToggleAction
 
         visible: menu.visualParent
