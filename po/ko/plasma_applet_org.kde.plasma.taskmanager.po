@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-25 00:48+0000\n"
-"PO-Revision-Date: 2026-02-03 21:58+0100\n"
+"PO-Revision-Date: 2026-09-29 00:26+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: backend.cpp:339
 #, kde-format
@@ -69,31 +69,27 @@ msgstr "최근 파일 비우기"
 #: backend.cpp:581
 #, kde-format
 msgid "Activate Previous Task Manager Entry"
-msgstr ""
+msgstr "이전 작업 관리자 항목 활성화"
 
 #: backend.cpp:588
-#, fuzzy, kde-format
-#| msgctxt "action:inmenu"
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgid "Activate Next Task Manager Entry"
-msgstr "작업 관리자에 고정(&P)"
+msgstr "다음 작업 관리자 항목 활성화"
 
 #: backend.cpp:595
 #, kde-format
 msgid "Move Active Task Manager Entry Backward"
-msgstr ""
+msgstr "활성 작업 관리자 항목을 뒤로 이동"
 
 #: backend.cpp:603
 #, kde-format
 msgid "Move Active Task Manager Entry Forward"
-msgstr ""
+msgstr "활성 작업 관리자 항목을 앞으로 이동"
 
 #: backend.cpp:612
-#, fuzzy, kde-format
-#| msgctxt "action:inmenu"
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgid "Activate Task Manager Entry %1"
-msgstr "작업 관리자에 고정(&P)"
+msgstr "작업 관리자 항목 %1 활성화"
 
 #: qml/AudioStream.qml:100
 #, kde-format
@@ -869,17 +865,15 @@ msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "9k+"
-msgstr ""
+msgstr "9k+"
 
 #: qml/TaskBadgeOverlay.qml:104
-#, fuzzy, kde-format
-#| msgctxt "volume percentage"
-#| msgid "%1%"
+#, kde-format
 msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "%1k"
-msgstr "%1%"
+msgstr "%1k"
 
 #: qml/ToolTipInstance.qml:212
 #, kde-format
