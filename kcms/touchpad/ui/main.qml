@@ -472,7 +472,11 @@ KCMUtils.SimpleKCM {
                 subtitle: rightClickMethodAreas.Accessible.description
                 contentItem: QQC2.RadioButton {
                     id: rightClickMethodAreas
-                    text: i18ndc("kcm_touchpad", "@option:radio Completes the sentence 'right-click by pressing bottom-right corner'", "Pressing bottom-right corner")
+                    text: (
+                        root.device?.leftHanded ?? false
+                            ? i18ndc("kcm_touchpad", "@option:radio Completes the sentence 'right-click by pressing bottom-left corner'", "Pressing bottom-left corner")
+                            : i18ndc("kcm_touchpad", "@option:radio Completes the sentence 'right-click by pressing bottom-right corner'", "Pressing bottom-right corner")
+                    )
                     enabled: root.device?.supportsClickMethodAreas ?? false
                     checked: enabled && (root.device?.clickMethodAreas ?? false)
                     Accessible.description: (
