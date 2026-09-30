@@ -41,6 +41,8 @@ KclockModule::KclockModule(QObject *parent, const KPluginMetaData &metaData)
 
 bool KclockModule::timedatedSave()
 {
+    const qint64 timeDiff = dtime->userTime().toMSecsSinceEpoch() - QDateTime::currentMSecsSinceEpoch();
+
     OrgFreedesktopTimedate1Interface timedateIface(QStringLiteral("org.freedesktop.timedate1"),
                                                    QStringLiteral("/org/freedesktop/timedate1"),
                                                    QDBusConnection::systemBus());
@@ -59,9 +61,7 @@ bool KclockModule::timedatedSave()
         qWarning() << "Failed to enable NTP" << reply.error().name() << reply.error().message();
         return false;
     }
-
     if (!dtime->ntpEnabled()) {
-        qint64 timeDiff = dtime->userTime().toMSecsSinceEpoch() - QDateTime::currentMSecsSinceEpoch();
         //*1000 for milliseconds -> microseconds
         auto reply = timedateIface.SetTime(timeDiff * 1000, true, true);
         reply.waitForFinished();
