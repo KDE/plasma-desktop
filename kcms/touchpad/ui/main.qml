@@ -475,11 +475,11 @@ KCMUtils.SimpleKCM {
                     text: i18ndc("kcm_touchpad", "@option:radio Completes the sentence 'right-click by pressing bottom-right corner'", "Pressing bottom-right corner")
                     enabled: root.device?.supportsClickMethodAreas ?? false
                     checked: enabled && (root.device?.clickMethodAreas ?? false)
-                    Accessible.description: !noMiddleSoftwareEmulation.visible
-                          ? ( middleEmulation.checked
-                                ? i18ndc("kcm_touchpad", "@info:usagetip shown below radio button", "Middle-click by pressing both bottom corners.")
-                                : i18ndc("kcm_touchpad", "@info:usagetip shown below radio button", "Middle-click by pressing bottom center."))
-                          : ""
+                    Accessible.description: (
+                        root.device?.middleEmulation ?? false
+                            ? i18ndc("kcm_touchpad", "@info:usagetip shown below radio button", "Middle-click by pressing both bottom corners.")
+                            : i18ndc("kcm_touchpad", "@info:usagetip shown below radio button", "Middle-click by pressing bottom center.")
+                    )
                 }
 
                 enabled: (root.device?.supportsClickMethodAreas && root.device?.supportsClickMethodClickfinger) ?? false
@@ -501,7 +501,7 @@ KCMUtils.SimpleKCM {
                 contentItem: QQC2.RadioButton {
                     id: rightClickMethodClickfinger
                     text: i18ndc("kcm_touchpad", "@option:radio Completes the sentence 'right-click by pressing with two fingers'", "Pressing anywhere with two fingers")
-                    Accessible.description: !noMiddleSoftwareEmulation.visible ? i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by pressing anywhere with three fingers.") : ""
+                    Accessible.description: i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by pressing anywhere with three fingers.")
                     topPadding: Kirigami.Units.smallSpacing // in lieu of rightClickMethod.spacing
                     enabled: root.device?.supportsClickMethodClickfinger ?? false
                     checked: enabled && (root.device?.clickMethodClickfinger ?? false)
@@ -509,49 +509,6 @@ KCMUtils.SimpleKCM {
 
                 enabled: (root.device?.supportsClickMethodAreas && root.device?.supportsClickMethodClickfinger) ?? false
                 visible: (root.device?.supportsClickMethodAreas || root.device?.supportsClickMethodClickfinger) ?? false
-            }
-
-
-            Kirigami.FormEntry {
-                title: i18ndc("kcm_touchpad", "@label for radiobutton group, begins the sentence 'middle-click by pressing bottom-middle edge/by pressing anywhere with three fingers'", "Middle-click by:")
-                contentItem: QQC2.RadioButton {
-                    id: noMiddleSoftwareEmulation
-                    text: i18ndc("kcm_touchpad", "@option:radio completes the sentence 'middle-click by pressing bottom-middle edge'", "Pressing bottom-middle edge")
-                    checked: enabled && !(root.device?.middleEmulation ?? false)
-                }
-
-                enabled: root.device?.supportsMiddleEmulation ?? false
-                visible: rightClickMethodAreas.checked
-
-                QQC2.ButtonGroup {
-                    buttons: [noMiddleSoftwareEmulation, middleSoftwareEmulation]
-                    onClicked: {
-                        if (root.device) {
-                            root.device.middleEmulation = middleSoftwareEmulation.checked && middleSoftwareEmulation.visible
-                        }
-                    }
-                }
-            }
-
-            Kirigami.FormEntry {
-                 contentItem: QQC2.RadioButton {
-                    id: middleSoftwareEmulation
-                    text: i18ndc("kcm_touchpad", "@option:radio completes the sentence 'middle-click by pressing bottom-left and bottom-right corners'", "Pressing bottom-left and bottom-right corners")
-                    checked: enabled && (root.device?.middleEmulation ?? false)
-                }
-
-                enabled: root.device?.supportsMiddleEmulation ?? false
-                visible: rightClickMethodAreas.checked
-            }
-
-            Kirigami.FormEntry {
-                visible: rightClickMethodClickfinger.checked
-                contentItem: QQC2.CheckBox {
-                    id: clickfingerMiddleInfoBox
-                    text: i18ndc("kcm_touchpad", "@option:check completes the sentence 'middle-click by pressing anywhere with three fingers'", "Pressing anywhere with three fingers")
-                    checked: true
-                    enabled: false
-                }
             }
         }
 
@@ -614,12 +571,15 @@ KCMUtils.SimpleKCM {
                 enabled: root.device?.supportsLmrTapButtonMap && tapToClick.checked
                 contentItem: QQC2.RadioButton {
                     id: multiTapRightClick
-                    text: (root.device?.tapFingerCount > 2
-                        ? i18ndc("kcm_touchpad", "@option:radio", "Right-click (three-finger tap to middle-click)")
-                        : i18ndc("kcm_touchpad", "@option:radio", "Right-click")
+                    text: i18ndc("kcm_touchpad", "@option:radio", "Right-click")
+                    Accessible.description: (
+                        root.device?.tapFingerCount > 2
+                            ? i18ndc("kcm_touchpad", "@info:usagetip shown below radio button", "Middle-click by tapping anywhere with three fingers.")
+                            : ""
                     )
                     checked: enabled && !(root.device?.lmrTapButtonMap ?? false)
                 }
+                subtitle: multiTapRightClick.Accessible.description
 
                 QQC2.ButtonGroup {
                     buttons: [multiTapRightClick, multiTapMiddleClick]
@@ -636,12 +596,15 @@ KCMUtils.SimpleKCM {
                 enabled: root.device?.supportsLmrTapButtonMap && tapToClick.checked
                 contentItem: QQC2.RadioButton {
                     id: multiTapMiddleClick
-                    text: (root.device?.tapFingerCount > 2
-                        ? i18ndc("kcm_touchpad", "@option:radio", "Middle-click (three-finger tap to right-click)")
-                        : i18ndc("kcm_touchpad", "@option:radio", "Middle-click")
+                    text: i18ndc("kcm_touchpad", "@option:radio", "Middle-click")
+                    Accessible.description: (
+                        root.device?.tapFingerCount > 2
+                            ? i18ndc("kcm_touchpad", "@info:usagetip shown below radio button", "Right-click by tapping anywhere with three fingers.")
+                            : ""
                     )
                     checked: enabled && (root.device?.lmrTapButtonMap ?? false)
                 }
+                subtitle: multiTapMiddleClick.Accessible.description
             }
         }
     }
