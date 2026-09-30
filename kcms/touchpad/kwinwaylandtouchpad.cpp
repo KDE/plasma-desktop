@@ -47,6 +47,8 @@ bool KWinWaylandTouchpad::load()
     };
 
     // general
+    success &= valueLoader(m_name);
+    success &= valueLoader(m_sysName);
     success &= valueLoader(m_supportsDisableEvents);
     success &= valueLoader(m_supportsLeftHanded);
     success &= valueLoader(m_supportedButtons);
