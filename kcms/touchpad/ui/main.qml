@@ -180,10 +180,13 @@ KCMUtils.SimpleKCM {
             }
 
             Kirigami.FormEntry {
+                id: middleEmulationFormEntry
+                visible: root.device?.supportsMiddleEmulation ?? false
+
                 contentItem: QQC2.CheckBox {
                     id: middleEmulation
                     text: i18ndc("kcm_touchpad", "@option:check 'both' refers to the left and right buttons'", "Press both simultaneously to middle-click")
-                    enabled: root.device?.supportsMiddleEmulation ?? false
+                    enabled: middleEmulationFormEntry.visible && (root.device?.clickMethodAreas ?? false)
                     checked: enabled && (root.device?.middleEmulation ?? false)
 
                     onToggled: {
@@ -194,7 +197,9 @@ KCMUtils.SimpleKCM {
                 }
 
                 trailingItems: Kirigami.ContextualHelpButton {
-                    toolTipText: i18ndc("kcm_touchpad", "@info:tooltip from ContextualHelpButton", "Activating this setting increases click latency by 50ms. The extra delay is needed to correctly detect simultaneous left and right button presses.")
+                    toolTipText: middleEmulation.enabled
+                        ? i18ndc("kcm_touchpad", "@info:tooltip from ContextualHelpButton", "Activating this setting increases click latency by 50ms. The extra delay is needed to correctly detect simultaneous left and right button presses.")
+                        : i18ndc("kcm_touchpad", "@info:tooltip from ContextualHelpButton", "This setting is not available while “Right-click by pressing anywhere with two fingers” is selected.")
                 }
             }
 
