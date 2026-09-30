@@ -2473,4 +2473,4 @@ bool FolderModel::isDeleteCommandShown()
     return cg.readEntry("ShowDeleteCommand", false);
 }
 
-#include "foldermodel.moc"
+#include "moc_foldermodel.cpp"

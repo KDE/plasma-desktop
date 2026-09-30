@@ -73,6 +73,4 @@ QStringList SpellCheckingSkeleton::clients() const
     return m_store->clients();
 }
 
-#include "spellcheckingskeleton.moc"
-
 #include "moc_spellcheckingskeleton.cpp"
