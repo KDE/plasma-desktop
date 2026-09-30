@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-17 00:46+0000\n"
+"POT-Creation-Date: 2026-09-30 00:48+0000\n"
 "PO-Revision-Date: 2026-04-03 20:35+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -147,22 +147,24 @@ msgid "Clear Icon"
 msgstr "Вернуть стандартный значок"
 
 #: package/contents/ui/ConfigIcons.qml:126
-#, kde-format
-msgctxt "@label:listbox columns/rows"
+#, fuzzy, kde-format
+#| msgctxt "@label:listbox columns/rows"
+#| msgid "Arrangement:"
+msgctxt "@label:listbox rows/columns"
 msgid "Arrangement:"
 msgstr "Расположение:"
 
 #: package/contents/ui/ConfigIcons.qml:129
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
-msgid "In Columns"
-msgstr "По столбцам"
+msgid "In Rows"
+msgstr "По строкам"
 
 #: package/contents/ui/ConfigIcons.qml:130
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
-msgid "In Rows"
-msgstr "По строкам"
+msgid "In Columns"
+msgstr "По столбцам"
 
 #: package/contents/ui/ConfigIcons.qml:139
 #, kde-format
@@ -686,14 +688,14 @@ msgstr "Упорядочить"
 #: plugins/folder/viewpropertiesmenu.cpp:70
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
-msgid "In Columns"
-msgstr "По столбцам"
+msgid "In Rows"
+msgstr "По строкам"
 
 #: plugins/folder/viewpropertiesmenu.cpp:74
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
-msgid "In Rows"
-msgstr "По строкам"
+msgid "In Columns"
+msgstr "По столбцам"
 
 #: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format

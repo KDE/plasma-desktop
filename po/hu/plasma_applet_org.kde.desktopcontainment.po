@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-17 00:46+0000\n"
+"POT-Creation-Date: 2026-09-30 00:48+0000\n"
 "PO-Revision-Date: 2026-05-21 22:00+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -142,22 +142,24 @@ msgid "Clear Icon"
 msgstr "Ikon visszaállítása"
 
 #: package/contents/ui/ConfigIcons.qml:126
-#, kde-format
-msgctxt "@label:listbox columns/rows"
+#, fuzzy, kde-format
+#| msgctxt "@label:listbox columns/rows"
+#| msgid "Arrangement:"
+msgctxt "@label:listbox rows/columns"
 msgid "Arrangement:"
 msgstr "Elrendezés:"
 
 #: package/contents/ui/ConfigIcons.qml:129
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
-msgid "In Columns"
-msgstr "Oszlopokban"
+msgid "In Rows"
+msgstr "Sorokban"
 
 #: package/contents/ui/ConfigIcons.qml:130
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
-msgid "In Rows"
-msgstr "Sorokban"
+msgid "In Columns"
+msgstr "Oszlopokban"
 
 #: package/contents/ui/ConfigIcons.qml:139
 #, kde-format
@@ -681,14 +683,14 @@ msgstr "Elrendezés"
 #: plugins/folder/viewpropertiesmenu.cpp:70
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
-msgid "In Columns"
-msgstr "Oszlopokban"
+msgid "In Rows"
+msgstr "Sorokban"
 
 #: plugins/folder/viewpropertiesmenu.cpp:74
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
-msgid "In Rows"
-msgstr "Sorokban"
+msgid "In Columns"
+msgstr "Oszlopokban"
 
 #: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format

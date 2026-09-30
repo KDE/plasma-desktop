@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-17 00:46+0000\n"
+"POT-Creation-Date: 2026-09-30 00:48+0000\n"
 "PO-Revision-Date: 2026-04-22 20:48+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -142,22 +142,24 @@ msgid "Clear Icon"
 msgstr "Symbol zurücksetzen"
 
 #: package/contents/ui/ConfigIcons.qml:126
-#, kde-format
-msgctxt "@label:listbox columns/rows"
+#, fuzzy, kde-format
+#| msgctxt "@label:listbox columns/rows"
+#| msgid "Arrangement:"
+msgctxt "@label:listbox rows/columns"
 msgid "Arrangement:"
 msgstr "Anordnung:"
 
 #: package/contents/ui/ConfigIcons.qml:129
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
-msgid "In Columns"
-msgstr "In Spalten"
+msgid "In Rows"
+msgstr "In Zeilen"
 
 #: package/contents/ui/ConfigIcons.qml:130
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
-msgid "In Rows"
-msgstr "In Zeilen"
+msgid "In Columns"
+msgstr "In Spalten"
 
 #: package/contents/ui/ConfigIcons.qml:139
 #, kde-format
@@ -682,14 +684,14 @@ msgstr "Anordnen"
 #: plugins/folder/viewpropertiesmenu.cpp:70
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
-msgid "In Columns"
-msgstr "In Spalten"
+msgid "In Rows"
+msgstr "In Zeilen"
 
 #: plugins/folder/viewpropertiesmenu.cpp:74
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
-msgid "In Rows"
-msgstr "In Zeilen"
+msgid "In Columns"
+msgstr "In Spalten"
 
 #: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format

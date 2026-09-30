@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-17 00:46+0000\n"
+"POT-Creation-Date: 2026-09-30 00:48+0000\n"
 "PO-Revision-Date: 2026-03-20 08:40+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
@@ -146,22 +146,24 @@ msgid "Clear Icon"
 msgstr "Effacer l'icône"
 
 #: package/contents/ui/ConfigIcons.qml:126
-#, kde-format
-msgctxt "@label:listbox columns/rows"
+#, fuzzy, kde-format
+#| msgctxt "@label:listbox columns/rows"
+#| msgid "Arrangement:"
+msgctxt "@label:listbox rows/columns"
 msgid "Arrangement:"
 msgstr "Disposition :"
 
 #: package/contents/ui/ConfigIcons.qml:129
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
-msgid "In Columns"
-msgstr "En colonne"
+msgid "In Rows"
+msgstr "En ligne"
 
 #: package/contents/ui/ConfigIcons.qml:130
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
-msgid "In Rows"
-msgstr "En ligne"
+msgid "In Columns"
+msgstr "En colonne"
 
 #: package/contents/ui/ConfigIcons.qml:139
 #, kde-format
@@ -686,14 +688,14 @@ msgstr "Disposer"
 #: plugins/folder/viewpropertiesmenu.cpp:70
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
-msgid "In Columns"
-msgstr "En colonne"
+msgid "In Rows"
+msgstr "En ligne"
 
 #: plugins/folder/viewpropertiesmenu.cpp:74
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
-msgid "In Rows"
-msgstr "En ligne"
+msgid "In Columns"
+msgstr "En colonne"
 
 #: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format

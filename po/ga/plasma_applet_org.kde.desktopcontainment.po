@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/plasma_applet_folderview.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-17 00:46+0000\n"
+"POT-Creation-Date: 2026-09-30 00:48+0000\n"
 "PO-Revision-Date: 2026-01-21 12:21+0000\n"
 "Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
 "Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
@@ -140,22 +140,24 @@ msgid "Clear Icon"
 msgstr "Deilbhín Glan"
 
 #: package/contents/ui/ConfigIcons.qml:126
-#, kde-format
-msgctxt "@label:listbox columns/rows"
+#, fuzzy, kde-format
+#| msgctxt "@label:listbox columns/rows"
+#| msgid "Arrangement:"
+msgctxt "@label:listbox rows/columns"
 msgid "Arrangement:"
 msgstr "Leagan amach:"
 
 #: package/contents/ui/ConfigIcons.qml:129
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
-msgid "In Columns"
-msgstr "I gColúin"
+msgid "In Rows"
+msgstr "I Sraitheanna"
 
 #: package/contents/ui/ConfigIcons.qml:130
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
-msgid "In Rows"
-msgstr "I Sraitheanna"
+msgid "In Columns"
+msgstr "I gColúin"
 
 #: package/contents/ui/ConfigIcons.qml:139
 #, kde-format
@@ -680,14 +682,14 @@ msgstr "Leag amach"
 #: plugins/folder/viewpropertiesmenu.cpp:70
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
-msgid "In Columns"
-msgstr "I gColúin"
+msgid "In Rows"
+msgstr "I Sraitheanna"
 
 #: plugins/folder/viewpropertiesmenu.cpp:74
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
-msgid "In Rows"
-msgstr "I Sraitheanna"
+msgid "In Columns"
+msgstr "I gColúin"
 
 #: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format

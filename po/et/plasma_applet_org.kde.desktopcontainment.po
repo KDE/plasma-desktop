@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-17 00:46+0000\n"
+"POT-Creation-Date: 2026-09-30 00:48+0000\n"
 "PO-Revision-Date: 2020-10-08 11:43+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -161,23 +161,23 @@ msgstr "Puhasta ikoon"
 #: package/contents/ui/ConfigIcons.qml:126
 #, fuzzy, kde-format
 #| msgid "Arrangement:"
-msgctxt "@label:listbox columns/rows"
+msgctxt "@label:listbox rows/columns"
 msgid "Arrangement:"
 msgstr "Paigutus:"
 
 #: package/contents/ui/ConfigIcons.qml:129
 #, fuzzy, kde-format
-#| msgid "Columns"
-msgctxt "@item:inlistbox arrangement of icons"
-msgid "In Columns"
-msgstr "Veergudes"
-
-#: package/contents/ui/ConfigIcons.qml:130
-#, fuzzy, kde-format
 #| msgid "Rows"
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Rows"
 msgstr "Ridades"
+
+#: package/contents/ui/ConfigIcons.qml:130
+#, fuzzy, kde-format
+#| msgid "Columns"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "In Columns"
+msgstr "Veergudes"
 
 #: package/contents/ui/ConfigIcons.qml:139
 #, fuzzy, kde-format
@@ -759,17 +759,17 @@ msgstr "Paigutus"
 
 #: plugins/folder/viewpropertiesmenu.cpp:70
 #, fuzzy, kde-format
-#| msgid "Columns"
-msgctxt "@item:inmenu arrangement of icons"
-msgid "In Columns"
-msgstr "Veergudes"
-
-#: plugins/folder/viewpropertiesmenu.cpp:74
-#, fuzzy, kde-format
 #| msgid "Rows"
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Rows"
 msgstr "Ridades"
+
+#: plugins/folder/viewpropertiesmenu.cpp:74
+#, fuzzy, kde-format
+#| msgid "Columns"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "In Columns"
+msgstr "Veergudes"
 
 #: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format

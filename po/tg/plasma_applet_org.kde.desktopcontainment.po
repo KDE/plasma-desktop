@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-17 00:46+0000\n"
+"POT-Creation-Date: 2026-09-30 00:48+0000\n"
 "PO-Revision-Date: 2021-09-05 11:41-0700\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik Language Support\n"
@@ -159,23 +159,23 @@ msgstr "Тоза кардани нишона"
 #: package/contents/ui/ConfigIcons.qml:126
 #, fuzzy, kde-format
 #| msgid "Arrangement:"
-msgctxt "@label:listbox columns/rows"
+msgctxt "@label:listbox rows/columns"
 msgid "Arrangement:"
 msgstr "Мураттабсозӣ:"
 
 #: package/contents/ui/ConfigIcons.qml:129
 #, fuzzy, kde-format
-#| msgid "Columns"
-msgctxt "@item:inlistbox arrangement of icons"
-msgid "In Columns"
-msgstr "Сутунҳо"
-
-#: package/contents/ui/ConfigIcons.qml:130
-#, fuzzy, kde-format
 #| msgid "Rows"
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Rows"
 msgstr "Қаторҳо"
+
+#: package/contents/ui/ConfigIcons.qml:130
+#, fuzzy, kde-format
+#| msgid "Columns"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "In Columns"
+msgstr "Сутунҳо"
 
 #: package/contents/ui/ConfigIcons.qml:139
 #, fuzzy, kde-format
@@ -757,17 +757,17 @@ msgstr "Мураттабсозӣ дар"
 
 #: plugins/folder/viewpropertiesmenu.cpp:70
 #, fuzzy, kde-format
-#| msgid "Columns"
-msgctxt "@item:inmenu arrangement of icons"
-msgid "In Columns"
-msgstr "Сутунҳо"
-
-#: plugins/folder/viewpropertiesmenu.cpp:74
-#, fuzzy, kde-format
 #| msgid "Rows"
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Rows"
 msgstr "Қаторҳо"
+
+#: plugins/folder/viewpropertiesmenu.cpp:74
+#, fuzzy, kde-format
+#| msgid "Columns"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "In Columns"
+msgstr "Сутунҳо"
 
 #: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format

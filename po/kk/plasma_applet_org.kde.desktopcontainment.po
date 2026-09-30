@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-17 00:46+0000\n"
+"POT-Creation-Date: 2026-09-30 00:48+0000\n"
 "PO-Revision-Date: 2013-05-28 03:59+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -166,25 +166,25 @@ msgstr "Таңбашаларын реттеу"
 #: package/contents/ui/ConfigIcons.qml:126
 #, fuzzy, kde-format
 #| msgid "Arrangement"
-msgctxt "@label:listbox columns/rows"
+msgctxt "@label:listbox rows/columns"
 msgid "Arrangement:"
 msgstr "Орналастыру"
 
 #: package/contents/ui/ConfigIcons.qml:129
 #, fuzzy, kde-format
 #| msgctxt "Arrange icons in"
-#| msgid "Columns"
-msgctxt "@item:inlistbox arrangement of icons"
-msgid "In Columns"
-msgstr "Бағандар"
-
-#: package/contents/ui/ConfigIcons.qml:130
-#, fuzzy, kde-format
-#| msgctxt "Arrange icons in"
 #| msgid "Rows"
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Rows"
 msgstr "Жолдар"
+
+#: package/contents/ui/ConfigIcons.qml:130
+#, fuzzy, kde-format
+#| msgctxt "Arrange icons in"
+#| msgid "Columns"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "In Columns"
+msgstr "Бағандар"
 
 #: package/contents/ui/ConfigIcons.qml:139
 #, fuzzy, kde-format
@@ -768,18 +768,18 @@ msgstr "Тәртібі"
 #: plugins/folder/viewpropertiesmenu.cpp:70
 #, fuzzy, kde-format
 #| msgctxt "Arrange icons in"
-#| msgid "Columns"
-msgctxt "@item:inmenu arrangement of icons"
-msgid "In Columns"
-msgstr "Бағандар"
-
-#: plugins/folder/viewpropertiesmenu.cpp:74
-#, fuzzy, kde-format
-#| msgctxt "Arrange icons in"
 #| msgid "Rows"
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Rows"
 msgstr "Жолдар"
+
+#: plugins/folder/viewpropertiesmenu.cpp:74
+#, fuzzy, kde-format
+#| msgctxt "Arrange icons in"
+#| msgid "Columns"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "In Columns"
+msgstr "Бағандар"
 
 #: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format

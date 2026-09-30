@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-17 00:46+0000\n"
+"POT-Creation-Date: 2026-09-30 00:48+0000\n"
 "PO-Revision-Date: 2015-02-24 20:34+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -156,23 +156,23 @@ msgstr ""
 #: package/contents/ui/ConfigIcons.qml:126
 #, fuzzy, kde-format
 #| msgid "Arrangement"
-msgctxt "@label:listbox columns/rows"
+msgctxt "@label:listbox rows/columns"
 msgid "Arrangement:"
 msgstr "Raspored:"
 
 #: package/contents/ui/ConfigIcons.qml:129
 #, fuzzy, kde-format
-#| msgid "Columns"
-msgctxt "@item:inlistbox arrangement of icons"
-msgid "In Columns"
-msgstr "Kolona"
-
-#: package/contents/ui/ConfigIcons.qml:130
-#, fuzzy, kde-format
 #| msgid "Rows"
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Rows"
 msgstr "Redovi"
+
+#: package/contents/ui/ConfigIcons.qml:130
+#, fuzzy, kde-format
+#| msgid "Columns"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "In Columns"
+msgstr "Kolona"
 
 #: package/contents/ui/ConfigIcons.qml:139
 #, fuzzy, kde-format
@@ -739,17 +739,17 @@ msgstr "Poredatje u:"
 
 #: plugins/folder/viewpropertiesmenu.cpp:70
 #, fuzzy, kde-format
-#| msgid "Columns"
-msgctxt "@item:inmenu arrangement of icons"
-msgid "In Columns"
-msgstr "Kolona"
-
-#: plugins/folder/viewpropertiesmenu.cpp:74
-#, fuzzy, kde-format
 #| msgid "Rows"
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Rows"
 msgstr "Redovi"
+
+#: plugins/folder/viewpropertiesmenu.cpp:74
+#, fuzzy, kde-format
+#| msgid "Columns"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "In Columns"
+msgstr "Kolona"
 
 #: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format

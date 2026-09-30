@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-17 00:46+0000\n"
+"POT-Creation-Date: 2026-09-30 00:48+0000\n"
 "PO-Revision-Date: 2024-09-19 17:29+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -159,23 +159,23 @@ msgstr "Καθαρισμός εικονιδίου"
 #: package/contents/ui/ConfigIcons.qml:126
 #, fuzzy, kde-format
 #| msgid "Arrangement:"
-msgctxt "@label:listbox columns/rows"
+msgctxt "@label:listbox rows/columns"
 msgid "Arrangement:"
 msgstr "Διάταξη:"
 
 #: package/contents/ui/ConfigIcons.qml:129
 #, fuzzy, kde-format
-#| msgid "Columns"
-msgctxt "@item:inlistbox arrangement of icons"
-msgid "In Columns"
-msgstr "Στήλες"
-
-#: package/contents/ui/ConfigIcons.qml:130
-#, fuzzy, kde-format
 #| msgid "Rows"
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Rows"
 msgstr "Γραμμές"
+
+#: package/contents/ui/ConfigIcons.qml:130
+#, fuzzy, kde-format
+#| msgid "Columns"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "In Columns"
+msgstr "Στήλες"
 
 #: package/contents/ui/ConfigIcons.qml:139
 #, fuzzy, kde-format
@@ -743,17 +743,17 @@ msgstr "Τακτοποίηση"
 
 #: plugins/folder/viewpropertiesmenu.cpp:70
 #, fuzzy, kde-format
-#| msgid "Columns"
-msgctxt "@item:inmenu arrangement of icons"
-msgid "In Columns"
-msgstr "Στήλες"
-
-#: plugins/folder/viewpropertiesmenu.cpp:74
-#, fuzzy, kde-format
 #| msgid "Rows"
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Rows"
 msgstr "Γραμμές"
+
+#: plugins/folder/viewpropertiesmenu.cpp:74
+#, fuzzy, kde-format
+#| msgid "Columns"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "In Columns"
+msgstr "Στήλες"
 
 #: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format
