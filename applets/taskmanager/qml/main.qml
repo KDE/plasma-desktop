@@ -37,7 +37,6 @@ PlasmoidItem {
     property Task toolTipOpenedByClick
     property Task toolTipAreaItem
 
-    readonly property Component contextMenuComponent: Qt.createComponent("ContextMenu.qml")
     readonly property Component pulseAudioComponent: Qt.createComponent("PulseAudio.qml")
 
     property alias taskList: taskList
@@ -307,6 +306,11 @@ PlasmoidItem {
 
     Mpris.Mpris2Model {
         id: mpris2Source
+    }
+
+    Component {
+        id: contextMenuComponent
+        ContextMenu {}
     }
 
     Item {
