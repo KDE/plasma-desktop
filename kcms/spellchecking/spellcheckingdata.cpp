@@ -51,6 +51,4 @@ bool SpellCheckingData::isDefaults() const
     return isDefaults;
 }
 
-#include "spellcheckingdata.moc"
-
 #include "moc_spellcheckingdata.cpp"

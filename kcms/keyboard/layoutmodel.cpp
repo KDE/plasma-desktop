@@ -59,5 +59,4 @@ QHash<int, QByteArray> LayoutModel::roleNames() const
     };
 }
 
-#include "layoutmodel.moc"
 #include "moc_layoutmodel.cpp"

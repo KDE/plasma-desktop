@@ -235,4 +235,3 @@ bool XkbOptionsModel::setData(const QModelIndex &index, const QVariant &value, i
 }
 
 #include "moc_xkboptionsmodel.cpp"
-#include "xkboptionsmodel.moc"

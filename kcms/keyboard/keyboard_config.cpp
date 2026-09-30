@@ -167,5 +167,4 @@ void KeyboardConfig::defaults()
     m_settings->setDefaults();
 }
 
-#include "keyboard_config.moc"
 #include "moc_keyboard_config.cpp"

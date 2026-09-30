@@ -103,4 +103,3 @@ QKeySequence ShortcutHelper::getSequence(QAction *action)
 }
 
 #include "moc_shortcuthelper.cpp"
-#include "shortcuthelper.moc"

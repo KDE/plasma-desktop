@@ -187,5 +187,4 @@ void KCMKeyboard::resetShortcuts()
     m_shortcutHelper->actionColletion()->setLayoutShortcuts(m_config->layouts());
 }
 
-#include "kcm_keyboard.moc"
 #include "moc_kcm_keyboard.cpp"

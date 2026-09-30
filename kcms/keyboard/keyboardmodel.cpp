@@ -53,5 +53,4 @@ QHash<int, QByteArray> KeyboardModel::roleNames() const
     };
 }
 
-#include "keyboardmodel.moc"
 #include "moc_keyboardmodel.cpp"

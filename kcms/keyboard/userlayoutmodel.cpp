@@ -155,4 +155,3 @@ void UserLayoutModel::setSingleLayout(const QString &layout, const QString &vari
 }
 
 #include "moc_userlayoutmodel.cpp"
-#include "userlayoutmodel.moc"
