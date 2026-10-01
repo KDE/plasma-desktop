@@ -71,3 +71,4 @@ Options:
  require-passing-tests-on: ['@all']
  xml-validate-ignore: ['kcms/keyboard/tests/config/base.bad.xml']
  run-qmllint: true
+ enable-lsan: True
