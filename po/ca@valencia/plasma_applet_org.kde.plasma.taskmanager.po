@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-25 00:48+0000\n"
+"POT-Creation-Date: 2026-10-01 17:43+0000\n"
 "PO-Revision-Date: 2026-07-22 13:02+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -727,103 +727,125 @@ msgctxt "action:inmenu"
 msgid "Move to %1"
 msgstr "Mou cap a %1"
 
-#: qml/ContextMenu.qml:509 qml/ContextMenu.qml:525
+#: qml/ContextMenu.qml:505
+#, fuzzy, kde-format
+#| msgctxt "action:inmenu"
+#| msgid "Move to &Desktop"
+msgctxt "action:inmenu"
+msgid "Move to &Screen"
+msgstr "Mou cap a l'&escriptori"
+
+#: qml/ContextMenu.qml:535
+#, kde-format
+msgctxt "@item:inmenu List of all Screens to send a window to."
+msgid "Built-in Screen"
+msgstr ""
+
+#: qml/ContextMenu.qml:538
+#, kde-format
+msgctxt ""
+"@item:inmenu List of all Screens to send a window to, manufacturer, model "
+"(output identifier)"
+msgid "%1 %2 (%3)"
+msgstr ""
+
+#: qml/ContextMenu.qml:583 qml/ContextMenu.qml:599
 #, kde-format
 msgctxt "action:inmenu"
 msgid "&Pin to Task Manager"
 msgstr "Fi&xa al gestor de tasques"
 
-#: qml/ContextMenu.qml:577
+#: qml/ContextMenu.qml:651
 #, kde-format
 msgctxt "action:inmenu"
 msgid "On All Activities"
 msgstr "En totes les activitats"
 
-#: qml/ContextMenu.qml:583
+#: qml/ContextMenu.qml:657
 #, kde-format
 msgctxt "action:inmenu"
 msgid "On The Current Activity"
 msgstr "En l'activitat actual"
 
-#: qml/ContextMenu.qml:607
+#: qml/ContextMenu.qml:681
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Unpin from Task Manager"
 msgstr "Desfixa del gestor de tasques"
 
-#: qml/ContextMenu.qml:622
+#: qml/ContextMenu.qml:696
 #, kde-format
 msgctxt "item:inmenu opens submenu"
 msgid "More"
 msgstr "Més"
 
-#: qml/ContextMenu.qml:631
+#: qml/ContextMenu.qml:705
 #, kde-format
 msgctxt "action:inmenu"
 msgid "&Move"
 msgstr "&Mou"
 
-#: qml/ContextMenu.qml:640
+#: qml/ContextMenu.qml:714
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Re&size"
 msgstr "Redimen&siona"
 
-#: qml/ContextMenu.qml:654
+#: qml/ContextMenu.qml:728
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Ma&ximize"
 msgstr "Ma&ximitza"
 
-#: qml/ContextMenu.qml:668
+#: qml/ContextMenu.qml:742
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Mi&nimize"
 msgstr "Mi&nimitza"
 
-#: qml/ContextMenu.qml:678
+#: qml/ContextMenu.qml:752
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Keep &Above Others"
 msgstr "Mantín damunt les &altres"
 
-#: qml/ContextMenu.qml:688
+#: qml/ContextMenu.qml:762
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Keep &Below Others"
 msgstr "Mantín &davall les altres"
 
-#: qml/ContextMenu.qml:700
+#: qml/ContextMenu.qml:774
 #, kde-format
 msgctxt "action:inmenu"
 msgid "&Fullscreen"
 msgstr "Pantalla &completa"
 
-#: qml/ContextMenu.qml:712
+#: qml/ContextMenu.qml:786
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
 msgstr "Se&nse barra de títol ni marc"
 
-#: qml/ContextMenu.qml:725
+#: qml/ContextMenu.qml:799
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Hide from Screencast"
 msgstr "&Oculta dels vídeos de captura de pantalla"
 
-#: qml/ContextMenu.qml:741
+#: qml/ContextMenu.qml:815
 #, kde-format
 msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr "Permet que este programa s'agrupe"
 
-#: qml/ContextMenu.qml:787
+#: qml/ContextMenu.qml:861
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "Tan&ca-ho tot"
 
-#: qml/ContextMenu.qml:787
+#: qml/ContextMenu.qml:861
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close"

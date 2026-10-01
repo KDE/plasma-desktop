@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-25 00:48+0000\n"
+"POT-Creation-Date: 2026-10-01 17:43+0000\n"
 "PO-Revision-Date: 2026-03-27 23:51+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -731,103 +731,125 @@ msgctxt "action:inmenu"
 msgid "Move to %1"
 msgstr "%1 に移動"
 
-#: qml/ContextMenu.qml:509 qml/ContextMenu.qml:525
+#: qml/ContextMenu.qml:505
+#, fuzzy, kde-format
+#| msgctxt "action:inmenu"
+#| msgid "Move to &Desktop"
+msgctxt "action:inmenu"
+msgid "Move to &Screen"
+msgstr "デスクトップに移動(&D)"
+
+#: qml/ContextMenu.qml:535
+#, kde-format
+msgctxt "@item:inmenu List of all Screens to send a window to."
+msgid "Built-in Screen"
+msgstr ""
+
+#: qml/ContextMenu.qml:538
+#, kde-format
+msgctxt ""
+"@item:inmenu List of all Screens to send a window to, manufacturer, model "
+"(output identifier)"
+msgid "%1 %2 (%3)"
+msgstr ""
+
+#: qml/ContextMenu.qml:583 qml/ContextMenu.qml:599
 #, kde-format
 msgctxt "action:inmenu"
 msgid "&Pin to Task Manager"
 msgstr "タスクマネージャにピン留め(&P)"
 
-#: qml/ContextMenu.qml:577
+#: qml/ContextMenu.qml:651
 #, kde-format
 msgctxt "action:inmenu"
 msgid "On All Activities"
 msgstr "すべてのアクティビティで"
 
-#: qml/ContextMenu.qml:583
+#: qml/ContextMenu.qml:657
 #, kde-format
 msgctxt "action:inmenu"
 msgid "On The Current Activity"
 msgstr "現在のアクティビティで"
 
-#: qml/ContextMenu.qml:607
+#: qml/ContextMenu.qml:681
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Unpin from Task Manager"
 msgstr "タスクマネージャからピン留めを外す"
 
-#: qml/ContextMenu.qml:622
+#: qml/ContextMenu.qml:696
 #, kde-format
 msgctxt "item:inmenu opens submenu"
 msgid "More"
 msgstr "その他"
 
-#: qml/ContextMenu.qml:631
+#: qml/ContextMenu.qml:705
 #, kde-format
 msgctxt "action:inmenu"
 msgid "&Move"
 msgstr "移動(&M)"
 
-#: qml/ContextMenu.qml:640
+#: qml/ContextMenu.qml:714
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Re&size"
 msgstr "サイズ変更(&S)"
 
-#: qml/ContextMenu.qml:654
+#: qml/ContextMenu.qml:728
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Ma&ximize"
 msgstr "最大化(&X)"
 
-#: qml/ContextMenu.qml:668
+#: qml/ContextMenu.qml:742
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Mi&nimize"
 msgstr "最小化(&N)"
 
-#: qml/ContextMenu.qml:678
+#: qml/ContextMenu.qml:752
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Keep &Above Others"
 msgstr "常に最前面に表示(&A)"
 
-#: qml/ContextMenu.qml:688
+#: qml/ContextMenu.qml:762
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Keep &Below Others"
 msgstr "常に最背面に表示(&B)"
 
-#: qml/ContextMenu.qml:700
+#: qml/ContextMenu.qml:774
 #, kde-format
 msgctxt "action:inmenu"
 msgid "&Fullscreen"
 msgstr "フルスクリーン(&F)"
 
-#: qml/ContextMenu.qml:712
+#: qml/ContextMenu.qml:786
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
 msgstr "タイトルバーとフレームを非表示(&N)"
 
-#: qml/ContextMenu.qml:725
+#: qml/ContextMenu.qml:799
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Hide from Screencast"
 msgstr "画面録画から消す(&H)"
 
-#: qml/ContextMenu.qml:741
+#: qml/ContextMenu.qml:815
 #, kde-format
 msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr "このプログラムのグループ化を許可する"
 
-#: qml/ContextMenu.qml:787
+#: qml/ContextMenu.qml:861
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "すべて閉じる(&C)"
 
-#: qml/ContextMenu.qml:787
+#: qml/ContextMenu.qml:861
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close"

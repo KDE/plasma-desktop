@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-25 00:48+0000\n"
+"POT-Creation-Date: 2026-10-01 17:43+0000\n"
 "PO-Revision-Date: 2026-08-01 17:55+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -719,103 +719,127 @@ msgctxt "action:inmenu"
 msgid "Move to %1"
 msgstr "%1-க்கு நகர்த்து"
 
-#: qml/ContextMenu.qml:509 qml/ContextMenu.qml:525
+#: qml/ContextMenu.qml:505
+#, fuzzy, kde-format
+#| msgctxt "action:inmenu"
+#| msgid "Move to &Desktop"
+msgctxt "action:inmenu"
+msgid "Move to &Screen"
+msgstr "பணிமேடைக்கு நகர்த்து"
+
+#: qml/ContextMenu.qml:535
+#, kde-format
+msgctxt "@item:inmenu List of all Screens to send a window to."
+msgid "Built-in Screen"
+msgstr ""
+
+#: qml/ContextMenu.qml:538
+#, fuzzy, kde-format
+#| msgctxt "1 = number of desktop, 2 = desktop name"
+#| msgid "&%1 %2"
+msgctxt ""
+"@item:inmenu List of all Screens to send a window to, manufacturer, model "
+"(output identifier)"
+msgid "%1 %2 (%3)"
+msgstr "&%1 %2"
+
+#: qml/ContextMenu.qml:583 qml/ContextMenu.qml:599
 #, kde-format
 msgctxt "action:inmenu"
 msgid "&Pin to Task Manager"
 msgstr "பணி மேலாளியில் தக்கவை"
 
-#: qml/ContextMenu.qml:577
+#: qml/ContextMenu.qml:651
 #, kde-format
 msgctxt "action:inmenu"
 msgid "On All Activities"
 msgstr "அனைத்து செயல்பாடுகளிலும்"
 
-#: qml/ContextMenu.qml:583
+#: qml/ContextMenu.qml:657
 #, kde-format
 msgctxt "action:inmenu"
 msgid "On The Current Activity"
 msgstr "தற்போதைய செயல்பாட்டில்"
 
-#: qml/ContextMenu.qml:607
+#: qml/ContextMenu.qml:681
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Unpin from Task Manager"
 msgstr "பணி மேலாளியில் தக்கவைக்க வேண்டாம்"
 
-#: qml/ContextMenu.qml:622
+#: qml/ContextMenu.qml:696
 #, kde-format
 msgctxt "item:inmenu opens submenu"
 msgid "More"
 msgstr "மேலும்"
 
-#: qml/ContextMenu.qml:631
+#: qml/ContextMenu.qml:705
 #, kde-format
 msgctxt "action:inmenu"
 msgid "&Move"
 msgstr "நகர்த்து"
 
-#: qml/ContextMenu.qml:640
+#: qml/ContextMenu.qml:714
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Re&size"
 msgstr "அளவுமாற்று"
 
-#: qml/ContextMenu.qml:654
+#: qml/ContextMenu.qml:728
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Ma&ximize"
 msgstr "அதிகபட்ச பெரிதாக்கு"
 
-#: qml/ContextMenu.qml:668
+#: qml/ContextMenu.qml:742
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Mi&nimize"
 msgstr "ஒதுக்கு"
 
-#: qml/ContextMenu.qml:678
+#: qml/ContextMenu.qml:752
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Keep &Above Others"
 msgstr "மற்றவற்றிற்கு மேலே வை"
 
-#: qml/ContextMenu.qml:688
+#: qml/ContextMenu.qml:762
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Keep &Below Others"
 msgstr "மற்றவற்றிற்கு கீழே வை"
 
-#: qml/ContextMenu.qml:700
+#: qml/ContextMenu.qml:774
 #, kde-format
 msgctxt "action:inmenu"
 msgid "&Fullscreen"
 msgstr "முழுத்திரை"
 
-#: qml/ContextMenu.qml:712
+#: qml/ContextMenu.qml:786
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
 msgstr "&விளிம்பும் தலைப்புப்பட்டையும் வேண்டாம்"
 
-#: qml/ContextMenu.qml:725
+#: qml/ContextMenu.qml:799
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Hide from Screencast"
 msgstr "திரைப்பகிர்விலிருந்து மறை"
 
-#: qml/ContextMenu.qml:741
+#: qml/ContextMenu.qml:815
 #, kde-format
 msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr "இச்செயலியை குழுப்படுத்த விடு"
 
-#: qml/ContextMenu.qml:787
+#: qml/ContextMenu.qml:861
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "அனைத்தையும் மூடு"
 
-#: qml/ContextMenu.qml:787
+#: qml/ContextMenu.qml:861
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close"
@@ -983,10 +1007,6 @@ msgstr "%1-இல் உள்ளது"
 #~ msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 #~ msgid "Cycles through tasks"
 #~ msgstr "பணிகளுக்கிடையே தாவும்"
-
-#~ msgctxt "1 = number of desktop, 2 = desktop name"
-#~ msgid "&%1 %2"
-#~ msgstr "&%1 %2"
 
 #~ msgid "Always arrange tasks in rows of as many columns"
 #~ msgstr "இத்தனை நெடுவரிசைகளை எப்போதும் பயன்படுத்து"

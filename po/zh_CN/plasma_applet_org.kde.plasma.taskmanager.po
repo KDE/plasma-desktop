@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-25 00:48+0000\n"
+"POT-Creation-Date: 2026-10-01 17:43+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -717,103 +717,125 @@ msgctxt "action:inmenu"
 msgid "Move to %1"
 msgstr "移动到 %1"
 
-#: qml/ContextMenu.qml:509 qml/ContextMenu.qml:525
+#: qml/ContextMenu.qml:505
+#, fuzzy, kde-format
+#| msgctxt "action:inmenu"
+#| msgid "Move to &Desktop"
+msgctxt "action:inmenu"
+msgid "Move to &Screen"
+msgstr "移动到桌面(&D)"
+
+#: qml/ContextMenu.qml:535
+#, kde-format
+msgctxt "@item:inmenu List of all Screens to send a window to."
+msgid "Built-in Screen"
+msgstr ""
+
+#: qml/ContextMenu.qml:538
+#, kde-format
+msgctxt ""
+"@item:inmenu List of all Screens to send a window to, manufacturer, model "
+"(output identifier)"
+msgid "%1 %2 (%3)"
+msgstr ""
+
+#: qml/ContextMenu.qml:583 qml/ContextMenu.qml:599
 #, kde-format
 msgctxt "action:inmenu"
 msgid "&Pin to Task Manager"
 msgstr "固定到任务栏(&P)"
 
-#: qml/ContextMenu.qml:577
+#: qml/ContextMenu.qml:651
 #, kde-format
 msgctxt "action:inmenu"
 msgid "On All Activities"
 msgstr "到全部活动"
 
-#: qml/ContextMenu.qml:583
+#: qml/ContextMenu.qml:657
 #, kde-format
 msgctxt "action:inmenu"
 msgid "On The Current Activity"
 msgstr "到当前活动"
 
-#: qml/ContextMenu.qml:607
+#: qml/ContextMenu.qml:681
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Unpin from Task Manager"
 msgstr "取消固定到任务栏"
 
-#: qml/ContextMenu.qml:622
+#: qml/ContextMenu.qml:696
 #, kde-format
 msgctxt "item:inmenu opens submenu"
 msgid "More"
 msgstr "更多"
 
-#: qml/ContextMenu.qml:631
+#: qml/ContextMenu.qml:705
 #, kde-format
 msgctxt "action:inmenu"
 msgid "&Move"
 msgstr "移动(&M)"
 
-#: qml/ContextMenu.qml:640
+#: qml/ContextMenu.qml:714
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Re&size"
 msgstr "调整大小(&S)"
 
-#: qml/ContextMenu.qml:654
+#: qml/ContextMenu.qml:728
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Ma&ximize"
 msgstr "最大化(&X)"
 
-#: qml/ContextMenu.qml:668
+#: qml/ContextMenu.qml:742
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Mi&nimize"
 msgstr "最小化(&N)"
 
-#: qml/ContextMenu.qml:678
+#: qml/ContextMenu.qml:752
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Keep &Above Others"
 msgstr "置顶(&A)"
 
-#: qml/ContextMenu.qml:688
+#: qml/ContextMenu.qml:762
 #, kde-format
 msgctxt "action:inmenu"
 msgid "Keep &Below Others"
 msgstr "置底(&B)"
 
-#: qml/ContextMenu.qml:700
+#: qml/ContextMenu.qml:774
 #, kde-format
 msgctxt "action:inmenu"
 msgid "&Fullscreen"
 msgstr "全屏(&F)"
 
-#: qml/ContextMenu.qml:712
+#: qml/ContextMenu.qml:786
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
 msgstr "无标题栏和边框(&N)"
 
-#: qml/ContextMenu.qml:725
+#: qml/ContextMenu.qml:799
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Hide from Screencast"
 msgstr "在录屏中隐藏(&H)"
 
-#: qml/ContextMenu.qml:741
+#: qml/ContextMenu.qml:815
 #, kde-format
 msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr "允许将此程序的所有窗口合并为一个分组"
 
-#: qml/ContextMenu.qml:787
+#: qml/ContextMenu.qml:861
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "关闭全部(&C)"
 
-#: qml/ContextMenu.qml:787
+#: qml/ContextMenu.qml:861
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close"
