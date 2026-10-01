@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-30 00:48+0000\n"
-"PO-Revision-Date: 2026-03-23 22:24+0400\n"
+"PO-Revision-Date: 2026-09-30 18:36+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: package/contents/config/config.qml:17
 #, kde-format
@@ -141,12 +141,10 @@ msgid "Clear Icon"
 msgstr "امحُ الأيقونة"
 
 #: package/contents/ui/ConfigIcons.qml:126
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox columns/rows"
-#| msgid "Arrangement:"
+#, kde-format
 msgctxt "@label:listbox rows/columns"
 msgid "Arrangement:"
-msgstr "التّرتيب:"
+msgstr "الترتيب:"
 
 #: package/contents/ui/ConfigIcons.qml:129
 #, kde-format

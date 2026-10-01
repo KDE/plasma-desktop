@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-30 00:48+0000\n"
-"PO-Revision-Date: 2026-04-08 23:42+0900\n"
+"PO-Revision-Date: 2026-10-01 01:03+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 26.07.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 
 #: package/contents/config/config.qml:17
 #, kde-format
@@ -142,9 +142,7 @@ msgid "Clear Icon"
 msgstr "清除圖示"
 
 #: package/contents/ui/ConfigIcons.qml:126
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox columns/rows"
-#| msgid "Arrangement:"
+#, kde-format
 msgctxt "@label:listbox rows/columns"
 msgid "Arrangement:"
 msgstr "安排："

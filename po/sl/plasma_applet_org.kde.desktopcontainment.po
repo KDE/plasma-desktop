@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-30 00:48+0000\n"
-"PO-Revision-Date: 2026-03-19 06:45+0100\n"
+"PO-Revision-Date: 2026-09-30 07:43+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: package/contents/config/config.qml:17
 #, kde-format
@@ -142,9 +142,7 @@ msgid "Clear Icon"
 msgstr "Počisti ikono"
 
 #: package/contents/ui/ConfigIcons.qml:126
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox columns/rows"
-#| msgid "Arrangement:"
+#, kde-format
 msgctxt "@label:listbox rows/columns"
 msgid "Arrangement:"
 msgstr "Razporeditev:"

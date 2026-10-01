@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-30 00:48+0000\n"
-"PO-Revision-Date: 2026-03-19 11:24+0100\n"
+"PO-Revision-Date: 2026-09-30 08:53+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: package/contents/config/config.qml:17
 #, kde-format
@@ -143,9 +143,7 @@ msgid "Clear Icon"
 msgstr "Neteja la icona"
 
 #: package/contents/ui/ConfigIcons.qml:126
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox columns/rows"
-#| msgid "Arrangement:"
+#, kde-format
 msgctxt "@label:listbox rows/columns"
 msgid "Arrangement:"
 msgstr "Organització:"
