@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 # SPDX-FileCopyrightText: 2026 Guillermo Steren <gstkein@gmail.com>
 #
