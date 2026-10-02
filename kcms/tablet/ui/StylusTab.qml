@@ -317,18 +317,18 @@ Item {
                                 target: root
 
                                 function onSettingsRestored(): void {
-                                    refreshInputSequence();
+                                    seq.refreshInputSequence();
                                 }
                             }
 
                             function refreshInputSequence(): void {
-                                seq.inputSequence = kcm.toolButtonMapping(root.device.name, seq.value);
+                                seq.inputSequence = kcm.toolButtonMapping(root.device.name, bindingDelegate.value);
                             }
 
                             Component.onCompleted: refreshInputSequence()
 
                             onGotInputSequence: sequence => {
-                                kcm.assignToolButtonMapping(root.device.name, seq.value, sequence);
+                                kcm.assignToolButtonMapping(root.device.name, bindingDelegate.value, sequence);
                             }
 
                             SettingHighlighter {
