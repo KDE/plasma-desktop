@@ -170,7 +170,7 @@ Kirigami.Form {
                     Connections {
                         target: kcm
                         function onSettingsRestored() {
-                            refreshInputSequence();
+                            seq.refreshInputSequence();
                         }
                     }
 
