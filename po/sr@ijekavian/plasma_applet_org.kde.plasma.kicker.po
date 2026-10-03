@@ -1,12 +1,13 @@
 # Translation of plasma_applet_org.kde.plasma.kicker.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2014, 2015, 2016, 2017.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-20 00:47+0000\n"
-"PO-Revision-Date: 2017-09-25 19:53+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-09-30 23:00+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
 "MIME-Version: 1.0\n"
@@ -34,221 +35,184 @@ msgid "On All Activities"
 msgstr "На свим активностима"
 
 #: code/tools.js:133
-#, fuzzy, kde-format
-#| msgid "On The Current Activity"
+#, kde-format
 msgid "On the Current Activity"
 msgstr "На текућој активности"
 
 #: code/tools.js:147
-#, fuzzy, kde-format
-#| msgid "Show In Favorites"
+#, kde-format
 msgid "Show in Favorites"
 msgstr "Прикажи у омиљенима"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Опште"
 
 #: ConfigGeneral.qml:50
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Иконица:"
 
 #: ConfigGeneral.qml:135
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu Open icon chooser dialog"
-#| msgid "Choose..."
+#, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
-msgstr "Изабери..."
+msgstr "Изабери…"
 
 #: ConfigGeneral.qml:140
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr ""
+msgstr "Ресетуј на подразумијевану иконицу"
 
 #: ConfigGeneral.qml:161
-#, fuzzy, kde-format
-#| msgid "Show applications as:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
-msgstr "Приказуј програме као:"
+msgstr "Прикажи програме као:"
 
 # >> @item:inlistbox
 #: ConfigGeneral.qml:163
-#, fuzzy, kde-format
-#| msgid "Name only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "само име"
 
 # >> @item:inlistbox
 #: ConfigGeneral.qml:163
-#, fuzzy, kde-format
-#| msgid "Description only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "само опис"
 
 # >> @item:inlistbox
 #: ConfigGeneral.qml:164
-#, fuzzy, kde-format
-#| msgid "Name (Description)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "име (опис)"
 
 # >> @item:inlistbox
 #: ConfigGeneral.qml:164
-#, fuzzy, kde-format
-#| msgid "Description (Name)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "опис (име)"
 
 # >> @title:group
 #: ConfigGeneral.qml:174
-#, fuzzy, kde-format
-#| msgid "Behavior"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
-msgstr "Понашање"
+msgstr "Понашање:"
 
 #: ConfigGeneral.qml:176
-#, fuzzy, kde-format
-#| msgid "Sort alphabetically"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
-msgstr "Поређај азбучно"
+msgstr "Поређај програме азбучно"
 
 # >> @option:check
 #: ConfigGeneral.qml:184
-#, fuzzy, kde-format
-#| msgid "Flatten menu to a single level"
+#, kde-format
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
-msgstr "Мени спљоштен на један ниво"
+msgstr "Спљошти подменије на један ниво"
 
 #: ConfigGeneral.qml:192
 #, kde-format
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
-msgstr ""
+msgstr "Прикажи иконице на корјеном нивоу менија"
 
 #: ConfigGeneral.qml:198
-#, fuzzy, kde-format
-#| msgid "Often Used Applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
-msgstr ""
-"Често коришћени програми|/|$[својства ген 'често коришћених програма' аку "
-"'често коришћене програме']"
+msgstr "Истакни новоинсталиране програме"
 
 #: ConfigGeneral.qml:208
-#, fuzzy, kde-format
-#| msgid "Categories"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
-msgstr "Категорије"
+msgstr "Прикажи категорије:"
 
 #: ConfigGeneral.qml:211
-#, fuzzy, kde-format
-#| msgid "Recent Applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent applications"
-msgstr ""
-"Недавни програми|/|$[својства ген 'недавних програма' аку 'недавне програме']"
+msgstr "Недавни програми"
 
 #: ConfigGeneral.qml:212
-#, fuzzy, kde-format
-#| msgid "Often Used Applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used applications"
-msgstr ""
-"Често коришћени програми|/|$[својства ген 'често коришћених програма' аку "
-"'често коришћене програме']"
+msgstr "Често коришћени програми"
 
 #: ConfigGeneral.qml:219
-#, fuzzy, kde-format
-#| msgid "Recent Documents"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent files"
-msgstr ""
-"Недавни документи|/|$[својства ген 'недавних докумената' аку 'недавне "
-"документе']"
+msgstr "Недавни фајлови"
 
 #: ConfigGeneral.qml:220
-#, fuzzy, kde-format
-#| msgid "Often used"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used files"
-msgstr "Често коришћено"
+msgstr "Често коришћени фајлови"
 
 #: ConfigGeneral.qml:227
-#, fuzzy, kde-format
-#| msgid "Recent Documents"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent places"
-msgstr ""
-"Недавни документи|/|$[својства ген 'недавних докумената' аку 'недавне "
-"документе']"
+msgstr "Недавна мјеста"
 
 #: ConfigGeneral.qml:228
-#, fuzzy, kde-format
-#| msgid "Often used"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used places"
-msgstr "Често коришћено"
+msgstr "Често коришћена мјеста"
 
 #: ConfigGeneral.qml:234
-#, fuzzy, kde-format
-#| msgid "Categories"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
-msgstr "Категорије"
+msgstr "Поређај ставке у категоријама по:"
 
 #: ConfigGeneral.qml:235
-#, fuzzy, kde-format
-#| msgid "Recently used"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
-msgstr "Недавно коришћено"
+msgstr "недавном коришћењу"
 
 #: ConfigGeneral.qml:235
-#, fuzzy, kde-format
-#| msgid "Often used"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Often used"
-msgstr "Често коришћено"
+msgstr "учесталости коришћења"
 
 # >> @title:group
 #: ConfigGeneral.qml:245
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
-msgstr "Претрага"
+msgstr "Претрага:"
 
 # >> @option:check
 #: ConfigGeneral.qml:247
-#, fuzzy, kde-format
-#| msgid "Expand search to bookmarks, files and emails"
+#, kde-format
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
-msgstr "Претражуј и обележиваче, фајлове и е‑пошту"
+msgstr "Претражуј и обиљеживаче, фајлове и е‑пошту"
 
 # >> @option:check
 #: ConfigGeneral.qml:255
-#, fuzzy, kde-format
-#| msgid "Align search results to bottom"
+#, kde-format
 msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr "Равнај резултате претраге уз дно"
@@ -257,13 +221,13 @@ msgstr "Равнај резултате претраге уз дно"
 #, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
-msgstr ""
+msgstr "Изглед:"
 
 #: ConfigGeneral.qml:265
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
-msgstr ""
+msgstr "Предност тамном режиму кад је доступан"
 
 #: ConfigGeneral.qml:269
 #, kde-kuit-format
@@ -272,10 +236,11 @@ msgid ""
 "This feature uses the complementary colors from your colorscheme, which "
 "usually feature a dark background."
 msgstr ""
+"Ова могућност користи комплементарне боје из ваше шеме боја, које обично "
+"имају тамну позадину."
 
 #: DashboardRepresentation.qml:425
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "Омиљено"
@@ -284,60 +249,52 @@ msgstr "Омиљено"
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Ново!"
 
 #: DashboardRepresentation.qml:952 ItemListDelegate.qml:98
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
-msgstr ""
+msgstr "У овој категорији постоји новоинсталирани програм"
 
 #: ItemGridDelegate.qml:81
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Ново!"
 
 #: ItemGridDelegate.qml:83
-#, fuzzy, kde-format
-#| msgid "Often Used Applications"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
-msgstr ""
-"Често коришћени програми|/|$[својства ген 'често коришћених програма' аку "
-"'често коришћене програме']"
+msgstr "Новоинсталирани програм"
 
 #: ItemListDelegate.qml:40
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
-msgstr ""
+msgstr "Отвори категорију"
 
 #: ItemListDelegate.qml:41
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
-msgstr ""
+msgstr "Покрени"
 
 #: ItemListDelegate.qml:99
-#, fuzzy, kde-format
-#| msgid "Often Used Applications"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
-msgstr ""
-"Често коришћени програми|/|$[својства ген 'често коришћених програма' аку "
-"'често коришћене програме']"
+msgstr "Новоинсталирани програм"
 
 #: main.qml:189
-#, fuzzy, kde-format
-#| msgid "Edit Applications..."
+#, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
-msgstr "Уреди програме..."
+msgstr "Уреди програме…"
 
 #: MenuRepresentation.qml:197
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@title:group accessible name for favorite group in sidebar"
 msgid "Favorites"
 msgstr "Омиљено"
@@ -346,46 +303,4 @@ msgstr "Омиљено"
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr ""
-
-#~ msgctxt "@item:inmenu Reset icon to default"
-#~ msgid "Clear Icon"
-#~ msgstr "Очисти иконицу"
-
-# >> @info:progress
-#~ msgid "Searching for '%1'"
-#~ msgstr "Тражим „%1“..."
-
-#, fuzzy
-#~| msgid "Type to search."
-#~ msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
-#~ msgid "Type to search…"
-#~ msgstr "Унесите нешто за тражење."
-
-#~ msgid "Widgets"
-#~ msgstr "Виџети"
-
-#~ msgid "Apps & Docs"
-#~ msgstr "Програми и документација"
-
-#, fuzzy
-#~| msgid "Recent Contacts"
-#~ msgid "Recent contacts"
-#~ msgstr ""
-#~ "Недавни контакти|/|$[својства ген 'недавних контаката' аку 'недавне "
-#~ "контакте']"
-
-#, fuzzy
-#~| msgid "Show often used contacts"
-#~ msgid "Often used contacts"
-#~ msgstr "Прикажи често коришћене контакте"
-
-#, fuzzy
-#~| msgid "Often Used Documents"
-#~ msgid "Often used documents"
-#~ msgstr ""
-#~ "Често коришћени документи|/|$[својства ген 'често коришћених докумената' "
-#~ "аку 'често коришћене документе']"
-
-#~ msgid "Search..."
-#~ msgstr "Тражи..."
+msgstr "Нема поклапања"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:48+0000\n"
-"PO-Revision-Date: 2026-02-25 20:18+0200\n"
+"PO-Revision-Date: 2026-08-24 20:06+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -183,8 +183,7 @@ msgid "Use compact list item style"
 msgstr "käytä tiivistä luetelmatyyliä"
 
 #: ConfigGeneral.qml:187
-#, fuzzy, kde-format
-#| msgid "Highlight newly installed applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "Korosta vasta-asennetut sovellukset"
@@ -324,16 +323,13 @@ msgid "Keep Open"
 msgstr "Pidä avoinna"
 
 #: KickoffGridDelegate.qml:59
-#, fuzzy, kde-format
-#| msgctxt "Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr "Uusi!"
+msgstr "Uutta!"
 
 #: KickoffGridDelegate.qml:61
-#, fuzzy, kde-format
-#| msgid "Newly installed application"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
 msgstr "Vasta-asennettu sovellus"
@@ -345,22 +341,18 @@ msgid "Grid with %1 rows, %2 columns"
 msgstr "%1 rivin × %2 sarakkeen ruudukko"
 
 #: KickoffListDelegate.qml:120
-#, fuzzy, kde-format
-#| msgctxt "Newly installed app, badge, keep short"
-#| msgid "New!"
+#, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr "Uusi!"
+msgstr "Uutta!"
 
 #: KickoffListDelegate.qml:125
-#, fuzzy, kde-format
-#| msgid "There is a newly installed application in this category"
+#, kde-format
 msgid "There is a newly-installed application in this category"
 msgstr "Tässä luokassa on vasta-asennettu sovellus"
 
 #: KickoffListDelegate.qml:126
-#, fuzzy, kde-format
-#| msgid "Newly installed application"
+#, kde-format
 msgid "Newly-installed application"
 msgstr "Vasta-asennettu sovellus"
 

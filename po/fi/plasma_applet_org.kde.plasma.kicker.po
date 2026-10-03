@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-20 00:47+0000\n"
-"PO-Revision-Date: 2026-02-25 20:21+0200\n"
+"PO-Revision-Date: 2026-08-24 20:07+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -65,7 +65,7 @@ msgstr "Valitse…"
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr ""
+msgstr "Palauta oletuskuvake"
 
 #: ConfigGeneral.qml:161
 #, kde-format
@@ -122,11 +122,10 @@ msgid "Show icons on the root level of the menu"
 msgstr "näytä kuvakkeet valikon juuritasolla"
 
 #: ConfigGeneral.qml:198
-#, fuzzy, kde-format
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
-msgstr "Usein käytetyt sovellukset"
+msgstr "Korosta vasta-asennetut sovellukset"
 
 #: ConfigGeneral.qml:208
 #, kde-format
@@ -159,18 +158,16 @@ msgid "Often used files"
 msgstr "usein käytetyt tiedostot"
 
 #: ConfigGeneral.qml:227
-#, fuzzy, kde-format
-#| msgid "Recent files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent places"
-msgstr "Viimeisimmät tiedostot"
+msgstr "Viimeisimmät sijainnit"
 
 #: ConfigGeneral.qml:228
-#, fuzzy, kde-format
-#| msgid "Often used files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used places"
-msgstr "Usein käytetyt tiedostot"
+msgstr "Usein käytetyt sijainnit"
 
 #: ConfigGeneral.qml:234
 #, kde-format
@@ -243,26 +240,25 @@ msgstr "Suosikit"
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Uutta!"
 
 #: DashboardRepresentation.qml:952 ItemListDelegate.qml:98
 #, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
-msgstr ""
+msgstr "Tässä luokassa on vasta-asennettu sovellus"
 
 #: ItemGridDelegate.qml:81
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Uutta!"
 
 #: ItemGridDelegate.qml:83
-#, fuzzy, kde-format
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
-msgstr "Usein käytetyt sovellukset"
+msgstr "Vasta-asennettu sovellus"
 
 #: ItemListDelegate.qml:40
 #, kde-format
@@ -277,11 +273,10 @@ msgid "Launch"
 msgstr "Käynnistä"
 
 #: ItemListDelegate.qml:99
-#, fuzzy, kde-format
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
-msgstr "Usein käytetyt sovellukset"
+msgstr "Vasta-asennettu sovellus"
 
 #: main.qml:189
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:49+0000\n"
+"POT-Creation-Date: 2026-10-03 00:47+0000\n"
 "PO-Revision-Date: 2022-07-31 23:06+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -150,14 +150,14 @@ msgctxt "@option:check"
 msgid "Swap (left-handed mode)"
 msgstr "Sol əl rejimi"
 
-#: ui/main.qml:185
+#: ui/main.qml:188
 #, fuzzy, kde-format
 #| msgid "Press left and right buttons for middle click"
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
 msgstr "Orta düymə kliki üçün sol və sağ düymələri basın"
 
-#: ui/main.qml:197
+#: ui/main.qml:201
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -165,35 +165,43 @@ msgid ""
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
 
-#: ui/main.qml:207
+#: ui/main.qml:202
+#, kde-format
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"This setting is not available while “Right-click by pressing anywhere with "
+"two fingers” is selected."
+msgstr ""
+
+#: ui/main.qml:212
 #, fuzzy, kde-format
 #| msgid "Minimum pointer speed"
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Göstəricinin minimum sürəti"
 
-#: ui/main.qml:287
+#: ui/main.qml:292
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Kursorun sürətlənməsi:"
 
-#: ui/main.qml:299
+#: ui/main.qml:304
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
 
-#: ui/main.qml:310
+#: ui/main.qml:315
 #, fuzzy, kde-format
 #| msgid "Scrolling speed:"
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "Sürüşdürmə sürəti"
 
-#: ui/main.qml:392
+#: ui/main.qml:397
 #, fuzzy, kde-format
 #| msgctxt "Slower Scroll"
 #| msgid "Slower"
@@ -201,7 +209,7 @@ msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "Yavaş"
 
-#: ui/main.qml:399
+#: ui/main.qml:404
 #, fuzzy, kde-format
 #| msgctxt "Faster Scroll Speed"
 #| msgid "Faster"
@@ -209,7 +217,7 @@ msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "Tez"
 
-#: ui/main.qml:406
+#: ui/main.qml:411
 #, fuzzy, kde-format
 #| msgid "Scrolling:"
 msgctxt ""
@@ -218,35 +226,35 @@ msgctxt ""
 msgid "Scroll by:"
 msgstr "Sürüşdürmə:"
 
-#: ui/main.qml:409
+#: ui/main.qml:414
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr ""
 
-#: ui/main.qml:427
+#: ui/main.qml:432
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr ""
 
-#: ui/main.qml:436
+#: ui/main.qml:441
 #, fuzzy, kde-format
 #| msgid "Invert scroll direction (Natural scrolling)"
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Sürüşdürmənin istiqamətini dəyişdirmək (təbii sürüşdürmə)"
 
-#: ui/main.qml:453
+#: ui/main.qml:458
 #, fuzzy, kde-format
 #| msgid "Disable horizontal scrolling"
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "Üfüqi sürüşdürməni söndürmək"
 
-#: ui/main.qml:471
+#: ui/main.qml:476
 #, fuzzy, kde-format
 #| msgid "Right-click"
 msgctxt ""
@@ -255,7 +263,16 @@ msgctxt ""
 msgid "Right-click by:"
 msgstr "Sağ klik"
 
-#: ui/main.qml:475
+#: ui/main.qml:482
+#, fuzzy, kde-format
+#| msgid "Press bottom-right corner"
+msgctxt ""
+"@option:radio Completes the sentence 'right-click by pressing bottom-left "
+"corner'"
+msgid "Pressing bottom-left corner"
+msgstr "Sağ aşağı küncə toxunun"
+
+#: ui/main.qml:483
 #, fuzzy, kde-format
 #| msgid "Press bottom-right corner"
 msgctxt ""
@@ -264,21 +281,21 @@ msgctxt ""
 msgid "Pressing bottom-right corner"
 msgstr "Sağ aşağı küncə toxunun"
 
-#: ui/main.qml:480
+#: ui/main.qml:489
 #, fuzzy, kde-format
 #| msgid "Press anywhere with three fingers."
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "Üç barmaqla toxunun."
 
-#: ui/main.qml:481
+#: ui/main.qml:490
 #, fuzzy, kde-format
 #| msgid "Press anywhere with three fingers."
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Üç barmaqla toxunun."
 
-#: ui/main.qml:503
+#: ui/main.qml:512
 #, fuzzy, kde-format
 #| msgid "Press anywhere with two fingers"
 msgctxt ""
@@ -287,70 +304,34 @@ msgctxt ""
 msgid "Pressing anywhere with two fingers"
 msgstr "İki barmaqla toxunun"
 
-#: ui/main.qml:504
+#: ui/main.qml:513
 #, fuzzy, kde-format
 #| msgid "Press anywhere with three fingers."
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
 msgstr "Üç barmaqla toxunun."
 
-#: ui/main.qml:516
-#, fuzzy, kde-format
-#| msgid "Middle-click"
-msgctxt ""
-"@label for radiobutton group, begins the sentence 'middle-click by pressing "
-"bottom-middle edge/by pressing anywhere with three fingers'"
-msgid "Middle-click by:"
-msgstr "Orta klik"
-
-#: ui/main.qml:519
-#, fuzzy, kde-format
-#| msgid "Press bottom-middle"
-msgctxt ""
-"@option:radio completes the sentence 'middle-click by pressing bottom-middle "
-"edge'"
-msgid "Pressing bottom-middle edge"
-msgstr "Ortadan aşağıya toxunun"
-
-#: ui/main.qml:539
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
-msgctxt ""
-"@option:radio completes the sentence 'middle-click by pressing bottom-left "
-"and bottom-right corners'"
-msgid "Pressing bottom-left and bottom-right corners"
-msgstr "Eyni vaxtda altdakı sol və sağ künclərə toxunun"
-
-#: ui/main.qml:551
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers"
-msgctxt ""
-"@option:check completes the sentence 'middle-click by pressing anywhere with "
-"three fingers'"
-msgid "Pressing anywhere with three fingers"
-msgstr "Üç barmaqla toxunun"
-
-#: ui/main.qml:564
+#: ui/main.qml:530
 #, fuzzy, kde-format
 #| msgid "Tapping:"
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Basılma:"
 
-#: ui/main.qml:565
+#: ui/main.qml:531
 #, fuzzy, kde-format
 #| msgid "Tap to Click"
 msgctxt "@option:check"
 msgid "Tap to click"
 msgstr "Toxunuşla klikləmək"
 
-#: ui/main.qml:580
+#: ui/main.qml:546
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr ""
 
-#: ui/main.qml:592
+#: ui/main.qml:558
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -358,46 +339,90 @@ msgid ""
 "finger to drop."
 msgstr ""
 
-#: ui/main.qml:599
+#: ui/main.qml:565
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr ""
 
-#: ui/main.qml:612
+#: ui/main.qml:578
 #, fuzzy, kde-format
 #| msgid "Two-finger tap:"
 msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "İki barmaqla toxunma:"
 
-#: ui/main.qml:618
-#, fuzzy, kde-format
-#| msgid "Right-click (three-finger tap to middle-click)"
-msgctxt "@option:radio"
-msgid "Right-click (three-finger tap to middle-click)"
-msgstr "Sağ düymə kliki (üç barmqla toxunma orta düymə kliki rolunda)"
-
-#: ui/main.qml:619
+#: ui/main.qml:583
 #, fuzzy, kde-format
 #| msgid "Right-click"
 msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "Sağ klik"
 
-#: ui/main.qml:640
+#: ui/main.qml:586
 #, fuzzy, kde-format
-#| msgid "Middle-click (three-finger tap right-click)"
-msgctxt "@option:radio"
-msgid "Middle-click (three-finger tap to right-click)"
-msgstr "Orta düymə kliki (üç barmaqla toxunma sağ düymə kliki kimi)"
+#| msgid "Press anywhere with three fingers."
+msgctxt "@info:usagetip shown below radio button"
+msgid "Middle-click by tapping anywhere with three fingers."
+msgstr "Üç barmaqla toxunun."
 
-#: ui/main.qml:641
+#: ui/main.qml:608
 #, fuzzy, kde-format
 #| msgid "Middle-click"
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Orta klik"
+
+#: ui/main.qml:611
+#, fuzzy, kde-format
+#| msgid "Press anywhere with three fingers."
+msgctxt "@info:usagetip shown below radio button"
+msgid "Right-click by tapping anywhere with three fingers."
+msgstr "Üç barmaqla toxunun."
+
+#, fuzzy
+#~| msgid "Middle-click"
+#~ msgctxt ""
+#~ "@label for radiobutton group, begins the sentence 'middle-click by "
+#~ "pressing bottom-middle edge/by pressing anywhere with three fingers'"
+#~ msgid "Middle-click by:"
+#~ msgstr "Orta klik"
+
+#, fuzzy
+#~| msgid "Press bottom-middle"
+#~ msgctxt ""
+#~ "@option:radio completes the sentence 'middle-click by pressing bottom-"
+#~ "middle edge'"
+#~ msgid "Pressing bottom-middle edge"
+#~ msgstr "Ortadan aşağıya toxunun"
+
+#, fuzzy
+#~| msgid "Press bottom left and bottom right corners simultaneously"
+#~ msgctxt ""
+#~ "@option:radio completes the sentence 'middle-click by pressing bottom-"
+#~ "left and bottom-right corners'"
+#~ msgid "Pressing bottom-left and bottom-right corners"
+#~ msgstr "Eyni vaxtda altdakı sol və sağ künclərə toxunun"
+
+#, fuzzy
+#~| msgid "Press anywhere with three fingers"
+#~ msgctxt ""
+#~ "@option:check completes the sentence 'middle-click by pressing anywhere "
+#~ "with three fingers'"
+#~ msgid "Pressing anywhere with three fingers"
+#~ msgstr "Üç barmaqla toxunun"
+
+#, fuzzy
+#~| msgid "Right-click (three-finger tap to middle-click)"
+#~ msgctxt "@option:radio"
+#~ msgid "Right-click (three-finger tap to middle-click)"
+#~ msgstr "Sağ düymə kliki (üç barmqla toxunma orta düymə kliki rolunda)"
+
+#, fuzzy
+#~| msgid "Middle-click (three-finger tap right-click)"
+#~ msgctxt "@option:radio"
+#~ msgid "Middle-click (three-finger tap to right-click)"
+#~ msgstr "Orta düymə kliki (üç barmaqla toxunma sağ düymə kliki kimi)"
 
 #~ msgid "Cannot connect to X server"
 #~ msgstr "X serverə qoşula bilmədi"
