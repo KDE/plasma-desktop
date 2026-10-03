@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-26 03:01+0000\n"
-"PO-Revision-Date: 2026-02-25 20:13+0200\n"
+"PO-Revision-Date: 2026-08-24 20:05+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -68,29 +68,27 @@ msgstr "Unohda viimeisimmät tiedostot"
 #: backend.cpp:581
 #, kde-format
 msgid "Activate Previous Task Manager Entry"
-msgstr ""
+msgstr "Aktivoi edellinen tehtävienhallinnan kohta"
 
 #: backend.cpp:588
-#, fuzzy, kde-format
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgid "Activate Next Task Manager Entry"
-msgstr "K&iinnitä tehtävienhallintaan"
+msgstr "Aktivoi seuraava tehtävienhallinnan kohta"
 
 #: backend.cpp:595
 #, kde-format
 msgid "Move Active Task Manager Entry Backward"
-msgstr ""
+msgstr "Siirrä tehtävänhallinnan aktiivista kohtaa taaksepäin"
 
 #: backend.cpp:603
 #, kde-format
 msgid "Move Active Task Manager Entry Forward"
-msgstr ""
+msgstr "Siirrä tehtävänhallinnan aktiivista kohtaa eteenpäin"
 
 #: backend.cpp:612
-#, fuzzy, kde-format
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgid "Activate Task Manager Entry %1"
-msgstr "K&iinnitä tehtävienhallintaan"
+msgstr "Aktivoi tehtävienhallinnan kohta %1"
 
 #: qml/AudioStream.qml:100
 #, kde-format
@@ -871,17 +869,15 @@ msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "9k+"
-msgstr ""
+msgstr "9k+"
 
 #: qml/TaskBadgeOverlay.qml:104
-#, fuzzy, kde-format
-#| msgctxt "volume percentage"
-#| msgid "%1%"
+#, kde-format
 msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "%1k"
-msgstr "%1 %"
+msgstr "%1k"
 
 #: qml/ToolTipInstance.qml:212
 #, kde-format

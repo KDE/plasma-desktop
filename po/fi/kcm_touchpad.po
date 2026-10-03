@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-12 00:49+0000\n"
-"PO-Revision-Date: 2026-02-25 20:28+0200\n"
+"PO-Revision-Date: 2026-08-30 22:57+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: kcm.cpp:57
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "Ei voida valita sopivaa taustajärjestelmää"
 
 #: kcm.cpp:103
 #, kde-format
@@ -33,10 +33,9 @@ msgstr ""
 "asetusmoduuli uudelleen."
 
 #: kcm.cpp:106
-#, fuzzy, kde-format
-#| msgid "No touchpad found. Connect touchpad now."
+#, kde-format
 msgid "No pointer device found. Connect now."
-msgstr "Kosketuslevyä ei löydy. Kytke kosketuslevy nyt."
+msgstr "Osoitinlaitteita ei löydy. Kytke sellainen nyt."
 
 #: kcm.cpp:115
 #, kde-format
@@ -66,16 +65,14 @@ msgstr ""
 "käynnistä tämä asetusosio uudelleen."
 
 #: kcm.cpp:162
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. Closed its setting dialog."
+#, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr "Kosketuslevy irrotettiin. Sen asetusikkuna suljettiin."
+msgstr "Osoitinlaite irrotettiin. Suljettiin sen asetusikkuna."
 
 #: kcm.cpp:164
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. No other touchpads found."
+#, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr "Kosketuslevy irrotettiin. Muita kosketuslevyjä ei löytynyt."
+msgstr "Osoitinlaite irrotettiin. Muita laitteita ei löytynyt."
 
 #: kwinwaylandbackend.cpp:45
 #, kde-format

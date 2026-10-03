@@ -1,5 +1,6 @@
 # Translation of plasma_applet_org.kde.plasma.pager.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2013, 2014, 2016.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.pager\n"
@@ -19,178 +20,156 @@ msgstr ""
 "X-Environment: kde\n"
 
 #: qml/config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Опште"
 
 #: qml/configGeneral.qml:39
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
-msgstr "Опште"
+msgstr "Опште:"
 
 #: qml/configGeneral.qml:41
 #, kde-format
 msgctxt "@option:check"
 msgid "Show window outlines"
-msgstr ""
+msgstr "Прикажи обрисе прозора"
 
 #: qml/configGeneral.qml:46
 #, kde-format
 msgctxt "@option:check"
 msgid "Show application icons on window outlines"
-msgstr ""
+msgstr "Прикажи иконице програма на обрисима прозора"
 
 # >> @option:check
 #: qml/configGeneral.qml:52
-#, fuzzy, kde-format
-#| msgid "Only the current screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show only current screen"
-msgstr "Само текући екран"
+msgstr "Прикажи само текући екран"
 
 #: qml/configGeneral.qml:57
 #, kde-format
 msgctxt "@option:check"
 msgid "Navigation wraps around"
-msgstr ""
+msgstr "Крећи се укруг"
 
 #: qml/configGeneral.qml:69
-#, fuzzy, kde-format
-#| msgid "Layout:"
+#, kde-format
 msgctxt "@title:listbox"
 msgid "Layout:"
 msgstr "Распоред:"
 
 # >> @item:inlistbox Layout:
 #: qml/configGeneral.qml:71
-#, fuzzy, kde-format
-#| msgctxt "The pager layout"
-#| msgid "Default"
+#, kde-format
 msgctxt "@item:inlistbox The pager layout"
 msgid "Default"
 msgstr "подразумевани"
 
 # >> @item:inlistbox Layout:
 #: qml/configGeneral.qml:71
-#, fuzzy, kde-format
-#| msgid "Horizontal"
+#, kde-format
 msgctxt "@item:inlistbox The pager layout"
 msgid "Horizontal"
 msgstr "водоравни"
 
 # >> @item:inlistbox Layout:
 #: qml/configGeneral.qml:71
-#, fuzzy, kde-format
-#| msgid "Vertical"
+#, kde-format
 msgctxt "@item:inlistbox The pager layout"
 msgid "Vertical"
 msgstr "усправни"
 
 #: qml/configGeneral.qml:85
-#, fuzzy, kde-format
-#| msgid "Display:"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Text display:"
-msgstr "Приказ:"
+msgstr "Приказ текста:"
 
 # >> @option:radio Display:
 #: qml/configGeneral.qml:88
-#, fuzzy, kde-format
-#| msgid "No text"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "No text"
-msgstr "без текста"
+msgstr "Без текста"
 
 # >> @option:radio Display:
 #: qml/configGeneral.qml:96
-#, fuzzy, kde-format
-#| msgid "Activity number"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "Activity number"
-msgstr "број активности"
+msgstr "Број активности"
 
 # >> @option:radio Display:
 #: qml/configGeneral.qml:96
-#, fuzzy, kde-format
-#| msgid "Desktop number"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "Desktop number"
-msgstr "број површи"
+msgstr "Број површи"
 
 # >> @option:radio Display:
 #: qml/configGeneral.qml:104
-#, fuzzy, kde-format
-#| msgid "Activity name"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "Activity name"
-msgstr "име активности"
+msgstr "Име активности"
 
 # >> @option:radio Display:
 #: qml/configGeneral.qml:104
-#, fuzzy, kde-format
-#| msgid "Desktop name"
+#, kde-format
 msgctxt "@option:radio text display"
 msgid "Desktop name"
-msgstr "име површи"
+msgstr "Име површи"
 
 #: qml/configGeneral.qml:119
-#, fuzzy, kde-format
-#| msgid "Selecting current desktop:"
+#, kde-format
 msgctxt ""
 "@label Start of the sentence 'Selecting current activity does nothing/shows "
 "the desktop'"
 msgid "Selecting current Activity:"
-msgstr "Бирање текуће површи:"
+msgstr "Бирање текуће активности:"
 
 #: qml/configGeneral.qml:120
-#, fuzzy, kde-format
-#| msgid "Selecting current desktop:"
+#, kde-format
 msgctxt ""
 "@label Start of the sentence 'Selecting current virtual desktop does nothing/"
 "shows the desktop'"
 msgid "Selecting current virtual desktop:"
-msgstr "Бирање текуће површи:"
+msgstr "Бирање текуће виртуелне површи:"
 
 # >> @option:radio Selecting current desktop:
 #: qml/configGeneral.qml:123
-#, fuzzy, kde-format
-#| msgid "Does nothing"
+#, kde-format
 msgctxt ""
 "option:check completes the sentence 'Selecting current activity/virtual "
 "desktop does nothing'"
 msgid "Does nothing"
-msgstr "нема ефекта"
+msgstr "Нема ефекта"
 
 # >> @option:radio Selecting current desktop:
 #: qml/configGeneral.qml:131
-#, fuzzy, kde-format
-#| msgid "Shows desktop"
+#, kde-format
 msgctxt ""
 "option:check completes the sentence 'Selecting current activity/virtual "
 "desktop shows the desktop'"
 msgid "Shows the desktop"
-msgstr "приказује површ"
+msgstr "Приказује површ"
 
 #: qml/main.qml:87
-#, fuzzy, kde-format
-#| msgid "...and %1 other window"
-#| msgid_plural "...and %1 other windows"
+#, kde-format
 msgctxt "@info:tooltip overflow label"
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
-msgstr[0] "...и %1 други прозор"
-msgstr[1] "...и %1 друга прозора"
-msgstr[2] "...и %1 других прозора"
-msgstr[3] "...и %1 други прозор"
+msgstr[0] "…и још %1 прозор"
+msgstr[1] "…и још %1 прозора"
+msgstr[2] "…и још %1 прозора"
+msgstr[3] "…и још један прозор"
 
 #: qml/main.qml:352
-#, fuzzy, kde-format
-#| msgid "%1 Window:"
-#| msgid_plural "%1 Windows:"
+#, kde-format
 msgctxt "@info:tooltip start of list"
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
@@ -200,62 +179,54 @@ msgstr[2] "%1 прозора:"
 msgstr[3] "%1 прозор:"
 
 #: qml/main.qml:364
-#, fuzzy, kde-format
-#| msgid "%1 Minimized Window:"
-#| msgid_plural "%1 Minimized Windows:"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
 msgstr[0] "%1 минимизован прозор:"
 msgstr[1] "%1 минимизована прозора:"
-msgstr[2] "%1 минимизован прозора:"
+msgstr[2] "%1 минимизованих прозора:"
 msgstr[3] "%1 минимизован прозор:"
 
 # >> @option:radio Display:
 #: qml/main.qml:440
-#, fuzzy, kde-format
-#| msgid "Desktop name"
+#, kde-format
 msgctxt "@info:whatsthis Accessible name for pager section"
 msgid "Desktop %1"
-msgstr "име површи"
+msgstr "Површ %1"
 
 #: qml/main.qml:441
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
-msgstr ""
+msgstr "Пребаци на %1"
 
 #: qml/main.qml:593
-#, fuzzy, kde-format
-#| msgid "Show Activity Manager..."
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
-msgstr "Прикажи менаџер активности..."
+msgstr "Прикажи менаџер активности"
 
 #: qml/main.qml:599
-#, fuzzy, kde-format
-#| msgid "Add Virtual Desktop"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
-msgstr "Додај виртуелну површи"
+msgstr "Додај виртуелну површ"
 
 #: qml/main.qml:605
-#, fuzzy, kde-format
-#| msgid "Remove Virtual Desktop"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "Уклони виртуелну површ"
 
 #: qml/main.qml:612
-#, fuzzy, kde-format
-#| msgid "Configure Desktops..."
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
-msgstr "Подеси површи..."
+msgstr "&Подеси активности…"
 
 #: qml/main.qml:617
-#, fuzzy, kde-format
-#| msgid "Configure Desktops..."
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Configure Virtual Desktops…"
-msgstr "Подеси површи..."
+msgstr "Подеси виртуелне површи…"
