@@ -2,21 +2,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # SPDX-FileCopyrightText: 2014, 2017, 2024, 2025, 2026 Vít Pelčák <vit@pelcak.org>
 # SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2023, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2026 Libor Filipek <libor.filipek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-03 00:47+0000\n"
-"PO-Revision-Date: 2026-03-12 14:01+0100\n"
-"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-10-04 00:00+0200\n"
+"Last-Translator: Libor Filipek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: kcm.cpp:57
 #, kde-format
@@ -166,6 +167,8 @@ msgid ""
 "This setting is not available while “Right-click by pressing anywhere with "
 "two fingers” is selected."
 msgstr ""
+"Toto nastavení není k dispozici, pokud je vybrána možnost \"Kliknutí pravým "
+"tlačítkem stisknutím libovolného místa dvěma prsty\"."
 
 #: ui/main.qml:212
 #, kde-format
@@ -249,16 +252,12 @@ msgid "Right-click by:"
 msgstr "Kliknutí pravým tlačítkem myši"
 
 #: ui/main.qml:482
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Completes the sentence 'right-click by pressing bottom-"
-#| "right corner'"
-#| msgid "Pressing bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-left "
 "corner'"
 msgid "Pressing bottom-left corner"
-msgstr "Stisknutí pravého dolního rohu"
+msgstr "Stisknutím levého dolního rohu"
 
 #: ui/main.qml:483
 #, kde-format
@@ -341,12 +340,10 @@ msgid "Right-click"
 msgstr "Kliknutí pravým tlačítkem myši"
 
 #: ui/main.qml:586
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by tapping anywhere with three fingers."
-msgstr "Prostřední tlačítko stisknutím obou dolních rohů."
+msgstr "Kliknutí prostředním tlačítkem tak, že kdekoli klepnete třemi prsty."
 
 #: ui/main.qml:608
 #, kde-format
@@ -355,12 +352,10 @@ msgid "Middle-click"
 msgstr "Kliknutí prostředním tlačítkem myši"
 
 #: ui/main.qml:611
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Right-click by tapping anywhere with three fingers."
-msgstr "Prostřední tlačítko stisknutím obou dolních rohů."
+msgstr "Pravým tlačítkem myši klikněte tak, že kdekoli klepnete třemi prsty."
 
 #~ msgctxt ""
 #~ "@label for radiobutton group, begins the sentence 'middle-click by "

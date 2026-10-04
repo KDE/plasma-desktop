@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-03 00:47+0000\n"
-"PO-Revision-Date: 2026-03-26 11:26+0100\n"
+"PO-Revision-Date: 2026-10-03 09:54+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: kcm.cpp:57
 #, kde-format
@@ -174,6 +174,8 @@ msgid ""
 "This setting is not available while “Right-click by pressing anywhere with "
 "two fingers” is selected."
 msgstr ""
+"Este paràmetre no està disponible mentre estiga seleccionat «Clic dret "
+"prement en qualsevol lloc amb dos dits»."
 
 #: ui/main.qml:212
 #, kde-format
@@ -257,16 +259,12 @@ msgid "Right-click by:"
 msgstr "Clic dret amb:"
 
 #: ui/main.qml:482
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Completes the sentence 'right-click by pressing bottom-"
-#| "right corner'"
-#| msgid "Pressing bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-left "
 "corner'"
 msgid "Pressing bottom-left corner"
-msgstr "Prement el cantó inferior dret"
+msgstr "Prement el cantó inferior esquerre"
 
 #: ui/main.qml:483
 #, kde-format
@@ -349,12 +347,10 @@ msgid "Right-click"
 msgstr "Clic dret"
 
 #: ui/main.qml:586
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by tapping anywhere with three fingers."
-msgstr "Clic del mig prement a qualsevol lloc amb tres dits."
+msgstr "Clic del mig tocant a qualsevol lloc amb tres dits."
 
 #: ui/main.qml:608
 #, kde-format
@@ -363,41 +359,7 @@ msgid "Middle-click"
 msgstr "Clic del mig"
 
 #: ui/main.qml:611
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Right-click by tapping anywhere with three fingers."
-msgstr "Clic del mig prement a qualsevol lloc amb tres dits."
-
-#~ msgctxt ""
-#~ "@label for radiobutton group, begins the sentence 'middle-click by "
-#~ "pressing bottom-middle edge/by pressing anywhere with three fingers'"
-#~ msgid "Middle-click by:"
-#~ msgstr "Clic del mig amb:"
-
-#~ msgctxt ""
-#~ "@option:radio completes the sentence 'middle-click by pressing bottom-"
-#~ "middle edge'"
-#~ msgid "Pressing bottom-middle edge"
-#~ msgstr "Prement la vora del mig inferior"
-
-#~ msgctxt ""
-#~ "@option:radio completes the sentence 'middle-click by pressing bottom-"
-#~ "left and bottom-right corners'"
-#~ msgid "Pressing bottom-left and bottom-right corners"
-#~ msgstr "Prement els cantons inferiors esquerra i dreta"
-
-#~ msgctxt ""
-#~ "@option:check completes the sentence 'middle-click by pressing anywhere "
-#~ "with three fingers'"
-#~ msgid "Pressing anywhere with three fingers"
-#~ msgstr "Prement a qualsevol lloc amb tres dits"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Right-click (three-finger tap to middle-click)"
-#~ msgstr "Clic dret (un toc amb tres dits per al clic del mig)"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Middle-click (three-finger tap to right-click)"
-#~ msgstr "Clic del mig (un toc amb tres dits per al clic dret)"
+msgstr "Clic dret tocant a qualsevol lloc amb tres dits."

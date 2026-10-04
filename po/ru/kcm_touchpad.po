@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-03 00:47+0000\n"
-"PO-Revision-Date: 2026-04-03 20:28+0200\n"
+"PO-Revision-Date: 2026-10-03 08:16+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -167,6 +167,8 @@ msgid ""
 "This setting is not available while “Right-click by pressing anywhere with "
 "two fingers” is selected."
 msgstr ""
+"Этот параметр недоступен, если выбран вариант «Щелчок правой кнопкой: "
+"нажатие двумя пальцами в любом месте»."
 
 #: ui/main.qml:212
 #, kde-format
@@ -250,16 +252,12 @@ msgid "Right-click by:"
 msgstr "Щелчок правой кнопкой:"
 
 #: ui/main.qml:482
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Completes the sentence 'right-click by pressing bottom-"
-#| "right corner'"
-#| msgid "Pressing bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-left "
 "corner'"
 msgid "Pressing bottom-left corner"
-msgstr "Нажатие правого нижнего угла"
+msgstr "Нажатие левого нижнего угла"
 
 #: ui/main.qml:483
 #, kde-format
@@ -343,12 +341,10 @@ msgid "Right-click"
 msgstr "Нажатие правой кнопки"
 
 #: ui/main.qml:586
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by tapping anywhere with three fingers."
-msgstr "Нажатие тремя пальцами в любом месте — нажатие средней кнопки."
+msgstr "Касание тремя пальцами в любом месте — нажатие средней кнопки."
 
 #: ui/main.qml:608
 #, kde-format
@@ -357,12 +353,10 @@ msgid "Middle-click"
 msgstr "Нажатие средней кнопки"
 
 #: ui/main.qml:611
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Right-click by tapping anywhere with three fingers."
-msgstr "Нажатие тремя пальцами в любом месте — нажатие средней кнопки."
+msgstr "Касание тремя пальцами в любом месте — нажатие правой кнопки."
 
 #~ msgctxt ""
 #~ "@label for radiobutton group, begins the sentence 'middle-click by "

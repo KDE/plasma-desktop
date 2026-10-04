@@ -1,13 +1,14 @@
 # Translation of kcmworkspaceoptions.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2009, 2010, 2011, 2017.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2010.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-04 00:46+0000\n"
-"PO-Revision-Date: 2017-12-03 22:53+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavianlatin\n"
 "MIME-Version: 1.0\n"
@@ -26,30 +27,32 @@ msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr ""
+"Sistem mora da se ponovo pokrene da bi izmjene postavke naljepljivanja "
+"srednjim klikom stupile na snagu."
 
 #: ui/main.qml:31
 #, kde-format
 msgctxt "@action:button"
 msgid "Restart"
-msgstr ""
+msgstr "Ponovo pokreni"
 
 #: ui/main.qml:46
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:49
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Dozvoli Plasmi da prikazuje:"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "Oblačiće panela i vidžeta"
 
 #: ui/main.qml:63
 #, kde-format
@@ -60,14 +63,17 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"Dozvoljava svim vidžetima panela i površi Plasme da prikazuju opisne "
+"oblačiće pri lebdjenju pokazivača. Ova postavka ne utiče na male oblačiće "
+"koji se prikazuju pri lebdjenju iznad pojedinačnih dugmadi i drugih "
+"elemenata korisničkog sučelja."
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "Vizuelni odziv pri promenama stanja"
+msgstr "Ekranske iskakače pri promjenama stanja"
 
 #: ui/main.qml:81
 #, kde-format
@@ -76,18 +82,21 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"Dozvoljava svim vidžetima Plasme da prikazuju iskakače ekranskog prikaza "
+"(OSD) pri promjenama kao što su jačina zvuka i nivo osvjetljaja, ili "
+"prebacivanje audio uređaja."
 
 #: ui/main.qml:88
 #, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr ""
+msgstr "Klizanje"
 
 #: ui/main.qml:92
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Clicking in scrollbar track:"
-msgstr ""
+msgstr "Klik na stazu klizačke trake:"
 
 #: ui/main.qml:93
 #, kde-format
@@ -95,7 +104,7 @@ msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
 "the clicked location'"
 msgid "Scrolls to the clicked location"
-msgstr ""
+msgstr "Kliza do kliknutog mjesta"
 
 #: ui/main.qml:111
 #, kde-format
@@ -103,19 +112,19 @@ msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
 "page up or down'"
 msgid "Scrolls one page up or down"
-msgstr ""
+msgstr "Kliza za stranicu gore ili dolje"
 
 #: ui/main.qml:112
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Middle-click to scroll to clicked location"
-msgstr ""
+msgstr "Srednji klik kliza do kliknutog mjesta"
 
 #: ui/main.qml:129
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
-msgstr ""
+msgstr "Daj prednost glatkom klizanju"
 
 #: ui/main.qml:140
 #, kde-format
@@ -126,43 +135,47 @@ msgid ""
 "because they either do not support smooth scrolling, or have their own "
 "setting for enabling and disabling it."
 msgstr ""
+"Ova postavka uključuje ili isključuje animirane prelaze pri klizanju "
+"točkićem miša ili tastaturom. Neki programi možda neće poštovati ovu "
+"postavku, jer ili ne podržavaju glatko klizanje ili imaju sopstvenu postavku "
+"za njegovo uključivanje i isključivanje."
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "Kliktanje"
 
 #: ui/main.qml:149
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
-msgstr ""
+msgstr "Klik na fajlove ili fascikle:"
 
 #: ui/main.qml:153
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
-msgstr ""
+msgstr "Bira ih"
 
 #: ui/main.qml:154
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
-msgstr ""
+msgstr "Otvarajte ih dvoklikom"
 
 #: ui/main.qml:171
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
-msgstr ""
+msgstr "Otvara ih"
 
 #: ui/main.qml:172
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
-msgstr ""
+msgstr "Birajte klikom na marker izbora stavke"
 
 #: ui/main.qml:190
 #, kde-format
@@ -170,7 +183,7 @@ msgctxt ""
 "@label for checkbox, part of a complete sentence: 'Middle-click pastes "
 "selected text'"
 msgid "Middle-click:"
-msgstr ""
+msgstr "Srednji klik:"
 
 #: ui/main.qml:194
 #, kde-format
@@ -178,29 +191,29 @@ msgctxt ""
 "@option:check part of a complete sentence: 'Middle click pastes selected "
 "text'"
 msgid "Pastes selected text"
-msgstr ""
+msgstr "Naljepljuje izabrani tekst"
 
 #: ui/main.qml:212
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Double-click interval:"
-msgstr ""
+msgstr "Period dvoklika:"
 
 #: ui/main.qml:232
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+msgstr[2] "%1 ms"
+msgstr[3] "%1 ms"
 
 #: ui/main.qml:236
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
-msgstr ""
+msgstr "ms"
 
 #: ui/main.qml:251
 #, kde-format
@@ -209,6 +222,8 @@ msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
 msgstr ""
+"Dva klika u okviru ovog perioda smatraju se dvoklikom. Neki programi možda "
+"neće poštovati ovu postavku."
 
 #: ui/main.qml:262
 #, kde-format
@@ -217,24 +232,26 @@ msgid ""
 "Double-click the folder to test. If it does not change its appearance, "
 "increase double-click interval."
 msgstr ""
+"Dvokliknite na fasciklu da isprobate. Ako ne promijeni izgled, povećajte "
+"period dvoklika."
 
 #: ui/main.qml:306
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
-msgstr ""
+msgstr "Prevlačenje i ispuštanje"
 
 #: ui/main.qml:309
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
-msgstr ""
+msgstr "Pri prevlačenju fajlova ili fascikli:"
 
 #: ui/main.qml:313
 #, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
-msgstr ""
+msgstr "Uvijek pitaj šta da se radi"
 
 #: ui/main.qml:314
 #, kde-kuit-format
@@ -244,42 +261,47 @@ msgid ""
 "and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
 "dialog."
 msgstr ""
+"Držite <shortcut>Shift</shortcut> za premiještanje, <shortcut>Ctrl</"
+"shortcut> za kopiranje i <shortcut>Shift+Ctrl</shortcut> za pravljenje "
+"simboličke veze. Inače se prikazuje dijalog."
 
 #: ui/main.qml:332
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
-msgstr ""
+msgstr "Premjesti ako je na istom uređaju"
 
 #: ui/main.qml:333
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
+"Držite <shortcut>Shift</shortcut> pri ispuštanju da biste vidjeli druge "
+"opcije."
 
 #: ui/main.qml:348
 #, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr ""
+msgstr "Dodir"
 
 #: ui/main.qml:351
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
-msgstr ""
+msgstr "Uključi režim tableta:"
 
 #: ui/main.qml:354
 #, kde-format
 msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
-msgstr ""
+msgstr "Automatski po potrebi"
 
 #: ui/main.qml:354
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
-msgstr ""
+msgstr "Nikad"
 
 #: ui/main.qml:373
 #, kde-format
@@ -289,30 +311,33 @@ msgid ""
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
+"Režim tableta će se automatski uključiti kad god sistem otkrije ekran na "
+"dodir, a nema miša ni dodirnika. Na primjer: kada se tastatura preklopivog "
+"laptopa obrne ili otkači."
 
 #: ui/main.qml:379
 #, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
-msgstr ""
+msgstr "Uvijek"
 
 #: ui/main.qml:401
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "Nikad"
 
 #: ui/main.qml:402
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."
-msgstr ""
+msgstr "U režimu tableta, virtuelna tastatura će se pojaviti po potrebi."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
 #, kde-format
 msgid "Single click to open files"
-msgstr ""
+msgstr "Jedan klik otvara fajlove"
 
 #. i18n: ectx: label, entry (dndBehavior), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:13
@@ -321,42 +346,45 @@ msgid ""
 "For local files on the same device, whether dragging and dropping will "
 "perform a move operation instead of showing the options menu"
 msgstr ""
+"Da li će, za lokalne fajlove na istom uređaju, prevlačenje i ispuštanje "
+"izvesti premiještanje umjesto prikazivanja menija opcija"
 
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
 #, kde-format
 msgid "Smooth scrolling"
-msgstr ""
+msgstr "Glatko klizanje"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:25
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
 msgstr ""
+"Lijevi klik na stazu klizačke trake pomijera klizačku traku za stranicu"
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:29
 #, kde-format
 msgid "Double click interval"
-msgstr ""
+msgstr "Period dvoklika"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9
 #, kde-format
 msgid "Automatically switch to touch-optimized mode"
-msgstr ""
+msgstr "Automatski prebacuj u režim prilagođen dodiru"
 
 #. i18n: ectx: label, entry (primarySelection), group (Wayland)
 #: workspaceoptions_kwinsettings.kcfg:15
 #, kde-format
 msgid "Enable middle click selection pasting"
-msgstr ""
+msgstr "Uključi naljepljivanje izbora srednjim klikom"
 
 #. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "Prikaži velike oblačiće panela i vidžeta"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -364,13 +392,14 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"Dozvoli vidžetima Plasme da prikazuju velike oblačiće panela i vidžeta pri "
+"lebdjenju"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "Vizuelni odziv pri promenama stanja"
+msgstr "Prikaži male iskakače pri promjenama stanja"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
@@ -379,31 +408,17 @@ msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
 msgstr ""
+"Dozvoli vidžetima Plasme da prikazuju male iskakače pri promjenama stanja, "
+"kao što su osvjetljaj ili jačina zvuka"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
 #, kde-format
 msgid "OSD on layout change"
-msgstr ""
+msgstr "OSD pri promjeni rasporeda"
 
 #. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:22
 #, kde-format
 msgid "Show a popup on layout changes"
-msgstr ""
-
-#~ msgid "Display informational tooltips on mouse hover"
-#~ msgstr "Informacioni oblačići pri lebdenju mišem"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Časlav Ilić"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "caslav.ilic@gmx.net"
-
-#, fuzzy
-#~| msgid "Global options for the Plasma Workspace"
-#~ msgid "System Settings module for configuring general workspace behavior."
-#~ msgstr "Globalne opcije za plasma radni prostor"
+msgstr "Prikaži iskakač pri promjeni rasporeda"

@@ -1,12 +1,13 @@
 # Translation of kcm_activities.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2016.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_activities\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2016-04-03 12:10+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -19,18 +20,15 @@ msgstr ""
 "X-Environment: kde\n"
 
 #: activityconfig.cpp:151
-#, fuzzy, kde-format
-#| msgid "Activity switching"
+#, kde-format
 msgid "Activity Manager"
-msgstr "Мењање активности"
+msgstr "Менаџер активности"
 
 #: ui/ActivityEditor.qml:22
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Activity Settings"
+#, kde-format
 msgctxt "@title:window"
 msgid "Activity Settings for %1"
-msgstr "Поставке активности"
+msgstr "Поставке активности %1"
 
 #: ui/ActivityEditor.qml:23
 #, kde-format
@@ -42,25 +40,22 @@ msgstr "Стварање нове активности"
 #, kde-format
 msgctxt "@action:button as in, 'save changes'"
 msgid "Save"
-msgstr ""
+msgstr "Сачувај"
 
 #: ui/ActivityEditor.qml:57
-#, fuzzy, kde-format
-#| msgid "Icon"
+#, kde-format
 msgctxt "@label:chooser"
 msgid "Icon:"
-msgstr "Иконица"
+msgstr "Иконица:"
 
 #: ui/ActivityEditor.qml:68
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Име:"
 
 #: ui/ActivityEditor.qml:74
-#, fuzzy, kde-format
-#| msgid "Description:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Description:"
 msgstr "Опис:"
@@ -69,47 +64,44 @@ msgstr "Опис:"
 #, kde-format
 msgctxt "@title:group for checkbox group"
 msgid "While on this activity, allow:"
-msgstr ""
+msgstr "У овој активности дозволи:"
 
 #: ui/ActivityEditor.qml:85
 #, kde-format
 msgctxt "@option:check While on activity, allow"
 msgid "Tracking file and app use"
-msgstr ""
+msgstr "Праћење коришћења фајлова и програма"
 
 #: ui/ActivityEditor.qml:91
 #, kde-format
 msgctxt "@option:check While on activity, allow"
 msgid "Automatically turning off the screen"
-msgstr ""
+msgstr "Аутоматско гашење екрана"
 
 #: ui/ActivityEditor.qml:97
 #, kde-format
 msgctxt "@option:check While on activity, allow"
 msgid "Automatically shutting down or sleeping"
-msgstr ""
+msgstr "Аутоматско гашење или спавање"
 
 #: ui/ActivityEditor.qml:103
-#, fuzzy, kde-format
-#| msgid "Shortcut for switching to this activity:"
+#, kde-format
 msgctxt "@label prefix for keyboard shortcut input button"
 msgid "Shortcut for switching:"
-msgstr "Пречица за пребацивање на ову активност:"
+msgstr "Пречица за пребацивање:"
 
+# >> @title:window
 #: ui/main.qml:58
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Delete Activity"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete %1 activity"
-msgstr "Брисање активности"
+msgstr "Обриши активност %1"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Create activity..."
+#, kde-format
 msgctxt "@action:button Create new Activity"
 msgid "Create New…"
-msgstr "Направи активност..."
+msgstr "Направи нову…"
 
 #: ui/main.qml:85
 #, kde-format
@@ -118,142 +110,13 @@ msgid "Delete Activity"
 msgstr "Брисање активности"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "Are you sure you want to delete '%1'?"
+#, kde-format
 msgctxt "%1 is an activity name"
 msgid "Do you want to delete activity '%1'?"
-msgstr "Желите ли заиста да обришете „%1“?"
+msgstr "Желите ли да обришете активност „%1“?"
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Delete Activity"
+#, kde-format
 msgctxt "@action:button in dialog confirms deletion"
 msgid "Delete Activity"
-msgstr "Брисање активности"
-
-#, fuzzy
-#~| msgid "Create activity..."
-#~ msgctxt "@info:tooltip"
-#~ msgid "Configure %1 activity"
-#~ msgstr "Направи активност..."
-
-# >> @title:tab
-#, fuzzy
-#~| msgid "Privacy"
-#~ msgctxt "@option:check"
-#~ msgid "Privacy:"
-#~ msgstr "Приватност"
-
-#, fuzzy
-#~| msgid "Private - do not track usage for this activity"
-#~ msgid "Do not track usage for this activity"
-#~ msgstr "Приватна — не прати коришћење ове активности"
-
-# >> @title:tab
-#~ msgid "Activities"
-#~ msgstr "Активности"
-
-#~ msgid ""
-#~ "Error loading the QML files. Check your installation.\n"
-#~ "Missing %1"
-#~ msgstr ""
-#~ "Грешка при учитавању КуМЛ фајлова. Проверите инсталацију.\n"
-#~ "Недостаје %1."
-
-#~ msgctxt "@action:button"
-#~ msgid "Create"
-#~ msgstr "Направи"
-
-# >> @title:tab
-#~ msgid "Switching"
-#~ msgstr "Мењање"
-
-#~ msgctxt "@action"
-#~ msgid "Walk through activities"
-#~ msgstr "Шетај кроз активности"
-
-#~ msgctxt "@action"
-#~ msgid "Walk through activities (Reverse)"
-#~ msgstr "Шетај кроз активности (обрнуто)"
-
-#, fuzzy
-#~| msgid ""
-#~| "Remember the current virtual desktop for each activity (needs restart)"
-#~ msgid "Remember for each activity (needs restart)"
-#~ msgstr ""
-#~ "Запамти текућу виртуелну површ за сваку активност (захтева поновно "
-#~ "покретање)"
-
-#, fuzzy
-#~| msgid "Shortcuts"
-#~ msgid "Shortcuts:"
-#~ msgstr "Пречице"
-
-#~ msgid "General"
-#~ msgstr "Опште"
-
-# >> @title:tab
-#~ msgid "Privacy"
-#~ msgstr "Приватност"
-
-#, fuzzy
-#~| msgctxt "unlimited number of months"
-#~| msgid "forever"
-#~ msgctxt "unlimited number of months"
-#~ msgid "Forever"
-#~ msgstr "заувек"
-
-#~ msgid "Forget the last hour"
-#~ msgstr "Заборави протекли сат"
-
-#~ msgid "Forget the last two hours"
-#~ msgstr "Заборави протекла два сата"
-
-#~ msgid "Forget a day"
-#~ msgstr "Заборави протекли дан"
-
-#~ msgid "Forget everything"
-#~ msgstr "Заборави све"
-
-#~ msgctxt "unit of time. months to keep the history"
-#~ msgid " month"
-#~ msgid_plural " months"
-#~ msgstr[0] " месец"
-#~ msgstr[1] " месеца"
-#~ msgstr[2] " месеци"
-#~ msgstr[3] " месец"
-
-#, fuzzy
-#~| msgid "Clear recent history"
-#~ msgid "Cleared the activity history."
-#~ msgstr "Очисти недавни историјат"
-
-#, fuzzy
-#~| msgid "Keep history"
-#~ msgid "Keep history:"
-#~ msgstr "Памти историјат"
-
-#, fuzzy
-#~| msgid "Clear recent history"
-#~ msgid "Clear History"
-#~ msgstr "Очисти недавни историјат"
-
-#~ msgid "For a&ll applications"
-#~ msgstr "у &свим програмима"
-
-#~ msgid "&Do not remember"
-#~ msgstr "&нигде"
-
-#, fuzzy
-#~| msgid "O&nly for specific applications"
-#~ msgid "O&nly for specific applications:"
-#~ msgstr "само у неким &програмима"
-
-#~ msgid "Remember opened documents:"
-#~ msgstr "Памти отворене документе:"
-
-#, fuzzy
-#~| msgid "Blacklist all applications not on this list"
-#~ msgid "Blacklist applications not on the list"
-#~ msgstr "Сви програме ван ове листе на црну листу"
+msgstr "Обриши активност"

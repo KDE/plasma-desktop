@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-01 17:43+0000\n"
-"PO-Revision-Date: 2026-09-29 00:26+0200\n"
+"PO-Revision-Date: 2026-10-03 23:03+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -721,28 +721,24 @@ msgid "Move to %1"
 msgstr "%1(으)로 이동"
 
 #: qml/ContextMenu.qml:505
-#, fuzzy, kde-format
-#| msgctxt "action:inmenu"
-#| msgid "Move to &Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move to &Screen"
-msgstr "다음 바탕 화면으로 이동(&D)"
+msgstr "다음 화면으로 이동(&S)"
 
 #: qml/ContextMenu.qml:535
 #, kde-format
 msgctxt "@item:inmenu List of all Screens to send a window to."
 msgid "Built-in Screen"
-msgstr ""
+msgstr "내장 화면"
 
 #: qml/ContextMenu.qml:538
-#, fuzzy, kde-format
-#| msgctxt "1 = number of desktop, 2 = desktop name"
-#| msgid "&%1 %2"
+#, kde-format
 msgctxt ""
 "@item:inmenu List of all Screens to send a window to, manufacturer, model "
 "(output identifier)"
 msgid "%1 %2 (%3)"
-msgstr "%1 %2(&%1)"
+msgstr "%1 %2(%3)"
 
 #: qml/ContextMenu.qml:583 qml/ContextMenu.qml:599
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-03 00:47+0000\n"
-"PO-Revision-Date: 2026-03-26 07:39+0100\n"
+"PO-Revision-Date: 2026-10-03 04:04+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -165,6 +165,8 @@ msgid ""
 "This setting is not available while “Right-click by pressing anywhere with "
 "two fingers” is selected."
 msgstr ""
+"ეს პარამეტრი ხელმიუწვდომელია, სანამ ჩართულია \"მარჯვენა წკაპი ნებისმიერ "
+"ადგილას ორი თითით დაჭერისას\"."
 
 #: ui/main.qml:212
 #, kde-format
@@ -248,16 +250,12 @@ msgid "Right-click by:"
 msgstr "მარჯვენა წკაპი რით:"
 
 #: ui/main.qml:482
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Completes the sentence 'right-click by pressing bottom-"
-#| "right corner'"
-#| msgid "Pressing bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-left "
 "corner'"
 msgid "Pressing bottom-left corner"
-msgstr "დაჭერა ქვედა-მარჯვენა კუთხეში"
+msgstr "დაჭერა ქვედა-მარცხენა კუთხეში"
 
 #: ui/main.qml:483
 #, kde-format
@@ -340,12 +338,10 @@ msgid "Right-click"
 msgstr "მარჯვენა წკაპი"
 
 #: ui/main.qml:586
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by tapping anywhere with three fingers."
-msgstr "შუა წკაპი სამი თითით დაწოლით ნებისმიერ ადგილას."
+msgstr "შუა წკაპი სამი თითით დატყაპუნებით ნებისმიერ ადგილას."
 
 #: ui/main.qml:608
 #, kde-format
@@ -354,12 +350,10 @@ msgid "Middle-click"
 msgstr "შუა წკაპი"
 
 #: ui/main.qml:611
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Right-click by tapping anywhere with three fingers."
-msgstr "შუა წკაპი სამი თითით დაწოლით ნებისმიერ ადგილას."
+msgstr "მარჯვენა წკაპი სამი თითით დატყაპუნებით ნებისმიერ ადგილას."
 
 #~ msgctxt ""
 #~ "@label for radiobutton group, begins the sentence 'middle-click by "

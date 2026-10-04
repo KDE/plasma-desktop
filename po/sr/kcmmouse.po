@@ -3,13 +3,14 @@
 # Marko Rosic <roske@kde.org.yu>, 2004.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2014, 2015, 2016, 2017.
 # Dalibor Djuric <dalibor.djuric@gmail.com>, 2009, 2010.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-04 00:47+0000\n"
-"PO-Revision-Date: 2017-12-15 12:37+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +25,7 @@ msgstr ""
 #: inputbackend.cpp:49
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
-msgstr ""
+msgstr "Критична грешка при читању основних података уређаја %1."
 
 #: kcm.cpp:112
 #, kde-format
@@ -32,11 +33,13 @@ msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr ""
+"Грешка при учитавању вредности. Погледајте дневник за више детаља. Покрените "
+"поново овај поставни модул."
 
 #: kcm.cpp:115
 #, kde-format
 msgid "No pointer device found. Connect now."
-msgstr ""
+msgstr "Нема ниједног показивачког уређаја. Повежите га сада."
 
 #: kcm.cpp:124
 #, kde-format
@@ -44,6 +47,8 @@ msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
+"Не могу да сачувам све измене. Погледајте дневник за више детаља. Покрените "
+"поново овај поставни модул па покушајте још опет."
 
 #: kcm.cpp:142
 #, kde-format
@@ -51,6 +56,8 @@ msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr ""
+"Грешка при учитавању подразумеваних вредности. Неке од опција не могу да се "
+"поставе на подразумеване вредности."
 
 #: kcm.cpp:157
 #, kde-format
@@ -58,102 +65,102 @@ msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr ""
+"Грешка при додавању новог повезаног уређаја. Повежите га опет и покрените "
+"поново овај поставни модул."
 
 #: kcm.cpp:170
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr ""
+msgstr "Показивачки уређај је откачен. Његов дијалог поставки је затворен."
 
 #: kcm.cpp:172
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr ""
+msgstr "Показивачки уређај је откачен. Нема других уређаја."
 
 #: ui/bindings.qml:27
 #, kde-format
 msgctxt "@title"
 msgid "Extra Mouse Buttons"
-msgstr ""
+msgstr "Додатна дугмад миша"
 
 #: ui/bindings.qml:77
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
-msgstr ""
+msgstr "Додатно дугме %1:"
 
 #: ui/bindings.qml:106
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
-msgstr ""
+msgstr "Притисните дугме миша коме желите да доделите свезу тастера"
 
 #: ui/bindings.qml:108
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
-msgstr ""
+msgstr "Унесите нову комбинацију тастера за %1"
 
 #: ui/bindings.qml:112
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Одустани"
 
 #: ui/bindings.qml:130
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button"
-msgstr ""
+msgstr "Притисни дугме миша"
 
 #: ui/bindings.qml:131
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
-msgstr ""
+msgstr "Додај свезу…"
 
 #: ui/main.qml:37
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
-msgstr ""
+msgstr "Подеси додатну дугмад…"
 
 #: ui/main.qml:64
 #, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
-msgstr ""
+msgstr "Уређај:"
 
 #: ui/main.qml:86
-#, fuzzy, kde-format
-#| msgid "&General"
+#, kde-format
 msgctxt "@title:group"
 msgid "General:"
-msgstr "&Опште"
+msgstr "Опште:"
 
 #: ui/main.qml:87
 #, kde-format
 msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
-msgstr ""
+msgstr "Укључи уређај"
 
 #: ui/main.qml:102
 #, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
-msgstr ""
+msgstr "Лево и десно дугме:"
 
 #: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Le&ft handed"
+#, kde-format
 msgctxt "@option:check Left and right buttons"
 msgid "Swap (left-handed mode)"
-msgstr "&Леворуки"
+msgstr "Замени (режим за леворуке)"
 
 #: ui/main.qml:118
 #, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
-msgstr ""
+msgstr "Притисни оба истовремено за средњи клик"
 
 #: ui/main.qml:130
 #, kde-format
@@ -162,72 +169,70 @@ msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"Укључивање ове поставке продужава кашњење клика за 50 ms. Додатно кашњење је "
+"потребно да би се исправно открили истовремени притисци левог и десног "
+"дугмета."
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid "Pointer threshold:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
-msgstr "Праг показивача:"
+msgstr "Брзина показивача:"
 
 #: ui/main.qml:223
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
-msgstr "Убрзање показивача:"
+msgstr "Укључи убрзање показивача"
 
 #: ui/main.qml:235
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
-msgstr ""
+msgstr "Кад је укључено, показивач прелази већи пут што је покрет бржи."
 
 #: ui/main.qml:264
-#, fuzzy, kde-format
-#| msgid "Pointer threshold:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
-msgstr "Праг показивача:"
+msgstr "Брзина клизања:"
 
 #: ui/main.qml:328
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
-msgstr ""
+msgstr "спорије"
 
 #: ui/main.qml:337
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
-msgstr ""
+msgstr "брже"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgid "Pointer threshold:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"
-msgstr "Праг показивача:"
+msgstr "Клизање:"
 
 #: ui/main.qml:348
-#, fuzzy, kde-format
-#| msgid "Re&verse scroll direction"
+#, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction"
-msgstr "Обрни &смер клизања"
+msgstr "Обрни смер клизања"
 
 #: ui/main.qml:363
 #, kde-format
 msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
-msgstr ""
+msgstr "Клизај при померању показивача"
 
 #: ui/main.qml:383
 #, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
-msgstr ""
+msgstr "док је притиснуто средње дугме"
 
 #: ui/main.qml:396
 #, kde-format
@@ -238,12 +243,16 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"Ово ће сметати програмима који користе превлачење средњим дугметом, попут "
+"неких уређивача слика, приказивача докумената или видео игара. Може се "
+"користити на сваком уређају, али је првенствено намењено као замена за "
+"точкић на уређајима који га немају."
 
 #: ui/main.qml:406
 #, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
-msgstr ""
+msgstr "после клика средњим дугметом"
 
 #: ui/main.qml:419
 #, kde-format
@@ -253,183 +262,6 @@ msgid ""
 "you want the application to receive a single middle-click. This includes "
 "middle-click dragging."
 msgstr ""
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Часлав Илић"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "caslav.ilic@gmx.net"
-
-#~ msgid ""
-#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
-#~ "way in which your pointing device works. Your pointing device may be a "
-#~ "mouse, trackball, or some other hardware that performs a similar function."
-#~ msgstr ""
-#~ "<qt><h1>Миш</h1><p>У овом модулу подешавате разне опције везане за "
-#~ "понашање показивачког уређаја. То може бити миш, трекбол, или неки други "
-#~ "хардвер сличне намене.</p></qt>"
-
-#~ msgid "&General"
-#~ msgstr "&Опште"
-
-#~ msgid ""
-#~ "If you are left-handed, you may prefer to swap the functions of the left "
-#~ "and right buttons on your pointing device by choosing the 'left-handed' "
-#~ "option. If your pointing device has more than two buttons, only those "
-#~ "that function as the left and right buttons are affected. For example, if "
-#~ "you have a three-button mouse, the middle button is unaffected."
-#~ msgstr ""
-#~ "Ако сте леворуки, може вам одговарати да замените функције левих и десних "
-#~ "дугмади миша бирањем опције за леворуке. Ако миш има више од два дугмета, "
-#~ "биће промењене функције само на левом и десном дугмету. Ако нпр. имате "
-#~ "миш са три дугмета, средње дугме ће остати непромењено."
-
-#~ msgid "Button Order"
-#~ msgstr "Редослед дугмади"
-
-#~ msgid "Righ&t handed"
-#~ msgstr "&Десноруки"
-
-#~ msgid "Le&ft handed"
-#~ msgstr "&Леворуки"
-
-#~ msgid ""
-#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
-#~ "mouse buttons."
-#~ msgstr "Мења смер клизања точкићем или четвртим и петим дугметом миша."
-
-#~ msgid "Re&verse scroll direction"
-#~ msgstr "Обрни &смер клизања"
-
-#~ msgid "Advanced"
-#~ msgstr "Напредно"
-
-#~ msgid "Pointer threshold:"
-#~ msgstr "Праг показивача:"
-
-#~ msgid "Double click interval:"
-#~ msgstr "Период двоклика:"
-
-#~ msgid "Drag start time:"
-#~ msgstr "Почетно време превлачења:"
-
-#~ msgid "Drag start distance:"
-#~ msgstr "Почетна удаљеност превлачења:"
-
-#~ msgid "Mouse wheel scrolls by:"
-#~ msgstr "Точкић миша клиза:"
-
-#~ msgid ""
-#~ "<p>This option allows you to change the relationship between the distance "
-#~ "that the mouse pointer moves on the screen and the relative movement of "
-#~ "the physical device itself (which may be a mouse, trackball, or some "
-#~ "other pointing device.)</p><p> A high value for the acceleration will "
-#~ "lead to large movements of the mouse pointer on the screen even when you "
-#~ "only make a small movement with the physical device. Selecting very high "
-#~ "values may result in the mouse pointer flying across the screen, making "
-#~ "it hard to control.</p>"
-#~ msgstr ""
-#~ "<qt><p>Овом опцијом подешавате однос између растојања који показивач "
-#~ "прелази на екрану и релативног помераја самог физичког уређаја (миша, "
-#~ "трекбола, или неког другог показивачког уређаја).</p><p>Висока вредност "
-#~ "убрзања ће довести до великих померања показивача на екрану чак и када "
-#~ "правите мале покрете уређајем, чинећи га тешким за контролу.</p></qt>"
-
-#~ msgid " x"
-#~ msgstr " ×"
-
-#~ msgid ""
-#~ "<p>The threshold is the smallest distance that the mouse pointer must "
-#~ "move on the screen before acceleration has any effect. If the movement is "
-#~ "smaller than the threshold, the mouse pointer moves as if the "
-#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
-#~ "with the physical device, there is no acceleration at all, giving you a "
-#~ "greater degree of control over the mouse pointer. With larger movements "
-#~ "of the physical device, you can move the mouse pointer rapidly to "
-#~ "different areas on the screen.</p>"
-#~ msgstr ""
-#~ "<qt><p>Праг је најмања раздаљина коју показивач мора да пређе на екрану "
-#~ "да би убрзање ступило у дејство. Ако је помак мањи од прага, показивач се "
-#~ "помера као да је убрзање постављено на 1×.</p><p>Ако правите мале покрете "
-#~ "физичким уређајем, убрзања уопште нема, што вам даје већи степен контроле "
-#~ "над показивачем. Већим покретима уређаја можете брзо да померате "
-#~ "показивач према удаљеним деловима екрана.</p></qt>"
-
-#~ msgid ""
-#~ "The double click interval is the maximal time (in milliseconds) between "
-#~ "two mouse clicks which turns them into a double click. If the second "
-#~ "click happens later than this time interval after the first click, they "
-#~ "are recognized as two separate clicks."
-#~ msgstr ""
-#~ "Период двоклика је највеће време (у милисекундама) између два клика мишем "
-#~ "које их и даље чини двокликом. Ако се други клик деси касније од задатог "
-#~ "периода, кликови се узимају као два независна једнострука."
-
-#~ msgid " msec"
-#~ msgstr " ms"
-
-#~ msgid ""
-#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
-#~ "move the mouse within the drag start time, a drag operation will be "
-#~ "initiated."
-#~ msgstr ""
-#~ "Ако кликнете мишем (нпр. у уређивачу текста) и почнете да померате миш у "
-#~ "оквиру почетног времена превлачења, почеће поступак превлачења."
-
-#~ msgid ""
-#~ "If you click with the mouse and begin to move the mouse at least the drag "
-#~ "start distance, a drag operation will be initiated."
-#~ msgstr ""
-#~ "Ако кликнете мишем и почнете да померате миш у оквиру почетне удаљености "
-#~ "превлачења, почеће поступак превлачења."
-
-#~ msgid ""
-#~ "If you use the wheel of a mouse, this value determines the number of "
-#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
-#~ "the number of visible lines, it will be ignored and the wheel movement "
-#~ "will be handled as a page up/down movement."
-#~ msgstr ""
-#~ "Ако користите точкић на мишу, ова вредност одређује број редова које "
-#~ "треба отклизати на сваки покрет точкића. Ако овај број пређе број "
-#~ "видљивих редова, биће игнорисан, а покрет точкића ће бити схваћен као "
-#~ "померање на страницу горе или доле."
-
-#~ msgid "Keyboard Navigation"
-#~ msgstr "Навигација тастатуром"
-
-#~ msgid "&Move pointer with keyboard (using the num pad)"
-#~ msgstr "Померај показивач &тастатуром (нумеричким делом)"
-
-#~ msgid "&Acceleration delay:"
-#~ msgstr "&Застој убрзања:"
-
-#~ msgid "R&epeat interval:"
-#~ msgstr "&Период понављања:"
-
-#~ msgid "Acceleration &time:"
-#~ msgstr "&Време убрзања:"
-
-#~ msgid "Ma&ximum speed:"
-#~ msgstr "&Највећа брзина:"
-
-#~ msgid " pixel/sec"
-#~ msgstr " пиксела/сек."
-
-#~ msgid "Acceleration &profile:"
-#~ msgstr "Про&фил убрзања:"
-
-#, fuzzy
-#~| msgid " pixel/sec"
-#~ msgid " pixel"
-#~ msgid_plural " pixels"
-#~ msgstr[0] " пиксела/сек."
-#~ msgstr[1] " пиксела/сек."
-#~ msgstr[2] " пиксела/сек."
-#~ msgstr[3] " пиксела/сек."
-
-#, fuzzy
-#~| msgid "Acceleration &profile:"
-#~ msgid "Acceleration profile:"
-#~ msgstr "Про&фил убрзања:"
+"Ово ће сметати свим средњим кликовима; кликните средњим дугметом двапут када "
+"желите да програм прими један средњи клик. То важи и за превлачење средњим "
+"кликом."

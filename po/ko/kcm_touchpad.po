@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-03 00:47+0000\n"
-"PO-Revision-Date: 2026-04-26 21:10+0200\n"
+"PO-Revision-Date: 2026-10-03 23:03+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: kcm.cpp:57
 #, kde-format
@@ -162,6 +162,8 @@ msgid ""
 "This setting is not available while “Right-click by pressing anywhere with "
 "two fingers” is selected."
 msgstr ""
+"“어디든지 두 손가락으로 눌러서 오른쪽으로 클릭”을 선택한 상태에서는 이 설정"
+"을 사용할 수 없습니다."
 
 #: ui/main.qml:212
 #, kde-format
@@ -244,16 +246,12 @@ msgid "Right-click by:"
 msgstr "오른쪽 단추 클릭 방식:"
 
 #: ui/main.qml:482
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Completes the sentence 'right-click by pressing bottom-"
-#| "right corner'"
-#| msgid "Pressing bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-left "
 "corner'"
 msgid "Pressing bottom-left corner"
-msgstr "오른쪽 아래 꼭짓점 누르기"
+msgstr "왼쪽 아래 꼭짓점 누르기"
 
 #: ui/main.qml:483
 #, kde-format
@@ -336,12 +334,10 @@ msgid "Right-click"
 msgstr "오른쪽 클릭"
 
 #: ui/main.qml:586
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by tapping anywhere with three fingers."
-msgstr "어디든지 세 손가락으로 눌러서 가운데 단추를 클릭합니다."
+msgstr "어디든지 세 손가락으로 탭해서 가운데 단추를 클릭합니다."
 
 #: ui/main.qml:608
 #, kde-format
@@ -350,12 +346,10 @@ msgid "Middle-click"
 msgstr "가운데 단추 클릭"
 
 #: ui/main.qml:611
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Right-click by tapping anywhere with three fingers."
-msgstr "어디든지 세 손가락으로 눌러서 가운데 단추를 클릭합니다."
+msgstr "어디든지 세 손가락으로 탭해서 가운데 단추를 클릭합니다."
 
 #~ msgctxt ""
 #~ "@label for radiobutton group, begins the sentence 'middle-click by "

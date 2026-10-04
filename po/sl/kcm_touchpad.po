@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-03 00:47+0000\n"
-"PO-Revision-Date: 2026-03-26 06:41+0100\n"
+"PO-Revision-Date: 2026-10-03 07:56+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -166,6 +166,8 @@ msgid ""
 "This setting is not available while “Right-click by pressing anywhere with "
 "two fingers” is selected."
 msgstr ""
+"Ta nastavitev ni na voljo, ko je izbrana možnost »Klik z desno tipko s "
+"pritiskom dveh prstov kjer koli«."
 
 #: ui/main.qml:212
 #, kde-format
@@ -249,16 +251,12 @@ msgid "Right-click by:"
 msgstr "Desni klik s:"
 
 #: ui/main.qml:482
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Completes the sentence 'right-click by pressing bottom-"
-#| "right corner'"
-#| msgid "Pressing bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-left "
 "corner'"
 msgid "Pressing bottom-left corner"
-msgstr "Pritiskom spodnjega desnega kota"
+msgstr "S pritiskom spodnjega levega kota"
 
 #: ui/main.qml:483
 #, kde-format
@@ -341,12 +339,10 @@ msgid "Right-click"
 msgstr "Desni klik"
 
 #: ui/main.qml:586
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by tapping anywhere with three fingers."
-msgstr "Srednji klik s pritiskom kjer koli s tremi prsti."
+msgstr "Srednji klik z dotikom kjer koli s tremi prsti."
 
 #: ui/main.qml:608
 #, kde-format
@@ -355,12 +351,10 @@ msgid "Middle-click"
 msgstr "Srednji klik"
 
 #: ui/main.qml:611
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Right-click by tapping anywhere with three fingers."
-msgstr "Srednji klik s pritiskom kjer koli s tremi prsti."
+msgstr "Desni klik z dotikom kjer koli s tremi prsti."
 
 #~ msgctxt ""
 #~ "@label for radiobutton group, begins the sentence 'middle-click by "

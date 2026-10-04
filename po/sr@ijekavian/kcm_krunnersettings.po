@@ -1,12 +1,13 @@
 # Translation of kcm_search.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2014, 2015, 2016, 2017.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_search\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-19 00:48+0000\n"
-"PO-Revision-Date: 2017-10-30 23:08+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
 "MIME-Version: 1.0\n"
@@ -22,91 +23,70 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Position on screen:"
-msgstr ""
+msgstr "Положај на екрану:"
 
 #: ui/main.qml:35
 #, kde-format
 msgctxt "@option:check Position on top of screen"
 msgid "Top"
-msgstr ""
+msgstr "Врх"
 
 #: ui/main.qml:42
 #, kde-format
 msgctxt "@option:check Position in center of screen"
 msgid "Center"
-msgstr ""
+msgstr "Средина"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "History:"
-msgstr "Очисти историјат"
+msgstr "Историјат:"
 
 #: ui/main.qml:58
 #, kde-format
 msgctxt "@option:radio History is disabled"
 msgid "Disabled"
-msgstr ""
+msgstr "Искључен"
 
 #: ui/main.qml:63
 #, kde-format
 msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable suggestions"
-msgstr ""
+msgstr "Са приједлозима"
 
 #: ui/main.qml:68
 #, kde-format
 msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable auto-complete"
-msgstr ""
+msgstr "Са аутоматским допуњавањем"
 
 #: ui/main.qml:76
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear History…"
-msgstr "Очисти историјат"
+msgstr "Очисти историјат…"
 
 #: ui/main.qml:99
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for all activities"
 msgid "For all activities"
-msgstr ""
+msgstr "За све активности"
 
 #: ui/main.qml:111
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for this activity"
 msgid "For activity \"%1\""
-msgstr ""
+msgstr "За активност „%1“"
 
 #: ui/main.qml:128
 #, kde-format
 msgctxt "@label"
 msgid "Plugins:"
-msgstr ""
+msgstr "Прикључци:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgctxt "kcm name for About dialog"
-#| msgid "Configure Search Bar"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
-msgstr "Подешавање траке претраге"
-
-#~ msgid "Clear History"
-#~ msgstr "Очисти историјат"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Часлав Илић"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "caslav.ilic@gmx.net"
-
-#~ msgid "Vishesh Handa"
-#~ msgstr "Вишеш Ханда"
-
-#~ msgid "Available Plugins"
-#~ msgstr "Доступни прикључци"
+msgstr "Подеси укључене прикључке претраге…"

@@ -1,13 +1,14 @@
 # Translation of kcm5_device_automounter.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2009, 2010, 2011, 2015, 2017.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2010.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-23 00:45+0000\n"
-"PO-Revision-Date: 2017-09-28 17:58+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -22,36 +23,26 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Часлав Илић"
+msgstr "Часлав Илић,Немања Хиршл"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "caslav.ilic@gmx.net"
+msgstr "caslav.ilic@gmx.net,nemhirsl@gmail.com"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "This list contains the storage devices known to the system. If "
-#| "\"Automount on Login\" is checked, the device will be automatically "
-#| "mounted even though \"Mount all removable media at login\" is unchecked. "
-#| "The same applies for \"Automount on Attach\".\n"
-#| "\n"
-#| "If \"Enable automatic mounting of removable media\" is unchecked, the "
-#| "overrides do not apply and no devices will be automatically mounted."
+#, kde-format
 msgid ""
 "This list contains the storage devices known to the system. If \"Automount "
 "on Login\" is checked, devices will be automatically mounted even though "
 "\"Mount all removable media at login\" is unchecked. The same applies for "
 "\"Automount on Attach\"."
 msgstr ""
-"<html><p>Овај списак садржи све складишне уређаје познате систему. Ако је "
-"попуњено <i>монт. по пријављивању</i>, уређај ће бити монтиран чак и ако је "
-"искључено <i>Монтирај уклоњиве медијуме на пријављивању</i>. Исто важи за "
-"<i>монт. по прикључивању</i>.</p><p>Међутим, ако се искључи <i>Аутоматско "
-"монтирање уклоњивих медијума</i>, ова потискивања се не примењују и ништа се "
-"аутоматски не монтира.</p></html>"
+"Овај списак садржи складишне уређаје познате систему. Ако је попуњено "
+"„Аутоматски монтирај при пријављивању“, уређаји ће бити аутоматски монтирани "
+"чак и ако је искључено „Монтирај све уклоњиве медијуме при пријављивању“. "
+"Исто важи за „Аутоматски монтирај при прикључивању“."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:54
@@ -77,15 +68,7 @@ msgstr "Заборави уређај"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:67
-#, fuzzy, kde-format
-#| msgid ""
-#| "When this is checked, only remembered devices will be automatically "
-#| "mounted. A device is 'remembered' if it has ever been mounted before. For "
-#| "instance, plugging in a USB media player to charge is not sufficient to "
-#| "'remember' it - if the files are not accessed, it will not be "
-#| "automatically mounted the next time it is seen. Once they have been "
-#| "accessed, however, the device's contents will be automatically made "
-#| "available to the system."
+#, kde-format
 msgid ""
 "When this is not checked, only remembered devices will be automatically "
 "mounted. A device is 'remembered' if it has ever been mounted before. For "
@@ -94,7 +77,7 @@ msgid ""
 "mounted the next time it is seen. Once they have been accessed, however, the "
 "device's contents will be automatically made available to the system."
 msgstr ""
-"Када је ово попуњено, само запамћени уређаји ће бити аутоматски монтирани. "
+"Када ово није попуњено, само запамћени уређаји ће бити аутоматски монтирани. "
 "Уређај је „запамћен“ ако је бар једном раније монтиран. На пример, "
 "прикључивање УСБ медија плејера ради пуњења није довољно да буде запамћен — "
 "ако се фајловима није приступало, неће бити аутоматски монтиран по следећем "
@@ -103,42 +86,38 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Only automatically mount removable media that has been manually mounted "
-#| "before"
+#, kde-format
 msgid "Automatically mount removable media that have never been mounted before"
-msgstr "Монтирај аутоматски само медијуме претходно ручно монтиране"
+msgstr "Аутоматски монтирај уклоњиве медијуме који никад раније нису монтирани"
 
+# >> @title:column
 #: DeviceModel.cpp:52
-#, fuzzy, kde-format
-#| msgid "Attached Devices"
+#, kde-format
 msgid "Automount Device"
-msgstr "Прикључени уређаји"
+msgstr "аутоматско монтирање уређаја"
 
 #: DeviceModel.cpp:54
 #, kde-format
 msgctxt "As in automount on login"
 msgid "On Login"
-msgstr ""
+msgstr "при пријављивању"
 
 #: DeviceModel.cpp:56
 #, kde-format
 msgctxt "As in automount on attach"
 msgid "On Attach"
-msgstr ""
+msgstr "при прикључивању"
 
 # >> @title:column
 #: DeviceModel.cpp:258
-#, fuzzy, kde-format
-#| msgid "Device"
+#, kde-format
 msgid "All Devices"
-msgstr "уређај"
+msgstr "Сви уређаји"
 
 #: DeviceModel.cpp:258
 #, kde-format
 msgid "All Known Devices"
-msgstr ""
+msgstr "Сви познати уређаји"
 
 #: DeviceModel.cpp:260
 #, kde-format
@@ -174,58 +153,3 @@ msgstr "Овај уређај се аутоматски монтира по пр
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "Овај уређај се не монтира аутоматски по прикључивању."
-
-#~ msgid "Device Automounter"
-#~ msgstr "Аутомонтер уређаја"
-
-#~ msgid "(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"
-#~ msgstr "© 2009, Тревер Фишер; © 2015, Каи Уве Броулик"
-
-#~ msgid "Trever Fischer"
-#~ msgstr "Тревер Фишер"
-
-#~ msgid "Original Author"
-#~ msgstr "Првобитни аутор"
-
-#~ msgid "Kai Uwe Broulik"
-#~ msgstr "Каи Уве Броулик"
-
-#~ msgid "Plasma 5 Port"
-#~ msgstr "Пренос на Плазму 5"
-
-#~ msgid ""
-#~ "When this is unchecked, no device automounting of any kind will happen, "
-#~ "regardless of anything selected in the \"Device Overrides\" section."
-#~ msgstr ""
-#~ "<html>Ако је искључено неће бити никаквог аутоматског монтирања уређаја, "
-#~ "без обзира на изабрано у одељку <i>Потискивања по уређају</i>.</html>"
-
-#~ msgid "Enable automatic mounting of removable media"
-#~ msgstr "Аутоматско монтирање уклоњивих медијума"
-
-#~ msgid ""
-#~ "If any removable storage devices are connected to your system when you "
-#~ "login to your desktop, their contents will automatically be made "
-#~ "available to your system for other programs to read."
-#~ msgstr ""
-#~ "Ако је неки уређај са уклоњивим медијумом повезан на систем у тренутку "
-#~ "кад се пријавите на површ, његов садржај ће аутоматски програмима постати "
-#~ "доступан за читање."
-
-#, fuzzy
-#~| msgid "Mount all removable media at login"
-#~ msgid "Automatically mount all removable media at login"
-#~ msgstr "Монтирај уклоњиве медијуме на пријављивању"
-
-#~ msgid ""
-#~ "When this is checked, the contents of any storage device will "
-#~ "automatically be made available to the system when it is plugged in or "
-#~ "attached."
-#~ msgstr ""
-#~ "Ако је попуњено, садржај сваког складишног уређаја биће учињен доступним "
-#~ "на систему чим се уређај утакне или прикачи."
-
-#, fuzzy
-#~| msgid "Automatically mount removable media when attached"
-#~ msgid "Automatically mount all removable media when attached"
-#~ msgstr "Аутоматски монтирај прикачене уклоњиве медијуме"

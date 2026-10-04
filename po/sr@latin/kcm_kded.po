@@ -2,13 +2,14 @@
 # Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2007, 2008, 2015, 2017.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2009.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-07 00:47+0000\n"
-"PO-Revision-Date: 2017-04-07 00:51+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
 "MIME-Version: 1.0\n"
@@ -21,33 +22,30 @@ msgstr ""
 "X-Environment: kde\n"
 
 #: kcmkded.cpp:117
-#, fuzzy, kde-format
-#| msgid "Unable to stop service <em>%1</em>."
+#, kde-format
 msgid "Failed to stop service: %1"
-msgstr "Ne mogu da zaustavim servis <em>%1</em>."
+msgstr "Ne mogu da zaustavim servis: %1"
 
 #: kcmkded.cpp:119
-#, fuzzy, kde-format
-#| msgid "Unable to start server <em>%1</em>."
+#, kde-format
 msgid "Failed to start service: %1"
-msgstr "Ne mogu da pokrenem server <em>%1</em>."
+msgstr "Ne mogu da pokrenem servis: %1"
 
 #: kcmkded.cpp:126
-#, fuzzy, kde-format
-#| msgid "Unable to stop service <em>%1</em>."
+#, kde-format
 msgid "Failed to stop service."
-msgstr "Ne mogu da zaustavim servis <em>%1</em>."
+msgstr "Ne mogu da zaustavim servis."
 
 #: kcmkded.cpp:128
-#, fuzzy, kde-format
-#| msgid "Unable to start server <em>%1</em>."
+#, kde-format
 msgid "Failed to start service."
-msgstr "Ne mogu da pokrenem server <em>%1</em>."
+msgstr "Ne mogu da pokrenem servis."
 
 #: kcmkded.cpp:226
 #, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
+"Ne mogu da obavestim KDE menadžer servisa (kded6) o sačuvanim izmenama: %1"
 
 #: ui/main.qml:48
 #, kde-kuit-format
@@ -56,6 +54,8 @@ msgid ""
 "If you're disabling something here to work around an issue, please <link "
 "url='%1'>submit a bug report about it as well.</link>"
 msgstr ""
+"Ako ovde isključujete nešto da biste zaobišli neki problem, <link "
+"url='%1'>prijavite i grešku zbog toga.</link>"
 
 #: ui/main.qml:55
 #, kde-format
@@ -64,6 +64,8 @@ msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
+"Menadžer pozadinskih servisa (kded6) trenutno nije pokrenut. Proverite da li "
+"je ispravno instaliran."
 
 #: ui/main.qml:65
 #, kde-format
@@ -72,6 +74,8 @@ msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
+"Neki servisi se ponovo sami isključe kad se ručno pokrenu, ako nisu korisni "
+"u tekućem okruženju."
 
 #: ui/main.qml:75
 #, kde-format
@@ -80,108 +84,89 @@ msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
+"Neki servisi su automatski pokrenuti ili zaustavljeni kad je menadžer "
+"pozadinskih servisa (kded6) ponovo pokrenut radi primene vaših izmena."
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "All Services"
-msgstr "Servisi pri pokretanju"
+msgstr "svi servisi"
 
 #: ui/main.qml:124
 #, kde-format
 msgctxt "@item:inlistbox List running services"
 msgid "Running"
-msgstr ""
+msgstr "u pogonu"
 
 #: ui/main.qml:125
 #, kde-format
 msgctxt "@item:inlistbox List not running services"
 msgid "Not Running"
-msgstr ""
+msgstr "van pogona"
 
 #: ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgctxt "@title:group list section"
 msgid "Startup Services"
 msgstr "Servisi pri pokretanju"
 
 #: ui/main.qml:147
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgctxt "@title:group list section"
 msgid "Load-on-Demand Services"
-msgstr "Servisi pri pokretanju"
+msgstr "Servisi učitavani na zahtev"
 
 #: ui/main.qml:166
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Disable automatically loading %1 on startup"
-msgstr ""
+msgstr "Isključi automatsko učitavanje servisa %1 pri pokretanju"
 
 #: ui/main.qml:166
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Enable automatically loading %1 on startup"
-msgstr ""
+msgstr "Uključi automatsko učitavanje servisa %1 pri pokretanju"
 
 #: ui/main.qml:167
 #, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Toggle automatically loading this service on startup"
-msgstr ""
+msgstr "Uključi/isključi automatsko učitavanje ovog servisa pri pokretanju"
 
 #: ui/main.qml:211
 #, kde-format
 msgctxt "@info:status"
 msgid "Not running"
-msgstr ""
+msgstr "van pogona"
 
 #: ui/main.qml:212
 #, kde-format
 msgctxt "@info:status"
 msgid "Running"
-msgstr ""
+msgstr "u pogonu"
 
 #: ui/main.qml:232
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Stop %1"
-msgstr ""
+msgstr "Zaustavi %1"
 
 #: ui/main.qml:232
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Start %1"
-msgstr ""
+msgstr "Pokreni %1"
 
 #: ui/main.qml:235
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgctxt "@action:button"
 msgid "Stop Service"
-msgstr "Servisi pri pokretanju"
+msgstr "Zaustavi servis"
 
 #: ui/main.qml:235
-#, fuzzy, kde-format
-#| msgid "Startup Services"
+#, kde-format
 msgctxt "@action:button"
 msgid "Start Service"
-msgstr "Servisi pri pokretanju"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Toplica Tanasković"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "toptan@kde.org.yu"
-
-#, fuzzy
-#~| msgid "(c) 2002 Daniel Molkentin"
-#~ msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
-#~ msgstr "© 2002, Danijel Molkentin"
-
-#~ msgid "Daniel Molkentin"
-#~ msgstr "Danijel Molkentin"
+msgstr "Pokreni servis"

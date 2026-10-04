@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the plasma-desktop package.
 # Automatically generated, 2015.
 #
-# SPDX-FileCopyrightText: 2015, 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2015, 2017-2021, 2023-2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-03 00:47+0000\n"
-"PO-Revision-Date: 2026-03-26 04:11+0100\n"
+"PO-Revision-Date: 2026-10-03 12:05+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: kcm.cpp:57
 #, kde-format
@@ -169,6 +169,8 @@ msgid ""
 "This setting is not available while “Right-click by pressing anywhere with "
 "two fingers” is selected."
 msgstr ""
+"Este ajuste no está disponible cuando está seleccionado «Clic derecho al "
+"pulsar con dos dedos en cualquier lugar»."
 
 #: ui/main.qml:212
 #, kde-format
@@ -252,16 +254,12 @@ msgid "Right-click by:"
 msgstr "Clic derecho:"
 
 #: ui/main.qml:482
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Completes the sentence 'right-click by pressing bottom-"
-#| "right corner'"
-#| msgid "Pressing bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-left "
 "corner'"
 msgid "Pressing bottom-left corner"
-msgstr "Al pulsar la esquina inferior derecha"
+msgstr "Al pulsar la esquina inferior izquierda"
 
 #: ui/main.qml:483
 #, kde-format
@@ -344,12 +342,10 @@ msgid "Right-click"
 msgstr "Clic derecho"
 
 #: ui/main.qml:586
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by tapping anywhere with three fingers."
-msgstr "Clic central al pulsar con tres dedos en cualquier lugar."
+msgstr "Clic central al tocar con tres dedos en cualquier lugar."
 
 #: ui/main.qml:608
 #, kde-format
@@ -358,56 +354,7 @@ msgid "Middle-click"
 msgstr "Clic central"
 
 #: ui/main.qml:611
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Right-click by tapping anywhere with three fingers."
-msgstr "Clic central al pulsar con tres dedos en cualquier lugar."
-
-#~ msgctxt ""
-#~ "@label for radiobutton group, begins the sentence 'middle-click by "
-#~ "pressing bottom-middle edge/by pressing anywhere with three fingers'"
-#~ msgid "Middle-click by:"
-#~ msgstr "Clic central:"
-
-#~ msgctxt ""
-#~ "@option:radio completes the sentence 'middle-click by pressing bottom-"
-#~ "middle edge'"
-#~ msgid "Pressing bottom-middle edge"
-#~ msgstr "Al pulsar el centro del borde inferior"
-
-#~ msgctxt ""
-#~ "@option:radio completes the sentence 'middle-click by pressing bottom-"
-#~ "left and bottom-right corners'"
-#~ msgid "Pressing bottom-left and bottom-right corners"
-#~ msgstr "Al pulsar las esquinas inferior derecha e inferior izquierda"
-
-#~ msgctxt ""
-#~ "@option:check completes the sentence 'middle-click by pressing anywhere "
-#~ "with three fingers'"
-#~ msgid "Pressing anywhere with three fingers"
-#~ msgstr "Al pulsar con tres dedos en cualquier lugar"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Right-click (three-finger tap to middle-click)"
-#~ msgstr "Clic derecho (toque con tres dedos para un clic central)"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Middle-click (three-finger tap to right-click)"
-#~ msgstr "Clic central (toque con tres dedos para hacer un clic derecho)."
-
-#~ msgid "Cannot connect to X server"
-#~ msgstr "No se puede conectar con el servidor X"
-
-#~ msgid "No touchpad found"
-#~ msgstr "No se ha encontrado ningún panel táctil"
-
-#~ msgid "Cannot apply touchpad configuration"
-#~ msgstr "No se puede aplicar la configuración del panel táctil"
-
-#~ msgid "Cannot read touchpad configuration"
-#~ msgstr "No se puede leer la configuración del panel táctil"
-
-#~ msgid "Cannot read default touchpad configuration"
-#~ msgstr "No se puede leer la configuración predeterminada del panel táctil"
+msgstr "Clic derecho al tocar con tres dedos en cualquier lugar."
