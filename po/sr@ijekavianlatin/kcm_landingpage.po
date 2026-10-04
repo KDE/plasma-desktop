@@ -1,0 +1,155 @@
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-07-01 00:47+0000\n"
+"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavianlatin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: landingpage_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "Ime šeme boja"
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:15
+#, kde-format
+msgid "Single click to open files"
+msgstr "Jedan klik otvara fajlove"
+
+#. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:19
+#, kde-format
+msgid "Switch the look and feel package depending on time of day"
+msgstr "Prebacuj paket izgleda i osjećaja u zavisnosti od doba dana"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:23
+#, kde-format
+msgid "Global Look and Feel package"
+msgstr "Paket globalnog izgleda i osjećaja"
+
+#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
+#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:27
+#: landingpage_kdeglobalssettings.kcfg:31
+#, kde-format
+msgid "Global Look and Feel package, alternate"
+msgstr "Paket globalnog izgleda i osjećaja, alternativni"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:35
+#, kde-format
+msgid "Animation speed"
+msgstr "Brzina animacije"
+
+#: ui/LookAndFeelBox.qml:106
+#, kde-format
+msgctxt "@action:button"
+msgid "Change global theme"
+msgstr "Promijeni globalnu temu"
+
+#: ui/LookAndFeelBox.qml:187
+#, kde-format
+msgctxt "@label accessible"
+msgid "Global theme"
+msgstr "Globalna tema"
+
+#: ui/main.qml:31
+#, kde-format
+msgctxt "@title:group for light/dark quick switch"
+msgid "Theme:"
+msgstr "Tema:"
+
+#: ui/main.qml:90
+#, kde-format
+msgctxt "Switch between dark and light look and feel packages automatically"
+msgid "Automatic"
+msgstr "Automatska"
+
+#: ui/main.qml:116
+#, kde-format
+msgctxt ""
+"@info:tooltip 1 is the name of a light global theme, 2 is the name of a dark "
+"global theme"
+msgid "Use “%1” during the day and “%2” at night"
+msgstr "Koristi „%1“ tokom dana i „%2“ noću"
+
+#: ui/main.qml:126
+#, kde-format
+msgctxt "@title:group translate as short as possible"
+msgid "More appearance settings:"
+msgstr "Više postavki izgleda:"
+
+#: ui/main.qml:193
+#, kde-format
+msgctxt "@title:slider"
+msgid "Animation speed:"
+msgstr "Brzina animacije:"
+
+#: ui/main.qml:203
+#, kde-format
+msgctxt "Animation speed"
+msgid "Slow"
+msgstr "sporo"
+
+#: ui/main.qml:210
+#, kde-format
+msgctxt "Animation speed"
+msgid "Instant"
+msgstr "trenutno"
+
+#: ui/main.qml:220
+#, kde-format
+msgctxt ""
+"part of a sentence: 'Clicking files or folders [opens them/selects them]'"
+msgid "Clicking files or folders:"
+msgstr "Klik na fajlove ili fascikle:"
+
+#: ui/main.qml:225
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders selects them'"
+msgid "Selects them"
+msgstr "Bira ih"
+
+#: ui/main.qml:231
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Open by double-clicking instead"
+msgstr "Otvarajte ih dvoklikom"
+
+#: ui/main.qml:247
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "Otvara ih"
+
+#: ui/main.qml:252
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Select by clicking on item's selection marker"
+msgstr "Birajte klikom na marker izbora stavke"
+
+#: ui/main.qml:264
+#, kde-format
+msgctxt "@title:group translate as short as possible"
+msgid "More behavior settings:"
+msgstr "Više postavki ponašanja:"
+
+#: ui/main.qml:275
+#, kde-format
+msgctxt "@title:group for grid of buttons opening kcms"
+msgid "Most used pages:"
+msgstr "Najkorišćenije stranice:"

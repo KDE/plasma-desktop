@@ -1,12 +1,13 @@
 # Translation of kcm_touchpad.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2015, 2017.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-12 00:49+0000\n"
-"PO-Revision-Date: 2017-10-30 23:08+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -21,13 +22,10 @@ msgstr ""
 #: kcm.cpp:57
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "Не могу да изаберем одговарајућу позадину"
 
 #: kcm.cpp:103
-#, fuzzy, kde-format
-#| msgid ""
-#| "Error while loading values. See logs for more informations. Please "
-#| "restart this configuration module."
+#, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
@@ -36,16 +34,12 @@ msgstr ""
 "поново овај поставни модул."
 
 #: kcm.cpp:106
-#, fuzzy, kde-format
-#| msgid "No touchpad found. Connect touchpad now."
+#, kde-format
 msgid "No pointer device found. Connect now."
-msgstr "Нема ниједног додирника. Повежите га сада."
+msgstr "Нема ниједног показивачког уређаја. Повежите га сада."
 
 #: kcm.cpp:115
-#, fuzzy, kde-format
-#| msgid ""
-#| "Not able to save all changes. See logs for more informations. Please "
-#| "restart this configuration module and try again."
+#, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
@@ -72,16 +66,14 @@ msgstr ""
 "поново овај поставни модул."
 
 #: kcm.cpp:162
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. Closed its setting dialog."
+#, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr "Додирник откачен. Затворите његов дијалог поставки."
+msgstr "Показивачки уређај је откачен. Његов дијалог поставки је затворен."
 
 #: kcm.cpp:164
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. No other touchpads found."
+#, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr "Додирник откачен. Нема других додирника."
+msgstr "Показивачки уређај је откачен. Нема других уређаја."
 
 #: kwinwaylandbackend.cpp:45
 #, kde-format
@@ -92,75 +84,67 @@ msgstr "Критична грешка при читању основних по�
 #, kde-format
 msgctxt "@info:status placeholdermessage text"
 msgid "No touchpad found"
-msgstr ""
+msgstr "Нема ниједног додирника"
 
 #: ui/main.qml:70
 #, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchpad"
-msgstr ""
+msgstr "Повежите спољашњи додирник"
 
 #: ui/main.qml:87
 #, kde-format
 msgctxt "@label:listbox device selection"
 msgid "Device:"
-msgstr ""
+msgstr "Уређај:"
 
 #: ui/main.qml:110
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
-msgstr ""
+msgstr "Опште:"
 
 #: ui/main.qml:111
-#, fuzzy, kde-format
-#| msgctxt "Coasting"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable device"
-msgstr "активирано"
+msgstr "Укључи уређај"
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgid "Disable touchpad when mouse is plugged in"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
-msgstr "Деактивирај додирник када се утакне миш"
+msgstr "Искључи док је миш повезан"
 
 #: ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Disable touchpad when typing"
+#, kde-format
 msgctxt "option:check"
 msgid "Disable while typing"
-msgstr "Деактивирање додирника током куцања"
+msgstr "Искључи током куцања"
 
 #: ui/main.qml:147
 #, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
-msgstr ""
+msgstr "Ово може да смета у видео играма."
 
 #: ui/main.qml:169
-#, fuzzy, kde-format
-#| msgctxt "Emulated mouse button"
-#| msgid "Left button"
+#, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
-msgstr "лево дугме"
+msgstr "Лево и десно дугме:"
 
 #: ui/main.qml:170
-#, fuzzy, kde-format
-#| msgctxt "Touchpad Edge"
-#| msgid "Left edge"
+#, kde-format
 msgctxt "@option:check"
 msgid "Swap (left-handed mode)"
-msgstr "лева ивица"
+msgstr "Замени (режим за леворуке)"
 
 #: ui/main.qml:185
 #, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
-msgstr ""
+msgstr "Притисни оба истовремено за средњи клик"
 
 #: ui/main.qml:197
 #, kde-format
@@ -169,84 +153,80 @@ msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"Укључивање ове поставке продужава кашњење клика за 50 ms. Додатно кашњење је "
+"потребно да би се исправно открили истовремени притисци левог и десног "
+"дугмета."
 
 #: ui/main.qml:207
-#, fuzzy, kde-format
-#| msgid "Minimum pointer speed"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
-msgstr "Најмања брзина показивача."
+msgstr "Брзина показивача:"
 
 #: ui/main.qml:287
-#, fuzzy, kde-format
-#| msgctxt "Pointer acceleration"
-#| msgid "Acceleration:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
-msgstr "Убрзање:"
+msgstr "Укључи убрзање показивача"
 
 #: ui/main.qml:299
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
-msgstr ""
+msgstr "Кад је укључено, показивач прелази већи пут што је покрет бржи."
 
 #: ui/main.qml:310
-#, fuzzy, kde-format
-#| msgid "Scrolling"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
-msgstr "Клизање"
+msgstr "Брзина клизања:"
 
 #: ui/main.qml:392
 #, kde-format
 msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
-msgstr ""
+msgstr "спорије"
 
 #: ui/main.qml:399
 #, kde-format
 msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
-msgstr ""
+msgstr "брже"
 
 #: ui/main.qml:406
-#, fuzzy, kde-format
-#| msgid "Scrolling"
+#, kde-format
 msgctxt ""
 "@title group begins the sentence 'Scroll by moving two fingers anywhere/"
 "moving one finger on edge'"
 msgid "Scroll by:"
-msgstr "Клизање"
+msgstr "Клизање:"
 
 #: ui/main.qml:409
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
-msgstr ""
+msgstr "Померањем два прста било где"
 
 #: ui/main.qml:427
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
-msgstr ""
+msgstr "Померањем једног прста по ивици"
 
 #: ui/main.qml:436
-#, fuzzy, kde-format
-#| msgid "Reverse horizontal scrolling"
+#, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
-msgstr "обратно водоравно клизање"
+msgstr "Обрни смер клизања (природно клизање)"
 
 #: ui/main.qml:453
-#, fuzzy, kde-format
-#| msgid "Reverse horizontal scrolling"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
-msgstr "обратно водоравно клизање"
+msgstr "Искључи водоравно клизање"
 
 #: ui/main.qml:471
 #, kde-format
@@ -254,44 +234,41 @@ msgctxt ""
 "@title:group for radiobutton group, begins the sentence 'right-click by "
 "pressing bottom-right corner/pressing with two fingers'"
 msgid "Right-click by:"
-msgstr ""
+msgstr "Десни клик:"
 
 #: ui/main.qml:475
-#, fuzzy, kde-format
-#| msgctxt "Touchpad Edge"
-#| msgid "Bottom right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-right "
 "corner'"
 msgid "Pressing bottom-right corner"
-msgstr "доњи десни угао"
+msgstr "Притиском на доњи десни угао"
 
 #: ui/main.qml:480
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
-msgstr ""
+msgstr "Средњи клик притиском на оба доња угла."
 
 #: ui/main.qml:481
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr ""
+msgstr "Средњи клик притиском на средину доње ивице."
 
 #: ui/main.qml:503
-#, fuzzy, kde-format
-#| msgid "Disable touchpad when typing"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing with two "
 "fingers'"
 msgid "Pressing anywhere with two fingers"
-msgstr "Деактивирање додирника током куцања"
+msgstr "Притиском два прста било где"
 
 #: ui/main.qml:504
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
-msgstr ""
+msgstr "Средњи клик притиском три прста било где."
 
 #: ui/main.qml:516
 #, kde-format
@@ -299,54 +276,49 @@ msgctxt ""
 "@label for radiobutton group, begins the sentence 'middle-click by pressing "
 "bottom-middle edge/by pressing anywhere with three fingers'"
 msgid "Middle-click by:"
-msgstr ""
+msgstr "Средњи клик:"
 
 #: ui/main.qml:519
-#, fuzzy, kde-format
-#| msgctxt "Touchpad Edge"
-#| msgid "Bottom right corner"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-middle "
 "edge'"
 msgid "Pressing bottom-middle edge"
-msgstr "доњи десни угао"
+msgstr "Притиском на средину доње ивице"
 
 #: ui/main.qml:539
-#, fuzzy, kde-format
-#| msgctxt "Touchpad Edge"
-#| msgid "Bottom right corner"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-left "
 "and bottom-right corners'"
 msgid "Pressing bottom-left and bottom-right corners"
-msgstr "доњи десни угао"
+msgstr "Притиском на доњи леви и доњи десни угао"
 
 #: ui/main.qml:551
-#, fuzzy, kde-format
-#| msgid "Disable touchpad when typing"
+#, kde-format
 msgctxt ""
 "@option:check completes the sentence 'middle-click by pressing anywhere with "
 "three fingers'"
 msgid "Pressing anywhere with three fingers"
-msgstr "Деактивирање додирника током куцања"
+msgstr "Притиском три прста било где"
 
 #: ui/main.qml:564
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
-msgstr ""
+msgstr "Тапкање:"
 
 #: ui/main.qml:565
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap to click"
-msgstr ""
+msgstr "Тапни за клик"
 
 #: ui/main.qml:580
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
-msgstr ""
+msgstr "Дозволи превлачење после тапа"
 
 #: ui/main.qml:592
 #, kde-format
@@ -355,737 +327,41 @@ msgid ""
 "Tap, then tap and immediately slide finger over the touchpad to drag. Lift "
 "finger to drop."
 msgstr ""
+"Тапните, па поново тапните и одмах повуците прст по додирнику да бисте "
+"превлачили. Подигните прст да бисте спустили."
 
 #: ui/main.qml:599
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
-msgstr ""
+msgstr "Дозволи кратко подизање прста током превлачења на тап"
 
 #: ui/main.qml:612
-#, fuzzy, kde-format
-#| msgctxt "Tapping"
-#| msgid "Two fingers:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Two-finger tap:"
-msgstr "Два прста:"
+msgstr "Тап са два прста:"
 
 #: ui/main.qml:618
 #, kde-format
 msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
-msgstr ""
+msgstr "Десни клик (тап са три прста за средњи клик)"
 
 #: ui/main.qml:619
 #, kde-format
 msgctxt "@option:radio"
 msgid "Right-click"
-msgstr ""
+msgstr "Десни клик"
 
 #: ui/main.qml:640
 #, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
-msgstr ""
+msgstr "Средњи клик (тап са три прста за десни клик)"
 
 #: ui/main.qml:641
 #, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click"
-msgstr ""
-
-#~ msgid "Cannot connect to X server"
-#~ msgstr "Не могу да се повежем на икс сервер"
-
-#~ msgid "Cannot apply touchpad configuration"
-#~ msgstr "Не могу да применим поставу додирника."
-
-#~ msgid "Cannot read touchpad configuration"
-#~ msgstr "Не могу да прочитам поставу додирника."
-
-#, fuzzy
-#~| msgid "Cannot read touchpad configuration"
-#~ msgid "Cannot read default touchpad configuration"
-#~ msgstr "Не могу да прочитам поставу додирника."
-
-#~ msgid "Querying input devices failed. Please reopen this settings module."
-#~ msgstr ""
-#~ "Испитивање улазних уређаја није успело. Отворите поново овај модул "
-#~ "поставки."
-
-#, fuzzy
-#~| msgctxt "Tapping"
-#~| msgid "Two fingers:"
-#~ msgid "Two fingers"
-#~ msgstr "Два прста:"
-
-#, fuzzy
-#~| msgctxt "Touchpad Edge"
-#~| msgid "Top edge"
-#~ msgid "Touchpad edges"
-#~ msgstr "горња ивица"
-
-# rewrite-msgid: /Gesture//
-#, fuzzy
-#~| msgid "Tap-and-Drag Gesture"
-#~ msgid "Tap-and-drag"
-#~ msgstr "Превлачење на тап"
-
-#, fuzzy
-#~| msgid "Disable touchpad when typing"
-#~ msgid "Disable touchpad while typing to prevent accidental inputs."
-#~ msgstr "Деактивирање додирника током куцања"
-
-#, fuzzy
-#~| msgid "Reverse horizontal scrolling"
-#~ msgid "Disable horizontal scrolling."
-#~ msgstr "обратно водоравно клизање"
-
-#, fuzzy
-#~| msgid "Single tap timeout:"
-#~ msgctxt "@info:tooltip"
-#~ msgid "Single tap to left-click."
-#~ msgstr "Прековреме једноструког тапа:"
-
-# rewrite-msgid: /Gesture//
-#, fuzzy
-#~| msgid "Tap-and-Drag Gesture"
-#~ msgid "Tap-and-drag lock"
-#~ msgstr "Превлачење на тап"
-
-#, fuzzy
-#~| msgid "Touchpad KCM"
-#~ msgid "Touchpad"
-#~ msgstr "КЦМ додирника"
-
-#~ msgid "Enable Touchpad"
-#~ msgstr "Активирај додирник"
-
-#~ msgid "Disable Touchpad"
-#~ msgstr "Деактивирај додирник"
-
-#~ msgid "Toggle Touchpad"
-#~ msgstr "Пребаци додирник"
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "No action"
-#~ msgstr "без радње"
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "Middle button"
-#~ msgstr "средње дугме"
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "Right button"
-#~ msgstr "десно дугме"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "All edges"
-#~ msgstr "све ивице"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Top edge"
-#~ msgstr "горња ивица"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Top right corner"
-#~ msgstr "горњи десни угао"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Right edge"
-#~ msgstr "десна ивица"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Bottom right corner"
-#~ msgstr "доњи десни угао"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Bottom edge"
-#~ msgstr "доња ивица"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Bottom left corner"
-#~ msgstr "доњи леви угао"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Left edge"
-#~ msgstr "лева ивица"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Top left corner"
-#~ msgstr "доњи леви угао"
-
-#~ msgid "Touchpad was disabled because a mouse was plugged in"
-#~ msgstr "Додирник је деактивиран јер је миш утакнут."
-
-#~ msgid "Touchpad was enabled because the mouse was unplugged"
-#~ msgstr "Додирник је активиран јер је миш извучен."
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Часлав Илић"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "caslav.ilic@gmx.net"
-
-#~ msgid "Drag me"
-#~ msgstr "Превуци ме"
-
-#~ msgctxt "Mouse button"
-#~ msgid "Left button"
-#~ msgstr "Лево дугме"
-
-#~ msgctxt "Mouse button"
-#~ msgid "Right button"
-#~ msgstr "Десно дугме"
-
-#~ msgctxt "Mouse button"
-#~ msgid "Middle button"
-#~ msgstr "Средње дугме"
-
-#~ msgid ""
-#~ "Active settings don't match saved settings.\n"
-#~ "You currently see saved settings."
-#~ msgstr ""
-#~ "Активне поставке не одговарају сачуваним.\n"
-#~ "Тренутно видите сачуване поставке."
-
-#~ msgid "Show active settings"
-#~ msgstr "Прикажи активне поставке"
-
-#~ msgid "These settings won't take effect in the testing area"
-#~ msgstr "Ове поставке неће ступити у дејство у пробној зони."
-
-#~ msgid "Enable/Disable Touchpad"
-#~ msgstr "Активирање и деактивирање додирника"
-
-#~ msgctxt "@title:window"
-#~ msgid "Enable/Disable Touchpad"
-#~ msgstr "Активирање и деактивирање додирника"
-
-#, fuzzy
-#~| msgid "Configure..."
-#~ msgid "Configure…"
-#~ msgstr "Подеси..."
-
-#~ msgid "Keyboard shortcuts:"
-#~ msgstr "Пречице са тастатуре:"
-
-#~ msgid "Timeout:"
-#~ msgstr "Прековреме:"
-
-#~ msgid ""
-#~ "If there was no keyboard activity for more than specified\n"
-#~ "number of milliseconds, touchpad will be enabled again"
-#~ msgstr ""
-#~ "Ако тастатура не буде активна више од задатог броја\n"
-#~ "милисекунди, додирник ће бити поново активиран."
-
-#~ msgid " ms"
-#~ msgstr " ms"
-
-#~ msgid ""
-#~ "Disable click emulation and scrolling.\n"
-#~ "You will be still able to move pointer using touchpad and perform clicks "
-#~ "with hardware buttons."
-#~ msgstr ""
-#~ "Искључите емулацију кликтања и клизање.\n"
-#~ "И даље ћете моћи да померате показивач додирником, и да кликћете "
-#~ "хардверским дугмадима."
-
-#~ msgid "Disable taps and scrolling only"
-#~ msgstr "Деактивирај само тапкање и клизање"
-
-#~ msgid "Notifications:"
-#~ msgstr "Обавештења:"
-
-#~ msgid "Ignored devices:"
-#~ msgstr "Игнорисани уређаји:"
-
-#~ msgid ""
-#~ "Some devices might be incorrectly treated as a mouse.\n"
-#~ "You can add them to this list so that they will be ignored when they're "
-#~ "plugged in."
-#~ msgstr ""
-#~ "Неки уређаји могу бити погрешно сматрани мишем.\n"
-#~ "Њих можете додати на овај списак да би били игнорисани кад се утакну."
-
-#~ msgid "Pointer Motion"
-#~ msgstr "Кретање показивача"
-
-#~ msgctxt "Mouse pointer motion parameters"
-#~ msgid "Speed"
-#~ msgstr "Брзина"
-
-#~ msgctxt "Minimum pointer movement speed"
-#~ msgid "Minimum:"
-#~ msgstr "Најмања:"
-
-#~ msgid "Minimum pointer speed"
-#~ msgstr "Најмања брзина показивача."
-
-#~ msgctxt "Maximum pointer movement speed"
-#~ msgid "Maximum:"
-#~ msgstr "Највећа:"
-
-#~ msgid "Maximum pointer speed"
-#~ msgstr "Највећа брзина показивача."
-
-#~ msgctxt "Pointer acceleration"
-#~ msgid "Acceleration:"
-#~ msgstr "Убрзање:"
-
-#~ msgid "Acceleration factor for normal pointer movements"
-#~ msgstr "Фактор убрзања за нормалне покрете показивача."
-
-#~ msgctxt "Pointer motion"
-#~ msgid "Pressure-Dependent Motion"
-#~ msgstr "Кретање зависно од притиска"
-
-#~ msgctxt "Pressure-dependent pointer motion"
-#~ msgid "Minimum pressure:"
-#~ msgstr "Најмањи притисак:"
-
-#~ msgctxt "Pressure-dependent pointer motion"
-#~ msgid "Minimum factor:"
-#~ msgstr "Најмањи фактор:"
-
-#~ msgctxt "Pressure-dependent pointer motion"
-#~ msgid "Maximum pressure:"
-#~ msgstr "Највећи притисак:"
-
-#~ msgctxt "Pressure-dependent pointer motion"
-#~ msgid "Maximum factor:"
-#~ msgstr "Највећи фактор:"
-
-#~ msgid "Finger pressure at which minimum pressure motion factor is applied"
-#~ msgstr "Притисак прста при којем се примењује најмањи фактор кретања."
-
-#~ msgid "Finger pressure at which maximum pressure motion factor is applied"
-#~ msgstr "Притисак прста при којем се примењује највећи фактор кретања."
-
-#~ msgid "Lowest setting for pressure motion factor"
-#~ msgstr "Најнижа поставка за фактор кретања под притиском."
-
-#~ msgid "Greatest setting for pressure motion factor"
-#~ msgstr "Највиша поставка за фактор кретања под притиском."
-
-#~ msgctxt "Pointer motion"
-#~ msgid "Noise Cancellation"
-#~ msgstr "Поништавање шума"
-
-#~ msgctxt "Noise cancellation"
-#~ msgid "Vertical:"
-#~ msgstr "Усправно:"
-
-#~ msgctxt "Noise cancellation"
-#~ msgid "Horizontal:"
-#~ msgstr "Водоравно:"
-
-#~ msgid ""
-#~ "The minimum vertical hardware distance required to generate motion events"
-#~ msgstr ""
-#~ "Најмање усправно хардверско растојање које генерише догађаје кретања."
-
-# well-spelled: јед
-#~ msgid " units"
-#~ msgstr " јед."
-
-#~ msgid ""
-#~ "The minimum horizontal hardware distance required to generate motion "
-#~ "events"
-#~ msgstr ""
-#~ "Најмање водоравно хардверско растојање које генерише догађаје кретања."
-
-#~ msgid "Scrolling"
-#~ msgstr "Клизање"
-
-#~ msgid "Edge scrolling:"
-#~ msgstr "Клизање ивицом:"
-
-#~ msgid "Enable vertical scrolling when dragging along the right edge"
-#~ msgstr "Активира усправно клизање на превлачење десном ивицом."
-
-#~ msgctxt "Scrolling direction"
-#~ msgid "Vertical"
-#~ msgstr "усправно"
-
-#~ msgid "Enable horizontal scrolling when dragging along the bottom edge"
-#~ msgstr "Активира водоравно клизање на превлачење доњом ивицом."
-
-#~ msgctxt "Scrolling direction"
-#~ msgid "Horizontal"
-#~ msgstr "водоравно"
-
-#~ msgid ""
-#~ "Enable vertical scrolling when dragging with two fingers anywhere on the "
-#~ "touchpad"
-#~ msgstr ""
-#~ "Активира усправно клизање на превлачење са два прста било где по "
-#~ "додирнику."
-
-#~ msgid ""
-#~ "Enable horizontal scrolling when dragging with two fingers anywhere on "
-#~ "the touchpad"
-#~ msgstr ""
-#~ "Активира водоравно клизање на превлачење са два прста било где по "
-#~ "додирнику."
-
-#~ msgid "Reverse vertical scrolling"
-#~ msgstr "обратно усправно клизање"
-
-#~ msgid "Reverse horizontal scrolling"
-#~ msgstr "обратно водоравно клизање"
-
-#~ msgid "Two-finger scrolling:"
-#~ msgstr "Клизање на два прста:"
-
-#~ msgid "Reverse scrolling:"
-#~ msgstr "Обратно клизање:"
-
-#~ msgctxt "Touchpad - Scrolling"
-#~ msgid "Scrolling Distance"
-#~ msgstr "Растојање клизања"
-
-#~ msgctxt "Scrolling distance"
-#~ msgid "Vertical:"
-#~ msgstr "Усправно:"
-
-#~ msgid "Move distance of the finger for a scroll event"
-#~ msgstr "Растојање покрета прстом за догађај клизања."
-
-#~ msgid " mm"
-#~ msgstr " mm"
-
-#~ msgctxt "Scrolling distance"
-#~ msgid "Horizontal:"
-#~ msgstr "Водоравно:"
-
-#~ msgid ""
-#~ "Continue scrolling after the finger is released from the edge of the "
-#~ "touchpad"
-#~ msgstr "Наставак клизања пошто прст напусти ивицу додирника."
-
-#~ msgctxt "Touchpad - Scrolling"
-#~ msgid "Coasting"
-#~ msgstr "Плутање"
-
-#~ msgctxt "Coasting"
-#~ msgid "Minimum speed:"
-#~ msgstr "Најмања брзина:"
-
-#~ msgid ""
-#~ "Your finger needs to produce this many scrolls per second in order to "
-#~ "start coasting"
-#~ msgstr ""
-#~ "Прст мора да произведе оволико клизања по секунди да би се активирало "
-#~ "плутање."
-
-# well-spelled: сек
-#~ msgid " scrolls/sec"
-#~ msgstr " клизања/сек."
-
-#~ msgctxt "Coasting"
-#~ msgid "Deceleration:"
-#~ msgstr "Успоравање:"
-
-#~ msgid "Number of scrolls/second² to decrease the coasting speed"
-#~ msgstr "Број клизања по секунди на квадрат за опадање брзине плутања."
-
-# well-spelled: сек²
-#~ msgid " scrolls/sec²"
-#~ msgstr " клизања/сек²"
-
-#~ msgid "Corner coasting:"
-#~ msgstr "Плутање на угао:"
-
-#~ msgid ""
-#~ "Enable edge scrolling to continue while the finger stays in an edge corner"
-#~ msgstr ""
-#~ "Активира продужено клизање по ивици када се прст задржи у углу ивице."
-
-#~ msgid ""
-#~ "Scrolling is engaged when a drag starts in the given trigger region.\n"
-#~ "Moving your finger in clockwise circles around the center of the "
-#~ "touchpad\n"
-#~ "will scroll down and counter clockwise motion will scroll up"
-#~ msgstr ""
-#~ "Клизање се активира на почетак превлачења у задатој области окидача.\n"
-#~ "Кружно померање прста у смеру казаљке сата око центра додирника\n"
-#~ "клизаће надоле, а у обрнутом смеру клизаће нагоре."
-
-#~ msgctxt "Touchpad - Scrolling"
-#~ msgid "Circular Scrolling"
-#~ msgstr "Кружно клизање"
-
-#~ msgctxt "Circular scrolling"
-#~ msgid "Trigger region:"
-#~ msgstr "Област окидача:"
-
-#~ msgid "Trigger region on the touchpad to start circular scrolling"
-#~ msgstr "Област окидача на додирнику за почетак кружног клизања."
-
-#~ msgctxt "Circular scrolling"
-#~ msgid "Angle:"
-#~ msgstr "Угао:"
-
-#~ msgid "Move angle (degrees) of finger to generate a scroll event"
-#~ msgstr "Угао покрета прста (у степенима) за генерисање догађаја клизања."
-
-#~ msgctxt "suffix - degrees (angle)"
-#~ msgid "°"
-#~ msgstr "°"
-
-#~ msgid ""
-#~ "When used together with vertical scrolling, hitting the upper or lower "
-#~ "right corner will seamlessly switch over from vertical to circular "
-#~ "scrolling"
-#~ msgstr ""
-#~ "Када се користи заједно са усправним клизањем, досезање горњег или доњег "
-#~ "угла глатко пребацује са вертикалног на кружно клизање."
-
-#~ msgid "Sensitivity"
-#~ msgstr "Осетљивост"
-
-#~ msgctxt "Touchpad"
-#~ msgid "Sensitivity"
-#~ msgstr "Осетљивост"
-
-#~ msgid "Pressure for detecting a touch:"
-#~ msgstr "Притисак за откривање додира:"
-
-#~ msgid "Pressure for detecting a release:"
-#~ msgstr "Притисак за откривање подизања:"
-
-#~ msgid ""
-#~ "When finger pressure goes above this value, the driver counts it as a "
-#~ "touch"
-#~ msgstr ""
-#~ "Када притисак прста премаши ову вредност, драјвер то рачуна као додир."
-
-#~ msgid ""
-#~ "When finger pressure drops below this value, the driver counts it as a "
-#~ "release"
-#~ msgstr ""
-#~ "Када притисак прста спадне испод ове вредности, драјвер то рачуна као "
-#~ "подизање."
-
-#~ msgid ""
-#~ "If palm detection should be enabled. Note that this also requires "
-#~ "hardware/firmware support from the touchpad"
-#~ msgstr ""
-#~ "Треба ли активирати откривање длана. Имајте на уму да ово такође захтева "
-#~ "хардверску/фирмверску подршку додирника."
-
-#~ msgctxt "Touchpad"
-#~ msgid "Palm Detection"
-#~ msgstr "Откривање длана"
-
-#~ msgctxt "Palm detection"
-#~ msgid "Minimum width:"
-#~ msgstr "Најмања ширина:"
-
-#~ msgctxt "Palm detection"
-#~ msgid "Minimum pressure:"
-#~ msgstr "Најмањи притисак:"
-
-#~ msgid "Minimum finger width at which touch is considered a palm"
-#~ msgstr "Најмања ширина прста при којој ће се додир сматрати дланом."
-
-#~ msgid "Minimum finger pressure at which touch is considered a palm"
-#~ msgstr "Најмањи притисак прста при којем ће се додир сматрати дланом."
-
-#~ msgctxt "Touchpad gesture"
-#~ msgid "Taps"
-#~ msgstr "Тапкање"
-
-#~ msgctxt "Tapping"
-#~ msgid "One finger:"
-#~ msgstr "Један прст:"
-
-#~ msgid "Which mouse button is reported on a non-corner one-finger tap"
-#~ msgstr "Које се дугме миша пријављује на тап једним прстом ван угла."
-
-#~ msgctxt "Tapping"
-#~ msgid "Two fingers:"
-#~ msgstr "Два прста:"
-
-#~ msgid "Which mouse button is reported on a non-corner two-finger tap"
-#~ msgstr "Које се дугме миша пријављује на тап са два прста ван угла."
-
-#~ msgctxt "Tapping"
-#~ msgid "Three fingers:"
-#~ msgstr "Три прста:"
-
-#~ msgid "Which mouse button is reported on a non-corner three-finger tap"
-#~ msgstr "Које се дугме миша пријављује на тап са три прста ван угла."
-
-#~ msgctxt "Touchpad"
-#~ msgid "Corners"
-#~ msgstr "Углови"
-
-#~ msgctxt "Touchpad corner"
-#~ msgid "Top left:"
-#~ msgstr "Горњи леви:"
-
-#~ msgid "Which mouse button is reported on a left top corner tap"
-#~ msgstr "Које се дугме миша пријављује на тап у горњи леви угао."
-
-#~ msgctxt "Touchpad corner"
-#~ msgid "Bottom left:"
-#~ msgstr "Доњи леви:"
-
-#~ msgctxt "Touchpad corner"
-#~ msgid "Top right:"
-#~ msgstr "Доњи десни:"
-
-#~ msgid "Which mouse button is reported on a left bottom corner tap"
-#~ msgstr "Које се дугме миша пријављује на тап у доњи леви угао."
-
-#~ msgid "Which mouse button is reported on a right top corner tap"
-#~ msgstr "Које се дугме миша пријављује на тап у горњи десни угао."
-
-#~ msgid "Which mouse button is reported on a right bottom corner tap"
-#~ msgstr "Које се дугме миша пријављује на тап у доњи десни угао."
-
-#~ msgctxt "Touchpad corner"
-#~ msgid "Bottom right:"
-#~ msgstr "Доњи десни:"
-
-#~ msgid ""
-#~ "This gesture is an alternative way of dragging. It is performed by "
-#~ "tapping (touching and releasing the finger), then touching again and "
-#~ "moving the finger on the touchpad"
-#~ msgstr ""
-#~ "Овај гест је алтернативни начин превлачења. Извршава се тапом (брзим "
-#~ "додиром и подизањем прста), затим поновним додиром и померањем прста по "
-#~ "додирнику."
-
-# rewrite-msgid: /Gesture//
-#~ msgid "Tap-and-Drag Gesture"
-#~ msgstr "Превлачење на тап"
-
-#~ msgid ""
-#~ "If off, a tap-and-drag gesture ends when you release the finger. If on, "
-#~ "the gesture is active until you tap a second time, or until timeout "
-#~ "expires"
-#~ msgstr ""
-#~ "Ако је искључено, превлачење на тап престаје подизањем прста. Ако је "
-#~ "укључено, гест је активан док не тапнете други пут или истекне прековреме."
-
-#~ msgctxt "Touchpad gesture"
-#~ msgid "Locked Drags"
-#~ msgstr "Забрављено превлачење"
-
-#~ msgctxt "Locked drags"
-#~ msgid "Timeout:"
-#~ msgstr "Прековреме:"
-
-#~ msgid ""
-#~ "How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
-#~ "automatically turned off after the finger is released from the touchpad"
-#~ msgstr ""
-#~ "Колико дуго треба (у милисекундама) да се режим забрављеног превлачења "
-#~ "аутоматски искључи пошто се прст подигне са додирника."
-
-#~ msgid "Tap Detection"
-#~ msgstr "Откривање тапа"
-
-#~ msgid "Maximum time:"
-#~ msgstr "Највеће време:"
-
-#~ msgid "Maximum finger movement:"
-#~ msgstr "Највећи покрет прста:"
-
-#~ msgid "Maximum time for double tap:"
-#~ msgstr "Највеће време за двоструки тап:"
-
-#~ msgid "Maximum time (in milliseconds) for detecting a tap"
-#~ msgstr "Највеће време (у милисекундама) за откривање тапа."
-
-#~ msgid "Maximum movement of the finger for detecting a tap"
-#~ msgstr "Највећи покрет прстом за откривање тапа."
-
-#~ msgid "Maximum time (in milliseconds) for detecting a double tap"
-#~ msgstr "Највеће време (у милисекундама) за откривање двоструког тапа."
-
-#~ msgid "Timeout after a tap to recognize it as a single tap"
-#~ msgstr "Прековреме по којем се тап узима за једноструки."
-
-#~ msgid "Testing area"
-#~ msgstr "Пробна зона"
-
-#~ msgid "Click me"
-#~ msgstr "Кликни овде"
-
-#, fuzzy
-#~| msgctxt "Pointer acceleration"
-#~| msgid "Acceleration:"
-#~ msgid "Acceleration profile:"
-#~ msgstr "Убрзање:"
-
-#~ msgid "Touchpad KCM"
-#~ msgstr "КЦМ додирника"
-
-#~ msgid "System Settings module for managing your touchpad"
-#~ msgstr "Модул Системских поставки за управљање додирником"
-
-#~ msgid "Copyright © 2016 Roman Gilg"
-#~ msgstr "© 2016, Роман Гилг"
-
-#~ msgid "Developer"
-#~ msgstr "Програмер"
-
-#~ msgid "Roman Gilg"
-#~ msgstr "Роман Гилг"
-
-#~ msgid ""
-#~ "System Settings module, daemon and Plasma applet for managing your "
-#~ "touchpad"
-#~ msgstr ""
-#~ "Модул Системских поставки, демон и плазма аплет за управљање додирником"
-
-#~ msgid "Copyright © 2013 Alexander Mezin"
-#~ msgstr "© 2013, Александар Мезин"
-
-#~ msgid ""
-#~ "This program incorporates work covered by this copyright notice:\n"
-#~ "Copyright © 2002-2005,2007 Peter Osterlund"
-#~ msgstr ""
-#~ "Овај програм садржи рад са наредном напоменом о ауторским правима:\n"
-#~ "© 2002–2005, 2007, Петер Естерлунд"
-
-#~ msgid "Alexander Mezin"
-#~ msgstr "Александар Мезин"
-
-#~ msgid "Thomas Pfeiffer"
-#~ msgstr "Томас Фајфер"
-
-#~ msgctxt "Credits"
-#~ msgid "Usability, testing"
-#~ msgstr "Употребљивост, испробавање"
-
-#~ msgid "Alex Fiestas"
-#~ msgstr "Алехандро Фијестас Оливарес"
-
-#~ msgctxt "Credits"
-#~ msgid "Helped a bit"
-#~ msgstr "Помогао по нешто"
-
-#~ msgid "Peter Osterlund"
-#~ msgstr "Петер Естерлунд"
-
-#~ msgctxt "Credits"
-#~ msgid "Developer of synclient"
-#~ msgstr "Програмер наредбе synclient"
-
-#~ msgid "Vadim Zaytsev"
-#~ msgstr "Вадим Зајцев"
-
-#~ msgctxt "Credits"
-#~ msgid "Testing"
-#~ msgstr "Испробавање"
-
-#~ msgid "Violetta Raspryagayeva"
-#~ msgstr "Виолета Распрјагајева"
+msgstr "Средњи клик"

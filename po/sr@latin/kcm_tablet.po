@@ -1,0 +1,855 @@
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-08-31 00:45+0000\n"
+"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: inputsequence.cpp:191
+#, kde-format
+msgctxt "@action:button This action is disabled"
+msgid "Disabled"
+msgstr "Isključeno"
+
+#: inputsequence.cpp:194
+#, kde-format
+msgctxt "@action:button There is no keybinding"
+msgid "None"
+msgstr "Ništa"
+
+#: inputsequence.cpp:209
+#, kde-format
+msgctxt "@action:button Two keybinds for a dial, up & down"
+msgid "%1 && %2"
+msgstr "%1 && %2"
+
+#: inputsequence.cpp:216
+#, kde-format
+msgctxt "@action:button There is no keybindings"
+msgid "None"
+msgstr "Ništa"
+
+#: inputsequence.cpp:221
+#, kde-format
+msgctxt "@action:button"
+msgid "Left mouse button"
+msgstr "Levo dugme miša"
+
+#: inputsequence.cpp:223
+#, kde-format
+msgctxt "@action:button"
+msgid "Right mouse button"
+msgstr "Desno dugme miša"
+
+#: inputsequence.cpp:225
+#, kde-format
+msgctxt "@action:button"
+msgid "Middle mouse button"
+msgstr "Srednje dugme miša"
+
+#: inputsequence.cpp:231
+#, kde-format
+msgctxt "@action:button"
+msgid "Application-defined"
+msgstr "Određuje program"
+
+#: inputsequence.cpp:233
+#, kde-format
+msgctxt "@action:button"
+msgid "Pen Button %1"
+msgstr "Dugme olovke %1"
+
+#: inputsequence.cpp:235
+#, kde-format
+msgctxt "@action:button"
+msgid "Scroll wheel"
+msgstr "Točkić za klizanje"
+
+#: kcmtablet.cpp:36
+#, kde-format
+msgid "Default"
+msgstr "podrazumevano"
+
+#: kcmtablet.cpp:37
+#, kde-format
+msgid "Portrait"
+msgstr "portret"
+
+#: kcmtablet.cpp:38
+#, kde-format
+msgid "Landscape"
+msgstr "pejzaž"
+
+#: kcmtablet.cpp:39
+#, kde-format
+msgid "Inverted Portrait"
+msgstr "obrnuti portret"
+
+#: kcmtablet.cpp:40
+#, kde-format
+msgid "Inverted Landscape"
+msgstr "obrnuti pejzaž"
+
+#: kcmtablet.cpp:90
+#, kde-format
+msgid "Follow the Current Screen"
+msgstr "prati trenutni ekran"
+
+#: kcmtablet.cpp:95
+#, kde-format
+msgid "All Screens"
+msgstr "svi ekrani"
+
+#: kcmtablet.cpp:104
+#, kde-format
+msgctxt "model - (x,y widthxheight)"
+msgid "%1 - (%2,%3 %4×%5)"
+msgstr "%1 - (%2,%3 %4×%5)"
+
+#: kcmtablet.cpp:164 ui/DisplayTab.qml:102 ui/DisplayTab.qml:103
+#, kde-format
+msgctxt "@item:inlistbox Stretch and fill to the screen"
+msgid "Stretch and Fill"
+msgstr "razvuci i popuni"
+
+#: kcmtablet.cpp:165 ui/DisplayTab.qml:104
+#, kde-format
+msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
+msgid "Keep Aspect Ratio and Fit"
+msgstr "zadrži proporciju i uklopi"
+
+#: kcmtablet.cpp:166 ui/DisplayTab.qml:105
+#, kde-format
+msgctxt "@item:inlistbox Map to portion of the screen"
+msgid "Map to Portion"
+msgstr "mapiraj na deo"
+
+#: kcmtablet.cpp:269
+#, kde-format
+msgctxt "Stylus pen button"
+msgid "Pen button %1:"
+msgstr "Dugme olovke %1:"
+
+#: kcmtablet.cpp:270
+#, kde-format
+msgctxt ""
+"@info Meant to be inserted into an existing sentence like 'configuring pen "
+"button X'"
+msgid "pen button %1"
+msgstr "dugme olovke %1"
+
+#: ui/ActionDialog.qml:27
+#, kde-format
+msgctxt "@title Select the action for the tablet dial"
+msgid "Select Dial/Ring Action"
+msgstr "Izbor radnje točkića/prstena"
+
+#: ui/ActionDialog.qml:28
+#, kde-format
+msgctxt "@title Select the action for the tablet button"
+msgid "Select Button Action"
+msgstr "Izbor radnje dugmeta"
+
+#: ui/ActionDialog.qml:83
+#, kde-format
+msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
+msgid "Choose what action will be taken when rotating %1:"
+msgstr "Izaberite radnju koja će se izvršiti kad se okreće %1:"
+
+#: ui/ActionDialog.qml:84
+#, kde-format
+msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
+msgid "Choose what action will be taken when pressing %1:"
+msgstr "Izaberite radnju koja će se izvršiti kad se pritisne %1:"
+
+#: ui/ActionDialog.qml:98
+#, kde-format
+msgctxt "@option:radio Set this action to an application-defined type"
+msgid "Defer to application"
+msgstr "Prepusti programu"
+
+#: ui/ActionDialog.qml:113
+#, kde-format
+msgctxt "@option:radio Set this action to a keyboard type"
+msgid "Send keyboard key"
+msgstr "Pošalji taster tastature"
+
+#: ui/ActionDialog.qml:129
+#, kde-format
+msgctxt "@option:radio Set this action to a up/down keyboard type"
+msgid "Send keyboard keys"
+msgstr "Pošalji tastere tastature"
+
+#: ui/ActionDialog.qml:144
+#, kde-format
+msgctxt "@option:radio Set this action to a mouse type"
+msgid "Send mouse button click"
+msgstr "Pošalji klik dugmetom miša"
+
+#: ui/ActionDialog.qml:160
+#, kde-format
+msgctxt "@option:radio Set this action to a pen button type"
+msgid "Send pen button"
+msgstr "Pošalji dugme olovke"
+
+#: ui/ActionDialog.qml:177
+#, kde-format
+msgctxt "@option:radio Set this action to a scroll wheel type type"
+msgid "Act as scroll wheel"
+msgstr "Ponašaj se kao točkić za klizanje"
+
+#: ui/ActionDialog.qml:195
+#, kde-format
+msgctxt "@option:radio Disable this action"
+msgid "Do nothing"
+msgstr "Ne radi ništa"
+
+#: ui/ActionDialog.qml:215
+#, kde-format
+msgctxt "@info"
+msgid ""
+"This tablet button is forwarded to the focused application, which can decide "
+"how to handle it."
+msgstr ""
+"Ovo dugme tablice prosleđuje se fokusiranom programu, koji odlučuje šta će s "
+"njim."
+
+#: ui/ActionDialog.qml:244
+#, kde-format
+msgctxt ""
+"@label prefix for configuring Keybind to send when dial/ring is turned "
+"upwards"
+msgid "Clockwise:"
+msgstr "U smeru kazaljke sata:"
+
+#: ui/ActionDialog.qml:257
+#, kde-format
+msgctxt ""
+"@label prefix for configuring Keybind to send when dial/ring is turned "
+"downwards"
+msgid "Counterclockwise:"
+msgstr "Suprotno kazaljci sata:"
+
+#: ui/ActionDialog.qml:271
+#, kde-format
+msgctxt ""
+"@label:slider Speed for how often this dial/ring should emit key events"
+msgid "Speed:"
+msgstr "Brzina:"
+
+#: ui/ActionDialog.qml:286
+#, kde-format
+msgctxt "@action:inmenu Left mouse click"
+msgid "Left-click"
+msgstr "Levi klik"
+
+#: ui/ActionDialog.qml:287
+#, kde-format
+msgctxt "@action:inmenu Middle mouse click"
+msgid "Middle-click"
+msgstr "Srednji klik"
+
+#: ui/ActionDialog.qml:288
+#, kde-format
+msgctxt "@action:inmenu Right mouse click"
+msgid "Right-click"
+msgstr "Desni klik"
+
+#: ui/ActionDialog.qml:315
+#, kde-format
+msgctxt "@option:check The ctrl modifier on the keyboard"
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: ui/ActionDialog.qml:322
+#, kde-format
+msgctxt "@option:check The alt modifier on the keyboard"
+msgid "Alt"
+msgstr "Alt"
+
+#: ui/ActionDialog.qml:329
+#, kde-format
+msgctxt "@option:check The meta modifier on the keyboard"
+msgid "Meta"
+msgstr "Meta"
+
+#: ui/ActionDialog.qml:336
+#, kde-format
+msgctxt "@option:check The shift modifier on the keyboard"
+msgid "Shift"
+msgstr "Shift"
+
+#: ui/ActionDialog.qml:352
+#, kde-format
+msgctxt "@action:inmenu Stylus button"
+msgid "Button 1"
+msgstr "Dugme 1"
+
+#: ui/ActionDialog.qml:353
+#, kde-format
+msgctxt "@action:inmenu Stylus button"
+msgid "Button 2"
+msgstr "Dugme 2"
+
+#: ui/ActionDialog.qml:354
+#, kde-format
+msgctxt "@action:inmenu Stylus button"
+msgid "Button 3"
+msgstr "Dugme 3"
+
+#: ui/ActionDialog.qml:363
+#, kde-format
+msgctxt "@info"
+msgid "Act like a scroll wheel on a mouse."
+msgstr "Ponaša se kao točkić za klizanje na mišu."
+
+#: ui/ActionDialog.qml:372
+#, kde-format
+msgctxt "@info"
+msgid "This button is disabled and will not do anything."
+msgstr "Ovo dugme je isključeno i neće raditi ništa."
+
+#: ui/Calibration.qml:32
+#, kde-format
+msgctxt "@title"
+msgid "Pen Calibration"
+msgstr "Kalibracija olovke"
+
+#: ui/Calibration.qml:73
+#, kde-format
+msgctxt "@info"
+msgid "%1: (%2 px, %3 px)"
+msgstr "%1: (%2 piks., %3 piks.)"
+
+#: ui/Calibration.qml:107
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Applied center correction (%1 px, %2 px). Retap the targets to redo the "
+"correction."
+msgstr ""
+"Primenjena je korekcija središta (%1 piks., %2 piks.). Ponovo tapnite mete "
+"da ponovite korekciju."
+
+#: ui/Calibration.qml:173
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Tap the targets again to confirm the new calibration.<nl/><nl/><emphasis "
+"strong='true'>Will revert to default calibration in %1 second unless further "
+"action is taken.</emphasis>"
+msgid_plural ""
+"Tap the targets again to confirm the new calibration.<nl/><nl/><emphasis "
+"strong='true'>Will revert to default calibration in %1 seconds unless "
+"further action is taken.</emphasis>"
+msgstr[0] ""
+"Ponovo tapnite mete da potvrdite novu kalibraciju.<nl/><nl/><emphasis "
+"strong='true'>Podrazumevana kalibracija biće vraćena za %1 sekundu ako ne "
+"preduzmete nikakvu radnju.</emphasis>"
+msgstr[1] ""
+"Ponovo tapnite mete da potvrdite novu kalibraciju.<nl/><nl/><emphasis "
+"strong='true'>Podrazumevana kalibracija biće vraćena za %1 sekunde ako ne "
+"preduzmete nikakvu radnju.</emphasis>"
+msgstr[2] ""
+"Ponovo tapnite mete da potvrdite novu kalibraciju.<nl/><nl/><emphasis "
+"strong='true'>Podrazumevana kalibracija biće vraćena za %1 sekundi ako ne "
+"preduzmete nikakvu radnju.</emphasis>"
+msgstr[3] ""
+"Ponovo tapnite mete da potvrdite novu kalibraciju.<nl/><nl/><emphasis "
+"strong='true'>Podrazumevana kalibracija biće vraćena za %1 sekundu ako ne "
+"preduzmete nikakvu radnju.</emphasis>"
+
+#: ui/Calibration.qml:177
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Calibration is completed and saved.\n"
+"\n"
+"Tap the center target once to fine-tune alignment. You can retap the other "
+"targets to verify the result."
+msgstr ""
+"Kalibracija je završena i sačuvana.\n"
+"\n"
+"Tapnite jednom središnju metu da fino podesite poravnanje. Ostale mete "
+"možete ponovo tapnuti da proverite rezultat."
+
+#: ui/Calibration.qml:180
+#, kde-format
+msgctxt "@info"
+msgid "Tap the center of each target."
+msgstr "Tapnite središte svake mete."
+
+#: ui/Calibration.qml:201
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Offset Correction:\n"
+"%1"
+msgstr ""
+"Korekcija pomaka:\n"
+"%1"
+
+#: ui/Calibration.qml:216
+#, kde-format
+msgctxt "@action:button"
+msgid "Refine Existing Calibration"
+msgstr "Doradi postojeću kalibraciju"
+
+#: ui/Calibration.qml:228
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset and Try Again"
+msgstr "Resetuj i pokušaj ponovo"
+
+#: ui/Calibration.qml:228
+#, kde-format
+msgctxt "@action:button"
+msgid "Calibrate from Scratch"
+msgstr "Kalibriši iz početka"
+
+#: ui/Calibration.qml:243
+#, kde-format
+msgctxt "@action:button"
+msgid "Close"
+msgstr "Zatvori"
+
+#: ui/Calibration.qml:243
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Odustani"
+
+#: ui/Calibration.qml:315
+#, kde-format
+msgctxt "@info Name used in the diagnostic log"
+msgid "Top-left"
+msgstr "Gore levo"
+
+#: ui/Calibration.qml:334
+#, kde-format
+msgctxt "@info Name used in the diagnostic log"
+msgid "Top-right"
+msgstr "Gore desno"
+
+#: ui/Calibration.qml:353
+#, kde-format
+msgctxt "@info Name used in the diagnostic log"
+msgid "Bottom-left"
+msgstr "Dole levo"
+
+#: ui/Calibration.qml:372
+#, kde-format
+msgctxt "@info Name used in the diagnostic log"
+msgid "Bottom-right"
+msgstr "Dole desno"
+
+#: ui/Calibration.qml:391
+#, kde-format
+msgctxt "@info Name used in the diagnostic log"
+msgid "Center"
+msgstr "Sredina"
+
+#: ui/DisplayTab.qml:46
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Map to screen:"
+msgstr "Mapiranje na ekran:"
+
+#: ui/DisplayTab.qml:76
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Orientation:"
+msgstr "Usmerenje:"
+
+#: ui/DisplayTab.qml:83
+#, kde-format
+msgctxt "@label substitute for unavailable orientation change"
+msgid "Not Applicable"
+msgstr "Nije primenljivo"
+
+#: ui/DisplayTab.qml:96
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Mapped Area:"
+msgstr "Mapirana oblast:"
+
+#: ui/ExternalScreenMapping.qml:110
+#, kde-format
+msgctxt "@option:check"
+msgid "Lock aspect ratio"
+msgstr "Zaključaj proporciju"
+
+#: ui/ExternalScreenMapping.qml:151
+#, kde-format
+msgctxt "tablet area position - size"
+msgid "%1,%2 - %3×%4"
+msgstr "%1,%2 - %3×%4"
+
+#: ui/ExternalScreenMapping.qml:190
+#, kde-format
+msgctxt "@action:button"
+msgid "Resize the screen area"
+msgstr "Promeni veličinu oblasti ekrana"
+
+#: ui/ExternalScreenMapping.qml:267
+#, kde-format
+msgctxt "tablet area position - size"
+msgid "%1%,%2% - %3%×%4%"
+msgstr "%1%,%2% - %3%×%4%"
+
+#: ui/ExternalScreenMapping.qml:301
+#, kde-format
+msgctxt "@action:button"
+msgid "Resize the tablet area"
+msgstr "Promeni veličinu oblasti tablice"
+
+#: ui/main.qml:39
+#, kde-format
+msgctxt "@info placeholdermessage text"
+msgid "No drawing tablets found"
+msgstr "Nema nijedne grafičke tablice"
+
+#: ui/main.qml:40
+#, kde-format
+msgctxt "@info:usagetip placeholdermessage explanation"
+msgid "Connect a drawing tablet"
+msgstr "Povežite grafičku tablicu"
+
+#: ui/main.qml:48
+#, kde-format
+msgctxt "Tests tablet functionality like the pen"
+msgid "Test Tablet…"
+msgstr "Isprobaj tablicu…"
+
+#: ui/main.qml:88
+#, kde-format
+msgctxt "@info"
+msgid ""
+"This device is managed by a user-space driver that you installed. Use that "
+"driver to configure the tablet instead of using the settings here, unless "
+"specifically instructed otherwise."
+msgstr ""
+"Ovim uređajem upravlja drajver van jezgra, koji ste sami instalirali. "
+"Tablicu podesite tim drajverom umesto ovdašnjih postavki, osim ako vam nije "
+"izričito rečeno drugačije."
+
+#: ui/main.qml:107
+#, kde-format
+msgctxt "@label:listbox The device we are configuring"
+msgid "Device:"
+msgstr "Uređaj:"
+
+#: ui/main.qml:175
+#, kde-format
+msgctxt "@title:tab"
+msgid "Display"
+msgstr "Ekran"
+
+#: ui/main.qml:188
+#, kde-format
+msgctxt "@title:tab"
+msgid "Pen"
+msgstr "Olovka"
+
+#: ui/main.qml:200
+#, kde-format
+msgctxt "@title:tab"
+msgid "Pad"
+msgstr "Podloga"
+
+#: ui/MissingPadTab.qml:15
+#, kde-format
+msgctxt "@info placeholdermessage main text"
+msgid "No pad inputs found"
+msgstr "Nema nijednog ulaza podloge"
+
+#: ui/MissingPadTab.qml:16
+#, kde-format
+msgctxt "@info:usagetip placeholdermessage explanation"
+msgid ""
+"No buttons or other inputs were detected. This could mean the driver for "
+"this device is missing."
+msgstr ""
+"Nisu otkrivena ni dugmad ni drugi ulazi. Možda nedostaje drajver za ovaj "
+"uređaj."
+
+#: ui/PadTab.qml:35
+#, kde-format
+msgctxt "@label for graphics tablet ring config, % is number of ring"
+msgid "Pad ring %1:"
+msgstr "Prsten podloge %1:"
+
+#: ui/PadTab.qml:62
+#, kde-format
+msgctxt ""
+"@info Meant to be inserted into an existing sentence like 'configuring pad "
+"ring/dial 0'"
+msgid "pad ring/dial %1"
+msgstr "prsten/točkić podloge %1"
+
+#: ui/PadTab.qml:104
+#, kde-format
+msgctxt "@label for graphics tablet ring config, % is number of dial"
+msgid "Pad dial %1:"
+msgstr "Točkić podloge %1:"
+
+#: ui/PadTab.qml:108
+#, kde-format
+msgctxt ""
+"@info Meant to be inserted into an existing sentence like 'configuring pad "
+"button 0'"
+msgid "pad dial %1"
+msgstr "točkić podloge %1"
+
+#: ui/PadTab.qml:146
+#, kde-format
+msgctxt "@label for graphics tablet button config, % is number of button"
+msgid "Pad button %1:"
+msgstr "Dugme podloge %1:"
+
+#: ui/PadTab.qml:152
+#, kde-format
+msgctxt ""
+"@info Meant to be inserted into an existing sentence like 'configuring pad "
+"button 0'"
+msgid "pad button %1"
+msgstr "dugme podloge %1"
+
+#: ui/StylusTab.qml:228
+#, kde-format
+msgctxt "@label prefix for checkbox"
+msgid "Left-handed mode:"
+msgstr "Režim za levoruke:"
+
+#: ui/StylusTab.qml:231
+#, kde-format
+msgctxt "@option:check Enable left-handed mode"
+msgid "Enable"
+msgstr "Uključi"
+
+#: ui/StylusTab.qml:241
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Tells the device to accommodate left-handed users. Effects will vary by "
+"device, but often it reverses the pad buttonsʼ functionality so the tablet "
+"can be used upside-down."
+msgstr ""
+"Prilagođava uređaj levorukim korisnicima. Dejstvo zavisi od uređaja, ali "
+"obično se obrću uloge dugmadi podloge, tako da tablica može da se koristi "
+"naopako."
+
+#: ui/StylusTab.qml:247
+#, kde-format
+msgctxt ""
+"'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
+msgid "Mode:"
+msgstr "Režim:"
+
+#: ui/StylusTab.qml:251
+#, kde-format
+msgctxt ""
+"@option:radio Pen mode, where the point on the screen is always where you "
+"touch the stylus"
+msgid "Pen"
+msgstr "Olovka"
+
+# switch-rule: t-cursor > t-pointer
+#: ui/StylusTab.qml:256
+#, kde-format
+msgctxt "@info:whatsthis Accessible description"
+msgid "The cursor follows where you touch the pen on the surface"
+msgstr "Pokazivač prati mesto gde olovkom dodirnete površinu"
+
+#: ui/StylusTab.qml:265
+#, kde-format
+msgctxt ""
+"@option:radio Mouse mode, or like using the tablet like a giant touchpad"
+msgid "Mouse"
+msgstr "Miš"
+
+# switch-rule: t-cursor > t-pointer
+#: ui/StylusTab.qml:270
+#, kde-format
+msgctxt "@info:whatsthis Accessible description"
+msgid ""
+"Moving the pen on the surface moves the cursor relative to where it was, "
+"like a mouse"
+msgstr ""
+"Pomeranje olovke po površini pomera pokazivač u odnosu na njegov prethodni "
+"položaj, kao miš"
+
+#: ui/StylusTab.qml:276
+#, kde-format
+msgid "Sync with mouse cursor"
+msgstr "Uskladi sa pokazivačem miša"
+
+#: ui/StylusTab.qml:345
+#, kde-format
+msgctxt "@label prefix for pen pressure curve config"
+msgid "Pen Pressure:"
+msgstr "Pritisak olovke:"
+
+#: ui/StylusTab.qml:401
+#, kde-format
+msgctxt "% of minimum pen pressure"
+msgid "%1%"
+msgstr "%1%"
+
+#: ui/StylusTab.qml:409
+#, kde-format
+msgctxt "% of maximum pen pressure"
+msgid "%1%"
+msgstr "%1%"
+
+#: ui/StylusTab.qml:420
+#, kde-format
+msgctxt "100% or maximum pen pressure"
+msgid "100%"
+msgstr "100%"
+
+#: ui/StylusTab.qml:428
+#, kde-format
+msgctxt "0% or zero pen pressure"
+msgid "0%"
+msgstr "0%"
+
+#: ui/StylusTab.qml:433
+#, kde-format
+msgctxt "@info"
+msgid ""
+"This curve controls the relationship between the pressure on the stylus and "
+"the pressure values received by applications."
+msgstr ""
+"Ova kriva određuje odnos između pritiska na olovku i vrednosti pritiska koje "
+"dobijaju programi."
+
+#: ui/StylusTab.qml:438
+#, kde-format
+msgctxt "Pen pressure range"
+msgid "Pressure Range:"
+msgstr "Opseg pritiska:"
+
+#: ui/StylusTab.qml:456
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Pressure above or below the threshold will be clamped, and this becomes the "
+"new effective range."
+msgstr ""
+"Pritisak iznad ili ispod praga biće odsečen, i to postaje novi stvarni opseg."
+
+#: ui/StylusTab.qml:461
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You have manually calibrated this tablet. If it's no longer working "
+"correctly, try resetting this first."
+msgstr ""
+"Ručno ste kalibrisali ovu tablicu. Ako više ne radi ispravno, prvo pokušajte "
+"da resetujete kalibraciju."
+
+#: ui/StylusTab.qml:470
+#, kde-format
+msgctxt "@action:button Calibration in progress"
+msgid "Calibration in Progress"
+msgstr "Kalibracija u toku"
+
+#: ui/StylusTab.qml:472
+#, kde-format
+msgctxt "@action:button Calibrate the pen display"
+msgid "Calibrate"
+msgstr "Kalibriši"
+
+#: ui/StylusTab.qml:475
+#, kde-format
+msgctxt "@action:button Pen display doesn't support calibration"
+msgid "Calibration Not Supported"
+msgstr "Kalibracija nije podržana"
+
+#: ui/StylusTab.qml:516
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset Custom Calibration"
+msgstr "Resetuj posebnu kalibraciju"
+
+#: ui/Tester.qml:25
+#, kde-format
+msgctxt "@title"
+msgid "Tablet Tester"
+msgstr "Isprobavanje tablice"
+
+#: ui/Tester.qml:48
+#, kde-format
+msgctxt ""
+"A tablet stylus was pressed onto the surface X=[x position] Y=[y position]"
+msgid "Stylus press X=%1 Y=%2"
+msgstr "Pritisak olovke X=%1 Y=%2"
+
+#: ui/Tester.qml:58
+#, kde-format
+msgctxt ""
+"A tablet stylus has 'released' or was lifted from the surface X=[x position] "
+"Y=[y position]"
+msgid "Stylus release X=%1 Y=%2"
+msgstr "Podizanje olovke X=%1 Y=%2"
+
+#: ui/Tester.qml:68
+#, kde-format
+msgctxt ""
+"A tablet stylus has moved over the surface X=[x position] Y=[y position] "
+"P=[pressure] TX=[tilt x] TY=[tilt y]"
+msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
+msgstr "Pomeranje olovke X=%1 Y=%2 P=%3% TX=%4 TY=%5"
+
+#: ui/Tester.qml:75
+#, kde-format
+msgctxt "A tablet pad's button has been pressed B=[the button number]"
+msgid "Pad button press B=%1"
+msgstr "Pritisak dugmeta podloge B=%1"
+
+#: ui/Tester.qml:77
+#, kde-format
+msgctxt "A tablet pad's button has been released B=[the button number]"
+msgid "Pad button release B=%1"
+msgstr "Otpuštanje dugmeta podloge B=%1"
+
+#: ui/Tester.qml:83
+#, kde-format
+msgctxt ""
+"A tablet pad's dial has moved, V120 here refers to 'Value 120' which is a "
+"technical term that should be kept as is"
+msgid "Pad dial moved V120=%1"
+msgstr "Pomeren točkić podloge V120=%1"
+
+#: ui/Tester.qml:219
+#, kde-format
+msgctxt "The tablet tester legend which is shown on start-up"
+msgid ""
+"## Legend:\n"
+"# X, Y - event coordinate\n"
+"# P - pressure\n"
+"# TX,TY - tilt\n"
+msgstr ""
+"## Legenda:\n"
+"# X, Y - koordinata događaja\n"
+"# P - pritisak\n"
+"# TX,TY - nagib\n"
+
+#: ui/Tester.qml:225
+#, kde-format
+msgctxt "Clear the tablet tester event log"
+msgid "Clear"
+msgstr "Očisti"

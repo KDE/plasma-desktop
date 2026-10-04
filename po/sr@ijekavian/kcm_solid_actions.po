@@ -1,13 +1,14 @@
 # Translation of kcm_solid_actions.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2009, 2010, 2011, 2012, 2014, 2016, 2017.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2010.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-31 00:46+0000\n"
-"PO-Revision-Date: 2017-09-28 17:58+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
 "MIME-Version: 1.0\n"
@@ -22,12 +23,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Часлав Илић"
+msgstr "Часлав Илић,Немања Хиршл"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "caslav.ilic@gmx.net"
+msgstr "caslav.ilic@gmx.net,nemhirsl@gmail.com"
 
 # >> @title:window
 #: ActionEditor.cpp:60
@@ -266,28 +267,10 @@ msgstr "Уклони"
 #: SolidActions.ui:29
 #, kde-format
 msgid "Edit…"
-msgstr ""
+msgstr "Уреди…"
 
 #. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
 #: SolidActions.ui:36
 #, kde-format
 msgid "Add…"
-msgstr ""
-
-#~ msgid "Solid Device Actions Editor"
-#~ msgstr "Уређивач Солидових радњи уређаја"
-
-#~ msgid "Solid Device Actions Control Panel Module"
-#~ msgstr "Модул контролног панела за Солидове радње уређаја"
-
-#~ msgid "(c) 2009, 2014 Solid Device Actions team"
-#~ msgstr "© 2009, 2014, тим Солидових радњи уређаја"
-
-#~ msgid "Port to Plasma 5"
-#~ msgstr "Пренос на Плазму 5"
-
-#~ msgid "Edit..."
-#~ msgstr "Уреди..."
-
-#~ msgid "Add..."
-#~ msgstr "Додај..."
+msgstr "Додај…"

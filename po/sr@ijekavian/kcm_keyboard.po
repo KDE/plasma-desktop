@@ -1,13 +1,14 @@
 # Translation of kcmkeyboard.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2007, 2008, 2010, 2011, 2012, 2014, 2016, 2017.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2010.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-19 00:46+0000\n"
-"PO-Revision-Date: 2017-09-28 17:58+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
 "MIME-Version: 1.0\n"
@@ -22,29 +23,27 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Часлав Илић"
+msgstr "Часлав Илић,Немања Хиршл"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "caslav.ilic@gmx.net"
+msgstr "caslav.ilic@gmx.net,nemhirsl@gmail.com"
 
 #: bindings.cpp:24
-#, fuzzy, kde-format
-#| msgid "KDE Keyboard Layout Switcher"
+#, kde-format
 msgid "Keyboard Layout Switcher"
-msgstr "КДЕ‑ов мењач распореда тастатуре"
+msgstr "Мјењач распореда тастатуре"
 
 #: bindings.cpp:26
 #, kde-format
 msgid "Switch to Next Keyboard Layout"
-msgstr "Пребаци на следећи распоред тастера"
+msgstr "Пребаци на сљедећи распоред тастера"
 
 #: bindings.cpp:30
-#, fuzzy, kde-format
-#| msgid "Switch to Next Keyboard Layout"
+#, kde-format
 msgid "Switch to Last-Used Keyboard Layout"
-msgstr "Пребаци на следећи распоред тастера"
+msgstr "Пребаци на посљедњи коришћени распоред тастатуре"
 
 #: bindings.cpp:60
 #, kde-format
@@ -65,19 +64,16 @@ msgstr "%1 | %2"
 
 # >> @title:group
 #: tastenbrett/main.cpp:52
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "app display name"
 msgid "Keyboard Preview"
-msgstr "Понављање тастера"
+msgstr "Преглед тастатуре"
 
 #: tastenbrett/main.cpp:54
-#, fuzzy, kde-format
-#| msgctxt "tooltip title"
-#| msgid "Keyboard Layout"
+#, kde-format
 msgctxt "app description"
 msgid "Keyboard layout visualization"
-msgstr "Распоред тастера"
+msgstr "Визуелни приказ распореда тастатуре"
 
 #: tastenbrett/main.cpp:139
 #, kde-format
@@ -91,50 +87,53 @@ msgid ""
 "not supported and  will also trigger this message. These might still work "
 "fine if applied"
 msgstr ""
+"Не могу да учитам геометрију тастатуре. Ово често значи да изабрани модел не "
+"подржава одређени распоред или варијанту распореда. Исти проблем ће се "
+"вјероватно јавити и када покушате да користите ову комбинацију модела, "
+"распореда и варијанте.\n"
+"Преглед распореда дефинисаних ван системске фасцикле xkb није подржан и "
+"такође изазива ову поруку. Такви распореди ипак могу исправно да раде када "
+"се примијене"
 
 #: ui/KeyBindings.qml:18
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
-msgstr "Подеси распореде"
+msgstr "Свезе тастера"
 
 #: ui/KeyBindings.qml:62
-#, fuzzy, kde-format
-#| msgid "&Configure keyboard options"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
-msgstr "&Подеси опције тастатуре"
+msgstr "Подеси опције тастатуре"
 
 #: ui/KeyBindings.qml:134
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset"
-msgstr ""
+msgstr "Ресетуј"
 
 #: ui/KeyBindings.qml:138
 #, kde-format
 msgctxt "@info accessible"
 msgid "Reset selected options for this group"
-msgstr ""
+msgstr "Ресетуј изабране опције за ову групу"
 
 #: ui/KeyBindings.qml:139
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Reset selected options for this group"
-msgstr ""
+msgstr "Ресетуј изабране опције за ову групу"
 
 # >> @title:column
 #: ui/LayoutDialog.qml:22
-#, fuzzy, kde-format
-#| msgid "Layout"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Layout"
-msgstr "распоред"
+msgstr "Постављање распореда"
 
 #: ui/LayoutDialog.qml:22
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "Додавање распореда"
@@ -142,11 +141,10 @@ msgstr "Додавање распореда"
 # >> @option:checkbox Layout Indicator
 # rewrite-msgid: /layout//
 #: ui/LayoutDialog.qml:121
-#, fuzzy, kde-format
-#| msgid "Show layout indicator"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
-msgstr "Прикажи показатељ"
+msgstr "Кратко име распореда"
 
 #: ui/LayoutDialog.qml:131
 #, kde-format
@@ -155,17 +153,17 @@ msgid ""
 "The abbreviated name of the selected layout, which will be displayed in the "
 "system tray. You can change this setting yourself."
 msgstr ""
+"Скраћено име изабраног распореда, које ће бити приказано у системској "
+"касети. Ову поставку можете сами да промијените."
 
 #: ui/LayoutDialog.qml:139
-#, fuzzy, kde-format
-#| msgid "Shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Пречица:"
 
 #: ui/LayoutDialog.qml:150 ui/main.qml:287
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button"
 msgid "Preview"
 msgstr "Преглед"
@@ -174,49 +172,46 @@ msgstr "Преглед"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Switching…"
-msgstr ""
+msgstr "Подеси пребацивање…"
 
 #: ui/main.qml:38
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Configure Switching"
-msgstr "Подеси распореде"
+msgstr "Подеси пребацивање"
 
 #: ui/main.qml:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Key Bindings"
-msgstr ""
+msgstr "Свезе тастера"
 
 #: ui/main.qml:45
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Key Bindings"
-msgstr ""
+msgstr "Свезе тастера"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@action:button Layout"
 msgid "Add…"
-msgstr ""
+msgstr "Додај…"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add layout"
-msgstr "Додавање распореда"
+msgstr "Додај распоред"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "@label:checkbox configure layouts option"
 msgid "Enable"
-msgstr ""
+msgstr "Укључи"
 
 #: ui/main.qml:60
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Configure Layouts"
 msgstr "Подеси распореде"
@@ -225,113 +220,101 @@ msgstr "Подеси распореде"
 #, kde-format
 msgctxt "@label:listbox Keyboard model"
 msgid "Model:"
-msgstr ""
+msgstr "Модел:"
 
 # rewrite-msgid: /Plasma//
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "NumLock on Plasma Startup"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "NumLock on startup:"
-msgstr "NumLock на покретању"
+msgstr "NumLock при покретању:"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgid "T&urn on"
+#, kde-format
 msgctxt "@item:inlistbox Turn on \"NumLock\" on startup"
 msgid "Turn on"
-msgstr "&Укључи"
+msgstr "укључи"
 
 #: ui/main.qml:116
-#, fuzzy, kde-format
-#| msgid "Turn o&ff"
+#, kde-format
 msgctxt "@item:inlistbox Turn off \"NumLock\" on startup"
 msgid "Turn off"
-msgstr "&Искључи"
+msgstr "искључи"
 
 #: ui/main.qml:120
-#, fuzzy, kde-format
-#| msgid "&Leave unchanged"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma "
 "started up"
 msgid "Leave unchanged"
-msgstr "&Не дирај"
+msgstr "не дирај"
 
 # >> @title:group
 #: ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Key repeat:"
-msgstr "Понављање тастера"
+msgstr "Понављање тастера:"
 
 # >> @title:group
 #: ui/main.qml:155 ui/main_phone.qml:115
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
 msgstr "Понављање тастера"
 
 #: ui/main.qml:166 ui/main_phone.qml:131
-#, fuzzy, kde-format
-#| msgid "&Delay:"
+#, kde-format
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
-msgstr "&Застој:"
+msgstr "Застој:"
 
 #: ui/main.qml:180 ui/main_phone.qml:135
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
-msgstr ""
+msgstr "Застој понављања тастера %1"
 
 #: ui/main.qml:188 ui/main_phone.qml:143
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
-msgstr ""
+msgstr "%1 ms"
 
 #: ui/main.qml:192 ui/main_phone.qml:147
-#, fuzzy, kde-format
-#| msgid " ms"
+#, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
-msgstr " ms"
+msgstr "ms"
 
 #: ui/main.qml:205 ui/main_phone.qml:162
-#, fuzzy, kde-format
-#| msgid "&Rate:"
+#, kde-format
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
-msgstr "&Учестаност:"
+msgstr "Учестаност:"
 
 #: ui/main.qml:219 ui/main_phone.qml:169
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
-msgstr ""
+msgstr "Учестаност понављања тастера %1"
 
 # well-spelled: сек
 #: ui/main.qml:227 ui/main_phone.qml:177
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
-msgstr " знак./сек."
+msgstr "%1 знак./сек."
 
 # well-spelled: сек
 #: ui/main.qml:231 ui/main_phone.qml:181
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
-msgstr " знак./сек."
+msgstr "знак./сек."
 
 #: ui/main.qml:243
-#, fuzzy, kde-format
-#| msgid "Test area:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Test area:"
 msgstr "Пробна зона:"
@@ -340,52 +323,46 @@ msgstr "Пробна зона:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to test settings"
-msgstr ""
+msgstr "Куцајте овдје да испробате поставке"
 
 #: ui/main.qml:256
-#, fuzzy, kde-format
-#| msgid "Layouts"
+#, kde-format
 msgctxt "@title:view"
 msgid "Layouts"
 msgstr "Распореди"
 
 #: ui/main.qml:270
-#, fuzzy, kde-format
-#| msgid "Move Up"
+#, kde-format
 msgctxt "@action:button"
 msgid "Move Up"
-msgstr "Помери нагоре"
+msgstr "Помјери нагоре"
 
 #: ui/main.qml:271
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
-msgstr ""
+msgstr "Помјери распоред %1 нагоре"
 
 #: ui/main.qml:277
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button"
 msgid "Move Down"
-msgstr "Помери надоле"
+msgstr "Помјери надоље"
 
 #: ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
-msgstr "Помери надоле"
+msgstr "Помјери распоред %1 надоље"
 
 #: ui/main.qml:288
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Preview"
 msgstr "Преглед"
 
 #: ui/main.qml:296
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "Уклони"
@@ -394,27 +371,25 @@ msgstr "Уклони"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
-msgstr ""
+msgstr "Уклони распоред %1"
 
 #: ui/main.qml:309
-#, fuzzy, kde-format
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
-msgstr "Резервни распореди"
+msgstr "Резервни распореди:"
 
 #: ui/main.qml:346
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
-msgstr ""
+msgstr "Број главних распореда"
 
 #: ui/main.qml:378
-#, fuzzy, kde-format
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
-msgstr "Резервни распореди"
+msgstr "главна распореда"
 
 #: ui/main.qml:382
 #, kde-format
@@ -425,53 +400,50 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"Можете имати до 4 главна распореда, а сви остали распореди су резервни. "
+"Резервни распореди се не укључују при кружењу кроз распореде, али им се може "
+"приступити преко аплета показатеља тастатуре или постављањем посебне пречице."
 
 #: ui/main.qml:387
-#, fuzzy, kde-format
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
-msgstr "Број главних распореда:"
+msgstr "Пречица за промјену распореда:"
 
 #: ui/main.qml:410
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
-msgstr ""
+msgstr "или"
 
 #: ui/main_phone.qml:36
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@title form header"
 msgid "Model & Layout"
-msgstr "Додавање распореда"
+msgstr "Модел и распоред"
 
 #: ui/main_phone.qml:43
-#, fuzzy, kde-format
-#| msgid "Keyboard &model:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Keyboard Model"
-msgstr "&Модел тастатуре:"
+msgstr "Модел тастатуре"
 
 # >> @title:column
 #: ui/main_phone.qml:72
-#, fuzzy, kde-format
-#| msgid "Layout"
+#, kde-format
 msgctxt "@option:check"
 msgid "Custom Layout"
-msgstr "распоред"
+msgstr "Посебан распоред"
 
 #: ui/main_phone.qml:96
-#, fuzzy, kde-format
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Layout..."
-msgstr "Резервни распореди"
+msgstr "Промијени распоред..."
 
 # >> @title:group
 #: ui/main_phone.qml:103
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "@title:group"
 msgid "Key Repeat"
 msgstr "Понављање тастера"
@@ -480,87 +452,81 @@ msgstr "Понављање тастера"
 #, kde-format
 msgctxt "@option:check"
 msgid "Customize Repeat"
-msgstr ""
+msgstr "Прилагоди понављање"
 
 #: ui/Switching.qml:17
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@title"
 msgid "Configure Switching"
-msgstr "Подеси распореде"
+msgstr "Подеси пребацивање"
 
 #: ui/Switching.qml:23
 #, kde-format
 msgctxt "@title:group"
 msgid "Behavior"
-msgstr ""
+msgstr "Понашање"
 
 #: ui/Switching.qml:28
-#, fuzzy, kde-format
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Switching layout affects:"
-msgstr "Број главних распореда:"
+msgstr "Пребацивање распореда утиче на:"
 
 #: ui/Switching.qml:35
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows"
-msgstr ""
+msgstr "све прозоре"
 
 #: ui/Switching.qml:39
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows on current desktop"
-msgstr ""
+msgstr "све прозоре на текућој површи"
 
 #: ui/Switching.qml:43
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows of current application"
-msgstr ""
+msgstr "све прозоре текућег програма"
 
 #: ui/Switching.qml:47
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Current window only"
-msgstr ""
+msgstr "само текући прозор"
 
 #: ui/Switching.qml:74
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Show OSD popup on layout change"
-msgstr ""
+msgstr "Прикажи екрански приказ при пребацивању распореда"
 
 # >> @title:column
 #: ui/Switching.qml:86
-#, fuzzy, kde-format
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Shortcuts"
-msgstr "пречица"
+msgstr "Пречице"
 
 #: ui/Switching.qml:91 ui/Switching.qml:151
-#, fuzzy, kde-format
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
-msgstr "Резервни распореди"
+msgstr "Промјена распореда:"
 
 #: ui/Switching.qml:111
-#, fuzzy, kde-format
-#| msgid "Switch to Next Keyboard Layout"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
-msgstr "Пребаци на следећи распоред тастера"
+msgstr "Пребацивање на посљедњи коришћени распоред:"
 
 # >> @title:column
 #: ui/Switching.qml:131
-#, fuzzy, kde-format
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
-msgstr "пречица"
+msgstr "Старе пречице"
 
 #: ui/Switching.qml:139
 #, kde-kuit-format
@@ -571,13 +537,16 @@ msgid ""
 "Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
 "page."
 msgstr ""
+"Старе икс11 пречице омогућавају финију контролу чисто модификаторских "
+"пречица и нешто бољу подршку под Иксом11 у рјеђим случајевима. Могу се "
+"користити и под вејландом.<nl/><nl/>Постављањем ових пречица прелазите на "
+"страницу „Свезе тастера“."
 
 #: ui/Switching.qml:180
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
-msgstr "Алтернативна пречица:"
+msgstr "Алтернативни симболи:"
 
 #: ui/Switching.qml:206
 #, kde-format
@@ -586,6 +555,8 @@ msgid ""
 "Modifier keys can be used to type additional characters, symbols, and "
 "diacritical marks."
 msgstr ""
+"Модификаторски тастери могу се користити за куцање додатних знакова, симбола "
+"и дијакритика."
 
 #: xkboptionsmodel.cpp:163
 #, kde-format
@@ -601,274 +572,3 @@ msgstr[3] "%1 пречица"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "ништа"
-
-#, fuzzy
-#~| msgid "&Turn off"
-#~ msgctxt "@option:radio"
-#~ msgid "Turn Off"
-#~ msgstr "&Искључи"
-
-#, fuzzy
-#~| msgid "Shortcuts for Switching Layout"
-#~ msgctxt "@title:group"
-#~ msgid "Shortcuts for Switching Layout"
-#~ msgstr "Пречице за пребацивање распореда"
-
-#, fuzzy
-#~| msgid "Main shortcuts:"
-#~ msgctxt "@option:textbox"
-#~ msgid "Main shortcuts:"
-#~ msgstr "Главне пречице:"
-
-#, fuzzy
-#~| msgid "3rd level shortcuts:"
-#~ msgctxt "@option:textbox"
-#~ msgid "3rd level shortcuts:"
-#~ msgstr "Пречице за трећи ниво:"
-
-#, fuzzy
-#~| msgid "Alternative shortcut:"
-#~ msgctxt "@option:textbox"
-#~ msgid "Last used shortcuts:"
-#~ msgstr "Алтернативна пречица:"
-
-#, fuzzy
-#~| msgid "Switching Policy"
-#~ msgctxt "@title:group"
-#~ msgid "Switching Policy"
-#~ msgstr "Смјерница мијењања"
-
-#, fuzzy
-#~| msgid "&Global"
-#~ msgctxt "@option:radio"
-#~ msgid "Global"
-#~ msgstr "&Глобално"
-
-#, fuzzy
-#~| msgid "&Desktop"
-#~ msgctxt "@option:radio"
-#~ msgid "Desktop"
-#~ msgstr "По по&врши"
-
-#, fuzzy
-#~| msgid "&Application"
-#~ msgctxt "@option:radio"
-#~ msgid "Application"
-#~ msgstr "По &програму"
-
-#, fuzzy
-#~| msgid "&Window"
-#~ msgctxt "@option:radio"
-#~ msgid "Window"
-#~ msgstr "По про&зору"
-
-#, fuzzy
-#~| msgid "Add"
-#~ msgctxt "@action:button"
-#~ msgid "Add"
-#~ msgstr "Додај"
-
-# >> @title:column
-#, fuzzy
-#~| msgctxt "layout map name"
-#~| msgid "Map"
-#~ msgctxt "@title:column"
-#~ msgid "Map"
-#~ msgstr "мапа"
-
-# >> @title:column
-#, fuzzy
-#~| msgid "Label"
-#~ msgctxt "@title:column"
-#~ msgid "Label"
-#~ msgstr "етикета"
-
-# >> @title:column
-#, fuzzy
-#~| msgid "Variant"
-#~ msgctxt "@title:column"
-#~ msgid "Variant"
-#~ msgstr "варијанта"
-
-#, fuzzy
-#~| msgid "Main shortcuts:"
-#~ msgctxt "@action:button"
-#~ msgid "Reassign shortcut"
-#~ msgstr "Главне пречице:"
-
-#, fuzzy
-#~| msgid "Hardware"
-#~ msgctxt "@title:tab"
-#~ msgid "Hardware"
-#~ msgstr "Хардвер"
-
-#~ msgctxt "layout - variant"
-#~ msgid "%1 - %2"
-#~ msgstr "%1 — %2"
-
-#~ msgid "Label:"
-#~ msgstr "Етикета:"
-
-#~ msgid ""
-#~ "Here you can choose a keyboard model. This setting is independent of your "
-#~ "keyboard layout and refers to the \"hardware\" model, i.e. the way your "
-#~ "keyboard is manufactured. Modern keyboards that come with your computer "
-#~ "usually have two extra keys and are referred to as \"104-key\" models, "
-#~ "which is probably what you want if you do not know what kind of keyboard "
-#~ "you have.\n"
-#~ msgstr ""
-#~ "Овдје можете изабрати модел тастатуре. Ова поставка не зависи од "
-#~ "распореда тастатуре, већ се тиче „хардверског“ модела, тј. начина на који "
-#~ "је тастатура произведена. Модерне тастатуре обично имају два додатна "
-#~ "тастера и познате су као „104‑тастерски“ модели, што је добар основни "
-#~ "избор ако не знате тачно какву тастатуру имате.\n"
-
-#~ msgid ""
-#~ "If you select \"Application\" or \"Window\" switching policy, changing "
-#~ "the keyboard layout will only affect the current application or window."
-#~ msgstr ""
-#~ "Ако изаберете смерницу мењања по програму или по прозору, промјена "
-#~ "распореда ће утицати само на текући програм или прозор."
-
-#~ msgid ""
-#~ "This is a shortcut for switching layouts which is handled by X.org. It "
-#~ "allows modifier-only shortcuts."
-#~ msgstr ""
-#~ "Ово је пречица за мијењање распореда коју обрађује Икс. Допушта чисто "
-#~ "модификаторске пречице."
-
-#~ msgctxt "no shortcut defined"
-#~ msgid "None"
-#~ msgstr "Никаква"
-
-#~ msgid ""
-#~ "This is a shortcut for switching to a third level of the active layout "
-#~ "(if it has one) which is handled by X.org. It allows modifier-only "
-#~ "shortcuts."
-#~ msgstr ""
-#~ "Ово је пречица за прелазак на трећи ниво активног распореда (ако постоји) "
-#~ "коју обрађује Икс. Допушта чисто модификаторске пречице."
-
-#~ msgid ""
-#~ "This is a shortcut for switching layouts. It does not support modifier-"
-#~ "only shortcuts and also may not work in some situations (e.g. if popup is "
-#~ "active or from screensaver)."
-#~ msgstr ""
-#~ "Ово је пречица за мењање распореда. Не подржава чисто модификаторске "
-#~ "пречице и може да не ради у неким случајевима (нпр. ако је активан "
-#~ "искакач или на чувару екрана)."
-
-#~ msgid "Advanced"
-#~ msgstr "Напредно"
-
-# >> @item:inlistbox layout variant
-#~ msgctxt "variant"
-#~ msgid "Default"
-#~ msgstr "подразумевани"
-
-#~ msgid ""
-#~ "Allows to test keyboard repeat and click volume (just don't forget to "
-#~ "apply the changes)."
-#~ msgstr ""
-#~ "Омогућава да се испроба понављање тастатуре и гласност клика (не "
-#~ "заборавите да претходно примените измене)."
-
-#~ msgid ""
-#~ "If supported, this option allows you to setup the state of NumLock after "
-#~ "Plasma startup.<p>You can configure NumLock to be turned on or off, or "
-#~ "configure Plasma not to set NumLock state."
-#~ msgstr ""
-#~ "<p>Ако је подржана, овом опцијом одређујете стање тастера NumLock по "
-#~ "покретању Плазме.</p><p>Можете подесити да је NumLock укључен или "
-#~ "искључен, или да Плазма не мијења затечено стање.</p>"
-
-#~ msgid "Leave unchan&ged"
-#~ msgstr "&Не дирај"
-
-#~ msgid ""
-#~ "If supported, this option allows you to set the delay after which a "
-#~ "pressed key will start generating keycodes. The 'Repeat rate' option "
-#~ "controls the frequency of these keycodes."
-#~ msgstr ""
-#~ "<html>Ако је подржана, овом опцијом задајете застој прије него што "
-#~ "притиснути тастер почне да шаље знакове. Брзину издавања знакова "
-#~ "контролише опција <i>Учестаност:</i>.</html>"
-
-#~ msgid ""
-#~ "If supported, this option allows you to set the rate at which keycodes "
-#~ "are generated while a key is pressed."
-#~ msgstr ""
-#~ "Ако је подржана, овом опцијом задајете учестаност којом се знакови шаљу "
-#~ "док је тастер притиснут."
-
-#~ msgid "KDE Keyboard Control Module"
-#~ msgstr "КДЕ контролни модул тастатуре"
-
-#~ msgid "(c) 2010 Andriy Rysin"
-#~ msgstr "© 2010, Андриј Рисин"
-
-#~ msgid ""
-#~ "<h1>Keyboard</h1> This control module can be used to configure keyboard "
-#~ "parameters and layouts."
-#~ msgstr ""
-#~ "<h1>Тастатура</h1><p>Ова контролни модул служи за подешавање параметара и "
-#~ "распореда тастатуре.</p>"
-
-#~ msgid "KDE Keyboard Layout Switcher"
-#~ msgstr "КДЕ‑ов мењач распореда тастатуре"
-
-#~ msgctxt "short layout label - full layout name"
-#~ msgid "%1 - %2"
-#~ msgstr "%1 — %2"
-
-# >> @item:inlistbox
-#~ msgid "Any language"
-#~ msgstr "било који језик"
-
-# >> @label:listbox
-#~ msgid "Layout:"
-#~ msgstr "Распоред:"
-
-# >> @label:listbox
-#~ msgid "Variant:"
-#~ msgstr "Варијанта:"
-
-#~ msgid "Limit selection by language:"
-#~ msgstr "Ограничи избор по језику:"
-
-#~ msgid "Layout Indicator"
-#~ msgstr "Показатељ распореда"
-
-# >> @option:checkbox Layout Indicator
-# rewrite-msgid: /layout//
-#~ msgid "Show for single layout"
-#~ msgstr "И при једном распореду"
-
-# >> @option:checkbox Layout Indicator
-#~ msgid "Show flag"
-#~ msgstr "Са заставом"
-
-# >> @option:checkbox Layout Indicator
-#~ msgid "Show label"
-#~ msgstr "Са етикетом"
-
-# >> @option:checkbox Layout Indicator
-#~ msgid "Show label on flag"
-#~ msgstr "Са етикетом на застави"
-
-#~ msgid "..."
-#~ msgstr "..."
-
-#~ msgid "Only up to %1 keyboard layout is supported"
-#~ msgid_plural "Only up to %1 keyboard layouts are supported"
-#~ msgstr[0] "Могуће је додати највише %1 распоред"
-#~ msgstr[1] "Могуће је додати највише %1 распореда"
-#~ msgstr[2] "Могуће је додати највише %1 распореда"
-#~ msgstr[3] "Могуће је додати највише %1 распоред"
-
-#~ msgctxt "tooltip title"
-#~ msgid "Keyboard Layout"
-#~ msgstr "Распоред тастера"
-
-#~ msgid "Configure Layouts..."
-#~ msgstr "Подеси распореде..."

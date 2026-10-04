@@ -1,12 +1,13 @@
 # Translation of plasma_applet_org.kde.plasma.trash.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.trash\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-27 00:47+0000\n"
-"PO-Revision-Date: 2016-04-15 23:42+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavianlatin\n"
 "MIME-Version: 1.0\n"
@@ -20,32 +21,26 @@ msgstr ""
 
 # >> @title:menu
 #: main.qml:33
-#, fuzzy, kde-format
-#| msgid "Trash"
+#, kde-format
 msgctxt "@title the name of the Trash widget"
 msgid "Trash"
 msgstr "Smeće"
 
 # >> The trash is empty. This is not an action, but a state
 #: main.qml:36
-#, fuzzy, kde-format
-#| msgid "Empty"
+#, kde-format
 msgctxt "@info:status The trash is being emptied"
 msgid "Emptying…"
-msgstr "Prazno"
+msgstr "Praznim…"
 
-# >> The trash is empty. This is not an action, but a state
 #: main.qml:38
-#, fuzzy, kde-format
-#| msgid "Empty"
+#, kde-format
 msgctxt "@info:status Counting the number of items in trash"
 msgid "Counting…"
-msgstr "Prazno"
+msgstr "Brojim…"
 
 #: main.qml:40
-#, fuzzy, kde-format
-#| msgid "One item"
-#| msgid_plural "%1 items"
+#, kde-format
 msgctxt "@info:status The trash contains this many items in it"
 msgid "One item"
 msgid_plural "%1 items"
@@ -56,61 +51,26 @@ msgstr[3] "Jedna stavka"
 
 # >> The trash is empty. This is not an action, but a state
 #: main.qml:42
-#, fuzzy, kde-format
-#| msgid "Empty"
+#, kde-format
 msgctxt "@info:status The trash is empty"
 msgid "Empty"
 msgstr "Prazno"
 
 #: main.qml:77
-#, fuzzy, kde-format
-#| msgctxt "a verb"
-#| msgid "Open"
+#, kde-format
 msgctxt "@action:inmenu Open the trash"
 msgid "Open"
 msgstr "Otvori"
 
 # >> The trash is empty. This is not an action, but a state
 #: main.qml:82
-#, fuzzy, kde-format
-#| msgid "Empty"
+#, kde-format
 msgctxt "@action:inmenu Empty the trash"
 msgid "Empty"
-msgstr "Prazno"
+msgstr "Isprazni"
 
 #: main.qml:88
-#, fuzzy, kde-format
-#| msgid "Trash Settings..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Trash Settings…"
-msgstr "Postavke smeća..."
-
-#~ msgctxt "a verb"
-#~ msgid "Empty"
-#~ msgstr "Isprazni"
-
-#~ msgid ""
-#~ "Trash\n"
-#~ "Empty"
-#~ msgstr ""
-#~ "Smeće\n"
-#~ "prazno"
-
-#~ msgid ""
-#~ "Trash\n"
-#~ "One item"
-#~ msgid_plural ""
-#~ "Trash\n"
-#~ " %1 items"
-#~ msgstr[0] ""
-#~ "Smeće\n"
-#~ "%1 stavka"
-#~ msgstr[1] ""
-#~ "Smeće\n"
-#~ "%1 stavke"
-#~ msgstr[2] ""
-#~ "Smeće\n"
-#~ "%1 stavki"
-#~ msgstr[3] ""
-#~ "Smeće\n"
-#~ "jedna stavka"
+msgstr "Postavke smeća…"

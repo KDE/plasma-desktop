@@ -1,12 +1,13 @@
 # Translation of plasma_applet_org.kde.plasma.showdesktop.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2009, 2015, 2016.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2016-03-13 14:33+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavianlatin\n"
 "MIME-Version: 1.0\n"
@@ -19,65 +20,55 @@ msgstr ""
 "X-Environment: kde\n"
 
 #: main.qml:118
-#, fuzzy, kde-format
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@label Accessible name"
 msgid "Minimize All Applet Active Indicator"
-msgstr "Minimizuj sve prozore"
+msgstr "Pokazatelj aktivnosti apleta za minimizovanje svih prozora"
 
 #: MinimizeAllController.qml:17
-#, fuzzy, kde-format
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Restore Windows"
-msgstr "Minimizuj sve prozore"
+msgstr "Obnovi prozore"
 
 #: MinimizeAllController.qml:18
-#, fuzzy, kde-format
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Minimize All Windows"
 msgstr "Minimizuj sve prozore"
 
 #: MinimizeAllController.qml:20
-#, fuzzy, kde-format
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Restores the previously minimized windows"
-msgstr "Minimizuj sve prozore"
+msgstr "Obnavlja prethodno minimizovane prozore"
 
 #: MinimizeAllController.qml:21
 #, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Shows the Desktop by minimizing all windows"
-msgstr ""
+msgstr "Prikazuje površ minimizovanjem svih prozora"
 
 #: PeekController.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Peek at Desktop"
-msgstr ""
+msgstr "Zaviri u površ"
 
 #: PeekController.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Peeking at Desktop"
-msgstr ""
+msgstr "Prekini zavirivanje u površ"
 
 #: PeekController.qml:17
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Moves windows back to their original positions"
-msgstr ""
+msgstr "Vraća prozore na prvobitne položaje"
 
 #: PeekController.qml:18
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"
-msgstr ""
-
-#~ msgid "Show Desktop"
-#~ msgstr "Prikaži površ"
-
-#~ msgid "Show the Plasma desktop"
-#~ msgstr "Prikaži plasma površ"
+msgstr "Privremeno prikazuje površ sklanjanjem prozora"

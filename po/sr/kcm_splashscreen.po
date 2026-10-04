@@ -1,12 +1,13 @@
 # Translation of kcm_splashscreen.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2014, 2015.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_splashscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-07 00:47+0000\n"
-"PO-Revision-Date: 2015-03-28 11:52+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -27,81 +28,57 @@ msgstr "ништа"
 #: kcm.cpp:167
 #, kde-format
 msgid "No splash screen will be shown"
-msgstr ""
+msgstr "Уводни екран се неће приказивати"
 
 #: kcm.cpp:185
 #, kde-format
 msgid "You cannot delete the currently selected splash screen"
-msgstr ""
+msgstr "Не можете да обришете тренутно изабрани уводни екран"
 
 #. i18n: ectx: label, entry (engine), group (KSplash)
 #: splashscreensettings.kcfg:12
 #, kde-format
 msgid "For future use"
-msgstr ""
+msgstr "За будућу употребу"
 
 #. i18n: ectx: label, entry (theme), group (KSplash)
 #: splashscreensettings.kcfg:16
 #, kde-format
 msgid "Name of the current splash theme"
-msgstr ""
+msgstr "Име текуће теме уводног екрана"
 
 #: ui/main.qml:30
 #, kde-format
 msgctxt "@action:button"
 msgid "&Get New…"
-msgstr ""
+msgstr "&Добави нове…"
 
 #: ui/main.qml:50
-#, fuzzy, kde-format
-#| msgid "Failed to successfully test the splash screen."
+#, kde-format
 msgctxt "@info:status"
 msgid "Failed to show the splash screen preview."
-msgstr "Проба уводног екрана није успела."
+msgstr "Не могу да прикажем преглед уводног екрана."
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgid "Test Splashscreen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview splash screen"
-msgstr "Пробни уводни екран"
+msgstr "Прегледај уводни екран"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgid "Test Splashscreen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove splash screen"
-msgstr "Пробни уводни екран"
+msgstr "Уклони уводни екран"
 
 #: ui/main.qml:90
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active splash screen"
-msgstr ""
+msgstr "Не могу да обришем активни уводни екран"
 
 #: ui/main.qml:92
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed splash screens"
-msgstr ""
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Часлав Илић"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "caslav.ilic@gmx.net"
-
-#, fuzzy
-#~| msgid "Test Splashscreen"
-#~ msgid "Splash Screen"
-#~ msgstr "Пробни уводни екран"
-
-#~ msgid "Marco Martin"
-#~ msgstr "Марко Мартин"
-
-#, fuzzy
-#~| msgid "Test Splashscreen"
-#~ msgid "&Get New Splash Screens..."
-#~ msgstr "Пробни уводни екран"
+msgstr "Не могу да обришем системски инсталиране уводне екране"

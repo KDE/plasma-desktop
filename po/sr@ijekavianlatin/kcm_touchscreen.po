@@ -1,0 +1,59 @@
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-07-20 00:45+0000\n"
+"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavianlatin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: kcmtouchscreen.cpp:48
+#, kde-format
+msgid "Automatic"
+msgstr "automatski"
+
+#: kcmtouchscreen.cpp:55
+#, kde-format
+msgctxt "model - (x,y widthxheight)"
+msgid "%1 - (%2,%3 %4×%5)"
+msgstr "%1 - (%2,%3 %4×%5)"
+
+#: ui/main.qml:29
+#, kde-format
+msgctxt "@info:status placeholdermessage text"
+msgid "No touchscreens found"
+msgstr "Nema nijednog ekrana na dodir"
+
+#: ui/main.qml:30
+#, kde-format
+msgctxt "@info:usagetip placeholdermessage explanation"
+msgid "Connect an external touchscreen"
+msgstr "Povežite spoljašnji ekran na dodir"
+
+#: ui/main.qml:46
+#, kde-format
+msgctxt "@label:listbox The device we are configuring"
+msgid "Device:"
+msgstr "Uređaj:"
+
+#: ui/main.qml:59
+#, kde-format
+msgctxt "@option:check prefix touchscreen device is enabled"
+msgid "Enabled:"
+msgstr "Uključen:"
+
+#: ui/main.qml:67
+#, kde-format
+msgctxt "@label:listbox this is a compound noun"
+msgid "Target display:"
+msgstr "Ciljni ekran:"

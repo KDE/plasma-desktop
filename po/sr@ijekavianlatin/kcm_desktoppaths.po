@@ -4,13 +4,14 @@
 # Marko Rosic <roske@kde.org.yu>, 2003.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2006, 2007, 2008, 2009, 2017.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2010.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-30 00:45+0000\n"
-"PO-Revision-Date: 2017-09-28 17:58+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavianlatin\n"
 "MIME-Version: 1.0\n"
@@ -26,79 +27,88 @@ msgstr ""
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
-msgstr ""
+msgstr "Fascikla površi:"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
-msgstr ""
+msgstr "Ova fascikla sadrži sve fajlove koje vidite na površi."
 
 #: ui/main.qml:67
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Documents folder:"
-msgstr ""
+msgstr "Fascikla dokumenata:"
 
 #: ui/main.qml:73
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
 msgstr ""
+"Ova fascikla se koristi kao podrazumijevana za otvaranje ili upisivanje "
+"dokumenata."
 
 #: ui/main.qml:81
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
-msgstr ""
+msgstr "Fascikla preuzimanja:"
 
 #: ui/main.qml:87
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
+"Ova fascikla se koristi kao podrazumijevana za upisivanje preuzetih stavki."
 
 #: ui/main.qml:95
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Videos folder:"
-msgstr ""
+msgstr "Fascikla video snimaka:"
 
 #: ui/main.qml:101
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
 msgstr ""
+"Ova fascikla se koristi kao podrazumijevana za otvaranje ili upisivanje "
+"video fajlova."
 
 #: ui/main.qml:109
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
-msgstr ""
+msgstr "Fascikla slika:"
 
 #: ui/main.qml:115
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
 msgstr ""
+"Ova fascikla se koristi kao podrazumijevana za otvaranje ili upisivanje "
+"fajlova slika."
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
-msgstr ""
+msgstr "Fascikla muzike:"
 
 #: ui/main.qml:129
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
 msgstr ""
+"Ova fascikla se koristi kao podrazumijevana za otvaranje ili upisivanje "
+"muzičkih fajlova."
 
 #: ui/main.qml:137
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Public folder:"
-msgstr ""
+msgstr "Javna fascikla:"
 
 #: ui/main.qml:143
 #, kde-format
@@ -107,43 +117,39 @@ msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
 msgstr ""
+"Ova fascikla se koristi kao podrazumijevana za javno dijeljene fajlove kada "
+"je uključeno mrežno dijeljenje."
 
 #: ui/main.qml:151
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Templates folder:"
-msgstr ""
+msgstr "Fascikla šablona:"
 
 #: ui/main.qml:157
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
 msgstr ""
+"Ova fascikla se koristi kao podrazumijevana za otvaranje ili upisivanje "
+"šablona fajlova."
 
 #: ui/main.qml:165
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Projects folder:"
-msgstr ""
+msgstr "Fascikla projekata:"
 
 #: ui/main.qml:171
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save projects."
 msgstr ""
+"Ova fascikla se koristi kao podrazumijevana za otvaranje ili upisivanje "
+"projekata."
 
 #: ui/UrlRequester.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"
-msgstr ""
-
-#~ msgid ""
-#~ "<h1>Paths</h1>\n"
-#~ "This module allows you to choose where in the filesystem the files on "
-#~ "your desktop should be stored.\n"
-#~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
-#~ msgstr ""
-#~ "<h1>Putanje</h1><p>Ovim modulom se određuje gdje se u fajl sistemu "
-#~ "smiještaju fajlovi na površi.</p><p>Koristite „Šta je ovo?“ (<b>Shift+F1</"
-#~ "b>) za objašnjenja pojedinih opcija.</p>"
+msgstr "Izaberi novu lokaciju"

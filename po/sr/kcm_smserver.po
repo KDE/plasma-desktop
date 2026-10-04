@@ -3,13 +3,14 @@
 # Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2008, 2009, 2017.
 # Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>, 2009, 2010.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2017-09-28 17:58+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -24,37 +25,34 @@ msgstr ""
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Conf&irm logout"
+#, kde-format
 msgid "Confirm logout"
-msgstr "Потврди &одјављивање"
+msgstr "Потврди одјављивање"
 
 #. i18n: ectx: label, entry (shutdownType), group (General)
 #: smserversettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Default Leave Option"
+#, kde-format
 msgid "Default leave option"
 msgstr "Подразумевана опција напуштања"
 
 #. i18n: ectx: label, entry (loginMode), group (General)
 #: smserversettings.kcfg:22
-#, fuzzy, kde-format
-#| msgid "On Login"
+#, kde-format
 msgid "On login"
 msgstr "По пријављивању"
 
 #. i18n: ectx: label, entry (excludeApps), group (General)
 #: smserversettings.kcfg:26
-#, fuzzy, kde-format
-#| msgid "Applications to be e&xcluded from sessions:"
+#, kde-format
 msgid "Applications to be excluded from session"
-msgstr "Програми које треба &искључити из сесија:"
+msgstr "Програми које треба искључити из сесије"
 
 #: ui/main.qml:30
 #, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Failed to request restart to firmware setup: %1"
 msgstr ""
+"Не могу да затражим поновно покретање у екран за подешавање фирмвера: %1"
 
 #: ui/main.qml:31
 #, kde-format
@@ -62,6 +60,7 @@ msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
+"При следећем поновном покретању рачунар ће ући у поставке UEFI фирмвера."
 
 #: ui/main.qml:32
 #, kde-format
@@ -69,17 +68,17 @@ msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
+"При следећем поновном покретању рачунар ће ући у екран за подешавање "
+"фирмвера."
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid "&Restart computer"
+#, kde-format
 msgctxt "@action:button"
 msgid "Restart Now"
-msgstr "&Поново покрени рачунар"
+msgstr "Поново покрени сада"
 
 #: ui/main.qml:46
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group"
 msgid "General"
 msgstr "Опште"
@@ -90,7 +89,7 @@ msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "Ask for confirmation:"
-msgstr ""
+msgstr "Тражи потврду:"
 
 #: ui/main.qml:52
 #, kde-format
@@ -98,31 +97,31 @@ msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "On shutdown, restart, and logout"
-msgstr ""
+msgstr "При гашењу, поновном покретању и одјављивању"
 
 #: ui/main.qml:63
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr ""
+msgstr "Обнављање сесије"
 
 #: ui/main.qml:71
 #, kde-format
 msgctxt "@title:group prefix for radiobuttons"
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "При пријављивању покрени програме који су били отворени:"
 
 #: ui/main.qml:72
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "При последњем одјављивању"
 
 #: ui/main.qml:85
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr ""
+msgstr "Кад је сесија ручно сачувана"
 
 #: ui/main.qml:94
 #, kde-kuit-format
@@ -133,22 +132,25 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"Дугме <interface>Сачувај сесију</interface> појавиће се у менију "
+"<interface>Покретач програма</interface>. Кад кликнете на њега, Плазма ће "
+"запамтити отворене програме и обновити их при следећем пријављивању. "
+"Кликните поново да замените скуп запамћених програма."
 
 #: ui/main.qml:99
-#, fuzzy, kde-format
-#| msgid "Start with an empty &session"
+#, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
 "restoration, whereby the windows that were open on logout are re-opened on "
 "the next login"
 msgid "Start with an empty session"
-msgstr "Покрени празну &сесију"
+msgstr "Покрени празну сесију"
 
 #: ui/main.qml:113
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Ignored applications:"
-msgstr ""
+msgstr "Игнорисани програми:"
 
 #: ui/main.qml:132
 #, kde-format
@@ -159,12 +161,17 @@ msgid ""
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
+"Овде упишите идентификаторе .десктоп фајлова програма или, на прозорском "
+"систему Икс11, имена извршних фајлова (раздвојене зарезима или двотачкама, "
+"на пример „xterm:org.kde.konsole.desktop“ или „xterm,org.kde.konsole."
+"desktop“), да се не би аутоматски покретали заједно са осталим програмима "
+"обновљеним из сесије."
 
 #: ui/main.qml:138
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr ""
+msgstr "Фирмвер"
 
 #: ui/main.qml:144
 #, kde-format
@@ -172,95 +179,16 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "После следећег поновног покретања:"
 
 #: ui/main.qml:145
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr ""
+msgstr "Уђи у поставке UEFI фирмвера"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr ""
-
-#, fuzzy
-#~| msgid "&Restart computer"
-#~ msgid "Restart"
-#~ msgstr "&Поново покрени рачунар"
-
-#~ msgid ""
-#~ "<h1>Session Manager</h1> You can configure the session manager here. This "
-#~ "includes options such as whether or not the session exit (logout) should "
-#~ "be confirmed, whether the session should be restored again when logging "
-#~ "in and whether the computer should be automatically shut down after "
-#~ "session exit by default."
-#~ msgstr ""
-#~ "<qt><h1>Менаџер сесија</h1>Овде можете подесити менаџер сесија. Ту су "
-#~ "опције попут да ли треба потврдити излазак из сесије (одјављивање), да ли "
-#~ "се сесија обнавља при пријављивању и треба ли рачунар аутоматски и треба "
-#~ "ли аутоматски угасити рачунар по напуштању сесије.</qt>"
-
-#~ msgid ""
-#~ "Check this option if you want the session manager to display a logout "
-#~ "confirmation dialog box."
-#~ msgstr ""
-#~ "Укључите ако желите да менаџер сесија прикаже потврдни дијалог пре него "
-#~ "што вас заиста одјави."
-
-#~ msgid "O&ffer shutdown options"
-#~ msgstr "Понуди опције &гашења"
-
-#~ msgid ""
-#~ "Here you can choose what should happen by default when you log out. This "
-#~ "only has meaning, if you logged in through KDM."
-#~ msgstr ""
-#~ "Овде можете изабрати шта треба да се догоди након одјављивања. Ове опције "
-#~ "важе само ако сте се пријавили из КДМ‑а."
-
-#~ msgid "&End current session"
-#~ msgstr "&Окончај текућу сесију"
-
-#~ msgid "&Restart computer"
-#~ msgstr "&Поново покрени рачунар"
-
-#~ msgid "&Turn off computer"
-#~ msgstr "&Угаси рачунар"
-
-#~ msgid ""
-#~ "<ul>\n"
-#~ "<li><b>Restore previous session:</b> Will save all applications running "
-#~ "on exit and restore them when they next start up</li>\n"
-#~ "<li><b>Restore manually saved session: </b> Allows the session to be "
-#~ "saved at any time via \"Save Session\" in the K-Menu. This means the "
-#~ "currently started applications will reappear when they next start up.</"
-#~ "li>\n"
-#~ "<li><b>Start with an empty session:</b> Do not save anything. Will come "
-#~ "up with an empty desktop on next start.</li>\n"
-#~ "</ul>"
-#~ msgstr ""
-#~ "<qt><ul><li><b>Поврати претходну сесију:</b> памти се који су све "
-#~ "програми активни у тренутку напуштања сесије и поново се покрећу по "
-#~ "следећем пријављивању.</li><li><b>Поврати ручно сачувану сесију:</b> у "
-#~ "сваком тренутку сесија се може ручно сачувати опцијом <i>Сачувај сесију</"
-#~ "i> у К‑менију. Овим ће се тако упамћени програми сами покренути по "
-#~ "следећем пријављивању.</li><li><b>Покрени празну сесију:</b> не памти се "
-#~ "ништа. По следећем пријављивању површ ће бити празна.</li></ul></qt>"
-
-#~ msgid "Restore &previous session"
-#~ msgstr "Поврати &претходну сесију"
-
-#~ msgid "Restore &manually saved session"
-#~ msgstr "Поврати &ручно сачувану сесију"
-
-#~ msgid ""
-#~ "Here you can enter a colon or comma separated list of applications that "
-#~ "should not be saved in sessions, and therefore will not be started when "
-#~ "restoring a session. For example 'xterm:konsole' or 'xterm,konsole'."
-#~ msgstr ""
-#~ "<qt>Овде можете унети двотачкама или запетама раздвојен списак програма "
-#~ "које не треба уписивати у сесије, и који стога неће бити покренути при "
-#~ "враћању сесије. На пример <tt>xterm:xconsole</tt> или <tt>xterm,xconsole</"
-#~ "tt>.</qt>"
+msgstr "Уђи у екран за подешавање фирмвера"

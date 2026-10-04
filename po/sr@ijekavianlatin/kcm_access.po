@@ -2,13 +2,14 @@
 # Toplica Tanaskovic <toptan@kde.org.yu>, 2003.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2006, 2007, 2008, 2014, 2015, 2017.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2010.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-03 00:45+0000\n"
-"PO-Revision-Date: 2017-12-03 22:53+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavianlatin\n"
 "MIME-Version: 1.0\n"
@@ -23,47 +24,47 @@ msgstr ""
 #: kcmaccess.cpp:123 kcmaccess.cpp:151
 #, kde-format
 msgid "KWin"
-msgstr ""
+msgstr "KWin"
 
 #: kcmaccess.cpp:126
 #, kde-format
 msgid "Toggle Invert Effect"
-msgstr ""
+msgstr "Uključi/isključi efekat izvrtanja"
 
 #: kcmaccess.cpp:132
 #, kde-format
 msgid "Toggle Invert Effect on Window"
-msgstr ""
+msgstr "Uključi/isključi efekat izvrtanja na prozoru"
 
 #: kcmaccess.cpp:174
 #, kde-format
 msgid "Move Left"
-msgstr ""
+msgstr "Pomjeri ulijevo"
 
 #: kcmaccess.cpp:181
 #, kde-format
 msgid "Move Right"
-msgstr ""
+msgstr "Pomjeri udesno"
 
 #: kcmaccess.cpp:188
 #, kde-format
 msgid "Move Up"
-msgstr ""
+msgstr "Pomjeri nagore"
 
 #: kcmaccess.cpp:195
 #, kde-format
 msgid "Move Down"
-msgstr ""
+msgstr "Pomjeri nadolje"
 
 #: kcmaccess.cpp:202
 #, kde-format
 msgid "Move Mouse to Focus"
-msgstr ""
+msgstr "Pomjeri miš na fokus"
 
 #: kcmaccess.cpp:209
 #, kde-format
 msgid "Move Mouse to Center"
-msgstr ""
+msgstr "Pomjeri miš na sredinu"
 
 # >> %1 is a command line
 #: kcmaccess.cpp:252
@@ -78,103 +79,99 @@ msgstr "Greška: Ne mogu da pokrenem „orca --setup“"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgid "Use System Bell"
-msgstr "Koristi &sistemsko zvono"
+msgstr "Koristi sistemsko zvono"
 
 #. i18n: ectx: label, entry (CustomBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgid "Customize system bell"
-msgstr "Koristi &sistemsko zvono"
+msgstr "Prilagodi sistemsko zvono"
 
 #. i18n: ectx: label, entry (CustomBellFile), group (Bell)
 #: kcmaccessibilitybell.kcfg:17
 #, kde-format
 msgid "Sound file for the Bell"
-msgstr ""
+msgstr "Zvučni fajl za zvono"
 
 #. i18n: ectx: label, entry (VisibleBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:20
 #, kde-format
 msgid "Use a visual bell instead of a sound"
-msgstr ""
+msgstr "Koristi vizuelno zvono umjesto zvuka"
 
 #. i18n: ectx: label, entry (InvertScreen), group (Bell)
 #: kcmaccessibilitybell.kcfg:24
 #, kde-format
 msgid "Invert the system colors on the bell"
-msgstr ""
+msgstr "Izvrni sistemske boje pri zvonu"
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
 #, kde-format
 msgid "Color of the Visual Bell"
-msgstr ""
+msgstr "Boja vizuelnog zvona"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
 #, kde-format
 msgid "Duration of the Visual Bell"
-msgstr ""
+msgstr "Trajanje vizuelnog zvona"
 
 #. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)
 #: kcmaccessibilitycolorblindnesscorrection.kcfg:13
 #, kde-format
 msgid "Whether Colorblindness Correction is enabled"
-msgstr ""
+msgstr "Da li je uključena popravka za daltonizam"
 
 #. i18n: ectx: label, entry (DwellClicker), group (Plugins)
 #: kcmaccessibilitydwellclicker.kcfg:13
 #, kde-format
 msgid "Whether Dwell Clicker is enabled"
-msgstr ""
+msgstr "Da li je uključeno klikanje prebivanjem"
 
 #. i18n: ectx: label, entry (DwellClickerDelayTime), group (Effect-dwellclicker)
 #: kcmaccessibilitydwellclicker.kcfg:19
 #, kde-format
 msgid "Delay Time"
-msgstr ""
+msgstr "Vrijeme zastoja"
 
 #. i18n: ectx: label, entry (DwellClickerDwellTime), group (Effect-dwellclicker)
 #: kcmaccessibilitydwellclicker.kcfg:24
 #, kde-format
 msgid "Dwell Time"
-msgstr ""
+msgstr "Vrijeme prebivanja"
 
 #. i18n: ectx: label, entry (DwellClickerDwellColor), group (Effect-dwellclicker)
 #: kcmaccessibilitydwellclicker.kcfg:29
 #, kde-format
 msgid "Dwell Color"
-msgstr ""
+msgstr "Boja prebivanja"
 
 #. i18n: ectx: label, entry (DwellClickerMotionThreshold), group (Effect-dwellclicker)
 #: kcmaccessibilitydwellclicker.kcfg:33
 #, kde-format
 msgid "Motion Threshold"
-msgstr ""
+msgstr "Prag pokreta"
 
 #. i18n: ectx: label, entry (Invert), group (Plugins)
 #: kcmaccessibilityinvert.kcfg:9
 #, kde-format
 msgid "Whether the Invert effect is enabled"
-msgstr ""
+msgstr "Da li je uključen efekat izvrtanja"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Use &sticky keys"
+#, kde-format
 msgid "Use sticky Keys"
-msgstr "Koristi &ljepljive tastere"
+msgstr "Koristi ljepljive tastere"
 
 #. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:13
-#, fuzzy, kde-format
-#| msgid "&Lock sticky keys"
+#, kde-format
 msgid "Lock the sticky keys"
-msgstr "&Zaključaj ljepljive tastere"
+msgstr "Zaključaj ljepljive tastere"
 
 #. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:17
@@ -184,53 +181,51 @@ msgstr "Isključi ljepljive tastere kada se dva tastera istovremeno pritisnu"
 
 #. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:21
-#, fuzzy, kde-format
-#| msgid "Use &sticky keys"
+#, kde-format
 msgid "Beep on a sticky key press"
-msgstr "Koristi &ljepljive tastere"
+msgstr "Pisni pri pritisku ljepljivog tastera"
 
 #. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:25
 #, kde-format
 msgid "Toggle keys beep"
-msgstr ""
+msgstr "Pisni pri tasterima za zaključavanje"
 
 #. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:29
 #, kde-format
 msgid "Notify when a keyboard modifier is pressed"
-msgstr ""
+msgstr "Obavijesti kada se pritisne modifikatorski taster"
 
 #. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:9
-#, fuzzy, kde-format
-#| msgid "&Use slow keys"
+#, kde-format
 msgid "Use slow keypresses"
-msgstr "Koristi s&pore tastere"
+msgstr "Koristi spore tastere"
 
 #. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:13
 #, kde-format
 msgid "Delay for the key press"
-msgstr ""
+msgstr "Zastoj pritiska tastera"
 
 #. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:17
 #, kde-format
 msgid "Beep on a slow keypress"
-msgstr ""
+msgstr "Pisni pri sporom pritisku tastera"
 
 #. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:21
 #, kde-format
 msgid "Beep on an accepted keypress"
-msgstr ""
+msgstr "Pisni pri prihvaćenom pritisku tastera"
 
 #. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:25
 #, kde-format
 msgid "Beep on a rejected keypress"
-msgstr ""
+msgstr "Pisni pri odbačenom pritisku tastera"
 
 #. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:29
@@ -242,174 +237,167 @@ msgstr "Odskačući tasteri"
 #: kcmaccessibilitykeyboardfilters.kcfg:33
 #, kde-format
 msgid "Use a delay for bouncing"
-msgstr ""
+msgstr "Koristi zastoj za odskakanje"
 
 #. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:37
 #, kde-format
 msgid "Beep if a bounce key event is rejected"
-msgstr ""
+msgstr "Pisni ako je odskačući taster odbačen"
 
 #. i18n: ectx: label, entry (MouseKeys), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:9
 #, kde-format
 msgid "Use keys to control the mouse"
-msgstr ""
+msgstr "Koristi tastere za upravljanje mišem"
 
 #. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:13
 #, kde-format
 msgid "Delay for the mouse movement"
-msgstr ""
+msgstr "Zastoj kretanja miša"
 
 #. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:17
 #, kde-format
 msgid "Repetition interval for the mouse movement"
-msgstr ""
+msgstr "Period ponavljanja kretanja miša"
 
 #. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:21
 #, kde-format
 msgid "Time to hit maximum velocity"
-msgstr ""
+msgstr "Vrijeme do najveće brzine"
 
 #. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:25
 #, kde-format
 msgid "Maximum Velocity"
-msgstr ""
+msgstr "Najveća brzina"
 
 #. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:29
 #, kde-format
 msgid "Mouse Key Curve"
-msgstr ""
+msgstr "Kriva tastera za miš"
 
 #. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
 #: kcmaccessibilityshakecursor.kcfg:9
 #, kde-format
 msgid "Whether Shake Pointer is enabled"
-msgstr ""
+msgstr "Da li je uključeno protresanje pokazivača"
 
 #. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
 #: kcmaccessibilityshakecursor.kcfg:15
-#, fuzzy, kde-format
-#| msgid "Notification"
+#, kde-format
 msgid "Magnification"
-msgstr "Obavještenje"
+msgstr "Uveličanje"
 
 #. i18n: ectx: label, entry (Zoom), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:9
 #, kde-format
 msgid "Whether the Zoom effect is enabled"
-msgstr ""
+msgstr "Da li je uključen efekat uveličanja"
 
 #. i18n: ectx: label, entry (Magnifier), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:13
 #, kde-format
 msgid "Whether the Magnifier effect is enabled"
-msgstr ""
+msgstr "Da li je uključen efekat uveličavača"
 
 #: ui/Bell.qml:18
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Please choose an audio file"
-msgstr ""
+msgstr "Izbor zvučnog fajla"
 
 #: ui/Bell.qml:20
 #, kde-format
 msgctxt "Name filters in a file dialog. Do not translate `(*.ogg *.oga *.wav)`"
 msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
-msgstr ""
+msgstr "zvučni fajlovi ogg, oga i wav (*.ogg *.oga *.wav)"
 
 #: ui/Bell.qml:28
-#, fuzzy, kde-format
-#| msgid "Audible Bell"
+#, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Audible bell:"
-msgstr "Čujno zvono"
+msgstr "Čujno zvono:"
 
 #: ui/Bell.qml:32
 #, kde-format
 msgctxt "Enable the system bell"
 msgid "Enable"
-msgstr ""
+msgstr "Uključi"
 
 #: ui/Bell.qml:44
 #, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
-msgstr ""
+msgstr "Poseban zvuk:"
 
 #: ui/Bell.qml:74
 #, kde-format
 msgctxt "@action:button icononly tooltip"
 msgid "Choose audio file for the system bell"
-msgstr ""
+msgstr "Izaberi zvučni fajl za sistemsko zvono"
 
 #: ui/Bell.qml:75
 #, kde-format
 msgctxt "@action button accessible only"
 msgid "Choose audio file"
-msgstr ""
+msgstr "Izaberi zvučni fajl"
 
 #: ui/Bell.qml:76
 #, kde-format
 msgctxt "@info:usagetip accessible description for button"
 msgid "Opens dialog"
-msgstr ""
+msgstr "Otvara dijalog"
 
 #: ui/Bell.qml:91
-#, fuzzy, kde-format
-#| msgid "Visual Bell"
+#, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Visual bell:"
-msgstr "Vizuelno zvono"
+msgstr "Vizuelno zvono:"
 
 #: ui/Bell.qml:95
 #, kde-format
 msgctxt "@option:check Enable visual bell"
 msgid "Enable"
-msgstr ""
+msgstr "Uključi"
 
 #: ui/Bell.qml:111
-#, fuzzy, kde-format
-#| msgid "I&nvert screen"
+#, kde-format
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
-msgstr "&Izvrnut ekran"
+msgstr "Izvrnute boje ekrana"
 
 #: ui/Bell.qml:129
-#, fuzzy, kde-format
-#| msgid "F&lash screen"
+#, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
-msgstr "&Trepćući ekran"
+msgstr "Trepćući ekran"
 
 #: ui/Bell.qml:141
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
-msgstr ""
+msgstr "Boja"
 
 #: ui/Bell.qml:157
-#, fuzzy, kde-format
-#| msgid "&Duration:"
+#, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
-msgstr "&Trajanje:"
+msgstr "Trajanje:"
 
 #: ui/Bell.qml:173
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is visible bell duration"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] " min."
-msgstr[1] " min."
-msgstr[2] " min."
-msgstr[3] " min."
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+msgstr[2] "%1 ms"
+msgstr[3] "%1 ms"
 
 #: ui/Bell.qml:177 ui/DwellClicker.qml:95 ui/DwellClicker.qml:126
 #: ui/KeyboardFilters.qml:66 ui/KeyboardFilters.qml:170
@@ -417,10 +405,10 @@ msgstr[3] " min."
 msgctxt "@label:valuesuffix short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "ms"
+msgstr[1] "ms"
+msgstr[2] "ms"
+msgstr[3] "ms"
 
 #: ui/ColorblindnessCorrection.qml:21
 #, kde-format
@@ -429,214 +417,214 @@ msgid ""
 "If you have trouble with certain colors on the screen, these filters can "
 "change them into other colors."
 msgstr ""
+"Ako imate problema sa određenim bojama na ekranu, ovi filteri mogu da ih "
+"promijene u druge boje."
 
 #: ui/ColorblindnessCorrection.qml:32
 #, kde-format
 msgctxt "@option check, Enable color blindness correction effect"
 msgid "Enable"
-msgstr ""
+msgstr "Uključi"
 
 #: ui/ColorblindnessCorrection.qml:45
 #, kde-format
 msgctxt ""
 "@label:listbox Difficulty seeing any of the following colors on the screen"
 msgid "Problematic colors:"
-msgstr ""
+msgstr "Problematične boje:"
 
 #: ui/ColorblindnessCorrection.qml:52
 #, kde-format
 msgctxt "@option"
 msgid "Red & purple (Protanopia)"
-msgstr ""
+msgstr "crvena i ljubičasta (protanopija)"
 
 #: ui/ColorblindnessCorrection.qml:53
 #, kde-format
 msgctxt "@option"
 msgid "Green & purple (Deuteranopia)"
-msgstr ""
+msgstr "zelena i ljubičasta (deuteranopija)"
 
 #: ui/ColorblindnessCorrection.qml:54
 #, kde-format
 msgctxt "@option"
 msgid "Yellow, green & purple (Tritanopia)"
-msgstr ""
+msgstr "žuta, zelena i ljubičasta (tritanopija)"
 
 #: ui/ColorblindnessCorrection.qml:55
 #, kde-format
 msgctxt "@option"
 msgid "All (grayscale mode)"
-msgstr ""
+msgstr "sve (režim sivih nijansi)"
 
 #: ui/ColorblindnessCorrection.qml:71
 #, kde-format
 msgctxt "@label"
 msgid "Intensity:"
-msgstr ""
+msgstr "Intenzitet:"
 
 #: ui/ColorblindnessCorrection.qml:97
 #, kde-format
 msgctxt "@label Mild color blindness correction intensity"
 msgid "Mild"
-msgstr ""
+msgstr "Blago"
 
 #: ui/ColorblindnessCorrection.qml:104
 #, kde-format
 msgctxt "@label Intense color blindness correction intensity"
 msgid "Intense"
-msgstr ""
+msgstr "Intenzivno"
 
 #: ui/ColorblindnessCorrection.qml:124
 #, kde-format
 msgctxt "@info"
 msgid "Adjusted colors:"
-msgstr ""
+msgstr "Prilagođene boje:"
 
 #: ui/ColorblindnessCorrection.qml:141
 #, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Reds:"
-msgstr ""
+msgstr "Crvene:"
 
 #: ui/ColorblindnessCorrection.qml:142
 #, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Greens:"
-msgstr ""
+msgstr "Zelene:"
 
 #: ui/ColorblindnessCorrection.qml:143
 #, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Blues:"
-msgstr ""
+msgstr "Plave:"
 
 #: ui/ColorblindnessCorrection.qml:144
 #, kde-format
 msgctxt "@title:group for color rectangles"
 msgid "Purples:"
-msgstr ""
+msgstr "Ljubičaste:"
 
 #: ui/DwellClicker.qml:19
 #, kde-format
 msgctxt "@label"
 msgid "Click when pointer remains still:"
-msgstr ""
+msgstr "Klikni kada pokazivač miruje:"
 
 #: ui/DwellClicker.qml:21
 #, kde-format
 msgctxt "@option check, Enable dwell clicker effect"
 msgid "Enable"
-msgstr ""
+msgstr "Uključi"
 
 #: ui/DwellClicker.qml:33
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically click when pointer remains still for a set amount of time."
-msgstr ""
+msgstr "Automatski klik kada pokazivač miruje zadato vrijeme."
 
 #: ui/DwellClicker.qml:39
 #, kde-format
 msgctxt "@label:spinbox Slow keys Delay"
 msgid "Motion Threshold:"
-msgstr ""
+msgstr "Prag pokreta:"
 
 #: ui/DwellClicker.qml:55
 #, kde-format
 msgctxt "@label:valuesuffix %1 is the motion threshold"
 msgid "%1 px"
 msgid_plural "%1 px"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%1 piks."
+msgstr[1] "%1 piks."
+msgstr[2] "%1 piks."
+msgstr[3] "%1 piks."
 
 #: ui/DwellClicker.qml:64
 #, kde-format
 msgctxt "@label:valuesuffix short for pixel(s)"
 msgid "px"
 msgid_plural "px"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "piks."
+msgstr[1] "piks."
+msgstr[2] "piks."
+msgstr[3] "piks."
 
 #: ui/DwellClicker.qml:70
 #, kde-format
 msgctxt "@label:spinbox Dwell clicker delay time"
 msgid "Delay Time:"
-msgstr ""
+msgstr "Vrijeme zastoja:"
 
 #: ui/DwellClicker.qml:86
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is the delay time"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] " min."
-msgstr[1] " min."
-msgstr[2] " min."
-msgstr[3] " min."
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+msgstr[2] "%1 ms"
+msgstr[3] "%1 ms"
 
 #: ui/DwellClicker.qml:101
 #, kde-format
 msgctxt "@label:spinbox Dwell clicker dwell time"
 msgid "Dwell Time:"
-msgstr ""
+msgstr "Vrijeme prebivanja:"
 
 #: ui/DwellClicker.qml:117
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is the dwell time"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] " min."
-msgstr[1] " min."
-msgstr[2] " min."
-msgstr[3] " min."
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+msgstr[2] "%1 ms"
+msgstr[3] "%1 ms"
 
 #: ui/DwellClicker.qml:132
 #, kde-format
 msgctxt "@label:button Dwell clicker dwell color"
 msgid "Dwell Color:"
-msgstr ""
+msgstr "Boja prebivanja:"
 
 #: ui/Invert.qml:17
 #, kde-format
 msgctxt "@label"
 msgid "Invert:"
-msgstr ""
+msgstr "Izvrtanje:"
 
 #: ui/Invert.qml:18
 #, kde-format
 msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr ""
+"Koristite prečice za uključivanje i isključivanje izvrtanja boja ekrana i "
+"prozora"
 
 #: ui/Invert.qml:21
 #, kde-format
 msgctxt "@option check, Enable invert effect"
 msgid "Enable"
-msgstr ""
+msgstr "Uključi"
 
 #: ui/Invert.qml:39 ui/ZoomMagnifier.qml:333
-#, fuzzy, kde-format
-#| msgid "Configure &Notifications..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
-msgstr "Podesi &obavještenja..."
+msgstr "Podesi prečice…"
 
 #: ui/KeyboardFilters.qml:18
-#, fuzzy, kde-format
-#| msgid "&Use slow keys"
+#, kde-format
 msgctxt "@title:group prefix"
 msgid "Slow keys:"
-msgstr "Koristi s&pore tastere"
+msgstr "Spori tasteri:"
 
 #: ui/KeyboardFilters.qml:21
 #, kde-format
 msgctxt "@option:check Enable slow keys"
 msgid "Enable"
-msgstr ""
+msgstr "Uključi"
 
 #: ui/KeyboardFilters.qml:33
 #, kde-format
@@ -646,64 +634,61 @@ msgid ""
 "Useful if you accidentally type more than one key at a time or have "
 "difficulty pressing the key you want the first time."
 msgstr ""
+"Da bi taster bio prihvaćen, mora se držati zadato vrijeme. Korisno ako "
+"slučajno pritiskate više tastera odjednom ili teško pritiskate željeni "
+"taster iz prvog pokušaja."
 
 #: ui/KeyboardFilters.qml:39
 #, kde-format
 msgctxt "@label:spinbox Slow keys Delay"
 msgid "Delay:"
-msgstr ""
+msgstr "Zastoj:"
 
 #: ui/KeyboardFilters.qml:57
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is slow keys delay"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] " min."
-msgstr[1] " min."
-msgstr[2] " min."
-msgstr[3] " min."
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+msgstr[2] "%1 ms"
+msgstr[3] "%1 ms"
 
 #: ui/KeyboardFilters.qml:72
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Ring system bell:"
-msgstr "Koristi &sistemsko zvono"
+msgstr "Oglasi sistemsko zvono:"
 
 #: ui/KeyboardFilters.qml:76
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is pressed"
+#, kde-format
 msgctxt "@option:check Use system bell when a key is pressed"
 msgid "when any key is &pressed"
-msgstr "&Oglasi sistemsko zvono uvijek kada se taster pritisne"
+msgstr "kada se &pritisne bilo koji taster"
 
 #: ui/KeyboardFilters.qml:92
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is accepted"
+#, kde-format
 msgctxt "@option:check Use system bell when a key is accepted"
 msgid "when any key is &accepted"
-msgstr "&Oglasi sistemsko zvono uvijek kada se taster prihvati"
+msgstr "kada se &prihvati bilo koji taster"
 
 #: ui/KeyboardFilters.qml:108
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is rejected"
+#, kde-format
 msgctxt "@option:check Use system bell when a key is rejected"
 msgid "when any key is &rejected"
-msgstr "&Oglasi sistemsko zvono uvijek kada se taster odbaci"
+msgstr "kada se &odbaci bilo koji taster"
 
 #: ui/KeyboardFilters.qml:123
-#, fuzzy, kde-format
-#| msgid "Bounce Keys"
+#, kde-format
 msgctxt "@title:group prefix"
 msgid "Bounce keys:"
-msgstr "Odskačući tasteri"
+msgstr "Odskačući tasteri:"
 
 #: ui/KeyboardFilters.qml:127
 #, kde-format
 msgctxt "@option:check Bounce keys enable"
 msgid "Enable"
-msgstr ""
+msgstr "Uključi"
 
 #: ui/KeyboardFilters.qml:139
 #, kde-format
@@ -713,73 +698,69 @@ msgid ""
 "tremors that cause you to press a key multiple times when you only intend to "
 "press once."
 msgstr ""
+"Zanemaruje brze, ponovljene pritiske istog tastera. Korisno ako zbog "
+"drhtanja ruku pritiskate taster više puta kada namjeravate samo jednom."
 
 #: ui/KeyboardFilters.qml:145
 #, kde-format
 msgctxt "@label:spinbox Bounce keys delay"
 msgid "Delay:"
-msgstr ""
+msgstr "Zastoj:"
 
 #: ui/KeyboardFilters.qml:163
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is bounce keys delay"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] " min."
-msgstr[1] " min."
-msgstr[2] " min."
-msgstr[3] " min."
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+msgstr[2] "%1 ms"
+msgstr[3] "%1 ms"
 
 #: ui/KeyboardFilters.qml:179
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is rejected"
+#, kde-format
 msgctxt "@option:check for bounce keys"
 msgid "Ring system bell when rejected"
-msgstr "&Oglasi sistemsko zvono uvijek kada se taster odbaci"
+msgstr "Oglasi sistemsko zvono pri odbacivanju"
 
 #: ui/main.qml:28
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Zoom & Magnifier"
-msgstr ""
+msgstr "Uveličanje i uveličavač"
 
 #: ui/main.qml:34
-#, fuzzy, kde-format
-#| msgid "Use &system bell"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "System Bell"
-msgstr "Koristi &sistemsko zvono"
+msgstr "Sistemsko zvono"
 
 #: ui/main.qml:40
-#, fuzzy, kde-format
-#| msgid "&Modifier Keys"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Modifier Keys"
-msgstr "&Modifikatorski tasteri"
+msgstr "Modifikatorski tasteri"
 
 #: ui/main.qml:46
-#, fuzzy, kde-format
-#| msgid "&Keyboard Filters"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Keyboard Filters"
-msgstr "&Filteri tastature"
+msgstr "Filteri tastature"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Mouse Navigation"
-msgstr ""
+msgstr "Upravljanje mišem"
 
 #: ui/main.qml:58
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Dwell Clicker"
-msgstr ""
+msgstr "Klikanje prebivanjem"
 
 #: ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Screen Reader"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "Čitač ekrana"
@@ -788,32 +769,31 @@ msgstr "Čitač ekrana"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
-msgstr ""
+msgstr "Popravka za daltonizam"
 
 #: ui/main.qml:76
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
-msgstr ""
+msgstr "Izvrtanje"
 
 #: ui/main.qml:82
 #, kde-format
 msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
-msgstr ""
+msgstr "Protresanje pokazivača"
 
 #: ui/ModifierKeys.qml:17
-#, fuzzy, kde-format
-#| msgid "Sticky Keys"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sticky keys:"
-msgstr "Ljepljivi tasteri"
+msgstr "Ljepljivi tasteri:"
 
 #: ui/ModifierKeys.qml:20
 #, kde-format
 msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
-msgstr ""
+msgstr "Uključi"
 
 #: ui/ModifierKeys.qml:32
 #, kde-format
@@ -823,13 +803,15 @@ msgid ""
 "though they “stick in place” and no longer need to be held down when typing "
 "a keyboard shortcut."
 msgstr ""
+"Modifikatorski tasteri kao što su Ctrl, Shift, Alt i taster Meta/Super/"
+"Windows ponašaju se kao da su „zalijepljeni“ i više ne moraju da se drže "
+"pritisnuti pri kucanju prečice sa tastature."
 
 #: ui/ModifierKeys.qml:39
-#, fuzzy, kde-format
-#| msgid "&Lock sticky keys"
+#, kde-format
 msgctxt "@option:check"
 msgid "Lock sticky keys"
-msgstr "&Zaključaj ljepljive tastere"
+msgstr "Zaključaj ljepljive tastere"
 
 #: ui/ModifierKeys.qml:52
 #, kde-format
@@ -838,68 +820,64 @@ msgid ""
 "Pressing a modifier key twice will keep it in active state until pressed "
 "again."
 msgstr ""
+"Dvostrukim pritiskom modifikatorski taster ostaje aktivan dok se ponovo ne "
+"pritisne."
 
 #: ui/ModifierKeys.qml:60
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable when two keys are held down"
-msgstr ""
+msgstr "Isključi kada se drže pritisnuta dva tastera"
 
 #: ui/ModifierKeys.qml:75
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is pressed"
+#, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when modifier keys are used"
-msgstr "&Oglasi sistemsko zvono uvijek kada se taster pritisne"
+msgstr "Oglasi sistemsko zvono pri upotrebi modifikatorskih tastera"
 
 #: ui/ModifierKeys.qml:91
 #, kde-format
 msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
-msgstr ""
+msgstr "Odziv:"
 
 #: ui/ModifierKeys.qml:94
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is accepted"
+#, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when locking keys are used"
-msgstr "&Oglasi sistemsko zvono uvijek kada se taster prihvati"
+msgstr "Oglasi sistemsko zvono pri upotrebi tastera za zaključavanje"
 
 #: ui/ModifierKeys.qml:106
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
-msgstr ""
+msgstr "Tasteri za zaključavanje su CapsLock, NumLock i ScrollLock."
 
 #: ui/ModifierKeys.qml:112
-#, fuzzy, kde-format
-#| msgid ""
-#| "Use Plasma's notification mechanism for modifier or locking key state "
-#| "changes"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
 msgstr ""
-"Upotrijebi Plasmin mehanizam obavještenja kada modifikatorski taster ili "
-"taster za zaključavanje promijeni stanje"
+"Prikaži obavještenje pri upotrebi modifikatorskih tastera ili tastera za "
+"zaključavanje"
 
 #: ui/ModifierKeys.qml:126
-#, fuzzy, kde-format
-#| msgid "Configure &Notifications..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Notifications…"
-msgstr "Podesi &obavještenja..."
+msgstr "Podesi obavještenja…"
 
 #: ui/MouseNavigation.qml:17
 #, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move pointer:"
-msgstr ""
+msgstr "Pomijeraj pokazivač numeričkim dijelom tastature:"
 
 #: ui/MouseNavigation.qml:19
 #, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
-msgstr ""
+msgstr "Uključi"
 
 #: ui/MouseNavigation.qml:31
 #, kde-kuit-format
@@ -913,603 +891,279 @@ msgid ""
 "<shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</shortcut>, and "
 "<shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
+"Numerički taster <shortcut>5</shortcut> služi kao klik mišem, a prebacuje se "
+"tasterom <shortcut>/</shortcut> na srednji klik, <shortcut>*</shortcut> na "
+"desni klik i <shortcut>NumLock</shortcut> na lijevi klik. Tasteri "
+"<shortcut>2</shortcut>, <shortcut>4</shortcut>, <shortcut>6</shortcut> i "
+"<shortcut>8</shortcut> služe za kretanje u glavnim pravcima (dolje, lijevo, "
+"desno i gore). Tasteri <shortcut>1</shortcut>, <shortcut>3</shortcut>, "
+"<shortcut>7</shortcut> i <shortcut>9</shortcut> služe za dijagonalno "
+"kretanje."
 
 #: ui/MouseNavigation.qml:37
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
-msgstr ""
+msgstr "Zastoj ubrzanja:"
 
 #: ui/MouseNavigation.qml:53
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgctxt "@label:valuesuffix acceleration delay spinbox %1 is value"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] " min."
-msgstr[1] " min."
-msgstr[2] " min."
-msgstr[3] " min."
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+msgstr[2] "%1 ms"
+msgstr[3] "%1 ms"
 
 #: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:90
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "ms"
+msgstr[1] "ms"
+msgstr[2] "ms"
+msgstr[3] "ms"
 
 #: ui/MouseNavigation.qml:66
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
-msgstr ""
+msgstr "Period ponavljanja:"
 
 #: ui/MouseNavigation.qml:86
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgctxt "@label:valuesuffix repeat interval spinbox %1 is value"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] " min."
-msgstr[1] " min."
-msgstr[2] " min."
-msgstr[3] " min."
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+msgstr[2] "%1 ms"
+msgstr[3] "%1 ms"
 
 #: ui/MouseNavigation.qml:95
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
-msgstr ""
+msgstr "Vrijeme ubrzanja:"
 
 #: ui/MouseNavigation.qml:116
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
-msgstr ""
+msgstr "Najveća brzina:"
 
 #: ui/MouseNavigation.qml:132
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
-msgstr ""
+msgstr "Ubrzanje pokazivača:"
 
 #: ui/ScreenReader.qml:22
-#, fuzzy, kde-format
-#| msgid "&Launch Orca Configuration"
+#, kde-format
 msgctxt "@info Placeholder message title"
 msgid "The Orca Screen Reader is not installed"
-msgstr "&Pokreni podešavanje Orce"
+msgstr "Čitač ekrana Orca nije instaliran"
 
 #: ui/ScreenReader.qml:23
 #, kde-format
 msgctxt "@info Placeholder message explanation"
 msgid "Please install it, then close and reopen this window"
-msgstr ""
+msgstr "Instalirajte ga, pa zatvorite i ponovo otvorite ovaj prozor"
 
 #: ui/ScreenReader.qml:30
-#, fuzzy, kde-format
-#| msgid "Screen Reader"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Screen Reader"
-msgstr "Čitač ekrana"
+msgstr "Uključi čitač ekrana"
 
 #: ui/ScreenReader.qml:44
-#, fuzzy, kde-format
-#| msgid "&Launch Orca Configuration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
-msgstr "&Pokreni podešavanje Orce"
+msgstr "Pokreni podešavanje čitača ekrana Orce…"
 
 #: ui/ShakeCursor.qml:16
 #, kde-format
 msgctxt "@label"
 msgid "Shake pointer to find it:"
-msgstr ""
+msgstr "Nađi pokazivač protresanjem:"
 
 #: ui/ShakeCursor.qml:18
 #, kde-format
 msgctxt "@option check, Enable shake pointer effect"
 msgid "Enable"
-msgstr ""
+msgstr "Uključi"
 
 #: ui/ShakeCursor.qml:31
-#, fuzzy, kde-format
-#| msgid "Notification"
+#, kde-format
 msgctxt "@label Pointer magnification level"
 msgid "Magnification:"
-msgstr "Obavještenje"
+msgstr "Uveličanje:"
 
 #: ui/ShakeCursor.qml:60
 #, kde-format
 msgctxt "@label Normal pointer size"
 msgid "Normal"
-msgstr ""
+msgstr "Normalan"
 
 #: ui/ShakeCursor.qml:67
 #, kde-format
 msgctxt "@label Large pointer size"
 msgid "Large"
-msgstr ""
+msgstr "Velik"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Show pixel grid at zoom level:"
-msgstr ""
+msgstr "Prikaži mrežu piksela od nivoa uveličanja:"
 
 #: ui/ZoomMagnifier.qml:60
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Pointer tracking:"
-msgstr ""
+msgstr "Praćenje pokazivača:"
 
 #: ui/ZoomMagnifier.qml:82
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
-msgstr ""
+msgstr "proporcionalno"
 
 #: ui/ZoomMagnifier.qml:83
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area moves in sync with pointer"
-msgstr ""
+msgstr "oblast uveličanja se kreće usklađeno sa pokazivačem"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
-msgstr ""
+msgstr "centrirano"
 
 #: ui/ZoomMagnifier.qml:88
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, except near screen edges"
-msgstr ""
+msgstr "pokazivač ostaje centriran na ekranu, osim blizu ivica ekrana"
 
 #: ui/ZoomMagnifier.qml:92
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered (Strict)"
-msgstr ""
+msgstr "centrirano (strogo)"
 
 #: ui/ZoomMagnifier.qml:93
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer stays centered on-screen, even near screen edges"
-msgstr ""
+msgstr "pokazivač ostaje centriran na ekranu, čak i blizu ivica ekrana"
 
 #: ui/ZoomMagnifier.qml:97
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
-msgstr ""
+msgstr "gurano"
 
 #: ui/ZoomMagnifier.qml:98
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Pointer pushes zoom area at screen edges"
-msgstr ""
+msgstr "pokazivač gura oblast uveličanja na ivicama ekrana"
 
 #: ui/ZoomMagnifier.qml:102
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
-msgstr ""
+msgstr "isključeno"
 
 #: ui/ZoomMagnifier.qml:103
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Zoom area doesn't follow pointer"
-msgstr ""
+msgstr "oblast uveličanja ne prati pokazivač"
 
 #: ui/ZoomMagnifier.qml:123
 #, kde-format
 msgctxt "@option:check"
 msgid "Sharpen screen content while zoomed in"
-msgstr ""
+msgstr "Izoštri sadržaj ekrana pri uveličanju"
 
 #: ui/ZoomMagnifier.qml:137
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
-msgstr ""
+msgstr "Uključi praćenje tekstualnog kursora"
 
 #: ui/ZoomMagnifier.qml:154
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
-msgstr ""
+msgstr "Širina:"
 
 #: ui/ZoomMagnifier.qml:167 ui/ZoomMagnifier.qml:195
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
 msgid_plural "%1 px"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%1 piks."
+msgstr[1] "%1 piks."
+msgstr[2] "%1 piks."
+msgstr[3] "%1 piks."
 
 #: ui/ZoomMagnifier.qml:168 ui/ZoomMagnifier.qml:196
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
-msgstr ""
+msgstr "piks."
 
 #: ui/ZoomMagnifier.qml:182
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
-msgstr ""
+msgstr "Visina:"
 
 #: ui/ZoomMagnifier.qml:211
 #, kde-format
 msgctxt "@label, followed by 'full screen' or 'magnify region'"
 msgid "Zoom:"
-msgstr ""
+msgstr "Uveličanje:"
 
 #: ui/ZoomMagnifier.qml:216
-#, fuzzy, kde-format
-#| msgid "F&lash screen"
+#, kde-format
 msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
 msgid "Full screen"
-msgstr "&Trepćući ekran"
+msgstr "Cio ekran"
 
 #: ui/ZoomMagnifier.qml:231
-#, fuzzy, kde-format
-#| msgid "Notification"
+#, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
-msgstr "Obavještenje"
+msgstr "Dio ekrana"
 
 #: ui/ZoomMagnifier.qml:244
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
-msgstr ""
+msgstr "Isključeno"
 
 #: ui/ZoomMagnifier.qml:265
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
-msgstr ""
+msgstr "Faktor uveličanja:"
 
 #: ui/ZoomMagnifier.qml:303
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
-msgstr ""
+msgstr "Modifikatorski tasteri za gest klizanja:"
 
 #: ui/ZoomMagnifier.qml:304
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is pressed"
+#, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
-msgstr "&Oglasi sistemsko zvono uvijek kada se taster pritisne"
-
-#, fuzzy
-#~| msgid " min"
-#~ msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
-#~ msgid "%1 ms"
-#~ msgid_plural "%1 ms"
-#~ msgstr[0] " min."
-#~ msgstr[1] " min."
-#~ msgstr[2] " min."
-#~ msgstr[3] " min."
-
-#, fuzzy
-#~| msgid "Screen Reader"
-#~ msgid "Enable Screen Reader"
-#~ msgstr "Čitač ekrana"
-
-#, fuzzy
-#~| msgid "Activation Gestures"
-#~ msgctxt "@option:check"
-#~ msgid "Activation shortcuts:"
-#~ msgstr "Aktivirajući gestovi"
-
-#, fuzzy
-#~| msgid ""
-#~| "Turn sticky keys and slow keys off after a certain period of inactivity."
-#~ msgctxt "@option:check"
-#~ msgid "Disable sticky and slow keys after:"
-#~ msgstr ""
-#~ "Isključi ljepljive i spore tastere poslije izvjesnog perioda neaktivnosti."
-
-#, fuzzy
-#~| msgid " min"
-#~ msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
-#~ msgid "%1 min"
-#~ msgid_plural "%1 min"
-#~ msgstr[0] " min."
-#~ msgstr[1] " min."
-#~ msgstr[2] " min."
-#~ msgstr[3] " min."
-
-#, fuzzy
-#~| msgid " min"
-#~ msgctxt "short for minute(s)"
-#~ msgid "min"
-#~ msgid_plural "min"
-#~ msgstr[0] " min."
-#~ msgstr[1] " min."
-#~ msgstr[2] " min."
-#~ msgstr[3] " min."
-
-#, fuzzy
-#~| msgid "Use &system bell"
-#~ msgctxt "@option:check when shortcut used"
-#~ msgid "Ring the system bell"
-#~ msgstr "Koristi &sistemsko zvono"
-
-#, fuzzy
-#~| msgid "Notification"
-#~ msgctxt "@option:check when shortcut used"
-#~ msgid "Show a notification"
-#~ msgstr "Obavještenje"
-
-#, fuzzy
-#~| msgid "Configure &Notifications..."
-#~ msgctxt "@action:button opens Notifications kcm"
-#~ msgid "Configure Notifications…"
-#~ msgstr "Podesi &obavještenja..."
-
-#, fuzzy
-#~| msgid "Activation Gestures"
-#~ msgctxt "@title Category name in sidebar"
-#~ msgid "Activation Shortcuts"
-#~ msgstr "Aktivirajući gestovi"
-
-#~ msgid "AltGraph"
-#~ msgstr "AltGr"
-
-#~ msgid "Hyper"
-#~ msgstr "Hyper"
-
-#~ msgid "Super"
-#~ msgstr "Super"
-
-#~ msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
-#~ msgstr ""
-#~ "Pritisnite %1 dok su aktivni NumLock, CapsLock i ScrollLock|/|Pritisnite "
-#~ "$[aku %1] dok su aktivni NumLock, CapsLock i ScrollLock"
-
-#~ msgid "Press %1 while CapsLock and ScrollLock are active"
-#~ msgstr ""
-#~ "Pritisnite %1 dok su aktivni CapsLock i ScrollLock|/|Pritisnite $[aku %1] "
-#~ "dok su aktivni CapsLock i ScrollLock"
-
-#~ msgid "Press %1 while NumLock and ScrollLock are active"
-#~ msgstr ""
-#~ "Pritisnite %1 dok su aktivni NumLock i ScrollLock|/|Pritisnite $[aku %1] "
-#~ "dok su aktivni NumLock i ScrollLock"
-
-#~ msgid "Press %1 while ScrollLock is active"
-#~ msgstr ""
-#~ "Pritisnite %1 dok je aktivan ScrollLock|/|Pritisnite $[aku %1] dok je "
-#~ "aktivan ScrollLock"
-
-#~ msgid "Press %1 while NumLock and CapsLock are active"
-#~ msgstr ""
-#~ "Pritisnite %1 dok su aktivni NumLock i CapsLock|/|Pritisnite $[aku %1] "
-#~ "dok su aktivni NumLock i CapsLock"
-
-#~ msgid "Press %1 while CapsLock is active"
-#~ msgstr ""
-#~ "Pritisnite %1 dok je aktivan CapsLock|/|Pritisnite $[aku %1] dok je "
-#~ "aktivan CapsLock"
-
-#~ msgid "Press %1 while NumLock is active"
-#~ msgstr ""
-#~ "Pritisnite %1 dok je aktivan NumLock|/|Pritisnite $[aku %1] dok je "
-#~ "aktivan NumLock"
-
-#~ msgid "Press %1"
-#~ msgstr "Pritisnite %1|/|Pritisnite $[aku %1]"
-
-#, fuzzy
-#~| msgid "Use the system bell whenever a key is rejected"
-#~ msgctxt "@label"
-#~ msgid "Flashes the screen whenever certain keys are pressed"
-#~ msgstr "Oglasi sistemsko zvono uvijek kada se taster odbaci"
-
-#, fuzzy
-#~| msgid "Activation Gestures"
-#~ msgid "Activation:"
-#~ msgstr "Aktivirajući gestovi"
-
-#~ msgid "Use gestures for activating sticky keys and slow keys"
-#~ msgstr "Koristi gestove za aktiviranje ljepljivih i sporih tastera"
-
-#, fuzzy
-#~| msgid "&Bell"
-#~ msgctxt "System Bell"
-#~ msgid "Bell"
-#~ msgstr "&Zvono"
-
-#, fuzzy
-#~| msgid ""
-#~| "Please note that you may have to log out once to allow the screen reader "
-#~| "to work properly."
-#~ msgid ""
-#~ "Please note that you may have to log out or reboot once to allow the "
-#~ "screen reader to work properly."
-#~ msgstr ""
-#~ "Možda ćete morati da se odjavite jednom da bi čitač ekrana pravilno "
-#~ "proradio."
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Toplica Tanasković,Časlav Ilić"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "toptan@kde.org.yu,caslav.ilic@gmx.net"
-
-#~ msgid ""
-#~ "If this option is checked, the default system bell will be used. Usually, "
-#~ "this is just a \"beep\"."
-#~ msgstr ""
-#~ "Ako je ova opcija uključena, koristiće se podrazumijevano sistemsko "
-#~ "zvono. Obično je to prosto „bip“."
-
-#~ msgid ""
-#~ "Check this option if you want to use a customized bell, playing a sound "
-#~ "file. If you do this, you will probably want to turn off the system bell."
-#~ msgstr ""
-#~ "Uključite ovo ako želite prilagođeno zvono, odnosno da se oglašava neki "
-#~ "zvučni fajl. Ako se odlučite za ovo, vjerovatno ćete željeti da "
-#~ "isključite sistemsko zvono."
-
-#~ msgid "Us&e customized bell"
-#~ msgstr "Koristi &prilagođeno zvono"
-
-#~ msgid ""
-#~ "If the option \"Use customized bell\" is enabled, you can choose a sound "
-#~ "file here. Click \"Browse...\" to choose a sound file using the file "
-#~ "dialog."
-#~ msgstr ""
-#~ "Ako zadate upotrebu prilagođenog zvona, ovdje možete izabrati željeni "
-#~ "zvučni fajl. Kliknite na „Pregledaj...“ da biste ga izabrali dijalogom "
-#~ "fajlova."
-
-#~ msgid "Sound &to play:"
-#~ msgstr "Ime &zvučnog fajla:"
-
-#~ msgid "Browse..."
-#~ msgstr "Pregledaj..."
-
-#~ msgid ""
-#~ "This option will turn on the \"visual bell\", i.e. a visual notification "
-#~ "shown every time that normally just a bell would occur. This is "
-#~ "especially useful for deaf people."
-#~ msgstr ""
-#~ "Ova opcija će uključiti „vizuelno zvono“, tj. vizuelno obavještenje "
-#~ "umjesto uobičajenog zvučnog kad god bi se zvono oglasilo. Vrlo zgodno za "
-#~ "korisnike sa slabijim sluhom."
-
-#~ msgid "&Use visual bell"
-#~ msgstr "Koristi &vizuelno zvono"
-
-#~ msgid ""
-#~ "The screen will turn to a custom color for the amount of time specified "
-#~ "below."
-#~ msgstr ""
-#~ "Ekran će zadobiti posebnu boju tokom vremenskog perioda zadatog ispod."
-
-#~ msgid ""
-#~ "All screen colors will be inverted for the amount of time specified below."
-#~ msgstr "Sve ekranske boje će biti izvrnute za vremenski period zadat ispod."
-
-#~ msgid ""
-#~ "Click here to choose the color used for the \"flash screen\" visible bell."
-#~ msgstr ""
-#~ "Kliknite ovdje da izaberete boju koja će biti korišćena za trepćući ekran."
-
-#~ msgid ""
-#~ "Here you can customize the duration of the \"visible bell\" effect being "
-#~ "shown."
-#~ msgstr ""
-#~ "Ovdje možete prilagoditi vremenski period za efekat vizuelnog zvona."
-
-#~ msgid " msec"
-#~ msgstr " ms"
-
-#~ msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
-#~ msgstr ""
-#~ "Upotrijebi sistemsko zvono kad god se modifikator zapne, zaključa ili "
-#~ "otključa"
-
-#~ msgid "Locking Keys"
-#~ msgstr "Tasteri za zaključavanje"
-
-#~ msgid "Use system bell whenever a locking key gets activated or deactivated"
-#~ msgstr ""
-#~ "Upotrijebi sistemsko zvoni kad god se taster za zaključavanje aktivira "
-#~ "ili deaktivira"
-
-#~ msgid "Slo&w Keys"
-#~ msgstr "&Spori tasteri"
-
-#~ msgid "Use bou&nce keys"
-#~ msgstr "Koristi &odskačuće tastere"
-
-#~ msgid "Activation &Gestures"
-#~ msgstr "Aktivirajući &gestovi"
-
-#~ msgid ""
-#~ "Use the system bell whenever a gesture is used to toggle an accessibility "
-#~ "feature"
-#~ msgstr ""
-#~ "Upotrijebi sistemsko zvono uvijek kada se upotrijebi gest za uključivanje "
-#~ "ili isključivanje neke mogućnosti pristupačnosti"
-
-#~ msgid ""
-#~ "If this option is checked, KDE will show a confirmation dialog whenever a "
-#~ "keyboard accessibility feature is turned on or off.\n"
-#~ "Ensure you know what you are doing if you uncheck it, as the keyboard "
-#~ "accessibility settings will then always be applied without confirmation."
-#~ msgstr ""
-#~ "Ako je ova opcija uključena, KDE će prikazati dijalog za potvrdu uvijek "
-#~ "kada se uključi ili isključi neka mogućnost pristupačnosti za tastaturu.\n"
-#~ "Pazite da znate šta radite ako isključite ovo, jer se tada postavke "
-#~ "pristupačnosti uvijek primjenjuju bez potvrde."
-
-#~ msgid ""
-#~ "Show a confirmation dialog whenever a keyboard accessibility feature is "
-#~ "toggled"
-#~ msgstr ""
-#~ "Prikaži dijalog za potvrdu uvijek kada se uključi ili isključi neka "
-#~ "mogućnost pristupačnosti"
-
-#~ msgid ""
-#~ "Use Plasma's notification mechanism whenever a keyboard accessibility "
-#~ "feature is toggled"
-#~ msgstr ""
-#~ "Koristi Plasmin mehanizam obavještenja uvijek kada se uključi ili "
-#~ "isključi neka mogućnost pristupačnosti tastature"
-
-#~ msgid "Screen reader enabled"
-#~ msgstr "Čitač ekrana uključen"
-
-#~ msgid "KDE Accessibility Tool"
-#~ msgstr ""
-#~ "KDE‑ova alatka za pristupačnost|/|$[svojstva dat 'KDE‑ovoj alatki za "
-#~ "pristupačnost']"
-
-#~ msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
-#~ msgstr "© 2000, Matijas Helcer-Klipfel"
-
-#~ msgid "Matthias Hoelzer-Kluepfel"
-#~ msgstr "Matijas Helcer-Klipfel"
-
-#~ msgid "Author"
-#~ msgstr "autor"
-
-#~ msgid ""
-#~ "Here you can activate keyboard gestures that turn on the following "
-#~ "features: \n"
-#~ "Sticky keys: Press Shift key 5 consecutive times\n"
-#~ "Slow keys: Hold down Shift for 8 seconds"
-#~ msgstr ""
-#~ "Ovdje možete aktivirati gestove sa tastature koji uključuju sljedeće "
-#~ "mogućnosti:\n"
-#~ "Ljepljivi tasteri: pritisnite taster Shift pet puta za redom\n"
-#~ "Spori tasteri: držite taster Shift pritisnut osam sekundi"
-
-#~ msgid ""
-#~ "Here you can activate keyboard gestures that turn on the following "
-#~ "features: \n"
-#~ "Mouse Keys: %1\n"
-#~ "Sticky keys: Press Shift key 5 consecutive times\n"
-#~ "Slow keys: Hold down Shift for 8 seconds"
-#~ msgstr ""
-#~ "Ovde možete aktivirati gestove sa tastature koji uključuju sledeće "
-#~ "mogućnosti:\n"
-#~ "Tasteri za miš: %1\n"
-#~ "Ljepljivi tasteri: pritisnite taster Shift pet puta za redom\n"
-#~ "Spori tasteri: držite taster Shift osam sekundi"
+msgstr "Klizajte dok držite modifikatorske tastere da biste uveličali"

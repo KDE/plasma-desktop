@@ -1,0 +1,405 @@
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-06-05 00:46+0000\n"
+"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: axesmodel.cpp:122 hatmodel.cpp:80
+#, kde-format
+msgctxt "@label Axis value"
+msgid "Value"
+msgstr "Вриједност"
+
+#: buttonmodel.cpp:71
+#, kde-format
+msgctxt "Status of a gamepad button"
+msgid "PRESSED"
+msgstr "ПРИТИСНУТО"
+
+#: buttonmodel.cpp:81
+#, kde-format
+msgctxt "@label Button state"
+msgid "State"
+msgstr "Стање"
+
+#: device.cpp:17 device.cpp:30
+#, kde-format
+msgid "Unknown"
+msgstr "непознат"
+
+#: device.cpp:18
+#, kde-format
+msgid "Game Controller"
+msgstr "контролор за игре"
+
+#: device.cpp:19
+#, kde-format
+msgid "Wheel"
+msgstr "волан"
+
+#: device.cpp:20
+#, kde-format
+msgid "Arcade Stick"
+msgstr "аркадна палица"
+
+#: device.cpp:21
+#, kde-format
+msgid "Flight Stick"
+msgstr "палица за летење"
+
+#: device.cpp:22
+#, kde-format
+msgid "Dance Pad"
+msgstr "плесна подлога"
+
+#: device.cpp:23
+#, kde-format
+msgid "Guitar"
+msgstr "гитара"
+
+#: device.cpp:24
+#, kde-format
+msgid "Drum Kit"
+msgstr "бубњеви"
+
+#: device.cpp:25
+#, kde-format
+msgid "Arcade Pad"
+msgstr "аркадни контролор"
+
+#: device.cpp:26
+#, kde-format
+msgid "Throttle"
+msgstr "ручица гаса"
+
+#: device.cpp:31
+#, kde-format
+msgid "XBox 360"
+msgstr "XBox 360"
+
+#: device.cpp:32
+#, kde-format
+msgid "XBox One"
+msgstr "XBox One"
+
+#: device.cpp:33
+#, kde-format
+msgid "Sony Dualshock 3"
+msgstr "Сони Dualshock 3"
+
+#: device.cpp:34
+#, kde-format
+msgid "Sony Dualshock 4"
+msgstr "Сони Dualshock 4"
+
+#: device.cpp:35
+#, kde-format
+msgid "Switch Pro"
+msgstr "Switch Pro"
+
+#: device.cpp:36
+#, kde-format
+msgid "Virtual"
+msgstr "виртуелни"
+
+#: device.cpp:37
+#, kde-format
+msgid "Sony Dualsense"
+msgstr "Сони Dualsense"
+
+#: device.cpp:38
+#, kde-format
+msgid "Amazon Luna"
+msgstr "Амазон Luna"
+
+#: device.cpp:39
+#, kde-format
+msgid "Google Stadia"
+msgstr "Гугл Stadia"
+
+#: device.cpp:40
+#, kde-format
+msgid "NVidia Shield"
+msgstr "Енвидија Shield"
+
+#: device.cpp:41
+#, kde-format
+msgid "Switch Left Joy-Con"
+msgstr "лијеви Joy-Con за Switch"
+
+#: device.cpp:42
+#, kde-format
+msgid "Switch Right Joy-Con"
+msgstr "десни Joy-Con за Switch"
+
+#: device.cpp:43
+#, kde-format
+msgid "Switch Paired Joy-Con"
+msgstr "упарени Joy-Con за Switch"
+
+#: device.cpp:48
+#, kde-format
+msgctxt "The game controller button with a letter A on it"
+msgid "A button"
+msgstr "Дугме A"
+
+#: device.cpp:49
+#, kde-format
+msgctxt "The game controller button with a letter B on it"
+msgid "B button"
+msgstr "Дугме B"
+
+#: device.cpp:50
+#, kde-format
+msgctxt "The game controller button with a letter X on it"
+msgid "X button"
+msgstr "Дугме X"
+
+#: device.cpp:51
+#, kde-format
+msgctxt "The game controller button with a letter Y on it"
+msgid "Y button"
+msgstr "Дугме Y"
+
+#: device.cpp:52
+#, kde-format
+msgctxt "The back game controller button"
+msgid "Back button"
+msgstr "Дугме за назад"
+
+#: device.cpp:53
+#, kde-format
+msgctxt "The guide game controller button"
+msgid "Guide button"
+msgstr "Дугме водича"
+
+#: device.cpp:54
+#, kde-format
+msgctxt "The start game controller button"
+msgid "Start button"
+msgstr "Дугме за старт"
+
+#: device.cpp:55
+#, kde-format
+msgctxt "The button under the game controller's left analog stick"
+msgid "Left analog stick"
+msgstr "Лијева аналогна палица"
+
+#: device.cpp:56
+#, kde-format
+msgctxt "The button under the game controller's right analog stick"
+msgid "Right analog stick"
+msgstr "Десна аналогна палица"
+
+#: device.cpp:57
+#, kde-format
+msgctxt "The game controller's left shoulder button"
+msgid "Left shoulder button"
+msgstr "Лијево раменско дугме"
+
+#: device.cpp:58
+#, kde-format
+msgctxt "The game controller's right shoulder button"
+msgid "Right shoulder button"
+msgstr "Десно раменско дугме"
+
+#: device.cpp:59
+#, kde-format
+msgctxt "The game controller's d-pad Up button"
+msgid "D-pad up button"
+msgstr "Крстасти тастер горе"
+
+#: device.cpp:60
+#, kde-format
+msgctxt "The game controller's d-pad down button"
+msgid "D-pad down button"
+msgstr "Крстасти тастер доље"
+
+#: device.cpp:61
+#, kde-format
+msgctxt "The game controller's d-pad left button"
+msgid "D-pad left button"
+msgstr "Крстасти тастер лијево"
+
+#: device.cpp:62
+#, kde-format
+msgctxt "The game controller's d-pad right button"
+msgid "D-pad right button"
+msgstr "Крстасти тастер десно"
+
+#: device.cpp:64
+#, kde-format
+msgctxt ""
+"The game controller's miscellaneous button (Share on Xbox, mic on "
+"Playstation/Luna, capture on Switch)"
+msgid "Miscellaneous button"
+msgstr "Помоћно дугме"
+
+#: device.cpp:65
+#, kde-format
+msgctxt "The game controller's 1st paddle button"
+msgid "Paddle button 1"
+msgstr "Задње дугме 1"
+
+#: device.cpp:66
+#, kde-format
+msgctxt "The game controller's 2nd paddle button"
+msgid "Paddle button 2"
+msgstr "Задње дугме 2"
+
+#: device.cpp:67
+#, kde-format
+msgctxt "The game controller's 3rd paddle button"
+msgid "Paddle button 3"
+msgstr "Задње дугме 3"
+
+#: device.cpp:68
+#, kde-format
+msgctxt "The game controller's 4th paddle button"
+msgid "Paddle button 4"
+msgstr "Задње дугме 4"
+
+#: device.cpp:69
+#, kde-format
+msgctxt "The button under the game controller's touchpad"
+msgid "Touchpad button"
+msgstr "Дугме додирника"
+
+#: device.cpp:73
+#, kde-format
+msgctxt "Unknown controller connection type"
+msgid "Unknown"
+msgstr "непознат"
+
+#: device.cpp:74
+#, kde-format
+msgctxt "USB connected controller"
+msgid "USB"
+msgstr "УСБ"
+
+#: device.cpp:75
+#, kde-format
+msgctxt "Bluetooth connected controller"
+msgid "Bluetooth"
+msgstr "блутут"
+
+#: device.cpp:83
+#, kde-format
+msgid "Invalid button value"
+msgstr "Лоша вриједност дугмета"
+
+#: device.cpp:251
+#, kde-format
+msgid "Not a controller"
+msgstr "није контролор"
+
+#: devicemodel.cpp:68
+#, kde-format
+msgctxt "Device name and path"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: ui/main.qml:34
+#, kde-format
+msgctxt "@option:check Allow using game controllers as a pointer and keyboard"
+msgid "Allow using as pointer and keyboard"
+msgstr "Дозволи употребу као показивача и тастатуре"
+
+#: ui/main.qml:43
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"Allow game controllers to act like pointer and keyboard devices in Plasma "
+"and non-game applications.<nl/><nl/>Games can always use the controller."
+msgstr ""
+"Дозвољава да се контролори за игре понашају као показивач и тастатура у "
+"Плазми и у програмима који нису игре.<nl/><nl/>Игре увијек могу да користе "
+"контролор."
+
+#: ui/main.qml:51
+#, kde-format
+msgctxt "@info placeholdermessage text"
+msgid "No game controllers found"
+msgstr "Нема ниједног контролора за игре"
+
+#: ui/main.qml:52
+#, kde-format
+msgctxt "@info:usagetip placeholdermessage text"
+msgid "Connect a wired or wireless controller"
+msgstr "Повежите жични или бежични контролор"
+
+#: ui/main.qml:82
+#, kde-format
+msgctxt "@info:usagetip"
+msgid ""
+"The system may automatically go to sleep or lock the screen while the "
+"controller is in use. Consider manually blocking them while using the "
+"controller, or enable automatic blocking by allowing the use as pointer and "
+"keyboard."
+msgstr ""
+"Систем може аутоматски да оде на спавање или да закључа екран док се "
+"контролор користи. Размислите о томе да то ручно спријечите током употребе "
+"контролора, или укључите аутоматско спрјечавање тако што ћете дозволити "
+"употребу као показивача и тастатуре."
+
+#: ui/main.qml:97
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Device:"
+msgstr "Уређај:"
+
+#: ui/main.qml:119
+#, kde-format
+msgctxt ""
+"@label game controller device type (wheel, joystick, game controller, etc.)"
+msgid "Device type:"
+msgstr "Тип уређаја:"
+
+#: ui/main.qml:135
+#, kde-format
+msgctxt "@label game controller controller type (which brand, etc.)"
+msgid "Controller type:"
+msgstr "Тип контролора:"
+
+#: ui/main.qml:151
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Connection type:"
+msgstr "Тип везе:"
+
+#: ui/main.qml:173
+#, kde-format
+msgctxt "@label Visual representation of the axis position for the left axis"
+msgid "Left position:"
+msgstr "Положај лијеве осе:"
+
+#: ui/main.qml:185
+#, kde-format
+msgctxt "@label Visual representation of the axis position for the right axis"
+msgid "Right position:"
+msgstr "Положај десне осе:"
+
+#: ui/main.qml:204
+#, kde-format
+msgctxt "@label Gamepad buttons"
+msgid "Buttons:"
+msgstr "Дугмад:"
+
+#: ui/main.qml:226
+#, kde-format
+msgctxt "@label Gamepad axes (sticks)"
+msgid "Axes:"
+msgstr "Осе:"
