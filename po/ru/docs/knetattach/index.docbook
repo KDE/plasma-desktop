@@ -101,7 +101,7 @@ Please at least include KDE, the KDE package it is in, the name
 <keyword
 >Мастер добавления сетевых папок</keyword>
 <keyword
->Мастер сети KDE</keyword>
+>Мастер добавления сетевых папок KDE</keyword>
 </keywordset>
 
 </bookinfo>
@@ -151,15 +151,15 @@ konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in 
 >Добавление сетевых папок</title>
 
 <para
->Сетевые папки отображаются в специальном месте в диспетчере файлов &konqueror; или &dolphin;, которое называется<emphasis
+>Сетевые папки показываются в специальном месте в диспетчере файлов &konqueror; или &dolphin;, которое называется <emphasis
 >виртуальная папка</emphasis
 >. Открыть эту папку можно, введя <userinput
 >remote:/</userinput
 > в строке адреса или выбрав пункт <guilabel
 >Сеть</guilabel
 > на панели <guilabel
->Точки доступа</guilabel
->. В открывшейся папке можно видеть все ранее добавленные папки, а также при помощи маcтера добавить новые. <screenshot>
+>Точки входа</guilabel
+>. В открывшейся папке можно видеть все ранее добавленные папки, а также при помощи мастера добавить новые. <screenshot>
 <screeninfo
 >Снимок экрана &knetattach;</screeninfo>
 <mediaobject>
@@ -181,7 +181,7 @@ konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in 
 <para
 >В основе работы мастера добавления сетевых папок лежит простота его использования. После открытия мастера выберите тип сетевой папки, доступ к которой необходимо получить. Перейдя к следующему экрану, введите требуемую информацию. И, наконец, укажите имя пользователя и пароль к сетевому ресурсу, к которому производится доступ. </para>
 <para
->Ниже приведён список данных, необходимых мастеру для создания сетевой папки. Если какой-то пункт не отображается при добавлении конкретной папки, значит эти данные указывать не нужно. Например, для добавления папки &Samba; указывать данные в строке <guilabel
+>Ниже приведён список данных, необходимых мастеру для создания сетевой папки. Если какой-то пункт не показывается при добавлении конкретной папки, значит эти данные указывать не нужно. Например, для добавления папки &Samba; указывать данные в строке <guilabel
 >Порт</guilabel
 > не требуется. </para>
 
@@ -214,7 +214,7 @@ konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in 
 ></term>
 <listitem>
 <para
->Укажите адрес добавляемого сервера. Это может быть IP адрес или доменное имя. </para>
+>Укажите адрес добавляемого сервера. Это может быть IP-адрес или доменное имя. </para>
 </listitem>
 </varlistentry>
 <varlistentry>
@@ -317,7 +317,7 @@ konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in 
 <para
 >Итак, мы решили добавить папку &FTP;. Ниже показан пример информации, которую потребуется указать для подключения к конкретному &FTP;-серверу. После заполнения всех полей нажимаем кнопку <guibutton
 >Сохранить и подключиться</guibutton
->. Если для работы с сервером требуется какого-либо подтверждение, соответствующий запрос будет показан до начала соединения. </para>
+>. Если для работы с сервером требуется какое-либо подтверждение, соответствующий запрос будет показан до начала соединения. </para>
 
 <para>
 <screenshot>
@@ -358,9 +358,9 @@ konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in 
 >Для возврата к сетевым папкам в строке адреса диспетчера файлов &konqueror; или &dolphin; введите <action
 >remote:/</action
 > или выберите пункт <guilabel
->Сети</guilabel
-> в панели <guilabel
->Точки доступа</guilabel
+>Сеть</guilabel
+> на панели <guilabel
+>Точки входа</guilabel
 >. </para>
 
 <para>
@@ -380,7 +380,7 @@ konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in 
 </para>
 
 <para
->Возможно даже добавить новую папку из этого места, используя ссылку <guilabel
+>Можно даже добавить новую папку из этого места, используя ссылку <guilabel
 >Добавить сетевую папку</guilabel
 >. На этом обзор закончен (как и было заявлено, он был коротким). Желаю вам удачи в сетевых приключениях ;-) </para>
 </chapter>
@@ -399,11 +399,11 @@ konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in 
 >Документация: &copy; &Orville.Bennett; &Orville.Bennett.mail;, 2005 </para>
 
 <para
->Ольга Миронова<email
+>Ольга Миронова <email
 >omiro@basealt.ru</email
 ></para
 ><para
->Перевод на русский - Новгородов Сергей<email
+>Перевод на русский - Новгородов Сергей <email
 >ximen@tsu.tmb.ru</email
 ></para
 > &underFDL; &underGPL; </chapter>

@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-03 00:45+0000\n"
-"PO-Revision-Date: 2026-09-06 19:30+0200\n"
+"PO-Revision-Date: 2026-10-04 08:28+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -257,7 +257,7 @@ msgstr "Воспроизводить звук, если событие «пры�
 #: kcmaccessibilitymouse.kcfg:9
 #, kde-format
 msgid "Use keys to control the mouse"
-msgstr "Управлять мышкой при помощи клавиш"
+msgstr "Управлять мышью при помощи клавиш"
 
 #. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:13
@@ -425,7 +425,7 @@ msgid ""
 "If you have trouble with certain colors on the screen, these filters can "
 "change them into other colors."
 msgstr ""
-"Если у вас проблемы с восприятием определённых цветов , эти фильтры могут "
+"Если у вас проблемы с восприятием определённых цветов, эти фильтры могут "
 "заменить их на другие цвета."
 
 #: ui/ColorblindnessCorrection.qml:32
@@ -609,7 +609,7 @@ msgstr "Инвертирование цветов:"
 msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr ""
-"Используйте комбинации клавиш для переключения инвертирования цветов дисплея "
+"Используйте комбинации клавиш для переключения инвертирования цветов экрана "
 "и окна"
 
 #: ui/Invert.qml:21
@@ -645,9 +645,9 @@ msgid ""
 "difficulty pressing the key you want the first time."
 msgstr ""
 "Чтобы нажатие клавиши было принято, необходимо удерживать её в течение "
-"заданного времени. Это удобная опция на тот случай, если происходит "
-"случайное нажатие сразу нескольких клавиш или сложно с первого раза нажать "
-"нужную клавишу."
+"заданного времени. Это полезно на тот случай, если происходит случайное "
+"нажатие сразу нескольких клавиш или сложно с первого раза нажать нужную "
+"клавишу."
 
 #: ui/KeyboardFilters.qml:39
 #, kde-format
@@ -709,8 +709,8 @@ msgid ""
 "tremors that cause you to press a key multiple times when you only intend to "
 "press once."
 msgstr ""
-"Игнорировать быстрые повторные нажатия одной и той же клавиши. Это удобная "
-"опция на тот случай, если из-за тремора рук происходит многократное нажатие "
+"Игнорировать быстрые повторные нажатия одной и той же клавиши. Это полезно "
+"на тот случай, если из-за тремора рук происходит многократное нажатие "
 "клавиши, которую требовалось нажать только один раз."
 
 #: ui/KeyboardFilters.qml:145
