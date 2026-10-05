@@ -1,6 +1,6 @@
-# Version: $Revision: 1745488 $
+# Version: $Revision: 1749192 $
 # translation of kcminput.po to
-# SPDX-FileCopyrightText: 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2011-2012, 2014-2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Piotr Roszatycki <dexter@debian.org>, 1998-2000.
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002,2003, 2004, 2005, 2008, 2010.
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-04 00:47+0000\n"
-"PO-Revision-Date: 2026-01-24 10:20+0100\n"
+"PO-Revision-Date: 2026-10-04 12:54+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: inputbackend.cpp:49
 #, kde-format
@@ -229,14 +229,13 @@ msgstr "Odwróć kierunek przewijania"
 #, kde-format
 msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
-msgstr ""
+msgstr "Przewijaj przy przesuwaniu wskaźnika"
 
 #: ui/main.qml:383
-#, fuzzy, kde-format
-#| msgid "Emulate middle button"
+#, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
-msgstr "Emuluj środkowy przycisk"
+msgstr "po naciśnięciu środkowego przycisku"
 
 #: ui/main.qml:396
 #, kde-format
@@ -253,11 +252,10 @@ msgstr ""
 "przewidziane jako rolka do przewijania dla urządzeń, które takiej nie mają."
 
 #: ui/main.qml:406
-#, fuzzy, kde-format
-#| msgid "Emulate middle button"
+#, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
-msgstr "Emuluj środkowy przycisk"
+msgstr "po kliknięciu środkowego przycisku"
 
 #: ui/main.qml:419
 #, kde-format
@@ -267,6 +265,9 @@ msgid ""
 "you want the application to receive a single middle-click. This includes "
 "middle-click dragging."
 msgstr ""
+"Będzie to ogólnie zakłócać klikanie środkowym; kliknij środkowym dwukrotnie, "
+"jeśli chcesz, aby aplikacja otrzymała pojedyncze kliknięcie środkowym. Do "
+"tego zalicza się przeciąganie po kliknięciu środkowym."
 
 #~ msgctxt "@option:check"
 #~ msgid "Hold down middle button and move mouse to scroll"
