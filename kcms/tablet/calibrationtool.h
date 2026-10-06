@@ -29,6 +29,7 @@ class CalibrationTool : public QObject
 
 public:
     CalibrationTool();
+    ~CalibrationTool();
 
     void setWidth(float width);
 
