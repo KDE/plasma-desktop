@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 00:47+0000\n"
-"PO-Revision-Date: 2026-08-18 04:10+0900\n"
+"PO-Revision-Date: 2026-10-06 03:46+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -294,24 +294,25 @@ msgstr "Ho̍k-guân thâi-tiāu khuài-sok-khí"
 msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
 msgstr ""
+"Tī tshing-tuann suán tsi̍t-ê hāng-bo̍k lâi tī tsia khuànn i ê khuài-sok-khí"
 
 #: ui/main.qml:435
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Export Shortcut Scheme"
-msgstr ""
+msgstr "Huē-tshut Khuài-sok-khí Hong-àn"
 
 #: ui/main.qml:435 ui/main.qml:567
 #, kde-format
 msgctxt "@title:window dialog"
 msgid "Import Shortcut Scheme"
-msgstr ""
+msgstr "Huē-ji̍p Khuài-sok-khí Hong-àn"
 
 #: ui/main.qml:437
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
-msgstr ""
+msgstr "Khuài-sok-khí Hong-àn (*.kksrc)"
 
 #: ui/main.qml:464
 #, kde-format
@@ -445,13 +446,13 @@ msgstr "Thiam khuài-sok-khí hong-àn"
 #, kde-format
 msgctxt "@action:button Collapse shortcuts view"
 msgid "Collapse"
-msgstr ""
+msgstr "Siu--khí-lâi"
 
 #: ui/ShortcutActionDelegate.qml:32
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand to configure shortcuts"
-msgstr ""
+msgstr "Thián-khui lâi siat-tīng khuài-sok-khí"
 
 #: ui/ShortcutActionDelegate.qml:38
 #, kde-format
@@ -471,7 +472,7 @@ msgstr "%1:"
 #, kde-format
 msgctxt "@info:status"
 msgid "No active shortcuts"
-msgstr ""
+msgstr "Bô khuài-sok-khí"
 
 #: ui/ShortcutActionDelegate.qml:136
 #, kde-format

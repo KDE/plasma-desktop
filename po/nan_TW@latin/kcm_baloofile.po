@@ -1,0 +1,159 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-08-13 00:52+0000\n"
+"PO-Revision-Date: 2026-10-06 04:07+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 26.11.70\n"
+
+#: ui/main.qml:44
+#, kde-format
+msgctxt "@action:button"
+msgid "Pause Indexer"
+msgstr "Tsiām-thîng Sik-ín"
+
+#: ui/main.qml:44
+#, kde-format
+msgctxt "@action:button"
+msgid "Resume Indexer"
+msgstr "Kè-sio̍k Sik-ín"
+
+#: ui/main.qml:61
+#, kde-format
+msgctxt "@info inlinemessage"
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr "Tse ē tī KRunner kap khé-tōng-khì "
+
+#: ui/main.qml:71
+#, kde-format
+msgctxt "@info:inlinemessage"
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on the number of files to "
+"index."
+msgstr ""
+"Lí kám ài thâi-tiāu tsit-má tû-tsûn ê sik-ín tsu-liāu? Tse ē sik-tshut %1 ê "
+"khang-king, m̄-koh nā í-āu koh khé-iōng sik-ín ē su-iàu koh uì khai-sí kiàn-"
+"li̍p kui-ê sik-ín. Khuànn ū luā-tsē tóng-àn, tse khó-lîng ê su-iàu tsi̍t-kuá "
+"sî-kan."
+
+#: ui/main.qml:73
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete Index Data"
+msgstr "Thâi-tiāu Sik-ín Tsu-liāu"
+
+#: ui/main.qml:83
+#, kde-format
+msgctxt "@info:usagetip"
+msgid ""
+"File Search helps you quickly locate your files. You can choose which "
+"folders and what types of file data are indexed."
+msgstr ""
+"Tòng-àn Tshiau-tshuē kong-lîng hōo lí ē-sái khah kín tshuē tio̍h lí ê tòng-"
+"àn. Lí ē-sái suán ài sik-ín toh tsi̍t-kuá tsu-liāu-giap-á kap toh tsi̍t-kuá "
+"tòng-àn luī-hîng ê tsu-liāu."
+
+#: ui/main.qml:102
+#, kde-format
+msgctxt "@title:group"
+msgid "Data to index:"
+msgstr "Ài sik-ín ê tsu-liāu:"
+
+#: ui/main.qml:106
+#, kde-format
+msgctxt "@option:radio Data to index"
+msgid "Nothing (disable indexing entirely)"
+msgstr "Lóng mài sik-ín (uân-tsuân thîng iōng sik-ín)"
+
+#: ui/main.qml:124
+#, kde-format
+msgctxt "@option:radio Data to index"
+msgid "File names only"
+msgstr "Kan-na tòng-àn miâ"
+
+#: ui/main.qml:142
+#, kde-format
+msgctxt "@option:radio Data to index"
+msgid "File names and contents"
+msgstr "Tóng-miâ kap lāi-iông"
+
+#: ui/main.qml:162
+#, kde-format
+msgctxt "@option:check"
+msgid "Also index hidden files and folders"
+msgstr "Mā sik-ín ún-tsông tòng-àn kap tsu-liāu-giap-á"
+
+#: ui/main.qml:189
+#, kde-format
+msgctxt "@title:table Locations to include or exclude from indexing"
+msgid "Locations"
+msgstr "Uī-tì"
+
+#: ui/main.qml:192
+#, kde-format
+msgctxt "@action:button"
+msgid "Start Indexing a Folder…"
+msgstr "Khai-sí Sik-ín Tsi̍t-ê Tsu-liāu-giap-á…"
+
+#: ui/main.qml:200
+#, kde-format
+msgctxt "@action:button"
+msgid "Stop Indexing a Folder…"
+msgstr "Thîng-tsí Sik-ín Tsi̍t-ê Tsu-liāu-giap-á…"
+
+#: ui/main.qml:218
+#, kde-format
+msgctxt "State and a percentage of progress"
+msgid "%1, %2% complete"
+msgstr "%1, %2% uân-sîng"
+
+#: ui/main.qml:225
+#, kde-kuit-format
+msgctxt "@info Currently Indexing"
+msgid "Currently indexing: <filename>%1</filename>"
+msgstr "Tsit-má leh sik-ín: <filename>%1</filename>"
+
+#: ui/main.qml:276
+#, kde-format
+msgctxt "@info:status"
+msgid "Not indexed"
+msgstr "Bē sik-ín"
+
+#: ui/main.qml:277
+#, kde-format
+msgctxt "@info:status"
+msgid "Indexed"
+msgstr "Ū sik-ín"
+
+#: ui/main.qml:303
+#, kde-format
+msgctxt "Remove the list item for this filesystem path"
+msgid "Remove entry"
+msgstr "Î-tû hāng-bo̍k"
+
+#: ui/main.qml:324
+#, kde-format
+msgctxt "@title:window"
+msgid "Select a folder to include"
+msgstr "Suán tsi̍t-ê ài pau-kuat ê tsu-liāu-giap-á"
+
+#: ui/main.qml:324
+#, kde-format
+msgctxt "@title:window"
+msgid "Select a folder to exclude"
+msgstr "Suán tsi̍t-ê ài pâi-tû ê tsu-liāu-giap-á"

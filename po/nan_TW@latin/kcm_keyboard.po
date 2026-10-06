@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-19 00:46+0000\n"
-"PO-Revision-Date: 2026-08-18 02:33+0900\n"
+"PO-Revision-Date: 2026-10-06 03:44+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -83,12 +83,19 @@ msgid ""
 "not supported and  will also trigger this message. These might still work "
 "fine if applied"
 msgstr ""
+"Khí-puânn kí-hô tsài-ji̍p sit-pāi--ah. Tse thong-siông sī tāi-piáu suán-ti̍k ê "
+"hîng-hō bô tsi-uān tsi̍t-ê pòo-kio̍k á-sī pòo-kio̍k piàn-tsíng. Tsit ê būn-tê "
+"tī iōng tsit ê hîng-hō, pòo-kio̍k kap piàn-tsíng ê tsoo-ha̍p ê sî-tsūn ìng-kai "
+"sī mā ē tshut-hiān.\n"
+"Tī hē-thóng xkb bo̍k-lo̍k guā-kháu tīng-gī ê pòo-kio̍k bô tsi-uān ī-lám, sóo-í "
+"mā ē hōo tsit ê sìn-sit tshut-hiān. Tsit khuán tsîng-hîng khó-lîng tsí-sī ī-"
+"lám ū būn-tê, thò-iōng liáu-āu khó-lîng á-sī ē-sái iōng"
 
 #: ui/KeyBindings.qml:18
 #, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
-msgstr "Khuài-sok-khí"
+msgstr "Khí Tsoo-ha̍p"
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -170,13 +177,13 @@ msgstr "Siat-tīng Tshiat-uānn"
 #, kde-format
 msgctxt "@action:button"
 msgid "Key Bindings"
-msgstr "Khuài-sok-khí"
+msgstr "Khí Tsoo-ha̍p"
 
 #: ui/main.qml:45
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Key Bindings"
-msgstr "Khuài-sok-khí"
+msgstr "Khí Tsoo-ha̍p"
 
 #: ui/main.qml:51
 #, kde-format
@@ -262,13 +269,13 @@ msgstr "Tiông-ho̍k khí iân-tî %1"
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
-msgstr ""
+msgstr "%1 hô-bió"
 
 #: ui/main.qml:192 ui/main_phone.qml:147
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
-msgstr ""
+msgstr "hô-bió"
 
 #: ui/main.qml:205 ui/main_phone.qml:162
 #, kde-format
@@ -298,19 +305,19 @@ msgstr "kái tiông-ho̍k/bió"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Test area:"
-msgstr ""
+msgstr "Tshik-tshì khu-i̍k:"
 
 #: ui/main.qml:245
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to test settings"
-msgstr ""
+msgstr "Tī tsia phah jī lâi tshik-tshì siat-tīng"
 
 #: ui/main.qml:256
 #, kde-format
 msgctxt "@title:view"
 msgid "Layouts"
-msgstr ""
+msgstr "Pòo-kio̍k"
 
 #: ui/main.qml:270
 #, kde-format
@@ -381,6 +388,10 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"Tsú pòo-kio̍k ē-sái ū 4 ê, kî-thann lóng sī pī-iōng ê. Pī-iōng pòo-kio̍k tī-"
+"leh sûn-khuân tshiat-uānn pòo-kio̍k ê sî-tsūn bē khí suán tio̍h, m̄-koh á-sī ē-"
+"sái uì khí-puânn tsí-sī-khì guân-kiānn á-sī iōng tsū-tīng khuài-sok-khí lâi "
+"khì iōng."
 
 #: ui/main.qml:387
 #, kde-format
@@ -511,6 +522,11 @@ msgid ""
 "Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
 "page."
 msgstr ""
+"Kū ê X11 khuài-sok-khí thê-kiong tuì kan-na ū siu-sik-khí ê khuài-sok-khí "
+"koh kha siông-sè ê khòng-tsè, tī-leh X11 tíng-kuân leh ki̍k-tuan ê tsîng-hîng "
+"mā khó-lîng tsi-uān ê ū khah hó tsi̍t-sut-á. In tī Wayland mā ē-sái iōng.<nl/"
+"><nl/>Siat-tīng tsit kuá khuài-sok-khí ē kah lí tshuā khì Khí Tsoo-ha̍p ia̍h-"
+"bīn."
 
 #: ui/Switching.qml:180
 #, kde-format
@@ -525,6 +541,8 @@ msgid ""
 "Modifier keys can be used to type additional characters, symbols, and "
 "diacritical marks."
 msgstr ""
+"Siu-sik-khí ē-sái iōng-lâi su-ji̍p koh-khah tsē ê jī-guân, hû-hō, kap piàn-im "
+"kì-hō."
 
 #: xkboptionsmodel.cpp:163
 #, kde-format

@@ -1,0 +1,171 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-06-07 00:47+0000\n"
+"PO-Revision-Date: 2026-10-06 04:05+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 26.11.70\n"
+
+#: kcmkded.cpp:117
+#, kde-format
+msgid "Failed to stop service: %1"
+msgstr "Thîng-tsí ho̍k-bū sit-pāi--ah: %1"
+
+#: kcmkded.cpp:119
+#, kde-format
+msgid "Failed to start service: %1"
+msgstr "Khé-tōng ho̍k-bū sit-pāi--ah: %1"
+
+#: kcmkded.cpp:126
+#, kde-format
+msgid "Failed to stop service."
+msgstr "Thîng-tsí ho̍k-bū sit-pāi--ah."
+
+#: kcmkded.cpp:128
+#, kde-format
+msgid "Failed to start service."
+msgstr "Khé-tōng ho̍k-bū sit-pāi--ah."
+
+#: kcmkded.cpp:226
+#, kde-format
+msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
+msgstr ""
+"Thong-ti piàn-king tû-tsûn hōo KDE Ho̍k-bū Kuán-lí-tsiá (kded6) ê sî-tsūn sit-"
+"pāi--ah: %1"
+
+#: ui/main.qml:48
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"If you're disabling something here to work around an issue, please <link "
+"url='%1'>submit a bug report about it as well.</link>"
+msgstr ""
+"Nā lí sī tī tsia beh thîng-iōng ho̍k-bū lâi hông-tsí būn-tê huat-sing, "
+"tshiánn mā khó-lū <link url='%1'>kah gún huê-pò tsit ê būn-tê</link>."
+
+#: ui/main.qml:55
+#, kde-format
+msgctxt "@info:status inlinemessage"
+msgid ""
+"The background services manager (kded6) is currently not running. Make sure "
+"it is installed correctly."
+msgstr ""
+"Puē-kíng ho̍k-bū kuán-lí-tsiá (kded6) tsit-má bô leh tsip-hîng. Tshiánn khak-"
+"tīng i ū tsìng-khak an-tsong."
+
+#: ui/main.qml:65
+#, kde-format
+msgctxt "@info:status inlinemessage"
+msgid ""
+"Some services disable themselves again when manually started if they are not "
+"useful in the current environment."
+msgstr ""
+"Ū tsi̍t-kuá ho̍k-bū nā-sī tī tsit-má ê khuân-kíng bô-lōo-iōng ē tī tshiú-tōng "
+"khé-tōng ê sî-tsūn kā ka-kī koh thîng-iōng."
+
+#: ui/main.qml:75
+#, kde-format
+msgctxt "@info:status inlinemessage"
+msgid ""
+"Some services were automatically started/stopped when the background "
+"services manager (kded6) was restarted to apply your changes."
+msgstr ""
+"Puē-kíng ho̍k-bū kuán-lí-tsiá (kded6) tîng-khé-tōng lâi thò-iōng lí ê piàn-"
+"king ê sî-tsūn ū tsi̍t-kuá ho̍k-bū hōo tsū-tōng khé-tōng á-sī thîng-tsí--ah."
+
+#: ui/main.qml:123
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "All Services"
+msgstr "Sóo-ū Ho̍k-bū"
+
+#: ui/main.qml:124
+#, kde-format
+msgctxt "@item:inlistbox List running services"
+msgid "Running"
+msgstr "Leh Tsip-hîng"
+
+#: ui/main.qml:125
+#, kde-format
+msgctxt "@item:inlistbox List not running services"
+msgid "Not Running"
+msgstr "Bô leh Tsip-hîng"
+
+#: ui/main.qml:146
+#, kde-format
+msgctxt "@title:group list section"
+msgid "Startup Services"
+msgstr "Khé-tōng sî ê Ho̍k-bū"
+
+#: ui/main.qml:147
+#, kde-format
+msgctxt "@title:group list section"
+msgid "Load-on-Demand Services"
+msgstr "Su-iàu sî Tsài-ji̍p ê Ho̍k-bū"
+
+#: ui/main.qml:166
+#, kde-format
+msgctxt "@action:button %1 service name"
+msgid "Disable automatically loading %1 on startup"
+msgstr "Mài tī hē-thóng khé-tōng ê sî-tsūn tsū-tōng tsài-ji̍p %1"
+
+#: ui/main.qml:166
+#, kde-format
+msgctxt "@action:button %1 service name"
+msgid "Enable automatically loading %1 on startup"
+msgstr "Ài tī hē-thóng khé-tōng ê sî-tsūn tsū-tōng tsài-ji̍p %1"
+
+#: ui/main.qml:167
+#, kde-format
+msgctxt "@info:whatsthis Accessible description"
+msgid "Toggle automatically loading this service on startup"
+msgstr ""
+"Tshiat-uānn kám ài tī hē-thóng khé-tōng ê sî-tsūn tsū-tōng tsài-ji̍p tsit ê "
+"ho̍k-bū"
+
+#: ui/main.qml:211
+#, kde-format
+msgctxt "@info:status"
+msgid "Not running"
+msgstr "Bô leh tsip-hîng"
+
+#: ui/main.qml:212
+#, kde-format
+msgctxt "@info:status"
+msgid "Running"
+msgstr "Leh tsip-hîng"
+
+#: ui/main.qml:232
+#, kde-format
+msgctxt "@action:button %1 service name"
+msgid "Stop %1"
+msgstr "Thîng-tsí %1"
+
+#: ui/main.qml:232
+#, kde-format
+msgctxt "@action:button %1 service name"
+msgid "Start %1"
+msgstr "Khé-tōng %1"
+
+#: ui/main.qml:235
+#, kde-format
+msgctxt "@action:button"
+msgid "Stop Service"
+msgstr "Thîng-tsí Ho̍k-bū"
+
+#: ui/main.qml:235
+#, kde-format
+msgctxt "@action:button"
+msgid "Start Service"
+msgstr "Khé-tōng Ho̍k-bū"
