@@ -38,6 +38,8 @@ KCMUtils.SimpleKCM {
                     LookAndFeelBox {
                         id: lightLookAndFeelBox
 
+                        Layout.alignment: Qt.AlignTop
+
                         packageId: kcm.globalsSettings.defaultLightLookAndFeel
                         variant: LookAndFeel.Variant.Light
 
@@ -61,6 +63,8 @@ KCMUtils.SimpleKCM {
                     LookAndFeelBox {
                         id: darkLookAndFeelBox
 
+                        Layout.alignment: Qt.AlignTop
+
                         packageId: kcm.globalsSettings.defaultDarkLookAndFeel
                         variant: LookAndFeel.Variant.Dark
 
@@ -83,6 +87,9 @@ KCMUtils.SimpleKCM {
 
                     LookAndFeelBox {
                         id: automaticLookAndFeelBox
+
+                        Layout.alignment: Qt.AlignTop
+
                         popupEnabled: false
 
                         group: themeGroup
