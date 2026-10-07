@@ -19,6 +19,7 @@ set( kcm_keyboard_PART_SRCS
     xkboptionsmodel.cpp
     userlayoutmodel.cpp
     layoutsearchmodel.cpp
+    variantsmodel.cpp
 )
 
 ecm_qt_declare_logging_category(kcm_keyboard_PART_SRCS

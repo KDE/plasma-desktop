@@ -5,6 +5,7 @@
 
 #include "flags.h"
 #include "layoutsearchmodel.h"
+#include "variantsmodel.h"
 
 struct FlagsForeign {
     Q_GADGET
@@ -17,4 +18,10 @@ struct LayoutSearchModelForeign {
     Q_GADGET
     QML_NAMED_ELEMENT(LayoutSearchModel)
     QML_FOREIGN(LayoutSearchModel)
+};
+
+struct VariantsModelForeign {
+    Q_GADGET
+    QML_NAMED_ELEMENT(VariantsModel)
+    QML_FOREIGN(VariantsModel)
 };

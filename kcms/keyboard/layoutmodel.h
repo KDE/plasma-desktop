@@ -35,7 +35,7 @@ public:
     QHash<int, QByteArray> roleNames() const override;
     enum Roles {
         ShortNameRole = Qt::UserRole + 1,
-        DescripionRole,
+        DescriptionRole,
         VariantNameRole,
     };
 

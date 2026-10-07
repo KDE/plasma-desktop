@@ -38,7 +38,7 @@ QVariant LayoutModel::data(const QModelIndex &index, int role) const
 
     const auto &layout = m_data.at(index.row());
 
-    if (role == Roles::DescripionRole || role == Qt::DisplayRole) {
+    if (role == Roles::DescriptionRole || role == Qt::DisplayRole) {
         return layout.description;
     } else if (role == Roles::ShortNameRole) {
         return layout.name;
@@ -54,7 +54,7 @@ QHash<int, QByteArray> LayoutModel::roleNames() const
     return {
         {Qt::DisplayRole, QByteArrayLiteral("display")},
         {Roles::ShortNameRole, QByteArrayLiteral("shortName")},
-        {Roles::DescripionRole, QByteArrayLiteral("description")},
+        {Roles::DescriptionRole, QByteArrayLiteral("description")},
         {Roles::VariantNameRole, QByteArrayLiteral("variantName")},
     };
 }

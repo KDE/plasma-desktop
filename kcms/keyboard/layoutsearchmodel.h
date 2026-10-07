@@ -1,6 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2025 Bharadwaj Raju <bharadwaj.raju777@protonmail.com>
-
+    SPDX-FileCopyrightText: 2026 Tobias Fella <tobias.fella@kde.org>
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
@@ -12,27 +12,23 @@ class LayoutSearchModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 
-public:
-    LayoutSearchModel(QObject *parent = nullptr);
-
-    Q_INVOKABLE QString searchString() const
-    {
-        return m_searchString;
-    };
-    Q_INVOKABLE void setSearchString(QStringView searchString);
-
     Q_PROPERTY(QString searchString READ searchString WRITE setSearchString NOTIFY searchStringChanged)
 
-signals:
+public:
+    explicit LayoutSearchModel(QObject *parent = nullptr);
+
+    QString searchString() const;
+    void setSearchString(const QString &searchString);
+
+    bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
+
+Q_SIGNALS:
     void searchStringChanged();
 
 protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
-    QVariant data(const QModelIndex &idx, int role) const override;
-    QHash<int, QByteArray> roleNames() const override;
 
 private:
-    QString m_searchString;
+    QString m_searchString = QStringLiteral("");
     QString getFullName(const QModelIndex &idx) const;
-    int m_searchScoreRole;
 };
