@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-03 00:47+0000\n"
-"PO-Revision-Date: 2026-03-27 21:33+0200\n"
+"PO-Revision-Date: 2026-10-07 00:19+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: kcm.cpp:57
 #, kde-format
@@ -171,6 +171,8 @@ msgid ""
 "This setting is not available while “Right-click by pressing anywhere with "
 "two fingers” is selected."
 msgstr ""
+"Ši nuostata neprieinama, kol pasirinkta „Inicijuoti dešiniojo mygtuko "
+"spustelėjimą paspaudžiant bet kur dviem pirštais“."
 
 #: ui/main.qml:212
 #, kde-format
@@ -254,16 +256,12 @@ msgid "Right-click by:"
 msgstr "Inicijuoti dešinįjį spustelėjimą:"
 
 #: ui/main.qml:482
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Completes the sentence 'right-click by pressing bottom-"
-#| "right corner'"
-#| msgid "Pressing bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-left "
 "corner'"
 msgid "Pressing bottom-left corner"
-msgstr "Paspaudžiant apatinį dešinįjį kampą"
+msgstr "Paspaudžiant apatinį kairįjį kampą"
 
 #: ui/main.qml:483
 #, kde-format
@@ -352,13 +350,11 @@ msgid "Right-click"
 msgstr "Dešinysis spustelėjimas"
 
 #: ui/main.qml:586
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by tapping anywhere with three fingers."
 msgstr ""
-"Inicijuoti viduriniojo mygtuko spustelėjimą paspaudžiant bet kur trimis "
+"Inicijuoti viduriniojo mygtuko spustelėjimą bakstelėjant bet kur trimis "
 "pirštais."
 
 #: ui/main.qml:608
@@ -368,13 +364,11 @@ msgid "Middle-click"
 msgstr "Vidurinysis spustelėjimas"
 
 #: ui/main.qml:611
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Right-click by tapping anywhere with three fingers."
 msgstr ""
-"Inicijuoti viduriniojo mygtuko spustelėjimą paspaudžiant bet kur trimis "
+"Inicijuoti dešiniojo mygtuko spustelėjimą bakstelėjant bet kur trimis "
 "pirštais."
 
 #~ msgctxt ""

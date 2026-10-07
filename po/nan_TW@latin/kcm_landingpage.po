@@ -1,0 +1,155 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-07-01 00:47+0000\n"
+"PO-Revision-Date: 2026-10-07 08:42+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 26.11.70\n"
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: landingpage_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "Phuè-sik hong-àn ê miâ"
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:15
+#, kde-format
+msgid "Single click to open files"
+msgstr "Tshi̍h tsi̍t-kái lâi khui tóng-àn"
+
+#. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:19
+#, kde-format
+msgid "Switch the look and feel package depending on time of day"
+msgstr "Tsiàu sî-kan tshiat-uānn guā-kuan kap hong-keh ê thò-kiānn"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:23
+#, kde-format
+msgid "Global Look and Feel package"
+msgstr "Tsuân-i̍k Guā-kuan kap Hong-keh thò-kiānn"
+
+#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
+#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:27
+#: landingpage_kdeglobalssettings.kcfg:31
+#, kde-format
+msgid "Global Look and Feel package, alternate"
+msgstr "Tsuân-i̍k Guā-kuan kap Hong-keh thò-kiānn, tāi-thè"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:35
+#, kde-format
+msgid "Animation speed"
+msgstr "Tōng-thài hāu-kó sok-tōo"
+
+#: ui/LookAndFeelBox.qml:106
+#, kde-format
+msgctxt "@action:button"
+msgid "Change global theme"
+msgstr "Uānn tsuân-i̍k tsú-tê"
+
+#: ui/LookAndFeelBox.qml:187
+#, kde-format
+msgctxt "@label accessible"
+msgid "Global theme"
+msgstr "Tsuân-i̍k tsú-tê"
+
+#: ui/main.qml:31
+#, kde-format
+msgctxt "@title:group for light/dark quick switch"
+msgid "Theme:"
+msgstr "Tsú-tê:"
+
+#: ui/main.qml:90
+#, kde-format
+msgctxt "Switch between dark and light look and feel packages automatically"
+msgid "Automatic"
+msgstr "Tsū-tōng"
+
+#: ui/main.qml:116
+#, kde-format
+msgctxt ""
+"@info:tooltip 1 is the name of a light global theme, 2 is the name of a dark "
+"global theme"
+msgid "Use “%1” during the day and “%2” at night"
+msgstr "Ji̍t--sî iōng “%1”, àm-sî iōng “%2”"
+
+#: ui/main.qml:126
+#, kde-format
+msgctxt "@title:group translate as short as possible"
+msgid "More appearance settings:"
+msgstr "Kî-thann guā-kuan siat-tīng:"
+
+#: ui/main.qml:193
+#, kde-format
+msgctxt "@title:slider"
+msgid "Animation speed:"
+msgstr "Tōng-thài hāu-kó sok-tōo:"
+
+#: ui/main.qml:203
+#, kde-format
+msgctxt "Animation speed"
+msgid "Slow"
+msgstr "Bān"
+
+#: ui/main.qml:210
+#, kde-format
+msgctxt "Animation speed"
+msgid "Instant"
+msgstr "Kín"
+
+#: ui/main.qml:220
+#, kde-format
+msgctxt ""
+"part of a sentence: 'Clicking files or folders [opens them/selects them]'"
+msgid "Clicking files or folders:"
+msgstr "Tiám tòng-àn á-sī tsu-liāu-giap-á ê sî-tsūn:"
+
+#: ui/main.qml:225
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders selects them'"
+msgid "Selects them"
+msgstr "Suán-ti̍k in"
+
+#: ui/main.qml:231
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Open by double-clicking instead"
+msgstr "Tiám nn̄g kái lâi phah-khui"
+
+#: ui/main.qml:247
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "Phah-khui in"
+
+#: ui/main.qml:252
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Select by clicking on item's selection marker"
+msgstr "Tshi̍h hāng-bo̍k ê suán-ti̍k piau-kì lâi suán-ti̍k"
+
+#: ui/main.qml:264
+#, kde-format
+msgctxt "@title:group translate as short as possible"
+msgid "More behavior settings:"
+msgstr "Kî-thann hîng-uî siat-tīng:"
+
+#: ui/main.qml:275
+#, kde-format
+msgctxt "@title:group for grid of buttons opening kcms"
+msgid "Most used pages:"
+msgstr "Siōng ū leh iōng ê ia̍h-bīn:"
