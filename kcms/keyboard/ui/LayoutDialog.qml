@@ -47,18 +47,15 @@ Kirigami.Dialog {
         }
     }
 
-    KCMKeyboard.LayoutSearchModel {
-        id: layoutSearchProxy
-        sourceModel: KCMKeyboard.LayoutModel {}
-        searchString: ""
+    KCMKeyboard.LayoutModel {
+        id: layoutModel
     }
 
-    KeyboardLayoutsModel {
-        id: layoutsProxy
-    }
-
-    KeyboardVariantsModel {
+    KCMKeyboard.VariantsModel {
         id: variantProxy
+        searchString: searchField.text
+        shortName: layoutsView.currentItem?.shortName ?? ""
+        sourceModel: layoutModel
     }
 
     contentItem: ColumnLayout {
@@ -67,9 +64,6 @@ Kirigami.Dialog {
         Kirigami.SearchField {
             id: searchField
             Layout.fillWidth: true
-            onAccepted: {
-                layoutSearchProxy.searchString = searchField.text.trim();
-            }
         }
 
         RowLayout {
@@ -84,12 +78,13 @@ Kirigami.Dialog {
                 contentItem: ListView {
                     id: layoutsView
                     currentIndex: 0
-                    model: layoutsProxy
+                    model: KCMKeyboard.LayoutSearchModel {
+                        sourceModel: layoutModel
+                        searchString: searchField.text
+                    }
                     delegate: LayoutDelegate {}
                     keyNavigationEnabled: true
                     activeFocusOnTab: true
-
-                    onCurrentItemChanged: variantProxy.invalidateFilter()
                 }
             }
 

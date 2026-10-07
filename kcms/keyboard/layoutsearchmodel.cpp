@@ -1,15 +1,10 @@
 /*
     SPDX-FileCopyrightText: 2025 Bharadwaj Raju <bharadwaj.raju777@protonmail.com>
-
+    SPDX-FileCopyrightText: 2026 Tobias Fella <tobias.fella@kde.org>
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #include "layoutsearchmodel.h"
-
-#include <algorithm>
-
-#include <QDebug>
-#include <QStringLiteral>
 
 #include <KFuzzyMatcher>
 
@@ -20,53 +15,75 @@ using namespace Qt::Literals::StringLiterals;
 LayoutSearchModel::LayoutSearchModel(QObject *parent)
     : QSortFilterProxyModel(parent)
 {
-    connect(this, &QSortFilterProxyModel::sourceModelChanged, this, [this]() {
-        const auto originalRoles = sourceModel()->roleNames().keys();
-        m_searchScoreRole = *std::max_element(originalRoles.begin(), originalRoles.end()) + 1;
-    });
+    setSortRole(LayoutModel::Roles::DescriptionRole);
 }
 
-void LayoutSearchModel::setSearchString(QStringView searchString)
+QString LayoutSearchModel::searchString() const
 {
-    beginResetModel();
-    m_searchString = searchString.toString();
-    endResetModel();
+    return m_searchString;
+}
+
+void LayoutSearchModel::setSearchString(const QString &searchString)
+{
+    if (searchString == m_searchString) {
+        return;
+    }
+
+    beginFilterChange();
+    m_searchString = searchString;
+    endFilterChange();
+    sort(0, Qt::DescendingOrder);
+
     Q_EMIT searchStringChanged();
 }
 
 QString LayoutSearchModel::getFullName(const QModelIndex &idx) const
 {
-    const auto shortName = sourceModel()->data(idx, LayoutModel::Roles::ShortNameRole).toString();
-    const auto description = sourceModel()->data(idx, LayoutModel::Roles::DescripionRole).toString();
-    const auto variantName = sourceModel()->data(idx, LayoutModel::Roles::VariantNameRole).toString();
+    const auto shortName = idx.data(LayoutModel::Roles::ShortNameRole).toString();
+    const auto description = idx.data(LayoutModel::Roles::DescriptionRole).toString();
+    const auto variantName = idx.data(LayoutModel::Roles::VariantNameRole).toString();
 
     return shortName + " - "_L1 + description + " - "_L1 + variantName;
 }
 
-QVariant LayoutSearchModel::data(const QModelIndex &idx, int role) const
-{
-    if (!idx.isValid())
-        return QVariant();
-
-    if (role == m_searchScoreRole)
-        return QVariant(KFuzzyMatcher::match(m_searchString, getFullName(idx)).score);
-
-    return sourceModel()->data(idx, role);
-}
-
 bool LayoutSearchModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {
-    return true;
-    const auto idx = sourceModel()->index(sourceRow, 0, sourceParent);
-    const auto res = KFuzzyMatcher::match(m_searchString, getFullName(idx));
-    return res.matched;
+    const auto index = sourceModel()->index(sourceRow, 0, sourceParent);
+
+    if (!index.data(LayoutModel::Roles::VariantNameRole).toString().trimmed().isEmpty()) {
+        return false;
+    }
+
+    if (m_searchString.isEmpty()) {
+        return true;
+    }
+
+    if (getFullName(index).contains(m_searchString, Qt::CaseInsensitive)) {
+        return true;
+    }
+
+    const auto shortName = index.data(LayoutModel::ShortNameRole).toString();
+
+    for (auto i = 0; i < sourceModel()->rowCount(); i++) {
+        const auto sourceIndex = sourceModel()->index(i, 0, sourceParent);
+        const auto sourceShortName = sourceIndex.data(LayoutModel::ShortNameRole).toString();
+        if (sourceShortName == shortName && getFullName(sourceIndex).contains(m_searchString, Qt::CaseInsensitive)) {
+            return true;
+        }
+    }
+    return false;
 }
 
-QHash<int, QByteArray> LayoutSearchModel::roleNames() const
+bool LayoutSearchModel::lessThan(const QModelIndex &left, const QModelIndex &right) const
 {
-    QHash<int, QByteArray> newRoles(sourceModel()->roleNames());
-    newRoles.insert(m_searchScoreRole, "searchScore"_ba);
-    return newRoles;
+    auto leftScore = KFuzzyMatcher::match(m_searchString, getFullName(left)).score;
+    auto rightScore = KFuzzyMatcher::match(m_searchString, getFullName(right)).score;
+
+    if (leftScore == rightScore) {
+        return QSortFilterProxyModel::lessThan(left, right);
+    }
+
+    return leftScore < rightScore;
 }
 
 #include "moc_layoutsearchmodel.cpp"
