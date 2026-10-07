@@ -15,6 +15,7 @@ import org.kde.taskmanager as TaskManager
 import org.kde.kwindowsystem
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.shell
+import org.kde.plasma.workspace.keyboardlayout as Keyboards
 
 import org.kde.plasma.plasmoid
 
@@ -91,6 +92,7 @@ Item {
     // Examples of such windows: properties of a file on desktop, or portal "open with" dialog
     property bool touchingWindow: false
     property bool touchingWindowDirect: visibleWindowsModel.count > 0
+    readonly property bool touchingWindowOrKeyboard: touchingWindow || (bottomEdge && Keyboards.KWinVirtualKeyboard.visible)
     property bool showingDesktop: KWindowSystem.showingDesktop
     Timer {
         id: touchingWindowDebounceTimer
@@ -186,24 +188,24 @@ Item {
     property bool isTransparent: panel.opacityMode === Panel.Translucent
     property bool isAdaptive: panel.opacityMode === Panel.Adaptive
     property bool floating: panel.floating
-    property var stateTriggers: [floating, touchingWindow, isOpaque, isAdaptive, isTransparent, containment, panel.floatingApplets]
+    property var stateTriggers: [floating, touchingWindowOrKeyboard, isOpaque, isAdaptive, isTransparent, containment, panel.floatingApplets]
     onStateTriggersChanged: {
         let opaqueApplets = false
         let floatingApplets = false
-        if ((!floating || touchingWindow) && (isOpaque || (touchingWindow && isAdaptive))) {
+        if ((!floating || touchingWindowOrKeyboard) && (isOpaque || (touchingWindowOrKeyboard && isAdaptive))) {
             panelOpacity = 1
             opaqueApplets = true
             floatingnessTarget = 0
             floatingApplets = (panel.floatingApplets && !floating)
-        } else if ((!floating || touchingWindow) && (isTransparent || (!touchingWindow && isAdaptive))) {
+        } else if ((!floating || touchingWindowOrKeyboard) && (isTransparent || (!touchingWindowOrKeyboard && isAdaptive))) {
             panelOpacity = 0
             floatingnessTarget = 0
             floatingApplets = (panel.floatingApplets && !floating)
-        } else if ((floating && !touchingWindow) && (isTransparent || isAdaptive)) {
+        } else if ((floating && !touchingWindowOrKeyboard) && (isTransparent || isAdaptive)) {
             panelOpacity = 0
             floatingnessTarget = 1
             floatingApplets = true
-        } else if (floating && !touchingWindow && isOpaque) {
+        } else if (floating && !touchingWindowOrKeyboard && isOpaque) {
             panelOpacity = 1
             opaqueApplets = true
             floatingnessTarget = 1
