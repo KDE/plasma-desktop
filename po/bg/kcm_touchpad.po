@@ -14,8 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.03.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.03.70\n"
 
 #: kcm.cpp:57
 #, kde-format
@@ -160,12 +160,14 @@ msgstr ""
 "с левия и десния бутон на мишката."
 
 #: ui/main.qml:202
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "This setting is not available while “Right-click by pressing anywhere with "
 "two fingers” is selected."
 msgstr ""
+"Тази настройка не е налична, докато е избрано „Десен клик чрез натискане с "
+"два пръста навсякъде“."
 
 #: ui/main.qml:212
 #, kde-format
@@ -258,7 +260,7 @@ msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-left "
 "corner'"
 msgid "Pressing bottom-left corner"
-msgstr "Натискане на долния десен ъгъл"
+msgstr "Натискане на долния ляв ъгъл"
 
 #: ui/main.qml:483
 #, kde-format
@@ -349,8 +351,7 @@ msgstr "Кликване с десен бутон"
 #| msgid "Middle-click by pressing anywhere with three fingers."
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by tapping anywhere with three fingers."
-msgstr ""
-"Кликване със среден бутон чрез натискане с три пръста на произволно място."
+msgstr "Среден клик чрез докосване на всяко място с три пръста."
 
 #: ui/main.qml:608
 #, kde-format
@@ -364,39 +365,4 @@ msgstr "Кликване със среден бутон"
 #| msgid "Middle-click by pressing anywhere with three fingers."
 msgctxt "@info:usagetip shown below radio button"
 msgid "Right-click by tapping anywhere with three fingers."
-msgstr ""
-"Кликване със среден бутон чрез натискане с три пръста на произволно място."
-
-#~ msgctxt ""
-#~ "@label for radiobutton group, begins the sentence 'middle-click by "
-#~ "pressing bottom-middle edge/by pressing anywhere with three fingers'"
-#~ msgid "Middle-click by:"
-#~ msgstr "Кликване със среден бутон чрез:"
-
-#~ msgctxt ""
-#~ "@option:radio completes the sentence 'middle-click by pressing bottom-"
-#~ "middle edge'"
-#~ msgid "Pressing bottom-middle edge"
-#~ msgstr "Натискане долу в средата"
-
-#~ msgctxt ""
-#~ "@option:radio completes the sentence 'middle-click by pressing bottom-"
-#~ "left and bottom-right corners'"
-#~ msgid "Pressing bottom-left and bottom-right corners"
-#~ msgstr "Натискане на долния ляв и десен ъгъл"
-
-#~ msgctxt ""
-#~ "@option:check completes the sentence 'middle-click by pressing anywhere "
-#~ "with three fingers'"
-#~ msgid "Pressing anywhere with three fingers"
-#~ msgstr "Натискане с два пръста на произволно място"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Right-click (three-finger tap to middle-click)"
-#~ msgstr ""
-#~ "Кликване  с десния бутон на мишката (докосване с три пръста за средно "
-#~ "кликване)"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Middle-click (three-finger tap to right-click)"
-#~ msgstr "Средно кликване (докосване с три пръста за кликване на десен бутон)"
+msgstr "Десен клик чрез докосване с три пръста на произволно място."
