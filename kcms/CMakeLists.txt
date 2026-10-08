@@ -20,7 +20,6 @@ add_subdirectory(recentFiles)
 add_subdirectory(kded)
 add_subdirectory(runners)
 add_subdirectory(spellchecking)
-add_subdirectory(qtquicksettings)
 add_subdirectory(touchscreen)
 
 add_subdirectory(workspaceoptions)
