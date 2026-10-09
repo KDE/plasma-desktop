@@ -64,10 +64,6 @@ QQC2.Button {
             elide: Text.ElideRight
             textFormat: Text.PlainText
             text: button.kcmAction?.text ?? ""
-            // This custom label is not painted by the button's native style.
-            color: button.enabled && (button.down || button.activeFocus)
-                ? Kirigami.Theme.highlightedTextColor
-                : Kirigami.Theme.textColor
         }
     }
 }
