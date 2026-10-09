@@ -27,55 +27,18 @@ QList<LayoutUnit> &KeyboardConfig::layouts()
     return m_layouts;
 }
 
+void KeyboardConfig::notifyLayoutsChanged()
+{
+    applyLayoutsToSettings();
+}
+
 KeyboardSettings *KeyboardConfig::keyboardSettings() const
 {
     return m_settings;
 }
 
-bool KeyboardConfig::isDefaults() const
+void KeyboardConfig::applyLayoutsToSettings()
 {
-    return m_settings->isDefaults() && isDefaultsLayouts();
-}
-
-bool KeyboardConfig::isSaveNeeded() const
-{
-    return m_settings->isSaveNeeded() || layoutsSaveNeeded();
-}
-
-bool KeyboardConfig::layoutsSaveNeeded() const
-{
-    if (m_layouts.size() != m_referenceLayouts.size()) {
-        return true;
-    }
-    if (m_settings->layoutLoopCount() != m_referenceLayoutLoopCount) {
-        return true;
-    }
-
-    // Due to layoutUnit operator==() that does not test all properties.
-    // Do not compare shortcuts, they are automatically applied
-    bool isSaveNeeded = false;
-    for (int i = 0; i < m_layouts.size(); ++i) {
-        isSaveNeeded |= m_layouts.at(i).getDisplayName() != m_referenceLayouts.at(i).getDisplayName();
-        isSaveNeeded |= m_layouts.at(i).layout() != m_referenceLayouts.at(i).layout();
-        isSaveNeeded |= m_layouts.at(i).variant() != m_referenceLayouts.at(i).variant();
-
-        if (isSaveNeeded) {
-            return isSaveNeeded;
-        }
-    }
-    return isSaveNeeded;
-}
-
-bool KeyboardConfig::isDefaultsLayouts() const
-{
-    return m_layouts.isEmpty();
-}
-
-void KeyboardConfig::save()
-{
-    m_referenceLayouts = m_layouts;
-    m_referenceLayoutLoopCount = m_settings->layoutLoopCount();
-
     QStringList layoutList;
     QStringList variants;
     QStringList displayNames;
@@ -98,14 +61,10 @@ void KeyboardConfig::save()
     m_settings->setLayoutList(layoutList);
     m_settings->setVariantList(variants);
     m_settings->setDisplayNames(displayNames);
-
-    m_settings->save();
 }
 
-void KeyboardConfig::load()
+void KeyboardConfig::resetLayouts()
 {
-    m_settings->load();
-
     const QStringList layoutStrings = m_settings->layoutList();
     const QStringList variants = m_settings->variantList();
     const QStringList names = m_settings->displayNames();
@@ -124,16 +83,6 @@ void KeyboardConfig::load()
     }
 
     // layouts' shortcuts are retrieved from GlobalShortcuts in KCMKeyboardWidget
-    m_referenceLayouts = m_layouts;
-    m_referenceLayoutLoopCount = m_settings->layoutLoopCount();
-
-    qCDebug(KCM_KEYBOARD) << "configuring layouts" << m_settings->configureLayouts() << "configuring options" << m_settings->resetOldXkbOptions();
-}
-
-void KeyboardConfig::defaults()
-{
-    m_layouts.clear();
-    m_settings->setDefaults();
 }
 
 #include "moc_keyboard_config.cpp"

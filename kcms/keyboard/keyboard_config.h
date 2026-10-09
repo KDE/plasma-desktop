@@ -21,25 +21,15 @@ public:
 
     const QList<LayoutUnit> &layouts() const;
     QList<LayoutUnit> &layouts();
+    void notifyLayoutsChanged();
+
+    void resetLayouts(); // call after settings load() and defaults()
+    void applyLayoutsToSettings(); // call before settings save()
 
     KeyboardSettings *keyboardSettings() const;
-
-    bool isDefaults() const;
-    bool isSaveNeeded() const;
-
-private:
-    bool layoutsSaveNeeded() const;
-    bool isDefaultsLayouts() const;
-
-public Q_SLOTS:
-    void save();
-    void load();
-    void defaults();
 
 private:
     KeyboardSettings *const m_settings;
 
     QList<LayoutUnit> m_layouts;
-    QList<LayoutUnit> m_referenceLayouts;
-    int m_referenceLayoutLoopCount;
 };
