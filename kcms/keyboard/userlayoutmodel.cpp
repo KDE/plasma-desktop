@@ -75,20 +75,31 @@ bool UserLayoutModel::setData(const QModelIndex &index, const QVariant &value, i
 
     if (role == Roles::DisplayNameRole) {
         QString displayText = value.toString().left(3);
-        layoutUnit.setDisplayName(displayText);
-        Q_EMIT dataChanged(index, index, {Roles::DisplayNameRole});
+        if (layoutUnit.getDisplayName() != displayText) {
+            layoutUnit.setDisplayName(displayText);
+            m_config->notifyLayoutsChanged();
+            Q_EMIT dataChanged(index, index, {Roles::DisplayNameRole});
+        }
         return true;
     }
 
     if (role == Roles::ShortcutRole) {
-        layoutUnit.setShortcut(QKeySequence(value.toString()));
-        Q_EMIT dataChanged(index, index, {Roles::ShortcutRole});
+        QKeySequence shortcut(value.toString());
+        if (layoutUnit.getShortcut() != shortcut) {
+            layoutUnit.setShortcut(shortcut);
+            m_config->notifyLayoutsChanged();
+            Q_EMIT dataChanged(index, index, {Roles::ShortcutRole});
+        }
         return true;
     }
 
     if (role == Roles::VariantRole) {
-        layoutUnit.setVariant(value.toString());
-        Q_EMIT dataChanged(index, index, {Roles::VariantRole, Roles::VariantNameRole});
+        QString variant = value.toString();
+        if (layoutUnit.variant() != variant) {
+            layoutUnit.setVariant(variant);
+            m_config->notifyLayoutsChanged();
+            Q_EMIT dataChanged(index, index, {Roles::VariantRole, Roles::VariantNameRole});
+        }
         return true;
     }
 
@@ -115,8 +126,11 @@ void UserLayoutModel::reset()
 
 void UserLayoutModel::clear()
 {
-    m_config->layouts().clear();
-    reset();
+    if (!m_config->layouts().isEmpty()) {
+        m_config->layouts().clear();
+        reset();
+        m_config->notifyLayoutsChanged();
+    }
 }
 
 void UserLayoutModel::move(int oldIndex, int newIndex)
@@ -124,6 +138,7 @@ void UserLayoutModel::move(int oldIndex, int newIndex)
     if (beginMoveRows(QModelIndex(), oldIndex, oldIndex, QModelIndex(), oldIndex < newIndex ? newIndex + 1 : newIndex)) {
         m_config->layouts().move(oldIndex, newIndex);
         endMoveRows();
+        m_config->notifyLayoutsChanged();
     }
 }
 
@@ -132,6 +147,7 @@ void UserLayoutModel::remove(int index)
     beginRemoveRows(QModelIndex(), index, index);
     m_config->layouts().removeAt(index);
     endRemoveRows();
+    m_config->notifyLayoutsChanged();
 }
 
 void UserLayoutModel::addLayout(const QString &layout, const QString &variant, const QKeySequence &shortcut, const QString &displayName)
@@ -146,6 +162,7 @@ void UserLayoutModel::addLayout(const QString &layout, const QString &variant, c
     beginInsertRows(QModelIndex(), m_config->layouts().count(), m_config->layouts().count());
     m_config->layouts().append(unit);
     endInsertRows();
+    m_config->notifyLayoutsChanged();
 }
 
 void UserLayoutModel::setSingleLayout(const QString &layout, const QString &variant, const QKeySequence &shortcut, const QString &displayName)

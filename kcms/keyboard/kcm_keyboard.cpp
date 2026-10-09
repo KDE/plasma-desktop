@@ -61,7 +61,6 @@ KCMKeyboard::KCMKeyboard(QObject *parent, const KPluginMetaData &data)
     connect(m_userLayoutModel, &UserLayoutModel::rowsInserted, this, &KCMKeyboard::resetShortcuts);
     connect(m_userLayoutModel, &UserLayoutModel::rowsRemoved, this, &KCMKeyboard::resetShortcuts);
     connect(m_userLayoutModel, &UserLayoutModel::dataChanged, this, &KCMKeyboard::resetShortcuts);
-    connect(m_userLayoutModel, &UserLayoutModel::rowsMoved, this, &KCMKeyboard::settingsChanged);
     connect(m_shortcutHelper, &ShortcutHelper::alternativeShortcutChanged, this, &KCMKeyboard::settingsChanged);
     connect(m_shortcutHelper, &ShortcutHelper::lastUsedShortcutChanged, this, &KCMKeyboard::settingsChanged);
     connect(m_xkbOptionsModel, &XkbOptionsModel::dataChanged, this, &KCMKeyboard::settingsChanged);
@@ -125,9 +124,9 @@ void KCMKeyboard::defaults()
 {
     KQuickManagedConfigModule::defaults();
 
+    m_config->resetLayouts();
     m_shortcutHelper->defaults();
     m_xkbOptionsModel->setXkbOptions(m_data->keyboardSettings()->defaultXkbOptionsValue());
-    m_config->defaults();
     m_userLayoutModel->reset();
 }
 
@@ -135,15 +134,17 @@ void KCMKeyboard::load()
 {
     KQuickManagedConfigModule::load();
 
+    m_config->resetLayouts();
     m_shortcutHelper->load();
     m_xkbOptionsModel->setXkbOptions(m_data->keyboardSettings()->xkbOptions());
-    m_config->load();
     m_shortcutHelper->actionCollection()->loadLayoutShortcuts(m_config->layouts());
     m_userLayoutModel->reset();
 }
 
 void KCMKeyboard::save()
 {
+    m_config->applyLayoutsToSettings();
+
     KQuickManagedConfigModule::save();
 
     m_shortcutHelper->save();
@@ -163,20 +164,17 @@ void KCMKeyboard::save()
     m_data->keyboardSettings()->save();
 
     m_shortcutHelper->actionCollection()->setLayoutShortcuts(m_config->layouts());
-    m_config->save();
     m_userLayoutModel->reset();
 }
 
 bool KCMKeyboard::isSaveNeeded() const
 {
-    return m_data->workspaceOptions()->isSaveNeeded() || m_data->keyboardMiscSettings()->isSaveNeeded() || m_config->isSaveNeeded()
-        || m_shortcutHelper->isSaveNeeded() || m_xkbOptionsModel->xkbOptions() != m_data->keyboardSettings()->xkbOptions();
+    return m_shortcutHelper->isSaveNeeded() || m_xkbOptionsModel->xkbOptions() != m_data->keyboardSettings()->xkbOptions();
 }
 
 bool KCMKeyboard::isDefaults() const
 {
-    return m_data->workspaceOptions()->isDefaults() && m_data->keyboardMiscSettings()->isDefaults() && m_config->isDefaults() && m_shortcutHelper->isDefaults()
-        && m_xkbOptionsModel->xkbOptions() == m_data->keyboardSettings()->xkbOptions();
+    return m_shortcutHelper->isDefaults() && m_xkbOptionsModel->xkbOptions() == m_data->keyboardSettings()->defaultXkbOptionsValue();
 }
 
 void KCMKeyboard::resetShortcuts()
