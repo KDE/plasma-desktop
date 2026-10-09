@@ -12,7 +12,6 @@
 #include <QString>
 
 class LayoutUnit;
-class KeyboardConfig;
 
 class Flags : public QObject
 {
@@ -24,7 +23,6 @@ public:
     Q_INVOKABLE QIcon getIcon(const QString &layout);
 
     static QString getLongText(const LayoutUnit &layoutUnit);
-    static QString getShortText(const LayoutUnit &layoutUnit, const KeyboardConfig &keyboardConfig);
 
 private:
     QIcon createIcon(const QString &layout);

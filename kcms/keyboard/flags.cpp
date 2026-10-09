@@ -8,17 +8,10 @@
 #include "flags.h"
 
 #include <KCountryFlagEmojiIconEngine>
-#include <KLocalizedString>
-
-#include <QPainter>
-#include <QPixmap>
-#include <QStandardPaths>
-#include <QStringList>
 
 // for text handling
-#include "keyboard_config.h"
 #include "layoutunit.h"
-#include "xkb_rules.h"
+#include "xkb_rules.h" // LayoutInfo
 
 QIcon Flags::getIcon(const QString &layout)
 {
@@ -47,28 +40,6 @@ QString Flags::getCountryFromLayoutName(const QString &layout) const
 }
 
 // TODO: move this to some other class?
-
-QString Flags::getShortText(const LayoutUnit &layoutUnit, const KeyboardConfig &keyboardConfig)
-{
-    if (layoutUnit.isEmpty())
-        return QStringLiteral("--");
-
-    QString layoutText = layoutUnit.layout();
-
-    for (const auto layouts = keyboardConfig.layouts(); const LayoutUnit &lu : layouts) {
-        if (layoutUnit.layout() == lu.layout() && layoutUnit.variant() == lu.variant()) {
-            layoutText = lu.getDisplayName();
-            break;
-        }
-    }
-
-    // TODO: good autolabel
-    //	if( layoutText == layoutUnit.layout && layoutUnit.getDisplayName() != layoutUnit.layout ) {
-    //		layoutText = layoutUnit.getDisplayName();
-    //	}
-
-    return layoutText;
-}
 
 static QString getDisplayText(const QString &layout, const QString &variant)
 {
