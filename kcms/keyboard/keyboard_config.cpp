@@ -10,32 +10,11 @@
 #include "debug.h"
 #include "keyboardsettings.h"
 #include "layoutunit.h"
-#include "xkb_rules.h"
-
-const QMap<KeyboardConfig::SwitchingPolicy, QString> switchingPolicyNames = {
-    {KeyboardConfig::SwitchingPolicy::SWITCH_POLICY_GLOBAL, QStringLiteral("Global")},
-    {KeyboardConfig::SwitchingPolicy::SWITCH_POLICY_DESKTOP, QStringLiteral("Desktop")},
-    {KeyboardConfig::SwitchingPolicy::SWITCH_POLICY_APPLICATION, QStringLiteral("WinClass")},
-    {KeyboardConfig::SwitchingPolicy::SWITCH_POLICY_WINDOW, QStringLiteral("Window")},
-};
-
-const int KeyboardConfig::NO_LOOPING = -1;
 
 KeyboardConfig::KeyboardConfig(KeyboardSettings *settings, QObject *parent) noexcept
     : QObject(parent)
     , m_settings(settings)
 {
-    QObject::connect(m_settings, &KeyboardSettings::switchModeChanged, this, &KeyboardConfig::switchingPolicyChanged);
-}
-
-KeyboardConfig::SwitchingPolicy KeyboardConfig::switchingPolicy() const
-{
-    return policyFromString(m_settings->switchMode());
-}
-
-void KeyboardConfig::setSwitchingPolicy(SwitchingPolicy mode)
-{
-    m_settings->setSwitchMode(switchingPolicyNames[mode]);
 }
 
 const QList<LayoutUnit> &KeyboardConfig::layouts() const
@@ -61,16 +40,6 @@ bool KeyboardConfig::isDefaults() const
 bool KeyboardConfig::isSaveNeeded() const
 {
     return m_settings->isSaveNeeded() || layoutsSaveNeeded();
-}
-
-KeyboardConfig::SwitchingPolicy KeyboardConfig::policyFromString(const QString &string) const
-{
-    const auto keys = switchingPolicyNames.keys();
-    auto mode = std::find_if(keys.constBegin(), keys.constEnd(), [=, this](const KeyboardConfig::SwitchingPolicy &key) {
-        return switchingPolicyNames[key] == string;
-    });
-
-    return *mode;
 }
 
 bool KeyboardConfig::layoutsSaveNeeded() const

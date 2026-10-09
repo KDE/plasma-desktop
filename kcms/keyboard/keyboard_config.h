@@ -17,20 +17,7 @@ class KeyboardConfig final : public QObject
     Q_OBJECT
 
 public:
-    static const int NO_LOOPING; // = -1;
-
-    enum SwitchingPolicy {
-        SWITCH_POLICY_GLOBAL = 0,
-        SWITCH_POLICY_DESKTOP = 1,
-        SWITCH_POLICY_APPLICATION = 2,
-        SWITCH_POLICY_WINDOW = 3,
-    };
-
-public:
     explicit KeyboardConfig(KeyboardSettings *settings, QObject *parent) noexcept;
-
-    SwitchingPolicy switchingPolicy() const;
-    void setSwitchingPolicy(SwitchingPolicy switchingPolicy);
 
     const QList<LayoutUnit> &layouts() const;
     QList<LayoutUnit> &layouts();
@@ -41,13 +28,8 @@ public:
     bool isSaveNeeded() const;
 
 private:
-    SwitchingPolicy policyFromString(const QString &string) const;
-
     bool layoutsSaveNeeded() const;
     bool isDefaultsLayouts() const;
-
-Q_SIGNALS:
-    void switchingPolicyChanged();
 
 public Q_SLOTS:
     void save();
