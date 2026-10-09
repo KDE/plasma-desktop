@@ -51,12 +51,10 @@ QAction *KeyboardLayoutActionCollection::getLastUsedLayoutAction()
     return action(1);
 }
 
-QAction *KeyboardLayoutActionCollection::createLayoutShortcutActon(const LayoutUnit &layoutUnit, int layoutIndex, bool autoload)
+QAction *KeyboardLayoutActionCollection::createLayoutShortcutAction(const LayoutUnit &layoutUnit, int layoutIndex, bool autoload)
 {
     QString longLayoutName = Flags::getLongText(layoutUnit);
-    QString actionName = QStringLiteral("Switch keyboard layout to ");
-    actionName += longLayoutName;
-    QAction *action = addAction(actionName);
+    QAction *action = addAction(QStringLiteral("Switch keyboard layout to %1").arg(longLayoutName));
     action->setText(i18n("Switch keyboard layout to %1", longLayoutName));
     KGlobalAccel::GlobalShortcutLoading loading = autoload ? KGlobalAccel::Autoloading : KGlobalAccel::NoAutoloading;
     QList<QKeySequence> shortcuts;
@@ -86,7 +84,7 @@ void KeyboardLayoutActionCollection::setLayoutShortcuts(QList<LayoutUnit> &layou
     for (int i = 0; i < layoutUnits.size(); ++i) {
         const LayoutUnit &layoutUnit = layoutUnits.at(i);
         if (!layoutUnit.getShortcut().isEmpty()) {
-            createLayoutShortcutActon(layoutUnit, i, false);
+            createLayoutShortcutAction(layoutUnit, i, false);
         }
     }
     qCDebug(KCM_KEYBOARD) << "Cleaning component shortcuts on save" << KGlobalAccel::cleanComponent(QStringLiteral("KDE Keyboard Layout Switcher"));
@@ -96,7 +94,7 @@ void KeyboardLayoutActionCollection::loadLayoutShortcuts(QList<LayoutUnit> &layo
 {
     for (int i = 0; i < layoutUnits.size(); ++i) {
         LayoutUnit &layoutUnit = layoutUnits[i];
-        QAction *action = createLayoutShortcutActon(layoutUnit, i, true);
+        QAction *action = createLayoutShortcutAction(layoutUnit, i, true);
         const auto shortcut = KGlobalAccel::self()->shortcut(action);
         if (!shortcut.isEmpty()) {
             qCDebug(KCM_KEYBOARD, ) << "Restored shortcut for" << layoutUnit.toString() << shortcut.first();

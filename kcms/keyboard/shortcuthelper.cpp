@@ -70,7 +70,7 @@ bool ShortcutHelper::isDefaults()
     return m_alternativeShortcut == DefaultAlternativeShortcut || m_lastUsedShortcut == DefaultLastUsedShortcut;
 }
 
-KeyboardLayoutActionCollection *ShortcutHelper::actionColletion()
+KeyboardLayoutActionCollection *ShortcutHelper::actionCollection()
 {
     return m_actionCollection;
 }

@@ -32,7 +32,7 @@ public:
     bool isSaveNeeded();
     bool isDefaults();
 
-    KeyboardLayoutActionCollection *actionColletion();
+    KeyboardLayoutActionCollection *actionCollection();
 
 public Q_SLOTS:
     void defaults();
