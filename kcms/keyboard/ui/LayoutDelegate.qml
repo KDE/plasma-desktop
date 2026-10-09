@@ -50,9 +50,13 @@ Item {
         id: delegate
         implicitWidth: itemDelegate.width
 
+        // Because there's content on both sides of the list item
+        Kirigami.Theme.useAlternateBackgroundColor: true
+
         // There's no need for a list item to ever be selected
         down: false
         highlighted: false
+        hoverEnabled: false
 
         contentItem: RowLayout {
             spacing: Kirigami.Units.smallSpacing
@@ -108,6 +112,7 @@ Item {
             Kirigami.ActionToolBar {
                 Layout.fillWidth: false
                 actions: itemDelegate.actions
+                flat: false // Only use flat buttons in window toolbars
             }
         }
     }

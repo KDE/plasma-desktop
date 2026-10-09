@@ -33,6 +33,9 @@ KCM.ScrollViewKCM {
         delegate: QQC2.ItemDelegate {
             width: ListView.view.width
 
+            // Because there's content on both sides of the list item
+            Kirigami.Theme.useAlternateBackgroundColor: true
+
             onClicked: kcm.configureActivity(model.id);
 
             contentItem: RowLayout {
@@ -51,7 +54,7 @@ KCM.ScrollViewKCM {
                     textFormat: Text.PlainText
                 }
 
-                QQC2.ToolButton {
+                QQC2.Button {
                     visible: kcm.isNewActivityAuthorized
                     enabled:  activitiesList.count > 1
                     icon.name: "edit-delete"
