@@ -20,7 +20,7 @@ public:
 
     QAction *getToggleAction();
     QAction *getLastUsedLayoutAction();
-    QAction *createLayoutShortcutActon(const LayoutUnit &layoutUnit, int layoutIndex, bool autoload);
+    QAction *createLayoutShortcutAction(const LayoutUnit &layoutUnit, int layoutIndex, bool autoload);
     void setLayoutShortcuts(QList<LayoutUnit> &layoutUnits);
     void setToggleShortcut(const QKeySequence &keySequence);
     void setLastUsedLayoutShortcut(const QKeySequence &keySequence);

@@ -138,7 +138,7 @@ void KCMKeyboard::load()
     m_shortcutHelper->load();
     m_xkbOptionsModel->setXkbOptions(m_data->keyboardSettings()->xkbOptions());
     m_config->load();
-    m_shortcutHelper->actionColletion()->loadLayoutShortcuts(m_config->layouts());
+    m_shortcutHelper->actionCollection()->loadLayoutShortcuts(m_config->layouts());
     m_userLayoutModel->reset();
 }
 
@@ -162,7 +162,7 @@ void KCMKeyboard::save()
     m_data->keyboardSettings()->setXkbOptions(options);
     m_data->keyboardSettings()->save();
 
-    m_shortcutHelper->actionColletion()->setLayoutShortcuts(m_config->layouts());
+    m_shortcutHelper->actionCollection()->setLayoutShortcuts(m_config->layouts());
     m_config->save();
     m_userLayoutModel->reset();
 }
@@ -183,8 +183,8 @@ void KCMKeyboard::resetShortcuts()
 {
     settingsChanged();
 
-    m_shortcutHelper->actionColletion()->resetLayoutShortcuts();
-    m_shortcutHelper->actionColletion()->setLayoutShortcuts(m_config->layouts());
+    m_shortcutHelper->actionCollection()->resetLayoutShortcuts();
+    m_shortcutHelper->actionCollection()->setLayoutShortcuts(m_config->layouts());
 }
 
 #include "moc_kcm_keyboard.cpp"
