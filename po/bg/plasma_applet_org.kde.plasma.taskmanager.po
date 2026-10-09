@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-01 17:43+0000\n"
-"PO-Revision-Date: 2026-07-23 19:43+0200\n"
+"PO-Revision-Date: 2026-10-08 16:04+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: backend.cpp:339
 #, kde-format
@@ -727,21 +727,19 @@ msgid "Move to %1"
 msgstr "Преместване в %1"
 
 #: qml/ContextMenu.qml:505
-#, fuzzy, kde-format
-#| msgctxt "action:inmenu"
-#| msgid "Move to &Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move to &Screen"
 msgstr "Преместване към &екран"
 
 #: qml/ContextMenu.qml:535
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@item:inmenu List of all Screens to send a window to."
 msgid "Built-in Screen"
 msgstr "Вграден екран"
 
 #: qml/ContextMenu.qml:538
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "@item:inmenu List of all Screens to send a window to, manufacturer, model "
 "(output identifier)"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-11 00:46+0000\n"
+"POT-Creation-Date: 2026-10-09 00:49+0000\n"
 "PO-Revision-Date: 2007-08-19 16:29+0545\n"
 "Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -87,18 +87,18 @@ msgstr ""
 "सक्नुहुन्छ । यदि तपाईँसँग मूल पासवर्ड नभएमा, तर प्रणाली समय सुधार गर्नुपर्ने लागेमा, कृपया "
 "तपाईँको प्रणाली प्रसाशकसँग सम्पर्क गर्नुहोस् ।"
 
-#: main.cpp:57
+#: main.cpp:78
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr ""
 
-#: main.cpp:70
+#: main.cpp:89
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set current time"
 msgstr "समय सर्भर सम्पर्क गर्न असक्षम: %1."
 
-#: main.cpp:82
+#: main.cpp:101
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set timezone"

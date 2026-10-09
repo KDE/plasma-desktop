@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022-2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-03 00:47+0000\n"
-"PO-Revision-Date: 2026-04-03 01:07+0200\n"
+"PO-Revision-Date: 2026-10-08 16:05+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: kcm.cpp:57
 #, kde-format
@@ -160,7 +160,7 @@ msgstr ""
 "с левия и десния бутон на мишката."
 
 #: ui/main.qml:202
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "This setting is not available while “Right-click by pressing anywhere with "
@@ -251,11 +251,7 @@ msgid "Right-click by:"
 msgstr "Кликване с десен бутон чрез"
 
 #: ui/main.qml:482
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Completes the sentence 'right-click by pressing bottom-"
-#| "right corner'"
-#| msgid "Pressing bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-left "
 "corner'"
@@ -346,9 +342,7 @@ msgid "Right-click"
 msgstr "Кликване с десен бутон"
 
 #: ui/main.qml:586
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by tapping anywhere with three fingers."
 msgstr "Среден клик чрез докосване на всяко място с три пръста."
@@ -360,9 +354,7 @@ msgid "Middle-click"
 msgstr "Кликване със среден бутон"
 
 #: ui/main.qml:611
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Right-click by tapping anywhere with three fingers."
 msgstr "Десен клик чрез докосване с три пръста на произволно място."

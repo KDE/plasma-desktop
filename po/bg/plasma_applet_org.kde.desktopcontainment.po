@@ -3,13 +3,13 @@
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2010, 2011.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022-2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-02 00:47+0000\n"
-"PO-Revision-Date: 2026-04-03 01:05+0200\n"
+"PO-Revision-Date: 2026-10-08 16:04+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: package/contents/config/config.qml:17
 #, kde-format
@@ -140,12 +140,10 @@ msgid "Clear Icon"
 msgstr "Изчистване на икона"
 
 #: package/contents/ui/ConfigIcons.qml:126
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox columns/rows"
-#| msgid "Arrangement:"
+#, kde-format
 msgctxt "@label:listbox rows/columns"
 msgid "Arrangement:"
-msgstr "Разположение:"
+msgstr "Подреждане:"
 
 #: package/contents/ui/ConfigIcons.qml:129
 #, kde-format

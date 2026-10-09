@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-11 00:46+0000\n"
+"POT-Creation-Date: 2026-10-09 00:49+0000\n"
 "PO-Revision-Date: 2025-05-26 00:49+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -89,17 +89,17 @@ msgstr ""
 "superusuario pero cree que debería cambiarse la fecha y hora del sistema, "
 "por favor, contacte con el administrador del sistema."
 
-#: main.cpp:57
+#: main.cpp:78
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "No ha sido posible cambiar las preferencias de NTP"
 
-#: main.cpp:70
+#: main.cpp:89
 #, kde-format
 msgid "Unable to set current time"
 msgstr "No ha sido posible fijar la hora actual"
 
-#: main.cpp:82
+#: main.cpp:101
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "No ha sido posible fijar la zona horaria"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-11 00:46+0000\n"
+"POT-Creation-Date: 2026-10-09 00:49+0000\n"
 "PO-Revision-Date: 2010-12-17 20:55+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -79,18 +79,18 @@ msgstr ""
 "เมื่อคุณใช้งานโปรแกรม 'ตั้งค่าระบบ' ในฐานะผู้ดูแลระบบเท่านั้น แต่ถ้าคุณไม่มีสิทธิ์เช่นนั้น "
 "และคิดเวลาของระบบไม่ถูกต้อง โปรดแจ้งกับผู้ดูแลระบบของคุณ"
 
-#: main.cpp:57
+#: main.cpp:78
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr ""
 
-#: main.cpp:70
+#: main.cpp:89
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set current time"
 msgstr "ไม่สามารถติดต่อกับแม่ข่ายบริการเวลา: %1"
 
-#: main.cpp:82
+#: main.cpp:101
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set timezone"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-11 00:46+0000\n"
+"POT-Creation-Date: 2026-10-09 00:49+0000\n"
 "PO-Revision-Date: 2010-01-29 00:43+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -85,18 +85,18 @@ msgstr ""
 "лозинката за root, а мислите дека системското време треба да биде поправено, "
 "контактирајте со вашиот систем администратор."
 
-#: main.cpp:57
+#: main.cpp:78
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr ""
 
-#: main.cpp:70
+#: main.cpp:89
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set current time"
 msgstr "Не можам да контактирам со серверот за време: %1."
 
-#: main.cpp:82
+#: main.cpp:101
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set timezone"

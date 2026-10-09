@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-11 00:46+0000\n"
+"POT-Creation-Date: 2026-10-09 00:49+0000\n"
 "PO-Revision-Date: 2014-10-20 19:34+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -84,18 +84,18 @@ msgstr ""
 "sistemsko vrijeme trebalo da bude izmijenjeno, obratite se sistem-"
 "administratoru.</p></qt>."
 
-#: main.cpp:57
+#: main.cpp:78
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr ""
 
-#: main.cpp:70
+#: main.cpp:89
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set current time"
 msgstr "Ne mogu da stupim u vezu sa serverom: %1."
 
-#: main.cpp:82
+#: main.cpp:101
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set timezone"
