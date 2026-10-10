@@ -73,7 +73,6 @@ private Q_SLOTS:
 
 private:
     KeyboardSettingsData *const m_data;
-    KeyboardConfig *const m_config;
 
     UserLayoutModel *const m_userLayoutModel;
     ShortcutHelper *const m_shortcutHelper;

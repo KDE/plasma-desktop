@@ -9,8 +9,7 @@
 #include <KActionCollection>
 
 class LayoutUnit;
-template<typename T>
-class QList;
+class UserLayoutModel;
 
 class KeyboardLayoutActionCollection : public KActionCollection
 {
@@ -21,10 +20,10 @@ public:
     QAction *getToggleAction();
     QAction *getLastUsedLayoutAction();
     QAction *createLayoutShortcutAction(const LayoutUnit &layoutUnit, int layoutIndex, bool autoload);
-    void setLayoutShortcuts(QList<LayoutUnit> &layoutUnits);
+    void setLayoutShortcuts(const UserLayoutModel *layoutModel);
     void setToggleShortcut(const QKeySequence &keySequence);
     void setLastUsedLayoutShortcut(const QKeySequence &keySequence);
-    void loadLayoutShortcuts(QList<LayoutUnit> &layoutUnits);
+    void loadLayoutShortcuts(UserLayoutModel *layoutModel);
     void resetLayoutShortcuts();
 
 private:
