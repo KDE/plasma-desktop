@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the kcm_touchpad package.
-# SPDX-FileCopyrightText: 2015, 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2025, 2026 Luigi Toscano <luigi.toscano@tiscali.it>
+# SPDX-FileCopyrightText: 2015, 2017-2021, 2023-2026 Luigi Toscano <luigi.toscano@tiscali.it>
 # Vincenzo Reale <smart2128vr@gmail.com>, 2020.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-03 00:47+0000\n"
-"PO-Revision-Date: 2026-04-09 00:09+0200\n"
+"PO-Revision-Date: 2026-10-07 15:46+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: kcm.cpp:57
 #, kde-format
@@ -166,6 +166,8 @@ msgid ""
 "This setting is not available while “Right-click by pressing anywhere with "
 "two fingers” is selected."
 msgstr ""
+"Questa impostazione non è disponibile quando l'opzione «Pulsante destro "
+"premendo un qualsiasi punto con due dita» è selezionata."
 
 #: ui/main.qml:212
 #, kde-format
@@ -249,16 +251,12 @@ msgid "Right-click by:"
 msgstr "Clic destro:"
 
 #: ui/main.qml:482
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Completes the sentence 'right-click by pressing bottom-"
-#| "right corner'"
-#| msgid "Pressing bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-left "
 "corner'"
 msgid "Pressing bottom-left corner"
-msgstr "Premendo l'angolo in basso a destra"
+msgstr "Premendo l'angolo in basso a sinistra"
 
 #: ui/main.qml:483
 #, kde-format
@@ -343,12 +341,10 @@ msgid "Right-click"
 msgstr "Clic destro"
 
 #: ui/main.qml:586
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by tapping anywhere with three fingers."
-msgstr "Clic centrale premendo in qualsiasi punto con tre dita."
+msgstr "Clic centrale con un tocco in qualsiasi punto con tre dita."
 
 #: ui/main.qml:608
 #, kde-format
@@ -357,12 +353,10 @@ msgid "Middle-click"
 msgstr "Clic centrale"
 
 #: ui/main.qml:611
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Right-click by tapping anywhere with three fingers."
-msgstr "Clic centrale premendo in qualsiasi punto con tre dita."
+msgstr "Clic destro con un tocco in qualsiasi punto con tre dita."
 
 #~ msgctxt ""
 #~ "@label for radiobutton group, begins the sentence 'middle-click by "
