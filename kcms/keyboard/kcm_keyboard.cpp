@@ -16,7 +16,6 @@
 #include <KGlobalAccel>
 
 #include "bindings.h"
-#include "keyboard_config.h"
 #include "keyboardmiscsettings.h"
 #include "keyboardsettings.h"
 #include "keyboardsettingsdata.h"
@@ -32,8 +31,7 @@
 KCMKeyboard::KCMKeyboard(QObject *parent, const KPluginMetaData &data)
     : KQuickManagedConfigModule(parent, data)
     , m_data(new KeyboardSettingsData(this))
-    , m_config(new KeyboardConfig(m_data->keyboardSettings(), this))
-    , m_userLayoutModel(new UserLayoutModel(m_config, this))
+    , m_userLayoutModel(new UserLayoutModel(m_data->keyboardSettings(), this))
     , m_shortcutHelper(new ShortcutHelper(this))
     , m_xkbOptionsModel(new XkbOptionsModel(this))
 {
@@ -42,14 +40,6 @@ KCMKeyboard::KCMKeyboard(QObject *parent, const KPluginMetaData &data)
     qmlRegisterAnonymousType<KeyboardMiscSettings>(uri, 1);
     qmlRegisterAnonymousType<KeyboardSettings>(uri, 1);
     qmlRegisterUncreatableMetaObject(NumLockState::staticMetaObject, uri, 1, 0, "NumLockState", QString());
-
-    connect(m_data->keyboardSettings(), &KeyboardSettings::configureLayoutsChanged, this, [this]() -> void {
-        if (m_data->keyboardSettings()->configureLayouts()) {
-            m_userLayoutModel->reset();
-        } else {
-            m_userLayoutModel->clear();
-        }
-    });
 
     connect(m_data->keyboardSettings(), &KeyboardSettings::resetOldXkbOptionsChanged, this, [this]() -> void {
         if (m_data->keyboardSettings()->resetOldXkbOptions()) {
@@ -124,31 +114,23 @@ void KCMKeyboard::defaults()
 {
     KQuickManagedConfigModule::defaults();
 
-    m_config->resetLayouts();
+    m_userLayoutModel->resetToSettings();
     m_shortcutHelper->defaults();
     m_xkbOptionsModel->setXkbOptions(m_data->keyboardSettings()->defaultXkbOptionsValue());
-    m_userLayoutModel->reset();
 }
 
 void KCMKeyboard::load()
 {
     KQuickManagedConfigModule::load();
 
-    m_config->resetLayouts();
+    m_userLayoutModel->resetToSettings();
     m_shortcutHelper->load();
+    m_shortcutHelper->actionCollection()->loadLayoutShortcuts(m_userLayoutModel);
     m_xkbOptionsModel->setXkbOptions(m_data->keyboardSettings()->xkbOptions());
-    m_shortcutHelper->actionCollection()->loadLayoutShortcuts(m_config->layouts());
-    m_userLayoutModel->reset();
 }
 
 void KCMKeyboard::save()
 {
-    m_config->applyLayoutsToSettings();
-
-    KQuickManagedConfigModule::save();
-
-    m_shortcutHelper->save();
-
     QStringList options;
     if (m_data->keyboardSettings()->resetOldXkbOptions()) {
         options = m_xkbOptionsModel->xkbOptions();
@@ -161,10 +143,11 @@ void KCMKeyboard::save()
         }
     }
     m_data->keyboardSettings()->setXkbOptions(options);
-    m_data->keyboardSettings()->save();
 
-    m_shortcutHelper->actionCollection()->setLayoutShortcuts(m_config->layouts());
-    m_userLayoutModel->reset();
+    KQuickManagedConfigModule::save();
+
+    m_shortcutHelper->save();
+    m_shortcutHelper->actionCollection()->setLayoutShortcuts(m_userLayoutModel);
 }
 
 bool KCMKeyboard::isSaveNeeded() const
@@ -182,7 +165,7 @@ void KCMKeyboard::resetShortcuts()
     settingsChanged();
 
     m_shortcutHelper->actionCollection()->resetLayoutShortcuts();
-    m_shortcutHelper->actionCollection()->setLayoutShortcuts(m_config->layouts());
+    m_shortcutHelper->actionCollection()->setLayoutShortcuts(m_userLayoutModel);
 }
 
 #include "moc_kcm_keyboard.cpp"

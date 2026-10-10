@@ -16,6 +16,7 @@
 
 #include "flags.h"
 #include "layoutunit.h"
+#include "userlayoutmodel.h"
 
 KeyboardLayoutActionCollection::KeyboardLayoutActionCollection(QObject *parent, bool configAction_)
     : KActionCollection(parent, QStringLiteral("KDE Keyboard Layout Switcher"))
@@ -79,10 +80,10 @@ void KeyboardLayoutActionCollection::setLastUsedLayoutShortcut(const QKeySequenc
     KGlobalAccel::self()->setShortcut(getLastUsedLayoutAction(), QList<QKeySequence>() << keySequence, KGlobalAccel::NoAutoloading);
 }
 
-void KeyboardLayoutActionCollection::setLayoutShortcuts(QList<LayoutUnit> &layoutUnits)
+void KeyboardLayoutActionCollection::setLayoutShortcuts(const UserLayoutModel *layoutModel)
 {
-    for (int i = 0; i < layoutUnits.size(); ++i) {
-        const LayoutUnit &layoutUnit = layoutUnits.at(i);
+    for (int i = 0; i < layoutModel->rowCount(); ++i) {
+        LayoutUnit layoutUnit = layoutModel->layoutUnit(i);
         if (!layoutUnit.getShortcut().isEmpty()) {
             createLayoutShortcutAction(layoutUnit, i, false);
         }
@@ -90,17 +91,17 @@ void KeyboardLayoutActionCollection::setLayoutShortcuts(QList<LayoutUnit> &layou
     qCDebug(KCM_KEYBOARD) << "Cleaning component shortcuts on save" << KGlobalAccel::cleanComponent(QStringLiteral("KDE Keyboard Layout Switcher"));
 }
 
-void KeyboardLayoutActionCollection::loadLayoutShortcuts(QList<LayoutUnit> &layoutUnits)
+void KeyboardLayoutActionCollection::loadLayoutShortcuts(UserLayoutModel *layoutModel)
 {
-    for (int i = 0; i < layoutUnits.size(); ++i) {
-        LayoutUnit &layoutUnit = layoutUnits[i];
+    for (int i = 0; i < layoutModel->rowCount(); ++i) {
+        LayoutUnit layoutUnit = layoutModel->layoutUnit(i);
         QAction *action = createLayoutShortcutAction(layoutUnit, i, true);
         const auto shortcut = KGlobalAccel::self()->shortcut(action);
         if (!shortcut.isEmpty()) {
-            qCDebug(KCM_KEYBOARD, ) << "Restored shortcut for" << layoutUnit.toString() << shortcut.first();
-            layoutUnit.setShortcut(shortcut.first());
+            qCDebug(KCM_KEYBOARD) << "Restored shortcut for" << layoutUnit.toString() << shortcut.first();
+            layoutModel->setData(layoutModel->index(i), shortcut.first(), UserLayoutModel::ShortcutRole);
         } else {
-            qCDebug(KCM_KEYBOARD, ) << "Skipping empty shortcut for" << layoutUnit.toString();
+            qCDebug(KCM_KEYBOARD) << "Skipping empty shortcut for" << layoutUnit.toString();
             removeAction(action);
         }
     }
