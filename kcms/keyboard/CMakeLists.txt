@@ -9,7 +9,6 @@ kcmutils_add_qml_kcm(kcm_keyboard SOURCES kcmmain.cpp)
 
 set( kcm_keyboard_PART_SRCS
     kcm_keyboard.cpp
-    keyboard_config.cpp
     bindings.cpp
     flags.cpp
     tastenbrett.cpp

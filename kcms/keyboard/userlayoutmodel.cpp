@@ -7,22 +7,85 @@
 #include "userlayoutmodel.h"
 
 #include <QItemSelectionModel>
+#include <utility>
 
 #include "debug.h"
-#include "keyboard_config.h"
+#include "keyboardsettings.h"
 #include "layoutunit.h"
-#include "xkb_rules.h"
+#include "xkb_rules.h" // LayoutInfo
 
-UserLayoutModel::UserLayoutModel(KeyboardConfig *config, QObject *parent) noexcept
+UserLayoutModel::UserLayoutModel(KeyboardSettings *settings, QObject *parent) noexcept
     : QAbstractListModel(parent)
-    , m_selectionModel(new QItemSelectionModel(this))
-    , m_config(config)
+    , m_settings(settings)
 {
+    connect(m_settings, &KeyboardSettings::configureLayoutsChanged, this, [this] {
+        // if !configureLayouts, the model will claim rowCount() == 0 without actually dropping data
+        beginResetModel();
+        endResetModel();
+    });
 }
 
-int UserLayoutModel::rowCount(const QModelIndex & /*parent*/) const
+void UserLayoutModel::resetToSettings()
 {
-    return m_config->layouts().count();
+    beginResetModel();
+
+    const QStringList layoutStrings = m_settings->layoutList();
+    const QStringList variants = m_settings->variantList();
+    const QStringList names = m_settings->displayNames();
+
+    m_layouts.clear();
+    for (int i = 0; i < layoutStrings.size(); ++i) {
+        m_layouts.append({layoutStrings[i], variants.value(i, QString())});
+
+        if (const QString name = names.value(i); name != layoutStrings[i]) {
+            m_layouts[i].setDisplayName(name);
+        }
+    }
+    // layouts' shortcuts are retrieved by ShortcutHelper's KeyboardLayoutActionCollection
+
+    endResetModel();
+}
+
+void UserLayoutModel::reset(const QList<LayoutUnit> &layouts)
+{
+    beginResetModel();
+
+    m_layouts = layouts;
+    applyToSettings();
+
+    endResetModel();
+}
+
+void UserLayoutModel::applyToSettings()
+{
+    QStringList layoutStrings;
+    QStringList variants;
+    QStringList displayNames;
+
+    for (const LayoutUnit &layoutUnit : std::as_const(m_layouts)) {
+        layoutStrings.append(layoutUnit.layout());
+        variants.append(layoutUnit.variant());
+        displayNames.append(layoutUnit.getRawDisplayName());
+    }
+
+    // QStringLists with a single empty string are serialized as "\\0", avoid that
+    // by saving them as an empty list instead. This way it can be passed as-is to
+    // libxkbcommon/setxkbmap. Before KConfigXT it used QStringList::join(",").
+    if (variants.size() == 1 && variants.constFirst().isEmpty()) {
+        variants.clear();
+    }
+    if (displayNames.size() == 1 && displayNames.constFirst().isEmpty()) {
+        displayNames.clear();
+    }
+
+    m_settings->setLayoutList(layoutStrings);
+    m_settings->setVariantList(variants);
+    m_settings->setDisplayNames(displayNames);
+}
+
+int UserLayoutModel::rowCount(const QModelIndex &parent) const
+{
+    return m_settings->configureLayouts() && !parent.isValid() ? m_layouts.size() : 0;
 }
 
 QVariant UserLayoutModel::data(const QModelIndex &index, int role) const
@@ -30,10 +93,10 @@ QVariant UserLayoutModel::data(const QModelIndex &index, int role) const
     if (!index.isValid())
         return QVariant();
 
-    if (index.row() >= m_config->layouts().size())
+    if (index.row() >= rowCount(index.parent()))
         return QVariant();
 
-    const auto &layout = m_config->layouts().at(index.row());
+    const auto &layout = m_layouts.at(index.row());
 
     if (role == Roles::LayoutRole) {
         return QVariant::fromValue(layout.layout());
@@ -67,17 +130,17 @@ bool UserLayoutModel::setData(const QModelIndex &index, const QVariant &value, i
         return false;
     }
 
-    if (index.row() >= m_config->layouts().size() || index.data(role) == value) {
+    if (index.row() >= rowCount(index.parent()) || index.data(role) == value) {
         return false;
     }
 
-    LayoutUnit &layoutUnit = m_config->layouts()[index.row()];
+    LayoutUnit &layoutUnit = m_layouts[index.row()];
 
     if (role == Roles::DisplayNameRole) {
-        QString displayText = value.toString().left(3);
+        const QString displayText = value.toString().left(3);
         if (layoutUnit.getDisplayName() != displayText) {
             layoutUnit.setDisplayName(displayText);
-            m_config->notifyLayoutsChanged();
+            applyToSettings();
             Q_EMIT dataChanged(index, index, {Roles::DisplayNameRole});
         }
         return true;
@@ -87,7 +150,6 @@ bool UserLayoutModel::setData(const QModelIndex &index, const QVariant &value, i
         QKeySequence shortcut(value.toString());
         if (layoutUnit.getShortcut() != shortcut) {
             layoutUnit.setShortcut(shortcut);
-            m_config->notifyLayoutsChanged();
             Q_EMIT dataChanged(index, index, {Roles::ShortcutRole});
         }
         return true;
@@ -97,7 +159,7 @@ bool UserLayoutModel::setData(const QModelIndex &index, const QVariant &value, i
         QString variant = value.toString();
         if (layoutUnit.variant() != variant) {
             layoutUnit.setVariant(variant);
-            m_config->notifyLayoutsChanged();
+            applyToSettings();
             Q_EMIT dataChanged(index, index, {Roles::VariantRole, Roles::VariantNameRole});
         }
         return true;
@@ -118,57 +180,62 @@ QHash<int, QByteArray> UserLayoutModel::roleNames() const
     };
 }
 
-void UserLayoutModel::reset()
-{
-    beginResetModel();
-    endResetModel();
-}
-
-void UserLayoutModel::clear()
-{
-    if (!m_config->layouts().isEmpty()) {
-        m_config->layouts().clear();
-        reset();
-        m_config->notifyLayoutsChanged();
-    }
-}
-
 void UserLayoutModel::move(int oldIndex, int newIndex)
 {
     if (beginMoveRows(QModelIndex(), oldIndex, oldIndex, QModelIndex(), oldIndex < newIndex ? newIndex + 1 : newIndex)) {
-        m_config->layouts().move(oldIndex, newIndex);
+        m_layouts.move(oldIndex, newIndex);
+        applyToSettings();
         endMoveRows();
-        m_config->notifyLayoutsChanged();
     }
 }
 
 void UserLayoutModel::remove(int index)
 {
+    if (index >= rowCount()) {
+        return;
+    }
     beginRemoveRows(QModelIndex(), index, index);
-    m_config->layouts().removeAt(index);
+
+    m_layouts.removeAt(index);
+    applyToSettings();
+
     endRemoveRows();
-    m_config->notifyLayoutsChanged();
 }
 
-void UserLayoutModel::addLayout(const QString &layout, const QString &variant, const QKeySequence &shortcut, const QString &displayName)
+static LayoutUnit makeLayout(const QString &layout, const QString &variant, const QKeySequence &shortcut, const QString &displayName)
 {
-    LayoutUnit unit = LayoutUnit(layout, variant);
+    LayoutUnit unit(layout, variant);
     unit.setShortcut(shortcut);
 
     if (!displayName.isEmpty()) {
         unit.setDisplayName(displayName);
     }
+    return unit;
+}
 
-    beginInsertRows(QModelIndex(), m_config->layouts().count(), m_config->layouts().count());
-    m_config->layouts().append(unit);
-    endInsertRows();
-    m_config->notifyLayoutsChanged();
+void UserLayoutModel::addLayout(const QString &layout, const QString &variant, const QKeySequence &shortcut, const QString &displayName)
+{
+    bool exposingLayouts = m_settings->configureLayouts();
+    if (exposingLayouts) {
+        beginInsertRows(QModelIndex(), m_layouts.size(), m_layouts.size());
+    }
+
+    m_layouts.append(makeLayout(layout, variant, shortcut, displayName));
+    applyToSettings();
+
+    if (exposingLayouts) {
+        endInsertRows();
+    }
 }
 
 void UserLayoutModel::setSingleLayout(const QString &layout, const QString &variant, const QKeySequence &shortcut, const QString &displayName)
 {
-    clear();
-    addLayout(layout, variant, shortcut, displayName);
+    reset({makeLayout(layout, variant, shortcut, displayName)});
+}
+
+LayoutUnit UserLayoutModel::layoutUnit(int row) const
+{
+    return row < rowCount() ? m_layouts.at(row) : LayoutUnit{QString()};
 }
 
 #include "moc_userlayoutmodel.cpp"
