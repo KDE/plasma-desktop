@@ -125,16 +125,13 @@ void KCMKeyboard::load()
 
 void KCMKeyboard::save()
 {
-    QStringList options;
-    if (m_data->keyboardSettings()->resetOldXkbOptions()) {
-        options = m_xkbOptionsModel->xkbOptions();
+    QStringList options = m_xkbOptionsModel->xkbOptions();
 
-        // QStringLists with a single empty string are serialized as "\\0", avoid that
-        // by saving them as an empty list instead. This way it can be passed as-is to
-        // libxkbcommon/setxkbmap. Before KConfigXT it used QStringList::join(",").
-        if (options.size() == 1 && options.constFirst().isEmpty()) {
-            options.clear();
-        }
+    // QStringLists with a single empty string are serialized as "\\0", avoid that
+    // by saving them as an empty list instead. This way it can be passed as-is to
+    // libxkbcommon/setxkbmap.
+    if (options.size() == 1 && options.constFirst().isEmpty()) {
+        options.clear();
     }
     m_data->keyboardSettings()->setXkbOptions(options);
 
