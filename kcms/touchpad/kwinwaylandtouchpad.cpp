@@ -77,11 +77,9 @@ bool KWinWaylandTouchpad::load()
     success &= valueLoader(m_supportsMiddleEmulation);
     success &= valueLoader(m_tapToClickEnabledByDefault);
     success &= valueLoader(m_tapAndDragEnabledByDefault);
-    success &= valueLoader(m_tapDragLockEnabledByDefault);
     success &= valueLoader(m_middleEmulationEnabledByDefault);
     success &= valueLoader(m_tapToClick);
     success &= valueLoader(m_tapAndDrag);
-    success &= valueLoader(m_tapDragLock);
     success &= valueLoader(m_middleEmulation);
     success &= valueLoader(m_lmrTapButtonMapEnabledByDefault);
     success &= valueLoader(m_lmrTapButtonMap);
@@ -129,7 +127,6 @@ bool KWinWaylandTouchpad::defaults()
 
     m_tapToClick.set(m_tapToClickEnabledByDefault);
     m_tapAndDrag.set(m_tapAndDragEnabledByDefault);
-    m_tapDragLock.set(m_tapDragLockEnabledByDefault);
     m_middleEmulation.set(m_middleEmulationEnabledByDefault);
 
     m_naturalScroll.set(m_naturalScrollEnabledByDefault);
@@ -159,7 +156,6 @@ bool KWinWaylandTouchpad::save()
 
     success &= valueWriter(m_tapToClick);
     success &= valueWriter(m_tapAndDrag);
-    success &= valueWriter(m_tapDragLock);
     success &= valueWriter(m_lmrTapButtonMap);
     success &= valueWriter(m_naturalScroll);
     success &= valueWriter(m_isScrollTwoFinger);
@@ -186,7 +182,6 @@ bool KWinWaylandTouchpad::isSaveNeeded() const
             m_middleEmulation.changed() ||
             m_tapToClick.changed() ||
             m_tapAndDrag.changed() ||
-            m_tapDragLock.changed() ||
             m_lmrTapButtonMap.changed() ||
             m_naturalScroll.changed() ||
             m_isScrollTwoFinger.changed() ||

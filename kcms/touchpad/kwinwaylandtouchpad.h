@@ -117,9 +117,6 @@ class KWinWaylandTouchpad : public QObject
     Q_PROPERTY(bool tapAndDragEnabledByDefault READ tapAndDragEnabledByDefault CONSTANT)
     Q_PROPERTY(bool tapAndDrag READ isTapAndDrag WRITE setTapAndDrag NOTIFY tapAndDragChanged)
 
-    Q_PROPERTY(bool tapDragLockEnabledByDefault READ tapDragLockEnabledByDefault CONSTANT)
-    Q_PROPERTY(bool tapDragLock READ isTapDragLock WRITE setTapDragLock NOTIFY tapDragLockChanged)
-
     //
     // scrolling
     Q_PROPERTY(bool supportsNaturalScroll READ supportsNaturalScroll CONSTANT)
@@ -307,18 +304,6 @@ public:
         m_tapAndDrag.set(set);
     }
 
-    bool tapDragLockEnabledByDefault() const
-    {
-        return m_tapDragLockEnabledByDefault.val;
-    }
-    bool isTapDragLock() const
-    {
-        return m_tapDragLock.val;
-    }
-    void setTapDragLock(bool set)
-    {
-        m_tapDragLock.set(set);
-    }
     //
     // acceleration speed and profile
     bool supportsPointerAcceleration() const
@@ -518,7 +503,6 @@ Q_SIGNALS:
     void tapToClickChanged();
     void lmrTapButtonMapChanged();
     void tapAndDragChanged();
-    void tapDragLockChanged();
     // Advanced
     void leftHandedChanged();
     void disableEventsOnExternalMouseChanged();
@@ -661,8 +645,6 @@ private:
 
     PropBool m_tapAndDragEnabledByDefault = PropBool(this, "tapAndDragEnabledByDefault");
     PropBool m_tapAndDrag = PropBool(this, "tapAndDrag", &KWinWaylandTouchpad::tapAndDragChanged);
-    PropBool m_tapDragLockEnabledByDefault = PropBool(this, "tapDragLockEnabledByDefault");
-    PropBool m_tapDragLock = PropBool(this, "tapDragLock", &KWinWaylandTouchpad::tapDragLockChanged);
 
     //
     // scrolling

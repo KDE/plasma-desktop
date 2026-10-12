@@ -555,22 +555,7 @@ KCMUtils.SimpleKCM {
                 }
 
                 trailingItems: Kirigami.ContextualHelpButton {
-                    toolTipText: i18ndc("kcm_touchpad", "@info:tooltip from ContextualHelpButton", "Tap, then tap and immediately slide finger over the touchpad to drag. Lift finger to drop.")
-                }
-            }
-
-            Kirigami.FormEntry {
-                contentItem: QQC2.CheckBox {
-                    id: tapAndDragLock
-                    text: i18ndc("kcm_touchpad", "@option:check", "Allow briefly lifting finger during tap-and-drag")
-                    enabled: root.device?.tapFingerCount > 0 && tapAndDrag.checked
-                    checked: enabled && (root.device?.tapDragLock ?? false)
-
-                    onToggled: {
-                        if (root.device) {
-                            root.device.tapDragLock = checked
-                        }
-                    }
+                    toolTipText: i18ndc("kcm_touchpad", "@info:tooltip from ContextualHelpButton", "Tap, then touch down again and slide finger over the touchpad to drag. Lift finger to drop. Briefly lift and reposition finger to continue dragging.")
                 }
             }
 
