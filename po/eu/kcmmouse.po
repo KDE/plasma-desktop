@@ -1,7 +1,7 @@
 # Translation for kcmmouse.po to Euskara/Basque (eu).
 # Copyright (C) 2002-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024-2026 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Marcos  <marcos@euskalgnu.org>, 2002,2003, 2005, 2006, 2007, 2008, 2010.
@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-04 00:47+0000\n"
-"PO-Revision-Date: 2026-02-16 10:40+0100\n"
+"PO-Revision-Date: 2026-10-11 13:50+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.08.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: inputbackend.cpp:49
@@ -230,13 +230,13 @@ msgstr "Alderantzizko kiribiltze-noranzkoa"
 #, kde-format
 msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
-msgstr ""
+msgstr "Erakuslea mugitzean kiribildu"
 
 #: ui/main.qml:383
 #, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
-msgstr ""
+msgstr "erdiko botoia sakatuta dagoen bitartean"
 
 #: ui/main.qml:396
 #, kde-format
@@ -257,7 +257,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
-msgstr ""
+msgstr "erdiko botoian klik egin ondoren"
 
 #: ui/main.qml:419
 #, kde-format
@@ -267,6 +267,9 @@ msgid ""
 "you want the application to receive a single middle-click. This includes "
 "middle-click dragging."
 msgstr ""
+"Honek, oro har, erdiko klikekin oztopoak sortuko ditu; aplikazioak erdiko "
+"klik bakar bat jasotzea nahi duzunean, egin erdiko klik bi aldiz. Horrek "
+"erdiko klikarekin arrastatzea ere barne hartzen du."
 
 #~ msgctxt "@option:check"
 #~ msgid "Hold down middle button and move mouse to scroll"
