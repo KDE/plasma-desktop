@@ -1,7 +1,7 @@
 # Translation for kcm_touchpad.po to Euskara/Basque (eu).
 # Copyright (C) 2017-2026 This file is copyright:
 # This file is distributed under the same license as plasma-desktop package.
-# SPDX-FileCopyrightText: 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024-2026 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Ander Elortondo <ander.elor@gmail.com>, 2017.
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-12 00:49+0000\n"
-"PO-Revision-Date: 2026-03-29 21:49+0200\n"
+"PO-Revision-Date: 2026-10-11 13:44+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -19,12 +19,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: kcm.cpp:57
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr "Ezin du bizkarraldeko egokirik aukeratu"
+msgstr "Ezin du bizkarraldeko egokia aukeratu"
 
 #: kcm.cpp:103
 #, kde-format
@@ -262,7 +262,7 @@ msgstr "Erdiko klik egiteko, sakatu beheko bi izkinak."
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr "Erdiko klik egiteko, sakatu beheko erdialdea ."
+msgstr "Erdiko klik egiteko, sakatu beheko erdialdea."
 
 #: ui/main.qml:503
 #, kde-format
@@ -270,13 +270,13 @@ msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing with two "
 "fingers'"
 msgid "Pressing anywhere with two fingers"
-msgstr "Bi hatz erabiliz edozein lekutan sakatuz"
+msgstr "Bi hatzez edozein lekutan sakatuz"
 
 #: ui/main.qml:504
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
-msgstr "Erdiko klik egiteko, sakatu hiru hatzekin edozein lekutan."
+msgstr "Erdiko klik egiteko, sakatu hiru hatzez edozein lekutan."
 
 #: ui/main.qml:516
 #, kde-format
@@ -314,13 +314,13 @@ msgstr "Hiru hatz erabiliz edozein aldetan klik eginda"
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
-msgstr "Tak-egitea:"
+msgstr "Tak egitea:"
 
 #: ui/main.qml:565
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap to click"
-msgstr "Egin tak klik egiteko"
+msgstr "Klik egiteko tak egin"
 
 #: ui/main.qml:580
 #, kde-format
@@ -335,8 +335,8 @@ msgid ""
 "Tap, then tap and immediately slide finger over the touchpad to drag. Lift "
 "finger to drop."
 msgstr ""
-"Egin tak, ondoren egin tak eta berehala hatza ukimen-saguaren gainean "
-"irristatu arrastatzeko. Altxatu hatza jaregiteko."
+"Tak egin, ondoren Tak egin eta berehala hatza ukimen-saguaren gainean "
+"irristatu arrastatzeko. Hatza altxatu jaregiteko."
 
 #: ui/main.qml:599
 #, kde-format
@@ -348,7 +348,7 @@ msgstr "Tak egin eta arrastatzean hatza laburki altxatzea baimendu"
 #, kde-format
 msgctxt "@title:group"
 msgid "Two-finger tap:"
-msgstr "Bi hatzeko tak:"
+msgstr "Bi hatzez tak egitea:"
 
 #: ui/main.qml:618
 #, kde-format

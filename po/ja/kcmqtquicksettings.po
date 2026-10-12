@@ -1,10 +1,11 @@
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmqtquicksettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2018-04-25 10:58-0700\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2026-09-25 18:30+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -13,16 +14,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Mint"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "5602mint@gmail.com"
 
 #. i18n: ectx: property (text), widget (KMessageWidget, kmessagewidget)
 #: kcmqtquicksettingswidget.ui:23
@@ -32,64 +34,67 @@ msgid ""
 "settings can break your desktop. Only adjust these settings if you know what "
 "you are doing."
 msgstr ""
+"以下の設定で Plasma が使用する QtQuick 設定を調整できます。この設定を変更する"
+"とお使いのデスクトップに不具合が発生する可能性があるため、操作内容を理解して"
+"いない場合は設定を変更しないでください。"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcmqtquicksettingswidget.ui:41
 #, kde-format
 msgid "Rendering Backend:"
-msgstr ""
+msgstr "レンダリングバックエンド:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
 #: kcmqtquicksettingswidget.ui:49 kcmqtquicksettingswidget.ui:87
 #, kde-format
 msgid "Automatic"
-msgstr ""
+msgstr "自動"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #: kcmqtquicksettingswidget.ui:54
 #, kde-format
 msgid "Open GL"
-msgstr ""
+msgstr "Open GL"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #: kcmqtquicksettingswidget.ui:59
 #, kde-format
 msgid "Software"
-msgstr ""
+msgstr "ソフトウェア"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #: kcmqtquicksettingswidget.ui:64
 #, kde-format
 msgid "Vulkan"
-msgstr ""
+msgstr "Vulkan"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcmqtquicksettingswidget.ui:72
 #, kde-format
 msgid "GL Core Profile:"
-msgstr ""
+msgstr "GL コアプロファイル:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcmqtquicksettingswidget.ui:79
 #, kde-format
 msgid "Render Loop:"
-msgstr ""
+msgstr "レンダーループ:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
 #: kcmqtquicksettingswidget.ui:92
 #, kde-format
 msgid "Basic"
-msgstr ""
+msgstr "基本"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
 #: kcmqtquicksettingswidget.ui:97
 #, kde-format
 msgid "Threaded"
-msgstr ""
+msgstr "スレッド"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ForceGlCoreProfile)
 #: kcmqtquicksettingswidget.ui:105
 #, kde-format
 msgid "Force"
-msgstr ""
+msgstr "強制"

@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-03 00:45+0000\n"
-"PO-Revision-Date: 2026-09-06 17:18+0200\n"
+"PO-Revision-Date: 2026-10-11 15:20+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -131,7 +131,7 @@ msgstr "Si s'ha activat la correcció del daltonisme"
 #: kcmaccessibilitydwellclicker.kcfg:13
 #, kde-format
 msgid "Whether Dwell Clicker is enabled"
-msgstr "Si s'ha activat el clic d'estancament"
+msgstr "Si s'ha activat el clic de permanència"
 
 #. i18n: ectx: label, entry (DwellClickerDelayTime), group (Effect-dwellclicker)
 #: kcmaccessibilitydwellclicker.kcfg:19
@@ -143,13 +143,13 @@ msgstr "Temps de retard"
 #: kcmaccessibilitydwellclicker.kcfg:24
 #, kde-format
 msgid "Dwell Time"
-msgstr "Temps d'estancament"
+msgstr "Temps de permanència"
 
 #. i18n: ectx: label, entry (DwellClickerDwellColor), group (Effect-dwellclicker)
 #: kcmaccessibilitydwellclicker.kcfg:29
 #, kde-format
 msgid "Dwell Color"
-msgstr "Color d'estancament"
+msgstr "Color de permanència"
 
 #. i18n: ectx: label, entry (DwellClickerMotionThreshold), group (Effect-dwellclicker)
 #: kcmaccessibilitydwellclicker.kcfg:33
@@ -565,7 +565,7 @@ msgstr[1] "%1 ms"
 #, kde-format
 msgctxt "@label:spinbox Dwell clicker dwell time"
 msgid "Dwell Time:"
-msgstr "Temps d'estancament:"
+msgstr "Temps de permanència:"
 
 #: ui/DwellClicker.qml:117
 #, kde-format
@@ -579,7 +579,7 @@ msgstr[1] "%1 ms"
 #, kde-format
 msgctxt "@label:button Dwell clicker dwell color"
 msgid "Dwell Color:"
-msgstr "Color d'estancament:"
+msgstr "Color de permanència:"
 
 #: ui/Invert.qml:17
 #, kde-format
@@ -747,7 +747,7 @@ msgstr "Navegació amb el ratolí"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Dwell Clicker"
-msgstr "Clic d'estancament"
+msgstr "Clic de permanència"
 
 #: ui/main.qml:64
 #, kde-format

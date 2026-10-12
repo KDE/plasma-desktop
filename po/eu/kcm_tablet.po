@@ -1,7 +1,7 @@
 # Translation for kcm_tablet.po to Euskara/Basque (eu).
 # Copyright (C) 2022-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024-2026 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022, 2024, 2025, 2026.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-31 00:45+0000\n"
-"PO-Revision-Date: 2026-02-16 00:44+0100\n"
+"PO-Revision-Date: 2026-10-11 13:23+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,13 +18,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: inputsequence.cpp:191
 #, kde-format
 msgctxt "@action:button This action is disabled"
 msgid "Disabled"
-msgstr "Desgaituta"
+msgstr "Ezgaituta"
 
 #: inputsequence.cpp:194
 #, kde-format
@@ -235,7 +235,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "upwards"
 msgid "Clockwise:"
-msgstr ""
+msgstr "Erloju-orratzen noranzkoa:"
 
 #: ui/ActionDialog.qml:257
 #, kde-format
@@ -243,7 +243,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "downwards"
 msgid "Counterclockwise:"
-msgstr ""
+msgstr "ordulari-orratzen aurkako noranzkoa:"
 
 #: ui/ActionDialog.qml:271
 #, kde-format
@@ -334,7 +334,7 @@ msgstr "Arkatzaren kalibrazioa"
 #, kde-format
 msgctxt "@info"
 msgid "%1: (%2 px, %3 px)"
-msgstr ""
+msgstr "%1: (%2 px, %3 px)"
 
 #: ui/Calibration.qml:107
 #, kde-format
@@ -343,14 +343,11 @@ msgid ""
 "Applied center correction (%1 px, %2 px). Retap the targets to redo the "
 "correction."
 msgstr ""
+"Erdigunearen zuzenketa aplikatu da (%1 px, %2 px). Jomugetan berriz tak egin "
+"zuzenketa berriro egiteko."
 
 #: ui/Calibration.qml:173
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds unless further action is "
-#| "taken.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><emphasis "
@@ -361,13 +358,13 @@ msgid_plural ""
 "strong='true'>Will revert to default calibration in %1 seconds unless "
 "further action is taken.</emphasis>"
 msgstr[0] ""
-"Jomugetan berriz tak egin kalibrazioa berresteko.<nl/><nl/><b>Ekintza "
-"gehiago egin ezean, %1 segundotan lehenetsitako kalibraziora lehengoratuko "
-"da.</b>"
+"Jomugetan berriz tak egin kalibrazio berria berresteko.<nl/><nl/><emphasis "
+"strong='true'>Beste ekintzarik egin ezean, segundo %1 barru lehenetsitako "
+"kalibraziora lehengoratuko da.</emphasis>"
 msgstr[1] ""
-"Jomugetan berriz tak egin kalibrazioa berresteko.<nl/><nl/><b>Ekintza "
-"gehiago egin ezean, %1 segundotan lehenetsitako kalibraziora lehengoratuko "
-"da.</b>"
+"Jomugetan berriz tak egin kalibrazio berria berresteko.<nl/><nl/><emphasis "
+"strong='true'>Beste ekintzarik egin ezean, %1 segundo barru lehenetsitako "
+"kalibraziora lehengoratuko da.</emphasis>"
 
 #: ui/Calibration.qml:177
 #, kde-format
@@ -378,6 +375,10 @@ msgid ""
 "Tap the center target once to fine-tune alignment. You can retap the other "
 "targets to verify the result."
 msgstr ""
+"Kalibrazioa osatu eta gorde da.\n"
+"\n"
+"Erdiko jomugan tak behin egin lerrokatzea fintzeko. Beste jomugetan emaitza "
+"egiaztatzeko berriz tak egin dezakezu."
 
 #: ui/Calibration.qml:180
 #, kde-format
@@ -392,12 +393,14 @@ msgid ""
 "Offset Correction:\n"
 "%1"
 msgstr ""
+"Desplazamenduaren zuzenketa:\n"
+"%1"
 
 #: ui/Calibration.qml:216
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr "Findu dagoen kalibrazioa"
+msgstr "Dagoen kalibrazioa findu"
 
 #: ui/Calibration.qml:228
 #, kde-format
@@ -409,7 +412,7 @@ msgstr "Berrezarri eta berriz saiatu"
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr "Kalibratu hutsetik abiatuta"
+msgstr "Hutsetik abiatuta kalibratu"
 
 #: ui/Calibration.qml:243
 #, kde-format
@@ -427,31 +430,31 @@ msgstr "Utzi"
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-left"
-msgstr ""
+msgstr "Goian ezkerrean"
 
 #: ui/Calibration.qml:334
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-right"
-msgstr ""
+msgstr "Goian eskuinean"
 
 #: ui/Calibration.qml:353
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-left"
-msgstr ""
+msgstr "Behean ezkerrean"
 
 #: ui/Calibration.qml:372
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-right"
-msgstr ""
+msgstr "Behean eskuinean"
 
 #: ui/Calibration.qml:391
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Center"
-msgstr ""
+msgstr "Erdian"
 
 #: ui/DisplayTab.qml:46
 #, kde-format
