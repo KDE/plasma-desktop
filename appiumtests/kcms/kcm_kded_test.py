@@ -108,6 +108,7 @@ class KCMTest(unittest.TestCase):
         """
         self.driver.find_element(AppiumBy.NAME, "Background Services")
 
+        session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
         print("Loaded modules before stop1:", loadedModules(session_bus))
         wait = WebDriverWait(self.driver, 30)
 
@@ -115,7 +116,7 @@ class KCMTest(unittest.TestCase):
         STOP_BUTTON_NAME: Final = "Stop Accent Color"
         SERVICE_NAME: Final = "plasma_accentcolor_service"  # The id is from plasma-workspace
 
-        session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
+        #session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
 
         print("Loaded modules before stop2:", loadedModules(session_bus))
         # The service has X-KDE-Kded-autoload: true, so it is always loaded when kded is running.
