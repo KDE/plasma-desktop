@@ -108,6 +108,7 @@ class KCMTest(unittest.TestCase):
         """
         self.driver.find_element(AppiumBy.NAME, "Background Services")
 
+        print("Loaded modules before stop1:", loadedModules(session_bus))
         wait = WebDriverWait(self.driver, 30)
 
         START_BUTTON_NAME: Final = "Start Accent Color"
@@ -116,6 +117,7 @@ class KCMTest(unittest.TestCase):
 
         session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
 
+        print("Loaded modules before stop2:", loadedModules(session_bus))
         # The service has X-KDE-Kded-autoload: true, so it is always loaded when kded is running.
         # Wait for autoloading to complete, then stop it to get into a known stopped state.
         wait.until(EC.element_to_be_clickable((AppiumBy.NAME, STOP_BUTTON_NAME))).click()
