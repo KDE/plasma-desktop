@@ -30,7 +30,7 @@ If this merge request introduces a visual change, please add before-and-after sc
 
 | Before | After |
 | ------ | ----- |
-| [drag "before" screenshot here] | [drag "after" screenshot here] |
+| [Click here and then drag in a "before" screenshot] | [Click here and then drag in a "after" screenshot] | 
 -->
 
 ### Bugs fixed
