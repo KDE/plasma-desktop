@@ -54,9 +54,7 @@ QAction *KeyboardLayoutActionCollection::getLastUsedLayoutAction()
 QAction *KeyboardLayoutActionCollection::createLayoutShortcutAction(const LayoutUnit &layoutUnit, int layoutIndex, bool autoload)
 {
     QString longLayoutName = Flags::getLongText(layoutUnit);
-    QString actionName = QStringLiteral("Switch keyboard layout to ");
-    actionName += longLayoutName;
-    QAction *action = addAction(actionName);
+    QAction *action = addAction(QStringLiteral("Switch keyboard layout to %1").arg(longLayoutName));
     action->setText(i18n("Switch keyboard layout to %1", longLayoutName));
     KGlobalAccel::GlobalShortcutLoading loading = autoload ? KGlobalAccel::Autoloading : KGlobalAccel::NoAutoloading;
     QList<QKeySequence> shortcuts;
