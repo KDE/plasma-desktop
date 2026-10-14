@@ -129,7 +129,7 @@ class KCMTest(unittest.TestCase):
             )
 
         # Now the service must be running, regardless of its initial state.
-        wait.until(
+        start = wait.until(
             lambda _: SERVICE_NAME in loadedModules(session_bus)
         )
         self.assertIn(SERVICE_NAME, loadedModules(session_bus))
