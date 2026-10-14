@@ -111,14 +111,16 @@ class KCMTest(unittest.TestCase):
         session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
         print("Loaded modules before stop1:", loadedModules(session_bus))
 
+        wait = WebDriverWait(self.driver, 30)
+
         # Normalize the initial state: the module may not be autoloaded
         # in the CI session, even when its files are installed.
-        # start = wait.until(
-        #     lambda driver: (
-        #         driver.find_elements(AppiumBy.NAME, START_BUTTON_NAME)
-        #         or driver.find_elements(AppiumBy.NAME, STOP_BUTTON_NAME)
-        #     )
-        # )
+        start = wait.until(
+            lambda driver: (
+                driver.find_elements(AppiumBy.NAME, START_BUTTON_NAME)
+                or driver.find_elements(AppiumBy.NAME, STOP_BUTTON_NAME)
+            )
+        )
 
         if start[0].get_attribute("name") == START_BUTTON_NAME:
             start[0].click()
@@ -133,8 +135,6 @@ class KCMTest(unittest.TestCase):
             lambda _: SERVICE_NAME in loadedModules(session_bus)
         )
         self.assertIn(SERVICE_NAME, loadedModules(session_bus))
-
-        wait = WebDriverWait(self.driver, 30)
 
         START_BUTTON_NAME: Final = "Start Accent Color"
         STOP_BUTTON_NAME: Final = "Stop Accent Color"
