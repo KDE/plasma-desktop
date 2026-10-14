@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2020, 2021, 2023, 2024, 2025, 2026 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2014, 2020-2021, 2023-2026 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-04 00:46+0000\n"
-"PO-Revision-Date: 2026-01-24 08:41-0600\n"
+"PO-Revision-Date: 2026-10-12 20:24-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
 "Language: pa\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -87,11 +87,7 @@ msgid "Clicking in scrollbar track:"
 msgstr ""
 
 #: ui/main.qml:93
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
-#| "scrolls to the clicked location'"
-#| msgid "Scrolls to the clicked location"
+#, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
 "the clicked location'"
@@ -99,11 +95,7 @@ msgid "Scrolls to the clicked location"
 msgstr "ਕਲਿੱਕ ਕੀਤੇ ਟਿਕਾਣੇ ਲਈ ਸਕਰੋਲ ਕਰਦਾ ਹੈ"
 
 #: ui/main.qml:111
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio part of a complete sentence: 'Clicking in scrollbar track "
-#| "scrolls one page up or down'"
-#| msgid "Scrolls one page up or down"
+#, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
 "page up or down'"
@@ -267,29 +259,22 @@ msgid "Touch"
 msgstr "ਟੱਚ"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgctxt "@title:group prefix radiobutton group"
-#| msgid "Enable Touch Mode:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
-msgstr "ਟੱਚ ਮੋਡ ਸਮਰੱਥ:"
+msgstr "ਟੇਬਲੇਟ ਮੋਡ ਸਮਰੱਥ:"
 
 #: ui/main.qml:354
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
-#| msgid "Automatically enable as needed"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "ਲੋੜ ਮੁਤਾਬਕ ਆਪਣੇ-ਆਪ ਸਮਰੱਥ ਕਰੋ"
 
 #: ui/main.qml:354
-#, fuzzy, kde-format
-#| msgctxt "option:radio As in: 'Touch Mode is never enabled'"
-#| msgid "Never enabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
-msgstr "ਕਦੇ ਵੀ ਸਮਰੱਥ ਨਾ ਕਰੋ"
+msgstr "ਕਦੇ ਵੀ ਸਮਰੱਥ ਨਹੀਂ ਹੈ"
 
 #: ui/main.qml:373
 #, kde-format
@@ -301,17 +286,13 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:379
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always active"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
-msgstr "ਹਮੇਸ਼ਾ ਸਰਗਰਮ"
+msgstr "ਹਮੇਸ਼ਾ ਸਮਰੱਥ ਹੈ"
 
 #: ui/main.qml:401
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is never enabled'"
-#| msgid "Disabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "ਅਸਮਰੱਥ ਹੈ"
@@ -381,10 +362,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "ਸਥਿਤੀ ਤਬਦੀਲੀਆਂ ਵਾਸਤੇ ਦਿੱਖ ਫੀਡਬੈਕ ਵੇਖਾਓ"
+msgstr "ਸਥਿਤੀ ਤਬਦੀਲੀਆਂ ਵਾਸਤੇ ਛੋਟੇ ਪੌਪ-ਅੱਪ ਵੇਖਾਓ"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
