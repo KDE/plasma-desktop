@@ -373,6 +373,7 @@ PlasmaCore.ToolTipArea {
         mainItem.isOnAllVirtualDesktops = Qt.binding(() => model.IsOnAllVirtualDesktops);
         mainItem.activities = Qt.binding(() => model.Activities);
         mainItem.isReadyForPainting = Qt.binding(() => model.IsMapped);
+        mainItem.isExcludedFromCapture = Qt.binding(() => model.IsExcludedFromCapture);
 
         mainItem.smartLauncherCountVisible = Qt.binding(() => smartLauncherItem?.countVisible ?? false);
         mainItem.smartLauncherCount = Qt.binding(() => mainItem.smartLauncherCountVisible ? (smartLauncherItem?.count ?? 0) : 0);

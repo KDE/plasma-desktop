@@ -38,6 +38,7 @@ Loader {
     property bool isLauncher
     property bool isMinimized
     property bool isReadyForPainting
+    property bool isExcludedFromCapture
 
     // Needed for generateSubtext()
     property string display
@@ -76,6 +77,7 @@ Loader {
             display: toolTipDelegate.display
             isMinimized: toolTipDelegate.isMinimized
             isReadyForPainting: toolTipDelegate.isReadyForPainting
+            isExcludedFromCapture: toolTipDelegate.isExcludedFromCapture
             isOnAllVirtualDesktops: toolTipDelegate.isOnAllVirtualDesktops
             virtualDesktops: toolTipDelegate.virtualDesktops
             activities: toolTipDelegate.activities
@@ -165,6 +167,7 @@ Loader {
                     // 'display' is required already
                     isMinimized: model.IsMinimized
                     isReadyForPainting: model.IsMapped
+                    isExcludedFromCapture: model.IsExcludedFromCapture
                     isOnAllVirtualDesktops: model.IsOnAllVirtualDesktops
                     virtualDesktops: model.VirtualDesktops
                     activities: model.Activities
