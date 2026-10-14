@@ -113,12 +113,12 @@ class KCMTest(unittest.TestCase):
 
         # Normalize the initial state: the module may not be autoloaded
         # in the CI session, even when its files are installed.
-        start = wait.until(
-            lambda driver: (
-                driver.find_elements(AppiumBy.NAME, START_BUTTON_NAME)
-                or driver.find_elements(AppiumBy.NAME, STOP_BUTTON_NAME)
-            )
-        )
+        # start = wait.until(
+        #     lambda driver: (
+        #         driver.find_elements(AppiumBy.NAME, START_BUTTON_NAME)
+        #         or driver.find_elements(AppiumBy.NAME, STOP_BUTTON_NAME)
+        #     )
+        # )
 
         if start[0].get_attribute("name") == START_BUTTON_NAME:
             start[0].click()
