@@ -111,6 +111,10 @@ class KCMTest(unittest.TestCase):
         session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
         print("Loaded modules before stop1:", loadedModules(session_bus))
 
+        START_BUTTON_NAME: Final = "Start Accent Color"
+        STOP_BUTTON_NAME: Final = "Stop Accent Color"
+        SERVICE_NAME: Final = "plasma_accentcolor_service"  # The id is from plasma-workspace
+
         wait = WebDriverWait(self.driver, 30)
 
         # Normalize the initial state: the module may not be autoloaded
@@ -135,10 +139,6 @@ class KCMTest(unittest.TestCase):
             lambda _: SERVICE_NAME in loadedModules(session_bus)
         )
         self.assertIn(SERVICE_NAME, loadedModules(session_bus))
-
-        START_BUTTON_NAME: Final = "Start Accent Color"
-        STOP_BUTTON_NAME: Final = "Stop Accent Color"
-        SERVICE_NAME: Final = "plasma_accentcolor_service"  # The id is from plasma-workspace
 
         #session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
 
