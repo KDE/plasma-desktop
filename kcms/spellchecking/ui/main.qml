@@ -64,7 +64,7 @@ KCM.SimpleKCM {
                         id: spellCheckingLanguageList
                         Kirigami.Dialog {
                             id: scroll
-                            title: i18ndc("kirigami-addons6", "@title:window", "Spell checking languages")
+                            title: i18ndc("kirigami-addons6", "@title:window", "Spell Checking Languages")
 
                             width: Kirigami.Units.gridUnit * 24
 
@@ -81,7 +81,7 @@ KCM.SimpleKCM {
                                 }
 
                                 header: Kirigami.SearchField {}
-                                delegate: KD.CheckSubtitleDelegate {
+                                delegate: QQC2.CheckDelegate {
                                     id: delegate
                                     width: ListView.view.width
 
@@ -179,11 +179,12 @@ KCM.SimpleKCM {
 
                         footerLeadingComponent: Kirigami.ActionTextField {
                             id: newWord
-                            placeholderText: "Dolphin"
+                            placeholderText: "Enter a word to ignore"
                             Layout.fillWidth: true
                             rightActions: [
                                 Kirigami.Action {
                                     text: i18nc("@action:button", "Add Word")
+                                    tooltip: text
                                     icon.name: "list-add"
                                     onTriggered: {
                                         let words = kcm.settings.currentIgnoreList;
@@ -207,7 +208,9 @@ KCM.SimpleKCM {
                                     actions: [
                                         Kirigami.Action {
                                             text: i18nc("@action:button", "Delete")
+                                            tooltip: text
                                             icon.name: "list-remove"
+                                            displayHint: Kirigami.DisplayHint.IconOnly
                                             onTriggered: {
                                                 kcm.settings.currentIgnoreList = kcm.settings.currentIgnoreList.filter((value, _, _) => {
                                                     return value !== delegate.modelData;
