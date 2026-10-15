@@ -9,6 +9,7 @@ plasma_add_applet(org.kde.plasma.taskmanager
         qml/ContextMenu.qml
         qml/GroupDialog.qml
         qml/GroupExpanderOverlay.qml
+        qml/IconThumbnail.qml
         qml/main.qml
         qml/MouseHandler.qml
         qml/PipeWireThumbnail.qml

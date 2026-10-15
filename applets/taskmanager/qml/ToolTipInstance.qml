@@ -263,25 +263,6 @@ ColumnLayout {
             hovered: true
         }
 
-        // Windows hidden from screencasts must not leak their contents through the thumbnail, show the icon instead
-        Loader {
-            active: Plasmoid.configuration.showToolTips
-                && root.isExcludedFromCapture
-                && !toolTipDelegate.isLauncher
-                && !albumArtImage.visible
-                && root.index !== -1 // Avoid loading when the instance is going to be destroyed
-            asynchronous: true
-            visible: active
-            anchors.fill: hoverHandler
-            anchors.margins: Kirigami.Units.smallSpacing * 2
-
-            sourceComponent: Kirigami.Icon {
-                source: toolTipDelegate.icon
-                animated: false
-                visible: valid
-            }
-        }
-
         Loader {
             id: pipeWireLoader
             anchors.fill: hoverHandler
@@ -292,12 +273,12 @@ ColumnLayout {
             active: Plasmoid.configuration.showToolTips
                 && !toolTipDelegate.isLauncher
                 && !albumArtImage.visible
-                && toolTipDelegate.isReadyForPainting
-                && !root.isExcludedFromCapture
+                && (toolTipDelegate.isReadyForPainting || root.isExcludedFromCapture)
                 && root.index !== -1
             asynchronous: true
             //In a loader since we might not have PipeWire available yet (WITH_PIPEWIRE could be undefined in plasma-workspace/libtaskmanager/declarative/taskmanagerplugin.cpp)
-            source: "PipeWireThumbnail.qml"
+            // Windows excluded from capture must not leak their contents, so show the icon instead
+            source: root.isExcludedFromCapture ? "IconThumbnail.qml" : "PipeWireThumbnail.qml"
         }
 
         Loader {
