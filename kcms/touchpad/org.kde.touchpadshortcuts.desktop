@@ -29,7 +29,7 @@ Name[ie]=Panel tactil
 Name[is]=Snertiplatti
 Name[it]=Touchpad
 Name[ja]=タッチパッド
-Name[ka]=თაჩპედი
+Name[ka]=სენსორული პანელი
 Name[ko]=터치패드
 Name[lt]=Jutiklinis kilimėlis
 Name[lv]=Skārienpaliktnis
@@ -86,7 +86,7 @@ Name[ia]=Habilita Touchpad
 Name[is]=Virkja snertiplatta
 Name[it]=Abilita touchpad
 Name[ja]=タッチパッドを有効化
-Name[ka]=თაჩპედის ჩართვა
+Name[ka]=სენსორული პანელის ჩართვა
 Name[ko]=터치패드 활성화
 Name[lt]=Įjungti jutiklinį kilimėlį
 Name[lv]=Ieslēgt skārienpaliktni
@@ -119,12 +119,34 @@ X-KDE-Migrate-Shortcut=kcm_touchpad,Enable Touchpad
 
 [Desktop Action DisableTouchpad]
 Name=Disable Touchpad
+Name[ca]=Desactiva el ratolí tàctil
+Name[ca@valencia]=Desactiva el ratolí tàctil
+Name[cs]=Zakázat touchpad
+Name[es]=Desactivar el panel táctil
+Name[ka]=სენსორული პანელის გამორთვა
+Name[nl]=Touchpad uitschakelen
+Name[pt_BR]=Desativar o touchpad
+Name[ru]=Выключить сенсорную панель
+Name[sl]=Onemogoči sledilno ploščico
+Name[tr]=Dokunmatik Yüzeyi Devre Dışı Bırak
+Name[uk]=Вимкнути сенсорну панель
 Exec=dbus-send --type=method_call --print-reply --dest=org.kde.touchpad /modules/kded_touchpad org.kde.touchpad.disable
 X-KDE-Shortcuts=Touchpad Off
 X-KDE-Migrate-Shortcut=kcm_touchpad,Disable Touchpad
 
 [Desktop Action ToggleTouchpad]
 Name=Toggle Touchpad
+Name[ca]=Commuta el ratolí tàctil
+Name[ca@valencia]=Activa o desactiva el ratolí tàctil
+Name[cs]=Přepnout touchpad
+Name[es]=Conmutar el panel táctil
+Name[ka]=სენსორული პანელის გადართვა
+Name[nl]=Touchpad omschakelen
+Name[pt_BR]=Alternar o touchpad
+Name[ru]=Включить или выключить сенсорную панель
+Name[sl]=Preklopi sledilno ploščico
+Name[tr]=Dokunmatik Yüzeyi Aç/Kapat
+Name[uk]=Увімкнути або вимкнути сенсорну панель
 Exec=dbus-send --type=method_call --print-reply --dest=org.kde.touchpad /modules/kded_touchpad org.kde.touchpad.toggle
 X-KDE-Shortcuts=Touchpad Toggle\tMeta+Ctrl+Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku
 X-KDE-Migrate-Shortcut=kcm_touchpad,Toggle Touchpad
