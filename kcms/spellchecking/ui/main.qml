@@ -179,7 +179,7 @@ KCM.SimpleKCM {
 
                         footerLeadingComponent: Kirigami.ActionTextField {
                             id: newWord
-                            placeholderText: "Enter a word to ignore"
+                            placeholderText: i18nc("@info:placeholder", "Enter a word to ignore")
                             Layout.fillWidth: true
                             rightActions: [
                                 Kirigami.Action {
