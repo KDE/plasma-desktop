@@ -155,7 +155,8 @@ KCM.SimpleKCM {
 
             Kirigami.FormEntry {
                 contentItem: QQC2.Button {
-                    text: i18nc("@action:button", "Configure Ignored Words")
+                    icon.name: "view-visible-off"
+                    text: i18nc("@action:button", "Configure Ignored Words…")
                     onClicked: {
                         let dialog = ignoredWordsComponent.createObject(root) as Kirigami.Dialog;
                         dialog.open();
