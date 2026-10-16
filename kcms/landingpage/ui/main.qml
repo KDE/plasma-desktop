@@ -282,7 +282,6 @@ KCMUtils.SimpleKCM {
                 title: i18nc("@title:group for grid of buttons opening kcms", "Most used pages:")
                 contentItem: GridLayout {
                     id: mostUsedGrid
-                    Kirigami.FormData.buddyFor: mostUsedGrid.children[1]
 
                     visible: recentlyUsedRepeater.count > 0
                     Layout.fillWidth: true
