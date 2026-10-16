@@ -376,12 +376,14 @@ KCMUtils.SimpleKCM {
 
             Kirigami.FormEntry {
                 contentItem: QQC2.RadioButton {
-                    leftPadding: Kirigami.Units.largeSpacing
                     enabled: scrollButton.checked
 
                     id: scrollOnButtonDown
                     text: i18ndc("kcmmouse", "@option:radio", "while pressing the middle button")
                     checked: !(root.device?.scrollButtonLock ?? false)
+
+                    leftPadding: mirrored ? scrollOnButtonDown.padding : (scrollButton.indicator.width + scrollButton.spacing)
+                    rightPadding: mirrored ? (scrollButton.indicator.width + scrollButton.spacing) : scrollOnButtonDown.padding
 
                     QQC2.ButtonGroup.group: autoScrollRadioGroup
 
@@ -399,12 +401,14 @@ KCMUtils.SimpleKCM {
 
             Kirigami.FormEntry {
                 contentItem: QQC2.RadioButton {
-                    leftPadding: Kirigami.Units.largeSpacing
                     enabled: scrollButton.checked
 
                     id: scrollButtonLock
                     text: i18ndc("kcmmouse", "@option:radio", "after clicking the middle button")
                     checked: root.device?.scrollButtonLock ?? false
+
+                    leftPadding: mirrored ? scrollButtonLock.padding : (scrollButton.indicator.width + scrollButton.spacing)
+                    rightPadding: mirrored ? (scrollButton.indicator.width + scrollButton.spacing) : scrollButtonLock.padding
 
                     QQC2.ButtonGroup.group: autoScrollRadioGroup
 
