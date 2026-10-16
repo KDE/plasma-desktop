@@ -29,7 +29,7 @@ PlasmaComponents3.ScrollView {
     property bool dynamicResize : true
     property bool showDescriptionInTooltip: false
     property int innerLeftMargin: 0
-    property int innerRightMargin: 0
+    property int innerRightMargin: PlasmaComponents3.ScrollBar.vertical.visible ? Kirigami.Units.smallSpacing : 0
 
     property alias currentIndex: listView.currentIndex
     property alias currentItem: listView.currentItem
