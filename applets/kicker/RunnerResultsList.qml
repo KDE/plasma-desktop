@@ -102,7 +102,7 @@ RowLayout {
             implicitWidth: Kirigami.Units.gridUnit * 17
             Layout.minimumWidth: implicitWidth
             Layout.maximumWidth: implicitWidth
-            innerRightMargin: runnerResultsList.isLastColumn ? 0 : Kirigami.Units.smallSpacing
+            innerRightMargin: (runnerResultsList.isLastColumn && !runnerMatches.PlasmaComponents3.ScrollBar.vertical.visible) ? 0 : Kirigami.Units.smallSpacing
 
             Accessible.name: header.text
 
