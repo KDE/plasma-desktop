@@ -110,6 +110,7 @@ PlasmaComponents3.ScrollView {
         Layout.minimumWidth: (sideBar.visible ? sideBar.implicitWidth + sideBar.Layout.rightMargin : 0) + minimumMainWidth
         LayoutMirroring.enabled: ((Plasmoid.location === PlasmaCore.Types.RightEdge)
             || (Application.layoutDirection === Qt.RightToLeft && Plasmoid.location !== PlasmaCore.Types.LeftEdge))
+        LayoutMirroring.childrenInherit: true
 
         KSvg.FrameSvgItem {
             id: sideBar
@@ -278,8 +279,6 @@ PlasmaComponents3.ScrollView {
 
             model: root.rootModel
 
-            LayoutMirroring.enabled: mainRow.LayoutMirroring.enabled
-
             onExited: rootList.currentIndex = -1
             onInteractionConcluded: root.interactionConcluded()
             onKeyNavigationAtListEnd: {
@@ -303,8 +302,6 @@ PlasmaComponents3.ScrollView {
             visible: searchField.text !== "" && root.runnerModel.count > 0 && !initialDelayTimer.active && root.runnerModel.resultsPresent
 
             spacing: 0
-
-            LayoutMirroring.enabled: mainRow.LayoutMirroring.enabled
 
             Timer {
                 property bool active: false
@@ -330,8 +327,6 @@ PlasmaComponents3.ScrollView {
 
                     model: root.runnerModel.modelForRow(index)
                     mainSearchField: searchField
-
-                    LayoutMirroring.enabled: runnerColumns.LayoutMirroring.enabled
 
                     function navigateToAdjacentColumn(forward = true) {
                         let currentColumnIndex = runnerColumns.visibleChildren.indexOf(runnerMatches)

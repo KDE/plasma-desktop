@@ -29,6 +29,7 @@ Kicker.SubMenu {
     location: PlasmaCore.Types.Floating
     offset: 0 // slightly overlap submenu to match QtWidgets menu behavior
     LayoutMirroring.enabled: dialogMirrored
+    LayoutMirroring.childrenInherit: true
 
     onWindowDeactivated: {
         if (!aboutToBeDestroyed) {
@@ -43,7 +44,6 @@ Kicker.SubMenu {
 
         hoverEnabled: !hoverBlock.enabled
         iconsEnabled: true
-        LayoutMirroring.enabled: itemDialog.LayoutMirroring.enabled
         // force tooltip for recent files - the path is relevant no matter the display setting
         showDescriptionInTooltip: (funnelModel.sourceModel as Kicker.RecentUsageModel)?.shownItems === Kicker.RecentUsageModel.OnlyDocs
 
