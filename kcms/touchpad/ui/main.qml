@@ -124,10 +124,8 @@ KCMUtils.SimpleKCM {
                 contentItem: QQC2.CheckBox {
                     id: disableEventsOnExternalMouse
                     text: i18ndc("kcm_touchpad", "@option:check", "Disable while mouse is connected")
-                    leftPadding: Application.layoutDirection === Qt.LeftToRight ?
-                        deviceEnabled.contentItem.leftPadding : disableEventsOnExternalMouse.padding
-                    rightPadding: Application.layoutDirection === Qt.RightToLeft ?
-                        deviceEnabled.contentItem.rightPadding : disableEventsOnExternalMouse.padding
+                    leftPadding: mirrored ? disableEventsOnExternalMouse.padding : (deviceEnabled.indicator.width + deviceEnabled.spacing)
+                    rightPadding: mirrored ? (deviceEnabled.indicator.width + deviceEnabled.spacing) : disableEventsOnExternalMouse.padding
                     enabled: root.device?.supportsDisableEventsOnExternalMouse ?? false
                     checked: enabled && (root.device?.disableEventsOnExternalMouse ?? false)
 
@@ -145,10 +143,8 @@ KCMUtils.SimpleKCM {
                     id: dwt
                     text: i18ndc("kcm_touchpad", "option:check", "Disable while typing")
                     Accessible.description: i18ndc("kcm_touchpad", "@label 'this' refers to the 'disable touchpad while typing' feature", "This can interfere with video games.")
-                    leftPadding: Application.layoutDirection === Qt.LeftToRight ?
-                        deviceEnabled.contentItem.leftPadding : disableEventsOnExternalMouse.padding
-                    rightPadding: Application.layoutDirection === Qt.RightToLeft ?
-                        deviceEnabled.contentItem.rightPadding : disableEventsOnExternalMouse.padding
+                    leftPadding: mirrored ? disableEventsOnExternalMouse.padding : (deviceEnabled.indicator.width + deviceEnabled.spacing)
+                    rightPadding: mirrored ? (deviceEnabled.indicator.width + deviceEnabled.spacing) : disableEventsOnExternalMouse.padding
                     enabled: root.device?.supportsDisableWhileTyping ?? false
                     checked: enabled && (root.device?.disableWhileTyping ?? false)
 
