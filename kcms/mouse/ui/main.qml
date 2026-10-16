@@ -376,10 +376,9 @@ KCMUtils.SimpleKCM {
 
             Kirigami.FormEntry {
                 contentItem: QQC2.RadioButton {
-                    enabled: scrollButton.checked
-
                     id: scrollOnButtonDown
                     text: i18ndc("kcmmouse", "@option:radio", "while pressing the middle button")
+                    enabled: scrollButton.checked
                     checked: !(root.device?.scrollButtonLock ?? false)
 
                     leftPadding: mirrored ? scrollOnButtonDown.padding : (scrollButton.indicator.width + scrollButton.spacing)
@@ -401,10 +400,9 @@ KCMUtils.SimpleKCM {
 
             Kirigami.FormEntry {
                 contentItem: QQC2.RadioButton {
-                    enabled: scrollButton.checked
-
                     id: scrollButtonLock
                     text: i18ndc("kcmmouse", "@option:radio", "after clicking the middle button")
+                    enabled: scrollButton.checked
                     checked: root.device?.scrollButtonLock ?? false
 
                     leftPadding: mirrored ? scrollButtonLock.padding : (scrollButton.indicator.width + scrollButton.spacing)
