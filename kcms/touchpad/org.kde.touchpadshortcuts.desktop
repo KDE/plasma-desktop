@@ -117,12 +117,30 @@ X-KDE-Migrate-Shortcut=kcm_touchpad,Enable Touchpad
 
 [Desktop Action DisableTouchpad]
 Name=Disable Touchpad
+Name[ca]=Desactiva el ratolí tàctil
+Name[ca@valencia]=Desactiva el ratolí tàctil
+Name[cs]=Zakázat touchpad
+Name[es]=Desactivar el panel táctil
+Name[nl]=Touchpad uitschakelen
+Name[pt_BR]=Desativar o touchpad
+Name[ru]=Выключить сенсорную панель
+Name[sl]=Onemogoči sledilno ploščico
+Name[uk]=Вимкнути сенсорну панель
 Exec=dbus-send --type=method_call --print-reply --dest=org.kde.touchpad /modules/kded_touchpad org.kde.touchpad.disable
 X-KDE-Shortcuts=Touchpad Off
 X-KDE-Migrate-Shortcut=kcm_touchpad,Disable Touchpad
 
 [Desktop Action ToggleTouchpad]
 Name=Toggle Touchpad
+Name[ca]=Commuta el ratolí tàctil
+Name[ca@valencia]=Activa o desactiva el ratolí tàctil
+Name[cs]=Přepnout touchpad
+Name[es]=Conmutar el panel táctil
+Name[nl]=Touchpad omschakelen
+Name[pt_BR]=Alternar o touchpad
+Name[ru]=Включить или выключить сенсорную панель
+Name[sl]=Omogoči sledilno ploščico
+Name[uk]=Увімкнути або вимкнути сенсорну панель
 Exec=dbus-send --type=method_call --print-reply --dest=org.kde.touchpad /modules/kded_touchpad org.kde.touchpad.toggle
 X-KDE-Shortcuts=Touchpad Toggle\tMeta+Ctrl+Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku
 X-KDE-Migrate-Shortcut=kcm_touchpad,Toggle Touchpad
