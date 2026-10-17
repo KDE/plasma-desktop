@@ -16,7 +16,7 @@ This repository contains only components specific to the desktop form factor. Co
 
 ## Building
 
-The easiest way to make changes and test Plasma Desktop during development is to [build it with kdesrc-build](https://develop.kde.org/docs/getting-started/building/).
+The easiest way to make changes and test Plasma Desktop during development is to [build it with kde-builder](https://develop.kde.org/docs/getting-started/building/).
 
 ## Contributing
 
@@ -28,5 +28,4 @@ tab to report bugs.
 * Is there a part of Plasma Desktop that's not translated? See the [Getting Involved in Translation wiki page](https://community.kde.org/Get_Involved/translation) to see how
 you can help translate!
 
-If you get stuck or need help with anything at all, head over to the [KDE New Contributors room](https://go.kde.org/matrix/#/#kde-welcome:kde.org) on Matrix. For questions specifically about Plasma Desktop, please ask in the [KDE Development room](https://go.kde.org/matrix/#/#plasma:kde.org). See [Matrix](https://community.kde.org/Matrix) for more details.
-
+If you get stuck or need help with anything at all, head over to the [KDE New Contributors room](https://go.kde.org/matrix/#/#kde-new-contributors:kde.org) on Matrix. For questions specifically about Plasma Desktop, please ask in the [KDE Development room](https://go.kde.org/matrix/#/#plasma:kde.org). See [Matrix](https://community.kde.org/Matrix) for more details.
