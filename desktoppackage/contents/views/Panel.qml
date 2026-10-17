@@ -92,7 +92,7 @@ Item {
     // Examples of such windows: properties of a file on desktop, or portal "open with" dialog
     property bool touchingWindow: false
     property bool touchingWindowDirect: visibleWindowsModel.count > 0
-    readonly property bool touchingWindowOrKeyboard: touchingWindow || (bottomEdge && Keyboards.KWinVirtualKeyboard.visible)
+    readonly property bool touchingWindowOrKeyboard: touchingWindow || (bottomEdge && Keyboards.KWinVirtualKeyboard.keyboardVisible)
     property bool showingDesktop: KWindowSystem.showingDesktop
     Timer {
         id: touchingWindowDebounceTimer
