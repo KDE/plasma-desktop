@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:49+0000\n"
+"POT-Creation-Date: 2026-10-17 03:07+0000\n"
 "PO-Revision-Date: 2026-01-21 11:04+0000\n"
 "Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
 "Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
@@ -120,37 +120,37 @@ msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "Díchumasaigh agus an luch ceangailte"
 
-#: ui/main.qml:146
+#: ui/main.qml:144
 #, kde-format
 msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "Díchumasaigh agus tú ag clóscríobh"
 
-#: ui/main.qml:147
+#: ui/main.qml:145
 #, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
 msgstr "Féadann sé seo cur isteach ar chluichí físeáin."
 
-#: ui/main.qml:169
+#: ui/main.qml:165
 #, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
 msgstr "Cnaipí clé agus deas:"
 
-#: ui/main.qml:170
+#: ui/main.qml:166
 #, kde-format
 msgctxt "@option:check"
 msgid "Swap (left-handed mode)"
 msgstr "Malartú (mód láimhe clé)"
 
-#: ui/main.qml:185
+#: ui/main.qml:181
 #, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
 msgstr "Brúigh an dá cheann ag an am céanna le cliceáil sa lár"
 
-#: ui/main.qml:197
+#: ui/main.qml:193
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -160,19 +160,19 @@ msgstr ""
 "Méadaíonn an socrú seo an moill cliceáil faoi 50ms. Tá an mhoill bhreise ag "
 "teastáil chun brúnna cnaipe clé agus deas comhuaineacha a bhrath i gceart."
 
-#: ui/main.qml:207
+#: ui/main.qml:203
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Luas pointeora:"
 
-#: ui/main.qml:287
+#: ui/main.qml:283
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "Cumasaigh luasghéarú pointeora"
 
-#: ui/main.qml:299
+#: ui/main.qml:295
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -181,25 +181,25 @@ msgstr ""
 "Nuair a bhíonn sé cumasaithe, méadaíonn achar taistil an phointeora de réir "
 "mar a bhíonn luas gluaiseachta níos tapúla."
 
-#: ui/main.qml:310
+#: ui/main.qml:306
 #, kde-format
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "Luas scrollaigh:"
 
-#: ui/main.qml:392
+#: ui/main.qml:388
 #, kde-format
 msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "Níos moille"
 
-#: ui/main.qml:399
+#: ui/main.qml:395
 #, kde-format
 msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "Níos tapúla"
 
-#: ui/main.qml:406
+#: ui/main.qml:402
 #, kde-format
 msgctxt ""
 "@title group begins the sentence 'Scroll by moving two fingers anywhere/"
@@ -207,33 +207,33 @@ msgctxt ""
 msgid "Scroll by:"
 msgstr "Scrollaigh de réir:"
 
-#: ui/main.qml:409
+#: ui/main.qml:405
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr "Dhá mhéar ag bogadh áit ar bith"
 
-#: ui/main.qml:427
+#: ui/main.qml:423
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr "Ag bogadh méar amháin ar an imeall"
 
-#: ui/main.qml:436
+#: ui/main.qml:432
 #, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Inbhéartaigh treo an scrolla (Scrolláil nádúrtha)"
 
-#: ui/main.qml:453
+#: ui/main.qml:449
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "Díchumasaigh scrollú cothrománach"
 
-#: ui/main.qml:471
+#: ui/main.qml:467
 #, kde-format
 msgctxt ""
 "@title:group for radiobutton group, begins the sentence 'right-click by "
@@ -241,7 +241,7 @@ msgctxt ""
 msgid "Right-click by:"
 msgstr "Cliceáil ar dheis ag:"
 
-#: ui/main.qml:475
+#: ui/main.qml:471
 #, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-right "
@@ -249,19 +249,19 @@ msgctxt ""
 msgid "Pressing bottom-right corner"
 msgstr "Ag brú sa chúinne íochtarach ar dheis"
 
-#: ui/main.qml:480
+#: ui/main.qml:476
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "Cliceáil sa lár trí bhrú ar an dá chúinne íochtaracha."
 
-#: ui/main.qml:481
+#: ui/main.qml:477
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Cliceáil sa lár trí bhrú ar an mbun lár."
 
-#: ui/main.qml:503
+#: ui/main.qml:499
 #, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing with two "
@@ -269,13 +269,13 @@ msgctxt ""
 msgid "Pressing anywhere with two fingers"
 msgstr "Ag brú áit ar bith le dhá mhéar"
 
-#: ui/main.qml:504
+#: ui/main.qml:500
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
 msgstr "Cliceáil sa lár trí bhrú áit ar bith le trí mhéar."
 
-#: ui/main.qml:516
+#: ui/main.qml:512
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'middle-click by pressing "
@@ -283,7 +283,7 @@ msgctxt ""
 msgid "Middle-click by:"
 msgstr "Cliceáil sa lár le:"
 
-#: ui/main.qml:519
+#: ui/main.qml:515
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-middle "
@@ -291,7 +291,7 @@ msgctxt ""
 msgid "Pressing bottom-middle edge"
 msgstr "Ag brú imeall bun-lár"
 
-#: ui/main.qml:539
+#: ui/main.qml:535
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-left "
@@ -299,7 +299,7 @@ msgctxt ""
 msgid "Pressing bottom-left and bottom-right corners"
 msgstr "Ag brú ar choirnéil íochtaracha ar chlé agus íochtaracha ar dheis"
 
-#: ui/main.qml:551
+#: ui/main.qml:547
 #, kde-format
 msgctxt ""
 "@option:check completes the sentence 'middle-click by pressing anywhere with "
@@ -307,25 +307,25 @@ msgctxt ""
 msgid "Pressing anywhere with three fingers"
 msgstr "Ag brú áit ar bith le trí mhéar"
 
-#: ui/main.qml:564
+#: ui/main.qml:560
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Ag tapáil:"
 
-#: ui/main.qml:565
+#: ui/main.qml:561
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap to click"
 msgstr "Beartaigh le cliceáil"
 
-#: ui/main.qml:580
+#: ui/main.qml:576
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr "Ceadaigh tarraingt tar éis tapáil"
 
-#: ui/main.qml:592
+#: ui/main.qml:588
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -335,37 +335,37 @@ msgstr ""
 "Tapáil, ansin tapáil agus sleamhnaigh do mhéar láithreach thar an bpainéal "
 "tadhaill le tarraingt. Ardaigh do mhéar le ligean titim."
 
-#: ui/main.qml:599
+#: ui/main.qml:595
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr "Ceadaigh méar a ardú go hachomair le linn tapáil agus tarraingt"
 
-#: ui/main.qml:612
+#: ui/main.qml:608
 #, kde-format
 msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "Tapáil dhá mhéar:"
 
-#: ui/main.qml:618
+#: ui/main.qml:614
 #, kde-format
 msgctxt "@option:radio"
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Cliceáil ar dheis (tapáil le trí mhéar chun cliceáil sa lár)"
 
-#: ui/main.qml:619
+#: ui/main.qml:615
 #, kde-format
 msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "Cliceáil ar dheis"
 
-#: ui/main.qml:640
+#: ui/main.qml:636
 #, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Cliceáil sa lár (tapáil le trí mhéar chun cliceáil ar dheis)"
 
-#: ui/main.qml:641
+#: ui/main.qml:637
 #, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click"
