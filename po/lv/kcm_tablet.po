@@ -1,14 +1,14 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2023-2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-31 00:45+0000\n"
-"PO-Revision-Date: 2026-03-03 13:25+0200\n"
-"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2026-10-15 12:47+0300\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -233,7 +233,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "upwards"
 msgid "Clockwise:"
-msgstr ""
+msgstr "Pulksteņrādītāja virzienā:"
 
 #: ui/ActionDialog.qml:257
 #, kde-format
@@ -241,7 +241,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "downwards"
 msgid "Counterclockwise:"
-msgstr ""
+msgstr "Pretēji pulksteņrādītāja virzienam:"
 
 #: ui/ActionDialog.qml:271
 #, kde-format
@@ -332,7 +332,7 @@ msgstr "Zīmuļa kalibrācija"
 #, kde-format
 msgctxt "@info"
 msgid "%1: (%2 px, %3 px)"
-msgstr ""
+msgstr "%1: (%2 piks., %3 piks.)"
 
 #: ui/Calibration.qml:107
 #, kde-format
@@ -341,14 +341,11 @@ msgid ""
 "Applied center correction (%1 px, %2 px). Retap the targets to redo the "
 "correction."
 msgstr ""
+"Pielietota centra korekcija (%1 piks., %2 piks.). Lai no jauna veiktu "
+"korekciju, vēlreiz pieskarieties mērķiem."
 
 #: ui/Calibration.qml:173
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds unless further action is "
-#| "taken.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><emphasis "
@@ -360,16 +357,16 @@ msgid_plural ""
 "further action is taken.</emphasis>"
 msgstr[0] ""
 "Atkārtoti pieskarieties mērķiem, lai apstiprinātu jauno kalibrāciju.<nl/><nl/"
-"><b>Ja neko nedarīsiet, pēc %1 sekundēm sistēma atgriezīsies pie noklusējuma "
-"kalibrācijas.</b>"
+"><emphasis strong='true'>Ja neko nedarīsiet, pēc %1 sekundes sistēma "
+"atgriezīsies pie noklusējuma kalibrācijas.</emphasis>"
 msgstr[1] ""
 "Atkārtoti pieskarieties mērķiem, lai apstiprinātu jauno kalibrāciju.<nl/><nl/"
-"><b>Ja neko nedarīsiet, pēc %1 sekundēm sistēma atgriezīsies pie noklusējuma "
-"kalibrācijas.</b>"
+"><emphasis strong='true'>Ja neko nedarīsiet, pēc %1 sekundēm sistēma "
+"atgriezīsies pie noklusējuma kalibrācijas.</emphasis>"
 msgstr[2] ""
 "Atkārtoti pieskarieties mērķiem, lai apstiprinātu jauno kalibrāciju.<nl/><nl/"
-"><b>Ja neko nedarīsiet, pēc %1 sekundēm sistēma atgriezīsies pie noklusējuma "
-"kalibrācijas.</b>"
+"><emphasis strong='true'>Ja neko nedarīsiet, pēc %1 sekundēm sistēma "
+"atgriezīsies pie noklusējuma kalibrācijas.</emphasis>"
 
 #: ui/Calibration.qml:177
 #, kde-format
@@ -380,6 +377,10 @@ msgid ""
 "Tap the center target once to fine-tune alignment. You can retap the other "
 "targets to verify the result."
 msgstr ""
+"Kalibrācijas ir pabeigta un saglabāta.\n"
+"\n"
+"Vienu reizi pieskarieties centra mērķim, lai izvietojumu uzlabotu sīkāk. "
+"Varat no jauna pieskarties citiem mērķiem, lai pārbaudītu rezultātu."
 
 #: ui/Calibration.qml:180
 #, kde-format
@@ -394,6 +395,8 @@ msgid ""
 "Offset Correction:\n"
 "%1"
 msgstr ""
+"Nobīdes korekcija:\n"
+"%1"
 
 #: ui/Calibration.qml:216
 #, kde-format
@@ -429,31 +432,31 @@ msgstr "Atcelt"
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-left"
-msgstr ""
+msgstr "Augša pa kreisi"
 
 #: ui/Calibration.qml:334
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-right"
-msgstr ""
+msgstr "Augša pa labi"
 
 #: ui/Calibration.qml:353
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-left"
-msgstr ""
+msgstr "Apakša pa kreisi"
 
 #: ui/Calibration.qml:372
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-right"
-msgstr ""
+msgstr "Apakša pa labi"
 
 #: ui/Calibration.qml:391
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Center"
-msgstr ""
+msgstr "Centrs"
 
 #: ui/DisplayTab.qml:46
 #, kde-format

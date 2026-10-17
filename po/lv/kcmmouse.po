@@ -5,20 +5,20 @@
 # Maris Nartiss <maris.kde@gmail.com>, 2007, 2010.
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2007, 2008.
 # Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011.
-# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2023-2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-04 00:47+0000\n"
-"PO-Revision-Date: 2026-01-16 18:16+0200\n"
-"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"POT-Creation-Date: 2026-10-17 00:51+0000\n"
+"PO-Revision-Date: 2026-10-15 12:55+0300\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 26.08.1\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -228,15 +228,15 @@ msgstr "Ritināt pretējā virzienā"
 #, kde-format
 msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
-msgstr ""
+msgstr "Ritināt, pārvietojot rādītāju"
 
-#: ui/main.qml:383
+#: ui/main.qml:380
 #, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
-msgstr ""
+msgstr "spiežot peles vidējo pogu"
 
-#: ui/main.qml:396
+#: ui/main.qml:397
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
@@ -250,13 +250,13 @@ msgstr ""
 "un datorspēlēm. Šo iestatījumu varat lietot jebkurā ierīce, tomēr tas "
 "primāri ir paredzēts ierīcēm, kurām trūkst peles ritenīša."
 
-#: ui/main.qml:406
+#: ui/main.qml:404
 #, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
-msgstr ""
+msgstr "pēc peles vidējās pogas nospiešanas"
 
-#: ui/main.qml:419
+#: ui/main.qml:421
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
@@ -264,6 +264,9 @@ msgid ""
 "you want the application to receive a single middle-click. This includes "
 "middle-click dragging."
 msgstr ""
+"Tas var radīt konfliktu ar vidējiem klikšķiem vispārīgi. Veiciet "
+"dubultklikšķi ar vidējo pogu, kad vēlaties, lai programma saņemtu vienu "
+"vidējo klikšķi. Tas ietver vilkšanu ar vidējo klikšķi."
 
 #~ msgctxt "@option:check"
 #~ msgid "Hold down middle button and move mouse to scroll"

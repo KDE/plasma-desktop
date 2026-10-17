@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-04 00:47+0000\n"
-"PO-Revision-Date: 2026-09-02 03:30+0900\n"
+"POT-Creation-Date: 2026-10-17 00:51+0000\n"
+"PO-Revision-Date: 2026-10-16 20:09+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -28,11 +28,13 @@ msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr ""
+"Tsài-ji̍p siat-tīng-ti̍t ê sî-tsūn ū tshò-gōo. Siông-sè tshiánn khuànn kì-lo̍k. "
+"Tshiánn kā tsit ê siat-tīng bôo-tsoo tîng-khé-tōng."
 
 #: kcm.cpp:115
 #, kde-format
 msgid "No pointer device found. Connect now."
-msgstr ""
+msgstr "Tshuē bô tsí-piau tsong-tì. Tshiánn kā i liân-tsiap."
 
 #: kcm.cpp:124
 #, kde-format
@@ -40,6 +42,9 @@ msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
+"Bô-huat-tōo tû-tsûn sóo-ū ê piàn-king. Siông-sè tshiánn khuànn kì-lo̍k. "
+"Tshiánn kā tsit ê siat-tīng bôo-tsoo tîng-khé-tōng, jiân-āu koh tshì tsi̍t-"
+"pái."
 
 #: kcm.cpp:142
 #, kde-format
@@ -135,7 +140,7 @@ msgstr "Khé-iōng tsong-tì"
 #, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
-msgstr ""
+msgstr "Tó-khí kap tsiànn-khí:"
 
 #: ui/main.qml:103
 #, kde-format
@@ -147,7 +152,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
-msgstr ""
+msgstr "Nn̄g-pîng tsò-hué tshi̍h lâi tsò tiong-khí tiám-tshi̍h"
 
 #: ui/main.qml:130
 #, kde-format
@@ -174,13 +179,13 @@ msgstr "Khé-iōng tsí-piau ka-sok"
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
-msgstr ""
+msgstr "Khé-iōng ê sî-tsūn, tshiú î-tōng jú kín tsí-piau tio̍h ē î-tōng jú hn̄g."
 
 #: ui/main.qml:264
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
-msgstr ""
+msgstr "Kńg-tōng sok-tōo:"
 
 #: ui/main.qml:328
 #, kde-format
@@ -212,13 +217,13 @@ msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
 msgstr ""
 
-#: ui/main.qml:383
+#: ui/main.qml:380
 #, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
 msgstr ""
 
-#: ui/main.qml:396
+#: ui/main.qml:397
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
@@ -228,13 +233,13 @@ msgid ""
 "devices that do not have any."
 msgstr ""
 
-#: ui/main.qml:406
+#: ui/main.qml:404
 #, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
 msgstr ""
 
-#: ui/main.qml:419
+#: ui/main.qml:421
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""

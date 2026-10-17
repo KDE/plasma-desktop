@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Maris Nartiss <maris.kde@gmail.com>, 2007, 2008, 2009.
-# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024-2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_trash\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-27 00:47+0000\n"
-"PO-Revision-Date: 2025-05-28 16:54+0300\n"
-"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2026-10-15 12:57+0300\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: main.qml:33
 #, kde-format
@@ -33,12 +33,10 @@ msgid "Emptying…"
 msgstr "Iztukšo…"
 
 #: main.qml:38
-#, fuzzy, kde-format
-#| msgctxt "@info:status The trash is being emptied"
-#| msgid "Emptying…"
+#, kde-format
 msgctxt "@info:status Counting the number of items in trash"
 msgid "Counting…"
-msgstr "Iztukšo…"
+msgstr "Skaita…"
 
 #: main.qml:40
 #, kde-format

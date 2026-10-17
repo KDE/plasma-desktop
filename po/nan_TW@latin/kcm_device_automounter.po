@@ -1,0 +1,151 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-01-23 00:45+0000\n"
+"PO-Revision-Date: 2026-10-16 19:15+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 26.11.70\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kisaragi Hiu"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "mail@kisaragi-hiu.com"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, devices will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"Tsia sī hē-thóng tsai-iánn ê tû-tsûn tsong-tì ê tshing-tuann. Nā ū kau "
+"\"Ting-ji̍p ê Sî-tsūn Tsū-tōng Kuà-tsái\", án-ne tio̍h-sǹg \"Ting-ji̍p ê Sî-"
+"tsūn Kuat-sài Sóo-ū Khó-î-tû Muî-thé\" bô kau--khí-lâi, tsong-tì á-sī ē hōo "
+"tsū-tōng kuà-tsài. \"Liân-tsiap ê Sî-tsūn Tsū-tōng Kuà-tsài\" mā sī kāng-"
+"khuán."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"Tshi̍h tsit ê liú ē hōo suán-ti̍k ê tsong-tì hōo 'bē-kì-tit'. Tse kan-na tī "
+"iōng \"Kan-na tsū-tōng kuà-tsái tsìn-tsîng ū kuà-tsái kuè ê khó-î-tû muî-thé"
+"\" suán-hāng ê sî-tsūn tsiah ū-lōo-iōng. Tsong-tì bē-kì-tit liáu-āu, nā hē-"
+"thóng siat-tīng sī kan-na tsū-tōng kuà-tsái ū khuànn-kuè ê tsong-tì, án-ne "
+"hōo bē-kì-tit ê tsong-tì tio̍h bē hōo tsū-tōng kuà-tsái."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Kā Tsong-tì Bē-kì-tit"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"Nā bô suán tsit ê suán-hāng, kan-na ū kì--leh ê tsong-tì tsiah ē tsū-tōng "
+"kuà-tsái. Ū kì--leh ê tsong-tì sī tsìn-tsîng ū kuà-tsái kuè ê tsong-tì. Kú-"
+"lē lâi kóng, kan-na liân-tsiap USB muî-thé hòng-sàng-khì bē hōo i kì--leh, "
+"nā bô tsûn-tshú i ê tóng-àn, āu-pái i tshut-hiān i mā bē hōo tsū-tōng kuà-"
+"tsái. Ū tsûn-tshú liáu-āu, hē-thóng tio̍h ē kā i kì--leh, āu-pái tio̍h ē tsū-"
+"tōng kā i kuà-tsái, hōo i ê lāi-iông tī hē-thóng lóng ē-sái iōng."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr "Tsū-tōng kuà-tsái tsìn-tsîng bô kuà-tsái kuè ê khó-î-tû muî-thé"
+
+#: DeviceModel.cpp:52
+#, kde-format
+msgid "Automount Device"
+msgstr "Tsū-tōng Kuà-tsái Tsong-tì"
+
+#: DeviceModel.cpp:54
+#, kde-format
+msgctxt "As in automount on login"
+msgid "On Login"
+msgstr "Ting-ji̍p ê Sî-tsūn"
+
+#: DeviceModel.cpp:56
+#, kde-format
+msgctxt "As in automount on attach"
+msgid "On Attach"
+msgstr "Liân-tsiap ê Sî-tsūn"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Devices"
+msgstr "Sóo-ū ê Tsong-tì"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Known Devices"
+msgstr "Sóo-ū Í-king Ū Khuànn-kuè ê Tsong-tì"
+
+#: DeviceModel.cpp:260
+#, kde-format
+msgid "Attached Devices"
+msgstr "Liân-tsiap ê Tsong-tì"
+
+#: DeviceModel.cpp:262
+#, kde-format
+msgid "Disconnected Devices"
+msgstr "Bô-liân-tsiap ê Tsong-tì"
+
+#: DeviceModel.cpp:298 DeviceModel.cpp:307
+#, kde-format
+msgid "UDI: %1"
+msgstr "UDI: %1"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will be automatically mounted at login."
+msgstr "Tsit ê tsong-tì ē tī ting-ji̍p ê sî-tsūn tsū-tōng ting-ji̍p."
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will not be automatically mounted at login."
+msgstr "Tsit ê tsong-tì buē tī ting-ji̍p ê sî-tsūn tsū-tōng ting-ji̍p."
+
+#: DeviceModel.cpp:326
+#, kde-format
+msgid "This device will be automatically mounted when attached."
+msgstr "Tsit ê tsong-tì ē tī liân-tsiap ê sî-tsūn tsū-tōng ting-ji̍p."
+
+#: DeviceModel.cpp:327
+#, kde-format
+msgid "This device will not be automatically mounted when attached."
+msgstr "Tsit ê tsong-tì buē tī liân-tsiap ê sî-tsūn tsū-tōng ting-ji̍p."

@@ -1,0 +1,155 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-10-10 00:48+0000\n"
+"PO-Revision-Date: 2026-10-16 21:29+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 26.11.70\n"
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: landingpage_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "配色方案 ê 名"
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:15
+#, kde-format
+msgid "Single click to open files"
+msgstr "揤一改來開檔案"
+
+#. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:19
+#, kde-format
+msgid "Switch the look and feel package depending on time of day"
+msgstr "照時間切換外觀 kap 風格 ê 套件"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:23
+#, kde-format
+msgid "Global Look and Feel package"
+msgstr "全域外觀 kap 風格套件"
+
+#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
+#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:27
+#: landingpage_kdeglobalssettings.kcfg:31
+#, kde-format
+msgid "Global Look and Feel package, alternate"
+msgstr "全域外觀 kap 風格套件，代替"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:35
+#, kde-format
+msgid "Animation speed"
+msgstr "動態效果速度"
+
+#: ui/LookAndFeelBox.qml:106
+#, kde-format
+msgctxt "@action:button"
+msgid "Change global theme"
+msgstr "換全域主題"
+
+#: ui/LookAndFeelBox.qml:187
+#, kde-format
+msgctxt "@label accessible"
+msgid "Global theme"
+msgstr "全域主題"
+
+#: ui/main.qml:31
+#, kde-format
+msgctxt "@title:group for light/dark quick switch"
+msgid "Theme:"
+msgstr "主題："
+
+#: ui/main.qml:97
+#, kde-format
+msgctxt "Switch between dark and light look and feel packages automatically"
+msgid "Automatic"
+msgstr "自動"
+
+#: ui/main.qml:123
+#, kde-format
+msgctxt ""
+"@info:tooltip 1 is the name of a light global theme, 2 is the name of a dark "
+"global theme"
+msgid "Use “%1” during the day and “%2” at night"
+msgstr "日時用 “%1”，暗時用 “%2”"
+
+#: ui/main.qml:133
+#, kde-format
+msgctxt "@title:group translate as short as possible"
+msgid "More appearance settings:"
+msgstr "其他外觀設定："
+
+#: ui/main.qml:200
+#, kde-format
+msgctxt "@title:slider"
+msgid "Animation speed:"
+msgstr "動態效果速度："
+
+#: ui/main.qml:210
+#, kde-format
+msgctxt "Animation speed"
+msgid "Slow"
+msgstr "慢"
+
+#: ui/main.qml:217
+#, kde-format
+msgctxt "Animation speed"
+msgid "Instant"
+msgstr "緊"
+
+#: ui/main.qml:227
+#, kde-format
+msgctxt ""
+"part of a sentence: 'Clicking files or folders [opens them/selects them]'"
+msgid "Clicking files or folders:"
+msgstr "揤檔案猶是資料鋏仔的時陣："
+
+#: ui/main.qml:232
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders selects them'"
+msgid "Selects them"
+msgstr "選擇 in"
+
+#: ui/main.qml:238
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Open by double-clicking instead"
+msgstr "點兩改來拍開"
+
+#: ui/main.qml:254
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr "拍開 in"
+
+#: ui/main.qml:259
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Select by clicking on item's selection marker"
+msgstr "揤項目 ê 選擇標記來選擇"
+
+#: ui/main.qml:271
+#, kde-format
+msgctxt "@title:group translate as short as possible"
+msgid "More behavior settings:"
+msgstr "其他行為設定："
+
+#: ui/main.qml:282
+#, kde-format
+msgctxt "@title:group for grid of buttons opening kcms"
+msgid "Most used pages:"
+msgstr "上有咧用 ê 頁面："

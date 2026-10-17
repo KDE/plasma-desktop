@@ -1,0 +1,209 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-04-15 00:48+0000\n"
+"PO-Revision-Date: 2026-10-16 21:21+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 26.11.70\n"
+
+#: qml/config.qml:13
+#, kde-format
+msgctxt "@title:group for configuration dialog page"
+msgid "General"
+msgstr "一般"
+
+#: qml/configGeneral.qml:39
+#, kde-format
+msgctxt "@title:group prefix for checkbox group"
+msgid "General:"
+msgstr ""
+
+#: qml/configGeneral.qml:41
+#, kde-format
+msgctxt "@option:check"
+msgid "Show window outlines"
+msgstr ""
+
+#: qml/configGeneral.qml:46
+#, kde-format
+msgctxt "@option:check"
+msgid "Show application icons on window outlines"
+msgstr ""
+
+#: qml/configGeneral.qml:52
+#, kde-format
+msgctxt "@option:check"
+msgid "Show only current screen"
+msgstr ""
+
+#: qml/configGeneral.qml:57
+#, kde-format
+msgctxt "@option:check"
+msgid "Navigation wraps around"
+msgstr ""
+
+#: qml/configGeneral.qml:69
+#, kde-format
+msgctxt "@title:listbox"
+msgid "Layout:"
+msgstr ""
+
+#: qml/configGeneral.qml:71
+#, kde-format
+msgctxt "@item:inlistbox The pager layout"
+msgid "Default"
+msgstr ""
+
+#: qml/configGeneral.qml:71
+#, kde-format
+msgctxt "@item:inlistbox The pager layout"
+msgid "Horizontal"
+msgstr ""
+
+#: qml/configGeneral.qml:71
+#, kde-format
+msgctxt "@item:inlistbox The pager layout"
+msgid "Vertical"
+msgstr ""
+
+#: qml/configGeneral.qml:85
+#, kde-format
+msgctxt "@title:group prefix for radiobutton group"
+msgid "Text display:"
+msgstr ""
+
+#: qml/configGeneral.qml:88
+#, kde-format
+msgctxt "@option:radio text display"
+msgid "No text"
+msgstr ""
+
+#: qml/configGeneral.qml:96
+#, kde-format
+msgctxt "@option:radio text display"
+msgid "Activity number"
+msgstr ""
+
+#: qml/configGeneral.qml:96
+#, kde-format
+msgctxt "@option:radio text display"
+msgid "Desktop number"
+msgstr ""
+
+#: qml/configGeneral.qml:104
+#, kde-format
+msgctxt "@option:radio text display"
+msgid "Activity name"
+msgstr ""
+
+#: qml/configGeneral.qml:104
+#, kde-format
+msgctxt "@option:radio text display"
+msgid "Desktop name"
+msgstr ""
+
+#: qml/configGeneral.qml:119
+#, kde-format
+msgctxt ""
+"@label Start of the sentence 'Selecting current activity does nothing/shows "
+"the desktop'"
+msgid "Selecting current Activity:"
+msgstr ""
+
+#: qml/configGeneral.qml:120
+#, kde-format
+msgctxt ""
+"@label Start of the sentence 'Selecting current virtual desktop does nothing/"
+"shows the desktop'"
+msgid "Selecting current virtual desktop:"
+msgstr ""
+
+#: qml/configGeneral.qml:123
+#, kde-format
+msgctxt ""
+"option:check completes the sentence 'Selecting current activity/virtual "
+"desktop does nothing'"
+msgid "Does nothing"
+msgstr ""
+
+#: qml/configGeneral.qml:131
+#, kde-format
+msgctxt ""
+"option:check completes the sentence 'Selecting current activity/virtual "
+"desktop shows the desktop'"
+msgid "Shows the desktop"
+msgstr ""
+
+#: qml/main.qml:87
+#, kde-format
+msgctxt "@info:tooltip overflow label"
+msgid "…and %1 other window"
+msgid_plural "…and %1 other windows"
+msgstr[0] ""
+
+#: qml/main.qml:352
+#, kde-format
+msgctxt "@info:tooltip start of list"
+msgid "%1 Window:"
+msgid_plural "%1 Windows:"
+msgstr[0] ""
+
+#: qml/main.qml:364
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "%1 Minimized Window:"
+msgid_plural "%1 Minimized Windows:"
+msgstr[0] ""
+
+#: qml/main.qml:440
+#, kde-format
+msgctxt "@info:whatsthis Accessible name for pager section"
+msgid "Desktop %1"
+msgstr ""
+
+#: qml/main.qml:441
+#, kde-format
+msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
+msgid "Switch to %1"
+msgstr ""
+
+#: qml/main.qml:593
+#, kde-format
+msgctxt "@action:inmenu widget context menu"
+msgid "Show Activity Manager"
+msgstr ""
+
+#: qml/main.qml:599
+#, kde-format
+msgctxt "@action:inmenu widget context menu"
+msgid "Add Virtual Desktop"
+msgstr ""
+
+#: qml/main.qml:605
+#, kde-format
+msgctxt "@action:inmenu widget context menu"
+msgid "Remove Virtual Desktop"
+msgstr ""
+
+#: qml/main.qml:612
+#, kde-format
+msgctxt "@action:inmenu widget context menu"
+msgid "&Configure Activities…"
+msgstr ""
+
+#: qml/main.qml:617
+#, kde-format
+msgctxt "@action:inmenu widget context menu"
+msgid "Configure Virtual Desktops…"
+msgstr ""
