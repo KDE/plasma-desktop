@@ -26,6 +26,7 @@ private Q_SLOTS:
     void tst_addMapping();
     void tst_addRemoveScreenWithItems();
     void tst_addRemoveScreenDifferentPaths();
+    void tst_replacementOwner();
 
     // Configuration read/write tests
     void tst_readScreenActivityMapping();

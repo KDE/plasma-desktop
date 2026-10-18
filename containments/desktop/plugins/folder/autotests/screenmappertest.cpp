@@ -56,6 +56,36 @@ void ScreenMapperTest::tst_addScreens()
     QCOMPARE(m_screenMapper->firstAvailableScreen(path, m_alternativeActivity), 1);
 }
 
+void ScreenMapperTest::tst_replacementOwner()
+{
+    const QUrl path(QStringLiteral("desktop:/"));
+    const QUrl icon(QStringLiteral("desktop:/icon.txt"));
+    QObject oldModel;
+    QObject replacement;
+    m_screenMapper->registerScreen(&oldModel, 0, m_currentActivity, path);
+    m_screenMapper->addMapping(icon, 0, m_currentActivity);
+
+    m_screenMapper->removeScreen(0, m_currentActivity, path);
+    m_screenMapper->registerScreen(&replacement, 0, m_currentActivity, path);
+    m_screenMapper->registerScreen(&oldModel, 0, m_currentActivity, path);
+    m_screenMapper->registerScreen(&replacement, 0, m_currentActivity, path);
+    QSignalSpy screens(m_screenMapper, &ScreenMapper::screensChanged);
+
+    m_screenMapper->unregisterScreen(&oldModel);
+    QCOMPARE(screens.count(), 0);
+    QCOMPARE(m_screenMapper->firstAvailableScreen(path, m_currentActivity), 0);
+    QCOMPARE(m_screenMapper->screenForItem(icon, m_currentActivity), 0);
+    QVERIFY(m_screenMapper->m_itemsOnDisabledScreensMap.isEmpty());
+
+    m_screenMapper->unregisterScreen(&replacement);
+    QCOMPARE(screens.count(), 1);
+    QCOMPARE(m_screenMapper->firstAvailableScreen(path, m_currentActivity), -1);
+    QCOMPARE(m_screenMapper->m_screenOwners.size(), 0);
+    QVERIFY(m_screenMapper->m_itemsOnDisabledScreensMap.value({0, m_currentActivity}).contains(icon));
+    m_screenMapper->unregisterScreen(&replacement);
+    QCOMPARE(screens.count(), 1);
+}
+
 void ScreenMapperTest::tst_removeScreens()
 {
     const auto path = ScreenMapper::stringToUrl(QStringLiteral("desktop:/"));

@@ -51,6 +51,9 @@ public:
 
     void addScreen(int screenId, const QString &activity, const QUrl &screenUrl);
     void removeScreen(int screenId, const QString &activity, const QUrl &screenUrl);
+    // Folder models can overlap while a desktop view is being replaced.
+    void registerScreen(const QObject *owner, int screenId, const QString &activity, const QUrl &screenUrl);
+    void unregisterScreen(const QObject *owner);
     int firstAvailableScreen(const QUrl &screenUrl, const QString &activity) const;
     void removeItemFromDisabledScreen(const QUrl &url);
 
@@ -95,6 +98,7 @@ private:
     QHash<std::pair<int /* screen */, QString /* activity ID */>, QSet<QUrl>> m_itemsOnDisabledScreensMap;
     QHash<QUrl, QList<std::pair<int /* screen */, QString /* activity ID */>>> m_screensPerPath; // screens per registered path
     QList<std::pair<int /* screen */, QString /* activity ID */>> m_availableScreens;
+    QHash<const QObject *, std::tuple<int, QString, QUrl>> m_screenOwners;
     QPointer<Plasma::Corona> m_corona;
     QTimer *const m_screenMappingChangedTimer;
     bool m_sharedDesktops = false; // all screens share the same desktops, disabling the screen mapping
