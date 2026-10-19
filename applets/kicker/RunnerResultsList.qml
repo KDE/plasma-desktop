@@ -111,7 +111,6 @@ RowLayout {
             iconsEnabled: true
             showDescriptionInTooltip: true
             keyNavigationWraps: !searchFieldPlaceholder.visible
-            LayoutMirroring.enabled: runnerResultsList.LayoutMirroring.enabled
 
             resetOnExitDelay: 0
 
