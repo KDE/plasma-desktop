@@ -31,15 +31,15 @@ PlasmaComponents3.ScrollView {
     // we never want a vertical scrollbar, the components handle those.
     PlasmaComponents3.ScrollBar.vertical.policy: PlasmaComponents3.ScrollBar.AlwaysOff
     // needs to be set explicitly as the default can cause loops
-    PlasmaComponents3.ScrollBar.horizontal.visible: Screen.width > 0 && contentWidth > (Screen.width - Kirigami.Units.largeSpacing * 4)
+    PlasmaComponents3.ScrollBar.horizontal.visible: Plasmoid.containment.screenGeometry.width > 0 && contentWidth > (Plasmoid.containment.screenGeometry.width - Kirigami.Units.largeSpacing * 4)
 
     // ScrollBar's padding is only to make space for the scrollbar, so we don't need it here
-    Layout.minimumWidth: Math.min(Math.max(mainRow.Layout.minimumWidth, mainRow.implicitWidth), Screen.width - Kirigami.Units.largeSpacing * 4)
+    Layout.minimumWidth: Math.min(Math.max(mainRow.Layout.minimumWidth, mainRow.implicitWidth), Plasmoid.containment.screenGeometry.width - Kirigami.Units.largeSpacing * 4)
     Layout.maximumWidth: Layout.minimumWidth
 
     contentWidth: mainRow.implicitWidth
 
-    Layout.minimumHeight: Math.min(Math.max(sideBar.implicitHeight, rootList.implicitHeight + rootList.Layout.bottomMargin), Math.round(Screen.height * 0.9)) + topPadding + bottomPadding
+    Layout.minimumHeight: Math.min(Math.max(sideBar.implicitHeight, rootList.implicitHeight + rootList.Layout.bottomMargin), Math.round(Plasmoid.containment.screenGeometry.height * 0.9)) + topPadding + bottomPadding
     Layout.maximumHeight: Layout.minimumHeight
 
     function ensureVisible(item: Item) : void {
@@ -166,7 +166,7 @@ PlasmaComponents3.ScrollView {
                 }
 
                 PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
-                PlasmaComponents3.ScrollBar.vertical.visible: Screen.height > 0 && sideBarScrollView.contentHeight > Math.round(Screen.height * 0.9)
+                PlasmaComponents3.ScrollBar.vertical.visible: Plasmoid.containment.screenGeometry.height > 0 && sideBarScrollView.contentHeight > Math.round(Plasmoid.containment.screenGeometry.height * 0.9)
                 contentWidth: availableWidth
                 contentHeight: Math.max(sideBarLayout.implicitHeight + sideBarLayout.anchors.topMargin + sideBarLayout.anchors.bottomMargin, sideBar.height - 2 * sideBar.innerMargin)
 
