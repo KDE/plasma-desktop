@@ -88,8 +88,11 @@ ItemAbstractDelegate {
     }
     Drag.dragType: Drag.Automatic
     Drag.mimeData: {
-        'favoritedrag': '',
-        "text/uri-list" : [root.url]
+        let mimeData = { 'favoritedrag': '' }
+        if (root.url.toString().length > 0) {
+            mimeData["text/uri-list"] = [root.url]
+        }
+        return mimeData
     }
 
     PC3.ToolTip {
