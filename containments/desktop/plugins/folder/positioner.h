@@ -142,7 +142,8 @@ private Q_SLOTS:
     void sourceRowsRemoved(const QModelIndex &parent, int first, int last);
     void sourceLayoutChanged(const QList<QPersistentModelIndex> &parents, QAbstractItemModel::LayoutChangeHint hint);
     void onItemRenamed(const QString &filename, const QString &newFilename);
-    void onListingCompleted();
+    void onItemDeleted(const QUrl &url);
+    void onListingCompleted(const QList<QUrl> &urls);
 
 private:
     void initMaps(int size = -1);

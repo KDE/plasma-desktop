@@ -292,7 +292,7 @@ public:
 
 Q_SIGNALS:
     void urlChanged() const;
-    void listingCompleted() const;
+    void listingCompleted(const QList<QUrl> &items) const;
     void listingCanceled() const;
     void iconNameChanged() const;
     void resolvedUrlChanged() const;
@@ -324,6 +324,7 @@ Q_SIGNALS:
     void selectionDone();
     void creatingNewItemsChanged() const;
     void selectionCountChanged() const;
+    void itemDeleted(const QUrl &url);
 
 protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
