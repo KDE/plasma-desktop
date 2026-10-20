@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-20 00:47+0000\n"
+"POT-Creation-Date: 2026-10-20 00:54+0000\n"
 "PO-Revision-Date: 2023-06-18 19:33+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -276,13 +276,13 @@ msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
 msgstr "Explorar por categorías os programas instalados"
 
-#: ItemGridDelegate.qml:81
+#: ItemGridDelegate.qml:85
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: ItemGridDelegate.qml:83
+#: ItemGridDelegate.qml:87
 #, fuzzy, kde-format
 #| msgid "All Installed Applications"
 msgctxt "@label Accessible name for badge"
@@ -315,14 +315,14 @@ msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
 msgstr "Editar as aplicacións…"
 
-#: MenuRepresentation.qml:197
+#: MenuRepresentation.qml:198
 #, fuzzy, kde-format
 #| msgid "Favorites"
 msgctxt "@title:group accessible name for favorite group in sidebar"
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: MenuRepresentation.qml:373
+#: MenuRepresentation.qml:368
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
