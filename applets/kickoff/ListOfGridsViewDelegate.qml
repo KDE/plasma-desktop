@@ -31,7 +31,6 @@ KickoffGridView {
 
     view.height: view.cellHeight * Math.ceil(count / view.columns)
     view.implicitHeight: view.contentHeight
-    blockTargetWheel: false
 
     delegate: KickoffGridDelegate {
         id: itemDelegate
