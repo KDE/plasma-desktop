@@ -179,25 +179,32 @@ KCM.SimpleKCM {
             Kirigami.FormData.label: i18nc("@label:listbox sort items by field", "Sort by:")
 
             property int mode
+            // Manual arrangement is only supported on the desktop itself, not in Folder View widgets
+            readonly property bool manualAvailable: Plasmoid.isContainment
             // FIXME TODO HACK: This maps the combo box list model to the KDirModel::ModelColumns
             // enum, which should be done in C++.
-            property var indexToMode: [-1, 0, 1, 6, 2]
-            property var modeToIndex: {'-1': '0', '0': '1', '1': '2', '6': '3', '2': '4'}
+            readonly property var indexToMode: manualAvailable ? [-1, 0, 1, 6, 2] : [0, 1, 6, 2]
+            readonly property bool manual: indexToMode[currentIndex] === -1
 
-            model: [i18nc("@item:inlistbox sort icons manually", "Manual"),
+            model: (manualAvailable ? [i18nc("@item:inlistbox sort icons manually", "Manual")] : []).concat([
                     i18nc("@item:inlistbox sort icons by name", "Name"),
                     i18nc("@item:inlistbox sort icons by size", "Size"),
                     i18nc("@item:inlistbox sort icons by file type", "Type"),
-                    i18nc("@item:inlistbox sort icons by date", "Date")]
+                    i18nc("@item:inlistbox sort icons by date", "Date")])
 
-            Component.onCompleted: currentIndex = modeToIndex[mode]
+            Component.onCompleted: {
+                if (!manualAvailable && mode === -1) {
+                    mode = 0;
+                }
+                currentIndex = indexToMode.indexOf(mode);
+            }
             onActivated: index => mode = indexToMode[index]
         }
 
         CheckBox {
             id: sortDesc
 
-            enabled: sortMode.currentIndex !== 0
+            enabled: !sortMode.manual
 
             text: i18nc("@option:check sort icons in descending order", "Descending")
         }
@@ -205,7 +212,7 @@ KCM.SimpleKCM {
         CheckBox {
             id: sortDirsFirst
 
-            enabled: sortMode.currentIndex !== 0
+            enabled: !sortMode.manual
 
             text: i18nc("@option:check sort icons with folders first", "Folders first")
         }
