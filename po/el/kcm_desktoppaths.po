@@ -7,7 +7,7 @@
 # Spiros Georgaras <sngeorgaras@otenet.gr>, 2005, 2006, 2007.
 # Toussis Manolis <manolis@koppermind.homelinux.org>, 2007, 2008, 2009.
 # Spiros Georgaras <sng@hellug.gr>, 2007.
-# Petros Vidalis <p_vidalis@hotmail.com>, 2009.
+# SPDX-FileCopyrightText: 2009, 2026 Petros Vidalis <p_vidalis@hotmail.com>
 # Petros <pvidalis@gmail.com>, 2010.
 # Antonis Geralis <capoiosct@gmail.com>, 2024.
 msgid ""
@@ -15,50 +15,46 @@ msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-30 00:45+0000\n"
-"PO-Revision-Date: 2024-08-12 11:10+0300\n"
-"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-10-20 11:46+0300\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Desktop Menu"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
-msgstr "Φάκελος επιφάνεια εργασίας:"
+msgstr "Φάκελος επιφάνειας εργασίας:"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
 msgstr ""
-"Αυτός ο φάκελος περιέχει όλα τα αρχεία που βλέπετε στην επιφάνεια εργασίας."
+"Αυτός ο φάκελος περιέχει όλα τα αρχεία που βλέπετε στην επιφάνεια εργασίας "
+"σας."
 
 #: ui/main.qml:67
-#, fuzzy, kde-format
-#| msgid "Documents"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Documents folder:"
 msgstr "Φάκελος εγγράφων:"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save documents from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
 msgstr ""
-"Αυτός θα είναι ο προκαθορισμένος φάκελος για το άνοιγμα και την αποθήκευση "
-"των εγγράφων."
+"Αυτός ο φάκελος χρησιμοποιείται από προεπιλογή για το άνοιγμα ή την "
+"αποθήκευση εγγράφων."
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgid "Downloads"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
 msgstr "Φάκελος λήψεων:"
@@ -68,8 +64,8 @@ msgstr "Φάκελος λήψεων:"
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
-"Αυτός θα είναι ο προκαθορισμένος φάκελος για την αποθήκευση των ληφθέντων "
-"αντικειμένων σας."
+"Αυτός ο φάκελος χρησιμοποιείται από προεπιλογή για την αποθήκευση των "
+"στοιχείων που λαμβάνετε."
 
 #: ui/main.qml:95
 #, kde-format
@@ -78,29 +74,26 @@ msgid "Videos folder:"
 msgstr "Φάκελος βίντεο:"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
 msgstr ""
-"Αυτός θα είναι ο προκαθορισμένος φάκελος για τη φόρτωση ή αποθήκευση βίντεο."
+"Αυτός ο φάκελος χρησιμοποιείται από προεπιλογή για το άνοιγμα ή την "
+"αποθήκευση αρχείων βίντεο."
 
 #: ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
 msgstr "Φάκελος εικόνων:"
 
 #: ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
 msgstr ""
-"Αυτός θα είναι ο προκαθορισμένος φάκελος για τη φόρτωση ή αποθήκευση εικόνων."
+"Αυτός ο φάκελος χρησιμοποιείται από προεπιλογή για το άνοιγμα ή την "
+"αποθήκευση αρχείων εικόνας."
 
 #: ui/main.qml:123
 #, kde-format
@@ -109,14 +102,12 @@ msgid "Music folder:"
 msgstr "Φάκελος μουσικής:"
 
 #: ui/main.qml:129
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save music from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
 msgstr ""
-"Αυτός θα είναι ο προκαθορισμένος φάκελος για τη φόρτωση ή αποθήκευση "
-"μουσικής."
+"Αυτός ο φάκελος χρησιμοποιείται από προεπιλογή για το άνοιγμα ή την "
+"αποθήκευση αρχείων μουσικής."
 
 #: ui/main.qml:137
 #, kde-format
@@ -145,25 +136,22 @@ msgstr "Φάκελος προτύπων:"
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
 msgstr ""
-"Αυτός ο φάκελος θα χρησιμοποιείται από προεπιλογή για τη φόρτωση ή την "
-"αποθήκευση προτύπων."
+"Αυτός ο φάκελος χρησιμοποιείται από προεπιλογή για το άνοιγμα ή την "
+"αποθήκευση προτύπων αρχείων."
 
 #: ui/main.qml:165
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Projects folder:"
-msgstr "Φάκελος εικόνων:"
+msgstr "Φάκελος έργων:"
 
 #: ui/main.qml:171
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save documents from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save projects."
 msgstr ""
-"Αυτός θα είναι ο προκαθορισμένος φάκελος για το άνοιγμα και την αποθήκευση "
-"των εγγράφων."
+"Αυτός ο φάκελος χρησιμοποιείται από προεπιλογή για το άνοιγμα ή την "
+"αποθήκευση έργων."
 
 #: ui/UrlRequester.qml:74
 #, kde-format
