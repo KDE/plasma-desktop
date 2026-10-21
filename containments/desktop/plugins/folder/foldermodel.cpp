@@ -302,12 +302,9 @@ FolderModel::FolderModel(QObject *parent)
 
 FolderModel::~FolderModel()
 {
-    if (m_usedByContainment) {
-        // disconnect so we don't handle signals from the screen mapper when
-        // removeScreen is called
-        m_screenMapper->disconnect(this);
-        m_screenMapper->removeScreen(m_screen, m_currentActivity, resolvedUrl());
-    }
+    // Disconnect before unregistering, which can emit screen mapping signals.
+    m_screenMapper->disconnect(this);
+    m_screenMapper->unregisterScreen(this);
 }
 
 QHash<int, QByteArray> FolderModel::roleNames() const
@@ -431,8 +428,6 @@ void FolderModel::setUrl(const QString &url)
         return;
     }
 
-    const auto oldUrl = resolvedUrl();
-
     beginResetModel();
     m_url = url;
     m_isDirCache.clear();
@@ -466,8 +461,8 @@ void FolderModel::setUrl(const QString &url)
     Q_EMIT iconNameChanged();
 
     if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
-        m_screenMapper->removeScreen(m_screen, m_currentActivity, oldUrl);
-        m_screenMapper->addScreen(m_screen, m_currentActivity, resolvedUrl());
+        m_screenMapper->unregisterScreen(this);
+        m_screenMapper->registerScreen(this, m_screen, m_currentActivity, resolvedUrl());
     }
 }
 
@@ -782,7 +777,7 @@ void FolderModel::setScreen(int screen, SetScreenActions screenActions)
         const int prevScreen = m_screen;
         m_screen = screen;
         if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
-            m_screenMapper->addScreen(screen, m_currentActivity, resolvedUrl());
+            m_screenMapper->registerScreen(this, screen, m_currentActivity, resolvedUrl());
             if (screenActions == SetScreenActions::MoveIcons && prevScreen > -1 && screen > -1) {
                 m_screenMapper->addScreenTransition(prevScreen, screen, m_currentActivity);
             }

@@ -73,6 +73,31 @@ ScreenMapper::ScreenMapper(QObject *parent)
     m_screenTransitionTimer->callOnTimeout(this, &ScreenMapper::processScreenTransition);
 }
 
+void ScreenMapper::registerScreen(const QObject *owner, int screenId, const QString &activity, const QUrl &screenUrl)
+{
+    if (screenId < 0) {
+        return;
+    }
+    m_screenOwners.insert(owner, {screenId, activity, screenUrl});
+    addScreen(screenId, activity, screenUrl);
+}
+
+void ScreenMapper::unregisterScreen(const QObject *owner)
+{
+    const auto it = m_screenOwners.find(owner);
+    if (it == m_screenOwners.end()) {
+        return;
+    }
+    const auto registration = it.value();
+    m_screenOwners.erase(it);
+    // A replacement FolderModel can register before the old model is destroyed.
+    if (m_screenOwners.values().contains(registration)) {
+        return;
+    }
+    const auto &[screen, activity, url] = registration;
+    removeScreen(screen, activity, url);
+}
+
 void ScreenMapper::removeScreen(int screenId, const QString &activity, const QUrl &screenUrl)
 {
     const std::pair<int, QString> pair = std::make_pair(screenId, activity);
@@ -271,6 +296,7 @@ void ScreenMapper::cleanup()
     m_itemsOnDisabledScreensMap.clear();
     m_screensPerPath.clear();
     m_availableScreens.clear();
+    m_screenOwners.clear();
 }
 #endif
 

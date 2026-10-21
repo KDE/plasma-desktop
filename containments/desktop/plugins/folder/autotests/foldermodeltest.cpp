@@ -346,6 +346,28 @@ void FolderModelTest::tst_multiScreen()
     QCOMPARE(screenMapper->screenForItem(stringToUrl(QLatin1String("file://") + dir.path()), m_currentActivity), 0);
 }
 
+void FolderModelTest::tst_replacementModel()
+{
+    m_folderModel->setUsedByContainment(true);
+    m_folderModel->setScreen(0);
+    m_folderModel->invalidate();
+    QTRY_VERIFY(m_folderModel->rowCount() > 0);
+    const auto count = m_folderModel->rowCount();
+
+    FolderModel replacement;
+    replacement.classBegin();
+    replacement.setUrl(m_folderModel->url());
+    replacement.setUsedByContainment(true);
+    replacement.setScreen(0);
+    replacement.componentComplete();
+    QTRY_COMPARE(replacement.rowCount(), count);
+
+    delete m_folderModel;
+    m_folderModel = nullptr;
+    replacement.invalidate();
+    QCOMPARE(replacement.rowCount(), count);
+}
+
 void FolderModelTest::tst_multiScreenDifferenPath()
 {
     m_folderModel->setUsedByContainment(true);

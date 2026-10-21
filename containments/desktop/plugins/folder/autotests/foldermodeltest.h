@@ -32,6 +32,7 @@ private Q_SLOTS:
     void tst_actionMenu();
     void tst_lockedChanged();
     void tst_multiScreen();
+    void tst_replacementModel();
     void tst_multiScreenDifferenPath();
     void tst_initializeOnCorrectScreens();
 
