@@ -77,6 +77,7 @@
 #include <KProtocolInfo>
 #include <KSharedConfig>
 #include <KShell>
+#include <KStandardShortcut>
 #include <KStringHandler>
 #include <KUrlMimeData>
 
@@ -1881,6 +1882,11 @@ void FolderModel::createActions()
 
     m_newMenu = new KNewFileMenu(this);
     m_newMenu->setModal(false);
+    // The shortcut itself is handled by ShortCut; this action is never added to a
+    // widget and is only used so that the menu shows it next to its folder entry.
+    auto newFolderShortcutAction = new QAction(this);
+    newFolderShortcutAction->setShortcuts(KStandardShortcut::createFolder());
+    m_newMenu->setNewFolderShortcutAction(newFolderShortcutAction);
     // Disallow closing the popup when action to open the dialog is triggered
     connect(m_newMenu, &KNewFileMenu::directoryCreationStarted, this, &FolderModel::newFileMenuItemCreationStarted);
     connect(m_newMenu, &KNewFileMenu::fileCreationStarted, this, &FolderModel::newFileMenuItemCreationStarted);
