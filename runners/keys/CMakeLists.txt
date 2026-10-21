@@ -6,6 +6,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_keys\")
 kcoreaddons_add_plugin(krunner_keys SOURCES keysrunner.cpp INSTALL_NAMESPACE "kf6/krunner")
 target_link_libraries(krunner_keys
     Qt::DBus
+    KF6::GlobalAccel
     KF6::I18n
     KF6::Runner
     kglobalaccelmodel
