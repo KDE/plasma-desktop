@@ -4,20 +4,21 @@
 # Antonis Geralis <gaantonio@civil.auth.gr>, 2013, 2014.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2017.
 # Antonis Geralis <capoiosct@gmail.com>, 2024.
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-13 00:52+0000\n"
-"PO-Revision-Date: 2024-08-12 10:41+0300\n"
-"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"PO-Revision-Date: 2026-10-20 11:46+0300\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ui/main.qml:44
 #, fuzzy, kde-format
@@ -34,10 +35,7 @@ msgid "Resume Indexer"
 msgstr "Συνέχεια ευρετηρίου"
 
 #: ui/main.qml:61
-#, fuzzy, kde-format
-#| msgid ""
-#| "This will disable file searching in KRunner and launcher menus, and "
-#| "remove extended metadata display from all KDE applications."
+#, kde-format
 msgctxt "@info inlinemessage"
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -48,12 +46,7 @@ msgstr ""
 "εφαρμογές KDE."
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid ""
-#| "Do you want to delete the saved index data? %1 of space will be freed, "
-#| "but if indexing is re-enabled later, the entire index will have to be re-"
-#| "created from scratch. This may take some time, depending on how many "
-#| "files you have."
+#, kde-format
 msgctxt "@info:inlinemessage"
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -67,17 +60,13 @@ msgstr ""
 "ανάλογα με το πόσα αρχεία έχετε."
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgid "Delete Index Data"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delete Index Data"
 msgstr "Διαγραφή δεδομένων ευρετηρίου"
 
 #: ui/main.qml:83
-#, fuzzy, kde-format
-#| msgid ""
-#| "File Search helps you quickly locate your files. You can choose which "
-#| "folders and what types of file data are indexed."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
@@ -96,18 +85,16 @@ msgstr "Δεδομένα προς ευρετηρίαση:"
 #, kde-format
 msgctxt "@option:radio Data to index"
 msgid "Nothing (disable indexing entirely)"
-msgstr ""
+msgstr "Τίποτα (πλήρης απενεργοποίηση ευρετηρίασης)"
 
 #: ui/main.qml:124
-#, fuzzy, kde-format
-#| msgid "File names only"
+#, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names only"
 msgstr "Μόνο ονόματα αρχείων"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid "File names and contents"
+#, kde-format
 msgctxt "@option:radio Data to index"
 msgid "File names and contents"
 msgstr "Ονόματα και περιεχόμενα αρχείων"
@@ -150,8 +137,7 @@ msgid "Currently indexing: <filename>%1</filename>"
 msgstr "Τρέχουσα ευρετηρίαση: <filename>%1</filename>"
 
 #: ui/main.qml:276
-#, fuzzy, kde-format
-#| msgid "Not indexed"
+#, kde-format
 msgctxt "@info:status"
 msgid "Not indexed"
 msgstr "Δεν ευρετηριάζεται"
@@ -170,8 +156,7 @@ msgid "Remove entry"
 msgstr "Διαγραφή καταχώρησης"
 
 #: ui/main.qml:324
-#, fuzzy, kde-format
-#| msgid "Select a folder to include"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select a folder to include"
 msgstr "Επιλογή φακέλου για συμπερίληψη"
