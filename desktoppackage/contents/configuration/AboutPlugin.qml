@@ -85,7 +85,7 @@ KCM.SimpleKCM {
 
             Kirigami.SelectableLabel {
                 id: licenseLabel
-                implicitWidth: Math.max(Kirigami.Units.gridUnit * 25, Math.round(page.width / 2), contentWidth)
+                implicitWidth: Math.max(Kirigami.Units.gridUnit * 25, Math.round(page.width / 2))
                 wrapMode: Text.WordWrap
             }
 
@@ -210,7 +210,10 @@ KCM.SimpleKCM {
                         text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Read License")
                         onClicked: {
                             licenseComponent.incubateObject(page.Window.window.contentItem, {
-                                "text": page.metaData.licenseText,
+                                // License texts are hard-wrapped at ~76 columns. Join each line with the
+                                // next one so paragraphs wrap to the sheet's width, but keep empty lines
+                                // and lines starting with whitespace (headings, list items) on their own.
+                                "text": page.metaData.licenseText.replace(/([^\r\n])\r?\n(?!\s)/g, "$1 "),
                                 "title": page.metaData.license,
                             }, Qt.Asynchronous);
                         }
