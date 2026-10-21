@@ -197,7 +197,7 @@ Item {
         // and we use the strictAvailableScreenRect, which accounts for all
         // of them. If we're not configuring anything, we instead use the
         // entire screen rect, without fear of overlapping panels.
-        property var referenceRect: root.containment?.plasmoid.corona.editMode ? desktop.strictAvailableScreenRect : Qt.rect(0, 0, desktop.screenGeometry.width, desktop.screenGeometry.height)
+        property var referenceRect: desktop.strictAvailableScreenRect
 
 
         readonly property bool sideBarOnRightEdge: {
@@ -222,23 +222,6 @@ Item {
         flags: Qt.WindowStaysOnTopHint
 
         hideOnWindowDeactivate: true
-
-        x: {
-            let result = desktop.x;
-            if (!root.containment) {
-                return result;
-            }
-
-            const rect = referenceRect;
-            result += rect.x;
-
-            if (sideBarOnRightEdge) {
-                result += rect.width - sidePanel.width;
-            }
-
-            return result;
-        }
-        y: desktop.y + (root.containment ? referenceRect.y : 0)
 
         onVisibleChanged: {
             if (!visible) {
