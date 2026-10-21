@@ -12,6 +12,7 @@
 
 #include <algorithm>
 
+#include <KGlobalShortcutInfo>
 #include <KLocalizedString>
 
 #include "filteredmodel.h"
@@ -37,33 +38,6 @@ static const QMap<QString, QStringList> ignoredComponentActions = {
         u"Halt Without Confirmation"_s
     }}
 };
-
-QDBusArgument &operator<<(QDBusArgument &argument, const QKeySequence &sequence)
-{
-    argument.beginStructure();
-    argument.beginArray(qMetaTypeId<int>());
-    for (int i = 0; i < 4; i++) {
-        argument << (i < sequence.count() ? sequence[i].toCombined() : 0);
-    }
-    argument.endArray();
-    argument.endStructure();
-    return argument;
-}
-
-const QDBusArgument &operator>>(const QDBusArgument &argument, QKeySequence &sequence)
-{
-    int s1;
-    int s2;
-    int s3;
-    int s4;
-    argument.beginStructure();
-    argument.beginArray();
-    argument >> s1 >> s2 >> s3 >> s4;
-    sequence = QKeySequence(s1, s2, s3, s4);
-    argument.endArray();
-    argument.endStructure();
-    return argument;
-}
 
 KeysRunner::KeysRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
