@@ -328,8 +328,8 @@ PlasmoidItem {
         MenuButton {
             id: menuButton
 
-            Layout.minimumWidth: implicitWidth
-            Layout.maximumWidth: implicitWidth
+            Layout.minimumWidth: Math.min(implicitWidth, Kirigami.Units.gridUnit * 20)
+            Layout.maximumWidth: Layout.minimumWidth
             Layout.fillHeight: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
             Layout.fillWidth: Plasmoid.formFactor === PlasmaCore.Types.Vertical
 

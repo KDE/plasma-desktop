@@ -81,6 +81,8 @@ AbstractButton {
             text: controlRoot.text
             color: controlRoot.down || controlRoot.hovered ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
             verticalAlignment: Text.AlignVCenter
+            elide: Text.ElideRight
+            Layout.fillWidth: true
             Layout.fillHeight: true
         }
     }
