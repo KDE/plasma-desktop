@@ -23,6 +23,8 @@ GridLayout {
     }
 
     required property int count
+    required property real availableWidth
+    required property real availableHeight
 
     readonly property bool vertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
 
@@ -40,15 +42,15 @@ GridLayout {
 
         // The maximum number of stripes allowed by the applet's size
         const stripeSizeLimit = vertical
-            ? Math.floor(parent.width / children[0].implicitWidth)
-            : Math.floor(parent.height / children[0].implicitHeight)
+            ? Math.floor(availableWidth / children[0].implicitWidth)
+            : Math.floor(availableHeight / children[0].implicitHeight)
         const maxStripes = Math.min(Plasmoid.configuration.maxStripes, stripeSizeLimit)
 
 
         // The number of tasks that will fill a "stripe" before starting the next one
         const maxTasksPerStripe = vertical
-            ? Math.ceil(parent.height / TaskManagerApplet.LayoutMetrics.preferredMinHeight())
-            : Math.ceil(parent.width / TaskManagerApplet.LayoutMetrics.preferredMinWidth())
+            ? Math.ceil(availableHeight / TaskManagerApplet.LayoutMetrics.preferredMinHeight())
+            : Math.ceil(availableWidth / TaskManagerApplet.LayoutMetrics.preferredMinWidth())
 
         return Math.min(Math.ceil(count / maxTasksPerStripe), maxStripes)
     }

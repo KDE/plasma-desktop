@@ -473,6 +473,8 @@ PlasmoidItem {
                 }
 
                 count: tasksModel.count
+                availableWidth: tasks.width
+                availableHeight: tasks.height
 
                 readonly property real widthOccupation: taskRepeater.count / columns
                 readonly property real heightOccupation: taskRepeater.count / rows
