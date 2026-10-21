@@ -32,7 +32,7 @@ MouseArea {
     required property Component appletContainerComponent
     required property bool isHorizontal
     required property bool reverse
-    required property int rootWidth
+    required property int rootLength
 
     property AppletContainer currentApplet
     property int draggedItemIndex
@@ -405,7 +405,9 @@ MouseArea {
                 Kirigami.Heading {
                     Layout.fillWidth: true
                     visible: panelSpacerWidth.visible
-                    text: i18nc("@label:spinbox", "Spacer width")
+                    text: configurationArea.isHorizontal
+                        ? i18nc("@label:spinbox", "Spacer width")
+                        : i18nc("@label:spinbox", "Spacer height")
                     textFormat: Text.PlainText
                     level: 3
                     horizontalAlignment: Text.AlignHCenter
@@ -420,7 +422,7 @@ MouseArea {
                         && !configurationArea.currentApplet.applet.Plasmoid.configuration.expanding
                     from: 0
                     stepSize: 10
-                    to: configurationArea.rootWidth
+                    to: configurationArea.rootLength
                     value: configurationArea.currentApplet?.applet.Plasmoid.configuration.length ?? 0
                     onValueModified: {
                         configurationArea.currentApplet.applet.Plasmoid.configuration.length = value

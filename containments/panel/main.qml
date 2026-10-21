@@ -140,7 +140,7 @@ ContainmentItem {
             "appletContainerComponent": appletContainerComponent,
             "dropArea": dropArea,
             "isHorizontal": Qt.binding(() => root.isHorizontal),
-            "rootWidth": Qt.binding(() => root.width),
+            "rootLength": Qt.binding(() => root.isHorizontal ? root.width : root.height),
             "reverse": Qt.binding(() => root.reverse),
             "lastSpacer": lastSpacer,
             "addWidgetsButton": addWidgetsButton
