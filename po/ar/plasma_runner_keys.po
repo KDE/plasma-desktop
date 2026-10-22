@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-10-22 00:52+0000\n"
 "PO-Revision-Date: 2025-08-28 12:22+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -18,7 +18,7 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: keysrunner.cpp:73
+#: keysrunner.cpp:47
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -28,7 +28,7 @@ msgstr ""
 "يبحث عن الاختصارات التي تتطابق أسماؤها أو أوصافها مع :q: أو يحصل على اسم "
 "الاختصار"
 
-#: keysrunner.cpp:135
+#: keysrunner.cpp:109
 #, kde-format
 msgctxt "@label action - app"
 msgid "%1 - %2"
