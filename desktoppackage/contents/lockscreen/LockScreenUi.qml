@@ -38,6 +38,9 @@ Item {
     property bool showPrompt: false // this is set for real when an authenticator is selected
 
     function handleMessage(msg) {
+        if (!msg) {
+            return;
+        }
         if (!root.notification) {
             root.notification += msg;
         } else if (root.notification.includes(msg)) {
