@@ -28,6 +28,11 @@ AppletConfiguration {
             source: "ConfigurationContainmentAppearance.qml"
         }
         ConfigCategory {
+            name: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:group for configuration dialog page", "Layout")
+            icon: "preferences-desktop"
+            source: "ConfigurationContainmentLayout.qml"
+        }
+        ConfigCategory {
             name: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:group for configuration dialog page", "Mouse Actions")
             icon: "preferences-desktop-mouse"
             source: "ConfigurationContainmentActions.qml"

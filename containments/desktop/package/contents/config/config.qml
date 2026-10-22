@@ -13,11 +13,13 @@ ConfigModel {
     id: configModel
     property bool isFolder: (Plasmoid.pluginName === "org.kde.plasma.folder")
 
+    readonly property string layoutConfigSource: Plasmoid.isContainment ? Qt.resolvedUrl("../ui/ConfigLocation.qml") : ""
+
     ConfigCategory {
          name: i18nc("@title:group for configuration dialog page", "Location")
          icon: "inode-directory"
          source: "ConfigLocation.qml"
-         visible: configModel.isFolder
+         visible: configModel.isFolder && !Plasmoid.isContainment
     }
 
     ConfigCategory {

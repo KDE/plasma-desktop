@@ -193,14 +193,15 @@ class DesktopTest(unittest.TestCase):
         self._open_containment_config_dialog()
         wait = WebDriverWait(self.driver, 30)
         mouseaction_element: WebElement = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Mouse Actions")))
-        location_element = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Location")))
+        layout_element = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Layout")))
         icons_element = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Icons")))
         filter_element = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Filter")))
 
         mouseaction_element.click()
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add Action")))
 
-        location_element.click()
+        layout_element.click()
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Show files and folders")))
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Desktop folder")))
 
         icons_element.click()

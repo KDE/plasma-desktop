@@ -21,6 +21,7 @@ KCM.SimpleKCM {
     property alias cfg_labelMode: labelMode.currentIndex
     property alias cfg_labelText: labelText.text
     property bool titleVisible: Plasmoid.containment != Plasmoid
+    property alias formLayout: formLayout
 
     onCfg_urlChanged: applyConfig()
 
@@ -73,6 +74,7 @@ KCM.SimpleKCM {
     }
 
     Kirigami.FormLayout {
+        id: formLayout
 
         RadioButton {
             id: locationDesktop

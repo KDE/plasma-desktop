@@ -202,7 +202,26 @@ Rectangle {
         }
     }
 
+    onCurrentSourceChanged: {
+        if (isContainment) {
+            configDialog.currentPage = currentSource
+        }
+    }
+
     Component.onCompleted: {
+        const currentPage = isContainment ? String(configDialog.currentPage) : ""
+        if (currentPage !== "") {
+            for (const model of [root.globalConfigModel, configDialog.configModel]) {
+                for (let i = 0; i < (model?.count ?? 0); ++i) {
+                    const item = model.get(i)
+                    if (item.visible && String(item.source) === currentPage) {
+                        open(item)
+                        return
+                    }
+                }
+            }
+        }
+
         // if we are a containment then the first item will be ConfigurationContainmentAppearance
         // if the applet does not have own configs then the first item will be Shortcuts
         if (isContainment || !configDialog.configModel || configDialog.configModel.count === 0) {

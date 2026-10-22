@@ -40,15 +40,12 @@ SimpleKCM {
             }
         })
         configDialog.applyWallpaper()
-        configDialog.containmentPlugin = pluginComboBox.currentValue
-        appearanceRoot.closeContainmentWarning()
         appearanceRoot.unsavedChanges = false
     }
 
     function checkUnsavedChanges() {
         const wallpaperConfig = configDialog.wallpaperConfiguration
         appearanceRoot.unsavedChanges = configDialog.currentWallpaper != appearanceRoot.originalWallpaper ||
-                                        configDialog.containmentPlugin != pluginComboBox.currentValue ||
                                         wallpaperConfig.keys().some(key => {
             const cfgKey = "cfg_" + key
             if (!(cfgKey in main.currentItem) || key.startsWith("PreviewImage") || key.endsWith("Default")) {
@@ -57,13 +54,6 @@ SimpleKCM {
             return main.currentItem[cfgKey] != wallpaperConfig[key] &&
                    main.currentItem[cfgKey].toString() != wallpaperConfig[key].toString()
         })
-    }
-
-    function closeContainmentWarning() {
-        if (main.currentItem?.objectName === "switchContainmentWarningItem") {
-            main.pop();
-            categoriesScroll.enabled = true;
-        }
     }
 
     ColumnLayout {
@@ -85,32 +75,8 @@ SimpleKCM {
             id: parentLayout // needed for twinFormLayouts to work in wallpaper plugins
             twinFormLayouts: main.currentItem.formLayout || []
             Layout.fillWidth: true
-            QQC2.ComboBox {
-                id: pluginComboBox
-                Layout.preferredWidth: Math.max(implicitWidth, wallpaperComboBox.implicitWidth)
-                Kirigami.FormData.label: i18ndc("plasma_shell_org.kde.plasma.desktop", "@label:listbox", "Layout:")
-                enabled: !Plasmoid.immutable
-                model: configDialog.containmentPluginsConfigModel
-                textRole: "name"
-                valueRole: "pluginName"
-                onActivated: {
-                    if (configDialog.containmentPlugin !== pluginComboBox.currentValue) {
-                        main.push(switchContainmentWarning);
-                        categoriesScroll.enabled = false;
-                    } else {
-                        closeContainmentWarning()
-                    }
-                    appearanceRoot.checkUnsavedChanges()
-                }
-                Component.onCompleted: {
-                    currentIndex = indexOfValue(configDialog.containmentPlugin)
-                    activated(currentIndex)
-                }
-            }
-
             RowLayout {
                 Layout.fillWidth: true
-                enabled: main.currentItem.objectName !== "switchContainmentWarningItem"
                 Kirigami.FormData.label: i18ndc("plasma_shell_org.kde.plasma.desktop", "@label:listbox", "Wallpaper type:")
                 Kirigami.FormData.buddyFor: wallpaperComboBox
 
@@ -123,7 +89,6 @@ SimpleKCM {
                         activated(currentIndex)
                     }
 
-                    Layout.preferredWidth: Math.max(implicitWidth, pluginComboBox.implicitWidth)
                     model: configDialog.wallpaperConfigModel
                     textRole: "name"
                     valueRole: "pluginName"
@@ -225,29 +190,6 @@ SimpleKCM {
 
         Kirigami.Separator {
             Layout.fillWidth: true
-        }
-    }
-
-    Component {
-        id: switchContainmentWarning
-
-        Item {
-            objectName: "switchContainmentWarningItem"
-
-            Kirigami.PlaceholderMessage {
-                id: message
-                width: parent.width - Kirigami.Units.largeSpacing * 8
-                anchors.centerIn: parent
-
-                icon.name: "documentinfo"
-                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info", "Layout changes must be applied before other changes can be made")
-
-                helpfulAction: QQC2.Action {
-                    icon.name: "dialog-ok-apply"
-                    text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Apply Now")
-                    onTriggered: appearanceRoot.saveConfig()
-                }
-            }
         }
     }
 }
