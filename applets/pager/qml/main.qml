@@ -570,7 +570,7 @@ PlasmoidItem {
 
                             Component.onCompleted: {
                                 if (Plasmoid.configuration.showWindowIcons) {
-                                    windowIconComponent.createObject(windowRect, { decoration: windowRect.decoration });
+                                    windowIconComponent.createObject(windowRect, { decoration: Qt.binding(() => windowRect.decoration) });
                                 }
                             }
                         }
@@ -579,7 +579,13 @@ PlasmoidItem {
 
                 Component.onCompleted: {
                     if (Plasmoid.configuration.displayedText < 2) {
-                        desktopLabelComponent.createObject(desktop, { index, display: desktop.display, desktopFrame });
+                        // Initial properties are copied once; bind them so that renaming
+                        // or reordering desktops updates the label.
+                        desktopLabelComponent.createObject(desktop, {
+                            index: Qt.binding(() => desktop.index),
+                            display: Qt.binding(() => desktop.display),
+                            desktopFrame,
+                        });
                     }
                 }
 
