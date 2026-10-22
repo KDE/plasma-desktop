@@ -25,7 +25,7 @@ EmptyPage {
     property alias currentIndex: view.currentIndex
     property alias currentItem: view.currentItem
     property alias delegate: view.delegate
-    property alias blockTargetWheel: wheelHandler.blockTargetWheel
+    property alias flickableToScroll: wheelHandler.target
     property alias view: view
 
     clip: view.height < view.contentHeight

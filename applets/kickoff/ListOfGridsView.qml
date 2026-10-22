@@ -29,6 +29,7 @@ KickoffListView {
         isCurrentSectionGrid: ListView.isCurrentItem
         isSearchFieldActive: kickoff.contentArea === root && kickoff.searchField.activeFocus
         parentView: ListView.view
+        flickableToScroll: root.view
         gridIndex: index
 
         model: KItemModels.KSortFilterProxyModel {
