@@ -40,19 +40,12 @@ Item {
         key: Qt.Key_CapsLock
     }
 
-    Item {
+    Background {
         id: wallpaper
         anchors.fill: parent
-        Repeater {
-            model: screenModel
-
-            Background {
-                x: geometry.x; y: geometry.y; width: geometry.width; height: geometry.height
-                sceneBackgroundType: config.type
-                sceneBackgroundColor: config.color
-                sceneBackgroundImage: config.background
-            }
-        }
+        sceneBackgroundType: config.type
+        sceneBackgroundColor: config.color
+        sceneBackgroundImage: config.background
     }
 
     RejectPasswordAnimation {
