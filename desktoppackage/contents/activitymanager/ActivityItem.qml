@@ -72,8 +72,11 @@ Item {
             anchors.fill: parent
 
             visible: !backgroundColor.visible
+            fillMode: Image.PreserveAspectCrop
             source: "image://wallpaperthumbnail/" + root.background
-            sourceSize: Qt.size(width, height)
+            // We ask for a square so that wallpapers narrower than
+            // the 16:9 card still cover it without being upscaled.
+            sourceSize: Qt.size(width, width)
         }
 
         // Title and the icon
