@@ -17,6 +17,7 @@ class KConfigBase;
 class KGlobalAccelPrivateSettingsInterface;
 class KGlobalShortcutInfo;
 class KGlobalShortcutInfoExt;
+class KGlobalShortcutTrigger;
 
 class Action;
 class Component;
@@ -53,6 +54,7 @@ private:
     void removeComponent(const Component &component);
     void genericErrorOccured(const QString &description, const QDBusError &error);
     bool saveAction(const Component &component, const Action &action, const QSet<QKeySequence> &shortcutsToSave);
+    bool saveActionTriggers(const Component &component, const Action &action, const QString &triggerType, const QSet<KGlobalShortcutTrigger> &triggersToSave);
 
     std::unique_ptr<GlobalAccelModelPrivate> d;
 };

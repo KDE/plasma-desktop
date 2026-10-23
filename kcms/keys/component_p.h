@@ -6,6 +6,9 @@
 
 #pragma once
 
+#include <KGlobalShortcutTrigger>
+
+#include <QHash>
 #include <QKeySequence>
 #include <QList>
 #include <QSet>
@@ -21,6 +24,11 @@ struct InverseActionReassignmentSuggestionPrivate {
 };
 
 struct Action {
+    struct TriggerSets {
+        QSet<KGlobalShortcutTrigger> activeTriggers;
+        QSet<KGlobalShortcutTrigger> defaultTriggers;
+        QSet<KGlobalShortcutTrigger> initialTriggers;
+    };
     QString id;
     QString displayName;
     QSet<QKeySequence> activeShortcuts;
@@ -28,6 +36,7 @@ struct Action {
     QSet<QKeySequence> initialShortcuts;
     QString inverseAction;
     std::shared_ptr<const InverseActionReassignmentSuggestionPrivate> inverseActionReassignmentSuggestion;
+    QHash<QString, TriggerSets> triggersByType;
 };
 
 struct Component {

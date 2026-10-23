@@ -56,6 +56,7 @@ GlobalAccelModel::GlobalAccelModel(QObject *parent)
     }
 
     qDBusRegisterMetaType<std::pair<QStringList, QStringList>>();
+    qDBusRegisterMetaType<KGlobalShortcutTrigger>();
     qDBusRegisterMetaType<KGlobalShortcutInfo>();
     qDBusRegisterMetaType<KGlobalShortcutInfoExt>();
     qDBusRegisterMetaType<QList<KGlobalShortcutInfoExt>>();
@@ -226,6 +227,14 @@ Component GlobalAccelModel::loadComponent(const QList<KGlobalShortcutInfoExt> &i
         }
         action.initialShortcuts = action.activeShortcuts;
         c.actions.push_back(action);
+
+        const QStringList &triggerTypes = infoExt.triggerTypes();
+        for (const QString &triggerType : triggerTypes) {
+            auto &triggerSets = action.triggersByType[triggerType];
+            triggerSets.activeTriggers = infoExt.triggers(triggerType);
+            triggerSets.initialTriggers = triggerSets.activeTriggers;
+            triggerSets.defaultTriggers = infoExt.defaultTriggers(triggerType);
+        }
     }
     QCollator collator;
     collator.setCaseSensitivity(Qt::CaseInsensitive);
@@ -263,6 +272,16 @@ void GlobalAccelModel::save()
                     }
                 }
             }
+            for (auto [triggerType, triggerSets] : action.triggersByType.asKeyValueRange()) {
+                QSet<KGlobalShortcutTrigger> removed = triggerSets.initialTriggers - triggerSets.activeTriggers;
+                if (!removed.isEmpty()) {
+                    QSet<KGlobalShortcutTrigger> unchangedTriggers = triggerSets.activeTriggers & triggerSets.initialTriggers;
+                    bool triggersApplied = saveActionTriggers(component, action, triggerType, unchangedTriggers);
+                    if (triggersApplied) {
+                        triggerSets.initialTriggers = unchangedTriggers;
+                    }
+                }
+            }
         }
     }
 
@@ -274,6 +293,14 @@ void GlobalAccelModel::save()
                     action.initialShortcuts = action.activeShortcuts;
                 }
             }
+            for (auto [triggerType, triggerSets] : action.triggersByType.asKeyValueRange()) {
+                if (triggerSets.initialTriggers != triggerSets.activeTriggers) {
+                    bool triggersApplied = saveActionTriggers(component, action, triggerType, triggerSets.activeTriggers);
+                    if (triggersApplied) {
+                        triggerSets.initialTriggers = triggerSets.activeTriggers;
+                    }
+                }
+            }
         }
     }
 }
@@ -283,6 +310,36 @@ bool GlobalAccelModel::saveAction(const Component &component, const Action &acti
     const QStringList actionId = buildActionId(component.id, component.displayName, action.id, action.displayName);
     qCDebug(KCMKEYS) << "Saving" << actionId << "target" << action.activeShortcuts << "applying" << shortcutsToSave;
     auto reply = d->globalAccelPrivateSettingsInterface->setForeignShortcutKeys(actionId, shortcutsToSave.values());
+    reply.waitForFinished();
+    if (!reply.isValid()) {
+        qCCritical(KCMKEYS) << "Error while saving";
+        if (reply.error().isValid()) {
+            qCCritical(KCMKEYS) << reply.error().name() << reply.error().message();
+        }
+        Q_EMIT errorOccured(i18nc("%1 is the name of the component, %2 is the action for which saving failed",
+                                  "Error while saving shortcut %1: %2",
+                                  component.displayName,
+                                  action.displayName));
+        return false;
+    }
+    return true;
+}
+
+bool GlobalAccelModel::saveActionTriggers(const Component &component,
+                                          const Action &action,
+                                          const QString &triggerType,
+                                          const QSet<KGlobalShortcutTrigger> &triggersToSave)
+{
+    const QStringList actionId = buildActionId(component.id, component.displayName, action.id, action.displayName);
+    QStringList triggerParamStrings;
+    triggerParamStrings.reserve(triggersToSave.size());
+    for (const KGlobalShortcutTrigger &trigger : triggersToSave) {
+        if (triggerType == trigger.type()) {
+            triggerParamStrings.append(trigger.paramString());
+        }
+    }
+    qCDebug(KCMKEYS) << "Saving" << actionId << "applying" << triggerType << triggerParamStrings;
+    auto reply = d->globalAccelPrivateSettingsInterface->setForeignShortcutTriggers(actionId, triggerType, triggerParamStrings);
     reply.waitForFinished();
     if (!reply.isValid()) {
         qCCritical(KCMKEYS) << "Error while saving";
