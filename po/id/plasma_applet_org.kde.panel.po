@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:50+0000\n"
+"POT-Creation-Date: 2026-10-23 00:50+0000\n"
 "PO-Revision-Date: 2024-10-29 20:53+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -39,14 +39,21 @@ msgctxt "@action:inmenu opens widget alternatives explorer"
 msgid "Show Alternatives…"
 msgstr "Tampilkan Alternatif…"
 
-#: ConfigOverlay.qml:408
+#: ConfigOverlay.qml:409
 #, fuzzy, kde-format
 #| msgid "Spacer width"
 msgctxt "@label:spinbox"
 msgid "Spacer width"
 msgstr "Lebar spacer"
 
-#: ConfigOverlay.qml:431
+#: ConfigOverlay.qml:410
+#, fuzzy, kde-format
+#| msgid "Spacer width"
+msgctxt "@label:spinbox"
+msgid "Spacer height"
+msgstr "Lebar spacer"
+
+#: ConfigOverlay.qml:433
 #, kde-format
 msgctxt ""
 "@option:check Whether to allow a spacer widget to fill available space"

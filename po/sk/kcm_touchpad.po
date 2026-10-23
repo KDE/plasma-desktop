@@ -164,6 +164,8 @@ msgid ""
 "This setting is not available while “Right-click by pressing anywhere with "
 "two fingers” is selected."
 msgstr ""
+"Toto nastavenie nie je dostupné, keď je vybrané „Pravé kliknutie stlačením "
+"kdekoľvek dvoma prstami“."
 
 #: ui/main.qml:208
 #, kde-format
@@ -247,16 +249,12 @@ msgid "Right-click by:"
 msgstr "Pravé kliknutie:"
 
 #: ui/main.qml:478
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Completes the sentence 'right-click by pressing bottom-"
-#| "right corner'"
-#| msgid "Pressing bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-left "
 "corner'"
 msgid "Pressing bottom-left corner"
-msgstr "Stlačením pravého dolného rohu"
+msgstr "Stlačením ľavého dolného rohu"
 
 #: ui/main.qml:479
 #, kde-format
@@ -339,12 +337,10 @@ msgid "Right-click"
 msgstr "Pravý klik"
 
 #: ui/main.qml:582
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by tapping anywhere with three fingers."
-msgstr "Stlačte hocikde s troma prstami na kliknutie stredného tlačidla."
+msgstr "Kliknutie stredným tlačidlom ťuknutím kdekoľvek troma prstami."
 
 #: ui/main.qml:604
 #, kde-format
@@ -353,12 +349,10 @@ msgid "Middle-click"
 msgstr "Stredný klik"
 
 #: ui/main.qml:607
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Right-click by tapping anywhere with three fingers."
-msgstr "Stlačte hocikde s troma prstami na kliknutie stredného tlačidla."
+msgstr "Kliknutie pravým tlačidlom ťuknutím kdekoľvek troma prstami."
 
 #~ msgctxt ""
 #~ "@label for radiobutton group, begins the sentence 'middle-click by "

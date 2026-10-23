@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:50+0000\n"
+"POT-Creation-Date: 2026-10-23 00:50+0000\n"
 "PO-Revision-Date: 2019-09-26 13:52+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -38,13 +38,19 @@ msgctxt "@action:inmenu opens widget alternatives explorer"
 msgid "Show Alternatives…"
 msgstr "Намоиш додани имконот..."
 
-#: ConfigOverlay.qml:408
+#: ConfigOverlay.qml:409
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Spacer width"
 msgstr ""
 
-#: ConfigOverlay.qml:431
+#: ConfigOverlay.qml:410
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Spacer height"
+msgstr ""
+
+#: ConfigOverlay.qml:433
 #, kde-format
 msgctxt ""
 "@option:check Whether to allow a spacer widget to fill available space"

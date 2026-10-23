@@ -725,28 +725,24 @@ msgid "Move to %1"
 msgstr "Presunúť na %1"
 
 #: qml/ContextMenu.qml:505
-#, fuzzy, kde-format
-#| msgctxt "action:inmenu"
-#| msgid "Move to &Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move to &Screen"
-msgstr "Presunúť na &plochu"
+msgstr "Presunúť na &obrazovku"
 
 #: qml/ContextMenu.qml:535
 #, kde-format
 msgctxt "@item:inmenu List of all Screens to send a window to."
 msgid "Built-in Screen"
-msgstr ""
+msgstr "Vstavaná obrazovka"
 
 #: qml/ContextMenu.qml:538
-#, fuzzy, kde-format
-#| msgctxt "1 = number of desktop, 2 = desktop name"
-#| msgid "&%1 %2"
+#, kde-format
 msgctxt ""
 "@item:inmenu List of all Screens to send a window to, manufacturer, model "
 "(output identifier)"
 msgid "%1 %2 (%3)"
-msgstr "&%1 %2"
+msgstr "%1 %2 (%3)"
 
 #: qml/ContextMenu.qml:583 qml/ContextMenu.qml:599
 #, kde-format
