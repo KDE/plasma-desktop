@@ -117,7 +117,10 @@ PlasmoidItem {
                             // equals NoButton. Otherwise select the clicked item and use its actionId.
                             const targetId = (listView.currentIndex === index) ? 0 : modelData.actionId
 
-                            root.expanded = false
+                            if (root.hideOnWindowDeactivate) {
+                                root.expanded = false
+                            }
+
                             dbusProperties.properties.button = targetId
                         }
                     }
