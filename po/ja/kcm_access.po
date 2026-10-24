@@ -1,5 +1,4 @@
 # Translation of kcmaccess into Japanese.
-# SPDX-FileCopyrightText: 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # This file is distributed under the same license as the kdebase package.
 # Noboru Sinohara <shinobo@leo.bekkoame.ne.jp>, 2002.
 # Shinsaku Nakagawa <shinsaku@users.sourceforge.jp>, 2004.
@@ -7,6 +6,7 @@
 # UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2006
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2006, 2007, 2008.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2015.
+# SPDX-FileCopyrightText: 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 #
 msgid ""
@@ -14,9 +14,9 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-03 00:45+0000\n"
-"PO-Revision-Date: 2026-05-10 18:32+0900\n"
+"PO-Revision-Date: 2026-10-11 20:55+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
-"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: kcmaccess.cpp:123 kcmaccess.cpp:151
 #, kde-format
@@ -129,14 +129,13 @@ msgstr "視覚的ベルの持続時間"
 #: kcmaccessibilitycolorblindnesscorrection.kcfg:13
 #, kde-format
 msgid "Whether Colorblindness Correction is enabled"
-msgstr "色覚補正が有効かどうか"
+msgstr "色覚補正を有効にするかどうか"
 
 #. i18n: ectx: label, entry (DwellClicker), group (Plugins)
 #: kcmaccessibilitydwellclicker.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether Dwell Clicker is enabled"
-msgstr "カーソル振動を有効にするかどうか"
+msgstr "静止でクリックを有効にするかどうか"
 
 #. i18n: ectx: label, entry (DwellClickerDelayTime), group (Effect-dwellclicker)
 #: kcmaccessibilitydwellclicker.kcfg:19
@@ -149,7 +148,7 @@ msgstr "タイムアウトの遅延"
 #: kcmaccessibilitydwellclicker.kcfg:24
 #, kde-format
 msgid "Dwell Time"
-msgstr ""
+msgstr "静止時間"
 
 #. i18n: ectx: label, entry (DwellClickerDwellColor), group (Effect-dwellclicker)
 #: kcmaccessibilitydwellclicker.kcfg:29
@@ -163,14 +162,13 @@ msgstr "色"
 #: kcmaccessibilitydwellclicker.kcfg:33
 #, kde-format
 msgid "Motion Threshold"
-msgstr ""
+msgstr "静止判定のしきい値"
 
 #. i18n: ectx: label, entry (Invert), group (Plugins)
 #: kcmaccessibilityinvert.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Invert effect is enabled"
-msgstr "カーソル振動を有効にするかどうか"
+msgstr "色を反転を有効にするかどうか"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -294,10 +292,9 @@ msgstr "マウスキーのカーブ"
 
 #. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
 #: kcmaccessibilityshakecursor.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether Shake Pointer is enabled"
-msgstr "カーソル振動を有効にするかどうか"
+msgstr "ポインタを探すを有効にするかどうか"
 
 #. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
 #: kcmaccessibilityshakecursor.kcfg:15
@@ -307,17 +304,15 @@ msgstr "倍率"
 
 #. i18n: ectx: label, entry (Zoom), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Zoom effect is enabled"
-msgstr "カーソル振動を有効にするかどうか"
+msgstr "ズームを有効にするかどうか"
 
 #. i18n: ectx: label, entry (Magnifier), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Magnifier effect is enabled"
-msgstr "カーソル振動を有効にするかどうか"
+msgstr "拡大鏡を有効にするかどうか"
 
 #: ui/Bell.qml:18
 #, kde-format
@@ -518,12 +513,10 @@ msgstr "紫:"
 #, kde-format
 msgctxt "@label"
 msgid "Click when pointer remains still:"
-msgstr ""
+msgstr "ポインタが静止したらクリック:"
 
 #: ui/DwellClicker.qml:21
-#, fuzzy, kde-format
-#| msgctxt "Enable the system bell"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable dwell clicker effect"
 msgid "Enable"
 msgstr "有効"
@@ -533,46 +526,36 @@ msgstr "有効"
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically click when pointer remains still for a set amount of time."
-msgstr ""
+msgstr "指定された時間ポインタが静止したときに自動でクリックします。"
 
 #: ui/DwellClicker.qml:39
 #, kde-format
 msgctxt "@label:spinbox Slow keys Delay"
 msgid "Motion Threshold:"
-msgstr ""
+msgstr "静止判定のしきい値:"
 
 #: ui/DwellClicker.qml:55
-#, fuzzy, kde-format
-#| msgctxt "short for pixel(s)"
-#| msgid "%1 px"
-#| msgid_plural "%1 px"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is the motion threshold"
 msgid "%1 px"
 msgid_plural "%1 px"
 msgstr[0] "%1 px"
 
 #: ui/DwellClicker.qml:64
-#, fuzzy, kde-format
-#| msgctxt "short for pixel(s)"
-#| msgid "px"
+#, kde-format
 msgctxt "@label:valuesuffix short for pixel(s)"
 msgid "px"
 msgid_plural "px"
 msgstr[0] "px"
 
 #: ui/DwellClicker.qml:70
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox Slow keys Delay"
-#| msgid "Delay:"
+#, kde-format
 msgctxt "@label:spinbox Dwell clicker delay time"
 msgid "Delay Time:"
 msgstr "遅延:"
 
 #: ui/DwellClicker.qml:86
-#, fuzzy, kde-format
-#| msgctxt "@label:valuesuffix %1 is visible bell duration"
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is the delay time"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -582,13 +565,10 @@ msgstr[0] "%1 ミリ秒"
 #, kde-format
 msgctxt "@label:spinbox Dwell clicker dwell time"
 msgid "Dwell Time:"
-msgstr ""
+msgstr "静止時間:"
 
 #: ui/DwellClicker.qml:117
-#, fuzzy, kde-format
-#| msgctxt "@label:valuesuffix %1 is visible bell duration"
-#| msgid "%1 ms"
-#| msgid_plural "%1 ms"
+#, kde-format
 msgctxt "@label:valuesuffix %1 is the dwell time"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -598,7 +578,7 @@ msgstr[0] "%1 ミリ秒"
 #, kde-format
 msgctxt "@label:button Dwell clicker dwell color"
 msgid "Dwell Color:"
-msgstr ""
+msgstr "静止インジケーターの色:"
 
 #: ui/Invert.qml:17
 #, kde-format
@@ -761,7 +741,7 @@ msgstr "マウスナビゲーション"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Dwell Clicker"
-msgstr ""
+msgstr "静止でクリック"
 
 #: ui/main.qml:64
 #, kde-format
@@ -785,7 +765,7 @@ msgstr "色を反転"
 #, kde-format
 msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
-msgstr "ポインタをシェイク"
+msgstr "ポインタを探す"
 
 #: ui/ModifierKeys.qml:17
 #, kde-format
@@ -1155,111 +1135,3 @@ msgstr "スクロールジェスチャーの修飾キー:"
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "修飾キーを押しながらスクロールするとズームできます"
-
-#~ msgctxt "@label:valuesuffix acceleration time spinbox %1 is value"
-#~ msgid "%1 ms"
-#~ msgid_plural "%1 ms"
-#~ msgstr[0] "%1 ミリ秒"
-
-#~ msgid "Enable Screen Reader"
-#~ msgstr "スクリーンリーダーを有効化"
-
-#~ msgctxt "@label Hint for zoom/magnify effect usage"
-#~ msgid "Use shortcuts to control zoom"
-#~ msgstr "ショートカットでズームを操作できます"
-
-#~ msgctxt "@option:check"
-#~ msgid "Enable focus tracking"
-#~ msgstr "フォーカス中のウィンドウに合わせる"
-
-#~ msgctxt "@info:tooltip, indicates feature unavailable on X11"
-#~ msgid "Zoom scroll gestures are only available on Wayland."
-#~ msgstr "ズームのスクロールジェスチャーは Wayland のみ対応しています。"
-
-#~ msgid "Use Gestures"
-#~ msgstr "ジェスチャーを使用"
-
-#~ msgid "Ask for Confirmation for a gesture"
-#~ msgstr "ジェスチャー実行の確認を求める"
-
-#~ msgid "Confirm access to the Keyboard"
-#~ msgstr "キーボードへのアクセスを確認"
-
-#~ msgid "Use a timeout delay"
-#~ msgstr "タイムアウト遅延を使用する"
-
-#~ msgid "Use a beep for access"
-#~ msgstr "アクセスにビープ音を使用する"
-
-# ACCELERATOR added by translator
-#~ msgctxt "@option:check"
-#~ msgid "Activation shortcuts:"
-#~ msgstr "有効化ショートカット:"
-
-#~ msgctxt "Enable activation shortcuts"
-#~ msgid "Enable"
-#~ msgstr "有効"
-
-#~ msgctxt "@label"
-#~ msgid "Press Shift 5 times to enable Sticky Keys"
-#~ msgstr "スティッキーキーを有効にするには Shift を5回押す"
-
-#~ msgctxt "@label"
-#~ msgid "Hold Shift for 8 seconds to enable Slow Keys"
-#~ msgstr "スローキーを有効にするには Shift を8秒間長押し"
-
-# ACCELERATOR added by translator
-#~ msgctxt "@option:check"
-#~ msgid "Disable sticky and slow keys after:"
-#~ msgstr "次の時間後にスティッキーキーとスローキーをオフにする:"
-
-#~ msgctxt "@label:valuesuffix in spinbox %1 is timeout delay"
-#~ msgid "%1 min"
-#~ msgid_plural "%1 min"
-#~ msgstr[0] "%1 分"
-
-#~ msgctxt "short for minute(s)"
-#~ msgid "min"
-#~ msgid_plural "min"
-#~ msgstr[0] "分"
-
-#~ msgctxt "@title:group for checkbox group"
-#~ msgid "When a shortcut is used:"
-#~ msgstr "ショートカットを使用したとき:"
-
-#~ msgctxt "@option:check when shortcut used"
-#~ msgid "Display a confirmation dialog"
-#~ msgstr "確認ダイアログを表示"
-
-#~ msgctxt "@option:check when shortcut used"
-#~ msgid "Ring the system bell"
-#~ msgstr "システムベルを鳴らす"
-
-#~ msgctxt "@option:check when shortcut used"
-#~ msgid "Show a notification"
-#~ msgstr "通知を表示"
-
-#~ msgctxt "@action:button opens Notifications kcm"
-#~ msgid "Configure Notifications…"
-#~ msgstr "通知を設定…"
-
-# ACCELERATOR added by translator
-#~ msgctxt "@title Category name in sidebar"
-#~ msgid "Activation Shortcuts"
-#~ msgstr "有効化ショートカット"
-
-#~ msgctxt "@label:listbox"
-#~ msgid "Pointer appearance:"
-#~ msgstr "ポインタの見た目:"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Scale"
-#~ msgstr "拡大"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Keep"
-#~ msgstr "そのまま"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Hide"
-#~ msgstr "非表示"
