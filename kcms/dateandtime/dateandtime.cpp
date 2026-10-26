@@ -114,11 +114,6 @@ void DateAndTime::setNtpEnabled(bool ntpEnabled)
     m_ntpEnabled = ntpEnabled;
     checkNeedsSave();
     Q_EMIT ntpChanged();
-
-    if (m_ntpEnabled) {
-        m_dateTime = QDateTime::currentDateTime();
-        Q_EMIT dateTimeChanged();
-    }
 }
 
 QDateTime DateAndTime::dateTime() const
