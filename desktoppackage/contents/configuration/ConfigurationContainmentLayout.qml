@@ -91,40 +91,40 @@ KCM.AbstractKCM {
             Layout.margins: Kirigami.Units.smallSpacing
         }
 
-        Kirigami.FormLayout {
-            twinFormLayouts: containmentPage.item?.formLayout ?? []
+        Kirigami.FormAlignmentGroup {
+            id: formAlignmentGroup
+        }
+
+        Kirigami.Form {
+            Kirigami.FormAlignmentGroup.group: formAlignmentGroup
             Layout.fillWidth: true
             Layout.margins: Kirigami.Units.largeSpacing
 
-            QQC2.CheckBox {
-                id: showFilesCheckBox
-                visible: layoutRoot.onlyDefaultPlugins
-                enabled: !Plasmoid.immutable
-                Kirigami.FormData.label: i18ndc("plasma_shell_org.kde.plasma.desktop", "@label", "Desktop:")
-                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@option:check", "Show files and folders")
-                checked: layoutRoot.selectedPlugin === layoutRoot.folderPlugin
-                onToggled: layoutRoot.selectedPlugin = checked ? layoutRoot.folderPlugin : layoutRoot.desktopPlugin
-            }
+            Kirigami.FormGroup {
+                Kirigami.FormEntry {
+                    visible: layoutRoot.onlyDefaultPlugins
+                    title: i18ndc("plasma_shell_org.kde.plasma.desktop", "@label", "Desktop:")
+                    subtitle: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info", "Icons for items in the selected location appear on the desktop")
+                    contentItem: QQC2.CheckBox {
+                        enabled: !Plasmoid.immutable
+                        text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@option:check", "Show files and folders")
+                        checked: layoutRoot.selectedPlugin === layoutRoot.folderPlugin
+                        onToggled: layoutRoot.selectedPlugin = checked ? layoutRoot.folderPlugin : layoutRoot.desktopPlugin
+                    }
+                }
 
-            QQC2.Label {
-                visible: layoutRoot.onlyDefaultPlugins
-                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info", "Icons for items in the selected location appear on the desktop")
-                leftPadding: showFilesCheckBox.indicator.width + showFilesCheckBox.spacing
-                font: Kirigami.Theme.smallFont
-                opacity: 0.75
-                wrapMode: Text.Wrap
-                Layout.maximumWidth: Kirigami.Units.gridUnit * 16
-            }
-
-            QQC2.ComboBox {
-                visible: !layoutRoot.onlyDefaultPlugins
-                enabled: !Plasmoid.immutable
-                Kirigami.FormData.label: i18ndc("plasma_shell_org.kde.plasma.desktop", "@label:listbox", "Layout:")
-                model: configDialog.containmentPluginsConfigModel
-                textRole: "name"
-                valueRole: "pluginName"
-                onActivated: layoutRoot.selectedPlugin = currentValue
-                Component.onCompleted: currentIndex = indexOfValue(configDialog.containmentPlugin)
+                Kirigami.FormEntry {
+                    visible: !layoutRoot.onlyDefaultPlugins
+                    title: i18ndc("plasma_shell_org.kde.plasma.desktop", "@label:listbox", "Layout:")
+                    contentItem: QQC2.ComboBox {
+                        enabled: !Plasmoid.immutable
+                        model: configDialog.containmentPluginsConfigModel
+                        textRole: "name"
+                        valueRole: "pluginName"
+                        onActivated: layoutRoot.selectedPlugin = currentValue
+                        Component.onCompleted: currentIndex = indexOfValue(configDialog.containmentPlugin)
+                    }
+                }
             }
         }
 
@@ -148,6 +148,9 @@ KCM.AbstractKCM {
                         props[cfgKey] = config[key]
                     }
                 })
+                if ("formAlignmentGroup" in temp) {
+                    props.formAlignmentGroup = formAlignmentGroup
+                }
                 temp.destroy()
                 setSource(layoutRoot.containmentPageSource, props)
             }

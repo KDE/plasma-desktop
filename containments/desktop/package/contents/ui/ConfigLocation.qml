@@ -21,7 +21,7 @@ KCM.SimpleKCM {
     property alias cfg_labelMode: labelMode.currentIndex
     property alias cfg_labelText: labelText.text
     property bool titleVisible: Plasmoid.containment != Plasmoid
-    property alias formLayout: formLayout
+    property Kirigami.FormAlignmentGroup formAlignmentGroup
 
     onCfg_urlChanged: applyConfig()
 
@@ -73,142 +73,150 @@ KCM.SimpleKCM {
         }
     }
 
-    Kirigami.FormLayout {
-        id: formLayout
+    Kirigami.Form {
+        Kirigami.FormAlignmentGroup.group: configLocation.formAlignmentGroup
 
-        RadioButton {
-            id: locationDesktop
-            implicitHeight: locationCustomValue.implicitHeight
+        Kirigami.FormGroup {
+            Kirigami.FormEntry {
+                title: i18nc("@title:group form label for radiobutton group", "Show:")
+                contentItem: RadioButton {
+                    id: locationDesktop
+                    implicitHeight: locationCustomValue.implicitHeight
 
-            Kirigami.FormData.label: i18nc("@title:group form label for radiobutton group", "Show:")
-
-            text: i18nc("@option:radio", "Desktop folder")
-        }
-
-        RadioButton {
-            id: locationCurrentActivity
-            visible: placesModel.activityLinkingEnabled
-            implicitHeight: locationCustomValue.implicitHeight
-
-            text: i18nc("@option:radio", "Files linked to the current activity")
-        }
-
-        RowLayout {
-            Layout.fillWidth: true
-            spacing: Kirigami.Units.smallSpacing
-            RadioButton {
-                id: locationPlace
-
-                text: i18nc("@option:radio also label for combobox", "Places panel item:")
-                Layout.minimumWidth: Math.max(locationPlace.implicitWidth, locationCustom.implicitWidth, labelMode.implicitWidth)
-
-                onCheckedChanged: {
-                    locationPlaceValue.enabled = checked;
+                    text: i18nc("@option:radio", "Desktop folder")
                 }
             }
 
-            ComboBox {
-                id: locationPlaceValue
+            Kirigami.FormEntry {
+                visible: placesModel.activityLinkingEnabled
+                contentItem: RadioButton {
+                    id: locationCurrentActivity
+                    implicitHeight: locationCustomValue.implicitHeight
 
-                Layout.fillWidth: true
+                    text: i18nc("@option:radio", "Files linked to the current activity")
+                }
+            }
 
-                model: placesModel
-                textRole: "display"
+            Kirigami.FormEntry {
+                contentItem: RowLayout {
+                    Layout.fillWidth: true
+                    spacing: Kirigami.Units.smallSpacing
+                    RadioButton {
+                        id: locationPlace
 
-                enabled: true
+                        text: i18nc("@option:radio also label for combobox", "Places panel item:")
+                        Layout.minimumWidth: Math.max(locationPlace.implicitWidth, locationCustom.implicitWidth, labelMode.implicitWidth)
 
-                onEnabledChanged: {
-                    if (enabled && currentIndex !== -1) {
-                        configLocation.cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(placesModel.urlForIndex(currentIndex));
+                        onCheckedChanged: {
+                            locationPlaceValue.enabled = checked;
+                        }
                     }
-                }
 
-                onActivated: index => {
-                    configLocation.cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(placesModel.urlForIndex(index));
-                }
-            }
-        }
+                    ComboBox {
+                        id: locationPlaceValue
 
-        RowLayout {
-            Layout.fillWidth: true
-            spacing: Kirigami.Units.smallSpacing
-            RadioButton {
-                id: locationCustom
-                Layout.minimumWidth: Math.max(locationPlace.implicitWidth, locationCustom.implicitWidth, labelMode.implicitWidth)
+                        Layout.fillWidth: true
 
-                text: i18nc("@option:radio also label for text field", "Custom location:")
-            }
+                        model: placesModel
+                        textRole: "display"
 
-            TextField {
-                id: locationCustomValue
-                enabled: locationCustom.checked
-                Layout.fillWidth: true
+                        enabled: true
 
-                placeholderText: i18nc("@info:placeholder custom location", "Type path or URL…")
+                        onEnabledChanged: {
+                            if (enabled && currentIndex !== -1) {
+                                configLocation.cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(placesModel.urlForIndex(currentIndex));
+                            }
+                        }
 
-                inputMethodHints: Qt.ImhNoPredictiveText
-
-                onEnabledChanged: {
-                    if (enabled && text !== "") {
-                        configLocation.cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(text);
-                    }
-                }
-
-                onTextChanged: {
-                    if (enabled) {
-                        configLocation.cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(text);
+                        onActivated: index => {
+                            configLocation.cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(placesModel.urlForIndex(index));
+                        }
                     }
                 }
             }
-            Button {
-                icon.name: "document-open"
 
-                enabled: locationCustom.checked
+            Kirigami.FormEntry {
+                contentItem: RowLayout {
+                    Layout.fillWidth: true
+                    spacing: Kirigami.Units.smallSpacing
+                    RadioButton {
+                        id: locationCustom
+                        Layout.minimumWidth: Math.max(locationPlace.implicitWidth, locationCustom.implicitWidth, labelMode.implicitWidth)
 
-                onClicked: {
-                    directoryPicker.open();
-                }
-            }
-            Folder.DirectoryPicker {
-                id: directoryPicker
+                        text: i18nc("@option:radio also label for text field", "Custom location:")
+                    }
 
-                onUrlChanged: {
-                    locationCustomValue.text = Folder.DesktopSchemeHelper.getDesktopUrl(url);
+                    TextField {
+                        id: locationCustomValue
+                        enabled: locationCustom.checked
+                        Layout.fillWidth: true
+
+                        placeholderText: i18nc("@info:placeholder custom location", "Type path or URL…")
+
+                        inputMethodHints: Qt.ImhNoPredictiveText
+
+                        onEnabledChanged: {
+                            if (enabled && text !== "") {
+                                configLocation.cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(text);
+                            }
+                        }
+
+                        onTextChanged: {
+                            if (enabled) {
+                                configLocation.cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(text);
+                            }
+                        }
+                    }
+                    Button {
+                        icon.name: "document-open"
+
+                        enabled: locationCustom.checked
+
+                        onClicked: {
+                            directoryPicker.open();
+                        }
+                    }
+                    Folder.DirectoryPicker {
+                        id: directoryPicker
+
+                        onUrlChanged: {
+                            locationCustomValue.text = Folder.DesktopSchemeHelper.getDesktopUrl(url);
+                        }
+                    }
                 }
             }
         }
 
-        Item {
+        Kirigami.FormGroup {
             visible: configLocation.titleVisible
-            Kirigami.FormData.isSection: true
-        }
 
-        RowLayout {
-            Layout.fillWidth: true
-            spacing: Kirigami.Units.smallSpacing
-            visible: configLocation.titleVisible
-            Kirigami.FormData.label: i18nc("@label:textbox custom widget title", "Title:")
+            Kirigami.FormEntry {
+                title: i18nc("@label:textbox custom widget title", "Title:")
+                contentItem: RowLayout {
+                    Layout.fillWidth: true
+                    spacing: Kirigami.Units.smallSpacing
 
-            ComboBox {
-                id: labelMode
-                Layout.minimumWidth: Math.max(locationPlace.implicitWidth, locationCustom.implicitWidth, labelMode.implicitWidth)
-                visible: configLocation.titleVisible
+                    ComboBox {
+                        id: labelMode
+                        Layout.minimumWidth: Math.max(locationPlace.implicitWidth, locationCustom.implicitWidth, labelMode.implicitWidth)
 
 
-                model: [
-                    i18nc("@item:inlistbox no title", "None"),
-                    i18nc("@item:inlistbox default title", "Default"),
-                    i18nc("@item:inlistbox full path as title", "Full path"),
-                    i18nc("@item:inlistbox title from text input field", "Custom")
-                ]
-            }
+                        model: [
+                            i18nc("@item:inlistbox no title", "None"),
+                            i18nc("@item:inlistbox default title", "Default"),
+                            i18nc("@item:inlistbox full path as title", "Full path"),
+                            i18nc("@item:inlistbox title from text input field", "Custom")
+                        ]
+                    }
 
-            TextField {
-                id: labelText
-                Layout.fillWidth: true
-                enabled: (labelMode.currentIndex === 3)
+                    TextField {
+                        id: labelText
+                        Layout.fillWidth: true
+                        enabled: (labelMode.currentIndex === 3)
 
-                placeholderText: i18nc("@info:placeholder custom window title", "Enter title…")
+                        placeholderText: i18nc("@info:placeholder custom window title", "Enter title…")
+                    }
+                }
             }
         }
     }
