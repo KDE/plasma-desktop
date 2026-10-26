@@ -245,7 +245,7 @@ bool DateAndTime::timedateSave()
         return false;
     }
 
-    if (!m_ntpEnabled) {
+    if (!m_ntpEnabled && m_dateTime.isValid()) {
         qint64 timeDiff = m_dateTime.toMSecsSinceEpoch() - QDateTime::currentMSecsSinceEpoch();
         //*1000 for milliseconds -> microseconds
         auto reply = timedateIface.SetTime(timeDiff * 1000, true, true);
@@ -260,7 +260,7 @@ bool DateAndTime::timedateSave()
             return false;
         }
     }
-    if (!m_timeZone.isValid()) {
+    if (m_timeZone.isValid()) {
         auto reply = timedateIface.SetTimezone(m_timeZone.id(), true);
         reply.waitForFinished();
         if (reply.isError()) {
