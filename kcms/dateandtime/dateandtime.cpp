@@ -233,31 +233,32 @@ bool DateAndTime::timedateSave()
     // we cannot send requests up front then block for all replies as we need NTP to be disabled before we can make a call to SetTime
     // timedated processes these in parallel and will return an error otherwise
 
-    auto reply = timedateIface.SetNTP(m_ntpEnabled, true);
-    reply.waitForFinished();
-    if (reply.isError()) {
-        if (reply.error().name() != QDBusError::errorString(QDBusError::AccessDenied)) {
-            addMessage(Message::error(i18n("Unable to change NTP settings")));
-        } else {
-            addMessage(Message::error(i18n("Permission to change NTP setting denied")));
-        }
-        qCWarning(KCM_CLOCK) << "Failed to enable NTP" << reply.error().name() << reply.error().message();
-        return false;
-    }
-
-    if (!m_ntpEnabled && m_dateTime.isValid()) {
-        qint64 timeDiff = m_dateTime.toMSecsSinceEpoch() - QDateTime::currentMSecsSinceEpoch();
-        //*1000 for milliseconds -> microseconds
-        auto reply = timedateIface.SetTime(timeDiff * 1000, true, true);
+    if (m_ntpEnabledSet) {
+        auto reply = timedateIface.SetNTP(m_ntpEnabled, true);
         reply.waitForFinished();
         if (reply.isError()) {
             if (reply.error().name() != QDBusError::errorString(QDBusError::AccessDenied)) {
-                addMessage(Message::error(i18n("Unable to set current time")));
+                addMessage(Message::error(i18n("Unable to change NTP settings")));
             } else {
-                addMessage(Message::error(i18n("Permission to change date and time setting denied")));
+                addMessage(Message::error(i18n("Permission to change NTP setting denied")));
             }
-            qCWarning(KCM_CLOCK) << "Failed to set current time" << reply.error().name() << reply.error().message();
+            qCWarning(KCM_CLOCK) << "Failed to enable NTP" << reply.error().name() << reply.error().message();
             return false;
+        }
+        if (!m_ntpEnabled && m_dateTime.isValid()) {
+            qint64 timeDiff = m_dateTime.toMSecsSinceEpoch() - QDateTime::currentMSecsSinceEpoch();
+            //*1000 for milliseconds -> microseconds
+            auto reply = timedateIface.SetTime(timeDiff * 1000, true, true);
+            reply.waitForFinished();
+            if (reply.isError()) {
+                if (reply.error().name() != QDBusError::errorString(QDBusError::AccessDenied)) {
+                    addMessage(Message::error(i18n("Unable to set current time")));
+                } else {
+                    addMessage(Message::error(i18n("Permission to change date and time setting denied")));
+                }
+                qCWarning(KCM_CLOCK) << "Failed to set current time" << reply.error().name() << reply.error().message();
+                return false;
+            }
         }
     }
     if (m_timeZone.isValid()) {
