@@ -296,6 +296,8 @@ ContainmentItem {
             configKey: "ItemGeometries-" + Math.round(root.screenGeometry.width) + "x" + Math.round(root.screenGeometry.height)
             fallbackConfigKey: root.availableScreenRect.width > root.availableScreenRect.height ? "ItemGeometriesHorizontal" : "ItemGeometriesVertical"
 
+            focusPolicy: Qt.StrongFocus
+
             Binding on containment {
                 value: Plasmoid
                 when: Plasmoid.isContainment
