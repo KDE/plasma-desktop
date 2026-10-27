@@ -106,7 +106,7 @@ Item {
 
             anchors.fill: parent
 
-            readonly property bool hovered: (main.GridView.view.hoveredItem === main)
+            readonly property bool hovered: toolTip.containsMouse || (main.GridView.view.hoveredItem === main)
             readonly property Item selectionButton: selectionButtonComponent.createObject(actions) as FolderItemActionButton
             readonly property int contentHeight: frameLoader.height + frameLoader.y * 2
             property alias iconArea: icon
