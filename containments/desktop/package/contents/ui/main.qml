@@ -35,8 +35,8 @@ ContainmentItem {
 
     objectName: isFolder ? "folder" : "desktop"
 
-    width: inPanel ? undefined : preferredWidth(false) // Initial size when adding to e.g. desktop.
-    height: inPanel ? undefined : preferredHeight(false) // Initial size when adding to e.g. desktop.
+    width: inPanel ? undefined : preferredFolderSize.width // Initial size when adding to e.g. desktop.
+    height: inPanel ? undefined : preferredFolderSize.height // Initial size when adding to e.g. desktop.
 
     function switchSize() {
         // Support expanding into the full representation on very thick vertical panels.
@@ -67,6 +67,35 @@ ContainmentItem {
     readonly property FolderViewLayerLoader folderViewLayer: fullRepresentationItem.folderViewLayer
     readonly property ContainmentLayoutManager.AppletsLayout appletsLayout: fullRepresentationItem.appletsLayout
 
+    // Size hints for the widget on the desktop and for its popup in a panel. None (-1) for the desktop
+    // itself, and while the full representation sits in the panel, so the panel doesn't keep switching representations.
+    readonly property bool hasSizeHints: !isContainment && folderViewLayer.ready && (!inPanel || (compactRepresentationItem?.visible ?? false))
+    readonly property real folderLabelHeight: hasSizeHints && Plasmoid.configuration.labelMode !== 0 ? (folderViewLayer.item as FolderViewLayer).labelHeight : 0
+
+    readonly property size minimumFolderSize: {
+        if (!hasSizeHints) {
+            return Qt.size(-1, -1);
+        } else if (useListViewMode) {
+            return Qt.size(folderViewLayer.view.cellHeight * 4,
+                           folderViewLayer.view.cellHeight + Kirigami.Units.smallSpacing + folderLabelHeight);
+        }
+
+        return Qt.size(folderViewLayer.view.cellWidth + Kirigami.Units.gridUnit * 2,
+                       folderViewLayer.view.cellHeight + Kirigami.Units.gridUnit + folderLabelHeight);
+    }
+
+    readonly property size preferredFolderSize: {
+        if (!hasSizeHints) {
+            return Qt.size(-1, -1);
+        } else if (useListViewMode) {
+            return Qt.size(Kirigami.Units.gridUnit * 16,
+                           folderViewLayer.view.cellHeight * 15 + Kirigami.Units.smallSpacing + folderLabelHeight);
+        }
+
+        return Qt.size(folderViewLayer.view.cellWidth * 3 + Kirigami.Units.gridUnit * 2,
+                       folderViewLayer.view.cellHeight * 2 + Kirigami.Units.gridUnit + folderLabelHeight);
+    }
+
     // Plasmoid.title is set by a Binding {} in FolderViewLayer
     toolTipSubText: ""
     Plasmoid.icon: (!Plasmoid.configuration.useCustomIcon && folderViewLayer.ready) ? symbolicizeIconName(folderViewLayer.view?.model.iconName) : Plasmoid.configuration.icon
@@ -91,33 +120,6 @@ ContainmentItem {
         }
 
         folderViewLayer.view.linkHere(desktopUrl);
-    }
-
-    function preferredWidth(forMinimumSize: bool): real {
-        if ((isContainment || !folderViewLayer.ready) || (inPanel && !compactRepresentationItem.visible)) {
-            return -1;
-        } else if (useListViewMode) {
-            return (forMinimumSize ? folderViewLayer.view.cellHeight * 4 : Kirigami.Units.gridUnit * 16);
-        }
-
-        return (folderViewLayer.view.cellWidth * (forMinimumSize ? 1 : 3)) + (Kirigami.Units.gridUnit * 2);
-    }
-
-    function preferredHeight(forMinimumSize: bool): real {
-        let height;
-        if ((isContainment || !folderViewLayer.ready) || (inPanel && !compactRepresentationItem.visible)) {
-            return -1;
-        } else if (useListViewMode) {
-            height = (folderViewLayer.view.cellHeight * (forMinimumSize ? 1 : 15)) + Kirigami.Units.smallSpacing;
-        } else {
-            height = (folderViewLayer.view.cellHeight * (forMinimumSize ? 1 : 2)) + Kirigami.Units.gridUnit;
-        }
-
-        if (Plasmoid.configuration.labelMode !== 0) {
-            height += (folderViewLayer.item as FolderViewLayer).labelHeight;
-        }
-
-        return height;
     }
 
     function isDrag(fromX, fromY, toX, toY) {
@@ -455,11 +457,11 @@ ContainmentItem {
         Component.onCompleted: {
             // Layout bindings need to be set delayed; the intermediate steps as the other bindings happen cause loops
             Qt.callLater( () => {
-                dropArea.Layout.minimumWidth = Qt.binding(() => root.preferredWidth(root.inPanel))
-                dropArea.Layout.minimumHeight = Qt.binding(() => root.preferredHeight(root.inPanel))
+                dropArea.Layout.minimumWidth = Qt.binding(() => root.minimumFolderSize.width)
+                dropArea.Layout.minimumHeight = Qt.binding(() => root.minimumFolderSize.height)
 
-                dropArea.Layout.preferredWidth = Qt.binding(() => root.preferredWidth(false))
-                dropArea.Layout.preferredHeight = Qt.binding(() => root.preferredHeight(false))
+                dropArea.Layout.preferredWidth = Qt.binding(() => root.preferredFolderSize.width)
+                dropArea.Layout.preferredHeight = Qt.binding(() => root.preferredFolderSize.height)
 
                 // Maximum size is intentionally unbounded
             })
