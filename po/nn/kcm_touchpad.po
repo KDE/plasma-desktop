@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-17 00:51+0000\n"
-"PO-Revision-Date: 2026-08-02 20:02+0200\n"
+"PO-Revision-Date: 2026-10-26 22:20+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -248,16 +248,12 @@ msgid "Right-click by:"
 msgstr "Høgreklikk med:"
 
 #: ui/main.qml:478
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Completes the sentence 'right-click by pressing bottom-"
-#| "right corner'"
-#| msgid "Pressing bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-left "
 "corner'"
 msgid "Pressing bottom-left corner"
-msgstr "Trykk i hjørnet nede til høgre"
+msgstr "Trykk i nedre venstre hjørne"
 
 #: ui/main.qml:479
 #, kde-format
@@ -340,9 +336,7 @@ msgid "Right-click"
 msgstr "Høgreklikk"
 
 #: ui/main.qml:582
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by tapping anywhere with three fingers."
 msgstr "Midtlikk ved å trykkja med tre fingrar kor som helst."
@@ -354,9 +348,7 @@ msgid "Middle-click"
 msgstr "Midtklikk"
 
 #: ui/main.qml:607
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Right-click by tapping anywhere with three fingers."
-msgstr "Midtlikk ved å trykkja med tre fingrar kor som helst."
+msgstr "Høgreklikk ved å trykkja med tre fingrar kor som helst."

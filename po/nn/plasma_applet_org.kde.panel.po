@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-23 00:50+0000\n"
-"PO-Revision-Date: 2026-06-30 22:32+0200\n"
+"PO-Revision-Date: 2026-10-26 22:17+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.07.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -44,12 +44,10 @@ msgid "Spacer width"
 msgstr "Mellomromsbreidd"
 
 #: ConfigOverlay.qml:410
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Spacer width"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Spacer height"
-msgstr "Mellomromsbreidd"
+msgstr "Mellomromshøgd"
 
 #: ConfigOverlay.qml:433
 #, kde-format
