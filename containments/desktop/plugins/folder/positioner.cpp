@@ -1034,6 +1034,9 @@ void Positioner::loadAndApplyPositionsConfig(const QString &resolution)
                     bool okStripe = false;
                     bool okPos = false;
                     const auto name = positions[offset + PositionsConstants::filenameOffset];
+                    if (m_folderModel && !m_folderModel->desktopFileExists(name)) {
+                        continue;
+                    }
                     const auto stripe = positions[offset + PositionsConstants::stripeOffset].toInt(&okStripe);
                     const auto pos = positions[offset + PositionsConstants::posOffset].toInt(&okPos);
                     if (!name.isEmpty() && okStripe && okPos) {
@@ -1120,19 +1123,27 @@ QString Positioner::loadConfigData() const
 
 void Positioner::loadChangedPositions()
 {
-    const auto jsonArr = QJsonDocument::fromJson(m_applet->config().group(u"General"_s).readEntry(u"changedPositions"_s).toUtf8()).object();
+    auto jsonArr = QJsonDocument::fromJson(m_applet->config().group(u"General"_s).readEntry(u"changedPositions"_s).toUtf8()).object();
 
     m_changedPositions.clear();
     m_changedPositions.reserve(jsonArr.size());
 
     for (auto it = jsonArr.begin(), itEnd = jsonArr.end(); it != itEnd; ++it) {
         const auto filename = it.key();
+
+        if (m_folderModel && !m_folderModel->desktopFileExists(filename)) {
+            jsonArr.remove(it.key());
+            continue;
+        }
+
         if (filename.isEmpty()) {
+            jsonArr.remove(it.key());
             continue;
         }
 
         const auto values = it.value().toVariant().toStringList();
         if (values.size() != 3) {
+            jsonArr.remove(it.key());
             continue;
         }
 
@@ -1143,11 +1154,13 @@ void Positioner::loadChangedPositions()
             .visitedResolutions = {visitedResolutions.constBegin(), visitedResolutions.constEnd()},
             .gridPosition = {.stripe = values[1].toInt(&okStripeOffset), .pos = values[2].toInt(&okPosOffset)},
         };
+
         if (!okStripeOffset || !okPosOffset) {
             continue;
         }
 
         m_changedPositions[filename] = std::move(changedPosition);
+        jsonArr.remove(it.key());
     }
 }
 

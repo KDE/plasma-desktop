@@ -270,6 +270,7 @@ public:
     bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
     Qt::DropActions supportedDragActions() const override;
     Qt::DropActions supportedDropActions() const override;
+    bool desktopFileExists(const QString &fileName) const;
 
     Q_INVOKABLE void paste();
     Q_INVOKABLE void copy();

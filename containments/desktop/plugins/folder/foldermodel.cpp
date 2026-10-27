@@ -21,6 +21,7 @@
 #include <QCollator>
 #include <QDir>
 #include <QDrag>
+#include <QFileInfo>
 #include <QImage>
 #include <QItemSelectionModel>
 #include <QLoggingCategory>
@@ -1691,6 +1692,12 @@ Qt::DropActions FolderModel::supportedDragActions() const
 Qt::DropActions FolderModel::supportedDropActions() const
 {
     return Qt::CopyAction | Qt::MoveAction | Qt::LinkAction;
+}
+
+bool FolderModel::desktopFileExists(const QString &fileName) const
+{
+    const auto resolvedFileName = DesktopSchemeHelper::getFileUrl(fileName);
+    return QFileInfo::exists(resolvedFileName);
 }
 
 inline bool FolderModel::matchMimeType(const KFileItem &item) const
