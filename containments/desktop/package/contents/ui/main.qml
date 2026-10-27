@@ -327,6 +327,8 @@ ContainmentItem {
 
                 configOverlaySource: "ConfigOverlay.qml"
 
+                Keys.onEscapePressed: folderViewLayer.forceActiveFocus()
+
                 Connections {
                     target: appletsLayout
                     function onEditModeChanged(): void {
