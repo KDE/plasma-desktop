@@ -962,7 +962,7 @@ FocusScope {
                 Keys.onMenuPressed: event => {
                     if (currentIndex !== -1 && dir.hasSelection() && currentItem) {
                         dir.setSelected(positioner.map(currentIndex));
-                        dir.openContextMenu(currentItem, event.modifiers);
+                        dir.openContextMenu(currentItem, event.modifiers, false);
                     } else {
                         // Otherwise let the containment handle it.
                         event.accepted = false;
