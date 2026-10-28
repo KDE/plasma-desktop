@@ -33,6 +33,9 @@
     <entry name="ZoomUsePatternUpscaler" key="UsePatternUpscaler" type="Bool">
         <default>true</default>
     </entry>
+    <entry name="ZoomAllScreens" type="Bool">
+      <default>false</default>
+    </entry>
   </group>
   <group name="Effect-magnifier">
     <entry name="MagnifierWidth" key="Width" type="UInt">

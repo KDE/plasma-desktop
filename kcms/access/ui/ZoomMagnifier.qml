@@ -134,6 +134,20 @@ Kirigami.Form {
         Kirigami.FormEntry {
             visible: objectModel.visible
             contentItem: QQC2.CheckBox {
+                text: i18nc("@option:check", "Zoom all screens at the same time")
+                checked: kcm.zoomMagnifierSettings.zoomAllScreens
+                onCheckedChanged: kcm.zoomMagnifierSettings.zoomAllScreens = checked
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.zoomMagnifierSettings
+                    settingName: "ZoomAllScreens"
+                }
+            }
+        }
+
+        Kirigami.FormEntry {
+            visible: objectModel.visible
+            contentItem: QQC2.CheckBox {
                 text: i18nc("@option:check", "Enable text caret tracking")
                 checked: kcm.zoomMagnifierSettings.zoomEnableTextCaretTracking
                 onCheckedChanged: kcm.zoomMagnifierSettings.zoomEnableTextCaretTracking = checked
