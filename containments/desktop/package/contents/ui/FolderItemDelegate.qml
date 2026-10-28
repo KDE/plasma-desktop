@@ -34,6 +34,7 @@ Item {
     required property var decoration
 
     property bool isOnRootView: false
+    property bool dragImageBeingGenerated
 
     readonly property /*FolderViewDialog*/ Folder.SubDialog popupDialog: loader.item ? loader.item.popupDialog    : null
     readonly property Item iconArea:        loader.item ? loader.item.iconArea       : null
@@ -92,8 +93,10 @@ Item {
 
     function updateDragImage() {
         if (selected && !blank) {
+            main.dragImageBeingGenerated = true;
             loader.grabToImage(result => {
                 dir.addItemDragImage(positioner.map(index), main.x + loader.x, main.y + loader.y, loader.width, loader.height, result.image);
+                dragImageBeingGenerated = false;
             });
         }
     }
