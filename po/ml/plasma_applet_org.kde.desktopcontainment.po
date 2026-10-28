@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-27 03:19+0000\n"
+"POT-Creation-Date: 2026-10-28 03:17+0000\n"
 "PO-Revision-Date: 2019-12-29 20:50+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -530,7 +530,7 @@ msgctxt "@item:inmenu opens submenu with view options like sorting"
 msgid "Icons"
 msgstr "ചിഹ്നങ്ങള്‍"
 
-#: package/contents/ui/main.qml:449
+#: package/contents/ui/main.qml:451
 #, fuzzy, kde-format
 msgctxt "@action:inmenu opens config dialog"
 msgid "Desktop and Wallpaper"
@@ -541,17 +541,17 @@ msgstr "പണിയിടം ക്രമീകരിക്കുക"
 msgid "Select Folder"
 msgstr "എല്ലാം തെരഞ്ഞെടുക്കുക"
 
-#: plugins/folder/foldermodel.cpp:539
+#: plugins/folder/foldermodel.cpp:540
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "പണിയിടം പുതുക്കുക (&R)"
 
-#: plugins/folder/foldermodel.cpp:539 plugins/folder/foldermodel.cpp:1779
+#: plugins/folder/foldermodel.cpp:540 plugins/folder/foldermodel.cpp:1786
 #, kde-format
 msgid "&Refresh View"
 msgstr "കാഴ്ച പുതുക്കുക (&R)"
 
-#: plugins/folder/foldermodel.cpp:902
+#: plugins/folder/foldermodel.cpp:903
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -559,7 +559,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:904
+#: plugins/folder/foldermodel.cpp:905
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -567,23 +567,23 @@ msgid ""
 "not be found. It may have been moved or deleted."
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1788
+#: plugins/folder/foldermodel.cpp:1795
 #, fuzzy, kde-format
 msgid "&Empty Trash"
 msgstr "ചവറ്റുകുട്ട കാലിയാക്കുക (&E)"
 
-#: plugins/folder/foldermodel.cpp:1791
+#: plugins/folder/foldermodel.cpp:1798
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1794
+#: plugins/folder/foldermodel.cpp:1801
 #, kde-format
 msgid "&Open"
 msgstr "തുറക്കുക (&O)"
 
-#: plugins/folder/foldermodel.cpp:1798
+#: plugins/folder/foldermodel.cpp:1805
 #, fuzzy, kde-format
 #| msgid "Show all"
 msgctxt ""
@@ -592,23 +592,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "എല്ലാം കാണിക്കുക"
 
-#: plugins/folder/foldermodel.cpp:1899
+#: plugins/folder/foldermodel.cpp:1906
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1902
+#: plugins/folder/foldermodel.cpp:1909
 #, kde-format
 msgid "&Move to Trash"
 msgstr "&ചവറ്റുകുട്ടയിലിടുക"
 
-#: plugins/folder/foldermodel.cpp:1935
+#: plugins/folder/foldermodel.cpp:1942
 #, kde-format
 msgid "&Paste"
 msgstr "ഒട്ടിക്കുക (&P)"
 
-#: plugins/folder/foldermodel.cpp:2086
+#: plugins/folder/foldermodel.cpp:2093
 #, kde-format
 msgid "&Properties"
 msgstr "ഗുണഗണങ്ങള്‍ (&P)"
