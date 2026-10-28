@@ -202,14 +202,13 @@ PlasmoidItem {
         Kirigami.Icon {
             anchors.centerIn: parent
 
-            height: Math.min(Kirigami.Units.iconSizes.small,
-                             parent.height,
-                             Math.max(parent.height - (Kirigami.Units.smallSpacing * 2),
-                                      Kirigami.Units.smallSpacing * 2))
-            width: Math.min(Kirigami.Units.iconSizes.small,
-                            parent.width,
-                            Math.max(parent.width - (Kirigami.Units.smallSpacing * 2),
+            readonly property real availableSize: Math.min(parent.width, parent.height)
+
+            width: Math.min(Kirigami.Units.iconSizes.medium,
+                            availableSize,
+                            Math.max(availableSize - (Kirigami.Units.smallSpacing * 2),
                                      Kirigami.Units.smallSpacing * 2))
+            height: width
 
             required property var decoration//: null
 
