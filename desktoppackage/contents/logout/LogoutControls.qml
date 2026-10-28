@@ -190,7 +190,7 @@ Item {
                                           : i18ndc("plasma_shell_org.kde.plasma.desktop", "Suspend to RAM", "Slee&p Now")
                 onClicked: controls.hostRoot.sleepRequested()
                 KeyNavigation.left: cancelButton
-                KeyNavigation.right: hibernateButton.visible ? hibernateButton : (rebootButton.visible ? rebootButton : (shutdownButton.visible ? shutdownButton : (logoutButton.visible ? logoutButton : cancelButton)))
+                KeyNavigation.right: hibernateButton
                 visible: spdMethods.SuspendState && controls.showAllOptions
             }
             LogoutButton {
@@ -200,8 +200,8 @@ Item {
                 text: controls.showAllOptions ? i18nd("plasma_shell_org.kde.plasma.desktop", "&Hibernate")
                                           : i18nd("plasma_shell_org.kde.plasma.desktop", "&Hibernate Now")
                 onClicked: controls.hostRoot.hibernateRequested()
-                KeyNavigation.left: suspendButton.visible ? suspendButton : cancelButton
-                KeyNavigation.right: rebootButton.visible ? rebootButton : (shutdownButton.visible ? shutdownButton : (logoutButton.visible ? logoutButton : cancelButton))
+                KeyNavigation.left: suspendButton
+                KeyNavigation.right: rebootButton
                 visible: spdMethods.HibernateState && controls.showAllOptions
             }
             LogoutButton {
@@ -223,8 +223,8 @@ Item {
                         controls.hostRoot.rebootRequested();
                     }
                 }
-                KeyNavigation.left: hibernateButton.visible ? hibernateButton : (suspendButton.visible ? suspendButton : cancelButton)
-                KeyNavigation.right: rebootWithoutUpdatesButton.visible ? rebootWithoutUpdatesButton : (shutdownButton.visible ? shutdownButton : (logoutButton.visible ? logoutButton : cancelButton))
+                KeyNavigation.left: hibernateButton
+                KeyNavigation.right: rebootWithoutUpdatesButton
                 focus: sdtype === ShutdownType.ShutdownTypeReboot
                 visible: maysd && (sdtype === ShutdownType.ShutdownTypeReboot || controls.showAllOptions)
             }
@@ -238,7 +238,7 @@ Item {
                     controls.hostRoot.rebootRequested();
                 }
                 KeyNavigation.left: rebootButton
-                KeyNavigation.right: shutdownButton.visible ? shutdownButton : (logoutButton.visible ? logoutButton : cancelButton)
+                KeyNavigation.right: shutdownButton
                 visible: maysd && softwareUpdatePending && (sdtype === ShutdownType.ShutdownTypeReboot || controls.showAllOptions)
             }
             LogoutButton {
@@ -260,8 +260,8 @@ Item {
                         controls.hostRoot.haltRequested();
                     }
                 }
-                KeyNavigation.left: rebootWithoutUpdatesButton.visible ? rebootWithoutUpdatesButton : (rebootButton.visible ? rebootButton : (hibernateButton.visible ? hibernateButton : (suspendButton.visible ? suspendButton : cancelButton)))
-                KeyNavigation.right: shutdownWithoutUpdatesButton.visible ? shutdownWithoutUpdatesButton : (logoutButton.visible ? logoutButton : cancelButton)
+                KeyNavigation.left: rebootWithoutUpdatesButton
+                KeyNavigation.right: shutdownWithoutUpdatesButton
                 focus: sdtype === ShutdownType.ShutdownTypeHalt || controls.showAllOptions
                 visible: maysd && (sdtype === ShutdownType.ShutdownTypeHalt || controls.showAllOptions)
             }
@@ -275,7 +275,7 @@ Item {
                     controls.hostRoot.haltRequested();
                 }
                 KeyNavigation.left: shutdownButton
-                KeyNavigation.right: logoutButton.visible ? logoutButton : cancelButton
+                KeyNavigation.right: logoutButton
                 focus: sdtype === ShutdownType.ShutdownTypeHalt || controls.showAllOptions
                 visible: maysd && softwareUpdatePending && (sdtype === ShutdownType.ShutdownTypeHalt || controls.showAllOptions)
             }
@@ -286,7 +286,7 @@ Item {
                 text: controls.showAllOptions ? i18nd("plasma_shell_org.kde.plasma.desktop", "&Log Out")
                                           : i18nd("plasma_shell_org.kde.plasma.desktop", "&Log Out Now")
                 onClicked: controls.hostRoot.logoutRequested()
-                KeyNavigation.left: shutdownWithoutUpdatesButton.visible ? shutdownWithoutUpdatesButton : (shutdownButton.visible ? shutdownButton : (rebootWithoutUpdatesButton.visible ? rebootWithoutUpdatesButton : (rebootButton.visible ? rebootButton : (hibernateButton.visible ? hibernateButton : (suspendButton.visible ? suspendButton : cancelButton)))))
+                KeyNavigation.left: shutdownWithoutUpdatesButton
                 KeyNavigation.right: cancelButton
                 focus: sdtype === ShutdownType.ShutdownTypeNone
                 visible: canLogout && (sdtype === ShutdownType.ShutdownTypeNone || controls.showAllOptions)
@@ -297,8 +297,8 @@ Item {
                 icon.name: "dialog-cancel"
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "&Cancel")
                 onClicked: controls.hostRoot.cancelRequested()
-                KeyNavigation.left: logoutButton.visible ? logoutButton : (shutdownWithoutUpdatesButton.visible ? shutdownWithoutUpdatesButton : (shutdownButton.visible ? shutdownButton : (rebootWithoutUpdatesButton.visible ? rebootWithoutUpdatesButton : (rebootButton.visible ? rebootButton : (hibernateButton.visible ? hibernateButton : suspendButton)))))
-                KeyNavigation.right: suspendButton.visible ? suspendButton : (hibernateButton.visible ? hibernateButton : rebootButton)
+                KeyNavigation.left: logoutButton
+                KeyNavigation.right: suspendButton
             }
         }
     }
