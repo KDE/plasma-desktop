@@ -38,6 +38,7 @@ Item {
     property Item frame:           loader.item ? loader.item.frame          : null
     property PlasmaCore.ToolTipArea toolTip:         loader.item ? loader.item.toolTip        : null
     property real contentHeight:   loader.item && !root.useListViewMode ? loader.item.contentHeight : null
+    property bool dragImageBeingGenerated
     Accessible.name: name
     Accessible.role: Accessible.Canvas
 
@@ -83,8 +84,10 @@ Item {
 
     function updateDragImage() {
         if (selected && !blank) {
+            main.dragImageBeingGenerated = true;
             loader.grabToImage(result => {
                 dir.addItemDragImage(positioner.map(index), main.x + loader.x, main.y + loader.y, loader.width, loader.height, result.image);
+                dragImageBeingGenerated = false;
             });
         }
     }
