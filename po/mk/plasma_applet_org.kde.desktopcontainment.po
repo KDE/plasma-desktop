@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-28 03:17+0000\n"
+"POT-Creation-Date: 2026-10-29 03:08+0000\n"
 "PO-Revision-Date: 2010-01-31 23:06+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -216,13 +216,13 @@ msgctxt "@label:listbox sort items by field"
 msgid "Sort by:"
 msgstr "Подредување:"
 
-#: package/contents/ui/ConfigIcons.qml:187
+#: package/contents/ui/ConfigIcons.qml:189
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:188
+#: package/contents/ui/ConfigIcons.qml:190
 #, fuzzy, kde-format
 #| msgctxt "Sort icons"
 #| msgid "By Name"
@@ -230,14 +230,14 @@ msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "Според името"
 
-#: package/contents/ui/ConfigIcons.qml:189
+#: package/contents/ui/ConfigIcons.qml:191
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "Големина:"
 
-#: package/contents/ui/ConfigIcons.qml:190
+#: package/contents/ui/ConfigIcons.qml:192
 #, fuzzy, kde-format
 #| msgctxt "Sort icons"
 #| msgid "By Type"
@@ -245,7 +245,7 @@ msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "Според типот"
 
-#: package/contents/ui/ConfigIcons.qml:191
+#: package/contents/ui/ConfigIcons.qml:193
 #, fuzzy, kde-format
 #| msgctxt "Sort icons"
 #| msgid "By Date"
@@ -253,13 +253,13 @@ msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "Според датумот"
 
-#: package/contents/ui/ConfigIcons.qml:202
+#: package/contents/ui/ConfigIcons.qml:209
 #, kde-format
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:210
+#: package/contents/ui/ConfigIcons.qml:217
 #, fuzzy, kde-format
 #| msgctxt "Sort icons"
 #| msgid "Folders First"
@@ -267,25 +267,25 @@ msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "Прво папките"
 
-#: package/contents/ui/ConfigIcons.qml:224
+#: package/contents/ui/ConfigIcons.qml:231
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:226
+#: package/contents/ui/ConfigIcons.qml:233
 #, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:227
+#: package/contents/ui/ConfigIcons.qml:234
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:238
+#: package/contents/ui/ConfigIcons.qml:245
 #, fuzzy, kde-format
 #| msgctxt "Sort icons"
 #| msgid "By Size"
@@ -293,124 +293,124 @@ msgctxt "@label:slider"
 msgid "Icon size:"
 msgstr "Според големината"
 
-#: package/contents/ui/ConfigIcons.qml:253
+#: package/contents/ui/ConfigIcons.qml:260
 #, fuzzy, kde-format
 #| msgid "Small"
 msgctxt "@item:inrange smallest icon size"
 msgid "Small"
 msgstr "Мали"
 
-#: package/contents/ui/ConfigIcons.qml:262
+#: package/contents/ui/ConfigIcons.qml:269
 #, fuzzy, kde-format
 #| msgid "Large"
 msgctxt "@item:inrange largest icon size"
 msgid "Large"
 msgstr "Големи"
 
-#: package/contents/ui/ConfigIcons.qml:271
+#: package/contents/ui/ConfigIcons.qml:278
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Label width:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:274
+#: package/contents/ui/ConfigIcons.qml:281
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:275
+#: package/contents/ui/ConfigIcons.qml:282
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:276
+#: package/contents/ui/ConfigIcons.qml:283
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:284
+#: package/contents/ui/ConfigIcons.qml:291
 #, fuzzy, kde-format
 #| msgid " lines"
 msgctxt "@label:spinbox"
 msgid "Text lines:"
 msgstr " редови"
 
-#: package/contents/ui/ConfigIcons.qml:300
+#: package/contents/ui/ConfigIcons.qml:307
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "When hovering over icons:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:302
+#: package/contents/ui/ConfigIcons.qml:309
 #, kde-format
 msgctxt "@option:check When hovering over icons…"
 msgid "Show tooltips"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:309
+#: package/contents/ui/ConfigIcons.qml:316
 #, fuzzy, kde-format
 #| msgid "Select All"
 msgctxt "@option:check When hovering over icons…"
 msgid "Show selection markers"
 msgstr "Избери ги сите"
 
-#: package/contents/ui/ConfigIcons.qml:316
+#: package/contents/ui/ConfigIcons.qml:323
 #, fuzzy, kde-format
 #| msgid "Previews:"
 msgctxt "@option:check When hovering over icons…"
 msgid "Show folder preview popups"
 msgstr "Прегледи:"
 
-#: package/contents/ui/ConfigIcons.qml:328
+#: package/contents/ui/ConfigIcons.qml:335
 #, kde-format
 msgctxt "@title:group"
 msgid "Typing on the desktop:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:334
+#: package/contents/ui/ConfigIcons.qml:341
 #, fuzzy, kde-format
 #| msgid "Select All"
 msgctxt "@option:radio Typing on the desktop selects items"
 msgid "Selects items"
 msgstr "Избери ги сите"
 
-#: package/contents/ui/ConfigIcons.qml:340
+#: package/contents/ui/ConfigIcons.qml:347
 #, kde-format
 msgctxt "@option:radio Typing on the desktop activates KRunner"
 msgid "Activates KRunner"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:356
+#: package/contents/ui/ConfigIcons.qml:363
 #, fuzzy, kde-format
 #| msgid "&Rename"
 msgctxt "@label prefix for checkbox"
 msgid "Rename:"
 msgstr "П&реименувај"
 
-#: package/contents/ui/ConfigIcons.qml:360
+#: package/contents/ui/ConfigIcons.qml:367
 #, kde-format
 msgctxt "@option:check"
 msgid "Rename inline by clicking selected item's text"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:371
+#: package/contents/ui/ConfigIcons.qml:378
 #, fuzzy, kde-format
 #| msgid "Previews:"
 msgctxt "@title:group prefix for checkbox and button"
 msgid "Previews:"
 msgstr "Прегледи:"
 
-#: package/contents/ui/ConfigIcons.qml:373
+#: package/contents/ui/ConfigIcons.qml:380
 #, fuzzy, kde-format
 #| msgid "Previews:"
 msgctxt "@option:check"
 msgid "Show preview thumbnails"
 msgstr "Прегледи:"
 
-#: package/contents/ui/ConfigIcons.qml:381
+#: package/contents/ui/ConfigIcons.qml:388
 #, fuzzy, kde-format
 #| msgid "More Preview Options..."
 msgctxt "@action:button opens dialog"
