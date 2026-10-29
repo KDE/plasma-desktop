@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-23 00:50+0000\n"
+"POT-Creation-Date: 2026-10-29 00:55+0000\n"
 "PO-Revision-Date: 2026-01-08 14:56+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -162,7 +162,7 @@ msgstr[1] "…ושני חלונות נוספים"
 msgstr[2] "…ו־%1 חלונות נוספים"
 msgstr[3] "…ו־%1 חלונות נוספים"
 
-#: qml/main.qml:352
+#: qml/main.qml:351
 #, kde-format
 msgctxt "@info:tooltip start of list"
 msgid "%1 Window:"
@@ -172,7 +172,7 @@ msgstr[1] "שני חלונות:"
 msgstr[2] "%1 חלונות:"
 msgstr[3] "%1 חלונות:"
 
-#: qml/main.qml:364
+#: qml/main.qml:363
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "%1 Minimized Window:"
@@ -182,43 +182,43 @@ msgstr[1] "שני חלונות ממוזערים:"
 msgstr[2] "%1 חלונות ממוזערים:"
 msgstr[3] "%1 חלונות ממוזערים:"
 
-#: qml/main.qml:440
+#: qml/main.qml:439
 #, kde-format
 msgctxt "@info:whatsthis Accessible name for pager section"
 msgid "Desktop %1"
 msgstr "שולחן עבודה %1"
 
-#: qml/main.qml:441
+#: qml/main.qml:440
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr "מעבר אל %1"
 
-#: qml/main.qml:597
+#: qml/main.qml:596
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
 msgstr "הצגת מנהל הפעילויות"
 
-#: qml/main.qml:603
+#: qml/main.qml:602
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
 msgstr "הוספת שולחן עבודה וירטואלי"
 
-#: qml/main.qml:609
+#: qml/main.qml:608
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "הסרת שולחן עבודה וירטואלי"
 
-#: qml/main.qml:616
+#: qml/main.qml:615
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
 msgstr "הגדרת &פעילויות…"
 
-#: qml/main.qml:621
+#: qml/main.qml:620
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Configure Virtual Desktops…"

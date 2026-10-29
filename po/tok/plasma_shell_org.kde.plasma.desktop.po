@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-24 00:52+0000\n"
+"POT-Creation-Date: 2026-10-29 00:55+0000\n"
 "PO-Revision-Date: 2024-07-07 20:41-0400\n"
 "Last-Translator: Janet Blackquill <uhhadd@gmail.com>\n"
 "Language-Team: C <kde-i18n-doc@kde.org>\n"
@@ -98,88 +98,12 @@ msgctxt "@info:whatsthis Accessible description for panel widget %1"
 msgid "Open %1"
 msgstr "o open %1"
 
-#: contents/configuration/AboutPlugin.qml:22
+#: contents/configuration/AboutPlugin.qml:20
 #, fuzzy, kde-format
 #| msgid "About"
 msgctxt "@title:window About this widget"
 msgid "About"
 msgstr "sona"
-
-#: contents/configuration/AboutPlugin.qml:52
-#, fuzzy, kde-format
-#| msgid "Send an email to %1"
-msgctxt "plasma_shell_org.kde.plasma.desktop"
-msgid "Send an email to %1"
-msgstr "o pana e lipu Email tawa %1"
-
-#: contents/configuration/AboutPlugin.qml:66
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip %1 url"
-#| msgid "Open website %1"
-msgctxt "@action:button icononly for tooltip & accessible %1 is url"
-msgid "Open website %1"
-msgstr "o open e lipu linluwi %1"
-
-#: contents/configuration/AboutPlugin.qml:159
-#, kde-format
-msgctxt "@title:group"
-msgid "Website"
-msgstr ""
-
-#: contents/configuration/AboutPlugin.qml:170
-#, kde-format
-msgctxt "@title:group"
-msgid "Get Help"
-msgstr ""
-
-#: contents/configuration/AboutPlugin.qml:178
-#, fuzzy, kde-format
-#| msgid "Report a Bug…"
-msgctxt "@action:button urlbutton"
-msgid "Report an issue"
-msgstr "o toki e pakala…"
-
-#: contents/configuration/AboutPlugin.qml:185
-#, fuzzy, kde-format
-#| msgid "Copyright"
-msgctxt "@title license information"
-msgid "Copyright"
-msgstr "jan lawa"
-
-#: contents/configuration/AboutPlugin.qml:204
-#, fuzzy, kde-format
-#| msgid "License:"
-msgctxt "@label %1 is the short SPDX text for the license"
-msgid "License: %1"
-msgstr "lipu lawa:"
-
-#: contents/configuration/AboutPlugin.qml:210
-#, fuzzy, kde-format
-#| msgid "License:"
-msgctxt "@action:button"
-msgid "Read License"
-msgstr "lipu lawa:"
-
-#: contents/configuration/AboutPlugin.qml:224
-#, fuzzy, kde-format
-#| msgid "Authors"
-msgctxt "@title:group"
-msgid "Authors"
-msgstr "jan pali"
-
-#: contents/configuration/AboutPlugin.qml:236
-#, fuzzy, kde-format
-#| msgid "Credits"
-msgctxt "@title:group"
-msgid "Credits"
-msgstr "jan ante"
-
-#: contents/configuration/AboutPlugin.qml:249
-#, fuzzy, kde-format
-#| msgid "Translators"
-msgctxt "@title:group"
-msgid "Translators"
-msgstr "jan pi ante toki"
 
 #: contents/configuration/AppletConfiguration.qml:90
 #, fuzzy, kde-format
@@ -1318,6 +1242,61 @@ msgstr "o weka tan tomo ante"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Send an email to %1"
+#~ msgctxt "plasma_shell_org.kde.plasma.desktop"
+#~ msgid "Send an email to %1"
+#~ msgstr "o pana e lipu Email tawa %1"
+
+#, fuzzy
+#~| msgctxt "@info:tooltip %1 url"
+#~| msgid "Open website %1"
+#~ msgctxt "@action:button icononly for tooltip & accessible %1 is url"
+#~ msgid "Open website %1"
+#~ msgstr "o open e lipu linluwi %1"
+
+#, fuzzy
+#~| msgid "Report a Bug…"
+#~ msgctxt "@action:button urlbutton"
+#~ msgid "Report an issue"
+#~ msgstr "o toki e pakala…"
+
+#, fuzzy
+#~| msgid "Copyright"
+#~ msgctxt "@title license information"
+#~ msgid "Copyright"
+#~ msgstr "jan lawa"
+
+#, fuzzy
+#~| msgid "License:"
+#~ msgctxt "@label %1 is the short SPDX text for the license"
+#~ msgid "License: %1"
+#~ msgstr "lipu lawa:"
+
+#, fuzzy
+#~| msgid "License:"
+#~ msgctxt "@action:button"
+#~ msgid "Read License"
+#~ msgstr "lipu lawa:"
+
+#, fuzzy
+#~| msgid "Authors"
+#~ msgctxt "@title:group"
+#~ msgid "Authors"
+#~ msgstr "jan pali"
+
+#, fuzzy
+#~| msgid "Credits"
+#~ msgctxt "@title:group"
+#~ msgid "Credits"
+#~ msgstr "jan ante"
+
+#, fuzzy
+#~| msgid "Translators"
+#~ msgctxt "@title:group"
+#~ msgid "Translators"
+#~ msgstr "jan pi ante toki"
 
 #~ msgctxt ""
 #~ "@action:button Revert an unsupported configuration back to the defaults"

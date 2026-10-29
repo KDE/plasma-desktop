@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-24 00:52+0000\n"
+"POT-Creation-Date: 2026-10-29 00:55+0000\n"
 "PO-Revision-Date: 2026-09-27 21:36+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
@@ -100,77 +100,11 @@ msgctxt "@info:whatsthis Accessible description for panel widget %1"
 msgid "Open %1"
 msgstr "Opna %1"
 
-#: contents/configuration/AboutPlugin.qml:22
+#: contents/configuration/AboutPlugin.qml:20
 #, kde-format
 msgctxt "@title:window About this widget"
 msgid "About"
 msgstr "Om"
-
-#: contents/configuration/AboutPlugin.qml:52
-#, kde-format
-msgctxt "plasma_shell_org.kde.plasma.desktop"
-msgid "Send an email to %1"
-msgstr "Send e-post til %1"
-
-#: contents/configuration/AboutPlugin.qml:66
-#, kde-format
-msgctxt "@action:button icononly for tooltip & accessible %1 is url"
-msgid "Open website %1"
-msgstr "Opna heimesida %1"
-
-#: contents/configuration/AboutPlugin.qml:159
-#, kde-format
-msgctxt "@title:group"
-msgid "Website"
-msgstr "Heimeside"
-
-#: contents/configuration/AboutPlugin.qml:170
-#, kde-format
-msgctxt "@title:group"
-msgid "Get Help"
-msgstr "Få hjelp"
-
-#: contents/configuration/AboutPlugin.qml:178
-#, kde-format
-msgctxt "@action:button urlbutton"
-msgid "Report an issue"
-msgstr "Meld frå om feil"
-
-#: contents/configuration/AboutPlugin.qml:185
-#, kde-format
-msgctxt "@title license information"
-msgid "Copyright"
-msgstr "Opphavsrett"
-
-#: contents/configuration/AboutPlugin.qml:204
-#, kde-format
-msgctxt "@label %1 is the short SPDX text for the license"
-msgid "License: %1"
-msgstr "Lisens: %1"
-
-#: contents/configuration/AboutPlugin.qml:210
-#, kde-format
-msgctxt "@action:button"
-msgid "Read License"
-msgstr "Les lisensvilkåra"
-
-#: contents/configuration/AboutPlugin.qml:224
-#, kde-format
-msgctxt "@title:group"
-msgid "Authors"
-msgstr "Opphavspersonar"
-
-#: contents/configuration/AboutPlugin.qml:236
-#, kde-format
-msgctxt "@title:group"
-msgid "Credits"
-msgstr "Bidragsytarar"
-
-#: contents/configuration/AboutPlugin.qml:249
-#, kde-format
-msgctxt "@title:group"
-msgid "Translators"
-msgstr "Omsetjarar"
 
 #: contents/configuration/AppletConfiguration.qml:90
 #, kde-format
@@ -1244,3 +1178,47 @@ msgstr "Avslutt tilpassing"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Panelfokus-markør"
+
+#~ msgctxt "plasma_shell_org.kde.plasma.desktop"
+#~ msgid "Send an email to %1"
+#~ msgstr "Send e-post til %1"
+
+#~ msgctxt "@action:button icononly for tooltip & accessible %1 is url"
+#~ msgid "Open website %1"
+#~ msgstr "Opna heimesida %1"
+
+#~ msgctxt "@title:group"
+#~ msgid "Website"
+#~ msgstr "Heimeside"
+
+#~ msgctxt "@title:group"
+#~ msgid "Get Help"
+#~ msgstr "Få hjelp"
+
+#~ msgctxt "@action:button urlbutton"
+#~ msgid "Report an issue"
+#~ msgstr "Meld frå om feil"
+
+#~ msgctxt "@title license information"
+#~ msgid "Copyright"
+#~ msgstr "Opphavsrett"
+
+#~ msgctxt "@label %1 is the short SPDX text for the license"
+#~ msgid "License: %1"
+#~ msgstr "Lisens: %1"
+
+#~ msgctxt "@action:button"
+#~ msgid "Read License"
+#~ msgstr "Les lisensvilkåra"
+
+#~ msgctxt "@title:group"
+#~ msgid "Authors"
+#~ msgstr "Opphavspersonar"
+
+#~ msgctxt "@title:group"
+#~ msgid "Credits"
+#~ msgstr "Bidragsytarar"
+
+#~ msgctxt "@title:group"
+#~ msgid "Translators"
+#~ msgstr "Omsetjarar"

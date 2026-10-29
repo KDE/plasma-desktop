@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-24 00:52+0000\n"
+"POT-Creation-Date: 2026-10-29 00:55+0000\n"
 "PO-Revision-Date: 2026-06-15 16:28+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -103,77 +103,11 @@ msgctxt "@info:whatsthis Accessible description for panel widget %1"
 msgid "Open %1"
 msgstr "Deschide %1"
 
-#: contents/configuration/AboutPlugin.qml:22
+#: contents/configuration/AboutPlugin.qml:20
 #, kde-format
 msgctxt "@title:window About this widget"
 msgid "About"
 msgstr "Despre"
-
-#: contents/configuration/AboutPlugin.qml:52
-#, kde-format
-msgctxt "plasma_shell_org.kde.plasma.desktop"
-msgid "Send an email to %1"
-msgstr "Trimite scrisoare către %1"
-
-#: contents/configuration/AboutPlugin.qml:66
-#, kde-format
-msgctxt "@action:button icononly for tooltip & accessible %1 is url"
-msgid "Open website %1"
-msgstr "Deschide saitul %1"
-
-#: contents/configuration/AboutPlugin.qml:159
-#, kde-format
-msgctxt "@title:group"
-msgid "Website"
-msgstr "Sait"
-
-#: contents/configuration/AboutPlugin.qml:170
-#, kde-format
-msgctxt "@title:group"
-msgid "Get Help"
-msgstr "Obține ajutor"
-
-#: contents/configuration/AboutPlugin.qml:178
-#, kde-format
-msgctxt "@action:button urlbutton"
-msgid "Report an issue"
-msgstr "Raportează o problemă"
-
-#: contents/configuration/AboutPlugin.qml:185
-#, kde-format
-msgctxt "@title license information"
-msgid "Copyright"
-msgstr "Drept de autor"
-
-#: contents/configuration/AboutPlugin.qml:204
-#, kde-format
-msgctxt "@label %1 is the short SPDX text for the license"
-msgid "License: %1"
-msgstr "Licență: %1"
-
-#: contents/configuration/AboutPlugin.qml:210
-#, kde-format
-msgctxt "@action:button"
-msgid "Read License"
-msgstr "Citește licența"
-
-#: contents/configuration/AboutPlugin.qml:224
-#, kde-format
-msgctxt "@title:group"
-msgid "Authors"
-msgstr "Autori"
-
-#: contents/configuration/AboutPlugin.qml:236
-#, kde-format
-msgctxt "@title:group"
-msgid "Credits"
-msgstr "Mulțumiri"
-
-#: contents/configuration/AboutPlugin.qml:249
-#, kde-format
-msgctxt "@title:group"
-msgid "Translators"
-msgstr "Traducători"
 
 #: contents/configuration/AppletConfiguration.qml:90
 #, kde-format
@@ -1266,6 +1200,50 @@ msgstr "Ieși din regim de modificare"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Indicator de focalizare a panoului"
+
+#~ msgctxt "plasma_shell_org.kde.plasma.desktop"
+#~ msgid "Send an email to %1"
+#~ msgstr "Trimite scrisoare către %1"
+
+#~ msgctxt "@action:button icononly for tooltip & accessible %1 is url"
+#~ msgid "Open website %1"
+#~ msgstr "Deschide saitul %1"
+
+#~ msgctxt "@title:group"
+#~ msgid "Website"
+#~ msgstr "Sait"
+
+#~ msgctxt "@title:group"
+#~ msgid "Get Help"
+#~ msgstr "Obține ajutor"
+
+#~ msgctxt "@action:button urlbutton"
+#~ msgid "Report an issue"
+#~ msgstr "Raportează o problemă"
+
+#~ msgctxt "@title license information"
+#~ msgid "Copyright"
+#~ msgstr "Drept de autor"
+
+#~ msgctxt "@label %1 is the short SPDX text for the license"
+#~ msgid "License: %1"
+#~ msgstr "Licență: %1"
+
+#~ msgctxt "@action:button"
+#~ msgid "Read License"
+#~ msgstr "Citește licența"
+
+#~ msgctxt "@title:group"
+#~ msgid "Authors"
+#~ msgstr "Autori"
+
+#~ msgctxt "@title:group"
+#~ msgid "Credits"
+#~ msgstr "Mulțumiri"
+
+#~ msgctxt "@title:group"
+#~ msgid "Translators"
+#~ msgstr "Traducători"
 
 #~ msgctxt "@action:button tooltip only, opens kcm"
 #~ msgid "Configure"

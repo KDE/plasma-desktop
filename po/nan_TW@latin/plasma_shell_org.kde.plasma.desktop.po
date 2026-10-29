@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-24 00:52+0000\n"
+"POT-Creation-Date: 2026-10-29 00:55+0000\n"
 "PO-Revision-Date: 2026-10-16 20:09+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
@@ -97,77 +97,11 @@ msgctxt "@info:whatsthis Accessible description for panel widget %1"
 msgid "Open %1"
 msgstr "Phah-khui %1"
 
-#: contents/configuration/AboutPlugin.qml:22
+#: contents/configuration/AboutPlugin.qml:20
 #, kde-format
 msgctxt "@title:window About this widget"
 msgid "About"
 msgstr "Siāu-kài"
-
-#: contents/configuration/AboutPlugin.qml:52
-#, kde-format
-msgctxt "plasma_shell_org.kde.plasma.desktop"
-msgid "Send an email to %1"
-msgstr "Kià tiān-tsú-phue-sìn hōo %1"
-
-#: contents/configuration/AboutPlugin.qml:66
-#, kde-format
-msgctxt "@action:button icononly for tooltip & accessible %1 is url"
-msgid "Open website %1"
-msgstr "Phah-khui bāng-tsām %1"
-
-#: contents/configuration/AboutPlugin.qml:159
-#, kde-format
-msgctxt "@title:group"
-msgid "Website"
-msgstr "Bāng-tsām"
-
-#: contents/configuration/AboutPlugin.qml:170
-#, kde-format
-msgctxt "@title:group"
-msgid "Get Help"
-msgstr "Suat-bîng"
-
-#: contents/configuration/AboutPlugin.qml:178
-#, kde-format
-msgctxt "@action:button urlbutton"
-msgid "Report an issue"
-msgstr "Huê-pò būn-tê"
-
-#: contents/configuration/AboutPlugin.qml:185
-#, kde-format
-msgctxt "@title license information"
-msgid "Copyright"
-msgstr "Tù-tsok-khuân"
-
-#: contents/configuration/AboutPlugin.qml:204
-#, kde-format
-msgctxt "@label %1 is the short SPDX text for the license"
-msgid "License: %1"
-msgstr "Siū-khuân: %1"
-
-#: contents/configuration/AboutPlugin.qml:210
-#, kde-format
-msgctxt "@action:button"
-msgid "Read License"
-msgstr "Tha̍k Siū-khuân"
-
-#: contents/configuration/AboutPlugin.qml:224
-#, kde-format
-msgctxt "@title:group"
-msgid "Authors"
-msgstr "Tsok-tsiá"
-
-#: contents/configuration/AboutPlugin.qml:236
-#, kde-format
-msgctxt "@title:group"
-msgid "Credits"
-msgstr "Kám-siā"
-
-#: contents/configuration/AboutPlugin.qml:249
-#, kde-format
-msgctxt "@title:group"
-msgid "Translators"
-msgstr "Huan-i̍k"
 
 #: contents/configuration/AppletConfiguration.qml:90
 #, kde-format
@@ -1226,6 +1160,50 @@ msgstr "Lī-khui Pian-tsi̍p Bôo-sik"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Bīn-pán Tsiau-tiám Tsí-sī-khì"
+
+#~ msgctxt "plasma_shell_org.kde.plasma.desktop"
+#~ msgid "Send an email to %1"
+#~ msgstr "Kià tiān-tsú-phue-sìn hōo %1"
+
+#~ msgctxt "@action:button icononly for tooltip & accessible %1 is url"
+#~ msgid "Open website %1"
+#~ msgstr "Phah-khui bāng-tsām %1"
+
+#~ msgctxt "@title:group"
+#~ msgid "Website"
+#~ msgstr "Bāng-tsām"
+
+#~ msgctxt "@title:group"
+#~ msgid "Get Help"
+#~ msgstr "Suat-bîng"
+
+#~ msgctxt "@action:button urlbutton"
+#~ msgid "Report an issue"
+#~ msgstr "Huê-pò būn-tê"
+
+#~ msgctxt "@title license information"
+#~ msgid "Copyright"
+#~ msgstr "Tù-tsok-khuân"
+
+#~ msgctxt "@label %1 is the short SPDX text for the license"
+#~ msgid "License: %1"
+#~ msgstr "Siū-khuân: %1"
+
+#~ msgctxt "@action:button"
+#~ msgid "Read License"
+#~ msgstr "Tha̍k Siū-khuân"
+
+#~ msgctxt "@title:group"
+#~ msgid "Authors"
+#~ msgstr "Tsok-tsiá"
+
+#~ msgctxt "@title:group"
+#~ msgid "Credits"
+#~ msgstr "Kám-siā"
+
+#~ msgctxt "@title:group"
+#~ msgid "Translators"
+#~ msgstr "Huan-i̍k"
 
 #~ msgctxt "@action:button tooltip only, opens kcm"
 #~ msgid "Configure"

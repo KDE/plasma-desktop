@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-24 00:52+0000\n"
+"POT-Creation-Date: 2026-10-29 00:55+0000\n"
 "PO-Revision-Date: 2026-09-14 20:10+0200\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -101,77 +101,11 @@ msgctxt "@info:whatsthis Accessible description for panel widget %1"
 msgid "Open %1"
 msgstr "Otvoriť %1"
 
-#: contents/configuration/AboutPlugin.qml:22
+#: contents/configuration/AboutPlugin.qml:20
 #, kde-format
 msgctxt "@title:window About this widget"
 msgid "About"
 msgstr "O aplikácii"
-
-#: contents/configuration/AboutPlugin.qml:52
-#, kde-format
-msgctxt "plasma_shell_org.kde.plasma.desktop"
-msgid "Send an email to %1"
-msgstr "Odoslať email na %1"
-
-#: contents/configuration/AboutPlugin.qml:66
-#, kde-format
-msgctxt "@action:button icononly for tooltip & accessible %1 is url"
-msgid "Open website %1"
-msgstr "Otvoriť webovú stránku %1"
-
-#: contents/configuration/AboutPlugin.qml:159
-#, kde-format
-msgctxt "@title:group"
-msgid "Website"
-msgstr "Webová stránka"
-
-#: contents/configuration/AboutPlugin.qml:170
-#, kde-format
-msgctxt "@title:group"
-msgid "Get Help"
-msgstr "Získať pomocníka"
-
-#: contents/configuration/AboutPlugin.qml:178
-#, kde-format
-msgctxt "@action:button urlbutton"
-msgid "Report an issue"
-msgstr "Nahlásiť problém"
-
-#: contents/configuration/AboutPlugin.qml:185
-#, kde-format
-msgctxt "@title license information"
-msgid "Copyright"
-msgstr "Copyright"
-
-#: contents/configuration/AboutPlugin.qml:204
-#, kde-format
-msgctxt "@label %1 is the short SPDX text for the license"
-msgid "License: %1"
-msgstr "Licencia: %1"
-
-#: contents/configuration/AboutPlugin.qml:210
-#, kde-format
-msgctxt "@action:button"
-msgid "Read License"
-msgstr "Prečítať licenciu"
-
-#: contents/configuration/AboutPlugin.qml:224
-#, kde-format
-msgctxt "@title:group"
-msgid "Authors"
-msgstr "Autori"
-
-#: contents/configuration/AboutPlugin.qml:236
-#, kde-format
-msgctxt "@title:group"
-msgid "Credits"
-msgstr "Zásluhy"
-
-#: contents/configuration/AboutPlugin.qml:249
-#, kde-format
-msgctxt "@title:group"
-msgid "Translators"
-msgstr "Prekladatelia"
 
 #: contents/configuration/AppletConfiguration.qml:90
 #, kde-format
@@ -1252,6 +1186,50 @@ msgstr "Ukončiť režim úprav"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Indikátor zamerania panela"
+
+#~ msgctxt "plasma_shell_org.kde.plasma.desktop"
+#~ msgid "Send an email to %1"
+#~ msgstr "Odoslať email na %1"
+
+#~ msgctxt "@action:button icononly for tooltip & accessible %1 is url"
+#~ msgid "Open website %1"
+#~ msgstr "Otvoriť webovú stránku %1"
+
+#~ msgctxt "@title:group"
+#~ msgid "Website"
+#~ msgstr "Webová stránka"
+
+#~ msgctxt "@title:group"
+#~ msgid "Get Help"
+#~ msgstr "Získať pomocníka"
+
+#~ msgctxt "@action:button urlbutton"
+#~ msgid "Report an issue"
+#~ msgstr "Nahlásiť problém"
+
+#~ msgctxt "@title license information"
+#~ msgid "Copyright"
+#~ msgstr "Copyright"
+
+#~ msgctxt "@label %1 is the short SPDX text for the license"
+#~ msgid "License: %1"
+#~ msgstr "Licencia: %1"
+
+#~ msgctxt "@action:button"
+#~ msgid "Read License"
+#~ msgstr "Prečítať licenciu"
+
+#~ msgctxt "@title:group"
+#~ msgid "Authors"
+#~ msgstr "Autori"
+
+#~ msgctxt "@title:group"
+#~ msgid "Credits"
+#~ msgstr "Zásluhy"
+
+#~ msgctxt "@title:group"
+#~ msgid "Translators"
+#~ msgstr "Prekladatelia"
 
 #~ msgctxt "@action:button tooltip only, opens kcm"
 #~ msgid "Configure"

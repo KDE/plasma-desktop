@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-24 00:52+0000\n"
+"POT-Creation-Date: 2026-10-29 00:55+0000\n"
 "PO-Revision-Date: 2026-08-20 07:12+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -101,77 +101,11 @@ msgctxt "@info:whatsthis Accessible description for panel widget %1"
 msgid "Open %1"
 msgstr "Odpri %1"
 
-#: contents/configuration/AboutPlugin.qml:22
+#: contents/configuration/AboutPlugin.qml:20
 #, kde-format
 msgctxt "@title:window About this widget"
 msgid "About"
 msgstr "O programu"
-
-#: contents/configuration/AboutPlugin.qml:52
-#, kde-format
-msgctxt "plasma_shell_org.kde.plasma.desktop"
-msgid "Send an email to %1"
-msgstr "Pošlji e-pošto za %1"
-
-#: contents/configuration/AboutPlugin.qml:66
-#, kde-format
-msgctxt "@action:button icononly for tooltip & accessible %1 is url"
-msgid "Open website %1"
-msgstr "Odpri spletišče %1"
-
-#: contents/configuration/AboutPlugin.qml:159
-#, kde-format
-msgctxt "@title:group"
-msgid "Website"
-msgstr "Spletišče"
-
-#: contents/configuration/AboutPlugin.qml:170
-#, kde-format
-msgctxt "@title:group"
-msgid "Get Help"
-msgstr "Dobi pomoč"
-
-#: contents/configuration/AboutPlugin.qml:178
-#, kde-format
-msgctxt "@action:button urlbutton"
-msgid "Report an issue"
-msgstr "Poročaj o težavi"
-
-#: contents/configuration/AboutPlugin.qml:185
-#, kde-format
-msgctxt "@title license information"
-msgid "Copyright"
-msgstr "Copyright"
-
-#: contents/configuration/AboutPlugin.qml:204
-#, kde-format
-msgctxt "@label %1 is the short SPDX text for the license"
-msgid "License: %1"
-msgstr "Licenca: %1"
-
-#: contents/configuration/AboutPlugin.qml:210
-#, kde-format
-msgctxt "@action:button"
-msgid "Read License"
-msgstr "Preberi licenco"
-
-#: contents/configuration/AboutPlugin.qml:224
-#, kde-format
-msgctxt "@title:group"
-msgid "Authors"
-msgstr "Avtorji"
-
-#: contents/configuration/AboutPlugin.qml:236
-#, kde-format
-msgctxt "@title:group"
-msgid "Credits"
-msgstr "Zasluge"
-
-#: contents/configuration/AboutPlugin.qml:249
-#, kde-format
-msgctxt "@title:group"
-msgid "Translators"
-msgstr "Prevajalci"
 
 #: contents/configuration/AppletConfiguration.qml:90
 #, kde-format
@@ -1281,6 +1215,50 @@ msgstr "Izhod iz urejevalnega načina"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Indikator fokusa plošče"
+
+#~ msgctxt "plasma_shell_org.kde.plasma.desktop"
+#~ msgid "Send an email to %1"
+#~ msgstr "Pošlji e-pošto za %1"
+
+#~ msgctxt "@action:button icononly for tooltip & accessible %1 is url"
+#~ msgid "Open website %1"
+#~ msgstr "Odpri spletišče %1"
+
+#~ msgctxt "@title:group"
+#~ msgid "Website"
+#~ msgstr "Spletišče"
+
+#~ msgctxt "@title:group"
+#~ msgid "Get Help"
+#~ msgstr "Dobi pomoč"
+
+#~ msgctxt "@action:button urlbutton"
+#~ msgid "Report an issue"
+#~ msgstr "Poročaj o težavi"
+
+#~ msgctxt "@title license information"
+#~ msgid "Copyright"
+#~ msgstr "Copyright"
+
+#~ msgctxt "@label %1 is the short SPDX text for the license"
+#~ msgid "License: %1"
+#~ msgstr "Licenca: %1"
+
+#~ msgctxt "@action:button"
+#~ msgid "Read License"
+#~ msgstr "Preberi licenco"
+
+#~ msgctxt "@title:group"
+#~ msgid "Authors"
+#~ msgstr "Avtorji"
+
+#~ msgctxt "@title:group"
+#~ msgid "Credits"
+#~ msgstr "Zasluge"
+
+#~ msgctxt "@title:group"
+#~ msgid "Translators"
+#~ msgstr "Prevajalci"
 
 #~ msgctxt "@action:button tooltip only, opens kcm"
 #~ msgid "Configure"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-23 00:50+0000\n"
+"POT-Creation-Date: 2026-10-29 00:55+0000\n"
 "PO-Revision-Date: 2016-11-28 01:33+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -168,7 +168,7 @@ msgstr[1] "…и још %1 прозора"
 msgstr[2] "…и још %1 прозора"
 msgstr[3] "…и још један прозор"
 
-#: qml/main.qml:352
+#: qml/main.qml:351
 #, kde-format
 msgctxt "@info:tooltip start of list"
 msgid "%1 Window:"
@@ -178,7 +178,7 @@ msgstr[1] "%1 прозора:"
 msgstr[2] "%1 прозора:"
 msgstr[3] "%1 прозор:"
 
-#: qml/main.qml:364
+#: qml/main.qml:363
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "%1 Minimized Window:"
@@ -189,43 +189,43 @@ msgstr[2] "%1 минимизованих прозора:"
 msgstr[3] "%1 минимизован прозор:"
 
 # >> @option:radio Display:
-#: qml/main.qml:440
+#: qml/main.qml:439
 #, kde-format
 msgctxt "@info:whatsthis Accessible name for pager section"
 msgid "Desktop %1"
 msgstr "Површ %1"
 
-#: qml/main.qml:441
+#: qml/main.qml:440
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr "Пребаци на %1"
 
-#: qml/main.qml:597
+#: qml/main.qml:596
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
 msgstr "Прикажи менаџер активности"
 
-#: qml/main.qml:603
+#: qml/main.qml:602
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
 msgstr "Додај виртуелну површ"
 
-#: qml/main.qml:609
+#: qml/main.qml:608
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "Уклони виртуелну површ"
 
-#: qml/main.qml:616
+#: qml/main.qml:615
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
 msgstr "&Подеси активности…"
 
-#: qml/main.qml:621
+#: qml/main.qml:620
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Configure Virtual Desktops…"

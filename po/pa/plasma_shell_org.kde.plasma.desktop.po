@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-24 00:52+0000\n"
+"POT-Creation-Date: 2026-10-29 00:55+0000\n"
 "PO-Revision-Date: 2026-10-12 20:17-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -97,77 +97,11 @@ msgctxt "@info:whatsthis Accessible description for panel widget %1"
 msgid "Open %1"
 msgstr "%1 ਨਾਲ ਖੋਲ੍ਹੋ"
 
-#: contents/configuration/AboutPlugin.qml:22
+#: contents/configuration/AboutPlugin.qml:20
 #, kde-format
 msgctxt "@title:window About this widget"
 msgid "About"
 msgstr "ਇਸ ਬਾਰੇ"
-
-#: contents/configuration/AboutPlugin.qml:52
-#, kde-format
-msgctxt "plasma_shell_org.kde.plasma.desktop"
-msgid "Send an email to %1"
-msgstr "%1 ਨੂੰ ਈਮੇਲ ਭੇਜੋ"
-
-#: contents/configuration/AboutPlugin.qml:66
-#, kde-format
-msgctxt "@action:button icononly for tooltip & accessible %1 is url"
-msgid "Open website %1"
-msgstr "%1 ਵੈੱਬਸਾਈਟ ਨੂੰ ਖੋਲ੍ਹੋ"
-
-#: contents/configuration/AboutPlugin.qml:159
-#, kde-format
-msgctxt "@title:group"
-msgid "Website"
-msgstr "ਵੈੱਬਸਾਈਟ"
-
-#: contents/configuration/AboutPlugin.qml:170
-#, kde-format
-msgctxt "@title:group"
-msgid "Get Help"
-msgstr "ਮਦਦ ਲਵੋ"
-
-#: contents/configuration/AboutPlugin.qml:178
-#, kde-format
-msgctxt "@action:button urlbutton"
-msgid "Report an issue"
-msgstr "ਮਸਲੇ ਦੀ ਜਾਣਕਾਰੀ ਦਿਓ"
-
-#: contents/configuration/AboutPlugin.qml:185
-#, kde-format
-msgctxt "@title license information"
-msgid "Copyright"
-msgstr "ਕਾਪੀਰਾਈਟ"
-
-#: contents/configuration/AboutPlugin.qml:204
-#, kde-format
-msgctxt "@label %1 is the short SPDX text for the license"
-msgid "License: %1"
-msgstr "ਲਸੰਸ: %1"
-
-#: contents/configuration/AboutPlugin.qml:210
-#, kde-format
-msgctxt "@action:button"
-msgid "Read License"
-msgstr "ਲਸੰਸ ਨੂੰ ਪੜ੍ਹੋ"
-
-#: contents/configuration/AboutPlugin.qml:224
-#, kde-format
-msgctxt "@title:group"
-msgid "Authors"
-msgstr "ਲੇਖਕ"
-
-#: contents/configuration/AboutPlugin.qml:236
-#, kde-format
-msgctxt "@title:group"
-msgid "Credits"
-msgstr "ਮਾਣ"
-
-#: contents/configuration/AboutPlugin.qml:249
-#, kde-format
-msgctxt "@title:group"
-msgid "Translators"
-msgstr "ਉਲੱਥਾਕਾਰ"
 
 #: contents/configuration/AppletConfiguration.qml:90
 #, kde-format
@@ -1234,6 +1168,50 @@ msgstr "ਸੋਧ ਢੰਗ ਨੂੰ ਛੱਡੋ"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "ਪੈਨਲ ਫੋਕਸ ਸੰਕੇਤਕ"
+
+#~ msgctxt "plasma_shell_org.kde.plasma.desktop"
+#~ msgid "Send an email to %1"
+#~ msgstr "%1 ਨੂੰ ਈਮੇਲ ਭੇਜੋ"
+
+#~ msgctxt "@action:button icononly for tooltip & accessible %1 is url"
+#~ msgid "Open website %1"
+#~ msgstr "%1 ਵੈੱਬਸਾਈਟ ਨੂੰ ਖੋਲ੍ਹੋ"
+
+#~ msgctxt "@title:group"
+#~ msgid "Website"
+#~ msgstr "ਵੈੱਬਸਾਈਟ"
+
+#~ msgctxt "@title:group"
+#~ msgid "Get Help"
+#~ msgstr "ਮਦਦ ਲਵੋ"
+
+#~ msgctxt "@action:button urlbutton"
+#~ msgid "Report an issue"
+#~ msgstr "ਮਸਲੇ ਦੀ ਜਾਣਕਾਰੀ ਦਿਓ"
+
+#~ msgctxt "@title license information"
+#~ msgid "Copyright"
+#~ msgstr "ਕਾਪੀਰਾਈਟ"
+
+#~ msgctxt "@label %1 is the short SPDX text for the license"
+#~ msgid "License: %1"
+#~ msgstr "ਲਸੰਸ: %1"
+
+#~ msgctxt "@action:button"
+#~ msgid "Read License"
+#~ msgstr "ਲਸੰਸ ਨੂੰ ਪੜ੍ਹੋ"
+
+#~ msgctxt "@title:group"
+#~ msgid "Authors"
+#~ msgstr "ਲੇਖਕ"
+
+#~ msgctxt "@title:group"
+#~ msgid "Credits"
+#~ msgstr "ਮਾਣ"
+
+#~ msgctxt "@title:group"
+#~ msgid "Translators"
+#~ msgstr "ਉਲੱਥਾਕਾਰ"
 
 #~ msgctxt "@action:button tooltip only, opens kcm"
 #~ msgid "Configure"

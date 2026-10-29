@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-24 00:52+0000\n"
+"POT-Creation-Date: 2026-10-29 00:55+0000\n"
 "PO-Revision-Date: 2026-09-24 20:13-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -94,77 +94,11 @@ msgctxt "@info:whatsthis Accessible description for panel widget %1"
 msgid "Open %1"
 msgstr "%1 نى ئاچ"
 
-#: contents/configuration/AboutPlugin.qml:22
+#: contents/configuration/AboutPlugin.qml:20
 #, kde-format
 msgctxt "@title:window About this widget"
 msgid "About"
 msgstr "ھەققىدە"
-
-#: contents/configuration/AboutPlugin.qml:52
-#, kde-format
-msgctxt "plasma_shell_org.kde.plasma.desktop"
-msgid "Send an email to %1"
-msgstr "%1 غا ئېلخەت يوللايدۇ"
-
-#: contents/configuration/AboutPlugin.qml:66
-#, kde-format
-msgctxt "@action:button icononly for tooltip & accessible %1 is url"
-msgid "Open website %1"
-msgstr "%1 تور بېكەتنى ئاچ"
-
-#: contents/configuration/AboutPlugin.qml:159
-#, kde-format
-msgctxt "@title:group"
-msgid "Website"
-msgstr "تور بېكەت"
-
-#: contents/configuration/AboutPlugin.qml:170
-#, kde-format
-msgctxt "@title:group"
-msgid "Get Help"
-msgstr "ياردەمگە ئېرىش"
-
-#: contents/configuration/AboutPlugin.qml:178
-#, kde-format
-msgctxt "@action:button urlbutton"
-msgid "Report an issue"
-msgstr "مەسىلە مەلۇم قىل"
-
-#: contents/configuration/AboutPlugin.qml:185
-#, kde-format
-msgctxt "@title license information"
-msgid "Copyright"
-msgstr "نەشر ھوقۇقى"
-
-#: contents/configuration/AboutPlugin.qml:204
-#, kde-format
-msgctxt "@label %1 is the short SPDX text for the license"
-msgid "License: %1"
-msgstr "ئىجازەتنامە: %1"
-
-#: contents/configuration/AboutPlugin.qml:210
-#, kde-format
-msgctxt "@action:button"
-msgid "Read License"
-msgstr "ئىجازەتنامە ئوقۇڭ"
-
-#: contents/configuration/AboutPlugin.qml:224
-#, kde-format
-msgctxt "@title:group"
-msgid "Authors"
-msgstr "يازغۇچى"
-
-#: contents/configuration/AboutPlugin.qml:236
-#, kde-format
-msgctxt "@title:group"
-msgid "Credits"
-msgstr "تەشەككۈر"
-
-#: contents/configuration/AboutPlugin.qml:249
-#, kde-format
-msgctxt "@title:group"
-msgid "Translators"
-msgstr "تەرجىمان"
 
 #: contents/configuration/AppletConfiguration.qml:90
 #, kde-format
@@ -1230,6 +1164,50 @@ msgstr "تەھرىرلەش ھالىتىدىن چېكىنىدۇ"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "كۆزنەكچە فوكۇس كۆرسەتكۈچ"
+
+#~ msgctxt "plasma_shell_org.kde.plasma.desktop"
+#~ msgid "Send an email to %1"
+#~ msgstr "%1 غا ئېلخەت يوللايدۇ"
+
+#~ msgctxt "@action:button icononly for tooltip & accessible %1 is url"
+#~ msgid "Open website %1"
+#~ msgstr "%1 تور بېكەتنى ئاچ"
+
+#~ msgctxt "@title:group"
+#~ msgid "Website"
+#~ msgstr "تور بېكەت"
+
+#~ msgctxt "@title:group"
+#~ msgid "Get Help"
+#~ msgstr "ياردەمگە ئېرىش"
+
+#~ msgctxt "@action:button urlbutton"
+#~ msgid "Report an issue"
+#~ msgstr "مەسىلە مەلۇم قىل"
+
+#~ msgctxt "@title license information"
+#~ msgid "Copyright"
+#~ msgstr "نەشر ھوقۇقى"
+
+#~ msgctxt "@label %1 is the short SPDX text for the license"
+#~ msgid "License: %1"
+#~ msgstr "ئىجازەتنامە: %1"
+
+#~ msgctxt "@action:button"
+#~ msgid "Read License"
+#~ msgstr "ئىجازەتنامە ئوقۇڭ"
+
+#~ msgctxt "@title:group"
+#~ msgid "Authors"
+#~ msgstr "يازغۇچى"
+
+#~ msgctxt "@title:group"
+#~ msgid "Credits"
+#~ msgstr "تەشەككۈر"
+
+#~ msgctxt "@title:group"
+#~ msgid "Translators"
+#~ msgstr "تەرجىمان"
 
 #~ msgctxt "@action:button tooltip only, opens kcm"
 #~ msgid "Configure"
