@@ -442,6 +442,11 @@ FocusScope {
 
             // Update rubberband geometry.
             if (main.rubberBand) {
+                if (!mouse.buttons & Qt.LeftButton) {
+                    pressCanceled()
+                    return;
+                }
+
                 let rB = main.rubberBand;
                 let cPos = mapToItem(gridView.contentItem, mouse.x, mouse.y);
 
@@ -1339,7 +1344,7 @@ FocusScope {
 
             onModelReset: {
                 // When reset, listener.pressedItem will be invalidated.
-                listener.clearPressState();
+                listener.pressedItem = null;
             }
         }
 
