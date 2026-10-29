@@ -57,7 +57,6 @@ KCMUtils.SimpleKCM {
                         text: i18ndc("kcm_clock", "@action:button as in set the current time on the machine", "Set Time")
                         onClicked: {
                             let dialog = Qt.createComponent("org.kde.kirigamiaddons.dateandtime", "TimePopup").createObject(QQC2.Overlay.overlay, {
-                                width: Kirigami.Units.gridUnit * 12,
                                 height: Kirigami.Units.gridUnit * 18,
                                 value: root.KCMUtils.ConfigModule.dateTime
                             }) as DateAndTime.TimePopup;
