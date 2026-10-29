@@ -95,7 +95,7 @@ PlasmaComponents3.ScrollView {
         Qt.callLater( () =>{
             if (ActionMenu.opened) {
                 return
-            } else if (hovered || (listView.currentItem as ItemListDelegate).dragActive) {
+            } else if (hovered || (listView.currentItem as ItemListDelegate).dragActive || (listView.currentItem as ItemListDelegate).containsMouse) {
                 resetIndexTimer.stop();
             } else {
                 resetIndexTimer.start();
