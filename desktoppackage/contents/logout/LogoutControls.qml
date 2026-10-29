@@ -186,8 +186,8 @@ Item {
                 id: suspendButton
                 objectName: "suspendButton"
                 icon.name: "system-suspend"
-                text: controls.showAllOptions ? i18ndc("plasma_shell_org.kde.plasma.desktop", "Suspend to RAM", "Slee&p")
-                                          : i18ndc("plasma_shell_org.kde.plasma.desktop", "Suspend to RAM", "Slee&p Now")
+                text: controls.hostRoot.everCountedDown ? i18ndc("plasma_shell_org.kde.plasma.desktop", "Suspend to RAM", "Slee&p Now")
+                                                        : i18ndc("plasma_shell_org.kde.plasma.desktop", "Suspend to RAM", "Slee&p")
                 onClicked: controls.hostRoot.sleepRequested()
                 KeyNavigation.left: cancelButton
                 KeyNavigation.right: hibernateButton.visible ? hibernateButton : (rebootButton.visible ? rebootButton : (shutdownButton.visible ? shutdownButton : (logoutButton.visible ? logoutButton : cancelButton)))
@@ -197,8 +197,8 @@ Item {
                 id: hibernateButton
                 objectName: "hibernateButton"
                 icon.name: "system-suspend-hibernate"
-                text: controls.showAllOptions ? i18nd("plasma_shell_org.kde.plasma.desktop", "&Hibernate")
-                                          : i18nd("plasma_shell_org.kde.plasma.desktop", "&Hibernate Now")
+                text: controls.hostRoot.everCountedDown ? i18nd("plasma_shell_org.kde.plasma.desktop", "&Hibernate Now")
+                                                        : i18nd("plasma_shell_org.kde.plasma.desktop", "&Hibernate")
                 onClicked: controls.hostRoot.hibernateRequested()
                 KeyNavigation.left: suspendButton.visible ? suspendButton : cancelButton
                 KeyNavigation.right: rebootButton.visible ? rebootButton : (shutdownButton.visible ? shutdownButton : (logoutButton.visible ? logoutButton : cancelButton))
@@ -212,8 +212,8 @@ Item {
                     if (softwareUpdatePending) {
                         return i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button Keep short", "Install Updates and Restart")
                     } else {
-                        return controls.showAllOptions ? i18nd("plasma_shell_org.kde.plasma.desktop", "&Restart")
-                                                   : i18nd("plasma_shell_org.kde.plasma.desktop", "&Restart Now")
+                        return controls.hostRoot.everCountedDown ? i18nd("plasma_shell_org.kde.plasma.desktop", "&Restart Now")
+                                                                 : i18nd("plasma_shell_org.kde.plasma.desktop", "&Restart")
                     }
                 }
                 onClicked: {
@@ -232,8 +232,8 @@ Item {
                 id: rebootWithoutUpdatesButton
                 objectName: "rebootWithoutUpdatesButton"
                 icon.name: "system-reboot"
-                text: controls.showAllOptions ? i18nd("plasma_shell_org.kde.plasma.desktop", "&Restart")
-                                          : i18nd("plasma_shell_org.kde.plasma.desktop", "&Restart Now")
+                text: controls.hostRoot.everCountedDown ? i18nd("plasma_shell_org.kde.plasma.desktop", "&Restart Now")
+                                                        : i18nd("plasma_shell_org.kde.plasma.desktop", "&Restart")
                 onClicked: {
                     controls.hostRoot.rebootRequested();
                 }
@@ -249,8 +249,8 @@ Item {
                     if (softwareUpdatePending) {
                         return i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button Keep short", "Install Updates and Shut Down")
                     } else {
-                        return controls.showAllOptions ? i18nd("plasma_shell_org.kde.plasma.desktop", "&Shut Down")
-                                                   : i18nd("plasma_shell_org.kde.plasma.desktop", "&Shut Down Now")
+                        return controls.hostRoot.everCountedDown ? i18nd("plasma_shell_org.kde.plasma.desktop", "&Shut Down Now")
+                                                                 : i18nd("plasma_shell_org.kde.plasma.desktop", "&Shut Down")
                     }
                 }
                 onClicked: {
@@ -269,8 +269,8 @@ Item {
                 id: shutdownWithoutUpdatesButton
                 objectName: "shutdownWithoutUpdatesButton"
                 icon.name: "system-shutdown"
-                text: controls.showAllOptions ? i18nd("plasma_shell_org.kde.plasma.desktop", "&Shut Down")
-                                          : i18nd("plasma_shell_org.kde.plasma.desktop", "&Shut Down Now")
+                text: controls.hostRoot.everCountedDown ? i18nd("plasma_shell_org.kde.plasma.desktop", "&Shut Down Now")
+                                                        : i18nd("plasma_shell_org.kde.plasma.desktop", "&Shut Down")
                 onClicked: {
                     controls.hostRoot.haltRequested();
                 }
@@ -283,8 +283,8 @@ Item {
                 id: logoutButton
                 objectName: "logoutButton"
                 icon.name: "system-log-out"
-                text: controls.showAllOptions ? i18nd("plasma_shell_org.kde.plasma.desktop", "&Log Out")
-                                          : i18nd("plasma_shell_org.kde.plasma.desktop", "&Log Out Now")
+                text: controls.hostRoot.everCountedDown ? i18nd("plasma_shell_org.kde.plasma.desktop", "&Log Out Now")
+                                                        : i18nd("plasma_shell_org.kde.plasma.desktop", "&Log Out")
                 onClicked: controls.hostRoot.logoutRequested()
                 KeyNavigation.left: shutdownWithoutUpdatesButton.visible ? shutdownWithoutUpdatesButton : (shutdownButton.visible ? shutdownButton : (rebootWithoutUpdatesButton.visible ? rebootWithoutUpdatesButton : (rebootButton.visible ? rebootButton : (hibernateButton.visible ? hibernateButton : (suspendButton.visible ? suspendButton : cancelButton)))))
                 KeyNavigation.right: cancelButton

@@ -39,6 +39,7 @@ Item {
 
     property real timeout: 30
     property real remainingTime: root.timeout
+    readonly property bool everCountedDown: !showAllOptions
     readonly property bool countingDown: countDownTimer.running
 
     property var currentAction: {
@@ -97,7 +98,7 @@ Item {
 
     Timer {
         id: countDownTimer
-        running: !showAllOptions
+        running: everCountedDown
         repeat: true
         interval: 1000
         onTriggered: remainingTime--
