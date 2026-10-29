@@ -8,7 +8,7 @@
 
 #include <QAbstractListModel>
 
-#include <utils/d_ptr.h>
+#include "kactivitymanagerd_plugins_settings.h"
 
 /**
  * ExcludedApplicationsModel
@@ -16,8 +16,6 @@
 class ExcludedApplicationsModel : public QAbstractListModel
 {
     Q_OBJECT
-
-    Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
 
 public:
     explicit ExcludedApplicationsModel(QObject *parent = nullptr);
@@ -37,18 +35,22 @@ public:
 Q_SIGNALS:
     void changed(bool changed);
     void defaulted(bool isDefault);
-    void enabledChanged(bool enabled);
 
 public Q_SLOTS:
     void toggleApplicationBlocked(int index);
-
-    void setEnabled(bool);
-    bool enabled() const;
 
     void load();
     void save();
     void defaults();
 
 private:
-    D_PTR;
+    struct ApplicationData {
+        QString name;
+        QString title;
+        QString icon;
+        bool blocked;
+    };
+
+    QList<ApplicationData> m_applications;
+    KActivityManagerdPluginsSettings *m_settings;
 };

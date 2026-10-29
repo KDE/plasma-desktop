@@ -1,6 +1,0 @@
-#ifndef KCM_CONFIG_FEATURES_H_
-#define KCM_CONFIG_FEATURES_H_
-
-#cmakedefine KAMD_KCM_DATADIR "@KAMD_KCM_DATADIR@"
-
-#endif

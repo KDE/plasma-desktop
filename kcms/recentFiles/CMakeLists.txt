@@ -1,88 +1,35 @@
-# vim:set softtabstop=3 shiftwidth=3 tabstop=3 expandtab:
+# SPDX-FileCopyrightText: 2026 James Graham <james.h.graham@protonmail.com>
+# SPDX-License-Identifier: BSD-2-Clause
+
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_recentFiles\")
 
-find_package (Qt6 REQUIRED NO_MODULE COMPONENTS Core Quick Sql Qml DBus)
-find_package (KF6KCMUtils ${KF6_MIN_VERSION} CONFIG REQUIRED)
-find_package (KF6XmlGui ${KF6_MIN_VERSION} CONFIG REQUIRED)
-find_package (KF6GlobalAccel ${KF6_MIN_VERSION} CONFIG REQUIRED)
-find_package (PlasmaActivities ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
-
-set (KAMD_KCM_DATADIR
-   ${KDE_INSTALL_DATADIR}/kcm_recentFiles/workspace/settings/
-   )
-
-if (NOT IS_ABSOLUTE "${KDE_INSTALL_DATADIR}")
-   set (KAMD_KCM_DATADIR "${CMAKE_INSTALL_PREFIX}/${KAMD_KCM_DATADIR}")
-endif ()
-
-configure_file (recentFiles-kcm-features.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/recentFiles-kcm-features.h)
-
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
-
-set (KAMD_KCM_SRCS
-   kcm_recentFiles.cpp
-
-   ExcludedApplicationsModel.cpp
-   )
-
-ki18n_wrap_ui (
-   KAMD_KCM_SRCS
-   ui/RecentFiles.ui
-   )
-
-qt_add_dbus_interface (
-   KAMD_KCM_SRCS
-
-   common/dbus/org.kde.ActivityManager.ResourceScoring.xml
-   resourcescoring_interface
-   )
-
-
-kcmutils_generate_module_data(
-    KAMD_KCM_SRCS
-    MODULE_DATA_HEADER kactivitiesdata.h
-    MODULE_DATA_CLASS_NAME KActivitiesData
-    SETTINGS_HEADERS kactivitymanagerd_plugins_settings.h
-    SETTINGS_CLASSES KActivityManagerdPluginsSettings
+kcmutils_add_qml_kcm(kcm_recentfiles
+    SOURCES
+        kcm_recentfiles.cpp
+        kcm_recentfiles.h
+        excludedapplicationsmodel.cpp
+        excludedapplicationsmodel.h
 )
 
-kconfig_add_kcfg_files(KAMD_KCM_SRCS kactivitymanagerd_plugins_settings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(kcm_recentfiles kactivitymanagerd_plugins_settings.kcfgc GENERATE_MOC)
 
-add_library (kcm_recentFiles MODULE ${KAMD_KCM_SRCS})
+ecm_qt_declare_logging_category(kcm_recentfiles
+    HEADER kcms_recentfiles_logging.h
+    IDENTIFIER KCM_RECENTFILES
+    CATEGORY_NAME kcm_recentFiles
+    DESCRIPTION "KCM for recent file usage tracking"
+    EXPORT KCM_RECENTFILES
+)
 
-kcmutils_generate_desktop_file(kcm_recentFiles)
-target_link_libraries (kcm_recentFiles
+qt_add_dbus_interface(kcm_recentfiles_DBUS_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/org.kde.ActivityManager.ResourceScoring.xml resourcescoring_interface)
+target_sources(kcm_recentfiles PRIVATE ${kcm_recentfiles_DBUS_SRCS})
+
+target_link_libraries (kcm_recentfiles
    Qt::Quick
-   Qt::QuickWidgets
-   Qt::Core
-   Qt::Sql
-   Qt::Qml
    Qt::DBus
+   Qt::Sql
    KF6::KCMUtils
    KF6::I18n
    KF6::Service
-   KF6::XmlGui
    Plasma::Activities
-   )
-
-install (
-   TARGETS kcm_recentFiles
-   DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets
-   )
-
-install (
-   DIRECTORY
-
-   qml/recentFiles
-
-   DESTINATION ${KAMD_KCM_DATADIR}/qml
-   )
-
-install(FILES kactivitymanagerd_plugins_settings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
-
-include(ECMQtDeclareLoggingCategory)
-ecm_qt_declare_logging_category(kcm_recentFiles
-    HEADER kcms-recentfiles-debug.h
-    IDENTIFIER "LOG_KCMS_RECENTFILES"
-    CATEGORY_NAME "org.kde.kcms.recentFiles"
 )
