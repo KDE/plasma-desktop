@@ -112,6 +112,9 @@ void DateAndTime::setNtpEnabled(bool ntpEnabled)
     }
     m_ntpEnabledSet = true;
     m_ntpEnabled = ntpEnabled;
+    if (m_ntpEnabled) {
+        m_dateTime = {};
+    }
     checkNeedsSave();
     Q_EMIT ntpChanged();
 }
@@ -145,6 +148,9 @@ void DateAndTime::setTime(const QTime &time)
 {
     if (m_ntpEnabled || m_dateTime.time() == time) {
         return;
+    }
+    if (!m_dateTime.isValid()) {
+        m_dateTime = m_systemDateTime;
     }
     m_dateTime.setTime(time);
     checkNeedsSave();
@@ -245,20 +251,19 @@ bool DateAndTime::timedateSave()
             qCWarning(KCM_CLOCK) << "Failed to enable NTP" << reply.error().name() << reply.error().message();
             return false;
         }
-        if (!m_ntpEnabled && m_dateTime.isValid()) {
-            qint64 timeDiff = m_dateTime.toMSecsSinceEpoch() - QDateTime::currentMSecsSinceEpoch();
-            //*1000 for milliseconds -> microseconds
-            auto reply = timedateIface.SetTime(timeDiff * 1000, true, true);
-            reply.waitForFinished();
-            if (reply.isError()) {
-                if (reply.error().name() != QDBusError::errorString(QDBusError::AccessDenied)) {
-                    addMessage(Message::error(i18n("Unable to set current time")));
-                } else {
-                    addMessage(Message::error(i18n("Permission to change date and time setting denied")));
-                }
-                qCWarning(KCM_CLOCK) << "Failed to set current time" << reply.error().name() << reply.error().message();
-                return false;
+    }
+    if (!m_ntpEnabled && m_dateTime.isValid()) {
+        //*1000 for milliseconds -> microseconds
+        auto reply = timedateIface.SetTime(m_dateTime.toMSecsSinceEpoch() * 1000, false, true);
+        reply.waitForFinished();
+        if (reply.isError()) {
+            if (reply.error().name() != QDBusError::errorString(QDBusError::AccessDenied)) {
+                addMessage(Message::error(i18n("Unable to set current time")));
+            } else {
+                addMessage(Message::error(i18n("Permission to change date and time setting denied")));
             }
+            qCWarning(KCM_CLOCK) << "Failed to set current time" << reply.error().name() << reply.error().message();
+            return false;
         }
     }
     if (m_timeZone.isValid()) {
