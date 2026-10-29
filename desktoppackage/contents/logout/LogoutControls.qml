@@ -82,6 +82,19 @@ Item {
 
         PlasmaComponents.Label {
             font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
+            Layout.maximumWidth: Math.max(Kirigami.Units.gridUnit * 16, logoutButtonsRow.implicitWidth)
+            Layout.alignment: Qt.AlignHCenter
+            Layout.fillWidth: true
+            horizontalAlignment: Text.AlignHCenter
+            wrapMode: Text.WordWrap
+            font.italic: true
+            text: xi18nd("plasma_shell_org.kde.plasma.desktop", "After exiting Safe Mode, return to your regular KDE Plasma session.<nl/><nl/>If it works now, great!<nl/>If not, come back and try something else.")
+            textFormat: Text.PlainText
+            visible: exitingSafeMode
+        }
+
+        PlasmaComponents.Label {
+            font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
             Layout.alignment: Qt.AlignHCenter
             //opacity, as visible would re-layout
             opacity: controls.hostRoot.countingDown ? 1 : 0

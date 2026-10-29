@@ -39,7 +39,7 @@ Item {
 
     property real timeout: 30
     property real remainingTime: root.timeout
-    readonly property bool everCountedDown: !showAllOptions
+    readonly property bool everCountedDown: !showAllOptions && !exitingSafeMode
     readonly property bool countingDown: countDownTimer.running
 
     property var currentAction: {
