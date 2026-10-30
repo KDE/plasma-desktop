@@ -14,7 +14,6 @@ import QtQuick.Layouts
 import org.kde.plasma.components as PC3
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
-import org.kde.kirigamiaddons.components as KirigamiComponents
 import org.kde.coreaddons as KCoreAddons
 import org.kde.kcmutils as KCM
 import org.kde.config as KConfig
@@ -67,109 +66,102 @@ PlasmaExtras.PlasmoidHeading {
 
             Keys.forwardTo: searchField.activeFocus ? null : searchField
 
-            RowLayout {
+            PC3.ToolButton {
                 id: nameAndIcon
-                spacing: root.spacing
                 anchors.left: parent.left
                 LayoutMirroring.enabled: kickoff.sideBarOnRight
+                LayoutMirroring.childrenInherit: true
                 height: parent.height
                 width: root.preferredNameAndIconWidth - layoutContainer.anchors.leftMargin
-
-                KirigamiComponents.AvatarButton {
-                    id: avatar
-                    visible: KConfig.KAuthorized.authorizeControlModule("kcm_users")
-
-                    Layout.fillHeight: true
-                    Layout.minimumWidth: height
-                    Layout.maximumWidth: height
-
-                    text: i18nc("@action:button icon-only, for tooltip/Accessible", "Open user settings")
-                    name: kuser.fullName
-
-                    // The icon property emits two signals in a row during which it
-                    // changes to an empty URL and probably back to the same
-                    // static file path, so we need QtQuick.Image not to cache it.
-                    cache: false
-                    source: kuser.faceIconUrl
-
-                    Keys.onTabPressed: event => {
-                        root.tabSetFocus(event, kickoff.firstCentralPane);
+                contentItem: RowLayout {
+                    Kirigami.Avatar {
+                        id: avatar
+                        Layout.fillHeight: true
+                        Layout.minimumWidth: height
+                        Layout.maximumWidth: height
+                        name: kuser.fullName
+                        // The icon property emits two signals in a row during which it
+                        // changes to an empty URL and probably back to the same
+                        // static file path, so we need QtQuick.Image not to cache it.
+                        cache: false
+                        source: kuser.faceIconUrl
                     }
-                    Keys.onBacktabPressed: event => {
-                        root.tabSetFocus(event, nextItemInFocusChain());
-                    }
-                    Keys.onLeftPressed: event => {
-                        if (kickoff.sideBarOnRight) {
-                            searchField.forceActiveFocus(Application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
-                        }
-                    }
-                    Keys.onRightPressed: event => {
-                        if (!kickoff.sideBarOnRight) {
-                            searchField.forceActiveFocus(Application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
-                        }
-                    }
-                    Keys.onDownPressed: event => {
-                        if (kickoff.sideBar) {
-                            kickoff.sideBar.forceActiveFocus(Qt.TabFocusReason)
-                        } else {
-                            kickoff.contentArea.forceActiveFocus(Qt.TabFocusReason)
-                        }
-                    }
+                    Item {
+                        Layout.fillHeight: true
+                        Layout.fillWidth: true
 
-                    onClicked: KCM.KCMLauncher.openSystemSettings("kcm_users")
-                }
+                        Kirigami.Heading {
+                            id: nameLabel
+                            anchors.fill: parent
+                            opacity: nameAndIcon.hovered ? 0 : 1
+                            color: Kirigami.Theme.textColor
+                            level: 4
+                            text: kuser.fullName
+                            textFormat: Text.PlainText
+                            elide: Text.ElideRight
+                            verticalAlignment: Text.AlignVCenter
 
-                MouseArea {
-                    id: nameAndInfoMouseArea
-                    hoverEnabled: true
-
-                    Layout.fillHeight: true
-                    Layout.fillWidth: true
-
-                    Kirigami.Heading {
-                        id: nameLabel
-                        anchors.fill: parent
-                        opacity: parent.containsMouse ? 0 : 1
-                        color: Kirigami.Theme.textColor
-                        level: 4
-                        text: kuser.fullName
-                        textFormat: Text.PlainText
-                        elide: Text.ElideRight
-                        horizontalAlignment: kickoff.paneSwap ? Text.AlignRight : Text.AlignLeft
-                        verticalAlignment: Text.AlignVCenter
-
-                        Behavior on opacity {
-                            NumberAnimation {
-                                duration: Kirigami.Units.longDuration
-                                easing.type: Easing.InOutQuad
+                            Behavior on opacity {
+                                NumberAnimation {
+                                    duration: Kirigami.Units.longDuration
+                                    easing.type: Easing.InOutQuad
+                                }
                             }
                         }
-                    }
 
-                    Kirigami.Heading {
-                        id: infoLabel
-                        anchors.fill: parent
-                        level: 5
-                        opacity: parent.containsMouse ? 1 : 0
-                        color: Kirigami.Theme.textColor
-                        text: kuser.os !== "" ? `${kuser.loginName}@${kuser.host} (${kuser.os})` : `${kuser.loginName}@${kuser.host}`
-                        textFormat: Text.PlainText
-                        elide: Text.ElideRight
-                        horizontalAlignment: kickoff.paneSwap ? Text.AlignRight : Text.AlignLeft
-                        verticalAlignment: Text.AlignVCenter
+                        Kirigami.Heading {
+                            id: infoLabel
+                            anchors.fill: parent
+                            level: 5
+                            opacity: nameAndIcon.hovered ? 1 : 0
+                            color: Kirigami.Theme.textColor
+                            text: kuser.os !== "" ? `${kuser.loginName}@${kuser.host} (${kuser.os})` : `${kuser.loginName}@${kuser.host}`
+                            textFormat: Text.PlainText
+                            elide: Text.ElideRight
+                            verticalAlignment: Text.AlignVCenter
 
-                        Behavior on opacity {
-                            NumberAnimation {
-                                duration: Kirigami.Units.longDuration
-                                easing.type: Easing.InOutQuad
+                            Behavior on opacity {
+                                NumberAnimation {
+                                    duration: Kirigami.Units.longDuration
+                                    easing.type: Easing.InOutQuad
+                                }
                             }
                         }
-                    }
 
-                    PC3.ToolTip.text: infoLabel.text
-                    PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
-                    PC3.ToolTip.visible: infoLabel.truncated && containsMouse
+                        PC3.ToolTip.text: infoLabel.text
+                        PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
+                        PC3.ToolTip.visible: infoLabel.truncated && nameAndIcon.hovered
+                    }
                 }
+
+                visible: KConfig.KAuthorized.authorizeControlModule("kcm_users")
+                text: i18nc("@action:button icon-only, for tooltip/Accessible", "Open user settings")
+
+                Keys.onTabPressed: event => {
+                    root.tabSetFocus(event, kickoff.firstCentralPane);
+                }
+                Keys.onBacktabPressed: event => {
+                    root.tabSetFocus(event, nextItemInFocusChain());
+                }
+                Keys.onLeftPressed: event => {
+                    if (kickoff.sideBarOnRight) {
+                        searchField.forceActiveFocus(Application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
+                    }
+                }
+                Keys.onRightPressed: event => {
+                    if (!kickoff.sideBarOnRight) {
+                        searchField.forceActiveFocus(Application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
+                    }
+                }
+                Keys.onDownPressed: event => {
+                    if (kickoff.sideBar) {
+                        kickoff.sideBar.forceActiveFocus(Qt.TabFocusReason)
+                    } else {
+                        kickoff.contentArea.forceActiveFocus(Qt.TabFocusReason)
+                    }
+                }
+
+                onClicked: KCM.KCMLauncher.openSystemSettings("kcm_users")
             }
             RowLayout {
                 id: rowLayout
