@@ -2032,6 +2032,8 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
     if (!m_fileItemActions) {
         m_fileItemActions = new KFileItemActions(this);
     }
+    // Let `menu` own the QActions plugins return, so they go away with the popup (see aboutToHide below).
+    m_fileItemActions->setParentObject(menu);
 
     if (indexes.isEmpty()) {
         menu->addAction(m_actionCollection.action(QStringLiteral("newMenu")));
