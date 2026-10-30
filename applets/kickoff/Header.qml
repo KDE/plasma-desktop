@@ -14,7 +14,6 @@ import QtQuick.Layouts
 import org.kde.plasma.components as PC3
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
-import org.kde.kirigamiaddons.components as KirigamiComponents
 import org.kde.coreaddons as KCoreAddons
 import org.kde.kcmutils as KCM
 import org.kde.config as KConfig
@@ -75,22 +74,36 @@ PlasmaExtras.PlasmoidHeading {
                 height: parent.height
                 width: root.preferredNameAndIconWidth - layoutContainer.anchors.leftMargin
 
-                KirigamiComponents.AvatarButton {
-                    id: avatar
-                    visible: KConfig.KAuthorized.authorizeControlModule("kcm_users")
-
+                PC3.ToolButton {
                     Layout.fillHeight: true
                     Layout.minimumWidth: height
                     Layout.maximumWidth: height
 
+                    display: PC3.AbstractButton.IconOnly
                     text: i18nc("@action:button icon-only, for tooltip/Accessible", "Open user settings")
-                    name: kuser.fullName
 
-                    // The icon property emits two signals in a row during which it
-                    // changes to an empty URL and probably back to the same
-                    // static file path, so we need QtQuick.Image not to cache it.
-                    cache: false
-                    source: kuser.faceIconUrl
+                    PC3.ToolTip.text: text
+                    PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
+                    PC3.ToolTip.visible: hovered
+                    visible: KConfig.KAuthorized.authorizeControlModule("kcm_users")
+
+                    HoverHandler {
+                        cursorShape: Qt.PointingHandCursor
+                    }
+
+                    contentItem: Kirigami.Avatar {
+                        id: avatar
+
+                        name: kuser.fullName
+
+                        // The icon property emits two signals in a row during which it
+                        // changes to an empty URL and probably back to the same
+                        // static file path, so we need QtQuick.Image not to cache it.
+                        cache: false
+                        source: kuser.faceIconUrl
+
+                    }
+                    background: null
 
                     Keys.onTabPressed: event => {
                         root.tabSetFocus(event, kickoff.firstCentralPane);
