@@ -14,11 +14,11 @@ import glob
 import xml.dom.minidom
 from PyQt5.QtCore import QFile, QDataStream, QByteArray, QIODevice, qCompress
 
-EMOJI_VERSION = "17.0.0"
+EMOJI_VERSION = "18.0.0"
 EMOJI_TEST_FILE = "emoji-test.txt"
 EMOJI_TEST_URL = f"https://www.unicode.org/Public/{EMOJI_VERSION}/emoji/{EMOJI_TEST_FILE}"
 
-CLDR_VERSION = "48.2" # omit trailing .0 from CLDR versions 47.0+
+CLDR_VERSION = "49" # omit trailing .0 from CLDR versions 47.0+
 CLDR_FILE = f"cldr-common-{CLDR_VERSION}.zip"
 CLDR_URL = f"https://unicode.org/Public/cldr/{CLDR_VERSION}/{CLDR_FILE}"
 CLDR_ANNOTATIONS_DIR = "common/annotations"
