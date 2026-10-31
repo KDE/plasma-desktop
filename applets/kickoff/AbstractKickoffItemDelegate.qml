@@ -62,7 +62,11 @@ T.ItemDelegate {
 
     property Item dragIconItem: null
 
-    down: mouseArea.pressed || dragHandler.active
+    readonly property bool actionMenuOpen: ActionMenu.menu.status === PlasmaExtras.Menu.Open
+        && ActionMenu.menu.visualParent === root
+
+    down: (mouseArea.pressed && (mouseArea.pressedButtons & Qt.LeftButton))
+        || dragHandler.active || actionMenuOpen
 
     function openActionMenu(x = undefined, y = undefined) {
         if (!hasActionList) { return; }
@@ -261,7 +265,7 @@ T.ItemDelegate {
     PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
 
     background: Loader {
-        active: (root.GridView?.isCurrentItem || root.ListView?.isCurrentItem) ?? false
+        active: root.actionMenuOpen || ((root.GridView?.isCurrentItem || root.ListView?.isCurrentItem) ?? false)
         sourceComponent: PlasmaExtras.Highlight {
             anchors.fill: parent
             z: (root.Drag.active ?? false) ? 3 : 0
@@ -269,7 +273,7 @@ T.ItemDelegate {
 
             pressed: root.down  && !root.isCategoryListItem
 
-            active: root.view.activeFocus ||
+            active: root.actionMenuOpen || root.view.activeFocus ||
                     (kickoff.contentArea === root && kickoff.searchField.activeFocus)
         }
     }
