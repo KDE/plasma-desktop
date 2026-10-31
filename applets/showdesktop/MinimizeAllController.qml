@@ -67,8 +67,11 @@ Controller {
      */
     property var minimizedClients: ({})
 
+    property var activeClients: ({})
+
     function activate() {
         const clients = [];
+        activeClients[activityDesktopId] = tasksModel.activeTask.valid ? tasksModel.makePersistentModelIndex(tasksModel.activeTask.row) : null;
         for (let i = tasksModel.count - 1; i >= 0; i--) {
             const idx = tasksModel.makeModelIndex(i);
             const activities = tasksModel.data(idx, TaskManager.AbstractTasksModel.Activities);
@@ -104,6 +107,10 @@ Controller {
             tasksModel.requestToggleMinimized(idx);
         }
         minimizedClients[activityDesktopId] = [];
+        const activeIdx = activeClients[activityDesktopId];
+        if (activeIdx && activeIdx.valid) {
+            tasksModel.requestActivate(activeIdx);
+        }
     }
 
     // override
