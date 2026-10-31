@@ -304,7 +304,14 @@ Item {
                 left: parent.left
                 right: parent.right
             }
-            height: lockScreenRoot.height + Kirigami.Units.gridUnit * 3
+            height: lockScreenRoot.height
+            // The page-transition zoom animation scales pages up to zoomFactor;
+            // clip them so the part that would extend past the screen is hidden
+            // instead of being drawn outside the visible area. Keeping the
+            // height at lockScreenRoot.height (not larger) also keeps
+            // SessionManagementScreen from anchoring its action buttons below
+            // the visible screen edge.
+            clip: true
             focus: true //StackView is an implicit focus scope, so we need to give this focus so the item inside will have it
 
             // this isn't implicit, otherwise items still get processed for the scenegraph

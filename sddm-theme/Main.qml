@@ -148,7 +148,13 @@ Item {
                 left: parent.left
                 right: parent.right
             }
-            height: root.height + Kirigami.Units.gridUnit * 3
+            height: root.height
+            // The page-transition zoom animation scales pages up to zoomFactor;
+            // clip them so the part that would extend past the screen is hidden
+            // instead of being drawn outside the visible area. Keeping the
+            // height at root.height (not larger) also keeps SessionManagementScreen
+            // from anchoring its action buttons below the visible screen edge.
+            clip: true
 
             // this isn't implicit, otherwise items still get processed for the scenegraph
             visible: opacity > 0
