@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-30 02:58+0000\n"
+"POT-Creation-Date: 2026-10-31 02:53+0000\n"
 "PO-Revision-Date: 2026-03-19 22:41+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -504,17 +504,17 @@ msgstr "Skjáborð og bakgrunnsmynd"
 msgid "Select Folder"
 msgstr "Veldu möppu"
 
-#: plugins/folder/foldermodel.cpp:540
+#: plugins/folder/foldermodel.cpp:541
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "Endu&rteikna skjáborð"
 
-#: plugins/folder/foldermodel.cpp:540 plugins/folder/foldermodel.cpp:1786
+#: plugins/folder/foldermodel.cpp:541 plugins/folder/foldermodel.cpp:1787
 #, kde-format
 msgid "&Refresh View"
 msgstr "U&ppfæra yfirlit"
 
-#: plugins/folder/foldermodel.cpp:903
+#: plugins/folder/foldermodel.cpp:904
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -522,7 +522,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr "Viðtökustaður tengils finnst ekki"
 
-#: plugins/folder/foldermodel.cpp:905
+#: plugins/folder/foldermodel.cpp:906
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -532,23 +532,23 @@ msgstr ""
 "<filename>%1</filename> bendir á <filename>%2</filename> en hún fannst ekki. "
 "Kannski var hún færð eða henni eytt."
 
-#: plugins/folder/foldermodel.cpp:1795
+#: plugins/folder/foldermodel.cpp:1796
 #, kde-format
 msgid "&Empty Trash"
 msgstr "Tæ&ma rusl"
 
-#: plugins/folder/foldermodel.cpp:1798
+#: plugins/folder/foldermodel.cpp:1799
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "Endurheimta á fyrri staðsetningu"
 
-#: plugins/folder/foldermodel.cpp:1801
+#: plugins/folder/foldermodel.cpp:1802
 #, kde-format
 msgid "&Open"
 msgstr "&Opna"
 
-#: plugins/folder/foldermodel.cpp:1805
+#: plugins/folder/foldermodel.cpp:1806
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -556,23 +556,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Sýna viðtökustað"
 
-#: plugins/folder/foldermodel.cpp:1906
+#: plugins/folder/foldermodel.cpp:1912
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "Fjarlægja tákn fyrir rusl"
 
-#: plugins/folder/foldermodel.cpp:1909
+#: plugins/folder/foldermodel.cpp:1915
 #, kde-format
 msgid "&Move to Trash"
 msgstr "&Setja í ruslið"
 
-#: plugins/folder/foldermodel.cpp:1942
+#: plugins/folder/foldermodel.cpp:1948
 #, kde-format
 msgid "&Paste"
 msgstr "&Líma"
 
-#: plugins/folder/foldermodel.cpp:2093
+#: plugins/folder/foldermodel.cpp:2099
 #, kde-format
 msgid "&Properties"
 msgstr "&Eiginleikar"

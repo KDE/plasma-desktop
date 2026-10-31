@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-30 02:58+0000\n"
+"POT-Creation-Date: 2026-10-31 02:53+0000\n"
 "PO-Revision-Date: 2026-09-30 12:00+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -533,17 +533,17 @@ msgstr "Površ i tapet"
 msgid "Select Folder"
 msgstr "Izbor fascikle"
 
-#: plugins/folder/foldermodel.cpp:540
+#: plugins/folder/foldermodel.cpp:541
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "&Osveži površ"
 
-#: plugins/folder/foldermodel.cpp:540 plugins/folder/foldermodel.cpp:1786
+#: plugins/folder/foldermodel.cpp:541 plugins/folder/foldermodel.cpp:1787
 #, kde-format
 msgid "&Refresh View"
 msgstr "&Osveži prikaz"
 
-#: plugins/folder/foldermodel.cpp:903
+#: plugins/folder/foldermodel.cpp:904
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -551,7 +551,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr "Cilj veze nije nađen"
 
-#: plugins/folder/foldermodel.cpp:905
+#: plugins/folder/foldermodel.cpp:906
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -561,24 +561,24 @@ msgstr ""
 "<filename>%1</filename> pokazuje na <filename>%2</filename>, ali taj cilj "
 "nije nađen. Možda je premešten ili obrisan."
 
-#: plugins/folder/foldermodel.cpp:1795
+#: plugins/folder/foldermodel.cpp:1796
 #, kde-format
 msgid "&Empty Trash"
 msgstr "&Isprazni smeće"
 
-#: plugins/folder/foldermodel.cpp:1798
+#: plugins/folder/foldermodel.cpp:1799
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "Vrati na pređašnju lokaciju"
 
-#: plugins/folder/foldermodel.cpp:1801
+#: plugins/folder/foldermodel.cpp:1802
 #, kde-format
 msgid "&Open"
 msgstr "&Otvori"
 
 # >> @option:radio
-#: plugins/folder/foldermodel.cpp:1805
+#: plugins/folder/foldermodel.cpp:1806
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -586,23 +586,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Prikaži cilj"
 
-#: plugins/folder/foldermodel.cpp:1906
+#: plugins/folder/foldermodel.cpp:1912
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "Ukloni ikonicu smeća"
 
-#: plugins/folder/foldermodel.cpp:1909
+#: plugins/folder/foldermodel.cpp:1915
 #, kde-format
 msgid "&Move to Trash"
 msgstr "Premesti u &smeće"
 
-#: plugins/folder/foldermodel.cpp:1942
+#: plugins/folder/foldermodel.cpp:1948
 #, kde-format
 msgid "&Paste"
 msgstr "&Nalepi"
 
-#: plugins/folder/foldermodel.cpp:2093
+#: plugins/folder/foldermodel.cpp:2099
 #, kde-format
 msgid "&Properties"
 msgstr "&Svojstva"

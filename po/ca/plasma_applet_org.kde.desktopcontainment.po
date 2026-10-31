@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-30 02:58+0000\n"
+"POT-Creation-Date: 2026-10-31 02:53+0000\n"
 "PO-Revision-Date: 2026-03-19 11:24+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -505,17 +505,17 @@ msgstr "Escriptori i fons de pantalla"
 msgid "Select Folder"
 msgstr "Selecció d'una carpeta"
 
-#: plugins/folder/foldermodel.cpp:540
+#: plugins/folder/foldermodel.cpp:541
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "&Actualitza l'escriptori"
 
-#: plugins/folder/foldermodel.cpp:540 plugins/folder/foldermodel.cpp:1786
+#: plugins/folder/foldermodel.cpp:541 plugins/folder/foldermodel.cpp:1787
 #, kde-format
 msgid "&Refresh View"
 msgstr "&Actualitza la vista"
 
-#: plugins/folder/foldermodel.cpp:903
+#: plugins/folder/foldermodel.cpp:904
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -523,7 +523,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr "No s'ha trobat la destinació de l'enllaç"
 
-#: plugins/folder/foldermodel.cpp:905
+#: plugins/folder/foldermodel.cpp:906
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -533,23 +533,23 @@ msgstr ""
 "<filename>%1</filename> apunta a <filename>%2</filename>, però aquest no "
 "s'ha pogut trobar. Potser s'ha mogut o suprimit."
 
-#: plugins/folder/foldermodel.cpp:1795
+#: plugins/folder/foldermodel.cpp:1796
 #, kde-format
 msgid "&Empty Trash"
 msgstr "&Buida la paperera"
 
-#: plugins/folder/foldermodel.cpp:1798
+#: plugins/folder/foldermodel.cpp:1799
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "Restaura a la ubicació anterior"
 
-#: plugins/folder/foldermodel.cpp:1801
+#: plugins/folder/foldermodel.cpp:1802
 #, kde-format
 msgid "&Open"
 msgstr "&Obre"
 
-#: plugins/folder/foldermodel.cpp:1805
+#: plugins/folder/foldermodel.cpp:1806
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -557,23 +557,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Mostra la destinació"
 
-#: plugins/folder/foldermodel.cpp:1906
+#: plugins/folder/foldermodel.cpp:1912
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "Elimina la icona de la paperera"
 
-#: plugins/folder/foldermodel.cpp:1909
+#: plugins/folder/foldermodel.cpp:1915
 #, kde-format
 msgid "&Move to Trash"
 msgstr "&Mou a la paperera"
 
-#: plugins/folder/foldermodel.cpp:1942
+#: plugins/folder/foldermodel.cpp:1948
 #, kde-format
 msgid "&Paste"
 msgstr "&Enganxa"
 
-#: plugins/folder/foldermodel.cpp:2093
+#: plugins/folder/foldermodel.cpp:2099
 #, kde-format
 msgid "&Properties"
 msgstr "&Propietats"
@@ -717,38 +717,3 @@ msgstr "Mostra les vistes prèvies"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Blocat"
-
-#~ msgctxt "@item:inlistbox arrangement of icons"
-#~ msgid "Top to Bottom"
-#~ msgstr "De dalt a baix"
-
-#~ msgctxt "@item:inlistbox alignment of icons"
-#~ msgid "Align left"
-#~ msgstr "Alinea a l'esquerra"
-
-#~ msgctxt "@item:inlistbox alignment of icons"
-#~ msgid "Align right"
-#~ msgstr "Alinea a la dreta"
-
-#~ msgctxt "@item:inmenu arrangement of icons"
-#~ msgid "Left to Right"
-#~ msgstr "D'esquerra a dreta"
-
-#~ msgctxt "@item:inmenu arrangement of icons"
-#~ msgid "Right to Left"
-#~ msgstr "De dreta a esquerra"
-
-#~ msgctxt "@item:inmenu arrangement of icons"
-#~ msgid "Top to Bottom"
-#~ msgstr "De dalt a baix"
-
-#~ msgid "Align"
-#~ msgstr "Alinea"
-
-#~ msgctxt "@item:inmenu alignment of icons"
-#~ msgid "Left"
-#~ msgstr "Esquerra"
-
-#~ msgctxt "@item:inmenu alignment of icons"
-#~ msgid "Right"
-#~ msgstr "Dreta"
