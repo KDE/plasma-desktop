@@ -257,7 +257,7 @@ public:
     Q_INVOKABLE QAction *action(const QString &name) const;
     QObject *newMenu() const;
     Q_INVOKABLE void updateActions();
-    Q_INVOKABLE void openContextMenu(QQuickItem *visualParent = nullptr, Qt::KeyboardModifiers modifiers = Qt::NoModifier);
+    Q_INVOKABLE void openContextMenu(QQuickItem *visualParent = nullptr, Qt::KeyboardModifiers modifiers = Qt::NoModifier, bool openAtPointer = true);
 
     Q_INVOKABLE void linkHere(const QUrl &sourceUrl);
 

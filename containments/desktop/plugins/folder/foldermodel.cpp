@@ -1962,7 +1962,7 @@ void FolderModel::updateActions()
     }
 }
 
-void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifiers modifiers)
+void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifiers modifiers, bool openAtPointer)
 {
     Q_UNUSED(modifiers)
 
@@ -2110,7 +2110,12 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
         menu->windowHandle()->setTransientParent(visualParent->window());
     }
 
-    menu->popup(m_menuPosition);
+    if (visualParent && !openAtPointer) {
+        menu->popup(visualParent->mapToGlobal(visualParent->width(), visualParent->height()).toPoint());
+    } else {
+        menu->popup(m_menuPosition);
+    }
+
     connect(menu, &QMenu::aboutToHide, this, [this, menu]() {
         menu->deleteLater();
 
