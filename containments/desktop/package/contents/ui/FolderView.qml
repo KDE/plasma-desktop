@@ -481,6 +481,9 @@ FocusScope {
             // Drag initiation.
             if (pressX !== -1 && root.isDrag(pressX, pressY, mouse.x, mouse.y)) {
                 if (pressedItem !== null && dir.isSelected(positioner.map(pressedItem.index))) {
+                    if (pressedItem.dragImageBeingGenerated) {
+                        return; // this should be very fast, we can try again next pixel
+                    }
                     pressedItem.hideToolTip();
                     gridView.verticalDropHitscanOffset = pressedItem.iconArea.y + (pressedItem.iconArea.height / 2);
                     dir.dragSelected(mouse.x, mouse.y);
@@ -1325,6 +1328,8 @@ FocusScope {
                     gridView.currentIndex = positioner.move(moves);
                     gridView.forceLayout();
                 }
+
+                main.generateDragImage(); // in case the user drags again
             }
         }
 
