@@ -472,8 +472,10 @@ Item {
                 id: virtualKeyboardButton
 
                 focusPolicy: Qt.TabFocus
-                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "Button to show/hide virtual keyboard", "Virtual Keyboard")
-                icon.name: Keyboards.KWinVirtualKeyboard.visible ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
+                text: Keyboards.KWinVirtualKeyboard.visible
+                ? i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Hide On-Screen Keyboard")
+                : i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Show On-Screen Keyboard")
+                icon.name: Keyboards.KWinVirtualKeyboard.visible ? "input-keyboard-virtual-hide" : "input-keyboard-virtual-show"
                 onClicked: {
                     if (Keyboards.KWinVirtualKeyboard.visible) {
                         Keyboards.KWinVirtualKeyboard.active = false;
