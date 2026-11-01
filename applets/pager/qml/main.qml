@@ -477,7 +477,7 @@ PlasmoidItem {
                             readonly property rect geometry: model.Geometry
                             readonly property bool minimized: model.IsMinimized
                             readonly property bool isActive: model.IsActive
-                            readonly property int stackingOrder: model.StackingOrder
+                            readonly property int stackingOrder: model.PagerStackingOrder
                         }
 
                         delegate: WindowDelegate {

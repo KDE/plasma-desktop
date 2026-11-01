@@ -17,7 +17,7 @@ class WindowModel : public TaskManager::TaskFilterProxyModel
 
 public:
     enum WindowModelRoles {
-        StackingOrder = Qt::UserRole + 1,
+        PagerStackingOrder = Qt::UserRole + 1,
     };
     Q_ENUM(WindowModelRoles)
 

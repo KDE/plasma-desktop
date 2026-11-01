@@ -41,7 +41,7 @@ WindowModel::WindowModel(PagerModel *parent)
     connect(parent, &PagerModel::pagerItemSizeChanged, this, &WindowModel::onPagerItemSizeChanged);
     connect(this, &QAbstractItemModel::dataChanged, this, [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles) {
         if (roles.contains(AbstractTasksModel::StackingOrder)) {
-            Q_EMIT dataChanged(topLeft, bottomRight, {WindowModelRoles::StackingOrder});
+            Q_EMIT dataChanged(topLeft, bottomRight, {WindowModelRoles::PagerStackingOrder});
         }
     });
 }
@@ -77,7 +77,7 @@ QVariant WindowModel::data(const QModelIndex &index, int role) const
 
         // Restrict to desktop/screen rect.
         return windowGeo.intersected(clampingRect);
-    } else if (role == StackingOrder) {
+    } else if (role == WindowModelRoles::PagerStackingOrder) {
         const auto &winId = TaskFilterProxyModel::data(index, AbstractTasksModel::WinIdList);
         const int z = d->pagerModel->stackingOrder(index);
 
