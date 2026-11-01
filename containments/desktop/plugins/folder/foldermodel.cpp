@@ -1697,7 +1697,7 @@ Qt::DropActions FolderModel::supportedDropActions() const
 
 bool FolderModel::desktopFileExists(const QString &fileName) const
 {
-    const auto resolvedFileName = DesktopSchemeHelper::getFileUrl(fileName);
+    const auto resolvedFileName = fileName.startsWith(QStringLiteral("file://")) ? fileName.mid(7) : DesktopSchemeHelper::getFileUrl(fileName);
     return QFileInfo::exists(resolvedFileName);
 }
 
