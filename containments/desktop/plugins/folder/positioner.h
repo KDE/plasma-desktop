@@ -177,6 +177,7 @@ private:
     QHash<QString, GridPosition> m_positions;
     bool m_deferApplyPositions;
     bool m_deferRestoreChangedPositions = false;
+    bool m_skipSaveOnListingCompleted = false;
     QVariantList m_deferMovePositions;
 
     QHash<QString, std::optional<ChangedPosition>> m_changedPositions;

@@ -418,6 +418,44 @@ void PositionerTest::tst_dontSaveWithoutScreen()
     QCOMPARE(baselineConfig, getCurrentConfig());
 }
 
+void PositionerTest::tst_mixedSetPerStripeListingAndReady()
+{
+    QString firstUrl;
+    for (auto [url, gridPos] : std::as_const(m_positioner->m_positions).asKeyValueRange()) {
+        if (gridPos.pos == 0 && gridPos.stripe == 0) {
+            firstUrl = url;
+            break;
+        }
+    }
+    QVERIFY(!firstUrl.isEmpty());
+
+    auto getFirstGridPos = [firstUrl, this] {
+        return m_positioner->m_positions.value(firstUrl, {-1, -1});
+    };
+
+    const auto perStripe = m_positioner->perStripe();
+    QCOMPARE_GT(perStripe, 1);
+
+    const int newPos = m_positioner->m_positions.size() + perStripe + 1;
+    m_positioner->move({0, newPos});
+
+    auto newGridPos = getFirstGridPos();
+    QCOMPARE(newGridPos.stripe, newPos / perStripe);
+    QCOMPARE(newGridPos.pos, newPos % perStripe);
+
+    m_folderModel->refresh();
+    QTRY_COMPARE(m_folderModel->status(), FolderModel::Listing);
+
+    m_positioner->setPerStripe(1);
+    QVERIFY(m_positioner->m_deferApplyPositions);
+    ensureFolderModelReady();
+    m_positioner->setPerStripe(perStripe);
+
+    auto gridPos = getFirstGridPos();
+    QCOMPARE(gridPos.stripe, newGridPos.stripe);
+    QCOMPARE(gridPos.pos, newGridPos.pos);
+}
+
 // Test utilities
 
 QJsonDocument PositionerTest::getCurrentConfig()

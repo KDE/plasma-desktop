@@ -570,6 +570,7 @@ void Positioner::sourceStatusChanged()
             updatePositionsList();
             if (m_deferRestoreChangedPositions) {
                 maybeRestoreAndApplyChangedPositions(false);
+                m_skipSaveOnListingCompleted = (m_folderModel->status() == FolderModel::Ready);
             }
         }
     }
@@ -1305,7 +1306,11 @@ void Positioner::onItemRenamed(const QString &filename, const QString &newFilena
 // geometry changes
 void Positioner::onListingCompleted()
 {
-    savePositionsConfig();
+    if (m_skipSaveOnListingCompleted) {
+        m_skipSaveOnListingCompleted = false;
+    } else {
+        savePositionsConfig();
+    }
 }
 
 void Positioner::connectSignals(FolderModel *model)
