@@ -48,6 +48,7 @@ private Q_SLOTS:
     void tst_renameFile();
     void tst_insertFile();
     void tst_dontSaveWithoutScreen();
+    void tst_mixedSetPerStripeListingAndReady();
 
 private:
     void checkDefaultPositions(int perStripe);

@@ -570,6 +570,7 @@ void Positioner::sourceStatusChanged()
             updatePositionsList();
             if (m_deferRestoreChangedPositions) {
                 maybeRestoreAndApplyChangedPositions(false);
+                m_skipSaveOnListingCompleted = (m_folderModel->status() == FolderModel::Ready);
             }
         }
     }
@@ -1328,7 +1329,11 @@ void Positioner::onListingCompleted(const QList<QUrl> &urls)
 
     m_positions = newPositions;
 
-    savePositionsConfig();
+    if (m_skipSaveOnListingCompleted) {
+        m_skipSaveOnListingCompleted = false;
+    } else {
+        savePositionsConfig();
+    }
 }
 
 void Positioner::connectSignals(FolderModel *model)
