@@ -8,6 +8,6 @@ ecm_install_icons(ICONS
         96-devices-input-touchpad.png
         128-devices-input-touchpad.png
         256-devices-input-touchpad.png
-        sc-devices-input-touchpad.svgz
+        sc-devices-input-touchpad.svg
     DESTINATION ${KDE_INSTALL_ICONDIR}
 )
