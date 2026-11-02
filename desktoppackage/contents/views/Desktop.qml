@@ -218,6 +218,23 @@ Item {
 
         hideOnWindowDeactivate: true
 
+        x: {
+            let result = desktop.x;
+            if (!root.containment) {
+                return result;
+            }
+
+            const rect = referenceRect;
+            result += rect.x;
+
+            if (sideBarOnRightEdge) {
+                result += rect.width - sidePanel.width;
+            }
+
+            return result;
+        }
+        y: desktop.y + (root.containment ? referenceRect.y : 0)
+
         onVisibleChanged: {
             if (!visible) {
                 sidePanelStack.state = "closed";
