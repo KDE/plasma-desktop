@@ -456,7 +456,7 @@ void FolderModel::setUrl(const QString &url)
         m_dirWatch = new KDirWatch(this);
         connect(m_dirWatch, &KDirWatch::created, this, &FolderModel::iconNameChanged);
         connect(m_dirWatch, &KDirWatch::dirty, this, &FolderModel::iconNameChanged);
-        m_dirWatch->addFile(DesktopSchemeHelper::getFileUrl(resolvedNewUrl.toString()).remove(QStringLiteral("file://")) + QStringLiteral("/.directory"));
+        m_dirWatch->addFile(DesktopSchemeHelper::getFileUrl(resolvedNewUrl.toString()) + QStringLiteral("/.directory"));
     }
 
     if (dragging()) {

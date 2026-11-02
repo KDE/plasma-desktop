@@ -23,7 +23,7 @@ public:
     ~DesktopSchemeHelper() override;
 
     Q_INVOKABLE static QString getDesktopUrl(const QString &absoluteUrlString);
-    Q_INVOKABLE static QString getFileUrl(const QString &UrlRelativeToDesktopString);
+    Q_INVOKABLE static QString getFileUrl(const QString &folderViewUrl);
 };
 
 #endif

@@ -13,6 +13,8 @@
 
 QTEST_MAIN(DesktopSchemeHelperTest)
 
+using namespace Qt::StringLiterals;
+
 void DesktopSchemeHelperTest::returnsExpectedValues()
 {
     DesktopSchemeHelper h;
@@ -58,6 +60,13 @@ void DesktopSchemeHelperTest::returnsExpectedValues()
 
     // LabelGenerator expects a leading slash
     QCOMPARE(DesktopSchemeHelper::getFileUrl(QStringLiteral("desktop:Productivity/")), childOfDesktop);
+
+    // file:// scheme
+    constexpr auto fileScheme = u"file://"_sv;
+    QCOMPARE(DesktopSchemeHelper::getFileUrl(fileScheme + desktopWithoutTrailingSlash), desktopWithoutTrailingSlash);
+    QCOMPARE(DesktopSchemeHelper::getFileUrl(fileScheme + desktopWithTrailingSlash), desktopWithTrailingSlash);
+    QCOMPARE(DesktopSchemeHelper::getFileUrl(fileScheme + childOfDesktop), childOfDesktop);
+    QCOMPARE(DesktopSchemeHelper::getFileUrl(fileScheme + parentOfDesktop), parentOfDesktop);
 }
 
 #include "moc_desktopschemehelpertest.cpp"

@@ -11,6 +11,8 @@
 #include <QStandardPaths>
 #include <QUrl>
 
+using namespace Qt::StringLiterals;
+
 DesktopSchemeHelper::DesktopSchemeHelper(QObject *parent)
     : QObject(parent)
 {
@@ -59,10 +61,13 @@ QString DesktopSchemeHelper::getDesktopUrl(const QString &absoluteUrlString)
     }
 }
 
-QString DesktopSchemeHelper::getFileUrl(const QString &UrlRelativeToDesktopString)
+QString DesktopSchemeHelper::getFileUrl(const QString &folderViewUrl)
 {
+    if (constexpr auto fileScheme = u"file://"_sv; folderViewUrl.startsWith(fileScheme)) {
+        return folderViewUrl.mid(fileScheme.size());
+    }
     QString absoluteDesktopString(QStandardPaths::standardLocations(QStandardPaths::DesktopLocation).at(0));
-    QString absoluteFileUrl(UrlRelativeToDesktopString);
+    QString absoluteFileUrl(folderViewUrl);
     if (absoluteFileUrl.startsWith(QStringLiteral("desktop:/"))) {
         absoluteFileUrl.replace(QStringLiteral("desktop:/"), QStringLiteral("desktop:"));
     }
