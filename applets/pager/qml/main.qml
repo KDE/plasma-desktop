@@ -119,12 +119,17 @@ PlasmoidItem {
                     const nextPage = Plasmoid.configuration.wrapPage?
                         (pagerModel.currentPage + 1) % repeater.count :
                         Math.min(pagerModel.currentPage + 1, repeater.count - 1);
-                    pagerModel.changePage(nextPage);
+                    // At the last desktop: changePage() on the current one would toggle Show Desktop
+                    if (nextPage !== pagerModel.currentPage) {
+                        pagerModel.changePage(nextPage);
+                    }
                 } else {
                     const previousPage = Plasmoid.configuration.wrapPage ?
                         (repeater.count + pagerModel.currentPage - 1) % repeater.count :
                         Math.max(pagerModel.currentPage - 1, 0);
-                    pagerModel.changePage(previousPage);
+                    if (previousPage !== pagerModel.currentPage) {
+                        pagerModel.changePage(previousPage);
+                    }
                 }
 
                 increment += (increment < 0) ? 1 : -1;
