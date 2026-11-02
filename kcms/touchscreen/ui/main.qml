@@ -40,6 +40,7 @@ KCMUtils.SimpleKCM {
         QQC2.ComboBox {
             id: combo
             model: kcm.touchscreensModel
+            textRole: "display"
 
             enabled: count > 1 //It's only interesting when there's more than 1 touchscreen
 
