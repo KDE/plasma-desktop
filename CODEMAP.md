@@ -57,10 +57,6 @@ Templates for the items in the "Add Panel…" menu on the desktop: default panel
 
 Provides the KCM, library, and KDE Daemon (kded) plugin for handling and configuring the automatic mounting of any removable devices plugged in.
 
-### `kaccess/`
-
-Accessibility daemon.
-
 ### `knetattach/`
 
 Wizard to add a network folder.
