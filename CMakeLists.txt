@@ -289,9 +289,7 @@ add_subdirectory(imports/activitymanager/)
 add_subdirectory(solid-device-automounter)
 add_subdirectory(emojier)
 add_subdirectory(kded)
-if(X11_FOUND)
-    add_subdirectory(kaccess)
-endif()
+
 install(FILES org.kde.plasmashell.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
 # Only link Discover to debian files in the debian world.
