@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-30 00:55+0000\n"
+"POT-Creation-Date: 2026-11-02 00:56+0000\n"
 "PO-Revision-Date: 2024-10-18 17:02+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -1073,13 +1073,19 @@ msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "Switch User"
 
-#: contents/lockscreen/LockScreenUi.qml:475
+#: contents/lockscreen/LockScreenUi.qml:476
 #, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "Virtual Keyboard"
+msgctxt "@action:button"
+msgid "Hide On-Screen Keyboard"
+msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:501
+#: contents/lockscreen/LockScreenUi.qml:477
+#, kde-format
+msgctxt "@action:button"
+msgid "Show On-Screen Keyboard"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:503
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -1319,6 +1325,10 @@ msgstr "Exit Edit Mode"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Panel Focus Indicator"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Virtual Keyboard"
 
 #, fuzzy
 #~| msgid "Send an email to %1"

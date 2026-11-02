@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-30 00:55+0000\n"
+"POT-Creation-Date: 2026-11-02 00:56+0000\n"
 "PO-Revision-Date: 2026-08-29 12:17+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -954,13 +954,19 @@ msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "بدّل ال&مستخدم"
 
-#: contents/lockscreen/LockScreenUi.qml:475
+#: contents/lockscreen/LockScreenUi.qml:476
 #, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "لوحة مفاتيح افتراضية"
+msgctxt "@action:button"
+msgid "Hide On-Screen Keyboard"
+msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:501
+#: contents/lockscreen/LockScreenUi.qml:477
+#, kde-format
+msgctxt "@action:button"
+msgid "Show On-Screen Keyboard"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:503
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -1219,6 +1225,10 @@ msgstr "اخرج من نمط التحرير"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "مؤشر التركيز على اللوحة"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "لوحة مفاتيح افتراضية"
 
 #~ msgctxt "plasma_shell_org.kde.plasma.desktop"
 #~ msgid "Send an email to %1"

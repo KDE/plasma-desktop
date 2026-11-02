@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-30 00:55+0000\n"
+"POT-Creation-Date: 2026-11-02 00:56+0000\n"
 "PO-Revision-Date: 2024-11-06 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -1082,13 +1082,19 @@ msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "Пераключыць карыстальніка"
 
-#: contents/lockscreen/LockScreenUi.qml:475
+#: contents/lockscreen/LockScreenUi.qml:476
 #, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "Віртуальная клавіятура"
+msgctxt "@action:button"
+msgid "Hide On-Screen Keyboard"
+msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:501
+#: contents/lockscreen/LockScreenUi.qml:477
+#, kde-format
+msgctxt "@action:button"
+msgid "Show On-Screen Keyboard"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:503
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -1340,6 +1346,10 @@ msgstr "Выйсці з рэжыму рэдагавання"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Індыкатар фокуса панэлі"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Віртуальная клавіятура"
 
 #, fuzzy
 #~| msgid "Send an email to %1"

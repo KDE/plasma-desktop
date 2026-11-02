@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-30 00:55+0000\n"
+"POT-Creation-Date: 2026-11-02 00:56+0000\n"
 "PO-Revision-Date: 2025-06-19 09:46+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -1055,13 +1055,19 @@ msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "Cambiar de persoa &usuaria"
 
-#: contents/lockscreen/LockScreenUi.qml:475
+#: contents/lockscreen/LockScreenUi.qml:476
 #, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "Teclado virtual"
+msgctxt "@action:button"
+msgid "Hide On-Screen Keyboard"
+msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:501
+#: contents/lockscreen/LockScreenUi.qml:477
+#, kde-format
+msgctxt "@action:button"
+msgid "Show On-Screen Keyboard"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:503
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -1300,6 +1306,10 @@ msgstr "Desactivar o modo de edición"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Indicador de foco do panel"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Teclado virtual"
 
 #, fuzzy
 #~| msgid "Send an email to %1"
