@@ -145,9 +145,7 @@ msgid "Apply Settings"
 msgstr "Aplicar a configuración"
 
 #: contents/configuration/AppletConfiguration.qml:386
-#, fuzzy, kde-format
-#| msgid ""
-#| "The current page has unsaved changes. Apply the changes or discard them?"
+#, kde-format
 msgctxt "@label dialog body"
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
@@ -359,8 +357,7 @@ msgid "Input Here"
 msgstr "Escribir aquí"
 
 #: contents/configuration/PanelConfiguration.qml:99
-#, fuzzy, kde-format
-#| msgid "Panel Settings"
+#, kde-format
 msgctxt "@title:window"
 msgid "Panel Settings"
 msgstr "Configuración do panel"
@@ -392,8 +389,7 @@ msgid "Widgets…"
 msgstr "Trebellos…"
 
 #: contents/configuration/PanelConfiguration.qml:169
-#, fuzzy, kde-format
-#| msgid "Position"
+#, kde-format
 msgctxt "@title:group"
 msgid "Position"
 msgstr "Posición"
@@ -427,15 +423,13 @@ msgid "Bottom"
 msgstr "Abaixo"
 
 #: contents/configuration/PanelConfiguration.qml:197
-#, fuzzy, kde-format
-#| msgid "Set Position…"
+#, kde-format
 msgctxt "action:button"
 msgid "Set Position…"
 msgstr "Definir a posición…"
 
 #: contents/configuration/PanelConfiguration.qml:224
-#, fuzzy, kde-format
-#| msgid "Alignment"
+#, kde-format
 msgctxt "@title:group"
 msgid "Alignment"
 msgstr "Aliñamento"
@@ -476,43 +470,37 @@ msgid "Right"
 msgstr "Á dereita"
 
 #: contents/configuration/PanelConfiguration.qml:321
-#, fuzzy, kde-format
-#| msgid "Height"
+#, kde-format
 msgctxt "@title:group panel height"
 msgid "Height"
 msgstr "Altura"
 
 #: contents/configuration/PanelConfiguration.qml:322
-#, fuzzy, kde-format
-#| msgid "Width"
+#, kde-format
 msgctxt "@title:group panel width"
 msgid "Width"
 msgstr "Anchura"
 
 #: contents/configuration/PanelConfiguration.qml:341
-#, fuzzy, kde-format
-#| msgid "Fill height"
+#, kde-format
 msgctxt "@item:inlistbox panel fills the full height of the display"
 msgid "Fill height"
 msgstr "Encher a altura"
 
 #: contents/configuration/PanelConfiguration.qml:341
-#, fuzzy, kde-format
-#| msgid "Fill width"
+#, kde-format
 msgctxt "@item:inlistbox panel fills the full width of the display"
 msgid "Fill width"
 msgstr "Encher a anchura"
 
 #: contents/configuration/PanelConfiguration.qml:342
-#, fuzzy, kde-format
-#| msgid "Fit content"
+#, kde-format
 msgctxt "@item:inlistbox panel is just big enough to fit its content"
 msgid "Fit content"
 msgstr "Axustar o contido"
 
 #: contents/configuration/PanelConfiguration.qml:343
-#, fuzzy, kde-format
-#| msgid "Custom"
+#, kde-format
 msgctxt "@item:inlistbox panel size"
 msgid "Custom"
 msgstr "Personalizada"
@@ -525,29 +513,25 @@ msgid "Visibility"
 msgstr "Visibilidade"
 
 #: contents/configuration/PanelConfiguration.qml:393
-#, fuzzy, kde-format
-#| msgid "Always visible"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always visible"
 msgstr "Sempre visíbel"
 
 #: contents/configuration/PanelConfiguration.qml:394
-#, fuzzy, kde-format
-#| msgid "Auto hide"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Auto hide"
 msgstr "Agochar automaticamente"
 
 #: contents/configuration/PanelConfiguration.qml:395
-#, fuzzy, kde-format
-#| msgid "Dodge windows"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Dodge windows"
 msgstr "Esquivar as xanelas"
 
 #: contents/configuration/PanelConfiguration.qml:396
-#, fuzzy, kde-format
-#| msgid "Windows go below"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Windows go below"
 msgstr "As xanelas van en baixo"
@@ -611,22 +595,19 @@ msgid "Panel and applets"
 msgstr "Paneis e miniaplicacións"
 
 #: contents/configuration/PanelConfiguration.qml:636
-#, fuzzy, kde-format
-#| msgid "Panel Width:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Panel Width:"
 msgstr "Anchura do panel:"
 
 #: contents/configuration/PanelConfiguration.qml:637
-#, fuzzy, kde-format
-#| msgid "Panel Height:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Panel Height:"
 msgstr "Altura do panel:"
 
 #: contents/configuration/PanelConfiguration.qml:660
-#, fuzzy, kde-format
-#| msgid "Focus shortcut:"
+#, kde-format
 msgctxt "@title:group shortcut that moves focus to the panel"
 msgid "Focus shortcut:"
 msgstr "Atallo do foco:"
@@ -671,9 +652,7 @@ msgid "Clone Panel"
 msgstr "Clonar o panel"
 
 #: contents/configuration/PanelConfiguration.qml:721
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Create a new panel with the same settings and applets"
+#, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Create a new panel with the same settings and applets"
 msgstr "Crear un novo panel coa mesma configuración e miniaplicacións."
@@ -692,8 +671,7 @@ msgid "Exit Edit Mode"
 msgstr "Desactivar o modo de edición"
 
 #: contents/configuration/PanelConfiguration.qml:733
-#, fuzzy, kde-format
-#| msgid "Close Panel Settings window and exit Edit Mode"
+#, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "Pechar a xanela de configuración do panel e saír do modo de edición."
@@ -740,8 +718,7 @@ msgstr ""
 "Prema dupla para restabelecer."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy, kde-format
-#| msgid "Manage Panels and Desktops"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Panels and Desktops"
 msgstr "Xestionar paneis e escritorios"
@@ -812,16 +789,13 @@ msgid "Add %1"
 msgstr "Engadir %1"
 
 #: contents/explorer/AppletDelegate.qml:47
-#, fuzzy, kde-format
-#| msgid "Unsupported Widget"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Unsupported Widget"
 msgstr "Trebello incompatíbel"
 
 #: contents/explorer/AppletDelegate.qml:196
-#, fuzzy, kde-format
-#| msgctxt "Text displayed on top of newly installed widgets"
-#| msgid "New!"
+#, kde-format
 msgctxt "Text displayed on top of newly-installed widgets"
 msgid "New!"
 msgstr "Novo!"
@@ -841,16 +815,13 @@ msgid "Recently installed"
 msgstr "Instalación recente"
 
 #: contents/explorer/AppletDelegate.qml:212
-#, fuzzy, kde-format
-#| msgid "Cancel Uninstallation"
+#, kde-format
 msgctxt "@action:button tooltip and accessible cancel uninstall widget"
 msgid "Cancel Uninstallation"
 msgstr "Cancelar a desinstalación"
 
 #: contents/explorer/AppletDelegate.qml:213
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip uninstall a widget"
-#| msgid "Mark for Uninstallation"
+#, kde-format
 msgctxt "@action:button tooltip and accessible uninstall widget"
 msgid "Mark for Uninstallation"
 msgstr "Marcar para desinstalar"
@@ -868,8 +839,7 @@ msgid "Mark widget %1 for uninstallation. Requires confirmation"
 msgstr "Marcar o trebello %1 para desinstalar. Require confirmación."
 
 #: contents/explorer/AppletDelegate.qml:260
-#, fuzzy, kde-format
-#| msgid "Remove all instances"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove all instances"
 msgstr "Retirar todas as instancias"
@@ -1007,8 +977,7 @@ msgid "Show under unlocking prompt"
 msgstr "Amosar baixo o diálogo de desbloquear."
 
 #: contents/lockscreen/LockScreenUi.qml:65
-#, fuzzy, kde-format
-#| msgid "Unlocking failed"
+#, kde-format
 msgctxt "@info:status"
 msgid "Unlocking failed"
 msgstr "Fallou o desbloqueo"
@@ -1022,8 +991,7 @@ msgid ""
 msgstr ""
 
 #: contents/lockscreen/LockScreenUi.qml:388
-#, fuzzy, kde-format
-#| msgid "Caps Lock is on"
+#, kde-format
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "As maiúsculas están bloqueadas"
@@ -1049,8 +1017,7 @@ msgid "&Hibernate"
 msgstr "&Hibernar"
 
 #: contents/lockscreen/LockScreenUi.qml:425
-#, fuzzy, kde-format
-#| msgid "Switch &User"
+#, kde-format
 msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "Cambiar de persoa &usuaria"
@@ -1074,8 +1041,7 @@ msgid "Switch layout"
 msgstr "Cambiar a disposición"
 
 #: contents/lockscreen/MainBlock.qml:67
-#, fuzzy, kde-format
-#| msgid "Password"
+#, kde-format
 msgctxt "@info:placeholder in text field"
 msgid "Password"
 msgstr "Contrasinal"
@@ -1088,50 +1054,43 @@ msgid "Unlock"
 msgstr "Desbloquear"
 
 #: contents/lockscreen/MainBlock.qml:164
-#, fuzzy, kde-format
-#| msgid "(or scan your fingerprint on the reader)"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "(or scan your fingerprint on the reader)"
 msgstr "(ou escanee a súa pegada no lector)"
 
 #: contents/lockscreen/MainBlock.qml:168
-#, fuzzy, kde-format
-#| msgid "(or scan your smartcard)"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "(or scan your smartcard)"
 msgstr "(ou escanee a súa tarxeta intelixente)"
 
 #: contents/lockscreen/MediaControls.qml:59
-#, fuzzy, kde-format
-#| msgid "No title"
+#, kde-format
 msgctxt "@info:status"
 msgid "No title"
 msgstr "Sen título"
 
 #: contents/lockscreen/MediaControls.qml:60
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgctxt "@info:status"
 msgid "No media playing"
 msgstr "Non se está a reproducir nada."
 
 #: contents/lockscreen/MediaControls.qml:88
-#, fuzzy, kde-format
-#| msgid "Previous track"
+#, kde-format
 msgctxt "@action:button Accessible only"
 msgid "Previous track"
 msgstr "Pista anterior"
 
 #: contents/lockscreen/MediaControls.qml:100
-#, fuzzy, kde-format
-#| msgid "Play or Pause media"
+#, kde-format
 msgctxt "@action:button Accessible only"
 msgid "Play or Pause media"
 msgstr "Reproducir ou deter o contido multimedia"
 
 #: contents/lockscreen/MediaControls.qml:110
-#, fuzzy, kde-format
-#| msgid "Next track"
+#, kde-format
 msgctxt "@action:button Accessible only"
 msgid "Next track"
 msgstr "Seguinte pista"
@@ -1301,8 +1260,7 @@ msgid "Exit Edit Mode"
 msgstr "Desactivar o modo de edición"
 
 #: contents/views/Panel.qml:322
-#, fuzzy, kde-format
-#| msgid "Panel Focus Indicator"
+#, kde-format
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Indicador de foco do panel"

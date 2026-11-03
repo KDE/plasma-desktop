@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-20 00:45+0000\n"
+"POT-Creation-Date: 2026-11-03 00:56+0000\n"
 "PO-Revision-Date: 2024-02-19 21:16+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -36,26 +36,25 @@ msgid "No touchscreens found"
 msgstr "Non se atoparon áreas táctiles."
 
 #: ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Connect an external touchscreen"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchscreen"
 msgstr "Conectar a unha área táctil externa"
 
-#: ui/main.qml:46
+#: ui/main.qml:47
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Dispositivo:"
 
-#: ui/main.qml:59
+#: ui/main.qml:60
 #, fuzzy, kde-format
 #| msgid "Enabled:"
 msgctxt "@option:check prefix touchscreen device is enabled"
 msgid "Enabled:"
 msgstr "Activado:"
 
-#: ui/main.qml:67
+#: ui/main.qml:68
 #, fuzzy, kde-format
 #| msgid "Target display:"
 msgctxt "@label:listbox this is a compound noun"

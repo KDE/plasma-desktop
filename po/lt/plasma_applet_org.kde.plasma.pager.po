@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-29 00:55+0000\n"
+"POT-Creation-Date: 2026-11-03 00:56+0000\n"
 "PO-Revision-Date: 2026-01-12 23:59+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -159,7 +159,7 @@ msgstr[1] "…ir dar %1 langai"
 msgstr[2] "…ir dar %1 langų"
 msgstr[3] "…ir dar %1 langas"
 
-#: qml/main.qml:351
+#: qml/main.qml:356
 #, kde-format
 msgctxt "@info:tooltip start of list"
 msgid "%1 Window:"
@@ -169,7 +169,7 @@ msgstr[1] "%1 langai:"
 msgstr[2] "%1 langų:"
 msgstr[3] "%1 langas:"
 
-#: qml/main.qml:363
+#: qml/main.qml:368
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "%1 Minimized Window:"
@@ -179,43 +179,43 @@ msgstr[1] "%1 suskleisti langai:"
 msgstr[2] "%1 suskleistų langų:"
 msgstr[3] "%1 suskleistas langas:"
 
-#: qml/main.qml:439
+#: qml/main.qml:444
 #, kde-format
 msgctxt "@info:whatsthis Accessible name for pager section"
 msgid "Desktop %1"
 msgstr "Darbalaukis %1"
 
-#: qml/main.qml:440
+#: qml/main.qml:445
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr "Perjungti į %1"
 
-#: qml/main.qml:596
+#: qml/main.qml:601
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
 msgstr "Rodyti veiklų tvarkytuvę"
 
-#: qml/main.qml:602
+#: qml/main.qml:607
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
 msgstr "Pridėti virtualų darbalaukį"
 
-#: qml/main.qml:608
+#: qml/main.qml:613
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "Šalinti virtualų darbalaukį"
 
-#: qml/main.qml:615
+#: qml/main.qml:620
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
 msgstr "&Konfigūruoti veiklas…"
 
-#: qml/main.qml:620
+#: qml/main.qml:625
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Configure Virtual Desktops…"
