@@ -57,12 +57,7 @@ msgid "Panel and widget tooltips"
 msgstr "Mensaxes emerxentes de paneis e trebellos."
 
 #: ui/main.qml:63
-#, fuzzy, kde-format
-#| msgid ""
-#| "Allows all Plasma panel and desktop widgets to show descriptive tooltips "
-#| "when hovered with the pointer. This setting has no effect on the small "
-#| "tooltips displayed when hovering over individual buttons and other user "
-#| "interface elements."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Allows all Plasma panel and desktop widgets to show descriptive tooltips "
@@ -83,10 +78,7 @@ msgid "OSD popups for status changes"
 msgstr "Mensaxes en pantalla ao cambiar de estado."
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgid ""
-#| "Allows all Plasma widgets to show on-screen display (OSD) popups for "
-#| "changes like volume and brightness level, or audio device switching."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
@@ -207,8 +199,7 @@ msgid "Pastes selected text"
 msgstr "Pega o texto seleccionado."
 
 #: ui/main.qml:212
-#, fuzzy, kde-format
-#| msgid "Double-click interval:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Double-click interval:"
 msgstr "Intervalo de clic duplo:"
@@ -228,10 +219,7 @@ msgid "ms"
 msgstr "ms"
 
 #: ui/main.qml:251
-#, fuzzy, kde-format
-#| msgid ""
-#| "Two clicks within this duration are considered a double-click. Some "
-#| "applications may not honor this setting."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "
@@ -251,22 +239,19 @@ msgstr ""
 "aumente o intervalo de prema dupla."
 
 #: ui/main.qml:306
-#, fuzzy, kde-format
-#| msgid "Drag and Drop"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr "Arrastrar e soltar"
 
 #: ui/main.qml:309
-#, fuzzy, kde-format
-#| msgid "When dragging files or folders:"
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "Ao arrastrar ficheiros e cartafoles:"
 
 #: ui/main.qml:313
-#, fuzzy, kde-format
-#| msgid "Always ask what to do"
+#, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr "Preguntar sempre que facer"
@@ -284,8 +269,7 @@ msgstr ""
 "ligazón simbólica. Senón, amosar un diálogo."
 
 #: ui/main.qml:332
-#, fuzzy, kde-format
-#| msgid "Move if on the same device"
+#, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "Mover se o dispositivo é o mesmo"
@@ -351,9 +335,7 @@ msgid "Always enabled"
 msgstr "Sempre activo"
 
 #: ui/main.qml:401
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is never enabled'"
-#| msgid "Disabled"
+#, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Desactivado"
