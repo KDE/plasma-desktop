@@ -56,6 +56,7 @@ Kirigami.ApplicationWindow {
         id: recentAction
         checked: window.pageStack.get(0).title === text
         text: i18nc("@title page title for Recent Emoji view, and sidebar label for it", "Recent")
+	displayHint: Kirigami.DisplayHint.IconOnly
 
         icon.name: "document-open-recent-symbolic"
         onTriggered: {
@@ -72,6 +73,7 @@ Kirigami.ApplicationWindow {
         checked: window.pageStack.get(0).title === text
         text: i18nc("@title:page All emojis", "All")
         icon.name: "view-list-icons"
+	displayHint: Kirigami.DisplayHint.IconOnly
 
         onTriggered: {
             window.currentPage.category = "All";
@@ -142,6 +144,7 @@ Kirigami.ApplicationWindow {
                 checked: window.pageStack.get(0).title === text
                 icon.name: drawer.getIcon(modelData)
                 text: i18ndc("org.kde.plasma.emojier", "Emoji Category", modelData)
+		displayHint: Kirigami.DisplayHint.IconOnly
 
                 onTriggered: {
                     window.currentPage.category = modelData;
