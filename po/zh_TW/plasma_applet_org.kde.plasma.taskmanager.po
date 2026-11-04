@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-28 01:03+0000\n"
-"PO-Revision-Date: 2026-08-04 06:56+0900\n"
+"PO-Revision-Date: 2026-11-03 20:42+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -724,28 +724,24 @@ msgid "Move to %1"
 msgstr "移動到 %1"
 
 #: qml/ContextMenu.qml:505
-#, fuzzy, kde-format
-#| msgctxt "action:inmenu"
-#| msgid "Move to &Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move to &Screen"
-msgstr "移動到桌面(&D)"
+msgstr "移動到螢幕(&S)"
 
 #: qml/ContextMenu.qml:535
 #, kde-format
 msgctxt "@item:inmenu List of all Screens to send a window to."
 msgid "Built-in Screen"
-msgstr ""
+msgstr "內建螢幕"
 
 #: qml/ContextMenu.qml:538
-#, fuzzy, kde-format
-#| msgctxt "1 = number of desktop, 2 = desktop name"
-#| msgid "&%1 %2"
+#, kde-format
 msgctxt ""
 "@item:inmenu List of all Screens to send a window to, manufacturer, model "
 "(output identifier)"
 msgid "%1 %2 (%3)"
-msgstr "%1 %2(&%1)"
+msgstr "%1 %2 (%3)"
 
 #: qml/ContextMenu.qml:583 qml/ContextMenu.qml:599
 #, kde-format

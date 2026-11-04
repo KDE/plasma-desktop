@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-17 00:51+0000\n"
-"PO-Revision-Date: 2026-04-08 23:46+0900\n"
+"PO-Revision-Date: 2026-11-03 20:44+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 26.07.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 
 #: kcm.cpp:57
 #, kde-format
@@ -156,7 +156,7 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "This setting is not available while “Right-click by pressing anywhere with "
 "two fingers” is selected."
-msgstr ""
+msgstr "已選取「用兩指點觸任何地方來點擊右鍵」時，這個選項無法使用。"
 
 #: ui/main.qml:208
 #, kde-format
@@ -238,16 +238,12 @@ msgid "Right-click by:"
 msgstr "右鍵點擊方式："
 
 #: ui/main.qml:478
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Completes the sentence 'right-click by pressing bottom-"
-#| "right corner'"
-#| msgid "Pressing bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-left "
 "corner'"
 msgid "Pressing bottom-left corner"
-msgstr "點觸右下角"
+msgstr "點觸左下角"
 
 #: ui/main.qml:479
 #, kde-format
@@ -330,9 +326,7 @@ msgid "Right-click"
 msgstr "點擊右鍵"
 
 #: ui/main.qml:582
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by tapping anywhere with three fingers."
 msgstr "在任何地方三指點觸來進行中鍵點擊。"
@@ -344,12 +338,10 @@ msgid "Middle-click"
 msgstr "中鍵"
 
 #: ui/main.qml:607
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Right-click by tapping anywhere with three fingers."
-msgstr "在任何地方三指點觸來進行中鍵點擊。"
+msgstr "在任何地方三指點觸來進行右鍵點擊。"
 
 #~ msgctxt ""
 #~ "@label for radiobutton group, begins the sentence 'middle-click by "
