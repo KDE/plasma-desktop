@@ -21,8 +21,8 @@ import org.kde.plasma.private.keyboardindicator as KeyboardIndicator
 import org.kde.kirigami as Kirigami
 import org.kde.kscreenlocker as ScreenLocker
 import org.kde.ki18n
+import org.kde.kworkspace as KWorkspace
 
-import org.kde.plasma.private.sessions
 import org.kde.breeze.components
 
 Item {
@@ -110,7 +110,7 @@ Item {
         }
     }
 
-    SessionManagement {
+    KWorkspace.SessionManagement {
         id: sessionManagement
     }
 
