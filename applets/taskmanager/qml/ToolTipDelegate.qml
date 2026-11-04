@@ -89,6 +89,7 @@ Loader {
         id: groupToolTip
 
         PlasmaComponents3.ScrollView {
+            id: scrollView
             // 2 * Kirigami.Units.smallSpacing is for the margin of tooltipDialog
             readonly property real maximumWidth: Screen.desktopAvailableWidth - 2 * Kirigami.Units.smallSpacing
             readonly property real maximumHeight: Screen.desktopAvailableWidth - 2 * Kirigami.Units.smallSpacing
@@ -162,6 +163,7 @@ Loader {
                 }
 
                 delegate: ToolTipInstance {
+                    id: delegate
                     submodelIndex: tasksModel.makeModelIndex(toolTipDelegate.rootIndex.row, index)
                     appPid: model.AppPid
                     // 'display' is required already
@@ -173,6 +175,25 @@ Loader {
                     activities: model.Activities
                     hasTrackInATitle: groupToolTipListView.hasTrackInATitle
                     orientation: groupToolTipListView.orientation
+
+                    Kirigami.WheelHandler {
+                        property real accumulatedDeltaY: 0
+                        target: scrollView.contentItem
+                        onWheel: event => {
+                            if (toolTipDelegate.isVerticalPanel || event.angleDelta.x != 0) {
+                                return
+                            }
+                            accumulatedDeltaY += event.angleDelta.y
+                            if (accumulatedDeltaY >= 120) {
+                                accumulatedDeltaY = 0
+                                scrollLeft()
+                            } else if (accumulatedDeltaY <= -120) {
+                                accumulatedDeltaY = 0
+                                scrollRight()
+                            }
+                            event.accepted = true
+                        }
+                    }
                 }
             }
         }
