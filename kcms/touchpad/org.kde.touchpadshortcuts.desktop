@@ -139,6 +139,7 @@ Name[sk]=Zakázať touchpad
 Name[sl]=Onemogoči sledilno ploščico
 Name[sv]=Inaktivera tryckplatta
 Name[uk]=Вимкнути сенсорну панель
+Name[zh_TW]=關閉觸控板
 Exec=dbus-send --type=method_call --print-reply --dest=org.kde.touchpad /modules/kded_touchpad org.kde.touchpad.disable
 X-KDE-Shortcuts=Touchpad Off
 X-KDE-Migrate-Shortcut=kcm_touchpad,Disable Touchpad
@@ -167,6 +168,7 @@ Name[sk]=Prepnúť touchpad
 Name[sl]=Omogoči sledilno ploščico
 Name[sv]=Växla tryckplatta
 Name[uk]=Увімкнути або вимкнути сенсорну панель
+Name[zh_TW]=切換觸控板
 Exec=dbus-send --type=method_call --print-reply --dest=org.kde.touchpad /modules/kded_touchpad org.kde.touchpad.toggle
 X-KDE-Shortcuts=Touchpad Toggle\tMeta+Ctrl+Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku
 X-KDE-Migrate-Shortcut=kcm_touchpad,Toggle Touchpad
