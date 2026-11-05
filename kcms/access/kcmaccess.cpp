@@ -77,8 +77,7 @@ KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData)
     qmlRegisterAnonymousType<ZoomMagnifierSettings>("org.kde.plasma.access.kcm", 0);
     qmlRegisterType<IntValidatorWithSuffix>("org.kde.plasma.access.kcm", 0, 0, "IntValidatorWithSuffix");
 
-    int tryOrcaRun = QProcess::execute(QStringLiteral("orca"), {QStringLiteral("--version")});
-    m_screenReaderInstalled = tryOrcaRun != -2;
+    m_screenReaderInstalled = orcaInstalled();
 
     setButtons(KAbstractConfigModule::Apply | KAbstractConfigModule::Default | KAbstractConfigModule::Help);
 
@@ -470,9 +469,7 @@ void KAccessConfig::setOrcaLaunchFeedback(const QString &value)
 
 bool KAccessConfig::orcaInstalled()
 {
-    int tryOrcaRun = QProcess::execute(QStringLiteral("orca"), {QStringLiteral("--version")});
-    // If the process cannot be started, -2 is returned.
-    return tryOrcaRun != -2;
+    return !QStandardPaths::findExecutable(QStringLiteral("orca")).isEmpty();
 }
 
 MouseSettings *KAccessConfig::mouseSettings() const
