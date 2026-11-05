@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-28 01:03+0000\n"
-"PO-Revision-Date: 2026-06-19 22:37+0200\n"
+"PO-Revision-Date: 2026-11-04 22:12+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: backend.cpp:339
 #, kde-format
@@ -70,31 +70,27 @@ msgstr "Legutóbbi fájlok elfelejtése"
 #: backend.cpp:581
 #, kde-format
 msgid "Activate Previous Task Manager Entry"
-msgstr ""
+msgstr "Előző bejegyzés aktiválása"
 
 #: backend.cpp:588
-#, fuzzy, kde-format
-#| msgctxt "action:inmenu"
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgid "Activate Next Task Manager Entry"
-msgstr "&Rögzítés a panelen"
+msgstr "Következő bejegyzés aktiválása"
 
 #: backend.cpp:595
 #, kde-format
 msgid "Move Active Task Manager Entry Backward"
-msgstr ""
+msgstr "Aktív bejegyzés mozgatása hátrafelé"
 
 #: backend.cpp:603
 #, kde-format
 msgid "Move Active Task Manager Entry Forward"
-msgstr ""
+msgstr "Aktív bejegyzés mozgatása előre"
 
 #: backend.cpp:612
-#, fuzzy, kde-format
-#| msgctxt "action:inmenu"
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgid "Activate Task Manager Entry %1"
-msgstr "&Rögzítés a panelen"
+msgstr "A(z) %1. bejegyzés aktiválása"
 
 #: qml/AudioStream.qml:100
 #, kde-format
