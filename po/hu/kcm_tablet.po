@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-31 00:45+0000\n"
-"PO-Revision-Date: 2026-05-21 22:16+0200\n"
+"PO-Revision-Date: 2026-11-04 22:08+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -232,7 +232,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "upwards"
 msgid "Clockwise:"
-msgstr ""
+msgstr "Óramutató szerint:"
 
 #: ui/ActionDialog.qml:257
 #, kde-format
@@ -240,7 +240,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "downwards"
 msgid "Counterclockwise:"
-msgstr ""
+msgstr "Óramutatóval ellentétesen:"
 
 #: ui/ActionDialog.qml:271
 #, kde-format
@@ -331,7 +331,7 @@ msgstr "Tollkalibrálás"
 #, kde-format
 msgctxt "@info"
 msgid "%1: (%2 px, %3 px)"
-msgstr ""
+msgstr "%1: (%2 képpont, %3 képpont)"
 
 #: ui/Calibration.qml:107
 #, kde-format
@@ -340,14 +340,11 @@ msgid ""
 "Applied center correction (%1 px, %2 px). Retap the targets to redo the "
 "correction."
 msgstr ""
+"Középpont-korrekció alkalmazva (%1 képpont, %2 képpont). Koppintson újra a "
+"célokra akorrekció megismétléséhez."
 
 #: ui/Calibration.qml:173
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds unless further action is "
-#| "taken.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><emphasis "
@@ -358,9 +355,9 @@ msgid_plural ""
 "strong='true'>Will revert to default calibration in %1 seconds unless "
 "further action is taken.</emphasis>"
 msgstr[0] ""
-"Koppintson a célokra ismét az új kalibráció megerősítéséhez.<nl/><nl/><b>%1 "
-"másodperc múlva visszaáll az alapértelmezett kalibrációra, hacsak nem "
-"történik további művelet.</b>"
+"Koppintson a célokra ismét az új kalibráció megerősítéséhez.<nl/><nl/"
+"><emphasis strong='true'>%1 másodperc múlva visszaáll az alapértelmezett "
+"kalibrációra, hacsak nem történik további művelet.</emphasis>"
 msgstr[1] ""
 "Koppintson a célokra ismét az új kalibráció megerősítéséhez.<nl/><nl/><b>%1 "
 "másodperc múlva visszaáll az alapértelmezett kalibrációra, hacsak nem "
@@ -375,6 +372,10 @@ msgid ""
 "Tap the center target once to fine-tune alignment. You can retap the other "
 "targets to verify the result."
 msgstr ""
+"Kalibráció befejezve és mentve.\n"
+"\n"
+"Koppintson egyszer a középső célra az igazítás finomhangolásához. A "
+"többicélt is megérintheti az eredmény ellenőrzése érdekében."
 
 #: ui/Calibration.qml:180
 #, kde-format
@@ -389,6 +390,8 @@ msgid ""
 "Offset Correction:\n"
 "%1"
 msgstr ""
+"Eltoláskorrekció:\n"
+"%1"
 
 #: ui/Calibration.qml:216
 #, kde-format
@@ -424,31 +427,31 @@ msgstr "Mégse"
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-left"
-msgstr ""
+msgstr "Bal felső"
 
 #: ui/Calibration.qml:334
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-right"
-msgstr ""
+msgstr "Jobb felső"
 
 #: ui/Calibration.qml:353
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-left"
-msgstr ""
+msgstr "Bal alsó"
 
 #: ui/Calibration.qml:372
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-right"
-msgstr ""
+msgstr "Jobb alsó"
 
 #: ui/Calibration.qml:391
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Center"
-msgstr ""
+msgstr "Középen"
 
 #: ui/DisplayTab.qml:46
 #, kde-format
