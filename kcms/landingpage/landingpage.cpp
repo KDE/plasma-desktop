@@ -115,23 +115,15 @@ QHash<int, QByteArray> MostUsedModel::roleNames() const
 
 bool MostUsedModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
-    const auto ignoreKCM = [this](const QString &desktopName) {
-        const bool isAlreadyIgnored = ignoredKCMs.contains(desktopName);
-        if (!isAlreadyIgnored) {
-            ignoredKCMs.append(desktopName);
-        }
-    };
-
     const QString desktopName = sourceModel()->index(source_row, 0, source_parent).data(ResultModel::ResourceRole).toUrl().path();
 
-    if (!KAuthorized::authorizeControlModule(desktopName)) {
-        ignoreKCM(desktopName);
+    if (ignoredKCMs.contains(desktopName)) {
         return false;
-    }
-
-    KService::Ptr service = KService::serviceByStorageId(desktopName);
-    if (!service || !service->showOnCurrentPlatform()) {
-        ignoreKCM(desktopName);
+    } else if (!KAuthorized::authorizeControlModule(desktopName)) {
+        ignoredKCMs.append(desktopName);
+        return false;
+    } else if (KService::Ptr service = KService::serviceByStorageId(desktopName); !service || !service->showOnCurrentPlatform()) {
+        ignoredKCMs.append(desktopName);
         return false;
     }
 
