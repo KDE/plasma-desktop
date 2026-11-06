@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-17 00:51+0000\n"
-"PO-Revision-Date: 2026-02-24 19:44+0200\n"
+"PO-Revision-Date: 2026-10-05 15:33+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -234,13 +234,13 @@ msgstr "käännä vierityssuunta"
 #, kde-format
 msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
-msgstr ""
+msgstr "Vieritä liikutettaessa osoitinta"
 
 #: ui/main.qml:380
 #, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
-msgstr ""
+msgstr "painettaessa keskipainiketta"
 
 #: ui/main.qml:397
 #, kde-format
@@ -260,7 +260,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
-msgstr ""
+msgstr "keskipainikkeen napsautuksen jälkeen"
 
 #: ui/main.qml:421
 #, kde-format
@@ -270,6 +270,9 @@ msgid ""
 "you want the application to receive a single middle-click. This includes "
 "middle-click dragging."
 msgstr ""
+"Tämä häiritsee keskinapsautuksia yleisemmin; keskinapsauta kahdesti "
+"halutessasi sovelluksen saavan yksittäisen keskinapsautuksen. Tähän kuuluu "
+"myös keskipainikkeella veto."
 
 #~ msgctxt "@option:check"
 #~ msgid "Hold down middle button and move mouse to scroll"

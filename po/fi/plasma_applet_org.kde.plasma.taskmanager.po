@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-28 01:03+0000\n"
-"PO-Revision-Date: 2026-08-24 20:05+0300\n"
+"PO-Revision-Date: 2026-10-05 15:33+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -725,28 +725,24 @@ msgstr "Siirrä → %1"
 
 # *** TARKISTA: Siirrä vai siirry? Sama koskee seuraavaa
 #: qml/ContextMenu.qml:505
-#, fuzzy, kde-format
-#| msgctxt "action:inmenu"
-#| msgid "Move to &Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move to &Screen"
-msgstr "Siirrä &työpöydälle"
+msgstr "Siirrä &näytölle"
 
 #: qml/ContextMenu.qml:535
 #, kde-format
 msgctxt "@item:inmenu List of all Screens to send a window to."
 msgid "Built-in Screen"
-msgstr ""
+msgstr "Sisäänrakennettu näyttö"
 
 #: qml/ContextMenu.qml:538
-#, fuzzy, kde-format
-#| msgctxt "1 = number of desktop, 2 = desktop name"
-#| msgid "&%1 %2"
+#, kde-format
 msgctxt ""
 "@item:inmenu List of all Screens to send a window to, manufacturer, model "
 "(output identifier)"
 msgid "%1 %2 (%3)"
-msgstr "&%1 %2"
+msgstr "%1 %2 (%3)"
 
 #: qml/ContextMenu.qml:583 qml/ContextMenu.qml:599
 #, kde-format

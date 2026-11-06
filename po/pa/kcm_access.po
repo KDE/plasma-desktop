@@ -2,75 +2,75 @@
 # Amanpreet Singh Alam <aalam@redhat.com>, 2004, 2005.
 # Amanpreet Singh Brar <amanpreetalam@yahoo.com>, 2005.
 # Amanpreet Singh Brar <aalam@redhat.com>, 2005.
-# SPDX-FileCopyrightText: 2007, 2008, 2021, 2024, 2025, 2026 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2007-2008, 2021, 2024-2026 A S Alam <aalam@users.sf.net>
 # Amanpreet Singh Alam <aalam@users.sf.net>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-03 00:45+0000\n"
-"PO-Revision-Date: 2026-01-24 08:26-0600\n"
+"POT-Creation-Date: 2026-11-06 00:54+0000\n"
+"PO-Revision-Date: 2026-11-02 20:23-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 26.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 
-#: kcmaccess.cpp:123 kcmaccess.cpp:151
+#: kcmaccess.cpp:122 kcmaccess.cpp:150
 #, kde-format
 msgid "KWin"
 msgstr "ਕੇ-ਵਿਨ"
 
-#: kcmaccess.cpp:126
+#: kcmaccess.cpp:125
 #, kde-format
 msgid "Toggle Invert Effect"
 msgstr ""
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Toggle Invert Effect on Window"
 msgstr ""
 
-#: kcmaccess.cpp:174
+#: kcmaccess.cpp:173
 #, kde-format
 msgid "Move Left"
 msgstr "ਖੱਬੇ ਭੇਜੋ"
 
-#: kcmaccess.cpp:181
+#: kcmaccess.cpp:180
 #, kde-format
 msgid "Move Right"
 msgstr "ਸੱਜੇ ਭੇਜੋ"
 
-#: kcmaccess.cpp:188
+#: kcmaccess.cpp:187
 #, kde-format
 msgid "Move Up"
 msgstr "ਉੱਤੇ ਭੇਜੋ"
 
-#: kcmaccess.cpp:195
+#: kcmaccess.cpp:194
 #, kde-format
 msgid "Move Down"
 msgstr "ਹੇਠਾਂ ਭੇਜੋ"
 
-#: kcmaccess.cpp:202
+#: kcmaccess.cpp:201
 #, kde-format
 msgid "Move Mouse to Focus"
 msgstr "ਫੋਕਸ ਲਈ ਮਾਊਸ ਨੂੰ ਹਿਲਾਓ"
 
-#: kcmaccess.cpp:209
+#: kcmaccess.cpp:208
 #, kde-format
 msgid "Move Mouse to Center"
 msgstr "ਸੈੰਟਰ ਲਈ ਮਾਊਸ ਨੂੰ ਹਿਲਾਓ"
 
-#: kcmaccess.cpp:252
+#: kcmaccess.cpp:251
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr ""
 
-#: kcmaccess.cpp:259
+#: kcmaccess.cpp:258
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr ""
@@ -320,8 +320,7 @@ msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
 msgstr "ogg, oga, ਅਤੇ ਵੇਵ ਆਡੀਓ ਫਾਇਲਾਂ (*.ogg *.oga *.wav)"
 
 #: ui/Bell.qml:28
-#, fuzzy, kde-format
-#| msgid "Audible bell:"
+#, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Audible bell:"
 msgstr "ਸੁਣਨਯੋਗ ਘੰਟੀ:"
