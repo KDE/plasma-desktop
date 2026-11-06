@@ -45,6 +45,11 @@ K_PLUGIN_FACTORY_WITH_JSON(KCMLandingPageFactory, "kcm_landingpage.json", regist
 // Program to icon hash
 static QHash<QString, QString> s_programs = {{"plasmashell", "plasmashell"}, {"plasma-discover", "plasmadiscover"}};
 
+namespace
+{
+constexpr int TOP_N_ITEMS = 6;
+};
+
 MostUsedModel::MostUsedModel(QObject *parent)
     : QSortFilterProxyModel(parent)
 {
@@ -80,7 +85,7 @@ void MostUsedModel::setResultModel(ResultModel *model)
 
     auto updateModel = [this]() {
         auto oldModel = sourceModel();
-        if (m_resultModel->rowCount() >= 6) {
+        if (m_resultModel->rowCount() >= TOP_N_ITEMS) {
             setSourceModel(m_resultModel);
         } else {
             setSourceModel(m_defaultModel);
@@ -131,7 +136,7 @@ bool MostUsedModel::filterAcceptsRow(int source_row, const QModelIndex &source_p
         return false;
     }
 
-    return source_row - ignoredKCMs.size() < 6;
+    return source_row - ignoredKCMs.size() < TOP_N_ITEMS;
 }
 
 QVariant MostUsedModel::data(const QModelIndex &index, int role) const
