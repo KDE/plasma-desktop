@@ -84,16 +84,15 @@ void MostUsedModel::setResultModel(ResultModel *model)
     }
 
     auto updateModel = [this]() {
-        auto oldModel = sourceModel();
         if (m_resultModel->rowCount() >= TOP_N_ITEMS) {
             setSourceModel(m_resultModel);
         } else {
             setSourceModel(m_defaultModel);
         }
-        if (oldModel != sourceModel()) {
-            ignoredKCMs.clear();
-        }
-        invalidateFilter();
+        beginFilterChange();
+        // ignoredKCMs may contain items past TOP_N_ITEMS, clear it to ensure filterAcceptsRow() correctness
+        ignoredKCMs.clear();
+        endFilterChange();
     };
 
     m_resultModel = model;
