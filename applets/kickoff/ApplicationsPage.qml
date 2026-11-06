@@ -215,6 +215,9 @@ BasePage {
                 onHideSectionViewRequested: index => {
                     stackView.pop();
                     stackView.currentItem.view.positionViewAtIndex(index, ListView.Beginning);
+                    // Loading distant delegates can change the estimated scroll extent.
+                    // See also QTBUG-132454
+                    stackView.currentItem.view.positionViewAtIndex(index, ListView.Beginning);
                     stackView.currentItem.currentIndex = index;
                 }
             }
