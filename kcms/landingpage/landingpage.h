@@ -47,7 +47,8 @@ private:
     QStandardItemModel *m_defaultModel = nullptr;
     // Model fed by kactivities-stats
     KActivities::Stats::ResultModel *m_resultModel = nullptr;
-    mutable QStringList ignoredKCMs;
+    // Proxy model filtering out KCMs that may not be shown
+    QSortFilterProxyModel *m_usableKCMs = nullptr;
 };
 
 class KCMLandingPage : public KQuickManagedConfigModule

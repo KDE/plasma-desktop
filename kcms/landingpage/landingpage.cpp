@@ -48,6 +48,24 @@ static QHash<QString, QString> s_programs = {{"plasmashell", "plasmashell"}, {"p
 namespace
 {
 constexpr int TOP_N_ITEMS = 6;
+
+class UsableKCMFilterModel : public QSortFilterProxyModel
+{
+public:
+    using QSortFilterProxyModel::QSortFilterProxyModel;
+
+    bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override
+    {
+        const QString desktopName = sourceModel()->index(sourceRow, 0, sourceParent).data(ResultModel::ResourceRole).toUrl().path();
+
+        if (!KAuthorized::authorizeControlModule(desktopName)) {
+            return false;
+        }
+
+        const KService::Ptr service = KService::serviceByStorageId(desktopName);
+        return service && service->showOnCurrentPlatform();
+    }
+};
 };
 
 MostUsedModel::MostUsedModel(QObject *parent)
@@ -56,6 +74,19 @@ MostUsedModel::MostUsedModel(QObject *parent)
     sort(0, Qt::DescendingOrder);
     setSortRole(ResultModel::ScoreRole);
     setDynamicSortFilter(true);
+
+    m_usableKCMs = new UsableKCMFilterModel(this);
+    setSourceModel(m_usableKCMs);
+
+    // filterAcceptsRow() below depends on the source row, so re-evaluate filters when the source row layout changes.
+    auto invalidateFilters = [this]() {
+        beginFilterChange();
+        endFilterChange();
+    };
+    connect(m_usableKCMs, &QAbstractItemModel::rowsInserted, this, invalidateFilters);
+    connect(m_usableKCMs, &QAbstractItemModel::rowsRemoved, this, invalidateFilters);
+    connect(m_usableKCMs, &QAbstractItemModel::rowsMoved, this, invalidateFilters);
+
     // prepare default items
     m_defaultModel = new QStandardItemModel(this);
 
@@ -85,14 +116,10 @@ void MostUsedModel::setResultModel(ResultModel *model)
 
     auto updateModel = [this]() {
         if (m_resultModel->rowCount() >= TOP_N_ITEMS) {
-            setSourceModel(m_resultModel);
+            m_usableKCMs->setSourceModel(m_resultModel);
         } else {
-            setSourceModel(m_defaultModel);
+            m_usableKCMs->setSourceModel(m_defaultModel);
         }
-        beginFilterChange();
-        // ignoredKCMs may contain items past TOP_N_ITEMS, clear it to ensure filterAcceptsRow() correctness
-        ignoredKCMs.clear();
-        endFilterChange();
     };
 
     m_resultModel = model;
@@ -113,21 +140,9 @@ QHash<int, QByteArray> MostUsedModel::roleNames() const
     return roleNames;
 }
 
-bool MostUsedModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
+bool MostUsedModel::filterAcceptsRow(int source_row, const QModelIndex &) const
 {
-    const QString desktopName = sourceModel()->index(source_row, 0, source_parent).data(ResultModel::ResourceRole).toUrl().path();
-
-    if (ignoredKCMs.contains(desktopName)) {
-        return false;
-    } else if (!KAuthorized::authorizeControlModule(desktopName)) {
-        ignoredKCMs.append(desktopName);
-        return false;
-    } else if (KService::Ptr service = KService::serviceByStorageId(desktopName); !service || !service->showOnCurrentPlatform()) {
-        ignoredKCMs.append(desktopName);
-        return false;
-    }
-
-    return source_row - ignoredKCMs.size() < TOP_N_ITEMS;
+    return source_row < TOP_N_ITEMS;
 }
 
 QVariant MostUsedModel::data(const QModelIndex &index, int role) const
