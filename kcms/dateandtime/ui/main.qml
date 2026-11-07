@@ -27,8 +27,6 @@ KCMUtils.SimpleKCM {
 
     Kirigami.Form {
         Kirigami.FormGroup {
-            title: i18ndc("kcm_clock", "@title", "Date and Time")
-
             Kirigami.FormEntry {
                 contentItem: QQC2.Label{
                     Layout.fillWidth: true
