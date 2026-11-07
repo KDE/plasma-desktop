@@ -114,6 +114,8 @@ void MostUsedModel::setResultModel(ResultModel *model)
         return;
     }
 
+    m_resultModel = model;
+
     auto updateModel = [this]() {
         if (m_resultModel->rowCount() >= TOP_N_ITEMS) {
             m_usableKCMs->setSourceModel(m_resultModel);
@@ -121,9 +123,6 @@ void MostUsedModel::setResultModel(ResultModel *model)
             m_usableKCMs->setSourceModel(m_defaultModel);
         }
     };
-
-    m_resultModel = model;
-
     connect(m_resultModel, &QAbstractItemModel::rowsInserted, this, updateModel);
     connect(m_resultModel, &QAbstractItemModel::rowsRemoved, this, updateModel);
 
