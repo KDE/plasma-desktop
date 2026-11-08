@@ -36,6 +36,9 @@ private Q_SLOTS:
     void tst_replacementModel();
     void tst_multiScreenDifferenPath();
     void tst_initializeOnCorrectScreens();
+    void tst_mapDropUrl_data();
+    void tst_mapDropUrl();
+    void tst_dropOnOtherScreen();
 
 private:
     void createTestFolder(const QString &path);

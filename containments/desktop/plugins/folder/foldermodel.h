@@ -158,6 +158,10 @@ public:
     QHash<int, QByteArray> roleNames() const override;
     static QHash<int, QByteArray> staticRoleNames();
 
+    // Maps url, a child of localDirUrl, to the same child of listerUrl,
+    // e.g. file:///home/user/Desktop/file to desktop:/file.
+    static QUrl mapDropUrl(const QUrl &url, const QUrl &localDirUrl, const QUrl &listerUrl);
+
     void classBegin() override;
     void componentComplete() override;
 

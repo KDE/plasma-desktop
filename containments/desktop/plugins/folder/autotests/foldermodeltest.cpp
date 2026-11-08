@@ -12,6 +12,8 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
+#include <QMimeData>
+#include <QScopeGuard>
 #include <QSignalSpy>
 #include <QStandardPaths>
 #include <QTemporaryDir>
@@ -456,6 +458,112 @@ void FolderModelTest::tst_initializeOnCorrectScreens()
 
     // Now that the screen_1 is enabled again, the item should be back on the screen_1
     QCOMPARE(screenMapper->screenMapping(), newMap);
+}
+
+void FolderModelTest::tst_mapDropUrl_data()
+{
+    QTest::addColumn<QString>("fileName");
+
+    QTest::newRow("plain") << QStringLiteral("file.txt");
+    QTest::newRow("space") << QStringLiteral("a file.txt");
+    QTest::newRow("question mark") << QStringLiteral("show_bug.cgi?id=507060.desktop");
+    QTest::newRow("percent") << QStringLiteral("100%.txt");
+    QTest::newRow("hash") << QStringLiteral("a#b.txt");
+    QTest::newRow("link from url") << QString::fromUtf8("https:⁄⁄example.org⁄page?x=1#top.desktop");
+}
+
+void FolderModelTest::tst_mapDropUrl()
+{
+    QFETCH(QString, fileName);
+
+    const QUrl localDirUrl = QUrl::fromLocalFile(QStringLiteral("/home/user/Desktop"));
+    const QUrl url = QUrl::fromLocalFile(QStringLiteral("/home/user/Desktop/") + fileName);
+
+    QUrl expected(QStringLiteral("desktop:/"));
+    expected.setPath(QLatin1Char('/') + fileName);
+    QCOMPARE(FolderModel::mapDropUrl(url, localDirUrl, QUrl(QStringLiteral("desktop:/"))), expected);
+
+    QUrl expectedSubDir(QStringLiteral("desktop:/"));
+    expectedSubDir.setPath(QStringLiteral("/sub/") + fileName);
+    const QUrl subDirUrl = QUrl::fromLocalFile(QStringLiteral("/home/user/Desktop/sub/") + fileName);
+    QCOMPARE(FolderModel::mapDropUrl(subDirUrl, QUrl::fromLocalFile(QStringLiteral("/home/user/Desktop/sub")), QUrl(QStringLiteral("desktop:/sub"))),
+             expectedSubDir);
+
+    // Same scheme, or not below the local folder: unchanged
+    QCOMPARE(FolderModel::mapDropUrl(url, localDirUrl, localDirUrl), url);
+    const QUrl elsewhere = QUrl::fromLocalFile(QStringLiteral("/home/user/Desktop2/") + fileName);
+    QCOMPARE(FolderModel::mapDropUrl(elsewhere, localDirUrl, QUrl(QStringLiteral("desktop:/"))), elsewhere);
+}
+
+void FolderModelTest::tst_dropOnOtherScreen()
+{
+    const QStringList fileNames{
+        QStringLiteral("file.txt"),
+        QStringLiteral("a file.txt"),
+        QStringLiteral("show_bug.cgi?id=507060.desktop"),
+        QStringLiteral("100%.txt"),
+        QStringLiteral("a#b.txt"),
+        QString::fromUtf8("https:⁄⁄example.org⁄page?x=1#top.desktop"),
+    };
+
+    // Earlier tests leave screens registered in the shared mapper
+    ScreenMapper::instance()->cleanup();
+
+    // The desktop:/ worker lists $HOME/Desktop in its own process
+    QTemporaryDir home;
+    const QByteArray oldHome = qgetenv("HOME");
+    const QByteArray oldConfigHome = qgetenv("XDG_CONFIG_HOME");
+    qputenv("HOME", QFile::encodeName(home.path()));
+    qputenv("XDG_CONFIG_HOME", QFile::encodeName(home.path() + QStringLiteral("/.config")));
+    auto restoreEnv = qScopeGuard([&] {
+        qputenv("HOME", oldHome);
+        qputenv("XDG_CONFIG_HOME", oldConfigHome);
+    });
+    const QString desktopPath = home.path() + QStringLiteral("/Desktop/");
+    QDir(home.path()).mkpath(QStringLiteral("Desktop"));
+    for (const QString &fileName : fileNames) {
+        QFile file(desktopPath + fileName);
+        QVERIFY(file.open(QFile::WriteOnly));
+    }
+
+    auto createModel = [](FolderModel &model, int screen) {
+        model.classBegin();
+        model.setUrl(QStringLiteral("desktop:/"));
+        model.setUsedByContainment(true);
+        model.setScreen(screen);
+        model.componentComplete();
+    };
+    FolderModel firstScreen;
+    QSignalSpy firstListed(&firstScreen, &FolderModel::listingCompleted);
+    createModel(firstScreen, 0);
+    QVERIFY(firstListed.wait(5000));
+    FolderModel secondScreen;
+    QSignalSpy secondListed(&secondScreen, &FolderModel::listingCompleted);
+    createModel(secondScreen, 1);
+    QVERIFY(secondListed.wait(5000));
+    QCOMPARE(firstScreen.rowCount(), fileNames.size());
+    QCOMPARE(secondScreen.rowCount(), 0);
+
+    // Drag and drop pass local file urls, the models list desktop:/ urls
+    for (const QString &fileName : fileNames) {
+        QUrl itemUrl(QStringLiteral("desktop:/"));
+        itemUrl.setPath(QLatin1Char('/') + fileName);
+
+        QMimeData mimeData;
+        mimeData.setUrls({QUrl::fromLocalFile(desktopPath + fileName)});
+        QObject dropEvent;
+        dropEvent.setProperty("mimeData", QVariant::fromValue<QObject *>(&mimeData));
+        dropEvent.setProperty("x", 10);
+        dropEvent.setProperty("y", 10);
+        secondScreen.drop(nullptr, &dropEvent, -1);
+
+        QVERIFY2(ScreenMapper::instance()->screenForItem(itemUrl, m_currentActivity) == 1, qPrintable(fileName));
+    }
+
+    firstScreen.invalidate();
+    secondScreen.invalidate();
+    QTRY_COMPARE(firstScreen.rowCount(), 0);
+    QTRY_COMPARE(secondScreen.rowCount(), fileNames.size());
 }
 
 #include "moc_foldermodeltest.cpp"

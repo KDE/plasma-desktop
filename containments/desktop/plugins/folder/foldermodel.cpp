@@ -1279,6 +1279,19 @@ void FolderModel::dragSelectedInternal(int x, int y)
     m_dropTargetPositions.clear();
 }
 
+QUrl FolderModel::mapDropUrl(const QUrl &url, const QUrl &localDirUrl, const QUrl &listerUrl)
+{
+    if (localDirUrl == listerUrl || !localDirUrl.isParentOf(url)) {
+        return url;
+    }
+
+    // Work on decoded paths: a file name may contain '?', '#' or '%'.
+    const QString relativePath = QDir(localDirUrl.path()).relativeFilePath(url.path());
+    QUrl mapped = listerUrl;
+    mapped.setPath(QDir::cleanPath(listerUrl.path() + QLatin1Char('/') + relativePath));
+    return mapped;
+}
+
 static bool isDropBetweenSharedViews(const QList<QUrl> &urls, const QUrl &folderUrl)
 {
     if (urls.empty()) {
@@ -1341,18 +1354,7 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
      * i.e. go from file:///home/user/Desktop/file to desktop:/file
      */
     auto mappableUrl = [this, dropTargetUrl](const QUrl &url) -> QUrl {
-        if (dropTargetUrl != m_dirModel->dirLister()->url()) {
-            QString mappedUrl = url.toString();
-            const auto local = dropTargetUrl.toString();
-            auto internal = m_dirModel->dirLister()->url();
-            if (mappedUrl.startsWith(local)) {
-                mappedUrl.replace(0, local.size(), QString());
-            }
-            // Ensure we use TolerantMode so that we parse any % symbols properly
-            internal.setPath(mappedUrl, QUrl::TolerantMode);
-            return ScreenMapper::stringToUrl(internal.toString());
-        }
-        return url;
+        return mapDropUrl(url, dropTargetUrl, m_dirModel->dirLister()->url());
     };
 
     const int x = dropEvent->property("x").toInt();
