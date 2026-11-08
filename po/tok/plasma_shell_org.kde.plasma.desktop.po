@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # SPDX-FileCopyrightText: 2024 Janet Blackquill <uhhadd@gmail.com>
+# SPDX-FileCopyrightText: 2026 Mizufuwa <mizuf@tutamail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-02 00:56+0000\n"
-"PO-Revision-Date: 2024-07-07 20:41-0400\n"
-"Last-Translator: Janet Blackquill <uhhadd@gmail.com>\n"
-"Language-Team: C <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-10-10 10:19-0500\n"
+"Last-Translator: Mizufuwa <mizuf@tutamail.com>\n"
+"Language-Team: Toki Pona <kde-i18n-doc@kde.org>\n"
 "Language: tok\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: contents/activitymanager/ActivityItem.qml:206
 #, fuzzy, kde-format
@@ -31,6 +32,8 @@ msgid ""
 "Move to\n"
 "this activity"
 msgstr ""
+"o tawa\n"
+"..."
 
 #: contents/activitymanager/ActivityItem.qml:276
 #, kde-format
@@ -62,7 +65,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button tooltip only"
 msgid "Search"
-msgstr ""
+msgstr "o alasa"
 
 #: contents/activitymanager/Heading.qml:103
 #, kde-format
@@ -167,11 +170,10 @@ msgid "Open configuration page"
 msgstr "o lukin e lipu lawa ilo"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:19
-#, fuzzy, kde-format
-#| msgid "Left-Button"
+#, kde-format
 msgctxt "@label for shortcuts"
 msgid "Left-Button"
-msgstr "nena lawa pi ilo luka"
+msgstr "nena soto pi ilo luka"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:20
 #, fuzzy, kde-format
@@ -251,7 +253,7 @@ msgstr " en "
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Action"
-msgstr ""
+msgstr "o pana e nasin pali"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:76
 #, kde-format
@@ -263,13 +265,13 @@ msgstr ""
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Layout:"
-msgstr ""
+msgstr "nasin leko:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:114
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Wallpaper type:"
-msgstr ""
+msgstr "kule pi sitelen supa:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:153
 #, fuzzy, kde-format
@@ -302,31 +304,31 @@ msgstr "nasin nena"
 #, kde-format
 msgctxt "@action:button set keyboard shortcut for"
 msgid "Activate widget as if clicked:"
-msgstr ""
+msgstr "namako o pali e ijo pi sama ilo luka:"
 
 #: contents/configuration/ContainmentConfiguration.qml:26
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Wallpaper"
-msgstr ""
+msgstr "sitelen supa"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Mouse Actions"
-msgstr ""
+msgstr "nasin pali pi ilo luka"
 
 #: contents/configuration/MouseEventInputButton.qml:13
 #, kde-format
 msgctxt "@action:button inactive state for button recording mouse input"
 msgid "Add Action"
-msgstr ""
+msgstr "o pana e nasin pali"
 
 #: contents/configuration/MouseEventInputButton.qml:20
 #, kde-format
 msgctxt "@action:button active state for button recording mouse input"
 msgid "Input Here"
-msgstr ""
+msgstr "o pana tawa ni"
 
 #: contents/configuration/PanelConfiguration.qml:99
 #, fuzzy, kde-format
@@ -341,7 +343,7 @@ msgctxt ""
 "@action:button label of button to open a menu that lets you add widgets or "
 "spacers"
 msgid "Add New"
-msgstr ""
+msgstr "o pana e ijo sin"
 
 #: contents/configuration/PanelConfiguration.qml:126
 #, fuzzy, kde-format
@@ -388,7 +390,7 @@ msgstr "suli sewi"
 #, kde-format
 msgctxt "@label panel screen edge"
 msgid "Left"
-msgstr ""
+msgstr "soto"
 
 #: contents/configuration/PanelConfiguration.qml:177
 #, fuzzy, kde-format
@@ -422,14 +424,13 @@ msgstr "sewi"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Left"
-msgstr ""
+msgstr "soto"
 
 #: contents/configuration/PanelConfiguration.qml:290
-#, fuzzy, kde-format
-#| msgid "Center"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Center"
-msgstr "insa"
+msgstr "meso"
 
 #: contents/configuration/PanelConfiguration.qml:291
 #, fuzzy, kde-format
@@ -523,11 +524,10 @@ msgid "Windows go below"
 msgstr "lupa li lon monsi"
 
 #: contents/configuration/PanelConfiguration.qml:459
-#, fuzzy, kde-format
-#| msgid "Opacity"
+#, kde-format
 msgctxt "@title:group"
 msgid "Opacity"
-msgstr "ijo"
+msgstr "kon lukin"
 
 #: contents/configuration/PanelConfiguration.qml:465
 #, kde-format
@@ -567,7 +567,7 @@ msgstr "o kon"
 #, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
-msgstr ""
+msgstr "ken ala"
 
 #: contents/configuration/PanelConfiguration.qml:538
 #, kde-format
@@ -669,7 +669,7 @@ msgstr "o weka tan tomo ante"
 #, kde-format
 msgctxt "@info:tooltip for button"
 msgid "Close Panel Settings window and exit Edit Mode"
-msgstr ""
+msgstr "o weka e lipu lawa ni, o weka tan tomo ante"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:24
 #, fuzzy, kde-format
@@ -690,7 +690,7 @@ msgstr "o tawa e palisa tawa ni: sina ante e suli poka pini"
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Double-click to reset."
-msgstr ""
+msgstr "sina wile kama sin e ni la o luka pi tenpo tu."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:29
 #, fuzzy, kde-format
@@ -745,13 +745,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Move to Screen %1"
-msgstr ""
+msgstr "o tawa e ni tawa sitelen pi ilo sona \"%1\""
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:202
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove Desktop"
-msgstr ""
+msgstr "o weka e supa"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:203
 #, fuzzy, kde-format
@@ -765,7 +765,7 @@ msgstr "o weka e palisa"
 #, kde-format
 msgctxt "@info % is screen name"
 msgid "%1 (primary)"
-msgstr ""
+msgstr "%1 (kepeken mi)"
 
 #: contents/explorer/AppletAlternatives.qml:70
 #, fuzzy, kde-format
@@ -778,19 +778,19 @@ msgstr "o lon e ilo lili…"
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Add %1"
-msgstr ""
+msgstr "o pana e %1"
 
 #: contents/explorer/AppletDelegate.qml:47
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Unsupported Widget"
-msgstr ""
+msgstr "ilo namako pakala"
 
 #: contents/explorer/AppletDelegate.qml:196
 #, kde-format
 msgctxt "Text displayed on top of newly-installed widgets"
 msgid "New!"
-msgstr ""
+msgstr "namako sin!"
 
 #: contents/explorer/AppletDelegate.qml:198
 #, kde-format
@@ -804,25 +804,25 @@ msgstr[1] ""
 #, kde-format
 msgctxt " @info:other accessible for badge indicating new widget"
 msgid "Recently installed"
-msgstr ""
+msgstr "namako lon sin"
 
 #: contents/explorer/AppletDelegate.qml:212
 #, kde-format
 msgctxt "@action:button tooltip and accessible cancel uninstall widget"
 msgid "Cancel Uninstallation"
-msgstr ""
+msgstr "o weka ala e ni"
 
 #: contents/explorer/AppletDelegate.qml:213
 #, kde-format
 msgctxt "@action:button tooltip and accessible uninstall widget"
 msgid "Mark for Uninstallation"
-msgstr ""
+msgstr "ni o weka"
 
 #: contents/explorer/AppletDelegate.qml:217
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Cancel pending uninstallation for widget %1"
-msgstr ""
+msgstr "o weka ala e namako ilo \"%1\""
 
 #: contents/explorer/AppletDelegate.qml:218
 #, kde-format
@@ -834,7 +834,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove all instances"
-msgstr ""
+msgstr "o weka e ni ale"
 
 #: contents/explorer/AppletDelegate.qml:264
 #, kde-format
@@ -865,7 +865,7 @@ msgstr "o lon e ilo lili…"
 #, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
-msgstr ""
+msgstr "o alasa e ijo sin..."
 
 #: contents/explorer/WidgetExplorer.qml:185
 #, fuzzy, kde-format
@@ -884,13 +884,13 @@ msgstr ""
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Search through widgets"
-msgstr ""
+msgstr "o alasa e ilo namako"
 
 #: contents/explorer/WidgetExplorer.qml:243
 #, kde-format
 msgctxt "@action:button tooltip only"
 msgid "Categories"
-msgstr ""
+msgstr "kule"
 
 #: contents/explorer/WidgetExplorer.qml:265
 #, kde-format
@@ -904,19 +904,19 @@ msgstr[1] ""
 #, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets matched the search terms"
-msgstr ""
+msgstr "mi alasa e namako ilo ala kepeken toki alasa sina."
 
 #: contents/explorer/WidgetExplorer.qml:395
 #, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets available"
-msgstr ""
+msgstr "namako ilo li lon ala"
 
 #: contents/lockscreen/config.qml:23
 #, kde-format
 msgctxt "@title: group"
 msgid "Show clock:"
-msgstr ""
+msgstr "o len ala e ilo tepo:"
 
 #: contents/lockscreen/config.qml:24
 #, fuzzy, kde-format
@@ -929,37 +929,37 @@ msgstr "lukin lon ale"
 #, kde-format
 msgctxt "@option:radio"
 msgid "Always show clock"
-msgstr ""
+msgstr "tenpo ale la o len ala e ilo tenpo"
 
 #: contents/lockscreen/config.qml:40
 #, kde-format
 msgctxt "@option:radio Clock shown only while unlock prompt is visible"
 msgid "On unlocking prompt"
-msgstr ""
+msgstr "tenpo pi len ilo"
 
 #: contents/lockscreen/config.qml:41
 #, kde-format
 msgctxt "@option:radio"
 msgid "Show clock only on unlocking prompt"
-msgstr ""
+msgstr "tenpo pi len ilo taso la o len ala e ilo tenpo"
 
 #: contents/lockscreen/config.qml:54
 #, kde-format
 msgctxt "@option:radio Clock never shown"
 msgid "Never"
-msgstr ""
+msgstr "ala"
 
 #: contents/lockscreen/config.qml:55
 #, kde-format
 msgctxt "@option:radio"
 msgid "Never show clock"
-msgstr ""
+msgstr "tenpo ale la o len e ilo tenpo"
 
 #: contents/lockscreen/config.qml:70
 #, kde-format
 msgctxt "@title: group UI controls for playback of multimedia content"
 msgid "Media controls:"
-msgstr ""
+msgstr "ilo lawa musi:"
 
 #: contents/lockscreen/config.qml:73
 #, kde-format
@@ -971,7 +971,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:status"
 msgid "Unlocking failed"
-msgstr ""
+msgstr "mi ken ala weka e len"
 
 #: contents/lockscreen/LockScreenUi.qml:356
 #, kde-format
@@ -985,31 +985,31 @@ msgstr ""
 #, kde-format
 msgctxt "@info:status"
 msgid "Caps Lock is on"
-msgstr ""
+msgstr "ilo nena sina li sitelen suli"
 
 #: contents/lockscreen/LockScreenUi.qml:391
 #, kde-format
 msgctxt "@info:status"
 msgid "Slow Keys are enabled"
-msgstr ""
+msgstr "tenpo suli la ilo nena li pana"
 
 #: contents/lockscreen/LockScreenUi.qml:411
 #, kde-format
 msgctxt "@action:button"
 msgid "Slee&p"
-msgstr ""
+msgstr "o lap&e"
 
 #: contents/lockscreen/LockScreenUi.qml:418
 #, kde-format
 msgctxt "@action:button"
 msgid "&Hibernate"
-msgstr ""
+msgstr "&o lape kepeken ilo poki"
 
 #: contents/lockscreen/LockScreenUi.qml:425
 #, kde-format
 msgctxt "@action:button"
 msgid "Switch &User"
-msgstr ""
+msgstr "o kama sama &jan ante"
 
 #: contents/lockscreen/LockScreenUi.qml:476
 #, kde-format
@@ -1033,13 +1033,13 @@ msgstr ""
 #, kde-format
 msgctxt "@info:placeholder in text field"
 msgid "Password"
-msgstr ""
+msgstr "nimi ken"
 
 #: contents/lockscreen/MainBlock.qml:115
 #, kde-format
 msgctxt "@action:button accessible only"
 msgid "Unlock"
-msgstr ""
+msgstr "o len ala"
 
 #: contents/lockscreen/MainBlock.qml:164
 #, kde-format
@@ -1057,37 +1057,37 @@ msgstr ""
 #, kde-format
 msgctxt "@info:status"
 msgid "No title"
-msgstr ""
+msgstr "nimi ala"
 
 #: contents/lockscreen/MediaControls.qml:60
 #, kde-format
 msgctxt "@info:status"
 msgid "No media playing"
-msgstr ""
+msgstr "musi ala li kalama"
 
 #: contents/lockscreen/MediaControls.qml:88
 #, kde-format
 msgctxt "@action:button Accessible only"
 msgid "Previous track"
-msgstr ""
+msgstr "musi pini"
 
 #: contents/lockscreen/MediaControls.qml:100
 #, kde-format
 msgctxt "@action:button Accessible only"
 msgid "Play or Pause media"
-msgstr ""
+msgstr "open anu awen e ni"
 
 #: contents/lockscreen/MediaControls.qml:110
 #, kde-format
 msgctxt "@action:button Accessible only"
 msgid "Next track"
-msgstr ""
+msgstr "musi sin"
 
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 #, kde-format
 msgctxt "@action:button no-password unlock"
 msgid "Unlock"
-msgstr ""
+msgstr "o len ala"
 
 #: contents/logout/LogoutControls.qml:97
 #, kde-format
@@ -1160,69 +1160,69 @@ msgstr ""
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
-msgstr ""
+msgstr "o lap&e"
 
 #: contents/logout/LogoutControls.qml:190
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
-msgstr ""
+msgstr "tenpo ni la o lap&e"
 
 #: contents/logout/LogoutControls.qml:200
 #, kde-format
 msgid "&Hibernate"
-msgstr ""
+msgstr "&o lape kepeken ilo poki"
 
 #: contents/logout/LogoutControls.qml:201
 #, kde-format
 msgid "&Hibernate Now"
-msgstr ""
+msgstr "&tenpo ni la o lape kepken ilo poki"
 
 #: contents/logout/LogoutControls.qml:213
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
-msgstr ""
+msgstr "o kama jo e ilo kon sin, o pini en open"
 
 #: contents/logout/LogoutControls.qml:215
 #: contents/logout/LogoutControls.qml:235
 #, kde-format
 msgid "&Restart"
-msgstr ""
+msgstr "&o pini en open"
 
 #: contents/logout/LogoutControls.qml:216
 #: contents/logout/LogoutControls.qml:236
 #, kde-format
 msgid "&Restart Now"
-msgstr ""
+msgstr "&tenpo ni la o pini en open"
 
 #: contents/logout/LogoutControls.qml:250
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr ""
+msgstr "o kama jo e ilo kon sin, o pini"
 
 #: contents/logout/LogoutControls.qml:252
 #: contents/logout/LogoutControls.qml:272
 #, kde-format
 msgid "&Shut Down"
-msgstr ""
+msgstr "&o pini"
 
 #: contents/logout/LogoutControls.qml:253
 #: contents/logout/LogoutControls.qml:273
 #, kde-format
 msgid "&Shut Down Now"
-msgstr ""
+msgstr "&tenpo ni la o pini"
 
 #: contents/logout/LogoutControls.qml:286
 #, kde-format
 msgid "&Log Out"
-msgstr ""
+msgstr "&o pini lili"
 
 #: contents/logout/LogoutControls.qml:287
 #, kde-format
 msgid "&Log Out Now"
-msgstr ""
+msgstr "&tenpo ni la o pini lili"
 
 #: contents/logout/LogoutControls.qml:298
 #, fuzzy, kde-format
@@ -1234,7 +1234,7 @@ msgstr "o &ni ala"
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
-msgstr ""
+msgstr "o len ala e ijo mute"
 
 #: contents/views/DesktopEditMode.qml:144
 #, fuzzy, kde-format
@@ -1261,6 +1261,14 @@ msgstr ""
 #~ msgctxt "@action:button icononly for tooltip & accessible %1 is url"
 #~ msgid "Open website %1"
 #~ msgstr "o open e lipu linluwi %1"
+
+#~ msgctxt "@title:group"
+#~ msgid "Website"
+#~ msgstr "tomo linluwi"
+
+#~ msgctxt "@title:group"
+#~ msgid "Get Help"
+#~ msgstr "o alasa e pona"
 
 #, fuzzy
 #~| msgid "Report a Bug…"

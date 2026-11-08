@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-02 00:56+0000\n"
-"PO-Revision-Date: 2026-09-22 23:06+0200\n"
+"PO-Revision-Date: 2026-11-07 22:43+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:206
 #, kde-format
@@ -948,13 +948,13 @@ msgstr "П&ревключване на потребител"
 #, kde-format
 msgctxt "@action:button"
 msgid "Hide On-Screen Keyboard"
-msgstr ""
+msgstr "Скриване на екранната клавиатура"
 
 #: contents/lockscreen/LockScreenUi.qml:477
 #, kde-format
 msgctxt "@action:button"
 msgid "Show On-Screen Keyboard"
-msgstr ""
+msgstr "Показване на екранна клавиатура"
 
 #: contents/lockscreen/LockScreenUi.qml:503
 #, kde-format
@@ -1187,51 +1187,3 @@ msgstr "Излизане от режим на редактиране"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Индикатор за фокус на панела"
-
-#~ msgctxt "Button to show/hide virtual keyboard"
-#~ msgid "Virtual Keyboard"
-#~ msgstr "Виртуална клавиатура"
-
-#~ msgctxt "plasma_shell_org.kde.plasma.desktop"
-#~ msgid "Send an email to %1"
-#~ msgstr "Изпращане на имейл до %1"
-
-#~ msgctxt "@action:button icononly for tooltip & accessible %1 is url"
-#~ msgid "Open website %1"
-#~ msgstr "Отваряне на уебстраница %1"
-
-#~ msgctxt "@title:group"
-#~ msgid "Website"
-#~ msgstr "Уебсайт"
-
-#~ msgctxt "@title:group"
-#~ msgid "Get Help"
-#~ msgstr "Помощ"
-
-#~ msgctxt "@action:button urlbutton"
-#~ msgid "Report an issue"
-#~ msgstr "Докладване на проблем"
-
-#~ msgctxt "@title license information"
-#~ msgid "Copyright"
-#~ msgstr "Авторско право"
-
-#~ msgctxt "@label %1 is the short SPDX text for the license"
-#~ msgid "License: %1"
-#~ msgstr "Лиценз: %1"
-
-#~ msgctxt "@action:button"
-#~ msgid "Read License"
-#~ msgstr "Прочитане на лиценза"
-
-#~ msgctxt "@title:group"
-#~ msgid "Authors"
-#~ msgstr "Автори"
-
-#~ msgctxt "@title:group"
-#~ msgid "Credits"
-#~ msgstr "Заслуги"
-
-#~ msgctxt "@title:group"
-#~ msgid "Translators"
-#~ msgstr "Преводачи"
