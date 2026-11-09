@@ -550,7 +550,6 @@ PlasmaExtras.Menu {
                     let isAnyTaskNotOnCurrentScreen = false;
                     TaskManagerApplet.TaskTools.foreachChildTask((childIndex) => {
                         const screenGeometry = tasksModel.data(childIndex, TaskManager.AbstractTasksModel.ScreenGeometry);
-                                                                     console.log(screenGeometry, currentScreenGeometry);
                         // TODO Expose current screen as QScreen in WindowTasksModel.
                         isAnyTaskNotOnCurrentScreen = isAnyTaskNotOnCurrentScreen ||
                             (screenGeometry.x !== currentScreenGeometry.x

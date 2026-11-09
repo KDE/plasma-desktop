@@ -191,7 +191,6 @@ DropArea {
                         delta *= stream.volume / loudest;
                     }
                     const volume = stream.volume + delta;
-                    console.log(volume, Math.max(pulseAudio.item.minimalVolume, Math.min(volume, pulseAudio.item.normalVolume)));
                     stream.model.Volume = Math.max(pulseAudio.item.minimalVolume, Math.min(volume, pulseAudio.item.normalVolume));
                     stream.model.Muted = volume === 0
                 })
