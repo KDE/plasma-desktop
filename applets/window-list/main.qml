@@ -118,204 +118,208 @@ PlasmoidItem {
     Component {
         id: windowList
 
-        ListView {  
-            id: windowListView
-            property int maxDelegateWidth: 0
-            
-            clip: true
+        PlasmaComponents.ScrollView {
+            id: windowListScrollView
+            PlasmaComponents.ScrollBar.horizontal.policy: PlasmaComponents.ScrollBar.AlwaysOff
 
+            ListView {
+                id: windowListView
+                property int maxDelegateWidth: 0
 
-            // Set preferred size when on desktop containment. 
-            // Size set arbitrarily to fit approximately 12-14 items.
-            Binding {
-                target: windowListView
-                property: "Layout.preferredWidth"
-                when: !root.inPanel
-                value: Kirigami.Units.gridUnit * 28
-            }
+                clip: true
+                width: windowListScrollView.availableWidth
 
-            Binding {
-                target: windowListView
-                property: "Layout.preferredHeight"
-                when: !root.inPanel
-                value: Kirigami.Units.gridUnit * 24
-            }
+                // Set preferred size when on desktop containment.
+                // Size set arbitrarily to fit approximately 12-14 items.
+                Binding {
+                    target: windowListScrollView
+                    property: "Layout.preferredWidth"
+                    when: !root.inPanel
+                    value: Kirigami.Units.gridUnit * 28
+                }
 
-            Binding {
-                target: windowListView
-                property: "Layout.maximumHeight"
-                when: root.inPanel
-                value: windowListView.contentHeight
-            }
-            Binding {
-                target: windowListView
-                property: "Layout.minimumHeight"
-                when: root.inPanel
-                value: windowListView.contentHeight
-            }
-            Binding {
-                target: windowListView
-                property: "Layout.maximumWidth"
-                when: root.inPanel
-                value: root.fullRepresentationDynamicWidth
-            }
-            Binding {
-                target: windowListView
-                property: "Layout.minimumWidth"
-                when: root.inPanel
-                value: root.fullRepresentationDynamicWidth
-            }
+                Binding {
+                    target: windowListScrollView
+                    property: "Layout.preferredHeight"
+                    when: !root.inPanel
+                    value: Kirigami.Units.gridUnit * 24
+                }
 
-            model: root.inPanel && tasksModel.count === 0 ? root.noWindowModel : tasksModel
+                Binding {
+                    target: windowListScrollView
+                    property: "Layout.maximumHeight"
+                    when: root.inPanel
+                    value: windowListView.contentHeight
+                }
+                Binding {
+                    target: windowListScrollView
+                    property: "Layout.minimumHeight"
+                    when: root.inPanel
+                    value: windowListView.contentHeight
+                }
+                Binding {
+                    target: windowListScrollView
+                    property: "Layout.maximumWidth"
+                    when: root.inPanel
+                    value: root.fullRepresentationDynamicWidth
+                }
+                Binding {
+                    target: windowListScrollView
+                    property: "Layout.minimumWidth"
+                    when: root.inPanel
+                    value: root.fullRepresentationDynamicWidth
+                }
+
+                model: root.inPanel && tasksModel.count === 0 ? root.noWindowModel : tasksModel
         
-            Connections {
-                target: root
-                function onExpandedChanged() {
-                    if (root.expanded) {
-                        windowListView.currentIndex = -1
+                Connections {
+                    target: root
+                    function onExpandedChanged() {
+                        if (root.expanded) {
+                            windowListView.currentIndex = -1
 
-                        // Needed for when for expanded with Global Shortcut
-                        if (tasksModel.activeTask.valid) {
-                            root.lastActiveTaskName = tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.AppName) ||
-                            tasksModel.data(tasksModel.activeTask, 0 /* display name, window title if app name not present */)
-                            root.lastActiveTaskIcon = tasksModel.data(tasksModel.activeTask, 1 /* decorationrole */)
-                        }
-                        root.updateLongestWindowTitle();
-                    }  else {
-                        Qt.callLater( () => { // give the previous window a chance to gain focus
-                            root.lastActiveTaskName = ""
-                            root.lastActiveTaskIcon = ""
+                            // Needed for when for expanded with Global Shortcut
+                            if (tasksModel.activeTask.valid) {
+                                root.lastActiveTaskName = tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.AppName) ||
+                                tasksModel.data(tasksModel.activeTask, 0 /* display name, window title if app name not present */)
+                                root.lastActiveTaskIcon = tasksModel.data(tasksModel.activeTask, 1 /* decorationrole */)
+                            }
                             root.updateLongestWindowTitle();
-                        })
-                    }
-                }
-            }
-
-            // focus is needed to receive key events on desktop containment works in panel without this.
-            focus: true
-            keyNavigationWraps: true
-
-            highlight: PlasmaExtras.Highlight {
-                visible: windowListView.currentItem
-                active: windowListView.focus
-                pressed: windowListView.currentItem && windowListView.currentItem.pressed
-            }
-
-            highlightMoveDuration: 0
-            highlightResizeDuration: 0
-
-            Keys.onTabPressed: {
-                incrementCurrentIndex();
-            }
-
-            Keys.onBacktabPressed: {
-                decrementCurrentIndex();
-            }
-
-            section {
-                property: switch (Plasmoid.configuration.sortingStrategy) {
-                    case TaskManager.TasksModel.SortVirtualDesktop:
-                        return "VirtualDesktops"; // AbstractTasksModel::AdditionalRoles::VirtualDesktops
-                    case TaskManager.TasksModel.SortActivity:
-                        return "Activities";  // AbstractTasksModel::AdditionalRoles::Activities
-                    default:
-                        return "";
-                }
-                delegate: Kirigami.ListSectionHeader {
-                    required property var section
-                    width: windowListView.width
-                    text: {
-                        switch (Plasmoid.configuration.sortingStrategy) {
-                        case TaskManager.TasksModel.SortVirtualDesktop:
-                            // Section contains the virtual desktop id. In case the application is on multiple desktops, it is empty.
-                            return section ? virtualDesktopInfo.desktopNames[virtualDesktopInfo.desktopIds.indexOf(section)] : "";
-                        case TaskManager.TasksModel.SortActivity:
-                            // Section contains the activity id. In case the application is on multiple activities, it is empty.
-                            return section ? activityInfo.activityName(section) : "";
+                        }  else {
+                            Qt.callLater( () => { // give the previous window a chance to gain focus
+                                root.lastActiveTaskName = ""
+                                root.lastActiveTaskIcon = ""
+                                root.updateLongestWindowTitle();
+                            })
                         }
-                        return "";
                     }
                 }
-            }
 
-            // Helps with performance otherwise scrolling is very laggy and stuttery
-            // with low fps
-            reuseItems: true
+                // focus is needed to receive key events on desktop containment works in panel without this.
+                focus: true
+                keyNavigationWraps: true
 
-            delegate: PlasmaComponents.ItemDelegate {
-                id: delegate
+                highlight: PlasmaExtras.Highlight {
+                    visible: windowListView.currentItem
+                    active: windowListView.focus
+                    pressed: windowListView.currentItem && windowListView.currentItem.pressed
+                }
 
-                required property var model
-                required property var decoration
+                highlightMoveDuration: 0
+                highlightResizeDuration: 0
 
-                width: {
-                    if (root.inPanel) {
-                        return root.fullRepresentationDynamicWidth 
-                    } else {
-                        return ListView.view.width;
+                Keys.onTabPressed: {
+                    incrementCurrentIndex();
+                }
+
+                Keys.onBacktabPressed: {
+                    decrementCurrentIndex();
+                }
+
+                section {
+                    property: switch (Plasmoid.configuration.sortingStrategy) {
+                        case TaskManager.TasksModel.SortVirtualDesktop:
+                            return "VirtualDesktops"; // AbstractTasksModel::AdditionalRoles::VirtualDesktops
+                        case TaskManager.TasksModel.SortActivity:
+                            return "Activities";  // AbstractTasksModel::AdditionalRoles::Activities
+                        default:
+                            return "";
+                    }
+                    delegate: Kirigami.ListSectionHeader {
+                        required property var section
+                        width: windowListView.width
+                        text: {
+                            switch (Plasmoid.configuration.sortingStrategy) {
+                            case TaskManager.TasksModel.SortVirtualDesktop:
+                                // Section contains the virtual desktop id. In case the application is on multiple desktops, it is empty.
+                                return section ? virtualDesktopInfo.desktopNames[virtualDesktopInfo.desktopIds.indexOf(section)] : "";
+                            case TaskManager.TasksModel.SortActivity:
+                                // Section contains the activity id. In case the application is on multiple activities, it is empty.
+                                return section ? activityInfo.activityName(section) : "";
+                            }
+                            return "";
+                        }
                     }
                 }
+
+                // Helps with performance otherwise scrolling is very laggy and stuttery
+                // with low fps
+                reuseItems: true
+
+                delegate: PlasmaComponents.ItemDelegate {
+                    id: delegate
+
+                    required property var model
+                    required property var decoration
+
+                    width: {
+                        if (root.inPanel) {
+                            return root.fullRepresentationDynamicWidth
+                        } else {
+                            return ListView.view.width;
+                        }
+                    }
                 
-                highlighted: ListView.isCurrentItem
+                    highlighted: ListView.isCurrentItem
 
-                contentItem: RowLayout {
-                    spacing: Kirigami.Units.smallSpacing
+                    contentItem: RowLayout {
+                        spacing: Kirigami.Units.smallSpacing
 
-                    Kirigami.Icon {
-                        id: iconItem
+                        Kirigami.Icon {
+                            id: iconItem
 
-                        source: delegate.decoration
-                        visible: source !== "" && iconItem.valid
+                            source: delegate.decoration
+                            visible: source !== "" && iconItem.valid
 
-                        implicitWidth: Kirigami.Units.iconSizes.sizeForLabels
-                        implicitHeight: Kirigami.Units.iconSizes.sizeForLabels
+                            implicitWidth: Kirigami.Units.iconSizes.sizeForLabels
+                            implicitHeight: Kirigami.Units.iconSizes.sizeForLabels
+                        }
+                        // Fall back to a generic icon if the application doesn't provide a valid one
+                        Kirigami.Icon {
+                            source: "preferences-system-windows"
+                            visible: !iconItem.valid
+
+                            implicitWidth: Kirigami.Units.iconSizes.sizeForLabels
+                            implicitHeight: Kirigami.Units.iconSizes.sizeForLabels
+                        }
+                        PlasmaComponents.Label {
+                            Layout.fillWidth: true
+                            text: delegate.model.display
+                            textFormat: Text.PlainText
+                            elide: Text.ElideRight
+                        }
                     }
-                    // Fall back to a generic icon if the application doesn't provide a valid one
-                    Kirigami.Icon {
-                        source: "preferences-system-windows"
-                        visible: !iconItem.valid
 
-                        implicitWidth: Kirigami.Units.iconSizes.sizeForLabels
-                        implicitHeight: Kirigami.Units.iconSizes.sizeForLabels
+                    onHoveredChanged: {
+                        if (hovered) {
+                            windowListView.currentIndex = model.index
+                        }
                     }
-                    PlasmaComponents.Label {
-                        Layout.fillWidth: true
-                        text: delegate.model.display
-                        textFormat: Text.PlainText
-                        elide: Text.ElideRight
-                    }
-                }
 
-                onHoveredChanged: {
-                    if (hovered) {
+                    onClicked: {
                         windowListView.currentIndex = model.index
+                        tasksModel.requestActivate(tasksModel.makeModelIndex(model.index))
+                        focus = false // or it persists invisibly after closing
+                    }
+
+                    Keys.onReturnPressed: animateClick()
+                    Keys.onEnterPressed: animateClick()
+
+                    TapHandler {
+                        acceptedButtons: Qt.RightButton
+                        onTapped: { /* Empty to disable right click menu provided by applet on the delegate */ }
                     }
                 }
 
-                onClicked: {
-                    windowListView.currentIndex = model.index
-                    tasksModel.requestActivate(tasksModel.makeModelIndex(model.index))
-                    focus = false // or it persists invisibly after closing
+                Kirigami.PlaceholderMessage {
+                    anchors.centerIn: parent
+                    width: parent.width - (Kirigami.Units.largeSpacing * 2)
+                    visible: !root.inPanel && windowListView.count === 0
+                    icon.source: "edit-none"
+                    text: placeholderMetrics.text
                 }
 
-                Keys.onReturnPressed: animateClick()
-                Keys.onEnterPressed: animateClick()
-
-                TapHandler {
-                    acceptedButtons: Qt.RightButton
-                    onTapped: { /* Empty to disable right click menu provided by applet on the delegate */ }
-                }
             }
-
-            Kirigami.PlaceholderMessage {
-                anchors.centerIn: parent
-                width: parent.width - (Kirigami.Units.largeSpacing * 2)
-                visible: !root.inPanel && windowListView.count === 0
-                icon.source: "edit-none"
-                text: placeholderMetrics.text
-            }
-
-
         }
     }
 
