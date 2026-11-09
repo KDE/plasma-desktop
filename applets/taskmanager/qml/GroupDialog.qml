@@ -138,7 +138,7 @@ PlasmaCore.PopupPlasmaWindow {
                                                 + 2 * (TaskManagerApplet.LayoutMetrics.labelMargin + TaskManagerApplet.LayoutMetrics.iconMargin)
                                                 + scrollView.leftPadding + scrollView.rightPadding
                 // Use groupFilter.count because sometimes count is not updated in time (BUG 446105)
-                readonly property real maxHeight: groupFilter.count * (TaskManagerApplet.LayoutMetrics.verticalMargins() + Math.max(Kirigami.Units.iconSizes.sizeForLabels, Kirigami.Units.iconSizes.medium))
+                readonly property real maxHeight: groupFilter.count * (TaskManagerApplet.LayoutMetrics.verticalMarginsWithoutIconSpacingAdjustment() + Math.max(Kirigami.Units.iconSizes.sizeForLabels, Kirigami.Units.iconSizes.medium))
 
                 model: DelegateModel {
                     id: groupFilter

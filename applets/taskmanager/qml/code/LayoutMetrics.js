@@ -19,6 +19,10 @@ function verticalMargins() {
     return (taskFrame.margins.top + taskFrame.margins.bottom) * (tasks.vertical ? spacingAdjustment : 1);
 }
 
+function verticalMarginsWithoutIconSpacingAdjustment() {
+    return (taskFrame.margins.top + taskFrame.margins.bottom);
+}
+
 function adjustMargin(height, margin) {
     const available = height - verticalMargins();
 
@@ -140,8 +144,8 @@ function preferredMaxHeight() {
 }
 
 function preferredHeightInPopup() {
-    return verticalMargins() + Math.max(Kirigami.Units.iconSizes.sizeForLabels,
-                                        Kirigami.Units.iconSizes.medium);
+    return verticalMarginsWithoutIconSpacingAdjustment() + Math.max(Kirigami.Units.iconSizes.sizeForLabels,
+                                             Kirigami.Units.iconSizes.medium);
 }
 
 function spaceRequiredToShowText() {
