@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 16:18+0000\n"
+"POT-Creation-Date: 2026-11-08 06:31+0000\n"
 "PO-Revision-Date: 2026-07-05 16:24+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
@@ -82,23 +82,13 @@ msgstr "Søk …"
 
 #: dtime.cpp:61
 #, kde-format
-msgid ""
-"No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
-"enable automatic updating of date and time."
-msgstr ""
-"Fann ikkje noko NTP-verktøy. Installer «ntpdate» eller «rdate»-programma for "
-"å kunna bruka automatisk oppdatering av dato og klokkeslett."
+msgid "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to enable automatic updating of date and time."
+msgstr "Fann ikkje noko NTP-verktøy. Installer «ntpdate» eller «rdate»-programma for å kunna bruka automatisk oppdatering av dato og klokkeslett."
 
 #: dtime.cpp:91
 #, kde-format
-msgid ""
-"Here you can change the system time. Click into the hours, minutes or "
-"seconds field to change the relevant value, either using the up and down "
-"buttons to the right or by entering a new value."
-msgstr ""
-"Her kan du endra systemtida. Klikk på time-, minutt- eller sekundfeltet for "
-"å endra verdien, anten med opp- og ned-knappane til høgre eller ved å skriva "
-"ein ny verdi."
+msgid "Here you can change the system time. Click into the hours, minutes or seconds field to change the relevant value, either using the up and down buttons to the right or by entering a new value."
+msgstr "Her kan du endra systemtida. Klikk på time-, minutt- eller sekundfeltet for å endra verdien, anten med opp- og ned-knappane til høgre eller ved å skriva ein ny verdi."
 
 #: dtime.cpp:113
 #, kde-format
@@ -114,14 +104,8 @@ msgstr "Gjeldande lokale tidssone: %1 (%2)"
 
 #: dtime.cpp:203
 #, kde-format
-msgid ""
-"Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        "
-"europe.pool.ntp.org,        north-america.pool.ntp.org,        "
-"oceania.pool.ntp.org"
-msgstr ""
-"Offentleg tidstenar (pool.ntp.org),        asia.pool.ntp.org,        "
-"europe.pool.ntp.org,        north-america.pool.ntp.org,        "
-"oceania.pool.ntp.org"
+msgid "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
+msgstr "Offentleg tidstenar (pool.ntp.org),        asia.pool.ntp.org,        europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
 
 #: dtime.cpp:274
 #, kde-format
@@ -146,18 +130,11 @@ msgstr "Tidssonefeil"
 #: dtime.cpp:299
 #, kde-format
 msgid ""
-"<h1>Date & Time</h1> This system settings module can be used to set the "
-"system date and time. As these settings do not only affect you as a user, "
-"but rather the whole system, you can only change these settings when you "
-"start the System Settings as root. If you do not have the root password, but "
-"feel the system time should be corrected, please contact your system "
-"administrator."
+"<h1>Date & Time</h1>"
+" This system settings module can be used to set the system date and time. As these settings do not only affect you as a user, but rather the whole system, you can only change these settings when you start the System Settings as root. If you do not have the root password, but feel the system time should be corrected, please contact your system administrator."
 msgstr ""
-"<h1>Dato og klokkeslett</h1>Her kan du stilla dato og klokkeslett på "
-"systemet. Sidan desse innstillingane ikkje berre påverkar deg som brukar men "
-"heile systemet, kan du berre endra desse innstillingane om du startar "
-"systeminnstillingane som root. Dersom du ikkje har root-passordet men "
-"likevel synest systemtida bør stillast, kontakt systemadministratoren."
+"<h1>Dato og klokkeslett</h1>"
+"Her kan du stilla dato og klokkeslett på systemet. Sidan desse innstillingane ikkje berre påverkar deg som brukar men heile systemet, kan du berre endra desse innstillingane om du startar systeminnstillingane som root. Dersom du ikkje har root-passordet men likevel synest systemtida bør stillast, kontakt systemadministratoren."
 
 #: main.cpp:49
 #, kde-format
@@ -203,17 +180,11 @@ msgstr "Lagt til NTP-støtte"
 #: main.cpp:60
 #, kde-format
 msgid ""
-"<h1>Date & Time</h1> This control module can be used to set the system date "
-"and time. As these settings do not only affect you as a user, but rather the "
-"whole system, you can only change these settings when you start the System "
-"Settings as root. If you do not have the root password, but feel the system "
-"time should be corrected, please contact your system administrator."
+"<h1>Date & Time</h1>"
+" This control module can be used to set the system date and time. As these settings do not only affect you as a user, but rather the whole system, you can only change these settings when you start the System Settings as root. If you do not have the root password, but feel the system time should be corrected, please contact your system administrator."
 msgstr ""
-"<h1>Dato og klokkeslett</h1> I denne kontrollmodulen kan du stilla dato og "
-"klokkeslett på systemet. Sidan desse innstillingane ikkje berre påverkar deg "
-"som brukar men heile systemet, kan du berre endra desse innstillingane om du "
-"startar systemoppsettet som root. Dersom du ikkje har root-passordet men "
-"likevel synest systemtida bør stillast, kontakt systemadministratoren."
+"<h1>Dato og klokkeslett</h1>"
+" I denne kontrollmodulen kan du stilla dato og klokkeslett på systemet. Sidan desse innstillingane ikkje berre påverkar deg som brukar men heile systemet, kan du berre endra desse innstillingane om du startar systemoppsettet som root. Dersom du ikkje har root-passordet men likevel synest systemtida bør stillast, kontakt systemadministratoren."
 
 #: main.cpp:113
 #, kde-format
