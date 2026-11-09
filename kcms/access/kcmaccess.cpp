@@ -307,11 +307,6 @@ void KAccessConfig::save()
 
     KQuickManagedConfigModule::save();
 
-    // make kaccess reread the configuration
-    // turning a11y features off needs to be done by kaccess
-    // so run it to clear any enabled features and it will exit if it should
-    QProcess::startDetached(QStringLiteral("kaccess"), {});
-
     if (shakeCursorSaveNeeded) {
         QDBusMessage reloadMessage =
             QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
