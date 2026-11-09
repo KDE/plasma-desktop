@@ -10,10 +10,13 @@
 
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QDBusReply>
 
 #include <qqml.h>
 
+#include <KConfigGroup>
 #include <KGlobalAccel>
+#include <KSharedConfig>
 
 #include "bindings.h"
 #include "keyboard_config.h"
@@ -25,9 +28,12 @@
 #include "tastenbrett.h"
 #include "userlayoutmodel.h"
 #include "workspace_options.h"
+#include "xkb_rules.h"
 #include "xkboptionsmodel.h"
 
 #include "debug.h"
+
+using namespace Qt::StringLiterals;
 
 KCMKeyboard::KCMKeyboard(QObject *parent, const KPluginMetaData &data)
     : KQuickManagedConfigModule(parent, data)
@@ -42,14 +48,6 @@ KCMKeyboard::KCMKeyboard(QObject *parent, const KPluginMetaData &data)
     qmlRegisterAnonymousType<KeyboardMiscSettings>(uri, 1);
     qmlRegisterAnonymousType<KeyboardSettings>(uri, 1);
     qmlRegisterUncreatableMetaObject(NumLockState::staticMetaObject, uri, 1, 0, "NumLockState", QString());
-
-    connect(m_data->keyboardSettings(), &KeyboardSettings::configureLayoutsChanged, this, [this]() -> void {
-        if (m_data->keyboardSettings()->configureLayouts()) {
-            m_userLayoutModel->reset();
-        } else {
-            m_userLayoutModel->clear();
-        }
-    });
 
     connect(m_data->keyboardSettings(), &KeyboardSettings::resetOldXkbOptionsChanged, this, [this]() -> void {
         if (m_data->keyboardSettings()->resetOldXkbOptions()) {
@@ -185,6 +183,66 @@ void KCMKeyboard::resetShortcuts()
 
     m_shortcutHelper->actionColletion()->resetLayoutShortcuts();
     m_shortcutHelper->actionColletion()->setLayoutShortcuts(m_config->layouts());
+}
+
+QString KCMKeyboard::defaultLayout() const
+{
+    // Mirrors how KWin picks the layout when none is configured in kxkbrc (see Xkb::reconfigure in kwin/src/xkb.cpp).
+    QString layouts;
+    QString variants;
+
+    // With FollowLocale1, KWin takes the layout from systemd-localed
+    if (KSharedConfig::openConfig(u"kwinrc"_s)->group(u"Wayland"_s).readEntry("FollowLocale1", false)) {
+        auto message =
+            QDBusMessage::createMethodCall(u"org.freedesktop.locale1"_s, u"/org/freedesktop/locale1"_s, u"org.freedesktop.DBus.Properties"_s, u"GetAll"_s);
+        message.setArguments({u"org.freedesktop.locale1"_s});
+        const QDBusReply<QVariantMap> reply = QDBusConnection::systemBus().call(message);
+        if (reply.isValid()) {
+            layouts = reply.value().value(u"X11Layout"_s).toString();
+            variants = reply.value().value(u"X11Variant"_s).toString();
+        } else {
+            qCWarning(KCM_KEYBOARD) << "Failed to query org.freedesktop.locale1:" << reply.error().message();
+        }
+    }
+
+    // Layout and variant from the environment are only ever used together
+    if (layouts.isEmpty()) {
+        layouts = qEnvironmentVariable("XKB_DEFAULT_LAYOUT");
+        variants = qEnvironmentVariable("XKB_DEFAULT_VARIANT");
+    }
+
+    // libxkbcommon's built-in default
+    if (layouts.isEmpty()) {
+        layouts = u"us"_s;
+        variants.clear();
+    }
+
+    const QStringList layoutList = layouts.split(u',');
+    const QStringList variantList = variants.split(u',');
+
+    QStringList names;
+    for (qsizetype i = 0; i < layoutList.size(); ++i) {
+        const QString layout = layoutList.at(i).trimmed();
+        const QString variant = variantList.value(i).trimmed();
+        if (layout.isEmpty()) {
+            continue;
+        }
+
+        const std::optional<LayoutInfo> layoutInfo = Rules::self().getLayoutInfo(layout);
+        if (!layoutInfo) {
+            names.append(variant.isEmpty() ? layout : u"%1(%2)"_s.arg(layout, variant));
+            continue;
+        }
+        if (!variant.isEmpty()) {
+            if (const std::optional<VariantInfo> variantInfo = layoutInfo->getVariantInfo(variant)) {
+                names.append(variantInfo->description);
+                continue;
+            }
+        }
+        names.append(layoutInfo->description);
+    }
+
+    return QLocale().createSeparatedList(names);
 }
 
 #include "moc_kcm_keyboard.cpp"

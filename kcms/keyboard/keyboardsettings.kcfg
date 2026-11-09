@@ -32,9 +32,6 @@ SPDX-License-Identifier: GPL-2.0-or-later
     <entry name="switchMode" key="SwitchMode" type="String">
       <default>Global</default>
     </entry>
-    <entry name="configureLayouts" key="Use" type="Bool">
-      <default>false</default>
-    </entry>
     <entry name="variantList" key="VariantList" type="StringList">
     <default code="true">QStringList()</default>
     </entry>
