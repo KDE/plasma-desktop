@@ -50,13 +50,16 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent)
     m_iconSizeMenu = m_menu->addMenu(QIcon::fromTheme(QStringLiteral("transform-scale")), i18n("Icon Size"));
     m_iconSize = new QActionGroup(this);
     connect(m_iconSize, &QActionGroup::triggered, this, &ViewPropertiesMenu::iconSizeChanged);
-    const QStringList iconSizes{i18nc("@item:inmenu size of the icons", "Tiny"),
-                                i18nc("@item:inmenu size of the icons", "Very Small"),
-                                i18nc("@item:inmenu size of the icons", "Small"),
-                                i18nc("@item:inmenu size of the icons", "Small-Medium"),
-                                i18nc("@item:inmenu size of the icons", "Medium"),
-                                i18nc("@item:inmenu size of the icons", "Large"),
-                                i18nc("@item:inmenu size of the icons", "Huge")};
+    const QStringList iconSizes{i18nc("@item:inmenu size of the icons", "22px"),
+                                i18nc("@item:inmenu size of the icons", "32px"),
+                                i18nc("@item:inmenu size of the icons", "48px"),
+                                i18nc("@item:inmenu size of the icons", "64px"),
+                                i18nc("@item:inmenu size of the icons", "96px"),
+                                i18nc("@item:inmenu size of the icons", "128px"),
+                                i18nc("@item:inmenu size of the icons", "160px"),
+                                i18nc("@item:inmenu size of the icons", "192px"),
+                                i18nc("@item:inmenu size of the icons", "224px"),
+                                i18nc("@item:inmenu size of the icons", "256px")};
     for (int i = 0; i < iconSizes.count(); ++i) {
         action = m_iconSizeMenu->addAction(iconSizes.at(i));
         action->setCheckable(true);

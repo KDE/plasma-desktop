@@ -10,6 +10,9 @@ var iconSizes = [Kirigami.Units.iconSizes.smallMedium,
                  Kirigami.Units.iconSizes.huge,
                  Kirigami.Units.iconSizes.large*2,
                  Kirigami.Units.iconSizes.enormous,
+                 Kirigami.Units.iconSizes.medium*5,
+                 Kirigami.Units.iconSizes.huge*3,
+                 Kirigami.Units.iconSizes.medium*7,
                  Kirigami.Units.iconSizes.enormous*2];
 
 function iconSizeFromTheme(size) {

@@ -245,7 +245,7 @@ KCM.SimpleKCM {
             Kirigami.FormData.label: i18nc("@label:slider", "Icon size:")
 
             from: 0
-            to: 6
+            to: 9
             stepSize: 1
             snapMode: Slider.SnapAlways
         }
