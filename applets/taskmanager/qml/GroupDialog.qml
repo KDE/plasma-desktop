@@ -56,7 +56,7 @@ PlasmaCore.PopupPlasmaWindow {
     }
 
     readonly property real preferredWidth: Screen.width / 3
-    readonly property real preferredHeight: Screen.height / 2
+    readonly property real preferredHeight: Math.round(Screen.height * 0.9)
     readonly property real contentWidth: mainItem.width // No padding here to avoid text elide.
 
     property /*PlasmaCore.ItemStatus*/int _oldAppletStatus: PlasmaCore.Types.UnknownStatus
