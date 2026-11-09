@@ -517,6 +517,7 @@ PlasmaComponents3.ScrollView {
         anchors.fill: parent
         hoverEnabled: true
         propagateComposedEvents: true // clicking should still work if hovering is blocked
+        cursorShape: undefined
 
         property bool mouseMoved: false
 
