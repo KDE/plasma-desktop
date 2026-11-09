@@ -14,6 +14,7 @@ MouseArea {
 
     hoverEnabled: true
     propagateComposedEvents: true // clicking should still work if hovering is blocked
+    cursorShape: undefined
 
     onPositionChanged: if (!mouseMoved) {
         mouseMoved = true
