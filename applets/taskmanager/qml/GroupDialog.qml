@@ -27,6 +27,8 @@ PlasmaCore.PopupPlasmaWindow {
             : PlasmaCore.AppletPopup.AtScreenEdges | PlasmaCore.AppletPopup.AtPanelEdges
 
     margin: (Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentPrefersFloatingApplets) ? Kirigami.Units.largeSpacing : 0
+    LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.childrenInherit: true
 
     Timer {
         id: closeOnTimer
