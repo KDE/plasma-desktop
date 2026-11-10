@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-02 00:56+0000\n"
+"POT-Creation-Date: 2026-11-09 17:40+0000\n"
 "PO-Revision-Date: 2026-09-30 15:10+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -631,90 +631,136 @@ msgstr "Розмір піктограм"
 #: plugins/folder/viewpropertiesmenu.cpp:53
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Tiny"
-msgstr "Крихітний"
+msgid "22px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:54
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Very Small"
-msgstr "Дуже малий"
+msgid "32px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:55
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Small"
-msgstr "Малий"
+msgid "48px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:56
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Small-Medium"
-msgstr "Малий середній"
+msgid "64px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:57
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Medium"
-msgstr "Середній"
+msgid "96px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:58
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Large"
-msgstr "Великий"
+msgid "128px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:59
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Huge"
-msgstr "Величезний"
+msgid "160px"
+msgstr ""
 
-#: plugins/folder/viewpropertiesmenu.cpp:67
+#: plugins/folder/viewpropertiesmenu.cpp:60
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "192px"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:61
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "224px"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:62
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "256px"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:70
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Arrange"
 msgstr "Компонування"
 
-#: plugins/folder/viewpropertiesmenu.cpp:70
+#: plugins/folder/viewpropertiesmenu.cpp:73
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Rows"
 msgstr "У рядках"
 
-#: plugins/folder/viewpropertiesmenu.cpp:74
+#: plugins/folder/viewpropertiesmenu.cpp:77
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Columns"
 msgstr "У стовпчиках"
 
-#: plugins/folder/viewpropertiesmenu.cpp:79
+#: plugins/folder/viewpropertiesmenu.cpp:82
 #, kde-format
 msgid "Sort Alignment"
 msgstr "Вирівнювання упорядкування"
 
-#: plugins/folder/viewpropertiesmenu.cpp:83
+#: plugins/folder/viewpropertiesmenu.cpp:86
 #, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Left-to-Right"
 msgstr "Зліва праворуч"
 
-#: plugins/folder/viewpropertiesmenu.cpp:84
+#: plugins/folder/viewpropertiesmenu.cpp:87
 #, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Right-to-Left"
 msgstr "Справа ліворуч"
 
-#: plugins/folder/viewpropertiesmenu.cpp:94
+#: plugins/folder/viewpropertiesmenu.cpp:97
 #, kde-format
 msgid "Show Previews"
 msgstr "Показувати мініатюри"
 
-#: plugins/folder/viewpropertiesmenu.cpp:98
+#: plugins/folder/viewpropertiesmenu.cpp:101
 #, kde-format
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Заблоковано"
+
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Tiny"
+#~ msgstr "Крихітний"
+
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Very Small"
+#~ msgstr "Дуже малий"
+
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Small"
+#~ msgstr "Малий"
+
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Small-Medium"
+#~ msgstr "Малий середній"
+
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Medium"
+#~ msgstr "Середній"
+
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Large"
+#~ msgstr "Великий"
+
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Huge"
+#~ msgstr "Величезний"
 
 #~ msgctxt "@item:inlistbox arrangement of icons"
 #~ msgid "Top to Bottom"

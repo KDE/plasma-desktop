@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-02 00:56+0000\n"
+"POT-Creation-Date: 2026-11-09 17:40+0000\n"
 "PO-Revision-Date: 2021-09-05 11:41-0700\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik Language Support\n"
@@ -700,105 +700,158 @@ msgid "Icon Size"
 msgstr "Андозаи нишона"
 
 #: plugins/folder/viewpropertiesmenu.cpp:53
-#, fuzzy, kde-format
-#| msgid "Tiny"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Tiny"
-msgstr "Хурдакак"
+msgid "22px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:54
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Very Small"
-msgstr "Хурд"
+msgid "32px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:55
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Small"
-msgstr "Хурд"
+msgid "48px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:56
-#, fuzzy, kde-format
-#| msgid "Small Medium"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Small-Medium"
-msgstr "Миёнаи хурд"
+msgid "64px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:57
-#, fuzzy, kde-format
-#| msgid "Medium"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Medium"
-msgstr "Миёна"
+msgid "96px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:58
-#, fuzzy, kde-format
-#| msgid "Large"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Large"
-msgstr "Калон"
+msgid "128px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:59
-#, fuzzy, kde-format
-#| msgid "Huge"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Huge"
-msgstr "Бузург"
+msgid "160px"
+msgstr ""
 
-#: plugins/folder/viewpropertiesmenu.cpp:67
+#: plugins/folder/viewpropertiesmenu.cpp:60
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "192px"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:61
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "224px"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:62
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "256px"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:70
 #, fuzzy, kde-format
 #| msgid "Arrange In"
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Arrange"
 msgstr "Мураттабсозӣ дар"
 
-#: plugins/folder/viewpropertiesmenu.cpp:70
+#: plugins/folder/viewpropertiesmenu.cpp:73
 #, fuzzy, kde-format
 #| msgid "Rows"
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Rows"
 msgstr "Қаторҳо"
 
-#: plugins/folder/viewpropertiesmenu.cpp:74
+#: plugins/folder/viewpropertiesmenu.cpp:77
 #, fuzzy, kde-format
 #| msgid "Columns"
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Columns"
 msgstr "Сутунҳо"
 
-#: plugins/folder/viewpropertiesmenu.cpp:79
+#: plugins/folder/viewpropertiesmenu.cpp:82
 #, kde-format
 msgid "Sort Alignment"
 msgstr ""
 
-#: plugins/folder/viewpropertiesmenu.cpp:83
+#: plugins/folder/viewpropertiesmenu.cpp:86
 #, fuzzy, kde-format
 #| msgid "Top to Bottom, Left to Right"
 msgctxt "@item:inmenu alignment of icons"
 msgid "Left-to-Right"
 msgstr "Сверху вниз, слева направо"
 
-#: plugins/folder/viewpropertiesmenu.cpp:84
+#: plugins/folder/viewpropertiesmenu.cpp:87
 #, fuzzy, kde-format
 #| msgid "Top to Bottom, Right to Left"
 msgctxt "@item:inmenu alignment of icons"
 msgid "Right-to-Left"
 msgstr "Сверху вниз, справа налево"
 
-#: plugins/folder/viewpropertiesmenu.cpp:94
+#: plugins/folder/viewpropertiesmenu.cpp:97
 #, kde-format
 msgid "Show Previews"
 msgstr "Пешнамоиш"
 
-#: plugins/folder/viewpropertiesmenu.cpp:98
+#: plugins/folder/viewpropertiesmenu.cpp:101
 #, fuzzy, kde-format
 #| msgid "Locked"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Қулфшуда"
+
+#, fuzzy
+#~| msgid "Tiny"
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Tiny"
+#~ msgstr "Хурдакак"
+
+#, fuzzy
+#~| msgid "Small"
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Very Small"
+#~ msgstr "Хурд"
+
+#, fuzzy
+#~| msgid "Small"
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Small"
+#~ msgstr "Хурд"
+
+#, fuzzy
+#~| msgid "Small Medium"
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Small-Medium"
+#~ msgstr "Миёнаи хурд"
+
+#, fuzzy
+#~| msgid "Medium"
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Medium"
+#~ msgstr "Миёна"
+
+#, fuzzy
+#~| msgid "Large"
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Large"
+#~ msgstr "Калон"
+
+#, fuzzy
+#~| msgid "Huge"
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Huge"
+#~ msgstr "Бузург"
 
 #, fuzzy
 #~| msgid "Top to Bottom, Left to Right"

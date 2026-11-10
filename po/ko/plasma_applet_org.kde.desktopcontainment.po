@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-02 00:56+0000\n"
+"POT-Creation-Date: 2026-11-09 17:40+0000\n"
 "PO-Revision-Date: 2026-10-03 23:03+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -629,90 +629,136 @@ msgstr "아이콘 크기"
 #: plugins/folder/viewpropertiesmenu.cpp:53
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Tiny"
-msgstr "작게"
+msgid "22px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:54
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Very Small"
-msgstr "매우 작게"
+msgid "32px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:55
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Small"
-msgstr "작게"
+msgid "48px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:56
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Small-Medium"
-msgstr "약간 작게"
+msgid "64px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:57
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Medium"
-msgstr "중간"
+msgid "96px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:58
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Large"
-msgstr "크게"
+msgid "128px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:59
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Huge"
-msgstr "크게"
+msgid "160px"
+msgstr ""
 
-#: plugins/folder/viewpropertiesmenu.cpp:67
+#: plugins/folder/viewpropertiesmenu.cpp:60
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "192px"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:61
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "224px"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:62
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "256px"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:70
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Arrange"
 msgstr "배열"
 
-#: plugins/folder/viewpropertiesmenu.cpp:70
+#: plugins/folder/viewpropertiesmenu.cpp:73
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Rows"
 msgstr "행 우선"
 
-#: plugins/folder/viewpropertiesmenu.cpp:74
+#: plugins/folder/viewpropertiesmenu.cpp:77
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Columns"
 msgstr "열 우선"
 
-#: plugins/folder/viewpropertiesmenu.cpp:79
+#: plugins/folder/viewpropertiesmenu.cpp:82
 #, kde-format
 msgid "Sort Alignment"
 msgstr "정렬 기준"
 
-#: plugins/folder/viewpropertiesmenu.cpp:83
+#: plugins/folder/viewpropertiesmenu.cpp:86
 #, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Left-to-Right"
 msgstr "왼쪽에서 오른쪽으로"
 
-#: plugins/folder/viewpropertiesmenu.cpp:84
+#: plugins/folder/viewpropertiesmenu.cpp:87
 #, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Right-to-Left"
 msgstr "오른쪽에서 왼쪽으로"
 
-#: plugins/folder/viewpropertiesmenu.cpp:94
+#: plugins/folder/viewpropertiesmenu.cpp:97
 #, kde-format
 msgid "Show Previews"
 msgstr "미리 보기 표시"
 
-#: plugins/folder/viewpropertiesmenu.cpp:98
+#: plugins/folder/viewpropertiesmenu.cpp:101
 #, kde-format
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "잠김"
+
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Tiny"
+#~ msgstr "작게"
+
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Very Small"
+#~ msgstr "매우 작게"
+
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Small"
+#~ msgstr "작게"
+
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Small-Medium"
+#~ msgstr "약간 작게"
+
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Medium"
+#~ msgstr "중간"
+
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Large"
+#~ msgstr "크게"
+
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Huge"
+#~ msgstr "크게"
 
 #~ msgctxt "@item:inlistbox arrangement of icons"
 #~ msgid "Top to Bottom"

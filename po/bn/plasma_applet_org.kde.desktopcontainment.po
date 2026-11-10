@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-02 00:56+0000\n"
+"POT-Creation-Date: 2026-11-09 17:40+0000\n"
 "PO-Revision-Date: 2006-01-04 13:13-0600\n"
 "Last-Translator: Deepayan Sarkar <deepayan@bengalinux.org>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -644,100 +644,153 @@ msgid "Icon Size"
 msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:53
-#, fuzzy, kde-format
-#| msgid "&Tiny"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Tiny"
-msgstr "[&ক]ক্ষুদ্র"
+msgid "22px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:54
-#, fuzzy, kde-format
-#| msgid "&Small"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Very Small"
-msgstr "ছো&ট"
+msgid "32px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:55
-#, fuzzy, kde-format
-#| msgid "&Small"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Small"
-msgstr "ছো&ট"
+msgid "48px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:56
-#, fuzzy, kde-format
-#| msgid "&Medium"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Small-Medium"
-msgstr "[&ম]মাঝারি"
+msgid "64px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:57
-#, fuzzy, kde-format
-#| msgid "&Medium"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Medium"
-msgstr "[&ম]মাঝারি"
+msgid "96px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:58
-#, fuzzy, kde-format
-#| msgid "&Large"
+#, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Large"
-msgstr "&বড়"
+msgid "128px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:59
-#, fuzzy, kde-format
-#| msgid "&Huge"
-msgctxt "@item:inmenu size of the icons"
-msgid "Huge"
-msgstr "বিশা&ল"
-
-#: plugins/folder/viewpropertiesmenu.cpp:67
 #, kde-format
-msgctxt "@item:inmenu arrangement of icons"
-msgid "Arrange"
+msgctxt "@item:inmenu size of the icons"
+msgid "160px"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:60
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "192px"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:61
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "224px"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:62
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "256px"
 msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:70
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
+msgid "Arrange"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:73
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
 msgid "In Rows"
 msgstr ""
 
-#: plugins/folder/viewpropertiesmenu.cpp:74
+#: plugins/folder/viewpropertiesmenu.cpp:77
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Columns"
 msgstr ""
 
-#: plugins/folder/viewpropertiesmenu.cpp:79
+#: plugins/folder/viewpropertiesmenu.cpp:82
 #, kde-format
 msgid "Sort Alignment"
 msgstr ""
 
-#: plugins/folder/viewpropertiesmenu.cpp:83
+#: plugins/folder/viewpropertiesmenu.cpp:86
 #, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Left-to-Right"
 msgstr ""
 
-#: plugins/folder/viewpropertiesmenu.cpp:84
+#: plugins/folder/viewpropertiesmenu.cpp:87
 #, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Right-to-Left"
 msgstr ""
 
-#: plugins/folder/viewpropertiesmenu.cpp:94
+#: plugins/folder/viewpropertiesmenu.cpp:97
 #, fuzzy, kde-format
 #| msgid "Preview"
 msgid "Show Previews"
 msgstr "প্রাক্‌দর্শন"
 
-#: plugins/folder/viewpropertiesmenu.cpp:98
+#: plugins/folder/viewpropertiesmenu.cpp:101
 #, kde-format
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Tiny"
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Tiny"
+#~ msgstr "[&ক]ক্ষুদ্র"
+
+#, fuzzy
+#~| msgid "&Small"
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Very Small"
+#~ msgstr "ছো&ট"
+
+#, fuzzy
+#~| msgid "&Small"
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Small"
+#~ msgstr "ছো&ট"
+
+#, fuzzy
+#~| msgid "&Medium"
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Small-Medium"
+#~ msgstr "[&ম]মাঝারি"
+
+#, fuzzy
+#~| msgid "&Medium"
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Medium"
+#~ msgstr "[&ম]মাঝারি"
+
+#, fuzzy
+#~| msgid "&Large"
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Large"
+#~ msgstr "&বড়"
+
+#, fuzzy
+#~| msgid "&Huge"
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Huge"
+#~ msgstr "বিশা&ল"
 
 #, fuzzy
 #~| msgid "&Restore"

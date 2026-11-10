@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-19 00:46+0000\n"
+"POT-Creation-Date: 2026-11-10 00:59+0000\n"
 "PO-Revision-Date: 2026-07-14 16:51+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -170,7 +170,7 @@ msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "ショートカット:"
 
-#: ui/LayoutDialog.qml:150 ui/main.qml:287
+#: ui/LayoutDialog.qml:150 ui/main.qml:285
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview"
@@ -212,44 +212,32 @@ msgctxt "@action:button accessible"
 msgid "Add layout"
 msgstr "レイアウトを追加"
 
-#: ui/main.qml:59
-#, kde-format
-msgctxt "@label:checkbox configure layouts option"
-msgid "Enable"
-msgstr "有効"
-
-#: ui/main.qml:60
-#, kde-format
-msgctxt "@label:checkbox accessible"
-msgid "Configure Layouts"
-msgstr "レイアウトを設定"
-
-#: ui/main.qml:76
+#: ui/main.qml:61
 #, kde-format
 msgctxt "@label:listbox Keyboard model"
 msgid "Model:"
 msgstr "モデル:"
 
-#: ui/main.qml:104
+#: ui/main.qml:89
 #, kde-format
 msgctxt "@label:listbox"
 msgid "NumLock on startup:"
 msgstr "起動時の NumLock:"
 
-#: ui/main.qml:112
+#: ui/main.qml:97
 #, kde-format
 msgctxt "@item:inlistbox Turn on \"NumLock\" on startup"
 msgid "Turn on"
 msgstr "オンにする"
 
 # ACCELERATOR changed by translator
-#: ui/main.qml:116
+#: ui/main.qml:101
 #, kde-format
 msgctxt "@item:inlistbox Turn off \"NumLock\" on startup"
 msgid "Turn off"
 msgstr "オフにする"
 
-#: ui/main.qml:120
+#: ui/main.qml:105
 #, kde-format
 msgctxt ""
 "@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma "
@@ -257,147 +245,161 @@ msgctxt ""
 msgid "Leave unchanged"
 msgstr "変更しない"
 
-#: ui/main.qml:146
+#: ui/main.qml:131
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Key repeat:"
 msgstr "キーリピート:"
 
-#: ui/main.qml:155 ui/main_phone.qml:115
+#: ui/main.qml:140 ui/main_phone.qml:101
 #, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
 msgstr "キーリピート"
 
 # ACCELERATOR changed by translator
-#: ui/main.qml:166 ui/main_phone.qml:131
+#: ui/main.qml:151 ui/main_phone.qml:117
 #, kde-format
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
 msgstr "遅延:"
 
-#: ui/main.qml:180 ui/main_phone.qml:135
+#: ui/main.qml:165 ui/main_phone.qml:121
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
 msgstr "キーリピートの遅延 %1"
 
-#: ui/main.qml:188 ui/main_phone.qml:143
+#: ui/main.qml:173 ui/main_phone.qml:129
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
 msgstr "%1 ミリ秒"
 
-#: ui/main.qml:192 ui/main_phone.qml:147
+#: ui/main.qml:177 ui/main_phone.qml:133
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
 msgstr "ミリ秒"
 
 # ACCELERATOR changed by translator
-#: ui/main.qml:205 ui/main_phone.qml:162
+#: ui/main.qml:190 ui/main_phone.qml:148
 #, kde-format
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
 msgstr "レート:"
 
-#: ui/main.qml:219 ui/main_phone.qml:169
+#: ui/main.qml:204 ui/main_phone.qml:155
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
 msgstr "キーリピートのレート %1"
 
-#: ui/main.qml:227 ui/main_phone.qml:177
+#: ui/main.qml:212 ui/main_phone.qml:163
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
 msgstr "%1 リピート/秒"
 
-#: ui/main.qml:231 ui/main_phone.qml:181
+#: ui/main.qml:216 ui/main_phone.qml:167
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
 msgstr "リピート/秒"
 
-#: ui/main.qml:243
+#: ui/main.qml:228
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Test area:"
 msgstr "テストエリア:"
 
-#: ui/main.qml:245
+#: ui/main.qml:230
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to test settings"
 msgstr "設定をテストするにはここに入力"
 
-#: ui/main.qml:256
+#: ui/main.qml:241
 #, kde-format
 msgctxt "@title:view"
 msgid "Layouts"
 msgstr "レイアウト"
 
-#: ui/main.qml:270
+#: ui/main.qml:251
+#, kde-format
+msgctxt "@info:usagetip %1 is the name of a keyboard layout"
+msgid "Using system-wide layout “%1”"
+msgstr ""
+
+#: ui/main.qml:252
+#, kde-kuit-format
+msgctxt "@info:usagetip"
+msgid ""
+"To override this or add more layouts for this user account, press the "
+"<interface>Add…</interface> button."
+msgstr ""
+
+#: ui/main.qml:268
 #, kde-format
 msgctxt "@action:button"
 msgid "Move Up"
 msgstr "上へ移動"
 
-#: ui/main.qml:271
+#: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
 msgstr "%1 レイアウトを上に移動"
 
-#: ui/main.qml:277
+#: ui/main.qml:275
 #, kde-format
 msgctxt "@action:button"
 msgid "Move Down"
 msgstr "下へ移動"
 
-#: ui/main.qml:278
+#: ui/main.qml:276
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
 msgstr "%1 レイアウトを下に移動"
 
-#: ui/main.qml:288
+#: ui/main.qml:286
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Preview"
 msgstr "プレビュー"
 
-#: ui/main.qml:296
+#: ui/main.qml:294
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "削除"
 
-#: ui/main.qml:297
+#: ui/main.qml:295
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
 msgstr "レイアウト %1 を削除"
 
-#: ui/main.qml:309
+#: ui/main.qml:307
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
 msgstr "予備のレイアウト:"
 
-#: ui/main.qml:346
+#: ui/main.qml:338
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
 msgstr "予備のメインレイアウトの数"
 
-#: ui/main.qml:378
+#: ui/main.qml:366
 #, kde-format
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
 msgstr "メインレイアウト"
 
-#: ui/main.qml:382
+#: ui/main.qml:370
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -411,13 +413,13 @@ msgstr ""
 "ターアプレットからか、カスタムショートカットを設定することで、アクセスできま"
 "す。"
 
-#: ui/main.qml:387
+#: ui/main.qml:375
 #, kde-format
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
 msgstr "レイアウト変更のショートカット:"
 
-#: ui/main.qml:410
+#: ui/main.qml:398
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
@@ -439,15 +441,7 @@ msgctxt "@label:listbox"
 msgid "Keyboard Model"
 msgstr "キーボードのプレビュー"
 
-#: ui/main_phone.qml:72
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Layout"
-msgctxt "@option:check"
-msgid "Custom Layout"
-msgstr "レイアウトを追加"
-
-#: ui/main_phone.qml:96
+#: ui/main_phone.qml:83
 #, fuzzy, kde-format
 #| msgctxt "@option:textbox"
 #| msgid "Change layout:"
@@ -455,7 +449,7 @@ msgctxt "@action:button"
 msgid "Change Layout..."
 msgstr "レイアウトを変更:"
 
-#: ui/main_phone.qml:103
+#: ui/main_phone.qml:89
 #, fuzzy, kde-format
 #| msgctxt "@label:checkbox accessible"
 #| msgid "Key repeat"
@@ -463,7 +457,7 @@ msgctxt "@title:group"
 msgid "Key Repeat"
 msgstr "キーリピート"
 
-#: ui/main_phone.qml:109
+#: ui/main_phone.qml:95
 #, kde-format
 msgctxt "@option:check"
 msgid "Customize Repeat"
@@ -580,3 +574,18 @@ msgstr[0] "%1 ショートカット"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "なし"
+
+#~ msgctxt "@label:checkbox configure layouts option"
+#~ msgid "Enable"
+#~ msgstr "有効"
+
+#~ msgctxt "@label:checkbox accessible"
+#~ msgid "Configure Layouts"
+#~ msgstr "レイアウトを設定"
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Add Layout"
+#~ msgctxt "@option:check"
+#~ msgid "Custom Layout"
+#~ msgstr "レイアウトを追加"

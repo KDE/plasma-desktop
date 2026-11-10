@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-02 00:56+0000\n"
+"POT-Creation-Date: 2026-11-09 17:40+0000\n"
 "PO-Revision-Date: 2024-09-19 17:29+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -696,71 +696,89 @@ msgstr "Μέγεθος εικονιδίων"
 #: plugins/folder/viewpropertiesmenu.cpp:53
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Tiny"
-msgstr "Μικροσκοπικό"
+msgid "22px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:54
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Very Small"
-msgstr "Πολύ μικρό"
+msgid "32px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:55
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Small"
-msgstr "Μικρό"
+msgid "48px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:56
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Small-Medium"
-msgstr "Μικρομεσαίο"
+msgid "64px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:57
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Medium"
-msgstr "Μεσαίο"
+msgid "96px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:58
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Large"
-msgstr "Μεγάλο"
+msgid "128px"
+msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:59
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
-msgid "Huge"
-msgstr "Τεράστιο"
+msgid "160px"
+msgstr ""
 
-#: plugins/folder/viewpropertiesmenu.cpp:67
+#: plugins/folder/viewpropertiesmenu.cpp:60
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "192px"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:61
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "224px"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:62
+#, kde-format
+msgctxt "@item:inmenu size of the icons"
+msgid "256px"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:70
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Arrange"
 msgstr "Τακτοποίηση"
 
-#: plugins/folder/viewpropertiesmenu.cpp:70
+#: plugins/folder/viewpropertiesmenu.cpp:73
 #, fuzzy, kde-format
 #| msgid "Rows"
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Rows"
 msgstr "Γραμμές"
 
-#: plugins/folder/viewpropertiesmenu.cpp:74
+#: plugins/folder/viewpropertiesmenu.cpp:77
 #, fuzzy, kde-format
 #| msgid "Columns"
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Columns"
 msgstr "Στήλες"
 
-#: plugins/folder/viewpropertiesmenu.cpp:79
+#: plugins/folder/viewpropertiesmenu.cpp:82
 #, kde-format
 msgid "Sort Alignment"
 msgstr ""
 
-#: plugins/folder/viewpropertiesmenu.cpp:83
+#: plugins/folder/viewpropertiesmenu.cpp:86
 #, fuzzy, kde-format
 #| msgctxt "@item:inlistbox arrangement of icons"
 #| msgid "Left to Right"
@@ -768,7 +786,7 @@ msgctxt "@item:inmenu alignment of icons"
 msgid "Left-to-Right"
 msgstr "Αριστερά προς δεξιά"
 
-#: plugins/folder/viewpropertiesmenu.cpp:84
+#: plugins/folder/viewpropertiesmenu.cpp:87
 #, fuzzy, kde-format
 #| msgctxt "@item:inlistbox arrangement of icons"
 #| msgid "Right to Left"
@@ -776,16 +794,44 @@ msgctxt "@item:inmenu alignment of icons"
 msgid "Right-to-Left"
 msgstr "Δεξιά προς αριστερά"
 
-#: plugins/folder/viewpropertiesmenu.cpp:94
+#: plugins/folder/viewpropertiesmenu.cpp:97
 #, kde-format
 msgid "Show Previews"
 msgstr "Εμφάνιση προεπισκοπήσεων"
 
-#: plugins/folder/viewpropertiesmenu.cpp:98
+#: plugins/folder/viewpropertiesmenu.cpp:101
 #, kde-format
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Κλειδωμένο"
+
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Tiny"
+#~ msgstr "Μικροσκοπικό"
+
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Very Small"
+#~ msgstr "Πολύ μικρό"
+
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Small"
+#~ msgstr "Μικρό"
+
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Small-Medium"
+#~ msgstr "Μικρομεσαίο"
+
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Medium"
+#~ msgstr "Μεσαίο"
+
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Large"
+#~ msgstr "Μεγάλο"
+
+#~ msgctxt "@item:inmenu size of the icons"
+#~ msgid "Huge"
+#~ msgstr "Τεράστιο"
 
 #~ msgctxt "@item:inlistbox arrangement of icons"
 #~ msgid "Top to Bottom"

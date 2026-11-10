@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-19 00:46+0000\n"
+"POT-Creation-Date: 2026-11-10 00:59+0000\n"
 "PO-Revision-Date: 2008-12-21 16:38+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -158,7 +158,7 @@ msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Главни кратенки:"
 
-#: ui/LayoutDialog.qml:150 ui/main.qml:287
+#: ui/LayoutDialog.qml:150 ui/main.qml:285
 #, fuzzy, kde-format
 #| msgid "Keyboard Repeat"
 msgctxt "@action:button"
@@ -203,47 +203,34 @@ msgctxt "@action:button accessible"
 msgid "Add layout"
 msgstr "Повторување на тастатурата"
 
-#: ui/main.qml:59
-#, kde-format
-msgctxt "@label:checkbox configure layouts option"
-msgid "Enable"
-msgstr ""
-
-#: ui/main.qml:60
-#, fuzzy, kde-format
-#| msgid "&Enable keyboard repeat"
-msgctxt "@label:checkbox accessible"
-msgid "Configure Layouts"
-msgstr "&Овозможи повторување на тастатура"
-
-#: ui/main.qml:76
+#: ui/main.qml:61
 #, kde-format
 msgctxt "@label:listbox Keyboard model"
 msgid "Model:"
 msgstr ""
 
-#: ui/main.qml:104
+#: ui/main.qml:89
 #, fuzzy, kde-format
 #| msgid "NumLock on KDE Startup"
 msgctxt "@label:listbox"
 msgid "NumLock on startup:"
 msgstr "NumLock при стартување на KDE:"
 
-#: ui/main.qml:112
+#: ui/main.qml:97
 #, fuzzy, kde-format
 #| msgid "T&urn on"
 msgctxt "@item:inlistbox Turn on \"NumLock\" on startup"
 msgid "Turn on"
 msgstr "Вкл&учи го"
 
-#: ui/main.qml:116
+#: ui/main.qml:101
 #, fuzzy, kde-format
 #| msgid "Turn o&ff"
 msgctxt "@item:inlistbox Turn off \"NumLock\" on startup"
 msgid "Turn off"
 msgstr "Исклучи г&о"
 
-#: ui/main.qml:120
+#: ui/main.qml:105
 #, fuzzy, kde-format
 #| msgid "Leave unchan&ged"
 msgctxt ""
@@ -252,153 +239,167 @@ msgctxt ""
 msgid "Leave unchanged"
 msgstr "Остави &го непроменето"
 
-#: ui/main.qml:146
+#: ui/main.qml:131
 #, fuzzy, kde-format
 #| msgid "Keyboard Repeat"
 msgctxt "@label:checkbox"
 msgid "Key repeat:"
 msgstr "Повторување на тастатурата"
 
-#: ui/main.qml:155 ui/main_phone.qml:115
+#: ui/main.qml:140 ui/main_phone.qml:101
 #, fuzzy, kde-format
 #| msgid "Keyboard Repeat"
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
 msgstr "Повторување на тастатурата"
 
-#: ui/main.qml:166 ui/main_phone.qml:131
+#: ui/main.qml:151 ui/main_phone.qml:117
 #, fuzzy, kde-format
 #| msgid "&Delay:"
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
 msgstr "&Пауза:"
 
-#: ui/main.qml:180 ui/main_phone.qml:135
+#: ui/main.qml:165 ui/main_phone.qml:121
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
 msgstr ""
 
-#: ui/main.qml:188 ui/main_phone.qml:143
+#: ui/main.qml:173 ui/main_phone.qml:129
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
 msgstr ""
 
-#: ui/main.qml:192 ui/main_phone.qml:147
+#: ui/main.qml:177 ui/main_phone.qml:133
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
 msgstr ""
 
-#: ui/main.qml:205 ui/main_phone.qml:162
+#: ui/main.qml:190 ui/main_phone.qml:148
 #, fuzzy, kde-format
 #| msgid "&Rate:"
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
 msgstr "&Брзина:"
 
-#: ui/main.qml:219 ui/main_phone.qml:169
+#: ui/main.qml:204 ui/main_phone.qml:155
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
 msgstr ""
 
-#: ui/main.qml:227 ui/main_phone.qml:177
+#: ui/main.qml:212 ui/main_phone.qml:163
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
 msgstr ""
 
-#: ui/main.qml:231 ui/main_phone.qml:181
+#: ui/main.qml:216 ui/main_phone.qml:167
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
 msgstr ""
 
-#: ui/main.qml:243
+#: ui/main.qml:228
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Test area:"
 msgstr ""
 
-#: ui/main.qml:245
+#: ui/main.qml:230
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to test settings"
 msgstr ""
 
-#: ui/main.qml:256
+#: ui/main.qml:241
 #, fuzzy, kde-format
 #| msgid "&Enable keyboard repeat"
 msgctxt "@title:view"
 msgid "Layouts"
 msgstr "&Овозможи повторување на тастатура"
 
-#: ui/main.qml:270
+#: ui/main.qml:251
+#, kde-format
+msgctxt "@info:usagetip %1 is the name of a keyboard layout"
+msgid "Using system-wide layout “%1”"
+msgstr ""
+
+#: ui/main.qml:252
+#, kde-kuit-format
+msgctxt "@info:usagetip"
+msgid ""
+"To override this or add more layouts for this user account, press the "
+"<interface>Add…</interface> button."
+msgstr ""
+
+#: ui/main.qml:268
 #, kde-format
 msgctxt "@action:button"
 msgid "Move Up"
 msgstr ""
 
-#: ui/main.qml:271
+#: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
 msgstr ""
 
-#: ui/main.qml:277
+#: ui/main.qml:275
 #, kde-format
 msgctxt "@action:button"
 msgid "Move Down"
 msgstr ""
 
-#: ui/main.qml:278
+#: ui/main.qml:276
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
 msgstr ""
 
-#: ui/main.qml:288
+#: ui/main.qml:286
 #, fuzzy, kde-format
 #| msgid "Keyboard Repeat"
 msgctxt "@action:button accessible"
 msgid "Preview"
 msgstr "Повторување на тастатурата"
 
-#: ui/main.qml:296
+#: ui/main.qml:294
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr ""
 
-#: ui/main.qml:297
+#: ui/main.qml:295
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
 msgstr ""
 
-#: ui/main.qml:309
+#: ui/main.qml:307
 #, fuzzy, kde-format
 #| msgid "&Enable keyboard repeat"
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
 msgstr "&Овозможи повторување на тастатура"
 
-#: ui/main.qml:346
+#: ui/main.qml:338
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
 msgstr ""
 
-#: ui/main.qml:378
+#: ui/main.qml:366
 #, fuzzy, kde-format
 #| msgid "&Enable keyboard repeat"
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
 msgstr "&Овозможи повторување на тастатура"
 
-#: ui/main.qml:382
+#: ui/main.qml:370
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -408,14 +409,14 @@ msgid ""
 "shortcut."
 msgstr ""
 
-#: ui/main.qml:387
+#: ui/main.qml:375
 #, fuzzy, kde-format
 #| msgid "Alternative shortcut:"
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
 msgstr "Алтернативна кратенка:"
 
-#: ui/main.qml:410
+#: ui/main.qml:398
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
@@ -435,28 +436,21 @@ msgctxt "@label:listbox"
 msgid "Keyboard Model"
 msgstr "Повторување на тастатурата"
 
-#: ui/main_phone.qml:72
-#, fuzzy, kde-format
-#| msgid "Layout"
-msgctxt "@option:check"
-msgid "Custom Layout"
-msgstr "Распоред"
-
-#: ui/main_phone.qml:96
+#: ui/main_phone.qml:83
 #, fuzzy, kde-format
 #| msgid "&Enable keyboard repeat"
 msgctxt "@action:button"
 msgid "Change Layout..."
 msgstr "&Овозможи повторување на тастатура"
 
-#: ui/main_phone.qml:103
+#: ui/main_phone.qml:89
 #, fuzzy, kde-format
 #| msgid "Keyboard Repeat"
 msgctxt "@title:group"
 msgid "Key Repeat"
 msgstr "Повторување на тастатурата"
 
-#: ui/main_phone.qml:109
+#: ui/main_phone.qml:95
 #, kde-format
 msgctxt "@option:check"
 msgid "Customize Repeat"
@@ -579,6 +573,18 @@ msgstr[2] ""
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Нема"
+
+#, fuzzy
+#~| msgid "&Enable keyboard repeat"
+#~ msgctxt "@label:checkbox accessible"
+#~ msgid "Configure Layouts"
+#~ msgstr "&Овозможи повторување на тастатура"
+
+#, fuzzy
+#~| msgid "Layout"
+#~ msgctxt "@option:check"
+#~ msgid "Custom Layout"
+#~ msgstr "Распоред"
 
 #, fuzzy
 #~| msgid "Turn o&ff"
