@@ -25,8 +25,8 @@ PlasmoidItem {
     Plasmoid.constraintHints: Plasmoid.CanFillArea
     compactRepresentation: windowListButton
     fullRepresentation: windowList
-    switchWidth: Kirigami.Units.gridUnit * 8
-    switchHeight: Kirigami.Units.gridUnit * 6
+    switchWidth: (fullRepresentationInPanel && !inVerticalPanel) ? 1 : Kirigami.Units.gridUnit * 8
+    switchHeight: (fullRepresentationInPanel && inVerticalPanel) ? 1 : Kirigami.Units.gridUnit * 6
 
     readonly property bool inPanel: [
         PlasmaCore.Types.TopEdge,
@@ -34,6 +34,13 @@ PlasmoidItem {
         PlasmaCore.Types.BottomEdge,
         PlasmaCore.Types.LeftEdge,
     ].includes(Plasmoid.location)
+
+    readonly property bool inVerticalPanel: [
+        PlasmaCore.Types.RightEdge,
+        PlasmaCore.Types.LeftEdge,
+    ].includes(Plasmoid.location)
+
+    readonly property bool fullRepresentationInPanel: inPanel && !compactRepresentationItem?.visible
 
     TextMetrics {
         id: placeholderMetrics
