@@ -161,6 +161,12 @@ PlasmoidItem {
                 Binding {
                     target: windowListScrollView
                     property: "Layout.minimumHeight"
+                    when: root.inPanel && !root.fullRepresentationInPanel
+                    value: windowListView.contentHeight
+                }
+                Binding {
+                    target: windowListScrollView
+                    property: "Layout.preferredHeight"
                     when: root.inPanel
                     value: windowListView.contentHeight
                 }
@@ -173,6 +179,12 @@ PlasmoidItem {
                 Binding {
                     target: windowListScrollView
                     property: "Layout.minimumWidth"
+                    when: root.inPanel && !root.fullRepresentationInPanel
+                    value: root.fullRepresentationDynamicWidth
+                }
+                Binding {
+                    target: windowListScrollView
+                    property: "Layout.preferredWidth"
                     when: root.inPanel
                     value: root.fullRepresentationDynamicWidth
                 }
@@ -260,7 +272,7 @@ PlasmoidItem {
                     required property var decoration
 
                     width: {
-                        if (root.inPanel) {
+                        if (root.inPanel && !root.fullRepresentationInPanel) {
                             return root.fullRepresentationDynamicWidth
                         } else {
                             return ListView.view.width;
