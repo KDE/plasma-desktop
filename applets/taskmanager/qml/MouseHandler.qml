@@ -43,7 +43,7 @@ DropArea {
         const rtlSpacerAdjustment = target.LayoutMirroring.enabled ? tasks.width - target.width : 0;
         let above;
         if (isGroupDialog) {
-            above = target.itemAt(event.x - rtlSpacerAdjustment, event.y);
+            above = target.itemAt(event.x, event.y);
         } else {
             above = target.childAt(event.x - rtlSpacerAdjustment, event.y);
         }
