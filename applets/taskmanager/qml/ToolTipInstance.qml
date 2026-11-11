@@ -36,6 +36,7 @@ ColumnLayout {
     required property bool isReadyForPainting
     required property bool isExcludedFromCapture
 
+    property bool forceHighlight: false
     property bool hasTrackInATitle: false
     property int orientation: ListView.Vertical // vertical for compact single-window tooltips
 
@@ -258,7 +259,7 @@ ColumnLayout {
             anchors.fill: headerItem
             anchors.margins: -headerItem.Layout.margins
             z: -1
-            visible: headerHoverHandler.hovered
+            visible: headerHoverHandler.hovered || (!Plasmoid.configuration.showToolTips && root.forceHighlight)
             pressed: headerTapHandler.pressed
             hovered: true
         }
@@ -280,7 +281,7 @@ ColumnLayout {
         // There's no PlasmaComponents3 version
         PlasmaExtras.Highlight {
             anchors.fill: parent
-            visible: hoverHandler.hovered
+            visible: hoverHandler.hovered || (Plasmoid.configuration.showToolTips && root.forceHighlight)
             pressed: tapHandler.pressed
             hovered: true
         }
