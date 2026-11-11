@@ -101,7 +101,10 @@ DropArea {
                 if (tasks.groupDialog) {
                     tasksModel.move(tasks.dragSource.index, insertAt,
                         tasksModel.makeModelIndex(tasks.groupDialog.visualParent.index));
-                } else {
+                } else if (isToolTip) {
+                    tasksModel.move(tasks.dragSource.index, insertAt,
+                                    tasksModel.makeModelIndex(tasks.dragSource.parentTask.index))
+                } else{
                     tasksModel.move(tasks.dragSource.index, insertAt);
                 }
 
