@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-10 00:59+0000\n"
-"PO-Revision-Date: 2026-06-19 11:30+0200\n"
+"PO-Revision-Date: 2026-11-10 17:03+0100\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -20,17 +20,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Vít Pelčák,Lukáš Kucharczyk,Jan Papež"
+msgstr "Vít Pelčák,Lukáš Kucharczyk,Jan Papež,Libor filípek"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "vit@pelcak.org,lukas@kucharczyk.xyz,honyczek@centrum.cz"
+msgstr ""
+"vit@pelcak.org,lukas@kucharczyk.xyz,honyczek@centrum.cz,libor.filipek@gmail."
+"com"
 
 #: bindings.cpp:24
 #, kde-format
@@ -316,7 +318,7 @@ msgstr "Rozvržení"
 #, kde-format
 msgctxt "@info:usagetip %1 is the name of a keyboard layout"
 msgid "Using system-wide layout “%1”"
-msgstr ""
+msgstr "Použití systémového rozvržení \"%1\""
 
 #: ui/main.qml:252
 #, kde-kuit-format
@@ -325,6 +327,8 @@ msgid ""
 "To override this or add more layouts for this user account, press the "
 "<interface>Add…</interface> button."
 msgstr ""
+"Chcete-li toto nastavení přepsat nebo přidat další rozvržení pro tento "
+"uživatelský účet, stiskněte tlačítko <interface>Přidat…</interface>."
 
 #: ui/main.qml:268
 #, kde-format

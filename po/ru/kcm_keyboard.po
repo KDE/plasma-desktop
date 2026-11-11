@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-10 00:59+0000\n"
-"PO-Revision-Date: 2026-10-04 08:28+0200\n"
+"PO-Revision-Date: 2026-11-10 07:46+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -324,7 +324,7 @@ msgstr "Раскладки"
 #, kde-format
 msgctxt "@info:usagetip %1 is the name of a keyboard layout"
 msgid "Using system-wide layout “%1”"
-msgstr ""
+msgstr "Используется общесистемная раскладка «%1»"
 
 #: ui/main.qml:252
 #, kde-kuit-format
@@ -333,6 +333,8 @@ msgid ""
 "To override this or add more layouts for this user account, press the "
 "<interface>Add…</interface> button."
 msgstr ""
+"Чтобы заменить её или добавить раскладки для этой учётной записи, нажмите "
+"кнопку <interface>Добавить…</interface>."
 
 #: ui/main.qml:268
 #, kde-format

@@ -13,14 +13,14 @@ msgstr ""
 "Project-Id-Version: kcm_keyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-10 00:59+0000\n"
-"PO-Revision-Date: 2026-06-19 12:11+0100\n"
+"PO-Revision-Date: 2026-11-10 16:10+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -317,7 +317,7 @@ msgstr "Distribuciones"
 #, kde-format
 msgctxt "@info:usagetip %1 is the name of a keyboard layout"
 msgid "Using system-wide layout “%1”"
-msgstr ""
+msgstr "Usando la distribución del sistema «%1»"
 
 #: ui/main.qml:252
 #, kde-kuit-format
@@ -326,6 +326,8 @@ msgid ""
 "To override this or add more layouts for this user account, press the "
 "<interface>Add…</interface> button."
 msgstr ""
+"Para anular esto o añadir más distribuciones en esta cuenta de usuario, "
+"pulse el botón <interface>Añadir…</interface>."
 
 #: ui/main.qml:268
 #, kde-format
@@ -558,15 +560,3 @@ msgstr[1] "%1 atajos de teclado"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Ninguno"
-
-#~ msgctxt "@label:checkbox configure layouts option"
-#~ msgid "Enable"
-#~ msgstr "Activar"
-
-#~ msgctxt "@label:checkbox accessible"
-#~ msgid "Configure Layouts"
-#~ msgstr "Configurar distribuciones"
-
-#~ msgctxt "@option:check"
-#~ msgid "Custom Layout"
-#~ msgstr "Distribución personalizada"
