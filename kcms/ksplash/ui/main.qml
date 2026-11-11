@@ -73,6 +73,9 @@ KCM.GridViewKCM {
             sourceSize: Qt.size(delegate.GridView.view.cellWidth * Screen.devicePixelRatio,
                                 delegate.GridView.view.cellHeight * Screen.devicePixelRatio)
             opacity: model.pendingDeletion ? 0.3 : 1
+            Behavior on opacity {
+                NumberAnimation { duration: Kirigami.Units.longDuration }
+            }
         }
         actions: [
             Kirigami.Action {
