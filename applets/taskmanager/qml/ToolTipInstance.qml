@@ -131,7 +131,7 @@ ColumnLayout {
                     lineHeight: toolTipDelegate.isWin && Plasmoid.configuration.showToolTips ? 1 : appNameHeading.lineHeight
                     elide: Text.ElideRight
                     text: toolTipDelegate.appName
-                    color: (headerHoverHandler.visible && headerHoverHighlight.pressed) ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+                    color: (headerHoverHandler.enabled && headerHoverHighlight.pressed) ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                     opacity: root.index === 0 ? 1 : 0
                     visible: (text.length !== 0) && (root.orientation === ListView.Horizontal || root.index === 0)
                     textFormat: Text.PlainText
@@ -156,7 +156,7 @@ ColumnLayout {
                     text: ((root.titleIncludesTrack && playerController.active) ||
                            (root.title === appNameHeading.text && somethingVisible))
                           ? "" : root.title
-                    color: (headerHoverHandler.visible && headerHoverHighlight.pressed) ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+                    color: (headerHoverHandler.enabled && headerHoverHighlight.pressed) ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                     opacity: 0.75
                     font.bold: toolTipDelegate.isGroup && toolTipDelegate.parentTask.model.IsActive && root.index == tasksModel.activeTask.row
                     visible: root.orientation === ListView.Horizontal || text.length !== 0
@@ -175,7 +175,7 @@ ColumnLayout {
                     elide: Text.ElideRight
                     verticalAlignment: Text.AlignVCenter
                     text: toolTipDelegate.isWin ? root.generateSubText() : ""
-                    color: (headerHoverHandler.visible && headerHoverHighlight.pressed) ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+                    color: (headerHoverHandler.enabled && headerHoverHighlight.pressed) ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                     opacity: 0.75
                     visible: text.length !== 0 && text !== appNameHeading.text
                     textFormat: Text.PlainText
@@ -234,28 +234,50 @@ ColumnLayout {
             }
         }
 
-        // make the header clickable if image tooltips are disabled (and thus there is no other clickable area that activates the window)
-        // headerHoverHandler has to be unloaded after the instance is pooled in order to avoid getting the old containsMouse status when the same instance is reused, so put it in a Loader.
-        Loader {
-            id: headerHoverHandler
-            active: (root.index !== -1) && !Plasmoid.configuration.showToolTips
-            z: -2
-            anchors.fill: headerItem
-            anchors.margins: -headerItem.Layout.margins
-            sourceComponent: ToolTipWindowMouseArea {
-                rootTask: toolTipDelegate.parentTask
-                modelIndex: root.submodelIndex
-                winId: thumbnailSourceItem.winId
+        component ToolTipHoverHandler: HoverHandler {
+            onHoveredChanged: {
+                tasks.windowsHovered([String(thumbnailSourceItem.winId)], hovered);
             }
+        }
+
+        component ToolTipTapHandler: TapHandler {
+            acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MiddleButton
+            onTapped: (event, button) => {
+                switch (button) {
+                    case Qt.LeftButton:
+                        tasksModel.requestActivate(root.submodelIndex);
+                        parentTask.hideImmediately();
+                        tasks.cancelHighlightWindows();
+                        break;
+                    case Qt.MiddleButton:
+                        tasks.cancelHighlightWindows();
+                        tasksModel.requestClose(root.submodelIndex);
+                        break;
+                    case Qt.RightButton:
+                        tasks.createContextMenu(parentTask, modelIndex).show();
+                        break;
+                }
+            }
+        }
+
+        ToolTipHoverHandler {
+            id: headerHoverHandler
+            enabled: (root.index !== -1) && !Plasmoid.configuration.showToolTips && thumbnailSourceItem.winId != undefined
+        }
+
+        ToolTipTapHandler {
+            id: headerTapHandler
+            enabled: (root.index !== -1) && !Plasmoid.configuration.showToolTips && thumbnailSourceItem.winId != undefined
         }
 
         // There's no PlasmaComponents3 version
         PlasmaExtras.Highlight {
             id: headerHoverHighlight
-            anchors.fill: headerHoverHandler
+            anchors.fill: headerItem
+            anchors.margins: -headerItem.Layout.margins
             z: -1
-            visible: (headerHoverHandler.item as MouseArea)?.containsMouse ?? false
-            pressed: (headerHoverHandler.item as MouseArea)?.containsPress ?? false
+            visible: headerHoverHandler.hovered
+            pressed: headerTapHandler.pressed
             hovered: true
         }
     }
@@ -275,15 +297,15 @@ ColumnLayout {
 
         // There's no PlasmaComponents3 version
         PlasmaExtras.Highlight {
-            anchors.fill: hoverHandler
-            visible: (hoverHandler.item as MouseArea)?.containsMouse ?? false
-            pressed: (hoverHandler.item as MouseArea)?.containsPress ?? false
+            anchors.fill: parent
+            visible: hoverHandler.hovered
+            pressed: tapHandler.pressed
             hovered: true
         }
 
         Loader {
             id: pipeWireLoader
-            anchors.fill: hoverHandler
+            anchors.fill: parent
             // Indent a little bit so that neither the thumbnail nor the drop
             // shadow can cover up the highlight
             anchors.margins: Kirigami.Units.smallSpacing * 2
@@ -323,7 +345,7 @@ ColumnLayout {
                 && root.index !== -1 // Avoid loading when the instance is going to be destroyed
             asynchronous: true
             visible: active
-            anchors.centerIn: hoverHandler
+            anchors.centerIn: parent
 
             sourceComponent: ShaderEffect {
                 id: albumArtBackground
@@ -352,7 +374,7 @@ ColumnLayout {
             readonly property bool available: (status === Image.Ready || status === Image.Loading)
                 && (!(toolTipDelegate.isGroup || backend.applicationCategories(launcherUrl).includes("WebBrowser")) || root.titleIncludesTrack)
 
-            anchors.fill: hoverHandler
+            anchors.fill: parent
             // Indent by one pixel to make sure we never cover up the entire highlight
             anchors.margins: 1
             sourceSize: Qt.size(parent.width, parent.height)
@@ -364,16 +386,14 @@ ColumnLayout {
             visible: available
         }
 
-        // hoverHandler has to be unloaded after the instance is pooled in order to avoid getting the old containsMouse status when the same instance is reused, so put it in a Loader.
-        Loader {
+        ToolTipHoverHandler {
             id: hoverHandler
-            active: root.index !== -1
-            anchors.fill: parent
-            sourceComponent: ToolTipWindowMouseArea {
-                rootTask: toolTipDelegate.parentTask
-                modelIndex: root.submodelIndex
-                winId: thumbnailSourceItem.winId
-            }
+            enabled: root.index !== -1 && Plasmoid.configuration.showToolTips && thumbnailSourceItem.winId != undefined
+        }
+
+        ToolTipTapHandler {
+            id: tapHandler
+            enabled: root.index !== -1 && Plasmoid.configuration.showToolTips && thumbnailSourceItem.winId != undefined
         }
     }
 
