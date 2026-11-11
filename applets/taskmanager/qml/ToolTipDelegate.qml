@@ -81,6 +81,7 @@ Loader {
             isOnAllVirtualDesktops: toolTipDelegate.isOnAllVirtualDesktops
             virtualDesktops: toolTipDelegate.virtualDesktops
             activities: toolTipDelegate.activities
+            parentTask: toolTipDelegate.parentTask
             model: null
         }
     }
@@ -189,6 +190,7 @@ Loader {
                     activities: model.Activities
                     hasTrackInATitle: groupToolTipListView.hasTrackInATitle
                     orientation: groupToolTipListView.orientation
+                    parentTask: toolTipDelegate.parentTask
 
                     Kirigami.WheelHandler {
                         property real accumulatedDeltaY: 0

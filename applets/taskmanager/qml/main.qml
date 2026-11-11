@@ -381,6 +381,14 @@ PlasmoidItem {
         Item {
             id: dragHelper
 
+            function setMimeData(launcherUrl, mimeType, mimeData) {
+                dragHelper.Drag.mimeData = {
+                    "text/x-orgkdeplasmataskmanager_taskurl": backend.tryDecodeApplicationsUrl(launcherUrl).toString(),
+                    [mimeType]: mimeData,
+                    "application/x-orgkdeplasmataskmanager_taskbuttonitem": mimeData,
+                };
+            }
+
             Drag.dragType: Drag.Automatic
             Drag.supportedActions: Qt.CopyAction | Qt.MoveAction | Qt.LinkAction
             Drag.onDragFinished: dropAction => {

@@ -82,7 +82,7 @@ PlasmaCore.ToolTipArea {
     active: !inPopup && !tasksRoot.groupDialog && task.contextMenu?.status !== PlasmaExtras.Menu.Open && task === (tasksRoot.toolTipOpenedByClick ?? task)
     interactive: model.IsWindow || mainItem.playerData
     hideOnClick: !(hasAudioStream && audioIndicatorsEnabled)
-    pinOpen: task === (tasksRoot.toolTipOpenedByClick)
+    pinOpen: task === (tasksRoot.toolTipOpenedByClick) || tasksRoot.dragSource?.parentTask ===  this
     location: Plasmoid.location
     mainItem: !Plasmoid.configuration.showToolTips || !model.IsWindow ? pinnedAppToolTipDelegate : openWindowToolTipDelegate
 
@@ -511,11 +511,7 @@ PlasmaCore.ToolTipArea {
                         setRequestedInhibitDnd(true);
                         tasksRoot.dragSource = task;
                         dragHelper.Drag.imageSource = result.url;
-                        dragHelper.Drag.mimeData = {
-                            "text/x-orgkdeplasmataskmanager_taskurl": backend.tryDecodeApplicationsUrl(model.LauncherUrlWithoutIcon).toString(),
-                            [model.MimeType]: model.MimeData,
-                            "application/x-orgkdeplasmataskmanager_taskbuttonitem": model.MimeData,
-                        };
+                        dragHelper.setMimeData(model.LauncherUrlWithoutIcon, model.MimeType, model.MimeData);
                         dragHelper.Drag.active = dragHandler.active;
                     });
                 } else {
