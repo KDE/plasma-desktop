@@ -1289,7 +1289,8 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
             if (mappedUrl.startsWith(local)) {
                 mappedUrl.replace(0, local.size(), QString());
             }
-            internal.setPath(mappedUrl);
+            // Ensure we use TolerantMode so that we parse any % symbols properly
+            internal.setPath(mappedUrl, QUrl::TolerantMode);
             return ScreenMapper::stringToUrl(internal.toString());
         }
         return url;
