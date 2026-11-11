@@ -35,6 +35,7 @@ ColumnLayout {
     required property list<string> activities
     required property bool isReadyForPainting
     required property bool isExcludedFromCapture
+    required property Task parentTask
 
     property bool forceHighlight: false
     property bool hasTrackInATitle: false
@@ -78,6 +79,34 @@ ColumnLayout {
 
     // Lots of spacing with no thumbnails looks bad
     spacing: Plasmoid.configuration.showToolTips ? Kirigami.Units.smallSpacing : 0
+
+    DragHandler {
+        id: dragHandler
+        grabPermissions: PointerHandler.CanTakeOverFromHandlersOfDifferentType
+        target: null
+
+        onActiveChanged: {
+            if (active) {
+                root.grabToImage(result => {
+                    if (!dragHandler.active) {
+                        // BUG 466675 grabToImage is async, so avoid updating dragSource when active is false
+                        return;
+                    }
+                    tasks.dragSource = root;
+                    dragHelper.Drag.imageSource = result.url;
+                    dragHelper.Drag.mimeData = {
+                        "text/x-orgkdeplasmataskmanager_taskurl": backend.tryDecodeApplicationsUrl(model.LauncherUrlWithoutIcon).toString(),
+                                 [model.MimeType]: model.MimeData,
+                                 "application/x-orgkdeplasmataskmanager_taskbuttonitem": model.MimeData,
+                    };
+                    dragHelper.Drag.active = dragHandler.active;
+                });
+            } else {
+                dragHelper.Drag.active = false;
+                dragHelper.Drag.imageSource = "";
+            }
+        }
+    }
 
     // text labels + close button
     Item {
@@ -156,7 +185,7 @@ ColumnLayout {
                           ? "" : root.title
                     color: (headerHoverHandler.enabled && headerHoverHighlight.pressed) ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                     opacity: 0.75
-                    font.bold: toolTipDelegate.isGroup && toolTipDelegate.parentTask.model.IsActive && root.index == tasksModel.activeTask.row
+                    font.bold: toolTipDelegate.isGroup && root.parentTask.model.IsActive && root.index == tasksModel.activeTask.row
                     visible: root.orientation === ListView.Horizontal || text.length !== 0
                     textFormat: Text.PlainText
                 }
@@ -229,7 +258,7 @@ ColumnLayout {
                 switch (button) {
                     case Qt.LeftButton:
                         tasksModel.requestActivate(root.submodelIndex);
-                        parentTask.hideImmediately();
+                        root.parentTask.hideImmediately();
                         tasks.cancelHighlightWindows();
                         break;
                     case Qt.MiddleButton:
@@ -237,7 +266,7 @@ ColumnLayout {
                         tasksModel.requestClose(root.submodelIndex);
                         break;
                     case Qt.RightButton:
-                        tasks.createContextMenu(parentTask, modelIndex).show();
+                        tasks.createContextMenu(root.parentTask, modelIndex).show();
                         break;
                 }
             }
@@ -386,7 +415,7 @@ ColumnLayout {
         // Only load for one entry, as the controls only apply to one window.
         // If this is changed in the future, test for index != -1 to avoid loading
         // when the instance is going to be destroyed
-        active: (toolTipDelegate.parentTask?.tooltipControlsEnabled
+        active: (root.parentTask?.tooltipControlsEnabled
              && toolTipDelegate.playerData
              && ((root.hasTrackInATitle && albumArtImage.available) || (!root.hasTrackInATitle && root.index == 0))) ?? false
 
@@ -403,10 +432,10 @@ ColumnLayout {
     // Volume controls
     Loader {
         id: volumeControls
-        active: toolTipDelegate.parentTask !== null
+        active: root.parentTask !== null
              && pulseAudio.item !== null
-             && toolTipDelegate.parentTask.tooltipControlsEnabled
-             && toolTipDelegate.parentTask.hasAudioStream
+             && root.parentTask.tooltipControlsEnabled
+             && root.parentTask.hasAudioStream
              // Only load for one entry, as the controls only apply to one window.
              // If this is changed in the future, test for index != -1 to avoid loading
              // when the instance is going to be destroyed
@@ -441,13 +470,13 @@ ColumnLayout {
 
                     return finalIcon
                 }
-                onClicked: toolTipDelegate.parentTask.toggleMuted()
-                checked: toolTipDelegate.parentTask.muted
+                onClicked: root.parentTask.toggleMuted()
+                checked: root.parentTask.muted
 
                 PlasmaComponents3.ToolTip {
                     text: muteButton.checked
-                        ? i18nc("button to unmute app", "Unmute %1", toolTipDelegate.parentTask.appName)
-                        : i18nc("button to mute app", "Mute %1", toolTipDelegate.parentTask.appName)
+                        ? i18nc("button to unmute app", "Unmute %1", root.parentTask.appName)
+                        : i18nc("button to mute app", "Mute %1", root.parentTask.appName)
                 }
             }
 
@@ -455,7 +484,7 @@ ColumnLayout {
                 id: slider
 
                 readonly property int displayValue: Math.round(value / to * 100)
-                readonly property int loudestVolume: toolTipDelegate.parentTask.audioStreams
+                readonly property int loudestVolume: root.parentTask.audioStreams
                     .reduce((loudestVolume, stream) => Math.max(loudestVolume, stream.volume), 0)
 
                 Layout.fillWidth: true
@@ -463,11 +492,11 @@ ColumnLayout {
                 to: pulseAudio.item.normalVolume
                 value: loudestVolume
                 stepSize: to / 100
-                opacity: toolTipDelegate.parentTask.muted ? 0.5 : 1
+                opacity: root.parentTask.muted ? 0.5 : 1
 
-                Accessible.name: i18nc("Accessibility data on volume slider", "Adjust volume for %1", toolTipDelegate.parentTask.appName)
+                Accessible.name: i18nc("Accessibility data on volume slider", "Adjust volume for %1", root.parentTask.appName)
 
-                onMoved: toolTipDelegate.parentTask.audioStreams.forEach((stream) => {
+                onMoved: root.parentTask.audioStreams.forEach((stream) => {
                     let v = Math.max(from, value)
                     if (v > 0 && loudestVolume > 0) { // prevent divide by 0
                         // adjust volume relative to the loudest stream
