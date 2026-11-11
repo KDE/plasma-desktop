@@ -22,7 +22,6 @@ plasma_add_applet(org.kde.plasma.taskmanager
         qml/Task.qml
         qml/ToolTipDelegate.qml
         qml/ToolTipInstance.qml
-        qml/ToolTipWindowMouseArea.qml
         qml/code/LayoutMetrics.js
         qml/code/TaskTools.js
     CPP_SOURCES
