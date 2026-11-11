@@ -18,3 +18,7 @@ install(TARGETS knetattach DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install( PROGRAMS org.kde.knetattach.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )
 
+
+if(BUILD_TESTING)
+    add_subdirectory(autotests)
+endif()

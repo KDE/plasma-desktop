@@ -107,7 +107,7 @@ bool KNetAttach::validateCurrentPage()
         if (_webfolder->isChecked()) {
             setInformationText(QStringLiteral("WebFolder"));
             updateForProtocol(QStringLiteral("WebFolder"));
-            _port->setValue(80);
+            updatePort(_useEncryption->isChecked());
         } else if (_fish->isChecked()) {
             setInformationText(QStringLiteral("Fish"));
             updateForProtocol(QStringLiteral("Fish"));
