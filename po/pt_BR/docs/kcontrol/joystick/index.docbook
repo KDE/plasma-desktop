@@ -7,7 +7,7 @@
 <article id="joystick" lang="&language;">
 <articleinfo>
 <title
->Controlador de jogos</title>
+>Controle de jogo</title>
 <authorgroup>
 <author
 ><firstname
@@ -61,22 +61,22 @@
 
 <sect1 id="kcm_joystick">
 <title
->Calibrar o controlador de jogos</title>
+>Calibrar o controle de jogo</title>
 
 <para
->Este módulo oferece uma interface para configurar o seu controlador de jogos, assim como ver as funções do seu controlador de jogos e os mapeamentos para os botões ou eixos.</para>
+>Este módulo oferece uma interface para configurar o seu controle de jogo, assim como ver as funções do seu controle de jogo e os mapeamentos para os botões ou eixos.</para>
 
 <para>
 <screenshot>
 <screeninfo
->Aqui está uma imagem do módulo do controlador de jogos</screeninfo>
+>Aqui está uma imagem do módulo do controle de jogo</screeninfo>
   <mediaobject>
     <imageobject>
       <imagedata fileref="joystick-main.png" format="PNG"/>
     </imageobject>
     <textobject>
       <phrase
->O módulo do controlador de jogos</phrase>
+>O módulo do controle de jogo</phrase>
     </textobject>
   </mediaobject>
 </screenshot>
@@ -90,9 +90,9 @@
 ></term>
 <listitem>
 <para
->Aqui você poderá ver a localização lógica do dispositivo. Se você tiver mais de um controlador de jogos poderá também selecionar qual deseja configurar. </para>
+>Aqui você poderá ver a localização lógica do dispositivo. Se você tiver mais de um controle de jogo poderá também selecionar qual deseja configurar. </para>
 <para
->Se nenhum controlador de jogos for encontrado de forma automática no seu computador e você sabe que existe um conectado, poderá informar aqui o arquivo do dispositivo correto. </para>
+>Se nenhum controle de jogo for encontrado de forma automática no seu computador e você sabe que existe um conectado, poderá informar aqui o arquivo do dispositivo correto. </para>
 </listitem>
 </varlistentry>
 
@@ -103,7 +103,7 @@
 ></term>
 <listitem>
 <para
->A localização desenhada dos eixos do X e do Y do joystick do controlador de jogo. Ative a opção <guibutton
+>A localização desenhada dos eixos do X e do Y do joystick do controle de jogo. Ative a opção <guibutton
 >Mostrar rastro</guibutton
 > para desenhar o rastro do joystick de um ponto para outro. </para>
 <tip
@@ -121,7 +121,7 @@
 ></term>
 <listitem>
 <para
->Um local para ver o estado de pressionado ou não dos botões do seu controlador de jogos, assim como verificar se os botões estão mapeados corretamente. Quando for pressionado o botão, irá aparecer <guilabel
+>Um local para ver o estado de pressionado ou não dos botões do seu controle de jogo, assim como verificar se os botões estão mapeados corretamente. Quando for pressionado o botão, irá aparecer <guilabel
 >PRESSIONADO</guilabel
 > ao lado do número lógico (a forma como o computador o vê) do botão que foi acionado. </para>
 </listitem>
@@ -134,7 +134,7 @@
 ></term>
 <listitem>
 <para
->Isto mostra os valores numéricos das posições dos eixos. O 0 significa centrado e os valores mínimo e máximo dependem do controlador de jogos e de cada eixo em particular. </para>
+>Isto mostra os valores numéricos das posições dos eixos. O 0 significa centrado e os valores mínimo e máximo dependem do controle de jogo e de cada eixo em particular. </para>
 </listitem>
 </varlistentry>
 
@@ -152,14 +152,14 @@
 <para>
 <screenshot>
 <screeninfo
->Calibrando o seu controlador de jogos</screeninfo>
+>Calibrando o seu controle de jogo</screeninfo>
   <mediaobject>
     <imageobject>
       <imagedata fileref="joystick-calibration.png" format="PNG"/>
     </imageobject>
     <textobject>
       <phrase
->Calibrando o seu controlador de jogos</phrase>
+>Calibrando o seu controle de jogo</phrase>
     </textobject>
   </mediaobject>
 </screenshot>
