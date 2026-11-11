@@ -7,6 +7,7 @@
 #include "knetattach.h"
 
 #include <QCheckBox>
+#include <QLineEdit>
 #include <QRadioButton>
 #include <QSpinBox>
 #include <QStandardPaths>
@@ -18,6 +19,8 @@ class KNetAttachTest : public QObject
 
 private Q_SLOTS:
     void initTestCase();
+    void testAFullAddressFillsTheWebFolderFields_data();
+    void testAFullAddressFillsTheWebFolderFields();
     void testTheWebFolderPortFollowsEncryption();
 
 private:
@@ -41,6 +44,43 @@ void KNetAttachTest::openWebFolderPage(KNetAttach &wizard)
     wizard.show();
     field<QRadioButton>(wizard, "_webfolder")->setChecked(true);
     wizard.next();
+}
+
+void KNetAttachTest::testAFullAddressFillsTheWebFolderFields_data()
+{
+    QTest::addColumn<QString>("address");
+    QTest::addColumn<QString>("host");
+    QTest::addColumn<int>("port");
+    QTest::addColumn<bool>("encrypted");
+    QTest::addColumn<QString>("path");
+
+    QTest::newRow("webdavs with a port") << QStringLiteral("webdavs://dav.example.org:8443/folder/") << QStringLiteral("dav.example.org") << 8443 << true
+                                         << QStringLiteral("/folder/");
+    QTest::newRow("https without a port") << QStringLiteral("https://cloud.example.org/remote.php/dav/files/user/") << QStringLiteral("cloud.example.org")
+                                          << 443 << true << QStringLiteral("/remote.php/dav/files/user/");
+    QTest::newRow("webdav") << QStringLiteral("webdav://nas.local/share") << QStringLiteral("nas.local") << 80 << false << QStringLiteral("/share");
+    QTest::newRow("host name only") << QStringLiteral("nas.local") << QStringLiteral("nas.local") << 80 << false << QString();
+}
+
+void KNetAttachTest::testAFullAddressFillsTheWebFolderFields()
+{
+    QFETCH(QString, address);
+    QFETCH(QString, host);
+    QFETCH(int, port);
+    QFETCH(bool, encrypted);
+    QFETCH(QString, path);
+
+    KNetAttach wizard;
+    openWebFolderPage(wizard);
+
+    auto hostField = field<QLineEdit>(wizard, "_host");
+    hostField->setText(address);
+    Q_EMIT hostField->editingFinished();
+
+    QCOMPARE(hostField->text(), host);
+    QCOMPARE(field<QSpinBox>(wizard, "_port")->value(), port);
+    QCOMPARE(field<QCheckBox>(wizard, "_useEncryption")->isChecked(), encrypted);
+    QCOMPARE(field<QLineEdit>(wizard, "_path")->text(), path);
 }
 
 void KNetAttachTest::testTheWebFolderPortFollowsEncryption()

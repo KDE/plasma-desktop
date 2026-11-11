@@ -30,6 +30,7 @@ private Q_SLOTS:
     void updateParametersPageStatus();
     bool validateCurrentPage() override;
     void updatePort(bool encryption);
+    void splitServerAddress();
     void updateFinishButtonText(bool save);
     void slotHelpClicked();
     void slotPageChanged(int);

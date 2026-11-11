@@ -31,6 +31,7 @@ KNetAttach::KNetAttach(QWidget *parent)
     connect(_connectionName, &QLineEdit::textChanged, this, &KNetAttach::updateParametersPageStatus);
     connect(_user, &QLineEdit::textChanged, this, &KNetAttach::updateParametersPageStatus);
     connect(_host, &QLineEdit::textChanged, this, &KNetAttach::updateParametersPageStatus);
+    connect(_host, &QLineEdit::editingFinished, this, &KNetAttach::splitServerAddress);
     connect(_port, &QSpinBox::valueChanged, this, &KNetAttach::updateParametersPageStatus);
     connect(_path, &QLineEdit::textChanged, this, &KNetAttach::updateParametersPageStatus);
     connect(_useEncryption, &QAbstractButton::toggled, this, &KNetAttach::updatePort);
@@ -161,6 +162,7 @@ bool KNetAttach::validateCurrentPage()
     } else {
         button(BackButton)->setEnabled(false);
         button(FinishButton)->setEnabled(false);
+        splitServerAddress();
         QUrl url;
         if (_type == QLatin1String("WebFolder")) {
             if (_useEncryption->isChecked()) {
@@ -268,6 +270,41 @@ void KNetAttach::updatePort(bool encryption)
             _port->setValue(80);
         }
     }
+}
+
+void KNetAttach::splitServerAddress()
+{
+    // A full address such as webdavs://host:443/folder/ in the server field fills the fields that it
+    // names, and the server field keeps the host name only.
+    const QUrl url(_host->text().trimmed());
+    if (!url.isValid() || url.scheme().isEmpty() || url.host().isEmpty()) {
+        return;
+    }
+
+    if (_type == QLatin1String("WebFolder")) {
+        if (url.scheme() == QLatin1String("webdavs") || url.scheme() == QLatin1String("https")) {
+            _useEncryption->setChecked(true);
+        } else if (url.scheme() == QLatin1String("webdav") || url.scheme() == QLatin1String("http")) {
+            _useEncryption->setChecked(false);
+        }
+    } else if (_type == QLatin1String("Fish")) {
+        const int protocolIndex = _protocolText->findText(url.scheme());
+        if (protocolIndex >= 0) {
+            _protocolText->setCurrentIndex(protocolIndex);
+        }
+    }
+
+    if (url.port() != -1 && _type != QLatin1String("SMB")) {
+        _port->setValue(url.port());
+    }
+    if (!url.userName().isEmpty() && (_type == QLatin1String("Fish") || _type == QLatin1String("FTP"))) {
+        _user->setText(url.userName());
+    }
+    // A bare "/" keeps a folder that was typed in the folder field.
+    if (!url.path().isEmpty() && (url.path() != QLatin1String("/") || _path->text().trimmed().isEmpty())) {
+        _path->setText(url.path());
+    }
+    _host->setText(url.host());
 }
 
 bool KNetAttach::doConnectionTest(const QUrl &url)
