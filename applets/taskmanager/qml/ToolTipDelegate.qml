@@ -124,6 +124,20 @@ Loader {
 
                 model: delegateModel
 
+                property bool scrollLeft: false
+                property bool scrollRight: false
+                property bool scrollUp: false
+                property bool scrollDown: false
+                property bool autoScroll: false
+
+                onScrollLeftChanged: contentX = scrollLeft && orientation == ListView.Horizontal ? originX : contentX
+                onScrollRightChanged: contentX = scrollRight  && orientation == ListView.Horizontal ? originX + contentWidth - width : contentX
+                onScrollUpChanged: contentY = scrollUp  && orientation == ListView.Vertical ? originY : contentY
+                onScrollDownChanged: contentY = scrollDown  && orientation == ListView.Vertical ? originY + contentHeight - height : contentY
+
+                Behavior on contentX { id: smoothX; enabled: groupToolTipListView.autoScroll; SmoothedAnimation { velocity: 700 } }
+                Behavior on contentY { id: smoothY; enabled: groupToolTipListView.autoScroll; SmoothedAnimation { velocity: 700 } }
+
                 orientation: toolTipDelegate.isVerticalPanel || !Plasmoid.configuration.showToolTips ? ListView.Vertical : ListView.Horizontal
                 reuseItems: true
 
@@ -195,6 +209,18 @@ Loader {
                         }
                     }
                 }
+
+            }
+        }
+    }
+    MouseHandler {
+        target: (toolTipDelegate.item as PlasmaComponents3.ScrollView)?.contentItem ?? null
+        anchors.fill: parent
+        isToolTip: true
+
+        onContainsDragChanged: {
+            if (!containsDrag && !toolTipDelegate.parentTask.pinOpen) {
+                toolTipDelegate.parentTask.hideToolTip()
             }
         }
     }

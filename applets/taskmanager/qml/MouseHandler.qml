@@ -8,6 +8,7 @@ import QtQuick
 
 import org.kde.taskmanager as TaskManager
 import org.kde.plasma.plasmoid
+import org.kde.kirigami as Kirigami
 import plasma.applet.org.kde.plasma.taskmanager as TaskManagerApplet
 
 DropArea {
@@ -18,6 +19,7 @@ DropArea {
     property Item ignoredItem
     property Item hoveredItem
     property bool isGroupDialog: false
+    property bool isToolTip: false
     property bool moved: false
 
     property alias handleWheelEvents: wheelHandler.handleWheelEvents
@@ -26,6 +28,9 @@ DropArea {
     onEntered: event => {
         if (event.formats.indexOf("text/x-plasmoidservicename") >= 0) {
             event.accepted = false;
+        }
+        if (isToolTip) {
+            target.autoScroll = true
         }
         if (target.animating) { // Not all targets have an animating property
             target.animating = false;
@@ -42,7 +47,7 @@ DropArea {
         // them, or we end thinking we're dragging way right of where we actually are.
         const rtlSpacerAdjustment = target.LayoutMirroring.enabled ? tasks.width - target.width : 0;
         let above;
-        if (isGroupDialog) {
+        if (isGroupDialog || isToolTip) {
             const targetListView = target as ListView
             const positionInScrollView = mapToItem(targetListView.contentItem, event.x, event.y)
             above = targetListView.itemAt(positionInScrollView.x, positionInScrollView.y)
@@ -76,6 +81,14 @@ DropArea {
             ignoredItem = null;
         }
 
+        if (isToolTip) {
+            // Trigger autoscroll.
+            target.scrollLeft = (event.x < (Kirigami.Units.gridUnit * 3));
+            target.scrollRight = (event.x > width - (Kirigami.Units.gridUnit * 3));
+            target.scrollUp = (event.y < (Kirigami.Units.gridUnit * 3));
+            target.scrollDown = (event.y > height - (Kirigami.Units.gridUnit * 3));
+        }
+
         if (tasksModel.sortMode === TaskManager.TasksModel.SortManual && tasks.dragSource) {
             // Reject drags between different TaskList instances.
             if (tasks.dragSource.parent !== above.parent) {
@@ -104,6 +117,13 @@ DropArea {
     onExited: {
         hoveredItem = null;
         activationTimer.stop();
+        if (isToolTip) {
+            target.autoScroll = false
+            target.scrollUp = false
+            target.scrollDown = false
+            target.scrollLeft = false
+            target.scrollRight = false
+        }
     }
 
     onDropped: event => {
@@ -136,6 +156,13 @@ DropArea {
         }
     }
 
+    Binding {
+        when: dropArea.isToolTip && !!dropArea.hoveredItem
+        target: dropArea.hoveredItem
+        property: "forceHighlight"
+        value: true
+    }
+
     Timer {
         id: ignoreItemTimer
 
@@ -155,9 +182,18 @@ DropArea {
 
         onTriggered: {
             if (parent.hoveredItem.model.IsGroupParent) {
-                TaskManagerApplet.TaskTools.createGroupDialog(parent.hoveredItem, tasks);
+                if (Plasmoid.configuration.groupedTaskVisualization == 3) {
+                    TaskManagerApplet.TaskTools.createGroupDialog(parent.hoveredItem, tasks);
+                } else {
+                    parent.hoveredItem.showToolTip()
+                    parent.hoveredItem.updateMainItemBindings()
+                }
             } else if (!parent.hoveredItem.model.IsLauncher) {
-                tasksModel.requestActivate(parent.hoveredItem.modelIndex());
+                if (dropArea.isToolTip) {
+                    tasksModel.requestActivate(parent.hoveredItem.submodelIndex);
+                } else {
+                    tasksModel.requestActivate(parent.hoveredItem.modelIndex());
+                }
             }
         }
     }
