@@ -43,7 +43,9 @@ DropArea {
         const rtlSpacerAdjustment = target.LayoutMirroring.enabled ? tasks.width - target.width : 0;
         let above;
         if (isGroupDialog) {
-            above = target.itemAt(event.x, event.y);
+            const targetListView = target as ListView
+            const positionInScrollView = mapToItem(targetListView.contentItem, event.x, event.y)
+            above = targetListView.itemAt(positionInScrollView.x, positionInScrollView.y)
         } else {
             above = target.childAt(event.x - rtlSpacerAdjustment, event.y);
         }
