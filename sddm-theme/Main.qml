@@ -314,7 +314,7 @@ Item {
             }
         }
 
-        VirtualKeyboard {
+        ThemeVirtualKeyboard {
             id: inputPanel
 
             z: 1
