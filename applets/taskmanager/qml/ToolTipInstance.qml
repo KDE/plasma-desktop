@@ -137,6 +137,9 @@ ColumnLayout {
                     textFormat: Text.PlainText
                 }
                 // window title
+                RowLayout {
+
+                }
                 PlasmaComponents3.Label {
                     id: winTitle
                     Layout.fillWidth: true
@@ -176,6 +179,21 @@ ColumnLayout {
                     opacity: 0.75
                     visible: text.length !== 0 && text !== appNameHeading.text
                     textFormat: Text.PlainText
+                }
+            }
+
+            // Requests Attention badge.
+            // The badge itself is inside an item to better center the text in the bubble
+            Item {
+                Layout.alignment: !Plasmoid.configuration.showToolTips && !playerController.active && !volumeControls.active ? Qt.AlignVCenter : Qt.AlignTop
+                Layout.preferredHeight: closeButton.height
+                Layout.preferredWidth: closeButton.width
+                visible: root.model?.IsDemandingAttention ?? false
+
+                Kirigami.Badge {
+                    anchors.centerIn: parent
+                    icon.name: "notification-active-symbolic"
+                    type: Kirigami.Badge.Warning
                 }
             }
 
