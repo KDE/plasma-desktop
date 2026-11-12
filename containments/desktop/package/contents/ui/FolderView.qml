@@ -1046,7 +1046,7 @@ FocusScope {
                         dir.refresh();
                     } else if (event.matches(StandardKey.SelectAll)) {
                         positioner.setRangeSelected(0, count - 1);
-                    } else if ( (root.inPanel || !main.krunnerAvailable || Plasmoid.configuration.useTypeAhead) && event.text.length === 1 && (event.modifiers === Qt.NoModifier || event.modifiers === Qt.ShiftModifier)) {
+                    } else if ( (root.inPanel || !main.krunnerAvailable || Plasmoid.configuration.useTypeAhead) && event.text.length === 1 && (event.modifiers === Qt.NoModifier || event.modifiers === Qt.ShiftModifier || (event.modifiers & Qt.KeypadModifier)) ) {
                         typeAheadTimer.restart();
                         const charPressed = event.text.toLowerCase();
 
