@@ -113,22 +113,22 @@ msgid "Configure keyboard options"
 msgstr "Διαμόρφωση επιλογών πληκτρολογίου"
 
 #: ui/KeyBindings.qml:134
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@action:button"
 msgid "Reset"
-msgstr ""
+msgstr "Επαναφορά"
 
 #: ui/KeyBindings.qml:138
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info accessible"
 msgid "Reset selected options for this group"
-msgstr ""
+msgstr "Επαναφορά των επιλεγμένων επιλογών αυτής της ομάδας"
 
 #: ui/KeyBindings.qml:139
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info:tooltip"
 msgid "Reset selected options for this group"
-msgstr ""
+msgstr "Επαναφορά των επιλεγμένων επιλογών αυτής της ομάδας"
 
 #: ui/LayoutDialog.qml:22
 #, fuzzy, kde-format
@@ -431,7 +431,7 @@ msgstr "Προσθήκη διάταξης"
 #| msgid "Keyboard &model:"
 msgctxt "@label:listbox"
 msgid "Keyboard Model"
-msgstr "&Μοντέλο πληκτρολογίου:"
+msgstr "Μοντέλο πληκτρολογίου"
 
 #: ui/main_phone.qml:83
 #, fuzzy, kde-format
@@ -450,10 +450,10 @@ msgid "Key Repeat"
 msgstr "Επανάληψη πλήκτρου"
 
 #: ui/main_phone.qml:95
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@option:check"
 msgid "Customize Repeat"
-msgstr ""
+msgstr "Προσαρμογή επανάληψης"
 
 #: ui/Switching.qml:17
 #, kde-format

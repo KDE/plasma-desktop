@@ -30,10 +30,10 @@ msgid "None"
 msgstr "Κανένα"
 
 #: inputsequence.cpp:209
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@action:button Two keybinds for a dial, up & down"
 msgid "%1 && %2"
-msgstr ""
+msgstr "%1 && %2"
 
 #: inputsequence.cpp:216
 #, fuzzy, kde-format
@@ -71,13 +71,13 @@ msgstr "Οριζόμενο από την εφαρμογή"
 #| msgid "Pen button 1:"
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "Κουμπί στυλό 1:"
+msgstr "Κουμπί γραφίδας %1"
 
 #: inputsequence.cpp:235
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@action:button"
 msgid "Scroll wheel"
-msgstr ""
+msgstr "Τροχός κύλισης"
 
 #: kcmtablet.cpp:36
 #, kde-format
@@ -121,10 +121,10 @@ msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
 #: kcmtablet.cpp:164 ui/DisplayTab.qml:102 ui/DisplayTab.qml:103
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
-msgstr ""
+msgstr "Τέντωμα και γέμισμα"
 
 #: kcmtablet.cpp:165 ui/DisplayTab.qml:104
 #, fuzzy, kde-format
@@ -145,7 +145,7 @@ msgstr "Χάρτης σε τμήμα της οθόνης"
 #| msgid "Pen button 1:"
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "Κουμπί στυλό 1:"
+msgstr "Κουμπί γραφίδας %1:"
 
 #: kcmtablet.cpp:270
 #, fuzzy, kde-format
@@ -157,7 +157,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr "κουμπί στυλό 1"
+msgstr "κουμπί γραφίδας %1"
 
 #: ui/ActionDialog.qml:27
 #, fuzzy, kde-format
@@ -224,10 +224,10 @@ msgid "Send pen button"
 msgstr "κουμπί στυλό 1"
 
 #: ui/ActionDialog.qml:177
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
-msgstr ""
+msgstr "Λειτουργία ως τροχός κύλισης"
 
 #: ui/ActionDialog.qml:195
 #, kde-format
@@ -262,11 +262,11 @@ msgid "Counterclockwise:"
 msgstr ""
 
 #: ui/ActionDialog.qml:271
-#, kde-format
+#, fuzzy, kde-format
 msgctxt ""
 "@label:slider Speed for how often this dial/ring should emit key events"
 msgid "Speed:"
-msgstr ""
+msgstr "Ταχύτητα:"
 
 #: ui/ActionDialog.qml:286
 #, kde-format
@@ -341,10 +341,10 @@ msgid "Button 3"
 msgstr "κουμπί στυλό 3"
 
 #: ui/ActionDialog.qml:363
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
-msgstr ""
+msgstr "Λειτουργεί όπως ο τροχός κύλισης ενός ποντικιού."
 
 #: ui/ActionDialog.qml:372
 #, kde-format
@@ -397,10 +397,10 @@ msgid ""
 msgstr ""
 
 #: ui/Calibration.qml:180
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "Αγγίξτε το κέντρο κάθε στόχου."
 
 #: ui/Calibration.qml:201
 #, kde-format
@@ -417,10 +417,10 @@ msgid "Refine Existing Calibration"
 msgstr "Βελτίωση υπάρχουσας βαθμονόμησης"
 
 #: ui/Calibration.qml:228
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "Επαναφορά και νέα προσπάθεια"
 
 #: ui/Calibration.qml:228
 #, kde-format
@@ -485,10 +485,10 @@ msgid "Orientation:"
 msgstr "Προσανατολισμός:"
 
 #: ui/DisplayTab.qml:83
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@label substitute for unavailable orientation change"
 msgid "Not Applicable"
-msgstr ""
+msgstr "Δεν ισχύει"
 
 #: ui/DisplayTab.qml:96
 #, fuzzy, kde-format
@@ -552,13 +552,16 @@ msgid "Test Tablet…"
 msgstr "Δοκιμή tablet…"
 
 #: ui/main.qml:88
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info"
 msgid ""
 "This device is managed by a user-space driver that you installed. Use that "
 "driver to configure the tablet instead of using the settings here, unless "
 "specifically instructed otherwise."
 msgstr ""
+"Αυτή η συσκευή διαχειρίζεται από οδηγό χώρου χρήστη που εγκαταστήσατε. "
+"Ρυθμίστε την ταμπλέτα από εκείνον τον οδηγό αντί για εδώ, εκτός αν σας έχει "
+"δοθεί άλλη οδηγία."
 
 #: ui/main.qml:107
 #, kde-format
@@ -567,16 +570,16 @@ msgid "Device:"
 msgstr "Συσκευή:"
 
 #: ui/main.qml:175
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "Οθόνη"
 
 #: ui/main.qml:188
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "Γραφίδα"
 
 #: ui/main.qml:200
 #, kde-format
@@ -592,12 +595,14 @@ msgid "No pad inputs found"
 msgstr "Δεν βρέθηκαν tablets σχεδίασης"
 
 #: ui/MissingPadTab.qml:16
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid ""
 "No buttons or other inputs were detected. This could mean the driver for "
 "this device is missing."
 msgstr ""
+"Δεν εντοπίστηκαν κουμπιά ή άλλες είσοδοι. Ίσως λείπει ο οδηγός αυτής της "
+"συσκευής."
 
 #: ui/PadTab.qml:35
 #, fuzzy, kde-format
@@ -623,12 +628,12 @@ msgid "Pad dial %1:"
 msgstr "Κουμπί επιφάνειας %1:"
 
 #: ui/PadTab.qml:108
-#, kde-format
+#, fuzzy, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad dial %1"
-msgstr ""
+msgstr "επιλογέα πλαισίου %1"
 
 #: ui/PadTab.qml:146
 #, fuzzy, kde-format
@@ -653,10 +658,10 @@ msgid "Left-handed mode:"
 msgstr "Λειτουργία αριστερόχειρα:"
 
 #: ui/StylusTab.qml:231
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@option:check Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "Ενεργοποίηση"
 
 #: ui/StylusTab.qml:241
 #, kde-kuit-format
@@ -671,105 +676,113 @@ msgstr ""
 "κουμπιών του πεδίου, ώστε το tablet να μπορεί να χρησιμοποιηθεί ανάποδα."
 
 #: ui/StylusTab.qml:247
-#, kde-format
+#, fuzzy, kde-format
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
-msgstr ""
+msgstr "Λειτουργία:"
 
 #: ui/StylusTab.qml:251
-#, kde-format
+#, fuzzy, kde-format
 msgctxt ""
 "@option:radio Pen mode, where the point on the screen is always where you "
 "touch the stylus"
 msgid "Pen"
-msgstr ""
+msgstr "Γραφίδα"
 
 #: ui/StylusTab.qml:256
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "The cursor follows where you touch the pen on the surface"
-msgstr ""
+msgstr "Ο δρομέας ακολουθεί το σημείο όπου αγγίζετε τη γραφίδα στην επιφάνεια"
 
 #: ui/StylusTab.qml:265
-#, kde-format
+#, fuzzy, kde-format
 msgctxt ""
 "@option:radio Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
-msgstr ""
+msgstr "Ποντίκι"
 
 #: ui/StylusTab.qml:270
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
 "like a mouse"
 msgstr ""
+"Η κίνηση της γραφίδας στην επιφάνεια μετακινεί τον δρομέα σχετικά με την "
+"προηγούμενη θέση του, όπως ένα ποντίκι"
 
 #: ui/StylusTab.qml:276
-#, kde-format
+#, fuzzy, kde-format
 msgid "Sync with mouse cursor"
-msgstr ""
+msgstr "Συγχρονισμός με τον δρομέα ποντικιού"
 
 #: ui/StylusTab.qml:345
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@label prefix for pen pressure curve config"
 msgid "Pen Pressure:"
-msgstr ""
+msgstr "Πίεση γραφίδας:"
 
 #: ui/StylusTab.qml:401
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:409
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:420
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: ui/StylusTab.qml:428
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
-msgstr ""
+msgstr "0%"
 
 #: ui/StylusTab.qml:433
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info"
 msgid ""
 "This curve controls the relationship between the pressure on the stylus and "
 "the pressure values received by applications."
 msgstr ""
+"Αυτή η καμπύλη ελέγχει τη σχέση μεταξύ της πίεσης στη γραφίδα και των τιμών "
+"πίεσης που λαμβάνουν οι εφαρμογές."
 
 #: ui/StylusTab.qml:438
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
-msgstr ""
+msgstr "Εύρος πίεσης:"
 
 #: ui/StylusTab.qml:456
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info"
 msgid ""
 "Pressure above or below the threshold will be clamped, and this becomes the "
 "new effective range."
 msgstr ""
+"Η πίεση πάνω ή κάτω από το όριο περικόπτεται, και αυτό γίνεται το νέο "
+"πραγματικό εύρος."
 
 #: ui/StylusTab.qml:461
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info"
 msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"Έχετε βαθμονομήσει χειροκίνητα αυτή την ταμπλέτα. Αν δεν λειτουργεί πια "
+"σωστά, δοκιμάστε πρώτα επαναφορά."
 
 #: ui/StylusTab.qml:470
 #, kde-format
@@ -827,7 +840,7 @@ msgctxt ""
 "A tablet stylus has moved over the surface X=[x position] Y=[y position] "
 "P=[pressure] TX=[tilt x] TY=[tilt y]"
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "Κίνηση γραφίδας X=%1 Y=%2"
+msgstr "Κίνηση γραφίδας X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:75
 #, fuzzy, kde-format
@@ -866,6 +879,8 @@ msgid ""
 msgstr ""
 "## Υπόμνημα:\n"
 "# X, Y - συντεταγμένες συμβάντος\n"
+"# P - πίεση\n"
+"# TX,TY - κλίση\n"
 
 #: ui/Tester.qml:225
 #, fuzzy, kde-format

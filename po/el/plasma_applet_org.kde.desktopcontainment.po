@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-09 17:40+0000\n"
+"POT-Creation-Date: 2026-11-11 15:19+0000\n"
 "PO-Revision-Date: 2024-09-19 17:29+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -358,10 +358,10 @@ msgid "Show folder preview popups"
 msgstr "Εμφάνιση αναδυόμενων παραθύρων προεπισκόπησης φακέλων"
 
 #: package/contents/ui/ConfigIcons.qml:335
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@title:group"
 msgid "Typing on the desktop:"
-msgstr ""
+msgstr "Πληκτρολόγηση στην επιφάνεια εργασίας:"
 
 #: package/contents/ui/ConfigIcons.qml:341
 #, fuzzy, kde-format
@@ -371,10 +371,10 @@ msgid "Selects items"
 msgstr "Επιλογή φακέλου"
 
 #: package/contents/ui/ConfigIcons.qml:347
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@option:radio Typing on the desktop activates KRunner"
 msgid "Activates KRunner"
-msgstr ""
+msgstr "Ανοίγει το KRunner"
 
 #: package/contents/ui/ConfigIcons.qml:363
 #, fuzzy, kde-format
@@ -574,44 +574,46 @@ msgstr "Επιλογή φακέλου"
 msgid "&Refresh Desktop"
 msgstr "&Ανανέωση επιφάνειας εργασίας"
 
-#: plugins/folder/foldermodel.cpp:548 plugins/folder/foldermodel.cpp:1841
+#: plugins/folder/foldermodel.cpp:548 plugins/folder/foldermodel.cpp:1842
 #, kde-format
 msgid "&Refresh View"
 msgstr "&Ανανέωση προβολής"
 
 #: plugins/folder/foldermodel.cpp:911
-#, kde-format
+#, fuzzy, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
 "or folder"
 msgid "Link Target Not Found"
-msgstr ""
+msgstr "Ο προορισμός του συνδέσμου δεν βρέθηκε"
 
 #: plugins/folder/foldermodel.cpp:913
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
 "<filename>%1</filename> points to <filename>%2</filename>, but that could "
 "not be found. It may have been moved or deleted."
 msgstr ""
+"Το <filename>%1</filename> παραπέμπει στο <filename>%2</filename>, που όμως "
+"δεν βρέθηκε. Μπορεί να έχει μετακινηθεί ή διαγραφεί."
 
-#: plugins/folder/foldermodel.cpp:1850
+#: plugins/folder/foldermodel.cpp:1851
 #, kde-format
 msgid "&Empty Trash"
 msgstr "Άδειασμα απο&ρριμμάτων"
 
-#: plugins/folder/foldermodel.cpp:1853
-#, kde-format
+#: plugins/folder/foldermodel.cpp:1854
+#, fuzzy, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
-msgstr ""
+msgstr "Επαναφορά στην αρχική θέση"
 
-#: plugins/folder/foldermodel.cpp:1856
+#: plugins/folder/foldermodel.cpp:1857
 #, kde-format
 msgid "&Open"
 msgstr "Άνοιγ&μα"
 
-#: plugins/folder/foldermodel.cpp:1860
+#: plugins/folder/foldermodel.cpp:1861
 #, fuzzy, kde-format
 #| msgid "Show all"
 msgctxt ""
@@ -620,23 +622,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Εμφάνιση όλων"
 
-#: plugins/folder/foldermodel.cpp:1966
-#, kde-format
+#: plugins/folder/foldermodel.cpp:1967
+#, fuzzy, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
-msgstr ""
+msgstr "Αφαίρεση εικονιδίου απορριμμάτων"
 
-#: plugins/folder/foldermodel.cpp:1969
+#: plugins/folder/foldermodel.cpp:1970
 #, kde-format
 msgid "&Move to Trash"
 msgstr "Μετακίνηση στα απο&ρρίμματα"
 
-#: plugins/folder/foldermodel.cpp:2002
+#: plugins/folder/foldermodel.cpp:2003
 #, kde-format
 msgid "&Paste"
 msgstr "&Επικόλληση"
 
-#: plugins/folder/foldermodel.cpp:2155
+#: plugins/folder/foldermodel.cpp:2156
 #, kde-format
 msgid "&Properties"
 msgstr "&Ιδιότητες"
@@ -774,9 +776,9 @@ msgid "In Columns"
 msgstr "Στήλες"
 
 #: plugins/folder/viewpropertiesmenu.cpp:82
-#, kde-format
+#, fuzzy, kde-format
 msgid "Sort Alignment"
-msgstr ""
+msgstr "Στοίχιση ταξινόμησης"
 
 #: plugins/folder/viewpropertiesmenu.cpp:86
 #, fuzzy, kde-format

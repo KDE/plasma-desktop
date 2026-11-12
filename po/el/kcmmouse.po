@@ -151,10 +151,10 @@ msgid "General:"
 msgstr "Γενικά:"
 
 #: ui/main.qml:87
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
-msgstr ""
+msgstr "Ενεργοποίηση συσκευής"
 
 #: ui/main.qml:102
 #, fuzzy, kde-format
@@ -262,7 +262,7 @@ msgid "while pressing the middle button"
 msgstr ""
 
 #: ui/main.qml:397
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "This will interfere with applications that use middle-button drag, such as "
@@ -270,6 +270,10 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"Επηρεάζει εφαρμογές που χρησιμοποιούν σύρσιμο με το μεσαίο κουμπί, όπως "
+"ορισμένοι επεξεργαστές εικόνας, προβολείς εγγράφων ή βιντεοπαιχνίδια. Μπορεί "
+"να χρησιμοποιηθεί σε κάθε συσκευή, αλλά προορίζεται κυρίως ως υποκατάστατο "
+"του τροχού κύλισης σε συσκευές που δεν έχουν."
 
 #: ui/main.qml:404
 #, kde-format

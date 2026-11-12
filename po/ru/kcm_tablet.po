@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-31 00:45+0000\n"
-"PO-Revision-Date: 2026-10-04 08:28+0200\n"
-"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2026-11-11 23:01+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -514,7 +514,7 @@ msgstr "Масштабировать область экрана"
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr "%1%,%2% - %3%×%4%"
+msgstr "%1 %,%2 % - %3 %×%4 %"
 
 #: ui/ExternalScreenMapping.qml:301
 #, kde-format
@@ -712,25 +712,25 @@ msgstr "Нажим пером:"
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: ui/StylusTab.qml:409
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: ui/StylusTab.qml:420
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
-msgstr "100%"
+msgstr "100 %"
 
 #: ui/StylusTab.qml:428
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
-msgstr "0%"
+msgstr "0 %"
 
 #: ui/StylusTab.qml:433
 #, kde-format
@@ -817,7 +817,7 @@ msgctxt ""
 "A tablet stylus has moved over the surface X=[x position] Y=[y position] "
 "P=[pressure] TX=[tilt x] TY=[tilt y]"
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "Перемещение пера: X=%1 Y=%2 P=%3% TX=%4 TY=%5"
+msgstr "Перемещение пера: X=%1 Y=%2 P=%3 % TX=%4 TY=%5"
 
 #: ui/Tester.qml:75
 #, kde-format

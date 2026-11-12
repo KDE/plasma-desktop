@@ -31,9 +31,9 @@ msgstr "Ένα κλικ για άνοιγμα αρχείων"
 
 #. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:19
-#, kde-format
+#, fuzzy, kde-format
 msgid "Switch the look and feel package depending on time of day"
-msgstr ""
+msgstr "Εναλλαγή καθολικού θέματος ανάλογα με την ώρα της ημέρας"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:23
@@ -56,16 +56,16 @@ msgid "Animation speed"
 msgstr "Ταχύτητα κίνησης"
 
 #: ui/LookAndFeelBox.qml:106
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@action:button"
 msgid "Change global theme"
-msgstr ""
+msgstr "Αλλαγή καθολικού θέματος"
 
 #: ui/LookAndFeelBox.qml:187
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@label accessible"
 msgid "Global theme"
-msgstr ""
+msgstr "Καθολικό θέμα"
 
 #: ui/main.qml:31
 #, fuzzy, kde-format
@@ -75,18 +75,18 @@ msgid "Theme:"
 msgstr "Θέμα:"
 
 #: ui/main.qml:97
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "Switch between dark and light look and feel packages automatically"
 msgid "Automatic"
-msgstr ""
+msgstr "Αυτόματο"
 
 #: ui/main.qml:123
-#, kde-format
+#, fuzzy, kde-format
 msgctxt ""
 "@info:tooltip 1 is the name of a light global theme, 2 is the name of a dark "
 "global theme"
 msgid "Use “%1” during the day and “%2” at night"
-msgstr ""
+msgstr "Χρήση του «%1» τη μέρα και του «%2» τη νύχτα"
 
 #: ui/main.qml:133
 #, kde-format

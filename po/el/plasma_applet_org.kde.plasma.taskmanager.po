@@ -99,7 +99,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "&Pin to Task Manager"
 msgid "Activate Task Manager Entry %1"
-msgstr "&Καρφίτσωμα στον διαχειριστή εργασιών"
+msgstr "Ενεργοποίηση καταχώρισης %1 στον διαχειριστή εργασιών"
 
 #: qml/AudioStream.qml:100
 #, kde-format
@@ -170,22 +170,22 @@ msgstr ""
 "Απόκρυψη άλλων παραθύρων όταν περνάτε με το ποντίκι πάνω από προεπισκοπήσεις"
 
 #: qml/ConfigAppearance.qml:60
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
-msgstr ""
+msgstr "Ένδειξη όταν μια εργασία αναπαράγει ήχο"
 
 #: qml/ConfigAppearance.qml:70
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
-msgstr ""
+msgstr "Σίγαση της εργασίας με κλικ στην ένδειξη"
 
 #: qml/ConfigAppearance.qml:78
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
-msgstr ""
+msgstr "Εμφάνιση χειριστηρίων πολυμέσων και έντασης στην προεπισκόπηση"
 
 #: qml/ConfigAppearance.qml:86
 #, kde-format
@@ -288,7 +288,7 @@ msgid "Large"
 msgstr "Μεγάλο"
 
 #: qml/ConfigBehavior.qml:50
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info"
 msgid ""
 "If you're using this setting to work around an application that demands "
@@ -296,6 +296,10 @@ msgid ""
 "behavior. If you don't find one, consider reporting this as a bug to the "
 "app's developer."
 msgstr ""
+"Αν χρησιμοποιείτε αυτή τη ρύθμιση για μια εφαρμογή που ζητά την προσοχή σας "
+"πολύ συχνά, αναζητήστε πρώτα μια ρύθμιση στην ίδια την εφαρμογή που "
+"απενεργοποιεί αυτή τη συμπεριφορά. Αν δεν υπάρχει, σκεφτείτε να το αναφέρετε "
+"ως σφάλμα στον προγραμματιστή της."
 
 #: qml/ConfigBehavior.qml:66
 #, kde-format
@@ -413,10 +417,10 @@ msgid "By activity"
 msgstr "Κατά δραστηριότητα"
 
 #: qml/ConfigBehavior.qml:154
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By horizontal window position"
-msgstr ""
+msgstr "Κατά την οριζόντια θέση του παραθύρου"
 
 #: qml/ConfigBehavior.qml:165
 #, kde-format
@@ -796,7 +800,7 @@ msgctxt ""
 "@item:inmenu List of all Screens to send a window to, manufacturer, model "
 "(output identifier)"
 msgid "%1 %2 (%3)"
-msgstr "&%1 %2"
+msgstr "%1 %2 (%3)"
 
 #: qml/ContextMenu.qml:583 qml/ContextMenu.qml:599
 #, fuzzy, kde-format
@@ -873,7 +877,7 @@ msgstr "Διατήρηση &πάνω από άλλα"
 #| msgid "Keep &Below Others"
 msgctxt "action:inmenu"
 msgid "Keep &Below Others"
-msgstr "Διατήρηση κάτω από άλλα"
+msgstr "Διατήρηση &κάτω από τα άλλα"
 
 #: qml/ContextMenu.qml:774
 #, fuzzy, kde-format
@@ -883,16 +887,16 @@ msgid "&Fullscreen"
 msgstr "&Πλήρης οθόνη"
 
 #: qml/ContextMenu.qml:786
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
-msgstr ""
+msgstr "&Χωρίς γραμμή τίτλου και πλαίσιο"
 
 #: qml/ContextMenu.qml:799
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@action:inmenu"
 msgid "&Hide from Screencast"
-msgstr ""
+msgstr "&Απόκρυψη από την καταγραφή οθόνης"
 
 #: qml/ContextMenu.qml:815
 #, fuzzy, kde-format
@@ -956,12 +960,12 @@ msgid "Activate %1"
 msgstr "Ενεργοποίηση %1"
 
 #: qml/TaskBadgeOverlay.qml:101
-#, kde-format
+#, fuzzy, kde-format
 msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "9k+"
-msgstr ""
+msgstr "9k+"
 
 #: qml/TaskBadgeOverlay.qml:104
 #, fuzzy, kde-format

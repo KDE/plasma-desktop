@@ -19,9 +19,9 @@ msgstr ""
 "X-Generator: Lokalize 24.05.2\n"
 
 #: kcm.cpp:57
-#, kde-format
+#, fuzzy, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "Αδυναμία επιλογής κατάλληλου συστήματος υποστήριξης"
 
 #: kcm.cpp:103
 #, kde-format
@@ -197,11 +197,13 @@ msgid "Enable pointer acceleration"
 msgstr "Επιτάχυνση δείκτη:"
 
 #: ui/main.qml:300
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
+"Όταν είναι ενεργή, η απόσταση που διανύει ο δείκτης αυξάνεται με την "
+"ταχύτητα κίνησης."
 
 #: ui/main.qml:311
 #, fuzzy, kde-format
@@ -236,18 +238,18 @@ msgid "Scroll by:"
 msgstr "Κύλιση:"
 
 #: ui/main.qml:410
-#, kde-format
+#, fuzzy, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
-msgstr ""
+msgstr "Κίνηση δύο δαχτύλων οπουδήποτε"
 
 #: ui/main.qml:428
-#, kde-format
+#, fuzzy, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
-msgstr ""
+msgstr "Κίνηση ενός δαχτύλου στην άκρη"
 
 #: ui/main.qml:437
 #, fuzzy, kde-format
@@ -341,24 +343,26 @@ msgid "Tap to click"
 msgstr "Πάτημα για κλικ"
 
 #: ui/main.qml:542
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
-msgstr ""
+msgstr "Σύρσιμο μετά από άγγιγμα"
 
 #: ui/main.qml:554
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Tap, then tap and immediately slide finger over the touchpad to drag. Lift "
 "finger to drop."
 msgstr ""
+"Αγγίξτε μία φορά, μετά αγγίξτε ξανά και σύρετε αμέσως το δάχτυλο στην "
+"επιφάνεια για να μετακινήσετε. Σηκώστε το δάχτυλο για να αφήσετε."
 
 #: ui/main.qml:561
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
-msgstr ""
+msgstr "Να επιτρέπεται στιγμιαίο σήκωμα του δαχτύλου κατά το σύρσιμο"
 
 #: ui/main.qml:574
 #, fuzzy, kde-format

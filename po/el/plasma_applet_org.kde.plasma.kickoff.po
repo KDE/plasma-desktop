@@ -137,28 +137,28 @@ msgid "Show applications as:"
 msgstr "Εμφάνιση άλλων εφαρμογών:"
 
 #: ConfigGeneral.qml:159
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
-msgstr ""
+msgstr "Μόνο όνομα"
 
 #: ConfigGeneral.qml:159
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
-msgstr ""
+msgstr "Μόνο περιγραφή"
 
 #: ConfigGeneral.qml:159
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
-msgstr ""
+msgstr "Όνομα (Περιγραφή)"
 
 #: ConfigGeneral.qml:159
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
-msgstr ""
+msgstr "Περιγραφή (Όνομα)"
 
 #: ConfigGeneral.qml:167
 #, kde-format
@@ -174,12 +174,14 @@ msgid "Sort applications alphabetically"
 msgstr "Ταξινόμηση των εφαρμογών πάντα με αλφαβητική σειρά"
 
 #: ConfigGeneral.qml:175
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "This doesn't affect how applications are sorted in either search results or "
 "the favorites page."
 msgstr ""
+"Δεν επηρεάζει την ταξινόμηση στα αποτελέσματα αναζήτησης ούτε στη σελίδα "
+"αγαπημένων."
 
 #: ConfigGeneral.qml:181
 #, fuzzy, kde-format
@@ -196,10 +198,10 @@ msgid "Highlight newly-installed applications"
 msgstr "Πρόσφατες εφαρμογές"
 
 #: ConfigGeneral.qml:192
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
-msgstr ""
+msgstr "Εναλλαγή κατηγοριών της πλευρικής στήλης με το πέρασμα του δείκτη"
 
 #: ConfigGeneral.qml:198
 #, kde-format
@@ -353,10 +355,10 @@ msgid "Keep Open"
 msgstr "Διατήρηση ανοιχτό"
 
 #: KickoffGridDelegate.qml:59
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Νέο!"
 
 #: KickoffGridDelegate.qml:61
 #, fuzzy, kde-format
@@ -373,10 +375,10 @@ msgid "Grid with %1 rows, %2 columns"
 msgstr "Πλέγμα με %1 γραμμές, %2 στήλες"
 
 #: KickoffListDelegate.qml:120
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Νέο!"
 
 #: KickoffListDelegate.qml:125
 #, fuzzy, kde-format

@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021-2022, 2024-2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2016, 2017.
 # Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2024.
 #
@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-09 17:40+0000\n"
-"PO-Revision-Date: 2026-09-30 18:36+0400\n"
+"POT-Creation-Date: 2026-11-11 15:19+0000\n"
+"PO-Revision-Date: 2026-11-11 21:06+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: package/contents/config/config.qml:17
 #, kde-format
@@ -508,7 +508,7 @@ msgstr "اختر مجلدًا"
 msgid "&Refresh Desktop"
 msgstr "&حدّث سطح المكتب"
 
-#: plugins/folder/foldermodel.cpp:548 plugins/folder/foldermodel.cpp:1841
+#: plugins/folder/foldermodel.cpp:548 plugins/folder/foldermodel.cpp:1842
 #, kde-format
 msgid "&Refresh View"
 msgstr "&حدّث العرض"
@@ -531,23 +531,23 @@ msgstr ""
 "يشير <filename>%1</filename> إلى <filename>%2</filename>، ولكن يعثر العثور "
 "عليه. ربما نقل أو حذف."
 
-#: plugins/folder/foldermodel.cpp:1850
+#: plugins/folder/foldermodel.cpp:1851
 #, kde-format
 msgid "&Empty Trash"
 msgstr "أ&فرغ المهملات"
 
-#: plugins/folder/foldermodel.cpp:1853
+#: plugins/folder/foldermodel.cpp:1854
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "استعد إلى المكان السابق"
 
-#: plugins/folder/foldermodel.cpp:1856
+#: plugins/folder/foldermodel.cpp:1857
 #, kde-format
 msgid "&Open"
 msgstr "ا&فتح"
 
-#: plugins/folder/foldermodel.cpp:1860
+#: plugins/folder/foldermodel.cpp:1861
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -555,23 +555,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "اظهر المقصد"
 
-#: plugins/folder/foldermodel.cpp:1966
+#: plugins/folder/foldermodel.cpp:1967
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "أزّل أيقونة سلة المهملات"
 
-#: plugins/folder/foldermodel.cpp:1969
+#: plugins/folder/foldermodel.cpp:1970
 #, kde-format
 msgid "&Move to Trash"
 msgstr "ا&نقل إلى المهملات"
 
-#: plugins/folder/foldermodel.cpp:2002
+#: plugins/folder/foldermodel.cpp:2003
 #, kde-format
 msgid "&Paste"
 msgstr "أل&صق"
 
-#: plugins/folder/foldermodel.cpp:2155
+#: plugins/folder/foldermodel.cpp:2156
 #, kde-format
 msgid "&Properties"
 msgstr "&خصائص"
@@ -632,61 +632,61 @@ msgstr "حجم الأيقونات"
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "22px"
-msgstr ""
+msgstr "22 بكسل"
 
 #: plugins/folder/viewpropertiesmenu.cpp:54
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "32px"
-msgstr ""
+msgstr "32 بكسل"
 
 #: plugins/folder/viewpropertiesmenu.cpp:55
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "48px"
-msgstr ""
+msgstr "48 بكسل"
 
 #: plugins/folder/viewpropertiesmenu.cpp:56
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "64px"
-msgstr ""
+msgstr "64 بكسل"
 
 #: plugins/folder/viewpropertiesmenu.cpp:57
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "96px"
-msgstr ""
+msgstr "96 بكسل"
 
 #: plugins/folder/viewpropertiesmenu.cpp:58
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "128px"
-msgstr ""
+msgstr "128 بكسل"
 
 #: plugins/folder/viewpropertiesmenu.cpp:59
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "160px"
-msgstr ""
+msgstr "160 بكسل"
 
 #: plugins/folder/viewpropertiesmenu.cpp:60
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "192px"
-msgstr ""
+msgstr "192 بكسل"
 
 #: plugins/folder/viewpropertiesmenu.cpp:61
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "224px"
-msgstr ""
+msgstr "224 بكسل"
 
 #: plugins/folder/viewpropertiesmenu.cpp:62
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "256px"
-msgstr ""
+msgstr "256 بكسل"
 
 #: plugins/folder/viewpropertiesmenu.cpp:70
 #, kde-format

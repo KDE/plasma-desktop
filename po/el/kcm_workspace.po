@@ -40,25 +40,25 @@ msgid "Restart"
 msgstr "Επανεκκίνηση"
 
 #: ui/main.qml:46
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:49
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Να επιτρέπεται στο Plasma η εμφάνιση:"
 
 #: ui/main.qml:52
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "Υποδείξεων πινάκων και συστατικών"
 
 #: ui/main.qml:63
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Allows all Plasma panel and desktop widgets to show descriptive tooltips "
@@ -66,6 +66,10 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"Επιτρέπει σε όλους τους πίνακες και τα συστατικά επιφάνειας εργασίας του "
+"Plasma να εμφανίζουν περιγραφικές υποδείξεις όταν περνά ο δείκτης από πάνω "
+"τους. Δεν επηρεάζει τις μικρές υποδείξεις στα μεμονωμένα κουμπιά και τα άλλα "
+"στοιχεία του περιβάλλοντος."
 
 #: ui/main.qml:70
 #, fuzzy, kde-format
@@ -156,10 +160,10 @@ msgstr ""
 "απενεργοποίηση της."
 
 #: ui/main.qml:146
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "Κλικ"
 
 #: ui/main.qml:149
 #, kde-format
@@ -245,18 +249,20 @@ msgstr ""
 "εφαρμογές ενδέχεται να μην σέβονται αυτή τη ρύθμιση."
 
 #: ui/main.qml:262
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "Test double-click speed"
 msgid ""
 "Double-click the folder to test. If it does not change its appearance, "
 "increase double-click interval."
 msgstr ""
+"Κάντε διπλό κλικ στον φάκελο για δοκιμή. Αν δεν αλλάξει εμφάνιση, αυξήστε το "
+"διάστημα διπλού κλικ."
 
 #: ui/main.qml:306
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
-msgstr ""
+msgstr "Μεταφορά και απόθεση"
 
 #: ui/main.qml:309
 #, fuzzy, kde-format
@@ -268,31 +274,37 @@ msgid "When dragging files or folders:"
 msgstr "Κάνοντας κλικ σε αρχεία ή φακέλους:"
 
 #: ui/main.qml:313
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
-msgstr ""
+msgstr "Ερώτηση κάθε φορά"
 
 #: ui/main.qml:314
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Hold <shortcut>Shift</shortcut> to move, <shortcut>Ctrl</shortcut> to copy, "
 "and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
 "dialog."
 msgstr ""
+"Κρατήστε πατημένο το <shortcut>Shift</shortcut> για μετακίνηση, το "
+"<shortcut>Ctrl</shortcut> για αντιγραφή και το <shortcut>Shift+Ctrl</"
+"shortcut> για δημιουργία συμβολικού συνδέσμου. Διαφορετικά εμφανίζεται "
+"διάλογος."
 
 #: ui/main.qml:332
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
-msgstr ""
+msgstr "Μετακίνηση αν είναι στην ίδια συσκευή"
 
 #: ui/main.qml:333
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
+"Κρατήστε πατημένο το <shortcut>Shift</shortcut> κατά την απόθεση για άλλες "
+"επιλογές."
 
 #: ui/main.qml:348
 #, fuzzy, kde-format
@@ -350,16 +362,17 @@ msgid "Always enabled"
 msgstr "Πάντα ενεργή"
 
 #: ui/main.qml:401
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "Ανενεργή"
 
 #: ui/main.qml:402
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."
 msgstr ""
+"Στη λειτουργία tablet, το εικονικό πληκτρολόγιο εμφανίζεται όταν χρειάζεται."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -369,11 +382,13 @@ msgstr "Ένα κλικ για άνοιγμα αρχείων"
 
 #. i18n: ectx: label, entry (dndBehavior), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:13
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "For local files on the same device, whether dragging and dropping will "
 "perform a move operation instead of showing the options menu"
 msgstr ""
+"Για τοπικά αρχεία στην ίδια συσκευή, αν η μεταφορά και απόθεση θα κάνει "
+"μετακίνηση αντί να εμφανίζει το μενού επιλογών"
 
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
@@ -408,16 +423,18 @@ msgstr "Ενεργοποίηση επικόλλησης επιλογής με μ
 
 #. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:9
-#, kde-format
+#, fuzzy, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "Εμφάνιση μεγάλων υποδείξεων πινάκων και συστατικών"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"Να επιτρέπεται στα συστατικά Plasma να εμφανίζουν μεγάλες υποδείξεις όταν "
+"περνά ο δείκτης"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
