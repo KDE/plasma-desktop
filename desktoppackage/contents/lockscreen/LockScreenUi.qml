@@ -371,7 +371,7 @@ Item {
 
                             PlasmaComponents3.ToolTip.text: tooltip
                             PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
-                            PlasmaComponents3.ToolTip.visible: hovered
+                            PlasmaComponents3.ToolTip.visible: hovered || visualFocus
 
                             Component.onCompleted: {
                                 if (checked) {

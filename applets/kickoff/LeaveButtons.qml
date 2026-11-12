@@ -202,7 +202,7 @@ RowLayout {
         visible: root.__layout.overflowMenuButtonIsVisible && root.__layout.collapseOverflowMenuButton
 
         PC3.ToolTip.text: text
-        PC3.ToolTip.visible: hovered || activeFocus
+        PC3.ToolTip.visible: hovered || visualFocus
         PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
     }
 

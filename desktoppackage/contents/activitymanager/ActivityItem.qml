@@ -337,7 +337,7 @@ Item {
                 display: PlasmaComponents.AbstractButton.IconOnly
 
                 PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
-                PlasmaComponents.ToolTip.visible: hovered || activeFocus
+                PlasmaComponents.ToolTip.visible: hovered || visualFocus
                 PlasmaComponents.ToolTip.text: text
 
                 onClicked: KCMLauncher.openSystemSettings("kcm_activities", root.activityId);

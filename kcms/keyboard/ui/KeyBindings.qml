@@ -137,7 +137,7 @@ KCM.ScrollViewKCM {
 
                         Accessible.description: i18nc("@info accessible", "Reset selected options for this group")
                         QQC2.ToolTip.text: i18nc("@info:tooltip", "Reset selected options for this group")
-                        QQC2.ToolTip.visible: hovered
+                        QQC2.ToolTip.visible: hovered || visualFocus
                     }
                 }
             }

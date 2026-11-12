@@ -707,7 +707,7 @@ ColumnLayout {
 
                 PC3.ToolTip.text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:tooltip for button", "Remove this panel; this action can be undone")
                 PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
-                PC3.ToolTip.visible: hovered
+                PC3.ToolTip.visible: hovered || visualFocus
 
                 onClicked: plasmoid.internalAction("remove").trigger()
             }
@@ -720,7 +720,7 @@ ColumnLayout {
 
                 PC3.ToolTip.text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:tooltip for button", "Create a new panel with the same settings and applets")
                 PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
-                PC3.ToolTip.visible: hovered
+                PC3.ToolTip.visible: hovered || visualFocus
             }
 
 
@@ -732,7 +732,7 @@ ColumnLayout {
 
                 PC3.ToolTip.text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:tooltip for button", "Close Panel Settings window and exit Edit Mode")
                 PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
-                PC3.ToolTip.visible: hovered
+                PC3.ToolTip.visible: hovered || visualFocus
 
                 onClicked: plasmoid.internalAction("configure").trigger()
             }

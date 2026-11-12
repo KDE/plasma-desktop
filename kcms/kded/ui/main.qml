@@ -231,7 +231,7 @@ KCM.ScrollViewKCM {
 
                         Accessible.name: model.status === Private.KCM.Running ? i18nc("@action:button %1 service name", "Stop %1", delegate.text) : i18nc("@action:button %1 service name", "Start %1", delegate.text)
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
-                        QQC2.ToolTip.visible: hovered
+                        QQC2.ToolTip.visible: hovered || visualFocus
                         QQC2.ToolTip.text: model.status === Private.KCM.Running ? i18nc("@action:button", "Stop Service") : i18nc("@action:button", "Start Service")
                     }
                 }

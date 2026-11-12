@@ -89,7 +89,7 @@ Item {
             checked: root.showingSearch
 
             PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
-            PlasmaComponents.ToolTip.visible: hovered || activeFocus
+            PlasmaComponents.ToolTip.visible: hovered || visualFocus
             PlasmaComponents.ToolTip.text: text
 
             onClicked: root.showingSearch = !root.showingSearch
@@ -105,7 +105,7 @@ Item {
             visible: KConfig.KAuthorized.authorizeControlModule("kcm_activities")
 
             PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
-            PlasmaComponents.ToolTip.visible: hovered || activeFocus
+            PlasmaComponents.ToolTip.visible: hovered || visualFocus
             PlasmaComponents.ToolTip.text: text
 
             onClicked: {
@@ -122,7 +122,7 @@ Item {
             text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button tooltip only, close panel", "Close")
 
             PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
-            PlasmaComponents.ToolTip.visible: hovered || activeFocus
+            PlasmaComponents.ToolTip.visible: hovered || visualFocus
             PlasmaComponents.ToolTip.text: text
 
             onClicked: root.closeRequested()

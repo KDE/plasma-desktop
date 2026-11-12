@@ -108,7 +108,7 @@ QQC2.ItemDelegate {
                     activeFocusOnTab: false
 
                     QQC2.ToolTip.text: text
-                    QQC2.ToolTip.visible: hovered || activeFocus
+                    QQC2.ToolTip.visible: hovered || visualFocus
                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                 }
             }
@@ -225,7 +225,7 @@ QQC2.ItemDelegate {
                                     onClicked: originalIndex.model.disableShortcut(originalIndex, modelData)
 
                                     QQC2.ToolTip.text: text
-                                    QQC2.ToolTip.visible: hovered || activeFocus
+                                    QQC2.ToolTip.visible: hovered || visualFocus
                                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                                 }
                             }
@@ -273,7 +273,7 @@ QQC2.ItemDelegate {
                                     onClicked: parent.finished()
 
                                     QQC2.ToolTip.text: text
-                                    QQC2.ToolTip.visible: hovered || activeFocus
+                                    QQC2.ToolTip.visible: hovered || visualFocus
                                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                                 }
                             }

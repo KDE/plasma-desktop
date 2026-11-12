@@ -218,7 +218,7 @@ Item {
                     : i18nc("@action:button accessible only, %1 is widget name", "Mark widget %1 for uninstallation. Requires confirmation", model.name)
                 // we don't really "undo" anything but we'll pretend to the user that we do
                 PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
-                PlasmaComponents.ToolTip.visible: hovered
+                PlasmaComponents.ToolTip.visible: hovered || visualFocus
                 PlasmaComponents.ToolTip.text: text
                 flat: false
                 visible: (model.local && delegate.GridView.isCurrentItem && !dragHandler.active && !touchDragHandler.active) ?? false
@@ -266,7 +266,7 @@ Item {
 
                 // we don't really "undo" anything but we'll pretend to the user that we do
                 PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
-                PlasmaComponents.ToolTip.visible: hovered
+                PlasmaComponents.ToolTip.visible: hovered || visualFocus
                 PlasmaComponents.ToolTip.text: text
                 flat: false
                 visible: (running && delegate.GridView.isCurrentItem && !dragHandler.active) ?? false

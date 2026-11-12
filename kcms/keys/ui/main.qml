@@ -255,7 +255,7 @@ KCM.AbstractKCM {
                                 }
 
                                 QQC2.ToolTip.text: text
-                                QQC2.ToolTip.visible: hovered || activeFocus
+                                QQC2.ToolTip.visible: hovered || visualFocus
                                 QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                             }
                             QQC2.Button {
@@ -279,7 +279,7 @@ KCM.AbstractKCM {
                                 }
 
                                 QQC2.ToolTip.text: text
-                                QQC2.ToolTip.visible: hovered || activeFocus
+                                QQC2.ToolTip.visible: hovered || visualFocus
                                 QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                             }
                             QQC2.Button {
@@ -294,7 +294,7 @@ KCM.AbstractKCM {
                                 onClicked: componentDelegate.undoDeletion()
 
                                 QQC2.ToolTip.text: text
-                                QQC2.ToolTip.visible: hovered || activeFocus
+                                QQC2.ToolTip.visible: hovered || visualFocus
                                 QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                             }
                             Rectangle {

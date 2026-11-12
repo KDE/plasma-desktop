@@ -251,7 +251,7 @@ PlasmaExtras.PlasmoidHeading {
 
                     PC3.ToolTip.text: text
                     PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
-                    PC3.ToolTip.visible: hovered
+                    PC3.ToolTip.visible: hovered || visualFocus
                     Keys.onTabPressed: event => {
                         tabSetFocus(event, nextItemInFocusChain(false));
                     }
@@ -277,7 +277,7 @@ PlasmaExtras.PlasmoidHeading {
                     display: PC3.ToolButton.IconOnly
                     PC3.ToolTip.text: text
                     PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
-                    PC3.ToolTip.visible: hovered
+                    PC3.ToolTip.visible: hovered || visualFocus
                     Binding {
                         target: kickoff
                         property: "hideOnWindowDeactivate"

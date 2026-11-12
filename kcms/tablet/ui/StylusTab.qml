@@ -523,7 +523,7 @@ Item {
 
                             QQC2.ToolTip.text: text
                             QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
-                            QQC2.ToolTip.visible: hovered
+                            QQC2.ToolTip.visible: hovered || visualFocus
                         }
                         Item {
                             Layout.fillWidth: parent
