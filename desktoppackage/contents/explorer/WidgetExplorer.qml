@@ -267,13 +267,6 @@ PC3.Page {
         }
     }
 
-    Timer {
-        id: setModelTimer
-        interval: 20
-        running: true
-        onTriggered: list.model = widgetExplorer.widgetsModel
-    }
-
     PC3.ScrollView {
         id: scrollView
         anchors {
@@ -296,15 +289,6 @@ PC3.Page {
         PC3.ScrollBar.horizontal.policy: PC3.ScrollBar.AlwaysOff
         PC3.ScrollBar.vertical.visible: scrollBarVisible
 
-        // hide the flickering by fading in nicely
-        opacity: setModelTimer.running ? 0 : 1
-        Behavior on opacity {
-            OpacityAnimator {
-                duration: Kirigami.Units.longDuration
-                easing.type: Easing.InOutQuad
-            }
-        }
-
         GridView {
             id: list
 
@@ -312,7 +296,7 @@ PC3.Page {
                                                 - leftMargin
                                                 - rightMargin
 
-            // model set delayed by Timer above
+            model: widgetExplorer.widgetsModel
 
             topMargin: main.contentMargins
             leftMargin: main.contentMargins
