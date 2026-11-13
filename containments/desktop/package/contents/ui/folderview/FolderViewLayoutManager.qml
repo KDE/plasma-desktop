@@ -18,13 +18,18 @@ import org.kde.private.desktopcontainment.folder as Folder
 import org.kde.plasma.private.containmentlayoutmanager as ContainmentLayoutManager
 
 import "../code/FolderTools.js" as FolderTools
-import ".."
+import ".." as Base
 
 ContainmentLayoutManager.AppletsLayout {
     id: root
 
     property alias url: dir.url
     property real iconSize: FolderTools.iconSizeFromTheme(Plasmoid.configuration.iconSize)
+    property FolderItemDelegate hoveredItem: null
+    readonly property bool useListViewMode: false
+    property Base.RenameEditor editor: null
+    readonly property int rows: height / cellHeight
+    readonly property int columns: width / cellWidth
 
     cellWidth: {
         const iconWidth = iconSize + (2 * Kirigami.Units.gridUnit) + (2 * Kirigami.Units.smallSpacing);
@@ -48,8 +53,72 @@ ContainmentLayoutManager.AppletsLayout {
         }
     }
 
-    readonly property int rows: height / cellHeight
-    readonly property int columns: width / cellWidth
+    function rename() {
+        if (gridView.currentIndex !== -1) {
+            let renameAction = model.action("rename");
+            if (renameAction && !renameAction.enabled) {
+                return;
+            }
+
+            if (!root.editor) {
+                editor = editorComponent.createObject(listener);
+            }
+
+            root.editor.targetItem = gridView.currentItem;
+        }
+    }
+
+    function cancelRename() {
+        if (root.editor) {
+            root.editor.targetItem = null;
+        }
+    }
+
+    function linkHere(sourceUrl) {
+        dir.linkHere(sourceUrl);
+    }
+
+    function handleDragMove(x, y) {
+        let pos = mapToItem(gridView.contentItem, x, y);
+        let item = gridView.safeItemAt(pos.x, pos.y);
+
+        if (item && item.isDir) {
+            hoveredItem = item;
+        } else {
+            hoveredItem = null;
+        }
+    }
+
+    function endDragMove() {
+        if (hoveredItem && !hoveredItem.popupDialog) {
+            hoveredItem = null;
+        }
+    }
+
+    function dropItemAt(pos) {
+        let item = gridView.safeItemAt(pos.x, pos.y);
+
+        if (item && !item.blank) {
+            gridView.currentIndex = item.index
+            return positioner.map(item.index);
+        }
+
+        return -1;
+    }
+
+    function drop(target, event, pos) {
+        let dropPos = mapToItem(gridView.contentItem, pos.x, pos.y);
+        dir.drop(target, event, dropItemAt(dropPos), Plasmoid.isContainment && !Plasmoid.immutable);
+    }
+
+    function generateDragImage() {
+        for (let i = 0; i < gridView.count; i++) {
+            let item = gridView.itemAtIndex(i) as FolderItemDelegate;
+            if (item) {
+                item.updateDragImage();
+            }
+        }
+    }
 
     Repeater {
         model: Folder.FolderModel {
@@ -90,22 +159,10 @@ ContainmentLayoutManager.AppletsLayout {
             }*/
         }
 
-        delegate: ContainmentLayoutManager.ItemContainer {
+        delegate: FolderItemDelegate {
             id: delegate
 
-            //layout: root
-            required property bool blank
-            required property bool isDir
-            required property bool isHidden
-            required property bool isLink
-            required property bool selected
-            required property int index
-            required property string size
-            required property string linkDestinationUrl
-            required property string type
-            required property string display
-            required property string displayWrapped
-            required property var decoration
+            isOnRootView: true
 
             Component.onCompleted: {
                 root.positionItem(this);
@@ -115,24 +172,6 @@ ContainmentLayoutManager.AppletsLayout {
             height: root.cellHeight
 
             preferredLayoutDirection: ContainmentLayoutManager.AppletsLayout.LeftToRight
-            editModeCondition:  ContainmentLayoutManager.ItemContainer.AfterMousePress
-
-            contentItem: FolderItemDelegate {
-                size: delegate.size
-                index: delegate.index
-                decoration: delegate.decoration
-                isHidden: delegate.isHidden
-                isLink: delegate.isLink
-                display: delegate.display
-                blank: delegate.blank
-                isDir: delegate.isDir
-                linkDestinationUrl: delegate.linkDestinationUrl
-                selected: delegate.selected
-                displayWrapped: delegate.displayWrapped
-                type: delegate.type
-
-                isOnRootView: true
-            }
         }
     }
 }
