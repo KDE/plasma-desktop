@@ -393,7 +393,7 @@ ContainmentItem {
                 property FolderView view: (item as FolderViewLayer)?.view ?? null
                 property Folder.FolderModel model: (item as FolderViewLayer)?.model ?? null
 
-                source: "FolderViewLayoutManager.qml"//"FolderViewLayer.qml"
+                source: "folderview/FolderViewLayoutManager.qml"//"folderview/FolderViewLayer.qml"
             }
 
 
