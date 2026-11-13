@@ -1,0 +1,961 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Arabic "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmaccess" lang="&language;">
+<title
+>الإتاحة</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2026-05-10</date>
+<releaseinfo
+>بلازما 6.6</releaseinfo>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>إعدادات النظام</keyword>
+<keyword
+>الإتاحة</keyword>
+<keyword
+>مفاتيح</keyword>
+<keyword
+>جرس</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="accessibility">
+<title
+>الإتاحة</title>
+<sect2 id="accessibility-intro">
+
+<title
+>مقدمة</title>
+
+<para
+>صُممت هذه الوحدة لمساعدة المستخدمين الذين يواجهون صعوبة في سماع التنبيهات الصوتية، أو الذين يجدون صعوبة في استخدام لوحة المفاتيح. </para>
+
+<para
+>تُقسم الوحدة إلى عشر لسانيات: <link linkend="access-zoom"
+><guilabel
+>التكبير والمكبّر</guilabel
+></link
+>، <link linkend="access-bell"
+><guilabel
+>جرس النظام</guilabel
+></link
+>، <link linkend="access-modifier-keys"
+><guilabel
+>مفاتيح التعديل</guilabel
+></link
+>، <link linkend="access-keyboard-filters"
+><guilabel
+>مرشحات لوحة المفاتيح</guilabel
+></link
+>، <link linkend="mouse-navigation"
+><guilabel
+>التنقل بالفأرة</guilabel
+></link
+>، <link linkend="access-activation-shortcuts"
+><guilabel
+>اختصارات التنشيط</guilabel
+></link
+>، <link linkend="access-screenreader"
+><guilabel
+>قارئ الشاشة</guilabel
+></link
+>، <link linkend="access-color-blindness"
+><guilabel
+>تصحيح عمى الألوان</guilabel
+></link
+>، <link linkend="access-invert"
+><guilabel
+>عكس الألوان</guilabel
+></link
+>، و <link linkend="access-shake-pointer"
+><guilabel
+>هز المؤشر</guilabel
+></link
+>. </para>
+
+
+<sect3 id="access-zoom">
+<title
+><guilabel
+>التكبير والمكبّر</guilabel
+></title>
+
+<para
+>صُممت أداتا التكبير والمكبّر في بلازما كيدي لتكبير أجزاء من الشاشة، لتكونا بمثابة عدسة مكبرة رقمية. بينما تشتركان في هدف جعل النصوص الصغيرة والتفاصيل الدقيقة أكثر وضوحًا، تقدمان طريقتين متميزتين للتفاعل مع بيئة سطح المكتب. </para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>تكبير</guilabel
+></term>
+<listitem>
+<para
+>هنا يمكنك التبديل بين وضعي <guilabel
+>ملء الشاشة</guilabel
+> و <guilabel
+>تكبير منطقة</guilabel
+>. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>شاشة كاملة</guilabel
+></term>
+<listitem>
+<para
+>فعّل وضع ملء الشاشة. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>اعرض شبكة البكسلات في مستوى التكبير</guilabel
+></term>
+<listitem>
+<para
+>وفّر تراكبًا مرئيًا للبكسلات الفردية المكونة للصورة على شاشتك بمجرد وصولك إلى تكبير عالٍ كافٍ. إذا فُعّل، يرسم بلازما شبكة رفيعة حول كل بكسل على حدة لترى أين ينتهي الواحد ويبدأ التالي بالضبط. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>مظهر المؤشر</guilabel
+></term>
+<listitem>
+<para
+>يتحكم في مظهر مؤشر الفأرة عند التكبير. هناك عدة خيارات: <guilabel
+>تحجيم</guilabel
+> و <guilabel
+>إبقاء</guilabel
+> و <guilabel
+>إخفاء</guilabel
+>. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>تتبّع المؤشر</guilabel
+></term>
+<listitem>
+<para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>متناسب</guilabel
+></term>
+<listitem>
+<para
+>تتحرك منطقة التكبير بالتزامن مع المؤشر. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>موسّطة</guilabel
+></term>
+<listitem>
+<para
+>يظل المؤشر في منتصف الشاشة، باستثناء المناطق القريبة من حواف الشاشة. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>موسّطة (صارمة)</guilabel
+></term>
+<listitem>
+<para
+>يظل المؤشر في منتصف الشاشة، حتى بالقرب من حواف الشاشة. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>الدفع</guilabel
+></term>
+<listitem>
+<para
+>المؤشر يدفع منطقة التكبير إلى حواف الشاشة. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>معطّل</guilabel
+></term>
+<listitem>
+<para
+>منطقة التكبير لا تتبع المؤشر. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>حسّن وضوح محتوى الشاشة عند التكبير</guilabel
+></term>
+<listitem>
+<para
+>إذا شُغّل، يستخدم كي ون التعرف على الأنماط لمحاولة تحجيم شكل النصوص/الأيقونات على مساحة العمل عند مستويات التكبير القصوى. يساعد هذا في تحسين تباين النص الإجمالي على حساب دقة الخط بتجنب الضبابية أو التبكسل. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>مكّن تتبع التركيز</guilabel
+></term>
+<listitem>
+<para
+>يضمن أن تتبع نافذة العرض المكبرة آليًا الجزء <quote
+>النشط</quote
+> من الواجهة، حتى لو كانت فأرتك لا تتحرك. بينما يتبع التكبير القياسي عادة مؤشر الفأرة، يراقب تتبع التركيز تركيز النظام (مؤشر النص أو عنصر واجهة المستخدم المحدد حاليًا). </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>مكّن تتبع علامة الإقحام النصية</guilabel
+></term>
+<listitem>
+<para
+>يسمح لأدوات التكبير في النظام باتباع مؤشر النص بدلًا من مؤشر الفأرة فقط. في البيئات التقنية — سواء كنت تكتب كودًا أو تصوغ مخطوطة بحثية أو تملأ نماذج معقدة — غالبًا ما يكون تركيزك حيث تكتب، والذي قد يكون بعيدًا عن مكان استراحة فأرتك. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>تكبير منطقة</guilabel
+></term>
+<listitem>
+<para
+>فعّل وضع تكبير المنطقة. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>العرض</guilabel
+></term>
+<listitem>
+<para
+>يسمح بضبط عرض المنطقة المكبرة. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>الارتفاع</guilabel
+></term>
+<listitem>
+<para
+>يسمح بضبط ارتفاع المنطقة المكبرة. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>معطّل</guilabel
+></term>
+<listitem>
+<para
+>عطّل أوضاع التحجيم. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>معامل التَّكبير</guilabel
+></term>
+<listitem>
+<para
+>يضبط مقدار تكبير الشاشة مع كل خطوة (مثلًا، 1.2x أو 2.0x). يدعم بلازما مستويات تكبير قصوى (حتى 100x)، وهي أعلى بكثير من معظم أنظمة التشغيل الأخرى. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>المفاتيح المغيِّرة لإيماءة التمرير</guilabel
+></term>
+<listitem>
+<para
+>يسمح لك بتنفيذ إجراءات التمرير باستخدام مزيج من مفتاح لوحة مفاتيح وحركة فأرة، بدلًا من استخدام عجلة تمرير فيزيائية. </para>
+<para
+>هذا مفيد بشكل خاص للمستخدمين الذين يستخدمون كرات التتبع، أو أجهزة تأشير متخصصة بدون عجلات، أو الذين لديهم إعاقات حركية تجعل استخدام عجلة التمرير صعبًا. </para>
+<note>
+<para
+>إيماءات تمرير التكبير/التصغير متاحة فقط على وايلاند. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>مرر أثناء الضغط على مفاتيح التعديل للتكبير</guilabel
+></term>
+<listitem>
+<para
+>عند تفعيل هذا الخيار، يؤدي الضغط باستمرار على مفتاح معين (عادة مفتاح &Meta;) وتدوير عجلة الفأرة (أو استخدام تمرير بإصبعين على لوحة اللمس) إلى زيادة أو تقليل تكبير سطح المكتب بالكامل ديناميكيًا. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>اضبط الاختصارات</guilabel
+></term>
+<listitem>
+<para
+>استخدم الاختصارات للتحكم بالتكبير. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-bell">
+<title
+><guilabel
+>جرس النظام</guilabel
+></title>
+
+<para
+>ينقسم هذا اللوح إلى قسم <guilabel
+>جرس مسموع</guilabel
+> وقسم <guilabel
+>جرس مرئي</guilabel
+>. </para>
+
+<para
+>يحدد مربع التأشير العلوي المسمى <guilabel
+>استخدم جرس النظام</guilabel
+> ما إذا كان جرس النظام العادي سيرن أم لا. إذا عُطّل هذا الخيار، سيُسكت جرس النظام. </para>
+
+<para
+>يمكن استخدام مربع التأشير التالي لتشغيل صوت مختلف كلما فُعّل جرس النظام. للتفعيل، ضع علامة في مربع التأشير المسمى <guilabel
+>استخدم جرسا مخصصا</guilabel
+>، وأدخل مسار ملف الصوت الكامل في المربع النصي المسمى <guilabel
+>الصوت المراد تشغيله</guilabel
+>. إذا أردت، يمكنك تحديد زر <guibutton
+>تصفح</guibutton
+> للتنقل عبر نظام الملفات للعثور على الملف المطلوب. </para>
+
+<para
+>للمستخدمين الذين يواجهون صعوبة في سماع جرس النظام، أو أولئك الذين يملكون حاسوبا صامتا، توفر كيدي <emphasis
+>الجرس المرئي</emphasis
+>. يقدم هذا إشارة مرئية (عكس ألوان الشاشة أو وميض لون عليها) عندما يصدر جرس النظام صوته عادة. </para>
+
+<para
+>لاستخدام الجرس المرئي، ضع أولا علامة في مربع التأشير المسمى <guilabel
+>استخدم الجرس المرئي</guilabel
+>. </para>
+
+<para
+>يمكنك بعدها الاختيار بين <guilabel
+>اعكس الشاشة</guilabel
+>، أو <guilabel
+>أومض الشاشة</guilabel
+>. إذا اخترت <guilabel
+>اعكس الشاشة</guilabel
+>، ستُعكس كل الألوان على الشاشة. وإذا اخترت <guilabel
+>أومض الشاشة</guilabel
+>، يمكنك اختيار اللون بالنقر على الزر الموجود يمين اختيار <guilabel
+>أومض الشاشة</guilabel
+>. </para>
+
+<para
+>يمكن استخدام مربع الأرقام لضبط مدة الجرس المرئي. القيمة المبدئية هي 500 ميلي ثانية، أي نصف ثانية. </para>
+
+</sect3>
+
+<sect3 id="access-modifier-keys">
+<title
+><guilabel
+>مفاتيح التعديل</guilabel
+></title>
+
+<para
+>يوجد قسمان في هذا اللوح هما <guilabel
+>المفاتيح اللاصقة</guilabel
+> و <guilabel
+>مفاتيح القفل</guilabel
+>.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>استخدم المفاتيح اللاصقة</guilabel
+></term>
+<listitem>
+<para
+>إذا فُعّل هذا الخيار، يمكنك ضغط مفاتيح &Shift; أو &Alt; أو &Ctrl; ثم إفلاتها، ثم ضغط مفتاح آخر للحصول على اختصار (مثال: <keycombo action="simul"
+>&Ctrl;&Alt;&Del;</keycombo
+> يمكن تنفيذه بضغط &Ctrl;، ثم &Alt; ثم &Del;). </para>
+
+<para
+>يوجد أيضا في هذا القسم مربع تأشير مسمى <guilabel
+>اقفل المفاتيح اللاصقة</guilabel
+>. إذا فُعّل هذا المربع، ستبقى مفاتيح &Alt; و &Ctrl; و &Shift; <quote
+>مختارة</quote
+> حتى <quote
+>تُلغي اختيارها</quote
+>. </para>
+
+<para
+>على سبيل المثال: </para>
+<variablelist>
+<varlistentry>
+<term
+>عند تعطيل <guilabel
+>اقفل المفاتيح اللاصقة</guilabel
+>:</term>
+<listitem>
+<para
+>إذا ضغطت مفتاح &Shift; ثم ضغطت مفتاح <keycap
+>F</keycap
+>، سيفسر الحاسوب هذا على أنه <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>. أما الآن فإذا كتبت <keycap
+>P</keycap
+>، سيفسره الحاسوب على أنه حرف p (بدون shift). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>عند تفعيل <guilabel
+>اقفل المفاتيح اللاصقة</guilabel
+>:</term>
+<listitem>
+<para
+>إذا ضغطت مفتاح &Shift; <emphasis
+>مرتين</emphasis
+> ثم ضغطت مفتاح <keycap
+>F</keycap
+>، سيفسر الحاسوب هذا على أنه <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>. أما الآن فإذا كتبت <keycap
+>P</keycap
+>، سيفسره الحاسوب على أنه حرف P كبير (<keycombo action="simul"
+>&Shift;<keycap
+>P</keycap
+></keycombo
+>). لإلغاء اختيار مفتاح &Shift;، اضغطه مرة أخرى. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+<!--this is missing - explain it
+<para
+><guilabel
+>Turn sticky keys off when two keys are pressed simultaneously</guilabel
+></para>
+<para
+><guilabel
+>Use system bell whenever a modifier gets latched, locked or unlocked</guilabel
+></para>
+-->
+</listitem>
+</varlistentry>
+<!-- explain use case etc
+<guilabel
+>Locking Keys</guilabel
+> what is that?
+<varlistentry>
+<term
+><guilabel
+>Use system bell whenever a locking key gets activated or deactivated</guilabel
+></term>
+<listitem
+><para
+></para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Use Plasma's system notification mechanism whenever a modifier or locking key 
+changes its state</guilabel
+></term>
+<listitem
+><para
+>Click the <guibutton
+>Configure Notifications...</guibutton
+> button to open a dialog 
+which allows you to edit the notifications for status changes of all keys</para
+></listitem>
+</varlistentry>
+-->
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-keyboard-filters">
+<title
+><guilabel
+>مرشحات لوحة المفاتيح</guilabel
+></title>
+
+<para
+>يوجد قسمان في هذا اللوح.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>استخدم المفاتيح البطيئة</guilabel
+></term>
+<listitem>
+<para
+>إذا فُعّل هذا الخيار، يجب عليك الاستمرار في ضغط المفتاح لفترة زمنية محددة (يمكن ضبطها بمربع الأرقام) قبل أن تُقبل الضغطة. يساعد هذا في منع ضغطات المفاتيح العرضية. </para>
+</listitem>
+</varlistentry>
+<!-- Acceptance delay slider 500 ms default
+Use system bell whenever a key is pressed/accepted/rejected
+-->
+<varlistentry>
+<term
+><guilabel
+>استخدم مفاتيح الارتداد</guilabel
+></term>
+<listitem>
+<para
+>إذا فُعّل هذا الخيار، يجب عليك الانتظار لفترة زمنية محددة (يمكن ضبطها بمربع الأرقام) قبل أن تُقبل الضغطة التالية للمفتاح. يمنع هذا ضغطات المفاتيح المتعددة العرضية. </para>
+</listitem>
+</varlistentry>
+<!-- Debounce time slider 500 ms default
+Use system bell whenever a key is rejected
+-->
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="mouse-navigation">
+<title
+>التنقل بالفأرة</title>
+
+<para
+>يتيح لك هذا اللسان ضبط مفاتيح لوحة الأرقام لتعمل كجهاز فأرة. قد يكون هذا مفيدا عند العمل على جهاز لا يملك جهاز تأشير آخر، أو عندما لا يكون لديك استخدام آخر للوحة الأرقام. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>حرك المؤشر بواسطة لوحة المفاتيح (باستخدام لوحة الأرقام)</guilabel
+></term>
+<listitem>
+<para
+>لتفعيل وضع فأرة لوحة المفاتيح، يجب تحديد مربع التأشير المسمى <guilabel
+>حرك المؤشر بواسطة لوحة المفاتيح (باستخدام لوحة الأرقام)</guilabel
+>. عند قيامك بذلك، ستُفعل الإعدادات الأخرى، ويمكنك تخصيص سلوك مؤشر لوحة المفاتيح أكثر إذا تطلب الأمر. </para>
+<para
+>تحرك المفاتيح المختلفة في لوحة الأرقام المؤشر في الاتجاهات المتوقعة. لاحظ أنه يمكنك التحرك قطريا بالإضافة إلى الأعلى والأسفل واليسار واليمين. يحاكي المفتاح <keycap
+>5</keycap
+> النقر بزر المؤشر، عادة زر الفأرة الأيسر. يمكنك تغيير الزر الذي تجري محاكاته باستخدام مفتاح <keycap
+>/</keycap
+> (ليصبح الزر الأيسر)، ومفتاح <keycap
+>*</keycap
+> (ليصبح الزر الأوسط) ومفتاح <keycap
+>-</keycap
+> (ليصبح الزر الأيمن). يحاكي مفتاح <keycap
+>+</keycap
+> نقرا مزدوجا لزر المؤشر المختار. يمكنك استخدام مفتاح <keycap
+>0</keycap
+> لمحاكاة الاستمرار في ضغط زر المؤشر المختار (للسحب السهل)، ثم استخدام مفتاح <keycap
+>.</keycap
+> لمحاكاة إفلات زر المؤشر المختار. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>تأخير التسارع</guilabel
+></term>
+<listitem>
+<para
+>هذا هو الوقت (بالميلي ثانية) بين ضغط المفتاح الأولي وأول حدث حركة متكرر لتسارع مفتاح الفأرة. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>فترة التكرار</guilabel
+></term>
+<listitem>
+<para
+>هذا هو الوقت بالميلي ثانية بين أحداث الحركة المتكررة لتسارع مفتاح الفأرة. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>وقت التسارع</guilabel
+></term>
+<listitem>
+<para
+>هذا هو الوقت بالميلي ثانية قبل أن يصل المؤشر إلى السرعة القصوى لتسارع مفتاح الفأرة. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>السرعة القصوى</guilabel
+></term>
+<listitem>
+<para
+>هذه هي السرعة القصوى بالبكسل في الثانية التي يمكن للمؤشر الوصول إليها لتسارع مفتاح الفأرة. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>تسارع المؤشر</guilabel
+></term>
+<listitem>
+<para
+>هذا هو مقدار التسارع المراد تطبيقه على تسارع مفتاح الفأرة. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-activation-shortcuts">
+<title
+><guilabel
+>اختصارات التنشيط</guilabel
+></title>
+
+<para
+>يوجد قسمان في هذا اللوح.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>إيماءات التفعيل</guilabel
+> مع هذه الخيارات:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>استخدم الإيماءات لتفعيل المفاتيح اللاصقة والمفاتيح البطيئة</guilabel
+></member>
+<member
+>يمكنك هنا تفعيل إيماءات لوحة المفاتيح التي تشغل الميزات التالية:</member>
+<member
+>مفاتيح الفأرة: اضغط &Shift;+NumLock</member>
+<member
+>المفاتيح اللاصقة: اضغط مفتاح &Shift; 5 مرات متتالية</member>
+<member
+>المفاتيح البطيئة: استمر في ضغط &Shift; لمدة 8 ثوانٍ</member>
+<member
+><guilabel
+>عطل المفاتيح اللاصقة والمفاتيح البطيئة بعد فترة معينة من الخمول</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>الإشعار</guilabel
+> مع هذه الخيارات:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>استخدم جرس النظام كلما استخدمت إيماءة لتشغيل ميزة إتاحة أو تعطيلها</guilabel
+></member>
+
+<member
+><guilabel
+>أظهر مربع حوار تأكيد كلما شُغلت ميزة إتاحة للوحة المفاتيح أو عُطلت</guilabel
+></member>
+<member
+>إذا أُشر على هذا الخيار، ستظهر كيدي مربع حوار تأكيد كلما شُغلت ميزة إتاحة للوحة المفاتيح أو عُطلت.</member>
+<member
+>تأكد من معرفة ما تفعله إذا ألغيت التأشير عليه، حيث ستُطبق إعدادات إتاحة لوحة المفاتيح دائما حينها دون تأكيد.</member>
+
+<member
+><guilabel
+>استخدم آلية إعلام النظام في كيدي كلما شغلت أو أوقفت ميزة إتاحة لوحة المفاتيح.</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>انقر على زر <guibutton
+>اضبط الإشعارات</guibutton
+> لفتح حوار يتيح لك تحرير إشعارات تغيير حالة جميع المفاتيح.</para>
+
+</sect3>
+
+<sect3 id="access-screenreader">
+<title
+><guilabel
+>قارئ الشاشة</guilabel
+></title>
+
+<para
+>ثبّت تطبيق قارئ شاشة مثل <ulink url="https://en.wikipedia.org/wiki/Orca_(assistive_technology)"
+>Orca</ulink
+> مع <application
+>speech-dispatcher</application
+>. </para>
+
+<para
+>اختبر عمل الصوت من مرسل الكلام باستخدام الأمر <command
+>spd-say hello</command
+> في الطرفية. </para>
+
+<para
+>بالإضافة إلى ذلك تحتاج إلى مصطنع نطق مثل <application
+>espeak</application
+>. </para>
+
+<para
+>فعّل قارئ الشاشة في مربع التأشير، ثم اخرج وأعد تشغيل جلسة سطح المكتب. </para>
+
+<para
+>بالنسبة لبلازما نفسها، تأكد من استخدام <guilabel
+>قائمة التطبيقات</guilabel
+> التقليدية، وتحقق من أن هذه القائمة مرتبطة باختصار لوحة مفاتيح (<keycombo action="simul"
+>&Alt;<keycap
+>F1</keycap
+></keycombo
+>). عند ضغط هذا الاختصار، يجب أن تُفتح القائمة وتُقرأ عند التنقل فيها باستخدام مفاتيح الأسهم. </para>
+</sect3>
+
+<sect3 id="access-color-blindness">
+<title
+><guilabel
+>تصحيح عمى الألوان</guilabel
+></title>
+
+<para
+>هي أداة إتاحة مصممة لمساعدة المستخدمين الذين يعانون من قصور في رؤية الألوان على التمييز بشكل أفضل بين الألوان على شاشتهم. </para>
+<para
+>على عكس المرشحات البسيطة التي تغير <quote
+>مظهر</quote
+> سطح المكتب، تستخدم هذه الميزة <ulink url="https://en.wikipedia.org/wiki/Color_blindness"
+>خوارزميات دالتونية</ulink
+>. تُحوّل هذه الخوارزميات ترددات الألوان الإشكالية إلى أجزاء من الطيف يمكن للمستخدم رؤيتها بوضوح أكبر، مما يساعد على استعادة التباين الذي قد يُفقد لولا ذلك. </para>
+<para
+>الأهداف الرئيسة: </para>
+<itemizedlist>
+<listitem>
+<para
+>تستخدم العديد من الواجهات الألوان لنقل المعنى (&eg;, الأخضر لـ<quote
+>النجاح</quote
+> والأحمر لـ<quote
+>الخطأ</quote
+>). بالنسبة لشخص مصاب بعمى الأحمر أو عمى الأخضر، قد تبدو هذه الألوان متطابقة. تُحوّل لوحة التصحيح هذه الألوان ليصبح التمييز مرئيًا. </para>
+</listitem>
+<listitem>
+<para
+>تضمن أن الأزرار والرسوم البيانية والنص المظلل مقروءة، بغض النظر عن لوحة ألوان التصميم الأصلي. </para>
+</listitem>
+<listitem>
+<para
+>لأنها تُعالج على مستوى المُركّب (&kwin;)، ينطبق التصحيح على كل شيء—متصفحات الويب، والبرامج الهندسية المتخصصة، والفيديو، وواجهة سطح المكتب نفسها. </para>
+</listitem>
+</itemizedlist>
+<para
+>تقدم اللوحة عادةً ضبطًا لأنواع عمى الألوان الثلاثة الرئيسة: </para>
+<itemizedlist>
+<listitem>
+<para
+>عمى الأحمر: عدم رؤية الضوء الأحمر (صعوبة في رؤية الضوء الأحمر). </para>
+</listitem>
+<listitem>
+<para
+>عمى الأخضر: عدم رؤية الضوء الأخضر (الشكل الأكثر شيوعًا). </para>
+</listitem>
+<listitem>
+<para
+>عمى الأزرق: عدم رؤية الضوء الأزرق (أكثر ندرة، صعوبة في التمييز بين الأزرق والأصفر). </para>
+</listitem>
+</itemizedlist>
+<para
+>اختيار <guilabel
+>الألوان الإشكالية</guilabel
+>: تختار النوع المحدد من القصور. </para>
+<para
+>مُنزلق <guilabel
+>الشدة</guilabel
+>: هذا هو الجزء الأهم في اللوحة. يسمح لك بضبط قوة التحويل. نظرًا لأن رؤية الألوان هي طيف، نادرًا ما يعمل مرشح "مقاس واحد يناسب الجميع"؛ يسمح لك المُنزلق بضبط التصحيح بدقة لرؤيتك الخاصة. </para>
+<note>
+<para
+>هذه المرشحات مخصصة لإمكانية الوصول، وليس للعمل الدقيق في الألوان مثل تحرير الصور الاحترافي أو الرسم الرقمي. لأنها تُحوّل طيف الألوان لجعله "قابلًا للقراءة"، لن تتطابق الألوان على الشاشة مع رموز hex "الحقيقية" أو قيم الطباعة للملفات التي تعرضها. </para>
+</note>
+<para
+>يمكنك التحكم في النتائج باستخدام عيّنات <guilabel
+>الألوان المضبوطة</guilabel
+>. </para>
+</sect3>
+
+<sect3 id="access-invert">
+<title
+><guilabel
+>اعكس</guilabel
+></title>
+
+<para
+>تضبط هذه اللوحة أداة لقلب قيم ألوان شاشتك—تحويل البكسلات البيضاء إلى سوداء، والزرقاء إلى برتقالية، وهكذا. يُعالج هذا بواسطة مدير النوافذ &kwin; كتأثير معالجة لاحقة. </para>
+<para
+>بينما قد يبدو كمرشح صور <quote
+>سلبي</quote
+>، فإن أغراضه الرئيسة وظيفية وليست جمالية: </para>
+<para
+>بالنسبة للمستخدمين ذوي الإعاقات البصرية المحددة، مثل رهاب الضوء (الحساسية للضوء) أو أنواع معينة من ضعف البصر، يمكن لشاشة ساطعة قياسية أن تسبب ألمًا جسديًا أو تجعل النص يبدو ضبابيًا بسبب <quote
+>تسرب الضوء.</quote
+> </para>
+<para
+>يُحوّل عكس الشاشة الخلفيات الساطعة إلى داكنة والنص الداكن إلى فاتح، مما يقلل بشكل كبير من كمية الضوء المنبعثة من الشاشة مع الحفاظ على التباين اللازم للقراءة. </para>
+<para
+>بينما تحتوي معظم التطبيقات الحديثة على أوضاع داكنة أصلية، فإن بعض البرامج الأقدم أو صفحات الويب المحددة مُبرمجة بشكل ثابت بخلفيات بيضاء. </para>
+<para
+>تعمل أداة العكس كـ<quote
+>وضع داكن عالمي.</quote
+> إذا كان التطبيق لا يدعم سمة داكنة، يمكنك إجبار الألوان على الانعكاس لحماية عينيك أثناء جلسات العمل المتأخرة ليلًا. </para>
+<para
+>يمكنك تشغيل العكس باستخدام خانة الاختيار <guilabel
+>اعكس</guilabel
+> و<guibutton
+>اضبط الاختصارات...</guibutton
+> لهذا الإجراء. </para>
+</sect3>
+
+<sect3 id="access-shake-pointer">
+<title
+><guilabel
+>هُزّ المؤشر</guilabel
+></title>
+
+<para
+>في بيئة سطح المكتب بلازما، تعد ميزة <guilabel
+>هز المؤشر</guilabel
+> (والتي تُسمى عامية غالبًا "الهز للعثور") ميزة إتاحة وإنتاجية صُممت لحل مشكلة "المؤشر المفقود". </para>
+<para
+>إذا كنت تستخدم إعدادًا متعدد الشاشات، أو شاشة ذات دقة فائقة العلو، أو ببساطة لديك خلفية مظلمة، فمن السهل جدًا فقدان أثر مكان مؤشر الفأرة. الغرض من هذه الميزة هو توفير تلميح مرئي فوري لمساعدتك في تحديد موقعه. </para>
+<para
+>عند تفعيل الميزة، يراقب النظام سرعة واتجاه حركات الفأرة. إذا رصد حركة "هز" سريعة ذهابًا وإيابًا: </para>
+<itemizedlist>
+<listitem>
+<para
+>تكبير مؤقت: يزداد حجم المؤشر إلى المقياس الكبير. </para>
+</listitem>
+<listitem>
+<para
+>التركيز المرئي: يجذب هذا التغيير المفاجئ في المقياس الرؤية المحيطية للعين البشرية، مما يكشف على الفور عن إحداثيات المؤشر. </para>
+</listitem>
+<listitem>
+<para
+>إعادة ضبط آلية: بمجرد التوقف عن هز الفأرة، يتقلص المؤشر ليعود إلى حجمه الطبيعي. </para>
+</listitem>
+</itemizedlist>
+<para
+>توجد خيارات عدة في هذا اللوح.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>هزّ المؤشر لإيجاده</guilabel
+></term>
+<listitem>
+<para
+>إذا فُعّل هذا الخيار، ستفعل بلازما تأثير هز المؤشر. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>كبّر</guilabel
+></term>
+<listitem>
+<para
+>يمكنك هنا تحديد مستوى تكبير المؤشر لحجم المؤشر <guilabel
+>العادي</guilabel
+> و<guilabel
+>الكبير</guilabel
+>. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
