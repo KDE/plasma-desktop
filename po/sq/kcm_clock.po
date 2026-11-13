@@ -1,0 +1,156 @@
+# Albanian translation for kdebase-workspace
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the kdebase-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+# SPDX-FileCopyrightText: 2024 Agron Selimaj <as9902613@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebase-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"PO-Revision-Date: 2024-07-24 23:17-0400\n"
+"Last-Translator: Agron Selimaj <as9902613@gmail.com>\n"
+"Language-Team: sq\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2011-05-06 01:47+0000\n"
+"X-Generator: Lokalize 24.05.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "KDE Shqip, Launchpad Contributions: Vilson Gjeci, Agron Selimaj"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde-i18n-sq@kde.org,vilsongjeci@gmail.com"
+
+#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr ""
+
+#: dateandtime.cpp:249
+#, kde-format
+msgid "Permission to change NTP setting denied"
+msgstr ""
+
+#: dateandtime.cpp:261 main.cpp:89
+#, kde-format
+msgid "Unable to set current time"
+msgstr ""
+
+#: dateandtime.cpp:263
+#, kde-format
+msgid "Permission to change date and time setting denied"
+msgstr ""
+
+#: dateandtime.cpp:274
+#, kde-format
+msgid "Unable to set time zone"
+msgstr ""
+
+#: dateandtime.cpp:276
+#, kde-format
+msgid "Permission to change time zone denied"
+msgstr ""
+
+#: main.cpp:101
+#, kde-format
+msgid "Unable to set timezone"
+msgstr ""
+
+#: ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Set date and time &automatically"
+msgctxt "@option"
+msgid "Set date and time automatically"
+msgstr "Cakto datën dhe orën &automatikisht"
+
+#: ui/main.qml:54
+#, kde-format
+msgctxt "@action:button as in set the current time on the machine"
+msgid "Set Time"
+msgstr ""
+
+#: ui/main.qml:68
+#, kde-format
+msgctxt "@action:button as in set the current date on the machine"
+msgid "Set Date"
+msgstr ""
+
+#: ui/main.qml:85
+#, fuzzy, kde-format
+#| msgid "Time Zone"
+msgctxt "@title"
+msgid "Time Zone"
+msgstr "Zona Kohore"
+
+#~ msgid "Date and Time"
+#~ msgstr "Data dhe ora"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr "Këtu mund të ndyshoni ditën, muajin dhe vitin e sistemit."
+
+#~ msgid "&Time server:"
+#~ msgstr "&Serveri i orës:"
+
+#~ msgid "Can not set date."
+#~ msgstr "Data nuk mund të caktohet."
+
+#~ msgid "Error setting new time zone."
+#~ msgstr "Gabim në vendosjen e zonës së re kohore."
+
+#~ msgid "Time zone Error"
+#~ msgstr "Gabim në zonën kohore"
+
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr ""
+#~ "Për të ndyshuar zonën lokale kohore, zgjedhni zonën tuaj nga lista këtu "
+#~ "poshtë."
+
+#~ msgid "Current local time zone:"
+#~ msgstr "Zona Kohore e tashme lokale:"
+
+#~ msgid "Search…"
+#~ msgstr "Kërko..."
+
+#~ msgctxt "Time zone"
+#~ msgid "Region"
+#~ msgstr "Rajoni"
+
+#~ msgid "Comment"
+#~ msgstr "Komento"
+
+#~ msgid "KDE Clock Control Module"
+#~ msgstr "Modul i Kontrollit të Orës KDE"
+
+#~ msgid "(c) 1996 - 2001 Luca Montecchiani"
+#~ msgstr "(c) 1996 - 2001 Luca Montecchiani"
+
+#~ msgid "Luca Montecchiani"
+#~ msgstr "Luca Montecchiani"
+
+#~ msgid "Original author"
+#~ msgstr "Autori origjinal"
+
+#~ msgid "Paul Campbell"
+#~ msgstr "Paul Campbell"
+
+#~ msgid "Current Maintainer"
+#~ msgstr "Mirëmbajtësi i Tanishëm"
+
+#~ msgid "Benjamin Meyer"
+#~ msgstr "Benjamin Meyer"
+
+#~ msgid "Added NTP support"
+#~ msgstr "U shtua mbështetja për NTP"
+
+#~ msgid "kcmclock"
+#~ msgstr "kcmclock"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-02 00:56+0000\n"
+"POT-Creation-Date: 2026-11-12 22:03+0000\n"
 "PO-Revision-Date: 2026-11-03 20:42+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -112,38 +112,38 @@ msgctxt "@title:group for configuration dialog page"
 msgid "Keyboard Shortcuts"
 msgstr "鍵盤快捷鍵"
 
-#: contents/configuration/AppletConfiguration.qml:337
+#: contents/configuration/AppletConfiguration.qml:356
 #, kde-format
 msgctxt "@title:group for About dialog page"
 msgid "About"
 msgstr "關於"
 
-#: contents/configuration/AppletConfiguration.qml:385
+#: contents/configuration/AppletConfiguration.qml:404
 #, kde-format
 msgctxt "@title:window dialog title"
 msgid "Apply Settings"
 msgstr "套用設定"
 
-#: contents/configuration/AppletConfiguration.qml:386
+#: contents/configuration/AppletConfiguration.qml:405
 #, kde-format
 msgctxt "@label dialog body"
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
 msgstr "目前頁面有尚未儲存的變更。您要套用還是要捨棄這些變更？"
 
-#: contents/configuration/AppletConfiguration.qml:418
+#: contents/configuration/AppletConfiguration.qml:437
 #, kde-format
 msgctxt "@action:button"
 msgid "OK"
 msgstr "確定"
 
-#: contents/configuration/AppletConfiguration.qml:425
+#: contents/configuration/AppletConfiguration.qml:444
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "套用"
 
-#: contents/configuration/AppletConfiguration.qml:431
+#: contents/configuration/AppletConfiguration.qml:450
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -235,37 +235,58 @@ msgctxt "@action:button"
 msgid "Add Action"
 msgstr "新增動作"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:76
+#: contents/configuration/ConfigurationContainmentAppearance.qml:66
+#: contents/configuration/ConfigurationContainmentLayout.qml:88
 #, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "佈局變更已被系統管理員限制"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:91
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Layout:"
-msgstr "佈局："
-
-#: contents/configuration/ConfigurationContainmentAppearance.qml:114
+#: contents/configuration/ConfigurationContainmentAppearance.qml:80
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Wallpaper type:"
 msgstr "桌布類型："
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:153
+#: contents/configuration/ConfigurationContainmentAppearance.qml:118
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Plugins…"
 msgstr "取得新的外掛程式…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:243
+#: contents/configuration/ConfigurationContainmentLayout.qml:106
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Remove Desktop"
+msgctxt "@label"
+msgid "Desktop:"
+msgstr "移除桌面"
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:107
+#, kde-format
+msgctxt "@info"
+msgid "Icons for items in the selected location appear on the desktop"
+msgstr ""
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:110
+#, kde-format
+msgctxt "@option:check"
+msgid "Show files and folders"
+msgstr ""
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:118
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Layout:"
+msgstr "佈局："
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:194
 #, kde-format
 msgctxt "@info"
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "佈局的變動必須在其他變動做出前套用"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:247
+#: contents/configuration/ConfigurationContainmentLayout.qml:198
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Now"
@@ -290,6 +311,14 @@ msgid "Wallpaper"
 msgstr "桌布"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
+#, fuzzy, kde-format
+#| msgctxt "@label:listbox"
+#| msgid "Layout:"
+msgctxt "@title:group for configuration dialog page"
+msgid "Layout"
+msgstr "佈局："
+
+#: contents/configuration/ContainmentConfiguration.qml:36
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Mouse Actions"
@@ -828,13 +857,13 @@ msgid "Uninstall (%1 Widget)"
 msgid_plural "Uninstall (%1 Widgets)"
 msgstr[0] "解除安裝（%1 個元件）"
 
-#: contents/explorer/WidgetExplorer.qml:395
+#: contents/explorer/WidgetExplorer.qml:379
 #, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets matched the search terms"
 msgstr "沒有元件符合搜尋字詞"
 
-#: contents/explorer/WidgetExplorer.qml:395
+#: contents/explorer/WidgetExplorer.qml:379
 #, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets available"

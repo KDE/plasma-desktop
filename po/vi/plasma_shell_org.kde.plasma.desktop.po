@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-02 00:56+0000\n"
+"POT-Creation-Date: 2026-11-12 22:03+0000\n"
 "PO-Revision-Date: 2023-01-08 16:18+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -127,21 +127,21 @@ msgctxt "@title:group for configuration dialog page"
 msgid "Keyboard Shortcuts"
 msgstr "Phím tắt"
 
-#: contents/configuration/AppletConfiguration.qml:337
+#: contents/configuration/AppletConfiguration.qml:356
 #, fuzzy, kde-format
 #| msgid "About"
 msgctxt "@title:group for About dialog page"
 msgid "About"
 msgstr "Thông tin"
 
-#: contents/configuration/AppletConfiguration.qml:385
+#: contents/configuration/AppletConfiguration.qml:404
 #, fuzzy, kde-format
 #| msgid "Apply Settings"
 msgctxt "@title:window dialog title"
 msgid "Apply Settings"
 msgstr "Áp dụng thiết lập"
 
-#: contents/configuration/AppletConfiguration.qml:386
+#: contents/configuration/AppletConfiguration.qml:405
 #, fuzzy, kde-format
 #| msgid ""
 #| "The settings of the current module have changed. Do you want to apply the "
@@ -153,21 +153,21 @@ msgstr ""
 "Thiết lập cho khối hiện tại đã thay đổi. Bạn muốn áp dụng hay loại bỏ các "
 "thay đổi?"
 
-#: contents/configuration/AppletConfiguration.qml:418
+#: contents/configuration/AppletConfiguration.qml:437
 #, fuzzy, kde-format
 #| msgid "OK"
 msgctxt "@action:button"
 msgid "OK"
 msgstr "OK"
 
-#: contents/configuration/AppletConfiguration.qml:425
+#: contents/configuration/AppletConfiguration.qml:444
 #, fuzzy, kde-format
 #| msgid "Apply"
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Áp dụng"
 
-#: contents/configuration/AppletConfiguration.qml:431
+#: contents/configuration/AppletConfiguration.qml:450
 #, fuzzy, kde-format
 #| msgid "Cancel"
 msgctxt "@action:button"
@@ -273,35 +273,55 @@ msgctxt "@action:button"
 msgid "Add Action"
 msgstr "Thêm hành động"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:76
+#: contents/configuration/ConfigurationContainmentAppearance.qml:66
+#: contents/configuration/ConfigurationContainmentLayout.qml:88
 #, fuzzy, kde-format
 #| msgid "Layout changes have been restricted by the system administrator"
 msgctxt "@info:status inlinemessage"
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "Các thay đổi về bố cục đã bị giới hạn bởi quản trị viên hệ thống"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:91
-#, fuzzy, kde-format
-#| msgid "Layout:"
-msgctxt "@label:listbox"
-msgid "Layout:"
-msgstr "Bố cục:"
-
-#: contents/configuration/ConfigurationContainmentAppearance.qml:114
+#: contents/configuration/ConfigurationContainmentAppearance.qml:80
 #, fuzzy, kde-format
 #| msgid "Wallpaper type:"
 msgctxt "@label:listbox"
 msgid "Wallpaper type:"
 msgstr "Kiểu phông nền:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:153
+#: contents/configuration/ConfigurationContainmentAppearance.qml:118
 #, fuzzy, kde-format
 #| msgid "Get New Plugins…"
 msgctxt "@action:button"
 msgid "Get New Plugins…"
 msgstr "Lấy phần cài cắm mới…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:243
+#: contents/configuration/ConfigurationContainmentLayout.qml:106
+#, fuzzy, kde-format
+#| msgid "Remove Panel"
+msgctxt "@label"
+msgid "Desktop:"
+msgstr "Xoá bỏ bảng"
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:107
+#, kde-format
+msgctxt "@info"
+msgid "Icons for items in the selected location appear on the desktop"
+msgstr ""
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:110
+#, kde-format
+msgctxt "@option:check"
+msgid "Show files and folders"
+msgstr ""
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:118
+#, fuzzy, kde-format
+#| msgid "Layout:"
+msgctxt "@label:listbox"
+msgid "Layout:"
+msgstr "Bố cục:"
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:194
 #, fuzzy, kde-format
 #| msgid "Layout changes must be applied before other changes can be made"
 msgctxt "@info"
@@ -309,7 +329,7 @@ msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
 "Thay đổi về bố cục phải được áp dụng trước khi tạo ra các thay đổi khác"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:247
+#: contents/configuration/ConfigurationContainmentLayout.qml:198
 #, fuzzy, kde-format
 #| msgid "Apply Now"
 msgctxt "@action:button"
@@ -337,6 +357,13 @@ msgid "Wallpaper"
 msgstr "Phông nền"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
+#, fuzzy, kde-format
+#| msgid "Layout:"
+msgctxt "@title:group for configuration dialog page"
+msgid "Layout"
+msgstr "Bố cục:"
+
+#: contents/configuration/ContainmentConfiguration.qml:36
 #, fuzzy, kde-format
 #| msgid "Mouse Actions"
 msgctxt "@title:group for configuration dialog page"
@@ -944,14 +971,14 @@ msgid "Uninstall (%1 Widget)"
 msgid_plural "Uninstall (%1 Widgets)"
 msgstr[0] "Gỡ cài đặt phụ kiện"
 
-#: contents/explorer/WidgetExplorer.qml:395
+#: contents/explorer/WidgetExplorer.qml:379
 #, fuzzy, kde-format
 #| msgid "No widgets matched the search terms"
 msgctxt "@info placeholdermessage"
 msgid "No widgets matched the search terms"
 msgstr "Không có phụ kiện nào khớp với các từ khoá tìm kiếm"
 
-#: contents/explorer/WidgetExplorer.qml:395
+#: contents/explorer/WidgetExplorer.qml:379
 #, fuzzy, kde-format
 #| msgid "No widgets available"
 msgctxt "@info placeholdermessage"

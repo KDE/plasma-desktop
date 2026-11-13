@@ -1,0 +1,222 @@
+# Translation of kcmclock to Korean.
+# Copyright (C) 2001, 2007 This_file_is_part_of_KDE
+# Yu-Chan, Park <super@susekorea.net>, 2001.
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2012, 2013, 2015, 2019, 2021, 2024 Shinjo Park <kde@peremen.name>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkclock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"PO-Revision-Date: 2024-02-09 19:23+0100\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 23.08.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "박신조"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde@peremen.name"
+
+#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr "NTP 설정을 변경할 수 없음"
+
+#: dateandtime.cpp:249
+#, fuzzy, kde-format
+#| msgid "Unable to change NTP settings"
+msgid "Permission to change NTP setting denied"
+msgstr "NTP 설정을 변경할 수 없음"
+
+#: dateandtime.cpp:261 main.cpp:89
+#, kde-format
+msgid "Unable to set current time"
+msgstr "현재 시간을 설정할 수 없음"
+
+#: dateandtime.cpp:263
+#, kde-format
+msgid "Permission to change date and time setting denied"
+msgstr ""
+
+#: dateandtime.cpp:274
+#, fuzzy, kde-format
+#| msgid "Unable to set timezone"
+msgid "Unable to set time zone"
+msgstr "시간대를 설정할 수 없음"
+
+#: dateandtime.cpp:276
+#, kde-format
+msgid "Permission to change time zone denied"
+msgstr ""
+
+#: main.cpp:101
+#, kde-format
+msgid "Unable to set timezone"
+msgstr "시간대를 설정할 수 없음"
+
+#: ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Set date and time &automatically"
+msgctxt "@option"
+msgid "Set date and time automatically"
+msgstr "자동으로 시간과 날짜 설정하기(&A)"
+
+#: ui/main.qml:54
+#, kde-format
+msgctxt "@action:button as in set the current time on the machine"
+msgid "Set Time"
+msgstr ""
+
+#: ui/main.qml:68
+#, kde-format
+msgctxt "@action:button as in set the current date on the machine"
+msgid "Set Date"
+msgstr ""
+
+#: ui/main.qml:85
+#, fuzzy, kde-format
+#| msgid "Time Zone"
+msgctxt "@title"
+msgid "Time Zone"
+msgstr "시간대"
+
+#~ msgid "Date and Time"
+#~ msgstr "날짜와 시간"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr "이 곳에서 시스템의 년, 월, 일을 설정할 수 있습니다."
+
+#~ msgid ""
+#~ "Here you can change the system time. Click into the hours, minutes or "
+#~ "seconds field to change the relevant value, either using the up and down "
+#~ "buttons to the right or by entering a new value."
+#~ msgstr ""
+#~ "여기에서 시스템 시간을 변경할 수 있습니다. 시, 분, 초 필드를 눌러서 값을 "
+#~ "입력하거나, 위나 아래 단추를 클릭해서 값을 변경할 수 있습니다."
+
+#~ msgid ""
+#~ "<h1>Date & Time</h1> This system settings module can be used to set the "
+#~ "system date and time. As these settings do not only affect you as a user, "
+#~ "but rather the whole system, you can only change these settings when you "
+#~ "start the System Settings as root. If you do not have the root password, "
+#~ "but feel the system time should be corrected, please contact your system "
+#~ "administrator."
+#~ msgstr ""
+#~ "<h1>날짜와 시간</h1> 이 시스템 설정 모듈에서는 시스템의 날짜와 시간을 설정"
+#~ "합니다. 이 설정은 한 사용자 뿐만 아니라 전체 시스템에 영향을 미치기 때문"
+#~ "에 관리자(root) 권한으로 시스템 설정을 실행시켜야 합니다. 관리자 암호를 알"
+#~ "지 못하지만, 시스템 시간을 수정해야 한다면 시스템 관리자에게 문의하십시오."
+
+#~ msgid "&Time server:"
+#~ msgstr "시간 서버(&T):"
+
+#~ msgid ""
+#~ "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
+#~ "enable automatic updating of date and time."
+#~ msgstr ""
+#~ "NTP 유틸리티가 없습니다. 날짜 및 시간 자동 설정을 사용하려면 'ntpdate'나 "
+#~ "'rdate' 패키지를 설치하십시오."
+
+#~ msgid ""
+#~ "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        "
+#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#~ "pool.ntp.org"
+#~ msgstr ""
+#~ "공용 시간 서버(pool.ntp.org),        asia.pool.ntp.org,        europe."
+#~ "pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp."
+#~ "org"
+
+#~ msgid "Unable to contact time server: %1."
+#~ msgstr "시간 서버에 연결할 수 없습니다: %1."
+
+#~ msgid "Can not set date."
+#~ msgstr "날짜를 설정할 수 없습니다."
+
+#~ msgid "Error setting new time zone."
+#~ msgstr "새 시간대를 설정하는 중 오류가 발생했습니다."
+
+#~ msgid "Time zone Error"
+#~ msgstr "시간대 오류"
+
+#~ msgid "Unable to authenticate/execute the action: %1, %2"
+#~ msgstr "동작을 인증/실행할 수 없음: %1, %2"
+
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr "지역 시간대를 변경하려면 아래 목록에서 지역을 선택하십시오."
+
+#~ msgid "Current local time zone:"
+#~ msgstr "현재 지역 시간대:"
+
+#~ msgid "Search…"
+#~ msgstr "검색…"
+
+#~ msgctxt "%1 is name of time zone"
+#~ msgid "Current local time zone: %1"
+#~ msgstr "현재 지역 시간대: %1"
+
+#~ msgctxt "%1 is name of time zone, %2 is its abbreviation"
+#~ msgid "Current local time zone: %1 (%2)"
+#~ msgstr "현재 지역 시간대: %1 (%2)"
+
+#~ msgctxt "Define an area in the time zone, like a town area"
+#~ msgid "Area"
+#~ msgstr "영역"
+
+#~ msgctxt "Time zone"
+#~ msgid "Region"
+#~ msgstr "지역"
+
+#~ msgid "Comment"
+#~ msgstr "설명"
+
+#~ msgid "KDE Clock Control Module"
+#~ msgstr "KDE 시계 제어 모듈"
+
+#~ msgid "(c) 1996 - 2001 Luca Montecchiani"
+#~ msgstr "(c) 1996 - 2001 Luca Montecchiani"
+
+#~ msgid "Luca Montecchiani"
+#~ msgstr "Luca Montecchiani"
+
+#~ msgid "Original author"
+#~ msgstr "원 작성자"
+
+#~ msgid "Paul Campbell"
+#~ msgstr "Paul Campbell"
+
+#~ msgid "Current Maintainer"
+#~ msgstr "현재 관리자"
+
+#~ msgid "Benjamin Meyer"
+#~ msgstr "Benjamin Meyer"
+
+#~ msgid "Added NTP support"
+#~ msgstr "NTP 지원 추가"
+
+#~ msgid ""
+#~ "<h1>Date & Time</h1> This control module can be used to set the system "
+#~ "date and time. As these settings do not only affect you as a user, but "
+#~ "rather the whole system, you can only change these settings when you "
+#~ "start the System Settings as root. If you do not have the root password, "
+#~ "but feel the system time should be corrected, please contact your system "
+#~ "administrator."
+#~ msgstr ""
+#~ "<h1>날짜와 시간</h1> 이 시스템 설정 모듈에서는 시스템의 날짜와 시간을 설정"
+#~ "합니다. 이 설정은 한 사용자 뿐만 아니라 전체 시스템에 영향을 미치기 때문"
+#~ "에 관리자(root) 권한으로 시스템 설정을 실행시켜야 합니다. 관리자 암호를 알"
+#~ "지 못하지만, 시스템 시간을 수정해야 한다면 시스템 관리자에게 문의하십시오."
+
+#~ msgid "kcmclock"
+#~ msgstr "kcmclock"

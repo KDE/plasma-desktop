@@ -1,0 +1,248 @@
+# Finnish messages for kcmkclock.
+# Copyright © 2003, 2004, 2005, 2007, 2008, 2010, 2011 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kde-workspace package.
+# Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2003.
+# Tapio Kautto <eleknader@phnet.fi>, 2004.
+# Ilpo Kantonen <ilpo@iki.fi>, 2005.
+# Mikko Piippo <piippo@cc.helsinki.fi>, 2007.
+# Elias Julkunen <elias.julkunen@gmail.com>, 2008.
+# Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
+# Tommi Nieminen <translator@legisign.org>, 2011, 2019, 2021, 2023.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2013, 2014, 2015.
+#
+# KDE Finnish translation sprint participants:
+# Author: Artnay
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkclock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"PO-Revision-Date: 2023-12-11 18:21+0200\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+"Teemu Rytilahti, Tapio Kautto, Ilpo Kantonen, Mikko Piippo, Elias Julkunen, "
+"Jorma Karvonen, Tommi Nieminen, Lasse Liehu, Jiri Grönroos"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"teemu.rytilahti@kde-fi.org, eleknader@phnet.fi, ilpo@iki.fi, piippo@cc."
+"helsinki.fi, elias.julkunen@gmail.com, karvonen.jorma@gmail.com, "
+"translator@legisign.org, lasse.liehu@gmail.com, jiri.gronroos+kde@iki.fi"
+
+#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr "NTP-asetusten muuttaminen epäonnistui"
+
+#: dateandtime.cpp:249
+#, fuzzy, kde-format
+#| msgid "Unable to change NTP settings"
+msgid "Permission to change NTP setting denied"
+msgstr "NTP-asetusten muuttaminen epäonnistui"
+
+#: dateandtime.cpp:261 main.cpp:89
+#, kde-format
+msgid "Unable to set current time"
+msgstr "Nykyisen ajan asettaminen epäonnistui"
+
+#: dateandtime.cpp:263
+#, kde-format
+msgid "Permission to change date and time setting denied"
+msgstr ""
+
+#: dateandtime.cpp:274
+#, fuzzy, kde-format
+#| msgid "Unable to set timezone"
+msgid "Unable to set time zone"
+msgstr "Aikavyöhykkeen asettaminen epäonnistui"
+
+#: dateandtime.cpp:276
+#, kde-format
+msgid "Permission to change time zone denied"
+msgstr ""
+
+#: main.cpp:101
+#, kde-format
+msgid "Unable to set timezone"
+msgstr "Aikavyöhykkeen asettaminen epäonnistui"
+
+#: ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Set date and time &automatically"
+msgctxt "@option"
+msgid "Set date and time automatically"
+msgstr "Aseta kellonaika ja päiväys &automaattisesti"
+
+#: ui/main.qml:54
+#, kde-format
+msgctxt "@action:button as in set the current time on the machine"
+msgid "Set Time"
+msgstr ""
+
+#: ui/main.qml:68
+#, kde-format
+msgctxt "@action:button as in set the current date on the machine"
+msgid "Set Date"
+msgstr ""
+
+#: ui/main.qml:85
+#, fuzzy, kde-format
+#| msgid "Time Zone"
+msgctxt "@title"
+msgid "Time Zone"
+msgstr "Aikavyöhyke"
+
+#~ msgid "Date and Time"
+#~ msgstr "Aika ja päiväys"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr "Tässä kohdassa voit vaihtaa järjestelmän päiväystä."
+
+#~ msgid ""
+#~ "Here you can change the system time. Click into the hours, minutes or "
+#~ "seconds field to change the relevant value, either using the up and down "
+#~ "buttons to the right or by entering a new value."
+#~ msgstr ""
+#~ "Tässä voit vaihtaa järjestelmän ajan. Napsauta tuntien, minuuttien ja "
+#~ "sekuntien kenttiä muuttaaksesi niiden arvoja. Käytä joko ylös/alas -"
+#~ "painikkeita tai kirjoita oikea arvo suoraan."
+
+#~ msgid ""
+#~ "<h1>Date & Time</h1> This system settings module can be used to set the "
+#~ "system date and time. As these settings do not only affect you as a user, "
+#~ "but rather the whole system, you can only change these settings when you "
+#~ "start the System Settings as root. If you do not have the root password, "
+#~ "but feel the system time should be corrected, please contact your system "
+#~ "administrator."
+#~ msgstr ""
+#~ "<h1>Päivä ja Aika</h1>Tässä määritellään järjestelmän päivämäärä ja aika. "
+#~ "Koska asetukset vaikuttavat koko järjestelmään, niitä voidaan muuttaa "
+#~ "vain pääkäyttäjän tunnuksin. Jos et tiedä pääkäyttäjän tunnusta, mutta "
+#~ "järjestelmän aikaa pitäisi muuttaa, ota yhteyttä järjestelmäsi "
+#~ "ylläpitäjään."
+
+#~ msgid "&Time server:"
+#~ msgstr "A&ikapalvelin:"
+
+#~ msgid ""
+#~ "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
+#~ "enable automatic updating of date and time."
+#~ msgstr ""
+#~ "NTP-työkalua ei löytynyt. Asenna ntpdate- tai rdate-ohjelma, jotta "
+#~ "päiväys ja kellonaika voidaan päivittää automaattisesti."
+
+#~ msgid ""
+#~ "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        "
+#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#~ "pool.ntp.org"
+#~ msgstr ""
+#~ "Julkinen aikapalvelin (pool.ntp.org),        asia.pool.ntp.org,        "
+#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#~ "pool.ntp.org"
+
+#~ msgid "Unable to contact time server: %1."
+#~ msgstr "Ei saatu yhteyttä aikapalvelimeen: %1."
+
+#~ msgid "Can not set date."
+#~ msgstr "Päivämäärää ei voida muuttaa."
+
+#~ msgid "Error setting new time zone."
+#~ msgstr "Uuden aikavyöhykkeen asettamisessa tapahtui virhe."
+
+#~ msgid "Time zone Error"
+#~ msgstr "Aikavyöhykevirhe"
+
+#~ msgid "Unable to authenticate/execute the action: %1, %2"
+#~ msgstr "Ei voitu todentaa/suorittaa toimintoa: %1, %2"
+
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr ""
+#~ "Muuta paikallinen aikavyöhyke valitsemalla alueesi alla olevasta "
+#~ "luettelosta."
+
+#~ msgid "Current local time zone:"
+#~ msgstr "Nykyinen aikavyöhyke:"
+
+#~ msgid "Search…"
+#~ msgstr "Etsi…"
+
+#~ msgctxt "%1 is name of time zone"
+#~ msgid "Current local time zone: %1"
+#~ msgstr "Nykyinen aikavyöhyke: %1"
+
+#~ msgctxt "%1 is name of time zone, %2 is its abbreviation"
+#~ msgid "Current local time zone: %1 (%2)"
+#~ msgstr "Nykyinen aikavyöhyke: %1 (%2)"
+
+#~ msgctxt "Define an area in the time zone, like a town area"
+#~ msgid "Area"
+#~ msgstr "Alue"
+
+#~ msgctxt "Time zone"
+#~ msgid "Region"
+#~ msgstr "Vyöhyke"
+
+#~ msgid "Comment"
+#~ msgstr "Huomautus"
+
+# pmap: =/elat=KDE:n kelloasetuksista/
+#~ msgid "KDE Clock Control Module"
+#~ msgstr "KDE:n kelloasetukset"
+
+#~ msgid "(c) 1996 - 2001 Luca Montecchiani"
+#~ msgstr "© 1996–2001 Luca Montecchiani"
+
+#~ msgid "Luca Montecchiani"
+#~ msgstr "Luca Montecchiani"
+
+#~ msgid "Original author"
+#~ msgstr "Alkuperäinen tekijä"
+
+#~ msgid "Paul Campbell"
+#~ msgstr "Paul Campbell"
+
+#~ msgid "Current Maintainer"
+#~ msgstr "Nykyinen ylläpitäjä"
+
+#~ msgid "Benjamin Meyer"
+#~ msgstr "Benjamin Meyer"
+
+#~ msgid "Added NTP support"
+#~ msgstr "Lisäsi NTP-tuen"
+
+#~ msgid ""
+#~ "<h1>Date & Time</h1> This control module can be used to set the system "
+#~ "date and time. As these settings do not only affect you as a user, but "
+#~ "rather the whole system, you can only change these settings when you "
+#~ "start the System Settings as root. If you do not have the root password, "
+#~ "but feel the system time should be corrected, please contact your system "
+#~ "administrator."
+#~ msgstr ""
+#~ "<h1>Päivä ja Aika</h1>Tässä määritellään järjestelmän päivämäärä ja aika. "
+#~ "Koska asetukset vaikuttavat koko järjestelmään, niitä voidaan muuttaa "
+#~ "vain pääkäyttäjän tunnuksin. Jos et tiedä pääkäyttäjän tunnusta, mutta "
+#~ "järjestelmän aikaa pitäisi muuttaa, ota yhteyttä järjestelmäsi "
+#~ "ylläpitäjään."
+
+#~ msgid "kcmclock"
+#~ msgstr "kcmclock"
+
+#~ msgid "Failed to set system date/time/time zone."
+#~ msgstr ""
+#~ "Järjestelmän päivämäärän/ajan/aikavyöhykkeen asettaminen epäonnistui."
+
+#~ msgid "Date/Time Error"
+#~ msgstr "Päivämäärä-  tai aikavirhe"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-02 00:56+0000\n"
+"POT-Creation-Date: 2026-11-12 22:03+0000\n"
 "PO-Revision-Date: 2026-01-21 14:35+0000\n"
 "Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
 "Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
@@ -114,19 +114,19 @@ msgctxt "@title:group for configuration dialog page"
 msgid "Keyboard Shortcuts"
 msgstr "Aicearraí Méarchláir"
 
-#: contents/configuration/AppletConfiguration.qml:337
+#: contents/configuration/AppletConfiguration.qml:356
 #, kde-format
 msgctxt "@title:group for About dialog page"
 msgid "About"
 msgstr "Maidir"
 
-#: contents/configuration/AppletConfiguration.qml:385
+#: contents/configuration/AppletConfiguration.qml:404
 #, kde-format
 msgctxt "@title:window dialog title"
 msgid "Apply Settings"
 msgstr "Cuir Socruithe i bhFeidhm"
 
-#: contents/configuration/AppletConfiguration.qml:386
+#: contents/configuration/AppletConfiguration.qml:405
 #, kde-format
 msgctxt "@label dialog body"
 msgid ""
@@ -135,19 +135,19 @@ msgstr ""
 "Tá athruithe neamhshábháilte ar an leathanach reatha. An bhfuil tú ag "
 "iarraidh na hathruithe a chur i bhfeidhm nó iad a chaitheamh amach?"
 
-#: contents/configuration/AppletConfiguration.qml:418
+#: contents/configuration/AppletConfiguration.qml:437
 #, kde-format
 msgctxt "@action:button"
 msgid "OK"
 msgstr "Ceart go leor"
 
-#: contents/configuration/AppletConfiguration.qml:425
+#: contents/configuration/AppletConfiguration.qml:444
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Cuir i bhfeidhm"
 
-#: contents/configuration/AppletConfiguration.qml:431
+#: contents/configuration/AppletConfiguration.qml:450
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -239,32 +239,53 @@ msgctxt "@action:button"
 msgid "Add Action"
 msgstr "Cuir Gníomh Leis"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:76
+#: contents/configuration/ConfigurationContainmentAppearance.qml:66
+#: contents/configuration/ConfigurationContainmentLayout.qml:88
 #, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Layout changes have been restricted by the system administrator"
 msgstr ""
 "Tá srian curtha ag riarthóir an chórais ar athruithe ar an leagan amach"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:91
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Layout:"
-msgstr "Leagan Amach:"
-
-#: contents/configuration/ConfigurationContainmentAppearance.qml:114
+#: contents/configuration/ConfigurationContainmentAppearance.qml:80
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Wallpaper type:"
 msgstr "Cineál cúlbhrat:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:153
+#: contents/configuration/ConfigurationContainmentAppearance.qml:118
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Plugins…"
 msgstr "Faigh Breiseáin Nua…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:243
+#: contents/configuration/ConfigurationContainmentLayout.qml:106
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Remove Desktop"
+msgctxt "@label"
+msgid "Desktop:"
+msgstr "Bain an Deasc"
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:107
+#, kde-format
+msgctxt "@info"
+msgid "Icons for items in the selected location appear on the desktop"
+msgstr ""
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:110
+#, kde-format
+msgctxt "@option:check"
+msgid "Show files and folders"
+msgstr ""
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:118
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Layout:"
+msgstr "Leagan Amach:"
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:194
 #, kde-format
 msgctxt "@info"
 msgid "Layout changes must be applied before other changes can be made"
@@ -272,7 +293,7 @@ msgstr ""
 "Ní mór athruithe leagan amach a chur i bhfeidhm sula bhféadfar athruithe "
 "eile a dhéanamh"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:247
+#: contents/configuration/ConfigurationContainmentLayout.qml:198
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Now"
@@ -297,6 +318,14 @@ msgid "Wallpaper"
 msgstr "Cúlbhrat"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
+#, fuzzy, kde-format
+#| msgctxt "@label:listbox"
+#| msgid "Layout:"
+msgctxt "@title:group for configuration dialog page"
+msgid "Layout"
+msgstr "Leagan Amach:"
+
+#: contents/configuration/ContainmentConfiguration.qml:36
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Mouse Actions"
@@ -850,13 +879,13 @@ msgstr[2] "Díshuiteáil (%1 Giuirléidí)"
 msgstr[3] "Díshuiteáil (%1 Giuirléidí)"
 msgstr[4] "Díshuiteáil (%1 Giuirléidí)"
 
-#: contents/explorer/WidgetExplorer.qml:395
+#: contents/explorer/WidgetExplorer.qml:379
 #, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets matched the search terms"
 msgstr "Níor tháinig aon ghiuirléidí leis na téarmaí cuardaigh"
 
-#: contents/explorer/WidgetExplorer.qml:395
+#: contents/explorer/WidgetExplorer.qml:379
 #, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets available"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 15:19+0000\n"
+"POT-Creation-Date: 2026-11-12 21:38+0000\n"
 "PO-Revision-Date: 2026-10-15 12:55+0300\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -23,19 +23,19 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
-#: package/contents/config/config.qml:17
+#: package/contents/config/config.qml:19
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Location"
 msgstr "Vieta"
 
-#: package/contents/config/config.qml:24
+#: package/contents/config/config.qml:26
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Icons"
 msgstr "Ikonas"
 
-#: package/contents/config/config.qml:31
+#: package/contents/config/config.qml:33
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Filter"
@@ -377,67 +377,67 @@ msgctxt "@title:group form label for radiobutton group"
 msgid "Show:"
 msgstr "Rādīt:"
 
-#: package/contents/ui/ConfigLocation.qml:83
+#: package/contents/ui/ConfigLocation.qml:86
 #, kde-format
 msgctxt "@option:radio"
 msgid "Desktop folder"
 msgstr "Darbvirsmas mapi"
 
-#: package/contents/ui/ConfigLocation.qml:91
+#: package/contents/ui/ConfigLocation.qml:96
 #, kde-format
 msgctxt "@option:radio"
 msgid "Files linked to the current activity"
 msgstr "Datnes, kas ir saistītas ar pašreizējo aktivitāti"
 
-#: package/contents/ui/ConfigLocation.qml:100
+#: package/contents/ui/ConfigLocation.qml:107
 #, kde-format
 msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
 msgstr "Vietu paneļa vienums:"
 
-#: package/contents/ui/ConfigLocation.qml:137
+#: package/contents/ui/ConfigLocation.qml:146
 #, kde-format
 msgctxt "@option:radio also label for text field"
 msgid "Custom location:"
 msgstr "Pielāgota vieta:"
 
-#: package/contents/ui/ConfigLocation.qml:145
+#: package/contents/ui/ConfigLocation.qml:154
 #, kde-format
 msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
 msgstr "Ierakstiet ceļu vai URL…"
 
-#: package/contents/ui/ConfigLocation.qml:188
+#: package/contents/ui/ConfigLocation.qml:194
 #, kde-format
 msgctxt "@label:textbox custom widget title"
 msgid "Title:"
 msgstr "Nosaukums:"
 
-#: package/contents/ui/ConfigLocation.qml:197
+#: package/contents/ui/ConfigLocation.qml:205
 #, kde-format
 msgctxt "@item:inlistbox no title"
 msgid "None"
 msgstr "Nekas"
 
-#: package/contents/ui/ConfigLocation.qml:198
+#: package/contents/ui/ConfigLocation.qml:206
 #, kde-format
 msgctxt "@item:inlistbox default title"
 msgid "Default"
 msgstr "Noklusējums"
 
-#: package/contents/ui/ConfigLocation.qml:199
+#: package/contents/ui/ConfigLocation.qml:207
 #, kde-format
 msgctxt "@item:inlistbox full path as title"
 msgid "Full path"
 msgstr "Pilns ceļš"
 
-#: package/contents/ui/ConfigLocation.qml:200
+#: package/contents/ui/ConfigLocation.qml:208
 #, kde-format
 msgctxt "@item:inlistbox title from text input field"
 msgid "Custom"
 msgstr "Pielāgots"
 
-#: package/contents/ui/ConfigLocation.qml:209
+#: package/contents/ui/ConfigLocation.qml:217
 #, kde-format
 msgctxt "@info:placeholder custom window title"
 msgid "Enter title…"

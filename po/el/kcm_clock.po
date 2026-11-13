@@ -1,0 +1,253 @@
+# translation of kcmkclock.po to greek
+# translation of kcmkclock.po to
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
+#
+# Dimitris Kamenopoulos <d.kamenopoulos@mail.ntua.gr>, 2000-2002.
+# Stergios Dramis <sdramis@egnatia.ee.auth.gr>, 2003-2004.
+# Spiros Georgaras <sngeorgaras@otenet.gr>, 2005, 2007.
+# Toussis Manolis <koppermind@yahoo.com>, 2005.
+# Spiros Georgaras <sng@hellug.gr>, 2007.
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2008.
+# Petros Vidalis <p_vidalis@hotmail.com>, 2009.
+# Petros <pvidalis@gmail.com>, 2010.
+# Dimitrios Glentadakis <dglent@gmail.com>, 2011.
+# Stelios <sstavra@gmail.com>, 2013.
+# Dimitris Kardarakos <dimkard@gmail.com>, 2015.
+# Dimitrys Meliates <demetresmeliates+i18n@gmail.com>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkclock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"PO-Revision-Date: 2024-09-04 14:30+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.08.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Στέργιος Δράμης,Δημήτρης Καμενόπουλος,Toύσης Μανώλης,Σπύρος Γεωργαράς"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"sdramis@egnatia.ee.auth.gr,d.kamenopoulos@mail.ntua.gr,manolis@koppermind."
+"homelinux.org,sngeorgaras@otenet.gr"
+
+#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr "Αδυναμία αλλαγής των ρυθμίσεων NTP"
+
+#: dateandtime.cpp:249
+#, fuzzy, kde-format
+#| msgid "Unable to change NTP settings"
+msgid "Permission to change NTP setting denied"
+msgstr "Αδυναμία αλλαγής των ρυθμίσεων NTP"
+
+#: dateandtime.cpp:261 main.cpp:89
+#, kde-format
+msgid "Unable to set current time"
+msgstr "Αδυναμία καθορισμού της τρέχουσας ώρας"
+
+#: dateandtime.cpp:263
+#, kde-format
+msgid "Permission to change date and time setting denied"
+msgstr ""
+
+#: dateandtime.cpp:274
+#, fuzzy, kde-format
+#| msgid "Unable to set timezone"
+msgid "Unable to set time zone"
+msgstr "Αδυναμία καθορισμού της ζώνης ώρας"
+
+#: dateandtime.cpp:276
+#, kde-format
+msgid "Permission to change time zone denied"
+msgstr ""
+
+#: main.cpp:101
+#, kde-format
+msgid "Unable to set timezone"
+msgstr "Αδυναμία καθορισμού της ζώνης ώρας"
+
+#: ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Set date and time &automatically"
+msgctxt "@option"
+msgid "Set date and time automatically"
+msgstr "&Αυτόματη ρύθμιση ημερομηνίας και ώρας"
+
+#: ui/main.qml:54
+#, kde-format
+msgctxt "@action:button as in set the current time on the machine"
+msgid "Set Time"
+msgstr ""
+
+#: ui/main.qml:68
+#, kde-format
+msgctxt "@action:button as in set the current date on the machine"
+msgid "Set Date"
+msgstr ""
+
+#: ui/main.qml:85
+#, fuzzy, kde-format
+#| msgid "Time Zone"
+msgctxt "@title"
+msgid "Time Zone"
+msgstr "Ζώνη ώρας"
+
+#~ msgid "Date and Time"
+#~ msgstr "Ημερομηνία και ώρα"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr ""
+#~ "Εδώ μπορείτε να αλλάξετε την ημέρα του μήνα, τον μήνα και το έτος της "
+#~ "ημερομηνίας του συστήματος."
+
+#~ msgid ""
+#~ "Here you can change the system time. Click into the hours, minutes or "
+#~ "seconds field to change the relevant value, either using the up and down "
+#~ "buttons to the right or by entering a new value."
+#~ msgstr ""
+#~ "Εδώ μπορείτε να αλλάξετε την ώρα του συστήματος. Πατήστε μέσα στο πεδίο "
+#~ "ωρών, λεπτών ή δευτερολέπτων για να αλλάξετε την αντίστοιχη τιμή, είτε "
+#~ "χρησιμοποιώντας τα βελάκια στα δεξιά, είτε πληκτρολογώντας τη νέα τιμή."
+
+#~ msgid ""
+#~ "<h1>Date & Time</h1> This system settings module can be used to set the "
+#~ "system date and time. As these settings do not only affect you as a user, "
+#~ "but rather the whole system, you can only change these settings when you "
+#~ "start the System Settings as root. If you do not have the root password, "
+#~ "but feel the system time should be corrected, please contact your system "
+#~ "administrator."
+#~ msgstr ""
+#~ "<h1>Ημερομηνία & Ώρα</h1> Αυτό το άρθρωμα των ρυθμίσεων του συστήματος "
+#~ "μπορεί να χρησιμοποιηθεί για τον ορισμό της ώρας και ημερομηνίας του "
+#~ "συστήματος. Επειδή αυτές οι ρυθμίσεις δεν επηρεάζουν μόνο εσάς ως χρήστη, "
+#~ "αλλά ολόκληρο το σύστημα, μπορείτε να τις αλλάξετε μόνο αν ξεκινήσετε τις "
+#~ "ρυθμίσεις συστήματος ως root. Αν δεν έχετε τον κωδικό πρόσβασης του root, "
+#~ "αλλά πιστεύετε πως η ώρα ή η ημερομηνία του συστήματος θα πρέπει να "
+#~ "διορθωθεί, παρακαλώ απευθυνθείτε στο διαχειριστή του συστήματος σας."
+
+#~ msgid "&Time server:"
+#~ msgstr "&Διακομιστής ώρας:"
+
+#~ msgid ""
+#~ "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
+#~ "enable automatic updating of date and time."
+#~ msgstr ""
+#~ "Δεν βρέθηκε το εργαλείο NTP. Εγκαταστήστε τις εντολές « ntpdate » ή « "
+#~ "rdate » για να ενεργοποιήσετε την αυτόματη ενημέρωση της ημερομηνίας και "
+#~ "ώρας"
+
+#~ msgid ""
+#~ "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        "
+#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#~ "pool.ntp.org"
+#~ msgstr ""
+#~ "Δημόσιος εξυπηρετητής ώρας (pool.ntp.org),        asia.pool.ntp."
+#~ "org,        europe.pool.ntp.org,        north-america.pool.ntp."
+#~ "org,        oceania.pool.ntp.org"
+
+#~ msgid "Unable to contact time server: %1."
+#~ msgstr "Αδύνατη η επικοινωνία με τον διακομιστή ώρας: %1."
+
+#~ msgid "Can not set date."
+#~ msgstr "Αδύνατο να οριστεί η ημερομηνία."
+
+#~ msgid "Error setting new time zone."
+#~ msgstr "Σφάλμα κατά τον ορισμό της νέας ζώνης ώρας."
+
+#~ msgid "Time zone Error"
+#~ msgstr "Σφάλμα ζώνης ώρας"
+
+#~ msgid "Unable to authenticate/execute the action: %1, %2"
+#~ msgstr "Αδυναμία ταυτοποίησης/εκτέλεσης ενέργειας: %1, %2"
+
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr ""
+#~ "Για να τροποποιήσετε τη ζώνη ώρας, επιλέξτε την περιοχή σας από την "
+#~ "παρακάτω λίστα."
+
+#~ msgid "Current local time zone:"
+#~ msgstr "Τρέχουσα τοπική ζώνη ώρας:"
+
+#~ msgid "Search…"
+#~ msgstr "Αναζήτηση…"
+
+#~ msgctxt "%1 is name of time zone"
+#~ msgid "Current local time zone: %1"
+#~ msgstr "Τρέχουσα τοπική ζώνη ώρας: %1"
+
+#~ msgctxt "%1 is name of time zone, %2 is its abbreviation"
+#~ msgid "Current local time zone: %1 (%2)"
+#~ msgstr "Τρέχουσα τοπική ζώνη ώρας: %1 (%2)"
+
+#~ msgctxt "Define an area in the time zone, like a town area"
+#~ msgid "Area"
+#~ msgstr "Περιοχή"
+
+#~ msgctxt "Time zone"
+#~ msgid "Region"
+#~ msgstr "Περιφέρεια"
+
+#~ msgid "Comment"
+#~ msgstr "Σχόλιο"
+
+#~ msgid "KDE Clock Control Module"
+#~ msgstr "Άρθρωμα ελέγχου ρολογιού του KDE"
+
+#~ msgid "(c) 1996 - 2001 Luca Montecchiani"
+#~ msgstr "(c) 1996 - 2001 Luca Montecchiani"
+
+#~ msgid "Luca Montecchiani"
+#~ msgstr "Luca Montecchiani"
+
+#~ msgid "Original author"
+#~ msgstr "Αρχικός συγγραφέας"
+
+#~ msgid "Paul Campbell"
+#~ msgstr "Paul Campbell"
+
+#~ msgid "Current Maintainer"
+#~ msgstr "Τρέχων συντηρητής"
+
+#~ msgid "Benjamin Meyer"
+#~ msgstr "Benjamin Meyer"
+
+#~ msgid "Added NTP support"
+#~ msgstr "Υποστήριξη NTP προστέθηκε"
+
+#~ msgid ""
+#~ "<h1>Date & Time</h1> This control module can be used to set the system "
+#~ "date and time. As these settings do not only affect you as a user, but "
+#~ "rather the whole system, you can only change these settings when you "
+#~ "start the System Settings as root. If you do not have the root password, "
+#~ "but feel the system time should be corrected, please contact your system "
+#~ "administrator."
+#~ msgstr ""
+#~ "<h1>Ημερομηνία & Ώρα</h1> Αυτό το άρθρωμα των ρυθμίσεων του συστήματος "
+#~ "μπορεί να χρησιμοποιηθεί για τον ορισμό της ώρας και ημερομηνίας του "
+#~ "συστήματος. Επειδή αυτές οι ρυθμίσεις δεν επηρεάζουν μόνο εσάς ως χρήστη, "
+#~ "αλλά ολόκληρο το σύστημα, μπορείτε να τις αλλάξετε μόνο αν ξεκινήσετε τις "
+#~ "ρυθμίσεις συστήματος ως root. Αν δεν έχετε τον κωδικό πρόσβασης του root, "
+#~ "αλλά πιστεύετε πως η ώρα ή η ημερομηνία του συστήματος θα πρέπει να "
+#~ "διορθωθεί, παρακαλώ απευθυνθείτε στο διαχειριστή του συστήματος σας."
+
+#~ msgid "kcmclock"
+#~ msgstr "kcmclock"
+
+#~ msgid "Failed to set system date/time/time zone."
+#~ msgstr "Αποτυχία ορισμού ημερομηνίας/ώρας/ωρολογιακής ζώνης του συστήματος."
+
+#~ msgid "Date/Time Error"
+#~ msgstr "Σφάλμα ημερομηνίας/ώρας"

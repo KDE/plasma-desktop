@@ -1,0 +1,189 @@
+# translation of kcmkclock.po to marathi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2009.
+# Chetan Khona <chetan@kompkin.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkclock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"PO-Revision-Date: 2013-03-28 15:17+0530\n"
+"Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
+"Language-Team: American English <kde-i18n-doc@kde.org>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+"संदिप शेडमाके, \n"
+"चेतन खोना"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"sandeep.shedmake@gmail.com, \n"
+"chetan@kompkin.com"
+
+#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr ""
+
+#: dateandtime.cpp:249
+#, kde-format
+msgid "Permission to change NTP setting denied"
+msgstr ""
+
+#: dateandtime.cpp:261 main.cpp:89
+#, fuzzy, kde-format
+#| msgid "Unable to contact time server: %1."
+msgid "Unable to set current time"
+msgstr "टाइम सर्व्हरशी जुळवणी करू शकत नाही: %1."
+
+#: dateandtime.cpp:263
+#, kde-format
+msgid "Permission to change date and time setting denied"
+msgstr ""
+
+#: dateandtime.cpp:274
+#, fuzzy, kde-format
+#| msgid "Unable to contact time server: %1."
+msgid "Unable to set time zone"
+msgstr "टाइम सर्व्हरशी जुळवणी करू शकत नाही: %1."
+
+#: dateandtime.cpp:276
+#, kde-format
+msgid "Permission to change time zone denied"
+msgstr ""
+
+#: main.cpp:101
+#, fuzzy, kde-format
+#| msgid "Unable to contact time server: %1."
+msgid "Unable to set timezone"
+msgstr "टाइम सर्व्हरशी जुळवणी करू शकत नाही: %1."
+
+#: ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Set date and time &automatically:"
+msgctxt "@option"
+msgid "Set date and time automatically"
+msgstr "दिनांक व वेळ आपोआप निश्चित करा (&A):"
+
+#: ui/main.qml:54
+#, kde-format
+msgctxt "@action:button as in set the current time on the machine"
+msgid "Set Time"
+msgstr ""
+
+#: ui/main.qml:68
+#, kde-format
+msgctxt "@action:button as in set the current date on the machine"
+msgid "Set Date"
+msgstr ""
+
+#: ui/main.qml:85
+#, fuzzy, kde-format
+#| msgid "Time Zone"
+msgctxt "@title"
+msgid "Time Zone"
+msgstr "वेळ क्षेत्र"
+
+#~ msgid "Date and Time"
+#~ msgstr "दिनांक व वेळ"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr "येथे तुम्ही प्रणालीचा दिनांक, महीना, वर्ष बदलू शकता."
+
+#, fuzzy
+#~| msgid "Time server:"
+#~ msgid "&Time server:"
+#~ msgstr "वेळ सर्व्हर :"
+
+#, fuzzy
+#~| msgid ""
+#~| "Public Time Server (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
+#~| "north-america.pool.ntp.org,oceania.pool.ntp.org"
+#~ msgid ""
+#~ "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        "
+#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#~ "pool.ntp.org"
+#~ msgstr ""
+#~ "पबलिक टाइम सर्व्हर (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
+#~ "north-america.pool.ntp.org,oceania.pool.ntp.org"
+
+#~ msgid "Unable to contact time server: %1."
+#~ msgstr "टाइम सर्व्हरशी जुळवणी करू शकत नाही: %1."
+
+#~ msgid "Can not set date."
+#~ msgstr "दिनांक निश्चित करू शकत नाही."
+
+#~ msgid "Error setting new time zone."
+#~ msgstr "नवीन वेळ क्षेत्र संयोजीत करतेवेळी त्रुटी आढळली."
+
+#~ msgid "Time zone Error"
+#~ msgstr "वेळ क्षेत्र त्रुटी"
+
+#~ msgid "Unable to authenticate/execute the action: %1, %2"
+#~ msgstr "हि क्रिया अधिप्रमाणनास / चालविण्यास अपयश : %1, %2"
+
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr "स्थानिक वेळ क्षेत्र बदलविण्याकरिता, खालील यादीतून कृपया तुमचे क्षेत्र निवडा."
+
+#~ msgid "Current local time zone:"
+#~ msgstr "वर्तमान स्थानिक वेळ क्षेत्र :"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgid "Search…"
+#~ msgstr "शोध"
+
+#~ msgctxt "%1 is name of time zone"
+#~ msgid "Current local time zone: %1"
+#~ msgstr "वर्तमान स्थानिक वेळ क्षेत्र: %1"
+
+#~ msgctxt "%1 is name of time zone, %2 is its abbreviation"
+#~ msgid "Current local time zone: %1 (%2)"
+#~ msgstr "वर्तमान स्थानिक वेळ क्षेत्र : %1 (%2)"
+
+#~ msgid "KDE Clock Control Module"
+#~ msgstr "केडीई घड्याळ नियंत्रण विबाग"
+
+#~ msgid "(c) 1996 - 2001 Luca Montecchiani"
+#~ msgstr "(c) 1996 - 2001 Luca Montecchiani"
+
+#~ msgid "Luca Montecchiani"
+#~ msgstr "Luca Montecchiani"
+
+#~ msgid "Original author"
+#~ msgstr "मूळ लेखक"
+
+#~ msgid "Paul Campbell"
+#~ msgstr "पाउल केंपबेल"
+
+#~ msgid "Current Maintainer"
+#~ msgstr "वर्तमान नियंत्रक"
+
+#~ msgid "Benjamin Meyer"
+#~ msgstr "बेंजामिन मेयर"
+
+#~ msgid "Added NTP support"
+#~ msgstr "NTP समर्थन जोडले"
+
+#~ msgid "kcmclock"
+#~ msgstr "केसीएम घड्याळ"
+
+#~ msgid "Failed to set system date/time/time zone."
+#~ msgstr "प्रणाली दिनांक/वेळ/वेळ क्षेत्र निश्चित करण्यास अपयशी."
+
+#~ msgid "Date/Time Error"
+#~ msgstr "दिनांक/वेळ त्रुटी"

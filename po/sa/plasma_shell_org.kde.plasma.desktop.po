@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-02 00:56+0000\n"
+"POT-Creation-Date: 2026-11-12 22:03+0000\n"
 "PO-Revision-Date: 2024-12-20 21:53+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -129,21 +129,21 @@ msgctxt "@title:group for configuration dialog page"
 msgid "Keyboard Shortcuts"
 msgstr "कीबोर्ड शॉर्टकट"
 
-#: contents/configuration/AppletConfiguration.qml:337
+#: contents/configuration/AppletConfiguration.qml:356
 #, fuzzy, kde-format
 #| msgid "About"
 msgctxt "@title:group for About dialog page"
 msgid "About"
 msgstr "विषये"
 
-#: contents/configuration/AppletConfiguration.qml:385
+#: contents/configuration/AppletConfiguration.qml:404
 #, fuzzy, kde-format
 #| msgid "Apply Settings"
 msgctxt "@title:window dialog title"
 msgid "Apply Settings"
 msgstr "सेटिंग्स् प्रयोजयन्तु"
 
-#: contents/configuration/AppletConfiguration.qml:386
+#: contents/configuration/AppletConfiguration.qml:405
 #, fuzzy, kde-format
 #| msgid ""
 #| "The settings of the current module have changed. Do you want to apply the "
@@ -154,21 +154,21 @@ msgid ""
 msgstr ""
 "वर्तमानमॉड्यूलस्य सेटिङ्ग्स् परिवर्तिताः सन्ति । परिवर्तनं प्रयोक्तुं इच्छति वा परित्यक्तुं वा?"
 
-#: contents/configuration/AppletConfiguration.qml:418
+#: contents/configuration/AppletConfiguration.qml:437
 #, fuzzy, kde-format
 #| msgid "OK"
 msgctxt "@action:button"
 msgid "OK"
 msgstr "अस्तु"
 
-#: contents/configuration/AppletConfiguration.qml:425
+#: contents/configuration/AppletConfiguration.qml:444
 #, fuzzy, kde-format
 #| msgid "Apply"
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "आचरतु"
 
-#: contents/configuration/AppletConfiguration.qml:431
+#: contents/configuration/AppletConfiguration.qml:450
 #, fuzzy, kde-format
 #| msgid "Cancel"
 msgctxt "@action:button"
@@ -274,42 +274,62 @@ msgctxt "@action:button"
 msgid "Add Action"
 msgstr "Action योजयतु"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:76
+#: contents/configuration/ConfigurationContainmentAppearance.qml:66
+#: contents/configuration/ConfigurationContainmentLayout.qml:88
 #, fuzzy, kde-format
 #| msgid "Layout changes have been restricted by the system administrator"
 msgctxt "@info:status inlinemessage"
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "विन्यासपरिवर्तनं प्रणालीप्रशासकेन प्रतिबन्धितम् अस्ति"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:91
-#, fuzzy, kde-format
-#| msgid "Layout:"
-msgctxt "@label:listbox"
-msgid "Layout:"
-msgstr "प्रारूपं:"
-
-#: contents/configuration/ConfigurationContainmentAppearance.qml:114
+#: contents/configuration/ConfigurationContainmentAppearance.qml:80
 #, fuzzy, kde-format
 #| msgid "Wallpaper type:"
 msgctxt "@label:listbox"
 msgid "Wallpaper type:"
 msgstr "वॉलपेपर प्रकारः :"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:153
+#: contents/configuration/ConfigurationContainmentAppearance.qml:118
 #, fuzzy, kde-format
 #| msgid "Get New Plugins…"
 msgctxt "@action:button"
 msgid "Get New Plugins…"
 msgstr "नवीन प्लगिन् प्राप्त करें..."
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:243
+#: contents/configuration/ConfigurationContainmentLayout.qml:106
+#, fuzzy, kde-format
+#| msgid "Remove Desktop"
+msgctxt "@label"
+msgid "Desktop:"
+msgstr "डेस्कटॉपं निष्कासयन्तु"
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:107
+#, kde-format
+msgctxt "@info"
+msgid "Icons for items in the selected location appear on the desktop"
+msgstr ""
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:110
+#, kde-format
+msgctxt "@option:check"
+msgid "Show files and folders"
+msgstr ""
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:118
+#, fuzzy, kde-format
+#| msgid "Layout:"
+msgctxt "@label:listbox"
+msgid "Layout:"
+msgstr "प्रारूपं:"
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:194
 #, fuzzy, kde-format
 #| msgid "Layout changes must be applied before other changes can be made"
 msgctxt "@info"
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "अन्यपरिवर्तनानि कर्तुं पूर्वं विन्यासपरिवर्तनं प्रयोक्तव्यम्"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:247
+#: contents/configuration/ConfigurationContainmentLayout.qml:198
 #, fuzzy, kde-format
 #| msgid "Apply Now"
 msgctxt "@action:button"
@@ -337,6 +357,13 @@ msgid "Wallpaper"
 msgstr "वॉलपेपर"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
+#, fuzzy, kde-format
+#| msgid "Layout:"
+msgctxt "@title:group for configuration dialog page"
+msgid "Layout"
+msgstr "प्रारूपं:"
+
+#: contents/configuration/ContainmentConfiguration.qml:36
 #, fuzzy, kde-format
 #| msgid "Mouse Actions"
 msgctxt "@title:group for configuration dialog page"
@@ -944,14 +971,14 @@ msgid_plural "Uninstall (%1 Widgets)"
 msgstr[0] "अनइन्स्टॉल"
 msgstr[1] "अनइन्स्टॉल"
 
-#: contents/explorer/WidgetExplorer.qml:395
+#: contents/explorer/WidgetExplorer.qml:379
 #, fuzzy, kde-format
 #| msgid "No widgets matched the search terms"
 msgctxt "@info placeholdermessage"
 msgid "No widgets matched the search terms"
 msgstr "अन्वेषणपदैः सह कोऽपि विजेट् मेलनं न कृतवान्"
 
-#: contents/explorer/WidgetExplorer.qml:395
+#: contents/explorer/WidgetExplorer.qml:379
 #, fuzzy, kde-format
 #| msgid "No widgets available"
 msgctxt "@info placeholdermessage"

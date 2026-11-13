@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-02 00:56+0000\n"
+"POT-Creation-Date: 2026-11-12 22:03+0000\n"
 "PO-Revision-Date: 2026-10-12 20:17-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -109,19 +109,19 @@ msgctxt "@title:group for configuration dialog page"
 msgid "Keyboard Shortcuts"
 msgstr "ਕੀਬੋਰਡ ਸ਼ਾਰਟਕਟ"
 
-#: contents/configuration/AppletConfiguration.qml:337
+#: contents/configuration/AppletConfiguration.qml:356
 #, kde-format
 msgctxt "@title:group for About dialog page"
 msgid "About"
 msgstr "ਇਸ ਬਾਰੇ"
 
-#: contents/configuration/AppletConfiguration.qml:385
+#: contents/configuration/AppletConfiguration.qml:404
 #, kde-format
 msgctxt "@title:window dialog title"
 msgid "Apply Settings"
 msgstr "ਸੈਟਿੰਗਾਂ ਨੂੰ ਲਾਗੂ ਕਰੋ"
 
-#: contents/configuration/AppletConfiguration.qml:386
+#: contents/configuration/AppletConfiguration.qml:405
 #, kde-format
 msgctxt "@label dialog body"
 msgid ""
@@ -129,19 +129,19 @@ msgid ""
 msgstr ""
 "ਮੌਜੂਦਾ ਸਫ਼ੇ ਉੱਤੇ ਨਾ-ਸੰਭਾਲੀਆਂ ਤਬਦੀਲੀਆਂ ਹਨ। ਕੀ ਤੁਸੀਂ ਤਬਦੀਲੀਆਂ ਲਾਗੂ ਕਰਨੀਆਂ ਚਾਹੁੰਦੇ ਹੋ ਜਾਂ ਅਣਡਿੱਠੀਆਂ?"
 
-#: contents/configuration/AppletConfiguration.qml:418
+#: contents/configuration/AppletConfiguration.qml:437
 #, kde-format
 msgctxt "@action:button"
 msgid "OK"
 msgstr "ਠੀਕ ਹੈ"
 
-#: contents/configuration/AppletConfiguration.qml:425
+#: contents/configuration/AppletConfiguration.qml:444
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "ਲਾਗੂ ਕਰੋ"
 
-#: contents/configuration/AppletConfiguration.qml:431
+#: contents/configuration/AppletConfiguration.qml:450
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -233,37 +233,58 @@ msgctxt "@action:button"
 msgid "Add Action"
 msgstr "ਕਾਰਵਾਈ ਨੂੰ ਜੋੜੋ"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:76
+#: contents/configuration/ConfigurationContainmentAppearance.qml:66
+#: contents/configuration/ConfigurationContainmentLayout.qml:88
 #, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "ਖਾਕਾ ਤਬਦੀਲੀਆਂ ਉੱਤੇ ਸਿਸਟਮ ਪਰਸ਼ਾਸ਼ਕ ਵਲੋਂ ਪਾਬੰਦੀਆਂ ਲਾਈਆਂ ਗਈਆਂ ਹਨ"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:91
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Layout:"
-msgstr "ਲੇਆਉਟ:"
-
-#: contents/configuration/ConfigurationContainmentAppearance.qml:114
+#: contents/configuration/ConfigurationContainmentAppearance.qml:80
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Wallpaper type:"
 msgstr "ਵਾਲਪੇਪਰ ਦੀ ਕਿਸਮ:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:153
+#: contents/configuration/ConfigurationContainmentAppearance.qml:118
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Plugins…"
 msgstr "…ਨਵੀਆਂ ਪਲੱਗਇਨਾਂ ਲਵੋ"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:243
+#: contents/configuration/ConfigurationContainmentLayout.qml:106
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Remove Desktop"
+msgctxt "@label"
+msgid "Desktop:"
+msgstr "ਡੈਸਕਟਾਪ ਨੂੰ ਹਟਾਓ"
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:107
+#, kde-format
+msgctxt "@info"
+msgid "Icons for items in the selected location appear on the desktop"
+msgstr ""
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:110
+#, kde-format
+msgctxt "@option:check"
+msgid "Show files and folders"
+msgstr ""
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:118
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Layout:"
+msgstr "ਲੇਆਉਟ:"
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:194
 #, kde-format
 msgctxt "@info"
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "ਹੋਰ ਤਬਦੀਲੀਆਂ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਖਾਕਾ ਤਬਦੀਲੀਆਂ ਨੂੰ ਲਾਗੂ ਕਰਨੀਆਂ ਪੈਣਗੀਆਂ"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:247
+#: contents/configuration/ConfigurationContainmentLayout.qml:198
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Now"
@@ -288,6 +309,14 @@ msgid "Wallpaper"
 msgstr "ਵਾਲਪੇਪਰ"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
+#, fuzzy, kde-format
+#| msgctxt "@label:listbox"
+#| msgid "Layout:"
+msgctxt "@title:group for configuration dialog page"
+msgid "Layout"
+msgstr "ਲੇਆਉਟ:"
+
+#: contents/configuration/ContainmentConfiguration.qml:36
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Mouse Actions"
@@ -825,13 +854,13 @@ msgid_plural "Uninstall (%1 Widgets)"
 msgstr[0] "ਅਣ-ਇੰਸਟਾਲ (%1 ਵਿਜੈਟ)"
 msgstr[1] "ਅਣ-ਇੰਸਟਾਲ (%1 ਵਿਜੈਟ)"
 
-#: contents/explorer/WidgetExplorer.qml:395
+#: contents/explorer/WidgetExplorer.qml:379
 #, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets matched the search terms"
 msgstr "ਖੋਜੇ ਸ਼ਬਦਾਂ ਨਾਲ ਮਿਲਦਾ ਕੋਈ ਵਿਜੈਟ ਨਹੀਂ ਹੈ"
 
-#: contents/explorer/WidgetExplorer.qml:395
+#: contents/explorer/WidgetExplorer.qml:379
 #, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets available"

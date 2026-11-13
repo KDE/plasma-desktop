@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-02 00:56+0000\n"
+"POT-Creation-Date: 2026-11-12 22:03+0000\n"
 "PO-Revision-Date: 2025-03-23 07:29+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -128,21 +128,21 @@ msgctxt "@title:group for configuration dialog page"
 msgid "Keyboard Shortcuts"
 msgstr "Klavaraj ŝparvojoj"
 
-#: contents/configuration/AppletConfiguration.qml:337
+#: contents/configuration/AppletConfiguration.qml:356
 #, fuzzy, kde-format
 #| msgid "About"
 msgctxt "@title:group for About dialog page"
 msgid "About"
 msgstr "Pri"
 
-#: contents/configuration/AppletConfiguration.qml:385
+#: contents/configuration/AppletConfiguration.qml:404
 #, fuzzy, kde-format
 #| msgid "Apply Settings"
 msgctxt "@title:window dialog title"
 msgid "Apply Settings"
 msgstr "Apliki Agordojn"
 
-#: contents/configuration/AppletConfiguration.qml:386
+#: contents/configuration/AppletConfiguration.qml:405
 #, fuzzy, kde-format
 #| msgid ""
 #| "The current page has unsaved changes. Apply the changes or discard them?"
@@ -153,21 +153,21 @@ msgstr ""
 "La nuna paĝo havas nekonservitajn ŝanĝojn. Ĉu apliki la ŝanĝojn aŭ forĵeti "
 "ilin?"
 
-#: contents/configuration/AppletConfiguration.qml:418
+#: contents/configuration/AppletConfiguration.qml:437
 #, fuzzy, kde-format
 #| msgid "OK"
 msgctxt "@action:button"
 msgid "OK"
 msgstr "bone"
 
-#: contents/configuration/AppletConfiguration.qml:425
+#: contents/configuration/AppletConfiguration.qml:444
 #, fuzzy, kde-format
 #| msgid "Apply"
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Apliki"
 
-#: contents/configuration/AppletConfiguration.qml:431
+#: contents/configuration/AppletConfiguration.qml:450
 #, fuzzy, kde-format
 #| msgid "Cancel"
 msgctxt "@action:button"
@@ -273,35 +273,55 @@ msgctxt "@action:button"
 msgid "Add Action"
 msgstr "Aldoni Agon"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:76
+#: contents/configuration/ConfigurationContainmentAppearance.qml:66
+#: contents/configuration/ConfigurationContainmentLayout.qml:88
 #, fuzzy, kde-format
 #| msgid "Layout changes have been restricted by the system administrator"
 msgctxt "@info:status inlinemessage"
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "Aranĝŝanĝoj estis limigitaj de la sistemadministranto"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:91
-#, fuzzy, kde-format
-#| msgid "Layout:"
-msgctxt "@label:listbox"
-msgid "Layout:"
-msgstr "Aranĝo:"
-
-#: contents/configuration/ConfigurationContainmentAppearance.qml:114
+#: contents/configuration/ConfigurationContainmentAppearance.qml:80
 #, fuzzy, kde-format
 #| msgid "Wallpaper type:"
 msgctxt "@label:listbox"
 msgid "Wallpaper type:"
 msgstr "Tapeta tipo:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:153
+#: contents/configuration/ConfigurationContainmentAppearance.qml:118
 #, fuzzy, kde-format
 #| msgid "Get New Plugins…"
 msgctxt "@action:button"
 msgid "Get New Plugins…"
 msgstr "Akiri novajn kromaĵojn…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:243
+#: contents/configuration/ConfigurationContainmentLayout.qml:106
+#, fuzzy, kde-format
+#| msgid "Remove Desktop"
+msgctxt "@label"
+msgid "Desktop:"
+msgstr "Forigi Labortablon"
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:107
+#, kde-format
+msgctxt "@info"
+msgid "Icons for items in the selected location appear on the desktop"
+msgstr ""
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:110
+#, kde-format
+msgctxt "@option:check"
+msgid "Show files and folders"
+msgstr ""
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:118
+#, fuzzy, kde-format
+#| msgid "Layout:"
+msgctxt "@label:listbox"
+msgid "Layout:"
+msgstr "Aranĝo:"
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:194
 #, fuzzy, kde-format
 #| msgid "Layout changes must be applied before other changes can be made"
 msgctxt "@info"
@@ -309,7 +329,7 @@ msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
 "Aranĝŝanĝoj devas esti aplikataj antaŭ ol aliaj ŝanĝoj povas esti faritaj"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:247
+#: contents/configuration/ConfigurationContainmentLayout.qml:198
 #, fuzzy, kde-format
 #| msgid "Apply Now"
 msgctxt "@action:button"
@@ -337,6 +357,13 @@ msgid "Wallpaper"
 msgstr "Tapeto"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
+#, fuzzy, kde-format
+#| msgid "Layout:"
+msgctxt "@title:group for configuration dialog page"
+msgid "Layout"
+msgstr "Aranĝo:"
+
+#: contents/configuration/ContainmentConfiguration.qml:36
 #, fuzzy, kde-format
 #| msgid "Mouse Actions"
 msgctxt "@title:group for configuration dialog page"
@@ -943,14 +970,14 @@ msgid_plural "Uninstall (%1 Widgets)"
 msgstr[0] "Malinstali (%1 Fenestraĵon)"
 msgstr[1] "Malinstali (%1 Fenestraĵojn)"
 
-#: contents/explorer/WidgetExplorer.qml:395
+#: contents/explorer/WidgetExplorer.qml:379
 #, fuzzy, kde-format
 #| msgid "No widgets matched the search terms"
 msgctxt "@info placeholdermessage"
 msgid "No widgets matched the search terms"
 msgstr "Neniuj fenestraĵoj kongruis kun la serĉaj terminoj"
 
-#: contents/explorer/WidgetExplorer.qml:395
+#: contents/explorer/WidgetExplorer.qml:379
 #, fuzzy, kde-format
 #| msgid "No widgets available"
 msgctxt "@info placeholdermessage"

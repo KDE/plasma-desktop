@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 15:19+0000\n"
-"PO-Revision-Date: 2026-09-30 08:53+0200\n"
+"POT-Creation-Date: 2026-11-12 21:38+0000\n"
+"PO-Revision-Date: 2026-11-11 09:54+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -22,19 +22,19 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 25.04.0\n"
 
-#: package/contents/config/config.qml:17
+#: package/contents/config/config.qml:19
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Location"
 msgstr "Ubicació"
 
-#: package/contents/config/config.qml:24
+#: package/contents/config/config.qml:26
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Icons"
 msgstr "Icones"
 
-#: package/contents/config/config.qml:31
+#: package/contents/config/config.qml:33
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Filter"
@@ -377,67 +377,67 @@ msgctxt "@title:group form label for radiobutton group"
 msgid "Show:"
 msgstr "Mostra:"
 
-#: package/contents/ui/ConfigLocation.qml:83
+#: package/contents/ui/ConfigLocation.qml:86
 #, kde-format
 msgctxt "@option:radio"
 msgid "Desktop folder"
 msgstr "Carpeta d'escriptori"
 
-#: package/contents/ui/ConfigLocation.qml:91
+#: package/contents/ui/ConfigLocation.qml:96
 #, kde-format
 msgctxt "@option:radio"
 msgid "Files linked to the current activity"
 msgstr "Fitxers enllaçats amb l'activitat actual"
 
-#: package/contents/ui/ConfigLocation.qml:100
+#: package/contents/ui/ConfigLocation.qml:107
 #, kde-format
 msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
 msgstr "Element del quadro Llocs:"
 
-#: package/contents/ui/ConfigLocation.qml:137
+#: package/contents/ui/ConfigLocation.qml:146
 #, kde-format
 msgctxt "@option:radio also label for text field"
 msgid "Custom location:"
 msgstr "Ubicació personalitzada:"
 
-#: package/contents/ui/ConfigLocation.qml:145
+#: package/contents/ui/ConfigLocation.qml:154
 #, kde-format
 msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
 msgstr "Teclegeu un camí o un URL…"
 
-#: package/contents/ui/ConfigLocation.qml:188
+#: package/contents/ui/ConfigLocation.qml:194
 #, kde-format
 msgctxt "@label:textbox custom widget title"
 msgid "Title:"
 msgstr "Títol:"
 
-#: package/contents/ui/ConfigLocation.qml:197
+#: package/contents/ui/ConfigLocation.qml:205
 #, kde-format
 msgctxt "@item:inlistbox no title"
 msgid "None"
 msgstr "Sense"
 
-#: package/contents/ui/ConfigLocation.qml:198
+#: package/contents/ui/ConfigLocation.qml:206
 #, kde-format
 msgctxt "@item:inlistbox default title"
 msgid "Default"
 msgstr "Predeterminat"
 
-#: package/contents/ui/ConfigLocation.qml:199
+#: package/contents/ui/ConfigLocation.qml:207
 #, kde-format
 msgctxt "@item:inlistbox full path as title"
 msgid "Full path"
 msgstr "Camí sencer"
 
-#: package/contents/ui/ConfigLocation.qml:200
+#: package/contents/ui/ConfigLocation.qml:208
 #, kde-format
 msgctxt "@item:inlistbox title from text input field"
 msgid "Custom"
 msgstr "Personalitzat"
 
-#: package/contents/ui/ConfigLocation.qml:209
+#: package/contents/ui/ConfigLocation.qml:217
 #, kde-format
 msgctxt "@info:placeholder custom window title"
 msgid "Enter title…"
@@ -635,61 +635,61 @@ msgstr "Mida de les icones"
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "22px"
-msgstr ""
+msgstr "22px"
 
 #: plugins/folder/viewpropertiesmenu.cpp:54
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "32px"
-msgstr ""
+msgstr "32px"
 
 #: plugins/folder/viewpropertiesmenu.cpp:55
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "48px"
-msgstr ""
+msgstr "48px"
 
 #: plugins/folder/viewpropertiesmenu.cpp:56
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "64px"
-msgstr ""
+msgstr "64px"
 
 #: plugins/folder/viewpropertiesmenu.cpp:57
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "96px"
-msgstr ""
+msgstr "96px"
 
 #: plugins/folder/viewpropertiesmenu.cpp:58
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "128px"
-msgstr ""
+msgstr "128px"
 
 #: plugins/folder/viewpropertiesmenu.cpp:59
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "160px"
-msgstr ""
+msgstr "160px"
 
 #: plugins/folder/viewpropertiesmenu.cpp:60
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "192px"
-msgstr ""
+msgstr "192px"
 
 #: plugins/folder/viewpropertiesmenu.cpp:61
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "224px"
-msgstr ""
+msgstr "224px"
 
 #: plugins/folder/viewpropertiesmenu.cpp:62
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "256px"
-msgstr ""
+msgstr "256px"
 
 #: plugins/folder/viewpropertiesmenu.cpp:70
 #, kde-format
@@ -736,31 +736,3 @@ msgstr "Mostra les vistes prèvies"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Blocat"
-
-#~ msgctxt "@item:inmenu size of the icons"
-#~ msgid "Tiny"
-#~ msgstr "Minúscula"
-
-#~ msgctxt "@item:inmenu size of the icons"
-#~ msgid "Very Small"
-#~ msgstr "Molt xicoteta"
-
-#~ msgctxt "@item:inmenu size of the icons"
-#~ msgid "Small"
-#~ msgstr "Xicoteta"
-
-#~ msgctxt "@item:inmenu size of the icons"
-#~ msgid "Small-Medium"
-#~ msgstr "Mitjana xicoteta"
-
-#~ msgctxt "@item:inmenu size of the icons"
-#~ msgid "Medium"
-#~ msgstr "Mitjana"
-
-#~ msgctxt "@item:inmenu size of the icons"
-#~ msgid "Large"
-#~ msgstr "Gran"
-
-#~ msgctxt "@item:inmenu size of the icons"
-#~ msgid "Huge"
-#~ msgstr "Enorme"

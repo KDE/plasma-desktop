@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 15:19+0000\n"
+"POT-Creation-Date: 2026-11-12 21:38+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,19 +18,19 @@ msgstr ""
 "desktopcontainment.pot\n"
 "X-Crowdin-File-ID: 43473\n"
 
-#: package/contents/config/config.qml:17
+#: package/contents/config/config.qml:19
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Location"
 msgstr "位置"
 
-#: package/contents/config/config.qml:24
+#: package/contents/config/config.qml:26
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Icons"
 msgstr "图标"
 
-#: package/contents/config/config.qml:31
+#: package/contents/config/config.qml:33
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Filter"
@@ -374,67 +374,67 @@ msgctxt "@title:group form label for radiobutton group"
 msgid "Show:"
 msgstr "显示："
 
-#: package/contents/ui/ConfigLocation.qml:83
+#: package/contents/ui/ConfigLocation.qml:86
 #, kde-format
 msgctxt "@option:radio"
 msgid "Desktop folder"
 msgstr "桌面文件夹"
 
-#: package/contents/ui/ConfigLocation.qml:91
+#: package/contents/ui/ConfigLocation.qml:96
 #, kde-format
 msgctxt "@option:radio"
 msgid "Files linked to the current activity"
 msgstr "链接到当前活动的文件"
 
-#: package/contents/ui/ConfigLocation.qml:100
+#: package/contents/ui/ConfigLocation.qml:107
 #, kde-format
 msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
 msgstr "常用面板项目："
 
-#: package/contents/ui/ConfigLocation.qml:137
+#: package/contents/ui/ConfigLocation.qml:146
 #, kde-format
 msgctxt "@option:radio also label for text field"
 msgid "Custom location:"
 msgstr "自定义位置："
 
-#: package/contents/ui/ConfigLocation.qml:145
+#: package/contents/ui/ConfigLocation.qml:154
 #, kde-format
 msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
 msgstr "输入路径或 URL…"
 
-#: package/contents/ui/ConfigLocation.qml:188
+#: package/contents/ui/ConfigLocation.qml:194
 #, kde-format
 msgctxt "@label:textbox custom widget title"
 msgid "Title:"
 msgstr "标题："
 
-#: package/contents/ui/ConfigLocation.qml:197
+#: package/contents/ui/ConfigLocation.qml:205
 #, kde-format
 msgctxt "@item:inlistbox no title"
 msgid "None"
 msgstr "无"
 
-#: package/contents/ui/ConfigLocation.qml:198
+#: package/contents/ui/ConfigLocation.qml:206
 #, kde-format
 msgctxt "@item:inlistbox default title"
 msgid "Default"
 msgstr "默认"
 
-#: package/contents/ui/ConfigLocation.qml:199
+#: package/contents/ui/ConfigLocation.qml:207
 #, kde-format
 msgctxt "@item:inlistbox full path as title"
 msgid "Full path"
 msgstr "完整路径"
 
-#: package/contents/ui/ConfigLocation.qml:200
+#: package/contents/ui/ConfigLocation.qml:208
 #, kde-format
 msgctxt "@item:inlistbox title from text input field"
 msgid "Custom"
 msgstr "自定义"
 
-#: package/contents/ui/ConfigLocation.qml:209
+#: package/contents/ui/ConfigLocation.qml:217
 #, kde-format
 msgctxt "@info:placeholder custom window title"
 msgid "Enter title…"

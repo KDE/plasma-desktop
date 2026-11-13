@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-02 00:56+0000\n"
+"POT-Creation-Date: 2026-11-12 22:03+0000\n"
 "PO-Revision-Date: 2026-10-10 10:19-0500\n"
 "Last-Translator: Mizufuwa <mizuf@tutamail.com>\n"
 "Language-Team: Toki Pona <kde-i18n-doc@kde.org>\n"
@@ -115,21 +115,21 @@ msgctxt "@title:group for configuration dialog page"
 msgid "Keyboard Shortcuts"
 msgstr "nasin nena"
 
-#: contents/configuration/AppletConfiguration.qml:337
+#: contents/configuration/AppletConfiguration.qml:356
 #, fuzzy, kde-format
 #| msgid "About"
 msgctxt "@title:group for About dialog page"
 msgid "About"
 msgstr "sona"
 
-#: contents/configuration/AppletConfiguration.qml:385
+#: contents/configuration/AppletConfiguration.qml:404
 #, fuzzy, kde-format
 #| msgid "Apply Settings"
 msgctxt "@title:window dialog title"
 msgid "Apply Settings"
 msgstr "o &ni e ale"
 
-#: contents/configuration/AppletConfiguration.qml:386
+#: contents/configuration/AppletConfiguration.qml:405
 #, fuzzy, kde-format
 #| msgid ""
 #| "The settings of the current module have changed. Do you want to apply the "
@@ -139,21 +139,21 @@ msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
 msgstr "sina ante e lawa pi ilo ni. sina wile weka anu awen e ante sina?"
 
-#: contents/configuration/AppletConfiguration.qml:418
+#: contents/configuration/AppletConfiguration.qml:437
 #, fuzzy, kde-format
 #| msgid "OK"
 msgctxt "@action:button"
 msgid "OK"
 msgstr "o ni o weka"
 
-#: contents/configuration/AppletConfiguration.qml:425
+#: contents/configuration/AppletConfiguration.qml:444
 #, fuzzy, kde-format
 #| msgid "Apply"
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "o &ni"
 
-#: contents/configuration/AppletConfiguration.qml:431
+#: contents/configuration/AppletConfiguration.qml:450
 #, fuzzy, kde-format
 #| msgid "Cancel"
 msgctxt "@action:button"
@@ -255,38 +255,59 @@ msgctxt "@action:button"
 msgid "Add Action"
 msgstr "o pana e nasin pali"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:76
+#: contents/configuration/ConfigurationContainmentAppearance.qml:66
+#: contents/configuration/ConfigurationContainmentLayout.qml:88
 #, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Layout changes have been restricted by the system administrator"
 msgstr ""
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:91
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Layout:"
-msgstr "nasin leko:"
-
-#: contents/configuration/ConfigurationContainmentAppearance.qml:114
+#: contents/configuration/ConfigurationContainmentAppearance.qml:80
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Wallpaper type:"
 msgstr "kule pi sitelen supa:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:153
+#: contents/configuration/ConfigurationContainmentAppearance.qml:118
 #, fuzzy, kde-format
 #| msgid "Add Widgets…"
 msgctxt "@action:button"
 msgid "Get New Plugins…"
 msgstr "o lon e ilo lili…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:243
+#: contents/configuration/ConfigurationContainmentLayout.qml:106
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Remove Desktop"
+msgctxt "@label"
+msgid "Desktop:"
+msgstr "o weka e supa"
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:107
+#, kde-format
+msgctxt "@info"
+msgid "Icons for items in the selected location appear on the desktop"
+msgstr ""
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:110
+#, kde-format
+msgctxt "@option:check"
+msgid "Show files and folders"
+msgstr ""
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:118
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Layout:"
+msgstr "nasin leko:"
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:194
 #, kde-format
 msgctxt "@info"
 msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:247
+#: contents/configuration/ConfigurationContainmentLayout.qml:198
 #, fuzzy, kde-format
 #| msgid "Apply"
 msgctxt "@action:button"
@@ -313,6 +334,14 @@ msgid "Wallpaper"
 msgstr "sitelen supa"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
+#, fuzzy, kde-format
+#| msgctxt "@label:listbox"
+#| msgid "Layout:"
+msgctxt "@title:group for configuration dialog page"
+msgid "Layout"
+msgstr "nasin leko:"
+
+#: contents/configuration/ContainmentConfiguration.qml:36
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Mouse Actions"
@@ -900,13 +929,13 @@ msgid_plural "Uninstall (%1 Widgets)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: contents/explorer/WidgetExplorer.qml:395
+#: contents/explorer/WidgetExplorer.qml:379
 #, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets matched the search terms"
 msgstr "mi alasa e namako ilo ala kepeken toki alasa sina."
 
-#: contents/explorer/WidgetExplorer.qml:395
+#: contents/explorer/WidgetExplorer.qml:379
 #, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets available"

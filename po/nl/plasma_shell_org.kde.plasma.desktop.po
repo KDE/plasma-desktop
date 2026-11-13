@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-02 00:56+0000\n"
+"POT-Creation-Date: 2026-11-12 22:03+0000\n"
 "PO-Revision-Date: 2026-11-02 12:48+0100\n"
 "Last-Translator: freek <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -110,19 +110,19 @@ msgctxt "@title:group for configuration dialog page"
 msgid "Keyboard Shortcuts"
 msgstr "Sneltoetsen"
 
-#: contents/configuration/AppletConfiguration.qml:337
+#: contents/configuration/AppletConfiguration.qml:356
 #, kde-format
 msgctxt "@title:group for About dialog page"
 msgid "About"
 msgstr "Info over"
 
-#: contents/configuration/AppletConfiguration.qml:385
+#: contents/configuration/AppletConfiguration.qml:404
 #, kde-format
 msgctxt "@title:window dialog title"
 msgid "Apply Settings"
 msgstr "Instellingen toepassen"
 
-#: contents/configuration/AppletConfiguration.qml:386
+#: contents/configuration/AppletConfiguration.qml:405
 #, kde-format
 msgctxt "@label dialog body"
 msgid ""
@@ -131,19 +131,19 @@ msgstr ""
 "De huidige pagina heeft niet opgeslagen wijzigingen. De wijzigingen "
 "toepassen of ze verwerpen?"
 
-#: contents/configuration/AppletConfiguration.qml:418
+#: contents/configuration/AppletConfiguration.qml:437
 #, kde-format
 msgctxt "@action:button"
 msgid "OK"
 msgstr "OK"
 
-#: contents/configuration/AppletConfiguration.qml:425
+#: contents/configuration/AppletConfiguration.qml:444
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Toepassen"
 
-#: contents/configuration/AppletConfiguration.qml:431
+#: contents/configuration/AppletConfiguration.qml:450
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -235,31 +235,52 @@ msgctxt "@action:button"
 msgid "Add Action"
 msgstr "Actie toevoegen"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:76
+#: contents/configuration/ConfigurationContainmentAppearance.qml:66
+#: contents/configuration/ConfigurationContainmentLayout.qml:88
 #, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "Wijzigingen in de indeling zijn beperkt door de systeembeheerder"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:91
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Layout:"
-msgstr "Indeling:"
-
-#: contents/configuration/ConfigurationContainmentAppearance.qml:114
+#: contents/configuration/ConfigurationContainmentAppearance.qml:80
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Wallpaper type:"
 msgstr "Type achtergrondafbeelding:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:153
+#: contents/configuration/ConfigurationContainmentAppearance.qml:118
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Plugins…"
 msgstr "Haal nieuwe plug-ins op…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:243
+#: contents/configuration/ConfigurationContainmentLayout.qml:106
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Remove Desktop"
+msgctxt "@label"
+msgid "Desktop:"
+msgstr "Bureaublad verwijderen"
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:107
+#, kde-format
+msgctxt "@info"
+msgid "Icons for items in the selected location appear on the desktop"
+msgstr ""
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:110
+#, kde-format
+msgctxt "@option:check"
+msgid "Show files and folders"
+msgstr ""
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:118
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Layout:"
+msgstr "Indeling:"
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:194
 #, kde-format
 msgctxt "@info"
 msgid "Layout changes must be applied before other changes can be made"
@@ -267,7 +288,7 @@ msgstr ""
 "Wijzigingen aan indeling moeten worden toegepast alvorens andere wijzigingen "
 "gemaakt kunnen worden"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:247
+#: contents/configuration/ConfigurationContainmentLayout.qml:198
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Now"
@@ -292,6 +313,14 @@ msgid "Wallpaper"
 msgstr "Achtergrondafbeelding"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
+#, fuzzy, kde-format
+#| msgctxt "@label:listbox"
+#| msgid "Layout:"
+msgctxt "@title:group for configuration dialog page"
+msgid "Layout"
+msgstr "Indeling:"
+
+#: contents/configuration/ContainmentConfiguration.qml:36
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Mouse Actions"
@@ -835,13 +864,13 @@ msgid_plural "Uninstall (%1 Widgets)"
 msgstr[0] "Installatie ongedaan maken (%1 widget)"
 msgstr[1] "Installatie ongedaan maken (%1 widgets)"
 
-#: contents/explorer/WidgetExplorer.qml:395
+#: contents/explorer/WidgetExplorer.qml:379
 #, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets matched the search terms"
 msgstr "Geen widgets gevondenS"
 
-#: contents/explorer/WidgetExplorer.qml:395
+#: contents/explorer/WidgetExplorer.qml:379
 #, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets available"

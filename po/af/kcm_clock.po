@@ -1,0 +1,216 @@
+# UTF-8 test:äëïöü
+# Copyright (C) 2001 Free Software Foundation, Inc.
+# Frikkie Thirion <frix@expertron.co.za>, 2001,2002.
+# Juanita Franz <juanita.franz@vr-web.de>, 2005.
+# Kobus Venter <kabousv@therugby.co.za>, 2005.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkclock stable\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"PO-Revision-Date: 2005-09-14 06:00+0200\n"
+"Last-Translator: Kobus Venter <kabousv@therugby.co.za>\n"
+"Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
+"Language: af\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Frikkie Thirion, Juanita Franz, Kobus Venter"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "frix@expertron.co.za, juanita.franz@vr-web.de, kabousv@therugby.co.za"
+
+#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr ""
+
+#: dateandtime.cpp:249
+#, kde-format
+msgid "Permission to change NTP setting denied"
+msgstr ""
+
+#: dateandtime.cpp:261 main.cpp:89
+#, kde-format
+msgid "Unable to set current time"
+msgstr ""
+
+#: dateandtime.cpp:263
+#, kde-format
+msgid "Permission to change date and time setting denied"
+msgstr ""
+
+#: dateandtime.cpp:274
+#, kde-format
+msgid "Unable to set time zone"
+msgstr ""
+
+#: dateandtime.cpp:276
+#, kde-format
+msgid "Permission to change time zone denied"
+msgstr ""
+
+#: main.cpp:101
+#, kde-format
+msgid "Unable to set timezone"
+msgstr ""
+
+#: ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Set date and time &automatically:"
+msgctxt "@option"
+msgid "Set date and time automatically"
+msgstr "Stel datum en tyd outomaties:"
+
+#: ui/main.qml:54
+#, kde-format
+msgctxt "@action:button as in set the current time on the machine"
+msgid "Set Time"
+msgstr ""
+
+#: ui/main.qml:68
+#, kde-format
+msgctxt "@action:button as in set the current date on the machine"
+msgid "Set Date"
+msgstr ""
+
+#: ui/main.qml:85
+#, fuzzy, kde-format
+#| msgid "Timezone Error"
+msgctxt "@title"
+msgid "Time Zone"
+msgstr "Tydsone Fout"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr ""
+#~ "Hier kan u die stelsel datum se dag van die maand, maand en jaar verander."
+
+#~ msgid ""
+#~ "Here you can change the system time. Click into the hours, minutes or "
+#~ "seconds field to change the relevant value, either using the up and down "
+#~ "buttons to the right or by entering a new value."
+#~ msgstr ""
+#~ "Hier kan u die stelsel tyd verander. Kliek binne-in die ure, minute of "
+#~ "sekondes veld om die relevante waarde te verander deur òf die op en af "
+#~ "knoppies te gebruik na die regterkant of deur 'n nuwe waarde in te tik."
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Date & Time</h1> This control module can be used to set the system "
+#~| "date and time. As these settings do not only affect you as a user, but "
+#~| "rather the whole system, you can only change these settings when you "
+#~| "start the Control Center as root. If you do not have the root password, "
+#~| "but feel the system time should be corrected, please contact your system "
+#~| "administrator."
+#~ msgid ""
+#~ "<h1>Date & Time</h1> This system settings module can be used to set the "
+#~ "system date and time. As these settings do not only affect you as a user, "
+#~ "but rather the whole system, you can only change these settings when you "
+#~ "start the System Settings as root. If you do not have the root password, "
+#~ "but feel the system time should be corrected, please contact your system "
+#~ "administrator."
+#~ msgstr ""
+#~ "<h1>Datum & Tyd</h1> Hierdie kontrole module kan gebruik word om die "
+#~ "stelsel Datum en Tyd te stel. Omrede hierdie instellings nie slegs u as "
+#~ "'n gebruiker affekteer nie, maar eerder die volledige stelsel, kan u "
+#~ "slegs hierdie instellings verander as u die Kontrole Sentrum as root "
+#~ "begin. As u nie die root wagwoord het nie, maar voel die stelsel Tyd moet "
+#~ "gekorrigeer word, kontak asseblief u stelsel administrateur."
+
+#, fuzzy
+#~| msgid ""
+#~| "Public Time Server (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
+#~| "north-america.pool.ntp.org,oceania.pool.ntp.org"
+#~ msgid ""
+#~ "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        "
+#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#~ "pool.ntp.org"
+#~ msgstr ""
+#~ "Publieke Tyd spaarder (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp."
+#~ "org,north-america.pool.ntp.org,oceania.pool.ntp.org"
+
+#~ msgid "Can not set date."
+#~ msgstr "Kan nie datum stel nie."
+
+#, fuzzy
+#~| msgid "Error setting new timezone."
+#~ msgid "Error setting new time zone."
+#~ msgstr "Fout instelling nuwe Tyd Sone."
+
+#, fuzzy
+#~| msgid "Timezone Error"
+#~ msgid "Time zone Error"
+#~ msgstr "Tydsone Fout"
+
+#, fuzzy
+#~| msgid "To change the timezone, select your area from the list below"
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr "Om die tyd sone te verander, kies u area van die lys onder"
+
+#, fuzzy
+#~| msgid "Current local timezone: %1 (%2)"
+#~ msgid "Current local time zone:"
+#~ msgstr "Huidige tyd sone: %1 (%2)"
+
+#, fuzzy
+#~| msgid "Current local timezone: %1 (%2)"
+#~ msgctxt "%1 is name of time zone"
+#~ msgid "Current local time zone: %1"
+#~ msgstr "Huidige tyd sone: %1 (%2)"
+
+#, fuzzy
+#~| msgid "Current local timezone: %1 (%2)"
+#~ msgctxt "%1 is name of time zone, %2 is its abbreviation"
+#~ msgid "Current local time zone: %1 (%2)"
+#~ msgstr "Huidige tyd sone: %1 (%2)"
+
+#~ msgid "KDE Clock Control Module"
+#~ msgstr "Kde Horlosie Kontrole Module"
+
+#~ msgid "Original author"
+#~ msgstr "Oorspronklike outeur"
+
+#~ msgid "Current Maintainer"
+#~ msgstr "Huidige Onderhouer"
+
+#~ msgid "Added NTP support"
+#~ msgstr "Bygevoegde NTP ondersteuning"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Date & Time</h1> This control module can be used to set the system "
+#~| "date and time. As these settings do not only affect you as a user, but "
+#~| "rather the whole system, you can only change these settings when you "
+#~| "start the Control Center as root. If you do not have the root password, "
+#~| "but feel the system time should be corrected, please contact your system "
+#~| "administrator."
+#~ msgid ""
+#~ "<h1>Date & Time</h1> This control module can be used to set the system "
+#~ "date and time. As these settings do not only affect you as a user, but "
+#~ "rather the whole system, you can only change these settings when you "
+#~ "start the System Settings as root. If you do not have the root password, "
+#~ "but feel the system time should be corrected, please contact your system "
+#~ "administrator."
+#~ msgstr ""
+#~ "<h1>Datum & Tyd</h1> Hierdie kontrole module kan gebruik word om die "
+#~ "stelsel Datum en Tyd te stel. Omrede hierdie instellings nie slegs u as "
+#~ "'n gebruiker affekteer nie, maar eerder die volledige stelsel, kan u "
+#~ "slegs hierdie instellings verander as u die Kontrole Sentrum as root "
+#~ "begin. As u nie die root wagwoord het nie, maar voel die stelsel Tyd moet "
+#~ "gekorrigeer word, kontak asseblief u stelsel administrateur."
+
+#~ msgid "kcmclock"
+#~ msgstr "kcm-horlosie"
+
+#, fuzzy
+#~| msgid "Timezone Error"
+#~ msgid "Date/Time Error"
+#~ msgstr "Tydsone Fout"

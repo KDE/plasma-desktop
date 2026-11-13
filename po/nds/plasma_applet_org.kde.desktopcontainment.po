@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 15:19+0000\n"
+"POT-Creation-Date: 2026-11-12 21:38+0000\n"
 "PO-Revision-Date: 2014-08-12 23:57+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -21,21 +21,21 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: package/contents/config/config.qml:17
+#: package/contents/config/config.qml:19
 #, fuzzy, kde-format
 #| msgid "Location"
 msgctxt "@title:group for configuration dialog page"
 msgid "Location"
 msgstr "Steed"
 
-#: package/contents/config/config.qml:24
+#: package/contents/config/config.qml:26
 #, fuzzy, kde-format
 #| msgid "Icons"
 msgctxt "@title:group for configuration dialog page"
 msgid "Icons"
 msgstr "Lüttbiller"
 
-#: package/contents/config/config.qml:31
+#: package/contents/config/config.qml:33
 #, fuzzy, kde-format
 #| msgid "Filter"
 msgctxt "@title:group for configuration dialog page"
@@ -416,75 +416,75 @@ msgctxt "@title:group form label for radiobutton group"
 msgid "Show:"
 msgstr "En Steed wiesen:"
 
-#: package/contents/ui/ConfigLocation.qml:83
+#: package/contents/ui/ConfigLocation.qml:86
 #, fuzzy, kde-format
 #| msgid "Show the Desktop folder"
 msgctxt "@option:radio"
 msgid "Desktop folder"
 msgstr "Den Schriefdischorner wiesen"
 
-#: package/contents/ui/ConfigLocation.qml:91
+#: package/contents/ui/ConfigLocation.qml:96
 #, kde-format
 msgctxt "@option:radio"
 msgid "Files linked to the current activity"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:100
+#: package/contents/ui/ConfigLocation.qml:107
 #, kde-format
 msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:137
+#: package/contents/ui/ConfigLocation.qml:146
 #, fuzzy, kde-format
 #| msgid "Custom title"
 msgctxt "@option:radio also label for text field"
 msgid "Custom location:"
 msgstr "Topasst Titel"
 
-#: package/contents/ui/ConfigLocation.qml:145
+#: package/contents/ui/ConfigLocation.qml:154
 #, fuzzy, kde-format
 #| msgid "Type a path or a URL here"
 msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
 msgstr "Hier en Padd oder URL ingeven"
 
-#: package/contents/ui/ConfigLocation.qml:188
+#: package/contents/ui/ConfigLocation.qml:194
 #, fuzzy, kde-format
 #| msgid "Title"
 msgctxt "@label:textbox custom widget title"
 msgid "Title:"
 msgstr "Titel"
 
-#: package/contents/ui/ConfigLocation.qml:197
+#: package/contents/ui/ConfigLocation.qml:205
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "@item:inlistbox no title"
 msgid "None"
 msgstr "Keen"
 
-#: package/contents/ui/ConfigLocation.qml:198
+#: package/contents/ui/ConfigLocation.qml:206
 #, fuzzy, kde-format
 #| msgid "Default"
 msgctxt "@item:inlistbox default title"
 msgid "Default"
 msgstr "Standard"
 
-#: package/contents/ui/ConfigLocation.qml:199
+#: package/contents/ui/ConfigLocation.qml:207
 #, fuzzy, kde-format
 #| msgid "Full path"
 msgctxt "@item:inlistbox full path as title"
 msgid "Full path"
 msgstr "Heel Padd"
 
-#: package/contents/ui/ConfigLocation.qml:200
+#: package/contents/ui/ConfigLocation.qml:208
 #, fuzzy, kde-format
 #| msgid "Custom title"
 msgctxt "@item:inlistbox title from text input field"
 msgid "Custom"
 msgstr "Topasst Titel"
 
-#: package/contents/ui/ConfigLocation.qml:209
+#: package/contents/ui/ConfigLocation.qml:217
 #, fuzzy, kde-format
 #| msgid "Enter custom title here"
 msgctxt "@info:placeholder custom window title"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-02 00:56+0000\n"
+"POT-Creation-Date: 2026-11-12 22:03+0000\n"
 "PO-Revision-Date: 2026-05-02 18:43+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -114,19 +114,19 @@ msgctxt "@title:group for configuration dialog page"
 msgid "Keyboard Shortcuts"
 msgstr "விசைச் சுருக்குவழிகள்"
 
-#: contents/configuration/AppletConfiguration.qml:337
+#: contents/configuration/AppletConfiguration.qml:356
 #, kde-format
 msgctxt "@title:group for About dialog page"
 msgid "About"
 msgstr "பற்றி"
 
-#: contents/configuration/AppletConfiguration.qml:385
+#: contents/configuration/AppletConfiguration.qml:404
 #, kde-format
 msgctxt "@title:window dialog title"
 msgid "Apply Settings"
 msgstr "அமைப்புகளை செயல்படுத்துவது"
 
-#: contents/configuration/AppletConfiguration.qml:386
+#: contents/configuration/AppletConfiguration.qml:405
 #, kde-format
 msgctxt "@label dialog body"
 msgid ""
@@ -135,19 +135,19 @@ msgstr ""
 "தற்போதைய பக்கத்தின் அமைப்புகள் மாறியுள்ளன. அவற்றை செயல்படுத்த வேண்டுமா, அல்லது கைவிட "
 "வேண்டுமா?"
 
-#: contents/configuration/AppletConfiguration.qml:418
+#: contents/configuration/AppletConfiguration.qml:437
 #, kde-format
 msgctxt "@action:button"
 msgid "OK"
 msgstr "சரி"
 
-#: contents/configuration/AppletConfiguration.qml:425
+#: contents/configuration/AppletConfiguration.qml:444
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "செயல்படுத்து"
 
-#: contents/configuration/AppletConfiguration.qml:431
+#: contents/configuration/AppletConfiguration.qml:450
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -239,37 +239,58 @@ msgctxt "@action:button"
 msgid "Add Action"
 msgstr "செயலை சேர்"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:76
+#: contents/configuration/ConfigurationContainmentAppearance.qml:66
+#: contents/configuration/ConfigurationContainmentLayout.qml:88
 #, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "தளவமைப்பை மாற்றுவதை கணினி நிர்வாகி தடைசெய்துள்ளார்"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:91
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Layout:"
-msgstr "தளவமைப்பு:"
-
-#: contents/configuration/ConfigurationContainmentAppearance.qml:114
+#: contents/configuration/ConfigurationContainmentAppearance.qml:80
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Wallpaper type:"
 msgstr "பின்புல படத்தின் வகை:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:153
+#: contents/configuration/ConfigurationContainmentAppearance.qml:118
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Plugins…"
 msgstr "புதிய செருகுநிரல்களை பதிவிறக்கு…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:243
+#: contents/configuration/ConfigurationContainmentLayout.qml:106
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Remove Desktop"
+msgctxt "@label"
+msgid "Desktop:"
+msgstr "பணிமேடையை நீக்கு"
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:107
+#, kde-format
+msgctxt "@info"
+msgid "Icons for items in the selected location appear on the desktop"
+msgstr ""
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:110
+#, kde-format
+msgctxt "@option:check"
+msgid "Show files and folders"
+msgstr ""
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:118
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Layout:"
+msgstr "தளவமைப்பு:"
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:194
 #, kde-format
 msgctxt "@info"
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "தளவமைப்பை மாற்றியதை செயல்படுத்திய பின்னரே மற்ற மாற்றங்களை நீங்கள் செய்யலாம்"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:247
+#: contents/configuration/ConfigurationContainmentLayout.qml:198
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Now"
@@ -294,6 +315,14 @@ msgid "Wallpaper"
 msgstr "பின்புல படம்"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
+#, fuzzy, kde-format
+#| msgctxt "@label:listbox"
+#| msgid "Layout:"
+msgctxt "@title:group for configuration dialog page"
+msgid "Layout"
+msgstr "தளவமைப்பு:"
+
+#: contents/configuration/ContainmentConfiguration.qml:36
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Mouse Actions"
@@ -834,13 +863,13 @@ msgid_plural "Uninstall (%1 Widgets)"
 msgstr[0] "நிறுவல்நீக்கு (%1 பிளாஸ்மாய்ட்)"
 msgstr[1] "நிறுவல் நீக்கு (%1 பிளாஸ்மாய்டுகள்)"
 
-#: contents/explorer/WidgetExplorer.qml:395
+#: contents/explorer/WidgetExplorer.qml:379
 #, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets matched the search terms"
 msgstr "தேடலுக்கு எந்த பிளாஸ்மாய்டும் பொருந்தவில்லை"
 
-#: contents/explorer/WidgetExplorer.qml:395
+#: contents/explorer/WidgetExplorer.qml:379
 #, kde-format
 msgctxt "@info placeholdermessage"
 msgid "No widgets available"

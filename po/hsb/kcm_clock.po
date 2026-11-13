@@ -1,0 +1,234 @@
+# translation of kcmkclock.po to Upper Sorbian
+# translation of kcmkclock.po to
+# Copyright (C) 2003, 2007 Free Software Foundation, Inc.
+#
+#  <jentschanne@gmx.de>, 2003.
+# Prof. Dr. Eduard Werner <e.werner@rz.uni-leipzig.de>, 2003.
+# Bianka Šwejdźic <hertn@gmx.de>, 2007.
+# Eduard Werner <edi.werner@gmx.de>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkclock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"PO-Revision-Date: 2008-11-21 22:29+0100\n"
+"Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
+"Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
+"Language: hsb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Edward Wornar"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "edi.werner@gmx.de"
+
+#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr ""
+
+#: dateandtime.cpp:249
+#, kde-format
+msgid "Permission to change NTP setting denied"
+msgstr ""
+
+#: dateandtime.cpp:261 main.cpp:89
+#, fuzzy, kde-format
+#| msgid "Unable to contact time server: %1."
+msgid "Unable to set current time"
+msgstr "Njemóžu so z časowym serwerom zwjazać: %1."
+
+#: dateandtime.cpp:263
+#, kde-format
+msgid "Permission to change date and time setting denied"
+msgstr ""
+
+#: dateandtime.cpp:274
+#, fuzzy, kde-format
+#| msgid "Unable to contact time server: %1."
+msgid "Unable to set time zone"
+msgstr "Njemóžu so z časowym serwerom zwjazać: %1."
+
+#: dateandtime.cpp:276
+#, kde-format
+msgid "Permission to change time zone denied"
+msgstr ""
+
+#: main.cpp:101
+#, fuzzy, kde-format
+#| msgid "Unable to contact time server: %1."
+msgid "Unable to set timezone"
+msgstr "Njemóžu so z časowym serwerom zwjazać: %1."
+
+#: ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Set date and time &automatically:"
+msgctxt "@option"
+msgid "Set date and time automatically"
+msgstr "Datum a čas awtomatisce nastajić:"
+
+#: ui/main.qml:54
+#, kde-format
+msgctxt "@action:button as in set the current time on the machine"
+msgid "Set Time"
+msgstr ""
+
+#: ui/main.qml:68
+#, kde-format
+msgctxt "@action:button as in set the current date on the machine"
+msgid "Set Date"
+msgstr ""
+
+#: ui/main.qml:85
+#, fuzzy, kde-format
+#| msgid "Time zone Error"
+msgctxt "@title"
+msgid "Time Zone"
+msgstr "Zmylk časoweho pasa"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr "Tu móžeće systemowy datum změnić."
+
+#~ msgid ""
+#~ "Here you can change the system time. Click into the hours, minutes or "
+#~ "seconds field to change the relevant value, either using the up and down "
+#~ "buttons to the right or by entering a new value."
+#~ msgstr ""
+#~ "Tu móžeće systemowy čas nastajić. Klikńće na pola za hodźiny, mjeńšiny "
+#~ "abo sekundy, zo byšće wotpowědnu hódnotu změnili, pak z kneflomaj za "
+#~ "\"horje\" abo \"dele\" abo přez zapodaće noweje hódnoty."
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Date & Time</h1> This control module can be used to set the system "
+#~| "date and time. As these settings do not only affect you as a user, but "
+#~| "rather the whole system, you can only change these settings when you "
+#~| "start the Control Center as root. If you do not have the root password, "
+#~| "but feel the system time should be corrected, please contact your system "
+#~| "administrator."
+#~ msgid ""
+#~ "<h1>Date & Time</h1> This system settings module can be used to set the "
+#~ "system date and time. As these settings do not only affect you as a user, "
+#~ "but rather the whole system, you can only change these settings when you "
+#~ "start the System Settings as root. If you do not have the root password, "
+#~ "but feel the system time should be corrected, please contact your system "
+#~ "administrator."
+#~ msgstr ""
+#~ "<h1>Datum a čas</h1> Tutón kontrolny modul wužiwa so za nastajenje "
+#~ "systemoweho časa a datuma. Dokelž tutej nastajeni nic jenož Was jako "
+#~ "wužiwarja potrjecha, ale cyły system, móžeće tutej hódnoće jenož změnić, "
+#~ "hdyž kontrolowy centrum jako \"root\" startujeće. Nimaće-li rootowe "
+#~ "hesło, ale měniće, zo měłoj so systemowy čas abo datum hinak nastajić, "
+#~ "skontaktujće so z administratorom Wašeho systema."
+
+#, fuzzy
+#~| msgid ""
+#~| "Public Time Server (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
+#~| "north-america.pool.ntp.org,oceania.pool.ntp.org"
+#~ msgid ""
+#~ "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        "
+#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#~ "pool.ntp.org"
+#~ msgstr ""
+#~ "Zjawny časowy serwer (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
+#~ "north-america.pool.ntp.org,oceania.pool.ntp.org"
+
+#~ msgid "Unable to contact time server: %1."
+#~ msgstr "Njemóžu so z časowym serwerom zwjazać: %1."
+
+#~ msgid "Can not set date."
+#~ msgstr "Njemóžu datum změnić."
+
+#~ msgid "Error setting new time zone."
+#~ msgstr "Zmylk při nastajenju noweho časoweho pasa!"
+
+#~ msgid "Time zone Error"
+#~ msgstr "Zmylk časoweho pasa"
+
+#, fuzzy
+#~| msgid "To change the local time zone, select your area from the list below"
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr "Za změnu lokalneho časa wubjerće swój časowy pas z lisćiny deleka"
+
+#, fuzzy
+#~| msgid "Current local time zone: %1 (%2)"
+#~ msgid "Current local time zone:"
+#~ msgstr "Tuchwilne localne časowy pas: %1 (%2)"
+
+#, fuzzy
+#~| msgid "Current local time zone: %1 (%2)"
+#~ msgctxt "%1 is name of time zone"
+#~ msgid "Current local time zone: %1"
+#~ msgstr "Tuchwilne localne časowy pas: %1 (%2)"
+
+#, fuzzy
+#~| msgid "Current local time zone: %1 (%2)"
+#~ msgctxt "%1 is name of time zone, %2 is its abbreviation"
+#~ msgid "Current local time zone: %1 (%2)"
+#~ msgstr "Tuchwilne localne časowy pas: %1 (%2)"
+
+#~ msgid "KDE Clock Control Module"
+#~ msgstr "KDE-modul za časnik"
+
+#~ msgid "(c) 1996 - 2001 Luca Montecchiani"
+#~ msgstr "(c) 1996 - 2001 Luca Montecchiani"
+
+#~ msgid "Luca Montecchiani"
+#~ msgstr "Luca Montecchiani"
+
+#~ msgid "Original author"
+#~ msgstr "Prěnjotny awtor"
+
+#~ msgid "Paul Campbell"
+#~ msgstr "Paul Campbell"
+
+#~ msgid "Current Maintainer"
+#~ msgstr "Tuchwilny zastaraćel"
+
+#~ msgid "Benjamin Meyer"
+#~ msgstr "Benjamin Meyer"
+
+#~ msgid "Added NTP support"
+#~ msgstr "Podpěra za NTP dodata"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Date & Time</h1> This control module can be used to set the system "
+#~| "date and time. As these settings do not only affect you as a user, but "
+#~| "rather the whole system, you can only change these settings when you "
+#~| "start the Control Center as root. If you do not have the root password, "
+#~| "but feel the system time should be corrected, please contact your system "
+#~| "administrator."
+#~ msgid ""
+#~ "<h1>Date & Time</h1> This control module can be used to set the system "
+#~ "date and time. As these settings do not only affect you as a user, but "
+#~ "rather the whole system, you can only change these settings when you "
+#~ "start the System Settings as root. If you do not have the root password, "
+#~ "but feel the system time should be corrected, please contact your system "
+#~ "administrator."
+#~ msgstr ""
+#~ "<h1>Datum a čas</h1> Tutón kontrolny modul wužiwa so za nastajenje "
+#~ "systemoweho časa a datuma. Dokelž tutej nastajeni nic jenož Was jako "
+#~ "wužiwarja potrjecha, ale cyły system, móžeće tutej hódnoće jenož změnić, "
+#~ "hdyž kontrolowy centrum jako \"root\" startujeće. Nimaće-li rootowe "
+#~ "hesło, ale měniće, zo měłoj so systemowy čas abo datum hinak nastajić, "
+#~ "skontaktujće so z administratorom Wašeho systema."
+
+#~ msgid "kcmclock"
+#~ msgstr "kcmclock"
+
+#~ msgid "Failed to set system date/time/time zone."
+#~ msgstr "Njemóžach systemowy čas/datum/časowy pas nastajić."
+
+#~ msgid "Date/Time Error"
+#~ msgstr "Zmylk časa/datuma"

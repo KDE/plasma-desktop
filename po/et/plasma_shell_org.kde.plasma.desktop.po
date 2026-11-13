@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-02 00:56+0000\n"
+"POT-Creation-Date: 2026-11-12 22:03+0000\n"
 "PO-Revision-Date: 2020-10-08 11:52+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -125,21 +125,21 @@ msgctxt "@title:group for configuration dialog page"
 msgid "Keyboard Shortcuts"
 msgstr "Kiirklahvid"
 
-#: contents/configuration/AppletConfiguration.qml:337
+#: contents/configuration/AppletConfiguration.qml:356
 #, fuzzy, kde-format
 #| msgid "About"
 msgctxt "@title:group for About dialog page"
 msgid "About"
 msgstr "Teave"
 
-#: contents/configuration/AppletConfiguration.qml:385
+#: contents/configuration/AppletConfiguration.qml:404
 #, fuzzy, kde-format
 #| msgid "Apply Settings"
 msgctxt "@title:window dialog title"
 msgid "Apply Settings"
 msgstr "Rakenda seadistused"
 
-#: contents/configuration/AppletConfiguration.qml:386
+#: contents/configuration/AppletConfiguration.qml:405
 #, fuzzy, kde-format
 #| msgid ""
 #| "The settings of the current module have changed. Do you want to apply the "
@@ -151,21 +151,21 @@ msgstr ""
 "Aktiivse mooduli seadistusi on muudetud. Kas muudatused rakendada või "
 "tühistada?"
 
-#: contents/configuration/AppletConfiguration.qml:418
+#: contents/configuration/AppletConfiguration.qml:437
 #, fuzzy, kde-format
 #| msgid "OK"
 msgctxt "@action:button"
 msgid "OK"
 msgstr "OK"
 
-#: contents/configuration/AppletConfiguration.qml:425
+#: contents/configuration/AppletConfiguration.qml:444
 #, fuzzy, kde-format
 #| msgid "Apply"
 msgctxt "@action:button"
 msgid "Apply"
 msgstr "Rakenda"
 
-#: contents/configuration/AppletConfiguration.qml:431
+#: contents/configuration/AppletConfiguration.qml:450
 #, fuzzy, kde-format
 #| msgid "Cancel"
 msgctxt "@action:button"
@@ -270,42 +270,62 @@ msgctxt "@action:button"
 msgid "Add Action"
 msgstr "Lisa toiming"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:76
+#: contents/configuration/ConfigurationContainmentAppearance.qml:66
+#: contents/configuration/ConfigurationContainmentLayout.qml:88
 #, fuzzy, kde-format
 #| msgid "Layout changes have been restricted by the system administrator"
 msgctxt "@info:status inlinemessage"
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "Süsteemiadministraator on keelanud paigutuse muutmise"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:91
-#, fuzzy, kde-format
-#| msgid "Layout:"
-msgctxt "@label:listbox"
-msgid "Layout:"
-msgstr "Paigutus:"
-
-#: contents/configuration/ConfigurationContainmentAppearance.qml:114
+#: contents/configuration/ConfigurationContainmentAppearance.qml:80
 #, fuzzy, kde-format
 #| msgid "Wallpaper Type:"
 msgctxt "@label:listbox"
 msgid "Wallpaper type:"
 msgstr "Taustapildi tüüp:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:153
+#: contents/configuration/ConfigurationContainmentAppearance.qml:118
 #, fuzzy, kde-format
 #| msgid "Get New Plugins..."
 msgctxt "@action:button"
 msgid "Get New Plugins…"
 msgstr "Hangi uusi pluginaid ..."
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:243
+#: contents/configuration/ConfigurationContainmentLayout.qml:106
+#, fuzzy, kde-format
+#| msgid "Remove Panel"
+msgctxt "@label"
+msgid "Desktop:"
+msgstr "Eemalda paneel"
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:107
+#, kde-format
+msgctxt "@info"
+msgid "Icons for items in the selected location appear on the desktop"
+msgstr ""
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:110
+#, kde-format
+msgctxt "@option:check"
+msgid "Show files and folders"
+msgstr ""
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:118
+#, fuzzy, kde-format
+#| msgid "Layout:"
+msgctxt "@label:listbox"
+msgid "Layout:"
+msgstr "Paigutus:"
+
+#: contents/configuration/ConfigurationContainmentLayout.qml:194
 #, fuzzy, kde-format
 #| msgid "Layout changes must be applied before other changes can be made"
 msgctxt "@info"
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "Enne muude muutuste tegemist tuleb paigutuse muudatused rakendada."
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:247
+#: contents/configuration/ConfigurationContainmentLayout.qml:198
 #, fuzzy, kde-format
 #| msgid "Apply now"
 msgctxt "@action:button"
@@ -333,6 +353,13 @@ msgid "Wallpaper"
 msgstr "Taustapilt"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
+#, fuzzy, kde-format
+#| msgid "Layout:"
+msgctxt "@title:group for configuration dialog page"
+msgid "Layout"
+msgstr "Paigutus:"
+
+#: contents/configuration/ContainmentConfiguration.qml:36
 #, fuzzy, kde-format
 #| msgid "Mouse Actions"
 msgctxt "@title:group for configuration dialog page"
@@ -919,14 +946,14 @@ msgid_plural "Uninstall (%1 Widgets)"
 msgstr[0] "Eemalda vidin"
 msgstr[1] "Eemalda vidin"
 
-#: contents/explorer/WidgetExplorer.qml:395
+#: contents/explorer/WidgetExplorer.qml:379
 #, fuzzy, kde-format
 #| msgid "No widgets matched the search terms"
 msgctxt "@info placeholdermessage"
 msgid "No widgets matched the search terms"
 msgstr "Otsinguga ei sobi ükski vidin"
 
-#: contents/explorer/WidgetExplorer.qml:395
+#: contents/explorer/WidgetExplorer.qml:379
 #, fuzzy, kde-format
 #| msgid "No widgets available"
 msgctxt "@info placeholdermessage"

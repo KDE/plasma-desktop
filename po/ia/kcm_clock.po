@@ -1,0 +1,231 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# g.sora <g.sora@tiscali.it>, 2010, 2011.
+# Giovanni Sora <g.sora@tiscali.it>, 2012, 2013, 2020, 2021, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"PO-Revision-Date: 2023-11-10 10:31+0100\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.12.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Giovanni Sora"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "g.sora@tiscali.it"
+
+#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr "Incapace a cambiar preferentias de NTP"
+
+#: dateandtime.cpp:249
+#, fuzzy, kde-format
+#| msgid "Unable to change NTP settings"
+msgid "Permission to change NTP setting denied"
+msgstr "Incapace a cambiar preferentias de NTP"
+
+#: dateandtime.cpp:261 main.cpp:89
+#, kde-format
+msgid "Unable to set current time"
+msgstr "Incapace a fixar le tempore currente"
+
+#: dateandtime.cpp:263
+#, kde-format
+msgid "Permission to change date and time setting denied"
+msgstr ""
+
+#: dateandtime.cpp:274
+#, fuzzy, kde-format
+#| msgid "Unable to set timezone"
+msgid "Unable to set time zone"
+msgstr "Incapace  a fixare le fuso horari"
+
+#: dateandtime.cpp:276
+#, kde-format
+msgid "Permission to change time zone denied"
+msgstr ""
+
+#: main.cpp:101
+#, kde-format
+msgid "Unable to set timezone"
+msgstr "Incapace  a fixare le fuso horari"
+
+#: ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Set date and time &automatically"
+msgctxt "@option"
+msgid "Set date and time automatically"
+msgstr "Fixa &automaticamente data e tempore"
+
+#: ui/main.qml:54
+#, kde-format
+msgctxt "@action:button as in set the current time on the machine"
+msgid "Set Time"
+msgstr ""
+
+#: ui/main.qml:68
+#, kde-format
+msgctxt "@action:button as in set the current date on the machine"
+msgid "Set Date"
+msgstr ""
+
+#: ui/main.qml:85
+#, fuzzy, kde-format
+#| msgid "Time Zone"
+msgctxt "@title"
+msgid "Time Zone"
+msgstr "Fuso Horari"
+
+#~ msgid "Date and Time"
+#~ msgstr "Data e Tempore"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr ""
+#~ "Ci tu pote cambiar die del mense, le mense e le anno de data de systema, "
+
+#~ msgid ""
+#~ "Here you can change the system time. Click into the hours, minutes or "
+#~ "seconds field to change the relevant value, either using the up and down "
+#~ "buttons to the right or by entering a new value."
+#~ msgstr ""
+#~ "Ci tu pote cambiar le tempore de systema. Tu pressa sur le campos de "
+#~ "horas, minutas o secundas pro cambiar le valor, o tu usa buttones alto e "
+#~ "basso aldextere del valor de insertar o per insertar un nove valor. "
+
+#~ msgid ""
+#~ "<h1>Date & Time</h1> This system settings module can be used to set the "
+#~ "system date and time. As these settings do not only affect you as a user, "
+#~ "but rather the whole system, you can only change these settings when you "
+#~ "start the System Settings as root. If you do not have the root password, "
+#~ "but feel the system time should be corrected, please contact your system "
+#~ "administrator."
+#~ msgstr ""
+#~ "<h1>Data & Tempore</h1> Iste modulo de preferentias de systema pote esser "
+#~ "usate pro fixar le data e le tempore de systema. Quia iste preferentias "
+#~ "non influentia te sol como usator, sed plus tosto le integre systema, tu "
+#~ "solmente pote cambiar los quando tu initia le preferentias de systema "
+#~ "como super usator (root). Si tu non ha le contrasigno de super usator, si "
+#~ "tu crede que le systema debe esser corrigite, pro favor tu continge tu "
+#~ "administrator de systema."
+
+#~ msgid "&Time server:"
+#~ msgstr "Servitor de &Tempore:"
+
+#~ msgid ""
+#~ "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
+#~ "enable automatic updating of date and time."
+#~ msgstr ""
+#~ "Nulle utilitate de NTP ha essite trovate. Tu installa commandos  "
+#~ "'ntpdate' o 'rdate' pro habilitar automaticamente le actualisation de "
+#~ "data e tempore."
+
+#~ msgid ""
+#~ "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        "
+#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#~ "pool.ntp.org"
+#~ msgstr ""
+#~ "Servitor de Tempore Public (pool.ntp.org),asia.pool.ntp.org,europe.pool."
+#~ "ntp.org,north-america.pool.ntp.org,oceania.pool.ntp.org"
+
+#~ msgid "Unable to contact time server: %1."
+#~ msgstr "Il non pote continger servitor te tempore: %1"
+
+#~ msgid "Can not set date."
+#~ msgstr "Il non pote fixar data."
+
+#~ msgid "Error setting new time zone."
+#~ msgstr "Error in fixar nove fuso horari."
+
+#~ msgid "Time zone Error"
+#~ msgstr "Error de Fuso horari"
+
+#~ msgid "Unable to authenticate/execute the action: %1, %2"
+#~ msgstr "Il non pote authenticar/executar le action: %1,%2"
+
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr ""
+#~ "Pro cambiar le fuso horari local, tu selige un area ex le lista a basso."
+
+#~ msgid "Current local time zone:"
+#~ msgstr "Currente fuso horari  local:"
+
+#~ msgid "Search…"
+#~ msgstr "Cerca…"
+
+#~ msgctxt "%1 is name of time zone"
+#~ msgid "Current local time zone: %1"
+#~ msgstr "Currente fuso horari  local: %1"
+
+#~ msgctxt "%1 is name of time zone, %2 is its abbreviation"
+#~ msgid "Current local time zone: %1 (%2)"
+#~ msgstr "Fuso horari local currente: %1 (%2)"
+
+#~ msgctxt "Define an area in the time zone, like a town area"
+#~ msgid "Area"
+#~ msgstr "Area"
+
+#~ msgctxt "Time zone"
+#~ msgid "Region"
+#~ msgstr "Region"
+
+#~ msgid "Comment"
+#~ msgstr "Commento"
+
+#~ msgid "KDE Clock Control Module"
+#~ msgstr "Modulo de controlo de horologio de KDE"
+
+#~ msgid "(c) 1996 - 2001 Luca Montecchiani"
+#~ msgstr "(c) 1996 - 2001 Luca Montecchiani"
+
+#~ msgid "Luca Montecchiani"
+#~ msgstr "Luca Montecchiani"
+
+#~ msgid "Original author"
+#~ msgstr "Autor original"
+
+#~ msgid "Paul Campbell"
+#~ msgstr "Paul Campbell"
+
+#~ msgid "Current Maintainer"
+#~ msgstr "Mantenitor Currente"
+
+#~ msgid "Benjamin Meyer"
+#~ msgstr "Benjamin Meyer"
+
+#~ msgid "Added NTP support"
+#~ msgstr "Addite supporto de NTP"
+
+#~ msgid ""
+#~ "<h1>Date & Time</h1> This control module can be used to set the system "
+#~ "date and time. As these settings do not only affect you as a user, but "
+#~ "rather the whole system, you can only change these settings when you "
+#~ "start the System Settings as root. If you do not have the root password, "
+#~ "but feel the system time should be corrected, please contact your system "
+#~ "administrator."
+#~ msgstr ""
+#~ "<h1>Data & Tempore</h1> Iste modulo de preferentias de systema pote esser "
+#~ "usate pro fixar le data e le tempore de systema. Quia iste preferentias "
+#~ "non influentia te sol como usator, sed plus tosto le integre systema, tu "
+#~ "solmente pote cambiar los quando tu initia le preferentias de Systema "
+#~ "como super usator (root). Si tu non ha le contrasigno de super usator, si "
+#~ "tu crede que le systema debe esser corrigite, pro favor tu continge tu "
+#~ "administrator de systema."
+
+#~ msgid "kcmclock"
+#~ msgstr "kcmclock"

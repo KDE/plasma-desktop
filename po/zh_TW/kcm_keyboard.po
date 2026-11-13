@@ -9,20 +9,20 @@
 # pan93412 <pan93412@gmail.com>, 2018, 2020.
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2008, 2010.
 # Chaoting Liu <brli@chakralinux.org>, 2021.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2022-2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-10 00:59+0000\n"
-"PO-Revision-Date: 2026-01-09 00:02+0900\n"
+"PO-Revision-Date: 2026-11-12 18:49+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
@@ -316,7 +316,7 @@ msgstr "佈局"
 #, kde-format
 msgctxt "@info:usagetip %1 is the name of a keyboard layout"
 msgid "Using system-wide layout “%1”"
-msgstr ""
+msgstr "使用系統佈局「%1」"
 
 #: ui/main.qml:252
 #, kde-kuit-format
@@ -325,6 +325,8 @@ msgid ""
 "To override this or add more layouts for this user account, press the "
 "<interface>Add…</interface> button."
 msgstr ""
+"要蓋過此設定值或為這個使用者帳號加入更多佈局，請點擊<interface>新增…</"
+"interface>按鈕。"
 
 #: ui/main.qml:268
 #, kde-format

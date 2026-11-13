@@ -1,0 +1,230 @@
+# Indonesian translations for kcmclock package.
+# Copyright (C) 2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kcmclock package.
+# A. Akbar Hidayat <keripix@gmail.com>, 2010.
+# Andhika Padmawan <andhika.padmawan@gmail.com>, 2014.
+# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2022, 2024 Wantoyo <wantoyek@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"PO-Revision-Date: 2024-10-29 18:27+0700\n"
+"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.08.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "A. Akbar Hidayat,Andhika Padmawan,Wantoyo"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "keripix@gmail.com,andhika.padmawan@gmail.com,wantoyek@gmail.com"
+
+#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr "Tak dapat mengubah pengaturan NTP"
+
+#: dateandtime.cpp:249
+#, fuzzy, kde-format
+#| msgid "Unable to change NTP settings"
+msgid "Permission to change NTP setting denied"
+msgstr "Tak dapat mengubah pengaturan NTP"
+
+#: dateandtime.cpp:261 main.cpp:89
+#, kde-format
+msgid "Unable to set current time"
+msgstr "Tak dapat mengeset waktu saat ini"
+
+#: dateandtime.cpp:263
+#, kde-format
+msgid "Permission to change date and time setting denied"
+msgstr ""
+
+#: dateandtime.cpp:274
+#, fuzzy, kde-format
+#| msgid "Unable to set timezone"
+msgid "Unable to set time zone"
+msgstr "Tak dapat mengeset zona waktu"
+
+#: dateandtime.cpp:276
+#, kde-format
+msgid "Permission to change time zone denied"
+msgstr ""
+
+#: main.cpp:101
+#, kde-format
+msgid "Unable to set timezone"
+msgstr "Tak dapat mengeset zona waktu"
+
+#: ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Set date and time &automatically"
+msgctxt "@option"
+msgid "Set date and time automatically"
+msgstr "Mengeset tanggal dan waktu secara &otomatis"
+
+#: ui/main.qml:54
+#, kde-format
+msgctxt "@action:button as in set the current time on the machine"
+msgid "Set Time"
+msgstr ""
+
+#: ui/main.qml:68
+#, kde-format
+msgctxt "@action:button as in set the current date on the machine"
+msgid "Set Date"
+msgstr ""
+
+#: ui/main.qml:85
+#, fuzzy, kde-format
+#| msgid "Time Zone"
+msgctxt "@title"
+msgid "Time Zone"
+msgstr "Zona Waktu"
+
+#~ msgid "Date and Time"
+#~ msgstr "Tanggal dan Waktu"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr "Di sini anda dapat mengubah tanggal, bulan dan tahun sistem."
+
+#~ msgid ""
+#~ "Here you can change the system time. Click into the hours, minutes or "
+#~ "seconds field to change the relevant value, either using the up and down "
+#~ "buttons to the right or by entering a new value."
+#~ msgstr ""
+#~ "Di sini anda dapat mengubah waktu pada sistem anda. Tekan pada bidang "
+#~ "jam, menit atau detik untuk mengubah nilai yang bersangkutan, baik dengan "
+#~ "cara menggunakan tombol atas dan bawah atau memasukkan sebuah nilai baru."
+
+#~ msgid ""
+#~ "<h1>Date & Time</h1> This system settings module can be used to set the "
+#~ "system date and time. As these settings do not only affect you as a user, "
+#~ "but rather the whole system, you can only change these settings when you "
+#~ "start the System Settings as root. If you do not have the root password, "
+#~ "but feel the system time should be corrected, please contact your system "
+#~ "administrator."
+#~ msgstr ""
+#~ "<h1>Tanggal & Waktu</h1> Modul system settings ini dapat digunakan untuk "
+#~ "menetapkan tanggal dan waktu. Karena pengaturan ini tidak hanya berdampak "
+#~ "pada user anda, tetapi pada seluruh sistem, anda hanya dapat merubahnya "
+#~ "dengan memulai System Settings sebagai root. Jika anda tidak memiliki "
+#~ "password root, tetapi merasa bahwa waktu pada sistem perlu diperbaiki, "
+#~ "silahkan menghubungi pengurus sistem anda."
+
+#~ msgid "&Time server:"
+#~ msgstr "&Server waktu:"
+
+#~ msgid ""
+#~ "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
+#~ "enable automatic updating of date and time."
+#~ msgstr ""
+#~ "Tak ada utilitas NTP yang ditemukan. Instal perintah 'ntpdate' atau "
+#~ "'rdate' untuk mengaktifkam pembaruan otomatis tanggal dan waktu."
+
+#~ msgid ""
+#~ "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        "
+#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#~ "pool.ntp.org"
+#~ msgstr ""
+#~ "Server Waktu Publik (pool.ntp.org),        asia.pool.ntp.org,        "
+#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#~ "pool.ntp.org"
+
+#~ msgid "Unable to contact time server: %1."
+#~ msgstr "Tidak dapat menghubungi server: %1."
+
+#~ msgid "Can not set date."
+#~ msgstr "Tidak bisa mengeset tanggal."
+
+#~ msgid "Error setting new time zone."
+#~ msgstr "Terjadi galat dalam mengeset zona waktu yang baru."
+
+#~ msgid "Time zone Error"
+#~ msgstr "Galat zona waktu"
+
+#~ msgid "Unable to authenticate/execute the action: %1, %2"
+#~ msgstr "Tidak dapat mengontentikasi/mengeksekusi perintah: %1, %2"
+
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr ""
+#~ "Untuk mengubah zona waktu lokal, pilih zona anda pada daftar di bawah."
+
+#~ msgid "Current local time zone:"
+#~ msgstr "Zona waktu lokal sekarang:"
+
+#~ msgid "Search…"
+#~ msgstr "Cari..."
+
+#~ msgctxt "%1 is name of time zone"
+#~ msgid "Current local time zone: %1"
+#~ msgstr "Zona waktu lokal sekarang: %1"
+
+#~ msgctxt "%1 is name of time zone, %2 is its abbreviation"
+#~ msgid "Current local time zone: %1 (%2)"
+#~ msgstr "Waktu zona lokal sekarang: %1 (%2)"
+
+#~ msgctxt "Define an area in the time zone, like a town area"
+#~ msgid "Area"
+#~ msgstr "Area"
+
+#~ msgctxt "Time zone"
+#~ msgid "Region"
+#~ msgstr "Wilayah"
+
+#~ msgid "Comment"
+#~ msgstr "Komentar"
+
+#~ msgid "KDE Clock Control Module"
+#~ msgstr "Modul Kendali Jam KDE"
+
+#~ msgid "(c) 1996 - 2001 Luca Montecchiani"
+#~ msgstr "(c) 1996 - 2001 Luca Montecchiani"
+
+#~ msgid "Luca Montecchiani"
+#~ msgstr "Luca Montecchiani"
+
+#~ msgid "Original author"
+#~ msgstr "Penulis asli"
+
+#~ msgid "Paul Campbell"
+#~ msgstr "Paul Campbell"
+
+#~ msgid "Current Maintainer"
+#~ msgstr "Pemelihara Sekarang"
+
+#~ msgid "Benjamin Meyer"
+#~ msgstr "Benjamin Meyer"
+
+#~ msgid "Added NTP support"
+#~ msgstr "Menambahkan dukungan NTP"
+
+#~ msgid ""
+#~ "<h1>Date & Time</h1> This control module can be used to set the system "
+#~ "date and time. As these settings do not only affect you as a user, but "
+#~ "rather the whole system, you can only change these settings when you "
+#~ "start the System Settings as root. If you do not have the root password, "
+#~ "but feel the system time should be corrected, please contact your system "
+#~ "administrator."
+#~ msgstr ""
+#~ "<h1>Tanggal & Waktu</h1> Modul pengaturan sistem ini dapat digunakan "
+#~ "untuk mengeset tanggal dan waktu. Karena pengaturan ini tidak hanya "
+#~ "berdampak pada user anda, tetapi pada seluruh sistem, anda hanya dapat "
+#~ "merubahnya dengan memulai System Settings sebagai root. Jika anda tidak "
+#~ "memiliki password root, tetapi merasa bahwa waktu pada sistem perlu "
+#~ "diperbaiki, silahkan menghubungi pengurus sistem anda."
+
+#~ msgid "kcmclock"
+#~ msgstr "kcmclock"

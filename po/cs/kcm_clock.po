@@ -1,0 +1,161 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Lukáš Tinkl <ltinkl@redhat.com>, 2011.
+# Vít Pelčák <vit@pelcak.org>, 2011, 2013, 2014, 2015.
+# Tomáš Chvátal <tomas.chvatal@gmail.com>, 2013.
+# SPDX-FileCopyrightText: 2021, 2023, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2026 Libor Filípek <libor.filipek@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkclock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"PO-Revision-Date: 2026-11-12 11:35+0100\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 26.08.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Lukáš Tinkl,Libor Filípek"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "lukas@kde.org,libor.filipek@gmail.com"
+
+#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr "Nelze změnit nastavení NTP"
+
+#: dateandtime.cpp:249
+#, fuzzy, kde-format
+#| msgid "Unable to change NTP settings"
+msgid "Permission to change NTP setting denied"
+msgstr "Nelze změnit nastavení NTP"
+
+#: dateandtime.cpp:261 main.cpp:89
+#, kde-format
+msgid "Unable to set current time"
+msgstr "Nelze nastavit aktuální čas"
+
+#: dateandtime.cpp:263
+#, kde-format
+msgid "Permission to change date and time setting denied"
+msgstr ""
+
+#: dateandtime.cpp:274
+#, fuzzy, kde-format
+#| msgid "Unable to set timezone"
+msgid "Unable to set time zone"
+msgstr "Nelze nastavit časové pásmo"
+
+#: dateandtime.cpp:276
+#, kde-format
+msgid "Permission to change time zone denied"
+msgstr ""
+
+#: main.cpp:101
+#, kde-format
+msgid "Unable to set timezone"
+msgstr "Nelze nastavit časové pásmo"
+
+#: ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Set date and time &automatically"
+msgctxt "@option"
+msgid "Set date and time automatically"
+msgstr "N&astavit automaticky datum a čas"
+
+#: ui/main.qml:54
+#, kde-format
+msgctxt "@action:button as in set the current time on the machine"
+msgid "Set Time"
+msgstr ""
+
+#: ui/main.qml:68
+#, kde-format
+msgctxt "@action:button as in set the current date on the machine"
+msgid "Set Date"
+msgstr ""
+
+#: ui/main.qml:85
+#, fuzzy, kde-format
+#| msgid "Time Zone"
+msgctxt "@title"
+msgid "Time Zone"
+msgstr "Časové pásmo"
+
+#~ msgid "Date and Time"
+#~ msgstr "Datum a čas"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr "Zde je možné změnit systémové datum."
+
+#~ msgid ""
+#~ "Here you can change the system time. Click into the hours, minutes or "
+#~ "seconds field to change the relevant value, either using the up and down "
+#~ "buttons to the right or by entering a new value."
+#~ msgstr ""
+#~ "Zde je možné změnit systémový čas. Klikněte do políček hodiny, minuty "
+#~ "nebo sekundy ke změně příslušné hodnoty. Hodnota se mění buď tlačítky "
+#~ "'+'/'-' nebo vložením hodnoty."
+
+#~ msgid ""
+#~ "<h1>Date & Time</h1> This system settings module can be used to set the "
+#~ "system date and time. As these settings do not only affect you as a user, "
+#~ "but rather the whole system, you can only change these settings when you "
+#~ "start the System Settings as root. If you do not have the root password, "
+#~ "but feel the system time should be corrected, please contact your system "
+#~ "administrator."
+#~ msgstr ""
+#~ "<h1>Datum a čas</h1> Tento modul Nastavení systému je možné použít k "
+#~ "nastavení systémového data a času. Protože se tato nastavení netýkají "
+#~ "pouze vás jako uživatele, ale celého systému, je možné změnit tato "
+#~ "nastavení pouze v případě, že jste spustili Nastavení systému jako "
+#~ "superuživatel root. Nemáte-li heslo uživatele root a přesto si myslíte, "
+#~ "že by bylo třeba opravit nastavení systémového času, pak prosím "
+#~ "kontaktujte svého správce systému."
+
+#~ msgid "&Time server:"
+#~ msgstr "Server N&TP:"
+
+#~ msgid ""
+#~ "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
+#~ "enable automatic updating of date and time."
+#~ msgstr ""
+#~ "Nebyl nalezen NTP výstup. Nainstalujte program 'ntpdate' nebo 'rdate' k "
+#~ "povolení automatické aktualizace data a času."
+
+#~ msgid ""
+#~ "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        "
+#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#~ "pool.ntp.org"
+#~ msgstr ""
+#~ "Veřejný server času (pool.ntp.org),        asia.pool.ntp.org,        "
+#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#~ "pool.ntp.org"
+
+#~ msgid "Unable to contact time server: %1."
+#~ msgstr "Nelze kontaktovat časový server: %1."
+
+#~ msgid "Can not set date."
+#~ msgstr "Nelze nastavit datum."
+
+#~ msgid "Error setting new time zone."
+#~ msgstr "Chyba při nastavování nového časového pásma."
+
+#~ msgid "Time zone Error"
+#~ msgstr "Chyba - časové pásmo"
+
+#~ msgid "Unable to authenticate/execute the action: %1, %2"
+#~ msgstr "Nelze ověřit/vykonat činnost: %1, %2"

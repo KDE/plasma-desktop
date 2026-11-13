@@ -1,0 +1,159 @@
+# translation of kcmkclock.po to Тоҷикӣ
+# Copyright (C) 2003 Free Software Foundation, Inc.
+# Victor Ibragimov <victor.ibragimov@gmail.com>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkclock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"PO-Revision-Date: 2019-09-19 17:25+0500\n"
+"Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
+"Language-Team: English <kde-i18n-doc@kde.org>\n"
+"Language: tg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.04.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Victor Ibragimov"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "victor.ibragimov@gmail.com"
+
+#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr "Танзимоти NTP тағйир дода намешавад"
+
+#: dateandtime.cpp:249
+#, fuzzy, kde-format
+#| msgid "Unable to change NTP settings"
+msgid "Permission to change NTP setting denied"
+msgstr "Танзимоти NTP тағйир дода намешавад"
+
+#: dateandtime.cpp:261 main.cpp:89
+#, kde-format
+msgid "Unable to set current time"
+msgstr "Вақти ҷорӣ танзим карда намешавад"
+
+#: dateandtime.cpp:263
+#, kde-format
+msgid "Permission to change date and time setting denied"
+msgstr ""
+
+#: dateandtime.cpp:274
+#, fuzzy, kde-format
+#| msgid "Unable to set timezone"
+msgid "Unable to set time zone"
+msgstr "Минтақаи вақт танзим карда намешавад"
+
+#: dateandtime.cpp:276
+#, kde-format
+msgid "Permission to change time zone denied"
+msgstr ""
+
+#: main.cpp:101
+#, kde-format
+msgid "Unable to set timezone"
+msgstr "Минтақаи вақт танзим карда намешавад"
+
+#: ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Set date and time &automatically"
+msgctxt "@option"
+msgid "Set date and time automatically"
+msgstr "&Сана ва вақт ба таври худкор танзим карда шавад"
+
+#: ui/main.qml:54
+#, kde-format
+msgctxt "@action:button as in set the current time on the machine"
+msgid "Set Time"
+msgstr ""
+
+#: ui/main.qml:68
+#, kde-format
+msgctxt "@action:button as in set the current date on the machine"
+msgid "Set Date"
+msgstr ""
+
+#: ui/main.qml:85
+#, fuzzy, kde-format
+#| msgid "Time Zone"
+msgctxt "@title"
+msgid "Time Zone"
+msgstr "Минтақаи вақт"
+
+#~ msgid "Date and Time"
+#~ msgstr "Сана ва вақт"
+
+#~ msgid "&Time server:"
+#~ msgstr "&Хизматрасони вақт:"
+
+#~ msgid ""
+#~ "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        "
+#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#~ "pool.ntp.org"
+#~ msgstr ""
+#~ "Хизматрасони ҷамъиятии вақт (pool.ntp.org),        asia.pool.ntp."
+#~ "org,        europe.pool.ntp.org,        north-america.pool.ntp."
+#~ "org,        oceania.pool.ntp.org"
+
+#~ msgid "Unable to contact time server: %1."
+#~ msgstr "Ба хизматрасони вақт пайваст шуда наметавонад: %1."
+
+#~ msgid "Error setting new time zone."
+#~ msgstr "Ҳангоми танзимкунии минтақаи вақти нав хато ба миён омад."
+
+#~ msgid "Time zone Error"
+#~ msgstr "Хато дар минтақаи вақти"
+
+#~ msgid "Unable to authenticate/execute the action: %1, %2"
+#~ msgstr "Амали ҷорӣ тасдиқ/иҷро карда намешавад: %1, %2"
+
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr ""
+#~ "Барои иваз кардани минтақаи вақти маҳаллӣ, минтақаи худро аз рӯйхати "
+#~ "зерин интихоб намоед."
+
+#~ msgid "Current local time zone:"
+#~ msgstr "Минтақаи вақти маҳаллии ҷорӣ:"
+
+#, fuzzy
+#~| msgid "Search..."
+#~ msgid "Search…"
+#~ msgstr "Ҷустуҷӯ..."
+
+#~ msgctxt "%1 is name of time zone"
+#~ msgid "Current local time zone: %1"
+#~ msgstr "Минтақаи вақти маҳаллии ҷорӣ: %1"
+
+#~ msgctxt "%1 is name of time zone, %2 is its abbreviation"
+#~ msgid "Current local time zone: %1 (%2)"
+#~ msgstr "Минтақаи вақти маҳаллии ҷорӣ: %1 (%2)"
+
+#~ msgid "KDE Clock Control Module"
+#~ msgstr "Модули идоракунии соати KDE"
+
+#~ msgid "Original author"
+#~ msgstr "Муаллифи аслӣ"
+
+#~ msgid "Current Maintainer"
+#~ msgstr "Муассиси ҷорӣ"
+
+#~ msgid "Added NTP support"
+#~ msgstr "Дастгирии NTP илова шуд"
+
+#~ msgid "kcmclock"
+#~ msgstr "kcmclock"
+
+#~ msgid "Failed to set system date/time/time zone."
+#~ msgstr "Не удаётся установить системные дату/время/часовой пояс."
+
+#~ msgid "Date/Time Error"
+#~ msgstr "Хато дар сана ва вақти"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 15:19+0000\n"
+"POT-Creation-Date: 2026-11-12 21:38+0000\n"
 "PO-Revision-Date: 2020-10-08 11:43+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -19,21 +19,21 @@ msgstr ""
 "X-Generator: Lokalize 20.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: package/contents/config/config.qml:17
+#: package/contents/config/config.qml:19
 #, fuzzy, kde-format
 #| msgid "Location"
 msgctxt "@title:group for configuration dialog page"
 msgid "Location"
 msgstr "Asukoht"
 
-#: package/contents/config/config.qml:24
+#: package/contents/config/config.qml:26
 #, fuzzy, kde-format
 #| msgid "Icons"
 msgctxt "@title:group for configuration dialog page"
 msgid "Icons"
 msgstr "Ikoonid"
 
-#: package/contents/config/config.qml:31
+#: package/contents/config/config.qml:33
 #, fuzzy, kde-format
 #| msgid "Filter"
 msgctxt "@title:group for configuration dialog page"
@@ -425,77 +425,77 @@ msgctxt "@title:group form label for radiobutton group"
 msgid "Show:"
 msgstr "Näidatakse:"
 
-#: package/contents/ui/ConfigLocation.qml:83
+#: package/contents/ui/ConfigLocation.qml:86
 #, fuzzy, kde-format
 #| msgid "Desktop folder"
 msgctxt "@option:radio"
 msgid "Desktop folder"
 msgstr "Töölauakataloog"
 
-#: package/contents/ui/ConfigLocation.qml:91
+#: package/contents/ui/ConfigLocation.qml:96
 #, fuzzy, kde-format
 #| msgid "Files linked to the current activity"
 msgctxt "@option:radio"
 msgid "Files linked to the current activity"
 msgstr "Aktiivse tegevusega seotud failid"
 
-#: package/contents/ui/ConfigLocation.qml:100
+#: package/contents/ui/ConfigLocation.qml:107
 #, fuzzy, kde-format
 #| msgid "Places panel item:"
 msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
 msgstr "Asukohapaneeli element:"
 
-#: package/contents/ui/ConfigLocation.qml:137
+#: package/contents/ui/ConfigLocation.qml:146
 #, fuzzy, kde-format
 #| msgid "Custom location:"
 msgctxt "@option:radio also label for text field"
 msgid "Custom location:"
 msgstr "Kohandatud asukoht:"
 
-#: package/contents/ui/ConfigLocation.qml:145
+#: package/contents/ui/ConfigLocation.qml:154
 #, fuzzy, kde-format
 #| msgid "Type path or URL..."
 msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
 msgstr "Kirjuta siia asukoht või URL ..."
 
-#: package/contents/ui/ConfigLocation.qml:188
+#: package/contents/ui/ConfigLocation.qml:194
 #, fuzzy, kde-format
 #| msgid "Title:"
 msgctxt "@label:textbox custom widget title"
 msgid "Title:"
 msgstr "Pealkiri:"
 
-#: package/contents/ui/ConfigLocation.qml:197
+#: package/contents/ui/ConfigLocation.qml:205
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "@item:inlistbox no title"
 msgid "None"
 msgstr "Puudub"
 
-#: package/contents/ui/ConfigLocation.qml:198
+#: package/contents/ui/ConfigLocation.qml:206
 #, fuzzy, kde-format
 #| msgid "Default"
 msgctxt "@item:inlistbox default title"
 msgid "Default"
 msgstr "Vaikimisi"
 
-#: package/contents/ui/ConfigLocation.qml:199
+#: package/contents/ui/ConfigLocation.qml:207
 #, fuzzy, kde-format
 #| msgid "Full path"
 msgctxt "@item:inlistbox full path as title"
 msgid "Full path"
 msgstr "Täielik asukoht"
 
-#: package/contents/ui/ConfigLocation.qml:200
+#: package/contents/ui/ConfigLocation.qml:208
 #, fuzzy, kde-format
 #| msgid "Custom title"
 msgctxt "@item:inlistbox title from text input field"
 msgid "Custom"
 msgstr "Kohandatud pealdis"
 
-#: package/contents/ui/ConfigLocation.qml:209
+#: package/contents/ui/ConfigLocation.qml:217
 #, fuzzy, kde-format
 #| msgid "Enter custom title..."
 msgctxt "@info:placeholder custom window title"

@@ -1,0 +1,216 @@
+# Vietnamese translation for kcmkclock.
+# Copyright © 2007 KDE i18n Project for Vietnamese.
+#
+# Nguyễn Hưng Vũ <Vu.Hung@techviet.com>, 2002.
+# Phan Vĩnh Thịnh <teppi82@gmail.com>, 2006.
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkclock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"PO-Revision-Date: 2021-05-26 21:17+0200\n"
+"Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
+"Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Nguyễn Hùng Phú,Phan Vĩnh Thịnh"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "phu.nguyen@kdemail.net,teppi82@gmail.com"
+
+#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr "Không thể thay đổi thiết lập NTP"
+
+#: dateandtime.cpp:249
+#, fuzzy, kde-format
+#| msgid "Unable to change NTP settings"
+msgid "Permission to change NTP setting denied"
+msgstr "Không thể thay đổi thiết lập NTP"
+
+#: dateandtime.cpp:261 main.cpp:89
+#, kde-format
+msgid "Unable to set current time"
+msgstr "Không thể đặt giờ hiện tại"
+
+#: dateandtime.cpp:263
+#, kde-format
+msgid "Permission to change date and time setting denied"
+msgstr ""
+
+#: dateandtime.cpp:274
+#, fuzzy, kde-format
+#| msgid "Unable to set timezone"
+msgid "Unable to set time zone"
+msgstr "Không thể đặt múi giờ"
+
+#: dateandtime.cpp:276
+#, kde-format
+msgid "Permission to change time zone denied"
+msgstr ""
+
+#: main.cpp:101
+#, kde-format
+msgid "Unable to set timezone"
+msgstr "Không thể đặt múi giờ"
+
+#: ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Set date and time &automatically"
+msgctxt "@option"
+msgid "Set date and time automatically"
+msgstr "Tự động đặt ngày &giờ"
+
+#: ui/main.qml:54
+#, kde-format
+msgctxt "@action:button as in set the current time on the machine"
+msgid "Set Time"
+msgstr ""
+
+#: ui/main.qml:68
+#, kde-format
+msgctxt "@action:button as in set the current date on the machine"
+msgid "Set Date"
+msgstr ""
+
+#: ui/main.qml:85
+#, fuzzy, kde-format
+#| msgid "Time Zone"
+msgctxt "@title"
+msgid "Time Zone"
+msgstr "Múi giờ"
+
+#~ msgid "Date and Time"
+#~ msgstr "Ngày giờ"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr "Tại đây bạn có thể thay đổi ngày tháng năm của hệ thống."
+
+#~ msgid ""
+#~ "Here you can change the system time. Click into the hours, minutes or "
+#~ "seconds field to change the relevant value, either using the up and down "
+#~ "buttons to the right or by entering a new value."
+#~ msgstr ""
+#~ "Tại đây bạn có thể thay đổi giờ của hệ thống. Bấm vào trường giờ, phút, "
+#~ "hoặc giây để thay đổi giá trị tương ứng, dùng các nút lên xuống ở bên "
+#~ "phải hoặc nhập trực tiếp một giá trị mới."
+
+#~ msgid ""
+#~ "<h1>Date & Time</h1> This system settings module can be used to set the "
+#~ "system date and time. As these settings do not only affect you as a user, "
+#~ "but rather the whole system, you can only change these settings when you "
+#~ "start the System Settings as root. If you do not have the root password, "
+#~ "but feel the system time should be corrected, please contact your system "
+#~ "administrator."
+#~ msgstr ""
+#~ "<h1>Ngày giờ</h1>Khối thiết lập hệ thống này có thể dùng để đặt ngày giờ "
+#~ "của hệ thống. Vì các thiết lập này không chỉ ảnh hưởng đến người dùng, mà "
+#~ "còn là toàn bộ hệ thống, nên bạn chỉ có thể thay đổi các thiết lập này "
+#~ "khi chạy Thiết lập hệ thống với vai trò người dùng gốc. Nếu bạn không có "
+#~ "mật khẩu người dùng gốc nhưng cho rằng thời gian của hệ thống cần được "
+#~ "sửa, vui lòng liên hệ với quản trị viên hệ thống của bạn."
+
+#~ msgid "&Time server:"
+#~ msgstr "Máy chủ &thời gian:"
+
+#~ msgid ""
+#~ "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
+#~ "enable automatic updating of date and time."
+#~ msgstr ""
+#~ "Không tìm thấy tiện ích NTP nào. Cài đặt lệnh 'ntpdate' hoặc 'rdate' để "
+#~ "bật chức năng cập nhật ngày giờ tự động."
+
+#~ msgid ""
+#~ "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        "
+#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
+#~ "pool.ntp.org"
+#~ msgstr ""
+#~ "Máy chủ thời gian công cộng (pool.ntp.org),        asia.pool.ntp."
+#~ "org,        europe.pool.ntp.org,        north-america.pool.ntp."
+#~ "org,        oceania.pool.ntp.org"
+
+#~ msgid "Unable to contact time server: %1."
+#~ msgstr "Không thể liên hệ với máy chủ thời gian: %1."
+
+#~ msgid "Can not set date."
+#~ msgstr "Không đặt được ngày."
+
+#~ msgid "Error setting new time zone."
+#~ msgstr "Lỗi khi đặt múi giờ mới."
+
+#~ msgid "Time zone Error"
+#~ msgstr "Lỗi múi giờ"
+
+#~ msgid "Unable to authenticate/execute the action: %1, %2"
+#~ msgstr "Không thể xác thực/thực thi hành động: %1, %2"
+
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr ""
+#~ "Để thay đổi múi giờ địa phương, hãy chọn vùng của bạn trong danh sách bên "
+#~ "dưới."
+
+#~ msgid "Current local time zone:"
+#~ msgstr "Múi giờ địa phương hiện tại:"
+
+#~ msgid "Search…"
+#~ msgstr "Tìm kiếm…"
+
+#~ msgctxt "%1 is name of time zone"
+#~ msgid "Current local time zone: %1"
+#~ msgstr "Múi giờ địa phương hiện tại: %1"
+
+#~ msgctxt "%1 is name of time zone, %2 is its abbreviation"
+#~ msgid "Current local time zone: %1 (%2)"
+#~ msgstr "Múi giờ địa phương hiện tại: %1 (%2)"
+
+#~ msgid "KDE Clock Control Module"
+#~ msgstr "Khối điều khiển đồng hồ KDE"
+
+#~ msgid "(c) 1996 - 2001 Luca Montecchiani"
+#~ msgstr "(c) 1996 - 2001 Luca Montecchiani"
+
+#~ msgid "Luca Montecchiani"
+#~ msgstr "Luca Montecchiani"
+
+#~ msgid "Original author"
+#~ msgstr "Tác giả gốc"
+
+#~ msgid "Paul Campbell"
+#~ msgstr "Paul Campbell"
+
+#~ msgid "Current Maintainer"
+#~ msgstr "Bảo trì viên hiện tại"
+
+#~ msgid "Benjamin Meyer"
+#~ msgstr "Benjamin Meyer"
+
+#~ msgid "Added NTP support"
+#~ msgstr "Thêm hỗ trợ NTP"
+
+#~ msgid ""
+#~ "<h1>Date & Time</h1> This control module can be used to set the system "
+#~ "date and time. As these settings do not only affect you as a user, but "
+#~ "rather the whole system, you can only change these settings when you "
+#~ "start the System Settings as root. If you do not have the root password, "
+#~ "but feel the system time should be corrected, please contact your system "
+#~ "administrator."
+#~ msgstr ""
+#~ "<h1>Ngày giờ</h1>Khối điều khiển này có thể dùng để đặt ngày giờ của hệ "
+#~ "thống. Vì các thiết lập này không chỉ ảnh hưởng đến người dùng, mà còn là "
+#~ "toàn bộ hệ thống, nên bạn chỉ có thể thay đổi các thiết lập này khi chạy "
+#~ "Thiết lập hệ thống với vai trò người dùng gốc. Nếu bạn không có mật khẩu "
+#~ "người dùng gốc nhưng cho rằng thời gian của hệ thống cần được sửa, vui "
+#~ "lòng liên hệ với quản trị viên hệ thống của bạn."

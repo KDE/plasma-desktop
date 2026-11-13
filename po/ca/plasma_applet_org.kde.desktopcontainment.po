@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 15:19+0000\n"
+"POT-Creation-Date: 2026-11-12 21:38+0000\n"
 "PO-Revision-Date: 2026-11-11 09:54+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -22,19 +22,19 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 25.04.0\n"
 
-#: package/contents/config/config.qml:17
+#: package/contents/config/config.qml:19
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Location"
 msgstr "Ubicació"
 
-#: package/contents/config/config.qml:24
+#: package/contents/config/config.qml:26
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Icons"
 msgstr "Icones"
 
-#: package/contents/config/config.qml:31
+#: package/contents/config/config.qml:33
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Filter"
@@ -376,67 +376,67 @@ msgctxt "@title:group form label for radiobutton group"
 msgid "Show:"
 msgstr "Mostra:"
 
-#: package/contents/ui/ConfigLocation.qml:83
+#: package/contents/ui/ConfigLocation.qml:86
 #, kde-format
 msgctxt "@option:radio"
 msgid "Desktop folder"
 msgstr "Carpeta d'escriptori"
 
-#: package/contents/ui/ConfigLocation.qml:91
+#: package/contents/ui/ConfigLocation.qml:96
 #, kde-format
 msgctxt "@option:radio"
 msgid "Files linked to the current activity"
 msgstr "Fitxers enllaçats amb l'activitat actual"
 
-#: package/contents/ui/ConfigLocation.qml:100
+#: package/contents/ui/ConfigLocation.qml:107
 #, kde-format
 msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
 msgstr "Element del plafó Llocs:"
 
-#: package/contents/ui/ConfigLocation.qml:137
+#: package/contents/ui/ConfigLocation.qml:146
 #, kde-format
 msgctxt "@option:radio also label for text field"
 msgid "Custom location:"
 msgstr "Ubicació personalitzada:"
 
-#: package/contents/ui/ConfigLocation.qml:145
+#: package/contents/ui/ConfigLocation.qml:154
 #, kde-format
 msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
 msgstr "Teclegeu un camí o un URL…"
 
-#: package/contents/ui/ConfigLocation.qml:188
+#: package/contents/ui/ConfigLocation.qml:194
 #, kde-format
 msgctxt "@label:textbox custom widget title"
 msgid "Title:"
 msgstr "Títol:"
 
-#: package/contents/ui/ConfigLocation.qml:197
+#: package/contents/ui/ConfigLocation.qml:205
 #, kde-format
 msgctxt "@item:inlistbox no title"
 msgid "None"
 msgstr "Sense"
 
-#: package/contents/ui/ConfigLocation.qml:198
+#: package/contents/ui/ConfigLocation.qml:206
 #, kde-format
 msgctxt "@item:inlistbox default title"
 msgid "Default"
 msgstr "Predeterminat"
 
-#: package/contents/ui/ConfigLocation.qml:199
+#: package/contents/ui/ConfigLocation.qml:207
 #, kde-format
 msgctxt "@item:inlistbox full path as title"
 msgid "Full path"
 msgstr "Camí sencer"
 
-#: package/contents/ui/ConfigLocation.qml:200
+#: package/contents/ui/ConfigLocation.qml:208
 #, kde-format
 msgctxt "@item:inlistbox title from text input field"
 msgid "Custom"
 msgstr "Personalitzat"
 
-#: package/contents/ui/ConfigLocation.qml:209
+#: package/contents/ui/ConfigLocation.qml:217
 #, kde-format
 msgctxt "@info:placeholder custom window title"
 msgid "Enter title…"

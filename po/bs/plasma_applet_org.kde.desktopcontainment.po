@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 15:19+0000\n"
+"POT-Creation-Date: 2026-11-12 21:38+0000\n"
 "PO-Revision-Date: 2015-02-24 20:34+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -19,21 +19,21 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: package/contents/config/config.qml:17
+#: package/contents/config/config.qml:19
 #, fuzzy, kde-format
 #| msgid "Location"
 msgctxt "@title:group for configuration dialog page"
 msgid "Location"
 msgstr "Lokacija"
 
-#: package/contents/config/config.qml:24
+#: package/contents/config/config.qml:26
 #, fuzzy, kde-format
 #| msgid "Icons"
 msgctxt "@title:group for configuration dialog page"
 msgid "Icons"
 msgstr "Ikone"
 
-#: package/contents/config/config.qml:31
+#: package/contents/config/config.qml:33
 #, fuzzy, kde-format
 #| msgid "Filter"
 msgctxt "@title:group for configuration dialog page"
@@ -411,75 +411,75 @@ msgctxt "@title:group form label for radiobutton group"
 msgid "Show:"
 msgstr "Pokaži mjesto:"
 
-#: package/contents/ui/ConfigLocation.qml:83
+#: package/contents/ui/ConfigLocation.qml:86
 #, fuzzy, kde-format
 #| msgid "Show the Desktop folder"
 msgctxt "@option:radio"
 msgid "Desktop folder"
 msgstr "Prikaži direktorij radne površi"
 
-#: package/contents/ui/ConfigLocation.qml:91
+#: package/contents/ui/ConfigLocation.qml:96
 #, kde-format
 msgctxt "@option:radio"
 msgid "Files linked to the current activity"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:100
+#: package/contents/ui/ConfigLocation.qml:107
 #, kde-format
 msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:137
+#: package/contents/ui/ConfigLocation.qml:146
 #, fuzzy, kde-format
 #| msgid "Custom title"
 msgctxt "@option:radio also label for text field"
 msgid "Custom location:"
 msgstr "Prilagođen naslov"
 
-#: package/contents/ui/ConfigLocation.qml:145
+#: package/contents/ui/ConfigLocation.qml:154
 #, fuzzy, kde-format
 #| msgid "Type a path or a URL here"
 msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
 msgstr "Unesite putanju ili URL ovdje"
 
-#: package/contents/ui/ConfigLocation.qml:188
+#: package/contents/ui/ConfigLocation.qml:194
 #, fuzzy, kde-format
 #| msgid "Title"
 msgctxt "@label:textbox custom widget title"
 msgid "Title:"
 msgstr "Naslov"
 
-#: package/contents/ui/ConfigLocation.qml:197
+#: package/contents/ui/ConfigLocation.qml:205
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "@item:inlistbox no title"
 msgid "None"
 msgstr "Ništa"
 
-#: package/contents/ui/ConfigLocation.qml:198
+#: package/contents/ui/ConfigLocation.qml:206
 #, fuzzy, kde-format
 #| msgid "Default"
 msgctxt "@item:inlistbox default title"
 msgid "Default"
 msgstr "Podrazumijevani"
 
-#: package/contents/ui/ConfigLocation.qml:199
+#: package/contents/ui/ConfigLocation.qml:207
 #, fuzzy, kde-format
 #| msgid "Full path"
 msgctxt "@item:inlistbox full path as title"
 msgid "Full path"
 msgstr "Puna staza"
 
-#: package/contents/ui/ConfigLocation.qml:200
+#: package/contents/ui/ConfigLocation.qml:208
 #, fuzzy, kde-format
 #| msgid "Custom title"
 msgctxt "@item:inlistbox title from text input field"
 msgid "Custom"
 msgstr "Prilagođen naslov"
 
-#: package/contents/ui/ConfigLocation.qml:209
+#: package/contents/ui/ConfigLocation.qml:217
 #, fuzzy, kde-format
 #| msgid "Enter custom title here"
 msgctxt "@info:placeholder custom window title"

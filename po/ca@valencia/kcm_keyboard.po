@@ -1,17 +1,17 @@
 # Translation of kcm_keyboard.po to Catalan (Valencian)
-# Copyright (C) 2007-2025 This_file_is_part_of_KDE
+# Copyright (C) 2007-2026 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # SPDX-FileCopyrightText: 2014, 2016-2017, 2020, 2024 Antoni Bella Pérez <antonibella5@yahoo.com>
 # SPDX-FileCopyrightText: 2019 Alfredo Vicente <alviboi@gmail.com>
-# SPDX-FileCopyrightText: 2007-2008, 2010-2012, 2014-2016, 2020-2021, 2023-2025 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2007-2008, 2010-2012, 2014-2016, 2020-2021, 2023-2026 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-10 00:59+0000\n"
-"PO-Revision-Date: 2025-12-04 11:40+0100\n"
+"PO-Revision-Date: 2026-11-11 09:54+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -25,12 +25,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Alfredo Vicente,Josep M. Ferrer"
+msgstr "Josep M. Ferrer"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "alviboi@gmail.com,txemaq@gmail.com"
+msgstr "txemaq@gmail.com"
 
 #: bindings.cpp:24
 #, kde-format
@@ -316,7 +316,7 @@ msgstr "Disposicions"
 #, kde-format
 msgctxt "@info:usagetip %1 is the name of a keyboard layout"
 msgid "Using system-wide layout “%1”"
-msgstr ""
+msgstr "S'utilitza la disposició «%1» global del sistema"
 
 #: ui/main.qml:252
 #, kde-kuit-format
@@ -325,6 +325,8 @@ msgid ""
 "To override this or add more layouts for this user account, press the "
 "<interface>Add…</interface> button."
 msgstr ""
+"Per a substituir açò o afegir més disposicions per a este compte d'usuari, "
+"premeu el botó <interface>Afig…</interface>."
 
 #: ui/main.qml:268
 #, kde-format
@@ -556,15 +558,3 @@ msgstr[1] "%1 dreceres"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Cap"
-
-#~ msgctxt "@label:checkbox configure layouts option"
-#~ msgid "Enable"
-#~ msgstr "Activa"
-
-#~ msgctxt "@label:checkbox accessible"
-#~ msgid "Configure Layouts"
-#~ msgstr "Configura les disposicions"
-
-#~ msgctxt "@option:check"
-#~ msgid "Custom Layout"
-#~ msgstr "Disposició personalitzada"

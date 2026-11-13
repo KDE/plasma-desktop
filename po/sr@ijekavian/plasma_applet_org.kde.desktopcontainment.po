@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 15:19+0000\n"
+"POT-Creation-Date: 2026-11-12 21:38+0000\n"
 "PO-Revision-Date: 2026-09-30 12:00+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -19,19 +19,19 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: package/contents/config/config.qml:17
+#: package/contents/config/config.qml:19
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Location"
 msgstr "Локација"
 
-#: package/contents/config/config.qml:24
+#: package/contents/config/config.qml:26
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Icons"
 msgstr "Иконице"
 
-#: package/contents/config/config.qml:31
+#: package/contents/config/config.qml:33
 #, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Filter"
@@ -397,72 +397,72 @@ msgctxt "@title:group form label for radiobutton group"
 msgid "Show:"
 msgstr "Прикажи:"
 
-#: package/contents/ui/ConfigLocation.qml:83
+#: package/contents/ui/ConfigLocation.qml:86
 #, kde-format
 msgctxt "@option:radio"
 msgid "Desktop folder"
 msgstr "Фасциклу површи"
 
 # >> @option:radio
-#: package/contents/ui/ConfigLocation.qml:91
+#: package/contents/ui/ConfigLocation.qml:96
 #, kde-format
 msgctxt "@option:radio"
 msgid "Files linked to the current activity"
 msgstr "Фајлове повезане са текућом активношћу"
 
-#: package/contents/ui/ConfigLocation.qml:100
+#: package/contents/ui/ConfigLocation.qml:107
 #, kde-format
 msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
 msgstr "Ставку панела мјеста:"
 
-#: package/contents/ui/ConfigLocation.qml:137
+#: package/contents/ui/ConfigLocation.qml:146
 #, kde-format
 msgctxt "@option:radio also label for text field"
 msgid "Custom location:"
 msgstr "Посебну локацију:"
 
-#: package/contents/ui/ConfigLocation.qml:145
+#: package/contents/ui/ConfigLocation.qml:154
 #, kde-format
 msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
 msgstr "Унесите путању или УРЛ…"
 
-#: package/contents/ui/ConfigLocation.qml:188
+#: package/contents/ui/ConfigLocation.qml:194
 #, kde-format
 msgctxt "@label:textbox custom widget title"
 msgid "Title:"
 msgstr "Наслов:"
 
 # >> @item:inlistbox Title
-#: package/contents/ui/ConfigLocation.qml:197
+#: package/contents/ui/ConfigLocation.qml:205
 #, kde-format
 msgctxt "@item:inlistbox no title"
 msgid "None"
 msgstr "никакав"
 
 # >> @item:inlistbox Title
-#: package/contents/ui/ConfigLocation.qml:198
+#: package/contents/ui/ConfigLocation.qml:206
 #, kde-format
 msgctxt "@item:inlistbox default title"
 msgid "Default"
 msgstr "подразумијеван"
 
 # >> @item:inlistbox Title
-#: package/contents/ui/ConfigLocation.qml:199
+#: package/contents/ui/ConfigLocation.qml:207
 #, kde-format
 msgctxt "@item:inlistbox full path as title"
 msgid "Full path"
 msgstr "пуна путања"
 
 # >> @item:inlistbox Title
-#: package/contents/ui/ConfigLocation.qml:200
+#: package/contents/ui/ConfigLocation.qml:208
 #, kde-format
 msgctxt "@item:inlistbox title from text input field"
 msgid "Custom"
 msgstr "посебан"
 
-#: package/contents/ui/ConfigLocation.qml:209
+#: package/contents/ui/ConfigLocation.qml:217
 #, kde-format
 msgctxt "@info:placeholder custom window title"
 msgid "Enter title…"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-17 00:51+0000\n"
-"PO-Revision-Date: 2026-04-22 20:33+0200\n"
+"PO-Revision-Date: 2026-11-04 00:40+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: kcm.cpp:57
 #, kde-format
@@ -169,6 +169,8 @@ msgid ""
 "This setting is not available while “Right-click by pressing anywhere with "
 "two fingers” is selected."
 msgstr ""
+"Diese Einstellung ist nicht verfügbar, wenn „Rechtsklick durch Tippen mit "
+"zwei Fingern an beliebiger Stelle“ ausgewählt ist."
 
 #: ui/main.qml:208
 #, kde-format
@@ -252,16 +254,12 @@ msgid "Right-click by:"
 msgstr "Rechtsklick:"
 
 #: ui/main.qml:478
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Completes the sentence 'right-click by pressing bottom-"
-#| "right corner'"
-#| msgid "Pressing bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-left "
 "corner'"
 msgid "Pressing bottom-left corner"
-msgstr "In die untere rechte Ecke tippen"
+msgstr "In die untere linke Ecke drücken"
 
 #: ui/main.qml:479
 #, kde-format
@@ -344,12 +342,10 @@ msgid "Right-click"
 msgstr "Rechtsklick"
 
 #: ui/main.qml:582
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by tapping anywhere with three fingers."
-msgstr "Mittelklick durch Drücken mit drei Fingern an beliebiger Stelle."
+msgstr "Mittelklick durch Tippen mit drei Fingern an beliebiger Stelle."
 
 #: ui/main.qml:604
 #, kde-format
@@ -358,12 +354,10 @@ msgid "Middle-click"
 msgstr "Mittelklick"
 
 #: ui/main.qml:607
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Right-click by tapping anywhere with three fingers."
-msgstr "Mittelklick durch Drücken mit drei Fingern an beliebiger Stelle."
+msgstr "Rechtsklick durch Tippen mit drei Fingern an beliebiger Stelle."
 
 #~ msgctxt ""
 #~ "@label for radiobutton group, begins the sentence 'middle-click by "

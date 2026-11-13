@@ -1,0 +1,129 @@
+# Translation of kcm_clock.po to Catalan
+# Copyright (C) 2001-2026 This_file_is_part_of_KDE
+#
+# SPDX-FileCopyrightText: 2001, 2004-2005 Sebastià Pla i Sanz <sps@sastia.com>
+# SPDX-FileCopyrightText: 2004 Ivan Lloro Boada <antispam@wanadoo.es>
+# SPDX-FileCopyrightText: 2005 Albert Astals Cid <aacid@kde.org>
+# SPDX-FileCopyrightText: 2007-2011, 2013, 2015, 2019, 2021, 2023, 2026 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2020 Antoni Bella Pérez <antonibella5@yahoo.com>
+# SPDX-FileCopyrightText: 2019 Empar Montoro Martín <montoro_mde@gva.es>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"PO-Revision-Date: 2026-03-29 13:10+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 25.04.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Sebastià Pla i Sanz,Ivan Lloro Boada"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sps@sastia.com,antispam@wanadoo.es"
+
+#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#, kde-format
+msgid "Unable to change NTP settings"
+msgstr "No s'han pogut canviar els paràmetres del NTP"
+
+#: dateandtime.cpp:249
+#, fuzzy, kde-format
+#| msgid "Unable to change NTP settings"
+msgid "Permission to change NTP setting denied"
+msgstr "No s'han pogut canviar els paràmetres del NTP"
+
+#: dateandtime.cpp:261 main.cpp:89
+#, kde-format
+msgid "Unable to set current time"
+msgstr "No s'ha pogut establir l'hora actual"
+
+#: dateandtime.cpp:263
+#, kde-format
+msgid "Permission to change date and time setting denied"
+msgstr ""
+
+#: dateandtime.cpp:274
+#, fuzzy, kde-format
+#| msgid "Unable to set timezone"
+msgid "Unable to set time zone"
+msgstr "No s'ha pogut establir el fus horari"
+
+#: dateandtime.cpp:276
+#, kde-format
+msgid "Permission to change time zone denied"
+msgstr ""
+
+#: main.cpp:101
+#, kde-format
+msgid "Unable to set timezone"
+msgstr "No s'ha pogut establir el fus horari"
+
+#: ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "Set date and time &automatically"
+msgctxt "@option"
+msgid "Set date and time automatically"
+msgstr "Estableix la data i hora &automàticament"
+
+#: ui/main.qml:54
+#, kde-format
+msgctxt "@action:button as in set the current time on the machine"
+msgid "Set Time"
+msgstr ""
+
+#: ui/main.qml:68
+#, kde-format
+msgctxt "@action:button as in set the current date on the machine"
+msgid "Set Date"
+msgstr ""
+
+#: ui/main.qml:85
+#, fuzzy, kde-format
+#| msgid "Time Zone"
+msgctxt "@title"
+msgid "Time Zone"
+msgstr "Fus horari"
+
+#~ msgid "Date and Time"
+#~ msgstr "Data i hora"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr "Aquí podeu canviar el dia, el mes i l'any de la data del sistema."
+
+#~ msgid ""
+#~ "Here you can change the system time. Click into the hours, minutes or "
+#~ "seconds field to change the relevant value, either using the up and down "
+#~ "buttons to the right or by entering a new value."
+#~ msgstr ""
+#~ "Aquí podeu canviar l'hora del sistema. Feu clic damunt del camp de les "
+#~ "hores, minuts o segons per a canviar el valor corresponent, bé usant els "
+#~ "botons amunt i avall de la dreta o introduint un nou valor."
+
+#~ msgid ""
+#~ "<h1>Date & Time</h1> This system settings module can be used to set the "
+#~ "system date and time. As these settings do not only affect you as a user, "
+#~ "but rather the whole system, you can only change these settings when you "
+#~ "start the System Settings as root. If you do not have the root password, "
+#~ "but feel the system time should be corrected, please contact your system "
+#~ "administrator."
+#~ msgstr ""
+#~ "<h1>Data i hora</h1> Aquest mòdul de l'Arranjament del sistema es pot "
+#~ "usar per a establir la data i l'hora del sistema. Com que aquests valors "
+#~ "no només us afecten a vós com a usuari, sinó al sistema sencer, només "
+#~ "podeu canviar-los quan engegueu l'arranjament del sistema com a "
+#~ "administrador. Si no teniu la contrasenya de l'administrador, però creieu "
+#~ "que l'hora del sistema s'hauria de corregir, contacteu l'administrador "
+#~ "del sistema."
