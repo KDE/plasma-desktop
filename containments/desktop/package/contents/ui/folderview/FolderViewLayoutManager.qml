@@ -17,7 +17,8 @@ import org.kde.private.desktopcontainment.folder as Folder
 
 import org.kde.plasma.private.containmentlayoutmanager as ContainmentLayoutManager
 
-import "code/FolderTools.js" as FolderTools
+import "../code/FolderTools.js" as FolderTools
+import ".."
 
 ContainmentLayoutManager.AppletsLayout {
     id: root
