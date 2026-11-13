@@ -335,12 +335,15 @@ PlasmoidItem {
         MenuButton {
             id: menuButton
 
+            property bool wasExpanded
+
             Layout.minimumWidth: Math.min(implicitWidth, Kirigami.Units.gridUnit * 20)
             Layout.maximumWidth: Layout.minimumWidth
             Layout.fillHeight: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
             Layout.fillWidth: Plasmoid.formFactor === PlasmaCore.Types.Vertical
 
-            onClicked: root.expanded = !root.expanded
+            onPressed: wasExpanded = root.expanded
+            onClicked: root.expanded = !wasExpanded
             down: pressed || root.expanded
 
             Accessible.name: Plasmoid.title
