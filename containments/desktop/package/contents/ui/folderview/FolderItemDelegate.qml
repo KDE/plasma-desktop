@@ -100,7 +100,7 @@ ContainmentLayoutManager.ItemContainer {
         if (selected && !blank) {
             main.dragImageBeingGenerated = true;
             loader.grabToImage(result => {
-                dir.addItemDragImage(positioner.map(index), main.x + loader.x, main.y + loader.y, loader.width, loader.height, result.image);
+                dir.addItemDragImage(index, main.x + loader.x, main.y + loader.y, loader.width, loader.height, result.image);
                 dragImageBeingGenerated = false;
             });
         }
