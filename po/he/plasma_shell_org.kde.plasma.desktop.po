@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-12 22:03+0000\n"
-"PO-Revision-Date: 2026-11-03 20:23+0200\n"
+"PO-Revision-Date: 2026-11-13 13:39+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language-Team: Hebrew <kde-l10n-he@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:206
 #, kde-format
@@ -255,24 +255,22 @@ msgid "Get New Plugins…"
 msgstr "הורדת תוספים חדשים…"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:106
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Remove Desktop"
+#, kde-format
 msgctxt "@label"
 msgid "Desktop:"
-msgstr "הסרת שולחן עבודה"
+msgstr "שולחן עבודה:"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:107
 #, kde-format
 msgctxt "@info"
 msgid "Icons for items in the selected location appear on the desktop"
-msgstr ""
+msgstr "סמלים לפריטים במקום הנבחר מופיעים על שולחן העבודה"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:110
 #, kde-format
 msgctxt "@option:check"
 msgid "Show files and folders"
-msgstr ""
+msgstr "הצגת קבצים ותיקיות"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:118
 #, kde-format
@@ -311,12 +309,10 @@ msgid "Wallpaper"
 msgstr "רקע"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox"
-#| msgid "Layout:"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Layout"
-msgstr "פריסה:"
+msgstr "פריסה"
 
 #: contents/configuration/ContainmentConfiguration.qml:36
 #, kde-format

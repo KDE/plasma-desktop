@@ -37,10 +37,9 @@ msgid "Unable to change NTP settings"
 msgstr "Nelze změnit nastavení NTP"
 
 #: dateandtime.cpp:249
-#, fuzzy, kde-format
-#| msgid "Unable to change NTP settings"
+#, kde-format
 msgid "Permission to change NTP setting denied"
-msgstr "Nelze změnit nastavení NTP"
+msgstr "Oprávnění ke změně nastavení NTP bylo zamítnuto"
 
 #: dateandtime.cpp:261 main.cpp:89
 #, kde-format
@@ -50,18 +49,17 @@ msgstr "Nelze nastavit aktuální čas"
 #: dateandtime.cpp:263
 #, kde-format
 msgid "Permission to change date and time setting denied"
-msgstr ""
+msgstr "Oprávnění ke změně nastavení data a času bylo zamítnuto"
 
 #: dateandtime.cpp:274
-#, fuzzy, kde-format
-#| msgid "Unable to set timezone"
+#, kde-format
 msgid "Unable to set time zone"
 msgstr "Nelze nastavit časové pásmo"
 
 #: dateandtime.cpp:276
 #, kde-format
 msgid "Permission to change time zone denied"
-msgstr ""
+msgstr "Oprávnění ke změně časového pásma bylo zamítnuto"
 
 #: main.cpp:101
 #, kde-format
@@ -69,27 +67,25 @@ msgid "Unable to set timezone"
 msgstr "Nelze nastavit časové pásmo"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "Set date and time &automatically"
+#, kde-format
 msgctxt "@option"
 msgid "Set date and time automatically"
-msgstr "N&astavit automaticky datum a čas"
+msgstr "Nastavit automaticky datum a čas"
 
 #: ui/main.qml:54
 #, kde-format
 msgctxt "@action:button as in set the current time on the machine"
 msgid "Set Time"
-msgstr ""
+msgstr "Nastavit čas"
 
 #: ui/main.qml:68
 #, kde-format
 msgctxt "@action:button as in set the current date on the machine"
 msgid "Set Date"
-msgstr ""
+msgstr "Nastavit datum"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Time Zone"
+#, kde-format
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "Časové pásmo"

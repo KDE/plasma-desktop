@@ -1,7 +1,7 @@
 # translation of kcmkclock.po to Slovenian
 # Translation of kcmkclock.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMKCLOCK.
-# $Id: kcm_clock.po 1753010 2026-11-13 01:48:30Z scripty $
+# $Id: kcm_clock.po 1753103 2026-11-14 01:51:19Z scripty $
 # $Source$
 #
 # Copyright (C) 2000, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-12 01:04+0000\n"
-"PO-Revision-Date: 2023-11-10 11:33+0100\n"
+"PO-Revision-Date: 2026-11-13 10:59+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Poedit 3.10\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -46,10 +46,9 @@ msgid "Unable to change NTP settings"
 msgstr "Ni bilo mogoče spremeniti nastavitev NTP"
 
 #: dateandtime.cpp:249
-#, fuzzy, kde-format
-#| msgid "Unable to change NTP settings"
+#, kde-format
 msgid "Permission to change NTP setting denied"
-msgstr "Ni bilo mogoče spremeniti nastavitev NTP"
+msgstr "Dovoljenje za spremembo nastavitve NTP zavrnjeno"
 
 #: dateandtime.cpp:261 main.cpp:89
 #, kde-format
@@ -59,18 +58,17 @@ msgstr "Ni bilo mogoče nastaviti trenutnega časa"
 #: dateandtime.cpp:263
 #, kde-format
 msgid "Permission to change date and time setting denied"
-msgstr ""
+msgstr "Dovoljenje za spremembo nastavitve datuma in ure je zavrnjeno"
 
 #: dateandtime.cpp:274
-#, fuzzy, kde-format
-#| msgid "Unable to set timezone"
+#, kde-format
 msgid "Unable to set time zone"
-msgstr "Ni bilo mogoče nastaviti časovnega pasu"
+msgstr "Ni mogoče nastaviti časovnega pasu"
 
 #: dateandtime.cpp:276
 #, kde-format
 msgid "Permission to change time zone denied"
-msgstr ""
+msgstr "Dovoljenje za spremembo časovnega pasu zavrnjeno"
 
 #: main.cpp:101
 #, kde-format
@@ -78,27 +76,25 @@ msgid "Unable to set timezone"
 msgstr "Ni bilo mogoče nastaviti časovnega pasu"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "Set date and time &automatically"
+#, kde-format
 msgctxt "@option"
 msgid "Set date and time automatically"
-msgstr "Čas in datum nastavi s&amodejno"
+msgstr "Čas in datum nastavi samodejno"
 
 #: ui/main.qml:54
 #, kde-format
 msgctxt "@action:button as in set the current time on the machine"
 msgid "Set Time"
-msgstr ""
+msgstr "Nastavi čas"
 
 #: ui/main.qml:68
 #, kde-format
 msgctxt "@action:button as in set the current date on the machine"
 msgid "Set Date"
-msgstr ""
+msgstr "Nastavi datum"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Time Zone"
+#, kde-format
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "Časovni pas"

@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-12 01:04+0000\n"
-"PO-Revision-Date: 2026-03-29 13:10+0200\n"
+"PO-Revision-Date: 2026-11-13 09:18+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -39,10 +39,9 @@ msgid "Unable to change NTP settings"
 msgstr "No s'han pogut canviar els paràmetres del NTP"
 
 #: dateandtime.cpp:249
-#, fuzzy, kde-format
-#| msgid "Unable to change NTP settings"
+#, kde-format
 msgid "Permission to change NTP setting denied"
-msgstr "No s'han pogut canviar els paràmetres del NTP"
+msgstr "S'ha denegat el permís per a canviar els paràmetres del NTP"
 
 #: dateandtime.cpp:261 main.cpp:89
 #, kde-format
@@ -53,17 +52,17 @@ msgstr "No s'ha pogut establir l'hora actual"
 #, kde-format
 msgid "Permission to change date and time setting denied"
 msgstr ""
+"S'ha denegat el permís per a canviar els paràmetres de la data i l'hora"
 
 #: dateandtime.cpp:274
-#, fuzzy, kde-format
-#| msgid "Unable to set timezone"
+#, kde-format
 msgid "Unable to set time zone"
 msgstr "No s'ha pogut establir el fus horari"
 
 #: dateandtime.cpp:276
 #, kde-format
 msgid "Permission to change time zone denied"
-msgstr ""
+msgstr "S'ha denegat el permís per a canviar el fus horari"
 
 #: main.cpp:101
 #, kde-format
@@ -71,27 +70,25 @@ msgid "Unable to set timezone"
 msgstr "No s'ha pogut establir el fus horari"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "Set date and time &automatically"
+#, kde-format
 msgctxt "@option"
 msgid "Set date and time automatically"
-msgstr "Establix la data i hora &automàticament"
+msgstr "Establix automàticament la data i l'hora"
 
 #: ui/main.qml:54
 #, kde-format
 msgctxt "@action:button as in set the current time on the machine"
 msgid "Set Time"
-msgstr ""
+msgstr "Establix l'hora"
 
 #: ui/main.qml:68
 #, kde-format
 msgctxt "@action:button as in set the current date on the machine"
 msgid "Set Date"
-msgstr ""
+msgstr "Establix la data"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Time Zone"
+#, kde-format
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "Fus horari"

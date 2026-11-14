@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-12 22:03+0000\n"
-"PO-Revision-Date: 2026-11-03 10:15+0100\n"
+"PO-Revision-Date: 2026-11-13 09:19+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -259,24 +259,23 @@ msgid "Get New Plugins…"
 msgstr "Obtén connectors nous…"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:106
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Remove Desktop"
+#, kde-format
 msgctxt "@label"
 msgid "Desktop:"
-msgstr "Elimina l'escriptori"
+msgstr "Escriptori:"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:107
 #, kde-format
 msgctxt "@info"
 msgid "Icons for items in the selected location appear on the desktop"
 msgstr ""
+"Les icones dels elements de la ubicació seleccionada apareixen a l'escriptori"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:110
 #, kde-format
 msgctxt "@option:check"
 msgid "Show files and folders"
-msgstr ""
+msgstr "Mostra fitxers i carpetes"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:118
 #, kde-format
@@ -315,12 +314,10 @@ msgid "Wallpaper"
 msgstr "Fons de pantalla"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox"
-#| msgid "Layout:"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Layout"
-msgstr "Disposició:"
+msgstr "Disposició"
 
 #: contents/configuration/ContainmentConfiguration.qml:36
 #, kde-format

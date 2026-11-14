@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-12 22:03+0000\n"
-"PO-Revision-Date: 2026-11-10 21:39+0300\n"
+"PO-Revision-Date: 2026-11-13 19:07+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -256,24 +256,22 @@ msgid "Get New Plugins…"
 msgstr "Yeni Eklentiler Al…"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:106
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Remove Desktop"
+#, kde-format
 msgctxt "@label"
 msgid "Desktop:"
-msgstr "Masaüstünü Kaldır"
+msgstr "Masaüstü:"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:107
 #, kde-format
 msgctxt "@info"
 msgid "Icons for items in the selected location appear on the desktop"
-msgstr ""
+msgstr "Seçili konumdaki ögelerin simgeleri masaüstünde görünür"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:110
 #, kde-format
 msgctxt "@option:check"
 msgid "Show files and folders"
-msgstr ""
+msgstr "Dosyaları ve klasörleri göster"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:118
 #, kde-format
@@ -312,12 +310,10 @@ msgid "Wallpaper"
 msgstr "Duvar Kâğıdı"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox"
-#| msgid "Layout:"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Layout"
-msgstr "Yerleşim:"
+msgstr "Yerleşim"
 
 #: contents/configuration/ContainmentConfiguration.qml:36
 #, kde-format

@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-12 22:03+0000\n"
-"PO-Revision-Date: 2026-11-02 08:00-0300\n"
+"PO-Revision-Date: 2026-11-13 05:43-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -260,24 +260,22 @@ msgid "Get New Plugins…"
 msgstr "Baixar novos plugins…"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:106
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Remove Desktop"
+#, kde-format
 msgctxt "@label"
 msgid "Desktop:"
-msgstr "Remover área de trabalho"
+msgstr "Área de trabalho:"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:107
 #, kde-format
 msgctxt "@info"
 msgid "Icons for items in the selected location appear on the desktop"
-msgstr ""
+msgstr "Ícones de itens no local selecionado aparecem na área de trabalho"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:110
 #, kde-format
 msgctxt "@option:check"
 msgid "Show files and folders"
-msgstr ""
+msgstr "Mostrar arquivos e pastas"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:118
 #, kde-format
@@ -318,12 +316,10 @@ msgid "Wallpaper"
 msgstr "Papel de parede"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox"
-#| msgid "Layout:"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Layout"
-msgstr "Layout:"
+msgstr "Layout"
 
 #: contents/configuration/ContainmentConfiguration.qml:36
 #, kde-format

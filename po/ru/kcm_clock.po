@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-12 01:04+0000\n"
-"PO-Revision-Date: 2023-11-14 22:31+0300\n"
+"PO-Revision-Date: 2026-11-13 07:45+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -47,10 +47,9 @@ msgid "Unable to change NTP settings"
 msgstr "Не удалось изменить параметры NTP"
 
 #: dateandtime.cpp:249
-#, fuzzy, kde-format
-#| msgid "Unable to change NTP settings"
+#, kde-format
 msgid "Permission to change NTP setting denied"
-msgstr "Не удалось изменить параметры NTP"
+msgstr "Нет прав на изменение параметров NTP"
 
 #: dateandtime.cpp:261 main.cpp:89
 #, kde-format
@@ -60,18 +59,17 @@ msgstr "Не удалось установить текущее время"
 #: dateandtime.cpp:263
 #, kde-format
 msgid "Permission to change date and time setting denied"
-msgstr ""
+msgstr "Нет прав на изменение даты и времени"
 
 #: dateandtime.cpp:274
-#, fuzzy, kde-format
-#| msgid "Unable to set timezone"
+#, kde-format
 msgid "Unable to set time zone"
 msgstr "Не удалось сменить часовой пояс"
 
 #: dateandtime.cpp:276
 #, kde-format
 msgid "Permission to change time zone denied"
-msgstr ""
+msgstr "Нет прав на смену часового пояса"
 
 #: main.cpp:101
 #, kde-format
@@ -79,27 +77,25 @@ msgid "Unable to set timezone"
 msgstr "Не удалось сменить часовой пояс"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "Set date and time &automatically"
+#, kde-format
 msgctxt "@option"
 msgid "Set date and time automatically"
-msgstr "Устанавливать дату и время &автоматически"
+msgstr "Устанавливать дату и время автоматически"
 
 #: ui/main.qml:54
 #, kde-format
 msgctxt "@action:button as in set the current time on the machine"
 msgid "Set Time"
-msgstr ""
+msgstr "Установить время"
 
 #: ui/main.qml:68
 #, kde-format
 msgctxt "@action:button as in set the current date on the machine"
 msgid "Set Date"
-msgstr ""
+msgstr "Установить дату"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Time Zone"
+#, kde-format
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "Часовой пояс"
