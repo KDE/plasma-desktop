@@ -30,6 +30,11 @@ KCMUtils.AbstractKCM {
             componentUrl: Qt.resolvedUrl("ZoomMagnifier.qml")
         },
         {
+            icon: "preferences-desktop-font",
+            title: i18nc("@title Category name in sidebar", "Text Size"),
+            componentUrl: Qt.resolvedUrl("TextSize.qml")
+        },
+        {
             icon: "notifications",
             title: i18nc("@title Category name in sidebar", "System Bell"),
             defaultnessKey: "bellIsDefaults",
@@ -139,7 +144,7 @@ KCMUtils.AbstractKCM {
                             radius: width * 0.5
                             implicitWidth: Kirigami.Units.largeSpacing
                             implicitHeight: Kirigami.Units.largeSpacing
-                            visible: kcm.defaultsIndicatorsVisible
+                            visible: kcm.defaultsIndicatorsVisible && baseDelegate.modelData.defaultnessKey !== undefined
                             opacity: !kcm[modelData.defaultnessKey]
                             color: Kirigami.Theme.neutralTextColor
                         }
