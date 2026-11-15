@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-10 03:19+0000\n"
-"PO-Revision-Date: 2024-09-13 18:18+0300\n"
-"Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
-"Language-Team: el <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2026-11-14 14:53+0200\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
@@ -33,7 +34,7 @@ msgstr "Ένα κλικ για άνοιγμα αρχείων"
 #: landingpage_kdeglobalssettings.kcfg:19
 #, kde-format
 msgid "Switch the look and feel package depending on time of day"
-msgstr ""
+msgstr "Εναλλαγή καθολικού θέματος ανάλογα με την ώρα της ημέρας"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:23
@@ -59,17 +60,16 @@ msgstr "Ταχύτητα κίνησης"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change global theme"
-msgstr ""
+msgstr "Αλλαγή καθολικού θέματος"
 
 #: ui/LookAndFeelBox.qml:187
 #, kde-format
 msgctxt "@label accessible"
 msgid "Global theme"
-msgstr ""
+msgstr "Καθολικό θέμα"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Theme:"
+#, kde-format
 msgctxt "@title:group for light/dark quick switch"
 msgid "Theme:"
 msgstr "Θέμα:"
@@ -78,7 +78,7 @@ msgstr "Θέμα:"
 #, kde-format
 msgctxt "Switch between dark and light look and feel packages automatically"
 msgid "Automatic"
-msgstr ""
+msgstr "Αυτόματο"
 
 #: ui/main.qml:123
 #, kde-format
@@ -86,7 +86,7 @@ msgctxt ""
 "@info:tooltip 1 is the name of a light global theme, 2 is the name of a dark "
 "global theme"
 msgid "Use “%1” during the day and “%2” at night"
-msgstr ""
+msgstr "Χρήση του «%1» τη μέρα και του «%2» τη νύχτα"
 
 #: ui/main.qml:133
 #, kde-format
@@ -95,8 +95,7 @@ msgid "More appearance settings:"
 msgstr "Περισσότερες ρυθμίσεις εμφάνισης:"
 
 #: ui/main.qml:200
-#, fuzzy, kde-format
-#| msgid "Animation speed:"
+#, kde-format
 msgctxt "@title:slider"
 msgid "Animation speed:"
 msgstr "Ταχύτητα κίνησης:"
@@ -127,8 +126,7 @@ msgid "Selects them"
 msgstr "Τους επιλέγει"
 
 #: ui/main.qml:238
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "Άνοιγμα με διπλό κλικ"
@@ -153,8 +151,7 @@ msgid "More behavior settings:"
 msgstr "Περισσότερες ρυθμίσεις συμπεριφοράς:"
 
 #: ui/main.qml:282
-#, fuzzy, kde-format
-#| msgid "Most used pages:"
+#, kde-format
 msgctxt "@title:group for grid of buttons opening kcms"
 msgid "Most used pages:"
 msgstr "Πιο συχνές σελίδες:"

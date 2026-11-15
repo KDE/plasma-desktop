@@ -2,30 +2,31 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-08 00:15+0000\n"
-"PO-Revision-Date: 2024-09-13 18:18+0300\n"
-"Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
-"Language-Team: el <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2026-11-14 14:52+0200\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Πέτρος Βιδάλης"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "pvidalis@gmail.com"
 
 #: basemodel.cpp:158
 #, kde-format
@@ -37,13 +38,13 @@ msgstr "Εκκίνηση"
 #, kde-format
 msgctxt "@item:intable"
 msgid "Window Management"
-msgstr ""
+msgstr "Διαχείριση παραθύρων"
 
 #: basemodel.cpp:194
 #, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Workspace"
-msgstr ""
+msgstr "Χώρος εργασίας Plasma"
 
 #: globalaccelmodel.cpp:281
 #, kde-format
@@ -134,29 +135,25 @@ msgid "Help"
 msgstr "Βοήθεια"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@title:group list section name"
 msgid "Applications"
 msgstr "Εφαρμογές"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "Commands"
+#, kde-format
 msgctxt "@title:group list section name"
 msgid "Commands"
 msgstr "Εντολές"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "System Services"
+#, kde-format
 msgctxt "@title:group list section name"
 msgid "System Services"
 msgstr "Υπηρεσίες συστήματος"
 
 #: ui/main.qml:27
-#, fuzzy, kde-format
-#| msgid "Common Actions"
+#, kde-format
 msgctxt "@title:group list section name"
 msgid "Common Actions"
 msgstr "Κοινές ενέργειες"
@@ -258,25 +255,19 @@ msgid "Export %1"
 msgstr "Εξαγωγή %1"
 
 #: ui/main.qml:239
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible %1 is the name of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@action:button %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Επεξεργασία εντολής για %1"
 
 #: ui/main.qml:268
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible %1 is the name of a shortcut category"
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@action:button %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Κατάργηση όλων των συντομεύσεων για %1"
 
 #: ui/main.qml:290
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible"
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@action:button"
 msgid "Undo deletion"
 msgstr "Αναίρεση διαγραφής"
@@ -292,13 +283,13 @@ msgstr "Δεν ταιριάζουν αντικείμενα με τους όρο�
 #, kde-format
 msgctxt "@info"
 msgid "These shortcuts will be deleted when changes are applied."
-msgstr ""
+msgstr "Αυτές οι συντομεύσεις θα διαγραφούν μόλις εφαρμοστούν οι αλλαγές."
 
 #: ui/main.qml:378
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo"
-msgstr ""
+msgstr "Αναίρεση"
 
 #: ui/main.qml:379
 #, fuzzy, kde-format
@@ -308,8 +299,7 @@ msgid "Undo deleting shortcuts"
 msgstr "Δεν υπάρχουν προεπιλεγμένες συντομεύσεις"
 
 #: ui/main.qml:422
-#, fuzzy, kde-format
-#| msgid "Select an item from the list to view its shortcuts here"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage"
 msgid "Select an item from the list to view its shortcuts here"
 msgstr ""
@@ -336,29 +326,25 @@ msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Συντόμευση σχεδίου (*.kksrc)"
 
 #: ui/main.qml:464
-#, fuzzy, kde-format
-#| msgid "Edit Command"
+#, kde-format
 msgctxt "@title:window dialog"
 msgid "Edit Command"
 msgstr "Επεξεργασία εντολής"
 
 #: ui/main.qml:464
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgctxt "@title:window dialog"
 msgid "Add Command"
 msgstr "Προσθήκη εντολής"
 
 #: ui/main.qml:481
-#, fuzzy, kde-format
-#| msgid "Save"
+#, kde-format
 msgctxt "@action:button in dialog, save changes to custom command"
 msgid "Save"
 msgstr "Αποθήκευση"
 
 #: ui/main.qml:481
-#, fuzzy, kde-format
-#| msgid "Add"
+#, kde-format
 msgctxt "@action:button in dialog, add entry as new custom command"
 msgid "Add"
 msgstr "Προσθήκη"
@@ -372,15 +358,13 @@ msgid "Save command"
 msgstr "Εντολή"
 
 #: ui/main.qml:484
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "Προσθήκη εντολής"
 
 #: ui/main.qml:506
-#, fuzzy, kde-format
-#| msgid "Enter a command or choose a script file:"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Enter a command or choose a script file:"
 msgstr "Εισάγετε μια εντολή ή επιλέξτε ένα αρχείο δέσμης ενεργειών:"
@@ -389,7 +373,7 @@ msgstr "Εισάγετε μια εντολή ή επιλέξτε ένα αρχε
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
-msgstr ""
+msgstr "Εντολή:"
 
 #: ui/main.qml:521
 #, kde-format
@@ -413,13 +397,13 @@ msgstr "Επιλογή αρχείου δέσμης ενεργειών"
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
-msgstr ""
+msgstr "Όνομα:"
 
 #: ui/main.qml:538
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
-msgstr ""
+msgstr "Εισαγάγετε όνομα εδώ"
 
 #: ui/main.qml:550
 #, kde-format
@@ -450,15 +434,13 @@ msgid "Custom Scheme"
 msgstr "Προσαρμοσμένο σχέδιο"
 
 #: ui/main.qml:602
-#, fuzzy, kde-format
-#| msgid "Select File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select File…"
 msgstr "Επιλογή αρχείου…"
 
 #: ui/main.qml:602
-#, fuzzy, kde-format
-#| msgid "Import"
+#, kde-format
 msgctxt "@action:button import shortcut scheme"
 msgid "Import"
 msgstr "Εισαγωγή"
@@ -482,7 +464,7 @@ msgstr "Εξαγωγή σχεδίου συντόμευσης"
 #, kde-format
 msgctxt "@action:button Collapse shortcuts view"
 msgid "Collapse"
-msgstr ""
+msgstr "Σύμπτυξη"
 
 #: ui/ShortcutActionDelegate.qml:32
 #, fuzzy, kde-format
@@ -492,8 +474,7 @@ msgid "Expand to configure shortcuts"
 msgstr "Δεν υπάρχουν ενεργές συντομεύσεις"
 
 #: ui/ShortcutActionDelegate.qml:38
-#, fuzzy, kde-format
-#| msgid "Editing shortcut: %1"
+#, kde-format
 msgctxt "@info:whatsthis accessible name %1 is shortcut label (not sequence)"
 msgid "Editing shortcut: %1"
 msgstr "Επεξεργασία συντόμευσης: %1"
@@ -507,17 +488,13 @@ msgid "%1:"
 msgstr "%1:"
 
 #: ui/ShortcutActionDelegate.qml:85
-#, fuzzy, kde-format
-#| msgid "No active shortcuts"
+#, kde-format
 msgctxt "@info:status"
 msgid "No active shortcuts"
 msgstr "Δεν υπάρχουν ενεργές συντομεύσεις"
 
 #: ui/ShortcutActionDelegate.qml:136
-#, fuzzy, kde-format
-#| msgctxt "%1 decides if singular or plural will be used"
-#| msgid "Default shortcut"
-#| msgid_plural "Default shortcuts"
+#, kde-format
 msgctxt "@title:column %1 decides if singular or plural will be used"
 msgid "Default shortcut"
 msgid_plural "Default shortcuts"
@@ -525,29 +502,25 @@ msgstr[0] "Προεπιλεγμένη συντόμευση"
 msgstr[1] "Προεπιλεγμένες συντομεύσεις"
 
 #: ui/ShortcutActionDelegate.qml:138
-#, fuzzy, kde-format
-#| msgid "No default shortcuts"
+#, kde-format
 msgctxt "@label for shortcut with no default bindings"
 msgid "No default shortcuts"
 msgstr "Δεν υπάρχουν προεπιλεγμένες συντομεύσεις"
 
 #: ui/ShortcutActionDelegate.qml:147
-#, fuzzy, kde-format
-#| msgid "Custom shortcuts"
+#, kde-format
 msgctxt "@title:column"
 msgid "Custom shortcuts"
 msgstr "Προσαρμοσμένες συντομεύσεις"
 
 #: ui/ShortcutActionDelegate.qml:172
-#, fuzzy, kde-format
-#| msgid "Default shortcut %1 is enabled."
+#, kde-format
 msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is enabled."
 msgstr "Η προεπιλεγμένη συντόμευση %1 είναι ενεργή."
 
 #: ui/ShortcutActionDelegate.qml:172
-#, fuzzy, kde-format
-#| msgid "Default shortcut %1 is disabled."
+#, kde-format
 msgctxt "@info:whatsthis accessible name"
 msgid "Default shortcut %1 is disabled."
 msgstr "Η προεπιλεγμένη συντόμευση %1 είναι ανενεργή."

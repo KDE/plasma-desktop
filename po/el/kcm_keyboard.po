@@ -10,20 +10,21 @@
 # Stelios <sstavra@gmail.com>, 2012.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2016.
 # Dimitrys Meliates <demetresmeliates+i18n@gmail.com>, 2024.
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-19 00:46+0000\n"
-"PO-Revision-Date: 2024-09-19 17:26+0300\n"
-"Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
+"PO-Revision-Date: 2026-11-14 14:52+0200\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -116,19 +117,19 @@ msgstr "Διαμόρφωση επιλογών πληκτρολογίου"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset"
-msgstr ""
+msgstr "Επαναφορά"
 
 #: ui/KeyBindings.qml:138
 #, kde-format
 msgctxt "@info accessible"
 msgid "Reset selected options for this group"
-msgstr ""
+msgstr "Επαναφορά των επιλογών αυτής της ομάδας"
 
 #: ui/KeyBindings.qml:139
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Reset selected options for this group"
-msgstr ""
+msgstr "Επαναφορά των επιλογών αυτής της ομάδας"
 
 #: ui/LayoutDialog.qml:22
 #, fuzzy, kde-format
@@ -447,9 +448,7 @@ msgid "Change Layout..."
 msgstr "Εφεδρικές διατάξεις"
 
 #: ui/main_phone.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@label:checkbox accessible"
-#| msgid "Key repeat"
+#, kde-format
 msgctxt "@title:group"
 msgid "Key Repeat"
 msgstr "Επανάληψη πλήκτρου"
@@ -458,7 +457,7 @@ msgstr "Επανάληψη πλήκτρου"
 #, kde-format
 msgctxt "@option:check"
 msgid "Customize Repeat"
-msgstr ""
+msgstr "Προσαρμογή επανάληψης"
 
 #: ui/Switching.qml:17
 #, kde-format
@@ -503,9 +502,7 @@ msgid "Current window only"
 msgstr "Μόνο το τρέχον παράθυρο"
 
 #: ui/Switching.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@label:checkbox"
-#| msgid "Show notification on layout change"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Show OSD popup on layout change"
 msgstr "Εμφάνιση ειδοποίησης κατά την αλλαγή διάταξης"
@@ -523,15 +520,13 @@ msgid "Change layout:"
 msgstr "Εφεδρικές διατάξεις"
 
 #: ui/Switching.qml:111
-#, fuzzy, kde-format
-#| msgid "Switch to Next Keyboard Layout"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
 msgstr "Εναλλαγή στην τελευταία χρησιμοποιημένη διάταξη:"
 
 #: ui/Switching.qml:131
-#, fuzzy, kde-format
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
 msgstr "Παλαιές Συντομεύσεις"

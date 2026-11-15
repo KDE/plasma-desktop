@@ -4,20 +4,21 @@
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016, 2017.
 # Dimitrios Glentadakis <dglent@free.fr>, 2014.
 # SPDX-FileCopyrightText: 2024 Antonis Geralis <capoiosct@gmail.com>
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:48+0000\n"
-"PO-Revision-Date: 2024-09-19 17:29+0300\n"
-"Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
+"PO-Revision-Date: 2026-11-14 15:27+0200\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: code/tools.js:32
 #, kde-format
@@ -45,15 +46,13 @@ msgid "Show in Favorites"
 msgstr "Εμφάνιση στα αγαπημένα"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Γενικά"
 
 #: ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Εικονίδιο:"
@@ -140,25 +139,25 @@ msgstr "Εμφάνιση άλλων εφαρμογών:"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
-msgstr ""
+msgstr "Μόνο όνομα"
 
 #: ConfigGeneral.qml:159
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
-msgstr ""
+msgstr "Μόνο περιγραφή"
 
 #: ConfigGeneral.qml:159
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
-msgstr ""
+msgstr "Όνομα (Περιγραφή)"
 
 #: ConfigGeneral.qml:159
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
-msgstr ""
+msgstr "Περιγραφή (Όνομα)"
 
 #: ConfigGeneral.qml:167
 #, kde-format
@@ -167,8 +166,7 @@ msgid "General:"
 msgstr "Γενικά:"
 
 #: ConfigGeneral.qml:171
-#, fuzzy, kde-format
-#| msgid "Always sort applications alphabetically"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Ταξινόμηση των εφαρμογών πάντα με αλφαβητική σειρά"
@@ -180,10 +178,11 @@ msgid ""
 "This doesn't affect how applications are sorted in either search results or "
 "the favorites page."
 msgstr ""
+"Δεν επηρεάζει την ταξινόμηση στα αποτελέσματα αναζήτησης ούτε στη σελίδα "
+"αγαπημένων."
 
 #: ConfigGeneral.qml:181
-#, fuzzy, kde-format
-#| msgid "Use compact list item style"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use compact list item style"
 msgstr "Χρήση συμπαγούς στυλ στοιχείων λίστας"
@@ -199,7 +198,7 @@ msgstr "Πρόσφατες εφαρμογές"
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
-msgstr ""
+msgstr "Εναλλαγή κατηγοριών της πλευρικής μπάρας με το πέρασμα του δείκτη"
 
 #: ConfigGeneral.qml:198
 #, kde-format
@@ -208,82 +207,67 @@ msgid "Configure Search Plugins…"
 msgstr "Ρύθμιση ενεργών πρόσθετων αναζήτησης…"
 
 #: ConfigGeneral.qml:208
-#, fuzzy, kde-format
-#| msgid "Sidebar position:"
+#, kde-format
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr "Θέση πλευρικής μπάρας:"
 
 #: ConfigGeneral.qml:209 ConfigGeneral.qml:217
-#, fuzzy, kde-format
-#| msgid "Right"
+#, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr "Δεξιά"
 
 #: ConfigGeneral.qml:209
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "option:radio sidebar position"
 msgid "Left"
 msgstr "Αριστερά"
 
 #: ConfigGeneral.qml:217
-#, fuzzy, kde-format
-#| msgid "Left"
+#, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr "Αριστερά"
 
 #: ConfigGeneral.qml:225
-#, fuzzy, kde-format
-#| msgid "Show favorites:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
 msgstr "Εμφάνιση αγαπημένων:"
 
 #: ConfigGeneral.qml:226
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
-#| msgid "In a grid"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "Σε ένα πλέγμα"
 
 #: ConfigGeneral.qml:234
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a list'"
-#| msgid "In a list"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "Σε μια λίστα"
 
 #: ConfigGeneral.qml:242
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
 msgstr "Εμφάνιση άλλων εφαρμογών:"
 
 #: ConfigGeneral.qml:243
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a grid'"
-#| msgid "In a grid"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "Σε ένα πλέγμα"
 
 #: ConfigGeneral.qml:251
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Show favorites in a list'"
-#| msgid "In a list"
+#, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "Σε μια λίστα"
 
 #: ConfigGeneral.qml:263
-#, fuzzy, kde-format
-#| msgid "Show buttons for:"
+#, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr "Εμφάνιση κουμπιών για:"
@@ -296,8 +280,7 @@ msgid "Power"
 msgstr "Ενέργεια"
 
 #: ConfigGeneral.qml:273
-#, fuzzy, kde-format
-#| msgid "Session"
+#, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "Συνεδρία"
@@ -310,22 +293,19 @@ msgid "Power and session"
 msgstr "Ενέργεια και συνεδρία"
 
 #: ConfigGeneral.qml:291
-#, fuzzy, kde-format
-#| msgid "Show action button captions"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show action button captions"
 msgstr "Εμφάνιση λεζάντας κουμπιών δράσης"
 
 #: Footer.qml:101
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@title:tab kickoff sidebar tab"
 msgid "Applications"
 msgstr "Εφαρμογές"
 
 #: Footer.qml:117
-#, fuzzy, kde-format
-#| msgid "Places"
+#, kde-format
 msgctxt "@title:tab kickoff sidebar tab"
 msgid "Places"
 msgstr "Τοποθεσίες"
@@ -337,8 +317,7 @@ msgid "No matches"
 msgstr "Δεν υπάρχουν αντιστοιχίες"
 
 #: Header.qml:86
-#, fuzzy, kde-format
-#| msgid "Open user settings"
+#, kde-format
 msgctxt "@action:button icon-only, for tooltip/Accessible"
 msgid "Open user settings"
 msgstr "Άνοιγμα ρυθμίσεων χρήστη"
@@ -356,7 +335,7 @@ msgstr "Διατήρηση ανοιχτό"
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Νέο!"
 
 #: KickoffGridDelegate.qml:61
 #, fuzzy, kde-format
@@ -366,8 +345,7 @@ msgid "Newly-installed application"
 msgstr "Πρόσφατες εφαρμογές"
 
 #: KickoffGridView.qml:116
-#, fuzzy, kde-format
-#| msgid "Grid with %1 rows, %2 columns"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "Grid with %1 rows, %2 columns"
 msgstr "Πλέγμα με %1 γραμμές, %2 στήλες"
@@ -376,7 +354,7 @@ msgstr "Πλέγμα με %1 γραμμές, %2 στήλες"
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Νέο!"
 
 #: KickoffListDelegate.qml:125
 #, fuzzy, kde-format
@@ -391,8 +369,7 @@ msgid "Newly-installed application"
 msgstr "Πρόσφατες εφαρμογές"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "Session"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "Session"
 msgstr "Συνεδρία"
@@ -405,8 +382,7 @@ msgid "Power"
 msgstr "Ενέργεια"
 
 #: LeaveButtons.qml:171
-#, fuzzy, kde-format
-#| msgid "More"
+#, kde-format
 msgctxt "@title:menu menubutton"
 msgid "More"
 msgstr "Περισσότερα"
@@ -419,8 +395,7 @@ msgid "Session and Power"
 msgstr "Συνεδρία"
 
 #: main.qml:358
-#, fuzzy, kde-format
-#| msgid "Edit Applications…"
+#, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
 msgstr "Επεξεργασία εφαρμογών…"

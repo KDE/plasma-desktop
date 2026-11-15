@@ -9,7 +9,7 @@
 # Toussis Manolis <koppermind@yahoo.com>, 2005.
 # Toussis Manolis <manolis@koppermind.homelinux.org>, 2005, 2007, 2008.
 # Spiros Georgaras <sng@hellug.gr>, 2007.
-# Petros <pvidalis@gmail.com>, 2010.
+# SPDX-FileCopyrightText: 2010, 2026 Petros <pvidalis@gmail.com>
 # Dimitrios Glentadakis <dglent@gmail.com>, 2011, 2012.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016.
 # Dimitrys Meliates <demetresmeliates+i18n@gmail.com>, 2024.
@@ -18,15 +18,15 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-17 03:07+0000\n"
-"PO-Revision-Date: 2024-08-12 22:00+0300\n"
-"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"PO-Revision-Date: 2026-11-14 15:17+0200\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: inputbackend.cpp:49
 #, kde-format
@@ -137,15 +137,13 @@ msgid "Configure Extra Buttons…"
 msgstr "Διαμόρφωση επιπλέον κουμπιών…"
 
 #: ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Συσκευή:"
 
 #: ui/main.qml:86
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General:"
 msgstr "Γενικά:"
@@ -154,7 +152,7 @@ msgstr "Γενικά:"
 #, kde-format
 msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
-msgstr ""
+msgstr "Ενεργοποίηση συσκευής"
 
 #: ui/main.qml:102
 #, fuzzy, kde-format
@@ -193,8 +191,7 @@ msgstr ""
 "τα ταυτόχρονα αριστερά και δεξιά κλικ του ποντικιού."
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid "Pointer speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Ταχύτητα δείκτη:"
@@ -217,8 +214,7 @@ msgstr ""
 "ποντικιού."
 
 #: ui/main.qml:264
-#, fuzzy, kde-format
-#| msgid "Scrolling speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr "Ταχύτητα κύλισης:"
@@ -236,15 +232,13 @@ msgid "Faster"
 msgstr "Ταχύτερη"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "Κύλιση:"
 
 #: ui/main.qml:348
-#, fuzzy, kde-format
-#| msgid "Invert scroll direction"
+#, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction"
 msgstr "Αντιστροφή κατεύθυνσης κύλισης"
@@ -253,13 +247,13 @@ msgstr "Αντιστροφή κατεύθυνσης κύλισης"
 #, kde-format
 msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
-msgstr ""
+msgstr "Κύλιση με κίνηση του δείκτη"
 
 #: ui/main.qml:380
 #, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
-msgstr ""
+msgstr "Με πατημένο το μεσαίο κουμπί"
 
 #: ui/main.qml:397
 #, kde-format
@@ -270,12 +264,16 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"Επηρεάζει εφαρμογές που χρησιμοποιούν σύρσιμο με το μεσαίο κουμπί, όπως "
+"ορισμένοι επεξεργαστές εικόνας, προβολείς εγγράφων ή βιντεοπαιχνίδια. Μπορεί "
+"να χρησιμοποιηθεί σε κάθε συσκευή, αλλά προορίζεται κυρίως ως υποκατάστατο "
+"του τροχού κύλισης σε συσκευές που δεν έχουν."
 
 #: ui/main.qml:404
 #, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
-msgstr ""
+msgstr "Μετά από κλικ με το μεσαίο κουμπί"
 
 #: ui/main.qml:421
 #, kde-format
@@ -285,6 +283,9 @@ msgid ""
 "you want the application to receive a single middle-click. This includes "
 "middle-click dragging."
 msgstr ""
+"Η ρύθμιση επηρεάζει τη χρήση του μεσαίου κουμπιού, ακόμη και το σύρσιμο. "
+"Κάντε δύο κλικ με το μεσαίο κουμπί όταν θέλετε η εφαρμογή να λάβει ένα μόνο "
+"κλικ."
 
 #, fuzzy
 #~| msgid "Press middle button and move mouse to scroll"
