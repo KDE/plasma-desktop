@@ -4,7 +4,7 @@
 #
 # Spiros Georgaras <sng@hellug.gr>, 2007, 2008.
 # Toussis Manolis <manolis@koppermind.homelinux.org>, 2008.
-# Petros Vidalis <p_vidalis@hotmail.com>, 2010.
+# SPDX-FileCopyrightText: 2010, 2026 Petros Vidalis <p_vidalis@hotmail.com>
 # Dimitrios Glentadakis <dglent@gmail.com>, 2011.
 # SPDX-FileCopyrightText: 2013, 2024 Antonis Geralis <capoiosct@gmail.com>
 # Dimitris Kardarakos <dimkard@gmail.com>, 2015, 2016, 2017.
@@ -14,26 +14,23 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-13 09:46+0000\n"
-"PO-Revision-Date: 2024-09-19 17:30+0300\n"
-"Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
+"PO-Revision-Date: 2026-11-14 15:28+0200\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: backend.cpp:339
-#, fuzzy, kde-format
-#| msgctxt "Show all user Places"
-#| msgid "%1 more Place"
-#| msgid_plural "%1 more Places"
+#, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
 msgid_plural "%1 more Places…"
-msgstr[0] "%1 επιπλέον τοποθεσία"
-msgstr[1] "%1 επιπλέον τοποθεσίες"
+msgstr[0] "%1 επιπλέον τοποθεσία…"
+msgstr[1] "%1 επιπλέον τοποθεσίες…"
 
 #: backend.cpp:422
 #, kde-format
@@ -77,27 +74,26 @@ msgstr "Αγνόηση πρόσφατων αρχείων"
 #: backend.cpp:581
 #, kde-format
 msgid "Activate Previous Task Manager Entry"
-msgstr ""
+msgstr "Ενεργοποίηση προηγούμενης εγγραφής του διαχειριστή εργασιών"
 
 #: backend.cpp:588
-#, fuzzy, kde-format
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgid "Activate Next Task Manager Entry"
-msgstr "&Καρφίτσωμα στον διαχειριστή εργασιών"
+msgstr "Ενεργοποίηση επόμενης εγγραφής του διαχειριστή εργασιών"
 
 #: backend.cpp:595
 #, kde-format
 msgid "Move Active Task Manager Entry Backward"
-msgstr ""
+msgstr "Μετακίνηση της ενεργής εγγραφής του διαχειριστή εργασιών προς τα πίσω"
 
 #: backend.cpp:603
 #, kde-format
 msgid "Move Active Task Manager Entry Forward"
 msgstr ""
+"Μετακίνηση της ενεργής εγγραφής του διαχειριστή εργασιών προς τα εμπρός"
 
 #: backend.cpp:612
-#, fuzzy, kde-format
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Ενεργοποίηση καταχώρισης %1 στον διαχειριστή εργασιών"
 
@@ -126,15 +122,13 @@ msgid "Mute %1"
 msgstr "Σίγαση %1"
 
 #: qml/config.qml:13
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Appearance"
 msgstr "Εμφάνιση"
 
 #: qml/config.qml:18
-#, fuzzy, kde-format
-#| msgid "Behavior"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Behavior"
 msgstr "Συμπεριφορά"
@@ -161,28 +155,26 @@ msgstr ""
 "Απόκρυψη άλλων παραθύρων όταν περνάτε με το ποντίκι πάνω από προεπισκοπήσεις"
 
 #: qml/ConfigAppearance.qml:55
-#, fuzzy, kde-format
-#| msgctxt "@option:check section General"
-#| msgid "Hide other windows when hovering over previews"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over tooltips"
 msgstr ""
 "Απόκρυψη άλλων παραθύρων όταν περνάτε με το ποντίκι πάνω από προεπισκοπήσεις"
 
 #: qml/ConfigAppearance.qml:60
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
 msgstr "Ένδειξη όταν μια εργασία αναπαράγει ήχο"
 
 #: qml/ConfigAppearance.qml:70
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
 msgstr "Σίγαση της εργασίας με κλικ στην ένδειξη"
 
 #: qml/ConfigAppearance.qml:78
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
 msgstr "Εμφάνιση χειριστηρίων πολυμέσων και έντασης στην προεπισκόπηση"
@@ -288,7 +280,7 @@ msgid "Large"
 msgstr "Μεγάλο"
 
 #: qml/ConfigBehavior.qml:50
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info"
 msgid ""
 "If you're using this setting to work around an application that demands "
@@ -386,11 +378,10 @@ msgid "Sort:"
 msgstr "Ταξινόμηση:"
 
 #: qml/ConfigBehavior.qml:134
-#, fuzzy, kde-format
-#| msgid "Do Not Group"
+#, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Do not sort"
-msgstr "Χωρίς ομαδοποίηση"
+msgstr "Χωρίς ταξινόμηση"
 
 #: qml/ConfigBehavior.qml:138
 #, kde-format
@@ -417,7 +408,7 @@ msgid "By activity"
 msgstr "Κατά δραστηριότητα"
 
 #: qml/ConfigBehavior.qml:154
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By horizontal window position"
 msgstr "Κατά την οριζόντια θέση του παραθύρου"
@@ -503,33 +494,22 @@ msgid "Brings it to the current virtual desktop"
 msgstr "Το μεταφέρει στην τρέχουσα εικονική επιφάνεια εργασίας"
 
 #: qml/ConfigBehavior.qml:207
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label for checkbox group, completes sentence like: … from current screen"
-#| msgid "Show only tasks:"
+#, kde-format
 msgctxt ""
 "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/cycles "
 "through tasks/cycles through the selected task's windows/adjusts the hovered "
 "task’s volume''"
 msgid "Scrolling behavior:"
-msgstr "Εμφάνιση μόνο εργασιών:"
+msgstr "Συμπεριφορά κύλισης:"
 
 #: qml/ConfigBehavior.qml:211
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Middle-clicking any task does "
-#| "nothing'"
-#| msgid "Does nothing"
+#, kde-format
 msgctxt "@item:inlistbox Part of a sentence: 'Scrolling behavior does nothing'"
 msgid "Does nothing"
 msgstr "Δεν κάνει τίποτα"
 
 #: qml/ConfigBehavior.qml:212
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
-#| "through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through all "
 "tasks'"
@@ -537,28 +517,20 @@ msgid "Cycles through all tasks"
 msgstr "Εναλλάσσεται μεταξύ των εργασιών"
 
 #: qml/ConfigBehavior.qml:213
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
-#| "through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through the "
 "hovered task's windows'"
 msgid "Cycles through the hovered task’s windows"
-msgstr "Εναλλάσσεται μεταξύ των εργασιών"
+msgstr "Εναλλάσσεται μεταξύ των παραθύρων της εργασίας κάτω από τον δείκτη"
 
 #: qml/ConfigBehavior.qml:214
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
-#| "through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior adjusts the hovered "
 "task’s volume'"
 msgid "Adjusts the hovered task’s volume"
-msgstr "Εναλλάσσεται μεταξύ των εργασιών"
+msgstr "Ρυθμίζει την ένταση ήχου της εργασίας κάτω από τον δείκτη"
 
 #: qml/ConfigBehavior.qml:222
 #, kde-format
@@ -574,25 +546,19 @@ msgid "Show only tasks:"
 msgstr "Εμφάνιση μόνο εργασιών:"
 
 #: qml/ConfigBehavior.qml:233
-#, fuzzy, kde-format
-#| msgctxt "@option:check completes sentence: show only tasks"
-#| msgid "From current desktop"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current desktop"
 msgstr "Από τρέχουσα επιφάνεια εργασίας"
 
 #: qml/ConfigBehavior.qml:238
-#, fuzzy, kde-format
-#| msgctxt "@option:check completes sentence: show only tasks"
-#| msgid "From current activity"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current activity"
 msgstr "Από τρέχουσα δραστηριότητα"
 
 #: qml/ConfigBehavior.qml:243
-#, fuzzy, kde-format
-#| msgctxt "@option:check completes sentence: show only tasks"
-#| msgid "From current screen"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current screen"
 msgstr "Από τρέχουσα οθόνη"
@@ -647,22 +613,19 @@ msgid "On the top"
 msgstr "Στην κορυφή"
 
 #: qml/ContextMenu.qml:100
-#, fuzzy, kde-format
-#| msgid "Places"
+#, kde-format
 msgctxt "@title:group for section of menu items"
 msgid "Places"
 msgstr "Τοποθεσίες"
 
 #: qml/ContextMenu.qml:106
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgctxt "@title:group for section of menu items"
 msgid "Recent Files"
 msgstr "Πρόσφατα αρχεία"
 
 #: qml/ContextMenu.qml:116
-#, fuzzy, kde-format
-#| msgid "Actions"
+#, kde-format
 msgctxt "@title:group for section of menu items"
 msgid "Actions"
 msgstr "Ενέργειες"
@@ -710,92 +673,79 @@ msgid "Restore"
 msgstr "Επαναφορά"
 
 #: qml/ContextMenu.qml:266
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@option:check inmenu, no separate unmute action"
 msgid "Mute"
 msgstr "Σίγαση"
 
 #: qml/ContextMenu.qml:277
-#, fuzzy, kde-format
-#| msgid "Open New Window"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Open New Window"
 msgstr "Άνοιγμα νέου παραθύρου"
 
 #: qml/ContextMenu.qml:293
-#, fuzzy, kde-format
-#| msgid "Move to &Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move to &Desktop"
 msgstr "Μετακίνηση στην &επιφάνεια εργασίας"
 
 #: qml/ContextMenu.qml:323
-#, fuzzy, kde-format
-#| msgid "Move &To Current Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move &To Current Desktop"
 msgstr "Μετακίνηση &στην τρέχουσα επιφάνεια εργασίας"
 
 #: qml/ContextMenu.qml:345
-#, fuzzy, kde-format
-#| msgid "&All Desktops"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&All Desktops"
 msgstr "Όλες οι επιφάνειες ε&ργασίας"
 
 #: qml/ContextMenu.qml:373
-#, fuzzy, kde-format
-#| msgid "&New Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&New Desktop"
 msgstr "&Νέα επιφάνεια εργασίας"
 
 #: qml/ContextMenu.qml:393
-#, fuzzy, kde-format
-#| msgid "Show in &Activities"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Show in &Activities"
 msgstr "Εμφάνιση σε &δραστηριότητες"
 
 #: qml/ContextMenu.qml:417
-#, fuzzy, kde-format
-#| msgid "Add To Current Activity"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Add To Current Activity"
 msgstr "Προσθήκη στην τρέχουσα δραστηριότητα"
 
 #: qml/ContextMenu.qml:427
-#, fuzzy, kde-format
-#| msgid "All Activities"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "All Activities"
 msgstr "Όλες οι δραστηριότητες"
 
 #: qml/ContextMenu.qml:483
-#, fuzzy, kde-format
-#| msgid "Move to %1"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move to %1"
 msgstr "Μετακίνηση στο %1"
 
 #: qml/ContextMenu.qml:505
-#, fuzzy, kde-format
-#| msgid "Move to &Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move to &Screen"
-msgstr "Μετακίνηση στην &επιφάνεια εργασίας"
+msgstr "Μετακίνηση στην &οθόνη"
 
 #: qml/ContextMenu.qml:535
 #, kde-format
 msgctxt "@item:inmenu List of all Screens to send a window to."
 msgid "Built-in Screen"
-msgstr ""
+msgstr "Ενσωματωμένη οθόνη"
 
 #: qml/ContextMenu.qml:538
-#, fuzzy, kde-format
-#| msgctxt "1 = number of desktop, 2 = desktop name"
-#| msgid "&%1 %2"
+#, kde-format
 msgctxt ""
 "@item:inmenu List of all Screens to send a window to, manufacturer, model "
 "(output identifier)"
@@ -803,122 +753,106 @@ msgid "%1 %2 (%3)"
 msgstr "%1 %2 (%3)"
 
 #: qml/ContextMenu.qml:583 qml/ContextMenu.qml:599
-#, fuzzy, kde-format
-#| msgid "&Pin to Task Manager"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Pin to Task Manager"
 msgstr "&Καρφίτσωμα στον διαχειριστή εργασιών"
 
 #: qml/ContextMenu.qml:651
-#, fuzzy, kde-format
-#| msgid "On All Activities"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "On All Activities"
 msgstr "Σε όλες τις δραστηριότητες"
 
 #: qml/ContextMenu.qml:657
-#, fuzzy, kde-format
-#| msgid "On The Current Activity"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "On The Current Activity"
 msgstr "Στην τρέχουσα δραστηριότητα"
 
 #: qml/ContextMenu.qml:681
-#, fuzzy, kde-format
-#| msgid "Unpin from Task Manager"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Unpin from Task Manager"
 msgstr "Ξεκαρφίτσωμα από τον διαχειριστή εργασιών"
 
 #: qml/ContextMenu.qml:696
-#, fuzzy, kde-format
-#| msgid "More"
+#, kde-format
 msgctxt "item:inmenu opens submenu"
 msgid "More"
 msgstr "Περισσότερα"
 
 #: qml/ContextMenu.qml:705
-#, fuzzy, kde-format
-#| msgid "&Move"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Move"
 msgstr "&Μετακίνηση"
 
 #: qml/ContextMenu.qml:714
-#, fuzzy, kde-format
-#| msgid "Re&size"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Re&size"
 msgstr "&Αλλαγή μεγέθους"
 
 #: qml/ContextMenu.qml:728
-#, fuzzy, kde-format
-#| msgid "Ma&ximize"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Ma&ximize"
 msgstr "Με&γιστοποίηση"
 
 #: qml/ContextMenu.qml:742
-#, fuzzy, kde-format
-#| msgid "Mi&nimize"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Mi&nimize"
 msgstr "&Ελαχιστοποίηση"
 
 #: qml/ContextMenu.qml:752
-#, fuzzy, kde-format
-#| msgid "Keep &Above Others"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Keep &Above Others"
 msgstr "Διατήρηση &πάνω από άλλα"
 
 #: qml/ContextMenu.qml:762
-#, fuzzy, kde-format
-#| msgid "Keep &Below Others"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Keep &Below Others"
 msgstr "Διατήρηση &κάτω από τα άλλα"
 
 #: qml/ContextMenu.qml:774
-#, fuzzy, kde-format
-#| msgid "&Fullscreen"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "&Fullscreen"
 msgstr "&Πλήρης οθόνη"
 
 #: qml/ContextMenu.qml:786
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
 msgstr "&Χωρίς γραμμή τίτλου και πλαίσιο"
 
 #: qml/ContextMenu.qml:799
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Hide from Screencast"
 msgstr "&Απόκρυψη από την καταγραφή οθόνης"
 
 #: qml/ContextMenu.qml:815
-#, fuzzy, kde-format
-#| msgid "Allow this program to be grouped"
+#, kde-format
 msgctxt "@option:check inmenu"
 msgid "Allow this program to be grouped"
 msgstr "Να επιτρέπεται η ομαδοποίηση του προγράμματος"
 
 #: qml/ContextMenu.qml:861
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu"
-#| msgid "&Close All"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close All"
 msgstr "&Κλείσιμο όλων"
 
 #: qml/ContextMenu.qml:861
-#, fuzzy, kde-format
-#| msgid "&Close"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Close"
-msgstr "&Κλείσιμο"
+msgstr "Κλεί&σιμο"
 
 #: qml/Task.qml:158
 #, kde-format
@@ -953,14 +887,13 @@ msgid "Open textual list of windows for %1"
 msgstr "Άνοιγμα κειμενικής λίστας παραθύρων για %1"
 
 #: qml/Task.qml:184
-#, fuzzy, kde-format
-#| msgid "Activate %1"
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Activate %1"
 msgstr "Ενεργοποίηση %1"
 
 #: qml/TaskBadgeOverlay.qml:101
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
@@ -968,24 +901,18 @@ msgid "9k+"
 msgstr "9k+"
 
 #: qml/TaskBadgeOverlay.qml:104
-#, fuzzy, kde-format
-#| msgctxt "volume percentage"
-#| msgid "%1%"
+#, kde-format
 msgctxt ""
 "'k' is a suffix for 'thousand'; keep to one character or else the badge "
 "could overflow!"
 msgid "%1k"
-msgstr "%1%"
+msgstr "%1k"
 
 #: qml/ToolTipInstance.qml:231
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Middle-clicking any task closes "
-#| "window or group'"
-#| msgid "Closes window or group"
+#, kde-format
 msgctxt "@info:tooltip Close this window"
 msgid "Close window"
-msgstr "Κλείνει το παράθυρο ή ομάδα"
+msgstr "Κλείσιμο παραθύρου"
 
 #: qml/ToolTipInstance.qml:466
 #, kde-format

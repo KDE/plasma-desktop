@@ -4,32 +4,30 @@
 # Toussis Manolis <manolis@koppermind.homelinux.org>, 2008.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2015, 2016.
 # Antonis Geralis <capoiosct@gmail.com>, 2024.
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2024-08-12 23:41+0300\n"
-"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-11-14 15:28+0200\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: main.qml:118
-#, fuzzy, kde-format
-#| msgid "Minimize All Applet Active Indicator"
+#, kde-format
 msgctxt "@label Accessible name"
 msgid "Minimize All Applet Active Indicator"
-msgstr "Ελαχιστοποίηση όλων δεικτών ενεργών μικροεφαρμογών"
+msgstr "Ένδειξη ενεργής ελαχιστοποίησης όλων των παραθύρων"
 
 #: MinimizeAllController.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Restore All Minimized Windows"
+#, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Restore Windows"
 msgstr "Επαναφορά όλων των ελαχιστοποιημένων παραθύρων"

@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma__desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-12 22:03+0000\n"
-"PO-Revision-Date: 2026-10-07 11:45+0200\n"
+"PO-Revision-Date: 2026-11-14 16:15+0100\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
@@ -255,24 +255,22 @@ msgid "Get New Plugins…"
 msgstr "Добави нове прикључке…"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:106
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Remove Desktop"
+#, kde-format
 msgctxt "@label"
 msgid "Desktop:"
-msgstr "Уклони површ"
+msgstr "Површ:"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:107
 #, kde-format
 msgctxt "@info"
 msgid "Icons for items in the selected location appear on the desktop"
-msgstr ""
+msgstr "Иконице ставки са изабране локације појављују се на површи"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:110
 #, kde-format
 msgctxt "@option:check"
 msgid "Show files and folders"
-msgstr ""
+msgstr "Прикажи фајлове и фасцикле"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:118
 #, kde-format
@@ -311,12 +309,10 @@ msgid "Wallpaper"
 msgstr "Тапет"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox"
-#| msgid "Layout:"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Layout"
-msgstr "Распоред:"
+msgstr "Распоред"
 
 #: contents/configuration/ContainmentConfiguration.qml:36
 #, kde-format
@@ -981,13 +977,13 @@ msgstr "Пребаци &корисника"
 #, kde-format
 msgctxt "@action:button"
 msgid "Hide On-Screen Keyboard"
-msgstr ""
+msgstr "Сакриј тастатуру на екрану"
 
 #: contents/lockscreen/LockScreenUi.qml:477
 #, kde-format
 msgctxt "@action:button"
 msgid "Show On-Screen Keyboard"
-msgstr ""
+msgstr "Прикажи тастатуру на екрану"
 
 #: contents/lockscreen/LockScreenUi.qml:503
 #, kde-format
@@ -1232,51 +1228,3 @@ msgstr "Изађи из режима уређивања"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "Показатељ фокуса панела"
-
-#~ msgctxt "Button to show/hide virtual keyboard"
-#~ msgid "Virtual Keyboard"
-#~ msgstr "Виртуелна тастатура"
-
-#~ msgctxt "plasma_shell_org.kde.plasma.desktop"
-#~ msgid "Send an email to %1"
-#~ msgstr "Пошаљи е‑пошту на %1"
-
-#~ msgctxt "@action:button icononly for tooltip & accessible %1 is url"
-#~ msgid "Open website %1"
-#~ msgstr "Отвори веб сајт %1"
-
-#~ msgctxt "@title:group"
-#~ msgid "Website"
-#~ msgstr "Веб сајт"
-
-#~ msgctxt "@title:group"
-#~ msgid "Get Help"
-#~ msgstr "Помоћ"
-
-#~ msgctxt "@action:button urlbutton"
-#~ msgid "Report an issue"
-#~ msgstr "Пријави проблем"
-
-#~ msgctxt "@title license information"
-#~ msgid "Copyright"
-#~ msgstr "Ауторска права"
-
-#~ msgctxt "@label %1 is the short SPDX text for the license"
-#~ msgid "License: %1"
-#~ msgstr "Лиценца: %1"
-
-#~ msgctxt "@action:button"
-#~ msgid "Read License"
-#~ msgstr "Прочитај лиценцу"
-
-#~ msgctxt "@title:group"
-#~ msgid "Authors"
-#~ msgstr "Аутори"
-
-#~ msgctxt "@title:group"
-#~ msgid "Credits"
-#~ msgstr "Заслуге"
-
-#~ msgctxt "@title:group"
-#~ msgid "Translators"
-#~ msgstr "Преводиоци"

@@ -2,109 +2,83 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-03 00:56+0000\n"
-"PO-Revision-Date: 2024-08-13 11:49+0300\n"
-"Last-Translator: Dimitrys Meliates <demetresmeliates+i18n@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-11-14 15:30+0200\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: KeyboardButton.qml:19
-#, fuzzy
-#| msgid "Keyboard Layout: %1"
 msgctxt "@action:button opens layout chooser %1 is current"
 msgid "Keyboard Layout: %1"
 msgstr "Διάταξη πληκτρολογίου: %1"
 
 #: Login.qml:86
-#, fuzzy
-#| msgid "Username"
 msgctxt "@info:placeholder in textfield"
 msgid "Username"
 msgstr "Όνομα χρήστη"
 
 #: Login.qml:103
-#, fuzzy
-#| msgid "Password"
 msgctxt "@info:placeholder in textfield"
 msgid "Password"
 msgstr "Κωδικός πρόσβασης"
 
 #: Login.qml:145
-#, fuzzy
-#| msgid "Log In"
 msgctxt "@action:button Accessible name"
 msgid "Log in"
 msgstr "Είσοδος"
 
 #: Login.qml:151
-#, fuzzy
-#| msgid "Log In"
 msgctxt "@action:button"
 msgid "Log In"
 msgstr "Είσοδος"
 
 #: Main.qml:201
-#, fuzzy
-#| msgid "Caps Lock is on"
 msgctxt "@info:status"
 msgid "Caps Lock is on"
-msgstr "Το Caps Lock είναι ανοιχτό"
+msgstr "Το Caps Lock είναι ενεργό"
 
 #: Main.qml:213
-#, fuzzy
 msgctxt "Suspend to disk"
 msgid "Hibernate"
 msgstr "Αδρανοποίηση"
 
 #: Main.qml:219 Main.qml:358
-#, fuzzy
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
 msgctxt "@action:button Suspend to RAM"
 msgid "Sleep"
 msgstr "Αναστολή"
 
 #: Main.qml:225 Main.qml:364
-#, fuzzy
-#| msgid "Restart"
 msgctxt "@action:button"
 msgid "Restart"
 msgstr "Επανεκκίνηση"
 
 #: Main.qml:231 Main.qml:370
-#, fuzzy
-#| msgid "Shut Down"
 msgctxt "@action:button"
 msgid "Shut Down"
 msgstr "Τερματισμός"
 
 #: Main.qml:237
-#, fuzzy
-#| msgctxt "For switching to a username and password prompt"
-#| msgid "Other…"
 msgctxt "@action:button For switching to a username and password prompt"
 msgid "Other…"
-msgstr "Άλλο…"
+msgstr "Άλλος χρήστης…"
 
 #: Main.qml:344
-#, fuzzy
-#| msgid "Type in Username and Password"
 msgctxt "@info:usagetip"
 msgid "Type in Username and Password"
 msgstr "Πληκτρολογήστε το όνομα χρήστη και τον κωδικό πρόσβασης"
 
 #: Main.qml:376
-#, fuzzy
-#| msgid "List Users"
 msgctxt "@action:button"
 msgid "List Users"
 msgstr "Λίστα χρηστών"
@@ -115,15 +89,11 @@ msgid "Virtual Keyboard"
 msgstr "Εικονικό πληκτρολόγιο"
 
 #: Main.qml:512
-#, fuzzy
-#| msgid "Login Failed"
 msgctxt "@info:status"
 msgid "Login Failed"
 msgstr "Αποτυχία εισόδου"
 
 #: SessionButton.qml:18
-#, fuzzy
-#| msgid "Desktop Session: %1"
 msgctxt "@action:button opens sessions menu %1 is current"
 msgid "Desktop Session: %1"
 msgstr "Συνεδρία επιφάνειας εργασίας: %1"

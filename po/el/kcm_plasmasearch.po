@@ -3,20 +3,21 @@
 #
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016.
 # SPDX-FileCopyrightText: 2024 Antonis Geralis <capoiosct@gmail.com>
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-27 00:47+0000\n"
-"PO-Revision-Date: 2024-09-19 17:26+0300\n"
-"Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
+"PO-Revision-Date: 2026-11-14 14:53+0200\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: plasmasearch/kcm.h:69
 #, kde-format
@@ -29,46 +30,38 @@ msgid "Available Plugins"
 msgstr "Διαθέσιμα πρόσθετα"
 
 #: plasmasearch/ui/main.qml:25
-#, fuzzy, kde-format
-#| msgid "Configure KRunner…"
+#, kde-format
 msgctxt "@action:button in toolbar"
 msgid "Configure KRunner…"
 msgstr "Διαμόρφωση KRunner…"
 
 #: plasmasearch/ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Get New Plugins…"
+#, kde-format
 msgctxt "@action:button in toolbar"
 msgid "Get New Plugins…"
 msgstr "Απόκτηση νέων πρόσθετων…"
 
 #: plasmasearch/ui/main.qml:45
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect). Mark plugins as favorites and arrange them in order you "
-#| "want to prioritize them."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to prioritize them."
 msgstr ""
-"Ενεργοποίηση ή απενεργοποίηση πρόσθετων (που χρησιμοποιούνται στο KRunner, "
-"Εκκινητή εφαρμογών και στο εφέ Επισκόπηση). Χαρακτηρίστε τα πρόσθετα ως "
-"αγαπημένα και τα τακτοποιήστε τα με τη σειρά που θέλετε να τους δώσετε "
-"προτεραιότητα."
+"Ενεργοποιήστε ή απενεργοποιήστε τα πρόσθετα που χρησιμοποιούνται στο "
+"KRunner, στον εκκινητή εφαρμογών και στο εφέ επισκόπησης. Σημειώστε τα "
+"πρόσθετα ως αγαπημένα και τοποθετήστε τα με τη σειρά προτεραιότητας που "
+"θέλετε."
 
 #: plasmasearch/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Remove from favorites"
+#, kde-format
 msgctxt "@action:button, icononly"
 msgid "Remove from favorites"
 msgstr "Αφαίρεση από τα αγαπημένα"
 
 #: plasmasearch/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Add to favorites"
+#, kde-format
 msgctxt "@action:button, icononly"
 msgid "Add to favorites"
 msgstr "Προσθήκη στα αγαπημένα"

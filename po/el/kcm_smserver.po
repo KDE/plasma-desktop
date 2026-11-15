@@ -9,20 +9,21 @@
 # Spiros Georgaras <sng@hellug.gr>, 2007.
 # Toussis Manolis <manolis@koppermind.homelinux.org>, 2008, 2009.
 # Antonis Geralis <capoiosct@gmail.com>, 2024.
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2024-08-12 19:17+0300\n"
-"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-11-14 15:11+0200\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -49,29 +50,22 @@ msgid "Applications to be excluded from session"
 msgstr "Εφαρμογές που αποκλείονται από τη συνεδρία"
 
 #: ui/main.qml:30
-#, fuzzy, kde-format
-#| msgid "Failed to request restart to firmware setup: %1"
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid "Failed to request restart to firmware setup: %1"
 msgstr "Αποτυχία αίτησης επανεκκίνησης για ρύθμιση υλικολογισμικού: %1"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter UEFI firmware settings."
 msgstr ""
-"Την επόμενη φορά που θα γίνει επανεκκίνηση του υπολογιστή, θα εμφανιστεί η "
-"οθόνη ρύθμισης του υλικολογισμικού."
+"Στην επόμενη επανεκκίνηση, ο υπολογιστής θα ανοίξει τις ρυθμίσεις "
+"υλικολογισμικού UEFI."
 
 #: ui/main.qml:32
-#, fuzzy, kde-format
-#| msgid ""
-#| "Next time the computer is restarted, it will enter the firmware setup "
-#| "screen."
+#, kde-format
 msgctxt "@info:status inlinemessage"
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
@@ -80,8 +74,7 @@ msgstr ""
 "οθόνη ρύθμισης του υλικολογισμικού."
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgctxt "@action:button"
 msgid "Restart Now"
 msgstr "Επανεκκίνηση τώρα"
@@ -115,8 +108,7 @@ msgid "Session Restore"
 msgstr "Επαναφορά συνεδρίας"
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid "On login, launch apps that were open:"
+#, kde-format
 msgctxt "@title:group prefix for radiobuttons"
 msgid "On login, launch apps that were open:"
 msgstr "Κατά την είσοδο, εκκίνηση εφαρμογών που ήταν ανοιχτές:"
@@ -158,18 +150,13 @@ msgid "Start with an empty session"
 msgstr "Εκκίνηση με μια άδεια συνεδρία"
 
 #: ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Ignored applications:"
 msgstr "Αγνοημένες εφαρμογές:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
@@ -177,10 +164,11 @@ msgid ""
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"Γράψτε εδώ τα ονόματα των εκτελέσιμων εφαρμογών (χωρισμένα με κόμμα ή άνω "
-"και κάτω τελεία, για παράδειγμα 'xterm:konsole' ή 'xterm,konsole') για να "
-"αποτρέψετε την αυτόματη εκκίνησή τους μαζί με άλλες εφαρμογές που έχουν "
-"αποκατασταθεί σε λειτουργία."
+"Γράψτε εδώ τα αναγνωριστικά των αρχείων .desktop των εφαρμογών ή, στο X11, "
+"τα ονόματα των εκτελέσιμων αρχείων τους. Χωρίστε τα με κόμματα ή άνω και "
+"κάτω τελείες, για παράδειγμα «xterm:org.kde.konsole.desktop» ή «xterm,org."
+"kde.konsole.desktop». Έτσι οι εφαρμογές αυτές δεν θα εκκινούν αυτόματα κατά "
+"την επαναφορά της συνεδρίας."
 
 #: ui/main.qml:138
 #, kde-format
@@ -197,12 +185,10 @@ msgid "After next restart:"
 msgstr "Μετά την επόμενη επανεκκίνηση:"
 
 #: ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Enter firmware setup screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
-msgstr "Είσοδος στην οθόνη ρύθμισης υλικολογισμικού"
+msgstr "Είσοδος στις ρυθμίσεις υλικολογισμικού UEFI"
 
 #: ui/main.qml:146
 #, kde-format

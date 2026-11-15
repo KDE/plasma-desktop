@@ -8,7 +8,7 @@
 # Toussis Manolis <koppermind@yahoo.com>, 2005.
 # Spiros Georgaras <sng@hellug.gr>, 2007.
 # Toussis Manolis <manolis@koppermind.homelinux.org>, 2008.
-# Petros Vidalis <p_vidalis@hotmail.com>, 2009.
+# SPDX-FileCopyrightText: 2009, 2026 Petros Vidalis <p_vidalis@hotmail.com>
 # Petros <pvidalis@gmail.com>, 2010.
 # Dimitrios Glentadakis <dglent@gmail.com>, 2011.
 # Stelios <sstavra@gmail.com>, 2013.
@@ -19,15 +19,15 @@ msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-12 01:04+0000\n"
-"PO-Revision-Date: 2024-09-04 14:30+0300\n"
-"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-11-14 14:52+0200\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -47,10 +47,9 @@ msgid "Unable to change NTP settings"
 msgstr "Αδυναμία αλλαγής των ρυθμίσεων NTP"
 
 #: dateandtime.cpp:249
-#, fuzzy, kde-format
-#| msgid "Unable to change NTP settings"
+#, kde-format
 msgid "Permission to change NTP setting denied"
-msgstr "Αδυναμία αλλαγής των ρυθμίσεων NTP"
+msgstr "Δεν επιτρέπεται η αλλαγή της ρύθμισης NTP"
 
 #: dateandtime.cpp:261 main.cpp:89
 #, kde-format
@@ -60,18 +59,17 @@ msgstr "Αδυναμία καθορισμού της τρέχουσας ώρας
 #: dateandtime.cpp:263
 #, kde-format
 msgid "Permission to change date and time setting denied"
-msgstr ""
+msgstr "Δεν επιτρέπεται η αλλαγή της ρύθμισης ημερομηνίας και ώρας"
 
 #: dateandtime.cpp:274
-#, fuzzy, kde-format
-#| msgid "Unable to set timezone"
+#, kde-format
 msgid "Unable to set time zone"
 msgstr "Αδυναμία καθορισμού της ζώνης ώρας"
 
 #: dateandtime.cpp:276
 #, kde-format
 msgid "Permission to change time zone denied"
-msgstr ""
+msgstr "Δεν επιτρέπεται η αλλαγή της ζώνης ώρας"
 
 #: main.cpp:101
 #, kde-format
@@ -79,27 +77,25 @@ msgid "Unable to set timezone"
 msgstr "Αδυναμία καθορισμού της ζώνης ώρας"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "Set date and time &automatically"
+#, kde-format
 msgctxt "@option"
 msgid "Set date and time automatically"
-msgstr "&Αυτόματη ρύθμιση ημερομηνίας και ώρας"
+msgstr "Αυτόματη ρύθμιση ημερομηνίας και ώρας"
 
 #: ui/main.qml:54
 #, kde-format
 msgctxt "@action:button as in set the current time on the machine"
 msgid "Set Time"
-msgstr ""
+msgstr "Ρύθμιση ώρας"
 
 #: ui/main.qml:68
 #, kde-format
 msgctxt "@action:button as in set the current date on the machine"
 msgid "Set Date"
-msgstr ""
+msgstr "Ρύθμιση ημερομηνίας"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Time Zone"
+#, kde-format
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "Ζώνη ώρας"

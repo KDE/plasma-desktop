@@ -7,20 +7,21 @@
 # Antonis Geralis <gaantonio@civil.auth.gr>, 2013, 2014.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016, 2017.
 # Dimitrys Meliates <demetresmeliates+i18n@gmail.com>, 2024.
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-20 00:54+0000\n"
-"PO-Revision-Date: 2024-08-12 23:01+0300\n"
-"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-11-14 15:27+0200\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: code/tools.js:53
 #, kde-format
@@ -48,15 +49,13 @@ msgid "Show in Favorites"
 msgstr "Εμφάνιση στα αγαπημένα"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Γενικά"
 
 #: ConfigGeneral.qml:50
-#, fuzzy, kde-format
-#| msgid "Icon:"
+#, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Εικονίδιο:"
@@ -68,134 +67,115 @@ msgid "Choose…"
 msgstr "Επιλογή…"
 
 #: ConfigGeneral.qml:140
-#, fuzzy, kde-format
-#| msgid "Restore Tabs to Default"
+#, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr "Επαναφορά καρτελών στις προκαθορισμένες"
+msgstr "Επαναφορά στο προεπιλεγμένο εικονίδιο"
 
 #: ConfigGeneral.qml:161
-#, fuzzy, kde-format
-#| msgid "Show applications as:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Εμφάνιση εφαρμογών ως:"
 
 #: ConfigGeneral.qml:163
-#, fuzzy, kde-format
-#| msgid "Name only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Μόνο όνομα"
 
 #: ConfigGeneral.qml:163
-#, fuzzy, kde-format
-#| msgid "Description only"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Μόνο περιγραφή"
 
 #: ConfigGeneral.qml:164
-#, fuzzy, kde-format
-#| msgid "Name (Description)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Όνομα (περιγραφή)"
 
 #: ConfigGeneral.qml:164
-#, fuzzy, kde-format
-#| msgid "Description (Name)"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Περιγραφή (όνομα)"
 
 #: ConfigGeneral.qml:174
-#, fuzzy, kde-format
-#| msgid "Behavior:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
 msgstr "Συμπεριφορά:"
 
 #: ConfigGeneral.qml:176
-#, fuzzy, kde-format
-#| msgid "Sort applications alphabetically"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Ταξινόμηση εφαρμογών αλφαβητικά"
 
 #: ConfigGeneral.qml:184
-#, fuzzy, kde-format
-#| msgid "Flatten sub-menus to a single level"
+#, kde-format
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
 msgstr "Εμφάνιση των υπομενού σε ένα μόνο επίπεδο"
 
 #: ConfigGeneral.qml:192
-#, fuzzy, kde-format
-#| msgid "Show icons on the root level of the menu"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
 msgstr "Εμφάνιση εικονιδίων στο ριζικό επίπεδο του μενού"
 
 #: ConfigGeneral.qml:198
-#, fuzzy, kde-format
-#| msgid "All Installed Applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
-msgstr "Όλες οι εγκατεστημένες εφαρμογές"
+msgstr "Επισήμανση νεοεγκατεστημένων εφαρμογών"
 
 #: ConfigGeneral.qml:208
-#, fuzzy, kde-format
-#| msgid "Show categories:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
 msgstr "Εμφάνιση κατηγοριών:"
 
 #: ConfigGeneral.qml:211
-#, fuzzy, kde-format
-#| msgid "Recent applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent applications"
 msgstr "Πρόσφατες εφαρμογές"
 
 #: ConfigGeneral.qml:212
-#, fuzzy, kde-format
-#| msgid "Often used applications"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used applications"
 msgstr "Συχνά χρησιμοποιούμενες εφαρμογές"
 
 #: ConfigGeneral.qml:219
-#, fuzzy, kde-format
-#| msgid "Recent files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent files"
 msgstr "Πρόσφατα αρχεία"
 
 #: ConfigGeneral.qml:220
-#, fuzzy, kde-format
-#| msgid "Often used files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used files"
 msgstr "Συχνά χρησιμοποιούμενα αρχεία"
 
 #: ConfigGeneral.qml:227
-#, fuzzy, kde-format
-#| msgid "Recent files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recent places"
-msgstr "Πρόσφατα αρχεία"
+msgstr "Πρόσφατες τοποθεσίες"
 
 #: ConfigGeneral.qml:228
-#, fuzzy, kde-format
-#| msgid "Often used files"
+#, kde-format
 msgctxt "@option:check"
 msgid "Often used places"
-msgstr "Συχνά χρησιμοποιούμενα αρχεία"
+msgstr "Συχνά χρησιμοποιούμενες τοποθεσίες"
 
 #: ConfigGeneral.qml:234
-#, fuzzy, kde-format
-#| msgid "Sort items in categories by:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
 msgstr "Ταξινόμηση αντικειμένων σε κατηγορίες κατά:"
@@ -208,48 +188,41 @@ msgid "Recently used"
 msgstr "Χρησιμοποιήθηκαν πρόσφατα"
 
 #: ConfigGeneral.qml:235
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
-#| msgid "Often used"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Often used"
 msgstr "Χρησιμοποιούνται συχνά"
 
 #: ConfigGeneral.qml:245
-#, fuzzy, kde-format
-#| msgid "Search:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
 msgstr "Αναζήτηση:"
 
 #: ConfigGeneral.qml:247
-#, fuzzy, kde-format
-#| msgid "Expand search to bookmarks, files and emails"
+#, kde-format
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Επέκταση αναζήτησης σε σελιδοδείκτες, αρχεία και αλληλογραφία"
 
 #: ConfigGeneral.qml:255
-#, fuzzy, kde-format
-#| msgid "Align search results to bottom"
+#, kde-format
 msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr "Στοίχιση των αποτελεσμάτων αναζήτησης στο κάτω μέρος"
 
 #: ConfigGeneral.qml:260
-#, fuzzy, kde-format
-#| msgid "Appearance"
+#, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
-msgstr "Εμφάνιση"
+msgstr "Εμφάνιση:"
 
 #: ConfigGeneral.qml:265
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
-msgstr ""
+msgstr "Προτίμηση σκοτεινής λειτουργίας όταν είναι διαθέσιμη"
 
 #: ConfigGeneral.qml:269
 #, kde-kuit-format
@@ -258,10 +231,11 @@ msgid ""
 "This feature uses the complementary colors from your colorscheme, which "
 "usually feature a dark background."
 msgstr ""
+"Αυτή η λειτουργία χρησιμοποιεί τα συμπληρωματικά χρώματα του χρωματικού σας "
+"συνδυασμού, τα οποία συνήθως έχουν σκούρο φόντο."
 
 #: DashboardRepresentation.qml:425
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@title:group for column with app and system action grids"
 msgid "Favorites"
 msgstr "Αγαπημένα"
@@ -270,57 +244,52 @@ msgstr "Αγαπημένα"
 #, kde-format
 msgctxt "Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Νέο!"
 
 #: DashboardRepresentation.qml:952 ItemListDelegate.qml:98
-#, fuzzy, kde-format
-#| msgid "Browse installed applications by categories"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "There is a newly-installed application in this category"
-msgstr "Περιηγηθείτε στις εγκατεστημένες εφαρμογές με βάση τις κατηγορίες"
+msgstr "Υπάρχει νεοεγκατεστημένη εφαρμογή σε αυτή την κατηγορία"
 
 #: ItemGridDelegate.qml:85
 #, kde-format
 msgctxt "@label Newly-installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Νέο!"
 
 #: ItemGridDelegate.qml:87
-#, fuzzy, kde-format
-#| msgid "All Installed Applications"
+#, kde-format
 msgctxt "@label Accessible name for badge"
 msgid "Newly-installed application"
-msgstr "Όλες οι εγκατεστημένες εφαρμογές"
+msgstr "Νεοεγκατεστημένη εφαρμογή"
 
 #: ItemListDelegate.qml:40
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
-msgstr ""
+msgstr "Άνοιγμα κατηγορίας"
 
 #: ItemListDelegate.qml:41
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
-msgstr ""
+msgstr "Εκκίνηση"
 
 #: ItemListDelegate.qml:99
-#, fuzzy, kde-format
-#| msgid "All Installed Applications"
+#, kde-format
 msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
-msgstr "Όλες οι εγκατεστημένες εφαρμογές"
+msgstr "Νεοεγκατεστημένη εφαρμογή"
 
 #: main.qml:189
-#, fuzzy, kde-format
-#| msgid "Edit Applications…"
+#, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
 msgstr "Επεξεργασία εφαρμογών…"
 
 #: MenuRepresentation.qml:198
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@title:group accessible name for favorite group in sidebar"
 msgid "Favorites"
 msgstr "Αγαπημένα"
@@ -329,7 +298,7 @@ msgstr "Αγαπημένα"
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr ""
+msgstr "Δεν υπάρχουν αντιστοιχίες"
 
 #~ msgctxt "@item:inmenu Reset icon to default"
 #~ msgid "Clear Icon"

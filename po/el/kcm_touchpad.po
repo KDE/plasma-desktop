@@ -3,23 +3,24 @@
 #
 # Dimitris Kardarakos <dimkard@gmail.com>, 2015, 2017.
 # Dimitrys Meliates <demetresmeliates+i18n@gmail.com>, 2024.
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-17 00:51+0000\n"
-"PO-Revision-Date: 2024-08-12 21:02+0300\n"
-"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-11-14 15:16+0200\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: kcm.cpp:57
-#, fuzzy, kde-format
+#, kde-format
 msgid "Not able to select appropriate backend"
 msgstr "Αδυναμία επιλογής κατάλληλου συστήματος υποστήριξης"
 
@@ -33,10 +34,9 @@ msgstr ""
 "πληροφορίες. Παρακαλώ επανεκκινήστε αυτή τη μονάδα διαμόρφωσης."
 
 #: kcm.cpp:106
-#, fuzzy, kde-format
-#| msgid "No touchpad found. Connect touchpad now."
+#, kde-format
 msgid "No pointer device found. Connect now."
-msgstr "Δεν βρέθηκε επιφάνεια αφής. Συνδέστε μια επιφάνεια αφής τώρα."
+msgstr "Δεν βρέθηκε συσκευή κατάδειξης. Συνδέστε μία τώρα."
 
 #: kcm.cpp:115
 #, kde-format
@@ -67,16 +67,14 @@ msgstr ""
 "επανασυνδέστε τη και επανεκκινήστε το άρθρωμα διαμόρφωσης."
 
 #: kcm.cpp:162
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. Closed its setting dialog."
+#, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr "Αποσύνδεση επιφάνειας αφής. Κλείσιμο του διαλόγου ρυθμίσεων."
+msgstr "Η συσκευή κατάδειξης αποσυνδέθηκε. Το παράθυρο ρυθμίσεών της έκλεισε."
 
 #: kcm.cpp:164
-#, fuzzy, kde-format
-#| msgid "Touchpad disconnected. No other touchpads found."
+#, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr "Αποσύνδεση επιφάνειας αφής. Δε βρέθηκαν άλλες επιφάνειες αφής."
+msgstr "Η συσκευή κατάδειξης αποσυνδέθηκε. Δεν βρέθηκαν άλλες συσκευές."
 
 #: kwinwaylandbackend.cpp:45
 #, kde-format
@@ -86,51 +84,43 @@ msgstr ""
 "επιφάνεια αφής %1."
 
 #: ui/main.qml:69
-#, fuzzy, kde-format
-#| msgid "No touchpad found"
+#, kde-format
 msgctxt "@info:status placeholdermessage text"
 msgid "No touchpad found"
 msgstr "Δεν βρέθηκε επιφάνεια αφής"
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Connect an external touchpad"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchpad"
 msgstr "Συνδέστε μια εξωτερική επιφάνεια αφής"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgctxt "@label:listbox device selection"
 msgid "Device:"
 msgstr "Συσκευή:"
 
 #: ui/main.qml:110
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "General:"
 msgstr "Γενικά:"
 
 #: ui/main.qml:111
-#, fuzzy, kde-format
-#| msgctxt "Coasting"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable device"
 msgstr "Ενεργοποίηση"
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgid "Disable touchpad when mouse is plugged in"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "Απενεργοποίηση της επιφάνειας αφής όταν συνδέεται το ποντίκι"
 
 #: ui/main.qml:144
-#, fuzzy, kde-format
-#| msgid "Disable while typing"
+#, kde-format
 msgctxt "option:check"
 msgid "Disable while typing"
 msgstr "Απενεργοποίηση κατά την πληκτρολόγηση"
@@ -142,26 +132,22 @@ msgid "This can interfere with video games."
 msgstr "Αυτό μπορεί να επηρεάσει τα βιντεοπαιχνίδια."
 
 #: ui/main.qml:165
-#, fuzzy, kde-format
-#| msgid "Swap left and right buttons."
+#, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
-msgstr "Εναλλαγή αριστερού και δεξιού κουμπιού."
+msgstr "Αριστερό και δεξί κουμπί:"
 
 #: ui/main.qml:166
-#, fuzzy, kde-format
-#| msgid "Left-handed mode"
+#, kde-format
 msgctxt "@option:check"
 msgid "Swap (left-handed mode)"
-msgstr "Λειτουργία αριστερόχειρα"
+msgstr "Εναλλαγή (λειτουργία για αριστερόχειρες)"
 
 #: ui/main.qml:184
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Press left and right buttons to middle-click"
+#, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
-msgstr "Πατήστε το αριστερό και το δεξί κουμπί για μεσαίο κλικ"
+msgstr "Πατήστε ταυτόχρονα και τα δύο κουμπιά για μεσαίο κλικ"
 
 #: ui/main.qml:197
 #, kde-format
@@ -181,23 +167,23 @@ msgid ""
 "This setting is not available while “Right-click by pressing anywhere with "
 "two fingers” is selected."
 msgstr ""
+"Αυτή η ρύθμιση δεν είναι διαθέσιμη όταν είναι επιλεγμένο το «Δεξί κλικ με "
+"πάτημα οπουδήποτε με δύο δάχτυλα»."
 
 #: ui/main.qml:208
-#, fuzzy, kde-format
-#| msgid "Pointer speed:"
+#, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "Ταχύτητα δείκτη:"
 
 #: ui/main.qml:288
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
-msgstr "Επιτάχυνση δείκτη:"
+msgstr "Ενεργοποίηση επιτάχυνσης δείκτη"
 
 #: ui/main.qml:300
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
@@ -206,31 +192,25 @@ msgstr ""
 "ταχύτητα κίνησης."
 
 #: ui/main.qml:311
-#, fuzzy, kde-format
-#| msgid "Scrolling speed:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "Ταχύτητα κύλισης:"
 
 #: ui/main.qml:393
-#, fuzzy, kde-format
-#| msgctxt "Slower Scroll"
-#| msgid "Slower"
+#, kde-format
 msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "Αργότερη"
 
 #: ui/main.qml:400
-#, fuzzy, kde-format
-#| msgctxt "Faster Scroll Speed"
-#| msgid "Faster"
+#, kde-format
 msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "Ταχύτερη"
 
 #: ui/main.qml:407
-#, fuzzy, kde-format
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt ""
 "@title group begins the sentence 'Scroll by moving two fingers anywhere/"
 "moving one finger on edge'"
@@ -238,92 +218,77 @@ msgid "Scroll by:"
 msgstr "Κύλιση:"
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr "Κίνηση δύο δαχτύλων οπουδήποτε"
 
 #: ui/main.qml:428
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr "Κίνηση ενός δαχτύλου στην άκρη"
 
 #: ui/main.qml:437
-#, fuzzy, kde-format
-#| msgid "Invert scroll direction (Natural scrolling)"
+#, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Αντιστροφή κατεύθυνσης κύλισης (Φυσική κύλιση)"
 
 #: ui/main.qml:454
-#, fuzzy, kde-format
-#| msgid "Disable horizontal scrolling"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "Απενεργοποίηση οριζόντιας κύλισης"
 
 #: ui/main.qml:472
-#, fuzzy, kde-format
-#| msgid "Right-click"
+#, kde-format
 msgctxt ""
 "@title:group for radiobutton group, begins the sentence 'right-click by "
 "pressing bottom-right corner/pressing with two fingers'"
 msgid "Right-click by:"
-msgstr "Δεξί κλικ"
+msgstr "Δεξί κλικ με:"
 
 #: ui/main.qml:478
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated right-click"
-#| msgid "Press bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-left "
 "corner'"
 msgid "Pressing bottom-left corner"
-msgstr "Πατήστε την κάτω δεξιά γωνία"
+msgstr "Πάτημα στην κάτω αριστερή γωνία"
 
 #: ui/main.qml:479
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated right-click"
-#| msgid "Press bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-right "
 "corner'"
 msgid "Pressing bottom-right corner"
-msgstr "Πατήστε την κάτω δεξιά γωνία"
+msgstr "Πάτημα στην κάτω δεξιά γωνία"
 
 #: ui/main.qml:485
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing both bottom corners."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "Μεσαίο κλικ πατώντας και τις δύο κάτω γωνίες."
 
 #: ui/main.qml:486
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing bottom center."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Μεσαίο κλικ πατώντας το κάτω κέντρο."
 
 #: ui/main.qml:508
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated right-click"
-#| msgid "Press touchpad with two fingers"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing with two "
 "fingers'"
 msgid "Pressing anywhere with two fingers"
-msgstr "Πατήστε την επιφάνειας αφής με δύο δάχτυλα"
+msgstr "Πάτημα οπουδήποτε με δύο δάχτυλα"
 
 #: ui/main.qml:509
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing with three fingers."
+#, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
 msgstr "Μεσαίο κλικ πατώντας με τρία δάχτυλα."
@@ -335,21 +300,19 @@ msgid "Tapping:"
 msgstr "Πατώντας:"
 
 #: ui/main.qml:527
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Tap-to-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Tap to click"
 msgstr "Πάτημα για κλικ"
 
 #: ui/main.qml:542
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr "Σύρσιμο μετά από άγγιγμα"
 
 #: ui/main.qml:554
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Tap, then tap and immediately slide finger over the touchpad to drag. Lift "
@@ -359,47 +322,40 @@ msgstr ""
 "επιφάνεια για να μετακινήσετε. Σηκώστε το δάχτυλο για να αφήσετε."
 
 #: ui/main.qml:561
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr "Να επιτρέπεται στιγμιαίο σήκωμα του δαχτύλου κατά το σύρσιμο"
 
 #: ui/main.qml:574
-#, fuzzy, kde-format
-#| msgid "Two-finger tap:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "Πάτημα με δύο δάχτυλα:"
 
 #: ui/main.qml:579
-#, fuzzy, kde-format
-#| msgid "Right-click"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "Δεξί κλικ"
 
 #: ui/main.qml:582
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by tapping anywhere with three fingers."
 msgstr "Μεσαίο κλικ πατώντας με τρία δάχτυλα."
 
 #: ui/main.qml:604
-#, fuzzy, kde-format
-#| msgid "Middle-click"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Μεσαίο κλικ"
 
 #: ui/main.qml:607
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Right-click by tapping anywhere with three fingers."
-msgstr "Μεσαίο κλικ πατώντας με τρία δάχτυλα."
+msgstr "Δεξί κλικ πατώντας οπουδήποτε με τρία δάχτυλα."
 
 #, fuzzy
 #~| msgid "Middle-click"

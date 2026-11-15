@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-10 00:59+0000\n"
-"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"PO-Revision-Date: 2026-11-14 16:15+0100\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
@@ -323,7 +323,7 @@ msgstr "Распореди"
 #, kde-format
 msgctxt "@info:usagetip %1 is the name of a keyboard layout"
 msgid "Using system-wide layout “%1”"
-msgstr ""
+msgstr "Користи се системски распоред „%1“"
 
 #: ui/main.qml:252
 #, kde-kuit-format
@@ -332,6 +332,8 @@ msgid ""
 "To override this or add more layouts for this user account, press the "
 "<interface>Add…</interface> button."
 msgstr ""
+"Да бисте ово потиснули или додали још распореда за овај кориснички налог, "
+"притисните дугме <interface>Додај…</interface>."
 
 #: ui/main.qml:268
 #, kde-format
@@ -567,16 +569,3 @@ msgstr[3] "%1 пречица"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "ништа"
-
-#~ msgctxt "@label:checkbox configure layouts option"
-#~ msgid "Enable"
-#~ msgstr "Укључи"
-
-#~ msgctxt "@label:checkbox accessible"
-#~ msgid "Configure Layouts"
-#~ msgstr "Подеси распореде"
-
-# >> @title:column
-#~ msgctxt "@option:check"
-#~ msgid "Custom Layout"
-#~ msgstr "Посебан распоред"

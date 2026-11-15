@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-31 00:45+0000\n"
-"PO-Revision-Date: 2024-09-13 18:18+0300\n"
-"Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
-"Language-Team: el <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2026-11-14 15:34+0200\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -30,14 +31,13 @@ msgid "None"
 msgstr "Κανένα"
 
 #: inputsequence.cpp:209
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button Two keybinds for a dial, up & down"
 msgid "%1 && %2"
 msgstr "%1 && %2"
 
 #: inputsequence.cpp:216
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybindings"
 msgid "None"
 msgstr "Κανένα"
@@ -67,14 +67,13 @@ msgid "Application-defined"
 msgstr "Οριζόμενο από την εφαρμογή"
 
 #: inputsequence.cpp:233
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
 msgstr "Κουμπί γραφίδας %1"
 
 #: inputsequence.cpp:235
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "Scroll wheel"
 msgstr "Τροχός κύλισης"
@@ -121,38 +120,31 @@ msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
 #: kcmtablet.cpp:164 ui/DisplayTab.qml:102 ui/DisplayTab.qml:103
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
-msgstr "Τέντωμα και γέμισμα"
+msgstr "Επέκταση για κάλυψη της οθόνης"
 
 #: kcmtablet.cpp:165 ui/DisplayTab.qml:104
-#, fuzzy, kde-format
-#| msgid "Keep Aspect Ratio and Fit Within Screen"
+#, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
 msgstr "Διατήρηση αναλογίας διαστάσεων και προσαρμογή εντός οθόνης"
 
 #: kcmtablet.cpp:166 ui/DisplayTab.qml:105
-#, fuzzy, kde-format
-#| msgid "Map to Portion of Screen"
+#, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
-msgstr "Χάρτης σε τμήμα της οθόνης"
+msgstr "Αντιστοίχιση σε τμήμα της οθόνης"
 
 #: kcmtablet.cpp:269
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
 msgstr "Κουμπί γραφίδας %1:"
 
 #: kcmtablet.cpp:270
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
@@ -160,12 +152,10 @@ msgid "pen button %1"
 msgstr "κουμπί γραφίδας %1"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet button"
-#| msgid "Select Button Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial/Ring Action"
-msgstr "Επιλογή ενέργειας κουμπιού"
+msgstr "Επιλογή ενέργειας περιστροφικού επιλογέα ή δακτυλίου"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -174,12 +164,10 @@ msgid "Select Button Action"
 msgstr "Επιλογή ενέργειας κουμπιού"
 
 #: ui/ActionDialog.qml:83
-#, fuzzy, kde-format
-#| msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
-#| msgid "Choose what action will be taken when pressing %1:"
+#, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when rotating %1:"
-msgstr "Επιλογή της ενέργειας που θα εκτελεστεί όταν πατήσετε το %1:"
+msgstr "Επιλέξτε την ενέργεια κατά την περιστροφή του χειριστηρίου (%1):"
 
 #: ui/ActionDialog.qml:84
 #, kde-format
@@ -200,12 +188,10 @@ msgid "Send keyboard key"
 msgstr "Αποστολή πλήκτρου πληκτρολογίου"
 
 #: ui/ActionDialog.qml:129
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Set this action to a keyboard type"
-#| msgid "Send keyboard key"
+#, kde-format
 msgctxt "@option:radio Set this action to a up/down keyboard type"
 msgid "Send keyboard keys"
-msgstr "Αποστολή πλήκτρου πληκτρολογίου"
+msgstr "Αποστολή πατημάτων πλήκτρων"
 
 #: ui/ActionDialog.qml:144
 #, kde-format
@@ -214,17 +200,13 @@ msgid "Send mouse button click"
 msgstr "Αποστολή κλικ κουμπιού ποντικιού"
 
 #: ui/ActionDialog.qml:160
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr "κουμπί στυλό 1"
+msgstr "Αποστολή πατήματος κουμπιού γραφίδας"
 
 #: ui/ActionDialog.qml:177
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
 msgstr "Λειτουργία ως τροχός κύλισης"
@@ -251,7 +233,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "upwards"
 msgid "Clockwise:"
-msgstr ""
+msgstr "Δεξιόστροφα:"
 
 #: ui/ActionDialog.qml:257
 #, kde-format
@@ -259,10 +241,10 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "downwards"
 msgid "Counterclockwise:"
-msgstr ""
+msgstr "Αριστερόστροφα:"
 
 #: ui/ActionDialog.qml:271
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "@label:slider Speed for how often this dial/ring should emit key events"
 msgid "Speed:"
@@ -311,37 +293,25 @@ msgid "Shift"
 msgstr "Shift"
 
 #: ui/ActionDialog.qml:352
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr "κουμπί στυλό 1"
+msgstr "Κουμπί 1"
 
 #: ui/ActionDialog.qml:353
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 2'"
-#| msgid "pen button 2"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr "κουμπί στυλό 2"
+msgstr "Κουμπί 2"
 
 #: ui/ActionDialog.qml:354
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 3'"
-#| msgid "pen button 3"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr "κουμπί στυλό 3"
+msgstr "Κουμπί 3"
 
 #: ui/ActionDialog.qml:363
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
 msgstr "Λειτουργεί όπως ο τροχός κύλισης ενός ποντικιού."
@@ -362,7 +332,7 @@ msgstr "Βαθμονόμηση στυλό"
 #, kde-format
 msgctxt "@info"
 msgid "%1: (%2 px, %3 px)"
-msgstr ""
+msgstr "%1: (%2 px, %3 px)"
 
 #: ui/Calibration.qml:107
 #, kde-format
@@ -371,6 +341,8 @@ msgid ""
 "Applied center correction (%1 px, %2 px). Retap the targets to redo the "
 "correction."
 msgstr ""
+"Εφαρμόστηκε διόρθωση κέντρου (%1 px, %2 px). Αγγίξτε ξανά τους στόχους για "
+"να επαναλάβετε τη διόρθωση."
 
 #: ui/Calibration.qml:173
 #, kde-kuit-format
@@ -384,7 +356,13 @@ msgid_plural ""
 "strong='true'>Will revert to default calibration in %1 seconds unless "
 "further action is taken.</emphasis>"
 msgstr[0] ""
+"Αγγίξτε ξανά τους στόχους για να επιβεβαιώσετε τη νέα βαθμονόμηση.<nl/><nl/"
+"><emphasis strong='true'>Αν δεν κάνετε κάτι άλλο, θα επανέλθει η "
+"προεπιλεγμένη βαθμονόμηση σε %1 δευτερόλεπτο.</emphasis>"
 msgstr[1] ""
+"Αγγίξτε ξανά τους στόχους για να επιβεβαιώσετε τη νέα βαθμονόμηση.<nl/><nl/"
+"><emphasis strong='true'>Αν δεν κάνετε κάτι άλλο, θα επανέλθει η "
+"προεπιλεγμένη βαθμονόμηση σε %1 δευτερόλεπτα.</emphasis>"
 
 #: ui/Calibration.qml:177
 #, kde-format
@@ -395,9 +373,13 @@ msgid ""
 "Tap the center target once to fine-tune alignment. You can retap the other "
 "targets to verify the result."
 msgstr ""
+"Η βαθμονόμηση ολοκληρώθηκε και αποθηκεύτηκε.\n"
+"\n"
+"Αγγίξτε μία φορά τον κεντρικό στόχο για να βελτιώσετε την ευθυγράμμιση. "
+"Μπορείτε να αγγίξετε ξανά τους άλλους στόχους για να ελέγξετε το αποτέλεσμα."
 
 #: ui/Calibration.qml:180
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
 msgstr "Αγγίξτε το κέντρο κάθε στόχου."
@@ -409,6 +391,8 @@ msgid ""
 "Offset Correction:\n"
 "%1"
 msgstr ""
+"Διόρθωση μετατόπισης:\n"
+"%1"
 
 #: ui/Calibration.qml:216
 #, kde-format
@@ -417,7 +401,7 @@ msgid "Refine Existing Calibration"
 msgstr "Βελτίωση υπάρχουσας βαθμονόμησης"
 
 #: ui/Calibration.qml:228
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
 msgstr "Επαναφορά και νέα προσπάθεια"
@@ -444,55 +428,52 @@ msgstr "Ακύρωση"
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-left"
-msgstr ""
+msgstr "Πάνω-αριστερά"
 
 #: ui/Calibration.qml:334
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-right"
-msgstr ""
+msgstr "Πάνω-δεξιά"
 
 #: ui/Calibration.qml:353
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-left"
-msgstr ""
+msgstr "Κάτω-αριστερά"
 
 #: ui/Calibration.qml:372
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-right"
-msgstr ""
+msgstr "Κάτω-δεξιά"
 
 #: ui/Calibration.qml:391
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Center"
-msgstr ""
+msgstr "Κέντρο"
 
 #: ui/DisplayTab.qml:46
-#, fuzzy, kde-format
-#| msgid "Map to screen:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Map to screen:"
 msgstr "Χαρτογράφηση στην οθόνη:"
 
 #: ui/DisplayTab.qml:76
-#, fuzzy, kde-format
-#| msgid "Orientation:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Orientation:"
 msgstr "Προσανατολισμός:"
 
 #: ui/DisplayTab.qml:83
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label substitute for unavailable orientation change"
 msgid "Not Applicable"
 msgstr "Δεν ισχύει"
 
 #: ui/DisplayTab.qml:96
-#, fuzzy, kde-format
-#| msgid "Mapped Area:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Mapped Area:"
 msgstr "Χαρτογραφημένη περιοχή:"
@@ -510,37 +491,31 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/ExternalScreenMapping.qml:190
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgctxt "@action:button"
 msgid "Resize the screen area"
-msgstr "Αλλαγή μεγέθους περιοχής tablet"
+msgstr "Αλλαγή μεγέθους της περιοχής της οθόνης"
 
 #: ui/ExternalScreenMapping.qml:267
-#, fuzzy, kde-format
-#| msgctxt "tablet area position - size"
-#| msgid "%1,%2 - %3×%4"
+#, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr "%1,%2 - %3×%4"
+msgstr "%1%,%2% - %3%×%4%"
 
 #: ui/ExternalScreenMapping.qml:301
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgctxt "@action:button"
 msgid "Resize the tablet area"
 msgstr "Αλλαγή μεγέθους περιοχής tablet"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "No drawing tablets found"
+#, kde-format
 msgctxt "@info placeholdermessage text"
 msgid "No drawing tablets found"
 msgstr "Δεν βρέθηκαν tablets σχεδίασης"
 
 #: ui/main.qml:40
-#, fuzzy, kde-format
-#| msgid "Connect a drawing tablet"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect a drawing tablet"
 msgstr "Συνδέστε ένα tablet σχεδίασης"
@@ -552,16 +527,16 @@ msgid "Test Tablet…"
 msgstr "Δοκιμή tablet…"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info"
 msgid ""
 "This device is managed by a user-space driver that you installed. Use that "
 "driver to configure the tablet instead of using the settings here, unless "
 "specifically instructed otherwise."
 msgstr ""
-"Αυτή η συσκευή διαχειρίζεται από οδηγό χώρου χρήστη που εγκαταστήσατε. "
-"Ρυθμίστε την ταμπλέτα από εκείνον τον οδηγό αντί για εδώ, εκτός αν σας έχει "
-"δοθεί άλλη οδηγία."
+"Η συσκευή ελέγχεται από έναν οδηγό χώρου χρήστη που εγκαταστήσατε. "
+"Χρησιμοποιήστε αυτόν τον οδηγό για να διαμορφώσετε την ταμπλέτα, εκτός αν "
+"σας έχουν δοθεί άλλες οδηγίες."
 
 #: ui/main.qml:107
 #, kde-format
@@ -570,13 +545,13 @@ msgid "Device:"
 msgstr "Συσκευή:"
 
 #: ui/main.qml:175
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:tab"
 msgid "Display"
 msgstr "Οθόνη"
 
 #: ui/main.qml:188
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
 msgstr "Γραφίδα"
@@ -588,14 +563,13 @@ msgid "Pad"
 msgstr "Επιφάνεια"
 
 #: ui/MissingPadTab.qml:15
-#, fuzzy, kde-format
-#| msgid "No drawing tablets found"
+#, kde-format
 msgctxt "@info placeholdermessage main text"
 msgid "No pad inputs found"
-msgstr "Δεν βρέθηκαν tablets σχεδίασης"
+msgstr "Δεν βρέθηκαν χειριστήρια στην ταμπλέτα"
 
 #: ui/MissingPadTab.qml:16
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid ""
 "No buttons or other inputs were detected. This could mean the driver for "
@@ -605,39 +579,35 @@ msgstr ""
 "συσκευής."
 
 #: ui/PadTab.qml:35
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt "@label for graphics tablet ring config, % is number of ring"
 msgid "Pad ring %1:"
-msgstr "Κουμπί επιφάνειας %1:"
+msgstr "Δακτύλιος ταμπλέτας %1:"
 
 #: ui/PadTab.qml:62
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "ring/dial 0'"
 msgid "pad ring/dial %1"
-msgstr "Κουμπί επιφάνειας %1:"
+msgstr "δακτύλιος ή περιστροφικός επιλογέας ταμπλέτας %1"
 
 #: ui/PadTab.qml:104
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt "@label for graphics tablet ring config, % is number of dial"
 msgid "Pad dial %1:"
-msgstr "Κουμπί επιφάνειας %1:"
+msgstr "Περιστροφικός επιλογέας ταμπλέτας %1:"
 
 #: ui/PadTab.qml:108
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad dial %1"
-msgstr "επιλογέα πλαισίου %1"
+msgstr "περιστροφικός επιλογέας ταμπλέτας %1"
 
 #: ui/PadTab.qml:146
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt "@label for graphics tablet button config, % is number of button"
 msgid "Pad button %1:"
 msgstr "Κουμπί επιφάνειας %1:"
@@ -651,14 +621,13 @@ msgid "pad button %1"
 msgstr "κουμπί επιφάνειας %1"
 
 #: ui/StylusTab.qml:228
-#, fuzzy, kde-format
-#| msgid "Left-handed mode:"
+#, kde-format
 msgctxt "@label prefix for checkbox"
 msgid "Left-handed mode:"
 msgstr "Λειτουργία αριστερόχειρα:"
 
 #: ui/StylusTab.qml:231
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check Enable left-handed mode"
 msgid "Enable"
 msgstr "Ενεργοποίηση"
@@ -676,14 +645,14 @@ msgstr ""
 "κουμπιών του πεδίου, ώστε το tablet να μπορεί να χρησιμοποιηθεί ανάποδα."
 
 #: ui/StylusTab.qml:247
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
 msgstr "Λειτουργία:"
 
 #: ui/StylusTab.qml:251
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "@option:radio Pen mode, where the point on the screen is always where you "
 "touch the stylus"
@@ -691,20 +660,20 @@ msgid "Pen"
 msgstr "Γραφίδα"
 
 #: ui/StylusTab.qml:256
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid "The cursor follows where you touch the pen on the surface"
 msgstr "Ο δρομέας ακολουθεί το σημείο όπου αγγίζετε τη γραφίδα στην επιφάνεια"
 
 #: ui/StylusTab.qml:265
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "@option:radio Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
 msgstr "Ποντίκι"
 
 #: ui/StylusTab.qml:270
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:whatsthis Accessible description"
 msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
@@ -714,42 +683,42 @@ msgstr ""
 "προηγούμενη θέση του, όπως ένα ποντίκι"
 
 #: ui/StylusTab.qml:276
-#, fuzzy, kde-format
+#, kde-format
 msgid "Sync with mouse cursor"
 msgstr "Συγχρονισμός με τον δρομέα ποντικιού"
 
 #: ui/StylusTab.qml:345
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label prefix for pen pressure curve config"
 msgid "Pen Pressure:"
 msgstr "Πίεση γραφίδας:"
 
 #: ui/StylusTab.qml:401
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
 #: ui/StylusTab.qml:409
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
 #: ui/StylusTab.qml:420
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100%"
 
 #: ui/StylusTab.qml:428
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0%"
 
 #: ui/StylusTab.qml:433
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info"
 msgid ""
 "This curve controls the relationship between the pressure on the stylus and "
@@ -759,13 +728,13 @@ msgstr ""
 "πίεσης που λαμβάνουν οι εφαρμογές."
 
 #: ui/StylusTab.qml:438
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
 msgstr "Εύρος πίεσης:"
 
 #: ui/StylusTab.qml:456
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Pressure above or below the threshold will be clamped, and this becomes the "
@@ -775,7 +744,7 @@ msgstr ""
 "πραγματικό εύρος."
 
 #: ui/StylusTab.qml:461
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info"
 msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
@@ -803,12 +772,10 @@ msgid "Calibration Not Supported"
 msgstr "Η βαθμονόμηση δεν υποστηρίζεται"
 
 #: ui/StylusTab.qml:516
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Refine Existing Calibration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr "Βελτίωση υπάρχουσας βαθμονόμησης"
+msgstr "Επαναφορά προσαρμοσμένης βαθμονόμησης"
 
 #: ui/Tester.qml:25
 #, kde-format
@@ -817,16 +784,14 @@ msgid "Tablet Tester"
 msgstr "Δοκιμαστής Tablet"
 
 #: ui/Tester.qml:48
-#, fuzzy, kde-format
-#| msgid "Stylus press X=%1 Y=%2"
+#, kde-format
 msgctxt ""
 "A tablet stylus was pressed onto the surface X=[x position] Y=[y position]"
 msgid "Stylus press X=%1 Y=%2"
 msgstr "Πάτημα γραφίδας X=%1 Y=%2"
 
 #: ui/Tester.qml:58
-#, fuzzy, kde-format
-#| msgid "Stylus release X=%1 Y=%2"
+#, kde-format
 msgctxt ""
 "A tablet stylus has 'released' or was lifted from the surface X=[x position] "
 "Y=[y position]"
@@ -834,8 +799,7 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "Απελευθέρωση γραφίδας X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2"
+#, kde-format
 msgctxt ""
 "A tablet stylus has moved over the surface X=[x position] Y=[y position] "
 "P=[pressure] TX=[tilt x] TY=[tilt y]"
@@ -843,33 +807,27 @@ msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "Κίνηση γραφίδας X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:75
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt "A tablet pad's button has been pressed B=[the button number]"
 msgid "Pad button press B=%1"
-msgstr "Κουμπί επιφάνειας %1:"
+msgstr "Πάτημα κουμπιού ταμπλέτας B=%1"
 
 #: ui/Tester.qml:77
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt "A tablet pad's button has been released B=[the button number]"
 msgid "Pad button release B=%1"
-msgstr "Κουμπί επιφάνειας %1:"
+msgstr "Απελευθέρωση κουμπιού ταμπλέτας B=%1"
 
 #: ui/Tester.qml:83
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt ""
 "A tablet pad's dial has moved, V120 here refers to 'Value 120' which is a "
 "technical term that should be kept as is"
 msgid "Pad dial moved V120=%1"
-msgstr "Κουμπί επιφάνειας %1:"
+msgstr "Κίνηση περιστροφικού επιλογέα ταμπλέτας V120=%1"
 
 #: ui/Tester.qml:219
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
+#, kde-format
 msgctxt "The tablet tester legend which is shown on start-up"
 msgid ""
 "## Legend:\n"
@@ -883,9 +841,7 @@ msgstr ""
 "# TX,TY - κλίση\n"
 
 #: ui/Tester.qml:225
-#, fuzzy, kde-format
-#| msgctxt "Clear the event log"
-#| msgid "Clear"
+#, kde-format
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
 msgstr "Εκκαθάριση"
