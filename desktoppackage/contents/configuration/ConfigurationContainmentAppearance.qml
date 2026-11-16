@@ -23,17 +23,88 @@ SimpleKCM {
     rightPadding: 0
     bottomPadding: 0
 
-    property int formAlignment: wallpaperComboBox.Kirigami.ScenePosition.x - appearanceRoot.Kirigami.ScenePosition.x + Kirigami.Units.smallSpacing
     property string originalWallpaper: ""
     property alias parentLayout: parentLayout
     property bool unsavedChanges: false
+
+    onUnsavedChangesChanged: console.log("uCC", unsavedChanges)
+
+    QQC2.ActionGroup {
+        id: wallpaperPluginGroup
+        readonly property string currentPlugin: checkedAction.pluginName
+        function checkAction(plugin: string) : void {
+            actions.find((action) => action.pluginName === plugin).checked = true
+        }
+        onCheckedActionChanged: {
+            if (!originalWallpaper) {
+                originalWallpaper = checkedAction.pluginName
+            }
+            if (configDialog.currentWallpaper === checkedAction.pluginName && main.sourceFile !== "tbd") {
+                originalWallpaper = originalWallpaper || checkedAction.pluginName
+                return;
+            }
+            configDialog.currentWallpaper = checkedAction.pluginName
+            let idx = configDialog.wallpaperConfigModel.index(checkedAction.index, 0)
+            main.sourceFile = idx.data(ConfigModel.SourceRole)
+            appearanceRoot.checkUnsavedChanges()
+        }
+    }
+    Connections {
+        target: configDialog.wallpaperConfigModel
+        function onWallpaperPluginsChanged() {
+            wallpaperPluginGroup.checkAction(wallpaperPluginGroup.currentPlugin);
+        }
+    }
+    Connections {
+        target: configDialog
+        function onCurrentWallpaperChanged() {
+            console.log("current Wallpaper Changed", configDialog.currentWallpaper)
+            wallpaperPluginGroup.checkAction(configDialog.currentWallpaper);
+        }
+    }
+
+    component ModelAction: Kirigami.Action {
+        id: modelAction
+        property alias model: internal.model
+        property alias delegate: internal.delegate
+        readonly property Instantiator __instantiator: Instantiator {
+            id: internal
+            onObjectAdded: (index, action) => modelAction.children.push(action)
+            onObjectRemoved: (index, action) => modelAction.children.splice(index, 1)
+        }
+    }
+
+    actions: [
+        ModelAction {
+            id: wallPaperTypeAction
+            text: {
+                return "Type: " + wallpaperPluginGroup.checkedAction.name
+            }
+            model: configDialog.wallpaperConfigModel
+            delegate: Kirigami.Action {
+                id: actionDelegate
+                required property string name
+                required property string pluginName
+                required property int index
+
+                QQC2.ActionGroup.group: wallpaperPluginGroup
+                text: name
+                checkable: true
+                checked: pluginName === configDialog.currentWallpaper
+            }
+        },
+        NewStuff.Action {
+            configFile: "wallpaperplugin.knsrc"
+            text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Get New Plugins…")
+        }
+    ]
 
     function saveConfig() {
         if (main.currentItem.saveConfig) {
             main.currentItem.saveConfig()
         }
-        configDialog.currentWallpaper = wallpaperComboBox.currentValue
-        appearanceRoot.originalWallpaper = wallpaperComboBox.currentValue
+        configDialog.currentWallpaper = wallpaperPluginGroup.currentPlugin
+        appearanceRoot.originalWallpaper = wallpaperPluginGroup.currentPlugin
         configDialog.wallpaperConfiguration.keys().forEach(key => {
             if (main.currentItem["cfg_"+key] !== undefined) {
                 configDialog.wallpaperConfiguration[key] = main.currentItem["cfg_"+key]
@@ -75,51 +146,7 @@ SimpleKCM {
             id: parentLayout // needed for twinFormLayouts to work in wallpaper plugins
             twinFormLayouts: main.currentItem.formLayout || []
             Layout.fillWidth: true
-            RowLayout {
-                Layout.fillWidth: true
-                Kirigami.FormData.label: i18ndc("plasma_shell_org.kde.plasma.desktop", "@label:listbox", "Wallpaper type:")
-                Kirigami.FormData.buddyFor: wallpaperComboBox
-
-                QQC2.ComboBox {
-                    id: wallpaperComboBox
-
-                    function selectCurrentWallpaperPlugin() {
-                        currentIndex = indexOfValue(configDialog.currentWallpaper)
-                        appearanceRoot.originalWallpaper = currentValue
-                        activated(currentIndex)
-                    }
-
-                    model: configDialog.wallpaperConfigModel
-                    textRole: "name"
-                    valueRole: "pluginName"
-                    onActivated: {
-                        var idx = configDialog.wallpaperConfigModel.index(currentIndex, 0)
-                        if (configDialog.currentWallpaper === currentValue && main.sourceFile !== "tbd") {
-                            return;
-                        }
-                        configDialog.currentWallpaper = currentValue
-                        main.sourceFile = idx.data(ConfigModel.SourceRole)
-                        appearanceRoot.checkUnsavedChanges()
-                    }
-                    Component.onCompleted: {
-                        selectCurrentWallpaperPlugin();
-                    }
-
-                    Connections {
-                        enabled: true
-                        target: configDialog.wallpaperConfigModel
-                        function onWallpaperPluginsChanged() {
-                            wallpaperComboBox.selectCurrentWallpaperPlugin();
-                        }
-                    }
-                }
-                NewStuff.Button {
-                    configFile: "wallpaperplugin.knsrc"
-                    text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Get New Plugins…")
-                    visibleWhenDisabled: true // don't hide on disabled
-                    Layout.preferredHeight: wallpaperComboBox.height
-                }
-            }
+            visible: false
         }
 
         Item {
