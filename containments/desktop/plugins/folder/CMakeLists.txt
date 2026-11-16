@@ -6,7 +6,6 @@ ecm_add_qml_module(folderplugin URI org.kde.private.desktopcontainment.folder GE
 
 target_sources(folderplugin PRIVATE
     applauncher.cpp
-    desktopschemehelper.cpp
     directorypicker.cpp
     foldermodel.cpp
     itemviewadapter.cpp

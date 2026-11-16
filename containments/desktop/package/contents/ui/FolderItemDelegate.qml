@@ -156,7 +156,7 @@ Item {
                 if (folderViewDialogComponent.status === Component.Ready) {
                     impl.popupDialog = folderViewDialogComponent.createObject(impl);
                     impl.popupDialog.visualParent = icon;
-                    impl.popupDialog.url = Folder.DesktopSchemeHelper.getDesktopUrl(main.linkDestinationUrl);
+                    impl.popupDialog.url = main.linkDestinationUrl;
                     impl.popupDialog.visible = true;
                 }
             }

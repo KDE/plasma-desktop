@@ -6,7 +6,6 @@
 */
 
 #include "labelgenerator.h"
-#include "desktopschemehelper.h"
 
 #include <KFilePlacesModel>
 #include <KShell>

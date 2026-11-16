@@ -124,12 +124,12 @@ KCM.SimpleKCM {
 
                         onEnabledChanged: {
                             if (enabled && currentIndex !== -1) {
-                                configLocation.cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(placesModel.urlForIndex(currentIndex));
+                                configLocation.cfg_url = placesModel.urlForIndex(currentIndex);
                             }
                         }
 
                         onActivated: index => {
-                            configLocation.cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(placesModel.urlForIndex(index));
+                            configLocation.cfg_url = placesModel.urlForIndex(index);
                         }
                     }
                 }
@@ -157,13 +157,13 @@ KCM.SimpleKCM {
 
                         onEnabledChanged: {
                             if (enabled && text !== "") {
-                                configLocation.cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(text);
+                                configLocation.cfg_url = text;
                             }
                         }
 
                         onTextChanged: {
                             if (enabled) {
-                                configLocation.cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(text);
+                                configLocation.cfg_url = text;
                             }
                         }
                     }
@@ -180,7 +180,7 @@ KCM.SimpleKCM {
                         id: directoryPicker
 
                         onUrlChanged: {
-                            locationCustomValue.text = Folder.DesktopSchemeHelper.getDesktopUrl(url);
+                            locationCustomValue.text = url;
                         }
                     }
                 }
