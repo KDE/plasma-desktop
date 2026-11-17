@@ -31,5 +31,11 @@
       <min>100</min>
       <max>2000</max>
     </entry>
+    <entry name="cursorBlinkRate" key="CursorBlinkRate" type="Int">
+      <label>Text cursor blink rate, 0 disables blinking</label>
+      <default>1000</default>
+      <min>0</min>
+      <max>2000</max>
+    </entry>
   </group>
 </kcfg>

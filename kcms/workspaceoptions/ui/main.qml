@@ -303,6 +303,64 @@ KCM.SimpleKCM {
 
 
         Kirigami.FormGroup {
+            title: i18nc("@title:group", "Text Cursor")
+
+            Kirigami.FormEntry {
+                contentItem: RowLayout {
+                    spacing: Kirigami.Units.smallSpacing
+
+                    QQC2.CheckBox {
+                        id: cursorBlinkCheckbox
+                        text: i18nc("@option:check followed by a spinbox", "Blink with interval:")
+                        checked: kcm.globalsSettings.cursorBlinkRate > 0
+                        onToggled: kcm.globalsSettings.cursorBlinkRate = checked ? cursorBlinkSpinbox.value : 0
+
+                        KCM.SettingStateBinding {
+                            configObject: kcm.globalsSettings
+                            settingName: "cursorBlinkRate"
+                        }
+                    }
+
+                    QQC2.SpinBox {
+                        id: cursorBlinkSpinbox
+                        from: 200
+                        to: 2000
+                        stepSize: 100
+
+                        validator: IntValidator {
+                            bottom: Math.min(cursorBlinkSpinbox.from, cursorBlinkSpinbox.to)
+                            top: Math.max(cursorBlinkSpinbox.from, cursorBlinkSpinbox.to)
+                        }
+
+                        textFromValue: (value, locale) => {
+                            return i18ncp("short for millisecond(s)", "%1 ms", "%1 ms", value)
+                        }
+
+                        valueFromText: (text, locale) => {
+                            return Number.fromLocaleString(locale, text.replace(i18nc("short for millisecond(s)", "ms"), ""))
+                        }
+
+                        // Show the default interval while blinking is off
+                        value: kcm.globalsSettings.cursorBlinkRate > 0 ? kcm.globalsSettings.cursorBlinkRate : 1000
+                        onValueModified: kcm.globalsSettings.cursorBlinkRate = value
+
+                        Accessible.name: i18nc("@label:spinbox accessible", "Text cursor blink interval")
+
+                        KCM.SettingStateBinding {
+                            configObject: kcm.globalsSettings
+                            settingName: "cursorBlinkRate"
+                            extraEnabledConditions: cursorBlinkCheckbox.checked
+                        }
+                    }
+                }
+                trailingItems: Kirigami.ContextualHelpButton {
+                    Layout.alignment: Qt.AlignRight
+                    toolTipText: i18nc("@info:whatsthis contextualhelpbutton tooltip", "Applies to KDE, Qt and GTK apps, including Firefox and Chromium-based browsers. May be ignored by apps with their own cursor settings, such as some terminals and code editors.")
+                }
+            }
+        }
+
+        Kirigami.FormGroup {
             title: i18nc("@title:group prefix radiobutton group", "Drag and Drop")
 
             Kirigami.FormEntry {
