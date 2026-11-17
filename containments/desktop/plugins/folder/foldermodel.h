@@ -350,6 +350,7 @@ private Q_SLOTS:
 
 private:
     void setUnsortedModeOnDrop();
+    void renameDesktopName(const QUrl &src, const QUrl &dest);
 
 private:
     struct DragImage {

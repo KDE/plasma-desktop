@@ -923,6 +923,49 @@ void FolderModel::showTarget()
     });
 }
 
+void FolderModel::renameDesktopName(const QUrl &src, const QUrl &dest)
+{
+    if (src == dest) {
+        return;
+    }
+    const QString srcPath = src.toLocalFile();
+    QString destPath = dest.toLocalFile();
+    QUrl reported_dest = dest;
+
+    if (KDesktopFile::isDesktopFile(srcPath)) {
+        QFileInfo fileInfo(srcPath);
+        // If we cant write to the file, create a copy to QStandardPaths::ApplicationsLocation
+        if (!fileInfo.isWritable()) {
+            KDesktopFile orig(src.toLocalFile());
+            QFile(srcPath).remove();
+            const QString newPath = QStandardPaths::writableLocation(QStandardPaths::ApplicationsLocation) + QDir::separator() + src.fileName();
+            if (!QFileInfo::exists(newPath)) {
+                auto writableDesktopFile = orig.copyTo(newPath);
+                writableDesktopFile->sync();
+                delete writableDesktopFile;
+            }
+            QFile::link(newPath, srcPath);
+        }
+
+        QString friendlyName;
+        if (destPath.endsWith(QLatin1String(".desktop"))) {
+            const QString fileName = dest.fileName();
+            friendlyName = KIO::decodeFileName(fileName.left(fileName.length() - 8));
+        } else {
+            friendlyName = KIO::decodeFileName(dest.fileName());
+            destPath.append(QLatin1String(".desktop"));
+            reported_dest.setPath(reported_dest.path().append(QLatin1String(".desktop")));
+        }
+
+        // Update the value of the Name field in the file.
+        KDesktopFile file(src.toLocalFile());
+        KConfigGroup cg(file.desktopGroup());
+        cg.writeEntry("Name", friendlyName);
+        cg.writeEntry("Name", friendlyName, KConfigGroup::Persistent | KConfigGroup::Localized);
+        cg.sync();
+    }
+}
+
 void FolderModel::rename(int row, const QString &name)
 {
     if (row < 0) {
@@ -940,13 +983,17 @@ void FolderModel::rename(int row, const QString &name)
     }
 
     const QUrl oldUrl = oldItem.url();
+    const bool isDesktopFile = oldItem.isDesktopFile();
     const QString oldName = oldItem.name();
     const QString filename = data(idx, UrlRole).toString();
-    const QString newFilename = name;
+    QString newFilename = name;
+    if (isDesktopFile && !newFilename.endsWith(QStringLiteral(".desktop"))) {
+        newFilename = newFilename.append(QStringLiteral(".desktop"));
+    }
 
 #if KIO_VERSION >= QT_VERSION_CHECK(6, 31, 0)
-    auto *renameWarning = new KIO::RenameFileWarningDialog(oldItem, name, nullptr, showHiddenFiles());
-    connect(renameWarning, &KIO::RenameFileWarningDialog::result, this, [this, oldUrl, oldName, filename, newFilename, name](bool proceed) {
+    auto *renameWarning = new KIO::RenameFileWarningDialog(oldItem, newFilename, nullptr, showHiddenFiles());
+    connect(renameWarning, &KIO::RenameFileWarningDialog::result, this, [this, isDesktopFile, oldUrl, oldName, filename, newFilename](bool proceed) {
         if (!proceed) {
             return;
         }
@@ -968,7 +1015,11 @@ void FolderModel::rename(int row, const QString &name)
                 Q_EMIT itemRenamed(filename, newFilename);
             },
             Qt::SingleShotConnection);
-        setData(index(targetRow, 0), name, Qt::EditRole);
+        if (isDesktopFile) {
+            auto newUrl = QUrl::fromUserInput(oldUrl.toString(QUrl::RemoveFilename).append(newFilename));
+            renameDesktopName(oldUrl, newUrl);
+        }
+        setData(index(targetRow, 0), newFilename, Qt::EditRole);
     });
     renameWarning->exec();
 #else
@@ -1559,7 +1610,7 @@ QVariant FolderModel::data(const QModelIndex &index, int role) const
         }
     } else if (role == TypeRole) {
         return m_dirModel->data(mapToSource(QSortFilterProxyModel::index(index.row(), 6)), Qt::DisplayRole);
-    } else if (role == FileNameRole || role == FileNameWrappedRole) {
+    } else if (role == Qt::DisplayRole || role == FileNameRole || role == FileNameWrappedRole) {
         auto item = itemForIndex(index);
         auto name = item.name();
         if (item.isDesktopFile()) {
