@@ -126,10 +126,12 @@ PlasmaExtras.PlasmoidHeading {
             }
         }
 
+        // Handles both the arrow keys and Ctrl+H/J/K/L
         Keys.onPressed: event => {
+            const key = KickoffSingleton.navigationKey(event)
             const Key_Next = Application.layoutDirection === Qt.RightToLeft ? Qt.Key_Left : Qt.Key_Right
             const Key_Prev = Application.layoutDirection === Qt.RightToLeft ? Qt.Key_Right : Qt.Key_Left
-            if (event.key === Key_Next) {
+            if (key === Key_Next) {
                 if (currentIndex === count - 1) {
                     leaveButtons.nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
                 } else {
@@ -137,14 +139,14 @@ PlasmaExtras.PlasmoidHeading {
                     currentItem.forceActiveFocus(Qt.TabFocusReason)
                 }
                 event.accepted = true
-            } else if (event.key === Key_Prev && currentIndex > 0) {
+            } else if (key === Key_Prev && currentIndex > 0) {
                 decrementCurrentIndex()
                 currentItem.forceActiveFocus(Qt.BacktabFocusReason)
                 event.accepted = true
+            } else if (key === Qt.Key_Up) {
+                kickoff.firstCentralPane.forceActiveFocus(Qt.BacktabFocusReason)
+                event.accepted = true
             }
-        }
-        Keys.onUpPressed: event => {
-            kickoff.firstCentralPane.forceActiveFocus(Qt.BacktabFocusReason);
         }
     }
 
@@ -160,8 +162,12 @@ PlasmaExtras.PlasmoidHeading {
         // available width for leaveButtons
         maximumWidth: root.availableWidth - tabBar.width - root.spacing
 
-        Keys.onUpPressed: event => {
-            kickoff.lastCentralPane.forceActiveFocus(Qt.BacktabFocusReason);
+        // Handles both the Up arrow key and Ctrl+K
+        Keys.onPressed: event => {
+            if (KickoffSingleton.navigationKey(event) === Qt.Key_Up) {
+                kickoff.lastCentralPane.forceActiveFocus(Qt.BacktabFocusReason);
+                event.accepted = true;
+            }
         }
     }
 

@@ -136,19 +136,23 @@ RowLayout {
                         event.accepted = false
                     }
                 }
-                Keys.onLeftPressed: event => {
-                    if (Application.layoutDirection === Qt.LeftToRight) {
-                        nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
-                    } else if (index < buttonRepeater.count - 1 || root.__layout.overflowMenuButtonIsVisible) {
-                        nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
+                // Handles both the arrow keys and Ctrl+H/J/K/L
+                Keys.onPressed: event => {
+                    switch (KickoffSingleton.navigationKey(event)) {
+                        case Qt.Key_Left: if (Application.layoutDirection === Qt.LeftToRight) {
+                            nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
+                        } else if (index < buttonRepeater.count - 1 || root.__layout.overflowMenuButtonIsVisible) {
+                            nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
+                        } break
+                        case Qt.Key_Right: if (Application.layoutDirection === Qt.RightToLeft) {
+                            nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
+                        } else if (index < buttonRepeater.count - 1 || root.__layout.overflowMenuButtonIsVisible) {
+                            nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
+                        } break
+                        default:
+                            return
                     }
-                }
-                Keys.onRightPressed: event => {
-                    if (Application.layoutDirection === Qt.RightToLeft) {
-                        nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
-                    } else if (index < buttonRepeater.count - 1 || root.__layout.overflowMenuButtonIsVisible) {
-                        nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
-                    }
+                    event.accepted = true
                 }
                 Keys.onEnterPressed: clicked()
                 Keys.onReturnPressed: clicked()
@@ -174,15 +178,19 @@ RowLayout {
         Keys.onTabPressed: event => {
             kickoff.firstHeaderItem.forceActiveFocus(Qt.TabFocusReason);
         }
-        Keys.onLeftPressed: event => {
-            if (!mirrored) {
-                nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
+        // Handles both the arrow keys and Ctrl+H/J/K/L
+        Keys.onPressed: event => {
+            switch (KickoffSingleton.navigationKey(event)) {
+                case Qt.Key_Left: if (!mirrored) {
+                    nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
+                } break
+                case Qt.Key_Right: if (mirrored) {
+                    nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
+                } break
+                default:
+                    return
             }
-        }
-        Keys.onRightPressed: event => {
-            if (mirrored) {
-                nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
-            }
+            event.accepted = true
         }
         onPressed: {
             contextMenu.visualParent = this;

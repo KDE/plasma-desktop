@@ -98,22 +98,24 @@ PlasmaExtras.PlasmoidHeading {
                     Keys.onBacktabPressed: event => {
                         root.tabSetFocus(event, nextItemInFocusChain());
                     }
-                    Keys.onLeftPressed: event => {
-                        if (kickoff.sideBarOnRight) {
-                            searchField.forceActiveFocus(Application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
+                    // Handles both the arrow keys and Ctrl+H/J/K/L
+                    Keys.onPressed: event => {
+                        switch (KickoffSingleton.navigationKey(event)) {
+                            case Qt.Key_Left: if (kickoff.sideBarOnRight) {
+                                searchField.forceActiveFocus(Application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
+                            } break
+                            case Qt.Key_Right: if (!kickoff.sideBarOnRight) {
+                                searchField.forceActiveFocus(Application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
+                            } break
+                            case Qt.Key_Down: if (kickoff.sideBar) {
+                                kickoff.sideBar.forceActiveFocus(Qt.TabFocusReason)
+                            } else {
+                                kickoff.contentArea.forceActiveFocus(Qt.TabFocusReason)
+                            } break
+                            default:
+                                return
                         }
-                    }
-                    Keys.onRightPressed: event => {
-                        if (!kickoff.sideBarOnRight) {
-                            searchField.forceActiveFocus(Application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
-                        }
-                    }
-                    Keys.onDownPressed: event => {
-                        if (kickoff.sideBar) {
-                            kickoff.sideBar.forceActiveFocus(Qt.TabFocusReason)
-                        } else {
-                            kickoff.contentArea.forceActiveFocus(Qt.TabFocusReason)
-                        }
+                        event.accepted = true
                     }
 
                     onClicked: KCM.KCMLauncher.openSystemSettings("kcm_users")
@@ -180,8 +182,12 @@ PlasmaExtras.PlasmoidHeading {
                     right: parent.right
                 }
                 LayoutMirroring.enabled: kickoff.sideBarOnRight
-                Keys.onDownPressed: event => {
-                    kickoff.contentArea.forceActiveFocus(Qt.TabFocusReason);
+                // Handles both the Down arrow key and Ctrl+J
+                Keys.onPressed: event => {
+                    if (KickoffSingleton.navigationKey(event) === Qt.Key_Down) {
+                        kickoff.contentArea.forceActiveFocus(Qt.TabFocusReason);
+                        event.accepted = true;
+                    }
                 }
 
                 PlasmaExtras.SearchField {
@@ -227,17 +233,21 @@ PlasmaExtras.PlasmoidHeading {
                     Keys.onBacktabPressed: event => {
                         tabSetFocus(event, nextItemInFocusChain());
                     }
-                    Keys.onLeftPressed: event => {
-                        if (activeFocus) {
-                            (sideBarOnRight ? configureButton : avatar).forceActiveFocus(
-                                Application.layoutDirection === Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
+                    // Handles both the arrow keys and Ctrl+H/J/K/L
+                    Keys.onPressed: event => {
+                        switch (KickoffSingleton.navigationKey(event)) {
+                            case Qt.Key_Left: if (activeFocus) {
+                                (sideBarOnRight ? configureButton : avatar).forceActiveFocus(
+                                    Application.layoutDirection === Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
+                            } break
+                            case Qt.Key_Right: if (activeFocus) {
+                                (sideBarOnRight ? avatar : configureButton).forceActiveFocus(
+                                    Application.layoutDirection === Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
+                            } break
+                            default:
+                                return
                         }
-                    }
-                    Keys.onRightPressed: event => {
-                        if (activeFocus) {
-                            (sideBarOnRight ? avatar : configureButton).forceActiveFocus(
-                                Application.layoutDirection === Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
-                        }
+                        event.accepted = true
                     }
                 }
 
@@ -258,13 +268,21 @@ PlasmaExtras.PlasmoidHeading {
                     Keys.onBacktabPressed: event => {
                         tabSetFocus(event, nextItemInFocusChain());
                     }
-                    Keys.onLeftPressed: event => {
-                        (kickoff.sideBarOnRight ? pinButton : searchField).forceActiveFocus(
-                            Application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
-                    }
-                    Keys.onRightPressed: event => {
-                        (kickoff.sideBarOnRight ? searchField : pinButton).forceActiveFocus(
-                            Application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
+                    // Handles both the arrow keys and Ctrl+H/J/K/L
+                    Keys.onPressed: event => {
+                        switch (KickoffSingleton.navigationKey(event)) {
+                            case Qt.Key_Left:
+                                (kickoff.sideBarOnRight ? pinButton : searchField).forceActiveFocus(
+                                    Application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
+                                break
+                            case Qt.Key_Right:
+                                (kickoff.sideBarOnRight ? searchField : pinButton).forceActiveFocus(
+                                    Application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
+                                break
+                            default:
+                                return
+                        }
+                        event.accepted = true
                     }
                     onClicked: plasmoid.internalAction("configure").trigger()
                 }
@@ -291,15 +309,19 @@ PlasmaExtras.PlasmoidHeading {
                     Keys.onBacktabPressed: event => {
                         tabSetFocus(event, nameAndIcon.nextItemInFocusChain(false), nextItemInFocusChain(false));
                     }
-                    Keys.onLeftPressed: event => {
-                        if (!kickoff.sideBarOnRight) {
-                            nextItemInFocusChain(false).forceActiveFocus(Application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
+                    // Handles both the arrow keys and Ctrl+H/J/K/L
+                    Keys.onPressed: event => {
+                        switch (KickoffSingleton.navigationKey(event)) {
+                            case Qt.Key_Left: if (!kickoff.sideBarOnRight) {
+                                nextItemInFocusChain(false).forceActiveFocus(Application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
+                            } break
+                            case Qt.Key_Right: if (kickoff.sideBarOnRight) {
+                                nextItemInFocusChain(false).forceActiveFocus(Application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
+                            } break
+                            default:
+                                return
                         }
-                    }
-                    Keys.onRightPressed: event => {
-                        if (kickoff.sideBarOnRight) {
-                            nextItemInFocusChain(false).forceActiveFocus(Application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
-                        }
+                        event.accepted = true
                     }
                     onToggled: Plasmoid.configuration.pin = checked
                 }

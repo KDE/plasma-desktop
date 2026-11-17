@@ -48,7 +48,11 @@ EmptyPage {
             value: footer
             restoreMode: Binding.RestoreBinding
         }
-        // Eat down events to prevent them from reaching the contentArea or searchField
-        Keys.onDownPressed: event => {}
+        // Eat down events (Down arrow key and Ctrl+J) to prevent them from reaching the contentArea or searchField
+        Keys.onPressed: event => {
+            if (KickoffSingleton.navigationKey(event) === Qt.Key_Down) {
+                event.accepted = true
+            }
+        }
     }
 }

@@ -56,6 +56,22 @@ Item {
     readonly property real compactListDelegateContentHeight: compactListDelegate.implicitContentHeight
     //END
 
+    //BEGIN Keyboard navigation
+    // Ctrl+H/J/K/L can be used in place of the arrow keys.
+    // Returns the arrow key the event stands for, or the event's own key.
+    function navigationKey(event: KeyEvent): int {
+        if (event.modifiers & Qt.ControlModifier) {
+            switch (event.key) {
+                case Qt.Key_H: return Qt.Key_Left;
+                case Qt.Key_J: return Qt.Key_Down;
+                case Qt.Key_K: return Qt.Key_Up;
+                case Qt.Key_L: return Qt.Key_Right;
+            }
+        }
+        return event.key;
+    }
+    //END
+
     //BEGIN Private
     KickoffGridDelegate {
         id: gridDelegate

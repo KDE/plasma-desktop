@@ -117,8 +117,12 @@ EmptyPage {
                 Keys.onBacktabPressed: event => {
                     kickoff.lastHeaderItem.forceActiveFocus(Qt.BacktabFocusReason);
                 }
-                Keys.onUpPressed: event => {
-                    kickoff.searchField.forceActiveFocus(Qt.BacktabFocusReason)
+                // Handles both the Up arrow key and Ctrl+K
+                Keys.onPressed: event => {
+                    if (KickoffSingleton.navigationKey(event) === Qt.Key_Up) {
+                        kickoff.searchField.forceActiveFocus(Qt.BacktabFocusReason)
+                        event.accepted = true
+                    }
                 }
                 T.StackView.onStatusChanged: {
                     if (T.StackView.status === T.StackView.Activating || T.StackView.status === T.StackView.Activating) {

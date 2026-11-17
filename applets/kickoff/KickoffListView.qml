@@ -267,7 +267,7 @@ EmptyPage {
             const atFirst = currentIndex === 0
             const atLast = currentIndex === count - 1
             if (count >= 1 || (kickoff.runnerModel.querying && [Qt.Key_Return, Qt.Key_Enter].includes(event.key))) {
-                switch (event.key) {
+                switch (KickoffSingleton.navigationKey(event)) {
                     case Qt.Key_Up: if (!atFirst) {
                         decrementCurrentIndex()
 
@@ -277,10 +277,6 @@ EmptyPage {
 
                         focusCurrentItem(event, Qt.BacktabFocusReason)
                     } break
-                    case Qt.Key_K: if (!atFirst && event.modifiers & Qt.ControlModifier) {
-                        decrementCurrentIndex()
-                        focusCurrentItem(event, Qt.BacktabFocusReason)
-                    } break
                     case Qt.Key_Down: if (!atLast) {
                         incrementCurrentIndex()
 
@@ -288,10 +284,6 @@ EmptyPage {
                             incrementCurrentIndex()
                         }
 
-                        focusCurrentItem(event, Qt.TabFocusReason)
-                    } break
-                    case Qt.Key_J: if (!atLast && event.modifiers & Qt.ControlModifier) {
-                        incrementCurrentIndex()
                         focusCurrentItem(event, Qt.TabFocusReason)
                     } break
                     case Qt.Key_Home: if (!atFirst) {

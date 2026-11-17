@@ -71,23 +71,27 @@ FocusScope {
                 (kickoff.paneSwap ? contentAreaLoader : kickoff.header.pinButton)
                     .forceActiveFocus(Qt.BacktabFocusReason);
             }
-            Keys.onLeftPressed: event => {
-                if (kickoff.sideBarOnRight) {
-                    contentAreaLoader.forceActiveFocus();
+            // Handles both the arrow keys and Ctrl+H/J/K/L
+            Keys.onPressed: event => {
+                switch (KickoffSingleton.navigationKey(event)) {
+                    case Qt.Key_Left: if (kickoff.sideBarOnRight) {
+                        contentAreaLoader.forceActiveFocus();
+                    } break
+                    case Qt.Key_Right: if (!kickoff.sideBarOnRight) {
+                        contentAreaLoader.forceActiveFocus();
+                    } break
+                    case Qt.Key_Up:
+                        kickoff.header.nextItemInFocusChain()
+                            .forceActiveFocus(Qt.BacktabFocusReason);
+                        break
+                    case Qt.Key_Down:
+                        (kickoff.paneSwap ? kickoff.footer.leaveButtons.nextItemInFocusChain() : kickoff.footer.tabBar)
+                            .forceActiveFocus(Qt.TabFocusReason);
+                        break
+                    default:
+                        return;
                 }
-            }
-            Keys.onRightPressed: event => {
-                if (!kickoff.sideBarOnRight) {
-                    contentAreaLoader.forceActiveFocus();
-                }
-            }
-            Keys.onUpPressed: event => {
-                kickoff.header.nextItemInFocusChain()
-                    .forceActiveFocus(Qt.BacktabFocusReason);
-            }
-            Keys.onDownPressed: event => {
-                (kickoff.paneSwap ? kickoff.footer.leaveButtons.nextItemInFocusChain() : kickoff.footer.tabBar)
-                    .forceActiveFocus(Qt.TabFocusReason);
+                event.accepted = true;
             }
         }
     }
@@ -123,22 +127,26 @@ FocusScope {
             (kickoff.paneSwap ? kickoff.header.avatar : sideBarLoader)
                 .forceActiveFocus(Qt.BacktabFocusReason)
         }
-        Keys.onLeftPressed: event => {
-            if (!kickoff.sideBarOnRight) {
-                sideBarLoader.forceActiveFocus();
+        // Handles both the arrow keys and Ctrl+H/J/K/L
+        Keys.onPressed: event => {
+            switch (KickoffSingleton.navigationKey(event)) {
+                case Qt.Key_Left: if (!kickoff.sideBarOnRight) {
+                    sideBarLoader.forceActiveFocus();
+                } break
+                case Qt.Key_Right: if (kickoff.sideBarOnRight) {
+                    sideBarLoader.forceActiveFocus();
+                } break
+                case Qt.Key_Up:
+                    kickoff.searchField.forceActiveFocus(Qt.BacktabFocusReason);
+                    break
+                case Qt.Key_Down:
+                    (kickoff.paneSwap ? kickoff.footer.tabBar : kickoff.footer.leaveButtons.nextItemInFocusChain())
+                        .forceActiveFocus(Qt.TabFocusReason)
+                    break
+                default:
+                    return;
             }
-        }
-        Keys.onRightPressed: event => {
-            if (kickoff.sideBarOnRight) {
-                sideBarLoader.forceActiveFocus();
-            }
-        }
-        Keys.onUpPressed: event => {
-            kickoff.searchField.forceActiveFocus(Qt.BacktabFocusReason);
-        }
-        Keys.onDownPressed: event => {
-            (kickoff.paneSwap ? kickoff.footer.tabBar : kickoff.footer.leaveButtons.nextItemInFocusChain())
-                .forceActiveFocus(Qt.TabFocusReason)
+            event.accepted = true;
         }
     }
 }

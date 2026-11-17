@@ -237,12 +237,8 @@ EmptyPage {
                 root.currentItem.forceActiveFocus(Qt.ShortcutFocusReason);
                 event.accepted = true;
             } else if (count > 1) {
-                switch (event.key) {
+                switch (KickoffSingleton.navigationKey(event)) {
                     case Qt.Key_Left: if (!atLeft && !kickoff.searchField.activeFocus) {
-                        moveCurrentIndexLeft()
-                        focusCurrentItem(event, Qt.BacktabFocusReason)
-                    } break
-                    case Qt.Key_H: if (!atLeft && !kickoff.searchField.activeFocus && event.modifiers & Qt.ControlModifier) {
                         moveCurrentIndexLeft()
                         focusCurrentItem(event, Qt.BacktabFocusReason)
                     } break
@@ -250,23 +246,11 @@ EmptyPage {
                         moveCurrentIndexUp()
                         focusCurrentItem(event, Qt.BacktabFocusReason)
                     } break
-                    case Qt.Key_K: if (!atTop && event.modifiers & Qt.ControlModifier) {
-                        moveCurrentIndexUp()
-                        focusCurrentItem(event, Qt.BacktabFocusReason)
-                    } break
                     case Qt.Key_Right: if (!atRight && !kickoff.searchField.activeFocus) {
                         moveCurrentIndexRight()
                         focusCurrentItem(event, Qt.TabFocusReason)
                     } break
-                    case Qt.Key_L: if (!atRight && !kickoff.searchField.activeFocus && event.modifiers & Qt.ControlModifier) {
-                        moveCurrentIndexRight()
-                        focusCurrentItem(event, Qt.TabFocusReason)
-                    } break
                     case Qt.Key_Down: if (!atBottom) {
-                        moveCurrentIndexDown()
-                        focusCurrentItem(event, Qt.TabFocusReason)
-                    } break
-                    case Qt.Key_J: if (!atBottom && event.modifiers & Qt.ControlModifier) {
                         moveCurrentIndexDown()
                         focusCurrentItem(event, Qt.TabFocusReason)
                     } break
