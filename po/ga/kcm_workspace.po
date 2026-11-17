@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 00:46+0000\n"
+"POT-Creation-Date: 2026-11-17 01:10+0000\n"
 "PO-Revision-Date: 2026-01-21 11:04+0000\n"
 "Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
 "Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
@@ -206,7 +206,7 @@ msgctxt "@label:spinbox"
 msgid "Double-click interval:"
 msgstr "Eatramh cliceáil faoi dhó:"
 
-#: ui/main.qml:232
+#: ui/main.qml:232 ui/main.qml:336
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
@@ -217,7 +217,7 @@ msgstr[2] "%1 ms"
 msgstr[3] "%1 ms"
 msgstr[4] "%1 ms"
 
-#: ui/main.qml:236
+#: ui/main.qml:236 ui/main.qml:340
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
@@ -245,23 +245,53 @@ msgstr ""
 
 #: ui/main.qml:306
 #, kde-format
+msgctxt "@title:group"
+msgid "Text Cursor"
+msgstr ""
+
+#: ui/main.qml:314
+#, fuzzy, kde-format
+#| msgctxt "@label:spinbox"
+#| msgid "Double-click interval:"
+msgctxt "@option:check followed by a spinbox"
+msgid "Blink with interval:"
+msgstr "Eatramh cliceáil faoi dhó:"
+
+#: ui/main.qml:347
+#, fuzzy, kde-format
+#| msgid "Double click interval"
+msgctxt "@label:spinbox accessible"
+msgid "Text cursor blink interval"
+msgstr "Eatramh cliceáil faoi dhó"
+
+#: ui/main.qml:358
+#, kde-format
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
+msgid ""
+"Applies to KDE, Qt and GTK apps, including Firefox and Chromium-based "
+"browsers. May be ignored by apps with their own cursor settings, such as "
+"some terminals and code editors."
+msgstr ""
+
+#: ui/main.qml:364
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr "Tarraing agus Scaoil"
 
-#: ui/main.qml:309
+#: ui/main.qml:367
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "Agus comhaid nó fillteáin á dtarraingt agat:"
 
-#: ui/main.qml:313
+#: ui/main.qml:371
 #, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr "Fiafraigh i gcónaí cad atá le déanamh"
 
-#: ui/main.qml:314
+#: ui/main.qml:372
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -273,13 +303,13 @@ msgstr ""
 "shortcut> le cóipeáil, agus <shortcut>Shift+Ctrl</shortcut> le nasc "
 "siombalach a chruthú. Seachas sin, taispeáin dialóg."
 
-#: ui/main.qml:332
+#: ui/main.qml:390
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "Bog más ar an ngléas céanna é"
 
-#: ui/main.qml:333
+#: ui/main.qml:391
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
@@ -287,13 +317,13 @@ msgstr ""
 "Coinnigh <shortcut>Shift</shortcut> síos agus tú ag scaoileadh chun roghanna "
 "eile a thaispeáint."
 
-#: ui/main.qml:348
+#: ui/main.qml:406
 #, kde-format
 msgctxt "@title:group"
 msgid "Touch"
 msgstr "Teagmháil"
 
-#: ui/main.qml:351
+#: ui/main.qml:409
 #, fuzzy, kde-format
 #| msgctxt "@title:group prefix radiobutton group"
 #| msgid "Enable Touch Mode:"
@@ -301,7 +331,7 @@ msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
 msgstr "Cumasaigh Mód Tadhaill:"
 
-#: ui/main.qml:354
+#: ui/main.qml:412
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@option:radio As in: 'Touch Mode is automatically enabled as needed'"
@@ -310,7 +340,7 @@ msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Cumasaigh go huathoibríoch de réir mar is gá"
 
-#: ui/main.qml:354
+#: ui/main.qml:412
 #, fuzzy, kde-format
 #| msgctxt "option:radio As in: 'Touch Mode is never enabled'"
 #| msgid "Never enabled"
@@ -318,7 +348,7 @@ msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Níor cuireadh ar chumas riamh"
 
-#: ui/main.qml:373
+#: ui/main.qml:431
 #, fuzzy, kde-format
 #| msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 #| msgid ""
@@ -335,7 +365,7 @@ msgstr ""
 "córas scáileán tadhaill ach gan luch ná ceap tadhaill. Mar shampla: nuair a "
 "chasfar nó a bhaintear méarchlár ríomhaire glúine in-athraithe."
 
-#: ui/main.qml:379
+#: ui/main.qml:437
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is always enabled'"
 #| msgid "Always active"
@@ -343,7 +373,7 @@ msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Gníomhach i gcónaí"
 
-#: ui/main.qml:401
+#: ui/main.qml:459
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is never enabled'"
 #| msgid "Disabled"
@@ -351,7 +381,7 @@ msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Díchumasaithe"
 
-#: ui/main.qml:402
+#: ui/main.qml:460
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."
@@ -393,6 +423,12 @@ msgstr ""
 #, kde-format
 msgid "Double click interval"
 msgstr "Eatramh cliceáil faoi dhó"
+
+#. i18n: ectx: label, entry (cursorBlinkRate), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:35
+#, kde-format
+msgid "Text cursor blink rate, 0 disables blinking"
+msgstr ""
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

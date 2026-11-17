@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 00:46+0000\n"
+"POT-Creation-Date: 2026-11-17 01:10+0000\n"
 "PO-Revision-Date: 2026-05-03 23:07+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -199,7 +199,7 @@ msgctxt "@label:spinbox"
 msgid "Double-click interval:"
 msgstr "Interval dvojkliku:"
 
-#: ui/main.qml:232
+#: ui/main.qml:232 ui/main.qml:336
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
@@ -208,7 +208,7 @@ msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 msgstr[2] "%1 ms"
 
-#: ui/main.qml:236
+#: ui/main.qml:236 ui/main.qml:340
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
@@ -236,23 +236,53 @@ msgstr ""
 
 #: ui/main.qml:306
 #, kde-format
+msgctxt "@title:group"
+msgid "Text Cursor"
+msgstr ""
+
+#: ui/main.qml:314
+#, fuzzy, kde-format
+#| msgctxt "@label:spinbox"
+#| msgid "Double-click interval:"
+msgctxt "@option:check followed by a spinbox"
+msgid "Blink with interval:"
+msgstr "Interval dvojkliku:"
+
+#: ui/main.qml:347
+#, fuzzy, kde-format
+#| msgid "Double click interval"
+msgctxt "@label:spinbox accessible"
+msgid "Text cursor blink interval"
+msgstr "Interval dvojkliku"
+
+#: ui/main.qml:358
+#, kde-format
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
+msgid ""
+"Applies to KDE, Qt and GTK apps, including Firefox and Chromium-based "
+"browsers. May be ignored by apps with their own cursor settings, such as "
+"some terminals and code editors."
+msgstr ""
+
+#: ui/main.qml:364
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr "Táhnout a pustit"
 
-#: ui/main.qml:309
+#: ui/main.qml:367
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "Při přetahování souborů nebo složek:"
 
-#: ui/main.qml:313
+#: ui/main.qml:371
 #, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr "Vždy se zeptat, co dělat"
 
-#: ui/main.qml:314
+#: ui/main.qml:372
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -264,13 +294,13 @@ msgstr ""
 "shortcut> pro kopírování a <shortcut>Shift+Ctrl</shortcut> pro vytvoření "
 "symbolického odkazu. V opačném případě zobrazte dialogové okno."
 
-#: ui/main.qml:332
+#: ui/main.qml:390
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "Přesunout, pokud je na stejném zařízení"
 
-#: ui/main.qml:333
+#: ui/main.qml:391
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
@@ -278,31 +308,31 @@ msgstr ""
 "Podržte klávesu <shortcut>Shift</shortcut> při přetahování, aby se zobrazily "
 "další možnosti."
 
-#: ui/main.qml:348
+#: ui/main.qml:406
 #, kde-format
 msgctxt "@title:group"
 msgid "Touch"
 msgstr "Dotek"
 
-#: ui/main.qml:351
+#: ui/main.qml:409
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
 msgstr "Povolit režim tabletu:"
 
-#: ui/main.qml:354
+#: ui/main.qml:412
 #, kde-format
 msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Automaticky povolit pokud je potřeba"
 
-#: ui/main.qml:354
+#: ui/main.qml:412
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Nikdy nepovolit"
 
-#: ui/main.qml:373
+#: ui/main.qml:431
 #, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
@@ -314,19 +344,19 @@ msgstr ""
 "dotykové obrazovky, ale žádnou myš ani touchpad. Například: když je "
 "klávesnice konvertibilního notebooku otočena nebo odpojena."
 
-#: ui/main.qml:379
+#: ui/main.qml:437
 #, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Vždy povoleno"
 
-#: ui/main.qml:401
+#: ui/main.qml:459
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Zakázáno"
 
-#: ui/main.qml:402
+#: ui/main.qml:460
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."
@@ -365,6 +395,12 @@ msgstr "Kliknutí levým tlačítkem myši na posuvník jej posune o jednu strá
 #, kde-format
 msgid "Double click interval"
 msgstr "Interval dvojkliku"
+
+#. i18n: ectx: label, entry (cursorBlinkRate), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:35
+#, kde-format
+msgid "Text cursor blink rate, 0 disables blinking"
+msgstr ""
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

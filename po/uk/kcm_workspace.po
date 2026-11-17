@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 00:46+0000\n"
+"POT-Creation-Date: 2026-11-17 01:10+0000\n"
 "PO-Revision-Date: 2026-04-23 14:12+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -199,7 +199,7 @@ msgctxt "@label:spinbox"
 msgid "Double-click interval:"
 msgstr "Інтервал подвійного клацання:"
 
-#: ui/main.qml:232
+#: ui/main.qml:232 ui/main.qml:336
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
@@ -209,7 +209,7 @@ msgstr[1] "%1 мс"
 msgstr[2] "%1 мс"
 msgstr[3] "%1 мс"
 
-#: ui/main.qml:236
+#: ui/main.qml:236 ui/main.qml:340
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
@@ -238,23 +238,53 @@ msgstr ""
 
 #: ui/main.qml:306
 #, kde-format
+msgctxt "@title:group"
+msgid "Text Cursor"
+msgstr ""
+
+#: ui/main.qml:314
+#, fuzzy, kde-format
+#| msgctxt "@label:spinbox"
+#| msgid "Double-click interval:"
+msgctxt "@option:check followed by a spinbox"
+msgid "Blink with interval:"
+msgstr "Інтервал подвійного клацання:"
+
+#: ui/main.qml:347
+#, fuzzy, kde-format
+#| msgid "Double click interval"
+msgctxt "@label:spinbox accessible"
+msgid "Text cursor blink interval"
+msgstr "Інтервал подвійного клацання"
+
+#: ui/main.qml:358
+#, kde-format
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
+msgid ""
+"Applies to KDE, Qt and GTK apps, including Firefox and Chromium-based "
+"browsers. May be ignored by apps with their own cursor settings, such as "
+"some terminals and code editors."
+msgstr ""
+
+#: ui/main.qml:364
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr "Перетягування зі скиданням"
 
-#: ui/main.qml:309
+#: ui/main.qml:367
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "При перетягуванні файлів або тек:"
 
-#: ui/main.qml:313
+#: ui/main.qml:371
 #, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr "Завжди питати, що робити"
 
-#: ui/main.qml:314
+#: ui/main.qml:372
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -267,13 +297,13 @@ msgstr ""
 "для створення символічного посилання. Якщо не утримувати натиснутою жодну "
 "комбінацію, буде показано меню дій."
 
-#: ui/main.qml:332
+#: ui/main.qml:390
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "Пересувати, якщо на одному пристрої"
 
-#: ui/main.qml:333
+#: ui/main.qml:391
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
@@ -281,31 +311,31 @@ msgstr ""
 "Утримуйте <shortcut>Shift</shortcut> при скиданні, щоб скористатися іншими "
 "варіантами дій."
 
-#: ui/main.qml:348
+#: ui/main.qml:406
 #, kde-format
 msgctxt "@title:group"
 msgid "Touch"
 msgstr "Дотик"
 
-#: ui/main.qml:351
+#: ui/main.qml:409
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
 msgstr "Увімкнути режим планшета:"
 
-#: ui/main.qml:354
+#: ui/main.qml:412
 #, kde-format
 msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Автоматично увімкнути, якщо потрібно"
 
-#: ui/main.qml:354
+#: ui/main.qml:412
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Ніколи не вмикати"
 
-#: ui/main.qml:373
+#: ui/main.qml:431
 #, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
@@ -317,19 +347,19 @@ msgstr ""
 "екран, але не виявить миші або сенсорної панелі. Приклад: відкинуто або "
 "від'єднано клавіатурний модуль ноутбука-трансформера."
 
-#: ui/main.qml:379
+#: ui/main.qml:437
 #, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Завжди увімкнено"
 
-#: ui/main.qml:401
+#: ui/main.qml:459
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Вимкнено"
 
-#: ui/main.qml:402
+#: ui/main.qml:460
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."
@@ -371,6 +401,12 @@ msgstr ""
 #, kde-format
 msgid "Double click interval"
 msgstr "Інтервал подвійного клацання"
+
+#. i18n: ectx: label, entry (cursorBlinkRate), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:35
+#, kde-format
+msgid "Text cursor blink rate, 0 disables blinking"
+msgstr ""
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

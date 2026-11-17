@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 00:46+0000\n"
+"POT-Creation-Date: 2026-11-17 01:10+0000\n"
 "PO-Revision-Date: 2026-11-14 15:16+0200\n"
 "Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -200,7 +200,7 @@ msgctxt "@label:spinbox"
 msgid "Double-click interval:"
 msgstr "Χρονικό διάστημα διπλού κλικ:"
 
-#: ui/main.qml:232
+#: ui/main.qml:232 ui/main.qml:336
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
@@ -208,7 +208,7 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/main.qml:236
+#: ui/main.qml:236 ui/main.qml:340
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
@@ -236,23 +236,53 @@ msgstr ""
 
 #: ui/main.qml:306
 #, kde-format
+msgctxt "@title:group"
+msgid "Text Cursor"
+msgstr ""
+
+#: ui/main.qml:314
+#, fuzzy, kde-format
+#| msgctxt "@label:spinbox"
+#| msgid "Double-click interval:"
+msgctxt "@option:check followed by a spinbox"
+msgid "Blink with interval:"
+msgstr "Χρονικό διάστημα διπλού κλικ:"
+
+#: ui/main.qml:347
+#, fuzzy, kde-format
+#| msgid "Double click interval"
+msgctxt "@label:spinbox accessible"
+msgid "Text cursor blink interval"
+msgstr "Διπλό κλικ στο διάστημα"
+
+#: ui/main.qml:358
+#, kde-format
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
+msgid ""
+"Applies to KDE, Qt and GTK apps, including Firefox and Chromium-based "
+"browsers. May be ignored by apps with their own cursor settings, such as "
+"some terminals and code editors."
+msgstr ""
+
+#: ui/main.qml:364
+#, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr "Μεταφορά και απόθεση"
 
-#: ui/main.qml:309
+#: ui/main.qml:367
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "Κατά το σύρσιμο αρχείων ή φακέλων:"
 
-#: ui/main.qml:313
+#: ui/main.qml:371
 #, kde-format
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr "Ερώτηση κάθε φορά"
 
-#: ui/main.qml:314
+#: ui/main.qml:372
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -265,13 +295,13 @@ msgstr ""
 "shortcut> για δημιουργία συμβολικού συνδέσμου. Διαφορετικά εμφανίζεται "
 "διάλογος."
 
-#: ui/main.qml:332
+#: ui/main.qml:390
 #, kde-format
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "Μετακίνηση αν είναι στην ίδια συσκευή"
 
-#: ui/main.qml:333
+#: ui/main.qml:391
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
@@ -279,31 +309,31 @@ msgstr ""
 "Κρατήστε πατημένο το <shortcut>Shift</shortcut> κατά την απόθεση για άλλες "
 "επιλογές."
 
-#: ui/main.qml:348
+#: ui/main.qml:406
 #, kde-format
 msgctxt "@title:group"
 msgid "Touch"
 msgstr "Αφή"
 
-#: ui/main.qml:351
+#: ui/main.qml:409
 #, kde-format
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
 msgstr "Ενεργοποίηση λειτουργίας αφής:"
 
-#: ui/main.qml:354
+#: ui/main.qml:412
 #, kde-format
 msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Αυτόματη ενεργοποίηση ανάλογα με τις ανάγκες"
 
-#: ui/main.qml:354
+#: ui/main.qml:412
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Ποτέ ενεργή"
 
-#: ui/main.qml:373
+#: ui/main.qml:431
 #, kde-format
 msgctxt "@info:whatsthis contextualhelpbutton tooltip"
 msgid ""
@@ -316,19 +346,19 @@ msgstr ""
 "πληκτρολόγιο ενός μεταμορφώσιμου φορητού υπολογιστή αναποδογυριστεί ή "
 "αποσπαστεί."
 
-#: ui/main.qml:379
+#: ui/main.qml:437
 #, kde-format
 msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Πάντα ενεργή"
 
-#: ui/main.qml:401
+#: ui/main.qml:459
 #, kde-format
 msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Ανενεργή"
 
-#: ui/main.qml:402
+#: ui/main.qml:460
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."
@@ -369,6 +399,12 @@ msgstr ""
 #, kde-format
 msgid "Double click interval"
 msgstr "Διπλό κλικ στο διάστημα"
+
+#. i18n: ectx: label, entry (cursorBlinkRate), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:35
+#, kde-format
+msgid "Text cursor blink rate, 0 disables blinking"
+msgstr ""
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

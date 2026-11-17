@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 00:46+0000\n"
+"POT-Creation-Date: 2026-11-17 01:10+0000\n"
 "PO-Revision-Date: 2025-10-31 22:53+0100\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -213,7 +213,7 @@ msgctxt "@label:spinbox"
 msgid "Double-click interval:"
 msgstr "Interval for dobbeltklik:"
 
-#: ui/main.qml:232
+#: ui/main.qml:232 ui/main.qml:336
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
@@ -221,7 +221,7 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/main.qml:236
+#: ui/main.qml:236 ui/main.qml:340
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
@@ -251,27 +251,56 @@ msgstr ""
 "forøge doubleklik-intervallet."
 
 #: ui/main.qml:306
+#, kde-format
+msgctxt "@title:group"
+msgid "Text Cursor"
+msgstr ""
+
+#: ui/main.qml:314
+#, fuzzy, kde-format
+#| msgid "Double-click interval:"
+msgctxt "@option:check followed by a spinbox"
+msgid "Blink with interval:"
+msgstr "Interval for dobbeltklik:"
+
+#: ui/main.qml:347
+#, fuzzy, kde-format
+#| msgid "Double click interval"
+msgctxt "@label:spinbox accessible"
+msgid "Text cursor blink interval"
+msgstr "Interval for dobbeltklik"
+
+#: ui/main.qml:358
+#, kde-format
+msgctxt "@info:whatsthis contextualhelpbutton tooltip"
+msgid ""
+"Applies to KDE, Qt and GTK apps, including Firefox and Chromium-based "
+"browsers. May be ignored by apps with their own cursor settings, such as "
+"some terminals and code editors."
+msgstr ""
+
+#: ui/main.qml:364
 #, fuzzy, kde-format
 #| msgid "Drag and Drop"
 msgctxt "@title:group prefix radiobutton group"
 msgid "Drag and Drop"
 msgstr "Træk og slip"
 
-#: ui/main.qml:309
+#: ui/main.qml:367
 #, fuzzy, kde-format
 #| msgid "When dragging files or folders:"
 msgctxt "@title:group prefix radiobutton group"
 msgid "When dragging files or folders:"
 msgstr "Når filer eller mapper trækkes:"
 
-#: ui/main.qml:313
+#: ui/main.qml:371
 #, fuzzy, kde-format
 #| msgid "Always ask what to do"
 msgctxt "@option:radio When dragging..."
 msgid "Always ask what to do"
 msgstr "Spørg altid, hvad der skal gøres"
 
-#: ui/main.qml:314
+#: ui/main.qml:372
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -283,14 +312,14 @@ msgstr ""
 "shortcut> inde for at kopiere og hold<shortcut>Skift+Ctrl</shortcut> inde "
 "for at oprette et symlink. Ellers vis en dialog."
 
-#: ui/main.qml:332
+#: ui/main.qml:390
 #, fuzzy, kde-format
 #| msgid "Move if on the same device"
 msgctxt "@option:radio When dragging…"
 msgid "Move if on the same device"
 msgstr "Flyt hvis på samme enhed"
 
-#: ui/main.qml:333
+#: ui/main.qml:391
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
@@ -298,20 +327,20 @@ msgstr ""
 "Hold <shortcut>Skift</shortcut> inde mens du trækker for at vise andre "
 "muligheder."
 
-#: ui/main.qml:348
+#: ui/main.qml:406
 #, kde-format
 msgctxt "@title:group"
 msgid "Touch"
 msgstr "Touch"
 
-#: ui/main.qml:351
+#: ui/main.qml:409
 #, fuzzy, kde-format
 #| msgid "Enable Touch Mode:"
 msgctxt "@title:group prefix radiobutton group"
 msgid "Enable Tablet Mode:"
 msgstr "Slå touch-tilstand til:"
 
-#: ui/main.qml:354
+#: ui/main.qml:412
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 #| msgid "Automatically enable as needed"
@@ -319,7 +348,7 @@ msgctxt "As in: 'Tablet Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Aktivér automatisk efter behov"
 
-#: ui/main.qml:354
+#: ui/main.qml:412
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is never enabled'"
 #| msgid "Never enabled"
@@ -327,7 +356,7 @@ msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Aldrig aktiveret"
 
-#: ui/main.qml:373
+#: ui/main.qml:431
 #, fuzzy, kde-format
 #| msgid ""
 #| "Touch Mode will be automatically activated whenever the system detects a "
@@ -343,7 +372,7 @@ msgstr ""
 "men ingen mus eller touchpad. For eksempel: Når en transformerbar laptops "
 "tastatur vendes rundt eller frakobles."
 
-#: ui/main.qml:379
+#: ui/main.qml:437
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is always enabled'"
 #| msgid "Always active"
@@ -351,7 +380,7 @@ msgctxt "As in: 'Tablet Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Altid aktiv"
 
-#: ui/main.qml:401
+#: ui/main.qml:459
 #, fuzzy, kde-format
 #| msgctxt "As in: 'Touch Mode is never enabled'"
 #| msgid "Disabled"
@@ -359,7 +388,7 @@ msgctxt "As in: 'Tablet Mode is never enabled'"
 msgid "Disabled"
 msgstr "Deaktiveret"
 
-#: ui/main.qml:402
+#: ui/main.qml:460
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "In Tablet Mode, the virtual keyboard will appear when needed."
@@ -396,6 +425,12 @@ msgstr "Venstreklik på rullebjælkesporet flytter rullebjælken med en side"
 #, kde-format
 msgid "Double click interval"
 msgstr "Interval for dobbeltklik"
+
+#. i18n: ectx: label, entry (cursorBlinkRate), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:35
+#, kde-format
+msgid "Text cursor blink rate, 0 disables blinking"
+msgstr ""
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

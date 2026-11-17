@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:54+0000\n"
+"POT-Creation-Date: 2026-11-16 20:39+0000\n"
 "PO-Revision-Date: 2026-05-02 18:42+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -17,27 +17,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 26.04.0\n"
 
-#: code/tools.js:53
+#: code/tools.js:62
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "பிடித்தவற்றிலிருந்து நீக்கு"
 
-#: code/tools.js:57
+#: code/tools.js:66
 #, kde-format
 msgid "Add to Favorites"
 msgstr "பிடித்தவற்றில் சேர்"
 
-#: code/tools.js:83
+#: code/tools.js:92
 #, kde-format
 msgid "On All Activities"
 msgstr "அனைத்து செயல்பாடுகளிலும்"
 
-#: code/tools.js:133
+#: code/tools.js:142
 #, kde-format
 msgid "On the Current Activity"
 msgstr "தற்போதைய செயல்பாட்டில்"
 
-#: code/tools.js:147
+#: code/tools.js:156
 #, kde-format
 msgid "Show in Favorites"
 msgstr "பிடித்தவற்றில் காட்டு"
@@ -48,177 +48,201 @@ msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "பொதுவானவை"
 
-#: ConfigGeneral.qml:50
+#: ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "சின்னம்:"
 
-#: ConfigGeneral.qml:135
+#: ConfigGeneral.qml:136
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "தேர்வு செய்…"
 
-#: ConfigGeneral.qml:140
+#: ConfigGeneral.qml:141
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr ""
 
-#: ConfigGeneral.qml:161
+#: ConfigGeneral.qml:150
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove icon"
+msgstr ""
+
+#: ConfigGeneral.qml:163
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Text label:"
+msgstr ""
+
+#: ConfigGeneral.qml:164
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to add a text label"
+msgstr ""
+
+#: ConfigGeneral.qml:176
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset menu label"
+msgstr ""
+
+#: ConfigGeneral.qml:196
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "செயலிகளை இவ்வாறு காட்டு:"
 
-#: ConfigGeneral.qml:163
+#: ConfigGeneral.qml:198
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "பெயர் மட்டும்"
 
-#: ConfigGeneral.qml:163
+#: ConfigGeneral.qml:198
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "விவரணம் மட்டும்"
 
-#: ConfigGeneral.qml:164
+#: ConfigGeneral.qml:199
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "பெயர் (விவரணம்)"
 
-#: ConfigGeneral.qml:164
+#: ConfigGeneral.qml:199
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "விவரணம் (பெயர்)"
 
-#: ConfigGeneral.qml:174
+#: ConfigGeneral.qml:209
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
 msgstr "நடத்தை:"
 
-#: ConfigGeneral.qml:176
+#: ConfigGeneral.qml:211
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "செயலிகளை அகரவரிசைப்படுத்து"
 
-#: ConfigGeneral.qml:184
+#: ConfigGeneral.qml:219
 #, kde-format
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
 msgstr "துணை பட்டிகளை ஒரே மட்டத்தில் காட்டு"
 
-#: ConfigGeneral.qml:192
+#: ConfigGeneral.qml:227
 #, kde-format
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
 msgstr "பட்டியின் மேல் மட்டத்தில் சின்னங்களை காட்டு"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:233
 #, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "புதியதாக நிறுவியுள்ள செயலிகளை முன்னிலைப்படுத்து"
 
-#: ConfigGeneral.qml:208
+#: ConfigGeneral.qml:243
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
 msgstr "பகுப்புகளை காட்டு:"
 
-#: ConfigGeneral.qml:211
+#: ConfigGeneral.qml:246
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent applications"
 msgstr "சமீப செயலிகள்"
 
-#: ConfigGeneral.qml:212
+#: ConfigGeneral.qml:247
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used applications"
 msgstr "அடிக்கடி பயன்படுத்தப்படும் செயலிகள்"
 
-#: ConfigGeneral.qml:219
+#: ConfigGeneral.qml:254
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent files"
 msgstr "சமீப கோப்புகள்"
 
-#: ConfigGeneral.qml:220
+#: ConfigGeneral.qml:255
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used files"
 msgstr "அடிக்கடி பயன்படுத்தப்படும் கோப்புகள்"
 
-#: ConfigGeneral.qml:227
+#: ConfigGeneral.qml:262
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent places"
 msgstr "சமீப இடங்கள்"
 
-#: ConfigGeneral.qml:228
+#: ConfigGeneral.qml:263
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used places"
 msgstr "அடிக்கடி அணுகப்படும் இடங்கள்"
 
-#: ConfigGeneral.qml:234
+#: ConfigGeneral.qml:269
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
 msgstr "பகுப்புகளின் உருப்படிகளை இவ்வாறு வரிசைப்படுத்து:"
 
-#: ConfigGeneral.qml:235
+#: ConfigGeneral.qml:270
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "சமீபத்தில் பயன்படுத்தியவை"
 
-#: ConfigGeneral.qml:235
+#: ConfigGeneral.qml:270
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Often used"
 msgstr "அடிக்கடி பயன்படுத்தப்படுபவை"
 
-#: ConfigGeneral.qml:245
+#: ConfigGeneral.qml:280
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
 msgstr "தேடல்:"
 
-#: ConfigGeneral.qml:247
+#: ConfigGeneral.qml:282
 #, kde-format
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr "தேடலில் நினைவுக்குறிகள், கோப்புகள் மற்றும் அஞ்சல்களை உட்படுத்து"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:290
 #, kde-format
 msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr "தேடலின் முடிவுகளை கீழே சீரமை"
 
-#: ConfigGeneral.qml:260
+#: ConfigGeneral.qml:295
 #, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
 msgstr "தோற்றம்:"
 
-#: ConfigGeneral.qml:265
+#: ConfigGeneral.qml:300
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
 msgstr "முடிந்தால் கருத்த நிறத்திட்டத்தைப் பயன்படுத்து"
 
-#: ConfigGeneral.qml:269
+#: ConfigGeneral.qml:304
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -276,7 +300,7 @@ msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
 msgstr "புதியதாக நிறுவியுள்ள செயலி"
 
-#: main.qml:189
+#: main.qml:191
 #, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"

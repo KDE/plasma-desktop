@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:54+0000\n"
+"POT-Creation-Date: 2026-11-16 20:39+0000\n"
 "PO-Revision-Date: 2026-05-21 16:08+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -19,27 +19,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.12.3\n"
 
-#: code/tools.js:53
+#: code/tools.js:62
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Aus Favoriten entfernen"
 
-#: code/tools.js:57
+#: code/tools.js:66
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Zu Favoriten hinzufügen"
 
-#: code/tools.js:83
+#: code/tools.js:92
 #, kde-format
 msgid "On All Activities"
 msgstr "In allen Aktivitäten"
 
-#: code/tools.js:133
+#: code/tools.js:142
 #, kde-format
 msgid "On the Current Activity"
 msgstr "In der aktuellen Aktivität"
 
-#: code/tools.js:147
+#: code/tools.js:156
 #, kde-format
 msgid "Show in Favorites"
 msgstr "In Favoriten anzeigen"
@@ -50,177 +50,202 @@ msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Allgemein"
 
-#: ConfigGeneral.qml:50
+#: ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Symbol:"
 
-#: ConfigGeneral.qml:135
+#: ConfigGeneral.qml:136
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Auswählen …"
 
-#: ConfigGeneral.qml:140
+#: ConfigGeneral.qml:141
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Auf Standardsymbol zurücksetzen"
 
-#: ConfigGeneral.qml:161
+#: ConfigGeneral.qml:150
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove icon"
+msgstr ""
+
+#: ConfigGeneral.qml:163
+#, fuzzy, kde-format
+#| msgid "Tab Label:"
+msgctxt "@label:textbox"
+msgid "Text label:"
+msgstr "Bezeichnung des Unterfensters:"
+
+#: ConfigGeneral.qml:164
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to add a text label"
+msgstr ""
+
+#: ConfigGeneral.qml:176
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset menu label"
+msgstr ""
+
+#: ConfigGeneral.qml:196
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Anwendungen anzeigen als:"
 
-#: ConfigGeneral.qml:163
+#: ConfigGeneral.qml:198
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Nur Name"
 
-#: ConfigGeneral.qml:163
+#: ConfigGeneral.qml:198
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Nur Beschreibung"
 
-#: ConfigGeneral.qml:164
+#: ConfigGeneral.qml:199
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Name (Beschreibung)"
 
-#: ConfigGeneral.qml:164
+#: ConfigGeneral.qml:199
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Beschreibung (Name)"
 
-#: ConfigGeneral.qml:174
+#: ConfigGeneral.qml:209
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
 msgstr "Verhalten:"
 
-#: ConfigGeneral.qml:176
+#: ConfigGeneral.qml:211
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Anwendungen alphabetisch sortieren"
 
-#: ConfigGeneral.qml:184
+#: ConfigGeneral.qml:219
 #, kde-format
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
 msgstr "Untermenüs auf eine einzelne Ebene verflachen"
 
-#: ConfigGeneral.qml:192
+#: ConfigGeneral.qml:227
 #, kde-format
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
 msgstr "Symbole auf der obersten Ebene des Menüs anzeigen"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:233
 #, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "Kürzlich installierte Anwendungen hervorheben"
 
-#: ConfigGeneral.qml:208
+#: ConfigGeneral.qml:243
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
 msgstr "Kategorien anzeigen:"
 
-#: ConfigGeneral.qml:211
+#: ConfigGeneral.qml:246
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent applications"
 msgstr "Zuletzt verwendete Anwendungen"
 
-#: ConfigGeneral.qml:212
+#: ConfigGeneral.qml:247
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used applications"
 msgstr "Häufig verwendete Anwendungen"
 
-#: ConfigGeneral.qml:219
+#: ConfigGeneral.qml:254
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent files"
 msgstr "Zuletzt geöffnete Dateien"
 
-#: ConfigGeneral.qml:220
+#: ConfigGeneral.qml:255
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used files"
 msgstr "Häufig verwendete Dateien"
 
-#: ConfigGeneral.qml:227
+#: ConfigGeneral.qml:262
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent places"
 msgstr "Kürzlich verwendete Orte"
 
-#: ConfigGeneral.qml:228
+#: ConfigGeneral.qml:263
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used places"
 msgstr "Häufig verwendete Orte"
 
-#: ConfigGeneral.qml:234
+#: ConfigGeneral.qml:269
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
 msgstr "Elemente in Kategorien sortieren nach:"
 
-#: ConfigGeneral.qml:235
+#: ConfigGeneral.qml:270
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Kürzlich verwendete"
 
-#: ConfigGeneral.qml:235
+#: ConfigGeneral.qml:270
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Often used"
 msgstr "Häufig verwendet"
 
-#: ConfigGeneral.qml:245
+#: ConfigGeneral.qml:280
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
 msgstr "Suche:"
 
-#: ConfigGeneral.qml:247
+#: ConfigGeneral.qml:282
 #, kde-format
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Suche auf Lesezeichen, Dateien und E-Mails erweitern"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:290
 #, kde-format
 msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr "Suchergebnisse nach unten ausrichten"
 
-#: ConfigGeneral.qml:260
+#: ConfigGeneral.qml:295
 #, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
 msgstr "Erscheinungsbild:"
 
-#: ConfigGeneral.qml:265
+#: ConfigGeneral.qml:300
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
 msgstr "Den dunklen Modus bevorzugen, wenn verfügbar"
 
-#: ConfigGeneral.qml:269
+#: ConfigGeneral.qml:304
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -278,7 +303,7 @@ msgctxt "@info:whatsthis Accessible description for badge"
 msgid "Newly-installed application"
 msgstr "Kürzlich installierte Anwendung"
 
-#: main.qml:189
+#: main.qml:191
 #, kde-format
 msgctxt "@action:inmenu launches kmenuedit"
 msgid "Edit Applications…"
@@ -784,9 +809,6 @@ msgstr "Keine Übereinstimmungen"
 
 #~ msgid "Broken source '%1'"
 #~ msgstr "„%1“ ist eine defekte Quelle"
-
-#~ msgid "Tab Label:"
-#~ msgstr "Bezeichnung des Unterfensters:"
 
 #~ msgid ""
 #~ "<p><b>Sorry, Homerun failed to load</b></p><p>Do you want to report this "
