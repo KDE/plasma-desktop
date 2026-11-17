@@ -279,15 +279,12 @@ int Positioner::indexForUrl(const QUrl &url) const
         return -1;
     }
 
-    const QString &name = url.fileName();
-
     int sourceIndex = -1;
 
     // TODO Optimize.
     for (int i = 0; i < m_folderModel->rowCount(); ++i) {
-        if (m_folderModel->data(m_folderModel->index(i, 0), FolderModel::FileNameRole).toString() == name) {
+        if (m_folderModel->data(m_folderModel->index(i, 0), FolderModel::UrlRole) == url) {
             sourceIndex = i;
-
             break;
         }
     }
