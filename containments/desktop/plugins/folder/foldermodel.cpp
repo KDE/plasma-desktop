@@ -1559,10 +1559,20 @@ QVariant FolderModel::data(const QModelIndex &index, int role) const
         }
     } else if (role == TypeRole) {
         return m_dirModel->data(mapToSource(QSortFilterProxyModel::index(index.row(), 6)), Qt::DisplayRole);
-    } else if (role == FileNameRole) {
-        return itemForIndex(index).url().fileName();
-    } else if (role == FileNameWrappedRole) {
-        return KStringHandler::preProcessWrap(itemForIndex(index).text());
+    } else if (role == FileNameRole || role == FileNameWrappedRole) {
+        auto item = itemForIndex(index);
+        auto name = item.name();
+        if (item.isDesktopFile()) {
+            KDesktopFile desktopfile(item.localPath());
+            auto desktopname = desktopfile.readName();
+            if (!desktopname.isEmpty()) {
+                name = desktopname;
+            }
+        }
+        if (role == FileNameWrappedRole) {
+            return KStringHandler::preProcessWrap(name);
+        }
+        return name;
     }
 
     return QSortFilterProxyModel::data(index, role);
