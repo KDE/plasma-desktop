@@ -29,7 +29,7 @@ public:
     };
 
     enum {
-        UdiRole = Qt::UserRole,
+        KeyRole = Qt::UserRole,
         TypeRole,
     };
 
@@ -58,7 +58,7 @@ public:
     void updateCheckedColumns(int column = -1);
 
 public Q_SLOTS:
-    void forgetDevice(const QString &udi);
+    void forgetDevice(const QString &key);
     void reload();
 
 private Q_SLOTS:
@@ -66,9 +66,11 @@ private Q_SLOTS:
     void deviceRemoved(const QString &udi);
 
 private:
-    void addNewDevice(const QString &udi);
+    void addNewDevice(const QString &key);
 
     QList<QString> m_attached;
     QList<QString> m_disconnected;
+    // Maps the key of an attached device to its UDI
+    QHash<QString, QString> m_attachedUdis;
     AutomounterSettings *const m_settings;
 };

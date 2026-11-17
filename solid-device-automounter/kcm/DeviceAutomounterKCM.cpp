@@ -79,7 +79,7 @@ void DeviceAutomounterKCM::forgetSelectedDevices()
         if (selected->selectedIndexes()[offset].data(DeviceModel::TypeRole) == DeviceModel::Attached) {
             offset++;
         } else {
-            m_devices->forgetDevice(selected->selectedIndexes()[offset].data(DeviceModel::UdiRole).toString());
+            m_devices->forgetDevice(selected->selectedIndexes()[offset].data(DeviceModel::KeyRole).toString());
         }
     }
 
@@ -112,9 +112,9 @@ void DeviceAutomounterKCM::save()
 
     for (const QModelIndex &idx : {m_devices->index(DeviceModel::RowAttached, 0), m_devices->index(DeviceModel::RowDetached, 0)}) {
         for (int j = 0; j < m_devices->rowCount(idx); ++j) {
-            const QString udi = m_devices->index(j, 0, idx).data(DeviceModel::UdiRole).toString();
-            validDevices << udi;
-            enabled |= m_settings->deviceSettings(udi)->mountOnLogin() | m_settings->deviceSettings(udi)->mountOnAttach();
+            const auto key = m_devices->index(j, 0, idx).data(DeviceModel::KeyRole).toString();
+            validDevices << key;
+            enabled |= m_settings->deviceSettings(key)->mountOnLogin() | m_settings->deviceSettings(key)->mountOnAttach();
         }
     }
 

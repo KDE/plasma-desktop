@@ -22,18 +22,26 @@ public:
         Attach,
     };
 
-    bool hasDeviceInfo(const QString &udi) const;
-    DeviceSettings *deviceSettings(const QString &udi) const;
-    QStringList knownDevices() const;
-    bool shouldAutomountDevice(const QString &udi, AutomountType type) const;
+    /**
+     * The key under which the settings of a device are stored.
+     * This is the UUID of the volume, which (unlike the UDI) is stable across replugging.
+     * Falls back to the UDI for volumes without a UUID.
+     */
+    static QString deviceKey(const Solid::Device &dev);
 
-    void setDeviceLastSeenMounted(const QString &udi, bool mounted);
+    bool hasDeviceInfo(const QString &key) const;
+    DeviceSettings *deviceSettings(const QString &key) const;
+    QStringList knownDevices() const;
+    bool shouldAutomountDevice(const QString &key, AutomountType type) const;
+
+    void setDeviceLastSeenMounted(const QString &key, bool mounted);
     void setDeviceInfo(const Solid::Device &dev);
-    void removeDeviceGroup(const QString &udi);
+    void removeDeviceGroup(const QString &key);
 
     bool usrIsSaveNeeded();
 
 private:
+    void migrateUdiGroups();
     void usrRead() override;
     bool usrSave() override;
 

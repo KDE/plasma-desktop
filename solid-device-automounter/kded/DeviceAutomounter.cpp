@@ -67,7 +67,7 @@ void DeviceAutomounter::init()
 
 void DeviceAutomounter::deviceMountChanged(bool accessible, const QString &udi)
 {
-    m_settings->setDeviceLastSeenMounted(udi, accessible);
+    m_settings->setDeviceLastSeenMounted(AutomounterSettings::deviceKey(Solid::Device(udi)), accessible);
     m_settings->save();
 }
 
@@ -76,11 +76,12 @@ void DeviceAutomounter::automountDevice(Solid::Device &dev, AutomounterSettings:
     if (dev.is<Solid::StorageVolume>() && dev.is<Solid::StorageAccess>()) {
         Solid::StorageAccess *sa = dev.as<Solid::StorageAccess>();
 
-        m_settings->setDeviceLastSeenMounted(dev.udi(), sa->isAccessible());
+        const auto key = AutomounterSettings::deviceKey(dev);
+        m_settings->setDeviceLastSeenMounted(key, sa->isAccessible());
         m_settings->setDeviceInfo(dev);
         m_settings->save();
 
-        if (m_settings->shouldAutomountDevice(dev.udi(), type)) {
+        if (m_settings->shouldAutomountDevice(key, type)) {
             Solid::StorageVolume *sv = dev.as<Solid::StorageVolume>();
             if (!sa->isAccessible() && !sv->isIgnored()) {
                 sa->setup();

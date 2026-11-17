@@ -8,12 +8,51 @@
 
 #include "AutomounterSettings.h"
 
+#include <Solid/StorageVolume>
+
+QString AutomounterSettings::deviceKey(const Solid::Device &dev)
+{
+    if (const auto volume = dev.as<Solid::StorageVolume>()) {
+        if (const QString uuid = volume->uuid(); !uuid.isEmpty()) {
+            return uuid;
+        }
+    }
+    return dev.udi();
+}
+
+void AutomounterSettings::migrateUdiGroups()
+{
+    // Settings used to be stored per UDI, which is not stable. Move the groups of all currently
+    // attached devices over to their UUID. Groups of devices which are not attached can't be
+    // mapped and are left alone.
+    auto devices = config()->group(QStringLiteral("Devices"));
+    const auto groups = devices.groupList();
+    if (groups.isEmpty()) {
+        return;
+    }
+
+    const auto volumes = Solid::Device::listFromType(Solid::DeviceInterface::StorageVolume);
+    for (const Solid::Device &volume : volumes) {
+        const auto udi = volume.udi();
+        const auto key = deviceKey(volume);
+        if (key == udi || !groups.contains(udi)) {
+            continue;
+        }
+        if (!devices.hasGroup(key)) {
+            auto target = devices.group(key);
+            devices.group(udi).copyTo(&target);
+        }
+        devices.deleteGroup(udi);
+    }
+}
+
 void AutomounterSettings::usrRead()
 {
+    migrateUdiGroups();
     qDeleteAll(m_devices);
     m_devices.clear();
-    for (const QString &udi : knownDevices()) {
-        m_devices[udi] = new DeviceSettings(sharedConfig(), udi, this);
+    for (const QString &key : knownDevices()) {
+        m_devices[key] = new DeviceSettings(sharedConfig(), key, this);
     }
 }
 
@@ -38,17 +77,17 @@ QStringList AutomounterSettings::knownDevices() const
     return config()->group(QStringLiteral("Devices")).groupList();
 }
 
-bool AutomounterSettings::hasDeviceInfo(const QString &udi) const
+bool AutomounterSettings::hasDeviceInfo(const QString &key) const
 {
-    return m_devices.contains(udi);
+    return m_devices.contains(key);
 }
 
-DeviceSettings *AutomounterSettings::deviceSettings(const QString &udi) const
+DeviceSettings *AutomounterSettings::deviceSettings(const QString &key) const
 {
-    return m_devices.value(udi);
+    return m_devices.value(key);
 }
 
-bool AutomounterSettings::shouldAutomountDevice(const QString &udi, AutomountType type) const
+bool AutomounterSettings::shouldAutomountDevice(const QString &key, AutomountType type) const
 {
     // We auto-mount the device, if:
     // 1.) auto-mounting is forced for the specific device, or
@@ -58,7 +97,7 @@ bool AutomounterSettings::shouldAutomountDevice(const QString &udi, AutomountTyp
 
     switch (type) {
     case Login:
-        if (hasDeviceInfo(udi) && deviceSettings(udi)->mountOnLogin()) {
+        if (hasDeviceInfo(key) && deviceSettings(key)->mountOnLogin()) {
             return true;
         }
         if (!automountOnLogin()) {
@@ -66,7 +105,7 @@ bool AutomounterSettings::shouldAutomountDevice(const QString &udi, AutomountTyp
         }
         break;
     case Attach:
-        if (hasDeviceInfo(udi) && deviceSettings(udi)->mountOnAttach()) {
+        if (hasDeviceInfo(key) && deviceSettings(key)->mountOnAttach()) {
             return true;
         }
         if (!automountOnPlugin()) {
@@ -79,34 +118,34 @@ bool AutomounterSettings::shouldAutomountDevice(const QString &udi, AutomountTyp
         return true;
     }
 
-    return hasDeviceInfo(udi) && (deviceSettings(udi)->isKnown() || deviceSettings(udi)->lastSeenMounted());
+    return hasDeviceInfo(key) && (deviceSettings(key)->isKnown() || deviceSettings(key)->lastSeenMounted());
 }
 
-void AutomounterSettings::setDeviceLastSeenMounted(const QString &udi, bool mounted)
+void AutomounterSettings::setDeviceLastSeenMounted(const QString &key, bool mounted)
 {
-    if (!m_devices.contains(udi)) {
-        m_devices[udi] = new DeviceSettings(sharedConfig(), udi, this);
+    if (!m_devices.contains(key)) {
+        m_devices[key] = new DeviceSettings(sharedConfig(), key, this);
     }
     if (mounted) {
-        deviceSettings(udi)->setIsKnown(true);
+        deviceSettings(key)->setIsKnown(true);
     }
-    deviceSettings(udi)->setLastSeenMounted(mounted);
+    deviceSettings(key)->setLastSeenMounted(mounted);
 }
 
 void AutomounterSettings::setDeviceInfo(const Solid::Device &dev)
 {
-    const QString udi = dev.udi();
-    if (!m_devices.contains(udi)) {
-        m_devices[udi] = new DeviceSettings(sharedConfig(), udi, this);
+    const QString key = deviceKey(dev);
+    if (!m_devices.contains(key)) {
+        m_devices[key] = new DeviceSettings(sharedConfig(), key, this);
     }
-    auto settings = deviceSettings(udi);
+    auto settings = deviceSettings(key);
     settings->setName(dev.description());
     settings->setIcon(dev.icon());
 }
 
-void AutomounterSettings::removeDeviceGroup(const QString &udi)
+void AutomounterSettings::removeDeviceGroup(const QString &key)
 {
-    if (config()->group(QStringLiteral("Devices")).hasGroup(udi)) {
-        config()->group(QStringLiteral("Devices")).group(udi).deleteGroup();
+    if (config()->group(QStringLiteral("Devices")).hasGroup(key)) {
+        config()->group(QStringLiteral("Devices")).group(key).deleteGroup();
     }
 }
