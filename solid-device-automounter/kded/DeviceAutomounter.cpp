@@ -97,9 +97,11 @@ void DeviceAutomounter::deviceAdded(const QString &udi)
     automountDevice(dev, AutomounterSettings::Attach);
     m_settings->save();
 
-    if (dev.is<Solid::StorageAccess>()) {
+    if (dev.is<Solid::StorageAccess>() && dev.is<Solid::StorageVolume>()) {
         Solid::StorageAccess *sa = dev.as<Solid::StorageAccess>();
-        if (sa && !sa->isIgnored()) {
+        // Use StorageVolume::isIgnored() rather than StorageAccess::isIgnored(): the latter depends on the
+        // mount point, which is still empty for a device that has not been mounted yet.
+        if (sa && !dev.as<Solid::StorageVolume>()->isIgnored()) {
             connect(sa, &Solid::StorageAccess::accessibilityChanged, this, &DeviceAutomounter::deviceMountChanged);
         }
     }
