@@ -263,11 +263,13 @@ ColumnLayout {
         ToolTipHoverHandler {
             id: headerHoverHandler
             enabled: (root.index !== -1) && !Plasmoid.configuration.showToolTips && thumbnailSourceItem.winId != undefined
+            margin: headerItem.Layout.margins
         }
 
         ToolTipTapHandler {
             id: headerTapHandler
             enabled: (root.index !== -1) && !Plasmoid.configuration.showToolTips && thumbnailSourceItem.winId != undefined
+            margin: headerItem.Layout.margins
         }
 
         // There's no PlasmaComponents3 version
