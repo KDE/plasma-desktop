@@ -27,6 +27,7 @@ void PositionerTest::initTestCase()
 
     m_currentActivity = QStringLiteral("00000000-0000-0000-0000-000000000000");
     m_folderDir = new QTemporaryDir();
+    m_currentDesktopPath = QStringLiteral("file://%1/").arg(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation));
 
     QDir dir(m_folderDir->path());
     dir.mkdir(desktop);
@@ -454,6 +455,24 @@ void PositionerTest::tst_mixedSetPerStripeListingAndReady()
     auto gridPos = getFirstGridPos();
     QCOMPARE(gridPos.stripe, newGridPos.stripe);
     QCOMPARE(gridPos.pos, newGridPos.pos);
+}
+
+void PositionerTest::tst_convertDesktopPath_data()
+{
+    QTest::addColumn<QString>("oldPath");
+    QTest::addColumn<QString>("newPath");
+    QTest::newRow("desktop:/ to file://") << "desktop:/Text File.txt" << QStringLiteral("%1%2").arg(m_currentDesktopPath, "Text File.txt");
+    QTest::newRow("just file:/") << QStringLiteral("%1%2").arg(m_currentDesktopPath, "Text File.txt")
+                                 << QStringLiteral("%1%2").arg(m_currentDesktopPath, "Text File.txt");
+    QTest::newRow("desktop:/ with complex filename") << "desktop:/file#desktop:/Name.txt"
+                                                     << QStringLiteral("%1%2").arg(m_currentDesktopPath, "file#desktop:/Name.txt");
+}
+
+void PositionerTest::tst_convertDesktopPath()
+{
+    QFETCH(QString, oldPath);
+    QFETCH(QString, newPath);
+    QCOMPARE(m_positioner->convertDesktopPath(oldPath), newPath);
 }
 
 // Test utilities
