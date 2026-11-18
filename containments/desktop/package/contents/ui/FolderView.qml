@@ -217,10 +217,16 @@ FocusScope {
         hoverEnabled: true
 
         onPressXChanged: {
+            if (main.rubberBand) {
+                return; // don't change the origin for an active rubber band
+            }
             cPress = mapToItem(gridView.contentItem, pressX, pressY);
         }
 
         onPressYChanged: {
+            if (main.rubberBand) {
+                return;
+            }
             cPress = mapToItem(gridView.contentItem, pressX, pressY);
         }
 
