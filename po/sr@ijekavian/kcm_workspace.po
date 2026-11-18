@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 01:10+0000\n"
-"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"PO-Revision-Date: 2026-11-17 23:51+0100\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
@@ -239,22 +239,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Text Cursor"
-msgstr ""
+msgstr "Текстуални курсор"
 
 #: ui/main.qml:314
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Double-click interval:"
+#, kde-format
 msgctxt "@option:check followed by a spinbox"
 msgid "Blink with interval:"
-msgstr "Период двоклика:"
+msgstr "Трепћи са периодом:"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgid "Double click interval"
+#, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Text cursor blink interval"
-msgstr "Период двоклика"
+msgstr "Период трептања текстуалног курсора"
 
 #: ui/main.qml:358
 #, kde-format
@@ -264,6 +261,9 @@ msgid ""
 "browsers. May be ignored by apps with their own cursor settings, such as "
 "some terminals and code editors."
 msgstr ""
+"Важи за КДЕ, КуТ и ГТК програме, укључујући Фајерфокс и прегледаче засноване "
+"на Кромијуму. Програми са сопственим поставкама курсора, као што су неки "
+"терминали и уређивачи кода, можда ће занемарити ову поставку."
 
 #: ui/main.qml:364
 #, kde-format
@@ -402,7 +402,7 @@ msgstr "Период двоклика"
 #: workspaceoptions_kdeglobalssettings.kcfg:35
 #, kde-format
 msgid "Text cursor blink rate, 0 disables blinking"
-msgstr ""
+msgstr "Период трептања текстуалног курсора, 0 искључује трептање"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

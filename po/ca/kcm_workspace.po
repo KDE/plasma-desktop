@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 01:10+0000\n"
-"PO-Revision-Date: 2026-04-23 09:18+0200\n"
+"PO-Revision-Date: 2026-11-17 09:23+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -240,22 +240,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Text Cursor"
-msgstr ""
+msgstr "Cursor de text"
 
 #: ui/main.qml:314
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Double-click interval:"
+#, kde-format
 msgctxt "@option:check followed by a spinbox"
 msgid "Blink with interval:"
-msgstr "Interval del doble clic:"
+msgstr "Parpelleig amb interval:"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgid "Double click interval"
+#, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Text cursor blink interval"
-msgstr "Interval del doble clic"
+msgstr "Interval de parpelleig del cursor de text"
 
 #: ui/main.qml:358
 #, kde-format
@@ -265,6 +262,9 @@ msgid ""
 "browsers. May be ignored by apps with their own cursor settings, such as "
 "some terminals and code editors."
 msgstr ""
+"S'aplica a les aplicacions KDE, Qt i GTK, inclosos els navegadors basats en "
+"Firefox i Chromium. Les aplicacions poden ignorar-ho amb la seva pròpia "
+"configuració de cursor, com ara alguns terminals i editors de codi."
 
 #: ui/main.qml:364
 #, kde-format
@@ -402,7 +402,7 @@ msgstr "Interval del doble clic"
 #: workspaceoptions_kdeglobalssettings.kcfg:35
 #, kde-format
 msgid "Text cursor blink rate, 0 disables blinking"
-msgstr ""
+msgstr "Velocitat de parpelleig del cursor de text, 0 desactiva el parpelleig"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

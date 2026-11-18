@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_access\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-06 00:54+0000\n"
+"POT-Creation-Date: 2026-11-18 01:12+0000\n"
 "PO-Revision-Date: 2026-09-04 01:01+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -723,52 +723,58 @@ msgstr "Ampliación y lupa"
 #: ui/main.qml:34
 #, kde-format
 msgctxt "@title Category name in sidebar"
+msgid "Text Size"
+msgstr ""
+
+#: ui/main.qml:39
+#, kde-format
+msgctxt "@title Category name in sidebar"
 msgid "System Bell"
 msgstr "Timbre del sistema"
 
-#: ui/main.qml:40
+#: ui/main.qml:45
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Modifier Keys"
 msgstr "Teclas modificadoras"
 
-#: ui/main.qml:46
+#: ui/main.qml:51
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Keyboard Filters"
 msgstr "Filtros de teclado"
 
-#: ui/main.qml:52
+#: ui/main.qml:57
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Mouse Navigation"
 msgstr "Navegación con el ratón"
 
-#: ui/main.qml:58
+#: ui/main.qml:63
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Dwell Clicker"
 msgstr "Clic por inmovilidad"
 
-#: ui/main.qml:64
+#: ui/main.qml:69
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "Lector de pantalla"
 
-#: ui/main.qml:70
+#: ui/main.qml:75
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr "Corrección para daltonismo"
 
-#: ui/main.qml:76
+#: ui/main.qml:81
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
 msgstr "Invertir"
 
-#: ui/main.qml:82
+#: ui/main.qml:87
 #, kde-format
 msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
@@ -1001,6 +1007,40 @@ msgstr "Normal"
 msgctxt "@label Large pointer size"
 msgid "Large"
 msgstr "Grande"
+
+#: ui/TextSize.qml:16
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Recommended in most situations. Makes text and everything else bigger and "
+"keeps their proportions; on low-resolution screens, some small graphics may "
+"look slightly blurry."
+msgstr ""
+
+#: ui/TextSize.qml:18
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure Shortcuts…"
+msgctxt "@action:button"
+msgid "Configure Display Scale…"
+msgstr "Configurar atajos de teclado…"
+
+#: ui/TextSize.qml:25
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Only suitable for small size changes. Changes the text alone, so large "
+"changes can make text no longer fit or look good next to icons and other "
+"elements."
+msgstr ""
+
+#: ui/TextSize.qml:27
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure Shortcuts…"
+msgctxt "@action:button"
+msgid "Configure Fonts…"
+msgstr "Configurar atajos de teclado…"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format

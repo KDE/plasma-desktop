@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-06 00:54+0000\n"
+"POT-Creation-Date: 2026-11-18 01:12+0000\n"
 "PO-Revision-Date: 2008-05-12 11:33+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh\n"
@@ -719,57 +719,63 @@ msgid "Zoom & Magnifier"
 msgstr ""
 
 #: ui/main.qml:34
+#, kde-format
+msgctxt "@title Category name in sidebar"
+msgid "Text Size"
+msgstr ""
+
+#: ui/main.qml:39
 #, fuzzy, kde-format
 #| msgid "Use &system bell"
 msgctxt "@title Category name in sidebar"
 msgid "System Bell"
 msgstr "&Жүйелік қоңырауы қолданылсын"
 
-#: ui/main.qml:40
+#: ui/main.qml:45
 #, fuzzy, kde-format
 #| msgid "&Modifier Keys"
 msgctxt "@title Category name in sidebar"
 msgid "Modifier Keys"
 msgstr "&Түрлендіру пернелері"
 
-#: ui/main.qml:46
+#: ui/main.qml:51
 #, fuzzy, kde-format
 #| msgid "&Keyboard Filters"
 msgctxt "@title Category name in sidebar"
 msgid "Keyboard Filters"
 msgstr "&Пернетақта сүзгілері"
 
-#: ui/main.qml:52
+#: ui/main.qml:57
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Mouse Navigation"
 msgstr ""
 
-#: ui/main.qml:58
+#: ui/main.qml:63
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Dwell Clicker"
 msgstr ""
 
-#: ui/main.qml:64
+#: ui/main.qml:69
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr ""
 
-#: ui/main.qml:70
+#: ui/main.qml:75
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr ""
 
-#: ui/main.qml:76
+#: ui/main.qml:81
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
 msgstr ""
 
-#: ui/main.qml:82
+#: ui/main.qml:87
 #, kde-format
 msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
@@ -997,6 +1003,38 @@ msgstr ""
 msgctxt "@label Large pointer size"
 msgid "Large"
 msgstr ""
+
+#: ui/TextSize.qml:16
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Recommended in most situations. Makes text and everything else bigger and "
+"keeps their proportions; on low-resolution screens, some small graphics may "
+"look slightly blurry."
+msgstr ""
+
+#: ui/TextSize.qml:18
+#, fuzzy, kde-format
+#| msgid "Configure &Notifications..."
+msgctxt "@action:button"
+msgid "Configure Display Scale…"
+msgstr "Құ&лақтандыруды баптау..."
+
+#: ui/TextSize.qml:25
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Only suitable for small size changes. Changes the text alone, so large "
+"changes can make text no longer fit or look good next to icons and other "
+"elements."
+msgstr ""
+
+#: ui/TextSize.qml:27
+#, fuzzy, kde-format
+#| msgid "Configure &Notifications..."
+msgctxt "@action:button"
+msgid "Configure Fonts…"
+msgstr "Құ&лақтандыруды баптау..."
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-06 00:54+0000\n"
+"POT-Creation-Date: 2026-11-18 01:12+0000\n"
 "PO-Revision-Date: 2026-09-03 19:34+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -736,52 +736,58 @@ msgstr "Лупа та збільшувальне скло"
 #: ui/main.qml:34
 #, kde-format
 msgctxt "@title Category name in sidebar"
+msgid "Text Size"
+msgstr ""
+
+#: ui/main.qml:39
+#, kde-format
+msgctxt "@title Category name in sidebar"
 msgid "System Bell"
 msgstr "Системний дзвінок"
 
-#: ui/main.qml:40
+#: ui/main.qml:45
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Modifier Keys"
 msgstr "Клавіші-модифікатори"
 
-#: ui/main.qml:46
+#: ui/main.qml:51
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Keyboard Filters"
 msgstr "Фільтри клавіатури"
 
-#: ui/main.qml:52
+#: ui/main.qml:57
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Mouse Navigation"
 msgstr "Навігація за допомогою миші"
 
-#: ui/main.qml:58
+#: ui/main.qml:63
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Dwell Clicker"
 msgstr "Клацання з затримкою"
 
-#: ui/main.qml:64
+#: ui/main.qml:69
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "Засіб читання з екрана"
 
-#: ui/main.qml:70
+#: ui/main.qml:75
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr "Виправлення колірної сліпоти"
 
-#: ui/main.qml:76
+#: ui/main.qml:81
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
 msgstr "Інверсія"
 
-#: ui/main.qml:82
+#: ui/main.qml:87
 #, kde-format
 msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
@@ -1018,6 +1024,40 @@ msgstr "Звичайний"
 msgctxt "@label Large pointer size"
 msgid "Large"
 msgstr "Великий"
+
+#: ui/TextSize.qml:16
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Recommended in most situations. Makes text and everything else bigger and "
+"keeps their proportions; on low-resolution screens, some small graphics may "
+"look slightly blurry."
+msgstr ""
+
+#: ui/TextSize.qml:18
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure Shortcuts…"
+msgctxt "@action:button"
+msgid "Configure Display Scale…"
+msgstr "Налаштувати скорочення…"
+
+#: ui/TextSize.qml:25
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Only suitable for small size changes. Changes the text alone, so large "
+"changes can make text no longer fit or look good next to icons and other "
+"elements."
+msgstr ""
+
+#: ui/TextSize.qml:27
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure Shortcuts…"
+msgctxt "@action:button"
+msgid "Configure Fonts…"
+msgstr "Налаштувати скорочення…"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format

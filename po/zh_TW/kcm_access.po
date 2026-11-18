@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-06 00:54+0000\n"
+"POT-Creation-Date: 2026-11-18 01:12+0000\n"
 "PO-Revision-Date: 2026-09-15 14:56+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -700,52 +700,58 @@ msgstr "縮放與放大鏡"
 #: ui/main.qml:34
 #, kde-format
 msgctxt "@title Category name in sidebar"
+msgid "Text Size"
+msgstr ""
+
+#: ui/main.qml:39
+#, kde-format
+msgctxt "@title Category name in sidebar"
 msgid "System Bell"
 msgstr "系統響鈴"
 
-#: ui/main.qml:40
+#: ui/main.qml:45
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Modifier Keys"
 msgstr "修飾鍵"
 
-#: ui/main.qml:46
+#: ui/main.qml:51
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Keyboard Filters"
 msgstr "鍵盤過濾器"
 
-#: ui/main.qml:52
+#: ui/main.qml:57
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Mouse Navigation"
 msgstr "滑鼠導覽"
 
-#: ui/main.qml:58
+#: ui/main.qml:63
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Dwell Clicker"
 msgstr "停留點擊器"
 
-#: ui/main.qml:64
+#: ui/main.qml:69
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Screen Reader"
 msgstr "螢幕閱讀器"
 
-#: ui/main.qml:70
+#: ui/main.qml:75
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Color Blindness Correction"
 msgstr "色盲校正"
 
-#: ui/main.qml:76
+#: ui/main.qml:81
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
 msgstr "反轉"
 
-#: ui/main.qml:82
+#: ui/main.qml:87
 #, kde-format
 msgctxt "@title Category name in sidebar, shake pointer to find it"
 msgid "Shake Pointer"
@@ -968,6 +974,40 @@ msgstr "一般"
 msgctxt "@label Large pointer size"
 msgid "Large"
 msgstr "巨大"
+
+#: ui/TextSize.qml:16
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Recommended in most situations. Makes text and everything else bigger and "
+"keeps their proportions; on low-resolution screens, some small graphics may "
+"look slightly blurry."
+msgstr ""
+
+#: ui/TextSize.qml:18
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure Shortcuts…"
+msgctxt "@action:button"
+msgid "Configure Display Scale…"
+msgstr "設定快捷鍵…"
+
+#: ui/TextSize.qml:25
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Only suitable for small size changes. Changes the text alone, so large "
+"changes can make text no longer fit or look good next to icons and other "
+"elements."
+msgstr ""
+
+#: ui/TextSize.qml:27
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure Shortcuts…"
+msgctxt "@action:button"
+msgid "Configure Fonts…"
+msgstr "設定快捷鍵…"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format

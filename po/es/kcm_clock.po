@@ -1,22 +1,22 @@
-# Spanish translations for kcmkclock.po package.
-# Copyright (C) 2001-2025 This file is copyright:
+# Spanish translations for kcm_clock.po package.
+# Copyright (C) 2001-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # SPDX-FileCopyrightText: 2001-2002 Pablo de Vicente <vicente@oan.es>
 # SPDX-FileCopyrightText: 2003, 2005, 2008 Jaime Robles <jaime@kde.org>
 # SPDX-FileCopyrightText: 2004 Miguel Revilla Rodríguez <yo@miguelrevilla.com>
-# SPDX-FileCopyrightText: 2004, 2005 Pablo de Vicente <p.devicente@wanadoo.es>
+# SPDX-FileCopyrightText: 2004-2005 Pablo de Vicente <p.devicente@wanadoo.es>
 # SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
 # SPDX-FileCopyrightText: 2009 Jaime Robles <jaime@robles.es>
 # SPDX-FileCopyrightText: 2010 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
 # SPDX-FileCopyrightText: 2012 Javier Vinal <fjvinal@gmail.com>
-# SPDX-FileCopyrightText: 2013, 2014, 2015, 2019, 2021, 2023, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2013-2015, 2019, 2021, 2023, 2025-2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: kcmkclock\n"
+"Project-Id-Version: kcm_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-12 01:04+0000\n"
-"PO-Revision-Date: 2025-05-26 00:49+0100\n"
+"PO-Revision-Date: 2026-11-17 20:42+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 26.08.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -43,10 +43,9 @@ msgid "Unable to change NTP settings"
 msgstr "No ha sido posible cambiar las preferencias de NTP"
 
 #: dateandtime.cpp:249
-#, fuzzy, kde-format
-#| msgid "Unable to change NTP settings"
+#, kde-format
 msgid "Permission to change NTP setting denied"
-msgstr "No ha sido posible cambiar las preferencias de NTP"
+msgstr "Permiso denegado para cambiar ajustes de NTP"
 
 #: dateandtime.cpp:261 main.cpp:89
 #, kde-format
@@ -56,18 +55,17 @@ msgstr "No ha sido posible fijar la hora actual"
 #: dateandtime.cpp:263
 #, kde-format
 msgid "Permission to change date and time setting denied"
-msgstr ""
+msgstr "Permiso denegado para cambiar la fecha y la hora"
 
 #: dateandtime.cpp:274
-#, fuzzy, kde-format
-#| msgid "Unable to set timezone"
+#, kde-format
 msgid "Unable to set time zone"
-msgstr "No ha sido posible fijar la zona horaria"
+msgstr "No se ha podido fijar la zona horaria"
 
 #: dateandtime.cpp:276
 #, kde-format
 msgid "Permission to change time zone denied"
-msgstr ""
+msgstr "Permiso denegado para cambiar la zona horaria"
 
 #: main.cpp:101
 #, kde-format
@@ -75,94 +73,25 @@ msgid "Unable to set timezone"
 msgstr "No ha sido posible fijar la zona horaria"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "Set date and time &automatically"
+#, kde-format
 msgctxt "@option"
 msgid "Set date and time automatically"
-msgstr "Poner fecha y hora &automáticamente:"
+msgstr "Definir la fecha y la hora automáticamente"
 
 #: ui/main.qml:54
 #, kde-format
 msgctxt "@action:button as in set the current time on the machine"
 msgid "Set Time"
-msgstr ""
+msgstr "Definir la hora"
 
 #: ui/main.qml:68
 #, kde-format
 msgctxt "@action:button as in set the current date on the machine"
 msgid "Set Date"
-msgstr ""
+msgstr "Definir la fecha"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Time Zone"
+#, kde-format
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "Zona horaria"
-
-#~ msgid "Date and Time"
-#~ msgstr "Fecha y hora"
-
-#~ msgid ""
-#~ "Here you can change the system date's day of the month, month and year."
-#~ msgstr ""
-#~ "Aquí puede cambiar el día del mes, mes y año de la fecha del sistema."
-
-#~ msgid ""
-#~ "Here you can change the system time. Click into the hours, minutes or "
-#~ "seconds field to change the relevant value, either using the up and down "
-#~ "buttons to the right or by entering a new value."
-#~ msgstr ""
-#~ "Aquí puede cambiar la hora del sistema. Pulse sobre los campos de hora, "
-#~ "minutos o segundos para cambiar el valor, usando los botones arriba y "
-#~ "abajo de la derecha o introduciendo un nuevo valor."
-
-#~ msgid ""
-#~ "<h1>Date & Time</h1> This system settings module can be used to set the "
-#~ "system date and time. As these settings do not only affect you as a user, "
-#~ "but rather the whole system, you can only change these settings when you "
-#~ "start the System Settings as root. If you do not have the root password, "
-#~ "but feel the system time should be corrected, please contact your system "
-#~ "administrator."
-#~ msgstr ""
-#~ "<h1>Fecha y hora</h1> Este módulo de control puede usarse para ajustar la "
-#~ "fecha y hora del sistema. Como estos cambios no solo le afectan como "
-#~ "usuario, sino a todo el sistema, solo puede cambiar estos valores si "
-#~ "inicia las Preferencias del sistema como superusuario. Si no tiene la "
-#~ "contraseña de superusuario pero cree que debería cambiarse la fecha y "
-#~ "hora del sistema, por favor, contacte con el administrador del sistema."
-
-#~ msgid "&Time server:"
-#~ msgstr "Servidor &horario:"
-
-#~ msgid ""
-#~ "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
-#~ "enable automatic updating of date and time."
-#~ msgstr ""
-#~ "No se ha encontrado ninguna utilidad de NTP. Instale las órdenes "
-#~ "«ntpdate» o «rdate» para activar la actualización automática de la fecha "
-#~ "y la hora."
-
-#~ msgid ""
-#~ "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        "
-#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
-#~ "pool.ntp.org"
-#~ msgstr ""
-#~ "Servidor horario público (pool.ntp.org),        asia.pool.ntp.org,        "
-#~ "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania."
-#~ "pool.ntp.org"
-
-#~ msgid "Unable to contact time server: %1."
-#~ msgstr "No se ha podido contactar con el servidor horario: %1."
-
-#~ msgid "Can not set date."
-#~ msgstr "No se puede ajustar la fecha."
-
-#~ msgid "Error setting new time zone."
-#~ msgstr "Error al establecer la nueva zona horaria."
-
-#~ msgid "Time zone Error"
-#~ msgstr "Error en zona horaria"
-
-#~ msgid "Unable to authenticate/execute the action: %1, %2"
-#~ msgstr "No se pudo autenticar/ejecutar la acción: %1, %2"
