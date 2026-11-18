@@ -404,12 +404,14 @@ PlasmoidItem {
 
             target: taskList
 
-            onUrlsDropped: urls => {
+            onUrlsDropped: (urls, position) => {
                 // If all dropped URLs point to application desktop files, we'll add a launcher for each of them.
                 const createLaunchers = urls.every(item => tasks.backend.isApplication(item));
 
+                let i = 0
+
                 if (createLaunchers) {
-                    urls.forEach(item => addLauncher(item));
+                    urls.forEach(item => tasks.addLauncher(item, position + i++));
                     return;
                 }
 
@@ -549,9 +551,24 @@ PlasmoidItem {
         return tasksModel.launcherPosition(url) !== -1;
     }
 
-    function addLauncher(url: url): void {
-        if (Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
-            tasksModel.requestAddLauncher(url);
+    function addLauncher(url: url, position = -1): void {
+        if (Plasmoid.immutability === PlasmaCore.Types.SystemImmutable) {
+            return;
+        }
+
+        let result = tasksModel.requestAddLauncher(url);
+        if (!result) {
+            return; // could not be added for some reason
+        }
+        if (position >= 0) {
+            let newLauncherPosition = tasksModel.launcherPosition(url)
+            if (newLauncherPosition === -1) {
+                // was added, but the url changed, likely because of symlinks.
+                // it's always at the end then
+                newLauncherPosition = tasksModel.launcherList.length -1 // not launcherCount!
+            }
+            tasksModel.move(newLauncherPosition, position)
+            tasksModel.syncLaunchers();
         }
     }
 

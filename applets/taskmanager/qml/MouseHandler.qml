@@ -12,7 +12,7 @@ import plasma.applet.org.kde.plasma.taskmanager as TaskManagerApplet
 
 DropArea {
     id: dropArea
-    signal urlsDropped(var urls)
+    signal urlsDropped(var urls, int position)
 
     property Item target
     property Item ignoredItem
@@ -118,7 +118,7 @@ DropArea {
         }
 
         if (event.hasUrls) {
-            urlsDropped(event.urls);
+            urlsDropped(event.urls, hoveredItem.index);
             return;
         }
     }
