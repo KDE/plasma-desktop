@@ -13,6 +13,7 @@
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QStandardPaths>
 #include <QTimer>
 
 using namespace Qt::StringLiterals;
@@ -1031,7 +1032,7 @@ void Positioner::loadAndApplyPositionsConfig(const QString &resolution)
                 for (qsizetype offset = PositionsConstants::headerSize; offset < positions.size(); offset += PositionsConstants::bucketSize) {
                     bool okStripe = false;
                     bool okPos = false;
-                    const auto name = positions[offset + PositionsConstants::filenameOffset];
+                    const auto name = convertDesktopPath(positions[offset + PositionsConstants::filenameOffset]);
                     const auto stripe = positions[offset + PositionsConstants::stripeOffset].toInt(&okStripe);
                     const auto pos = positions[offset + PositionsConstants::posOffset].toInt(&okPos);
                     if (!name.isEmpty() && okStripe && okPos) {
@@ -1069,9 +1070,8 @@ void Positioner::savePositionsConfig()
                     && (positions.size() - PositionsConstants::headerSize) % PositionsConstants::bucketSize == 0) {
                     newPositions.append(positions[0]);
                     newPositions.append(positions[1]);
-
                     for (qsizetype offset = PositionsConstants::headerSize; offset < positions.size(); offset += PositionsConstants::bucketSize) {
-                        const auto name = positions[offset + PositionsConstants::filenameOffset];
+                        const auto name = convertDesktopPath(positions[offset + PositionsConstants::filenameOffset]);
                         const auto stripe = positions[offset + PositionsConstants::stripeOffset];
                         const auto pos = positions[offset + PositionsConstants::posOffset];
                         if (currentPositions.contains(name)) {
@@ -1286,6 +1286,16 @@ void Positioner::maybeRestoreAndApplyChangedPositions(bool forceConvertAndSave)
         savePositionsConfig();
     }
     m_deferRestoreChangedPositions = false;
+}
+
+QString Positioner::convertDesktopPath(const QString &path)
+{
+    QString name = path;
+    if (name.startsWith(u"desktop:/"_s)) {
+        QString desktopPath = u"file://%1/"_s.arg(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation));
+        name = desktopPath.append(name.sliced(9));
+    }
+    return name;
 }
 
 void Positioner::onItemRenamed(const QString &filename, const QString &newFilename)
