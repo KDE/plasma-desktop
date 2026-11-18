@@ -132,8 +132,7 @@ PlasmoidItem {
             const task = taskItems[i];
 
             if (!task.model.IsLauncher && !task.model.IsStartup) {
-                tasksModel.requestPublishDelegateGeometry(tasksModel.makeModelIndex(task.index),
-                    backend.globalRect(task), task);
+                tasksModel.requestPublishDelegateGeometry(tasksModel.makeModelIndex(task.index), task);
             }
         }
     }
@@ -283,7 +282,7 @@ PlasmoidItem {
             onTriggered: {
                 const task = parent as Task;
                 if (task) {
-                    tasks.tasksModel.requestPublishDelegateGeometry(task.modelIndex(), tasks.backend.globalRect(task), task);
+                    tasks.tasksModel.requestPublishDelegateGeometry(task.modelIndex(), task);
                 }
                 destroy();
             }
