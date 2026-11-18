@@ -59,8 +59,6 @@ public:
     Q_INVOKABLE QVariantList recentDocumentActions(const QUrl &launcherUrl, QObject *parent);
     Q_INVOKABLE void setActionGroup(QAction *action) const;
 
-    Q_INVOKABLE QRect globalRect(QQuickItem *item) const;
-
     Q_INVOKABLE bool isApplication(const QUrl &url) const;
 
     Q_INVOKABLE qint64 parentPid(qint64 pid) const;

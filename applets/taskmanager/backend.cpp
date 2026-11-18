@@ -512,19 +512,6 @@ void Backend::setActionGroup(QAction *action) const
     }
 }
 
-QRect Backend::globalRect(QQuickItem *item) const
-{
-    if (!item || !item->window()) {
-        return QRect();
-    }
-
-    QRect iconRect(item->x(), item->y(), item->width(), item->height());
-    iconRect.moveTopLeft(item->parentItem()->mapToScene(iconRect.topLeft()).toPoint());
-    iconRect.moveTopLeft(item->window()->mapToGlobal(iconRect.topLeft()));
-
-    return iconRect;
-}
-
 bool Backend::isApplication(const QUrl &url) const
 {
     if (!url.isValid() || !url.isLocalFile()) {
