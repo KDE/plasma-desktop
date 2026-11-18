@@ -164,7 +164,11 @@ Item {
             } else if (uiVisible) {
                 fadeoutTimer.restart();
             }
-            authenticator.startAuthenticating();
+            if (uiVisible) {
+                authenticator.startAuthenticating();
+            } else {
+                authenticator.stopAuthenticating();
+            }
         }
 
         Timer { // heart beat keeping the backend active for as long as we are in visible state
