@@ -423,6 +423,32 @@ Kirigami.ScrollablePage {
                 (emojiLabel.GridView.isCurrentItem && emojiView.currentIndex + 1 === emojiView.hoveredIndex)
             ) ? 2 : (emojiLabel.isHoveredOrFocused ? 1 : 0)
 
+            property bool dragImageReady: false
+
+            Drag.active: dragHandler.active && emojiLabel.dragImageReady
+            Drag.mimeData: { "text/plain": emojiLabel.text }
+            Drag.dragType: Drag.Automatic
+
+            DragHandler {
+                id: dragHandler
+                target: null
+
+                onActiveChanged: {
+                    if (active) {
+                        emojiLabel.contentItem.grabToImage(result => {
+                            if (!dragHandler.active) {
+                                return
+                            }
+                            emojiLabel.Drag.imageSource = result.url
+                            emojiLabel.Drag.hotSpot = Qt.point(emojiLabel.contentItem.width / 2, emojiLabel.contentItem.height / 2)
+                            emojiLabel.dragImageReady = true
+                        })
+                    } else {
+                        emojiLabel.dragImageReady = false
+                    }
+                }
+            }
+
             text: model.display
             contentItem: QQC2.Label {
                 font.pixelSize: Math.round(emojiLabel.height * 0.6)
