@@ -423,6 +423,15 @@ Kirigami.ScrollablePage {
                 (emojiLabel.GridView.isCurrentItem && emojiView.currentIndex + 1 === emojiView.hoveredIndex)
             ) ? 2 : (emojiLabel.isHoveredOrFocused ? 1 : 0)
 
+            Drag.active: dragHandler.active
+            Drag.mimeData: { "text/plain": emojiLabel.text }
+            Drag.dragType: Drag.Automatic
+
+            DragHandler {
+                id: dragHandler
+                target: null
+            }
+
             text: model.display
             contentItem: QQC2.Label {
                 font.pixelSize: Math.round(emojiLabel.height * 0.6)
