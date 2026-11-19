@@ -132,10 +132,10 @@ PlasmoidItem {
                 property bool returnAllMargins: true
                 // The above makes sure margin is returned even for side margins
                 // that would be otherwise turned off.
-                topMargin: !root.vertical && containerMargins ? -containerMargins('top', returnAllMargins) : 0
-                leftMargin: root.vertical && containerMargins ? -containerMargins('left', returnAllMargins) : 0
-                rightMargin: root.vertical && containerMargins ? -containerMargins('right', returnAllMargins) : 0
-                bottomMargin: !root.vertical && containerMargins ? -containerMargins('bottom', returnAllMargins) : 0
+                topMargin: containerMargins ? -containerMargins('top', returnAllMargins) : 0
+                leftMargin: containerMargins ? -containerMargins('left', returnAllMargins) : 0
+                rightMargin: containerMargins ? -containerMargins('right', returnAllMargins) : 0
+                bottomMargin: containerMargins ? -containerMargins('bottom', returnAllMargins) : 0
             }
             imagePath: "widgets/tabbar"
             visible: opacity > 0
