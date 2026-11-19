@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-26 03:01+0000\n"
+"POT-Creation-Date: 2026-11-18 14:20+0000\n"
 "PO-Revision-Date: 2026-07-22 07:42+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: LUGOS\n"
@@ -131,79 +131,79 @@ msgctxt "@title:group for configuration dialog page"
 msgid "Behavior"
 msgstr "Obnašanje"
 
-#: qml/ConfigAppearance.qml:49
+#: qml/ConfigAppearance.qml:51
 #, kde-format
 msgctxt "@label for several checkboxes"
 msgid "General:"
 msgstr "Splošno:"
 
-#: qml/ConfigAppearance.qml:50
+#: qml/ConfigAppearance.qml:52
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show small window previews when hovering over tasks"
 msgstr "Prikazuj majhne predoglede oken, ko je miška nad opravili"
 
-#: qml/ConfigAppearance.qml:55
+#: qml/ConfigAppearance.qml:58
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over previews"
 msgstr "Skrivaj ostala okna, kadar je miška nad predogledi"
 
-#: qml/ConfigAppearance.qml:55
+#: qml/ConfigAppearance.qml:58
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over tooltips"
 msgstr "Skrivaj ostala okna, kadar je miška nad namigi orodij"
 
-#: qml/ConfigAppearance.qml:60
+#: qml/ConfigAppearance.qml:64
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
 msgstr "Pokaži indikator, ko opravilo predvaja zvok"
 
-#: qml/ConfigAppearance.qml:70
+#: qml/ConfigAppearance.qml:75
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
 msgstr "Utišaj opravilo, ko kliknete indikator"
 
-#: qml/ConfigAppearance.qml:78
+#: qml/ConfigAppearance.qml:84
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
 msgstr "Prikazuj medij in nadzor glasnosti v namigu orodja"
 
-#: qml/ConfigAppearance.qml:86
+#: qml/ConfigAppearance.qml:93
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Fill free space on panel"
 msgstr "Zapolni prazen prostor na plošči"
 
-#: qml/ConfigAppearance.qml:98
+#: qml/ConfigAppearance.qml:105
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Maximum task width:"
 msgstr "Največja širina opravila:"
 
-#: qml/ConfigAppearance.qml:101
+#: qml/ConfigAppearance.qml:108
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Narrow"
 msgstr "Ozka"
 
-#: qml/ConfigAppearance.qml:102
+#: qml/ConfigAppearance.qml:109
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Medium"
 msgstr "Srednja"
 
-#: qml/ConfigAppearance.qml:103
+#: qml/ConfigAppearance.qml:110
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Wide"
 msgstr "Široka"
 
-#: qml/ConfigAppearance.qml:114
+#: qml/ConfigAppearance.qml:122
 #, kde-format
 msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
@@ -211,7 +211,7 @@ msgctxt ""
 msgid "Use multi-column view:"
 msgstr "Uporabi pogled z več stolpci:"
 
-#: qml/ConfigAppearance.qml:115
+#: qml/ConfigAppearance.qml:123
 #, kde-format
 msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
@@ -219,55 +219,55 @@ msgctxt ""
 msgid "Use multi-row view:"
 msgstr "Uporabi pogled z več vrsticami:"
 
-#: qml/ConfigAppearance.qml:121
+#: qml/ConfigAppearance.qml:129
 #, kde-format
 msgctxt "@option:radio Never use multi-column view for Task Manager"
 msgid "Never"
 msgstr "Nikoli"
 
-#: qml/ConfigAppearance.qml:131
+#: qml/ConfigAppearance.qml:140
 #, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "When panel is low on space and thick enough"
 msgstr "Kadar na plošči zmanjkuje prostora in je dovolj debela"
 
-#: qml/ConfigAppearance.qml:141
+#: qml/ConfigAppearance.qml:151
 #, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "Always when panel is thick enough"
 msgstr "Vedno, kadar je plošča dovolj debela"
 
-#: qml/ConfigAppearance.qml:148
+#: qml/ConfigAppearance.qml:158
 #, kde-format
 msgctxt "@label:spinbox maximum number of columns for tasks"
 msgid "Maximum columns:"
 msgstr "Maksimum stolpcev:"
 
-#: qml/ConfigAppearance.qml:149
+#: qml/ConfigAppearance.qml:159
 #, kde-format
 msgctxt "@label:spinbox maximum number of rows for tasks"
 msgid "Maximum rows:"
 msgstr "Največ vrstic:"
 
-#: qml/ConfigAppearance.qml:159
+#: qml/ConfigAppearance.qml:169
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Spacing between icons:"
 msgstr "Prostor med ikonami:"
 
-#: qml/ConfigAppearance.qml:163
+#: qml/ConfigAppearance.qml:173
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Majhen"
 
-#: qml/ConfigAppearance.qml:167
+#: qml/ConfigAppearance.qml:177
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Normalen"
 
-#: qml/ConfigAppearance.qml:171
+#: qml/ConfigAppearance.qml:181
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
