@@ -95,6 +95,7 @@ void PositionerTest::tst_default_positions()
     m_positioner->convertFolderModelData();
     m_positioner->updateResolution();
     m_positioner->updatePositionsList();
+    m_positioner->savePositionsConfig();
     checkDefaultPositions(perStripe);
 }
 
@@ -186,7 +187,7 @@ void PositionerTest::tst_defaultValues()
     QVERIFY(!positioner.enabled());
     QVERIFY(!positioner.folderModel());
     QCOMPARE(positioner.perStripe(), 0);
-    QVERIFY(positioner.positions().isEmpty());
+    QVERIFY(positioner.m_positions.isEmpty());
 }
 
 void PositionerTest::tst_changeEnabledStatus()
@@ -479,34 +480,18 @@ void PositionerTest::tst_convertDesktopPath()
 
 QJsonDocument PositionerTest::getCurrentConfig()
 {
-    return QJsonDocument::fromJson(m_applet->config()
-                                       .group(QStringLiteral("General"))
-                                       .readEntry(QStringLiteral("positions"))
-                                       .replace(QStringLiteral("\\,"), QStringLiteral(","))
-                                       .toUtf8());
-}
-
-QHash<QString, Pos> PositionerTest::getPositionHash(QStringList positions)
-{
-    QHash<QString, Pos> posHash;
-
-    for (int i = 2; i < positions.length() - 2; i += 3) {
-        posHash[positions[i]] = {positions[i + 1].toInt(), positions[i + 2].toInt()};
-    }
-    return posHash;
+    return QJsonDocument::fromJson(m_positioner->loadConfigData().toUtf8());
 }
 
 void PositionerTest::checkDefaultPositions(int perStripe)
 {
     ensureFolderModelReady();
     QCOMPARE(perStripe, m_positioner->perStripe());
-    QCOMPARE(m_positioner->positions().at(0).toInt(), 1 + ((m_positioner->rowCount() - 1) / perStripe)); // rows
-    QCOMPARE(m_positioner->positions().at(1).toInt(), perStripe); // columns
-    const auto currentPositions = getPositionHash(m_positioner->positions());
-    // Checking default positions ignores configuration completely
-    // instead, it compares that the default values match, since the
-    // for-loop it runs is same as creating default positions in positioner code.
-    // For comparing configurations and their positions, you can just compare the JSON data.
+    QCOMPARE(m_positioner->m_positionsHeader->numStripes, 1 + ((m_positioner->rowCount() - 1) / perStripe)); // rows
+    QCOMPARE(m_positioner->m_positionsHeader->perStripe, perStripe); // columns
+    auto doc = getCurrentConfig();
+
+    const auto containmentId = m_positioner->applet()->id();
 
     int col = 0;
     int row = 0;
@@ -516,9 +501,16 @@ void PositionerTest::checkDefaultPositions(int perStripe)
         if (url.isEmpty()) {
             continue;
         }
-        const Pos pos = currentPositions[url];
-        QCOMPARE(pos.x, row);
-        QCOMPARE(pos.y, col);
+
+        auto files = doc[QStringLiteral("files")].toObject();
+        auto file = files[url].toObject();
+        auto cont = file[QString::number(containmentId)].toObject();
+        auto res = cont[m_positioner->m_resolution].toObject();
+        int confCol = res[QStringLiteral("column")].toInt();
+        int confRow = res[QStringLiteral("row")].toInt();
+
+        QCOMPARE(confCol, col);
+        QCOMPARE(confRow, row);
         col++;
         if (col == perStripe) {
             row++;

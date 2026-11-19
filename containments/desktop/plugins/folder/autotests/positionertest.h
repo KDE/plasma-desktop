@@ -14,10 +14,6 @@
 class QTemporaryDir;
 class FolderModel;
 class Positioner;
-struct Pos {
-    int x;
-    int y;
-};
 
 class PositionerTest : public QObject
 {
@@ -56,7 +52,6 @@ private:
     void checkDefaultPositions(int perStripe);
     void ensureFolderModelReady();
     QJsonDocument getCurrentConfig();
-    QHash<QString, Pos> getPositionHash(QStringList positions);
     void changeResolution(const QSize &resolution);
 
     QString m_currentActivity;

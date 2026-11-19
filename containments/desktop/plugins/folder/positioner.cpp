@@ -10,6 +10,7 @@
 #include <cstdlib>
 #include <ranges>
 
+#include <QFile>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -17,20 +18,6 @@
 #include <QTimer>
 
 using namespace Qt::StringLiterals;
-
-namespace PositionsConstants
-{
-// Stripes and items per stripe
-constexpr qsizetype headerSize = 2;
-
-// filename, stripe, pos
-constexpr qsizetype bucketSize = 3;
-
-// Offsets in bucket
-constexpr qsizetype filenameOffset = 0;
-constexpr qsizetype stripeOffset = 1;
-constexpr qsizetype posOffset = 2;
-}
 
 Positioner::Positioner(QObject *parent)
     : QAbstractItemModel(parent)
@@ -148,7 +135,6 @@ void Positioner::setPerStripe(int perStripe)
             // If we performed drag and drop operation on sorted mode - remove config for all resolutions
             // "savePositionsConfig()" will be called soon, so don't save here
             m_changedPositions.clear();
-            m_applet->config().group(u"General"_s).deleteEntry(u"positions"_s);
         }
         if (resolutionUpdated && m_resolution.isEmpty()) {
             // When the resolution disappears, we load icons from the last used resolution and wait for it to be delivered
@@ -163,24 +149,6 @@ void Positioner::setPerStripe(int perStripe)
                 Qt::SingleShotConnection);
         }
     }
-}
-
-QStringList Positioner::positions() const
-{
-    QStringList positions;
-
-    if (m_positionsHeader.has_value()) {
-        positions.reserve(PositionsConstants::headerSize + m_positions.size() * PositionsConstants::bucketSize);
-        positions.append(QString::number(m_positionsHeader->numStripes));
-        positions.append(QString::number(m_positionsHeader->perStripe));
-        for (auto &&[filename, gridPos] : std::as_const(m_positions).asKeyValueRange()) {
-            positions.append(filename);
-            positions.append(QString::number(gridPos.stripe));
-            positions.append(QString::number(gridPos.pos));
-        }
-    }
-
-    return positions;
 }
 
 int Positioner::map(int row) const
@@ -1019,31 +987,25 @@ void Positioner::loadAndApplyPositionsConfig(const QString &resolution)
     if (m_applet && m_enabled && screenInUse() && !resolutionToLoad.isEmpty()) {
         // The old configuration has commas with escape characters, so clean up those from the config
         auto confdata = loadConfigData();
-        const QJsonDocument doc = QJsonDocument::fromJson(confdata.toUtf8());
+        QJsonDocument doc = QJsonDocument::fromJson(confdata.toUtf8());
 
-        const auto positions = doc[resolutionToLoad].toVariant().toStringList();
-        m_positionsHeader.reset();
-        m_positions.clear();
-        if (positions.size() >= PositionsConstants::headerSize && (positions.size() - PositionsConstants::headerSize) % PositionsConstants::bucketSize == 0) {
-            bool okNumStripes = false;
-            bool okPerStripe = false;
-            m_positionsHeader = {.numStripes = positions[0].toInt(&okNumStripes), .perStripe = positions[1].toInt(&okPerStripe)};
-            if (okNumStripes && okPerStripe) {
-                for (qsizetype offset = PositionsConstants::headerSize; offset < positions.size(); offset += PositionsConstants::bucketSize) {
-                    bool okStripe = false;
-                    bool okPos = false;
-                    const auto name = convertDesktopPath(positions[offset + PositionsConstants::filenameOffset]);
-                    const auto stripe = positions[offset + PositionsConstants::stripeOffset].toInt(&okStripe);
-                    const auto pos = positions[offset + PositionsConstants::posOffset].toInt(&okPos);
-                    if (!name.isEmpty() && okStripe && okPos) {
-                        m_positions[name] = {
-                            .stripe = stripe,
-                            .pos = pos,
-                        };
-                    }
-                }
-            } else {
-                m_positionsHeader.reset();
+        auto resolutionsObject = doc[u"resolutions"_s].toObject();
+        m_positionsHeader = {.numStripes = resolutionsObject[m_resolution][u"columns"_s].toInt(),
+                             .perStripe = resolutionsObject[m_resolution][u"rows"_s].toInt()};
+        m_perStripe = m_positionsHeader.value().perStripe;
+        m_optimalStripes = m_positionsHeader.value().numStripes;
+
+        auto filesObject = doc[u"files"_s].toObject();
+        for (const auto &[key, value] : filesObject.asKeyValueRange()) {
+            auto name = key.toString();
+            if (!name.isEmpty()) {
+                auto containment = value.toObject();
+                auto resolutions = containment[QString::number(m_applet->id())].toObject();
+                auto positions = resolutions[m_resolution].toObject();
+                m_positions[name] = {
+                    .stripe = positions[u"column"_s].toInt(m_positions[name].stripe),
+                    .pos = positions[u"row"_s].toInt(m_positions[name].pos),
+                };
             }
         }
 
@@ -1056,42 +1018,45 @@ void Positioner::loadAndApplyPositionsConfig(const QString &resolution)
 void Positioner::savePositionsConfig()
 {
     if (m_applet && m_enabled && screenInUse() && !m_resolution.isEmpty()) {
-        auto confdata = loadConfigData();
-        auto doc = QJsonDocument::fromJson(confdata.toUtf8());
-        QJsonObject root;
-        // Iterate over the old data
-        // Positions are serialized like this: [stripes, itemsPerStripe, filename, stripe, position]
-        const auto currentPositions = positions();
-        for (const auto &[resolution, itemList] : doc.toVariant().toMap().asKeyValueRange()) {
-            if (resolution != m_resolution) {
-                QStringList newPositions;
-                const QStringList positions = itemList.toStringList();
-                if (positions.size() >= PositionsConstants::headerSize
-                    && (positions.size() - PositionsConstants::headerSize) % PositionsConstants::bucketSize == 0) {
-                    newPositions.append(positions[0]);
-                    newPositions.append(positions[1]);
-                    for (qsizetype offset = PositionsConstants::headerSize; offset < positions.size(); offset += PositionsConstants::bucketSize) {
-                        const auto name = convertDesktopPath(positions[offset + PositionsConstants::filenameOffset]);
-                        const auto stripe = positions[offset + PositionsConstants::stripeOffset];
-                        const auto pos = positions[offset + PositionsConstants::posOffset];
-                        if (currentPositions.contains(name)) {
-                            newPositions.append(name);
-                            newPositions.append(stripe);
-                            newPositions.append(pos);
-                        }
-                    }
-                }
-                root.insert(resolution, QJsonValue::fromVariant(newPositions));
-            }
-        }
-        // Append our new item
-        root.insert(m_resolution, QJsonArray::fromStringList(currentPositions));
-
-        const QByteArray data = QJsonDocument(root).toJson(QJsonDocument::Compact);
         auto config = m_applet->config().group(QStringLiteral("General"));
         config.writeEntry(QStringLiteral("lastResolution"), m_resolution);
-        config.writeEntry(QStringLiteral("positions"), data);
         config.writeEntry(u"changedPositions"_s, prepareAndGetChangedPositionsJson());
+
+        auto confdata = loadConfigData();
+        QJsonDocument doc = QJsonDocument::fromJson(confdata.toUtf8());
+
+        QJsonObject resolution;
+        QJsonObject positions;
+        positions[u"columns"_s] = m_positionsHeader.value().numStripes;
+        positions[u"rows"_s] = m_positionsHeader.value().perStripe;
+        resolution[m_resolution] = positions;
+
+        QJsonObject files;
+        QJsonObject file;
+        QJsonObject containment;
+        QJsonObject fileResolution;
+        QJsonObject filePositions;
+        QJsonObject root = doc.object();
+        if (root.isEmpty()) {
+            root = {{u"resolutions"_s, resolution}, {u"files"_s, {}}};
+        }
+
+        for (auto &&[filename, gridPos] : std::as_const(m_positions).asKeyValueRange()) {
+            filePositions[u"column"_s] = gridPos.stripe;
+            filePositions[u"row"_s] = gridPos.pos;
+            fileResolution[m_resolution] = filePositions;
+            containment[QString::number(m_applet->id())] = fileResolution;
+            file[filename] = containment;
+            root[u"files"_s] = file;
+        }
+
+        doc.setObject(root);
+
+        QFile save_file(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + u"/plasma-desktopicons.json"_s);
+        if (save_file.open(QIODevice::WriteOnly)) {
+            save_file.write(doc.toJson());
+            save_file.close();
+        }
         Q_EMIT m_applet->configNeedsSaving();
     }
 }
@@ -1123,15 +1088,18 @@ bool Positioner::configurationHasResolution(const QString &resolution) const
         return false;
     }
     const QJsonDocument doc = QJsonDocument::fromJson(confdata.toUtf8());
-    return doc.object().contains(resolution);
+
+    return doc[u"resolutions"_s].toObject().contains(resolution);
 }
 
 QString Positioner::loadConfigData() const
 {
     QString confdata;
-    if (m_applet) {
-        confdata =
-            m_applet->config().group(QStringLiteral("General")).readEntry(QStringLiteral("positions")).replace(QStringLiteral("\\,"), QStringLiteral(","));
+    auto configPath = QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + u"/plasma-desktopicons.json"_s;
+    QFile file(configPath);
+    if (file.open(QIODeviceBase::ReadOnly)) {
+        auto old = QJsonDocument::fromJson(file.readAll());
+        confdata = QString::fromUtf8(old.toJson());
     }
     return confdata;
 }

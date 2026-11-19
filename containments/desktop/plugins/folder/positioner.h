@@ -55,8 +55,6 @@ public:
     int perStripe() const;
     void setPerStripe(int perStripe);
 
-    QStringList positions() const;
-
     Q_INVOKABLE int map(int row) const;
 
     Q_INVOKABLE int nearestItem(int currentIndex, Qt::ArrowType direction);
