@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-17 08:02+0000\n"
+"POT-Creation-Date: 2026-11-18 15:35+0000\n"
 "PO-Revision-Date: 2026-11-03 20:42+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -131,79 +131,79 @@ msgctxt "@title:group for configuration dialog page"
 msgid "Behavior"
 msgstr "行為"
 
-#: qml/ConfigAppearance.qml:49
+#: qml/ConfigAppearance.qml:51
 #, kde-format
 msgctxt "@label for several checkboxes"
 msgid "General:"
 msgstr "一般："
 
-#: qml/ConfigAppearance.qml:50
+#: qml/ConfigAppearance.qml:52
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show small window previews when hovering over tasks"
 msgstr "當游標停留在工作上時顯示小的視窗預覽"
 
-#: qml/ConfigAppearance.qml:55
+#: qml/ConfigAppearance.qml:58
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over previews"
 msgstr "當游標停留在預覽上時隱藏其他視窗"
 
-#: qml/ConfigAppearance.qml:55
+#: qml/ConfigAppearance.qml:58
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over tooltips"
 msgstr "當游標停留在工具提示上時隱藏其他視窗"
 
-#: qml/ConfigAppearance.qml:60
+#: qml/ConfigAppearance.qml:64
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
 msgstr "工作項目播放音訊時顯示指示器"
 
-#: qml/ConfigAppearance.qml:70
+#: qml/ConfigAppearance.qml:75
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
 msgstr "點擊指示器時將該工作項目靜音"
 
-#: qml/ConfigAppearance.qml:78
+#: qml/ConfigAppearance.qml:84
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
 msgstr "在工作提示中顯示媒體與音量控制"
 
-#: qml/ConfigAppearance.qml:86
+#: qml/ConfigAppearance.qml:93
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Fill free space on panel"
 msgstr "填滿面板上的可用空間"
 
-#: qml/ConfigAppearance.qml:98
+#: qml/ConfigAppearance.qml:105
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Maximum task width:"
 msgstr "工作項目最大寬度："
 
-#: qml/ConfigAppearance.qml:101
+#: qml/ConfigAppearance.qml:108
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Narrow"
 msgstr "狹窄"
 
-#: qml/ConfigAppearance.qml:102
+#: qml/ConfigAppearance.qml:109
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Medium"
 msgstr "中等"
 
-#: qml/ConfigAppearance.qml:103
+#: qml/ConfigAppearance.qml:110
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Wide"
 msgstr "寬廣"
 
-#: qml/ConfigAppearance.qml:114
+#: qml/ConfigAppearance.qml:122
 #, kde-format
 msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
@@ -211,7 +211,7 @@ msgctxt ""
 msgid "Use multi-column view:"
 msgstr "使用多欄檢視："
 
-#: qml/ConfigAppearance.qml:115
+#: qml/ConfigAppearance.qml:123
 #, kde-format
 msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
@@ -219,55 +219,55 @@ msgctxt ""
 msgid "Use multi-row view:"
 msgstr "使用多列檢視："
 
-#: qml/ConfigAppearance.qml:121
+#: qml/ConfigAppearance.qml:129
 #, kde-format
 msgctxt "@option:radio Never use multi-column view for Task Manager"
 msgid "Never"
 msgstr "永不"
 
-#: qml/ConfigAppearance.qml:131
+#: qml/ConfigAppearance.qml:140
 #, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "When panel is low on space and thick enough"
 msgstr "面板空間不足但是厚度足夠的時候"
 
-#: qml/ConfigAppearance.qml:141
+#: qml/ConfigAppearance.qml:151
 #, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "Always when panel is thick enough"
 msgstr "面板厚度足夠的時候總是"
 
-#: qml/ConfigAppearance.qml:148
+#: qml/ConfigAppearance.qml:158
 #, kde-format
 msgctxt "@label:spinbox maximum number of columns for tasks"
 msgid "Maximum columns:"
 msgstr "最大欄數："
 
-#: qml/ConfigAppearance.qml:149
+#: qml/ConfigAppearance.qml:159
 #, kde-format
 msgctxt "@label:spinbox maximum number of rows for tasks"
 msgid "Maximum rows:"
 msgstr "最大列數："
 
-#: qml/ConfigAppearance.qml:159
+#: qml/ConfigAppearance.qml:169
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Spacing between icons:"
 msgstr "圖示間的距離："
 
-#: qml/ConfigAppearance.qml:163
+#: qml/ConfigAppearance.qml:173
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "小"
 
-#: qml/ConfigAppearance.qml:167
+#: qml/ConfigAppearance.qml:177
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "中"
 
-#: qml/ConfigAppearance.qml:171
+#: qml/ConfigAppearance.qml:181
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
@@ -904,61 +904,61 @@ msgctxt "@info:tooltip Close this window"
 msgid "Close window"
 msgstr "關閉視窗"
 
-#: qml/ToolTipInstance.qml:466
+#: qml/ToolTipInstance.qml:468
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
 msgstr "取消靜音 %1"
 
-#: qml/ToolTipInstance.qml:467
+#: qml/ToolTipInstance.qml:469
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
 msgstr "靜音 %1"
 
-#: qml/ToolTipInstance.qml:485
+#: qml/ToolTipInstance.qml:487
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
 msgstr "調整 %1 的音量"
 
-#: qml/ToolTipInstance.qml:501
+#: qml/ToolTipInstance.qml:503
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: qml/ToolTipInstance.qml:505
+#: qml/ToolTipInstance.qml:507
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
 msgstr "100%"
 
-#: qml/ToolTipInstance.qml:521
+#: qml/ToolTipInstance.qml:523
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "於 %1"
 
-#: qml/ToolTipInstance.qml:524
+#: qml/ToolTipInstance.qml:526
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
 msgstr "釘選到所有桌面"
 
-#: qml/ToolTipInstance.qml:530
+#: qml/ToolTipInstance.qml:532
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
 msgstr "所有活動都可使用"
 
-#: qml/ToolTipInstance.qml:540
+#: qml/ToolTipInstance.qml:542
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
 msgstr "也可在 %1 上使用"
 
-#: qml/ToolTipInstance.qml:544
+#: qml/ToolTipInstance.qml:546
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"

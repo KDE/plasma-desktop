@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-30 00:45+0000\n"
+"POT-Creation-Date: 2026-11-18 19:35+0000\n"
 "PO-Revision-Date: 2024-12-25 19:45+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -19,85 +19,85 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: ui/main.qml:53
+#: ui/main.qml:38
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
 msgstr "डेस्कटॉप् पुटम् :"
 
-#: ui/main.qml:59
+#: ui/main.qml:42
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
 msgstr "अस्मिन् पुटे भवता भवतः डेस्कटॉप् मध्ये दृश्यमानानि सर्वाणि सञ्चिकानि सन्ति ।"
 
-#: ui/main.qml:67
+#: ui/main.qml:50
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Documents folder:"
 msgstr "दस्तावेजपुटम् :"
 
-#: ui/main.qml:73
+#: ui/main.qml:54
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
 msgstr "दस्तावेजान् उद्घाटयितुं वा रक्षितुं वा पूर्वनिर्धारितरूपेण एतत् पुटं उपयुज्यते ।"
 
-#: ui/main.qml:81
+#: ui/main.qml:62
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
 msgstr "डाउनलोड्स् समुच्चय:"
 
-#: ui/main.qml:87
+#: ui/main.qml:66
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "भवतः डाउनलोड् कृतानि वस्तूनि रक्षितुं पूर्वनिर्धारितरूपेण एतत् पुटं उपयुज्यते ।"
 
-#: ui/main.qml:95
+#: ui/main.qml:74
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Videos folder:"
 msgstr "Videos पुटम् :"
 
-#: ui/main.qml:101
+#: ui/main.qml:78
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
 msgstr "एतत् पुटं पूर्वनिर्धारितरूपेण विडियो सञ्चिकाः उद्घाटयितुं वा रक्षितुं वा उपयुज्यते ।"
 
-#: ui/main.qml:109
+#: ui/main.qml:86
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
 msgstr "चित्रपुटम् :"
 
-#: ui/main.qml:115
+#: ui/main.qml:90
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
 msgstr "इदं पुटं पूर्वनिर्धारितरूपेण चित्रसञ्चिकाः उद्घाटयितुं वा रक्षितुं वा उपयुज्यते ।"
 
-#: ui/main.qml:123
+#: ui/main.qml:98
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
 msgstr "संगीतपुटम् :"
 
-#: ui/main.qml:129
+#: ui/main.qml:102
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
 msgstr "एतत् पुटं पूर्वनिर्धारितरूपेण सङ्गीतसञ्चिकाः उद्घाटयितुं वा रक्षितुं वा उपयुज्यते ।"
 
-#: ui/main.qml:137
+#: ui/main.qml:110
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Public folder:"
 msgstr "सार्वजनिकपुटम् :"
 
-#: ui/main.qml:143
+#: ui/main.qml:114
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid ""
@@ -107,19 +107,19 @@ msgstr ""
 "यदा संजालसाझेदारी सक्षमा भवति तदा सार्वजनिकरूपेण साझासञ्चिकानां कृते एतत् पुटं "
 "पूर्वनिर्धारितरूपेण उपयुज्यते ।"
 
-#: ui/main.qml:151
+#: ui/main.qml:122
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Templates folder:"
 msgstr "टेम्पलेट्स फोल्डर:"
 
-#: ui/main.qml:157
+#: ui/main.qml:126
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
 msgstr "सञ्चिकासारूप्याणि उद्घाटयितुं वा रक्षितुं वा पूर्वनिर्धारितरूपेण एतत् पुटं उपयुज्यते ।"
 
-#: ui/main.qml:165
+#: ui/main.qml:134
 #, fuzzy, kde-format
 #| msgctxt "@label:textbox"
 #| msgid "Pictures folder:"
@@ -127,7 +127,7 @@ msgctxt "@label:textbox"
 msgid "Projects folder:"
 msgstr "चित्रपुटम् :"
 
-#: ui/main.qml:171
+#: ui/main.qml:138
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip and accessible description"
 #| msgid "This folder will be used by default to open or save documents."
@@ -135,7 +135,7 @@ msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save projects."
 msgstr "दस्तावेजान् उद्घाटयितुं वा रक्षितुं वा पूर्वनिर्धारितरूपेण एतत् पुटं उपयुज्यते ।"
 
-#: ui/UrlRequester.qml:74
+#: ui/UrlRequester.qml:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"

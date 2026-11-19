@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-23 00:45+0000\n"
+"POT-Creation-Date: 2026-11-19 01:09+0000\n"
 "PO-Revision-Date: 2026-01-28 19:20+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt\n"
@@ -93,64 +93,66 @@ msgstr ""
 "Prijungti automatiškai keičiamąsias laikmenas, kurios anksčiau niekada "
 "nebuvo prijungtos"
 
-#: DeviceModel.cpp:52
+#: DeviceModel.cpp:55
 #, kde-format
 msgid "Automount Device"
 msgstr "Automatiškai prijungti įrenginį"
 
-#: DeviceModel.cpp:54
+#: DeviceModel.cpp:57
 #, kde-format
 msgctxt "As in automount on login"
 msgid "On Login"
 msgstr "Prisijungus prie paskyros"
 
-#: DeviceModel.cpp:56
+#: DeviceModel.cpp:59
 #, kde-format
 msgctxt "As in automount on attach"
 msgid "On Attach"
 msgstr "Prijungus įrenginį prie kompiuterio"
 
-#: DeviceModel.cpp:258
+#: DeviceModel.cpp:277
 #, kde-format
 msgid "All Devices"
 msgstr "Visi įrenginiai"
 
-#: DeviceModel.cpp:258
+#: DeviceModel.cpp:277
 #, kde-format
 msgid "All Known Devices"
 msgstr "Visi žinomi įrenginiai"
 
-#: DeviceModel.cpp:260
+#: DeviceModel.cpp:279
 #, kde-format
 msgid "Attached Devices"
 msgstr "Įdėti įrenginiai"
 
-#: DeviceModel.cpp:262
+#: DeviceModel.cpp:281
 #, kde-format
 msgid "Disconnected Devices"
 msgstr "Atjungti įrenginiai"
 
-#: DeviceModel.cpp:298 DeviceModel.cpp:307
-#, kde-format
-msgid "UDI: %1"
+#: DeviceModel.cpp:317 DeviceModel.cpp:326
+#, fuzzy, kde-format
+#| msgid "UDI: %1"
+msgctxt "@info:tooltip %1 is a UUID or device identifier"
+msgid "Device ID: %1"
 msgstr "UDI: %1"
 
-#: DeviceModel.cpp:318
+#: DeviceModel.cpp:337
 #, kde-format
 msgid "This device will be automatically mounted at login."
 msgstr "Šis įrenginys bus automatiškai prijungtas prisijungimo metu."
 
-#: DeviceModel.cpp:318
+#: DeviceModel.cpp:337
 #, kde-format
 msgid "This device will not be automatically mounted at login."
 msgstr "Šis įrenginys prisijungimo metu nebus automatiškai prijungtas."
 
-#: DeviceModel.cpp:326
+#: DeviceModel.cpp:345
 #, kde-format
 msgid "This device will be automatically mounted when attached."
 msgstr "Šis įrenginys bus automatiškai prijungtas, jį įdėjus."
 
-#: DeviceModel.cpp:327
+#: DeviceModel.cpp:346
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "Šis įrenginys, jį įdėjus, nebus automatiškai prijungtas."

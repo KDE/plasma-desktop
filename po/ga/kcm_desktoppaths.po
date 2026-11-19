@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-30 00:45+0000\n"
+"POT-Creation-Date: 2026-11-18 19:35+0000\n"
 "PO-Revision-Date: 2026-01-20 12:01+0000\n"
 "Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
 "Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
@@ -19,25 +19,25 @@ msgstr ""
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
 
-#: ui/main.qml:53
+#: ui/main.qml:38
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
 msgstr "Fillteán deisce:"
 
-#: ui/main.qml:59
+#: ui/main.qml:42
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
 msgstr "Tá na comhaid go léir a fheiceann tú ar do dheasc sa fhillteán seo."
 
-#: ui/main.qml:67
+#: ui/main.qml:50
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Documents folder:"
 msgstr "Fillteán na ndoiciméad:"
 
-#: ui/main.qml:73
+#: ui/main.qml:54
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
@@ -45,13 +45,13 @@ msgstr ""
 "Úsáidfear an fillteán seo de réir réamhshocraithe chun doiciméid a oscailt "
 "nó a shábháil."
 
-#: ui/main.qml:81
+#: ui/main.qml:62
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
 msgstr "Fillteán íoslódálacha:"
 
-#: ui/main.qml:87
+#: ui/main.qml:66
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
@@ -59,13 +59,13 @@ msgstr ""
 "Úsáidfear an fillteán seo de réir réamhshocraithe chun do mhíreanna "
 "íoslódáilte a shábháil."
 
-#: ui/main.qml:95
+#: ui/main.qml:74
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Videos folder:"
 msgstr "Fillteán físeáin:"
 
-#: ui/main.qml:101
+#: ui/main.qml:78
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
@@ -73,13 +73,13 @@ msgstr ""
 "Úsáidfear an fillteán seo de réir réamhshocraithe chun comhaid físe a "
 "oscailt nó a shábháil."
 
-#: ui/main.qml:109
+#: ui/main.qml:86
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
 msgstr "Fillteán pictiúr:"
 
-#: ui/main.qml:115
+#: ui/main.qml:90
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
@@ -87,13 +87,13 @@ msgstr ""
 "Úsáidfear an fillteán seo de réir réamhshocraithe chun comhaid íomhá a "
 "oscailt nó a shábháil."
 
-#: ui/main.qml:123
+#: ui/main.qml:98
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
 msgstr "Fillteán ceoil:"
 
-#: ui/main.qml:129
+#: ui/main.qml:102
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
@@ -101,13 +101,13 @@ msgstr ""
 "Úsáidfear an fillteán seo de réir réamhshocraithe chun comhaid cheoil a "
 "oscailt nó a shábháil."
 
-#: ui/main.qml:137
+#: ui/main.qml:110
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Public folder:"
 msgstr "Fillteán poiblí:"
 
-#: ui/main.qml:143
+#: ui/main.qml:114
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid ""
@@ -117,13 +117,13 @@ msgstr ""
 "Úsáidfear an fillteán seo de réir réamhshocraithe le haghaidh comhad a "
 "roinntear go poiblí nuair a bheidh comhroinnt líonra cumasaithe."
 
-#: ui/main.qml:151
+#: ui/main.qml:122
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Templates folder:"
 msgstr "Fillteán teimpléid:"
 
-#: ui/main.qml:157
+#: ui/main.qml:126
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
@@ -131,7 +131,7 @@ msgstr ""
 "Úsáidfear an fillteán seo de réir réamhshocraithe chun teimpléid comhad a "
 "oscailt nó a shábháil."
 
-#: ui/main.qml:165
+#: ui/main.qml:134
 #, fuzzy, kde-format
 #| msgctxt "@label:textbox"
 #| msgid "Pictures folder:"
@@ -139,7 +139,7 @@ msgctxt "@label:textbox"
 msgid "Projects folder:"
 msgstr "Fillteán pictiúr:"
 
-#: ui/main.qml:171
+#: ui/main.qml:138
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip and accessible description"
 #| msgid "This folder will be used by default to open or save documents."
@@ -149,7 +149,7 @@ msgstr ""
 "Úsáidfear an fillteán seo de réir réamhshocraithe chun doiciméid a oscailt "
 "nó a shábháil."
 
-#: ui/UrlRequester.qml:74
+#: ui/UrlRequester.qml:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"

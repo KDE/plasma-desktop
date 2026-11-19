@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/plasma_applet_tasks.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-17 08:02+0000\n"
+"POT-Creation-Date: 2026-11-18 15:35+0000\n"
 "PO-Revision-Date: 2026-01-21 15:09+0000\n"
 "Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
 "Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
@@ -134,80 +134,80 @@ msgctxt "@title:group for configuration dialog page"
 msgid "Behavior"
 msgstr "Iompar"
 
-#: qml/ConfigAppearance.qml:49
+#: qml/ConfigAppearance.qml:51
 #, kde-format
 msgctxt "@label for several checkboxes"
 msgid "General:"
 msgstr "Ginearálta:"
 
-#: qml/ConfigAppearance.qml:50
+#: qml/ConfigAppearance.qml:52
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show small window previews when hovering over tasks"
 msgstr ""
 "Taispeáin réamhamhairc fuinneoga beaga agus tú ag bogadh thar thascanna"
 
-#: qml/ConfigAppearance.qml:55
+#: qml/ConfigAppearance.qml:58
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over previews"
 msgstr "Folaigh fuinneoga eile agus tú ag bogadh thar réamhamhairc"
 
-#: qml/ConfigAppearance.qml:55
+#: qml/ConfigAppearance.qml:58
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over tooltips"
 msgstr "Folaigh fuinneoga eile agus tú ag luascadh thar leideanna uirlisí"
 
-#: qml/ConfigAppearance.qml:60
+#: qml/ConfigAppearance.qml:64
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
 msgstr "Taispeáin táscaire nuair a bhíonn tasc ag seinm fuaime"
 
-#: qml/ConfigAppearance.qml:70
+#: qml/ConfigAppearance.qml:75
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
 msgstr "Táscaire balbhaigh tasc nuair a chliceálann tú"
 
-#: qml/ConfigAppearance.qml:78
+#: qml/ConfigAppearance.qml:84
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
 msgstr "Taispeáin rialuithe meán agus toirte sa leid uirlisí"
 
-#: qml/ConfigAppearance.qml:86
+#: qml/ConfigAppearance.qml:93
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Fill free space on panel"
 msgstr "Líon an spás saor ar an bpainéal"
 
-#: qml/ConfigAppearance.qml:98
+#: qml/ConfigAppearance.qml:105
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Maximum task width:"
 msgstr "Leithead uasta tascanna:"
 
-#: qml/ConfigAppearance.qml:101
+#: qml/ConfigAppearance.qml:108
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Narrow"
 msgstr "Caol"
 
-#: qml/ConfigAppearance.qml:102
+#: qml/ConfigAppearance.qml:109
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Medium"
 msgstr "Meánach"
 
-#: qml/ConfigAppearance.qml:103
+#: qml/ConfigAppearance.qml:110
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Wide"
 msgstr "Leathan"
 
-#: qml/ConfigAppearance.qml:114
+#: qml/ConfigAppearance.qml:122
 #, kde-format
 msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
@@ -215,7 +215,7 @@ msgctxt ""
 msgid "Use multi-column view:"
 msgstr "Úsáid radharc ilcholún:"
 
-#: qml/ConfigAppearance.qml:115
+#: qml/ConfigAppearance.qml:123
 #, kde-format
 msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
@@ -223,56 +223,56 @@ msgctxt ""
 msgid "Use multi-row view:"
 msgstr "Úsáid radharc il-shraithe:"
 
-#: qml/ConfigAppearance.qml:121
+#: qml/ConfigAppearance.qml:129
 #, kde-format
 msgctxt "@option:radio Never use multi-column view for Task Manager"
 msgid "Never"
 msgstr "Choíche"
 
-#: qml/ConfigAppearance.qml:131
+#: qml/ConfigAppearance.qml:140
 #, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "When panel is low on space and thick enough"
 msgstr ""
 "Nuair a bhíonn easpa spáis ar an bpainéal agus go bhfuil sé tiubh go leor"
 
-#: qml/ConfigAppearance.qml:141
+#: qml/ConfigAppearance.qml:151
 #, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "Always when panel is thick enough"
 msgstr "I gcónaí nuair a bhíonn an painéal tiubh go leor"
 
-#: qml/ConfigAppearance.qml:148
+#: qml/ConfigAppearance.qml:158
 #, kde-format
 msgctxt "@label:spinbox maximum number of columns for tasks"
 msgid "Maximum columns:"
 msgstr "Uasmhéid colún:"
 
-#: qml/ConfigAppearance.qml:149
+#: qml/ConfigAppearance.qml:159
 #, kde-format
 msgctxt "@label:spinbox maximum number of rows for tasks"
 msgid "Maximum rows:"
 msgstr "Uasmhéid sraitheanna:"
 
-#: qml/ConfigAppearance.qml:159
+#: qml/ConfigAppearance.qml:169
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Spacing between icons:"
 msgstr "Spásáil idir deilbhíní:"
 
-#: qml/ConfigAppearance.qml:163
+#: qml/ConfigAppearance.qml:173
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Beag"
 
-#: qml/ConfigAppearance.qml:167
+#: qml/ConfigAppearance.qml:177
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Gnáth"
 
-#: qml/ConfigAppearance.qml:171
+#: qml/ConfigAppearance.qml:181
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
@@ -920,61 +920,61 @@ msgctxt "@info:tooltip Close this window"
 msgid "Close window"
 msgstr "Dún an fhuinneog"
 
-#: qml/ToolTipInstance.qml:466
+#: qml/ToolTipInstance.qml:468
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
 msgstr "Díbhalbhaigh %1"
 
-#: qml/ToolTipInstance.qml:467
+#: qml/ToolTipInstance.qml:469
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
 msgstr "Balbhaigh %1"
 
-#: qml/ToolTipInstance.qml:485
+#: qml/ToolTipInstance.qml:487
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
 msgstr "Coigeartaigh an toirt do %1"
 
-#: qml/ToolTipInstance.qml:501
+#: qml/ToolTipInstance.qml:503
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: qml/ToolTipInstance.qml:505
+#: qml/ToolTipInstance.qml:507
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
 msgstr "100%"
 
-#: qml/ToolTipInstance.qml:521
+#: qml/ToolTipInstance.qml:523
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "Ar %1"
 
-#: qml/ToolTipInstance.qml:524
+#: qml/ToolTipInstance.qml:526
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
 msgstr "Prionáilte le gach deasc"
 
-#: qml/ToolTipInstance.qml:530
+#: qml/ToolTipInstance.qml:532
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
 msgstr "Ar fáil ar gach gníomhaíocht"
 
-#: qml/ToolTipInstance.qml:540
+#: qml/ToolTipInstance.qml:542
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
 msgstr "Ar fáil freisin ar %1"
 
-#: qml/ToolTipInstance.qml:544
+#: qml/ToolTipInstance.qml:546
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"

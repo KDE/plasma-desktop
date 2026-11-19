@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-18 01:12+0000\n"
-"PO-Revision-Date: 2026-10-11 15:16+0200\n"
+"PO-Revision-Date: 2026-11-18 10:01+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -723,7 +723,7 @@ msgstr "Zoom i lupa"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Text Size"
-msgstr ""
+msgstr "Mida del text"
 
 #: ui/main.qml:39
 #, kde-format
@@ -1012,14 +1012,15 @@ msgid ""
 "keeps their proportions; on low-resolution screens, some small graphics may "
 "look slightly blurry."
 msgstr ""
+"Recomanat en la majoria de situacions. Fa que el text i tota la resta siguin "
+"més grans i mantinguin les seves proporcions; en pantalles de resolució "
+"baixa, alguns gràfics petits poden semblar lleugerament borrosos."
 
 #: ui/TextSize.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Display Scale…"
-msgstr "Configura les dreceres…"
+msgstr "Configura l'escala de visualització…"
 
 #: ui/TextSize.qml:25
 #, kde-format
@@ -1029,14 +1030,15 @@ msgid ""
 "changes can make text no longer fit or look good next to icons and other "
 "elements."
 msgstr ""
+"Només és adequat per a canvis de mida petita. Canvia només el text, de "
+"manera que els canvis grans poden fer que el text ja no s'ajusti o que es "
+"vegi bé al costat d'icones i altres elements."
 
 #: ui/TextSize.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Fonts…"
-msgstr "Configura les dreceres…"
+msgstr "Configura les lletres…"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format

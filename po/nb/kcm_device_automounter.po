@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-23 00:45+0000\n"
+"POT-Creation-Date: 2026-11-19 01:09+0000\n"
 "PO-Revision-Date: 2026-03-03 13:59+0100\n"
 "Last-Translator: Kjetil Sørlund <translate@sorlund.no>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@nuug.no>\n"
@@ -93,64 +93,66 @@ msgstr ""
 msgid "Automatically mount removable media that have never been mounted before"
 msgstr "Avmonter og lagringsmedium som aldri er monterte før"
 
-#: DeviceModel.cpp:52
+#: DeviceModel.cpp:55
 #, kde-format
 msgid "Automount Device"
 msgstr "Automonter enhet"
 
-#: DeviceModel.cpp:54
+#: DeviceModel.cpp:57
 #, kde-format
 msgctxt "As in automount on login"
 msgid "On Login"
 msgstr "Ved innlogging"
 
-#: DeviceModel.cpp:56
+#: DeviceModel.cpp:59
 #, kde-format
 msgctxt "As in automount on attach"
 msgid "On Attach"
 msgstr "Ved tilkobling"
 
-#: DeviceModel.cpp:258
+#: DeviceModel.cpp:277
 #, kde-format
 msgid "All Devices"
 msgstr "Alle enheter"
 
-#: DeviceModel.cpp:258
+#: DeviceModel.cpp:277
 #, kde-format
 msgid "All Known Devices"
 msgstr "Alle kjente enheter"
 
-#: DeviceModel.cpp:260
+#: DeviceModel.cpp:279
 #, kde-format
 msgid "Attached Devices"
 msgstr "Tilkoblede enheter"
 
-#: DeviceModel.cpp:262
+#: DeviceModel.cpp:281
 #, kde-format
 msgid "Disconnected Devices"
 msgstr "Frakoblede enheter"
 
-#: DeviceModel.cpp:298 DeviceModel.cpp:307
-#, kde-format
-msgid "UDI: %1"
+#: DeviceModel.cpp:317 DeviceModel.cpp:326
+#, fuzzy, kde-format
+#| msgid "UDI: %1"
+msgctxt "@info:tooltip %1 is a UUID or device identifier"
+msgid "Device ID: %1"
 msgstr "UDI: %1"
 
-#: DeviceModel.cpp:318
+#: DeviceModel.cpp:337
 #, kde-format
 msgid "This device will be automatically mounted at login."
 msgstr "Denne enheten blir automatisk montert ved innlogging."
 
-#: DeviceModel.cpp:318
+#: DeviceModel.cpp:337
 #, kde-format
 msgid "This device will not be automatically mounted at login."
 msgstr "Denne enheten vil ikke bli automatisk montert ved innlogging."
 
-#: DeviceModel.cpp:326
+#: DeviceModel.cpp:345
 #, kde-format
 msgid "This device will be automatically mounted when attached."
 msgstr "Denne enheten blir automatisk montert når den kobles til."
 
-#: DeviceModel.cpp:327
+#: DeviceModel.cpp:346
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "Denne enheten vil ikke bli automatisk montert når den kobles til."

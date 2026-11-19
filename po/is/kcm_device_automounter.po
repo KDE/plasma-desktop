@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-23 00:45+0000\n"
+"POT-Creation-Date: 2026-11-19 01:09+0000\n"
 "PO-Revision-Date: 2026-02-15 14:28+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -93,64 +93,66 @@ msgstr ""
 msgid "Automatically mount removable media that have never been mounted before"
 msgstr "Tengja sjálfkrafa utanáliggjandi tæki sem hafa aldrei tengst áður"
 
-#: DeviceModel.cpp:52
+#: DeviceModel.cpp:55
 #, kde-format
 msgid "Automount Device"
 msgstr "Tengja tæki sjálfkrafa"
 
-#: DeviceModel.cpp:54
+#: DeviceModel.cpp:57
 #, kde-format
 msgctxt "As in automount on login"
 msgid "On Login"
 msgstr "Við innskráningu"
 
-#: DeviceModel.cpp:56
+#: DeviceModel.cpp:59
 #, kde-format
 msgctxt "As in automount on attach"
 msgid "On Attach"
 msgstr "Þegar stungið er í samband"
 
-#: DeviceModel.cpp:258
+#: DeviceModel.cpp:277
 #, kde-format
 msgid "All Devices"
 msgstr "Öll tæki"
 
-#: DeviceModel.cpp:258
+#: DeviceModel.cpp:277
 #, kde-format
 msgid "All Known Devices"
 msgstr "Öll þekkt tæki"
 
-#: DeviceModel.cpp:260
+#: DeviceModel.cpp:279
 #, kde-format
 msgid "Attached Devices"
 msgstr "Tæki í sambandi"
 
-#: DeviceModel.cpp:262
+#: DeviceModel.cpp:281
 #, kde-format
 msgid "Disconnected Devices"
 msgstr "Tæki sem voru tekin úr sambandi"
 
-#: DeviceModel.cpp:298 DeviceModel.cpp:307
-#, kde-format
-msgid "UDI: %1"
+#: DeviceModel.cpp:317 DeviceModel.cpp:326
+#, fuzzy, kde-format
+#| msgid "UDI: %1"
+msgctxt "@info:tooltip %1 is a UUID or device identifier"
+msgid "Device ID: %1"
 msgstr "UDI: %1"
 
-#: DeviceModel.cpp:318
+#: DeviceModel.cpp:337
 #, kde-format
 msgid "This device will be automatically mounted at login."
 msgstr "Þetta tæki verður tengt sjálfkrafa við innskráningu."
 
-#: DeviceModel.cpp:318
+#: DeviceModel.cpp:337
 #, kde-format
 msgid "This device will not be automatically mounted at login."
 msgstr "Þetta tæki verður ekki tengt sjálfkrafa við innskráningu."
 
-#: DeviceModel.cpp:326
+#: DeviceModel.cpp:345
 #, kde-format
 msgid "This device will be automatically mounted when attached."
 msgstr "Þetta tæki verður tengt sjálfkrafa þegar því er stungið í samband."
 
-#: DeviceModel.cpp:327
+#: DeviceModel.cpp:346
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr ""

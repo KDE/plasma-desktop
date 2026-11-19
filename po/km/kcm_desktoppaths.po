@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-30 00:45+0000\n"
+"POT-Creation-Date: 2026-11-18 19:35+0000\n"
 "PO-Revision-Date: 2009-12-22 09:17+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -18,27 +18,27 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ui/main.qml:53
+#: ui/main.qml:38
 #, fuzzy, kde-format
 #| msgid "Desktop path:"
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
 msgstr "ផ្លូវ​ផ្ទៃ​តុ ៖"
 
-#: ui/main.qml:59
+#: ui/main.qml:42
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
 msgstr ""
 
-#: ui/main.qml:67
+#: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Documents"
 msgctxt "@label:textbox"
 msgid "Documents folder:"
 msgstr "ឯកសារ"
 
-#: ui/main.qml:73
+#: ui/main.qml:54
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -46,28 +46,28 @@ msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
 msgstr "ថត​នេះ​នឹង​ត្រូវ​បាន​ប្រើ​តាម​លំនាំ​ដើម ដើម្បី​ផ្ទុក​ឯកសារ​ពី ឬ​រក្សា​ទុក​ឯកសារ​ពី ឬ​ទៅ ។"
 
-#: ui/main.qml:81
+#: ui/main.qml:62
 #, fuzzy, kde-format
 #| msgid "Downloads"
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
 msgstr "ទាញយក"
 
-#: ui/main.qml:87
+#: ui/main.qml:66
 #, fuzzy, kde-format
 #| msgid "This folder will be used by default to save your downloaded items."
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "ថត​នេះ​នឹង​មិន​ត្រូវ​បានប្រើ​​តាម​លំនាំដើម ដើម្បី​រក្សាទុក​ធាតុ​ដែល​បានទាញយក​របស់​អ្នក ។"
 
-#: ui/main.qml:95
+#: ui/main.qml:74
 #, fuzzy, kde-format
 #| msgid "Movies path:"
 msgctxt "@label:textbox"
 msgid "Videos folder:"
 msgstr "ផ្លូវ​ភាពយន្ត ៖"
 
-#: ui/main.qml:101
+#: ui/main.qml:78
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save movies from or to."
@@ -75,14 +75,14 @@ msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
 msgstr "ថត​នេះ​នឹង​ត្រូវ​បានប្រើ​​តាម​លំនាំដើម ដើម្បី​ផ្ទុក​ ឬ​រក្សាទុក​ភាពយន្ត​ ។"
 
-#: ui/main.qml:109
+#: ui/main.qml:86
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
 msgstr "ផ្លូវ​រូបភាព ៖"
 
-#: ui/main.qml:115
+#: ui/main.qml:90
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save movies from or to."
@@ -90,13 +90,13 @@ msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
 msgstr "ថត​នេះ​នឹង​ត្រូវ​បានប្រើ​​តាម​លំនាំដើម ដើម្បី​ផ្ទុក​ ឬ​រក្សាទុក​ភាពយន្ត​ ។"
 
-#: ui/main.qml:123
+#: ui/main.qml:98
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
 msgstr ""
 
-#: ui/main.qml:129
+#: ui/main.qml:102
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save music from or to."
@@ -104,14 +104,14 @@ msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
 msgstr "ថត​នេះ​នឹង​ត្រូ​វបាន​ប្រើ​តាមលំនាំដើម ដើម្បី​ផ្ទុក​ ឬរក្សាទុក​តន្ត្រី ។"
 
-#: ui/main.qml:137
+#: ui/main.qml:110
 #, fuzzy, kde-format
 #| msgid "Music path:"
 msgctxt "@label:textbox"
 msgid "Public folder:"
 msgstr "ផ្លូវ​តន្ត្រី ៖"
 
-#: ui/main.qml:143
+#: ui/main.qml:114
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
@@ -121,14 +121,14 @@ msgid ""
 "sharing is enabled."
 msgstr "ថត​នេះ​នឹង​ត្រូវ​បានប្រើ​តាម​លំនាំដើម ដើម្បី​ផ្ទុក ឬ​រក្សាទុក​រូបភាព ។"
 
-#: ui/main.qml:151
+#: ui/main.qml:122
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
 msgctxt "@label:textbox"
 msgid "Templates folder:"
 msgstr "ផ្លូវ​រូបភាព ៖"
 
-#: ui/main.qml:157
+#: ui/main.qml:126
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
@@ -136,14 +136,14 @@ msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
 msgstr "ថត​នេះ​នឹង​ត្រូវ​បានប្រើ​តាម​លំនាំដើម ដើម្បី​ផ្ទុក ឬ​រក្សាទុក​រូបភាព ។"
 
-#: ui/main.qml:165
+#: ui/main.qml:134
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
 msgctxt "@label:textbox"
 msgid "Projects folder:"
 msgstr "ផ្លូវ​រូបភាព ៖"
 
-#: ui/main.qml:171
+#: ui/main.qml:138
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -151,7 +151,7 @@ msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save projects."
 msgstr "ថត​នេះ​នឹង​ត្រូវ​បាន​ប្រើ​តាម​លំនាំ​ដើម ដើម្បី​ផ្ទុក​ឯកសារ​ពី ឬ​រក្សា​ទុក​ឯកសារ​ពី ឬ​ទៅ ។"
 
-#: ui/UrlRequester.qml:74
+#: ui/UrlRequester.qml:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"

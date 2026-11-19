@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 22:03+0000\n"
-"PO-Revision-Date: 2026-11-03 07:26+0100\n"
+"POT-Creation-Date: 2026-11-18 15:47+0000\n"
+"PO-Revision-Date: 2026-11-17 19:54+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Lokalize 26.08.3\n"
 "X-Text-Markup: kde4\n"
 
 #: contents/activitymanager/ActivityItem.qml:206
@@ -264,24 +264,24 @@ msgid "Get New Plugins…"
 msgstr "Obtenir de nouveaux modules externes…"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:106
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Remove Desktop"
+#, kde-format
 msgctxt "@label"
 msgid "Desktop:"
-msgstr "Supprimer le bureau"
+msgstr "Bureau :"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:107
 #, kde-format
 msgctxt "@info"
 msgid "Icons for items in the selected location appear on the desktop"
 msgstr ""
+"Les icônes des éléments de l’emplacement sélectionné s’affichent sur le "
+"bureau"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:110
 #, kde-format
 msgctxt "@option:check"
 msgid "Show files and folders"
-msgstr ""
+msgstr "Afficher les fichiers et les dossiers"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:118
 #, kde-format
@@ -322,12 +322,10 @@ msgid "Wallpaper"
 msgstr "Fond d'écran"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox"
-#| msgid "Layout:"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Layout"
-msgstr "Disposition :"
+msgstr "Disposition"
 
 #: contents/configuration/ContainmentConfiguration.qml:36
 #, kde-format
@@ -952,7 +950,7 @@ msgctxt "@info:status"
 msgid "Unlocking failed"
 msgstr "Échec du déverrouillage"
 
-#: contents/lockscreen/LockScreenUi.qml:356
+#: contents/lockscreen/LockScreenUi.qml:360
 #, kde-format
 msgctxt "@info:status"
 msgid ""
@@ -962,49 +960,49 @@ msgstr ""
 "Cette méthode d'authentification ne fonctionne pas correctement. Veuillez "
 "essayer une autre méthode et vérifier la configuration de votre système."
 
-#: contents/lockscreen/LockScreenUi.qml:388
+#: contents/lockscreen/LockScreenUi.qml:392
 #, kde-format
 msgctxt "@info:status"
 msgid "Caps Lock is on"
 msgstr "Le verrouillage en majuscules est activé."
 
-#: contents/lockscreen/LockScreenUi.qml:391
+#: contents/lockscreen/LockScreenUi.qml:395
 #, kde-format
 msgctxt "@info:status"
 msgid "Slow Keys are enabled"
 msgstr "Les touches lentes sont activées."
 
-#: contents/lockscreen/LockScreenUi.qml:411
+#: contents/lockscreen/LockScreenUi.qml:415
 #, kde-format
 msgctxt "@action:button"
 msgid "Slee&p"
 msgstr "Mettre en &veille"
 
-#: contents/lockscreen/LockScreenUi.qml:418
+#: contents/lockscreen/LockScreenUi.qml:422
 #, kde-format
 msgctxt "@action:button"
 msgid "&Hibernate"
 msgstr "&Hiberner"
 
-#: contents/lockscreen/LockScreenUi.qml:425
+#: contents/lockscreen/LockScreenUi.qml:429
 #, kde-format
 msgctxt "@action:button"
 msgid "Switch &User"
 msgstr "Changer d'&utilisateur"
 
-#: contents/lockscreen/LockScreenUi.qml:476
+#: contents/lockscreen/LockScreenUi.qml:480
 #, kde-format
 msgctxt "@action:button"
 msgid "Hide On-Screen Keyboard"
 msgstr "Masquer le clavier virtuel"
 
-#: contents/lockscreen/LockScreenUi.qml:477
+#: contents/lockscreen/LockScreenUi.qml:481
 #, kde-format
 msgctxt "@action:button"
 msgid "Show On-Screen Keyboard"
 msgstr "Afficher le clavier virtuel"
 
-#: contents/lockscreen/LockScreenUi.qml:503
+#: contents/lockscreen/LockScreenUi.qml:507
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

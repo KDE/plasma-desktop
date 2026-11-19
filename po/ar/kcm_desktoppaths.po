@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-30 00:45+0000\n"
+"POT-Creation-Date: 2026-11-18 19:35+0000\n"
 "PO-Revision-Date: 2026-05-07 12:24+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -26,85 +26,85 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: ui/main.qml:53
+#: ui/main.qml:38
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
 msgstr "مجلّد سطح المكتب:"
 
-#: ui/main.qml:59
+#: ui/main.qml:42
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
 msgstr "هذا المجلد يحوي كل الملفات التي تراها على سطح مكتبك"
 
-#: ui/main.qml:67
+#: ui/main.qml:50
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Documents folder:"
 msgstr "مجلد المستندات:"
 
-#: ui/main.qml:73
+#: ui/main.qml:54
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
 msgstr "سيُستخدم هذا المجلد مبدئيًّا لتحميل المستندات منه أو حفظها فيه."
 
-#: ui/main.qml:81
+#: ui/main.qml:62
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
 msgstr "مجلد التنزيلات:"
 
-#: ui/main.qml:87
+#: ui/main.qml:66
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "سيُستخدم هذا المجلد مبدئيًّا لحفظ العناصر التي تنزلها من الإنترنت."
 
-#: ui/main.qml:95
+#: ui/main.qml:74
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Videos folder:"
 msgstr "مجلد الفيديوهات:"
 
-#: ui/main.qml:101
+#: ui/main.qml:78
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
 msgstr "سيُستخدم هذا المجلد مبدئيًّا لتحميل الفيديوهات منه أو حفظها فيه."
 
-#: ui/main.qml:109
+#: ui/main.qml:86
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
 msgstr "مجلد الصور:"
 
-#: ui/main.qml:115
+#: ui/main.qml:90
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
 msgstr "سيُستخدم هذا المجلد مبدئيًّا لتحميل الصور منه أو حفظها فيه."
 
-#: ui/main.qml:123
+#: ui/main.qml:98
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
 msgstr "مجلد الموسيقى:"
 
-#: ui/main.qml:129
+#: ui/main.qml:102
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
 msgstr "سيُستخدم هذا المجلد مبدئيًّا لتحميل الملفات الصوتية منه أو حفظها فيه."
 
-#: ui/main.qml:137
+#: ui/main.qml:110
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Public folder:"
 msgstr "المجلد العام:"
 
-#: ui/main.qml:143
+#: ui/main.qml:114
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid ""
@@ -113,31 +113,31 @@ msgid ""
 msgstr ""
 "سيُستخدم  هذا المجلد مبدئيًّا للملفات المشتركة بشكل عام عند تمكين مشاركة الشبكة."
 
-#: ui/main.qml:151
+#: ui/main.qml:122
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Templates folder:"
 msgstr "مجلّد القوالب:"
 
-#: ui/main.qml:157
+#: ui/main.qml:126
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
 msgstr "سيُستخدم هذا المجلد مبدئيًّا لتحميل القوالب منه أو حفظها فيه."
 
-#: ui/main.qml:165
+#: ui/main.qml:134
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Projects folder:"
 msgstr "مجلد المشاريع:"
 
-#: ui/main.qml:171
+#: ui/main.qml:138
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save projects."
 msgstr "سيُستخدم هذا المجلد مبدئيًّا لفتح المشاريع منه أو حفظها فيه."
 
-#: ui/UrlRequester.qml:74
+#: ui/UrlRequester.qml:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"

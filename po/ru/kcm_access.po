@@ -16,8 +16,8 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-18 01:12+0000\n"
-"PO-Revision-Date: 2026-10-04 08:28+0200\n"
-"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2026-11-18 08:53+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -745,7 +745,7 @@ msgstr "Масштаб и экранная лупа"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Text Size"
-msgstr ""
+msgstr "Размер текста"
 
 #: ui/main.qml:39
 #, kde-format
@@ -1041,14 +1041,15 @@ msgid ""
 "keeps their proportions; on low-resolution screens, some small graphics may "
 "look slightly blurry."
 msgstr ""
+"Рекомендуется в большинстве случаев. Увеличивает текст и остальные элементы "
+"с сохранением их пропорций; на экранах с низким разрешением мелкая графика "
+"может выглядеть слегка размытой."
 
 #: ui/TextSize.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Display Scale…"
-msgstr "Настроить комбинации клавиш…"
+msgstr "Настроить масштаб экрана…"
 
 #: ui/TextSize.qml:25
 #, kde-format
@@ -1058,14 +1059,15 @@ msgid ""
 "changes can make text no longer fit or look good next to icons and other "
 "elements."
 msgstr ""
+"Подходит только для небольших изменений размера. Изменяется только текст, "
+"поэтому при больших значениях он может не помещаться или плохо смотреться "
+"рядом со значками и другими элементами."
 
 #: ui/TextSize.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Fonts…"
-msgstr "Настроить комбинации клавиш…"
+msgstr "Настроить шрифты…"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format

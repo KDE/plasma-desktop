@@ -7,7 +7,7 @@
 # Nicolas Ternisien <nicolas.ternisien@gmail.com>, 2004.
 # Nicolas Ternisien <nicolas.ternisien@gmail.com>, 2005, 2007, 2008, 2010.
 # Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2008, 2012.
-# SPDX-FileCopyrightText: 2013, 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2013, 2024, 2026 Xavier Besnard <xavier.besnard@kde.org>
 # Maxime Corteel <mcorteel@gmail.com>, 2015.
 # SPDX-FileCopyrightText: 2021, 2023 Xavier Besnard <xavier.besnard@kde.org>
 #
@@ -16,15 +16,15 @@ msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-12 01:04+0000\n"
-"PO-Revision-Date: 2024-04-26 11:56+0200\n"
+"PO-Revision-Date: 2026-11-17 19:56+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: French <French <kde-francophone@kde.org>>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 26.08.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -45,10 +45,9 @@ msgid "Unable to change NTP settings"
 msgstr "Impossible de changer la configuration NTP"
 
 #: dateandtime.cpp:249
-#, fuzzy, kde-format
-#| msgid "Unable to change NTP settings"
+#, kde-format
 msgid "Permission to change NTP setting denied"
-msgstr "Impossible de changer la configuration NTP"
+msgstr "L'autorisation pour modifier la configuration de NTP a été refusée."
 
 #: dateandtime.cpp:261 main.cpp:89
 #, kde-format
@@ -59,17 +58,18 @@ msgstr "Impossible de régler l'heure actuelle"
 #, kde-format
 msgid "Permission to change date and time setting denied"
 msgstr ""
+"L'autorisation pour modifier la configuration de l'heure et de la date a été "
+"refusée."
 
 #: dateandtime.cpp:274
-#, fuzzy, kde-format
-#| msgid "Unable to set timezone"
+#, kde-format
 msgid "Unable to set time zone"
-msgstr "Impossible de régler le fuseau horaire"
+msgstr "Impossible de définir le fuseau horaire"
 
 #: dateandtime.cpp:276
 #, kde-format
 msgid "Permission to change time zone denied"
-msgstr ""
+msgstr "L'autorisation pour modifier le fuseau horaire a été refusée."
 
 #: main.cpp:101
 #, kde-format
@@ -77,27 +77,25 @@ msgid "Unable to set timezone"
 msgstr "Impossible de régler le fuseau horaire"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "Set date and time &automatically"
+#, kde-format
 msgctxt "@option"
 msgid "Set date and time automatically"
-msgstr "Définir &automatiquement la date et l'heure"
+msgstr "Définir automatiquement la date et l'heure"
 
 #: ui/main.qml:54
 #, kde-format
 msgctxt "@action:button as in set the current time on the machine"
 msgid "Set Time"
-msgstr ""
+msgstr "Définir l'heure"
 
 #: ui/main.qml:68
 #, kde-format
 msgctxt "@action:button as in set the current date on the machine"
 msgid "Set Date"
-msgstr ""
+msgstr "Définir la date"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Time Zone"
+#, kde-format
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "Fuseau horaire"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-23 00:45+0000\n"
+"POT-Creation-Date: 2026-11-19 01:09+0000\n"
 "PO-Revision-Date: 2026-11-14 14:52+0200\n"
 "Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -96,64 +96,66 @@ msgstr ""
 "Αυτόματη προσάρτηση αφαιρούμενων μέσων που δεν έχουν προσαρτηθεί ποτέ στο "
 "παρελθόν"
 
-#: DeviceModel.cpp:52
+#: DeviceModel.cpp:55
 #, kde-format
 msgid "Automount Device"
 msgstr "Αυτόματη προσάρτηση συσκευής"
 
-#: DeviceModel.cpp:54
+#: DeviceModel.cpp:57
 #, kde-format
 msgctxt "As in automount on login"
 msgid "On Login"
 msgstr "Κατά την είσοδο"
 
-#: DeviceModel.cpp:56
+#: DeviceModel.cpp:59
 #, kde-format
 msgctxt "As in automount on attach"
 msgid "On Attach"
 msgstr "Κατά τη σύνδεση"
 
-#: DeviceModel.cpp:258
+#: DeviceModel.cpp:277
 #, kde-format
 msgid "All Devices"
 msgstr "Όλες οι συσκευές"
 
-#: DeviceModel.cpp:258
+#: DeviceModel.cpp:277
 #, kde-format
 msgid "All Known Devices"
 msgstr "Όλες οι γνωστές συσκευές"
 
-#: DeviceModel.cpp:260
+#: DeviceModel.cpp:279
 #, kde-format
 msgid "Attached Devices"
 msgstr "Προσαρτημένες συσκευές"
 
-#: DeviceModel.cpp:262
+#: DeviceModel.cpp:281
 #, kde-format
 msgid "Disconnected Devices"
 msgstr "Αποσυνδεδεμένες συσκευές"
 
-#: DeviceModel.cpp:298 DeviceModel.cpp:307
-#, kde-format
-msgid "UDI: %1"
+#: DeviceModel.cpp:317 DeviceModel.cpp:326
+#, fuzzy, kde-format
+#| msgid "UDI: %1"
+msgctxt "@info:tooltip %1 is a UUID or device identifier"
+msgid "Device ID: %1"
 msgstr "UDI: %1"
 
-#: DeviceModel.cpp:318
+#: DeviceModel.cpp:337
 #, kde-format
 msgid "This device will be automatically mounted at login."
 msgstr "Αυτή η συσκευή θα προσαρτάται αυτόματα κατά την είσοδο."
 
-#: DeviceModel.cpp:318
+#: DeviceModel.cpp:337
 #, kde-format
 msgid "This device will not be automatically mounted at login."
 msgstr "Αυτή η συσκευή δεν θα προσαρτάται αυτόματα κατά την είσοδο."
 
-#: DeviceModel.cpp:326
+#: DeviceModel.cpp:345
 #, kde-format
 msgid "This device will be automatically mounted when attached."
 msgstr "Αυτή η συσκευή θα προσαρτάται αυτόματα όταν συνδέεται."
 
-#: DeviceModel.cpp:327
+#: DeviceModel.cpp:346
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "Αυτή η συσκευή δεν θα προσαρτάται αυτόματα όταν συνδέεται."

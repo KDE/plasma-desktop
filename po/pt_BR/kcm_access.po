@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-18 01:12+0000\n"
-"PO-Revision-Date: 2026-09-03 06:34-0300\n"
+"PO-Revision-Date: 2026-11-18 05:36-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@kde.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: kcmaccess.cpp:122 kcmaccess.cpp:150
 #, kde-format
@@ -725,7 +725,7 @@ msgstr "Lente de aumento"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Text Size"
-msgstr ""
+msgstr "Tamanho do texto"
 
 #: ui/main.qml:39
 #, kde-format
@@ -1014,14 +1014,15 @@ msgid ""
 "keeps their proportions; on low-resolution screens, some small graphics may "
 "look slightly blurry."
 msgstr ""
+"Recomendado na maioria das situações. Aumenta o texto e todos os outros "
+"elementos, mantendo suas proporções; em telas de baixa resolução, alguns "
+"elementos gráficos pequenos podem ficar levemente desfocados."
 
 #: ui/TextSize.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Display Scale…"
-msgstr "Configurar atalhos…"
+msgstr "Configurar escala de exibição…"
 
 #: ui/TextSize.qml:25
 #, kde-format
@@ -1031,14 +1032,15 @@ msgid ""
 "changes can make text no longer fit or look good next to icons and other "
 "elements."
 msgstr ""
+"Adequado apenas para pequenas alterações. Apenas o texto é alterado; "
+"portanto, mudanças maiores podem fazer com que o texto deixe de caber ou "
+"perca a harmonia visual ao lado de ícones e outros elementos."
 
 #: ui/TextSize.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Fonts…"
-msgstr "Configurar atalhos…"
+msgstr "Configurar fontes…"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format

@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-18 01:12+0000\n"
-"PO-Revision-Date: 2026-09-03 20:35+0300\n"
+"PO-Revision-Date: 2026-11-18 18:46+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: kcmaccess.cpp:122 kcmaccess.cpp:150
 #, kde-format
@@ -720,7 +720,7 @@ msgstr "Yakınlaştırma ve Büyüteç"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Text Size"
-msgstr ""
+msgstr "Metin Boyutu"
 
 #: ui/main.qml:39
 #, kde-format
@@ -1008,14 +1008,14 @@ msgid ""
 "keeps their proportions; on low-resolution screens, some small graphics may "
 "look slightly blurry."
 msgstr ""
+"Çoğu durumda önerilir. Metni ve diğer her şeyi büyütürken oranlarını korur; "
+"düşük çözünürlüklü ekranlarda bazı küçük grafikler hafif bulanık görünebilir."
 
 #: ui/TextSize.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Display Scale…"
-msgstr "Kısayolları Yapılandır…"
+msgstr "Görüntü Ölçeğini Yapılandır…"
 
 #: ui/TextSize.qml:25
 #, kde-format
@@ -1025,14 +1025,15 @@ msgid ""
 "changes can make text no longer fit or look good next to icons and other "
 "elements."
 msgstr ""
+"Yalnızca küçük boyut değişiklikleri için uygundur. Yalnızca metni "
+"değiştirir, böylece büyük değişiklikler metnin artık simgelere ve diğer "
+"ögelere sığmamasına veya iyi görünmemesine neden olabilir."
 
 #: ui/TextSize.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Fonts…"
-msgstr "Kısayolları Yapılandır…"
+msgstr "Yazı Tiplerini Yapılandır…"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format

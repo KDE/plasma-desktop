@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-30 00:45+0000\n"
+"POT-Creation-Date: 2026-11-18 19:35+0000\n"
 "PO-Revision-Date: 2008-11-04 17:48+0200\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -20,27 +20,27 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
 
-#: ui/main.qml:53
+#: ui/main.qml:38
 #, fuzzy, kde-format
 #| msgid "Des&ktop path:"
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
 msgstr "Ściežka &stała:"
 
-#: ui/main.qml:59
+#: ui/main.qml:42
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
 msgstr ""
 
-#: ui/main.qml:67
+#: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgctxt "@label:textbox"
 msgid "Documents folder:"
 msgstr "Ściežka &dakumentaŭ:"
 
-#: ui/main.qml:73
+#: ui/main.qml:54
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -48,14 +48,14 @@ msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
 msgstr "Heta zmoŭčany kataloh dla adčytvańnia j zapisu dakumentaŭ."
 
-#: ui/main.qml:81
+#: ui/main.qml:62
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
 msgstr "Ściežka &dakumentaŭ:"
 
-#: ui/main.qml:87
+#: ui/main.qml:66
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -63,14 +63,14 @@ msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "Heta zmoŭčany kataloh dla adčytvańnia j zapisu dakumentaŭ."
 
-#: ui/main.qml:95
+#: ui/main.qml:74
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgctxt "@label:textbox"
 msgid "Videos folder:"
 msgstr "Ściežka &dakumentaŭ:"
 
-#: ui/main.qml:101
+#: ui/main.qml:78
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -78,14 +78,14 @@ msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
 msgstr "Heta zmoŭčany kataloh dla adčytvańnia j zapisu dakumentaŭ."
 
-#: ui/main.qml:109
+#: ui/main.qml:86
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
 msgstr "Ściežka &dakumentaŭ:"
 
-#: ui/main.qml:115
+#: ui/main.qml:90
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -93,13 +93,13 @@ msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
 msgstr "Heta zmoŭčany kataloh dla adčytvańnia j zapisu dakumentaŭ."
 
-#: ui/main.qml:123
+#: ui/main.qml:98
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
 msgstr ""
 
-#: ui/main.qml:129
+#: ui/main.qml:102
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -107,14 +107,14 @@ msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
 msgstr "Heta zmoŭčany kataloh dla adčytvańnia j zapisu dakumentaŭ."
 
-#: ui/main.qml:137
+#: ui/main.qml:110
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgctxt "@label:textbox"
 msgid "Public folder:"
 msgstr "Ściežka &dakumentaŭ:"
 
-#: ui/main.qml:143
+#: ui/main.qml:114
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -124,14 +124,14 @@ msgid ""
 "sharing is enabled."
 msgstr "Heta zmoŭčany kataloh dla adčytvańnia j zapisu dakumentaŭ."
 
-#: ui/main.qml:151
+#: ui/main.qml:122
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgctxt "@label:textbox"
 msgid "Templates folder:"
 msgstr "Ściežka &dakumentaŭ:"
 
-#: ui/main.qml:157
+#: ui/main.qml:126
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -139,14 +139,14 @@ msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
 msgstr "Heta zmoŭčany kataloh dla adčytvańnia j zapisu dakumentaŭ."
 
-#: ui/main.qml:165
+#: ui/main.qml:134
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgctxt "@label:textbox"
 msgid "Projects folder:"
 msgstr "Ściežka &dakumentaŭ:"
 
-#: ui/main.qml:171
+#: ui/main.qml:138
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -154,7 +154,7 @@ msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save projects."
 msgstr "Heta zmoŭčany kataloh dla adčytvańnia j zapisu dakumentaŭ."
 
-#: ui/UrlRequester.qml:74
+#: ui/UrlRequester.qml:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"

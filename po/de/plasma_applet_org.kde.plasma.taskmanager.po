@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-17 08:02+0000\n"
+"POT-Creation-Date: 2026-11-18 15:35+0000\n"
 "PO-Revision-Date: 2026-10-19 22:23+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -132,79 +132,79 @@ msgctxt "@title:group for configuration dialog page"
 msgid "Behavior"
 msgstr "Verhalten"
 
-#: qml/ConfigAppearance.qml:49
+#: qml/ConfigAppearance.qml:51
 #, kde-format
 msgctxt "@label for several checkboxes"
 msgid "General:"
 msgstr "Allgemein:"
 
-#: qml/ConfigAppearance.qml:50
+#: qml/ConfigAppearance.qml:52
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show small window previews when hovering over tasks"
 msgstr "Kleine Fenster-Vorschauen beim Überfahren von Anwendungen anzeigen"
 
-#: qml/ConfigAppearance.qml:55
+#: qml/ConfigAppearance.qml:58
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over previews"
 msgstr "Andere Fenster beim Überfahren von Vorschauen ausblenden"
 
-#: qml/ConfigAppearance.qml:55
+#: qml/ConfigAppearance.qml:58
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over tooltips"
 msgstr "Andere Fenster beim Überfahren von Kurzinfos ausblenden"
 
-#: qml/ConfigAppearance.qml:60
+#: qml/ConfigAppearance.qml:64
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
 msgstr "Einen Indikator anzeigen, wenn ein Programm Audio abspielt"
 
-#: qml/ConfigAppearance.qml:70
+#: qml/ConfigAppearance.qml:75
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
 msgstr "Programm stummschalten, wenn Indikator angeklickt wird"
 
-#: qml/ConfigAppearance.qml:78
+#: qml/ConfigAppearance.qml:84
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
 msgstr "Medien- und Lautstärkeregler in der Kurzinfo anzeigen"
 
-#: qml/ConfigAppearance.qml:86
+#: qml/ConfigAppearance.qml:93
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Fill free space on panel"
 msgstr "Freien Platz auf der Kontrollleiste füllen"
 
-#: qml/ConfigAppearance.qml:98
+#: qml/ConfigAppearance.qml:105
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Maximum task width:"
 msgstr "Maximale Anwendungsbreite:"
 
-#: qml/ConfigAppearance.qml:101
+#: qml/ConfigAppearance.qml:108
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Narrow"
 msgstr "Schmal"
 
-#: qml/ConfigAppearance.qml:102
+#: qml/ConfigAppearance.qml:109
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Medium"
 msgstr "Mittel"
 
-#: qml/ConfigAppearance.qml:103
+#: qml/ConfigAppearance.qml:110
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Wide"
 msgstr "Breit"
 
-#: qml/ConfigAppearance.qml:114
+#: qml/ConfigAppearance.qml:122
 #, kde-format
 msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
@@ -212,7 +212,7 @@ msgctxt ""
 msgid "Use multi-column view:"
 msgstr "Mehrspaltige Ansicht verwenden:"
 
-#: qml/ConfigAppearance.qml:115
+#: qml/ConfigAppearance.qml:123
 #, kde-format
 msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
@@ -220,55 +220,55 @@ msgctxt ""
 msgid "Use multi-row view:"
 msgstr "Mehrzeilige Ansicht verwenden:"
 
-#: qml/ConfigAppearance.qml:121
+#: qml/ConfigAppearance.qml:129
 #, kde-format
 msgctxt "@option:radio Never use multi-column view for Task Manager"
 msgid "Never"
 msgstr "Niemals"
 
-#: qml/ConfigAppearance.qml:131
+#: qml/ConfigAppearance.qml:140
 #, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "When panel is low on space and thick enough"
 msgstr "Wenn die Kontrollleiste wenig Platz hat und dick genug ist"
 
-#: qml/ConfigAppearance.qml:141
+#: qml/ConfigAppearance.qml:151
 #, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "Always when panel is thick enough"
 msgstr "Immer, wenn die Kontrollleiste dick genug ist"
 
-#: qml/ConfigAppearance.qml:148
+#: qml/ConfigAppearance.qml:158
 #, kde-format
 msgctxt "@label:spinbox maximum number of columns for tasks"
 msgid "Maximum columns:"
 msgstr "Maximale Anzahl Spalten:"
 
-#: qml/ConfigAppearance.qml:149
+#: qml/ConfigAppearance.qml:159
 #, kde-format
 msgctxt "@label:spinbox maximum number of rows for tasks"
 msgid "Maximum rows:"
 msgstr "Maximale Anzahl Zeilen:"
 
-#: qml/ConfigAppearance.qml:159
+#: qml/ConfigAppearance.qml:169
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Spacing between icons:"
 msgstr "Abstand zwischen Symbolen:"
 
-#: qml/ConfigAppearance.qml:163
+#: qml/ConfigAppearance.qml:173
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Klein"
 
-#: qml/ConfigAppearance.qml:167
+#: qml/ConfigAppearance.qml:177
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Normal"
 
-#: qml/ConfigAppearance.qml:171
+#: qml/ConfigAppearance.qml:181
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
@@ -910,61 +910,61 @@ msgctxt "@info:tooltip Close this window"
 msgid "Close window"
 msgstr "Fenster schließen"
 
-#: qml/ToolTipInstance.qml:466
+#: qml/ToolTipInstance.qml:468
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
 msgstr "Stummschaltung von %1 aufheben"
 
-#: qml/ToolTipInstance.qml:467
+#: qml/ToolTipInstance.qml:469
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
 msgstr "%1 stummschalten"
 
-#: qml/ToolTipInstance.qml:485
+#: qml/ToolTipInstance.qml:487
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
 msgstr "Lautstärke für %1 anpassen"
 
-#: qml/ToolTipInstance.qml:501
+#: qml/ToolTipInstance.qml:503
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1 %"
 
-#: qml/ToolTipInstance.qml:505
+#: qml/ToolTipInstance.qml:507
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
 msgstr "100 %"
 
-#: qml/ToolTipInstance.qml:521
+#: qml/ToolTipInstance.qml:523
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "Auf %1"
 
-#: qml/ToolTipInstance.qml:524
+#: qml/ToolTipInstance.qml:526
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
 msgstr "Auf allen Arbeitsflächen"
 
-#: qml/ToolTipInstance.qml:530
+#: qml/ToolTipInstance.qml:532
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
 msgstr "In allen Aktivitäten verfügbar"
 
-#: qml/ToolTipInstance.qml:540
+#: qml/ToolTipInstance.qml:542
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
 msgstr "Auch verfügbar in %1"
 
-#: qml/ToolTipInstance.qml:544
+#: qml/ToolTipInstance.qml:546
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"

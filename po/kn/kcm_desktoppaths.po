@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-30 00:45+0000\n"
+"POT-Creation-Date: 2026-11-18 19:35+0000\n"
 "PO-Revision-Date: 2008-12-28 23:57+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
@@ -18,27 +18,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ui/main.qml:53
+#: ui/main.qml:38
 #, fuzzy, kde-format
 #| msgid "Des&ktop path:"
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
 msgstr "ಗಣಕತೆರೆಯ ಪಥ(&k):"
 
-#: ui/main.qml:59
+#: ui/main.qml:42
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
 msgstr ""
 
-#: ui/main.qml:67
+#: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgctxt "@label:textbox"
 msgid "Documents folder:"
 msgstr "ದಸ್ತಾವೇಜುಗಳ ಪಥ(&o):"
 
-#: ui/main.qml:73
+#: ui/main.qml:54
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -48,14 +48,14 @@ msgstr ""
 "ಈ ಕಡತಕೋಶಕ್ಕೆ ಕಡತಗಳನ್ನು ಉಳಿಸಲು ಹಾಗು ಈ ಕಡತಕೋಶದಿಂದ ಕಡತಗಳನ್ನು ಲೋಡ್ ಮಾಡಲು ಇದು "
 "ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಬಳಸಲ್ಪಡುತ್ತದೆ."
 
-#: ui/main.qml:81
+#: ui/main.qml:62
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
 msgstr "ದಸ್ತಾವೇಜುಗಳ ಪಥ(&o):"
 
-#: ui/main.qml:87
+#: ui/main.qml:66
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -65,14 +65,14 @@ msgstr ""
 "ಈ ಕಡತಕೋಶಕ್ಕೆ ಕಡತಗಳನ್ನು ಉಳಿಸಲು ಹಾಗು ಈ ಕಡತಕೋಶದಿಂದ ಕಡತಗಳನ್ನು ಲೋಡ್ ಮಾಡಲು ಇದು "
 "ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಬಳಸಲ್ಪಡುತ್ತದೆ."
 
-#: ui/main.qml:95
+#: ui/main.qml:74
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgctxt "@label:textbox"
 msgid "Videos folder:"
 msgstr "ದಸ್ತಾವೇಜುಗಳ ಪಥ(&o):"
 
-#: ui/main.qml:101
+#: ui/main.qml:78
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -82,14 +82,14 @@ msgstr ""
 "ಈ ಕಡತಕೋಶಕ್ಕೆ ಕಡತಗಳನ್ನು ಉಳಿಸಲು ಹಾಗು ಈ ಕಡತಕೋಶದಿಂದ ಕಡತಗಳನ್ನು ಲೋಡ್ ಮಾಡಲು ಇದು "
 "ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಬಳಸಲ್ಪಡುತ್ತದೆ."
 
-#: ui/main.qml:109
+#: ui/main.qml:86
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
 msgstr "ದಸ್ತಾವೇಜುಗಳ ಪಥ(&o):"
 
-#: ui/main.qml:115
+#: ui/main.qml:90
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -99,13 +99,13 @@ msgstr ""
 "ಈ ಕಡತಕೋಶಕ್ಕೆ ಕಡತಗಳನ್ನು ಉಳಿಸಲು ಹಾಗು ಈ ಕಡತಕೋಶದಿಂದ ಕಡತಗಳನ್ನು ಲೋಡ್ ಮಾಡಲು ಇದು "
 "ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಬಳಸಲ್ಪಡುತ್ತದೆ."
 
-#: ui/main.qml:123
+#: ui/main.qml:98
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
 msgstr ""
 
-#: ui/main.qml:129
+#: ui/main.qml:102
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -115,14 +115,14 @@ msgstr ""
 "ಈ ಕಡತಕೋಶಕ್ಕೆ ಕಡತಗಳನ್ನು ಉಳಿಸಲು ಹಾಗು ಈ ಕಡತಕೋಶದಿಂದ ಕಡತಗಳನ್ನು ಲೋಡ್ ಮಾಡಲು ಇದು "
 "ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಬಳಸಲ್ಪಡುತ್ತದೆ."
 
-#: ui/main.qml:137
+#: ui/main.qml:110
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgctxt "@label:textbox"
 msgid "Public folder:"
 msgstr "ದಸ್ತಾವೇಜುಗಳ ಪಥ(&o):"
 
-#: ui/main.qml:143
+#: ui/main.qml:114
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -134,14 +134,14 @@ msgstr ""
 "ಈ ಕಡತಕೋಶಕ್ಕೆ ಕಡತಗಳನ್ನು ಉಳಿಸಲು ಹಾಗು ಈ ಕಡತಕೋಶದಿಂದ ಕಡತಗಳನ್ನು ಲೋಡ್ ಮಾಡಲು ಇದು "
 "ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಬಳಸಲ್ಪಡುತ್ತದೆ."
 
-#: ui/main.qml:151
+#: ui/main.qml:122
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgctxt "@label:textbox"
 msgid "Templates folder:"
 msgstr "ದಸ್ತಾವೇಜುಗಳ ಪಥ(&o):"
 
-#: ui/main.qml:157
+#: ui/main.qml:126
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -151,14 +151,14 @@ msgstr ""
 "ಈ ಕಡತಕೋಶಕ್ಕೆ ಕಡತಗಳನ್ನು ಉಳಿಸಲು ಹಾಗು ಈ ಕಡತಕೋಶದಿಂದ ಕಡತಗಳನ್ನು ಲೋಡ್ ಮಾಡಲು ಇದು "
 "ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಬಳಸಲ್ಪಡುತ್ತದೆ."
 
-#: ui/main.qml:165
+#: ui/main.qml:134
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
 msgctxt "@label:textbox"
 msgid "Projects folder:"
 msgstr "ದಸ್ತಾವೇಜುಗಳ ಪಥ(&o):"
 
-#: ui/main.qml:171
+#: ui/main.qml:138
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
@@ -168,7 +168,7 @@ msgstr ""
 "ಈ ಕಡತಕೋಶಕ್ಕೆ ಕಡತಗಳನ್ನು ಉಳಿಸಲು ಹಾಗು ಈ ಕಡತಕೋಶದಿಂದ ಕಡತಗಳನ್ನು ಲೋಡ್ ಮಾಡಲು ಇದು "
 "ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಬಳಸಲ್ಪಡುತ್ತದೆ."
 
-#: ui/UrlRequester.qml:74
+#: ui/UrlRequester.qml:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"
