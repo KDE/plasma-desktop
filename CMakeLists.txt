@@ -275,6 +275,7 @@ if (INSTALL_SDDM_THEME)
 endif()
 
 add_subdirectory(layout-templates)
+add_subdirectory(login-sessions)
 
 add_subdirectory(runners)
 add_subdirectory(containments)
