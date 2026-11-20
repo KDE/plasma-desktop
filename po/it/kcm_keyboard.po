@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the kdebase package.
 # Luciano Montanaro <mikelima@cirulla.net>, 2007, 2008.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2009, 2010, 2011, 2012, 2014.
-# SPDX-FileCopyrightText: 2016, 2017, 2020, 2021, 2023, 2024, 2025, 2026 Paolo Zamponi <feus73@gmail.com>
+# SPDX-FileCopyrightText: 2016-2017, 2020-2021, 2023-2026 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-10 00:59+0000\n"
-"PO-Revision-Date: 2026-01-10 15:37+0100\n"
+"PO-Revision-Date: 2026-11-11 15:33+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -315,7 +315,7 @@ msgstr "Mappature"
 #, kde-format
 msgctxt "@info:usagetip %1 is the name of a keyboard layout"
 msgid "Using system-wide layout “%1”"
-msgstr ""
+msgstr "Utilizzo della mappatura a livello di sistema «%1»"
 
 #: ui/main.qml:252
 #, kde-kuit-format
@@ -324,6 +324,8 @@ msgid ""
 "To override this or add more layouts for this user account, press the "
 "<interface>Add…</interface> button."
 msgstr ""
+"Per ignorare questa impostazione, o per aggiungere altre mappature per "
+"questo account utente, premi il pulsante <interface>Aggiungi…</interface>."
 
 #: ui/main.qml:268
 #, kde-format

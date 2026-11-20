@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 01:10+0000\n"
-"PO-Revision-Date: 2026-05-28 13:58+0200\n"
+"PO-Revision-Date: 2026-11-19 21:46+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -234,22 +234,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Text Cursor"
-msgstr ""
+msgstr "Текстов курсор"
 
 #: ui/main.qml:314
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Double-click interval:"
+#, kde-format
 msgctxt "@option:check followed by a spinbox"
 msgid "Blink with interval:"
-msgstr "Интервал на двойно кликване"
+msgstr "Интервал на мигане:"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgid "Double click interval"
+#, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Text cursor blink interval"
-msgstr "Интервал на двойно кликване"
+msgstr "Интервал на мигане на текстовия курсор"
 
 #: ui/main.qml:358
 #, kde-format
@@ -259,6 +256,9 @@ msgid ""
 "browsers. May be ignored by apps with their own cursor settings, such as "
 "some terminals and code editors."
 msgstr ""
+"Прилага се за приложения на KDE, Qt и GTK, включително браузъри, базирани на "
+"Firefox и Chromium. Може да бъде игнорирано от приложения със собствени "
+"настройки на курсора, като например някои терминали и редактори на код."
 
 #: ui/main.qml:364
 #, kde-format
@@ -398,7 +398,7 @@ msgstr "Интервал на двойно кликване"
 #: workspaceoptions_kdeglobalssettings.kcfg:35
 #, kde-format
 msgid "Text cursor blink rate, 0 disables blinking"
-msgstr ""
+msgstr "Честота на мигане на текстовия курсор, 0 изключва мигането"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

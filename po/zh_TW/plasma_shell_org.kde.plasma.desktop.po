@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-18 15:47+0000\n"
-"PO-Revision-Date: 2026-11-03 20:42+0900\n"
+"PO-Revision-Date: 2026-11-19 22:32+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 26.11.70\n"
+"X-Generator: Lokalize 27.03.70\n"
 
 #: contents/activitymanager/ActivityItem.qml:206
 #, kde-format
@@ -255,24 +255,22 @@ msgid "Get New Plugins…"
 msgstr "取得新的外掛程式…"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:106
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Remove Desktop"
+#, kde-format
 msgctxt "@label"
 msgid "Desktop:"
-msgstr "移除桌面"
+msgstr "桌面："
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:107
 #, kde-format
 msgctxt "@info"
 msgid "Icons for items in the selected location appear on the desktop"
-msgstr ""
+msgstr "讓所選位置當中的項目以圖示形式顯示於桌面上"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:110
 #, kde-format
 msgctxt "@option:check"
 msgid "Show files and folders"
-msgstr ""
+msgstr "顯示檔案與資料夾"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:118
 #, kde-format
@@ -311,12 +309,10 @@ msgid "Wallpaper"
 msgstr "桌布"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox"
-#| msgid "Layout:"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Layout"
-msgstr "佈局："
+msgstr "佈局"
 
 #: contents/configuration/ContainmentConfiguration.qml:36
 #, kde-format

@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-18 01:12+0000\n"
-"PO-Revision-Date: 2026-09-03 11:57+0200\n"
-"Last-Translator: Libor Filipek <libor.filipek@gmail.com>\n"
+"PO-Revision-Date: 2026-11-19 03:39+0100\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.3\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -727,7 +727,7 @@ msgstr "Přiblížení &Lupa"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Text Size"
-msgstr ""
+msgstr "Velikost textu"
 
 #: ui/main.qml:39
 #, kde-format
@@ -1019,14 +1019,15 @@ msgid ""
 "keeps their proportions; on low-resolution screens, some small graphics may "
 "look slightly blurry."
 msgstr ""
+"Doporučuje se ve většině případů. Zvětší text i všechny ostatní prvky a "
+"zachová jejich proporce; na obrazovkách s nízkým rozlišením mohou některé "
+"malé grafické prvky vypadat mírně rozmazaně."
 
 #: ui/TextSize.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Display Scale…"
-msgstr "Nastavit zkratky…"
+msgstr "Nastavit měřítko zobrazení…"
 
 #: ui/TextSize.qml:25
 #, kde-format
@@ -1036,14 +1037,15 @@ msgid ""
 "changes can make text no longer fit or look good next to icons and other "
 "elements."
 msgstr ""
+"Vhodné pouze pro drobné úpravy velikosti. Změny se týkají pouze textu, takže "
+"při větších úpravách se může stát, že se text již nevejde nebo nebude vedle "
+"ikon a dalších prvků vypadat dobře."
 
 #: ui/TextSize.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Fonts…"
-msgstr "Nastavit zkratky…"
+msgstr "Nastavit písma…"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format

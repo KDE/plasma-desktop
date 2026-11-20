@@ -1,7 +1,7 @@
 # translation of kcmaccess.po to Arabic
 # translation of kcmaccess.po to
 # Copyright (C) 2001,2002, 2004, 2006, 2007, 2008 Free Software Foundation, Inc.
-# SPDX-FileCopyrightText: 2008, 2021, 2022, 2023, 2024, 2025, 2026 zayed <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2008, 2021-2026 zayed <zayed.alsaidi@gmail.com>
 # Mohammed Gamal <f2c2001@yahoo.com>, 2001.
 # Isam Bayazidi <bayazidi@arabeyes.org>, 2002.
 # Ossama Khayat <okhayat@yahoo.com>, 2004.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-18 01:12+0000\n"
-"PO-Revision-Date: 2026-09-09 19:09+0400\n"
+"PO-Revision-Date: 2026-11-19 17:29+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: kcmaccess.cpp:122 kcmaccess.cpp:150
 #, kde-format
@@ -752,7 +752,7 @@ msgstr "التقريب والتكبير"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Text Size"
-msgstr ""
+msgstr "حجم النّصّ"
 
 #: ui/main.qml:39
 #, kde-format
@@ -1050,14 +1050,14 @@ msgid ""
 "keeps their proportions; on low-resolution screens, some small graphics may "
 "look slightly blurry."
 msgstr ""
+"مُوصى به في معظم الحالات. يجعل النص وكل شيء آخر أكبر ويحافظ على تناسباتها؛ "
+"على الشاشات منخفضة الدقة، قد تبدو بعض الرسومات الصغيرة ضبابية قليلًا."
 
 #: ui/TextSize.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Display Scale…"
-msgstr "اضبط الاختصارات"
+msgstr "اضبط مقياس العرض…"
 
 #: ui/TextSize.qml:25
 #, kde-format
@@ -1067,14 +1067,14 @@ msgid ""
 "changes can make text no longer fit or look good next to icons and other "
 "elements."
 msgstr ""
+"مناسب فقط لتغييرات الحجم الصغيرة. يغيّر النص وحده، لذا قد تجعل التغييرات "
+"الكبيرة النص لا يتناسب أو لا يبدو جيدًا بجانب الأيقونات والعناصر الأخرى."
 
 #: ui/TextSize.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Fonts…"
-msgstr "اضبط الاختصارات"
+msgstr "اضبط الخطوط…"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format

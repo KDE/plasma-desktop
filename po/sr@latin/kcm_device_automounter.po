@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kcm5_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-19 01:09+0000\n"
-"PO-Revision-Date: 2026-10-07 14:30+0200\n"
+"PO-Revision-Date: 2026-11-19 17:02+0100\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
@@ -131,11 +131,10 @@ msgid "Disconnected Devices"
 msgstr "Isključeni uređaji"
 
 #: DeviceModel.cpp:317 DeviceModel.cpp:326
-#, fuzzy, kde-format
-#| msgid "UDI: %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is a UUID or device identifier"
 msgid "Device ID: %1"
-msgstr "UDI: %1"
+msgstr "ID uređaja: %1"
 
 #: DeviceModel.cpp:337
 #, kde-format

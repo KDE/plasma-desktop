@@ -9,21 +9,21 @@
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2008, 2009.
 # pan93412 <pan93412@gmail.com>, 2019.
 # Chaoting Liu <brli@chakralinux.org>, 2021.
-# SPDX-FileCopyrightText: 2022, 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2022-2023, 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-12 01:04+0000\n"
-"PO-Revision-Date: 2023-11-10 23:22+0900\n"
+"PO-Revision-Date: 2026-11-19 22:29+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 27.03.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,10 +41,9 @@ msgid "Unable to change NTP settings"
 msgstr "無法變更 NTP 設定"
 
 #: dateandtime.cpp:249
-#, fuzzy, kde-format
-#| msgid "Unable to change NTP settings"
+#, kde-format
 msgid "Permission to change NTP setting denied"
-msgstr "無法變更 NTP 設定"
+msgstr "沒有權限變更 NTP 設定"
 
 #: dateandtime.cpp:261 main.cpp:89
 #, kde-format
@@ -54,18 +53,17 @@ msgstr "無法設定目前時間"
 #: dateandtime.cpp:263
 #, kde-format
 msgid "Permission to change date and time setting denied"
-msgstr ""
+msgstr "沒有權限變更日期與時間設定"
 
 #: dateandtime.cpp:274
-#, fuzzy, kde-format
-#| msgid "Unable to set timezone"
+#, kde-format
 msgid "Unable to set time zone"
 msgstr "無法設定時區"
 
 #: dateandtime.cpp:276
 #, kde-format
 msgid "Permission to change time zone denied"
-msgstr ""
+msgstr "沒有權限變更時區設定"
 
 #: main.cpp:101
 #, kde-format
@@ -73,27 +71,25 @@ msgid "Unable to set timezone"
 msgstr "無法設定時區"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "Set date and time &automatically"
+#, kde-format
 msgctxt "@option"
 msgid "Set date and time automatically"
-msgstr "自動設定日期與時刻(&A)"
+msgstr "自動設定日期與時間"
 
 #: ui/main.qml:54
 #, kde-format
 msgctxt "@action:button as in set the current time on the machine"
 msgid "Set Time"
-msgstr ""
+msgstr "設定時間"
 
 #: ui/main.qml:68
 #, kde-format
 msgctxt "@action:button as in set the current date on the machine"
 msgid "Set Date"
-msgstr ""
+msgstr "設定日期"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Time Zone"
+#, kde-format
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "時區"

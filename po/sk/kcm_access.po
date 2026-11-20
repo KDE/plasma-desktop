@@ -727,7 +727,7 @@ msgstr "Zoom & Magnifier"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Text Size"
-msgstr ""
+msgstr "Veľkosť textu"
 
 #: ui/main.qml:39
 #, kde-format
@@ -1013,14 +1013,15 @@ msgid ""
 "keeps their proportions; on low-resolution screens, some small graphics may "
 "look slightly blurry."
 msgstr ""
+"Odporúčané vo väčšine situácií. Zväčší text aj všetko ostatné a zachová ich "
+"proporcie; na obrazovkách s nízkym rozlíšením môže niektorá drobná grafika "
+"vyzerať mierne rozmazane."
 
 #: ui/TextSize.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Display Scale…"
-msgstr "Configure Shortcuts…"
+msgstr "Nastaviť mierku zobrazenia…"
 
 #: ui/TextSize.qml:25
 #, kde-format
@@ -1030,14 +1031,14 @@ msgid ""
 "changes can make text no longer fit or look good next to icons and other "
 "elements."
 msgstr ""
+"Vhodné iba na malé zmeny veľkosti. Mení iba text, takže pri veľkých zmenách "
+"sa text nemusí zmestiť alebo nemusí dobre vyzerať vedľa ikon a iných prvkov."
 
 #: ui/TextSize.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Fonts…"
-msgstr "Configure Shortcuts…"
+msgstr "Nastaviť písma…"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format

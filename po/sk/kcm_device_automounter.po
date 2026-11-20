@@ -126,11 +126,10 @@ msgid "Disconnected Devices"
 msgstr "Odpojené zariadenia"
 
 #: DeviceModel.cpp:317 DeviceModel.cpp:326
-#, fuzzy, kde-format
-#| msgid "UDI: %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is a UUID or device identifier"
 msgid "Device ID: %1"
-msgstr "UDI: %1"
+msgstr "ID zariadenia: %1"
 
 #: DeviceModel.cpp:337
 #, kde-format

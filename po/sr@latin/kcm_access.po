@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-18 01:12+0000\n"
-"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"PO-Revision-Date: 2026-11-19 09:26+0100\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
@@ -733,7 +733,7 @@ msgstr "Uveličanje i uveličavač"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Text Size"
-msgstr ""
+msgstr "Veličina teksta"
 
 #: ui/main.qml:39
 #, kde-format
@@ -1027,14 +1027,15 @@ msgid ""
 "keeps their proportions; on low-resolution screens, some small graphics may "
 "look slightly blurry."
 msgstr ""
+"Preporučeno u većini situacija. Uvećava tekst i sve ostalo uz očuvanje "
+"proporcija; na ekranima niske rezolucije neki mali grafički elementi mogu "
+"izgledati malo mutno."
 
 #: ui/TextSize.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Display Scale…"
-msgstr "Podesi prečice…"
+msgstr "Podesi razmeru ekrana…"
 
 #: ui/TextSize.qml:25
 #, kde-format
@@ -1044,14 +1045,15 @@ msgid ""
 "changes can make text no longer fit or look good next to icons and other "
 "elements."
 msgstr ""
+"Pogodno samo za male izmene veličine. Menja samo tekst, pa velike izmene "
+"mogu učiniti da tekst više ne staje ili ne izgleda dobro pored ikonica i "
+"drugih elemenata."
 
 #: ui/TextSize.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Fonts…"
-msgstr "Podesi prečice…"
+msgstr "Podesi fontove…"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format

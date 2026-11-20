@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-18 01:12+0000\n"
-"PO-Revision-Date: 2026-09-03 19:34+0300\n"
+"PO-Revision-Date: 2026-11-19 10:41+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -737,7 +737,7 @@ msgstr "Лупа та збільшувальне скло"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Text Size"
-msgstr ""
+msgstr "Розмір шрифту"
 
 #: ui/main.qml:39
 #, kde-format
@@ -1033,14 +1033,15 @@ msgid ""
 "keeps their proportions; on low-resolution screens, some small graphics may "
 "look slightly blurry."
 msgstr ""
+"Рекомендовано в більшості випадків. Збільшує текст та інші елементи, "
+"зберігаючи їхні пропорції; на екранах із низькою роздільною здатністю деякі "
+"дрібні графічні об’єкти можуть виглядати дещо розмитими."
 
 #: ui/TextSize.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Display Scale…"
-msgstr "Налаштувати скорочення…"
+msgstr "Налаштувати масштабування дисплея…"
 
 #: ui/TextSize.qml:25
 #, kde-format
@@ -1050,14 +1051,15 @@ msgid ""
 "changes can make text no longer fit or look good next to icons and other "
 "elements."
 msgstr ""
+"Підходить лише для незначних змін розміру. Змінюється лише текст, тому через "
+"суттєві зміни він може перестати вміщуватися або мати непривабливий вигляд "
+"поруч із піктограмами та іншими елементами."
 
 #: ui/TextSize.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Fonts…"
-msgstr "Налаштувати скорочення…"
+msgstr "Налаштувати шрифти…"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format

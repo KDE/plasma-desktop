@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-18 01:12+0000\n"
-"PO-Revision-Date: 2026-09-15 14:56+0900\n"
+"PO-Revision-Date: 2026-11-19 22:28+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "dot tw>\n"
-"X-Generator: Lokalize 26.11.70\n"
+"X-Generator: Lokalize 27.03.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: kcmaccess.cpp:122 kcmaccess.cpp:150
@@ -701,7 +701,7 @@ msgstr "縮放與放大鏡"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Text Size"
-msgstr ""
+msgstr "文字大小"
 
 #: ui/main.qml:39
 #, kde-format
@@ -983,14 +983,14 @@ msgid ""
 "keeps their proportions; on low-resolution screens, some small graphics may "
 "look slightly blurry."
 msgstr ""
+"大部分情況下建議使用此選項。這會讓文字與其他一切變得更大並維持它們的寬高比；"
+"在低解析度的螢幕上，有些比較小的圖形可能會有點模糊。"
 
 #: ui/TextSize.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Display Scale…"
-msgstr "設定快捷鍵…"
+msgstr "設定顯示器縮放…"
 
 #: ui/TextSize.qml:25
 #, kde-format
@@ -1000,14 +1000,14 @@ msgid ""
 "changes can make text no longer fit or look good next to icons and other "
 "elements."
 msgstr ""
+"只適合微幅修改大小的情況。只改變文字大小，因此數值太大的時候會使文字空間不夠"
+"或是在圖示等元件旁的顯示效果變糟。"
 
 #: ui/TextSize.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Fonts…"
-msgstr "設定快捷鍵…"
+msgstr "設定字型…"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format

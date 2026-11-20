@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 01:10+0000\n"
-"PO-Revision-Date: 2026-04-23 16:38+0200\n"
+"PO-Revision-Date: 2026-11-18 10:20+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -238,22 +238,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Text Cursor"
-msgstr ""
+msgstr "Cursore di testo"
 
 #: ui/main.qml:314
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Double-click interval:"
+#, kde-format
 msgctxt "@option:check followed by a spinbox"
 msgid "Blink with interval:"
-msgstr "Intervallo per il doppio clic:"
+msgstr "Lampeggia con un intervallo di:"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgid "Double click interval"
+#, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Text cursor blink interval"
-msgstr "Intervallo per il doppio clic"
+msgstr "Intervallo di lampeggiamento del cursore di testo"
 
 #: ui/main.qml:358
 #, kde-format
@@ -263,6 +260,9 @@ msgid ""
 "browsers. May be ignored by apps with their own cursor settings, such as "
 "some terminals and code editors."
 msgstr ""
+"Si applica alle applicazioni KDE, Qt e GTK, inclusi i browser basati su "
+"Firefox e Chromium. Può essere ignorato dalle applicazioni che dispongono di "
+"impostazioni del cursore proprie, come alcuni terminali ed editor di codice."
 
 #: ui/main.qml:364
 #, kde-format
@@ -404,6 +404,8 @@ msgstr "Intervallo per il doppio clic"
 #, kde-format
 msgid "Text cursor blink rate, 0 disables blinking"
 msgstr ""
+"Frequenza di lampeggiamento del cursore di testo; 0 disattiva il "
+"lampeggiamento"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 01:10+0000\n"
-"PO-Revision-Date: 2026-05-03 23:07+0200\n"
+"PO-Revision-Date: 2026-11-19 03:39+0100\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -238,22 +238,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Text Cursor"
-msgstr ""
+msgstr "Textový kurzor"
 
 #: ui/main.qml:314
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Double-click interval:"
+#, kde-format
 msgctxt "@option:check followed by a spinbox"
 msgid "Blink with interval:"
-msgstr "Interval dvojkliku:"
+msgstr "Blikání s intervalem:"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgid "Double click interval"
+#, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Text cursor blink interval"
-msgstr "Interval dvojkliku"
+msgstr "Interval blikání textového kurzoru"
 
 #: ui/main.qml:358
 #, kde-format
@@ -263,6 +260,9 @@ msgid ""
 "browsers. May be ignored by apps with their own cursor settings, such as "
 "some terminals and code editors."
 msgstr ""
+"Platí pro aplikace KDE, Qt a GTK, včetně prohlížečů založených na Firefoxu a "
+"Chromiu. Aplikace s vlastním nastavením kurzoru, jako jsou například některé "
+"terminály a editory kódu, mohou toto nastavení ignorovat."
 
 #: ui/main.qml:364
 #, kde-format
@@ -400,7 +400,7 @@ msgstr "Interval dvojkliku"
 #: workspaceoptions_kdeglobalssettings.kcfg:35
 #, kde-format
 msgid "Text cursor blink rate, 0 disables blinking"
-msgstr ""
+msgstr "Rychlost blikání textového kurzoru; hodnota 0 blikání vypne"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

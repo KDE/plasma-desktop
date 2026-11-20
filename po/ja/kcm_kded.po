@@ -1,9 +1,9 @@
 # Translation of kcmkded into Japanese.
-# SPDX-FileCopyrightText: 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # This file is distributed under the same license as the kdebase package.
 # Taiki Komoda <kom@kde.gr.jp>, 2004.
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2006, 2008.
 # Fumiaki Okushi <okushi@kde.gr.jp>, 2007.
+# SPDX-FileCopyrightText: 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 #
 msgid ""
@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-07 00:47+0000\n"
-"PO-Revision-Date: 2026-05-17 18:17+0900\n"
+"PO-Revision-Date: 2026-11-14 11:24+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
-"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.08.3\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -26,17 +26,17 @@ msgstr ""
 #: kcmkded.cpp:117
 #, kde-format
 msgid "Failed to stop service: %1"
-msgstr "サービスの停止に失敗しました: %1"
+msgstr "サービスの停止に失敗しました。エラー内容: %1"
 
 #: kcmkded.cpp:119
 #, kde-format
 msgid "Failed to start service: %1"
-msgstr "サービスの開始に失敗しました: %1"
+msgstr "サービスの開始に失敗しました。エラー内容: %1"
 
 #: kcmkded.cpp:126
 #, kde-format
 msgid "Failed to stop service."
-msgstr "サービスの停止に失敗しました:。"
+msgstr "サービスの停止に失敗しました。"
 
 #: kcmkded.cpp:128
 #, kde-format
@@ -47,7 +47,8 @@ msgstr "サービスの開始に失敗しました。"
 #, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
-"KDE サービスマネージャ (kded6) に保存された変更を通知できませんでした: %1"
+"KDE サービスマネージャ (kded6) に保存された変更を通知できませんでした。エラー"
+"内容: %1"
 
 #: ui/main.qml:48
 #, kde-kuit-format
@@ -56,8 +57,8 @@ msgid ""
 "If you're disabling something here to work around an issue, please <link "
 "url='%1'>submit a bug report about it as well.</link>"
 msgstr ""
-"不具合を回避する目的でサービスを無効化しようとしている場合は、<link url='%1'>"
-"バグ報告</link> も行うようご協力をお願いします。"
+"不具合を回避する目的でサービスを無効化する場合は、<link url='%1'>バグ報告</"
+"link> も行うようご協力をお願いします。"
 
 #: ui/main.qml:55
 #, kde-format

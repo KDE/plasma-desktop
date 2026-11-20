@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Anne-Marie Mahfouf <annemarie.mahfouf@free.fr>, 2009, 2010.
 # Anne-Marie Mahfouf <annma@kde.org>, 2010, 2011, 2012.
-# SPDX-FileCopyrightText: 2013, 2024, 2025, 2026 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2013, 2024-2026 Xavier Besnard <xavier.besnard@kde.org>
 # Vincent Pinon <vpinon@kde.org>, 2017.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019, 2020.
 # SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Xavier Besnard <xavier.besnard@kde.org>
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 01:10+0000\n"
-"PO-Revision-Date: 2026-04-24 08:13+0200\n"
+"PO-Revision-Date: 2026-11-18 20:40+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.3\n"
 "X-Text-Markup: kde4\n"
 
 #: ui/main.qml:25
@@ -246,22 +246,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Text Cursor"
-msgstr ""
+msgstr "Pointeur de texte"
 
 #: ui/main.qml:314
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Double-click interval:"
+#, kde-format
 msgctxt "@option:check followed by a spinbox"
 msgid "Blink with interval:"
-msgstr "Intervalle d'un double-clic :"
+msgstr "Clignotement avec intervalle :"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgid "Double click interval"
+#, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Text cursor blink interval"
-msgstr "Intervalle d'un double-clic :"
+msgstr "Intervalle de clignotement du pointeur de texte"
 
 #: ui/main.qml:358
 #, kde-format
@@ -271,6 +268,10 @@ msgid ""
 "browsers. May be ignored by apps with their own cursor settings, such as "
 "some terminals and code editors."
 msgstr ""
+"S’applique aux applications de KDE, avec Qt et avec GTK, y compris les "
+"navigateurs reposant sur Firefox et Chromium. Peut être ignoré par les "
+"applications ayant leur propre configuration de pointeur, comme dans "
+"certains terminaux et éditeurs de code."
 
 #: ui/main.qml:364
 #, kde-format
@@ -414,6 +415,8 @@ msgstr "Intervalle d'un double-clic :"
 #, kde-format
 msgid "Text cursor blink rate, 0 disables blinking"
 msgstr ""
+"Fréquence de clignotement du curseur de texte  une valeur de 0 désactive le "
+"clignotement."
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

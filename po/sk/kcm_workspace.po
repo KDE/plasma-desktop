@@ -234,22 +234,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Text Cursor"
-msgstr ""
+msgstr "Textový kurzor"
 
 #: ui/main.qml:314
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Double-click interval:"
+#, kde-format
 msgctxt "@option:check followed by a spinbox"
 msgid "Blink with interval:"
-msgstr "Interval dvojitého kliknutia:"
+msgstr "Blikať s intervalom:"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgid "Double click interval"
+#, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Text cursor blink interval"
-msgstr "Interval dvojitého kliknutia"
+msgstr "Interval blikania textového kurzora"
 
 #: ui/main.qml:358
 #, kde-format
@@ -259,6 +256,9 @@ msgid ""
 "browsers. May be ignored by apps with their own cursor settings, such as "
 "some terminals and code editors."
 msgstr ""
+"Platí pre aplikácie KDE, Qt a GTK vrátane Firefoxu a prehliadačov založených "
+"na Chromiu. Aplikácie s vlastnými nastaveniami kurzora, ako niektoré "
+"terminály a editory kódu, to môžu ignorovať."
 
 #: ui/main.qml:364
 #, kde-format
@@ -398,7 +398,7 @@ msgstr "Interval dvojitého kliknutia"
 #: workspaceoptions_kdeglobalssettings.kcfg:35
 #, kde-format
 msgid "Text cursor blink rate, 0 disables blinking"
-msgstr ""
+msgstr "Rýchlosť blikania textového kurzora, 0 vypne blikanie"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9
