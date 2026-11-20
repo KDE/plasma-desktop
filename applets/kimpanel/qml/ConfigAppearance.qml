@@ -52,10 +52,11 @@ KCM.SimpleKCM {
             }
 
             QQC2.TextField {
+                id: demoTextField
                 enabled: useCustomFont.checked
                 readOnly: true
                 text: i18nc("@info The selected font family (%1) and font size (%2)", "%1 %2 pt", font.family, font.pointSize)
-                font: root.cfg_font
+                font: !root.cfg_font || root.cfg_font.family === "" ? Kirigami.Theme.defaultFont : root.cfg_font
                 Layout.fillHeight: true
             }
 
@@ -65,7 +66,10 @@ KCM.SimpleKCM {
                 text: i18nc("@action:button opens font dialog", "Choose Font…")
                 display: QQC2.AbstractButton.IconOnly
                 icon.name: "document-edit"
-                onClicked: fontDialog.open();
+                onClicked: {
+                    fontDialog.open();
+                    fontDialog.selectedFont = demoTextField.font
+                }
 
                 QQC2.ToolTip {
                     visible: chooseFontButton.hovered
