@@ -243,6 +243,8 @@ PlasmoidItem {
         hasActiveTask: tasksModel.count > 0 && tasksModel.activeTask.valid
         showsOnlyCurrentScreen: Plasmoid.configuration.showOnlyCurrentScreen
 
+        onActivationKeysChanged: console.log(activationKeys, activationKeys[0])
+
         onAddLauncher: url => {
             tasks.addLauncher(url);
         }
@@ -547,6 +549,7 @@ PlasmoidItem {
 
                     delegate: Task {
                         tasksRoot: tasks
+                        showShortcutHelper: backend.showShortcutHelper
                     }
                 }
             }

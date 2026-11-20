@@ -49,6 +49,7 @@ target_link_libraries(org.kde.plasma.taskmanager PRIVATE
                       Plasma::ActivitiesStats
                       KF6::ConfigGui
                       KF6::GlobalAccel
+                      KF6::GuiAddons
                       KF6::I18n
                       KF6::KIOCore
                       KF6::KIOGui

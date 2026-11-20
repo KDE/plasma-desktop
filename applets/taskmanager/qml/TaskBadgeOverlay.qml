@@ -12,6 +12,12 @@ import org.kde.plasma.plasmoid
 Item {
     id: root
 
+    property alias badgeAnchors: badgeRect.anchors
+    property alias badgeText: badgeRect.text
+    property alias badgeVisible: badgeRect.visible
+    property alias badgeType: badgeRect.type
+    property alias badgeFont: badgeRect.font
+
     readonly property bool verySmallIcon:
         icon.width < Kirigami.Units.iconSizes.smallMedium ||
         icon.height < Kirigami.Units.iconSizes.smallMedium
@@ -81,30 +87,14 @@ Item {
     Kirigami.Badge {
         id: badgeRect
 
-        anchors.right: parent.right
-        anchors.rightMargin: root.extraHorizontalOffset
         y: root.badgeMaskY + root.offset
 
         Behavior on y {
             NumberAnimation { duration: Kirigami.Units.longDuration }
         }
 
-        visible: task.smartLauncherItem.countVisible
-
         padding: Math.floor(root.badgeScaleFactor * 2)
 
         font.pointSize: Math.floor((Kirigami.Theme.smallFont.pointSize * root.badgeScaleFactor))
-
-        text: {
-            let unreadCount = task.smartLauncherItem.count;
-            if (unreadCount > 9999) {
-                return i18nc("'k' is a suffix for 'thousand'; keep to one character or else the badge could overflow!", "9k+");
-            } else if (unreadCount > 999) {
-                let rounded = Math.floor(unreadCount / 1000);
-                return i18nc("'k' is a suffix for 'thousand'; keep to one character or else the badge could overflow!", "%1k", rounded);
-            } else {
-               return unreadCount.toLocaleString(Qt.locale(), 'f', 0);
-            }
-        }
     }
 }

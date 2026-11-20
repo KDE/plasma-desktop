@@ -36,7 +36,9 @@
 #include <QVersionNumber>
 
 #include <KGlobalAccel>
+#include <KModifierKeyInfo>
 
+#include <memory>
 #include <mutex>
 
 #include <PlasmaActivities/Consumer>
@@ -55,6 +57,34 @@ using namespace KAStats::Terms;
 static constexpr int NoApplications = 2; // kactivitymanager StatsPlugin WhatToRemember.
 
 QVector<Backend *> Backend::s_instances;
+
+MetaTracker Backend::s_metaTracker;
+
+QList<QChar> Backend::s_activationKeys = QList<QChar>(10);
+
+MetaTracker::MetaTracker()
+    : m_modifierInfo(std::make_unique<KModifierKeyInfo>())
+    , m_timer(std::make_unique<QTimer>())
+{
+    m_timer->setInterval(500);
+    m_timer->setSingleShot(true);
+    QObject::connect(m_modifierInfo.get(), &KModifierKeyInfo::keyPressed, m_timer.get(), [this](Qt::Key key, bool pressed) {
+        if (key != Qt::Key_Meta) {
+            m_timer->stop();
+            return;
+        } else {
+            if (pressed) {
+                m_timer->start();
+            } else {
+                m_timer->stop();
+                Backend::dispatchMetaHold(false);
+            }
+        }
+    });
+    QObject::connect(m_timer.get(), &QTimer::timeout, m_timer.get(), []() {
+        Backend::dispatchMetaHold(true);
+    });
+};
 
 Backend::Backend(QObject *parent)
     : QObject(parent)
@@ -117,6 +147,15 @@ void Backend::setShowsOnlyCurrentScreen(bool shows)
         m_showsOnlyCurrentScreen = shows;
         Q_EMIT showsOnlyCurrentScreenChanged();
     }
+}
+
+void Backend::setShowShortcutHelper(bool show)
+{
+    if (m_showShortcutHelper == show) {
+        return;
+    }
+    m_showShortcutHelper = show;
+    Q_EMIT showShortcutHelperChanged();
 }
 
 QUrl Backend::tryDecodeApplicationsUrl(const QUrl &launcherUrl)
@@ -555,6 +594,11 @@ qint64 Backend::parentPid(qint64 pid) const
     return -1;
 }
 
+QList<QChar> Backend::activationKeys() const
+{
+    return Backend::s_activationKeys;
+}
+
 void Backend::setupShortcuts()
 {
     static std::once_flag once;
@@ -605,6 +649,40 @@ void Backend::setupShortcuts()
     });
 }
 
+bool Backend::checkHighlightableShortcuts()
+{
+    QList<QChar> activationKeys = QList<QChar>(10);
+    for (int i = 0; i < 10; ++i) {
+        const int entryNumber = i + 1;
+        auto bindings = KGlobalAccel::self()->globalShortcut(QStringLiteral("plasmashell"),
+                                                             QStringLiteral("activate task manager entry %1").arg(QString::number(entryNumber)));
+
+        auto value = std::find_if(bindings.cbegin(), bindings.cend(), [](auto sequence) {
+            auto modifier = sequence[0].keyboardModifiers();
+            auto key = sequence[0].key();
+            return sequence.count() == 1 && modifier == Qt::MetaModifier && ((key >= Qt::Key_0 && key <= Qt::Key_9) || (key >= Qt::Key_A && key <= Qt::Key_Z));
+        });
+        if (value < bindings.cend()) {
+            activationKeys[i] = QChar::fromLatin1((*value)[0].key());
+        }
+    }
+    setActivationKeys(activationKeys);
+    return std::any_of(activationKeys.cbegin(), activationKeys.cend(), [](QChar key) {
+        return !key.isNull();
+    });
+}
+
+void Backend::setActivationKeys(QList<QChar> newActivationKeys)
+{
+    if (s_activationKeys == newActivationKeys) {
+        return;
+    }
+    s_activationKeys = newActivationKeys;
+    for (auto *instance : std::as_const(s_instances)) {
+        Q_EMIT instance->activationKeysChanged();
+    }
+}
+
 Backend *Backend::findTargetBackend()
 {
     // Prefer a bar that shows tasks from all screens so that cycling
@@ -631,31 +709,46 @@ Backend *Backend::findTargetBackend()
     return fallback;
 }
 
-void Backend::dispatchActivateTaskAtIndex(int index)
+Backend *Backend::findIndexBackend()
 {
     // Prefer the same priority order as the other task shortcuts:
     // 1. Non-screen-filtered taskbar with the active task
     // 2. Screen-filtered taskbar with the active task
-    if (auto *target = findTargetBackend()) {
-        Q_EMIT target->activateTaskAtIndexRequested(index);
-        return;
+    auto target = Backend::findTargetBackend();
+    if (target) {
+        return target;
     }
 
     // If no task is active on any taskmanager (e.g. the user wants to
     // launch a pinned app), fallback: prefer a non-screen-filtered
     // instance, then the first available instance.
+
     Backend *fallback = nullptr;
     for (auto *instance : std::as_const(s_instances)) {
         if (!instance->m_showsOnlyCurrentScreen) {
-            Q_EMIT instance->activateTaskAtIndexRequested(index);
-            return;
+            return instance;
         }
         if (!fallback) {
             fallback = instance;
         }
     }
-    if (fallback) {
-        Q_EMIT fallback->activateTaskAtIndexRequested(index);
+    return fallback;
+}
+
+void Backend::dispatchActivateTaskAtIndex(int index)
+{
+    if (auto *target = findIndexBackend()) {
+        Q_EMIT target->activateTaskAtIndexRequested(index);
+    }
+}
+
+void Backend::dispatchMetaHold(bool held)
+{
+    if (!checkHighlightableShortcuts()) {
+        return;
+    }
+    if (auto *target = findIndexBackend()) {
+        target->setShowShortcutHelper(held);
     }
 }
 

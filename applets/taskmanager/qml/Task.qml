@@ -58,6 +58,7 @@ PlasmaCore.ToolTipArea {
     property bool toolTipOpen: false
     property bool inPopup: false
     property bool isWindow: model.IsWindow
+    property bool showShortcutHelper: false
     property int childCount: model.ChildCount
     property int previousChildCount: 0
     property alias labelText: label.text
@@ -554,7 +555,24 @@ PlasmaCore.ToolTipArea {
         asynchronous: true
         active: height >= Kirigami.Units.iconSizes.small
                 && task.smartLauncherItem && task.smartLauncherItem.countVisible
-        source: "TaskBadgeOverlay.qml"
+                sourceComponent: TaskBadgeOverlay {
+                    id: countBadge
+
+                    badgeAnchors.right: countBadge.right
+                    badgeAnchors.rightMargin: extraHorizontalOffset
+                    badgeVisible: task.smartLauncherItem.countVisible && !task.showShortcutHelper
+                    badgeText: {
+                        let unreadCount = task.smartLauncherItem.count;
+                        if (unreadCount > 9999) {
+                            return i18nc("'k' is a suffix for 'thousand'; keep to one character or else the badge could overflow!", "9k+");
+                        } else if (unreadCount > 999) {
+                            let rounded = Math.floor(unreadCount / 1000);
+                            return i18nc("'k' is a suffix for 'thousand'; keep to one character or else the badge could overflow!", "%1k", rounded);
+                        } else {
+                            return unreadCount.toLocaleString(Qt.locale(), 'f', 0);
+                        }
+                    }
+                }
 
         function adjustMargin(isVertical: bool, size: real, margin: real): real {
             if (!size) {
@@ -609,6 +627,21 @@ PlasmaCore.ToolTipArea {
             height: width
             active: task.model.IsStartup
             sourceComponent: busyIndicator
+        }
+
+        Loader {
+            anchors.fill: parent
+            active: task.showShortcutHelper
+            sourceComponent: TaskBadgeOverlay {
+                id: shortcutHelperBadge
+
+                badgeAnchors.left: shortcutHelperBadge.left
+                badgeAnchors.bottom: shortcutHelperBadge.bottom
+                badgeVisible: task.index <= 9 && badgeText && badgeText != "\0"
+                badgeText: backend.activationKeys[task.index] || ""
+                badgeType: Kirigami.Badge.Positive
+                badgeFont.pointSize: 7
+            }
         }
     }
 
