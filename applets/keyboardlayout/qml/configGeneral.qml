@@ -6,7 +6,7 @@
 
 import QtQuick
 import QtQuick.Layouts
-import QtQuick.Controls
+import QtQuick.Controls as QQC2
 
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.workspace.keyboardlayout
@@ -25,84 +25,97 @@ SimpleKCM {
                                                                             : ""
     KeyboardLayout { id: keyboardLayout }
 
-    Kirigami.FormLayout {
-        RadioButton {
-            id: showLabel
-            Kirigami.FormData.label: i18nc("@title:group of radio buttons, options are language codes or images", "Display style:")
-            text: root.displayName.length > 0 ? root.displayName: root.layoutShortName
-            checked: root.cfg_displayStyle === 0
-            onToggled: root.cfg_displayStyle = 0;
-        }
-
-        RadioButton {
-            id: showFlag
-            checked: root.cfg_displayStyle === 1
-            onToggled: root.cfg_displayStyle = 1;
-            contentItem: RowLayout {
-                id: flagMissing
-                spacing: Kirigami.Units.smallSpacing
-                anchors.left: parent.left
-                anchors.leftMargin: showFlag.indicator.width + showFlag.spacing
-
-                // Deliberately using this instead of Image to preserve visual fidelity
-                // with what the widget will show
-                Kirigami.Icon {
-                    id: flagImage
-                    implicitWidth: Kirigami.Units.iconSizes.medium
-                    implicitHeight: Kirigami.Units.iconSizes.medium
-                    source: KCMKeyboard.Flags.getIcon(root.layoutShortName)
-                    visible: valid
-                }
-
-                Kirigami.Icon {
-                    implicitWidth: Kirigami.Units.iconSizes.smallMedium
-                    implicitHeight: Kirigami.Units.iconSizes.smallMedium
-                    source: "emblem-warning"
-                    visible: !flagImage.visible
-
-                }
-                Label {
-                    text: i18nc("@info:placeholder Make this translation as short as possible", "No flag available")
-                    visible: !flagImage.visible
-
+    Kirigami.Form {
+        Kirigami.FormGroup {
+            QQC2.ButtonGroup { id: displayButtonGroup}
+            Kirigami.FormEntry {
+                title: i18nc("@title:group of radio buttons, options are language codes or images", "Display style:")
+                contentItem:  QQC2.RadioButton {
+                    id: showLabel
+                    QQC2.ButtonGroup.group: displayButtonGroup
+                    text: root.displayName.length > 0 ? root.displayName: root.layoutShortName
+                    checked: root.cfg_displayStyle === 0
+                    onToggled: root.cfg_displayStyle = 0;
                 }
             }
-        }
 
-        RadioButton {
-            id: showLabelOverFlag
-            checked: root.cfg_displayStyle === 2
-            onToggled: root.cfg_displayStyle = 2;
-            contentItem: Kirigami.Icon {
-                // Deliberately using this instead of Image to preserve visual fidelity
-                // with what the widget will show
-                id: labelOverFlagImage
-                width: Kirigami.Units.iconSizes.medium
-                height: Kirigami.Units.iconSizes.medium
-                anchors.left: parent.left
-                anchors.leftMargin: showLabelOverFlag.indicator.width + showLabelOverFlag.spacing
-                source: KCMKeyboard.Flags.getIcon(root.layoutShortName)
-                visible: valid
+            Kirigami.FormEntry {
+                contentItem: QQC2.RadioButton {
+                    id: showFlag
+                    QQC2.ButtonGroup.group: displayButtonGroup
+                    checked: root.cfg_displayStyle === 1
+                    onToggled: root.cfg_displayStyle = 1;
+                    contentItem: RowLayout {
+                        id: flagMissing
+                        spacing: Kirigami.Units.smallSpacing
+                        anchors.left: parent.left
+                        anchors.leftMargin: showFlag.indicator.width + showFlag.spacing
+                        anchors.verticalCenter: parent.verticalCenter
 
-                WorkspaceComponents.BadgeOverlay {
-                    anchors.bottom: parent.bottom
-                    anchors.right: parent.right
+                        // Deliberately using this instead of Image to preserve visual fidelity
+                        // with what the widget will show
+                        Kirigami.Icon {
+                            id: flagImage
+                            implicitWidth: Kirigami.Units.iconSizes.medium
+                            implicitHeight: Kirigami.Units.iconSizes.medium
+                            source: KCMKeyboard.Flags.getIcon(root.layoutShortName)
+                            visible: valid
+                        }
 
-                    text: showLabel.text
-                    icon: parent
+                        Kirigami.Icon {
+                            implicitWidth: Kirigami.Units.iconSizes.smallMedium
+                            implicitHeight: Kirigami.Units.iconSizes.smallMedium
+                            source: "emblem-warning"
+                            visible: !flagImage.visible
+
+                        }
+                        QQC2.Label {
+                            text: i18nc("@info:placeholder Make this translation as short as possible", "No flag available")
+                            visible: !flagImage.visible
+
+                        }
+                    }
                 }
             }
-        }
 
-        Kirigami.Separator {
-            Kirigami.FormData.isSection: true
-        }
+            Kirigami.FormEntry {
+                contentItem: QQC2.RadioButton {
+                    id: showLabelOverFlag
+                    QQC2.ButtonGroup.group: displayButtonGroup
+                    checked: root.cfg_displayStyle === 2
+                    onToggled: root.cfg_displayStyle = 2;
+                    contentItem: Kirigami.Icon {
+                        // Deliberately using this instead of Image to preserve visual fidelity
+                        // with what the widget will show
+                        id: labelOverFlagImage
+                        width: Kirigami.Units.iconSizes.medium
+                        height: Kirigami.Units.iconSizes.medium
+                        anchors.left: parent.left
+                        anchors.leftMargin: showLabelOverFlag.indicator.width + showLabelOverFlag.spacing
+                        source: KCMKeyboard.Flags.getIcon(root.layoutShortName)
+                        visible: valid
 
-        Button {
-            Kirigami.FormData.label: i18nc("@label prefixed to button, as in 'keyboard layouts'", "Layouts:")
-            text: i18nc("@action:button opens kcm_keyboard", "Configure…")
-            icon.name: "configure"
-            onClicked: KCMLauncher.openSystemSettings("kcm_keyboard", "--tab=layouts")
+                        WorkspaceComponents.BadgeOverlay {
+                            anchors.bottom: parent.bottom
+                            anchors.right: parent.right
+
+                            text: showLabel.text
+                            icon: parent
+                        }
+                    }
+                }
+            }
+
+            Kirigami.FormSeparator { }
+
+            Kirigami.FormAction {
+                action: Kirigami.Action {
+                    text: i18nc("@action:button opens kcm_keyboard", "Configure Layouts…")
+                    icon.name: "preferences-desktop-keyboard"
+                    onTriggered: KCMLauncher.openSystemSettings("kcm_keyboard", "--tab=layouts")
+                }
+            }
+
         }
     }
 }
