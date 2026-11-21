@@ -22,84 +22,102 @@ KCM.SimpleKCM {
     property font cfg_font
     property bool cfg_scaleIconsToFit
 
-    Kirigami.FormLayout {
-        QQC2.ButtonGroup { id: layoutRadioGroup }
-        QQC2.ButtonGroup { id: scaleRadioGroup }
+    Kirigami.Form {
+        Kirigami.FormGroup {
+            QQC2.ButtonGroup { id: layoutRadioGroup }
 
-        QQC2.RadioButton {
-            id: verticalLayoutRadioButton
-            Kirigami.FormData.label: i18nc("@title:group for radiobuttons", "Input method list:")
-            text: i18nc("@option:radio IM list orientation", "Vertical")
-            checked: root.cfg_vertical_lookup_table == true
-            onToggled: root.cfg_vertical_lookup_table = checked
-            QQC2.ButtonGroup.group: layoutRadioGroup
-        }
-        QQC2.RadioButton {
-            text: i18nc("@option:radio IM list orientation", "Horizontal")
-            checked: root.cfg_vertical_lookup_table == false
-            onToggled: root.cfg_vertical_lookup_table = !checked
-            QQC2.ButtonGroup.group: layoutRadioGroup
-        }
-
-        RowLayout {
-            Kirigami.FormData.label: i18nc("@title group font selection", "Font:")
-
-            QQC2.CheckBox {
-                id: useCustomFont
-                checked: !root.cfg_use_default_font
-                onClicked: root.cfg_use_default_font = !checked
-                text: i18nc("@option:check use custom font", "Use custom:")
+            Kirigami.FormEntry {
+                title: i18nc("@title:group for radiobuttons", "Input method list:")
+                contentItem: QQC2.RadioButton {
+                    id: verticalLayoutRadioButton
+                    text: i18nc("@option:radio IM list orientation", "Vertical")
+                    checked: root.cfg_vertical_lookup_table == true
+                    onToggled: root.cfg_vertical_lookup_table = checked
+                    QQC2.ButtonGroup.group: layoutRadioGroup
+                }
             }
-
-            QQC2.TextField {
-                enabled: useCustomFont.checked
-                readOnly: true
-                text: i18nc("@info The selected font family (%1) and font size (%2)", "%1 %2 pt", font.family, font.pointSize)
-                font: root.cfg_font
-                Layout.fillHeight: true
-            }
-
-            QQC2.Button {
-                id: chooseFontButton
-                enabled: useCustomFont.checked
-                text: i18nc("@action:button opens font dialog", "Choose Font…")
-                display: QQC2.AbstractButton.IconOnly
-                icon.name: "document-edit"
-                onClicked: fontDialog.open();
-
-                QQC2.ToolTip {
-                    visible: chooseFontButton.hovered
-                    text: chooseFontButton.text
+            Kirigami.FormEntry {
+                contentItem: QQC2.RadioButton {
+                    text: i18nc("@option:radio IM list orientation", "Horizontal")
+                    checked: root.cfg_vertical_lookup_table == false
+                    onToggled: root.cfg_vertical_lookup_table = !checked
+                    QQC2.ButtonGroup.group: layoutRadioGroup
                 }
             }
         }
+        Kirigami.FormGroup {
+            Kirigami.FormEntry {
+                title: i18nc("@title group font selection", "Font:")
+                contentItem: QQC2.CheckBox {
+                    id: useCustomFont
+                    checked: !root.cfg_use_default_font
+                    onClicked: root.cfg_use_default_font = !checked
+                    text: i18nc("@option:check use custom font", "Use custom:")
+                }
+                trailingItems: [
+                    QQC2.TextField {
+                        id: demoTextField
+                        Layout.fillWidth: true
+                        Layout.leftMargin: Kirigami.Units.smallSpacing
+                        enabled: useCustomFont.checked
+                        readOnly: true
+                        text: i18nc("@info The selected font family (%1) and font size (%2)", "%1 %2 pt", font.family, font.pointSize)
+                        font: !root.cfg_font || root.cfg_font.family === "" ? Kirigami.Theme.defaultFont : root.cfg_font
+                        Layout.fillHeight: true
+                    },
 
-        QQC2.RadioButton {
-            Kirigami.FormData.label: i18nc("@title:group The arrangement of icons in the Panel", "Panel icon size:")
-            text: i18nc("@option:radio panel icon size", "Small")
-            checked: root.cfg_scaleIconsToFit == false
-            onToggled: root.cfg_scaleIconsToFit = !checked
-            QQC2.ButtonGroup.group: scaleRadioGroup
-        }
-        QQC2.RadioButton {
-            id: automaticScaleRadioButton
-            text: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
-                ? i18nc("@option:radio panel icon size", "Scale with Panel height")
-                : i18nc("@option:radio panel icon size", "Scale with Panel width")
-            checked: root.cfg_scaleIconsToFit == true
-            onToggled: root.cfg_scaleIconsToFit = checked
-            QQC2.ButtonGroup.group: scaleRadioGroup
-        }
+                    QQC2.Button {
+                        id: chooseFontButton
+                        enabled: useCustomFont.checked
+                        text: i18nc("@action:button opens font dialog", "Choose Font…")
+                        display: QQC2.AbstractButton.IconOnly
+                        icon.name: "document-edit"
+                        onClicked: {
+                            fontDialog.open();
+                            fontDialog.selectedFont = demoTextField.font
+                        }
 
-        QtDialogs.FontDialog {
-            id: fontDialog
-            title: i18nc("@title:window", "Select Font")
+                        QQC2.ToolTip.visible: hovered || visualFocus
+                        QQC2.ToolTip.text: text
+                        QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
 
-            selectedFont: !root.cfg_font || root.cfg_font.family === "" ? Kirigami.Theme.defaultFont : root.cfg_font
-
-            onAccepted: {
-                root.cfg_font = selectedFont
+                    }
+                ]
             }
+        }
+        Kirigami.FormGroup {
+            QQC2.ButtonGroup { id: scaleRadioGroup }
+            Kirigami.FormEntry {
+                title: i18nc("@title:group The arrangement of icons in the Panel", "Panel icon size:")
+                contentItem: QQC2.RadioButton {
+                    text: i18nc("@option:radio panel icon size", "Small")
+                    checked: root.cfg_scaleIconsToFit == false
+                    onToggled: root.cfg_scaleIconsToFit = !checked
+                    QQC2.ButtonGroup.group: scaleRadioGroup
+                }
+            }
+            Kirigami.FormEntry {
+                contentItem: QQC2.RadioButton {
+                    id: automaticScaleRadioButton
+                    text: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
+                        ? i18nc("@option:radio panel icon size", "Scale with Panel height")
+                        : i18nc("@option:radio panel icon size", "Scale with Panel width")
+                    checked: root.cfg_scaleIconsToFit == true
+                    onToggled: root.cfg_scaleIconsToFit = checked
+                    QQC2.ButtonGroup.group: scaleRadioGroup
+                }
+            }
+        }
+    }
+
+    QtDialogs.FontDialog {
+        id: fontDialog
+        title: i18nc("@title:window", "Select Font")
+
+        selectedFont: !root.cfg_font || root.cfg_font.family === "" ? Kirigami.Theme.defaultFont : root.cfg_font
+
+        onAccepted: {
+            root.cfg_font = selectedFont
         }
     }
 }
