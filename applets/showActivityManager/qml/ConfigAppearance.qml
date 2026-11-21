@@ -5,7 +5,7 @@
 */
 
 import QtQuick
-import QtQuick.Controls
+import QtQuick.Controls as QQC2
 
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.plasmoid
@@ -16,31 +16,36 @@ KCM.SimpleKCM {
     property alias cfg_showActivityIcon: radioCurrentActivityIcon.checked
     property alias cfg_showActivityName: checkShowActivityName.checked
 
-    Kirigami.FormLayout {
-        RadioButton {
-            id: radioCurrentActivityIcon
+    Kirigami.Form {
+        Kirigami.FormGroup {
+            QQC2.ButtonGroup { id: iconGroup }
 
-            Kirigami.FormData.label: i18nc("@title:group prefix for radiobutton group", "Icon:")
+            Kirigami.FormEntry {
+                title: i18nc("@title:group prefix for radiobutton group", "Icon:")
+                contentItem: QQC2.RadioButton {
+                    id: radioCurrentActivityIcon
+                    text: i18nc("@option:radio", "Show the current activity icon")
+                }
+            }
 
-            text: i18nc("@option:radio", "Show the current activity icon")
+            Kirigami.FormEntry {
+                contentItem: QQC2.RadioButton {
+                    id: radioGenericActivityIcon
+                    checked: !radioCurrentActivityIcon.checked
+                    text: i18nc("@option:radio", "Show the generic activity icon")
+                }
+            }
         }
 
-        RadioButton {
-            id: radioGenericActivityIcon
-            checked: !radioCurrentActivityIcon.checked
-            text: i18nc("@option:radio", "Show the generic activity icon")
-        }
-
-        Item { Kirigami.FormData.isSection: true }
-
-        CheckBox {
-            id: checkShowActivityName
-
+        Kirigami.FormGroup {
             enabled: Plasmoid.formFactor !== PlasmaCore.Types.Vertical
-
-            Kirigami.FormData.label: i18nc("@label prefix for checkbox", "Title:")
-
-            text: i18nc("@option:check title", "Show the current activity name")
+            Kirigami.FormEntry {
+                title: i18nc("@label prefix for checkbox", "Title:")
+                contentItem: QQC2.CheckBox {
+                    id: checkShowActivityName
+                    text: i18nc("@option:check title", "Show the current activity name")
+                }
+            }
         }
     }
 }
