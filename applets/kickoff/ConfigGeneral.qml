@@ -14,20 +14,17 @@ import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 
 import org.kde.plasma.core as PlasmaCore
-import org.kde.ksvg as KSvg
-import org.kde.iconthemes as KIconThemes
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 import org.kde.config as KConfig
 import org.kde.plasma.plasmoid
-
-import "code/tools.js" as Tools
+import org.kde.plasma.private.kicker as Kicker
 
 KCM.SimpleKCM {
     id: root
 
     property string cfg_menuLabel: menuLabel.text
-    property string cfg_icon: Plasmoid.configuration.icon
+    property alias cfg_icon: iconButton.iconName
     property alias cfg_appNameFormat: appNameFormat.currentIndex
     property bool cfg_paneSwap: Plasmoid.configuration.paneSwap
     property int cfg_favoritesDisplay: Plasmoid.configuration.favoritesDisplay
@@ -41,73 +38,11 @@ KCM.SimpleKCM {
     property alias cfg_switchCategoryOnHover: switchCategoryOnHoverCheckbox.checked
 
     Kirigami.FormLayout {
-        QQC2.Button {
+        Kicker.IconButton {
             id: iconButton
-
             Kirigami.FormData.label: i18nc("@label prefix for icon-only button", "Icon:")
-
-            implicitWidth: previewFrame.width + Kirigami.Units.smallSpacing * 2
-            implicitHeight: previewFrame.height + Kirigami.Units.smallSpacing * 2
-            hoverEnabled: true
-
-            Accessible.name: i18nc("@action:button", "Change Application Launcher's icon")
-            Accessible.description: i18nc("@info:whatsthis", "Current icon is %1. Click to open menu to change the current icon or reset to the default icon.", root.cfg_icon)
-            Accessible.role: Accessible.ButtonMenu
-
-            QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
-            QQC2.ToolTip.text: i18nc("@info:tooltip", "Icon name is \"%1\"", root.cfg_icon)
-            QQC2.ToolTip.visible: iconButton.hovered && root.cfg_icon.length > 0
-
-            KIconThemes.IconDialog {
-                id: iconDialog
-                onAccepted: {
-                    root.cfg_icon = iconName || Tools.defaultIconName;
-                }
-            }
-
-            onPressed: iconMenu.opened ? iconMenu.close() : iconMenu.open()
-
-            KSvg.FrameSvgItem {
-                id: previewFrame
-                anchors.centerIn: parent
-                imagePath: Plasmoid.formFactor === PlasmaCore.Types.Vertical || Plasmoid.formFactor === PlasmaCore.Types.Horizontal
-                        ? "widgets/panel-background" : "widgets/background"
-                width: Kirigami.Units.iconSizes.large + fixedMargins.left + fixedMargins.right
-                height: Kirigami.Units.iconSizes.large + fixedMargins.top + fixedMargins.bottom
-
-                Kirigami.Icon {
-                    anchors.centerIn: parent
-                    width: Kirigami.Units.iconSizes.large
-                    height: width
-                    source: Tools.iconOrDefault(Plasmoid.formFactor, root.cfg_icon)
-                }
-            }
-
-            QQC2.Menu {
-                id: iconMenu
-
-                // Appear below the button
-                y: parent.height
-
-                QQC2.MenuItem {
-                    text: i18nc("@item:inmenu Open icon chooser dialog", "Choose…")
-                    icon.name: "document-open-folder"
-                    Accessible.description: i18nc("@info:whatsthis", "Choose an icon for Application Launcher")
-                    onClicked: iconDialog.open()
-                }
-                QQC2.MenuItem {
-                    text: i18nc("@item:inmenu Reset icon to default", "Reset to default icon")
-                    icon.name: "edit-clear"
-                    enabled: root.cfg_icon !== Tools.defaultIconName
-                    onClicked: root.cfg_icon = Tools.defaultIconName
-                }
-                QQC2.MenuItem {
-                    text: i18nc("@action:inmenu", "Remove icon")
-                    icon.name: "delete"
-                    enabled: root.cfg_icon !== "" && menuLabel.text && Plasmoid.formFactor !== PlasmaCore.Types.Vertical
-                    onClicked: root.cfg_icon = ""
-                }
-            }
+            hasLabelText: menuLabel.text != ""
+            widgetName: i18nc("@label match translation with Kickoff's metadata.json", "Application Launcher")
         }
 
         Kirigami.ActionTextField {
@@ -123,7 +58,7 @@ KCM.SimpleKCM {
                 // If the user remove the icon and remove the text, without this, we'll have no icon and no text.
                 // This is to force the icon to be there.
                 if (!menuLabel.text) {
-                    root.cfg_icon = root.cfg_icon || Tools.defaultIconName
+                    root.cfg_icon = root.cfg_icon || Kicker.Tools.defaultIconName
                 }
             }
             rightActions: QQC2.Action {
@@ -133,7 +68,7 @@ KCM.SimpleKCM {
                 onTriggered: {
                     menuLabel.clear()
                     root.cfg_menuLabel = ""
-                    root.cfg_icon = root.cfg_icon || Tools.defaultIconName
+                    root.cfg_icon = root.cfg_icon || Kicker.Tools.defaultIconName
                 }
             }
         }

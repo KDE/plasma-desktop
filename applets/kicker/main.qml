@@ -200,6 +200,13 @@ PlasmoidItem {
             Plasmoid.activationTogglesExpanded = !kicker.isDash
         }
 
+        // port old custom icon format - can be dropped once we can expect everyone to be on 6.9
+        if (Plasmoid.configuration.useCustomButtonImage) {
+            Plasmoid.configuration.icon = Plasmoid.configuration.customButtonImage
+            Plasmoid.configuration.useCustomButtonImage = false
+            Plasmoid.configuration.writeConfig()
+        }
+
         rootModelInstance.refreshed.connect(modelRefreshed);
     }
 }

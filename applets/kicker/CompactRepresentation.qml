@@ -143,7 +143,7 @@ MouseArea {
             Layout.maximumHeight: Kirigami.Units.iconSizes.huge
             Layout.maximumWidth: Kirigami.Units.iconSizes.huge
             Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
-            source: Tools.iconOrDefault(Plasmoid.formFactor, Plasmoid.icon)
+            source: Kicker.Tools.iconOrDefault(Plasmoid.formFactor, Plasmoid.icon)
             active: root.containsMouse
             roundToIconSize: implicitHeight === implicitWidth
             visible: valid && !imageFallback.visible
@@ -158,7 +158,7 @@ MouseArea {
             Layout.preferredHeight: !root.vertical ? -1 : width
             Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
 
-            source: buttonIcon.valid ? null : Tools.defaultIconName
+            source: buttonIcon.valid ? null : Kicker.Tools.defaultIconName
             active: root.containsMouse
             visible: !buttonIcon.valid && Plasmoid.icon !== "" && !imageFallback.visible
         }

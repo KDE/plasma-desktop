@@ -11,11 +11,11 @@
       <default>start-here-kde-symbolic</default>
     </entry>
     <entry name="useCustomButtonImage" type="Bool">
-      <label>Whether to use a custom image instead of an icon in the compact representation (e.g. on a small panel).</label>
+      <label>Deprecated - set icon</label>
       <default>false</default>
     </entry>
     <entry name="customButtonImage" type="Url">
-      <label>The URL of the custom image to use instead of an icon in the compact representation (e.g. on a small panel).</label>
+      <label>deprecated - set icon</label>
       <default></default>
     </entry>
     <entry name="menuLabel" type="String">
