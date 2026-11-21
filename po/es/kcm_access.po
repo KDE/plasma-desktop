@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcm_access\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-18 01:12+0000\n"
-"PO-Revision-Date: 2026-09-04 01:01+0100\n"
+"PO-Revision-Date: 2026-11-21 00:42+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Andrea Mara Pimenta Alonso <pimenta@conectiva.com.br>\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kcmaccess.cpp:122 kcmaccess.cpp:150
@@ -724,7 +724,7 @@ msgstr "Ampliación y lupa"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Text Size"
-msgstr ""
+msgstr "Tamaño del texto"
 
 #: ui/main.qml:39
 #, kde-format
@@ -1016,14 +1016,15 @@ msgid ""
 "keeps their proportions; on low-resolution screens, some small graphics may "
 "look slightly blurry."
 msgstr ""
+"Recomendado en la mayoría de los casos. Amplía el texto y demás elementos "
+"manteniendo sus proporciones; en pantallas de baja resolución, algunos "
+"gráficos pequeños pueden verse ligeramente borrosos."
 
 #: ui/TextSize.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Display Scale…"
-msgstr "Configurar atajos de teclado…"
+msgstr "Configurar escala de visualización…"
 
 #: ui/TextSize.qml:25
 #, kde-format
@@ -1033,14 +1034,15 @@ msgid ""
 "changes can make text no longer fit or look good next to icons and other "
 "elements."
 msgstr ""
+"Solo es adecuado para cambios de tamaño pequeños. Solo modifica el texto, "
+"por lo que los cambios grandes pueden hacer que el texto deje de ajustarse o "
+"de verse bien junto a iconos y otros elementos."
 
 #: ui/TextSize.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Fonts…"
-msgstr "Configurar atajos de teclado…"
+msgstr "Configurar tipos de letra…"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format
