@@ -33,54 +33,57 @@ KCMUtils.SimpleKCM {
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
     }
 
-    Kirigami.FormLayout {
+    Kirigami.Form {
+        Kirigami.FormGroup {
+            visible: combo.count > 0
+            Kirigami.FormEntry {
+                title: i18nc("@label:listbox The device we are configuring", "Device:")
+                contentItem: QQC2.ComboBox {
+                    id: combo
+                    model: kcm.touchscreensModel
+                    textRole: "display"
 
-        visible: combo.count > 0
+                    enabled: count > 1 //It's only interesting when there's more than 1 touchscreen
 
-        QQC2.ComboBox {
-            id: combo
-            model: kcm.touchscreensModel
-            textRole: "display"
+                    onCountChanged: if (count > 0 && currentIndex < 0) {
+                        currentIndex = 0;
+                    }
 
-            enabled: count > 1 //It's only interesting when there's more than 1 touchscreen
-
-            Kirigami.FormData.label: i18nc("@label:listbox The device we are configuring", "Device:")
-
-            onCountChanged: if (count > 0 && currentIndex < 0) {
-                currentIndex = 0;
-            }
-
-            onCurrentIndexChanged: {
-                root.device = kcm.touchscreensModel.deviceAt(currentIndex)
-            }
-        }
-
-
-        QQC2.CheckBox {
-            Kirigami.FormData.label: i18nc("@option:check prefix touchscreen device is enabled", "Enabled:")
-
-            checked: root.device?.enabled ?? false
-            onToggled: root.device.enabled = checked
-        }
-
-        QQC2.ComboBox {
-            id: outputsCombo
-            Kirigami.FormData.label: i18nc("@label:listbox this is a compound noun", "Target display:")
-            model: TouchScreenKCM.OutputsModel {
-                id: outputsModel
-            }
-            enabled: count > 2 //It's only interesting when there's more than 1 screen
-            currentIndex: {
-                if (!root.device || count === 0) {
-                    return -1;
+                    onCurrentIndexChanged: {
+                        root.device = kcm.touchscreensModel.deviceAt(currentIndex)
+                    }
                 }
-
-                return outputsModel.rowForOutputName(root.device.outputName);
             }
-            textRole: "display"
-            onActivated: {
-                if (root.device) {
-                    root.device.outputName = outputsModel.outputNameAt(currentIndex);
+            Kirigami.FormEntry {
+                title: i18nc("@title:group currently only entry 'Enable device'", "General:")
+                contentItem: QQC2.CheckBox {
+                    text: i18nc("@option:check prefix touchscreen device is enabled", "Enable device")
+
+                    checked: root.device?.enabled ?? false
+                    onToggled: root.device.enabled = checked
+                }
+            }
+            Kirigami.FormEntry {
+                title: i18nc("@label:listbox this is a compound noun", "Target display:")
+                contentItem: QQC2.ComboBox {
+                    id: outputsCombo
+                    model: TouchScreenKCM.OutputsModel {
+                        id: outputsModel
+                    }
+                    enabled: count > 2 //It's only interesting when there's more than 1 screen
+                    currentIndex: {
+                        if (!root.device || count === 0) {
+                            return -1;
+                        }
+
+                        return outputsModel.rowForOutputName(root.device.outputName);
+                    }
+                    textRole: "display"
+                    onActivated: {
+                        if (root.device) {
+                            root.device.outputName = outputsModel.outputNameAt(currentIndex);
+                        }
+                    }
                 }
             }
         }
