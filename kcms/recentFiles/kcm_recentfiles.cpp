@@ -8,11 +8,12 @@
 
 #include "kcm_recentfiles.h"
 
+#include "kactivitiesdata.h"
 #include "resourcescoring_interface.h"
 
 using namespace Qt::StringLiterals;
 
-K_PLUGIN_CLASS_WITH_JSON(RecentFilesKcm, "kcm_recentfiles.json")
+K_PLUGIN_FACTORY_WITH_JSON(KCMRecentFilesFactory, "kcm_recentFiles.json", registerPlugin<RecentFilesKcm>(); registerPlugin<KActivitiesData>();)
 
 namespace
 {
@@ -21,82 +22,15 @@ constexpr inline auto ResourceScoringPathKey = "/ActivityManager/Resources/Scori
 }
 
 RecentFilesKcm::RecentFilesKcm(QObject *parent, const KPluginMetaData &data)
-    : KQuickConfigModule(parent, data)
-    , m_settings(new KActivityManagerdPluginsSettings(this))
-    , m_excludedApplicationsModel(new ExcludedApplicationsModel(this))
+    : KQuickManagedConfigModule(parent, data)
+    , m_data(new KActivitiesData(this))
 {
-    connect(m_excludedApplicationsModel, &ExcludedApplicationsModel::changed, this, [this](bool changed) {
-        if (changed) {
-            setNeedsSave(true);
-        }
-    });
 }
 
-int RecentFilesKcm::whatToRemember() const
+KActivityManagerdPluginsSettings *RecentFilesKcm::settings() const
 {
-    return m_settings->whatToRemember();
-}
-
-void RecentFilesKcm::setWhatToRemember(int whatToRemember)
-{
-    if (whatToRemember == m_settings->whatToRemember()) {
-        return;
-    }
-    m_settings->setWhatToRemember(whatToRemember);
-    setNeedsSave(true);
-    Q_EMIT whatToRememberChanged();
-}
-
-int RecentFilesKcm::keepHistoryFor() const
-{
-    return m_settings->keepHistoryFor();
-}
-
-void RecentFilesKcm::setKeepHistoryFor(int keepHistoryFor)
-{
-    if (keepHistoryFor == m_settings->keepHistoryFor()) {
-        return;
-    }
-    m_settings->setKeepHistoryFor(keepHistoryFor);
-    setNeedsSave(true);
-    Q_EMIT keepHistoryForChanged();
-}
-
-bool RecentFilesKcm::blockByDefault() const
-{
-    return m_settings->blockedByDefault();
-}
-
-void RecentFilesKcm::setBlockByDefault(bool blockByDefault)
-{
-    if (blockByDefault == m_settings->blockedByDefault()) {
-        return;
-    }
-    m_settings->setBlockedByDefault(blockByDefault);
-    setNeedsSave(true);
-    Q_EMIT blockByDefaultChanged();
-}
-
-ExcludedApplicationsModel *RecentFilesKcm::excludedApplicationsModel() const
-{
-    return m_excludedApplicationsModel;
-}
-
-void RecentFilesKcm::defaults()
-{
-    m_excludedApplicationsModel->defaults();
-    setWhatToRemember(0);
-}
-
-void RecentFilesKcm::load()
-{
-    m_excludedApplicationsModel->load();
-}
-
-void RecentFilesKcm::save()
-{
-    m_excludedApplicationsModel->save();
-    m_settings->save();
+    return m_data->settings();
+    ;
 }
 
 void RecentFilesKcm::forget(int count, const QString &what)

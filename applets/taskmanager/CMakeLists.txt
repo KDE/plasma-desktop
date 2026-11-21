@@ -33,7 +33,13 @@ plasma_add_applet(org.kde.plasma.taskmanager
     GENERATE_APPLET_CLASS
 )
 
-kconfig_add_kcfg_files(org.kde.plasma.taskmanager ${CMAKE_SOURCE_DIR}/kcms/recentFiles/kactivitymanagerd_plugins_settings.kcfgc)
+kconfig_target_kcfg_file(org.kde.plasma.taskmanager
+    GENERATE_MOC
+    FILE ${CMAKE_SOURCE_DIR}/kcms/recentFiles/kactivitymanagerd_plugins_settings.kcfg
+    HEADER kactivitymanagerd_plugins_settings.h
+    CLASS_NAME KActivityManagerdPluginsSettings
+    MUTATORS DEFAULT_VALUE_GETTERS PARENT_IN_CONSTRUCTOR NOTIFIERS GLOBAL_ENUMS
+)
 
 ecm_qt_declare_logging_category(org.kde.plasma.taskmanager
     HEADER log_settings.h

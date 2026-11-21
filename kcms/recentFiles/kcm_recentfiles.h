@@ -8,25 +8,20 @@
 
 #pragma once
 
-#include <KQuickConfigModule>
+#include <KQuickManagedConfigModule>
 
-#include "excludedapplicationsmodel.h"
 #include "kactivitymanagerd_plugins_settings.h"
+
+class KActivitiesData;
 
 /**
  * RecentFilesKcm
  */
-class RecentFilesKcm : public KQuickConfigModule
+class RecentFilesKcm : public KQuickManagedConfigModule
 {
     Q_OBJECT
 
-    Q_PROPERTY(int keepHistoryFor READ keepHistoryFor WRITE setKeepHistoryFor NOTIFY keepHistoryForChanged)
-
-    Q_PROPERTY(int whatToRemember READ whatToRemember WRITE setWhatToRemember NOTIFY whatToRememberChanged)
-
-    Q_PROPERTY(bool blockByDefault READ blockByDefault WRITE setBlockByDefault NOTIFY blockByDefaultChanged)
-
-    Q_PROPERTY(ExcludedApplicationsModel *excludedApplicationsModel READ excludedApplicationsModel CONSTANT)
+    Q_PROPERTY(KActivityManagerdPluginsSettings *settings READ settings CONSTANT)
 
 public:
     enum WhatToRemember {
@@ -37,27 +32,10 @@ public:
 
     explicit RecentFilesKcm(QObject *parent, const KPluginMetaData &data);
 
-    int whatToRemember() const;
-    void setWhatToRemember(int whatToRemember);
-    int keepHistoryFor() const;
-    void setKeepHistoryFor(int keepHistoryFor);
-    bool blockByDefault() const;
-    void setBlockByDefault(bool blockByDefault);
-
-    ExcludedApplicationsModel *excludedApplicationsModel() const;
-
-    void defaults() override;
-    void load() override;
-    void save() override;
+    KActivityManagerdPluginsSettings *settings() const;
 
     Q_INVOKABLE void forget(int count, const QString &what);
 
-Q_SIGNALS:
-    void whatToRememberChanged();
-    void keepHistoryForChanged();
-    void blockByDefaultChanged();
-
 private:
-    KActivityManagerdPluginsSettings *m_settings;
-    ExcludedApplicationsModel *m_excludedApplicationsModel;
+    KActivitiesData *m_data;
 };

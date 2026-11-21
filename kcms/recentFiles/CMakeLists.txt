@@ -3,28 +3,31 @@
 
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_recentFiles\")
 
-kcmutils_add_qml_kcm(kcm_recentfiles
+kcmutils_add_qml_kcm(kcm_recentFiles
     SOURCES
         kcm_recentfiles.cpp
         kcm_recentfiles.h
-        excludedapplicationsmodel.cpp
-        excludedapplicationsmodel.h
 )
 
-kconfig_add_kcfg_files(kcm_recentfiles kactivitymanagerd_plugins_settings.kcfgc GENERATE_MOC)
-
-ecm_qt_declare_logging_category(kcm_recentfiles
-    HEADER kcms_recentfiles_logging.h
-    IDENTIFIER KCM_RECENTFILES
-    CATEGORY_NAME kcm_recentFiles
-    DESCRIPTION "KCM for recent file usage tracking"
-    EXPORT KCM_RECENTFILES
+kconfig_target_kcfg_file(kcm_recentFiles
+    GENERATE_MOC
+    FILE kactivitymanagerd_plugins_settings.kcfg
+    HEADER kactivitymanagerd_plugins_settings.h
+    CLASS_NAME KActivityManagerdPluginsSettings
+    MUTATORS DEFAULT_VALUE_GETTERS GENERATE_PROPERTIES PARENT_IN_CONSTRUCTOR NOTIFIERS
 )
 
-qt_add_dbus_interface(kcm_recentfiles_DBUS_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/org.kde.ActivityManager.ResourceScoring.xml resourcescoring_interface)
-target_sources(kcm_recentfiles PRIVATE ${kcm_recentfiles_DBUS_SRCS})
+kcmutils_generate_module_data(kcm_recentFiles
+    MODULE_DATA_HEADER kactivitiesdata.h
+    MODULE_DATA_CLASS_NAME KActivitiesData
+    SETTINGS_HEADERS kactivitymanagerd_plugins_settings.h
+    SETTINGS_CLASSES KActivityManagerdPluginsSettings
+)
 
-target_link_libraries (kcm_recentfiles
+qt_add_dbus_interface(kcm_recentFiles_DBUS_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/org.kde.ActivityManager.ResourceScoring.xml resourcescoring_interface)
+target_sources(kcm_recentFiles PRIVATE ${kcm_recentFiles_DBUS_SRCS})
+
+target_link_libraries (kcm_recentFiles
    Qt::Quick
    Qt::DBus
    Qt::Sql
