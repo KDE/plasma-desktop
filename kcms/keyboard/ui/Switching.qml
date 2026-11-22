@@ -16,194 +16,183 @@ import org.kde.kcmutils as KCM
 KCM.AbstractKCM {
     title: i18nc("@title", "Configure Switching")
 
-    contentItem: Kirigami.FormLayout {
+    contentItem: Kirigami.Form {
+        Kirigami.FormGroup {
+            title: i18nc("@title:group", "Behavior")
+            Kirigami.FormEntry {
+                title: i18nc("@label:listbox", "Switching layout affects:")
+                contentItem: QQC2.ComboBox {
+                    id: switchingPolicyCombobox
+                    textRole: "text"
+                    valueRole: "value"
+                    onActivated: kcm.keyboardSettings.switchMode = currentValue
 
-        Kirigami.Separator {
-            Kirigami.FormData.isSection: true
-            Kirigami.FormData.label: i18nc("@title:group", "Behavior")
-        }
+                    model: [
+                        {
+                            "text": i18nc("@item:inlistbox", "All windows"),
+                            "value": "Global",
+                        },
+                        {
+                            "text": i18nc("@item:inlistbox", "All windows on current desktop"),
+                            "value": "Desktop",
+                        },
+                        {
+                            "text": i18nc("@item:inlistbox", "All windows of current application"),
+                            "value": "WinClass",
+                        },
+                        {
+                            "text": i18nc("@item:inlistbox", "Current window only"),
+                            "value": "Window",
+                        },
+                    ]
 
-        QQC2.ComboBox {
-            id: switchingPolicyCombobox
-            Kirigami.FormData.label: i18nc("@label:listbox", "Switching layout affects:")
-            textRole: "text"
-            valueRole: "value"
-            onActivated: kcm.keyboardSettings.switchMode = currentValue
+                    Component.onCompleted: selectCurrent()
 
-            model: [
-                {
-                    "text": i18nc("@item:inlistbox", "All windows"),
-                    "value": "Global",
-                },
-                {
-                    "text": i18nc("@item:inlistbox", "All windows on current desktop"),
-                    "value": "Desktop",
-                },
-                {
-                    "text": i18nc("@item:inlistbox", "All windows of current application"),
-                    "value": "WinClass",
-                },
-                {
-                    "text": i18nc("@item:inlistbox", "Current window only"),
-                    "value": "Window",
-                },
-            ]
+                    Connections {
+                        target: kcm?.keyboardSettings ?? undefined
 
-            Component.onCompleted: selectCurrent()
-
-            Connections {
-                target: kcm?.keyboardSettings ?? undefined
-
-                function onSwitchModeChanged(): void {
-                    switchingPolicyCombobox.selectCurrent()
-                }
-            }
-
-            function selectCurrent(): void {
-                currentIndex = indexOfValue(kcm.keyboardSettings.switchMode);
-            }
-
-            KCM.SettingStateBinding {
-                configObject: kcm.keyboardSettings
-                settingName: "switchMode"
-            }
-        }
-
-
-        QQC2.CheckBox {
-            text: i18nc("@label:checkbox", "Show OSD popup on layout change")
-            checked: kcm.workspaceOptions.osdKbdLayoutChangedEnabled
-            onToggled: kcm.workspaceOptions.osdKbdLayoutChangedEnabled = checked
-
-            KCM.SettingStateBinding {
-                configObject: kcm.workspaceOptions
-                settingName: "osdKbdLayoutChangedEnabled"
-            }
-        }
-
-        Kirigami.Separator {
-            Kirigami.FormData.isSection: true
-            Kirigami.FormData.label: i18nc("@title:group", "Shortcuts")
-        }
-
-        KQuickControls.KeySequenceItem {
-            id: alternativeShortcut
-            Kirigami.FormData.label: i18nc("@option:textbox", "Change layout:")
-            patterns: KQuickControls.ShortcutPattern.Modifier | KQuickControls.ShortcutPattern.ModifierAndKey
-
-            keySequence: kcm.shortcutHelper.alternativeShortcut
-            onKeySequenceModified: kcm.shortcutHelper.alternativeShortcut = keySequence
-
-            Binding {
-                target: alternativeShortcut
-                property: "keySequence"
-                value: kcm.shortcutHelper.alternativeShortcut
-            }
-
-            KCM.SettingHighlighter {
-                target: alternativeShortcut
-                highlight: alternativeShortcut.keySequence !== kcm.shortcutHelper.defaultAlternativeShortcut()
-            }
-        }
-
-        KQuickControls.KeySequenceItem {
-            id: lastUsedShortcut
-            Kirigami.FormData.label: i18nc("@option:textbox", "Switch to last used layout:")
-            patterns: KQuickControls.ShortcutPattern.Modifier | KQuickControls.ShortcutPattern.ModifierAndKey
-
-            keySequence: kcm.shortcutHelper.lastUsedShortcut
-            onCaptureFinished: kcm.shortcutHelper.lastUsedShortcut = keySequence
-
-            Binding {
-                target: lastUsedShortcut
-                property: "keySequence"
-                value: kcm.shortcutHelper.lastUsedShortcut
-            }
-
-            KCM.SettingHighlighter {
-                target: lastUsedShortcut
-                highlight: lastUsedShortcut.keySequence !== kcm.shortcutHelper.defaultLastUsedShortcut()
-            }
-        }
-
-        ColumnLayout {
-            spacing: Kirigami.Units.smallSpacing
-            Kirigami.FormData.label: i18nc("@title:group", "Legacy Shortcuts")
-            Kirigami.FormData.isSection: true
-
-            Kirigami.ContextualHelpButton {
-                Layout.alignment: Qt.AlignRight
-                Layout.topMargin: -height
-                // Make sure the button doesn't take size of its parent
-                Layout.maximumHeight: -1
-                toolTipText: xi18nc("@info", "Legacy X11 shortcuts allow finer control of modifier-only shortcuts and have slightly better support on X11 in edge cases. They can also be used on Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings page.")
-            }
-
-            Kirigami.Separator {
-                Layout.fillWidth: true
-            }
-        }
-
-        // Since "Main shortcut" has specific behavior (we push "KeyBindings" page) we can`t use standard KeySequenceItem
-        // But this component looks exactly like KeySequenceItem
-        RowLayout {
-            spacing: Kirigami.Units.smallSpacing
-            Kirigami.FormData.label: i18nc("@option:textbox", "Change layout:")
-
-            // TODO: SettingStateBinding and default value
-            QQC2.Button {
-                id: mainShortcutButton
-                icon.name: "configure-symbolic"
-                text: kcm.xkbOptionsModel.getShortcutName(__internal.mainShortcutGroupName)
-
-                onClicked: {
-                    if (!kcm.keyboardSettings.resetOldXkbOptions) {
-                        kcm.keyboardSettings.resetOldXkbOptions = true;
+                        function onSwitchModeChanged(): void {
+                            switchingPolicyCombobox.selectCurrent()
+                        }
                     }
 
-                    kcm.push("KeyBindings.qml");
-                    kcm.xkbOptionsModel.navigateToGroup(__internal.mainShortcutGroupName);
-                }
-            }
-
-            QQC2.Button {
-                icon.name: Application.layoutDirection === Qt.LeftToRight ? "edit-clear-locationbar-rtl-symbolic" :
-                                                                               "edit-clear-locationbar-ltr-symbolic"
-                onClicked: kcm.xkbOptionsModel.clearXkbGroup(__internal.mainShortcutGroupName);
-            }
-        }
-
-        // Since "3rd level shortcuts" has specific behavior (we push "KeyBindings" page) we can`t use standard KeySequenceItem
-        // But this component looks exactly like KeySequenceItem
-        RowLayout {
-            spacing: Kirigami.Units.smallSpacing
-            Kirigami.FormData.label: i18nc("@option:textbox", "Alternative symbols:")
-
-            // TODO: SettingStateBinding and default value
-            QQC2.Button {
-                id: lvl3lShortcutButton
-                icon.name: "configure-symbolic"
-                text: kcm.xkbOptionsModel.getShortcutName(__internal.lvl3ShortcutGroupName)
-
-                onClicked: {
-                    if (!kcm.keyboardSettings.resetOldXkbOptions) {
-                        kcm.keyboardSettings.resetOldXkbOptions = true;
+                    function selectCurrent(): void {
+                        currentIndex = indexOfValue(kcm.keyboardSettings.switchMode);
                     }
 
-
-                    kcm.push("KeyBindings.qml");
-                    kcm.xkbOptionsModel.navigateToGroup(__internal.lvl3ShortcutGroupName);
+                    KCM.SettingStateBinding {
+                        configObject: kcm.keyboardSettings
+                        settingName: "switchMode"
+                    }
                 }
             }
+            Kirigami.FormEntry {
+                title: i18nc("@option:check prefix, completes …Show OSD popup", "On layout change:")
+                contentItem: QQC2.CheckBox {
+                    text: i18nc("@option:check, completes On layout change…", "Show OSD popup")
+                    checked: kcm.workspaceOptions.osdKbdLayoutChangedEnabled
+                    onToggled: kcm.workspaceOptions.osdKbdLayoutChangedEnabled = checked
 
-            QQC2.Button {
-                icon.name: Application.layoutDirection === Qt.LeftToRight ? "edit-clear-locationbar-rtl-symbolic" :
-                                                                               "edit-clear-locationbar-ltr-symbolic"
-                onClicked: kcm.xkbOptionsModel.clearXkbGroup(__internal.lvl3ShortcutGroupName)
+                    KCM.SettingStateBinding {
+                        configObject: kcm.workspaceOptions
+                        settingName: "osdKbdLayoutChangedEnabled"
+                    }
+                }
             }
+        }
+        Kirigami.FormGroup {
+            title: i18nc("@title:group", "Shortcuts")
+            Kirigami.FormEntry {
+                title: i18nc("@option:textbox", "Change layout:")
+                contentItem: KQuickControls.KeySequenceItem {
+                    id: alternativeShortcut
+                    patterns: KQuickControls.ShortcutPattern.Modifier | KQuickControls.ShortcutPattern.ModifierAndKey
 
-            Kirigami.ContextualHelpButton {
-                toolTipText: i18nc("@info", "Modifier keys can be used to type additional characters, symbols, and diacritical marks.")
+                    keySequence: kcm.shortcutHelper.alternativeShortcut
+                    onKeySequenceModified: kcm.shortcutHelper.alternativeShortcut = keySequence
+
+                    Binding {
+                        target: alternativeShortcut
+                        property: "keySequence"
+                        value: kcm.shortcutHelper.alternativeShortcut
+                    }
+
+                    KCM.SettingHighlighter {
+                        target: alternativeShortcut
+                        highlight: alternativeShortcut.keySequence !== kcm.shortcutHelper.defaultAlternativeShortcut()
+                    }
+                }
+            }
+            Kirigami.FormEntry {
+                title: i18nc("@option:textbox", "Switch to last used layout:")
+                contentItem: KQuickControls.KeySequenceItem {
+                    id: lastUsedShortcut
+                    patterns: KQuickControls.ShortcutPattern.Modifier | KQuickControls.ShortcutPattern.ModifierAndKey
+
+                    keySequence: kcm.shortcutHelper.lastUsedShortcut
+                    onCaptureFinished: kcm.shortcutHelper.lastUsedShortcut = keySequence
+
+                    Binding {
+                        target: lastUsedShortcut
+                        property: "keySequence"
+                        value: kcm.shortcutHelper.lastUsedShortcut
+                    }
+
+                    KCM.SettingHighlighter {
+                        target: lastUsedShortcut
+                        highlight: lastUsedShortcut.keySequence !== kcm.shortcutHelper.defaultLastUsedShortcut()
+                    }
+                }
+            }
+        }
+        Kirigami.FormGroup {
+            title: i18nc("@title:group", "Legacy Shortcuts")
+            Kirigami.FormEntry {
+                title: i18nc("@option:textbox", "Change layout:")
+                contentItem: RowLayout {
+                    spacing: Kirigami.Units.smallSpacing
+
+                    // TODO: SettingStateBinding and default value
+                    QQC2.Button {
+                        id: mainShortcutButton
+                        icon.name: "configure-symbolic"
+                        text: kcm.xkbOptionsModel.getShortcutName(__internal.mainShortcutGroupName)
+
+                        onClicked: {
+                            if (!kcm.keyboardSettings.resetOldXkbOptions) {
+                                kcm.keyboardSettings.resetOldXkbOptions = true;
+                            }
+
+                            kcm.push("KeyBindings.qml");
+                            kcm.xkbOptionsModel.navigateToGroup(__internal.mainShortcutGroupName);
+                        }
+                    }
+
+                    QQC2.Button {
+                        icon.name: Application.layoutDirection === Qt.LeftToRight ? "edit-clear-locationbar-rtl-symbolic" :
+                        "edit-clear-locationbar-ltr-symbolic"
+                        onClicked: kcm.xkbOptionsModel.clearXkbGroup(__internal.mainShortcutGroupName);
+                    }
+                }
+                trailingItems: [
+                    Kirigami.ContextualHelpButton {
+                        toolTipText: xi18nc("@info", "Legacy shortcuts allow finer control of modifier-only shortcuts.<nl/><nl/>Setting this shortcut will take you to the Key bindings page.")
+                    }
+                ]
+            }
+            Kirigami.FormEntry {
+                title: i18nc("@option:textbox", "Alternative symbols:")
+                contentItem: RowLayout {
+                    spacing: Kirigami.Units.smallSpacing
+
+                    // TODO: SettingStateBinding and default value
+                    QQC2.Button {
+                        id: lvl3lShortcutButton
+                        icon.name: "configure-symbolic"
+                        text: kcm.xkbOptionsModel.getShortcutName(__internal.lvl3ShortcutGroupName)
+
+                        onClicked: {
+                            if (!kcm.keyboardSettings.resetOldXkbOptions) {
+                                kcm.keyboardSettings.resetOldXkbOptions = true;
+                            }
+
+
+                            kcm.push("KeyBindings.qml");
+                            kcm.xkbOptionsModel.navigateToGroup(__internal.lvl3ShortcutGroupName);
+                        }
+                    }
+
+                    QQC2.Button {
+                        icon.name: Application.layoutDirection === Qt.LeftToRight ? "edit-clear-locationbar-rtl-symbolic" :
+                        "edit-clear-locationbar-ltr-symbolic"
+                        onClicked: kcm.xkbOptionsModel.clearXkbGroup(__internal.lvl3ShortcutGroupName)
+                    }
+                }
+                trailingItems: [
+                    Kirigami.ContextualHelpButton {
+                        toolTipText: xi18nc("@info", "Modifier keys can be used to type additional characters, symbols, and diacritical marks.<nl/><nl/>Setting this shortcut will take you to the Key bindings page.")
+                    }
+                ]
             }
         }
     }

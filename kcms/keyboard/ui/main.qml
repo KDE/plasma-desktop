@@ -53,181 +53,183 @@ KCM.ScrollViewKCM {
         onTriggered: _cLayoutDialog.incubateObject(root, {}, Qt.Asynchronous)
     }
 
-    header: Kirigami.FormLayout {
-        id: headerFormLayout
+    Kirigami.FormAlignmentGroup { id: alignmentGroup}
 
-        QQC2.ComboBox {
-            id: keyboardModelComboBox
-            Kirigami.FormData.label: i18nc("@label:listbox Keyboard model", "Model:")
-            model: keyboardsProxy
-            textRole: "description"
-            valueRole: "name"
-            onActivated: kcm.keyboardSettings.keyboardModel = currentValue
+    header: Kirigami.Form {
+        Kirigami.FormAlignmentGroup.group: alignmentGroup
+        Kirigami.FormGroup {
+            Layout.topMargin: -Kirigami.Units.largeSpacing // HACK
+            Kirigami.FormEntry {
+                title: i18nc("@label:listbox Keyboard model", "Model:")
+                contentItem: QQC2.ComboBox {
+                    id: keyboardModelComboBox
+                    Layout.fillWidth: true
+                    model: keyboardsProxy
+                    textRole: "description"
+                    valueRole: "name"
+                    onActivated: kcm.keyboardSettings.keyboardModel = currentValue
 
-            Component.onCompleted: selectCurrent()
+                    Component.onCompleted: selectCurrent()
 
-            Connections {
-                target: kcm?.keyboardSettings ?? undefined
+                    Connections {
+                        target: kcm?.keyboardSettings ?? undefined
 
-                function onKeyboardModelChanged(): void {
-                    keyboardModelComboBox.selectCurrent()
+                        function onKeyboardModelChanged(): void {
+                            keyboardModelComboBox.selectCurrent()
+                        }
+                    }
+
+                    function selectCurrent(): void {
+                        currentIndex = indexOfValue(kcm.keyboardSettings.keyboardModel);
+                    }
+
+                    KCM.SettingStateBinding {
+                        configObject: kcm.keyboardSettings
+                        settingName: "keyboardModel"
+                    }
                 }
             }
+            Kirigami.FormEntry {
+                title: i18nc("@label:listbox", "NumLock on startup:")
+                contentItem: QQC2.ComboBox {
+                    id: numlockCombobox
+                    Layout.fillWidth: true
+                    textRole: "text"
+                    valueRole: "value"
+                    onActivated: kcm.miscSettings.numLock = currentValue
 
-            function selectCurrent(): void {
-                currentIndex = indexOfValue(kcm.keyboardSettings.keyboardModel);
-            }
+                    model: [
+                        {
+                            "text": i18nc("@item:inlistbox Turn on \"NumLock\" on startup", "Turn on"),
+                            "value": KCMKeyboard.NumLockState.NumLockOn
+                        },
+                        {
+                            "text": i18nc("@item:inlistbox Turn off \"NumLock\" on startup", "Turn off"),
+                            "value": KCMKeyboard.NumLockState.NumLockOff
+                        },
+                        {
+                            "text": i18nc("@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma started up", "Leave unchanged"),
+                            "value": KCMKeyboard.NumLockState.NumLockUnchanged
+                        },
+                    ]
 
-            KCM.SettingStateBinding {
-                configObject: kcm.keyboardSettings
-                settingName: "keyboardModel"
-            }
-        }
+                    Component.onCompleted: selectCurrent()
 
-        QQC2.ComboBox {
-            id: numlockCombobox
-            Kirigami.FormData.label: i18nc("@label:listbox", "NumLock on startup:")
-            Layout.preferredWidth: keyboardModelComboBox.width
-            textRole: "text"
-            valueRole: "value"
-            onActivated: kcm.miscSettings.numLock = currentValue
+                    Connections {
+                        target: kcm?.miscSettings ?? undefined
 
-            model: [
-                {
-                    "text": i18nc("@item:inlistbox Turn on \"NumLock\" on startup", "Turn on"),
-                    "value": KCMKeyboard.NumLockState.NumLockOn
-                },
-                {
-                    "text": i18nc("@item:inlistbox Turn off \"NumLock\" on startup", "Turn off"),
-                    "value": KCMKeyboard.NumLockState.NumLockOff
-                },
-                {
-                    "text": i18nc("@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma started up", "Leave unchanged"),
-                    "value": KCMKeyboard.NumLockState.NumLockUnchanged
-                },
-            ]
+                        function onNumLockChanged(): void {
+                            numlockCombobox.selectCurrent()
+                        }
+                    }
 
-            Component.onCompleted: selectCurrent()
+                    function selectCurrent(): void {
+                        currentIndex = indexOfValue(kcm.miscSettings.numLock);
+                    }
 
-            Connections {
-                target: kcm?.miscSettings ?? undefined
-
-                function onNumLockChanged(): void {
-                    numlockCombobox.selectCurrent()
+                    KCM.SettingStateBinding {
+                        configObject: kcm.miscSettings
+                        settingName: "numLock"
+                    }
                 }
             }
+            Kirigami.FormEntry {
+                title: i18nc("@label:checkbox", "Key repeat:")
+                contentItem: QQC2.CheckBox {
+                    checked: kcm.miscSettings.keyboardRepeat === __internal.keyboardRepeatRepeat
+                    onToggled: kcm.miscSettings.keyboardRepeat = checked
+                        ? __internal.keyboardRepeatRepeat
+                        : __internal.keyboardRepeatNothing
 
-            function selectCurrent(): void {
-                currentIndex = indexOfValue(kcm.miscSettings.numLock);
+                    text: i18nc("@option:check also @label:spinbox key repeat delay", "Delay:")
+                    Accessible.name: i18nc("@label:checkbox accessible", "Key repeat")
+
+                    KCM.SettingStateBinding {
+                        configObject: kcm.miscSettings
+                        settingName: "keyboardRepeat"
+                    }
+                }
+                trailingItems: [
+                    QQC2.SpinBox {
+                        id: repeatDelaySpinbox
+                        Layout.fillWidth: true
+                        from: 100
+                        to: 5000
+                        stepSize: 50
+
+                        value: kcm.miscSettings.repeatDelay
+                        onValueModified: kcm.miscSettings.repeatDelay = value
+
+                        Accessible.name: i18nc("@label:spinbox accessible", "Key repeat delay %1", textFromValue(value))
+
+                        validator: IntValidator {
+                            bottom: Math.min(repeatDelaySpinbox.from, repeatDelaySpinbox.to)
+                            top: Math.max(repeatDelaySpinbox.from, repeatDelaySpinbox.to)
+                        }
+
+                        textFromValue: (value, locale) => {
+                            return i18nc("@spinbox:value Repeat delay interval", "%1 ms", value)
+                        }
+
+                        valueFromText: (text, locale) => {
+                            return Number.fromLocaleString(locale, text.replace(i18nc("@spinbox:value Repeat delay interval", "ms"), ""))
+                        }
+
+                        KCM.SettingStateBinding {
+                            configObject: kcm.miscSettings
+                            settingName: "repeatDelay"
+                            extraEnabledConditions: kcm.miscSettings.keyboardRepeat !== __internal.keyboardRepeatNothing
+                        }
+                    },
+
+                    QQC2.Label {
+                        Layout.leftMargin: Kirigami.Units.largeSpacing
+                        // Force the label to use its own Kirigami.Theme object
+                        Kirigami.Theme.inherit: false
+                        text: i18nc("@label:textbox Key repeat rate", "Rate:")
+                        enabled: kcm.miscSettings.keyboardRepeat !== __internal.keyboardRepeatNothing
+                    },
+
+                    QQC2.SpinBox {
+                        id: repeatRateSpinbox
+                        Layout.fillWidth: true
+                        from: 20
+                        to: 20000
+                        stepSize: 500
+
+                        value: Math.round(kcm.miscSettings.repeatRate * 100)
+                        onValueModified: kcm.miscSettings.repeatRate = value / 100
+
+                        Accessible.name: i18nc("@label:spinbox accessible", "Key repeat rate %1", textFromValue(value))
+
+                        validator: DoubleValidator {
+                            bottom: Math.min(repeatRateSpinbox.from, repeatRateSpinbox.to)
+                            top:  Math.max(repeatRateSpinbox.from, repeatRateSpinbox.to)
+                        }
+
+                        textFromValue: (value, locale) => {
+                            return i18nc("@spinbox:value  Key repeat rate", "%1 repeats/s", value / 100)
+                        }
+
+                        valueFromText: (text, locale) => {
+                            return Number.fromLocaleString(locale, text.replace(i18nc("@spinbox:value  Key repeat rate", "repeats/s"), "")) * 100
+                        }
+
+                        KCM.SettingStateBinding {
+                            configObject: kcm.miscSettings
+                            settingName: "repeatRate"
+                            extraEnabledConditions: kcm.miscSettings.keyboardRepeat !== __internal.keyboardRepeatNothing
+                        }
+                    }
+                ]
             }
-
-            KCM.SettingStateBinding {
-                configObject: kcm.miscSettings
-                settingName: "numLock"
-            }
-        }
-
-        RowLayout {
-            Kirigami.FormData.label: i18nc("@label:checkbox", "Key repeat:")
-            spacing: Kirigami.Units.smallSpacing
-
-            QQC2.CheckBox {
-                checked: kcm.miscSettings.keyboardRepeat === __internal.keyboardRepeatRepeat
-                onToggled: kcm.miscSettings.keyboardRepeat = checked
-                           ? __internal.keyboardRepeatRepeat
-                           : __internal.keyboardRepeatNothing
-
-                Accessible.name: i18nc("@label:checkbox accessible", "Key repeat")
-
-                KCM.SettingStateBinding {
-                    configObject: kcm.miscSettings
-                    settingName: "keyboardRepeat"
-                }
-            }
-
-            QQC2.Label {
-                // Force the label to use its own Kirigami.Theme object
-                Kirigami.Theme.inherit: false
-                text: i18nc("@label:textbox Key repeat delay", "Delay:")
-                enabled: kcm.miscSettings.keyboardRepeat !== __internal.keyboardRepeatNothing
-            }
-
-            QQC2.SpinBox {
-                id: repeatDelaySpinbox
-                Layout.preferredWidth: Kirigami.Units.gridUnit * 8
-                from: 100
-                to: 5000
-                stepSize: 50
-
-                value: kcm.miscSettings.repeatDelay
-                onValueModified: kcm.miscSettings.repeatDelay = value
-
-                Accessible.name: i18nc("@label:spinbox accessible", "Key repeat delay %1", textFromValue(value))
-
-                validator: IntValidator {
-                    bottom: Math.min(repeatDelaySpinbox.from, repeatDelaySpinbox.to)
-                    top: Math.max(repeatDelaySpinbox.from, repeatDelaySpinbox.to)
-                }
-
-                textFromValue: (value, locale) => {
-                    return i18nc("@spinbox:value Repeat delay interval", "%1 ms", value)
-                }
-
-                valueFromText: (text, locale) => {
-                    return Number.fromLocaleString(locale, text.replace(i18nc("@spinbox:value Repeat delay interval", "ms"), ""))
-                }
-
-                KCM.SettingStateBinding {
-                    configObject: kcm.miscSettings
-                    settingName: "repeatDelay"
-                    extraEnabledConditions: kcm.miscSettings.keyboardRepeat !== __internal.keyboardRepeatNothing
-                }
-            }
-
-            QQC2.Label {
-                // Force the label to use its own Kirigami.Theme object
-                Kirigami.Theme.inherit: false
-                text: i18nc("@label:textbox Key repeat rate", "Rate:")
-                enabled: kcm.miscSettings.keyboardRepeat !== __internal.keyboardRepeatNothing
-            }
-
-            QQC2.SpinBox {
-                id: repeatRateSpinbox
-                Layout.preferredWidth: Kirigami.Units.gridUnit * 8
-                from: 20
-                to: 20000
-                stepSize: 500
-
-                value: Math.round(kcm.miscSettings.repeatRate * 100)
-                onValueModified: kcm.miscSettings.repeatRate = value / 100
-
-                Accessible.name: i18nc("@label:spinbox accessible", "Key repeat rate %1", textFromValue(value))
-
-                validator: DoubleValidator {
-                    bottom: Math.min(repeatRateSpinbox.from, repeatRateSpinbox.to)
-                    top:  Math.max(repeatRateSpinbox.from, repeatRateSpinbox.to)
-                }
-
-                textFromValue: (value, locale) => {
-                    return i18nc("@spinbox:value  Key repeat rate", "%1 repeats/s", value / 100)
-                }
-
-                valueFromText: (text, locale) => {
-                    return Number.fromLocaleString(locale, text.replace(i18nc("@spinbox:value  Key repeat rate", "repeats/s"), "")) * 100
-                }
-
-                KCM.SettingStateBinding {
-                    configObject: kcm.miscSettings
-                    settingName: "repeatRate"
-                    extraEnabledConditions: kcm.miscSettings.keyboardRepeat !== __internal.keyboardRepeatNothing
+            Kirigami.FormEntry {
+                title: i18nc("@label:textbox", "Test area:")
+                contentItem: QQC2.TextField {
+                    Layout.fillWidth: true
+                    placeholderText: i18nc("@info:placeholder", "Type here to test settings")
                 }
             }
-        }
-
-        QQC2.TextField {
-            Kirigami.FormData.label: i18nc("@label:textbox", "Test area:")
-            Layout.preferredWidth: keyboardModelComboBox.width
-            placeholderText: i18nc("@info:placeholder", "Type here to test settings")
         }
     }
 
@@ -239,7 +241,7 @@ KCM.ScrollViewKCM {
         header: Kirigami.InlineViewHeader {
             width: list.width
             text: i18nc("@title:view", "Layouts")
-            actions: [ addLayoutAction ]
+            actions: [ root.addLayoutAction ]
         }
 
         readonly property int maxKeySequenceItemWidth: Math.max(...contentItem.children.map(item => item?.keySequenceItemWidth || 0))
@@ -255,7 +257,6 @@ KCM.ScrollViewKCM {
                 visible: list.count === 0
             }
         }
-
 
         delegate: LayoutDelegate {
             id: delegate
@@ -298,108 +299,106 @@ KCM.ScrollViewKCM {
             ]
         }
     }
+    footer: Kirigami.Form {
+        Kirigami.FormAlignmentGroup.group: alignmentGroup
+        Kirigami.FormGroup {
+            Layout.topMargin: -Kirigami.Units.largeSpacing // HACK
+            Kirigami.FormEntry {
+                title: i18nc("@label:checkbox", "Spare layouts:")
+                contentItem: RowLayout {
+                    spacing: Kirigami.Units.smallSpacing
 
-    footer: Kirigami.FormLayout {
-        twinFormLayouts: headerFormLayout
+                    QQC2.CheckBox {
+                        id: layoutLoopingCheckBox
+                        onToggled: {
+                            const count = checked ? __internal.minimumAvailableLoops : __internal.noLooping;
+                            kcm.keyboardSettings.layoutLoopCount = count;
+                        }
 
-        RowLayout {
-            spacing: Kirigami.Units.smallSpacing
-            Kirigami.FormData.label: i18nc("@label:checkbox", "Spare layouts:")
+                        checked: {
+                            if (__internal.minimumAvailableLoops < __internal.minimumLoopingCount) {
+                                return false;
+                            }
 
-            QQC2.CheckBox {
-                id: layoutLoopingCheckBox
-                onToggled: {
-                    const count = checked ? __internal.minimumAvailableLoops : __internal.noLooping;
-                    kcm.keyboardSettings.layoutLoopCount = count;
-                }
+                            // If the number of layouts is not the default value
+                            // or the available number of layouts is greater than the limit from X.org, then enable the option
+                            return kcm.keyboardSettings.layoutLoopCount !== __internal.noLooping
+                            || __internal.minimumAvailableLoops >= kcm.maxGroupCount
+                        }
 
-                checked: {
-                    if (__internal.minimumAvailableLoops < __internal.minimumLoopingCount) {
-                        return false;
+                        enabled: {
+                            // If the number of layouts is within the range of acceptable values, then enable the element
+                            return __internal.minimumAvailableLoops >= __internal.minimumLoopingCount
+                            && __internal.minimumAvailableLoops < kcm.maxGroupCount
+                        }
                     }
 
-                    // If the number of layouts is not the default value
-                    // or the available number of layouts is greater than the limit from X.org, then enable the option
-                    return kcm.keyboardSettings.layoutLoopCount !== __internal.noLooping
-                        || __internal.minimumAvailableLoops >= kcm.maxGroupCount
-                }
+                    QQC2.SpinBox {
+                        id: layoutLoopCountSpinBox
+                        Layout.minimumWidth: Kirigami.Units.gridUnit * 4
 
-                enabled: {
-                    // If the number of layouts is within the range of acceptable values, then enable the element
-                    return __internal.minimumAvailableLoops >= __internal.minimumLoopingCount
-                        && __internal.minimumAvailableLoops < kcm.maxGroupCount
-                }
-            }
+                        Accessible.name: i18nc("@label:spinbox", "Number of spared main layouts")
 
-            QQC2.SpinBox {
-                id: layoutLoopCountSpinBox
-                Layout.minimumWidth: Kirigami.Units.gridUnit * 4
+                        enabled: layoutLoopingCheckBox.checked
+                        to: Math.max(from, __internal.minimumAvailableLoops)
+                        from: {
+                            if (layoutLoopingCheckBox.checked) {
+                                return __internal.minimumLoopingCount;
+                            }
 
-                Accessible.name: i18nc("@label:spinbox", "Number of spared main layouts")
+                            return __internal.noLooping;
+                        }
 
-                enabled: layoutLoopingCheckBox.checked
-                to: Math.max(from, __internal.minimumAvailableLoops)
-                from: {
-                    if (layoutLoopingCheckBox.checked) {
-                        return __internal.minimumLoopingCount;
+                        value: {
+                            if (kcm.keyboardSettings.layoutLoopCount > to){
+                                return to
+                            }
+
+                            return kcm.keyboardSettings.layoutLoopCount;
+                        }
+
+                        textFromValue: (value, locale) => value < 0 ? "" : Number(value).toLocaleString(locale, "f", 0)
+                        onValueModified: kcm.keyboardSettings.layoutLoopCount = value;
                     }
 
-                    return __internal.noLooping;
+                    QQC2.Label {
+                        // Force the label to use its own Kirigami.Theme object
+                        Kirigami.Theme.inherit: false
+                        enabled: layoutLoopCountSpinBox.enabled
+                        text: i18nc("@label:textbox completes spinbox, x main layouts", "main layouts")
+                    }
                 }
+                trailingItems: [
+                    Kirigami.ContextualHelpButton {
+                        toolTipText: i18nc("@info", "You can have up to 4 main layouts, all other layouts are spare. Spare layouts are not included when cycling through the layouts, but can be accessed through the keyboard indicator applet or by setting a custom shortcut.")
+                    }
+                ]
+            }
+            Kirigami.FormEntry {
+                title: i18nc("@label:group Shortcut to change the keyboard layout. Keep it short", "Change layout shortcut:")
+                contentItem: KQuickControls.KeySequenceItem {
+                    id: alternativeShortcut
+                    patterns: KQuickControls.ShortcutPattern.Modifier | KQuickControls.ShortcutPattern.ModifierAndKey
 
-                value: {
-                    if (kcm.keyboardSettings.layoutLoopCount > to){
-                        return to
+                    keySequence: kcm.shortcutHelper.alternativeShortcut
+                    onKeySequenceModified: kcm.shortcutHelper.alternativeShortcut = keySequence
+
+                    Binding {
+                        target: alternativeShortcut
+                        property: "keySequence"
+                        value: kcm.shortcutHelper.alternativeShortcut
                     }
 
-                    return kcm.keyboardSettings.layoutLoopCount;
+                    KCM.SettingHighlighter {
+                        target: alternativeShortcut
+                        highlight: alternativeShortcut.keySequence !== kcm.shortcutHelper.defaultAlternativeShortcut()
+                    }
                 }
-
-                textFromValue: (value, locale) => value < 0 ? "" : Number(value).toLocaleString(locale, "f", 0)
-                onValueModified: kcm.keyboardSettings.layoutLoopCount = value;
-            }
-
-            QQC2.Label {
-                // Force the label to use its own Kirigami.Theme object
-                Kirigami.Theme.inherit: false
-                enabled: layoutLoopCountSpinBox.enabled
-                text: i18nc("@label:textbox completes spinbox, x main layouts", "main layouts")
-            }
-
-            Kirigami.ContextualHelpButton {
-                toolTipText: i18nc("@info", "You can have up to 4 main layouts, all other layouts are spare. Spare layouts are not included when cycling through the layouts, but can be accessed through the keyboard indicator applet or by setting a custom shortcut.")
-            }
-        }
-
-        RowLayout {
-            Kirigami.FormData.label: i18nc("@label:group Shortcut to change the keyboard layout. Keep it short", "Change layout shortcut:")
-            spacing: Kirigami.Units.smallSpacing
-
-            KQuickControls.KeySequenceItem {
-                id: alternativeShortcut
-                patterns: KQuickControls.ShortcutPattern.Modifier | KQuickControls.ShortcutPattern.ModifierAndKey
-
-                keySequence: kcm.shortcutHelper.alternativeShortcut
-                onKeySequenceModified: kcm.shortcutHelper.alternativeShortcut = keySequence
-
-                Binding {
-                    target: alternativeShortcut
-                    property: "keySequence"
-                    value: kcm.shortcutHelper.alternativeShortcut
-                }
-
-                KCM.SettingHighlighter {
-                    target: alternativeShortcut
-                    highlight: alternativeShortcut.keySequence !== kcm.shortcutHelper.defaultAlternativeShortcut()
-                }
-            }
-
-            QQC2.Label {
-                text: i18nc("@label Change layout shortcut or \"Configure Switching\"", "or")
-            }
-
-            QQC2.Button {
-                action: switchingPageAction
+                trailingItems: [
+                    QQC2.Button {
+                        action: root.switchingPageAction
+                    }
+                ]
             }
         }
     }
