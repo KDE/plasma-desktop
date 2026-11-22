@@ -21,6 +21,9 @@ Item {
     required property KCM.InputDevice device
     required property KCM.TabletEvents tabletEvents
 
+    property Kirigami.FormAlignmentGroup formAlignmentGroup
+    property real penMinWidth: svgContainer.Layout.minimumWidth
+
     readonly property bool calibrationWindowOpen: calibrationWindow !== null
     property Calibration calibrationWindow
     property string currentCalibrationSysName
@@ -222,8 +225,10 @@ Item {
             Layout.alignment: Qt.AlignTop
             Layout.fillWidth: true
             Layout.maximumWidth: implicitWidth
+            Kirigami.FormAlignmentGroup.group: root.formAlignmentGroup
 
             Kirigami.FormGroup {
+                id: firstFormGroup
                 Kirigami.FormEntry {
                     title: i18ndc("kcm_tablet", "@label prefix for checkbox", "Left-handed mode:")
                     contentItem: QQC2.CheckBox {

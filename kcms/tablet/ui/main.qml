@@ -97,68 +97,95 @@ SimpleKCM {
 
         anchors.fill: parent
 
-        Kirigami.FormLayout {
-            visible: combo.count > 1
+        Kirigami.FormAlignmentGroup { id: formGroup }
 
+        RowLayout {
+            // Layout and everything except the Form only exists to keep form positions in sync
+            // when StylusTab is visible, the extra pen image throws everything off.
             Layout.fillWidth: true
 
-            QQC2.ComboBox {
-                id: combo
-                Kirigami.FormData.label: i18ndc("kcm_tablet", "@label:listbox The device we are configuring", "Device:")
-                model: kcm.tabletsModel
+            Item {
+                id: penPlaceholder
+                Layout.minimumWidth: (contentLoader.item as StylusTab)?.penMinWidth ?? 0
+                Layout.horizontalStretchFactor: 1
+                Layout.fillWidth: true
+                visible: Layout.minimumWidth > 0
+            }
 
-                onCountChanged: {
-                    // If a device is added, select that device first.
-                    if (count > 0 && currentIndex < 0) {
-                        currentIndex = 0;
-                        return;
-                    }
+            Kirigami.Form {
+                Layout.fillWidth: true
+                visible: combo.count > 1
+                Kirigami.FormAlignmentGroup.group: formGroup
+                Kirigami.FormGroup {
+                    Kirigami.FormEntry {
+                        title: i18ndc("kcm_tablet", "@label:listbox The device we are configuring", "Device:")
+                        contentItem: QQC2.ComboBox {
+                            id: combo
+                            model: kcm.tabletsModel
 
-                    // If we had previously selected the last device (that was removed) then go back one.
-                    if (currentIndex >= count) {
-                        currentIndex = count - 1;
-                    }
-                }
+                            onCountChanged: {
+                                // If a device is added, select that device first.
+                                if (count > 0 && currentIndex < 0) {
+                                    currentIndex = 0;
+                                    return;
+                                }
 
-                onCurrentIndexChanged: reload()
+                                // If we had previously selected the last device (that was removed) then go back one.
+                                if (currentIndex >= count) {
+                                    currentIndex = count - 1;
+                                }
+                            }
 
-                function reload(): void {
-                    root.device = kcm.tabletsModel.penAt(combo.currentIndex);
-                    root.padDevice = kcm.tabletsModel.padAt(combo.currentIndex);
+                            onCurrentIndexChanged: reload()
 
-                    // If it is a pen device, prefer the display tab first.
-                    // Otherwise, if it's a lonely pad then we only have the pad tab available.
-                    if (root.device) {
-                        displayAction.trigger();
-                    } else if (root.padDevice) {
-                        padAction.trigger();
-                    }
+                            function reload(): void {
+                                root.device = kcm.tabletsModel.penAt(combo.currentIndex);
+                                root.padDevice = kcm.tabletsModel.padAt(combo.currentIndex);
 
-                    if (displayAction.checked) {
-                        contentLoader.item.reloadOutputView();
-                    }
-                }
+                                // If it is a pen device, prefer the display tab first.
+                                // Otherwise, if it's a lonely pad then we only have the pad tab available.
+                                if (root.device) {
+                                    displayAction.trigger();
+                                } else if (root.padDevice) {
+                                    padAction.trigger();
+                                }
 
-                Connections {
-                    target: kcm.tabletsModel
+                                if (displayAction.checked) {
+                                    contentLoader.item.reloadOutputView();
+                                }
+                            }
 
-                    function onDeviceChanged(index: int): void {
-                        if (index === combo.currentIndex) {
-                            combo.reload();
-                        }
-                    }
-                }
+                            Connections {
+                                target: kcm.tabletsModel
 
-                Connections {
-                    target: kcm
+                                function onDeviceChanged(index: int): void {
+                                    if (index === combo.currentIndex) {
+                                        combo.reload();
+                                    }
+                                }
+                            }
 
-                    function onSettingsRestored(): void {
-                        if (displayAction.checked) {
-                            contentLoader.item.reloadOutputView();
+                            Connections {
+                                target: kcm
+
+                                function onSettingsRestored(): void {
+                                    if (displayAction.checked) {
+                                        contentLoader.item.reloadOutputView();
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
+
+            Item {
+                Layout.horizontalStretchFactor: 1
+                Layout.minimumWidth: Kirigami.Units.gridUnit
+                Layout.fillWidth: true
+                visible: penPlaceholder.visible
+            }
+
         }
 
         Kirigami.NavigationTabBar {
@@ -231,6 +258,8 @@ SimpleKCM {
         DisplayTab {
             id: tab
 
+            Kirigami.FormAlignmentGroup.group: formGroup
+
             device: root.device
 
             Connections {
@@ -247,6 +276,8 @@ SimpleKCM {
 
         StylusTab {
             id: tab
+
+            formAlignmentGroup: formGroup
 
             db: kcm.db
             device: root.device
@@ -265,6 +296,8 @@ SimpleKCM {
         id: padTab
 
         PadTab {
+            Kirigami.FormAlignmentGroup.group: formGroup
+
             device: root.device
             padDevice: root.padDevice
             tabletEvents: events
