@@ -382,11 +382,11 @@ PlasmoidItem {
 
                 // These states match the set of SVG prefixes for the "widgets/pager" below.
                 state: {
-                    if ((desktopMouseArea.enabled && (desktopMouseArea.containsMouse || desktopMouseArea.activeFocus))
+                    if (isCurrent) {
+                        return "active";
+                    } else if ((desktopMouseArea.enabled && (desktopMouseArea.containsMouse || desktopMouseArea.activeFocus))
                             || (root.dragging && root.dragId === desktopId)) {
                         return "hover";
-                    } else if (isCurrent) {
-                        return "active";
                     } else {
                         return "normal";
                     }
