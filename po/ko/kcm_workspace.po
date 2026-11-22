@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 01:10+0000\n"
-"PO-Revision-Date: 2026-04-26 21:11+0200\n"
+"PO-Revision-Date: 2026-11-21 22:41+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -231,22 +231,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Text Cursor"
-msgstr ""
+msgstr "텍스트 커서"
 
 #: ui/main.qml:314
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Double-click interval:"
+#, kde-format
 msgctxt "@option:check followed by a spinbox"
 msgid "Blink with interval:"
-msgstr "두 번 클릭 간격:"
+msgstr "깜빡임 간격:"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgid "Double click interval"
+#, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Text cursor blink interval"
-msgstr "두 번 클릭 간격"
+msgstr "텍스트 커서 깜빡임 간격"
 
 #: ui/main.qml:358
 #, kde-format
@@ -256,6 +253,9 @@ msgid ""
 "browsers. May be ignored by apps with their own cursor settings, such as "
 "some terminals and code editors."
 msgstr ""
+"KDE, Qt, Firefox와 Chromium 기반 브라우저 등 GTK 앱에 적용됩니다. 일부 터미널"
+"이나 코드 편집기와 같이 자체 커서 설정을 사용하는 앱에서는 무시될 수 있습니"
+"다."
 
 #: ui/main.qml:364
 #, kde-format
@@ -392,7 +392,7 @@ msgstr "두 번 클릭 간격"
 #: workspaceoptions_kdeglobalssettings.kcfg:35
 #, kde-format
 msgid "Text cursor blink rate, 0 disables blinking"
-msgstr ""
+msgstr "텍스트 커서 깜빡임 속도. 0을 사용하면 깜빡이지 않습니다"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

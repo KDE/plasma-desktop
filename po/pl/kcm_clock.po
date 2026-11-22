@@ -1,5 +1,5 @@
 # translation of kcmkclock.po to Polish
-# Version: $Revision$
+# Version: $Revision: 1753851 $
 # translation of kcmkclock.po to
 # KTranslator Generated File
 # SPDX-FileCopyrightText: 2011, 2012, 2013, 2015, 2016, 2017, 2019, 2021, 2023 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-22 01:07+0000\n"
 "PO-Revision-Date: 2023-11-11 13:42+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmai.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -20,18 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Michał Rudolf, Norbert Popiołek, Łukasz Wojniłowicz"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ""
-"mrudolf@kdewebdev.org, norbert@kde.com.pl, lukasz.wojnilowicz@gmail.com"
-
-#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#: dateandtime.cpp:208 dateandtime.cpp:247
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "Nie można zmienić ustawień NTP"
@@ -42,7 +31,7 @@ msgstr "Nie można zmienić ustawień NTP"
 msgid "Permission to change NTP setting denied"
 msgstr "Nie można zmienić ustawień NTP"
 
-#: dateandtime.cpp:261 main.cpp:89
+#: dateandtime.cpp:261
 #, kde-format
 msgid "Unable to set current time"
 msgstr "Nie można ustawić bieżącego czasu"
@@ -62,11 +51,6 @@ msgstr "Nie można ustawić strefy czasowej"
 #, kde-format
 msgid "Permission to change time zone denied"
 msgstr ""
-
-#: main.cpp:101
-#, kde-format
-msgid "Unable to set timezone"
-msgstr "Nie można ustawić strefy czasowej"
 
 #: ui/main.qml:39
 #, fuzzy, kde-format
@@ -93,6 +77,18 @@ msgstr ""
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "Strefa czasowa"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Michał Rudolf, Norbert Popiołek, Łukasz Wojniłowicz"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "mrudolf@kdewebdev.org, norbert@kde.com.pl, lukasz.wojnilowicz@gmail.com"
+
+#~ msgid "Unable to set timezone"
+#~ msgstr "Nie można ustawić strefy czasowej"
 
 #~ msgid "Date and Time"
 #~ msgstr "Data i czas"

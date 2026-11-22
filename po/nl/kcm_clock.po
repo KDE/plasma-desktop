@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-22 01:07+0000\n"
 "PO-Revision-Date: 2026-11-16 15:07+0100\n"
 "Last-Translator: freek <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -28,17 +28,7 @@ msgstr ""
 "X-Generator: Lokalize 26.04.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Rinse de Vries - 2000; 2003 t/m 2008,Freek de Kruijf - 2013 t/m 2023"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "rinsedevries@kde.nl,freekdekruijf@kde.nl"
-
-#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#: dateandtime.cpp:208 dateandtime.cpp:247
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "NTP-instellingen wijzigen lukt niet"
@@ -48,7 +38,7 @@ msgstr "NTP-instellingen wijzigen lukt niet"
 msgid "Permission to change NTP setting denied"
 msgstr "Toestemming om NTP-instellingen te wijzigen afgewezen"
 
-#: dateandtime.cpp:261 main.cpp:89
+#: dateandtime.cpp:261
 #, kde-format
 msgid "Unable to set current time"
 msgstr "Huidige tijd instellen lukt niet"
@@ -67,11 +57,6 @@ msgstr "Tijdzone instellen lukt niet"
 #, kde-format
 msgid "Permission to change time zone denied"
 msgstr "Toestemming om tijdzone te wijzigen afgewezen"
-
-#: main.cpp:101
-#, kde-format
-msgid "Unable to set timezone"
-msgstr "Tijdzone instellen lukt niet"
 
 #: ui/main.qml:39
 #, kde-format
@@ -96,6 +81,18 @@ msgstr "Datum instellen"
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "Tijdzone"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Rinse de Vries - 2000; 2003 t/m 2008,Freek de Kruijf - 2013 t/m 2023"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "rinsedevries@kde.nl,freekdekruijf@kde.nl"
+
+#~ msgid "Unable to set timezone"
+#~ msgstr "Tijdzone instellen lukt niet"
 
 #~ msgid "Date and Time"
 #~ msgstr "Datum en tijd"

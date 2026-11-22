@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-18 15:47+0000\n"
-"PO-Revision-Date: 2026-09-29 00:31+0200\n"
+"PO-Revision-Date: 2026-11-21 22:42+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -255,24 +255,22 @@ msgid "Get New Plugins…"
 msgstr "새 플러그인 가져오기…"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:106
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Remove Desktop"
+#, kde-format
 msgctxt "@label"
 msgid "Desktop:"
-msgstr "바탕 화면 삭제"
+msgstr "바탕 화면:"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:107
 #, kde-format
 msgctxt "@info"
 msgid "Icons for items in the selected location appear on the desktop"
-msgstr ""
+msgstr "선택한 위치에 있는 항목에 대한 아이콘이 바탕 화면에 표시됨"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:110
 #, kde-format
 msgctxt "@option:check"
 msgid "Show files and folders"
-msgstr ""
+msgstr "파일과 폴더 표시"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:118
 #, kde-format
@@ -311,12 +309,10 @@ msgid "Wallpaper"
 msgstr "배경 그림"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox"
-#| msgid "Layout:"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Layout"
-msgstr "레이아웃:"
+msgstr "레이아웃"
 
 #: contents/configuration/ContainmentConfiguration.qml:36
 #, kde-format
@@ -971,13 +967,13 @@ msgstr "사용자 전환(&U)"
 #, kde-format
 msgctxt "@action:button"
 msgid "Hide On-Screen Keyboard"
-msgstr ""
+msgstr "온스크린 키보드 숨기기"
 
 #: contents/lockscreen/LockScreenUi.qml:481
 #, kde-format
 msgctxt "@action:button"
 msgid "Show On-Screen Keyboard"
-msgstr ""
+msgstr "온스크린 키보드 표시"
 
 #: contents/lockscreen/LockScreenUi.qml:507
 #, kde-format

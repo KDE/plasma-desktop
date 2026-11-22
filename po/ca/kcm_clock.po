@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-22 01:07+0000\n"
 "PO-Revision-Date: 2026-11-13 09:18+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -23,17 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Sebastià Pla i Sanz,Ivan Lloro Boada"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "sps@sastia.com,antispam@wanadoo.es"
-
-#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#: dateandtime.cpp:208 dateandtime.cpp:247
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "No s'han pogut canviar els paràmetres del NTP"
@@ -43,7 +33,7 @@ msgstr "No s'han pogut canviar els paràmetres del NTP"
 msgid "Permission to change NTP setting denied"
 msgstr "S'ha denegat el permís per a canviar els paràmetres del NTP"
 
-#: dateandtime.cpp:261 main.cpp:89
+#: dateandtime.cpp:261
 #, kde-format
 msgid "Unable to set current time"
 msgstr "No s'ha pogut establir l'hora actual"
@@ -63,11 +53,6 @@ msgstr "No s'ha pogut establir el fus horari"
 #, kde-format
 msgid "Permission to change time zone denied"
 msgstr "S'ha denegat el permís per a canviar el fus horari"
-
-#: main.cpp:101
-#, kde-format
-msgid "Unable to set timezone"
-msgstr "No s'ha pogut establir el fus horari"
 
 #: ui/main.qml:39
 #, kde-format
@@ -92,6 +77,17 @@ msgstr "Estableix la data"
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "Fus horari"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Sebastià Pla i Sanz,Ivan Lloro Boada"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "sps@sastia.com,antispam@wanadoo.es"
+
+#~ msgid "Unable to set timezone"
+#~ msgstr "No s'ha pogut establir el fus horari"
 
 #~ msgid "Date and Time"
 #~ msgstr "Data i hora"

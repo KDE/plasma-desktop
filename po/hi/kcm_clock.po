@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-22 01:07+0000\n"
 "PO-Revision-Date: 2021-07-10 10:57+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -19,17 +19,7 @@ msgstr ""
 "X-Generator: Lokalize 21.04.3\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "रविशंकर श्रीवास्तव, जी. करूणाकर, राघवेंद्र कामत"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "raviratlami@aol.in, raghu@raghukamath.com"
-
-#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#: dateandtime.cpp:208 dateandtime.cpp:247
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "एनटीपी सेटिंग्स बदलने में असमर्थ"
@@ -40,7 +30,7 @@ msgstr "एनटीपी सेटिंग्स बदलने में �
 msgid "Permission to change NTP setting denied"
 msgstr "एनटीपी सेटिंग्स बदलने में असमर्थ"
 
-#: dateandtime.cpp:261 main.cpp:89
+#: dateandtime.cpp:261
 #, kde-format
 msgid "Unable to set current time"
 msgstr "वर्तमान समय नियत करने में असमर्थ"
@@ -60,11 +50,6 @@ msgstr "समय क्षेत्र नियत करने में अ�
 #, kde-format
 msgid "Permission to change time zone denied"
 msgstr ""
-
-#: main.cpp:101
-#, kde-format
-msgid "Unable to set timezone"
-msgstr "समय क्षेत्र नियत करने में असमर्थ"
 
 #: ui/main.qml:39
 #, fuzzy, kde-format
@@ -91,6 +76,17 @@ msgstr ""
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "समय क्षेत्र"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "रविशंकर श्रीवास्तव, जी. करूणाकर, राघवेंद्र कामत"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "raviratlami@aol.in, raghu@raghukamath.com"
+
+#~ msgid "Unable to set timezone"
+#~ msgstr "समय क्षेत्र नियत करने में असमर्थ"
 
 #~ msgid "Date and Time"
 #~ msgstr "दिनांक व समय"

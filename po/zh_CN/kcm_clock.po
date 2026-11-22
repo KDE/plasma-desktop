@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-22 01:07+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,17 +17,7 @@ msgstr ""
 "X-Crowdin-File: /kf6-trunk/messages/plasma-desktop/kcmkclock.pot\n"
 "X-Crowdin-File-ID: 42909\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "KDE 中国"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "kde-china@kde.org"
-
-#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#: dateandtime.cpp:208 dateandtime.cpp:247
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "无法更改 NTP 设置"
@@ -38,7 +28,7 @@ msgstr "无法更改 NTP 设置"
 msgid "Permission to change NTP setting denied"
 msgstr "无法更改 NTP 设置"
 
-#: dateandtime.cpp:261 main.cpp:89
+#: dateandtime.cpp:261
 #, kde-format
 msgid "Unable to set current time"
 msgstr "无法设置当前时间"
@@ -58,11 +48,6 @@ msgstr "无法设置时区"
 #, kde-format
 msgid "Permission to change time zone denied"
 msgstr ""
-
-#: main.cpp:101
-#, kde-format
-msgid "Unable to set timezone"
-msgstr "无法设置时区"
 
 #: ui/main.qml:39
 #, fuzzy, kde-format
@@ -89,6 +74,17 @@ msgstr ""
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "时区"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "KDE 中国"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde-china@kde.org"
+
+#~ msgid "Unable to set timezone"
+#~ msgstr "无法设置时区"
 
 #~ msgid "Date and Time"
 #~ msgstr "日期和时间"

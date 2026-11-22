@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-22 01:07+0000\n"
 "PO-Revision-Date: 2013-03-28 15:17+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -19,21 +19,7 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr ""
-"संदिप शेडमाके, \n"
-"चेतन खोना"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ""
-"sandeep.shedmake@gmail.com, \n"
-"chetan@kompkin.com"
-
-#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#: dateandtime.cpp:208 dateandtime.cpp:247
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr ""
@@ -43,7 +29,7 @@ msgstr ""
 msgid "Permission to change NTP setting denied"
 msgstr ""
 
-#: dateandtime.cpp:261 main.cpp:89
+#: dateandtime.cpp:261
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set current time"
@@ -64,12 +50,6 @@ msgstr "टाइम सर्व्हरशी जुळवणी करू �
 #, kde-format
 msgid "Permission to change time zone denied"
 msgstr ""
-
-#: main.cpp:101
-#, fuzzy, kde-format
-#| msgid "Unable to contact time server: %1."
-msgid "Unable to set timezone"
-msgstr "टाइम सर्व्हरशी जुळवणी करू शकत नाही: %1."
 
 #: ui/main.qml:39
 #, fuzzy, kde-format
@@ -96,6 +76,23 @@ msgstr ""
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "वेळ क्षेत्र"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "संदिप शेडमाके, \n"
+#~ "चेतन खोना"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "sandeep.shedmake@gmail.com, \n"
+#~ "chetan@kompkin.com"
+
+#, fuzzy
+#~| msgid "Unable to contact time server: %1."
+#~ msgid "Unable to set timezone"
+#~ msgstr "टाइम सर्व्हरशी जुळवणी करू शकत नाही: %1."
 
 #~ msgid "Date and Time"
 #~ msgstr "दिनांक व वेळ"

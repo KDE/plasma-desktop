@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-22 01:07+0000\n"
 "PO-Revision-Date: 2024-01-07 18:28+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -21,17 +21,7 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Claudiu Costin,Sergiu Bivol"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ",sergiu@cip.md"
-
-#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#: dateandtime.cpp:208 dateandtime.cpp:247
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "Configurările NTP nu au putut fi modificate"
@@ -42,7 +32,7 @@ msgstr "Configurările NTP nu au putut fi modificate"
 msgid "Permission to change NTP setting denied"
 msgstr "Configurările NTP nu au putut fi modificate"
 
-#: dateandtime.cpp:261 main.cpp:89
+#: dateandtime.cpp:261
 #, kde-format
 msgid "Unable to set current time"
 msgstr "Nu s-a putut stabili ora curentă"
@@ -62,11 +52,6 @@ msgstr "Nu s-a putut stabili fusul orar"
 #, kde-format
 msgid "Permission to change time zone denied"
 msgstr ""
-
-#: main.cpp:101
-#, kde-format
-msgid "Unable to set timezone"
-msgstr "Nu s-a putut stabili fusul orar"
 
 #: ui/main.qml:39
 #, fuzzy, kde-format
@@ -93,6 +78,17 @@ msgstr ""
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "Fus orar"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Claudiu Costin,Sergiu Bivol"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ",sergiu@cip.md"
+
+#~ msgid "Unable to set timezone"
+#~ msgstr "Nu s-a putut stabili fusul orar"
 
 #~ msgid "Date and Time"
 #~ msgstr "Data și ora"

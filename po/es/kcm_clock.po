@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-22 01:07+0000\n"
 "PO-Revision-Date: 2026-11-17 20:42+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -27,17 +27,7 @@ msgstr ""
 "X-Generator: Lokalize 26.08.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Eloy Cuadra,Jaime Robles,Pablo de Vicente"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "ecuadra@eloihr.net,jaime@kde.org,vicente@oan.es"
-
-#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#: dateandtime.cpp:208 dateandtime.cpp:247
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "No ha sido posible cambiar las preferencias de NTP"
@@ -47,7 +37,7 @@ msgstr "No ha sido posible cambiar las preferencias de NTP"
 msgid "Permission to change NTP setting denied"
 msgstr "Permiso denegado para cambiar ajustes de NTP"
 
-#: dateandtime.cpp:261 main.cpp:89
+#: dateandtime.cpp:261
 #, kde-format
 msgid "Unable to set current time"
 msgstr "No ha sido posible fijar la hora actual"
@@ -66,11 +56,6 @@ msgstr "No se ha podido fijar la zona horaria"
 #, kde-format
 msgid "Permission to change time zone denied"
 msgstr "Permiso denegado para cambiar la zona horaria"
-
-#: main.cpp:101
-#, kde-format
-msgid "Unable to set timezone"
-msgstr "No ha sido posible fijar la zona horaria"
 
 #: ui/main.qml:39
 #, kde-format
@@ -95,3 +80,14 @@ msgstr "Definir la fecha"
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "Zona horaria"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Eloy Cuadra,Jaime Robles,Pablo de Vicente"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ecuadra@eloihr.net,jaime@kde.org,vicente@oan.es"
+
+#~ msgid "Unable to set timezone"
+#~ msgstr "No ha sido posible fijar la zona horaria"

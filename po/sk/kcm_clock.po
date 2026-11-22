@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-22 01:07+0000\n"
 "PO-Revision-Date: 2023-11-11 15:39+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -23,17 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.08.3\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Branislav Gajdoš,Stanislav Višňovský,Miroslav Dávid"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "brian@linuxee.sk,visnovsky@nenya.ms.mff.cuni.cz,mirodav@gmail.com"
-
-#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#: dateandtime.cpp:208 dateandtime.cpp:247
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "Nemôžem zmeniť NTP nastavenia"
@@ -43,7 +33,7 @@ msgstr "Nemôžem zmeniť NTP nastavenia"
 msgid "Permission to change NTP setting denied"
 msgstr "Povolenie na zmenu nastavenia NTP bolo zamietnuté"
 
-#: dateandtime.cpp:261 main.cpp:89
+#: dateandtime.cpp:261
 #, kde-format
 msgid "Unable to set current time"
 msgstr "Nepodarilo sa nastaviť aktuálny čas"
@@ -62,11 +52,6 @@ msgstr "Nepodarilo sa nastaviť časové pásmo"
 #, kde-format
 msgid "Permission to change time zone denied"
 msgstr "Povolenie na zmenu časového pásma bolo zamietnuté"
-
-#: main.cpp:101
-#, kde-format
-msgid "Unable to set timezone"
-msgstr "Nepodarilo sa nastaviť časové pásmo"
 
 #: ui/main.qml:39
 #, kde-format
@@ -91,6 +76,17 @@ msgstr "Nastaviť dátum"
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "Časové pásmo"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Branislav Gajdoš,Stanislav Višňovský,Miroslav Dávid"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "brian@linuxee.sk,visnovsky@nenya.ms.mff.cuni.cz,mirodav@gmail.com"
+
+#~ msgid "Unable to set timezone"
+#~ msgstr "Nepodarilo sa nastaviť časové pásmo"
 
 #~ msgid "Date and Time"
 #~ msgstr "Dátum a čas"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-22 01:07+0000\n"
 "PO-Revision-Date: 2019-12-12 22:39+0000\n"
 "Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -21,17 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "മനു എസ് മാധവ്, ഹരി വിഷ്ണു, മണിലാല്‍ കെ.എം, ഇര്‍ഷാദ് കെ, പ്രവീണ്‍ അരിമ്പ്രത്തൊടിയില്‍"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "shijualexonline@gmail.com,snalledam@dataone.in,vivekkj2004@gmail.com"
-
-#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#: dateandtime.cpp:208 dateandtime.cpp:247
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr ""
@@ -41,7 +31,7 @@ msgstr ""
 msgid "Permission to change NTP setting denied"
 msgstr ""
 
-#: dateandtime.cpp:261 main.cpp:89
+#: dateandtime.cpp:261
 #, fuzzy, kde-format
 msgid "Unable to set current time"
 msgstr "%1 എന്ന സമയ സെര്‍വറുമായി ബന്ധപ്പെടാന്‍ കഴിഞ്ഞില്ല."
@@ -60,11 +50,6 @@ msgstr "%1 എന്ന സമയ സെര്‍വറുമായി ബന്
 #, kde-format
 msgid "Permission to change time zone denied"
 msgstr ""
-
-#: main.cpp:101
-#, fuzzy, kde-format
-msgid "Unable to set timezone"
-msgstr "%1 എന്ന സമയ സെര്‍വറുമായി ബന്ധപ്പെടാന്‍ കഴിഞ്ഞില്ല."
 
 #: ui/main.qml:39
 #, fuzzy, kde-format
@@ -90,6 +75,19 @@ msgstr ""
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "സമയമേഖല"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "മനു എസ് മാധവ്, ഹരി വിഷ്ണു, മണിലാല്‍ കെ.എം, ഇര്‍ഷാദ് കെ, പ്രവീണ്‍ അരിമ്പ്രത്തൊടിയില്‍"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "shijualexonline@gmail.com,snalledam@dataone.in,vivekkj2004@gmail.com"
+
+#, fuzzy
+#~ msgid "Unable to set timezone"
+#~ msgstr "%1 എന്ന സമയ സെര്‍വറുമായി ബന്ധപ്പെടാന്‍ കഴിഞ്ഞില്ല."
 
 #~ msgid "Date and Time"
 #~ msgstr "ദിവസവും സമയവും"

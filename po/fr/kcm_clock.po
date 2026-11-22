@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-22 01:07+0000\n"
 "PO-Revision-Date: 2026-11-17 19:56+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -29,17 +29,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Thibaut Cousin, Nicolas Ternisien, Maxime Corteel"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "cousin@kde.org, nicolas.ternisien@gmail.com, mcorteel@gmail.com"
-
-#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#: dateandtime.cpp:208 dateandtime.cpp:247
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "Impossible de changer la configuration NTP"
@@ -49,7 +39,7 @@ msgstr "Impossible de changer la configuration NTP"
 msgid "Permission to change NTP setting denied"
 msgstr "L'autorisation pour modifier la configuration de NTP a été refusée."
 
-#: dateandtime.cpp:261 main.cpp:89
+#: dateandtime.cpp:261
 #, kde-format
 msgid "Unable to set current time"
 msgstr "Impossible de régler l'heure actuelle"
@@ -70,11 +60,6 @@ msgstr "Impossible de définir le fuseau horaire"
 #, kde-format
 msgid "Permission to change time zone denied"
 msgstr "L'autorisation pour modifier le fuseau horaire a été refusée."
-
-#: main.cpp:101
-#, kde-format
-msgid "Unable to set timezone"
-msgstr "Impossible de régler le fuseau horaire"
 
 #: ui/main.qml:39
 #, kde-format
@@ -99,6 +84,17 @@ msgstr "Définir la date"
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "Fuseau horaire"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Thibaut Cousin, Nicolas Ternisien, Maxime Corteel"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "cousin@kde.org, nicolas.ternisien@gmail.com, mcorteel@gmail.com"
+
+#~ msgid "Unable to set timezone"
+#~ msgstr "Impossible de régler le fuseau horaire"
 
 #~ msgid "Date and Time"
 #~ msgstr "Date et heure"

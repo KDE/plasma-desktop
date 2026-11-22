@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-22 01:07+0000\n"
 "PO-Revision-Date: 2023-12-11 18:21+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -26,22 +26,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr ""
-"Teemu Rytilahti, Tapio Kautto, Ilpo Kantonen, Mikko Piippo, Elias Julkunen, "
-"Jorma Karvonen, Tommi Nieminen, Lasse Liehu, Jiri Grönroos"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ""
-"teemu.rytilahti@kde-fi.org, eleknader@phnet.fi, ilpo@iki.fi, piippo@cc."
-"helsinki.fi, elias.julkunen@gmail.com, karvonen.jorma@gmail.com, "
-"translator@legisign.org, lasse.liehu@gmail.com, jiri.gronroos+kde@iki.fi"
-
-#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#: dateandtime.cpp:208 dateandtime.cpp:247
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "NTP-asetusten muuttaminen epäonnistui"
@@ -52,7 +37,7 @@ msgstr "NTP-asetusten muuttaminen epäonnistui"
 msgid "Permission to change NTP setting denied"
 msgstr "NTP-asetusten muuttaminen epäonnistui"
 
-#: dateandtime.cpp:261 main.cpp:89
+#: dateandtime.cpp:261
 #, kde-format
 msgid "Unable to set current time"
 msgstr "Nykyisen ajan asettaminen epäonnistui"
@@ -72,11 +57,6 @@ msgstr "Aikavyöhykkeen asettaminen epäonnistui"
 #, kde-format
 msgid "Permission to change time zone denied"
 msgstr ""
-
-#: main.cpp:101
-#, kde-format
-msgid "Unable to set timezone"
-msgstr "Aikavyöhykkeen asettaminen epäonnistui"
 
 #: ui/main.qml:39
 #, fuzzy, kde-format
@@ -103,6 +83,22 @@ msgstr ""
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "Aikavyöhyke"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Teemu Rytilahti, Tapio Kautto, Ilpo Kantonen, Mikko Piippo, Elias "
+#~ "Julkunen, Jorma Karvonen, Tommi Nieminen, Lasse Liehu, Jiri Grönroos"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "teemu.rytilahti@kde-fi.org, eleknader@phnet.fi, ilpo@iki.fi, piippo@cc."
+#~ "helsinki.fi, elias.julkunen@gmail.com, karvonen.jorma@gmail.com, "
+#~ "translator@legisign.org, lasse.liehu@gmail.com, jiri.gronroos+kde@iki.fi"
+
+#~ msgid "Unable to set timezone"
+#~ msgstr "Aikavyöhykkeen asettaminen epäonnistui"
 
 #~ msgid "Date and Time"
 #~ msgstr "Aika ja päiväys"

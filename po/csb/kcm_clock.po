@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-22 01:07+0000\n"
 "PO-Revision-Date: 2009-12-10 20:48+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -21,17 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2)\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Michôł Òstrowsczi, Mark Kwidzińsczi"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "michol@linuxcsb.org, mark@linuxcsb.org"
-
-#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#: dateandtime.cpp:208 dateandtime.cpp:247
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr ""
@@ -41,7 +31,7 @@ msgstr ""
 msgid "Permission to change NTP setting denied"
 msgstr ""
 
-#: dateandtime.cpp:261 main.cpp:89
+#: dateandtime.cpp:261
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set current time"
@@ -62,12 +52,6 @@ msgstr "Nié mòże sparłączëc sã z serwerą czasu: %1."
 #, kde-format
 msgid "Permission to change time zone denied"
 msgstr ""
-
-#: main.cpp:101
-#, fuzzy, kde-format
-#| msgid "Unable to contact time server: %1."
-msgid "Unable to set timezone"
-msgstr "Nié mòże sparłączëc sã z serwerą czasu: %1."
 
 #: ui/main.qml:39
 #, fuzzy, kde-format
@@ -94,6 +78,19 @@ msgstr ""
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "Czasowô cona"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Michôł Òstrowsczi, Mark Kwidzińsczi"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "michol@linuxcsb.org, mark@linuxcsb.org"
+
+#, fuzzy
+#~| msgid "Unable to contact time server: %1."
+#~ msgid "Unable to set timezone"
+#~ msgstr "Nié mòże sparłączëc sã z serwerą czasu: %1."
 
 #~ msgid "Date and Time"
 #~ msgstr "Datum ë czas"

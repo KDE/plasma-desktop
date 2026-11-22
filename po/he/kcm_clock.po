@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-22 01:07+0000\n"
 "PO-Revision-Date: 2026-11-13 13:40+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <kde-l10n-he@kde.org>\n"
@@ -33,17 +33,7 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 26.08.3\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "צוות התרגום של KDE ישראל"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "kde-l10n-he@kde.org"
-
-#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#: dateandtime.cpp:208 dateandtime.cpp:247
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "אי אפשר לשנות את הגדרות ה־NTP"
@@ -53,7 +43,7 @@ msgstr "אי אפשר לשנות את הגדרות ה־NTP"
 msgid "Permission to change NTP setting denied"
 msgstr "ההרשאה לשנות את הגדרת ה־NTP נדחתה"
 
-#: dateandtime.cpp:261 main.cpp:89
+#: dateandtime.cpp:261
 #, kde-format
 msgid "Unable to set current time"
 msgstr "לא ניתן להגדיר את השעה הנוכחית"
@@ -72,11 +62,6 @@ msgstr "לא ניתן להגדיר את אזור הזמן"
 #, kde-format
 msgid "Permission to change time zone denied"
 msgstr "ההרשאה לשנות את אזור הזמן נדחתה"
-
-#: main.cpp:101
-#, kde-format
-msgid "Unable to set timezone"
-msgstr "לא ניתן לקבוע את אזור הזמן"
 
 #: ui/main.qml:39
 #, kde-format
@@ -101,6 +86,17 @@ msgstr "הגדרת התאריך"
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "אזור זמן"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "צוות התרגום של KDE ישראל"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde-l10n-he@kde.org"
+
+#~ msgid "Unable to set timezone"
+#~ msgstr "לא ניתן לקבוע את אזור הזמן"
 
 #~ msgid "Date and Time"
 #~ msgstr "תאריך ושעה"

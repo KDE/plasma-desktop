@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-22 01:07+0000\n"
 "PO-Revision-Date: 2011-02-26 10:27+0100\n"
 "Last-Translator: Marko Dimjasevic <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -23,17 +23,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Renato Pavičić, Nenad Mikša"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "renato@translator-shop.org, DoDoEntertainment@gmail.com"
-
-#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#: dateandtime.cpp:208 dateandtime.cpp:247
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr ""
@@ -43,7 +33,7 @@ msgstr ""
 msgid "Permission to change NTP setting denied"
 msgstr ""
 
-#: dateandtime.cpp:261 main.cpp:89
+#: dateandtime.cpp:261
 #, fuzzy, kde-format
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set current time"
@@ -64,12 +54,6 @@ msgstr "Ne mogu se spojiti sa poslužiteljem vremena: %1"
 #, kde-format
 msgid "Permission to change time zone denied"
 msgstr ""
-
-#: main.cpp:101
-#, fuzzy, kde-format
-#| msgid "Unable to contact time server: %1."
-msgid "Unable to set timezone"
-msgstr "Ne mogu se spojiti sa poslužiteljem vremena: %1"
 
 #: ui/main.qml:39
 #, fuzzy, kde-format
@@ -96,6 +80,19 @@ msgstr ""
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "Vremenska zona"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Renato Pavičić, Nenad Mikša"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "renato@translator-shop.org, DoDoEntertainment@gmail.com"
+
+#, fuzzy
+#~| msgid "Unable to contact time server: %1."
+#~ msgid "Unable to set timezone"
+#~ msgstr "Ne mogu se spojiti sa poslužiteljem vremena: %1"
 
 #~ msgid "Date and Time"
 #~ msgstr "Datum i vrijeme"

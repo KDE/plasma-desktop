@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-22 01:07+0000\n"
 "PO-Revision-Date: 2026-11-12 11:35+0100\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -21,17 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 26.08.3\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Lukáš Tinkl,Libor Filípek"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "lukas@kde.org,libor.filipek@gmail.com"
-
-#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#: dateandtime.cpp:208 dateandtime.cpp:247
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "Nelze změnit nastavení NTP"
@@ -41,7 +31,7 @@ msgstr "Nelze změnit nastavení NTP"
 msgid "Permission to change NTP setting denied"
 msgstr "Oprávnění ke změně nastavení NTP bylo zamítnuto"
 
-#: dateandtime.cpp:261 main.cpp:89
+#: dateandtime.cpp:261
 #, kde-format
 msgid "Unable to set current time"
 msgstr "Nelze nastavit aktuální čas"
@@ -60,11 +50,6 @@ msgstr "Nelze nastavit časové pásmo"
 #, kde-format
 msgid "Permission to change time zone denied"
 msgstr "Oprávnění ke změně časového pásma bylo zamítnuto"
-
-#: main.cpp:101
-#, kde-format
-msgid "Unable to set timezone"
-msgstr "Nelze nastavit časové pásmo"
 
 #: ui/main.qml:39
 #, kde-format
@@ -89,6 +74,17 @@ msgstr "Nastavit datum"
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "Časové pásmo"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Lukáš Tinkl,Libor Filípek"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "lukas@kde.org,libor.filipek@gmail.com"
+
+#~ msgid "Unable to set timezone"
+#~ msgstr "Nelze nastavit časové pásmo"
 
 #~ msgid "Date and Time"
 #~ msgstr "Datum a čas"

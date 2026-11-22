@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-22 01:07+0000\n"
 "PO-Revision-Date: 2026-11-14 16:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -26,17 +26,7 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Lokalize 26.08.1\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "محمد سعد,زايد السعيدي,صفا الفليج"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "metehyi@free.fr,zayed.alsaidi@gmail.com,safa1996alfulaij@gmail.com"
-
-#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#: dateandtime.cpp:208 dateandtime.cpp:247
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "تعذّر تغيير إعدادات NTP"
@@ -46,7 +36,7 @@ msgstr "تعذّر تغيير إعدادات NTP"
 msgid "Permission to change NTP setting denied"
 msgstr "رُفض الإذن بتغيير إعدادات NTP"
 
-#: dateandtime.cpp:261 main.cpp:89
+#: dateandtime.cpp:261
 #, kde-format
 msgid "Unable to set current time"
 msgstr "تعذّر ضبط الوقت"
@@ -65,11 +55,6 @@ msgstr "تعذّر ضبط المنطقة الزمنيّة"
 #, kde-format
 msgid "Permission to change time zone denied"
 msgstr "رُفض الإذن بتغيير المنطقة الزمنية"
-
-#: main.cpp:101
-#, kde-format
-msgid "Unable to set timezone"
-msgstr "تعذّر ضبط المنطقة الزّمنيّة"
 
 #: ui/main.qml:39
 #, kde-format
@@ -94,6 +79,17 @@ msgstr "تعيين التاريخ"
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "المنطقة الزمنيّة"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "محمد سعد,زايد السعيدي,صفا الفليج"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "metehyi@free.fr,zayed.alsaidi@gmail.com,safa1996alfulaij@gmail.com"
+
+#~ msgid "Unable to set timezone"
+#~ msgstr "تعذّر ضبط المنطقة الزّمنيّة"
 
 #~ msgid "Date and Time"
 #~ msgstr "التّاريخ والوقت"

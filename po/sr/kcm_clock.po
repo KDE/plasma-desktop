@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-22 01:07+0000\n"
 "PO-Revision-Date: 2026-11-14 16:15+0100\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -22,17 +22,7 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Топлица Танасковић,Немања Хиршл"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "toptan@kde.org.yu,nemhirsl@gmail.com"
-
-#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#: dateandtime.cpp:208 dateandtime.cpp:247
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "Не могу да изменим НТП поставке"
@@ -42,7 +32,7 @@ msgstr "Не могу да изменим НТП поставке"
 msgid "Permission to change NTP setting denied"
 msgstr "Одбијена је дозвола за измену НТП поставке"
 
-#: dateandtime.cpp:261 main.cpp:89
+#: dateandtime.cpp:261
 #, kde-format
 msgid "Unable to set current time"
 msgstr "Не могу да поставим тренутно време."
@@ -61,11 +51,6 @@ msgstr "Не могу да поставим временску зону"
 #, kde-format
 msgid "Permission to change time zone denied"
 msgstr "Одбијена је дозвола за измену временске зоне"
-
-#: main.cpp:101
-#, kde-format
-msgid "Unable to set timezone"
-msgstr "Не могу да поставим временску зону."
 
 #: ui/main.qml:39
 #, kde-format
@@ -90,3 +75,14 @@ msgstr "Постави датум"
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "Временска зона"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Топлица Танасковић,Немања Хиршл"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "toptan@kde.org.yu,nemhirsl@gmail.com"
+
+#~ msgid "Unable to set timezone"
+#~ msgstr "Не могу да поставим временску зону."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-22 01:07+0000\n"
 "PO-Revision-Date: 2024-11-01 06:25\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -25,17 +25,7 @@ msgstr ""
 "kcmkclock.po\n"
 "X-Crowdin-File-ID: 10632\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Ігар Грачышка, Antikruk"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "komzpa@licei2.com, nashtlumach@gmail.com"
-
-#: dateandtime.cpp:208 dateandtime.cpp:247 main.cpp:78
+#: dateandtime.cpp:208 dateandtime.cpp:247
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "Не ўдалося змяніць налады NTP"
@@ -46,7 +36,7 @@ msgstr "Не ўдалося змяніць налады NTP"
 msgid "Permission to change NTP setting denied"
 msgstr "Не ўдалося змяніць налады NTP"
 
-#: dateandtime.cpp:261 main.cpp:89
+#: dateandtime.cpp:261
 #, kde-format
 msgid "Unable to set current time"
 msgstr "Не ўдалося прызначыць бягучы час"
@@ -66,11 +56,6 @@ msgstr "Не ўдалося прызначыць часавы пояс"
 #, kde-format
 msgid "Permission to change time zone denied"
 msgstr ""
-
-#: main.cpp:101
-#, kde-format
-msgid "Unable to set timezone"
-msgstr "Не ўдалося прызначыць часавы пояс"
 
 #: ui/main.qml:39
 #, fuzzy, kde-format
@@ -97,6 +82,17 @@ msgstr ""
 msgctxt "@title"
 msgid "Time Zone"
 msgstr "Часавы пояс"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Ігар Грачышка, Antikruk"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "komzpa@licei2.com, nashtlumach@gmail.com"
+
+#~ msgid "Unable to set timezone"
+#~ msgstr "Не ўдалося прызначыць часавы пояс"
 
 #~ msgid "Date and Time"
 #~ msgstr "Дата і час"

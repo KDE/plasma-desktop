@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-18 01:12+0000\n"
-"PO-Revision-Date: 2026-09-29 00:27+0200\n"
+"PO-Revision-Date: 2026-11-21 22:38+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -704,7 +704,7 @@ msgstr "확대와 돋보기"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Text Size"
-msgstr ""
+msgstr "텍스트 크기"
 
 #: ui/main.qml:39
 #, kde-format
@@ -985,14 +985,14 @@ msgid ""
 "keeps their proportions; on low-resolution screens, some small graphics may "
 "look slightly blurry."
 msgstr ""
+"대부분 상황에서 추천합니다. 텍스트와 다른 모든 것을 크게 확대하며 배율을 유지"
+"합니다. 저해상도 화면에서는 일부 작은 그래픽이 흐리게 보일 수도 있습니다."
 
 #: ui/TextSize.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Display Scale…"
-msgstr "단축키 설정…"
+msgstr "디스플레이 크기 조정 설정…"
 
 #: ui/TextSize.qml:25
 #, kde-format
@@ -1002,14 +1002,15 @@ msgid ""
 "changes can make text no longer fit or look good next to icons and other "
 "elements."
 msgstr ""
+"작은 크기 변경에만 추천합니다. 텍스트의 크기만 변경하며, 변경 폭이 크다면 텍"
+"스트가 더 이상 화면에 맞지 않거나, 아이콘이나 다른 구성 요소 옆에 있을 때 어"
+"울리지 않아 보일 수도 있습니다."
 
 #: ui/TextSize.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Fonts…"
-msgstr "단축키 설정…"
+msgstr "글꼴 설정…"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format
