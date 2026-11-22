@@ -59,9 +59,9 @@ KCMUtils.SimpleKCM {
             // Device
             Kirigami.FormEntry {
                 enabled: deviceSelector.count > 1
+                title: i18ndc("kcmmouse", "@title:listbox select device", "Device:")
                 contentItem: QQC2.ComboBox {
                     id: deviceSelector
-                    Kirigami.FormData.label: i18ndc("kcmmouse", "@title:listbox select device", "Device:")
                     Layout.fillWidth: true
                     model: root.backend.inputDevices
                     textRole: "name"
@@ -81,9 +81,9 @@ KCMUtils.SimpleKCM {
             // General
             Kirigami.FormEntry {
                 enabled: root.device?.supportsDisableEvents ?? false
+                title: i18ndc("kcmmouse", "@title:group", "General:")
                 contentItem: QQC2.CheckBox {
                     id: deviceEnabled
-                    Kirigami.FormData.label: i18ndc("kcmmouse", "@title:group", "General:")
                     text: i18ndc("kcmmouse", "@option:check enable this mouse device", "Enable device")
                     checked: root.device && (!root.device.supportsDisableEvents || root.device.enabled)
 
@@ -98,8 +98,8 @@ KCMUtils.SimpleKCM {
             Kirigami.FormSeparator {}
 
             Kirigami.FormEntry {
+                title: i18ndc("kcmmouse", "@title:group", "Left and right buttons:")
                 contentItem: QQC2.CheckBox {
-                    Kirigami.FormData.label: i18ndc("kcmmouse", "@title:group", "Left and right buttons:")
                     text: i18ndc("kcmmouse", "@option:check Left and right buttons", "Swap (left-handed mode)")
                     enabled: root.device?.supportsLeftHanded ?? false
                     checked: enabled && (root.device?.leftHanded ?? false)
@@ -136,10 +136,10 @@ KCMUtils.SimpleKCM {
         Kirigami.FormGroup {
             // Acceleration
             Kirigami.FormEntry {
+                title: i18ndc("kcmmouse", "@label:slider and @label:spinbox", "Pointer speed:")
                 contentItem: RowLayout {
                     id: accelSpeed
 
-                    Kirigami.FormData.label: i18ndc("kcmmouse", "@label:slider and @label:spinbox", "Pointer speed:")
                     Layout.fillWidth: true
 
                     spacing: Kirigami.Units.smallSpacing
@@ -259,8 +259,8 @@ KCMUtils.SimpleKCM {
                     20,
                 ]
 
+                title: i18ndc("kcmmouse", "@label:slider and @label:spinbox", "Scrolling speed:")
                 contentItem: GridLayout {
-                    Kirigami.FormData.label: i18ndc("kcmmouse", "@label:slider and @label:spinbox", "Scrolling speed:")
                     Kirigami.FormData.buddyFor: scrollFactor
                     Layout.fillWidth: true
 
@@ -341,9 +341,9 @@ KCMUtils.SimpleKCM {
 
             // Scrolling
             Kirigami.FormEntry {
+                title: i18ndc("kcmmouse", "@title:group", "Scrolling:")
                 contentItem: QQC2.CheckBox {
                     id: naturalScroll
-                    Kirigami.FormData.label: i18ndc("kcmmouse", "@title:group", "Scrolling:")
                     text: i18ndc("kcmmouse", "@option:check", "Invert scroll direction")
                     enabled: root.device?.supportsNaturalScroll ?? false
                     checked: enabled && (root.device?.naturalScroll ?? false)

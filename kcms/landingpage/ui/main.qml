@@ -164,7 +164,6 @@ KCMUtils.SimpleKCM {
                     // 0 is a special case, which means "instant speed / no animations"
                     Layout.fillWidth: true
 
-                    Kirigami.FormData.label: slider.Accessible.name
                     Kirigami.FormData.buddyFor: slider
 
                     QQC2.Slider {

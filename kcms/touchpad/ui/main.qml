@@ -83,8 +83,8 @@ KCMUtils.SimpleKCM {
             // Device
             Kirigami.FormEntry {
                 visible: deviceSelector.count > 1
+                title: i18ndc("kcm_touchpad", "@label:listbox device selection", "Device:")
                 contentItem: QQC2.ComboBox {
-                    Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label:listbox device selection", "Device:")
                     id: deviceSelector
 
                     Layout.fillWidth: true
@@ -105,9 +105,9 @@ KCMUtils.SimpleKCM {
 
             // General settings
             Kirigami.FormEntry {
+                title: i18ndc("kcm_touchpad", "@title:group prefix for checkbox group", "General:")
                 contentItem: QQC2.CheckBox {
                     id: deviceEnabled
-                    Kirigami.FormData.label: i18ndc("kcm_touchpad", "@title:group prefix for checkbox group", "General:")
                     text: i18ndc("kcm_touchpad", "@option:check", "Enable device")
                     enabled: root.device?.supportsDisableEvents ?? false
                     checked: root.device && (!root.device.supportsDisableEvents || root.device.enabled)
@@ -251,9 +251,9 @@ KCMUtils.SimpleKCM {
             Kirigami.FormSeparator {}
 
             Kirigami.FormEntry {
+                title: i18ndc("kcm_touchpad", "@title:group", "Left and right buttons:")
                 contentItem: QQC2.CheckBox {
                     id: leftHanded
-                    Kirigami.FormData.label: i18ndc("kcm_touchpad", "@title:group", "Left and right buttons:")
                     text: i18ndc("kcm_touchpad", "@option:check", "Swap (left-handed mode)")
                     enabled: root.device?.supportsLeftHanded ?? false
                     checked: enabled && (root.device?.leftHanded ?? false)
@@ -295,8 +295,8 @@ KCMUtils.SimpleKCM {
 
             // Acceleration
             Kirigami.FormEntry {
+                title: i18ndc("kcm_touchpad", "@label:slider and @label:spinbox", "Pointer speed:")
                 contentItem: RowLayout {
-                    Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label:slider and @label:spinbox", "Pointer speed:")
                     id: accelSpeed
                     Layout.fillWidth: true
 
@@ -397,9 +397,9 @@ KCMUtils.SimpleKCM {
         Kirigami.FormGroup {
             // Scroll Speed aka scroll Factor
             Kirigami.FormEntry {
+                title: i18ndc("kcm_touchpad", "@label:slider", "Scrolling speed:")
                 contentItem: GridLayout {
                     id: scrollProfile
-                    Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label:slider", "Scrolling speed:")
                     Kirigami.FormData.buddyFor: scrollFactor
                     Layout.fillWidth: true
 
@@ -612,9 +612,9 @@ KCMUtils.SimpleKCM {
         // Tap-to-click section
         Kirigami.FormGroup {
             Kirigami.FormEntry {
+                title: i18ndc("kcm_touchpad", "@label for checkbox, tap-to-click", "Tapping:")
                 contentItem: QQC2.CheckBox {
                     id: tapToClick
-                    Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label for checkbox, tap-to-click", "Tapping:")
                     text: i18ndc("kcm_touchpad", "@option:check", "Tap to click")
                     enabled: root.device?.tapFingerCount > 0
                     checked: enabled && (root.device?.tapToClick ?? false)

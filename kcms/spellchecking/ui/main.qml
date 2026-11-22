@@ -18,9 +18,9 @@ KCM.SimpleKCM {
     Kirigami.Form {
         Kirigami.FormGroup {
             Kirigami.FormEntry {
+                title: i18nc("@label", "Default Language:")
                 contentItem: QQC2.ComboBox {
                     id: defaultLanguage
-                    Kirigami.FormData.label: i18nc("@label", "Default Language:")
                     model: kcm.settings.dictionaryModel
                     textRole: "display"
                     valueRole: "languageCode"

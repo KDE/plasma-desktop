@@ -88,8 +88,8 @@ KCM.SimpleKCM {
             title: i18nc("@title:group", "Scrolling")
 
             Kirigami.FormEntry {
+                title: i18nc("@title:group prefix radiobutton group", "Clicking in scrollbar track:")
                 contentItem: QQC2.RadioButton {
-                    Kirigami.FormData.label: i18nc("@title:group prefix radiobutton group", "Clicking in scrollbar track:")
                     text: i18nc("@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to the clicked location'", "Scrolls to the clicked location")
                     checked: !kcm.globalsSettings.scrollbarLeftClickNavigatesByPage
                     onToggled: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage = false
