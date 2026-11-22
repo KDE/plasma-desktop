@@ -41,68 +41,71 @@ KCM.SimpleKCM {
         id: settings
     }
 
-    Kirigami.FormLayout {
-        anchors.fill: parent
+    Kirigami.Form {
+        Kirigami.FormGroup {
+            Kirigami.FormEntry {
+                title: i18nc("@label:chooser", "Icon:")
+                contentItem: QQC2.Button {
+                    implicitHeight:  Kirigami.Units.iconSizes.medium + Kirigami.Units.largeSpacing * 2
+                    implicitWidth: height
+                    icon.height: Kirigami.Units.iconSizes.medium
+                    icon.width: Kirigami.Units.iconSizes.medium
+                    icon.name: settings.iconName
+                    onClicked: iconDialog.open();
 
-        Item {
-            height: Kirigami.Units.smallSpacing
-        }
-
-        QQC2.Button {
-            implicitHeight:  Kirigami.Units.iconSizes.medium + Kirigami.Units.largeSpacing * 2
-            implicitWidth: height
-            icon.height: Kirigami.Units.iconSizes.medium
-            icon.width: Kirigami.Units.iconSizes.medium
-            icon.name: settings.iconName
-            Kirigami.FormData.label: i18nc("@label:chooser", "Icon:")
-            onClicked: iconDialog.open();
-
-            KIconThemes.IconDialog {
-                id: iconDialog
-                onIconNameChanged: iconName => settings.iconName = iconName
+                    KIconThemes.IconDialog {
+                        id: iconDialog
+                        onIconNameChanged: iconName => settings.iconName = iconName
+                    }
+                }
             }
-
+            Kirigami.FormEntry {
+                title: i18nc("@label:textbox", "Name:")
+                contentItem: QQC2.TextField {
+                    text: settings.name
+                    onTextEdited: settings.name = text
+                }
+            }
+            Kirigami.FormEntry {
+                title: i18nc("@label:textbox", "Description:")
+                contentItem: QQC2.TextField {
+                    text: settings.description
+                    onTextEdited: settings.description = text
+                }
+            }
         }
-
-        QQC2.TextField {
-            Kirigami.FormData.label: i18nc("@label:textbox", "Name:")
-            text: settings.name
-            onTextEdited: settings.name = text
+        Kirigami.FormGroup {
+            Kirigami.FormEntry {
+                title: i18nc("@title:group for checkbox group", "While on this activity, allow:")
+                contentItem: QQC2.CheckBox {
+                    text: i18nc("@option:check While on activity, allow", "Tracking file and app use")
+                    checked: !settings.isPrivate
+                    onToggled: settings.isPrivate = !checked
+                }
+            }
+            Kirigami.FormEntry {
+                contentItem: QQC2.CheckBox {
+                    text: i18nc("@option:check While on activity, allow", "Automatically turning off the screen")
+                    checked: !settings.inhibitScreen
+                    onToggled: settings.inhibitScreen = !checked
+                }
+            }
+            Kirigami.FormEntry {
+                contentItem: QQC2.CheckBox {
+                    text: i18nc("@option:check While on activity, allow", "Automatically shutting down or sleeping")
+                    checked: !settings.inhibitSleep
+                    onToggled: settings.inhibitSleep = !checked
+                }
+            }
         }
-
-        QQC2.TextField {
-            Kirigami.FormData.label: i18nc("@label:textbox", "Description:")
-            text: settings.description
-            onTextEdited: settings.description = text
-        }
-
-        Kirigami.Separator {
-            Kirigami.FormData.isSection: true
-        }
-
-        QQC2.CheckBox {
-            Kirigami.FormData.label: i18nc("@title:group for checkbox group", "While on this activity, allow:")
-            text: i18nc("@option:check While on activity, allow", "Tracking file and app use")
-            checked: !settings.isPrivate
-            onToggled: settings.isPrivate = !checked
-        }
-
-        QQC2.CheckBox {
-            text: i18nc("@option:check While on activity, allow", "Automatically turning off the screen")
-            checked: !settings.inhibitScreen
-            onToggled: settings.inhibitScreen = !checked
-        }
-
-        QQC2.CheckBox {
-            text: i18nc("@option:check While on activity, allow", "Automatically shutting down or sleeping")
-            checked: !settings.inhibitSleep
-            onToggled: settings.inhibitSleep = !checked
-        }
-
-        KQuickControls.KeySequenceItem {
-            Kirigami.FormData.label: i18nc("@label prefix for keyboard shortcut input button", "Shortcut for switching:")
-            keySequence: settings.shortcut
-            onCaptureFinished: settings.shortcut = keySequence
+        Kirigami.FormGroup {
+            Kirigami.FormEntry {
+                title: i18nc("@label prefix for keyboard shortcut input button", "Shortcut for switching:")
+                contentItem:         KQuickControls.KeySequenceItem {
+                    keySequence: settings.shortcut
+                    onCaptureFinished: settings.shortcut = keySequence
+                }
+            }
         }
     }
 }
