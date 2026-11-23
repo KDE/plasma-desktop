@@ -59,6 +59,14 @@ class InputDevice : public QObject
     // The only unique property to the Wayland backend
     Q_PROPERTY(qreal scrollFactor READ scrollFactor WRITE setScrollFactor NOTIFY scrollFactorChanged FINAL)
 
+    //
+    // rotation
+    Q_PROPERTY(bool supportsRotation READ supportsRotation CONSTANT FINAL)
+    Q_PROPERTY(uint defaultRotation READ defaultRotation CONSTANT FINAL)
+    Q_PROPERTY(uint rotation READ rotation WRITE setRotation NOTIFY rotationChanged FINAL)
+    // The rotation KWin currently applies, which differs from rotation while changes are unsaved
+    Q_PROPERTY(uint appliedRotation READ appliedRotation NOTIFY appliedRotationChanged FINAL)
+
 public:
     using QObject::QObject;
 
@@ -134,6 +142,17 @@ public:
     virtual qreal scrollFactor() const = 0;
     virtual void setScrollFactor(qreal set) = 0;
 
+    //
+    // rotation
+    virtual bool supportsRotation() const = 0;
+
+    virtual uint defaultRotation() const = 0;
+
+    virtual uint rotation() const = 0;
+    virtual void setRotation(uint angle) = 0;
+
+    virtual uint appliedRotation() const = 0;
+
 Q_SIGNALS:
     void needsSaveChanged();
 
@@ -148,4 +167,6 @@ Q_SIGNALS:
     void scrollButtonLockChanged();
     // The only unique property to the Wayland backend
     void scrollFactorChanged();
+    void rotationChanged();
+    void appliedRotationChanged();
 };

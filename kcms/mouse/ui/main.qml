@@ -236,7 +236,6 @@ KCMUtils.SimpleKCM {
                 }
             }
 
-
             Kirigami.FormSeparator {}
 
             Kirigami.FormEntry {
@@ -421,6 +420,72 @@ KCMUtils.SimpleKCM {
                     toolTipText: i18ndc("kcmmouse", "@info:whatsthis ContextualHelpButton tooltip", "This will interfere with middle-clicks in general; middle-click twice when you want the application to receive a single middle-click. This includes middle-click dragging.")
                 }
             }
+
+            Kirigami.FormSeparator {}
+
+            Kirigami.FormEntry {
+                enabled: root.device?.supportsRotation ?? false
+
+                contentItem: RowLayout {
+                    Kirigami.FormData.label: i18ndc("kcmmouse", "@label:spinbox", "Angle adjustment:")
+                    Kirigami.FormData.buddyFor: rotationSpinBox
+
+                    spacing: Kirigami.Units.smallSpacing
+
+                    QQC2.SpinBox {
+                        id: rotationSpinBox
+                        Layout.minimumWidth: Kirigami.Units.gridUnit * 5
+
+                        // libinput rotates clockwise in [0, 360); show it in [-180, 180], so that
+                        // small rotations in either direction read naturally
+                        from: -180
+                        to: 180
+                        stepSize: 1
+                        editable: true
+
+                        textFromValue: (value, locale) => i18ndc("kcmmouse", "@label:valuesuffix %1 is an angle in degrees", "%1°", Number(value).toLocaleString(locale, "f", 0))
+                        // The default validator only accepts plain numbers, without the ° sign
+                        validator: RegularExpressionValidator {
+                            regularExpression: /[-−]?\d{0,3}°?/
+                        }
+                        valueFromText: (text, locale) => Number.fromLocaleString(locale, text.replace(/[^-−\d]/g, ""))
+
+                        value: {
+                            const rotation = enabled && root.device ? root.device.rotation : 0
+                            return rotation > 180 ? rotation - 360 : rotation
+                        }
+
+                        onValueModified: {
+                            if (root.device) {
+                                root.device.rotation = (value + 360) % 360
+                            }
+                        }
+                    }
+
+                    QQC2.Button {
+                        text: i18ndc("kcmmouse", "@action:button Measure angle adjustment", "Measure…")
+                        icon.name: "crosshairs"
+                        onClicked: rotationCalibrationComponent.incubateObject(root, {}, Qt.Asynchronous)
+                    }
+                }
+
+                trailingItems: Kirigami.ContextualHelpButton {
+                    toolTipText: i18ndc("kcmmouse", "@info:whatsthis ContextualHelpButton tooltip for angle adjustment", "Rotates the direction of pointer movement clockwise by the given angle. This is useful for devices that are held or mounted at an angle.")
+                }
+            }
+        }
+    }
+
+    Component {
+        id: rotationCalibrationComponent
+
+        RotationCalibrationWindow {
+            appliedRotation: root.device.appliedRotation
+            deviceName: root.backend.inputDevices.length > 1 ? root.device.name : ""
+
+            Component.onCompleted: showFullScreen()
+            onAccepted: root.device.rotation = measuredRotation
+            onClosing: destroy()
         }
     }
 }

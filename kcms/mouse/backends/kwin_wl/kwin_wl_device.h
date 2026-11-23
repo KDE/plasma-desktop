@@ -227,6 +227,33 @@ public:
         m_scrollButtonLock.set(set);
     }
 
+    //
+    // rotation
+    bool supportsRotation() const override
+    {
+        return m_supportsRotation.val;
+    }
+
+    uint defaultRotation() const override
+    {
+        return m_defaultRotation.val;
+    }
+
+    uint rotation() const override
+    {
+        return m_rotation.val;
+    }
+
+    void setRotation(uint angle) override
+    {
+        m_rotation.set(angle % 360);
+    }
+
+    uint appliedRotation() const override
+    {
+        return m_rotation.old;
+    }
+
 private:
     template<typename T>
     struct Prop {
@@ -331,6 +358,12 @@ private:
     Prop<bool> m_scrollOnButtonDown{this, u"scrollOnButtonDown"_s, &KWinWaylandDevice::scrollOnButtonDownChanged};
     Prop<bool> m_scrollButtonLockEnabledByDefault{this, u"scrollButtonLockEnabledByDefault"_s};
     Prop<bool> m_scrollButtonLock{this, u"scrollButtonLock"_s, &KWinWaylandDevice::scrollButtonLockChanged};
+
+    //
+    // rotation
+    Prop<bool> m_supportsRotation{this, u"supportsRotation"_s};
+    Prop<uint> m_defaultRotation{this, u"defaultRotation"_s};
+    Prop<uint> m_rotation{this, u"rotation"_s, &KWinWaylandDevice::rotationChanged};
 
     QString m_dbusName;
 };

@@ -96,6 +96,11 @@ bool KWinWaylandDevice::init()
 
     success &= valueLoader(m_scrollButtonLockEnabledByDefault);
     success &= valueLoader(m_scrollButtonLock);
+    // rotation
+    success &= valueLoader(m_supportsRotation);
+    success &= valueLoader(m_defaultRotation);
+    success &= valueLoader(m_rotation);
+    Q_EMIT appliedRotationChanged(); // computed property: m_rotation.old was reassigned
 
     return success;
 }
@@ -115,6 +120,8 @@ bool KWinWaylandDevice::defaults()
     m_scrollFactor.set(1.0);
     m_scrollOnButtonDown.set(m_scrollOnButtonDownEnabledByDefault);
     m_scrollButtonLock.set(m_scrollButtonLockEnabledByDefault);
+    // rotation
+    m_rotation.set(m_defaultRotation);
 
     return true;
 }
@@ -136,6 +143,8 @@ bool KWinWaylandDevice::save()
     success &= valueWriter(m_scrollFactor);
     success &= valueWriter(m_scrollOnButtonDown);
     success &= valueWriter(m_scrollButtonLock);
+    // rotation
+    success &= valueWriter(m_rotation);
 
     return success;
 }
@@ -154,7 +163,9 @@ bool KWinWaylandDevice::isSaveNeeded() const
         || m_naturalScroll.isSaveNeeded() //
         || m_scrollFactor.isSaveNeeded() //
         || m_scrollOnButtonDown.isSaveNeeded() //
-        || m_scrollButtonLock.isSaveNeeded();
+        || m_scrollButtonLock.isSaveNeeded() //
+        // rotation
+        || m_rotation.isSaveNeeded();
 }
 
 template<typename T>
