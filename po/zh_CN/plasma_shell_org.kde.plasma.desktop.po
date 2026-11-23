@@ -253,24 +253,22 @@ msgid "Get New Plugins…"
 msgstr "获取新插件…"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:106
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Remove Desktop"
+#, kde-format
 msgctxt "@label"
 msgid "Desktop:"
-msgstr "移除桌面"
+msgstr "桌面："
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:107
 #, kde-format
 msgctxt "@info"
 msgid "Icons for items in the selected location appear on the desktop"
-msgstr ""
+msgstr "所选位置中的项目图标会显示在桌面上"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:110
 #, kde-format
 msgctxt "@option:check"
 msgid "Show files and folders"
-msgstr ""
+msgstr "显示文件和文件夹"
 
 #: contents/configuration/ConfigurationContainmentLayout.qml:118
 #, kde-format
@@ -300,7 +298,7 @@ msgstr "快捷键"
 #, kde-format
 msgctxt "@action:button set keyboard shortcut for"
 msgid "Activate widget as if clicked:"
-msgstr "激活小部件，效果与点击它相同："
+msgstr "激活小部件 (相当于点击此小部件)："
 
 #: contents/configuration/ContainmentConfiguration.qml:26
 #, kde-format
@@ -309,12 +307,10 @@ msgid "Wallpaper"
 msgstr "壁纸"
 
 #: contents/configuration/ContainmentConfiguration.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox"
-#| msgid "Layout:"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "Layout"
-msgstr "布局： "
+msgstr "布局"
 
 #: contents/configuration/ContainmentConfiguration.qml:36
 #, kde-format
@@ -749,7 +745,7 @@ msgstr "不支持的小部件"
 #, kde-format
 msgctxt "Text displayed on top of newly-installed widgets"
 msgid "New!"
-msgstr "新！"
+msgstr "新装"
 
 #: contents/explorer/AppletDelegate.qml:198
 #, kde-format
@@ -967,19 +963,19 @@ msgstr "切换用户(&U)"
 #, kde-format
 msgctxt "@action:button"
 msgid "Hide On-Screen Keyboard"
-msgstr ""
+msgstr "隐藏屏幕键盘"
 
 #: contents/lockscreen/LockScreenUi.qml:481
 #, kde-format
 msgctxt "@action:button"
 msgid "Show On-Screen Keyboard"
-msgstr ""
+msgstr "显示屏幕键盘"
 
 #: contents/lockscreen/LockScreenUi.qml:507
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr ""
+msgstr "切换布局"
 
 #: contents/lockscreen/MainBlock.qml:67
 #, kde-format
@@ -1193,47 +1189,3 @@ msgstr "退出编辑模式"
 msgctxt "@info:whatsthis Accessible name"
 msgid "Panel Focus Indicator"
 msgstr "面板焦点指示器"
-
-#~ msgctxt "plasma_shell_org.kde.plasma.desktop"
-#~ msgid "Send an email to %1"
-#~ msgstr "发送电子邮件到 %1"
-
-#~ msgctxt "@action:button icononly for tooltip & accessible %1 is url"
-#~ msgid "Open website %1"
-#~ msgstr "打开网站 %1"
-
-#~ msgctxt "@title:group"
-#~ msgid "Website"
-#~ msgstr "网站"
-
-#~ msgctxt "@title:group"
-#~ msgid "Get Help"
-#~ msgstr "获取帮助"
-
-#~ msgctxt "@action:button urlbutton"
-#~ msgid "Report an issue"
-#~ msgstr "报告问题"
-
-#~ msgctxt "@title license information"
-#~ msgid "Copyright"
-#~ msgstr "版权信息"
-
-#~ msgctxt "@label %1 is the short SPDX text for the license"
-#~ msgid "License: %1"
-#~ msgstr "许可证：%1"
-
-#~ msgctxt "@action:button"
-#~ msgid "Read License"
-#~ msgstr "查看许可证"
-
-#~ msgctxt "@title:group"
-#~ msgid "Authors"
-#~ msgstr "作者"
-
-#~ msgctxt "@title:group"
-#~ msgid "Credits"
-#~ msgstr "鸣谢"
-
-#~ msgctxt "@title:group"
-#~ msgid "Translators"
-#~ msgstr "翻译者"

@@ -225,22 +225,19 @@ msgstr "双击文件夹进行测试。如果它的外观没有发生变化，请
 #, kde-format
 msgctxt "@title:group"
 msgid "Text Cursor"
-msgstr ""
+msgstr "文本光标"
 
 #: ui/main.qml:314
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Double-click interval:"
+#, kde-format
 msgctxt "@option:check followed by a spinbox"
 msgid "Blink with interval:"
-msgstr "双击间隔时间："
+msgstr "闪烁间隔："
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgid "Double click interval"
+#, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Text cursor blink interval"
-msgstr "双击间隔时间"
+msgstr "文本光标闪烁间隔"
 
 #: ui/main.qml:358
 #, kde-format
@@ -250,6 +247,8 @@ msgid ""
 "browsers. May be ignored by apps with their own cursor settings, such as "
 "some terminals and code editors."
 msgstr ""
+"适用于 KDE、Qt 和 GTK 应用，包括 Firefox 和基于 Chromium 的浏览器。某些内建光"
+"标设置的应用 (如部分终端和代码编辑器) 可能会忽略此设置。"
 
 #: ui/main.qml:364
 #, kde-format
@@ -382,7 +381,7 @@ msgstr "双击间隔时间"
 #: workspaceoptions_kdeglobalssettings.kcfg:35
 #, kde-format
 msgid "Text cursor blink rate, 0 disables blinking"
-msgstr ""
+msgstr "文本光标闪烁频率，0 表示禁用闪烁"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

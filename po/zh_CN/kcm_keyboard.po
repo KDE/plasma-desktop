@@ -306,7 +306,7 @@ msgstr "布局"
 #, kde-format
 msgctxt "@info:usagetip %1 is the name of a keyboard layout"
 msgid "Using system-wide layout “%1”"
-msgstr ""
+msgstr "正在使用系统级布局“%1”"
 
 #: ui/main.qml:252
 #, kde-kuit-format
@@ -315,6 +315,8 @@ msgid ""
 "To override this or add more layouts for this user account, press the "
 "<interface>Add…</interface> button."
 msgstr ""
+"要覆盖此设置或为此用户账户添加更多键盘布局，请点击 <interface>添加...</"
+"interface> 按钮。"
 
 #: ui/main.qml:268
 #, kde-format
@@ -540,15 +542,3 @@ msgstr[0] "%1 个快捷键"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "无"
-
-#~ msgctxt "@label:checkbox configure layouts option"
-#~ msgid "Enable"
-#~ msgstr "启用"
-
-#~ msgctxt "@label:checkbox accessible"
-#~ msgid "Configure Layouts"
-#~ msgstr "配置布局"
-
-#~ msgctxt "@option:check"
-#~ msgid "Custom Layout"
-#~ msgstr "自定义布局"

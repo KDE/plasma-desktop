@@ -718,18 +718,16 @@ msgid "Move to %1"
 msgstr "移动到 %1"
 
 #: qml/ContextMenu.qml:505
-#, fuzzy, kde-format
-#| msgctxt "action:inmenu"
-#| msgid "Move to &Desktop"
+#, kde-format
 msgctxt "action:inmenu"
 msgid "Move to &Screen"
-msgstr "移动到桌面(&D)"
+msgstr "移动到屏幕(&S)"
 
 #: qml/ContextMenu.qml:535
 #, kde-format
 msgctxt "@item:inmenu List of all Screens to send a window to."
 msgid "Built-in Screen"
-msgstr ""
+msgstr "自带屏幕"
 
 #: qml/ContextMenu.qml:538
 #, kde-format
@@ -737,7 +735,7 @@ msgctxt ""
 "@item:inmenu List of all Screens to send a window to, manufacturer, model "
 "(output identifier)"
 msgid "%1 %2 (%3)"
-msgstr ""
+msgstr "%1 %2 (%3)"
 
 #: qml/ContextMenu.qml:583 qml/ContextMenu.qml:599
 #, kde-format

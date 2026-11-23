@@ -152,7 +152,7 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "This setting is not available while “Right-click by pressing anywhere with "
 "two fingers” is selected."
-msgstr ""
+msgstr "当选择了“双指按下触摸板的任意位置”时，此设置不可用。"
 
 #: ui/main.qml:208
 #, kde-format
@@ -234,16 +234,12 @@ msgid "Right-click by:"
 msgstr "右键点击方式："
 
 #: ui/main.qml:478
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Completes the sentence 'right-click by pressing bottom-"
-#| "right corner'"
-#| msgid "Pressing bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-left "
 "corner'"
 msgid "Pressing bottom-left corner"
-msgstr "按下触摸板的右下角"
+msgstr "按下触摸板的左下角"
 
 #: ui/main.qml:479
 #, kde-format
@@ -326,12 +322,10 @@ msgid "Right-click"
 msgstr "右键点击"
 
 #: ui/main.qml:582
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by tapping anywhere with three fingers."
-msgstr "任意位置三指按下时点击中键。"
+msgstr "任意位置三指点击时点击中键。"
 
 #: ui/main.qml:604
 #, kde-format
@@ -340,41 +334,7 @@ msgid "Middle-click"
 msgstr "中键点击"
 
 #: ui/main.qml:607
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing anywhere with three fingers."
+#, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Right-click by tapping anywhere with three fingers."
-msgstr "任意位置三指按下时点击中键。"
-
-#~ msgctxt ""
-#~ "@label for radiobutton group, begins the sentence 'middle-click by "
-#~ "pressing bottom-middle edge/by pressing anywhere with three fingers'"
-#~ msgid "Middle-click by:"
-#~ msgstr "中键点击方式："
-
-#~ msgctxt ""
-#~ "@option:radio completes the sentence 'middle-click by pressing bottom-"
-#~ "middle edge'"
-#~ msgid "Pressing bottom-middle edge"
-#~ msgstr "按下触摸板底部的中间位置"
-
-#~ msgctxt ""
-#~ "@option:radio completes the sentence 'middle-click by pressing bottom-"
-#~ "left and bottom-right corners'"
-#~ msgid "Pressing bottom-left and bottom-right corners"
-#~ msgstr "按下触摸板的左下角和右下角"
-
-#~ msgctxt ""
-#~ "@option:check completes the sentence 'middle-click by pressing anywhere "
-#~ "with three fingers'"
-#~ msgid "Pressing anywhere with three fingers"
-#~ msgstr "三指按下触摸板的任意位置"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Right-click (three-finger tap to middle-click)"
-#~ msgstr "右键点击 (三指轻触时点击中键)"
-
-#~ msgctxt "@option:radio"
-#~ msgid "Middle-click (three-finger tap to right-click)"
-#~ msgstr "中键点击 (三指轻触时点击右键)"
+msgstr "任意位置三指点击时点击右键。"

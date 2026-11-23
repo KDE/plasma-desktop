@@ -700,7 +700,7 @@ msgstr "缩放和放大"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Text Size"
-msgstr ""
+msgstr "文本大小"
 
 #: ui/main.qml:39
 #, kde-format
@@ -979,14 +979,14 @@ msgid ""
 "keeps their proportions; on low-resolution screens, some small graphics may "
 "look slightly blurry."
 msgstr ""
+"推荐大多数情况下使用。文本及其他内容同时放大，比例不变；低分辨率屏幕下部分小"
+"元素可能略显模糊。"
 
 #: ui/TextSize.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Display Scale…"
-msgstr "配置快捷键…"
+msgstr "配置显示缩放…"
 
 #: ui/TextSize.qml:25
 #, kde-format
@@ -996,14 +996,14 @@ msgid ""
 "changes can make text no longer fit or look good next to icons and other "
 "elements."
 msgstr ""
+"仅适用于字体大小的微调。仅改变文本尺寸，大幅调整可能导致文本溢出或与图标等元"
+"素排布不协调。"
 
 #: ui/TextSize.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Fonts…"
-msgstr "配置快捷键…"
+msgstr "配置字体…"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format
