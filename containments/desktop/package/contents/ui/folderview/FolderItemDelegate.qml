@@ -47,7 +47,7 @@ ContainmentLayoutManager.ItemContainer {
     Accessible.name: display
     Accessible.role: Accessible.Canvas
 
-    editModeCondition: ContainmentLayoutManager.ItemContainer.AfterPress
+    editModeCondition: ContainmentLayoutManager.ItemContainer.Manual
 
     // This MouseArea exists to intercept press and hold; preventing edit mode
     // from being triggered when pressing and holding on an icon (if there is one).
@@ -55,6 +55,15 @@ ContainmentLayoutManager.ItemContainer {
         anchors.fill: parent
         visible: !main.blank
         z: -1
+    }
+
+    DragHandler {
+        target:null
+        onActiveChanged: {
+            if (active) {
+                dir.dragSelected(main.x, main.y);
+            }
+        }
     }
 
     function openPopup() {
@@ -129,7 +138,7 @@ ContainmentLayoutManager.ItemContainer {
 
                 function onSelectedChanged() {
                     if (dir.usedByContainment && main.selected) {
-                        gridView.currentIndex = main.index;
+                        main.forceActiveFocus;
                     }
                 }
             }
@@ -245,17 +254,7 @@ ContainmentLayoutManager.ItemContainer {
                 active: impl.hovered || main.selected
                 asynchronous: true
 
-                width: {
-                    if (root.useListViewMode) {
-                        if (main.GridView.view.overflowing) {
-                            return parent.width - Kirigami.Units.smallSpacing;
-                        } else {
-                            return parent.width;
-                        }
-                    }
-
-                    return parent.width - (Kirigami.Units.smallSpacing * 2);
-                }
+                width: parent.width - (Kirigami.Units.smallSpacing * 2);
 
                 height: root.useListViewMode
                                 ? parent.height
@@ -293,7 +292,7 @@ ContainmentLayoutManager.ItemContainer {
                         leftMargin: Kirigami.Units.smallSpacing
                     }
 
-                    width: root.useListViewMode ? main.GridView.view.iconSize : (parent.width - 2 * Kirigami.Units.smallSpacing)
+                    width: root.useListViewMode ? main.layout.iconSize : (parent.width - 2 * Kirigami.Units.smallSpacing)
                     height: main.layout.iconSize
 
                     opacity: {
@@ -399,8 +398,8 @@ ContainmentLayoutManager.ItemContainer {
                         element: main.selected ? "remove" : "add"
 
                         onClicked: {
-                            dir.toggleSelected(positioner.map(main.index));
-                            main.GridView.view.currentIndex = main.index;
+                            dir.toggleSelected(main.index);
+                            main.forceActiveFocus();
                         }
                     }
                 }
@@ -414,8 +413,8 @@ ContainmentLayoutManager.ItemContainer {
                         element: "open"
 
                         onClicked: {
-                            dir.setSelected(positioner.map(main.index));
-                            main.GridView.view.currentIndex = main.index;
+                            dir.setSelected(main.index);
+                            main.forceActiveFocus();
                             main.openPopup();
                         }
                     }

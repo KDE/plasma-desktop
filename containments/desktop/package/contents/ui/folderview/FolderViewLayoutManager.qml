@@ -12,6 +12,7 @@ import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 import org.kde.ksvg as KSvg
 import org.kde.kirigami as Kirigami
+import org.kde.kquickcontrolsaddons
 
 import org.kde.private.desktopcontainment.folder as Folder
 
@@ -26,6 +27,7 @@ ContainmentLayoutManager.AppletsLayout {
     property alias url: dir.url
     property real iconSize: FolderTools.iconSizeFromTheme(Plasmoid.configuration.iconSize)
     property FolderItemDelegate hoveredItem: null
+    property FolderItemDelegate pressedItem: null
     readonly property bool useListViewMode: false
     property Base.RenameEditor editor: null
     readonly property int rows: height / cellHeight
@@ -171,14 +173,14 @@ ContainmentLayoutManager.AppletsLayout {
         id: eventGenerator
     }
 
-    MouseArea {
+    MouseEventListener {
         id: listener
-
+visible: false
         anchors.fill: parent
 
-        enabled: !Plasmoid.containment.corona.editMode && !root.editMode
+        enabled: false//!Plasmoid.containment.corona.editMode && !root.editMode
 
-        acceptedButtons: Qt.LeftButton
+        acceptedButtons: Qt.LeftButton | Qt.RightButton
         hoverEnabled: true
 
         property int pressX: -1
@@ -207,11 +209,12 @@ ContainmentLayoutManager.AppletsLayout {
             if ((!root.hoveredItem || root.hoveredItem.blank) && !root.ctrlPressed) {
                 dir.clearSelection();
             }
+            root.pressedItem = gridView.safeItemAt(mouse.x, mouse.y);
         }
 
         onPositionChanged: mouse => {
             root.ctrlPressed = (mouse.modifiers & Qt.ControlModifier);
-
+print(mouse)
             // Update rubberband geometry.
             if (root.rubberBand) {
                 let rB = root.rubberBand;
@@ -245,13 +248,22 @@ ContainmentLayoutManager.AppletsLayout {
 
             // Drag initiation.
             if (pressX !== -1 && root.isDrag(pressX, pressY, mouse.x, mouse.y)) {
-                // Disable rubberband while renaming
-                if (root.editor && root.editor.targetItem) {
-                    return;
+                print("AAAA",pressedItem)
+                if (pressedItem !== null && dir.isSelected(positioner.map(pressedItem.index))) {
+                    if (pressedItem.dragImageBeingGenerated) {
+                        return; // this should be very fast, we can try again next pixel
+                    }
+                    pressedItem.hideToolTip();
+                    dir.dragSelected(mouse.x, mouse.y);
+                    clearPressState();
+                } else {
+                    // Disable rubberband in popup list view mode or while renaming
+                    //if (root.useListViewMode || (main.editor && main.editor.targetItem) || (verticalScrollBar.active || horizontalScrollBar.active)) {
+                    //    return;
+                    //}
+                    dir.pinSelection();
+                    root.rubberBand = rubberBandObject.createObject(root, {x: listener.cPress.x, y: listener.cPress.y});
                 }
-
-                dir.pinSelection();
-                root.rubberBand = rubberBandObject.createObject(root, {x: listener.cPress.x, y: listener.cPress.y});
             }
         }
 
@@ -297,6 +309,7 @@ ContainmentLayoutManager.AppletsLayout {
         }
 
         function clearPressState() {
+            root.pressedItem = null;
             pressX = -1;
             pressY = -1;
         }
@@ -357,6 +370,19 @@ ContainmentLayoutManager.AppletsLayout {
         }
     }
 
+    Folder.ItemViewAdapter {
+        id: viewAdapter
+
+        adapterView: root
+        adapterModel: positioner
+        adapterIconSize: root.iconSize * 2
+        adapterVisibleArea: Qt.rect(0, 0, root.width, root.height)
+
+        Component.onCompleted: {
+           // gridView.movementStarted.connect(viewAdapter.viewScrolled);
+            dir.viewAdapter = viewAdapter;
+        }
+    }
     Repeater {
         id: repeater
         model: Folder.FolderModel {
@@ -371,30 +397,24 @@ ContainmentLayoutManager.AppletsLayout {
             previewPlugins: Plasmoid.configuration.previewPlugins
             applet: Plasmoid
 
-           // onRequestRename: main.rename()
+           onRequestRename: root.rename()
 
             onPopupMenuAboutToShow: (dropJob, mimeData, x, y) => {
                 if (Plasmoid.isContainment && !Plasmoid.immutable) {
                     root.processMimeData(mimeData, x, y, dropJob);
                 }
             }
-/*
+
             // Create drag images before dragging
             // Due to async operations we can't call this before dragging starts,
             // but we have to call it after a selection is done
-            onSelectionDone: main.generateDragImage()
+            onSelectionDone: root.generateDragImage()
 
-            onListingCompleted: {
-                if (!gridView.model && root.expanded) {
-                    gridView.model = positioner;
-                    gridView.currentIndex = inPanel ? 0 : -1;
-                } else if (main.goingBack) {
-                    main.goingBack = false;
-                    gridView.currentIndex = Math.min(main.lastPosition.index, gridView.count - 1);
-                    setSelected(positioner.map(gridView.currentIndex));
-                    gridView.contentY = main.lastPosition.yPosition * gridView.contentHeight;
-                }
-            }*/
+
+            onMove: (x, y, urls) => {
+                print("MOVE",x,y,urls)
+                root.generateDragImage(); // in case the user drags again
+            }
         }
 
         delegate: FolderItemDelegate {
