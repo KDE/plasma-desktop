@@ -1,0 +1,129 @@
+/*
+    SPDX-FileCopyrightText: 2014-2015 Eike Hein <hein@kde.org>
+
+    SPDX-License-Identifier: GPL-2.0-or-later
+*/
+pragma ComponentBehavior: Bound
+
+import QtQuick
+
+import org.kde.plasma.plasmoid
+import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.extras as PlasmaExtras
+import org.kde.kirigami as Kirigami
+
+import org.kde.private.desktopcontainment.folder as Folder
+
+Folder.SubDialog {
+    id: dialog
+
+    visible: false
+
+    readonly property bool containsDrag: {
+        if (folderViewDropArea.containsDrag) {
+            return true;
+        }
+
+        if (folderView.hoveredItem && folderView.hoveredItem.popupDialog) {
+            return childDialog.containsDrag;
+        }
+
+        return false;
+    }
+
+    readonly property Timer closeTimer: closeTimer
+    readonly property FolderViewDialog childDialog: (folderView.hoveredItem?.popupDialog as FolderViewDialog) ?? null
+    readonly property bool containsMouse: folderView.containsMouse || (childDialog !== null && childDialog.containsMouse)
+
+    property alias url: folderView.url
+
+    location: PlasmaCore.Types.Floating
+    hideOnWindowDeactivate: (allowClosing && (childDialog === null))
+
+    onContainsMouseChanged: {
+        if (containsMouse) {
+            closeTimer.stop();
+        } else {
+            closeTimer.start();
+        }
+    }
+
+    mainItem: FolderViewDropArea {
+        id: folderViewDropArea
+
+        width: folderView.cellWidth * 3 + Kirigami.Units.gridUnit // FIXME HACK: Use actual scrollbar width.
+        height: folderView.cellHeight * 2
+
+        folderView: folderView
+
+        FolderView {
+            id: folderView
+
+            anchors.fill: parent
+
+            isRootView: false
+            dialog: dialog
+
+            locked: true
+
+            sortMode: ((Plasmoid.configuration.sortMode === 0) ? 1 : Plasmoid.configuration.sortMode)
+            filterMode: 0
+
+            // TODO: Bidi.
+            flow: GridView.FlowLeftToRight
+            layoutDirection: Qt.LeftToRight
+
+            onDragInProgressAnywhereChanged: {
+                if (!dragInProgressAnywhere && !dialog.visible) {
+                    dialog.destroy();
+                }
+            }
+            onCreatingNewItemsChanged: {
+                dialog.allowClosing = !creatingNewItems;
+            }
+        }
+
+        Loader {
+            anchors.centerIn: parent
+            width: parent.width - (Kirigami.Units.gridUnit * 4)
+            active: folderView.view.count === 0
+            sourceComponent: PlasmaExtras.PlaceholderMessage {
+                text: i18nc("@info:placeholder", "Folder is empty")
+            }
+        }
+    }
+
+    data: [
+        Timer {
+            id: closeTimer
+
+            interval: Kirigami.Units.humanMoment
+
+            onTriggered: {
+                if (dialog.childDialog !== null) {
+                    dialog.childDialog.closeTimer.stop();
+                    dialog.childDialog.visible = false;
+                }
+
+                dialog.visible = false;
+                dialog.delayedDestroy();
+            }
+        }
+    ]
+
+    function requestDestroy() {
+        if (folderView.dragInProgressAnywhere) {
+            visible = false;
+        } else {
+            destroy();
+        }
+    }
+
+    function delayedDestroy() {
+        Qt.callLater(() => dialog.destroy());
+    }
+
+    Component.onDestruction: {
+        closeTimer.stop();
+    }
+}

@@ -33,7 +33,7 @@ ContainmentItem {
     // TODO remove once it gains that feature (perhaps optionally?)
     compactRepresentation: (isFolder && !isContainment) ? compactRepresentation : null
 
-    objectName: isFolder ? "folder" : "desktop"
+    objectName: "folder"
 
     width: inPanel ? undefined : preferredFolderSize.width // Initial size when adding to e.g. desktop.
     height: inPanel ? undefined : preferredFolderSize.height // Initial size when adding to e.g. desktop.
@@ -50,7 +50,7 @@ ContainmentItem {
     LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-    property bool isFolder: (Plasmoid.pluginName === "org.kde.plasma.folder")
+    property bool isFolder: true
     property bool isContainment: Plasmoid.isContainment
     property bool inPanel: (Plasmoid.location !== PlasmaCore.Types.Floating)
     property bool useListViewMode: inPanel && Plasmoid.configuration.viewMode === 0

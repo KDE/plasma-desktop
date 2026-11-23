@@ -1,0 +1,223 @@
+/*
+    SPDX-FileCopyrightText: 2014 Eike Hein <hein@kde.org>
+
+    SPDX-License-Identifier: GPL-2.0-or-later
+*/
+
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+
+import org.kde.plasma.plasmoid
+import org.kde.kirigami as Kirigami
+import org.kde.kcmutils as KCM
+
+import org.kde.private.desktopcontainment.folder as Folder
+
+KCM.SimpleKCM {
+    id: configLocation
+
+    property string cfg_url
+    property alias cfg_labelMode: labelMode.currentIndex
+    property alias cfg_labelText: labelText.text
+    property bool titleVisible: Plasmoid.containment != Plasmoid
+    property Kirigami.FormAlignmentGroup formAlignmentGroup
+
+    onCfg_urlChanged: applyConfig()
+
+    function applyConfig(force) {
+        if (!force && locationGroup.checkedButton !== null) {
+            return;
+        }
+
+        if (cfg_url === "desktop:/") {
+            locationDesktop.checked = true;
+            locationCustomValue.text = "";
+        } else if (cfg_url === "activities:/current/") {
+            locationCurrentActivity.checked = true;
+            locationCustomValue.text = "";
+        } else {
+            var placeForUrl = placesModel.indexForUrl(cfg_url);
+
+            if (placeForUrl !== -1) {
+                locationPlaceValue.currentIndex = placeForUrl; // needs to happen before checking the radiobutton
+                locationPlace.checked = true;
+                locationCustomValue.text = "";
+            } else {
+                locationCustom.checked = true;
+                locationCustomValue.text = cfg_url;
+            }
+        }
+
+        locationPlaceValue.enabled = locationPlace.checked;
+    }
+
+    Folder.PlacesModel {
+        id: placesModel
+        showDesktopEntry: false
+
+        onPlacesChanged: configLocation.applyConfig(true)
+    }
+
+    ButtonGroup {
+        id: locationGroup
+
+        buttons: [locationDesktop, locationCurrentActivity, locationPlace, locationCustom]
+
+        onCheckedButtonChanged: {
+            if (checkedButton === locationDesktop) {
+                configLocation.cfg_url = "desktop:/";
+            } else if (checkedButton === locationCurrentActivity) {
+                configLocation.cfg_url = "activities:/current/";
+            }
+        }
+    }
+
+    Kirigami.Form {
+        Kirigami.FormAlignmentGroup.group: configLocation.formAlignmentGroup
+
+        Kirigami.FormGroup {
+            Kirigami.FormEntry {
+                title: i18nc("@title:group form label for radiobutton group", "Show:")
+                contentItem: RadioButton {
+                    id: locationDesktop
+                    implicitHeight: locationCustomValue.implicitHeight
+
+                    text: i18nc("@option:radio", "Desktop folder")
+                }
+            }
+
+            Kirigami.FormEntry {
+                visible: placesModel.activityLinkingEnabled
+                contentItem: RadioButton {
+                    id: locationCurrentActivity
+                    implicitHeight: locationCustomValue.implicitHeight
+
+                    text: i18nc("@option:radio", "Files linked to the current activity")
+                }
+            }
+
+            Kirigami.FormEntry {
+                contentItem: RowLayout {
+                    Layout.fillWidth: true
+                    spacing: Kirigami.Units.smallSpacing
+                    RadioButton {
+                        id: locationPlace
+
+                        text: i18nc("@option:radio also label for combobox", "Places panel item:")
+                        Layout.minimumWidth: Math.max(locationPlace.implicitWidth, locationCustom.implicitWidth, labelMode.implicitWidth)
+
+                        onCheckedChanged: {
+                            locationPlaceValue.enabled = checked;
+                        }
+                    }
+
+                    ComboBox {
+                        id: locationPlaceValue
+
+                        Layout.fillWidth: true
+
+                        model: placesModel
+                        textRole: "display"
+
+                        enabled: true
+
+                        onEnabledChanged: {
+                            if (enabled && currentIndex !== -1) {
+                                configLocation.cfg_url = placesModel.urlForIndex(currentIndex);
+                            }
+                        }
+
+                        onActivated: index => {
+                            configLocation.cfg_url = placesModel.urlForIndex(index);
+                        }
+                    }
+                }
+            }
+
+            Kirigami.FormEntry {
+                contentItem: RowLayout {
+                    Layout.fillWidth: true
+                    spacing: Kirigami.Units.smallSpacing
+                    RadioButton {
+                        id: locationCustom
+                        Layout.minimumWidth: Math.max(locationPlace.implicitWidth, locationCustom.implicitWidth, labelMode.implicitWidth)
+
+                        text: i18nc("@option:radio also label for text field", "Custom location:")
+                    }
+
+                    TextField {
+                        id: locationCustomValue
+                        enabled: locationCustom.checked
+                        Layout.fillWidth: true
+
+                        placeholderText: i18nc("@info:placeholder custom location", "Type path or URL…")
+
+                        inputMethodHints: Qt.ImhNoPredictiveText
+
+                        onEnabledChanged: {
+                            if (enabled && text !== "") {
+                                configLocation.cfg_url = text;
+                            }
+                        }
+
+                        onTextChanged: {
+                            if (enabled) {
+                                configLocation.cfg_url = text;
+                            }
+                        }
+                    }
+                    Button {
+                        icon.name: "document-open"
+
+                        enabled: locationCustom.checked
+
+                        onClicked: {
+                            directoryPicker.open();
+                        }
+                    }
+                    Folder.DirectoryPicker {
+                        id: directoryPicker
+
+                        onUrlChanged: {
+                            locationCustomValue.text = url;
+                        }
+                    }
+                }
+            }
+        }
+
+        Kirigami.FormGroup {
+            visible: configLocation.titleVisible
+
+            Kirigami.FormEntry {
+                title: i18nc("@label:textbox custom widget title", "Title:")
+                contentItem: RowLayout {
+                    Layout.fillWidth: true
+                    spacing: Kirigami.Units.smallSpacing
+
+                    ComboBox {
+                        id: labelMode
+                        Layout.minimumWidth: Math.max(locationPlace.implicitWidth, locationCustom.implicitWidth, labelMode.implicitWidth)
+
+
+                        model: [
+                            i18nc("@item:inlistbox no title", "None"),
+                            i18nc("@item:inlistbox default title", "Default"),
+                            i18nc("@item:inlistbox full path as title", "Full path"),
+                            i18nc("@item:inlistbox title from text input field", "Custom")
+                        ]
+                    }
+
+                    TextField {
+                        id: labelText
+                        Layout.fillWidth: true
+                        enabled: (labelMode.currentIndex === 3)
+
+                        placeholderText: i18nc("@info:placeholder custom window title", "Enter title…")
+                    }
+                }
+            }
+        }
+    }
+}

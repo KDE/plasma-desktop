@@ -1,0 +1,394 @@
+/*
+    SPDX-FileCopyrightText: 2014 Eike Hein <hein@kde.org>
+    SPDX-FileCopyrightText: 2015 Kai Uwe Broulik <kde@privat.broulik.de>
+
+    SPDX-License-Identifier: GPL-2.0-or-later
+*/
+
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+
+import org.kde.plasma.plasmoid
+import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.extras as PlasmaExtras
+import org.kde.iconthemes as KIconThemes
+import org.kde.config // for KAuthorized
+import org.kde.kirigami as Kirigami
+import org.kde.kcmutils as KCM
+import org.kde.private.desktopcontainment.folder as Folder
+
+KCM.SimpleKCM {
+    id: configIcons
+
+    property bool inPanel: (Plasmoid.location !== PlasmaCore.Types.Floating)
+
+    readonly property bool krunnerAvailable: Folder.KRunnerChecker.krunnerAvailable
+
+    property string cfg_icon: Plasmoid.configuration.icon
+    property alias cfg_useCustomIcon: useCustomIcon.checked
+    property alias cfg_arrangement: arrangement.currentIndex
+    property alias cfg_alignment: alignment.currentIndex
+    property bool cfg_locked
+    property alias cfg_sortMode: sortMode.mode
+    property alias cfg_sortDesc: sortDesc.checked
+    property alias cfg_sortDirsFirst: sortDirsFirst.checked
+    property alias cfg_toolTips: toolTips.checked
+    property alias cfg_selectionMarkers: selectionMarkers.checked
+    property alias cfg_renameInline: renameInline.checked
+    property alias cfg_popups: popups.checked
+    property alias cfg_previews: previews.checked
+    property var cfg_previewPlugins
+    property alias cfg_viewMode: viewMode.currentIndex
+    property alias cfg_iconSize: iconSize.value
+    property alias cfg_labelWidth: labelWidth.currentIndex
+    property alias cfg_textLines: textLines.value
+    property bool cfg_useTypeAhead: Plasmoid.configuration.useTypeAhead
+
+    readonly property bool lockedByKiosk: !KAuthorized.authorize("editable_desktop_icons")
+
+    KIconThemes.IconDialog {
+        id: iconDialog
+        onIconNameChanged: iconName => configIcons.cfg_icon = iconName || "folder-symbolic";
+    }
+
+    Kirigami.FormLayout {
+        // Panel button
+        RowLayout {
+            spacing: Kirigami.Units.smallSpacing
+            visible: configIcons.inPanel
+
+            Kirigami.FormData.label: i18nc("@title:group prefix for checkbox + button", "Panel button:")
+
+            CheckBox {
+                id: useCustomIcon
+                visible: configIcons.inPanel
+                checked: configIcons.cfg_useCustomIcon
+                text: i18nc("@option:check", "Use a custom icon")
+            }
+
+            Button {
+                id: iconButton
+                Layout.minimumWidth: Kirigami.Units.iconSizes.large + Kirigami.Units.smallSpacing * 2
+                Layout.maximumWidth: Layout.minimumWidth
+                Layout.minimumHeight: Layout.minimumWidth
+                Layout.maximumHeight: Layout.minimumWidth
+
+                checkable: true
+                enabled: useCustomIcon.checked
+
+                onClicked: {
+                    checked = Qt.binding(() =>
+                        iconMenu.status === PlasmaExtras.Menu.Open);
+
+                    iconMenu.open(0, height);
+                }
+
+                Kirigami.Icon {
+                    anchors.centerIn: parent
+                    width: Kirigami.Units.iconSizes.large
+                    height: width
+                    source: configIcons.cfg_icon
+                }
+            }
+
+            PlasmaExtras.Menu {
+                id: iconMenu
+                visualParent: iconButton
+
+                PlasmaExtras.MenuItem {
+                    text: i18nc("@item:inmenu Open icon chooser dialog", "Choose…")
+                    icon: "document-open-folder"
+                    onClicked: iconDialog.open()
+                }
+
+                PlasmaExtras.MenuItem {
+                    text: i18nc("@item:inmenu Reset icon to default", "Clear Icon")
+                    icon: "edit-clear"
+                    onClicked: configIcons.cfg_icon = "folder-symbolic";
+                }
+            }
+        }
+
+        Item {
+            visible: configIcons.inPanel
+            Kirigami.FormData.isSection: true
+        }
+
+
+
+        // Arrangement section
+        ComboBox {
+            id: arrangement
+            Layout.fillWidth: true
+            visible: !configIcons.inPanel || viewMode.currentIndex === 1 /* Icons mode */
+
+            Kirigami.FormData.label: i18nc("@label:listbox rows/columns", "Arrangement:")
+
+            model: [
+                i18nc("@item:inlistbox arrangement of icons", "In Rows"),
+                i18nc("@item:inlistbox arrangement of icons", "In Columns"),
+            ]
+        }
+
+        ComboBox {
+            id: alignment
+            Layout.fillWidth: true
+            visible: !configIcons.inPanel || viewMode.currentIndex === 1 /* Icons mode */
+
+            Kirigami.FormData.label: i18nc("@label:listbox, LtR/RtL", "Sort Alignment:")
+
+            model: {
+                const ltrText = i18nc("@item:inlistbox alignment of icons", "Left-to-Right");
+                const rtlText = i18nc("@item:inlistbox alignment of icons", "Right-to-Left");
+                if (Application.layoutDirection === Qt.LeftToRight) {
+                    return [ltrText, rtlText];
+                }
+                else {
+                    return [rtlText, ltrText];
+                }
+            }
+        }
+
+        CheckBox {
+            id: locked
+            visible: ("containmentType" in Plasmoid)
+            checked: configIcons.cfg_locked || configIcons.lockedByKiosk
+            enabled: !configIcons.lockedByKiosk
+
+            onCheckedChanged: {
+                if (!configIcons.lockedByKiosk) {
+                    configIcons.cfg_locked = checked;
+                }
+            }
+
+            text: i18nc("@option:check lock icon positions", "Lock in place")
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+            visible: !configIcons.inPanel || viewMode.currentIndex === 1 /* Icons mode */
+        }
+
+
+        // Sorting section
+        ComboBox {
+            id: sortMode
+            Layout.fillWidth: true
+
+            Kirigami.FormData.label: i18nc("@label:listbox sort items by field", "Sort by:")
+
+            property int mode
+            // FIXME TODO HACK: This maps the combo box list model to the KDirModel::ModelColumns
+            // enum, which should be done in C++.
+            readonly property var indexToMode: [0, 1, 6, 2]
+            readonly property bool manual: indexToMode[currentIndex] === -1
+
+            model: [].concat([
+                    i18nc("@item:inlistbox sort icons by name", "Name"),
+                    i18nc("@item:inlistbox sort icons by size", "Size"),
+                    i18nc("@item:inlistbox sort icons by file type", "Type"),
+                    i18nc("@item:inlistbox sort icons by date", "Date")])
+
+            Component.onCompleted: {
+                mode = 0;
+            }
+            onActivated: index => mode = indexToMode[index]
+        }
+
+        CheckBox {
+            id: sortDesc
+
+            enabled: !sortMode.manual
+
+            text: i18nc("@option:check sort icons in descending order", "Descending")
+        }
+
+        CheckBox {
+            id: sortDirsFirst
+
+            enabled: !sortMode.manual
+
+            text: i18nc("@option:check sort icons with folders first", "Folders first")
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+
+        // View Mode section (only if we're a pop-up)
+        ComboBox {
+            id: viewMode
+            visible: configIcons.inPanel
+            Layout.fillWidth: true
+
+            Kirigami.FormData.label: i18nc("whether to use icon or list view", "View mode:")
+
+            model: [i18nc("@item:inlistbox show icons in a list", "List"),
+                    i18nc("@item:inlistbox show icons in a grid", "Grid")]
+        }
+
+
+        // Size section
+        Slider {
+            id: iconSize
+
+            Layout.fillWidth: true
+            visible: !configIcons.inPanel || viewMode.currentIndex === 1 /* Icons mode */
+
+            Kirigami.FormData.label: i18nc("@label:slider", "Icon size:")
+
+            from: 0
+            to: 9
+            stepSize: 1
+            snapMode: Slider.SnapAlways
+        }
+
+        RowLayout {
+            Layout.fillWidth: true
+
+            Label {
+                Layout.alignment: Qt.AlignLeft
+                visible: !configIcons.inPanel || viewMode.currentIndex === 1 /* Icons mode */
+
+                text: i18nc("@item:inrange smallest icon size", "Small")
+            }
+            Item {
+                Layout.fillWidth: true
+            }
+            Label {
+                Layout.alignment: Qt.AlignRight
+                visible: !configIcons.inPanel || viewMode.currentIndex === 1 /* Icons mode */
+
+                text: i18nc("@item:inrange largest icon size", "Large")
+            }
+        }
+
+        ComboBox {
+            id: labelWidth
+            visible: !configIcons.inPanel || viewMode.currentIndex === 1 /* Icons mode */
+            Layout.fillWidth: true
+
+            Kirigami.FormData.label: i18nc("@label:listbox", "Label width:")
+
+            model: [
+                i18nc("@item:inlistbox how long a text label should be", "Narrow"),
+                i18nc("@item:inlistbox how long a text label should be", "Medium"),
+                i18nc("@item:inlistbox how long a text label should be", "Wide"),
+            ]
+        }
+
+        SpinBox {
+            id: textLines
+            visible: !configIcons.inPanel || viewMode.currentIndex === 1 /* Icons mode */
+
+            Kirigami.FormData.label: i18nc("@label:spinbox", "Text lines:")
+
+            from: 1
+            to: 10
+            stepSize: 1
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+
+        // Features section
+        CheckBox {
+            id: toolTips
+
+            Kirigami.FormData.label: i18nc("@title:group prefix for checkbox group", "When hovering over icons:")
+
+            text: i18nc("@option:check When hovering over icons…", "Show tooltips")
+        }
+
+        CheckBox {
+            id: selectionMarkers
+            visible: Application.styleHints.singleClickActivation
+
+            text: i18nc("@option:check When hovering over icons…", "Show selection markers")
+        }
+
+        CheckBox {
+            id: popups
+            visible: !configIcons.inPanel
+
+            text: i18nc("@option:check When hovering over icons…", "Show folder preview popups")
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+
+        ColumnLayout {
+            // Only show if it's the desktop (not a popup) AND KRunner is present/running
+            visible: !configIcons.inPanel && configIcons.krunnerAvailable
+
+            Kirigami.FormData.label: i18nc("@title:group", "Typing on the desktop:")
+            Kirigami.FormData.buddyFor: typeAheadRadioButton
+            spacing: Kirigami.Units.smallSpacing
+
+            RadioButton {
+                id: typeAheadRadioButton
+                text: i18nc("@option:radio Typing on the desktop selects items", "Selects items")
+                checked: configIcons.cfg_useTypeAhead
+                onToggled: if (checked) configIcons.cfg_useTypeAhead = true
+            }
+
+            RadioButton {
+                text: i18nc("@option:radio Typing on the desktop activates KRunner", "Activates KRunner")
+                checked: !configIcons.cfg_useTypeAhead
+                onToggled: if (checked) configIcons.cfg_useTypeAhead = false
+            }
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+            visible: !configIcons.inPanel && configIcons.krunnerAvailable
+            implicitHeight: Kirigami.Units.smallSpacing
+        }
+
+
+        CheckBox {
+            id: renameInline
+
+            Kirigami.FormData.label: i18nc("@label prefix for checkbox", "Rename:")
+
+            visible: !selectionMarkers.visible
+
+            text: i18nc("@option:check", "Rename inline by clicking selected item's text")
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+            visible: renameInline.visible
+        }
+
+        CheckBox {
+            id: previews
+
+            Kirigami.FormData.label: i18nc("@title:group prefix for checkbox and button", "Previews:")
+
+            text: i18nc("@option:check", "Show preview thumbnails")
+        }
+
+        Button {
+            id: previewSettings
+            Layout.fillWidth: true
+
+            icon.name: "configure"
+            text: i18nc("@action:button opens dialog", "Configure Preview Plugins…")
+
+            onClicked: {
+                const component = Qt.createComponent(Qt.resolvedUrl("FolderItemPreviewPluginsDialog.qml"));
+                component.incubateObject(configIcons.Window.window.contentItem, {
+                    "previewPlugins": configIcons.cfg_previewPlugins,
+                }, Qt.Asynchronous);
+                component.destroy();
+            }
+        }
+    }
+}
