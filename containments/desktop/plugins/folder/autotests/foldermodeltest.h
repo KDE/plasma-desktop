@@ -36,6 +36,7 @@ private Q_SLOTS:
     void tst_replacementModel();
     void tst_multiScreenDifferenPath();
     void tst_initializeOnCorrectScreens();
+    void tst_renameDesktopFile();
 
 private:
     void createTestFolder(const QString &path);

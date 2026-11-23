@@ -5,13 +5,14 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "foldermodeltest.h"
 #include "foldermodel.h"
+#include "foldermodeltest.h"
 #include "screenmapper.h"
 
 #include <KConfigGroup>
 #include <KSharedConfig>
 
+#include <KDesktopFile>
 #include <QSignalSpy>
 #include <QStandardPaths>
 #include <QTemporaryDir>
@@ -456,6 +457,61 @@ void FolderModelTest::tst_initializeOnCorrectScreens()
 
     // Now that the screen_1 is enabled again, the item should be back on the screen_1
     QCOMPARE(screenMapper->screenMapping(), newMap);
+}
+
+void FolderModelTest::tst_renameDesktopFile()
+{
+    // Create a DesktopFile
+    QFile desktopFile;
+    const QString path = m_folderDir->path() + QDir::separator() + desktop;
+    desktopFile.setFileName(QStringLiteral("%1/Link to Application.desktop").arg(path));
+    if (desktopFile.open(QFile::WriteOnly)) {
+        const auto fileData = R"([Desktop Entry]
+Comment=
+Exec=/usr/bin/ls
+GenericName=
+Icon=system-run
+MimeType=
+Name=Link to Application
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+)";
+        desktopFile.write(fileData);
+        desktopFile.close();
+    } else {
+        QFAIL("Could not write desktop file!");
+    }
+
+    // Refresh FolderModel so that the new file is there
+    QSignalSpy s1(m_folderModel, &FolderModel::listingCompleted);
+    m_folderModel->refresh();
+    QVERIFY(s1.wait(1000));
+
+    // DesktopFile is now at row 10 due to its name
+    auto index = m_folderModel->index(10, 0);
+    auto file = m_folderModel->itemForIndex(index);
+    QVERIFY(file.isDesktopFile());
+    QCOMPARE(file.name(), QStringLiteral("Link to Application.desktop"));
+    KDesktopFile beforeRename(file.localPath());
+    QCOMPARE(beforeRename.readName(), QStringLiteral("Link to Application"));
+
+    // Rename the DesktopFile
+    m_folderModel->rename(10, QStringLiteral("Cool new name"));
+    QSignalSpy s2(m_folderModel, &FolderModel::listingCompleted);
+    s2.wait(500);
+
+    // After renaming, the DesktopFile jumps to row 1 due to its new name
+    index = m_folderModel->index(1, 0);
+    file = m_folderModel->itemForIndex(index);
+    QVERIFY(file.isDesktopFile());
+    QCOMPARE(file.name(), QStringLiteral("Cool new name.desktop"));
+    KDesktopFile afterRename(file.localPath());
+    QCOMPARE(afterRename.readName(), QStringLiteral("Cool new name"));
 }
 
 #include "moc_foldermodeltest.cpp"

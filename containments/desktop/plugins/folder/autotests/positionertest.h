@@ -49,6 +49,8 @@ private Q_SLOTS:
     void tst_insertFile();
     void tst_dontSaveWithoutScreen();
     void tst_mixedSetPerStripeListingAndReady();
+    void tst_convertDesktopPath_data();
+    void tst_convertDesktopPath();
 
 private:
     void checkDefaultPositions(int perStripe);
@@ -62,4 +64,5 @@ private:
     FolderModel *m_folderModel;
     QTemporaryDir *m_folderDir;
     Plasma::Applet *m_applet = nullptr;
+    QString m_currentDesktopPath;
 };

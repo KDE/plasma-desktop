@@ -10,7 +10,6 @@
 
 #include "foldermodel.h"
 #include "debug.h"
-#include "desktopschemehelper.h"
 #include "itemviewadapter.h"
 #include "positioner.h"
 #include "removeaction.h"
@@ -456,7 +455,7 @@ void FolderModel::setUrl(const QString &url)
         m_dirWatch = new KDirWatch(this);
         connect(m_dirWatch, &KDirWatch::created, this, &FolderModel::iconNameChanged);
         connect(m_dirWatch, &KDirWatch::dirty, this, &FolderModel::iconNameChanged);
-        m_dirWatch->addFile(DesktopSchemeHelper::getFileUrl(resolvedNewUrl.toString()) + QStringLiteral("/.directory"));
+        m_dirWatch->addFile(resolvedNewUrl.toString() + QStringLiteral("/.directory"));
     }
 
     if (dragging()) {
@@ -484,7 +483,9 @@ QUrl FolderModel::resolve(const QString &url)
 {
     QUrl resolvedUrl;
 
-    if (url.startsWith(QLatin1Char('~'))) {
+    if (url.startsWith(QStringLiteral("desktop:/"))) {
+        resolvedUrl = QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation));
+    } else if (url.startsWith(QLatin1Char('~'))) {
         resolvedUrl = QUrl::fromLocalFile(KShell::tildeExpand(url));
     } else {
         resolvedUrl = QUrl::fromUserInput(url);
@@ -854,11 +855,12 @@ void FolderModel::run(int row)
 
     auto job = new KIO::OpenUrlJob(url);
     job->setUiDelegate(KIO::createDefaultJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, nullptr));
-    // On desktop:/ we want to be able to run .desktop files right away,
-    // otherwise ask for security reasons. We also don't use the targetUrl()
-    // from above since we don't want the resolved /home/foo/Desktop URL.
-    job->setShowOpenOrExecuteDialog(item.url().scheme() != QLatin1String("desktop") || item.url().adjusted(QUrl::RemoveFilename).path() != QLatin1String("/")
-                                    || !item.isDesktopFile());
+    // On desktop we want to be able to run .desktop files right away.
+    const auto desktopLocation = QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation));
+    bool fileOnDesktop = item.mostLocalUrl().path().startsWith(desktopLocation.path());
+    // We also don't use the targetUrl() from above since we don't want the resolved /home/foo/Desktop URL.
+    bool urlIsRoot = (item.url().adjusted(QUrl::RemoveFilename).path() == QLatin1String("/"));
+    job->setShowOpenOrExecuteDialog(!fileOnDesktop || urlIsRoot || !item.isDesktopFile());
     job->setRunExecutables(true);
     job->start();
 }
@@ -921,6 +923,49 @@ void FolderModel::showTarget()
     });
 }
 
+void FolderModel::renameDesktopName(const QUrl &src, const QUrl &dest)
+{
+    if (src == dest) {
+        return;
+    }
+    const QString srcPath = src.toLocalFile();
+    QString destPath = dest.toLocalFile();
+    QUrl reported_dest = dest;
+
+    if (KDesktopFile::isDesktopFile(srcPath)) {
+        QFileInfo fileInfo(srcPath);
+        // If we cant write to the file, create a copy to QStandardPaths::ApplicationsLocation
+        if (!fileInfo.isWritable()) {
+            KDesktopFile orig(src.toLocalFile());
+            QFile(srcPath).remove();
+            const QString newPath = QStandardPaths::writableLocation(QStandardPaths::ApplicationsLocation) + QDir::separator() + src.fileName();
+            if (!QFileInfo::exists(newPath)) {
+                auto writableDesktopFile = orig.copyTo(newPath);
+                writableDesktopFile->sync();
+                delete writableDesktopFile;
+            }
+            QFile::link(newPath, srcPath);
+        }
+
+        QString friendlyName;
+        if (destPath.endsWith(QLatin1String(".desktop"))) {
+            const QString fileName = dest.fileName();
+            friendlyName = KIO::decodeFileName(fileName.left(fileName.length() - 8));
+        } else {
+            friendlyName = KIO::decodeFileName(dest.fileName());
+            destPath.append(QLatin1String(".desktop"));
+            reported_dest.setPath(reported_dest.path().append(QLatin1String(".desktop")));
+        }
+
+        // Update the value of the Name field in the file.
+        KDesktopFile file(src.toLocalFile());
+        KConfigGroup cg(file.desktopGroup());
+        cg.writeEntry("Name", friendlyName);
+        cg.writeEntry("Name", friendlyName, KConfigGroup::Persistent | KConfigGroup::Localized);
+        cg.sync();
+    }
+}
+
 void FolderModel::rename(int row, const QString &name)
 {
     if (row < 0) {
@@ -938,13 +983,17 @@ void FolderModel::rename(int row, const QString &name)
     }
 
     const QUrl oldUrl = oldItem.url();
+    const bool isDesktopFile = oldItem.isDesktopFile();
     const QString oldName = oldItem.name();
     const QString filename = data(idx, UrlRole).toString();
-    const QString newFilename = QStringLiteral("desktop:/%1").arg(name);
+    QString newFilename = name;
+    if (isDesktopFile && !newFilename.endsWith(QStringLiteral(".desktop"))) {
+        newFilename = newFilename.append(QStringLiteral(".desktop"));
+    }
 
 #if KIO_VERSION >= QT_VERSION_CHECK(6, 31, 0)
-    auto *renameWarning = new KIO::RenameFileWarningDialog(oldItem, name, nullptr, showHiddenFiles());
-    connect(renameWarning, &KIO::RenameFileWarningDialog::result, this, [this, oldUrl, oldName, filename, newFilename, name](bool proceed) {
+    auto *renameWarning = new KIO::RenameFileWarningDialog(oldItem, newFilename, nullptr, showHiddenFiles());
+    connect(renameWarning, &KIO::RenameFileWarningDialog::result, this, [this, isDesktopFile, oldUrl, oldName, filename, newFilename](bool proceed) {
         if (!proceed) {
             return;
         }
@@ -966,7 +1015,11 @@ void FolderModel::rename(int row, const QString &name)
                 Q_EMIT itemRenamed(filename, newFilename);
             },
             Qt::SingleShotConnection);
-        setData(index(targetRow, 0), name, Qt::EditRole);
+        if (isDesktopFile) {
+            auto newUrl = QUrl::fromUserInput(oldUrl.toString(QUrl::RemoveFilename).append(newFilename));
+            renameDesktopName(oldUrl, newUrl);
+        }
+        setData(index(targetRow, 0), newFilename, Qt::EditRole);
     });
     renameWarning->exec();
 #else
@@ -1331,15 +1384,10 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
     }
 
     if (dropTargetUrl.fileName() == QLatin1Char('.')) {
-        // the target URL for desktop:/ is e.g. 'file://home/user/Desktop/.'
+        // the target URL for desktop is e.g. 'file://home/user/Desktop/.'
         dropTargetUrl = dropTargetUrl.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash);
     }
 
-    // use dropTargetUrl to resolve desktop:/ to the actual file location which is also used by the mime data
-    /* QMimeData operates on local URLs, but the dir lister and thus screen mapper and positioner may
-     * use a fancy scheme like desktop:/ instead. Ensure we always use the latter to properly map URLs,
-     * i.e. go from file:///home/user/Desktop/file to desktop:/file
-     */
     auto mappableUrl = [this, dropTargetUrl](const QUrl &url) -> QUrl {
         if (dropTargetUrl != m_dirModel->dirLister()->url()) {
             QString mappedUrl = url.toString();
@@ -1452,18 +1500,8 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
                 // assign a screen for the item before the copy is actually done, so
                 // filterAcceptsRow doesn't assign the default screen to it
                 QUrl url = resolvedUrl();
-                // if the folderview's folder is a standard path, just use the targetUrl for mapping
                 if (targetUrl.toString().startsWith(url.toString())) {
                     m_screenMapper->addMapping(targetUrl, m_screen, m_currentActivity, ScreenMapper::DelayedSignal);
-                } else if (targetUrl.toString().startsWith(dropTargetUrl.toString())) {
-                    // if the folderview's folder is a special path, like desktop:// , we need to convert
-                    // the targetUrl file:// path to a desktop:/ path for mapping
-                    auto destPath = dropTargetUrl.path();
-                    auto filePath = targetUrl.path();
-                    if (filePath.startsWith(destPath)) {
-                        url.setPath(filePath.remove(0, destPath.length()));
-                        m_screenMapper->addMapping(url, m_screen, m_currentActivity, ScreenMapper::DelayedSignal);
-                    }
                 }
             }
         };
@@ -1572,10 +1610,20 @@ QVariant FolderModel::data(const QModelIndex &index, int role) const
         }
     } else if (role == TypeRole) {
         return m_dirModel->data(mapToSource(QSortFilterProxyModel::index(index.row(), 6)), Qt::DisplayRole);
-    } else if (role == FileNameRole) {
-        return itemForIndex(index).url().fileName();
-    } else if (role == FileNameWrappedRole) {
-        return KStringHandler::preProcessWrap(itemForIndex(index).text());
+    } else if (role == Qt::DisplayRole || role == FileNameRole || role == FileNameWrappedRole) {
+        auto item = itemForIndex(index);
+        auto name = item.name();
+        if (item.isDesktopFile()) {
+            KDesktopFile desktopfile(item.localPath());
+            auto desktopname = desktopfile.readName();
+            if (!desktopname.isEmpty()) {
+                name = desktopname;
+            }
+        }
+        if (role == FileNameWrappedRole) {
+            return KStringHandler::preProcessWrap(name);
+        }
+        return name;
     }
 
     return QSortFilterProxyModel::data(index, role);

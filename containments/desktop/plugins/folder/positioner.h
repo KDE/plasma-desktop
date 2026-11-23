@@ -164,6 +164,7 @@ private:
     QByteArray prepareAndGetChangedPositionsJson();
     QPair<bool, bool> restoreChangedPositions();
     void maybeRestoreAndApplyChangedPositions(bool forceConvertAndSave);
+    QString convertDesktopPath(const QString &path);
 
     bool m_enabled;
     FolderModel *m_folderModel;
