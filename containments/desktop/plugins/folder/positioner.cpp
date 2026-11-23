@@ -23,7 +23,7 @@ Positioner::Positioner(QObject *parent)
     : QAbstractItemModel(parent)
     , m_enabled(false)
     , m_folderModel(nullptr)
-    , m_perStripe(0)
+    , m_rows(0)
     , m_ignoreNextTransaction(false)
     , m_deferApplyPositions(false)
 {
@@ -53,7 +53,7 @@ void Positioner::setEnabled(bool enabled)
 
         Q_EMIT enabledChanged();
 
-        setPerStripe(m_perStripe);
+        setTotalRows(m_rows);
     }
 }
 
@@ -84,29 +84,29 @@ void Positioner::setFolderModel(QObject *folderModel)
 
         Q_EMIT folderModelChanged();
 
-        setPerStripe(m_perStripe);
+        setTotalRows(m_rows);
     }
 }
 
-int Positioner::perStripe() const
+int Positioner::totalRows() const
 {
-    return m_perStripe;
+    return m_rows;
 }
 
-void Positioner::setPerStripe(int perStripe)
+void Positioner::setTotalRows(int totalRows)
 {
-    // Make sure we have screen in use before perStripe update
+    // Make sure we have screen in use before perColumn update
     // to make sure we update correct positions
-    if (perStripe > 0 && screenInUse()) {
-        const bool perStripeUpdated = m_perStripe != perStripe;
+    if (totalRows > 0 && screenInUse()) {
+        const bool totalRowsUpdated = m_rows != totalRows;
         const bool resolutionUpdated = updateResolution();
-        const int prevPerStripe = m_perStripe;
-        if (perStripeUpdated) {
-            m_perStripe = perStripe;
-            Q_EMIT perStripeChanged();
+        const int previousRows = m_rows;
+        if (totalRowsUpdated) {
+            m_rows = totalRows;
+            Q_EMIT totalRowsChanged();
         }
         const bool unsortedModeOnDrop = m_folderModel->unsortedModeOnDrop();
-        if (m_enabled && (perStripeUpdated || resolutionUpdated) && !unsortedModeOnDrop) {
+        if (m_enabled && (totalRowsUpdated || resolutionUpdated) && !unsortedModeOnDrop) {
             const bool existingResolution = configurationHasResolution(m_resolution);
             if (existingResolution) {
                 loadAndApplyPositionsConfig();
@@ -119,9 +119,9 @@ void Positioner::setPerStripe(int perStripe)
             }
             // If no longer deferring positions, update them
             if (!m_deferApplyPositions) {
-                // If it's a new resolution, preserve icon positions by using previous "perStripe" (if available)
+                // If it's a new resolution, preserve icon positions by using previous "totalRows" (if available)
                 const bool prevPositionsEmpty = m_positions.empty();
-                updatePositionsList(existingResolution ? 0 : prevPerStripe);
+                updatePositionsList(existingResolution ? 0 : previousRows);
                 const bool currPositionsEmpty = m_positions.empty();
                 if (!currPositionsEmpty) {
                     maybeRestoreAndApplyChangedPositions(!existingResolution);
@@ -144,7 +144,7 @@ void Positioner::setPerStripe(int perStripe)
                 &FolderModel::screenGeometryChanged,
                 this,
                 [this] {
-                    setPerStripe(m_perStripe);
+                    setTotalRows(m_rows);
                 },
                 Qt::SingleShotConnection);
         }
@@ -194,12 +194,12 @@ int Positioner::nearestItem(int currentIndex, Qt::ArrowType direction)
     std::sort(rows.begin(), rows.end());
 
     int nearestItem = -1;
-    const QPoint currentPos(currentIndex % m_perStripe, currentIndex / m_perStripe);
+    const QPoint currentPos(currentIndex % m_rows, currentIndex / m_rows);
     int lastDistance = -1;
     int distance = 0;
 
     for (const int row : std::as_const(rows)) {
-        const QPoint pos(row % m_perStripe, row / m_perStripe);
+        const QPoint pos(row % m_rows, row / m_rows);
 
         if (row == currentIndex) {
             continue;
@@ -500,13 +500,13 @@ int Positioner::move(const QVariantList &moves, bool save)
     return toIndices.constFirst();
 }
 
-void Positioner::updatePositionsList(int perStripeForPositions)
+void Positioner::updatePositionsList(int rowsForPositions)
 {
-    if (m_enabled && screenInUse() && m_perStripe > 0) {
-        if (perStripeForPositions <= 0)
-            perStripeForPositions = m_perStripe;
+    if (m_enabled && screenInUse() && m_rows > 0) {
+        if (rowsForPositions <= 0)
+            rowsForPositions = m_rows;
 
-        m_positionsHeader.emplace(PositionsHeader{.numStripes = 1 + ((rowCount() - 1) / m_perStripe), .perStripe = m_perStripe});
+        m_positionsHeader.emplace(PositionsHeader{.columns = 1 + ((rowCount() - 1) / m_rows), .rows = m_rows});
 
         QHashIterator<int, int> it(m_proxyToSource);
 
@@ -520,8 +520,8 @@ void Positioner::updatePositionsList(int perStripeForPositions)
             }
 
             m_positions[name] = {
-                .stripe = qMax(0, it.key() / perStripeForPositions),
-                .pos = qMax(0, it.key() % perStripeForPositions),
+                .column = qMax(0, it.key() / rowsForPositions),
+                .row = qMax(0, it.key() % rowsForPositions),
             };
         }
     }
@@ -880,14 +880,14 @@ void Positioner::convertFolderModelData()
 
     // Restore positions for items that still fit.
     for (auto &&[name, gridPos] : std::as_const(m_positions).asKeyValueRange()) {
-        if (gridPos.pos < m_perStripe) {
+        if (gridPos.row < m_rows) {
             if (!sourceIndices.contains(name)) {
                 continue;
             }
 
             const int sourceIndex = sourceIndices.value(name);
 
-            const int index = (gridPos.stripe * m_perStripe) + gridPos.pos;
+            const int index = (gridPos.column * m_rows) + gridPos.row;
 
             if (m_proxyToSource.contains(index)) {
                 continue;
@@ -900,7 +900,7 @@ void Positioner::convertFolderModelData()
 
     // Find new positions for items that didn't fit.
     for (auto &&[name, gridPos] : std::as_const(m_positions).asKeyValueRange()) {
-        if (gridPos.pos >= m_perStripe) {
+        if (gridPos.row >= m_rows) {
             if (!sourceIndices.contains(name)) {
                 continue;
             }
@@ -990,10 +990,9 @@ void Positioner::loadAndApplyPositionsConfig(const QString &resolution)
         QJsonDocument doc = QJsonDocument::fromJson(confdata.toUtf8());
 
         auto resolutionsObject = doc[u"resolutions"_s].toObject();
-        m_positionsHeader = {.numStripes = resolutionsObject[m_resolution][u"columns"_s].toInt(),
-                             .perStripe = resolutionsObject[m_resolution][u"rows"_s].toInt()};
-        m_perStripe = m_positionsHeader.value().perStripe;
-        m_optimalStripes = m_positionsHeader.value().numStripes;
+        m_positionsHeader = {.columns = resolutionsObject[m_resolution][u"columns"_s].toInt(), .rows = resolutionsObject[m_resolution][u"rows"_s].toInt()};
+        m_rows = m_positionsHeader.value().rows;
+        m_optimalColumns = m_positionsHeader.value().columns;
 
         auto filesObject = doc[u"files"_s].toObject();
         for (const auto &[key, value] : filesObject.asKeyValueRange()) {
@@ -1003,8 +1002,8 @@ void Positioner::loadAndApplyPositionsConfig(const QString &resolution)
                 auto resolutions = containment[QString::number(m_applet->id())].toObject();
                 auto positions = resolutions[m_resolution].toObject();
                 m_positions[name] = {
-                    .stripe = positions[u"column"_s].toInt(m_positions[name].stripe),
-                    .pos = positions[u"row"_s].toInt(m_positions[name].pos),
+                    .column = positions[u"column"_s].toInt(m_positions[name].column),
+                    .row = positions[u"row"_s].toInt(m_positions[name].row),
                 };
             }
         }
@@ -1027,8 +1026,8 @@ void Positioner::savePositionsConfig()
 
         QJsonObject resolution;
         QJsonObject positions;
-        positions[u"columns"_s] = m_positionsHeader.value().numStripes;
-        positions[u"rows"_s] = m_positionsHeader.value().perStripe;
+        positions[u"columns"_s] = m_positionsHeader.value().columns;
+        positions[u"rows"_s] = m_positionsHeader.value().rows;
         resolution[m_resolution] = positions;
 
         QJsonObject files;
@@ -1042,8 +1041,8 @@ void Positioner::savePositionsConfig()
         }
 
         for (auto &&[filename, gridPos] : std::as_const(m_positions).asKeyValueRange()) {
-            filePositions[u"column"_s] = gridPos.stripe;
-            filePositions[u"row"_s] = gridPos.pos;
+            filePositions[u"column"_s] = gridPos.column;
+            filePositions[u"row"_s] = gridPos.row;
             fileResolution[m_resolution] = filePositions;
             containment[QString::number(m_applet->id())] = fileResolution;
             file[filename] = containment;
@@ -1124,13 +1123,13 @@ void Positioner::loadChangedPositions()
         }
 
         const auto visitedResolutions = values[0].split(','_L1, Qt::SkipEmptyParts);
-        bool okStripeOffset = false;
+        bool okColumnOffset = false;
         bool okPosOffset = false;
         ChangedPosition changedPosition{
             .visitedResolutions = {visitedResolutions.constBegin(), visitedResolutions.constEnd()},
-            .gridPosition = {.stripe = values[1].toInt(&okStripeOffset), .pos = values[2].toInt(&okPosOffset)},
+            .gridPosition = {.column = values[1].toInt(&okColumnOffset), .row = values[2].toInt(&okPosOffset)},
         };
-        if (!okStripeOffset || !okPosOffset) {
+        if (!okColumnOffset || !okPosOffset) {
             continue;
         }
 
@@ -1157,8 +1156,8 @@ QByteArray Positioner::prepareAndGetChangedPositionsJson()
 
             jsonObj[filename] = QJsonArray::fromStringList({
                 QStringList(changedPosition->visitedResolutions.constBegin(), changedPosition->visitedResolutions.constEnd()).join(','_L1),
-                QString::number(changedPosition->gridPosition.stripe),
-                QString::number(changedPosition->gridPosition.pos),
+                QString::number(changedPosition->gridPosition.column),
+                QString::number(changedPosition->gridPosition.row),
             });
         } else {
             toRemove.push_back(filename);
@@ -1184,12 +1183,12 @@ QPair<bool, bool> Positioner::restoreChangedPositions()
         });
     };
 
-    auto getOptimalStripes = [this] {
-        // Optimal number of stripes to prevent scroll bar if we don't have it yet
-        return qMax(m_optimalStripes, m_positionsHeader.value_or(PositionsHeader()).numStripes);
+    auto getOptimalColumns = [this] {
+        // Optimal number of columns to prevent scroll bar if we don't have it yet
+        return qMax(m_optimalColumns, m_positionsHeader.value_or(PositionsHeader()).columns);
     };
 
-    auto canUpdateGridPos = [&, optimalStripes = getOptimalStripes()](const GridPosition currGridPos, GridPosition &newGridPos) {
+    auto canUpdateGridPos = [&, optimalColumns = getOptimalColumns()](const GridPosition currGridPos, GridPosition &newGridPos) {
         if (currGridPos == newGridPos) {
             // Position has not been changed
             return false;
@@ -1197,15 +1196,15 @@ QPair<bool, bool> Positioner::restoreChangedPositions()
 
         bool checkAgain = false;
 
-        if (newGridPos.pos >= m_perStripe) {
+        if (newGridPos.row >= m_rows) {
             // Icon will be repositioned automatically, so clip to maximum position
-            newGridPos.pos = m_perStripe > 0 ? m_perStripe - 1 : currGridPos.pos;
+            newGridPos.row = m_rows > 0 ? m_rows - 1 : currGridPos.row;
             checkAgain = true;
         }
 
-        if (newGridPos.stripe >= optimalStripes) {
-            // Scroll bar will appear, so use maximum possible stripe
-            newGridPos.stripe = optimalStripes > 0 ? optimalStripes - 1 : currGridPos.stripe;
+        if (newGridPos.column >= optimalColumns) {
+            // Scroll bar will appear, so use maximum possible column
+            newGridPos.column = optimalColumns > 0 ? optimalColumns - 1 : currGridPos.column;
             checkAgain = true;
         }
 
@@ -1273,8 +1272,8 @@ void Positioner::onItemRenamed(const QString &filename, const QString &newFilena
         // Restore item position after rename
         if (auto positionsIt = m_positions.find(filename); positionsIt != m_positions.end()) {
             m_positions[newFilename] = {
-                .stripe = qMax(0, positionsIt->stripe),
-                .pos = qMax(0, positionsIt->pos),
+                .column = qMax(0, positionsIt->column),
+                .row = qMax(0, positionsIt->row),
             };
         }
     }

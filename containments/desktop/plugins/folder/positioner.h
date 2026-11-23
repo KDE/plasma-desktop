@@ -22,19 +22,18 @@ class Positioner : public QAbstractItemModel
     Q_PROPERTY(Plasma::Applet *applet READ applet WRITE setApplet NOTIFY appletChanged)
     Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
     Q_PROPERTY(FolderModel *folderModel READ folderModel WRITE setFolderModel NOTIFY folderModelChanged)
-    Q_PROPERTY(int perStripe READ perStripe WRITE setPerStripe NOTIFY perStripeChanged)
-    Q_PROPERTY(int optimalStripes MEMBER m_optimalStripes)
+    Q_PROPERTY(int perStripe READ totalRows WRITE setTotalRows NOTIFY totalRowsChanged)
+    Q_PROPERTY(int optimalStripes MEMBER m_optimalColumns)
 
     struct PositionsHeader {
-        int numStripes;
-        int perStripe;
+        int columns;
+        int rows;
     };
 
     struct GridPosition {
         bool operator==(const GridPosition &other) const = default;
-
-        int stripe;
-        int pos;
+        int column;
+        int row;
     };
 
     struct ChangedPosition {
@@ -52,8 +51,8 @@ public:
     FolderModel *folderModel() const;
     void setFolderModel(QObject *folderModel);
 
-    int perStripe() const;
-    void setPerStripe(int perStripe);
+    int totalRows() const;
+    void setTotalRows(int totalRows);
 
     Q_INVOKABLE int map(int row) const;
 
@@ -70,7 +69,7 @@ public:
      * Loads the position configuration from a config file,
      * then calls convertFolderModelData to convert it to
      * proxyData which can be used later by updatePositions.
-     * @param flags is used for handling if the PerStripe value is updated
+     * @param flags is used for handling if the TotalRows value is updated
      * on load.
      */
     void loadAndApplyPositionsConfig(const QString &resolution = QString());
@@ -123,7 +122,7 @@ public:
 Q_SIGNALS:
     void enabledChanged() const;
     void folderModelChanged() const;
-    void perStripeChanged() const;
+    void totalRowsChanged() const;
     void appletChanged() const;
 
 private Q_SLOTS:
@@ -152,7 +151,7 @@ private:
     // Converts data from folderModel to proxy data
     void convertFolderModelData();
     // Turns proxyToSource data into positions QStringList
-    void updatePositionsList(int perStripeForPositions = 0);
+    void updatePositionsList(int columnsForPositions = 0);
     void flushPendingChanges(bool inserted);
     void connectSignals(FolderModel *model);
     void disconnectSignals(FolderModel *model);
@@ -167,8 +166,8 @@ private:
     bool m_enabled;
     FolderModel *m_folderModel;
 
-    int m_perStripe;
-    int m_optimalStripes = 0;
+    int m_rows;
+    int m_optimalColumns = 0;
 
     QModelIndexList m_pendingChanges;
     bool m_ignoreNextTransaction;
