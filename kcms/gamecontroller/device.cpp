@@ -346,7 +346,13 @@ void Device::onButtonEvent(const SDL_JoyButtonEvent &event)
 void Device::onControllerButtonEvent(const SDL_ControllerButtonEvent &event)
 {
     qCDebug(KCM_GAMECONTROLLER) << "Got controller button event for button: " << ButtonToButtonName(SDL_GameControllerButton(event.button));
-    Q_EMIT buttonStateChanged(event.button);
+
+    for (auto it = m_buttonType.cbegin(); it != m_buttonType.cend(); ++it) {
+        if (it.value() == event.button) {
+            Q_EMIT buttonStateChanged(it.key());
+            return;
+        }
+    }
 }
 
 void Device::onAxisEvent(const SDL_JoyAxisEvent &event)
