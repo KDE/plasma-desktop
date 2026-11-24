@@ -74,7 +74,7 @@ FocusScope {
             }
 
             if (!main.editor) {
-                editor = editorComponent.createObject(listener);
+                editor = editorComponent.createObject(main);
             }
 
             main.editor.targetItem = gridView.currentItem;
@@ -231,12 +231,6 @@ FocusScope {
                 return;
             }
 
-            // Ignore clicks if main.editor is enabled and we click on that
-            // BUG:494558
-            if (main.editor && childAt(mouse.x, mouse.y) === main.editor) {
-                return;
-            }
-
             scrollArea.focus = true;
 
             if (mouse.buttons & Qt.BackButton) {
@@ -244,7 +238,7 @@ FocusScope {
                 return;
             }
 
-            if (main.editor && childAt(mouse.x, mouse.y) !== main.editor) {
+            if (main.editor) {
                 main.editor.commit();
             }
 
@@ -350,8 +344,7 @@ FocusScope {
         onClicked: mouse => {
             clearPressState();
 
-            if (mouse.button === Qt.RightButton ||
-                (main.editor && childAt(mouse.x, mouse.y) === main.editor)) {
+            if (mouse.button === Qt.RightButton) {
                 return;
             }
 
