@@ -145,20 +145,20 @@
 </variablelist>
 
 <para
->Öntanımlı masaüstünde iki ana öge vardır: Panel ve Masaüstü’nün kendisi. &plasma;’nın yapı mantığına göre bunların ikisi de kapsamadır. </para>
+>Varsayılan masaüstünde iki ana öge vardır: Panel ve Masaüstü’nün kendisi. &plasma;’nın yapı mantığına göre bunların ikisi de kapsamadır. </para>
 
 </sect2>
 
 <sect2 id="default-plasma-desktop">
 <title
->Öntanımlı &plasma; Masaüstü</title>
+>Varsayılan &plasma; Masaüstü</title>
 
 <para
 ><note
 ><para
 >&plasma; Masaüstü, sayısız biçimde yapılandırılabilir. Aşağıda görülen ekran görüntüsü oldukça standart bir masaüstünü göstermektedir. Bazı dağıtımlar kapsamlı özelleştirmeler uygular, bu nedenle masaüstünüz farklı görünebilir. </para>
 <para
->Benzer şekilde, arayüz ögelerinin grafiksel görünümünün biçemi değiştirilebilir. Bu ekran görüntüleri &plasma;’nın öntanımlı biçemi olan Esinti’yi kullanır.</para
+>Benzer şekilde, arayüz ögelerinin grafiksel görünümünün stili değiştirilebilir. Bu ekran görüntüleri &plasma;’nın varsayılan stili olan Esinti’yi kullanır.</para
 ></note>
 </para>
 <para>
@@ -254,7 +254,7 @@
 >Panel</title>
 
 <para
->Öntanımlı panel, birkaç &plasma; araç takımını barındırır: soldan başlayarak uygulama başlatıcısını görebilirsiniz.</para>
+>Varsayılan panel, birkaç &plasma; araç takımını barındırır: soldan başlayarak uygulama başlatıcısını görebilirsiniz.</para>
 
 <sect2 id="panel-launcher">
 <title
@@ -274,7 +274,7 @@
   </mediaobject>
 </screenshot>
 <para
->Uygulamaları başlatmak, yakın zamanda açılmış dosyaları açmak ve normal çıkış/kapatma seçeneklerini kullanmak için kullanabilirsiniz. Uygulamalarınıza göz atmanızı sağlayan bir yapı da vardır. Yerleşim, en yaygın kullanılan durum olan bir uygulamayı başlatma için eniyilenmiştir. Öntanımlı sekme olan <guilabel
+>Uygulamaları başlatmak, yakın zamanda açılmış dosyaları açmak ve normal çıkış/kapatma seçeneklerini kullanmak için kullanabilirsiniz. Uygulamalarınıza göz atmanızı sağlayan bir yapı da vardır. Yerleşim, en yaygın kullanılan durum olan bir uygulamayı başlatma için eniyilenmiştir. Varsayılan sekme olan <guilabel
 >Sık Kullanılanlar</guilabel
 >, en çok kullanılan girdileri tutar. Başlangıçta <guilabel
 >Uygulamalar</guilabel
@@ -296,7 +296,7 @@
 >Uygulama Menüsü</title>
 
 <para
->Eğer geleneksel menü biçemli uygulama başlatıcısını tercih ediyorsanız bunu menü düğmesine <mousebutton
+>Eğer geleneksel menü stilli uygulama başlatıcısını tercih ediyorsanız bunu menü düğmesine <mousebutton
 >sağ</mousebutton
 > tıklayıp <guimenuitem
 >Alternatifler</guimenuitem
@@ -346,13 +346,13 @@
 >Görev Çubuğu</title>
 
 <para
->Görev çubuğu, paneldeki başka bir pencere araç takımıdır. Öntanımlı olarak tüm masaüstlerindeki tüm açık pencereler için bir alan gösterir. İki pencere arasında görev yöneticisine sağ tıkladığınızda <guimenuitem
+>Görev çubuğu, paneldeki başka bir pencere araç takımıdır. Varsayılan olarak tüm masaüstlerindeki tüm açık pencereler için bir alan gösterir. İki pencere arasında görev yöneticisine sağ tıkladığınızda <guimenuitem
 >Yalnızca geçerli masaüstünün pencerelerini göster</guimenuitem
 > seçeneğini işaretleyerek geçerli masaüstündeki tüm açık pencereleri göstermesini sağlayabilirsiniz. Görev çubuğu ögeleri üzerindeki metnin boyutu &systemsettings; <menuchoice
 ><guimenu
 >Görünüş</guimenu
 ><guisubmenu
->Yazıtipleri</guisubmenu
+>Yazı Tipleri</guisubmenu
 > </menuchoice
 > altında ayarlanabilir. Görev çubuğuna sağ tıklamak, görev çubuğunuzu özelleştirmek için çeşitli seçenekler seçebileceğiniz Ayarlar iletişim kutusunu getirir. <screenshot>
 <screeninfo
@@ -375,7 +375,7 @@
 >Sistem Tepsisi</title>
 
 <para
->Diğer bir öntanımlı panel ögesi ise geleneksel uygulamalar ve araç takımları tarafından rıhtım olarak kullanılan <application
+>Diğer bir varsayılan panel ögesi ise geleneksel uygulamalar ve araç takımları tarafından rıhtım olarak kullanılan <application
 >Sistem Tepsisi</application
 >’dir. <application
 >Sistem Tepsisi</application
@@ -485,12 +485,12 @@
 >Sayısal Saat</title>
 
 <para
->Öntanımlı panelde en sağdaki &plasma; araç takımı <application
+>Varsayılan panelde en sağdaki &plasma; araç takımı <application
 >Sayısal Saat</application
->’i barındırır. Bu saat, çeşitli saat dilimlerindeki saati görüntüleyebilir ve büyüklüğü ayarlanabilir. Saat, çevresindeki alanın büyüklüğüne göre yazıtipi puntosunu ayarlar (bu durumda panelin). Tarihi görüntülemeyi seçerseniz bu saat, &systemsettings; <guilabel
->Yazıtipi</guilabel
+>’i barındırır. Bu saat, çeşitli saat dilimlerindeki saati görüntüleyebilir ve büyüklüğü ayarlanabilir. Saat, çevresindeki alanın büyüklüğüne göre yazı tipi puntosunu ayarlar (bu durumda panelin). Tarihi görüntülemeyi seçerseniz bu saat, &systemsettings; <guilabel
+>Yazı Tipi</guilabel
 > bölümündeki <guimenuitem
->Küçük yazıtipi</guimenuitem
+>Küçük yazı tipi</guimenuitem
 > ayarı kullanılarak görüntülenir. Zaman ise geri kalan alanı kaplar. Özet olarak, görüntülemek isteyeceğiniz bilgi miktarını sığdığı sürece siz seçersiniz. Daha fazla bilgi görüntülemek istiyorsanız paneli daha büyük yapın veya saati rahatça büyüyebileceği masaüstüne koyun. </para>
 </sect2>
 
@@ -581,7 +581,7 @@
 >Masaüstü</title>
 
 <para
->Masaüstü, aslında başka bir kapsamadır. Uygulamacıklar üzerinde boyut sınırlandırması yapmayan. Uygulamacıklar serbestçe taşınabilir ve boyutlandırılabilir. Kilidi açılmış bir masaüstünde, &plasma; araç takımlar, onların üzerine fareyi getirdiğinizde bir dörtgen gösterirler. Bu uygulamacık; paneli taşımanıza, yeniden boyutlandırmanıza, yeniden konumlandırmanıza ve yeniden hizalamanıza olanak sağlar. Ayrıca, &plasma; masaüstüne sürükleyip bırakmayı da halleder. Köşedeki düğmeler yeniden boyutlandırmak, döndürmek, yapılandırmak ve kaldırmak için kullanılır. Döndürüldüğünde, bir &plasma; araç takımı saat 12 yönüne manyetik olarak çekilir; böylelikle onu düzgün bir duruma rahatlıkla geri sokabilirsiniz. Öntanımlı olarak, çoğu uygulamacık yeniden boyutlandırılırken en-boy oranını korur. Bir uygulamacığı serbestçe yeniden boyutlandırmak istiyorsanız yeniden boyutlarken &Ctrl; düğmesini basılı tutun. </para>
+>Masaüstü, aslında başka bir kapsamadır. Uygulamacıklar üzerinde boyut sınırlandırması yapmayan. Uygulamacıklar serbestçe taşınabilir ve boyutlandırılabilir. Kilidi açılmış bir masaüstünde, &plasma; araç takımlar, onların üzerine fareyi getirdiğinizde bir dörtgen gösterirler. Bu uygulamacık; paneli taşımanıza, yeniden boyutlandırmanıza, yeniden konumlandırmanıza ve yeniden hizalamanıza olanak sağlar. Ayrıca, &plasma; masaüstüne sürükleyip bırakmayı da halleder. Köşedeki düğmeler yeniden boyutlandırmak, döndürmek, yapılandırmak ve kaldırmak için kullanılır. Döndürüldüğünde, bir &plasma; araç takımı saat 12 yönüne manyetik olarak çekilir; böylelikle onu düzgün bir duruma rahatlıkla geri sokabilirsiniz. Varsayılan olarak, çoğu uygulamacık yeniden boyutlandırılırken en-boy oranını korur. Bir uygulamacığı serbestçe yeniden boyutlandırmak istiyorsanız yeniden boyutlarken &Ctrl; düğmesini basılı tutun. </para>
 
 <para
 >Masaüstüne sağ tıklamak size duvar kağıdını, kullanılan yerleşimi ve fare eylemlerini değiştirme olanağı sağlar. Ayrıca &knewstuff; ile yeni duvar kâğıtları indirmenize izin verir. </para>
@@ -628,7 +628,7 @@
 <para
 ><guilabel
 >Klasör Görünümü</guilabel
-> araç takımı, öntanımlı olarak <filename class="directory"
+> araç takımı, varsayılan olarak <filename class="directory"
 >$<envar
 >HOME</envar
 >/Masaüstü</filename
@@ -792,7 +792,7 @@
 >A</keycap
 > düğmesine basıp bırakın demektir. </para>
 <para
->Öntanımlı olarak şu kısayollar kullanılır: </para>
+>Varsayılan olarak şu kısayollar kullanılır: </para>
 
 <variablelist>
 <varlistentry>

@@ -78,7 +78,7 @@
     <para
 >Bir nokta (<literal
 >.</literal
->) ile başlayan her dosya veya klasör öntanımlı olarak gizlidir. </para>
+>) ile başlayan her dosya veya klasör varsayılan olarak gizlidir. </para>
 </note>
 
 <variablelist>
@@ -89,13 +89,13 @@
 ></term>
 <listitem>
     <para
->İndekslenebilecek bir klasör listesi size sunuldu. Öntanımlı olarak, yalnızca tüm <filename class="directory"
+>İndekslenebilecek bir klasör listesi size sunuldu. Varsayılan olarak, yalnızca tüm <filename class="directory"
 ><envar
 >$HOME</envar
 ></filename
 > klasörünüz indekslenir ve başka klasörlere veya sürüclere dokunulmaz. </para>
     <para
->Kaldırılabilir ortamlar, öntanımlı olarak hiçbir zaman indekslenmez. İndekslemeden dışlanan klasörler listesinden kaldırıldığında indekslenir. </para>
+>Kaldırılabilir ortamlar, varsayılan olarak hiçbir zaman indekslenmez. İndekslemeden dışlanan klasörler listesinden kaldırıldığında indekslenir. </para>
     <para
 >Listedeki her bir ögenin yanındaki çoklu kutuyu kullanarak bir ögenin <guimenuitem
 >İndekslenmiş</guimenuitem
