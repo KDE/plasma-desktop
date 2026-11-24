@@ -901,7 +901,6 @@ FocusScope {
                     const rows = (gridView.flow === GridView.FlowLeftToRight);
                     const stripes = Math.ceil(gridView.count / positioner.perStripe);
                     const cWidth = gridView.cellWidth - (2 * Kirigami.Units.smallSpacing);
-                    const cHeight = gridView.cellHeight - (2 * Kirigami.Units.smallSpacing);
                     const midWidth = gridView.cellWidth / 2;
                     const midHeight = gridView.cellHeight / 2;
                     let indices = [];
