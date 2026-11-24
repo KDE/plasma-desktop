@@ -324,7 +324,7 @@ Q_SIGNALS:
     void selectionDone();
     void creatingNewItemsChanged() const;
     void selectionCountChanged() const;
-    void itemDeleted(const QUrl &url);
+    void itemsDeleted(const QList<QUrl> &urls);
 
 protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;

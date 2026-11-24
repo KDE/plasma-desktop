@@ -1712,8 +1712,8 @@ void FolderModel::evictFromIsDirCache(const KFileItemList &items)
     for (const KFileItem &item : items) {
         m_screenMapper->removeFromMap(item.url(), m_currentActivity);
         m_isDirCache.remove(item.url());
-        Q_EMIT itemDeleted(item.url());
     }
+    Q_EMIT itemsDeleted(items.urlList());
 }
 
 bool FolderModel::lessThan(const QModelIndex &left, const QModelIndex &right) const

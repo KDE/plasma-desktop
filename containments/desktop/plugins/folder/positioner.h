@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <KSharedConfig>
 #include <Plasma/Applet>
 #include <QAbstractItemModel>
 #include <qqmlregistration.h>
@@ -37,11 +38,6 @@ class Positioner : public QAbstractItemModel
         int pos;
     };
 
-    struct ChangedPosition {
-        QSet<QString> visitedResolutions;
-        GridPosition gridPosition;
-    };
-
 public:
     explicit Positioner(QObject *parent = nullptr);
     ~Positioner() override;
@@ -54,8 +50,6 @@ public:
 
     int perStripe() const;
     void setPerStripe(int perStripe);
-
-    QStringList positions() const;
 
     Q_INVOKABLE int map(int row) const;
 
@@ -142,7 +136,7 @@ private Q_SLOTS:
     void sourceRowsRemoved(const QModelIndex &parent, int first, int last);
     void sourceLayoutChanged(const QList<QPersistentModelIndex> &parents, QAbstractItemModel::LayoutChangeHint hint);
     void onItemRenamed(const QString &filename, const QString &newFilename);
-    void onItemDeleted(const QUrl &url);
+    void onItemsDeleted(const QList<QUrl> &urls);
     void onListingCompleted(const QList<QUrl> &urls);
 
 private:
@@ -155,15 +149,10 @@ private:
     void convertFolderModelData();
     // Turns proxyToSource data into positions QStringList
     void updatePositionsList(int perStripeForPositions = 0);
-    void flushPendingChanges(bool inserted);
+    void flushPendingChanges();
     void connectSignals(FolderModel *model);
     void disconnectSignals(FolderModel *model);
     bool configurationHasResolution(const QString &resolution) const;
-    QString loadConfigData() const;
-    void loadChangedPositions();
-    QByteArray prepareAndGetChangedPositionsJson();
-    QPair<bool, bool> restoreChangedPositions();
-    void maybeRestoreAndApplyChangedPositions(bool forceConvertAndSave);
     QString convertDesktopPath(const QString &path);
 
     bool m_enabled;
@@ -178,11 +167,8 @@ private:
     std::optional<PositionsHeader> m_positionsHeader;
     QHash<QString, GridPosition> m_positions;
     bool m_deferApplyPositions;
-    bool m_deferRestoreChangedPositions = false;
     bool m_skipSaveOnListingCompleted = false;
     QVariantList m_deferMovePositions;
-
-    QHash<QString, std::optional<ChangedPosition>> m_changedPositions;
 
     QHash<int, int> m_proxyToSource;
     QHash<int, int> m_sourceToProxy;
@@ -191,6 +177,8 @@ private:
     QString m_resolution;
 
     Plasma::Applet *m_applet = nullptr;
+
+    KSharedConfigPtr m_config;
 
     friend class PositionerTest;
 };
