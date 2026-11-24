@@ -55,6 +55,14 @@ Loader {
     readonly property bool isVerticalPanel: Plasmoid.formFactor === PlasmaCore.Types.Vertical
     // This number controls the overall size of the window tooltips
     readonly property int tooltipInstanceMaximumWidth: Kirigami.Units.gridUnit * 16
+    // Uniform margin around the contents of every tooltip instance
+    readonly property int contentMargin: Kirigami.Units.smallSpacing * 2
+    // What one instance ends up occupying: its contents plus the margin on both sides
+    readonly property int tooltipInstanceWidth: tooltipInstanceMaximumWidth + 2 * contentMargin
+    // Gap between the windows of a grouped tooltip, on top of the contentMargin each one already has
+    readonly property int instanceSpacing: Kirigami.Units.largeSpacing
+    // Top margin of the theme's dialog background, measured once in main.qml and shared by every instance
+    property real backgroundTopMargin
 
     // These properties are required to make tooltip interactive when there is a player but no window is present.
     readonly property Mpris.PlayerContainer playerData: mpris2Source.playerForLauncherUrl(launcherUrl, pidParent)
@@ -95,10 +103,9 @@ Loader {
             readonly property real maximumHeight: Screen.desktopAvailableWidth - 2 * Kirigami.Units.smallSpacing
 
             implicitWidth: {
-                // when vertical, all delegates have the same fixed width, but with an extra
-                // gridUnit when thumbnails are disabled to match the default tooltip margins
+                // when vertical, all delegates have the same fixed width
                 let listContentWidth = groupToolTipListView.orientation == ListView.Vertical
-                   ? toolTipDelegate.tooltipInstanceMaximumWidth + (toolTipDelegate.isWin && Plasmoid.configuration.showToolTips ? 0 : Kirigami.Units.gridUnit)
+                   ? toolTipDelegate.tooltipInstanceWidth
                    : groupToolTipListView.contentWidth
 
                 return leftPadding + rightPadding + Math.min(maximumWidth, Math.max(delegateModel.estimatedWidth, listContentWidth))
@@ -128,7 +135,7 @@ Loader {
                 reuseItems: true
 
                 // Lots of spacing with no thumbnails looks bad
-                spacing: Plasmoid.configuration.showToolTips ? Kirigami.Units.gridUnit : 0
+                spacing: Plasmoid.configuration.showToolTips ? toolTipDelegate.instanceSpacing : 0
 
                 // Required to know whether to display the media player buttons on the first window or not
                 property bool hasTrackInATitle: {
@@ -148,8 +155,8 @@ Loader {
                 id: delegateModel
 
                 // On Wayland, a tooltip has a significant resizing process, so estimate the size first.
-                readonly property real estimatedWidth: (toolTipDelegate.isVerticalPanel || !Plasmoid.configuration.showToolTips ? 1 : count) * (toolTipDelegate.tooltipInstanceMaximumWidth + Kirigami.Units.gridUnit) - Kirigami.Units.gridUnit
-                readonly property real estimatedHeight: (toolTipDelegate.isVerticalPanel || !Plasmoid.configuration.showToolTips ? count : 1) * (Plasmoid.configuration.showToolTips ? (toolTipDelegate.tooltipInstanceMaximumWidth / 2 + Kirigami.Units.gridUnit) : Kirigami.Units.gridUnit * 2) - Kirigami.Units.gridUnit
+                readonly property real estimatedWidth: (toolTipDelegate.isVerticalPanel || !Plasmoid.configuration.showToolTips ? 1 : count) * (toolTipDelegate.tooltipInstanceWidth + toolTipDelegate.instanceSpacing) - toolTipDelegate.instanceSpacing
+                readonly property real estimatedHeight: (toolTipDelegate.isVerticalPanel || !Plasmoid.configuration.showToolTips ? count : 1) * (Plasmoid.configuration.showToolTips ? (toolTipDelegate.tooltipInstanceWidth / 2 + toolTipDelegate.instanceSpacing) : Kirigami.Units.gridUnit * 2) - toolTipDelegate.instanceSpacing
 
                 model: tasksModel
 

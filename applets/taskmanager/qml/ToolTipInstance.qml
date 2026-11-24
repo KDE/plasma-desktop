@@ -76,7 +76,23 @@ ColumnLayout {
     readonly property bool titleIncludesTrack: toolTipDelegate.playerData !== null && title.includes(toolTipDelegate.playerData.track)
 
     // Lots of spacing with no thumbnails looks bad
-    spacing: Plasmoid.configuration.showToolTips ? Kirigami.Units.smallSpacing : 0
+    spacing: Plasmoid.configuration.showToolTips ? toolTipDelegate.contentMargin + toolTipDelegate.backgroundTopMargin : 0
+
+    // Every row is inset from the tooltip's edges by toolTipDelegate.contentMargin.
+    // Rows are stacked with spacing in between, so only the top one needs a top
+    // margin, and only the bottom-most visible one a bottom margin; hidden rows are
+    // skipped by the layout, margins and all.
+    readonly property Item lastVisibleRow: {
+        if (volumeControls.visible) {
+            return volumeControls;
+        } else if (playerController.visible) {
+            return playerController;
+        } else if (thumbnailSourceItem.visible) {
+            return thumbnailSourceItem;
+        } else {
+            return headerItem;
+        }
+    }
 
     // text labels + close button
     Item {
@@ -89,14 +105,15 @@ ColumnLayout {
         Layout.maximumWidth: toolTipDelegate.tooltipInstanceMaximumWidth
         Layout.minimumWidth: (toolTipDelegate.isWin && Plasmoid.configuration.showToolTips) || toolTipDelegate.isGroup ? Layout.maximumWidth : 0
         Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-        // match margins of DefaultToolTip.qml in plasma-framework
-        Layout.margins: toolTipDelegate.isWin && Plasmoid.configuration.showToolTips ? 0 : Kirigami.Units.gridUnit / 2
+        Layout.margins: toolTipDelegate.contentMargin
+        // Without thumbnails the header is the whole row, so it always keeps its bottom margin
+        Layout.bottomMargin: Plasmoid.configuration.showToolTips && root.lastVisibleRow !== headerItem ? 0 : toolTipDelegate.contentMargin
 
-        // With thumbnails the header has no margins, so that the thumbnail below it
-        // can span the entire width of the tooltip. That leaves the text labels flush
-        // against the tooltip's edges, so inset them by the same amount the thumbnail
-        // is, to line them up
-        readonly property int labelInset: toolTipDelegate.isWin && Plasmoid.configuration.showToolTips ? pipeWireLoader.anchors.margins : 0
+        // Without thumbnails the close button sits in the row's corner, to keep the rows compact
+        readonly property int closeButtonOutset: Plasmoid.configuration.showToolTips ? 0 : toolTipDelegate.contentMargin
+        // With thumbnails, pull the close button and the badges up by the button's padding, so the
+        // icon rather than its hover background lines up with the top of the text
+        readonly property real closeButtonPaddingOffset: Plasmoid.configuration.showToolTips ? closeButton.topPadding : 0
 
         RowLayout {
             id: header
@@ -118,10 +135,6 @@ ColumnLayout {
             // all textlabels
             ColumnLayout {
                 spacing: 0
-                // Keep the inset on the side away from the close button, which is meant to sit in the corner
-                Layout.leftMargin: closeButtonFlippedItemProxy.visible ? 0 : headerItem.labelInset
-                Layout.rightMargin: closeButtonFlippedItemProxy.visible ? headerItem.labelInset : 0
-                Layout.topMargin: headerItem.labelInset
                 // app name
                 Kirigami.Heading {
                     id: appNameHeading
@@ -186,6 +199,7 @@ ColumnLayout {
             // The badge itself is inside an item to better center the text in the bubble
             Item {
                 Layout.alignment: !Plasmoid.configuration.showToolTips && !playerController.active && !volumeControls.active ? Qt.AlignVCenter : Qt.AlignTop
+                Layout.topMargin: -headerItem.closeButtonPaddingOffset
                 Layout.preferredHeight: closeButton.height
                 Layout.preferredWidth: closeButton.width
                 visible: root.model?.IsDemandingAttention ?? false
@@ -201,6 +215,7 @@ ColumnLayout {
             // The badge itself is inside an item to better center the text in the bubble
             Item {
                 Layout.alignment: !Plasmoid.configuration.showToolTips && !playerController.active && !volumeControls.active ? Qt.AlignVCenter : Qt.AlignTop
+                Layout.topMargin: -headerItem.closeButtonPaddingOffset
                 Layout.preferredHeight: closeButton.height
                 Layout.preferredWidth: closeButton.width
                 visible: root.index === 0 && toolTipDelegate.smartLauncherCountVisible
@@ -220,9 +235,9 @@ ColumnLayout {
             PlasmaComponents3.ToolButton {
                 id: closeButton
                 Layout.alignment: Qt.AlignTop
-                Layout.rightMargin: closeButtonFlippedItemProxy.visible ? headerItem.Layout.margins : -headerItem.Layout.margins
-                Layout.leftMargin: closeButtonFlippedItemProxy.visible ? -headerItem.Layout.margins : headerItem.Layout.margins
-                Layout.topMargin: -headerItem.Layout.margins
+                Layout.topMargin: -headerItem.closeButtonOutset - headerItem.closeButtonPaddingOffset
+                Layout.leftMargin: closeButtonFlippedItemProxy.visible ? -headerItem.closeButtonOutset : headerItem.closeButtonOutset
+                Layout.rightMargin: closeButtonFlippedItemProxy.visible ? headerItem.closeButtonOutset : -headerItem.closeButtonOutset
                 icon.name: "window-close"
                 onClicked: {
                     tasks.cancelHighlightWindows();
@@ -276,7 +291,7 @@ ColumnLayout {
         PlasmaExtras.Highlight {
             id: headerHoverHighlight
             anchors.fill: headerItem
-            anchors.margins: -headerItem.Layout.margins
+            anchors.margins: -toolTipDelegate.contentMargin
             z: -1
             visible: headerHoverHandler.hovered
             pressed: headerTapHandler.pressed
@@ -290,12 +305,35 @@ ColumnLayout {
 
         Layout.fillWidth: true
         Layout.preferredHeight: Kirigami.Units.gridUnit * 8
+        Layout.leftMargin: toolTipDelegate.contentMargin
+        Layout.rightMargin: toolTipDelegate.contentMargin
+        Layout.bottomMargin: root.lastVisibleRow === thumbnailSourceItem ? toolTipDelegate.contentMargin : 0
 
         clip: true
         visible: Plasmoid.configuration.showToolTips && toolTipDelegate.isWin
 
+        // Round off the corners of the preview area and everything painted inside
+        // it: the thumbnail, the album art and the hover highlight
+        layer.enabled: true
+        layer.effect: GE.OpacityMask {
+            maskSource: Rectangle {
+                width: thumbnailSourceItem.width
+                height: thumbnailSourceItem.height
+                radius: Kirigami.Units.cornerRadius
+            }
+        }
+
         readonly property /*undefined|WId where WId = int|string*/ var winId:
             toolTipDelegate.isWin ? toolTipDelegate.windows[root.index] : undefined
+
+        // The thumbnail is painted inside this inset box to give its drop shadow
+        // room; flush against the rounded, clipped edge of the row it would be
+        // masked away entirely
+        Item {
+            id: thumbnailContent
+            anchors.fill: parent
+            anchors.margins: toolTipDelegate.contentMargin
+        }
 
         // There's no PlasmaComponents3 version
         PlasmaExtras.Highlight {
@@ -307,10 +345,7 @@ ColumnLayout {
 
         Loader {
             id: pipeWireLoader
-            anchors.fill: parent
-            // Indent a little bit so that neither the thumbnail nor the drop
-            // shadow can cover up the highlight
-            anchors.margins: Kirigami.Units.smallSpacing * 2
+            anchors.fill: thumbnailContent
 
             active: Plasmoid.configuration.showToolTips
                 && !toolTipDelegate.isLauncher
@@ -354,7 +389,7 @@ ColumnLayout {
                 readonly property Image source: albumArtImage
 
                 // Manual implementation of Image.PreserveAspectCrop
-                readonly property real scaleFactor: Math.max(hoverHandler.width / source.paintedWidth, hoverHandler.height / source.paintedHeight)
+                readonly property real scaleFactor: Math.max(thumbnailSourceItem.width / source.paintedWidth, thumbnailSourceItem.height / source.paintedHeight)
                 width: Math.round(source.paintedWidth * scaleFactor)
                 height: Math.round(source.paintedHeight * scaleFactor)
                 layer.enabled: true
@@ -376,10 +411,8 @@ ColumnLayout {
             readonly property bool available: (status === Image.Ready || status === Image.Loading)
                 && (!(toolTipDelegate.isGroup || backend.applicationCategories(launcherUrl).includes("WebBrowser")) || root.titleIncludesTrack)
 
-            anchors.fill: parent
-            // Indent by one pixel to make sure we never cover up the entire highlight
-            anchors.margins: 1
-            sourceSize: Qt.size(parent.width, parent.height)
+            anchors.fill: thumbnailContent
+            sourceSize: Qt.size(thumbnailContent.width, thumbnailContent.height)
 
             asynchronous: true
             retainWhileLoading: true
@@ -413,8 +446,9 @@ ColumnLayout {
         visible: active
         Layout.fillWidth: true
         Layout.maximumWidth: headerItem.Layout.maximumWidth
-        Layout.leftMargin: headerItem.Layout.margins
-        Layout.rightMargin: headerItem.Layout.margins
+        Layout.leftMargin: toolTipDelegate.contentMargin
+        Layout.rightMargin: toolTipDelegate.contentMargin
+        Layout.bottomMargin: root.lastVisibleRow === playerController ? toolTipDelegate.contentMargin : 0
 
         source: "PlayerController.qml"
     }
@@ -434,8 +468,9 @@ ColumnLayout {
         visible: active
         Layout.fillWidth: true
         Layout.maximumWidth: headerItem.Layout.maximumWidth
-        Layout.leftMargin: headerItem.Layout.margins
-        Layout.rightMargin: headerItem.Layout.margins
+        Layout.leftMargin: toolTipDelegate.contentMargin
+        Layout.rightMargin: toolTipDelegate.contentMargin
+        Layout.bottomMargin: toolTipDelegate.contentMargin
         sourceComponent: RowLayout {
             PlasmaComponents3.ToolButton { // Mute button
                 id: muteButton

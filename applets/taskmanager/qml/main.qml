@@ -397,6 +397,16 @@ PlasmoidItem {
             prefix: TaskManagerApplet.TaskTools.taskPrefix("normal", Plasmoid.location)
         }
 
+        // Only used to read the theme's dialog margins for the tooltips; one
+        // shared instance instead of one inside every tooltip instance
+        KSvg.FrameSvgItem {
+            id: toolTipBackgroundFrame
+
+            visible: false
+
+            imagePath: "dialogs/background"
+        }
+
         MouseHandler {
             id: mouseHandler
 
@@ -428,11 +438,13 @@ PlasmoidItem {
         ToolTipDelegate {
             id: openWindowToolTipDelegate
             visible: false
+            backgroundTopMargin: toolTipBackgroundFrame.margins.top
         }
 
         ToolTipDelegate {
             id: pinnedAppToolTipDelegate
             visible: false
+            backgroundTopMargin: toolTipBackgroundFrame.margins.top
         }
 
         TriangleMouseFilter {
