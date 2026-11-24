@@ -756,7 +756,7 @@ FocusScope {
                         hoverActivateTimer.stop();
                     }
 
-                    cancelRename();
+                    main.cancelRename();
 
                     dir.setDragHotSpotScrollOffset(contentX, contentY);
 
@@ -1242,7 +1242,7 @@ FocusScope {
             onListingCompleted: {
                 if (!gridView.model && root.expanded) {
                     gridView.model = positioner;
-                    gridView.currentIndex = inPanel ? 0 : -1;
+                    gridView.currentIndex = root.inPanel ? 0 : -1;
                 } else if (main.goingBack) {
                     main.goingBack = false;
                     gridView.currentIndex = Math.min(main.lastPosition.index, gridView.count - 1);
