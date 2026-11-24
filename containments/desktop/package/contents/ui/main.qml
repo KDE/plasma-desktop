@@ -202,6 +202,8 @@ ContainmentItem {
 
         property alias folderViewLayer: folderViewLayer
         property alias appletsLayout: appletsLayout
+        property point dragStartPosition
+        property point dragOffset
 
         // Layout size bindings are set in Component.onCompleted
 
@@ -210,6 +212,17 @@ ContainmentItem {
         onDragEnter: event => {
             if (root.isContainment && Plasmoid.immutable && !(root.isFolder && FolderTools.isFileDrag(event))) {
                 event.ignore();
+            }
+
+            dragStartPosition = Qt.point(event.x, event.y);
+            if (root.isFolder && FolderTools.isFileDrag(event)) {
+                const firstItem = folderViewLayer.item.draggingItems[0];
+                const firstItemPos = Qt.point(firstItem.x, firstItem.y);
+                dragOffset = Qt.point(event.x - firstItemPos.x, event.y - firstItemPos.y)
+                for(const item of folderViewLayer.item.draggingItems) {
+                    item.x = event.x + (item.x - firstItemPos.x) - (event.x - firstItemPos.x);
+                    item.y = event.y + (item.y - firstItemPos.y) - (event.y - firstItemPos.y);
+                }
             }
 
             // Don't allow any drops while listing.
@@ -231,7 +244,17 @@ ContainmentItem {
 
             // Trigger autoscroll.
             if (root.isFolder && FolderTools.isFileDrag(event)) {
-                handleDragMove(folderViewLayer.view, mapToItem(folderViewLayer.view, event.x, event.y));
+                /*for(const item of folderViewLayer.item.draggingItems) {
+                    item.x = item.dragStartPosition.x + event.x - dragStartPosition.x;
+                    item.y = item.dragStartPosition.y + event.y - dragStartPosition.y;
+                }*/
+                const firstItem = folderViewLayer.item.draggingItems[0];
+                const firstItemPos = Qt.point(firstItem.x, firstItem.y);
+                for(const item of folderViewLayer.item.draggingItems) {
+                    item.x = event.x + (item.x - firstItemPos.x) - dragOffset.x;
+                    item.y = event.y + (item.y - firstItemPos.y) - dragOffset.y;
+                }
+                //handleDragMove(folderViewLayer.view, mapToItem(folderViewLayer.view, event.x, event.y));
             } else if (root.isContainment) {
                 appletsLayout.showPlaceHolderAt(
                     Qt.rect(event.x - appletsLayout.minimumItemWidth / 2,
@@ -243,6 +266,11 @@ ContainmentItem {
         }
 
         onDragLeave: event => {
+            if (root.isFolder) {
+                for(const item of folderViewLayer.item.draggingItems) {
+                    item.cancelDrag();
+                }
+            }
             // Cancel autoscroll.
             if (root.isFolder) {
                 handleDragEnd(folderViewLayer.view);
@@ -255,8 +283,8 @@ ContainmentItem {
 
         onDrop: event => {
             if (root.isFolder && FolderTools.isFileDrag(event)) {
-                handleDragEnd(folderViewLayer.view);
-                folderViewLayer.view.drop(root, event, mapToItem(folderViewLayer.view, event.x, event.y));
+               // handleDragEnd(folderViewLayer.view);
+                folderViewLayer.item.drop(root, event, mapToItem(folderViewLayer.item, event.x, event.y));
             } else if (root.isContainment) {
                 root.processMimeData(event.mimeData,
                     event.x - appletsLayout.placeHolder.width / 2,

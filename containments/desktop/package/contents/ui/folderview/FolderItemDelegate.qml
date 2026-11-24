@@ -22,7 +22,7 @@ import ".."
 ContainmentLayoutManager.ItemContainer {
     id: main
 
-    required property bool blank
+    required property bool blank // TODO: this should be called explicitly isDragging
     required property bool isDir
     required property bool isHidden
     required property bool isLink
@@ -37,6 +37,7 @@ ContainmentLayoutManager.ItemContainer {
 
     property bool isOnRootView: false
     property bool dragImageBeingGenerated
+    property point dragStartPosition
 
     readonly property /*FolderViewDialog*/ Folder.SubDialog popupDialog: loader.item ? loader.item.popupDialog    : null
     readonly property Item iconArea:        loader.item ? loader.item.iconArea       : null
@@ -49,19 +50,61 @@ ContainmentLayoutManager.ItemContainer {
 
     editModeCondition: ContainmentLayoutManager.ItemContainer.Manual
 
+    function cancelDrag() {
+        if (layout.draggingItems.indexOf(main) === -1) {
+            return;
+        }
+        x = dragStartPosition.x;
+        y = dragStartPosition.y;
+        main.layout.positionItem(main);
+    }
+
+    onBlankChanged: {
+        if (blank) {
+            dragStartPosition = Qt.point(x, y);
+            layout.draggingItems.push(main);
+            main.layout.releaseSpace(main);
+        } else if (layout.draggingItems.indexOf(main) !== -1) {
+            layout.draggingItems = layout.draggingItems.filter(x => x !== main);
+            main.layout.positionItem(main);
+            updateDragImage();
+        }
+    }
+
     // This MouseArea exists to intercept press and hold; preventing edit mode
     // from being triggered when pressing and holding on an icon (if there is one).
     MouseArea {
         anchors.fill: parent
-        visible: !main.blank
-        z: -1
-    }
-
-    DragHandler {
-        target:null
-        onActiveChanged: {
-            if (active) {
-                dir.dragSelected(main.x, main.y);
+        property point scenePressPos
+        onPressed: {
+            scenePressPos = mapToItem(null, mouse.x, mouse.y);
+            if (!dir.isSelected(main.index)) {
+                if (mouse.modifiers === Qt.ControlModifier) {
+                    dir.toggleSelected(index);
+                } else {
+                    dir.clearSelection();
+                    dir.setSelected(index);
+                }
+            }
+        }
+        onPositionChanged: {
+            const scenePos = mapToItem(null, mouse.x, mouse.y);
+            if (root.isDrag(scenePressPos.x, scenePressPos.y, scenePos.x, scenePos.y)) {
+                dir.dragSelected(scenePressPos.x, scenePressPos.y);
+            }
+        }
+        onClicked: {
+            if (Application.styleHints.singleClickActivation || mouse.source === Qt.MouseEventSynthesizedByQt) {
+                if (mouse.modifiers & Qt.AltModifier) {
+                    dir.openPropertiesDialog();
+                } else if (!(mouse.modifiers & Qt.ControlModifier)) {
+                    dir.run(index);
+                }
+            }
+        }
+        onDoubleClicked: {
+            if (!Application.styleHints.singleClickActivation && mouse.source !== Qt.MouseEventSynthesizedByQt) {
+                dir.run(index);
             }
         }
     }

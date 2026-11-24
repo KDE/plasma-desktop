@@ -37,6 +37,8 @@ ContainmentLayoutManager.AppletsLayout {
     property var cachedRectangleSelection: null
     property bool ctrlPressed: false
 
+    property var draggingItems: []
+
     // The graphical item of the containment this view is in, if any.
     containmentItem: {
         for (let item = parent; item; item = item.parent) {
@@ -45,7 +47,6 @@ ContainmentLayoutManager.AppletsLayout {
                 return layout.containmentItem;
             }
         }
-
         return null;
     }
 
@@ -125,7 +126,7 @@ ContainmentLayoutManager.AppletsLayout {
     }
 
     function drop(target, event, pos) {
-        let dropPos = mapToItem(gridView.contentItem, pos.x, pos.y);
+        let dropPos = target.mapToItem(this, pos.x, pos.y);
         dir.drop(target, event, dropItemAt(dropPos), Plasmoid.isContainment && !Plasmoid.immutable);
     }
 
@@ -173,128 +174,11 @@ ContainmentLayoutManager.AppletsLayout {
         id: eventGenerator
     }
 
-    MouseEventListener {
-        id: listener
-visible: false
+    MouseArea {
         anchors.fill: parent
-
-        enabled: false//!Plasmoid.containment.corona.editMode && !root.editMode
-
+        property point pressPos
+        enabled: !Plasmoid.containment.corona.editMode && !root.editMode
         acceptedButtons: Qt.LeftButton | Qt.RightButton
-        hoverEnabled: true
-
-        property int pressX: -1
-        property int pressY: -1
-        property var cPress: null
-
-        onPressed: mouse => {
-            root.forceActiveFocus();
-
-            // Commit a possible inline rename operation
-            if (root.editor && root.editor.targetItem) {
-                root.editor.commit();
-            }
-
-            if (mouse.source === Qt.MouseEventSynthesizedByQt) {
-                root.hoveredItem?.hideToolTip();
-            }
-
-            root.ctrlPressed = (mouse.modifiers & Qt.ControlModifier);
-
-            pressX = mouse.x;
-            pressY = mouse.y;
-            cPress = mapToItem(root, mouse.x, mouse.y);
-
-            // Pressing on the empty desktop space clears the selection unless Ctrl is held
-            if ((!root.hoveredItem || root.hoveredItem.blank) && !root.ctrlPressed) {
-                dir.clearSelection();
-            }
-            root.pressedItem = gridView.safeItemAt(mouse.x, mouse.y);
-        }
-
-        onPositionChanged: mouse => {
-            root.ctrlPressed = (mouse.modifiers & Qt.ControlModifier);
-print(mouse)
-            // Update rubberband geometry.
-            if (root.rubberBand) {
-                let rB = root.rubberBand;
-                let cPos = mapToItem(root, mouse.x, mouse.y);
-
-                if (cPos.x < listener.cPress.x) {
-                    rB.x = Math.max(0, cPos.x);
-                    rB.width = Math.abs(rB.x - listener.cPress.x);
-                } else {
-                    rB.x = listener.cPress.x;
-                    rB.width = Math.min(root.width - rB.x, Math.abs(rB.x - cPos.x));
-                }
-
-                if (cPos.y < listener.cPress.y) {
-                    rB.y = Math.max(0, cPos.y);
-                    rB.height = Math.abs(rB.y - listener.cPress.y);
-                } else {
-                    rB.y = listener.cPress.y;
-                    rB.height = Math.min(root.height - rB.y, Math.abs(rB.y - cPos.y));
-                }
-
-                // Ensure rubberband is at least 1px in size or else it will become
-                // invisible and not match any items.
-                rB.width = Math.max(1, rB.width);
-                rB.height = Math.max(1, rB.height);
-
-                Qt.callLater(root.rectangleSelect, rB.x, rB.y, rB.width, rB.height, root.rubberBand);
-
-                return;
-            }
-
-            // Drag initiation.
-            if (pressX !== -1 && root.isDrag(pressX, pressY, mouse.x, mouse.y)) {
-                print("AAAA",pressedItem)
-                if (pressedItem !== null && dir.isSelected(positioner.map(pressedItem.index))) {
-                    if (pressedItem.dragImageBeingGenerated) {
-                        return; // this should be very fast, we can try again next pixel
-                    }
-                    pressedItem.hideToolTip();
-                    dir.dragSelected(mouse.x, mouse.y);
-                    clearPressState();
-                } else {
-                    // Disable rubberband in popup list view mode or while renaming
-                    //if (root.useListViewMode || (main.editor && main.editor.targetItem) || (verticalScrollBar.active || horizontalScrollBar.active)) {
-                    //    return;
-                    //}
-                    dir.pinSelection();
-                    root.rubberBand = rubberBandObject.createObject(root, {x: listener.cPress.x, y: listener.cPress.y});
-                }
-            }
-        }
-
-        onCanceled: pressCanceled()
-
-        onReleased: pressCanceled()
-
-        onClicked: mouse => {
-            clearPressState();
-
-            // Only replay genuine clicks, not the release of a rubberband drag:
-            // BUG 357367: replay the mouse event, so containment actions assigned
-            // to the left mouse button keep working.
-            if (Plasmoid.isContainment && root.containmentItem
-                && !root.isDrag(listener.cPress.x, listener.cPress.y, mouse.x, mouse.y)) {
-                const pos = mapToItem(root.containmentItem, mouse.x, mouse.y);
-                eventGenerator.sendMouseEvent(root.containmentItem,
-                    Folder.EventGenerator.MouseButtonPress,
-                    pos.x, pos.y, mouse.button, mouse.buttons, mouse.modifiers);
-            }
-        }
-
-        onContainsMouseChanged: {
-            if (!containsMouse && !root.rubberBand) {
-                clearPressState();
-
-                if (!(root.hoveredItem?.popupDialog?.visible ?? false)) {
-                    root.hoveredItem = null;
-                }
-            }
-        }
 
         function pressCanceled() {
             if (root.rubberBand) {
@@ -304,71 +188,89 @@ print(mouse)
                 root.cachedRectangleSelection = null;
                 dir.unpinSelection();
             }
-
-            clearPressState();
         }
 
-        function clearPressState() {
-            root.pressedItem = null;
-            pressX = -1;
-            pressY = -1;
+        onPressed: (mouse) => pressPos = Qt.point(mouse.x, mouse.y)
+        onCanceled: pressCanceled()
+        onReleased: pressCanceled()
+        onClicked: (mouse) => {
+            if (!root.isDrag(pressPos.x, pressPos.y, mouse.x, mouse.y)) {
+                dir.clearSelection();
+            }
         }
+        onPositionChanged: (mouse) => {
+            if (root.rubberBand) {
+                root.rubberBand.x = Math.min(pressPos.x, mouse.x);
+                root.rubberBand.y = Math.min(pressPos.y, mouse.y);
+                root.rubberBand.width = Math.max(1, Math.max(pressPos.x, mouse.x) - root.rubberBand.x);
+                root.rubberBand.height = Math.max(1, Math.max(pressPos.y, mouse.y) - root.rubberBand.y);
+                Qt.callLater(root.rectangleSelect, rubberBand.x, rubberBand.y, rubberBand.width, rubberBand.height, root.rubberBand);
+            } else if (root.isDrag(pressPos.x, pressPos.y, mouse.x, mouse.y)) {
+                // TODO: Disable rubberband in popup list view mode or while renaming
+                //if (main.editor && main.editor.targetItem) {
+                //    return;
+                //}
+                dir.pinSelection();
+                root.rubberBand = rubberBandObject.createObject(root, {x: pressPos.x, y: pressPos.y});
+            }
+        }
+    }
 
-        Component {
-            id: rubberBandObject
+    Component {
+        id: rubberBandObject
 
-            Rectangle {
-                id: rubberBand
+        Rectangle {
+            id: rubberBand
 
-                width: 0
-                height: 0
-                z: 99999
+            width: 0
+            height: 0
+            z: 99999
 
-                SystemPalette {
-                    id: sysPalette
-                    colorGroup: SystemPalette.Active
+            SystemPalette {
+                id: sysPalette
+                colorGroup: SystemPalette.Active
+            }
+
+            radius: Kirigami.Units.cornerRadius
+            border.color: sysPalette.highlight
+            color: Qt.alpha(border.color, 0.3)
+
+            function intersects(rect) {
+                return x + width >= rect.x && y + height >= rect.y && rect.x + rect.width >= x && rect.y + rect.height >= y;
+            }
+
+            function close() {
+                opacityAnimation.restart();
+            }
+
+            OpacityAnimator {
+                id: opacityAnimation
+                target: rubberBand
+                to: 0
+                from: 1
+                duration: Kirigami.Units.shortDuration
+
+                // This easing curve has an elognated start, which works
+                // better than a standard easing curve for the rubberband
+                // animation, which fades out fast and is generally of a
+                // small area.
+                easing {
+                    bezierCurve: [0.4, 0.0, 1, 1]
+                    type: Easing.Bezier
                 }
 
-                radius: Kirigami.Units.cornerRadius
-                border.color: sysPalette.highlight
-                color: Qt.alpha(border.color, 0.3)
-
-                function intersects(rect) {
-                    return x + width >= rect.x && y + height >= rect.y && rect.x + rect.width >= x && rect.y + rect.height >= y;
-                }
-
-                function close() {
-                    opacityAnimation.restart();
-                }
-
-                OpacityAnimator {
-                    id: opacityAnimation
-                    target: rubberBand
-                    to: 0
-                    from: 1
-                    duration: Kirigami.Units.shortDuration
-
-                    // This easing curve has an elognated start, which works
-                    // better than a standard easing curve for the rubberband
-                    // animation, which fades out fast and is generally of a
-                    // small area.
-                    easing {
-                        bezierCurve: [0.4, 0.0, 1, 1]
-                        type: Easing.Bezier
-                    }
-
-                    onFinished: {
-                        rubberBand.visible = false;
-                        rubberBand.enabled = false;
-                        // We need to explicitly generate an image here
-                        // to make sure we have one before we start dragging
-                        root.generateDragImage();
-                        rubberBand.destroy();
-                    }
+                onFinished: {
+                    rubberBand.visible = false;
+                    rubberBand.enabled = false;
+                    // We need to explicitly generate an image here
+                    // to make sure we have one before we start dragging
+                    root.generateDragImage();
+                    rubberBand.destroy();
                 }
             }
         }
     }
+
 
     Folder.ItemViewAdapter {
         id: viewAdapter
@@ -429,7 +331,7 @@ print(mouse)
             width: root.cellWidth
             height: root.cellHeight
 
-            preferredLayoutDirection: ContainmentLayoutManager.AppletsLayout.LeftToRight
+            preferredLayoutDirection: ContainmentLayoutManager.AppletsLayout.LeftToRight // TODO: all folderview layout preferences and RTL mode
         }
     }
 }

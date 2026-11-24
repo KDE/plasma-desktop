@@ -1406,7 +1406,6 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
     const int x = dropEvent->property("x").toInt();
     const int y = dropEvent->property("y").toInt();
     const QPoint dropPos = {x, y};
-
     if (dragging() && row == -1 && !m_urlChangedWhileDragging) {
         if (m_locked || mimeData->urls().isEmpty()) {
             return;
