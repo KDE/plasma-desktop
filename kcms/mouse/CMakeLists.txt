@@ -1,8 +1,6 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcmmouse\")
 
-add_subdirectory(misc)
-
 kcmutils_add_qml_kcm(kcm_mouse
     SOURCES
         kcm.cpp
