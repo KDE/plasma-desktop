@@ -13,7 +13,7 @@
 #include <QObject>
 #include <QVariantHash>
 
-#include "backends/kwin_wl/kwin_wl_device.h"
+#include "kwin_wl_device.h"
 
 #include <KConfigGroup>
 

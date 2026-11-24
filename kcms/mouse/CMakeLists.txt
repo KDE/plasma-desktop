@@ -11,6 +11,8 @@ kcmutils_add_qml_kcm(kcm_mouse
         inputdevice.h
         mousemoduledata.cpp
         mousemoduledata.h
+        kwin_wl_device.cpp
+        kwin_wl_device.h
 )
 
 ecm_qt_declare_logging_category(kcm_mouse
@@ -33,6 +35,5 @@ target_link_libraries(kcm_mouse PRIVATE
     KF6::KIOWidgets
     KF6::WindowSystem
     Qt::QuickWidgets
+    kwindevices
 )
-
-add_subdirectory(backends)
