@@ -22,7 +22,7 @@ import "../code/FolderTools.js" as FolderTools
 import ".." as Base
 
 ContainmentLayoutManager.AppletsLayout {
-    id: root
+    id: main
 
     property alias url: dir.url
     property real iconSize: FolderTools.iconSizeFromTheme(Plasmoid.configuration.iconSize)
@@ -52,7 +52,7 @@ ContainmentLayoutManager.AppletsLayout {
 
     cellWidth: {
         const iconWidth = iconSize + (2 * Kirigami.Units.gridUnit) + (2 * Kirigami.Units.smallSpacing);
-        if (root.isContainment && isRootView && scrollArea.viewportWidth > 0) {
+        if (false&&root.isContainment && isRootView && scrollArea.viewportWidth > 0) {
             const minIconWidth = Math.max(iconWidth, Kirigami.Units.iconSizes.small * ((Plasmoid.configuration.labelWidth * 2) + 4));
             const extraWidth = calcExtraSpacing(minIconWidth, scrollArea.viewportWidth);
             return minIconWidth + extraWidth;
@@ -64,7 +64,7 @@ ContainmentLayoutManager.AppletsLayout {
     cellHeight: {
         // the smallSpacings are for padding
         const iconHeight = iconSize + (Kirigami.Units.gridUnit * Plasmoid.configuration.textLines) + (Kirigami.Units.smallSpacing * 3);
-        if (root.isContainment && isRootView && scrollArea.viewportHeight > 0) {
+        if (false&&root.isContainment && isRootView && scrollArea.viewportHeight > 0) {
             let extraHeight = calcExtraSpacing(iconHeight, scrollArea.viewportHeight);
             return iconHeight + extraHeight;
         } else {
@@ -79,17 +79,17 @@ ContainmentLayoutManager.AppletsLayout {
                 return;
             }
 
-            if (!root.editor) {
+            if (!main.editor) {
                 editor = editorComponent.createObject(listener);
             }
 
-            root.editor.targetItem = gridView.currentItem;
+            main.editor.targetItem = gridView.currentItem;
         }
     }
 
     function cancelRename() {
-        if (root.editor) {
-            root.editor.targetItem = null;
+        if (main.editor) {
+            main.editor.targetItem = null;
         }
     }
 
@@ -127,7 +127,8 @@ ContainmentLayoutManager.AppletsLayout {
 
     function drop(target, event, pos) {
         let dropPos = target.mapToItem(this, pos.x, pos.y);
-        dir.drop(target, event, dropItemAt(dropPos), Plasmoid.isContainment && !Plasmoid.immutable);
+        //dir.drop(target, event, dropItemAt(dropPos), Plasmoid.isContainment && !Plasmoid.immutable);
+        dir.drop(target, event, -1, Plasmoid.isContainment && !Plasmoid.immutable);
     }
 
     function isDrag(fromX, fromY, toX, toY) {
@@ -150,7 +151,7 @@ ContainmentLayoutManager.AppletsLayout {
             }
         }
 
-        root.cachedRectangleSelection = indices;
+        main.cachedRectangleSelection = indices;
     }
 
     onCachedRectangleSelectionChanged: {
@@ -158,7 +159,7 @@ ContainmentLayoutManager.AppletsLayout {
             return;
         }
 
-        dir.updateSelection(cachedRectangleSelection, root.ctrlPressed);
+        dir.updateSelection(cachedRectangleSelection, main.ctrlPressed);
     }
 
     function generateDragImage() {
@@ -181,11 +182,11 @@ ContainmentLayoutManager.AppletsLayout {
         acceptedButtons: Qt.LeftButton | Qt.RightButton
 
         function pressCanceled() {
-            if (root.rubberBand) {
-                root.rubberBand.close();
-                root.rubberBand = null;
+            if (main.rubberBand) {
+                main.rubberBand.close();
+                main.rubberBand = null;
 
-                root.cachedRectangleSelection = null;
+                main.cachedRectangleSelection = null;
                 dir.unpinSelection();
             }
         }
@@ -194,24 +195,24 @@ ContainmentLayoutManager.AppletsLayout {
         onCanceled: pressCanceled()
         onReleased: pressCanceled()
         onClicked: (mouse) => {
-            if (!root.isDrag(pressPos.x, pressPos.y, mouse.x, mouse.y)) {
+            if (!main.isDrag(pressPos.x, pressPos.y, mouse.x, mouse.y)) {
                 dir.clearSelection();
             }
         }
         onPositionChanged: (mouse) => {
-            if (root.rubberBand) {
-                root.rubberBand.x = Math.min(pressPos.x, mouse.x);
-                root.rubberBand.y = Math.min(pressPos.y, mouse.y);
-                root.rubberBand.width = Math.max(1, Math.max(pressPos.x, mouse.x) - root.rubberBand.x);
-                root.rubberBand.height = Math.max(1, Math.max(pressPos.y, mouse.y) - root.rubberBand.y);
-                Qt.callLater(root.rectangleSelect, rubberBand.x, rubberBand.y, rubberBand.width, rubberBand.height, root.rubberBand);
-            } else if (root.isDrag(pressPos.x, pressPos.y, mouse.x, mouse.y)) {
+            if (main.rubberBand) {
+                main.rubberBand.x = Math.min(pressPos.x, mouse.x);
+                main.rubberBand.y = Math.min(pressPos.y, mouse.y);
+                main.rubberBand.width = Math.max(1, Math.max(pressPos.x, mouse.x) - main.rubberBand.x);
+                main.rubberBand.height = Math.max(1, Math.max(pressPos.y, mouse.y) - main.rubberBand.y);
+                Qt.callLater(main.rectangleSelect, rubberBand.x, rubberBand.y, rubberBand.width, rubberBand.height, main.rubberBand);
+            } else if (main.isDrag(pressPos.x, pressPos.y, mouse.x, mouse.y)) {
                 // TODO: Disable rubberband in popup list view mode or while renaming
                 //if (main.editor && main.editor.targetItem) {
                 //    return;
                 //}
                 dir.pinSelection();
-                root.rubberBand = rubberBandObject.createObject(root, {x: pressPos.x, y: pressPos.y});
+                main.rubberBand = rubberBandObject.createObject(main, {x: pressPos.x, y: pressPos.y});
             }
         }
     }
@@ -264,7 +265,7 @@ ContainmentLayoutManager.AppletsLayout {
                     rubberBand.enabled = false;
                     // We need to explicitly generate an image here
                     // to make sure we have one before we start dragging
-                    root.generateDragImage();
+                    main.generateDragImage();
                     rubberBand.destroy();
                 }
             }
@@ -275,10 +276,10 @@ ContainmentLayoutManager.AppletsLayout {
     Folder.ItemViewAdapter {
         id: viewAdapter
 
-        adapterView: root
+        adapterView: main
         adapterModel: positioner
-        adapterIconSize: root.iconSize * 2
-        adapterVisibleArea: Qt.rect(0, 0, root.width, root.height)
+        adapterIconSize: main.iconSize * 2
+        adapterVisibleArea: Qt.rect(0, 0, main.width, main.height)
 
         Component.onCompleted: {
            // gridView.movementStarted.connect(viewAdapter.viewScrolled);
@@ -299,7 +300,7 @@ ContainmentLayoutManager.AppletsLayout {
             previewPlugins: Plasmoid.configuration.previewPlugins
             applet: Plasmoid
 
-           onRequestRename: root.rename()
+           onRequestRename: main.rename()
 
             onPopupMenuAboutToShow: (dropJob, mimeData, x, y) => {
                 if (Plasmoid.isContainment && !Plasmoid.immutable) {
@@ -310,12 +311,12 @@ ContainmentLayoutManager.AppletsLayout {
             // Create drag images before dragging
             // Due to async operations we can't call this before dragging starts,
             // but we have to call it after a selection is done
-            onSelectionDone: root.generateDragImage()
+            onSelectionDone: main.generateDragImage()
 
 
             onMove: (x, y, urls) => {
                 print("MOVE",x,y,urls)
-                root.generateDragImage(); // in case the user drags again
+                main.generateDragImage(); // in case the user drags again
             }
         }
 
@@ -325,11 +326,11 @@ ContainmentLayoutManager.AppletsLayout {
             isOnRootView: true
 
             Component.onCompleted: {
-                root.positionItem(this);
+                main.positionItem(this);
             }
 
-            width: root.cellWidth
-            height: root.cellHeight
+            width: main.cellWidth
+            height: main.cellHeight
 
             preferredLayoutDirection: ContainmentLayoutManager.AppletsLayout.LeftToRight // TODO: all folderview layout preferences and RTL mode
         }
