@@ -14,7 +14,6 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid
 
 import org.kde.plasma.workspace.dbus as DBus
-import org.kde.taskmanager as TaskManager
 
 KCMUtils.SimpleKCM {
     id: root
@@ -78,7 +77,7 @@ KCMUtils.SimpleKCM {
             Layout.fillWidth: true
             Layout.minimumWidth: Kirigami.Units.gridUnit * 14
 
-            enabled: groupingStrategy.currentIndex !== 0
+            enabled: groupingStrategy.currentIndex !== Plasmoid.configuration.groupingStrategyEnum.GroupDisabled
 
             model: [
                 i18nc("@item:inlistbox Completes the sentence 'Clicking grouped task cycles through tasks' ", "Cycles through tasks"),
@@ -93,7 +92,7 @@ KCMUtils.SimpleKCM {
         // "You asked for Window View but Window View is not available" message
         Kirigami.InlineMessage {
             Layout.fillWidth: true
-            visible: groupedTaskVisualization.currentIndex === 2 && !effectWatcher.registered
+            visible: groupedTaskVisualization.currentIndex === Plasmoid.configuration.groupedTaskVisualizationEnum.WindowView && !effectWatcher.registered
             type: Kirigami.MessageType.Warning
             text: i18nc("@info displayed as InlineMessage", "The compositor does not support displaying windows side by side, so a textual list will be displayed instead.")
         }
@@ -106,14 +105,14 @@ KCMUtils.SimpleKCM {
             id: groupPopups
             visible: (Plasmoid.pluginName !== "org.kde.plasma.icontasks")
             text: i18nc("@option:check grouped task", "Combine into single button")
-            enabled: groupingStrategy.currentIndex > 0
+            enabled: groupingStrategy.currentIndex !== Plasmoid.configuration.groupingStrategyEnum.GroupDisabled
         }
 
         QQC2.CheckBox {
             id: onlyGroupWhenFull
             visible: (Plasmoid.pluginName !== "org.kde.plasma.icontasks")
             text: i18nc("@option:check grouped task","Group only when the Task Manager is full")
-            enabled: groupingStrategy.currentIndex > 0 && groupPopups.checked
+            enabled: groupingStrategy.currentIndex !== Plasmoid.configuration.groupingStrategyEnum.GroupDisabled && groupPopups.checked
             Accessible.onPressAction: toggle()
         }
 
@@ -132,27 +131,27 @@ KCMUtils.SimpleKCM {
             model: [
                 {
                     "text": i18nc("@item:inlistbox sort tasks in grouped task", "Do not sort"),
-                    "value": TaskManager.TasksModel.SortDisabled,
+                    "value": Plasmoid.configuration.sortingStrategyEnum.SortDisabled,
                 },
                 {
                     "text": i18nc("@item:inlistbox sort tasks in grouped task", "Manually"),
-                    "value": TaskManager.TasksModel.SortManual,
+                    "value": Plasmoid.configuration.sortingStrategyEnum.SortManual,
                 },
                 {
                     "text": i18nc("@item:inlistbox sort tasks in grouped task", "Alphabetically"),
-                    "value": TaskManager.TasksModel.SortAlpha,
+                    "value": Plasmoid.configuration.sortingStrategyEnum.SortAlpha,
                 },
                 {
                     "text": i18nc("@item:inlistbox sort tasks in grouped task", "By desktop"),
-                    "value": TaskManager.TasksModel.SortVirtualDesktop,
+                    "value": Plasmoid.configuration.sortingStrategyEnum.SortVirtualDesktop,
                 },
                 {
                     "text": i18nc("@item:inlistbox sort tasks in grouped task", "By activity"),
-                    "value": TaskManager.TasksModel.SortActivity,
+                    "value": Plasmoid.configuration.sortingStrategyEnum.SortActivity,
                 },
                 {
                     "text": i18nc("@item:inlistbox sort tasks in grouped task", "By horizontal window position"),
-                    "value": TaskManager.TasksModel.SortWindowPositionHorizontal,
+                    "value": Plasmoid.configuration.sortingStrategyEnum.SortWindowPositionHorizontal,
                 },
             ]
             onActivated: root.cfg_sortingStrategy = currentValue
@@ -163,7 +162,7 @@ KCMUtils.SimpleKCM {
             id: separateLaunchers
             visible: (Plasmoid.pluginName !== "org.kde.plasma.icontasks")
             text: i18nc("@option:check configure task sorting", "Keep launchers separate")
-            enabled: sortingStrategy.currentValue === TaskManager.TasksModel.SortManual
+            enabled: sortingStrategy.currentValue === Plasmoid.configuration.sortingStrategyEnum.SortManual
         }
 
         QQC2.CheckBox {
@@ -220,7 +219,7 @@ KCMUtils.SimpleKCM {
             leftPadding: mirrored ? 0 : (wheelEnabled.indicator.width + wheelEnabled.spacing)
             rightPadding: mirrored ? (wheelEnabled.indicator.width + wheelEnabled.spacing) : 0
             text: i18nc("@option:check mouse wheel task cycling", "Skip minimized tasks")
-            enabled: wheelEnabled.currentIndex !== 0 // None
+            enabled: wheelEnabled.currentIndex !== Plasmoid.configuration.wheelEnabledEnum.None
         }
 
         Item {

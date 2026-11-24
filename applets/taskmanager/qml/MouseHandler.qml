@@ -6,7 +6,6 @@
 
 import QtQuick
 
-import org.kde.taskmanager as TaskManager
 import org.kde.plasma.plasmoid
 import plasma.applet.org.kde.plasma.taskmanager as TaskManagerApplet
 
@@ -74,7 +73,7 @@ DropArea {
             ignoredItem = null;
         }
 
-        if (tasksModel.sortMode === TaskManager.TasksModel.SortManual && tasks.dragSource) {
+        if (tasksModel.sortMode === Plasmoid.configuration.sortingStrategyEnum.SortManual && tasks.dragSource) {
             // Reject drags between different TaskList instances.
             if (tasks.dragSource.parent !== above.parent) {
                 return;
@@ -167,7 +166,7 @@ DropArea {
 
         property bool handleWheelEvents: true
 
-        enabled: handleWheelEvents && Plasmoid.configuration.wheelEnabled !== 0
+        enabled: handleWheelEvents && Plasmoid.configuration.wheelEnabled !== Plasmoid.configuration.wheelEnabledEnum.None
 
         onWheel: event => {
             // magic number 15 for common "one scroll"
@@ -182,7 +181,7 @@ DropArea {
                 increment--;
             }
             const anchor = dropArea.target.childAt(event.x, event.y);
-            if (Plasmoid.configuration.wheelEnabled === 3) {
+            if (Plasmoid.configuration.wheelEnabled === Plasmoid.configuration.wheelEnabledEnum.AdjustVolume) {
                 const loudest = anchor?.audioStreams?.reduce((loudest, stream) => Math.max(loudest, stream.volume), 0)
                 const step = (pulseAudio.item.normalVolume - pulseAudio.item.minimalVolume) * pulseAudio.item.globalConfig.volumeStep / 100;
                 anchor?.audioStreams?.forEach((stream) => {
@@ -198,7 +197,7 @@ DropArea {
             return;
             }
             while (increment !== 0) {
-                TaskManagerApplet.TaskTools.activateNextPrevTask(anchor, increment < 0, Plasmoid.configuration.wheelSkipMinimized, Plasmoid.configuration.wheelEnabled, tasks);
+                TaskManagerApplet.TaskTools.activateNextPrevTask(anchor, increment < 0, Plasmoid.configuration.wheelSkipMinimized, tasks);
                 increment += (increment < 0) ? 1 : -1;
             }
         }

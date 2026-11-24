@@ -807,7 +807,7 @@ PlasmaExtras.Menu {
             }
 
             PlasmaExtras.MenuItem {
-                visible: (Plasmoid.configuration.groupingStrategy !== 0) && menu.get(TaskManager.AbstractTasksModel.IsWindow)
+                visible: (Plasmoid.configuration.groupingStrategy !== Plasmoid.configuration.groupingStrategyEnum.GroupDisabled) && menu.get(TaskManager.AbstractTasksModel.IsWindow)
 
                 checkable: true
                 checked: menu.visualParent && menu.get(TaskManager.AbstractTasksModel.IsGroupable)

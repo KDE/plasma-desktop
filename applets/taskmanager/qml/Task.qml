@@ -166,12 +166,12 @@ PlasmaCore.ToolTipArea {
 
         if (model.IsGroupParent) {
             switch (Plasmoid.configuration.groupedTaskVisualization) {
-            case 0:
+            case Plasmoid.configuration.groupedTaskVisualizationEnum.CycleThroughTasks:
                 break; // Use the default description
-            case 1: {
+            case Plasmoid.configuration.groupedTaskVisualizationEnum.ShowTooltips: {
                 return `${i18nc("@info:usagetip %1 task name", "Show Task tooltip for %1", model.display)}; ${smartLauncherDescription}`;
             }
-            case 2: {
+            case Plasmoid.configuration.groupedTaskVisualizationEnum.WindowView: {
                 if (effectWatcher.registered) {
                     return `${i18nc("@info:usagetip %1 task name", "Show windows side by side for %1", model.display)}; ${smartLauncherDescription}`;
                 }
@@ -436,15 +436,15 @@ PlasmaCore.ToolTipArea {
         acceptedButtons: Qt.MiddleButton | Qt.BackButton | Qt.ForwardButton
         onTapped: (eventPoint, button) => {
             if (button === Qt.MiddleButton) {
-                if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.NewInstance) {
+                if (Plasmoid.configuration.middleClickAction === Plasmoid.configuration.middleClickActionEnum.NewInstance) {
                     tasksModel.requestNewInstance(modelIndex());
-                } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.Close) {
+                } else if (Plasmoid.configuration.middleClickAction === Plasmoid.configuration.middleClickActionEnum.Close) {
                     tasksModel.requestClose(modelIndex());
-                } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleMinimized) {
+                } else if (Plasmoid.configuration.middleClickAction === Plasmoid.configuration.middleClickActionEnum.ToggleMinimized) {
                     tasksModel.requestToggleMinimized(modelIndex());
-                } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleGrouping) {
+                } else if (Plasmoid.configuration.middleClickAction === Plasmoid.configuration.middleClickActionEnum.ToggleGrouping) {
                     tasksModel.requestToggleGrouping(modelIndex());
-                } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.BringToCurrentDesktop) {
+                } else if (Plasmoid.configuration.middleClickAction === Plasmoid.configuration.middleClickActionEnum.BringToCurrentDesktop) {
                     TaskManagerApplet.TaskTools.foreachChildTask((childIndex) => {
                         tasksModel.requestVirtualDesktops(childIndex, [virtualDesktopInfo.currentDesktopByScreenGeometry(tasksModel.data(childIndex, TaskManager.AbstractTasksModel.ScreenGeometry))]);
                     }, modelIndex(), tasksModel);

@@ -13,10 +13,13 @@
 // Can't be `let`, or else QML counterpart won't be able to assign to it.
 var taskManagerInstanceCount = 0;
 
-function activateNextPrevTask(anchor, next, wheelSkipMinimized, wheelEnabled, tasks) {
+function activateNextPrevTask(anchor, next, wheelSkipMinimized, tasks) {
     // FIXME TODO: Unnecessarily convoluted and costly; optimize.
 
-    if (wheelEnabled === 2) { // TaskOnly
+    const wheelEnabled = tasks.plasmoid.configuration.wheelEnabled;
+    const taskOnly = wheelEnabled === tasks.plasmoid.configuration.wheelEnabledEnum.TaskOnly;
+
+    if (taskOnly) {
         // anchor can be undefined if scrolling on an empty area
         if (!anchor) return;
         // Get the number of open windows for the application
@@ -48,7 +51,7 @@ function activateNextPrevTask(anchor, next, wheelSkipMinimized, wheelEnabled, ta
 
         if (!task.model.IsLauncher && !task.model.IsStartup) {
             if (task.model.IsGroupParent) {
-                if (wheelEnabled === 2 && task === anchor) { // If TaskOnly mode and the anchor is a group parent, collect only windows within the group.
+                if (taskOnly && task === anchor) { // If TaskOnly mode and the anchor is a group parent, collect only windows within the group.
                     taskIndexList = [];
                 }
 
@@ -60,7 +63,7 @@ function activateNextPrevTask(anchor, next, wheelSkipMinimized, wheelEnabled, ta
                     }
                 }
 
-                if (wheelEnabled === 2 && task === anchor) { // If TaskOnly mode, break after processing the anchor group.
+                if (taskOnly && task === anchor) { // If TaskOnly mode, break after processing the anchor group.
                     break;
                 }
             } else {
@@ -133,7 +136,7 @@ function activateTask(index, model, modifiers, task, plasmoid, tasks, windowView
         // forward the most recently used task in the group.
         // Otherwise cycle through all tasks in the group without paying attention
         // to the last activation time, which otherwise would change with every click
-        if (plasmoid.configuration.groupedTaskVisualization === 0) {
+        if (plasmoid.configuration.groupedTaskVisualization === plasmoid.configuration.groupedTaskVisualizationEnum.CycleThroughTasks) {
             let childTaskList = [];
 
             for (let i = 0; i < tasks.tasksModel.rowCount(task.modelIndex(index)); ++i) {
@@ -175,7 +178,7 @@ function activateTask(index, model, modifiers, task, plasmoid, tasks, windowView
 
         // Option 2: show tooltips for all child tasks
         // ===========================================
-        else if (plasmoid.configuration.groupedTaskVisualization === 1) {
+        else if (plasmoid.configuration.groupedTaskVisualization === plasmoid.configuration.groupedTaskVisualizationEnum.ShowTooltips) {
             if (tasks.toolTipOpenedByClick) {
                 task.hideImmediately();
             } else {
@@ -189,7 +192,7 @@ function activateTask(index, model, modifiers, task, plasmoid, tasks, windowView
         // ==================================================
         // Make sure the Window View effect is  are actually enabled though;
         // if not, fall through to the next option.
-        else if (plasmoid.configuration.groupedTaskVisualization === 2 && windowViewAvailable) {
+        else if (plasmoid.configuration.groupedTaskVisualization === plasmoid.configuration.groupedTaskVisualizationEnum.WindowView && windowViewAvailable) {
             task.hideToolTip();
             tasks.activateWindowView(model.WinIdList);
         }

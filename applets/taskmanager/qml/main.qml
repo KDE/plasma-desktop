@@ -170,18 +170,18 @@ PlasmoidItem {
         filterNotMinimized: Plasmoid.configuration.showOnlyMinimized
 
         hideActivatedLaunchers: tasks.iconsOnly || Plasmoid.configuration.hideLauncherOnStart
-        sortMode: sortModeEnumValue(Plasmoid.configuration.sortingStrategy)
-        launchInPlace: tasks.iconsOnly && Plasmoid.configuration.sortingStrategy === 1
+        sortMode: Plasmoid.configuration.sortingStrategy
+        launchInPlace: tasks.iconsOnly && Plasmoid.configuration.sortingStrategy === Plasmoid.configuration.sortingStrategyEnum.SortManual
         separateLaunchers: {
             if (!tasks.iconsOnly && !Plasmoid.configuration.separateLaunchers
-                && Plasmoid.configuration.sortingStrategy === 1) {
+                && Plasmoid.configuration.sortingStrategy === Plasmoid.configuration.sortingStrategyEnum.SortManual) {
                 return false;
             }
 
             return true;
         }
 
-        groupMode: groupModeEnumValue(Plasmoid.configuration.groupingStrategy)
+        groupMode: Plasmoid.configuration.groupingStrategy
         groupInline: !Plasmoid.configuration.groupPopups && !tasks.iconsOnly
         groupingWindowTasksThreshold: (Plasmoid.configuration.onlyGroupWhenFull && !tasks.iconsOnly
             ? TaskManagerApplet.LayoutMetrics.optimumCapacity(tasks.width, tasks.height) + 1 : -1)
@@ -196,35 +196,6 @@ PlasmoidItem {
 
         onGroupingLauncherUrlBlacklistChanged: {
             Plasmoid.configuration.groupingLauncherUrlBlacklist = groupingLauncherUrlBlacklist;
-        }
-
-        function sortModeEnumValue(index: int): /*TaskManager.TasksModel.SortMode*/ int {
-            switch (index) {
-            case 0:
-                return TaskManager.TasksModel.SortDisabled;
-            case 1:
-                return TaskManager.TasksModel.SortManual;
-            case 2:
-                return TaskManager.TasksModel.SortAlpha;
-            case 3:
-                return TaskManager.TasksModel.SortVirtualDesktop;
-            case 4:
-                return TaskManager.TasksModel.SortActivity;
-            // 5 is SortLastActivated, skipped
-            case 6:
-                return TaskManager.TasksModel.SortWindowPositionHorizontal;
-            default:
-                return TaskManager.TasksModel.SortDisabled;
-            }
-        }
-
-        function groupModeEnumValue(index: int): /*TaskManager.TasksModel.GroupMode*/ int {
-            switch (index) {
-            case 0:
-                return TaskManager.TasksModel.GroupDisabled;
-            case 1:
-                return TaskManager.TasksModel.GroupApplications;
-            }
         }
 
         Component.onCompleted: {
@@ -628,7 +599,7 @@ PlasmoidItem {
 
         // Switch to manual sorting via the config so the binding and the
         // settings UI stay in sync.
-        Plasmoid.configuration.sortingStrategy = 1; // Manual
+        Plasmoid.configuration.sortingStrategy = Plasmoid.configuration.sortingStrategyEnum.SortManual;
 
         // Find the active task's top-level row from the now-resorted model.
         const activeModelIndex = tasksModel.activeTask;

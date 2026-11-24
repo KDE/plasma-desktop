@@ -27,11 +27,21 @@
       <default>true</default>
     </entry>
     <entry name="groupingStrategy" type="Enum">
-      <label>How tasks are grouped: 0 = Do Not Group, 1 = By Program Name</label>
+      <label>How tasks are grouped</label>
+      <choices name="TaskManager.TasksModel">
+        <choice name="GroupDisabled"/>
+        <choice name="GroupApplications"/>
+      </choices>
       <default>1</default>
     </entry>
     <entry name="groupedTaskVisualization" type="Enum">
-      <label>What happens when clicking on a grouped task: 0 = cycle through grouped tasks, 1 = try to show tooltips, 2 = try to show present Windows effect, 3 = show textual list (AKA group dialog)</label>
+      <label>What happens when clicking on a grouped task</label>
+      <choices>
+        <choice name="CycleThroughTasks"/>
+        <choice name="ShowTooltips"/>
+        <choice name="WindowView"/>
+        <choice name="TextualList"/>
+      </choices>
       <default>0</default>
     </entry>
     <entry name="groupPopups" type="Bool">
@@ -50,8 +60,17 @@
       <label>The launcher URLs (usually .desktop file or executable URLs) of applications that should not have their tasks grouped.</label>
       <default></default>
     </entry>
-    <entry name="sortingStrategy" type="Int">
+    <entry name="sortingStrategy" type="Enum">
       <label>Values from TaskManager::TasksModel::SortMode</label>
+      <choices name="TaskManager.TasksModel">
+        <choice name="SortDisabled"/>
+        <choice name="SortManual"/>
+        <choice name="SortAlpha"/>
+        <choice name="SortVirtualDesktop"/>
+        <choice name="SortActivity"/>
+        <choice name="SortLastActivated"/>
+        <choice name="SortWindowPositionHorizontal"/>
+      </choices>
       <default>1</default>
     </entry>
     <entry name="separateLaunchers" type="Bool">

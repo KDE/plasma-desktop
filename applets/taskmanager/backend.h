@@ -36,17 +36,6 @@ class Backend : public QObject
     QML_ELEMENT
 
 public:
-    enum MiddleClickAction {
-        None = 0,
-        Close,
-        NewInstance,
-        ToggleMinimized,
-        ToggleGrouping,
-        BringToCurrentDesktop,
-    };
-
-    Q_ENUM(MiddleClickAction)
-
     Q_PROPERTY(int screen READ screen WRITE setScreen NOTIFY screenChanged)
     Q_PROPERTY(bool hasActiveTask READ hasActiveTask WRITE setHasActiveTask NOTIFY hasActiveTaskChanged)
     Q_PROPERTY(bool showsOnlyCurrentScreen READ showsOnlyCurrentScreen WRITE setShowsOnlyCurrentScreen NOTIFY showsOnlyCurrentScreenChanged)

@@ -90,13 +90,13 @@ function preferredMaxWidth() {
     const laneHeight = tasks.height / maxStripes(); // correct for multiple rows
     let baseFactor = 1; // sane default in case something goes wrong
     switch (tasks.plasmoid.configuration.taskMaxWidth) {
-    case 0: // narrow
+    case tasks.plasmoid.configuration.taskMaxWidthEnum.Narrow:
         baseFactor = 1.2;
         break;
-    case 1: // medium
+    case tasks.plasmoid.configuration.taskMaxWidthEnum.Medium:
         baseFactor = 1.6;
         break;
-    case 2: // wide
+    case tasks.plasmoid.configuration.taskMaxWidthEnum.Wide:
         baseFactor = 2;
         break;
     }
