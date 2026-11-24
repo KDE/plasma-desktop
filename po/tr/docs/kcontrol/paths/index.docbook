@@ -95,7 +95,7 @@
 
 <note>
     <para
->Kendiliğinden bağlanan sürücüler, bu yollar için kullanılamazlar. Böyle sürücüler, &plasma;’nın yeniden başlatılması sonrası öntanımlı değerlere döndürülürler. </para>
+>Kendiliğinden bağlanan sürücüler, bu yollar için kullanılamazlar. Böyle sürücüler, &plasma;’nın yeniden başlatılması sonrası varsayılan değerlere döndürülürler. </para>
 </note>
 
 <variablelist>
@@ -108,7 +108,7 @@
 ><para
 >Masaüstü klasörü, masaüstünüzdeki bir <guilabel
 >Klasör Görünümü</guilabel
-> araç takımında gördüğünüz tüm dosyaları içerir. Öntanımlı yol genellikle <filename class="directory"
+> araç takımında gördüğünüz tüm dosyaları içerir. Varsayılan yol genellikle <filename class="directory"
 >~/Desktop</filename
 > biçimindedir; ancak bu klasörün konumunu buradan değiştirebilirsiniz. </para
 ></listitem>
@@ -120,7 +120,7 @@
 ></term>
 <listitem
 ><para
->Bu klasör, belgeleri yüklemek veya kaydetmek için öntanımlı olarak kullanılacaktır.</para
+>Bu klasör, belgeleri yüklemek veya kaydetmek için varsayılan olarak kullanılacaktır.</para
 ></listitem>
 </varlistentry>
 <varlistentry>
@@ -130,7 +130,7 @@
 ></term>
 <listitem
 ><para
->Bu klasör, indirdiğiniz ögeleri kaydetmek için öntanımlı olarak kullanılacaktır.</para
+>Bu klasör, indirdiğiniz ögeleri kaydetmek için varsayılan olarak kullanılacaktır.</para
 ></listitem>
 </varlistentry>
 <varlistentry>
@@ -140,7 +140,7 @@
 ></term>
 <listitem
 ><para
->Bu klasör öntanımlı olarak filmlerin yüklenmesi veya kaydedilmesi için kullanılacaktır.</para
+>Bu klasör varsayılan olarak filmlerin yüklenmesi veya kaydedilmesi için kullanılacaktır.</para
 ></listitem>
 </varlistentry>
 <varlistentry>
@@ -150,7 +150,7 @@
 ></term>
 <listitem
 ><para
->Bu klasör öntanımlı olarak resimlerin yüklenmesi veya kaydedilmesi için kullanılacaktır.</para
+>Bu klasör varsayılan olarak resimlerin yüklenmesi veya kaydedilmesi için kullanılacaktır.</para
 ></listitem>
 </varlistentry>
 <varlistentry>
@@ -160,7 +160,7 @@
 ></term>
 <listitem
 ><para
->Bu klasör öntanımlı olarak müziklerin yüklenmesi veya kaydedilmesi için kullanılacaktır.</para
+>Bu klasör varsayılan olarak müziklerin yüklenmesi veya kaydedilmesi için kullanılacaktır.</para
 ></listitem>
 </varlistentry>
 </variablelist>

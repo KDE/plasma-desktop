@@ -53,7 +53,7 @@
 <title
 >Yazım Denetimi</title>
 <para
->Burada bulunan yapılandırma seçenekleri, çeşitli ücretsiz yazım denetleyicilerin bir ön yüzü olan &sonnet; kullanan tüm &kde; uygulamaları tarafından öntanımlı olarak kullanılır.</para>
+>Burada bulunan yapılandırma seçenekleri, çeşitli ücretsiz yazım denetleyicilerin bir ön yüzü olan &sonnet; kullanan tüm &kde; uygulamaları tarafından varsayılan olarak kullanılır.</para>
 
 <para
 >&sonnet;’i kullanmak için; &eg;, <ulink url="http://aspell.net/"
@@ -69,7 +69,7 @@
 
 <para
 ><guilabel
->Öntanımlı dil</guilabel
+>Varsayılan dil</guilabel
 > açılır kutusunda kullanılabilir sözlükler arasından &sonnet; için hangisini kullanacağınızı seçin. </para>
 
 <sect2 id="spell-options">
@@ -92,7 +92,7 @@
 <varlistentry>
 <term
 ><guilabel
->Kendiliğinden yazım denetimi öntanımlı olarak etkin</guilabel
+>Kendiliğinden yazım denetimi varsayılan olarak etkin</guilabel
 ></term>
 <listitem>
 <para
@@ -164,8 +164,8 @@
 
 <para
 ><guibutton
->Öntanımlılar</guibutton
-> düğmesine tıklamak, tüm değerleri öntanımlı değerlerine geri yükler.</para>
+>Varsayılanlar</guibutton
+> düğmesine tıklamak, tüm değerleri varsayılan değerlerine geri yükler.</para>
 </sect3>
 
 </sect2>
