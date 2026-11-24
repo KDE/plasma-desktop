@@ -88,18 +88,6 @@ void Backend::setupUnity()
         qCWarning(TASKMANAGER_DEBUG) << "Failed to register unity service";
         // In case an external process uses this (e.g. Latte Dock), let it just listen.
     }
-
-    KConfigGroup grp(KSharedConfig::openConfig(QStringLiteral("taskmanagerrulesrc")), QStringLiteral("Unity Launcher Mapping"));
-
-    const QStringList keys = grp.keyList();
-    for (const QString &key : keys) {
-        const QString &value = grp.readEntry(key, QString());
-        if (value.isEmpty()) {
-            continue;
-        }
-
-        m_unityMappingRules.insert(key, value);
-    }
 }
 
 bool Backend::hasLauncher(const QString &storageId) const
@@ -136,11 +124,6 @@ bool Backend::progressVisible(const QString &uri) const
 bool Backend::urgent(const QString &uri) const
 {
     return m_launchers.value(uri).urgent;
-}
-
-QHash<QString, QString> Backend::unityMappingRules() const
-{
-    return m_unityMappingRules;
 }
 
 void Backend::update(const QString &uri, const QMap<QString, QVariant> &properties)

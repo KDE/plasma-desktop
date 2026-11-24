@@ -47,8 +47,6 @@ public:
     bool progressVisible(const QString &uri) const;
     bool urgent(const QString &uri) const;
 
-    QHash<QString, QString> unityMappingRules() const;
-
 Q_SIGNALS:
     void countChanged(const QString &uri, int count);
     void countVisibleChanged(const QString &uri, bool countVisible);
@@ -100,10 +98,6 @@ private:
     QDBusServiceWatcher *m_watcher;
     QHash<QString, QString> m_dbusServiceToLauncherUrl;
     QHash<QString, QString> m_launcherUrlToStorageId;
-    // these rules can be configured in the taskmanagerrulesrc in the "Unity Launcher Mapping" section
-    // key is the actual desktop file name of the application (some-broken-app-beta.desktop)
-    // value is how it actually announces itself on the Unity API (some-broken-app.desktop)
-    QHash<QString, QString> m_unityMappingRules;
 
     // Application Jobs
     NotificationManager::JobsModel::Ptr m_jobsModel;

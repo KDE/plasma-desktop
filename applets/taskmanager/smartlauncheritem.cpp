@@ -138,14 +138,6 @@ void Item::setLauncherUrl(const QUrl &launcherUrl)
             return;
         }
 
-        if (m_backendPtr) {
-            // check if we have a mapping to a different desktop file
-            const QString &overrideStorageId = m_backendPtr->unityMappingRules().value(m_storageId);
-            if (!overrideStorageId.isEmpty()) {
-                m_storageId = overrideStorageId;
-            }
-        }
-
         init();
         populate();
     }
