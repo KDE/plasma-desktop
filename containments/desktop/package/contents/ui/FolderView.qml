@@ -1257,43 +1257,29 @@ FocusScope {
                 }
                 const rows = (gridView.flow === GridView.FlowLeftToRight);
                 const dropPos = gridView.mapToItem(gridView.contentItem, x, y);
-                const leftEdge = Math.min(gridView.contentX, gridView.originX);
-
                 let moves = []
-                let itemX = -1;
-                let itemY = -1;
-                let col = -1;
-                let row = -1;
-                let from = -1;
-                let to = -1;
 
                 for (let i = 0; i < urls.length; i++) {
-                    from = positioner.indexForUrl(urls[i]);
-                    to = -1;
-
-                    if (from === -1) {
+                    let startPositions = positioner.indexForUrl(urls[i]);
+                    if (startPositions === -1) {
                         continue;
                     }
-
-                    let offset = dir.dragCursorOffset(positioner.map(from));
-
+                    let endPositions = -1;
+                    let offset = dir.dragCursorOffset(positioner.map(startPositions));
                     if (offset.x === -1) {
                         continue;
                     }
 
                     // The +(gridView.cellWidth / 2) is kept here to make it easier to drag items between cells.
-                    itemX = dropPos.x + offset.x + (gridView.cellWidth / 2);
-                    itemY = dropPos.y + offset.y + gridView.verticalDropHitscanOffset;
-
-
+                    let itemX = dropPos.x + offset.x + (gridView.cellWidth / 2);
+                    let itemY = dropPos.y + offset.y + gridView.verticalDropHitscanOffset;
                     if (gridView.effectiveLayoutDirection === Qt.RightToLeft) {
                         itemX -= (rows ? gridView.contentX : gridView.originX);
                         itemX = (rows ? gridView.width : gridView.contentItem.width) - itemX;
                     }
 
-                    col = rows ? Math.floor(itemX / gridView.cellWidth) : Math.floor(itemY / gridView.cellHeight);
-                    row = rows ? Math.floor(itemY / gridView.cellHeight) : Math.floor(itemX / gridView.cellWidth);
-
+                    let col = rows ? Math.floor(itemX / gridView.cellWidth) : Math.floor(itemY / gridView.cellHeight);
+                    let row = rows ? Math.floor(itemY / gridView.cellHeight) : Math.floor(itemX / gridView.cellWidth);
 
                     if (col <= positioner.perStripe) {
                         // We have somehow moved the item outside of the available
@@ -1302,17 +1288,15 @@ FocusScope {
                         if (col === positioner.perStripe) {
                             col -= 1;
                         }
-
-                        to = (row * positioner.perStripe) + col;
-
-                        if (to < 0) {
+                        endPositions = (row * positioner.perStripe) + col;
+                        if (endPositions < 0) {
                             return;
                         }
                     }
 
-                    if (from !== to) {
-                        moves.push(from);
-                        moves.push(to);
+                    if (startPositions !== endPositions) {
+                        moves.push(startPositions);
+                        moves.push(endPositions);
                     }
                 }
 
@@ -1322,7 +1306,6 @@ FocusScope {
                     gridView.currentIndex = positioner.move(moves);
                     gridView.forceLayout();
                 }
-
                 main.generateDragImage(); // in case the user drags again
             }
         }
