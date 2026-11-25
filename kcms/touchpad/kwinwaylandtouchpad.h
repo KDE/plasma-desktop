@@ -84,6 +84,14 @@ class KWinWaylandTouchpad : public QObject
     Q_PROPERTY(bool supportsDisableWhileTyping READ supportsDisableWhileTyping CONSTANT)
     Q_PROPERTY(bool disableWhileTypingEnabledByDefault READ disableWhileTypingEnabledByDefault CONSTANT)
     Q_PROPERTY(bool disableWhileTyping READ isDisableWhileTyping WRITE setDisableWhileTyping NOTIFY disableWhileTypingChanged)
+    Q_PROPERTY(quint32 disableWhileTypingTimeoutDefault READ disableWhileTypingTimeoutDefault CONSTANT)
+    Q_PROPERTY(quint32 disableWhileTypingTimeout READ disableWhileTypingTimeout WRITE setDisableWhileTypingTimeout NOTIFY disableWhileTypingTimeoutChanged)
+
+    Q_PROPERTY(bool supportsDisableWhileTrackpointing READ supportsDisableWhileTrackpointing CONSTANT)
+    Q_PROPERTY(bool disableWhileTrackpointingEnabledByDefault READ disableWhileTrackpointingEnabledByDefault CONSTANT)
+    Q_PROPERTY(bool disableWhileTrackpointing READ isDisableWhileTrackpointing WRITE setDisableWhileTrackpointing NOTIFY disableWhileTrackpointingChanged)
+    Q_PROPERTY(quint32 disableWhileTrackpointingTimeoutDefault READ disableWhileTrackpointingTimeoutDefault CONSTANT)
+    Q_PROPERTY(quint32 disableWhileTrackpointingTimeout READ disableWhileTrackpointingTimeout WRITE setDisableWhileTrackpointingTimeout NOTIFY disableWhileTrackpointingTimeoutChanged)
 
     Q_PROPERTY(bool supportsMiddleEmulation READ supportsMiddleEmulation CONSTANT)
     Q_PROPERTY(bool middleEmulationEnabledByDefault READ middleEmulationEnabledByDefault CONSTANT)
@@ -242,6 +250,46 @@ public:
     void setDisableWhileTyping(bool set)
     {
         m_disableWhileTyping.set(set);
+    }
+    quint32 disableWhileTypingTimeoutDefault() const
+    {
+        return m_disableWhileTypingTimeoutDefault.val;
+    }
+    quint32 disableWhileTypingTimeout() const
+    {
+        return m_disableWhileTypingTimeout.val;
+    }
+    void setDisableWhileTypingTimeout(quint32 val)
+    {
+        m_disableWhileTypingTimeout.set(val);
+    }
+    bool supportsDisableWhileTrackpointing() const
+    {
+        return m_supportsDisableWhileTrackpointing.val;
+    }
+    bool disableWhileTrackpointingEnabledByDefault() const
+    {
+        return m_disableWhileTrackpointingEnabledByDefault.val;
+    }
+    bool isDisableWhileTrackpointing() const
+    {
+        return m_disableWhileTrackpointing.val;
+    }
+    void setDisableWhileTrackpointing(bool set)
+    {
+        m_disableWhileTrackpointing.set(set);
+    }
+    quint32 disableWhileTrackpointingTimeoutDefault() const
+    {
+        return m_disableWhileTrackpointingTimeoutDefault.val;
+    }
+    quint32 disableWhileTrackpointingTimeout() const
+    {
+        return m_disableWhileTrackpointingTimeout.val;
+    }
+    void setDisableWhileTrackpointingTimeout(quint32 val)
+    {
+        m_disableWhileTrackpointingTimeout.set(val);
     }
     bool supportsMiddleEmulation() const
     {
@@ -523,6 +571,9 @@ Q_SIGNALS:
     void leftHandedChanged();
     void disableEventsOnExternalMouseChanged();
     void disableWhileTypingChanged();
+    void disableWhileTypingTimeoutChanged();
+    void disableWhileTrackpointingChanged();
+    void disableWhileTrackpointingTimeoutChanged();
     void middleEmulationChanged();
     // acceleration speed and profile
     void pointerAccelerationChanged();
@@ -632,6 +683,14 @@ private:
 
     PropBool m_disableWhileTypingEnabledByDefault = PropBool(this, "disableWhileTypingEnabledByDefault");
     PropBool m_disableWhileTyping = PropBool(this, "disableWhileTyping", &KWinWaylandTouchpad::disableWhileTypingChanged);
+    Prop<quint32> m_disableWhileTypingTimeoutDefault = Prop<quint32>(this, "disableWhileTypingTimeoutDefault", 0);
+    Prop<quint32> m_disableWhileTypingTimeout = Prop<quint32>(this, "disableWhileTypingTimeout", 0, &KWinWaylandTouchpad::disableWhileTypingTimeoutChanged);
+
+    PropBool m_supportsDisableWhileTrackpointing = PropBool(this, "supportsDisableWhileTrackpointing");
+    PropBool m_disableWhileTrackpointingEnabledByDefault = PropBool(this, "disableWhileTrackpointingEnabledByDefault");
+    PropBool m_disableWhileTrackpointing = PropBool(this, "disableWhileTrackpointing", &KWinWaylandTouchpad::disableWhileTrackpointingChanged);
+    Prop<quint32> m_disableWhileTrackpointingTimeoutDefault = Prop<quint32>(this, "disableWhileTrackpointingTimeoutDefault", 0);
+    Prop<quint32> m_disableWhileTrackpointingTimeout = Prop<quint32>(this, "disableWhileTrackpointingTimeout", 0, &KWinWaylandTouchpad::disableWhileTrackpointingTimeoutChanged);
 
     PropBool m_middleEmulationEnabledByDefault = PropBool(this, "middleEmulationEnabledByDefault");
     PropBool m_middleEmulation = PropBool(this, "middleEmulation", &KWinWaylandTouchpad::middleEmulationChanged);

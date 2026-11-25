@@ -120,12 +120,13 @@ KCMUtils.SimpleKCM {
                 }
             }
 
+            Kirigami.FormSeparator {}
+
             Kirigami.FormEntry {
                 contentItem: QQC2.CheckBox {
                     id: disableEventsOnExternalMouse
-                    text: i18ndc("kcm_touchpad", "@option:check", "Disable while mouse is connected")
-                    leftPadding: mirrored ? disableEventsOnExternalMouse.padding : (deviceEnabled.indicator.width + deviceEnabled.spacing)
-                    rightPadding: mirrored ? (deviceEnabled.indicator.width + deviceEnabled.spacing) : disableEventsOnExternalMouse.padding
+                    Kirigami.FormData.label: i18ndc("kcm_touchpad", "@title:group prefix for checkbox group", "Disable while:")
+                    text: i18ndc("kcm_touchpad", "@option:check Completes the sentence 'Disable while:'", "Mouse is connected")
                     enabled: root.device?.supportsDisableEventsOnExternalMouse ?? false
                     checked: enabled && (root.device?.disableEventsOnExternalMouse ?? false)
 
@@ -138,24 +139,114 @@ KCMUtils.SimpleKCM {
             }
 
             Kirigami.FormEntry {
-                subtitle: dwt.Accessible.description
-                contentItem: QQC2.CheckBox {
-                    id: dwt
-                    text: i18ndc("kcm_touchpad", "option:check", "Disable while typing")
-                    Accessible.description: i18ndc("kcm_touchpad", "@label 'this' refers to the 'disable touchpad while typing' feature", "This can interfere with video games.")
-                    leftPadding: mirrored ? disableEventsOnExternalMouse.padding : (deviceEnabled.indicator.width + deviceEnabled.spacing)
-                    rightPadding: mirrored ? (deviceEnabled.indicator.width + deviceEnabled.spacing) : disableEventsOnExternalMouse.padding
-                    enabled: root.device?.supportsDisableWhileTyping ?? false
-                    checked: enabled && (root.device?.disableWhileTyping ?? false)
+                visible: root.device?.supportsDisableWhileTyping ?? false
+                subtitle: disableWhileTyping.Accessible.description
+                contentItem: RowLayout {
+                    spacing: Kirigami.Units.smallSpacing
 
-                    onToggled: {
-                        if (root.device) {
-                            root.device.disableWhileTyping = checked
+                    QQC2.CheckBox {
+                        id: disableWhileTyping
+                        text: i18ndc("kcm_touchpad", "@option:check Completes the sentence 'Disable while:'", "Typing; re-enable after:")
+                        Accessible.description: i18ndc("kcm_touchpad", "@label 'this' refers to the 'disable touchpad while typing' feature", "This can interfere with video games.")
+                        enabled: root.device?.supportsDisableWhileTyping ?? false
+                        checked: enabled && (root.device?.disableWhileTyping ?? false)
+
+                        onToggled: {
+                            if (root.device) {
+                                root.device.disableWhileTyping = checked
+                            }
+                        }
+                    }
+
+                    QQC2.SpinBox {
+                        id: disableWhileTypingTimeout
+                        from: 0
+                        to: 5000
+                        stepSize: 50
+                        editable: true
+                        enabled: (root.device?.supportsDisableWhileTyping ?? false) && disableWhileTyping.checked
+
+                        value: (root.device?.supportsDisableWhileTyping ?? false) ? root.device.disableWhileTypingTimeout : 0
+
+                        validator: IntValidator {
+                            bottom: disableWhileTypingTimeout.from
+                            top: disableWhileTypingTimeout.to
+                        }
+
+                        textFromValue: (value, locale) => {
+                            return i18ncp("short for millisecond(s)", "%1 ms", "%1 ms", value)
+                        }
+
+                        valueFromText: (text, locale) => {
+                            return Number.fromLocaleString(locale, text.replace(i18nc("short for millisecond(s)", "ms"), "").trim())
+                        }
+
+                        onValueModified: {
+                            if (root.device) {
+                                root.device.disableWhileTypingTimeout = value
+                                value = Qt.binding(() => (root.device?.supportsDisableWhileTyping ?? false)
+                                    ? root.device.disableWhileTypingTimeout
+                                    : 0
+                                )
+                            }
                         }
                     }
                 }
             }
 
+            Kirigami.FormEntry {
+                visible: root.device?.supportsDisableWhileTrackpointing ?? false
+                contentItem: RowLayout {
+                    spacing: Kirigami.Units.smallSpacing
+
+                    QQC2.CheckBox {
+                        id: disableWhileUsingTrackpoint
+                        text: i18ndc("kcm_touchpad", "@option:check Completes the sentence 'Disable while:'", "Using trackpoint; re-enable after:")
+                        enabled: root.device?.supportsDisableWhileTrackpointing ?? false
+                        checked: enabled && (root.device?.disableWhileTrackpointing ?? false)
+
+                        onToggled: {
+                            if (root.device) {
+                                root.device.disableWhileTrackpointing = checked
+                            }
+                        }
+                    }
+
+                    QQC2.SpinBox {
+                        id: disableWhileUsingTrackpointTimeout
+                        from: 0
+                        to: 5000
+                        stepSize: 50
+                        editable: true
+                        enabled: (root.device?.supportsDisableWhileTrackpointing ?? false) && disableWhileUsingTrackpoint.checked
+
+                        value: (root.device?.supportsDisableWhileTrackpointing ?? false) ? root.device.disableWhileTrackpointingTimeout : 0
+
+                        validator: IntValidator {
+                            bottom: disableWhileUsingTrackpointTimeout.from
+                            top: disableWhileUsingTrackpointTimeout.to
+                        }
+
+                        textFromValue: (value, locale) => {
+                            return i18ncp("short for millisecond(s)", "%1 ms", "%1 ms", value)
+                        }
+
+                        valueFromText: (text, locale) => {
+                            return Number.fromLocaleString(locale, text.replace(i18nc("short for millisecond(s)", "ms"), "").trim())
+                        }
+
+                        onValueModified: {
+                            if (root.device) {
+                                root.device.disableWhileTrackpointingTimeout = value
+                                value = Qt.binding(() => (root.device?.supportsDisableWhileTrackpointing ?? false)
+                                    ? root.device.disableWhileTrackpointingTimeout
+                                    : 0
+                                )
+                            }
+                        }
+                    }
+                }
+            }
 
             Kirigami.FormSeparator {}
 

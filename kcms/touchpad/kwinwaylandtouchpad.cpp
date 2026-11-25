@@ -66,12 +66,19 @@ bool KWinWaylandTouchpad::load()
     success &= valueLoader(m_defaultPointerAccelerationProfileAdaptive);
     success &= valueLoader(m_disableEventsOnExternalMouseEnabledByDefault);
     success &= valueLoader(m_disableWhileTypingEnabledByDefault);
+    success &= valueLoader(m_disableWhileTypingTimeoutDefault);
+    success &= valueLoader(m_supportsDisableWhileTrackpointing);
+    success &= valueLoader(m_disableWhileTrackpointingEnabledByDefault);
+    success &= valueLoader(m_disableWhileTrackpointingTimeoutDefault);
     success &= valueLoader(m_leftHandedEnabledByDefault);
     success &= valueLoader(m_pointerAcceleration);
     success &= valueLoader(m_pointerAccelerationProfileFlat);
     success &= valueLoader(m_pointerAccelerationProfileAdaptive);
     success &= valueLoader(m_disableEventsOnExternalMouse);
     success &= valueLoader(m_disableWhileTyping);
+    success &= valueLoader(m_disableWhileTypingTimeout);
+    success &= valueLoader(m_disableWhileTrackpointing);
+    success &= valueLoader(m_disableWhileTrackpointingTimeout);
     // tapping
     success &= valueLoader(m_tapFingerCount);
     success &= valueLoader(m_supportsMiddleEmulation);
@@ -126,6 +133,9 @@ bool KWinWaylandTouchpad::defaults()
 
     m_disableEventsOnExternalMouse.set(m_disableEventsOnExternalMouseEnabledByDefault);
     m_disableWhileTyping.set(m_disableWhileTypingEnabledByDefault);
+    m_disableWhileTypingTimeout.set(m_disableWhileTypingTimeoutDefault);
+    m_disableWhileTrackpointing.set(m_disableWhileTrackpointingEnabledByDefault);
+    m_disableWhileTrackpointingTimeout.set(m_disableWhileTrackpointingTimeoutDefault);
 
     m_tapToClick.set(m_tapToClickEnabledByDefault);
     m_tapAndDrag.set(m_tapAndDragEnabledByDefault);
@@ -155,6 +165,9 @@ bool KWinWaylandTouchpad::save()
     success &= valueWriter(m_pointerAccelerationProfileAdaptive);
     success &= valueWriter(m_disableEventsOnExternalMouse);
     success &= valueWriter(m_disableWhileTyping);
+    success &= valueWriter(m_disableWhileTypingTimeout);
+    success &= valueWriter(m_disableWhileTrackpointing);
+    success &= valueWriter(m_disableWhileTrackpointingTimeout);
     success &= valueWriter(m_middleEmulation);
 
     success &= valueWriter(m_tapToClick);
@@ -183,6 +196,9 @@ bool KWinWaylandTouchpad::isSaveNeeded() const
             m_pointerAccelerationProfileAdaptive.changed() ||
             m_disableEventsOnExternalMouse.changed() ||
             m_disableWhileTyping.changed() ||
+            m_disableWhileTypingTimeout.changed() ||
+            m_disableWhileTrackpointing.changed() ||
+            m_disableWhileTrackpointingTimeout.changed() ||
             m_middleEmulation.changed() ||
             m_tapToClick.changed() ||
             m_tapAndDrag.changed() ||
