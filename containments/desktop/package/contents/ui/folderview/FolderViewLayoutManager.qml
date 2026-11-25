@@ -37,6 +37,7 @@ ContainmentLayoutManager.AppletsLayout {
     property bool ctrlPressed: false
 
     property var draggingItems: []
+    property var sharedActions: ["newMenu", "paste", "undo", "emptyTrash"]
 
     // The graphical item of the containment this view is in, if any.
     containmentItem: {
@@ -68,6 +69,21 @@ ContainmentLayoutManager.AppletsLayout {
             return iconHeight + extraHeight;
         } else {
             return iconHeight;
+        }
+    }
+
+    function updateContextualActions() {
+        folderView.model.updateActions();
+
+        for (let i = 0, len = sharedActions.length; i < len; i++) {
+            const actionName = sharedActions[i];
+            const appletAction = Plasmoid.internalAction(actionName);
+            if (appletAction) {
+                const modelAction = folderView.model.action(actionName);
+                appletAction.text = modelAction.text;
+                appletAction.enabled = modelAction.enabled;
+                appletAction.visible = modelAction.visible;
+            }
         }
     }
 
@@ -184,6 +200,86 @@ ContainmentLayoutManager.AppletsLayout {
         }
     }
 
+    PlasmaCore.Action {
+        id: viewPropertiesAction
+        text: i18nc("@item:inmenu opens submenu with view options like sorting", "Icons")
+        icon.name: "view-list-icons"
+        menu: viewPropertiesMenu.menu
+    }
+    PlasmaCore.Action {
+        id: actionSeparator
+        isSeparator: true
+    }
+    Component.onCompleted: {
+        for (let i = 0, len = sharedActions.length; i < len; i++) {
+            const actionName = sharedActions[i];
+            const modelAction = dir.action(actionName);
+            Plasmoid.contextualActions.push(modelAction)
+            if (actionName === "emptyTrash") {
+                Plasmoid.contextualActions.push(viewPropertiesAction)
+            }
+        }
+
+        Plasmoid.contextualActions.push(actionSeparator);
+
+        Plasmoid.contextualActionsAboutToShow.connect(updateContextualActions);
+        Plasmoid.contextualActionsAboutToShow.connect(folderView.model.clearSelection);
+    }
+    Folder.ViewPropertiesMenu {
+        id: viewPropertiesMenu
+
+        showLayoutActions: !folderViewLayerComponent.inPanel
+        showLockAction: Plasmoid.isContainment
+        showIconSizeActions: !folderViewLayerComponent.useListViewMode
+
+        lockedEnabled: !folderViewLayerComponent.lockedByKiosk
+
+        onArrangementChanged: {
+            Plasmoid.configuration.arrangement = arrangement;
+        }
+
+        onAlignmentChanged: {
+            Plasmoid.configuration.alignment = alignment;
+        }
+
+        onPreviewsChanged: {
+            Plasmoid.configuration.previews = previews;
+        }
+
+        onLockedChanged: {
+            if (!folderViewLayerComponent.lockedByKiosk) {
+                Plasmoid.configuration.locked = locked;
+            }
+        }
+
+        onSortModeChanged: {
+            Plasmoid.configuration.sortMode = sortMode;
+        }
+
+        onSortDescChanged: {
+            Plasmoid.configuration.sortDesc = sortDesc;
+        }
+
+        onSortDirsFirstChanged: {
+            Plasmoid.configuration.sortDirsFirst = sortDirsFirst;
+        }
+
+        onIconSizeChanged: {
+            Plasmoid.configuration.iconSize = iconSize;
+        }
+
+        Component.onCompleted: {
+            arrangement = Plasmoid.configuration.arrangement;
+            alignment = Plasmoid.configuration.alignment;
+            previews = Plasmoid.configuration.previews;
+            locked = Plasmoid.configuration.locked || folderViewLayerComponent.lockedByKiosk;
+            sortMode = Plasmoid.configuration.sortMode;
+            sortDesc = Plasmoid.configuration.sortDesc;
+            sortDirsFirst = Plasmoid.configuration.sortDirsFirst;
+            iconSize = Plasmoid.configuration.iconSize;
+        }
+    }
+
     Folder.EventGenerator {
         id: eventGenerator
     }
@@ -208,17 +304,11 @@ ContainmentLayoutManager.AppletsLayout {
         onCanceled: pressCanceled()
         onReleased: pressCanceled()
         onClicked: (mouse) => {
-            if (mouse.button === Qt.RightButton) {
-                // On the desktop, fall through to the desktop context menu plugin
-                if (!dir.usedByContainment) {
-                    dir.openContextMenu(main, mouse.modifiers);
-                }
-                return;
-            }
-            if (!main.isDrag(pressPos.x, pressPos.y, mouse.x, mouse.y)) {
+            if (mouse.button === Qt.LeftButton && !main.isDrag(pressPos.x, pressPos.y, mouse.x, mouse.y)) {
                 main.cancelRename();
                 dir.clearSelection();
             }
+            eventGenerator.sendMouseEvent(root, Folder.EventGenerator.MouseButtonPress, mouse.x, mouse.y, mouse.button, mouse.buttons, mouse.modifiers);
         }
         onPositionChanged: (mouse) => {
             if (main.rubberBand) {
