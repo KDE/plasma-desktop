@@ -11,6 +11,7 @@ import QtQuick.Layouts
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 import org.kde.ksvg as KSvg
+import org.kde.config // for KAuthorized
 import org.kde.kirigami as Kirigami
 import org.kde.kquickcontrolsaddons
 
@@ -38,6 +39,7 @@ ContainmentLayoutManager.AppletsLayout {
 
     property var draggingItems: []
     property var sharedActions: ["newMenu", "paste", "undo", "emptyTrash"]
+    readonly property bool lockedByKiosk: !KAuthorized.authorize("editable_desktop_icons")
 
     // The graphical item of the containment this view is in, if any.
     containmentItem: {
@@ -73,13 +75,13 @@ ContainmentLayoutManager.AppletsLayout {
     }
 
     function updateContextualActions() {
-        folderView.model.updateActions();
+        dir.updateActions();
 
         for (let i = 0, len = sharedActions.length; i < len; i++) {
             const actionName = sharedActions[i];
             const appletAction = Plasmoid.internalAction(actionName);
             if (appletAction) {
-                const modelAction = folderView.model.action(actionName);
+                const modelAction = dir.action(actionName);
                 appletAction.text = modelAction.text;
                 appletAction.enabled = modelAction.enabled;
                 appletAction.visible = modelAction.visible;
@@ -191,6 +193,16 @@ ContainmentLayoutManager.AppletsLayout {
         dir.updateSelection(cachedRectangleSelection, main.ctrlPressed);
     }
 
+    Keys.onPressed: event => {
+        if (event.key === Qt.Key_Menu) {
+            const target = main.selectedItem();
+            if (target) {
+                dir.openContextMenu(target, event.modifiers, false);
+                event.accepted = true;
+            }
+        }
+    }
+
     function generateDragImage() {
         for (let i = 0; i < repeater.count; i++) {
             let item = repeater.itemAt(i) as FolderItemDelegate;
@@ -223,16 +235,16 @@ ContainmentLayoutManager.AppletsLayout {
         Plasmoid.contextualActions.push(actionSeparator);
 
         Plasmoid.contextualActionsAboutToShow.connect(updateContextualActions);
-        Plasmoid.contextualActionsAboutToShow.connect(folderView.model.clearSelection);
+        Plasmoid.contextualActionsAboutToShow.connect(dir.clearSelection);
     }
     Folder.ViewPropertiesMenu {
         id: viewPropertiesMenu
 
-        showLayoutActions: !folderViewLayerComponent.inPanel
+        showLayoutActions: !root.inPanel
         showLockAction: Plasmoid.isContainment
-        showIconSizeActions: !folderViewLayerComponent.useListViewMode
+        showIconSizeActions: !main.useListViewMode
 
-        lockedEnabled: !folderViewLayerComponent.lockedByKiosk
+        lockedEnabled: !main.lockedByKiosk
 
         onArrangementChanged: {
             Plasmoid.configuration.arrangement = arrangement;
@@ -247,7 +259,7 @@ ContainmentLayoutManager.AppletsLayout {
         }
 
         onLockedChanged: {
-            if (!folderViewLayerComponent.lockedByKiosk) {
+            if (!main.lockedByKiosk) {
                 Plasmoid.configuration.locked = locked;
             }
         }
@@ -272,7 +284,7 @@ ContainmentLayoutManager.AppletsLayout {
             arrangement = Plasmoid.configuration.arrangement;
             alignment = Plasmoid.configuration.alignment;
             previews = Plasmoid.configuration.previews;
-            locked = Plasmoid.configuration.locked || folderViewLayerComponent.lockedByKiosk;
+            locked = Plasmoid.configuration.locked || main.lockedByKiosk;
             sortMode = Plasmoid.configuration.sortMode;
             sortDesc = Plasmoid.configuration.sortDesc;
             sortDirsFirst = Plasmoid.configuration.sortDirsFirst;
@@ -282,6 +294,31 @@ ContainmentLayoutManager.AppletsLayout {
 
     Folder.EventGenerator {
         id: eventGenerator
+    }
+
+    Folder.ShortCut {
+        Component.onCompleted: {
+            installAsEventFilterFor(main);
+        }
+
+        onDeleteFile: {
+            dir.deleteSelected();
+        }
+
+        onRenameFile: {
+            main.rename();
+        }
+
+        onMoveToTrash: {
+            const action = dir.action("trash");
+            if (action && action.enabled) {
+                action.trigger();
+            }
+        }
+
+        onCreateFolder: {
+            dir.createFolder();
+        }
     }
 
     MouseArea {
@@ -403,7 +440,7 @@ ContainmentLayoutManager.AppletsLayout {
             id: dir
 
             url: Plasmoid.configuration.url
-            usedByContainment: true//root.isContainment && main.isRootView
+            usedByContainment: true//Plasmoid.isContainment
             sortDesc: Plasmoid.configuration.sortDesc
             sortDirsFirst: Plasmoid.configuration.sortDirsFirst
             parseDesktopFiles: (Plasmoid.configuration.url === "desktop:/")
