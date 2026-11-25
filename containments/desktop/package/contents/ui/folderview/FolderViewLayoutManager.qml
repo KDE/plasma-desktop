@@ -51,24 +51,15 @@ ContainmentLayoutManager.AppletsLayout {
 
     cellWidth: {
         const iconWidth = iconSize + (2 * Kirigami.Units.gridUnit) + (2 * Kirigami.Units.smallSpacing);
-        if (false&&root.isContainment && isRootView && scrollArea.viewportWidth > 0) {
-            const minIconWidth = Math.max(iconWidth, Kirigami.Units.iconSizes.small * ((Plasmoid.configuration.labelWidth * 2) + 4));
-            const extraWidth = calcExtraSpacing(minIconWidth, scrollArea.viewportWidth);
-            return minIconWidth + extraWidth;
-        } else {
-            return iconWidth;
-        }
+        const columns = Math.floor(width / iconWidth);
+        return width / columns;
     }
 
     cellHeight: {
         // the smallSpacings are for padding
         const iconHeight = iconSize + (Kirigami.Units.gridUnit * Plasmoid.configuration.textLines) + (Kirigami.Units.smallSpacing * 3);
-        if (false&&root.isContainment && isRootView && scrollArea.viewportHeight > 0) {
-            let extraHeight = calcExtraSpacing(iconHeight, scrollArea.viewportHeight);
-            return iconHeight + extraHeight;
-        } else {
-            return iconHeight;
-        }
+        const rows = Math.floor(height / iconHeight);
+        return height / rows;
     }
 
     function updateContextualActions() {
@@ -302,6 +293,7 @@ ContainmentLayoutManager.AppletsLayout {
         property point pressPos
         enabled: !Plasmoid.containment.corona.editMode && !root.editMode
         acceptedButtons: Qt.LeftButton | Qt.RightButton
+        hoverEnabled: true
 
         function pressCanceled() {
             if (main.rubberBand) {
@@ -324,6 +316,10 @@ ContainmentLayoutManager.AppletsLayout {
             eventGenerator.sendMouseEvent(root, Folder.EventGenerator.MouseButtonPress, mouse.x, mouse.y, mouse.button, mouse.buttons, mouse.modifiers);
         }
         onPositionChanged: (mouse) => {
+            if (!pressed) {
+                hoveredItem = null;
+                return;
+            }
             if (main.rubberBand) {
                 main.rubberBand.x = Math.min(pressPos.x, mouse.x);
                 main.rubberBand.y = Math.min(pressPos.y, mouse.y);
