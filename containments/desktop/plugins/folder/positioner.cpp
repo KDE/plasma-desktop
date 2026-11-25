@@ -111,9 +111,7 @@ void Positioner::setPerStripe(int perStripe)
             } else if (m_applet && m_positions.isEmpty()) {
                 // We don't have any positions yet, restore them from last used resolution
                 const QString lastResolution = m_config->group(QString::number(m_applet->id())).readEntry(QStringLiteral("lastResolution"));
-                if (configurationHasResolution(lastResolution)) {
-                    loadAndApplyPositionsConfig(lastResolution);
-                }
+                loadAndApplyPositionsConfig(lastResolution);
             }
             // If no longer deferring positions, update them
             if (!m_deferApplyPositions) {
@@ -964,19 +962,21 @@ void Positioner::loadAndApplyPositionsConfig(const QString &resolution)
         m_positionsHeader.reset();
         m_positions.clear();
 
-        auto containmentGroup = m_config->group(QString::number(m_applet->id())).group(m_resolution);
+        auto containmentGroup = m_config->group(QString::number(m_applet->id()));
+        m_positionsHeader = {.numStripes = containmentGroup.readEntry(u"stripes"_s, m_optimalStripes),
+                             .perStripe = containmentGroup.readEntry(u"perStripe"_s, m_perStripe)};
 
-        m_positionsHeader = {.numStripes = containmentGroup.readEntry(u"stripes"_s, 0), .perStripe = containmentGroup.readEntry(u"perStripe"_s, 0)};
-
-        auto files = containmentGroup.groupList();
-
+        const auto files = containmentGroup.group(resolutionToLoad).groupList();
         for (const auto &file : files) {
-            auto fileName = convertDesktopPath(file);
-            if (!fileName.isEmpty()) {
+            auto filename = convertDesktopPath(file);
+            if (!filename.isEmpty()) {
                 // TODO: when loading a resolution we dont have yet, we should try to rearrange the icons
-                auto stripe = containmentGroup.group(fileName).readEntry(u"stripe"_s, 0);
-                auto pos = containmentGroup.group(fileName).readEntry(u"pos"_s, 0);
-                m_positions[fileName] = {
+                auto stripe = containmentGroup.group(resolutionToLoad).group(filename).readEntry(u"stripe"_s, 0);
+                if (stripe > m_optimalStripes) {
+                    stripe = m_optimalStripes;
+                }
+                auto pos = containmentGroup.group(resolutionToLoad).group(filename).readEntry(u"pos"_s, 0);
+                m_positions[filename] = {
                     .stripe = stripe,
                     .pos = pos,
                 };
