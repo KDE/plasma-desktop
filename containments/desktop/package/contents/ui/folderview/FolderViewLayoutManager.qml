@@ -19,7 +19,6 @@ import org.kde.private.desktopcontainment.folder as Folder
 import org.kde.plasma.private.containmentlayoutmanager as ContainmentLayoutManager
 
 import "../code/FolderTools.js" as FolderTools
-import ".." as Base
 
 ContainmentLayoutManager.AppletsLayout {
     id: main
@@ -29,7 +28,7 @@ ContainmentLayoutManager.AppletsLayout {
     property FolderItemDelegate hoveredItem: null
     property FolderItemDelegate pressedItem: null
     readonly property bool useListViewMode: false
-    property Base.RenameEditor editor: null
+    property RenameEditor editor: null
     readonly property int rows: height / cellHeight
     readonly property int columns: width / cellWidth
 
@@ -72,19 +71,33 @@ ContainmentLayoutManager.AppletsLayout {
         }
     }
 
-    function rename() {
-        if (gridView.currentIndex !== -1) {
-            let renameAction = model.action("rename");
-            if (renameAction && !renameAction.enabled) {
-                return;
+    function selectedItem() {
+        for (let i = 0; i < repeater.count; i++) {
+            const item = repeater.itemAt(i) as FolderItemDelegate;
+            if (item && !item.blank && dir.isSelected(item.index)) {
+                return item;
             }
-
-            if (!main.editor) {
-                editor = editorComponent.createObject(listener);
-            }
-
-            main.editor.targetItem = gridView.currentItem;
         }
+        return null;
+    }
+
+    function rename() {
+        let renameAction = dir.action("rename");
+        if (renameAction && !renameAction.enabled) {
+            return;
+        }
+
+        const target = selectedItem();
+        if (!target) {
+            return;
+        }
+
+        if (!main.editor) {
+            main.editor = editorComponent.createObject(main);
+        }
+
+        main.editor.targetItem = target;
+        print("HHH",main.editor.targetItem );
     }
 
     function cancelRename() {
@@ -195,7 +208,15 @@ ContainmentLayoutManager.AppletsLayout {
         onCanceled: pressCanceled()
         onReleased: pressCanceled()
         onClicked: (mouse) => {
+            if (mouse.button === Qt.RightButton) {
+                // On the desktop, fall through to the desktop context menu plugin
+                if (!dir.usedByContainment) {
+                    dir.openContextMenu(main, mouse.modifiers);
+                }
+                return;
+            }
             if (!main.isDrag(pressPos.x, pressPos.y, mouse.x, mouse.y)) {
+                main.cancelRename();
                 dir.clearSelection();
             }
         }
@@ -207,10 +228,10 @@ ContainmentLayoutManager.AppletsLayout {
                 main.rubberBand.height = Math.max(1, Math.max(pressPos.y, mouse.y) - main.rubberBand.y);
                 Qt.callLater(main.rectangleSelect, rubberBand.x, rubberBand.y, rubberBand.width, rubberBand.height, main.rubberBand);
             } else if (main.isDrag(pressPos.x, pressPos.y, mouse.x, mouse.y)) {
-                // TODO: Disable rubberband in popup list view mode or while renaming
-                //if (main.editor && main.editor.targetItem) {
-                //    return;
-                //}
+                // Disable rubberband while renaming
+                if (main.editor && main.editor.targetItem) {
+                    return;
+                }
                 dir.pinSelection();
                 main.rubberBand = rubberBandObject.createObject(main, {x: pressPos.x, y: pressPos.y});
             }
@@ -334,6 +355,36 @@ ContainmentLayoutManager.AppletsLayout {
             height: main.cellHeight
 
             preferredLayoutDirection: ContainmentLayoutManager.AppletsLayout.LeftToRight // TODO: all folderview layout preferences and RTL mode
+        }
+    }
+
+    Component {
+        id: editorComponent
+
+        RenameEditor {
+            id: editor
+
+            view: main
+            model: dir
+
+            visible: false
+            z: 100000
+
+            onCommit: {
+                if (targetItem) {
+                    dir.rename(targetItem.index, text);
+                    targetItem = null;
+                    main.forceActiveFocus();
+                }
+            }
+
+            onVisibleChanged: {
+                if (visible) {
+                    focus = true;
+                } else {
+                    main.forceActiveFocus();
+                }
+            }
         }
     }
 }

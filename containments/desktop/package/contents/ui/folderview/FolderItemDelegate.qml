@@ -90,44 +90,6 @@ ContainmentLayoutManager.ItemContainer {
         }
     }
 
-    // This MouseArea exists to intercept press and hold; preventing edit mode
-    // from being triggered when pressing and holding on an icon (if there is one).
-    MouseArea {
-        anchors.fill: parent
-        property point scenePressPos
-        onPressed: {
-            scenePressPos = mapToItem(null, mouse.x, mouse.y);
-            if (!dir.isSelected(main.index)) {
-                if (mouse.modifiers === Qt.ControlModifier) {
-                    dir.toggleSelected(index);
-                } else {
-                    dir.clearSelection();
-                    dir.setSelected(index);
-                }
-            }
-        }
-        onPositionChanged: {
-            const scenePos = mapToItem(null, mouse.x, mouse.y);
-            if (root.isDrag(scenePressPos.x, scenePressPos.y, scenePos.x, scenePos.y)) {
-                dir.dragSelected(scenePressPos.x, scenePressPos.y);
-            }
-        }
-        onClicked: {
-            if (Application.styleHints.singleClickActivation || mouse.source === Qt.MouseEventSynthesizedByQt) {
-                if (mouse.modifiers & Qt.AltModifier) {
-                    dir.openPropertiesDialog();
-                } else if (!(mouse.modifiers & Qt.ControlModifier)) {
-                    dir.run(index);
-                }
-            }
-        }
-        onDoubleClicked: {
-            if (!Application.styleHints.singleClickActivation && mouse.source !== Qt.MouseEventSynthesizedByQt) {
-                dir.run(index);
-            }
-        }
-    }
-
     function openPopup() {
         if (isDir) {
             loader.item.openPopup();
@@ -180,7 +142,7 @@ ContainmentLayoutManager.ItemContainer {
     Component {
         id: delegateImplementation
 
-        Item {
+        MouseArea {
             id: impl
 
             anchors.fill: parent
@@ -194,6 +156,50 @@ ContainmentLayoutManager.ItemContainer {
             property alias toolTip: toolTip
             property /*FolderViewDialog*/ Folder.SubDialog popupDialog: null
             property Item popupButton: null
+
+
+            property point scenePressPos
+            acceptedButtons: Qt.LeftButton | Qt.RightButton
+            onPressed: {
+                scenePressPos = mapToItem(null, mouse.x, mouse.y);
+                if (!dir.isSelected(main.index)) {
+                    if (mouse.modifiers === Qt.ControlModifier) {
+                        dir.toggleSelected(index);
+                    } else {
+                        dir.clearSelection();
+                        dir.setSelected(index);
+                    }
+                }
+                if (mouse.button === Qt.RightButton) {
+                    dir.openContextMenu(main, mouse.modifiers);
+                }
+            }
+            onPositionChanged: {
+                const scenePos = mapToItem(null, mouse.x, mouse.y);
+                if (root.isDrag(scenePressPos.x, scenePressPos.y, scenePos.x, scenePos.y)) {
+                    dir.dragSelected(scenePressPos.x, scenePressPos.y);
+                }
+            }
+            onClicked: {
+                if (mouse.button !== Qt.LeftButton) {
+                    return;
+                }
+                if (Application.styleHints.singleClickActivation || mouse.source === Qt.MouseEventSynthesizedByQt) {
+                    if (mouse.modifiers & Qt.AltModifier) {
+                        dir.openPropertiesDialog();
+                    } else if (!(mouse.modifiers & Qt.ControlModifier)) {
+                        dir.run(index);
+                    }
+                }
+            }
+            onDoubleClicked: {
+                if (mouse.button !== Qt.LeftButton) {
+                    return;
+                }
+                if (!Application.styleHints.singleClickActivation && mouse.source !== Qt.MouseEventSynthesizedByQt) {
+                    dir.run(index);
+                }
+            }
 
             Connections {
                 target: main
