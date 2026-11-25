@@ -44,7 +44,7 @@ ContainmentLayoutManager.ItemContainer {
     readonly property Item iconArea:        loader.item ? loader.item.iconArea       : null
     readonly property Item labelArea:       loader.item ? loader.item.labelArea      : null
     readonly property Item actionsOverlay:  loader.item ? loader.item.actionsOverlay : null
-    readonly property real contentHeight:   loader.item && !root.useListViewMode ? loader.item.contentHeight : null
+    readonly property real contentHeight:   loader.item ? loader.item.contentHeight : null
 
     Accessible.name: display
     Accessible.role: Accessible.Canvas
@@ -218,7 +218,7 @@ ContainmentLayoutManager.ItemContainer {
                             hoverActivateTimer.restart();
                         }
 
-                        if (Plasmoid.configuration.popups && !root.useListViewMode) {
+                        if (Plasmoid.configuration.popups) {
                             popupButton = popupButtonComponent.createObject(actions);
                         }
                     }
@@ -251,7 +251,7 @@ ContainmentLayoutManager.ItemContainer {
                         && impl.popupDialog === null
                         && !main.blank
                 interactive: false
-                location: root.useListViewMode ? (Plasmoid.location === PlasmaCore.Types.LeftEdge ? PlasmaCore.Types.LeftEdge : PlasmaCore.Types.RightEdge) : Plasmoid.location
+                location: Plasmoid.location
 
                 icon: main.decoration
                 mainText: main.display
@@ -277,44 +277,17 @@ ContainmentLayoutManager.ItemContainer {
                     }
                 }
 
-                states: [
-                    State { // icon view
-                        when: !root.useListViewMode
-
-                        AnchorChanges {
-                            target: toolTip
-                            anchors.horizontalCenter: parent.horizontalCenter
-                        }
-
-                        PropertyChanges {
-                            toolTip.y: frameLoader.y + icon.y
-                            toolTip.width: Math.max(icon.paintedWidth, label.paintedWidth)
-                            toolTip.height: (label.y + label.paintedHeight) - y
-                        }
-                    },
-                    State { // list view
-                        when: root.useListViewMode
-
-                        AnchorChanges {
-                            target: toolTip
-                            anchors.horizontalCenter: undefined
-                        }
-
-                        PropertyChanges {
-                            toolTip.x: frameLoader.x
-                            toolTip.y: frameLoader.y
-                            toolTip.width: frameLoader.width
-                            toolTip.height: frameLoader.height
-                        }
-                    }
-                ]
+                anchors.horizontalCenter: parent.horizontalCenter
+                y: frameLoader.y + icon.y
+                width: Math.max(icon.paintedWidth, label.paintedWidth)
+                height: (label.y + label.paintedHeight) - y
             }
 
             Loader {
                 id: frameLoader
 
-                x: root.useListViewMode ? 0 : Kirigami.Units.smallSpacing
-                y: root.useListViewMode ? 0 : Kirigami.Units.smallSpacing
+                x: Kirigami.Units.smallSpacing
+                y: Kirigami.Units.smallSpacing
 
                 property Item iconShadow: null
 
@@ -324,50 +297,25 @@ ContainmentLayoutManager.ItemContainer {
 
                 width: parent.width - (Kirigami.Units.smallSpacing * 2);
 
-                height: root.useListViewMode
-                                ? parent.height
-                                // the smallSpacings are for padding
-                                : icon.height + label.implicitHeight + (Kirigami.Units.smallSpacing * 3)
+                // the smallSpacings are for padding
+                height: icon.height + label.implicitHeight + (Kirigami.Units.smallSpacing * 3)
 
                 Kirigami.Icon {
                     id: icon
 
                     z: 2
 
-                    states: [
-                        State { // icon view
-                            when: !root.useListViewMode
-
-                            AnchorChanges {
-                                target: icon
-                                anchors.top: parent.top
-                                anchors.horizontalCenter: parent.horizontalCenter
-                            }
-                        },
-                        State { // list view
-                            when: root.useListViewMode
-
-                            AnchorChanges {
-                                target: icon
-                                anchors.left: parent.left
-                                anchors.verticalCenter: parent.verticalCenter
-                            }
-                        }
-                    ]
-
                     anchors {
+                        top: parent.top
+                        horizontalCenter: parent.horizontalCenter
                         topMargin: Kirigami.Units.smallSpacing
                         leftMargin: Kirigami.Units.smallSpacing
                     }
 
-                    width: root.useListViewMode ? main.layout.iconSize : (parent.width - 2 * Kirigami.Units.smallSpacing)
+                    width: parent.width - 2 * Kirigami.Units.smallSpacing
                     height: main.layout.iconSize
 
                     opacity: {
-                        if (root.useListViewMode && impl.selectionButton.visible) {
-                            return 0.3;
-                        }
-
                         if (main.isHidden) {
                             return 0.6;
                         }
@@ -387,39 +335,13 @@ ContainmentLayoutManager.ItemContainer {
 
                     z: 2 // So it's always above the highlight effect
 
-                    states: [
-                        State { // icon view
-                            when: !root.useListViewMode
-
-                            AnchorChanges {
-                                target: label
-                                anchors.top: icon.bottom
-                                anchors.horizontalCenter: parent.horizontalCenter
-                            }
-                            PropertyChanges {
-                                label.anchors.topMargin: Kirigami.Units.smallSpacing
-                                label.width: label.parent.width - Kirigami.Units.smallSpacing
-                                label.maximumLineCount: label.Plasmoid.configuration.textLines
-                                label.horizontalAlignment: Text.AlignHCenter
-                            }
-                        },
-                        State { // list view
-                            when: root.useListViewMode
-
-                            AnchorChanges {
-                                target: label
-                                anchors.left: icon.right
-                                anchors.verticalCenter: parent.verticalCenter
-                            }
-                            PropertyChanges {
-                                label.anchors.leftMargin: Kirigami.Units.smallSpacing * 2
-                                label.anchors.rightMargin: Kirigami.Units.smallSpacing * 2
-                                label.width: label.parent.width - icon.width - (Kirigami.Units.smallSpacing * 4)
-                                label.maximumLineCount: 1
-                                label.horizontalAlignment: Text.AlignLeft
-                            }
-                        }
-                    ]
+                    anchors {
+                        top: icon.bottom
+                        horizontalCenter: parent.horizontalCenter
+                        topMargin: Kirigami.Units.smallSpacing
+                    }
+                    width: parent.width - Kirigami.Units.smallSpacing
+                    maximumLineCount: Plasmoid.configuration.textLines
 
                     color: {
                         if (main.isOnRootView) {
@@ -533,8 +455,6 @@ ContainmentLayoutManager.ItemContainer {
                 anchors {
                     left: frameLoader.left
                     top: frameLoader.top
-                    leftMargin: root.useListViewMode ? (icon.x + (icon.width / 2)) - (width / 2) : 0
-                    topMargin: root.useListViewMode ? (icon.y + (icon.height / 2)) - (height / 2) : 0
                 }
 
                 width: implicitWidth

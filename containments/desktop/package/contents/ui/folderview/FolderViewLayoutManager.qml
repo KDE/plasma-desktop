@@ -25,7 +25,6 @@ ContainmentLayoutManager.AppletsLayout {
     property real iconSize: FolderTools.iconSizeFromTheme(Plasmoid.configuration.iconSize)
     property FolderItemDelegate hoveredItem: null
     property FolderItemDelegate pressedItem: null
-    readonly property bool useListViewMode: false
     property RenameEditor editor: null
     readonly property int rows: height / cellHeight
     readonly property int columns: width / cellWidth
@@ -209,7 +208,7 @@ ContainmentLayoutManager.AppletsLayout {
 
         showLayoutActions: !root.inPanel
         showLockAction: Plasmoid.isContainment
-        showIconSizeActions: !main.useListViewMode
+        showIconSizeActions: true
 
         lockedEnabled: !main.lockedByKiosk
 
