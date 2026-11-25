@@ -1997,16 +1997,26 @@ void FolderModel::updateActions()
         showTarget->setEnabled(items.count() == 1 && items.at(0).isLink());
     }
 
-    if (m_newMenu) {
+    // target directory associated with the current context menu actions
+    const auto contextWorkDir = [&]() -> std::optional<QUrl> {
+        if (indexes.count() == 1 && items.first().isDir()) {
+            return items.first().targetUrl();
+        }
+        if (indexes.isEmpty() && !isTrash) {
+            return m_dirModel->dirLister()->url();
+        }
+        return std::nullopt;
+    }();
+    if (contextWorkDir) {
         m_newMenu->checkUpToDate();
-        m_newMenu->setWorkingDirectory(m_dirModel->dirLister()->url());
+        m_newMenu->setWorkingDirectory(*contextWorkDir);
         // we need to set here as well, when the menu is shown via AppletInterface::eventFilter
         m_menuPosition = QCursor::pos();
 
-        if (QAction *newMenuAction = m_actionCollection.action(QStringLiteral("newMenu"))) {
-            newMenuAction->setEnabled(itemProperties.supportsWriting());
-            newMenuAction->setVisible(!isTrash);
-        }
+        m_newMenu->setEnabled(itemProperties.supportsWriting());
+        m_newMenu->setVisible(true);
+    } else {
+        m_newMenu->setVisible(false);
     }
 
     if (QAction *moveToTrash = m_actionCollection.action(QStringLiteral("trash"))) {
@@ -2126,6 +2136,12 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
         if (!isTrash && !isTrashLink) {
             m_fileItemActions->setItemListProperties(itemProperties);
             m_fileItemActions->insertOpenWithActionsTo(nullptr, menu, QStringList());
+        }
+
+        // isVisible is kept up to date inside ::updateActions()
+        if (m_newMenu->isVisible()) {
+            menu->addAction(m_newMenu);
+            menu->addSeparator();
         }
 
         if (!isTrash) {
