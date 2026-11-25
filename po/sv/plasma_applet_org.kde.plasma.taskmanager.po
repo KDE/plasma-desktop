@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-18 15:35+0000\n"
+"POT-Creation-Date: 2026-11-24 14:08+0000\n"
 "PO-Revision-Date: 2026-10-02 21:27+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -64,27 +64,27 @@ msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Glöm senaste filer"
 
-#: backend.cpp:581
+#: backend.cpp:568
 #, kde-format
 msgid "Activate Previous Task Manager Entry"
 msgstr "Aktivera föregående post i aktivitetshanteraren"
 
-#: backend.cpp:588
+#: backend.cpp:575
 #, kde-format
 msgid "Activate Next Task Manager Entry"
 msgstr "Aktivera nästa post i aktivitetshanteraren"
 
-#: backend.cpp:595
+#: backend.cpp:582
 #, kde-format
 msgid "Move Active Task Manager Entry Backward"
 msgstr "Flytta aktiv post i aktivitetshanteraren bakåt"
 
-#: backend.cpp:603
+#: backend.cpp:590
 #, kde-format
 msgid "Move Active Task Manager Entry Forward"
 msgstr "Flytta aktiv post i aktivitetshanteraren framåt"
 
-#: backend.cpp:612
+#: backend.cpp:599
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Aktivera post %1 i aktivitetshanteraren"
@@ -897,67 +897,67 @@ msgctxt ""
 msgid "%1k"
 msgstr "%1k"
 
-#: qml/ToolTipInstance.qml:231
+#: qml/ToolTipInstance.qml:246
 #, kde-format
 msgctxt "@info:tooltip Close this window"
 msgid "Close window"
 msgstr "Stäng fönster"
 
-#: qml/ToolTipInstance.qml:468
+#: qml/ToolTipInstance.qml:503
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
 msgstr "Tysta inte %1"
 
-#: qml/ToolTipInstance.qml:469
+#: qml/ToolTipInstance.qml:504
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
 msgstr "Tysta %1"
 
-#: qml/ToolTipInstance.qml:487
+#: qml/ToolTipInstance.qml:522
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
 msgstr "Justera volym för %1"
 
-#: qml/ToolTipInstance.qml:503
+#: qml/ToolTipInstance.qml:538
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1 %"
 
-#: qml/ToolTipInstance.qml:507
+#: qml/ToolTipInstance.qml:542
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
 msgstr "100 %"
 
-#: qml/ToolTipInstance.qml:523
+#: qml/ToolTipInstance.qml:558
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "På %1"
 
-#: qml/ToolTipInstance.qml:526
+#: qml/ToolTipInstance.qml:561
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
 msgstr "Fäst på alla skrivbord"
 
-#: qml/ToolTipInstance.qml:532
+#: qml/ToolTipInstance.qml:567
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
 msgstr "Tillgänglig för alla aktiviteter"
 
-#: qml/ToolTipInstance.qml:542
+#: qml/ToolTipInstance.qml:577
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
 msgstr "Också tillgänglig för %1"
 
-#: qml/ToolTipInstance.qml:546
+#: qml/ToolTipInstance.qml:581
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"

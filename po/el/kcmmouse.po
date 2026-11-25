@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-17 00:51+0000\n"
+"POT-Creation-Date: 2026-11-25 01:27+0000\n"
 "PO-Revision-Date: 2026-11-14 15:17+0200\n"
 "Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -204,49 +204,49 @@ msgstr ""
 "Όταν είναι ενεργή, όσο πιο γρήγορα μετακινείτε το ποντίκι τόσο μεγαλύτερη "
 "απόσταση διανύει ο δείκτης."
 
-#: ui/main.qml:264
+#: ui/main.qml:263
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr "Ταχύτητα κύλισης:"
 
-#: ui/main.qml:328
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Αργότερη"
 
-#: ui/main.qml:337
+#: ui/main.qml:336
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Ταχύτερη"
 
-#: ui/main.qml:347
+#: ui/main.qml:346
 #, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "Κύλιση:"
 
-#: ui/main.qml:348
+#: ui/main.qml:347
 #, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction"
 msgstr "Αντιστροφή κατεύθυνσης κύλισης"
 
-#: ui/main.qml:363
+#: ui/main.qml:362
 #, kde-format
 msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
 msgstr "Κύλιση με κίνηση του δείκτη"
 
-#: ui/main.qml:380
+#: ui/main.qml:379
 #, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
 msgstr "Με πατημένο το μεσαίο κουμπί"
 
-#: ui/main.qml:397
+#: ui/main.qml:396
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
@@ -260,13 +260,13 @@ msgstr ""
 "να χρησιμοποιηθεί σε κάθε συσκευή, αλλά προορίζεται κυρίως ως υποκατάστατο "
 "του τροχού κύλισης σε συσκευές που δεν έχουν."
 
-#: ui/main.qml:404
+#: ui/main.qml:403
 #, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
 msgstr "Μετά από κλικ με το μεσαίο κουμπί"
 
-#: ui/main.qml:421
+#: ui/main.qml:420
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
@@ -277,6 +277,85 @@ msgstr ""
 "Η ρύθμιση επηρεάζει τη χρήση του μεσαίου κουμπιού, ακόμη και το σύρσιμο. "
 "Κάντε δύο κλικ με το μεσαίο κουμπί όταν θέλετε η εφαρμογή να λάβει ένα μόνο "
 "κλικ."
+
+#: ui/main.qml:430
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Angle adjustment:"
+msgstr ""
+
+#: ui/main.qml:446
+#, kde-format
+msgctxt "@label:valuesuffix %1 is an angle in degrees"
+msgid "%1°"
+msgstr ""
+
+#: ui/main.qml:466
+#, kde-format
+msgctxt "@action:button Measure angle adjustment"
+msgid "Measure…"
+msgstr ""
+
+#: ui/main.qml:473
+#, kde-format
+msgctxt "@info:whatsthis ContextualHelpButton tooltip for angle adjustment"
+msgid ""
+"Rotates the direction of pointer movement clockwise by the given angle. This "
+"is useful for devices that are held or mounted at an angle."
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:40
+#, kde-format
+msgctxt "@title:window"
+msgid "Measure Angle Adjustment"
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:152
+#, kde-format
+msgctxt "@info %1 is the name of a pointing device"
+msgid "Please make sure you are using the device “%1”."
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:161
+#, kde-format
+msgctxt "@info %1 is an angle in degrees"
+msgid "The measured angle is %1°."
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:162
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Move the mouse back and forth a few times, in the direction that feels like "
+"left and right to you. Don't watch the pointer: it doesn't matter which way "
+"it moves on the screen."
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:179
+#, kde-format
+msgctxt "@action:button Use the measured angle adjustment"
+msgid "&OK"
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:189
+#, kde-format
+msgctxt "@action:button Angle adjustment calibration"
+msgid "&Measure Again"
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:196
+#, kde-format
+msgctxt "@action:button Discard the measured angle adjustment"
+msgid "&Discard"
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:197
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Cancel"
+msgctxt "@action:button Angle adjustment calibration"
+msgid "&Cancel"
+msgstr "Ακύρωση"
 
 #, fuzzy
 #~| msgid "Press middle button and move mouse to scroll"

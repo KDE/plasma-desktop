@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 01:10+0000\n"
-"PO-Revision-Date: 2026-11-14 15:16+0200\n"
+"PO-Revision-Date: 2026-11-24 22:59+0200\n"
 "Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
@@ -238,22 +238,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Text Cursor"
-msgstr ""
+msgstr "Δρομέας κειμένου"
 
 #: ui/main.qml:314
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Double-click interval:"
+#, kde-format
 msgctxt "@option:check followed by a spinbox"
 msgid "Blink with interval:"
-msgstr "Χρονικό διάστημα διπλού κλικ:"
+msgstr "Αναβόσβημα ανά:"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgid "Double click interval"
+#, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Text cursor blink interval"
-msgstr "Διπλό κλικ στο διάστημα"
+msgstr "Διάστημα αναβοσβήματος δρομέα κειμένου"
 
 #: ui/main.qml:358
 #, kde-format
@@ -263,6 +260,10 @@ msgid ""
 "browsers. May be ignored by apps with their own cursor settings, such as "
 "some terminals and code editors."
 msgstr ""
+"Ισχύει για εφαρμογές KDE, Qt και GTK, όπως το Firefox και τα προγράμματα "
+"περιήγησης που βασίζονται στο Chromium. Ορισμένες εφαρμογές με δικές τους "
+"ρυθμίσεις δρομέα, όπως τερματικά και επεξεργαστές κώδικα, μπορεί να "
+"αγνοήσουν αυτή τη ρύθμιση."
 
 #: ui/main.qml:364
 #, kde-format
@@ -404,7 +405,7 @@ msgstr "Διπλό κλικ στο διάστημα"
 #: workspaceoptions_kdeglobalssettings.kcfg:35
 #, kde-format
 msgid "Text cursor blink rate, 0 disables blinking"
-msgstr ""
+msgstr "Ρυθμός αναβοσβήματος του δρομέα κειμένου (0 για απενεργοποίηση)"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

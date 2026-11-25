@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-17 00:47+0000\n"
+"POT-Creation-Date: 2026-11-25 01:27+0000\n"
 "PO-Revision-Date: 2024-06-29 11:29+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -79,13 +79,7 @@ msgctxt "@action:button"
 msgid "Restart Now"
 msgstr "Restart Now"
 
-#: ui/main.qml:46
-#, kde-format
-msgctxt "@title:group"
-msgid "General"
-msgstr "General"
-
-#: ui/main.qml:51
+#: ui/main.qml:45
 #, kde-format
 msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
@@ -93,7 +87,7 @@ msgctxt ""
 msgid "Ask for confirmation:"
 msgstr "Ask for confirmation:"
 
-#: ui/main.qml:52
+#: ui/main.qml:48
 #, kde-format
 msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
@@ -101,85 +95,7 @@ msgctxt ""
 msgid "On shutdown, restart, and logout"
 msgstr "On shutdown, restart, and logout"
 
-#: ui/main.qml:63
-#, kde-format
-msgctxt "@title:group"
-msgid "Session Restore"
-msgstr "Session Restore"
-
-#: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid "On login, launch apps that were open:"
-msgctxt "@title:group prefix for radiobuttons"
-msgid "On login, launch apps that were open:"
-msgstr "On login, launch apps that were open:"
-
-#: ui/main.qml:72
-#, kde-format
-msgctxt "@option:radio Automatic style of session restoration"
-msgid "On last logout"
-msgstr "On last logout"
-
-#: ui/main.qml:85
-#, kde-format
-msgctxt "@option:radio Manual style of session restoration"
-msgid "When session was manually saved"
-msgstr "When session was manually saved"
-
-#: ui/main.qml:94
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"A <interface>Save Session</interface> button will appear in the "
-"<interface>Application Launcher</interface> menu. When you click it, Plasma "
-"will remember the apps that are open and restore them on the next login. "
-"Click it again to replace the set of remembered apps."
-msgstr ""
-"A <interface>Save Session</interface> button will appear in the "
-"<interface>Application Launcher</interface> menu. When you click it, Plasma "
-"will remember the apps that are open and restore them on the next login. "
-"Click it again to replace the set of remembered apps."
-
-#: ui/main.qml:99
-#, kde-format
-msgctxt ""
-"@option:radio Here 'session' refers to the technical concept of session "
-"restoration, whereby the windows that were open on logout are re-opened on "
-"the next login"
-msgid "Start with an empty session"
-msgstr "Start with an empty session"
-
-#: ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Ignored applications:"
-msgctxt "@label:textbox"
-msgid "Ignored applications:"
-msgstr "Ignored applications:"
-
-#: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
-msgctxt "@info:whatsthis contextualhelpbutton tooltip"
-msgid ""
-"Write apps' desktop file identifier or, on X11, executable names here "
-"(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
-"or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
-"with other session-restored apps."
-msgstr ""
-"Write apps' executable names here (separated by commas or colons, for "
-"example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-"autostarting along with other session-restored apps."
-
-#: ui/main.qml:138
-#, kde-format
-msgctxt "@title:group"
-msgid "Firmware"
-msgstr "Firmware"
-
-#: ui/main.qml:144
+#: ui/main.qml:60
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -187,7 +103,7 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "After next restart:"
 
-#: ui/main.qml:145
+#: ui/main.qml:63
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Enter firmware setup screen"
@@ -195,11 +111,176 @@ msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
 msgstr "Enter firmware setup screen"
 
-#: ui/main.qml:146
+#: ui/main.qml:64
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Enter firmware setup screen"
+
+#: ui/main.qml:72
+#, kde-format
+msgctxt "@title:group"
+msgid "Session Restore"
+msgstr "Session Restore"
+
+#: ui/main.qml:79
+#, fuzzy, kde-format
+#| msgid "On login"
+msgctxt "@title:group prefix for radiobuttons"
+msgid "On login:"
+msgstr "On login"
+
+#: ui/main.qml:82
+#, fuzzy, kde-format
+#| msgid "Restore previous saved session"
+msgctxt "@option:radio Automatic style of session restoration"
+msgid "Restore apps from previous session"
+msgstr "Restore previous saved session"
+
+#: ui/main.qml:93
+#, kde-format
+msgctxt "@info"
+msgid ""
+"When you log back in, Plasma will automatically reopen applications and "
+"windows that were running when you last logged out."
+msgstr ""
+
+#: ui/main.qml:101
+#, fuzzy, kde-format
+#| msgid "Restore previous saved session"
+msgctxt "@option:radio Manual style of session restoration"
+msgid "Restore manually saved session"
+msgstr "Restore previous saved session"
+
+#: ui/main.qml:112
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "A <interface>Save Session</interface> button will appear in the "
+#| "<interface>Application Launcher</interface> menu. When you click it, "
+#| "Plasma will remember the apps that are open and restore them on the next "
+#| "login. Click it again to replace the set of remembered apps."
+msgctxt "@info"
+msgid ""
+"Adds a <interface>Save Session</interface> button to the "
+"<interface>Application Launcher</interface> menu. When you click it, Plasma "
+"will remember the open apps and restore them on the next login. Click it "
+"again to replace the set of remembered apps."
+msgstr ""
+"A <interface>Save Session</interface> button will appear in the "
+"<interface>Application Launcher</interface> menu. When you click it, Plasma "
+"will remember the apps that are open and restore them on the next login. "
+"Click it again to replace the set of remembered apps."
+
+#: ui/main.qml:121
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@option:radio Here 'session' refers to the technical concept of session "
+#| "restoration, whereby the windows that were open on logout are re-opened "
+#| "on the next login"
+#| msgid "Start with an empty session"
+msgctxt "@option:radio"
+msgid "Start with an empty session"
+msgstr "Start with an empty session"
+
+#: ui/main.qml:134
+#, fuzzy, kde-format
+#| msgid "Ignored applications:"
+msgctxt "@action:button"
+msgid "Configure Ignored Applications…"
+msgstr "Ignored applications:"
+
+#: ui/main.qml:148
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Prevent specified applications from autostarting with other session-restored "
+"apps. Use each application's desktop file identifier (e.g. org.kde.kate."
+"desktop) or, for XWayland apps, its executable name (e.g. xterm)."
+msgstr ""
+
+#: ui/main.qml:158
+#, fuzzy, kde-format
+#| msgid "Ignored applications:"
+msgctxt "@title:dialog"
+msgid "Ignored Applications"
+msgstr "Ignored applications:"
+
+#: ui/main.qml:171
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Enter application (e.g. org.kde.kate.desktop or xterm)"
+msgstr ""
+
+#: ui/main.qml:177
+#, fuzzy, kde-format
+#| msgid "Ignored applications:"
+msgctxt "@action:button"
+msgid "Ignore this Application"
+msgstr "Ignored applications:"
+
+#: ui/main.qml:179
+#, fuzzy, kde-format
+#| msgid "Ignored applications:"
+msgctxt "@info:whatsthis"
+msgid "Add %1 to the list of ignored applications"
+msgstr "Ignored applications:"
+
+#: ui/main.qml:180
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Add an application to the list of ignored applications"
+msgstr ""
+
+#: ui/main.qml:214
+#, kde-format
+msgctxt "@action:button"
+msgid "Remove"
+msgstr ""
+
+#: ui/main.qml:215
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Remove %1 from the list of ignored applications"
+msgstr ""
+
+#~ msgctxt "@title:group"
+#~ msgid "General"
+#~ msgstr "General"
+
+#, fuzzy
+#~| msgid "On login, launch apps that were open:"
+#~ msgctxt "@title:group prefix for radiobuttons"
+#~ msgid "On login, launch apps that were open:"
+#~ msgstr "On login, launch apps that were open:"
+
+#~ msgctxt "@option:radio Automatic style of session restoration"
+#~ msgid "On last logout"
+#~ msgstr "On last logout"
+
+#~ msgctxt "@option:radio Manual style of session restoration"
+#~ msgid "When session was manually saved"
+#~ msgstr "When session was manually saved"
+
+#, fuzzy
+#~| msgid ""
+#~| "Write apps' executable names here (separated by commas or colons, for "
+#~| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
+#~| "autostarting along with other session-restored apps."
+#~ msgctxt "@info:whatsthis contextualhelpbutton tooltip"
+#~ msgid ""
+#~ "Write apps' desktop file identifier or, on X11, executable names here "
+#~ "(separated by commas or colons, for example 'xterm:org.kde.konsole."
+#~ "desktop' or 'xterm,org.kde.konsole.desktop') to prevent them from "
+#~ "autostarting along with other session-restored apps."
+#~ msgstr ""
+#~ "Write apps' executable names here (separated by commas or colons, for "
+#~ "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
+#~ "autostarting along with other session-restored apps."
+
+#~ msgctxt "@title:group"
+#~ msgid "Firmware"
+#~ msgstr "Firmware"
 
 #, fuzzy
 #~| msgid ""
@@ -334,9 +415,6 @@ msgstr "Enter firmware setup screen"
 
 #~ msgid "Carl Schwan"
 #~ msgstr "Carl Schwan"
-
-#~ msgid "Restore previous saved session"
-#~ msgstr "Restore previous saved session"
 
 #~ msgid "UEFI Setup"
 #~ msgstr "UEFI Setup"

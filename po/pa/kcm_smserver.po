@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-17 00:47+0000\n"
+"POT-Creation-Date: 2026-11-25 01:27+0000\n"
 "PO-Revision-Date: 2024-07-21 22:13-0500\n"
 "Last-Translator: aalam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -76,14 +76,7 @@ msgctxt "@action:button"
 msgid "Restart Now"
 msgstr "ਹੁਣੇ ਮੁੜ-ਚਾਲੂ ਕਰੋ"
 
-#: ui/main.qml:46
-#, fuzzy, kde-format
-#| msgid "General"
-msgctxt "@title:group"
-msgid "General"
-msgstr "ਸਧਾਰਨ"
-
-#: ui/main.qml:51
+#: ui/main.qml:45
 #, kde-format
 msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
@@ -91,7 +84,7 @@ msgctxt ""
 msgid "Ask for confirmation:"
 msgstr "ਤਸਦੀਕ ਲਈ ਪੁੱਛੋ:"
 
-#: ui/main.qml:52
+#: ui/main.qml:48
 #, kde-format
 msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
@@ -99,74 +92,7 @@ msgctxt ""
 msgid "On shutdown, restart, and logout"
 msgstr "ਬੰਦ ਕਰਨ, ਮੁੜ-ਚਾਲੂ ਕਰਨ ਤੇ ਲਾਉਟ ਕਰਨ ਉੱਤੇ"
 
-#: ui/main.qml:63
-#, kde-format
-msgctxt "@title:group"
-msgid "Session Restore"
-msgstr "ਸ਼ੈਸ਼ਨ ਬਹਾਲ ਕਰੋ"
-
-#: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid "On login, launch apps that were open:"
-msgctxt "@title:group prefix for radiobuttons"
-msgid "On login, launch apps that were open:"
-msgstr "ਲਾਗਇਨ ਸਮੇਂ ਖੁੱਲ੍ਹੀਆਂ ਐਪਾਂ ਨੂੰ ਚਲਾਓ:"
-
-#: ui/main.qml:72
-#, kde-format
-msgctxt "@option:radio Automatic style of session restoration"
-msgid "On last logout"
-msgstr "ਪਿਛਲੀ ਵਾਰ ਲਾਗ ਆਉਟ ਸਮੇਂ"
-
-#: ui/main.qml:85
-#, kde-format
-msgctxt "@option:radio Manual style of session restoration"
-msgid "When session was manually saved"
-msgstr "ਜਦੋਂ ਸ਼ੈਸ਼ਨ ਨੂੰ ਖੁਦ ਸੰਭਾਲਿਆ ਗਿਆ ਹੈ"
-
-#: ui/main.qml:94
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"A <interface>Save Session</interface> button will appear in the "
-"<interface>Application Launcher</interface> menu. When you click it, Plasma "
-"will remember the apps that are open and restore them on the next login. "
-"Click it again to replace the set of remembered apps."
-msgstr ""
-
-#: ui/main.qml:99
-#, kde-format
-msgctxt ""
-"@option:radio Here 'session' refers to the technical concept of session "
-"restoration, whereby the windows that were open on logout are re-opened on "
-"the next login"
-msgid "Start with an empty session"
-msgstr "ਇੱਕ ਖਾਲੀ ਸ਼ੈਸ਼ਨ ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ"
-
-#: ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Ignored applications:"
-msgctxt "@label:textbox"
-msgid "Ignored applications:"
-msgstr "ਅਣਡਿੱਠੀਆਂ ਕੀਤੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ:"
-
-#: ui/main.qml:132
-#, kde-format
-msgctxt "@info:whatsthis contextualhelpbutton tooltip"
-msgid ""
-"Write apps' desktop file identifier or, on X11, executable names here "
-"(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
-"or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
-"with other session-restored apps."
-msgstr ""
-
-#: ui/main.qml:138
-#, kde-format
-msgctxt "@title:group"
-msgid "Firmware"
-msgstr "ਫਿਰਮਵੇਅਰ"
-
-#: ui/main.qml:144
+#: ui/main.qml:60
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -174,7 +100,7 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "ਅਗਲੀ ਵਾਰ ਮੁੜ-ਚਾਲੂ ਹੋਣ ਦੇ ਬਾਅਦ:"
 
-#: ui/main.qml:145
+#: ui/main.qml:63
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Enter firmware setup screen"
@@ -182,11 +108,152 @@ msgctxt "@option:check"
 msgid "Enter UEFI firmware settings"
 msgstr "ਫਿਰਮਵੇਅਰ ਸੈਟਅੱਪ ਸਕਰੀਨ ਵਿੱਚ ਜਾਓ"
 
-#: ui/main.qml:146
+#: ui/main.qml:64
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "ਫਿਰਮਵੇਅਰ ਸੈਟਅੱਪ ਸਕਰੀਨ ਵਿੱਚ ਜਾਓ"
+
+#: ui/main.qml:72
+#, kde-format
+msgctxt "@title:group"
+msgid "Session Restore"
+msgstr "ਸ਼ੈਸ਼ਨ ਬਹਾਲ ਕਰੋ"
+
+#: ui/main.qml:79
+#, fuzzy, kde-format
+#| msgid "On login"
+msgctxt "@title:group prefix for radiobuttons"
+msgid "On login:"
+msgstr "ਲਾਗਇਨ ਉੱਤੇ"
+
+#: ui/main.qml:82
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt "@option:radio Automatic style of session restoration"
+msgid "Restore apps from previous session"
+msgstr "ਖੁਦ ਸੰਭਾਲਿਆ ਸ਼ੈਸ਼ਨ ਮੁੜ-ਸਟੋਰ ਕਰੋ(&m)"
+
+#: ui/main.qml:93
+#, kde-format
+msgctxt "@info"
+msgid ""
+"When you log back in, Plasma will automatically reopen applications and "
+"windows that were running when you last logged out."
+msgstr ""
+
+#: ui/main.qml:101
+#, fuzzy, kde-format
+#| msgid "Restore &manually saved session"
+msgctxt "@option:radio Manual style of session restoration"
+msgid "Restore manually saved session"
+msgstr "ਖੁਦ ਸੰਭਾਲਿਆ ਸ਼ੈਸ਼ਨ ਮੁੜ-ਸਟੋਰ ਕਰੋ(&m)"
+
+#: ui/main.qml:112
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Adds a <interface>Save Session</interface> button to the "
+"<interface>Application Launcher</interface> menu. When you click it, Plasma "
+"will remember the open apps and restore them on the next login. Click it "
+"again to replace the set of remembered apps."
+msgstr ""
+
+#: ui/main.qml:121
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@option:radio Here 'session' refers to the technical concept of session "
+#| "restoration, whereby the windows that were open on logout are re-opened "
+#| "on the next login"
+#| msgid "Start with an empty session"
+msgctxt "@option:radio"
+msgid "Start with an empty session"
+msgstr "ਇੱਕ ਖਾਲੀ ਸ਼ੈਸ਼ਨ ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ"
+
+#: ui/main.qml:134
+#, fuzzy, kde-format
+#| msgid "Ignored applications:"
+msgctxt "@action:button"
+msgid "Configure Ignored Applications…"
+msgstr "ਅਣਡਿੱਠੀਆਂ ਕੀਤੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ:"
+
+#: ui/main.qml:148
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Prevent specified applications from autostarting with other session-restored "
+"apps. Use each application's desktop file identifier (e.g. org.kde.kate."
+"desktop) or, for XWayland apps, its executable name (e.g. xterm)."
+msgstr ""
+
+#: ui/main.qml:158
+#, fuzzy, kde-format
+#| msgid "Ignored applications:"
+msgctxt "@title:dialog"
+msgid "Ignored Applications"
+msgstr "ਅਣਡਿੱਠੀਆਂ ਕੀਤੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ:"
+
+#: ui/main.qml:171
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Enter application (e.g. org.kde.kate.desktop or xterm)"
+msgstr ""
+
+#: ui/main.qml:177
+#, fuzzy, kde-format
+#| msgid "Ignored applications:"
+msgctxt "@action:button"
+msgid "Ignore this Application"
+msgstr "ਅਣਡਿੱਠੀਆਂ ਕੀਤੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ:"
+
+#: ui/main.qml:179
+#, fuzzy, kde-format
+#| msgid "Ignored applications:"
+msgctxt "@info:whatsthis"
+msgid "Add %1 to the list of ignored applications"
+msgstr "ਅਣਡਿੱਠੀਆਂ ਕੀਤੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ:"
+
+#: ui/main.qml:180
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Add an application to the list of ignored applications"
+msgstr ""
+
+#: ui/main.qml:214
+#, kde-format
+msgctxt "@action:button"
+msgid "Remove"
+msgstr ""
+
+#: ui/main.qml:215
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Remove %1 from the list of ignored applications"
+msgstr ""
+
+#, fuzzy
+#~| msgid "General"
+#~ msgctxt "@title:group"
+#~ msgid "General"
+#~ msgstr "ਸਧਾਰਨ"
+
+#, fuzzy
+#~| msgid "On login, launch apps that were open:"
+#~ msgctxt "@title:group prefix for radiobuttons"
+#~ msgid "On login, launch apps that were open:"
+#~ msgstr "ਲਾਗਇਨ ਸਮੇਂ ਖੁੱਲ੍ਹੀਆਂ ਐਪਾਂ ਨੂੰ ਚਲਾਓ:"
+
+#~ msgctxt "@option:radio Automatic style of session restoration"
+#~ msgid "On last logout"
+#~ msgstr "ਪਿਛਲੀ ਵਾਰ ਲਾਗ ਆਉਟ ਸਮੇਂ"
+
+#~ msgctxt "@option:radio Manual style of session restoration"
+#~ msgid "When session was manually saved"
+#~ msgstr "ਜਦੋਂ ਸ਼ੈਸ਼ਨ ਨੂੰ ਖੁਦ ਸੰਭਾਲਿਆ ਗਿਆ ਹੈ"
+
+#~ msgctxt "@title:group"
+#~ msgid "Firmware"
+#~ msgstr "ਫਿਰਮਵੇਅਰ"
 
 #, fuzzy
 #~| msgid ""
@@ -287,11 +354,6 @@ msgstr "ਫਿਰਮਵੇਅਰ ਸੈਟਅੱਪ ਸਕਰੀਨ ਵਿੱਚ
 #~| msgid "Restore &previous session"
 #~ msgid "Desktop Session"
 #~ msgstr "ਪਿਛਲਾ ਸ਼ੈਸ਼ਨ ਮੁੜ-ਸਟੋਰ ਕਰੋ(&p)"
-
-#, fuzzy
-#~| msgid "Restore &manually saved session"
-#~ msgid "Restore previous saved session"
-#~ msgstr "ਖੁਦ ਸੰਭਾਲਿਆ ਸ਼ੈਸ਼ਨ ਮੁੜ-ਸਟੋਰ ਕਰੋ(&m)"
 
 #~ msgid ""
 #~ "Check this option if you want the session manager to display a logout "

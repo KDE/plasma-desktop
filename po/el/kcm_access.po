@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-18 01:12+0000\n"
-"PO-Revision-Date: 2026-10-20 11:51+0300\n"
+"PO-Revision-Date: 2026-11-24 22:59+0200\n"
 "Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
@@ -723,10 +723,10 @@ msgid "Zoom & Magnifier"
 msgstr "Μεγέθυνση και μεγεθυντικός φακός"
 
 #: ui/main.qml:34
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Text Size"
-msgstr ""
+msgstr "Μέγεθος κειμένου"
 
 #: ui/main.qml:39
 #, kde-format
@@ -1014,14 +1014,15 @@ msgid ""
 "keeps their proportions; on low-resolution screens, some small graphics may "
 "look slightly blurry."
 msgstr ""
+"Συνιστάται στις περισσότερες περιπτώσεις. Μεγαλώνει το κείμενο και όλα τα "
+"άλλα στοιχεία διατηρώντας τις αναλογίες τους. Σε οθόνες χαμηλής ανάλυσης, "
+"ορισμένα μικρά γραφικά μπορεί να φαίνονται ελαφρώς θολά."
 
 #: ui/TextSize.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Display Scale…"
-msgstr "Διαμόρφωση συντομεύσεων…"
+msgstr "Διαμόρφωση κλιμάκωσης οθόνης…"
 
 #: ui/TextSize.qml:25
 #, kde-format
@@ -1031,14 +1032,15 @@ msgid ""
 "changes can make text no longer fit or look good next to icons and other "
 "elements."
 msgstr ""
+"Κατάλληλο μόνο για μικρές αλλαγές μεγέθους. Αλλάζει μόνο το κείμενο. Με "
+"μεγάλες αλλαγές, το κείμενο μπορεί να μη χωράει ή να μη φαίνεται σωστά δίπλα "
+"σε εικονίδια και άλλα στοιχεία."
 
 #: ui/TextSize.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Fonts…"
-msgstr "Διαμόρφωση συντομεύσεων…"
+msgstr "Διαμόρφωση γραμματοσειρών…"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format

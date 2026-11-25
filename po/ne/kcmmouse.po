@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-17 00:51+0000\n"
+"POT-Creation-Date: 2026-11-25 01:27+0000\n"
 "PO-Revision-Date: 2007-11-04 18:50+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -184,52 +184,52 @@ msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
 
-#: ui/main.qml:264
+#: ui/main.qml:263
 #, fuzzy, kde-format
 #| msgid "Pointer threshold:"
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr "सङ्केतक थ्रेसहोल्ड:"
 
-#: ui/main.qml:328
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr ""
 
-#: ui/main.qml:337
+#: ui/main.qml:336
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr ""
 
-#: ui/main.qml:347
+#: ui/main.qml:346
 #, fuzzy, kde-format
 #| msgid "Pointer threshold:"
 msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "सङ्केतक थ्रेसहोल्ड:"
 
-#: ui/main.qml:348
+#: ui/main.qml:347
 #, fuzzy, kde-format
 #| msgid "Re&verse scroll direction"
 msgctxt "@option:check"
 msgid "Invert scroll direction"
 msgstr "स्क्रोल दिशा उल्टाउनुहोस्"
 
-#: ui/main.qml:363
+#: ui/main.qml:362
 #, kde-format
 msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
 msgstr ""
 
-#: ui/main.qml:380
+#: ui/main.qml:379
 #, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
 msgstr ""
 
-#: ui/main.qml:397
+#: ui/main.qml:396
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
@@ -239,19 +239,96 @@ msgid ""
 "devices that do not have any."
 msgstr ""
 
-#: ui/main.qml:404
+#: ui/main.qml:403
 #, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
 msgstr ""
 
-#: ui/main.qml:421
+#: ui/main.qml:420
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
 "This will interfere with middle-clicks in general; middle-click twice when "
 "you want the application to receive a single middle-click. This includes "
 "middle-click dragging."
+msgstr ""
+
+#: ui/main.qml:430
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Angle adjustment:"
+msgstr ""
+
+#: ui/main.qml:446
+#, kde-format
+msgctxt "@label:valuesuffix %1 is an angle in degrees"
+msgid "%1°"
+msgstr ""
+
+#: ui/main.qml:466
+#, kde-format
+msgctxt "@action:button Measure angle adjustment"
+msgid "Measure…"
+msgstr ""
+
+#: ui/main.qml:473
+#, kde-format
+msgctxt "@info:whatsthis ContextualHelpButton tooltip for angle adjustment"
+msgid ""
+"Rotates the direction of pointer movement clockwise by the given angle. This "
+"is useful for devices that are held or mounted at an angle."
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:40
+#, kde-format
+msgctxt "@title:window"
+msgid "Measure Angle Adjustment"
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:152
+#, kde-format
+msgctxt "@info %1 is the name of a pointing device"
+msgid "Please make sure you are using the device “%1”."
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:161
+#, kde-format
+msgctxt "@info %1 is an angle in degrees"
+msgid "The measured angle is %1°."
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:162
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Move the mouse back and forth a few times, in the direction that feels like "
+"left and right to you. Don't watch the pointer: it doesn't matter which way "
+"it moves on the screen."
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:179
+#, kde-format
+msgctxt "@action:button Use the measured angle adjustment"
+msgid "&OK"
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:189
+#, kde-format
+msgctxt "@action:button Angle adjustment calibration"
+msgid "&Measure Again"
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:196
+#, kde-format
+msgctxt "@action:button Discard the measured angle adjustment"
+msgid "&Discard"
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:197
+#, kde-format
+msgctxt "@action:button Angle adjustment calibration"
+msgid "&Cancel"
 msgstr ""
 
 #~ msgctxt "NAME OF TRANSLATORS"

@@ -1,7 +1,7 @@
 # translation of kcminput.po to Slovenian
 # Translation of kcminput.po to Slovenian
 # KCMINPUT TRANSLATION TO SLOVENE LANGUAGE.
-# $Id$
+# $Id: kcmmouse.po 1754264 2026-11-25 02:10:58Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-17 00:51+0000\n"
+"POT-Creation-Date: 2026-11-25 01:27+0000\n"
 "PO-Revision-Date: 2026-09-04 07:22+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -201,49 +201,49 @@ msgstr ""
 "Ko je omogočeno, se razdalja poti kazalca povečuje z večjo hitrostjo "
 "premikanja."
 
-#: ui/main.qml:264
+#: ui/main.qml:263
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
 msgstr "Hitrost drsenja:"
 
-#: ui/main.qml:328
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Počasneje"
 
-#: ui/main.qml:337
+#: ui/main.qml:336
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Hitreje"
 
-#: ui/main.qml:347
+#: ui/main.qml:346
 #, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"
 msgstr "Drsenje zaslona:"
 
-#: ui/main.qml:348
+#: ui/main.qml:347
 #, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction"
 msgstr "Obrni smer drsenja zaslona"
 
-#: ui/main.qml:363
+#: ui/main.qml:362
 #, kde-format
 msgctxt "@option:check"
 msgid "Scroll when moving the pointer"
 msgstr "Pomakni med premikanjem kazalca"
 
-#: ui/main.qml:380
+#: ui/main.qml:379
 #, kde-format
 msgctxt "@option:radio"
 msgid "while pressing the middle button"
 msgstr "med pritiskom na srednji gumb"
 
-#: ui/main.qml:397
+#: ui/main.qml:396
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
@@ -257,13 +257,13 @@ msgstr ""
 "Uporablja se lahko na kateri koli napravi, vendar je namenjeno predvsem kot "
 "nadomestilo za drsni kolešček v napravah, ki ga nimajo."
 
-#: ui/main.qml:404
+#: ui/main.qml:403
 #, kde-format
 msgctxt "@option:radio"
 msgid "after clicking the middle button"
 msgstr "po kliku na srednji gumb"
 
-#: ui/main.qml:421
+#: ui/main.qml:420
 #, kde-format
 msgctxt "@info:whatsthis ContextualHelpButton tooltip"
 msgid ""
@@ -274,6 +274,85 @@ msgstr ""
 "To bo na splošno motilo srednje klike; dvakrat kliknite s srednjim gumbom, "
 "če želite, da aplikacija prejme en sam srednji klik. To vključuje tudi "
 "vlečenje s srednjim gumbom miške."
+
+#: ui/main.qml:430
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Angle adjustment:"
+msgstr ""
+
+#: ui/main.qml:446
+#, kde-format
+msgctxt "@label:valuesuffix %1 is an angle in degrees"
+msgid "%1°"
+msgstr ""
+
+#: ui/main.qml:466
+#, kde-format
+msgctxt "@action:button Measure angle adjustment"
+msgid "Measure…"
+msgstr ""
+
+#: ui/main.qml:473
+#, kde-format
+msgctxt "@info:whatsthis ContextualHelpButton tooltip for angle adjustment"
+msgid ""
+"Rotates the direction of pointer movement clockwise by the given angle. This "
+"is useful for devices that are held or mounted at an angle."
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:40
+#, kde-format
+msgctxt "@title:window"
+msgid "Measure Angle Adjustment"
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:152
+#, kde-format
+msgctxt "@info %1 is the name of a pointing device"
+msgid "Please make sure you are using the device “%1”."
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:161
+#, kde-format
+msgctxt "@info %1 is an angle in degrees"
+msgid "The measured angle is %1°."
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:162
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Move the mouse back and forth a few times, in the direction that feels like "
+"left and right to you. Don't watch the pointer: it doesn't matter which way "
+"it moves on the screen."
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:179
+#, kde-format
+msgctxt "@action:button Use the measured angle adjustment"
+msgid "&OK"
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:189
+#, kde-format
+msgctxt "@action:button Angle adjustment calibration"
+msgid "&Measure Again"
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:196
+#, kde-format
+msgctxt "@action:button Discard the measured angle adjustment"
+msgid "&Discard"
+msgstr ""
+
+#: ui/RotationCalibrationWindow.qml:197
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Cancel"
+msgctxt "@action:button Angle adjustment calibration"
+msgid "&Cancel"
+msgstr "Prekliči"
 
 #~ msgctxt "@option:check"
 #~ msgid "Hold down middle button and move mouse to scroll"

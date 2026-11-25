@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-18 15:35+0000\n"
+"POT-Creation-Date: 2026-11-24 14:08+0000\n"
 "PO-Revision-Date: 2010-01-31 23:12+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -67,27 +67,27 @@ msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr ""
 
-#: backend.cpp:581
+#: backend.cpp:568
 #, kde-format
 msgid "Activate Previous Task Manager Entry"
 msgstr ""
 
-#: backend.cpp:588
+#: backend.cpp:575
 #, kde-format
 msgid "Activate Next Task Manager Entry"
 msgstr ""
 
-#: backend.cpp:595
+#: backend.cpp:582
 #, kde-format
 msgid "Move Active Task Manager Entry Backward"
 msgstr ""
 
-#: backend.cpp:603
+#: backend.cpp:590
 #, kde-format
 msgid "Move Active Task Manager Entry Forward"
 msgstr ""
 
-#: backend.cpp:612
+#: backend.cpp:599
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr ""
@@ -926,44 +926,44 @@ msgctxt ""
 msgid "%1k"
 msgstr "Според раб. површина"
 
-#: qml/ToolTipInstance.qml:231
+#: qml/ToolTipInstance.qml:246
 #, kde-format
 msgctxt "@info:tooltip Close this window"
 msgid "Close window"
 msgstr ""
 
-#: qml/ToolTipInstance.qml:468
+#: qml/ToolTipInstance.qml:503
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
 msgstr ""
 
-#: qml/ToolTipInstance.qml:469
+#: qml/ToolTipInstance.qml:504
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
 msgstr ""
 
-#: qml/ToolTipInstance.qml:487
+#: qml/ToolTipInstance.qml:522
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
 msgstr ""
 
-#: qml/ToolTipInstance.qml:503
+#: qml/ToolTipInstance.qml:538
 #, fuzzy, kde-format
 #| msgid "By Desktop"
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "Според раб. површина"
 
-#: qml/ToolTipInstance.qml:507
+#: qml/ToolTipInstance.qml:542
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
 msgstr ""
 
-#: qml/ToolTipInstance.qml:523
+#: qml/ToolTipInstance.qml:558
 #, fuzzy, kde-format
 #| msgctxt "Which virtual desktop a window is currently on"
 #| msgid "On %1"
@@ -971,25 +971,25 @@ msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "На %1"
 
-#: qml/ToolTipInstance.qml:526
+#: qml/ToolTipInstance.qml:561
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
 msgstr ""
 
-#: qml/ToolTipInstance.qml:532
+#: qml/ToolTipInstance.qml:567
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
 msgstr ""
 
-#: qml/ToolTipInstance.qml:542
+#: qml/ToolTipInstance.qml:577
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
 msgstr ""
 
-#: qml/ToolTipInstance.qml:546
+#: qml/ToolTipInstance.qml:581
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
