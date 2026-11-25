@@ -124,33 +124,13 @@ ContainmentLayoutManager.AppletsLayout {
         }
     }
 
-    function linkHere(sourceUrl) {
-        dir.linkHere(sourceUrl);
-    }
-
-    function handleDragMove(x, y) {
-        let pos = mapToItem(gridView.contentItem, x, y);
-        let item = gridView.safeItemAt(pos.x, pos.y);
-
-        if (item && item.isDir) {
-            hoveredItem = item;
-        } else {
-            hoveredItem = null;
-        }
-    }
-
-    function endDragMove() {
-        if (hoveredItem && !hoveredItem.popupDialog) {
-            hoveredItem = null;
-        }
-    }
-
     function dropItemAt(pos) {
-        let item = gridView.safeItemAt(pos.x, pos.y);
+        let item = childAt(pos.x, pos.y);
 
-        if (item && !item.blank) {
-            gridView.currentIndex = item.index
-            return positioner.map(item.index);
+        if (item && item?.isDir && !item?.blank) {
+            //gridView.currentIndex = item.index
+            item.forceActiveFocus();
+            return item.index;
         }
 
         return -1;
@@ -158,8 +138,7 @@ ContainmentLayoutManager.AppletsLayout {
 
     function drop(target, event, pos) {
         let dropPos = target.mapToItem(this, pos.x, pos.y);
-        //dir.drop(target, event, dropItemAt(dropPos), Plasmoid.isContainment && !Plasmoid.immutable);
-        dir.drop(target, event, -1, Plasmoid.isContainment && !Plasmoid.immutable);
+        dir.drop(target, event, dropItemAt(dropPos), Plasmoid.isContainment && !Plasmoid.immutable);
     }
 
     function isDrag(fromX, fromY, toX, toY) {
