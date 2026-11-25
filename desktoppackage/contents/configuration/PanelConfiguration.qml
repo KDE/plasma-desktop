@@ -561,9 +561,8 @@ ColumnLayout {
         active: setPositionButton.checked || clonePanelButton.checked
         asynchronous: true
         model: Application.screens
-        Item {
-            width: 0
-            height: 0
+
+        QtObject {
             required property var modelData
 
             component Indicator : PlasmaCore.Dialog {
@@ -593,25 +592,25 @@ ColumnLayout {
                 }
             }
 
-            Indicator {
+            property Indicator leftIndicator: Indicator {
                 x: modelData.virtualX + Kirigami.Units.largeSpacing
                 y: modelData.virtualY + modelData.height / 2 - mainItem.height / 2 - margins.top
                 iconSource: "arrow-left"
                 onClickedLocation: PlasmaCore.Types.LeftEdge
             }
-            Indicator {
+            property Indicator rightIndicator: Indicator {
                 x: modelData.virtualX + modelData.width - Kirigami.Units.largeSpacing - margins.left - margins.right - mainItem.width
                 y: modelData.virtualY + modelData.height / 2 - mainItem.height / 2 - margins.top
                 iconSource: "arrow-right"
                 onClickedLocation: PlasmaCore.Types.RightEdge
             }
-            Indicator {
+            property Indicator upIndicator: Indicator {
                 x: modelData.virtualX + modelData.width / 2 - mainItem.width / 2 - margins.left
                 y: modelData.virtualY + Kirigami.Units.largeSpacing
                 iconSource: "arrow-up"
                 onClickedLocation: PlasmaCore.Types.TopEdge
             }
-            Indicator {
+            property Indicator downIndicator: Indicator {
                 x: modelData.virtualX + modelData.width / 2 - mainItem.width / 2 - margins.left
                 y: modelData.virtualY + modelData.height - mainItem.height - margins.top - margins.bottom - Kirigami.Units.largeSpacing
                 iconSource: "arrow-down"
