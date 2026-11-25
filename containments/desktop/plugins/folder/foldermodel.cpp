@@ -993,7 +993,7 @@ void FolderModel::rename(int row, const QString &name)
 
 #if KIO_VERSION >= QT_VERSION_CHECK(6, 31, 0)
     auto *renameWarning = new KIO::RenameFileWarningDialog(oldItem, newFilename, nullptr, showHiddenFiles());
-    connect(renameWarning, &KIO::RenameFileWarningDialog::result, this, [this, isDesktopFile, oldUrl, oldName, filename, newFilename](bool proceed) {
+    connect(renameWarning, &KIO::RenameFileWarningDialog::result, this, [this, idx, isDesktopFile, oldUrl, oldName, filename, newFilename](bool proceed) {
         if (!proceed) {
             return;
         }
@@ -1012,7 +1012,8 @@ void FolderModel::rename(int row, const QString &name)
                 Q_UNUSED(roles);
                 Q_UNUSED(topLeft);
                 Q_UNUSED(bottomRight);
-                Q_EMIT itemRenamed(filename, newFilename);
+                const auto newFilenameUrl = data(idx, UrlRole).toString();
+                Q_EMIT itemRenamed(filename, newFilenameUrl);
             },
             Qt::SingleShotConnection);
         if (isDesktopFile) {
