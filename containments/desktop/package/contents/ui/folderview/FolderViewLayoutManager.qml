@@ -316,6 +316,7 @@ ContainmentLayoutManager.AppletsLayout {
 
             onMove: (x, y, urls) => {
                 print("MOVE",x,y,urls)
+
                 main.generateDragImage(); // in case the user drags again
             }
         }

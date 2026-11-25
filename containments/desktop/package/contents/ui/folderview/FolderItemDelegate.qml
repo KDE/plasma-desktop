@@ -33,6 +33,7 @@ ContainmentLayoutManager.ItemContainer {
     required property string type
     required property string display
     required property string displayWrapped
+    required property string url
     required property var decoration
 
     property bool isOnRootView: false
@@ -68,6 +69,24 @@ ContainmentLayoutManager.ItemContainer {
             layout.draggingItems = layout.draggingItems.filter(x => x !== main);
             main.layout.positionItem(main);
             updateDragImage();
+        }
+    }
+
+    Connections {
+        target: dir
+        function onMove(x, y, urls) {
+            //FIXME: do we have a more efficient way?
+            for (const url of urls) {
+                if (url == main.url) {
+                    main.layout.releaseSpace(main);
+                    main.x = x;
+                    main.y = y;
+                    print(x,y,main.x,main.y)
+                    main.layout.positionItem(main);
+                    updateDragImage();
+                    break;
+                }
+            }
         }
     }
 
