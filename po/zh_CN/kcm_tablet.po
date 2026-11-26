@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-desktop/kcm_tablet.pot\n"
-"X-Crowdin-File-ID: 43037\n"
+"X-Crowdin-File: /kf6-stable/messages/plasma-desktop/kcm_tablet.pot\n"
+"X-Crowdin-File-ID: 52840\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -351,6 +351,8 @@ msgid_plural ""
 "strong='true'>Will revert to default calibration in %1 seconds unless "
 "further action is taken.</emphasis>"
 msgstr[0] ""
+"再次点击目标以确认新的校准。<nl/><nl/><emphasis strong='true'>如果不进行任何"
+"操作，%1 秒后将恢复为默认校准。</emphasis>"
 
 #: ui/Calibration.qml:177
 #, kde-format

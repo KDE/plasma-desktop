@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-desktop/plasma_shell_org.kde."
+"X-Crowdin-File: /kf6-stable/messages/plasma-desktop/plasma_shell_org.kde."
 "plasma.desktop.pot\n"
-"X-Crowdin-File-ID: 43043\n"
+"X-Crowdin-File-ID: 50590\n"
 
 #: contents/activitymanager/ActivityItem.qml:206
 #, kde-format
@@ -345,7 +345,7 @@ msgstr "快捷键"
 #, kde-format
 msgctxt "@action:button set keyboard shortcut for"
 msgid "Activate widget as if clicked:"
-msgstr "激活小部件，效果与点击它相同："
+msgstr "激活小部件 (相当于点击此小部件)："
 
 #: contents/configuration/ContainmentConfiguration.qml:26
 #, kde-format
@@ -786,7 +786,7 @@ msgstr "不支持的小部件"
 #, kde-format
 msgctxt "Text displayed on top of newly-installed widgets"
 msgid "New!"
-msgstr "新！"
+msgstr "新装"
 
 #: contents/explorer/AppletDelegate.qml:198
 #, kde-format
@@ -1004,13 +1004,13 @@ msgstr "切换用户(&U)"
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "虚拟键盘"
 
 #: contents/lockscreen/LockScreenUi.qml:505
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr ""
+msgstr "切换布局"
 
 #: contents/lockscreen/MainBlock.qml:67
 #, kde-format
