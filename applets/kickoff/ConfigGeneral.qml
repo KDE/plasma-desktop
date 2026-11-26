@@ -14,6 +14,7 @@ import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 
 import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.private.kicker as Kicker
 import org.kde.ksvg as KSvg
 import org.kde.iconthemes as KIconThemes
 import org.kde.kirigami as Kirigami
@@ -80,6 +81,8 @@ KCM.SimpleKCM {
                     width: Kirigami.Units.iconSizes.large
                     height: width
                     source: Tools.iconOrDefault(Plasmoid.formFactor, root.cfg_icon)
+
+                    Kirigami.Theme.textColor: Kicker.LauncherTheme.textColor
                 }
             }
 
