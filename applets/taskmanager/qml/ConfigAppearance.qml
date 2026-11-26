@@ -153,7 +153,7 @@ KCMUtils.SimpleKCM {
 
         QQC2.SpinBox {
             id: maxStripes
-            enabled: maxStripes.value > 1
+            enabled: !forbidStripes.checked
             Kirigami.FormData.label: root.plasmoidVertical
                 ? i18nc("@label:spinbox maximum number of columns for tasks", "Maximum columns:")
                 : i18nc("@label:spinbox maximum number of rows for tasks", "Maximum rows:")
