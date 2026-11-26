@@ -14,6 +14,7 @@ import org.kde.kcmutils as KCMUtils
 import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
 import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.private.kicker as Kicker
 import org.kde.plasma.plasmoid
 
 KCMUtils.SimpleKCM {
@@ -120,6 +121,8 @@ KCMUtils.SimpleKCM {
                     width: Kirigami.Units.iconSizes.large
                     height: width
                     source: configGeneral.cfg_useCustomButtonImage ? configGeneral.cfg_customButtonImage : configGeneral.cfg_icon
+
+                    Kirigami.Theme.textColor: Kicker.LauncherTheme.textColor
                 }
             }
 
