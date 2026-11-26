@@ -111,7 +111,6 @@ msgstr "会话恢复"
 
 #: ui/main.qml:79
 #, fuzzy, kde-format
-#| msgid "On login"
 msgctxt "@title:group prefix for radiobuttons"
 msgid "On login:"
 msgstr "登录时"
@@ -138,12 +137,6 @@ msgstr ""
 
 #: ui/main.qml:112
 #, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "A <interface>Save Session</interface> button will appear in the "
-#| "<interface>Application Launcher</interface> menu. When you click it, "
-#| "Plasma will remember the apps that are open and restore them on the next "
-#| "login. Click it again to replace the set of remembered apps."
 msgctxt "@info"
 msgid ""
 "Adds a <interface>Save Session</interface> button to the "
@@ -157,19 +150,12 @@ msgstr ""
 
 #: ui/main.qml:121
 #, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Here 'session' refers to the technical concept of session "
-#| "restoration, whereby the windows that were open on logout are re-opened "
-#| "on the next login"
-#| msgid "Start with an empty session"
 msgctxt "@option:radio"
 msgid "Start with an empty session"
 msgstr "启动为空会话"
 
 #: ui/main.qml:134
 #, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Ignored applications:"
 msgctxt "@action:button"
 msgid "Configure Ignored Applications…"
 msgstr "忽略的应用程序："
@@ -185,8 +171,6 @@ msgstr ""
 
 #: ui/main.qml:158
 #, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Ignored applications:"
 msgctxt "@title:dialog"
 msgid "Ignored Applications"
 msgstr "忽略的应用程序："
@@ -199,16 +183,12 @@ msgstr ""
 
 #: ui/main.qml:177
 #, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Ignored applications:"
 msgctxt "@action:button"
 msgid "Ignore this Application"
 msgstr "忽略的应用程序："
 
 #: ui/main.qml:179
 #, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Ignored applications:"
 msgctxt "@info:whatsthis"
 msgid "Add %1 to the list of ignored applications"
 msgstr "忽略的应用程序："

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-25 01:27+0000\n"
-"PO-Revision-Date: 2026-02-17 04:13+0100\n"
+"PO-Revision-Date: 2026-11-25 15:06+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.10\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -115,22 +115,16 @@ msgid "Session Restore"
 msgstr "სესიის აღდგენა"
 
 #: ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "On login"
+#, kde-format
 msgctxt "@title:group prefix for radiobuttons"
 msgid "On login:"
-msgstr "შესვლისას"
+msgstr "შესვლისას:"
 
 #: ui/main.qml:82
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Here 'session' refers to the technical concept of session "
-#| "restoration, whereby the windows that were open on logout are re-opened "
-#| "on the next login"
-#| msgid "Restore last session"
+#, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "Restore apps from previous session"
-msgstr "ბოლო სესიის აღდგენა"
+msgstr "აპების აღდგენა წინა სესიიდან"
 
 #: ui/main.qml:93
 #, kde-format
@@ -139,26 +133,18 @@ msgid ""
 "When you log back in, Plasma will automatically reopen applications and "
 "windows that were running when you last logged out."
 msgstr ""
+"როცა სისტემაში თავიდან შეხვალთ, Plasma ავტომატურად გახსნის თავიდან "
+"აპლიკაციებს და ფანჯრებს, რომლებიც გაშვებული იყო მაშინ, როცა ბოლოს სისტემიდან "
+"გახვედით."
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Here 'session' refers to the technical concept of session "
-#| "restoration, whereby the windows that were open on logout are re-opened "
-#| "on the next login"
-#| msgid "Restore last session"
+#, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "Restore manually saved session"
-msgstr "ბოლო სესიის აღდგენა"
+msgstr "ხელით შენახული სესიის აღდგენა"
 
 #: ui/main.qml:112
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "A <interface>Save Session</interface> button will appear in the "
-#| "<interface>Application Launcher</interface> menu. When you click it, "
-#| "Plasma will remember the apps that are open and restore them on the next "
-#| "login. Click it again to replace the set of remembered apps."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Adds a <interface>Save Session</interface> button to the "
@@ -169,27 +155,20 @@ msgstr ""
 "ღილაკი <interface>სესიის შენახვა</interface> გამოჩნდება "
 "<interface>აპლიკაციების გამშვების</interface> მენიუში. როცა მას "
 "დააწკაპუნებთ, Plasma დაიმახსოვრებს გახსნილ აპლიკაციებს და მათ შემდეგი "
-"შესვლისას იგივე ადგილას გაუშვებს. დააწკაპუნეთ მას კიდევ ერთხელ, რათა ეს "
-"აპები შეცვალოთ."
+"შესვლისას იგივე ადგილას გაუშვებს. დამახსოვრებული აპების ნაკრების "
+"ჩასანაცვლებლად დააწკაპუნეთ მასზე კიდევ ერთხელ."
 
 #: ui/main.qml:121
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Here 'session' refers to the technical concept of session "
-#| "restoration, whereby the windows that were open on logout are re-opened "
-#| "on the next login"
-#| msgid "Start with an empty session"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Start with an empty session"
 msgstr "ცარიელი სესიით დაწყება"
 
 #: ui/main.qml:134
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Ignored Applications…"
-msgstr "იგნორირებული აპლიკაციები:"
+msgstr "იგნორირებული აპლიკაციების მორგება…"
 
 #: ui/main.qml:148
 #, kde-format
@@ -199,54 +178,52 @@ msgid ""
 "apps. Use each application's desktop file identifier (e.g. org.kde.kate."
 "desktop) or, for XWayland apps, its executable name (e.g. xterm)."
 msgstr ""
+"მითითებული აპლიკაციების ავტოგაშვების აკრძალვა სხვა სესიასთან აღდგენილ "
+"აპლიკაციებთან ერთად. გამოიყენეთ თითოეული აპლიკაციის სამუშაო ფალის "
+"იდენტიფიკატორი (მაგ: org.kde.kate.desktop) ან, XWayland-ის აპლიკაციების "
+"შემთხვევაში, მისი გამშვები ფაილის სახელი (მაგ: xterm)."
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@title:dialog"
 msgid "Ignored Applications"
-msgstr "იგნორირებული აპლიკაციები:"
+msgstr "იგნორირებული აპლიკაციები"
 
 #: ui/main.qml:171
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter application (e.g. org.kde.kate.desktop or xterm)"
-msgstr ""
+msgstr "შეიყვანეთ აპლიკაცია (მაგ: org.kde.kate.desktop ან xterm)"
 
 #: ui/main.qml:177
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Ignore this Application"
-msgstr "იგნორირებული აპლიკაციები:"
+msgstr "ამ აპლიკაციის იგნორი"
 
 #: ui/main.qml:179
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Add %1 to the list of ignored applications"
-msgstr "იგნორირებული აპლიკაციები:"
+msgstr "%1-ის დამატება დაიგნორებული აპლიკაციების სიაში"
 
 #: ui/main.qml:180
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Add an application to the list of ignored applications"
-msgstr ""
+msgstr "აპლიკაციის დამატება დაიგნორებული აპლიკაციების სიაში"
 
 #: ui/main.qml:214
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove"
-msgstr ""
+msgstr "წაშლა"
 
 #: ui/main.qml:215
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Remove %1 from the list of ignored applications"
-msgstr ""
+msgstr "%1-ის წაშლა დაიგნორებული აპლიკაციების სიიდან"
 
 #~ msgctxt "@title:group"
 #~ msgid "General"

@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-25 01:27+0000\n"
-"PO-Revision-Date: 2026-11-23 17:59+0300\n"
+"PO-Revision-Date: 2026-11-25 18:02+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -120,17 +120,16 @@ msgid "Session Restore"
 msgstr "Oturumu Geri Yükle"
 
 #: ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "On login"
+#, kde-format
 msgctxt "@title:group prefix for radiobuttons"
 msgid "On login:"
-msgstr "Oturum açarken"
+msgstr "Oturum açarken:"
 
 #: ui/main.qml:82
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "Restore apps from previous session"
-msgstr ""
+msgstr "Bir önceki oturumdan kalan uygulamaları geri yükle"
 
 #: ui/main.qml:93
 #, kde-format
@@ -139,21 +138,17 @@ msgid ""
 "When you log back in, Plasma will automatically reopen applications and "
 "windows that were running when you last logged out."
 msgstr ""
+"Geri oturum açtığınızda, Plasma son oturum kapanışında açık olan "
+"uygulamaları ve pencereleri kendiliğinden yeniden açar."
 
 #: ui/main.qml:101
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "Restore manually saved session"
-msgstr ""
+msgstr "Elle kaydedilmiş oturumu geri yükle"
 
 #: ui/main.qml:112
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "A <interface>Save Session</interface> button will appear in the "
-#| "<interface>Application Launcher</interface> menu. When you click it, "
-#| "Plasma will remember the apps that are open and restore them on the next "
-#| "login. Click it again to replace the set of remembered apps."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Adds a <interface>Save Session</interface> button to the "
@@ -161,29 +156,22 @@ msgid ""
 "will remember the open apps and restore them on the next login. Click it "
 "again to replace the set of remembered apps."
 msgstr ""
-"<interface>Uygulama Başlatıcısı</interface> menüsünde bir <interface>Oturumu "
-"Kaydet</interface> düğmesi görünür. Ona tıkladığınızda, Plasma açık olan "
+"<interface>Uygulama Başlatıcısı</interface> menüsüne bir <interface>Oturumu "
+"Kaydet</interface> düğmesi ekler. Ona tıkladığınızda, Plasma açık olan "
 "uygulamaları anımsar ve bir sonraki oturum açılışında onları başlatır. "
 "Anımsanan uygulamalar kümesini değiştirmek için ona yeniden tıklayın."
 
 #: ui/main.qml:121
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Here 'session' refers to the technical concept of session "
-#| "restoration, whereby the windows that were open on logout are re-opened "
-#| "on the next login"
-#| msgid "Start with an empty session"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Start with an empty session"
 msgstr "Boş bir oturum ile başlat"
 
 #: ui/main.qml:134
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Ignored Applications…"
-msgstr "Yok sayılan uygulamalar:"
+msgstr "Yok Sayılan Uygulamaları Yapılandır…"
 
 #: ui/main.qml:148
 #, kde-format
@@ -193,54 +181,52 @@ msgid ""
 "apps. Use each application's desktop file identifier (e.g. org.kde.kate."
 "desktop) or, for XWayland apps, its executable name (e.g. xterm)."
 msgstr ""
+"Belirtilen uygulamaların, oturum tarafından geri yüklenen diğer "
+"uygulamalarla kendiliğinden başlatılmasını önleyin. Her uygulamanın masaüstü "
+"dosya tanımlayıcısını (ör. org.kde.kate.desktop) veya XWayland uygulamaları "
+"için yürütülebilir adını (ör. xterm) kullanın."
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@title:dialog"
 msgid "Ignored Applications"
-msgstr "Yok sayılan uygulamalar:"
+msgstr "Yok Sayılan Uygulamalar"
 
 #: ui/main.qml:171
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter application (e.g. org.kde.kate.desktop or xterm)"
-msgstr ""
+msgstr "Uygulama gir… (ör. org.kde.kate.desktop veya xterm)"
 
 #: ui/main.qml:177
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Ignore this Application"
-msgstr "Yok sayılan uygulamalar:"
+msgstr "Bu Uygulamayı Yok Say"
 
 #: ui/main.qml:179
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Add %1 to the list of ignored applications"
-msgstr "Yok sayılan uygulamalar:"
+msgstr "%1 uygulamasını, yok sayılan uygulamalar listesine ekler."
 
 #: ui/main.qml:180
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Add an application to the list of ignored applications"
-msgstr ""
+msgstr "Yok sayılan uygulamalar listesine bir uygulama ekleyin."
 
 #: ui/main.qml:214
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove"
-msgstr ""
+msgstr "Kaldır"
 
 #: ui/main.qml:215
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Remove %1 from the list of ignored applications"
-msgstr ""
+msgstr "%1 uygulamasını, yok sayılan uygulamalar listesinden kaldırın."
 
 #~ msgctxt "@title:group"
 #~ msgid "General"

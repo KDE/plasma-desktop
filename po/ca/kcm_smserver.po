@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-25 01:27+0000\n"
-"PO-Revision-Date: 2026-02-17 09:47+0100\n"
+"PO-Revision-Date: 2026-11-25 11:06+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -122,17 +122,16 @@ msgid "Session Restore"
 msgstr "Restauració de la sessió"
 
 #: ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "On login"
+#, kde-format
 msgctxt "@title:group prefix for radiobuttons"
 msgid "On login:"
-msgstr "En connectar-se"
+msgstr "En connectar-se:"
 
 #: ui/main.qml:82
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "Restore apps from previous session"
-msgstr ""
+msgstr "Restaura les aplicacions de la sessió anterior"
 
 #: ui/main.qml:93
 #, kde-format
@@ -141,21 +140,17 @@ msgid ""
 "When you log back in, Plasma will automatically reopen applications and "
 "windows that were running when you last logged out."
 msgstr ""
+"Quan torneu a iniciar la sessió, el Plasma reobrirà automàticament les "
+"aplicacions i finestres que s'estaven executant quan vau tancar la sessió."
 
 #: ui/main.qml:101
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "Restore manually saved session"
-msgstr ""
+msgstr "Restaura manualment la sessió desada"
 
 #: ui/main.qml:112
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "A <interface>Save Session</interface> button will appear in the "
-#| "<interface>Application Launcher</interface> menu. When you click it, "
-#| "Plasma will remember the apps that are open and restore them on the next "
-#| "login. Click it again to replace the set of remembered apps."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Adds a <interface>Save Session</interface> button to the "
@@ -163,30 +158,23 @@ msgid ""
 "will remember the open apps and restore them on the next login. Click it "
 "again to replace the set of remembered apps."
 msgstr ""
-"Apareixerà el botó <interface>Desa la sessió</interface> en el menú del "
+"Afegeix un botó <interface>Desa la sessió</interface> en el menú del "
 "<interface>Llançador d'aplicacions</interface>. Quan hi feu clic, el Plasma "
-"recordarà les aplicacions que estan obertes i les restaurarà en iniciar la "
-"sessió següent. Feu-hi clic una altra vegada per a substituir el conjunt "
+"recordarà les aplicacions obertes i les restaurarà en iniciar la sessió "
+"següent. Feu-hi clic una altra vegada per a substituir el conjunt "
 "d'aplicacions recordades."
 
 #: ui/main.qml:121
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Here 'session' refers to the technical concept of session "
-#| "restoration, whereby the windows that were open on logout are re-opened "
-#| "on the next login"
-#| msgid "Start with an empty session"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Start with an empty session"
 msgstr "Comença amb una sessió buida"
 
 #: ui/main.qml:134
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Ignored Applications…"
-msgstr "Aplicacions ignorades:"
+msgstr "Configureu les aplicacions ignorades…"
 
 #: ui/main.qml:148
 #, kde-format
@@ -196,54 +184,52 @@ msgid ""
 "apps. Use each application's desktop file identifier (e.g. org.kde.kate."
 "desktop) or, for XWayland apps, its executable name (e.g. xterm)."
 msgstr ""
+"Evita que les aplicacions especificades comencin automàticament amb altres "
+"aplicacions restaurades per sessió. Utilitzeu l'identificador del fitxer "
+"«desktop» de cada aplicació (p. ex. org.kde.kate.desktop) o, per a les "
+"aplicacions XWayland, el seu nom executable (p. ex. xterm)."
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@title:dialog"
 msgid "Ignored Applications"
-msgstr "Aplicacions ignorades:"
+msgstr "Aplicacions ignorades"
 
 #: ui/main.qml:171
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter application (e.g. org.kde.kate.desktop or xterm)"
-msgstr ""
+msgstr "Introduïu l'aplicació (p. ex. org.kde.kate.desktop o xterm)"
 
 #: ui/main.qml:177
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Ignore this Application"
-msgstr "Aplicacions ignorades:"
+msgstr "Ignora aquesta aplicació"
 
 #: ui/main.qml:179
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Add %1 to the list of ignored applications"
-msgstr "Aplicacions ignorades:"
+msgstr "Afegeix %1 a la llista d'aplicacions ignorades"
 
 #: ui/main.qml:180
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Add an application to the list of ignored applications"
-msgstr ""
+msgstr "Afegeix una aplicació a la llista d'aplicacions ignorades"
 
 #: ui/main.qml:214
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove"
-msgstr ""
+msgstr "Elimina"
 
 #: ui/main.qml:215
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Remove %1 from the list of ignored applications"
-msgstr ""
+msgstr "Elimina %1 de la llista d'aplicacions ignorades"
 
 #~ msgctxt "@title:group"
 #~ msgid "General"

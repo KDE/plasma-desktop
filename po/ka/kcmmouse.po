@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-25 01:27+0000\n"
-"PO-Revision-Date: 2026-09-04 07:49+0200\n"
+"PO-Revision-Date: 2026-11-25 15:12+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 
 #: inputbackend.cpp:49
 #, kde-format
@@ -268,19 +268,19 @@ msgstr ""
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Angle adjustment:"
-msgstr ""
+msgstr "კუთხის გასწორება:"
 
 #: ui/main.qml:446
 #, kde-format
 msgctxt "@label:valuesuffix %1 is an angle in degrees"
 msgid "%1°"
-msgstr ""
+msgstr "%1°"
 
 #: ui/main.qml:466
 #, kde-format
 msgctxt "@action:button Measure angle adjustment"
 msgid "Measure…"
-msgstr ""
+msgstr "გაზომვა…"
 
 #: ui/main.qml:473
 #, kde-format
@@ -289,24 +289,27 @@ msgid ""
 "Rotates the direction of pointer movement clockwise by the given angle. This "
 "is useful for devices that are held or mounted at an angle."
 msgstr ""
+"მოაბრუნებს მაჩვენებლის გადაადგილების მიმართულებას საათის მიმართულებით და "
+"მითითებული კუთხით. სასარგებლოა მოწყობილობებისთვის, რომლებიც დახრილად "
+"გიჭირავთ ან მიმაგრებულია."
 
 #: ui/RotationCalibrationWindow.qml:40
 #, kde-format
 msgctxt "@title:window"
 msgid "Measure Angle Adjustment"
-msgstr ""
+msgstr "კუთხის გასწორების გაზომვა"
 
 #: ui/RotationCalibrationWindow.qml:152
 #, kde-format
 msgctxt "@info %1 is the name of a pointing device"
 msgid "Please make sure you are using the device “%1”."
-msgstr ""
+msgstr "დარწმუნდით, რომ იყენებთ მოწყობილობას \"%1\"."
 
 #: ui/RotationCalibrationWindow.qml:161
 #, kde-format
 msgctxt "@info %1 is an angle in degrees"
 msgid "The measured angle is %1°."
-msgstr ""
+msgstr "გაზომილი კუთხეა %1°."
 
 #: ui/RotationCalibrationWindow.qml:162
 #, kde-format
@@ -316,32 +319,33 @@ msgid ""
 "left and right to you. Don't watch the pointer: it doesn't matter which way "
 "it moves on the screen."
 msgstr ""
+"გადააადგილეთ თაგუნა წინ და უკან რამდენიმეჯერ მიმართულებთ, რომელიც თქვეთვის "
+"მარჯვენა ან მარცხენაა. არ უყუროთ მაჩვენებელს. იმას, რა მიმართულებით დადის "
+"ის, მნიშვნელობა არ აქვს."
 
 #: ui/RotationCalibrationWindow.qml:179
 #, kde-format
 msgctxt "@action:button Use the measured angle adjustment"
 msgid "&OK"
-msgstr ""
+msgstr "&დიახ"
 
 #: ui/RotationCalibrationWindow.qml:189
 #, kde-format
 msgctxt "@action:button Angle adjustment calibration"
 msgid "&Measure Again"
-msgstr ""
+msgstr "კიდევ ერთხელ გაზო&მვა"
 
 #: ui/RotationCalibrationWindow.qml:196
 #, kde-format
 msgctxt "@action:button Discard the measured angle adjustment"
 msgid "&Discard"
-msgstr ""
+msgstr "&მოცილება"
 
 #: ui/RotationCalibrationWindow.qml:197
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button Angle adjustment calibration"
 msgid "&Cancel"
-msgstr "შეწყვეტა"
+msgstr "&გაუქმება"
 
 #~ msgctxt "@option:check"
 #~ msgid "Hold down middle button and move mouse to scroll"

@@ -9,19 +9,20 @@
 # Rinse de Vries <rinsedevries@kde.nl>, 2004, 2005, 2008.
 # SPDX-FileCopyrightText: 2009, 2013, 2019, 2020, 2021, 2022, 2024, 2025, 2026 Freek de Kruijf <f.de.kruijf@hetnet.nl>
 # SPDX-FileCopyrightText: 2024 pieter <pieterkristensen@gmail.com>
+# SPDX-FileCopyrightText: 2026 freek <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-25 01:27+0000\n"
-"PO-Revision-Date: 2026-02-17 12:34+0100\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"PO-Revision-Date: 2026-11-25 13:55+0100\n"
+"Last-Translator: freek <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.04.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
@@ -121,18 +122,16 @@ msgid "Session Restore"
 msgstr "Sessie herstellen"
 
 #: ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "On login"
+#, kde-format
 msgctxt "@title:group prefix for radiobuttons"
 msgid "On login:"
-msgstr "Bij aanmelden"
+msgstr "Bij aanmelden:"
 
 #: ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "Restore previous saved session"
+#, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "Restore apps from previous session"
-msgstr "Vorige opgeslagen sessie herstellen"
+msgstr "Toepassingen van vorige sessie herstellen"
 
 #: ui/main.qml:93
 #, kde-format
@@ -141,22 +140,18 @@ msgid ""
 "When you log back in, Plasma will automatically reopen applications and "
 "windows that were running when you last logged out."
 msgstr ""
+"Wanneer u opnieuw zich aanmeldt, zal Plasma automatisch de toepassingen en "
+"vensters heropenen die actief waren op het moment dat u de vorige keer zich "
+"afmeldde."
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "Restore previous saved session"
+#, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "Restore manually saved session"
-msgstr "Vorige opgeslagen sessie herstellen"
+msgstr "Handmatig opgeslagen sessie herstellen"
 
 #: ui/main.qml:112
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "A <interface>Save Session</interface> button will appear in the "
-#| "<interface>Application Launcher</interface> menu. When you click it, "
-#| "Plasma will remember the apps that are open and restore them on the next "
-#| "login. Click it again to replace the set of remembered apps."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Adds a <interface>Save Session</interface> button to the "
@@ -164,30 +159,23 @@ msgid ""
 "will remember the open apps and restore them on the next login. Click it "
 "again to replace the set of remembered apps."
 msgstr ""
-"Een knop <interface>Sessie opslaan</interface> zal in het menu "
+"Voegt een knop <interface>Sessie opslaan</interface> toe aan het menu "
 "<interface>Toepassingenstarter</interface> verschijnen. Wanneer u er op "
 "klikt, zal Plasma de toepassingen onthouden die open waren en ze herstellen "
 "bij de volgende keer aanmelden. Klik er nog eens op om de set van onthouden "
 "toepassingen te vervangen."
 
 #: ui/main.qml:121
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@option:radio Here 'session' refers to the technical concept of session "
-#| "restoration, whereby the windows that were open on logout are re-opened "
-#| "on the next login"
-#| msgid "Start with an empty session"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Start with an empty session"
 msgstr "Met een lege sessie opstarten"
 
 #: ui/main.qml:134
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Ignored Applications…"
-msgstr "Genegeerde toepassingen:"
+msgstr "Genegeerde toepassingen configureren…"
 
 #: ui/main.qml:148
 #, kde-format
@@ -197,54 +185,53 @@ msgid ""
 "apps. Use each application's desktop file identifier (e.g. org.kde.kate."
 "desktop) or, for XWayland apps, its executable name (e.g. xterm)."
 msgstr ""
+"Voorkom dat specifieke toepassingen automatisch starten samen met andere "
+"toepassingen die bij het herstellen van een sessie worden teruggezet. "
+"Gebruik hiervoor de identificatie van het desktopbestand van de betreffende "
+"toepassing (bijv. org.kde.kate.desktop) of, voor XWayland-toepassingen, de "
+"naam van het uitvoerbare bestand (bijv. xterm)."
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@title:dialog"
 msgid "Ignored Applications"
-msgstr "Genegeerde toepassingen:"
+msgstr "Genegeerde toepassingen"
 
 #: ui/main.qml:171
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter application (e.g. org.kde.kate.desktop or xterm)"
-msgstr ""
+msgstr "Voer toepassing in (bijv. org.kde.kate.desktop of xterm)"
 
 #: ui/main.qml:177
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Ignore this Application"
-msgstr "Genegeerde toepassingen:"
+msgstr "Deze toepassingen negeren"
 
 #: ui/main.qml:179
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Ignored applications:"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Add %1 to the list of ignored applications"
-msgstr "Genegeerde toepassingen:"
+msgstr "Voeg %1 toe aan de lijst met genegeerde toepassingen"
 
 #: ui/main.qml:180
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Add an application to the list of ignored applications"
-msgstr ""
+msgstr "Voeg een toepassing toe aan de lijst met genegeerde toepassingen"
 
 #: ui/main.qml:214
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove"
-msgstr ""
+msgstr "Verwijderen"
 
 #: ui/main.qml:215
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Remove %1 from the list of ignored applications"
-msgstr ""
+msgstr "Verwijder %1 uit de lijst met genegeerde toepassingen"
 
 #~ msgctxt "@title:group"
 #~ msgid "General"

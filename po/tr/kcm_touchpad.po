@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: playground-utils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-17 00:51+0000\n"
+"POT-Creation-Date: 2026-11-26 01:06+0000\n"
 "PO-Revision-Date: 2026-11-23 18:16+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -112,43 +112,74 @@ msgctxt "@option:check"
 msgid "Enable device"
 msgstr "Aygıtı etkinleştir"
 
-#: ui/main.qml:126
-#, kde-format
-msgctxt "@option:check"
-msgid "Disable while mouse is connected"
-msgstr "Fare takılıyken devre dışı bırak"
-
-#: ui/main.qml:144
-#, kde-format
-msgctxt "option:check"
-msgid "Disable while typing"
+#: ui/main.qml:128
+#, fuzzy, kde-format
+#| msgctxt "option:check"
+#| msgid "Disable while typing"
+msgctxt "@title:group prefix for checkbox group"
+msgid "Disable while:"
 msgstr "Yazarken devre dışı bırak"
 
-#: ui/main.qml:145
+#: ui/main.qml:129
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Disable while mouse is connected"
+msgctxt "@option:check Completes the sentence 'Disable while:'"
+msgid "Mouse is connected"
+msgstr "Fare takılıyken devre dışı bırak"
+
+#: ui/main.qml:149
+#, kde-format
+msgctxt "@option:check Completes the sentence 'Disable while:'"
+msgid "Typing; re-enable after:"
+msgstr ""
+
+#: ui/main.qml:150
 #, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
 msgstr "Bu ayar, oyun oynarken sorun çıkarabilir."
 
-#: ui/main.qml:165
+#: ui/main.qml:177 ui/main.qml:231
+#, kde-format
+msgctxt "short for millisecond(s)"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/main.qml:181 ui/main.qml:235
+#, fuzzy, kde-format
+#| msgid " ms"
+msgctxt "short for millisecond(s)"
+msgid "ms"
+msgstr " ms"
+
+#: ui/main.qml:204
+#, kde-format
+msgctxt "@option:check Completes the sentence 'Disable while:'"
+msgid "Using trackpoint; re-enable after:"
+msgstr ""
+
+#: ui/main.qml:256
 #, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
 msgstr "Sol ve sağ düğmeleri:"
 
-#: ui/main.qml:166
+#: ui/main.qml:257
 #, kde-format
 msgctxt "@option:check"
 msgid "Swap (left-handed mode)"
 msgstr "Birbirleriyle değiştir (sol el kipi)"
 
-#: ui/main.qml:184
+#: ui/main.qml:275
 #, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
 msgstr "Orta tık için her ikisine de aynı anda bas"
 
-#: ui/main.qml:197
+#: ui/main.qml:288
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -159,7 +190,7 @@ msgstr ""
 "ek gecikme, aynı anda yapılan düğme basımlarını düzgünce algılayabilmek için "
 "gereklidir."
 
-#: ui/main.qml:198
+#: ui/main.qml:289
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -169,19 +200,19 @@ msgstr ""
 "Bu ayar, “Sağ tık için: İki parmakla herhangi bir yere bas” seçiliyken "
 "kullanılamaz."
 
-#: ui/main.qml:208
+#: ui/main.qml:299
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "İşaretçi hızı:"
 
-#: ui/main.qml:288
+#: ui/main.qml:379
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "İşaretçi ivmelendirmesini etkinleştir"
 
-#: ui/main.qml:300
+#: ui/main.qml:391
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -190,25 +221,25 @@ msgstr ""
 "Etkinleştirildiğinde, işaretçi hareketinin uzaklığı daha hızlı hareketle "
 "artar."
 
-#: ui/main.qml:311
+#: ui/main.qml:402
 #, kde-format
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "Sarma hızı:"
 
-#: ui/main.qml:393
+#: ui/main.qml:484
 #, kde-format
 msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "Daha yavaş"
 
-#: ui/main.qml:400
+#: ui/main.qml:491
 #, kde-format
 msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "Daha hızlı"
 
-#: ui/main.qml:407
+#: ui/main.qml:498
 #, kde-format
 msgctxt ""
 "@title group begins the sentence 'Scroll by moving two fingers anywhere/"
@@ -216,33 +247,33 @@ msgctxt ""
 msgid "Scroll by:"
 msgstr "Sarmak için:"
 
-#: ui/main.qml:410
+#: ui/main.qml:501
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr "İki parmağı herhangi bir yerde hareket ettir"
 
-#: ui/main.qml:428
+#: ui/main.qml:519
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr "Tek parmağı bir kenarda hareket ettir"
 
-#: ui/main.qml:437
+#: ui/main.qml:528
 #, kde-format
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Sarma yönünü ters çevir (Doğal sarma)"
 
-#: ui/main.qml:454
+#: ui/main.qml:545
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "Yatay sarmayı devre dışı bırak"
 
-#: ui/main.qml:472
+#: ui/main.qml:563
 #, kde-format
 msgctxt ""
 "@title:group for radiobutton group, begins the sentence 'right-click by "
@@ -250,7 +281,7 @@ msgctxt ""
 msgid "Right-click by:"
 msgstr "Sağ tık için:"
 
-#: ui/main.qml:478
+#: ui/main.qml:569
 #, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-left "
@@ -258,7 +289,7 @@ msgctxt ""
 msgid "Pressing bottom-left corner"
 msgstr "Sol alt köşeye bas"
 
-#: ui/main.qml:479
+#: ui/main.qml:570
 #, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-right "
@@ -266,19 +297,19 @@ msgctxt ""
 msgid "Pressing bottom-right corner"
 msgstr "Sağ alt köşeye bas"
 
-#: ui/main.qml:485
+#: ui/main.qml:576
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "Orta tık için her iki alt köşeye aynı anda basın."
 
-#: ui/main.qml:486
+#: ui/main.qml:577
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Orta tık için alt kısmın ortasına basın."
 
-#: ui/main.qml:508
+#: ui/main.qml:599
 #, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing with two "
@@ -286,31 +317,31 @@ msgctxt ""
 msgid "Pressing anywhere with two fingers"
 msgstr "İki parmakla herhangi bir yere bas"
 
-#: ui/main.qml:509
+#: ui/main.qml:600
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
 msgstr "Orta tık için herhangi bir yere üç parmakla basın."
 
-#: ui/main.qml:526
+#: ui/main.qml:617
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Vuruş:"
 
-#: ui/main.qml:527
+#: ui/main.qml:618
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap to click"
 msgstr "Tıklamak için vur"
 
-#: ui/main.qml:542
+#: ui/main.qml:633
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr "Vuruş sonrası sürüklemeye izin ver"
 
-#: ui/main.qml:554
+#: ui/main.qml:645
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -320,38 +351,38 @@ msgstr ""
 "Sürüklemek için vurun, sonra hemen vurup parmağınızı dokunmatik yüzey "
 "üzerinde kaydırın. Bırakmak için parmağınızı kaldırın."
 
-#: ui/main.qml:561
+#: ui/main.qml:652
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr ""
 "Vurup sürükleme sırasında parmağı kısa bir süreliğine kaldırmaya olanak tanı"
 
-#: ui/main.qml:574
+#: ui/main.qml:665
 #, kde-format
 msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "İki parmakla vuruş:"
 
-#: ui/main.qml:579
+#: ui/main.qml:670
 #, kde-format
 msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "Sağ tık"
 
-#: ui/main.qml:582
+#: ui/main.qml:673
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by tapping anywhere with three fingers."
 msgstr "Orta tık için herhangi bir yere üç parmakla dokunun."
 
-#: ui/main.qml:604
+#: ui/main.qml:695
 #, kde-format
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "Orta tık"
 
-#: ui/main.qml:607
+#: ui/main.qml:698
 #, kde-format
 msgctxt "@info:usagetip shown below radio button"
 msgid "Right-click by tapping anywhere with three fingers."
@@ -691,9 +722,6 @@ msgstr "Orta tık için herhangi bir yere üç parmakla dokunun."
 #~ msgstr ""
 #~ "Eğer belirtilen milisaniye süresinden daha uzun süre klavye\n"
 #~ "etkinliği olmamışsa dokunmatik yüzey yeniden etkinleştirilecek"
-
-#~ msgid " ms"
-#~ msgstr " ms"
 
 #~ msgid ""
 #~ "Disable click emulation and scrolling.\n"

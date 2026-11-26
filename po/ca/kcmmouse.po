@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-25 01:27+0000\n"
-"PO-Revision-Date: 2026-09-04 09:54+0200\n"
+"PO-Revision-Date: 2026-11-25 11:01+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -280,19 +280,19 @@ msgstr ""
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Angle adjustment:"
-msgstr ""
+msgstr "Ajust de l'angle:"
 
 #: ui/main.qml:446
 #, kde-format
 msgctxt "@label:valuesuffix %1 is an angle in degrees"
 msgid "%1°"
-msgstr ""
+msgstr "%1°"
 
 #: ui/main.qml:466
 #, kde-format
 msgctxt "@action:button Measure angle adjustment"
 msgid "Measure…"
-msgstr ""
+msgstr "Mesura…"
 
 #: ui/main.qml:473
 #, kde-format
@@ -301,24 +301,27 @@ msgid ""
 "Rotates the direction of pointer movement clockwise by the given angle. This "
 "is useful for devices that are held or mounted at an angle."
 msgstr ""
+"Gira la direcció del moviment del punter en el sentit de les agulles del "
+"rellotge segons l'angle indicat. Això és útil per a dispositius que es "
+"mantenen o munten amb un angle."
 
 #: ui/RotationCalibrationWindow.qml:40
 #, kde-format
 msgctxt "@title:window"
 msgid "Measure Angle Adjustment"
-msgstr ""
+msgstr "Mesura l'ajust de l'angle"
 
 #: ui/RotationCalibrationWindow.qml:152
 #, kde-format
 msgctxt "@info %1 is the name of a pointing device"
 msgid "Please make sure you are using the device “%1”."
-msgstr ""
+msgstr "Assegureu-vos que utilitzeu el dispositiu «%1»."
 
 #: ui/RotationCalibrationWindow.qml:161
 #, kde-format
 msgctxt "@info %1 is an angle in degrees"
 msgid "The measured angle is %1°."
-msgstr ""
+msgstr "L'angle mesurat és %1°."
 
 #: ui/RotationCalibrationWindow.qml:162
 #, kde-format
@@ -328,32 +331,33 @@ msgid ""
 "left and right to you. Don't watch the pointer: it doesn't matter which way "
 "it moves on the screen."
 msgstr ""
+"Moveu el ratolí enrere i endavant unes quantes vegades, en la direcció que "
+"sentiu l'esquerra i la dreta. No mireu el punter: no importa com es mogui a "
+"la pantalla."
 
 #: ui/RotationCalibrationWindow.qml:179
 #, kde-format
 msgctxt "@action:button Use the measured angle adjustment"
 msgid "&OK"
-msgstr ""
+msgstr "D'ac&ord"
 
 #: ui/RotationCalibrationWindow.qml:189
 #, kde-format
 msgctxt "@action:button Angle adjustment calibration"
 msgid "&Measure Again"
-msgstr ""
+msgstr "Torna a &mesurar"
 
 #: ui/RotationCalibrationWindow.qml:196
 #, kde-format
 msgctxt "@action:button Discard the measured angle adjustment"
 msgid "&Discard"
-msgstr ""
+msgstr "&Descarta"
 
 #: ui/RotationCalibrationWindow.qml:197
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button Angle adjustment calibration"
 msgid "&Cancel"
-msgstr "Cancel·la"
+msgstr "&Cancel·la"
 
 #~ msgctxt "@option:check"
 #~ msgid "Hold down middle button and move mouse to scroll"

@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-25 01:27+0000\n"
-"PO-Revision-Date: 2026-11-23 18:16+0300\n"
+"PO-Revision-Date: 2026-11-25 18:04+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -282,19 +282,19 @@ msgstr ""
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Angle adjustment:"
-msgstr ""
+msgstr "Açı ayarı:"
 
 #: ui/main.qml:446
 #, kde-format
 msgctxt "@label:valuesuffix %1 is an angle in degrees"
 msgid "%1°"
-msgstr ""
+msgstr "%1°"
 
 #: ui/main.qml:466
 #, kde-format
 msgctxt "@action:button Measure angle adjustment"
 msgid "Measure…"
-msgstr ""
+msgstr "Ölç…"
 
 #: ui/main.qml:473
 #, kde-format
@@ -303,24 +303,26 @@ msgid ""
 "Rotates the direction of pointer movement clockwise by the given angle. This "
 "is useful for devices that are held or mounted at an angle."
 msgstr ""
+"İşaretçinin hareket yönünü verilen açı kadar saat yönünde döndürür. Bu, "
+"belirli bir açıyla tutulan veya monte edilen aygıtlar için kullanışlıdır."
 
 #: ui/RotationCalibrationWindow.qml:40
 #, kde-format
 msgctxt "@title:window"
 msgid "Measure Angle Adjustment"
-msgstr ""
+msgstr "Açı Ayarını Ölç"
 
 #: ui/RotationCalibrationWindow.qml:152
 #, kde-format
 msgctxt "@info %1 is the name of a pointing device"
 msgid "Please make sure you are using the device “%1”."
-msgstr ""
+msgstr "Lütfen, “%1” aygıtını kullandığınızdan emin olun."
 
 #: ui/RotationCalibrationWindow.qml:161
 #, kde-format
 msgctxt "@info %1 is an angle in degrees"
 msgid "The measured angle is %1°."
-msgstr ""
+msgstr "Ölçülen açı %1°."
 
 #: ui/RotationCalibrationWindow.qml:162
 #, kde-format
@@ -330,32 +332,33 @@ msgid ""
 "left and right to you. Don't watch the pointer: it doesn't matter which way "
 "it moves on the screen."
 msgstr ""
+"Fareyi, size sol ve sağ gibi gelen yönde birkaç kez ileri geri hareket "
+"ettirin. İşaretçiyi izlemeyin: Ekranda hangi yöne hareket ettiği önemli "
+"değildir."
 
 #: ui/RotationCalibrationWindow.qml:179
 #, kde-format
 msgctxt "@action:button Use the measured angle adjustment"
 msgid "&OK"
-msgstr ""
+msgstr "&Tamam"
 
 #: ui/RotationCalibrationWindow.qml:189
 #, kde-format
 msgctxt "@action:button Angle adjustment calibration"
 msgid "&Measure Again"
-msgstr ""
+msgstr "&Yeniden Ölç"
 
 #: ui/RotationCalibrationWindow.qml:196
 #, kde-format
 msgctxt "@action:button Discard the measured angle adjustment"
 msgid "&Discard"
-msgstr ""
+msgstr "&At"
 
 #: ui/RotationCalibrationWindow.qml:197
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button Angle adjustment calibration"
 msgid "&Cancel"
-msgstr "İptal"
+msgstr "İ&ptal"
 
 #~ msgctxt "@option:check"
 #~ msgid "Hold down middle button and move mouse to scroll"

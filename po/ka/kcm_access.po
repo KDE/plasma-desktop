@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-18 01:12+0000\n"
-"PO-Revision-Date: 2026-11-06 05:37+0100\n"
+"PO-Revision-Date: 2026-11-25 14:16+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -712,7 +712,7 @@ msgstr "გადიდება და გამადიდებელი შ
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Text Size"
-msgstr ""
+msgstr "ტექსტის ზომა"
 
 #: ui/main.qml:39
 #, kde-format
@@ -999,14 +999,15 @@ msgid ""
 "keeps their proportions; on low-resolution screens, some small graphics may "
 "look slightly blurry."
 msgstr ""
+"რეკომენდებულია უმეტესი სიტუაციებისთვის. გაადიდებს ტექსტს და დანარჩენ "
+"ყველაფერს და ინარჩუნებს მათ პროპორციებს. დაბალი გაფართოების მქონე ეკრანებზე "
+"ზოგიერთი პატარა გრაფიკა, შეიძლება, ოდნავ ბუნდოვნად გამოჩნდეს."
 
 #: ui/TextSize.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Display Scale…"
-msgstr "მალსახმობების მორგება…"
+msgstr "ეკრანის მასშტაბის მორგება…"
 
 #: ui/TextSize.qml:25
 #, kde-format
@@ -1016,14 +1017,15 @@ msgid ""
 "changes can make text no longer fit or look good next to icons and other "
 "elements."
 msgstr ""
+"გამოდგება, მხოლოდ, მცირე ზომის ცვლილებებისთვის. ცვლის, მხოლოდ, ტექსტს, ასე "
+"რომ დიდი ცვლილებებისას ტექსტის შეიძლება, აღარ ჩაეტიოს და ცუდად გამოჩნდეს "
+"ხატულების და სხვა ელემენტების გვერდით."
 
 #: ui/TextSize.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Shortcuts…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Fonts…"
-msgstr "მალსახმობების მორგება…"
+msgstr "ფონტების მორგება…"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 01:10+0000\n"
-"PO-Revision-Date: 2026-11-09 10:18+0100\n"
+"PO-Revision-Date: 2026-11-25 15:06+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -233,22 +233,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Text Cursor"
-msgstr ""
+msgstr "ტექსტის კურსორი"
 
 #: ui/main.qml:314
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Double-click interval:"
+#, kde-format
 msgctxt "@option:check followed by a spinbox"
 msgid "Blink with interval:"
-msgstr "ორმაგი წკაპის ინტერვალი:"
+msgstr "ციმციმი ინტერვალით:"
 
 #: ui/main.qml:347
-#, fuzzy, kde-format
-#| msgid "Double click interval"
+#, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Text cursor blink interval"
-msgstr "ორმაგი წკაპის ინტერვალი"
+msgstr "ტექსტის კურსორის ციმციმის ინტერვალი"
 
 #: ui/main.qml:358
 #, kde-format
@@ -258,6 +255,10 @@ msgid ""
 "browsers. May be ignored by apps with their own cursor settings, such as "
 "some terminals and code editors."
 msgstr ""
+"ეხება KDE-ის, Qt-ის და GTK-ის აპებს Firefox-ისა და Chromium-ზე დაფუძნებული "
+"ბრაუზერების ჩათვლით. შეიძლება დაიგნორებული იყოს აპლიკაციების მიერ, რომლებსაც "
+"საკუთარი კურსორის პარამეტრები აქვთ, როგორიცაა ტერმინალები და კოდის "
+"რედაქტორები."
 
 #: ui/main.qml:364
 #, kde-format
@@ -395,7 +396,7 @@ msgstr "ორმაგი წკაპის ინტერვალი"
 #: workspaceoptions_kdeglobalssettings.kcfg:35
 #, kde-format
 msgid "Text cursor blink rate, 0 disables blinking"
-msgstr ""
+msgstr "ტექსტის კურსორის ციმციმის სიხშირე. 0 გამორთავს ციმციმს"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9

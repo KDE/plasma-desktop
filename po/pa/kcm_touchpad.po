@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-17 00:51+0000\n"
+"POT-Creation-Date: 2026-11-26 01:06+0000\n"
 "PO-Revision-Date: 2024-02-25 09:27-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -113,48 +113,75 @@ msgctxt "@option:check"
 msgid "Enable device"
 msgstr "ਸਮਰੱਥ"
 
-#: ui/main.qml:126
+#: ui/main.qml:128
 #, fuzzy, kde-format
 #| msgid "Disable while typing"
-msgctxt "@option:check"
-msgid "Disable while mouse is connected"
+msgctxt "@title:group prefix for checkbox group"
+msgid "Disable while:"
 msgstr "ਲਿਖਣ ਦੇ ਦੌਰਾਨ ਅਸਮਰੱਥ ਕਰੋ"
 
-#: ui/main.qml:144
+#: ui/main.qml:129
 #, fuzzy, kde-format
 #| msgid "Disable while typing"
-msgctxt "option:check"
-msgid "Disable while typing"
+msgctxt "@option:check Completes the sentence 'Disable while:'"
+msgid "Mouse is connected"
 msgstr "ਲਿਖਣ ਦੇ ਦੌਰਾਨ ਅਸਮਰੱਥ ਕਰੋ"
 
-#: ui/main.qml:145
+#: ui/main.qml:149
+#, kde-format
+msgctxt "@option:check Completes the sentence 'Disable while:'"
+msgid "Typing; re-enable after:"
+msgstr ""
+
+#: ui/main.qml:150
 #, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
 msgstr ""
 
-#: ui/main.qml:165
+#: ui/main.qml:177 ui/main.qml:231
+#, kde-format
+msgctxt "short for millisecond(s)"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/main.qml:181 ui/main.qml:235
+#, fuzzy, kde-format
+#| msgid " ms"
+msgctxt "short for millisecond(s)"
+msgid "ms"
+msgstr " ਮਿ.ਸ."
+
+#: ui/main.qml:204
+#, kde-format
+msgctxt "@option:check Completes the sentence 'Disable while:'"
+msgid "Using trackpoint; re-enable after:"
+msgstr ""
+
+#: ui/main.qml:256
 #, fuzzy, kde-format
 #| msgid "Swap left and right buttons."
 msgctxt "@title:group"
 msgid "Left and right buttons:"
 msgstr "ਖੱਬੇ ਤੇ ਸੱਜੇ ਬਟਨਾਂ ਨੂੰ ਆਪਸ ਵਿੱਚ ਬਦਲੋ।"
 
-#: ui/main.qml:166
+#: ui/main.qml:257
 #, fuzzy, kde-format
 #| msgid "Left handed mode"
 msgctxt "@option:check"
 msgid "Swap (left-handed mode)"
 msgstr "ਖੱਬੇ ਹੱਥਾ ਢੰਗ"
 
-#: ui/main.qml:184
+#: ui/main.qml:275
 #, fuzzy, kde-format
 #| msgid "Press left and right buttons for middle click"
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
 msgstr "ਵਿਚਲੇ ਬਟਨ ਕਲਿੱਕ ਲਈ ਖੱਬੇ ਅਤੇ ਸੱਜੇ ਦੋਵੇਂ ਬਟਨਾਂ ਨੂੰ ਦਬਾਓ"
 
-#: ui/main.qml:197
+#: ui/main.qml:288
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -162,7 +189,7 @@ msgid ""
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
 
-#: ui/main.qml:198
+#: ui/main.qml:289
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -170,35 +197,35 @@ msgid ""
 "two fingers” is selected."
 msgstr ""
 
-#: ui/main.qml:208
+#: ui/main.qml:299
 #, fuzzy, kde-format
 #| msgid "Pointer speed:"
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
 msgstr "ਪੁਆਇੰਟਰ ਦੀ ਗਤੀ:"
 
-#: ui/main.qml:288
+#: ui/main.qml:379
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
 msgctxt "@option:check"
 msgid "Enable pointer acceleration"
 msgstr "ਪੁਆਇੰਟਰ ਐਕਸਰਲੇਸ਼ਨ:"
 
-#: ui/main.qml:300
+#: ui/main.qml:391
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
 
-#: ui/main.qml:311
+#: ui/main.qml:402
 #, fuzzy, kde-format
 #| msgid "Scrolling speed:"
 msgctxt "@label:slider"
 msgid "Scrolling speed:"
 msgstr "ਸਰਕਾਉਣ ਦੀ ਗਤੀ:"
 
-#: ui/main.qml:393
+#: ui/main.qml:484
 #, fuzzy, kde-format
 #| msgctxt "Slower Scroll"
 #| msgid "Slower"
@@ -206,7 +233,7 @@ msgctxt "@item:inrange Slower Scroll"
 msgid "Slower"
 msgstr "ਵੱਧ ਹੌਲੀ"
 
-#: ui/main.qml:400
+#: ui/main.qml:491
 #, fuzzy, kde-format
 #| msgctxt "Faster Scroll Speed"
 #| msgid "Faster"
@@ -214,7 +241,7 @@ msgctxt "@item:inrange Faster Scroll Speed"
 msgid "Faster"
 msgstr "ਵੱਧ ਤੇਜ਼"
 
-#: ui/main.qml:407
+#: ui/main.qml:498
 #, fuzzy, kde-format
 #| msgid "Scrolling:"
 msgctxt ""
@@ -223,35 +250,35 @@ msgctxt ""
 msgid "Scroll by:"
 msgstr "ਸਰਕਾਉਣਾ:"
 
-#: ui/main.qml:410
+#: ui/main.qml:501
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving two fingers anywhere'"
 msgid "Moving two fingers anywhere"
 msgstr ""
 
-#: ui/main.qml:428
+#: ui/main.qml:519
 #, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'Scroll by moving one finger on edge'"
 msgid "Moving one finger on edge"
 msgstr ""
 
-#: ui/main.qml:437
+#: ui/main.qml:528
 #, fuzzy, kde-format
 #| msgid "Invert scroll direction (Natural scrolling)"
 msgctxt "@option:check"
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "ਉਲਟ ਸਕਰੋਲ ਦੀ ਦਿਸ਼ਾ (ਕੁਦਰਤੀ ਸਕਰੋਲਿੰਗ)"
 
-#: ui/main.qml:454
+#: ui/main.qml:545
 #, fuzzy, kde-format
 #| msgid "Disable horizontal scrolling"
 msgctxt "@option:check"
 msgid "Disable horizontal scrolling"
 msgstr "ਲੇਟਵੇ ਸਰਕਾਉਣਾ ਅਸਮਰੱਥ ਕਰੋ"
 
-#: ui/main.qml:472
+#: ui/main.qml:563
 #, fuzzy, kde-format
 #| msgid "Right-click"
 msgctxt ""
@@ -260,7 +287,7 @@ msgctxt ""
 msgid "Right-click by:"
 msgstr "ਸੱਜਾ-ਕਲਿੱਕ"
 
-#: ui/main.qml:478
+#: ui/main.qml:569
 #, fuzzy, kde-format
 #| msgid "Press bottom-right corner"
 msgctxt ""
@@ -269,7 +296,7 @@ msgctxt ""
 msgid "Pressing bottom-left corner"
 msgstr "ਹੇਠਾਂ-ਸੱਜਾ ਕੋਨਾ ਦਬਾਓ"
 
-#: ui/main.qml:479
+#: ui/main.qml:570
 #, fuzzy, kde-format
 #| msgid "Press bottom-right corner"
 msgctxt ""
@@ -278,21 +305,21 @@ msgctxt ""
 msgid "Pressing bottom-right corner"
 msgstr "ਹੇਠਾਂ-ਸੱਜਾ ਕੋਨਾ ਦਬਾਓ"
 
-#: ui/main.qml:485
+#: ui/main.qml:576
 #, fuzzy, kde-format
 #| msgid "Press anywhere with three fingers."
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਕਿਤੇ ਵੀ ਦਬਾਓ।"
 
-#: ui/main.qml:486
+#: ui/main.qml:577
 #, fuzzy, kde-format
 #| msgid "Press anywhere with three fingers."
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਕਿਤੇ ਵੀ ਦਬਾਓ।"
 
-#: ui/main.qml:508
+#: ui/main.qml:599
 #, fuzzy, kde-format
 #| msgid "Press anywhere with two fingers"
 msgctxt ""
@@ -301,34 +328,34 @@ msgctxt ""
 msgid "Pressing anywhere with two fingers"
 msgstr "ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਕਿਤੇ ਵੀ ਦਬਾਓ"
 
-#: ui/main.qml:509
+#: ui/main.qml:600
 #, fuzzy, kde-format
 #| msgid "Press anywhere with three fingers."
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
 msgstr "ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਕਿਤੇ ਵੀ ਦਬਾਓ।"
 
-#: ui/main.qml:526
+#: ui/main.qml:617
 #, fuzzy, kde-format
 #| msgid "Tapping:"
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "ਛੋਹਣਾ:"
 
-#: ui/main.qml:527
+#: ui/main.qml:618
 #, fuzzy, kde-format
 #| msgid "Tap to Click"
 msgctxt "@option:check"
 msgid "Tap to click"
 msgstr "ਕਲਿੱਕ ਕਰਨ ਲਈ ਛੋਹੋ"
 
-#: ui/main.qml:542
+#: ui/main.qml:633
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow dragging after tapping"
 msgstr ""
 
-#: ui/main.qml:554
+#: ui/main.qml:645
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -336,41 +363,41 @@ msgid ""
 "finger to drop."
 msgstr ""
 
-#: ui/main.qml:561
+#: ui/main.qml:652
 #, kde-format
 msgctxt "@option:check"
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr ""
 
-#: ui/main.qml:574
+#: ui/main.qml:665
 #, fuzzy, kde-format
 #| msgid "Two-finger tap:"
 msgctxt "@title:group"
 msgid "Two-finger tap:"
 msgstr "ਦੋ-ਉਂਗਲ ਨਾਲ ਟੈਪ:"
 
-#: ui/main.qml:579
+#: ui/main.qml:670
 #, fuzzy, kde-format
 #| msgid "Right-click"
 msgctxt "@option:radio"
 msgid "Right-click"
 msgstr "ਸੱਜਾ-ਕਲਿੱਕ"
 
-#: ui/main.qml:582
+#: ui/main.qml:673
 #, fuzzy, kde-format
 #| msgid "Press anywhere with three fingers."
 msgctxt "@info:usagetip shown below radio button"
 msgid "Middle-click by tapping anywhere with three fingers."
 msgstr "ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਕਿਤੇ ਵੀ ਦਬਾਓ।"
 
-#: ui/main.qml:604
+#: ui/main.qml:695
 #, fuzzy, kde-format
 #| msgid "Middle-click"
 msgctxt "@option:radio"
 msgid "Middle-click"
 msgstr "ਮੱਧ-ਕਲਿੱਕ"
 
-#: ui/main.qml:607
+#: ui/main.qml:698
 #, fuzzy, kde-format
 #| msgid "Press anywhere with three fingers."
 msgctxt "@info:usagetip shown below radio button"
@@ -676,9 +703,6 @@ msgstr "ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਕਿਤੇ ਵੀ ਦਬਾ�
 
 #~ msgid "Timeout:"
 #~ msgstr "ਸਮਾਂ-ਸਮਾਪਤ:"
-
-#~ msgid " ms"
-#~ msgstr " ਮਿ.ਸ."
 
 #~ msgid "Disable taps and scrolling only"
 #~ msgstr "ਸਿਰਫ਼ ਛੋਹਣਾ ਤੇ ਸਰਕਾਉਣਾ ਅਸਮਰੱਥ ਕਰੋ"
