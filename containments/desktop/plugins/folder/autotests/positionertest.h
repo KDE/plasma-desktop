@@ -53,7 +53,7 @@ private Q_SLOTS:
     void tst_convertDesktopPath();
 
 private:
-    void checkDefaultPositions(int perStripe);
+    void checkDefaultPositions(int totalRows);
     void ensureFolderModelReady();
     QJsonDocument getCurrentConfig();
     QHash<QString, Pos> getPositionHash(QStringList positions);

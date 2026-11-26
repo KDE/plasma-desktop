@@ -30,7 +30,7 @@ FocusScope {
     property alias currentIndex: gridView.currentIndex
     property alias url: dir.url
     property alias status: dir.status
-    property alias perStripe: positioner.perStripe
+    property alias totalRows: positioner.totalRows
     property alias positionerApplet: positioner.applet
     property alias errorString: dir.errorString
     property alias dragging: dir.dragging
@@ -899,15 +899,15 @@ FocusScope {
 
                 function rectangleSelect(x, y, width, height, rubberBand) {
                     const rows = (gridView.flow === GridView.FlowLeftToRight);
-                    const stripes = Math.ceil(gridView.count / positioner.perStripe);
+                    const stripes = Math.ceil(gridView.count / positioner.totalRows);
                     const cWidth = gridView.cellWidth - (2 * Kirigami.Units.smallSpacing);
                     const midWidth = gridView.cellWidth / 2;
                     const midHeight = gridView.cellHeight / 2;
                     let indices = [];
 
                     for (let s = 0; s < stripes; s++) {
-                        for (let i = 0; i < positioner.perStripe; i++) {
-                            let index = (s * positioner.perStripe) + i;
+                        for (let i = 0; i < positioner.totalRows; i++) {
+                            let index = (s * positioner.totalRows) + i;
 
                             if (index >= gridView.count) {
                                 break;
@@ -1280,14 +1280,14 @@ FocusScope {
                     let col = rows ? Math.floor(itemX / gridView.cellWidth) : Math.floor(itemY / gridView.cellHeight);
                     let row = rows ? Math.floor(itemY / gridView.cellHeight) : Math.floor(itemX / gridView.cellWidth);
 
-                    if (col <= positioner.perStripe) {
+                    if (col <= positioner.totalRows) {
                         // We have somehow moved the item outside of the available
                         // areas (usually during file creation), so make sure
-                        // the col is within perStripe
-                        if (col === positioner.perStripe) {
+                        // the col is within totalRows
+                        if (col === positioner.totalRows) {
                             col -= 1;
                         }
-                        endPositions = (row * positioner.perStripe) + col;
+                        endPositions = (row * positioner.totalRows) + col;
                         if (endPositions < 0) {
                             return;
                         }
@@ -1316,10 +1316,10 @@ FocusScope {
 
             folderModel: dir
 
-            optimalStripes: Math.floor((gridView.flow === GridView.FlowLeftToRight)
+            totalColumns: Math.floor((gridView.flow === GridView.FlowLeftToRight)
                 ? (gridView.height / gridView.cellHeight)
-                : (gridView.width / gridView.cellWidth))
-            perStripe: Math.floor((gridView.flow === GridView.FlowLeftToRight)
+                : (gridView.width / gridView.cellWidth)) - 1
+            totalRows: Math.floor((gridView.flow === GridView.FlowLeftToRight)
                 ? (gridView.width / gridView.cellWidth)
                 : (gridView.height / gridView.cellHeight))
 

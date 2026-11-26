@@ -60,7 +60,7 @@ void PositionerTest::init()
     m_positioner->setApplet(m_applet);
     m_positioner->setEnabled(true);
     m_positioner->setFolderModel(m_folderModel);
-    m_positioner->setPerStripe(3);
+    m_positioner->setTotalRows(3);
 
     m_folderModel->setUrl(m_folderDir->path() + QDir::separator() + desktop);
     QSignalSpy s(m_folderModel, &FolderModel::listingCompleted);
@@ -77,7 +77,7 @@ void PositionerTest::cleanup()
 
 void PositionerTest::tst_default_positions_data()
 {
-    QTest::addColumn<int>("perStripe");
+    QTest::addColumn<int>("totalRows");
     QTest::newRow("3 per column") << 3;
     QTest::newRow("5 per column") << 5;
 }
@@ -85,17 +85,17 @@ void PositionerTest::tst_default_positions_data()
 void PositionerTest::tst_default_positions()
 {
     // Ignore config with this test to see if positions are laid out as expected on first run
-    QFETCH(int, perStripe);
+    QFETCH(int, totalRows);
     QVERIFY(m_positioner->screenInUse());
     // Since we are not using configs, make sure our positions is clean before test
     m_positioner->reset();
     m_positioner->m_positionsHeader.reset();
     m_positioner->m_positions.clear();
-    m_positioner->m_perStripe = perStripe;
+    m_positioner->m_totalRows = totalRows;
     m_positioner->convertFolderModelData();
     m_positioner->updateResolution();
     m_positioner->updatePositionsList();
-    checkDefaultPositions(perStripe);
+    checkDefaultPositions(totalRows);
 }
 
 void PositionerTest::tst_map()
@@ -185,7 +185,7 @@ void PositionerTest::tst_defaultValues()
     Positioner positioner;
     QVERIFY(!positioner.enabled());
     QVERIFY(!positioner.folderModel());
-    QCOMPARE(positioner.perStripe(), 0);
+    QCOMPARE(positioner.totalRows(), 0);
     QVERIFY(positioner.positions().isEmpty());
 }
 
@@ -208,19 +208,19 @@ void PositionerTest::tst_changeEnabledStatus()
 void PositionerTest::tst_changePerStripe()
 {
     Positioner positioner;
-    QCOMPARE(positioner.perStripe(), 0);
-    QSignalSpy s(&positioner, &Positioner::perStripeChanged);
-    positioner.setPerStripe(1);
+    QCOMPARE(positioner.totalRows(), 0);
+    QSignalSpy s(&positioner, &Positioner::totalRowsChanged);
+    positioner.setTotalRows(1);
     QCOMPARE(s.count(), 0); // No change without foldermodel, since foldermodel holds screen information
     positioner.setFolderModel(m_folderModel);
-    positioner.setPerStripe(1);
+    positioner.setTotalRows(1);
     QCOMPARE(s.count(), 1);
 
     // No change
-    positioner.setPerStripe(1);
+    positioner.setTotalRows(1);
     QCOMPARE(s.count(), 1);
 
-    positioner.setPerStripe(4);
+    positioner.setTotalRows(4);
     QCOMPARE(s.count(), 2);
 }
 
@@ -236,7 +236,7 @@ void PositionerTest::tst_proxyMapping()
     Positioner secondPositioner;
     secondPositioner.setEnabled(true);
     secondPositioner.setFolderModel(&secondFolderModel);
-    secondPositioner.setPerStripe(3);
+    secondPositioner.setTotalRows(3);
 
     QSignalSpy s2(&secondFolderModel, &FolderModel::listingCompleted);
     QVERIFY(s2.wait(1000));
@@ -326,14 +326,14 @@ void PositionerTest::tst_configSaveLoad()
     auto baselineConfig = getCurrentConfig();
 
     // set stripe to 5
-    m_positioner->setPerStripe(5);
+    m_positioner->setTotalRows(5);
     m_positioner->updatePositionsList();
     // The config should be identical since we did not allow saving
     m_positioner->loadAndApplyPositionsConfig();
     QCOMPARE(baselineConfig, getCurrentConfig());
 
     // Set stripe to 4, the config should be different
-    m_positioner->setPerStripe(4);
+    m_positioner->setTotalRows(4);
     m_positioner->updatePositionsList();
     m_positioner->savePositionsConfig();
     m_positioner->loadAndApplyPositionsConfig();
@@ -434,23 +434,23 @@ void PositionerTest::tst_mixedSetPerStripeListingAndReady()
         return m_positioner->m_positions.value(firstUrl, {-1, -1});
     };
 
-    const auto perStripe = m_positioner->perStripe();
-    QCOMPARE_GT(perStripe, 1);
+    const auto totalRows = m_positioner->totalRows();
+    QCOMPARE_GT(totalRows, 1);
 
-    const int newPos = m_positioner->m_positions.size() + perStripe + 1;
+    const int newPos = m_positioner->m_positions.size() + totalRows + 1;
     m_positioner->move({0, newPos});
 
     auto newGridPos = getFirstGridPos();
-    QCOMPARE(newGridPos.stripe, newPos / perStripe);
-    QCOMPARE(newGridPos.pos, newPos % perStripe);
+    QCOMPARE(newGridPos.stripe, newPos / totalRows);
+    QCOMPARE(newGridPos.pos, newPos % totalRows);
 
     m_folderModel->refresh();
     QTRY_COMPARE(m_folderModel->status(), FolderModel::Listing);
 
-    m_positioner->setPerStripe(1);
+    m_positioner->setTotalRows(1);
     QVERIFY(m_positioner->m_deferApplyPositions);
     ensureFolderModelReady();
-    m_positioner->setPerStripe(perStripe);
+    m_positioner->setTotalRows(totalRows);
 
     auto gridPos = getFirstGridPos();
     QCOMPARE(gridPos.stripe, newGridPos.stripe);
@@ -496,12 +496,12 @@ QHash<QString, Pos> PositionerTest::getPositionHash(QStringList positions)
     return posHash;
 }
 
-void PositionerTest::checkDefaultPositions(int perStripe)
+void PositionerTest::checkDefaultPositions(int totalRows)
 {
     ensureFolderModelReady();
-    QCOMPARE(perStripe, m_positioner->perStripe());
-    QCOMPARE(m_positioner->positions().at(0).toInt(), 1 + ((m_positioner->rowCount() - 1) / perStripe)); // rows
-    QCOMPARE(m_positioner->positions().at(1).toInt(), perStripe); // columns
+    QCOMPARE(totalRows, m_positioner->totalRows());
+    QCOMPARE(m_positioner->positions().at(0).toInt(), 1 + ((m_positioner->rowCount() - 1) / totalRows)); // rows
+    QCOMPARE(m_positioner->positions().at(1).toInt(), totalRows); // columns
     const auto currentPositions = getPositionHash(m_positioner->positions());
     // Checking default positions ignores configuration completely
     // instead, it compares that the default values match, since the
@@ -520,7 +520,7 @@ void PositionerTest::checkDefaultPositions(int perStripe)
         QCOMPARE(pos.x, row);
         QCOMPARE(pos.y, col);
         col++;
-        if (col == perStripe) {
+        if (col == totalRows) {
             row++;
             col = 0;
         }
@@ -538,7 +538,7 @@ void PositionerTest::ensureFolderModelReady()
 void PositionerTest::changeResolution(const QSize &resolution)
 {
     m_folderModel->setScreenResolution(resolution);
-    m_positioner->setPerStripe(m_positioner->m_perStripe);
+    m_positioner->setTotalRows(m_positioner->m_totalRows);
 }
 
 #include "moc_positionertest.cpp"

@@ -23,19 +23,19 @@ class Positioner : public QAbstractItemModel
     Q_PROPERTY(Plasma::Applet *applet READ applet WRITE setApplet NOTIFY appletChanged)
     Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
     Q_PROPERTY(FolderModel *folderModel READ folderModel WRITE setFolderModel NOTIFY folderModelChanged)
-    Q_PROPERTY(int perStripe READ perStripe WRITE setPerStripe NOTIFY perStripeChanged)
-    Q_PROPERTY(int optimalStripes MEMBER m_optimalStripes)
+    Q_PROPERTY(int totalRows READ totalRows WRITE setTotalRows NOTIFY totalRowsChanged)
+    Q_PROPERTY(int totalColumns READ totalColumns WRITE setTotalColumns NOTIFY totalColumnsChanged)
 
     struct PositionsHeader {
-        int numStripes;
-        int perStripe;
+        int totalColumns;
+        int totalRows;
     };
 
     struct GridPosition {
         bool operator==(const GridPosition &other) const = default;
 
-        int stripe;
-        int pos;
+        int column;
+        int row;
     };
 
 public:
@@ -48,8 +48,11 @@ public:
     FolderModel *folderModel() const;
     void setFolderModel(QObject *folderModel);
 
-    int perStripe() const;
-    void setPerStripe(int perStripe);
+    int totalRows() const;
+    void setTotalRows(int totalRows);
+
+    int totalColumns() const;
+    void setTotalColumns(const int &newTotalColumns);
 
     Q_INVOKABLE int map(int row) const;
 
@@ -119,7 +122,8 @@ public:
 Q_SIGNALS:
     void enabledChanged() const;
     void folderModelChanged() const;
-    void perStripeChanged() const;
+    void totalRowsChanged() const;
+    void totalColumnsChanged();
     void appletChanged() const;
 
 private Q_SLOTS:
@@ -148,7 +152,7 @@ private:
     // Converts data from folderModel to proxy data
     void convertFolderModelData();
     // Turns proxyToSource data into positions QStringList
-    void updatePositionsList(int perStripeForPositions = 0);
+    void updatePositionsList(int totalRowsForPositions = 0);
     void flushPendingChanges();
     void connectSignals(FolderModel *model);
     void disconnectSignals(FolderModel *model);
@@ -158,8 +162,8 @@ private:
     bool m_enabled;
     FolderModel *m_folderModel;
 
-    int m_perStripe;
-    int m_optimalStripes = 0;
+    int m_totalRows;
+    int m_totalColumns = 0;
 
     QModelIndexList m_pendingChanges;
     bool m_ignoreNextTransaction;
