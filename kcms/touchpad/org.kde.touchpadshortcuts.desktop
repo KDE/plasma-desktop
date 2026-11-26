@@ -146,6 +146,7 @@ Name[sr@ijekavianlatin]=Isključi dodirnik
 Name[sr@latin]=Isključi dodirnik
 Name[sv]=Inaktivera tryckplatta
 Name[uk]=Вимкнути сенсорну панель
+Name[zh_CN]=禁用触摸板
 Name[zh_TW]=關閉觸控板
 Exec=dbus-send --type=method_call --print-reply --dest=org.kde.touchpad /modules/kded_touchpad org.kde.touchpad.disable
 X-KDE-Shortcuts=Touchpad Off
@@ -182,6 +183,7 @@ Name[sr@ijekavianlatin]=Uključi/isključi dodirnik
 Name[sr@latin]=Uključi/isključi dodirnik
 Name[sv]=Växla tryckplatta
 Name[uk]=Увімкнути або вимкнути сенсорну панель
+Name[zh_CN]=开关触摸板
 Name[zh_TW]=切換觸控板
 Exec=dbus-send --type=method_call --print-reply --dest=org.kde.touchpad /modules/kded_touchpad org.kde.touchpad.toggle
 X-KDE-Shortcuts=Touchpad Toggle\tMeta+Ctrl+Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku
