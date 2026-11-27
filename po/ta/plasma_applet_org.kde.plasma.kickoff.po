@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:48+0000\n"
+"POT-Creation-Date: 2026-11-26 04:39+0000\n"
 "PO-Revision-Date: 2026-04-12 18:18+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -48,19 +48,19 @@ msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "பொதுவானவை"
 
-#: ConfigGeneral.qml:47
+#: ConfigGeneral.qml:48
 #, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "சின்னம்:"
 
-#: ConfigGeneral.qml:53
+#: ConfigGeneral.qml:54
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "செயலி ஏவியின் சின்னத்தை மாற்று"
 
-#: ConfigGeneral.qml:54
+#: ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -69,103 +69,103 @@ msgid ""
 msgstr ""
 "தற்போதைய சின்னம் %1 ஆகும். சின்னத்தை மாற்றவோ இயல்பிருப்புக்கு மீட்டமைக்கவோ கிளிக் செய்யுங்கள்."
 
-#: ConfigGeneral.qml:58
+#: ConfigGeneral.qml:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "சின்னத்தின் பெயர் \"%1\""
 
-#: ConfigGeneral.qml:93
+#: ConfigGeneral.qml:96
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "தேர்வு செய்…"
 
-#: ConfigGeneral.qml:95
+#: ConfigGeneral.qml:98
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "செயலி ஏவிக்கான சின்னத்தைத் தேர்ந்தெடுக்க விடும்"
 
-#: ConfigGeneral.qml:99
+#: ConfigGeneral.qml:102
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "இயல்பிருப்பு சின்னத்தை மீட்டமை"
 
-#: ConfigGeneral.qml:105
+#: ConfigGeneral.qml:108
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "சின்னத்தை நீக்கு"
 
-#: ConfigGeneral.qml:116
+#: ConfigGeneral.qml:119
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "காட்சிப்பெயர்:"
 
-#: ConfigGeneral.qml:118
+#: ConfigGeneral.qml:121
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "காட்சிப்பெயரை சேர்க்க இங்கு கிளிக் செய்யுங்கள்"
 
-#: ConfigGeneral.qml:132
+#: ConfigGeneral.qml:135
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "பட்டியின் காட்சிப்பெயரை மீட்டமை"
 
-#: ConfigGeneral.qml:145
+#: ConfigGeneral.qml:148
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "பலகை செங்குத்தாக இருக்கும்போது காட்சிப்பெயரை அமைக்கு முடியாது."
 
-#: ConfigGeneral.qml:157
+#: ConfigGeneral.qml:160
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "செயலிகளை இவ்வாறு காட்டு:"
 
-#: ConfigGeneral.qml:159
+#: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "பெயர் மட்டும்"
 
-#: ConfigGeneral.qml:159
+#: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "விவரணம் மட்டும்"
 
-#: ConfigGeneral.qml:159
+#: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "பெயர் (விவரணம்)"
 
-#: ConfigGeneral.qml:159
+#: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "விவரணம் (பெயர்)"
 
-#: ConfigGeneral.qml:167
+#: ConfigGeneral.qml:170
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "பொதுவானவை:"
 
-#: ConfigGeneral.qml:171
+#: ConfigGeneral.qml:174
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "செயலிகளை அகரவரிசைப்படுத்து"
 
-#: ConfigGeneral.qml:175
+#: ConfigGeneral.qml:178
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -174,115 +174,115 @@ msgid ""
 msgstr ""
 "தேடல் முடிவுகளிலும் பிடித்தவற்றிலும் செயலிகள் வரிசைப்படுத்தப்படுவதை இது பாதிக்காது."
 
-#: ConfigGeneral.qml:181
+#: ConfigGeneral.qml:184
 #, kde-format
 msgctxt "@option:check"
 msgid "Use compact list item style"
 msgstr "சுருக்கமான காட்சிமுறையை பயன்படுத்து"
 
-#: ConfigGeneral.qml:187
+#: ConfigGeneral.qml:190
 #, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "புதியதாக நிறுவியுள்ள செயலிகளை முன்னிலைப்படுத்து"
 
-#: ConfigGeneral.qml:192
+#: ConfigGeneral.qml:195
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
 msgstr "ஓரப்பட்டையிலுள்ள பகுப்புகளின் மீது சுட்டியை வைக்கும்போது அவற்றிற்கு தாவு"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:201
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "தேடல் செருகுநிரல்களை அமை…"
 
-#: ConfigGeneral.qml:208
+#: ConfigGeneral.qml:211
 #, kde-format
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr "ஓரப்பட்டையின் இருப்பிடம்:"
 
-#: ConfigGeneral.qml:209 ConfigGeneral.qml:217
+#: ConfigGeneral.qml:212 ConfigGeneral.qml:220
 #, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr "வலதில்"
 
-#: ConfigGeneral.qml:209
+#: ConfigGeneral.qml:212
 #, kde-format
 msgctxt "option:radio sidebar position"
 msgid "Left"
 msgstr "இடதில்"
 
-#: ConfigGeneral.qml:217
+#: ConfigGeneral.qml:220
 #, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr "இடதில்"
 
-#: ConfigGeneral.qml:225
+#: ConfigGeneral.qml:228
 #, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
 msgstr "பிடித்தவற்றை காட்டுவது:"
 
-#: ConfigGeneral.qml:226
+#: ConfigGeneral.qml:229
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "நெடுவரிசைகளில்"
 
-#: ConfigGeneral.qml:234
+#: ConfigGeneral.qml:237
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "பட்டியலாக"
 
-#: ConfigGeneral.qml:242
+#: ConfigGeneral.qml:245
 #, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
 msgstr "மற்ற செயலிகளை காட்டுவது:"
 
-#: ConfigGeneral.qml:243
+#: ConfigGeneral.qml:246
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "நெடுவரிசைகளில்"
 
-#: ConfigGeneral.qml:251
+#: ConfigGeneral.qml:254
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "பட்டியலாக"
 
-#: ConfigGeneral.qml:263
+#: ConfigGeneral.qml:266
 #, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr "இவற்றிற்கு பட்டன்களை காட்டு:"
 
-#: ConfigGeneral.qml:264
+#: ConfigGeneral.qml:267
 #, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power"
 msgstr "ஆற்றல்"
 
-#: ConfigGeneral.qml:273
+#: ConfigGeneral.qml:276
 #, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "அமர்வு"
 
-#: ConfigGeneral.qml:282
+#: ConfigGeneral.qml:285
 #, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
 msgstr "ஆற்றல் மற்றும் அமர்வு"
 
-#: ConfigGeneral.qml:291
+#: ConfigGeneral.qml:294
 #, kde-format
 msgctxt "@option:check"
 msgid "Show action button captions"

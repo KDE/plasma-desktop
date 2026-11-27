@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-21 03:03+0000\n"
+"POT-Creation-Date: 2026-11-26 04:39+0000\n"
 "PO-Revision-Date: 2026-11-22 20:23+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -53,177 +53,177 @@ msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "General"
 
-#: ConfigGeneral.qml:50
+#: ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Icona:"
 
-#: ConfigGeneral.qml:135
+#: ConfigGeneral.qml:138
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Trieu…"
 
-#: ConfigGeneral.qml:140
+#: ConfigGeneral.qml:143
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Restableix a la icona predeterminada"
 
-#: ConfigGeneral.qml:161
+#: ConfigGeneral.qml:164
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Mostra les aplicacions amb:"
 
-#: ConfigGeneral.qml:163
+#: ConfigGeneral.qml:166
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Només el nom"
 
-#: ConfigGeneral.qml:163
+#: ConfigGeneral.qml:166
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Només la descripció"
 
-#: ConfigGeneral.qml:164
+#: ConfigGeneral.qml:167
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Nom (Descripció)"
 
-#: ConfigGeneral.qml:164
+#: ConfigGeneral.qml:167
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Descripció (Nom)"
 
-#: ConfigGeneral.qml:174
+#: ConfigGeneral.qml:177
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
 msgstr "Comportament:"
 
-#: ConfigGeneral.qml:176
+#: ConfigGeneral.qml:179
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Ordena alfabèticament les aplicacions"
 
-#: ConfigGeneral.qml:184
+#: ConfigGeneral.qml:187
 #, kde-format
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
 msgstr "Aplana els submenús a un únic nivell"
 
-#: ConfigGeneral.qml:192
+#: ConfigGeneral.qml:195
 #, kde-format
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
 msgstr "Mostra les icones al nivell arrel del menú"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:201
 #, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "Ressalta les aplicacions instal·lades noves"
 
-#: ConfigGeneral.qml:208
+#: ConfigGeneral.qml:211
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
 msgstr "Mostra les categories:"
 
-#: ConfigGeneral.qml:211
+#: ConfigGeneral.qml:214
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent applications"
 msgstr "Aplicacions recents"
 
-#: ConfigGeneral.qml:212
+#: ConfigGeneral.qml:215
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used applications"
 msgstr "Aplicacions usades sovint"
 
-#: ConfigGeneral.qml:219
+#: ConfigGeneral.qml:222
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent files"
 msgstr "Fitxers recents"
 
-#: ConfigGeneral.qml:220
+#: ConfigGeneral.qml:223
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used files"
 msgstr "Fitxers usats sovint"
 
-#: ConfigGeneral.qml:227
+#: ConfigGeneral.qml:230
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent places"
 msgstr "Llocs recents"
 
-#: ConfigGeneral.qml:228
+#: ConfigGeneral.qml:231
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used places"
 msgstr "Llocs usats sovint"
 
-#: ConfigGeneral.qml:234
+#: ConfigGeneral.qml:237
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
 msgstr "Ordena els elements en categories per:"
 
-#: ConfigGeneral.qml:235
+#: ConfigGeneral.qml:238
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Usats recentment"
 
-#: ConfigGeneral.qml:235
+#: ConfigGeneral.qml:238
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Often used"
 msgstr "Usats sovint"
 
-#: ConfigGeneral.qml:245
+#: ConfigGeneral.qml:248
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
 msgstr "Cerca:"
 
-#: ConfigGeneral.qml:247
+#: ConfigGeneral.qml:250
 #, kde-format
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Amplia la cerca a les adreces d'interès, fitxers i correus electrònics"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:258
 #, kde-format
 msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr "Alinea els resultats de la cerca a la part inferior"
 
-#: ConfigGeneral.qml:260
+#: ConfigGeneral.qml:263
 #, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
 msgstr "Aparença:"
 
-#: ConfigGeneral.qml:265
+#: ConfigGeneral.qml:268
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
 msgstr "Prefereix el mode fosc quan estigui disponible"
 
-#: ConfigGeneral.qml:269
+#: ConfigGeneral.qml:272
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""

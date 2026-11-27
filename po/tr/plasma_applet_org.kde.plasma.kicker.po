@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-21 03:03+0000\n"
+"POT-Creation-Date: 2026-11-26 04:39+0000\n"
 "PO-Revision-Date: 2026-06-11 20:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -50,177 +50,177 @@ msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Genel"
 
-#: ConfigGeneral.qml:50
+#: ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Simge:"
 
-#: ConfigGeneral.qml:135
+#: ConfigGeneral.qml:138
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Seç…"
 
-#: ConfigGeneral.qml:140
+#: ConfigGeneral.qml:143
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Öntanımlı Simgeye Sıfırla"
 
-#: ConfigGeneral.qml:161
+#: ConfigGeneral.qml:164
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Uygulamaları şöyle göster:"
 
-#: ConfigGeneral.qml:163
+#: ConfigGeneral.qml:166
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Yalnızca ad"
 
-#: ConfigGeneral.qml:163
+#: ConfigGeneral.qml:166
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Yalnızca açıklama"
 
-#: ConfigGeneral.qml:164
+#: ConfigGeneral.qml:167
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Ad (açıklama)"
 
-#: ConfigGeneral.qml:164
+#: ConfigGeneral.qml:167
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Açıklama (ad)"
 
-#: ConfigGeneral.qml:174
+#: ConfigGeneral.qml:177
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
 msgstr "Davranış:"
 
-#: ConfigGeneral.qml:176
+#: ConfigGeneral.qml:179
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Uygulamaları abecesel olarak sırala"
 
-#: ConfigGeneral.qml:184
+#: ConfigGeneral.qml:187
 #, kde-format
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
 msgstr "Tek bir düzeyde düzleştirilmiş alt menüler"
 
-#: ConfigGeneral.qml:192
+#: ConfigGeneral.qml:195
 #, kde-format
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
 msgstr "Menünün kök düzeyindeki simgeleri göster"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:201
 #, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "Yeni kurulan uygulamaları vurgula"
 
-#: ConfigGeneral.qml:208
+#: ConfigGeneral.qml:211
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
 msgstr "Kategorileri göster:"
 
-#: ConfigGeneral.qml:211
+#: ConfigGeneral.qml:214
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent applications"
 msgstr "Son kullanılan uygulamalar"
 
-#: ConfigGeneral.qml:212
+#: ConfigGeneral.qml:215
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used applications"
 msgstr "Sık kullanılan uygulamalar"
 
-#: ConfigGeneral.qml:219
+#: ConfigGeneral.qml:222
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent files"
 msgstr "Son kullanılan dosyalar"
 
-#: ConfigGeneral.qml:220
+#: ConfigGeneral.qml:223
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used files"
 msgstr "Sık kullanılan dosyalar"
 
-#: ConfigGeneral.qml:227
+#: ConfigGeneral.qml:230
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent places"
 msgstr "Son gidilen yerler"
 
-#: ConfigGeneral.qml:228
+#: ConfigGeneral.qml:231
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used places"
 msgstr "Sık kullanılan yerler"
 
-#: ConfigGeneral.qml:234
+#: ConfigGeneral.qml:237
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
 msgstr "Ögeleri kategorilerde şuna göre sırala:"
 
-#: ConfigGeneral.qml:235
+#: ConfigGeneral.qml:238
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Son kullanılanlar"
 
-#: ConfigGeneral.qml:235
+#: ConfigGeneral.qml:238
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Often used"
 msgstr "Sıkça kullanılanlar"
 
-#: ConfigGeneral.qml:245
+#: ConfigGeneral.qml:248
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
 msgstr "Ara:"
 
-#: ConfigGeneral.qml:247
+#: ConfigGeneral.qml:250
 #, kde-format
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Aramayı yer imlerine, dosyalara ve e-postalara genişlet"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:258
 #, kde-format
 msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr "Arama sonuçlarını aşağıya hizala"
 
-#: ConfigGeneral.qml:260
+#: ConfigGeneral.qml:263
 #, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
 msgstr "Görünüş:"
 
-#: ConfigGeneral.qml:265
+#: ConfigGeneral.qml:268
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
 msgstr "Kullanılabildiği durumlarda Koyu Kip’i yeğle"
 
-#: ConfigGeneral.qml:269
+#: ConfigGeneral.qml:272
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
