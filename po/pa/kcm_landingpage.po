@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-10 00:48+0000\n"
-"PO-Revision-Date: 2026-01-24 08:42-0600\n"
+"POT-Creation-Date: 2026-11-27 01:06+0000\n"
+"PO-Revision-Date: 2026-11-26 12:26-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
 "Language: pa\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
@@ -33,7 +33,7 @@ msgstr "ਫਾਇਲ ਖੋਲ੍ਹਣ ਲਈ ਇੱਕ ਵਾਰ ਕਲਿੱ�
 #: landingpage_kdeglobalssettings.kcfg:19
 #, kde-format
 msgid "Switch the look and feel package depending on time of day"
-msgstr ""
+msgstr "ਦਿਨ ਦੇ ਸਮੇਂ ਮੁਤਾਬਕ ਦਿੱਖ ਅਤੇ ਰਵਈਏ ਪੈਕੇਜ ਨੂੰ ਬਦਲੋ"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:23
@@ -68,8 +68,7 @@ msgid "Global theme"
 msgstr "ਗਲੋਬਲ ਥੀਮ"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Theme:"
+#, kde-format
 msgctxt "@title:group for light/dark quick switch"
 msgid "Theme:"
 msgstr "ਥੀਮ:"
@@ -86,7 +85,7 @@ msgctxt ""
 "@info:tooltip 1 is the name of a light global theme, 2 is the name of a dark "
 "global theme"
 msgid "Use “%1” during the day and “%2” at night"
-msgstr ""
+msgstr "ਦਿਨ ਲਈ “%1” ਅਤੇ ਰਾਤ ਲਈ “%2” ਨੂੰ ਵਰਤੋਂ"
 
 #: ui/main.qml:133
 #, kde-format
@@ -94,67 +93,63 @@ msgctxt "@title:group translate as short as possible"
 msgid "More appearance settings:"
 msgstr "ਹੋਰ ਦਿੱਖ ਸੈਟਿੰਗਾਂ:"
 
-#: ui/main.qml:200
-#, fuzzy, kde-format
-#| msgid "Animation speed:"
+#: ui/main.qml:199
+#, kde-format
 msgctxt "@title:slider"
 msgid "Animation speed:"
 msgstr "ਐਨੀਮੇਸ਼ਨ ਗਤੀ:"
 
-#: ui/main.qml:210
+#: ui/main.qml:209
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "ਹੌਲੀ"
 
-#: ui/main.qml:217
+#: ui/main.qml:216
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "ਫ਼ੌਰਨ"
 
-#: ui/main.qml:227
+#: ui/main.qml:226
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "ਫਾਇਲ ਜਾਂ ਫੋਲਡਰ ਉੱਤੇ ਕਲਿੱਕ ਕਰਨਾ:"
 
-#: ui/main.qml:232
+#: ui/main.qml:231
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "ਉਹਨਾਂ ਨੂੰ ਚੁਣੋ"
 
-#: ui/main.qml:238
-#, fuzzy, kde-format
-#| msgid "Open by double-clicking instead"
+#: ui/main.qml:237
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Open by double-clicking instead"
 msgstr "ਇਸ ਦੀ ਬਜਾਏ ਦੋ ਵਾਰ ਕਲਿੱਕ ਕਰਕੇ ਖੋਲ੍ਹੋ"
 
-#: ui/main.qml:254
+#: ui/main.qml:253
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "ਉਹਨਾਂ ਨੂੰ ਖੋਲ੍ਹੋ"
 
-#: ui/main.qml:259
-#, fuzzy, kde-format
-#| msgid "Select by clicking on item's selection marker"
+#: ui/main.qml:258
+#, kde-format
 msgctxt "@info:usagetip"
 msgid "Select by clicking on item's selection marker"
 msgstr "ਆਈਟਮ ਦੇ ਚੋਣ ਨਿਸ਼ਾਨ ਨੂੰ ਕਲਿੱਕ ਕਰਕੇ ਚੁਣੋ"
 
-#: ui/main.qml:271
+#: ui/main.qml:270
 #, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
 msgstr "ਹੋਰ ਰਵੱਈਆ ਸੈਟਿੰਗਾਂ:"
 
-#: ui/main.qml:282
-#, fuzzy, kde-format
-#| msgid "Most Used Pages:"
+#: ui/main.qml:281
+#, kde-format
 msgctxt "@title:group for grid of buttons opening kcms"
 msgid "Most used pages:"
 msgstr "ਅਕਸਰ ਵਰਤੇ ਸਫ਼ੇ:"

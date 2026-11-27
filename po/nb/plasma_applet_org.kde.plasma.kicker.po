@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-16 20:39+0000\n"
+"POT-Creation-Date: 2026-11-26 04:01+0000\n"
 "PO-Revision-Date: 2026-03-03 12:08+0100\n"
 "Last-Translator: Kjetil Sorlund <translate@sorlund.no>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@nuug.no>\n"
@@ -53,103 +53,103 @@ msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Generelt"
 
-#: ConfigGeneral.qml:51
+#: ConfigGeneral.qml:52
 #, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Ikon:"
 
-#: ConfigGeneral.qml:136
+#: ConfigGeneral.qml:139
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Velg …"
 
-#: ConfigGeneral.qml:141
+#: ConfigGeneral.qml:144
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr ""
 
-#: ConfigGeneral.qml:150
+#: ConfigGeneral.qml:153
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr ""
 
-#: ConfigGeneral.qml:163
+#: ConfigGeneral.qml:166
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr ""
 
-#: ConfigGeneral.qml:164
+#: ConfigGeneral.qml:167
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr ""
 
-#: ConfigGeneral.qml:176
+#: ConfigGeneral.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr ""
 
-#: ConfigGeneral.qml:196
+#: ConfigGeneral.qml:199
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Vis programmer som:"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:201
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Bare navn"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:201
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Bare beskrivelse"
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:202
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Navn (beskrivelse)"
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:202
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Beskrivelse (navn)"
 
-#: ConfigGeneral.qml:209
+#: ConfigGeneral.qml:212
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
 msgstr "Atferd:"
 
-#: ConfigGeneral.qml:211
+#: ConfigGeneral.qml:214
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Sorter programmene alfabetisk"
 
-#: ConfigGeneral.qml:219
+#: ConfigGeneral.qml:222
 #, kde-format
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
 msgstr "Flat ut undermenyer til ett nivå"
 
-#: ConfigGeneral.qml:227
+#: ConfigGeneral.qml:230
 #, kde-format
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
 msgstr "Vis ikon på rotnivået av menyen"
 
-#: ConfigGeneral.qml:233
+#: ConfigGeneral.qml:236
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Often used applications"
@@ -157,37 +157,37 @@ msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "Ofte brukte programmer"
 
-#: ConfigGeneral.qml:243
+#: ConfigGeneral.qml:246
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
 msgstr "Vis kategorier:"
 
-#: ConfigGeneral.qml:246
+#: ConfigGeneral.qml:249
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent applications"
 msgstr "Nylig brukte programmer"
 
-#: ConfigGeneral.qml:247
+#: ConfigGeneral.qml:250
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used applications"
 msgstr "Ofte brukte programmer"
 
-#: ConfigGeneral.qml:254
+#: ConfigGeneral.qml:257
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent files"
 msgstr "Nylige brukte filer"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:258
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used files"
 msgstr "Ofte brukte filer"
 
-#: ConfigGeneral.qml:262
+#: ConfigGeneral.qml:265
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Recent files"
@@ -195,7 +195,7 @@ msgctxt "@option:check"
 msgid "Recent places"
 msgstr "Nylige brukte filer"
 
-#: ConfigGeneral.qml:263
+#: ConfigGeneral.qml:266
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Often used files"
@@ -203,57 +203,57 @@ msgctxt "@option:check"
 msgid "Often used places"
 msgstr "Ofte brukte filer"
 
-#: ConfigGeneral.qml:269
+#: ConfigGeneral.qml:272
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
 msgstr "Sorter i kategorier etter:"
 
-#: ConfigGeneral.qml:270
+#: ConfigGeneral.qml:273
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Nylig brukte"
 
-#: ConfigGeneral.qml:270
+#: ConfigGeneral.qml:273
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Often used"
 msgstr "Ofte brukte"
 
-#: ConfigGeneral.qml:280
+#: ConfigGeneral.qml:283
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
 msgstr "Søk:"
 
-#: ConfigGeneral.qml:282
+#: ConfigGeneral.qml:285
 #, kde-format
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Utvid søket til bokmerker, filer og e-poster"
 
-#: ConfigGeneral.qml:290
+#: ConfigGeneral.qml:293
 #, kde-format
 msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr "Plasser søkeresultater nederst"
 
-#: ConfigGeneral.qml:295
+#: ConfigGeneral.qml:298
 #, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
 msgstr "Utseende:"
 
-#: ConfigGeneral.qml:300
+#: ConfigGeneral.qml:303
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
 msgstr "Foretrekk mørkt tema når tilgjengelig"
 
-#: ConfigGeneral.qml:304
+#: ConfigGeneral.qml:307
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-25 01:27+0000\n"
+"POT-Creation-Date: 2026-11-27 01:06+0000\n"
 "PO-Revision-Date: 2026-11-04 22:10+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -124,13 +124,13 @@ msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
 msgstr "Extra gombok beállítása…"
 
-#: ui/main.qml:64
+#: ui/main.qml:62
 #, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Eszköz:"
 
-#: ui/main.qml:86
+#: ui/main.qml:84
 #, kde-format
 msgctxt "@title:group"
 msgid "General:"
@@ -142,7 +142,7 @@ msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr "Bekapcsolás"
 
-#: ui/main.qml:102
+#: ui/main.qml:101
 #, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
@@ -171,7 +171,7 @@ msgstr ""
 "egérkattintás késleltetését. Az extra késleltetésre az egyidejű bal és jobb "
 "egérkattintások helyes érzékeléséhez van szükség."
 
-#: ui/main.qml:142
+#: ui/main.qml:139
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
@@ -192,7 +192,7 @@ msgstr ""
 "Ha be van kapcsolva, a mutató mozgási távolsága a gyorsabb mozgási "
 "sebességgel nő."
 
-#: ui/main.qml:263
+#: ui/main.qml:262
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
@@ -210,7 +210,7 @@ msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Gyorsabb"
 
-#: ui/main.qml:346
+#: ui/main.qml:344
 #, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"

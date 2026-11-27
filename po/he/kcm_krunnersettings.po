@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_search\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-19 00:48+0000\n"
+"POT-Creation-Date: 2026-11-26 06:47+0000\n"
 "PO-Revision-Date: 2026-01-09 17:28+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -20,77 +20,75 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 25.12.0\n"
 
-#: ui/main.qml:31
+#: ui/main.qml:26
 #, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Position on screen:"
 msgstr "מקום במסך:"
 
-#: ui/main.qml:35
+#: ui/main.qml:31
 #, kde-format
 msgctxt "@option:check Position on top of screen"
 msgid "Top"
 msgstr "למעלה"
 
-#: ui/main.qml:42
+#: ui/main.qml:39
 #, kde-format
 msgctxt "@option:check Position in center of screen"
 msgid "Center"
 msgstr "באמצע"
 
-#: ui/main.qml:55
+#: ui/main.qml:51
 #, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "History:"
 msgstr "היסטוריה:"
 
-#: ui/main.qml:58
+#: ui/main.qml:55
 #, kde-format
 msgctxt "@option:radio History is disabled"
 msgid "Disabled"
 msgstr "מושבת"
 
-#: ui/main.qml:63
+#: ui/main.qml:62
 #, kde-format
 msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable suggestions"
 msgstr "הפעלת הצעות"
 
-#: ui/main.qml:68
+#: ui/main.qml:69
 #, kde-format
 msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable auto-complete"
 msgstr "הפעלת השלמה אוטומטית"
 
-#: ui/main.qml:76
+#: ui/main.qml:78
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear History…"
 msgstr "פינוי היסטוריה…"
 
-#: ui/main.qml:99
+#: ui/main.qml:101
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for all activities"
 msgid "For all activities"
 msgstr "לכל הפעילויות"
 
-#: ui/main.qml:111
+#: ui/main.qml:113
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for this activity"
 msgid "For activity \"%1\""
 msgstr "לפעילות „%1”"
 
-#: ui/main.qml:128
-#, kde-format
-msgctxt "@label"
-msgid "Plugins:"
-msgstr "תוספים:"
-
-#: ui/main.qml:132
+#: ui/main.qml:126
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "הגדרת תוספי חיפוש פעילים…"
+
+#~ msgctxt "@label"
+#~ msgid "Plugins:"
+#~ msgstr "תוספים:"
 
 #~ msgctxt "@label prefix for checkbutton"
 #~ msgid "Activation:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-16 20:39+0000\n"
+"POT-Creation-Date: 2026-11-26 04:01+0000\n"
 "PO-Revision-Date: 2026-09-23 06:56+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -49,202 +49,202 @@ msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "ئادەتتىكى"
 
-#: ConfigGeneral.qml:51
+#: ConfigGeneral.qml:52
 #, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "سىنبەلگە:"
 
-#: ConfigGeneral.qml:136
+#: ConfigGeneral.qml:139
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "تاللا…"
 
-#: ConfigGeneral.qml:141
+#: ConfigGeneral.qml:144
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "كۆڭۈلدىكى سىنبەلگىگە ئەسلىگە قايتۇر"
 
-#: ConfigGeneral.qml:150
+#: ConfigGeneral.qml:153
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr ""
 
-#: ConfigGeneral.qml:163
+#: ConfigGeneral.qml:166
 #, fuzzy, kde-format
 #| msgid "Text Color:"
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "تېكىست رەڭگى:"
 
-#: ConfigGeneral.qml:164
+#: ConfigGeneral.qml:167
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr ""
 
-#: ConfigGeneral.qml:176
+#: ConfigGeneral.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr ""
 
-#: ConfigGeneral.qml:196
+#: ConfigGeneral.qml:199
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "پىروگراممىنى كۆرسىتىدۇ:"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:201
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "ئاتىلا"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:201
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "چۈشەندۈرۈشىلا"
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:202
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "ئاتى (چۈشەندۈرۈش)"
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:202
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "چۈشەندۈرۈش(ئات)"
 
-#: ConfigGeneral.qml:209
+#: ConfigGeneral.qml:212
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
 msgstr "قىلمىش:"
 
-#: ConfigGeneral.qml:211
+#: ConfigGeneral.qml:214
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "پىروگراممىنى ئېلىپبە تەرتىپىدە تەرتىپلەيدۇ"
 
-#: ConfigGeneral.qml:219
+#: ConfigGeneral.qml:222
 #, kde-format
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
 msgstr "تارماق تىزىملىكنى يەككە دەرىجىگە تۈزلەيدۇ"
 
-#: ConfigGeneral.qml:227
+#: ConfigGeneral.qml:230
 #, kde-format
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
 msgstr "غول تىزىملىك دەرىجىسىدە سىنبەلگە كۆرسىتىدۇ"
 
-#: ConfigGeneral.qml:233
+#: ConfigGeneral.qml:236
 #, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "يېڭى ئورنىتىلغان پىروگراممىنى يورۇتىدۇ"
 
-#: ConfigGeneral.qml:243
+#: ConfigGeneral.qml:246
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
 msgstr "سەھىپە كۆرسەت:"
 
-#: ConfigGeneral.qml:246
+#: ConfigGeneral.qml:249
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent applications"
 msgstr "يېقىنقى پىروگرامما"
 
-#: ConfigGeneral.qml:247
+#: ConfigGeneral.qml:250
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used applications"
 msgstr "دائىم ئىشلىتىدىغان پىروگرامما"
 
-#: ConfigGeneral.qml:254
+#: ConfigGeneral.qml:257
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent files"
 msgstr "يېقىنقى ھۆججەت"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:258
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used files"
 msgstr "دائىم ئىشلىتىدىغان ھۆججەت"
 
-#: ConfigGeneral.qml:262
+#: ConfigGeneral.qml:265
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent places"
 msgstr "يېقىنقى ئورۇن"
 
-#: ConfigGeneral.qml:263
+#: ConfigGeneral.qml:266
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used places"
 msgstr "دائىم ئىشلىتىدىغان ئورۇن"
 
-#: ConfigGeneral.qml:269
+#: ConfigGeneral.qml:272
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
 msgstr "سەھىپىدىكى تۈرنىڭ تەرتىپى:"
 
-#: ConfigGeneral.qml:270
+#: ConfigGeneral.qml:273
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "يېقىندا ئىشلەتكەن"
 
-#: ConfigGeneral.qml:270
+#: ConfigGeneral.qml:273
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Often used"
 msgstr "دائىم ئىشلىتىدىغان"
 
-#: ConfigGeneral.qml:280
+#: ConfigGeneral.qml:283
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
 msgstr "ئىزدە:"
 
-#: ConfigGeneral.qml:282
+#: ConfigGeneral.qml:285
 #, kde-format
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr "ئىزدە دائىرىسىنى خەتكۈش، ھۆججەت ۋە ئېلخەتكە كېڭەيتىدۇ"
 
-#: ConfigGeneral.qml:290
+#: ConfigGeneral.qml:293
 #, kde-format
 msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr "ئىزدەش نەتىجىسىنى ئاستىغا توغرىلايدۇ"
 
-#: ConfigGeneral.qml:295
+#: ConfigGeneral.qml:298
 #, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
 msgstr "قىياپەت:"
 
-#: ConfigGeneral.qml:300
+#: ConfigGeneral.qml:303
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
 msgstr "ئىشلەتكىلى بولسا قاراڭغۇ ھالەتنى تاللايدۇ"
 
-#: ConfigGeneral.qml:304
+#: ConfigGeneral.qml:307
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""

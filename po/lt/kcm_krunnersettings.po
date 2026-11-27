@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-19 00:48+0000\n"
+"POT-Creation-Date: 2026-11-26 06:47+0000\n"
 "PO-Revision-Date: 2026-01-13 00:09+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -21,77 +21,75 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.8\n"
 
-#: ui/main.qml:31
+#: ui/main.qml:26
 #, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Position on screen:"
 msgstr "Pozicija ekrane:"
 
-#: ui/main.qml:35
+#: ui/main.qml:31
 #, kde-format
 msgctxt "@option:check Position on top of screen"
 msgid "Top"
 msgstr "Viršuje"
 
-#: ui/main.qml:42
+#: ui/main.qml:39
 #, kde-format
 msgctxt "@option:check Position in center of screen"
 msgid "Center"
 msgstr "Centre"
 
-#: ui/main.qml:55
+#: ui/main.qml:51
 #, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "History:"
 msgstr "Istorija:"
 
-#: ui/main.qml:58
+#: ui/main.qml:55
 #, kde-format
 msgctxt "@option:radio History is disabled"
 msgid "Disabled"
 msgstr "Išjungta"
 
-#: ui/main.qml:63
+#: ui/main.qml:62
 #, kde-format
 msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable suggestions"
 msgstr "Įjungti pasiūlymus"
 
-#: ui/main.qml:68
+#: ui/main.qml:69
 #, kde-format
 msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable auto-complete"
 msgstr "Įjungti automatinį užbaigimą"
 
-#: ui/main.qml:76
+#: ui/main.qml:78
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear History…"
 msgstr "Išvalyti istoriją…"
 
-#: ui/main.qml:99
+#: ui/main.qml:101
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for all activities"
 msgid "For all activities"
 msgstr "Visose veiklose"
 
-#: ui/main.qml:111
+#: ui/main.qml:113
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for this activity"
 msgid "For activity \"%1\""
 msgstr "Veikloje „%1“"
 
-#: ui/main.qml:128
-#, kde-format
-msgctxt "@label"
-msgid "Plugins:"
-msgstr "Įskiepiai:"
-
-#: ui/main.qml:132
+#: ui/main.qml:126
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "Konfigūruoti įjungtus paieškos įskiepius…"
+
+#~ msgctxt "@label"
+#~ msgid "Plugins:"
+#~ msgstr "Įskiepiai:"
 
 #~ msgctxt "@label prefix for checkbutton"
 #~ msgid "Activation:"

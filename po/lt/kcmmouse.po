@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-25 01:27+0000\n"
+"POT-Creation-Date: 2026-11-27 01:06+0000\n"
 "PO-Revision-Date: 2026-09-05 12:24+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -126,13 +126,13 @@ msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
 msgstr "Konfigūruoti papildomus mygtukus…"
 
-#: ui/main.qml:64
+#: ui/main.qml:62
 #, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Įrenginys:"
 
-#: ui/main.qml:86
+#: ui/main.qml:84
 #, kde-format
 msgctxt "@title:group"
 msgid "General:"
@@ -144,7 +144,7 @@ msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr "Įjungti įrenginį"
 
-#: ui/main.qml:102
+#: ui/main.qml:101
 #, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
@@ -175,7 +175,7 @@ msgstr ""
 "papildoma delsa yra reikalinga, kad būtų teisingai aptinkami vienalaikiai "
 "kairiojo ir dešiniojo mygtuko spustelėjimai."
 
-#: ui/main.qml:142
+#: ui/main.qml:139
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
@@ -196,7 +196,7 @@ msgstr ""
 "Kai įjungta, kuo greičiau judinama pelė, tuo labiau padidėja rodyklės "
 "nukeliautas atstumas."
 
-#: ui/main.qml:263
+#: ui/main.qml:262
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
@@ -214,7 +214,7 @@ msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Greitesnis"
 
-#: ui/main.qml:346
+#: ui/main.qml:344
 #, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"

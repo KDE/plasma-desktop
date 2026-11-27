@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-16 20:39+0000\n"
+"POT-Creation-Date: 2026-11-26 04:01+0000\n"
 "PO-Revision-Date: 2026-11-17 13:13+0100\n"
 "Last-Translator: freek <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -48,201 +48,201 @@ msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Algemeen"
 
-#: ConfigGeneral.qml:51
+#: ConfigGeneral.qml:52
 #, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Pictogram:"
 
-#: ConfigGeneral.qml:136
+#: ConfigGeneral.qml:139
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Kiezen…"
 
-#: ConfigGeneral.qml:141
+#: ConfigGeneral.qml:144
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Terugzetten naar standaard pictogram"
 
-#: ConfigGeneral.qml:150
+#: ConfigGeneral.qml:153
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Pictogram verwijderen"
 
-#: ConfigGeneral.qml:163
+#: ConfigGeneral.qml:166
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Tekstlabel:"
 
-#: ConfigGeneral.qml:164
+#: ConfigGeneral.qml:167
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Hier typen om een tekstlabel toe te voegen"
 
-#: ConfigGeneral.qml:176
+#: ConfigGeneral.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "Menulabel resetten"
 
-#: ConfigGeneral.qml:196
+#: ConfigGeneral.qml:199
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Toepassingen tonen als:"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:201
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Alleen naam"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:201
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Alleen beschrijving"
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:202
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Naam (beschrijving)"
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:202
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Beschrijving (Naam)"
 
-#: ConfigGeneral.qml:209
+#: ConfigGeneral.qml:212
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
 msgstr "Gedrag:"
 
-#: ConfigGeneral.qml:211
+#: ConfigGeneral.qml:214
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Toepassingen alfabetisch sorteren"
 
-#: ConfigGeneral.qml:219
+#: ConfigGeneral.qml:222
 #, kde-format
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
 msgstr "Submenu's afvlakken tot een enkel niveau"
 
-#: ConfigGeneral.qml:227
+#: ConfigGeneral.qml:230
 #, kde-format
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
 msgstr "Pictogrammen tonen op het hoogste niveau van het menu"
 
-#: ConfigGeneral.qml:233
+#: ConfigGeneral.qml:236
 #, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "Accentueer nieuw geïnstalleerde toepassingen"
 
-#: ConfigGeneral.qml:243
+#: ConfigGeneral.qml:246
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
 msgstr "Categorieën tonen:"
 
-#: ConfigGeneral.qml:246
+#: ConfigGeneral.qml:249
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent applications"
 msgstr "Recente toepassingen"
 
-#: ConfigGeneral.qml:247
+#: ConfigGeneral.qml:250
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used applications"
 msgstr "Vaak gebruikte toepassingen"
 
-#: ConfigGeneral.qml:254
+#: ConfigGeneral.qml:257
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent files"
 msgstr "Recente bestanden"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:258
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used files"
 msgstr "Vaak gebruikte bestanden"
 
-#: ConfigGeneral.qml:262
+#: ConfigGeneral.qml:265
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent places"
 msgstr "Recente plaatsen"
 
-#: ConfigGeneral.qml:263
+#: ConfigGeneral.qml:266
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used places"
 msgstr "Vaak gebruikte plaatsen"
 
-#: ConfigGeneral.qml:269
+#: ConfigGeneral.qml:272
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
 msgstr "Items in categorieën sorteren op:"
 
-#: ConfigGeneral.qml:270
+#: ConfigGeneral.qml:273
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Recent gebruikt"
 
-#: ConfigGeneral.qml:270
+#: ConfigGeneral.qml:273
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Often used"
 msgstr "Vaak gebruikt"
 
-#: ConfigGeneral.qml:280
+#: ConfigGeneral.qml:283
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
 msgstr "Zoeken:"
 
-#: ConfigGeneral.qml:282
+#: ConfigGeneral.qml:285
 #, kde-format
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Zoeken uitbreiden naar bladwijzers, bestanden en e-mailberichten"
 
-#: ConfigGeneral.qml:290
+#: ConfigGeneral.qml:293
 #, kde-format
 msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr "Zoekresultaten uitlijnen naar onderen"
 
-#: ConfigGeneral.qml:295
+#: ConfigGeneral.qml:298
 #, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
 msgstr "Uiterlijk:"
 
-#: ConfigGeneral.qml:300
+#: ConfigGeneral.qml:303
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
 msgstr "Voorkeur voor donkere modus indien beschikbaar"
 
-#: ConfigGeneral.qml:304
+#: ConfigGeneral.qml:307
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""

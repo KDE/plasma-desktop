@@ -1,4 +1,4 @@
-# Version: $Revision: 1754264 $
+# Version: $Revision: 1754456 $
 # translation of kcminput.po to
 # SPDX-FileCopyrightText: 2011-2012, 2014-2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Piotr Roszatycki <dexter@debian.org>, 1998-2000.
@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-25 01:27+0000\n"
+"POT-Creation-Date: 2026-11-27 01:06+0000\n"
 "PO-Revision-Date: 2026-10-04 12:54+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -127,13 +127,13 @@ msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
 msgstr "Ustawienia dodatkowych przycisków…"
 
-#: ui/main.qml:64
+#: ui/main.qml:62
 #, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Urządzenie:"
 
-#: ui/main.qml:86
+#: ui/main.qml:84
 #, kde-format
 msgctxt "@title:group"
 msgid "General:"
@@ -145,7 +145,7 @@ msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr "Włącz urządzenie"
 
-#: ui/main.qml:102
+#: ui/main.qml:101
 #, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
@@ -174,7 +174,7 @@ msgstr ""
 "opóźnienie jest potrzebne do wykrywania jednoczesnego naciśnięcia lewego i "
 "prawego przycisku myszy."
 
-#: ui/main.qml:142
+#: ui/main.qml:139
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
@@ -195,7 +195,7 @@ msgstr ""
 "Po włączeniu, odległość przemieszczania się wskaźnika wzrasta wraz z "
 "szybszymi ruchami użytkownika."
 
-#: ui/main.qml:263
+#: ui/main.qml:262
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
@@ -213,7 +213,7 @@ msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Szybciej"
 
-#: ui/main.qml:346
+#: ui/main.qml:344
 #, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"

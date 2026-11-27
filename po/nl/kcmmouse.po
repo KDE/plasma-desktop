@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-25 01:27+0000\n"
+"POT-Creation-Date: 2026-11-27 01:06+0000\n"
 "PO-Revision-Date: 2026-11-25 13:59+0100\n"
 "Last-Translator: freek <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -137,13 +137,13 @@ msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
 msgstr "Extra muisknoppen configureren…"
 
-#: ui/main.qml:64
+#: ui/main.qml:62
 #, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Apparaat:"
 
-#: ui/main.qml:86
+#: ui/main.qml:84
 #, kde-format
 msgctxt "@title:group"
 msgid "General:"
@@ -155,7 +155,7 @@ msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr "Apparaat inschakelen"
 
-#: ui/main.qml:102
+#: ui/main.qml:101
 #, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
@@ -184,7 +184,7 @@ msgstr ""
 "De extra vertraging is nodig om gelijktijdig indrukken van de linker en "
 "rechter knop correct te detecteren."
 
-#: ui/main.qml:142
+#: ui/main.qml:139
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
@@ -205,7 +205,7 @@ msgstr ""
 "Indien ingeschakeld, wordt de verplaatsingsafstand van de aanwijzer vergroot "
 "met snellere verplaatsingssnelheid."
 
-#: ui/main.qml:263
+#: ui/main.qml:262
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
@@ -223,7 +223,7 @@ msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Sneller"
 
-#: ui/main.qml:346
+#: ui/main.qml:344
 #, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"

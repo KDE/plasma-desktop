@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-16 20:39+0000\n"
+"POT-Creation-Date: 2026-11-26 04:01+0000\n"
 "PO-Revision-Date: 2020-10-08 11:46+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -50,14 +50,14 @@ msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Üldine"
 
-#: ConfigGeneral.qml:51
+#: ConfigGeneral.qml:52
 #, fuzzy, kde-format
 #| msgid "Icon:"
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Ikoon:"
 
-#: ConfigGeneral.qml:136
+#: ConfigGeneral.qml:139
 #, fuzzy, kde-format
 #| msgctxt "@item:inmenu Open icon chooser dialog"
 #| msgid "Choose..."
@@ -65,171 +65,171 @@ msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Vali ..."
 
-#: ConfigGeneral.qml:141
+#: ConfigGeneral.qml:144
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr ""
 
-#: ConfigGeneral.qml:150
+#: ConfigGeneral.qml:153
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr ""
 
-#: ConfigGeneral.qml:163
+#: ConfigGeneral.qml:166
 #, fuzzy, kde-format
 #| msgid "Tab Label:"
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Kaardi pealdis:"
 
-#: ConfigGeneral.qml:164
+#: ConfigGeneral.qml:167
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr ""
 
-#: ConfigGeneral.qml:176
+#: ConfigGeneral.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr ""
 
-#: ConfigGeneral.qml:196
+#: ConfigGeneral.qml:199
 #, fuzzy, kde-format
 #| msgid "Show applications as:"
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Rakenduste kuvamine:"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:201
 #, fuzzy, kde-format
 #| msgid "Name only"
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Ainult nimi"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:201
 #, fuzzy, kde-format
 #| msgid "Description only"
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Ainult kirjeldus"
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:202
 #, fuzzy, kde-format
 #| msgid "Name (Description)"
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Nimi (kirjeldus)"
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:202
 #, fuzzy, kde-format
 #| msgid "Description (Name)"
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Kirjeldus (nimi)"
 
-#: ConfigGeneral.qml:209
+#: ConfigGeneral.qml:212
 #, fuzzy, kde-format
 #| msgid "Behavior:"
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
 msgstr "Käitumine:"
 
-#: ConfigGeneral.qml:211
+#: ConfigGeneral.qml:214
 #, fuzzy, kde-format
 #| msgid "Sort applications alphabetically"
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Rakenduste sortimine tähestiku järgi"
 
-#: ConfigGeneral.qml:219
+#: ConfigGeneral.qml:222
 #, fuzzy, kde-format
 #| msgid "Flatten sub-menus to a single level"
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
 msgstr "Alammenüüde ahendamine ühele tasandile"
 
-#: ConfigGeneral.qml:227
+#: ConfigGeneral.qml:230
 #, fuzzy, kde-format
 #| msgid "Show icons on the root level of the menu"
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
 msgstr "Ikoonide näitamine menüü juurtasemel"
 
-#: ConfigGeneral.qml:233
+#: ConfigGeneral.qml:236
 #, fuzzy, kde-format
 #| msgid "All Installed Applications"
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "Kõik paigaldatud rakendused"
 
-#: ConfigGeneral.qml:243
+#: ConfigGeneral.qml:246
 #, fuzzy, kde-format
 #| msgid "Show categories:"
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
 msgstr "Kategooriate näitamine:"
 
-#: ConfigGeneral.qml:246
+#: ConfigGeneral.qml:249
 #, fuzzy, kde-format
 #| msgid "Recent applications"
 msgctxt "@option:check"
 msgid "Recent applications"
 msgstr "Viimati kasutatud rakendused"
 
-#: ConfigGeneral.qml:247
+#: ConfigGeneral.qml:250
 #, fuzzy, kde-format
 #| msgid "Often used applications"
 msgctxt "@option:check"
 msgid "Often used applications"
 msgstr "Sageli kasutatud rakendused"
 
-#: ConfigGeneral.qml:254
+#: ConfigGeneral.qml:257
 #, fuzzy, kde-format
 #| msgid "Recent files"
 msgctxt "@option:check"
 msgid "Recent files"
 msgstr "Viimati kasutatud failid"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:258
 #, fuzzy, kde-format
 #| msgid "Often used files"
 msgctxt "@option:check"
 msgid "Often used files"
 msgstr "Sageli kasutatud failid"
 
-#: ConfigGeneral.qml:262
+#: ConfigGeneral.qml:265
 #, fuzzy, kde-format
 #| msgid "Recent files"
 msgctxt "@option:check"
 msgid "Recent places"
 msgstr "Viimati kasutatud failid"
 
-#: ConfigGeneral.qml:263
+#: ConfigGeneral.qml:266
 #, fuzzy, kde-format
 #| msgid "Often used files"
 msgctxt "@option:check"
 msgid "Often used places"
 msgstr "Sageli kasutatud failid"
 
-#: ConfigGeneral.qml:269
+#: ConfigGeneral.qml:272
 #, fuzzy, kde-format
 #| msgid "Sort items in categories by:"
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
 msgstr "Kategooriates sortimise alus:"
 
-#: ConfigGeneral.qml:270
+#: ConfigGeneral.qml:273
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Viimati kasutatud"
 
-#: ConfigGeneral.qml:270
+#: ConfigGeneral.qml:273
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
@@ -239,40 +239,40 @@ msgctxt ""
 msgid "Often used"
 msgstr "Sageli kasutatud"
 
-#: ConfigGeneral.qml:280
+#: ConfigGeneral.qml:283
 #, fuzzy, kde-format
 #| msgid "Search:"
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
 msgstr "Otsing:"
 
-#: ConfigGeneral.qml:282
+#: ConfigGeneral.qml:285
 #, fuzzy, kde-format
 #| msgid "Expand search to bookmarks, files and emails"
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Otsingu laiendamine järjehoidjatele, failidele ja kirjadele"
 
-#: ConfigGeneral.qml:290
+#: ConfigGeneral.qml:293
 #, fuzzy, kde-format
 #| msgid "Align search results to bottom"
 msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr "Otsingutulemuste joondamine alla"
 
-#: ConfigGeneral.qml:295
+#: ConfigGeneral.qml:298
 #, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
 msgstr ""
 
-#: ConfigGeneral.qml:300
+#: ConfigGeneral.qml:303
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
 msgstr ""
 
-#: ConfigGeneral.qml:304
+#: ConfigGeneral.qml:307
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""

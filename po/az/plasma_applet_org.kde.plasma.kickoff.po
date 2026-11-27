@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-17 13:19+0000\n"
+"POT-Creation-Date: 2026-11-26 04:01+0000\n"
 "PO-Revision-Date: 2025-12-17 23:03+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -50,20 +50,20 @@ msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Ümumi"
 
-#: ConfigGeneral.qml:47
+#: ConfigGeneral.qml:48
 #, fuzzy, kde-format
 #| msgid "Icon:"
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "İkon:"
 
-#: ConfigGeneral.qml:53
+#: ConfigGeneral.qml:54
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "Tətbiq başladıcının nişanını dəyiş"
 
-#: ConfigGeneral.qml:54
+#: ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -73,105 +73,105 @@ msgstr ""
 "%1 hazırkı nişandır. Nişanı dəyişmək menyusunu açmaq və ya standart nişana "
 "qaytarmaq üçün vurun."
 
-#: ConfigGeneral.qml:58
+#: ConfigGeneral.qml:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "Nişanın adı: \"%1\""
 
-#: ConfigGeneral.qml:93
+#: ConfigGeneral.qml:96
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Seçim…"
 
-#: ConfigGeneral.qml:95
+#: ConfigGeneral.qml:98
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "Tətbiq başladıcı üçün bir nişan seç"
 
-#: ConfigGeneral.qml:99
+#: ConfigGeneral.qml:102
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Standart nişana qaytarın"
 
-#: ConfigGeneral.qml:105
+#: ConfigGeneral.qml:108
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Nişanı silin"
 
-#: ConfigGeneral.qml:116
+#: ConfigGeneral.qml:119
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Mətnli etiketi:"
 
-#: ConfigGeneral.qml:118
+#: ConfigGeneral.qml:121
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Mətnli etiketi buraya yazaraqəlavə edin"
 
-#: ConfigGeneral.qml:132
+#: ConfigGeneral.qml:135
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "Menyu başlığını sıfırla"
 
-#: ConfigGeneral.qml:145
+#: ConfigGeneral.qml:148
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "Panel şaquli olduqda mətnli etiketi əlavə etmək mümkün deyil."
 
-#: ConfigGeneral.qml:157
+#: ConfigGeneral.qml:160
 #, fuzzy, kde-format
 #| msgid "Show other applications:"
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Başqa tətbiqləri göstərmək:"
 
-#: ConfigGeneral.qml:159
+#: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr ""
 
-#: ConfigGeneral.qml:159
+#: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr ""
 
-#: ConfigGeneral.qml:159
+#: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr ""
 
-#: ConfigGeneral.qml:159
+#: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr ""
 
-#: ConfigGeneral.qml:167
+#: ConfigGeneral.qml:170
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Əsas:"
 
-#: ConfigGeneral.qml:171
+#: ConfigGeneral.qml:174
 #, fuzzy, kde-format
 #| msgid "Always sort applications alphabetically"
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Həmişə tətbiqləri əlifba sırası ilə çeşidləmək"
 
-#: ConfigGeneral.qml:175
+#: ConfigGeneral.qml:178
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -179,27 +179,27 @@ msgid ""
 "the favorites page."
 msgstr ""
 
-#: ConfigGeneral.qml:181
+#: ConfigGeneral.qml:184
 #, fuzzy, kde-format
 #| msgid "Use compact list item style"
 msgctxt "@option:check"
 msgid "Use compact list item style"
 msgstr "Yığcam siyahı üslubundan istifadə edin"
 
-#: ConfigGeneral.qml:187
+#: ConfigGeneral.qml:190
 #, fuzzy, kde-format
 #| msgid "Show other applications:"
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "Başqa tətbiqləri göstərmək:"
 
-#: ConfigGeneral.qml:192
+#: ConfigGeneral.qml:195
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
 msgstr ""
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:201
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Configure Enabled Search Plugins…"
@@ -207,38 +207,38 @@ msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "Aktiv axtarış qoşmalarını tənzimləyin..."
 
-#: ConfigGeneral.qml:208
+#: ConfigGeneral.qml:211
 #, kde-format
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr ""
 
-#: ConfigGeneral.qml:209 ConfigGeneral.qml:217
+#: ConfigGeneral.qml:212 ConfigGeneral.qml:220
 #, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr ""
 
-#: ConfigGeneral.qml:209
+#: ConfigGeneral.qml:212
 #, kde-format
 msgctxt "option:radio sidebar position"
 msgid "Left"
 msgstr ""
 
-#: ConfigGeneral.qml:217
+#: ConfigGeneral.qml:220
 #, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr ""
 
-#: ConfigGeneral.qml:225
+#: ConfigGeneral.qml:228
 #, fuzzy, kde-format
 #| msgid "Show favorites:"
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
 msgstr "Seçilmişləri göstərmək:"
 
-#: ConfigGeneral.qml:226
+#: ConfigGeneral.qml:229
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a grid'"
 #| msgid "In a grid"
@@ -246,7 +246,7 @@ msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "Torda"
 
-#: ConfigGeneral.qml:234
+#: ConfigGeneral.qml:237
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a list'"
 #| msgid "In a list"
@@ -254,14 +254,14 @@ msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "Siyahıda"
 
-#: ConfigGeneral.qml:242
+#: ConfigGeneral.qml:245
 #, fuzzy, kde-format
 #| msgid "Show other applications:"
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
 msgstr "Başqa tətbiqləri göstərmək:"
 
-#: ConfigGeneral.qml:243
+#: ConfigGeneral.qml:246
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a grid'"
 #| msgid "In a grid"
@@ -269,7 +269,7 @@ msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "Torda"
 
-#: ConfigGeneral.qml:251
+#: ConfigGeneral.qml:254
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Show favorites in a list'"
 #| msgid "In a list"
@@ -277,35 +277,35 @@ msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "Siyahıda"
 
-#: ConfigGeneral.qml:263
+#: ConfigGeneral.qml:266
 #, fuzzy, kde-format
 #| msgid "Show buttons for:"
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr "Düymələri bunun üçün göstərin:"
 
-#: ConfigGeneral.qml:264
+#: ConfigGeneral.qml:267
 #, fuzzy, kde-format
 #| msgid "Power"
 msgctxt "@option:radio Show buttons for"
 msgid "Power"
 msgstr "El. qidalanması"
 
-#: ConfigGeneral.qml:273
+#: ConfigGeneral.qml:276
 #, fuzzy, kde-format
 #| msgid "Session"
 msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "Sesiya"
 
-#: ConfigGeneral.qml:282
+#: ConfigGeneral.qml:285
 #, fuzzy, kde-format
 #| msgid "Power and session"
 msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
 msgstr "Enerji və sessiya"
 
-#: ConfigGeneral.qml:291
+#: ConfigGeneral.qml:294
 #, fuzzy, kde-format
 #| msgid "Show action button captions"
 msgctxt "@option:check"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-25 01:27+0000\n"
+"POT-Creation-Date: 2026-11-27 01:06+0000\n"
 "PO-Revision-Date: 2026-09-09 21:50+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -127,13 +127,13 @@ msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
 msgstr "Конфигуриране на допълнителни бутони…"
 
-#: ui/main.qml:64
+#: ui/main.qml:62
 #, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Устройство:"
 
-#: ui/main.qml:86
+#: ui/main.qml:84
 #, kde-format
 msgctxt "@title:group"
 msgid "General:"
@@ -145,7 +145,7 @@ msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr "Активиране на устройството"
 
-#: ui/main.qml:102
+#: ui/main.qml:101
 #, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
@@ -174,7 +174,7 @@ msgstr ""
 "с 50ms.Това е необходимо, за да се откриват правилно едновременни щраквания "
 "с левия и десния бутон на мишката."
 
-#: ui/main.qml:142
+#: ui/main.qml:139
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
@@ -195,7 +195,7 @@ msgstr ""
 "Когато е активирано, разстоянието на движение на показалеца се увеличава с "
 "увеличаване на скоростта на движение."
 
-#: ui/main.qml:263
+#: ui/main.qml:262
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
@@ -213,7 +213,7 @@ msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "По-бързо"
 
-#: ui/main.qml:346
+#: ui/main.qml:344
 #, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"

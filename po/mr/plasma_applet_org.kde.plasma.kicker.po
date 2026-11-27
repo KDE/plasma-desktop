@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-16 20:39+0000\n"
+"POT-Creation-Date: 2026-11-26 04:01+0000\n"
 "PO-Revision-Date: 2013-04-13 16:15+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -52,171 +52,171 @@ msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "सामान्य"
 
-#: ConfigGeneral.qml:51
+#: ConfigGeneral.qml:52
 #, fuzzy, kde-format
 #| msgid "Icon:"
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "चिन्ह :"
 
-#: ConfigGeneral.qml:136
+#: ConfigGeneral.qml:139
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr ""
 
-#: ConfigGeneral.qml:141
+#: ConfigGeneral.qml:144
 #, fuzzy, kde-format
 #| msgid "Restore Tabs to Default"
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "टॅब्स मूलभूतरित्या पुन्हस्थापित करा"
 
-#: ConfigGeneral.qml:150
+#: ConfigGeneral.qml:153
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr ""
 
-#: ConfigGeneral.qml:163
+#: ConfigGeneral.qml:166
 #, fuzzy, kde-format
 #| msgid "Tab Label:"
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "टॅब लेबल :"
 
-#: ConfigGeneral.qml:164
+#: ConfigGeneral.qml:167
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr ""
 
-#: ConfigGeneral.qml:176
+#: ConfigGeneral.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr ""
 
-#: ConfigGeneral.qml:196
+#: ConfigGeneral.qml:199
 #, fuzzy, kde-format
 #| msgid "Applications"
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "अनुप्रयोग"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:201
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr ""
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:201
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr ""
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:202
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr ""
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:202
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr ""
 
-#: ConfigGeneral.qml:209
+#: ConfigGeneral.qml:212
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
 msgstr ""
 
-#: ConfigGeneral.qml:211
+#: ConfigGeneral.qml:214
 #, fuzzy, kde-format
 #| msgid "Applications"
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "अनुप्रयोग"
 
-#: ConfigGeneral.qml:219
+#: ConfigGeneral.qml:222
 #, kde-format
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
 msgstr ""
 
-#: ConfigGeneral.qml:227
+#: ConfigGeneral.qml:230
 #, kde-format
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
 msgstr ""
 
-#: ConfigGeneral.qml:233
+#: ConfigGeneral.qml:236
 #, fuzzy, kde-format
 #| msgid "All Installed Applications"
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "प्रतिष्ठापीत केलेले अनुप्रयोग"
 
-#: ConfigGeneral.qml:243
+#: ConfigGeneral.qml:246
 #, fuzzy, kde-format
 #| msgid "Favorite Places"
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
 msgstr "पसंत जागा"
 
-#: ConfigGeneral.qml:246
+#: ConfigGeneral.qml:249
 #, fuzzy, kde-format
 #| msgid "Applications"
 msgctxt "@option:check"
 msgid "Recent applications"
 msgstr "अनुप्रयोग"
 
-#: ConfigGeneral.qml:247
+#: ConfigGeneral.qml:250
 #, fuzzy, kde-format
 #| msgid "Installed Applications"
 msgctxt "@option:check"
 msgid "Often used applications"
 msgstr "प्रतिष्ठापीत केलेले अनुप्रयोग"
 
-#: ConfigGeneral.qml:254
+#: ConfigGeneral.qml:257
 #, fuzzy, kde-format
 #| msgid "Recent Documents"
 msgctxt "@option:check"
 msgid "Recent files"
 msgstr "अलिकडील दस्तऐवज"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:258
 #, fuzzy, kde-format
 #| msgid "Recent Documents"
 msgctxt "@option:check"
 msgid "Often used files"
 msgstr "अलिकडील दस्तऐवज"
 
-#: ConfigGeneral.qml:262
+#: ConfigGeneral.qml:265
 #, fuzzy, kde-format
 #| msgid "Recent Documents"
 msgctxt "@option:check"
 msgid "Recent places"
 msgstr "अलिकडील दस्तऐवज"
 
-#: ConfigGeneral.qml:263
+#: ConfigGeneral.qml:266
 #, fuzzy, kde-format
 #| msgid "Recent Documents"
 msgctxt "@option:check"
 msgid "Often used places"
 msgstr "अलिकडील दस्तऐवज"
 
-#: ConfigGeneral.qml:269
+#: ConfigGeneral.qml:272
 #, fuzzy, kde-format
 #| msgid "Favorite Places"
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
 msgstr "पसंत जागा"
 
-#: ConfigGeneral.qml:270
+#: ConfigGeneral.qml:273
 #, fuzzy, kde-format
 #| msgid "Recent Documents"
 msgctxt ""
@@ -224,7 +224,7 @@ msgctxt ""
 msgid "Recently used"
 msgstr "अलिकडील दस्तऐवज"
 
-#: ConfigGeneral.qml:270
+#: ConfigGeneral.qml:273
 #, fuzzy, kde-format
 #| msgid "Recent Documents"
 msgctxt ""
@@ -232,37 +232,37 @@ msgctxt ""
 msgid "Often used"
 msgstr "अलिकडील दस्तऐवज"
 
-#: ConfigGeneral.qml:280
+#: ConfigGeneral.qml:283
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
 msgstr ""
 
-#: ConfigGeneral.qml:282
+#: ConfigGeneral.qml:285
 #, kde-format
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr ""
 
-#: ConfigGeneral.qml:290
+#: ConfigGeneral.qml:293
 #, kde-format
 msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr ""
 
-#: ConfigGeneral.qml:295
+#: ConfigGeneral.qml:298
 #, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
 msgstr ""
 
-#: ConfigGeneral.qml:300
+#: ConfigGeneral.qml:303
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
 msgstr ""
 
-#: ConfigGeneral.qml:304
+#: ConfigGeneral.qml:307
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""

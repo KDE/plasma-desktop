@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"POT-Creation-Date: 2026-11-27 01:06+0000\n"
 "PO-Revision-Date: 2026-01-20 19:48+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -46,43 +46,43 @@ msgctxt "@action:button as in, 'save changes'"
 msgid "Save"
 msgstr "Сохранить"
 
-#: ui/ActivityEditor.qml:57
+#: ui/ActivityEditor.qml:47
 #, kde-format
 msgctxt "@label:chooser"
 msgid "Icon:"
 msgstr "Значок:"
 
-#: ui/ActivityEditor.qml:68
+#: ui/ActivityEditor.qml:63
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Имя:"
 
-#: ui/ActivityEditor.qml:74
+#: ui/ActivityEditor.qml:70
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Description:"
 msgstr "Описание:"
 
-#: ui/ActivityEditor.qml:84
+#: ui/ActivityEditor.qml:79
 #, kde-format
 msgctxt "@title:group for checkbox group"
 msgid "While on this activity, allow:"
 msgstr "Разрешить в этой комнате:"
 
-#: ui/ActivityEditor.qml:85
+#: ui/ActivityEditor.qml:81
 #, kde-format
 msgctxt "@option:check While on activity, allow"
 msgid "Tracking file and app use"
 msgstr "Отслеживать использование файлов и приложений"
 
-#: ui/ActivityEditor.qml:91
+#: ui/ActivityEditor.qml:88
 #, kde-format
 msgctxt "@option:check While on activity, allow"
 msgid "Automatically turning off the screen"
 msgstr "Автоматически выключать экран"
 
-#: ui/ActivityEditor.qml:97
+#: ui/ActivityEditor.qml:95
 #, kde-format
 msgctxt "@option:check While on activity, allow"
 msgid "Automatically shutting down or sleeping"

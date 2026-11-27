@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"POT-Creation-Date: 2026-11-27 01:06+0000\n"
 "PO-Revision-Date: 2024-05-20 18:59+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -41,25 +41,25 @@ msgctxt "@action:button as in, 'save changes'"
 msgid "Save"
 msgstr "Save"
 
-#: ui/ActivityEditor.qml:57
+#: ui/ActivityEditor.qml:47
 #, kde-format
 msgctxt "@label:chooser"
 msgid "Icon:"
 msgstr "Icon:"
 
-#: ui/ActivityEditor.qml:68
+#: ui/ActivityEditor.qml:63
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Name:"
 
-#: ui/ActivityEditor.qml:74
+#: ui/ActivityEditor.qml:70
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Description:"
 msgstr "Description:"
 
-#: ui/ActivityEditor.qml:84
+#: ui/ActivityEditor.qml:79
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "While on this activity, allow:"
@@ -67,14 +67,14 @@ msgctxt "@title:group for checkbox group"
 msgid "While on this activity, allow:"
 msgstr "While on this activity, allow:"
 
-#: ui/ActivityEditor.qml:85
+#: ui/ActivityEditor.qml:81
 #, fuzzy, kde-format
 #| msgid "Tracking file and app use"
 msgctxt "@option:check While on activity, allow"
 msgid "Tracking file and app use"
 msgstr "Tracking file and app use"
 
-#: ui/ActivityEditor.qml:91
+#: ui/ActivityEditor.qml:88
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Automatically turning off the screen"
@@ -82,7 +82,7 @@ msgctxt "@option:check While on activity, allow"
 msgid "Automatically turning off the screen"
 msgstr "Automatically turning off the screen"
 
-#: ui/ActivityEditor.qml:97
+#: ui/ActivityEditor.qml:95
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Automatically shutting down or sleeping"

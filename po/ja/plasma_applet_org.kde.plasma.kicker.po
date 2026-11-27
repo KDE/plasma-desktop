@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-16 20:39+0000\n"
+"POT-Creation-Date: 2026-11-26 04:01+0000\n"
 "PO-Revision-Date: 2026-07-24 14:05+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -50,201 +50,201 @@ msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "全般"
 
-#: ConfigGeneral.qml:51
+#: ConfigGeneral.qml:52
 #, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "アイコン:"
 
-#: ConfigGeneral.qml:136
+#: ConfigGeneral.qml:139
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "選択..."
 
-#: ConfigGeneral.qml:141
+#: ConfigGeneral.qml:144
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "標準のアイコンに戻す"
 
-#: ConfigGeneral.qml:150
+#: ConfigGeneral.qml:153
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr ""
 
-#: ConfigGeneral.qml:163
+#: ConfigGeneral.qml:166
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr ""
 
-#: ConfigGeneral.qml:164
+#: ConfigGeneral.qml:167
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr ""
 
-#: ConfigGeneral.qml:176
+#: ConfigGeneral.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr ""
 
-#: ConfigGeneral.qml:196
+#: ConfigGeneral.qml:199
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "アプリケーションの表示方法:"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:201
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "名前のみ"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:201
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "説明のみ"
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:202
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "名前 (説明)"
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:202
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "説明 (名前)"
 
-#: ConfigGeneral.qml:209
+#: ConfigGeneral.qml:212
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
 msgstr "挙動:"
 
-#: ConfigGeneral.qml:211
+#: ConfigGeneral.qml:214
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "アプリケーションをアルファベット順にソート"
 
-#: ConfigGeneral.qml:219
+#: ConfigGeneral.qml:222
 #, kde-format
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
 msgstr "サブメニューを単一階層にフラット化"
 
-#: ConfigGeneral.qml:227
+#: ConfigGeneral.qml:230
 #, kde-format
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
 msgstr "メニューの第一階層でアイコンを表示"
 
-#: ConfigGeneral.qml:233
+#: ConfigGeneral.qml:236
 #, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "新しくインストールしたアプリケーションを強調"
 
-#: ConfigGeneral.qml:243
+#: ConfigGeneral.qml:246
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
 msgstr "表示するカテゴリ:"
 
-#: ConfigGeneral.qml:246
+#: ConfigGeneral.qml:249
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent applications"
 msgstr "最近のアプリケーション"
 
-#: ConfigGeneral.qml:247
+#: ConfigGeneral.qml:250
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used applications"
 msgstr "よく使用するアプリケーション"
 
-#: ConfigGeneral.qml:254
+#: ConfigGeneral.qml:257
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent files"
 msgstr "最近のファイル"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:258
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used files"
 msgstr "よく使用するファイル"
 
-#: ConfigGeneral.qml:262
+#: ConfigGeneral.qml:265
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent places"
 msgstr "最近使用した場所"
 
-#: ConfigGeneral.qml:263
+#: ConfigGeneral.qml:266
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used places"
 msgstr "よく使用する場所"
 
-#: ConfigGeneral.qml:269
+#: ConfigGeneral.qml:272
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
 msgstr "カテゴリ内のアイテムのソート方法:"
 
-#: ConfigGeneral.qml:270
+#: ConfigGeneral.qml:273
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "最近使用したアイテム"
 
-#: ConfigGeneral.qml:270
+#: ConfigGeneral.qml:273
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Often used"
 msgstr "よく使用するアイテム"
 
-#: ConfigGeneral.qml:280
+#: ConfigGeneral.qml:283
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
 msgstr "検索:"
 
-#: ConfigGeneral.qml:282
+#: ConfigGeneral.qml:285
 #, kde-format
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr "検索対象をブックマークとファイル、メールに拡大する"
 
-#: ConfigGeneral.qml:290
+#: ConfigGeneral.qml:293
 #, kde-format
 msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr "検索結果を下部に配置する"
 
-#: ConfigGeneral.qml:295
+#: ConfigGeneral.qml:298
 #, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
 msgstr "外観:"
 
-#: ConfigGeneral.qml:300
+#: ConfigGeneral.qml:303
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
 msgstr "利用可能なときはダークモードを使用"
 
-#: ConfigGeneral.qml:304
+#: ConfigGeneral.qml:307
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""

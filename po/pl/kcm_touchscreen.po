@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-03 00:56+0000\n"
+"POT-Creation-Date: 2026-11-26 06:47+0000\n"
 "PO-Revision-Date: 2026-01-24 10:17+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -41,19 +41,27 @@ msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchscreen"
 msgstr "Podłącz swój zewnętrzny ekran dotykowy"
 
-#: ui/main.qml:47
+#: ui/main.qml:40
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Urządzenie:"
 
-#: ui/main.qml:60
+#: ui/main.qml:58
 #, kde-format
+msgctxt "@title:group currently only entry 'Enable device'"
+msgid "General:"
+msgstr ""
+
+#: ui/main.qml:60
+#, fuzzy, kde-format
+#| msgctxt "@option:check prefix touchscreen device is enabled"
+#| msgid "Enabled:"
 msgctxt "@option:check prefix touchscreen device is enabled"
-msgid "Enabled:"
+msgid "Enable device"
 msgstr "Włączone:"
 
-#: ui/main.qml:68
+#: ui/main.qml:67
 #, kde-format
 msgctxt "@label:listbox this is a compound noun"
 msgid "Target display:"

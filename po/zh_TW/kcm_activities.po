@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_activities5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"POT-Creation-Date: 2026-11-27 01:06+0000\n"
 "PO-Revision-Date: 2026-01-08 23:59+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -43,43 +43,43 @@ msgctxt "@action:button as in, 'save changes'"
 msgid "Save"
 msgstr "儲存"
 
-#: ui/ActivityEditor.qml:57
+#: ui/ActivityEditor.qml:47
 #, kde-format
 msgctxt "@label:chooser"
 msgid "Icon:"
 msgstr "圖示："
 
-#: ui/ActivityEditor.qml:68
+#: ui/ActivityEditor.qml:63
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "名稱："
 
-#: ui/ActivityEditor.qml:74
+#: ui/ActivityEditor.qml:70
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Description:"
 msgstr "描述："
 
-#: ui/ActivityEditor.qml:84
+#: ui/ActivityEditor.qml:79
 #, kde-format
 msgctxt "@title:group for checkbox group"
 msgid "While on this activity, allow:"
 msgstr "在這個活動中時，允許："
 
-#: ui/ActivityEditor.qml:85
+#: ui/ActivityEditor.qml:81
 #, kde-format
 msgctxt "@option:check While on activity, allow"
 msgid "Tracking file and app use"
 msgstr "追蹤檔案與應用程式使用情形"
 
-#: ui/ActivityEditor.qml:91
+#: ui/ActivityEditor.qml:88
 #, kde-format
 msgctxt "@option:check While on activity, allow"
 msgid "Automatically turning off the screen"
 msgstr "自動關閉螢幕"
 
-#: ui/ActivityEditor.qml:97
+#: ui/ActivityEditor.qml:95
 #, kde-format
 msgctxt "@option:check While on activity, allow"
 msgid "Automatically shutting down or sleeping"

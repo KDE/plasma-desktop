@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-25 01:27+0000\n"
+"POT-Creation-Date: 2026-11-27 01:06+0000\n"
 "PO-Revision-Date: 2026-09-04 11:18+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -145,13 +145,13 @@ msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
 msgstr "Configurer les boutons supplémentaires..."
 
-#: ui/main.qml:64
+#: ui/main.qml:62
 #, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Périphérique :"
 
-#: ui/main.qml:86
+#: ui/main.qml:84
 #, kde-format
 msgctxt "@title:group"
 msgid "General:"
@@ -163,7 +163,7 @@ msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr "Activer le périphérique"
 
-#: ui/main.qml:102
+#: ui/main.qml:101
 #, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
@@ -192,7 +192,7 @@ msgstr ""
 "ms. Ce délai supplémentaire est nécessaire pour la détection correcte des "
 "appuis simultanés des boutons gauche et droit."
 
-#: ui/main.qml:142
+#: ui/main.qml:139
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
@@ -213,7 +213,7 @@ msgstr ""
 "Lorsque cette option est activée, la distance de déplacement du pointeur "
 "augmente avec une vitesse plus importante de celui-ci."
 
-#: ui/main.qml:263
+#: ui/main.qml:262
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
@@ -231,7 +231,7 @@ msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Plus rapide"
 
-#: ui/main.qml:346
+#: ui/main.qml:344
 #, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"

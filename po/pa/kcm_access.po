@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-18 01:12+0000\n"
-"PO-Revision-Date: 2026-11-02 20:23-0500\n"
+"PO-Revision-Date: 2026-11-26 12:44-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.08.2\n"
+"X-Generator: Lokalize 26.08.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 
@@ -131,10 +131,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (DwellClickerDelayTime), group (Effect-dwellclicker)
 #: kcmaccessibilitydwellclicker.kcfg:19
-#, fuzzy, kde-format
-#| msgid "Delay for timeout"
+#, kde-format
 msgid "Delay Time"
-msgstr "ਟਾਈਮ-ਆਉਟ ਲਈ ਦੇਰੀ"
+msgstr "ਸਮਾਂ ਦੇਰੀ"
 
 #. i18n: ectx: label, entry (DwellClickerDwellTime), group (Effect-dwellclicker)
 #: kcmaccessibilitydwellclicker.kcfg:24
@@ -1021,33 +1020,25 @@ msgid "Shake pointer to find it:"
 msgstr ""
 
 #: ui/ShakeCursor.qml:18
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable shake pointer effect"
 msgid "Enable"
 msgstr "ਸਮਰੱਥ"
 
 #: ui/ShakeCursor.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@label Cursor magnification level"
-#| msgid "Magnification:"
+#, kde-format
 msgctxt "@label Pointer magnification level"
 msgid "Magnification:"
 msgstr "ਵੱਡਦਰਸ਼ਨ:"
 
 #: ui/ShakeCursor.qml:60
-#, fuzzy, kde-format
-#| msgctxt "@label Normal cursor size"
-#| msgid "Normal"
+#, kde-format
 msgctxt "@label Normal pointer size"
 msgid "Normal"
 msgstr "ਸਧਾਰਨ"
 
 #: ui/ShakeCursor.qml:67
-#, fuzzy, kde-format
-#| msgctxt "@label Large cursor size"
-#| msgid "Large"
+#, kde-format
 msgctxt "@label Large pointer size"
 msgid "Large"
 msgstr "ਵੱਡਾ"
@@ -1062,11 +1053,10 @@ msgid ""
 msgstr ""
 
 #: ui/TextSize.qml:18
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Display Scale…"
-msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਦੀ ਸੰਰਚਨਾ…"
+msgstr "…ਡਿਸਪਲੇਅ ਸਕੇਲ ਦੀ ਸੰਰਚਨਾ…"
 
 #: ui/TextSize.qml:25
 #, kde-format
@@ -1078,11 +1068,10 @@ msgid ""
 msgstr ""
 
 #: ui/TextSize.qml:27
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Fonts…"
-msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਦੀ ਸੰਰਚਨਾ…"
+msgstr "…ਫ਼ੋੰਟ ਸੰਰਚਨਾ"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format
@@ -1102,7 +1091,7 @@ msgstr "ਪੁਆਇੰਟਰ ਐਕਸਰਲੇਸ਼ਨ:"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
-msgstr ""
+msgstr "ਅਨੁਪਾਤੀ"
 
 #: ui/ZoomMagnifier.qml:83
 #, kde-format
@@ -1114,7 +1103,7 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
-msgstr ""
+msgstr "ਸੈਂਟਰ"
 
 #: ui/ZoomMagnifier.qml:88
 #, kde-format
@@ -1138,7 +1127,7 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
-msgstr ""
+msgstr "ਪੁਸ਼"
 
 #: ui/ZoomMagnifier.qml:98
 #, kde-format
@@ -1150,7 +1139,7 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
-msgstr ""
+msgstr "ਅਸਮਰੱਥ ਹੈ"
 
 #: ui/ZoomMagnifier.qml:103
 #, kde-format
@@ -1174,60 +1163,57 @@ msgstr ""
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
-msgstr ""
+msgstr "ਚੌੜਾਈ:"
 
 #: ui/ZoomMagnifier.qml:167 ui/ZoomMagnifier.qml:195
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
 msgid_plural "%1 px"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 px"
+msgstr[1] "%1 px"
 
 #: ui/ZoomMagnifier.qml:168 ui/ZoomMagnifier.qml:196
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #: ui/ZoomMagnifier.qml:182
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
-msgstr ""
+msgstr "ਉਚਾਈ:"
 
 #: ui/ZoomMagnifier.qml:211
 #, kde-format
 msgctxt "@label, followed by 'full screen' or 'magnify region'"
 msgid "Zoom:"
-msgstr ""
+msgstr "ਜ਼ੂਮ:"
 
 #: ui/ZoomMagnifier.qml:216
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Flash screen when a system bell is rung"
-#| msgid "Flash screen"
+#, kde-format
 msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
 msgid "Full screen"
-msgstr "ਫਲੈਸ਼ ਸਕਰੀਨ"
+msgstr "ਪੂਰੀ ਸਕਰੀਨ"
 
 #: ui/ZoomMagnifier.qml:231
-#, fuzzy, kde-format
-#| msgid "Magnification"
+#, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
-msgstr "ਵੱਡਦਰਸ਼ਨ"
+msgstr "ਵੱਡਦਰਸ਼ਨ ਖੇਤਰ"
 
 #: ui/ZoomMagnifier.qml:244
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
-msgstr ""
+msgstr "ਅਸਮਰੱਥ ਹੈ"
 
 #: ui/ZoomMagnifier.qml:265
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
-msgstr ""
+msgstr "ਜ਼ੂਮ ਗੁਣਾਂਕ:"
 
 #: ui/ZoomMagnifier.qml:303
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-19 00:48+0000\n"
+"POT-Creation-Date: 2026-11-26 06:47+0000\n"
 "PO-Revision-Date: 2022-06-19 14:26+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -17,82 +17,80 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 21.12.2\n"
 
-#: ui/main.qml:31
+#: ui/main.qml:26
 #, fuzzy, kde-format
 #| msgid "Position on screen:"
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Position on screen:"
 msgstr "Vị trí trên màn hình:"
 
-#: ui/main.qml:35
+#: ui/main.qml:31
 #, fuzzy, kde-format
 #| msgid "Top"
 msgctxt "@option:check Position on top of screen"
 msgid "Top"
 msgstr "Trên"
 
-#: ui/main.qml:42
+#: ui/main.qml:39
 #, fuzzy, kde-format
 #| msgid "Center"
 msgctxt "@option:check Position in center of screen"
 msgid "Center"
 msgstr "Giữa"
 
-#: ui/main.qml:55
+#: ui/main.qml:51
 #, fuzzy, kde-format
 #| msgid "History:"
 msgctxt "@title:group prefix for radiobutton group"
 msgid "History:"
 msgstr "Lịch sử:"
 
-#: ui/main.qml:58
+#: ui/main.qml:55
 #, kde-format
 msgctxt "@option:radio History is disabled"
 msgid "Disabled"
 msgstr ""
 
-#: ui/main.qml:63
+#: ui/main.qml:62
 #, kde-format
 msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable suggestions"
 msgstr ""
 
-#: ui/main.qml:68
+#: ui/main.qml:69
 #, kde-format
 msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable auto-complete"
 msgstr ""
 
-#: ui/main.qml:76
+#: ui/main.qml:78
 #, fuzzy, kde-format
 #| msgid "Clear History…"
 msgctxt "@action:button"
 msgid "Clear History…"
 msgstr "Xoá lịch sử…"
 
-#: ui/main.qml:99
+#: ui/main.qml:101
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for all activities"
 msgid "For all activities"
 msgstr "Cho tất cả các Hoạt động"
 
-#: ui/main.qml:111
+#: ui/main.qml:113
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for this activity"
 msgid "For activity \"%1\""
 msgstr "Cho Hoạt động \"%1\""
 
-#: ui/main.qml:128
-#, kde-format
-msgctxt "@label"
-msgid "Plugins:"
-msgstr "Phần cài cắm:"
-
-#: ui/main.qml:132
+#: ui/main.qml:126
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "Cấu hình các phần cài cắm tìm kiếm được bật…"
+
+#~ msgctxt "@label"
+#~ msgid "Plugins:"
+#~ msgstr "Phần cài cắm:"
 
 #, fuzzy
 #~| msgid "Activation:"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-25 01:27+0000\n"
+"POT-Creation-Date: 2026-11-27 01:06+0000\n"
 "PO-Revision-Date: 2026-10-17 19:13+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -131,13 +131,13 @@ msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
 msgstr "追加のボタンを設定..."
 
-#: ui/main.qml:64
+#: ui/main.qml:62
 #, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "デバイス:"
 
-#: ui/main.qml:86
+#: ui/main.qml:84
 #, kde-format
 msgctxt "@title:group"
 msgid "General:"
@@ -149,7 +149,7 @@ msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr "デバイスを有効にする"
 
-#: ui/main.qml:102
+#: ui/main.qml:101
 #, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
@@ -177,7 +177,7 @@ msgstr ""
 "この設定を有効にすると、クリックのレイテンシが50ミリ秒増加します。この遅延は"
 "左右のボタンが同時に押されたことを正しく検知するために必要です。"
 
-#: ui/main.qml:142
+#: ui/main.qml:139
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
@@ -199,7 +199,7 @@ msgstr ""
 "この機能を有効にすると、ポインタの動く距離がマウスの動く速さに応じて変動しま"
 "す。"
 
-#: ui/main.qml:263
+#: ui/main.qml:262
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
@@ -217,7 +217,7 @@ msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "速く"
 
-#: ui/main.qml:346
+#: ui/main.qml:344
 #, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"

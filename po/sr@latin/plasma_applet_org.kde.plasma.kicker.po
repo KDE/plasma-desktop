@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-16 20:39+0000\n"
+"POT-Creation-Date: 2026-11-26 04:01+0000\n"
 "PO-Revision-Date: 2026-11-17 23:51+0100\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -50,170 +50,170 @@ msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Opšte"
 
-#: ConfigGeneral.qml:51
+#: ConfigGeneral.qml:52
 #, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Ikonica:"
 
-#: ConfigGeneral.qml:136
+#: ConfigGeneral.qml:139
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Izaberi…"
 
-#: ConfigGeneral.qml:141
+#: ConfigGeneral.qml:144
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Resetuj na podrazumevanu ikonicu"
 
-#: ConfigGeneral.qml:150
+#: ConfigGeneral.qml:153
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Ukloni ikonicu"
 
-#: ConfigGeneral.qml:163
+#: ConfigGeneral.qml:166
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Tekstualna etiketa:"
 
-#: ConfigGeneral.qml:164
+#: ConfigGeneral.qml:167
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Kucajte ovde da dodate tekstualnu etiketu"
 
-#: ConfigGeneral.qml:176
+#: ConfigGeneral.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "Resetuj etiketu menija"
 
-#: ConfigGeneral.qml:196
+#: ConfigGeneral.qml:199
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Prikaži programe kao:"
 
 # >> @item:inlistbox
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:201
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "samo ime"
 
 # >> @item:inlistbox
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:201
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "samo opis"
 
 # >> @item:inlistbox
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:202
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "ime (opis)"
 
 # >> @item:inlistbox
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:202
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "opis (ime)"
 
 # >> @title:group
-#: ConfigGeneral.qml:209
+#: ConfigGeneral.qml:212
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
 msgstr "Ponašanje:"
 
-#: ConfigGeneral.qml:211
+#: ConfigGeneral.qml:214
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Poređaj programe abecedno"
 
 # >> @option:check
-#: ConfigGeneral.qml:219
+#: ConfigGeneral.qml:222
 #, kde-format
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
 msgstr "Spljošti podmenije na jedan nivo"
 
-#: ConfigGeneral.qml:227
+#: ConfigGeneral.qml:230
 #, kde-format
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
 msgstr "Prikaži ikonice na korenom nivou menija"
 
-#: ConfigGeneral.qml:233
+#: ConfigGeneral.qml:236
 #, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "Istakni novoinstalirane programe"
 
-#: ConfigGeneral.qml:243
+#: ConfigGeneral.qml:246
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
 msgstr "Prikaži kategorije:"
 
-#: ConfigGeneral.qml:246
+#: ConfigGeneral.qml:249
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent applications"
 msgstr "Nedavni programi"
 
-#: ConfigGeneral.qml:247
+#: ConfigGeneral.qml:250
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used applications"
 msgstr "Često korišćeni programi"
 
-#: ConfigGeneral.qml:254
+#: ConfigGeneral.qml:257
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent files"
 msgstr "Nedavni fajlovi"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:258
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used files"
 msgstr "Često korišćeni fajlovi"
 
-#: ConfigGeneral.qml:262
+#: ConfigGeneral.qml:265
 #, kde-format
 msgctxt "@option:check"
 msgid "Recent places"
 msgstr "Nedavna mesta"
 
-#: ConfigGeneral.qml:263
+#: ConfigGeneral.qml:266
 #, kde-format
 msgctxt "@option:check"
 msgid "Often used places"
 msgstr "Često korišćena mesta"
 
-#: ConfigGeneral.qml:269
+#: ConfigGeneral.qml:272
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
 msgstr "Poređaj stavke u kategorijama po:"
 
-#: ConfigGeneral.qml:270
+#: ConfigGeneral.qml:273
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "nedavnom korišćenju"
 
-#: ConfigGeneral.qml:270
+#: ConfigGeneral.qml:273
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
@@ -221,39 +221,39 @@ msgid "Often used"
 msgstr "učestalosti korišćenja"
 
 # >> @title:group
-#: ConfigGeneral.qml:280
+#: ConfigGeneral.qml:283
 #, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
 msgstr "Pretraga:"
 
 # >> @option:check
-#: ConfigGeneral.qml:282
+#: ConfigGeneral.qml:285
 #, kde-format
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Pretražuj i obeleživače, fajlove i e‑poštu"
 
 # >> @option:check
-#: ConfigGeneral.qml:290
+#: ConfigGeneral.qml:293
 #, kde-format
 msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr "Ravnaj rezultate pretrage uz dno"
 
-#: ConfigGeneral.qml:295
+#: ConfigGeneral.qml:298
 #, kde-format
 msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
 msgstr "Izgled:"
 
-#: ConfigGeneral.qml:300
+#: ConfigGeneral.qml:303
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
 msgstr "Prednost tamnom režimu kad je dostupan"
 
-#: ConfigGeneral.qml:304
+#: ConfigGeneral.qml:307
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""

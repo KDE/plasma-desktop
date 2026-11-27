@@ -1,31 +1,30 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2024 A S Alam <aalam@punlinux.org>
+# SPDX-FileCopyrightText: 2024, 2026 A S Alam <aalam@punlinux.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-31 00:45+0000\n"
-"PO-Revision-Date: 2024-02-25 09:26-0600\n"
-"Last-Translator: A S Alam <aalam@punlinux.org>\n"
-"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-11-26 12:22-0500\n"
+"Last-Translator: A S Alam <aman@punlinux.org>\n"
+"Language-Team: pa\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: inputsequence.cpp:191
 #, kde-format
 msgctxt "@action:button This action is disabled"
 msgid "Disabled"
-msgstr ""
+msgstr "ਅਸਮਰੱਥ ਹੈ"
 
 #: inputsequence.cpp:194
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybinding"
 msgid "None"
 msgstr "ਕੋਈ ਨਹੀਂ"
@@ -34,11 +33,10 @@ msgstr "ਕੋਈ ਨਹੀਂ"
 #, kde-format
 msgctxt "@action:button Two keybinds for a dial, up & down"
 msgid "%1 && %2"
-msgstr ""
+msgstr "%1 && %2"
 
 #: inputsequence.cpp:216
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybindings"
 msgid "None"
 msgstr "ਕੋਈ ਨਹੀਂ"
@@ -47,43 +45,42 @@ msgstr "ਕੋਈ ਨਹੀਂ"
 #, kde-format
 msgctxt "@action:button"
 msgid "Left mouse button"
-msgstr ""
+msgstr "ਖੱਬੇ ਹੱਥ ਬਟਨ"
 
 #: inputsequence.cpp:223
 #, kde-format
 msgctxt "@action:button"
 msgid "Right mouse button"
-msgstr ""
+msgstr "ਸੱਜੇ ਹੱਥ ਬਟਨ"
 
 #: inputsequence.cpp:225
 #, kde-format
 msgctxt "@action:button"
 msgid "Middle mouse button"
-msgstr ""
+msgstr "ਮੱਧ ਮਾਊਸ ਬਟਨ"
 
 #: inputsequence.cpp:231
 #, kde-format
 msgctxt "@action:button"
 msgid "Application-defined"
-msgstr ""
+msgstr "ਐਪਲੀਕੇਸ਼ਨ ਵਲੋਂ ਨਿਰਧਾਰਿਤ"
 
 #: inputsequence.cpp:233
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "ਪੈਨ ਬਟਨ 1"
+msgstr "ਪੈਨ ਬਟਨ %1"
 
 #: inputsequence.cpp:235
 #, kde-format
 msgctxt "@action:button"
 msgid "Scroll wheel"
-msgstr ""
+msgstr "ਸਕਰੋਲ ਵੀਲ੍ਹ"
 
 #: kcmtablet.cpp:36
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "ਡਿਫਾਲਟ"
 
 #: kcmtablet.cpp:37
 #, kde-format
@@ -106,15 +103,14 @@ msgid "Inverted Landscape"
 msgstr "ਉਲਟ ਲੈਂਡਸਕੇਪ"
 
 #: kcmtablet.cpp:90
-#, fuzzy, kde-format
-#| msgid "Follow the active screen"
+#, kde-format
 msgid "Follow the Current Screen"
-msgstr "ਸਰਗਰਮ ਸਕਰੀਨ ਮੁਤਾਬਕ"
+msgstr "ਮੌਜੂਦਾ ਸਕਰੀਨ ਮੁਤਾਬਕ"
 
 #: kcmtablet.cpp:95
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "ਸਾਰੀਆਂ ਸਕਰੀਨਾਂ"
 
 #: kcmtablet.cpp:104
 #, kde-format
@@ -126,13 +122,13 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
-msgstr ""
+msgstr "ਤਾਣੋ ਅਤੇ ਭਰੋ"
 
 #: kcmtablet.cpp:165 ui/DisplayTab.qml:104
 #, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
-msgstr ""
+msgstr "ਆਕਾਰ ਅਨੁਪਾਤ ਰੱਖੋ ਅਤੇ ਫਿੱਟ"
 
 #: kcmtablet.cpp:166 ui/DisplayTab.qml:105
 #, kde-format
@@ -141,20 +137,18 @@ msgid "Map to Portion"
 msgstr ""
 
 #: kcmtablet.cpp:269
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "ਪੈਨ ਬਟਨ 1"
+msgstr "ਪੈਨ ਬਟਨ %1:"
 
 #: kcmtablet.cpp:270
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr "ਪੈਨ ਬਟਨ 1"
+msgstr "ਪੈਨ ਬਟਨ %1"
 
 #: ui/ActionDialog.qml:27
 #, kde-format
@@ -166,7 +160,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
-msgstr ""
+msgstr "ਬਟਨ ਕਾਰਵਾਈ ਨੂੰ ਚੁਣੋ"
 
 #: ui/ActionDialog.qml:83
 #, kde-format
@@ -184,19 +178,19 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
-msgstr ""
+msgstr "ਐਪਲੀਕੇਸ਼ਨ ਲਈ ਛੱਡੋ"
 
 #: ui/ActionDialog.qml:113
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
-msgstr ""
+msgstr "ਕੀਬੋਰਡ ਸਵਿੱਚ ਭੇਜੋ"
 
 #: ui/ActionDialog.qml:129
 #, kde-format
 msgctxt "@option:radio Set this action to a up/down keyboard type"
 msgid "Send keyboard keys"
-msgstr ""
+msgstr "ਕੀਬੋਰਡ ਸਵਿੱਚਾਂ ਭੇਜੋ"
 
 #: ui/ActionDialog.qml:144
 #, kde-format
@@ -205,11 +199,10 @@ msgid "Send mouse button click"
 msgstr ""
 
 #: ui/ActionDialog.qml:160
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr "ਪੈਨ ਬਟਨ 1"
+msgstr "ਪੈਨ ਬਟਨ ਭੇਜੋ"
 
 #: ui/ActionDialog.qml:177
 #, kde-format
@@ -221,7 +214,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
-msgstr ""
+msgstr "ਕੁਝ ਨਾ ਕਰੋ"
 
 #: ui/ActionDialog.qml:215
 #, kde-format
@@ -237,7 +230,7 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "upwards"
 msgid "Clockwise:"
-msgstr ""
+msgstr "ਸੱਜੇ-ਦਾਅ:"
 
 #: ui/ActionDialog.qml:257
 #, kde-format
@@ -245,77 +238,74 @@ msgctxt ""
 "@label prefix for configuring Keybind to send when dial/ring is turned "
 "downwards"
 msgid "Counterclockwise:"
-msgstr ""
+msgstr "ਖੱਬੇ ਦਾਅ:"
 
 #: ui/ActionDialog.qml:271
 #, kde-format
 msgctxt ""
 "@label:slider Speed for how often this dial/ring should emit key events"
 msgid "Speed:"
-msgstr ""
+msgstr "ਸਪੀਡ:"
 
 #: ui/ActionDialog.qml:286
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
-msgstr ""
+msgstr "ਖੱਬਾ-ਕਲਿੱਕ"
 
 #: ui/ActionDialog.qml:287
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
-msgstr ""
+msgstr "ਮੱਧ-ਕਲਿੱਕ"
 
 #: ui/ActionDialog.qml:288
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
-msgstr ""
+msgstr "ਸੱਜਾ-ਕਲਿੱਕ"
 
 #: ui/ActionDialog.qml:315
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: ui/ActionDialog.qml:322
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: ui/ActionDialog.qml:329
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
-msgstr ""
+msgstr "ਮੇਟਾ"
 
 #: ui/ActionDialog.qml:336
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: ui/ActionDialog.qml:352
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr "ਪੈਨ ਬਟਨ 1"
+msgstr "ਬਟਨ 1"
 
 #: ui/ActionDialog.qml:353
-#, fuzzy, kde-format
-#| msgid "Pen Button 2"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr "ਪੈਨ ਬਟਨ 2"
+msgstr "ਬਟਨ 2"
 
 #: ui/ActionDialog.qml:354
-#, fuzzy, kde-format
-#| msgid "Pen Button 3"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr "ਪੈਨ ਬਟਨ 3"
+msgstr "ਬਟਨ 3"
 
 #: ui/ActionDialog.qml:363
 #, kde-format
@@ -327,19 +317,19 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
-msgstr ""
+msgstr "ਇਹ ਬਟਨ ਅਸਮਰੱਥ ਹੈ ਅਤੇ ਕੁਝ ਨਹੀਂ ਕਰੇਗਾ।"
 
 #: ui/Calibration.qml:32
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr ""
+msgstr "ਪੈਨ ਇਕਸੁਰਤਾ"
 
 #: ui/Calibration.qml:73
 #, kde-format
 msgctxt "@info"
 msgid "%1: (%2 px, %3 px)"
-msgstr ""
+msgstr "%1: (%2 px, %3 px)"
 
 #: ui/Calibration.qml:107
 #, kde-format
@@ -409,43 +399,43 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "ਬੰਦ ਕਰੋ"
 
 #: ui/Calibration.qml:243
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "ਰੱਦ ਕਰੋ"
 
 #: ui/Calibration.qml:315
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-left"
-msgstr ""
+msgstr "ਉੱਤੇ-ਖੱਬੇ"
 
 #: ui/Calibration.qml:334
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Top-right"
-msgstr ""
+msgstr "ਉੱਤੇ-ਸੱਜੇ"
 
 #: ui/Calibration.qml:353
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-left"
-msgstr ""
+msgstr "ਹੇਠਾਂ-ਖੱਬੇ"
 
 #: ui/Calibration.qml:372
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Bottom-right"
-msgstr ""
+msgstr "ਹੇਠਾਂ-ਸੱਜੇ"
 
 #: ui/Calibration.qml:391
 #, kde-format
 msgctxt "@info Name used in the diagnostic log"
 msgid "Center"
-msgstr ""
+msgstr "ਸੈਂਟਰ"
 
 #: ui/DisplayTab.qml:46
 #, kde-format
@@ -454,8 +444,7 @@ msgid "Map to screen:"
 msgstr ""
 
 #: ui/DisplayTab.qml:76
-#, fuzzy, kde-format
-#| msgid "Orientation:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Orientation:"
 msgstr "ਸਥਿਤੀ:"
@@ -464,7 +453,7 @@ msgstr "ਸਥਿਤੀ:"
 #, kde-format
 msgctxt "@label substitute for unavailable orientation change"
 msgid "Not Applicable"
-msgstr ""
+msgstr "ਲਾਗੂ ਨਹੀਂ"
 
 #: ui/DisplayTab.qml:96
 #, kde-format
@@ -492,30 +481,25 @@ msgid "Resize the screen area"
 msgstr "ਟੈਬਲੇਟ ਖੇਤਰ ਨੂੰ ਮੁੜ-ਆਕਾਰ ਦਿਓ"
 
 #: ui/ExternalScreenMapping.qml:267
-#, fuzzy, kde-format
-#| msgctxt "tablet area position - size"
-#| msgid "%1,%2 - %3×%4"
+#, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr "%1,%2 - %3×%4"
+msgstr "%1%,%2% - %3%×%4%"
 
 #: ui/ExternalScreenMapping.qml:301
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgctxt "@action:button"
 msgid "Resize the tablet area"
 msgstr "ਟੈਬਲੇਟ ਖੇਤਰ ਨੂੰ ਮੁੜ-ਆਕਾਰ ਦਿਓ"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "No drawing tablets found"
+#, kde-format
 msgctxt "@info placeholdermessage text"
 msgid "No drawing tablets found"
 msgstr "ਕੋਈ ਡਰਾਇੰਗ ਟੈਬਲੇਟ ਨਹੀਂ ਲੱਭਿਆ"
 
 #: ui/main.qml:40
-#, fuzzy, kde-format
-#| msgid "Connect a drawing tablet"
+#, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect a drawing tablet"
 msgstr "ਡਰਾਇੰਗ ਟੈਬਲੇਟ ਨਾਲ ਕਨੈਕਟ ਕਰੋ"
@@ -545,21 +529,19 @@ msgstr "ਡਿਵਾਈਸ:"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "ਡਿਸਪਲੇਅ"
 
 #: ui/main.qml:188
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "ਪੈਨ"
 
 #: ui/main.qml:200
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The pad we are configuring"
-#| msgid "Pad:"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr "ਪੈਡ:"
+msgstr "ਪੈਡ"
 
 #: ui/MissingPadTab.qml:15
 #, fuzzy, kde-format
@@ -634,7 +616,7 @@ msgstr "ਖੱਬੇ ਹੱਥਾ ਢੰਗ:"
 #, kde-format
 msgctxt "@option:check Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "ਸਮਰੱਥ"
 
 #: ui/StylusTab.qml:241
 #, kde-kuit-format
@@ -650,7 +632,7 @@ msgstr ""
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
-msgstr ""
+msgstr "ਮੋਡ:"
 
 #: ui/StylusTab.qml:251
 #, kde-format
@@ -658,7 +640,7 @@ msgctxt ""
 "@option:radio Pen mode, where the point on the screen is always where you "
 "touch the stylus"
 msgid "Pen"
-msgstr ""
+msgstr "ਪੈਨ"
 
 #: ui/StylusTab.qml:256
 #, kde-format
@@ -671,7 +653,7 @@ msgstr ""
 msgctxt ""
 "@option:radio Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
-msgstr ""
+msgstr "ਮਾਊਸ"
 
 #: ui/StylusTab.qml:270
 #, kde-format
@@ -696,25 +678,25 @@ msgstr ""
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:409
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:420
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: ui/StylusTab.qml:428
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
-msgstr ""
+msgstr "0%"
 
 #: ui/StylusTab.qml:433
 #, kde-format
@@ -750,13 +732,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr ""
+msgstr "ਇਕਸੁਰਤਾ ਜਾਰੀ ਹੈ"
 
 #: ui/StylusTab.qml:472
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
-msgstr ""
+msgstr "ਇਕਸੁਰ"
 
 #: ui/StylusTab.qml:475
 #, kde-format
@@ -774,7 +756,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr ""
+msgstr "ਟੇਬਲੇਟ ਟੈਸਟਰ"
 
 #: ui/Tester.qml:48
 #, kde-format
@@ -836,7 +818,7 @@ msgstr ""
 #, kde-format
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
-msgstr ""
+msgstr "ਮਿਟਾਓ"
 
 #, fuzzy
 #~| msgid "Pen Button 2"

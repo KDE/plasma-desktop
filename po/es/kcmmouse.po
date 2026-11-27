@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-25 01:27+0000\n"
-"PO-Revision-Date: 2026-09-04 23:43+0100\n"
+"POT-Creation-Date: 2026-11-27 01:06+0000\n"
+"PO-Revision-Date: 2026-11-27 00:26+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: inputbackend.cpp:49
@@ -136,13 +136,13 @@ msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
 msgstr "Configurar los botones adicionales…"
 
-#: ui/main.qml:64
+#: ui/main.qml:62
 #, kde-format
 msgctxt "@title:listbox select device"
 msgid "Device:"
 msgstr "Dispositivo:"
 
-#: ui/main.qml:86
+#: ui/main.qml:84
 #, kde-format
 msgctxt "@title:group"
 msgid "General:"
@@ -154,7 +154,7 @@ msgctxt "@option:check enable this mouse device"
 msgid "Enable device"
 msgstr "Activar dispositivo"
 
-#: ui/main.qml:102
+#: ui/main.qml:101
 #, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
@@ -183,7 +183,7 @@ msgstr ""
 "retardo adicional es necesario para detectar correctamente la pulsación  "
 "simultánea de los botones derecho e izquierdo."
 
-#: ui/main.qml:142
+#: ui/main.qml:139
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Pointer speed:"
@@ -204,7 +204,7 @@ msgstr ""
 "Cuando está activa, la distancia que recorre el puntero aumenta con un "
 "movimiento más rápido."
 
-#: ui/main.qml:263
+#: ui/main.qml:262
 #, kde-format
 msgctxt "@label:slider and @label:spinbox"
 msgid "Scrolling speed:"
@@ -222,7 +222,7 @@ msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Más rápida"
 
-#: ui/main.qml:346
+#: ui/main.qml:344
 #, kde-format
 msgctxt "@title:group"
 msgid "Scrolling:"
@@ -283,19 +283,19 @@ msgstr ""
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Angle adjustment:"
-msgstr ""
+msgstr "Ajuste de ángulo:"
 
 #: ui/main.qml:446
 #, kde-format
 msgctxt "@label:valuesuffix %1 is an angle in degrees"
 msgid "%1°"
-msgstr ""
+msgstr "%1°"
 
 #: ui/main.qml:466
 #, kde-format
 msgctxt "@action:button Measure angle adjustment"
 msgid "Measure…"
-msgstr ""
+msgstr "Medir…"
 
 #: ui/main.qml:473
 #, kde-format
@@ -304,24 +304,27 @@ msgid ""
 "Rotates the direction of pointer movement clockwise by the given angle. This "
 "is useful for devices that are held or mounted at an angle."
 msgstr ""
+"Rota la dirección del movimiento del puntero en sentido horario según el "
+"ángulo especificado. Esto resulta útil para dispositivos que se sostienen o "
+"montan en ángulo."
 
 #: ui/RotationCalibrationWindow.qml:40
 #, kde-format
 msgctxt "@title:window"
 msgid "Measure Angle Adjustment"
-msgstr ""
+msgstr "Ajuste del ángulo de medición"
 
 #: ui/RotationCalibrationWindow.qml:152
 #, kde-format
 msgctxt "@info %1 is the name of a pointing device"
 msgid "Please make sure you are using the device “%1”."
-msgstr ""
+msgstr "Asegúrese de estar usando el dispositivo «%1»."
 
 #: ui/RotationCalibrationWindow.qml:161
 #, kde-format
 msgctxt "@info %1 is an angle in degrees"
 msgid "The measured angle is %1°."
-msgstr ""
+msgstr "El ángulo medido es %1°."
 
 #: ui/RotationCalibrationWindow.qml:162
 #, kde-format
@@ -331,29 +334,30 @@ msgid ""
 "left and right to you. Don't watch the pointer: it doesn't matter which way "
 "it moves on the screen."
 msgstr ""
+"Mueva el ratón de un lado a otro varias veces, en la dirección que crea que "
+"corresponde a izquierda y derecha. No mire el puntero: no importa hacia "
+"dónde se mueva en la pantalla."
 
 #: ui/RotationCalibrationWindow.qml:179
 #, kde-format
 msgctxt "@action:button Use the measured angle adjustment"
 msgid "&OK"
-msgstr ""
+msgstr "Acep&tar"
 
 #: ui/RotationCalibrationWindow.qml:189
 #, kde-format
 msgctxt "@action:button Angle adjustment calibration"
 msgid "&Measure Again"
-msgstr ""
+msgstr "&Volver a medir"
 
 #: ui/RotationCalibrationWindow.qml:196
 #, kde-format
 msgctxt "@action:button Discard the measured angle adjustment"
 msgid "&Discard"
-msgstr ""
+msgstr "&Descartar"
 
 #: ui/RotationCalibrationWindow.qml:197
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button Angle adjustment calibration"
 msgid "&Cancel"
-msgstr "Cancelar"
+msgstr "&Cancelar"

@@ -110,10 +110,10 @@ msgid "Session Restore"
 msgstr "会话恢复"
 
 #: ui/main.qml:79
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:group prefix for radiobuttons"
 msgid "On login:"
-msgstr "登录时"
+msgstr ""
 
 #: ui/main.qml:82
 #, kde-format
@@ -136,7 +136,7 @@ msgid "Restore manually saved session"
 msgstr ""
 
 #: ui/main.qml:112
-#, fuzzy, kde-kuit-format
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Adds a <interface>Save Session</interface> button to the "
@@ -144,21 +144,18 @@ msgid ""
 "will remember the open apps and restore them on the next login. Click it "
 "again to replace the set of remembered apps."
 msgstr ""
-"<interface>保存会话</interface> 按钮将显示在 <interface>应用程序启动器</"
-"interface> 菜单。当您点击该按钮时，Plasma 将记住当前打开的应用程序，并在下次"
-"登录时恢复它们。再次点击该按钮以替换记忆的应用程序组合。"
 
 #: ui/main.qml:121
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:radio"
 msgid "Start with an empty session"
 msgstr "启动为空会话"
 
 #: ui/main.qml:134
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Ignored Applications…"
-msgstr "忽略的应用程序："
+msgstr ""
 
 #: ui/main.qml:148
 #, kde-format
@@ -170,10 +167,10 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:dialog"
 msgid "Ignored Applications"
-msgstr "忽略的应用程序："
+msgstr ""
 
 #: ui/main.qml:171
 #, kde-format
@@ -182,16 +179,16 @@ msgid "Enter application (e.g. org.kde.kate.desktop or xterm)"
 msgstr ""
 
 #: ui/main.qml:177
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "Ignore this Application"
-msgstr "忽略的应用程序："
+msgstr ""
 
 #: ui/main.qml:179
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Add %1 to the list of ignored applications"
-msgstr "忽略的应用程序："
+msgstr ""
 
 #: ui/main.qml:180
 #, kde-format
@@ -210,35 +207,3 @@ msgstr ""
 msgctxt "@info:whatsthis"
 msgid "Remove %1 from the list of ignored applications"
 msgstr ""
-
-#~ msgctxt "@title:group"
-#~ msgid "General"
-#~ msgstr "常规"
-
-#~ msgctxt "@title:group prefix for radiobuttons"
-#~ msgid "On login, launch apps that were open:"
-#~ msgstr "登录时自动启动应用程序："
-
-#~ msgctxt "@option:radio Automatic style of session restoration"
-#~ msgid "On last logout"
-#~ msgstr "上次注销时正在打开的应用程序"
-
-#~ msgctxt "@option:radio Manual style of session restoration"
-#~ msgid "When session was manually saved"
-#~ msgstr "手动保存会话时正在打开的应用程序"
-
-#~ msgctxt "@info:whatsthis contextualhelpbutton tooltip"
-#~ msgid ""
-#~ "Write apps' desktop file identifier or, on X11, executable names here "
-#~ "(separated by commas or colons, for example 'xterm:org.kde.konsole."
-#~ "desktop' or 'xterm,org.kde.konsole.desktop') to prevent them from "
-#~ "autostarting along with other session-restored apps."
-#~ msgstr ""
-#~ "在此输入应用程序的 desktop 文件标识符，如果在 X11 环境中，则输入可执行名"
-#~ "称 (用半角逗号或者冒号分隔，例如“xterm:org.kde.konsole.desktop”或“xterm,"
-#~ "org.kde.konsole.desktop”) 以防止这些应用程序和其他会话恢复的应用程序一起自"
-#~ "动启动。"
-
-#~ msgctxt "@title:group"
-#~ msgid "Firmware"
-#~ msgstr "固件"

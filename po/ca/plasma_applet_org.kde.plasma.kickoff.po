@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-17 13:19+0000\n"
+"POT-Creation-Date: 2026-11-26 04:01+0000\n"
 "PO-Revision-Date: 2026-11-22 20:23+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -53,19 +53,19 @@ msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "General"
 
-#: ConfigGeneral.qml:47
+#: ConfigGeneral.qml:48
 #, kde-format
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "Icona:"
 
-#: ConfigGeneral.qml:53
+#: ConfigGeneral.qml:54
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "Canvia la icona del llançador d'aplicacions"
 
-#: ConfigGeneral.qml:54
+#: ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -75,103 +75,103 @@ msgstr ""
 "La icona actual és %1. Feu-hi clic per a obrir un menú per a canviar la "
 "icona actual o restablir la icona predeterminada."
 
-#: ConfigGeneral.qml:58
+#: ConfigGeneral.qml:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "El nom de la icona és «%1»"
 
-#: ConfigGeneral.qml:93
+#: ConfigGeneral.qml:96
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Trieu…"
 
-#: ConfigGeneral.qml:95
+#: ConfigGeneral.qml:98
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "Trieu una icona per al llançador d'aplicacions"
 
-#: ConfigGeneral.qml:99
+#: ConfigGeneral.qml:102
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Restableix a la icona predeterminada"
 
-#: ConfigGeneral.qml:105
+#: ConfigGeneral.qml:108
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Elimina la icona"
 
-#: ConfigGeneral.qml:116
+#: ConfigGeneral.qml:119
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Etiqueta de text:"
 
-#: ConfigGeneral.qml:118
+#: ConfigGeneral.qml:121
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Teclegeu aquí per a afegir una etiqueta de text"
 
-#: ConfigGeneral.qml:132
+#: ConfigGeneral.qml:135
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "Inicialitza l'etiqueta del menú"
 
-#: ConfigGeneral.qml:145
+#: ConfigGeneral.qml:148
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "No es pot definir una etiqueta de text quan el plafó és vertical."
 
-#: ConfigGeneral.qml:157
+#: ConfigGeneral.qml:160
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Mostra les aplicacions amb:"
 
-#: ConfigGeneral.qml:159
+#: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Només el nom"
 
-#: ConfigGeneral.qml:159
+#: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Només la descripció"
 
-#: ConfigGeneral.qml:159
+#: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Nom (Descripció)"
 
-#: ConfigGeneral.qml:159
+#: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Descripció (Nom)"
 
-#: ConfigGeneral.qml:167
+#: ConfigGeneral.qml:170
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "General:"
 
-#: ConfigGeneral.qml:171
+#: ConfigGeneral.qml:174
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Ordena alfabèticament les aplicacions"
 
-#: ConfigGeneral.qml:175
+#: ConfigGeneral.qml:178
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -181,115 +181,115 @@ msgstr ""
 "Això no afecta com s'ordenen les aplicacions ni als resultats de cerca ni a "
 "la pàgina de les preferides."
 
-#: ConfigGeneral.qml:181
+#: ConfigGeneral.qml:184
 #, kde-format
 msgctxt "@option:check"
 msgid "Use compact list item style"
 msgstr "Usa un estil compacte d'elements de llista"
 
-#: ConfigGeneral.qml:187
+#: ConfigGeneral.qml:190
 #, kde-format
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "Ressalta les aplicacions instal·lades noves"
 
-#: ConfigGeneral.qml:192
+#: ConfigGeneral.qml:195
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch sidebar categories when hovering over them"
 msgstr "Canvia les categories de la barra lateral en passar-hi per sobre"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:201
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "Configura els connectors de cerca…"
 
-#: ConfigGeneral.qml:208
+#: ConfigGeneral.qml:211
 #, kde-format
 msgctxt "@label:group prefix for radio button group"
 msgid "Sidebar position:"
 msgstr "Posició de la barra lateral:"
 
-#: ConfigGeneral.qml:209 ConfigGeneral.qml:217
+#: ConfigGeneral.qml:212 ConfigGeneral.qml:220
 #, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Right"
 msgstr "Dreta"
 
-#: ConfigGeneral.qml:209
+#: ConfigGeneral.qml:212
 #, kde-format
 msgctxt "option:radio sidebar position"
 msgid "Left"
 msgstr "Esquerra"
 
-#: ConfigGeneral.qml:217
+#: ConfigGeneral.qml:220
 #, kde-format
 msgctxt "@option:radio sidebar position"
 msgid "Left"
 msgstr "Esquerra"
 
-#: ConfigGeneral.qml:225
+#: ConfigGeneral.qml:228
 #, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show favorites:"
 msgstr "Mostra els preferits:"
 
-#: ConfigGeneral.qml:226
+#: ConfigGeneral.qml:229
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "En una quadrícula"
 
-#: ConfigGeneral.qml:234
+#: ConfigGeneral.qml:237
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "En una llista"
 
-#: ConfigGeneral.qml:242
+#: ConfigGeneral.qml:245
 #, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show other applications:"
 msgstr "Mostra altres aplicacions:"
 
-#: ConfigGeneral.qml:243
+#: ConfigGeneral.qml:246
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "En una quadrícula"
 
-#: ConfigGeneral.qml:251
+#: ConfigGeneral.qml:254
 #, kde-format
 msgctxt "@option:radio Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "En una llista"
 
-#: ConfigGeneral.qml:263
+#: ConfigGeneral.qml:266
 #, kde-format
 msgctxt "@title:group prefix for radio button group"
 msgid "Show buttons for:"
 msgstr "Mostra els botons per a:"
 
-#: ConfigGeneral.qml:264
+#: ConfigGeneral.qml:267
 #, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power"
 msgstr "Aturada"
 
-#: ConfigGeneral.qml:273
+#: ConfigGeneral.qml:276
 #, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Session"
 msgstr "Sessió"
 
-#: ConfigGeneral.qml:282
+#: ConfigGeneral.qml:285
 #, kde-format
 msgctxt "@option:radio Show buttons for"
 msgid "Power and session"
 msgstr "Aturada i sessió"
 
-#: ConfigGeneral.qml:291
+#: ConfigGeneral.qml:294
 #, kde-format
 msgctxt "@option:check"
 msgid "Show action button captions"

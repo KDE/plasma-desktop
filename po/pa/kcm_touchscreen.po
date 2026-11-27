@@ -1,21 +1,21 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2024 A S Alam <aalam@punlinux.org>
+# SPDX-FileCopyrightText: 2024, 2026 A S Alam <aalam@punlinux.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-03 00:56+0000\n"
-"PO-Revision-Date: 2024-01-01 11:43-0600\n"
-"Last-Translator: A S Alam <aalam@punlinux.org>\n"
-"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
+"POT-Creation-Date: 2026-11-26 06:47+0000\n"
+"PO-Revision-Date: 2026-11-26 12:11-0500\n"
+"Last-Translator: A S Alam <aman@punlinux.org>\n"
+"Language-Team: pa\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: kcmtouchscreen.cpp:48
 #, kde-format
@@ -29,8 +29,7 @@ msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
 #: ui/main.qml:29
-#, fuzzy, kde-format
-#| msgid "No touchscreens found"
+#, kde-format
 msgctxt "@info:status placeholdermessage text"
 msgid "No touchscreens found"
 msgstr "ਕੋਈ ਟੱਚ-ਸਕਰੀਨ ਨਹੀ ਲੱਭੀ"
@@ -39,24 +38,30 @@ msgstr "ਕੋਈ ਟੱਚ-ਸਕਰੀਨ ਨਹੀ ਲੱਭੀ"
 #, kde-format
 msgctxt "@info:usagetip placeholdermessage explanation"
 msgid "Connect an external touchscreen"
-msgstr ""
+msgstr "ਬਾਹਰੀ ਟੱਚ-ਸਕਰੀਨ ਨਾਲ ਕਨੈਕਟ ਕਰੋ"
 
-#: ui/main.qml:47
+#: ui/main.qml:40
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "ਡਿਵਾਈਸ:"
 
+#: ui/main.qml:58
+#, kde-format
+msgctxt "@title:group currently only entry 'Enable device'"
+msgid "General:"
+msgstr ""
+
 #: ui/main.qml:60
 #, fuzzy, kde-format
+#| msgctxt "@option:check prefix touchscreen device is enabled"
 #| msgid "Enabled:"
 msgctxt "@option:check prefix touchscreen device is enabled"
-msgid "Enabled:"
+msgid "Enable device"
 msgstr "ਸਮਰੱਥ ਹੈ:"
 
-#: ui/main.qml:68
-#, fuzzy, kde-format
-#| msgid "Target display:"
+#: ui/main.qml:67
+#, kde-format
 msgctxt "@label:listbox this is a compound noun"
 msgid "Target display:"
 msgstr "ਟਾਰਗੇਟ ਡਿਸਪਲੇਅ:"

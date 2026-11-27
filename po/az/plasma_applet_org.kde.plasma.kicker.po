@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-16 20:39+0000\n"
+"POT-Creation-Date: 2026-11-26 04:01+0000\n"
 "PO-Revision-Date: 2025-12-22 01:42+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -50,183 +50,183 @@ msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Əsas"
 
-#: ConfigGeneral.qml:51
+#: ConfigGeneral.qml:52
 #, fuzzy, kde-format
 #| msgid "Icon:"
 msgctxt "@label prefix for icon-only button"
 msgid "Icon:"
 msgstr "İkon:"
 
-#: ConfigGeneral.qml:136
+#: ConfigGeneral.qml:139
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Seçim…"
 
-#: ConfigGeneral.qml:141
+#: ConfigGeneral.qml:144
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr ""
 
-#: ConfigGeneral.qml:150
+#: ConfigGeneral.qml:153
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr ""
 
-#: ConfigGeneral.qml:163
+#: ConfigGeneral.qml:166
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr ""
 
-#: ConfigGeneral.qml:164
+#: ConfigGeneral.qml:167
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr ""
 
-#: ConfigGeneral.qml:176
+#: ConfigGeneral.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr ""
 
-#: ConfigGeneral.qml:196
+#: ConfigGeneral.qml:199
 #, fuzzy, kde-format
 #| msgid "Show applications as:"
 msgctxt "@label:listbox"
 msgid "Show applications as:"
 msgstr "Tətbiqlərin adlandırma forması:"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:201
 #, fuzzy, kde-format
 #| msgid "Name only"
 msgctxt "@item:inlistbox"
 msgid "Name only"
 msgstr "Yalnız adı"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:201
 #, fuzzy, kde-format
 #| msgid "Description only"
 msgctxt "@item:inlistbox"
 msgid "Description only"
 msgstr "Yalnız təsviri"
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:202
 #, fuzzy, kde-format
 #| msgid "Name (Description)"
 msgctxt "@item:inlistbox"
 msgid "Name (Description)"
 msgstr "Ad (Təsviri)"
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:202
 #, fuzzy, kde-format
 #| msgid "Description (Name)"
 msgctxt "@item:inlistbox"
 msgid "Description (Name)"
 msgstr "Təsviri (Adı)"
 
-#: ConfigGeneral.qml:209
+#: ConfigGeneral.qml:212
 #, fuzzy, kde-format
 #| msgid "Behavior:"
 msgctxt "@title:group prefix for checkbox group"
 msgid "Behavior:"
 msgstr "Davranış:"
 
-#: ConfigGeneral.qml:211
+#: ConfigGeneral.qml:214
 #, fuzzy, kde-format
 #| msgid "Sort applications alphabetically"
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Tətbiqləri əlifba sırası ilə çeşidləmək"
 
-#: ConfigGeneral.qml:219
+#: ConfigGeneral.qml:222
 #, fuzzy, kde-format
 #| msgid "Flatten sub-menus to a single level"
 msgctxt "@option:check"
 msgid "Flatten sub-menus to a single level"
 msgstr "Alt menyuları bir səviyyədə düzmək"
 
-#: ConfigGeneral.qml:227
+#: ConfigGeneral.qml:230
 #, fuzzy, kde-format
 #| msgid "Show icons on the root level of the menu"
 msgctxt "@option:check"
 msgid "Show icons on the root level of the menu"
 msgstr "Yuxarı səviyyədəki elementlərin nişanlarını göstərmək"
 
-#: ConfigGeneral.qml:233
+#: ConfigGeneral.qml:236
 #, fuzzy, kde-format
 #| msgid "Often used applications"
 msgctxt "@option:check"
 msgid "Highlight newly-installed applications"
 msgstr "Tez-tez istifadə olunan tətbiqlər"
 
-#: ConfigGeneral.qml:243
+#: ConfigGeneral.qml:246
 #, fuzzy, kde-format
 #| msgid "Show categories:"
 msgctxt "@title:group prefix for checkbox group"
 msgid "Show categories:"
 msgstr "Kateqoriyaları göstərmək:"
 
-#: ConfigGeneral.qml:246
+#: ConfigGeneral.qml:249
 #, fuzzy, kde-format
 #| msgid "Recent applications"
 msgctxt "@option:check"
 msgid "Recent applications"
 msgstr "Sonuncu tətbiqlər"
 
-#: ConfigGeneral.qml:247
+#: ConfigGeneral.qml:250
 #, fuzzy, kde-format
 #| msgid "Often used applications"
 msgctxt "@option:check"
 msgid "Often used applications"
 msgstr "Tez-tez istifadə olunan tətbiqlər"
 
-#: ConfigGeneral.qml:254
+#: ConfigGeneral.qml:257
 #, fuzzy, kde-format
 #| msgid "Recent files"
 msgctxt "@option:check"
 msgid "Recent files"
 msgstr "Sonuncu fayllar"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:258
 #, fuzzy, kde-format
 #| msgid "Often used files"
 msgctxt "@option:check"
 msgid "Often used files"
 msgstr "Tez-tez istifadə olunan fayllar"
 
-#: ConfigGeneral.qml:262
+#: ConfigGeneral.qml:265
 #, fuzzy, kde-format
 #| msgid "Recent files"
 msgctxt "@option:check"
 msgid "Recent places"
 msgstr "Sonuncu fayllar"
 
-#: ConfigGeneral.qml:263
+#: ConfigGeneral.qml:266
 #, fuzzy, kde-format
 #| msgid "Often used files"
 msgctxt "@option:check"
 msgid "Often used places"
 msgstr "Tez-tez istifadə olunan fayllar"
 
-#: ConfigGeneral.qml:269
+#: ConfigGeneral.qml:272
 #, fuzzy, kde-format
 #| msgid "Sort items in categories by:"
 msgctxt "@label:listbox"
 msgid "Sort items in categories by:"
 msgstr "Kateqoriyadakı elementlərin çeşidlənməsi:"
 
-#: ConfigGeneral.qml:270
+#: ConfigGeneral.qml:273
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Son istifadə olunanlar"
 
-#: ConfigGeneral.qml:270
+#: ConfigGeneral.qml:273
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
@@ -236,28 +236,28 @@ msgctxt ""
 msgid "Often used"
 msgstr "Tez-tez istifadə olunanlar"
 
-#: ConfigGeneral.qml:280
+#: ConfigGeneral.qml:283
 #, fuzzy, kde-format
 #| msgid "Search:"
 msgctxt "@title:group prefix for checkbox group"
 msgid "Search:"
 msgstr "Axtarış:"
 
-#: ConfigGeneral.qml:282
+#: ConfigGeneral.qml:285
 #, fuzzy, kde-format
 #| msgid "Expand search to bookmarks, files and emails"
 msgctxt "@option:check"
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Əlfəcinlər, fayllar və e-poçtlar arasında axtarmaq"
 
-#: ConfigGeneral.qml:290
+#: ConfigGeneral.qml:293
 #, fuzzy, kde-format
 #| msgid "Align search results to bottom"
 msgctxt "@option:check"
 msgid "Align search results to bottom"
 msgstr "Axtarış nəticələrini aşağıda yerləşdirmək"
 
-#: ConfigGeneral.qml:295
+#: ConfigGeneral.qml:298
 #, fuzzy, kde-format
 #| msgctxt "@label:textbox for a checkbox toggling Dark Mode"
 #| msgid "Appearance:"
@@ -265,14 +265,14 @@ msgctxt "@label prefix for a checkbox toggling Dark Mode"
 msgid "Appearance:"
 msgstr "Xarici görünüş:"
 
-#: ConfigGeneral.qml:300
+#: ConfigGeneral.qml:303
 #, fuzzy, kde-format
 #| msgid "Prefer Dark Mode when available"
 msgctxt "@option:check"
 msgid "Prefer Dark Mode when available"
 msgstr "Əlçatan olduqda qaranlıq rejimə üstünlük vermək"
 
-#: ConfigGeneral.qml:304
+#: ConfigGeneral.qml:307
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-19 00:48+0000\n"
+"POT-Creation-Date: 2026-11-26 06:47+0000\n"
 "PO-Revision-Date: 2025-10-06 01:34+0400\n"
 "Last-Translator: linux <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -18,35 +18,35 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.08.1\n"
 
-#: ui/main.qml:31
+#: ui/main.qml:26
 #, fuzzy, kde-format
 #| msgid "Position on screen:"
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Position on screen:"
 msgstr "Ekrandakı mövqeyi:"
 
-#: ui/main.qml:35
+#: ui/main.qml:31
 #, fuzzy, kde-format
 #| msgid "Top"
 msgctxt "@option:check Position on top of screen"
 msgid "Top"
 msgstr "Yuxarı"
 
-#: ui/main.qml:42
+#: ui/main.qml:39
 #, fuzzy, kde-format
 #| msgid "Center"
 msgctxt "@option:check Position in center of screen"
 msgid "Center"
 msgstr "Mərkəz"
 
-#: ui/main.qml:55
+#: ui/main.qml:51
 #, fuzzy, kde-format
 #| msgid "History:"
 msgctxt "@title:group prefix for radiobutton group"
 msgid "History:"
 msgstr "Tarixçə:"
 
-#: ui/main.qml:58
+#: ui/main.qml:55
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Disabled"
@@ -54,7 +54,7 @@ msgctxt "@option:radio History is disabled"
 msgid "Disabled"
 msgstr "Söndürülüb"
 
-#: ui/main.qml:63
+#: ui/main.qml:62
 #, fuzzy, kde-format
 #| msgctxt "@option:check The thing being enabled is search history"
 #| msgid "Enable suggestions"
@@ -62,7 +62,7 @@ msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable suggestions"
 msgstr "Təklifləri aktiv etmək"
 
-#: ui/main.qml:68
+#: ui/main.qml:69
 #, fuzzy, kde-format
 #| msgctxt "@option:check The thing being enabled is search history"
 #| msgid "Enabled auto-complete"
@@ -70,36 +70,34 @@ msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable auto-complete"
 msgstr "Avtomatik tamamlamanı aktiv etmək"
 
-#: ui/main.qml:76
+#: ui/main.qml:78
 #, fuzzy, kde-format
 #| msgid "Clear History…"
 msgctxt "@action:button"
 msgid "Clear History…"
 msgstr "Tarixçəni Təmizləmək…"
 
-#: ui/main.qml:99
+#: ui/main.qml:101
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for all activities"
 msgid "For all activities"
 msgstr "Bütün fəaliyyətlər üçün"
 
-#: ui/main.qml:111
+#: ui/main.qml:113
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for this activity"
 msgid "For activity \"%1\""
 msgstr "\"%1\" fəaliyyəti üçün"
 
-#: ui/main.qml:128
-#, kde-format
-msgctxt "@label"
-msgid "Plugins:"
-msgstr "Qoşmalar:"
-
-#: ui/main.qml:132
+#: ui/main.qml:126
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "Aktiv axtarış qoşmalarını ayarlayın..."
+
+#~ msgctxt "@label"
+#~ msgid "Plugins:"
+#~ msgstr "Qoşmalar:"
 
 #, fuzzy
 #~| msgid "Activation:"

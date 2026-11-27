@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_krunnersettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-19 00:48+0000\n"
+"POT-Creation-Date: 2026-11-26 06:47+0000\n"
 "PO-Revision-Date: 2026-01-09 00:32+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -19,77 +19,75 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.12.0\n"
 
-#: ui/main.qml:31
+#: ui/main.qml:26
 #, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "Position on screen:"
 msgstr "Posición en la pantalla:"
 
-#: ui/main.qml:35
+#: ui/main.qml:31
 #, kde-format
 msgctxt "@option:check Position on top of screen"
 msgid "Top"
 msgstr "Arriba"
 
-#: ui/main.qml:42
+#: ui/main.qml:39
 #, kde-format
 msgctxt "@option:check Position in center of screen"
 msgid "Center"
 msgstr "Centro"
 
-#: ui/main.qml:55
+#: ui/main.qml:51
 #, kde-format
 msgctxt "@title:group prefix for radiobutton group"
 msgid "History:"
 msgstr "Historial:"
 
-#: ui/main.qml:58
+#: ui/main.qml:55
 #, kde-format
 msgctxt "@option:radio History is disabled"
 msgid "Disabled"
 msgstr "Desactivado"
 
-#: ui/main.qml:63
+#: ui/main.qml:62
 #, kde-format
 msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable suggestions"
 msgstr "Activar sugerencias"
 
-#: ui/main.qml:68
+#: ui/main.qml:69
 #, kde-format
 msgctxt "@option:radio The thing being enabled is search history"
 msgid "Enable auto-complete"
 msgstr "Activar terminación automática"
 
-#: ui/main.qml:76
+#: ui/main.qml:78
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear History…"
 msgstr "Borrar el historial…"
 
-#: ui/main.qml:99
+#: ui/main.qml:101
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for all activities"
 msgid "For all activities"
 msgstr "Para todas las actividades"
 
-#: ui/main.qml:111
+#: ui/main.qml:113
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for this activity"
 msgid "For activity \"%1\""
 msgstr "Para la actividad «%1»"
 
-#: ui/main.qml:128
-#, kde-format
-msgctxt "@label"
-msgid "Plugins:"
-msgstr "Complementos:"
-
-#: ui/main.qml:132
+#: ui/main.qml:126
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
 msgstr "Configurar los complementos de búsqueda activados…"
+
+#~ msgctxt "@label"
+#~ msgid "Plugins:"
+#~ msgstr "Complementos:"
 
 #~ msgctxt "@label prefix for checkbutton"
 #~ msgid "Activation:"
