@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-27 01:06+0000\n"
-"PO-Revision-Date: 2026-10-03 08:16+0200\n"
-"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2026-11-27 07:59+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -114,26 +114,22 @@ msgid "Enable device"
 msgstr "Использовать устройство"
 
 #: ui/main.qml:128
-#, fuzzy, kde-format
-#| msgctxt "option:check"
-#| msgid "Disable while typing"
+#, kde-format
 msgctxt "@title:group prefix for checkbox group"
 msgid "Disable while:"
-msgstr "Выключать при вводе текста"
+msgstr "Выключать, когда:"
 
 #: ui/main.qml:129
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Disable while mouse is connected"
+#, kde-format
 msgctxt "@option:check Completes the sentence 'Disable while:'"
 msgid "Mouse is connected"
-msgstr "Выключать сенсорную панель при подключении мыши"
+msgstr "подключена мышь"
 
 #: ui/main.qml:149
 #, kde-format
 msgctxt "@option:check Completes the sentence 'Disable while:'"
 msgid "Typing; re-enable after:"
-msgstr ""
+msgstr "идёт ввод текста; включать снова через:"
 
 #: ui/main.qml:150
 #, kde-format
@@ -146,23 +142,22 @@ msgstr "Это может помешать видеоиграм."
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%1 мс"
+msgstr[1] "%1 мс"
+msgstr[2] "%1 мс"
+msgstr[3] "%1 мс"
 
 #: ui/main.qml:181 ui/main.qml:235
-#, fuzzy, kde-format
-#| msgid " ms"
+#, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
-msgstr " мс"
+msgstr "мс"
 
 #: ui/main.qml:204
 #, kde-format
 msgctxt "@option:check Completes the sentence 'Disable while:'"
 msgid "Using trackpoint; re-enable after:"
-msgstr ""
+msgstr "используется трекпойнт; включать снова через:"
 
 #: ui/main.qml:254
 #, kde-format
