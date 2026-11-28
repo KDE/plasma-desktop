@@ -559,12 +559,12 @@ PlasmoidItem {
                                         // Will reset the model, destroying the reparented drag delegate that
                                         // is no longer bound to model.Geometry.
                                         root.dragging = false;
+                                        pagerModel.refresh();
                                     } else {
                                         // When there is no dragging (just a click), the event is passed
                                         // to the desktop MouseArea.
                                         desktopMouseArea.clicked(mouse);
                                     }
-                                    pagerModel.refresh();
                                 }
                             }
 
